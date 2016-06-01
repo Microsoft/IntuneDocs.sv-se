@@ -1,0 +1,5 @@
+Mer information om hur hjälpmedelsteknik för datorer bidrar till att förenkla livet för personer med funktionsnedsättning finns på [webbplatsen Microsoft Accessibility](http://go.microsoft.com/fwlink/?LinkId=8431)
+
+<!--HONumber=May16_HO2-->
+
+

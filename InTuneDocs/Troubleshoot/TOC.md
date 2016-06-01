@@ -1,15 +1,20 @@
-# [Understand and Explore](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Get Started](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Förstå och utforska](/intune/understand-explore/introduction-to-microsoft-intune)
+# [Kom igång](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 
-# [Troubleshoot](how-to-get-support-for-microsoft-intune.md)
-## [How to get support](how-to-get-support-for-microsoft-intune.md)
-## [Troubleshoot endpoint protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
-## [Troubleshoot company resource access problems](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
-## [Troubleshoot app deployment problems](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
-## [Troubleshoot device enrollment](troubleshoot-device-enrollment-in-intune.md)
-## [Troubleshoot policies](Troubleshoot-policies-in-microsoft-intune.md)
-## [Troubleshoot client setup](Troubleshoot-client-setup-in-microsoft-intune.md)
-## [Troubleshoot software updates](Troubleshoot-software-updates-in-microsoft-intune.md)
-## [Troubleshoot email profiles](Troubleshoot-email-profiles-in-microsoft-intune.md)
+# [Felsöka](how-to-get-support-for-microsoft-intune.md)
+## [Hur du kan få support](how-to-get-support-for-microsoft-intune.md)
+## [Felsöka Endpoint Protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
+## [Felsökning av problem med åtkomst till företagsresurser](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
+## [Felsökning av problem med appdistribution](Troubleshoot-app-deployment-problems-in-microsoft-intune.md)
+## [Felsöka enhetsregistrering](troubleshoot-device-enrollment-in-intune.md)
+## [Felsöka principer](Troubleshoot-policies-in-microsoft-intune.md)
+## [Felsöka klientkonfiguration](Troubleshoot-client-setup-in-microsoft-intune.md)
+## [Felsöka programuppdateringar](Troubleshoot-software-updates-in-microsoft-intune.md)
+## [Felsöka e-postprofiler](Troubleshoot-email-profiles-in-microsoft-intune.md)
+
+
+<!--HONumber=May16_HO1-->
+
+

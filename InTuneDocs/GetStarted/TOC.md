@@ -1,35 +1,45 @@
-# [Understand and Explore](/intune/understand-explore/introduction-to-microsoft-intune)
+# [Förstå och utforska](/intune/understand-explore/introduction-to-microsoft-intune)
 
-# [Get Started](what-to-know-before-you-start-microsoft-intune.md)
-## [What to know before you start](what-to-know-before-you-start-microsoft-intune.md)
-### [Supported web browsers](supported-web-browsers.md)
-### [Network infrastructure requirements](network-infrastructure-requirements-for-microsoft-intune.md)
-### [Administrative accounts, websites, and permissions](administrative-accounts-websites-perms.md)
-### [Company Portal](microsoft-intune-company-portal.md)
-### [Integration with Microsoft cloud services and products](integration-with-cloud-services.md)
-### [Network bandwidth usage](network-bandwidth-use.md)
-### [Domain names](domain-names-for-microsoft-intune.md)
+# [Kom igång](what-to-know-before-you-start-microsoft-intune.md)
+## [Vad du behöver veta innan du börjar](what-to-know-before-you-start-microsoft-intune.md)
+### [Webbläsare som stöds](supported-web-browsers.md)
+### [Krav på nätverksinfrastruktur](network-infrastructure-requirements-for-microsoft-intune.md)
+### [Administrativa konton, webbplatser och behörigheter](administrative-accounts-websites-perms.md)
+### [Företagsportal](microsoft-intune-company-portal.md)
+### [Integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)
+### [Användning av nätverksbandbredd](network-bandwidth-use.md)
+### [Domännamn](domain-names-for-microsoft-intune.md)
 
-## [Start with a paid subscription](start-with-a-paid-subscription-to-microsoft-intune.md)
-### [Sign in to Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
-### [Configure a custom domain name](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
-### [Synchronize AD and add users](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
-### [Manage Intune licenses](start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
-### [Organize users and devices](start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
-### [Create policies and publish an app](start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
-### [Customize the Company Portal](start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
-### [Enroll mobile devices & install an app](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
-### [Post configuration tasks](post-configuration-tasks.md)
+## [Snabbstartsguide för Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
+### [Logga in i Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
+### [Så här konfigurerar du ett eget domännamn](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
+### [Synkronisera AD och lägga till användare](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
+### [Hantera Intune-licenser](start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
+### [Ordna användare och enheter](start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
+### [Skapa principer och publicera en app](start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
+### [Anpassa företagsportalen.](start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
+### [Registrera mobila enheter och installera en app](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
+### [Publicera konfigurationsuppgifter](post-configuration-tasks.md)
 
+<!--
+## [Choose how to manage devices](choose-how-to-manage-devices.md)
+### [Mobile device management capabilities](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Windows PC management capabilities](windows-pc-management-capabilities-in-microsoft-intune.md)
+-->
 
-## [Rollout phases for Intune deployments](rollout-phases-for-microsoft-intune-deployment.md)
-### [Project scope](project-scope.md)
-### [Proof of concept](proof-of-concept.md)
+## [Distributionsfaser för Intune-distributioner](rollout-phases-for-microsoft-intune-deployment.md)
+### [Projektets omfattning](project-scope.md)
+### [Konceptbevis](proof-of-concept.md)
 ### [Pilot](pilot.md)
-### [Enterprise rollout](enterprise-rollout.md)
-### [Operations and maintenance](operations-and-maintenance.md)
+### [Företagsomfattande distribution](enterprise-rollout.md)
+### [Åtgärder och underhåll](operations-and-maintenance.md)
 
 
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
-# [Deploy and Use](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
-# [Troubleshoot](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+
+
+<!--HONumber=May16_HO1-->
+
+

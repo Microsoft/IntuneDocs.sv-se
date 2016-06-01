@@ -1,13 +1,30 @@
 ---
-title: Översikt över Microsoft Intune App SDK
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ef1751bb-3a2f-4662-a922-38c076869eb3
+# required metadata
+
+title: Översikt över Microsoft Intune App SDK | Microsoft Intune
+description:
+keywords:
 author: Msmbaldwin
+manager: jeffgilb
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod:
+ms.service: microsoft-intune
+ms.technology:
+ms.assetid: ef1751bb-3a2f-4662-a922-38c076869eb3
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: jeffgilb
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Översikt över Microsoft Intune App SDK
 Intune App SDK, som finns för både iOS- och Android-plattformen, gör det möjligt att använda hanteringsfunktioner för mobilappar med Microsoft Intune. Därutöver arbetar vi för att minska mängden kodändringar som utvecklare behöver göra. Som du kommer märka kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda våra API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app. 
 
@@ -36,7 +53,7 @@ IT-administratörer kan framtvinga användningen av en hanterad webbläsare när
 IT-administratörer kan tillämpa en PIN-princip när en Intune-hanterad app startar. Den här principen ser till att slutanvändarna som registrerat sina enheter med Microsoft Intune är samma personer som startar apparna. När slutanvändarna konfigurerar sina PIN-koder använder Intune App SDK Azure Active Directory för att kontrollera autentiseringsuppgifterna för slutanvändare mot autentiseringsuppgifterna för enhetsregistreringen. 
 
 ## Kräva att användarna anger autentiseringsuppgifter innan de kan starta appar
-IT-administratörer kan kräva att användarna anger sina autentiseringsuppgifter innan de kan starta en Intune-hanterad app. Intune App SDK använder Azure Active Directory för att tillhandahålla enkel inloggning, där de autentiseringsuppgifter som anges återanvänds vid efterföljande inloggningar. Vi stöder också autentisering av identitetshanteringslösningar som är [federerade med Azure Active Directory](https://msdn.microsoft.com/en-us/library/azure/jj679342.aspx). 
+IT-administratörer kan kräva att användarna anger sina autentiseringsuppgifter innan de kan starta en Intune-hanterad app. Intune App SDK använder Azure Active Directory för att tillhandahålla enkel inloggning, där de autentiseringsuppgifter som anges återanvänds vid efterföljande inloggningar. Vi stöder också autentisering av identitetshanteringslösningar som är [federerade med Azure Active Directory](https://msdn.microsoft.com/en-us/library/azure/jj679342.aspx) 
 
 ## Kontrollera enhetens hälsotillstånd och efterlevnad
 IT-administratörer kan kontrollera enhetens hälsotillstånd och huruvida enheten följer företagets principer innan slutanvändarna kan komma åt Intune-hanterade appar. På iOS-plattformen kontrollerar den här principen om enheten har blivit jailbreakad. På Android-plattformen kontrollerar den här principen om enheten har blivit rotad.  
@@ -44,6 +61,6 @@ IT-administratörer kan kontrollera enhetens hälsotillstånd och huruvida enhet
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 
