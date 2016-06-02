@@ -53,9 +53,9 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 |**Tillåt enkla lösenord**|Tillåt enkla lösenord som "0000" och "1234"|Ja|
 |**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Rensar enheten om detta antal inloggningsförsök misslyckas.|Ja|
 |**Minuter av inaktivitet innan skärmen stängs av**<sup>1</sup>|Ange antalet minuter innan enhetens skärm är inaktiverad.|Ja|
-|**Lösenordets giltighetstid (i dagar)**|Anger antal dagar innan lösenordet måste ändras.|Ja|
+|**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|Ja|
 |**Kom ihåg tidigare lösenord**|Anger om användaren kan använda lösenord som de har använt tidigare.|Ja|
-|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Anger antal tidigare använda lösenord som enheten sparar.|Ja|
+|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Anger antalet tidigare använda lösenord som enheten sparar.|Ja|
 |**Antal minuters inaktivitet innan lösenord krävs**<sup>1</sup>|Anger hur länge enheten kan vara inaktiv innan användaren måste ange sina lösenord på nytt.|Ja|
 |**Tillåt fingeravtrycksupplåsning**|Tillåt att enheten kan låsas upp med ett fingeravtryck.|iOS 7.1 och senare|
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
@@ -135,7 +135,7 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 
 
 ### Inställningar för kompatibla och icke-kompatibla appar
-I listan **Kompatibla och &amp; inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
+I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
 
 > [!NOTE]
 > En enda princip kan bara innehålla en lista över kompatibla eller en lista över inkompatibel appar. Du kan inte ange båda i samma princip.
@@ -183,7 +183,7 @@ Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten
 
 ##### Så här kör du Inkompatibilitetsrapporter för appar
 
-1.  I [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapporter för appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapporter för appar**.
 
 2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller inkompatibla appar och klicka sedan på **Visa rapport**.
 

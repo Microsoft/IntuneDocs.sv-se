@@ -39,14 +39,14 @@ Inställningarna i det här avsnittet stöds på Windows Phone 8.1 och senare.
 
 ## Inställningar för systemsäkerhet
 ### Lösenord
-- **Kräv lösenord för att låsa upp mobila enheter:**    Välj **Ja** för den här inställningen om användaren måste ange ett lösenord
+- **Kräv lösenord för att låsa upp mobila enheter:**    Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord
 
 - för att komma åt sin enhet.
 
 -  **Tillåt enkla lösenord:** Välj
-- **Ja** om användarna ska kunna skapa enkla lösenord
+- på **Ja** för att låta användarna skapa enkla lösenord
 
-  som **1234** eller **1111**.
+  som till exempel '**1234**'eller'**1111**'.
 
 - Minsta längd på lösenord: Ange det minsta antalet siffror eller tecken som
   -   användarens lösenord måste innehålla.
@@ -69,7 +69,7 @@ Inställningarna i det här avsnittet stöds på Windows Phone 8.1 och senare.
 - **Minuter av inaktivitet innan lösenord måste anges:** Anger efter hur lång tids inaktivitet som användaren måste ange lösenordet igen.
 
 ## **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills användarens lösenord upphör att gälla
-- och användaren måste ange ett nytt lösenord.  **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** om du inte vill att användaren ska kunna
+- och användaren måste ange ett nytt lösenord.  **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** för att förhindra att användaren
   -  återanvända tidigare använda lösenord. **Förhindra återanvändning av tidigare lösenord:** Om du har valt **Spara lösenordshistorik** anger du hur många tidigare använda lösenord som inte får återanvändas. **Kräv lösenord när enheten lämnar inaktivt läge:** Den här inställningen bör användas tillsammans med inställningen **Minuter av inaktivitet innan lösenord måste anges**. Användarna uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i inställningen **Minuter av inaktivitet innan lösenord måste anges**.
   -  Den här inställningen gäller endast Windows 10 Mobile-enheter. Kryptering
   - **Kräv kryptering på den mobila enheten:** Välj **Ja** för den här inställningen om du vill kräva att enheten krypteras för att kunna ansluta till resurser. Inställningar för enhetens hälsotillstånd **Kräv att enheter ska rapporteras som felfria:** Du kan ange en regel för att kräva att **Windows 10 Mobile**-enheter rapporteras som felfria i nya eller befintliga efterlevnadsprinciper.

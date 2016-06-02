@@ -145,7 +145,7 @@ Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principe
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** – markera en eller flera grupper som du vill distribuera principen till och klicka sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** – Markera en eller flera grupper som du vill distribuera principen till och klicka sedan på **Lägg till** &gt; **OK**.
 
     -   **Om du vill stänga dialogrutan utan att distribuera principen** – klicka på **Avbryt**..
 

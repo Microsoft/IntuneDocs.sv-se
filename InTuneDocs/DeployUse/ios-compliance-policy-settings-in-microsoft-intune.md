@@ -66,10 +66,10 @@ Om du letar efter information om andra plattformar väljer du något av följand
 ### Om du anger en hög siffra för den här inställningen kräver det att användarna skapar mer komplexa lösenord.
 - För iOS-enheter refererar den här inställningen för antalet specialtecken (t.ex, **!**, **#**, **&amp;**) som måste inkluderas i lösenordet. **Minuter av inaktivitet innan lösenord krävs:**  Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
   - **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills användarens lösenord upphör att gälla
-  - och användaren måste ange ett nytt lösenord. **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** för att förhindra att användaren återanvänder tidigare använda lösenord.
+  - och användaren måste ange ett nytt lösenord. **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** för att förhindra att användaren återanvända tidigare använda lösenord.
 
 
-- **Förhindra återanvändning av tidigare lösenord:** Om **Spara lösenordshistorik** väljs, så ange det antal tidigare använda lösenord som inte får återanvändas.
+- **Förhindra återanvändning av tidigare lösenord:** Om du har valt **Spara lösenordshistorik** anger du det antal tidigare använda lösenord som inte får återanvändas.
 
      Kräv lösenord när enheten återgår från viloläge:
 

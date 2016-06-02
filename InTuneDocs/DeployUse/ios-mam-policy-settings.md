@@ -28,7 +28,7 @@ ms.suite: ems
 #  Inställningar för iOS-princip för hantering av mobila program
 Principinställningar som beskrivs nedan kan [konfigureras](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för MAM-principen på **inställningsbladet** på Azure Portal.
 
-Det finns två typer av principinställningar – Dataflytt- och Åtkomstinställningar:
+Det finns två kategorier för principinställningar, inställningar för Dataflytt och Åtkomst:
 
 ##  Inställningar för dataflytt
 Termen **principhanterade appar** används för att referera till appar som är konfigurerade med MAM-principer.
@@ -60,8 +60,8 @@ Termen **principhanterade appar** används för att referera till appar som är 
 - Välj **Nej** om du vill tillåta att Spara som används. Standardvärde = Ja
   -   Begränsa klipp ut, kopiera och klistra in med andra appar:
   -   Ange när åtgärderna Klipp ut, Kopiera och Klistra in ska begränsas.
-  -   Välj mellan: **Blockerad**: Tillåt inte åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
-  - **Principhanterade appar**: Tillåt endast åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
+  -   Välj mellan: **Blockerad**: Tillåt inte åtgärderna Klipp ut, kopiera och klistra in mellan principhanterade appar.
+  - **Principhanterade appar**: Tillåt endast åtgärderna Klipp ut, kopiera och klistra in mellan principhanterade appar.
 
   ****Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan principhanterade appar.**
 
