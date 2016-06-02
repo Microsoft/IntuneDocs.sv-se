@@ -1,11 +1,39 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\EndUser\turn-off-microsoft-usage-data-collection-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6d435c2c9773040d6870aea274d3879c00461457/InTuneDocs/EndUser/turn-off-microsoft-usage-data-collection-ios.md) | InSyncHandedBackSuccess | [Details](#343551db25a9e945cca997cdd68b2f3780a7da60438)
+ [InTuneDocs\EndUser\using-your-android-device-with-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2c0f356aefc8c3e14e75ba4be752a6f7ce19e760/InTuneDocs/EndUser/using-your-android-device-with-intune.md) | InSyncHandedBackSuccess | [Details](#94348e8e2062af15768ef31dbd43b94956e94476448)
 
 ## Item Details
+##### <a name='343551db25a9e945cca997cdd68b2f3780a7da60438'></a> Source: [InTuneDocs\EndUser\turn-off-microsoft-usage-data-collection-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/6d435c2c9773040d6870aea274d3879c00461457/InTuneDocs/EndUser/turn-off-microsoft-usage-data-collection-ios.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\EndUser\turn-off-microsoft-usage-data-collection-ios.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/01fdea271f6278b7a215411833ba158f3fa5a922/InTuneDocs/EndUser/turn-off-microsoft-usage-data-collection-ios.md)
+* Handoff File: [turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d8a9c723e68c4a443f90faa311bcee231cc65a7e/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf)
+* Handoff Datetime: 2016-05-13 16:44:12
+* Handoff Reason: Include
+* Archive File: [turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/fec3bc954ebec3ab822bf49bfeef5963ea1be38d/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf)
+* Archive Datetime: 2016-06-02 02:53:51
+* Handback File: [turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/fe2073cab375310a52e58d4175d6ee1d67fb16a0/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/turn-off-microsoft-usage-data-collection-ios.0922ed8f41c84fc955099c51f212aff85941e277.sv-se.xlf)
+* Handback Datetime: 2016-06-02 22:33:57
+* [Back to Top](#report-top)
+
+##### <a name='94348e8e2062af15768ef31dbd43b94956e94476448'></a> Source: [InTuneDocs\EndUser\using-your-android-device-with-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/2c0f356aefc8c3e14e75ba4be752a6f7ce19e760/InTuneDocs/EndUser/using-your-android-device-with-intune.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\EndUser\using-your-android-device-with-intune.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/01fdea271f6278b7a215411833ba158f3fa5a922/InTuneDocs/EndUser/using-your-android-device-with-intune.md)
+* Handoff File: [using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/dc2b27a3b6e637cb8f71bf1263bbe0854072d8af/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf)
+* Handoff Datetime: 2016-05-18 19:14:52
+* Handoff Reason: Include
+* Archive File: [using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/fec3bc954ebec3ab822bf49bfeef5963ea1be38d/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf)
+* Archive Datetime: 2016-06-02 02:53:51
+* Handback File: [using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/fe2073cab375310a52e58d4175d6ee1d67fb16a0/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/using-your-android-device-with-intune.d0bf975631e9ed2d4324af0aadc8c70b25d9b88a.sv-se.xlf)
+* Handback Datetime: 2016-06-02 22:33:57
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
