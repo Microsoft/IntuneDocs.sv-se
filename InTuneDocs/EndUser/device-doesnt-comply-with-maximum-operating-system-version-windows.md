@@ -11,11 +11,11 @@ ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
 ms.technology:
-ms.assetid: ada223d7-2a80-4415-bd85-5bdf9eca7ace
+ms.assetid: 2df53b9b-9195-45c9-b5dd-7eb7642ff219
 
 # optional metadata
 
-ROBOTS:
+#ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -28,12 +28,11 @@ ms.suite: ems
 
 # Enheten är inte kompatibel med den senaste versionen av operativsystemet
 
-iOS-enheten är inte kompatibel med IT-administratörens princip för högsta operativsystemversion. Kontakta IT-administratören för hjälp.
+IT-administratören har angett en högsta version av operativsystemet som du kan ha på Windows-enheten, men enheten uppfyller inte den inställningen. Om du vill ta reda på vilket det högsta tillåtna operativsystemet är för enheten måste du kontakta IT-administratören.
 
 ### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

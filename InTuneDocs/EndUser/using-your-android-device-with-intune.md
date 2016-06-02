@@ -63,11 +63,12 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 - [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-administrator-android.md)</br>
 - [Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-android.md)</br>
 - [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)</br>
-- [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)
+- [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)</br>
+- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)</br>
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=May16_HO3-->
 
 

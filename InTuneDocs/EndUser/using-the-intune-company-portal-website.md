@@ -52,9 +52,9 @@ Du kan utföra de flesta av samma uppgifter på **Företagsportalens webbplats**
 
 - [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 - [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
-- [Med hjälp av en Android-enhet med Intune](using-your-windows-device-with-intune.md)
+- [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 
