@@ -1,42 +1,55 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\get-ready-to-enroll-devices-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/71077d9f86a53cc66536928e4799fa4b1a51cdf0/InTuneDocs/DeployUse/get-ready-to-enroll-devices-in-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#86d3b7894eca70454fa82393c4d06eab5a99246f47)
- [InTuneDocs\DeployUse\manage-corporate-owned-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/abe03bc69c2c156bce5c8683798bc27fe9e9f4e4/InTuneDocs/DeployUse/manage-corporate-owned-devices.md) | OutofSyncHandedBackSuccess | [Details](#271446485e01d7e89b6438ead4e9f484ad63703b68)
+ [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.experimental.md](https://github.com/Microsoft/IntuneDocs-pr/blob/70217eef1d4ba54f167c63f6d0e6b8351708d9a9/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.experimental.md) | HandedOffSuccess | [Details](#988eac7d1d2ce61f4ce90b19d182df0b4f0cd5c0257)
+ [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a3f2ae30e38c669e00800614f08ac382503d5e22/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.md) | OutofSyncHandedBackSuccess | [Details](#141de80a80020cafaee9af0e8b2ceb887609270c258)
+ [InTuneDocs\EndUser\sync-your-device-manually-cpwebsite.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a3f2ae30e38c669e00800614f08ac382503d5e22/InTuneDocs/EndUser/sync-your-device-manually-cpwebsite.md) | OutofSyncHandedBackSuccess | [Details](#a2e15340726c43ca2996d27a3389cd8523838531433)
 
 ## Item Details
-##### <a name='86d3b7894eca70454fa82393c4d06eab5a99246f47'></a> Source: [InTuneDocs\DeployUse\get-ready-to-enroll-devices-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/71077d9f86a53cc66536928e4799fa4b1a51cdf0/InTuneDocs/DeployUse/get-ready-to-enroll-devices-in-microsoft-intune.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='988eac7d1d2ce61f4ce90b19d182df0b4f0cd5c0257'></a> Source: [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.experimental.md](https://github.com/Microsoft/IntuneDocs-pr/blob/70217eef1d4ba54f167c63f6d0e6b8351708d9a9/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.experimental.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [get-ready-to-enroll-devices-in-microsoft-intune.1c1d777cd24a140ea97642e8404647eb99f16625.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d9250661a43de485e6f6e835b04564a9479d14db/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/get-ready-to-enroll-devices-in-microsoft-intune.1c1d777cd24a140ea97642e8404647eb99f16625.sv-se.xlf)
-* Handoff Datetime: 2016-06-03 21:34:01
+* Handoff File: [whats-new-in-microsoft-intune.experimental.d77a43a101232c802a18c845571c82f5818321f3.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/689138276d5050413d89d46231a5dffc580c739e/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/whats-new-in-microsoft-intune.experimental.d77a43a101232c802a18c845571c82f5818321f3.sv-se.xlf)
+* Handoff Datetime: 2016-06-06 17:34:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\get-ready-to-enroll-devices-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/532ffe6f1737b4c7f64b737ca0233d79f228fb00/InTuneDocs/DeployUse/get-ready-to-enroll-devices-in-microsoft-intune.md)
-* Current Handback File: [get-ready-to-enroll-devices-in-microsoft-intune.1c1d777cd24a140ea97642e8404647eb99f16625.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/5dff4b7d1f075b0f021badd3d34829b04f4fcb36/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/get-ready-to-enroll-devices-in-microsoft-intune.1c1d777cd24a140ea97642e8404647eb99f16625.sv-se.xlf)
+* [Back to Top](#report-top)
+
+##### <a name='141de80a80020cafaee9af0e8b2ceb887609270c258'></a> Source: [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a3f2ae30e38c669e00800614f08ac382503d5e22/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/689138276d5050413d89d46231a5dffc580c739e/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf)
+* Handoff Datetime: 2016-06-06 17:34:08
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/532ffe6f1737b4c7f64b737ca0233d79f228fb00/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.md)
+* Current Handback File: [whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/5dff4b7d1f075b0f021badd3d34829b04f4fcb36/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf)
 * Current Handback Datetime: 2016-06-02 06:45:01
 * [Back to Top](#report-top)
 
-##### <a name='271446485e01d7e89b6438ead4e9f484ad63703b68'></a> Source: [InTuneDocs\DeployUse\manage-corporate-owned-devices.md](https://github.com/Microsoft/IntuneDocs-pr/blob/abe03bc69c2c156bce5c8683798bc27fe9e9f4e4/InTuneDocs/DeployUse/manage-corporate-owned-devices.md)
+##### <a name='a2e15340726c43ca2996d27a3389cd8523838531433'></a> Source: [InTuneDocs\EndUser\sync-your-device-manually-cpwebsite.md](https://github.com/Microsoft/IntuneDocs-pr/blob/a3f2ae30e38c669e00800614f08ac382503d5e22/InTuneDocs/EndUser/sync-your-device-manually-cpwebsite.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [manage-corporate-owned-devices.865c6a0e2c92ad75f207f32281351fc87b2074b4.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d9250661a43de485e6f6e835b04564a9479d14db/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/manage-corporate-owned-devices.865c6a0e2c92ad75f207f32281351fc87b2074b4.sv-se.xlf)
-* Handoff Datetime: 2016-06-03 21:34:01
+* Handoff File: [sync-your-device-manually-cpwebsite.134d3dcb8c1828322d1a008204817be65e8251bb.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/689138276d5050413d89d46231a5dffc580c739e/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/sync-your-device-manually-cpwebsite.134d3dcb8c1828322d1a008204817be65e8251bb.sv-se.xlf)
+* Handoff Datetime: 2016-06-06 17:34:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\manage-corporate-owned-devices.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/ded106009b121060219c2851848d2d50083ff8eb/InTuneDocs/DeployUse/manage-corporate-owned-devices.md)
-* Current Handback File: [manage-corporate-owned-devices.865c6a0e2c92ad75f207f32281351fc87b2074b4.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/5b6b4d046b9cd514dc90af8211b8993884bb9e57/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/manage-corporate-owned-devices.865c6a0e2c92ad75f207f32281351fc87b2074b4.sv-se.xlf)
+* Current Target File: [InTuneDocs\EndUser\sync-your-device-manually-cpwebsite.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/ded106009b121060219c2851848d2d50083ff8eb/InTuneDocs/EndUser/sync-your-device-manually-cpwebsite.md)
+* Current Handback File: [sync-your-device-manually-cpwebsite.134d3dcb8c1828322d1a008204817be65e8251bb.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/5b6b4d046b9cd514dc90af8211b8993884bb9e57/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/sync-your-device-manually-cpwebsite.134d3dcb8c1828322d1a008204817be65e8251bb.sv-se.xlf)
 * Current Handback Datetime: 2016-06-01 01:46:33
 * [Back to Top](#report-top)
 
