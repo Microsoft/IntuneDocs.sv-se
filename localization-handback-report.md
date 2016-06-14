@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [InTuneDocs\PlanDesign\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/27c739c9d1b8db0518f25d906587e2f32b24068e/InTuneDocs/PlanDesign/TOC.md) | InSyncHandedBackSuccess | [Details](#1f12e5b9d36dc3b71a77f0f99c243e93451098291128)
 
 ## Item Details
+##### <a name='1f12e5b9d36dc3b71a77f0f99c243e93451098291128'></a> Source: [InTuneDocs\PlanDesign\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/27c739c9d1b8db0518f25d906587e2f32b24068e/InTuneDocs/PlanDesign/TOC.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\PlanDesign\TOC.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/10b4d06ce6f57f227f78f71b15d21e4d40510a36/InTuneDocs/PlanDesign/TOC.md)
+* Handoff File: [TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/d8a9c723e68c4a443f90faa311bcee231cc65a7e/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf)
+* Handoff Datetime: 2016-05-13 16:44:12
+* Handoff Reason: Include
+* Archive File: [TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/fec3bc954ebec3ab822bf49bfeef5963ea1be38d/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf)
+* Archive Datetime: 2016-06-02 02:53:51
+* Handback File: [TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/908fa93513c3b47b54e17cf62d50f514117098df/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/TOC.d0ab1e477a90594f65e42b7c1cb6be18c260ea26.sv-se.xlf)
+* Handback Datetime: 2016-06-14 13:48:33
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
