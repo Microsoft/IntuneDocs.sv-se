@@ -28,41 +28,7 @@ ms.suite: ems
 
 # Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?
 
-Information om vad som händer när du installerar företagsportalappen och registrerar din enhet finns på länken för den enhet som du använder.
-
-- [Windows 10](#windows-10)
-- [Windows 8.1 och Windows RT](#windows-8-1-and-windows-rt)
-- [Windows Phone 8.1 och Windows Phone 8](#windows-phone-8-1-and-windows-phone-8)
-- [Windows 7 och Vista](#windows-7-and-vista)
-
-## Windows 10
-När du installerar företagsportalappen och sedan använder appen för att registrera din Windows 10 Enterprise- eller Professional-enhet i Intune, kan du använda företagsportalappen till:
-
--   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler
-
--   Hämta företagsappar från Företagsportalen.
-
--   Konfigurera ditt företags e-postkonto automatiskt
-
--   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
-
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan IT-administratören se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
-
-När du lägger till en dator:
-
--   Programvara installeras på datorn så att IT-administratören kan hantera datorn och så att du kan få tillgång till företagsresurser som appar och supportinformation. IT-administratören kan uppdatera den här programvaran automatiskt.
-
--   Intune Endpoint Protection kan installeras på datorn. Det är ett program som söker efter virus och skadlig kod.
-
--   IT-administratören kan göra en förteckning över alla program som finns installerade på datorn, inklusive sådana du har installerat själv.
-
--   Du kan behöva acceptera användningsvillkoren.
-
--   IT-administratören kan samla in eller radera data från datorns hårddisk. IT-administratören kan också radera hela hårddisken.
-
--   IT-administratören kan installera appar och uppdateringar på datorn.
-
--   IT-administratören kan genomdriva principer på datorn. Du kan till exempel bli ombedd att ange ett lösenord eller en PIN-kod för datorn, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också försvinner all information från hårddisken.
+Information om vad som händer när du installerar företagsportalappen och registrerar din enhet finns via länken för den enhet som du använder som visas i avsnittet ”I den här artikeln” ovan. Information om Windows 10-enheter finns på [den här sidan](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
 ## Windows 8.1 och Windows RT
 När du installerar företagsportalappen och sedan använder appen för att registrera din Windows 10 Enterprise- eller Professional- eller Windows RT-enhet i Intune, kan du använda företagsportalappen till:
@@ -75,7 +41,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan IT-administratören se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 När du lägger till en dator:
 
@@ -104,7 +70,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan IT-administratören se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 När du lägger till en Windows Phone-enhet ger du IT-administratören tillstånd att hantera enheten. IT-administratören kan exempelvis:
 
@@ -141,7 +107,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Information om vad IT-administratören kan se på din enhet finns i [Vad kan IT-administratören se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 När du lägger till en dator:
 
@@ -163,6 +129,6 @@ När du lägger till en dator:
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

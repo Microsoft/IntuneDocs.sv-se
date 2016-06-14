@@ -61,10 +61,11 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 
   För enheter som inte är registrerade i Intune öppnas webblänkar i principhanterade appar endast i appen Managed Browser med hanteringsprincipen för mobilappar.
 
-  Om du använder Intune för att hantera enheterna läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md)
+  Om du använder Intune för hanteringen av dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
 
     **Standardvärde = Ja**
 - **Kryptera appdata:** Välj **Ja** för att aktivera kryptering. När den här inställningen är aktiverad tillhandahålls krypteringen av Microsoft för appar som associeras med en hanteringsprincip för mobilappar. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid.
+  >[!NOTE] Krypteringsmetoden är inte FIPS 140-2-certifierad.
 
   **Standardvärde = Ja**
 
@@ -75,12 +76,13 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 ##  Principinställningar för Android-åtkomst
 Termen **principhanterade appar** används för att hänvisa till appar som är konfigurerade med MAM-principer
 
-- **Kräv enkel PIN-kod för åtkomst:** Välj **Ja** för att kräva en PIN-kod för att använda principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
+- **Kräv PIN-kod för åtkomst:** Välj **Ja** om du vill kräva en PIN-kod vid användning av principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
 
  **Standardvärde = Ja**
-- **Antal försök innan PIN-koden återställs:** Ange antalet tillåtna PIN-inmatningsförsök innan användaren måste återställa PIN-koden.
 
- **Det finns inget standardvärde för den här inställningen.**
+ -  **Tillåt enkel PIN-kod:** Ange du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. **Standardvärde = Ja**.
+ - **PIN-kodslängd:** Ange det minsta antalet siffror i en PIN-kod. **Standardvärde = 4**
+ - **Antal försök innan PIN-koden återställs:** Ange antalet tillåtna PIN-inmatningsförsök innan användaren måste återställa PIN-koden. **Det finns inget standardvärde för den här inställningen.**
 - **Kräv företagets autentiseringsuppgifter för åtkomst:** Välj **Ja** om du vill kräva att företagets autentiseringsuppgifter anges i stället för en PIN-kod för åtkomst till appen.  Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  Användaren uppmanas att ange sina autentiseringsuppgifter för företaget.
 
   **Standardvärde = Nej**
@@ -98,6 +100,6 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 - **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare):** Välj **Ja** för att blockera funktioner för skärmdump och **Android Assistant** på enheten när den här appen används.
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

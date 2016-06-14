@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Funktioner för hantering av mobila enheter i Microsoft Intune | Microsoft Intune
+title: Funktioner för hantering av mobila enheter | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -66,12 +66,13 @@ Hantering, inventering, appdistribution, etablering och tillbakadragning hantera
 
 |Funktion|Information|Mer information|
 |--------------|-----------|--------------------|
-|Inventering och rapporter|Hitta information om de hanterade enheterna och den programvara de använder.<br /><br />Du kan filtrera rapporterna på olika sätt, till exempel efter enhetsplattform och om enheten är kompatibel med företagets standarder.|[Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](/intune/understand-explore/understand-microsoft-intune-operations-by-using-reports)|
+|Inventering och rapporter|Hitta information om de hanterade enheterna och den programvara de använder.|[Förstå dina enheter inventering i Microsoft Intune](./deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
+
 
 ### Se även
-[Windows-datorhanteringsfunktioner i Microsoft Intune](/intune/understand-explore/windows-pc-management-capabilities-in-microsoft-intune)
+[Windows-datorhanteringsfunktioner i Microsoft Intune](./windows-pc-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

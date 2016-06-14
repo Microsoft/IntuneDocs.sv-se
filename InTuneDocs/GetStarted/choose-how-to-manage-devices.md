@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Välj hur du vill hantera enheter med Microsoft Intune | Microsoft Intune
+title: Välj hur du vill hantera enheter | Microsoft Intune
 description:
 keywords:
 author: jeffgilb
@@ -31,12 +31,7 @@ ms.suite: ems
 ## Metoder för att hantera mobila enheter
 [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] kan hantera följande enhetsplattformar:
 
-- Apple iOS 7.1 och senare
-- Google Android 4.0 och senare (inklusive Samsung KNOX)
-- Windows Phone 8.0 och senare
-- Windows RT och Windows 8.1 RT
-- Datorer som kör Windows 8.1 och senare
-- Mac OS X 10.9 och senare
+[!INCLUDE[mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 <div class="alert alert-tip">
   <h5><span class="icon-tip"></span> Tips</h5>
@@ -80,16 +75,16 @@ Du måste alltid registrera enheter för mobila enhetsoperativsystem, inklusive 
 ## Exchange ActiveSync-hantering
 Du kan också hantera enheter med Exchange ActiveSync. Det kräver att du installerar den lokala anslutningen eller använder den inbyggda tjänst-till-tjänst-anslutningen för att ansluta till Exchange Server.
 
-Information om maskin- och programvarukraven för att installera den lokala anslutningen finns i [Krav för den lokala anslutningen](/Intune/network-infrastructure-requirements-for-microsoft-intune.md).
+Information om maskin- och programvarukraven för att installera den lokala anslutningen finns i [Krav för den lokala anslutningen](../deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connector).
 
-Information om hur du använder den lokala anslutningen eller tjänst-till-tjänst-anslutningen med Exchange finns i [Hantering av mobila enheter med Exchange ActiveSync och Microsoft Intune](/Intune/get-started/mobile-device-management-with-exchange-activesync-and-microsoft-intune.md).
+Information om hur du använder den lokala anslutningen eller tjänst-till-tjänst-anslutningen med Exchange finns i [Hantering av mobila enheter med Exchange ActiveSync och Microsoft Intune](../deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
 
 
 ## Nästa steg
-Nu när du har upptäckt några av de funktioner som du kan använda när du registrerar dina enheter med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] måste du [göra dig redo att registrera enheterna](/Intune/get-started/get-ready-to-enroll-devices-in-microsoft-intune.md). När du har registrerat enheterna kan du dra nytta av alla de funktioner som du har läst om i det här avsnittet. <!--lindavr: There's a logical flaw in our "get to know/get started" content. You can take the path in this topic or you can take the path in the What to know before your get started topic. And they don't cover the same ground. -->
+Nu har du upptäckt några av de funktioner som du kan använda när du registrerar dina enheter med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Nu måste du [registrera dina enheter](../deploy-use/enroll-devices-in-microsoft-intune). När du har registrerat enheterna kan du dra nytta av alla de funktioner som du har läst om i det här avsnittet. <!--lindavr: There's a logical flaw in our "get to know/get started" content. You can take the path in this topic or you can take the path in the What to know before your get started topic. And they don't cover the same ground. -->
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 

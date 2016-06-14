@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -53,14 +53,14 @@ På skärmbilden nedan ser du två tydliga exempel:
 
 ![Intune-enhetsprincip](../media/Intune-Device-Policy-v.2.jpg)
 
-> Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
+> [!NOTE] Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
 
 ## Uppdateringsintervall för principer
 Tänk på att principer uppdateras enligt regelbundna intervall. I allmänhet ska principer registreras på enheter inom 15 minuter från ändringen. Här finns mer information om regelbundna intervall för principuppdatering:
 
 -   **Windows-enhet registrerad för MDM**: Åtgärden utlöses av en schemalagd aktivitet kl. 03:00 lokal tid på enheten och utförs varje dag.
 
--   **Windows Phone**: Principen uppdateras var åttonde timme. Detta kan framtvingas av en uppdatering på företagsportalen, under **Inställningar**
+-   **Windows Phone**: Principen uppdateras var åttonde timme. Detta kan framtvinga en uppdatering på företagsportalen, under **Inställningar**.
 
 -   **iOS**: Principen uppdateras en gång om dagen med ett slumpmässigt tidsintervall. Detta kan också framtvingas genom att du öppnar företagsportalen, markerar enheten och klickar på **Synkronisera**
 
@@ -71,11 +71,11 @@ För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på
 
 ### Så här löser du problem i UAC
 
-1.  Återkalla datorn genom att följa anvisningarna i [Dra tillbaka enheter från hantering i Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management)
+1.  Dra tillbaka datorn genom att följa anvisningarna i [Dra tillbaka enheter från hantering i Microsoft Intune](/intune/deploy-use/retire-devices-from-microsoft-intune-management).
 
 2.  Vänta 20 minuter tills klientprogrammet har tagits bort.
 
-    > Försök inte att ta bort klienten från Program och funktioner.
+    > [!NOTE] Försök inte att ta bort klienten från Program och funktioner.
 
 3.  Skriv **UAC** på startmenyn för att öppna inställningarna för User Account Control.
 
@@ -100,8 +100,8 @@ Du löser problemet genom att ange en tid i det lokala systemet så nära Intern
 Windows Phone och Windows RT-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in via MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva principen har redan tillämpats för enheten.
 
 Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra principen till ett mindre säkert värde.
-I Windows RT sveper du till exempel från höger på skrivbordet för att öppna menyraden för **snabbknapparna** och klickar på **Inställningar** &gt; **Kontrollpanelen**.  Välj appleten **Användarkonton** .
-I den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper** längst ned. Klicka på den och klicka sedan på knappen **Återställ principer** .
+I Windows RT sveper du till exempel in från höger på skrivbordet så öppnas menyraden för **Snabbknappar** och väljer **Inställningar** &gt; **Kontrollpanelen**.  Välj appleten **Användarkonton** .
+I den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper** längst ned. Välj den och klicka sedan på **Återställ principer**.
 Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande princip.
 
 ## Android-enheter framtvingar inte säkerhetsprincipsändringar utan slutanvändarens godkännande
@@ -113,9 +113,9 @@ Android MDM tillåter inte att tjänsten framtvingar initiala principändringar 
 **Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
 ### Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

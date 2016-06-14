@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -37,13 +37,13 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 1.  Kontrollera om ditt konto finns på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) eller om det har inaktiverats.
 
-2.  Kontrollera att du är etablerad på det här kontot på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+2.  Kontrollera att du är etablerad på det här kontot i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
-3.  På [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) kontrollerar du att du använder rätt användarnamn och lösenord för att logga in i Intune och att formatet är: **joe@domain.com**.
+3.  I [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) kontrollerar du att du använder rätt användarnamn och lösenord när du loggar in till Intune och att formatet är: **joe@domain.com**.
 
 ### Om Kontakta IT-informationen saknas i företagsportalen
 
-1.  I Intune-administrationskonsolen klickar du på **Admin** &gt; **Företagsportal**
+1.  I Intune-administrationskonsolen väljer du **Admin**&gt;**Företagsportal**
 
 2.  Ange **Kontakta IT** -informationen.
 
@@ -87,7 +87,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 ### Fel: Utgivaren finns inte
 Du använder **Lägg till ytterligare programvaruavtal** för att lägga till ett tredjeparts licensavtal. Du försöker lägga till utgivaren från sidan **Andra avtal för programvarulicenser**. Sidan innehåller en lista med befintliga utgivare i alfabetisk ordning.
-Du anger utgivaren som saknas men får ett felmeddelande som anger att **utgivaren inte finns** 
+Du anger utgivaren som saknas men får ett felmeddelande som anger **Utgivaren finns inte**. 
 
 Detta beteende är inbyggt. Intune tillhandahåller endast licensspårning för populära program. Intune kräver att programvaran rapporteras av minst fyra separata konton innan den görs tillgänglig som ett alternativ i licensieringsbelastningen.
 
@@ -106,9 +106,9 @@ I följande tabell listas vanliga fel som kan inträffa under Intune-appdistribu
 |0x80073CFB|Det tillhandahållna paketet har redan installerats, och återinstallering av paketet är blockerad|Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt till det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<br /><br />-   Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.<br />-   Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.|
 
 ### Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Hantera licensavtal för Windows-datorprogram i Microsoft Intune | Microsoft Intune
+title: Hantera licensavtal för Windows-datorprogram | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -45,15 +45,14 @@ I arbetsytan **Licenser** i administrationskonsolen för Intune kan du:
 
 Du kan även generera rapporter som visar installations- och licensantal för programvarutitlar. Licensrapporter kan hjälpa dig att bedöma ditt fullständiga licensläge för Microsofts mjukvaruprogram och mjukvaruprogramtitlar som inte kommer från Microsoft.
 
-> [!TIP]
-> Arbetsytan **Licenser** visas inte i administratörskonsolen förrän du hanterar minst en Windows-dator med Intune-klienten för Windows.
+> [!TIP] Arbetsytan **Licenser** visas inte i administratörskonsolen förrän du hanterar minst en Windows-dator med Intune-klienten för Windows-datorer.
 
 ## Lägga till Microsofts volymlicensavtal
-Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842)..
+Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  I [Microsoft Intune-administratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx) klickar du på **Licenser**.
+1.  I [Microsoft Intune adminstratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx)klickar du på **Licenser**.
 
-2.  På sidan **Lägg till avtal** går du till **Välj avtalstyp** och väljer **Volymlicensieringsavtal**.
+2.  På sidan **Lägg till avtal** under **Välj avtalstyp**väljer du **Volymlicensieringsavtal**.
 
 3.  I avsnittet **Lägg till avtalsuppgifter** väljer du något av följande:
 
@@ -97,8 +96,7 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         -   **Licens-/registrerings-/kundnummer** – Ange licens-/registrerings-/kundnummer för licensparet.
 
-        > [!NOTE]
-        > Om du lägger till flera avtalsnummerpar skapar Intune ett avtal med det namn som du anger, och alla par som du har lagt till kommer att vara en del av detta avtal.
+        > [!NOTE] Om du lägger till flera avtalsnummerpar skapar Intune ett avtal med det namn som du anger, och alla par som du har lagt till kommer att bli en del av detta avtal.
 
     Du kan klicka på **+** för att lägga till ett till avtalsnummerpar eller **-** för att ta bort ett avtalsnummerpar som du har angett.
 
@@ -114,10 +112,9 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
 Vyn **Alla avtal** visas och Intune ansluter till Microsoft Volume Licensing Service Center för att bekräfta de avtalsnummerpar som du har angett.
 
-Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensavtal i Intune går du till sidan **Licensöversikt** och klickar på **Uppdatera nu**. Då hämtas den aktuella licensinformationen från [Microsoft Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
+Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensavtal i Intune går du till sidan **Licensöversikt** och klickar på **Uppdatera nu**. Denna åtgärd hämtar den aktuella licensinformationen från [Microsoft volymlicens servicecenter (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
 
-> [!IMPORTANT]
-> Tills du uppdaterat volymlicensinformationen, kan du se olika typer av information i avtalslistan och rättighetsinformationen på **Avtalsöversikt** sidan.
+> [!IMPORTANT] Fram till dess att du uppdaterar volymlicensinformationen kan du se olika typer av information i avtalslistan och rättighetsinformationen på sidan **Avtalsöversikt**.
 
 När du har uppdaterat volymlicensinformationen kan du jämföra licensinformationen med din upptäckta Microsoft-programvara i arbetsytan **Appar** arbetsområdet. Du kan också köra följande licensrapporter:
 
@@ -125,8 +122,7 @@ När du har uppdaterat volymlicensinformationen kan du jämföra licensinformati
 
 -   **Licensinstallationsrapport** – Hjälper dig att avgöra om du har tillräcklig licensavtalstäckning.
 
-> [!NOTE]
-> **Produkttiteln** som visas för alla Microsofts volymlicensavtal är **Ej tillgänglig**.
+> [!NOTE] Den **Produkttitel** som visas för alla Microsofts volymlicensavtal är **Inte tillgänglig**.
 
 ## Lägga till och redigera andra licensavtal
 Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts volymlicensavtal. Dessa avtal kan omfatta mjukvaruprogram som inte är Microsofts eller mjukvaruprogram från Microsoft som köptes via en återförsäljare.
@@ -136,7 +132,7 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
 
 ### För att lägga till mjukvaruprogramavtal
 
-1.  I [Microsoft Intune-administratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx) klickar du på **Licenser**.
+1.  I [Microsoft Intune adminstratörskonsolen](https://account.manage.microsoft.com/admin/default.aspx)klickar du på **Licenser**.
 
 2.  Klicka på **Lägg till avtal** i **Övriga mjukvaruprogramlicensavtal** sektionen.
 
@@ -151,7 +147,7 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
         > [!IMPORTANT]
         > Det företag som du vill lägga till kanske inte visas i listan. Du kan bara lägga till programvaruavtal för företag som redan finns i Software Asset Catalog. Microsoft lägger dock kontinuerligt till de mest populära programvarutitlarna. Om du vill skicka en begäran för att få ett företag tillagt på listan kan du göra detta på [UserVoice-webbplatsen för Intune](https://microsoftintune.uservoice.com/).
 
-    -   **Produkttitel** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Du måste ange en **Utgivare** innan du kan ange en **Produkttitel**.
+    -   **Produkttitel** (krävs). När du börjar skriva en utgivares namn, hämtar tjänsten alla utgivares namn som innehåller de bokstäver som du skriver. Du måste specificera en **Utgivare** innan du kan specificera en **Produkttitel**.
 
     -   **Licensräknare** (krävs). Ange antal köpta licenser.
 
@@ -182,12 +178,12 @@ Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licen
 |Skapa en licensgrupp|På sidan **Översikt** i arbetsytan **Licenser** klickar du på **Skapa licensgrupp** på menyn **Aktiviteter** . **Obs!** Du kan skapa totalt max 500 licensgrupper.|
 |Byta namn på en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och klicka sedan på **Redigera licensgrupp** på menyn **Aktiviteter** .|
 |Ta bort en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och klicka sedan på **Ta bort licensgrupp** på menyn **Aktiviteter** . **Tips!** Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen **Otilldelade avtal**.|
-|Ta bort ett licensavtal|I arbetsytan **Licenser** väljer du ett avtal och klickar på **Ta bort**. **Tips!** Om du vill uppdatera licensinformationen efter att du har tagit bort volymlicensavtal klickar du på **Uppdatera nu** på sidan **Licensöversikt** eller på fliken **Allmänt** för en viss licensgrupp.|
+|Ta bort ett licensavtal|I arbetsytan **Licenser** väljer du ett avtal och klickar sedan på **Ta bort**. **Tips:** När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att klicka på **Uppdatera nu** på sidan **Licensöversikt** eller på fliken **Allmänt** för en viss licensgrupp.|
 
 
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

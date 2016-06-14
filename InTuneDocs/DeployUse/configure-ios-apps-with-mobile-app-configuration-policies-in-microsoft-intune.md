@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune | Microsoft Intune
+title: Konfigurera iOS-appar med konfigurationsprinciper för mobilappar | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -42,19 +42,18 @@ Med konfigurationsprinciper för mobilappar slipper du den här typen av problem
 
 Du distribuerar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och distribuerar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
 
-> [!TIP]
-> Den här principtypen är för närvarande bara tillgänglig för enheter som kör iOS 7.1 och senare och stöder följande typer av appinstallationer:
+> [!TIP] Den här principtypen är för närvarande bara tillgänglig för enheter som kör iOS 7.1 och senare och stöder följande typer av appinstallationer:
 > 
 > -   **Hanterade iOS-appar från App Store**
 > -   **App-paket för iOS**
 > 
-> Mer information om appinstallationstyper finns i [Distribuera appar med Microsoft Intune](deploy-apps.md)..
+> Mer information om appinstallationstyper finns i [Distribuera appar med Microsoft Intune](deploy-apps.md).
 
 ## Konfigurera en konfigurationsprincip för mobilappar
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
+1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
-2.  Expandera **iOS** i listan med principer, klicka på **Konfiguration av mobilapp**och klicka sedan på **Skapa princip**.
+2.  Expandera **iOS**i listan med principer, klicka på **Konfiguration av mobilapp**och klicka sedan på **Skapa princip**.
 
     > [!TIP]
     > Du kan bara konfigurera anpassade inställningar för den här principtypen. Rekommenderade inställningar är inte tillgängliga.
@@ -63,15 +62,14 @@ Du distribuerar inte principerna direkt till användare och enheter. I stället 
 
 4.  Skriv eller klistra in en XML-egenskapslista med de appkonfigurationsinställningar som du vill använda i rutan i ämnet **Konfigurationsprincip för mobilapp** på sidan.
 
-    > [!TIP]
-    > Mer information om XML-egenskapslistor finns i [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
+    > [!TIP] Mer information om XML-egenskapslistor finns i [Förstå XML-egenskapslistor](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
     > 
     > Formatet på XML-egenskapslistan varierar beroende på vilken app du konfigurerar. Kontakta appleverantören för information om vilket format du ska använda.
     > 
     > Intune har stöd för följande datatyper i en egenskapslista:
     > 
     > &lt;heltal&gt;
-    > &lt;verklig&gt;
+    > &lt;verkligt&gt;
     > &lt;sträng&gt;
     > &lt;matris&gt;
     > &lt;dict&gt;
@@ -81,15 +79,7 @@ Du distribuerar inte principerna direkt till användare och enheter. I stället 
     >
         > Dessutom stöder Intune följande typer av token i egenskapslistan:
     >    
-    > \{\{userprincipalname\}\} – (Exempel: **Johan@contoso.com**)
-    > \{\{mail\}\} – (Exempel: **Johan@contoso.com**)
-    > \{\{partialupn\}\} – (Exempel: **Johan**)
-    > \{\{accountid\}\} – (Exempel: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-    > \{\{deviceid\}\} – (Exempel: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-    > \{\{userid\}\} – (Exempel: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-    > \{\{username\}\} – (Exempel: **Johan Danielsson**)
-    > \{\{serialnumber\}\} - (Exempel: **F4KN99ZUG5V2**) för iOS-enheter
-    > \{\{serialnumberlast4digits\}\} - (Exempel: **G5V2**) för iOS-enheter
+    > \{\{användarhuvudnamn\}\} – (Exempel: **John@contoso.com**) \{\{e-post\}\} – (Exempel: **John@contoso.com**) \{\{delupn\}\} – (Exempel: **John**) \{\{konto-id\}\} – (Exempel: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**) \{\{enhets-id\}\} – (Exempel: **b9841cd9-9843-405f-be28-b2265c59ef97**) \{\{användar-id\}\} – (Exempel: **3ec2c00f-b125-4519-acf0-302ac3761822**) \{\{användarnamn\}\} – (Exempel: **John Doe**) \{\{serienummer\}\} – (Exempel: **F4KN99ZUG5V2**) för iOS-enheter \{\{serienummersista4siffror\}\} – (Exempel: **G5V2**) för iOS-enheter
 >
 > Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för andra ändamål.
 
@@ -114,8 +104,7 @@ Fortsätt sedan att distribuera och övervaka appdistributionen som vanligt.
 
 När den distribuerade appen körs på en enhet körs den med de inställningar som du konfigurerade i konfigurationsprincipen för mobilappar.
 
-> [!TIP]
-> Om en eller flera konfigurationsprinciper för mobilappar är i konflikt med varandra tillämpas ingen av dem och konflikten rapporteras på **instrumentpanelen** i Intune-administrationskonsolen.
+> [!TIP] Om en eller flera konfigurationsprinciper för mobila appar är i konflikt med varandra tillämpas ingen av dem, utan konflikten rapporteras på **instrumentpanelen** i Intune-administrationskonsolen.
 
 ## Exempelformat för XML-filen för en mobilappskonfiguration
 
@@ -150,6 +139,6 @@ När du skapar en konfigurationsfil för mobilappar kan du ange en eller flera a
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -30,7 +30,7 @@
 
 ### [Hantera inställningar och funktioner på dina enheter med principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Inställningar för iOS](ios-policy-settings-in-microsoft-intune.md)
-#### [Inställningar för Android](android-policy-settings-in-microsoft-intune.md)
+#### [Android- och Samsung KNOX-inställningar](android-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows 8 och Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows 10 Desktop och Mobile](windows-10-policy-settings-in-microsoft-intune.md)
@@ -106,6 +106,7 @@
 ### [Förbereda affärsappar för MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 #### [Omsluta iOS-appar](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
 #### [Omsluta Android-appar](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+#### [LOB-appar på enheter som inte hanteras av Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Använda SDK när du skriver en app](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
@@ -118,11 +119,13 @@
 
 ## [Migrera till Intune](migrate-to-intune.md)
 
-## [Vad är nytt?](whats-new-in-microsoft-intune.md)
+## [Nyheter](whats-new-in-microsoft-intune.md)
+
+# [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 
 # [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

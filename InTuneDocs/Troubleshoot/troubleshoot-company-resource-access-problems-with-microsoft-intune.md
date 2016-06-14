@@ -374,9 +374,9 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016346011|0x87D10065|Det angivna SyncML-kommandot genomförs, men har ännu inte slutförts.|
 
 ### Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

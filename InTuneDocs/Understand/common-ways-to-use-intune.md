@@ -67,11 +67,11 @@ Uppdragspersonal använder mobil teknik i allt större omfattning.  Till exempel
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
 ## Gör det möjligt för medarbetarna att på ett säkert sätt få åtkomst till Office 365 från en ej hanterad offentlig dator
-Ibland behöver medarbetarna använda enheter, appar eller webbläsare som du inte kan hantera, t.ex. offentliga datorer på mässor och hotell.  Ska du tillåta att medarbetarna får åtkomst till företagets e-post från dem?  Med Intune och Enterprise Mobility Suite finns det alternativ.  Svaret kan vara ett enkelt ”nej” genom att begränsa e-poståtkomst till enheter som hanteras av organisationen.  Du kan även välja att tillåta begränsad åtkomst på dessa ej betrodda datorer genom att kräva multifaktorautentisering och endast tillåta webbläsaråtkomst (Outlook Web Access) i ett läge där det inte går att hämta filer (t.ex. e-postbilagor).  Det säkerställer att den starkt autentiserade medarbetaren inte råkar lämna företagsdata på den ej betrodda datorn.
+Ibland behöver medarbetarna använda enheter, appar eller webbläsare som du inte kan hantera, t.ex. offentliga datorer på mässor och hotell. Ska du tillåta att medarbetarna får åtkomst till företagets e-post från dem? Med Intune och Enterprise Mobility Suite <!--you have choices. The--> blir svaret helt enkelt ”nej” genom att begränsa e-poståtkomsten till enheter som hanteras av din organisation.  <!-- Alternatively, you can choose to allow limited access to these untrusted computers by requiring multi-factor authentication and only allowing browser access (Outlook Web Access) in a mode where files cannot be downloaded (e.g. email attachments).-->  Det säkerställer att den starkt autentiserade medarbetaren inte råkar lämna företagsdata på den ej betrodda datorn.
 
 <!-- Learn more about how to plan and deploy Intune to support kiosks. -->
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

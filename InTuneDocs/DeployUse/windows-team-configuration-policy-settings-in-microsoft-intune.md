@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Inställningar för Windows Team-konfigurationsprincip i Microsoft Intune | Microsoft Intune
+title: Inställningar för Windows Team-konfigurationsprincip| Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -33,7 +33,7 @@ Använd Microsoft Intunes **allmänna Windows 10 Team-konfigurationsprincip** om
 |**Låt skärmen aktiveras automatiskt när någon är i rummet**|Tillåter att enheten aktiveras automatiskt när dess sensor känner av att någon är i rummet.|
 |**Kräv PIN-kod för trådlös projektion**|Anger om du måste ange en PIN-kod innan du kan använda funktionerna för trådlös projektion för enheten.|
 |**Ange en underhållsperiod för enhetsuppdateringar**|Konfigurerar tidsperioden då uppdateringar till enheten kan göras. Du kan konfigurera starttiden och varaktigheten (mellan 1–5 timmar).|
-|**Aktivera Åtgärdsinformation i Azure**|Åtgärdsinformation i Azure är en del av Microsoft Operations Manager-programsviten och samlar in, lagrar och analyserar loggfilsdata från Windows 10 Team-enheter.<br /><br />För att ansluta till Åtgärdsinformation i Azure måste du ange ett **arbetsyte-ID** och en **arbetsytenyckel**.|
+|**Aktivera Åtgärdsinformation i Azure**|Åtgärdsinformation i Azure är en del av Microsoft Operations Manager-programsviten och samlar in, lagrar och analyserar loggfilsdata från Windows 10 Team-enheter.<br /><br />Om du vill kunna ansluta till Azure-åtgärdsinformationen måste du ange ett **Arbetsyte-ID** och en **Arbetsytenyckel**.|
 |**Aktivera trådlös Miracast-projektion**|Aktivera det här alternativet om du vill att Windows 10 Team-enheten ska kunna använda Miracast-aktiverade enheter för att projicera innehåll.<br /><br />Om du aktiverar det här alternativet från **Välj Miracast-kanal** väljer du den Miracast-kanal som används för att projicera innehåll.|
 |**Välj den mötesinformation som ska visas på välkomstskärmen**|Om du aktiverar det här alternativet kan du välja den information som ska visas i rutan **Möten** på **välkomstskärmen**. Du kan:<br /><br />-   **Visa endast kalender och tid**<br />-   **Visa kalender, tid och ämne (ämnet är dolt för privata möten)**|
 |**Webbadress till bakgrundsbild för låsskärm**|Aktivera den här inställningen om du vill visa en anpassad bakgrund på **välkomstskärmen** på Windows 10 Team-enheter från den webbadress som du anger.<br /><br />Bilden måste vara i PNG-format och webbadressen måste börja med **https://**.|
@@ -44,6 +44,6 @@ Använd Microsoft Intunes **allmänna Windows 10 Team-konfigurationsprincip** om
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Skydda iOS-enheter med Kringgå Aktiveringslås för Microsoft Intune | Microsoft Intune
+title: Skydda iOS-enheter med Kringgå aktiveringslås | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -49,7 +49,7 @@ För att hjälpa att lösa de här problemen, så introducerade Apple med iOS 7.
 > Övervakat läge för iOS-enheter gör att du kan använda Apples Konfigureringsverktyg för att låsa en enhet och begränsa funktionaliteten till specifika företagsändamål. Övervakat läge är generellt sett bara till för företagsägda enheter.
 
 ## Hur Intune hjälper dig att hantera aktiveringslås
-Intune kan begära status för aktiveringslås för både övervakade och oövervakade enheter som kör iOS 7.1 och senare. För övervakade enheter kan Intune hämta koden för att förbikoppla aktiveringslås och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda koden som användarnamn och ett tomt lösenord).
+Intune kan begära status för aktiveringslås för både övervakade och oövervakade enheter som kör iOS 7.1 och senare. Enbart för övervakade enheter kan Intune hämta koden för att kringgå aktiveringslåset och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda koden som användarnamn och ett tomt lösenord).
 
 **Företagets fördelar med detta är att**:
 
@@ -61,7 +61,7 @@ Intune kan begära status för aktiveringslås för både övervakade och oöver
 > [!IMPORTANT]
 > När du kringgått aktiveringslåset på en enhet, kommer den automatiskt att aktivera ett nytt aktiveringslås om appen Hitta Min iPhone öppnas. Därför **bör du ha fysisk tillgång till enheten innan du följer den här proceduren**.
 
-1.  I [Microsoft Intune administrationskonsol](https://manage.microsoft.com) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter**.
 
 2.  Markera den enhet vars aktiveringslås du vill förbikoppla. Välj **Förbikoppla aktiveringslås**.
 
@@ -90,9 +90,9 @@ Du kan se vilka enheter som använder aktiveringslås på två sätt:
 
 ### Se även
 [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md)
-[Skydda dina enheter med fjärrlåsning och lösenordsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
+[Skydda dina enheter med fjärrlås och lösenordskodsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

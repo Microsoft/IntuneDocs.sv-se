@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Exchange ActiveSync-principinställningar i Microsoft Intune | Microsoft Intune
+title: Exchange ActiveSync-principinställningar | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -47,7 +47,7 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 
 |Inställningsnamn|Information|
 |----------------|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att data på enheten krypteras när detta stöds.<br>För Windows Phone 8-enheter måste du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|
+|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att data på enheten krypteras när detta stöds.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|
 |**Kräv kryptering på minneskort**|Kräver att data som lagras på externa lagringsenheter, t.ex. ett SD-kort, ska krypteras (på enheter som stöds).
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
 
@@ -86,6 +86,6 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

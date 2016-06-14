@@ -28,14 +28,14 @@ ms.suite: ems
 # Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune
 Hanteringsprinciper för mobilappar (MAM) kan tillämpas på appar som körs på enheter som kan, men som inte måste, hanteras av Intune. En detaljerad beskrivning av hur MAM-principer fungerar och de scenarier som stöds av Intunes MAM-principer finns i avsnittet [Skydda appdata med hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
-Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure Portal**. MAM-principen som du skapar i Azure Portal stöds för alla MAM-scenarier:
+Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure Portal**. Azure Portal är en ny administratörskonsol som används för att skapa MAM-principer och vi rekommenderar att du använder den här portalen när MAM-principerna skapas. Azure Portal har stöd för följande MAM-scenarier:
 - Enheter som har registrerats i Intune
 - Enheter som hanteras av en MDM-lösning från tredje part
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
 
-Om du för närvarande använder **Intune-administratörskonsolen** för att hantera enheter kan du skapa en MAM-princip som har stöd för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
+Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
-> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer.
+> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
 
 Om du vill se en lista över principinställningar som stöds för Android- och iOS-plattformar kan du välja något av följande:
 
@@ -49,13 +49,13 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
-    > Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med portalen.
+    > [!TIP] Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) och bekantar dig med portalen.
 
 2.  På bladet **Inställningar** väljer du **Apprincip**.  När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga.
 
     ![Skärmbild av bladet Apprincip som visar en lista med befintliga principer](../media/AppManagement/AzurePortal_MAM_AppPolicy.png)
 
-3.  Välj **Lägg till en princip**
+3.  Välj **Lägg till en princip**.
 
     ![Skärmbild av bladet Apprincip med menyalternativet Lägg till en princip markerat ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
@@ -65,7 +65,7 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
 
 5.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Du kan välja en eller flera appar i listan som du vill associera med principen som du skapar. När du har valt apparna väljer du knappen **Välj** längst ned på bladet **Appar** för att spara ditt val.
 
-    > Du måste välja minst en app för att skapa en princip.
+    > [!IMPORTANT] Du måste välja minst en app om du vill skapa en princip.
 
 6.  Öppna principinställningsbladet genom att välja **Konfigurera nödvändiga inställningar** på bladet **Lägg till en princip**.
 
@@ -167,6 +167,6 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 [Slutanvändarupplevelse för MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

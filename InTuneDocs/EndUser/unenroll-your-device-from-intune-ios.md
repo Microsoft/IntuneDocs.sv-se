@@ -15,7 +15,7 @@ ms.assetid: 28914db1-3e62-45f5-9632-b0d2a808a44d
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -34,7 +34,7 @@ Använd följande instruktioner om du vill avregistrera enheten från Intune ell
 
 1.  Välj den enhet som du vill avregistrera under **Mina enheter**i företagsportalappen.
 
-2.  Tryck på  **Ta bort** &gt; **Ta bort**.
+2.  Tryck på **Ta bort** &gt; **Ta bort**.
 
 När du avregistrerar en enhet från Intune händer följande:
 
@@ -57,6 +57,6 @@ När du avregistrerar en enhet från Intune händer följande:
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

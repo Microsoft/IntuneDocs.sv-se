@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -37,26 +37,26 @@ Detta inträffar när alternativet **Tillåt att e-post skickas från tredjepart
 
 ### Intune-lösning
 
-1.  Öppna Microsoft Intune-administrationskonsolen och välj arbetsbelastningen **Princip** &gt; **Konfigurationsprincip**
+1.  Öppna Microsoft Intune-administrationskonsolen och välj arbetsbelastningen **Princip** &gt;**Konfigurationsprincip**.
 
-2.  Välj e-postprofilen och klicka på **Redigera**
+2.  Välj e-postprofilen och klicka på **Redigera**.
 
 3.  Välj **Tillåt att e-post skickas från tredjepartsprogram.**
 
 ### Configuration Manager integrerat med Intune
 
-1.  Öppna Configuration Manager-konsolen &gt; **Tillgångar och efterlevnad**.
+1.  Öppna Configuration Manager-konsolen &gt;**Tillgångar och efterlevnad**.
 
-2.  Expandera **Översikt** -&gt; **Kompatibilitetsinställningar** -&gt; **Åtkomst till företagsresurs** och välj **E-postprofiler**
+2.  Expandera **Översikt** -&gt;**Efterlevnadsinställningar** -&gt;**Åtkomst till företagsresurser** och välj **E-postprofiler**.
 
-3.  Högerklicka på e-postprofilen och öppna **Egenskaper**
+3.  Högerklicka på e-postprofilen och öppna **Egenskaper**.
 
-4.  Välj **Tillåt att e-post skickas från tredjepartsprogram** på fliken **Synkroniseringsinställningar**
+4.  Välj **Tillåt att e-post skickas från tredjepartsprogram** på fliken **Synkroniseringsinställningar**.
 
 ## Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

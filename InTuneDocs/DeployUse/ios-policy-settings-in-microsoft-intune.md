@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Principinställningar för iOS i Microsoft Intune | Microsoft Intune
+title: iOS-principinställningar | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -38,7 +38,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vil
 -   **Kompatibla och inkompatibla appar** – Ange en lista över appar i företaget som är kompatibla eller inkompatibla. För Android- och iOS-enheter kan **Inkompatibilitetsrapporter för appar** användas för att visa om de appar du har angett i listan är kompatibla med appar som användare har installerat (men det inte går att blockera installationen av programmet).
 
 > [!TIP]
-> Du kan konfigurera villkor för användarna för att säkerställa att de är medvetna om att apparna på deras enheter, även personliga appar, kommer att utvärderas och inkompatibla appar antingen kommer att blockeras eller rapporteras som inkompatibla. Användarna måste acceptera dessa villkor innan de kan registrera sina enheter och använda företagsportalen för att hämta appar. Mer information om de allmänna villkoren finns i [Inställningar för villkorsprinciper i Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md)..
+> Du kan konfigurera villkor för användarna för att säkerställa att de är medvetna om att apparna på deras enheter, även personliga appar, kommer att utvärderas och inkompatibla appar antingen kommer att blockeras eller rapporteras som inkompatibla. Användarna måste acceptera dessa villkor innan de kan registrera sina enheter och använda företagsportalen för att hämta appar. Mer information om de allmänna villkoren finns i [Principinställningar för användarvillkor i Microsoft Intune](terms-and-condition-policy-settings-in-microsoft-intune.md).
 
 Om den inställning som du söker efter inte visas i avsnittet kan du skapa den med hjälp av en anpassad iOS-princip med vilken du kan importera inställningar som du har skapat med hjälp av [Apple-konfigurationsverktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Mer information finns i **Anpassade principinställningar** senare i det här avsnittet.
 
@@ -160,7 +160,7 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 |**Tillåt ringsignalsomkopplare**|Aktiverar eller inaktiverar tyst läge på enheten.|
 |**Tillåt aktiveringsknapp på skärmen**|Aktiverar eller inaktiverar aktiveringsknappen på enhetens skärm.|
 |**Tillåt automatiskt lås**|Aktiverar eller inaktiverar automatisk låsning av enheten.|
-|**Aktivera monoljud**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Monoljud**..|
+|**Aktivera monoljud**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Monoljud**.|
 |**Aktivera text-till-tal**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Text-till-tal** som läser upp text på enhetsskärmen.|
 |**Aktivera justering av text-till-tal**|Aktiverar eller inaktiverar justeringar av text-till-talfunktionen så att du kan justera funktionen text-till-tal (till exempel hur snabbt texten ska läsas upp).|
 |**Aktivera zoom**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Zoom** som gör att du kan använda pekskärmen för att zooma in det som visas på enheten.|
@@ -170,8 +170,7 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 |**Aktivera Assistive Touch**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Assistive Touch** som hjälper användaren med gester på skärmen som kan vara svåra att utföra.|
 |**Aktivera anpassning av Assistive Touch**|Aktiverar eller inaktiverar anpassning av funktionen Assistive Touch.|
 |**Aktivera Läs upp markering**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Läs upp markering** som kan läsa upp texten du väljer.|
-> [!NOTE]
-> Följande information gäller inställningar för helskärmsläge på iOS-enheter:
+> [!NOTE] Följande information gäller inställningar för helskärmsläge på iOS-enheter:
 > 
 > -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator Tool](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller Enhetsregistreringshanteraren för att placera enheten i övervakat läge Mer information om Apple Configurator Tool, se dokumentationen till Apple.
 > -   Om iOS-appen du anger har installerats efter det att du har distribuerat konfigurationsprincipen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
@@ -183,9 +182,9 @@ Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten
 
 ##### Så här kör du Inkompatibilitetsrapporter för appar
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapporter för appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller inkompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
 
 #### Så här anger du webbadresser till appbutiker
 Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla appar eller i alternativet **Välj en hanterad app som kommer att kunna köras när enheten är i helskärmsläge** (endast iOS), använder du följande format:
@@ -196,8 +195,7 @@ Kopiera webbadressen till sidan och använd den som webbadress för att konfigur
 
 **Exempel:** Sök efter **Microsoft Word för iPad**. Webbadressen du använder är **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
-> [!NOTE]
-> Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
+> [!NOTE] Du kan även använda iTunes-programmet för att hitta appen och sedan hämta appens webbadress med hjälp av kommandot **Kopiera länk**.
 
 
 ## Anpassade principinställningar
@@ -232,6 +230,6 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -30,21 +30,23 @@ ms.suite: ems
 
 När du avregistrera en Android-enhet från Intune:
 
+-   Du avregistrerar enheten från Intune, vilket innebär att din IT-administratör inte längre hanterar enheten. 
+
+-   Du förlorar åtkomst till företagets data och resurser.
+
 -   Enheten visas inte på företagsportalen längre.
 
 -   Det går inte att installera appar från företagsportalen längre.
 
 -   Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran eller att en viss längd på lösenorden krävdes, gäller inte längre.
 
--   Eventuellt har du inte åtkomst till vissa företagsresurser från din enhet längre, exempelvis fildelningar eller interna webbplatser.
-
 Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post och du avregistrerar enheten kommer den inte längre att visas i företagsportalen. 
 
-Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md)
+Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

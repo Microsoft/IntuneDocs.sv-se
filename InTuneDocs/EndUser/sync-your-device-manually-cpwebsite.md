@@ -28,13 +28,13 @@ ms.suite: ems
 
 # Synkronisera enheten manuellt
 
-Om installationen av appen tar för lång tid kan du synkronisera enheten manuellt, vilket kan påskynda installationen. Följ instruktionerna för din typ av enhet:
+Om installationen av appen tar för lång tid kan du synkronisera enheten manuellt, vilket kan påskynda installationen. Följ de anvisningar nedan som matchar den typ av enhet eller version av Windows som du har. Endast de versioner som anges i listan stöds.
 
 * [Windows 10 Mobil](sync-your-device-manually-windows.md#windows-10-mobile)
 * [Windows 10 Desktop](sync-your-device-manually-windows.md#windows-10-desktop)
 * [Windows Phone 8.1](sync-your-device-manually-windows.md#windows-phone-8-1)
 * [iOS](sync-your-device-manually-ios.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

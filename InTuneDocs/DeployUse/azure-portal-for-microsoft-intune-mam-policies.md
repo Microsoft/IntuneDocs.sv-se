@@ -30,13 +30,13 @@ ms.suite: ems
 **Azure Portal** gör det möjligt att skapa och hantera hanteringsprinciper för mobilappar.
 
 Azure Portal har stöd för att skapa MAM-principer för:
-- Appar som körs på enheter som har **registrerats och hanteras av Intune**
+- Appar som körs på enheter **som är registrerade och hanteras av Intune**.
 - Appar som körs på enheter som **inte är registrerade** i någon MDM-lösning.
-- Appar som körs på enheter som **är registrerade i en MDM-lösning från tredje part**
+- Appar som körs på enheter som **är registrerade i en MDM-lösning från tredje part**.
 
-Om du för närvarande använder **Intune-administratörskonsolen** för att hantera enheter kan du skapa en MAM-princip som har stöd för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
+Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
-> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer.
+> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsol som används för att skapa MAM-principer. Om du skapar MAM-principer i både Intune-administrationskonsolen och Azure Portal, tillämpas principen i Azure Portal på apparna och distribueras till användarna.
 
 ## Logga in på Azure Portal och anpassa startsidan
 
@@ -48,9 +48,9 @@ Om du för närvarande använder **Intune-administratörskonsolen** för att han
 
     ![Skärmbild av instrumentpanelen i Azure portal](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  På menyn **Bläddra** letar du reda på **Intune**.![Skärmbild av menyn Bläddra med Intune markerat](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
+3.  På menyn **Bläddra** letar du upp **Intune**.![Skärmbild av menyn Bläddra med Intune markerat](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
-4.  Klicka på **Intune > Hantering av mobilprogram i Intune > Inställningar**
+4.  Klicka på **Intune > Hantering av mobilprogram i Intune > Inställningar**.
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
@@ -64,6 +64,6 @@ Om du för närvarande använder **Intune-administratörskonsolen** för att han
 [Förbered dig för att konfigurera hanteringsprinciper för mobilappar](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

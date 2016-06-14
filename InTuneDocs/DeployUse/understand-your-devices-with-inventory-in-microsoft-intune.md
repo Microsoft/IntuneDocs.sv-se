@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Förstå dina enheter med inventering i Microsoft Intune | Microsoft Intune
+title: Förstå dina enheter med inventering | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -66,8 +66,7 @@ Om du vill se inventeringen som samlas in av mobila enheter kör du [Rapporter o
 |**Kryptering är aktiverat**|All -enheter|
 
 ## Det här samlas in från Windows-datorer
-> [!IMPORTANT]
-> Det här avsnittet gäller endast för Windows-datorer som kör Intunes Windows-PC-klientprogramvara.
+> [!IMPORTANT] Det här avsnittet gäller endast för Windows-datorer som kör Intunes Windows-datorklientprogram.
 
 Om du vill visa inventeringen som samlas in av Windows-datorer kör du [datorinventeringsrapporterna](understand-microsoft-intune-operations-by-using-reports.md). Intune samlar in följande inventering från Windows-datorer:
 
@@ -113,11 +112,12 @@ Om du vill visa inventeringen som samlas in av Windows-datorer kör du [datorinv
 
 -   **Senast uppdaterad**
 
-### Se även
-[Övervakning och rapporter med Microsoft Intune](monitoring-and-reports-with-microsoft-intune.md)
+<!-- this section below belongs in the planning journey
+### See Also
+[Monitoring and reports with Microsoft Intune](monitoring-and-reports-with-microsoft-intune.md)
+-->
 
 
-
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

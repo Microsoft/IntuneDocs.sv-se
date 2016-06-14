@@ -28,9 +28,9 @@ ms.suite: ems
 
 # Avregistrera enheten från Intune
 
-Om du är registrerad i Intune, men inte längre vill använda din Windows-enhet på arbetet eller skolan och inte har behov av att komma åt e-postmeddelanden, appar eller andra resurser på arbetet eller skolan, så måste du avregistrera din enhet.   När du avregistrerat enheten från Intune kommer du inte längre ha åtkomst till dessa resurser. Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+Om du är registrerad i Intune, men inte längre vill använda din Windows-enhet på arbetet eller skolan och inte har behov av att komma åt e-postmeddelanden, appar eller andra resurser på arbetet eller skolan, så måste du avregistrera din enhet. När du avregistrerat enheten från Intune kommer du inte längre ha åtkomst till dessa resurser. Mer information om vad som händer när du avregistrerar enheten finns i [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
-Om du vill avregistrera enheten följer du anvisningarna för din enhet:
+Om du vill avregistrera enheten använder du den länk om visas i avsnittet ”I den här artikeln” ovan som matchar den typ av enhet som du använder:
 
 -   [Avregistrera din Windows 10-enhet](#unenroll-your-windows-10-device)
 -   [Avregistrera din Windows 8.1-dator](#unenroll-your-windows-8-1-computer)
@@ -44,31 +44,31 @@ Om du vill avregistrera enheten följer du anvisningarna för din enhet:
 
 3.  I **Mina Enheter**väljer du den enhet du vill avregistrera.
 
-4.  Tryck på **Ta bort** &gt; **Ta bort**
+4.  Tryck på **Ta bort** &gt; **Ta bort**.
 
 ## Avregistrera din Windows 8.1-dator
 
-1.  Gå till **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats**
+1.  Gå till **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats**.
 
-2.  Tryck på **Lämna** under **Anslut till arbetsplats**
+2.  Tryck på **Lämna** under **Anslut till arbetsplats **.
 
-3.  Tryck på **Inaktivera** under **Aktivera enhetshantering**
+3.  Tryck på **Inaktivera** under **Aktivera enhetshantering**.
 
-4.  Tryck på **Inaktivera** i popup-fönstret som öppnas
+4.  Tryck på **Inaktivera** i popup-fönstret som öppnas.
 
 ## Avregistrera din Windows Phone 8.1-enhet
 
-1.  Gå till **Inställningar** &gt; **Arbetsplats**
+1.  Gå till **Inställningar** &gt; **Arbetsplats**.
 
 2.  Tryck på arbetsplatskontot som du vill avregistrera.
 
 3.  Tryck på **Ta bort** längst ned på skärmen.
 
-4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**
+4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

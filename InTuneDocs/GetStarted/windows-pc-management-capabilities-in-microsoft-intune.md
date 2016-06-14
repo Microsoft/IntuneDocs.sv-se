@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Funktioner för hantering av Windows-datorer i Microsoft Intune | Microsoft Intune
+title: Funktioner för hantering av Windows-datorer | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -34,7 +34,7 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 
 -   **Skydd mot skadlig programvara** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
 
--   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune.
+-   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
 -   **Hantera programvarulicenser** –Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
 -   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogramvaran.
@@ -46,11 +46,13 @@ Intune kan hantera datorer som kör följande Windows-versioner (både x86 och x
 
 -   **Windows Vista** – Business-, Enterprise- och Ultimate-versioner.
 
--   **Windows 7** – Professional-, Enterprise- och Ultimate-versioner (utan service pack eller med SP1).
+-   **Windows 7** – Pro-, Enterprise- och Ultimate-versionerna (utan service pack eller med SP1).
 
--   **Windows 8** – Professional- och Enterprise-versioner.
+-   **Windows 8** – Pro- och Enterprise-versionerna.
 
--   **Windows 8.1** – Professional- och Enterprise-versioner.
+-   **Windows 8.1** – Pro- och Enterprise-versionerna.
+
+- **Windows 10** – Home-, Pro-, Education- och Enterprise-versionerna.
 
 
 ## Minsta maskinvarukrav
@@ -72,9 +74,9 @@ Nedan visas programvarukraven för att installera Intune PC-klienten:
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune PC-klientprogrammet måste du avinstallera följande klientprogram från datorn:<br /><br />– Alla versioner av Configuration Manager<br />– Alla versioner av Microsoft Systems Management Server (SMS)|
 
 ### Se även
-[Funktioner för hantering av mobila enheter i Microsoft Intune](/intune/understand/mobile-device-management-capabilties-in-microsoft-intune.md)
+[Funktioner för hantering av mobila enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

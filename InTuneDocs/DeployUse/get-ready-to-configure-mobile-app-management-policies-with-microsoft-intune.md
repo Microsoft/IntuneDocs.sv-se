@@ -27,9 +27,19 @@ ms.suite: ems
 
 # Förbered dig för att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune
 Den här artikeln beskriver vad du behöver göra innan du kan skapa principer för hantering av mobilappar (MAM) i Azure Portal.
-Om du för närvarande använder **Intune-administratörskonsolen** för att hantera enheter kan du skapa en MAM-princip som har stöd för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
+
+Azure Portal är en ny administratörskonsol som används för att skapa MAM-principer och vi rekommenderar att du använder den här portalen när MAM-principerna skapas. Azure Portal har stöd för följande MAM-scenarier:
+- Enheter som har registrerats i Intune
+- Enheter som hanteras av en MDM-lösning från tredje part
+- Enheter som inte hanteras av någon MDM-lösning (BYOD).
+
+Om du inte har använt Azure Portal tidigare kan du läsa avsnittet [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) så får du en snabb överblick.
+
+Om du för närvarande använder **Intune-administratörskonsolen** för att hantera dina enheter kan du skapa MAM-principer som har stöd för appar för enheter som är registrerade i Intune med hjälp av **Intune-administratörskonsolen**, men det är bäst att använda Azure Portal även för enheter som är registrerade i Intune. Anvisningar för hur du skapar en MAM-princip med Intune-administratörskonsolen finns [här](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
 >[!IMPORTANT]
-> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer.
+> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
+
 
 ##  Plattformar som stöds
 - iOS 8.1 eller senare
@@ -37,27 +47,31 @@ Om du för närvarande använder **Intune-administratörskonsolen** för att han
 - Android 4 eller senare
 
 ##  Appar som stöds
-Om du vill se en fullständig lista över appar som stöds kan du gå till [Microsoft Intune-galleriet för mobilprogram](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) på sidan för Microsoft Intune-programpartner.
-Klicka på appen för att se vilka scenarier och plattformar som stöds och huruvida appen stöder flera identiteter.
+* **Microsoft-appar:** Dessa appar har en inbyggd app-SDK för Intune och kräver ingen ytterligare bearbetning innan du tillämpar MAM-principer.
+Om du vill se en fullständig lista över Microsoft-appar som stöds går du till [Microsoft Intune-mobilprogramsgalleriet](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) på sidan för Microsoft Intune-programpartner. Klicka på appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen har stöd för flera identiteter.
+* Din internt byggda **Branschspecifika appar:** Med dessa måste appen förberedas för att inkludera Intune App SDK innan du kan tillämpa MAM-principer.
+
+  * För enheter som hanteras av Intune, se [Besluta hur du ska förbereda appar för MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+  * För enheter som inte hanteras som medarbetarägda enheter eller för enheter som hanteras av en tredjepartslösning för hantering av mobila enheter finns mer information i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
 **Innan** du kan konfigurera MAM-principer behöver du följande:
 
 -   **En prenumeration på Microsoft Intune**.    Slutanvändare behöver [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licenser för att hämta appar med MAM-principen.
 
--   **Auktoriteten för hanteringen av mobila enheter** måste vara inställd på antingen **Intune** eller **Configuration Manager**, beroende på om du använder bara Intune eller Configuration Manager integrerat med Intune för att hantera dina enheter. Om du använder inbyggd hantering av mobila enheter i O365 måste du köpa en Intune-prenumeration och [ange Intune som auktoritet för hanteringen av mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)
 -   En prenumeration på **Office 365 (O365)** som krävs för följande:
   - Tillämpa MAM-principer för appar med stöd för flera identiteter.
   - Skapa konton för SharePoint Online och Exchange Online-arbete. Lokalt Exchange och lokalt SharePoint stöds inte.
+-    **Aktivera modern autentisering** för **Skype för företag – online**. Logga in på Microsoft Connect och fyll i [det här formuläret](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) om du vill registreras i programmet för modern autentisering.
 
 
 - **Azure Active Directory (Azure AD)** för att skapa användare. Azure AD autentiserar användaren när slutanvändaren startar appen och anger sina autentiseringsuppgifter.
 
-    > Om du konfigurerar användare via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen bör du tänka på att konfigurationen av MAM-principen flyttar till Azure Portal framöver och för att använda den här portalen måste du skapa användargrupper i Azure AD med Office 365-portalen.
+    > [!NOTE] Om du konfigurerar användare via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen bör du tänka på att MAM-principskonfigureringen flyttar till Azure Portal framöver och om du vill använda den här portalen måste du skapa användargrupper i Azure AD med hjälp av Office 365-portalen.
 
 
 ## Skapa användare och tilldela Microsoft Intune-licenser
 
-1. Du behöver en Intune-prenumeration: Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du för närvarande använder [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att hantera enheter.  Du har också en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du har köpt en EMS-licens. Om du provar [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att kolla in MAM-funktionerna kan du skapa ett provkonto [här](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)
+1. Du behöver en Intune-prenumeration: Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du för närvarande använder [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att hantera enheter.  Du har också en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du har köpt en EMS-licens. Om du provar [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att få en överblick av MAM-funktionerna kan du skapa ett provkonto [här](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/).
 
     Kontrollera om du har en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration genom att besöka sidan Fakturering på Office-portalen.  Du bör se [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] som **aktivt** under prenumerationerna.
 
@@ -86,16 +100,16 @@ I följande tabell visas rollen och behörigheterna som du kan tilldela administ
 
 ## Tilldela en användare deltagarrollen
 
-**Globala administratörer** har åtkomst till Azure Portal.  Om du vill att andra administrativa användare ska kunna konfigurera principer och utföra andra uppgifter för hantering av mobilappar kan du tilldela användaren **deltagarrollen** enligt beskrivningen nedan:
+**Globala administratörer** har åtkomst till [Azure Portal](https://portal.azure.com).  Om du vill att andra administrativa användare ska kunna konfigurera principer och utföra andra uppgifter för hantering av mobilappar kan du tilldela användaren **deltagarrollen** enligt beskrivningen nedan:
 
 
-1.  På bladet **Inställningar** i avsnittet **Resurshantering** klickar du på **Användare**
+1.  Gå till bladet **Inställningar** och klicka på **Användare** i avsnittet **Resurshantering**.
 
     ![Skärmbild av bladet Användare på Azure Portal](../media/AppManagement/AzurePortal_MAM_AddUsers.png)
 
 2.  Klicka på **Lägg till** för att öppna bladet **Lägg till åtkomst** .
 
-3.  Klicka på **Välj en roll** och sedan på **Deltagarroll**
+3.  Klicka på **Välj en roll**och sedan på **Deltagarroll**.
 
     ![Skärmbild av bladet Välj en roll på Azure Portal](../media/AppManagement/AzurePortal_MAM_AddRole.png)
 
@@ -103,12 +117,12 @@ I följande tabell visas rollen och behörigheterna som du kan tilldela administ
 
     ![Skärmbild av bladet Lägg till användargrupp på Azure Portal](../media/AppManagement/AzurePortal_MAM_AddusertoRole.png)
 
-    > Om du väljer en användare som inte har tilldelats någon [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licens kommer den användaren inte att komma åt portalen.
+    > [!IMPORTANT] Om du väljer en användare som inte har tilldelats någon [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licens kommer den här användaren inte att komma åt portalen.
 
 ## Nästa steg
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

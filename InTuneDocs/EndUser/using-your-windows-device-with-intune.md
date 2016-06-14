@@ -42,6 +42,7 @@ Det här avsnittet innehåller information om installationen av Intune-företags
 Det här avsnittet innehåller information om åtgärder som du kan vidta när din Windows-enhet har registrerats i Intune.
 
 - [Kryptera din enhet](encrypt-your-device-windows.md)</br>
+- [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)</br>
 - [Återställ (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-windows.md)</br>
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-windows.md)</br>
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)</br>
@@ -54,7 +55,7 @@ Det här avsnittet innehåller information om åtgärder som du kan vidta när d
 Det här avsnittet innehåller information om hur du löser problem som kan uppstå när en Windows-enhet registreras i Intune.
 
 - [Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-windows.md)</br>
-- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply with-maximum-operating-system-version-windows.md)</br>
+- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-windows.md)</br>
 - [BitLocker är inte aktiverat i enheten](device-doesnt-have-bitlocker-enabled-windows.md)</br>
 - [Programvara mot skadlig kod är inte aktiverad på enheten](device-doesnt-have-antimalware-software-enabled-windows.md)</br>
 - [Säker start är inte aktiverat i enheten](device-doesnt-have-secure-boot-enabled-windows.md)</br>
@@ -63,6 +64,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

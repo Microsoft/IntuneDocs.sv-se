@@ -26,11 +26,22 @@ ms.suite: ems
 ---
 
 # Vad du behöver veta innan du startar Microsoft Intune
+
 ## Allmänna funktioner för hantering av enheter och appar
-Innan du börjar konfigurera [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] bör du läsa [Introduktion till Intune](/intune/understand-explore/introduction-to-microsoft-intune) och bekanta dig med funktionerna i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] som beskrivs i det här avsnittet. När du har bekantat dig med funktionerna i Intune är du redo att konfigurera din betalprenumeration. Om du började med en utvärderingsprenumeration kan du konvertera den senare till en fullständig prenumeration. Läs [Köpa Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx)
+Innan du börjar konfigurera Microsoft Intune bör du läsa [Introduktion till Intune](/intune/understand-explore/introduction-to-microsoft-intune) och bekanta dig med funktionerna i Intune som beskrivs i det här avsnittet. När du har bekantat dig med funktionerna i Intune är du redo att konfigurera din betalprenumeration. Om du började med en utvärderingsprenumeration kan du konvertera den senare till en fullständig prenumeration. Läs [Köpa Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx).
 
 ### Hantera mobila enheter och datorer utan server- eller intranätskrav
-Du kan hantera mobila enheter och datorer även om enheterna inte är anslutna till en domän eller finns på plats. Detta gör [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] idealiskt för ett företag med en mobil eller geografiskt spridd personal.
+Du kan hantera följande mobila enheter och datorer:
+
+-   Apple iOS 7.1 och senare
+-   Google Android 4.0 och senare (inklusive Samsung KNOX)
+-   Windows Phone 8.0 och senare
+-   Windows RT och Windows 8.1 RT
+-   Datorer som kör Windows 8.1
+-   Datorer som kör Windows 10 (versionerna Home, Pro, Education och Enterprise)
+-   Mac OS X 10.9 och senare
+
+Du kan hantera dessa enheter och datorer även om enheterna inte är anslutna till en domän eller finns på plats. Detta gör Intune idealiskt för ett företag med en mobil eller geografiskt utspridd personal. Se [Välj hur du vill hantera enheter](/Intune/Deploy-use/choose-how-to-manage-devices) för mer information om hantering av enheter.
 
 ### Kräva kryptering av mobila enheter och datorer
 Mobila enheter som stöder kryptering kan tvingas att använda kryptering. Du kan också kräva att datorer som stöder BitLocker-enhetskryptering ska använda det. Om en mobil enhet eller dator med kryptering tappas bort eller blir stulen går det inte att läsa data på enhetens lagringsmedium, vilket innebär att informationen är skyddad mot stöld.
@@ -45,10 +56,10 @@ Du kan skapa varningar som meddelar dig när det är problem med en mobil enhet 
 Användarna kan använda företagsportalen för att registrera enheter, installera platslicensierad programvara eller för att hitta kontaktuppgifter till IT-administratörer.
 
 ### Stöd för multifaktorautentisering
-[!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] stöder multifaktorautentisering (MFA). Mer information finns i [Skydda Windows-enheter med multifaktorautentisering](/intune/deploy-use/protect-windows-devices-with-multi-factor-authentication)
+Intune har stöd för multifaktorautentisering (MFA). Mer information finns i [Skydda Windows-enheter med multifaktorautentisering](/intune/deploy-use/protect-windows-devices-with-multi-factor-authentication).
 
 ### Tillgängligt på flera språk
-Intune finns på följande språk: kinesiska (förenklad och traditionell), tjeckiska, danska, nederländska, engelska, finska, franska, tyska, grekiska, ungerska, italienska, japanska, koreanska, norska, polska, portugisiska, rumänska, ryska, spanska, svenska och turkiska. En lista över de länder där [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-tjänsten stöds finns i [Internationell tillgänglighet](https://products.office.com/en-us/business/international-availability)
+Intune finns på följande språk: kinesiska (förenklad och traditionell), tjeckiska, danska, nederländska, engelska, finska, franska, tyska, grekiska, ungerska, italienska, japanska, koreanska, norska, polska, portugisiska, rumänska, ryska, spanska, svenska och turkiska. En lista över de länder där Intune-tjänsten stöds finns i [Internationell tillgänglighet](https://products.office.com/en-us/business/international-availability).
 
 ## Ytterligare krav och funktioner   
 Förutom de allmänna funktionerna bör du också bekanta dig med följande funktioner:
@@ -62,6 +73,6 @@ Förutom de allmänna funktionerna bör du också bekanta dig med följande funk
 - [Domännamn för Microsoft Intune](domain-names-for-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

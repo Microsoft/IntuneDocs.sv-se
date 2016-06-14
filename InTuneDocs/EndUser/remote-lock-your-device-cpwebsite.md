@@ -46,11 +46,11 @@ Använda Fjärrlås för att låsa enheten:
 
 1.  Tryck på namnet på den enhet som du vill låsa på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-2.  Tryck på **Fjärrlås**
+2.  Tryck på **Fjärrlåsning**.
 
     När du trycker på **Fjärrlås** visas statusen ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
 
-    Statusen visas på tre platser:
+    Status för fjärrlåsningens status visas på tre platser:
 
     * Meddelandefältet på webbplatsen. 
     * Sidan Information för enheten.
@@ -64,6 +64,6 @@ Använda Fjärrlås för att låsa enheten:
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

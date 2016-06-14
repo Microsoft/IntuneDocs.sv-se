@@ -6,7 +6,7 @@ description:
 keywords:
 author: nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -29,7 +29,7 @@ ms.suite: ems
 Det kan hända att du upptäcker problem med konfigurationen eller med klienter efter att du har distribuerat Microsoft Intune. Resurserna nedan kan hjälpa dig att ta reda på vad som kan vara orsaken till problemet så att du kan lösa det.
 
 > [!NOTE]
-> Klicka [här](https://portal.office.com/admin/default.aspx) om du vill besöka administrationscentret för Office 365  där du kan skapa en supportbegäran eller visa en befintlig begäran. Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+> Om du vill skapa en supportbegäran eller visa en befintlig begäran [går du till Office 365-administrationscentret](https://portal.office.com/admin/default.aspx). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 ## Definiera problemet
 
 -   Vad är problemet?
@@ -45,6 +45,8 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 -   Hur ofta uppstår problemet och förekommer det sporadiska eller hela tiden?
 
 -   Kan användaren ha autentiseringsproblem? Om det är en möjlighet kontrollerar du om användaren kan logga in till andra tjänster som använder Azure Active Directory. Kontrollera också om användaren kan logga in från en annan enhet.
+
+-   Har du kontrollerat status för tjänsten? Du kan övervaka hälsotillståndet för Intune-tjänsten i den [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Välj **Tjänstens hälsa** i det vänstra fönstret. 
 
 ## Samla in tillgängliga data
 
@@ -64,7 +66,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
 -   Du kan öppna en supportbegäran. Det är lättare för Intunes support att hjälpa dig att lösa ett problem om du har definierat problemet och samlat in tillgängliga data.
 
-    Om du vill skapa en supportbegäran klickar du [här](https://portal.office.com/admin/default.aspx) för att gå till administrationscenter för Office 365. Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    Om du vill skapa en supportbegäran går du till [administrationscenter för Office 365.](https://portal.office.com/admin/default.aspx) Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 ## Community-resurser
 Du kan hitta annan användbar information i dessa gruppresurser:
@@ -77,8 +79,8 @@ Du kan hitta annan användbar information i dessa gruppresurser:
 
 -   [Intune-forum](https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 
-## Nästa steg
-Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den informationen inte hjälper kan du kontakta Microsoft Support enligt beskrivningen i [Få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+### Nästa steg
+Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den informationen inte hjälper kan du kontakta Microsofts support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 [Troubleshoot Endpoint Protection in Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md)
 
@@ -93,9 +95,8 @@ Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den i
 [Felsöka klientinstallationen i Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Felsökning av programuppdateringar i Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-g
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 

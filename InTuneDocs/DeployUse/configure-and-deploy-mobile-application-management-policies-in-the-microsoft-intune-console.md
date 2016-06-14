@@ -34,17 +34,17 @@ Principerna för hantering av mobilprogram har stöd för:
 
 -   Enheter som kör iOS 7 och senare.
 
-> Principer för hantering av mobilprogram stöder enheter som registrerats med Intune.
-> 
-> Information om hur du skapar apphanteringsprinciper för enheter som inte hanteras av Intune finns i [Skydda appdata med principer för hantering av mobilprogram med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+> [!TIP]Principer för hantering av mobilappar har stöd för enheter som har registrerats med Intune.
+>
+> Information om hur du skapar apphanteringsprinciper för enheter som inte hanteras av Intune finns i [Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 Till skillnad från andra Intune-principer kan du inte distribuera en princip för hantering av mobilprogram direkt. Du måste i stället associera principen med den app som du vill begränsa. När appen har distribuerats och installerats på enheter, börjar de inställningar du anger gälla.
 
 Om du vill tillämpa begränsningar i en app måste den innehålla Microsoft App-SDK (Software Development Kit). Det finns två metoder för att hämta den här typen av app:
 
--   **Använda en principhanterad app** – Har inbyggt app-SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Visa en lista över [appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
+-   **Använda en principhanterad app** – Har inbyggt app-SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Visa en lista över [appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
 
--   **Använda en ”omsluten” app** – Appar som paketeras på nytt för att inkludera app-SDK med hjälp av **Microsoft Intunes apphanteringsverktyg**. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Det kan inte användas för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobilprogram med Microsoft Intunes apphanteringsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobilprogram med Microsoft Intunes apphanteringsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
+-   **Använda en ”omsluten” app** – Appar som paketeras på nytt för att inkludera app-SDK med hjälp av **Microsoft Intunes apphanteringsverktyg**. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Det kan inte användas för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobila program med Microsoft Intunes-appomslutningsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobila program med Microsoft Intunes-appomslutningsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
 
 Vissa hanterade appar, t.ex. Outlook-appen för iOS och Android, stöder **flera identiteter**. Detta innebär att Intune endast tillämpar hanteringsinställningar för företagskonton eller data i appen.
 
@@ -56,7 +56,7 @@ Om du t.ex. använder Outlook-appen:
 
 -   Det företagskonto som används måste vara samma konto som användes för att registrera enheten med Intune.
 
-> Om du använder Intune med Configuration Manager läser du [Styra appar med hanteringsprinciper för mobilprogram i Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx)
+> [!TIP] Om du använder Intune med Configuration Manager läser du [Kontrollera appar med principer för hantering av mobilprogram i Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
 
 ## Skapa och distribuera en app med en princip för hantering av mobila program
 
@@ -85,11 +85,11 @@ När du publicerar en hanterad app varierar procedurerna beroende på om du publ
 
 #### Så här publicerar du en principhanterad app
 
-1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägga till appar för mobilenheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md)
+1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
-2.  För iOS-appar väljer du **Hanterade iOS-appar från App Store** under **Välj hur programvaran görs tillgänglig för enheter**
+2.  För IOS-appar väljer du **Hanterade iOS-appar från App Store**under **Välj hur programvaran görs tillgänglig för enheter**.
 
-    För Android-appar väljer du **Extern länk**
+    För Android-appar väljer du **Extern länk**.
 
 3.  Under **Ange en URL**anger du webbadressen till den principhanterade app du antecknade tidigare.
 
@@ -99,11 +99,11 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
 #### Så här publicerar du en app som bearbetades med verktyget Microsoft Intune App Wrapping
 
-1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägga till appar för mobilenheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md)
+1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
-2.  Välj **Installationsprogram för programvara** under **Välj hur programvaran görs tillgänglig för enheter**
+2.  Välj **Installationsprogram för programvara**under **Välj hur programvaran görs tillgänglig för enheter**.
 
-3.  Välj **Appaket för iOS (&#42;.ipa-fil)** under **Filtyp för installationsprogram för programvara**
+3.  Välj **Appaket för iOS (&#42;.ipa-fil)** under **Filtyp för installationsprogram för programvara**.
 
 När överföringen har slutförts visas **Ja** för **Apphanteringsprinciper** på sidan **Programvaruegenskaper** för den överförda appen.
 
@@ -111,7 +111,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
 ## **Steg 3:** Skapa en princip för hantering av mobila program
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**
+1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
 2.  Konfigurera och distribuera någon av följande principer för **Programvara** , beroende på vilken enhetstyp du vill konfigurera appar för:
 
@@ -119,7 +119,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
     -   **Princip för hantering av mobila program (iOS 7 och senare)**
 
-    Du kan använda rekommenderade inställningar eller anpassa inställningarna. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
+    Du kan använda rekommenderade inställningar eller anpassa inställningarna. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Konfigurera följande inställningar efter behov. Alternativen kan variera beroende på enhetstypen som du konfigurerar principen för.
 
@@ -139,20 +139,20 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
     |**Kräv enhetens efterlevnad med företagsprinciper för att få åtkomst**|Tillåter endast användning av appen när enheten inte är jailbreakad eller rotad.|
     |**Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**|I fältet **Tidsgräns** anger du hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt efter att den har startats.|
     |**Offline-respitperiod**|Ange hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.|
-    |**Kryptera appdata**|Anger att alla data som är associerade med appen krypteras, inklusive data som lagras externt, till exempel SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med en Intune-princip för hantering av mobila program krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta är aktiverat via enhetens PIN-princip som måste anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i principen för hantering av mobila program. Enligt informationen i Apples dokumentation är de [moduler som används av iOS 7 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739)<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med en Intune-princip för hantering av mobila program tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder enligt inställningen i principen för hantering av mobila program. Hanterade appar på Android använder AES-128-kryptering i CBC-läge med plattformens kryptografibibliotek. Krypteringsmetoden är inte FIPS 140-2-certifierad. Innehållet på enhetens lagring krypteras alltid.|
+    |**Kryptera appdata**|Anger att alla data som är associerade med appen krypteras, inklusive data som lagras externt, till exempel SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med en Intune-princip för hantering av mobila program krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta är aktiverat via enhetens PIN-princip som måste anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i principen för hantering av mobila program. Enligt informationen i Apples dokumentation är de [moduler som används av iOS 7 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med en Intune-princip för hantering av mobila program tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är inte FIPS 140-2-certifierad.|
     |**Blockera skärmdump** (endast Android-enheter)|Anger att skärmdumpsfunktionen i enheten är blockerad när du använder den här appen.|
 
-4.  När du är klar klickar du på **Spara princip**
+4.  När du är klar klickar du på **Spara profilen**.
 
 Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principer** .
 
 ## **Steg 4:** Associera appen till en princip för hantering av mobila program och distribuera sedan appen.
 Distribuera appen och se till att du väljer principen för hantering av mobila program på sidan **Hantering av mobilappar** för att associera principen med appen.
 
-Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md)
+Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md).
 
-> För enheter som kör operativsystem tidigare än iOS 7.1, tas associerade principer inte bort när appen avinstalleras.
-> 
+> [!IMPORTANT] För enheter som kör operativsystem tidigare än iOS 7.1 tas tillhörande principer inte bort när appen avinstalleras.
+>
 > Om enheten avregistreras från Intune tas principerna inte bort från apparna. Alla appar som hade tillämpade principer behåller principinställningarna även efter att appen avinstallerats och installerats om.
 
 ### Vad du gör om en app redan har distribuerats på enheter
@@ -162,14 +162,14 @@ I så fall måste du be användaren att manuellt avinstallera den ohanterade ver
 
 För enheter som kör iOS 9 och senare ber Intune dock användaren om tillstånd att ta över hanteringen av den befintliga appen. Om användaren accepterar börjar appen hanteras av Intune och de hanteringsprinciper för mobilprogram som du har associerat med appen börjar tillämpas.
 
-> Om enheten är i övervakat läge tar Intune över hanteringen av den befintliga appen utan att be om användarens tillstånd.
+> [!TIP] Om enheten är i övervakat läge tar Intune över hanteringen av den befintliga appen utan att be om användarens tillstånd.
 
 ## **Steg 5:** Övervaka appdistributionen.
 När du har skapat och distribuerat en app som är associerad med en princip för hantering av mobila program, kan du använda följande procedurer för att övervaka appen och lösa eventuella principkonflikter.
 
 #### Så här visar du status för distributionen
 
-1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) klickar du på **Grupper** &gt; **Översikt**
+1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och klicka på **Grupper** &gt; **Översikt**.
 
 2.  Utför något av följande steg:
 
@@ -197,9 +197,6 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 -   Om ingen princip har distribuerats till enheten och två motstridiga inställningar distribueras, används standardinställningen som är inbyggd i enheten.
 
 
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

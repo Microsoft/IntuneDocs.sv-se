@@ -61,9 +61,11 @@ När du distribuerar appar kan du välja någon av följande distributionsåtgä
 
 -   **Nödvändig installation** – Appen installeras på enheten utan att det krävs någon åtgärd från slutanvändaren.
 
-    > När det gäller iOS-enheter som inte är i övervakat läge, samt alla Android-enheter, måste användaren godkänna apperbjudandet innan appen kan installeras.
+    > [!TIP] När det gäller iOS-enheter som inte är i övervakat läge, samt alla Android-enheter, måste användaren godkänna apperbjudandet innan appen kan installeras.
     >
     > Du kan inte längre skapa nya appdistributioner till iOS-enheter som kör ett operativsystem tidigare än iOS 7.1. Alla befintliga appdistributioner till enheter som kör ett tidigare operativsystem än iOS 7.1 fortsätter att fungera och hanteras av Intune.
+    > 
+    >  Om en slutanvändare avinstallerar en app som du har distribuerat som en nödvändig installation installeras appen automatiskt om av Intune efter nästa inventeringscykel, som vanligtvis sker var sjunde dag.
 
 -   **Tillgänglig installation** – Appen visas i företagsportalen och slutanvändare kan installera den på begäran.
 
@@ -85,7 +87,7 @@ När du distribuerar appar kan du välja någon av följande distributionsåtgä
 |Extern länk (distribuerad till en enhetsgrupp)|Nej|Nej|Nej|Nej|
 |Hanterad iOS-app från App Store (distribuerad till en användargrupp)|Ja|Ja|Ja|Ja|
 |Hanterad iOS-app från App Store (distribuerad till en enhetsgrupp)|Ja|Nej|Ja|Ja|
-> Om du väljer både användar- och enhetsgrupper när du distribuerar appar kan du endast distribuera appen som en **Tillgänglig installation**
+> [!TIP] När du distribuerar appar, om du väljer både användar- och enhetsgrupper, kan du bara distribuera appen som en **Tillgänglig installation**.
 
 ## Distributionskonflikter
 När två distributioner, med samma distributionsåtgärd, tas emot av en enhet gäller följande regler:
@@ -101,8 +103,8 @@ När två distributioner, med samma distributionsåtgärd, tas emot av en enhet 
 
 ## Nästa steg
 
-Lär dig hur du [distribuerar appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
+Lär dig hur du [distribuerar appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

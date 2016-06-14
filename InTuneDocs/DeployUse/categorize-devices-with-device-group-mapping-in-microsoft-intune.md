@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Kategorisera enheter med mappning av enhetsgrupp i Microsoft Intune | Microsoft Intune
+title: Kategorisera enheter med gruppmappning av enheter | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -47,7 +47,7 @@ Du kan dock konfigurera vilka kategorier du vill.
 ## Konfigurera inställningar för mappning av enhetsgrupp
 1. Skapa en Intune-enhetsgrupp för varje enhetskategori som du vill använda. Mer information om hur du skapar grupper finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 2. Klicka på **Admin** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com).
-3. I arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och klickar sedan på **Mappning av enhetsgrupp**.
+3. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och klickar sedan på **Mappning av enhetsgrupp**.
 4. På sidan **Mappning av enhetsgrupp** kan du aktivera mappning av enhetsgrupp.
 5. Klicka på **Lägg till** att skapa en ny mappningsregel.
 6. I dialogrutan **Lägg till en mappningsregel för enhetsgrupp** anger du namnet på den kategori du vill skapa och använder sedan listrutan för att välja den enhetssamling som du vill mappa denna kategori till. Klicka på **Lägg till** när du är klar.
@@ -58,6 +58,6 @@ Nu när användare registrerar sina enheter får de se en lista med de kategorie
 ### Se även
 [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

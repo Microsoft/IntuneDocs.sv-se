@@ -29,10 +29,10 @@ ms.suite: ems
 
 Enhetslivscykeln i Intune börjar med att inledningsvis registrera en enhet, fortsätter genom flera steg och avslutas när enheten inte längre behövs.
 
-![Enhetslivscykeln](./media/devicelifecycle_nobg.png "the Intune device lifecycle")
+![Enhetslivscykeln](./media/device-lifecycle.png "the Intune device lifecycle")
 
 ## Registrera
-Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera registrering av enheter](enroll-devices-in-microsoft-intune.md). Du kan även hantera Windows-datorer genom att antingen registrera dem med Intune (MDM) eller genom att [installera klientprogramvaran för Intune](manage-windows-pcs-with-microsoft-intune.md).
+Dagens strategier för hantering av mobila enheter (MDM) omfattar många olika telefoner, surfplattor och datorer (iOS, Android, Windows och Mac OS X). Om du behöver kunna hantera enheten, vilket ofta är fallet för företagsägda enheter, är det första steget att [konfigurera registrering av enheter](enroll-devices-in-microsoft-intune.md). Du kan även hantera Windows-datorer genom att antingen registrera dem med Intune (MDM) eller genom att [installera Intune-klientprogrammet](manage-windows-pcs-with-microsoft-intune.md).
 
 ## Konfigurera
 Registrering av enheter är bara det första steget. Om du vill dra nytta av allt som Intune har att erbjuda och se till att enheterna är skyddade och kompatibla med företagets standarder, kan du välja bland en mängd olika **principer** som gör att du kan konfigurera nästan alla aspekter av hur hanterade enheter fungerar. Bör användare till exempel ha lösenord på enheter som innehåller företagsdata? Du kan kräva det. Har du företags-Wi-Fi? Du kan konfigurera det automatiskt. Här är typerna av konfigurationsalternativ:
@@ -51,6 +51,6 @@ I den moderna IT-världen är skydd av enheter från obehörig åtkomst en av de
 När en enhet blir stulen eller tappas bort, behöver bytas ut eller när användarna flyttar till en annan tjänst är det vanligtvis dags att [dra tillbaka eller rensa](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) enheten. Det finns ett antal sätt att göra det, till exempel att återställa enheten, ta bort den från hantering eller rensa företagsdata på den.
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

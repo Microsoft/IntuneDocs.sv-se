@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -40,7 +40,7 @@ Den här artikeln innehåller några exempel på problem som kan uppstå i samba
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
 ## Enhetstaket har nåtts
-**Problem:** En användare får ett fel på en iOS-enhet i samband med registreringen, t.ex. **Företagsportalen är för tillfället otillgänglig**, och DMPdownloader.log för Configuration Manager innehåller felet **DeviceCapReached**
+**Problem:** En användare får ett fel på enheten under registreringen, som **Företagsportalen är för tillfället otillgänglig** på en iOS-enhet och DMPdownloader.log på Configuration Manager innehåller felet **DeviceCapReached**.
 
 **Lösning:** På grund av utformningen kan användarna inte registrera fler än fem enheter.
 
@@ -50,17 +50,17 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 2.  Kontrollera i Intunes administrationsportal  under Admin\Hantering av mobila enheter\Registreringsregler att gränsen för enhetsregistrering är inställd på fem.
 
-Användare av mobila enheter kan ta bort enheter på följande URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/)
+Användare av mobila enheter kan ta bort enheter på följande URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
 
 Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 ### Ta bort enheter i Azure Active Directory-portalen
 
-1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller klicka på **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com)
+1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
 
 2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
 
-3.  Skapa en Azure-prenumeration om du inte har någon. Detta får inte kräva en kreditkort eller betalning om du har ett konto som kostar pengar (klicka på prenumerationslänken **Registrera en gratis Azure Active Directory** ).
+3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva en kreditkort eller betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
 
 4.  Välj **Active Directory** och välj sedan din organisation.
 
@@ -68,13 +68,13 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 6.  Välj den användare vars enheter du vill ta bort.
 
-7.  Klicka på **Enheter**
+7.  Välj **Enheter**.
 
 8.  Ta bort enheter efter behov, till exempel de som inte längre används eller som har felaktiga definitioner.
 
 > [!NOTE]
 
-> Du kan undvika taket för enhetsregistrering genom att använda enhetsregistreringshanterare. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
+> Du kan undvika taket för enhetsregistrering genom att använda enhetsregistreringshanterare. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 >
 > Ett användarkonto som läggs till i gruppen Enhetsregistreringshanterare kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
@@ -111,9 +111,9 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 ### Felsöka MDM-auktoritet har inte definierats
 
-1.  Kontrollera att MDM-auktoriteten har ställts in korrekt för den version av Intune-tjänsten som du använder, det vill säga för Intune, O365 MDM eller System Center Configuration Manager med Intune. Om du bara har Intune anger du MDM-utfärdaren i **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i O365 är det en inställning under **Mobila enheter**
+1.  Kontrollera att MDM-auktoriteten har ställts in korrekt för den version av Intune-tjänsten som du använder, det vill säga för Intune, O365 MDM eller System Center Configuration Manager med Intune. För Intune ställs MDM-utfärdaren in under **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i O365 är det en inställning under **Mobila enheter**.
 
-    > När du har angett MDM-utfärdaren kan du bara ändra inställningen genom att kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+    > [!NOTE] När du har angett MDM-utfärdaren kan du bara ändra inställningen genom att kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 2.  Kontrollera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory genom att kontrollera att deras UPN matchar Active Directory-informationen i kontoportalen.
     Om aktuellt UPN inte överensstämmer med Active Directory-informationen:
@@ -134,13 +134,13 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
     3.  Öppna databasmappen och leta upp och öppna mappen **CM_DBName** där DBName är namnet på kunddatabasen.
 
-    4.  Klicka på Ny fråga överst och kör följande frågor:
+    4.  Klicka på **Ny fråga** överst och kör följande frågor:
 
-        -   Visa alla användare:
+        -   Om du vill visa alla användare: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Om du vill söka efter specifika användare, använd följande fråga där testuser1% representerar username@domain.com för den användare som du vill söka efter:
+        -   Om du vill se specifika användare använder du följande fråga där %testuser1% representerar username@domain.com för den användare som du vill söka efter: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
-        När du har skrivit frågan klickar du på **!Kör**
+        När du har skrivit frågan väljer du **!Kör**.
         När resultatet har returnerats, leta efter molnanvändar-ID:et.  Om det finns något ID är inte användaren licensierad för att använda Intune.
 
 ## Mobila enheter försvinner när du använder System Center Configuration Manager med Intune
@@ -150,9 +150,9 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 ### Kontrollera hur enheten har tagits bort
 
-1.  Välj **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor** i administrationskonsolen i Configuration Manager
+1.  Gå till administrationskonsolen i Configuration Manager och välj **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
 
-2.  Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**
+2.  Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
 
 3.  Välj lämplig tid/datum eller de senaste 12 timmarna.
 
@@ -172,7 +172,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Lösning:** Utför följande steg:
 
 1. Inaktivera iOS i Windows Intune Connector. 
-    1. Högerklicka på Intune-prenumerationen och välj Egenskaper.
+    1. Högerklicka på Intune-prenumerationen och välj **Egenskaper**.
     1. På fliken iOS avmarkerar du Aktivera iOS-registrering.
 
 
@@ -194,7 +194,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 
 ## Datorn har redan registrerats – Fel hr 0x8007064c
-**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**
+**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
   
 Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 
@@ -202,14 +202,14 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 
 **Lösning:** 
 
-1. Öppna **Start**-menyn, välj **Run** -> **MMC** 
-1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**
-1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa**, välj **Lokal dator**
-1. Dubbelklicka på **Certifikat (lokal dator)**, välj **Personliga certifikat** 
+1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
+1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
+1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
+1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
 1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
 1. Ta bort följande registernyckel om den finns: ** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
 1. Försök att registrera datorn igen. 
-1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95** 
+1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
 1. Försök att registrera datorn igen. 
 
     > [!IMPORTANT]
@@ -245,20 +245,20 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 |0x80043007, 0x80CF3007|Det gick inte att hitta certifikatfilen i samma mapp som installationsprogrammet.|Extrahera alla filer innan du påbörjar installationen. Byt inte namn på eller flytta någon av de hämtade filerna: alla filer måste finnas i samma mapp annars misslyckas installationen.|
 |0x8024D015, 0x00240005, 0x80070BC2, 0x80070BC9, 0x80CFD015|Det går inte att installera programvaran eftersom klientdatorn väntar på att startas om.|Starta om datorn och pröva sedan att installera klientprogramvaran igen.|
 |0x80070032|Ett eller flera installationskrav för klientprogramvaran kunde inte bekräftas på klientdatorn.|Kontrollera att alla nödvändiga uppdateringar är installerade på klientdatorn och pröva sedan att installera klientprogramvaran igen.|
-|0x80043008, 0x80CF3008|Det gick inte att starta tjänsten Uppdatering av Microsoft onlinehantering.|Kontakta Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
+|0x80043008, 0x80CF3008|Det gick inte att starta tjänsten Uppdatering av Microsoft onlinehantering.|Kontakta Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
 |0x80043009, 0x80CF3009|Klientdatorn har redan registrerats i tjänsten.|Du måste inaktivera klientdatorn innan du kan registrera den igen i tjänsten.|
 |0x8004300B, 0x80CF300B|Det går inte att köra installationspaketet för klientprogramvaran eftersom den version av Windows som körs på klienten inte stöds.|Intune stöder inte den version av Windows som körs på klientdatorn.|
-|0xAB2|Windows Installer kunde inte komma åt VBScript-körtiden för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda verktygen som beskrivs i [Microsoft Support-artikeln KB198038: användbara verktyg för paket- och distributionsproblem](https://support.microsoft.com/en-us/kb/198038)|
+|0xAB2|Windows Installer kunde inte komma åt VBScript-körtiden för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda de verktyg som beskrivs i [Microsoft Support-artikeln KB198038: Användbara verktyg för paket- och distributionsproblem](https://support.microsoft.com/en-us/kb/198038).|
 |0x80cf0440|Anslutningen till tjänstslutpunkten avbröts.|Utvärderings- eller betalkontot har inaktiverats tillfälligt. Skapa ett nytt utvärderings- eller betalkonto och registrera dig igen.|
 
 
 ## Fel vid iOS-registrering
-En lista med övriga fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune)
+En lista med övriga fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
 
 ### Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

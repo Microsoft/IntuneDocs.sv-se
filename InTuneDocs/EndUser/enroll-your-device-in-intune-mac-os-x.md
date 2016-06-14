@@ -15,7 +15,7 @@ ms.assetid: 58eb0e7a-1321-4c66-a281-88fb01e72c1c
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Registrera din Mac OS X-enhet i Intune
 
-Genom att registrera Mac OS X-enheten i Intune kan du få åtkomst till företagets nätverk, din e-post och filer för arbetet och kan hämta företagsappar. Mer information om vad som händer när du registrerar din enhet finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)..
+Genom att registrera Mac OS X-enheten i Intune kan du få åtkomst till företagets nätverk, din e-post och filer för arbetet och kan hämta företagsappar. Mer information om vad som händer när du registrerar din enhet finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Om du försöker registrera en iOS-enhet kan du läsa [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md).
 
@@ -45,7 +45,7 @@ Så här registrerar du din Mac OS X-enhet:
 
     ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
 
-4.  Tryck på **Installera** i dialogrutan **Installera hanteringsprofil**. Om en dialogruta visas där du ombeds ange inloggningsinformation anger du ditt användarnamn och lösenord och trycker sedan på **Fortsätt** &gt; **Installera**.
+4.  Tryck på **Installera** i dialogrutan **Installera hanteringsprofil**. Om en dialogruta visas där du ombes ange inloggningsinformation anger du användarnamn och lösenord och trycker sedan på **Fortsätt** &gt; **Installera**.
 
     ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
 
@@ -56,6 +56,6 @@ Så här registrerar du din Mac OS X-enhet:
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

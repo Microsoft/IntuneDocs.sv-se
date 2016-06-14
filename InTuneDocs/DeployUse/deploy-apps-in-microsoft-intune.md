@@ -1,5 +1,5 @@
 ---
-title: Distribuera appar i Microsoft Intune | Microsoft Intune
+title: Distribuera appar | Microsoft Intune
 ms.custom: na
 ms.reviewer: na
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ I den här proceduren ska du distribuera appen till valda enheter eller använda
 
 ### Distribuera en app
 
-1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) klickar du på **Appar** &gt; **Appar** för att visa listan över appar som du hanterar.
+1. Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Appar** så visas listan över appar som du hanterar.
 
 2.  Välj den app som du vill distribuera och klicka sedan på **Hantera distribuering**.
 
@@ -39,7 +39,7 @@ I den här proceduren ska du distribuera appen till valda enheter eller använda
     [Se vilka Microsoft-appar som är kompatibla med hanteringsprinciper för mobilappar.](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
 
 6. Om appen du distribuerar är kompatibel med Intune VPN-profiler visas sidan **VPN-profil**. På den här sidan kan du associera iOS-appar med en VPN-profil som du har distribuerat. VPN-anslutningen kommer att öppnas automatiskt när appen har startats. Om du vill göra en VPN-profil tillgänglig måste den ha profilinställningen **Per app-VPN** aktiverad.
- Information om hur du konfigurerar VPN-profiler, inklusive stöd för att associera profiler till appar finns i [Hjälp användarna att ansluta till sitt arbete med hjälp av VPN-profiler med Microsoft Intune](vpn-connections-in-microsoft-intune.md).
+ Information om hur du konfigurerar VPN-profiler, inklusive stöd för att associera profiler till appar, finns i [Hjälp användarna att ansluta till sitt arbete med hjälp av VPN-profiler med Microsoft Intune](vpn-connections-in-microsoft-intune.md).
 
 ## Exempel
 
@@ -55,6 +55,6 @@ Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får använd
 När du har distribuerat en app vill du övervaka dess förlopp. Mer information finns i [Övervaka appar i Microsoft Intune](monitor-apps-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

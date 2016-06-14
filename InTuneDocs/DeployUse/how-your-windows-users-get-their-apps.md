@@ -32,16 +32,16 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Obligatoriska appar** - Appar som krävs av administratören och som installeras på enheten med minimal inblandning av användaren, beroende på plattform.
 
-**Obligatoriska appar** - Appar som finns angivna i Företagsportalens app-lista och som användare kan välja att installera.
+**Tillgängliga appar** – Appar som finns i företagsportalens applista och som en användare kan välja att installera.
 
 **Hanterade appar** - Appar som kan hanteras med principer eller som har blivit "wrappade" av Intune eller som har skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
 
 **Ohanterade appar** - Appar som inte kan hanteras med principer eller som inte har wrappats av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
-###Se även</br>
-[Så får dina Android-användare sina appar](how-your-ios-users-get-their-apps.md)
+###Se även [Så får dina Android-användare sina appar](how-your-android-users-get-their-apps.md)</br>
+[Så får dina iOS-användare sina appar](how-your-ios-users-get-their-apps.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

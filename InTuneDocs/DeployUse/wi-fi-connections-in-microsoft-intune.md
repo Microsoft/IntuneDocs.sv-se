@@ -48,7 +48,7 @@ För enheter som kör Windows 8.1 och senare kan du importera en Wi-Fi-konfigura
 
 ## Skapa en Wi-Fi-profil
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Lägg till princip**
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Princip** &gt; **Lägg till princip**.
 
 2.  Välj en av följande principtyper och klicka sedan på **Skapa princip**:
 
@@ -64,85 +64,91 @@ För enheter som kör Windows 8.1 och senare kan du importera en Wi-Fi-konfigura
 
 4. Ange värdena för **nätverksanslutningar** :
 
-  |Inställning|Mer information| **Nätverksnamn**| Ange ett beskrivande namn för det trådlösa nätverket. Det här är namnet som visas på användarnas enheter när de väljer ett nätverk.|
+  |Ställa in|Mer information| |-----------|--------------------|
+|**Nätverksnamn**|Ange ett beskrivande namn på det trådlösa nätverket. Detta är det namn som visas på en användares enhet när användaren väljer ett trådlöst nätverk. | |**SSID (Service Set Identifier)**| Ange ett SSID för det trådlösa nätverk som enheterna ska anslutas till. SSID är skiftlägeskänsligt och visas inte för användaren. | |**Anslut automatiskt när det här nätverket är inom räckhåll**| Välj det här alternativet om enheterna automatiskt ska ansluta till det trådlösa nätverket när det är inom räckhåll. | |**Anslut när nätverket inte sänder sitt namn (SSID)**| Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan över nätverk (eftersom det är dolt och inte sänder sitt namn). |
 
-5. **SSID (Service Set Identifier)**| Ange SSID för det trådlösa nätverk som enheterna ska ansluta till. SSID är skiftlägeskänsligt och visas inte för användarna.|
+5. Konfigurera **säkerhetsinställningarna** för den valda plattformen. De tillgängliga inställningarna beror på vilken säkerhetstyp du väljer.
 
-  #### **Anslut automatiskt när det här nätverket är inom räckhåll**| Välj det här alternativet om enheterna ska ansluta automatiskt till det trådlösa nätverket när det är inom räckhåll.|
+  #### För Android-enheter
 
-  **Anslut när nätverket inte sänder sitt namn (SSID)**|Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan med nätverk (eftersom det är dolt och inte sänder sitt namn).|<br /><br />-   **Konfigurera **säkerhetsinställningarna** för den valda plattformen.**<br />-   De tillgängliga inställningarna beror på vilken säkerhetstyp du väljer.<br /><br />-   **För Android-enheter**<br />-   **|Inställningens namn|Mer information|Använd när:|**<br />-   **Säkerhetstyp**| Välj säkerhetsprotokoll för det trådlösa nätverket: WPA-Enterprise/WPA2-Enterprise<br /><br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|<br />-   **EAP-typ**|Välj EAP-typen (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   ****EAP-TTLS**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.|**<br />-   ****Välj rotcertifikat för serververifiering**| Klicka på **Välj** och välj sedan den betrodda rotcertifikatprofil som används för att autentisera anslutningen.**<br />-   ****Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).| En **EAP-typ** har valts. |**<br /><br />**Autentiseringsmetod**|Välj autentiseringsmetod för anslutningen: **Certifikat** för att ange klientcertifikatet **Användarnamn och lösenord** om du vill ange en annan metod för autentisering|**EAP-typen** är **PEAP** eller **EAP-TTLS** **Välj en annan metod än EAP för autentisering (inre identitet)**|Välj hur du ska autentisera anslutningen:
+  | Ange namn| Mer information| Använd när: | |----------------|--------------------|-------------|
+|**Säkerhetstyp**| Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat. | Alltid| |**EAP-typ**| Välj den typ av utökningsbart autentiseringsprotokoll (EAP, Extensible Authentication Protocol) som ska användas för att autentisera skyddade trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.| |**Välj rotcertifikat för serveridentifiering**|Klicka på **Välj** och välj sedan den betrodda rotcertifikatprofil som används för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).| En **EAP-typ** har valts. | |**Autentiseringsmetod**|Välj autentiseringsmetod för anslutningen:<br /><br />-   **Certifikat** för att ange klientcertifikatet<br />-   **Användarnamn och lösenord** om du vill ange en annan metod för autentisering|**EAP-typen** är **PEAP** eller **EAP-TTLS**.| |**Välj en annan metod än EAP för autentisering (inre identitet)**|Välj hur du ska autentisera anslutningen:<br /><br />-   **Inga**<br />-   **Okrypterat lösenord (PAP)**<br />-   **CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Microsoft CHAP (MS-CHAP)**<br />-   **Microsoft CHAP Version 2 (MS-CHAP v2)**<br /><br />De tillgängliga alternativen beror på vilken EAP-typ du valt.|**Autentiseringsmetod** är **Användarnamn och lösenord**| |**Aktivera identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentiseringen skickas den här anonyma identiteten först, följt av den verkliga identifieringen som skickas i en säker tunnel.|**EAP-typ** är **PEAP** eller **EAP-TTLS** | |**Välj ett klientcertifikat för klientautentisering (identitetscertifikat)**|Klicka på **Välj** och välj sedan den SCEP-certifikatprofil som används för att autentisera anslutningen. **Viktigt!** Information om hur du skapar en SCEP-certifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och en **EAP-typ** har valts.|
 
-  #### Inga
+  #### För iOS- och Mac OS X-enheter
 
-  Okrypterat lösenord (PAP)<br /><br />-   **CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Microsoft CHAP (MS-CHAP)**<br />-   **Microsoft CHAP Version 2 (MS-CHAP v2)**<br />-   De tillgängliga alternativen beror på vilken EAP-typ du valt.|**Autentiseringsmetod** är **Användarnamn och lösenord**<br /><br />-   ****Aktivera identitetssekretess (yttre identitet)**|Ange texten som skickas som svar på en begäran om EAP-identitet.**<br />-   **Den här texten kan ha vilket värde som helst.**<br />-   **Vid autentiseringen skickas den här anonyma identiteten först, följt av den verkliga identifieringen som skickas i en säker tunnel.|**EAP-typen** är **PEAP** eller **EAP-TTLS****<br />-   ****Välj ett klientcertifikat för klientautentisering (identitetscertifikat)**|Klicka på **Välj** och sedan på SCEP-certifikatprofilen som används för att autentisera anslutningen.**<br />-   ****Viktigt!** Information om hur du skapar en SCEP-certifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och en **EAP-typ** har valts.|**<br />-   För iOS- och Mac OS X-enheter |Inställningens namn|Mer information|Använd när:| **Säkerhetstyp**|Välj säkerhetsprotokollet för trådlösa nätverk:<br /><br />WPA-Personal/WPA2-Personal<br /><br /><ul><li>WPA-Enterprise/WPA2-Enterprise</li><li>WEP<br /><br /><ul><li>****Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|**</li><li>****EAP-typ**|Välj EAP-typen (Extensible Authentication Protocol) som används för att autentisera skyddade trådlösa anslutningar:**</li><li>**EAP-TLS**</li><li>**PEAP**</li><li>**EAP-TLS**</li><li>**EAP-AST**</li></ul></li></ul>LEAP **EAP-SIM**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise** **Namn på betrodda servercertifikat**|Välj den betrodda rotcertifikatprofil som används för att autentisera anslutningen.<br /><br />**Viktigt!** Information om hur du skapar en betrodd rotcertifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Du har valt EAP-typen **EAP-TLS**, **PEAP**, **EAP-TTLS** eller **EAP-FAST**
+  | Ange namn| Mer information| Använd när: | |----------------|--------------------|-------------|
+|**Säkerhetstyp**| Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Personal/WPA2-Personal**<br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **WEP**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat. | Alltid| |**EAP-typ**| Välj den typ av utökningsbart autentiseringsprotokoll (EAP, Extensible Authentication Protocol) som ska användas för att autentisera skyddade trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TLS**<br />-   **EAP-AST**<br />-   **LEAP**<br />-   **EAP-SIM**| Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**. | |**Namn på betrodda servercertifikat**| Markera den betrodda rotcertifikatprofil som används för att autentisera anslutningen. **Viktigt!** Information om hur du skapar en betrodd rotcertifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Du har valt EAP-typen **EAP-TLS**, **PEAP**, **EAP-TTLS** eller **EAP-FAST** | |**Använd Protected Access Credential (PAC)**| Välj det här alternativet om du vill använda skyddade inloggningsuppgifter för att etablera en autentiserad tunnel mellan klienten och autentiseringsservern. En befintlig PAC-fil används om den finns. | **EAP-typ** är **EAP-FAST**. | |**Etablera PAC**| Etablerar PAC-filen till enheterna.<br /><br />När detta används kan du också välja **Etablera PAC anonymt** om du vill säkerställa att PAC-filen etableras utan att servern autentiseras.|**Använd PAC (Protected Access Credential)** är valt.| |**Autentiseringsmetod**|Välj den autentiseringsmetod som ska användas för anslutningen:<br /><br /><ul><li>**Certifikat** för att ange klientcertifikatet</li><li>**Användarnamn och lösenord** för att ange någon av följande icke-EAP-metoder för autentisering (även kallat inre identitet):<br /><br /><ul><li>**Inga**</li><li>**Okrypterat lösenord (PAP)**</li><li>**CHAP (Challenge Handshake Authentication Protocol)**</li><li>**Microsoft CHAP (MS-CHAP)**</li><li>**Microsoft CHAP Version 2 (MS-CHAP v2)**</li><li>**EAP-TLS**</li></ul></li></ul>|**EA-typ** är **PEAP** eller **EAP-TTLS**.| |**Välj ett klientcertifikat för klientautentisering (identitetscertifikat)**|Markera den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt:** Information om hur du skapar en SCEP-certifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|När säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och **EAP-typen** är **EAP-TLS**, **PEAP** eller **EAP-TTLS**.| |**Aktivera identitetssekretess (yttre identitet)**| Ange text som ska skickas som svar på en begäran om EAP-intensitet. Den här texten kan ha vilket värde som helst.<br /><br />Under autentiseringen skickas den här anonyma identiteten först, följt av den verkliga identifieringen som skickas i en säker tunnel.|När **EAP-typen** är **PEAP**, **EAP-TTLS** eller **EAP-FAST**.|
 
-6. **Använd Protected Access Credential (PAC)**|Välj den här inställningen om du vill använda skyddade autentiseringsuppgifter för att upprätta en autentiserad tunnel mellan klienten och autentiseringsservern.
+6. (endast iOS och MAC OS X) Konfigurera **Proxyinställningar**
 
-    |En befintlig PAC-fil används om den finns.|**EAP-typen** är **EAP-FAST**|**Etablera PAC**|Etablerar PAC-filen till dina enheter.|När den används kan du även välja **Etablera PAC anonymt** för att säkerställa att PAC-filen etableras utan att servern autentiseras.|**Använd PACK (Protected Access Credential)** har valts.||
+    |Inställningsnamn|Mer information|Använd när:|
     |----------------|-------------------|-------------|
-    |****Autentiseringsmetod**|Välj autentiseringsmetoden som används för anslutningen:**|**Certifikat** för att ange klientcertifikatet<br /><br />-   **Användarnamn och lösenord** för att ange någon av följande icke-EAP-metoder för autentisering (även kallat inre identitet):<br />-   Inga<br />-   Okrypterat lösenord (PAP)|CHAP (Challenge Handshake Authentication Protocol)|
-    |Microsoft CHAP (MS-CHAP)|Microsoft CHAP Version 2 (MS-CHAP v2)|EAP-TLS|
-    |**|**EAP-typen** är **PEAP** eller **EAP-TTLS****|**Välj ett klientcertifikat för klientautentisering (identitetscertifikat)**|Välj SCEP-certifikatprofilen som används för att autentisera anslutningen.|**Viktigt!** Information om hur du skapar en SCEP-certifikatprofil finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|När säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och **EAP-typen** är **EAP-TLS**, **PEAP** eller **EAP-TTLS**|
+    |**Proxy-inställningar för den här Wi-Fi-anslutningen**|Välj inställningstyp för proxy:<br /><br />-   **Ingen** (standard)<br />-   **Manuell** – Ange URL:en och portnumret för proxyservern manuellt.<br />-   **Automatisk** – Använd en konfigurationsfil för att konfigurera proxyservern.|Alltid|
+    |**Proxyserveradress** och **-portnummer**|Ange proxyserverns URL och portnummer.|**Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Manuell**|
+    |**URL för proxyserver**|Ange URL till den fil som innehåller inställningarna för proxyservern.|**Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Automatisk**|
 
-7.  **Aktivera identitetssekretess (yttre identitet)**|Ange texten som skickas som svar på en begäran om EAP-identitet.
+7.  Spara Wi-Fi-profilen
 
-Den här texten kan ha vilket värde som helst. Under autentiseringen skickas den här anonyma identiteten först, följt av den verkliga identifieringen som skickas i en säker tunnel.|När **EAP-typen** är **PEAP**, **EAP-TTLS** eller **EAP-FAST**
+Ny princip som visas i noden **Konfigurationsprinciper** på arbetsytan **Princip** . Information om hur du distribuerar profilen finns under **Nästa steg**.
 
-## (endast iOS och MAC OS X) Konfigurera **Proxyinställningar**
+## Exportera eller importera en Wi-Fi-konfigurationsprofil (endast Windows 8.1 och senare)
 
-### Inställningsnamn
-Mer information Använd när:
+### Exportera en Wi-Fi-profil
+I Windows kan du använda verktyget **netsh wlan** för att exportera en befintlig Wi-Fi-profil till en XML-fil som kan läsas av Intune. Följ stegen nedan på en Windows-dator som redan har nödvändig WiFi-profil installerad.
 
-1.  Proxy-inställningar för den här Wi-Fi-anslutningen
+1.  Skapa en lokal mapp för de exporterade W-Fi-profilerna, till exempel c:\WiFi
 
-2.  Välj inställningstyp för proxy:
+2.  Öppna en kommandotolk som administratör.
 
-3.  **Ingen** (standard)  **Manuell** – Ange URL:en och portnumret för proxyservern manuellt.
+3.  Kör kommandot `netsh wlan show profiles` och notera namnet på den profil som du vill exportera.  I det här exemplet är profilnamnet *WiFiName*.
 
-4.  **Automatisk** – Använd en konfigurationsfil för att konfigurera proxyservern.
+4.  Kör det här kommandot: `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. När du gör det skapas en Wi-Fi-profilfil med namnet ”Wi-Fi-WiFiName.xml” i målmappen.
 
-## Alltid
-**Proxyserveradress** och **-portnummer** Ange proxyserverns URL och portnummer.
+## Importera en Wi-Fi-profil
+Använd **Importprincipen för Windows Wi-Fi** för att importera en uppsättning Wi-Fi-inställningar som du kan distribuera till nödvändiga användar- eller enhetsgrupper. Stegen som du följer för att exportera en Wi-Fi-profil beskrivs i
 
-1.  **Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Manuell**
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Princip** &gt; **Lägg till princip**.
 
-2.  URL för proxyserver
+2.  Konfigurera en princip av typen **Windows** &gt; **Importprincip för Windows Wi-Fi**.
 
-    Ange URL till den fil som innehåller inställningarna för proxyservern. **Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Automatisk**
+    Du kan bara skapa och distribuera anpassade Windows Wi-Fi-importprinciper. Rekommenderade inställningar är inte tillgängliga.
 
-3.  Spara Wi-Fi-profilen
+3.  Ange följande allmänna värden för Windows Wi-Fi-importprincip:
 
-    |Ny princip som visas i noden **Konfigurationsprinciper** på arbetsytan **Princip** .|Information om hur du distribuerar profilen finns under **Nästa steg**.|
+    |Inställningsnamn|Mer information|
     |----------------|--------------------|
-    |**Exportera eller importera en Wi-Fi-konfigurationsprofil (endast Windows 8.1 och senare)**|Exportera en Wi-Fi-profil|
-    |**I Windows kan du använda verktyget **netsh wlan** för att exportera en befintlig Wi-Fi-profil till en XML-fil som kan läsas av Intune.**|Följ stegen nedan på en Windows-dator som redan har nödvändig WiFi-profil installerad.|
+    |**Namn**|Ange ett unikt namn för Wi-Fi-profilen som hjälper dig att identifiera den i Intune-konsolen.|
+    |**Beskrivning**|Ange en beskrivning av Wi-Fi-profilen och annan relevant information som gör det enkelt att hitta profilen.|
 
-4.  Skapa en lokal mapp för de exporterade W-Fi-profilerna, till exempel c:\WiFi
+4.  Ange följande värden under rubriken **Anpassad Wi-Fi-profil**:
 
-    |Öppna en kommandotolk som administratör.|Kör kommandot `netsh wlan show profiles` och notera namnet på den profil som du vill exportera.|
+    |Inställningsnamn|Mer information|
     |----------------|--------------------|
-    |**I det här exemplet är profilnamnet *WiFiName***|Kör det här kommandot: `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. När du gör det skapas en Wi-Fi-profilfil med namnet ”Wi-Fi-WiFiName.xml” i målmappen.|
-    |**Importera en Wi-Fi-profil**|Använd **Importprincipen för Windows Wi-Fi** för att importera en uppsättning Wi-Fi-inställningar som du kan distribuera till nödvändiga användar- eller enhetsgrupper.|
-    |**Stegen som du följer för att exportera en Wi-Fi-profil beskrivs i**|I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Lägg till princip**|
+    |**Konfigurationsprofilsfil**|Klicka på **Importera** för att välja XML-filen som innehåller de Wi-Fi-profilinställningar som du vill importera till Intune.|
+    |**Anpassat konfigurationsprofilsnamn (visas för användare)**|Visar namnet på konfigurationsprofilen för Wi-Fi-nätverket, så  som det visas på användarens enhet.|
+    |**Information om konfigurationsprofilen**|Visar XML-koden för den konfigurationsprofil du har valt.|
 
-5.  Konfigurera en princip av typen **Windows** &gt; **Windows Wi-Fi-importprincip**
+5.  När du är klar klickar du på **Spara profilen**.
 
-6.  Du kan bara skapa och distribuera anpassade Windows Wi-Fi-importprinciper.
+6.  Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principer** .
 
-## Rekommenderade inställningar är inte tillgängliga.
+## Distribuera principen
 
-1.  Ange följande allmänna värden för Windows Wi-Fi-importprincip:
+1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
 
-2.  Inställningsnamn
+2.  I dialogrutan **Hantera distribution** :
 
-    -   Mer information
+    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
 
-    -   Namn
-
-
-Ange ett unikt namn för Wi-Fi-profilen som hjälper dig att identifiera den i Intune-konsolen. Beskrivning
+    -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
 
 
-<!--HONumber=May16_HO2-->
+En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
+
+### Se även
+Läs om hur du skapar en Wi-Fi-profil med en i förväg delad nyckel i [Wi-Fi-profil med i förväg delad nyckel](pre-shared-key-wi-fi-profile.md)
+
+
+<!--HONumber=May16_HO3-->
 
 

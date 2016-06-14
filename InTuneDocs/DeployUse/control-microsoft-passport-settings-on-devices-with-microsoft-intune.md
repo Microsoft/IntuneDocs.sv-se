@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Kontrollera Microsoft Passport-inställningar på enheter med Microsoft Intune | Microsoft Intune
+title: Kontrollera Microsoft Passport-inställningar på enheter | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -38,7 +38,7 @@ Intune kan integreras med Passport för arbetsplats på två sätt:
 
 ## Skapa en Passport for Work-princip
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows** &gt; **Passport för arbetsplats** för att öppna sidan Passport för arbetsplats på det sätt som visas nedan.
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows** &gt; **Passport för arbetsplats** så öppnas sidan Passport för arbetsplats som visas nedan.
 
     ![Sidan Passport för arbetsplats](../media/passport.png)
 
@@ -57,8 +57,7 @@ Intune kan integreras med Passport för arbetsplats på två sätt:
     - **Tillåts** – Användare kan använda teckentypen i sina PIN-koder, men det är inte obligatoriskt.
     - **Krävs** – Användarna måste inkludera minst en av teckentyperna i sina PIN-koder. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
     - **Tillåts inte** (standard) – Användarna får inte använda dessa teckentyper i sina PIN-koder (det är också det som gäller om inställningen inte konfigureras).
-    > [!TIP]
-    > Specialtecken omfattar: **! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**.
+    > [!TIP] Specialtecken omfattar följande: **! " # $ % &amp; ' ( ) &#42; + , – . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**.
 - **PIN-kodens giltighetstid (dagar)** – Det tillhör god praxis att ange en giltighetstid för en PIN-kod och efter denna tid måste användaren ändra den. Standarden är 41 dagar. 
 - **Spara PIN-kodshistorik** – Använd den här inställningen för att begränsa återanvändning av PIN-koder som har använts tidigare. Standardvärdet är att de 5 senaste PIN-koder som har använts inte kan återanvändas.
 
@@ -80,6 +79,6 @@ Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

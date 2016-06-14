@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 # Synkronisera enheten manuellt
-Om appinstallationen tar för lång tid synkroniserar du Windows-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. Följ instruktionerna för din typ av enhet:
+Om appinstallationen tar för lång tid synkroniserar du Windows-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. De enda versioner som stöds är de som visas. Använd den länk som visas i avsnittet ”I den här artikeln” ovan som matchar den typ av enhet som du har:
 
 * [Windows 10 Mobil](#windows-10-mobile)
 * [Windows 10 Desktop](#windows-10-desktop)
@@ -58,7 +58,7 @@ Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda
 ## Windows 10 desktop
 Så här synkroniserar du en Windows 10 Desktop-enhet manuellt för att påskynda en långsam appinstallation:
 
-1. Välj **startknappen**, som du ser nedan, och välj **Inställningar**.
+1. Klicka på knappen **Starta** som visas nedan och välj sedan **Inställningar**.
 
     ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
     
@@ -83,7 +83,7 @@ Så här synkroniserar du en Windows 10 Desktop-enhet manuellt för att påskynd
 ## Windows Phone 8.1
 Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda en långsam appinstallation:
 
-1. Gå till **Alla appar** > **Inställningar** > **Arbetsyta**.
+1. Gå till **Alla appar** > **Inställningar** > **arbetsplats**.
 
     ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
     
@@ -102,6 +102,6 @@ Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

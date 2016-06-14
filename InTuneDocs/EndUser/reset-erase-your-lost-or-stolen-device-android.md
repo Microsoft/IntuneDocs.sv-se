@@ -26,19 +26,19 @@ ms.suite: ems
 ---
 
 
-# Återställa (radera) en enhet som förlorats eller stulits
+# Återställ (radera) en enhet som förlorats eller stulits
 
-Om du tappar bort din telefon eller om den blir stulen kan du återställa den till fabriksinställningarna från företagsportalappen eller företagsportalens webbplats. Följ stegen nedan eller titta på det här [videoklippet](http://aka.ms/ly1x17) som beskriver hur du använder företagsportalappen. Du kan också [återställa din enhet via företagsportalens webbplats](reset-your-device-cpwebsite.md)
+Om du tappar bort din Android-telefon eller om den blir stulen kan du återställa den till fabriksinställningarna från företagsportalappen eller -webbplatsen. Följ stegen nedan eller titta på det här [videoklippet](http://aka.ms/ly1x17) som beskriver hur du använder företagsportalappen. Du kan även [återställa enheten via företagsportalens webbplats](reset-your-device-cpwebsite.md).
 
-Läs om vad som händer när du återställer en enhet i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+Läs mer om vad som händer när du återställer en enhet i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
 
-> När du återställer en enhet till standardinställningarna tas information från både ditt privatliv och ditt arbete bort från den.
+> [!WARNING] När du återställer en enhet till standardinställningarna tas information från både ditt privatliv och ditt arbete bort från den.
 
 1.  Öppna [företagsportalen](http://portal.manage.microsoft.com) i webbläsaren och logga in på ditt arbetskonto.
 
 2.  Tryck på **Mina enheter** och välj namnet på den borttappade eller stulna enheten.
 
-3.  Klicka på **Återställ** &gt; **Återställ**
+3.  Klicka på **Återställ** &gt; **Återställ**.
 
 Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig.
 
@@ -47,6 +47,6 @@ Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-ad
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

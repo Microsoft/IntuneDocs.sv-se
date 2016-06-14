@@ -38,13 +38,13 @@ Med Microsoft Intune App SDK kan du göra så att vissa funktioner i iOS- eller 
 
 Du behöver åtkomst till appens källkod för att använda SDK, men du kan aktivera SDK-funktioner utan att ändra appens beteende.
 
-En översikt över SDK finns på sidan [Översikt](https://msdn.microsoft.com/en-us/library/mt627767.aspx). Om du vill börja använda Intune App SDK läser du [Komma igång med Microsoft Intune App SDK](https://msdn.microsoft.com/library/mt627766.aspx).
+En översikt över SDK finns på sidan [Översikt](/intune/develop/intune-app-sdk). Om du vill börja använda Intune App SDK läser du [Komma igång med Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
 
 ### Se även
 [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

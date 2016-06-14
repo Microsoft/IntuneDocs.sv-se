@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Uppgradera principinställningar för Windows-version i Microsoft Intune | Microsoft Intune
+title: Uppgradera principinställningar för Windows-version | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -44,11 +44,11 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 |**Beskrivning**|Du kan även ange en beskrivning för principen som hjälper dig att identifiera den i Intune-konsolen.
 |**Version att uppgradera till**|I listrutan väljer du den version av Windows 10 Desktop, Windows 10 Holographic eller Windows 10 Mobile som du vill uppgradera riktade enheter till.
 |**Produktnyckel**|Ange produktnyckeln som du har skaffat från Microsoft som kan användas för att uppgradera alla inriktade Windows 10 Desktop-enheter.<br>När du har skapat en princip som innehåller en produktnyckel kan du inte redigera produktnyckeln senare. Det beror på att nyckeln döljs av säkerhetsskäl. Om du vill ändra produktnyckeln måste du ange hela nyckeln igen.
-|**Licensfil**|Klicka på **Bläddra** för att välja den licensfil som du har skaffat från Microsoft som innehåller licensinformation för den Windows Holographic-version som du vill uppgradera riktade enheter till.
+|**Licensfil**|Klicka på **Bläddra** och välj den licensfil som du har fått från Microsoft och som innehåller licensinformation för den Windows Holographic- eller Windows 10 Mobile-version som du vill uppgradera målenheterna till.
 
 ### Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

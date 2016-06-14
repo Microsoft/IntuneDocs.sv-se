@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune | Microsoft Intune
+title: Säkerhetsprincipinställningar för mobila enheter | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -72,7 +72,7 @@ När du ställer in en princip för lösenordslängd för enheter som kör Windo
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup><br /><br />För Windows Phone 8-enheter måste du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
+|**Kräv kryptering på den mobila enheten**<sup>1</sup><br /><br />För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
 |**Kräv kryptering på minneskort**<br /><br />Gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas (appar och associerade data krypteras automatiskt)|saknas|Ja|
 Ytterligare information för enheter som kör Windows 8.1
 
@@ -217,6 +217,6 @@ Ytterligare information för enheter som kör Windows 8.1
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

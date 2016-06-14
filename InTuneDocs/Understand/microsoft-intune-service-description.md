@@ -42,7 +42,7 @@ En lista över inställningar du kan konfigurera för mobila enheter finns här:
 
 -   [Allmänna inställningar för mobila enheter i Configuration Manager](https://technet.microsoft.com/en-us/library/dn376523.aspx)
 
-Information om System Center 2012 R2 Configuration Manager finns i [dokumentationsbiblioteket för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).
+Information om System Center 2012 R2 Configuration Manager finns i [Dokumentationsbibliotek för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).
 
 ## Förstå hur uppdateringar av Intune-tjänsten påverkar dig
 Eftersom Intune är en onlinetjänst kan Microsoft uppdatera den regelbundet.
@@ -51,7 +51,9 @@ Använd informationen i det här avsnittet för att förstå hur ofta dessa tjä
 
 Information om ändringar i Intune-tjänsten finns i [Nyheter i Microsoft Intune](/intune/deploy-use/Whats-new-in-microsoft-intune.md). På [Microsoft Intune-bloggen](http://blogs.technet.com/b/microsoftintune/) diskuteras också ändringar i tjänsten och du får nyttiga tips så att du kan få ut mesta möjliga av Intune.
 
-Dessutom förmedlas viktiga uppdateringar av tjänsten till dig direkt från Intune-konsolen på anslagstavlan.
+Viktiga uppdateringar för tjänsten kommer också meddelas meddelandecentret till [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Om du installerar tillhörande [Office 365 Admin-mobilapp](https://support.office.com/en-us/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) kan du ta emot meddelanden på din mobila enhet.
+
+> [!NOTE] Du kan övervaka hälsotillståndet för Intune-tjänsten i den [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Välj **Tjänstens hälsa** i det vänstra fönstret.  
 
 Här är de typer av meddelanden som Microsoft tillhandahåller om Intune-tjänsten:
 -   Som hjälp att planera för tjänsteändringar meddelar vi dig minst 30–90 dagar innan tjänsteuppgraderingen beroende på effekten av ändringen. Detta sker med hjälp av kommunikationskanaler i produkten som anslagstavleaviseringar. Exempel på ändringar:
@@ -60,7 +62,7 @@ Här är de typer av meddelanden som Microsoft tillhandahåller om Intune-tjäns
 * Nya eller ändrade API:er – du får ett meddelande om att du måste utföra tester för att säkerställa bakåtkompatibilitet för anpassade appar
 * Ändringar av systemkrav, till exempel hur gammal webbläsarversionen får lov att vara
 * Alla uppdateringar som kräver att du vidtar åtgärder för att aktivera funktionen eller för att undvika tjänsteavbrott för funktionen.
--   Microsoft tillhandahåller information om nya funktioner och förbättringar av befintliga funktioner i vår månatliga tjänstuppdatering. I allmänhet skickar Microsoft ut tjänstuppdateringar runt mitten av varje månad. Uppdateringar beskrivs i [Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md).
+-   Microsoft tillhandahåller information om nya funktioner och förbättringar av befintliga funktioner i vår månatliga tjänstuppdatering. I allmänhet skickar Microsoft ut tjänstuppdateringar runt mitten av varje månad. Uppdateringarna beskrivs i [Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md).
 -   Om Intune-tjänsten skulle dras tillbaka meddelas du 12 månader i förväg.
 
 ## Välj den hanteringslösning som passar dig
@@ -81,11 +83,11 @@ Använd dessa resurser om du vill veta mer om Intune:
 
 ### Se även
 [Microsoft Intune](https://docs.microsoft.com/intune/)
-[Dokumentationsbibliotek för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx)
+[-dokumentationsbibliotek för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx)
 
 [Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

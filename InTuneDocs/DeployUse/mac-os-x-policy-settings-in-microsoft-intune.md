@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Principinställningar för Mac OS X i Microsoft Intune | Microsoft Intune
+title: Inställningar för Mac OS X-principer | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -43,9 +43,9 @@ Om den inställning som du söker efter inte visas i listan kan du skapa den med
 |----------------|---------------|
 |**Kräv ett lösenord för att låsa upp enheter**|Anger om användaren måste använda ett lösenord för att komma åt Mac-datorn. **Viktigt!** Till skillnad från iOS-enheter uppmanas användare på Mac OS X-enheter inte genast att uppdatera sitt lösenord för att följa den här inställningen.|
 |**Lösenordstyp krävs**|Anger om lösenordet som används kan vara endast numeriskt eller om det måste vara **Alfanumeriskt** (innehålla bokstäver och siffror). **Viktigt!** Den här inställningen stöds endast i Mac OS X version 10.10.3 och senare.|
-|**Antal avancerade tecken som krävs i lösenord**|Anger antalet avancerade tecken som krävs i lösenordet (från **0** - **4**).<br /><br />Ett avancerat tecken är en symbol som "**?**'|
+|**Antal avancerade tecken som krävs i lösenord**|Anger det antal avancerade tecken som krävs i lösenordet (från **0** - **4**).<br /><br />Ett avancerat tecken är en symbol som "**?**"|
 |**Minsta längd på lösenord**|Anger minimilängden för lösenordet (mellan **4** och **14** tecken).|
-|**Tillåt enkla lösenord**|Låter användarna skapa enkla lösenord som "**0000**" eller "**1234**'.|
+|**Tillåt enkla lösenord**|Låter användarna skapa enkla lösenord som "**0000**" eller "**1234**".|
 |**Antal minuters inaktivitet innan lösenord krävs**|Anger hur länge datorn måste vara inaktiv innan ett lösenord krävs för att låsa upp den.|
 |**Lösenordets giltighetstid (i dagar)**|Anger efter hur många dagar användaren måste byta lösenord (från **1** - **255** dagar).|
 |**Kom ihåg tidigare lösenord**|Den här inställningen används för att förhindra att användaren använder ett lösenord som har använts tidigare. När den här inställningen används kan du även konfigurera **Förhindra återanvändning av tidigare lösenord** om du vill ange ett antal tidigare lösenord som inte får återanvändas (från **1** - **24**).|
@@ -67,8 +67,7 @@ I listan **Kompatibla &amp; inkompatibla appar för Mac OS X** aktiverar du **Ha
 |**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och appaket-ID i filen.|
 |**Redigera**|Du kan redigera namn, utgivare och appaket-ID för den valda appen.|
 |**Ta bort**|Tar bort den markerade appen från listan.|
-> [!TIP]
-> Mer information om Intune-rapporter finns i [Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](understand-microsoft-intune-operations-by-using-reports.md).
+> [!TIP] Mer information om Intune-rapporter finns i [Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](understand-microsoft-intune-operations-by-using-reports.md).
 
 > [!IMPORTANT]
 > När en Mac OS X-enhet är i viloläge kan inte principer och profiler levereras eller inventeras. Därför kan det hända att Intune-konsolen tillfälligt visar statusen **Principinställningar med fel** tills enheten väcks ur viloläge nästa gång.
@@ -78,9 +77,9 @@ Använd **Rapporter om ej kompatibla appar** för att visa kompatibiliteten för
 
 #### Köra rapport
 
-1.  I [administratörskonsolen för Microsoft Intune](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapporter för appar**.
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Rapporter** &gt; **Rapporter om ej kompatibla appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller inkompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
 
 ## Anpassade principinställningar för Mac OS X i Microsoft Intune
 Använd Microsoft Intunes **Mac OS X anpassade konfigurationspolicy** för att distribuera inställningar till Mac OS X-enheter som du skapat med hjälp av [Apple konfigureringsverktyg](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12). Med detta verktyg kan du skapa många inställningar som styr driften av dessa enheter och exportera dem till en konfigurationsprofil. Du kan sedan importera denna konfigurationsprofil till en anpassad princip för Mac OS X i Intune och distribuera inställningarna för användare och enheter i organisationen.
@@ -127,6 +126,6 @@ Du kan skapa filen för konfigurationsprofil som används av den anpassade princ
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

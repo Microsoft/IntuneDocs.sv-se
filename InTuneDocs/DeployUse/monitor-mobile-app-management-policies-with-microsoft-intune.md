@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Övervaka hanteringsprinciper för mobilappar med Microsoft Intune
-När du har konfigurerat en MAM-princip och tillämpat den för användarna kan du övervaka efterlevnadsstatus på Azure Portal. Azure Portal innehåller information om de användare som påverkas av principen, efterlevnadsstatus och eventuella problem som slutanvändarna kan råka ut för.
+När du har konfigurerat en MAM-princip och tillämpat den för användarna kan du övervaka efterlevnadsstatus på [Azure Portal](https://portal.azure.com). Azure Portal innehåller information om de användare som påverkas av principen, efterlevnadsstatus och eventuella problem som slutanvändarna kan råka ut för.
 ## Sammanfattningsvy
 På bladet **Hantering av mobilprogram i Intune** visas en sammanfattning av efterlevnadsstatus enligt nedan:
 
@@ -39,7 +39,7 @@ På bladet **Hantering av mobilprogram i Intune** visas en sammanfattning av eft
 
 -   **INGEN PRINCIP:** Antalet användare som använder de appar som är associerade med principen, men inte är mål för principen.  Du kan lägga till dessa användare i principen.
 
-- **Flaggade användare:** Antalet användare som har problem. För närvarande rapporteras endast användare med jailbreakade enheter under **Flaggade användare**
+- **Flaggade användare:** Antalet användare som har problem. För närvarande rapporteras endast användare med upplåsta enheter under **Flaggade användare**.
 
 
 ## Detaljerad vy
@@ -77,6 +77,6 @@ I den detaljerade vyn visas felmeddelandet, appen som användes när felet intr�
 [Slutanvändarupplevelse för MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Skydda enheter med Microsoft Intune | Microsoft Intune
+title: Skydda enheter | Microsoft Intune
 description:
 keywords:
 author: Robstackmsft
@@ -41,9 +41,9 @@ Det första steget för att skydda företagets data på mobila enheter är att k
 Med Intune kan du integrera [Microsoft Passport for Work](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md), som är en alternativ inloggningsmetod för Windows 10 och senare som använder Active Directory eller ett Azure Active Directory-konto i stället för ett lösenord, smartkort eller virtuellt smartkort.
 
 ## Skydda Windows-datorer som hanteras med Intune-klienten
-Intune stöder fortfarande säkerhetsprinciper för Windows-datorer som du inte registrerar utan hanterar med Intune-klientprogrammet. Information om hur du kan skydda dina Windows-datorer med dessa principer finns i [Använda principer för att skydda Windows-datorer som kör Intune-klientprogrammet](policies-to-protect-windows-pcs-in-microsoft-intune.md).
+Intune stöder fortfarande säkerhetsprinciper för Windows-datorer som du inte registrerar utan hanterar med Intune-klientprogrammet. Information om hur du kan skydda dina Windows-datorer med dessa principer finns i [Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran](policies-to-protect-windows-pcs-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

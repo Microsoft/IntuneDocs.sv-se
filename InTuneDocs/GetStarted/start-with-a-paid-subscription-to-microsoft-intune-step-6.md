@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Skapa principer och publicera en app
-Intune-principerna tillhandahåller inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/Intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/Intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+Intune-principerna förser dig med inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Du kan lära dig mer i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/Intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/Intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Du kan utföra två typer av appinstallationer med Intune. Den första är en **obligatorisk installation**som automatiskt distribuerar appen till hanterade datorer. Den andra är en **tillgänglig installation**som distribuerar appen, eller en länk till appen, till Intune-företagsportalen så att användarna kan välja om de vill installera den på sina datorer eller på sina mobila enheter.
 
@@ -43,17 +43,17 @@ Följande steg förklarar hur du skapar en konfigurationsprincip för mobila enh
 
 ## Skapa och distribuera en konfigurationsprincip för mobila enheter
 
-1.  Öppna [Intune-administrationskonsolen](https://manage.microsoft.com/)
+1.  Öppna [Intune-administrationskonsolen](https://manage.microsoft.com/).
 
 2.  Välj ikonen **Princip** i det vänstra fönstret.
 
     ![admin-console-policy-workspace](./media/policy.png)
 
-3.  Välj **Lägg till princip** i listan **Uppgifter** på sidan **Principöversikt**.
+3.  Välj du **Lägg till princip** i listan **Uppgifter** på sidan **Översikt över princip** .
 
-4.  Expandera den plattform som du vill skapa en princip för i principlistan och välj **Allmän konfiguration** > **Skapa och distribuera en princip med de rekommenderade inställningarna** > **Skapa princip**
+4.  Expandera den plattform som du vill skapa en princip för i principlistan och välj **Allmän konfiguration** > **Skapa och distribuera en princip med de rekommenderade inställningarna** > **Skapa princip**.
 
-5.  När du uppmanas att **välja de grupper som du vill distribuera principen till** väljer du **Intune-användare** (gruppen som skapades i föregående steg) i listan över tillgängliga grupper och väljer **Lägg till** > **OK**
+5.  När du uppmanas till **Välj de grupper som du vill distribuera principen till** väljer du **Intune-användare** (gruppen som skapades i föregående steg) i listan över tillgängliga grupper och väljer **Lägg till** > **OK**.
 
 Din princip visas i listan över konfigurationsprinciper och har distribuerats till gruppen **Intune-användare** . Visa principens egenskaper genom att dubbelklicka på den.
 
@@ -63,23 +63,23 @@ Din princip visas i listan över konfigurationsprinciper och har distribuerats t
 
     ![admin-console-apps-workspace](./media/apps.png)
 
-    > När du startar **Intune Software Publisher** första gången inträffar en kort fördröjning medan programmet installeras.
+    > [!NOTE]När du startar **Intune Software Publisher** första gången inträffar en kort fördröjning medan programmet installeras.
 
-2.  Granska säkerhetsvarningen och välj **Kör**
+2.  Läs säkerhetsvarningen och välj **Kör**.
 
-3.  Välj **Nästa** på sidan **Innan du börjar**
+3.  Välj **Nästa** på sidan **Innan du börjar**.
 
-4.  På sidan **Programvaruinstallation** i **Hur ska enheterna få tillgång till den här programvaran** väljer du **Extern länk**.
+4.  På sidan **Programinstallation** går du till **Hur ska enheterna få tillgång till den här programvaran** och väljer **Extern länk**.
 
-5.  Ange programmets externa länk i **Ange webbadress (URL)** och välj sedan **Nästa**. URL:en måste börja med **http://**. För Skype-appen använder du länken nedan som matchar den mobilplattform som du använder:
+5.  Ange programmets externa länk i **Ange URL:en** och välj sedan **Nästa**. URL:en måste börja med **http://**. För Skype-appen använder du länken nedan som matchar den mobilplattform som du använder:
 
-    -   **iOS:**   [https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8](https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8)
+    -   **iOS:** [https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8](https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt%3D8)
 
-    -   **Android:**  [https://play.google.com/store/apps/details?id=com.skype.raider](https://play.google.com/store/apps/details?id=com.skype.raider)
+    -   **Android:** [https://play.google.com/store/apps/details?id=com.skype.raider](https://play.google.com/store/apps/details?id=com.skype.raider)
 
-    -   **Windows Phone 8 eller Windows Phone 8.1:**  [http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
+    -   **Windows Phone 8 eller Windows Phone 8.1:** [http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51](http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51)
 
-6.  Lägg till den information som du vill att användarna ska se på företagsportalen för programmet på sidan **Programbeskrivning** och välj sedan **Nästa**. Följande inställningar är tillgängliga (det här exemplet refererar till Skype):
+6.  Tillhandahåll den information som du vill att användarna ska se i företagsportalen för programmet på sidan **Programbeskrivning** och välj sedan **Nästa**. Följande inställningar är tillgängliga (det här exemplet refererar till Skype):
 
     -   **Utgivare:** Ange utgivarens namn, ”Microsoft”
 
@@ -95,25 +95,25 @@ Din princip visas i listan över konfigurationsprinciper och har distribuerats t
 
 7.  På sidan **Sammanfattning** kontrollerar du programinformationen och väljer sedan **Ladda upp**. Avsluta guiden genom att klicka på **Stäng**.
 
-8.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Appar** > **Appar** > **Skype** > **Hantera distribution**
+8.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Appar** > **Appar** > **Skype** > **Hantera distribution**.
 
-9. Välj **Intune-användare** på sidan **Välj grupper** om du vill distribuera programmet till den användargruppen och välj sedan **Lägg till** > **Nästa**
+9. Välj **Intune-användare** på sidan **Välj grupper** om du vill distribuera programmet till användargruppen och välj sedan **Lägg till** > **Nästa**
 
 10. Välj **Tillgänglig installation** i kolumnen **Godkännande** för din grupp på sidan **Distributionsåtgärd** .
 
-11. Välj **Slutför**
+11. Välj **Slutför**.
 
 Skype-appen är nu tillgänglig för installation på mobila enheter från företagsportalen, men du måste först installera [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-programvaran på datorer och mobila enheter.
 
 
 ### Nästa steg
-Grattis! Du är klar med steg 6 i *snabbstartsguiden för Intune*
+Gratulerar! Du är klar med steg 6 i *snabbstartsguiden för Intune*.
 
 >[!div class="step-by-step"]
 
->[&larr; **Ordna användare och enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)       [**Anpassa företagsportalen** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-7.md)  
+>[&larr; **Ordna användare och enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md) [**Anpassa företagsportalen** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-7.md)  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

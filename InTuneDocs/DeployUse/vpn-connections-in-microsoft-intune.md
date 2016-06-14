@@ -48,20 +48,23 @@ Intune har stöd för att skapa VPN-profiler som använder följande anslutnings
 
 
 
-Anslutningstyp |iOS och Mac OS X  |Android  |Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1  |Windows 10 Desktop och Mobile |
----------|---------|---------|---------|---------|---------
-Cisco AnyConnect |Ja |Ja   |Nej    |     Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
-Pulse Secure |Ja  |Ja |Ja   |Nej  |Ja  |Ja| Ja|        
-F5 Edge Client |Ja |Ja |Ja |Nej  |Ja  |   Ja |  Ja|   
-Dell SonicWALL Mobile Connect |Ja |Ja |Ja |Nej  |Ja |Ja |Ja|         
-Kontrollpunkt för mobilt VPN: |Ja |Ja |Ja |Ja |Ja|Ja|Ja|
-
-
+Anslutningstyp |iOS och Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1  |Windows 10 Desktop och Mobile |
+----------------|------------------|-------|-----------|----------|--------------|-----------------|------------|
+Cisco AnyConnect|Ja |Ja   |Nej    |     Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
+Pulse Secure|Ja  |Ja |Ja   |Nej  |Ja  |Ja| Ja|        
+F5 Edge Client|Ja |Ja |Ja |Nej  |Ja  |   Ja |  Ja|   
+Dell SonicWALL Mobile Connect|Ja |Ja |Ja |Nej  |Ja |Ja |Ja|         
+Kontrollpunkt för mobilt VPN:|Ja |Ja |Ja |Ja |Ja|Ja|Ja|
+Microsoft SSL (SSTP)|Nej |Nej |Nej |Nej |Nej|Nej|Nej|
+Microsoft Automatic|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
+IKEv2|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
+PPTP|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
+L2TP|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
 
 
 > [!IMPORTANT] Innan du kan använda de VPN-profiler som har distribuerats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md) när du ska distribuera appar med hjälp av Intune.  
 
- Lär dig hur du skapar anpassade VPN-profiler med URI-inställningar i [Anpassade konfigurationer för VPN-profiler](custom-configurations-for-vpn-profiles.md).     
+ Lär dig att skapa anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](custom-configurations-for-vpn-profiles.md).     
 
 ## Så här skyddar du VPN-profiler
 
@@ -73,7 +76,7 @@ När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som d
 
 Detta kallas identitetscertifikat och används för att autentisera mot en betrodd certifikatprofil (eller ett rotcertifikat) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
-Mer information om hur du skapar och använda certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
+Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
 ### Användarnamn och lösenord
 
@@ -81,7 +84,7 @@ Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösen
 
 ## Skapa en VPN-profil
 
-1. I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) klickar du på **Princip > Lägg till princip**..
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Princip > Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
     * **VPN-profil (Android 4 och senare)**
     * **VPN-profil (iOS 7.1 och senare)**
@@ -102,15 +105,15 @@ Inställningsnamn  |Mer information
 **Anslutningstyp**     |  Välj någon av följande anslutningstyper som ska användas i VPN-profilen: **Cisco AnyConnect** (inte tillgänglig för Windows 8.1 eller Windows Phone 8.1), **Pulse Secure**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**
 **VPN-serverbeskrivning**     | Ange en beskrivning för den VPN-server som enheterna ska ansluta till. **Exempel:** Contoso VPN Server. Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.
 **Serverns IP-adress eller fullständiga domännamn**    |Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. **Exempel:** 192.168.1.1, vpn.contoso.com.  Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.         |         
-**Serverlista**     |Klicka på **Lägg till** för att lägga till en ny VPN-server för VPN-anslutningen. Du kan även ange vilken server som ska vara standardserver för anslutningen. Det här alternativet visas endast när anslutningstypen är **F5 Edge Client**.         
+**Serverlista**     |Välj **Lägg till** om du vill lägga till en ny VPN-server som ska användas för VPN-anslutningen. Du kan även ange vilken server som ska vara standardserver för anslutningen. Det här alternativet visas endast när anslutningstypen är **F5 Edge Client**.         
 **Skicka all nätverkstrafik via VPN-anslutningen**     |Om du väljer det här alternativet skickas all nätverkstrafik via VPN-anslutningen. Om du inte väljer det här alternativet kommer klienten dynamiskt att förhandla vägar i delade tunnlar vid anslutning till tredjeparts VPN-servrar. Endast anslutningar till företagsnätverket skickas via en VPN-tunnel. VPN-tunnlar används inte vid anslutning till resurser på Internet.
 **Autentiseringsmetod**| Välj den autentiseringsmetod som används av VPN-anslutningen: **Certifikat** eller **Användarnamn och lösenord**. (Användarnamn och lösenord är inte tillgängligt om anslutningstypen är Cisco AnyConnect.) Alternativet **Autentiseringsmetod** är inte tillgängligt för Windows 8.1.
 **Spara autentiseringsuppgifterna för varje inloggning**|Välj det här alternativet om användarnas autentiseringsuppgifter ska sparas, så att användarna slipper ange dem varje gång som en anslutning ska upprättas.
-**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Välj det SCEP-klientcertifikat du skapade tidigare och som ska användas för att autentisera VPN-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas bara om autentiseringsmetoden är **Certifikat**.
-**Roll**| Ange namnet för den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner. Det här alternativet visas bara om anslutningstypen är **Pulse Secure**.
-**Område**|Ange namnet för den autentiseringssfär som ska användas. En autentiseringssfär är en grupp av autentiseringsresurser som används av Pulse Secure-anslutningstypen. Det här alternativet visas bara om anslutningstypen är **Pulse Secure**.
-**Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas bara om anslutningstypen är **Dell SonicWALL Mobile Connect**.
-**Fingeravtryck**|Ange en sträng, till exempel "Contoso fingeravtryckskod" som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan: Skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på VPN-servern medan fingeravtrycket visas (användaren verifierar fingeravtrycket manuellt och klickar på **betrodd** för att ansluta). Det här alternativet visas bara om anslutningstypen är **CheckPoint Mobile VPN**.
+**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Välj det SCEP-klientcertifikat du skapade tidigare och som ska användas för att autentisera VPN-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.
+**Roll**| Ange namnet för den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner. Det här alternativet visas endast när anslutningstypen är **Pulse Secure**.
+**Område**|Ange namnet för den autentiseringssfär som ska användas. En autentiseringssfär är en grupp av autentiseringsresurser som används av Pulse Secure-anslutningstypen. Det här alternativet visas endast när anslutningstypen är **Pulse Secure**.
+**Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas endast när anslutningstypen är **Dell SonicWALL Mobile Connect**.
+**Fingeravtryck**|Ange en sträng, till exempel "Contoso fingeravtryckskod" som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan: Skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på den VPN-server som anslutningsförsöket görs till medan fingeravtrycket visas (användaren verifierar fingeravtrycket manuellt och väljer **lita på** för att ansluta). Det här alternativet visas endast när anslutningstypen är **CheckPoint Mobile VPN**.
 **VPN per app**|Välj det här alternativet om du vill koppla VPN-anslutningen till en iOS- eller Mac OS X-app så att anslutningen öppnas när appen körs. Du kan associera VPN-profilen med en app när du distribuerar programvaran. Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 **Identifiera proxyinställningar automatiskt** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
 **Använd automatiskt konfigurationsskript** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill använda ett automatiskt konfigurationsskript för att ange inställningarna och ange en URL till den fil som innehåller inställningarna. Mer information finns i dokumentationen till Windows Server.
@@ -131,6 +134,8 @@ Inställningsnamn  |Mer information
 **Associerade appar**     | Du kan ange en lista över appar som ska använda VPN-anslutningen automatiskt. Appidentifieraren beror på typen av app. För universella appar anger du Namn på paketfamilj och för skrivbordsappar anger du appens filsökväg.          
 
 
+> [!IMPORTANT] Vi rekommenderar att du skyddar alla listor över appar som du sammanställer för användning i konfigurationen av per app-VPN. Om en obehörig användare ändrar listan och du importerar den till per app-VPN-applistan finns risken att du tillåter VPN-åtkomst till appar som inte ska ha åtkomst. Ett sätt att skydda applistor är att använda en åtkomstkontrollista (ACL, Access Control List).
+
 Här är ett exempel på när du kan använda inställningar för företagsgränser. Om du bara vill aktivera VPN för fjärrskrivbord skapar du en regel för nätverkstrafik som tillåter trafik för protokoll nummer 27 på den externa porten 3996. Ingen annan trafik använder VPN-anslutningen.
 
 Det är praktiskt att definiera vägar i företagsgränser om VPN-anslutningstypen inte tillåter att du definierar hur trafiken hanteras i delade tunnlar (Split Tunneling). I så fall använder du **Vägar** för att visa en lista med de vägar som ska använda VPN-anslutningen.
@@ -141,21 +146,24 @@ Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principe
 
 ## Distribuera principen
 
-1.  Välj den princip som du vill distribuera på arbetsytan **Princip** och klicka sedan på **Hantera distribution**.
+1.  På arbetsytan **Princip** markerar den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** – Markera en eller flera grupper som du vill distribuera principen till och klicka sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** – Välj en eller flera grupper som du vill distribuera principen till och välj sedan **Lägg till** &gt; **OK**.
 
-    -   **Om du vill stänga dialogrutan utan att distribuera principen** – klicka på **Avbryt**..
+    -   **Om du vill stänga dialogrutan utan att distribuera den** – Välj **Avbryt**.
 
 
 Efter slutförd distribution ser användarna det namn du gav VPN-anslutningen i listan över VPN-anslutningar på sina enheter.
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
+### Se även
+[Anpassade konfigurationer för VPN-profiler](Custom-configurations-for-VPN-profiles.md)
+[Per app-VPN för Android Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO5-->
 
 

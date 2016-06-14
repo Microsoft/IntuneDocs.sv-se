@@ -49,25 +49,25 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 
 ## Så här skaffar du och laddar upp en Apple VPP-token
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Admin** &gt; **iOS och Mac OS X** &gt;  **Volyminköpsprogram**
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Admin** &gt; **iOS och Mac OS X** &gt; **Volyminköpsprogram**.
 
 2.  Klicka på länken **Apple VPP-konto** och registrera dig för volyminköpsprogrammet för företag om du inte redan gjort det. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto.
 
-3.  På sidan **Hantera Apple VPP (Volume Purchase Program)** i Intune-konsolen klickar du på **Överför en VPP-token**
+3.  På sidan **Hantera Apple VPP (Volume Purchase Program)** i Intune-konsolen klickar du på **Överför VPP-token**.
 
-4.  I dialogrutan **Överför en VPP-token** anger du eller klistrar in namnet på VPP-token och ditt Apple-ID och klickar sedan på **Överför**
+4.  I dialogrutan **Överför en VPP-token** anger du eller klistrar in namnet på VPP-token och ditt Apple-ID och klickar sedan på **Överför**.
 
-5.  I varningsdialogrutan klickar du på kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och klickar sedan på **Ja**
+5.  I varningsdialogrutan klickar du på kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och klickar sedan på **Ja**.
 
 På sidan **Volyminköpsprogram** kan du nu visa information om Apple VPP-token, inklusive när den senast uppdaterades, när den upphör att gälla och när den senast synkroniserades med Intune.
 
-Du kan synkronisera data från Apple med Intune när som helst genom att klicka på **Synkronisera nu**
+Du kan synkronisera data från Apple med Intune när som helst genom att klicka på **Synkronisera nu**.
 
-## För att ladda upp och distribuera en volyminköpt app
+## Distribuera en volyminköpt app
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
 
-2.  Följ instruktionerna i avsnittet [Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md) för att ladda upp, skapa och distribuera appen.
+2.  Välj den app som du vill distribuera, klicka på **Hantera distribution**, genomför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
 När du distribuerar appar som en **obligatorisk** installation används en licens av alla användare som installerar appen.
 
@@ -75,20 +75,20 @@ Om du vill frisläppa en licens måste du ändra distributionsåtgärden till **
 
 När användare med kvalificerande enheter försöker installera en VPP-app ombeds de att gå med i Apples volyminköpsprogram. De måste göra detta innan appinstallationen fortsätter.
 
-> Titta i kolumnen **Status för VPP-villkor** så ser du godkännandestatusen för varje användare som appen har distribuerats till.
+> [!TIP] Titta på kolumnen **Status för VPP-villkor** om du vill se godkännandestatus för varje användare som appen har distribuerats till.
 
 Distributionen misslyckas om det inte finns fler tillgängliga licenser.
 
 ## För att övervaka Apple VPP-appar
-Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser som används från arbetsytan **Appar** under noden **Hanterad programvara** &gt; **Volyminköpta appar**.
+Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser som används från arbetsýtan **Appar** i noden **Hanterad programvara** &gt; **Volyminköpta appar**.
 
-> Du kan också använda **appfilter** för att kontrollera statusen för varje appinstallation.
+> [!TIP] Du kan också använda appen **Filter** att kontrollera status för varje appinstallation.
 
 ### Se även
-[Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md)
+[Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

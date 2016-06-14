@@ -31,15 +31,14 @@ Använd informationen i det här avsnittet för att lära dig hur du lägger til
 
 
 > [!IMPORTANT]
-> Informationen i det här avsnittet hjälper dig att lägga till appar som du vill distribuera till registrerade enheter och registrerade Windows-datorer. Om du vill lägga till appar för Windows-datorer som du hanterar med Intune-klientprogrammet läser du [Lägg till appar för Windows-datorer i Microsoft Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
+> Informationen i det här avsnittet hjälper dig att lägga till appar som du vill distribuera till registrerade enheter och registrerade Windows-datorer. Om du vill lägga till appar för Windows-datorer som du hanterar med hjälp av Intune-klientprogrammet, se [Lägg till appar för Windows-datorer i Microsoft Intune](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
 ## Lägg till appen
 Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för appen och, om tillämpligt, överföra den till molnlagringsutrymmet med följande metod:
 
-1.  Använd [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivaren.
+1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Lägg till appar** så startas programvaruutgivaren för Intune.
 
-    > [!TIP]
-    > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
+    > [!TIP] Du kan behöva ange ditt Intune-användarnamn och lösenord innan utgivaren startar.
 
 2.  På sidan **Programvaruinstallation** för programvaruutgivaren väljer du något av följande alternativ för **Hur ska enheterna få tillgång till den här programvaran**:
     - **Installationsprogram för programvara**, för appar med filnamnstillägget **.msi** eller **.exe** anger du:
@@ -53,7 +52,7 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
             - Webbadressen till App Store för den app som du vill distribuera. Om du till exempel vill distribuera appen Microsoft Remote Desktop för Android anger du **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**. Du hittar webbadressen till appen genom att använda en sökmotor för att hitta Store-sidan som innehåller appen. Om du till exempel vill hitta Remote Desktop-appen kan du söka efter **Microsoft Remote Desktop Android**.
             - En webbplats. Intune distribuerar en genvägsikon till platsen till enheten (kallas även för web clip).
             - En app på webben. Intune distribuerar en genvägsikon till appen på enheten.
-        - **Kräv en hanterad webbläsare för att öppna den här länken (endast Android och iOS)** – När du distribuerar en länk till en webbplats eller webbapp till användare kan de bara öppna den i Intune Managed Browser som måste vara installerad på enheten.<br>Mer information om Managed Browser finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
+        - **Kräv en hanterad webbläsare för att öppna den här länken (endast Android och iOS)** – När du distribuerar en länk till en webbplats eller webbapp till användare kan de bara öppna den i Intune Managed Browser som måste vara installerad på enheten.<br>Mer information om den hanterade webbläsaren finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
 
   -   **Hanterad iOS-app från App Store**, för kostnadsfria appar från iTunes-butiken som du vill hantera med MAM-principer anger du:
 
@@ -65,8 +64,7 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
 
 3.  På sidan **Programvarubeskrivning** konfigurerar du följande:
 
-    > [!TIP]
-    > En del av dessa värden kan anges automatiskt eller visas inte, beroende på den installationstyp som används.
+    > [!TIP] Beroende på vilken typ av installationsprogram som du använder kan en del av dessa värden ha angetts automatiskt.
 
     - **Utgivare** – Ange namnet på appens utgivare.
     - **Namn** – Ange namnet på appen så som det ska visas i företagsportalen.<br>Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
@@ -83,8 +81,7 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
 
 4.  På sidan **Krav** väljer du de krav som måste uppfyllas innan appen kan börja installeras på en enhet. För ett appaket för iOS kan du till exempel välja den lägsta version av iOS som krävs och vilken typ av enhet det måste vara, t.ex. iPhone eller iPad.
 
-    > [!TIP]
-    > Sidan **Krav** visas inte för alla typer av appar.
+    > [!TIP] Sidan **Krav** visas inte för alla typer av appar.
 
 5.  Ytterligare guidesidor visas när du väljer filtypen **Windows Installer**. Den här filtypen används när du distribuerar programvara till datorer som kör Windows 10 eller senare och som har registrerats i Intune.
 
@@ -94,6 +91,12 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
 
 Appen visas i noden **Appar** på arbetsytan **Appar**.
 
+## Exempel
+
+### Distribuera MSI-program till Windows 10-enheter
+I den här fyra minuter långa videon får du lära dig mer om hur du distribuerar program för Microsoft Installer (msi) till registrerade enheter som kör Windows 10.<br><br>
+
+<iframe src="https://channel9.msdn.com/Series/How-to-Control-the-Uncontrolled/6--How-to-Deploy-MSI-Applications-to-Windows-10-Using-Intune-and-Mobile-Device-Management-MDM/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 ## Nästa steg
 
@@ -103,6 +106,6 @@ När du har skapat en app är nästa steg att distribuera den. Mer information f
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 

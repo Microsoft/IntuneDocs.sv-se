@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Principinställningar för Windows i Microsoft Intune | Microsoft Intune
+title: Principinställningar för Windows | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -26,7 +26,13 @@ ms.suite: ems
 ---
 
 # Principinställningar för Windows i Microsoft Intune
-Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows** om du vill konfigurera inställningar för registrerade Windows 8- och Windows 8.1-enheter:
+Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows (Windows 8.1 och senare)** om du vill konfigurera inställningar för registrerade Windows 8.1- och Windows 8-enheter:
+
+## Tillämplighetsinställningar
+
+|Inställningsnamn|Information|
+|----------------|----------------------------------|
+|**Tillämpa alla konfigurationer på Windows 10**|Gör att inställningar i den här principen tillämpas på Windows 10-enheter utöver Windows 8- och Windows 8.1-enheter.|
 
 ## Säkerhetsinställningar
 
@@ -47,7 +53,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows** om du
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
 |----------------|----------------------------------|--------------|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att filer på enheten krypteras.<br>För Windows Phone 8-enheter måst du ange detta till **Ja**..|Ja|Nej|
+|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att filer på enheten krypteras.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.|Ja|Nej|
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
 
 -   Om du vill framtvinga kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](http://support.microsoft.com/kb/3013816) på varje enhet.
@@ -119,6 +125,6 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows** om du
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

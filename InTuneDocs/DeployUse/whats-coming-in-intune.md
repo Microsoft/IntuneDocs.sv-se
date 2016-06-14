@@ -6,7 +6,7 @@ description:
 keywords:
 author: Lindavr
 manager: jeffgilb
-ms.date: 05/03/2016
+ms.date: 05/17/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: microsoft-intune
@@ -15,7 +15,7 @@ ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: noindex,nofollow
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -32,21 +32,21 @@ Den här sidan uppdateras regelbundet. Kom tillbaka då och då för nytillkomme
 
 Följande ändringar är under utveckling för Intune. Hybriddistributioner (Configuration Manager med Intune) kommer också att ha stöd för alla dessa funktioner. Mer information om nya hybridfunktioner finns på [sidan med nyheter om hybridfunktioner](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 
-## Introduktion av Meddelandecenter
-Som en del av migreringen av Intune till [hanteringsportalen för Office 365](https://portal.office.com/) kommer vi att börja utnyttja Meddelandecenter för att informera om nya funktioner och annan kommunikation.  Genom att installera den medföljande mobilappen för Office 365-administratör kan du också ta emot meddelanden på din mobiltelefon och enkelt vidarebefordra meddelanden till användare eller ett distributionsalias.<br>  
-Från och med majutgåvan kommer vi att börja använda Meddelandecenter för att meddela dig när uppdateringar är färdiga och för att publicera information om nya och förbättrade Intune-funktioner.  Kolla in Meddelandecenter redan nu genom att logga in på [hanteringsportalen för Office 365](https://portal.office.com/) och välja alternativet **MEDDELANDECENTER** i det vänstra navigeringsfönstret.
-<!---TFS 1242782--->
+## Intune-kommunikation
+- **Hälsoinformation för Intune-tjänsten.** för Intune har nu flyttats till en central plats med andra Microsoft-tjänster. Nu hittar du den här informationen i [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx) under Tjänstens hälsa. Mer information finns i [det här blogginlägget](https://blogs.technet.microsoft.com/microsoftintune/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
 
+- **Introduktion till gränssnittet i Meddelandecenter** Som en del av migreringen av Intune till [hanteringsportalen för Office 365](https://portal.office.com/) kommer vi att börja utnyttja Meddelandecenter för att informera om nya funktioner och annan kommunikation. Genom att installera den medföljande mobilappen för Office 365-administratör kan du också ta emot meddelanden på din mobiltelefon och enkelt vidarebefordra meddelanden till användare eller ett distributionsalias.
+Från och med majutgåvan kommer vi att börja använda Meddelandecenter för att meddela dig när uppdateringar är färdiga och för att publicera information om nya och förbättrade Intune-funktioner. Ta en titt på Meddelandecenter redan nu genom att logga in till [hanteringsportalen för Office 365](https://portal.office.com/) och välja alternativet **Meddelandecenter** i det vänstra navigeringsfönstret.
 
 ## Apphantering
+- **Nya appar tillgängliga för hantering med MAM-principer.** Microsoft Word-, Excel- och PowerPoint-appar för Android kan nu associeras med MAM-principer på enheter som inte har registrerats med Intune. Om du vill se en fullständig lista över appar som stöds kan du gå till Microsoft Intune-galleriet för mobilprogram på [sidan för Microsoft Intune-programpartner](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
+
+
 - **Villkorlig åtkomst för webbläsare.** Du kan skapa en princip för villkorlig åtkomst för Exchange Online och SharePoint Online så att programmen bara kan användas av hanterade och godkända iOS- och Android-enheter. Användare som försöker logga in till Outlook Web Access (OWA) och SharePoint-webbplatser med iOS- och Android-enheter uppmanas att registrera sina enheter med Intune samt att åtgärda eventuella efterlevnadsproblem innan de kan logga in.
 <!---TFS 1175844--->
 
 - **MAM SDK: Stöd för konfiguration av PIN-kodens längd.** Du kan ange längden på PIN-koden för MAM-appar på samma sätt som PIN-koden för en enhet. Detta innebär att slutanvändaren måste uppfylla de nya begränsningar som du anger. Användaren ser en lite annorlunda PIN-skärm som är anpassad till den längre inmatningen.
 <!--- TFS 1104753--->
-
-- **MAM-kontroller för att förhindra att Outlook-kontakter synkroniseras (iOS).** En ny inställning är tillgänglig för hantering av mobila program utan enhetsregistrering. Med den här inställningen kan Intune-administratören förhindra att ett program synkroniserar kontakter till den interna adressboken på iOS-enheter. När den här inställningen är aktiverad kan appen inte längre spara kontakter i den interna adressboken. När den här inställningen är inaktiverad kan appen spara kontakter i den interna adressboken. När en Intune-administratör rensar en enhet selektivt tas alla kontakter som redan har sparats i den interna adressboken bort. Den här nya inställningen stöds nu av Outlook-appen på iOS-enheter.
-<!---TFS item 1276166--->
 
 - **Skype för företag för Android.** Intune-administratörer kan nu välja att rikta MAM mot Skype för företag utan registreringsprinciper.  När användarna har loggat in tillämpas MAM-principerna.
 <!--- TFS item 1248444 --->
@@ -69,41 +69,44 @@ Om du behöver hjälp med att välja metod läser du [Förbereda appar för hant
 <!--- TFS 1284856--->
 
 
-<!--- TFS item 1274326 --->
-
-## Åtkomstkontroll
-* **Skype för företag – Online stöder villkorlig åtkomst.** Intune-administratörer kan skapa en princip för villkorlig åtkomst för Skype för företag – Online så att programmet bara kan användas av hanterade och kompatibla iOS- och Android-enheter. Användare som försöker logga in i mobilappen för Skype för företag på iOS och Android uppmanas att registrera sig i Intune samt att åtgärda eventuella efterlevnadsproblem innan de kan logga in.
-<!---TFS item 1254499--->
 
 ## Företagsportal
-* **En banderoll för enhetsidentifikation ger mer information till slutanvändaren.** Slutanvändarna kan enkelt identifiera den enhet de valt när de använder företagsportalens webbplats. Om fel enhet har valts kan de välja rätt enhet genom att trycka på länken ”Tryck här” på banderollens startsida.
+
+- **Popup-meddelanden för slutanvändare.** Slutanvändarna ser nu popup-meddelanden från Android-företagsportalappen när de registrerar enheter eller tar bort enheter från företagsportalen.
+- **En banderoll för enhetsidentifikation ger mer information till slutanvändaren.** Slutanvändarna kan enkelt identifiera den enhet de valt när de använder företagsportalens webbplats. Om fel enhet har valts kan de välja rätt enhet genom att trycka på länken ”Tryck här” på banderollens startsida.
 <!--- TFS 1231157--->
 
-* **Windows-appaket är tillgängliga direkt från företagsportalen**: Användare av Windows 8-, Windows 8.1- och Windows RT-datorer kan nu installera Windows-appaket (med filtillägget .appx) direkt från företagsportalens webbplats. Tidigare var Intune-administratörerna tvungna att sköta distributionen eller så var användarna tvungna att installera företagsportalappen på sina enheter för att installera appar.
-<!--- TFS item 1082481 --->
+- **Ändringar i kontona för Enhetsregistreringshanterare i Android-företagsportalappen.** I syfte att förbättra prestanda och skalning visar Intune inte längre alla enheter i Enhetsregistreringshanteraren (DEM, Device Enrollment Manager) i fönstret **Mina enheter** i Android-företagsportalappen. Endast den lokala enhet som kör appen visas och endast om den har registrerats via företagsportalappen. DEM-användaren kan utföra åtgärder på den lokala enheten, men fjärrhanteringen av andra registrerade enheter kan endast utföras från Intune-administrationskonsolen.
 
-* **Användare kan fjärrlåsa sina enheter från företagsportalen** Ett nytt alternativ för fjärrlåsning har lagts till på företagsportalens webbplats så att användarna kan fjärrlåsa sina enheter från portalen om de tappar bort enheten eller om den blir stulen. Följande tabell visar plattformsstödet för fjärrlåsning för Intune och Intune med Configuration Manager.
-<!--- TFS item 1195661 --->
+- **Ändringar av konton för enhetsregistreringshanterare i iOS-företagsportalappen.** I syfte att förbättra prestanda och skalning visar Intune inte längre alla enheter i enhetsregistreringshanterarna (DEM, Device Enrollment Managers) i fönstret Mina enheter i iOS-företagsportalappen. Endast den lokala enheten som kör appen visas och endast om den har registrerats via företagsportalappen. DEM-användaren kan utföra åtgärder på den lokala enheten, men fjärrhanteringen av andra registrerade enheter kan endast utföras från Intune-administrationskonsolen.  Dessutom kommer Intune sluta använda DEM-konton med antingen Apples DEP-program för enhetsregistrering (Device Enrollment Program) eller verktyget Apple Configurator. Båda dessa registreringsmetoder stöder redan användarlös registrering för delade iOS-enheter.  Använd endast DEM-konton om användarlös registrering för delade enheter inte är tillgängligt.
 
-|Plattform  |Information om stöd|
-|---------|---------|
-|iOS | Stöds|
-|Android | Stöds|
-|Windows Phone 8.1 | Stöds|
-|Windows 10 Mobil | Stöds endast om telefonen har ett konfigurerat lösenord|
-|PC (Windows 8.0 och tidigare) | Stöds inte|
-|PC (Windows 8.1) | Stöds inte|
-|Windows Phone 8.0 | Stöds inte|
-|Windows 10 Desktop | Stöds inte|
+
 
 ## Tjänstens utfasning
-* **Borttagning av anpassade meddelanderegler för specifika grupper.** Från början av juni 2016 kommer du inte längre att kunna använda guiden Skapa meddelanderegel för att tillämpa meddelanderegler på specifika användarskapade grupper.
+**Borttagning av anpassade meddelanderegler för specifika grupper.**
+Intune-meddelanderegler används för att definiera vem en e-postavisering ska skickas till från Intune. För närvarande kan du konfigurera meddelanderegler för att skicka e-post till alla användare av enheter i en Intune-enhetsgrupp som du har skapat. Från och med den 1 juni 2016 eller däromkring kommer det inte längre att finnas stöd för att rikta sig till användarskapade grupper.
 
-    För närvarande, om du vill rikta in dig på en viss användardefinierad grupp, väljer du **Admin** > **Meddelanderegler** > **Skapa ny regel** från Microsoft Intune Administrationskonsol. I steg två i guiden Skapa meddelanderegel måste du välja de enhetsgrupper som regeln ska tillämpas på. Det här steget, **Välj enhetsgrupper**, håller på att fasas ut från Intune-konsolen.
+Om du vill rikta en meddelanderegel till en grupp som du har skapat via Microsoft Intune-administrationskonsolen skulle du i dag utföra följande steg:
 
-    **Välj enhetsgrupper** stöds inte efter 1606-versionen i juni av Intune. Dock visas alternativet fram till augusti 2016. Efter augusti börjar vi fasa ut våra klientorganisationer till den nya upplevelsen under en tvåmånadersperiod. Alla befintliga kunder bör ha gått över till den nya miljön senast i oktober 2016. När du har migrerat till den nya miljön visas inte längre alternativet för att tillämpa meddelanderegler på en viss grupp.
+Gå till **Admin**-arbetsytan och klicka på **Meddelanderegler** > **Skapa ny regel**
+
+Välj de enhetsgrupper som regeln ska gälla för i steg två i guiden Skapa meddelanderegel. Det här steget, Välj enhetsgrupper, håller på att fasas ut från Intune-konsolen.
+
+Den preliminära tidslinjen för den här ändringen ser ut som följer:
+- Från och med juni 2016 kan nya klienter inte se steg två i guiden Skapa meddelanderegel. Befintliga klienter påverkas inte.
+- Runt augusti 2016 kommer vissa befintliga klienter inte att se kommandot för att välja enhetsgrupper i guiden.
+- Runt oktober 2016 planerar vi för att samtliga klienter inte kommer att se kommandot för att välja enhetsgrupper i guiden.
+
 <!---   TFS 1278864--->
+**Ändringar i stödet för iOS-företagsportalappen.**
+Under de kommande månaderna kommer det en uppdatering för Microsoft Intune-företagsportalappen för iOS som bara har stöd för enheter som kör iOS 8.0 eller senare. Användarna kan inte registrera nya enheter som kör versioner under iOS 8.0. Registrerade enheter som kör versioner under iOS 8.0 fortsätter att hanteras och kommer under en begränsad tid att kunna fortsätta använda företagsportalappen. Enheterna måste dock har version iOS 8.0 eller senare installerad för att få åtkomst till den senaste versionen av företagsportalappen. Vi rekommenderar att du att meddelar användarna om att de bör uppdatera till iOS 8.0 eller senare för att kunna dra full nytta av nya funktioner i Intune.  
 
+- **Intune Viewer-appar.** Med versionen av den nya RMS-delningsappen tar vi bort följande Intune Viewer-appar, med början från augusti 2016:
+    - Intune AV Viewer
+    - Intune PDF Viewer
+    - Intune Image Viewer för Android från Google Play
+
+  I stället för att använda Intune Viewer-appar bör du använda den nya Rights Management-appen (RMS-delning) för Android, där du kan distribuera en app i stället för tre separata appar för att på ett säkert sätt visa företagets filer på Android-enheter. Läs mer om RMS-delningsappen (med länk till dokumentationen).
 
 
 
@@ -114,6 +117,6 @@ Om du behöver hjälp med att välja metod läser du [Förbereda appar för hant
 Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune](whats-new-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO5-->
 
 

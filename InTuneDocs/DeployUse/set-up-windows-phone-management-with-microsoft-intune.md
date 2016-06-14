@@ -29,10 +29,9 @@ ms.suite: ems
 # Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune
 Innan du kan hantera Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune måste enheterna kunna kommunicera med Intune. För att förenkla detta kan du skapa en DNS-post så att användarna inte behöver ange adressen till servern. Stegen nedan beskriver hur du underlättar registreringen för användarna.  
 
-I de flesta fall kan användarna installera företagsportalappen från Windows Store. Om du hanterar Windows Phone 8.0-enheter eller behöver distribuera företagsportalen till Windows Phone-enheter måste du också hämta och signera företagsportalappen. Läs [Konfigurera hantering av Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
+I de flesta fall kan användarna installera företagsportalappen från Windows Store. Om du hanterar Windows Phone 8.0-enheter eller behöver distribuera företagsportalen till Windows Phone-enheter måste du också hämta och signera företagsportalappen. Se [Konfigurera hantering av Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
 
-1.  **Konfigurera Intune**
-    Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [utfärdare av mobilenhetshantering](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) och genom att konfigurera MDM.
+1.  **Konfigurera Intune** Om du inte redan gjort det förbereder du för hantering av mobila enheter genom att [konfigurera hanteringsauktoritet för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) som **Microsoft Intune** och ställa in MDM.
 
 2.  **Ange ett DNS-alias för registreringsserverns adress** (valfritt)
 
@@ -51,7 +50,7 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
       **EnterpriseRegistration.windows.net** – Stöder Windows 8.1- och Windows 10 Mobile-enheter som registreras med Azure Active Directory med ett arbets- eller skolkonto
 
-    2.  I [Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Administration** &gt; **Hantering av mobila enheter** &gt; **Windows Phone**.
+    2.  Gå till [Intune-administrationskonsolen](http://manage.microsoft.com) och klicka på **Administration** &gt; **Hantering av mobila enheter** &gt; **Windows Phone**.
 
       ![Dialogrutan Ställa in hantering av mobila enheter för Windows](../media/windows-device-enrollment.png)
 
@@ -59,9 +58,9 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
 
 
-Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2, 3 och 4 i administrationskonsolen.
+Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2 och 3 i administrationskonsolen.
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

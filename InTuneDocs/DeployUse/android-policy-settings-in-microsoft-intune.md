@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Principinställningar för Android-konfiguration i Microsoft Intune | Microsoft Intune
+title: Inställningar för Android- och Samsung KNOX-konfigurationsprinciper | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Principinställningar för Android i Microsoft Intune
+# Inställningar för Android- och Samsung KNOX-principer i Microsoft Intune
 
 ## Allmän konfigurationsprincip
 
@@ -131,7 +131,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Tillåt YouTube**|Tillåt att YouTube används på enheten.|Nej|Ja|
 
 ### Inställningar för kompatibla och icke-kompatibla appar
-I listan över **kompatibla och &amp; inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
+I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
 
 > [!NOTE]
 > En enda princip kan bara innehålla en lista över kompatibla eller en lista över inkompatibel appar. Du kan inte ange båda i samma princip.
@@ -150,7 +150,7 @@ Ange följande inställningar för **Samsung KNOX-enheter**:
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
-|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Klicka på **Bläddra**, välj den hanterade appen eller en app från en butik som ska kunna köras när enheten är i helskärmsläge. Inga andra appar kommer att kunna köras på enheten.<br /><br />Mer hjälp finns i Så här anger du webbadresser till appbutiker senare i det här avsnittet.|
+|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Klicka på **Bläddra** och välj den hanterade app som kommer att tillåtas att köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.|
 |**Tillåt volymknappar**|Aktiverar eller inaktiverar användningen av volymknapparna på enheten.|
 |**Tillåt aktiveringsknapp på skärmen**|Aktiverar eller inaktiverar aktiveringsknappen på enhetens skärm.|
 
@@ -161,12 +161,12 @@ Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten
 
 ###### Så här kör du Inkompatibilitetsrapporter för appar
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapporter för appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller inkompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
 
 #### Så här anger du webbadresser till appbutiker
-Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla appar eller i alternativet **Välj en hanterad app som kommer att kunna köras när enheten är i helskärmsläge** (endast iOS), använder du följande format:
+Om du vill specificera en app-URL i listan över kompatibla och ej kompatibla appar ska du använda följande format:
 
 I [App-delen i Google Play](https://play.google.com/store/apps) söker du efter den app du vill använda.
 
@@ -177,7 +177,7 @@ I [App-delen i Google Play](https://play.google.com/store/apps) söker du efter 
 ## Anpassade principinställningar
 Använd **Anpassad konfigurationsprincip för Android** i Microsoft Intune för att distribuera OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) som kan användas till att styra funktioner på Android-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
-Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer. Information om vilka inställningar du kan konfigurera med dessa principer finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer. Information om vilka inställningar som du kan konfigurera med dessa principer finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 > [!NOTE]
 > För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel. Mer information finns i Konfigurera en anpassad Wi-Fi-profil med en i förväg delad nyckel senare i det här avsnittet.
@@ -258,6 +258,6 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

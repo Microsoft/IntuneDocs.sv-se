@@ -15,7 +15,7 @@ ms.assetid: 09cd4ed6-1ce4-4530-9753-59808f01c6d7
 
 # optional metadata
 
-ROBOTS: noindex
+ROBOTS:
 #audience:
 #ms.devlang:
 ms.reviewer: jeffgilb
@@ -34,12 +34,12 @@ Om du får ett felmeddelande när du använder företagsportalappen på en iOS-e
 
 -   Genom att trycka på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
 
--   Genom att skaka enheten då du är i företagsportalappen och sedan trycka på **E-post** när diagnostikaviseringen visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
+-   Genom att skaka enheten då du är i företagsportalappen och sedan trycka på **E-post** när diagnostikaviseringen visas. Om aviseringen inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

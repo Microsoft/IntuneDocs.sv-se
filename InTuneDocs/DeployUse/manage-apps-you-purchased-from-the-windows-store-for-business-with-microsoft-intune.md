@@ -39,11 +39,13 @@ Granska följande information innan du börjar synkronisera och distribuera appa
 * När du har associerat ett konto i Windows Store för företag med Intune kan du inte ändra till ett annat konto i framtiden.
 * Appar från Windows Store kan inte manuellt läggas till eller tas bort från Intune. De kan endast synkroniseras med Windows Store för företag.
 * Intune synkroniserar bara online-licensierade appar som du har köpt från Windows Store för företag.
+* Enheterna måste vara anslutna till Active Directory-domänen eller arbetsplatsanslutna om du vill använda den här funktionen.
+* Registrerade enheter måste använda 1511-versionen av Windows 10.
 
 ## Koppla ditt konto för Windows Store för företag till Intune
 Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt Windows Store-konto för att använda Intune som ett hanteringsverktyg:
 1. Se till att du loggar in i Windows Store för företag med samma innehavarkonto som du använder för att logga in på Intune.
-2. Välj **Inställningar** > **Hanteringsverktyg** i Windows Store för företag.
+2. Välj **Inställningar** > **Hanteringsverktyg** i Business Store.
 3. Välj **Lägg till ett hanteringsverktyg** och välj Microsoft Intune på sidan Hanteringsverktyg.
 
 Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
@@ -80,6 +82,6 @@ När du distribuerar en app från Windows Store för företag används en licens
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

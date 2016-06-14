@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer | Microsoft Intune
+title: Hantera inställningar och funktioner på dina enheter med principer | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -35,9 +35,9 @@ Intune-principer hör till följande kategorier. Den kategori som du använder p
 
 - **Konfigurationsprinciper:** De används ofta för att hantera säkerhetsinställningar och -funktioner på dina enheter. Använd informationen i det här avsnittet om du vill veta mer om hur du skapar och distribuerar de här principerna och utforska de tillgängliga inställningarna.
 - **Efterlevnadsprinciper för enheter:** De definierar reglerna och inställningarna som en enhet måste följa för att anses vara kompatibel med principerna för villkorlig åtkomst. Du kan också använda efterlevnadsprinciper för att övervaka och åtgärda enheters efterlevnad oberoende av villkorlig åtkomst.
-Mer information finns i [Enhetsefterlevnadsprinciper i Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md).
+Mer information finns i [Efterlevnadsprinciper för enheter i Microsoft Intune](introduction-to-device-compliance-policies-in-microsoft-intune.md).
 - **Principer för villkorlig åtkomst:** De här principerna skyddar e-post och andra tjänster utifrån de villkor du anger.
-Mer information finns i [Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Mer information finns i [Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 - **Principer för registrering av företagets enheter:** Information om principer för registrering av företagets enheter finns i [Konfigurera iOS- och Mac-hantering med Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md).
 - **Resursåtkomstprinciper:** Den här gruppen med principer fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver för att utföra sitt arbete, oavsett var de befinner sig.
 Mer information finns i [Ge åtkomst till företagsresurser med Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
@@ -50,14 +50,13 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
 
 ## Skapa en konfigurationsprincip
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) klickar du på **Princip** &gt; **Konfigurationsprinciper** &gt; **Lägg till**.
+1.  Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och klicka på **Princip** &gt; **Konfigurationsprinciper** &gt; **Lägg till**.
 
 2.  Välj den princip som du vill använda, välj att använda de rekommenderade inställningarna för principen (om de är tillgängliga kan du ändra inställningarna senare) eller välj att skapa en anpassad princip med dina egna inställningar.
 
-    > [!TIP]
-    > Hjälp med att välja rätt princip finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
+    > [!TIP] Hjälp med att välja rätt princip finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
 
-3.  Klicka på **Skapa princip** när du är klar.
+3.  Klicka på **Skapa princip**när du är klar.
 
 4.  Konfigurera ett namn och en valfri beskrivning för principen på skärmen **Skapa princip** .
 
@@ -90,11 +89,11 @@ Nu när du har skapat en princip vill du förmodligen distribuera den till en el
 
 ## Distribuera en konfigurationsprincip
 
-1.  Välj den princip som du vill distribuera på arbetsytan **Princip** och klicka sedan på **Hantera distribution**.
+1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** – Markera en eller flera grupper som du vill distribuera principen till och klicka sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
 
     -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
 
@@ -120,7 +119,7 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 
 3.  Klicka på **Fjärruppgifter** i det nedre högra hörnet i Intune-administrationskonsolen för att kontrollera aktivitetsstatusen.
 
-## Referensinformation för Intune-principer
+## Vanliga frågor om Intune-principer
 
 ### Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har distribuerats?
 När en princip eller app distribueras börjar Intune genast att uppmana enheten att kontakta Intune-tjänsten. Detta brukar ta mindre än fem minuter.
@@ -132,7 +131,8 @@ I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjä
 - iOS – Var 6:e timme
 - Android – Var 8:e timme
 - Windows Phone – Var 8:e timme
-- Windows-datorer som registrerats som enheter – Var 24:e timme
+- Registrerade Windows RT-enheter – var 24:e timme
+- Windows 8.1- och Windows 10-datorer som har registrerats som enheter – var åttonde timme
 
 Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
 
@@ -172,7 +172,7 @@ Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassa
 
 När du distribuerar en anpassad princip bör du därför se till att de konfigurerade inställningarna inte är i konflikt med efterlevnads- och konfigurationsprinciper eller andra anpassade principer. Om en anpassad princip har inställningar som är i konflikt med varandra tillämpas dessa inställningar i slumpmässig ordning.
 
-### Vad händer när en princip tas bort eller inte längre tillämpas
+### Vad händer när en princip tas bort eller inte längre är tillämplig?
 När du tar bort en princip eller tar bort en enhet från en grupp som en princip har distribuerats till, tas principer och inställningar bort från enheten enligt följande tabeller:
 
 #### Registrerade enheter
@@ -214,15 +214,15 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
 
 #### Windows-datorer med Intune-klientprogramvaran
 
-- **Endpoint Protection-inställningar** – Inställningarna återställs till rekommenderade värden. Det enda undantaget är inställningen **Delta i Microsoft Active Protection Service** där standardvärdet är **Nej**. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
-- **Inställningar för programuppdateringar** – Inställningarna återställs till standardläget för operativsystemet. Mer information finns i [Hålla Windows PC-datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
+- **Endpoint Protection-inställningar** – Inställningarna återställs till rekommenderade värden. Det enda undantaget är inställningen **Delta i Microsoft Active Protection Service** där standardvärdet är **Nej**. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
+- **Inställningar för programuppdateringar** – Inställningarna återställs till standardläget för operativsystemet. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 - **Microsoft Intune Center-inställningar** – All kontaktinformation för support som konfigurerats av principen tas bort från datorerna.
-- **Inställningar för Windows-brandväggen** – Inställningarna återställs till standardinställningarna för datorns operativsystem. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
+- **Inställningar för Windows-brandväggen** – Inställningarna återställs till standardinställningarna för datorns operativsystem. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO3-->
 
 

@@ -48,11 +48,11 @@ Hanteringsprinciper för mobilappar (MAM) används bara när appar används i en
 
     ![Skärmbild av OneDrive-app som efterfrågar en PIN-kod](../media/AppManagement/iOS_AppPINPrompt.png)
 
-5.  När du har angett och bekräftat PIN-koden kan du komma åt filerna på din **OneDrive för företag**
+5.  När du har angett och bekräftat PIN-koden kan du komma åt filerna på din **OneDrive för företag**.
 
     ![Skärmbild som visar filplatsen öppen med listan över befintliga filer](../media/AppManagement/iOS_OneDriveSuccess.png)
 
-    > När du ändrar en distribuerad princip tillämpas ändringarna nästa gång du öppnar appen.
+    > [!NOTE] När du ändrar en distribuerad princip kommer ändringarna gälla nästa gång du öppnar appen.
 
 ##  Komma åt OneDrive på en Android-enhet
 
@@ -105,13 +105,13 @@ Microsoft Word används som exempel för det här scenariot.
 
     ![Skärmbild av en mening som har skrivits in i ett Word-dokument](../media/AppManagement/iOS_WordCreateCompanyDoc.PNG)
 
-5.  Öppna dokumentet som du sparade till din arbetsplats.  Kopiera texten, öppna ditt personliga **Facebook**-konto och försök att klistra in den kopierade texten.  Du bör inte kunna klistra in innehållet i det nya Facebook-inlägget. Inklistringsalternativet är inte nedtonat men ingenting händer när du trycker på **Klistra in**
+5.  Öppna dokumentet som du sparade till din arbetsplats.  Kopiera texten, öppna ditt personliga **Facebook**-konto och försök att klistra in den kopierade texten.  Du bör inte kunna klistra in innehållet i det nya Facebook-inlägget. Inklistringsalternativet är inte nedtonat men ingenting händer när du trycker på **Klistra in**.
 
     ![Skärmbild som visar klipp ut, kopiera och klistra in markering](../media/AppManagement/iOS_WordCopyCompany.png)
 
     ![Skärmbild som visar inga inklistrade data i Facebook-inlägg](../media/AppManagement/iOS_FacebookPasteCompany.png)
 
-6.  Skapa ett nytt dokument genom att upprepa steg 2 och 3. Skriv valfri mening och spara dokumentet på din personliga plats, t.ex. **OneDrive – personligt** i stället för att spara det som arbete.
+6.  Upprepa nu steg 2 och 3 och skapa ännu ett nytt dokument, skriv en valfri mening och i stället för att spara den bland ditt arbete sparar du den på en personliga plats, exempelvis **OneDrive – personlig**.
 
     ![Skärmbild av klipp ut, kopiera och klistra in markering med meningen som ska kopieras markerad](../media/AppManagement/iOS_WordCopyPersonal.png)
 
@@ -133,27 +133,35 @@ För **OneDrive- och Outlook-appar** kan du bara använda ett arbetskonto.  Det 
 
 Läsa exemplet nedan för att få en bättre förståelse för hur flera användarkonton behandlas.
 
-Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera MAM-principer. **Företag X** distribuerar MAM-principer **före** **företag Y**. Det konto som är kopplat till **Företag X** får MAM-principen, men inte kontot som är kopplat till Företag Y. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av MAM-principerna måste du ta bort användarkontot som är kopplat till Företag X.
+Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera MAM-principer. **Företag X** distribuerar MAM-principer **före** **Företag Y**. Det konto som är kopplat till **Företag X** får MAM-principen, men inte kontot som är kopplat till Företag Y. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av MAM-principerna måste du ta bort användarkontot som är kopplat till Företag X.
 ### Lägga till ett andra konto
 #### iOS
-Om du använder en iOS-enhet visas ett blockeringsmeddelande om du försöker lägga till ett andra arbetskonto på samma enhet.  Du ser också ett alternativ för att ta bort det befintliga kontot och lägga till ett nytt. Du kan göra det genom att klicka på **Ja**
+Om du använder en iOS-enhet visas ett blockeringsmeddelande om du försöker lägga till ett andra arbetskonto på samma enhet.  Du ser också ett alternativ för att ta bort det befintliga kontot och lägga till ett nytt. Du kan göra det genom att klicka på **Ja**.
 
 ![Skärmbild av dialogrutan med blockeringsmeddelandet och alternativen Ja och Nej](../media/AppManagement/iOS_SwitchUser.PNG)
 ####  Android
-Om du använder en Android-enhet kan ett blockeringsmeddelande visas med instruktioner för att ta bort det befintliga kontot och lägga till ett nytt.  På Android-enheter tar du bort det befintliga kontot genom att gå till **Inställningar &gt;Allmänt &gt; Programhanterare &gt;Företagsportal och välja "Rensa data"**
+Om du använder en Android-enhet kan ett blockeringsmeddelande visas med instruktioner för att ta bort det befintliga kontot och lägga till ett nytt.  På Android-enheter tar du bort det befintliga kontot genom att gå till **Inställningar &gt;Allmänt &gt; Programhanterare &gt;Företagsportal och välja ”Rensa data”**.
 
 ![Skärmbild av felmeddelande och anvisningar för att ta bort kontot](../media/AppManagement/Android_SwitchUser.png)
 
 ##  Visa mediefiler med delningsappen Rights Management
-Om du vill visa företagets AV-, PDF- och bildfiler på Android-enheter använder du [delningsappen Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)
+Om du vill visa företagets AV-, PDF- och bildfiler på Android-enheter använder du [delningsappen Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
 
 Hämta den här appen från Google Play Store.  När appen har installerats på enheten startar du appen och verifierar med dina autentiseringsuppgifter för företaget. Du bör nu kunna visa oskyddade och skyddade filer från andra principhanterade appar.
+
+**Android-enheter som inte har registrerats i Intune**
+
+Innan du kan använda RMS-delningsappen för att visa filer från andra appar som hanteras av Intune startar du RMS-appen och autentiserar med ditt arbetskonto.  När du loggar in visas följande meddelande **endast om du inte har en licens för RMS**:
+
+**Autentisering lyckades – Nu kan du visa företagets filer, men din organisation har inte ställts in så att du kan skydda filer. Kontakta IT-administratören om du vill har mer information.**
+
+Detta förhindrar inte att du använder RMS-delningsappen för att visa företagets filer. Du kan fortfarande öppna och visa företagets filer från andra appar som hanteras av Intune och MAM-principerna gäller fortfarande.  Meddelandet betyder att du inte kan lägga till ytterligare skyddsfunktioner som RMS-delningsappen innehåller.  Du måste ha en RMS-licens om du vill kunna lägga till skydd åt dina filer. Läs mer om RMS-funktionerna för filskydd i [Skydda en fil på en enhet](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-in-place) och [Skydda en fil som du delar via e-post](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-by-email).
 
 
 ### Se även
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

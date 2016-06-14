@@ -26,12 +26,12 @@ ms.suite: ems
 ---
 
 # Vanliga hanteringsuppgifter för Windows-dator med Microsoft Intune datorklient
-Studera det här avsnittet om du vill veta mer om hur du hanterar datorer som kör Intune-klienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md)
+Studera det här avsnittet om du vill veta mer om hur du hanterar datorer som kör Intune-klienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 ## Använd principer för att förenkla datorhantering
 ### Hantera Windows-brandväggen
-Med principer förenklas administrationen av Windows-brandväggen på hanterade datorer. Mer information finns i [Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)
+Med principer förenklas administrationen av Windows-brandväggen på hanterade datorer. Mer information finns i [Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
 
 ### Hantera Microsoft Intune Center
 Med Microsoft Intune Center kan användarna:
@@ -56,10 +56,10 @@ Microsoft Intune Center är installerat på alla hanterade datorer. Du kan konfi
 |**Anteckningar**|En kommentar som visas för användarna.<br /><br />Maxlängd: 120 tecken|
 
 ### Hantera inställningar för programuppdateringar
-Använd principer för att konfigurera de inställningar som hanterade datorer använder för att söka efter och hämta uppdateringar från Microsoft och från tredje part. Mer information finns i [Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)
+Använd principer för att konfigurera de inställningar som hanterade datorer använder för att söka efter och hämta uppdateringar från Microsoft och från tredje part. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 
 ### Hantera Endpoint Protection-inställningar
-Använd principer för att konfigurera inställningar för Endpoint Protection , som du sedan distribuerar till hanterade datorer. De omfattar bland annat genomsökningsscheman och åtgärder som ska vidtas om skadlig kod upptäcks. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)
+Använd principer för att konfigurera inställningar för Endpoint Protection , som du sedan distribuerar till hanterade datorer. De omfattar bland annat genomsökningsscheman och åtgärder som ska vidtas om skadlig kod upptäcks. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 ## Visa maskinvaru- och programvaruinventering.
 Intune samlar in detaljerad information om de hanterade datorernas maskinvara och programvara. Använd informationen i följande procedurer för att lära dig skapa:
@@ -72,7 +72,7 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 ### Så här visar du information om datorerna
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Rapporter** &gt; **Datorinventeringsrapporter**
+1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Datorinventeringsrapporter**.
 
 2.  På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast de datorer som kör Windows 8.1 ska visas i rapporten.
 
@@ -82,21 +82,21 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 ### Så här ser du vilka program som är installerade på datorerna
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Rapporter** &gt; **Rapporter med identifierad programvara**
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Rapporter om identifierad programvara**
 
 2.  På sidan **Skapa ny rapport** accepterar du standardvärdena eller anpassar dem om du vill filtrera resultatet som rapporten skickar tillbaka. Du kan till exempel välja att endast program som är utgivna av Microsoft ska visas i rapporten.
 
 3.  Välj **Visa rapport** för att öppna **Upptäckta programvarurapporter** i ett nytt fönster.
 
-    Du kan sortera rapporten på valfri kolumn, t.ex. **Namn**, **Utgivare** eller **Kategori** genom att välja kolumnens rubrik. Du kan expandera uppdateringarna i listan om du vill visa mer information (t.ex vilka datorer programmet har installerats på) genom att klicka på pilen bredvid listobjektet.
+    Du kan sortera rapporten på valfri kolumn, t.ex. **Namn**, **Utgivare** eller **Kategori** genom att välja kolumnens rubrik. Du kan expandera uppdateringarna i listan om du vill visa mer information (t.ex vilka datorer som programmet har installerats på) genom att klicka på riktningspilen bredvid listposten.
 
 ### Så här uppdaterar du datorinventeringen för att säkerställa att den är aktuell
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill uppdatera inventeringen för).
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill uppdatera inventeringen för).
 
 2.  Välj en dator eller tryck och håll ned **Ctrl** för att välja flera datorer.
 
-3.  Klicka på **Fjärruppgifter** &gt; **Uppdatera inventering** i verktygsfältet.
+3.  Klicka på **Fjärruppgifter** &gt; **Uppdatera inventering** i aktivitetsfältet.
 
 4.  Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
 
@@ -105,9 +105,9 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 ## Starta om en Windows-dator via en fjärranslutning
 
-1.  I [Microsoft Intune-administrattionskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill starta om).
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill starta om).
 
-2.  Välj en eller flera datorer och klicka sedan på **Fjärruppgifter** &gt; **Starta om datorn**
+2.  Markera en eller flera datorer, och välj sedan **Fjärruppgifter** &gt; **Starta om datorn**.
 
 3.  Om du vill visa aktivitetens status väljer du **Fjärruppgifter** längst ner till höger på sidan.
 
@@ -117,7 +117,7 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill dra tillbaka).
 
-2.  Markera de enheter som du vill dra tillbaka och välj sedan **Dra tillbaka/rensa**
+2.  Markera de enheter som du vill dra tillbaka och väljer sedan **Dra tillbaka/Rensa**.
 
 Om du vill återregistrera en dator i Intune installerar du om klientprogrammet på datorn med hjälp av informationen i avsnittet [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
@@ -139,7 +139,7 @@ När du drar tillbaka en dator:
 
 -   Beroende på datorernas konfiguration kan de eventuellt fortfarande kan ta emot uppdateringar via Windows Server Update Services, Windows Update eller Microsoft Update.
 
-    > Om klientprogrammet har installerats med en hjälp av ett grupprincipobjekt (GPO), måste du ta bort grupprincipobjektet innan du kan ta bort klientprogrammet, för att förhindra att programvaran installeras på nytt.
+    > [!IMPORTANT] Om klientprogrammet har installerats med en hjälp av ett grupprincipobjekt (GPO), måste du ta bort grupprincipobjektet innan du kan ta bort klientprogrammet, för att förhindra att programvaran installeras på nytt.
 
     Om det inte går att avinstallera klienten läser du [Felsöka Endpoint Protection](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune) om du behöver mer hjälp.
 
@@ -150,48 +150,73 @@ Innan du kan distribuera programvara till en användare måste du koppla använd
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill länka till en användare).
 
-2.  Markera den dator du vill länka till en användare och välj sedan **Länka användare**
+2.  Välj den dator som du vill koppla en användare till och välj sedan **Länka användare**.
 
-    Dialogrutan **Länka användare** visar en lista över tillgängliga användare med deras visningsnamn, användar-ID och hur många datorer som varje användare för närvarande är länkad till. Om en användare redan är länkad till den valda datorn visas användarens namn och användar-ID under **Aktuell användare**. Om datorn inte är länkad till någon användare visas **Ingen användare** under **Aktuell användare**
+    Dialogrutan **Länka användare** visar en lista över tillgängliga användare med deras visningsnamn, användar-ID och hur många datorer som varje användare för närvarande är länkad till. Om en användare redan är länkad till den valda datorn visas användarens namn och användar-ID under **Aktuell användare**. Om datorn inte är länkad till någon användare visas **Ingen användare** under **Aktuella användare**.
 
 3.  Gör något av följande:
 
-    -   Om du vill låta datorn fortsätta att vara kopplad till den aktuella användaren, om det finns en sådan, väljer du **Avbryt**
+    -   Om du vill låta datorn fortsätta att vara kopplad till den aktuella användaren, om det finns en sådan, väljer du **Avbryt**.
 
-    -   Om du vill ta bort länken till den aktuella användaren, om det finns en sådan, väljer du **Ta bort länk**&gt;**OK**
+    -   Om du vill ta bort länken till den aktuella användaren, om det finns en sådan, väljer du **Ta bort länk**&gt;**OK**.
 
-    -   För att länka datorn till en ny användare väljer du en användare i listan **Alla användare** . Bekräfta att informationen är korrekt och välj sedan **OK**
+    -   För att länka datorn till en ny användare väljer du en användare i listan **Alla användare** . Bekräfta att användardata är korrekta och välj sedan **OK**.
 
-> Om du vill begränsa slutanvändarnas möjlighet att länka sig själva till datorer aktiverar du alternativet **Begränsa användarnas möjlighet att länka sig själva till datorer** i principen **Agentinställningar för Microsoft Intune**.
+> [!TIP] Om du vill begränsa slutanvändarnas möjlighet att länka sig själva till datorer aktiverar du alternativet **Begränsa användarnas möjlighet att länka sig själva till datorer** i principen **Agentinställningar för Microsoft Intune**.
 
-## Svara på en begäran om Fjärrhjälp
-Användarna kan begära hjälp via Fjärrhjälp med hjälp av Microsoft Easy Assist som installeras automatiskt på hanterade datorer. När en begäran skickas visas en avisering i Intune-konsolen.
+## Begär och ge fjärrhjälp till Windows-datorer som använder Intune-klientprogrammet
 
-> Fjärrhjälp stöds inte på datorer som kör Windows 8 eller senare.
->
-> Om du accepterar en begäran om Fjärrhjälp från en dator som inte har Microsoft Easy Assist installerat, uppmanas användaren att installera det. Datorn måste startas om för att installationen ska slutföras. Det kan vara bra att läsa in Microsoft Easy Assist i förväg på användarnas datorer för att undvika denna omstart.
+> [!IMPORTANT]
+> Du kanske inte ser alternativen för att konfigurera TeamViewer-integrering för fjärrhjälp i Intune-administratörskonsolen. Den här funktionen är för närvarande inte tillgänglig för alla kunder, men kommer att distribueras mer brett inom kort.
+     
 
-### Så här hanterar du en begäran om Fjärrhjälp
-
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Aviseringar** &gt; **Fjärrhjälp**
-
-2.  Markera en begäran om Fjärrhjälp i listan **Aviseringar** för att öppna egenskapssidan för begäran.
-
-3.  Välj **Godkänn begäran och starta Fjärrhjälp** för att öppna en dialogruta med alternativ för att åtgärda aviseringen.
-
-4.  Gör något av följande:
-
-    -   **Godkänn begäran** – Om du vill ansluta till fjärrsessionen klickar du på **Godkänn begäran om Fjärrhjälp**
-
-        Användaren ser meddelandet: **Din begäran accepterades. Följ instruktionerna i Easy Assist för att dela ett program eller ditt skrivbord med systemadministratören**
-
-        > Du kan inte acceptera en begäran om Fjärrhjälp på en Mac-dator som kör Intune-administratörskonsolen.
-
-    -   **Neka begäran** – Stäng fönstret **Visa felsökningsinformation** och välj **Stäng den här aviseringen** i fönstret Egenskaper för aviseringen.
-
-        Begäran stängs och användaren ser ett meddelande om att begäran har nekats. För att begära Fjärrhjälp igen måste användaren skicka en ny begäran om Fjärrhjälp. Om du råkar stänga en avisering om Fjärrhjälp måste du kontakta den användare som skickade begäran om Fjärrhjälp och be användaren att skicka en ny begäran.
+Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran så att användare av datorer som kör Intune-klientprogrammet kan få fjärrhjälp från dig. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp.
+Den här funktionen ersätter den befintliga Windows-fjärrhjälpsfunktionen i Intune.
 
 
-<!--HONumber=May16_HO2-->
+### Innan du börjar
+
+Innan du kan upprätta och svara på förfrågningar om fjärrhjälp måste du kontrollera att följande krav är uppfyllda:
+
+- Du måste ha [registrerat ett TeamViewer-konto](https://login.teamviewer.com/LogOn#register) om du vill kunna logga in på TeamViewer-webbplatsen.
+- Windows-datorer som du vill administrera måste [hanteras av Windows-datorklienten](manage-windows-pcs-with-microsoft-intune.md)
+- Alla Windows-datoroperativsystem som stöds av Intune kan administreras.
+
+### Konfigurera TeamViewer-anslutningen
+
+1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin**.
+2. På arbetsytan **Admin** väljer du **TeamViewer**.
+3. Välj **Aktivera** på sidan **TeamViewer** under **TeamViewer-anslutningsprogram**.
+4. I dialogrutan **Aktivera TeamViewer** läser du igenom licensvillkoren och väljer **Godkänn**. Om du inte redan har en licens för TeamViewer, väljer du **Köp en licens för TeamViewer**.
+5. När webbläsarfönstret till TeamViewer öppnas loggar du in på webbplatsen med autentiseringsuppgifterna till TeamViewer.
+6. På TeamViewer-webbplatsen läser du igenom och godkänner alternativen för att tillåta att Intune ansluter till TeamViewer.
+7. I Intune-konsolen kontrollerar du att objektet **TeamViewer-anslutningsprogram** visas som **Aktiverat**.
+
+
+### Öppna en begäran om fjärrhjälp (slutanvändare)
+
+1. Öppna **Microsoft Intune Center** på en Windows-klientdator.
+2. Välj **Begär fjärrhjälp** under **Fjärrhjälp**.
+3. När du har godkänt förfrågan (se nedan) öppnas TeamViewer på klienten. Användaren måste godkänna alla meddelanden som indikerar att webbläsaren försöker öppna TeamViewer-programmet.
+4. Användaren ser ett meddelande med en förfrågan om du får styra personens dator. Användaren måste godkänna meddelandet för att kunna fortsätta.
+5. Under fjärrhjälpssessionen ser användaren ett fönster som visar att du är ansluten. Om användaren stänger fönstret avslutas fjärrsessionen.
+
+### Svara på en begäran om fjärrhjälp
+
+1. När en användare skickar en begäran om fjärrhjälp kan du visa den på arbetsytan **Aviseringar** under **Övervakning** > **Fjärrhjälp**. Exempel:
+> ![Skärmbild av en begäran om fjärrhjälp](./media/team-viewer.png)
+
+<br>Om en begäran inte besvaras på fyra timmar tas den bort.
+2. Välj om du vill acceptera begäran väljer du **Godkänn begäran och starta Fjärrhjälp**.
+3. I dialogrutan **En ny begäran om fjärrhjälp väntar** väljer du **Godkänn begäran om fjärrhjälp**. Om det inte redan är installerat installerar TeamViewer alla nödvändiga appar på datorn.
+4. TeamViewer meddelar därefter slutanvändaren att du vill ta kontroll över datorn. När användaren har accepterat begäran öppnas TeamViewer-fönstren och du kan styra datorn. 
+ 
+Du kan använda alla tillgängliga TeamViewer-kommandon i en fjärrhjälpssession när du styr en fjärransluten dator. Om du vill få hjälp med de här kommandona hämtar det [Handbok för fjärrstyrning](http://www.teamviewer.com/en/support/documents/) från TeamViewer-webbplatsen.
+
+### Stänga fjärrhjälpssessionen
+
+Från menyn **Åtgärder** i fönstret **TeamViewer** väljer du **Avsluta sessionen**.
+
+<!--HONumber=May16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Principinställningar för Windows Phone 8.1 i Microsoft Intune | Microsoft Intune
+title: Principinställningar för Windows Phone 8.1 | Microsoft Intune
 description:
 keywords:
 author: robstackmsft
@@ -29,11 +29,17 @@ ms.suite: ems
 
 ## Allmänna konfigurationsinställningar
 
-Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows Phone** om du vill konfigurera följande inställningar för Windows Phone 8.1-enheter:
+Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (Windows Phone 8.1 och senare)** om du vill konfigurera följande inställningar för Windows Phone 8.1-enheter:
 
 -   **Säkerhetsinställningar för mobil enhet** – Välj i en lista fördefinierade inställningar med vilka du kan reglera många av enhetens egenskaper och funktioner.
 
 -   **Kompatibla och inkompatibla appar** – Ange en lista över appar i företaget som är kompatibla eller inkompatibla. Windows Phone-enheter kan blockera eller tillåta installation av dessa appar.
+
+### Tillämplighetsinställningar
+
+|Inställningsnamn|Information|
+|----------------|----------------------------------|
+|**Tillämpa alla konfigurationer på Windows 10**|Gör inställningar i den här principen ska tillämpas på Windows 10-enheter utöver Windows 8.1-enheter.|
 
 ### Inställningar för lösenord
 
@@ -54,7 +60,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows Phone**
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
 |----------------|-----------------------------------------|
-|**Filkryptering på mobil enhet**|Kräver att data på mobila enheter som stöds krypteras.<br>För Windows Phone 8-enheter måste du ange detta till **Ja**.|Ja|Ja|
+|**Filkryptering på mobil enhet**|Kräver att data på mobila enheter som stöds krypteras.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.|Ja|Ja|
 
 ### Systeminställningar
 
@@ -121,8 +127,7 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 |**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och app-URL i filen.|
 |**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
 |**Ta bort**|Tar bort den markerade appen från listan.|
-> [!IMPORTANT]
-> Om du skapar en lista över tillåtna appar för Windows Phone 8.1-enheter måste du lägga till företagsportalappen i listan, annars blockeras den.
+> [!IMPORTANT] Om du skapar en lista över tillåtna appar för Windows Phone 8.1-enheter måste du lägga till företagsportalappen i listan, annars blockeras den.
 
 
 ### Referensinformation för kompatibla och icke-kompatibla appar
@@ -169,6 +174,6 @@ I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följa
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

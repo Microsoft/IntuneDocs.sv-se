@@ -28,12 +28,15 @@ ms.suite: ems
 
 # Vad händer om du återställer en enhet med hjälp av företagsportalen?
 
-När du använder företagsportalen för att återställa en Android-enhet kan vissa appar och inställningar på enheten raderas, inklusive vissa personliga data. Det som händer på varje enskild enhet beror på typen av enhet och hur du använder den, enligt beskrivning i följande tabell.
+När du använder företagsportalen för att återställa en Android-enhet raderas alla appar, inställningar och personliga data på enheten, och enheten återställs till fabriksinställningarna.
 
-|Enhetskonfiguration och hantering|Enhetstyp|
-|---------------------------------------|---------------|
-|Din IT-administratör hanterar din mobila enhet|När du återställer din Android-enhet visas inte längre enheten på företagsportalen och ditt företags e-postkonto tas bort och alla meddelanden som inte har sparats raderas.|
-|Enheten har enbart åtkomst till företagets e-post|När du återställer din Android-enhet visas inte längre enheten på företagsportalen och företagsportalen försöker återställa enheten till tillverkarens standardinställningar. Alla personliga data och inställningar tas bort.|
+Om du har en Samsung Knox-enhet kan du utföra en ”selektiv rensning” genom att välja alternativet **Ta bort enheten** från företagsportalen. Vid en selektiv rensning tas enbart följande bort:
+
+- Företagsappar som din IT-administratör gör tillgängliga för dig
+- E-post, VPN och WiFi
+- IT-administratörens möjlighet att framtvinga vissa inställningar
+
+
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)

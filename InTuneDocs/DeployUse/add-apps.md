@@ -29,11 +29,11 @@ ms.suite: ems
 Innan du börjar distribuera appar med Microsoft Intune är det bra om du bekantar dig med de olika begreppen i det här avsnittet. Det hjälper dig att förstå vilka appar som du kan distribuera till vilken plattform och förstå de krav som måste vara uppfyllda innan du gör det.
 
 ## Apptyper som du kan distribuera med Intune
-Du kan distribuera appar till alla enhetstyper som stöds av Intune. Processen och vilka enheter som stöds varierar beroende på vilken typ av app du distribuerar. Följande tabell visar vad som kan och inte kan distribueras:
+Du kan distribuera appar till alla enhetstyper som stöds av Intune. Processen och vilka enheter som stöds varierar beroende på vilken typ av app du distribuerar. Använd dig av följande information för att få hjälp att förstå vad som går respektive inte går att distribuera:
 
 
 ### **Windows Installer (&#42;.exe, &#42;.msi)**
-- Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**
+- Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns [här](https://support.microsoft.com/en-us/kb/227091).
 - Alla eventuella ytterligare filer och mappar som krävs av appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.
 - I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) några kommandoradsargument för att kunna installeras av Intune. Läs dokumentationen till din app. Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).
 
@@ -49,17 +49,17 @@ Den här typen av app överförs till ditt molnlagringsutrymme.
 
 Den här typen av app överförs till ditt molnlagringsutrymme.
 
-Förnärvarande kan slutanvändare inte installera företags-appar från  appen för företagsportalen för iOS. Det beror på begränsningar för appar som publiceras i iOS App Store (se [App Stores riktlinjer för granskning](https://developer.apple.com/app-store/review/guidelines/)). Användarna får åtkomst till företagsappar (inklusive hanterade App Store-appar och paket med branschanpassade appar) genom att starta företagsportalsappen på sin enhet och peka på Företagsappar, vilket öppnar webbläsaren och omdirigerar dem till Intunes webbportal.
+För närvarande kan slutanvändare inte installera företagsappar från Intune-företagsportalappen för iOS. Det beror på begränsningar för appar som publiceras i iOS App Store (se [App Stores riktlinjer för granskning](https://developer.apple.com/app-store/review/guidelines/)). Användarna får åtkomst till företagsappar (inklusive hanterade App Store-appar och paket med branschanpassade appar) genom att starta företagsportalsappen på sin enhet och peka på Företagsappar, vilket öppnar webbläsaren och omdirigerar dem till Intunes webbportal.
 
 ### **Appaket för Windows Phone (&#42;.xap, .appx, .appxbundle)**
-- För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
+- För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).
 
 Den här typen av app överförs till ditt molnlagringsutrymme.
 
 Nedan finns information om hur du installerar affärsappar för UWP med Intune.
 
 ### **Windows-app-paket (.appx, .appxbundle)**
-- För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera Windows-enhetshantering med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
+- För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows-enheter med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).
 
 Den här typen av app överförs till ditt molnlagringsutrymme.
 ### **Windows Installer via MDM (&#42;.msi)**
@@ -81,7 +81,7 @@ Används när du har en
 Appar som är baserade på externa länkar lagras inte i Intune-molnlagringsutrymmet.
 ### **Hanterade iOS-appar från App Store**
 Du kan hantera och distribuera kostnadsfria iOS-appar från App Store. Det gör det också möjligt att koppla [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
-> Alternativ för mobila enheter är inte tillgängliga förrän du [anger hanteringsplats för mobil enhet](get-ready-to-enroll-devices-in-microsoft-intune.md) som Intune.
+> [!TIP] Alternativen för mobila enheter är inte tillgängliga förrän du [ställer in hanteringsutfärdaren för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md) på Intune.
 
 ## Stöd för UWP-appar (Universal Windows Platform)
 Windows 10-enheter kräver inte en nyckel för att installera branschspecifika appar. Dock måste registernyckeln **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** ha värdet **1** för att aktivera separat inläsning.
@@ -94,8 +94,8 @@ På Windows 10 Mobile-enheter kan du använda ett icke-Symantec-kodsigneringscer
 
 ## Nästa steg 
 
-Därefter måste du lägga till appar i Intune-konsolen innan du kan distribuera dem. Du kan lägga till appar för [registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md) och [Windows-datorer som du hanterar med Intune-klientprogramvaran](add-apps-for-windows-pcs-in-microsoft-intune.md)
+Därefter måste du lägga till appar i Intune-konsolen innan du kan distribuera dem. Du kan lägga till appar för [registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md) eller för [Windows-datorer som du hanterar med Intune-klientprogrammet](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

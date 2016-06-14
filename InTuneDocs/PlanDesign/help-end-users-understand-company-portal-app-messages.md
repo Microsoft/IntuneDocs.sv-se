@@ -55,7 +55,7 @@ Om användarna nekar åtkomst kan de fortsätta att använda företagsportalappe
 Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren loggar in på företagsportalappen efter registreringen.</br></br>Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktiverar sedan behörigheten.
 
 ### Vart ska användarna vända sig för mer information
-[Logga in på företagsportal-appen](/Intune/EndUser/sign-in-to-the-company-portal-app-android)
+Steg 5 i [Registrera en Android-enhet i Intune](/Intune/EndUser/enroll-your-device-in-intune-android)
 
 ## Tillåt att företagsportalen kommer åt foton, media och filer på enheten?
 
@@ -83,6 +83,6 @@ Den andra gången användarna loggar in på företagsportalappen efter att de ne
 [Vad du ska berätta för slutanvändare om att använda Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

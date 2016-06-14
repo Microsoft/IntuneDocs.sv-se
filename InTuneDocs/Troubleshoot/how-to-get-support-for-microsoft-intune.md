@@ -6,7 +6,7 @@ description:
 keywords:
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/26/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -33,21 +33,21 @@ Det här avsnittet beskrivs hur du öppnar en servicebegäran eller kontaktar te
 För självhjälp med Intune, se [Allmänna felsökningstips för Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) eller något av felsökningsavsnitten för specifika problem, som anges i avsnittet **Se även** i detta avsnitt.
 ## Skapa en serviceförfrågan online
 
-1.  Logga in på Intune och besök sedan [Administrationscentret för Office 365](https://portal.office.com/Support/SupportEntry.aspx) igen.
+1.  Logga in på Intune och gå sedan till [administrationscentret för Office 365](https://portal.office.com/Support/SupportEntry.aspx).
 
 2.  Under rubriken **Skapa en tjänstförfrågan** väljer du den problemkategori som du vill skapa ett ärende för:
 
-    -   Välj **Fakturerings- och produktinfo** för fakturerings- och licensieringsproblem
+    -   Välj **Fakturerings- och produktinfo** för fakturerings- och licensieringsproblem.
 
     -   För alla andra Intune-problem väljer du **Hantering av mobilenheter**. Det här alternativet omfattar även Office 365 MDM och System Center Configuration Manager med Intune.
 
-    > Du kanske måste klicka på **mer** längst ned i listan om du vill se alla kategorier.
+    > [!NOTE] Du kanske måste klicka på **mer** längst ned i listan om du vill se alla kategorier.
 
-3.  På sidan för att **identifiera problemet** väljer du **Funktion** och **Symtom** för vilka du behöver hjälp. Du ombeds ange en **problemsammanfattning** och **probleminformation**
+3.  På sidan för att **identifiera problemet** väljer du **Funktion** och **Symtom** för vilka du behöver hjälp. Du ombeds ange en **problemsammanfattning** och **probleminformation**.
 
 4.  På sidan **Granska förslag** hittar du länkar till innehåll som kan hjälpa dig att lösa problemet på egen hand.  Om du inte kan lösa problemet kan du klicka på **Ja, fortsätt** längst ned på sidan för att skicka din tjänsteförfrågan.
 
-5.  På sidan **Lägg till information** anger du den information som efterfrågas. Du kan bifoga skärmdumpar eller andra dokument genom att klicka på **Bifoga en fil**
+5.  På sidan **Lägg till information** anger du den information som efterfrågas. Du kan bifoga skärmdumpar eller andra dokument genom att klicka på **Bifoga en fil**.
 
 6.  På sidan **Bekräfta och skicka** anger du kontaktinformation, går igenom din begäran och klickar på **Skicka begäran**. När begäran har skickats skickas du till en lista över dina tjänstbegäranden.
 
@@ -57,7 +57,8 @@ I [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-suppo
 ## Spåra dina tjänstförfrågningar
 Om du vill spåra dina förfrågningar går du till [administrationscentret för Office 365](https://portal.office.com/admin/default.aspx). Klicka på **Visa alla supportärenden** längst ned i listan **Skapa en tjänstförfrågan**. Som standard visas alla dina tjänstbegäranden som är öppna. Klicka på filterikonen i det övre navigeringsfältet och välj önskad vyn för att ändra vilka tjänstbegäranden som ska visas, till exempel för att visa stängda begäranden.
 
-> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support med Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) för att hitta utförligt självhjälpsmaterial och möjligheten att öppna en supportbegäran online eller via telefon.
+> [!NOTE]
+> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support för Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) där du hittar utförligt självhjälpsmaterial och har möjlighet att öppna en supportbegäran online eller via telefon.
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 
@@ -146,6 +147,6 @@ Vår roll är att:
 [Vanliga frågor för Microsoft Intune](/intune/understand-explore/frequently-asked-questions-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

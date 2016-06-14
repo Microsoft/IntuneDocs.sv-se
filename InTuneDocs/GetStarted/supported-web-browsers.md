@@ -27,13 +27,12 @@ ms.suite: ems
 
 # Webbläsare som stöds av Microsoft Intune
 
-Innan du konfigurerar Intune går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar](what-to-know-before-you-start-microsoft-intune.md)
+Innan du konfigurerar Intune går du igenom det här avsnittet och övriga krav som anges i [Vad du behöver veta innan du börjar](what-to-know-before-you-start-microsoft-intune.md).
 
 |Intune-funktion |Webbläsare som stöds|
 |---------|---------|
 |Förbättringar i administrationskonsolen för Intune     |  Internet Explorer 10 eller senare<br /><br />Google Chrome (versioner före version 42)<br /><br />Mozilla Firefox <br /><br />**Obs!** Edge stöds för närvarande inte för administrationskonsolen.                      
-|Intune-kontoportalen     | Internet Explorer 10 eller senare<br /><br />Google Chrome  <br /><br />Mozilla Firefox<br /><br />**Obs!** Om du använder administrationsportalen för Office 365, som ersätter Intune-kontoportalen, finns en lista över webbläsare i Administrationsportalen för Office 365.    
-|Administrationsportalen för Office 365     |Internet Explorer 10 eller senare<br /><br />Google Chrome <br /><br />Mozilla Firefox <br /><br />Microsoft Edge  |
+|Administrationsportalen för Office 365     |Alla webbläsare  |
 |Företagsportalens webbplats     |**På mobila enheter:** använd standardwebbläsaren för varje plattform som stöds   <br /><br />**På Windows-datorer:** Internet Explorer 10 eller senare eller Microsoft Edge<br /><br />**På Mac OS X 10.9 eller senare:** Apple Safari    |
 
 
@@ -43,6 +42,6 @@ Innan du konfigurerar Intune går du igenom det här avsnittet och andra krav so
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

@@ -21,11 +21,9 @@
 ### [Registrera mobila enheter och installera en app](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](post-configuration-tasks.md)
 
-<!--
-## [Choose how to manage devices](choose-how-to-manage-devices.md)
-### [Mobile device management capabilities](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Windows PC management capabilities](windows-pc-management-capabilities-in-microsoft-intune.md)
--->
+## [Välj hur du vill hantera enheter](choose-how-to-manage-devices.md)
+### [Funktioner för hantering av mobila enheter](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Windows-datorhanteringsfunktioner](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 ## [Distributionsfaser för Intune-distributioner](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Projektets omfattning](project-scope.md)
@@ -34,12 +32,12 @@
 ### [Företagsomfattande distribution](enterprise-rollout.md)
 ### [Åtgärder och underhåll](operations-and-maintenance.md)
 
-
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
+# [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 # [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

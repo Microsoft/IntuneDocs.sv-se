@@ -30,7 +30,7 @@ Använd informationen i det här avsnittet för att lösa problem med programvar
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
-I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hittar en viss felkod i den här tabellen går du till [resultatkoder för Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542)
+I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hittar en viss felkod i den här tabellen går du till [resultatkoder för Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542).
 
 |Felkod|Symboliskt namn|Mer information|
 |--------------|-----------------|--------------------|
@@ -249,25 +249,25 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 - De slutar plötsligt rapportera till Microsoft-administrationskonsolen.  
 - De uppvisar hög processoranvändning.
 - Programmen installeras långsamt när de installeras via Intune-portalen. 
-- Microsoft Intune Center utlöser följande fel: *Ett fel uppstod när datorn uppdaterades. Påträffat fel: Kod 0x800705b4*
-- Statusfältet på Intune-administratörskonsolen > Grupper > Alla enheter visar: *En eller flera agenter installerade på den här datorn har fel. Informationen för datorn är kanske felaktig eller inaktuell*
+- Microsoft Intune Center utlöser följande fel: *Ett fel uppstod när datorn uppdaterades. Fel hittades: kod 0x800705b4*.
+- Statusfältet på Intune-administratörskonsolen > Grupper > Alla enheter visar: *En eller flera agenter installerade på den här datorn har fel. Informationen för datorn är kanske felaktig eller inaktuell*.
 
 Det här problemet kan uppstå om ersatta programuppdateringar (uppdateringar som har ersatts av en annan uppdatering) inte har avfärdats under en längre tid. Under vissa processer, till exempel installationen av ett program, kontrollerar Windows alla ersatta uppdateringar i följd så att uppdateringarna och deras efterträdare kan mappas korrekt. Om listan över ersatta programuppdateringar blir för stor kan den här kontrollåtgärden leda till hög processoranvändning på grund av den bearbetningsbelastning och tid som krävs. Det här problemet påverkar huvudsakligen klienter som kör Windows 7 på grund av det stora antalet ersatta programuppdateringar som är tillgängliga för Windows 7. Windows 8 och senare operativsystem har inte lika många ersatta uppdateringar och är därför inte lika mottagliga för det här problemet.
 
 **Lösning**: Du kan lösa det här problemet genom att följa dessa steg:
-1. Logga in på [Intune-administrationskonsolen](https://manage.microsoft.com)
-2. Välj **Uppdateringar** > **Alla uppdateringar**
+1. Logga in till [Intune-administrationskonsolen](https://manage.microsoft.com).
+2. Välj **Uppdateringar** > **Alla uppdateringar**.
 3. Använd filteralternativet i det övre verktygsfältet för att filtrera fram ersatta uppdateringar.
 4. Avfärda alla ersatta uppdateringar som gäller Windows 7 eller program (till exempel Microsoft Office) som har installerats på de berörda klienterna. 
 5. Starta om de berörda klienterna.
 
-Om du kör Windows 7 kontrollerar du att följande uppdateringar är installerade:[3050265 Windows Update-klienten för Windows 7: juni 2015](https://support.microsoft.com/kb/3050265)
+Om du kör Windows 7 kontrollerar du dessutom att följande uppdatering är installerad: [3050265 Windows Update-klienten för Windows 7: juni 2015](https://support.microsoft.com/kb/3050265).
 
 ### Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft Support. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

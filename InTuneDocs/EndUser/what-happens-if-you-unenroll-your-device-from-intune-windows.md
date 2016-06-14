@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Vad händer om du avregistrerar din enhet från Intune?
 
-När du avinstallerar företagsportalappen på din enhet avregistreras även din enhet i Intune. Mer information om vad som händer finns på länken för den typ av enhet som du använder.
+När du avinstallerar företagsportalappen på din enhet avregistreras även din enhet i Intune. Mer information om vad som händer får du via länken som matchar den typ av enhet du använder och som visas i avsnittet ”I den här artikeln” ovan.
 
 - [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
 - [Windows 10, Windows 8.1 eller Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
@@ -43,7 +43,7 @@ När du avinstallerar företagsportalappen på din enhet avregistreras även din
 
 -   Endpoint Protection-programmet för Intune tas bort från datorn. Om det finns annan antivirusprogramvara installerad på datorn och den har inaktiverats kan det hända att den återaktiveras när Intune Endpoint Protection tas bort. Kontrollera datorn när du har tagit bort den från företagsportalen.
 
-    > Om det andra virusskyddsprogrammet inte återaktiveras och det inte finns något annat virusskyddsprogram kan datorn vara utsatt för virus och skadlig kod.
+    > [!IMPORTANT] Om det andra virusskyddsprogrammet inte har återaktiveras och det inte finns något annat virusskyddsprogram installerat kan datorn vara utsatt för virus och skadlig kod.
 
 -   Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran, gäller inte längre.
 
@@ -96,6 +96,6 @@ När du tar bort en Windows RT-enhet händer följande:
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

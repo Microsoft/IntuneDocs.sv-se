@@ -169,20 +169,10 @@ Du kan ändra inställningarna för proxyservern i enskilda klientdatorer, eller
 Du kan också använda en proxyserver som cachelagrar innehåll för att [minska nätverksbandbredden](network-bandwidth-use.md) som används av Intune-klienter.
 
 
-
-## Krav för Service To Service Connector
-Service To Service Connector har endast stöd för molnbaserad Exchange och har inga krav för lokal infrastruktur.
-
-Om du vill använda denna anslutningstjänst måste följande vara sant:
-
--   Du har en Office 365-prenumeration med en Exchange Server 2013-innehavare. Så länge innehavaren är Exchange Server 2013 stöder anslutningstjänsten Exchange Server 2010 i samma miljö.
-
--   Det användarkonto som du använder för att installera den lokala anslutningstjänsten måste vara innehavaradministratör för Intune och administratör i Exchange-klientorganisationen med en licens för att använda Exchange Server 2013.
-
 ### Se även
 [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
