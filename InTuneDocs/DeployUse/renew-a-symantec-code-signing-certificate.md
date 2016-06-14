@@ -59,7 +59,7 @@ Att tillhandahålla en signerad SSP.xap-fil är för närvarande det enda sätte
 
 2.  Öppna [Intune-administrationskonsolen](https://admin.manage.microsoft.com) (https://admin.manage.microsoft.com) och gå till **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
 
-3.  Överför den nyligen signerade företagsportalen. You’ll need the newly signed SSP.xap and the new .PFX file you received from Symantec or the Application enrollment token that was created with this new .PFX file.
+3.  Överför den nyligen signerade företagsportalen. Du behöver den nyligen signerade SSP.xap och den nya PFX-filen som du har fått från Symantec eller den programregistreringstoken som har skapats med den nya PFX-filen.
 
 4.  När uppladdningen är klar tar du bort den gamla företagsportalversionen i arbetsytan **Programvara**  .
 
