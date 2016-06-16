@@ -18,7 +18,7 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: andcerat
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -100,6 +100,6 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 - **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare):** Välj **Ja** för att blockera funktioner för skärmdump och **Android Assistant** på enheten när den här appen används.
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 
