@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Vanliga frågor om Microsoft Intune
-Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar svar på din fråga här kan du [berätta det för oss](https://microsoftintune.uservoice.com/)
+Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar svar på din fråga här kan du [berätta det för oss](https://microsoftintune.uservoice.com/).
 
 ## Allmänna frågor
 
@@ -40,13 +40,13 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
 -   **Finns det någon fjärrhjälpsfunktion för mobila enheter i Intune?**
 
-    Nej, tyvärr. Appar från tredje part som [Bomgar](http://www.bomgar.com/) och [TeamViewer](https://www.teamviewer.com/) kan vara användbara.
+    Nej, tyvärr. Appar från tredje part som [Bomgar](http://www.bomgar.com/) <!---and [TeamViewer](https://www.teamviewer.com/)---> kan vara användbara.
 
 ## Konton
 
 -   **Kan jag lägga till Office 365 i utvärderingen med samma klientorganisation om jag börjar utvärdera Intune och skapar en ny klientorganisation för utvärderingsversionen?**
 
-    Ja. Logga bara in med en global administratör från din befintliga klientorganisation eller prenumeration på Intune, till exempel *globaladmin@&lt;company&gt;.onmicrosoft.com*
+    Ja. Logga bara in med en global administratör från din befintliga klientorganisation eller prenumeration på Intune, till exempel *globaladmin@&lt;company&gt;.onmicrosoft.com*.
 
 -   **Är det svårt att byta till ett annat företags tjänst om jag tilldelar Intune en MDM-utfärdare under en utvärderingsprenumeration och sedan ändrar mig angående Intune?**
 
@@ -62,15 +62,15 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
 -   **Var kan mina användare lära sig hur de registrerar sina enheter?**
 
-    Du kan använda eller anpassa information från [registreringsanvisningarna för slutanvändare i Intune för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a)
+    Du kan använda eller anpassa information från [registreringsanvisningarna för slutanvändare i Intune för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a).
 
 -   **Hur felsöker jag en registrering av en enhet?**
 
-    Anvisningar för hur du kan felsöka vanliga problem med registreringen finns i [Felsöka enhetsregistrering i Intune](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune)
+    Anvisningar för hur du kan felsöka vanliga problem med registreringen finns i [Felsöka enhetsregistrering i Intune](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune).
 
 -   **Hur samlar jag in registreringsloggar om en användare har problem med registreringen?**
 
-    Följ [dessa anvisningar](http://www.microsoft.com/en-us/download/46391)
+    Följ [dessa anvisningar](http://www.microsoft.com/en-us/download/46391).
 
 ## Hantering av mobila enheter
 
@@ -78,15 +78,15 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
     -   **Kan Intune identifiera om en enhet är jailbrokad?**
 
-        Ja, för vissa operativsystem. Information om hur du hanterar jailbrokade enheter finns i [Skapa en princip för enhetsefterlevnad](/intune/deploy-use/create-a-device-compliance-policy-in-microsoft-intune.md)
+        Ja, för vissa operativsystem. Information om hur du hanterar jailbrokade enheter finns i [Skapa en princip för enhetsefterlevnad](/intune/deploy-use/create-a-device-compliance-policy-in-microsoft-intune.md).
 
     -   **Kan jag välja vilka företagsdata jag vill ta bort från enheten?**
 
-        Ja. Information om selektiv rensning finns i [Skydda dina data med fjärrensning, fjärrlåsning eller lösenordsåterställning](/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
+        Ja. Information om selektiv rensning finns i [Skydda dina data med fjärrensning, fjärrlåsning eller lösenordsåterställning](/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune.md).
 
     -   **Går det att blockera vissa webbplatser i webbläsaren på en mobil enhet via Intune?**
 
-        Inte i plattformarnas interna webbläsare. Du kan dock tillåta eller blockera webbadresser när du har distribuerat den Intune-hanterade webbläsaren på iOS- och Android-enheter. Mer information finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper](/intune/Deploy-Use/Manage-Internet-access-using-managed-browser-policies-with-Microsoft-Intune.md)
+        Inte i plattformarnas interna webbläsare. Du kan dock tillåta eller blockera webbadresser när du har distribuerat den Intune-hanterade webbläsaren på iOS- och Android-enheter. Mer information finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper](/intune/Deploy-Use/Manage-Internet-access-using-managed-browser-policies-with-Microsoft-Intune.md).
 
     -   **Kan vi hindra en användare från att avinstallera en app?**
 
@@ -104,105 +104,99 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
         Du kan i vissa fall byta MDM-utfärdare. Om du behöver göra det kontaktar du supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](/intune/Troubleshoot/How-to-get-support-for-Microsoft-Intune.md). I tabellen nedan beskrivs vilka ändringar som är möjliga. Ändringar av MDM-utfärdare kräver ny registrering av enheter.
 
-        **Till:** Intune!**Till:** O365|**Till:** Configuration Manager med Intune|
+        ||**Till:** Intune!**Till:** O365|**Till:** Configuration Manager med Intune| |**Från:** Intune| |Ja&#42;|Ja| |**Från:** O365||Ja&#42;||Ja| |**Från:** Configuration Manager med Intune|Ja|Ja| |
         
-        **Från:** Intune| |Ja&#42;|Ja|
+        &#42;MDM-utfärdare för O365 och Intune kan samexistera, så du behöver inte registrera mobila enheter på nytt.
 
 
 
--   ****Från:** O365||Ja&#42;||Ja|**
+-   **Windows**
 
-    -   ****Från:** Configuration Manager med Intune|Ja|Ja| |**
+    -   **Kan jag läsa in en app från Windows Store separat?**
 
-        &#42;MDM-utfärdare för O365 och Intune kan samexistera, så du behöver inte registrera mobila enheter på nytt. Windows Kan jag läsa in en app från Windows Store separat?
-
-    -   **Offentligt tillgängliga appar kan inte läsas in separat.**
-
-        Även om du kan hämta XAP-filen kan du inte överföra den till Intune eftersom det är en offentlig XAP-fil som är krypterad och signerad med utvecklarens kodsigneringscertifikat. Du kan bara läsa in appar som du utvecklar och signerar med ditt eget kodsigneringscertifikat separat.
+        Offentligt tillgängliga appar kan inte läsas in separat. Även om du kan hämta XAP-filen kan du inte överföra den till Intune eftersom det är en offentlig XAP-fil som är krypterad och signerad med utvecklarens kodsigneringscertifikat. Du kan bara läsa in appar som du utvecklar och signerar med ditt eget kodsigneringscertifikat separat.
 
     -   **Måste slutanvändaren ha ett Microsoft-konto för att distribuera Windows Phone Store-appar via företagsportalen?**
 
         Ja, slutanvändaren kan inte hämta appar utan ett Microsoft-konto. Undantaget är privata LOB-appar som läses in separat och som kan distribueras till en enhet utan ett Microsoft-konto.
 
-        **Måste jag ha ett Microsoft-konto på Windows Phone 8.1 för att den ska kunna hanteras av Intune?**
-        Nej. Men det krävs för att installera de flesta appar från den offentliga butiken. Varför kräver Windows Phone ett Symantec-certifikat för hanteringen? Windows Phone styr hur du installerar appar. Alla användare med ett Microsoftkonto kan installera appar från Store, företag kan installera eller sidladda sina internt utvecklade företagsappar (LOB) med hjälp av en särskild process som beskrivs i dokumentationen för Windows Phone.
+    -   **Måste jag ha ett Microsoft-konto på Windows Phone 8.1 för att den ska kunna hanteras av Intune?**
 
-        När du installerar LOB-appar, litar Windows Phones endast på en speciell typ av certifiering som utfärdats av Symantec. Du kan inte använda någon annan kommersiellt eller privat genererad certifiering. Detta krav gäller för alla mobila enhetshanteringslösningar, inte bara Intune. Symantec-certifikatet skapar en programregistreringstoken (AET). AET kan installeras på en enhet när enheten registreras för hantering av mobila enheter, eller installeras out-of-band från en säker webbplats eller ett e-postmeddelande. Administratörer måste signera varje LOB-app med Symantec-certifikatet med hjälp av de verktyg som finns i [Windows Phone SDK](http://go.microsoft.com/fwlink/?LinkId=268439). När användarna försöker installera LOB-appar kontrollerar operativsystemet i Windows Phone signaturen i AET gentemot signaturen i appen.
+        Nej. Men det krävs för att installera de flesta appar från den offentliga butiken.
 
-        -   Om signaturerna matchar kan installationen fortsätta.
+        **Varför kräver Windows Phone ett Symantec-certifikat för hanteringen?**
+        Windows Phone styr hur du installerar appar. Alla användare med ett Microsoftkonto kan installera appar från Store, företag kan installera eller sidladda sina internt utvecklade företagsappar (LOB) med hjälp av en särskild process som beskrivs i dokumentationen för Windows Phone. När du installerar LOB-appar, litar Windows Phones endast på en speciell typ av certifiering som utfärdats av Symantec. Du kan inte använda någon annan kommersiellt eller privat genererad certifiering. Detta krav gäller för alla mobila enhetshanteringslösningar, inte bara Intune.
 
-        -   Installationen misslyckas om AET inte kan verifieras.
+        Symantec-certifikatet skapar en programregistreringstoken (AET). AET kan installeras på en enhet när enheten registreras för hantering av mobila enheter, eller installeras out-of-band från en säker webbplats eller ett e-postmeddelande. Administratörer måste signera varje LOB-app med Symantec-certifikatet med hjälp av de verktyg som finns i [Windows Phone SDK](http://go.microsoft.com/fwlink/?LinkId=268439). När användarna försöker installera LOB-appar kontrollerar operativsystemet i Windows Phone signaturen i AET gentemot signaturen i appen. Om signaturerna matchar kan installationen fortsätta. Installationen misslyckas om AET inte kan verifieras. Det finns flera orsaker till att AET inte kan verifieras:
 
-        -   Det finns flera orsaker till att AET inte kan verifieras:
+        -   AET installerades aldrig på enheten
 
-        AET installerades aldrig på enheten
+        -   AET har upphört att gälla
 
-    **AET har upphört att gälla**
-  AET skapades inte med samma Symantec-certifikat som användes för att signera appen Windows Phone kräver inte att AET finns vid MDM-registreringen, men före versionen som släpptes i november 2014, krävde Intune AET och en signerad ssp.xap eftersom det inte fanns någon möjlighet att installera AET och ssp.xap utom under registreringen.
+        -   AET skapades inte med samma Symantec-certifikat som användes för att signera appen
 
-      > Hur skapas AET för Intune-användare?
+        Windows Phone kräver inte att AET finns vid MDM-registreringen, men före versionen som släpptes i november 2014, krävde Intune AET och en signerad ssp.xap eftersom det inte fanns någon möjlighet att installera AET och ssp.xap utom under registreringen.
 
-    **När administratörer överför .pfx-filen för sina Symantec-certifikat, skapar Intune automatiskt AET och distribuerar den till registrerade Windows Phone-enheter.**
-       Det är inte nödvändigt för Intune-administratörer att använda AET-generatorn i Windows Phone SDK.
+    **Hur skapas AET för Intune-användare?**
+  När administratörer överför .pfx-filen för sina Symantec-certifikat, skapar Intune automatiskt AET och distribuerar den till registrerade Windows Phone-enheter. Det är inte nödvändigt för Intune-administratörer att använda AET-generatorn i Windows Phone SDK.
 
-       -   Intune stöder inte att skapa AET manuellt och distribuera den out-of-band. Vilka ändringar har minskat behovet av ett Symantec-certifikat?
+      > [!IMPORTANT] Intune har inte stöd för att skapa AET manuellt och distribuera den out-of-band.
 
-        -   I november 2014-versionen har Intune gjort ändringar för att tillåta scenarier där företag inte har något Symantec-certifikat. Företagsportalen för Windows Phone 8.1 är tillgänglig för installation från Store, så den behöver inte signeras med ett Symantec-certifikat eller verifieras mot en AET. I stället verifieras appen som en del av publiceringsprocessen i Store.
+    **Vilka ändringar har minskat behovet av ett Symantec-certifikat?**
+       I november 2014-versionen har Intune gjort ändringar för att tillåta scenarier där företag inte har något Symantec-certifikat.
 
-        Windows Phone 8.1-enheter kan registreras med eller utan en AET i telefonen. Om det finns en tillgänglig AET installeras den första gången enheten synkroniserar med Intune.
+       -   Företagsportalen för Windows Phone 8.1 är tillgänglig för installation från Store, så den behöver inte signeras med ett Symantec-certifikat eller verifieras mot en AET. I stället verifieras appen som en del av publiceringsprocessen i Store.
 
-        **Om det inte finns någon AET kan enheten fortfarande hanteras av Intune och användarna kan installera företagsportalen från Store, samt använda de flesta funktioner i företagsportalen utan ett Symantec-certifikat för att signera appar.**
-        Det finns inte några ändringar i Symantecs krav för Windows Phone 8-enheter.
+        -   Windows Phone 8.1-enheter kan registreras med eller utan en AET i telefonen. Om det finns en tillgänglig AET installeras den första gången enheten synkroniserar med Intune. Om det inte finns någon AET kan enheten fortfarande hanteras av Intune och användarna kan installera företagsportalen från Store, samt använda de flesta funktioner i företagsportalen utan ett Symantec-certifikat för att signera appar.
 
-        -   Windows Phone 8-enheter måste ha signerade ssp.xap och AET under registreringen, annars går de inte att registrera.
+        Det finns inte några ändringar i Symantecs krav för Windows Phone 8-enheter. Windows Phone 8-enheter måste ha signerade ssp.xap och AET under registreringen, annars går de inte att registrera.
 
-        -   Vilka funktioner stöds om en Windows Phone 8.1-enhet registreras, men det inte finns något Symantec-certifikat?
-
-        -   Om en Windows Phone 8.1-enhet registreras, men det inte finns något Symantec-certifikat kan du:
+        **Vilka funktioner stöds om en Windows Phone 8.1-enhet registreras, men det inte finns något Symantec-certifikat?**
+        Om en Windows Phone 8.1-enhet registreras, men det inte finns något Symantec-certifikat kan du:
 
         -   Skapa principer och push-installera dem på enheten
 
         -   Konfigurera kontaktinformation för IT-avdelningen som ska visas i företagsportalen
 
-        Skapa djuplänkar till Store och distribuera dem till företagsportalen
+        -   Skapa djuplänkar till Store och distribuera dem till företagsportalen
+
+        -   Skapa länkar till webbsidor och distribuera dem till företagsportalen
+
+        -   Skapa villkor som måste godkännas av användarna innan de kan använda företagsportalen
+
+        Det enda du  inte kan utföra utan ett Symantec-certifikat är att distribuera LOB-appar.
 
         > [!IMPORTANT]
-        > Skapa länkar till webbsidor och distribuera dem till företagsportalen Skapa villkor som måste godkännas av användarna innan de kan använda företagsportalen
+        > Programvaruutgivaren för Intune kontrollerar inte att appar har signerats när du överför dem.. Om du distribuerar osignerade appar kommer användarna inte att kunna installera dem.
 
-        **Det enda du  inte kan utföra utan ett Symantec-certifikat är att distribuera LOB-appar.**
-        Programvaruutgivaren för Intune kontrollerar inte att appar har signerats när du överför dem.. Om du distribuerar osignerade appar kommer användarna inte att kunna installera dem. Vad kan användarna göra om de har företagsportalen, men det inte finns något Symantec-certifikat?
+        **Vad kan användarna göra om de har företagsportalen, men det inte finns något Symantec-certifikat?**
+        Windows Phone 8.1-enheter registreras inte förrän användarna installerar företagsportalen från Store. Om enheten inte har registrerats uppmanas användarna att registrera den. När användarna pekar på promptfrågan i företagsportalen kommer de direkt till **Inställningar / Arbetsyta** där de kan registrera sina enheter.
 
-        Windows Phone 8.1-enheter registreras inte förrän användarna installerar företagsportalen från Store.
+        Även om användarna inte registrerar enheten kan de utföra följande åtgärder när företagsportalen installerats från Store:
 
-        -   Om enheten inte har registrerats uppmanas användarna att registrera den. När användarna pekar på promptfrågan i företagsportalen kommer de direkt till **Inställningar / Arbetsyta** där de kan registrera sina enheter.
-
-        -   Även om användarna inte registrerar enheten kan de utföra följande åtgärder när företagsportalen installerats från Store:
-
-        -   Godkänna eller avvisa de villkor som konfigurerats av administratören.
-
-        -   Om användarna inte godkänner villkoren stängs företagsportalen.
+        -   Godkänna eller avvisa de villkor som konfigurerats av administratören. Om användarna inte godkänner villkoren stängs företagsportalen.
 
         -   Visa kontaktinformation för IT-avdelningen
 
-        Visa alla registrerade enheter, inklusive iOS-, Android- och Windows-enheter Använda djuplänkar till appar i Store Använda webblänkar för att öppna webbsidor När enheten är registrerad kan användarna visa den i listan **Mina enheter** .
+        -   Visa alla registrerade enheter, inklusive iOS-, Android- och Windows-enheter
 
-        När enheten har registrerats följer den alla distribuerade Intune-principer.
+        -   Använda djuplänkar till appar i Store
 
-        **Enheter måste registreras för att kunna hämta AET och installera LOB-appar. En oregistrerad enhet som försöker installera en LOB-app kommer att skickas vidare till registreringen.**
-        Det enda som användarna inte kan göra om företaget saknar ett Symantec-certifikat, är att installera LOB-appar som distribuerats av administratören. Vårt företag har redan ett certifikat och har registrerat Windows Phone 8.1-enheter.
+        -   Använda webblänkar för att öppna webbsidor
 
-        **Måste jag göra något annat nu när företagsportalen finns i Store?**
-        Aktuell ssp.xap från Download Center fungerar fortfarande på Windows Phone 8.1-enheter.
+        När enheten är registrerad kan användarna visa den i listan **Mina enheter** . När enheten har registrerats följer den alla distribuerade Intune-principer. Enheter måste registreras för att kunna hämta AET och installera LOB-appar. En oregistrerad enhet som försöker installera en LOB-app kommer att skickas vidare till registreringen.
 
-        -   Du kan fortsätta att dirigera användare till att registrera och hämta företagsportalen under installationen.
+        Det enda som användarna inte kan göra om företaget saknar ett Symantec-certifikat, är att installera LOB-appar som distribuerats av administratören.
 
-        -   Vilka fördelar och nackdelar får användare som hämtar företagsportalen från Store?
+        **Vårt företag har redan ett certifikat och har registrerat Windows Phone 8.1-enheter. Måste jag göra något annat nu när företagsportalen finns i Store?**
+        Aktuell ssp.xap från Download Center fungerar fortfarande på Windows Phone 8.1-enheter. Du kan fortsätta att dirigera användare till att registrera och hämta företagsportalen under installationen.
 
-        -   Fördelar:
+        **Vilka fördelar och nackdelar får användare som hämtar företagsportalen från Store?**
+        Fördelar:
 
         -   Användarna får djuplänkar och webblänkar, även om Windows Phone 8.1-enheten inte registrerats
 
-        När Microsoft uppdaterar företagsportalen uppdateras Store-appen automatiskt utan att du behöver hämta, signera och omdistribuera ssp.xap
+        -   När Microsoft uppdaterar företagsportalen uppdateras Store-appen automatiskt utan att du behöver hämta, signera och omdistribuera ssp.xap
 
         -   Dokumentationen för Windows Phone 8.1-, iOS-, Android- och Windows-användare är samstämmig: ”Gå till Store och installera företagsportalen.”
 
@@ -214,48 +208,50 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
         -   Användarna behöver inte acceptera anpassade villkor förrän de öppnar företagsportalen
 
-        -   Du kan fortsätta dirigera användare att registrera sig och installera ssp.xap vid registreringen under följande omständigheter:
+        Du kan fortsätta dirigera användare att registrera sig och installera ssp.xap vid registreringen under följande omständigheter:
 
-        **Om företaget blockerar åtkomsten till Store från Windows Phone-enheter, måste användarna få ssp.xap installerat under registreringen.**
+        -   Om företaget blockerar åtkomsten till Store från Windows Phone-enheter, måste användarna få ssp.xap installerat under registreringen.
 
         -   Om användarna inte har konfigurerat något Microsoft-konto på sin Windows Phone-enhet, kan de inte installera företagsportalen från Store.
 
         -   Om den befintliga dokumentationen för Windows Phone-registreringen säger att de ska gå till Inställningar, Arbetsyta först, kan det ta ett tag att uppdatera dokumenten och dirigera användarna till Store.
 
-        -   Vad är skillnaden mellan ssp.xap i Download Center och appen i Store?
+        **Vad är skillnaden mellan ssp.xap i Download Center och appen i Store?**
 
-        **Företagsportalen i Store behöver inte vara signerat av ett Symantec-certifikat som måste vara installerat**
-        Företagsportalen i Store visar villkoren för användaren, men det gör inte ssp.xap i Download Center Företagsportalen i Store är en .appx i stället för en .xap
+        -   Företagsportalen i Store behöver inte vara signerat av ett Symantec-certifikat som måste vara installerat
 
-        -   Kan jag hämta företagsportalens fil och push-installera den hos användarna i stället för att skicka dem till Store?
+        -   Företagsportalen i Store visar villkoren för användaren, men det gör inte ssp.xap i Download Center
 
-        -   Ja.
+        -   Företagsportalen i Store är en .appx i stället för en .xap
 
-        -   Företagsportalappen kan laddas ner för följande operativsystem från Download Center:
+        **Kan jag hämta företagsportalens fil och push-installera den hos användarna i stället för att skicka dem till Store?**
+        Ja. Företagsportalappen kan laddas ner för följande operativsystem från Download Center:
 
-        **Windows Phone 8.1: [http://go.microsoft.com/fwlink/?LinkId=615799](http://go.microsoft.com/fwlink/?LinkId=615799)**
-        Windows Phone 8.0 : [http://go.microsoft.com/fwlink/?LinkId=268440](http://go.microsoft.com/fwlink/?LinkId=268440) Windows 8.1: [http://go.microsoft.com/fwlink/?LinkId=615800](http://go.microsoft.com/fwlink/?LinkId=615800) Kan företag fortfarande använda supportverktyget för Windows Intune-testhantering för Windows Phone om de inte har något Symantec-certifikat och ändå låta användarna installera företagsportalen från Store?
+        -   Windows Phone 8.1: [http://go.microsoft.com/fwlink/?LinkId=615799](http://go.microsoft.com/fwlink/?LinkId=615799)
 
-        Ja.
+        -   Windows Phone 8.0 : [http://go.microsoft.com/fwlink/?LinkId=268440](http://go.microsoft.com/fwlink/?LinkId=268440)
+
+        -   Windows 8.1: [http://go.microsoft.com/fwlink/?LinkId=615800](http://go.microsoft.com/fwlink/?LinkId=615800)
+
+        **Kan företag fortfarande använda supportverktyget för Windows Intune-testhantering för Windows Phone om de inte har något Symantec-certifikat och ändå låta användarna installera företagsportalen från Store?**
+        Ja. Om du behöver göra ett POC (Proof Of Concept) som innefattar installationen av LOB-appar, fungerar testhanteringsverktyget med Store-versionen av företagsportalen. Även om AET från Symantec-certifikatet inte längre krävs för att registrera Windows Phone 8.1-enheter, kan företag testa appinstallationen med djuplänkar till appar i Store.
+
+        Supportverktyget för Windows Intune-testhanteringen för Windows Phone är endast avsett för utvärderingsprenumerationer på Intune.
 
         > [!IMPORTANT]
-        > Om du behöver göra ett POC (Proof Of Concept) som innefattar installationen av LOB-appar, fungerar testhanteringsverktyget med Store-versionen av företagsportalen. Även om AET från Symantec-certifikatet inte längre krävs för att registrera Windows Phone 8.1-enheter, kan företag testa appinstallationen med djuplänkar till appar i Store.
+        > Använd bara testhanteringsverktyget vid testning. Enheter som har registrerats med AET från testhanteringsverktyget måste avregistreras och omregistreras om Symantec-certifikatet för testhanteringsverktyget inte längre är tillgängligt, eller om företaget erhåller ett eget Symantec-certifikat för signering av appar.
 
-        **Supportverktyget för Windows Intune-testhanteringen för Windows Phone är endast avsett för utvärderingsprenumerationer på Intune.**
-        Använd bara testhanteringsverktyget vid testning. Enheter som har registrerats med AET från testhanteringsverktyget måste avregistreras och omregistreras om Symantec-certifikatet för testhanteringsverktyget inte längre är tillgängligt, eller om företaget erhåller ett eget Symantec-certifikat för signering av appar. Kan företag börja utan Symantec-certifikat och lägga till ett senare, även efter att Windows Phone 8.1-enheter har registrerats? Ja. Även om Windows Phone 8.1-enheter redan har registrerats kan du få ett certifikat från Symantec, signera ssp.xap samt överföra den och pfx-filen.
+        **Kan företag börja utan Symantec-certifikat och lägga till ett senare, även efter att Windows Phone 8.1-enheter har registrerats?**
+        Ja. Även om Windows Phone 8.1-enheter redan har registrerats kan du få ett certifikat från Symantec, signera ssp.xap samt överföra den och pfx-filen. Intune skapar sedan AET. Windows Phone 8.1-enheter får AET nästa gång de synkroniseras, efter upp till åtta timmar. Låt det gå minst åtta timmar innan du distribuerar branschspecifika appar efter överföring av xap och pfx.
 
-
--   **Intune skapar sedan AET.**
-
-    -   **Windows Phone 8.1-enheter får AET nästa gång de synkroniseras, efter upp till åtta timmar.**
-
-        Låt det gå minst åtta timmar innan du distribuerar branschspecifika appar efter överföring av xap och pfx.
 
 -   **Android**
 
     -   **Hur lång tid tar det att kryptera en Android-enhet?**
 
-        Det beror i första hand på hastigheten på enhetens processor och den totala mängden använt minne. Det är inte en funktion som ingår i Intune. iOS
+        Det beror i första hand på hastigheten på enhetens processor och den totala mängden använt minne. Det är inte en funktion som ingår i Intune.
+
+-   **iOS**
 
     -   **Måste enheten ha ett Apple-ID för att installationen ska kunna fortsätta vid distribution av iOS-appar med Intune om appens IPA- och Manifest-fil har överförts?**
 
@@ -263,43 +259,43 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
     -   **Går det att aktivera installationen av appar på iOS utan att tillåta åtkomst till Apple Store?**
 
-        Nej, men du kan aktivera App Store och använda tillåtna eller blockerade appar på iOS för att hålla koll på vad användarna gör.
+        Nej, men du kan aktivera App Store och använda tillåtna eller blockerade appar på iOS för att hålla koll på vad användarna gör. LOB-appar som läses in separat behöver inte ha åtkomst till Apple App Store.
 
-    -   **LOB-appar som läses in separat behöver inte ha åtkomst till Apple App Store.**
+    -   **Måste slutanvändaren ha ett iTunes-konto för att distribuera Apple Store-appar via företagsportalen?**
 
-        Måste slutanvändaren ha ett iTunes-konto för att distribuera Apple Store-appar via företagsportalen? Ja, slutanvändaren kan inte hämta appar utan ett iTunes-konto.
+        Ja, slutanvändaren kan inte hämta appar utan ett iTunes-konto.
 
-## Kan jag blockera App Store?
+    -   **Kan jag blockera App Store?**
 
--   **Ja, det kan du. Men det blockerar alla appinstallationer och uppdateringar från App Store, inte bara de som initierats av slutanvändaren.**
+        Ja, det kan du. Men det blockerar alla appinstallationer och uppdateringar från App Store, inte bara de som initierats av slutanvändaren. Det innebär att alla offentliga appar från App Store som du distribuerar från Intune också misslyckas.
 
-    Det innebär att alla offentliga appar från App Store som du distribuerar från Intune också misslyckas.
+## Appdistribution
 
--   **Appdistribution**
+-   **Hur lägger jag till en rekommenderad app?**
 
-    Hur lägger jag till en rekommenderad app? I Intune kallas dessa ”aktuella appar” och dokumenteras i [Distribuera appar i Microsoft Intune](/Intune/Deploy-Use/deploy-apps-in-microsoft-intune.md).
+    I Intune kallas dessa ”aktuella appar” och dokumenteras i [Distribuera appar i Microsoft Intune](/Intune/Deploy-Use/deploy-apps-in-microsoft-intune.md).
 
-## Kan jag få ytterligare molnlagring för appar som jag vill distribuera?
+-   **Kan jag få ytterligare molnlagring för appar som jag vill distribuera?**
 
--   **Ja.**
+    Ja. Du kan läsa om detta i [Distribuera appar](/Intune/Deploy-Use/deploy-apps.md) i avsnittet *Krav för molnlagring*.
 
-    Du kan läsa om detta i [Distribuera appar](/Intune/Deploy-Use/deploy-apps.md), i avsnittet *Krav för molnlagring* Säkerhet Kan BitLocker tillämpas av Intune?
+## Säkerhet
 
--   **Med OMA-DM-agenten i Windows 8.1/RT kan du läsa (hämta) krypteringsstatusen.**
+-   **Kan BitLocker tillämpas av Intune?**
 
-    Du kan inte ange den. Detta gäller för Intune och för andra tjänster för hantering av mobila enheter. Kan jag rensa hela enheten om en användare flera gånger i följd misslyckas med att logga in om jag har krypterat en Windows 8-surfplatta med BitLocker?
+    Med OMA-DM-agenten i Windows 8.1/RT kan du läsa (hämta) krypteringsstatusen. Du kan inte ange den. Detta gäller för Intune och för andra tjänster för hantering av mobila enheter.
 
-## Det finns inget alternativ för fullständig rensning på Windows 8.1/RT-enheter för tjänster för hantering av mobila enheter, inklusive Intune.
+-   **Kan jag rensa hela enheten om en användare flera gånger i följd misslyckas med att logga in om jag har krypterat en Windows 8-surfplatta med BitLocker?**
 
--   **Med Intune kan du ta göra en selektiv rensning på dessa enheter.**
+    Det finns inget alternativ för fullständig rensning på Windows 8.1/RT-enheter för tjänster för hantering av mobila enheter, inklusive Intune. Med Intune kan du ta göra en selektiv rensning på dessa enheter. Mer information om rensning/selektiv rensning i Intune finns i [Skydda data och appar med Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md).
 
-    Mer information om rensning/selektiv rensning i Intune finns i [Skydda data och appar med Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md) Företagsportal
+## Företagsportal
 
-## Kan jag anpassa företagsportalen?
+-   **Kan jag anpassa företagsportalen?**
 
--   **Ja.**
+    Ja. Öppna administratörskonsolen i Intune och välj **Admin&gt;Företagsportal** för dessa inställningar.
 
-    Öppna administratörskonsolen i Intune och välj **Admin&gt;Företagsportal** för dessa inställningar. Microsoft Intune med Configuration Manager
+## Microsoft Intune med Configuration Manager
 
 -   **Var hanterar jag mina enheter när jag använder Configuration Manager med Intune?**
 
@@ -307,10 +303,14 @@ Den här artikeln besvarar några vanliga frågor om Intune. Om du inte hittar s
 
 -   **Kan jag göra en selektiv rensning på enheter?**
 
-    Om du använder System Center 2012 R2 Configuration Manager eller senare med Intune kan du göra en selektiv rensning som tar bort företagsdata. Mer information finns i [Skydda data och appar med Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md)
+    Om du använder System Center 2012 R2 Configuration Manager eller senare med Intune kan du göra en selektiv rensning som tar bort företagsdata. Mer information finns i [Skydda data och appar med Microsoft Intune](/intune/Deploy-Use/protect-apps-and-data-with-microsoft-intune.md).
+
+-   **Kan jag fortsätta att använda administrationsportalen i Intune om jag använder Configuration Manager med Intune?**
+
+    Du kan göra det, men du kan bara hantera datorer som har Intune-agenten installerad från den portalen. Det finns även annan användbar information i portalen angående aviseringar om tjänsten, tjänstens status osv., men dessa inställningar för enhetshantering gäller inte för registrerade enheter.
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

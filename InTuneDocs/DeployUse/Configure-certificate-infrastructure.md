@@ -18,7 +18,7 @@ ms.assetid: 3a435650-3891-4754-8abc-4bbac244f33b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: kmyrup
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -94,7 +94,7 @@ I det här steget kommer du att:
 
 -   Skapa ett NDES-tjänstkonto
 
-    > [!NOTE] Om du vill återkalla certifikat behöver NDES-tjänstkontot rättigheter för att *Utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
+    > [!NOTE] Om du vill återkalla certifikat som behöver NDES-tjänstkontot, *utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
 
 -   Konfigurera en certifikatmall för NDES
 
@@ -114,13 +114,13 @@ I det här steget kommer du att:
 
     -   På fliken **Tillägg** kontrollerar du att **beskrivningen av användningsprinciper** omfattar **Klientautentisering**.
 
-        > [!IMPORTANT] För iOS- och Mac OS X-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att alternativet **Signaturen är bevis för ursprung** inte är markerat.
+        > [!IMPORTANT] För iOS- och Mac OS X-certifikatmallar: på fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att alternativet **Signatur är bevis för ursprung** inte är markerat.
 
     -   På fliken **Säkerhet** lägger du till NDES-tjänstekontot och ger det **Registreringsrättigheter** för mallen.
 
 3.  Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock välja att konfigurera certifikatutfärdaren att tillåta att den som begär anger ett annat värde, som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
-    > [!IMPORTANT] På iOS- och Mac OS X-plattformen används alltid det värde som ställts in i mallen, oavsett vilka andra konfigureringar du gör.
+    > [!IMPORTANT] På iOS- och Mac OS X-plattformarna används alltid värdet i mallen, oavsett vilka andra konfigurationer du gör.
 
     Om du vill konfigurera certifikatutfärdaren att tillåta att den som begär anger giltighetsperioden, kör du följande kommandon på certifikatutfärdaren:
 
@@ -132,7 +132,7 @@ I det här steget kommer du att:
 
 4.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatutfärdaren för att publicera certifikatmallen.
 
-    1.  Välj noden **Certifikatmallar**, klicka på **Åtgärd**-&gt; **Ny** &gt; **Certifikatmall som ska utfärdas**, och välj sedan den mall som du skapade i steg 2.
+    1.  Välj noden **Certifikatmallar** klickar du på **Åtgärd**-&gt; **Ny** &gt; **Certifikatmall som ska utfärdas**. Välj sedan den mall du skapade i steg 2.
 
     2.  Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
@@ -158,11 +158,11 @@ I det här steget kommer du att:
 
     2.  När NDES läggs till på servern installerar guiden även IIS. Kontrollera att IIS har följande konfigurationer:
 
-        -   **Webbserver** &gt; **Säkerhet** &gt; **Begärandefiltrering**
+        -   **Webbserver** &gt; **Säkerhet** &gt; **Förfrågningsfiltrering**
 
         -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 3.5**. Om du installerar ASP.NET 3.5 installeras även .NET Framework 3.5. När du installerar .NET Framework 3.5, installera både kärnfunktionen **.NET Framework 3.5** och **HTTP-aktivering**.
 
-        -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 4.5**. Om du installerar ASP.NET 4,5 installeras även .NET Framework 4,5. När du installerar .NET Framework 4.5 installerar du kärnfunktionen **.NET Framework 4.5**, **ASP.NET 4.5** och **WCF Services** &gt; **HTTP-aktivering**.
+        -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 4.5**. Om du installerar ASP.NET 4,5 installeras även .NET Framework 4,5. När du installerar .NET Framework 4.5 installerar du kärnfunktionen **.NET Framework 4.5**, **ASP.NET 4.5** samt **WCF-tjänster** &gt; **HTTP-aktivering**.
 
         -   **Hanteringsverktyg** &gt; **IIS 6-hanteringskompatibilitet** &gt; **IIS 6-metabaskompatibilitet**
 
@@ -232,7 +232,7 @@ I det här steget kommer du att:
 
     3.  För **SSL-certifikat**anger du certifikatet för serverautentiserning.
 
-        > [!NOTE] Om NDES-servern använder både ett externt och ett internt namn för en enda nätverksadress, måste certifikatet för serverautentisering ha ett **Ämnesnam** med ett externt offentligt servernamn och ett **Alternativt ämnesnamn** som innehåller namnet på den interna servern.
+        > [!NOTE] Om NDES-servern använder både ett externt och ett internt namn för en enda nätverksadress, måste certifikatet för serverautentisering ha ett **Ämnesnamn** med ett externt offentligt servernamn och ett **Alternativt ämnesnamn** som innehåller namnet på den interna servern.
 
 2.  På NDES-servern: begär och installera ett certifikat för **klientautentisering** från den interna certifikatutfärdaren eller en offentlig certifikatutfärdare. Detta kan vara samma certifikat som certifikatet för serverautentisering om certifikatet har båda funktioner.
 
@@ -281,7 +281,7 @@ Ladda ner, installera och konfigurera Certifikat connectorn på NDES-servern
 
 ##### Så här laddar du ner, installerar och konfigurerar Certifikat Connectorn
 
-1.  Öppna [Administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Hämta certifikatanslutningspp**.
+1.  Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
 
 2.  När nedladdningen är klar så kör du det nedladdade installationsprogrammet (**ndesconnectorssetup.exe**):
 
@@ -300,7 +300,7 @@ Ladda ner, installera och konfigurera Certifikat connectorn på NDES-servern
 
 4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
 
-    > [!TIP] Om du har stängt guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
+    > [!TIP] Om du stängde guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
     >
     > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -314,7 +314,7 @@ Ladda ner, installera och konfigurera Certifikat connectorn på NDES-servern
 
     Nu kan du stänga användargränssnittet för Certifikat Connectorn.
 
-6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**
+6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**.
 
 Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följande URL, vilket borde returnera ett **403** -fel:
 
@@ -324,6 +324,6 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](configure-intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

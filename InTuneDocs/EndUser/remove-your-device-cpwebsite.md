@@ -18,7 +18,7 @@ ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -36,15 +36,17 @@ Så här tar du bort din enhet:
 
 1.  Öppna [företagsportalens webbplats](http://portal.manage.microsoft.com) och tryck på den enhet vars namn du vill ändra.
 
-2.  Tryck på **Ta bort**
+2.  Tryck på **Ta bort**.
 
     ![remove-device](./media/iwp-1-tap-reset-passcode.png)
 
 Nu har enheten tagits bort.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

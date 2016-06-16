@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Webbläsare som stöds av Microsoft Intune
 
-Innan du konfigurerar Intune går du igenom det här avsnittet och övriga krav som anges i [Vad du behöver veta innan du börjar](what-to-know-before-you-start-microsoft-intune.md).
+Innan du konfigurerar Intune går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar](what-to-know-before-you-start-microsoft-intune.md).
 
 |Intune-funktion |Webbläsare som stöds|
 |---------|---------|
@@ -42,6 +42,6 @@ Innan du konfigurerar Intune går du igenom det här avsnittet och övriga krav 
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

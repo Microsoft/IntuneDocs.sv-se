@@ -18,7 +18,7 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,16 +30,16 @@ Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta ti
 
 1.  Öppna **Inställningar** på enheten och ta bort den anslutning som du tidigare har konfigurerat för e-posten för företag.
 
-    På en iOS-enhet kan du till exempel trycka på **Inställningar** &gt; **E-post, kontakter, kalendrar**. Välj ditt e-postkonto för arbetet och klicka sedan på **Ta bort**
+    På en iOS-enhet kan du till exempel trycka på **Inställningar** &gt; **E-post, Kontakter, Kalendrar**. Välj ditt e-postkonto för arbetet och klicka sedan på **Ta bort**.
 
-2.  Öppna företagsportalappen på din enhet och tryck på **Kontrollera efterlevnad**
+2.  Öppna företagsportalappen på din enhet och tryck på **Kontrollera efterlevnad**.
 
 3.  Vänta en stund så att de nya e-postinställningarna kan börja gälla automatiskt på enheten.
 
-Kontakta IT-administratören om de nya e-postinställningarna inte visas efter ett tag.
+Kontakta IT-administratören om de nya e-postinställningarna inte visas efter ett tag. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

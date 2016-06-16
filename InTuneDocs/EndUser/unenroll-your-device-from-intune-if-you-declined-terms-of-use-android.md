@@ -18,7 +18,7 @@ ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisbal
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,24 +30,25 @@ ms.suite: ems
 
 Det bästa sättet att avregistrera en Android-enhet är att acceptera användningsvillkoren, logga in i företagsportalappen och sedan följa dessa [anvisningar](unenroll-your-device-from-intune-android.md) för att avregistrera enheten. Om du avböjer användningsvillkoren när du försöker logga in i företagsportalappen hindras du från att logga in i företagsportalappen vid framtida försök. Därför måste du följa särskilda anvisningar för att avregistrera enheten.
 
-När du installerar företagsportalappen avregistrerar du också enheten från Intune, vilket innebär att din enhet inte längre har åtkomst till företagets resurser.  Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+När du installerar företagsportalappen avregistrerar du också enheten från Intune, vilket innebär att din enhet inte längre har åtkomst till företagets resurser.  Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Innan du kan avinstallera företagsportalappen måste du välja inställningen **Enhetsadministratörer** och inaktivera **Företagsportalen**. Anvisningarna kan skilja sig en aning beroende på vilken Android-enhet du har.
 
 Avregistrera enheten från Intune och avinstallera företagsportalappen
 
-1.  Gå till **Inställningar** &gt; **Säkerhet &amp; Skärmlås** &gt; **Enhetsadministratörer**
+1.  Gå till **Inställningar** &gt; **Säkerhet &amp; Skärmlås** &gt; **Enhetsadministratörer**.
 
     Om du slutför det här steget avregistreras enheten helt.
 
-2.  Avmarkera kryssrutan bredvid eller inaktivera **Företagsportalen**
+2.  Avmarkera kryssrutan bredvid eller inaktivera **Företagsportalen**.
 
     Nu kan du installera företagsportalappen.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

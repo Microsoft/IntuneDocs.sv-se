@@ -39,12 +39,15 @@ Den här artikeln innehåller några exempel på problem som kan uppstå i samba
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
-## Enhetstaket har nåtts
+## Allmänna registreringsproblem
+Dessa problem kan uppstå på alla enhetsplattformar.
+
+### Enhetstaket har nåtts
 **Problem:** En användare får ett fel på enheten under registreringen, som **Företagsportalen är för tillfället otillgänglig** på en iOS-enhet och DMPdownloader.log på Configuration Manager innehåller felet **DeviceCapReached**.
 
 **Lösning:** På grund av utformningen kan användarna inte registrera fler än fem enheter.
 
-### Kontrollera antalet enheter som har registrerats och som tillåts
+#### Kontrollera antalet enheter som har registrerats och som tillåts
 
 1.  Validera i Intunes administrationsportal att användaren inte har fler än fem enheter tilldelade
 
@@ -54,13 +57,13 @@ Användare av mobila enheter kan ta bort enheter på följande URL: [https://byo
 
 Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
-### Ta bort enheter i Azure Active Directory-portalen
+#### Ta bort enheter i Azure Active Directory-portalen
 
 1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
 
 2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
 
-3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva en kreditkort eller betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
+3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
 
 4.  Välj **Active Directory** och välj sedan din organisation.
 
@@ -78,23 +81,10 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 >
 > Ett användarkonto som läggs till i gruppen Enhetsregistreringshanterare kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
-## Det gick inte att installera profilen
-**Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS- eller Android-enhet.
-
-### Felsökningssteg för misslyckad profilinstallation
-
-1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
-
-2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
-
-3.  För iOS-enhet, gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
-
-4.  Bekräfta att Safari för iOS och Chrome för Android är standardwebbläsare och att cookies har aktiverats.
-
-## Företagsportalen är för tillfället otillgänglig
+### Företagsportalen är för tillfället otillgänglig
 **Problem:** Användaren får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
 
-### Felsökning för felet Företagsportalen är för tillfället otillgänglig
+#### Felsökning för felet Företagsportalen är för tillfället otillgänglig
 
 1.  Ta bort företagsportalappen för Intune från enheten.
 
@@ -106,10 +96,10 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste man manuellt installera företagsportalappen för Intune, och sedan prova igen att registrera sig.
 
-## MDM-auktoritet har inte definierats
+### MDM-auktoritet har inte definierats
 **Problem:** Användaren får felet **MDM-utfärdare har inte definierats**.
 
-### Felsöka MDM-auktoritet har inte definierats
+#### Felsöka MDM-auktoritet har inte definierats
 
 1.  Kontrollera att MDM-auktoriteten har ställts in korrekt för den version av Intune-tjänsten som du använder, det vill säga för Intune, O365 MDM eller System Center Configuration Manager med Intune. För Intune ställs MDM-utfärdaren in under **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i O365 är det en inställning under **Mobila enheter**.
 
@@ -143,26 +133,68 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
         När du har skrivit frågan väljer du **!Kör**.
         När resultatet har returnerats, leta efter molnanvändar-ID:et.  Om det finns något ID är inte användaren licensierad för att använda Intune.
 
-## Mobila enheter försvinner när du använder System Center Configuration Manager med Intune
-**Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
+### Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
+**Problem:** Du kan inte skapa en princip eller registrera enheter.
 
-**Lösning:** Detta kan inträffa eftersom du har en egen process som tar bort enheter som inte är anslutna till en domän eller för att användaren har dragit tillbaka enheten från prenumerationen. Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
+**Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
-### Kontrollera hur enheten har tagits bort
+### Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
+**Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter. 
 
-1.  Gå till administrationskonsolen i Configuration Manager och välj **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
 
-2.  Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
+**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
-3.  Välj lämplig tid/datum eller de senaste 12 timmarna.
+### Datorn har redan registrerats – Fel hr 0x8007064c
+**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
+  
+Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 
-4.  Hitta enheten i fråga och granska hur enheten har tagits bort. Exemplet nedan visar att kontot SCCMInstall tog bort enheten via ett okänt program.
 
-    ![Skärmbild av enhetsborttagningsdiagnostik](./media/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Kontrollera att Configuration Manager inte har någon schemalagd aktivitet, något skript eller någon annan process som automatiskt kan rensa något som inte är anslutet till någon domän, någon, mobil eller andra relaterade enheter.
+**Lösning:** 
 
-## En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
+1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
+1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
+1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
+1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
+1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
+1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
+1. Försök att registrera datorn igen. 
+1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
+1. Försök att registrera datorn igen. 
+
+    > [!IMPORTANT]
+    > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
+    > Mer information om hur du säkerhetskopierar och återställer registret finns i avsnittet [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/kb/322756)
+
+
+## Android-problem
+### Det gick inte att installera profilen
+**Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en Android-enhet.
+
+### Felsökningssteg för misslyckad profilinstallation
+
+1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
+
+2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
+
+
+4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+## iOS-problem
+### Det gick inte att installera profilen
+**Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS-enhet.
+
+### Felsökningssteg för misslyckad profilinstallation
+
+1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
+
+2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
+
+3.  Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
+
+4.  Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
+
+### En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen i Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
 - Du kanske har registrerat Intune Connector för ett konto och sedan för ett annat. 
@@ -191,48 +223,36 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 
 1. Skaffa ett nytt APN-certifikat och ladda upp det: Högerklicka på Intune-prenumerationen i den vänstra rutan i Configuration Manager. Välj **Skapa APNs-certifikatförfrågan** och följ instruktionerna.
+## Problem när du använder System Center Configuration Manager med Intune
+### Mobila enheter försvinner 
+**Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
 
+**Lösning:** Detta kan inträffa eftersom du har en egen process som tar bort enheter som inte är anslutna till en domän eller för att användaren har dragit tillbaka enheten från prenumerationen. Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
 
-## Datorn har redan registrerats – Fel hr 0x8007064c
-**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
-  
-Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
+#### Kontrollera hur enheten har tagits bort
 
+1.  I administrationskonsolen i Configuration Manager väljer du **Övervakning** &gt; **Systemstatus** &gt; **Statusmeddelandefrågor**.
 
+2.  Högerklicka på **Medlemsresurser för samlingar som togs bort manuellt** och välj **Visa meddelanden**.
 
-**Lösning:** 
+3.  Välj lämplig tid/datum eller de senaste 12 timmarna.
 
-1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
-1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
-1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
-1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
-1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
-1. Ta bort följande registernyckel om den finns: ** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
-1. Försök att registrera datorn igen. 
-1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Försök att registrera datorn igen. 
+4.  Hitta enheten i fråga och granska hur enheten har tagits bort. Exemplet nedan visar att kontot SCCMInstall tog bort enheten via ett okänt program.
 
-    > [!IMPORTANT]
-    > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
-    > Mer information om hur du säkerhetskopierar och återställer registret finns i avsnittet [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/kb/322756)
+    ![Skärmbild av enhetsborttagningsdiagnostik](./media/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-## Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
-**Problem:** Du kan inte skapa en princip eller registrera enheter.
-
-**Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
-
-## Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
-**Problem:** När du lägger till en andra verifierad domän i AD FS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter. 
-
-
-**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+5.  Kontrollera att Configuration Manager inte har någon schemalagd aktivitet, något skript eller någon annan process som automatiskt kan rensa något som inte är anslutet till någon domän, någon, mobil eller andra relaterade enheter.
 
 
 
-## Felkoder
+
+### Övriga iOS-registreringsfel
+En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
+
+## Felkoder för allmänna registreringsfel
 
 |Felkod|Möjligt problem|Föreslagen lösning|
-|--------------|--------------------|------------------------|
+|--------------|--------------------|----------------------------------------|
 |0x80CF0437 |Klockan på klientdatorn är inte inställd på rätt tid.|Kontrollera att klockan och tidszonen på klientdatorn är inställda på rätt tid och tidszon.
 |
 |0x80240438, 0x80CF0438, 0x80CF402C|Det går inte att ansluta till Intune-tjänsten. Kontrollera klientens proxyinställningar.|Kontrollera att proxykonfigurationen på klientdatorn stöds av Intune och att klientdatorn har Internetanslutning.|
@@ -252,13 +272,12 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 |0x80cf0440|Anslutningen till tjänstslutpunkten avbröts.|Utvärderings- eller betalkontot har inaktiverats tillfälligt. Skapa ett nytt utvärderings- eller betalkonto och registrera dig igen.|
 
 
-## Fel vid iOS-registrering
-En lista med övriga fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
+
 
 ### Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

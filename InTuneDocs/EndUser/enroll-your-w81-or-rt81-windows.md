@@ -18,7 +18,7 @@ ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,51 +28,52 @@ ms.suite: ems
 
 # Registrera din Windows 8.1- eller Windows RT 8.1-enhet i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
-och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Registrera din Windows 8.1- eller Windows RT 8.1-enhet:
 
-1.  Registrera din Windows 8.1- eller Windows RT 8.1-enhet:
+1.  Tryck på **Inställningar** &gt; **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats** på enheten.
 
-    ![Tryck på **Inställningar** &gt; **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats** på enheten](./media/W81-1-workplacejoin.png)
+    ![nav-to-workplace](./media/W81-1-workplacejoin.png)
 
-2.  nav-to-workplace
+2.  Ange den e-postadress för arbetet eller skolan som hör ihop med ditt användar-ID, om så krävs, och tryck sedan på **Delta**.
 
-    Ange den e-postadress för arbetet eller skolan som hör ihop med ditt användar-ID, om så krävs, och tryck sedan på **Delta**
+    Om ditt användar-ID inte krävs, används den e-postadress som du angav när du loggade in på enheten.
 
-3.  Om ditt användar-ID inte krävs, används den e-postadress som du angav när du loggade in på enheten.
+3.  Ange lösenordet för ditt arbetes eller skolkontos e-postadress.
 
-    ![Ange lösenordet för ditt arbetes eller skolkontos e-postadress.](./media/W81-2-workplacesettings_signin.png)
+    ![type-password](./media/W81-2-workplacesettings_signin.png)
 
-4.  type-password
+4.  Tryck på **Aktivera** under **Aktivera enhetshantering**.
 
-    ![Tryck på **Aktivera** under **Aktivera enhetshantering**](./media/W81-3-dev-mgt-turn-on.png)
+    ![turn-on-device-management](./media/W81-3-dev-mgt-turn-on.png)
 
-5.  turn-on-device-management
+5.  I dialogrutan **Tillåt appar och tjänster från IT-administratören** markerar du rutan **Jag accepterar** och trycker sedan på **Aktivera**.
 
-    ![I dialogrutan **Tillåt appar och tjänster från IT-administratören** markerar du rutan **Jag accepterar** och trycker sedan på **Aktivera**](./media/W81-4-agree-allow-apps-services.png)
+    ![turn-on-allow-apps-services](./media/W81-4-agree-allow-apps-services.png)
 
-    turn-on-allow-apps-services
+    När du har registrerats, visas följande skärm.
 
-    ![När du har registrerats, visas följande skärm.](./media/W81-5-enrolled-done.png)
+    ![enrollment-complete](./media/W81-5-enrolled-done.png)
 
-enrollment-complete Vi rekommenderar också att du installerar appen Företagsportalen som gör att du lätt kan identifiera och ladda ner de företagsappar som är relevanta för dig och din arbetsroll. Företagsportalen kan ha installerats som en del i din registrering, beroende på hur ditt företag har konfigurerat Intune. Du kan kontrollera att du har appen genom att se om **Företagsportalen** finns i din applista.
+Vi rekommenderar också att du installerar appen Företagsportalen som gör att du lätt kan identifiera och ladda ner de företagsappar som är relevanta för dig och din arbetsroll. Företagsportalen kan ha installerats som en del i din registrering, beroende på hur ditt företag har konfigurerat Intune. Du kan kontrollera att du har appen genom att se om **Företagsportalen** finns i din applista. Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
 
-1.  Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
+1.  Tryck på **Start** &gt; **Store**.
 
-2.  Tryck på **Starta** &gt; **Store**
+2.  Tryck på **Sök** och skriv in **Företagsportalen**.
 
-3.  Tryck på **Sök** och skriv in **företagsportal**
+3.  Tryck på **Företagsportalen** i resultatlistan.
 
-4.  Tryck på **Företagsportalen** i listan med resultat Tryck på antingen **Installera** eller på **Ledigt**.
+4.  Tryck på antingen **Installera** eller på **Ledigt**. Vilket alternativ som visas beror på hur ditt företag har konfigurerat appen.
+
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+### Se även
+[Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)</br>
+[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-### Vilket alternativ som visas beror på hur ditt företag har konfigurerat appen.
-[Se även](enroll-your-device-in-intune-windows.md)</br>
-[Registrera din Windows-enhet i Intune](using-your-windows-device-with-intune.md)
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

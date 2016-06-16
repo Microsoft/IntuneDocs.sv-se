@@ -18,7 +18,7 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -31,7 +31,7 @@ Använd principinställningarna som anges i det här avsnittet om du vill konfig
 
 ## Generella inställningar för konfigurationsprinciper
 
-Använd **den allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter:
+Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter:
 
 
 ### Lösenord
@@ -220,7 +220,7 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 |**WiFi/AllowWiFi**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/WiFi/AllowWiFi<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – **Tillåt inte Wi-Fi-anslutning**.<br>**1** –**Tillåt användning av Wi-Fi-anslutning** (standard)|
 |**WiFi/AllowInternetSharing**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/WiFi/AllowInternetSharing<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Tillåt inte internet delning.<br>**1** – Tillåt internetdelning (standard)|
 |**WiFi/AllowAutoConnectToWiFiSenseHotspots**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/WiFi/AllowAutoConnectToWiFiSenseHotspots<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
-|**WiFi/AllowManualWiFiConfiguration**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/WiFi/AllowManualWiFiConfiguration<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Ingen Wi-Fi-anslutning utanför etablerad MDM är tillåtet.<br>**1** – Lägger till nya SSID:er för nätverket utöver de som MDM som redan har tillhandahållit när detta tillåts (standard)|
+|**WiFi/AllowManualWiFiConfiguration**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/WiFi/AllowManualWiFiConfiguration<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Ingen Wi-Fi-anslutning utanför etablerad MDM är tillåtet.<br>**1** – Att lägga till nya SSID:er för nätverket utöver de som MDM redan har tillhandahållit tillåts (standard)|
 |**System/AllowLocation**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/System/AllowLocation<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
 |**System/AllowTelemetry**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/System/AllowTelemetry<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inte tillåten (endast Enterprise inställningar)<br>**1** – Begränsad<br>**2** – Fullständig (standard)<br>**3** – Fullständig information och diagnostikinformation|
 |**System/AllowExperimentation**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/System/AllowExperimentation<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inte tillåten<br>**1** – Endast inställningar (standard)<br>**2** – Inställningar och experiment|
@@ -257,7 +257,7 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 |**TextInput/AllowJapaneseIVSCharacters**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/AllowJapaneseIVSCharacters<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
 |**TextInput/AllowJapaneseUserDictionary**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/AllowJapaneseUserDictionary<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
 |**TextInput/AllowJapaneseIMESurrogatePairCharacters**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/AllowJapaneseIMESurrogatePairCharacters<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
-|**TextInput/ExcludeJapaneseIMEExceptShiftJIS**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/ExcludeJapaneseIMEExceptShiftJIS<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Tecken filtreras inte (standard)<br>**1** – Alla tecken utom JIS-skifttecken filtreras|
+|**TextInput/ExcludeJapaneseIMEExceptShiftJIS**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/ExcludeJapaneseIMEExceptShiftJIS<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inga tecken filtreras (standard)<br>**1** – Alla tecken utom JIS-skifttecken filtreras|
 |**TextInput/ExcludeJapaneseIMEExceptJIS0208**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/ExcludeJapaneseIMEExceptJIS0208<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br /><br />**0** – Inga tecken filtreras (standard)<br>**1** – Alla tecken utom JIS0208-tecken filtreras|
 |**TextInput/ExcludeJapaneseIMEExceptJIS0208andEUDC**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/ExcludeJapaneseIMEExceptJIS0208andEUDC<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inga tecken filtreras (standard)<br>**1** – Alla tecken utom JIS0208-tecken och EUDC-tecken filtreras|
 |**TextInput/AllowInputPanel**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/TextInput/AllowInputPanel<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
@@ -276,7 +276,7 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 |**Experience/AllowCortana**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Experience/AllowCortana<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
 |**Search/SafeSearchPermissions**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Search/SafeSearchPermissions<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Strikt, högsta filtrering mot vuxet innehåll<br>**1** – Måttlig, måttlig filtrering mot vuxet innehåll (giltiga sökresultat filtreras inte – standard)|
 |**Experience/AllowCopyPaste**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Experience/AllowCopyPaste<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – inte tillåten<br>**1** – tillåtet (standard)|
-|**Forcerad startstorlek**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Start/ForceStartSize<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Tillåt användaren att ändra storlek (standard)<br>**1** – Framtvinga skärm som inte är helskärm<br>**2** – Framtvinga helskärm|
+|**Forcerad startstorlek**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Start/ForceStartSize<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – tillåt användaren att ändra storlek (standard)<br>**1** – Framtvinga skärm som inte är helskärm<br>**2** – Framtvinga helskärm|
 |**Update/RequireDeferUpgrade**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Update/RequireDeferUpgrade<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: skjut inte upp uppgradering (stanna i aktuell gren, CB – standard)<br>**1**: Aktivera uppdateringar och uppgraderingar som ska skjutas upp (enheten följer aktuell företagsgren, CBB, regler)<br /><br />Mer information finns i:<br>[Introduktion till Windows 10-installation](https://technet.microsoft.com/library/mt598226.aspx)<br>[Planera för distribution av Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
 |**Update/DeferUpdatePeriod**<br>(stationär dator och mobil)|**Beskrivning:** Princip för att skjuta upp programuppdateringar i upp till fyra veckor<br /><br />**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Update/DeferUpdatePeriod<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br> **0**: Tillämpa uppdateringar direkt (standard)<br>**1**-**4**: antal veckor som programvaruuppdateringarna ska skjutas upp.<br /><br />Mer information finns i:<br>[Introduktion till Windows 10-installation](https://technet.microsoft.com/library/mt598226.aspx)<br>[Planera för distribution av Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
 |**Update/DeferUpgradePeriod**<br>(stationär dator och mobil)|**Beskrivning:** Princip för att skjuta upp funktionsuppgraderingar i upp till åtta månader<br /><br />**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Update/DeferUpgradePeriod<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: Tillämpa uppdateringar direkt (standard)<br>**1**-**8**: antal månader som funktionsuppgraderingar ska skjutas upp.<br /><br />Mer information finns i:<br>[Introduktion till Windows 10-installation](https://technet.microsoft.com/library/mt598226.aspx)<br>[Planera för distribution av Windows 10](https://technet.microsoft.com/library/mt574241.aspx)|
@@ -323,7 +323,7 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 |**Konfigurera SmartScreen**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowSmartScreen<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Tillåt inte<br>**1** – Tillåt (standard)|
 |**Tillåt popup-fönster**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowPopups<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Blockera popup-fönster (standard)<br>**1** – Tillåt popup-fönster|
 |**Tillåt cookies**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowCookies<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Blockera inte. Tillåt cookies från alla webbplatser (standard)<br>**1** – Blockera endast cookies från tredje part<br>**2** – Blockera alla cookies|
-|**Tillåt att spara lösenord**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowPasswordManager<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Lösenordshanteraren är inaktiverad <br>**1** – Lösenordshanteraren är aktiverad (standard)|
+|**Tillåt att spara lösenord**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowPasswordManager<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Lösenordshanteraren är inaktiverad; <br>**1** – Lösenordshanteraren är aktiverad (standard)|
 |**Tillåt autofyll**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowAutofill<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inaktiverad (standard)<br>**1** – Aktiverad|
 |**Konfigurera företagswebbplatslista**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/EnterpriseModeSiteList<br /><br />**Datatyp:** Sträng<br /><br />**Tillåtna värden:<br>0** – Inte konfigurerat<br>**1** – Använd Internet Explorers webbplatslista för företagsläge om den är konfigurerad (standard)<br>**2** – Ange plats för företagswebbplatslista|
 
@@ -332,6 +332,6 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

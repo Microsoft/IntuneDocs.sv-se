@@ -28,7 +28,7 @@ ms.suite: ems
 # Dags att registrera enheter i Microsoft Intune
 Om du vill låta medarbetarna registrera mobila enheter (däribland [Android](set-up-android-management-with-microsoft-intune.md), [iOS and Mac](set-up-ios-and-mac-management-with-microsoft-intune.md), [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) och [Windows PC](set-up-windows-device-management-with-microsoft-intune.md)) med Intune måste du aktivera registrering av enheter. Om du vill tillåta registrering måste du ange en utfärdare för hantering av mobila enheter, konfigurera Intunes företagsportal, tilldela licenser och aktivera registrering för enhetsplattformen.
 
-## <a name="BKMK_Set_MDM_Authority"></a>Ange auktoritet för hantering av mobila enheter
+## Ange auktoritet för hantering av mobila enheter
 Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativ för MDM-utfärdare kan vara själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
 
 >[!IMPORTANT]
@@ -45,11 +45,17 @@ Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst so
 3.  Intune begär bekräftelse på att du vill ha Intune som MDM-utfärdare. Markera kryssrutan och klicka sedan på **Ja** om du vill använda Microsoft Intune för att hantera mobila enheter.
 
 ## Konfigurera Intune-företagsportalen
+
+Intune-företagsportalen är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen.
+
+> [!TIP] När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.
+
 Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Om du vill göra det loggar du bara in på [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) som klient eller tjänstadministratör, väljer **Admin** &gt; **Företagsportal** och konfigurerar inställningarna för företagsportalen.
 
-![admin-console-admin-workspace-comp-portal-settings](../media/cp_setup.png)
+![admin-console-admin-workspace-comp-portal-settings](../media/cp_sa_cpsetup.PNG)
 
 #### Företagets kontaktinformation och sekretesspolicy
+
 Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och informationen visas för användarna på skärmen Kontakta IT på företagsportalen. Sekretesspolicyn visas när användaren klickar på sekretesslänken.
 
 |Fältnamn|Högsta längd|Mer information|
@@ -69,7 +75,9 @@ Supportwebbplatsen visas för användarna på företagsportalen så att de kan f
     |URL till supportwebbplatsen|150|Om du har en supportwebbplats som du vill att slutanvändarna ska använda, anger du webbadressen här. URL:en måste ha formatet https://www.contoso.com. Om du inte anger någon webbadress kommer inget att visas på sidan **Kontakta IT** på företagsportalen.|
     |Namn på webbplats|40|Det här är det egna namnet som visas för supportwebbplatsens URL. Om du bara anger URL:en till en supportwebbplats utan något eget namn visas **Gå till IT-webbplatsen** på sidan **Kontakta IT** på företagsportalen.|
 
-## Varumärkesanpassning
+
+#### Varumärkesanpassning
+
 Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund.
 
 |Fältnamn|Mer information|
@@ -81,13 +89,11 @@ Du kan anpassa företagsportalen med företagets logotyp, företagets namn, tema
 
 När du har sparat ändringarna kan du använda länkarna längst ned på sidan **Företagsportal** i administrationskonsolen för att gå till företagsportalen. Dessa länkar kan inte ändras. När en användare loggar in visar dessa länkar dina prenumerationer på företagsportalen.
 
-
-
 ## Tilldela en Intune-användarlicens
 
-Du använder **[!INCLUDE[wit_icp_2](../includes/wit_icp_2_md.md)]** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
+Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
 
-1.  Logga in till [Intune-kontoportalen](https://portal.office.com/Admin/Default.aspx) med dina klientadministratörsuppgifter.
+1.  Logga in på [hanteringsportalen för Office 365](https://portal.office.com/Admin/Default.aspx) med dina klientadministratörsuppgifter.
 
 2.  Välj det användarkonto som du vill tilldela Intune-användarlicensen till och aktivera kryssrutan **Microsoft Intune** i egenskaperna för användarkontot.
 

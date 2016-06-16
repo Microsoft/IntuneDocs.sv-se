@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 8bb47a5c-f66d-491b-b909-e6a8844f773a
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,13 +26,13 @@ ms.suite: ems
 ---
 
 
-# Återställ (radera) en enhet som förlorats eller stulits
+# Återställa (radera) en enhet som förlorats eller stulits
 
 Om du tappar bort din Android-telefon eller om den blir stulen kan du återställa den till fabriksinställningarna från företagsportalappen eller -webbplatsen. Följ stegen nedan eller titta på det här [videoklippet](http://aka.ms/ly1x17) som beskriver hur du använder företagsportalappen. Du kan även [återställa enheten via företagsportalens webbplats](reset-your-device-cpwebsite.md).
 
 Läs mer om vad som händer när du återställer en enhet i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
 
-> [!WARNING] När du återställer en enhet till standardinställningarna tas information från både ditt privatliv och ditt arbete bort från den.
+> [!WARNING] När du återställer en enhet till standardinställningarna tas både privat och arbetsrelaterad information bort från den.
 
 1.  Öppna [företagsportalen](http://portal.manage.microsoft.com) i webbläsaren och logga in på ditt arbetskonto.
 
@@ -40,13 +40,13 @@ Läs mer om vad som händer när du återställer en enhet i [Vad händer om du 
 
 3.  Klicka på **Återställ** &gt; **Återställ**.
 
-Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig.
+Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

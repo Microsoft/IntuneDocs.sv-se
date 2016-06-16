@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/05/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 9081b1d8-50e8-4bc2-ba37-766421364213
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,7 +33,7 @@ Om din Android-enhet inte har registrerats i Intune och den saknar ett certifika
 
 Lösa problemet och hämta certifikatet som krävs:
 
-1.  I en webbläsare navigerar du till denna [Digicert-certifikatsida](https://www.digicert.com/digicert-root-certificates.htm)
+1.  I en webbläsare navigerar du till den här [Digicert-certifikatsidan](https://www.digicert.com/digicert-root-certificates.htm).
 
 2.  Sök efter och ladda ned Baltimore CyberTrust-rotcertifikatet (https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt).
 
@@ -41,7 +41,7 @@ Lösa problemet och hämta certifikatet som krävs:
 
 4.  I dialogrutan **Namnge certifikatet** godkänner du standardcertifikatnamnet.
 
-5. Kontrollera att **Användning av användaruppgifter** är inställt på **Används för VPN och appar** och tryck sedan på **OK**
+5. Kontrollera att **Autentiseringsuppgift** är inställt på **Används för VPN och appar** och tryck sedan på **OK**.
 
     ![andr-cert-install-add-cert-name](./media/andr-cert_install-2-add_cert_name.png)
 
@@ -49,6 +49,8 @@ Lösa problemet och hämta certifikatet som krävs:
 
 7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta IT-administratören om du behöver hjälp.
 
-<!--HONumber=May16_HO2-->
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+<!--HONumber=Jun16_HO1-->
 
 

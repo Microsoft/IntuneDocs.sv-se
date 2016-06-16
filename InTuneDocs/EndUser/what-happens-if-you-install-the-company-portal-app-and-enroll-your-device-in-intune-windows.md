@@ -18,7 +18,7 @@ ms.assetid: d65e3452-5bbf-4d26-a06e-401ddcc47f39
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -41,7 +41,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 När du lägger till en dator:
 
@@ -70,7 +70,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 När du lägger till en Windows Phone-enhet ger du IT-administratören tillstånd att hantera enheten. IT-administratören kan exempelvis:
 
@@ -107,7 +107,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställ din telefon till fabriksinställningar om den tappas bort eller blir stulen
 
-Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 När du lägger till en dator:
 
@@ -124,6 +124,8 @@ När du lägger till en dator:
 -   IT-administratören kan installera appar och uppdateringar på datorn.
 
 -   IT-administratören kan genomdriva principer på datorn. Du kan till exempel bli ombedd att ange ett lösenord eller en PIN-kod för datorn, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också försvinner all information från hårddisken.
+
+Om du har frågor och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)

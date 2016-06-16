@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/30/2016
 ms.topic: article
 ms.prod:
 ms.service:
@@ -19,7 +19,7 @@ ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -32,7 +32,7 @@ Om din version av företagsportalen inte längre stöds eller om det finns en ny
 
 ## Så här uppdaterar du en Android-enhet
 
-Play Store varnar när en ny version av företagsportalen blir tillgänglig. Det visas inget meddelande i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
+Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Det visas inget meddelande i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
 
 ## Uppdatera din iOS-enhet
 
@@ -46,6 +46,9 @@ Apple AppStore aviserar när en ny version av företagsportalen är tillgänglig
 
     > [!NOTE] Kontakta IT-administratören om du inte kan komma åt Windows Store.
 
+
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 Information om andra uppgifter som du kan utföra med din enhet får du via den länk som matchar den typ av enhet som du har:
 
 - [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)</br>
@@ -54,6 +57,6 @@ Information om andra uppgifter som du kan utföra med din enhet får du via den 
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

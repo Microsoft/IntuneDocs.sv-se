@@ -34,6 +34,8 @@ Använd dessa länkar och information för att:
 - Förstå de steg som användarna följer för att utföra olika uppgifter i Intune.
 - Ge informationen till användarna för att hjälpa dem att utföra uppgifter och lösa problem när de använder Intune.
 
+Se till att du inkluderar kontaktuppgifter till IT-administratören när du [anpassar företagsportalen](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7) så att användarna kan få hjälp om det behövs.
+
 
 ## Var slutanvändarna kan hitta information om vanliga uppgifter
 
@@ -61,9 +63,9 @@ Välj bland följande enhetsplattformsalternativ för att förstå hur dina slut
 
 ## Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
-För att hjälpa användarna att lösa problem som kan uppstå när de använder företagsportalen kan du läsa [meddelanden som kan visas för användarna på företagsportalen](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages)
+För att hjälpa användarna att lösa problem som kan uppstå när de använder företagsportalen kan du läsa [meddelanden som kan visas för användarna på företagsportalen](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

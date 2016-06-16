@@ -18,7 +18,7 @@ ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,15 +34,17 @@ Så här byter du namn på din enhet:
 
 1.  Öppna [företagsportalens webbplats](http://portal.manage.microsoft.com) och tryck på den enhet vars namn du vill ändra.
 
-2.  Tryck på **Byt namn**
+2.  Tryck på **Byt namn**.
 
     ![rename-device](./media/iwp-1-tap-reset-passcode.png)
 
 3.  Skriv det nya namnet för enheten i rutan där det nuvarande enhetsnamnen visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

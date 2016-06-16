@@ -18,7 +18,7 @@ ms.assetid: 0f7dc155-cb8e-477b-ba02-2623194a9575
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: pbala
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,10 +33,10 @@ Som IT-administratör vill du övervaka status för enheter i din organisation. 
 
 -   **[Aviseringar](get-notified-by-microsoft-intune-alerts.md)** hjälper dig att övervaka hälsotillståndet hos enheter som hanteras av Intune (bland annat status och varningar för Endpoint Protection, varningar om skadlig kod, nätverksanslutningar och om diskutrymmet börjar ta slut).
 
--   Enheter och datorer som hanteras av Intune returnerar detaljerad information om deras egenskaper och installerad programvara.  Intune ger dig verktyg och rapporter för att undersöka och presentera informationen. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md)
+-   Enheter och datorer som hanteras av Intune returnerar detaljerad information om deras egenskaper och installerad programvara.  Intune ger dig verktyg och rapporter för att undersöka och presentera informationen. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

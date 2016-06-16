@@ -18,7 +18,7 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -42,8 +42,8 @@ Det här avsnittet innehåller information om installationen av Intune-företags
 Det här avsnittet innehåller information om åtgärder som du kan vidta när din Windows-enhet har registrerats i Intune.
 
 - [Kryptera din enhet](encrypt-your-device-windows.md)</br>
-- [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)</br>
-- [Återställ (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-windows.md)</br>
+- [Ange eller ändra ditt lösenord](set-or-change-your-password-windows.md)</br>
+- [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-windows.md)</br>
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-windows.md)</br>
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)</br>
 - [Vad händer om du återställer en enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)</br>
@@ -64,6 +64,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

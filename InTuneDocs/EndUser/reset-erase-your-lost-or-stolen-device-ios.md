@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 70788dca-765f-47a7-9994-a286f8a88588
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Återställ (radera) en enhet som förlorats eller stulits
+# Återställa (radera) en enhet som förlorats eller stulits
 
 Om en telefon som har registrerats i Intune är borttappad eller om den har blivit stulen kan du återställa den till fabriksinställningarna via företagsportalappen från en annan enhet eller via [företagsportalwebbplatsen](http://portal.manage.microsoft.com).
 
@@ -44,11 +44,12 @@ Använd följande instruktioner om du vill återställa enheten med företagspor
 1.  Gå till [företagsportalwebbplatsen](http://portal.manage.microsoft.com) och välj den enhet som du vill radera.
 
 2.  Tryck på **Återställ** &gt; **Återställ**.
-> [!NOTE] Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör att återställa den åt dig.
+> [!NOTE]
+> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

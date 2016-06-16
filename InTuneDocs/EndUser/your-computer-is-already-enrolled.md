@@ -18,7 +18,7 @@ ms.assetid: 8d3a40f5-99e9-48dc-9706-f7a3a23e5704
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Din dator är redan registrerad.
 
-Om ett felmeddelande om att datorn har redan registrerats visas, innebär det att datorn redan har lagts till i företagsportalen, men inte har länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.
+Om ett felmeddelande om att datorn redan har registrerats visas, innebär det att datorn redan har lagts till i företagsportalen, men inte länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.
 
 Så här länkar du datorn:
 
@@ -38,8 +38,8 @@ Så här länkar du datorn:
 
 3.  Följ anvisningarna om hur du länkar datorn till ditt användarkonto.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

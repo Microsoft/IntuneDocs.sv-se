@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Microsoft Intune-företagsportal
 
-Innan du konfigurerar [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
+Innan du konfigurerar Intune läser du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Intune-företagsportalen är ett verktyg som ger användarna åtkomst till företagsdata och -appar. Företagsportalen finns tillgänglig på två sätt:
 
@@ -58,6 +58,6 @@ Innan användarna får åtkomst till företagsportalen måste deras konto bevilj
 [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

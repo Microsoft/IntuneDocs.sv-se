@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 58f2a207-88cf-446c-ac9f-ad10a124e4e2
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,11 +27,12 @@ ms.suite: ems
 
 # Enheten är inte kompatibel med den senaste versionen av operativsystemet
 
-Android-enheten är inte kompatibel med IT-administratörens princip för högsta operativsystemversion. Kontakta IT-administratören för hjälp.
+Android-enheten är inte kompatibel med IT-administratörens princip för högsta operativsystemversion. Kontakta IT-administratören om du behöver hjälp. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

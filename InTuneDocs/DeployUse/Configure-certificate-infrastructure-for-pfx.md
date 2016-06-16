@@ -16,7 +16,7 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: 
+ms.reviewer: vinaybha
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -87,7 +87,7 @@ I det här steget kommer du att publicera certifikatmallen
 
 3.  Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock välja att konfigurera certifikatutfärdaren att tillåta att den som begär anger ett annat värde, som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
-    > [!IMPORTANT] På iOS- och Mac OS X-plattformen används alltid det värde som ställts in i mallen, oavsett vilka andra konfigureringar du gör.
+    > [!IMPORTANT] På iOS- och Mac OS X-plattformarna används alltid det värde som ställts in i mallen, oavsett vilka andra konfigurationer du gör.
 
     Om du vill konfigurera certifikatutfärdaren att tillåta att den som begär anger giltighetsperioden, kör du följande kommandon på certifikatutfärdaren:
 
@@ -103,12 +103,12 @@ I det här steget kommer du att publicera certifikatmallen
 
     2.  Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
-5.  På certifikatutfärdardatorn se du till att den dator som har Intunes certifikatanslutningsapp har registreringsrättigheter, så att den kommer åt de mall som användes för att skapa .PFX-profilen. Ställ in behörighet på **säkerhetsfliken** i datoregenskaper för Certifikatutfärdar-datorn.
+5.  På certifikatutfärdardatorn se du till att den dator som har Intunes certifikatanslutningsapp har registreringsrättigheter, så att den kommer åt den mall som användes för att skapa .PFX-profilen. Ställ in behörighet på **säkerhetsfliken** i datoregenskaper för Certifikatutfärdar-datorn.
 
-### Uppgift 4 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
+### Uppgift 2 – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen
 I det här steget kommer du att:
 
-Så här gör du om du vill hämta, installera och konfigurera Certificate Connector
+Hämta, installera och konfigurera certifikatanslutningsappen
 
 ##### Så här aktiverar du stöd för Certifikat Connectorn
 
@@ -120,7 +120,7 @@ Så här gör du om du vill hämta, installera och konfigurera Certificate Conne
 
 ##### Så här laddar du ner, installerar och konfigurerar Certifikat Connectorn
 
-1.  Öppna [Administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Hämta certifikatanslutningspp**.
+1.  Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
 
 2.  När nedladdningen är klar så kör du det nedladdade installationsprogrammet (**ndesconnectorssetup.exe**):
 
@@ -134,7 +134,7 @@ Så här gör du om du vill hämta, installera och konfigurera Certificate Conne
 
 4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
 
-    > [!TIP] Om du har stängt guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
+    > [!TIP] Om du stängde guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
     >
     > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -148,7 +148,7 @@ Så här gör du om du vill hämta, installera och konfigurera Certificate Conne
 
     Nu kan du stänga användargränssnittet för Certifikat Connectorn.
 
-6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**
+6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**.
 
 Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följande URL, vilket borde returnera ett **403** -fel:
 
@@ -158,6 +158,6 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

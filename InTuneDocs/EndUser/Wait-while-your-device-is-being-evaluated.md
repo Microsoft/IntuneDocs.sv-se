@@ -18,7 +18,7 @@ ms.assetid: 01247881-452c-4da8-93ca-66b5e65c5317
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre 
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,8 +28,10 @@ ms.suite: ems
 # Vänta medan enheten utvärderas
 Enhetens kompatibilitet utvärderas fortfarande. Vänta några minuter tills kompatibilitetskontrollen är klar.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO1-->
 
 

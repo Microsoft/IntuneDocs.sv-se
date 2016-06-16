@@ -18,7 +18,7 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -48,19 +48,20 @@ Intune har stöd för att skapa VPN-profiler som använder följande anslutnings
 
 
 
-Anslutningstyp |iOS och Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1  |Windows 10 Desktop och Mobile |
-----------------|------------------|-------|-----------|----------|--------------|-----------------|------------|
+Anslutningstyp |iOS och Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop och Mobile |
+----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Ja |Ja   |Nej    |     Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
 Pulse Secure|Ja  |Ja |Ja   |Nej  |Ja  |Ja| Ja|        
 F5 Edge Client|Ja |Ja |Ja |Nej  |Ja  |   Ja |  Ja|   
 Dell SonicWALL Mobile Connect|Ja |Ja |Ja |Nej  |Ja |Ja |Ja|         
 Kontrollpunkt för mobilt VPN:|Ja |Ja |Ja |Ja |Ja|Ja|Ja|
-Microsoft SSL (SSTP)|Nej |Nej |Nej |Nej |Nej|Nej|Nej|
-Microsoft Automatic|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
-IKEv2|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
-PPTP|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
-L2TP|Nej |Nej |Nej |Nej |Nej|Nej|Ja|
+Microsoft SSL (SSTP)|Nej |Nej |Nej |Nej |Nej|Nej|VPNv1 OMA-URI*|
+Microsoft Automatic|Nej |Nej |Nej |Nej |Nej|Ja (OMA-URI)|Ja|
+IKEv2|Anpassad profil för iOS|Nej |Nej |Nej |Nej|Ja (OMA-URI)|Ja|
+PPTP|Anpassad profil för iOS|Nej |Nej |Nej |Nej|Nej|Ja|
+L2TP|Anpassad profil för iOS|Nej |Nej |Nej |Nej|Ja (OMA-URI)|Ja|
 
+\* Utan ytterligare inställningar som är tillgängliga för Windows 10 på annat sätt.
 
 > [!IMPORTANT] Innan du kan använda de VPN-profiler som har distribuerats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md) när du ska distribuera appar med hjälp av Intune.  
 
@@ -146,7 +147,7 @@ Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principe
 
 ## Distribuera principen
 
-1.  På arbetsytan **Princip** markerar den princip som du vill distribuera och väljer sedan **Hantera distribution**.
+1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
@@ -164,6 +165,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 [Per app-VPN för Android Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO2-->
 
 

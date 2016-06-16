@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Hitta en paketfamiljenamn (PFN) för per app-VPN | Microsoft Intune|
+title: Hitta ett paketfamiljenamn (PFN) för per app-VPN | Microsoft Intune|
 description:
 keywords:
 author: nbigman
@@ -18,16 +18,16 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: tycast
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Hitta ett produktfamiljenamn (PFN) per app-VPN-konfiguration
+# Hitta ett produktfamiljenamn (PFN) för per app-VPN-konfiguration
 
-Det finns två sätt att hitta en PFN så att du kan konfigurera en per app-VPN.
+Det finns två sätt att hitta ett PFN så att du kan konfigurera en per app-VPN.
 
 ## Hitta ett PFN för en app som är installerad på en Windows 10-dator 
 
@@ -91,6 +91,6 @@ Den information du vill visa visas i Edge; i Internet Explorer klickar du på **
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -50,7 +50,7 @@ Använda Fjärrlås för att låsa enheten:
 
     När du trycker på **Fjärrlås** visas statusen ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
 
-    Status för fjärrlåsningens status visas på tre platser:
+    Fjärrlåsningens status visas på tre platser:
 
     * Meddelandefältet på webbplatsen. 
     * Sidan Information för enheten.
@@ -60,10 +60,11 @@ Använda Fjärrlås för att låsa enheten:
 
     Om det andra försöket misslyckas kontaktar du IT-administratören och ber om hjälp. Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 

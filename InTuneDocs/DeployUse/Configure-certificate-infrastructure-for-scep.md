@@ -17,7 +17,7 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: 
+ms.reviewer: kmyrup
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -111,11 +111,11 @@ I det här steget kommer du att:
 
     -   På fliken **Säkerhet** lägger du till NDES-tjänstekontot och ger det **Registreringsrättigheter** för mallen. Intune-administratörer som ska skapa SCEP-profiler behöver **läsrättigheter** så att de kan bläddra till mallen när de skapar SCEP-profiler.
     
-    > [!NOTE] Om du vill återkalla certifikat behöver NDES-tjänstkontot rättigheter för att *Utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
+    > [!NOTE] Om du vill återkalla certifikat som behöver NDES-tjänstkontot, *utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
 
 3.  Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock välja att konfigurera certifikatutfärdaren att tillåta att den som begär anger ett annat värde, som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
-    > [!IMPORTANT] På iOS- och Mac OS X-plattformen används alltid det värde som ställts in i mallen, oavsett vilka andra konfigureringar du gör.
+    > [!IMPORTANT] På iOS- och Mac OS X-plattformarna används alltid det värde som ställts in i mallen, oavsett vilka andra konfigurationer du gör.
 
 Här följer skärmdumpar av en exempelkonfiguration av mallen.
 
@@ -256,11 +256,11 @@ I det här steget kommer du att:
 
     1.  När du har fått certifikat för serverautentisering, öppnar du **IIS-hanteraren**, väljer **Standardwebbplats** i rutan **Anslutningar** och klickar sedan på **Bindningar** i rutan **Åtgärder** .
 
-    2.  Klicka på **Lägg till**, ställ in **Typ** till **https**och kontrollera att porten är **443**. (Endast port 443 stöds för fristående Intune)
+    2.  Klicka på **Lägg till**, ställ in **Typ** till **https**och kontrollera att porten är **443**. (Endast port 443 stöds för fristående Intune.
 
     3.  För **SSL-certifikat**anger du certifikatet för serverautentiserning.
 
-        > [!NOTE] Om NDES-servern använder både ett externt och ett internt namn för en enda nätverksadress, måste certifikatet för serverautentisering ha ett **Ämnesnam** med ett externt offentligt servernamn och ett **Alternativt ämnesnamn** som innehåller namnet på den interna servern.
+        > [!NOTE] Om NDES-servern använder både ett externt och ett internt namn för en enda nätverksadress, måste certifikatet för serverautentisering ha ett **Ämnesnamn** med ett externt offentligt servernamn och ett **Alternativt ämnesnamn** som innehåller namnet på den interna servern.
 
 2.  På NDES-servern: begär och installera ett certifikat för **klientautentisering** från den interna certifikatutfärdaren eller en offentlig certifikatutfärdare. Detta kan vara samma certifikat som certifikatet för serverautentisering om certifikatet har båda funktioner.
 
@@ -295,7 +295,7 @@ I det här steget kommer du att:
 ### Uppgift 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
 I det här steget kommer du att:
 
-Aktivera stöd för NDES i Intune
+Aktivera stöd för NDES i Intune.
 
 Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 
@@ -309,7 +309,7 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 
 ##### Så här laddar du ner, installerar och konfigurerar Certifikat Connectorn
 
-1.  Öppna [Administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Hämta certifikatanslutningspp**.
+1.  Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och klicka sedan på **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
 
 2.  När hämtningen är klar kör du det hämtade installationsprogrammet (**ndesconnectorssetup.exe**) på en Windows Server 2012 R2-server. Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. (CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS).
 
@@ -322,7 +322,7 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 
 4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
 
-    > [!TIP] Om du har stängt guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
+    > [!TIP] Om du stängde guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
     >
     > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -336,7 +336,7 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 
     Nu kan du stänga användargränssnittet för Certifikat Connectorn.
 
-6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**
+6.  Öppna kommandotolken och skriv **services.msc**. Tryck sedan på **Retur**, högerklicka på **Intune-anslutningstjänsten** och klicka sedan på **Starta om**.
 
 Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följande URL, vilket borde returnera ett **403** -fel:
 
@@ -346,6 +346,6 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

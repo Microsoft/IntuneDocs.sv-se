@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,32 +27,21 @@ ms.suite: ems
 
 
 # Kryptera din Windows-enhet
-I syfte att skydda företags- eller skoldata kan IT-administratören kräva att du krypterar Windows-enheten. Om du ser ett meddelande som anger att du måste kryptera bör IT-administratören tala om vilka steg nedan som ska användas för att kryptera enheten.
 
-Du kan antingen kryptera din enhet genom att lägga till ett Microsoft-konto eller genom att aktivera BitLocker.
+I syfte att skydda företags- eller skoldata kan IT-administratören kräva att du krypterar Windows-enheten. Om du har en Windows Phone som du har registrerat krypteras enheten automatiskt om kryptering krävs.
 
-**Alternativ 1: Lägga till ett Microsoft-konto**
-
-1.  Sök efter och starta sedan appen **Datorinställningar**.
-
-2.  Klicka på **Konton** &gt; **Ditt konto** och tryck sedan på **Anslut till ett Microsoft-konto**
-
-3.  Följ anvisningarna som visas.
-
-4.  Kontrollera att enheten har registrerats med Intune genom att följa anvisningarna i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md).
-
-**Alternativ 2: Aktivera BitLocker:**
+Om du har en stationär enhet följer du anvisningarna nedan för att kryptera den. 
 
 1.  Sök efter och starta sedan appen **Hantera BitLocker**.
 
 2.  Klicka på **Aktivera BitLocker** och följ anvisningarna som visas för att kryptera var och en av dina enheter.
 
-3.  Kontrollera att enheten har registrerats med Intune genom att följa anvisningarna i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md).
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
+[Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)</br>
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

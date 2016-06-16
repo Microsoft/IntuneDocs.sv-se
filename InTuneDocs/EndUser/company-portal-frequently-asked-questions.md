@@ -31,7 +31,7 @@ ms.suite: ems
 Via Microsoft Intune-företagsportalen får du tillgång till ditt företags eller din skolas data och appar. Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen med hjälp av olika metoder.
-- Genom att gå till den [Företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat. 
+- Genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat. 
 
 Det finns några mindre skillnader mellan företagsportalappen och webbplatsen med företagsportalen, men du kan utföra likartade uppgifter på båda två. Några exempel:
 
@@ -80,7 +80,7 @@ Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på di
 ## Kan jag ta bort en dator eller enhet från företagsportalen?
 Ja, du kan ta bort eller återställa en dator eller enhet på företagsportalen. Det är skillnad mellan att **ta bort** och att **återställa**:
 
-När du *bort* en dator eller enhet avregistrerar du enheten från Intune. När du tar bort en dator eller enhet har du inte längre åtkomst till företagsportalen från den enheten och viss företagsinformation kan tas bort från enheten. Välj någon av följande länkar om du vill se hur du tar bort enheten från företagsportalen:
+När du *tar bort* en dator eller enhet avregistrerar du enheten från Intune. När du tar bort en dator eller enhet har du inte längre åtkomst till företagsportalen från den enheten och viss företagsinformation kan tas bort från enheten. Välj någon av följande länkar om du vill se hur du tar bort enheten från företagsportalen:
 
 > [!div class="op_single_selector"]
 - [Android](unenroll-your-device-from-intune-android.md)
@@ -100,10 +100,14 @@ Välj någon av följande länkar om du vill se hur du återställer enheten:
 ## Jag ser inte alla mina enheter i företagsportalen
 Om du vill se en enhet måste du lägga till den i företagsportalen. Bläddra till företagsportalen enligt de anvisningar du har fått av administratören och följ anvisningarna för din enhet. Enheter som ägs och hanteras av ditt företag visas inte.
 
+## Kontakta IT-administratören om du har frågor
+Kontakta IT-administratören om du behöver hjälp. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jun16_HO2-->
 
 

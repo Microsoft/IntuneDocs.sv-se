@@ -18,7 +18,7 @@ ms.assetid: cefb485f-f555-4da9-b4bf-d569cc4d5581
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Återställa (radera) en enhet som förlorats eller stulits
 
-Om du tappar bort din registrerade Windows-enhet eller om den blir stulen kan du återställa den till fabriksinställningarna. Stegen nedan förklarar hur du återställer din enhet via företagsportalappen. Du kan också [återställa din enhet via företagsportalens webbplats](reset-your-device-cpwebsite.md)
+Om du tappar bort din registrerade Windows-enhet eller om den blir stulen kan du återställa den till fabriksinställningarna. Stegen nedan förklarar hur du återställer din enhet via företagsportalappen. Du kan också [återställa din enhet via företagsportalens webbplats](reset-your-device-cpwebsite.md).
 
 
 > [!WARNING]
@@ -38,13 +38,14 @@ Om du tappar bort din registrerade Windows-enhet eller om den blir stulen kan du
 
 2.  Under **Mina enheter** väljer du enheten som förlorats eller stulits.
 
-3.  Tryck på **Återställ** &gt; **Återställ**
+3.  Tryck på **Återställ** &gt; **Återställ**.
 
-> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig.
+> [!NOTE]
+> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,10 +40,13 @@ Det första steget för att skydda företagets data på mobila enheter är att k
 ## Kontrollera Microsoft Passport-inställningar på Windows-enheter
 Med Intune kan du integrera [Microsoft Passport for Work](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md), som är en alternativ inloggningsmetod för Windows 10 och senare som använder Active Directory eller ett Azure Active Directory-konto i stället för ett lösenord, smartkort eller virtuellt smartkort.
 
+## Förbikoppla aktiveringslåset på iOS-enheter
+Aktiveringslåset är en funktion som skyddar användarnas enheter genom att kräva att deras Apple-ID och lösenord anges innan någon kan radera eller återaktivera enheten. Detta kan dock leda till problem, till exempel om användaren lämnar företaget utan att ta bort låset. [Kringgå aktiveringslås för iOS](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md) kan hjälpa genom att ta bort låset från de övervakade iOS-enheterna så att du kan allokera eller radera dem.
+
 ## Skydda Windows-datorer som hanteras med Intune-klienten
 Intune stöder fortfarande säkerhetsprinciper för Windows-datorer som du inte registrerar utan hanterar med Intune-klientprogrammet. Information om hur du kan skydda dina Windows-datorer med dessa principer finns i [Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran](policies-to-protect-windows-pcs-in-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

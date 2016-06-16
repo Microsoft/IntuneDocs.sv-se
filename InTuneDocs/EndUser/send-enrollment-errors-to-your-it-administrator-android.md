@@ -18,7 +18,7 @@ ms.assetid: d7c871b8-e5d8-4912-b87f-7e6bc59897be
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,6 +40,6 @@ Du kan skicka enhetens dataloggar till IT-administratören för att få hjälp m
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

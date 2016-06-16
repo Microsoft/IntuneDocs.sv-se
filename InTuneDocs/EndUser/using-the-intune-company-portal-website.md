@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mamoriss
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -42,7 +42,7 @@ Du kan använda företagsportalens webbplats för att:
 
 -   [Synkronisera enheten manuellt för att påskynda långsamma appinstallationer](sync-your-device-manually-cpwebsite.md)
 
--   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta
+-   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta. Om du har svårt att hitta dem kan du se om de finns med på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 -   Se information om enheten, till exempel om den är kompatibel med principer för ditt företag eller din skola
 
@@ -55,6 +55,6 @@ Du kan utföra de flesta av samma uppgifter på **Företagsportalens webbplats**
 - [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

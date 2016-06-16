@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -43,8 +43,8 @@ Det här avsnittet innehåller information om installationen av Intune-företags
 Det här avsnittet innehåller information om åtgärder som du kan vidta när din iOS-enhet har registrerats i Intune.
 
 - [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)</br>
-- [Ange eller ändra en lösenordskod](set-or-change-your-passcode-ios.md)</br>
-- [Återställ (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-ios.md)</br>
+- [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)</br>
+- [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-ios.md)</br>
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)</br>
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md)</br>
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)</br>
@@ -66,6 +66,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

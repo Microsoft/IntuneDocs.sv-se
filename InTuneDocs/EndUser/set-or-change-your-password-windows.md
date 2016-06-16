@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Ange eller ändra lösenordskod | Microsoft Intune
+title: Ange eller ändra ditt lösenord | Microsoft Intune
 description:
 keywords:
 author: staciebarker
@@ -18,18 +18,18 @@ ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [ALIAS]
+#ms.reviewer: priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
-# Ange eller ändra en lösenordskod
+# Ange eller ändra ditt lösenord
 
-Om din Windows-enhet inte följer din IT-administratörs lösenordsprincip, visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
+Om din Windows-enhet inte följer din IT-administratörs lösenordsprincip visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
-IT-administratören kan ange fler än ett lösenordskrav. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom fler än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. 
+IT-administratören kan ange fler än ett lösenordskrav. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. 
 
 Om du har problem med att ange ett lösenord som uppfyller alla krav för lösenord kan du be IT-administratören om hjälp.
 
@@ -48,9 +48,11 @@ Om du har problem med att ange ett lösenord som uppfyller alla krav för lösen
 4. Ange ditt nya lösenord i fältet **Nytt lösenord** och ange sedan det nya lösenordet i fältet **Bekräfta lösenord**.
 4. Tryck på **Klar**.
 
+Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

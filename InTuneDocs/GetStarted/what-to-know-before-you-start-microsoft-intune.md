@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: microsoft-intune
@@ -27,52 +27,26 @@ ms.suite: ems
 
 # Vad du behöver veta innan du startar Microsoft Intune
 
-## Allmänna funktioner för hantering av enheter och appar
-Innan du börjar konfigurera Microsoft Intune bör du läsa [Introduktion till Intune](/intune/understand-explore/introduction-to-microsoft-intune) och bekanta dig med funktionerna i Intune som beskrivs i det här avsnittet. När du har bekantat dig med funktionerna i Intune är du redo att konfigurera din betalprenumeration. Om du började med en utvärderingsprenumeration kan du konvertera den senare till en fullständig prenumeration. Läs [Köpa Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx).
+Innan du börjar konfigurera Microsoft Intune granskar du varje enskilt krav:
 
-### Hantera mobila enheter och datorer utan server- eller intranätskrav
-Du kan hantera följande mobila enheter och datorer:
-
--   Apple iOS 7.1 och senare
--   Google Android 4.0 och senare (inklusive Samsung KNOX)
--   Windows Phone 8.0 och senare
--   Windows RT och Windows 8.1 RT
--   Datorer som kör Windows 8.1
--   Datorer som kör Windows 10 (versionerna Home, Pro, Education och Enterprise)
--   Mac OS X 10.9 och senare
-
-Du kan hantera dessa enheter och datorer även om enheterna inte är anslutna till en domän eller finns på plats. Detta gör Intune idealiskt för ett företag med en mobil eller geografiskt utspridd personal. Se [Välj hur du vill hantera enheter](/Intune/Deploy-use/choose-how-to-manage-devices) för mer information om hantering av enheter.
-
-### Kräva kryptering av mobila enheter och datorer
-Mobila enheter som stöder kryptering kan tvingas att använda kryptering. Du kan också kräva att datorer som stöder BitLocker-enhetskryptering ska använda det. Om en mobil enhet eller dator med kryptering tappas bort eller blir stulen går det inte att läsa data på enhetens lagringsmedium, vilket innebär att informationen är skyddad mot stöld.
-
-### Generera inventeringar och rapporter för maskinvara och programvara
-Du kan samla in information om den maskin- och programvara som används av ditt företag, så att det blir lättare att planera uppgraderingscykeln för maskinvara, eller ta reda på om oönskad programvara är installerad på hanterade enheter.
-
-### Övervaka mobila enheter och datorer
-Du kan skapa varningar som meddelar dig när det är problem med en mobil enhet eller en dator. Varningarna kan även utlösa e-postaviseringar till personer som bör informeras om problemet.
-
-### En ”självbetjäningsmodell” för IT
-Användarna kan använda företagsportalen för att registrera enheter, installera platslicensierad programvara eller för att hitta kontaktuppgifter till IT-administratörer.
-
-### Stöd för multifaktorautentisering
-Intune har stöd för multifaktorautentisering (MFA). Mer information finns i [Skydda Windows-enheter med multifaktorautentisering](/intune/deploy-use/protect-windows-devices-with-multi-factor-authentication).
-
-### Tillgängligt på flera språk
-Intune finns på följande språk: kinesiska (förenklad och traditionell), tjeckiska, danska, nederländska, engelska, finska, franska, tyska, grekiska, ungerska, italienska, japanska, koreanska, norska, polska, portugisiska, rumänska, ryska, spanska, svenska och turkiska. En lista över de länder där Intune-tjänsten stöds finns i [Internationell tillgänglighet](https://products.office.com/en-us/business/international-availability).
-
-## Ytterligare krav och funktioner   
-Förutom de allmänna funktionerna bör du också bekanta dig med följande funktioner:
-
-- [Webbläsare som stöds av Intune](supported-web-browsers.md)</br>
-- [Krav på nätverksinfrastruktur för Microsoft Intune](network-infrastructure-requirements-for-microsoft-intune.md)</br>
-- [Administrativa konton, webbplatser och behörigheter i Microsoft Intune](administrative-accounts-websites-perms.md)</br>
-- [Microsoft Intune-företagsportal](microsoft-intune-company-portal.md)</br>
-- [Intune-integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)</br>
-- [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md)</br>
+- [Mobila enheter och datorer som stöds](supported-mobile-devices-and-computers.md)
+- [Webbläsare som stöds av Intune](supported-web-browsers.md)
+- [Krav på nätverksinfrastruktur för Microsoft Intune](network-infrastructure-requirements-for-microsoft-intune.md)
+- [Administrativa konton, webbplatser och behörigheter i Microsoft Intune](administrative-accounts-websites-perms.md)
+- [Microsoft Intune-företagsportal](microsoft-intune-company-portal.md)
+- [Intune-integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)
+- [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md)
 - [Domännamn för Microsoft Intune](domain-names-for-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO4-->
+Innan du använder Intune kan du också läsa [Funktioner för hantering av mobila enheter i Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune). Om du började med en utvärderingsprenumeration kan du konvertera den senare till en fullständig prenumeration. Läs [Köpa Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx).
+
+
+
+
+
+
+
+<!--HONumber=Jun16_HO2-->
 
 

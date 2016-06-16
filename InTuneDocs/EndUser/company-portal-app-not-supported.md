@@ -18,7 +18,7 @@ ms.assetid: dea37b91-33fa-4d4a-ac44-560b450c02a6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,10 +26,12 @@ ms.suite: ems
 ---
 
 # Företagsportalappen stöds inte
-Den här versionen av företagsportalen kan inte längre användas. Installera **företagsportalappen** från Windows Store om du vill fortsätta.
+Den här versionen av företagsportalen kan inte längre användas. Installera den senaste **företagsportalappen** från Windows Store om du vill fortsätta.
 
 
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO2-->
 
 

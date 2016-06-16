@@ -18,7 +18,7 @@ ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,13 +34,15 @@ Följ stegen nedan om du använder en dator i stället för en mobil enhet och d
 
 2.  Anslut din Android-enhet till en dator via en USB-kabel.
 
-3.  Leta efter en mapp med namnet på din telefon på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\ i katalogen.\.
+3.  Leta efter en mapp med namnet på din telefon på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files i den katalogen\.
 
 4.  Bifoga alla filer i ett e-postmeddelande och skicka dem till din IT-administratör.
+
+Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

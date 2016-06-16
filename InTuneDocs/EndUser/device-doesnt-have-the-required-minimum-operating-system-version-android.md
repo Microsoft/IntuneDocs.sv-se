@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/30/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 3ef43ff5-8d6b-4be1-baa4-6fb6a7f3c312
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,10 +30,11 @@ ms.suite: ems
 
 Android-enheten uppfyller inte de krav som IT-avdelningen har fastställt för äldsta tillåtna version av operativsystemet. Innan du uppdaterar enheten kontrollerar du vilken version av operativsystemet som används genom att trycka på **Inställningar** &gt; **Om telefon** och sedan kontrollera om det finns någon tillgänglig uppdatering för enheten genom att trycka på **Inställningar** och leta reda på uppdateringsalternativet.
 
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

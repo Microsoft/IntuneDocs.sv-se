@@ -6,7 +6,7 @@ description:
 keywords:
 author: Staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/18/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -31,6 +31,7 @@ ms.suite: ems
 Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan IT-avdelningen hantera dessa arbets- eller skolresurser och skydda dem, samtidigt som du får friheten att använda den enhet du önskar för att utföra arbetet. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
+
 
 
 **Registrera din iOS-enhet:**
@@ -49,7 +50,7 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 
     ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png) 
 
-5.  På skärmen **Vad kommer härnäst** kan du läsa om vad som händer under registreringen- Tryck sedan på **Registrera**.
+5.  På skärmen **Vad kommer härnäst** kan du läsa om vad som händer under registreringen. Tryck sedan på **Registrera**.
 
     ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png) 
 
@@ -89,13 +90,11 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 
 Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
 
-    
-
-  
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 
