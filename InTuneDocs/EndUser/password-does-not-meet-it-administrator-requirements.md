@@ -44,8 +44,8 @@ Information om hur du ställer in en PIN-kod eller ett lösenord eller om andra 
 - [Ange eller ändra lösenordet för din iOS-enhet](set-or-change-your-passcode-ios.md)
 - [Ange eller ändra lösenordet för din Windows-enhet](set-or-change-your-password-windows.md)
 
-Kontakta IT-administratören om du har problem med att skapa ett lösenord som uppfyller kraven. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har problem med att skapa ett lösenord som uppfyller kraven. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

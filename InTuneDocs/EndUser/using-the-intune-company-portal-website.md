@@ -42,7 +42,7 @@ Du kan använda företagsportalens webbplats för att:
 
 -   [Synkronisera enheten manuellt för att påskynda långsamma appinstallationer](sync-your-device-manually-cpwebsite.md)
 
--   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta. Om du har svårt att hitta dem kan du se om de finns med på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+-   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta. 
 
 -   Se information om enheten, till exempel om den är kompatibel med principer för ditt företag eller din skola
 
@@ -55,6 +55,6 @@ Du kan utföra de flesta av samma uppgifter på **Företagsportalens webbplats**
 - [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
