@@ -30,11 +30,11 @@ ms.suite: ems
 
 Om din Android-enhet är rotad innebär det att enheten har ändrats för att aktivera vissa funktioner som kan äventyra företagets resurser och säkerhet. När enheten är rotad kan du inte komma åt företagets resurser och måste då kontakta IT-administratören om hjälp för att återansluta till företagets resurser.
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

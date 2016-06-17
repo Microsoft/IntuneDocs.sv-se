@@ -47,7 +47,7 @@ Apple AppStore aviserar när en ny version av företagsportalen är tillgänglig
     > [!NOTE] Kontakta IT-administratören om du inte kan komma åt Windows Store.
 
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 Information om andra uppgifter som du kan utföra med din enhet får du via den länk som matchar den typ av enhet som du har:
 
@@ -57,6 +57,6 @@ Information om andra uppgifter som du kan utföra med din enhet får du via den 
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -41,11 +41,11 @@ Om du tappar bort din registrerade Windows-enhet eller om den blir stulen kan du
 3.  Tryck på **Återställ** &gt; **Återställ**.
 
 > [!NOTE]
-> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

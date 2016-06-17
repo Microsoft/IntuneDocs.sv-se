@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -34,15 +34,12 @@ IT-administratören kan kräva att du ställer in en PIN-kod eller ett lösenord
 
 2.  Välj och bekräfta det nya lösenordet.
 
-3.  Kontrollera att enheten har registrerats med Microsoft Intune genom att följa anvisningarna i [Registrera din enhet i Microsoft Intune](enroll-your-device-in-Intune-android.md).
 
-4.  Tryck på **HÄMTA** &gt; **INSTALLERA**.
-
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

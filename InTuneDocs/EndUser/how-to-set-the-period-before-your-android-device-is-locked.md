@@ -36,8 +36,8 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 
 3.  Kontrollera att enheten har registrerats med Intune genom att följa anvisningarna i [Registrera din enhet om du vill använda den på jobbet](http://go.microsoft.com/fwlink/?LinkId=519071).
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

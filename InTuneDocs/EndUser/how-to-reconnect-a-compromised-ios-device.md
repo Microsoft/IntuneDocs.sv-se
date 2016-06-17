@@ -28,10 +28,10 @@ ms.suite: ems
 # Återansluta en komprometterad iOS-enhet
 IT-administratören har upptäckt att du använder en jailbreakad enhet. "Jailbrokad" innebär att programbegränsningar, som fastställts av iOS, har tagits bort, vilket kan påverka säkerheten och utgöra ett hot mot företagets resurser. När detta sker har enheten inte längre åtkomst till företagets resurser.
 
-Be IT-administratören om hjälp med att återansluta enheten. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

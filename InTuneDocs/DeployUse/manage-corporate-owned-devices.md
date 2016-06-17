@@ -83,7 +83,6 @@ Läs mer om [DEP](ios-device-enrollment-program-in-microsoft-intune.md). ([Tillb
 
 ### USB-SA
 Installationsassistent för USB-ansluten registrering. Administratören skapar en Intune-princip och exporterar den till Apple Configurator. USB-anslutna enheter förbereds med Intune-principen. Administratören måste registrera varje enhet manuellt. Användarna får sina enheter och kör Installationsassistenten, där de registrerar sina enheter. Den här metoden har stöd för **iOS Övervakad**-läget vilket i sin tur aktiverar:
-  - Låst registrering
   - Villkorlig åtkomst
   - Upplåsningsidentifiering
   - Hantering av mobila program
@@ -112,6 +111,6 @@ Anger om enheten kan låsas för att förhindra att användaren tar bort Intune-
 ([Tillbaka till tabellen](#overview-of corporate-owned-device-enrollment-methods)) ([Tillbaka till tabellen](#overview-of corporate-owned-device-enrollment-methods))
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

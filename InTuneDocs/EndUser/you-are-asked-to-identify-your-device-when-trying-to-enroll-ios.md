@@ -34,11 +34,11 @@ Om du försöker registrera en iOS- eller Mac OS X-enhet i Intune och en skärm 
 2. Tryck på **Fortsätt**.
 3. Ange de sista fyra tecknen i enhetens serienummer så att Intune kan verifiera att din enhet är registrerad. Information om hur du hittar serienumret finns i [Hur hittar jag serienumret på enheten?](how-do-i-find-the-serial-number-on-my-device-ios.md).
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

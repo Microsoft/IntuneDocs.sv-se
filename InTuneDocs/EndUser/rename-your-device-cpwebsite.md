@@ -40,11 +40,11 @@ Så här byter du namn på din enhet:
 
 3.  Skriv det nya namnet för enheten i rutan där det nuvarande enhetsnamnen visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

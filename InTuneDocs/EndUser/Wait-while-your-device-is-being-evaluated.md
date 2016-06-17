@@ -28,10 +28,10 @@ ms.suite: ems
 # Vänta medan enheten utvärderas
 Enhetens kompatibilitet utvärderas fortfarande. Vänta några minuter tills kompatibilitetskontrollen är klar.
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -31,10 +31,10 @@ Enheten har visat sig vara inkompatibel med en eller flera av företagets princi
 
 Lös problemet genom att vänta några minuter och sedan trycka på **Kontrollera efterlevnad**.
 
-Om problemet kvarstår kontaktar du IT-administratören. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om problemet kvarstår kontaktar du IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

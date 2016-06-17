@@ -45,11 +45,11 @@ Använd följande instruktioner om du vill återställa enheten med företagspor
 
 2.  Tryck på **Återställ** &gt; **Återställ**.
 > [!NOTE]
-> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+> Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

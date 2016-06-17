@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 # Synkronisera enheten manuellt
-Om appinstallationen tar för lång tid synkroniserar du Windows-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. De enda versioner som stöds är de som visas. Använd länken som visas i avsnittet "I den här artikeln" ovan, som matchar typ av enhet som du har:
+Om appinstallationen tar för lång tid synkroniserar du Windows-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. De enda versioner som stöds är de som visas. Använd den länk som visas i avsnittet ”I den här artikeln” ovan som matchar den typ av enhet som du har:
 
 * [Windows 10 Mobil](#windows-10-mobile)
 * [Windows 10 Desktop](#windows-10-desktop)
@@ -97,11 +97,12 @@ Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda
     
    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen tills synkroniseringen är klar.
 
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

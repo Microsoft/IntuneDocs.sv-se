@@ -36,10 +36,10 @@ Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta ti
 
 3.  Vänta en stund så att de nya e-postinställningarna kan börja gälla automatiskt på enheten.
 
-Kontakta IT-administratören om de nya e-postinställningarna inte visas efter ett tag. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om de nya e-postinställningarna inte visas efter ett tag. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

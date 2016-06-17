@@ -39,7 +39,7 @@ När du använder företagsdata i en hanterad app visas ett meddelande (se nedan
 ### Hur skaffar jag hanterade appar?
 Du kan hämta hanterade appar på ett par olika sätt:
 
--   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan IT-administratören installera den på enheten. Läs mer om registrering i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
+-   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan IT-administratören installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
 
 -   Du installerar en app från App Store och sedan loggar du in med ditt företagskonto som hanteras av Intune.
 
@@ -64,23 +64,12 @@ Här är några exempel på vad IT-administratören kan hantera i en app och hur
 
 -   Krav på datakryptering
 
-Några vanliga appar som IT-avdelningen kan hantera:
 
--   Hanterad webbläsare
-
--   Hanterat bildvisningsprogram
-
--   Hanterat PDF-visningsprogram
-
--   Hanterad ljud- och videospelare
-
--   Microsoft Word, Excel och PowerPoint
-
-Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
