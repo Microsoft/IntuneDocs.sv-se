@@ -18,7 +18,7 @@ ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -35,7 +35,7 @@ ms.suite: ems
 
 För att åstadkomma detta konfigurerar du en princip för villkorlig åtkomst för Exchange Online med följande inställningar:
 
--   Välj **Aktivera princip för villkorlig åtkomst**
+-   Välj **Aktivera princip för villkorlig åtkomst**.
 
 - Välj önskade plattformar för att tillåta åtkomst från appar med modern autentisering.
 - För Exchange ActiveSync-appar väljer du **Blockera inkompatibla enheter på plattformar som stöds av Microsoft Intune** och **Blockera alla andra enheter på plattformar som inte stöds av Microsoft Intune.**
@@ -70,7 +70,7 @@ Följande flöde används för att bestämma vilka enheter som kan få tillgång
 ## Inga Android-enheter kan komma åt Exchange On-premises.
 ### Krav för scenario
 - Alla Android-enheter ska blockeras från att komma åt Exchange.
-- Alla andra enheter som stöds kan få åtkomst till Exchange under förutsättning att de hanteras av
+- Alla andra enheter som stöds kan få åtkomst till Exchange under förutsättning att de hanteras av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 Du åstadkommer detta genom att konfigurera en princip för villkorlig åtkomst för Exchange On-premises med följande inställningar:
 
@@ -86,6 +86,6 @@ Följande flöde används för att bestämma vilka enheter som kan få tillgång
 ![Åtkomstflöde för enheter](./media/ConditionalAccess8-4.png)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

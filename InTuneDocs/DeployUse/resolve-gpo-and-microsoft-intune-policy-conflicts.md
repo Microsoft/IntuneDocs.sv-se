@@ -18,7 +18,7 @@ ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -26,30 +26,30 @@ ms.suite: ems
 ---
 
 # Lösa konflikter mellan grupprincipobjekt och Microsoft Intune-principer
-Intune använder principer som hjälper dig att hantera inställningarna på de datorer som du hanterar. Du kan t.ex. använda en princip för att kontrollera datorernas inställningar för Windows-brandväggen. Många av Intunes inställningar påminner om inställningarna som du kan konfigurera med Grupprincip i Windows. Emellanåt kan det dock inträffa att de två metoderna hamnar i konflikt med varandra.
+Intune använder principer som hjälper dig att hantera inställningarna på de Windows PC-datorer som du hanterar. Du kan t.ex. använda en princip för att kontrollera PC-datorernas inställningar för Windows-brandväggen. Många av Intunes inställningar påminner om inställningarna som du kan konfigurera med Grupprincip i Windows. Emellanåt kan det dock inträffa att de två metoderna hamnar i konflikt med varandra.
 
-När sådana konflikter uppstår har grupprinciper på domännivå företräde framför Intune-principer, såvida datorn inte kan logga in till domänen. I detta fall tillämpas Intune-principen på klientdatorn.
+När sådana konflikter uppstår har grupprinciper på domännivå företräde framför Intune-principer, såvida PC-datorn inte kan logga in till domänen. I detta fall tillämpas Intune-principen på klientdatorn.
 
 ## Vad som krävs vid användning av grupprinciper
 Kontrollera att ingen av de principer som du använder hanteras av någon grupprincip. Om du vill undvika konflikter bör du använda en eller flera av följande metoder:
 
--   Flytta dina datorer till en Active Directory-organisationsenhet som inte omfattas av några grupprincipinställningar innan du installerar Intune-klienten. Du kan också blockera arv av grupprinciper i organisationsenheter som innehåller datorer som har registrerats i Intune och som du inte vill använda grupprincipinställningar för.
+-   Flytta dina PC-datorer till en Active Directory-organisationsenhet som inte omfattas av några grupprincipinställningar innan du installerar Intune-klienten. Du kan också blockera arv av grupprinciper i organisationsenheter som innehåller PC-datorer som har registrerats i Intune och som du inte vill använda grupprincipinställningar för.
 
--   Använd ett WMI-filter eller säkerhetsfilter för att begränsa grupprincipobjekt till datorer som inte hanteras av Intune. Mer information och exempel på hur du gör finns i avsnittet [Så här filtrerar du befintliga grupprincipobjekt för att undvika konflikter med Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md#BKMK_Filter) nedan.
+-   Använd säkerhetsgruppfilter för att begränsa grupprincipobjekt till PC-datorer som inte hanteras av Intune. 
 
 -   Inaktivera eller ta bort det grupprincipobjekt som står i konflikt med Intune-principerna.
 
 Mer information om Active Directory och grupprinciper i Windows finns i Windows Server-dokumentationen.
 
 ## Så här filtrerar du befintliga grupprincipobjekt för att undvika konflikter med Intune-principer
-Om du har identifierat grupprincipobjekt med inställningar som är i konflikt med Intune-principer kan du använda någon av följande filtreringsmetoder för att begränsa grupprincipobjekten till datorer som inte hanteras av Intune.
+Om du har identifierat grupprincipobjekt med inställningar som är i konflikt med Intune-principer kan du använda säkerhetsgruppfilter för att begränsa grupprincipobjekten till PC-datorer som inte hanteras av Intune.
 
-### Använda WMI-filter
-WMI-filter tillämpar selektivt grupprincipobjekt på datorer som uppfyller villkoren i en fråga. Om du vill använda ett WMI-filter distribuerar du en WMI-klassinstans till alla datorer på företaget innan du registrerar datorer för Intune-tjänsten.
+<!--- ### Use WMI filters
+WMI filters selectively apply GPOs to computers that satisfy the conditions of a query. To apply a WMI filter, deploy a WMI class instance to all PCs in the enterprise before you enroll any PCs in the Intune service.
 
-#### Tillämpa WMI-filter på grupprincipobjekt
+#### To apply WMI filters to a GPO
 
-1.  Skapa en hanteringsobjektsfil genom att kopiera och klistra in följande i en textfil och sedan spara filen på en lämplig plats som **WIT.mof**. Filen innehåller den WMI-klassinstans som du distribuerar till datorer som du vill registrera i Intune-tjänsten.
+1.  Create a management object file by copying and pasting the following into a text file, and then saving it to a convenient location as **WIT.mof**. The file contains the WMI class instance that you deploy to PCs that you want to enroll in the Intune service.
 
     ```
     //Beginning of MOF file.
@@ -79,38 +79,38 @@ WMI-filter tillämpar selektivt grupprincipobjekt på datorer som uppfyller vill
     };
     ```
 
-2.  Använd antingen ett startskript eller en grupprincip för att distribuera filen. Följande distributionskommando används för startskriptet. Du måste distribuera WMI-klassinstansen innan du registrerar klientdatorer i Intune-tjänsten.
+2.  Use either a startup script or Group Policy to deploy the file. The following is the deployment command for the startup script. The WMI class instance must be deployed before you enroll client PCs in the Intune service.
 
-    **C:/Windows/System32/Wbem/MOFCOMP &lt;sökväg till MOF-fil&gt;\wit.mof**
+    **C:/Windows/System32/Wbem/MOFCOMP &lt;path to MOF file&gt;\wit.mof**
 
-3.  Skapa WMI-filtren genom att köra något av följande kommandon, beroende på om det grupprincipobjekt som du vill filtrera gäller för datorer som hanteras i Intune eller för datorer som inte hanteras i Intune.
+3.  Run either of the following commands to create the WMI filters, depending on whether the GPO you want to filter applies to PCs that are managed by using Intune or to PCs that are not managed by using Intune.
 
-    -   För grupprincipobjekt som gäller för datorer som inte hanteras i Intune använder du följande:
+    -   For GPOs that apply to PCs that are not managed by using Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=0
         ```
 
-    -   För grupprincipobjekt som gäller för datorer som hanteras i Intune använder du följande:
+    -   For GPOs that apply to PCs that are managed by Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=1
         ```
 
-4.  Redigera grupprincipobjektet i konsolen Grupprinciphantering så att WMI-filtret som du skapade i förra steget tillämpas.
+4.  Edit the GPO in the Group Policy Management console to apply the WMI filter that you created in the previous step.
 
-    -   För grupprincipobjekt som endast ska tillämpas på datorer som du vill hantera med Intune använder du filtret **WindowsIntunePolicyEnabled=1**.
+    -   For GPOs that should apply only to PCs that you want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=1**.
 
-    -   För grupprincipobjekt som endast ska tillämpas på datorer som du inte vill hantera med Intune använder du filtret **WindowsIntunePolicyEnabled=0**.
+    -   For GPOs that should apply only to PCs that you do not want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=0**.
 
-Mer information om hur du använder WMI-filter i Grupprincip finns i bloggposten [Säkerhetsfiltrering, WMI-filtrering och målinriktning på objektnivå i grupprincipinställningar](http://go.microsoft.com/fwlink/?LinkId=177883)
+For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](http://go.microsoft.com/fwlink/?LinkId=177883). --->
 
-### Använda säkerhetsgruppfilter
-Med en grupprincip kan du tillämpa grupprincipobjekt enbart på de säkerhetsgrupper som du anger i området **Säkerhetsfiltrering** i konsolen Grupprinciphantering för ett utvalt grupprincipobjekt. Grupprincipobjekt gäller som standard för **autentiserade användare**
 
--   Skapa en ny säkerhetsgrupp i snapin-modulen **Active Directory – användare och datorer** som innehåller datorer och användarkonton som du inte vill hantera med hjälp av Intune. Du kan till exempel ge gruppen namnet **Inte i Microsoft-Intune**
+Med en grupprincip kan du tillämpa grupprincipobjekt enbart på de säkerhetsgrupper som du anger i området **Säkerhetsfiltrering** i konsolen Grupprinciphantering för ett utvalt grupprincipobjekt. Grupprincipobjekt gäller som standard för **autentiserade användare**.
+
+-   Skapa en ny säkerhetsgrupp i snapin-modulen **Active Directory – användare och datorer** som innehåller datorer och användarkonton som du inte vill hantera med hjälp av Intune. Du kan till exempel ge gruppen namnet **Inte i Microsoft-Intune**.
 
 -   Högerklicka på den nya säkerhetsgruppen på fliken **Delegering** i konsolen Grupprinciphantering för det valda grupprincipobjektet och delegera lämpliga **Läs**- och **Tillämpa grupprincip**-behörigheter till både användare och datorer i säkerhetsgruppen. (Behörigheterna för**Tillämpa grupprincip** är tillgängliga i dialogrutan **Avancerat** .)
 
@@ -122,6 +122,6 @@ Den nya säkerhetsgruppen måste underhållas när registreringen i Intune-tjän
 [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: ad5ea85c-aa2e-4110-a184-172cd0b8f270
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -44,7 +44,7 @@ Följande regler gäller vid köp av ytterligare molnbaserad lagring för Intune
 
 -   Du måste ha en aktiv betald prenumeration för att kunna köpa ytterligare lagringsutrymme.
 
--   Endast faktureringsadministratörer eller globala administratörer för din Microsoft Online-tjänst kan köpa ytterligare lagringsutrymme via Intune-kontoportalen. Om du vill lägga till, ta bort eller hantera dessa administratörer måste du vara global administratör och logga in på Intune-kontoportalen.
+-   Endast faktureringsadministratörer eller globala administratörer för din Microsoft Online-tjänst kan köpa ytterligare lagringsutrymme via hanteringsportalen för Office 365. Om du vill lägga till, ta bort eller hantera dessa administratörer måste du vara global administratör och logga in på hanteringsportalen för Office 365.
 
 -   Om du är en volymlicenskund som har köpt Intune eller Microsoft Intune-tilläggsprogrammet kontaktar du din kontoansvariga på Microsoft eller din Microsoft-partner om du vill ha prisinformation och köpa extra lagringsutrymme.
 
@@ -105,6 +105,6 @@ När två distributioner, med samma distributionsåtgärd, tas emot av en enhet 
 
 Lär dig hur du [distribuerar appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

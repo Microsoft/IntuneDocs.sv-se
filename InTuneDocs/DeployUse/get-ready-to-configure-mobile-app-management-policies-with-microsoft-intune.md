@@ -18,7 +18,7 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,6 +46,7 @@ Om du för närvarande använder **Intune-administratörskonsolen** för att han
 
 - Android 4 eller senare
 
+Windows-enheter stöds inte för tillfället.
 ##  Appar som stöds
 * **Microsoft-appar:** Dessa appar har en inbyggd app-SDK för Intune och kräver ingen ytterligare bearbetning innan du tillämpar MAM-principer.
 Om du vill se en fullständig lista över Microsoft-appar som stöds går du till [Microsoft Intune-mobilprogramsgalleriet](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) på sidan för Microsoft Intune-programpartner. Klicka på appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen har stöd för flera identiteter.
@@ -123,6 +124,6 @@ I följande tabell visas rollen och behörigheterna som du kan tilldela administ
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

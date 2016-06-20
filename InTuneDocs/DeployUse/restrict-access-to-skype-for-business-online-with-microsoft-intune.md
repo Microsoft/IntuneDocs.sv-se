@@ -18,7 +18,7 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,7 +46,7 @@ När en målanvändare försöker använda Skype för företag – Online på si
 
 -   Vara en **Android**- eller **iOS**-enhet.
 
--   Vara **registrerad** med
+-   Vara **registrerad** med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 -   Vara **kompatibel** med eventuella [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper.
 
@@ -73,24 +73,24 @@ Du kan ange två typer av grupper för principen för Skype för företag – On
 Om en användare finns i båda grupperna, kommer de att vara befriade från policyn.
 
 ### Steg 2: Ställ in och distribuera en efterlevnadsprincip
-[Skapa](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuera](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip för alla enheter som påverkas av principen. Detta motsvarar alla enheter som används av användarna i **Målgrupper**
+[Skapa](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuera](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip för alla enheter som påverkas av principen. Detta motsvarar alla enheter som används av användarna i **Målgrupper**.
 
-> Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
+> [!NOTE] Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
 
-> Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
+> [!IMPORTANT] Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
 
-När du är klar fortsätter du till **Steg 3**.
+När du är klar, fortsätt till **Steg 3**.
 
 ### Steg 3: Konfigurera principen för Skype för företag – Online
 Nu ska du konfigurera principen så att endast hanterade och kompatibla enheter kan komma åt Skype för företag – Online. Denna policy kommer att lagras i Azure Active Directory.
 
 ####
-1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) klickar du på **Princip** > **Villkorlig åtkomst** > **Princip för Skype för företag – Online**
+1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) klickar du på **Princip** > **Villkorlig åtkomst** > **Princip för Skype för företag – Online**.
 
 ![Skärmbild av sidan för principen för villkorlig åtkomst för Skype för företag – Online](./media/conditional_access_SFBPolicy.png)
 
-2.  Välj **Aktivera princip för villkorlig åtkomst**
+2.  Välj **Aktivera princip för villkorlig åtkomst**.
 
 3.  Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
 
@@ -102,7 +102,7 @@ Nu ska du konfigurera principen så att endast hanterade och kompatibla enheter 
 
 5.  Under **Undantagna Grupper**, kan du alternativt klicka på **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna policyn.
 
-6.  Klicka på **Spara** när du är klar.
+6.  När du är klar klicka på **Spara**.
 
 Nu har du konfigurerat villkorlig åtkomst för Skype för företag – Online. Du behöver inte använda den villkorliga åtkomstpolicyn, den träder i kraft omedelbart.
 
@@ -119,6 +119,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 * **Enheter som är registrerade i AAD och kompatibla** – Dessa enheter kan komma åt Skype för företag – Online.
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

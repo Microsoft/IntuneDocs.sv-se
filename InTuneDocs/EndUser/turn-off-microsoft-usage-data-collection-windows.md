@@ -32,9 +32,11 @@ Microsoft samlar automatiskt in anonymiserade data om företagsportalappens till
 
 Du kan inaktivera insamlingen av dessa data på en Windows-enhet med hjälp av inställningen **Användningsdata** i företagsportalappen. IT-administratörer har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
 
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -84,7 +84,7 @@ Du kan hantera och distribuera kostnadsfria iOS-appar från App Store. Det gör 
 > [!TIP] Alternativen för mobila enheter är inte tillgängliga förrän du [ställer in hanteringsutfärdaren för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md) på Intune.
 
 ## Stöd för UWP-appar (Universal Windows Platform)
-Windows 10-enheter kräver inte en nyckel för att installera branschspecifika appar. Dock måste registernyckeln **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** ha värdet **1** för att aktivera separat inläsning.
+Windows 10-datorer kräver inte en nyckel för att installera branschspecifika appar. Dock måste registernyckeln **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** ha värdet **1** för att aktivera separat inläsning.
 
 Om registernyckeln inte är konfigurerad ställer Intune automatiskt in värdet på **1** första gången du distribuerar en app till enheten. Om det här värdet har angetts till **0** kan inte Intune automatiskt ändra värdet och distributionen av affärsappar kommer att misslyckas.
 
@@ -96,6 +96,6 @@ På Windows 10 Mobile-enheter kan du använda ett icke-Symantec-kodsigneringscer
 
 Därefter måste du lägga till appar i Intune-konsolen innan du kan distribuera dem. Du kan lägga till appar för [registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md) eller för [Windows-datorer som du hanterar med Intune-klientprogrammet](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

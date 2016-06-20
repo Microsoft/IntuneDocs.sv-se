@@ -18,7 +18,7 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -99,7 +99,7 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 |**Tillåt appbutik**|Tillåter enheten att få åtkomst till appbutiken.|Ja|
 |**Kräv ett lösenord om du vill komma åt programbutiken.**|Ja|
 |**Tillåt köp via app**|Tillåt att inköp görs från en app som körs.|Ja|
-|**Tillåt hanterade dokument i andra ohanterade appar**|Tillåter visning av företagsdokument i vilken app som helst.|OS 7.1 och senare|
+|**Tillåt hanterade dokument i andra ohanterade appar**|Tillåter visning av företagsdokument i vilken app som helst.<br>**Exempel:** Du vill förhindra att användare sparar filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen till Nej. När enheten har hämtat principen (till exempel efter en omstart) kommer den inte längre att tillåta att spara.|iOS 7.1 och senare|
 |**Tillåt ohanterade dokument i andra hanterade appar**|Tillåt visning av valfria dokument i hanterade företagsappar.|iOS 7.1 och senare|
 |**Tillåt videokonferens**|Tillåt videokonferensappar, till exempel Facetime på enheten.|Ja|
 |**Tillåt innehåll för vuxna i mediebutik**|Tillåt att enheten får åtkomst till innehåll som är klassificerade som för vuxna i butiken.|Ja|
@@ -153,7 +153,7 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
-|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Klicka på **Bläddra**, ange den hanterade appen eller en app från en butik som ska kunna köras när enheten är i helskärmsläge. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i **Så anger du webbadresser till appbutiker** senare i det här avsnittet.|
+|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Välj **Bläddra**, ange den hanterade appen eller en app från en butik som ska kunna köras när enheten är i helskärmsläge. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i **Så anger du webbadresser till appbutiker** senare i det här avsnittet.|
 |**Tillåt pekskärm**|Aktiverar eller inaktiverar pekskärm på enheten.|
 |**Tillåt rotering av skärmbild**|Aktiverar eller inaktiverar ändring av skärmens orientering när du roterar hela enheten.|
 |**Tillåt volymknappar**|Aktiverar eller inaktiverar användningen av volymknapparna på enheten.|
@@ -182,9 +182,9 @@ Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten
 
 ##### Så här kör du Inkompatibilitetsrapporter för appar
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och välj sedan **Visa rapport**.
 
 #### Så här anger du webbadresser till appbutiker
 Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla appar eller i alternativet **Välj en hanterad app som kommer att kunna köras när enheten är i helskärmsläge** (endast iOS), använder du följande format:
@@ -222,7 +222,7 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 |Inställningsnamn|Information|
     |----------------|--------------------|
 |**Anpassat konfigurationsprofilsnamn (visas för användare)**|Ange ett namn för principen som den kommer att visas på enheten och i principrapporter för Intune.|
-|**Konfigurationsprofilsfil**|Klicka på **Importera**, bläddra sedan till den konfigurationsprofilen som du skapat med hjälp av Apple Configurator. **Obs!** Se till att de inställningar som du exporterar från verktyget Apple Configurator är kompatibla med iOS-versionen på de enheter som du distribuerar den anpassade iOS-principen till. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen för [Apple-utvecklare](https://developer.apple.com/).|
+|**Konfigurationsprofilsfil**|Välj **Importera**, bläddra sedan till den konfigurationsprofil som du skapat med hjälp av Apple Configurator. **Obs!** Se till att de inställningar som du exporterar från verktyget Apple Configurator är kompatibla med iOS-versionen på de enheter som du distribuerar den anpassade iOS-principen till. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen för [Apple-utvecklare](https://developer.apple.com/).|
     |**Information om konfigurationsprofilen**|Visar XML-koden för den konfigurationsprofil du har importerat.|
 
 ### Se även
@@ -230,6 +230,6 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

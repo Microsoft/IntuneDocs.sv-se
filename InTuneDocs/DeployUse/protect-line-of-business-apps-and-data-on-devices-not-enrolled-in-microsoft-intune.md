@@ -1,25 +1,25 @@
 ---
 # required metadata
 
-title: [Skydda branschspecifika appar och data på enheter som inte har registrerats | Microsoft Intune]
+title: Skydda branschspecifika appar och data på enheter som inte har registrerats | Microsoft Intune
 description:
 keywords:
-author: [karthikaraman]
-manager: [jeffgilb]
+author: karthikaraman
+manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid: [00219467-a62e-43b6-954b-3084f54c45ba]
+ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: [joglocke]
-#ms.suite: ems
+ms.reviewer: joglocke
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -52,6 +52,11 @@ Om du vill associera branschspecifika appar med MAM-principer måste du lägga t
 
 ## Steg 3: Tillämpa MAM-principer
 När appmetadata har överförts till tjänsten visas appen i listan över appar.  Du kan nu [skapa en ny princip eller en befintlig princip](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) och tillämpa den på den branschspecifika app som du lade till i steg 2.
+
+>[!IMPORTANT]
+>Du måste använda MAM-principen för de användare som ska använda den omslutna appen.  Användare som inte har den här principen distribuerad till sig kommer inte att kunna använda appen.
+
+
   ![Skärmbild av bladet Riktad lista över appar där den nya branschspecifika appen visas](../media/mam-azure-portal-lob-on-targeted-app-list.png)
 ## Steg 4: Distribuera appen
 Du kan distribuera appar till slutanvändarna på följande sätt:
@@ -75,6 +80,6 @@ Du kan ta bort en branschspecifik app från applistan.  Den här åtgärden tar 
   Detta tar bort apparna från listan över branschspecifika appar och Riktad lista över appar i MAM-principen.
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

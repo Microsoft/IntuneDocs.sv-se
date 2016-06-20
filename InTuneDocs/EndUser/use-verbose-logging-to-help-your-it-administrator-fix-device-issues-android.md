@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -32,9 +32,11 @@ När din Android-enhet har registrerats i Intune kan du använda inställningen 
 
 För att aktivera eller inaktiva **Utförlig loggning** loggar du in i företagsportalappen med dina inloggningsuppgifter för arbetet eller skolan och trycker på **Inställningar** och sedan på på/av-knappen bredvid inställningen **Utförlig loggning**.
 
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

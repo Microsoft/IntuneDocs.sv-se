@@ -18,7 +18,7 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -69,6 +69,6 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
   - [Skapa en princip för villkorlig åtkomst för Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

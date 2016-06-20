@@ -18,7 +18,7 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -39,7 +39,7 @@ När en användare försöker ansluta till en fil med en app som stöds, till ex
 >[!IMPORTANT]
 >Villkorlig åtkomst för datorer och Windows 10 Mobile-enheter med appar som använder modern autentisering är inte tillgängligt för alla Intune-kunder för närvarande. Om du redan använder dessa funktioner behöver du inte göra något. Du kan fortsätta använda dem.
 
->Om du inte har skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar som använder modern autentisering och vill göra det, måste du skicka en begäran.  Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [Connect-webbplatsen](http://go.microsoft.com/fwlink/?LinkId=761472)
+>Om du inte har skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar som använder modern autentisering och vill göra det, måste du skicka en begäran.  Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [Connect-webbplatsen](http://go.microsoft.com/fwlink/?LinkId=761472).
 
 **Innan** du konfigurerar en princip för villkorlig åtkomst för SharePoint Online måste du:
 - Ha en **SharePoint Online-prenumeration**, och användarna måste ha licens för SharePoint Online.
@@ -48,7 +48,7 @@ När en användare försöker ansluta till en fil med en app som stöds, till ex
   För att kunna ansluta till de nödvändiga filerna måste enheten:
 -   Vara **registrerad** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller vara en domänansluten dator.
 
--   Vara **registrerad** i Azure Active Directory (detta sker automatiskt när enheten registreras med
+-   **Registrera enheten** i Azure Active Directory (detta sker automatiskt när enheten registreras med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
 
 
 -   Vara kompatibel med eventuella [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper
@@ -76,9 +76,9 @@ AAD DRS aktiveras automatiskt för Intune och Office 365-kunder. Kunder som reda
   - Om principen är konfigurerad att kräva domänanslutning och datorn inte är domänansluten visas ett meddelande som uppmanar användaren att kontakta IT-administratören.
 
   - Om principen är konfigurerad att kräva domänsanslutning eller efterlevnad och datorn inte uppfyller något av kraven visas ett meddelande med instruktioner som hjälper användaren att installera företagsportalappen och registrera sig.
--    [Modern autentisering för Office 365 måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
+-    [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
 
-    Med modern autentisering kan Windows-baserade Office 2013-klienter använda ADAL-baserad (Active Directory Authentication Library) inloggning. Metoden ökar även säkerheten med till exempel **multifaktorautentisering** och **certifikatbaserad autentisering**
+    Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentication Library) inloggning i Windows-baserade Office 2013-klienter och förbättrar säkerheten med bland annat **multifaktorautentisering** och **certifikatbaserad autentisering**.
 
 
 ## Konfigurera villkorlig åtkomst för SharePoint Online
@@ -97,13 +97,13 @@ Om en användare finns i båda grupperna, kommer de att vara befriade från poli
 ### Steg 2: Ställ in och distribuera en efterlevnadsprincip
 Om du inte redan har gjort det skapar du och distribuerar en efterlevnadsprincip för de användare som SharePoint Online-principen ska tillämpas på.
 
-> Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
+> [!NOTE] Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
-Mer information om hur du konfigurerar efterlevnadsprincipen finns i [Skapa en efterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md)
+Mer information om hur du konfigurerar efterlevnadsprincipen finns i [Skapa en efterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md).
 
-> Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
+> [!IMPORTANT] Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
 
-När du är klar fortsätter du till **Steg 3**.
+När du är klar, fortsätt till **Steg 3**.
 
 ### Steg 3: Ställ in SharePoint Online-principen
 Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter kan komma åt SharePoint Online. Denna policy kommer att lagras i Azure Active Directory.
@@ -121,7 +121,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
         Detta kräver att alla enheter som används för att komma åt **SharePoint Online** registreras i Intune och att de uppfyller principkraven.  Klientprogram som använder **modern autentisering** omfattas av principen för villkorlig åtkomst. Om plattformen inte stöds av Intune för närvarande blockeras åtkomsten till **SharePoint Online**.
         >[!TIP]
-        >Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [webbplatsen för Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472)
+        >Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [webbplatsen för Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
 
     -   **Vissa plattformar**
 
@@ -129,7 +129,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
      För Windows-datorer måste datorn antingen vara domänansluten eller registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och kompatibel. Du kan ange följande krav:
 
-     -   **Enheter måste vara domänanslutna eller kompatibla.** Välj det här alternativet om du vill att datorerna antingen ska vara domänanslutna eller kompatibla med principer som angetts i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Om datorn inte uppfyller något av dessa krav ombeds användaren att registrera enheten i
+     -   **Enheter måste vara domänanslutna eller kompatibla.** Välj det här alternativet om du vill att datorerna antingen ska vara domänanslutna eller kompatibla med principer som angetts i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Om datorn inte uppfyller något av dessa krav ombeds användaren att registrera enheten i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
      -   **Enheter måste vara domänanslutna.** Välj det här alternativet om du vill kräva att datorerna ska vara domänanslutna för att få åtkomst till Exchange Online. Om datorn inte är domänansluten blockeras åtkomsten till e-posten och användaren uppmanas att kontakta IT-administratören.
 
@@ -139,7 +139,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
 5.  Under **Undantagna Grupper**, kan du alternativt klicka på **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna policyn.
 
-6.  Klicka på **Spara** när du är klar.
+6.  När du är klar klicka på **Spara**.
 
 Du behöver inte använda den villkorliga åtkomstpolicyn, den träder i kraft omedelbart.
 
@@ -158,6 +158,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 [Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

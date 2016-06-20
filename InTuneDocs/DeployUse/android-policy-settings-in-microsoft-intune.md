@@ -18,7 +18,7 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -138,8 +138,8 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
-|**Rapportera inkompatibilitet när användare installerar apparna i listan**|Visar en lista med de appar som inte hanteras av Intune och som användarna inte får installera och köra.|
-|**Rapportera inte inkompatibilitet när användare installerar apparna i listan**|Visar listan med de appar som användare tillåts att installera. För att fortsätta vara kompatibla får användarna inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt.|
+|**Rapportera inkompatibilitet när användare installerar apparna i listan**|Visar en lista med de appar som inte hanteras av Intune och som du inte vill att användarna ska installera och köra. Om användarna installerar en av de här apparna skrivs det upp i en rapport över icke-kompatibla appar.|
+|**Rapportera inte inkompatibilitet när användare installerar apparna i listan**|Ange de appar som du vill tillåta i ditt företag. För att fortsätta vara kompatibla får användarna inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt.|
 |**Lägg till**|Lägger till en app i den markerade listan. Ange ett namn, eventuellt appens utgivare och webbadressen till appen i appbutiken.<br /><br />Mer hjälp finns i Så här anger du webbadresser till appbutiker senare i det här avsnittet.|
 |**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och app-URL i filen.|
 |**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
@@ -150,7 +150,7 @@ Ange följande inställningar för **Samsung KNOX-enheter**:
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
-|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Klicka på **Bläddra** och välj den hanterade app som kommer att tillåtas att köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.|
+|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Välj **Bläddra** och välj den hanterade app som kommer att tillåtas att köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.|
 |**Tillåt volymknappar**|Aktiverar eller inaktiverar användningen av volymknapparna på enheten.|
 |**Tillåt aktiveringsknapp på skärmen**|Aktiverar eller inaktiverar aktiveringsknappen på enhetens skärm.|
 
@@ -161,9 +161,9 @@ Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten
 
 ###### Så här kör du Inkompatibilitetsrapporter för appar
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och välj sedan **Visa rapport**.
 
 #### Så här anger du webbadresser till appbutiker
 Om du vill specificera en app-URL i listan över kompatibla och ej kompatibla appar ska du använda följande format:
@@ -177,10 +177,9 @@ I [App-delen i Google Play](https://play.google.com/store/apps) söker du efter 
 ## Anpassade principinställningar
 Använd **Anpassad konfigurationsprincip för Android** i Microsoft Intune för att distribuera OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) som kan användas till att styra funktioner på Android-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
-Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer. Information om vilka inställningar som du kan konfigurera med dessa principer finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer.
 
-> [!NOTE]
-> För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel. Mer information finns i Konfigurera en anpassad Wi-Fi-profil med en i förväg delad nyckel senare i det här avsnittet.
+> [!NOTE] För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel.
 
 ### Allmänna inställningar
 
@@ -258,6 +257,6 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -18,7 +18,7 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -40,7 +40,7 @@ Om du bara vill ta bort vissa företagsdata från appar skapar du en rensningsbe
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune med rutan Sammanfattning](../media/AppManagement/AzurePortal_MAM_WipeRequests.png)
 
-2.  Välj  **Ny rensningsförfrågan**
+2.  Välj  **Ny rensningsförfrågan**.
 
     ![Skärmbild av bladet Ny rensningsförfrågan](../media/AppManagement/AzurePortal_MAM_NewWipeRequest.png)
 
@@ -58,7 +58,7 @@ Bladet **Hantering av mobilprogram i Intune** innehåller en sammanfattad rappor
 
 1.  Öppna bladet **Rensningsförfrågan** genom att välja rutan **Rensningsförfrågan** i bladet **Hantering av mobilprogram i Intune** .
 
-2.  I bladet **Rensningsbegäran** ser du listan med dina begäranden grupperade efter användare.  Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare.  Statusen anger om en rensningsbegäran fortfarande är **väntande**, **misslyckad**eller **lyckad**
+2.  I bladet **Rensningsbegäran** ser du listan med dina begäranden grupperade efter användare.  Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare.  Statusen anger om en rensningsbegäran fortfarande är **väntande**, **misslyckad**eller **lyckad**.
 
 ### Se även
 [Skydda appdata med principer för hantering av mobila appar ](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
@@ -66,6 +66,6 @@ Bladet **Hantering av mobilprogram i Intune** innehåller en sammanfattad rappor
 [Använda Azure Portal](azure-portal-for-microsoft-intune-mam-policies.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

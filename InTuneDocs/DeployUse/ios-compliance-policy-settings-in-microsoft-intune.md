@@ -18,7 +18,7 @@ ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,53 +37,54 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 ## Systemsäkerhetsinställningar
 ### Lösenord
-- **Kräv lösenord för att låsa upp mobila enheter:**    Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att komma åt sin enhet.
+- **Kräv lösenord för att låsa upp mobila enheter:** Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter. iOS-enheter som använder lösenord krypteras.
 
-- iOS-enheter som använder lösenord krypteras.
+- **Tillåt enkla lösenord:** Ställ in på **Ja** för att låta användarna skapa enkla lösenord som '**1234**'eller'**1111**'.
 
--  **Tillåt enkla lösenord:** Ställ in
-- på **Ja** för att låta användarna skapa enkla lösenord
+-  **Minsta längd på lösenord:** Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
+- **Lösenordstyp som krävs**: Ange om användarna måste skapa ett **alfanumeriskt** eller **numeriskt lösenord**.
 
-- som till exempel '**1234**'eller'**1111**'. Minsta längd på lösenord:
-  -   Ange det minsta antalet siffror eller tecken som
-  -   användarens lösenord måste innehålla.
-  -   **Lösenordstyp som krävs:** Ange om användarna måste skapa
-  -   ett **alfanumeriskt**, eller ett **numeriskt** lösenord.
+- **Minsta antal teckenuppsättningar:** Om du konfigurerar alternativet för **Krav på lösenordstyp** som **Alfanumeriskt** använder du den här inställningen för att specificera det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
+  -   Gemener
+  -   Versaler
+  -   Symboler
+  -   Siffror
 
-  **Minsta antal teckenuppsättningar:** Om du ställer in **Lösenordstyp som krävs** på
+  Om du anger en hög siffra för den här inställningen kräver det att användarna skapar lösenord som är mer komplexa.
 
-  **alfanumeriskt**, så kan du använda den här inställningen för att ange det minsta antalet
-- teckenuppsättningar som lösenordet måste innehålla.
+  För iOS-enheter refererar den här inställningen för antalet specialtecken (t.ex, **!**, **#**,**&amp;**) som måste inkluderas i lösenordet.
+- **Minuter av inaktivitet innan lösenord krävs:**  Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
 
-- De fyra teckenuppsättningarna är:
+- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills användarens lösenord upphör att gälla och användaren måste ange ett nytt lösenord.
 
-- Gemener
+- **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** om du inte vill att användaren ska kunna återanvända tidigare använda lösenord.
 
-- Versaler
+- **Förhindra återanvändning av tidigare lösenord**: Om **Spara lösenordshistorik** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
 
-- Symboler Siffror
+- **Kräv lösenord när enheten lämnar inaktivt läge:** Den här inställningen bör användas tillsammans med inställningen **Minuter av inaktivitet innan lösenord måste anges**. Användarna uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i inställningen **Minuter av inaktivitet innan lösenord måste anges**.
 
-### Om du anger en hög siffra för den här inställningen kräver det att användarna skapar mer komplexa lösenord.
-- För iOS-enheter refererar den här inställningen för antalet specialtecken (t.ex, **!**, **#**, **&amp;**) som måste inkluderas i lösenordet. **Minuter av inaktivitet innan lösenord krävs:**  Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
-  - **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills användarens lösenord upphör att gälla
-  - och användaren måste ange ett nytt lösenord. **Spara lösenordshistorik:** Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** för att förhindra att användaren återanvända tidigare använda lösenord.
-
-
-- **Förhindra återanvändning av tidigare lösenord:** Om du har valt **Spara lösenordshistorik** anger du det antal tidigare använda lösenord som inte får återanvändas.
-
-     Kräv lösenord när enheten återgår från viloläge:
-
-## Den här inställningen bör användas ihop med inställningen **Antal minuters inaktivitet innan lösenord krävs**.
-
-- Slutanvändarna uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i
-
-##  inställningen **Antal minuters inaktivitet innan lösenord krävs**.
-- E-postprofil
-**E-postkontot måste hanteras av Intune:** när det här alternativet är ställt på **Ja** måste enheten använda e-postkontot som distribuerats till enheten. Enheten betraktas som icke-kompatibel i följande situationer:
-
-- E-postprofilen måste också distribueras till samma användargrupp som den som berörs av efterlevnadsprincipen, annars betraktas användarnas enheter som inkompatibla. Enheten rapporteras som inkompatibel om användaren redan har konfigurerat ett e-postkonto på enheten som matchar Intune-epostprofilen som distribuerats till enheten.
+### E-postprofil
+- **E-postkontot måste hanteras av Intune:** när det här alternativet är ställt på **Ja** måste enheten använda e-postkontot som distribuerats till enheten. Enheten betraktas som icke-kompatibel i följande situationer:
+  - E-postprofilen måste också distribueras till samma användargrupp som den som berörs av efterlevnadsprincipen, annars betraktas användarnas enheter som inkompatibla.
+  - Enheten rapporteras som inkompatibel om användaren redan har konfigurerat ett e-postkonto på enheten som matchar Intune-epostprofilen som distribuerats till enheten. Intune kan inte skriva över den användartillhandahållna profilen, och kan därför inte hantera den. För att försäkra sig om efterlevnad måste användaren ta bort de befintliga e-postinställningarna. Efter det kan Intune installera den hanterade e-postprofilen.
 
 
-<!--HONumber=May16_HO2-->
+- **Välj den e-postprofil som måste hanteras av Intune:**
+     Om inställningen **E-postkontot måste hanteras av Intune** har valts, välj **Välj** för att ange e-postprofilen för Intune. E-postprofilen måste finnas på enheten.
+
+     Information om e-postprofiler finns i [Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).
+
+## Inställningar för enhetens hälsotillstånd
+
+- **Enheten får inte vara jailbrokad eller rotad:** Om du aktiverar den här inställningen kommer jailbrokade enheter inte att vara kompatibla.
+
+##  Egenskaper för enheten
+- **Lägsta operativsystemversion som krävs:** När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel.
+En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
+
+- **Högsta tillåtna version av operativsystemet:** När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+
+
+<!--HONumber=Jun16_HO2-->
 
 

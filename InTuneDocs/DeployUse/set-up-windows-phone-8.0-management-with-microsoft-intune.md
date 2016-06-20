@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Konfigurera hantering av Windows Phone 8.0 med Microsoft Intune | Microsoft Intune
+title: Konfigurera hantering av Windows Phone 8.0 | Microsoft Intune
 description:
 keywords:
 author: NathBarn
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/09/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -28,6 +28,8 @@ ms.suite: ems
 # Konfigurera enhetshantering för Windows Phone 8.0
 
 Windows Phone 8.0 kräver ett Symantec-certifikat för att installera appen för Intune-företagsportalen och möjliggöra hantering av enheter. Ett certifikat krävs även för att signera branschspecifika företagsappar. Följande avsnitt avser endast Windows Phone 8.0. Information om att hantera Windows Phone 8.1 eller senare, inklusive Windows 10 Mobile, finns i [Konfigurera Windows Phone-registreringen](set-up-windows-phone-management-with-microsoft-intune.md).
+
+> [!IMPORTANT] Från September 2016 kommer företagsportalappen för Windows 8.0 och Windows Phone 8.0 inte längre vara tillgänglig för nedladdning.
 
 -   **Windows Phone 8** – Certifikat som krävs
 -   **Windows Phone 8.1 och Windows 10 Mobile** kräver bara ett certifikat om:
@@ -184,6 +186,6 @@ Du kan distribuera företagsportalappen till Windows Phone 8.1-enheter med Intun
     > -   Om du måste installera separat inlästa appar, registrera Windows Phone 8.0-enheter samt hämta ssp.xap, skapar du en ny programvarudistribution av ssp.xap och distribuerar den med åtgärden **avinstallera** . Windows Phone 8.0-enheter stöder inte framtvingad installation eller avinstallation av appar, så de kommer att ignorera distributionen. Windows Phone 8.1-enheter stöder avinstallationsåtgärden och tar bort ssp.xap.
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

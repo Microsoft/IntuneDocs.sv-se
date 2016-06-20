@@ -6,7 +6,7 @@ description:
 keywords:
 author: robstackmsft
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -50,17 +50,17 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
 
 ## Skapa en konfigurationsprincip
 
-1.  Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och klicka på **Princip** &gt; **Konfigurationsprinciper** &gt; **Lägg till**.
+1.  Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Princip** &gt; **Konfigurationsprinciper** &gt; **Lägg till**.
 
 2.  Välj den princip som du vill använda, välj att använda de rekommenderade inställningarna för principen (om de är tillgängliga kan du ändra inställningarna senare) eller välj att skapa en anpassad princip med dina egna inställningar.
 
     > [!TIP] Hjälp med att välja rätt princip finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
 
-3.  Klicka på **Skapa princip**när du är klar.
+3.  Välj **Skapa princip** när du är klar.
 
 4.  Konfigurera ett namn och en valfri beskrivning för principen på skärmen **Skapa princip** .
 
-5.  Konfigurera nödvändiga principinställningar och klicka på **Spara princip**.
+5.  Konfigurera nödvändiga principinställningar och välj **Spara princip**.
 
     Om du behöver hjälp med några principinställningar väljer du principtypen i följande lista:
 
@@ -73,10 +73,10 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
     - [Inställningar för uppgradering av Windows-utgåva](edition-upgrade-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Mac OS X-enheter](mac-os-x-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
-    - [Inställningar för villkorsprincipen](terms-and-condition-policy-settings-in-microsoft-intune.md)
-    - [Allmänna inställningar för mobila enheter (äldre)](mobile-device-security-policy-settings-in-microsoft-intune.md)
+    - [Inställningar för villkorsprinciper](terms-and-condition-policy-settings-in-microsoft-intune.md)
+    - [Allmänna inställningar för mobila enheter (bakåtkompatibelt)](mobile-device-security-policy-settings-in-microsoft-intune.md)
 
-4.  I bekräftelsedialogrutan klickar du på **Ja** om du vill distribuera principen nu eller klickar på **Nej** om du vill skapa principen utan att distribuera den.
+4.  I bekräftelsedialogrutan väljer du **Ja** om du vill distribuera principen nu eller **Nej** om du vill skapa principen utan att distribuera den.
 
 Du kan visa och redigera den nya principen genom att gå igenom ämnena för respektive principtyp på arbetsytan **Princip** .
 
@@ -89,35 +89,26 @@ Nu när du har skapat en princip vill du förmodligen distribuera den till en el
 
 ## Distribuera en konfigurationsprincip
 
-1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
+1.  På arbetsytan **Princip** markerar den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** – Välj en eller flera grupper som du vill distribuera principen till och välj sedan **Lägg till** &gt; **OK**.
 
-    -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
+    -   **Om du vill stänga dialogrutan utan att distribuera den** – Välj **Avbryt**.
 
 När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
 
 ## Hantera principer
 
-1.  I [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com/), klickar du på **Princip**, bläddrar sedan fram och markerar den princip som du vill hantera.
+1.  I [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com/), väljer du **Princip**, bläddrar sedan fram och markerar den princip som du vill hantera.
 
 2.  Välj någon av följande åtgärder:
 
 - **Redigera** – Öppnar egenskaperna för den markerade principen så att du kan göra ändringar.
 - **Ta bort** – Tar bort den markerade principen.<br>När du tar bort en princip tas den bort från alla grupper som den har distribuerats till.
-- **Hantera distribution** – Välj den grupp som du vill distribuera principen till och klicka på **Lägg till**.
+- **Hantera distribution** – Välj den grupp som du vill distribuera principen till och välj sedan **Lägg till**.
 
-## Uppgifter för Intune-principer
-
-### Så här gör du om du vill uppdatera principerna på en enhet för att säkerställa att de är aktuella (gäller endast Windows-datorer med Intune-klientprogramvaran)
-
-1.  I [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com/), klickar du på **Grupper**och väljer en enhetsgrupp.
-
-2.  Markera de enheter som du vill uppdatera principerna på och klicka sedan på **Fjärruppgifter** &gt; **Uppdatera principer**.
-
-3.  Klicka på **Fjärruppgifter** i det nedre högra hörnet i Intune-administrationskonsolen för att kontrollera aktivitetsstatusen.
 
 ## Vanliga frågor om Intune-principer
 
@@ -187,25 +178,7 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
         - Lösenordstyp krävs
         - Lösenordets giltighetstid (i dagar)
         - Kom ihåg tidigare lösenord
-        - Antal tillåtna, upprepad felinloggningar innan enheten rensas
-        - Antal minuters inaktivitet innan lösenord krävs
-        - Krävd lösenordstyp – minsta antal tecken
-        - Tillåt kamera
-        - Filkryptering på mobil enhet
-        - Tillåt flyttbara lagringsenheter
-        - Tillåt webbläsare
-        - Tillåt appbutik
-        - Tillåt skärmbild
-        - Tillåt geolokalisering
-        - Tillåt Microsoft-konto
-        - Tillåt kopiera och klistra in
-        - Tillåt Wi-Fi -delning
-        - Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter
-        - Tillåt rapportering av trådlösa surfpunkter
-        - Tillåt fabriksåterställning
-        - Tillåt Bluetooth
-        - Tillåt NFC
-        - Tillåt Wi-Fi
+        - Antal upprepade misslyckade inloggningar innan enheten rensas – Minuter av inaktivitet innan lösenord krävs – Krävd lösenordstyp – minsta antal teckenuppsättningar – Tillåt kamera – Kräv kryptering på mobila enheter – Tillåt flyttbara lagringsenheter – Tillåt webbläsare – Tillåt appbutik – Tillåt tagning av skärmbild – Tillåt geolokalisering – Tillåt Microsoft-konto – Tillåt kopiera och klistra in – Tillåt trådlös Internetdelning – Tillåt automatisk anslutning till kostnadsfria trådlösa surfzoner – Tillåt rapportering om trådlösa surfzoner – Tillåt fabriksåterställning – Tillåt Bluetooth – Tillåt NFC – Tillåt Wi-Fi
     
     - **iOS** – Alla inställningar tas bort, utom:
         - Tillåt röstroaming
@@ -220,9 +193,16 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
 - **Inställningar för Windows-brandväggen** – Inställningarna återställs till standardinställningarna för datorns operativsystem. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 
+### Hur kan jag uppdatera principerna på en enhet för att säkerställa att de är aktuella (gäller endast Windows-datorer med Intune-klientprogramvaran)
+
+1.  Markera de enheter i en enhetsgrupp som du vill uppdatera principerna på och välj sedan **Fjärruppgifter** &gt; **Uppdatera principer**.
+2.  Välj **Fjärruppgifter** i det nedre högra hörnet i Intune-administrationskonsolen för att kontrollera aktivitetsstatusen.
+
+### Var kan jag få hjälp med att felsöka principer?
+
+Se [Felsökningsprinciper i Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
 
 
-
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

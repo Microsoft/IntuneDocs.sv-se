@@ -2,6 +2,7 @@
 
 # [Kom igång](what-to-know-before-you-start-microsoft-intune.md)
 ## [Vad du behöver veta innan du börjar](what-to-know-before-you-start-microsoft-intune.md)
+### [Mobila enheter och datorer som stöds](supported-mobile-devices-and-computers.md)
 ### [Webbläsare som stöds](supported-web-browsers.md)
 ### [Krav på nätverksinfrastruktur](network-infrastructure-requirements-for-microsoft-intune.md)
 ### [Administrativa konton, webbplatser och behörigheter](administrative-accounts-websites-perms.md)
@@ -38,6 +39,6 @@
 # [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

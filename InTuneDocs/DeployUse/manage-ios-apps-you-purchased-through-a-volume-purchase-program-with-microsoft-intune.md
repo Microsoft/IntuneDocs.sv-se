@@ -18,7 +18,7 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -46,28 +46,29 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan dock starta en manuell synkronisering när som helst.
 * När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
 * Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer. Intune synkroniserar inte de användarkontona till Intune som en säkerhetsåtgärd. Intune synkroniserar endast data från Apple VPP-tjänsten som har skapats av Intune. 
+* Du kan inte distribuera iOS VPP-appar till enheter som har registrerats med hjälp av Device Enrollment Protocol (DEP).
 
 ## Så här skaffar du och laddar upp en Apple VPP-token
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Admin** &gt; **iOS och Mac OS X** &gt; **Volyminköpsprogram**.
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin** &gt; **iOS och Mac OS X** &gt; **Volyminköpsprogram**.
 
-2.  Klicka på länken **Apple VPP-konto** och registrera dig för volyminköpsprogrammet för företag om du inte redan gjort det. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto.
+2.  Välj länken **Apple VPP-konto** och registrera dig för volyminköpsprogrammet för företag om du inte redan gjort det. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto.
 
-3.  På sidan **Hantera Apple VPP (Volume Purchase Program)** i Intune-konsolen klickar du på **Överför VPP-token**.
+3.  På sidan **Hantera Apple VPP (Volume Purchase Program)** i Intune-konsolen väljer du **Överför VPP-token**.
 
-4.  I dialogrutan **Överför en VPP-token** anger du eller klistrar in namnet på VPP-token och ditt Apple-ID och klickar sedan på **Överför**.
+4.  I dialogrutan **Överför en VPP-token** anger du eller klistrar in namnet på VPP-token och ditt Apple-ID och väljer sedan **Överför**.
 
-5.  I varningsdialogrutan klickar du på kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och klickar sedan på **Ja**.
+5.  I varningsdialogrutan väljer du kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och väljer sedan **Ja**.
 
 På sidan **Volyminköpsprogram** kan du nu visa information om Apple VPP-token, inklusive när den senast uppdaterades, när den upphör att gälla och när den senast synkroniserades med Intune.
 
-Du kan synkronisera data från Apple med Intune när som helst genom att klicka på **Synkronisera nu**.
+Du kan synkronisera data från Apple med Intune när som helst genom att välja **Synkronisera nu**.
 
 ## Distribuera en volyminköpt app
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
 
-2.  Välj den app som du vill distribuera, klicka på **Hantera distribution**, genomför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+2.  Välj den app som du vill distribuera, välj sedan **Hantera distribution**, genomför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
 När du distribuerar appar som en **obligatorisk** installation används en licens av alla användare som installerar appen.
 
@@ -89,6 +90,6 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

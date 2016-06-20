@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 06/03/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -32,43 +32,43 @@ Följ dessa steg för åtgärder som du behöver utföra på din Android-enhet o
 
 ## Installation av företagsportalappen och registrering av Intune
 
-Det här avsnittet innehåller information om installationen av Intune-företagsportalen och registreringen av iOS-enheter.
+Det här avsnittet innehåller information om installationen av Intune-företagsportalen och registreringen av Android-enheter.
 
-- [Registrera din enhet i Intune](enroll-your-device-in-Intune-android.md)</br>
+- [Registrera din enhet i Intune](enroll-your-device-in-Intune-android.md)
 - [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 
 ## Saker du kan göra när enheten har registrerats i Intune
 
-Det här avsnittet innehåller information om åtgärder som du kan vidta när din iOS-enhet har registrerats i Intune.
+Det här avsnittet innehåller information om åtgärder som du kan vidta när din Android-enhet har registrerats i Intune.
 
-- [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)</br>
-- [Kryptera din enhet](encrypt-your-device-android.md)</br>
-- [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)</br>
-- [Installera företagets VPN (Virtual Private Network)](install-your-companys-virtual-private-network-VPN-android.md)</br>
-- [Ställa in hur lång tid det tar innan enheten låser sig](set-the-amount-of-time-before-your-device-is-locked-android.md)</br>
-- [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-android.md)</br>
-- [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)</br>
-- [Avregistrera enheten från Intune](unenroll-your-device-from-intune-android.md)</br>
-- [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)</br>
-- [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)</br>
+- [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)
+- [Kryptera din enhet](encrypt-your-device-android.md)
+- [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
+- [Installera företagets VPN (Virtual Private Network)](install-your-companys-virtual-private-network-VPN-android.md)
+- [Ställa in hur lång tid det tar innan enheten låser sig](set-the-amount-of-time-before-your-device-is-locked-android.md)
+- [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-android.md)
+- [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
+- [Avregistrera enheten från Intune](unenroll-your-device-from-intune-android.md)
+- [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+- [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Vad händer om du återställer en Android-enhet med hjälp av företagsportalappen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
 
 ## Åtgärda problem med din enhet
 
-Det här avsnittet innehåller information om hur du löser problem som kan uppstå när en iOS-enhet registreras i Intune.
+Det här avsnittet innehåller information om hur du löser problem som kan uppstå när en Android-enhet registreras i Intune.
 
-- [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)</br>
-- [Skicka loggar med diagnostikdata till IT-administratören via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)</br>
-- [Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)</br>
-- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-administrator-android.md)</br>
-- [Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-android.md)</br>
-- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)</br>
-- [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)</br>
-- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)</br>
-
-
+- [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Skicka loggar med diagnostikdata till IT-administratören via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
+- [Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
+- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-administrator-android.md)
+- [Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-android.md)
+- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)
+- [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
+- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+
+<!--HONumber=Jun16_HO2-->
 
 

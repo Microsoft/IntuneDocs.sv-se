@@ -18,7 +18,7 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -30,7 +30,7 @@ ms.suite: ems
 För att skydda företagets data, måste du se till att de enheter som används för åtkomst till företagets appar och data överensstämmer med vissa regler, t.ex. använder en PIN-kod för att komma åt enheten, och kryptering av data som lagras på enheten. Dessa regler kallas för en princip för efterlevnad.
 
 ## Hur använder jag principer för efterlevnad?
-Du kan använda principer för efterlevnad med principer för villkorlig åtkomst för att begränsa åtkomsten till enheter som uppfyller principregler för efterlevnad. Läs artikeln om att [begränsa åtkomst till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) för att förstå hur två principer kan användas tillsammans.
+Du kan använda principer för efterlevnad med principer för villkorlig åtkomst för att endast tillåta åtkomst för enheter som uppfyller principregler för efterlevnad för åtkomst till e-post och andra tjänster. Läs artikeln om att [begränsa åtkomst till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) för att förstå hur två principer kan användas tillsammans.
 
 Du kan också använda principer för efterlevnad oberoende av villkorlig åtkomst. När de används oberoende kommer de aktuella enheterna att utvärderas och rapporteras med deras efterlevnadsstatus. Du kanske vill rapportera om hur många enheter som inte är krypterade eller vilka enheter som är jailbreakade eller rootade. När funktionen används enskilt, finns inga åtkomstbegränsningar till företagsresurser på plats.
 
@@ -67,6 +67,6 @@ I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprincipe
 [Begränsa åtkomst till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

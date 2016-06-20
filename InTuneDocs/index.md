@@ -2,231 +2,249 @@
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
 
-title: Microsoft Intune Documentation
-description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+title: Microsoft Intune-dokumentation
+description: Teknisk dokumentation om Microsoft Intune - hantering av mobilenheter och mobilapplikationer
 keywords: intune documentation, MDM documentation, Mobile Device Management Documentation, Mobile Device and Application Management Documentation
 author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage
-ms.prod: 
+ms.prod:
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology:
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 
 ---
-# Microsoft Intune Documentation
+# Microsoft Intune-dokumentation
 <article id="main">
     <section id="hero-content">
-      <h1>Microsoft Intune Documentation</h1>
-      <h2>Learn how to deploy and manage Microsoft Intune, a mobile device and application management service.</h2>
-      <h3>Manage Intune with Configuration Manager? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">View Configuration Manager Documentation &rarr;</a></h3>
+      <h1>Microsoft Intune-dokumentation</h1>
+      <h2>Lär dig att distribuera och hantera Microsoft Intune, en hanteringstjänst för mobila enheter och program.</h2>
+      <h3>Hantera Intune med Configuration Manager? <a href="https://technet.microsoft.com/en-us/library/mt627883.aspx" target="_blank">Se Configuration Manager-dokumentation &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Introduction to Microsoft Intune</a></li>
-          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Common scenarios that rely on Intune</a></li>
-          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Start with a paid subscription</a></li>
+          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Introduktion till Microsoft Intune</a></li>
+          <li><a href="/intune/understand-explore/common-ways-to-use-intune">Vanliga scenarier som förlitar sig på Intune</a></li>
+          <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Snabbstartsguide för Intune</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Overview of device and app lifecycles</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Protect app data</a></li>
-          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">What to tell your end users about Intune</a></li>
+          <li><a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">Översikt över enhets- och applivscykler</a></li>
+          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Skydda appdata</a></li>
+          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Vad du bör berätta för slutanvändare om Intune</a></li>
         </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
         <!-- <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2> -->
         <ul class="journeys-list">
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/intune/understand-explore/introduction-to-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Understand &amp; Explore</p>
+                  <p>Förstå &amp; utforska</p>
                 </div>
-                <p class="description column-two-thirds">Learn the basic concepts and capabilities of Microsoft Intune.
+                <p class="description column-two-thirds">Lär dig mer om grundläggande koncept och funktioner i Microsoft Intune.
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
-                    <h3>Introduction to Intune</h3>
-                    <p>Learn about how Intune provides device, app, and data management capabilities for mobile devices (iOS devices, Android devices, Windows phones) and Windows PCs.</p>
+                    <h3>Introduktion till Intune</h3>
+                    <p>Lär dig om hur Intune tillhandahåller funktioner för enhets-, program- och datahantering för mobila enheter (iOS-enheter, Android-enheter, Windows Phone-enheter) och Windows-datorer.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune">
-                    <h3>Intune evaluation guide</h3>
-                    <p>Use the trial guide to walk through the steps to get your trial set up with up to 100 users and devices.</p>
+                    <h3>Utvärderingsguiden för Intune</h3>
+                    <p>Använd guiden för utvärderingsversionen för att gå igenom stegen för att konfigurera din utvärderingsversion med upp till 100 användare och enheter.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/common-ways-to-use-intune">
-                    <h3>Common scenarios</h3>
-                    <p>Consider how Intune is commonly used to solve real-world business problems.</p>
+                    <h3>Vanliga scenarier</h3>
+                    <p>Överväg hur Intune ofta används för att lösa verkliga affärsproblem.</p>
                   </a>
                 </li>
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Get Started</p>
+                  <p>Kom igång</p>
                 </div>
-                <p class="description column-two-thirds">Get your environment set up.
+                <p class="description column-two-thirds">Kom igång med att konfigurera din miljö.
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
-                    <h3>What to know before you start</h3>
-                    <p>Quickly familiarize yourself with the baseline requirements for any Intune deployment.</p>
+                    <h3>Vad du behöver veta innan du börjar</h3>
+                    <p>Bekanta dig snabbt med de grundläggande kraven för distribution av Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">
-                    <h3>Get started with a paid subscription</h3>
-                    <p>Building on the 30-day trial guide, this topic walks you through Azure Active Directory synchronization, domain and DNS considerations, and other Intune customizations.</p>
+                    <h3>Snabbstartsguide för Intune</h3>
+                    <p>Det här avsnittet vägleder dig genom Azure Active Directory-synkronisering, domän- och DNS-frågor samt andra anpassningar för Intune, och bygger på guiden för 30-dagars utvärderingsversionen.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/get-started/rollout-phases-for-microsoft-intune-deployment">
-                    <h3>Rollout phases</h3>
-                    <p>Define your Intune goals, architecture, pilot, and production rollout plans.</p>
+                    <h3>Distributionsfaser</h3>
+                    <p>Definiera dina Intune-mål, arkitektur, pilotprojekt och planer för produktionsdistribution.</p>
                   </a>
                 </li>
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">
                 <div class="title column-third">
                   <span class="step-number">3</span>
-                  <p>Deploy &amp; Use</p>
+                  <p>Distribuera &amp; använda</p>
                 </div>
-                <p class="description column-two-thirds">Manage devices, apps, and data with Intune.
+                <p class="description column-two-thirds">Hantera enheter, appar och data med Intune.
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune">
-                    <h3>Overview of device and app lifecycles</h3>
-                    <p>Learn about the typical phases involved with managing devices and apps using Intune.</p>
+                    <h3>Översikt över enhets- och applivscykler</h3>
+                    <p>Läs mer om de typiska faserna som ingår i hantering av enheter och appar med hjälp av Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/enroll-devices-in-microsoft-intune">
-                    <h3>Enroll devices</h3>
-                    <p>Learn the various ways to enroll mobile devices and Windows PCs into management with Intune.</p>
+                    <h3>Registrera enheter</h3>
+                    <p>Lär dig mer om olika sätt att registrera mobila enheter och Windows-datorer för hantering med Intune.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">
-                    <h3>What to tell your end users</h3>
-                    <p>Understand the steps your end users need to perform to use their devices with Intune and share this information with end users to help them complete tasks on their own.</p>
+                    <h3>Vad du ska säga till slutanvändarna</h3>
+                    <p>Förstå de steg som slutanvändarna behöver utföra för att använda sina enheter med Intune och dela information med slutanvändare för att hjälpa dem att utföra uppgifter på egen hand.</p>
                   </a>
                 </li>
               </ul>
-
-	      <ul class="row">
+          <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune">
-                    <h3>Device compliance policies</h3>
-                    <p>Create and use compliance policies that protect your apps and data.</p>
+                    <h3>Efterlevnadsprinciper för enheter</h3>
+                    <p>Skapa och använda efterlevnadsprinciper som skyddar dina appar och data.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune">
-                    <h3>Restrict access to email and O365 services</h3>
-                    <p>Use Intune's conditional access capability to restrict access to company email and Office 365 services.</p>
+                    <h3>Begränsa åtkomst till e-post och O365-tjänster</h3>
+                    <p>Använd Intunes funktion för villkorlig åtkomst för att begränsa åtkomsten till företagets e-post och Office 365-tjänster.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies">
-                    <h3>Manage settings and features on your devices</h3>
-                    <p>Use Intune policies to control settings and features on your devices and computers.</p>
+                    <h3>Hantera inställningar och funktioner på dina enheter</h3>
+                    <p>Använd Intune-principer för att styra inställningar och funktioner på dina enheter och datorer.</p>
                   </a>
                 </li>
               </ul>
-
                 <ul class="row">
                 <li class="column-third">
                   <a href="/intune/deploy-use/deploy-apps-in-microsoft-intune">
-                    <h3>Deploy apps to devices and PCs</h3>
-                    <p>Deploy an app to selected devices and users.</p>
+                    <h3>Distribuera appar till enheter och datorer</h3>
+                    <p>Distribuera en app till valda enheter och användare.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">
-                    <h3>Protect app data</h3>
-                    <p>Use Intune’s Mobile App Management (MAM) policies to help protect app data.</p>
+                    <h3>Skydda appdata</h3>
+                    <p>Använd Intunes hanteringsprinciper för mobila appar (MAM) för att skydda appdata.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune">
-                    <h3>Remote lock and passcode reset</h3>
-                    <p>Protect remote or lost devices by using remote lock and passcode capabilities.</p>
+                    <h3>Fjärrlåsning och lösenordsåterställning</h3>
+                    <p>Skydda fjärrenheter eller förlorade enheter med hjälp av funktionerna för fjärrlås och lösenord.</p>
                   </a>
                 </li>
               </ul>
-
-	    </section>
+        </section>
           </li>
-
-
-
           <li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/intune/develop/intune-app-sdk">
+                <div class="title column-third">
+                  <span class="step-number">4</span>
+                  <p>Utveckla och anpassa appar</p>
+                </div>
+                <p class="description column-two-thirds">Aktivera hantering av mobilappar för iOS och Android.</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-get-started">
+                    <h3>Kom igång med Microsoft Intune App SDK</h3>
+                    <p>Den här guiden går igenom de viktigaste stegen när du ska aktivera hantering av mobilappar i en app med Microsoft Intune.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-ios">
+                    <h3>Utvecklarhandbok för Intune App SDK för iOS</h3>
+                    <p>Intune App SDK för iOS innehåller ett statiskt bibliotek, resursfiler, API-rubriker, en plist-fil med inställningar för felsökning samt ett konfigurationsverktyg.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/develop/intune-app-sdk-android">
+                    <h3>Utvecklarhandbok för Intune App SDK för Android</h3>
+                    <p>Intune App SDK för Android är ett Android-standardbibliotek utan externa beroenden.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            </li>
+      <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/intune/troubleshoot/how-to-get-support-for-microsoft-intune">
                 <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>Troubleshoot</p>
+                  <span class="step-number">5</span>
+                  <p>Felsöka</p>
                 </div>
-                <p class="description column-two-thirds">Resources to help you troubleshoot Intune.</p>
+                <p class="description column-two-thirds">Resurser som hjälper dig att felsöka i Intune.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/troubleshoot/how-to-get-support-for-microsoft-intune">
-                    <h3>How to get support for Intune</h3>
-                    <p>Get familiar with different ways Microsoft provides global technical, pre-sales, and billing support.</p>
+                    <h3>Ta reda på hur du kan få support för Intune</h3>
+                    <p>Bekanta dig med olika sätt Microsoft tillhandahåller global teknisk support, förförsäljnings- samt faktureringssupport.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/troubleshoot/troubleshoot-device-enrollment-in-intune">
-                    <h3>Troubleshoot device enrollment</h3>
-                    <p>Solve problems encountered when enrolling devices.</p>
+                    <h3>Felsöka enhetsregistrering</h3>
+                    <p>Lösa problem som uppstår vid registrering av enheter.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune">
-                    <h3>Troubleshoot app deployment problems in Intune</h3>
-                    <p>Solve common app deployment problems.</p>
+                    <h3>Felsökning av problem med appdistribution i Intune</h3>
+                    <p>Lös vanliga appdistributionsproblem.</p>
                   </a>
                 </li>
               </ul>
@@ -235,29 +253,33 @@ ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
         </ul>
       </section>
     </div>
-
     <div class="section-border">
       <section class="resources container">
-      <h2 class="section-heading"><span class="icon icon-note"></span>Additional resources for Intune</h2>
+      <h2 class="section-heading"><span class="icon icon-note"></span>Fler resurser för Intune</h2>
       <div class="resource-list row">
           <ul class="column-half">
-          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Give feedback on Intune functionality</a></li>
-          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Give feedback on Intune documentation</a></li>
-          <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Intune documentation downloads</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Ge feedback för Intune-funktioner</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Ge feedback för Intune-dokumentation</a></li>
+          <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Nedladdningar av Intune-dokumentation</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="/enterprise-mobility/solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems" target="_blank">Fast Track Center for Enterprise Mobility Suite</a></li>
-          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">Microsoft Intune TechNet forum</a></li>
-          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Intune product page</a></li>
+          <li><a href="/enterprise-mobility/solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems" target="_blank">Fast Track Center för Enterprise Mobility Suite</a></li>
+          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">TechNet-forum om Microsoft Intune</a></li>
+          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Produktsidan för Intune</a></li>
           </ul>
       </div>
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up-to-date on Intune</p>
+      <p>Håll dig uppdaterad på Intune</p>
       <ol class="action-list">
-        <li><a href="https://blogs.technet.com/b/microsoftintune/" target="_blank" class="button-bordered button-translucent">Intune team blog</a></li>
-        <li><a href="https://twitter.com/msintune/" target="_blank" class="button-bordered button-translucent">@MSIntune on Twitter</a></li>
+        <li><a href="https://blogs.technet.com/b/microsoftintune/" target="_blank" class="button-bordered button-translucent">Intune-teamets blogg</a></li>
+        <li><a href="https://twitter.com/msintune/" target="_blank" class="button-bordered button-translucent">@MSIntune på Twitter</a></li>
       </ol>
     </aside>
 </article>
+
+
+<!--HONumber=Jun16_HO2-->
+
+

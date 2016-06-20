@@ -18,7 +18,7 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,7 +29,7 @@ ms.suite: ems
 Det här avsnittet beskriver de steg du kan använda för att skapa en efterlevnadsprincip som en enhet måste följa för att anses vara kompatibel.
 
 ##  Steg 1: Lägg till en ny princip
-  I [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com) väljer du **Princip** &gt; **Efterlevnadsprinciper** &gt; **Lägg till**
+  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Efterlevnadsprinciper** &gt; **Lägg till**.
 
   ![Skärmbild av sidan för efterlevnadsprincip i Intune-administratörskonsolen, som visar alternativet Lägg till på menyn överst på sidan](./media/intune-sa-3a-add-compliance-policy.png)
 
@@ -41,7 +41,7 @@ Aktivera önskade inställningar på sidan **Skapa princip**:
 ![Skärmbild av fliken Allmänt på sidan Skapa princip ](./media/intune-sa-3b-create-policy.png)
 
 ##  Steg 3: Spara principen
-När du är klar väljer du **Spara princip**
+När du är klar väljer du **Spara princip**.
 
 Du kan välja att distribuera principen direkt efter att du har sparat principen eller så kan du välja att distribuera den senare. Den nya principen visas i noden **Efterlevnadsprinciper** på arbetsytan **Principer**.
 
@@ -84,6 +84,6 @@ Välj något av följande om du vill veta mer om efterlevnadsinställningar som 
 [Introduktion till efterlevnadsprinciper för enheter](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 
