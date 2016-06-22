@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Begränsa åtkomsten till e-post: Exempelscenarier | Microsoft Intune
+title: "Begränsa åtkomsten till e-post: Exempelscenarier | Microsoft Intune"
 description:
 keywords:
 author: karthikaraman
