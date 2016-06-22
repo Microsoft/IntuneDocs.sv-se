@@ -4,7 +4,7 @@
 title: Planera dina användar- och enhetsgrupper | Microsoft Intune
 description:
 keywords:
-author: SanchuSa
+author: nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
@@ -40,7 +40,7 @@ Grupper i Intune ger stor flexibilitet vid hanteringen av enheter och användare
 
 Standardvyn för noden Grupper i Intune-administrationskonsolen är:
 
-![Skärmbild av standardvyn för noden Grupper i Intune-konsolen](/intune/media/Group-planning/Intune_Planning_Groups_Default_small.png)
+![Skärmbild av standardvyn för noden Grupper i Intune-konsolen](/intune/media/Intune_Planning_Groups_Default_small.png)
 
 Principer distribueras till grupper. Grupphierarkin är därför en av de viktigaste designaspekterna. Det är också viktigt att du vet att det inte går att ändra en grupps överordnade grupp när gruppen har skapas. Därför är gruppernas design ytterst viktig från det ögonblick då du börjar använda Intune-tjänsten. Här beskrivs några av de rekommenderade metoderna för att designa en grupphierarki baserat på din organisations behov.
 
@@ -92,7 +92,7 @@ Principer distribueras till grupper. Grupphierarkin är därför en av de viktig
 
     * Gruppen **Användare av bärbara datorer** är medlem i säkerhetsgruppen **Godkända användare** .
 
-    * Du skapar en grupp i Intune som använder en dynamisk medlemskapsfråga som innehåller medlemmarna i gruppen **Godkända användare**. Resultatet är att din Intune-användargrupp innehåller **Patrik**.
+    * Du skapar en grupp i Intune som använder en dynamisk medlemskapsfråga som innehåller medlemmarna i gruppen **Godkända användare**. Resultatet är att din Intune-användargrupp innehåller **Erik**.
 
 > [!TIP]
 > När du skapar grupper bör du tänka på hur du ska tillämpa de olika principerna. Du kan t.ex. ha principer som är specifika för ett operativsystem för en enhet och principer som är specifika för olika roller i din organisation eller för organisationsenheter som du redan har definierat i Active Directory. Vissa tycker att det är praktiskt att ha enhetsgrupper som är specifika för iOS, Android och Windows och användargrupper som är specifika för olika organisationsroller.
@@ -131,22 +131,22 @@ Om organisationen tillåter att anställda använder sina egna enheter på arbet
 
 När det gäller BYOD-enheter eller en kombination bör du planera principer som inte överträder lokala sekretessbestämmelser. Skapa en överordnad grupp för alla användare som ska ta med sina egna enheter (BYOD). Den här gruppen kan sedan användas för att tillämpa principer som gäller för alla användare i kategorin.
 
-![Skärmbild av hur du skapar en överordnad BYOD-grupp](/intune/media/Group-planning/Intune_Planning_Groups_BYOD_small.png)
+![Skärmbild av hur du skapar en överordnad BYOD-grupp](/intune/media/Intune_Planning_Groups_BYOD_small.png)
 
 På liknande sätt kan du skapa en grupp för CO-användarna i organisationen:
 
-![Skärmbild av användargrupper för BYOD och CO på samma nivå](/intune/media/Group-planning/Intune_Planning_Groups_BYOD_Hierachy_View_small.png)
+![Skärmbild av användargrupper för BYOD och CO på samma nivå](/intune/media/Intune_Planning_Groups_BYOD_Hierachy_View_small.png)
 
 <!---START HERE--->
 
 ### Grupper för geografiska områden
 Om organisationen behöver principer för vissa regioner kan du skapa grupper baserat på geografiskt område. Du kan basera dem på regionala grupper som du kanske redan har skapat i Active Directory (AD) och synkronisera dem till Azure AD. Du kan också skapa dem direkt i Azure AD.
 
-Dessa skärmdumpar visar hur du skapar Intune-grupper baserat på grupper som synkroniserats från din lokala AD. Dessa exempel förutsätter att du har en AD-säkerhetsgrupp som heter **US Users Group**
+Dessa skärmdumpar visar hur du skapar Intune-grupper baserat på grupper som synkroniserats från din lokala AD. Dessa exempel förutsätter att du har en AD-säkerhetsgrupp som heter **US Users Group**.
 
 1. Börja med att ange den allmänna informationen.
 
-    ![Skärmbild av området Redigera grupp](/intune/media/PlanDesign/Group-planning/Intune_Planning_Groups_AD_General_small.png)
+![Skärmbild av området Redigera grupp](/intune/media/Intune_Planning_Groups_AD_General_small.png)
 
 Under Kriterier för medlemskap väljer du **US Users Group**, som synkroniserats från AD, som säkerhetsgruppen som ska användas under Medlemskapsregler.
 
@@ -158,7 +158,7 @@ Gå igenom informationen och skapa gruppen genom att välja **Slutför**.
 
 I vårt exempel har vi också skapat en grupp för Mellanöstern och Asien, MEA.
 
-> Om gruppmedlemskapet inte har fyllts i baserat på medlemskap i säkerhetsgruppen kontrollerar du att dessa medlemmar har tilldelats Intune-licenser.
+> [!NOTE] Om gruppmedlemskapet inte har fyllts i baserat på medlemskap i säkerhetsgruppen kontrollerar du att dessa medlemmar har tilldelats Intune-licenser.
 
 ### Grupper för särskild maskinvara
 Om organisationen kräver principer som tillämpas för specifika maskinvarutyper kan du skapa grupper utifrån det här kravet. Du kan basera dem på specifika grupper som du redan har skapat i din lokala AD och synkronisera dem till Azure AD. Du kan också skapa dem direkt i Azure AD. I det här exemplet använder vi **US Users Group** som överordnad grupp till gruppen **Laptop Users**.
@@ -167,14 +167,14 @@ Om organisationen kräver principer som tillämpas för specifika maskinvarutype
 
 Nu bör grupphierarkin se ut som nedan. Som du ser finns det nu medlemmar i Intune-gruppen **Laptop Users**. Alla principer som tillämpas på den här gruppen kommer nu att gälla användare av bärbara BYOD-datorer från regionen USA.
 
-![Visning av gruppen Användare av bärbara datorer](/intune/media/Group-planning/Intune_Planning_Groups_Laptop_Hierarchy_small.png)
+![Visning av gruppen Användare av bärbara datorer](/intune/media/Intune_Planning_Groups_Laptop_Hierarchy_small.png)
 
 ### Grupper för specifika operativsystem
 Om organisation kräver principer som tillämpas för specifika operativsystem, till exempel Android, iOS eller Windows, kan du skapa grupper utifrån det här kravet. Som i föregående exempel kan du basera dem på operativsystemspecifika grupper som du redan har skapat i din lokala AD och synkronisera dem till Azure AD. Du kan också skapa dem direkt i Azure AD.
 
-Enligt samma metod som i föregående exempel kan vi skapa grupper baserat på användare <!--devices?--> med specifika operativsystemplattformar.
+Enligt samma metod som i föregående exempel kan vi skapa grupper baserat på användare <!--devices?--> som använder specifika operativsystemplattformar.
 
-> Om du har användare som använder flera mobila plattformar eller operativsystem och du inte har en automatiserad metod för att kategorisera användare som Android-användare, iOS-användare eller Windows-användare, bör du överväga att tillämpa principer på enhetsnivå, vilket ger bättre flexibilitet vid tillämpning av operativsystemspecifika principer.
+> [!NOTE] Om du har användare som använder flera mobila plattformar eller operativsystem och du inte har en automatiserad metod för att kategorisera användare som Android-användare, iOS-användare eller Windows-användare, bör du överväga att tillämpa principer på enhetsnivå, vilket ger bättre flexibilitet vid tillämpning av operativsystemspecifika principer.
 >
 > Du kan inte etablera grupper dynamiskt baserat på enhetens operativsystem. Det gör du med hjälp av AD- eller AAD-säkerhetsgrupper.
 
@@ -206,18 +206,18 @@ Fortsätta att skapa enhetsgrupper tills du har en enhetshierarki liknande anvä
 ## Grupphierarkier och namngivningskonventioner
 För att underlätta principhanteringen rekommenderar vi att du namnger varje princip efter dess syfte, plattform och omfång. Den här namngivningsstandarden bör följa den gruppstruktur som du skapade inför tillämpningen av dina principer.
 
-För en Android-princip som tillämpas på alla företagsägda, mobila Android-enheter på regionsnivån USA kan du till exempel döpa principen till
+För en Android-princip som tillämpas på alla företagsägda, mobila Android-enheter på regionsnivån USA kan du till exempel döpa principen till **CO_US_Mob_Android_General**.
 
-![CO_US_Mob_Android_General](/intune/media/Intune_planning_policy_android_small.png)
+![Skapa princip för Android](/intune/media/Intune_planning_policy_android_small.png)
 
-Skapa princip för Android
+Genom att namnge principerna på det här sättet kan du snabbt identifiera principer och deras avsedda användning och omfång i konsolens principnod, som du ser här:
 
-![Genom att namnge principerna på det här sättet kan du snabbt identifiera principer och deras avsedda användning och omfång i konsolens principnod, som du ser här:](/intune/media/Intune_planning_policy_view_small.png)
+![Principlista i Intune](/intune/media/Intune_planning_policy_view_small.png)
 
-## Principlista i Intune
-[Nästa steg](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+## Nästa steg
+[Skapa grupper](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

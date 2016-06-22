@@ -79,40 +79,40 @@ Följande är en lista över steg som hjälper dig att komma igång med fasen **
 
 -   Identifiera grupper som kan kräva riktad kommunikation och utbildning.
 
--   Anpassa e-postkommunikation, uppdatera intranät
-
--   Identifiera fortlöpande ägare för kommunikation/resursuppdatering.
+-   Anpassa e-postkommunikation och uppdatera intranät-webbplatsen. Identifiera fortlöpande ägare för kommunikation/resursuppdatering.
 
 -   Beskriv vilka utbildningsmetoder som ska användas.
-    Skapa en checklista för att komma igång och registreringsguide för användare.
-    -  Använd dessa användarguider som utgångspunkt:
-    -  [Registrera din Windows-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-windows]
-    -  [Registrera din Android-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-android]
-    -  [Registrera din iOS-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-ios]
 
--   [Registrera din Mac OS X-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x]
+-   Skapa en checklista för att komma igång och registreringsguide för användare.
+    Använd dessa användarguider som utgångspunkt:
+    -  [Registrera din Windows-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-windows)
+    -  [Registrera en Android-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-android)
+    -  [Registrera din iOS-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-ios)
+    -  [Registrera din Mac OS X-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)
 
 -   Definiera en process för att uppdatera utbildningsmaterial, vid behov.
 
-## Implementera en bred distributionsplan.
-Vanliga utmaningar
+-   Implementera en bred distributionsplan.
 
--   Följande är några utmaningar som du kan stöta på i fasen **Företagsomfattande distribution**.
+## Vanliga utmaningar
+Följande är några utmaningar som du kan stöta på i fasen **Företagsomfattande distribution**.
 
-    **Utmaning:** E-postmeddelanden har skickats, men införandet är begränsat. **Lösning:** Förstå att användare kan få hundratals, om inte tusentals, e-postmeddelanden om dagen.
+-   **Utmaning:** E-postmeddelanden har skickats, men införandet är begränsat.
 
--   Det här hjälper dig att se till att meddelandet går fram: (1) låt en sponsor skicka ut det första meddelandet, (2) håll e-postmeddelandet kort och fokusera på värdebeskrivningen, (3) använd en tydlig uppmaning och (4) använd flera olika metoder för att skapa medvetande: sätt till exempel upp affischer i kafeterior som uppmanar användare att kontrollera sin inkorg.
+    **Lösning:** Förstå att användare kan få hundratals, om inte tusentals, e-postmeddelanden om dagen. Det här hjälper dig att se till att meddelandet går fram: (1) låt en sponsor skicka ut det första meddelandet, (2) håll e-postmeddelandet kort och fokusera på värdebeskrivningen, (3) använd en tydlig uppmaning och (4) använd flera olika metoder för att skapa medvetande: sätt till exempel upp affischer i kafeterior som uppmanar användare att kontrollera sin inkorg.
 
-    **Utmaning:** Användare står emot förändring och bromsar användning av ny teknik.
+-   **Utmaning:** Användare står emot förändring och bromsar användning av ny teknik.
 
--   **Lösning:** Använd positiva erfarenheter från pilotanvändarna för att främja användning av enheter som hanteras av Intune.
+    **Lösning:** Använd positiva erfarenheter från pilotanvändarna för att främja användning av enheter som hanteras av Intune.
 
-    **Utmaning:** Användare känner att om de måste få utbildning måste lösningen vara svår att använda. **Lösning:** Alla lär sig i olika takt. En del tar till sig ny teknik utan några instruktioner, medan andra kräver viss handledning eller stöd på vägen. Utbildning kan ge tips som ser till att användarna får ut så mycket som möjligt av lösningen, och den kan delas upp i mindre delar eller efter avdelning för att inte användarna ska bli överväldigade eller att det ska verka för detaljerat. Lägg fram utbildningen som ett mervärde och erbjud uppdelad utbildning.
+-   **Utmaning:** Användare känner att om de måste få utbildning måste lösningen vara svår att använda.
 
-### Maximera användarnas inlärning och införande genom att använda olika utbildningsmetoder i planen.
-[Nästa steg](operations-and-maintenance.md)
+    **Lösning:** Alla lär sig i olika takt. En del tar till sig ny teknik utan några instruktioner, medan andra kräver viss handledning eller stöd på vägen. Utbildning kan ge tips som ser till att användarna får ut så mycket som möjligt av lösningen, och den kan delas upp i mindre delar eller efter avdelning för att inte användarna ska bli överväldigade eller att det ska verka för detaljerat. Lägg fram utbildningen som ett mervärde och erbjud uppdelad utbildning. Maximera användarnas inlärning och införande genom att använda olika utbildningsmetoder i planen.
+
+### Nästa steg
+[Åtgärder och underhåll](operations-and-maintenance.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

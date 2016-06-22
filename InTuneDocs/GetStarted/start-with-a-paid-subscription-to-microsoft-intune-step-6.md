@@ -53,7 +53,7 @@ Följande steg förklarar hur du skapar en konfigurationsprincip för mobila enh
 
 4.  Expandera den plattform som du vill skapa en princip för i principlistan och välj **Allmän konfiguration** > **Skapa och distribuera en princip med de rekommenderade inställningarna** > **Skapa princip**.
 
-5.  När du uppmanas till **Välj de grupper som du vill distribuera principen till** väljer du **Intune-användare** (gruppen som skapades i föregående steg) i listan över tillgängliga grupper och väljer **Lägg till** > **OK**.
+5.  När du uppmanas med **Välj de grupper som du vill distribuera principen till** väljer du en grupp i listan över tillgängliga grupper och väljer **Lägg till** > **OK**.
 
 Din princip visas i listan över konfigurationsprinciper och har distribuerats till gruppen **Intune-användare** . Visa principens egenskaper genom att dubbelklicka på den.
 
@@ -114,6 +114,6 @@ Gratulerar! Du är klar med steg 6 i *snabbstartsguiden för Intune*.
 >[&larr; **Ordna användare och enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md) [**Anpassa företagsportalen** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-7.md)  
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 
