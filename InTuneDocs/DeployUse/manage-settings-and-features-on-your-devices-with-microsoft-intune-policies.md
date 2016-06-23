@@ -200,9 +200,9 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
 
 ### Var kan jag få hjälp med att felsöka principer?
 
-Se [Felsökningsprinciper i Microsoft Intune](/troubleshoot/troubleshoot-policies-in-microsoft-intune.md).
+Se [Felsökningsprinciper i Microsoft Intune](../Troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/11/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -66,22 +66,22 @@ Här är några exempel på vad IT-administratören kan hantera i en app och hur
 
 Några vanliga appar som IT-avdelningen kan hantera:
 
--   Hanterad webbläsare
+-   Intune Managed Browser
 
--   Hanterat bildvisningsprogram
+-   Intune Image Viewer
 
--   Hanterat PDF-visningsprogram
+-   Intune PDF Viewer
 
--   Hanterad ljud- och videospelare
+-   Intune AV Player
 
 -   Microsoft Word, Excel och PowerPoint
 
-Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

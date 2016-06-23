@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/24/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,7 @@ ms.suite: ems
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din Android-enhet så att den får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan IT-avdelningen hantera dessa arbets- eller skolresurser och skydda dem, samtidigt som du får friheten att använda den enhet du önskar för att utföra arbetet. Mer information om registrering finns i [Vad händer när jag installerar företagsportalappen och registrerar min enhet?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-android.md).
 
-De här registreringsanvisningarna är för Samsung Knox Android-enheter och "ursprungliga" Android-enheter (inte Samsung Knox). Avgör om du har en Samsung Knox-enhet genom att välja **Inställningar** &gt; **Om telefonen**. Om du inte ser ordet "Knox" i listan har du en ursprunglig Android-enhet.
+De här registreringsanvisningarna är för Samsung Knox Android-enheter och "ursprungliga" Android-enheter (inte Samsung Knox). Avgör om du har en Samsung Knox-enhet genom att välja **Inställningar** &gt; **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
 
 Före eller efter registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Din IT-administratör använder den här kategorin för att avgöra vilka appar du har åtkomst till.
 
@@ -57,7 +57,7 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT, eftersom **Microsoft aldrig ringer eller hanterar dina telefonsamtal**! Google styr meddelandetexten och Microsoft kan inte ändra den. När du tillåter åtkomst tillåter du endast att enheten skriver dataloggar till enhetens SD-kort, vilket gör att du kan flytta dessa loggar med hjälp av en USB-kabel. Du kan behöva använda den här funktionen för att skicka loggar till IT-administratören om du har problem när du använder företagsportalappen. Lär dig att [skicka Android-registreringsfel till din IT-administratör](send-enrollment-errors-to-your-it-administrator-android.md).
+    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT, eftersom **Microsoft aldrig ringer eller hanterar dina telefonsamtal**! Google styr meddelandetexten och Microsoft kan inte ändra den. När du tillåter åtkomst tillåter du endast att enheten skriver dataloggar till enhetens SD-kort, vilket gör att du kan flytta dessa loggar med hjälp av en USB-kabel.
 
     Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka i kryssrutan **Fråga inte igen**.  Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
 
@@ -65,7 +65,7 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT, eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du tillåter åtkomst tillåter det endast att företagsportalappen får åtkomst till dataloggar som hjälper till att felsöka problem med enheten.
+    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT, eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. Om du beviljar åtkomst kan endast företagsportalappen skapa, använda och hantera ditt arbetskonto.
 
     Om du nekar åtkomst visas meddelandet igen nästa gång du trycker på **Skicka data**, men du kan inaktivera framtida meddelanden genom att markera kryssrutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Lagring** och sedan aktivera behörigheten.
 
@@ -97,7 +97,7 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![Ange PIN-kod eller lösenord](./media/and-enroll-6-PIN-native.png)
 
-13.  Följ anvisningarna nedan för den enhetstyp som du använder (ursprunglig Android eller Samsung Knox). Avgör om du har en Samsung Knox-enhet genom att välja **Inställningar** &gt; **Om telefonen**. Om du inte ser ordet "Knox" i listan har du en ursprunglig Android-enhet.
+13.  Följ anvisningarna nedan för den enhetstyp som du använder (ursprunglig Android eller Samsung Knox). Avgör om du har en Samsung Knox-enhet genom att välja **Inställningar** &gt; **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
 
     -   Ursprunglig enhet (ej Samsung Knox): På skärmen **Namnge certifikatet** trycker du på **OK** för att godkänna standardcertifikatet.
 
@@ -119,7 +119,7 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![Skärmen Konfiguration av företagsåtkomst slutförd](./media/and-enroll-10-comp-access-setup-complete.png)
 
-Innan du försöker installera företagsappar besöker du **Inställningar** &gt; **Säkerhet**, och aktiverar **Okända källor**. Om du inte aktiverar det här alternativet innan du försöker installera apparna visas meddelandet Installationen blockerades. Av säkerhetsskäl är mobilen inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i dialogrutan med felmeddelandet för att gå till alternativet **Okända källor**.
+Innan du försöker installera företagsappar besöker du **Inställningar** &gt; **Säkerhet**, och aktiverar **Okända källor**. Om du inte aktiverar det här alternativet innan du försöker installera apparna visas meddelandet Installationen blockerades. Av säkerhetsskäl är enheten inställd på att blockera installationer av appar från okända källor. Du kan trycka på **Inställningar** i dialogrutan med felmeddelandet för att gå till alternativet **Okända källor**.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

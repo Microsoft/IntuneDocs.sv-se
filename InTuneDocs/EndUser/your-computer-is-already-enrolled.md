@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Din dator är redan registrerad.
 
-Om ett felmeddelande om att datorn redan har registrerats visas, innebär det att datorn redan har lagts till i företagsportalen, men inte länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.
+Om ett felmeddelande om att datorn redan har registrerats visas, innebär det att datorn redan har lagts till i företagsportalen, men inte länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.  
 
 Så här länkar du datorn:
 
@@ -38,8 +38,10 @@ Så här länkar du datorn:
 
 3.  Följ anvisningarna om hur du länkar datorn till ditt användarkonto.
 
-Om du behöver hjälp och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du vill avregistrera enheten följer du instruktionerna för den typ av enhet som du har: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) eller [Windows](unenroll-your-device-from-intune-windows.md).
 
-<!--HONumber=Jun16_HO1-->
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+<!--HONumber=Jun16_HO2-->
 
 

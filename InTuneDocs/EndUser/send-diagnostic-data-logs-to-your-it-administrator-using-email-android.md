@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Skicka loggar med diagnostikdata till IT-administratören via e-post
 
-Om det uppstår ett fel på din Android-enhet när du arbetar med dina skol- eller företagsappar eller när du använder företagsportalappen kan du skicka loggar med diagnostikdata som hjälper IT-administratören att identifiera och åtgärda felet. Om du vill inkludera alla detaljer i loggarna, vilket gör det lättare för IT-administratören att lösa problemet, aktiverar du Utförlig loggning.
+Om det uppstår ett fel på din Android-enhet när du arbetar med dina skol- eller företagsappar eller när du använder företagsportalappen kan du skicka loggar med diagnostikdata som hjälper IT-administratören att identifiera och åtgärda felet. Om du vill inkludera alla detaljer i loggarna, vilket gör det lättare för IT-administratören att lösa problemet, aktiverar du Utförlig loggning. Läs mer om [utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
 Så här aktiverar du utförlig loggning:
 
@@ -54,6 +54,6 @@ Så här aktiverar du utförlig loggning:
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

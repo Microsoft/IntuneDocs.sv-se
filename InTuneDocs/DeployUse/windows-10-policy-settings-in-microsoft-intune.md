@@ -31,7 +31,7 @@ Använd principinställningarna som anges i det här avsnittet om du vill konfig
 
 ## Generella inställningar för konfigurationsprinciper
 
-Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter:
+Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter. Den här principen kan inte användas när du hanterar Windows 10-datorer med Intune-klientprogrammet.
 
 
 ### Lösenord
@@ -332,6 +332,6 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

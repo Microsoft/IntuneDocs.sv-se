@@ -125,12 +125,12 @@ När du lägger till en dator:
 
 -   IT-administratören kan genomdriva principer på datorn. Du kan till exempel bli ombedd att ange ett lösenord eller en PIN-kod för datorn, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också försvinner all information från hårddisken.
 
-Om du har frågor och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

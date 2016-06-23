@@ -63,11 +63,11 @@ När du registrerar en Windows-enhet i Intune ger du IT-administratören tillst�
 -   Tillverkare
 
 
-Om du har frågor och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: staciebarker
 manager: jeffgilb
-ms.date: 05/20/2016
+ms.date: 05/31/2016
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -32,21 +32,21 @@ Om du tappar bort din Android-telefon eller om den blir stulen kan du återstäl
 
 Läs mer om vad som händer när du återställer en enhet i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
 
-> [!WARNING] När du återställer en enhet till standardinställningarna tas både privat och arbetsrelaterad information bort från den.
+> [!WARNING] När du återställer en enhet till standardinställningarna tas all privat, arbetsrelaterad och studierelaterad information bort från den.
 
-1.  Öppna [företagsportalen](http://portal.manage.microsoft.com) i webbläsaren och logga in på ditt arbetskonto.
+1.  Öppna [företagsportalen](http://portal.manage.microsoft.com) i webbläsaren och logga in på ditt arbets- eller skolkonto.
 
 2.  Tryck på **Mina enheter** och välj namnet på den borttappade eller stulna enheten.
 
 3.  Klicka på **Återställ** &gt; **Återställ**.
 
-Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Om du inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

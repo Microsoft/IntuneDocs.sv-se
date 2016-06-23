@@ -44,11 +44,11 @@ Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post oc
 
 Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md).
 
-Om du har frågor och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

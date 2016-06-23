@@ -144,29 +144,6 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 **Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
-### Datorn har redan registrerats – Fel hr 0x8007064c
-**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
-  
-Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
-
-
-
-**Lösning:** 
-
-1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
-1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
-1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
-1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
-1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
-1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
-1. Försök att registrera datorn igen. 
-1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Försök att registrera datorn igen. 
-
-    > [!IMPORTANT]
-    > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
-    > Mer information om hur du säkerhetskopierar och återställer registret finns i avsnittet [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/kb/322756)
-
 
 ## Android-problem
 ### Det gick inte att installera profilen
@@ -248,6 +225,31 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 
 ### Övriga iOS-registreringsfel
 En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
+
+## Datorproblem
+
+### Datorn har redan registrerats – Fel hr 0x8007064c
+**Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
+  
+Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
+
+
+
+**Lösning:** 
+
+1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
+1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
+1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
+1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
+1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
+1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
+1. Försök att registrera datorn igen. 
+1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
+1. Försök att registrera datorn igen. 
+
+    > [!IMPORTANT]
+    > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
+    > Mer information om hur du säkerhetskopierar och återställer registret finns i avsnittet [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/kb/322756)
 
 ## Felkoder för allmänna registreringsfel
 

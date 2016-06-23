@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Vad händer om du avregistrerar din enhet från Intune?
 
-När du avinstallerar företagsportalappen på din enhet avregistreras även din enhet i Intune. Mer information om vad som händer får du via länken som matchar den typ av enhet du använder och som visas i avsnittet ”I den här artikeln” ovan.
+Mer information om vad som händer får du via länken som matchar den typ av enhet du använder och som visas i avsnittet ”I den här artikeln” ovan.
 
 - [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
 - [Windows 10, Windows 8.1 eller Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
@@ -92,11 +92,11 @@ När du tar bort en Windows RT-enhet händer följande:
 
 -   Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran eller att en viss längd på lösenorden krävdes, gäller inte längre.
 
-Om du har frågor och inte kan hitta kontaktuppgifter till IT-administratören kan du se om de finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

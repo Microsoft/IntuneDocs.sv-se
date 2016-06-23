@@ -35,31 +35,52 @@ Registrering av mobila enheter är den process som anger smarttelefoner, surfpla
 
 Dina svar på följande frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
-## Tar de anställda med sina egna enheter eller tillhandahålls enheter av din organisation?
+## **Tar de anställda med sina egna enheter eller tillhandahålls enheter av din organisation?**
 
-  **Användarägda enheter** – BYOD-registrering (Bring your own device) – användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.  
-  > [!div class = "button"]   [BYOD-registrering >](..deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)
+  **Enheter som ägs av användare** används på arbetsplatsen enligt principen ”Bring your own device” (BYOD). Även dessa enheter kan registreras och få åtkomst till företagsresurser som e-post, appar, företagsdata och support. **Företagsägda enheter** (Company-owned devices, COD) tillhandahålls av organisationen och används av personalen. Uppfyller ofta ett särskilt behov i verksamheten.
+  > [!div class="button"]   [BYOD-registrering >](#byod-device-enrollment)   [COD-registrering >](cod-device-enrollment)
 
-  **Företagsägda enheter** – Företagsägda enheter (COD, Company-owned devices) kan registreras på en rad olika sätt beroende på organisationens behov och vilka typer av enheter som hanteras. Nästa fråga …
+### Registrering av BYOD-enheter
 
-## Är de företagsägda enheterna delade eller har de enskilda användare?
+Registrering av BYOD-enheter kräver att användarna också installerar Intunes företagsportalapp på sina enheter. De kan sedan starta appen och registrera sig genom att ange autentiseringsuppgifterna för sina arbets- eller skolkonton. Under förutsättning att Intune hittar en licens kopplad till autentiseringsuppgifterna läggs enheten till på Intune-administrationskonsolen, tar emot principer från Intune och beviljas åtkomst till företagets resurser.
 
-**Delade företagsägda enheter** – Dessa enheter har inte en enskild användare och är vanligtvis inte konfigurerade för åtkomst till e-post. Exempel är till exempel kioskenheter eller aktivitetsbaserade enheter som användare hämtar från en pool vid behov och sedan lämnar tillbaka. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform.
+**Välj enhetstyp:**
+
+> [!div class="op_single_selector"]
+- [Konfigurera Android-hantering med Microsoft Intune](..deploy-use/set-up-android-management-with-microsoft-intune.md)
+- [Konfigurera iOS- och Mac-hantering med Microsoft Intune](..deploy-use/set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Konfigurera hantering av Windows Phone med Microsoft Intune](..deploy-use/set-up-windows-phone-management-with-microsoft-intune.md)
+- [Konfigurera Windows-enhetshantering med Microsoft Intune](..deploy-use/set-up-windows-device-management-with-microsoft-intune.md)
+
+
+### Registrering av COD-enheter
+
+Företagsägda enheter kan registreras för en särskild användare eller som delad enhet.  **Delade enheter** har inte någon särskild användare och är vanligtvis inte konfigurerade för åtkomst till e-post. Exempel är till exempel kioskenheter eller aktivitetsbaserade enheter som användare lånar från en pool vid behov och sedan lämnar tillbaka. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform. **Särskilda enheter** som har utfärdats till enskilda användare måste spåras som företagstillgångar samtidigt som användarna behöver få åtkomst till e-post och data som personliga enheter. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform.
+
+## **Är de företagsägda enheterna delade eller har de särskilda användare?**
+
+> [!div class="button"] [Delade >](#Shared-company-owned-devices)   [Särskilda >](..deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)
+
+
+### Delade företagsägda enheter
+
+De här enheterna har inte någon särskild användare och är vanligtvis inte konfigurerade för åtkomst till e-post. Exempel är till exempel kioskenheter eller aktivitetsbaserade enheter som användare lånar från en pool vid behov och sedan lämnar tillbaka. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform.
 
   - **Windows- och Android-enheter** – En *enhetsregistreringshanterare* är ett Intune-konto som kan användas för att registrera många delade enheter med företagsportalappen.
-  > [!div class="button"]   [Enhetsregistreringshanterare >](../deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
+  > [!div class="button"]   [Windows >](../deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [Android >](../deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) [iOS >](#shared-ios-device-enrollment)
 
-  - **iOS-enheter** – Delade iOS-enheter kan hanteras på tre sätt.  **Hur ska du registrera dina delade iOS-enheter?**
+### Registrering av delade iOS-enheter
 
-    - **Apples enhetsregistreringsprogram (DEP)** – Köpta eller hanterade iOS-enheter med DEP kan vara mål för en registreringsprofil. När användarna sätter på sina enheter för första gången hämtar enheten DEP-profilen och registreras med DEP-profilen
-    > [!div class="button"]     [DEP-registrering >](../deploy-use/ios-device-enrollment-program-in-microsoft-intune)
+Den bästa metoden för att registrera delade företagsägda iOS-enheter beror på hur du vanligen köper in och hanterar enheterna:
 
-    - **Apple Configurator på en Mac** – Apple Configurator är ett Apple-program som körs på en Mac-dator. Du kan ansluta dina iOS-enheter till Mac-datorn med en USB-kabel för att installera en registreringsprofil på enheten. Om du inte kan återställa fabriksinställningarna på enheterna kan du registrera dem med hjälp av installationsassistentläget. Om du inte vill fabriksåterställa enheterna kan du använda Direktregistrering.
+  - **Apples enhetsregistreringsprogram (DEP)** – Köpta eller hanterade iOS-enheter med DEP kan vara mål för en registreringsprofil. När användarna sätter på sina enheter för första gången hämtar enheten DEP-profilen och registreras med DEP-profilen
+  - **Apple Configurator på en Mac (Mac)** – Apple Configurator är ett Apple-program som körs på en Mac-dator. Du kan ansluta dina iOS-enheter till Mac-datorn med en USB-kabel för att installera en registreringsprofil på enheten. Om du inte kan återställa fabriksinställningarna på enheterna kan du registrera dem med hjälp av installationsassistentläget. Om du inte vill fabriksåterställa enheterna kan du använda Direktregistrering.
+  - **Inget av ovanstående** – Om du inte kan eller inte vill använda Apples DEP- eller Apple Configurator-registreringsmetoderna använder du enhetsregistreringshanteraren i Intune.
 
-    > [!div class="button"]     [Installationsassistentläge >](../deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune) eller [Direktregistrering >](../deploy-use/ios-direct-enrollment-in-microsoft-intune)
+  **Välj:**
+    > [! div class="button"]      [DEP-registrering >](../deploy-use/ios-device-enrollment-program-in-microsoft-intune) [Mac >](../deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune) [Direktregistrering >](../deploy-use/ios-direct-enrollment-in-microsoft-intune)  
 
-    - **Inget av ovanstående** – Om du inte kan eller inte vill använda Apples DEP- eller Apple Configurator-registreringsmetoderna använder du enhetsregistreringshanteraren i Intune.
-    > [!div class="button"]     [DEP-registrering >](../deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+  > [!div class="button"]     [DEP-registrering >](../deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 
 **Enskilda användare** – Företagsägda enheter som har utfärdats till enskilda användare måste spåras som företagstillgångar samtidigt som användarna behöver få åtkomst till e-post och data som personliga enheter. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform.
 
@@ -80,6 +101,6 @@ Dina svar på följande frågor hjälper dig att avgöra den bästa registrering
     - **Inget av ovanstående** – Om du inte kan eller inte vill använda Apples DEP- eller Apple Configurator-registreringsmetoder genom att importera IMEI-numren (Internationella Mobile Equipment Identity) för de företagsägda enheterna kan du tagga dem som företagsägda enheter i Intune. Användarna kan sedan registrera sina enheter som personliga enheter genom att installera företagsportalen för att få åtkomst till företagsresurser som e-post, appar och data. > [!div class="button"][Tagga enheter med IMEI-nummer](../deploy-use/specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

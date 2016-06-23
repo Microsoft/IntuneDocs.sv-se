@@ -26,7 +26,9 @@ ms.suite: ems
 ---
 
 # Hantera Intune-licenser
-Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste de först tilldelas en licens för Intune-prenumerationen från [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854). När de har tilldelats en licens visas användarnas namn i Intune-administrationskonsolen. Användare kan sedan registrera upp till fem enheter.
+Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste du först tilldela varje användare en licens för Intune-prenumerationen med hjälp av [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854). När de har tilldelats en licens visas användarnas namn i Intune-administrationskonsolen. Användare kan sedan registrera upp till fem enheter.
+
+Organisationer som använder Microsoft EMS (Enterprise Mobility Suite) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela det eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx). Mer information finns i [Hantera Intune-licenser med PowerShell](start-with-a-paid-subscription-to-microsoft-intune-step-4-posh.md).
 
 ## Så här tilldelas Intune-licenser
 När användarkonton synkroniseras från din lokala Active Directory eller läggs till manuellt i din molntjänstprenumeration via [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) så tilldelas de inte en Intune-licens automatiskt. I stället måste en Intune-klientadministratör senare redigera användarkontot och tilldela en licens till användaren från Office 365-portalen.
@@ -42,7 +44,7 @@ Du använder [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=6988
 
 1.  Logga in på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) med dina klientadministratörsuppgifter och välj sedan **Personer** > **Alla användare**.
 
-2.  Välj det användarkonto som du vill tilldela Intune-användarlicensen till och välj **Microsoft Intune** i egenskaperna för användarkontot.
+2.  Välj det användarkonto som du vill tilldela Intune-användarlicensen till och välj antingen **Microsoft Intune** (fristående) eller **Enterprise Mobility Suite**.
 
 3.  Användarkontot har nu de nödvändiga behörigheterna som krävs för att använda tjänsten och registrera enheter för hantering.
 
@@ -93,6 +95,6 @@ Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 >[&larr; **Synkronisera användare i Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Ordna användare och enheter** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 
