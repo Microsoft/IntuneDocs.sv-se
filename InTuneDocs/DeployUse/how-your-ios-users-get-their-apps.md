@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Så får dina iOS-användare sina appar | Microsoft Intune
-description:
-keywords:
+title: "Så får dina iOS-användare sina appar | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: f36bc73d3397fef5bebe6896d91bcffcd5507cfc
+
 
 ---
 
@@ -38,9 +32,11 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Ohanterade appar** - Appar som inte kan hanteras med principer eller som inte har wrappats av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
-###Se även</br>
-[Så får dina Android-användare sina appar](how-your-windows-users-get-their-apps.md)
+###Se även
+[Så får dina Android-användare sina appar](how-your-android-users-get-their-apps.md)</br>
+[Så får dina Windows-användare sina appar](how-your-windows-users-get-their-apps.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

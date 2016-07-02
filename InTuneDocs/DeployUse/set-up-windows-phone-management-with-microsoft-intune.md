@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone med Microsoft Intune | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c5d1b53f09ce2f475cd934e36ddb19d019737431
+ms.openlocfilehash: e67a5be851b68d87a4cdda871824cf0ecb14579e
+
 
 ---
 
@@ -61,6 +55,7 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2 och 3 i administrationskonsolen.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

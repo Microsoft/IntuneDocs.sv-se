@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Kom igång med att registrera enheter | Microsoft Intune
-description:
-keywords:
+title: "Kom igång med att registrera enheter | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 71077d9f86a53cc66536928e4799fa4b1a51cdf0
+ms.openlocfilehash: 86d3b7894eca70454fa82393c4d06eab5a99246f
+
 
 ---
 
@@ -48,7 +42,8 @@ Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst so
 
 Intune-företagsportalen är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen.
 
-> [!TIP] När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.
+> [!TIP]
+> När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.
 
 Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Om du vill göra det loggar du bara in på [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) som klient eller tjänstadministratör, väljer **Admin** &gt; **Företagsportal** och konfigurerar inställningarna för företagsportalen.
 
@@ -104,7 +99,7 @@ När du har konfigurerat MDM-utfärdare måste du konfigurera enhetshantering f�
 
 > [!div class="op_single_selector"]
 - [Konfigurera Android-hantering med Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Konfigurera iOS- och Mac-hantering med Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Konfigurera Windows-enhetshantering med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
@@ -113,6 +108,7 @@ Du kan också:
  - [Ange företagsägda enheter med hjälp av IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) för att registrera enheter och målprincip
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

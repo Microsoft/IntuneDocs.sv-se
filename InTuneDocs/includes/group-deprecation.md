@@ -6,6 +6,6 @@
 >Nya dynamiska enhetsgruppstilldelningar kan definieras i Azure Active Directory baserat på namnet på företagets registreringsprofil. Den här processen säkerställer att enheter som tilldelats till en enhetsgrupp i förväg automatiskt registreras i gruppen med principer och program distribuerade. Mer information kommer att publiceras snart.
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 
