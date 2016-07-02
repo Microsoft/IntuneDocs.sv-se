@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Distribuera appar | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c95a776e79cf3e1c7009d6e27f8f50482434d298
+ms.openlocfilehash: 46562ed3463c4a23a511eb5c7f28a0b11e84f421
+
 ---
 # Distribuera appar i Microsoft Intune
 
@@ -69,6 +63,7 @@ Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får använd
 När du har distribuerat en app vill du övervaka dess förlopp. Mer information finns i [Övervaka appar i Microsoft Intune](monitor-apps-in-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
