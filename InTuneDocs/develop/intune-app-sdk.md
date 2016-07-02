@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Fördelar med Intune App SDK | Microsoft Intune
-description:
-keywords:
+title: "Fördelar med Intune App SDK | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
+ms.openlocfilehash: 3abf566831348de11f718370d6267e3ff4355bfb
+
 
 ---
 
 # Översikt över Intune App SDK
-Intune App SDK, som finns för både iOS- och Android-plattformen, gör det möjligt att använda hanteringsfunktioner för mobilappar med Microsoft Intune. Därutöver arbetar vi för att minska mängden kodändringar som utvecklare behöver göra. Som du kommer märka kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda våra API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app. 
-När du har aktiverat din app kan IT-administratörer distribuera principer till Intune-hanterade appar och utnyttja dessa funktioner för att skydda företagsdata i apparna.
+Intune App SDK, som finns för både iOS- och Android-plattformen, gör det möjligt att använda hanteringsfunktioner för mobilappar med Microsoft Intune. Därutöver arbetar vi för att minska mängden kodändringar som utvecklare behöver göra. Som du kommer märka kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda våra API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app. När du har aktiverat din app kan IT-administratörer distribuera principer till Intune-hanterade appar och utnyttja dessa funktioner för att skydda företagsdata i apparna.
 
 ## Vanliga funktioner
 
@@ -77,6 +70,7 @@ Med apphantering utan enhetsregistrering kan Microsoft Intune-tjänsten distribu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Aktivera din produktnyckel | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 844c2ca8-2721-4f72-b1dd-be9b1da1f220
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: d575d77a5f951311dc0d94abc96767952111b146
+
 
 ---
 
@@ -35,7 +29,8 @@ Lös in produktnyckeln genom att ange den 25 tecken långa koden.
 
 -   Om du aktiverar en produktnyckel för Enterprise Mobility Suite går du [hit](http://www.microsoft.com/ems/open).
 
-> [!NOTE] Om du förlorar produktnyckeln kontaktar du partnern eller återförsäljaren du har handlat från.
+> [!NOTE]
+> Om du förlorar produktnyckeln kontaktar du partnern eller återförsäljaren du har handlat från.
 
 ## Hämta din System Center Configuration Manager-programvara
 För att hämta programvaran för System Center Configuration Manager går du till [Volume Licensing Service Center](http://go.microsoft.com/fwlink/?LinkID=232300).
@@ -56,6 +51,7 @@ För att hämta programvaran för System Center Configuration Manager går du ti
 |**Tyvärr kan vi inte behandla din order**.|Klienten skapades men produktnycklarna har inte lösts in. Försök att lösa in dina produktnycklar igen via länken ovan. Om problemet kvarstår bör du kontakta [supportavdelningen](http://go.microsoft.com/fwlink/?LinkID=394189).|
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

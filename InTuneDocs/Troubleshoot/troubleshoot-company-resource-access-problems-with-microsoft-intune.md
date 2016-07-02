@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Felsökning av problem med åtkomst till företagsresurser | Microsoft Intune
-description:
-keywords:
+title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c22ddd554928b394e14742b8ba7d583d390d1c44
+ms.openlocfilehash: ed14e92d48a2604d16ceee8b844ae5cc0c45f051
+
 
 ---
 
@@ -377,6 +371,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
