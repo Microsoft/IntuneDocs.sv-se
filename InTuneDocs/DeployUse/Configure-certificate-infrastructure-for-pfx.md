@@ -1,25 +1,21 @@
 ---
-title: Konfigurera certifikatinfrastrukturen för PFX | Microsoft Intune
-description:
-keywords:
+title: "Konfigurera certifikatinfrastrukturen för PFX | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 05/16/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: vinaybha
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6edb37708d26033358af30c47e955b20caedb6fd
+ms.openlocfilehash: 51def9dc80043bbf5a71578fb44cae9259fd48b1
+
 
 
 ---
@@ -51,7 +47,7 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
  > [!NOTE]           
 > -    Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
 >-  Dessutom måste den server som är värd för WAP ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter, samt lita på SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
-Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
+    Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
 ### Certifikat och mallar
@@ -82,12 +78,14 @@ I det här steget kommer du att publicera certifikatmallen
 
     -   På fliken **Tillägg** kontrollerar du att **beskrivningen av användningsprinciper** omfattar **Klientautentisering**.
 
-        > [!IMPORTANT] För iOS- och Mac OS X-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att alternativet **Signaturen är bevis för ursprung** inte är markerat.
+        > [!IMPORTANT]
+        > För iOS- och Mac OS X-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
 
 
 3.  Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock välja att konfigurera certifikatutfärdaren att tillåta att den som begär anger ett annat värde, som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
-    > [!IMPORTANT] På iOS- och Mac OS X-plattformarna används alltid det värde som ställts in i mallen, oavsett vilka andra konfigurationer du gör.
+    > [!IMPORTANT]
+    > iOS- och Mac OS X-plattformen använder alltid värdet i mallen, oavsett andra konfigurationer som du gör.
 
     Om du vill konfigurera certifikatutfärdaren att tillåta att den som begär anger giltighetsperioden, kör du följande kommandon på certifikatutfärdaren:
 
@@ -134,7 +132,8 @@ Hämta, installera och konfigurera certifikatanslutningsappen
 
 4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
 
-    > [!TIP] Om du stängde guiden innan du startade användargränssnittet till certifikatanslutningsappen kan du öppna det igen genom att köra följande kommando:
+    > [!TIP]
+    > Om du stängt guiden innan du startade användargränssnittet kan du öppna det genom att skriva följande kommando:
     >
     > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
@@ -158,6 +157,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

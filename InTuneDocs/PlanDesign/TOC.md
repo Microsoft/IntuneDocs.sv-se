@@ -18,9 +18,9 @@
 
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
-# [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

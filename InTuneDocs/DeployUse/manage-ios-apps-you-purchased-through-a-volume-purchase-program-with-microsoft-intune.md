@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Hantera iOS-appar som du har köpt via ett volyminköpsprogram | Microsoft Intune
-description:
-keywords:
+title: "Hantera iOS-appar som du har köpt via ett volyminköpsprogram | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
+ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+
 
 ---
 
@@ -76,20 +70,23 @@ Om du vill frisläppa en licens måste du ändra distributionsåtgärden till **
 
 När användare med kvalificerande enheter försöker installera en VPP-app ombeds de att gå med i Apples volyminköpsprogram. De måste göra detta innan appinstallationen fortsätter.
 
-> [!TIP] Titta på kolumnen **Status för VPP-villkor** om du vill se godkännandestatus för varje användare som appen har distribuerats till.
+> [!TIP]
+> Titta i kolumnen **Status för VPP-villkor** så ser du godkännandestatusen för varje användare som appen har distribuerats till.
 
 Distributionen misslyckas om det inte finns fler tillgängliga licenser.
 
 ## För att övervaka Apple VPP-appar
 Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser som används från arbetsýtan **Appar** i noden **Hanterad programvara** &gt; **Volyminköpta appar**.
 
-> [!TIP] Du kan också använda appen **Filter** att kontrollera status för varje appinstallation.
+> [!TIP]
+> Du kan också använda **appfilter** för att kontrollera statusen för varje appinstallation.
 
 ### Se även
 [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
