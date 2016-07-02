@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Hantera licensavtal för Windows-datorprogram | Microsoft Intune
-description:
-keywords:
+title: "Hantera licensavtal för Windows-datorprogram | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
+ms.openlocfilehash: 575b8525b8b99d06358a911b8deb24ee5de48fe1
+
 
 ---
 
@@ -45,7 +39,8 @@ I arbetsytan **Licenser** i administrationskonsolen för Intune kan du:
 
 Du kan även generera rapporter som visar installations- och licensantal för programvarutitlar. Licensrapporter kan hjälpa dig att bedöma ditt fullständiga licensläge för Microsofts mjukvaruprogram och mjukvaruprogramtitlar som inte kommer från Microsoft.
 
-> [!TIP] Arbetsytan **Licenser** visas inte i administratörskonsolen förrän du hanterar minst en Windows-dator med Intune-klienten för Windows-datorer.
+> [!TIP]
+> Arbetsytan **Licenser** visas inte i administratörskonsolen förrän du hanterar minst en Windows-dator med Intune-klienten för Windows.
 
 ## Lägga till Microsofts volymlicensavtal
 Intune-volymlicensavtal tillhandahåller licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan lägga till Microsofts volymlicensavtal i Intune genom att tillhandahålla matchande par av avtalsnummer. Avtalet eller tillståndsnumret måste anpassas till rätt licens eller registreringsnummer. Avtalsnummerpar erhåller du när du köper dina licensavtal från [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
@@ -96,7 +91,8 @@ Intune-volymlicensavtal tillhandahåller licensinformation för programvara som 
 
         -   **Licens-/registrerings-/kundnummer** – Ange licens-/registrerings-/kundnummer för licensparet.
 
-        > [!NOTE] Om du lägger till flera avtalsnummerpar skapar Intune ett avtal med det namn som du anger, och alla par som du har lagt till kommer att bli en del av detta avtal.
+        > [!NOTE]
+        > Om du lägger till flera avtalsnummerpar skapar Intune ett avtal med det namn som du anger, och alla par som du har lagt till kommer att vara en del av detta avtal.
 
     Du kan klicka på **+** för att lägga till ett till avtalsnummerpar eller **-** för att ta bort ett avtalsnummerpar som du har angett.
 
@@ -114,7 +110,8 @@ Vyn **Alla avtal** visas och Intune ansluter till Microsoft Volume Licensing Ser
 
 Om du vill uppdatera volymlicensinformationen efter att du har lagt till licensavtal i Intune går du till sidan **Licensöversikt** och klickar på **Uppdatera nu**. Denna åtgärd hämtar den aktuella licensinformationen från [Microsoft volymlicens servicecenter (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
 
-> [!IMPORTANT] Fram till dess att du uppdaterar volymlicensinformationen kan du se olika typer av information i avtalslistan och rättighetsinformationen på sidan **Avtalsöversikt**.
+> [!IMPORTANT]
+> Tills du uppdaterat volymlicensinformationen, kan du se olika typer av information i avtalslistan och rättighetsinformationen på **Avtalsöversikt** sidan.
 
 När du har uppdaterat volymlicensinformationen kan du jämföra licensinformationen med din upptäckta Microsoft-programvara i arbetsytan **Appar** arbetsområdet. Du kan också köra följande licensrapporter:
 
@@ -122,7 +119,8 @@ När du har uppdaterat volymlicensinformationen kan du jämföra licensinformati
 
 -   **Licensinstallationsrapport** – Hjälper dig att avgöra om du har tillräcklig licensavtalstäckning.
 
-> [!NOTE] Den **Produkttitel** som visas för alla Microsofts volymlicensavtal är **Inte tillgänglig**.
+> [!NOTE]
+> **Produkttiteln** som visas för alla Microsofts volymlicensavtal är **Ej tillgänglig**.
 
 ## Lägga till och redigera andra licensavtal
 Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts volymlicensavtal. Dessa avtal kan omfatta mjukvaruprogram som inte är Microsofts eller mjukvaruprogram från Microsoft som köptes via en återförsäljare.
@@ -184,6 +182,7 @@ Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

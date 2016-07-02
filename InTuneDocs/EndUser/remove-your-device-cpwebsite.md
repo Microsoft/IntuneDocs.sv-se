@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Ta bort enheten från företagsportalen | Microsoft Intune
-description:
-keywords:
+title: "Ta bort enheten från företagsportalen | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mamoriss
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
+ms.openlocfilehash: 9f63869b6c4f3a082da7587921870004c6ffc5e1
+
 
 ---
 
@@ -47,6 +41,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 ### Se även
 [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

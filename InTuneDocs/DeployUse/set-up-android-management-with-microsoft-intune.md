@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Konfigurera Android-hantering med Microsoft Intune | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: lacranda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f1dc713099c982d6e32c87b814dd3f55b1656eda
+ms.openlocfilehash: 5f65887345c1a650c6d80863e42f447035c789f7
+
 
 ---
 
@@ -32,7 +26,7 @@ Välj följande alternativ för enhetsplattformar om du vill veta mer:
 
 > [!div class="op_single_selector"]
 - [Konfigurera Android-hantering med Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Set up iOS and Mac management with Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
+- [Konfigurera iOS- och Mac-hantering med Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
 - [Konfigurera Windows-enhetshantering med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
@@ -51,6 +45,7 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 [Dags att registrera enheter i Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 
