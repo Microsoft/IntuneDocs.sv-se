@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Planera dina användar- och enhetsgrupper | Microsoft Intune
-description:
-keywords:
+title: "Planera dina användar- och enhetsgrupper | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 82ab2dbfada6c0745195da149d5f0dc1948ceb92
+ms.openlocfilehash: e89d8384532b994d810649fc07c698237e2f3cec
+
 
 ---
 
@@ -158,7 +152,8 @@ Gå igenom informationen och skapa gruppen genom att välja **Slutför**.
 
 I vårt exempel har vi också skapat en grupp för Mellanöstern och Asien, MEA.
 
-> [!NOTE] Om gruppmedlemskapet inte har fyllts i baserat på medlemskap i säkerhetsgruppen kontrollerar du att dessa medlemmar har tilldelats Intune-licenser.
+> [!NOTE]
+> Om gruppmedlemskapet inte har fyllts i baserat på medlemskap i säkerhetsgruppen kontrollerar du att dessa medlemmar har tilldelats Intune-licenser.
 
 ### Grupper för särskild maskinvara
 Om organisationen kräver principer som tillämpas för specifika maskinvarutyper kan du skapa grupper utifrån det här kravet. Du kan basera dem på specifika grupper som du redan har skapat i din lokala AD och synkronisera dem till Azure AD. Du kan också skapa dem direkt i Azure AD. I det här exemplet använder vi **US Users Group** som överordnad grupp till gruppen **Laptop Users**.
@@ -174,7 +169,8 @@ Om organisation kräver principer som tillämpas för specifika operativsystem, 
 
 Enligt samma metod som i föregående exempel kan vi skapa grupper baserat på användare <!--devices?--> som använder specifika operativsystemplattformar.
 
-> [!NOTE] Om du har användare som använder flera mobila plattformar eller operativsystem och du inte har en automatiserad metod för att kategorisera användare som Android-användare, iOS-användare eller Windows-användare, bör du överväga att tillämpa principer på enhetsnivå, vilket ger bättre flexibilitet vid tillämpning av operativsystemspecifika principer.
+> [!NOTE]
+> Om du har användare som använder flera mobila plattformar eller operativsystem och du inte har en automatiserad metod för att kategorisera användare som Android-användare, iOS-användare eller Windows-användare, bör du överväga att tillämpa principer på enhetsnivå, vilket ger bättre flexibilitet vid tillämpning av operativsystemspecifika principer.
 >
 > Du kan inte etablera grupper dynamiskt baserat på enhetens operativsystem. Det gör du med hjälp av AD- eller AAD-säkerhetsgrupper.
 
@@ -218,6 +214,7 @@ Genom att namnge principerna på det här sättet kan du snabbt identifiera prin
 [Skapa grupper](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

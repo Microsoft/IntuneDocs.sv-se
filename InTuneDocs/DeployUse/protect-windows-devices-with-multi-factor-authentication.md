@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Skydda Windows-enheter med multifaktorautentisering | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: vinaybha
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2023d7bc1d35b423a216ece195cdca9a6a542446
+ms.openlocfilehash: 15e546b93c2a3aff551efa36ac80ff212ada5812
+
 
 ---
 
@@ -40,7 +34,8 @@ Alla servrar som anges ovan måste uppfylla systemkraven i [System Requirements 
 #### MFA med Intune
 Om din organisation har en lokal IT-infrastruktur med en Active Directory-domän med AD FS (Active Directory Federation Services) kan du konfigurera MFA på federationsservern och sedan aktivera MFA för registrering i Intune. Genom att konfigurera MFA i Intune behöver användarna bara autentiseras en gång vid registreringen och kan sedan komma åt företagets resurser utan att behöva upprepa MFA-processen varje gång.
 
->[!NOTE] MFA kan krävas per användare eller per grupp på ADFS-servern.  
+>[!NOTE]
+>MFA kan krävas per användare eller per grupp på ADFS-servern.  
 
 #### MFA utan Intune
 Om du konfigurerar multifaktorautentisering på federationsservern, men inte aktiverar multifaktorautentisering för registrering i Intune måste användarna använda multifaktorautentisering varje gång de kommer åt företagsresurser (inte bara vid enhetsregistreringen).
@@ -60,6 +55,7 @@ Information om hur du aktiverar multifaktorautentisering i AD FS finns i [Manage
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
