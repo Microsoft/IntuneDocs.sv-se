@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Vad händer om du avregistrerar din enhet från Intune? | Microsoft Intune
-description:
-keywords:
+title: "Vad händer om du avregistrerar din enhet från Intune? | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1244d931d1bd3db012fbcfe0bd055d1fd4f2d88a
+ms.openlocfilehash: f0108b884439aac9661c9f36f85b47d80209d155
+
 
 ---
 
@@ -43,7 +37,8 @@ Mer information om vad som händer får du via länken som matchar den typ av en
 
 -   Endpoint Protection-programmet för Intune tas bort från datorn. Om det finns annan antivirusprogramvara installerad på datorn och den har inaktiverats kan det hända att den återaktiveras när Intune Endpoint Protection tas bort. Kontrollera datorn när du har tagit bort den från företagsportalen.
 
-    > [!IMPORTANT] Om det andra virusskyddsprogrammet inte har återaktiveras och det inte finns något annat virusskyddsprogram installerat kan datorn vara utsatt för virus och skadlig kod.
+    > [!IMPORTANT]
+    > Om det andra virusskyddsprogrammet inte återaktiveras och det inte finns något annat virusskyddsprogram kan datorn vara utsatt för virus och skadlig kod.
 
 -   Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran, gäller inte längre.
 
@@ -97,6 +92,7 @@ Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på
 ### Se även
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

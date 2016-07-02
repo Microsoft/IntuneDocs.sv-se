@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Nästa steg efter att Intune-utvärderingen har slutförts | Microsoft Intune
-description:
-keywords:
+title: "Nästa steg efter att Intune-utvärderingen har slutförts | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1a5d9e44ae524f9f8ca3cfe9912e6dae2d1a7d49
+ms.openlocfilehash: 5ae133583311963d5a3b8c55d8caf43453b3aedf
+
 
 ---
 
@@ -39,6 +33,7 @@ Du kan konvertera en kostnadsfri utvärderingsversion av Intune till en betald p
 -   **Online-prenumerationsprogram** (&lt;250 användare) – Programmet [Volymlicensiering för onlinetjänster](http://www.microsoft.com/licensing/online-services/default.aspx) är utformat särskilt för organisationen med färre än 250 användare. Använd det här programmet när du ska prenumerera på, hantera och distribuera Intune-tjänster.
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
