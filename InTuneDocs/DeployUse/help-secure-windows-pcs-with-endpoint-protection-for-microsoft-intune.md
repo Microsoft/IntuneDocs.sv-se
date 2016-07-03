@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Endpoint Protection för Windows-datorer| Microsoft Intune
-description:
-keywords:
+title: "Endpoint Protection för Windows-datorer| Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
-manager: jeffgilb
+manager: muhosabe
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9b96e6c49ec9122961588156d77bf94cdbccd787
+ms.openlocfilehash: b1b1cc90672903ac0336151373272b5e20e56165
+
 
 ---
 
@@ -52,7 +46,8 @@ Om du vill växla från ditt aktuella slutpunktsskydd till Microsoft Intune Endp
 
     -   Ta bort från slutpunktsskyddprogram från tredje part manuellt så här:
 
-> [!NOTE] Intune kommer inte att avinstallera slutpunktsskyddsprogram från tredje part automatiskt.
+> [!NOTE]
+> Intune kommer inte att avinstallera slutpunktsskyddprogram från tredje part automatiskt.
 
 ## Så här konfigurerar du Microsoft Intune Endpoint Protection
 Använd följande steg när du konfigurerar Endpoint Protection för Microsoft Intune.
@@ -162,7 +157,8 @@ Du övervaka status för skadlig kod på datorer med hjälp av arbetsytan **Skyd
   - **Visa egenskaper** – öppnar sidan med mer information om den valda skadliga koden.
   - **Lär dig mer om den här skadliga koden** – öppnar ett ämne från Microsoft Malware Protection Center med mer information om den skadliga koden.
 
-> [!IMPORTANT] Arbetsytan **Skydd** visas inte i administratörskonsolen förrän du har installerat klienten och hanterar minst en datorklient.
+> [!IMPORTANT]
+> Arbetsytan **Skydd** visas inte i administratörskonsolen förrän du har installerat klienten och hanterar har minst en datorklient.
 
   ![Övervaka Endpoint Protection](./media/pol-sa-ep-monitor.png)
 
@@ -181,7 +177,7 @@ Intune kan köra antingen en fullständig sökning eller snabbsökning efter ska
 1. I den [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) går du till **Grupper** > **Översikt** > **Alla enheter** > **Alla datorer** och markerar den dator som du vill använda.
 
 2. Klicka på listrutan **Fjärråtgärder** och välj sedan aktiviteten. Aktiviteten körs på fjärrdatorn.
-![Köra en sökning efter skadlig kod](../media/ep_sa_malwarescan.png)
+
 
 
 
@@ -192,6 +188,7 @@ Mer hjälp och support finns i [Felsöka slutpunktsskydd i Microsoft Intune](/in
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 
