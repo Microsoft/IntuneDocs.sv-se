@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 9
 [ Handback Failed Files ](#handback-failed-list)| 30
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 361
-[ In Sync Handback Files ](#insync-handback-success-list)| 420
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 360
+[ In Sync Handback Files ](#insync-handback-success-list)| 421
 [ Ignored Files ](#ignored-list)| 224
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -496,7 +496,6 @@
  [InTuneDocs\includes\CPEnrollmentTermsAndConditions_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/CPEnrollmentTermsAndConditions_md.md) | OutofSyncHandedBackSuccess | [Details](#3912b65a31e52de663cbbf07329e7c92b88f604a595)
  [InTuneDocs\includes\group-deprecation.md](https://github.com/Microsoft/IntuneDocs-pr/blob/5ec8e8d42232efdac7e8c36e00341bb07c66c0e5/InTuneDocs/includes/group-deprecation.md) | OutofSyncHandedBackSuccess | [Details](#de6b0a502492984a20cb9f16abbdea1d7c34dc60602)
  [InTuneDocs\includes\Intune-feedback-footer.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/Intune-feedback-footer.md) | OutofSyncHandedBackSuccess | [Details](#d9fdbbe0d10fcd31299c021749df2ea6dc55d199603)
- [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e8f9d974947835d5ec5a356bea6b4261960277ef/InTuneDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#b6e3e5189a1567dd5b13017d275ff4bd548e5fa1654)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-11-start-mg-mobl-dev.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-11-start-mg-mobl-dev.png) | OutofSyncHandedBackSuccess | [Details](#64f06d45481657e65ee924d286623dc83a514f40659)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-12-link-set-mdm.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-12-link-set-mdm.png) | OutofSyncHandedBackSuccess | [Details](#73ef645cbc717eb389266a0e21f6ac7bdb749a6f660)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-13-enbl-ios-plat.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png) | OutofSyncHandedBackSuccess | [Details](#b3a60bde0102f405e115743da44fe7b71c503d07661)
@@ -964,6 +963,7 @@
  [InTuneDocs\includes\wit_tools_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/wit_tools_md.md) | InSyncHandedBackSuccess | [Details](#58643537b9c0a34ac93bf6af99240b6e3469ab2a651)
  [InTuneDocs\includes\wps_2.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/wps_2.md) | InSyncHandedBackSuccess | [Details](#e9096a16bdd11b30f840ceba6f1cb16bd4cf25e8652)
  [InTuneDocs\includes\wps_2_md.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/wps_2_md.md) | InSyncHandedBackSuccess | [Details](#7aec405442c5cb6c886214b18022f4f9d2af5cbf653)
+ [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e8f9d974947835d5ec5a356bea6b4261960277ef/InTuneDocs/index.md) | InSyncHandedBackSuccess | [Details](#b6e3e5189a1567dd5b13017d275ff4bd548e5fa1654)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-16-cert-portl-link.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-16-cert-portl-link.png) | InSyncHandedBackSuccess | [Details](#151651e0979833aeabd508b9ddae8a298cbd940c664)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-21-CSRfile-open.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-21-CSRfile-open.png) | InSyncHandedBackSuccess | [Details](#5f0f94df8b553992406aaee1d98129c87db82c87669)
  [InTuneDocs\media\30-day-trial-walkthrus\30day-cfg-pol-22-upld-reqst.png](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/media/30-day-trial-walkthrus/30day-cfg-pol-22-upld-reqst.png) | InSyncHandedBackSuccess | [Details](#98b53b0abe3287761ebdf1733d238a1d6b24bf45670)
@@ -9571,15 +9571,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b6e3e5189a1567dd5b13017d275ff4bd548e5fa1654'></a> Source: [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr/blob/e8f9d974947835d5ec5a356bea6b4261960277ef/InTuneDocs/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/6b9ff771cf03ec45f301848776dd1bdf796930ad/InTuneDocs/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [InTuneDocs\index.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/fd7ff65b45dbc67109567caceff15fd8ac1abff7/InTuneDocs/index.md)
 * Handoff File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/0dd1cdd2bf038c568241ea24f554069c2cedc934/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf)
 * Handoff Datetime: 2016-06-27 11:56:36
 * Handoff Reason: Include
 * Archive File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/6647a9fd3b025f6ba1638a28c09bdbdaa19ca091/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf)
 * Archive Datetime: 2016-07-02 01:42:42
-* Handback File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/107256bfe11ae386680e967e4e2cf9271c7f627a/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf)
-* Handback Datetime: 2016-06-24 17:41:25
+* Handback File: [index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/e317a4ca6de278dd362cd7dc27dfdc51bfc767f5/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/index.404579aeff405d27d9820f60e5e015fb7352d33a.sv-se.xlf)
+* Handback Datetime: 2016-07-04 07:49:38
 * [Back to Top](#report-top)
 
 ##### <a name='11fd1aed877c922967ea3e4f2cc115d4b8cc596a655'></a> Source: [InTuneDocs\intunefiles.txt](https://github.com/Microsoft/IntuneDocs-pr/blob/5aa7c22cfcc25a19ba3649840b267261d0f4ffd8/InTuneDocs/intunefiles.txt)
