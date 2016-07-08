@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Viktig information för Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Viktig information för Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: db9479b2-582d-4a1a-9fbc-fbfc6c680e6f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 1906f14568484ebbf23ac7c4350964fb2d5d508f
+
 
 ---
 
@@ -65,7 +59,7 @@ Resursåtkomstprofilen (e-postprofilen) togs inte bort från enheten i något av
 
 1.  Öppna **Internet Explorer** på Windows 8.1-enheten.
 
-2.  När du uppmanas att ange autentiseringsuppgifter för proxyservern gör du det och väljer alternativet **Kom ihåg min inloggningsinformation**.
+2.  När du uppmanas att ange autentiseringsuppgifter för proxyservern gör du detta och väljer alternativet **Kom ihåg min inloggningsinformation**.
 
 3.  Registrera enheten.
 
@@ -78,7 +72,7 @@ Resursåtkomstprofilen (e-postprofilen) togs inte bort från enheten i något av
 ## Microsoft Intune App Wrapping-verktyget för Android har ingen inbyggd avinstallationsfunktion
 **Problem:** **Microsoft Intunes apphanteringsverktyg för Android** har ingen inbyggd funktion för att avinstallera verktyget.
 
-**Lösning:** Bläddra till den palats där du installerade verktyget och ta bort katalogen. Standardinstallationsplatsen är: **C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool**. Mer information om programhanteringsverktyget finns i [Förbereda Android-appar för hantering med programhanteringsverktyget](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)
+**Lösning:** Bläddra till den palats där du installerade verktyget och ta bort katalogen. Standardinstallationsplatsen är: **C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool**. Mer information om apphanteringsverktyget finns i [Förbereda Android-appar för hantering med apphanteringsverktyget](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool).
 
 ## Fjärrhjälp är inte tillgänglig på datorer som kör Windows 8 eller Windows 8.1
 **Problem:** I den här versionen är fjärrhjälpsfunktionen inte tillgänglig på datorer som kör Windows 8 eller Windows 8.1.
@@ -96,6 +90,7 @@ Azure Preview Portal bygger på en ny plattform och stöder följande språk –
 Intune-administrationskonsolen och mobilmiljöerna för slutanvändarna stöder danska, grekiska, finska, norska och rumänska, förutom de språk som stöds av Azure Preview Portal.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
