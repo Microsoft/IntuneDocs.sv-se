@@ -1,5 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink"><maml:para address="BKMK_TAC" xmlns:maml="http://ddue.schemas.microsoft.com/authoring/2003/5"> <maml:embeddedLabel>Definiera användningsvillkor</maml:embeddedLabel> <maml:br/>Du kan publicera användningsvillkor som användarna ser första gången de använder företagsportalen från en enhet, oavsett om enheten har registrerats eller inte. Användarna måste godkänna dessa villkor för att få åtkomst till portalen.  När du uppdaterar villkoren avsevärt och vill att användarna ska kunna se och godkänna dem, kan du markera de nya villkoren som en ny version. Användarna går sedan via samma process nästa gång de besöker portalen.  </maml:para><maml:para xmlns:maml="http://ddue.schemas.microsoft.com/authoring/2003/5">I <maml:externalLink><maml:linkText>Microsoft Intune-administrationskonsolen</maml:linkText><maml:linkUri>http://manage.microsoft.com</maml:linkUri></maml:externalLink> klickar du på <maml:embeddedLabel>Företagsportal</maml:embeddedLabel> &gt; <maml:embeddedLabel>Villkor</maml:embeddedLabel>.</maml:para></Token>
-
-<!--HONumber=May16_HO2-->
-
-
