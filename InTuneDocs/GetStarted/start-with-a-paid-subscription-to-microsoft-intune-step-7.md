@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Anpassa företagsportalen | Microsoft Intune
-description:
-keywords:
+title: "Anpassa företagsportalen | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: eb4a9f01-f857-4563-ab6f-5d0d7dfa659d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
+ms.openlocfilehash: 45f574a975c94338c4543c0cdbc3aef549030601
+
 
 ---
 
@@ -29,9 +23,10 @@ ms.suite: ems
 # Anpassa företagsportalen.
 [!INCLUDE[wit_iwportal_1](../includes/wit_iwportal_1_md.md)] är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen.
 
+> [!TIP]
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.
 
-Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Logga bara in på [Microsoft Intune Administratörskonsol](https://manage.microsoft.com) som klientorganisation eller administratör, välj **Admin** &gt; **Företagsportal** och konfigurera inställningarna för företagsportalen.
+Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Om du vill göra det loggar du bara in på [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) som klient eller tjänstadministratör, väljer **Admin** &gt; **Företagsportal** och konfigurerar inställningarna för företagsportalen.
 
 ![admin-console-admin-workspace-comp-portal-settings](./media/companyportal.png)
 
@@ -43,7 +38,7 @@ Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och info
     |Företag|40|Det här namnet visas som företagsportalens rubrik.|
     |IT-avdelningens kontaktperson|40|Det här namnet visas på sidan **Kontakta IT-avdelningen**.|
     |IT-avdelningens telefonnummer|20|Det här numret visas på sidan **Kontakta IT-avdelningen**.|
-    |IT-avdelningens e-postadress|40|Den här adressen visas på sidan **Kontakta IT-avdelningen**. Du måste ange en giltig e-postadress i formatet **alias@domännamn.com**|
+    |IT-avdelningens e-postadress|40|Den här adressen visas på sidan **Kontakta IT-avdelningen**. Du måste ange en giltig e-postadress i formatet **alias@domännamn.com**.|
     |Ytterligare information|120|Visas på sidan **Kontakta IT-avdelningen**.|
     |URL till företagets sekretesspolicy|79|Du kan ange en egen sekretesspolicy för ditt företag som visas när användaren klickar på en länk på företagsportalen. Du måste ange en giltig URL i formatet https://www.contoso.com.|
 
@@ -68,12 +63,13 @@ Du kan anpassa företagsportalen med företagets logotyp, företagets namn, tema
 När du har sparat ändringarna kan du använda länkarna längst ned på sidan **Företagsportal** i administrationskonsolen för att gå till företagsportalen. Dessa länkar kan inte ändras. När en användare loggar in visar dessa länkar dina prenumerationer på företagsportalen.
 
 ### Nästa steg
-Grattis! Du är klar med steg 7 i *snabbstartsguiden för Intune*
+Gratulerar! Du är klar med steg 7 i *snabbstartsguiden för Intune*.
 >[!div class="step-by-step"]
 
 >[&larr; **Skapa principer och appar**](.\start-with-a-paid-subscription-to-microsoft-intune-step-6.md)       [**Registrera enheter** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

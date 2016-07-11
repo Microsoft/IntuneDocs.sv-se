@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Anpassade konfigurationer för VPN-profiler | Microsoft Intune
-description:
-keywords:
+title: "Anpassade konfigurationer för VPN-profiler | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d5c48a4cead6250864f5b10444d99d062441bd99
+ms.openlocfilehash: 7e7c50552b5a61804e759a7ec5443029d4bd4584
+
 
 ---
 
@@ -50,7 +44,8 @@ Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune. 
 
 När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
 
-##Exempel på URI-inställningar för en anpassad konfiguration av VPN-profil Följande är exempelposter för URI-värden för att skapa en anpassad konfiguration för VPN i det fiktiva företaget Contoso. Mer information, t.ex. om datatypen för varje post, finns i [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx)
+##Exempel på URI-inställningar för en anpassad konfiguration av VPN-profil
+Följande är exempelposter för URI-värden för att skapa en anpassad konfiguration för VPN i det fiktiva företaget Contoso. Mer information, t.ex. om datatypen för varje post, finns i [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx)
 
 Native Contoso VPN (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
 
@@ -116,6 +111,7 @@ Exempel:
 (VPN-anslutningar i Microsoft Intune)[vpn-connections-in-microsoft-intune.md]
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

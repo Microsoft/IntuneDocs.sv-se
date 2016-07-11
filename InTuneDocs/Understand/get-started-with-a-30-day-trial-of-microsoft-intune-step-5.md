@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrera mobila enheter för utvärdering | Microsoft Intune
-description:
-keywords:
+title: "Registrera mobila enheter för utvärdering | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
+ms.openlocfilehash: f26b64015f483eb5b6a6efbaa6fe6730dde7dac9
+
 
 ---
 
@@ -32,17 +26,17 @@ Om du ska konfigurera hantering av mobila enheter med Intune måste du först an
 
 1.  **Gör Intune till din utfärdare för hantering av mobila enheter**
 
-    I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Admin** &gt; **Hantering av mobila enheter** Välj **Uppgifter** > **Ange MDM-utfärdare** och välj sedan **Ja** i dialogrutan **MDM-utfärdare**.
+    I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Admin** &gt; **Hantering av mobila enheter**. Välj **Uppgifter** > **Ange MDM-utfärdare** och välj sedan **Ja** i dialogrutan **MDM-utfärdare**.
 
 2.  **Aktivera MDM för din enhetsplattform**
 
     Aktivera hantering av mobila enheter för den enhetsplattform som du vill hantera. Beroende på din plattform behövs olika krav:
 
-    -   **iOS och Mac OS X**: Se [Konfigurera iOS-hantering med Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune)
+    -   **iOS och Mac OS X**: Se [Konfigurera iOS- och Mac-hantering med Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).
 
     -   **Android**: Med mobila Android-enheter kan användarna registrera sig med hjälp av företagsportalappen som finns i Google Play. Det krävs ingen ytterligare konfiguration i Intune.
 
-    -   **Windows Phone**: Se [Konfigurera hantering av Windows Phone med Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune)
+    -   **Windows Phone**: Se [Konfigurera hantering av Windows Phone med Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).
 
 ## Registrera testenheter
 
@@ -62,9 +56,9 @@ Om du tillfrågas om en **Serveradress**skriver du manage.microsoft.com.
 
 
 ## Installera appen som distribuerades tidigare
-Öppna företagsportalen på den mobila enheten, välj **Appar**och installera sedan **Microsoft Skype**
+Öppna företagsportalen på den mobila enheten, välj **Appar**och installera sedan **Microsoft Skype**.
 
-Mer information om hantering av mobila enheter med hjälp av Intune finns i [Dags att registrera enheter i Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune)
+Mer information om hantering av mobila enheter med hjälp av Intune finns i [Dags att registrera enheter i Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
 
 ### Nästa steg
 Gratulerar! Du har precis slutfört steg 5 i genomgången av *Microsoft Intune-utvärderingen*.
@@ -74,6 +68,7 @@ Gratulerar! Du har precis slutfört steg 5 i genomgången av *Microsoft Intune-u
 >[&larr; **Skapa principer**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)     [**Alternativ och tillägg** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Skapa grupper för att organisera användare och enheter som prenumererar på utvärderingen | Microsoft Intune
-description:
-keywords:
+title: "Skapa grupper för att organisera användare och enheter som prenumererar på utvärderingen | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
+ms.openlocfilehash: f438b2b5e53d9bc119341effae1533d26cc9a47b
+
 
 ---
 
@@ -31,9 +25,9 @@ Grupper i Intune ger stor flexibilitet för att hantera dina enheter och använd
 ## Skapa en enhetsgrupp
 Använd enhetsgrupper för att distribuera programvara och uppdateringar och konfigurera inställningsprinciper för Microsoft Intune Agent och Windows brandvägg. Du kan till exempel skapa gruppen ”Mina utvärderingsenheter” med följande steg:
 
-1.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Översikt** &gt; **Skapa grupp**
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** &gt; **Översikt** &gt; **Skapa grupp**.
 
-2.  Skriv ”Mina utvärderingsenheter” som **Gruppnamn**, välj **Alla enheter**i den överordnade grupplistan och välj sedan **Nästa**.
+2.  Skriv ”Mina utvärderingsenheter” som **Gruppnamn**, välj **Alla enheter** i den överordnade grupplistan och välj sedan **Nästa**.
 
 3.  Välj **Alla enheter** på sidan **Definiera medlemsskapsvillkor** för att indikera att gruppen innehåller både mobila enheter och datorer.
 
@@ -46,11 +40,11 @@ Du kan hitta de nyligen skapade grupperna i listan **Grupper** under **Alla enhe
 ## Skapa en användargrupp
 Använd användargrupper för att distribuera programvara och enhetsprinciper. Du kan till exempel skapa gruppen ”Mina utvärderingsanvändare” med följande steg:
 
-1.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Översikt** &gt; **Skapa grupp**
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** &gt; **Översikt** &gt; **Skapa grupp**.
 
 2.  Skriv ”Mina utvärderingsanvändare” som **Gruppnamn**, välj **Alla användare**i den överordnade grupplistan och välj sedan **Nästa**.
 
-3.  På sidan **Definiera medlemskapsvillkor** ställer du in **Starta gruppmedlemskap med** på **Alla användare i den överordnade gruppen**
+3.  På sidan **Definiera medlemskapsvillkor** ställer du in **Starta gruppmedlemskap med** på **Alla användare i den överordnade gruppen**.
 
 4.  Välj **Bläddra**intill **Exkludera medlemmar från dessa säkerhetsgrupper** och välj sedan **Företagsadministratör**. Med detta undantag kan du hantera gruppen Mina utvärderingsanvändare utan att företagsadministratörskontot (även kallat innehavaradministratören) påverkas.
 
@@ -60,7 +54,7 @@ Använd användargrupper för att distribuera programvara och enhetsprinciper. D
 
 Du hittar den nyligen skapade gruppen i listan **Grupper** under **Alla användare** på arbetsytan **Grupper**. Här kan du också redigera eller ta bort gruppen.
 
-Mer information om hur du använder grupper finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/Intune/Deploy-Use/use-groups-to-manage-users-and-devices-with-microsoft-intune)
+Mer information om hur du använder grupper finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/Intune/Deploy-Use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ### Nästa steg
 Gratulerar! Du har precis slutfört steg 3 i genomgången av *Microsoft Intune-utvärderingen*.
@@ -70,6 +64,7 @@ Gratulerar! Du har precis slutfört steg 3 i genomgången av *Microsoft Intune-u
 >[&larr; **Lägg till användare**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)     [**Skapa principer** &larr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

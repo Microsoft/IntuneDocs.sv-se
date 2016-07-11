@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Synkronisera Active Directory och lägga till användare i Intune | Microsoft Intune
-description:
-keywords:
+title: "Synkronisera Active Directory och lägga till användare i Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
+ms.openlocfilehash: 70a2d32de67f0a69bbc29ca68a1c831c9cf38796
+
 
 ---
 
@@ -40,19 +34,20 @@ Det enda verktyg som du behöver för att synkronisera dina användarkonton med 
 ## Bevilja administratörsbehörighet
 När du har lagt till användare i din Intune-prenumeration rekommenderar vi att du ger några av användarkontona [administratörsbehörighet](administrative-accounts-websites-perms.md). Vilken konsol du använder för att tilldela administratörsbehörighet är beroende av vilken administratörstyp du vill tilldela:
 
--   **Innehavaradministratör**: Använd **[!INCLUDE[wit_icp_1](../includes/wit_icp_1_md.md)]** om du vill att den här typen av administratör ska hantera din prenumeration, inklusive fakturering, molnlagring och hantering av användare som kan använda
+-   **Innehavaradministratör**: Använd **[!INCLUDE[wit_icp_1](../includes/wit_icp_1_md.md)]** om du vill att den här typen av administratör ska hantera din prenumeration, inklusive fakturering, molnlagring och hantering av användare som kan använda [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 -   **Tjänstadministratör**: Använd **[!INCLUDE[wit_adminconsole](../includes/wit_adminconsole_md.md)]** om du vill att den här typen av administratör ska utföra dagliga uppgifter, t.ex. hantering av mobila enheter eller datorer, distribution av principer eller programvara samt rapportkörning.
 
 
 ### Nästa steg
-Grattis! Du är klar med steg 3 i *snabbstartsguiden för Intune*
+Gratulerar! Du är klar med steg 3 i *snabbstartsguiden för Intune*.
 
 >[!div class="step-by-step"]
 
 >[&larr; **Domäninställningar**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Hantera Intune-licenser** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-4.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

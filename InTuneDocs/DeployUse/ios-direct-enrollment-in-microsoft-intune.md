@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Direktregistrering för iOS-enheter | Microsoft Intune
-description:
-keywords:
+title: "Direktregistrering för iOS-enheter | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
+ms.openlocfilehash: 8fea0f7f87972bc643bbb20348095e05f701287e
+
 
 ---
 
@@ -46,6 +40,8 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 
         -   **Förtilldelning av enhetsgrupp** – Alla enheter som har distribuerat den här profilen hör ursprungligen till den här gruppen. Du kan tilldela enheter på nytt efter registreringen.
 
+        >[!Important]
+        >Grupptilldelningar flyttas från Intune till Azure Active Directory. [Läs mer](http://go.microsoft.com/fwlink/?LinkID=787064)
     3.  Välj **Spara profil** för att lägga till profilen.
 
 5.  **Exportera en profil som .mobileconfig för att distribuera den till iOS-enheter** Välj den enhetsprofil som du skapat. Välj **Exportera...** i verktygsfältet. Välj **Hämta profil** och spara den nedladdade .mobileconfig-filen.
@@ -89,6 +85,7 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 [Dags att registrera enheter](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

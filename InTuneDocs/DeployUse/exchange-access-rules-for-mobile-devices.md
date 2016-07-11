@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Exchange-åtkomstregler för Microsoft Intune-hanterade mobila enheter | Microsoft Intune
-description:
-keywords:
+title: "Exchange-åtkomstregler för Microsoft Intune-hanterade mobila enheter | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: ef0b9901e340aec8b2b516f0180133e37833bf37
+
 
 ---
 
@@ -45,19 +39,20 @@ Följande procedur beskriver hur du skapar en anpassad regel.
 
 ## Skapa en standardregel för åtkomst
 
-1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) &gt; **Princip** &gt; **Exchange-åtkomst för mobila enheter**
+1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) &gt; **Princip** &gt; **Exchange-åtkomst för mobila enheter**.
 
-2.  I listan **Standardregel** markerar du den åtkomstregel som du vill koppla till alla mobila enheter som inte omfattas av en regel eller personligt undantag. Välj **Spara**
+2.  I listan **Standardregel** markerar du den åtkomstregel som du vill koppla till alla mobila enheter som inte omfattas av en regel eller personligt undantag. Välj **Spara**.
 
 Följande procedur beskriver hur du skapar en anpassad regel.
 
 ## Skapa en anpassad åtkomstregel
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) &gt; **Princip** &gt; **Exchange-åtkomst för mobila enheter**
+1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) &gt; **Princip** &gt; **Exchange-åtkomst för mobila enheter**.
 
-2.  I listan **Anpassade regler** klickar du på **Lägg till regel** och skapar en anpassad regel. Välj **Spara**
+2.  I listan **Anpassade regler** klickar du på **Lägg till regel** och skapar en anpassad regel. Välj **Spara**.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

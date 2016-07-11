@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Principinställningar för Windows 10 |Microsoft Intune
-description:
-keywords:
+title: "Principinställningar för Windows 10 |Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 1cccafa5f740bad50779ae36c899fd23ee7dc5f3
+ms.openlocfilehash: 70347776f72a3534a4c384957aef01a909767b99
+
 
 ---
 
@@ -168,6 +161,7 @@ Alla inställningar gäller endast Windows 10 Desktop.
 |**Intervall för signaturuppdatering**|Ange med vilket intervall som Defender ska söka efter nya signaturfiler.|
 |**Tillåt molnskydd**|Tillåt eller förhindra att Microsoft Active Protection Service tar emot information om skadlig kod från enheter som du hanterar. Den här informationen används för att förbättra tjänsten i framtiden.|
 |**Be användarna att skicka exempel**|Styr huruvida filer som kan kräva ytterligare analys av Microsoft för att avgöra om de är skadliga ska skickas automatiskt till Microsoft.|
+|**Identifiering av potentiellt oönskade program**|Du kan använda den här inställningen för att skydda registrerade stationära Windows-datorer från att köra program som Windows Defender har klassificerat som potentiellt oönskade. Du kan skydda dig mot att dessa program körs eller använda granskningsläget för att rapportera att ett potentiellt oönskat program har installerats.|
 |**Filer och mappar som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till en eller flera filer och mappar som **C:\Sökväg** eller **%ProgramFiles%\Sökväg\filnamn.exe** i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.|
 |**Filändelser som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till ett eller flera filnamnstillägg som **jpg** eller **txt** i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.|
 |**Processer som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till en eller flera processer av typen **.exe**, **.com** eller **.scr** i undantagslistan. De här processerna tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.| 
@@ -332,6 +326,7 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

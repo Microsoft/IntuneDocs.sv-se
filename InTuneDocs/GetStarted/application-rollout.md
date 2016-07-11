@@ -1,32 +1,26 @@
 ---
-# required metadata
-
 title: Programdistribution | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0fc32ed3-bcf4-472a-80e7-eb20986f78fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d82d0ae4820d2e2141848235b8741abccaec3bc6
+ms.openlocfilehash: 4a237942b4bc1e411cf55bc34c7b86d2249c526e
+
 
 ---
 
 # Programdistribution
-Det här avsnittet innehåller specifika rekommendationer för en stegvis distribution av appar i Microsoft Intune. Allmän information om distributionsfaser finns i [Distributionsfaser för distribution av Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md)
+Det här avsnittet innehåller specifika rekommendationer för en stegvis distribution av appar i Microsoft Intune. Allmän information om distributionsfaser finns i [Distributionsfaser för distribution av Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md).
 
 ### Faser i appdistribution
 Faserna i appdistributionen är:
@@ -48,23 +42,28 @@ Tänk på följande:
 
 -   Appens lämplighet för användarna och deras enheter (alla som sannolikt kommer att användas).
 
--   Kontrollera att installationsprogrammet för den app du väljer stöds av appdistribution i Intune, enligt beskrivningen i [Lägg till appar med Microsoft Intune](/intune/deploy-use/add-apps)
+-   Kontrollera att installationsprogrammet för den app du väljer stöds av appdistribution i Intune, enligt beskrivningen i [Lägg till appar med Microsoft Intune](/intune/deploy-use/add-apps).
 
--   Se till att kraven för appdistributionen har installerats. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md--->Kontrollera att apptypen stöds av Intune.
+-   Se till att kraven för appdistributionen har installerats. <!---, as described in [Plan for app deployment in Microsoft Intune](plan-for-app-deployment-in-microsoft-intune.md--->).
 
--   Kontrollera att du har tillräckligt med ledigt lagringsutrymme i molnet för att hämta appen.
+-   Kontrollera att apptypen stöds av Intune.
 
--   Anvisningar för att köpa ytterligare lagringsutrymme finns i [Lägg till appar med Microsoft Intune](/intune/deploy-use/add-apps) Konceptbevis
+-   Kontrollera att du har tillräckligt med ledigt lagringsutrymme i molnet för att hämta appen. Anvisningar för att köpa ytterligare lagringsutrymme finns i [Lägg till appar med Microsoft Intune](/intune/deploy-use/add-apps).
 
-## Under fasen Konceptbevis testar du appdistributionen i en laboratoriemiljö på enheter och användare som du har konfigurerat endast i testsyfte.
-Låt supportavdelningen delta i denna fas för att ta reda på vilka problem som kan uppstå under pilot- och produktionsdistribution.
+> [!NOTE]           
+> Du kan hämta den här [planeringsmallen för mobilappar](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59) som hjälper dig med distributionen.
 
--   Information om felsökning finns i [Felsöka problem med appdistributionen i Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune) Under den här delen av processen bör du utveckla kommunikationsplaner för pilot- och produktionsanvändare.
+## Konceptbevis
+Under fasen Konceptbevis testar du appdistributionen i en laboratoriemiljö på enheter och användare som du har konfigurerat endast i testsyfte.
 
--   Planen bör minst omfatta vilken app som distribueras, hur och när användare kan hämta den, affärssyftet med distributionen och vad användarna kan göra om de stöter på problem, både information för självhjälp och hur de kontaktar supportavdelningen. Pilot
+-   Låt supportavdelningen delta i denna fas för att ta reda på vilka problem som kan uppstå under pilot- och produktionsdistribution. Information om felsökning finns i [Felsöka problem med appdistributionen i Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune).
 
-## Under pilottestet ska du distribuera appen till en liten grupp testanvändare och enheter.
-Tänk på följande: Se till att testgruppen är representativ för användare och enheter som kommer att använda appen efter produktionsdistributionen.
+-   Under den här delen av processen bör du ta fram kommunikationsplaner för pilot- och produktionsanvändare. Planen bör minst omfatta vilken app som distribueras, hur och när användare kan hämta den, affärssyftet med distributionen och vad användarna kan göra om de stöter på problem, både information för självhjälp och hur de kontaktar supportavdelningen.
+
+## Pilot
+Under pilottestet ska du distribuera appen till en liten grupp testanvändare och enheter. Tänk på följande:
+
+-   Se till att testgruppen är representativ för användare och enheter som kommer att använda appen efter produktionsdistributionen.
 
 -   Utbilda supportavdelningen om appdistributionen och se till att de är beredda att hjälpa användare i testgruppen.
 
@@ -72,31 +71,30 @@ Tänk på följande: Se till att testgruppen är representativ för användare o
 
 -   Aktivera kommunikationsplanen för pilotanvändare.
 
--   Företagsomfattande distribution
+## Företagsomfattande distribution
 
-## Använd pilotresultaten för att anpassa den företagsomfattande distributionen.
+-   Använd pilotresultaten för att anpassa den företagsomfattande distributionen.
 
--   Meddela supportavdelningen om schemat för appdistributionen.
+-   Meddela supportavdelningen om schemat för appdistributionen. Ha funktioner redo för att besvara hjälpförfrågningar och anpassa distributionen efter behov.
 
--   Ha funktioner redo för att besvara hjälpförfrågningar och anpassa distributionen efter behov. Vad beredd att felsöka distributionen om problem uppstår.
+-   Vad beredd att felsöka distributionen om problem uppstår.
 
 -   Aktivera kommunikationsplanen för produktionsanvändare.
 
 -   Använd en stegvis metod för att distribuera appen, genom att lägga till några grupper i taget för att se till att distributionen fungerar smidigt.
 
--   Åtgärder och underhåll
+## Åtgärder och underhåll
+**Åtgärder:** Övervaka Intune-konsolen för aviseringar och problem med användare eller enheter, och för att se till att programdistributionen fungerar enligt planen.
 
-## **Åtgärder:** Övervaka Intune-konsolen för aviseringar och problem med användare eller enheter, och för att se till att programdistributionen fungerar enligt planen.
 **Support:** Se till att supportavdelningen är medveten om eventuella ändringar i apptillgänglighet som kan leda till supportärenden.
 
-Se även
+### Se även
+[Distribuera appar](/intune/deploy-use/deploy-apps)
 
-### Distribuera appar
-[Felsöka problem med appdistributionen i Microsoft Intune](/intune/deploy-use/deploy-apps)
-
-[Troubleshoot app deployment problems in Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)
+[Felsöka problem med appdistributionen i Microsoft Intune](/intune/troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

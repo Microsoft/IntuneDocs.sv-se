@@ -1,38 +1,32 @@
 ---
-# required metadata
-
-title: Utvecklarhandbok för Microsoft Intune App SDK för Android | Microsoft Intune
-description:
-keywords:
+title: "Utvecklarhandbok för Microsoft Intune App SDK för Android | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2915cca314b489bbcb590d01b03a0b38134fa619
+ms.openlocfilehash: d2e4b6903d86b79edd9c758b2ce51733831e785a
+
 
 ---
 
 # Utvecklarhandbok för Microsoft Intune App SDK för Android
 
-> [!NOTE] Börja gärna med att läsa guiden [Översikt över Intune App SDK](intune-app-sdk.md). Den här översikten beskriver funktionerna i SDK samt hur du förbereder integreringen på de plattformar som stöds. 
+> [!NOTE]
+> Börja gärna med att läsa guiden [Översikt över Intune App SDK](intune-app-sdk.md). Den här översikten beskriver funktionerna i SDK samt hur du förbereder integreringen på de plattformar som stöds. 
 
 # Vad innehåller SDK? 
 
-Intune App SDK för Android är ett Android-standardbibliotek utan externa beroenden. 
-SDK består av:  
+Intune App SDK för Android är ett Android-standardbibliotek utan externa beroenden. SDK består av:  
 
 * **`Microsoft.Intune MAM.SDK.jar`**: Gränssnitten som behövs för att aktivera MAM i en app, samt för att aktivera samverkan med Microsoft Intune-appen Företagsportal. Appar måste ange den som en Android-biblioteksreferens.
 
@@ -370,6 +364,7 @@ Intune SDK använder kontraktet som tillhandahålls av Android-API:et, även om 
 * Undvik att använda API:er på ett tvetydigt sätt. Till exempel resulterar `Activity.startActivityForResult/onActivityResult` utan att requestCode kontrolleras i ett onormalt beteende.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

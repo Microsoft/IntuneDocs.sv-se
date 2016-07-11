@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Konfigurera hantering av Windows Phone 8.0 | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 06/09/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: priyar
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: eed5855f3e27460146703ddf40fd935229a974e5
+ms.openlocfilehash: 02f9b7c7abe2daf942299015bfdfb052755ec2de
+
 
 ---
 
@@ -29,7 +23,8 @@ ms.suite: ems
 
 Windows Phone 8.0 kräver ett Symantec-certifikat för att installera appen för Intune-företagsportalen och möjliggöra hantering av enheter. Ett certifikat krävs även för att signera branschspecifika företagsappar. Följande avsnitt avser endast Windows Phone 8.0. Information om att hantera Windows Phone 8.1 eller senare, inklusive Windows 10 Mobile, finns i [Konfigurera Windows Phone-registreringen](set-up-windows-phone-management-with-microsoft-intune.md).
 
-> [!IMPORTANT] Från September 2016 kommer företagsportalappen för Windows 8.0 och Windows Phone 8.0 inte längre vara tillgänglig för nedladdning.
+> [!IMPORTANT]
+> Från september 2016 kommer företagsportalappen för Windows 8.0 och Windows Phone 8.0 inte längre vara tillgänglig för hämtning.
 
 -   **Windows Phone 8** – Certifikat som krävs
 -   **Windows Phone 8.1 och Windows 10 Mobile** kräver bara ett certifikat om:
@@ -41,7 +36,8 @@ Windows Phone 8.0 kräver ett Symantec-certifikat för att installera appen för
 
 ![Diagram över certifikatkrav](../media/wpcertreqs.png)
 
-  > [!IMPORTANT] Det Symantec-certifikat som används för att hantera vissa Windows-enheter och mobila Windows Phone-enheter [måste förnyas regelbundet](renew-a-symantec-code-signing-certificate.md).
+  > [!IMPORTANT]
+  > Det Symantec-certifikat som används för att hantera vissa Windows-enheter och mobila Windows Phone-enheter [måste förnyas regelbundet](renew-a-symantec-code-signing-certificate.md).
 
 Kraven för konfiguration av enhetshantering för mobila enheter som använder Windows Phone beror på hur du kommer att hantera enheter.  Genom att skapa två CNAME-poster i företagets DNS gör du registrering enklare för användare. Om användarna kommer att ladda ned företagsportalappen från butiken behöver du efter att du konfigurerat DNS-inställningarna endast konfigurera företagsportalen och informera användarna om hur de registrerar sig.  För Windows Phone 8.0 eller Windows Phone 8.1 där du ska distribuera företagsportalen behöver du ett Symantec-certifikat för att kodsignera appen.
 
@@ -186,6 +182,7 @@ Du kan distribuera företagsportalappen till Windows Phone 8.1-enheter med Intun
     > -   Om du måste installera separat inlästa appar, registrera Windows Phone 8.0-enheter samt hämta ssp.xap, skapar du en ny programvarudistribution av ssp.xap och distribuerar den med åtgärden **avinstallera** . Windows Phone 8.0-enheter stöder inte framtvingad installation eller avinstallation av appar, så de kommer att ignorera distributionen. Windows Phone 8.1-enheter stöder avinstallationsåtgärden och tar bort ssp.xap.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

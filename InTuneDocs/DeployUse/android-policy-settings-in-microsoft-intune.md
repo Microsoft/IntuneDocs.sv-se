@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Inställningar för Android- och Samsung KNOX-konfigurationsprinciper | Microsoft Intune
-description:
-keywords:
+title: "Inställningar för Android- och Samsung KNOX-konfigurationsprinciper | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 62beaec31a0cdc3c28fd3eed820a6771e42ef3e7
+ms.openlocfilehash: f4c0eccb0cd30daaba97e8f34eea69e3d0e8e0ad
+
 
 ---
 
@@ -55,6 +49,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Förhindrar återanvändning av lösenord som har använts tidigare.|Ja|Ja|
 |**Lösenordskvalitet**|Välj den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.|Ja|Ja|
 |**Tillåt fingeravtrycksupplåsning**|Tillåt att enheten kan låsas upp med ett fingeravtryck.|Nej|Ja|
+|**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 5 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagenter, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att slutanvändare konfigurerar Smart Lock.|Ja|Nej|
 
 ### Krypteringsinställningar
 
@@ -73,7 +68,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 
 ### Molninställningar – dokument och data
 
-|Inställningsnamn|Information|Android och Samsung KNOX|Android 4.0+|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
 |----------------|----------------------------|----------------|
 |**Tillåt Google säkerhetskopiering**|Google-säkerhetskopiering får användas.|Nej|Ja|
 
@@ -95,7 +90,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 
 ### Programinställningar - appar
 
-|Inställningsnamn|Android 4.0+|Samsung KNOX|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
 |----------------|----------------|----------------|
 |**Tillåt Google Play-butik**|Tillåt att användaren kommer åt Google Play Store på enheten.|Nej|Ja|
 
@@ -179,7 +174,8 @@ Använd **Anpassad konfigurationsprincip för Android** i Microsoft Intune för 
 
 Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer.
 
-> [!NOTE] För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel.
+> [!NOTE]
+> För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel.
 
 ### Allmänna inställningar
 
@@ -257,6 +253,7 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

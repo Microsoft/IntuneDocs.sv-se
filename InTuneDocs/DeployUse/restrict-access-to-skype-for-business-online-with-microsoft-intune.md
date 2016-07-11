@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Begränsa åtkomsten till Skype för företag – Online | Microsoft Intune
-description:
-keywords:
+title: "Begränsa åtkomsten till Skype för företag – Online | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 5cbf748ffee8fbb53f7e64a5499f06d5bd89c415
+ms.openlocfilehash: c26f3b732eb42903c72e8655542ee1ed586f5c67
+
 
 ---
 
@@ -39,7 +32,7 @@ När en målanvändare försöker använda Skype för företag – Online på si
 **Innan** du konfigurerar en princip för villkorlig åtkomst för Skype för företag – Online måste du:
 - Ha en **prenumeration på Skype för företag – Online** och tilldela användare Skype för Business Online-licenser.
 - Ha en prenumeration på **Enterprise Mobility Suite** eller **Azure Active Directory Premium**.
--   **Aktivera modern autentisering** för Skype för företag – Online. Logga in på Microsoft Connect och fyll i [det här formuläret](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) om du vill registreras i programmet för modern autentisering.
+-   [Aktivera modern autentisering](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) för Skype för företag – Online. 
 -  Alla dina slutanvändare måste använda **Skype för företag – Online**. Om du har en distribution med både Skype för företag – Online och Skype för företag lokalt tillämpas inte principen för villkorlig åtkomst på slutanvändarna.
 
     Enheten som behöver åtkomst till Skype för företag – Online måste:
@@ -119,6 +112,7 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 * **Enheter som är registrerade i AAD och kompatibla** – Dessa enheter kan komma åt Skype för företag – Online.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

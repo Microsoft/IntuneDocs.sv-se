@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Snabbstartsguide för Intune | Microsoft Intune
-description:
-keywords:
+title: "Snabbstartsguide för Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
+ms.openlocfilehash: ca0ca74357b59d9cc6fbf4ec7eb237dff972c411
+
 
 ---
 
@@ -41,7 +35,7 @@ Många av stegen i den här snabbstartsguiden är samma som de i [utvärderingsg
 -   Anpassa Intune-funktioner för produktionsanvändning
 
 >[!TIP]
->Om du köper minst 150 licenser för Microsoft Intune i ett tillgängligt abonnemang kan du använda FastTrack Center Benefit, en tjänst där Microsoft-specialister samarbetar med dig för att förbereda din miljö för Intune. Se [Beskrivning av Microsoft Intune-förmåner](https://technet.microsoft.com/library/mt228265.aspx).
+>Om du köper minst 150 licenser för Microsoft Intune i ett tillgängligt abonnemang kan du använda FastTrack Center Benefit, en tjänst där Microsoft-specialister samarbetar med dig för att förbereda din miljö för Intune. Se [Beskrivning av Microsoft Intune Serviceförmån](https://technet.microsoft.com/library/mt228265.aspx).
 
 
 ## Innan du börjar
@@ -55,8 +49,9 @@ Använd den här guiden när du börjar med en betald prenumeration och är redo
 Redo att sätta igång? Du behöver följande när du börjar använda din betalprenumeration på Intune:
 
 ### En enhet med en Silverlight-aktiverad webbläsare
-Du behöver detta för att få åtkomst till Intune-administrationskonsolen där du hanterar enheter, appar och principer. Du behöver också en webbläsare för att få åtkomst till den webbaserade företagsportalen när du inte kommer åt företagsportalappen från en mobil enhet. För att göra det lättare kan du använda inställningen för sekretessläge i samma webbläsare som du använder för Intune-administration (i Internet Explorer klickar du till exempel på **Verktyg** &gt; **InPrivate-surfning**
+Du behöver detta för att få åtkomst till Intune-administrationskonsolen där du hanterar enheter, appar och principer. Du behöver också en webbläsare för att få åtkomst till den webbaserade företagsportalen när du inte kommer åt företagsportalappen från en mobil enhet. För att göra det lättare kan du använda inställningen för sekretessläge i samma webbläsare som du använder för Intune-administration (i Internet Explorer klickar du till exempel på **Verktyg** &gt; **InPrivate-surfning**).
 
+>[!TIP]
 >Microsoft Edge-webbläsaren stöds inte för åtkomst till Intune-administrationskonsolen på grund av det här kravet.
 
 
@@ -68,16 +63,18 @@ Om du ska hantera iOS- eller Windows Phone-enheter med Intune behöver du certif
 >[!NOTE]
 >Den här snabbstartsguiden förutsätter att användarna hämtar företagsportalappen från Store på en Windows Phone 8.1-enhet eller senare. Information om Windows Phone 8.0-stöd finns i [Konfigurera hantering av Windows Phone 8.0 med Microsoft Intune](/Intune/deploy-use/set-up-windows-phone-8.0-management-with-microsoft-intune).
 
-- Det finns inga certifikatkrav för **Windows-datorer** eller **Windows RT-enheter** när Windows-datorer registreras som enheter eller när [Windows-datorklienten installeras för Microsoft Intune](/intune/deploy-use/install-the-windows-pc-client-with-microsoft-intune)
+- Det finns inga certifikatkrav för **Windows-datorer** eller **Windows RT-enheter** när Windows-datorer registreras som enheter eller när [Windows-datorklienten installeras för Microsoft Intune](/intune/deploy-use/install-the-windows-pc-client-with-microsoft-intune).
 
-- För **iOS**- eller **Mac OS X**-enheter måste du begära ett certifikat för Apple Push Notification Service från Apple. Mer information finns i steg 3 i [Konfigurera iOS- och Mac-hantering med Microsoft Intune](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+- För **iOS**- eller **Mac OS X**-enheter måste du begära ett certifikat för Apple Push Notification Service från Apple. Mer information finns i steg 3 i [Konfigurera iOS- och Mac-hantering med Microsoft Intune](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).
 
 ### Nästa steg
 Det är dags att komma igång med Intunes snabbstartsguide!
 
 >[!div class="step-by-step"]
+[**Logga in i Intune** &rarr;](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

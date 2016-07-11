@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Skydda appdata med hanteringsprinciper för mobila appar | Microsoft Intune
-description:
-keywords:
+title: "Skydda appdata med hanteringsprinciper för mobila appar | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
+
 
 ---
 
@@ -33,15 +27,16 @@ Dina anställda använder mobila enheter för både personliga och arbetsrelater
 Du kan använda Intunes hanteringsprinciper för mobila appar (MAM) för att skydda företagets data. Eftersom Intunes MAM-principer kan användas oberoende av en hanteringslösning för mobila enheter (MDM) kan du använda dem för att skydda företagets data både om du registrerar eller inte registrerar enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
 
 MAM-principer stöder appar som körs på:
+> [!IMPORTANT]
+> Du kan skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. MAM-principer stöds inte för appar som ansluter till lokala Exchange- eller SharePoint-tjänster.
 
--   **Enheter som hanteras och som är registrerade** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
-  > [!IMPORTANT]
-  > Om du använder Intune för att hantera iOS- och Android-enheter kan du skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. MAM-principer stöds inte för appar som ansluter till lokala Exchange- eller SharePoint-tjänster.
+- **Enheter som hanteras och är registrerade i Microsoft Intune**. Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
 -   **Enheter som hanteras och som är registrerade i en hanteringslösning för mobila enheter från tredje part**.   Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
-  > [!NOTE] Principer för mobilapphantering ska inte användas med tredje parts mobilapphantering eller lösningar för säkra behållare.
+  > [!NOTE]
+  > Principer för mobilapphantering ska inte användas med tredje parts mobilapphantering eller lösningar för säkra behållare.
 
 -   **Enheter som inte hanteras**.  Enheter i den här kategorin är vanligtvis personalägda enheter som inte hanteras eller som inte är registrerade i Intune eller andra MDM-lösningar.
 
@@ -137,6 +132,7 @@ Alla mobila Office-appar stöder multiidentitet.
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

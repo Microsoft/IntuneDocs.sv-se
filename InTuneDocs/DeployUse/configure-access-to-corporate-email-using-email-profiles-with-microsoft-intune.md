@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler | Microsoft Intune
-description:
-keywords:
+title: "Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/05/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: karanda
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8a3df01e9c02af7c43cdadc6d202bc6d74a000da
+ms.openlocfilehash: d0fa235b7b25fe71a4e3b4b0bf68cd2db31b1f18
+
 
 ---
 
@@ -89,9 +83,10 @@ Lösenordet finns inte i e-postprofilen, användaren måste ange detta när de a
     |**Synkroniseringsschema** (Samsung KNOX, Windows Phone 8 och senare, Windows 10)|Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.|
     |**Använd SSL**|Använda Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.<br /><br />För enheter som kör Samsung KNOX 4.0 eller senare kan du exportera Exchange-serverns SSL-certifikat och distribuera det som en Android-betrodd certifikatprofil i Intune. Intune stöder inte åtkomst till det här certifikatet om det är installerat på Exchange-servern på annat sätt.|
     |**Innehållstyp som ska synkroniseras**|Välj vilka typer av innehåll du vill synkronisera till enheterna.| 
-    |**Tillåt att e-post skickas från tredjepartsprogram** (endast iOS)|Tillåt att tredjepartsprogram öppnar e-post i den interna e-postappen, t.ex. för att bifoga filer till e-post.|
+    |**Tillåt att e-post skickas från tredjepartsprogram** (endast iOS)|Tillåt att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.|
 
-    > [!IMPORTANT] Om du har distribuerat en e-postprofil och vill ändra värdena för **värd** eller **E-postadress** måste du ta bort den befintliga e-postprofilen och skapa en ny med nödvändiga värden.
+    > [!IMPORTANT]
+    > Om du har distribuerat en e-postprofil och vill ändra värdena för **värd** eller **E-postadress** måste du ta bort den befintliga e-postprofilen och skapa en ny med nödvändiga värden.
 
 4.  När du är klar klickar du på **Spara profilen**.
 
@@ -103,17 +98,19 @@ Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principe
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** - Markera en eller flera grupper som du vill distribuera principen till och klicka sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
 
     -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
-> [!NOTE] Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem.
+> [!NOTE]
+> Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem.
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,25 +1,19 @@
 ---
-title: Använda fjärrlåsning och lösenordsåterställning | Microsoft Intune
-description:
-keywords:
+title: "Använda fjärrlåsning och lösenordsåterställning | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
+translationtype: Human Translation
+ms.sourcegitcommit: 6d9b79a09eef2546d78a19e061ba5cc3f24f645c
+ms.openlocfilehash: 34379881b8299a2e3f9886b14b6d83e9dfe83373
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 ---
 # Skydda dina enheter med fjärrlåsning och lösenordsåterställning
 Microsoft Intune tillhandahåller både funktioner för fjärrlåsning och lösenordsåterställning.
@@ -39,7 +33,7 @@ Om en användare förlorar sin enhet kan du låsa enheten via fjärranslutning. 
 
 ### Så här fjärrlåser du en mobil enhet via Intune-konsolen
 
-1.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**.
 
 2.  Välj **Alla direkthanterade enheter** för enheter som registrerats i Intune eller **Alla hanterade enheter i Exchange ActiveSync**.
 
@@ -62,20 +56,22 @@ Om en användare glömmer sitt lösenord, kan du hjälpa dem genom att ta bort l
 
 ### Så här återställer du ett lösenord
 
-1.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**.
 
 2.  Välj **Alla direkthanterade enheter** för enheter som registrerats i Intune eller **Alla hanterade enheter i Exchange ActiveSync**.
 
     > [!TIP]
     > Du kan också navigera till en enhet efter användare. Klicka på **Alla användare**. Öppna sidan med egenskaper för användaren, klicka på **Enheter** och sedan på namnet på den mobila enhet som du vill rensa.
 
-3.  Välj den eller de enheter i listan som du vill låsa. I verktygsfältet väljer du **Fjärruppgifter** och sedan **Återställ lösenord**
+3.  Välj den eller de enheter i listan som du vill låsa. I verktygsfältet väljer du **Fjärruppgifter** och sedan **Återställ lösenord**.
 
 
 ### Se även
-Dra tillbaka enheter
+[Ta enheter ur bruk](retire-devices-from-microsoft-intune-management.md)
+[Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Förbereda appar för hantering av mobilprogram med Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Förbereda appar för hantering av mobilprogram med Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: 986d864a3169fa3b094241a3522e3f25b7bfe349
+
 
 ---
 
@@ -29,7 +22,7 @@ ms.suite: ems
 Du kan använda principer för hantering av mobilprogram i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## Intunes apphanteringsverktyg
-Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en wrapper runt appen, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram. Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering.  Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](http://blogs.technet.com/b/microsoftintune/archive/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios.aspx). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) respektive [Appomslutningsverktyget för iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en wrapper runt appen, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram. Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering.  Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) respektive [Appomslutningsverktyget för iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
 Apphanteringsverktyget stöder inte appar i App Store eller Play Store eller funktioner som kräver integrering av utvecklingstid (se jämförelsetabellen för funktioner nedan).
 
@@ -43,7 +36,8 @@ Mer information om SDK:n finns i [Översikt](/intune/develop/intune-app-sdk). Om
 ## Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
 
-> [!NOTE] Appomslutningsverktyget kan användas med den fristående versionen av Intune eller Intune med Configuration Manager.
+> [!NOTE]
+> Apphanteringsverktyget kan användas med den fristående versionen av Intune eller Intune med Configuration Manager.
 
 |Funktion|App SDK|Apphanteringsverktyg|
 |-----------|---------------------|-----------|
@@ -73,6 +67,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 [Aktivera hantering av mobilprogram i appar med SDK](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

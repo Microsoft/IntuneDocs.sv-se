@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Kategorisera enheter med gruppmappning av enheter | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: sumitp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: bb30b8e61a768b15e2f09993f4dceae8f4e1bd8a
+ms.openlocfilehash: 55f811153bf37048a4fcdfc6da301a5f181700c3
+
 
 ---
 
@@ -46,18 +39,19 @@ Du kan dock konfigurera vilka kategorier du vill.
 
 ## Konfigurera inställningar för mappning av enhetsgrupp
 1. Skapa en Intune-enhetsgrupp för varje enhetskategori som du vill använda. Mer information om hur du skapar grupper finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
-2. Klicka på **Admin** i [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com).
-3. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och klickar sedan på **Mappning av enhetsgrupp**.
+2. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin**.
+3. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och väljer sedan **Mappning av enhetsgrupp**.
 4. På sidan **Mappning av enhetsgrupp** kan du aktivera mappning av enhetsgrupp.
-5. Klicka på **Lägg till** att skapa en ny mappningsregel.
-6. I dialogrutan **Lägg till en mappningsregel för enhetsgrupp** anger du namnet på den kategori du vill skapa och använder sedan listrutan för att välja den enhetssamling som du vill mappa denna kategori till. Klicka på **Lägg till** när du är klar.
-7. När du har lagt till alla kategorier och grupper som önskas klickar du på **Spara**.
+5. Välj **Lägg till** för att skapa en ny mappningsregel.
+6. I dialogrutan **Lägg till en mappningsregel för enhetsgrupp** anger du namnet på den kategori du vill skapa och använder sedan listrutan för att välja den enhetssamling som du vill mappa denna kategori till. Välj **Lägg till** när du är klar.
+7. När du har lagt till alla kategorier och grupper som önskas väljer du **Spara**.
 
 Nu när användare registrerar sina enheter får de se en lista med de kategorier du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den enhetsgrupp som motsvarar den kategori som har valts.
 
 ### Se även
 [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

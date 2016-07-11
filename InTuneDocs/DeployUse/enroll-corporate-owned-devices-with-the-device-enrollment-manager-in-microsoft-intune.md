@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrera företagsägda enheter med Enhetsregistreringshanteraren | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 7b0154d73ab540e7543fab9088463ed8b61b45a0
+ms.openlocfilehash: 74ff3209d00dee0b5ddd14e107b5544b364d08f7
+
 
 ---
 
+
 # Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune
-Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot *enhetsregistreringshanterare* är ett särskilt Intune-konto med behörighet att registrera högst fem enheter. Du kan utse en arkivhanterare eller -kontrollant, till exempel ett användarkonto för enhetsregistreringshanteraren som kan användas för att göra följande:
+Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt Intune-konto med behörighet att registrera upp till 1 000 enheter. Använd enheter som registrerats med kontot för enhetsregistreringshanterare som delade enheter i stället för att använda personliga enheter (”BYOD”). Användarna kan till exempel inte använda ”interna” e-postappar. Du kan utse en arkivhanterare eller -kontrollant, till exempel ett användarkonto för enhetsregistreringshanteraren som kan användas för att göra följande:
 
 -   Registrera enheter i Intune
 
@@ -41,16 +35,17 @@ Organisationer kan använda Intune för att hantera ett stort antal mobila enhet
 
 Administratören eller restaurangchefen kan distribuera rollspecifika appar till restaurangens enheter. Administratören kan också välja enheten i Intune-konsolen och dra tillbaka den från enhetshanteringen med administrationskonsolen.
 
-Enheter som registreras med ett DEM-konto för enhetsregistreringshanterare har följande begränsningar:
+Enheter som registrerats med ett konto för enhetsregistreringshanterare har följande begränsningar:
   - Ingen specifik användare så alla enheter är ”användarlösa”; därför ingen åtkomst till e-psot eller företagsdata även om VPN, exempelvis, fortfarande kan ge enhetsappar åtkomst till data
   - Ingen villkorlig åtkomst eftersom de är scenarier per användare
   - Det går inte att återställa enheterna från företagsportalen
+  - Endast den lokala enheten visas i företagsportalappen eller webbplatsen
   - Inget Apple Volume Purchase Program (VPP) på grund av kraven på Apple-ID per användare för apphantering
   - Kan inte heller registreras med Apple Configurator eller Apples DEP-program (iOS-enheter)
 
 > [!NOTE]
-> Användarkonton i enhetsregistreringshanteraren med fler än 20 registrerade enheter kan få problem med att använda företagsportalappen. Om du vill distribuera appar till enheter som hanteras med enhetsregistreringshanteraren distribuerar du företagsportalappen som en **obligatorisk installation** till enhetsregistreringshanterarens användarkonto.
-> I syfte att förbättra prestanda visar företagsportalappen på en enhet i DEM enbart de lokala enheterna, och enbart om enheten i fråga har registrerats med hjälp av företagsportalappen. Fjärrhantering av andra DEM-enheter kan bara utföras från Intune-konsolen.
+> Om du vill distribuera appar till enheter som hanteras med enhetsregistreringshanteraren distribuerar du företagsportalappen som en **obligatorisk installation** till enhetsregistreringshanterarens användarkonto.
+> I syfte att förbättra prestanda visar företagsportalappen på en enhet i DEM enbart den lokala enheten. Fjärrhantering av andra DEM-enheter kan bara utföras från Intune-administratörskonsolen.
 
 ## Skapa konton för enhetsregistreringshanterare
 Konton för enhetsregistreringshanteraren är användarkonton med behörighet att registrera ett stort antal enheter som ägs av företaget. Endast användare i Intune-konsolen kan vara enhetsregistreringshanterare.
@@ -59,17 +54,17 @@ Konton för enhetsregistreringshanteraren är användarkonton med behörighet at
 
 1.  Gå till [Microsoft Intune-kontoportalen](http://go.microsoft.com/fwlink/?LinkId=698854) och logga in på ditt administratörskonto.
 
-2.  Klicka på **Lägg till användare**.
+2.  Välj **Lägg till användare**.
 
-3.  Kontrollera att det användarkonto som ska bli enhetsregistreringshanterare finns med i listan. Om den inte finns med lägger du till användaren genom att klicka på **Ny** och slutföra processen att lägga till användare. En prenumerationslicens krävs för varje användare som använder tjänsten och *enhetsregistreringshanteraren* får inte vara Intune-administratör. Avgör om du behöver lägga till fler licenser innan du använder den här funktionen.
+3.  Kontrollera att det användarkonto som ska bli enhetsregistreringshanterare finns med i listan. Om den inte finns med lägger du till användaren genom att välja **Ny** och slutföra processen att lägga till användare. En prenumerationslicens krävs för varje användare som använder tjänsten och *enhetsregistreringshanteraren* får inte vara Intune-administratör. Avgör om du behöver lägga till fler licenser innan du använder den här funktionen.
 
 4.  Logga in på [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) med ditt administratörskonto.
 
-5.  I navigeringsfönstret klickar du på **Admin**, går till **Administratörshantering** och väljer **Enhetsregistreringshanteraren**. Sidan Enhetsregistreringshanteraren öppnas.
+5.  I navigeringsfönstret väljer du **Admin**, **Administratörshantering** och sedan **Enhetsregistreringshanteraren**. Sidan Enhetsregistreringshanteraren öppnas.
 
-6.  Klicka på **Lägg till...**. Dialogrutan **Lägg till enhetsregistreringshanterare** öppnas.
+6.  Välj **Lägg till...**. Dialogrutan **Lägg till enhetsregistreringshanterare** öppnas.
 
-7.  Ange **användar-ID** för Intune-kontot och klicka sedan på **OK**. Den användare som är Enhetsregistreringshanterare får inte vara Intune-administratör.
+7.  Ange **användar-ID** för Intune-kontot och välj sedan **OK**. Den användare som är Enhetsregistreringshanterare får inte vara Intune-administratör.
 
 8.  Enhetsregistreringshanteraren kan nu registrera mobila enheter på samma sätt som när en slutanvändare registrerar en BYOD i företagsportalen.
 
@@ -77,11 +72,11 @@ Konton för enhetsregistreringshanteraren är användarkonton med behörighet at
 
 1.  Logga in på [Microsoft Intune-administrationsportalen](http://manage.microsoft.com) med ditt administratörskonto.
 
-2.  I navigeringsfönstret klickar du på **Admin** , går till **Administratörshantering** och väljer **Enhetsregistreringshanteraren**. Sidan Enhetsregistreringshanteraren öppnas.
+2.  I navigeringsfönstret väljer du **Admin**, **Administratörshantering** och sedan **Enhetsregistreringshanteraren**. Sidan Enhetsregistreringshanteraren öppnas.
 
-3.  Välj den **användare** i Enhetsregistreringshanteraren som du vill ta bort och klicka sedan på **Ta bort**. Den här användaren kommer inte att tas bort från Intune och de enheter som den här användaren hanterar förblir registrerade i Intune. Genom att ta bort en enhetsregistreringshanterare förhindras den användaren att registrera ytterligare enheter i Intune.
+3.  Välj den **användare** i Enhetsregistreringshanteraren som du vill ta bort och välj sedan **Ta bort**. Den här användaren kommer inte att tas bort från Intune och de enheter som den här användaren hanterar förblir registrerade i Intune. Genom att ta bort en enhetsregistreringshanterare förhindras den användaren att registrera ytterligare enheter i Intune.
 
-4.  Klicka på **Ja** för att bekräfta att du vill ta bort enhetsregistreringshanteraren.
+4.  Välj **Ja** för att bekräfta att du vill ta bort enhetsregistreringshanteraren.
 
 Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare tas bort. När en enhetsregistreringshanterare tas bort:
 
@@ -96,6 +91,6 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 -   Finns den borttagna enhetsregistreringshanterarkontots relation till registrerade enheter kvar, men inga ytterligare enheter kan registreras
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 

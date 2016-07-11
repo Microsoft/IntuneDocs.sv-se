@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Hantera inställningar och funktioner på dina enheter med principer | Microsoft Intune
-description:
-keywords:
+title: "Hantera inställningar och funktioner på dina enheter med principer | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: ab570d551189ec71b54081229b93d7b4ce8d58d5
+
 
 ---
 
@@ -54,7 +48,8 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
 
 2.  Välj den princip som du vill använda, välj att använda de rekommenderade inställningarna för principen (om de är tillgängliga kan du ändra inställningarna senare) eller välj att skapa en anpassad princip med dina egna inställningar.
 
-    > [!TIP] Hjälp med att välja rätt princip finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
+    > [!TIP]
+    > Hjälp med att välja rätt princip finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
 
 3.  Välj **Skapa princip** när du är klar.
 
@@ -73,8 +68,8 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
     - [Inställningar för uppgradering av Windows-utgåva](edition-upgrade-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Mac OS X-enheter](mac-os-x-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Exchange ActiveSync](exchange-activesync-policy-settings-in-microsoft-intune.md)
-    - [Inställningar för villkorsprinciper](terms-and-condition-policy-settings-in-microsoft-intune.md)
-    - [Allmänna inställningar för mobila enheter (bakåtkompatibelt)](mobile-device-security-policy-settings-in-microsoft-intune.md)
+    - [Inställningar för villkorsprincipen](terms-and-condition-policy-settings-in-microsoft-intune.md)
+    - [Allmänna inställningar för mobila enheter (äldre)](mobile-device-security-policy-settings-in-microsoft-intune.md)
 
 4.  I bekräftelsedialogrutan väljer du **Ja** om du vill distribuera principen nu eller **Nej** om du vill skapa principen utan att distribuera den.
 
@@ -119,7 +114,7 @@ Om enheten inte kontaktar tjänsten för att be om principen när den första av
 
 I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
 
-- iOS – Var 6:e timme
+- iOS och Mac OS X – Var 6:e timme
 - Android – Var 8:e timme
 - Windows Phone – Var 8:e timme
 - Registrerade Windows RT-enheter – var 24:e timme
@@ -127,10 +122,10 @@ I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjä
 
 Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
 
-- iOS – Var 15:e minut i 6 timmar och därefter var 6:e timme
+- iOS och Mac OS X – Var 15:e minut i 6 timmar och därefter var 6:e timme
 - Android – Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
 - Windows Phone – Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme
-- Windows-datorer som registrerats som enheter – Var 3:e minut i 30 minuter och därefter var 24:e timme
+- Windows-datorer som registrerats som enheter – Var 3:e minut i 30 minuter och därefter var 8:e timme
 
 Användarna kan också söka efter principer när som helst genom att starta appen Företagsportal och synkronisera enheten.
 
@@ -149,7 +144,7 @@ Det är viktigt att veta att när två eller fler principer distribueras till sa
 
 -   Den mest restriktiva efterlevnadsprincipinställningen tillämpas om den utvärderas och jämförs med samma inställning i en annan efterlevnadsprincip.
 
--   Den mest restriktiva konfigurationsprincipinställningen tillämpas om den utvärderas och jämförs med samma inställning i en annan konfigurationsprincip.
+-   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Intune-konsolen. Du måste lösa dessa konflikter manuellt.
 
 ### Vad händer om hanteringsprinciper för mobilprogram (MAM) är i konflikt med varandra? Vilken används för appen?
 Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en hanteringsprincip för mobilprogram, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning).  Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
@@ -178,7 +173,25 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
         - Lösenordstyp krävs
         - Lösenordets giltighetstid (i dagar)
         - Kom ihåg tidigare lösenord
-        - Antal upprepade misslyckade inloggningar innan enheten rensas – Minuter av inaktivitet innan lösenord krävs – Krävd lösenordstyp – minsta antal teckenuppsättningar – Tillåt kamera – Kräv kryptering på mobila enheter – Tillåt flyttbara lagringsenheter – Tillåt webbläsare – Tillåt appbutik – Tillåt tagning av skärmbild – Tillåt geolokalisering – Tillåt Microsoft-konto – Tillåt kopiera och klistra in – Tillåt trådlös Internetdelning – Tillåt automatisk anslutning till kostnadsfria trådlösa surfzoner – Tillåt rapportering om trådlösa surfzoner – Tillåt fabriksåterställning – Tillåt Bluetooth – Tillåt NFC – Tillåt Wi-Fi
+        - Antal tillåtna, upprepad felinloggningar innan enheten rensas
+        - Antal minuters inaktivitet innan lösenord krävs
+        - Krävd lösenordstyp – minsta antal tecken
+        - Tillåt kamera
+        - Filkryptering på mobil enhet
+        - Tillåt flyttbara lagringsenheter
+        - Tillåt webbläsare
+        - Tillåt appbutik
+        - Tillåt skärmbild
+        - Tillåt geolokalisering
+        - Tillåt Microsoft-konto
+        - Tillåt kopiera och klistra in
+        - Tillåt Wi-Fi -delning
+        - Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter
+        - Tillåt rapportering av trådlösa surfpunkter
+        - Tillåt fabriksåterställning
+        - Tillåt Bluetooth
+        - Tillåt NFC
+        - Tillåt Wi-Fi
     
     - **iOS** – Alla inställningar tas bort, utom:
         - Tillåt röstroaming
@@ -200,9 +213,10 @@ När du tar bort en princip eller tar bort en enhet från en grupp som en princi
 
 ### Var kan jag få hjälp med att felsöka principer?
 
-Se [Felsökningsprinciper i Microsoft Intune](../Troubleshoot/troubleshoot-policies-in-microsoft-intune).
+Se [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

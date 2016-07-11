@@ -1,34 +1,28 @@
 ---
-# required metadata
-
 title: Principdistribution | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 390d5adf-86d2-4e23-ba93-1e61e6b1028b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d82d0ae4820d2e2141848235b8741abccaec3bc6
+ms.openlocfilehash: 8935fbc42d7b406a5bcdbfc4353209b4447ae413
+
 
 ---
 
 # Principdistribution
 Det här avsnittet innehåller specifika rekommendationer för en fasindelad distribution av principer i Microsoft Intune. Den här metoden gäller för de första principerna som du tillämpar i en ny Intune-distribution eller principer som du lägger till i en befintlig distribution.
 
-Allmän information om distributionsfaser finns i [Distributionsfaser för distribution av Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md)
+Allmän information om distributionsfaser finns i [Distributionsfaser för distribution av Microsoft Intune](rollout-phases-for-microsoft-intune-deployment.md).
 
 ### Faser i principdistribution
 Faserna i principdistribution är:
@@ -61,7 +55,7 @@ Definiera omfånget för Intune-principdistributionen:
 ## Konceptbevis
 Under fasen Konceptbevis testar du principdistributionen i en laboratoriemiljö på enheter och användare som du har konfigurerat endast i testsyfte.
 
--   Låt supportavdelningen delta i denna fas för att ta reda på vilka problem som kan uppstå under pilot- och produktionsdistribution. Information om felsökning finns i [Felsöka principer i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)
+-   Låt supportavdelningen delta i denna fas för att ta reda på vilka problem som kan uppstå under pilot- och produktionsdistribution. Information om felsökning finns i [Felsöka principer i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 -   Under den här delen av processen bör du ta fram kommunikationsplaner för pilot- och produktionsanvändare. Planen bör minst omfatta vilka enhetsbeteenden som ändras och när, affärssyftet med ändringen och vad användarna eller IT-personalen kan göra om de stöter på problem, både information för självhjälp och hur de kontaktar supportavdelningen.
 
@@ -102,6 +96,7 @@ Under piloten distribuerar du principen till en liten grupp testanvändare och -
 [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

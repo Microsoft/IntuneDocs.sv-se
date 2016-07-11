@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Översikt över enhetslivscykeln | Microsoft Intune
-description:
-keywords:
+title: "Översikt över livscykeln för hantering av mobila enheter (MDM) | Microsoft Intune"
+description: "Läs om hur Intune kan hjälpa dig att hantera enheter genom hela livscykeln, från registrering till konfiguration och slutligen pensionering."
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f6051fa7-133f-4712-86a5-e5f5bc5ab3c7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 5140c4943be630ea8e48f80f7e6b590d223beac1
+ms.openlocfilehash: 751025aa71ef41564100ea57ac0d1fe60619e214
+
 
 ---
 
 # Översikt över livscykeln för hantering av mobila enheter (MDM)
 
-Enhetslivscykeln i Intune börjar med att inledningsvis registrera en enhet, fortsätter genom flera steg och avslutas när enheten inte längre behövs.
+Alla enheter du hanterar har en så kallad *livscykel*. Intune kan hjälpa dig att hantera livscykeln från registrering till pensionering när enheten inte behövs längre:
 
 ![Enhetslivscykeln](./media/device-lifecycle.png "the Intune device lifecycle")
 
@@ -51,6 +44,7 @@ I den moderna IT-världen är skydd av enheter från obehörig åtkomst en av de
 När en enhet blir stulen eller tappas bort, behöver bytas ut eller när användarna flyttar till en annan tjänst är det vanligtvis dags att [dra tillbaka eller rensa](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) enheten. Det finns ett antal sätt att göra det, till exempel att återställa enheten, ta bort den från hantering eller rensa företagsdata på den.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

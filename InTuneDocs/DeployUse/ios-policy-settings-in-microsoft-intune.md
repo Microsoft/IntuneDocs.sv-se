@@ -1,37 +1,33 @@
 ---
-# required metadata
-
-title: iOS-principinställningar | Microsoft Intune
-description:
-keywords:
+title: "iOS-principinställningar | Microsoft Intune"
+description: "Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune."
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: heenamac
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9a492a16605130743b943f6aa49d1d633eb97d4
+ms.openlocfilehash: 3292df922eeb53108f2b34d4113b0b6c5a114564
+
 
 ---
 
 # Principinställningar för iOS i Microsoft Intune
 
+I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i iOS-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune.
+
 ## Generella inställningar för konfigurationsprinciper
 
 Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vill konfigurera inställningar för:
 
--   **Säkerhetsinställningar för mobil enhet** – Välj i en lista fördefinierade inställningar med vilka du kan reglera många av enhetens egenskaper och funktioner.
+-   **Allmänna enhets- och säkerhetsinställningar** – Välj i en lista fördefinierade inställningar med vilka du kan reglera många av enhetens egenskaper och funktioner.
 
 -   **Helskärmsläge** – Lås en enhet så att bara vissa funktioner fungerar. Du kan t.ex. tillåta att enheten endast ska kunna köra en hanterad app som du anger, eller så kan du inaktivera volymknapparna på en enhet. De här inställningarna kan användas på en demonstrationsmodell av en enhet, eller en enhet som bara används för att utföra en enda funktion, till exempel i en butikskassa.
 
@@ -47,8 +43,8 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 |Inställningsnamn|Information|iOS|
 |----------------|-------|
 |**Kräv ett lösenord för att låsa upp mobila enheter**|Ange om användare måste ange ett lösenord för att komma åt sin enhet.|Ja|
-|**Lösenordstyp krävs**|Specificerar den typ av lösenord som krävs, enbart numeriskt eller alfanumeriskt exempelvis)|Ja|
-|**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. Den här inställningen anger hur många olika teckenuppsättningar som måste inkluderas i lösenordet. För iOS-enheter specificerar detta dock det antal symboltecken som måste inkluderas i lösenordet.|Ja|
+|**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.|Ja|
+|**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Detta anger antalet symboltecken (till exempel **#** eller **@**) som måste tas med i lösenordet.|Ja|
 |**Minsta längd på lösenord**|Anger det minsta antalet tecken som lösenordet måste innehålla.|Ja|
 |**Tillåt enkla lösenord**|Tillåt enkla lösenord som "0000" och "1234"|Ja|
 |**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Rensar enheten om detta antal inloggningsförsök misslyckas.|Ja|
@@ -77,7 +73,7 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 |Inställningsnamn|Information|iOS|
 |----------------|-------|
 |**Tillåt säkerhetskopiering till iCloud**|Tillåter användare att säkerhetskopiera enheten till iCloud.|Ja|
-|**Tillåt dokumentsynkronisering till iCloud**|Tillåt synkronisering av dokument och nyckel/värde till ditt lagringsutrymme i iCloud. Ja|
+|**Tillåt dokumentsynkronisering till iCloud**|Tillåt synkronisering av dokument och nyckel/värde till ditt lagringsutrymme i iCloud.|Ja|
 |**Tillåt bildströmssynkronisering till iCloud**|Tillåt foton på enheten att synkronisera med iCloud.|Ja|
 |**Kräv krypterad säkerhetskopiering**|Kräv att säkerhetskopior av enheter måste vara krypterade.|Ja|
 
@@ -97,7 +93,7 @@ Om den inställning som du söker efter inte visas i avsnittet kan du skapa den 
 |Inställningsnamn|Information|iOS|
 |----------------|-------|
 |**Tillåt appbutik**|Tillåter enheten att få åtkomst till appbutiken.|Ja|
-|**Kräv ett lösenord om du vill komma åt programbutiken.**|Ja|
+|**Kräv ett lösenord om du vill komma åt programbutiken.**|Kräver att användarna anger ett lösenord innan de kan besöka app store.|Ja|
 |**Tillåt köp via app**|Tillåt att inköp görs från en app som körs.|Ja|
 |**Tillåt hanterade dokument i andra ohanterade appar**|Tillåter visning av företagsdokument i vilken app som helst.<br>**Exempel:** Du vill förhindra att användare sparar filer från OneDrive-appen till Dropbox. Konfigurera den här inställningen till Nej. När enheten har hämtat principen (till exempel efter en omstart) kommer den inte längre att tillåta att spara.|iOS 7.1 och senare|
 |**Tillåt ohanterade dokument i andra hanterade appar**|Tillåt visning av valfria dokument i hanterade företagsappar.|iOS 7.1 och senare|
@@ -170,7 +166,8 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 |**Aktivera Assistive Touch**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Assistive Touch** som hjälper användaren med gester på skärmen som kan vara svåra att utföra.|
 |**Aktivera anpassning av Assistive Touch**|Aktiverar eller inaktiverar anpassning av funktionen Assistive Touch.|
 |**Aktivera Läs upp markering**|Aktiverar eller inaktiverar hjälpmedelsinställningen **Läs upp markering** som kan läsa upp texten du väljer.|
-> [!NOTE] Följande information gäller inställningar för helskärmsläge på iOS-enheter:
+> [!NOTE]
+> Följande information gäller inställningar för helskärmsläge på iOS-enheter:
 > 
 > -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator Tool](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller Enhetsregistreringshanteraren för att placera enheten i övervakat läge Mer information om Apple Configurator Tool, se dokumentationen till Apple.
 > -   Om iOS-appen du anger har installerats efter det att du har distribuerat konfigurationsprincipen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
@@ -195,7 +192,8 @@ Kopiera webbadressen till sidan och använd den som webbadress för att konfigur
 
 **Exempel:** Sök efter **Microsoft Word för iPad**. Webbadressen du använder är **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
-> [!NOTE] Du kan även använda iTunes-programmet för att hitta appen och sedan hämta appens webbadress med hjälp av kommandot **Kopiera länk**.
+> [!NOTE]
+> Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
 
 ## Anpassade principinställningar
@@ -230,6 +228,7 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

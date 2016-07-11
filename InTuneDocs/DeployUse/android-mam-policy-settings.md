@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: MAM-principinställningar för Android | Microsoft Intune
-description:
-keywords:
+title: "MAM-principinställningar för Android | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: 3f43dc871dc0b0a81a6d0b05376a1254957fc35b
+
 
 ---
 
@@ -65,11 +59,12 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 
     **Standardvärde = Ja**
 - **Kryptera appdata:** Välj **Ja** för att aktivera kryptering. När den här inställningen är aktiverad tillhandahålls krypteringen av Microsoft för appar som associeras med en hanteringsprincip för mobilappar. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid.
-  >[!NOTE] Krypteringsmetoden är inte FIPS 140-2-certifierad.
+  >[!NOTE]
+  >Krypteringsmetoden är inte FIPS 140-2-certifierad
 
   **Standardvärde = Ja**
 
-- **ContactSyncDisabled:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.<br/>När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för **Microsoft Outlook**-appen.
+- **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.<br/>När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för **Microsoft Outlook**-appen.
 
   **Standardvärde = Ja**
 
@@ -100,6 +95,7 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 - **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare):** Välj **Ja** för att blockera funktioner för skärmdump och **Android Assistant** på enheten när den här appen används.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

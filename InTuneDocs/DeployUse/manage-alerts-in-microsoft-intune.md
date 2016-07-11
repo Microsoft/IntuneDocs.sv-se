@@ -1,27 +1,22 @@
 ---
-# required metadata
-
 title: Hantera aviseringar | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-
-# optional metadata
-
 ROBOTS: noindex,nofollow
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: bfea7213f67b55807045bfd8b29fdb083b841a56
+
 
 ---
 
@@ -36,6 +31,7 @@ Använd arbetsytan **Aviseringar** i administratörskonsolen för Intune när du
 
     -   **För att visa sammanfattningar för avisering**, klicka på **Aviseringar &gt; Översikt**. Området **Aviseringstypssammanfattning** visar en sammanfattning över olika aviseringar på sidan **Aviseringsöversikt**. Viktiga aviseringar visas först. Du kan klicka på länkarna i aviseringarna om du vill se mer detaljerad information.
 
+        > [!NOTE]
         > I vissa fall kan en varningstyp visas mer än en gång i listan **Aviseringstypssammanfattning**.
         > 
         > Följande instanser av aviseringstypen för ledigt logiskt diskutrymme kan t.ex. förekomma i listan:
@@ -60,7 +56,7 @@ Anslagstavleaviseringar tillhandahåller viktig tjänstinformation om t.ex. komm
 
 #### Visa och hantera anslagstavleaviseringar
 
-1.  I administratörskonsolen för Intune klickar du på **Systemöversikt**
+1.  I administratörskonsolen för Intune klickar du på **Systemöversikt**.
 
 2.  Om det finns några viktiga tjänstmeddelanden visas de i området **Anslagstavla**.
 
@@ -71,7 +67,7 @@ Visa systemstatussammanfattningar för Endpoint Protection, uppdateringar, agent
 
 #### Visa status för din prenumeration
 
-1.  I administratörskonsolen för Intune klickar du på **Systemöversikt**
+1.  I administratörskonsolen för Intune klickar du på **Systemöversikt**.
 
 2.  Du kan undersöka statusen för de olika Microsoft Intune-komponenterna i området **Systemstatus**. Många av objekten innehåller länkar genom vilka du kan få ytterligare information. Under **Endpoint Protection** kan du t.ex. välja det antal instanser som ska visas på arbetsytan **Endpoint Protection** med en lista över skadlig kod som har identifierats. När du väljer antal enheter visas arbetsytan **Grupper** med en lista över enheter där skadlig kod har påträffats.
 
@@ -90,27 +86,28 @@ Aviseringar som har markerats som stängda tas bort permanent efter 90 dagar.
 
 1.  Gör något av följande i administratörskonsolen för Intune:
 
-    1.  **För att stänga en avisering från aviseringslistan** – Klicka på **Aviseringar &gt; Alla aviseringar**. Välj en avisering och klicka sedan på **Stäng avisering**
+    1.  **För att stänga en avisering från aviseringslistan** – Klicka på **Aviseringar &gt; Alla aviseringar**. Välj en avisering och klicka sedan på **Stäng avisering**.
 
-    2.  **För att stänga en avisering för en specifik enhet** – Klicka på **Grupper &gt; Alla enheter**. Välj en enhet och klicka på **Visa egenskaper**. Klicka sedan på fliken **Aviseringar**, markera en varning och klicka sedan på **Stäng avisering**
+    2.  **För att stänga en avisering för en specifik enhet** – Klicka på **Grupper &gt; Alla enheter**. Välj en enhet och klicka på **Visa egenskaper**. Klicka sedan på fliken **Aviseringar**, markera en varning och klicka sedan på **Stäng avisering**.
 
     3.  **Stänga en anslagstavleavisering** – Klicka på **Systemöversikt**. Klicka på **X** bredvid anslagstavleaviseringen.
 
 #### Visa och återaktivera stängda aviseringar
 
-1.  I administratörskonsolen för Intune klickar du på **Aviseringar &gt; Alla aviseringar**
+1.  I administratörskonsolen för Intune klickar du på **Aviseringar &gt; Alla aviseringar**.
 
-2.  Klicka på **Stängd** i listan **Filter**
+2.  Klicka på **Stängd** i listan **Filter**.
 
     Aviseringarnas namn och ytterligare information visas i listhanteringsfönstret. Information om de markerade varningarna visas i förhandsgranskningsfönstret.
 
-3.  Om du vill återaktivera den markerade aviseringen klickar du på **Återaktivera avisering**
+3.  Om du vill återaktivera den markerade aviseringen klickar du på **Återaktivera avisering**.
 
 ### Se även
-[Håll dig informerad med aviseringar från Microsoft Intune](get-notified-by-microsoft-intune-alerts.md)
+[Håll dig informerad med aviseringar från Microsoft Intune](get-notified-by-alerts.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

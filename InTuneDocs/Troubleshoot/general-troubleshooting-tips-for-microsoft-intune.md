@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Allmänna felsökningstips | Microsoft Intune
-description:
-keywords:
+title: "Allmänna felsökningstips | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79617dd41e51402a73759da792f581028095a2f5
+ms.openlocfilehash: 6b2d1d5eecb543e45fca5fbb8aa1854c88ec4f9c
+
 
 ---
 
@@ -46,7 +40,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
 -   Kan användaren ha autentiseringsproblem? Om det är en möjlighet kontrollerar du om användaren kan logga in till andra tjänster som använder Azure Active Directory. Kontrollera också om användaren kan logga in från en annan enhet.
 
--   Har du kontrollerat status för tjänsten? Du kan övervaka hälsotillståndet för Intune-tjänsten i den [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Välj **Tjänstens hälsa** i det vänstra fönstret. 
+-   Har du kontrollerat status för tjänsten? Du kan övervaka hälsotillståndet för Intune-tjänsten i den [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx). Välj **Tjänstens hälsa** i det vänstra fönstret.
 
 ## Samla in tillgängliga data
 
@@ -54,9 +48,9 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
   - [Skicka loggar med Android-diagnostikdata till IT-administratören via USB-kabel](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
   - [Skicka loggar med Android-diagnostikdata till IT-administratören via e-post](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
   - [Skicka Android-registreringsfel till IT-administratören](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-  - [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios.md)
+  - [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios)
 
--   Data från administratörskonsolen. Vid problem relaterade till principimplementeringen bör du till exempel undersöka den avsedda principen och principens status genom att följa anvisningarna i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/indune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Data från administratörskonsolen. Vid problem relaterade till principimplementeringen bör du till exempel undersöka den avsedda principen och principens status genom att följa anvisningarna i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## Undersök lösningen
 
@@ -97,6 +91,7 @@ Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den i
 [Felsökning av programuppdateringar i Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

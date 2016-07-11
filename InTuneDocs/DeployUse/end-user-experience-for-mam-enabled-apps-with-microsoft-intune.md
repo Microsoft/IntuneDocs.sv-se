@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Slutanvändarupplevelse för MAM-aktiverade appar | Microsoft Intune
-description:
-keywords:
+title: "Slutanvändarupplevelse för MAM-aktiverade appar | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3f797e3ef4a7e2d1b27ce6b1ed6e5322343c6cff
+ms.openlocfilehash: 9b557c272c9d740792560a392d52efff6a7deed1
+
 
 ---
 
@@ -41,6 +34,7 @@ Hanteringsprinciper för mobilappar (MAM) används bara när appar används i en
     ![Skärmbild av inloggningssidan för O365](../media/AppManagement/iOS_O365SignInPage.png)
 
 3.  När dina autentiseringsuppgifter har autentiserats av Azure AD tillämpas MAM-principerna och du uppmanas att starta om **OneDrive** -appen.
+  >[OBS!] Dialogrutan Omstart krävs visas bara på enheter som inte har registrerats i Intune.
 
     ![Skärmbild av dialogrutan Omstart krävs](../media/AppManagement/iOS_AppRestartforMAM.png)
 
@@ -79,7 +73,7 @@ Hanteringsprinciper för mobilappar (MAM) används bara när appar används i en
 
     ![Skärmbild av företagsportalappen](../media/AppManagement/Android_CompanyPortalInstall.png)
 
-5.  När du har slutfört installationen accepterar du villkoren genom att klicka på **Acceptera** .
+5.  När du har slutfört installationen accepterar du villkoren genom att välja **Acceptera** .
 
 6.  **OneDrive** -appen startas automatiskt.
 
@@ -136,7 +130,7 @@ Läsa exemplet nedan för att få en bättre förståelse för hur flera använd
 Användare A arbetar för två företag – **Företag X** och **Företag Y**. Användare A har ett arbetskonto för varje företag och båda använder Intune för att distribuera MAM-principer. **Företag X** distribuerar MAM-principer **före** **Företag Y**. Det konto som är kopplat till **Företag X** får MAM-principen, men inte kontot som är kopplat till Företag Y. Om du vill att användarkontot som är kopplat till Företag Y ska hanteras av MAM-principerna måste du ta bort användarkontot som är kopplat till Företag X.
 ### Lägga till ett andra konto
 #### iOS
-Om du använder en iOS-enhet visas ett blockeringsmeddelande om du försöker lägga till ett andra arbetskonto på samma enhet.  Du ser också ett alternativ för att ta bort det befintliga kontot och lägga till ett nytt. Du kan göra det genom att klicka på **Ja**.
+Om du använder en iOS-enhet visas ett blockeringsmeddelande om du försöker lägga till ett andra arbetskonto på samma enhet.  Du ser också ett alternativ för att ta bort det befintliga kontot och lägga till ett nytt. Du kan göra det genom att välja **Ja**.
 
 ![Skärmbild av dialogrutan med blockeringsmeddelandet och alternativen Ja och Nej](../media/AppManagement/iOS_SwitchUser.PNG)
 ####  Android
@@ -149,6 +143,18 @@ Om du vill visa företagets AV-, PDF- och bildfiler på Android-enheter använde
 
 Hämta den här appen från Google Play Store.  När appen har installerats på enheten startar du appen och verifierar med dina autentiseringsuppgifter för företaget. Du bör nu kunna visa oskyddade och skyddade filer från andra principhanterade appar.
 
+Följande filtyper stöds:
+
+* **Ljud:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (förbättrad AAC+), AAC ELD (Enhanced Low Delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
+* **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8.
+* **Bild:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
+* PDF, PPDF
+
+------------
+|**pfile**|**text**|
+|----|----|
+|Pfile är ett allmänt “wrapper”-format för skyddade filer som kapslar in det krypterade innehållet och RMS-licenserna. Det kan användas för att skydda alla filtyper.|Textfiler, till exempel XML och CSV, kan visas i appen även när de skyddas. Filtyper: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+---------------
 **Android-enheter som inte har registrerats i Intune**
 
 Innan du kan använda RMS-delningsappen för att visa filer från andra appar som hanteras av Intune startar du RMS-appen och autentiserar med ditt arbetskonto.  När du loggar in visas följande meddelande **endast om du inte har en licens för RMS**:
@@ -162,6 +168,7 @@ Detta förhindrar inte att du använder RMS-delningsappen för att visa företag
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,31 +1,24 @@
 ---
-# required metadata
-
-title: Begränsa åtkomsten till e-post och O365-tjänster | Microsoft Intune
-description:
-keywords:
+title: "Begränsa åtkomsten till e-post och O365-tjänster | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f770bdc312879d1c833e8861494ecd2204ea603a
+ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
+
 
 ---
 
-# Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune
+# Begränsa åtkomsten till e-post, O365 och andra tjänster med Microsoft Intune
 Du kan begränsa åtkomsten till företagsrelaterad e-post och O365-tjänster med villkorlig åtkomst i Intune. Med Intunes funktioner för villkorlig åtkomst kan du se till att åtkomsten till företagsrelaterad e-post och O365-tjänster är begränsad till enheter som är kompatibla med de regler som du anger.
 ## Hur fungerar villkorlig åtkomst?
 Inställningar för efterlevnadsprinciper används för att utvärdera enhetens kompatibilitet. Principen för villkorlig åtkomst använder utvärderingen för att begränsa eller tillåta åtkomst till en specifik tjänst. När en princip för villkorlig åtkomst används i kombination med en efterlevnadsprincip kommer endast kompatibla enheter att kunna komma åt tjänsten.
@@ -37,7 +30,7 @@ Om en enhet inte uppfyller de villkor som du har definierat i principerna vägle
 
 Så här ser ett typiskt flöde för villkorlig åtkomst ut:
 
-![Diagrammet visar beslutspunkterna som används för att avgöra om en enhet har åtkomst till en tjänst eller om den blockeras](./media/ConditionalAccess4.png)
+![Diagrammet visar beslutspunkterna som används för att avgöra om en enhet har åtkomst till en tjänst eller om den blockeras](../media/ConditionalAccess4.png)
 
 ## Hur konfigurerar jag villkorlig åtkomst?
 Använd villkorlig åtkomst om du vill hantera åtkomsten till Microsoft **Exchange On-premises**, **Exchange Online**, **Exchange Online Dedicated**, **SharePoint Online** och **Skype för företag – Online**.
@@ -67,8 +60,10 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
   - [Skapa en princip för villkorlig åtkomst för gamla Exchange Online Dedicated](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+  - [Skapa en princip för villkorlig åtkomst för Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

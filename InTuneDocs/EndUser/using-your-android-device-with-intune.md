@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Använda en Android-enhet med Intune | Microsoft Intune
-description:
-keywords:
+title: "Använda en Android-enhet med Intune | Microsoft Intune"
+description: 
+keywords: 
 author: staciebarker
 manager: jeffgilb
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
+ms.openlocfilehash: 4622897f5e32514ad80b5000732cf6835224160a
+
 
 ---
 
@@ -52,6 +46,7 @@ Det här avsnittet innehåller information om åtgärder som du kan vidta när d
 - [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Vad händer om du återställer en Android-enhet med hjälp av företagsportalappen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+<!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
 
 ## Åtgärda problem med din enhet
 
@@ -65,10 +60,16 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 - [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)
 - [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)
+- [Du uppmanas att stänga av okända källor](you-are-asked-to-turn-off-unknown-sources-android.md)
+- [Du uppmanas att stänga av USB-felsökning](you-are-asked-to-turn-off-usb-debugging-android.md)
+- [Du uppmanas att aktivera alternativet att genomsöka enheten efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Enheten uppfyller inte minimikraven för säkerhetskorrigering](your-device-does-not-meet-the-minimum-security-patch-android.md)
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+
+<!--HONumber=Jun16_HO5-->
 
 

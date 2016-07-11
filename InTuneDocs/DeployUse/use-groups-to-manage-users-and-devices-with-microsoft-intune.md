@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Använda grupper för att hantera användare och enheter | Microsoft Intune
-description:
-keywords:
+title: "Använda grupper för att hantera användare och enheter | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cc64e51499908d08823429871cda91dfb0078b1e
+ms.openlocfilehash: a1f6dfc7629481403c40a1ce927b588f67e5fa74
+
 
 ---
 
@@ -43,16 +37,16 @@ Dessutom visas din grupphierarki med statussammanfattningar som hjälper dig att
 >
 > Du vill förmodligen skapa en standardprincip som gäller för alla grupper och enheter och som fastställer de grundläggande kompatibilitetskraven för ditt företag. Sedan kan du skapa mer specifika principer för de bredaste användar- och enhetskategorierna, t.ex. e-postprinciper för vart och ett av enhetsoperativsystemen.
 >
-> Var noga med att ge dina principer namn som gör det lätt att identifiera dem längre fram. Ett exempel på ett bra beskrivande principnamn är **WP e-postprincip för hela företaget**
+> Var noga med att ge dina principer namn som gör det lätt att identifiera dem längre fram. Ett exempel på ett bra beskrivande principnamn är **WP e-postprincip för hela företaget**.
 >
 > Varje gång som du skapar en begränsande princip vill du sannolikt informera användarna om den. Så när du har skapat de mer allmänna grupperna och principerna bör du vara noga med hur du skapar mindre grupper, så att du minskar risken för onödig information.
 
 
 ## Skapa en enhetsgrupp
 
-1.  I Intune-administrationskonsolen väljer du **Grupper** &gt; **Översikt** &gt; **Skapa grupp**
+1.  I Intune-administratörskonsolen klickar du på **Grupper** &gt; **Översikt** &gt; **Skapa grupp**.
 
-2.  Ange ett namn och en valfri beskrivning för gruppen och välj en enhetsgrupp som den överordnade gruppen. Välj **Nästa**
+2.  Ange ett namn och en valfri beskrivning för gruppen och välj en enhetsgrupp som den överordnade gruppen. Välj **Nästa**.
 
 3.  På sidan **Definierar medlemskapskriterier** markerar du typen av enheter som gruppen kommer att innehålla. Fler alternativ för att konfigurera gruppen beror på vilken typ av enheter som du väljer:
 
@@ -65,15 +59,15 @@ Dessutom visas din grupphierarki med statussammanfattningar som hjälper dig att
 4.  På sidan **Definiera direkt medlemskap** tas med eller utesluts enskilda enheter som du anger genom att klicka på **Bläddra**. Om du använder alternativet för att välja enheter som inte ingår i den överordnade gruppen du angav läggs enheterna automatiskt till den överordnade gruppen.
 
 
-5.  Granska de åtgärder som kommer att vidtas på sidan **Sammanfattning**. Välj **Slutför**
+5.  Granska de åtgärder som kommer att vidtas på sidan **Sammanfattning**. Välj **Slutför**.
 
 Du hittar grupperna som skapats i listan **Grupper** under den överordnade gruppen på arbetsytan **Grupper**. Här kan du också redigera eller ta bort gruppen.
 
 ## Skapa en användargrupp
 
-1.  I Intune-administrationskonsolen väljer du **Grupper** &gt; **Översikt** &gt; **Skapa grupp**
+1.  I Intune-administratörskonsolen klickar du på **Grupper** &gt; **Översikt** &gt; **Skapa grupp**.
 
-2.  Ange ett namn och en valfri beskrivning för gruppen och välj en användargrupp som den överordnade gruppen. Välj **Nästa**
+2.  Ange ett namn och en valfri beskrivning för gruppen och välj en användargrupp som den överordnade gruppen. Välj **Nästa**.
 
 3.  På sidan **Definiera medlemskapskriterier** kan du ange om alla medlemmar i den överordnade gruppen ska inkluderas eller om du vill börja med en tom grupp.  Du kan sedan ta med eller utesluta medlemmar baserat på **Säkerhetsgrupper** med användare som du konfigurerar manuellt i [administrationscenter för Office 365](http://go.microsoft.com/fwlink/?LinkId=698854) eller som synkroniseras från din lokala Active Directory. Om medlemskap i en säkerhetsgrupp ändras kan även medlemskap i användargrupperna som är baserade på säkerhetsgruppen ändras.
 
@@ -81,13 +75,13 @@ Du hittar grupperna som skapats i listan **Grupper** under den överordnade grup
     > Om din grupp innehåller medlemmar från specifika säkerhetsbehörigheter eller manager-grupper, och du även exkluderar medlemmar från specifika grupper, tas medlemmarna du ursprungligen inkluderade för närvarande bort. Om du vill skapa en grupp som både har inkluderade medlemmar och exkluderade medlemmar, rekommenderar vi att du först skapar en överordnad grupp med inkluderade medlemmar och sedan skapar en underordnad grupp där du anger exkluderade medlemmar. Du kan sedan använda den underordnade gruppen för Intune-principer, profiler och app-distribution.
 
     > [!NOTE]
-    > Du kan skapa en grupp baserad på den hanterare som användarna rapporterar till i Azure-hanteringsportal. Gruppen ska vara dynamisk, ändras då anställda läggs till eller tas bort från denna hanterares team i Azure Active Directory. Stegen som du följer för att skapa en Azure-grupp baserat på en hanterare beskrivs i [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) i avsnittet **Konfigurera en grupp som en ”Manager”-grupp**
+    > Du kan skapa en grupp baserad på den hanterare som användarna rapporterar till i Azure-hanteringsportal. Gruppen ska vara dynamisk, ändras då anställda läggs till eller tas bort från denna hanterares team i Azure Active Directory. Stegen som du följer för att skapa en Azure-grupp baserat på en hanterare beskrivs i [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) i avsnittet **Konfigurera en grupp som en ”Manager”-grupp**.
 
 
 4.  På sidan **Definiera direkt medlemskap** tas med eller utesluts enskilda användare som du anger genom att klicka på **Bläddra**. Om du använder alternativet för att välja användare som inte ingår i den överordnade gruppen du angav läggs enheterna automatiskt till den överordnade gruppen. Längst ned i dialogrutan **Välj medlemmar** hittar du alternativet för att lägga till en användare manuellt. Detta är praktiskt om du vill lägga till en användare som ännu inte har en registrerad enhet.
 
 
-5.  Granska de åtgärder som kommer att vidtas på sidan **Sammanfattning**. Välj **Slutför**
+5.  Granska de åtgärder som kommer att vidtas på sidan **Sammanfattning**. Välj **Slutför**.
 
 Du hittar grupperna som skapats i listan **Grupper** under den överordnade gruppen på arbetsytan **Grupper**. Här kan du också redigera eller ta bort gruppen.
 
@@ -101,7 +95,7 @@ Med filtrerade gruppvyer kan du anpassa vyn som administratörer kan se baserat 
 
 -   Du vill endast visa relevanta grupper för varje IT-administratör.
 
-Du kan konfigurera filtrerade gruppvyer för administratörer i Intune-administrationskonsolen. Mer information finns i [Vad du behöver veta innan du startar Microsoft Intune](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+Du kan konfigurera filtrerade gruppvyer för administratörer i Intune-administrationskonsolen. Mer information finns i [Vad du behöver veta innan du startar Microsoft Intune](/intune/get-started/what-to-know-before-you-start-microsoft-intune).
 
 När du har konfigurerat filtrerade gruppvyer för en tjänstadministratör kan administratören:
 
@@ -123,11 +117,11 @@ När du har konfigurerat filtrerade gruppvyer för en tjänstadministratör kan 
 
 ### Konfigurera filtrerade gruppvyer
 
-1.  I Intune-administrationskonsolen väljer du **Admin** &gt; **Administratörshantering** &gt; **Tjänstadministratörer**
+1.  I Intune-administrationskonsolen väljer du **Admin** &gt; **Administratörshantering** &gt; **Tjänstadministratörer**.
 
-2.  Välj den tjänstadministratör som du vill filtrera grupper för och klicka på **Hantera grupper**
+2.  Välj den tjänstadministratör för vilken du vill filtrera grupper och klicka på **Hantera grupper**.
 
-3.  I dialogrutan **Markera de grupper som ska vara synliga för den här tjänstadministratören** lägger du till de grupper som den valda tjänstadministratören kan komma åt och klickar sedan på **OK**
+3.  I dialogrutan **Markera de grupper som visas för den här tjänstadministratören** lägger du till de grupper som den valda tjänstadministratör kommer att kunna få åtkomst till och klickar sedan på **OK**.
 
 När du har konfigurerat de filtrerade gruppvyerna kommer IT-administratörerna att kunna visa och välj de grupper som du valt.
 
@@ -141,7 +135,7 @@ Du kan ta bort en grupp som inte längre tjänar organisationens behov. Om du ta
 ## Nästa steg
 
 ### Kontrollera din design
-När du har skapat dina grupper och principer kontrollerar du de praktiska effekterna av din design genom att kontrollera **Avsett värde** och **Status**
+När du har skapat dina grupper och principer kontrollerar du de praktiska effekterna av din design genom att kontrollera **Avsett värde** och **Status**.
 
 1. Välj vilken enhet du vill från en enhetsgrupp och bläddra igenom informationskategorierna överst på skärmen.
 2. Välj **Princip** . Du ser något som liknar denna skärmbild från en Android-enhets principinställningar.
@@ -154,9 +148,11 @@ Varje princip har ett **Avsett värde** och en **Status**. Det avsedda värdet �
 
 -   På samma sätt tillämpas inte det utökade principobjektet, **E-postinställningar för iOS-enheter**, på den här enheten eftersom det är en Android-enhet.
 
+> [!NOTE]
 > Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

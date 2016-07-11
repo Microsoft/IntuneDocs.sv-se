@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Lägg till appar för mobila enheter | Microsoft Intune
-description:
-keywords:
+title: "Lägga till appar för registrerade enheter | Microsoft Intune"
+description: "Innan du kan distribuera en app måste du lägga till den i Intune. Sedan är den tillgänglig i Intune-konsolen där du kan distribuera och hantera den."
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 5140c4943be630ea8e48f80f7e6b590d223beac1
+ms.openlocfilehash: 795843f012434e1a50cd6abab05b6af2c811cf3e
+
 
 ---
 
-# Lägg till appar för mobila enheter i Microsoft Intune
+# Lägga till appar för registrerade enheter i Intune
 
-Använd informationen i det här avsnittet för att lära dig hur du lägger till appar i Intune innan du distribuerar dem.
+Innan du kan distribuera och hantera en app måste du lägga till den i Microsoft Intune. Det här avsnittet visar hur du lägger till appar för registrerade enheter.
 
 
 > [!IMPORTANT]
@@ -36,14 +29,15 @@ Använd informationen i det här avsnittet för att lära dig hur du lägger til
 ## Lägg till appen
 Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för appen och, om tillämpligt, överföra den till molnlagringsutrymmet med följande metod:
 
-1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Lägg till appar** så startas programvaruutgivaren för Intune.
+1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Lägg till appar** så startas programvaruutgivaren för Intune.
 
-    > [!TIP] Du kan behöva ange ditt Intune-användarnamn och lösenord innan utgivaren startar.
+    > [!TIP]
+    > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
 
 2.  På sidan **Programvaruinstallation** för programvaruutgivaren väljer du något av följande alternativ för **Hur ska enheterna få tillgång till den här programvaran**:
     - **Installationsprogram för programvara**, för appar med filnamnstillägget **.msi** eller **.exe** anger du:
         - **Välj typ av programinstallationsfil** – Detta anger vilken typ av programvara som du vill distribuera. Om du till exempel vill installera en iOS-app väljer du **Appaket för iOS (&#42;.ipa-fil)**.
-        - **Ange platsen för programvarans installationsfiler** – Ange platsen för installationsfilerna eller klicka på **Bläddra** för att välja platsen i en lista.
+        - **Ange platsen för programvarans installationsfiler** – Ange platsen för installationsfilerna eller välj **Bläddra** för att välja platsen i en lista.
         - **Inkludera ytterligare filer och undermappar från samma mapp** – Endast för filtypen **Windows Installer**.<br>Vissa program som använder Windows Installer kräver stödfiler som vanligtvis finns i samma mapp som installationsfilerna. Välj det här alternativet om du även vill distribuera dessa filer.<br>Den här installationstypen använder en del av ditt molnlagringsutrymme.
 
   -   **Extern länk**, för appar som du vill skapa genom att ange en länk till en appbutik anger du:
@@ -64,7 +58,8 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
 
 3.  På sidan **Programvarubeskrivning** konfigurerar du följande:
 
-    > [!TIP] Beroende på vilken typ av installationsprogram som du använder kan en del av dessa värden ha angetts automatiskt.
+    > [!TIP]
+    > Beroende på vilken typ av installationsprogram som du använder kan en del av dessa värden ha angetts automatiskt.
 
     - **Utgivare** – Ange namnet på appens utgivare.
     - **Namn** – Ange namnet på appen så som det ska visas i företagsportalen.<br>Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
@@ -81,13 +76,14 @@ Du använder Intune-programvaruutgivaren för att konfigurera egenskaper för ap
 
 4.  På sidan **Krav** väljer du de krav som måste uppfyllas innan appen kan börja installeras på en enhet. För ett appaket för iOS kan du till exempel välja den lägsta version av iOS som krävs och vilken typ av enhet det måste vara, t.ex. iPhone eller iPad.
 
-    > [!TIP] Sidan **Krav** visas inte för alla typer av appar.
+    > [!TIP]
+    > Sidan **Krav** visas inte för alla typer av appar.
 
 5.  Ytterligare guidesidor visas när du väljer filtypen **Windows Installer**. Den här filtypen används när du distribuerar programvara till datorer som kör Windows 10 eller senare och som har registrerats i Intune.
 
-6.  På sidan **Sammanfattning** läser du igenom informationen du har angivit. När du är klar klickar du på **Överför**.
+6.  På sidan **Sammanfattning** läser du igenom informationen du har angivit. När du är klar väljer du **Överför**.
 
-7.  Klicka på **Stäng** för att slutföra.
+7.  Välj **Stäng** för att slutföra.
 
 Appen visas i noden **Appar** på arbetsytan **Appar**.
 
@@ -106,6 +102,7 @@ När du har skapat en app är nästa steg att distribuera den. Mer information f
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

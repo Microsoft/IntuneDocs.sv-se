@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: Principer för att skydda Windows-datorer | Microsoft Intune
-description:
-keywords:
+title: "Principer för att skydda Windows-datorer | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: d081f466-45dd-41d1-ab25-6d974c72a52a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 8d1bad7af972a32ce3509d67edab3f4f9c9df299
+
 
 ---
 
 # Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran
 
-Microsoft Intune innehåller tre principer som du kan använda för att säkerställa säkerheten för Windows-datorer när de hanteras av [Intune-klientprogramvaran](manage-windows-pcs-with-microsoft-intune.md) 
+Microsoft Intune innehåller tre principer som du kan använda för att säkerställa säkerheten för Windows-datorer när de hanteras av [Intune-klientprogramvaran](manage-windows-pcs-with-microsoft-intune.md). 
 
 
 ## Programuppdateringar
@@ -49,6 +43,7 @@ Som IT-administratör är en av dina högsta prioriteter att [hålla Windows-dat
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

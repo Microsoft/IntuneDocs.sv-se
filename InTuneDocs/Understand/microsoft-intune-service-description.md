@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Beskrivning av tjänst | Microsoft Intune
-description:
-keywords:
+title: "Beskrivning av tjänst | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 4794a22b3bdd1f28e6951b81e8379dc208fffc89
+ms.openlocfilehash: 6cab0bacd9157323e342662609de8c9f20550d78
+
 
 ---
 
@@ -38,7 +32,7 @@ Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion 
 
 En lista över inställningar du kan konfigurera för mobila enheter finns här:
 
--   [Funktioner för hantering av mobila enheter i Microsoft Intune](mobile-device-management-capabilities-in-microsoft-intune.md)
+-   [Funktioner för hantering av mobila enheter i Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
 -   [Allmänna inställningar för mobila enheter i Configuration Manager](https://technet.microsoft.com/en-us/library/dn376523.aspx)
 
@@ -62,7 +56,7 @@ Här är de typer av meddelanden som Microsoft tillhandahåller om Intune-tjäns
 * Nya eller ändrade API:er – du får ett meddelande om att du måste utföra tester för att säkerställa bakåtkompatibilitet för anpassade appar
 * Ändringar av systemkrav, till exempel hur gammal webbläsarversionen får lov att vara
 * Alla uppdateringar som kräver att du vidtar åtgärder för att aktivera funktionen eller för att undvika tjänsteavbrott för funktionen.
--   Microsoft tillhandahåller information om nya funktioner och förbättringar av befintliga funktioner i vår månatliga tjänstuppdatering. I allmänhet skickar Microsoft ut tjänstuppdateringar runt mitten av varje månad. Uppdateringarna beskrivs i [Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md).
+-   Microsoft tillhandahåller information om nya funktioner och förbättringar av befintliga funktioner i vår månatliga tjänstuppdatering. I allmänhet skickar Microsoft ut tjänstuppdateringar runt mitten av varje månad. Uppdateringarna beskrivs i [Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune).
 -   Om Intune-tjänsten skulle dras tillbaka meddelas du 12 månader i förväg.
 
 ## Välj den hanteringslösning som passar dig
@@ -70,24 +64,24 @@ Du kan konfigurera Intune på ett antal sätt för att hantera och skydda föret
 
 -   **Fristående Intune-konfiguration.** Använd den webbaserade administrationskonsolen i Intune för att hantera enheter i organisationen. Intune kan användas utan att det finns någon lokal IT-infrastruktur, men om du använder Intune med Active Directory Domain Services, kan du använda domänanvändarkonton som du hanterar med domäntjänster med Intune.
 
--   **Intune med System Center Configuration Manager.** Använd hanteringskonsolen i Configuration Manager för att hantera datorer och mobila enheter i företaget. Den här konfigurationen kan hjälpa dig att hantera organisationens enheter genom en enda konsol, nämligen administratörskonsolen i Configuration Manager. Configuration Manager stöder ett stort antal mobila enheter, servrar och datorer. Mer information finns i [Hantera mobila enheter med Configuration Manager och Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=271118) i [dokumentationsbiblioteket för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  Mer hjälp för att avgöra vilket arbetssätt som passar dig bäst finns i [Användning av mobilitet i företag](/intune/plan-design/ways-to-do-enterprise-mobility.md)
+-   **Intune med System Center Configuration Manager.** Använd hanteringskonsolen i Configuration Manager för att hantera datorer och mobila enheter i företaget. Den här konfigurationen kan hjälpa dig att hantera organisationens enheter genom en enda konsol, nämligen administratörskonsolen i Configuration Manager. Configuration Manager stöder ett stort antal mobila enheter, servrar och datorer. Mer information finns i [Hantera mobila enheter med Configuration Manager och Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=271118) i [dokumentationsbiblioteket för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  Mer hjälp för att bestämma vilken metod som är bäst för dig finns i [Välj mellan fristående Microsoft Intune och hantering av mobila hybridenheter med Configuration Manager](https://technet.microsoft.com/en-us/library/mt706478.aspx).
 
--   Hantering av mobila enheter som tillhandahålls av Office 365, enligt beskrivningen i [Användning av mobilitet i företag](/intune/plan-design/ways-to-do-enterprise-mobility.md)
 
 ## Läs mer om Intune
 Använd dessa resurser om du vill veta mer om Intune:
 
 -   [Microsoft Intune Trust Center](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) innehåller information om säkerhet och sekretess samt efterlevnadsregler för Intune och beskriver även några av certifieringarna för Intune.
 
--   [Funktioner för hantering av mobila enheter i Microsoft Intune](/intune/understand-explore/mobile-device-management-capabilities-in-microsoft-intune.md)
+-   [Funktioner för hantering av mobila enheter i Microsoft Intune](/intune/understand-explore/mobile-device-management-capabilities-in-microsoft-intune)
 
 ### Se även
 [Microsoft Intune](https://docs.microsoft.com/intune/)
 [-dokumentationsbibliotek för System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx)
 
-[Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune.md)
+[Nyheter i Microsoft Intune](/intune/deploy-use/whats-new-in-microsoft-intune)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

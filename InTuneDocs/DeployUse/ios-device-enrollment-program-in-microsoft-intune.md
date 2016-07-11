@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Hantering med Apples DEP för iOS-enheter med Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Hantering med Apples DEP för iOS-enheter med Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dagerrit
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
+ms.openlocfilehash: cd763f9fa0b08cc7b822eccbd043a5b9cd355d0f
+
 
 ---
 
@@ -59,6 +53,12 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
       - **Fråga efter användartillhörighet**: Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post som användaren.  **Användartillhörighet** ska konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (d.v.s. för att installera appar).
       - **Ingen användartillhörighet**: Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 
+    Du kan också **Tilldela enheter till följande grupp**. Klicka på **Välj...** för att välja en grupp.
+
+    >[!Important]
+    >Grupptilldelningar flyttas från Intune till Azure Active Directory. [Läs mer](#changes-to-intune-group-assignments)
+
+
     Aktivera sedan **Konfigurera DEP-inställningar för den här profilen** för att ge stöd åt DEP.
 
       ![Installationsassistentfönstret](../media/pol-sa-corp-enroll.png)
@@ -78,8 +78,16 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
         - **Platstjänster** – Om en här funktionen är aktiverad frågar Installationsassistenten efter under aktivering
         - **Återställ** – Om den här funktionen är aktiverad frågar Installationsassistenten om iCloud-säkerhetskopiering vid aktivering
         - **Apple-ID** – Ett Apple-ID krävs för att hämta iOS App Store-appar, inklusive de som har installerats av Intune. Om det här alternativet är aktiverat uppmanas användaren i iOS att uppge ett Apple-ID när Intune försöker installera en app utan ett ID.
-        - **Villkor** – Om alternativet är aktiverat uppmanar Installationsassistenten användarna att acceptera Apples villkor under aktivering - **Touch ID** – Om alternativet är aktiverat frågar Installationsassistenten efter den här tjänsten under aktivering - **Apple Pay** – Om alternativet är aktiverat frågar Installationsassistenten efter den här tjänsten under aktivering - **Zooma** – Om alternativet är aktiverat frågar Installationsassistenten efter den här tjänsten under aktivering - **Siri** – Om alternativet är aktiverat frågar Installationsassistenten efter den här tjänsten under aktivering - **Skicka diagnostikdata till Apple** – Om alternativet är aktiverat frågar Installationsassistenten efter den här tjänsten under aktivering -  **Aktivera ytterligare hantering av Apple Configurator** – Ställ in på **Tillåt inte** att förhindra synkronisering av filer med iTunes eller hantering via Apple Configurator. Microsoft rekommenderar att du anger **Tillåt inte**, exporterar eventuell ytterligare konfiguration från Apple Configurator och sedan distribuerar som en anpassad iOS-konfigurationsprofil via Intune i stället för att använda den här inställningen för att tillåta manuell distribution med eller utan ett certifikat.
-        - **Tillåt inte** – Hindrar enheten från att kommunicera via USB (inaktiverar sammankoppling) - **Tillåt** – Tillåter enheten att kommunicera via USB-anslutning för PC eller Mac - **Kräv certifikat** – Tillåter sammankoppling med en Mac-dator med ett certifikat som importerats till registreringsprofilen
+        - **Villkor** – Om det här alternativet är aktiverat uppmanas användarna i installationsassistenten att godkänna Apples villkor under aktiveringen
+        - **Touch ID** – Om det här alternativet är aktiverat frågar installationsassistenten efter den här tjänsten under aktivering
+        - **Apple Pay** – Om det här alternativet är aktiverat frågar installationsassistenten efter den här tjänsten under aktivering
+        - **Zooma** – Om den här funktionen är aktiverad frågar installationsassistenten efter den här tjänsten under aktivering
+        - **Siri** – Om den här funktionen är aktiverad frågar installationsassistenten efter den här tjänsten under aktivering
+        - **Skicka diagnostikdata till Apple** – Om den här funktionen är aktiverad frågar installationsassistenten efter den här tjänsten under aktivering
+     -  **Aktivera ytterligare hantering av Apple Configurator** – Ange till **Tillåt inte** om du vill förhindra synkronisering av filer med iTunes eller hantering via Apple Configurator. Microsoft rekommenderar att du anger **Tillåt inte**, exporterar eventuell ytterligare konfiguration från Apple Configurator och sedan distribuerar som en anpassad iOS-konfigurationsprofil via Intune i stället för att använda den här inställningen för att tillåta manuell distribution med eller utan ett certifikat.
+        - **Tillåt inte** – Hindrar enheten från att kommunicera via USB (inaktiverar sammankoppling)
+        - **Tillåt** – Enheten kan kommunicera via USB-anslutning för PC- eller Mac-dator
+        - **Kräv certifikat** – Möjliggör sammankoppling med en Mac-dator med ett certifikat som har importerats till registreringsprofilen
 
 6.  **Tilldela DEP-enheter för hantering** Gå till [DEP-portalen (Device Enrollment Program Portal)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med ditt företags Apple-ID. Gå till **Distribution av program** &gt; **Enhetsregistreringsprogram** &gt; **Hantera enheter**. Ange hur du ska **Välja enheter**, ange information om enheten och ange information om enhetens **serienummer**, **ordningsnummer**eller **Överför CSV-fil**. Välj därefter **Tilldela till server**, välj det &lt;ServerName&gt; som har angetts för Microsoft Intune och klicka sedan på **OK**.
 
@@ -91,12 +99,15 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 
 8.  **Distribuera enheter till användare** Dina företagsägda enheter kan nu distribueras till användarna. När en iOS-enhet aktiveras, kommer den att registreras för hantering av Intune.
 
+## Ändringar i Intune-grupptilldelningar
 
+Från och med september flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Mer information kommer att publiceras snart.
 
 ### Se även
 [Dags att registrera enheter](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: Användning av nätverksbandbredd i Intune | Microsoft Intune
-description:
-keywords:
+title: "Användning av nätverksbandbredd i Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: e104dc52a8a9bdda4b2edb2939d8c7c36e8ecc12
+
 
 ---
 
 # Användning av nätverksbandbredd i Intune
 
-Innan du konfigurerar [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
+Innan du konfigurerar [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
 Använd informationen i följande avsnitt när du planerar nätverkstrafiken för [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)]-klienter.
 
@@ -83,15 +77,16 @@ Läs mer om BITS och Windows-datorer i [Background Intelligent Transfer Service]
 
 -   [!INCLUDE[winblue_client_2](../includes/winblue_client_2_md.md)]
 
-Om du vill använda BranchCache måste klientdatorn ha BranchCache aktiverat och dessutom vara konfigurerat för **distribuerat cacheläge**
+Om du vill använda BranchCache måste klientdatorn ha BranchCache aktiverat och dessutom vara konfigurerat för **distribuerat cacheläge**.
 
 Som standard aktiveras BranchCache och distribuerat cacheläge på en dator när [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-klienten installeras. Men om klienten redan har en grupprincip som inaktiverar BranchCache, åsidosätter inte [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] principen och BranchCache kommer att förbli inaktiverat på datorn.
 
-Om du använder BranchCache bör du kommunicera med andra administratörer i din organisation som hanterar grupprincip och [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)]-brandväggsprincip för att säkerställa att de inte distribuerar en princip som inaktiverar BranchCache eller brandväggsundantag. Mer information om BranchCache finns i [BranchCache-översikt](http://technet.microsoft.com/library/hh831696.aspx)
+Om du använder BranchCache bör du kommunicera med andra administratörer i din organisation som hanterar grupprincip och [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)]-brandväggsprincip för att säkerställa att de inte distribuerar en princip som inaktiverar BranchCache eller brandväggsundantag. Mer information om BranchCache finns i [BranchCache-översikt](http://technet.microsoft.com/library/hh831696.aspx).
 
 ### Se även
 [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -47,6 +47,7 @@
 #### [VPN-anslutningar i Intune](vpn-connections-in-microsoft-intune.md)
 #### [E-postprofiler i Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Hantera användare och enheter med hjälp av grupper](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+### [Mappa enheter till grupper](categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Förstå dina enheter med inventering](understand-your-devices-with-inventory-in-microsoft-intune.md)
 ### [Vanliga datorhanteringsuppgifter](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 
@@ -86,14 +87,19 @@
 #### [För Windows och Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Distribuera en enhetsefterlevnadsprincip](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Begränsa åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+
+
 #### [Exchange Online och nya Exchange Online Dedicated](restrict-access-to-exchange-online-with-microsoft-intune.md)
 #### [Exchange On-premises och äldre Exchange Online Dedicated](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 #### [SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 #### [Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+#### [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Begränsa e-poståtkomsten: exempel](restrict-email-access-example-scenarios.md)
 
-### [Skydda appdata](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+### [Begränsa åtkomsten till nätverk (Cisco ISE)](restrict-access-to-networks.md)
+
+### [Skydda appdata med MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Azure Portal för MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md)
 #### [Gör dig redo att konfigurera MAM-principer](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Skapa och distribuera MAM-principer](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
@@ -102,6 +108,7 @@
 #### [Övervaka principefterlevnad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 #### [Slutanvändarupplevelse](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+#### [Administrationskonsolen för Intune för MAM-principer](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Förbereda affärsappar för MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 #### [Omsluta iOS-appar](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
@@ -123,9 +130,9 @@
 
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 
-# [Felsöka](/intune/troubleshoot/how-to-get-support-for-microsoft-intune)
+# [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

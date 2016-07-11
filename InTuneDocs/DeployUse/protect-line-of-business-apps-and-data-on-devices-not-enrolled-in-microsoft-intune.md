@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Skydda branschspecifika appar och data på enheter som inte har registrerats | Microsoft Intune
-description:
-keywords:
+title: "Skydda branschspecifika appar och data på enheter som inte har registrerats | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: 5e8b2a3f830016bbcd1965898dcf7b5d9a0597b5
+
 
 ---
 
@@ -64,7 +57,7 @@ Du kan distribuera appar till slutanvändarna på följande sätt:
 * För enheter som inte hanteras av någon MDM-lösning behöver du en anpassad lösning. Slutanvändare måste hämta och installera appen på sin enhet.
 
 ## Ändra metadata
-Om du behöver ändra informationen om en app som namnet på appen eller paket-ID måste du [ta bort appen](#remove-apps), och [lägga till ](#add-the-app) den med nya metadata.
+Om du behöver ändra informationen om en app, t.ex. namnet på appen eller paket-ID, måste du [ta bort appen](#remove-apps), och [lägga till ](#step-2-add-the-app) den med nya metadata.
 
 ##  Ta bort appar
 Du kan ta bort en branschspecifik app från applistan.  Den här åtgärden tar bort appen från listan och ta bort kopplingen till MAM-principerna, men inte tar bort eller avinstallerar appen från slutanvändarens enhet.  
@@ -80,6 +73,7 @@ Du kan ta bort en branschspecifik app från applistan.  Den här åtgärden tar 
   Detta tar bort apparna från listan över branschspecifika appar och Riktad lista över appar i MAM-principen.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,34 +1,28 @@
 ---
-# required metadata
-
-title: Brandväggsprinciper för Windows-datorer | Microsoft Intune
-description:
-keywords:
+title: "Brandväggsprinciper för Windows-datorer | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 9f338efe3ef40da3db40c12d1a18c4122e65dc5d
+
 
 ---
 
 # Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
 Microsoft Intune kan hjälpa dig att skydda dina hanterade Windows-datorer med Intune-klienten på många olika sätt, inklusive användningen av principer som gör att du kan konfigurera inställningar för Windows-brandväggen på datorer.
 
-Om du inte har installerat Intune-klienten på dina Windows-datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md)
+Om du inte har installerat Intune-klienten på dina Windows-datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Använd informationen i följande avsnitt för att konfigurera, distribuera och övervaka principer för Windows-brandväggen på Windows-datorer.
 
@@ -36,10 +30,11 @@ Använd informationen i följande avsnitt för att konfigurera, distribuera och 
 Med principen för Windows-brandväggen kan du skapa och distribuera inställningar som styr Windows-brandväggen på hanterade datorer. Du kan inte hantera anpassade undantag för Windows-brandväggen och de här inställningarna påverkar inte brandväggar från tredje part.
 
 > [!NOTE]
-> Om Microsoft Intune-principen och grupprincipen har konfigurerats för att hantera samma inställning på samma dator åsidosätter grupprincipen principinställningen för Microsoft Intune. Information om hur du undviker konflikter mellan Intune-principer och grupprinciper finns i [Åtgärda konflikter mellan grupprincipobjekt och Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+> Om Microsoft Intune-principen och grupprincipen har konfigurerats för att hantera samma inställning på samma dator åsidosätter grupprincipen principinställningen för Microsoft Intune. Information om hur du undviker konflikter mellan Intune-principer och grupprinciper finns i [Åtgärda konflikter mellan grupprincipobjekt och Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
 > Om du vill distribuera Windows-brandväggen på datorer som kör Windows Vista, måste du först installera [Hotfix KB971800](http://support2.microsoft.com/kb/971800) på dessa datorer.
 
+> [!IMPORTANT]
 > Om du vill hantera Windows-brandväggen med hjälp av Intune måste du se till att följande två tjänster är aktiverade på de datorer som du tänker hantera:
 >
 > -   Windows-brandvägg
@@ -47,9 +42,9 @@ Med principen för Windows-brandväggen kan du skapa och distribuera inställnin
 
 ## Konfigurera en princip för Windows-brandväggen
 
-1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com/) väljer du **Princip** &gt; **Lägg till princip**
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Princip** &gt; **Lägg till princip**.
 
-2.  Konfigurera och distribuera en princip för **Windows-brandväggens inställningar** . Du kan använda rekommenderade inställningar eller anpassa inställningarna. Om du behöver mer information om hur du skapar och distribuerar principer läser du [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
+2.  Konfigurera och distribuera en princip för **Windows-brandväggens inställningar** . Du kan använda rekommenderade inställningar eller anpassa inställningarna. Om du behöver mer information om hur du skapar och distribuerar principer läser du [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     I följande avsnitt visas värdena som du kan konfigurera i principen och de standardvärden som används om du inte anpassar principen.
 
@@ -67,11 +62,12 @@ Dessa principinställningar aktiverar Windows-brandväggen på hanterade datorer
 
 Dessa principinställningar konfigurerar Windows-brandväggen att blockera inkommande nätverkstrafik när den hanterade datorn är ansluten till en domän (till exempel på arbetsplatsen), ett privat (betrott) nätverk (till exempel ett hemnätverk) eller ett ej betrott offentligt nätverk (till exempel ett kafé). Standardvärdet för var och en av de här inställningarna är **Ja**, vilket är det säkraste värdet. 
 
+> [!IMPORTANT]
 > Om det finns hanterade datorer som kör Windows Vista utan något Service Pack i din miljö måste du antingen installera uppdateringen som är kopplad till [artikel 971800](http://go.microsoft.com/fwlink/?LinkId=188405) i Microsoft Knowledge Base eller inaktivera principinställningarna **Blockera alla inkommande anslutningar** i principer som distribueras till dessa datorer.
 
 ### Meddela användaren när ett nytt program blockeras av Windows-brandväggen
 
-Dessa principinställningar konfigurerar huruvida Windows-brandväggen aviserar datoranvändaren när den blockerar inkommande nätverkstrafik när den hanterade datorn är ansluten till en domän (till exempel på arbetsplatsen), ett privat (betrott) nätverk (till exempel ett hemnätverk) eller ett ej betrott offentligt nätverk (till exempel ett kafé). Standardvärdet för var och en av de här inställningarna är **Ja**
+Dessa principinställningar konfigurerar huruvida Windows-brandväggen aviserar datoranvändaren när den blockerar inkommande nätverkstrafik när den hanterade datorn är ansluten till en domän (till exempel på arbetsplatsen), ett privat (betrott) nätverk (till exempel ett hemnätverk) eller ett ej betrott offentligt nätverk (till exempel ett kafé). Standardvärdet för var och en av de här inställningarna är **Ja**.
 
 
 ### Fördefinierade undantag
@@ -122,6 +118,7 @@ När du har konfigurerat de grundläggande värdena ovan kan du konfigurera unda
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

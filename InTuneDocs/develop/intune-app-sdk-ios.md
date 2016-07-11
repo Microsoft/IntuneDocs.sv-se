@@ -1,33 +1,28 @@
 ---
-# required metadata
-
-title: Utvecklarhandbok för Microsoft Intune App SDK för iOS | Microsoft Intune
-description:
-keywords:
+title: "Utvecklarhandbok för Microsoft Intune App SDK för iOS | Microsoft Intune"
+description: 
+keywords: 
 author: Msmbaldwin
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
+ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
+
 
 ---
 
 # Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
-> [!NOTE] Börja gärna med att läsa guiden [Komma igång med Intune App SDK](intune-app-sdk-get-started.md). Den här guiden beskriver hur du förbereder för integrering på de plattformar som stöds.* 
+> [!NOTE]
+> Börja gärna med att läsa guiden [Komma igång med Intune App SDK](intune-app-sdk-get-started.md). Den här guiden beskriver hur du förbereder för integrering på de plattformar som stöds.* 
 
 Med Microsoft Intune App SDK för iOS kan du lägga till mobilappshantering (MAM, Mobile App Management) med Intune i din iOS-app. Ett MAM-aktiverat program är integrerat i Intune App SDK och gör att IT-administratörer kan distribuera principer till mobilappen när den hanteras aktivt.
 
@@ -232,7 +227,8 @@ Innan du testar den MAM-aktiverade appen med Microsoft Intune kan du använda `S
 
 * Starta appen (antingen i eller utanför Xcode). Kontrollera att PIN-koden fungerar som väntat.
 
-> [!NOTE] Nu kan du använda Inställningar -> Appens namn -> Aktivera testprinciper för att aktivera och växla mellan inställningar.
+> [!NOTE]
+> Nu kan du använda Inställningar -> Appens namn -> Aktivera testprinciper för att aktivera och växla mellan inställningar.
 
 # Rekommenderade metoder för iOS
 
@@ -244,6 +240,7 @@ Om Xcode har problem med att hitta `libIntuneMAM.a`kan du åtgärda problemet ge
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

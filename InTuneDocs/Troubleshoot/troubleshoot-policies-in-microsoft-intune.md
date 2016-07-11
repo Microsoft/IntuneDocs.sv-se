@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Felsökningsprinciper | Microsoft Intune
-description:
-keywords:
+title: "Felsökningsprinciper | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: ac3417781df0a5b092a70620aa7343849b1e8c82
+ms.openlocfilehash: 3ac6b06b7eb85503786b4d8b0b9bd2a30d2a15e6
+
 
 ---
 
@@ -58,7 +51,7 @@ På skärmbilden nedan ser du två tydliga exempel:
 ## Uppdateringsintervall för principer
 Tänk på att principer uppdateras enligt regelbundna intervall. I allmänhet ska principer registreras på enheter inom 15 minuter från ändringen. Här finns mer information om regelbundna intervall för principuppdatering:
 
--   **Windows-enhet registrerad för MDM**: Åtgärden utlöses av en schemalagd aktivitet kl. 03:00 lokal tid på enheten och utförs varje dag.
+-   **Windows-enhet registrerad för MDM**: Principen uppdateras var 8:e timme för Windows 8.1- och Windows 10-enheter och var 24:e timme för Windows RT-enheter.
 
 -   **Windows Phone**: Principen uppdateras var åttonde timme. Detta kan framtvinga en uppdatering på företagsportalen, under **Inställningar**.
 
@@ -116,6 +109,7 @@ Android MDM tillåter inte att tjänsten framtvingar initiala principändringar 
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Funktioner för hantering av Windows-datorer | Microsoft Intune
-description:
-keywords:
+title: "Funktioner för hantering av Windows-datorer | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: owenyen
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 665e4a1aa7ee22db91b47660a179384f7c3e4393
+ms.openlocfilehash: 9e7a2f5cb2afdeca737c0c8b1b91418352ad5539
+
 
 ---
 
@@ -39,6 +33,8 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 -   **Hantera programvarulicenser** –Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
 -   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogramvaran.
 
+
+Intune stöder installation av PC-klientprogramvara på upp till 7 000 Windows-enheter.
 
 ## Krav på operativsystem
 Intune kan hantera datorer som kör följande Windows-versioner (både x86 och x64):
@@ -77,6 +73,7 @@ Nedan visas programvarukraven för att installera Intune PC-klienten:
 [Funktioner för hantering av mobila enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

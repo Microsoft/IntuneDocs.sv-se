@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Förbered dig för att konfigurera hanteringsprinciper för mobila appar | Microsoft Intune
-description:
-keywords:
+title: "Förbered dig för att konfigurera hanteringsprinciper för mobila appar | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 6a989482e9c3c35c1f377e0b32bf04beb89e60a3
+ms.openlocfilehash: da4020eb71432f9bccb52909272d027da64ee47c
+
 
 ---
 
@@ -36,6 +29,8 @@ Azure Portal är en ny administratörskonsol som används för att skapa MAM-pri
 Om du inte har använt Azure Portal tidigare kan du läsa avsnittet [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) så får du en snabb överblick.
 
 Om du för närvarande använder **Intune-administratörskonsolen** för att hantera dina enheter kan du skapa MAM-principer som har stöd för appar för enheter som är registrerade i Intune med hjälp av **Intune-administratörskonsolen**, men det är bäst att använda Azure Portal även för enheter som är registrerade i Intune. Anvisningar för hur du skapar en MAM-princip med Intune-administratörskonsolen finns [här](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
+MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
 
 >[!IMPORTANT]
 > Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
@@ -62,7 +57,7 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 -   En prenumeration på **Office 365 (O365)** som krävs för följande:
   - Tillämpa MAM-principer för appar med stöd för flera identiteter.
   - Skapa konton för SharePoint Online och Exchange Online-arbete. Lokalt Exchange och lokalt SharePoint stöds inte.
--    **Aktivera modern autentisering** för **Skype för företag – online**. Logga in på Microsoft Connect och fyll i [det här formuläret](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) om du vill registreras i programmet för modern autentisering.
+-    [Aktivera modern autentisering](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx.md) för **Skype för företag – Online**.
 
 
 - **Azure Active Directory (Azure AD)** för att skapa användare. Azure AD autentiserar användaren när slutanvändaren startar appen och anger sina autentiseringsuppgifter.
@@ -124,6 +119,7 @@ I följande tabell visas rollen och behörigheterna som du kan tilldela administ
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

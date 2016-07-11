@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Utvärderingsguiden för | Microsoft Intune
-description:
-keywords:
+title: "Utvärderingsguiden för | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 4af13629986e7cef814104f3d1f298eb2be240ac
+ms.openlocfilehash: 26ecc3dfe8816da9f30829901d929af53b1bedc0
+
 
 ---
 
@@ -30,16 +23,16 @@ Det går snabbt och enkelt att ställa in en kostnadsfri 30-dagars utvärderings
 
 I det här avsnittet lär du dig grunderna för att få igång en utvärderingsversion av Intune och få en översikt över tjänsten så att du kan utvärdera Intunes funktioner och möjligheter.
 
-Titta på den här fem minuter långa demonstrationsvideon för se hur lätt det är att komma igång med den kostnadsfria utvärderingsversionen av Microsoft Intune och hantera dina enheter:
+Titta på den här fem minuter långa demonstrationsvideon och se hur lätt det är att komma igång med den kostnadsfria utvärderingsversionen av Microsoft Intune och hantera dina enheter. I den första delen av videon beskrivs en portal som har ”pensionerats”, men stegen är i stort sett desamma även om du använder en annan portal. Du kan läsa mer om portalen [här](https://docs.microsoft.com/intune/deploy-use/account-portal-merged-with-Office-365).
 
 <iframe width="675" height="480" src="https://www.youtube.com/embed/ltcZvm4VOFU" frameborder="0" allowfullscreen></iframe>
 
 ## Innan du börjar
 Innan du börjar med Intune behöver du följande:
 
--   En enhet med en Silverlight-aktiverad webbläsare som du kan använda för att få åtkomst till de webbplatser där du skapar Intune-användarkonton (**Office 365-administrationscentret**) och där du hanterar enheter, grupper och principer (**Intune-administratörskonsolen**
+-   En enhet med en Silverlight-aktiverad webbläsare som du kan använda för att få åtkomst till de webbplatser där du skapar Intune-användarkonton (**Office 365-administrationscentret**) och där du hanterar enheter, grupper och principer (**Intune-administratörskonsolen**).
 
--   En andra enhet med en webbläsare som du använder för att testa hur Intune-användare registrerar och hanterar sina enheter med hjälp av företagsportalen. Du kan också testa hur användare söker efter och installerar appar och ber om hjälp från administratörer. Om du inte har en andra enhet kan du använda sekretesslägesinställningen i samma webbläsare som du använder för Intune-administration (i Internet Explorer kan du t.ex. klicka på **Verktyg** &gt; **InPrivate-surfning**
+-   En andra enhet med en webbläsare som du använder för att testa hur Intune-användare registrerar och hanterar sina enheter med hjälp av företagsportalen. Du kan också testa hur användare söker efter och installerar appar och ber om hjälp från administratörer. Om du inte har en andra enhet kan du använda sekretesslägesinställningen i samma webbläsare som du använder för Intune-administration (i Internet Explorer kan du till exempel klicka på **Verktyg** &gt; **InPrivate-surfning**).
 
 -   Om du har ett befintligt Microsoft Online Services-konto behöver du ha tillgång till autentiseringsuppgifterna för kontots administratör. Om du inte har något sådant konto, eller om du vill använda denna Intune-innehavare enbart i utvärderingssyfte, behöver du inte dessa autentiseringsuppgifter för administratören.
 
@@ -47,9 +40,9 @@ Innan du börjar med Intune behöver du följande:
 
     |Plattform|Certifikatkrav|Mer information|
     |------------|----------------------------|--------------------|
-    |Windows Phone 8.1 och Windows Phone 8 |Inga certifikat krävs för Windows Phone 8.1-användare som installerar företagsportalappen från Store. Ett Symantec-certifikat krävs för Windows Phone 8.0 eller för att använda Intune för att distribuera företagets portalapp till Windows Phone 8.1-enheter.|Dessa riktlinjer förutsätter att användarna hämtar företagsportalappen från Store på en Windows Phone 8.1 eller senare enhet. Information om Windows Phone 8.0-stöd finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](/Intune/DeployUse/set-up-windows-phone-management-with-microsoft-intune)|
-    |Windows 10-, Windows RT 8.1-, Windows RT- eller Windows 8.1-enheter|Det finns inga certifikatkrav vid registrering av Windows RT- eller Windows-enheter.|Installera Windows PC-klienten med Microsoft Intune|
-    |iOS 7.1 och senare|Hämta ett certifikat för Apple Push-aviseringstjänsten.|Begär ett certifikat för Apple Push Notification Service från Apple genom att följa anvisningarna i [Konfigurera iOS-hantering med Microsoft Intune](/Intune/DeployUse/set-up-ios-and-mac-management-with-microsoft-intune)|
+    |Windows Phone 8.1 och Windows Phone 8 |Inga certifikat krävs för Windows Phone 8.1-användare som installerar företagsportalappen från Store. Ett Symantec-certifikat krävs för Windows Phone 8.0 eller för att använda Intune för att distribuera företagets portalapp till Windows Phone 8.1-enheter.|Dessa riktlinjer förutsätter att användarna hämtar företagsportalappen från Store på en Windows Phone 8.1 eller senare enhet. Information om Windows Phone 8.0-stöd finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).|
+    |Windows 10-, Windows RT 8.1-, Windows RT- eller Windows 8.1-enheter|Det finns inga certifikatkrav vid registrering av Windows RT- eller Windows-enheter.|[Installera Windows PC-klienten med Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
+    |iOS 7.1 och senare|Hämta ett certifikat för Apple Push-aviseringstjänsten.|Begär ett certifikat för Apple Push Notification Service från Apple genom att följa anvisningarna i [Konfigurera iOS-hantering med Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
 ## Steg för att slutföra en 30-dagars utvärderingsversion av Intune
 - [Steg 1: Logga in eller registrera dig för en 30-dagars utvärderingsversion](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md). Innan du registrerar dig eller loggar in på Intune bör du bestämma dig för om du vill logga in med ett befintligt konto eller skapa ett tillfälligt konto som ska användas endast för 30-dagars utvärderingsversionen av Microsoft Intune.
@@ -65,11 +58,13 @@ Innan du börjar med Intune behöver du följande:
 Det är dags att komma igång med din prenumeration på 30-dagars utvärderingsversionen!
 
 >[!div class="step-by-step"]
+[**Registrera dig för Intune** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 
-### Registrera dig för Intune
-[Se även](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune)
+### Se även
+[Snabbstartsguide för Intune](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

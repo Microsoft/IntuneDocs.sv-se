@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurera och distribuera principer för hantering av mobilprogram i Microsoft Intune-konsolen | Microsoft Intune
-description:
-keywords:
+title: "Konfigurera och distribuera principer för hantering av mobilprogram i Microsoft Intune-konsolen | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
+ms.openlocfilehash: a140a2f634397440b35786e7afb3165dccc7d93e
+
 
 ---
 
@@ -34,7 +28,8 @@ Principerna för hantering av mobilprogram har stöd för:
 
 -   Enheter som kör iOS 7 och senare.
 
-> [!TIP]Principer för hantering av mobilappar har stöd för enheter som har registrerats med Intune.
+> [!TIP]
+> Principer för hantering av mobilprogram stöder enheter som registrerats med Intune.
 >
 > Information om hur du skapar apphanteringsprinciper för enheter som inte hanteras av Intune finns i [Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
@@ -46,9 +41,9 @@ Om du vill tillämpa begränsningar i en app måste den innehålla Microsoft Int
 
 -   **Använda en ”omsluten” app** – Appar som paketeras på nytt för att inkludera app-SDK med hjälp av **Microsoft Intunes apphanteringsverktyg**. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Det kan inte användas för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobila program med Microsoft Intunes-appomslutningsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobila program med Microsoft Intunes-appomslutningsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)
 
-- **Skriv din egna app som inkorporerar Intune App SDK** – Intunes App SDK låter du inkludera app-hanteringsfunktioner i en app när du skriver den. Mer information finns i [Översikt över Intune App SDK](/develop/intune-app-sdk)
+- **Skriv din egna app som inkorporerar Intune App SDK** – Intunes App SDK låter du inkludera app-hanteringsfunktioner i en app när du skriver den. Mer information finns i [Översikt över Intune App SDK](/intune/develop/intune-app-sdk)
 
-Om du behöver hjälp med att välja mellan Intunes apphanteringsverktyg och Intune App SDK läser du [Förbereda appar för hantering av mobilprogram med Microsoft Intune](/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+Om du behöver hjälp med att välja mellan Intunes apphanteringsverktyg och Intune App SDK läser du [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
 
 Vissa hanterade appar, t.ex. Outlook-appen för iOS och Android, stöder **flera identiteter**. Detta innebär att Intune endast tillämpar hanteringsinställningar för företagskonton eller data i appen.
 
@@ -60,7 +55,8 @@ Om du t.ex. använder Outlook-appen:
 
 -   Det företagskonto som används måste vara samma konto som användes för att registrera enheten med Intune.
 
-> [!TIP] Om du använder Intune med Configuration Manager läser du [Kontrollera appar med principer för hantering av mobilprogram i Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
+> [!TIP]
+> Om du använder Intune med Configuration Manager läser du [Kontrollera appar med principer för hantering av mobilprogram i Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
 
 ## Skapa och distribuera en app med en princip för hantering av mobila program
 
@@ -152,7 +148,8 @@ Distribuera appen och se till att du väljer principen för hantering av mobila 
 
 Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md).
 
-> [!IMPORTANT] För enheter som kör operativsystem tidigare än iOS 7.1 tas tillhörande principer inte bort när appen avinstalleras.
+> [!IMPORTANT]
+> För enheter som kör operativsystem tidigare än iOS 7.1, tas associerade principer inte bort när appen avinstalleras.
 >
 > Om enheten avregistreras från Intune tas principerna inte bort från apparna. Alla appar som hade tillämpade principer behåller principinställningarna även efter att appen avinstallerats och installerats om.
 
@@ -163,7 +160,8 @@ I så fall måste du be användaren att manuellt avinstallera den ohanterade ver
 
 För enheter som kör iOS 9 och senare ber Intune dock användaren om tillstånd att ta över hanteringen av den befintliga appen. Om användaren accepterar börjar appen hanteras av Intune och de hanteringsprinciper för mobilprogram som du har associerat med appen börjar tillämpas.
 
-> [!TIP] Om enheten är i övervakat läge tar Intune över hanteringen av den befintliga appen utan att be om användarens tillstånd.
+> [!TIP]
+> Om enheten är i övervakat läge tar Intune över hanteringen av den befintliga appen utan att be om användarens tillstånd.
 
 ## **Steg 5:** Övervaka appdistributionen.
 När du har skapat och distribuerat en app som är associerad med en princip för hantering av mobila program, kan du använda följande procedurer för att övervaka appen och lösa eventuella principkonflikter.
@@ -198,6 +196,7 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 -   Om ingen princip har distribuerats till enheten och två motstridiga inställningar distribueras, används standardinställningen som är inbyggd i enheten.
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

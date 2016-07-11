@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Begränsa e-poståtkomsten till Exchange On-premises och äldre Exchange Online Dedicated | Microsoft Intune
-description:
-keywords:
+title: "Begränsa e-poståtkomsten till Exchange On-premises och äldre Exchange Online Dedicated | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
+ms.openlocfilehash: 6bc85a0291fa62069ba6a0f63fdd9306db3c4195
+
 
 ---
 
@@ -75,7 +69,8 @@ Följande diagram illustrerar flödet som används av principer för villkorlig 
 -   Intern e-postapp för iOS.
 
 -   Intern e-post-app på Android 4 eller senare
-> [!NOTE] Microsoft Outlook-appen for Android and iOS stöds inte.
+> [!NOTE]
+> Microsoft Outlook-appen for Android and iOS stöds inte.
 
 ## Stöd för datorer
 
@@ -104,7 +99,8 @@ Programmet **E-post** i Windows 8 och senare (om det har registrerats med [!INCL
 >Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] påverkas.
 
   - **Meddelande till användare:** Förutom e-postmeddelandet som skickas från Exchange skickar Intune ett e-postmeddelande med stegvisa anvisningar för att låsa upp enheten. Du kan redigera standardmeddelandet och anpassa det efter dina behov. Eftersom Intunes e-postmeddelande med instruktionerna skickas till användarens Exchange-postlåda kan användaren använda en enhet som inte är blockerad eller en annan metod för att komma åt Exchange och läsa meddelandet om enheten hinner blockeras innan användaren får e-postmeddelandet. Detta är särskilt viktigt om **standardregeln** har konfigurerats att blockera eller placera enheter i karantän.  I så fall måste slutanvändaren besöka sin appbutik, ladda ned Microsofts företagsportalapp och registrera sin enhet. Detta gäller iOS-, Windows- och Samsung KNOX-enheter.  För enheter som inte kör Samsung KNOX måste du skicka karantänmeddelandet till ett alternativt e-postkonto, som slutanvändaren sedan måste kopiera till sin blockerade enhet för att slutföra registrerings- och efterlevnadsprocessen.
-  > [!NOTE] För att Exchange ska kunna skicka e-postmeddelandet måste du ange det konto som ska användas för att skicka meddelandet.
+  > [!NOTE]
+  > För att Exchange ska kunna skicka e-postmeddelandet måste du ange det konto som ska användas för att skicka meddelandet.
   >
   > Mer information finns i [Konfigurera lokal Exchange-anslutning för lokal eller värdbaserad Exchange](intune-on-premises-exchange-connector.md).
 
@@ -126,6 +122,7 @@ Programmet **E-post** i Windows 8 och senare (om det har registrerats med [!INCL
 [Begränsa åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

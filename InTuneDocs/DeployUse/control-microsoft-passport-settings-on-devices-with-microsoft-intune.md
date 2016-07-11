@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Kontrollera Microsoft Passport-inställningar på enheter | Microsoft Intune
-description:
-keywords:
+title: "Kontrollera Microsoft Passport-inställningar på enheter | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 402bc5a1-ada3-4c4c-a0de-292d026b4444
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
+ms.openlocfilehash: bdf7dfda3814ad6c6c00f5c133027175a95fb5e2
+
 
 ---
 
@@ -57,7 +51,8 @@ Intune kan integreras med Passport för arbetsplats på två sätt:
     - **Tillåts** – Användare kan använda teckentypen i sina PIN-koder, men det är inte obligatoriskt.
     - **Krävs** – Användarna måste inkludera minst en av teckentyperna i sina PIN-koder. Det är till exempel vanligt att man kräver minst en versal och ett specialtecken.
     - **Tillåts inte** (standard) – Användarna får inte använda dessa teckentyper i sina PIN-koder (det är också det som gäller om inställningen inte konfigureras).
-    > [!TIP] Specialtecken omfattar följande: **! " # $ % &amp; ' ( ) &#42; + , – . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**.
+    > [!TIP]
+    > Specialtecken omfattar följande: **! " # $ % &amp; ' ( ) &#42; + , – . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**.
 - **PIN-kodens giltighetstid (dagar)** – Det tillhör god praxis att ange en giltighetstid för en PIN-kod och efter denna tid måste användaren ändra den. Standarden är 41 dagar. 
 - **Spara PIN-kodshistorik** – Använd den här inställningen för att begränsa återanvändning av PIN-koder som har använts tidigare. Standardvärdet är att de 5 senaste PIN-koder som har använts inte kan återanvändas.
 
@@ -79,6 +74,7 @@ Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

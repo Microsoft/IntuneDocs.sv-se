@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Anpassa konsolvyer för administratörsroller | Microsoft Intune
-description:
-keywords:
+title: "Anpassa konsolvyer för administratörsroller | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 52a77e50b3dde24ba270766d4472bdd6176cc415
+
 
 ---
 
@@ -30,9 +24,9 @@ Du kan filtrera konsolvyn för administratörer i Microsoft Intune så att admin
 
 ## Skapa en anpassad vy
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Tjänstadministratörer**
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Tjänstadministratörer**.
 
-2.  I listan över tjänstadministratörer väljer du den användare vars benämning du vill ändra och klickar sedan på **Hantera åtkomst**
+2.  I listan över tjänstadministratörer väljer du den användare vars benämning du vill ändra och klickar sedan på **Hantera åtkomst**.
 
 3.  I dialogrutan **Hantera åtkomst** , välj den åtkomstnivå som du vill ge den valda användaren. Du kan välja mellan:
 
@@ -44,7 +38,7 @@ Du kan filtrera konsolvyn för administratörer i Microsoft Intune så att admin
 
     **Supportavdelning – Gruppnod** begränsar vad administratören kan se och göra till följande:
 
-    -   Se listan över användare och enheter. Administratören kan inte använda filter för att ändra vyn. Du kan dock använda gruppfiltrering för att ändra vad administratören kan se. Mer information finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+    -   Se listan över användare och enheter. Administratören kan inte använda filter för att ändra vyn. Du kan dock använda gruppfiltrering för att ändra vad administratören kan se. Mer information finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
     -   Skriv ut listan över användare och enheter
 
@@ -73,6 +67,7 @@ Du kan filtrera konsolvyn för administratörer i Microsoft Intune så att admin
 När administratören som du har konfigurerat öppnar Intune-administratörskonsolen nästa gång får personen den åtkomstnivå som du tilldelat.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

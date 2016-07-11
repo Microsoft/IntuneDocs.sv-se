@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Konfigurera iOS-appar med konfigurationsprinciper för mobilappar | Microsoft Intune
-description:
-keywords:
+title: "Konfigurera iOS-appar med konfigurationsprinciper för mobilappar | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
+ms.openlocfilehash: a1b2fb7f2938939725465a18efb594dda91d16bd
+
 
 ---
 
@@ -42,7 +36,8 @@ Med konfigurationsprinciper för mobilappar slipper du den här typen av problem
 
 Du distribuerar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och distribuerar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
 
-> [!TIP] Den här principtypen är för närvarande bara tillgänglig för enheter som kör iOS 7.1 och senare och stöder följande typer av appinstallationer:
+> [!TIP]
+> Den här principtypen är för närvarande bara tillgänglig för enheter som kör iOS 7.1 och senare och stöder följande typer av appinstallationer:
 > 
 > -   **Hanterade iOS-appar från App Store**
 > -   **App-paket för iOS**
@@ -62,7 +57,8 @@ Du distribuerar inte principerna direkt till användare och enheter. I stället 
 
 4.  Skriv eller klistra in en XML-egenskapslista med de appkonfigurationsinställningar som du vill använda i rutan i ämnet **Konfigurationsprincip för mobilapp** på sidan.
 
-    > [!TIP] Mer information om XML-egenskapslistor finns i [Förstå XML-egenskapslistor](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
+    > [!TIP]
+    > Mer information om XML-egenskapslistor finns i [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
     > 
     > Formatet på XML-egenskapslistan varierar beroende på vilken app du konfigurerar. Kontakta appleverantören för information om vilket format du ska använda.
     > 
@@ -104,7 +100,8 @@ Fortsätt sedan att distribuera och övervaka appdistributionen som vanligt.
 
 När den distribuerade appen körs på en enhet körs den med de inställningar som du konfigurerade i konfigurationsprincipen för mobilappar.
 
-> [!TIP] Om en eller flera konfigurationsprinciper för mobila appar är i konflikt med varandra tillämpas ingen av dem, utan konflikten rapporteras på **instrumentpanelen** i Intune-administrationskonsolen.
+> [!TIP]
+> Om en eller flera konfigurationsprinciper för mobila appar är i konflikt med varandra tillämpas ingen av dem. Konflikten rapporteras i stället i **instrumentpanelen** i Intune-administrationskonsolen.
 
 ## Exempelformat för XML-filen för en mobilappskonfiguration
 
@@ -139,6 +136,7 @@ När du skapar en konfigurationsfil för mobilappar kan du ange en eller flera a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Migrera till Intune | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: 20394c243b9355cd3f4e30f170dfd00d10e1153f
+
 
 ---
 
@@ -34,7 +27,7 @@ Migreringen till Intune från din befintliga lösning för mobilitetshantering i
 
 ## Meddela användarna
 
-När du anser att pilotdistributionen av Intune uppfyller dina krav informerar du användarna om den kommande migreringen av deras enheter till Intune. E-postmeddelanden, [instruktioner](http://www.microsoft.com/en-us/download/details.aspx?id=46398) och [affischer](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) kan hjälpa dig att skapa förväntningar och ge registreringsinformation om de steg användarna måste följa för att upprätthålla kontinuerlig anslutning till företagets resurser och program. Se till att supportteamet är redo att hjälpa användarna med migreringen.
+När du anser att pilotdistributionen av Intune uppfyller dina krav informerar du användarna om den kommande migreringen av deras enheter till Intune. E-postmeddelanden, instruktioner och [affischer](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) kan hjälpa dig att skapa förväntningar och ge registreringsinformation om de steg användarna måste följa för att upprätthålla kontinuerlig anslutning till företagets resurser och program. Se till att supportteamet är redo att hjälpa användarna med migreringen.
 
 ## Ändra din befintliga lösning för mobilitetshantering i företaget
 
@@ -75,9 +68,10 @@ Behöver du mer hjälp med migreringen till Intune? Vi erbjuder alternativ för 
 
 ## Hämta en nedladdningsbar kopia av den här guiden
 
-Om du vill hämta en nedladdningsbar kopia av hela guiden går du till [TechNet-galleriet](https://gallery.technet.microsoft.com/Migrating-to-Intune-ea439387).
+Om du vill hämta en kopia av hela handboken går du till [TechNet-galleriet](https://gallery.technet.microsoft.com/Migrating-to-Intune-ea439387).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

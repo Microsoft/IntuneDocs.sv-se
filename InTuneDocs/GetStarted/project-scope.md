@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Projektomfång | Microsoft Intune
-description:
-keywords:
+title: "Projektomfång | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 71488dad-2f78-478c-a505-5cb9410eec07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9218b1f58032c07eddf84f04a667e2c56b5463ed
+ms.openlocfilehash: cf9b8bf9a07e4d5a29637fe52a0bfb6e0191478e
+
 
 ---
 
@@ -64,7 +58,15 @@ Gå igenom det här avsnittet för att få vägledning om fokusområdesaktivitet
 
 Merparten av arbetet under omfångsfasen handlar om planering och förberedelser. När du fastställer omfånget för projektet bör du ta hänsyn till både teknik- och organisationsproblem, samt hur användarna arbetar i dag och vilken beteendeförändring som krävs. Börja med helhetsbilden av slutmålet och skapa sedan mindre mål i efterföljande faser för att ligga i fas.
 
-### Supportavdelningen
+
+ > [!NOTE]
+ > 
+ > Dessa mallar kan vara användbara när du arbetar med projektets omfattning:
+ > > - [Beslutsmall för Intune eller Intune med Configuration Manager](https://gallery.technet.microsoft.com/Intune-or-Intune-with-900e8a78)
+ > - [Planeringsmall för mobilappar](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59)
+>- [Planeringsmall för allmän enhetshantering](https://gallery.technet.microsoft.com/General-device-management-334c3792)
+
+### Supportavdelning
 För att kunskapsarbetare ska kunna dra fördel av en produktiv Intune-upplevelse bör supportavdelningen vara väl förberedd. När du fastställer omfånget för projektet bör du tänka på hur supportavdelningen har en roll i varje fas och vilka resurser du behöver köra och säkerställa att supportavdelningen är redo att stödja slutanvändarna.
 
 ### Medvetenhet
@@ -110,6 +112,7 @@ Följande är några utmaningar som du kan stöta på i **projektomfångs**fasen
 [Konceptbevis](proof-of-concept.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

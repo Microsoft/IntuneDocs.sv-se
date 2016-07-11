@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Skapa och distribuera MAM-principer | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: joglocke
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3f79de38ce7fc9a5434033ee45ddf43f22517356
+ms.openlocfilehash: f1b9216c673039f8600e07508b255e12cc30bf3f
+
 
 ---
 
@@ -34,6 +27,8 @@ Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure P
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
 
 Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
+
 >[!IMPORTANT]
 > Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
 
@@ -49,7 +44,8 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
-    > [!TIP] Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) och bekantar dig med portalen.
+    > [!TIP]
+    > Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med portalen.
 
 2.  På bladet **Inställningar** väljer du **Apprincip**.  När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga.
 
@@ -65,7 +61,8 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
 
 5.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Du kan välja en eller flera appar i listan som du vill associera med principen som du skapar. När du har valt apparna väljer du knappen **Välj** längst ned på bladet **Appar** för att spara ditt val.
 
-    > [!IMPORTANT] Du måste välja minst en app om du vill skapa en princip.
+    > [!IMPORTANT]
+    > Du måste välja minst en app för att skapa en princip.
 
 6.  Öppna principinställningsbladet genom att välja **Konfigurera nödvändiga inställningar** på bladet **Lägg till en princip**.
 
@@ -108,7 +105,8 @@ När du har skapat en princip genom att följa stegen i föregående procedur di
 
 Endast användare med tilldelade [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licenser påverkas av principen.  Användare som ingår i säkerhetsgruppen som du valde och som inte har tilldelats någon [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licens påverkas inte.
 
-Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt.  Medlemmar i underordnade grupper till den grupp du valt påverkas inte.
+>[!IMPORTANT]
+> Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt.  Medlemmar i underordnade grupper till den grupp du valt påverkas inte.
 
 Slutanvändarna kan hämta apparna från App Store eller Google Play. En detaljerad genomgång av hur MAM skyddar företagsdata på enheten finns i [slutanvändarupplevelse med MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md).
 
@@ -167,6 +165,7 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 [Slutanvändarupplevelse för MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: dad88d43-0054-4be6-9e5d-ada5a957dd6c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: fe1587bead9e4cd350f5ffcf925fe04afd824ea0
+ms.openlocfilehash: f97b619d2b82556685cf0e247700d1fd8c8d4369
+
 
 ---
 
@@ -41,11 +35,11 @@ Innan du antingen registrerar dig för eller loggar in på Intune, bör du tänk
 
 |Registrera dig för ett NYTT konto om något av följande stämmer:|Logga in med ditt ARBETS- eller SKOL-konto om:|
 |-----------------------------------------------------------------|------------------------------------------------|
-|**Du har inget arbets- eller skolkonto** . Ett arbets- eller skolkonto tillhandahålls vid tecknandet av volymlicensavtal med Microsoft eller i samband med prenumerationer på Office 365. Om din organisation inte har undertecknat något företagsavtal eller motsvarande volymlicensavtal med Microsoft (och inte har något Office 365-konto) så har du inte något Microsoft Online Services-konto som du kan använda för att logga in på Microsoft Online Services.<br /><br />**Intune-innehavaren ignoreras när 30-dagars utvärderingsversionen är slut.** Du måste registrera dig för ett nytt konto om du använder din kostnadsfria Intune-utvärderingsprenumeration i utvärderingssyfte och sedan tänker göra om konfigurationen av Intune-tjänsten och enhetsetableringen när du är klar med utvärderingsversionen. Detta är det rekommenderade alternativet om du tänker använda Intune med System Center 2012 Configuration Manager.<br /><br />Om du registrerar dig för ett nytt konto kan du inte senare ändra till att använda ett befintligt arbets- eller skolkonto för att hantera det kontot, eller kombinera det med befintliga volymlicensavtal.|**Du har ett arbets- eller skolkonto med ett volymlicensavtal eller en prenumeration på Office 365, och du använder den här utvärderingsversionen för att utvärdera Intune.**<br /><br />Om du konfigurerar Intune för ett befintligt konto rekommenderar vi att du läser [Välj hur du hanterar enheter](choose-how-to-manage-devices.md) innan du fortsätter med de här stegen.|
+|**Du har inget arbets- eller skolkonto** . Ett arbets- eller skolkonto tillhandahålls vid tecknandet av volymlicensavtal med Microsoft eller i samband med prenumerationer på Office 365. Om din organisation inte har undertecknat något företagsavtal eller motsvarande volymlicensavtal med Microsoft (och inte har något Office 365-konto) så har du inte något Microsoft Online Services-konto som du kan använda för att logga in på Microsoft Online Services.<br /><br />**Intune-innehavaren ignoreras när 30-dagars utvärderingsversionen är slut.** Du måste registrera dig för ett nytt konto om du använder din kostnadsfria Intune-utvärderingsprenumeration i utvärderingssyfte och sedan tänker göra om konfigurationen av Intune-tjänsten och enhetsetableringen när du är klar med utvärderingsversionen. Detta är det rekommenderade alternativet om du tänker använda Intune med System Center 2012 Configuration Manager.<br /><br />Om du registrerar dig för ett nytt konto kan du inte senare ändra till att använda ett befintligt arbets- eller skolkonto för att hantera det kontot, eller kombinera det med befintliga volymlicensavtal.|**Du har ett arbets- eller skolkonto med ett volymlicensavtal eller en prenumeration på Office 365, och du använder den här utvärderingsversionen för att utvärdera Intune.**<br /><br />Om du konfigurerar Intune för ett befintligt konto rekommenderar vi att du läser [Välj hur du hanterar enheter](/intune/get-started/choose-how-to-manage-devices) innan du fortsätter med de här stegen.|
 
 ## Registrering eller inloggning på Intune
 
-1.  Börja med att [klicka här, så kommer du till registreringssidan för Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20)
+1.  Börja med att [klicka här, så kommer du till registreringssidan för Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
 2.  På sidan **Registrera dig** finns två alternativ:
 
@@ -63,9 +57,10 @@ Gratulerar! Du har precis slutfört steg 1 i genomgången av *Microsoft Intune-u
 
 >[!div class="step-by-step"]
 
->[&larr; **Kom igång**](.\get-started-with-a-30-day-trial-of-microsoft-intune.md)     [**Lägg till användare** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)  
+>[&larr; **Kom igång**](get-started-with-a-30-day-trial-of-microsoft-intune.md)     [**Lägg till användare** &rarr;](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

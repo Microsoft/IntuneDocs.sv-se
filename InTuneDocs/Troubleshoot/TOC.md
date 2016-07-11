@@ -4,7 +4,7 @@
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 
-# [Felsöka](how-to-get-support-for-microsoft-intune.md)
+# [Felsöka](general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Hur du kan få support](how-to-get-support-for-microsoft-intune.md)
 ## [Felsöka Endpoint Protection](Troubleshoot-Endpoint-Protection-in-microsoft-intune.md)
 ## [Felsökning av problem med åtkomst till företagsresurser](Troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
@@ -14,8 +14,8 @@
 ## [Felsöka klientkonfiguration](Troubleshoot-client-setup-in-microsoft-intune.md)
 ## [Felsöka programuppdateringar](Troubleshoot-software-updates-in-microsoft-intune.md)
 ## [Felsöka e-postprofiler](Troubleshoot-email-profiles-in-microsoft-intune.md)
+## [Felsöka villkorlig åtkomst](troubleshoot-conditional-access.md)
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

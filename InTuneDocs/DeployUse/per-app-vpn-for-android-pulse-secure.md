@@ -1,27 +1,18 @@
 ---
-# required metadata
-
-title: Per app-VPN för Android med Pulse Secure | Microsoft Intune
-description:
-keywords:
+title: "Per app-VPN för Android med Pulse Secure | Microsoft Intune"
+description: 
+keywords: 
 author: nbigman
 manager: jeffgilb
 ms.date: 05/08/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
+ms.sourcegitcommit: 40e5602a4675bd92a85001827fb43426c41ed1e3
+ms.openlocfilehash: fc58e71a9b2279200dee2630aab7dbab727ea128
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: chrisbal
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
@@ -35,7 +26,7 @@ Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. 
 2. Välj en mall för den nya principen genom att expandera **Android**, och välj sedan **VPN-profil (Android 4 och senare)**.
 
 3. I mallen väljer du **Pulse Secure** som **Anslutningstyp**.
-4. Slutför och spara VPN-profilen. Mer information om VPN-profiler finns i [VPN-profiler](Help%20users%20connect%20to%20their%20work%20using%20VPN%20profiles%20with%20Microsoft%20Intune.md).
+4. Slutför och spara VPN-profilen. Mer information om VPN-profiler finns i [VPN-anslutningar](vpn-connections-in-microsoft-intune.md).
 
 > [!NOTE]
 Anteckna VPN-profilnamnet för användning i nästa steg. Till exempel **MyAppVpnProfile**.
@@ -82,6 +73,7 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

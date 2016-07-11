@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: iOS MAM-principinställningar | Microsoft Intune
-description:
-keywords:
+title: "iOS MAM-principinställningar | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: andcerat
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
+ms.openlocfilehash: b3df4b35dbe2710157b88a4e7fdba9734f8b998b
+
 
 ---
 
@@ -83,7 +77,7 @@ Termen **principhanterade appar** används för att referera till appar som är 
   När du aktiverar den här inställningen måste slutanvändaren konfigurera och använda en PIN-kod för att komma åt sin enhet.  Om det inte finns någon PIN startar inte apparna och slutanvändaren uppmanas att ange en PIN-kod. Ett meddelande visas som informerar användaren om att dennes företag kräver att enheten har en PIN-kod för att det ska gå att komma åt programmet.
 
   **Standardvärde -Krypteringsalternativet är inte valt**
-- **ContactSyncDisabled:**  Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.
+- **Inaktivera kontaktsynkronisering:**  Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.
 
   När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för **Microsoft Outlook**-appen.
 
@@ -117,6 +111,7 @@ På iOS-enheter kan du tillåta att användarna identifierar sig med fingeravtry
   **Standardvärde = 90 dagar**
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

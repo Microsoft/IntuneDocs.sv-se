@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Förnya ett Symantec-kodsigneringscertifikat för företag för användning med Microsoft Intune | Microsoft Intune
-description:
-keywords:
+title: "Förnya ett Symantec-kodsigneringscertifikat för företag för användning med Microsoft Intune | Microsoft Intune"
+description: 
+keywords: 
 author: NathBarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c4813044-a925-4273-b0ec-e992fd55850a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: 566a226c19825990c6a34bffbbd9d1cd6a242ddb
+
 
 ---
 
@@ -41,9 +35,9 @@ Det Symantec-certifikat som används för att hantera vissa Windows- och Windows
 
 ## Hur du installerar det uppdaterade certifikatet för Windows Phone 8.0
 
-1.  Hämta och signera den senaste företagsportalen för Windows Phone här: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060)
+1.  Hämta och signera den senaste företagsportalen för Windows Phone här: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060).
 
-2.  Öppna Intune-administrationskonsolen ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)) och gå till **Admin**, **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad appfil**.
+2.  Öppna din Intune-administratörskonsol ([https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)) och välj **Admin**, **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
 
 3.  Överför den nyligen signerade företagsportalen. Du behöver den nyligen signerade SSP.xap och den nya PFX-filen som du har fått från Symantec eller den programregistreringstoken som har skapats med den nya PFX-filen.
 
@@ -55,9 +49,9 @@ Att tillhandahålla en signerad SSP.xap-fil är för närvarande det enda sätte
 
 ## Hur du installerar det uppdaterade certifikatet för Windows Phone 8.1 och senare enheter
 
-1.  Hämta och signera den senaste företagsportalen för Windows Phone från Download Center här: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060)
+1.  Hämta och signera den senaste företagsportalen för Windows Phone från Download Center här: [http://www.microsoft.com/en-us/download/details.aspx?id=36060](http://www.microsoft.com/en-us/download/details.aspx?id=36060).
 
-2.  Öppna [Intune-administrationskonsolen](https://admin.manage.microsoft.com) (https://admin.manage.microsoft.com) och gå till **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
+2.  Öppna din [Intune-administratörskonsol](https://admin.manage.microsoft.com) (https://admin.manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
 
 3.  Överför den nyligen signerade företagsportalen. Du behöver den nyligen signerade SSP.xap och den nya PFX-filen som du har fått från Symantec eller den programregistreringstoken som har skapats med den nya PFX-filen.
 
@@ -67,9 +61,11 @@ Att tillhandahålla en signerad SSP.xap-fil är för närvarande det enda sätte
 
 
 ### Se även
-Konfigurera hantering av Windows Phone 8.0
+[Konfigurera hantering av Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md)
+[Konfigurera hantering av Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Hantering av mobila enheter med Exchange ActiveSync och Microsoft Intune | Microsoft Intune
-description:
-keywords:
+description: 
+keywords: 
 author: nathbarn
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
+ms.openlocfilehash: d24395786daa7aec103ec754895868a75983e099
+
 
 ---
 
@@ -41,14 +35,16 @@ Med Exchange Connector kan du hantera Exchange-distributionen i Intune-konsolen.
 -   [Konfigurera Intune Service To Service Connector för värdbaserad Exchange](intune-service-to-service-exchange-connector.md)
 
 ## Använda princip för Exchange-hanterade mobila enheter
-Principinställningar kan tillämpas via Intune-konsolen. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). En lista över Exchange ActiveSync-principinställningar och -funktioner som stöds av specifika mobila enheter finns i [Jämförelsetabell för Exchange ActiveSync-klienten](http://go.microsoft.com/fwlink/?LinkId=247270)
+Principinställningar kan tillämpas via Intune-konsolen. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md). En lista över Exchange ActiveSync-principinställningar och -funktioner som stöds av specifika mobila enheter finns i [Jämförelsetabell för Exchange ActiveSync-klienten](http://go.microsoft.com/fwlink/?LinkId=247270).
 
+> [!NOTE]
 > Efter anslutning av Intune till en Microsoft Exchange-miljö återställs EAS-principen för alla användare som hanteras via Intune till den aktuella standardprincipen på Microsoft Exchange-servern, om inte en mer specifik princip har definierats i Intune.
 
 ## Rensa företagsdata på mobila enheter
 Slutligen kan du [rensa företagsdata på EAS-hanterade mobila enheter](wipe-for-exchange-managed-mobile-devices.md) när de inte längre används, eller om enheter tappas bort eller blir stulna.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

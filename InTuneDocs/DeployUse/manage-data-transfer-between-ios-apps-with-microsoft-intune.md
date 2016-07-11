@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Hantera dataöverföring mellan iOS-appar | Microsoft Intune
-description:
-keywords:
+title: "Hantera dataöverföring mellan iOS-appar | Microsoft Intune"
+description: 
+keywords: 
 author: karthikaraman
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 002ebec14a089754849024916590b787431c7efe
+ms.openlocfilehash: fce0081fc1ecb92acf539a2d69f0493fb30ee418
+
 
 ---
 
@@ -51,9 +44,9 @@ För att säkerställa att appar som du distribuerar med en tredje parts MDM-lö
 Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM-lösning. Nedan visas ett vanligt flöde för hur du implementerar UPN-inställningen och den resulterande användarupplevelsen:
 
 
-1.  Konfigurera en princip för hantering av mobila program för iOS-plattformen. Konfigurera principinställningar enligt företagets krav och välj de appar som ska ha principen.
+1.  [Konfigurera en princip för hantering av mobila program](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för iOS-plattformen i Azure Portal. Konfigurera principinställningar enligt företagets krav och välj de appar som ska ha principen.
 
-2.  Distribuera de appar och e-postprofiler som du vill ska hanteras via din tredje part MDM-lösning med hjälp av inställningen som beskrivs i steg 3 och 4.
+2.  Distribuera de appar och e-postprofiler som du vill ska hanteras **via din tredje part MDM-lösning** med hjälp av inställningen som beskrivs i steg 3 och 4.
 
 3.  Distribuera appen med följande appkonfigurationsinställningar: key=IntuneMAMUPN, Value=<username@company.com> [example: ‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
@@ -69,6 +62,7 @@ Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM
 
 4.  När Word startas ombeds slutanvändaren logga in med sitt arbetskonto.  Arbetskontot användaren anger när den uppmanas ange ett konto bör matcha kontot som du angav i konfigurationsinställningarna för Microsoft Word-app.
 
+    > [!NOTE]
     > Slutanvändaren kan lägga till andra personliga konton till Word för att utföra sitt personliga arbete och inte påverkas av MAM-principerna när de använder Word-appen i en personlig kontext.
 
 5.  När inloggningen är klar tillämpas apprincipinställningarna för Word.
@@ -79,6 +73,7 @@ Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM
 [Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

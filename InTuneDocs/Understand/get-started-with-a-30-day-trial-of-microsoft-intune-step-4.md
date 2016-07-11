@@ -1,33 +1,27 @@
 ---
-# required metadata
-
-title: Skapa principer och publicera en app för utvärderingsanvändare | Microsoft Intune
-description:
-keywords:
+title: "Skapa principer och publicera en app för utvärderingsanvändare | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
+ms.openlocfilehash: 658806c07ea78a327819376c1b47af53ac51f0f9
+
 
 ---
 
 
 # Skapa principer och publicera en app för utvärderingsanvändare
-Intune-principerna förser dig med inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Om du planerar att använda Intune för enheter som du konfigurerar för produktion efter utvärderingsperioden är det mycket viktigt att du följer anvisningarna i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+Intune-principerna förser dig med inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Om du planerar att använda Intune för enheter som du konfigurerar för produktion efter utvärderingsperioden är det mycket viktigt att du följer anvisningarna i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Du kan utföra två typer av appinstallationer med Intune. Den första är en **obligatorisk installation**som automatiskt distribuerar appen till hanterade datorer. Den andra är en **tillgänglig installation**som distribuerar appen, eller en länk till appen, till Intune-företagsportalen så att användarna kan välja om de vill installera den på sina datorer eller på sina mobila enheter.
 
@@ -37,29 +31,30 @@ I följande steg ska du ställa in en konfigurationsprincip för en mobil enhet 
 
 ## Skapa och distribuera en konfigurationsprincip för mobila enheter
 
-1.  Öppna [Intune-administrationskonsolen](https://manage.microsoft.com/)
+1.  Öppna [Intune-administrationskonsolen](https://manage.microsoft.com/).
 
 2.  Välj ikonen **Princip** i det vänstra fönstret.
 
-3.  Välj **Lägg till princip** i listan **Uppgifter** på sidan **Principöversikt**.
+3.  Välj du **Lägg till princip** i listan **Uppgifter** på sidan **Översikt över princip** .
 
-4.  I principlistan expanderar du den plattform som du vill skapa en princip för och väljer sedan **Allmän konfiguration**, **Skapa och distribuera en princip med de rekommenderade inställningarna**och väljer **Skapa princip**.
+4.  I principlistan expanderar du den plattform som du vill skapa en princip för och väljer sedan **Allmän konfiguration**, **Skapa och distribuera en princip med de rekommenderade inställningarna** och väljer **Skapa princip**.
 
-5.  När du får uppmaningen **Välj de grupper som du vill distribuera principen till** väljer du **Mina utvärderingsanvändare** i listan och väljer **Lägg till** &gt; **OK**
+5.  När du får uppmaningen **Välj de grupper som du vill distribuera principen till** väljer du **Mina utvärderingsanvändare** i listan och väljer **Lägg till** &gt; **OK**.
 
 Din princip visas i listan över konfigurationsprinciper och har distribuerats till gruppen **Mina utvärderingsanvändare** . Visa principens egenskaper genom att dubbelklicka på den.
 
 ## Publicera Skype-appen för mobila enheter
 
-1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du ikonen **Appar** och väljer sedan **Appar** &gt; **Lägg till app**. Ange dina autentiseringsuppgifter för Intune om du uppmanas till detta.
+1.  I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du ikonen **Appar** och väljer sedan **Appar** &gt; **Lägg till app**. Ange dina autentiseringsuppgifter för Intune om du uppmanas till detta.
 
+    > [!NOTE]
     > När du startar **Intune Software Publisher** första gången inträffar en kort fördröjning medan programmet installeras.
 
-2.  Granska säkerhetsvarningen och välj **Kör**.
+2.  Läs säkerhetsvarningen och välj **Kör**.
 
 3.  Välj **Nästa** på sidan **Innan du börjar**.
 
-4.  På sidan **Programinstallation** i **Hur ska enheterna få tillgång till den här programvaran** väljer du **Extern länk**
+4.  På sidan **Programinstallation** i **Hur ska enheterna få tillgång till den här programvaran**väljer du **Extern länk**.
 
 5.  Ange programmets externa länk i **Ange URL:en** och välj sedan **Nästa**. URL:en måste börja med **https://**. För Skype-appen använder du länken nedan som matchar den mobilplattform som du använder:
 
@@ -85,13 +80,13 @@ Din princip visas i listan över konfigurationsprinciper och har distribuerats t
 
 7.  På sidan **Sammanfattning** kontrollerar du programinformationen och väljer sedan **Ladda upp**. Avsluta guiden genom att klicka på **Stäng**.
 
-8.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Appar** &gt; **Appar** &gt; **Skype** &gt; **Hantera distribution**
+8.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) klickar du på **Appar** &gt; **Appar** &gt; **Skype** &gt; **Hantera distribution**.
 
-9. Välj **Mina utvärderingsanvändare** på sidan **Välj grupper** om du vill distribuera programmet till den användargruppen och välj sedan **Lägg till** &gt; **Nästa**
+9. Välj **Mina utvärderingsanvändare** på sidan **Välj grupper** om du vill distribuera programmet till den användargruppen och välj sedan **Lägg till** &gt; **Nästa**.
 
 10. Välj **Tillgänglig installation** i kolumnen **Godkännande** för din grupp på sidan **Distributionsåtgärd** .
 
-11. Välj **Slutför**
+11. Välj **Slutför**.
 
 Skype-appen är nu tillgänglig för installation på mobila enheter från företagsportalen, men du måste först installera Intune-programvaran på datorer och mobila enheter.
 
@@ -103,6 +98,7 @@ Gratulerar! Du har precis slutfört steg 4 i genomgången av *Microsoft Intune-u
 >[&larr; **Skapa grupper**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)     [**Registrera enheter** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

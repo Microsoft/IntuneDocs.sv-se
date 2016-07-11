@@ -1,32 +1,26 @@
 ---
-# required metadata
-
-title: Starta en utvärdering av Microsoft Intune och distribuera en PIN-princip för iOS | Microsoft Intune
-description:
-keywords:
+title: "Starta en utvärdering av Microsoft Intune och distribuera en PIN-princip för iOS | Microsoft Intune"
+description: 
+keywords: 
 author: Staciebarker
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 06cb9a73-0f17-44b3-b334-86c98020316e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7f3985b10ac9612c8c1efc4756eb25cdcf29b023
+ms.openlocfilehash: 6787d0c35621b2bc94bfe376dfd1669e9dfe46db
+
 
 ---
 
 # Starta en utvärdering av Microsoft Intune och distribuera PIN-principen för iOS
-Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering och att konfigurera en PIN-princip för iOS-enheter. En lista över andra vanliga Intune-utvärderingsaktiviteter som du kan prova finns i [Vanliga Microsoft Intune-utvärderingsaktiviteter](common-microsoft-intune-evaluation-tasks.md)
+Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering och att konfigurera en PIN-princip för iOS-enheter. En lista över andra vanliga Intune-utvärderingsaktiviteter som du kan prova finns i [Vanliga Microsoft Intune-utvärderingsaktiviteter](common-microsoft-intune-evaluation-tasks.md).
 
 
 
@@ -39,9 +33,10 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 -   Telefonnummer för att autentisera dig under utvärderingsregistreringen
 
 ## Skapa ett kostnadsfritt utvärderingskonto för Intune
+> [!NOTE]
 > Om du redan har en Intune-prenumeration hoppar du över det här avsnittet och går till nästa avsnitt.
 
-1.  På en Windows-dator högerklickar du på **Internet Explorer** (IE) och väljer **InPrivate-surfning**
+1.  På en Windows-dator högerklickar du på **Internet Explorer** (IE) och väljer **InPrivate-surfning**.
 
     ![Starta InPrivate-surfning](../media/30-day-trial-walkthrus/30day-start-trial-1-InPrivate.png)
 
@@ -79,11 +74,11 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
     3.  Avmarkera kryssrutan **Användaren måste byta lösenord vid nästa inloggning**.
 
-    4.  Klicka på **Skapa**
+    4.  Klicka på **Skapa**.
 
     ![Skapa ett nytt användarkonto](../media/30-day-trial-walkthrus/30day-crt-user-8-add-user-info.png)
 
-4.  Klicka på **Stäng** på bekräftelsesidan
+4.  Klicka på **Stäng** på bekräftelsesidan.
 
     ![Bekräftelsesida för användargenerering](../media/30-day-trial-walkthrus/30day-crt-user-9-close-confirm.png)
 
@@ -105,11 +100,11 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
 2.  Aktivera iOS-enheter för registrering. Den här processen ställer in ett betrott certifikat mellan Apple Push Notification Service (APNs) och din Intune-prenumeration.
 
-    1.  Klicka på **Aktivera iOS- och Mac OS X-plattformen**
+    1.  Klicka på **Aktivera iOS- och Mac OS X-plattformen**.
 
         ![Aktivera iOS- och Mac OS X-registrering](../media/30-day-trial-walkthrus/30day-cfg-pol-13-enbl-ios-plat.png)
 
-    2.  Klicka på **Hämta begäran om APN-certifikat**
+    2.  Klicka på **Hämta begäran om APN-certifikat**.
 
         ![Hämta APN-certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-14-dwnld-cert-reqst.png)
 
@@ -125,19 +120,19 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
         ![Logga in på Apples portal för Push-certifikat](../media/30-day-trial-walkthrus/30day-cfg-pol-17-id-passw-signin.png)
 
-    6.  Klicka på **Skapa ett certifikat**
+    6.  Klicka på **Skapa ett certifikat**.
 
         ![Skapa ett APNs-certifikat](../media/30-day-trial-walkthrus/30day-cfg-pol-18-create-cert.png)
 
-    7.  Läs Apples användningsvillkor, markera kryssrutan och klicka på **Acceptera**
+    7.  Läs Apples användningsvillkor, markera kryssrutan och klicka på **Acceptera**.
 
         ![Acceptera villkoren](../media/30-day-trial-walkthrus/30day-cfg-pol-19-TOU.png)
 
-    8.  Klicka på **Bläddra**
+    8.  Klicka på **Bläddra**.
 
         ![Bläddra till platsen där du sparade certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-20-browse.png)
 
-    9. Välj CSR-filen som du sparade tidigare och klicka på **Öppna**
+    9. Välj CSR-filen som du sparade tidigare och klicka på **Öppna**.
 
         ![Öppna certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-21-CSRfile-open.png)
 
@@ -145,43 +140,43 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
         ![Ladda upp certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-22-upld-reqst.png)
 
-    11. När du uppmanas att hämta en JSON-fil klickar du på **Spara som**
+    11. När du uppmanas att hämta en JSON-fil klickar du på **Spara som**.
 
         ![Spara JSON-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-23-json-saveas.png)
 
-    12. Ange en plats för JSON-filen och klicka på **Spara**
+    12. Ange en plats för JSON-filen och klicka på **Spara**.
 
         ![Ange var du vill spara JSON-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-24-json-save-loc.png)
 
-        Om du inte omdirigeras automatisk efter några sekunder klickar du på **Avbryt**
+        Om du inte omdirigeras automatisk efter några sekunder klickar du på **Avbryt**.
 
         ![Avbryt om du inte omdirigeras automatiskt](../media/30-day-trial-walkthrus/30day-cfg-pol-25-json-pg-cancel.png)
 
-    13. Hämta den nya certifikatfilen genom att klicka på **Ladda ned**
+    13. Hämta den nya certifikatfilen genom att klicka på **Ladda ned**.
 
         ![Hämta certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-26-dwnld-retrv-cert.png)
 
-    14. När du uppmanas att ladda ned en PEM-fil klickar du på **Spara som**
+    14. När du uppmanas att ladda ned en PEM-fil klickar du på **Spara som**.
 
         ![Hämta PEM-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-27-pem-saveas.png)
 
-    15. Ange en plats för PEM-filen och klicka på **Spara**
+    15. Ange en plats för PEM-filen och klicka på **Spara**.
 
         ![Spara PEM-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-28-pem-save-loc.png)
 
-    16. Gå tillbaka till fliken för Intune-hanteringskonsolen och klicka på **Överför ett APN-certifikat**
+    16. Gå tillbaka till fliken för Intune-hanteringskonsolen och klicka på **Överför ett APN-certifikat**.
 
         ![Ladda upp APN-certifikatet](../media/30-day-trial-walkthrus/30day-cfg-pol-29-upld-cert.png)
 
-    17. Ange ditt Apple-ID och klicka på **Bläddra**
+    17. Ange ditt Apple-ID och klicka på **Bläddra**.
 
         ![Ange ditt Apple-ID](../media/30-day-trial-walkthrus/30day-cfg-pol-30-app-id-browse.png)
 
-    18. Välj PEM-filen som du precis sparat och klicka på **Öppna**
+    18. Välj PEM-filen som du precis sparat och klicka på **Öppna**.
 
         ![Öppna PEM-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-31-sel-pem-open.png)
 
-    19. Klicka på **Överför**
+    19. Klicka på **Överför**.
 
         ![Ladda upp PEM-filen](../media/30-day-trial-walkthrus/30day-cfg-pol-32-pem-upload.png)
 
@@ -191,37 +186,37 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
 3.  Skapa en testanvändargrupp för riktad principtillämpning:
 
-    1.  I den vänstra rutan klickar du på **Grupper**
+    1.  I den vänstra rutan klickar du på **Grupper**.
 
         ![Öppna grupper](../media/30-day-trial-walkthrus/30day-cfg-pol-34-clk-groups.png)
 
-    2.  Längst till höger klickar du på **Skapa grupp**
+    2.  Längst till höger klickar du på **Skapa grupp**.
 
         ![Skapa en grupp](../media/30-day-trial-walkthrus/30day-cfg-pol-35-crt-group.png)
 
-    3.  Ange ett gruppnamn, välj **Alla användare** som den överordnade gruppen och klicka på **Nästa**
+    3.  Ange ett gruppnamn, välj **Alla användare** som den överordnade gruppen och klicka på **Nästa**.
 
         ![Välj Alla användare som den överordnade gruppen](../media/30-day-trial-walkthrus/30day-cfg-pol-36-name-group.png)
 
-    4.  I fältet **Starta gruppmedlemskap med** väljer du **Alla användare i den överordnade gruppen** och klickar på **Slutför**
+    4.  I fältet **Starta gruppmedlemskap med** väljer du **Alla användare i den överordnade gruppen** och klickar på **Slutför**.
 
         ![Starta gruppmedlemskap med den överordnade gruppen](../media/30-day-trial-walkthrus/30day-cfg-pol-37-all-users-group.png)
 
 4.  Skapa en PIN-princip för iOS och aktivera den för testanvändargruppen:
 
-    1.  I den vänstra rutan klickar du på **Princip**
+    1.  I den vänstra rutan klickar du på **Princip**.
 
         ![Öppna principarbetsytan](../media/30-day-trial-walkthrus/30day-cfg-pol-38-clk-policy.png)
 
-    2.  Längst till höger klickar du på **Lägg till princip**
+    2.  Längst till höger klickar du på **Lägg till princip**.
 
         ![Lägg till en princip](../media/30-day-trial-walkthrus/30day-cfg-pol-39-add-policy.png)
 
-    3.  Expandera iOS-noden, välj raden **Allmän konfiguration** och klicka på **Skapa princip**
+    3.  Expandera iOS-noden, välj raden **Allmän konfiguration** och klicka på **Skapa princip**.
 
         ![Skapa en allmän iOS-konfigurationsprincip](../media/30-day-trial-walkthrus/30day-cfg-pol-40-gen_cfg_pol.png)
 
-    4.  Ange ett namn för principen, aktivera alternativet **Kräv lösenord för att låsa upp mobila enheter** och ange **Minsta längd på lösenord** till **4**
+    4.  Ange ett namn för principen, aktivera alternativet **Kräv lösenord för att låsa upp mobila enheter** och ange **Minsta längd på lösenord** till **4**.
 
         ![Konfigurera inställningar för lösenord](../media/30-day-trial-walkthrus/30day-cfg-pol-41-name-policy.png)
 
@@ -229,7 +224,7 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
         ![Distribuera princip](../media/30-day-trial-walkthrus/30day-cfg-pol-42-yes-deploy-pol.png)
 
-    6.  Klicka på användargruppen som du skapade tidigare, klicka på **Lägg till** och sedan på **OK**
+    6.  Klicka på användargruppen som du skapade tidigare, klicka på **Lägg till** och sedan på **OK**.
 
         ![Välj grupp för principen](../media/30-day-trial-walkthrus/30day-cfg-pol-43-add-pol-to-grp.png)
 
@@ -243,7 +238,7 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
     ![Installera företagsportalen](../media/30-day-trial-walkthrus/30day-cfg-pol-45-cportal-installed.png)
 
-2.  Ange namnet på ditt testanvändarkonto och tryck på **Logga in**
+2.  Ange namnet på ditt testanvändarkonto och tryck på **Logga in**.
 
     ![Ange dina inloggningsuppgifter](../media/30-day-trial-walkthrus/30day-cfg-pol-46-cportal-signin.png)
 
@@ -251,19 +246,19 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
     ![Starta registreringen](../media/30-day-trial-walkthrus/30day-cfg-pol-47-tap-enroll.jpg)
 
-4.  Tryck på **Installera** på skärmen **Installera profil**
+4.  Tryck på **Installera** på skärmen **Installera profil**.
 
     ![Installera en profil](../media/30-day-trial-walkthrus/30day-cfg-pol-48-profile-install-1.jpg)
 
-5.  Tryck på **Installera** i dialogrutan **Installera profil**
+5.  Tryck på **Installera** i dialogrutan **Installera profil**.
 
     ![Fortsätt att installera profilen](../media/30-day-trial-walkthrus/30day-cfg-pol-49-profile-install-2.jpg)
 
-6.  Tryck på **Installera** på skärmen **Varning**
+6.  Tryck på **Installera** på skärmen **Varning**.
 
     ![Acceptera varningsmeddelandet](../media/30-day-trial-walkthrus/30day-cfg-pol-50-warning-install-3.png)
 
-7.  Tryck på **Förtroende** i dialogrutan **Fjärrhantering**
+7.  Tryck på **Förtroende** i dialogrutan **Fjärrhantering**.
 
     ![Välj att lita på fjärrhantering](../media/30-day-trial-walkthrus/30day-cfg-pol-51-remt-mgmt-trust.jpg)
 
@@ -275,11 +270,11 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 
     ![Stäng företagsportalappen genom att trycka på OK](../media/30-day-trial-walkthrus/30day-cfg-pol-53-devc-enrolled-ok.png)
 
-10. När du uppmanas att konfigurera ett lösenord trycker du på **Fortsätt**
+10. När du uppmanas att konfigurera ett lösenord trycker du på **Fortsätt**.
 
     ![Acceptera uppmaningen om att konfigurera lösenordet](../media/30-day-trial-walkthrus/30day-cfg-pol-54-passcode-req-cont.png)
 
-11. Ange ditt lösenord, tryck på **Fortsätt**, ange lösenordet igen och tryck på **Spara**
+11. Ange ditt lösenord, tryck på **Fortsätt**, ange lösenordet igen och tryck på **Spara**.
 
     ![Ange ett lösenord](../media/30-day-trial-walkthrus/30day-cfg-pol-55-passcode-enter.jpg)
 
@@ -289,6 +284,7 @@ Dessa stegvisa anvisningar hjälper dig att konfigurera en Intune-utvärdering o
 [Utvärderingsguiden för Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

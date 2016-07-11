@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Lägg till appar | Microsoft Intune
-description:
-keywords:
+title: "Lägg till appar | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f85e91b985d9d30c71dff9e0d910293354fc40b7
+ms.openlocfilehash: 119a795697feb0cdbc2b93293cd66df7e77147cf
+
 
 ---
 
@@ -83,6 +76,32 @@ Appar som är baserade på externa länkar lagras inte i Intune-molnlagringsutry
 Du kan hantera och distribuera kostnadsfria iOS-appar från App Store. Det gör det också möjligt att koppla [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
 > [!TIP] Alternativen för mobila enheter är inte tillgängliga förrän du [ställer in hanteringsutfärdaren för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md) på Intune.
 
+## Intune-programvaruutgivare
+**Microsoft Intune programvaruutgivare** startar när du lägger till eller ändrar appar från administratörskonsolen för Microsoft Intune. Från utgivaren väljer du och konfigurerar en typ av installationsprogram som antingen hämtar appar (program för datorer eller appar för mobila enheter) som ska lagras i Intune-molnlagring eller länkar till en onlinebutik eller ett webbprogram.
+
+### Krav
+Innan du börjar använda Microsoft Intune programvaruutgivare måste du installera den kompletta versionen av [Microsoft .NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851). Efter att du har installerat .NET Framework måste du starta om innan Intune-programvaruutgivare kan starta korrekt.
+
+## Molnlagringsutrymme
+Alla appar som du skapar med installationstypen Programinstallation (till exempel en branschspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. I en betald prenumeration ingår 20 GB, med alternativet att köpa ytterligare lagringsutrymme.
+
+Du kan se hur mycket utrymme som du använder och köpa mer lagringsutrymme i noden **Lagringsanvändning** i arbetsytan **Admin**.
+
+Följande regler gäller vid köp av ytterligare molnbaserad lagring för Intune:
+
+-   Du måste ha en aktiv betald prenumeration för att kunna köpa ytterligare lagringsutrymme.
+
+-   Endast faktureringsadministratörer eller globala administratörer för din Microsoft Online-tjänst kan köpa ytterligare lagringsutrymme via hanteringsportalen för Office 365. Om du vill lägga till, ta bort eller hantera dessa administratörer måste du vara global administratör och logga in på hanteringsportalen för Office 365.
+
+-   Om du är en volymlicenskund som har köpt Intune eller Microsoft Intune-tilläggsprogrammet kontaktar du din kontoansvariga på Microsoft eller din Microsoft-partner om du vill ha prisinformation och köpa extra lagringsutrymme.
+
+#### Krav för lagringsutrymme i molnet
+
+-   Kontrollera att alla appinstallationsfiler finns i samma mapp.
+
+-   Den maximala filstorleken för en fil som du överför är 2 GB.
+
+
 ## Stöd för UWP-appar (Universal Windows Platform)
 Windows 10-datorer kräver inte en nyckel för att installera branschspecifika appar. Dock måste registernyckeln **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** ha värdet **1** för att aktivera separat inläsning.
 
@@ -96,6 +115,8 @@ På Windows 10 Mobile-enheter kan du använda ett icke-Symantec-kodsigneringscer
 
 Därefter måste du lägga till appar i Intune-konsolen innan du kan distribuera dem. Du kan lägga till appar för [registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md) eller för [Windows-datorer som du hanterar med Intune-klientprogrammet](add-apps-for-windows-pcs-in-microsoft-intune.md).
 
-<!--HONumber=Jun16_HO2-->
+
+
+<!--HONumber=Jun16_HO3-->
 
 

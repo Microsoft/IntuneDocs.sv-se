@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Inställningar för Mac OS X-principer | Microsoft Intune
-description:
-keywords:
+title: "Inställningar för Mac OS X-principer | Microsoft Intune"
+description: 
+keywords: 
 author: robstackmsft
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
+ms.openlocfilehash: bbbb666fdc34a82d247d760d156d48c5ac72374c
+
 
 ---
 
@@ -67,7 +60,8 @@ I listan **Kompatibla &amp; inkompatibla appar för Mac OS X** aktiverar du **Ha
 |**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och appaket-ID i filen.|
 |**Redigera**|Du kan redigera namn, utgivare och appaket-ID för den valda appen.|
 |**Ta bort**|Tar bort den markerade appen från listan.|
-> [!TIP] Mer information om Intune-rapporter finns i [Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](understand-microsoft-intune-operations-by-using-reports.md).
+> [!TIP]
+> Mer information om Intune-rapporter finns i [Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](understand-microsoft-intune-operations-by-using-reports.md).
 
 > [!IMPORTANT]
 > När en Mac OS X-enhet är i viloläge kan inte principer och profiler levereras eller inventeras. Därför kan det hända att Intune-konsolen tillfälligt visar statusen **Principinställningar med fel** tills enheten väcks ur viloläge nästa gång.
@@ -105,7 +99,7 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 |Inställningsnamn|Information|
     |----------------|--------------------|
     |**Anpassat konfigurationsprofilsnamn (visas för användare)**|Ange ett namn för principen som den kommer att visas på enheten och i principrapporter för Intune.|
-    |**Konfigurationsprofilsfil**|Klicka på **Importera**, bläddra sedan till den konfigurationsprofilen som du skapat med hjälp av Apple Configurator. **Tips:** Se [Så här skapar du en konfigurationsprofilsfil](#BKMK_Prof) i det här avsnittet för hjälp med hur du skapar konfigurationsprofilen.|
+    |**Konfigurationsprofilsfil**|Klicka på **Importera**, bläddra sedan till den konfigurationsprofilen som du skapat med hjälp av Apple Configurator. **Tips!** Se **Så här skapar du en fil för konfigurationsprofil** i det här avsnittet för hjälp med hur du skapar konfigurationsprofilen.|
     |**Information om konfigurationsprofilen**|Visar XML-koden för den konfigurationsprofil du har importerat.|
 
 
@@ -126,6 +120,7 @@ Du kan skapa filen för konfigurationsprofil som används av den anpassade princ
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

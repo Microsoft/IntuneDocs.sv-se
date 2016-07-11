@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Förstå aktiviteter med hjälp av rapporter | Microsoft Intune
-description:
-keywords:
+title: "Förstå aktiviteter med hjälp av rapporter | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
-ms.date: 04/28/2016
+ms.date: 06/21/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: pbala
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 617f1cd42de49f0c8675bd450591a390af674e73
+ms.openlocfilehash: b8af36cef1bcb9077d0ab611a14fb88c0f458ece
+
 
 ---
 
@@ -41,10 +34,11 @@ Intune-rapporter tillhandahåller information om programvara, maskinvara och lic
 |**Rapporter om inventering av mobila enheter**|Visar information om mobila enheter i din organisation. Du kan filtrera den information som visas efter grupptillhörighet, huruvida enheten är jailbroken eller rotad eller efter operativsystem.|
 |**Rapporter om licensinköp**|Visar programtitlar för alla licensierade program i de valda licensgrupperna, baserat på deras licensavtal. Om programlicensinformationen inte har uppdaterats på mer än 24 timmar uppdateras den när du skapar en licensrapport. En licensrapport är inte en exakt beräkning av det antal program som används eller bevis på avtalsefterlevnad. Rapporten är ett verktyg som hjälper dig att fatta beslut om volymlicensavtal beslut för din organisation. Intune upptäcker kanske inte alla produkter som kan ha Microsoft-volymlicenser. De tillgängliga filtren är:<br /><br />**Alla avtal**, som visar alla licensierade programvaruprodukter som hanteras av Intune.<br /><br />**Volymlicensavtal**, som endast visar VLSC-programvaruprodukter.<br /><br />**Andra programlicensavtal**, som visar programvaruprodukter som hanteras utanför VLSC.|
 |**Licensinstallationsrapporter**|Jämför installerade program på datorer i din organisation med dina aktuella licensavtal enligt VLSC (Volume Licensing Service Center). Filtren är:<br /><br />**Alla avtal**, som visar alla licensierade programvaruprodukter som hanteras av Intune.<br /><br />**Volymlicensavtal**, som endast visar VLSC-programvaruprodukter.<br /><br />**Andra programlicensavtal**, som visar programvaruprodukter som hanteras utanför VLSC.|
-|**Villkorsrapporter**|Visar om användarna har accepterat de villkor du distribuerat, och vilken version de har accepterat. Du kan ange upp till tio användare vars godkännande av de villkor som distribuerats till dem visas, eller visa godkännandestatusen för ett visst villkor som distribuerats till dem.|
+|**Villkorsrapporter**|Visa om användarna har accepterat de villkor du distribuerat, och vilken version de har accepterat. Du kan ange upp till tio användare vars godkännande av de villkor som distribuerats till dem visas, eller visa godkännandestatusen för ett visst villkor som distribuerats till dem.|
 |**Inkompatibilitetsrapporter för appar**|Visar information om de användare som har installerat appar som finns i din listor över kompatibla och inkompatibla appar. Använd den här rapporten om du vill hitta användare och enheter som inte uppfyller dina apprinciper.|
-|**Rapporter om certifikatsefterlevnad**|Visar vilka certifikat som har utfärdats till användare och enheter via SCEP eller PKCS #12 (.PFX). Använd den här rapporten om du vill hitta certifikat som har utfärdats, upphört att gälla eller återkallats.|
-|**Rapporter om enhetshistorik**|Visar en historisk logg över tillbakadragna, rensade och borttagna åtgärder. Använd den här rapporten om du vill se vem som tidigare har initierat åtgärder på enheterna.|
+|**Rapporter om certifikatsefterlevnad**|Visa vilka certifikat som har utfärdats till användare och enheter via SCEP eller PKCS #12 (.PFX). Använd den här rapporten om du vill hitta certifikat som har utfärdats, upphört att gälla eller återkallats.|
+|**Rapporter om enhetshistorik**|Visa en historisk logg över tillbakadragna, rensade och borttagna åtgärder. Använd den här rapporten om du vill se vem som tidigare har initierat åtgärder på enheterna.|
+|**Hälsoattesteringsrapporter**|Visa hälsotillståndet för mobila enheter.|
 |**Rapport för Mac OS X-maskinvara**|Visar information om maskinvara för alla registrerade Mac OS X-enheter i de grupper du väljer. Information om maskinvaruinventering som samlas in från dessa enheter finns i [Förstå dina enheter med inventering i Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Rapport för Mac OS X-programvara**|Visar program som installeras på alla Mac OS X-enheter i de grupper som du valde. Rapporten innehåller programnamnen (som ett paket-ID), den korta namnversionen (eller eget namn), versionen och antalet enheter som programvaran är installerad på.|
 
@@ -74,6 +68,7 @@ Rapporterna stöder dessutom följande åtgärder:
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO3-->
 
 

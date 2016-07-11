@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Felsöka klientinstallationen | Microsoft Intune
-description:
-keywords:
+title: "Felsöka klientinstallationen | Microsoft Intune"
+description: 
+keywords: 
 author: Nbigman
 manager: jeffgilb
 ms.date: 05/26/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c8409d58e3e7a1038e4d030d88a9ffe7d29bc1b6
+ms.openlocfilehash: 78fa086f2e7e6c836aa74acb303d9a6564ed0993
+
 
 ---
 
@@ -32,7 +26,7 @@ Använd följande information för att felsöka vanliga problem med klientinstal
 
 -   Om inga meddelanden om distributionen av klientprogramvaran för datorn visas i [Microsoft Intune Administrationskonsol](https://manage.microsoft.com/) kontrollerar du datorns Internetanslutning och proxykonfiguration och kontrollerar att datorn kan kommunicera med tjänstens webbadress, [https://manage.microsoft.com](https://manage.microsoft.com/). Pröva sedan att installera klientprogramvaran igen.
 
--   Du kan ange att ett e-postmeddelande ska skickas till valda mottagare om distributionen av klientprogramvaran misslyckas genom att konfigurera en aviseringsregel på arbetsytan **Admin** . Mer information finns i [Håll dig informerad med aviseringar från Microsoft Intune](/intune/deploy-use/get-notified-by-microsoft-intune-alerts).
+-   Du kan ange att ett e-postmeddelande ska skickas till valda mottagare om distributionen av klientprogramvaran misslyckas genom att konfigurera en aviseringsregel på arbetsytan **Admin** . Mer information finns i [Håll dig informerad med aviseringar från Microsoft Intune](/intune/deploy-use/get-notified-by-alerts).
 
 -   Den viktiga aviseringen **Distributionen av klientprogramvaran misslyckades** visas i Intune om det inte går att distribuera klientprogramvaran. Meddelandet visas på sidan **Systemöversikt** och **Aviseringar** i [Microsoft Intune Administrationskonsol](https://manage.microsoft.com/). Så här letar du efter aviseringar:
 
@@ -56,23 +50,23 @@ Använd följande information för att felsöka vanliga problem med klientinstal
 
 ## Det går inte att ladda ned datorregistreringspaketet
 **Problem:** Följande händer när du försöker registrera en dator:
--  Det går inte att hämta registreringspaketet 
+-  Det går inte att hämta registreringspaketet
 -  Hämtningsdialogrutan visas men tidsgränsen går ut
 
 **Lösning:** I webbläsaren som du använder för nedladdningen kontrollerar du, för den tid då nedladdningen sker, att nedladdningar är aktiverat och att krypterade filer kan sparas på din lokala disk.
 
 ## Klientinstallationen låser sig med felkoden 0x80040154
 **Problem:**
- 
+
 -  Klientinstallationen låser sig under registreringen
 
--  Det går inte att registrera enheten 
+-  Det går inte att registrera enheten
 
 -  Fel 0x80040154 i WindowsUpdate.log
 
 Detta kan bero på att viktiga programuppdateringar saknas på datorn.
 
-**Lösning:** Kontrollera att din princip för programuppdateringar aktiverar installationen av viktiga uppdateringar. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune) 
+**Lösning:** Kontrollera att din princip för programuppdateringar aktiverar installationen av viktiga uppdateringar. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)
 
 
 ## Principrelaterade Microsoft Intune-fel i policyplatform.log
@@ -84,7 +78,8 @@ För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på
 
 2.  Vänta 20 minuter tills klientprogrammet har tagits bort.
 
-    > [!NOTE] Försök inte att ta bort klienten från Program och funktioner.
+    > [!NOTE]
+    > Försök inte att ta bort klienten från Program och funktioner.
 
 3.  Skriv **UAC** på startmenyn för att öppna inställningarna för User Account Control.
 
@@ -130,6 +125,7 @@ Om installationsproblemen kvarstår kontaktar du supporten. Mer information finn
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jul16_HO1-->
 
 
