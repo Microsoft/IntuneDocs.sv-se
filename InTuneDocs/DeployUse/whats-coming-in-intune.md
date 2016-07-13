@@ -94,6 +94,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 
