@@ -4346,7 +4346,7 @@
 * Archive File: [restrict-email-access-example-scenarios.864d5c5f75fe174593dadf9ad193d7a2fa2efc21.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/6647a9fd3b025f6ba1638a28c09bdbdaa19ca091/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/restrict-email-access-example-scenarios.864d5c5f75fe174593dadf9ad193d7a2fa2efc21.sv-se.xlf)
 * Archive Datetime: 2016-07-02 01:42:42
 * Handback File: [restrict-email-access-example-scenarios.864d5c5f75fe174593dadf9ad193d7a2fa2efc21.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/4061070506768b1aca86084549852866f142f1a4/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/restrict-email-access-example-scenarios.864d5c5f75fe174593dadf9ad193d7a2fa2efc21.sv-se.xlf)
-* Handback Datetime: 2016-07-13 18:34:49
+* Handback Datetime: 2016-07-13 18:55:46
 * Handback Error: [handback_transform_failed](#962840a608a7b228d5f2519ea566d996bb4e21a4233handback_transform_failed)
 * [Back to Top](#report-top)
 
