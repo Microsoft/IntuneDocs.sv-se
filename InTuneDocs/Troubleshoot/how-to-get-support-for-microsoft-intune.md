@@ -34,6 +34,7 @@ För självhjälp med Intune, se [Allmänna felsökningstips för Microsoft Intu
 
     -   För alla andra Intune-problem väljer du **Hantering av mobilenheter**. Det här alternativet omfattar även Office 365 MDM och System Center Configuration Manager med Intune.
 
+    > [!NOTE]
     > [!NOTE] Du kanske måste klicka på **mer** längst ned i listan om du vill se alla kategorier.
 
 3.  På sidan för att **identifiera problemet** väljer du **Funktion** och **Symtom** för vilka du behöver hjälp. Du ombeds ange en **problemsammanfattning** och **probleminformation**.
@@ -51,7 +52,8 @@ I [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-suppo
 Om du vill spåra dina förfrågningar går du till [administrationscentret för Office 365](https://portal.office.com/admin/default.aspx). Klicka på **Visa alla supportärenden** längst ned i listan **Skapa en tjänstförfrågan**. Som standard visas alla dina tjänstbegäranden som är öppna. Klicka på filterikonen i det övre navigeringsfältet och välj önskad vyn för att ändra vilka tjänstbegäranden som ska visas, till exempel för att visa stängda begäranden.
 
 > [!NOTE]
-> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support för Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) där du hittar utförligt självhjälpsmaterial och har möjlighet att öppna en supportbegäran online eller via telefon.
+> [!NOTE]
+**Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support för Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) där du hittar utförligt självhjälpsmaterial och har möjlighet att öppna en supportbegäran online eller via telefon.
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 
@@ -138,6 +140,6 @@ Vår roll är att:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 
