@@ -46,6 +46,7 @@ På skärmbilden nedan ser du två tydliga exempel:
 
 ![Intune-enhetsprincip](../media/Intune-Device-Policy-v.2.jpg)
 
+> [!NOTE]
 > [!NOTE] Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
 
 ## Uppdateringsintervall för principer
@@ -68,6 +69,7 @@ För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på
 
 2.  Vänta 20 minuter tills klientprogrammet har tagits bort.
 
+    > [!NOTE]
     > [!NOTE] Försök inte att ta bort klienten från Program och funktioner.
 
 3.  Skriv **UAC** på startmenyn för att öppna inställningarna för User Account Control.
@@ -110,6 +112,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
