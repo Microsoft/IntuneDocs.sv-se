@@ -46,6 +46,7 @@ Hanteringsprinciper för mobilappar (MAM) används bara när appar används i en
 
     ![Skärmbild som visar filplatsen öppen med listan över befintliga filer](../media/AppManagement/iOS_OneDriveSuccess.png)
 
+    > [!NOTE]
     > [!NOTE] När du ändrar en distribuerad princip kommer ändringarna gälla nästa gång du öppnar appen.
 
 ##  Komma åt OneDrive på en Android-enhet
@@ -169,6 +170,6 @@ Detta förhindrar inte att du använder RMS-delningsappen för att visa företag
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

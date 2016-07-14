@@ -133,6 +133,6 @@ Du kan också kontrollera datum och tid för det senaste lyckade synkroniserings
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

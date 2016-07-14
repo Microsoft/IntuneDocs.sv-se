@@ -74,6 +74,6 @@ Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
