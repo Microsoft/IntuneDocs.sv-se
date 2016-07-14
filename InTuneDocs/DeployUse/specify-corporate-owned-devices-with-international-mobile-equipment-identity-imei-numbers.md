@@ -48,6 +48,6 @@ När en enhet som har ett sådant IMEI-nummer registreras (vanligtvis när en an
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 
