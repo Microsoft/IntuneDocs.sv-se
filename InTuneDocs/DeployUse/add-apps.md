@@ -74,6 +74,7 @@ Används när du har en
 Appar som är baserade på externa länkar lagras inte i Intune-molnlagringsutrymmet.
 ### **Hanterade iOS-appar från App Store**
 Du kan hantera och distribuera kostnadsfria iOS-appar från App Store. Det gör det också möjligt att koppla [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
+> [!TIP]
 > [!TIP] Alternativen för mobila enheter är inte tillgängliga förrän du [ställer in hanteringsutfärdaren för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md) på Intune.
 
 ## Intune-programvaruutgivare
@@ -117,6 +118,6 @@ Därefter måste du lägga till appar i Intune-konsolen innan du kan distribuera
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
