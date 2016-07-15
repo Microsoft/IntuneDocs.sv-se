@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9cc98051a7ceae05278ed26a7a222d56fc8152a8/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md) | OutofSyncHandedBackSuccess | [Details](#3b39e0de265928ab0d68ecca1d62f46300687a9b49)
- [InTuneDocs\includes\accessibility10.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility10.md) | InSyncHandedBackSuccess | [Details](#696afdb33b3539746abcc89d588f0fa72ec1a68d543)
 
 ## Item Details
-##### <a name='3b39e0de265928ab0d68ecca1d62f46300687a9b49'></a> Source: [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr/blob/9cc98051a7ceae05278ed26a7a222d56fc8152a8/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/1839ff0ab9f7bf3385dcd84b04780c33aacc5740/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.sv-se.xlf)
-* Handoff Datetime: 2016-07-08 05:52:27
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\how-your-android-users-get-their-apps.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/a6489f8dd752ae51d8db1d12d3b42484a7b05213/InTuneDocs/DeployUse/how-your-android-users-get-their-apps.md)
-* Current Handback File: [how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/264cabe85ab1f0d5ac2dd299806b5b544f17f814/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/how-your-android-users-get-their-apps.b3db6a6f5e34a50522804167256fb8771547c48f.sv-se.xlf)
-* Current Handback Datetime: 2016-07-15 02:33:04
-* [Back to Top](#report-top)
-
-##### <a name='696afdb33b3539746abcc89d588f0fa72ec1a68d543'></a> Source: [InTuneDocs\includes\accessibility10.md](https://github.com/Microsoft/IntuneDocs-pr/blob/56ab8c21f7da490c3bf0d541c7026e2ed84926dd/InTuneDocs/includes/accessibility10.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\includes\accessibility10.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/a6489f8dd752ae51d8db1d12d3b42484a7b05213/InTuneDocs/includes/accessibility10.md)
-* Handoff File: [accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/0dd1cdd2bf038c568241ea24f554069c2cedc934/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf)
-* Handoff Datetime: 2016-06-27 11:56:36
-* Handoff Reason: Include
-* Archive File: [accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf](https://github.com/Microsoft/EM.handoff/blob/6647a9fd3b025f6ba1638a28c09bdbdaa19ca091/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/archive/accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf)
-* Archive Datetime: 2016-07-02 01:42:42
-* Handback File: [accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/264cabe85ab1f0d5ac2dd299806b5b544f17f814/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/accessibility10.3c280d525bdc5f3f6743c7a8cc175c4de4e13754.sv-se.xlf)
-* Handback Datetime: 2016-07-15 02:33:04
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
