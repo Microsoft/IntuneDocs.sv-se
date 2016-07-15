@@ -4709,9 +4709,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/07231ea74ba33bfdd11e55a81d32756cb71ed6c4/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.md)
-* Current Handback File: [whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/5759b999a4a804cd20e8731ee4b21c36ca9c4690/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf)
-* Current Handback Datetime: 2016-07-11 15:26:22
+* Current Target File: [InTuneDocs\DeployUse\whats-new-in-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/a2592f58a9487c96662a24cd6646f8a56b88d911/InTuneDocs/DeployUse/whats-new-in-microsoft-intune.md)
+* Current Handback File: [whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/3a80a6f5a651a1febfcf61900d05a354e6fd3c37/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/whats-new-in-microsoft-intune.452e6578fe554fac5c29ad3c9d38e8fb790666f5.sv-se.xlf)
+* Current Handback Datetime: 2016-07-15 05:52:56
 * [Back to Top](#report-top)
 
 ##### <a name='893e896fc52e6e883fcd151db2c47030113502a2252'></a> Source: [InTuneDocs\DeployUse\what-to-tell-your-end-users-about-using-microsoft-intune.md](https://github.com/Microsoft/IntuneDocs-pr/blob/83f029c97cf34b6c96c6b2ef16cc65ab839c1d55/InTuneDocs/DeployUse/what-to-tell-your-end-users-about-using-microsoft-intune.md)
@@ -5680,15 +5680,15 @@
 
 ##### <a name='172de0509bee4c3ab54fd47780197923ab6358f3325'></a> Source: [InTuneDocs\EndUser\media\and-enroll-4c-we-care-privacy.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-4c-we-care-privacy.png)
 * Status: InSyncHandedBackSuccess
-* Target File: [InTuneDocs\EndUser\media\and-enroll-4c-we-care-privacy.png](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/268d742ece3f17b088a97e48c76cf5c6649df3c8/InTuneDocs/EndUser/media/and-enroll-4c-we-care-privacy.png)
+* Target File: [InTuneDocs\EndUser\media\and-enroll-4c-we-care-privacy.png](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/a2592f58a9487c96662a24cd6646f8a56b88d911/InTuneDocs/EndUser/media/and-enroll-4c-we-care-privacy.png)
 * Handoff File: [172de0509bee4c3ab54fd47780197923ab6358f3.png](https://github.com/Microsoft/EM.handoff/blob/eaf53ef15ba89bafde7c914aac19d40002fff3aa/ol-handoff/Microsoft/IntuneDocs-pr.sv-se/master/172de0509bee4c3ab54fd47780197923ab6358f3.png)
 * Handoff Datetime: 2016-06-30 16:24:57
 * Handoff Reason: IsDependency
 * Dependency From: InTuneDocs\EndUser\enroll-your-device-in-Intune-android.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [172de0509bee4c3ab54fd47780197923ab6358f3.png](https://github.com/Microsoft/EM.handback/blob/daf4b1e5a7b2eafbddaaf496336873932eb5b381/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/172de0509bee4c3ab54fd47780197923ab6358f3.png)
-* Handback Datetime: 2016-07-12 12:59:36
+* Handback File: [172de0509bee4c3ab54fd47780197923ab6358f3.png](https://github.com/Microsoft/EM.handback/blob/3a80a6f5a651a1febfcf61900d05a354e6fd3c37/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/172de0509bee4c3ab54fd47780197923ab6358f3.png)
+* Handback Datetime: 2016-07-15 05:52:56
 * [Back to Top](#report-top)
 
 ##### <a name='63078b3122b280ab69dba53f2d5075b0f08a3e54326'></a> Source: [InTuneDocs\EndUser\media\and-enroll-4d-what-comes-next.png](https://github.com/Microsoft/IntuneDocs-pr/blob/59cb9c26f96352831d7190ea50e4d7c48c16d4f9/InTuneDocs/EndUser/media/and-enroll-4d-what-comes-next.png)
@@ -7319,9 +7319,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/f0eaec85c881e0b1d7461d453b4ee4b3d759d724/InTuneDocs/EndUser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-* Current Handback File: [use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.ef81d47520e164656db1e326ccd5afd031d0018e.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/1f5d88c84d726c3d44eb5c5b87af5418e6d997e2/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.ef81d47520e164656db1e326ccd5afd031d0018e.sv-se.xlf)
-* Current Handback Datetime: 2016-07-02 22:27:27
+* Current Target File: [InTuneDocs\EndUser\use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/a2592f58a9487c96662a24cd6646f8a56b88d911/InTuneDocs/EndUser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+* Current Handback File: [use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.ef81d47520e164656db1e326ccd5afd031d0018e.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/3a80a6f5a651a1febfcf61900d05a354e6fd3c37/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.ef81d47520e164656db1e326ccd5afd031d0018e.sv-se.xlf)
+* Current Handback Datetime: 2016-07-15 05:52:56
 * [Back to Top](#report-top)
 
 ##### <a name='2c06a9c1fc979c79c63c4aad8110b66c8abe0846448'></a> Source: [InTuneDocs\EndUser\using-the-intune-company-portal-website.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/using-the-intune-company-portal-website.md)
