@@ -68,9 +68,11 @@ Om en användare finns i båda grupperna, kommer de att vara befriade från poli
 ### Steg 2: Ställ in och distribuera en efterlevnadsprincip
 [Skapa](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuera](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip för alla enheter som påverkas av principen. Detta motsvarar alla enheter som används av användarna i **Målgrupper**.
 
+> [!NOTE]
 > [!NOTE] Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
 
+> [!IMPORTANT]
 > [!IMPORTANT] Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
 
 När du är klar, fortsätt till **Steg 3**.
@@ -113,6 +115,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
