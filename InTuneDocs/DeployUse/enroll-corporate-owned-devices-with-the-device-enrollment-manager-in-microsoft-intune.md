@@ -91,6 +91,6 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 -   Finns den borttagna enhetsregistreringshanterarkontots relation till registrerade enheter kvar, men inga ytterligare enheter kan registreras
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
