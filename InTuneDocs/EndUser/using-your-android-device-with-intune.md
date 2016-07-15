@@ -1,0 +1,75 @@
+---
+title: "Använda en Android-enhet med Intune | Microsoft Intune"
+description: 
+keywords: 
+author: staciebarker
+manager: jeffgilb
+ms.date: 06/14/2016
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
+ms.reviewer: arnab
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
+ms.openlocfilehash: 4622897f5e32514ad80b5000732cf6835224160a
+
+
+---
+
+
+# Med hjälp av en Android-enhet med Intune
+
+Följ dessa steg för åtgärder som du behöver utföra på din Android-enhet om ditt företag använder Microsoft Intune.
+
+## Installation av företagsportalappen och registrering av Intune
+
+Det här avsnittet innehåller information om installationen av Intune-företagsportalen och registreringen av Android-enheter.
+
+- [Registrera din enhet i Intune](enroll-your-device-in-Intune-android.md)
+- [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
+
+## Saker du kan göra när enheten har registrerats i Intune
+
+Det här avsnittet innehåller information om åtgärder som du kan vidta när din Android-enhet har registrerats i Intune.
+
+- [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)
+- [Kryptera din enhet](encrypt-your-device-android.md)
+- [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
+- [Installera företagets VPN (Virtual Private Network)](install-your-companys-virtual-private-network-VPN-android.md)
+- [Ställa in hur lång tid det tar innan enheten låser sig](set-the-amount-of-time-before-your-device-is-locked-android.md)
+- [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-android.md)
+- [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
+- [Avregistrera enheten från Intune](unenroll-your-device-from-intune-android.md)
+- [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+- [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+- [Vad händer om du återställer en Android-enhet med hjälp av företagsportalappen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+<!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
+
+## Åtgärda problem med din enhet
+
+Det här avsnittet innehåller information om hur du löser problem som kan uppstå när en Android-enhet registreras i Intune.
+
+- [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Skicka loggar med diagnostikdata till IT-administratören via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
+- [Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
+- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-administrator-android.md)
+- [Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-android.md)
+- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)
+- [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
+- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)
+- [Du uppmanas att stänga av okända källor](you-are-asked-to-turn-off-unknown-sources-android.md)
+- [Du uppmanas att stänga av USB-felsökning](you-are-asked-to-turn-off-usb-debugging-android.md)
+- [Du uppmanas att aktivera alternativet att genomsöka enheten efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Enheten uppfyller inte minimikraven för säkerhetskorrigering](your-device-does-not-meet-the-minimum-security-patch-android.md)
+
+
+
+
+
+
+<!--HONumber=Jun16_HO5-->
+
+
