@@ -52,6 +52,6 @@ Nu när användare registrerar sina enheter får de se en lista med de kategorie
 [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

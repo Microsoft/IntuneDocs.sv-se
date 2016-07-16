@@ -49,6 +49,6 @@ För appar som distribueras med en länk till en butik hanteras uppdateringen av
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
