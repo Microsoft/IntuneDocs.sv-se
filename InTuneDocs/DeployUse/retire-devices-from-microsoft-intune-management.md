@@ -32,7 +32,7 @@ För företagsägda enheter kan du också använda en [fullständig rensning](us
 ## Återkalla åtkomst till företagets nätverk
 Om du drar tillbaka en enhet på grund av att en medarbetare har slutat på företaget och glömt att lämna tillbaka företagsägd maskinvara, kan du även [fjärrlåsa](use-remote-lock-and-passcode-reset-in-microsoft-intune.md) enheten. Därmed skyddas både företagsdata och du förhindrar att enheten missbrukas, även om du kanske får skriva av den som en förlust.
 
-Du bör också återkalla licensen för medarbetarens Intunekonto.. Detta frigör licensen som du kan tilldela till ett nytta användarkonto.
+Du bör också återkalla licensen för medarbetarens Intunekonto. Detta frigör licensen som du kan tilldela till ett nytta användarkonto.
 
 ## Göra sig av med maskinvara
 Ibland är det själva enheten som blivit för gammal. I sådana fall tar en [återställning till fabriksinställningarna](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) med en fullständig rensning bort alla data och tar bort enheten från Intune. Sen kan du göra dig av med maskinvaran i enlighet med företagets policy.
