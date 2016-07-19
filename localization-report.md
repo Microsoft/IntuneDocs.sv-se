@@ -5167,9 +5167,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/08981fcd5da4ba774c8a26f19c3af5173b1476b4/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-android.md)
-* Current Handback File: [device-doesnt-have-the-required-minimum-operating-system-version-android.8530187d7b052ec22ef3b242475cebce58b01093.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/a4c2563ff19b3291a0a8b744c0853d861d03a753/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/device-doesnt-have-the-required-minimum-operating-system-version-android.8530187d7b052ec22ef3b242475cebce58b01093.sv-se.xlf)
-* Current Handback Datetime: 2016-07-02 12:49:21
+* Current Target File: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-android.md)
+* Current Handback File: [device-doesnt-have-the-required-minimum-operating-system-version-android.8530187d7b052ec22ef3b242475cebce58b01093.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/device-doesnt-have-the-required-minimum-operating-system-version-android.8530187d7b052ec22ef3b242475cebce58b01093.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='d01d8057de27f9bdfaeb85703fd9b0b906286959282'></a> Source: [InTuneDocs\EndUser\device-doesnt-have-the-required-minimum-operating-system-version-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/device-doesnt-have-the-required-minimum-operating-system-version-ios.md)
@@ -7108,9 +7108,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/507c4d7ef5552e5490ff3f461a5777eab9bdb169/InTuneDocs/EndUser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
-* Current Handback File: [send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.481732c21953d249f4ab22aacc43b038321bc56c.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cf4dda97831b104627a45c012fcfde8903101f5b/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.481732c21953d249f4ab22aacc43b038321bc56c.sv-se.xlf)
-* Current Handback Datetime: 2016-07-15 14:37:22
+* Current Target File: [InTuneDocs\EndUser\send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
+* Current Handback File: [send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.481732c21953d249f4ab22aacc43b038321bc56c.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.481732c21953d249f4ab22aacc43b038321bc56c.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='5ed1f5fb618b9b7bc0fb3c6d62d4d79fa299a059428'></a> Source: [InTuneDocs\EndUser\send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
@@ -7138,9 +7138,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\send-enrollment-errors-to-your-it-administrator-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/e2288e6e524712c4dd348266787cf55b99d0ee7d/InTuneDocs/EndUser/send-enrollment-errors-to-your-it-administrator-android.md)
-* Current Handback File: [send-enrollment-errors-to-your-it-administrator-android.9a89af9c62a762a779b29baa1b5d44f70a019fe8.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/835e93c48959a4c4e559f310c628f026c060860b/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/send-enrollment-errors-to-your-it-administrator-android.9a89af9c62a762a779b29baa1b5d44f70a019fe8.sv-se.xlf)
-* Current Handback Datetime: 2016-07-02 19:37:51
+* Current Target File: [InTuneDocs\EndUser\send-enrollment-errors-to-your-it-administrator-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/send-enrollment-errors-to-your-it-administrator-android.md)
+* Current Handback File: [send-enrollment-errors-to-your-it-administrator-android.9a89af9c62a762a779b29baa1b5d44f70a019fe8.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/send-enrollment-errors-to-your-it-administrator-android.9a89af9c62a762a779b29baa1b5d44f70a019fe8.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='d7b1787e8e9d38c31b505e1f96ae8bcf5ce3f1b3430'></a> Source: [InTuneDocs\EndUser\send-errors-to-your-it-admin-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/send-errors-to-your-it-admin-ios.md)
@@ -7168,9 +7168,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\set-or-change-your-passcode-ios.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/fb01382c1cc692a92c5b792c428e33eb1396f47a/InTuneDocs/EndUser/set-or-change-your-passcode-ios.md)
-* Current Handback File: [set-or-change-your-passcode-ios.708f1c646562db1f5dc4409c5a7abe803e80fe88.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/8c5323c3d416ebb8fd426c3252b4211cf70660c1/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/set-or-change-your-passcode-ios.708f1c646562db1f5dc4409c5a7abe803e80fe88.sv-se.xlf)
-* Current Handback Datetime: 2016-07-13 18:34:49
+* Current Target File: [InTuneDocs\EndUser\set-or-change-your-passcode-ios.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/set-or-change-your-passcode-ios.md)
+* Current Handback File: [set-or-change-your-passcode-ios.708f1c646562db1f5dc4409c5a7abe803e80fe88.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/set-or-change-your-passcode-ios.708f1c646562db1f5dc4409c5a7abe803e80fe88.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='4c31c1300416e12cdbe1f66e74b4815f60e883d9432'></a> Source: [InTuneDocs\EndUser\set-or-change-your-password-windows.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/set-or-change-your-password-windows.md)
@@ -7258,9 +7258,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\sync-your-device-manually-windows.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/b39c7d757aaf8348b9113175efd36934f675d63c/InTuneDocs/EndUser/sync-your-device-manually-windows.md)
-* Current Handback File: [sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/51ba684247c37024f94ad0bcea60e5add1fb4dd4/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.sv-se.xlf)
-* Current Handback Datetime: 2016-07-13 15:49:27
+* Current Target File: [InTuneDocs\EndUser\sync-your-device-manually-windows.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/sync-your-device-manually-windows.md)
+* Current Handback File: [sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/sync-your-device-manually-windows.4081cba85e39a4bb7a5abaec67fc159b0cb7cf04.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='67d220f0e26c9783a0de0e3004eedfb6e5406c65438'></a> Source: [InTuneDocs\EndUser\TOC.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5/InTuneDocs/EndUser/TOC.md)
@@ -7687,9 +7687,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/e2288e6e524712c4dd348266787cf55b99d0ee7d/InTuneDocs/EndUser/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
-* Current Handback File: [you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.c014b43bed4849331750f1bfb49b3b4590dc7dce.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/835e93c48959a4c4e559f310c628f026c060860b/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.c014b43bed4849331750f1bfb49b3b4590dc7dce.sv-se.xlf)
-* Current Handback Datetime: 2016-07-02 19:37:51
+* Current Target File: [InTuneDocs\EndUser\you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
+* Current Handback File: [you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.c014b43bed4849331750f1bfb49b3b4590dc7dce.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.c014b43bed4849331750f1bfb49b3b4590dc7dce.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='0e290bb692f996874ccf689422fa6adc2892767b467'></a> Source: [InTuneDocs\EndUser\you-are-asked-to-turn-off-unknown-sources-android.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/you-are-asked-to-turn-off-unknown-sources-android.md)
@@ -7837,9 +7837,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [InTuneDocs\EndUser\your-device-is-rooted-and-you-cant-connect-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/58411194671290c0d357ee9b95b1dd1dc474c95a/InTuneDocs/EndUser/your-device-is-rooted-and-you-cant-connect-android.md)
-* Current Handback File: [your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/0ea90ad8144b938610615c2db25c6e594a452107/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.sv-se.xlf)
-* Current Handback Datetime: 2016-07-15 17:00:50
+* Current Target File: [InTuneDocs\EndUser\your-device-is-rooted-and-you-cant-connect-android.md](https://github.com/Microsoft/IntuneDocs-pr.sv-se/blob/8e8fed40037cac5f31f56405ab1891cf4d3cb6c9/InTuneDocs/EndUser/your-device-is-rooted-and-you-cant-connect-android.md)
+* Current Handback File: [your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.sv-se.xlf](https://github.com/Microsoft/EM.handback/blob/cc44f29bc30a22c846812d9b5f347b6dd815b359/ol-handback/Microsoft/IntuneDocs-pr.sv-se/master/your-device-is-rooted-and-you-cant-connect-android.e61b5acb50c18f7558532c8cf0f9137ff66aecc8.sv-se.xlf)
+* Current Handback Datetime: 2016-07-19 21:06:19
 * [Back to Top](#report-top)
 
 ##### <a name='e4caf483cfcbf4cb626213446a8951f932b6f9c3473'></a> Source: [InTuneDocs\EndUser\you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md](https://github.com/Microsoft/IntuneDocs-pr/blob/ea35d0222f33a0babb8bdc4fb30f0f5a405214a2/InTuneDocs/EndUser/you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
