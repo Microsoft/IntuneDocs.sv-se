@@ -3,18 +3,19 @@ title: "Skicka loggar med diagnostikdata till IT-administratören via e-post | M
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 57646f103fb0520295729a89a30692c657896e55
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 00e23b0094ee03c2a54bf6d12295e9f38781373f
 
 
 ---
@@ -30,13 +31,13 @@ Så här aktiverar du utförlig loggning:
 
 2.  Tryck på **Meny** &gt; **Inställningar**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > **Meny** kan vara en program- eller maskinvaruknapp, beroende på vilken Android-enhet du har.
 
 3.  Under **Diagnostikdata** trycker du på **Skicka Data**.
 
     > [!NOTE]
-    > **Endast om du använder enheter med Android 6.0 eller senare:**  När du trycker på **Skicka data** visas meddelandet **Tillåt att företagsportalen kommer åt foton, media och filer på enheten?**. 
+    > **Endast om du använder enheter med Android 6.0 eller senare:**  När du trycker på **Skicka data** visas meddelandet **Tillåt att företagsportalen kommer åt foton, media och filer på enheten?**.
 
     Det här meddelandet är vilseledande eftersom **Microsoft aldrig kommer åt foton, media eller filer på din enhet!** Google styr meddelandetexten, så Microsoft kan inte ändra den.  När du tillåter åtkomst är allt du gör att tillåta att enheten skriver dataloggar till enhetens SD-kort, vilket gör att du kan flytta dessa loggar med hjälp av en USB-kabel.
 
@@ -49,6 +50,7 @@ Så här aktiverar du utförlig loggning:
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

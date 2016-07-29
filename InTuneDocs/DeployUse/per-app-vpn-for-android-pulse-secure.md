@@ -1,24 +1,27 @@
 ---
 title: "Per app-VPN för Android med Pulse Secure | Microsoft Intune"
-description: 
+description: "Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 05/08/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
-ms.sourcegitcommit: 40e5602a4675bd92a85001827fb43426c41ed1e3
-ms.openlocfilehash: fc58e71a9b2279200dee2630aab7dbab727ea128
+ms.reviewer: chrisbal
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: d6d929b83b967cc4efdc84ecc3262c5c1f509351
 
 
 ---
 
 # Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter
 
-Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. Först måste du skapa en VPN-profil som används för anslutningstypen Pulse Secure och en princip för anpassad konfiguration som kopplar den här profilen till specifika appar. När du distribuerar dessa principer till din Android-enhet eller användargrupperna öppnar du en av de angivna apparna på dessa enheter så öppnas en VPN-anslutning för appen. 
+Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. Först måste du skapa en VPN-profil som används för anslutningstypen Pulse Secure och en princip för anpassad konfiguration som kopplar den här profilen till specifika appar. När du distribuerar dessa principer till din Android-enhet eller användargrupperna öppnar du en av de angivna apparna på dessa enheter så öppnas en VPN-anslutning för appen.
 
 ### Steg 1: Skapa en VPN-profil
 
@@ -30,9 +33,9 @@ Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. 
 
 > [!NOTE]
 Anteckna VPN-profilnamnet för användning i nästa steg. Till exempel **MyAppVpnProfile**.
-   
+
 ### Steg 2: Skapa en princip för anpassad konfigurering
-    
+
    1. I Intune-administrationskonsolen väljer du **Princip** -> **Lägg till princip** -> **Android** -> **Anpassad konfiguration** -> **Skapa princip**.
    2. Ange ett namn för principen.
    3. Klicka på **Lägg till** under **OMA-URI-inställningar**.
@@ -40,23 +43,23 @@ Anteckna VPN-profilnamnet för användning i nästa steg. Till exempel **MyAppVp
    5. Ange **Sträng** för **Datatyp**.
    6. för **OMA-URI** anger du strängen: **./Vendor/MSFT/VPN/Profile/*Namn*/PackageList**, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
    7.   Under **Värde** anger du en semikolonavgränsad lista över paket som ska associeras med profilen.  Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du: **com.microsoft.office.excel;com.android.chrome**.
-  
 
-   ![Exempel på VPN-anpassad princip per app för Android](..\media\android_per_app_vpn_oma_uri.png) 
+
+   ![Exempel på VPN-anpassad princip per app för Android](..\media\android_per_app_vpn_oma_uri.png)
 #### Ange applistan som svartlistad eller vitlistad (valfritt)
 Du kan ange att din lista över appar *inte* kommer att kunna använda VPN-anslutning med hjälp av värdet **SVARTLISTAT**.  Alla andra appar ansluter via VPN.
 
 Du kan också ange att *endast* angivna appar kommer att kunna använda VPN-anslutning med hjälp av värdet **VITLISTAT**.
- 
+
 
 1.  Klicka på **Lägg till** under OMA-URI-inställningar.
 2.  Ange ett namn på inställningen.
 3.  Ange **Sträng** för **Datatyp**.
 4.  För **OMA-URI** anger du följande sträng: **./Vendor/MSFT/VPN/Profile/*Namn*/Läge**, där *Namn* är den VPN-profil som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode**.
-5.  Under **Värde** anger du **SVARTLISTAT** eller **VITLISTAT**. 
+5.  Under **Värde** anger du **SVARTLISTAT** eller **VITLISTAT**.
 
 
-   
+
 ### Steg 3: Distribuera båda principerna
 
 Du måste distribuera *båda* principerna för *samma* Intune-grupp.
@@ -73,7 +76,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,15 +3,17 @@ title: "Enheten uppfyller inte minimikraven för säkerhetskorrigering | Microso
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
-ms.sourcegitcommit: b76c04545b9b26a0e2470b95a3f5ac0a81b07817
-ms.openlocfilehash: a4788340b36c7d04ff1a62844aea7dba06079a2b
+ROBOTS: noindex,nofollow
+translationtype: Human Translation
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 9405fdf219a1882cbfa2326c22325545ecec5080
 
 
 ---
@@ -30,7 +32,7 @@ Den aktuella säkerhetskorrigeringsnivån kan finnas på olika platser, beroende
 
 **Så här installerar du säkerhetskorrigeringen:**
 
-- Ej Samsung Knox-enheter: Välj **Inställningar** > **Om** > **Programvaruuppdateringar**. 
+- Ej Samsung Knox-enheter: Välj **Inställningar** > **Om** > **Programvaruuppdateringar**.
 
 - Samsung Knox-enheter: Välj **Inställningar** > **Systemuppdateringar** > **Sök efter ny systemuppdatering**.
 
@@ -41,6 +43,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-adm
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

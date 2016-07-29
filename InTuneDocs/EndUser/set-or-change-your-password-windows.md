@@ -3,16 +3,17 @@ title: "Ange eller ändra ditt lösenord | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
+ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 19f06b1fc58584b42af7740384c9a927a20d0b6e
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 791d9e4d5817acfa8b11b1f5ed570df5e38718d7
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: 19f06b1fc58584b42af7740384c9a927a20d0b6e
 
 Om din Windows-enhet inte följer din IT-administratörs lösenordsprincip visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
-IT-administratören kan ange fler än ett lösenordskrav. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. 
+IT-administratören kan ange fler än ett lösenordskrav. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
 
 Om du har problem med att ange ett lösenord som uppfyller alla krav för lösenord kan du be IT-administratören om hjälp.
 
@@ -29,7 +30,7 @@ Om du har problem med att ange ett lösenord som uppfyller alla krav för lösen
 
 1. Från **startskärmen** trycker du på **Inställningar** och väljer sedan **låsskärm**.
 2. Rulla ned till **Lösenord** och dra stapeln **Lösenord** till **På**.
-3. Ange ditt nya lösenord i fältet **Nytt lösenord** och ange det sedan igen i fältet **Bekräfta lösenord**. 
+3. Ange ditt nya lösenord i fältet **Nytt lösenord** och ange det sedan igen i fältet **Bekräfta lösenord**.
 4. Tryck på **Klar**.
 
 ## Så här byter du lösenord på en Windows Phone 8 eller 8.1:
@@ -46,6 +47,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

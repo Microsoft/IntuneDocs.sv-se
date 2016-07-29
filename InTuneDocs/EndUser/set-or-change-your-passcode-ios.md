@@ -3,16 +3,17 @@ title: "Ange eller ändra ditt lösenord | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 5/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
+ROBOTS: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 94c2282688e73a8ab95599b1f7beb05e98eb103a
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
 
 Om din iOS-enhet inte följer IT-administratörens princip för lösenord visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
-IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. 
+IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
 
 Om du har problem med att ange ett lösenord som uppfyller alla krav för lösenord kan du be IT-administratören om hjälp.
 
@@ -44,6 +45,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,18 +3,19 @@ title: "Om företagsportalen | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 06/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
+ROBOTS: noindex,nofollow
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 56edeafa9221b3574ceaba269891dfb92df44408
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 609ed567e40cc35a6e36539ca58165f9193cec65
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: 56edeafa9221b3574ceaba269891dfb92df44408
 Via Microsoft Intune-företagsportalen får du tillgång till ditt företags eller din skolas data och appar. Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen med hjälp av olika metoder.
-- Genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat. 
+- Genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat.
 
 Det finns några mindre skillnader mellan företagsportalappen och webbplatsen med företagsportalen, men du kan utföra likartade uppgifter på båda två. Några exempel:
 
@@ -99,10 +100,6 @@ Kontakta IT-administratören om du behöver hjälp. Titta efter kontaktuppgifter
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
