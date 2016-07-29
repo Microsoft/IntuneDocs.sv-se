@@ -1,10 +1,10 @@
 ---
-title: "Hantera appar som du har köpt från Windows Store för företag | Microsoft Intune"
-description: 
+title: "Hantera Windows Store för företag-appar | Microsoft Intune"
+description: "Anslut Microsoft Intune till Windows Store för företag om du vill hantera och distribuera volyminköpsappar från Intune-konsolen"
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
-ms.openlocfilehash: b6e2f0ec13caa9616b72a2fa225e77fe43a4755c
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 07079b6566bec45593bb9ae49272aa7154a7174d
 
 
 ---
@@ -77,6 +77,6 @@ När du distribuerar en app från Windows Store för företag används en licens
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

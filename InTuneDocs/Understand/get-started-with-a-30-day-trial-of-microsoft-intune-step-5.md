@@ -1,9 +1,9 @@
 ---
 title: "Registrera mobila enheter för utvärdering | Microsoft Intune"
-description: 
+description: "Så här registrerar du mobila enheter och installerar en app när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
-ms.openlocfilehash: f26b64015f483eb5b6a6efbaa6fe6730dde7dac9
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: d441bb68a28a18cf45c616271cb33556df9f67f3
 
 
 ---
@@ -69,6 +69,6 @@ Gratulerar! Du har precis slutfört steg 5 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

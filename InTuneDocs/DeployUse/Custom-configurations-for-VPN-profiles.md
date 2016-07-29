@@ -1,20 +1,20 @@
 ---
 title: "Anpassade konfigurationer för VPN-profiler | Microsoft Intune"
-description: 
+description: "Använd anpassade konfigurationer för att skapa VPN-profiler i Intune."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
-ms.reviewer: jeffgilb
+ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5c48a4cead6250864f5b10444d99d062441bd99
-ms.openlocfilehash: 7e7c50552b5a61804e759a7ec5443029d4bd4584
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
 
 
 ---
@@ -86,19 +86,19 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 Vid eventuella frågor om hur dessa inställningar ska användas eller för mer information om vad de utför kan kunden vända sig till CSP-dokumentationen: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx
 
 ## URI-inställningar för Android per-app-VPN på PulseSecure
-### ANPASSAD URI FÖR PAKETLISTA 
+### ANPASSAD URI FÖR PAKETLISTA
 -  Datatyp = Sträng
--  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList 
+-  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList
 -  Värde = Paketlista avskild med avgränsare.
    - Avgränsare: semikolon (;), kolon (:), kommatecken (,), lodstreck (|)
 
-Exempel: 
+Exempel:
 - com.android.chrome
 - com.android.chrome;com.android.browser
 
 ### ANPASSAD URI FÖR LÄGE (VALFRITT)
 - Datatyp = Sträng
-- OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode 
+- OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode
 
 > Anteckningar
 > - Använd samma *namn* som tilldelades till den anpassade profilen
@@ -112,6 +112,6 @@ Exempel:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

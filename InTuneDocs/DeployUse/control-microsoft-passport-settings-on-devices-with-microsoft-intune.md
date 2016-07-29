@@ -1,10 +1,10 @@
 ---
 title: "Kontrollera Microsoft Passport-inställningar på enheter | Microsoft Intune"
-description: 
+description: "Läs om hur Intune kan integreras med **Microsoft Passport for Work** som är en alternativ inloggningsmetod som använder Active Directory, eller ett Azure Active Directory-konto för att ersätta lösenord, smartkort eller virtuellt smartkort."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 402bc5a1-ada3-4c4c-a0de-292d026b4444
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
-ms.openlocfilehash: bdf7dfda3814ad6c6c00f5c133027175a95fb5e2
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 9f75306e1448bd474bd90b1836393962c0e08522
 
 
 ---
@@ -23,6 +23,9 @@ ms.openlocfilehash: bdf7dfda3814ad6c6c00f5c133027175a95fb5e2
 Microsoft Intune gör att du kan integrera med **Microsoft Passport för arbetsplats** som är en alternativ inloggningsmetod som använder Active Directory, eller ett Azure Active Directory-konto för att ersätta lösenord, smartkort eller virtuellt smartkort.
 
 Passport gör det möjligt att använda en **användargest** för att logga in i stället för ett lösenord. En användargest kan vara en enkel PIN-kod, biometrisk autentisering, t.ex. Windows Hello, eller en extern enhet, t.ex. en fingeravtrycksläsare.
+
+>[!TIP]
+>Microsoft Passport for Work heter numera Windows Hello för företag. Den här ändringen kommer att återspeglas i Intune-konsolen i en kommande uppdatering.
 
 Intune kan integreras med Passport för arbetsplats på två sätt:
 
@@ -75,6 +78,6 @@ Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

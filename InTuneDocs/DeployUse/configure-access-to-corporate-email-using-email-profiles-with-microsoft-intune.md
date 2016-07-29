@@ -1,10 +1,10 @@
 ---
-title: "Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler | Microsoft Intune"
-description: 
+title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Intune"
+description: "Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 05/05/2016
+manager: angrobe
+ms.date: 07/021/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8a3df01e9c02af7c43cdadc6d202bc6d74a000da
-ms.openlocfilehash: d0fa235b7b25fe71a4e3b4b0bf68cd2db31b1f18
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 878172811c7899237b5ebf5db9a443f10fea42dd
 
 
 ---
@@ -24,7 +24,7 @@ Många mobila plattformar har en *intern* e-postklient som levereras som en del 
 
 Om du behöver ytterligare skydd mot dataförlust (DLP) väljer du [Villkorlig åtkomst](restrict-access-to-email-and-o365-services-with-microsoft-intune.md), som styr åtkomsten till användarens inkorg för alla e-postklienter, inklusive inbyggda e-postklienter.
 
-Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter.   De flesta mobila plattformar har en *intern* e-postklient som levereras som en del av operativsystemet.  På plattformar som stöds kan de interna e-postklienterna konfigureras av Microsoft Intune så att det blir möjligt för användarna att komma åt sin e-post för företaget på de personliga enheterna utan konfiguration.  
+Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter. De flesta mobila plattformar har en *intern* e-postklient som levereras som en del av operativsystemet.  På plattformar som stöds kan de interna e-postklienterna konfigureras av Microsoft Intune så att det blir möjligt för användarna att komma åt sin e-post för företaget på de personliga enheterna utan konfiguration.  
 
 IT-administratörer eller användare kan också välja att installera alternativa e-postklienter, t.ex. Microsoft Outlook för Android eller iOS.  Dessa e-postklienter stöder inte e-postprofiler och kan inte konfigureras med hjälp av e-postprofiler i Microsoft Intune.  
 
@@ -82,7 +82,7 @@ Lösenordet finns inte i e-postprofilen, användaren måste ange detta när de a
     |**Antal dagars e-postmeddelande att synkronisera**|Hur många dagar för e-post som du vill synkronisera eller välj **Obegränsad** för att synkronisera alla tillgängliga e-postmeddelanden.|
     |**Synkroniseringsschema** (Samsung KNOX, Windows Phone 8 och senare, Windows 10)|Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.|
     |**Använd SSL**|Använda Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.<br /><br />För enheter som kör Samsung KNOX 4.0 eller senare kan du exportera Exchange-serverns SSL-certifikat och distribuera det som en Android-betrodd certifikatprofil i Intune. Intune stöder inte åtkomst till det här certifikatet om det är installerat på Exchange-servern på annat sätt.|
-    |**Innehållstyp som ska synkroniseras**|Välj vilka typer av innehåll du vill synkronisera till enheterna.| 
+    |**Innehållstyp som ska synkroniseras**|Välj vilka typer av innehåll du vill synkronisera till enheterna.|
     |**Tillåt att e-post skickas från tredjepartsprogram** (endast iOS)|Tillåt att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.|
 
     > [!IMPORTANT]
@@ -109,8 +109,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

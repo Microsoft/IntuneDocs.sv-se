@@ -1,10 +1,10 @@
 ---
 title: "Funktioner för hantering av mobila enheter | Microsoft Intune"
-description: 
+description: "Läs om hur Intune hjälper dig att hantera de mobila enheter som du registrerar med tjänsten."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: 0f460165f251acf95f4af36afa39409d3eb21162
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 720112c7c20883200557510da2a42ee402eff50a
 
 
 ---
@@ -42,7 +42,8 @@ Hantering, inventering, appdistribution, etablering och tillbakadragning hantera
 |Appdistribution och -hantering|Tillhandahåller verktyg som hjälper dig att hantera mobila appar genom hela deras livscykel, inklusive appdistribution från installationsfiler och appbutiker, detaljerad övervakning av appstatus och borttagning av appar.|[Distribuera appar i Microsoft Intune](/intune/deploy-use/deploy-apps)|
 |Kompatibla och icke-kompatibla appar|Gör att du kan ange listor med kompatibla appar (som användarna ska kunna installera) och icke-kompatibla appar (som inte får installeras av användarna).|[Principinställningar för iOS i Microsoft Intune](/intune/deploy-use/ios-policy-settings-in-microsoft-intune)|
 |Hantering av mobila program|Konfigurera begränsningar för appar med hjälp av hantering av mobilprogram för både enheter som du hanterar med Intune och enheter som inte hanteras av Intune. Med hjälp av dessa principer kan du öka säkerheten för företagets data genom att begränsa åtgärder, exempelvis kopiera och klistra in, extern säkerhetskopiering av data och överföring av data mellan appar.|[Configure and deploy mobile application management policies in the Microsoft Intune console](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console)<br><br>[Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)<br /><br />[Förbereda iOS-appar för hantering av mobila program med Microsoft Intune App Wrapping-verktyg](/intune/deploy-use/prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)<br /><br />[Förbered Android-appar för hantering av mobila program med Microsoft Intunes App-Wrapping-verktyg](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool)|
-|Konfiguration av mobilapp|Använd konfigurationsprinciper för mobilappar om du vill definiera inställningar för iOS-appar som kan krävas när användaren kör appen. En app kan till exempel kräva att användaren anger ett portnummer för inloggningsinformation. Det kan effektivisera appkonfiguration och minska antalet samtal till supportavdelningen.|[Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Konfiguration av iOS-mobilapp|Använd konfigurationsprinciper för mobilappar om du vill definiera inställningar för iOS-appar som kan krävas när användaren kör appen. En app kan till exempel kräva att användaren anger ett portnummer för inloggningsinformation. Det kan effektivisera appkonfiguration och minska antalet samtal till supportavdelningen.|[Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)|
+|Etableringsprofiler för iOS-mobilappar|I Intune finns verktyg för att distribuera etableringsprofiler till iOS-appar som snart upphör att gälla.|[Använd etableringsprofilprinciper för iOS för att förhindra att dina appar upphör att gälla](/intune/deploy-use/ios-mobile-app-provisioning-profiles)|
 |Hanterad webbläsare|När du har distribuerat den hanterade webbläsaren till dina användare kan du konfigurera en princip för hanterade webbläsare om du vill kunna kontrollera vilka webbplatser de ska kunna besöka. Du kan dessutom använda principer för hantering av mobila appar på den hanterade webbläsaren.|[Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](/intune/deploy-use/manage-internet-access-using-managed-browser-policies)|
 |Microsoft Passport|Med Intune kan du integrera med Microsoft Passport for Work, som är en alternativ inloggningsmetod för Windows 10 som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort.|[Kontrollera Microsoft Passport-inställningar på enheter med Microsoft Intune](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune)|
 
@@ -68,6 +69,6 @@ Hantering, inventering, appdistribution, etablering och tillbakadragning hantera
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

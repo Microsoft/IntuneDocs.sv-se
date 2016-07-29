@@ -1,10 +1,10 @@
 ---
 title: "iOS MAM-principinställningar | Microsoft Intune"
-description: 
+description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för iOS-enheter."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: b3df4b35dbe2710157b88a4e7fdba9734f8b998b
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 5f13b6b9df7218734e8b015e5ddb3f6ab2698cac
 
 
 ---
@@ -37,6 +37,8 @@ Termen **principhanterade appar** används för att referera till appar som är 
   - **Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.
 
   Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar.
+
+  **Den här inställningen styr inte användningen av funktionen Öppna med på mobila enheter. Information om hur du hanterar Öppna med finns [här](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)**.
 
   **Standardvärde = Principhanterade appar**
 
@@ -112,6 +114,6 @@ På iOS-enheter kan du tillåta att användarna identifierar sig med fingeravtry
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

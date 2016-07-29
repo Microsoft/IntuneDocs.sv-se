@@ -1,21 +1,21 @@
 ---
 title: Hantera aviseringar | Microsoft Intune
-description: 
+description: "Använd arbetsytan Aviseringar när du ska utvärdera den övergripande hälsan för enheter i din organisation."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 74dc4ce4-21da-4f40-a07f-3eea34561eee
-ROBOTS: noindex,nofollow
-ms.reviewer: jeffgilb
+ROBOTS: NOINDEX,NOFOLLOW
+ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: bfea7213f67b55807045bfd8b29fdb083b841a56
+ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
+ms.openlocfilehash: 54dd8c6bae6c02e7dde3582b439d106261bc490b
 
 
 ---
@@ -33,12 +33,12 @@ Använd arbetsytan **Aviseringar** i administratörskonsolen för Intune när du
 
         > [!NOTE]
         > I vissa fall kan en varningstyp visas mer än en gång i listan **Aviseringstypssammanfattning**.
-        > 
+        >
         > Följande instanser av aviseringstypen för ledigt logiskt diskutrymme kan t.ex. förekomma i listan:
-        > 
+        >
         > -   3 Ledigt logiskt diskutrymme
         > -   2 Ledigt logiskt diskutrymme
-        > 
+        >
         > Detta inträffar när samma aviseringstyp genereras för enheter som körs under olika operativsystem. I det här exemplet kan den första instansen av aviseringen, 3 Ledigt logiskt diskutrymme, ha genererats av datorer som kör Windows® 7. Den andra förekomsten av aviseringstypen kan ha genererats av datorer som kör Windows Vista®.
 
     -   **Visa alla aktiva aviseringar**, klicka på **Aviseringar &gt; Alla aviseringar**. En lista över alla aktiva aviseringar visas med följande kolumner på sidan **Aviseringar**:
@@ -107,7 +107,6 @@ Aviseringar som har markerats som stängda tas bort permanent efter 90 dagar.
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

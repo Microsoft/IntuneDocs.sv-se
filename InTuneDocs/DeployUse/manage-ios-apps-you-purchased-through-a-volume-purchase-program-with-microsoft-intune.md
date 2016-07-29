@@ -1,10 +1,10 @@
 ---
-title: "Hantera iOS-appar som du har köpt via ett volyminköpsprogram | Microsoft Intune"
-description: 
+title: "Hantera volyminköpta iOS-appar | Microsoft Intune"
+description: "Intune hjälper dig att hantera appar som du volyminköpt av Apple genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,16 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
-ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 8f7e77f00e6082c5b272a7ec2be835bc1ef97a28
 
 
 ---
 
 # Hantera iOS-appar som du har köpt via ett volyminköpsprogram med Microsoft Intune
-En del appbutiker erbjuder möjligheten att köpa flera licenser till en app som du vill köra i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
+I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
 
-Microsoft Intune hjälper dig att hantera appar som du har köpt via ett sådant program genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.
+Microsoft Intune hjälper dig att hantera appar som du har köpt via det här programmet genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.
 
 > [!Important]
 > Intune tilldelar för närvarande applicenser för iOS VPP till användare och inte enheter. Därför måste användare ange sitt Apple-ID-lösenord för att installera appen.
@@ -87,6 +87,6 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

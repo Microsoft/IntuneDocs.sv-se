@@ -1,19 +1,20 @@
 ---
-title: "Hantera Internetåtkomst med hanterade webbläsarprinciper | Microsoft Intune"
-description: 
+title: "Hantera webbåtkomst med den hanterade webbläsaren | Microsoft Intune"
+description: "Distribuera den hanterade webbläsaren för att begränsa surfning och överföring av webbdata till andra appar."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
-ms.reviewer: jeffgilb
+ms.reviewer: maxles
 ms.suite: ems
-ms.sourcegitcommit: 2df44199ecd904dcfb6774a942244338c1384186
-ms.openlocfilehash: c4462af584d54225084159dfa35f5e1d07c36397
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 44f6ee1354f1fdfc7f8db7d5b844dc12c01e686c
 
 
 ---
@@ -150,6 +151,6 @@ Om flera principer för hanterade webbläsare har distribuerats till en enhet oc
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

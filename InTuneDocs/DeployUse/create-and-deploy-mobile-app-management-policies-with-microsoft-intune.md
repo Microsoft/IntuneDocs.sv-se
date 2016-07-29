@@ -1,10 +1,10 @@
 ---
 title: Skapa och distribuera MAM-principer | Microsoft Intune
-description: 
+description: "Följ instruktionerna i det här avsnittet om du vill skapa och distribuera hanteringsprinciper för mobilappar."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
-ms.sourcegitcommit: 3f79de38ce7fc9a5434033ee45ddf43f22517356
-ms.openlocfilehash: f1b9216c673039f8600e07508b255e12cc30bf3f
+translationtype: Human Translation
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 9e1c8f3c125633f1224005b7f80d3578fd4b729d
 
 
 ---
@@ -26,10 +27,12 @@ Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure P
 - Enheter som hanteras av en MDM-lösning från tredje part
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
 
-Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+>[!IMPORTANT]
+
+> Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
 
->[!IMPORTANT]
+
 > Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
 
 Om du vill se en lista över principinställningar som stöds för Android- och iOS-plattformar kan du välja något av följande:
@@ -47,24 +50,20 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
     > [!TIP]
     > Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med portalen.
 
-2.  På bladet **Inställningar** väljer du **Apprincip**.  När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga.
-
-    ![Skärmbild av bladet Apprincip som visar en lista med befintliga principer](../media/AppManagement/AzurePortal_MAM_AppPolicy.png)
-
-3.  Välj **Lägg till en princip**.
+2.  På bladet **Inställningar** väljer du **Apprincip**.  När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga. Välj **Lägg till en princip**.
 
     ![Skärmbild av bladet Apprincip med menyalternativet Lägg till en princip markerat ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
-4.  Skriv ett namn för principen, lägg till en kort beskrivning och välj plattformstypen för att skapa en princip för iOS eller Android.  Du kan skapa mer än en princip för varje plattform.
+3.  Skriv ett namn för principen, lägg till en kort beskrivning och välj plattformstypen för att skapa en princip för iOS eller Android.  Du kan skapa mer än en princip för varje plattform.
 
     ![Skärmbild av bladet Lägg till en princip](../media/AppManagement/AzurePortal_MAM_AddPolicy_only.png)
 
-5.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Du kan välja en eller flera appar i listan som du vill associera med principen som du skapar. När du har valt apparna väljer du knappen **Välj** längst ned på bladet **Appar** för att spara ditt val.
+4.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Du kan välja en eller flera appar i listan som du vill associera med principen som du skapar. När du har valt apparna väljer du knappen **Välj** längst ned på bladet **Appar** för att spara ditt val.
 
     > [!IMPORTANT]
     > Du måste välja minst en app för att skapa en princip.
 
-6.  Öppna principinställningsbladet genom att välja **Konfigurera nödvändiga inställningar** på bladet **Lägg till en princip**.
+5.  Öppna principinställningsbladet genom att välja **Konfigurera nödvändiga inställningar** på bladet **Lägg till en princip**.
 
     Det finns två typer av principinställningar, **Dataflytt** och **Åtkomst**.  Principer för dataflytt tillämpas när data flyttas till och från appar, medan åtkomstprinciper avgör hur slutanvändare får åtkomst till apparna i en arbetskontext.
     Du kan snabbt komma igång genom att använda principinställningarnas standardvärden.  Du behöver inte göra några ändringar om standardvärdena uppfyller dina krav.
@@ -74,11 +73,11 @@ Innan du skapar en MAM-princip granskar du informationen om [krav och support](g
 
     ![Skärmbild av inställningsbladet tillsammans med bladet Lägg till en princip](../media/AppManagement/AzurePortal_MAM_PolicySettings.png)
 
-7.  Spara konfigurationen genom att välja **OK**.  Nu är du tillbaka i bladet **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
+6.  Spara konfigurationen genom att välja **OK**.  Nu är du tillbaka i bladet **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
 
     ![Skärmbild av bladet Lägg till en princip som visar att appar och inställningar har konfigurerats](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-    ![Skärmbild av bladet Apprincip med aviseringen Lägger till en princip ](../media/AppManagement/AzurePortal_MAM_AddingPolicyNotification.png)
+
 
 När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare.  Du distribuerar principen genom att följa stegen nedan.
 
@@ -155,8 +154,8 @@ Om användaren ska kunna se effekten av ändringarna direkt måste användaren l
 Välj något av följande om du vill se en fullständig lista med principinställningar för iOS och Android:
 
 > [!div class="op_single_selector"]
-  - [iOS-principer](ios-mam-policy-settings.md)
-  - [Android-principer](android-mam-policy-settings.md)
+- [iOS-principer](ios-mam-policy-settings.md)
+- [Android-principer](android-mam-policy-settings.md)
 
 ## Nästa steg
 [Övervaka efterlevnad och användarstatus](monitor-mobile-app-management-policies-with-microsoft-intune.md)
@@ -166,6 +165,6 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
