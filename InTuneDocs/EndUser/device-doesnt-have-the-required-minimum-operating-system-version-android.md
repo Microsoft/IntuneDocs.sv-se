@@ -1,26 +1,27 @@
 ---
-title: "Enheten uppfyller inte kraven för äldsta tillåtna version av operativsystemet | Microsoft Intune"
+title: "Android-enheten uppfyller inte kraven för äldsta tillåtna version av operativsystemet | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3ef43ff5-8d6b-4be1-baa4-6fb6a7f3c312
+ROBOTS: noindex,nofollow
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 620078cdd6a6d918153ab5a9813a14406c11acb4
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 1deee9381a7fb55174600cc8824170f3b6e0887f
 
 
 ---
 
 
-# Enheten uppfyller inte kraven för äldsta tillåtna vesion av operativsystemet
+# Android-enheten uppfyller inte kraven för äldsta tillåtna version av operativsystemet
 
 Android-enheten uppfyller inte de krav som IT-avdelningen har fastställt för äldsta tillåtna version av operativsystemet. Innan du uppdaterar enheten kontrollerar du vilken version av operativsystemet som används genom att trycka på **Inställningar** &gt; **Om telefon** och sedan kontrollera om det finns någon tillgänglig uppdatering för enheten genom att trycka på **Inställningar** och leta reda på uppdateringsalternativet.
 
@@ -30,6 +31,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

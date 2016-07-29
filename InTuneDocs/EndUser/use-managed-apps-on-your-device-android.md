@@ -1,26 +1,27 @@
 ---
-title: "Använda hanterade appar på enheten | Microsoft Intune"
+title: "Använda hanterade appar på Android-enheten | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
+ROBOTS: noindex,nofollow
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 5a25d845113ef6a3cb402923ef451fab63138979
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 9e6ef6d4daf8507ed00cb5fa4a1d88f44a05068c
 
 
 ---
 
 
-# Använda hanterade appar på enheten
+# Använda hanterade appar på Android-enheten
 
 Hanterade appar är appar som IT-administratören kan konfigurera för att skydda de företagsdata som du kan komma åt i appen. När du använder företagets data i en hanterad app på en Android-enhet kan du märka att appen inte fungerar riktigt som du förväntat dig. Du kanske inte kan kopiera och klistra in skyddade företagsdata, eller så kanske du inte kan spara data på vissa platser.
 
@@ -77,6 +78,7 @@ Kontakta IT-administratören om du vill ha mer information om hanterade appar p�
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

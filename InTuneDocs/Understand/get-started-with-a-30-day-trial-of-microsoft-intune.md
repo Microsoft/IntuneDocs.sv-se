@@ -1,9 +1,9 @@
 ---
 title: "Utvärderingsguiden för | Microsoft Intune"
-description: 
+description: "Introduktion och förutsättningar för att komma igång med en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.sourcegitcommit: 4af13629986e7cef814104f3d1f298eb2be240ac
-ms.openlocfilehash: 26ecc3dfe8816da9f30829901d929af53b1bedc0
+translationtype: Human Translation
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: f64fc7c8758e87aeb4866c21c46e0db7349713c5
 
 
 ---
@@ -65,6 +66,6 @@ Det är dags att komma igång med din prenumeration på 30-dagars utvärderingsv
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

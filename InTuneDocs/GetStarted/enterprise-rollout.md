@@ -1,10 +1,10 @@
 ---
 title: "Företagsomfattande distribution | Microsoft Intune"
-description: 
+description: "Rekommendationer för distributionsfasen för en Intune-distribution."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d894708e-7071-44f5-aa3b-af5aef02fb98
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d82d0ae4820d2e2141848235b8741abccaec3bc6
-ms.openlocfilehash: 588d37ac5524c80da9082ee5b1af0e897e925ef9
+ms.sourcegitcommit: 0fff944e180bda99d70caafebe4ae69b6bd05b1b
+ms.openlocfilehash: aae62850d35aab6908cae2841988822911989a40
 
 
 ---
@@ -73,7 +73,9 @@ Följande är en lista över steg som hjälper dig att komma igång med fasen **
 
 -   Identifiera grupper som kan kräva riktad kommunikation och utbildning.
 
--   Anpassa e-postkommunikation och uppdatera intranät-webbplatsen. Identifiera fortlöpande ägare för kommunikation/resursuppdatering.
+-   Anpassa e-postkommunikation, uppdatera intranät
+
+-   Identifiera fortlöpande ägare för kommunikation/resursuppdatering.
 
 -   Beskriv vilka utbildningsmetoder som ska användas.
 
@@ -108,6 +110,6 @@ Följande är några utmaningar som du kan stöta på i fasen **Företagsomfatta
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

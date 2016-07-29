@@ -1,9 +1,9 @@
 ---
 title: "Felsökningsprinciper | Microsoft Intune"
-description: 
+description: "Felsöka problem med principkonfiguration."
 keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/26/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.sourcegitcommit: ac3417781df0a5b092a70620aa7343849b1e8c82
-ms.openlocfilehash: 3ac6b06b7eb85503786b4d8b0b9bd2a30d2a15e6
+translationtype: Human Translation
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: 06468bd7d6cdcf84da269c8132b37240ef1f2197
 
 
 ---
@@ -47,7 +48,7 @@ På skärmbilden nedan ser du två tydliga exempel:
 ![Intune-enhetsprincip](../media/Intune-Device-Policy-v.2.jpg)
 
 > [!NOTE]
-> [!NOTE] Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
+> Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
 
 ## Uppdateringsintervall för principer
 Tänk på att principer uppdateras enligt regelbundna intervall. I allmänhet ska principer registreras på enheter inom 15 minuter från ändringen. Här finns mer information om regelbundna intervall för principuppdatering:
@@ -70,7 +71,7 @@ För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på
 2.  Vänta 20 minuter tills klientprogrammet har tagits bort.
 
     > [!NOTE]
-    > [!NOTE] Försök inte att ta bort klienten från Program och funktioner.
+    > Försök inte att ta bort klienten från Program och funktioner.
 
 3.  Skriv **UAC** på startmenyn för att öppna inställningarna för User Account Control.
 
@@ -112,6 +113,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,28 +1,26 @@
 ---
 title: Konfigurera iOS- och Mac-enhetshantering | Microsoft Intune
-description: 
+description: "Aktivera hantering av mobila enheter (MDM) för iOS-enheter, inklusive iPad och iPhone samt Mac OS X-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb44d53c87bec1b6892bf49a65f3df684199ed08
-ms.openlocfilehash: 9766b6e64259d809b04e6f6004c25ed88ad72659
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 8a41c4c4f0ab4b4864fe366a2852046693b6baee
 
 
 ---
 
 # Konfigurera iOS- och Mac-enhetshantering
-Med Microsoft Intune kan du aktivera BYOD (”Bring Your Own Device”) för registreringen av iOS- och Mac OS X-enheter så att iPhone-, iPad- och Mac-användare får åtkomst till företagets e-post och appar. När den här funktionen har aktiverats kan användarna installera Intunes företagsportalapp så att principer kan tillämpas på deras enheter via Intune-administrationskonsolen.
-
-Innan du kan hantera iOS-enheter med Intune måste enheterna kunna kommunicera med Intune. Apple kräver en förtroenderelation med Intune som upprättas genom att ett certifikat för Apple Push Notification Service (APNs) importeras.
+Ge åtkomst till företagets e-post och appar med Intunes hantering av mobila enheter för iPad, iPhone, och Mac OS X-enheter. Ett APNs-certifikat (Apple Push Notification Service) från Apple krävs för att kunna hantera iOS- och Mac-enheter med Intune. När certifikatet har lagts till i Intune kan användare installera företagsportalappen och registrera sina enheter, eller så kan administratören konfigurera [hantering av företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Konfigurera Intune**<br>
     Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [utfärdare av mobilenhetshantering](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) och genom att konfigurera MDM.
@@ -50,6 +48,6 @@ Om företaget eller organisationen köper iOS-enheter åt användarna kan enhete
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

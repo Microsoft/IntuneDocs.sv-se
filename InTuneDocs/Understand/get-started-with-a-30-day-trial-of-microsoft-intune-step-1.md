@@ -1,9 +1,9 @@
 ---
 title: "Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intune | Microsoft Intune"
-description: 
+description: "Hur du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune och vad du behöver tänka på innan du registrerar dig"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: dad88d43-0054-4be6-9e5d-ada5a957dd6c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fe1587bead9e4cd350f5ffcf925fe04afd824ea0
-ms.openlocfilehash: f97b619d2b82556685cf0e247700d1fd8c8d4369
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: 5c36bac82389453d83504564cf26beb1027feefe
 
 
 ---
@@ -61,6 +61,6 @@ Gratulerar! Du har precis slutfört steg 1 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

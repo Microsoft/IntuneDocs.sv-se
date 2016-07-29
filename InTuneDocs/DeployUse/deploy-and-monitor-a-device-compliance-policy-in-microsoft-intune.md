@@ -1,10 +1,10 @@
 ---
-title: "Distribuera och övervaka efterlevnadsprincipen i Microsoft Intune | Microsoft Intune"
-description: 
+title: "Distribuera och övervaka en enhetsefterlevnadsprincip | Microsoft Intune"
+description: "Följ instruktionerna i det här avsnittet om du vill distribuera och övervaka en enhetsefterlevnadsprincip."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 52da5cf6d14a5fc3ff3db6bdb07823d3bf373466
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 4345f46b67e1a2d77580fa87e4143bd96588f4e3
 
 
 ---
@@ -31,7 +31,8 @@ Distribuera efterlevnadsprincipen som du har [skapat](create-a-device-compliance
 
 Använd statussammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** för att identifiera problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan **Instrumentpanel** .
 
-> [!IMPORTANT]Om du inte har implementerat en villkorspolicy och därefter aktiverat en Exchange villkorlig åtkomstpolicy kommer alla målriktade enheter att ges tillgång.
+> [!IMPORTANT]
+> Om du inte har implementerat en villkorspolicy och därefter aktiverat en Exchange villkorlig åtkomstpolicy kommer alla målriktade enheter att ges tillgång.
 
 ## Så här löser du Intunes principkonflikter
 Principkonflikter kan uppstå när flera Intune-principer används på en enhet. Om principinställningarna överlappar varandra löser Intune eventuella konflikter med följande regler:
@@ -71,6 +72,6 @@ Du kan nu använda efterlevnadsprincipen med principer för villkorlig åtkomst 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

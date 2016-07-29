@@ -1,10 +1,10 @@
 ---
 title: "Principinställningar för Windows 10 |Microsoft Intune"
-description: 
+description: "Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,19 +12,24 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
-ms.sourcegitcommit: 1cccafa5f740bad50779ae36c899fd23ee7dc5f3
-ms.openlocfilehash: 70347776f72a3534a4c384957aef01a909767b99
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: bb08ea54b24e0395972ce29ae05ff2b7b6ee4220
 
 
 ---
 
 # Principinställningar för Windows 10 i Microsoft Intune
 
-Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter.
+Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter.
+
+> [!IMPORTANT]
+> Du kan hantera Windows 10-datorer på två olika sätt: Genom att registrera dem eller genom att installera Intune-klientprogramvara. Varje metod erbjuder olika funktioner (mer information finns i [Välj hur du vill hantera enheter](/intune/get-started/choose-how-to-manage-devices)).
+> När du hanterar Windows 10-enheter med Intune-klientprogramvaran kan du inte använda de principer och inställningar som anges i det här avsnittet. Om du vill använda dessa inställningar måste du registrera Windows 10-enheterna i Intune.
 
 ## Generella inställningar för konfigurationsprinciper
 
-Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter. Den här principen kan inte användas när du hanterar Windows 10-datorer med Intune-klientprogrammet.
+Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windows 10 om du vill konfigurera allmänna inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter. 
 
 
 ### Lösenord
@@ -161,7 +166,7 @@ Alla inställningar gäller endast Windows 10 Desktop.
 |**Intervall för signaturuppdatering**|Ange med vilket intervall som Defender ska söka efter nya signaturfiler.|
 |**Tillåt molnskydd**|Tillåt eller förhindra att Microsoft Active Protection Service tar emot information om skadlig kod från enheter som du hanterar. Den här informationen används för att förbättra tjänsten i framtiden.|
 |**Be användarna att skicka exempel**|Styr huruvida filer som kan kräva ytterligare analys av Microsoft för att avgöra om de är skadliga ska skickas automatiskt till Microsoft.|
-|**Identifiering av potentiellt oönskade program**|Du kan använda den här inställningen för att skydda registrerade stationära Windows-datorer från att köra program som Windows Defender har klassificerat som potentiellt oönskade. Du kan skydda dig mot att dessa program körs eller använda granskningsläget för att rapportera att ett potentiellt oönskat program har installerats.|
+|**Identifiering av potentiellt oönskade program**|Du kan använda den här inställningen för att skydda registrerade Windows-skrivbordsenheter från att köra program som Windows Defender har klassificerat som potentiellt oönskade. Du kan skydda dig mot att dessa program körs eller använda granskningsläget för att rapportera att ett potentiellt oönskat program har installerats.|
 |**Filer och mappar som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till en eller flera filer och mappar som **C:\Sökväg** eller **%ProgramFiles%\Sökväg\filnamn.exe** i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.|
 |**Filändelser som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till ett eller flera filnamnstillägg som **jpg** eller **txt** i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.|
 |**Processer som ska undantas när du kör en skanning eller använder realtidsskydd**|Lägg till en eller flera processer av typen **.exe**, **.com** eller **.scr** i undantagslistan. De här processerna tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.| 
@@ -327,6 +332,6 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

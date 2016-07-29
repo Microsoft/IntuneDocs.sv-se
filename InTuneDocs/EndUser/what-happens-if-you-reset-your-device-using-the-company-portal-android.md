@@ -1,26 +1,27 @@
 ---
-title: "Vad händer om du återställer en enhet med hjälp av företagsportalen? | Microsoft Intune"
+title: "Vad händer om du återställer en Android-enhet med hjälp av företagsportalen? | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5d4e31a2-7bda-4d62-a0ba-c31e77ecea03
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 565ada54c6267d38764f3e1049b5569da1f796cd
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 19618f98a951648b47f07ebda1d7a2ed682dcc27
 
 
 ---
 
 
-# Vad händer om du återställer en enhet med hjälp av företagsportalen?
+# Vad händer om du återställer en Android-enhet med hjälp av företagsportalen?
 
 När du använder företagsportalen för att återställa en Android-enhet raderas alla appar, inställningar och personliga data på enheten, och enheten återställs till fabriksinställningarna.
 
@@ -36,6 +37,7 @@ Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

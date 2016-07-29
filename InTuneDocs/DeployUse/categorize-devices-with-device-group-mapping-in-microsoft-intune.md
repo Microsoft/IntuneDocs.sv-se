@@ -1,10 +1,10 @@
 ---
 title: Kategorisera enheter med gruppmappning av enheter | Microsoft Intune
-description: 
+description: "Använd mappning av enhetsgrupp i Microsoft Intune för att gruppera enheter i kategorier som du definierar för att göra det enklare att hantera dessa enheter."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ms.reviewer: sumitp
 ms.suite: ems
-ms.sourcegitcommit: bb30b8e61a768b15e2f09993f4dceae8f4e1bd8a
-ms.openlocfilehash: 55f811153bf37048a4fcdfc6da301a5f181700c3
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 3eda87026f46ed911c83b874f7ef9362f0705492
 
 
 ---
@@ -52,6 +53,6 @@ Nu när användare registrerar sina enheter får de se en lista med de kategorie
 [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

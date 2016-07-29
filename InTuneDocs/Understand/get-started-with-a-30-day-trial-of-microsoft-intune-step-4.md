@@ -1,9 +1,9 @@
 ---
-title: "Skapa principer och publicera en app för utvärderingsanvändare | Microsoft Intune"
-description: 
+title: "Skapa principer och publicera en app för användare | Microsoft Intune"
+description: "Så här skapar du principer och publicerar en app när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9755499575118feecf33780ee29a70525f95508e
-ms.openlocfilehash: 658806c07ea78a327819376c1b47af53ac51f0f9
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: fb11c48b50e1aa8642a51a542baebe0d068ecda4
 
 
 ---
@@ -99,6 +99,6 @@ Gratulerar! Du har precis slutfört steg 4 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

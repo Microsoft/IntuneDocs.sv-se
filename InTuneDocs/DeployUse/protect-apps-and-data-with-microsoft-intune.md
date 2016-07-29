@@ -1,10 +1,10 @@
 ---
 title: Skydda data och appar | Microsoft Intune
 description: 
-keywords: 
+keywords: "I det här avsnittet beskrivs de olika Intune-funktionerna och hur du kan skydda företagets appar och data."
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 9445b4b171eb2102d73cf0e866e85b535274eee2
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: f60541c2e9284ea795c5e9811ef2663113af57cb
 
 
 ---
@@ -39,7 +39,9 @@ Att skydda åtkomsten till företagets resurser är bara det första steget i at
 - Skyddar åtkomsten till appar genom att kräva PIN-kod/lösenord eller autentiseringsuppgifter för företaget.
 - Tvingar alla länkar att öppnas i Intune Managed Browser.
 
-Den här uppsättningen regler kallas för [hanteringsprinciper för mobila appar (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  MAM-principer kan tillämpas på appar som körs på enheter som kan, men som inte nödvändigtvis, hanteras av dig.  Du kan skydda företagets data genom att använda MAM-principer för enheter som är registrerade i Intune, enheter som är registrerade och som hanteras i en tredje parts MDM-lösning eller enheter som inte hanteras av dig, t.ex. personalägda enheter.
+Den här uppsättningen regler kallas för [hanteringsprinciper för mobila appar (MAM)](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).  MAM-principer kan tillämpas på appar som körs på enheter som kan, men som inte nödvändigtvis, hanteras av dig.  
+
+Du kan skydda företagets data genom att använda MAM-principer för enheter som är **registrerade i Intune**, enheter som är **registrerade och som hanteras i en MDM-lösning från tredje part** eller enheter som **inte hanteras i någon MDM-lösning**, t.ex. personalägda enheter.
 
 Om du vill associera en app med en MAM-princip måste Microsoft Intune App Software Development Kit (SDK) ingå i appen eller så använder du appomslutningsverktyget.
 
@@ -51,6 +53,6 @@ Förutom att förhindra eller begränsa dataflyttning om en enhet blir stulen el
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: Distribuera appar | Microsoft Intune
-description: 
+description: "Ta hjälp av informationen i den här artikeln när du distribuerar appar med Microsoft Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,17 +13,17 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c95a776e79cf3e1c7009d6e27f8f50482434d298
-ms.openlocfilehash: 46562ed3463c4a23a511eb5c7f28a0b11e84f421
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: f3a8492532f01c576b1abf3c3228ba99dbd0d547
 
 ---
 # Distribuera appar i Microsoft Intune
 
-Använd informationen i den här artikeln som hjälp för att planera användning av Microsoft Intune-appar.
+Ta hjälp av informationen i den här artikeln när du distribuerar appar med Microsoft Intune.
 
 
 ## Distribuera en app
-I den här proceduren ska du distribuera appen till valda enheter eller användare.
+I den här proceduren ska du distribuera appen till valda grupper av enheter eller användare.
 
 ### Distribuera en app
 
@@ -52,11 +52,11 @@ I den här proceduren ska du distribuera appen till valda enheter eller använda
 ## Exempel
 
 I det här exemplet distribuerade du appen som **Tillgänglig** på en iOS-enhet.
-Appen visas i företagsportalen på användarnas enheter och de kan installera appen därifrån. I den här skärmbilden har till exempel Bing for iOS-appen distribuerats med installationstypen **Extern länk**, med en anpassad ikon, och alternativet **Visa den här som en aktuell app och markera den i företagsportalen** har valts.
-    ![Tillgänglig iOS-app](./media/available-install-on-iOS.png)
+Appen visas i företagsportalen på användarnas enheter och de kan installera appen därifrån. I den här skärmbilden har till exempel Bing for iOS-appen distribuerats med installationstypen **Extern länk**, med en anpassad ikon, och alternativet **Visa den här som en aktuell app och markera den i företagsportalen** har valts.  
+![Tillgänglig iOS-app](./media/available-install-on-iOS.png)
 
-Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får användaren ett meddelande om att en app är redo att installera. I den här skärmbilden har till exempel Work Folders for iOS-appen distribuerats med installationstypen **Hanterad iOS-app från App Store**.
-    ![Obligatorisk iOS-app](./media/iOS-Required-install.PNG)
+Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får användaren ett meddelande om att en app är redo att installera. I den här skärmbilden har till exempel Work Folders for iOS-appen distribuerats med installationstypen **Hanterad iOS-app från App Store**.  
+![Obligatorisk iOS-app](./media/iOS-Required-install.PNG)
 
 ## Nästa steg
 
@@ -64,6 +64,6 @@ När du har distribuerat en app vill du övervaka dess förlopp. Mer information
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

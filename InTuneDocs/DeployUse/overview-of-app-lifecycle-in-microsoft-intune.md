@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Översikt över applivscykeln | Microsoft Intune
-description:
-keywords:
+title: "Översikt över applivscykeln | Microsoft Intune"
+description: "Läs om livscykeln för Intune-hanterade appar, från de läggs till tills de tas ur bruk."
+keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: mghadial
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: ede28a99224b3d0bd94a4300b4b8b85815ae9591
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 
 Applivscykeln i Intune börjar när en app läggs till och fortsätter genom fler faser tills du tar bort dem.
 
-![Applivscykeln](./media/applifecycle_nobg.png "the Intune app lifecycle")
+![Applivscykeln](./media/app-lifecycle.png "the Intune app lifecycle")
 
 ## Lägg till
 
@@ -56,6 +50,7 @@ Intune ger många sätt att skydda data i dina appar. De viktigaste metoderna ä
 Så småningom är det troligt att appar som du har distribuerat blir inaktuella och måste tas bort. Intune gör det enkelt att [dra tillbaka appar från tjänsten](retire-apps-using-microsoft-intune.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "Felsöka enhetsregistrering | Microsoft Intune"
-description: 
+description: "Förslag på hur du kan felsöka problem med enhetsregistrering."
 keywords: 
 author: Nbigman
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/26/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d12a31eb0727f7ca0c460049ac6fffb314daf70e
-ms.openlocfilehash: 62668c607bc3064cf8148fd7929b3c1268b721d7
+ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
+ms.openlocfilehash: e10ef68d97127b848a7d624ba40d219ffed3d06d
 
 
 ---
@@ -144,7 +144,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
 ### Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
-**Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter. 
+**Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
 
 
 **Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
@@ -160,8 +160,29 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
 
-
 4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+
+### Certifikatfel (Android)
+
+**Problem**: Användaren får meddelandet *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat* på enheten.
+
+**Lösning**:
+
+- Användaren kan prova att hämta certifikatet som saknas med hjälp av [de här anvisningarna](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
+- Om användaren inte lyckas hämta certifikatet kanske mellanliggande certifikat saknas på ADFS-servern. Mellanliggande certifikat krävs för att Android ska lita på servern.
+
+Så här importerar du certifikaten till ADFS-servern eller proxyservrar:
+
+1.  På ADFS-servern startar du **Microsoft Management Console** och lägger till snapin-modulen för certifikat för **datorkontot**.
+5.  Sök efter certifikatet som ADFS-tjänsten använder och visa dess överordnade certifikat.
+6.  Kopiera det överordnade certifikatet och klistra in det under **Computer\Intermediate Certification Authorities\Certificates**.
+7.  Kopiera certifikaten för ADFS, ADFS-dekryptering och ADFS-signering och klistra in dem i det personliga arkivet för ADFS-tjänsten.
+8.  Starta om ADFS-servrarna.
+
+Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
+
+
+
 ## iOS-problem
 ### Det gick inte att installera profilen
 **Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS-enhet.
@@ -179,34 +200,34 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 ### En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen i Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
-- Du kanske har registrerat Intune Connector för ett konto och sedan för ett annat. 
+- Du kanske har registrerat Intune Connector för ett konto och sedan för ett annat.
 - Du kanske har hämtat MDM-certifikatet från ett konto och använt det för ett annat.
 
 
 **Lösning:** Utför följande steg:
 
-1. Inaktivera iOS i Windows Intune Connector. 
+1. Inaktivera iOS i Windows Intune Connector.
     1. Högerklicka på Intune-prenumerationen och välj **Egenskaper**.
     1. På fliken iOS avmarkerar du Aktivera iOS-registrering.
 
 
 
 1. I SQL kör du följande steg mot CAS-databasen
-  
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%' 
-    1. delete from MDMPolicy where PolicyType = 7 
+
+    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
+    1. delete from MDMPolicy where PolicyType = 7
     1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%' 
-    1. delete from MDMPolicy where PolicyType = 11 
-    1. delete from MDMPolicyAssignment where PolicyType = 11 
+    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
+    1. delete from MDMPolicy where PolicyType = 11
+    1. delete from MDMPolicyAssignment where PolicyType = 11
     1. DELETE Drs_Signals
-1. Starta om SMS Executive-tjänsten eller CM-servern 
+1. Starta om SMS Executive-tjänsten eller CM-servern
 
 
 
 1. Skaffa ett nytt APN-certifikat och ladda upp det: Högerklicka på Intune-prenumerationen i den vänstra rutan i Configuration Manager. Välj **Skapa APNs-certifikatförfrågan** och följ instruktionerna.
 ## Problem när du använder System Center Configuration Manager med Intune
-### Mobila enheter försvinner 
+### Mobila enheter försvinner
 **Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
 
 **Lösning:** Detta kan inträffa eftersom du har en egen process som tar bort enheter som inte är anslutna till en domän eller för att användaren har dragit tillbaka enheten från prenumerationen. Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
@@ -235,22 +256,22 @@ En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokume
 
 ### Datorn har redan registrerats – Fel hr 0x8007064c
 **Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
-  
+
 Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 
 
 
-**Lösning:** 
+**Lösning:**
 
-1. Öppna **Start**-menyn och välj **Kör** -> **MMC**. 
+1. Öppna **Start**-menyn och välj **Kör** -> **MMC**.
 1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
 1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
-1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**. 
+1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**.
 1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
 1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
-1. Försök att registrera datorn igen. 
-1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**. 
-1. Försök att registrera datorn igen. 
+1. Försök att registrera datorn igen.
+1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Försök att registrera datorn igen.
 
     > [!IMPORTANT]
     > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
@@ -285,6 +306,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

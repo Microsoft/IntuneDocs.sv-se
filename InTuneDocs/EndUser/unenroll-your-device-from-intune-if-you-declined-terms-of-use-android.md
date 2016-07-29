@@ -1,9 +1,9 @@
 ---
 title: "Avregistrera enheten från Intune om du avvisade användningsvillkoren | Microsoft Intune"
-description: 
+description: "Beskriver hur du avregistrerar en Android-enhet från Intune om du avvisade användningsvillkoren och inte kan logga in på företagsportalappen"
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 ms.reviewer: chrisbal
 ms.suite: ems
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: abcb7dbe4f3423fcba108a7ea0c4b2efa295c970
+translationtype: Human Translation
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 82cc94eb37b11251343706d60a45fb78458cab7e
 
 
 ---
@@ -37,12 +38,14 @@ Avregistrera enheten från Intune och avinstallera företagsportalappen
 
     Nu kan du installera företagsportalappen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

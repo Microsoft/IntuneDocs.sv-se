@@ -1,10 +1,10 @@
 ---
-title: Skydda Windows-enheter med multifaktorautentisering | Microsoft Intune
-description: 
+title: "Multi-factor Authentication för Windows | Microsoft Intune"
+description: "Intune integrerar Multi-factor Authentication (MFA) för att skydda företagets resurser."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2023d7bc1d35b423a216ece195cdca9a6a542446
-ms.openlocfilehash: 15e546b93c2a3aff551efa36ac80ff212ada5812
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: c1f9c60a1c79d23bab62617ed237ad982e82c39d
 
 
 ---
 
 # Protect Windows devices with multi-factor authentication
-Microsoft Intune integrerar multifaktorautentisering (MFA) för att skydda företagets resurser. MFA kräver autentiseringsfaktorer som textautentisering förutom användarnamn och lösenord. Intune stöder multifaktorautentisering vid registrering av Windows 8.1-enheter eller senare, Windows Phone 8.1-enheter eller Windows 10 Desktop- och Mobile-enheter. 
+Microsoft Intune integrerar multifaktorautentisering (MFA) för att skydda företagets resurser. MFA kräver autentiseringsfaktorer som textautentisering förutom användarnamn och lösenord. Intune stöder multifaktorautentisering vid registrering av Windows 8.1-enheter eller senare, Windows Phone 8.1-enheter eller Windows 10 Desktop- och Mobile-enheter.
 
 ## Krav på lokal infrastruktur för ADFS MFA
 Om du vill konfigurera multifaktorautentisering behöver du:
@@ -55,7 +55,6 @@ Information om hur du aktiverar multifaktorautentisering i AD FS finns i [Manage
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

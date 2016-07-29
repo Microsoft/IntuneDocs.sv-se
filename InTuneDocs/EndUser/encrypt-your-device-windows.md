@@ -1,9 +1,9 @@
 ---
 title: Kryptera din Windows-enhet i Intune | Microsoft Intune
-description: 
+description: Beskriver hur du krypterar en Windows-enhet
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 8d022ea7-d9b6-43c4-adcd-4f6421606a7f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: aeeb607e54a207792e1cc8c16ee2ecd25a553e34
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 6f7da9c3df479e8664b4425c1fec1c655fd103b4
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: aeeb607e54a207792e1cc8c16ee2ecd25a553e34
 
 I syfte att skydda företags- eller skoldata kan IT-administratören kräva att du krypterar Windows-enheten. Om du har en Windows Phone som du har registrerat krypteras enheten automatiskt om kryptering krävs.
 
-Om du har en stationär enhet följer du anvisningarna nedan för att kryptera den. 
+Om du har en stationär enhet följer du anvisningarna nedan för att kryptera den.
 
 1.  Sök efter och starta sedan appen **Hantera BitLocker**.
 
@@ -37,6 +37,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

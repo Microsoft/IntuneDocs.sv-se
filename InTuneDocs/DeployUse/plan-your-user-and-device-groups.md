@@ -1,20 +1,20 @@
 ---
 title: "Planera dina användar- och enhetsgrupper | Microsoft Intune"
-description: 
+description: "Planera grupper för att uppfylla organisationens behov."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
-ms.reviewer: jeffgilb
+ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 82ab2dbfada6c0745195da149d5f0dc1948ceb92
-ms.openlocfilehash: e89d8384532b994d810649fc07c698237e2f3cec
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: bb3e96ad4276819ad46ab2a5e1a8deb931bd421a
 
 
 ---
@@ -215,6 +215,6 @@ Genom att namnge principerna på det här sättet kan du snabbt identifiera prin
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

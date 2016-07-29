@@ -1,10 +1,10 @@
 ---
-title: "Rensa hanterade företagsdata från appar med Microsoft Intune | Microsoft Intune"
-description: 
+title: "Rensa hanterade företagsdata från appar | Microsoft Intune"
+description: "Läs om hur du tar bort företagsdata från enheter selektivt via fjärranslutning."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: ebc83611679f5128df45e4ca6b2f3b745f47061d
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 89a7cc6bdd81387ff008bc43cc206eed6975fc7e
 
 
 ---
@@ -61,6 +61,6 @@ Bladet **Hantering av mobilprogram i Intune** innehåller en sammanfattad rappor
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,25 +1,27 @@
 ---
 title: "Principinställningar för Windows Phone 8.1 | Microsoft Intune"
-description: 
+description: "I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Windows Phone 8.1-enheter. Du kan också ange OMA-URI-värden för att skapa anpassade inställningar som inte är tillgängliga från Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a280fcbecf82e6ff27e40d2d53331b3988953ff7
-ms.openlocfilehash: fe685da41bb5379526bdc28c2f9cceb6b7800703
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 04fca72cd426ee4718e100cb2633ca2c967b4c05
 
 
 ---
 
 # Principinställningar för Windows Phone 8.1 i Microsoft Intune
+
+I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Windows Phone 8.1-enheter. Du kan också ange OMA-URI-värden för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
 ## Allmänna konfigurationsinställningar
 
@@ -170,6 +172,6 @@ I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

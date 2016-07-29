@@ -1,9 +1,9 @@
 ---
 title: "Vad du behöver veta innan du startar Microsoft Intune | Microsoft Intune"
-description: 
+description: "Sida med länkar till krav och förutsättningar för Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/08/2016
 ms.topic: get-started-article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09caaa76d08f99b0d455d291fbd4002289f2f11c
-ms.openlocfilehash: fe2ebc32005d04e92b93fd817981aa2a632c2288
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: f68c53883a05263305f4cc9860ffc0bd7ee336f1
 
 
 ---
@@ -30,18 +30,13 @@ Innan du börjar konfigurera Microsoft Intune granskar du varje enskilt krav:
 - [Microsoft Intune-företagsportal](microsoft-intune-company-portal.md)
 - [Intune-integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)
 - [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md)
-- [Hantera anpassade domäner med Microsoft Intune](domain-names-for-microsoft-intune.md)
+- [Anpassade domännamn med Microsoft Intune](domain-names-for-microsoft-intune.md)
 
 
 Innan du använder Intune kan du också läsa [Funktioner för hantering av mobila enheter i Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune). Om du började med en utvärderingsprenumeration kan du konvertera den senare till en fullständig prenumeration. Läs [Köpa Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/Purchasing.aspx).
 
 
 
-
-
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

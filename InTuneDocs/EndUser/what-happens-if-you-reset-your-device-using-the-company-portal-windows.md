@@ -1,26 +1,27 @@
 ---
-title: "Vad händer om du återställer en enhet med hjälp av företagsportalen? | Microsoft Intune"
+title: "Vad händer om du återställer en Windows-enhet med hjälp av företagsportalen? | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
+ROBOTS: noindex,nofollow
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39e810466d3a98789f0f1338f68d2be80d757d39
-ms.openlocfilehash: 9ff73d6e2066b0fb3d2e8ca9d7732d4685e258fd
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 33809dbb8ee297a7f88a9615d8cec128ceadc96e
 
 
 ---
 
 
-# Vad händer om du återställer en enhet med hjälp av företagsportalen?
+# Vad händer om du återställer en Windows-enhet med hjälp av företagsportalen?
 
 När du använder företagsportalappen eller [företagsportalens webbplats](reset-your-device-cpwebsite.md) för att återställa din Windows-enhet återställs enheten till fabriksinställningarna. Alla appar, inställningar och data tas bort, inklusive personliga data. Det som händer på varje enskild enhet beror på typen av enhet och hur du använder den, enligt beskrivning i följande tabell. Anvisningar om hur du återställer en enhet som förlorats eller stulits finns i [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-windows.md).
 
@@ -36,6 +37,7 @@ Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

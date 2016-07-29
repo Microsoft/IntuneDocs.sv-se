@@ -1,20 +1,20 @@
 ---
-title: "Skydda iOS-enheter med Kringgå aktiveringslås | Microsoft Intune"
-description: 
+title: "Hantera iOS aktiveringslås på enheter | Microsoft Intune"
+description: "Microsoft Intune kan hjälpa dig att hantera iOS aktiveringslås, en funktion i Hitta Min iPhone appen för enheter med iOS 7.1 och senare."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
-ms.reviewer: jeffgilb
+ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 496679a196dc3e84c6b16ad0d3b830c81f12631b
-ms.openlocfilehash: 7bbd761b13f110297959a036ec15cafe1396377e
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 3980d1a498ccab3eb5683e03e0cce252959b89dc
 
 
 ---
@@ -82,12 +82,16 @@ Du kan se vilka enheter som använder aktiveringslås på två sätt:
 
     Om du väljer en enhet i noden **Alla företagsägda enheter** och aktiveringslåset är aktiverat för enheten, så kan du också se koden för att förbikopplingskoden. Koden kan användas för att manuellt kringgå aktiveringslåset.
 
+    > [!IMPORTANT]
+    >Intune hämtar information från enheter var 7:e dag för aktiveringslåset. Det innebär att enheterna kanske inte visas direkt med status för aktiveringslås i Intune-konsolen.
+
+
 ### Se även
 [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md)
 [Skydda dina enheter med fjärrlås och lösenordskodsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

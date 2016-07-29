@@ -1,10 +1,10 @@
 ---
 title: "Principinställningar för Windows | Microsoft Intune"
-description: 
+description: "Använd Intunes allmänna konfigurationsprincip för Windows (Windows 8.1 och senare) om du vill konfigurera inställningar för registrerade Windows 8.1- och Windows 8-enheter."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a280fcbecf82e6ff27e40d2d53331b3988953ff7
-ms.openlocfilehash: aa62528e588b0579669ab8d115766efd72e6f9b2
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 809c8dc87e9b7c2f27e8015a55606e376c5319ab
 
 
 ---
 
 # Principinställningar för Windows i Microsoft Intune
-Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows (Windows 8.1 och senare)** om du vill konfigurera inställningar för registrerade Windows 8.1- och Windows 8-enheter:
+Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Windows 8.1 och senare)** om du vill konfigurera följande inställningar för registrerade Windows 8.1- och Windows 8-enheter:
 
 ## Tillämplighetsinställningar
 
@@ -120,6 +120,6 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows (Window
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

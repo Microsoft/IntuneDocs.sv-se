@@ -1,42 +1,42 @@
 ---
 title: "Kom igång med att registrera enheter | Microsoft Intune"
-description: 
+description: "Ange krav för hantering av mobila enheter (MDM) och kom igång med att registrera olika operativsystem."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 71077d9f86a53cc66536928e4799fa4b1a51cdf0
-ms.openlocfilehash: 86d3b7894eca70454fa82393c4d06eab5a99246f
+ms.sourcegitcommit: 1f6f98d582ce9a686ca02682a9066d8b2162d6ab
+ms.openlocfilehash: 24b8434993d7661e12172ac0e5fe58d1e6621558
 
 
 ---
 
 # Dags att registrera enheter i Microsoft Intune
-Om du vill låta medarbetarna registrera mobila enheter (däribland [Android](set-up-android-management-with-microsoft-intune.md), [iOS and Mac](set-up-ios-and-mac-management-with-microsoft-intune.md), [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) och [Windows PC](set-up-windows-device-management-with-microsoft-intune.md)) med Intune måste du aktivera registrering av enheter. Om du vill tillåta registrering måste du ange en utfärdare för hantering av mobila enheter, konfigurera Intunes företagsportal, tilldela licenser och aktivera registrering för enhetsplattformen.
+Om du vill låta medarbetarna registrera mobila enheter (däribland [Android](set-up-android-management-with-microsoft-intune.md), [iOS och Mac](set-up-ios-and-mac-management-with-microsoft-intune.md), [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) och [Windows PC](set-up-windows-device-management-with-microsoft-intune.md)) med Intune måste du aktivera registrering av enheter. Om du vill tillåta registrering måste du ange en utfärdare för hantering av mobila enheter (MDM), konfigurera Intunes företagsportal, tilldela licenser och aktivera registrering för enhetsplattformen.
 
 ## Ange auktoritet för hantering av mobila enheter
-Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativ för MDM-utfärdare kan vara själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
+Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
 
 >[!IMPORTANT]
-> Överväg noggrant om du vill hantera mobila enheter endast med hjälp av Intune (onlinetjänst) eller System Center Configuration Manager med Intune (lokal programvarulösning i samband med onlinetjänsten). När du har angivit utfärdare för hantering av mobila enheter går det inte att ändra den.
+> Överväg noggrant om du vill hantera mobila enheter endast med hjälp av Intune (onlinetjänst) eller System Center Configuration Manager med Intune (lokal programvarulösning i samband med onlinetjänsten). När du har angett utfärdare för hantering av mobila enheter går det inte att ändra detta.
 
 
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter**.
+1.  Gå till [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter**.
 
 2.  Klicka på **Ange auktoritet för hantering av mobila enheter** i **Uppgiftslistan**. Dialogrutan **Ange MDM-auktoritet** öppnas.
 
     ![Dialogrutan Ange MDM-auktoritet](../media/intune-mdm-authority.png)
 
-3.  Intune begär bekräftelse på att du vill ha Intune som MDM-utfärdare. Markera kryssrutan och klicka sedan på **Ja** om du vill använda Microsoft Intune för att hantera mobila enheter.
+3.  Intune begär bekräftelse på att du vill ha Intune som MDM-utfärdare. Markera kryssrutan och välj sedan **Ja** om du vill hantera mobila enheter med Microsoft Intune.
 
 ## Konfigurera Intune-företagsportalen
 
@@ -49,7 +49,7 @@ Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina 
 
 ![admin-console-admin-workspace-comp-portal-settings](../media/cp_sa_cpsetup.PNG)
 
-#### Företagets kontaktinformation och sekretesspolicy
+### Företagets kontaktinformation och sekretesspolicy
 
 Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och informationen visas för användarna på skärmen Kontakta IT på företagsportalen. Sekretesspolicyn visas när användaren klickar på sekretesslänken.
 
@@ -59,10 +59,10 @@ Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och info
     |IT-avdelningens kontaktperson|40|Det här namnet visas på sidan **Kontakta IT-avdelningen**.|
     |IT-avdelningens telefonnummer|20|Det här numret visas på sidan **Kontakta IT-avdelningen**.|
     |IT-avdelningens e-postadress|40|Den här adressen visas på sidan **Kontakta IT-avdelningen**. Du måste ange en giltig e-postadress i formatet **alias@domännamn.com**.|
-    |Ytterligare information|120|Visas på sidan **Kontakta IT-avdelningen**.|
+    |Ytterligare information|120|Den här informationen visas på sidan **Kontakta IT-avdelningen**.|
     |URL till företagets sekretesspolicy|79|Du kan ange en egen sekretesspolicy för ditt företag som visas när användaren klickar på en länk på företagsportalen. Du måste ange en giltig URL i formatet https://www.contoso.com.|
 
-#### Supportkontakter
+### Supportkontakter
 Supportwebbplatsen visas för användarna på företagsportalen så att de kan få tillgång till onlinesupport.
 
 |Fältnamn|Högsta längd|Mer information|
@@ -71,7 +71,7 @@ Supportwebbplatsen visas för användarna på företagsportalen så att de kan f
     |Namn på webbplats|40|Det här är det egna namnet som visas för supportwebbplatsens URL. Om du bara anger URL:en till en supportwebbplats utan något eget namn visas **Gå till IT-webbplatsen** på sidan **Kontakta IT** på företagsportalen.|
 
 
-#### Varumärkesanpassning
+### Varumärkesanpassning
 
 Du kan anpassa företagsportalen med företagets logotyp, företagets namn, temafärg och bakgrund.
 
@@ -82,17 +82,17 @@ Du kan anpassa företagsportalen med företagets logotyp, företagets namn, tema
     |Välj en bakgrund för företagsportalappen i [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]|Den här inställningen påverkar bara bakgrunden i [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]-företagsportalappen.|
 
 
-När du har sparat ändringarna kan du använda länkarna längst ned på sidan **Företagsportal** i administrationskonsolen för att gå till företagsportalen. Dessa länkar kan inte ändras. När en användare loggar in visar dessa länkar dina prenumerationer på företagsportalen.
+När du har sparat ändringarna kan du använda länkarna längst ned på sidan **Företagsportal** i administratörskonsolen för att gå till företagsportalen. Dessa länkar kan inte ändras. När en användare loggar in visar dessa länkar dina prenumerationer på företagsportalen.
 
 ## Tilldela en Intune-användarlicens
 
-Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
+Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure Active Directory (Azure AD).
 
 1.  Logga in på [hanteringsportalen för Office 365](https://portal.office.com/Admin/Default.aspx) med dina klientadministratörsuppgifter.
 
-2.  Välj det användarkonto som du vill tilldela Intune-användarlicensen till och aktivera kryssrutan **Microsoft Intune** i egenskaperna för användarkontot.
+2.  Välj det användarkonto som du vill tilldela Intune-användarlicensen till och markera kryssrutan **Microsoft Intune** i egenskaperna för användarkontot.
 
-3.  Nu läggs användarkontot till i Microsoft Intune-användargruppen som beviljar användaren behörighet att använda tjänsten och registrera sina enheter för hantering.
+3.  Nu läggs användarkontot till i Microsoft Intune-användargruppen, vilket beviljar användaren behörighet att använda tjänsten och registrera sina enheter för hantering.
 
 ## Konfigurera enhetshantering
 När du har konfigurerat MDM-utfärdare måste du konfigurera enhetshantering för de operativsystem som organisationen vill ha stöd för. Stegen för att konfigurera enhetshantering varierar beroende på operativsystem. I Android OS krävs till exempel inte att du gör någonting i Intune-administratörskonsolen. Å andra sidan kräver Windows och iOS en förtroenderelation mellan enheter och Intune för att tillåta hantering.
@@ -104,11 +104,11 @@ När du har konfigurerat MDM-utfärdare måste du konfigurera enhetshantering f�
 - [Konfigurera Windows-enhetshantering med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
 
 Du kan också:
- - Använda [kontot för enhetsregistreringshanterare](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) för att registrera flera enheter
- - [Ange företagsägda enheter med hjälp av IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) för att registrera enheter och målprincip
+ - Använda [kontot för enhetsregistreringshanterare](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) för att registrera flera enheter.
+ - [Ange företagsägda enheter med hjälp av IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) för att registrera enheter och målprincip.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

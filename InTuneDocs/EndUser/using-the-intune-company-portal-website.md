@@ -1,9 +1,9 @@
 ---
 title: "Använda Intune-företagsportalens webbplats | Microsoft Intune"
-description: 
+description: "Beskriver företagsportalens webbplats och innehåller länkar till anvisningar för saker du kan göra på webbplatsen"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/03/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 79e8d7da83997dc9c89b95097ca50493af1f9f6b
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: bfce55b6d23554d1c3df2b62d6bf5fdd4607974b
 
 
 ---
@@ -24,19 +24,19 @@ ms.openlocfilehash: 79e8d7da83997dc9c89b95097ca50493af1f9f6b
 
 Du kan använda företagsportalens webbplats för att:
 
--   [Återställa enhetens lösenord](reset-your-passcode-cpwebsite.md)
-
 -   [Byta namn på enheten](rename-your-device-cpwebsite.md)
 
 -   [Ta bort din enhet](remove-your-device-cpwebsite.md)
 
 -   [Återställa din enhet](reset-your-device-cpwebsite.md)
 
+-   [Återställa enhetens lösenord](reset-your-passcode-cpwebsite.md)
+
 -   [Fjärrlåsa en enhet](remote-lock-your-device-cpwebsite.md)
 
 -   [Synkronisera enheten manuellt för att påskynda långsamma appinstallationer](sync-your-device-manually-cpwebsite.md)
 
--   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta. 
+-   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta.
 
 -   Se information om enheten, till exempel om den är kompatibel med principer för ditt företag eller din skola
 
@@ -50,6 +50,6 @@ Du kan utföra de flesta av samma uppgifter på **Företagsportalens webbplats**
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Ge åtkomst till företagsresurser med hjälp av certifikatprofiler | Microsoft Intune"
-description: 
+title: "Certifikatprofiler för åtkomst till resurser | Microsoft Intune"
+description: "Skydda åtkomsten via VPN, Wi-Fi och e-post med ett certifikat som installeras på varje användarenhet."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79617dd41e51402a73759da792f581028095a2f5
-ms.openlocfilehash: 1d2e6676714daba76a9b54553b4ad1af23a0f880
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 98c32f924b60734d9a592ebdd7e00429dc32af26
 
 
 ---
@@ -47,7 +47,7 @@ Du måste skapa en separat profil för varje plattform. När du skapar profilen 
 > -    Du måste skapa en utfärdare av företagscertifikat om du inte redan har en.
 >- Om du, beroende på dina enhetsplattformar, väljer att använda SCEP-profilen (Simplified Certificate Enrollment Protocol) måste du också konfigurera en NDES-server (Network Device Enrollment Service).
 >-  Om du planerar att använda SCEP- eller PFX-profiler måste du hämta och konfigurera Microsoft Intune Certificate Connector.
-> Konfigurationen av alla dessa beskrivs i avsnittet [Konfigurera infrastrukturen för certifikat](configure-certificate-infrastructure.md).
+> Konfigurationen av alla dessa beskrivs i [Konfigurera certifikatinfrastruktur för SCEP](configure-certificate-infrastructure-for-scep.md) och [Konfigurera certifikatinfrastruktur för PFX](configure-certificate-infrastructure-for-pfx.md).
 
 ### Nästa steg
 - [Konfigurera certifikatinfrastruktur för SCEP](configure-certificate-infrastructure-for-scep.md)
@@ -56,6 +56,6 @@ Du måste skapa en separat profil för varje plattform. När du skapar profilen 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

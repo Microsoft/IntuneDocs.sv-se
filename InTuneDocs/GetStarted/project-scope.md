@@ -1,10 +1,10 @@
 ---
 title: "Projektomfång | Microsoft Intune"
-description: 
+description: "Rekommendationer för projektomfångsfasen för en Intune-distribution."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 71488dad-2f78-478c-a505-5cb9410eec07
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9218b1f58032c07eddf84f04a667e2c56b5463ed
-ms.openlocfilehash: cf9b8bf9a07e4d5a29637fe52a0bfb6e0191478e
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: 14c65bdef3c9663c81ac9ecc00b662845f3209e5
 
 
 ---
@@ -60,7 +60,7 @@ Merparten av arbetet under omfångsfasen handlar om planering och förberedelser
 
 
  > [!NOTE]
- > 
+ >
  > Dessa mallar kan vara användbara när du arbetar med projektets omfattning:
  > > - [Beslutsmall för Intune eller Intune med Configuration Manager](https://gallery.technet.microsoft.com/Intune-or-Intune-with-900e8a78)
  > - [Planeringsmall för mobilappar](https://gallery.technet.microsoft.com/Mobile-app-planning-18689d59)
@@ -113,6 +113,6 @@ Följande är några utmaningar som du kan stöta på i **projektomfångs**fasen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
-title: "Avregistrera enheten från Intune | Microsoft Intune"
-description: 
+title: "Avregistrera din Android-enhet från Intune | Microsoft Intune"
+description: "Beskriver hur du avregistrerar en Android-enhet från Intune"
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,18 +13,20 @@ ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: db9755013320f11bd58fa94275274ad6ba2b5e9a
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 1586e72eef5afdc0baefde8e5a3c105af22edb62
 
 
 ---
 
 
-# Avregistrera enheten från Intune
+# Avregistrera en Android-enhet från Intune
 
 När du avregistrerar din Android-enhet från Intune kan enheten inte längre komma åt företagets resurser.  Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
-Avregistrera enheten från Intune och avinstallera företagsportalappen genom att följa dessa steg eller titta på den här [videon](http://aka.ms/gyq2du):
+Avregistrera enheten från Intune och avinstallera företagsportalappen genom att följa dessa steg eller titta på den här videon:
+
+<iframe width="675" height="379" src="https://www.youtube.com/embed/K-Vi7lNfaMk" frameborder="0" allowfullscreen></iframe>
 
 1.  Logga in på företagsportalappen.
 
@@ -40,12 +42,14 @@ Avregistrera enheten från Intune och avinstallera företagsportalappen genom at
 
     ![android-company-portal-unenroll-warning](./media/andr-3-warning-about-remove.png)
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

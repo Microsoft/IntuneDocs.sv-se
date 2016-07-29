@@ -1,20 +1,21 @@
 ---
-title: "Inaktivera Microsofts insamling av användningsdata | Microsoft Intune"
+title: "Inaktivera Microsofts insamling av användningsdata för Windows | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 51f1594d-0283-41d2-b4c3-a7a4ad70b369
+ROBOTS: noindex,nofollow
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 2c0f538ab85de4b76feb52bde71b9f325eacf17f
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: e539e95a92a9076ea3bab5df65c33cafcf2536d7
 
 
 ---
@@ -22,7 +23,7 @@ ms.openlocfilehash: 2c0f538ab85de4b76feb52bde71b9f325eacf17f
 
 # Inaktivera Microsofts insamling av användningsdata
 
-Microsoft samlar automatiskt in anonymiserade data om företagsportalappens tillförlitlighet och prestanda och hur den används för att kunna förbättra sina produkter och tjänster. 
+Microsoft samlar automatiskt in anonymiserade data om företagsportalappens tillförlitlighet och prestanda och hur den används för att kunna förbättra sina produkter och tjänster.
 
 Du kan inaktivera insamlingen av dessa data på en Windows-enhet med hjälp av inställningen **Användningsdata** i företagsportalappen. IT-administratörer har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
 
@@ -32,6 +33,7 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 
