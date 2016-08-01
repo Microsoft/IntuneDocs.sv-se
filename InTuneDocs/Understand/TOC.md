@@ -12,8 +12,11 @@
 ### [Starta en utvärdering och distribuera en princip för PIN-koder för iOS](start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md)
 ### [Konfigurera e-poståtkomst för iOS-enheter](set-up-email-access-for-ios-devices-using-microsoft-intune.md)
 ## [Vanliga scenarier](common-ways-to-use-intune.md)
-
-<!--- ## [Intune FAQ](frequently-asked-questions-for-microsoft-intune.md)--->
+## [Snabbstartsguider](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Förhindra företagsdataläckor från Office 365-mobilappar](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Publicera mobilappar till användarna](publish-mobile-apps-to-users.md)
+### [Skydda Windows-datorer mot skadlig kod](protect-pcs-against-malware-threats.md)
+### [Förenkla e-postkonfigurationen på mobila enheter](simplify-email-configuration-on-mobile-devices.md)
 
 # [Kom igång](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
@@ -22,6 +25,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
