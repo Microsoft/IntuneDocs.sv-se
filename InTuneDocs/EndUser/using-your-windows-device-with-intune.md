@@ -1,10 +1,10 @@
 ---
 title: "Använda en Windows-enhet med Intune | Microsoft Intune"
-description: 
+description: "Lista med länkar till saker du kan göra på din Windows-enhet när enheten har registrerats i Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,15 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: f5170f9230812e4c4606dac5258cde1da6b99089
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 85e6b4c4e507b83ba4a5f104e552e5a4f1fd68f2
 
 
 ---
 
 # Att använda din Windowsenhet med Intune
 
-Följ dessa steg för åtgärder som du behöver utföra på din Windows-enhet eller Windows-dator om ditt företag använder Microsoft Intune.
+Den här sidan innehåller länkar till alla åtgärder som användarna kan utföra på sina enheter som hanteras av Intune. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: registreringsrelaterad information, hanteringsuppgifter och efterlevnadsproblem.
 
 ## Installation av företagsportalappen och registrering av Intune
 
@@ -57,8 +57,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Använda en iOS- eller Mac OS X-enhet med Intune | Microsoft Intune"
-description: 
+description: "Lista med länkar till saker du kan göra på din iOS- eller Mac OS-enhet när enheten har registrerats i Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/03/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: bf298bace896a666d1f2992f2921ebf5a15f05f7
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: c91355b77850acbb76cd028bffb231e2ba1a5174
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Följ dessa steg för åtgärder som du behöver utföra på din iOS- eller Mac OS X-enhet om ditt företag använder Microsoft Intune.
+Den här sidan innehåller länkar till alla åtgärder som användarna kan utföra på sina enheter som hanteras av Intune. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: registreringsrelaterad information, hanteringsuppgifter och efterlevnadsproblem.
 
 ## Installation av företagsportalappen och registrering av Intune
 
@@ -50,7 +50,7 @@ Det här avsnittet innehåller information om åtgärder som du kan vidta när d
 
 Det här avsnittet innehåller information om hur du löser problem som kan uppstå när en iOS-enhet registreras i Intune.
 
-- [Återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device)
+- [Återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
 - [Skicka fel till IT-administratören](send-errors-to-your-it-admin-ios.md)
 - [Du får ett felmeddelande när du använder företagsportalappen](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Du får felmeddelanden när du försöker registrera enheten i Intune](you-see-errors-while-trying-to-enroll-your-device-in-intune-ios.md)
@@ -61,8 +61,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

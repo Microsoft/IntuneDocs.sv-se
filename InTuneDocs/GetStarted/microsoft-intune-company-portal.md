@@ -1,9 +1,9 @@
 ---
 title: "Microsoft Intune-företagsportal | Microsoft Intune"
-description: 
+description: "konfigurera Intune-företagsportalen"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 4dc3d084-0394-4ee7-b7fa-a72523928627
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65769fade08dea34b3e788628e578d58f90389f3
-ms.openlocfilehash: 815e36569e17bde750b49c7d7b10744a9b614635
+ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
+ms.openlocfilehash: 743be083ca9e8bed989982092f103b18f8f73582
 
 
 ---
@@ -28,7 +28,7 @@ Intune-företagsportalen är ett verktyg som ger användarna åtkomst till före
 -   **Företagsportalappen**: En app som är tillgänglig på enheter som du hanterar med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Läs mer om företagsportalapparna för [Android](/Intune/EndUser/using-your-android-device-with-intune), [iOS](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune) och [Windows](/Intune/EndUser/using-your-windows-device-with-intune).
 
 
-- **Företagsportalwebbplatsen**: En webbplats som ger åtkomst från [en webbläsare som stöds](supported-web-browsers.md). Webbadressen är [https://portal.office.com/Admin/Default.aspx](https://portal.office.com/Admin/Default.aspx). Läs mer om webbplatsen på [Använda Intune-företagsportalens webbplats](/Intune/EndUser/using-the-intune-company-portal-website).
+- **Företagsportalens webbplats**: En webbplats som kan nås från en [webbläsare som stöds](supported-web-browsers.md). Via webbplatsen kan användarna utföra de flesta av de aktiviteter som de kan göra från sin plattformsspecifika företagsportalapp. Webbadressen är [http://portal.manage.microsoft.com](http://portal.manage.microsoft.com). Läs mer om webbplatsen på [Använda Intune-företagsportalens webbplats](/Intune/EndUser/using-the-intune-company-portal-website).
 
 Några uppgifter som användarna kan utföra i företagsportalen:
 
@@ -53,6 +53,6 @@ Innan användarna får åtkomst till företagsportalen måste deras konto bevilj
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,20 +1,20 @@
 ---
 title: "Skydda data med hjälp av fjärrensning | Microsoft Intune"
-description: 
+description: "I Intune finns funktioner för selektiv och fullständig rensning så att du kan ta bort känsliga företagsdata och ta bort åtkomsten till många företagsresurser."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
-ms.reviewer: jeffgilb
+ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aa4dc77c66a34d9d50b83d072ed5e03674b4d293
-ms.openlocfilehash: bfb82684d8c4347297c3ed8659cc44e70ad4706c
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: c61fd1070f84f359ac6abe9ff48e51d2787c4eb4
 
 
 ---
@@ -29,6 +29,9 @@ Precis som med enheter kommer du någon gång att vilja eller behöva [dra tillb
 
 
 **Fullständig rensning** återställer enheten till fabriksinställningarna och tar bort alla företags- och användarrelaterade data och inställningar. Enheten tas bort från Intune. En fullständig rensning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen.  **Var försiktig med att välja fullständig rensning. Det går inte att återställa data på enheten**.
+
+> [!Warning]
+> Windows 10 RTM-enheter (d.v.s. enheter med en tidigare version än Windows 10 version 1511) som har mindre än 4 GB RAM-minne kan bli otillgängliga om de rensas. Om du vill komma åt en Windows 10-enhet som inte svarar, kan du starta enheten från en USB-enhet eller använda en liknande lösning.
 
 ## Selektiv rensning
 
@@ -55,7 +58,7 @@ En **selektiv rensning** tar bort företagets data inklusive eventuella MAM-data
 |Google Play-appar som inte hanteras|Appar och data förblir installerade|Appar och data förblir installerade|
 |Branschspecifika appar som inte hanteras|Appar och data förblir installerade|Apparna avinstalleras och lokala data i appen tas därmed bort. Inga data utanför appen (SD-kortet osv.) tas bort.|
 |Google Play-appar som hanteras|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade och oanvändbara men tas inte bort.|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade men tas inte bort.|
-|Branschspecifika appar som hanteras|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade och oanvändbara men tas inte bort.|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade men tas inte bort.|
+|Branschspecifika appar som hanteras|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade och oanvändbara men tas inte bort.|Appdata tas bort. Appen tas inte bort. Data som skyddas med MAM-kryptering utanför appen (SD-kortet osv.) förblir krypterade och oanvändbara men tas inte bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Borttaget|Borttaget|
 |Certifikatprofilinställningar|Certifikat återkallas, men tas inte bort.|Certifikat tas bort och återkallas.|
@@ -139,6 +142,6 @@ Hämta en rapport över enheter som har dragits tillbaka, rensats eller tagits b
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

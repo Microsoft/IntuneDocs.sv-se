@@ -1,20 +1,20 @@
 ---
-title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone med Microsoft Intune | Microsoft Intune
-description: 
+title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone | Microsoft Intune
+description: "Aktivera hantering av mobila enheter (MDM) för Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c5d1b53f09ce2f475cd934e36ddb19d019737431
-ms.openlocfilehash: e67a5be851b68d87a4cdda871824cf0ecb14579e
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: cc928e4facf592ca0f7398b374242a7a07ae193e
 
 
 ---
@@ -29,7 +29,7 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
 2.  **Ange ett DNS-alias för registreringsserverns adress** (valfritt)
 
-    Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. Om du inte skapar ett DNS-alias måste användarna
+    Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. CNAME DNS-posten är valfri för Windows-enhetsregistrering, men vi rekommenderar att du skapar en eller flera poster vid behov. Då blir det enklare att registrera Windows-enheter. Om ingen CNAME-post hittas ombeds användaren att ange namnet på MDM-servern manuellt.
 
   1.  Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats exempelvis är contoso.com, skulle du skapa en CNAME-post i DNS-servern som omdirigerar EnterpriseEnrollment.contoso.com till manage.microsoft.com. Om det finns mer än en verifierad domän skapar du en CNAME-post för varje domän. CNAME-resursposterna måste innehålla följande information:
 
@@ -56,6 +56,6 @@ Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen til
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

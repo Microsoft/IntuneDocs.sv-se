@@ -1,10 +1,10 @@
 ---
-title: Konfigurera Android-hantering med Microsoft Intune | Microsoft Intune
-description: 
+title: Konfigurera Android-hantering | Microsoft Intune
+description: "Aktivera hantering av mobila enheter (MDM) för Android- och KNOX-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1dc713099c982d6e32c87b814dd3f55b1656eda
-ms.openlocfilehash: 5f65887345c1a650c6d80863e42f447035c789f7
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 147765f6e8225e8e1d9d8e64473e8b6988256b03
 
 
 ---
@@ -46,6 +46,6 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO4-->
 
 

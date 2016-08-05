@@ -1,10 +1,10 @@
 ---
 title: "Azure Portal för MAM-principer | Microsoft Intune"
-description: 
+description: "Skapa hanteringsprinciper för mobilprogram i Azure Portal. De principer som du skapar här kan tillämpas på enheter som har, eller som inte har, registrerats i Intune."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 519bde55966d88f516553d509af60e34a6af62a9
+ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
+ms.openlocfilehash: 22aea1a9a2ff55ae7a8a115fae31b1358305a4a5
 
 
 ---
@@ -28,8 +28,10 @@ Azure Portal har stöd för att skapa MAM-principer för:
 - Appar som körs på enheter som **inte är registrerade** i någon MDM-lösning.
 - Appar som körs på enheter som **är registrerade i en MDM-lösning från tredje part**.
 
-Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 >[!IMPORTANT]
+
+> Om du för närvarande använder Intune-administratörskonsolen för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+
 > Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsol som används för att skapa MAM-principer. Om du skapar MAM-principer i både Intune-administrationskonsolen och Azure Portal, tillämpas principen i Azure Portal på apparna och distribueras till användarna.
 
 ## Logga in på Azure Portal och anpassa startsidan
@@ -38,13 +40,13 @@ Om du för närvarande använder **Intune-administratörskonsolen** för hanteri
 
     ![Skärmbild av inloggningssidan för Azure portal](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
-2.  När du har loggat in visas sidan **instrumentpanelen**. På sidan för **instrumentpanelen** finns en rad standardpaneler som du kan ta bort eller lägga till nya för att anpassa sidan.
+2.  När du har loggat in visas sidan **instrumentpanelen**. **Instrumentpanelssidan** kan anpassas.
 
     ![Skärmbild av instrumentpanelen i Azure portal](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
 3.  På menyn **Bläddra** letar du upp **Intune**.![Skärmbild av menyn Bläddra med Intune markerat](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
-4.  Klicka på **Intune > Hantering av mobilprogram i Intune > Inställningar**.
+4.  Välj **Intune > Hantering av mobilprogram i Intune > Inställningar**.
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
@@ -59,6 +61,6 @@ Om du för närvarande använder **Intune-administratörskonsolen** för hanteri
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

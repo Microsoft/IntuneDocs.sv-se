@@ -3,18 +3,19 @@ title: "Skicka loggar med diagnostikdata till IT-administratören via en USB-kab
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
+ROBOTS: noindex,nofollow
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 7ad4f4b726f093a14663fc5c4dbadf5603965075
+ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
+ms.openlocfilehash: 6cd0c267dc93d08369ecfb10939af8140b3c57e9
 
 
 ---
@@ -22,9 +23,11 @@ ms.openlocfilehash: 7ad4f4b726f093a14663fc5c4dbadf5603965075
 
 # Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel
 
-Följ stegen nedan om du använder en dator i stället för en mobil enhet och du vill skicka dataloggar från din mobila enhet till IT-administratören så att han eller hon kan identifiera och åtgärda ditt problem:
+Om du vill skicka dataloggar till IT-administratören för att få hjälp med ett problem kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet. Så här gör du:
 
-1.  Innan du börjar bör du kontrollera att du har din IT-administratörs e-postadress. Den visas vanligtvis på företagsportalens webbplats eller i företagsportalappen.
+1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
+
+2.  Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
 
 2.  Anslut din Android-enhet till en dator via en USB-kabel.
 
@@ -32,12 +35,13 @@ Följ stegen nedan om du använder en dator i stället för en mobil enhet och d
 
 4.  Bifoga alla filer i ett e-postmeddelande och skicka dem till din IT-administratör.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

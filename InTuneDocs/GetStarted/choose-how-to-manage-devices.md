@@ -1,10 +1,10 @@
 ---
 title: "Välj hur du vill hantera enheter | Microsoft Intune"
-description: 
+description: "Läs om de olika sätten att registrera och hantera enheter."
 keywords: 
-author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f33a86c51320c75ce74d20e0cac2b9581990ecec
-ms.openlocfilehash: c9b34408e4af34dafc700d016304a6d29c2e8585
+ms.sourcegitcommit: 76d0d9c620000864a4a554600985ba351c18d359
+ms.openlocfilehash: 067838593f7a222b5949cbfaf20744104030aee6
 
 
 ---
@@ -69,7 +69,7 @@ Du måste alltid registrera enheter för mobila enhetsoperativsystem, inklusive 
 ## Exchange ActiveSync-hantering
 Du kan också hantera enheter med Exchange ActiveSync. Det kräver att du installerar den lokala anslutningen eller använder den inbyggda tjänst-till-tjänst-anslutningen för att ansluta till Exchange Server.
 
-Information om maskin- och programvarukraven för att installera den lokala anslutningen finns i [Krav för den lokala anslutningen](/intune/deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connect).
+Information om maskin- och programvarukraven för att installera den lokala anslutningen finns i [Krav för den lokala anslutningen](/intune/deploy-use/intune-on-premises-exchange-connector#requirements-for-the-on-premises-connector).
 
 Information om hur du använder den lokala anslutningen eller tjänst-till-tjänst-anslutningen med Exchange finns i [Hantering av mobila enheter med Exchange ActiveSync och Microsoft Intune](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
 
@@ -80,6 +80,6 @@ Nu har du upptäckt några av de funktioner som du kan använda när du registre
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

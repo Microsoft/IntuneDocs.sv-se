@@ -1,10 +1,10 @@
 ---
 title: "Inställningar för efterlevnadsprinciper för Android-enheter | Microsoft Intune"
-description: 
+description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.sourcegitcommit: e736d688032dd2ddee5be9edf2a33d5e7ba5257b
-ms.openlocfilehash: dd3369cf59ea972f1ecc4953881ddbbede9a99c8
+translationtype: Human Translation
+ms.sourcegitcommit: 465a5f305ac191fdf761997df565423f4349ff91
+ms.openlocfilehash: ed358c07594507d3a9144e9c686b54dcbd30aede
 
 
 ---
@@ -55,9 +56,17 @@ Om du letar efter information om andra plattformar väljer du något av följand
 ### Kryptering
 - **Kräv kryptering på den mobila enheten:** Välj **Ja** för den här inställningen om du vill kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du konfigurerar inställningen **Kräv lösenord för att låsa upp mobila enheter**.
 
-## Inställningar för enhetens hälsotillstånd
+## Inställningar för enhetens för hälsotillstånd och säkerhet
 
 - **Enheten får inte vara jailbrokad eller rotad:** Om du aktiverar den här inställningen kommer jailbrokade enheter att utvärderas som inkompatibla.
+- **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)** Om du vill blockera enheter som har aktiverat **Säkerhet > Okända källor** på enheten aktiverar du och väljer **Ja** för inställningen.  
+>[!IMPORTANT]
+>Inställningen **Okända källor** måste vara aktiverad för program med separat inläsning.  Du bör endast tillämpa denna efterlevnadsprincip om du inte läser in Android-appar separat på enheter.
+
+- **Kräv att USB-felsökning är inaktiverat (Android 4.2 eller senare)**: Den här inställningen anger om du vill kontrollera om USB-felsökning är aktiverad på enheten.
+- **Kräv att ”Genomsök enhet efter säkerhetshot” (Android 4.2-4.4) är aktiverat på enheter**: Den här inställningen anger att funktionen **Verifiera appar** är aktiverad på enheten.
+- **Lägsta Android-säkerhetskorrigeringsnivå (Android 6.0 eller senare)**: Använd den här inställningen för att ange den lägsta Android-korrigeringsnivå.  Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste ha formatet ÅÅÅÅ-MM-DD.
+
 
 ## Inställningar för enhetsegenskaper
 - **Lägsta operativsystemversion som krävs:** När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel.
@@ -67,6 +76,6 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

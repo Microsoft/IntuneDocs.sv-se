@@ -1,10 +1,10 @@
 ---
 title: "Uppgradera principinställningar för Windows-version | Microsoft Intune"
-description: 
+description: "Läs om hur du uppgraderar Windows 10-enheter automatiskt till den senaste versionen med Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8589866a-3f13-489b-a5cd-cee017d16d54
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e911193075d2a621ef94f2917b2126501ea2100
-ms.openlocfilehash: e468ff102b45bf0c23fd76d8d15c44978861ae8a
+ms.sourcegitcommit: 2a08ace43fb61f57a9d29b119c59698bc50e7af8
+ms.openlocfilehash: 49bc54f36b281d85c9667c51fb6ddbe0d454b4d1
 
 
 ---
@@ -27,8 +27,8 @@ Med Microsoft Intunes **princip för versionsuppgradering** kan du automatiskt u
 ## Innan du börjar
 Innan du börjar uppgradera enheter till den senaste versionen behöver du något av följande:
 * En produktnyckel som är giltig för att installera den nya versionen av Windows på alla enheter som du riktar principen mot (för Windows 10 Desktop-versioner).
-* En licensfil från Microsoft som innehåller licensinformationen för att installera den nya versionen på alla enheter som du riktar principen mot (för Windows 10 Mobile- och Windows 10 Holographic-versioner).
-* Windows 10-enheter som du riktar in dig på måste vara registrerade i Microsoft Intune.
+* En licensfil från Microsoft som innehåller licensinformationen för att installera den nya Windows-versionen på alla enheter som du riktar principen mot (för Windows 10 Mobile- och Windows 10 Holographic-versioner).
+* Windows 10-målenheterna måste vara registrerade i Microsoft Intune.
 
 ## Inställningar för princip för versionsuppgradering
 
@@ -37,13 +37,14 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 |**Namn**|Ange ett namn på principen för versionsuppgradering.|
 |**Beskrivning**|Du kan även ange en beskrivning för principen som hjälper dig att identifiera den i Intune-konsolen.
 |**Version att uppgradera till**|I listrutan väljer du den version av Windows 10 Desktop, Windows 10 Holographic eller Windows 10 Mobile som du vill uppgradera riktade enheter till.
-|**Produktnyckel**|Ange produktnyckeln som du har skaffat från Microsoft som kan användas för att uppgradera alla inriktade Windows 10 Desktop-enheter.<br>När du har skapat en princip som innehåller en produktnyckel kan du inte redigera produktnyckeln senare. Det beror på att nyckeln döljs av säkerhetsskäl. Om du vill ändra produktnyckeln måste du ange hela nyckeln igen.
+|**Produktnyckel**|Ange produktnyckeln som du har skaffat från Microsoft som kan användas för att uppgradera alla Windows 10 Desktop-målenheter.<br>När du har skapat en princip som innehåller en produktnyckel kan du inte redigera produktnyckeln senare. Det beror på att nyckeln döljs av säkerhetsskäl. Om du vill ändra produktnyckeln måste du ange hela nyckeln igen.
 |**Licensfil**|Klicka på **Bläddra** och välj den licensfil som du har fått från Microsoft och som innehåller licensinformation för den Windows Holographic- eller Windows 10 Mobile-version som du vill uppgradera målenheterna till.
 
 ### Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jul16_HO4-->
 
 

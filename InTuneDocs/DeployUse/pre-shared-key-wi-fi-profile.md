@@ -1,10 +1,10 @@
 ---
 title: Wi-Fi med PSK | Microsoft Intune
-description: 
+description: "Använd Anpassad konfiguration för att skapa en Wi-Fi-profil med en i förväg delad nyckel."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 066baae17da1fd399f4f7d10784719e3dc46f235
-ms.openlocfilehash: 632adf3dccf40dd2b361d170f501a851bf0fda38
+ms.sourcegitcommit: 8fe47a5843414fbe4add7f77df63c0d6466273cd
+ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
 
 
 
@@ -40,12 +40,15 @@ Obs!
 
    c.   **Datatyp**: Inställd på "Sträng (XML)"
 
-   d.   **OMA-URI**: ./Vendor/MSFT/Wi-Fi /Profile/<SSID>/Settings
+   d.   **OMA-URI**: 
+        
+- **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+- **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
 Obs! Se till att ta med punkttecknet i början.
 
 SSID är det SSID som du skapar principen för. Exempel:
-`./Vendor/MSFT/Wi-Fi/Profile/Hotspot-1/Settings`
+`./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
   e.    Värdefält: Det är här du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
 
@@ -197,6 +200,6 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
