@@ -3,7 +3,7 @@ title: "Azure Portal för MAM-principer | Microsoft Intune"
 description: "Skapa hanteringsprinciper för mobilprogram i Azure Portal. De principer som du skapar här kan tillämpas på enheter som har, eller som inte har, registrerats i Intune."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: 22aea1a9a2ff55ae7a8a115fae31b1358305a4a5
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 1ddb7a30a6f23a3f3d754bd18975c50f32662578
 
 
 ---
@@ -61,6 +61,6 @@ Azure Portal har stöd för att skapa MAM-principer för:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

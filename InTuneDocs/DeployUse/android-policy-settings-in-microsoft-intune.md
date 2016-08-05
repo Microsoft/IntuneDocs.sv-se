@@ -5,7 +5,7 @@ description: "Skapa principer som styr inställningar och funktioner på Android
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6e3e81f37e677a016ac49240cc70602a568afcd5
-ms.openlocfilehash: 9385ca0e5aa9dd8fc2daf79c57b47951bcd5c0cb
+ms.sourcegitcommit: 8465ab2ead21b825141c1aa6e77c02a9b7061a66
+ms.openlocfilehash: 5e7ba0d4546c13106e32359c9578a6f0a49d6de7
 
 
 ---
@@ -197,65 +197,16 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
     |**OMA-URI (skiftlägeskänslig)**|Ange den OMA-URI som du vill tillhandahålla en inställning för.|
     |**Värde**|Ange det värde som ska associeras med den OMA-URI som du tidigare angav.|
 
-### Exempel: Konfigurera en anpassad Wi-Fi-profil med en i förväg delad nyckel
-Även om Intune stöder Wi-Fi-profiler för Android-enheter stöder den här funktionen för närvarande inte att en i förväg delad nyckel läggs till i konfigurationen. I det här exemplet lär du dig hur du skapar en anpassad Android-princip som i sin tur skapar en Wi-Fi-profil med en i förväg delad nyckel på Android-enheten.
+### Exempel
 
-#### Så här skapar du en Wi-Fi-profil med en i förväg delad nyckel
-
-1.  Kontrollera att dina användare använder den senaste versionen av appen [Intune-företagsportal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) för Android.
-
-2.  Skapa en anpassad Android-princip och lägg till följande inställningar:
-
-|Inställningsnamn|Information|
-|----------------|--------------------|
-|**Inställningsnamn**|Ange ett valfritt namn för inställningen.|
-|**Beskrivning av inställning**|Ange en beskrivning av inställningen.|
-|**Datatyp**|Välj **Sträng (XML)**.|
-|**OMA-URI**|Skriv följande: ./Vendor/MSFT/WiFi/Profile/*&lt;din Wi-Fi-profil&gt;*/Settings|
-
-3.  Kopiera och klistra in följande XML-kod för **Värde**:
-
-    ```
-    <!--
-    WEP Wifi Profile
-                    <Name of wifi profile> = Name of profile
-                    <SSID of wifi profile> = Plain text version of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
-                    <WEP password> = Password to connect to the network
-    -->
-    <WLANProfile
-    xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-      <name><Name of wifi profile></name>
-      <SSIDConfig>
-        <SSID>
-          <name><SSID of wifi profile></name>
-        </SSID>
-      </SSIDConfig>
-      <connectionType>ESS</connectionType>
-      <MSM>
-        <security>
-          <authEncryption>
-            <authentication>open</authentication>
-            <encryption>WEP</encryption>
-            <useOneX>false</useOneX>
-          </authEncryption>
-          <sharedKey>
-            <keyType>networkKey</keyType>
-            <protected>false</protected>
-            <keyMaterial><WEP password></keyMaterial>
-          </sharedKey>
-          <keyIndex>0</keyIndex>
-        </security>
-      </MSM>
-    </WLANProfile>
-    ```
-
-4.  När du är klar sparar du principen och distribuerar den till de Android-enheter som behöver den. Den nya Wi-Fi-profilen visas i listan med anslutningar på enheten.
+- [Skapa en Wi-Fi-profil med en i förväg delad nyckel](pre-shared-key-wi-fi-profile.md)
+- [Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter](per-app-vpn-for-android-pulse-secure.md)
 
 ### Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

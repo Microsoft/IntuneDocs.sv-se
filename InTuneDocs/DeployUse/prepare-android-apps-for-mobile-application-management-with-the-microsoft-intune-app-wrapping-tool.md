@@ -3,7 +3,7 @@ title: Omsluta Android-appar med apphanteringsverktyget | Microsoft Intune
 description: "Använd informationen i det här avsnittet för att lära dig hur du omsluter Android-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
 keywords: 
 author: karthikaraman
-manager: arob98
+manager: angrobe
 ms.date: 07/06/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: matgates
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2038ed6219a94dc4285891d71ce00fd51310f3e3
-ms.openlocfilehash: 15d0877f799c89e2a8af65c416c0e914f898641f
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 061bde9155c30bf8d7063d40478bbdf35fc7b53a
 
 
 ---
@@ -175,6 +175,6 @@ Tänk på följande när du omsluter dina appar:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

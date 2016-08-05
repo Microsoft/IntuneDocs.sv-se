@@ -2,19 +2,19 @@
 title: "Felsökningsprinciper | Microsoft Intune"
 description: "Felsöka problem med principkonfiguration."
 keywords: 
-author: Nbigman
+author: robstack
 manager: angrobe
-ms.date: 05/26/2016
+ms.date: 08/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
-ms.reviewer: jeffgilb
+ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
-ms.openlocfilehash: 06468bd7d6cdcf84da269c8132b37240ef1f2197
+ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
+ms.openlocfilehash: 98f15f304d5d372d05abfdd296ddff1ef98dd3eb
 
 
 ---
@@ -77,10 +77,6 @@ För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på
 
 4.  Dra meddelandereglaget till standardinställningen.
 
-## Fel 0x87D1FDE8 för KNOX-enheter
-**Problem**: Efter att en Exchange Active Sync-e-postprofil  har skapats och distribuerats för Samsung KNOX för olika Android-enheter rapporterar de felet **0x87D1FDE8** eller **Reparationen misslyckades** på fliken Egenskaper &gt; Princip på enheten.
-
-Granska konfigurationen av din EAS-profil för Samsung KNOX och källprincipen. Synkroniseringsalternativet för Samsung Note stöds inte längre och det alternativet bör inte väljas i din profil. Se till att enheterna har fått tillräckligt med tid för att behandla principen, upp till 24 timmar.
 
 ## Avisering: Det gick inte att spara åtkomstregler i Exchange
 **Problem**: Du får aviseringen **Det gick inte att spara åtkomstregler i Exchange**  i administrationskonsolen.
@@ -113,6 +109,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
