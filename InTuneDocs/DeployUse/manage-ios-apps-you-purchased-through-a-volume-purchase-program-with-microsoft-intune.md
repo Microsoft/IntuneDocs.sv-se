@@ -4,7 +4,7 @@ description: "Intune hjälper dig att hantera appar som du volyminköpt av Apple
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 8f7e77f00e6082c5b272a7ec2be835bc1ef97a28
+ms.sourcegitcommit: c64fb33893027d0000cae4cc3d9c3ed28cc38901
+ms.openlocfilehash: 5db23913601973630a4d013aae86cf26af337c4b
 
 
 ---
@@ -64,6 +64,9 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 2.  Välj den app som du vill distribuera, välj sedan **Hantera distribution**, genomför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
+> [!TIP]
+> Du måste välja distributionsåtgärden **Krävs**. Tillgängliga installationer stöds för närvarande inte.
+
 När du distribuerar appar som en **obligatorisk** installation används en licens av alla användare som installerar appen.
 
 Om du vill frisläppa en licens måste du ändra distributionsåtgärden till **Avinstallera**. Licensen frisläpps när appen avinstalleras.
@@ -87,6 +90,6 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

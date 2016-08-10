@@ -3,7 +3,7 @@ title: Registrera enheter | Microsoft Intune
 description: "Hantering av mobila enheter (MDM) använder registrering för att skapa hantering för enheterna och tillåta åtkomst till resurser."
 keywords: 
 author: NathBarn
-manager: arob98
+manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6256b1ed5edb72bf9f623555a4c6e3fddb864b32
-ms.openlocfilehash: 71f0637a1cb6fdafb590ca274fcc0f80707ed6ce
+ms.sourcegitcommit: d8e524b267622f91ed0c2ed854f931299f316312
+ms.openlocfilehash: 15f4af1f870d619f4fd51e88d1aef91b0b45e66d
 
 
 ---
@@ -89,7 +89,7 @@ Anger om en registreringsmetod har stöd för funktionen ”Användartillhörigh
   - Villkorlig åtkomst till e-post och företagsdata
   - Företagsportalappen
 
-[Användartillhörighet](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#user-affinity-for-ios-corporate-owned-devices-using-the-company-portal) ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
+[Användartillhörighet](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices) ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
 ### Lås
 Anger om enheten kan låsas för att förhindra att användaren tar bort Intune-principen, vilket tar bort enheten från hanteringen. För iOS-enheter måste enheten vara i övervakat läge för att den ska gå att låsa.
@@ -124,6 +124,6 @@ Datorer som hanteras med Intune-klientprogrammet kan inte rensas selektivt eller
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

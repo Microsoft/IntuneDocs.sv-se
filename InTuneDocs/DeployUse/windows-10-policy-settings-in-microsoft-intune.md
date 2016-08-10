@@ -4,7 +4,7 @@ description: "Använd principinställningarna som anges i det här avsnittet om 
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 07/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: bb08ea54b24e0395972ce29ae05ff2b7b6ee4220
+ms.sourcegitcommit: 7ef205aece89667ea84b9b73e42e71fc540fa257
+ms.openlocfilehash: cbfd2da544814dc93a818a1ca5bd0496a268634b
 
 
 ---
@@ -45,7 +45,6 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Lösenordets giltighetstid (i dagar)**|Anger efter hur lång tid enhetens lösenord måste ändras.|
 |**Kom ihåg tidigare lösenord**|Anger om du vill hindra användaren från att återanvända tidigare lösenord.|
 |**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Anger hur många tidigare använda lösenord som sparas av enheten.|
-|**Tillåt bildlösenord och PIN**|Låter dig använda enkla gester på en bild eller en enkel PIN-kod för inloggning.<br>(endast Windows 10 Desktop)|
 |**Kräv lösenord när enheten återgår från viloläge**|Om den här inställningen är aktiverad måste användaren ange ett lösenord för att låsa upp enheten från inaktivt läge.<br>(endast Windows 10 Mobile)|
 
 ### Kryptering
@@ -71,14 +70,6 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt Microsoft-konto**|Låter användaren associera ett Microsoft-konto med enheten.|
 |**Tillåt att lägga till icke-Microsoft konton manuellt**|Låter användaren lägga till e-postkonton till enheten som inte är associerade med ett Microsoft-konto.|
 |**Tillåt synkronisering av inställningar för Microsoft-konton**|Tillåt att enhets- och appinställningar som associeras med ett Microsoft-konto synkroniseras mellan enheter.|
-
-### E-postinställningar
-
-|Inställningsnamn|Information|
-|----------------|----------------------|---------------------|
-|**Gör Microsoft-kontot valfritt i Windows Mail-programmet**|Konfigurera den här inställningen om du vill ta bort kravet på ett Microsoft-konto i Windows Mail.<br>endast Windows 10 Desktop|
-
-
 
 ### Microsoft Edge
 
@@ -127,7 +118,6 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt Bluetooth**|Tillåter användningen av Bluetooth-funktioner på enheten.|
 |**Tillåt att Bluetooth kan hittas**|Tillåter att enheten kan upptäckas av andra Bluetooth-aktiverade enheter.|
 |**Tillåt Bluetoothreklam**|Tillåter att enheter tar emot reklam via Bluetooth.|
-|**Tillåt Bluetooth i anslutningsläge**|**Viktigt:** Den här inställningen stöds inte längre i Windows 10 och kommer att tas bort i framtiden.|
 |**Tillåt telefonåterställning**|Styr huruvida användaren kan fabriksåterställa enheten.|
 |**Tillåt USB-anslutning**|Styr huruvida enheter kan komma åt externa lagringsenheter via en USB-anslutning.|
 |**Tillåt AntiTheft läge**|Konfigurera om Windows Antitheft läge är aktiverat.|
@@ -177,6 +167,7 @@ Alla inställningar gäller endast Windows 10 Desktop.
 |Inställningsnamn|Information|
 |----------------|---------------|
 |**Tillåt automatiska uppdateringar**|Aktivera den här inställningen för att tillåta automatiska uppdateringar. Konfigurera sedan någon av följande inställningar för att kontrollera uppdateringsbeteende:<br /><br />**Meddela om hämtning**<br /><br />**Automatisk installation vid underhållstidpunkt**<br /><br />**Automatisk installation och omstart vid underhållstidpunkt**<br /><br />**Installera automatiskt och starta om enligt schema****Obs!** Om det här alternativet har valts kan du också konfigurera följande inställningar: **Meddela inte slutanvändare** och **Definiera installationsdag för schemalagda uppdateringar**.<br>(endast Windows 10 Desktop)|
+|**Tillåt förhandsfunktioner**|Låter Microsoft distribuera förhandsversionsinställningar och -funktioner till Windows 10-enheter. Du kan välja att tillåta att endast inställningar eller alla förhandsversionsinställningar och -funktioner installeras.|
 
 ## Anpassade principinställningar
 Använd Microsoft Intunes **anpassade konfigurationsprincip** för Windows 10 och Windows 10 Mobile om du vill distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) som kan användas för att styra funktioner på Windows 10- och Windows 10 Mobile-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
@@ -332,6 +323,6 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

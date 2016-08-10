@@ -13,13 +13,15 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 147765f6e8225e8e1d9d8e64473e8b6988256b03
+ms.sourcegitcommit: d8e524b267622f91ed0c2ed854f931299f316312
+ms.openlocfilehash: e42f49558ea9744b59693be873aa5130c7e1a0c3
 
 
 ---
 
 # Konfigurera Android-enhetshantering
+Om du vill konfigurera din Windows-enhet kan du få hjälp [här](../enduser/using-your-android-device-with-intune.md).
+
 Med Microsoft Intune kan du aktivera BYOD (”Bring Your Own Device”) för Android-enheter utan ytterligare plattformsbelastning.
 
 Välj följande alternativ för enhetsplattformar om du vill veta mer:
@@ -41,11 +43,15 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 3.  **Förklara för användarna hur de kommer åt företagets resurser med företagsportalen**<br>
     Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering. [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
+4.  Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering.
+        - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Vägledning för slutanvändare för Windows-enheter](../enduser/using-your-android-device-with-intune.md)
+
 ### Se även
 [Dags att registrera enheter i Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

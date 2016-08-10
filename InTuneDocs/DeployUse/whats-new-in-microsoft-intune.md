@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ef0210d7ca2d44608c5baa8f48ef56a2b9b5ce3a
+ms.sourcegitcommit: b93c6fe16e598c6f4b0d87981de8655f3de9c8d3
+ms.openlocfilehash: 051f2994c59b2886a81a50d7c72f51627064bc6a
 
 
 ---
@@ -24,6 +24,15 @@ Läs mer om nyheterna i den här versionen av Microsoft Intune. Du kan också l�
 
 Hybriddistributioner (Configuration Manager med Intune) kommer också att ha stöd för alla dessa funktioner. Mer information om nya hybridfunktioner finns på [sidan med nyheter om hybridfunktioner](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 
+## Augusti 2016
+## Uppdateringar av företagsportalen
+
+### Android
+- **Android-företagsportalsapp**<br/>
+Intune-företagsportalappen för Android stödjer "day 0" för det kommande Android 7.0-operativsystemet för mobila enheter.  
+
+- **Googles borttagning av funktionen för fjärråterställning av lösenord på Android 7.0-enheter**<br/>
+På Android 7.0-enheter kan Intunes IT-administratörer och slutanvändare inte fjärråterställa enhetens lösenord eftersom Google har tagit bort den här funktionen för Android 7.0-enheter. För tidigare versioner än Android 7.0 kan IT-administratörer fortfarande fjärråterställa en användares lösenord, och slutanvändarna kan fortfarande återställa sina lösenord från företagsportalens webbplats.
 
 ## Juli 2016
 ## Apphantering
@@ -41,7 +50,9 @@ Med komponenten Intune App SDK Xamarin kan du aktivera funktioner för hantering
 Intune har ökat maxgränsen för enhetsregistrering från 5 till 15 enheter per användare.
 <!---TFS 1289896 --->
 
-
+### TeamViewer-integrering för Windows-datorer med Intune-klientprogramvaran
+Med [TeamViewer](https://www.teamviewer.com)-integrering för Windows-datorer som kör Intune-klienten kan du etablera fjärrhjälpssessioner med Windows-datorer, vilket underlättar supportavdelningens arbete. Detta gäller Windows 7, 8, 8.1 och Windows 10. Mer information finns i [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
+<!---TFS 1284856--->
 
 ## Uppdateringar av företagsportalen
 ### Företagsportalens webbplats
@@ -93,7 +104,7 @@ Förutom ändringarna i grupphantering kommer följande funktion att bli inaktue
 Mer information om hur dessa utfasningar kan hanteras släpps i augusti.
 
 ### Tillägg av Meddelanden på företagsportalen för Android
-Vi publicerar en uppdatering av företagsportalen för Android i augusti där vi lägger till en ny **Meddelanden**-ikon på startsidan. När användaren trycker på ikonen visas sidan **Meddelanden**. På sidan visas alla objekt som kräver åtgärder i företagsportalappen, till exempel inkompatibla enheter, registreringsuppdatering och aktivering av registreringar. Om du också använder företagsportalappen för iOS kan du redan se dessa meddelanden. När sidan **Meddelanden** läggs till kommer sidan **Konfiguration av företagsåtkomst** inte att visas varje gång du startar eller återupptar företagsportalen för Android, förutsatt att enheten redan är registrerad. Vi vet att många av er har skapat instruktioner till användarna och uppskattar att få veta på förhand när era instruktioner/skärmbilder behöver uppdateras. Uppdatera din dokumentation med de kommande ändringarna. Om du behöver nya skärmbilder kan du gå till https://aka.ms/androidcpupdate.  
+Vi publicerar en uppdatering av företagsportalen för Android i september där vi lägger till en ny **Meddelanden**-ikon på startsidan. När användaren trycker på ikonen visas sidan **Meddelanden**. På sidan visas alla objekt som kräver åtgärder i företagsportalappen, till exempel inkompatibla enheter, registreringsuppdatering och aktivering av registreringar. Om du också använder företagsportalappen för iOS kan du redan se dessa meddelanden. När sidan **Meddelanden** läggs till kommer sidan **Konfiguration av företagsåtkomst** inte att visas varje gång du startar eller återupptar företagsportalen för Android, förutsatt att enheten redan är registrerad. Vi vet att många av er har skapat instruktioner till användarna och uppskattar att få veta på förhand när era instruktioner/skärmbilder behöver uppdateras. Uppdatera din dokumentation med de kommande ändringarna. Om du behöver nya skärmbilder kan du gå till https://aka.ms/androidcpupdate.  
 
 
 
@@ -147,6 +158,6 @@ Information om det senaste halvårets nyheter i Intune finns i artikeln [Tidigar
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: matgates
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 19a5b8f8260bace2bbe3626da3df281306f53024
-ms.openlocfilehash: ebd68513da55b8bb1715d2c82636abf791cae1ff
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
 
 
 ---
@@ -27,12 +27,13 @@ Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt 
 För att ladda ned verktyget går du till [Microsoft Intunes apphanteringsverktyg för iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
 
 ## Steg 1 Uppfyll nödvändiga krav för att använda programhanteringsverktyget
+Läs [det här blogginlägget](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) om du vill veta mer om krav och hur du anger dem.
 
 |Krav|Mer information|
 |---------------|--------------------------------|
 |Operativsystem och verktygsuppsättning som stöds|Du måste köra app-wrapping-verktyget på en Mac-dator som kör OS X 10.8.5 eller senare och som har verktygsuppsättningen XCode version 5 eller senare installerad.|
 |Signeringscertifikat och etableringsprofil|Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/).|
-|Bearbeta en app med programhanteringsverktyget|Apparna måste vara utvecklade och signerade av ditt företag eller någon oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 7.0 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om formatet PIE finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
+|Bearbeta en app med programhanteringsverktyget|Apparna måste vara utvecklade och signerade av ditt företag eller någon oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 7.1 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om formatet PIE finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
 |Appar som programhanteringsverktyget inte kan bearbeta|Krypterade appar, osignerade appar och appar med utökade filattribut.|
 |Appar som använder Azure Active Directory Library (ADAL)|Om appen använder sig av ADAL måste appen innehålla ADAL version 1.0.2 eller senare, och utvecklaren måste ge appen åtkomst till resursen för hantering av mobilprogram i Intune.<br /><br />Information om hur du använder ADAL finns i [Information om appar som använder Azure Active Directory Library](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#information-for-apps-that-use-the-azure-active-directory-library) i den här artikeln.|
 |Ställa in rättigheter för din app|Du måste ställa in rättigheter, som ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas, innan du omsluter appen. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).|
@@ -292,6 +293,6 @@ Använd följande metodtips för säkerhet och sekretess när du använder appom
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

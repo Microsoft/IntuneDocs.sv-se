@@ -13,14 +13,16 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: cc928e4facf592ca0f7398b374242a7a07ae193e
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: 344f1cf4367deb12288f9c361e043d345f9846bb
 
 
 ---
 
 
 # Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune
+Om du vill konfigurera din Windows-enhet kan du få hjälp [här](../enduser/using-your-windows-device-with-intune.md).
+
 Innan du kan hantera Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune måste enheterna kunna kommunicera med Intune. För att förenkla detta kan du skapa en DNS-post så att användarna inte behöver ange adressen till servern. Stegen nedan beskriver hur du underlättar registreringen för användarna.  
 
 I de flesta fall kan användarna installera företagsportalappen från Windows Store. Om du hanterar Windows Phone 8.0-enheter eller behöver distribuera företagsportalen till Windows Phone-enheter måste du också hämta och signera företagsportalappen. Se [Konfigurera hantering av Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
@@ -50,12 +52,16 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
     3.  Ange webbadressen till företagswebbplatsens verifierade domän i rutan **Ange ett verifierat domännamn** och klicka sedan på **Testa automatisk identifiering**.
 
+    4.  Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering.
+        - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Vägledning för slutanvändare för Windows-enheter](../enduser/using-your-windows-device-with-intune.md)
+
 
 
 Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2 och 3 i administrationskonsolen.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

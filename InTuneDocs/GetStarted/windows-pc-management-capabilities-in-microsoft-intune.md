@@ -4,7 +4,7 @@ description: "Läs om funktionerna du kan använda i Intune när du hanterar dat
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: b2e5b04df846db1a0076da7db63a5906fbd25558
+ms.sourcegitcommit: 49a236359692a5bbccf9ee0bb263094434049a91
+ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
 
 
 ---
@@ -28,7 +28,7 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 
 -   **Skydd mot skadlig programvara** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
 
--   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune <!--- (requires TeamViewer software)--->.
+-   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
 -   **Hantera programvarulicenser** –Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
 -   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogramvaran.
@@ -48,7 +48,7 @@ Intune kan hantera datorer som kör följande Windows-versioner (både x86 och x
 
 -   **Windows 8.1** – Pro- och Enterprise-versionerna.
 
-- **Windows 10** – Home-, Pro-, Education- och Enterprise-versionerna.
+- **Windows 10** – Pro-, Education- och Enterprise-versionerna.
 
 
 ## Minsta maskinvarukrav
@@ -74,6 +74,6 @@ Nedan visas programvarukraven för att installera Intune PC-klienten:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

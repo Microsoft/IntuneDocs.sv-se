@@ -13,8 +13,8 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: b01354b62507b9843b53cc4b2c8c1e82a6c422e5
+ms.sourcegitcommit: aa1d6105a5be9c329c75681857a9d6e553088b65
+ms.openlocfilehash: be45b2ffb99eb75e71c0d591fc84089b83735905
 
 
 ---
@@ -27,7 +27,7 @@ Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som A
 Intune-klienten har stöd för [principer som skyddar datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md) med hantering av programuppdateringar, Windows-brandväggen och Endpoint Protection, men andra Intune-principer kan inte tillämpas på datorer som hanteras med Intune-klienten.
 
 > [!NOTE]
-> Enheter som kör Windows 8.1 kan hanteras med Intune-klienten eller registreras som mobila enheter. Informationen nedan gäller för datorer som kör Intune-klienten. Det går inte att både installera Intune-klienten och registrera Windows-enheten för hantering av mobila enheter.
+> Enheter som kör Windows 8.1 eller senare kan hanteras med Intune-klienten eller registreras som mobila enheter. Informationen nedan gäller för datorer som kör Intune-klienten. Det går inte att både installera Intune-klienten och registrera Windows-enheten för hantering av mobila enheter.
 
 ## Krav för hantering av Intune-klienten
 
@@ -86,6 +86,6 @@ Intune-klientagenten körs vanligtvis tyst i bakgrunden och kräver sällan omfa
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

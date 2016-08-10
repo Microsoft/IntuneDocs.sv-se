@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 777b87328e12b4d6b3de1b338fe802d92c1138a1
+ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
+ms.openlocfilehash: 9c89a70f8d9625504f6c710fe29f308dfd34530a
 
 
 ---
@@ -34,9 +34,11 @@ Om du någon gång avregistrerar telefonen förblir den krypterad.
 3.  Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
 
 ### Vad du gör om du har problem
-**Problem**: Du har redan krypterat enheten och du ser något av följande: – Krypteringsknappen är inaktiverad.
-– Du ser ett meddelande om att du fortfarande behöver kryptera enheten.
-– Fel uppstår när du försöker använda företagsportalappen.
+**Problem**: Du har redan krypterat enheten och du ser något av följande:
+
+- Krypteringsknappen är inaktiverad.
+- Du ser ett meddelande om att du fortfarande behöver kryptera enheten.
+- Fel uppstår när du försöker använda företagsportalappen.
 
 **Gör så här**: Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.
 
@@ -47,6 +49,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

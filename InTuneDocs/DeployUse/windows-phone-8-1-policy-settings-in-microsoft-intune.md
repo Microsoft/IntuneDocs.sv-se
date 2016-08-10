@@ -4,7 +4,7 @@ description: "I Intune finns en uppsättning inbyggda allmänna inställningar s
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 07/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 04fca72cd426ee4718e100cb2633ca2c967b4c05
+ms.sourcegitcommit: 1648a070cc2d318df4d434955f6068cd4b42690c
+ms.openlocfilehash: 87021459424c84feed3b676364cf890f43ff32d9
 
 
 ---
@@ -109,11 +109,11 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 |----------------|-----------------------------------------|
 |**Tillåt kopiera och klistra in**|Tillåt kopierings- och inklistringsfunktioner på enheter.|Nej|Ja|
 
-### Inställningar för kompatibla och icke-kompatibla appar
-I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
+### Inställningar för tillåtna och blockerade appar
+I **Lista över tillåtna och blockerade appar** anger du en lista över appar som du vill tillåta eller blockera med hjälp av följande information:
 
 > [!NOTE]
-> En enda princip kan bara innehålla en lista över kompatibla eller en lista över inkompatibel appar. Du kan inte ange båda i samma princip.
+> En enda princip kan bara innehålla en lista över tillåtna eller en lista över blockerade appar. Du kan inte ange båda i samma princip.
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
@@ -127,14 +127,14 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 > Om du skapar en lista över tillåtna appar för Windows Phone 8.1-enheter måste du lägga till företagsportalappen i listan, annars blockeras den.
 
 
-### Referensinformation för kompatibla och icke-kompatibla appar
+### Referensinformation för tillåtna och blockerade appar
 
 #### Så här anger du webbadresser till appbutiker
-Om du vill specificera en app-URL i listan över kompatibla och ej kompatibla appar ska du använda följande format:
+Om du vill ange en app-URL i listan över tillåtna och blockerade appar använder du följande format:
 
 Gå till sidan [Windows Phone appar och spel](http://www.windowsphone.com/en-us/store/overview) och sök efter den app du vill använda.
 
-Öppna appens sida och kopiera webbadressen till Urklipp. Nu kan du använda denna som webbadress, i listan över kompatibla eller inkompatibla appar.
+Öppna appens sida och kopiera webbadressen till Urklipp. Nu kan du använda den som webbadress i listan över tillåtna eller blockerade appar.
 
 **Exempel:** Sök i butiken efter Skype-appen. Webbadressen som du använder är **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
@@ -172,6 +172,6 @@ I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följa
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

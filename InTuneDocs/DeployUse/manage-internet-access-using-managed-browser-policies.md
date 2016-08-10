@@ -4,7 +4,7 @@ description: "Distribuera den hanterade webbläsaren för att begränsa surfning
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 44f6ee1354f1fdfc7f8db7d5b844dc12c01e686c
+ms.sourcegitcommit: 2fcd53d335aa18701ba0b8c3c75569febbee2cd5
+ms.openlocfilehash: d07a5dde05055c54f5b89c8aa5f49203d0a22b97
 
 
 ---
@@ -22,12 +22,13 @@ ms.openlocfilehash: 44f6ee1354f1fdfc7f8db7d5b844dc12c01e686c
 # Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune
 Den hanterade webbläsaren är ett webbläsningsprogram som med hjälp av Microsoft Intune kan distribueras i organisationen. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.
 
-Eftersom den här appen är en hanterad app, kan även hanteringsprinciper för mobilprogram tillämpas på appen, till exempel hur användningen av klipp ut, kopiera och klistra in kontrolleras, hindra skärmdumpar och även säkerställa att länkar till innehåll som användare klickar på endast öppnas i andra hanterade appar. Mer information finns i avsnittet [Konfigurera och distribuera hanteringsprinciper för mobilprogram i konsolen för Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+Eftersom den här appen är en hanterad app kan du dessutom använda principer för hantering av mobila appar på appen. De här principerna kan omfatta att kontrollera användningen av klipp ut, kopiera och klistra in, hindra skärmdumpar och säkerställa att länkar till innehåll som användare väljer endast öppnas i andra hanterade appar. Mer information finns i avsnittet [Konfigurera och distribuera hanteringsprinciper för mobilprogram i konsolen för Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > [!IMPORTANT]
->Om användare installerar den hanterade webbläsaren från app store och de inte hanteras av Intune gäller följande: iOS – Den hanterade webbläsarappen kan användas som en vanlig webbläsare, men vissa funktioner är inte tillgängliga, och den kan inte komma åt data från andra Intune-hanterade appar.
-Android – Den hanterade webbläsaren kan inte användas.
-Om användaren själv installerar den hanterade webbläsaren på en iOS-enhet med en version som är mindre än iOS 9, hanteras den inte av de principer som du skapar. För att säkerställa att webbläsaren hanteras av Intune, måste användarna avinstallera appen innan du kan distribuera den till dem som en hanterad app. Om användarna själva installerar den hanterade webbläsaren i iOS 9 och senare uppmanas de att tillåta att den hanteras av principer.
+>Om användarna installerar den hanterade webbläsaren, Managed Browser, från App Store och Intune inte hanterar den gäller följande:<br /><br />
+iOS – Den hanterade webbläsaren kan användas som en grundläggande webbläsare, men vissa funktioner är inte tillgängliga och den kan inte komma åt data från andra Intune-hanterade appar.<br />
+Android – Den hanterade webbläsaren kan inte användas.<br /><br />
+Om användaren själv installerar den hanterade webbläsaren på en iOS-enhet med en tidigare version än iOS 9 hanterar inga principer som du skapar webbläsaren. För att säkerställa att Intune hanterar webbläsaren måste användarna avinstallera appen innan du kan distribuera den till dem som en hanterad app. Om användarna själva installerar den hanterade webbläsaren i iOS 9 och senare uppmanas de att tillåta att den hanteras av principer.
 
 Du kan skapa principer för hanterade webbläsare för följande enhetstyper:
 
@@ -39,7 +40,7 @@ Intune Managed Browser stöder öppning av webbinnehåll från [Microsoft Intune
 
 ## Skapa en princip för hanterad webbläsare
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Lägg till princip**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
 
 2.  Konfigurera en av följande typer av **programvaru** princip:
 
@@ -49,20 +50,22 @@ Intune Managed Browser stöder öppning av webbinnehåll från [Microsoft Intune
 
     Mer information om hur du skapar och distribuerar principer finns i avsnittet [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Använd följande tabell för att konfigurera inställningarna för en princip för hanterad webbläsare:
+3.  Använd följande för att konfigurera inställningarna för en princip för hanterad webbläsare:
 
-|Inställningsnamn|Information|
-    |----------------|--------------------|
-    |**Namn**|Ange ett unikt namn för principen för den hanterade webbläsaren som hjälper dig att identifiera den i Intune-konsolen.|
-    |**Beskrivning**|Ange en lämplig beskrivning av principen och annan information som gör det enkelt att hitta den.|
-    |**Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**|Välj något av följande alternativ:<br /><br />**Låt Managed Browser enbart öppna de URL:er som listas nedan ** – ange en lista över URL:er som kan öppnas i den hanterade webbläsaren.<br /><br />**Blockera Managed Browser från att öppna de URL:er som listas nedan ** – ange en lista över URL:er som inte kan öppnas och som blockeras i den hanterade webbläsaren. **Obs!** Både tillåtna och blockerade URL:er kan inte ingå i samma princip för den hanterade webbläsaren.<br />Mer information om de URL-format som du kan ange finns i **URL-format för tillåtna och blockerade URL:er** i det här avsnittet.|
+    - **Namn**. Ange ett unikt namn för principen för den hanterade webbläsaren som hjälper dig att identifiera den i Intune-konsolen.
+    - **Beskrivning**. Ange en lämplig beskrivning av principen och annan information som gör det enkelt att hitta den.
+    - **Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**. Välj något av följande alternativ:
+        - **Låt den hanterade webbläsaren endast öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren kan öppna.
+        - **Blockera den hanterade webbläsaren från att öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren blockeras från att öppna.
+**Obs!** Både tillåtna och blockerade URL:er kan inte ingå i samma princip för den hanterade webbläsaren.
+Mer information om de URL-format som du kan ange finns i **URL-format för tillåtna och blockerade URL:er** i det här avsnittet.
 
-4.  När du är klar klickar du på **Spara profilen**.
+4.  När du är klar väljer du **Spara princip**.
 
-Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principer** .
+Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
 ## Skapa en distribution för den hanterade webbläsarappen
-När du har skapat principen för den hanterade webbläsaren kan du skapa en programdistribution för den hanterade webbläsarappen och associera det med principen som du skapade.
+När du har skapat principen för den hanterade webbläsaren kan du skapa en programdistribution för den hanterade webbläsarappen och associera den med principen som du skapade.
 
 > [!IMPORTANT]
 > Principer för hanterade webbläsare distribueras inte på samma sätt som andra Intune-principer. Den här typen av princip måste associeras med programvarupaketet för den hanterade webbläsaren.
@@ -75,23 +78,23 @@ Mer information om hur du distribuerar appar finns i [Distribuera appar i Micros
 
 -   Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
 
--   Inställningar som användare gör för den inbyggda webbläsaren på sina enheter används inte av den hanterade webbläsaren. Det här beror på att den hanterade webbläsaren inte har tillgång till de här inställningarna.
+-   Den hanterade webbläsaren använder inte inställningar som användare gör för den inbyggda webbläsaren på sina enheter. Det här beror på att den hanterade webbläsaren inte har tillgång till de här inställningarna.
 
--   Om du konfigurerar alternativen **Kräv enkel PIN-kod för åtkomst** eller **Kräv företagets autentiseringsuppgifter för åtkomst** i en hanteringsprincip för mobilprogram som är associerad med den hanterade webbläsaren och en användare klickar på hjälplänken på autentiseringssidan kan användaren bläddra i alla webbplatser, oavsett om de har lagts till i en blockeringslista i principen för hanterade webbläsare.
+-   Om du konfigurerar alternativet **Kräv enkel PIN-kod för åtkomst** eller **Kräv företagets autentiseringsuppgifter för åtkomst** i en hanteringsprincip för mobilprogram som är associerad med den hanterade webbläsaren och en användare väljer hjälplänken på autentiseringssidan kan användaren bläddra på alla webbplatser, oavsett om de har lagts till i en blockeringslista i principen för hanterade webbläsare.
 
--   Den hanterade webbläsaren kan endast blockera åtkomst till webbplatser när de används direkt. Den kan inte blockera åtkomst när mellanliggande tjänster (till exempel en översättningstjänst) används för åtkomst till webbplatsen.
+-   Den hanterade webbläsaren kan endast blockera åtkomst till webbplatser när de öppnas direkt. Den kan inte blockera åtkomst när mellanliggande tjänster (till exempel en översättningstjänst) används för åtkomst till webbplatsen.
 
--   För att tillåta autentisering och säkerställa att Intune-dokumentationen kan nås är **&#42;.microsoft.com** undantaget från listan Tillåt eller blockera – den tillåts alltid.
+-   För att tillåta autentisering och säkerställa att Intune-dokumentationen kan nås är **&#42;.microsoft.com** undantaget från listan Tillåt eller blockera. Den tillåts alltid.
 
 ### Stäng av användningsdata
-Microsoft samlar automatiskt in anonyma data om prestanda och användningen av den hanterade webbläsaren för att förbättra sina produkter och tjänster. Användarna kan dock inaktivera datainsamlingen med hjälp av inställningen **Användningsdata** på deras enheter. Du har ingen kontroll över insamlingen av dessa data.
+Microsoft samlar automatiskt in anonymiserade data om prestanda och användning av den hanterade webbläsaren för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
 ## Referensinformation
 
 ### URL-format för tillåtna och blockerade URL:er
-Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser.
+Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser:
 
--   Du kan använda jokertecknet **&#42;** enligt reglerna i listan med tillåtna mönster nedan.
+-   Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster.
 
 -   Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
 
@@ -101,7 +104,7 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
     -   Port 443 för http
 
-    Jokertecken i portnummer stöds inte, till exempel **http&colon;//www&period;contoso&period;com:*;** och **http&colon;//www&period;contoso&period;com: /*;**
+    Jokertecken i portnummer stöds inte. Till exempel stöds inte **http&colon;//www&period;contoso&period;com:*;** och **http&colon;//www&period;contoso&period;com: /*;**.
 
 -   Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
 
@@ -151,6 +154,6 @@ Om flera principer för hanterade webbläsare har distribuerats till en enhet oc
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

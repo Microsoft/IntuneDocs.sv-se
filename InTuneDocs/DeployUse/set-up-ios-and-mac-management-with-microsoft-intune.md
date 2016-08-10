@@ -13,13 +13,15 @@ ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 8a41c4c4f0ab4b4864fe366a2852046693b6baee
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: e61e764f4761ab83500ff6f0febe253d427729d9
 
 
 ---
 
 # Konfigurera iOS- och Mac-enhetshantering
+Om du vill konfigurera din iOS- eller Mac-enhet kan du få hjälp [här](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md).
+
 Ge åtkomst till företagets e-post och appar med Intunes hantering av mobila enheter för iPad, iPhone, och Mac OS X-enheter. Ett APNs-certifikat (Apple Push Notification Service) från Apple krävs för att kunna hantera iOS- och Mac-enheter med Intune. När certifikatet har lagts till i Intune kan användare installera företagsportalappen och registrera sina enheter, eller så kan administratören konfigurera [hantering av företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Konfigurera Intune**<br>
@@ -39,7 +41,9 @@ Ge åtkomst till företagets e-post och appar med Intunes hantering av mobila en
     Öppna [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) och gå till **Administration** &gt; **Hantering av mobila enheter** &gt; **iOS och Mac OS X** &gt; **Överför ett APN-certifikat** och klicka på **Överför APN-certifikatet**. **Bläddra** till certifikatsfil (.pem) och klicka på **Öppna** och ange sedan ditt **Apple ID**. Med APN-certifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
 
 5.  **Förklara för användarna hur de kommer åt företagets resurser med företagsportalen**<br>
-    Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering. [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+    Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering.
+    - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+    - [Vägledning för slutanvändare för iOS- och Mac-enheter](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md)
 
 Om företaget eller organisationen köper iOS-enheter åt användarna kan enheterna även registreras för hantering som [företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
@@ -48,6 +52,6 @@ Om företaget eller organisationen köper iOS-enheter åt användarna kan enhete
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 
