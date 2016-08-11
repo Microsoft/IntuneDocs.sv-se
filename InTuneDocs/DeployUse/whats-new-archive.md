@@ -145,7 +145,7 @@ För allmän feedback om Microsoft Intune, inklusive förfrågningar om designä
 * [Rensa hanterade företagsdata från appar med Microsoft Intune](https://technet.microsoft.com/library/mt627826.aspx): Hur du tar bort företagsdata från appar.
 
 **Uppdaterat innehåll**
-* [Inställningar för Windows 10-konfigurationsprinciper i Microsoft Intune](https://technet.microsoft.com/library/mt404697.aspx): Nya inställningar för Edge-webbläsaren har lagts till.
+* [Inställningar för Windows 10-konfigurationsprinciper i Microsoft Intune](https://technet.microsoft.com/library/mt404697.aspx): Nya inställningar för Microsoft Edge-webbläsaren har lagts till.
 * [Konfigurera iOS-hantering med Microsoft Intune](http://technet.microsoft.com/library/dn408185.aspx): Information om hur du registrerar Mac OS X-enheter har lagts till.
 * [Förstå dina enheter med inventering i Microsoft Intune](https://technet.microsoft.com/library/jj733634.aspx): Information om inventeringen som samlas in från Mac OS X-enheter har lagts till. Dessutom har avsnittet uppdaterats med den senaste informationen för alla enhetsplattformar.
 * [Förstå Microsoft Intune-åtgärder med hjälp av rapporter](https://technet.microsoft.com/library/dn646977.aspx): Information har lagts till om de två nya rapporterna som används för att visa information om dina hanterade Mac OS X-enheter.

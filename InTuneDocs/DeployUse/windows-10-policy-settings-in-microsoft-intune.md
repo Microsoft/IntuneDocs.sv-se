@@ -75,16 +75,16 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 
 |Inställningsnamn|Information|
 |----------------|----------------------|
-|**Tillåt webbläsare**|Tillåt användningen av Edge-webbläsaren på enheten.<br>(endast Windows 10 Mobile)|
+|**Tillåt webbläsare**|Tillåt användningen av Microsoft Edge-webbläsaren på enheten.<br>(endast Windows 10 Mobile)|
 |**Tillåt sökförslag i adressfältet**|Tillåter att din sökmotor föreslår platser när du skriver sökord.|
 |**Tillåt att intranättrafik skickas till Internet Explorer**|Tillåter att användarna öppnar intranätsplatser i Internet Explorer.<br>(endast Windows 10 Desktop)|
-|**Tillåt spåra inte**|Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.|
+|**Tillåt spåra inte**|Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.|
 |**Aktivera SmartScreen**|Aktiverar webbläsarinställningen SmartScreen på enheter.|
-|**Tillåt active scripting**|Tillåter att skript, t.ex. JavaScript, körs i Edge-webbläsaren.|
+|**Tillåt active scripting**|Tillåter att skript, t.ex. JavaScript, körs i Microsoft Edge-webbläsaren.|
 |**Tillåt popup-fönster**|Aktiverar eller inaktiverar webbläsarens blockering av popup-fönster.<br>(endast Windows 10 Desktop)|
 |**Tillåt cookies**|Tillåt eller inaktivera cookies.|
 |**Tillåt autofyll**|Tillåt att användarna ändrar inställningarna för Komplettera automatiskt i webbläsaren.<br>(endast Windows 10 Desktop)|
-|**Tillåt lösenordshanteraren**|Aktivera eller inaktivera lösenordshanteraren för Edge.|
+|**Tillåt lösenordshanteraren**|Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.|
 |**Listplats för Företagsläge-webbplats**|Anger var man hittar listan över webbsidor som öppnar i Enterprise-läge. Användare kan inte redigera den här listan.<br>(endast Windows 10 Desktop)|
 
 ### Appar
@@ -302,13 +302,13 @@ Alla enheter måste vara registrerade med Intune om du vill använda principen f
 |**ExcludedPaths**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedPaths<br /><br />**Datatyp:** Sträng<br /><br />**Tillåtna värden:**<br /><br />*&lt;lista över sökvägar avgränsade med semikolon&gt;*<br /><br />Exempel: **c:\test;c:\test1.exe**<br /><br />**Standardvärde:** Inga sökvägar utesluts|
 |**ExcludedProcesses**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Defender/ExcludedProcesses<br /><br />**Datatyp:** Sträng<br /><br />**Tillåtna värden:**<br>*&lt;lista över sökvägar avgränsade med semikolon&gt;*<br>Exempel: **c:\test.exe;c:\test1.exe**<br>**Standardvärde:** Inga processer utesluts|
 
-### URI-inställningar för Edge-webbläsare
+### URI-inställningar för Microsoft Edge-webbläsare
 
 |Principnamn|Information|
 |---------------|------------|-----------|
 |**Tillåt webbläsare**<br>(endast mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowBrowser<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: navigering inaktiverat<br>**1**: navigering aktiverat (standard)|
 |**AllowSearchSuggestionsinAddressBar**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowSearchSuggestionsinAddressBar<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: Visa inte sökförslag<br>**1**: Visa sökförslag (standard)|
-|**SendIntranetTraffictoInternetExplorer**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: Inaktiverad (öppna intranätsplatser i Edge-webbläsare – standard)<br>**1** – Aktiverad (öppna intranätsplatser i Internet Explorer).|
+|**SendIntranetTraffictoInternetExplorer**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/SendIntranetTraffictoInternetExplorer<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0**: Inaktiverad (öppna intranätsplatser i Microsoft Edge-webbläsare – standard)<br>**1** – Aktiverad (öppna intranätsplatser i Internet Explorer).|
 |**Tillåt Do Not Track**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowDoNotTrack<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Inaktiverad (DNT skickas inte – standard)<br>**1** – Aktiverad (skicka DNT)|
 |**Konfigurera SmartScreen**<br>(stationär dator och mobil)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowSmartScreen<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Tillåt inte<br>**1** – Tillåt (standard)|
 |**Tillåt popup-fönster**<br>(endast stationär dator)|**Fullständig URI-sökväg:** ./Vendor/MSFT/Policy/Config/Browser/AllowPopups<br /><br />**Datatyp:** heltal<br /><br />**Tillåtna värden:**<br>**0** – Blockera popup-fönster (standard)<br>**1** – Tillåt popup-fönster|

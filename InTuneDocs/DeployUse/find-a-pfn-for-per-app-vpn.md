@@ -73,7 +73,7 @@ Här är den information som har hämtats för OneNote:
 `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
 4.  Klistra in följande URL i en annan flik `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, och ersätt `<app id>` med det app-id som du har fått från https://www.microsoft.com/en-us/store/apps – serien med bokstäver i slutet av URL:en i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-Den information du vill visa visas i Edge; i Internet Explorer klickar du på **Öppna** om du vill se informationen. PFN-värdet anges på första raden. Så här ser resultatet ut i vårt exempel:
+Den information du vill visa visas i Microsoft Edge; i Internet Explorer klickar du på **Öppna** om du vill se informationen. PFN-värdet anges på första raden. Så här ser resultatet ut i vårt exempel:
 
 
 `{`
