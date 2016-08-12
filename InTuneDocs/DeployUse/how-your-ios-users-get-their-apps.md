@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 5468914de3444a709068b4d3d143d3b2828616eb
+ms.sourcegitcommit: 6dbb6012389d8058c2d9b1c46b4ae8c2418a6130
+ms.openlocfilehash: 30ebdfa1729df81a3b4a4a90b71aadacf373bb2d
 
 
 ---
@@ -26,7 +26,7 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Obligatoriska appar** - Appar som krävs av administratören och som installeras på enheten med minimal inblandning av användaren, beroende på plattform.
 
-**Obligatoriska appar** - Appar som finns angivna i Företagsportalens app-lista och som användare kan välja att installera.
+**Tillgängliga appar** – Appar som finns i företagsportalens applista och som en användare kan välja att installera.
 
 **Hanterade appar** - Appar som kan hanteras med principer eller som har blivit "wrappade" av Intune eller som har skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
 
@@ -38,6 +38,6 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -2,9 +2,9 @@
 title: "Ordna användare och enheter genom att skapa grupper | Microsoft Intune"
 description: "Så här skapar du enhetsgrupper och användargrupper när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
-author: Staciebarker
+author: lindavr
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/09/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
-ms.openlocfilehash: 4c0ccb2d27d90c4a3aeebb3129b9b13a707b26a0
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 6cab173d7ef4a1d7bcea3193265e0729c93a214e
 
 
 ---
@@ -33,7 +33,7 @@ Använd enhetsgrupper för att distribuera programvara och uppdateringar och kon
 
 4.  Välj **Nästa** på sidan **Ange direkt medlemskap**. Om du tidigare har skapat en grupp som inte innehåller alla enheter, och du vill lägga till specifika enheter till din nya grupp, kan du göra det här.
 
-5.  På sidan **Sammanfattning** kan du granska de åtgärder som vidtas och sedan välja **Slutför**.
+5.  På sidan **Sammanfattning** granskar du de åtgärder som kommer att vidtas och väljer sedan **Slutför**.
 
 Du kan hitta de nyligen skapade grupperna i listan **Grupper** under **Alla enheter** på arbetsytan **Grupper**. Här kan du också redigera eller ta bort gruppen.
 
@@ -65,6 +65,6 @@ Gratulerar! Du har precis slutfört steg 3 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

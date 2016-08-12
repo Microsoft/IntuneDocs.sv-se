@@ -13,8 +13,8 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9d2ad912de7bc775cde2c40c8de27a09ba2af
-ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
+ms.sourcegitcommit: 87aea89a323fb05087322fb117d0be2e579a06ff
+ms.openlocfilehash: 6eda2828a801700e885d1bed667f9260f325e175
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: d37630d2aaf4a260acf98a57aa2d38c95711f12b
 
 Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. Först måste du skapa en VPN-profil som används för anslutningstypen Pulse Secure och en princip för anpassad konfiguration som kopplar den här profilen till specifika appar. När du distribuerar dessa principer till din Android-enhet eller användargrupperna öppnar du en av de angivna apparna på dessa enheter så öppnas en VPN-anslutning för appen.
 
-> [OBS]
+> [!NOTE]
 > 
 > Endast anslutningstypen Pulse Secure stöds för den här profilen.
 
@@ -37,7 +37,8 @@ Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune. 
 4. Slutför och spara VPN-profilen. Mer information om VPN-profiler finns i [VPN-anslutningar](vpn-connections-in-microsoft-intune.md).
 
 > [!NOTE]
-Anteckna VPN-profilnamnet för användning i nästa steg. Till exempel **MyAppVpnProfile**.
+> 
+> Anteckna VPN-profilnamnet för användning i nästa steg.   Till exempel **MyAppVpnProfile**.
 
 ### Steg 2: Skapa en princip för anpassad konfigurering
 
@@ -81,6 +82,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 
