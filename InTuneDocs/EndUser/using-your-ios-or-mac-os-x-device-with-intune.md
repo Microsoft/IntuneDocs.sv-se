@@ -4,7 +4,7 @@ description: "Lista med länkar till saker du kan göra på din iOS- eller Mac O
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: c91355b77850acbb76cd028bffb231e2ba1a5174
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: 83564abcfcbb6597656e19031e5af1c7d7a3252d
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Den här sidan innehåller länkar till alla åtgärder som användarna kan utföra på sina enheter som hanteras av Intune. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: registreringsrelaterad information, hanteringsuppgifter och efterlevnadsproblem.
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
+- Installation av företagsportalappen och registrering av Intune 
+- Hanteringsuppgifter efter registrering
+- Efterlevnadsproblem
 
 ## Installation av företagsportalappen och registrering av Intune
 
@@ -61,6 +64,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

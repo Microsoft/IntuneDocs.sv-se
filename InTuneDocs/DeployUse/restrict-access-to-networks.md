@@ -1,6 +1,6 @@
 ---
 title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Intune"
-description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN-styrs av Cisco ISE."
+description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN som styrs av Cisco ISE."
 keywords: 
 author: nbigman
 manager: angrobe
@@ -13,27 +13,28 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: c516cffe416559d1d239010605227eda76c32c1b
+ms.sourcegitcommit: ede9c4db136eb0498cad6d196488d03768741328
+ms.openlocfilehash: 382dd93a5aec7415e5fb738f3068820e36d8ae06
 
 
 ---
 
 # Använda Cisco ISE med Microsoft Intune
-Med Intune-integration i Cisco ISE kan du skapa nätverksprinciper i ISE-miljön med enhetsregistrering och kompatibilitetstillstånd i Intune. Dessa principer kan säkerställa att åtkomst till företagets nätverk är begränsad till enheter som hanteras av Intune och är kompatibla med Intune-principer.
+Med Intune-integration i Cisco Identity Services Engine (ISE) kan du skapa nätverksprinciper i ISE-miljön med hjälp av enhetsregistrering och kompatibilitetstillstånd i Intune. Med dessa principer kan du säkerställa att åtkomsten till företagets nätverk är begränsad till enheter som hanteras av Intune och är kompatibla med Intune-principer.
 
-## Konfiguration
+## Konfigurationssteg
 
-Om du vill aktivera den här integreringen behöver du inte göra några inställningar i Intune-klienten. Du behöver ge behörighet till Cisco ISE-servern att få åtkomst till Intune-klienten och när det är klart sker resten av installationen i Cisco ISE-servern. Den här artikeln innehåller anvisningar för att tillhandahålla ISE-servern med behörighet att komma åt Intune-klienten.
+Om du vill aktivera den här integreringen behöver du inte göra några inställningar i Intune-klienten. Du måste ge behörighet till Cisco ISE-servern för att få åtkomst till din Intune-klient. När det är klart görs de resterande inställningarna på Cisco ISE-servern. Den här artikeln innehåller anvisningar om hur du ger ISE-servern behörighet att komma åt Intune-klienten.
 
 ### Steg 1: Hantera certifikaten
-1. Exportera certifikatet i Azure Active Directory-konsolen (AAD).
+1. Exportera certifikatet i Azure Active Directory-konsolen (Azure AD).
 
     #### Internet Explorer 11
 
-    a. Kör Internet Explorer som administratör och logga in på AAD-konsolen.
 
-    b. Välj låsikonen i adressfältet och välj **Visa certifikat**
+    a. Kör Internet Explorer som administratör och logga in på Azure AD-konsolen.
+
+    b. Välj låsikonen i adressfältet och välj **Visa certifikat**.
 
     c. På fliken **Information** för certifikategenskaperna väljer du **Kopiera till fil**.
 
@@ -41,11 +42,11 @@ Om du vill aktivera den här integreringen behöver du inte göra några instäl
 
     e. På sidan **Filformat för export** låter du standardvalet **DER-kodad binär fil x.509 (.CER)** stå kvar och väljer **Nästa**.  
 
-    f. På sidan **Fil som ska exporteras** väljer du **Bläddra** för att välja en plats där filen ska sparas och anger ett filnamn. Även om det verkar som om du väljer en fil att exportera namnger du faktiskt filen där det exporterade certifikatet ska sparas. Välj **Nästa** &gt; **Slutför**.
+    f. På sidan **Fil som ska exporteras** väljer du **Bläddra** för att välja en plats där filen ska sparas och anger ett filnamn. Även om det verkar som om du väljer en fil att exportera namnger du faktiskt filen som det exporterade certifikatet ska sparas till. Välj **Nästa** &gt; **Slutför**.
 
     #### Safari
 
-    a. Logga in på AAD-konsolen.
+    a. Logga in på Azure AD-konsolen.
 
     b. Välj låsikonen &gt;  **Mer information**.
 
@@ -53,37 +54,40 @@ Om du vill aktivera den här integreringen behöver du inte göra några instäl
 
     d. Välj certifikatet och välj sedan **Exportera**.  
 
-
     > [!IMPORTANT]
     > Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
 
 
-
 2. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
-3. I ISE-konsolen går du till **Administration** > **Certifikat** > **Systemcertifikat**.
-4. Välj ISE-certifikatet och välj sedan **Exportera**.
-5. Redigera det exporterade certifikatet i en textredigerare:
+### Skaffa ett självsignerat certifikat från ISE 
+1.  I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
+2.       Exportera det självsignerade certifikatet.
+3. Redigera det exporterade certifikatet i en textredigerare: [kommentar]: <> Jag tycker inte att det ska vara en punkt i slutet av dessa två uttryck. Jag tror att det kan vara förvirrande.
  - Ta bort ** -----BEGIN CERTIFICATE-----**
  - Ta bort ** -----END CERTIFICATE-----**
- - Se till att all text är på en enda rad
+ 
+Se till att all text är på en enda rad
 
-### Steg 2: Skapa en app för ISE i AAD-klienten
-1. I Azure Active Directory-konsolen (AAD) väljer du **Program** > **Lägg till ett program** > **Lägg till ett program som min organisation utvecklar**.
+
+### Steg 2: Skapa en app för ISE i Azure AD-klienten
+1. I Azure AD-konsolen väljer du **Program** > **Lägg till ett program** > **Lägg till ett program som min organisation utvecklar**.
 2. Ange ett namn och en webbadress för appen. Webbadressen kan vara företagets webbplats.
 3. Hämta appmanifestet (en JSON-fil).
 4. Redigera JSON-manifestfilen. I inställningen som heter **keyCredentials** anger du den redigerade certifikattexten från Steg 1 som inställningsvärde.
 5. Spara filen utan att ändra dess namn.
 6. Ge appen behörighet till Microsoft Graph och Microsoft Intune API.
-    1. Välj följande för Microsoft Graph
-        - **Behörigheter för program**: Läsa katalogdata
-        - **Delegerad behörighet**:
-            - Få åtkomst till användarens data när som helst
-          - Logga in användare
-   2. För Microsoft Intune API väljer du **Hämta enhetsstatus och efterlevnad från Intune** under **Behörigheter för program**.
+
+ a. Välj följande för Microsoft Graph:
+    - **Behörigheter för program**: Läsa katalogdata
+    - **Delegerad behörighet**:
+        - Få åtkomst till användarens data när som helst
+        - Logga in användare
+
+ b. För Microsoft Intune API väljer du **Hämta enhetsstatus och efterlevnad från Intune** under **Behörigheter för program**.
 
 7. Välj **Visa slutpunkter** och kopiera följande värden som ska användas vid konfigurering av ISE-inställningar:
 
-|Värde i AAD-portalen|Motsvarande fält i ISE-portalen|
+|Värde i Azure AD-portalen|Motsvarande fält i ISE-portalen|
 |-------------------|---------------------------------|
 |Microsoft Azure AD-diagram API-slutpunkt|URL för automatisk identifiering|
 |OAuth 2.0-token för slutpunkt|Tokenutfärdande URL|
@@ -91,13 +95,13 @@ Om du vill aktivera den här integreringen behöver du inte göra några instäl
 
 
 ### Steg 3: Konfigurera ISE-inställningar
-2. Ange dessa inställningsvärden i ISE-administrationskonsolen:
+Ange dessa inställningsvärden i ISE-administrationskonsolen:
   - **Servertyp**: Mobile Device Manager
   - **Autentiseringstyp**: OAuth – klientens autentiseringsuppgifter
   - **Automatisk identifiering**: Ja
-  - **Automatisk identifiering av URL**: Ange värdet från steg 1
-  - **Klient-ID**: Ange värdet från steg 1
-  - **Tokenutfärdande URL**: Ange värdet från steg 1
+  - **Automatisk identifiering av URL**: *Ange värdet från steg 1.*
+  - **Klient-ID**: *Ange värdet från steg 1.*
+  - **Tokenutfärdande URL**: *Ange värdet från steg 1.*
 
 
 
@@ -106,27 +110,27 @@ Den här tabellen innehåller den information som delas mellan Intune-klienten o
 
 |Egenskap|  Beskrivning|
 |---------------|------------------------------------------------------------|
-|complianceState|   Sant eller falskt (sträng) anger om enheten är kompatibel eller inkompatibel.|
-|isManaged| Sant eller falskt (anger om klienten hanteras av Intune eller inte.|
+|complianceState|Sant- eller falskt-strängen som anger om enheten är kompatibel eller inkompatibel.|
+|isManaged|Sant- eller falskt-strängen som anger om klienten hanteras av Intune eller inte.|
 |macAddress|Enhetens MAC-adress.|
 |serialNumber|Enhetens serienummer. Gäller endast för iOS-enheter.|
-|imei|IMEI (15 decimaler: 14 siffror plus en kontrollsiffra) eller IMEISV (16 siffror) innehåller information om ursprung, modell och serienumret för enheten. Strukturen för IMEI/SA anges i 3GPP TS 23.003. Gäller endast för enheter med SIM-kort.)|
-|udid|Unikt enhets-ID, en sekvens med 40 bokstäver och siffror som är specifika för iOS-enheter.|
-|meid|Identifierare för mobil utrustning, ett globalt unikt nummer för att identifiera en fysisk CDMA-mobilstationsutrustning. Formatet definieras av rapporten 3GPP2 S. R0048 men i praktiken kan det ses som en IMEI men med hexadecimala siffror. Ett MEID är 56 bitar långt (14 hexadecimala siffror). Det består av tre fält, inklusive en 8-bitars regional kod (RR), en 24-bitars tillverkarkod och ett 24-bitars serienummer som tilldelas av tillverkaren.|
-|osVersion| Enhetens operativsystemversion.
-|modell|Enhetsmodell.
-|manufacturer|Enhetstillverkare.
-|azureDeviceId| Enhets-ID när den har anslutits med Azure Active Directory för arbetsplatsen. Är ett tomt guid för enheter som inte är anslutna.|
+|imei|IMEI-numret (15 decimaler: 14 siffror plus en kontrollsiffra) eller IMEISV-numret (16 siffror) innehåller information om ursprung, modell och serienumret för enheten. Strukturen för detta nummer anges i 3GPP TS 23.003. Gäller endast för enheter med SIM-kort.|
+|udid|Unikt enhets-ID, en sekvens med 40 bokstäver och siffror. ID:t är specifikt för iOS-enheter.|
+|meid|Identifierare för mobil utrustning. Det här är ett globalt unikt nummer som identifierar en fysisk CDMA-mobilstationsutrustning. Nummerformatet definieras av 3GPP2-rapporten S. R0048. Men i praktiken kan det här numret ses som ett IMEI-nummer, men med hexadecimala siffror. Ett MEID är 56 bitar långt (14 hexadecimala siffror). Det består av tre fält, inklusive en 8-bitars regional kod (RR), en 24-bitars tillverkarkod och ett 24-bitars serienummer som tilldelas av tillverkaren.|
+|osVersion|Enhetens operativsystemversion.
+|modell|Enhetsmodellen.
+|manufacturer|Enhetstillverkaren.
+|azureDeviceId|Enhets-ID när den har anslutits med Azure AD för arbetsplatsen. Det här är ett tomt GUID för enheter som inte är anslutna.|
 |lastContactTimeUtc|Datum och tid när enheten senast checkade in hos Intune-hanteringstjänsten.
 
 
 ## Användarupplevelse
 
-När en användare försöker få åtkomst till resurser med en enhet som inte är registrerad får denne en uppmaning att registrera sin enhet, t.ex. en sådan som visas här:
+När en användare försöker få åtkomst till resurser med en enhet som inte är registrerad får användaren en uppmaning att registrera sin enhet, t.ex. en sådan som visas här:
 
 ![Exempel på registreringsfråga](../media/cisco-ise-user-iphone.png)
 
-När användaren väljer att registrera sin enhet dirigeras denna om till Intune-registreringsprocessen. Användarupplevelsen för registrering i Intune beskrivs i följande avsnitt:
+När en användare väljer att registrera sin enhet dirigeras användaren om till Intune-registreringsprocessen. Användarupplevelsen för registrering i Intune beskrivs i följande avsnitt:
 
 - [Registrera en Android-enhet i Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
 - [Registrera din iOS-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
@@ -142,6 +146,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 026bb4c8bf90bbe1af93513df46f0ec21f82509b
+ms.sourcegitcommit: 3cc73e43f09709b71c78a81c73b044d92d4ef401
+ms.openlocfilehash: 77977ea32ea37a54e9d67638bb0e4c3bb6841fb3
 
 
 ---
@@ -32,11 +32,12 @@ Syntaxen för Get-AppxPackage är:
 ` Parameter Set: __AllParameterSets`
 ` Get-AppxPackage [[-Name] <String> ] [[-Publisher] <String> ] [-AllUsers] [-User <String> ] [ <CommonParameters>]`
 
-> Obs! Du kan behöva köra PowerShell som administratör om du vill kunna hämta PFN
+> [!NOTE]
+Du kan behöva köra PowerShell som administratör för att kunna hämta PFN.
 
 Om du exempelvis vill få information om alla universella appar som är installerade på datorn använder du `Get-AppxPackage`.
 
-Använd `Get-AppxPackage *<app_name>` om du vill få information om en app som du känner till namnet eller en del av namnet på. Observera användning av jokertecken, vilket är särskilt användbart om du inte är säker på appens fullständiga namn. Använd till exempel `Get-AppxPackage *OneNote` om du vill hämta info för OneNote.
+Använd `Get-AppxPackage *<app_name>` om du vill få information om en app som du känner till hela eller en del av namnet på. Observera användning av jokertecken, vilket är särskilt användbart om du inte är säker på appens fullständiga namn. Använd till exempel `Get-AppxPackage *OneNote` om du vill hämta info för OneNote.
 
 
 Här är den information som har hämtats för OneNote:
@@ -67,13 +68,12 @@ Här är den information som har hämtats för OneNote:
 
 ## Hitta en PFN om appen inte har installerats på en dator
 
-1.  Gå till https://www.microsoft.com/en-us/store/apps
+1.  Gå till https://www.microsoft.com/en-us/store/apps.
 2.  Ange namnet på appen i sökfältet. I vårt exempel söker du efter OneNote.
-3.  Klicka på länken till appen. Observera att den URL som du har åtkomst till har en serie bokstäver i slutet. I vårt exempel ser URL-adressen ser ut så här:
-`https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  Klistra in följande URL i en annan flik `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`, och ersätt `<app id>` med det app-id som du har fått från https://www.microsoft.com/en-us/store/apps – serien med bokstäver i slutet av URL:en i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+3.  Välj länken till appen. Observera att URL:en har en serie bokstäver i slutet. I vårt exempel ser URL:en ut så här: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
+4.  Klistra in följande URL på en annan flik: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Ersätt `<app id>` med det app-id som du har fått från https://www.microsoft.com/en-us/store/apps – serien med bokstäver i slutet av URL:en i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
-Den information du vill visa visas i Microsoft Edge; i Internet Explorer klickar du på **Öppna** om du vill se informationen. PFN-värdet anges på första raden. Så här ser resultatet ut i vårt exempel:
+I Microsoft Edge visas den information som du vill ha. Välj **Öppna** i Internet Explorer om du vill se informationen. PFN-värdet anges på första raden. Här följer resultaten i vårt exempel:
 
 
 `{`
@@ -85,6 +85,6 @@ Den information du vill visa visas i Microsoft Edge; i Internet Explorer klickar
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

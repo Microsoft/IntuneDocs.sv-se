@@ -13,8 +13,8 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a124663a80bb477d0312faa0fb43e4457ba8246
-ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
+ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
+ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
 
 
 ---
@@ -24,28 +24,28 @@ ms.openlocfilehash: ae5ac5c697195f8b45f500cfa9d0de24953f8cb0
 ## Skapa en anpassad konfiguration
 Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune. Skapa en anpassad konfiguration:
 
-   1. Gå till Intune-administratörskonsolen och välj **Princip** -> **Lägg till princip** -> *<Expand platform>* -> **Anpassad konfiguration** -> **Skapa princip**.
+   1. Gå till Intune-administratörskonsolen och välj **Princip** > **Lägg till princip** > *<Expand platform>* > **Anpassad konfiguration** > **Skapa princip**.
    2. Ange ett namn för principen.
-   3. För varje URI-inställning klickar du på **Lägg till** och anger önskad information. Här är ett exempel:
+   3. För varje URI-inställning väljer du **Lägg till** och anger önskad information. Här är ett exempel:
 
    ![Dialogrutan för anpassad konfiguration av VPN-profil](./media/Intune_Add_VPN_URI.png)
 
-   4.  När du har angett alla URI-inställningar klickar du på **Spara princip** och distribuerar sedan principen.
+   4.  När du har angett alla URI-inställningar väljer du **Spara princip** och distribuerar sedan principen.
 
 ## Distribuera en konfigurationsprincip
 
-1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
+1.  På arbetsytan **Princip** väljer du den princip som du vill distribuera och klickar sedan på **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** – Välj en eller flera grupper som du vill distribuera principen till. Klicka sedan på **Lägg till** &gt; **OK**.
 
-    -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
+    -   **Om du vill stänga dialogrutan utan att distribuera den** – Välj **Avbryt**.
 
 När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
 
 ##Exempel på URI-inställningar för en anpassad konfiguration av VPN-profil
-Följande är exempelposter för URI-värden för att skapa en anpassad konfiguration för VPN i det fiktiva företaget Contoso. Mer information, t.ex. om datatypen för varje post, finns i [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx)
+Följande är exempelposter för URI-värden för att skapa en anpassad konfiguration för VPN i det fiktiva företaget Contoso. Mer information, t.ex. om datatypen för varje post, finns i [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
 
 Native Contoso VPN (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
 
@@ -83,7 +83,7 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 **./Vendor/MSFT/VPNv2/ContosoVPN/TrafficFilterList/1/App/Id** Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 
-Vid eventuella frågor om hur dessa inställningar ska användas eller för mer information om vad de utför kan kunden vända sig till CSP-dokumentationen: https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx
+Kunder som har frågor om hur dessa inställningar ska användas eller som vill veta mer om vad inställningarna gör, kan läsa CSP-dokumentationen (Configuration Service Provider): https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
 ## URI-inställningar för Android per-app-VPN på PulseSecure
 ### ANPASSAD URI FÖR PAKETLISTA
@@ -112,6 +112,6 @@ Exempel:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

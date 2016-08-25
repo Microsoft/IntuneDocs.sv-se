@@ -13,8 +13,8 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 49a236359692a5bbccf9ee0bb263094434049a91
-ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
+ms.sourcegitcommit: a6caef9e0f4d6235ecf1a89c1765d6c8e6ce1a7b
+ms.openlocfilehash: e5e3833a38434d4fe55cae554fc49f567b606ad8
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: f5ade985900e2387b19b4ed2786f22d8a216d8d8
 # Funktioner för hantering av Windows-datorer (med Microsoft Intune PC-klienten)
 I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner än med Intune PC-klienten. Men du kan också hantera datorer med hjälp av Intune PC-klienten som tillhandahåller följande funktioner:
 
--   **Hantera programvaruuppdateringar** – Du kan hålla datorerna uppdaterade och hantera dem när nya uppdateringar tillämpas.
+-   **Hantering av programvaruuppdateringar** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
 
 -   **Princip för Windows-brandväggen** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
 
@@ -37,22 +37,22 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 Intune stöder installation av PC-klientprogramvara på upp till 7 000 Windows-enheter.
 
 ## Krav på operativsystem
-Intune kan hantera datorer som kör följande Windows-versioner (både x86 och x64):
+Intune kan hantera datorer som kör följande Windows-versioner (både 32-bitars och 64-bitars):
 
 
--   **Windows Vista** – Business-, Enterprise- och Ultimate-versioner.
+-   **Windows Vista** – Business-, Enterprise- och Ultimate-versioner
 
--   **Windows 7** – Pro-, Enterprise- och Ultimate-versionerna (utan service pack eller med SP1).
+-   **Windows 7** – Pro-, Enterprise- och Ultimate-versionerna (utan service pack eller med SP1)
 
--   **Windows 8** – Pro- och Enterprise-versionerna.
+-   **Windows 8** – Pro- och Enterprise-versionerna
 
--   **Windows 8.1** – Pro- och Enterprise-versionerna.
+-   **Windows 8.1** – Pro- och Enterprise-versionerna
 
-- **Windows 10** – Pro-, Education- och Enterprise-versionerna.
+- **Windows 10** – Pro-, Education- och Enterprise-versionerna
 
 
 ## Minsta maskinvarukrav
-Följande är de minsta maskinvarukraven för att installera Intune PC-klienten:
+Minsta maskinvarukrav för att installera Intune PC-klienten:
 
 |Krav|Information|
 |---------------|--------------------|
@@ -61,12 +61,12 @@ Följande är de minsta maskinvarukraven för att installera Intune PC-klienten:
 |Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
 
 ## Ytterligare krav
-Nedan visas programvarukraven för att installera Intune PC-klienten:
+Minsta programvarukrav för att installera Intune PC-klienten:
 
 |Krav|Information|
 |---------------|--------------------|
-|Administrativ behörighet|Det konto som installerar klientprogrammet måste ha lokal administratörsbehörighet på datorn.|
-|Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1 installerat.|
+|Administrativ behörighet|Kontot som används för att installera klientprogramvaran måste ha lokal administratörsbehörighet på datorn.|
+|Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune PC-klientprogrammet måste du avinstallera följande klientprogram från datorn:<br /><br />– Alla versioner av Configuration Manager<br />– Alla versioner av Microsoft Systems Management Server (SMS)|
 
 ### Se även
@@ -74,6 +74,6 @@ Nedan visas programvarukraven för att installera Intune PC-klienten:
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

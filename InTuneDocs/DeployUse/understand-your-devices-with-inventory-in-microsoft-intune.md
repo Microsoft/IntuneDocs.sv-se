@@ -4,7 +4,7 @@ description: "Använd Intune för att visa information om maskinvara för enhete
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 7d11642f13dfbe554661ecc4149c3aaf3e7448c2
+ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
+ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
 
 
 ---
@@ -45,7 +45,7 @@ Om du vill se inventeringen som samlas in av mobila enheter kör du [Rapporter o
 |**Serienummer**|iOS-, Mac OS X-, Android-, Windows 8.1- och Windows 10-enheter|
 |**Totalt lagringsutrymme**|iOS-, Mac OS X-, Windows 8.1- och Windows 10-enheter|
 |**Ledigt lagringsutrymme**|iOS-, Mac OS X-, Windows 8.1- och Windows 10-enheter|
-|**Telefonnummer**<br>Exempelvis identifieras telefoner som kategoriserats som företagets med sina fullständiga telefonnummer när du kör en inventeringsrapport för mobila enheter. BYOD-telefonnummer maskeras med &#42;, och bara de sista fyra siffrorna visas.|iOS-, Android- och Windows Phone-enheter|
+|**Telefonnummer**<br>Telefoner som kategoriserats som företagets identifieras med sina fullständiga telefonnummer (till exempel när du kör en inventeringsrapport för mobila enheter). BYOD-telefonnummer maskeras med &#42;, och bara de sista fyra siffrorna visas.|iOS-, Android- och Windows Phone-enheter|
 |**IMEI**|Exchange ActiveSync-, iOS-, Android- och Windows Phone-enheter|
 |**MEID**<br>MEID (Mobile Equipment Identifier)|Endast iOS-enheter|
 |**Wi-Fi MAC**|Alla enheter utom Exchange ActiveSync|
@@ -114,6 +114,6 @@ Om du vill visa inventeringen som samlas in av Windows-datorer kör du [datorinv
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

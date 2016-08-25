@@ -13,8 +13,8 @@ ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: ae9b3be57e4008d25f5222025c057fc4211f1119
+ms.sourcegitcommit: 167db9027e69dd6419d5deec758a8a0a0b119a97
+ms.openlocfilehash: 8605a665a0033fdc9b05ba452f5bf966e76699ca
 
 
 ---
@@ -24,7 +24,7 @@ Wi-Fi-, VPN- och e-postprofiler i Microsoft Intune fungerar tillsammans så att 
 
 ## [Wi-Fi-profiler](wi-fi-connections-in-microsoft-intune.md) och plattformar som stöds
 
-Distribuera trådlösa nätverksinställningar till användarna. Genom att distribuera de här inställningarna gör du det enklare för slutanvändaren att ansluta till företagets nätverk.
+Distribuera trådlösa nätverksinställningar till användarna. Inställningarna gör det enkelt för användarna att ansluta till företagets nätverk.
 #### Plattformar som stöds
 
 |Windows 8.1 och senare|Windows Phone 8.1 och senare|iOS|Android|Samsung KNOX|
@@ -32,7 +32,7 @@ Distribuera trådlösa nätverksinställningar till användarna. Genom att distr
 |Ja (du kan importera en Windows Wi-Fi-profil)|Ja (du kan konfigurera OMA-URI) |Ja|Ja|Ja|
 
 ## [VPN-profiler](vpn-connections-in-microsoft-intune.md) och plattformar som stöds
-Distribuera VPN-inställningar till dina användare. Genom att distribuera de här inställningarna gör du det enklare för slutanvändaren att ansluta till resurser i företagsnätverket.
+Distribuera VPN-inställningar till dina användare. Inställningarna gör det enkelt för användarna att ansluta till resurser i företagets nätverk.
 
 |Windows 8.1 och senare|Windows Phone 8.1 och senare|iOS|Android|Samsung KNOX|
 |---------------------|---------------------------|---|-------|------------|
@@ -56,6 +56,6 @@ Hjälper till med att säkra åtkomst till företagsresurser som trådlösa nät
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

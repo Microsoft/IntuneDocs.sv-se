@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc5ff023b5d29ded999c7e49c5e7c2aee8a23bba
-ms.openlocfilehash: e71cc1e8e2cb0f46507ff63d962f3d477acfb72e
+ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
+ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
 
 
 ---
@@ -233,6 +233,77 @@ Du kan konfigurera följande inställningar på enheter som kör iOS 7.1 och sen
 |**Tillåt att användaren installerar konfigurationsprofiler och certifikat**|Tillåt att användaren installerar konfigurationsprofiler och certifikat.|
 |**Tillåt användning av appen Meddelanden på enheten**|Tillåt att appen Meddelanden används för att skicka sms.|
 
+### Visa eller dölja appar
+
+Med **listan över dolda och visade appar** kan du styra följande på övervakade enheter som kör iOS 9.3 eller senare:
+
+- Ange en lista över appar som ska vara dolda från användare. Användare kan inte visa eller starta dessa appar.
+- Ange en lista över appar som användare kan visa och starta. Inga andra appar kan visas eller startas.
+
+
+#### Så här skapar du en lista över dolda eller visade appar
+
+Ange följande inställningar.
+
+|Inställningsnamn|Information|
+|-|-|
+|**Lista över dolda och visade appar**|Aktivera den här inställningen om du vill skapa en lista över dolda eller visade appar.|
+|**Dölj apparna i listan från användarna**|Välj det här alternativet om du vill skapa en lista över appar som är dolda för användarna.|
+|**Visa enbart appar som finns med i listan för användarna**|Välj det här alternativet om du vill skapa en lista över appar som visas för användarna.<br>När du skapar den här listtypen döljs alla andra appar utom iOS-apparna **Inställningar** och **Telefon** (för iPhones).<br>Dessutom måste du lägga till företagsportalen och alla program som du har distribuerat och hanterar med Intune i listan.|
+|**Lägg till**|Lägger till en app i den markerade listan.<br>För den dolda listan måste du ange **namn**, **utgivare**, och **app-URL eller paket-ID** för varje app som du vill dölja.<br>För den visade listan kan du antingen **välja en hanterad app** som visar en lista över Intune-hanterade appar som du kan välja från, eller så kan du välja en butiksapp och sedan ange **namn**, **utgivare** och **app-URL eller paket-ID** för varje app som du vill visa.|
+|**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och app-URL i filen.|
+|**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
+|**Ta bort**|Tar bort den markerade appen från listan.|
+
+#### Appinformation för inbyggda iOS-appar
+
+Med informationen i den här listan kan du identifiera namn, utgivare och paket-ID för de inbyggda iOS-appar som du kan välja att visa eller dölja. Om du vill visa eller dölja alla appar i listan kan du kopiera data till en textfil med filnamnstillägget **.csv** och sedan importera alla appar samtidigt med alternativet **Importera appar**.
+
+```
+App Store,Apple,com.apple.AppStore
+Calculator,Apple,com.apple.calculator
+Calendar,Apple,com.apple.mobilecal
+Camera,Apple,com.apple.camera
+Clock,Apple,com.apple.mobiletimer
+Compass,Apple,com.apple.compass
+Contacts,Apple,com.apple.MobileAddressBook
+FaceTime,Apple,com.apple.facetime
+Find Friends,Apple,com.apple.mobileme.fmf1
+Find iPhone,Apple,com.apple.mobileme.fmip1
+Game Center,Apple,com.apple.gamecenter
+GarageBand,Apple,com.apple.mobilegarageband
+Health,Apple,com.apple.Health
+iBooks,Apple,com.apple.iBooks
+iTunes Store,Apple,com.apple.MobileStore
+iTunes U,Apple,com.apple.itunesu
+Keynote,Apple,com.apple.Keynote
+Mail,Apple,com.apple.mobilemail
+Maps,Apple,com.apple.Maps
+Messages,Apple,com.apple.MobileSMS
+Music,Apple,com.apple.Music
+News,Apple,com.apple.news
+Notes,Apple,com.apple.mobilenotes
+Numbers,Apple,com.apple.Numbers
+Pages,Apple,com.apple.Pages
+Photo Booth,Apple,com.apple.Photo-Booth
+Photos,Apple,com.apple.mobileslideshow
+Podcasts,Apple,com.apple.podcasts
+Reminders,Apple,com.apple.reminders
+Safari,Apple,com.apple.mobilesafari
+Settings,Apple,com.apple.Preferences
+Stocks,Apple,com.apple.stocks
+Tips,Apple,com.apple.tips
+Videos,Apple,com.apple.videos
+VoiceMemos,Apple,com.apple.VoiceMemos
+Wallet,Apple,com.apple.Passbook
+Watch,Apple,com.apple.Bridge
+Weather,Apple,com.apple.weather
+
+
+```
+
+
+
 
 ## Anpassade principinställningar
 
@@ -266,6 +337,6 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

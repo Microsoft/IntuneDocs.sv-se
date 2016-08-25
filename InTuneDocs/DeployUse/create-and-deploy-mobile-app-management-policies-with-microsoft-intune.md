@@ -13,8 +13,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 1782d200ed26473414fbc40f554c84cb5d017d44
+ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
+ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
 
 
 ---
@@ -28,12 +28,16 @@ Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure P
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
 
 >[!IMPORTANT]
+Tänk på följande om du hanterar dina enheter med **Intune-administratörskonsolen**:
 
-> Om du för närvarande använder **Intune-administratörskonsolen** för hantering av enheterna kan du skapa en MAM-princip som har stöd för appar för enheter som har registrerats i Intune med [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
-MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
+> * Du kan skapa en MAM-princip som stöder appar för enheter som registrerats i Intune med hjälp av [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+> * MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
 
+> * Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer.
 
-> Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer. Om du skapar principer för MAM i både Intune-administrationskonsolen och Azure Portal tillämpas principen i Azure Portal på apparna och distribueras till användarna.
+> * För att kunna distribuera hanterade appar måste du skapa en MAM-princip i Intune-administratörskonsolen. Då vill du kanske skapa MAM-principer i både Intune-administratörskonsolen och i Azure Portal: I Intune-administratörskonsolen så att du kan distribuera hanterade appar och i Azure Portal eftersom det är den nya administratörskonsolen där alla MAM-principinställningar finns.
+
+> * Om du skapar MAM-principer i både Intune-administratörskonsolen och i Azure Portal tillämpas de principer som skapas i Azure Portal för apparna.
 
 Om du vill se en lista över principinställningar som stöds för Android- och iOS-plattformar kan du välja något av följande:
 
@@ -165,6 +169,6 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 
