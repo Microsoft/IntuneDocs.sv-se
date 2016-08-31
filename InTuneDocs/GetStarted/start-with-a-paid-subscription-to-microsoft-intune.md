@@ -2,7 +2,7 @@
 title: "Snabbstartsguide för Intune | Microsoft Intune"
 description: "Krav och förutsättningar för att börja använda din Intune-prenumeration"
 keywords: 
-author: Staciebarker
+author: barlanmsft
 manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +13,8 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: d10bb6ce48ba000154d117b2481690a198d25e49
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: 735889feb1c3234c0c063048601715a3f8aa4719
 
 
 ---
@@ -75,6 +75,6 @@ Det är dags att komma igång med Intunes snabbstartsguide!
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -8,9 +8,6 @@
 ### [Registrera mobila enheter och installera en app](get-started-with-a-30-day-trial-of-microsoft-intune-step-5.md)
 ### [Övriga alternativ och tillägg](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Nästa steg](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-## [Vanliga uppgifter vid utvärdering av Intune](common-microsoft-intune-evaluation-tasks.md)
-### [Starta en utvärdering och distribuera en princip för PIN-koder för iOS](start-a-microsoft-intune-trial-and-deploy-ios-pin-policy.md)
-### [Konfigurera e-poståtkomst för iOS-enheter](set-up-email-access-for-ios-devices-using-microsoft-intune.md)
 ## [Vanliga scenarier](common-ways-to-use-intune.md)
 ## [Snabbstartsguider](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
 ### [Förhindra företagsdataläckor från Office 365-mobilappar](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
@@ -25,6 +22,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

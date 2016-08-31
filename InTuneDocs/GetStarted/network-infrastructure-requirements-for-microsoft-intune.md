@@ -2,7 +2,7 @@
 title: "Krav på nätverksinfrastruktur | Microsoft Intune"
 description: "Krav på brandvägg, port, domän och proxyserver för Intune"
 keywords: 
-author: Staciebarker
+author: barlanmsft
 manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +13,8 @@ ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c671610b9c56d8b92d126d9902cce9c8c689ed63
-ms.openlocfilehash: 5f92ecf7d2590150c5341d81a1a976c71518e2fd
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: d77d33f0c849be6b9edcbe977900fd5dac6c4e2f
 
 
 ---
@@ -148,6 +148,7 @@ I följande tabell visas de portar och tjänster som Intune-klienten har åtkoms
 |Microsoft Update-tjänster|\*.update.microsoft.com<br>download.microsoft.com<br>update.microsoft.com<br>\*.download.windowsupdate.com<br>download.windowsupdate.com<br>\*.windowsupdate.com<br>windowsupdate.microsoft.com<br>ntservicepack.microsoft.com|80 och 443|
 |DNS-sökningsbegäranden|manage.microsoft.com.nsatc.net|80|
 |Samsung KNOX-enhetskommunikation genom brandväggen|Om du vill att Samsung KNOX-enheterna ska kontakta KNOX-servrarna genom brandväggen följer du anvisningarna i Vanliga frågor och svar om Samsung KNOX.||
+|Kommunikation för villkorlig åtkomst|443|204.79.197.200|
 |Dokumentation, hjälp och support:</br></br>*.livemeeting.com<br>\*.microsoftonline.com<br>\*.social.technet.microsoft.com<br>blogs.technet.com<br>go.microsoft.com<br>onlinehelp.microsoft.com<br>www.microsoft.com|80|||
 
 
@@ -169,6 +170,6 @@ Du kan också använda en proxyserver som cachelagrar innehåll för att [minska
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

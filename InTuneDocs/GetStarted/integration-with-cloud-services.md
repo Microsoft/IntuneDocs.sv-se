@@ -2,7 +2,7 @@
 title: "Intune-integration med Microsofts molntjänster | Microsoft Intune"
 description: "Intune-integration med Microsofts molntjänster och andra Microsoft-produkter"
 keywords: 
-author: Staciebarker
+author: barlanmsft
 manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: 49675811-08a3-408f-810b-89552ff404bd
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 6523c731e8351b121cba46f6c5d2ef46db656c2c
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: 83020d347a4bc036778d830f5189e68e7f8d85da
 
 
 ---
@@ -43,6 +43,6 @@ Mer information finns i [Hantera mobila enheter med Configuration Manager och Mi
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Med Intune kan du skapa och distribuera principer som styr instäl
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
-ms.openlocfilehash: 70b980c045d8d37aa4ea5bee5858c0c728d54114
+ms.sourcegitcommit: fa665c758460b8bbd95b237da6a22eda741b8b95
+ms.openlocfilehash: 0dc10ea029d078840a584424f7900f340189b960
 
 
 ---
@@ -132,9 +132,6 @@ Enheter kontaktar Intune antingen när de får en avisering som uppmanar dem att
 
 Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsportalen, utlöser inte en omedelbar avisering till enheter.
 
-> [!TIP]
-> När en princip som innehåller inställningar distribueras till en Android-enhet uppmanas användaren att vidta åtgärder för att följa principen. De nya principinställningarna börjar gälla när användaren vidtar dessa åtgärder eller när enheten startas om.
-
 ### Hur vet jag vilka inställningar som tillämpas om flera principer distribueras till samma användare eller enhet?
 När två eller fler principer distribueras till samma användare eller enhet så görs utvärderingen av vilken inställning som ska tillämpas på inställningsnivå:
 
@@ -152,7 +149,7 @@ Konflikter uppstår om två principinställningar är samma.  Anta att du har ko
 Om en princip distribueras till appen och börjar tillämpas, och en andra princip distribueras senare, har den första principen företräde och fortsätter att tillämpas, medan den andra visas som i konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående princip, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
 
 ### Vad händer om anpassade iOS-principer är i konflikt med varandra?
-Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer. Den fungerar bara som själva leveransmekanismen.
+Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
 
 När du distribuerar en anpassad princip bör du se till att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad princip har inställningar som är i konflikt med varandra tillämpas dessa inställningar i slumpmässig ordning.
 
@@ -215,6 +212,6 @@ Se [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

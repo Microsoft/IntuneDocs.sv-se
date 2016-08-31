@@ -2,9 +2,9 @@
 title: "Felsökningsprinciper | Microsoft Intune"
 description: "Felsöka problem med principkonfiguration."
 keywords: 
-author: robstack
+author: robstackmsft
 manager: angrobe
-ms.date: 08/01/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +13,15 @@ ms.assetid: 99fb6db6-21c5-46cd-980d-50f063ab8ab8
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 98f15f304d5d372d05abfdd296ddff1ef98dd3eb
+ms.sourcegitcommit: 1f133d31311706365888cf33ceb4c4412deec333
+ms.openlocfilehash: a8afc681b8b12e1e760dea3f784e4beac4697242
 
 
 ---
 
 # Felsökningsprinciper i Microsoft Intune
 
-Det här avsnittet innehåller information om problem relaterade till din Microsoft Intune-principkonfiguration samt information om hur du felsöker dessa problem.
-
-Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
-
+Börja här om du har problem med att distribuera och hantera principer med Intune. Det här avsnittet innehåller några vanliga problem du kan stöta på samt lösningar på problemen.
 
 ## Tillämpas principen för enheten?
 **Problem:** Det är oklart om en viss princip används för en enhet eller så beter sig en enhet på ett sätt som strider mot en princip.
@@ -49,17 +46,6 @@ På skärmbilden nedan ser du två tydliga exempel:
 
 > [!NOTE]
 > Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
-
-## Uppdateringsintervall för principer
-Tänk på att principer uppdateras enligt regelbundna intervall. I allmänhet ska principer registreras på enheter inom 15 minuter från ändringen. Här finns mer information om regelbundna intervall för principuppdatering:
-
--   **Windows-enhet registrerad för MDM**: Principen uppdateras var 8:e timme för Windows 8.1- och Windows 10-enheter och var 24:e timme för Windows RT-enheter.
-
--   **Windows Phone**: Principen uppdateras var åttonde timme. Detta kan framtvinga en uppdatering på företagsportalen, under **Inställningar**.
-
--   **iOS**: Principen uppdateras en gång om dagen med ett slumpmässigt tidsintervall. Detta kan också framtvingas genom att du öppnar företagsportalen, markerar enheten och klickar på **Synkronisera**
-
--   **Android**: Principen uppdateras en gång om dagen med ett slumpmässigt tidsintervall. Detta kan också framtvingas genom att du öppnar företagsportalen, markerar enheten och klickar på **Synkronisera**
 
 ## Principrelaterade Microsoft Intune-fel i policyplatform.log
 För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på att andra inställningar än standardinställningarna används i Windows User Account Control (UAC) på enheten. Andra inställningar än UAC-standardinställningarna kan påverka Microsoft Intune-klientinstallationer och principkörning.
@@ -96,9 +82,6 @@ I Windows RT sveper du till exempel in från höger på skrivbordet så öppnas 
 I den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper** längst ned. Välj den och klicka sedan på **Återställ principer**.
 Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande princip.
 
-## Android-enheter framtvingar inte säkerhetsprincipsändringar utan slutanvändarens godkännande
-Android MDM tillåter inte att tjänsten framtvingar initiala principändringar på enheter som andra plattformar gör. Detta beror på Android-funktionerna och är inte relaterat till Intune-tjänsten. Android-enheter uppmanar slutanvändaren via meddelandefönstret för den relaterade principändringen (d.v.s. lösenord, kryptering osv.).  Slutanvändaren måste svara på uppmaningen och när principen har godkänts ska den tillämpas.
-
 ## Det går inte att skapa en princip eller registrera klienter om företagets namn innehåller specialtecken
 **Problem:** Du kan inte skapa en princip eller registrera klienter.
 
@@ -109,6 +92,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

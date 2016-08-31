@@ -2,7 +2,7 @@
 title: "Synkronisera Active Directory och lägga till användare i Intune | Microsoft Intune"
 description: "Beskriver hur du synkroniserar lokala användare med Azure AD och beviljar administratörsbehörigheter för din Intune-prenumeration"
 keywords: 
-author: Staciebarker
+author: barlanmsft
 manager: angrobe
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +13,8 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2a192c71b1b82f59b34ea614d09d895174f8112b
-ms.openlocfilehash: 49eb9d1658df352c68677eaa3f29e1d57c43947e
+ms.sourcegitcommit: 6d1c7c670341692d4ea0c823e4a9a96746b83067
+ms.openlocfilehash: fb38e2ba5ffcff202504ee1ebb934000c1f074f1
 
 
 ---
@@ -48,6 +48,6 @@ Gratulerar! Du är klar med steg 3 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

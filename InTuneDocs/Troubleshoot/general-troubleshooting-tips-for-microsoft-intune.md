@@ -13,8 +13,8 @@ ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9915b275101e287498217c4f35e1c0e56d2425c2
-ms.openlocfilehash: d321930262a9bcf9542c757fdf0b945d0419930c
+ms.sourcegitcommit: ab7ccf4c72f8e8f3c67c65d99563fe6fbfdd42b9
+ms.openlocfilehash: 94c761071f4b578440297859662102b2b3080899
 
 
 ---
@@ -24,6 +24,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
 > [!NOTE]
 > Om du vill skapa en supportbegäran eller visa en befintlig begäran [går du till Office 365-administrationscentret](https://portal.office.com/admin/default.aspx). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
 ## Definiera problemet
 
 -   Vad är problemet?
@@ -62,7 +63,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
     Om du vill skapa en supportbegäran går du till [administrationscenter för Office 365.](https://portal.office.com/admin/default.aspx) Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
-## Community-resurser
+## Gruppresurser
 Du kan hitta annan användbar information i dessa gruppresurser:
 
 -   [Överlevnadsguide till Microsoft Intune](http://social.technet.microsoft.com/wiki/contents/articles/23431.microsoft-intune-survival-guide.aspx) innehåller länkar till många resurser som kan hjälpa dig att konfigurera, underhålla och felsöka Intune.
@@ -92,6 +93,6 @@ Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den i
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
