@@ -13,14 +13,14 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
-ms.openlocfilehash: 947a7ba62d817e6b02d8a6bb0a0d0bddf53e7d4e
+ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
+ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
 
 
 ---
 
 # Konfigurera Android-enhetshantering
-Om du vill konfigurera din Windows-enhet kan du få hjälp [här](../enduser/using-your-android-device-with-intune.md).
+Om du vill konfigurera din Android-enhet kan du få hjälp [här](../enduser/using-your-android-device-with-intune.md).
 
 Med Microsoft Intune kan du aktivera BYOD (”Bring Your Own Device”) för Android-enheter utan ytterligare plattformsbelastning.
 
@@ -52,6 +52,6 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

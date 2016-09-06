@@ -13,8 +13,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c329bd08aaf72ae2acaa03dcb12c911d84b46b4e
-ms.openlocfilehash: 9d624da7931c56476b476b7a9fd5711f398052c4
+ms.sourcegitcommit: a7a0f834df939432910e32e6e635a70f021b37a9
+ms.openlocfilehash: 63405b43609eda515656ad397c5c7ff4253a8167
 
 
 ---
@@ -76,7 +76,7 @@ I följande tabell visas registreringsmetoder för företagsägda enheter, och v
 |**[BYOD](#BYOD)** | Nej|    Ja |   Nej |
 |**[DEM](#DEM)**|   Nej |Nej |Nej  |
 
-**Registreringsmetoder för företagsägda enheter**
+**Metoder för registrering av enheter**
 
 ### BYOD
 ”Bring Your Own Device”. Användarna installerar företagsportalsappen och registrerar sina enheter. Om en enhet registreras på företagsportalen kommer arbetsplatsen att koppla enheten. Registrering av iOS-enheter i företagsportalen kräver ett Apple-ID. BYOD kräver inte ytterligare konfiguration för företagsägda enheter. Se stegen för att [konfigurera enhetshantering](get-ready-to-enroll-devices-in-microsoft-intune.md#set-up-device-management). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
@@ -151,6 +151,6 @@ Datorer som hanteras med Intune-klientprogrammet kan inte rensas selektivt eller
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

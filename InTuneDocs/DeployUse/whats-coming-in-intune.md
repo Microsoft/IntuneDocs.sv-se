@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f941fad998c6c0e07437c8f476df55325a4741b
-ms.openlocfilehash: dd7bd41188cee812aafc8c439f703fa4abd42858
+ms.sourcegitcommit: 0d70a46d9c13aad1bc0a940836d83a99b93bb95e
+ms.openlocfilehash: 7f84ad1566431a7a72897750fadbc90cb56ec5ce
 
 
 ---
@@ -30,7 +30,7 @@ Följande ändringar är under utveckling för Intune. Hybriddistributioner (Con
 
 ## Apphantering
 ### Dolda och visade appar för iOS 9.3
-För enheter som kör iOS 9.3 eller senare kan du använda listan över dolda och visade appar i den allmänna konfigurationsprincipen för iOS för att:
+För övervakade enheter som kör iOS 9.3 eller senare kan du använda listan över dolda och visade appar i den allmänna konfigurationsprincipen för iOS för att:
 - Ange en lista över appar som ska vara dolda från användare. Användare kan inte visa eller starta dessa appar.
 - Ange en lista över appar som användare kan visa och starta. Inga andra appar kan visas eller startas.
 
@@ -50,7 +50,7 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX.
 ### Nya appar är kompatibla med hanteringsprinciper för mobilappar (MAM)
 Yammer-appen för [iOS](https://itunes.apple.com/app/yammer/id289559439?mt=8) och [Android](https://play.google.com/store/apps/details?id=com.yammer.v1) är kompatibel med [hanteringsprinciper för mobilappar (MAM) i Intune](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune), oavsett om enheten har registrerats.
 
-En fullständig lista över MAM-kompatibla appar finns på webbplatsen för [Microsoft Intune-programpartner](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).
+En fullständig lista över MAM-kompatibla appar finns på webbplatsen för [Microsoft Intune-programpartner](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).
 <!--- TFS 1252335 & 1252336--->
 
 ## Enhetshantering
@@ -87,6 +87,18 @@ På företagsportalens webbplats kan slutanvändare trycka på en ny "Feedback"-
 ### Tillägg av Meddelanden på företagsportalen för Android
 Vi publicerar en uppdatering av företagsportalen för Android i september där vi lägger till en ny **Meddelanden**-ikon på startsidan. När användaren trycker på ikonen visas sidan **Meddelanden**. På sidan visas alla objekt som kräver åtgärder i företagsportalappen, till exempel inkompatibla enheter, registreringsuppdatering och aktivering av registreringar. Om du också använder företagsportalappen för iOS kan du redan se dessa meddelanden. När sidan **Meddelanden** läggs till kommer sidan **Konfiguration av företagsåtkomst** inte att visas varje gång du startar eller återupptar företagsportalen för Android, förutsatt att enheten redan är registrerad. Vi vet att många av er har skapat instruktioner till användarna och uppskattar att få veta på förhand när era instruktioner/skärmbilder behöver uppdateras. Uppdatera din dokumentation med de kommande ändringarna. Om du behöver nya skärmbilder kan du gå till https://aka.ms/androidcpupdate.  
 
+### Förbättringar i hur iOS-slutanvändare får sina appar
+Följande ändringar av app-panelerna i företagsportalsappen för iOS görs i september så att användarna ska kunna få flera vyer på en och samma plats, nämligen företagsportalens webbplats för alla deras appar. Apples begränsningar förhindrar för närvarande att verksamhetsspecifika appar och hanterade App Store-appar listas i företagsportalsappen, och kräver att besöker olika vyer om de vill hitta alla sina appar.
+
+- Panelen **Företagsappar** pekar för närvarande på en lista över alla program på fliken ALLA på företagsportalens webbplats, och den kommer att fortsätta fungera på samma sätt. Namnet på panelen ändras till **Alla appar**.
+- Panelen **Andra appar** pekar för tillfället pekar på en vy i företagsportalsappen som visar alla appar som Apple tillåter att företagsportalsappen visar. Namnet på panelen ändras till **Aktuella appar**, och om du trycker på panelen öppnas fliken AKTUELLT på företagsportalens webbplats.
+-  Panelen **Kategorier** pekar för tillfället på en vy i företagsportalsappen som listar appkategorier. Panelens namn kommer inte att ändras, men den kommer nu att peka på fliken KATEGORIER på företagsportalens webbplats.
+Du kan söka efter uppdaterade skärmbilder [här](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
+<!---TFS 1317133--->
+
+### Uppmanar till installation av appen iOS Managed Browser om IT Pro anger detta krav för en app
+I den version av iOS-företagsportalsappen som släpptes i september uppmanar enhetens företagsportalsapp dig till att installera den hanterade webbläsaren innan ett webbklipp kan installeras, om du har konfigurerat detta webbpklipp så att det bara kan öppnas i den hanterade webbläsaren och om du ännu inte har installerat den hanterade webbläsaren. 
+<!---TFS 1228570--->
 
 ## Tjänstens utfasning
 ### Företagsportalappar för Windows 8 och Windows Phone 8 blir inaktuella med början i september 2016
@@ -114,7 +126,7 @@ Med versionen av den nya RMS-delningsappen kommer vi att ta bort följande Intun
 - Intune PDF Viewer
 - Intune Image Viewer för Android från Google Play
 
-I stället för att använda Intune Viewer-appar bör du använda den nya Rights Management-appen (RMS-delning) för Android, där du kan distribuera en app i stället för tre separata appar för att på ett säkert sätt visa företagets filer på Android-enheter. Läs mer om RMS-delningsappen (med länk till dokumentationen).
+I stället för att använda Intune Viewer-appar bör du använda den nya Rights Management-appen (RMS-delning) för Android, där du kan distribuera en app i stället för tre separata appar för att på ett säkert sätt visa företagets filer på Android-enheter. Läs mer om [RMS-delningsappen](https://docs.microsoft.com/en-us/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune#viewing-media-files-with-the-rights-management-sharing-app).
 <!--- goes in 1608 What's New--->
 
 
@@ -123,6 +135,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

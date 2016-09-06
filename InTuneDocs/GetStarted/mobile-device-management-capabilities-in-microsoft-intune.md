@@ -1,10 +1,10 @@
 ---
-title: "Funktioner för hantering av mobila enheter | Microsoft Intune"
-description: "Läs om hur Intune hjälper dig att hantera de mobila enheter som du registrerar med tjänsten."
+title: "Funktioner för hantering av registrerade enheter | Microsoft Intune"
+description: "Läs om hur Intune hjälper dig att hantera de enheter som du registrerar."
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2ef264e963f689bb5a47a795170e0b9915848eec
-ms.openlocfilehash: efe86b7fd56603de2b910a8ec76b6de91db3b698
+ms.sourcegitcommit: a09c5e3349945cfdcb4ae9d3aa51aa3f7024330a
+ms.openlocfilehash: eab582d30408d1a57643e30ba4965bd08f6ce847
 
 
 ---
-# Funktioner för hantering av mobila enheter i Microsoft Intune
+# Funktioner för hantering av registrerade enheter i Microsoft Intune
 
 Med Microsoft Intune kan du hantera ett antal enheter genom att *registrera* dem i tjänsten. Du kan registrera vissa typer av enheter själv, eller så kan användare registrera sig via *företagsportalappen*. Användarna kan även utföra åtgärder som att söka efter och installera appar, vilket säkerställer att deras enheter är kompatibla med företagets principer. Och de kan kontakta IT-support.
 
@@ -70,6 +70,6 @@ Hantering, inventering, appdistribution, etablering och tillbakadragning hantera
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

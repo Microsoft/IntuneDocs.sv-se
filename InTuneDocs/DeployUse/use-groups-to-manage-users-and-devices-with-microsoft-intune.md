@@ -13,11 +13,15 @@ ms.assetid: eb9b01ce-9b9b-4c2a-bf99-3879c0bdaba5
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab9592c253238fd832f8b48372e5474fcfc5331
-ms.openlocfilehash: 96b0cd997544b2013efaca818d614c9802baaa46
+ms.sourcegitcommit: e7c680c43b8c9120755ec3c652cf7ec1cbcc3472
+ms.openlocfilehash: b13e2ff2f4822d71ef8cff9d835e32b99cb3e4ab
 
 
 ---
+# Använda grupper för att hantera användare och enheter i Microsoft Intune
+
+I det här avsnittet beskrivs hur man skapar grupper i Intune. Det innehåller även information om hur hanteringen av grupper kommer att ändras under de kommande månaderna. Mer information om den *aktuella* -metoden för grupphantering finns under [Skapa grupper för att hantera användare och enheter med Microsoft Intune](#Create-groups-to-manage-users-and-devices-with-Microsoft-Intune) i det här avsnittet.
+
 ## Meddelande om kommande förbättringar till administratörsupplevelsen för grupper
 
 Efter att ha fått feedback om en enskild upplevelse för grupper och målgrupper i Enterprise Mobility + Security har vi gjort om Intune-grupper till Azure Active Directory-baserade säkerhetsgrupper. Det skapar en enhetlig grupphantering i Intune och Azure Active Directory (Azure AD). Det innebär att du undviker duplicerade grupper mellan tjänster och kan utöka med PowerShell och Graph. 
@@ -72,7 +76,7 @@ Grupphanteringen kommer att vara bättre, men vissa Intune-funktioner kommer int
 -  Om det finns administratörer i organisationen som inte har behörighet att skapa grupper i Azure AD kan du be Azure AD-administratören att lägga till dem i rollen **Intune-tjänstadministratör** i Azure AD.
 
 
-# Använda grupper för att hantera användare och enheter med Microsoft Intune
+## Använda grupper för att hantera användare och enheter med Microsoft Intune
 
 I det här avsnittet beskrivs hur du skapar Intune-grupper i Intune-administratörskonsolen.
 
@@ -208,6 +212,6 @@ Varje princip har ett **Avsett värde** och en **Status**. Det avsedda värdet �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

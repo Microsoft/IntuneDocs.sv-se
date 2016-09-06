@@ -1,10 +1,10 @@
 ---
-title: "Funktioner för hantering av Windows-datorer | Microsoft Intune"
-description: "Läs om funktionerna du kan använda i Intune när du hanterar datorer med Windows Intune-klientprogrammet."
+title: Funktioner i Intune-klientprogrammet | Microsoft Intune
+description: "Läs om funktionerna du kan använda i Intune när du hanterar Windows-datorer med Intune-klientprogrammet."
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a6caef9e0f4d6235ecf1a89c1765d6c8e6ce1a7b
-ms.openlocfilehash: e5e3833a38434d4fe55cae554fc49f567b606ad8
+ms.sourcegitcommit: 12d75bc67fd61a2e807eed2543f21b756a65a900
+ms.openlocfilehash: 3066ef98c0a1df6fc0ae455860635e7c12f82c4f
 
 
 ---
 
-# Funktioner för hantering av Windows-datorer (med Microsoft Intune PC-klienten)
-I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner än med Intune PC-klienten. Men du kan också hantera datorer med hjälp av Intune PC-klienten som tillhandahåller följande funktioner:
+# Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet)
+I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
 -   **Hantering av programvaruuppdateringar** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
 
@@ -31,10 +31,10 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 -   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
 -   **Hantera programvarulicenser** –Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
--   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogramvaran.
+-   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
 
 
-Intune stöder installation av PC-klientprogramvara på upp till 7 000 Windows-enheter.
+Intune stöder installation av klientprogrammet på upp till 7 000 Windows-enheter.
 
 ## Krav på operativsystem
 Intune kan hantera datorer som kör följande Windows-versioner (både 32-bitars och 64-bitars):
@@ -52,7 +52,7 @@ Intune kan hantera datorer som kör följande Windows-versioner (både 32-bitars
 
 
 ## Minsta maskinvarukrav
-Minsta maskinvarukrav för att installera Intune PC-klienten:
+Minimikraven på maskinvara för installation av Intune-klientprogrammet är:
 
 |Krav|Information|
 |---------------|--------------------|
@@ -61,7 +61,7 @@ Minsta maskinvarukrav för att installera Intune PC-klienten:
 |Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
 
 ## Ytterligare krav
-Minsta programvarukrav för att installera Intune PC-klienten:
+Minimikraven på programvara för installation av Intune-klientprogrammet är:
 
 |Krav|Information|
 |---------------|--------------------|
@@ -70,10 +70,10 @@ Minsta programvarukrav för att installera Intune PC-klienten:
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune PC-klientprogrammet måste du avinstallera följande klientprogram från datorn:<br /><br />– Alla versioner av Configuration Manager<br />– Alla versioner av Microsoft Systems Management Server (SMS)|
 
 ### Se även
-[Funktioner för hantering av mobila enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
+[Funktioner för hantering av registrerade enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
