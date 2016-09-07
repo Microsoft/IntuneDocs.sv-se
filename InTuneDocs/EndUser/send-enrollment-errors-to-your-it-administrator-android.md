@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 0d1b9b16df643004aca7fd620f738d226a6ebb07
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 7fe6918a3dae009e68f19e1fb005414704aee7f7
 
 
 ---
@@ -29,14 +29,12 @@ Ett e-postmeddelande till din IT-administratör skapas automatiskt och innehåll
 
 Du kan skicka enhetens dataloggar till IT-administratören för att få hjälp med fel på olika sätt:
 
-[Skicka loggar via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)</br>
-[Skicka loggar via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
-
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
+- [Skicka loggar via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
+- [Skicka loggar via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

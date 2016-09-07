@@ -4,7 +4,7 @@ description: Beskriver hur du krypterar en Android-enhet
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 06/07/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80ebf1a56106ad4e66d2d791ab98edae1ab11505
-ms.openlocfilehash: 9c89a70f8d9625504f6c710fe29f308dfd34530a
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 2fff575f84512304a119508b49486d02695a06bd
 
 
 ---
@@ -40,15 +40,30 @@ Om du någon gång avregistrerar telefonen förblir den krypterad.
 - Du ser ett meddelande om att du fortfarande behöver kryptera enheten.
 - Fel uppstår när du försöker använda företagsportalappen.
 
-**Gör så här**: Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.
+**Saker du kan prova**: 
+
+1. Kontrollera att enheten är laddad och inkopplad.
+
+2. Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.
+
+3. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, kan du prova följande steg, som IT-administratören kan kräva för att ge enheten ett bättre skydd. Menynamnen i de här stegen kan skilja sig något från de som visas i din enhet, beroende på vilken typ av Android-enhet du har.
+
+    a. Välj **Inställningar** > **Säkerhet** > **Skärmlås**. Bekräfta din aktuella PIN-kod eller ditt lösenord.
+
+    b. På skärmen **Välj skärmlås** väljer du vilken typ av skärmlås du vill använda.
+
+    c. På skärmen **Säker start** trycker du på **Kräv PIN-kod för att starta enheten** och sedan på **Fortsätt**.
+
+    d. Välj en PIN-kod (du kan ange samma som du angav tidigare) och tryck på **Bekräfta din PIN-kod**.
+
+    e. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+
+<!--HONumber=Aug16_HO5-->
 
 

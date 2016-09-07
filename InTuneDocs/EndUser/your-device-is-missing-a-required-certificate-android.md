@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: e10de556babc49d4e2f1ebf6ba9c766291d58efd
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 6740962e55b1232330c6fab43ce1250a54e3a97b
 
 
 ---
@@ -96,11 +96,10 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
 Om du ser samma meddelande om att ett certifikat saknas som visas ovan, och du redan har utfört stegen ovan, betyder det troligtvis att det finns ett annat certifikat som du behöver ta hjälp av IT-administratören för att installera. Kontakta och ge IT-administratören den här [länken](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues) till anvisningar för att lösa problemet.
 
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

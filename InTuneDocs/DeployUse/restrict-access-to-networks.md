@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ede9c4db136eb0498cad6d196488d03768741328
-ms.openlocfilehash: 382dd93a5aec7415e5fb738f3068820e36d8ae06
+ms.sourcegitcommit: 281557e7b9c4b2ed1ff6122dbd574df4a2601a8c
+ms.openlocfilehash: 3d62fe870a609af982435bd3f482fcc18beecdb1
 
 
 ---
@@ -29,33 +29,34 @@ Om du vill aktivera den här integreringen behöver du inte göra några instäl
 ### Steg 1: Hantera certifikaten
 1. Exportera certifikatet i Azure Active Directory-konsolen (Azure AD).
 
-    #### Internet Explorer 11
+#### Internet Explorer 11
 
 
-    a. Kör Internet Explorer som administratör och logga in på Azure AD-konsolen.
+   a. Kör Internet Explorer som administratör och logga in på Azure AD-konsolen.
 
-    b. Välj låsikonen i adressfältet och välj **Visa certifikat**.
+   b. Välj låsikonen i adressfältet och välj **Visa certifikat**.
 
-    c. På fliken **Information** för certifikategenskaperna väljer du **Kopiera till fil**.
+   c. På fliken **Information** för certifikategenskaperna väljer du **Kopiera till fil**.
 
-    d. På välkomstsidan i **guiden Exportera certifikat** väljer du **Nästa**.
+   d. På välkomstsidan i **guiden Exportera certifikat** väljer du **Nästa**.
 
-    e. På sidan **Filformat för export** låter du standardvalet **DER-kodad binär fil x.509 (.CER)** stå kvar och väljer **Nästa**.  
+   e. På sidan **Filformat för export** låter du standardvalet **DER-kodad binär fil x.509 (.CER)** stå kvar och väljer **Nästa**.  
 
-    f. På sidan **Fil som ska exporteras** väljer du **Bläddra** för att välja en plats där filen ska sparas och anger ett filnamn. Även om det verkar som om du väljer en fil att exportera namnger du faktiskt filen som det exporterade certifikatet ska sparas till. Välj **Nästa** &gt; **Slutför**.
+   f. På sidan **Fil som ska exporteras** väljer du **Bläddra** för att välja en plats där filen ska sparas och anger ett filnamn. Även om det verkar som om du väljer en fil att exportera namnger du faktiskt filen som det exporterade certifikatet ska sparas till. Välj **Nästa** &gt; **Slutför**.
 
-    #### Safari
+#### Safari
 
-    a. Logga in på Azure AD-konsolen.
+ a. Logga in på Azure AD-konsolen.
 
-    b. Välj låsikonen &gt;  **Mer information**.
+b. Välj låsikonen &gt;  **Mer information**.
 
-    c. Välj **Visa certifikat** &gt; **Information**.
+   c. Välj **Visa certifikat** &gt; **Information**.
 
-    d. Välj certifikatet och välj sedan **Exportera**.  
+   d. Välj certifikatet och välj sedan **Exportera**.  
 
-    > [!IMPORTANT]
-    > Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
+> [!IMPORTANT]
+>
+> Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
 
 
 2. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
@@ -146,6 +147,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

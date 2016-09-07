@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 06/15/2016
+ms.date: 08/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: e8b6da8348f9c4d8ba1b85687510388cd40eac8a
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: e2493f93c08aaf7c10c47a0835de498349799e28
 
 
 ---
@@ -35,11 +35,10 @@ Följande tabell innehåller felmeddelanden som kan visas när du registrerar en
 |UserLicenseTypeInvalid|Du kan inte registrera din mobila enhet eftersom ditt användarkonto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />Kontakta IT-administratörerna och berätta att du fått meddelandet **UserLicenseTypeInvalid** när du försökte registrera din mobila enhet. Be dem också ta en titt på lösningen i den här tabellen.|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br /><br />Läs följande om du vill ha mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) samt [Ordna användare och enheter](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
 |MdmAuthorityNotDefined|IT-administratören måste konfigurera hur mobila enheter i ditt företag ska hanteras.<br /><br />Kontakta IT-administratörerna och berätta att du fått meddelandet **MdmAuthorityNotDefined** när du försökte registrera din mobila enhet. Be dem också ta en titt på lösningen i den här tabellen.|Utfärdaren för hantering av mobila enheter har inte angetts i Intune.<br /><br />Läs punkt 1 i avsnittet ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](/Intune/Understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).|
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

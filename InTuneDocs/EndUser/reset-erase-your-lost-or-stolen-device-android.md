@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: fbdaf27865a715a7ae9efb68390fc21a5dcd17c5
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 2b759c45a045fff29c6d21a16b3798482886d587
 
 
 ---
@@ -52,11 +52,10 @@ Följ dessa anvisningar eller titta på den här videon:
 
 Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

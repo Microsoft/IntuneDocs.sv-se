@@ -4,7 +4,7 @@ description: "Ta hjälp av informationen i den här artikeln när du distribuera
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c6f795031ec23ffe6f332b3510eea43d5fbdbcd
-ms.openlocfilehash: 4c9f5b111fbd95f9e1c928cfaaa0c7ebf61dad2a
+ms.sourcegitcommit: 6b6a5e2435a3cdffeaf27b0045dee9b8263cdc7a
+ms.openlocfilehash: 1e6e0656fb3da0d77dab10736e7b1607d77e6335
 
 ---
 # Distribuera appar i Microsoft Intune
@@ -57,7 +57,7 @@ Appen visas på användarnas enheter i företagsportalen och användarna kan ins
 I den här skärmbilden har till exempel Bing for iOS-appen distribuerats med installationstypen **Extern länk** med en anpassad ikon. Alternativet **Visa den här som en aktuell app och markera den i företagsportalen** har valts.  
 ![Tillgänglig iOS-app](./media/available-install-on-iOS.png)
 
-Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får användaren ett meddelande om att en app är redo att installera. I den här skärmbilden har till exempel Work Folders for iOS-appen distribuerats med installationstypen **Hanterad iOS-app från App Store**.
+Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får användaren ett meddelande om att en app är redo att installera. I den här skärmbilden har till exempel Work Folders for iOS-appen distribuerats med installationstypen **Hanterad iOS-app från App Store**.  
 ![Obligatorisk iOS-app](./media/iOS-Required-install.PNG)
 
 ## Nästa steg
@@ -66,6 +66,6 @@ När du har distribuerat en app vill du övervaka dess förlopp. Mer information
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

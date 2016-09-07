@@ -4,7 +4,7 @@ description: Beskriver hur du registrerar en Mac OS X-enhet i Intune
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 05/30/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 9e3c351591f496fbc7be3fefdc320af9caaae726
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
 
 
 ---
@@ -50,11 +50,9 @@ Så här registrerar du din Mac OS X-enhet:
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

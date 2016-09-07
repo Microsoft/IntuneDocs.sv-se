@@ -13,8 +13,8 @@ ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 8f342183590c1099661a0121c1d99c2aa3aa0ba4
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 6fa1e13b6b0e29144c3740f00b232807e6e4e984
 
 
 ---
@@ -91,17 +91,11 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![Ange PIN-kod eller lösenord](./media/and-enroll-6-PIN-native.png)
 
-13.  Följ anvisningarna nedan för den enhetstyp som du använder (ursprunglig Android eller Samsung Knox). Avgör om du har en Samsung Knox-enhet genom att välja **Inställningar** &gt; **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
-
-    -   Ursprunglig enhet (ej Samsung Knox): På skärmen **Namnge certifikatet** trycker du på **OK** för att godkänna standardcertifikatet.
-
-    ![Skärmen Namnge certifikatet](./media/and-enroll-7-cert-native.png)
-
-    -   Samsung Knox-enhet: Godkänn sekretesspolicyn och tryck på **BEKRÄFTA**.
+13.  Om du använder en Samsung Knox-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Om du använder en ursprunglig Android-enhet observerar du skärmen nedan som visar att enheten registreras.
 
     ![Sekretesspolicy för Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
 
-    Följande meddelande visas på skärmen när Intune registrerar enheten.
+    Den här skärmen visar att enheten registreras.
 
     ![Skärmen Registrerar enheten](./media/and-enroll-8-device-enrolling.png)
 
@@ -118,11 +112,10 @@ Innan du försöker installera företagsappar besöker du **Inställningar** &gt
 Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
 
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

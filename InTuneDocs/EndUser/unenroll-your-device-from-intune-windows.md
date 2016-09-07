@@ -4,7 +4,7 @@ description: "Beskriver hur du avregistrerar en Windows-enhet från Intune"
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 618e2abda642c3b9b2e813824dfd4235c9309faa
-ms.openlocfilehash: 424890c84de5b42c9a490489b78d7b2408b47cef
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
 
 
 ---
@@ -62,11 +62,9 @@ Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

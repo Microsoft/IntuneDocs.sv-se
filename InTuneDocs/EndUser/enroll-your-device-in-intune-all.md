@@ -4,15 +4,15 @@ description: "Innehåller länkar till information om hur du registrerar olika e
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 06/06/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
 ms.technology: 
 ms.assetid: b51dbdd6-aaa3-48dd-a47f-9d01a4ca37f6
 translationtype: Human Translation
-ms.sourcegitcommit: fc18b9f1caf9f0e6c6b1c8d21d95f42a0c40c507
-ms.openlocfilehash: 8d3cc70379fdba7c7e3f6c0c82bc6bfb7b534b2c
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 5ea154c58207b1ddcce8c51c0cd039532bda4cad
 
 
 ---
@@ -23,18 +23,15 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din Wind
 
 Använd länken som matchar den typ av enhet du använder om du vill se anvisningar för distribution:
 
-- [Registrera en Android-enhet i Intune](enroll-your-device-in-Intune-android.md)</br>
-- [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md)</br>
-- [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md)</br>
-- [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)</br>
-
-### Se även
-- [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)</br>
-- [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)</br>
-- [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
+- [Registrera en Android-enhet i Intune](enroll-your-device-in-Intune-android.md)
+- [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md)
+- [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md)
+- [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 
