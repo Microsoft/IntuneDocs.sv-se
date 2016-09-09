@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4279ecd098ddaa6d6eb239ee71f9c3f7d450ab3f
-ms.openlocfilehash: f2ccc52ceae6bbb63ea76ff4391922099c69f4dd
+ms.sourcegitcommit: c6b3f193606f13427a68c561d688b75d38221950
+ms.openlocfilehash: 315e492b301387c2030440e7188dfdb35a99ddd9
 
 
 ---
@@ -40,7 +40,7 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 ### Inställningar för lösenord
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Kräv ett lösenord för att låsa upp mobila enheter**|Anger om användarna måste ange ett lösenord för att få åtkomst till sina enheter.|Ja|Ja|
 |**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|Ja|Ja|
 |**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. För iOS-enheter specificerar detta dock det antal symboler som måste inkluderas i lösenordet.|Ja|Ja|
@@ -55,44 +55,44 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 ### Krypteringsinställningar
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|------|-----------------------------|
 |**Filkryptering på mobil enhet**|Kräver att data på mobila enheter som stöds krypteras.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.|Ja|Ja|
 
 ### Systeminställningar
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Tillåt skärmbild**|Låter användaren fånga innehållet på skärmen som en bildfil.|Nej|Ja|
 |**Tillåt sändning av diagnostikdata**|Gör att enheten skickar diagnostikinformation till Microsoft.|Nej|Ja|
 
 ### Molninställningar – konton och synkronisering
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|------|-----|------------------------------|
 |**Tillåt Microsoft-konto**|Gör att ett Microsoft-konto kopplas till enheten.|Nej|Ja|
 
 ### E-postinställningar
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Tillåt anpassade e-postkonton**|Gör att enheten ansluter till andra e-postkonton än Microsoft-e-postkonton.|Nej|Ja|
 
 ### Programinställningar - webbläsare
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|-----|-------------------------------|
 |**Tillåt webbläsare**|Tillåter eller blockerar den inbyggda webbläsaren på enheter.|Nej|Ja|
 
 ### Programinställningar - appar
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|------|------------------------------|
 |**Tillåt appbutik**|Tillåter att användarna ansluter till appbutiken från enheten.|Nej|Ja|
 
 ### Enhetskapacitetsinställningar - maskinvara
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|-----|----|--------------------------------|
 |**Tillåt kamera**|Tillåter eller blockerar kameran på enheten.|Nej|Ja|
 |**Tillåt flyttbara lagringsenheter**|Tillåter att enheten använder flyttbara lagringsenheter, till exempel SD-kort.|Ja|Ja|
 |**Tillåt Wi-Fi**|Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.|Nej|Ja|
@@ -106,7 +106,7 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 ### Enhetskapacitetsinställningar - funktioner
 
 |Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----------------------------------------|
+|----------------|----|------|-------------------------------|
 |**Tillåt kopiera och klistra in**|Tillåter kopierings- och inklistringsfunktioner på enheter.|Nej|Ja|
 
 ### Inställningar för tillåtna och blockerade appar
@@ -171,6 +171,6 @@ I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

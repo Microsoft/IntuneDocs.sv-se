@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 281557e7b9c4b2ed1ff6122dbd574df4a2601a8c
-ms.openlocfilehash: 3d62fe870a609af982435bd3f482fcc18beecdb1
+ms.sourcegitcommit: 40194f4359d0889806e080a4855b8e1934b667f9
+ms.openlocfilehash: 9d6b7198e3c2e30898a8ec83785c7f3b777eda5f
 
 
 ---
@@ -60,7 +60,10 @@ b. Välj låsikonen &gt;  **Mer information**.
 
 
 2. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
+
+
 ### Skaffa ett självsignerat certifikat från ISE 
+
 1.  I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
 2.       Exportera det självsignerade certifikatet.
 3. Redigera det exporterade certifikatet i en textredigerare: [kommentar]: <> Jag tycker inte att det ska vara en punkt i slutet av dessa två uttryck. Jag tror att det kan vara förvirrande.
@@ -147,6 +150,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

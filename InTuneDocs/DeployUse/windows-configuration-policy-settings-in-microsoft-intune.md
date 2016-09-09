@@ -13,8 +13,8 @@ ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7fdfe64a18fe359ee4b3b4507ef4108ad65ab573
-ms.openlocfilehash: 3102e4637c61bbae002fb30947acd1f82204ac93
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 6b2d805561067d2dc0de70d93c45622a951e5981
 
 
 ---
@@ -31,7 +31,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 ## Säkerhetsinställningar
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|Ja|Ja|
 |**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemener, versaler, siffror och symboler. För iOS-enheter specificerar den här inställningen i stället det antal symboler som måste inkluderas i lösenordet.|Ja|Ja|
 |**Minsta längd på lösenord**<sup>1</sup>|Konfigurerar den minsta tillåtna längden (i antal tecken) för lösenordet.|Ja|Ja|
@@ -46,7 +46,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 ## Krypteringsinställningar
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att filer på enheten krypteras.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.|Ja|Nej|
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
 
@@ -61,14 +61,14 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 ## Inställningar för skadlig programvara
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Kräver brandvägg för nätverk**|Kräver att Windows-brandväggen är aktiverad.|Ja|Nej|
 |**Aktivera SmartScreen**|Kräver användning av Windows SmartScreen.|Ja|Nej|
 
 ## Systeminställningar
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-------|---------------------------|--------------|
 |**Kräver automatiska uppdateringar**|Aktiverar inställningen för automatiska uppdateringar på enheter.|Ja|Nej|
 |**Kräver automatiska uppdateringar – Minimumklassificering för uppdateringar som ska installeras automatiskt**|Väljer den klassificering av uppdateringar som ska installeras automatiskt:<br /><br />-   **Viktiga** – Installerar alla uppdateringar som klassificeras som viktiga.<br />-   **Rekommenderade** – Installerar alla uppdateringar som klassificeras som viktiga eller rekommenderade.|Ja|Nej|
 |**User Account Control**|Kräver användning av UAC (User Account Control) på enheter.|Ja|Nej|
@@ -78,19 +78,19 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 ## Molninställningar – dokument och data
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|------|----------------------------|--------------|
 |**URL till arbetsmappar**|Ställer in arbetsmappens URL så att dokument kan synkroniseras mellan enheter.|Ja|Nej|
 
 ## E-postinställningar
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Gör Microsoft-kontot valfritt i Windows Mail-programmet**|Tillåter åtkomst till Windows Mail utan något Microsoft-konto.|Ja|Nej|
 
 ## Programinställningar - webbläsare
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|-----|-----------------------------|--------------|
 |**Tillåt autofyll**|Gör att användarna kan ändra inställningarna för Komplettera automatiskt i webbläsaren.|Ja|Nej|
 |**Tillåt blockering av popup-fönster**|Aktiverar eller inaktiverar webbläsarens blockering av popup-fönster.|Ja|Nej|
 |**Tillåt insticksprogram**|Gör att användarna kan lägga till plugin-program i Internet Explorer.|Ja|Nej|
@@ -109,7 +109,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 ## Enhetskapacitetsinställningar - mobil
 
 |Inställningsnamn|Information|Windows 8.1 och Windows RT 8.1|Windows RT|
-|----------------|----------------------------------|--------------|
+|----------------|----|------------------------------|--------------|
 |**Tillåt dataroaming**|Gör att det går att använda dataroaming när enheten är i ett mobilnät.|Ja|Nej|
 
 
@@ -119,6 +119,6 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

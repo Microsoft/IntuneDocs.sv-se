@@ -14,8 +14,8 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 1809f619173ca57868cfd2b8466e6e2bcf05f0c7
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 870d735644f08e3eca8c72bca2b156947d798cb5
 
 
 ---
@@ -57,14 +57,14 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 ### Krypteringsinställningar
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Filkryptering på mobil enhet**|Kräver att filer på den mobila enheten krypteras.|Ja|Ja|
 |**Kräv kryptering på minneskort**|Anger om enhetens minneskort måste vara krypterat.|Nej|Ja|
 
 ### Systeminställningar
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Tillåt skärmbild**|Låter användaren fånga skärminnehållet som en bild.|Nej|Ja|
 |**Tillåt sändning av diagnostikdata**|Tillåter att enheten skickar diagnostikinformation till Google.|Nej|Ja|
 |**Tillåt fabriksåterställning**|Tillåter att användaren utför en fabriksåterställning på enheten.|Nej|Ja|
@@ -72,19 +72,19 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 ### Molninställningar – dokument och data
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------------------|----------------|
+|----------------|----|------------------------|----------------|
 |**Tillåt Google säkerhetskopiering**|Tillåter användning av Google-säkerhetskopiering.|Nej|Ja|
 
 ### Molninställningar – konton och synkronisering
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Tillåt autosynkronisering av Google-konto**|Google-kontoinställningarna får synkroniseras automatiskt.|Nej|Ja|
 
 ### Programinställningar - webbläsare
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Tillåt webbläsare**|Anger om enhetens standardwebbläsare får användas.|Nej|Ja|
 |**Tillåt autofyll**|Tillåter att webbläsarens autofyllfunktion används.|Nej|Ja|
 |**Tillåt blockering av popup-fönster**|Tillåter att blockering av popup-fönster används i webbläsaren.|Nej|Ja|
@@ -94,13 +94,13 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 ### Programinställningar - appar
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Tillåt Google Play-butik**|Tillåter att användaren kommer åt Google Play Store på enheten.|Nej|Ja|
 
 ### Enhetskapacitetsinställningar - maskinvara
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|-----|-----------|----------------|
 |**Tillåt kamera**|Enhetens kamera får användas.|Ja|Ja|
 |**Tillåt flyttbara lagringsenheter**|Tillåter att enheten använder flyttbara lagringsenheter, t.ex. ett SD-kort.|Nej|Ja|
 |**Tillåt Wi-Fi**|Tillåter att enhetens Wi-Fi-funktioner används.|Nej|Ja|
@@ -113,7 +113,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 ### Enhetskapacitetsinställningar - mobil
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|---|-------------|----------------|
 |**Tillåt röstroaming**|Tillåter röstroaming när enheten är i ett mobilnät.|Nej|Ja|
 |**Tillåt dataroaming**|Tillåter dataroaming när enheten är i ett mobilnät.|Nej|Ja|
 |**Tillåt SMS/MMS-meddelanden**|Tillåter att SMS och MMS används på enheten.|Nej|Ja|
@@ -121,7 +121,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 ### Enhetskapacitetsinställningar - funktioner
 
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX|
-|----------------|----------------|----------------|
+|----------------|----|------------|----------------|
 |**Tillåt röstassistent**|Tillåter att röstassistentprogramvaran används på enheten.|Nej|Ja|
 |**Tillåt röstsamtal**|Aktiverar eller inaktiverar röstsamtalsfunktionen på enheten.|Nej|Ja|
 |**Tillåt kopiera och klistra in**|Tillåter funktioner för att kopiera och klistra in på enheten.|Nej|Ja|
@@ -208,6 +208,6 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

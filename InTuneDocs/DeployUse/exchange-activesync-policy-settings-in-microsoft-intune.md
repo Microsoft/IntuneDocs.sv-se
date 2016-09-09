@@ -13,8 +13,8 @@ ms.assetid: e9cbb826-b155-4df6-abf3-60c6f05b2783
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: d8f7de4013c1bdf6174cd4e1d7491514b11a14a3
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: 9a481e1ce7815a0411651fc724e3fc2f5d374eac
 
 
 ---
@@ -26,7 +26,7 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 ## Inställningar för lösenord
 
 |Inställningsnamn|Information
-|----------------|
+|----------------|---|
 |**Kräv ett lösenord för att låsa upp mobila enheter**|Anger om enheter måste vara låsta med ett lösenord.<br>(gäller inte enheter som kör Windows RT).|
 |**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.|
 |**Minsta längd på lösenord**|Anger det minsta antalet tecken som enhetslösenordet måste innehålla.|
@@ -40,7 +40,7 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 ## Krypteringsinställningar
 
 |Inställningsnamn|Information|
-|----------------|
+|----------------|---|
 |**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att data på en enhet krypteras när detta stöds.<br><br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|
 |**Kräv kryptering på minneskort**|Kräver att data som lagras på externa lagringsenheter, t.ex. ett SD-kort, ska krypteras (på enheter som stöds).
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
@@ -56,7 +56,7 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 ## E-postinställningar
 
 |Inställningsnamn|Information
-|----------------|
+|----------------|---|
 |**Tillåt användare att hämta e-postbilagor**|Anger om bifogade filer i e-postmeddelanden ska kunna hämtas till enheten.|
 |**E-postsynkroniseringsperiod**|Anger hur många dagar med mottagen e-post som ska synkroniseras till enheten.
 |**Tillåt mobila enheter som inte fullt ut stöder inställningarna i Exchange ActiveSync att synkroniseras med Exchange**|Anger om Exchange-åtkomst ska tillåtas på enheter som inte har stöd för en eller flera Exchange ActiveSync-inställningar.
@@ -64,13 +64,13 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 ## Webbläsarinställningar
 
 |Inställningsnamn|Information
-|----------------|-
+|----------------|---|
 |**Tillåt webbläsare**|Anger om webbläsaren på enheten får användas.<br>(Inte tillgängligt för Windows RT eller Windows Phone).
 
 ## Maskinvaruinställningar
 
 |Inställningsnamn|Information
-|----------------|
+|----------------|---|
 |**Tillåt kamera**|Anger om kameran på enheten får användas.<br>(Inte tillgängligt för Windows RT eller Windows Phone).
 
 
@@ -80,6 +80,6 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
