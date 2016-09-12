@@ -1,10 +1,10 @@
 ---
 title: "Ordna användare och enheter genom att skapa grupper | Microsoft Intune"
-description: 
+description: "Beskriver hur du skapar användare och grupper för din Intune-prenumeration"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
-ms.openlocfilehash: 00ac59ffe219109dd48c47e59de9ecf588f07344
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: 3b2f896ea6c3e66924dbd8b35fcddcccd0b65ca6
 
 
 ---
@@ -60,7 +60,7 @@ Använd användargrupper för att distribuera programvara och enhetsprinciper. D
 
 5.  Välj **Nästa** på sidan **Ange direkt medlemskap**. Du behöver inte göra något här eftersom du vill att gruppen Intune-användare ska innehålla alla användare, med undantag för företagsadministratören.
 
-6.  På sidan **Sammanfattning** granskar du de åtgärder som kommer att vidtas och väljer sedan **Slutför**.
+6.  På sidan **Sammanfattning** kan du granska de åtgärder som vidtas och sedan välja **Slutför**.
 
 Du kan hitta de nyligen skapade grupperna i listan **Grupper** under **Alla användare** på arbetsytan **Grupper**. Här kan du också redigera eller ta bort gruppen.
 
@@ -75,6 +75,6 @@ Gratulerar! Du är klar med steg 5 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

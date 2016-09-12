@@ -1,10 +1,10 @@
 ---
 title: Enhetsefterlevnadsprinciper | Microsoft Intune
-description: 
+description: "I det här avsnittet förklaras olika begrepp som du behöver känna till för att förstå vad enhetsefterlevnadsprinciper är och hur de fungerar."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9e069a2887b812b30c620634a8e0d093093b460
-ms.openlocfilehash: c443bb51ba05161c5088475e528e6ada28c105a5
+ms.sourcegitcommit: 44443db664753b202cc3fa07f8b76894320dc55d
+ms.openlocfilehash: f3bb686dda7bdf1e9557be2b5f5e0da2fb4d27e4
 
 
 ---
@@ -35,7 +35,7 @@ I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprincipe
 --------------
 
 |Principinställning| Windows 8.1 och senare| Windows Phone 8.1 och senare| iOS 6.0 och senare|Android 4.0 och senare<br/>Samsung KNOX Standard 4.0 och senare|
-|-----|----|----|----|
+|-----|----|----|----|----|
 |**Konfiguration av PIN-kod eller lösenord** |Åtgärdad|Åtgärdad|Åtgärdad|I karantän|
 |**Enhetskryptering**|E.t.|Åtgärdad|Åtgärdad (genom angiven PIN-kod)|I karantän|
 |**Jailbreakad eller rotad enhet**|E.t.|E.t.|I karantän (inte en inställning)|I karantän (inte en inställning)|
@@ -62,6 +62,6 @@ I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprincipe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

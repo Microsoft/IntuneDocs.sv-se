@@ -1,10 +1,10 @@
 ---
 title: Wi-Fi-anslutningar | Microsoft Intune
-description: 
+description: "Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i organisationen."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 910ccd7c91593114ddf57c842c0bf9c9ffa54fdc
-ms.openlocfilehash: 1282ec1214a2c499166299a0a13b0bd3bfc7f3b2
+ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
+ms.openlocfilehash: 271d2be675ab808365cd6869c69d386058f76ae8
 
 
 ---
@@ -125,8 +125,8 @@ Använd **Importprincipen för Windows Wi-Fi** för att importera en uppsättnin
 
 2.  Konfigurera en princip av typen **Windows** &gt; **Importera trådlöst nätverk (Windows 8.1 och senare)**.
 
-    Den här principen kan tillämpas på enheter med Windows 8.1 och Windows 10 (Desktop och Mobile). 
-    
+    Den här principen kan tillämpas på enheter med Windows 8.1 och Windows 10 (Desktop och Mobile).
+
     Du kan bara skapa och distribuera *anpassade* Windows Wi-Fi-importprinciper. Rekommenderade inställningar är inte tillgängliga.
 
 3.  Ange följande allmänna värden för Windows Wi-Fi-importprincip:
@@ -166,6 +166,6 @@ Läs om hur du skapar en Wi-Fi-profil med en i förväg delad nyckel i [Wi-Fi-pr
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

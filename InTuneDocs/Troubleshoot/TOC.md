@@ -15,7 +15,8 @@
 ## [Felsöka programuppdateringar](Troubleshoot-software-updates-in-microsoft-intune.md)
 ## [Felsöka e-postprofiler](Troubleshoot-email-profiles-in-microsoft-intune.md)
 ## [Felsöka villkorlig åtkomst](troubleshoot-conditional-access.md)
+## [Felsöka Exchange Connector](troubleshoot-exchange-connector.md)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

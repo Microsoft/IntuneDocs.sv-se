@@ -1,10 +1,10 @@
 ---
 title: Registrera din Mac OS X-enhet i Intune | Microsoft Intune
-description: 
+description: Beskriver hur du registrerar en Mac OS X-enhet i Intune
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 05/30/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: b85d2ac62ca313f0740c68ff6d85918ff7bcd55a
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
 
 
 ---
@@ -34,26 +34,25 @@ Så här registrerar du din Mac OS X-enhet:
 
 2.  Tryck på **Enheten är inte registrerad eller också kan den inte identifieras av företagsportalen**.
 
-    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png) 
+    ![device-not-enrolled](./media/1-macosx-enroll-tap-enroll.png)
 
 3.  Tryck på **Installera** för att starta registreringen av din enhet.
 
-    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png) 
+    ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
 4.  Tryck på **Installera** i dialogrutan **Installera hanteringsprofil**. Om en dialogruta visas där du ombes ange inloggningsinformation anger du användarnamn och lösenord och trycker sedan på **Fortsätt** &gt; **Installera**.
 
-    ![install-management-profile](./media/3-macosx-enroll-tap-install.png) 
+    ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
     När du är klar med registreringen visas en hanteringsprofilsida som visar att profilen har verifierats.
 
-    ![management-profile-verified](./media/4-macosx-enroll-done.png) 
+    ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

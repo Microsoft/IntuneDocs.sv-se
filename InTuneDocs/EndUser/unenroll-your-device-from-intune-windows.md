@@ -1,10 +1,10 @@
 ---
-title: "Avregistrera enheten från Intune | Microsoft Intune"
-description: 
+title: "Avregistrera Windows-enheten från Intune | Microsoft Intune"
+description: "Beskriver hur du avregistrerar en Windows-enhet från Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: c323aed2b4fbac831ae4919c8145b7253eb97ace
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
 
 
 ---
 
 
-# Avregistrera enheten från Intune
+# Avregistrera din Windows-enhet från Intune
 
 Om du är registrerad i Intune, men inte längre vill använda din Windows-enhet på arbetet eller skolan och inte har behov av att komma åt e-postmeddelanden, appar eller andra resurser på arbetet eller skolan, så måste du avregistrera din enhet. När du avregistrerat enheten från Intune kommer du inte längre ha åtkomst till dessa resurser. Mer information om vad som händer när du avregistrerar enheten finns i [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -62,10 +62,9 @@ Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

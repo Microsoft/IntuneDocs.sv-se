@@ -1,10 +1,10 @@
 ---
-title: "Skydda appdata med hanteringsprinciper för mobila appar | Microsoft Intune"
-description: 
+title: "Skydda appdata med hanteringsprinciper för mobila appar (MAM) | Microsoft Intune"
+description: "I det här avsnittet beskrivs hur du kan använda hanteringsprinciper för mobila appar för att skydda dina företagsdata, förhindra dataförlust och hålla isär privat och arbetsrelaterad information."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 6163f2b2a1c562e5315785b8b4c486fe2347f89d
 
 
 ---
@@ -24,21 +24,21 @@ ms.openlocfilehash: 161351164d9e99abb867aa34721ef4f992fb14fa
 ## Hur du kan skydda appdata
 Dina anställda använder mobila enheter för både personliga och arbetsrelaterade uppgifter.  Samtidigt som du vill se till att de anställda kan vara produktiva vill du även förhindra dataförlust, både avsiktlig och oavsiktlig.  Dessutom vill du kunna skydda företagsdata som nås med enheter även i de fall då de inte hanteras av dig.
 
-Du kan använda Intunes hanteringsprinciper för mobila appar (MAM) för att skydda företagets data. Eftersom Intunes MAM-principer kan användas oberoende av en hanteringslösning för mobila enheter (MDM) kan du använda dem för att skydda företagets data både om du registrerar eller inte registrerar enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
+Du kan använda Intunes hanteringsprinciper för mobila appar (MAM) för att skydda företagets data. Eftersom Intunes MAM-principer kan användas **oberoende av en hanteringslösning för mobila enheter (MDM)** kan du använda dem för att skydda företagets data både om du registrerar eller inte registrerar enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
 
-MAM-principer stöder appar som körs på:
-> [!IMPORTANT]
-> Du kan skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. MAM-principer stöds inte för appar som ansluter till lokala Exchange- eller SharePoint-tjänster.
+MAM-principer kan konfigureras för appar som körs på enheter som:
 
+- **Är registrerade i Microsoft Intune:** Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
-- **Enheter som hanteras och är registrerade i Microsoft Intune**. Enheter i den här kategorin är vanligtvis företagsägda enheter.
-
--   **Enheter som hanteras och som är registrerade i en hanteringslösning för mobila enheter från tredje part**.   Enheter i den här kategorin är vanligtvis företagsägda enheter.
+-   **Är registrerade i en hanteringslösning för mobila enheter (MDM) från tredje part:**   Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
   > [!NOTE]
   > Principer för mobilapphantering ska inte användas med tredje parts mobilapphantering eller lösningar för säkra behållare.
 
--   **Enheter som inte hanteras**.  Enheter i den här kategorin är vanligtvis personalägda enheter som inte hanteras eller som inte är registrerade i Intune eller andra MDM-lösningar.
+-   **Inte är registrerade i någon hanteringslösning för mobila enheter:**  Enheter i den här kategorin är vanligtvis personalägda enheter som inte hanteras eller som inte är registrerade i Intune eller andra MDM-lösningar.
+
+> [!IMPORTANT]
+> Du kan skapa hanteringsprinciper för mobila appar för Office-mobilappar som ansluter till Office 365-tjänster. MAM-principer stöds inte för appar som ansluter till lokala Exchange-, Skype för företag- eller SharePoint-tjänster.
 
 **De främsta fördelarna med att använda MAM-principer är:**
 
@@ -133,6 +133,6 @@ Alla mobila Office-appar stöder multiidentitet.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

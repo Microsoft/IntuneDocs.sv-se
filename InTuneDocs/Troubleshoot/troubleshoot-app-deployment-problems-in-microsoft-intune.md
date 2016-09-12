@@ -1,10 +1,10 @@
 ---
 title: "Felsöka problem med appdistributionen | Microsoft Intune"
-description: 
+description: "Det här avsnittet innehåller information om hur du löser problem med appdistributionen i Microsoft Intune."
 keywords: 
-author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+author: robstack
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
-ms.sourcegitcommit: 327c3aaf42aaf7f97e2b78d5ae38584bc13773e1
-ms.openlocfilehash: dc782a54983e4db39a029a15183834a925d0e00c
+translationtype: Human Translation
+ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
+ms.openlocfilehash: 44af28c18980e549924139badd8f3ca439dc29b3
 
 
 ---
@@ -80,7 +81,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 ### Fel: Utgivaren finns inte
 Du använder **Lägg till ytterligare programvaruavtal** för att lägga till ett tredjeparts licensavtal. Du försöker lägga till utgivaren från sidan **Andra avtal för programvarulicenser**. Sidan innehåller en lista med befintliga utgivare i alfabetisk ordning.
-Du anger utgivaren som saknas men får ett felmeddelande som anger **Utgivaren finns inte**. 
+Du anger utgivaren som saknas men får ett felmeddelande som anger **Utgivaren finns inte**.
 
 Detta beteende är inbyggt. Intune tillhandahåller endast licensspårning för populära program. Intune kräver att programvaran rapporteras av minst fyra separata konton innan den görs tillgänglig som ett alternativ i licensieringsbelastningen.
 
@@ -104,6 +105,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO1-->
 
 

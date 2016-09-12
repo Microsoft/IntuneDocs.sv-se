@@ -1,10 +1,10 @@
 ---
-title: Skapa en enhetsefterlevnadsprincip i Microsoft Intune | Microsoft Intune
-description: 
+title: Skapa en enhetsefterlevnadsprincip | Microsoft Intune
+description: "Skapa en efterlevnadsprincip för att skydda mobila enheter och datorer som används för att komma åt företagets data."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: f4f036fc1b6fe2394e05907e2d14289c9fba3426
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 2ff0b24d0a6991c22b23da5da5c63a9bb26ccdd2
 
 
 ---
@@ -32,12 +32,20 @@ Aktivera önskade inställningar på sidan **Skapa princip**:
   -   Inställningar för systemsäkerhet, t.ex. lösenord och kryptering
   -   Inställningar för enhetens hälsotillstånd, t.ex. om en enhet är jailbrokad eller inte, eller om den rapporteras som felfri av Windows-tjänsten för attestering av hälsotillstånd.
   -   Inställningar för enhetsegenskaper, t.ex. lägsta operativsystemsversion som krävs eller högsta operativsystemsversion som tillåts.
-![Skärmbild av fliken Allmänt på sidan Skapa princip ](./media/intune-sa-3b-create-policy.png)
+![Sidan Skapa princip på fliken Allmänt ](./media/intune-sa-3b-create-policy.png)
+
 
 ##  Steg 3: Spara principen
 När du är klar väljer du **Spara princip**.
 
 Du kan välja att distribuera principen direkt efter att du har sparat principen eller så kan du välja att distribuera den senare. Den nya principen visas i noden **Efterlevnadsprinciper** på arbetsytan **Principer**.
+
+##  Steg 4: Ange giltighetsperioden för efterlevnadsstatus
+Om du vill ange hur lång tid enheten har på sig att checka in innan den anses vara ej kompatibel, går du till inställningarna för efterlevnadsprincip och ändrar tiden.  Standardinställningen är 30 dagar.
+
+![alternativet Inställningar för efterlevnadsprinciper på principmenyraden](../media/mdm-compliance-policy-settings.png)
+
+![dialogrutan Efterlevnadsprincip](../media/mdm-ca-compliance-status-validity-period.png)
 
 ## Principinställningar som stöds
 I följande tabell visas inställningarna för efterlevnadsprincip och de plattformar där de stöds.
@@ -79,6 +87,6 @@ Välj något av följande om du vill veta mer om efterlevnadsinställningar som 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Vad du ska berätta för slutanvändare om att använda Microsoft Intune | Microsoft Intune"
-description: 
+title: "Vad du ska berätta för slutanvändare om att använda Intune | Microsoft Intune"
+description: "Länkar till information som du kan dela med dina slutanvändare"
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83f029c97cf34b6c96c6b2ef16cc65ab839c1d55
-ms.openlocfilehash: 893e896fc52e6e883fcd151db2c47030113502a2
+ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
+ms.openlocfilehash: d29649c204f50aec1d1604b55bebc6018a3c7ef2
 
 
 ---
@@ -33,7 +33,9 @@ Se till att du inkluderar kontaktuppgifter till IT-administratören när du [anp
 
 ## Var slutanvändarna kan hitta information om vanliga uppgifter
 
-Ge användarna följande hjälplänkar när de letar efter information om hur de ska använda Intune på sina enheter. På dessa länkar hittar användarna anvisningar om hur de installerar företagsportalappen, registrerar sina enheter, hämtar hanterade appar, felsöker problem och mer.
+När registrerade användare behöver hjälp med Intune ser de vanligtvis en länk på företagsportalens webbplats eller i företagsportalsappen som pekar en viss artikel med anvisningar om hur du löser problemet eller slutför uppgiften. Om t.ex. Android-användare ser ett meddelande om att ett nödvändigt certifikat saknas kan de knacka på en länk som leder till en artikel som anger vilka steg de bör vidta för att kunna hämta certifikatet. 
+
+Länkarna nedan gäller för IT-administratörer. De här sidorna innehåller länkar till alla de artiklar som användarna skickas till från företagsportalens webbplats eller app. Länken är indelad i avsnitt: installation av företagsportalsappen och Intune-registrering, uppgifter som användarna kan utföra på sina enheter, t.ex. använda hanterade appar och synkronisera sina enheter manuellt, och felsökning.
 
 - [Med hjälp av en Android-enhet med Intune](/Intune/EndUser/using-your-android-device-with-intune)
 - [Using your iOS or Mac OS X device with Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
@@ -59,8 +61,10 @@ Välj bland följande enhetsplattformsalternativ för att förstå hur dina slut
 
 För att hjälpa användarna att lösa problem som kan uppstå när de använder företagsportalen kan du läsa [meddelanden som kan visas för användarna på företagsportalen](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages).
 
+Om det finns annan information som du vill ska ingå i den här artikeln så föreslå detta i kommentarsfältet längst ned i det här avsnittet. Tack!
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

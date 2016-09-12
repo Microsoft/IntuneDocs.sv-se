@@ -1,18 +1,19 @@
 ---
 title: "Använda fjärrlåsning och lösenordsåterställning | Microsoft Intune"
-description: 
+description: "Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
+ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: 6d9b79a09eef2546d78a19e061ba5cc3f24f645c
-ms.openlocfilehash: 34379881b8299a2e3f9886b14b6d83e9dfe83373
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: c2b4b6308569e1e67a1c3da18c12d19bdeecf08e
 
 ---
 # Skydda dina enheter med fjärrlåsning och lösenordsåterställning
@@ -25,7 +26,7 @@ Om en användare förlorar sin enhet kan du låsa enheten via fjärranslutning. 
 |------------|---------------|
 |iOS|Stöds|
 |Android|Stöds|
-|Windows 10 Mobil|Stöds|
+|Windows 10 och Windows 10 Mobile|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 |Windows 8.1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
@@ -72,6 +73,6 @@ Om en användare glömmer sitt lösenord, kan du hjälpa dem genom att ta bort l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Hantera iOS-appar som du har köpt via ett volyminköpsprogram | Microsoft Intune"
-description: 
+title: "Hantera volyminköpta iOS-appar | Microsoft Intune"
+description: "Intune hjälper dig att hantera appar som du volyminköpt av Apple genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,22 +13,22 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ccb494f64426e6c2f21a59d8f52b84afe534d721
-ms.openlocfilehash: 65ceaa5a8f6604463463820545a9d108839c00c1
+ms.sourcegitcommit: 164f9656246a46bf39e263fc3c5f16828674e1fd
+ms.openlocfilehash: a5c37c470f937c682d9138a636d1211f641da784
 
 
 ---
 
 # Hantera iOS-appar som du har köpt via ett volyminköpsprogram med Microsoft Intune
-En del appbutiker erbjuder möjligheten att köpa flera licenser till en app som du vill köra i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
+I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
 
-Microsoft Intune hjälper dig att hantera appar som du har köpt via ett sådant program genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.
+Microsoft Intune hjälper dig att hantera appar som du har köpt via det här programmet genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.
 
 > [!Important]
-> Intune tilldelar för närvarande applicenser för iOS VPP till användare och inte enheter. Därför måste användare ange sitt Apple-ID-lösenord för att installera appen.
+> Intune tilldelar för närvarande iOS-applicenser via volyminköpsprogrammet för företag (VPP) till användare och inte enheter. Därför måste användare ange sitt Apple-ID-lösenord för att installera appen.
 
 ## Hantera appar som köpts genom volyminköpsprogrammet för iOS-enheter
-Du kan köpa flera licenser för iOS-appar genom [Apples volymköpsprogram för företag (VPP, Volume Purchase Program)](http://www.apple.com/business/vpp/). När du gör det måste du bland annat skapa ett Apple VPP-konto från Apples webbplats och skicka din Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
+Du kan köpa flera licenser för iOS-appar genom [Apples volyminköpsprogram för företag](http://www.apple.com/business/vpp/). När du gör det måste du bland annat skapa ett Apple VPP-konto från Apples webbplats och ladda upp din Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
 
 ## Innan du börjar
 Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den till ditt Intune-konto. Du bör också känna till följande:
@@ -37,22 +37,22 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * När du har kopplat ett Apple VPP-konto till Intune kan du inte koppla ett annat konto senare. Därför är det mycket viktigt att mer än en person har tillgång till informationen om det konto som du använder.
 * Om du tidigare har använt en VPP-token med en annan produkt måste du generera en ny som ska användas med Intune.
 * Varje token är giltig i ett år.
-* Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan dock starta en manuell synkronisering när som helst.
+* Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
-* Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer. Intune synkroniserar inte de användarkontona till Intune som en säkerhetsåtgärd. Intune synkroniserar endast data från Apple VPP-tjänsten som har skapats av Intune. 
+* Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobila enheter). Intune synkroniserar inte de användarkontona till Intune som en säkerhetsåtgärd. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
 * Du kan inte distribuera iOS VPP-appar till enheter som har registrerats med hjälp av Device Enrollment Protocol (DEP).
 
 ## Så här skaffar du och laddar upp en Apple VPP-token
 
 1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin** &gt; **iOS och Mac OS X** &gt; **Volyminköpsprogram**.
 
-2.  Välj länken **Apple VPP-konto** och registrera dig för volyminköpsprogrammet för företag om du inte redan gjort det. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto.
+2.  Välj länken **Apple VPP-konto**. Registrera dig för volyminköpsprogrammet för företag om du inte redan gjort det. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto.
 
 3.  På sidan **Hantera Apple VPP (Volume Purchase Program)** i Intune-konsolen väljer du **Överför VPP-token**.
 
 4.  I dialogrutan **Överför en VPP-token** anger du eller klistrar in namnet på VPP-token och ditt Apple-ID och väljer sedan **Överför**.
 
-5.  I varningsdialogrutan väljer du kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och väljer sedan **Ja**.
+5.  I varningsdialogrutan markerar du kryssrutan för att bekräfta att du är medveten om att du inte kan byta till ett annat VPP-konto senare och väljer sedan **Ja**.
 
 På sidan **Volyminköpsprogram** kan du nu visa information om Apple VPP-token, inklusive när den senast uppdaterades, när den upphör att gälla och när den senast synkroniserades med Intune.
 
@@ -62,9 +62,12 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
 
-2.  Välj den app som du vill distribuera, välj sedan **Hantera distribution**, genomför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+2.  Välj den app som du vill distribuera, välj sedan **Hantera distribution** och slutför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
-När du distribuerar appar som en **obligatorisk** installation används en licens av alla användare som installerar appen.
+> [!TIP]
+> Du måste välja distributionsåtgärden **Krävs**. Tillgängliga installationer stöds för närvarande inte.
+
+När du distribuerar appar som en **obligatorisk** installation använder alla användare som installerar appen en licens.
 
 Om du vill frisläppa en licens måste du ändra distributionsåtgärden till **Avinstallera**. Licensen frisläpps när appen avinstalleras.
 
@@ -86,7 +89,6 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

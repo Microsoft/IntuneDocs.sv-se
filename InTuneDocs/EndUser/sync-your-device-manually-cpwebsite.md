@@ -1,26 +1,27 @@
 ---
-title: Synkronisera enheten manuellt | Microsoft Intune
+title: "Synkronisera enheten manuellt med företagsportalens webbplats | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/02/2016
+manager: angrobe
+ms.date: 07/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ecd0628a-3c8a-4d6b-8985-1641dd24132b
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 98ba0968653ceaf13ab5422468040f8e2ce50422
-ms.openlocfilehash: 2fc13272848bd70d4ebed2750c550f7a5eb13508
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: c676c15ad526ff31b98484704190b96006bf4f36
 
 
 ---
 
 
-# Synkronisera enheten manuellt
+# Synkronisera enheten manuellt med företagsportalens webbplats
 
 Om installationen av appen tar för lång tid kan du synkronisera enheten manuellt, vilket kan påskynda installationen. Följ anvisningarna nedan som matchar den typ av enhet eller version av Windows som du använder. Synkronisering av enheten för att påskynda appinstallationer fungerar endast för de angivna versionerna nedan.
 
@@ -31,8 +32,6 @@ Om installationen av appen tar för lång tid kan du synkronisera enheten manuel
 
 
 
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

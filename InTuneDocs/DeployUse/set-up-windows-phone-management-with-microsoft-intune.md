@@ -1,26 +1,28 @@
 ---
-title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone med Microsoft Intune | Microsoft Intune
-description: 
+title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone | Microsoft Intune
+description: "Aktivera hantering av mobila enheter (MDM) för Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
-ms.reviewer: jeffgilb
+ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c5d1b53f09ce2f475cd934e36ddb19d019737431
-ms.openlocfilehash: e67a5be851b68d87a4cdda871824cf0ecb14579e
+ms.sourcegitcommit: 06d6c8ce97ba6a259055e94f0eba87f7c5a96531
+ms.openlocfilehash: 344f1cf4367deb12288f9c361e043d345f9846bb
 
 
 ---
 
 
 # Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune
+Om du vill konfigurera din Windows-enhet kan du få hjälp [här](../enduser/using-your-windows-device-with-intune.md).
+
 Innan du kan hantera Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune måste enheterna kunna kommunicera med Intune. För att förenkla detta kan du skapa en DNS-post så att användarna inte behöver ange adressen till servern. Stegen nedan beskriver hur du underlättar registreringen för användarna.  
 
 I de flesta fall kan användarna installera företagsportalappen från Windows Store. Om du hanterar Windows Phone 8.0-enheter eller behöver distribuera företagsportalen till Windows Phone-enheter måste du också hämta och signera företagsportalappen. Se [Konfigurera hantering av Windows Phone 8.0](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
@@ -29,7 +31,7 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
 2.  **Ange ett DNS-alias för registreringsserverns adress** (valfritt)
 
-    Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. Om du inte skapar ett DNS-alias måste användarna
+    Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. CNAME DNS-posten är valfri för Windows-enhetsregistrering, men vi rekommenderar att du skapar en eller flera poster vid behov. Då blir det enklare att registrera Windows-enheter. Om ingen CNAME-post hittas ombeds användaren att ange namnet på MDM-servern manuellt.
 
   1.  Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats exempelvis är contoso.com, skulle du skapa en CNAME-post i DNS-servern som omdirigerar EnterpriseEnrollment.contoso.com till manage.microsoft.com. Om det finns mer än en verifierad domän skapar du en CNAME-post för varje domän. CNAME-resursposterna måste innehålla följande information:
 
@@ -50,12 +52,16 @@ I de flesta fall kan användarna installera företagsportalappen från Windows S
 
     3.  Ange webbadressen till företagswebbplatsens verifierade domän i rutan **Ange ett verifierat domännamn** och klicka sedan på **Testa automatisk identifiering**.
 
+    4.  Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering.
+        - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+        - [Vägledning för slutanvändare för Windows-enheter](../enduser/using-your-windows-device-with-intune.md)
+
 
 
 Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2 och 3 i administrationskonsolen.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

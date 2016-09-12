@@ -1,10 +1,10 @@
 ---
 title: "Direktregistrering för iOS-enheter | Microsoft Intune"
-description: 
+description: "Använd verktyget Apple Configurator för att registrera företagsägda iOS-enheter direkt med en fördefinierade princip genom att ansluta dem via USB till en Mac-dator."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +13,16 @@ ms.assetid: a692b90c-72ae-47d1-ba9c-67a2e2576cc2
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
-ms.openlocfilehash: 8fea0f7f87972bc643bbb20348095e05f701287e
+ms.sourcegitcommit: aabe68a3621a02b8f3142ab3f593190cc23053dd
+ms.openlocfilehash: 17836bc826bc89e3f041f7b369be09c1cce9ea4f
 
 
 ---
 
 # Registrera iOS-enheter som använder Apple Configurator direkt
-Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator. Den här processen fabriksåterställer inte enheten och registrerar enheten med en fördefinierad princip. Den här metoden gäller för enheter som **inte har någon användartillhörighet** och kräver att du utför företagsregistreringen genom att ansluta iOS-enheten till en Mac-dator via en USB-anslutning. Företagsportalappen stöds inte för direktregistrerade enheter. Den här vägledningen förutsätter att du använder Apple Configurator 2.0 på en Mac-dator.
+Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator. Den här processen fabriksåterställer inte enheten och registrerar enheten med en fördefinierad princip. Den här metoden gäller för enheter som **inte har någon användartillhörighet** och kräver att du utför företagsregistreringen genom att ansluta iOS-enheten till en Mac-dator via en USB-anslutning. När du registrerar iOS-enheter direkt kan du registrera dem utan att hämta enhetens serienummer. Du kan också namnge enheten i identifieringssyfte innan Intune samlar in enhetens namn under registreringen. Företagsportalappen stöds inte för direktregistrerade enheter. Den här vägledningen förutsätter att du använder Apple Configurator 2.0 på en Mac-dator.
 
 1.  **Skapa en profil för enheter** En enhets registreringsprofil definierar inställningarna som tillämpas på enheter. Om du inte redan har gjort det, skapar du en registreringsprofil för iOS-enheter som använder Apple Configurator.
-
-    #### Så här skapar du en profil
 
     1.  I [Microsoft Intunes administrationskonsol](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till...**.
 
@@ -40,8 +38,8 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 
         -   **Förtilldelning av enhetsgrupp** – Alla enheter som har distribuerat den här profilen hör ursprungligen till den här gruppen. Du kan tilldela enheter på nytt efter registreringen.
 
-        >[!Important]
-        >Grupptilldelningar flyttas från Intune till Azure Active Directory. [Läs mer](http://go.microsoft.com/fwlink/?LinkID=787064)
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
+
     3.  Välj **Spara profil** för att lägga till profilen.
 
 5.  **Exportera en profil som .mobileconfig för att distribuera den till iOS-enheter** Välj den enhetsprofil som du skapat. Välj **Exportera...** i verktygsfältet. Välj **Hämta profil** och spara den nedladdade .mobileconfig-filen.
@@ -61,8 +59,6 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 
 8.  **Installera profilen** Du är redo att installera profilen på iOS-enheten. Installationsassistenten måste ha slutförts på enheten och enheten måste vara redo att användas.  Om registreringen medför appdistributioner måste enheten ha ett konfigurerat Apple-ID eftersom appdistributioner kräver att du har ett Apple-ID för App Store.
 
-    ###### Slutför profilgodkännande för obevakade iOS-enheter
-
     1.  Lås upp iOS-enheten.
 
     2.  Tryck på **Installera** i dialogrutan **Installera profil** för **Hanteringsprofil**.
@@ -81,11 +77,7 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 10. **Distribuera enheter** Nu är iOS-enheten registrerad med Intune och hanteras.
 
 
-### Se även
-[Dags att registrera enheter](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO1-->
 
 

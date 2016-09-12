@@ -3,18 +3,19 @@ title: "Enheten uppfyller inte kraven för äldsta tillåtna version av operativ
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 05/30/2016
+manager: angrobe
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2df6fca5-9731-4ea0-a8ee-45b648caa5b4
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 12e559f51419da6c3edfa7af1d8b0f09c99e4caa
+ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
+ms.openlocfilehash: ab64d5d96c4572e9aade27dfac697cb9adbefc49
 
 
 ---
@@ -33,10 +34,10 @@ Du kontrollerar versionen för Windows 10 och Windows 8.1 genom att trycka på *
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Sep16_HO2-->
 
 

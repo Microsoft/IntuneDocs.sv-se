@@ -1,10 +1,10 @@
 ---
-title: "Installationsassistent för registrering av iOS-enheter med Microsoft Intune | Microsoft Intune"
-description: 
+title: Registrera iOS-enheter med installationsassistenten | Microsoft Intune
+description: "Registrera företagsägda iOS-enheter med hjälp av verktyget Apple Configurator för att återställa enheten till fabriksinställningarna och förbereda enheten för att köra installationsassistenten."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f3637e79e7b6f93820e775932653c41879f369fe
-ms.openlocfilehash: b9cb10ccb26d4f61d63fb2dc6c18be48cc0a3182
+ms.sourcegitcommit: ecfeb73efed4a47256275120c52de232c556adfe
+ms.openlocfilehash: 01d87b95d2599f75161c9a95ff4cf94375eedb60
 
 
 ---
@@ -26,7 +26,8 @@ Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple C
 ## Registrering med installationsassistenten för iOS-enheter med Microsoft Intune
 Med Apple Configurator kan du återställa iOS-enheter till fabriksinställningarna och förbereda dem för installation av enhetens nya användare.  Den här metoden kräver att du utför företagsregistreringen genom att ansluta iOS-enheten till en Mac-dator via en USB-anslutning och förutsätter att du använder Apple Configurator 2.0. De flesta scenarier kräver att principen som tillämpas på iOS-enheten inkluderar *användartillhörighet* för att aktivera appen Intune-företagsportal.
 
-**Krav**
+**Förutsättningar**
+* [Aktivera iOS-registrering](set-up-ios-and-mac-management-with-microsoft-intune.md) genom att installera ett APN-certifikat
 * Fysisk åtkomst till iOS-enheter – Enheterna måste vara okonfigurerade (fabriksåterställning) utan lösenord
 * Enhetsserienummer – [Hämta ett iOS-serienummer](https://support.apple.com/en-us/HT204308)
 * USB-anslutningskablar
@@ -37,10 +38,7 @@ Med Apple Configurator kan du återställa iOS-enheter till fabriksinställninga
 
 2.  **Skapa en profil för enheter** En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter. Om du inte redan har gjort det, skapar du en registreringsprofil för iOS-enheter som använder Apple Configurator.
 
-    ###### Så här skapar du en profil
-
-    1.  I [Microsoft Intunes administrationskonsol](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och klickar sedan på **Lägg till...**.
-
+    1.  I [Microsoft Intunes administrationskonsol](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till...**.
     ![Skapa profil för mobilenhetsregistrering](../media/pol-sa-corp-enroll.png)
 
     2.  Ange information om enhetsprofilerna:
@@ -51,19 +49,13 @@ Med Apple Configurator kan du återställa iOS-enheter till fabriksinställninga
 
         -   **Registreringsinformation** – Anger hur enheterna registreras.
 
-            -   **Fråga efter användartillhörighet** – iOS-enheten kan kopplas till en användare under installationen och kan sedan får åtkomst till företagets data och e-post som den användaren. I de flesta scenarier med installationsassistenten använder du **Fråga efter användartillhörighet**.
-            Det här läget stöder ett antal scenarier:
+            -   **Fråga efter användartillhörighet** – Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post som användaren. **Användartillhörighet** ska konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (d.v.s. för att installera appar).
 
-                -   **Företagsägd personlig enhet** – CYOD (”Choose Your Own Device”) liknar privatägda eller personliga enheter, men administratören har viss behörighet och kan exempelvis rensa, återställa, administrera och avregistrera enheten. Enhetens användare kan installera appar och har de flesta behörigheter för enhetsanvändning som inte blockeras av hanteringsprincipen.
-
-                -   **Enhetsregistrering av hanteringskonto** – Enheten har registrerats med hjälp av ett särskilt Intune-administratörskonto. Det kan hanteras som ett privat konto, men bara en användare som känner till registreringens autentiseringsuppgifter kan installera appar, rensa, återställa, administrera och avregistrera enheten. Information om hur du registrerar en enhet som delas av många användare via ett gemensamt konto finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
-
-            -   **Ingen användartillhörighet** – Enheten är användarlös. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användaranknytning inaktiveras eller fungerar inte.
+            -   **Ingen användartillhörighet** – Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 
         -   **Förtilldelning av enhetsgrupp** – Alla enheter som har distribuerat den här profilen hör ursprungligen till den här gruppen. Du kan tilldela enheter på nytt efter registreringen.
 
-        >[!Important]
-        >Grupptilldelningar flyttas från Intune till Azure Active Directory. [Läs mer](http://go.microsoft.com/fwlink/?LinkID=787064)
+            [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
           -  **Enhetsregistreringsprogram** – Apples Enhetsregistreringsprogram (Device Enrollment Program) kan inte användas med installationsassistenten för registrering. Kontrollera att växlingsknappen är i läget **av**.
 
@@ -123,26 +115,24 @@ Med Apple Configurator kan du återställa iOS-enheter till fabriksinställninga
 
     3. Ange **namnet** och **registrerings-URL** för MDM-servern från Steg 6 ovan. Ange registreringsprofil-URL:en som exporteras från Intune som URL: en för registrering. Välj **Nästa**.  
 
-       Om du får en varning om krav på förtroendeprofil för Apple TV kan du på ett säkert sätt kan avbryta **förtroendeprofil**-alternativet genom att välja det grå krysset. Du kan också på ett säkert sätt bortse från alla ankarcertifikatvarningar. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
+       Om du får ett varningsmeddelande om att ”serverns URL inte är verifierad” kan du utan risk ignorera varningen. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
 
-    4.  Välj "Redigera" i fönstret för **servrar** bredvid den nya serverns profil. Se till att registrerings-URL:en exakt matchar den URL som exporteras från Intune. Ange den ursprungliga URL:en igen om de är olika och **Spara** registreringsprofilen som exporteras från Intune.
-
-    5.  Anslut mobila iOS-enheter till Apple-datorn med en USB-adapter.
+    4.  Anslut mobila iOS-enheter till Apple-datorn med en USB-adapter.
 
         > [!WARNING]
         > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och slår på den. **Välkommen**-skärmen bör visas på enheten när du startar installationsassistenten.
 
-    6.  Välj **Förbereda**. I fönstret **Förbered iOS-enhet** väljer du först **Manuellt** och sedan **Nästa**.
+    5.  Välj **Förbereda**. I fönstret **Förbered iOS-enhet** väljer du först **Manuellt** och sedan **Nästa**.
 
-    7. I fönstret **Registrera i MDM-server** väljer du först servernamnet du skapat och sedan **Nästa**.
+    6. I fönstret **Registrera i MDM-server** väljer du först servernamnet du skapat och sedan **Nästa**.
 
-    8. I fönstret **Övervaka enheter** väljer du först övervakningsnivån och sedan **Nästa**.
+    7. I fönstret **Övervaka enheter** väljer du först övervakningsnivån och sedan **Nästa**.
 
-    9. I fönstret **Skapa en organisation** väljer du **Organisation** eller skapar en ny organisation och väljer sedan **Nästa**.
+    8. I fönstret **Skapa en organisation** väljer du **Organisation** eller skapar en ny organisation och väljer sedan **Nästa**.
 
-    10. I fönstret **Konfigurera installationsassistenten för iOS** väljer du stegen som visas för användaren och väljer sedan **Förbered**. Autentisera för att uppdatera förtroendeinställningarna om du uppmanas att göra det.  
+    9. I fönstret **Konfigurera installationsassistenten för iOS** väljer du stegen som visas för användaren och väljer sedan **Förbered**. Autentisera för att uppdatera förtroendeinställningarna om du uppmanas att göra det.  
 
-    11. När iOS-enheten har slutfört förberedelserna kan du koppla från USB-kabeln.  
+    10. När iOS-enheten har slutfört förberedelserna kan du koppla från USB-kabeln.  
 
 8.  **Distribuera enheter** Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. Installationsassistenten startar när enheten slås på.
 
@@ -153,6 +143,6 @@ Med Apple Configurator kan du återställa iOS-enheter till fabriksinställninga
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

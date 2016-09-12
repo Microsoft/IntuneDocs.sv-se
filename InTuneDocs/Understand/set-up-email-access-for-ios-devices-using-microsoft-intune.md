@@ -1,9 +1,9 @@
 ---
-title: "Konfigurera e-poståtkomst för iOS-enheter med Microsoft Intune | Microsoft Intune"
-description: 
+title: "Konfigurera e-poståtkomst för iOS-enheter | Microsoft Intune"
+description: "konfigurera e-poståtkomst för iOS-enheter med Intune"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 3853673d-290a-400f-8e45-d55e39d42acd
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7f3985b10ac9612c8c1efc4756eb25cdcf29b023
-ms.openlocfilehash: 5b746cee0806fb44b1fd847efb9791d525673133
+ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
+ms.openlocfilehash: f132266939b70e87ce7fb36e42ef8b8c0777d55d
 
 
 ---
@@ -40,7 +40,7 @@ Med en e-postprofil blir e-poståtkomsten automatisk för registrerade enheter, 
 I den här genomgången ska vi använda den värdbaserade Exchange-servern som medföljer en utvärderingsprenumeration.
 1. I Intune-administrationskonsolen klickar du på **Princip** och sedan på **Lägg till princip**.
 ![<add-policy>](./media/Email-Walkthrough/Email-Walkthrough-1.png)
-2. Expandera **iOS** i dialogrutan **Skapa en ny princip**, välj **E-postprofil** och klicka sedan på **Skapa princip**.
+2. Expandera **iOS** i dialogrutan **Skapa en ny princip**, välj **E-postprofil** och klicka sedan på **Skapa princip**.  
 ![<ios-email-profile-policy>](./media/Email-Walkthrough/Email-Walkthrough-2.png)
 3. På sidan Skapa princip anger du ett namn för principen, t.ex. **E-postprofil för iOS – användarlösenord** och en beskrivning. Du kan ha flera e-postprofiler för olika enhetstyper och olika autentiseringsmetoder och använda namnet för att indikera vad profilen gäller.
 4. Ange värdnamnet för Exchange. Eftersom vi använder Exchange-servern i Azure skriver vi bara följande som värdnamn: **outlook.office365.com**
@@ -51,21 +51,23 @@ I den här genomgången ska vi använda den värdbaserade Exchange-servern som m
 8. Klicka på **Spara princip**.
 9. En dialogruta visas där du tillfrågas om du vill distribuera principen nu. Klicka på **Ja**.
 ![<deploy-policy-now-dialog>](./media/Email-Walkthrough/Email-Walkthrough-4.png)
-10. Välj den grupp som du vill distribuera e-postprofilen till i fönstret som visas, klicka på **Lägg till** och sedan på **OK**.
-![<finish-add-policy>](./media/Email-Walkthrough/Email-Walkthrough-5.png) När du klickar på **OK** börjar principen flöda till registrerade enheter efter en minut eller två.
+10. Välj den grupp som du vill distribuera e-postprofilen till i fönstret som visas, klicka på **Lägg till** och sedan på **OK**.  
+![<finish-add-policy>](./media/Email-Walkthrough/Email-Walkthrough-5.png)  
+När du klickar på **OK** börjar principen flöda till registrerade enheter efter en minut eller två.
 
 ## Så här kontrollerar du att profilen har tillämpats
 
 Om du vill kontrollera att profilen har installerats behöver du åtkomst till någon av de enheter som du har distribuerat e-postprofilen till.
 1. Öppna appen E-post på iOS-enheten.
-Du uppmanas att ange användarens användarnamn och lösenord för e-post.
+Du uppmanas att ange användarens användarnamn och lösenord för e-post.  
 ![<verify-policy-add-password>](./media/Email-Walkthrough/Email-Walkthrough-6.png)
 2. Ange användarnamnet och lösenordet för användarens Exchange-e-postkonto och tryck på **OK**.
  E-postappen öppnas under Exchange-kontot och e-posten börjar synkroniseras till enheten.
 ![<exchange-account-opens>](./media/Email-Walkthrough/Email-Walkthrough-7.png)
 3. Gå till kontoinställningarna för e-postappen och kontrollera att kontonamnet är samma som det namn du angav i e-postprofilen (t.ex. **E-post för Contoso**) och att synkroniseringsinställningarna är rätt inställda.
 ![<check-account-settings>](./media/Email-Walkthrough/Email-Walkthrough-8.png)
-![<check-email-account-name>](./media/Email-Walkthrough/Email-Walkthrough-9.png) Om det verkar som e-postprofilen inte har tillämpats automatiskt på enheten kan du tillämpa principen manuellt via företagsportalappen på enheten.
+![<check-email-account-name>](./media/Email-Walkthrough/Email-Walkthrough-9.png)  
+  Om det verkar som e-postprofilen inte har tillämpats automatiskt på enheten kan du tillämpa principen manuellt via företagsportalappen på enheten.
 1. Öppna företagsportalappen.
 2. Tryck på **Mina enheter**.
 3. Tryck på namnet på din enhet.
@@ -78,6 +80,6 @@ Du uppmanas att ange användarens användarnamn och lösenord för e-post.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Slutanvändarupplevelse för MAM-aktiverade appar | Microsoft Intune"
-description: 
+description: "I det här avsnittet beskrivs vad som händer när din app hanteras av hanteringsprinciper för mobilappar (MAM)."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
-ms.sourcegitcommit: 3f797e3ef4a7e2d1b27ce6b1ed6e5322343c6cff
-ms.openlocfilehash: 9b557c272c9d740792560a392d52efff6a7deed1
+translationtype: Human Translation
+ms.sourcegitcommit: a1a8d80ad2b0ee66101ad9e67532e806ebc4b690
+ms.openlocfilehash: 3361c9069a3258621b9349a0cf332a38c206d041
 
 
 ---
@@ -47,7 +48,7 @@ Hanteringsprinciper för mobilappar (MAM) används bara när appar används i en
     ![Skärmbild som visar filplatsen öppen med listan över befintliga filer](../media/AppManagement/iOS_OneDriveSuccess.png)
 
     > [!NOTE]
-    > [!NOTE] När du ändrar en distribuerad princip kommer ändringarna gälla nästa gång du öppnar appen.
+    > När du ändrar en distribuerad princip tillämpas ändringarna nästa gång du öppnar appen.
 
 ##  Komma åt OneDrive på en Android-enhet
 
@@ -170,6 +171,6 @@ Detta förhindrar inte att du använder RMS-delningsappen för att visa företag
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 

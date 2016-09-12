@@ -1,10 +1,10 @@
 ---
-title: Registrera din Windows 8.1- eller Windows RT 8.1-enhet i Intune | Microsoft Intune
-description: 
+title: Registrera din Windows 8.1- eller Windows RT 8.1-enhet | Microsoft Intune
+description: Beskriver hur du registrerar en Windows 8.1- eller Windows RT 8.1-enhet i Intune
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: 6607ea6c355e0ec767e514ac0097789b83c5d8c7
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 9eecefaf5f56adb0959bf3ce23c7d7062ff7c9f6
 
 
 ---
@@ -63,12 +63,9 @@ Vi rekommenderar också att du installerar appen Företagsportalen som gör att 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)</br>
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

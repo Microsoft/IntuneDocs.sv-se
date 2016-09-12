@@ -3,19 +3,19 @@ title: "Du uppmanas att identifiera din enhet när du försöker registrera dig 
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 05/06/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e40f228-cf04-4077-845f-300fbc3baee6
-ROBOTS: 
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: e5ea21d877c2828545436b211d4e62adc4de402c
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 5db6e8e4b27a00ce159fb700139db45a45e48b02
 
 
 ---
@@ -31,10 +31,10 @@ Om du försöker registrera en iOS- eller Mac OS X-enhet i Intune och en skärm 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO5-->
 
 

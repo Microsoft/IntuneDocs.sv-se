@@ -1,10 +1,10 @@
 ---
-title: Konfigurera Android-hantering med Microsoft Intune | Microsoft Intune
-description: 
+title: Konfigurera Android-hantering | Microsoft Intune
+description: "Aktivera hantering av mobila enheter (MDM) för Android- och KNOX-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,15 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1dc713099c982d6e32c87b814dd3f55b1656eda
-ms.openlocfilehash: 5f65887345c1a650c6d80863e42f447035c789f7
+ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
+ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
 
 
 ---
 
 # Konfigurera Android-enhetshantering
+Om du vill konfigurera din Android-enhet kan du få hjälp [här](../enduser/using-your-android-device-with-intune.md).
+
 Med Microsoft Intune kan du aktivera BYOD (”Bring Your Own Device”) för Android-enheter utan ytterligare plattformsbelastning.
 
 Välj följande alternativ för enhetsplattformar om du vill veta mer:
@@ -41,11 +43,15 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 3.  **Förklara för användarna hur de kommer åt företagets resurser med företagsportalen**<br>
     Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering. [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
+4.  Dina användare behöver information om hur de registrerar sina enheter och om vad som händer när de registrerat dem för hantering.
+  - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+  - [Vägledning för slutanvändare för Windows-enheter](../enduser/using-your-android-device-with-intune.md)
+
 ### Se även
 [Dags att registrera enheter i Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

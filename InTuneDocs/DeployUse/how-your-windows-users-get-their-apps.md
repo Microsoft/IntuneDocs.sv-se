@@ -1,10 +1,10 @@
 ---
 title: "Så får dina Windows-användare sina appar | Microsoft Intune"
-description: 
+description: "Metoder för att göra Windows-appar tillgängliga för slutanvändare"
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d867202b8b3cc5e6ed77d97bcfddce2beabdd40
-ms.openlocfilehash: f226ea2a7be64ef759f61c61903bb0dc964c1410
+ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
+ms.openlocfilehash: 205821f1e6a9685b2a60f6c6d3e0ba3e9e961d85
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: f226ea2a7be64ef759f61c61903bb0dc964c1410
 
 # Så får dina Windows-användare sina appar
 
-Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune. 
+Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune.
 
 **Obligatoriska appar** - Appar som krävs av administratören och som installeras på enheten med minimal inblandning av användaren, beroende på plattform.
 
@@ -38,6 +38,6 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

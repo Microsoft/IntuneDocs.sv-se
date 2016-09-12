@@ -1,10 +1,10 @@
 ---
 title: "Krav på nätverksinfrastruktur | Microsoft Intune"
-description: 
+description: "Krav på brandvägg, port, domän och proxyserver för Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 074de65b-84a5-4a01-a824-18ffd838eab0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c5d1b53f09ce2f475cd934e36ddb19d019737431
-ms.openlocfilehash: b551aca6994780591dabe042420d5f23d98b218b
+ms.sourcegitcommit: 073e3df63a5de9cf92c739c1ced858e21a9ac351
+ms.openlocfilehash: aa4d2219a5962d83b80630ed3a09660a76469764
 
 
 ---
@@ -35,7 +35,7 @@ I följande tabell visas de portar och tjänster som Intune-klienten har åtkoms
 
 
 |**Domain**|**Portar**|**IP-adress**|
-|------|----|
+|------|----|---|
 |manage.microsoft.com<br>a.manage.microsoft.com<br>admin.manage.microsoft.com<br>enterpriseenrollment.manage.microsoft.com<br>enterpriseenrollment-s.manage.microsoft.com<br>i.manage.microsoft.com<br>m.manage.microsoft.com<br>p.manage.microsoft.com<br>portal.manage.microsoft.com<br>r.manage.microsoft.com|80 och 443|134.170.168.254<br>134.170.51.126
 |account.manage.microsoft.com|80 och 443|157.56.13.59
 |fef.msua01.manage.microsoft.com|80 och 443|138.91.243.97
@@ -135,6 +135,7 @@ I följande tabell visas de portar och tjänster som Intune-klienten har åtkoms
 |status.manage.microsoft.com|80 och 443|157.55.99.170
 |swda01.manage.microsoft.com<br>swda02.manage.microsoft.com<br>swdb01.manage.microsoft.com<br>swdb02.manage.microsoft.com<br>swdc01.manage.microsoft.com<br>swdc02.manage.microsoft.com|80 och 443|93.184.215.200
 |*.microsoftonline-p.com|80 och 443||
+|has.spserv.microsoft.com<br>Krävs för hälsoattesteringstjänst för enheter|443||
 |*.microsoftonline-p.net|80 och 443||
 |*.portal.office.com|80 och 443||
 |*.spynet2.microsoft.com|443||
@@ -147,6 +148,7 @@ I följande tabell visas de portar och tjänster som Intune-klienten har åtkoms
 |Microsoft Update-tjänster|\*.update.microsoft.com<br>download.microsoft.com<br>update.microsoft.com<br>\*.download.windowsupdate.com<br>download.windowsupdate.com<br>\*.windowsupdate.com<br>windowsupdate.microsoft.com<br>ntservicepack.microsoft.com|80 och 443|
 |DNS-sökningsbegäranden|manage.microsoft.com.nsatc.net|80|
 |Samsung KNOX-enhetskommunikation genom brandväggen|Om du vill att Samsung KNOX-enheterna ska kontakta KNOX-servrarna genom brandväggen följer du anvisningarna i Vanliga frågor och svar om Samsung KNOX.||
+|Kommunikation för villkorlig åtkomst|443|204.79.197.200|
 |Dokumentation, hjälp och support:</br></br>*.livemeeting.com<br>\*.microsoftonline.com<br>\*.social.technet.microsoft.com<br>blogs.technet.com<br>go.microsoft.com<br>onlinehelp.microsoft.com<br>www.microsoft.com|80|||
 
 
@@ -168,6 +170,6 @@ Du kan också använda en proxyserver som cachelagrar innehåll för att [minska
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

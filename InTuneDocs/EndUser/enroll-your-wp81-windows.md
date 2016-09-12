@@ -1,10 +1,10 @@
 ---
 title: Registrera din Windows Phone 8.1-enhet i Intune | Microsoft Intune
-description: 
+description: Beskriver hur du registrerar en Windows Phone 8.1-enhet i Intune
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f83a539e9bec5207d7c1c682942b4bb6797d616c
-ms.openlocfilehash: cc427327897084d6366ade896f7d760603d86eb7
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: 9a38443813682b29615ec79b0e0d7da4f8bd369c
 
 
 ---
@@ -84,13 +84,9 @@ Om din IT-administratör har konfigurerat Företagsportalen för installation un
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md)</br>
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

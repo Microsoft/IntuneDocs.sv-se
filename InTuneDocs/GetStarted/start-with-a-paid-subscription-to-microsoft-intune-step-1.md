@@ -1,10 +1,10 @@
 ---
 title: Logga in eller registrera dig i Intune | Microsoft Intune
-description: 
+description: "Hur du registrerar dig för en Intune-prenumeration eller loggar in om du redan har en prenumeration"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed26d65b98a0ae1bbc4fbac682fb53fddd50b4e5
-ms.openlocfilehash: 1a67e22ef8f2b9d0c8bf0c816c774a15acc24f35
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: fddf33ecc0296d5bfabb710e0d4b178f75659009
 
 
 ---
@@ -51,6 +51,6 @@ Gratulerar! Du är klar med steg 1 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

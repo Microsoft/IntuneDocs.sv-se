@@ -1,19 +1,20 @@
 ---
-title: "Installera Microsoft Intune Exchange Connector för on-premises Exchange | Microsoft Intune"
-description: 
+title: "Exchange Connector för lokal EAS | Microsoft Intune"
+description: "Använd anslutningsverktyget för att möjliggöra kommunikation mellan Intune-administratörskonsolen och lokal Exchange Server för Exchange ActiveSync MDM."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
-ms.reviewer: jeffgilb
+ms.reviewer: muhosabe
 ms.suite: ems
-ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
-ms.openlocfilehash: 45f815ea379007b75316552d34f5bd8669b2ccef
+translationtype: Human Translation
+ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
+ms.openlocfilehash: 18614cc272323b8031c94b8e582f80aa5c06d9d3
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: 45f815ea379007b75316552d34f5bd8669b2ccef
 # Installera Intune on-premises Exchange Connector
 
 
-Om du vill skapa en anslutning som gör det möjligt för Microsoft Intune att kommunicera med Exchange-servern som är värd för mobila enheters postlådor måste du ladda ned och konfigurera verktyget för lokal anslutning från Intunes administratörskonsol.
+Om du vill skapa en anslutning som gör det möjligt för Microsoft Intune att kommunicera med Exchange-servern som är värd för mobila enheters postlådor måste du ladda ned och konfigurera verktyget för lokal anslutning från Intunes administratörskonsol. Intune har endast stöd för en Exchange Connector-anslutning av valfri typ per prenumeration.
 
 ## Krav för den lokala anslutningen
 I följande tabell visas kraven på datorn där du installerar on-premises Exchange Connector.
@@ -29,14 +30,13 @@ I följande tabell visas kraven på datorn där du installerar on-premises Excha
 |Krav|Mer information|
 |---------------|--------------------|
 |Operativsystem|Intune stöder on-premises Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012 eller Windows Server 2012 R2.<br /><br />Anslutningen stöds inte i Server Core-installationen.|
-|Microsoft Exchange-version|On-premises Connector kräver Microsoft Exchange 2010 SP1 eller senare.|
+|Microsoft Exchange-version|On-Premises Connector kräver Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den **nya** eller **äldre** konfigurationen kontaktar du din kontoansvariga.|
 |Utfärdare för hantering av mobila enheter| [Ange utfärdare för hantering av mobila enheter till Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority).|
 |Maskinvara|Datorn där du installerar anslutningen kräver en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.|
 |Active Directory-synkronisering|Innan du kan använda endera Connector för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
 |Tilläggsprogramvara|En fullständig installation av Microsoft .NET Framework 4 och Windows PowerShell 2.0 måste installeras på den dator som är värd för anslutningen.|
 |Nätverk|Datorn där du installerar anslutningen måste finnas i en domän som har en förtroenderelation till domänen som är värd för Exchange Server.<br /><br />Datorn kräver konfigurationer för att kunna komma åt Intune-tjänsten genom brandväggar och proxyservrar via portarna 80 och 443. Exempel på domäner som används av Intune är manage.microsoft.com, &#42;manage.microsoft.com och &#42;.manage.microsoft.com.|
 |Värdbaserad Exchange konfigurerad och körs|Se [Exchange Server 2016](https://technet.microsoft.com/library/mt170645.aspx) för mer information. |
-|Ange utfärdare för hantering av mobila enheter till Intune|[Ange utfärdare för mobila enheter till Intune](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)|
 
 ### Krav för Exchange-cmdlet
 
@@ -58,16 +58,14 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 
 ## Ladda ner programinstallationspaketet för on-premises Exchange Connector
 
-1. På ett operativsystem med stöd för on-premises Exchange Connector, öppna [administrationskonsolen för Microsoft Intunes](http://manage.microsoft.com) (http://manage.microsoft.com) med ett användarkonto som är en administratör i Exchange-klienten med en licens för att använda Exchange Server.
+1. På ett Windows Server-operativsystem som stöder on-premises Exchange Connector: Öppna [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) (http://manage.microsoft.com) med ett användarkonto som är en administratör i Exchange-klienten med en licens för att använda Exchange Server.
 ![Öppna Konfigurera Exchange Connection](../media/ExchangeConnector.gif)
 
-2.  I fönstret med genvägar för arbetsytan väljer du **ADMIN**.
+2.  Välj **Admin** i fönstret med genvägar på arbetsytan, välj **Hantering av mobila enheter** > **Microsoft Exchange** och välj sedan **Installera Exchange Connection**.
 
-3.  Under **Hantering av mobila enheter** i navigeringsfönstret expanderar du **Microsoft Exchange** och klickar sedan på **Konfigurera Exchange Connection**.
+3.  På sidan **Konfigurera Exchange-anslutning** väljer du **Hämta lokal anslutning**.
 
-4.  På sidan **Konfigurera Exchange-anslutning** väljer du **Hämta lokal anslutning**.
-
-5.  On-premises Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
+4.  On-premises Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
 
 > [!IMPORTANT]
 > Byt inte namn på eller flytta filerna i on-premises Exchange Connector-mappen. Om du flyttar eller byter namn på innehållet i mappen kommer installationen inte fungera korrekt.
@@ -133,6 +131,6 @@ Du kan också kontrollera datum och tid för det senaste lyckade synkroniserings
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO5-->
 
 

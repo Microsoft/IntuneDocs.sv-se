@@ -1,10 +1,10 @@
 ---
 title: "Använda en Android-enhet med Intune | Microsoft Intune"
-description: 
+description: "Lista med länkar till saker du kan göra på din mobila Android-enhet när enheten har registrerats i Intune"
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 06/14/2016
+manager: angrobe
+ms.date: 07/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 24573d04c319e359b810b6fdf607b44db19306e9
-ms.openlocfilehash: 4622897f5e32514ad80b5000732cf6835224160a
+ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
+ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 
 ---
@@ -22,7 +22,11 @@ ms.openlocfilehash: 4622897f5e32514ad80b5000732cf6835224160a
 
 # Med hjälp av en Android-enhet med Intune
 
-Följ dessa steg för åtgärder som du behöver utföra på din Android-enhet om ditt företag använder Microsoft Intune.
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
+
+- Installation av företagsportalappen och registrering av Intune 
+- Hanteringsuppgifter efter registrering
+- Efterlevnadsproblem
 
 ## Installation av företagsportalappen och registrering av Intune
 
@@ -67,9 +71,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Anpassa konsolvyer för administratörsroller | Microsoft Intune"
-description: 
+description: "I det här avsnittet beskrivs hur du kan filtrera visningen i Intune-administratörskonsolen så att administratörer endast ser de objekt som de behöver."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: e0783eaa-67dc-410e-9e80-4d3aa72f36d8
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 52a77e50b3dde24ba270766d4472bdd6176cc415
+ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
+ms.openlocfilehash: a17f207db4cf8fe0fd53348be464a367d9a8b0a4
 
 
 ---
 
 # Anpassa Intune-konsolvyer i enlighet med administratörsroller
-Du kan filtrera konsolvyn för administratörer i Microsoft Intune så att administratörerna endast ser de poster de behöver för sin roll. Du kan till exempel tillåta att operatörer för administratörskonsolen kan uppdatera definitioner för skadlig kod eller återställa lösenordet på enheter. Det gör du med hjälp av förinställda **beteckningar** som du tilldelar specifika användare. När dessa användare kommer åt administrationskonsolen, ser de bara poster specifika för deras beteckning.
+Du kan filtrera visningen i Microsoft Intune-administratörskonsolen så att administratörerna endast ser de poster de behöver för sin roll. Du kan till exempel tillåta att operatörer för administratörskonsolen kan uppdatera definitioner för skadlig kod eller återställa lösenordet på enheter. Det gör du med hjälp av förinställda **beteckningar** som du tilldelar specifika användare. När dessa användare kommer åt administratörskonsolen, ser de bara poster specifika för deras beteckning.
 
 ## Skapa en anpassad vy
 
@@ -60,14 +60,14 @@ Du kan filtrera konsolvyn för administratörer i Microsoft Intune så att admin
 
         -   Uppdatera inventering
 
-        -   Fjärrlås på en enhet
+        -   Fjärrlåsa en enhet
 
-        -   Återställning av lösenord
+        -   Återställa ett lösenord
 
 När administratören som du har konfigurerat öppnar Intune-administratörskonsolen nästa gång får personen den åtkomstnivå som du tilldelat.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

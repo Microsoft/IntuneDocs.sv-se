@@ -1,26 +1,27 @@
 ---
-title: Synkronisera enheten manuellt | Microsoft Intune
+title: Synkronisera iOS-enheten manuellt | Microsoft Intune
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 06/06/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 3cb6b8236afc227df9df34848cb81bcbe82a612e
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: 54633d57fc1898c70abf1f37cff08e2dd553e5a1
 
 
 ---
 
 
-# Synkronisera enheten manuellt
+# Synkronisera iOS-enheten manuellt
 
 Om appinstallationen tar för lång tid synkroniserar du iOS-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. Synkroniseringsfunktionen gäller bara för iOS, inte för Mac OS X.
 
@@ -38,10 +39,9 @@ En snurrande cirkel visas på skärmen tills synkroniseringen är klar.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

@@ -1,10 +1,10 @@
 ---
 title: "Felsöka programuppdateringar | Microsoft Intune"
-description: 
+description: "Lös problem med programuppdateringar i Microsoft Intune."
 keywords: 
-author: Nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+author: robstackmsft
+manager: angrobe
+ms.date: 08/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ca4d4197ac1ece3e9abf44ad462d8ec7a807b4b2
-ms.openlocfilehash: d8470be236ac7b7a9431e07c5ca651cb6bd9fbc0
+ms.sourcegitcommit: 906371576609152aaf61e033da5ce60744ddd255
+ms.openlocfilehash: 07e5737b75870319445f5af4d7038916b155d083
 
 
 ---
@@ -244,7 +244,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 **Problem**: Du kan stöta på en situation där ett eller flera av följande problem uppstår i Microsoft Intune-klienter:
 - De slutar plötsligt rapportera till Microsoft-administrationskonsolen.  
 - De uppvisar hög processoranvändning.
-- Programmen installeras långsamt när de installeras via Intune-portalen. 
+- Programmen installeras långsamt när de installeras via Intune-portalen.
 - Microsoft Intune Center utlöser följande fel: *Ett fel uppstod när datorn uppdaterades. Fel hittades: kod 0x800705b4*.
 - Statusfältet på Intune-administratörskonsolen > Grupper > Alla enheter visar: *En eller flera agenter installerade på den här datorn har fel. Informationen för datorn är kanske felaktig eller inaktuell*.
 
@@ -254,7 +254,7 @@ Det här problemet kan uppstå om ersatta programuppdateringar (uppdateringar so
 1. Logga in till [Intune-administrationskonsolen](https://manage.microsoft.com).
 2. Välj **Uppdateringar** > **Alla uppdateringar**.
 3. Använd filteralternativet i det övre verktygsfältet för att filtrera fram ersatta uppdateringar.
-4. Avfärda alla ersatta uppdateringar som gäller Windows 7 eller program (till exempel Microsoft Office) som har installerats på de berörda klienterna. 
+4. Avfärda alla ersatta uppdateringar som gäller Windows 7 eller program (till exempel Microsoft Office) som har installerats på de berörda klienterna.
 5. Starta om de berörda klienterna.
 
 Om du kör Windows 7 kontrollerar du dessutom att följande uppdatering är installerad: [3050265 Windows Update-klienten för Windows 7: juni 2015](https://support.microsoft.com/kb/3050265).
@@ -264,7 +264,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

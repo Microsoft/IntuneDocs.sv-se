@@ -1,20 +1,20 @@
 ---
-title: "Principinställningar för allmänna villkor i Microsoft Intune | Microsoft Intune"
-description: 
+title: "Inställningar för användarvillkor | Microsoft Intune"
+description: "Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, tillgång till arbetsresurser och användning av företagsportalappen påverkar enheter och användare."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 8079ca5abcedbe024fb6347e02c7cf61ae541a30
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: b6eff361a30afc965d0a1375d25232833acab03d
 
 
 ---
@@ -80,6 +80,6 @@ När du redigerar en befintlig policy för användarvillkor, kan du välja dess 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
