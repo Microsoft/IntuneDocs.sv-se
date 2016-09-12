@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: "Begränsa åtkomsten till e-post: Exempelscenarier | Microsoft Intune"
-description:
-keywords:
+description: "Några exempelscenarier och hur de kan genomföras med villkorlig åtkomst."
+keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chrisgre
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 6b4751a67414a0b8a16886070b323a0296eeb829
+
 
 ---
 
@@ -86,6 +80,7 @@ Följande flöde används för att bestämma vilka enheter som kan få tillgång
 ![Åtkomstflöde för enheter](./media/ConditionalAccess8-4.png)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO5-->
 
 

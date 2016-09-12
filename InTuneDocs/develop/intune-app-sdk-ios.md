@@ -13,8 +13,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7f62c5ee18d8f69fa174f09a1c46b6925c7517c
-ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
+ms.sourcegitcommit: 63d94a83a3a5ad9520abab3ef25e8d9690c26ce7
+ms.openlocfilehash: 512ef2416e14f2a44e1c46e996c8519b5776581f
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 820ec2da0554f0af383895482241be7d1c0cf305
 
 Med Microsoft Intune App SDK för iOS kan du lägga till mobilappshantering (MAM, Mobile App Management) med Intune i din iOS-app. Ett MAM-aktiverat program är integrerat i Intune App SDK och gör att IT-administratörer kan distribuera principer till mobilappen när den hanteras aktivt.
 
-# Vad innehåller SDK?
+## Vad innehåller SDK?
 
 Intune App SDK för iOS innehåller ett statiskt bibliotek, resursfiler, API-rubriker, en plist-fil med inställningar för felsökning samt ett konfigurationsverktyg. Mobilappar kan bara innehålla resursfiler och statiskt länka till biblioteken i de flesta tillämpningarna av principer. Avancerade MAM-funktioner i Intune aktiveras via API:er.
 I den här handboken beskrivs hur du använder följande när du integrerar Intune App SDK för iOS:
@@ -37,13 +37,13 @@ I den här handboken beskrivs hur du använder följande när du integrerar Intu
 
 * **Rubriker**: visar API:er för Intune App SDK. Om du använder ett API måste du inkludera huvudfilen som innehåller API:et. 
 
-# Så fungerar Intune App SDK
+## Så fungerar Intune App SDK
 
 Målet med Intune App SDK för iOS är att lägga till hanteringsfunktioner i iOS-program med minimala kodändringar. Genom att minska antalet kodändringar minskar du tiden det tar att marknadsföra produkten samtidigt som mobilappen blir mer konsekvent och stabil. 
 
 Programmet måste länkas till det statiska biblioteket och inkludera resurspaketet. Filen MAMDebugSettings.plist är valfri och kan tas med i paketet för att simulera MAM-principer som tillämpas på programmet utan att behöva distribuera programmet via Microsoft Intune. Dessutom kan principerna i filen MAMDebugSettings.plist tillämpas i felsökningsversioner genom att överföra filen till programmets dokumentkatalog via iTunes fildelning.
 
-# Skapa en app med Intune App SDK 
+## Skapa en app med Intune App SDK 
 
 Följ stegen nedan för att aktivera Intune App SDK:
 
@@ -133,7 +133,7 @@ Följ stegen nedan för att aktivera Intune App SDK:
 
 Om mobilappen använder ADAL för sin egen autentisering läser du avsnittet Konfigurera inställningarna för Azure Directory Authentication Library (ADAL) som finns här.
 
-## Telemetri 
+### Telemetri 
 
 Intune App SDK för iOS loggar telemetridata vid användningshändelser som standard och skickar dem till Microsoft Intune.
 
@@ -155,15 +155,15 @@ Stegen nedan krävs om själva appen använder ADAL för autentisering. Om mobil
 
 2. I filen `Info.plist`i projektet, under ordlistan `IntuneMAMSettings` med nyckelnamnet `ADALRedirectUri`anger du den omdirigerings-URI som ska användas för ADAL-anrop. Du kan även behöva ange `ADALRedirectScheme` beroende på formatet för appens omdirigerings-URI.
 
-## Skapa tillägg (valfritt) 
+### Skapa tillägg (valfritt) 
 
 När du skapar tillägg följer du samma anvisningar som när du skapade mobilappen som beskrivs i avsnittet Skapa en app med Intune App SDK. Dessutom uppdaterar du filen info.plist för varje tillägg för att lägga till nyckeln ContainingAppBundleId i ordlistan IntuneMAMSettings med värdet för programmets paket-ID.
 
-## Skapa ramverk (valfritt)
+### Skapa ramverk (valfritt)
 
 Med de senaste ändringarna i Intune App SDK behöver du inte kompilera mobilappen med några särskilda länkarflaggor om mobilappen innehåller inbäddade ramverk för programmet. 
 
-## Bildfiler vid start (valfritt)
+### Bildfiler vid start (valfritt)
 
 När en MAM-aktiverad app aktivt hanteras av Microsoft Intune visas en startskärm i Intune App SDK när appen startas för att visa användaren att appen hanteras. Om du vill kan du lägga till bildfiler som kan visas på startsidan Hanteras av ditt företag. Använd följande riktlinjer för bilder:
 
@@ -179,7 +179,7 @@ När en MAM-aktiverad app aktivt hanteras av Microsoft Intune visas en startskä
 
 **Obs!**Den här skärmen visas vid starten, men kan ignoreras permanent av användaren.
 
-# Konfigurera inställningarna för Intune App SDK
+## Konfigurera inställningarna för Intune App SDK
 
 Ordlistan `IntuneMAMSettings` i filen `info.plist` i programmet används för att konfigurera Intune App SDK. Följande är en lista över konfigurationer som stöds: 
 
@@ -197,7 +197,7 @@ SplashIconFile <br>SplashIconFile~ipad  | Sträng  | Anger filen för Intunes ik
 SplashDuration | Antal | Kortaste tid i sekunder som välkomstskärmen för Intune visas när programmet startas. Standardvärdet är 1,5. | Valfritt.
 ADALLogOverrideDisabled | Boolesk  | Anger om SDK:t dirigerar alla ADAL-loggar (inklusive eventuella ADAL-anrop från appen) till den egna loggfilen. Standardvärdet är NO (NEJ). Ange YES (JA) om appen ska ange egna återanrop i ADAL-loggen. | Valfritt.
 
-# Huvuden för Intune App SDK 
+## Huvuden för Intune App SDK 
 
 Följande huvuden innehåller API-funktionsanrop som krävs för att aktivera funktionerna i Intune App SDK. 
 
@@ -209,7 +209,7 @@ Följande huvuden innehåller API-funktionsanrop som krävs för att aktivera fu
     IntuneMAMPolicyDelegate.h
     IntuneMAMLogger.h
 
-# Felsökning av Intune App SDK i Xcode
+## Felsökning av Intune App SDK i Xcode
 
 Innan du testar den MAM-aktiverade appen med Microsoft Intune kan du använda `Settings.bundle` i Xcode. På så sätt kan du ange testprinciper utan att det krävs någon anslutning till Intune. Så här aktiverar du det:
 
@@ -230,7 +230,7 @@ Innan du testar den MAM-aktiverade appen med Microsoft Intune kan du använda `S
 > [!NOTE]
 > Nu kan du använda Inställningar -> Appens namn -> Aktivera testprinciper för att aktivera och växla mellan inställningar.
 
-# Rekommenderade metoder för iOS
+## Rekommenderade metoder för iOS
 
 Följande är några rekommenderade metoder när du utvecklar för iOS:
 
@@ -241,6 +241,6 @@ Om Xcode har problem med att hitta `libIntuneMAM.a`kan du åtgärda problemet ge
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

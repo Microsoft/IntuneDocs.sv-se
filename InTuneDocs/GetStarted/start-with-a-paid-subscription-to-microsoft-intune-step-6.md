@@ -1,10 +1,10 @@
 ---
 title: Skapa principer och publicera en app | Microsoft Intune
-description: 
+description: "Beskriver hur du skapar principer och publicerar en exempelapp för din Intune-prenumeration"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e0d8e98f-7dd8-4cbf-887c-a9af63ffe970
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2847c9af38ae0ddddc8d76d548ae7abddc63e4c1
-ms.openlocfilehash: b3b65a1fd1e426bf566f39382321a29e913f102c
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: 0bf3eb60b60e8ad1c91d3010230a41ce5d863dfe
 
 
 ---
@@ -23,11 +23,6 @@ ms.openlocfilehash: b3b65a1fd1e426bf566f39382321a29e913f102c
 Intune-principerna förser dig med inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Du kan lära dig mer i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/Intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/Intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Du kan utföra två typer av appinstallationer med Intune. Den första är en **obligatorisk installation**som automatiskt distribuerar appen till hanterade datorer. Den andra är en **tillgänglig installation**som distribuerar appen, eller en länk till appen, till Intune-företagsportalen så att användarna kan välja om de vill installera den på sina datorer eller på sina mobila enheter.
-
-<!-- this section really isn't necessary and confuses a lot of people because most mobile device apps aren't licensed this way (and our licensing/reporting features aren't super helpful). I think it's best to avoid this during a quick start guide.
-
-Before using Intune to deploy apps, make sure that you have the appropriate licenses to publish, distribute, and use the app. The Licenses workspace lets you add and manage license agreement information for apps or software purchased through Microsoft Volume Licensing agreements, and for Microsoft or non-Microsoft software that was purchased by other means. You can then create license reports that display managed license usage information throughout your company to stay informed of license usage activity.
--->
 
 Följande steg förklarar hur du skapar en konfigurationsprincip för mobila enheter, hur du skapar en brandväggsprincip för Windows-datorer och hur du konfigurerar Skype som en tillgänglig installation för mobila enheter när de har registrerats.
 
@@ -46,6 +41,10 @@ Följande steg förklarar hur du skapar en konfigurationsprincip för mobila enh
 3.  Välj du **Lägg till princip** i listan **Uppgifter** på sidan **Översikt över princip** .
 
 4.  Expandera den plattform som du vill skapa en princip för i principlistan och välj **Allmän konfiguration** > **Skapa och distribuera en princip med de rekommenderade inställningarna** > **Skapa princip**.
+
+> [!NOTE]
+> Det finns inga rekommenderade inställningar för enhetskonfigurationsprinciper eftersom det finns så många alternativ att välja bland. Du måste skapa en anpassad enhetskonfigurationsprincip.
+
 
 5.  När du uppmanas med **Välj de grupper som du vill distribuera principen till** väljer du en grupp i listan över tillgängliga grupper och väljer **Lägg till** > **OK**.
 
@@ -110,6 +109,6 @@ Gratulerar! Du är klar med steg 6 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

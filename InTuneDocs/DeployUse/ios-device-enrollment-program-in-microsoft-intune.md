@@ -1,10 +1,10 @@
 ---
-title: "Hantering med Apples DEP för iOS-enheter med Microsoft Intune | Microsoft Intune"
-description: 
+title: "Hantering med Apples DEP för iOS-enheter | Microsoft Intune"
+description: "Distribuera en registreringsprofil som registrerar iOS-enheter som köpts via enhetsregistreringsprogrammet (DEP) &quot;over-the-air&quot; för att hantera Apple-enheter."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1b942c7e09e59de59e3e406b84a21a712c0e973a
-ms.openlocfilehash: cd763f9fa0b08cc7b822eccbd043a5b9cd355d0f
+ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
+ms.openlocfilehash: affcca7ea406ea8a9d60f29add4385998b0ae29d
 
 
 ---
@@ -55,9 +55,7 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 
     Du kan också **Tilldela enheter till följande grupp**. Klicka på **Välj...** för att välja en grupp.
 
-    >[!Important]
-    >Grupptilldelningar flyttas från Intune till Azure Active Directory. [Läs mer](#changes-to-intune-group-assignments)
-
+    [!INCLUDE[groups deprecated](../includes/group-deprecation.md)]
 
     Aktivera sedan **Konfigurera DEP-inställningar för den här profilen** för att ge stöd åt DEP.
 
@@ -101,13 +99,13 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 
 ## Ändringar i Intune-grupptilldelningar
 
-Från och med september flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Mer information kommer att publiceras snart.
+Från och med oktober flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil. Den här processen säkerställer att enheter som tilldelats till en enhetsgrupp i förväg automatiskt registreras i gruppen med principer och program distribuerade. [Läs mer om Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Se även
 [Dags att registrera enheter](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO2-->
 
 

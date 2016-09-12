@@ -1,9 +1,9 @@
 ---
 title: "Begränsa åtkomsten till e-post och O365-tjänster | Microsoft Intune"
-description: 
+description: "I det här avsnittet beskrivs hur du kan använda villkorlig åtkomst för att endast tillåta att kompatibla enheter får åtkomst till e-post och företagsdata i SharePoint Online och andra tjänster."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.sourcegitcommit: f770bdc312879d1c833e8861494ecd2204ea603a
-ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 536d34e618efdc78b3103a3b1b36f13fb784781c
 
 
 ---
@@ -21,9 +22,9 @@ ms.openlocfilehash: ebce26b0e09bb5282475cb1a39c8070a5d5b44aa
 # Begränsa åtkomsten till e-post, O365 och andra tjänster med Microsoft Intune
 Du kan begränsa åtkomsten till företagsrelaterad e-post och O365-tjänster med villkorlig åtkomst i Intune. Med Intunes funktioner för villkorlig åtkomst kan du se till att åtkomsten till företagsrelaterad e-post och O365-tjänster är begränsad till enheter som är kompatibla med de regler som du anger.
 ## Hur fungerar villkorlig åtkomst?
-Inställningar för efterlevnadsprinciper används för att utvärdera enhetens kompatibilitet. Principen för villkorlig åtkomst använder utvärderingen för att begränsa eller tillåta åtkomst till en specifik tjänst. När en princip för villkorlig åtkomst används i kombination med en efterlevnadsprincip kommer endast kompatibla enheter att kunna komma åt tjänsten.
+Inställningar för efterlevnadsprinciper används för att utvärdera enhetens kompatibilitet. Principen för villkorlig åtkomst använder utvärderingen för att begränsa eller tillåta åtkomst till en specifik tjänst. När en princip för villkorlig åtkomst används i kombination med en efterlevnadsprincip kommer endast kompatibla enheter att kunna komma åt tjänsten. Principen för efterlevnad och principen för villkorlig åtkomst distribueras till användaren. Alla enheter som användaren använder för att komma åt tjänsterna kontrolleras för att se att de följer principerna.
 
-Tänk på att en efterlevnadsprincip även måste distribueras till användaren som använder enheten för att enhetens efterlevnad ska kunna utvärderas.
+Tänk på att en efterlevnadsprincip måste distribueras till enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas.
 Om ingen efterlevnadsprincip har distribuerats till användaren behandlas enheten som kompatibel och inga åtkomstbegränsningar tillämpas.
 
 Om en enhet inte uppfyller de villkor som du har definierat i principerna vägleds användaren genom en process för att registrera enheten och åtgärda problemet som gör att enheten inte är kompatibel.
@@ -64,6 +65,6 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

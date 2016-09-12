@@ -3,18 +3,19 @@ title: "Fjärrlåsa en enhet från företagsportalens webbplats | Microsoft Intu
 description: 
 keywords: 
 author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 7e5d48d35e8216bac2fae8e2f9a1ba82d3493acc
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: c422d612e4d4447799d242fae91c963c922b99ce
 
 
 ---
@@ -42,24 +43,27 @@ Använda Fjärrlås för att låsa enheten:
 
 2.  Tryck på **Fjärrlåsning**.
 
+    ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
+
+3.  Läs varningsmeddelandet om att du håller på att låsa enheten och tryck sedan på **Fjärrlås**. Därmed låses enheten av företagsportalens webbplats.
+
     När du trycker på **Fjärrlås** visas statusen ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
 
     Fjärrlåsningens status visas på tre platser:
 
-    * Meddelandefältet på webbplatsen. 
+    * Meddelandefältet på webbplatsen.
     * Sidan Information för enheten.
     * Panelen som visar namnet på enheten i avsnittet Mina enheter på sidan.
 
-    Om meddelandet ”Det gick inte att fjärrlåsa” visas väntar du några minuter och provar sedan att låsa enheten igen. När du trycker för att försöka igen ändras statusen till ”Fjärrlås väntar” igen. 
+    Om meddelandet ”Det gick inte att fjärrlåsa” visas väntar du några minuter och provar sedan att låsa enheten igen. När du trycker för att försöka igen ändras statusen till ”Fjärrlås väntar” igen.
 
     Om det andra försöket misslyckas kontaktar du IT-administratören och ber om hjälp. Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

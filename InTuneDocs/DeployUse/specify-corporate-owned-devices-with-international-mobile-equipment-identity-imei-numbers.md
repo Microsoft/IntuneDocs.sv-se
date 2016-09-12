@@ -1,25 +1,26 @@
 ---
-title: "Ange företagsägda enheter med IMEI-nummer (International Mobile Equipment Identity) | Microsoft Intune"
-description: 
+title: Ange IMEI-nummer | Microsoft Intune
+description: "Med Microsoft Intune kan administratörer importera IMEI-nummer för plattformar för mobila enheter för att identifiera företagsägda mobila enheter"
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
-ms.reviewer: jeffgilb
+ms.reviewer: dagerrit
 ms.suite: ems
-ms.sourcegitcommit: 398d93d4e2317d00a2f9d5f89966aaec3b942504
-ms.openlocfilehash: af4b87eb8082ee5ff11cd2d42b788ad17b334bcb
+translationtype: Human Translation
+ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
+ms.openlocfilehash: 4e2092182dbda4523c19afeabc34aa0166962c40
 
 
 ---
 
 # Ange enheter som ägs av företaget med IMEI-nummer (International Mobile Equipment Identity)
-Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilplattformar för att identifiera de mobila enheter som företaget äger. När de har registrerats i Intune kan enheter med importerade IMEI-tal kan visas under **Grupper** > **Översikt** > **Alla enheter** > **Förregistrerade företagsenheter** > **Av IMEI (alla plattformar)**.
+Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilplattformar för att identifiera de mobila enheter som företaget äger. När enheterna har registrerats i Intune visas enheter med importerade IMEI-nummer under **Grupper** > **Översikt** > **Alla enheter**. I **Enhetsgrupp** visas enheter med importerade IMEI-nummer som **Företag** i kolumnen **Ägarskap**.
 
 1. Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Alla förregistrerade företagsenheter** &gt; **Av IMEI (alla plattformar)** och välj sedan **Lägg till enheter…**. Du kan lägga till enheter på två sätt:
 
@@ -48,6 +49,6 @@ När en enhet som har ett sådant IMEI-nummer registreras (vanligtvis när en an
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

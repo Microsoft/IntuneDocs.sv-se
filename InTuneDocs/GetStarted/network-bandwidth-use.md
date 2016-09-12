@@ -1,10 +1,10 @@
 ---
 title: "Användning av nätverksbandbredd i Intune | Microsoft Intune"
-description: 
+description: "Användning av nätverksbandbredd i Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: e104dc52a8a9bdda4b2edb2939d8c7c36e8ecc12
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: b40c5ce0d4447b10ec949af6933f28b091136315
 
 
 ---
@@ -87,6 +87,7 @@ Om du använder BranchCache bör du kommunicera med andra administratörer i din
 [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

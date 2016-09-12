@@ -1,65 +1,68 @@
 ---
 title: "Inställningar för Mac OS X-principer | Microsoft Intune"
-description: 
+description: "I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Mac OS X-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 98b2f19b-bee8-42d7-a215-a716d56a25a3
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
-ms.sourcegitcommit: 8c1f4f209c5ec704290882b8f6f71e0b1b01d21c
-ms.openlocfilehash: bbbb666fdc34a82d247d760d156d48c5ac72374c
+translationtype: Human Translation
+ms.sourcegitcommit: 744fc6ecbabdccbfab38f45745505d635fb7e190
+ms.openlocfilehash: c6b010e49b4e581dad056aa6e8bb17123030f7b0
 
 
 ---
 
 # Inställningar för Mac OS X-konfigurationsprinciper i Microsoft Intune
 
+I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Mac OS X-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune.
+
 ## Generella inställningar för konfigurationsprinciper
 
 Använd Microsoft Intunes **allmänna konfigurationsprincip** för Mac OS X om du vill konfigurera inställningar för:
 
--   **Enhetssäkerhet** – Välj i en lista med fördefinierade inställningar som du kan använda för att styra många av enhetens egenskaper och funktioner.
+-   **Enhetssäkerhet**. Välj i en lista med fördefinierade inställningar som du kan använda för att styra många av enhetens egenskaper och funktioner.
 
--   **Kompatibla och inkompatibla appar** – Ange en lista över appar i företaget som är kompatibla eller inkompatibla. Inkompatibilitetsrapporter för appar kan användas för att visa om de appar du har angett i listan är kompatibla med appar som användare har installerat (men det går inte att blockera installationen av programmet).
+-   **Kompatibla och icke-kompatibla appar**. Ange en lista över appar i företaget som är kompatibla eller inkompatibla. Inkompatibilitetsrapporter för appar kan användas för att visa om de appar du har angett i listan är kompatibla med appar som användare har installerat (men det går inte att blockera installationen av appen).
 
-Om den inställning som du söker efter inte visas i listan kan du skapa den med hjälp av en anpassad Mac OS X-princip med vilken du kan importera inställningar som du har skapat med hjälp av Apple Configurator-verktyget. Mer information finns i **Anpassade principinställningar** senare i det här avsnittet.
+Om den inställning som du söker efter inte visas i listan kan du eventuellt skapa den med hjälp av en anpassad Mac OS X-princip med vilken du kan importera inställningar som du har skapat med hjälp av Apple Configurator-verktyget. Mer information finns i "Anpassade principinställningar" senare i det här avsnittet.
 
 ### Inställningar för lösenord
 
 |Inställningsnamn|Information|
 |----------------|---------------|
-|**Kräv ett lösenord för att låsa upp enheter**|Anger om användaren måste använda ett lösenord för att komma åt Mac-datorn. **Viktigt!** Till skillnad från iOS-enheter uppmanas användare på Mac OS X-enheter inte genast att uppdatera sitt lösenord för att följa den här inställningen.|
-|**Lösenordstyp krävs**|Anger om lösenordet som används kan vara endast numeriskt eller om det måste vara **Alfanumeriskt** (innehålla bokstäver och siffror). **Viktigt!** Den här inställningen stöds endast i Mac OS X version 10.10.3 och senare.|
-|**Antal avancerade tecken som krävs i lösenord**|Anger det antal avancerade tecken som krävs i lösenordet (från **0** - **4**).<br /><br />Ett avancerat tecken är en symbol som "**?**"|
-|**Minsta längd på lösenord**|Anger minimilängden för lösenordet (mellan **4** och **14** tecken).|
-|**Tillåt enkla lösenord**|Låter användarna skapa enkla lösenord som "**0000**" eller "**1234**".|
-|**Antal minuters inaktivitet innan lösenord krävs**|Anger hur länge datorn måste vara inaktiv innan ett lösenord krävs för att låsa upp den.|
-|**Lösenordets giltighetstid (i dagar)**|Anger efter hur många dagar användaren måste byta lösenord (från **1** - **255** dagar).|
-|**Kom ihåg tidigare lösenord**|Den här inställningen används för att förhindra att användaren använder ett lösenord som har använts tidigare. När den här inställningen används kan du även konfigurera **Förhindra återanvändning av tidigare lösenord** om du vill ange ett antal tidigare lösenord som inte får återanvändas (från **1** - **24**).|
-|**Minuter av inaktivitet innan skärmsläckaren aktiveras**|Anger hur länge datorn måste vara inaktiv innan skärmsläckaren aktiveras.|
+|**Kräv ett lösenord för att låsa upp enheter**|Ange om användaren måste använda ett lösenord för att komma åt Mac-datorn. **Viktigt!** Till skillnad från iOS-enheter uppmanas användare på Mac OS X-enheter inte genast att uppdatera sitt lösenord för att följa den här inställningen.|
+|**Lösenordstyp krävs**|Ange om lösenordet kan vara endast **Numeriskt** eller om det måste vara **Alfanumeriskt** (innehålla bokstäver och siffror). **Viktigt!** Den här inställningen stöds endast i Mac OS X version 10.10.3 och senare.|
+|**Antal avancerade tecken som krävs i lösenord**|Ange det antal avancerade tecken som krävs i lösenordet (**0** till **4**).<br /><br />Ett avancerat tecken är en symbol som **?**.|
+|**Minsta längd på lösenord**|Ange minimilängden för lösenordet (**4** till **14** tecken).|
+|**Tillåt enkla lösenord**|Låt användarna skapa enkla lösenord som **0000** eller **1234**.|
+|**Antal minuters inaktivitet innan lösenord krävs**|Ange hur länge datorn måste vara inaktiv innan ett lösenord krävs för att låsa upp den.|
+|**Förfallotid för lösenord (dagar)**|Ange efter hur många dagar användaren måste byta lösenord (**1** till **255** dagar).|
+|**Kom ihåg tidigare lösenord**|Förhindra att användaren använder ett lösenord som har använts tidigare. När den här inställningen används kan du även konfigurera **Förhindra återanvändning av tidigare lösenord** om du vill ange ett antal tidigare lösenord som inte får återanvändas (**1** till **24**).|
+|**Minuter av inaktivitet innan skärmsläckaren aktiveras**|Ange hur länge datorn måste vara inaktiv innan skärmsläckaren aktiveras.|
 
 ### Inställningar för kompatibla och icke-kompatibla appar
 I listan **Kompatibla &amp; inkompatibla appar för Mac OS X** aktiverar du **Hanterade inställningar för enheter** och skapar sedan en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
 
 > [!NOTE]
-> En enda princip kan bara innehålla en lista över kompatibla eller en lista över inkompatibel appar. Du kan inte ange båda i samma princip.
-> 
+> En enda princip kan innehålla endast en lista över kompatibla appar eller en lista över inkompatibla appar. Du kan inte ange båda i samma princip.
+>
 > Intune gör det möjligt att rapportera enheter med inkompatibla appar. Den blockerar inte installation eller tar bort inkompatibla appar.
 
 |Inställningsnamn|Information|
 |----------------|---------------|
-|**Rapportera inkompatibilitet när användare installerar apparna i listan**|Visar listan med de Mac OS X-appar som användare inte tillåts att installera. Om användarna installerar någon av de här apparna rapporteras de i **Rapporter om ej kompatibla appar**.|
-|**Rapportera inkompatibilitet när användare installerar appar som inte är listade**|Visar listan med de Mac OS X-appar som användare tillåts att installera. Om användarna installerar några andra appar rapporteras de i **Rapporter om ej kompatibla appar**.|
-|**Lägg till**|Lägger till en app i den markerade listan. Ange ett namn, eventuellt appens utgivare och paket-id för appen. **Tips!** Hitta paket-ID:t för en app på en Mac-dator där appen är installerad:<ol><li>Öppna mappen där appen har installerats (till exempel **/Appar**)</li><li>Välj paketet *&lt;Appnamn&gt;***.app** och välj **Visa paketinnehåll**</li><li>Öppna filen **Info.plist** </li><li>Kontrollera värdet som är associerat med nyckeln **CFBundleIdentifier**</li></ol>Formatet för paket-ID är **com.contoso.appname**|
-|**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och appaket-ID i filen.|
-|**Redigera**|Du kan redigera namn, utgivare och appaket-ID för den valda appen.|
-|**Ta bort**|Tar bort den markerade appen från listan.|
+|**Rapportera inkompatibilitet när användare installerar apparna i listan**|Visar de Mac OS X-appar som användare inte tillåts att installera. Om användarna installerar någon av de här apparna rapporteras de i **Rapporter om ej kompatibla appar**.|
+|**Rapportera inkompatibilitet när användare installerar appar som inte är listade**|Visar de Mac OS X-appar som användare tillåts att installera. Om användarna installerar några andra appar rapporteras de i **Rapporter om ej kompatibla appar**.|
+|**Lägg till**|Lägg till en app i den markerade listan. Ange ett namn, eventuellt appens utgivare och paket-ID för appen. **Tips!** Hitta paket-ID:t för en app på en Mac-dator där appen är installerad:<ol><li>Öppna mappen där appen har installerats (till exempel **/Appar**).</li><li>Välj paketet *&lt;Appnamn&gt;***.app** och välj **Visa paketinnehåll**.</li><li>Öppna filen **Info.plist**.</li><li>Kontrollera värdet som är associerat med nyckeln **CFBundleIdentifier**.</li></ol>Formatet för paket-ID är **com.contoso.appname**.|
+|**Importera appar**|Importera en lista med appar som du har angett i en fil med kommaseparerade värden. I filen använder du det här formatet: appnamn, utgivare, appaket-ID.|
+|**Redigera**|Redigera namn, utgivare och appaket-ID för den valda appen.|
+|**Ta bort**|Ta bort den markerade appen från listan.|
 > [!TIP]
 > Mer information om Intune-rapporter finns i [Förstå Microsoft Intune-aktiviteter med hjälp av rapporter](understand-microsoft-intune-operations-by-using-reports.md).
 
@@ -69,19 +72,19 @@ I listan **Kompatibla &amp; inkompatibla appar för Mac OS X** aktiverar du **Ha
 ### Övervaka kompatibla och icke-kompatibla appar
 Använd **Rapporter om ej kompatibla appar** för att visa kompatibiliteten för angivna appar.
 
-#### Köra rapport
+#### Skapa en rapport
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Rapporter** &gt; **Rapporter om ej kompatibla appar**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Rapporter** &gt; **Rapporter om ej kompatibla appar**.
 
-2.  Välj de enhetsgrupper du vill kontrollera, om du vill söka efter kompatibla eller icke kompatibla appar och klicka sedan på **Visa rapport**.
+2.  Välj de enhetsgrupper du vill kontrollera, välj om du vill söka efter kompatibla appar, icke kompatibla appar eller båda och välj sedan **Visa rapport**.
 
 ## Anpassade principinställningar för Mac OS X i Microsoft Intune
-Använd Microsoft Intunes **Mac OS X anpassade konfigurationspolicy** för att distribuera inställningar till Mac OS X-enheter som du skapat med hjälp av [Apple konfigureringsverktyg](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12). Med detta verktyg kan du skapa många inställningar som styr driften av dessa enheter och exportera dem till en konfigurationsprofil. Du kan sedan importera denna konfigurationsprofil till en anpassad princip för Mac OS X i Intune och distribuera inställningarna för användare och enheter i organisationen.
+Använd Microsoft Intunes **anpassade konfigurationsprincip för Mac OS X** för att distribuera inställningar som du skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) till Mac OS X-enheter. Med detta verktyg kan du skapa många inställningar som styr driften av dessa enheter och exportera dem till en konfigurationsprofil. Du kan sedan importera denna konfigurationsprofil till en anpassad princip för Mac OS X i Intune och distribuera inställningarna för användare och enheter i organisationen.
 
-Den här funktionen är avsedd för att distribuera Mac OS X-inställningar som inte kan konfigureras med den allmänna konfigurationsprincipen för Mac OS X i Intune.
+Med den här funktionen kan du distribuera Mac OS X-inställningar som inte kan konfigureras med den allmänna konfigurationsprincipen för Mac OS X i Intune.
 
-### Krav
-Innan du börjar, måste du har installerat Apple Configurator och skapat en konfigurationsfil som innehåller de inställningar som du vill distribuera till användare eller enheter. Du kan hämta hem och lära dig om Apple Configurator från [Mac App-butiken](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
+### Förutsättningar
+Innan du börjar måste du ha installerat Apple Configurator och skapat en konfigurationsfil som innehåller de inställningar som du vill distribuera till användare eller enheter. Du kan ladda ned och lära dig om Apple Configurator från [Mac App Store](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12).
 
 > [!NOTE]
 > Intune rapporterar inte uppfyllande av individuella inställningar i en anpassad princip för Mac OS X. Dock rapporteras uppfyllande av principen som helhet.
@@ -99,8 +102,8 @@ Innan du börjar, måste du har installerat Apple Configurator och skapat en kon
 |Inställningsnamn|Information|
     |----------------|--------------------|
     |**Anpassat konfigurationsprofilsnamn (visas för användare)**|Ange ett namn för principen som den kommer att visas på enheten och i principrapporter för Intune.|
-    |**Konfigurationsprofilsfil**|Klicka på **Importera**, bläddra sedan till den konfigurationsprofilen som du skapat med hjälp av Apple Configurator. **Tips!** Se **Så här skapar du en fil för konfigurationsprofil** i det här avsnittet för hjälp med hur du skapar konfigurationsprofilen.|
-    |**Information om konfigurationsprofilen**|Visar XML-koden för den konfigurationsprofil du har importerat.|
+    |**Konfigurationsprofilsfil**|Välj **Importera** och bläddra sedan till den konfigurationsprofil som du skapat med hjälp av Apple Configurator. **Tips!** Se "Skapa en konfigurationsprofilfil" i det här avsnittet för hjälp med hur du skapar konfigurationsprofilen.|
+    |**Information om konfigurationsprofilen**|Visa XML-koden för den konfigurationsprofil du har importerat.|
 
 
 
@@ -112,15 +115,11 @@ Du kan skapa filen för konfigurationsprofil som används av den anpassade princ
 -   Redigera filen själv med lämpligt schema från [Nyckelreferens för Apple-konfigurationsprofil](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html).
 
 
-> [!IMPORTANT]
-> När en Mac OS X-enhet är i viloläge kan inte principer och profiler levereras eller inventeras. Därför kan det hända att Intune-konsolen tillfälligt visar statusen **Principinställningar med fel** tills enheten väcks ur viloläge nästa gång.
-
 ### Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO1-->
 
 

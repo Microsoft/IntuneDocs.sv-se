@@ -1,10 +1,10 @@
 ---
 title: "Begränsa e-poståtkomst till Dynamics CRM Online | Microsoft Intune"
-description: 
+description: "Skydda och styr åtkomsten till Dynamics CRM Online med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 06/16/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +12,9 @@ ms.technology:
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
-ms.sourcegitcommit: 89e522a99687fc9b6e82db9f721858d17afdce6a
-ms.openlocfilehash: 8f90f99d621d7edebcb7a4c67e0774da59098df7
+translationtype: Human Translation
+ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
+ms.openlocfilehash: 875da922b311b06fa8a1eb8ba7207108684825d5
 
 
 ---
@@ -55,10 +56,10 @@ Om en användare finns i båda grupperna, kommer de att vara befriade från poli
 [Skapa](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuera](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip för alla enheter som påverkas av principen. Detta motsvarar alla enheter som används av användarna i Målgrupper.
 
 > [!NOTE]
-> [!NOTE] Medan efterlevnadsprinciper distribueras till Microsoft Intune-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
+> Medan efterlevnadsprinciper distribueras till Microsoft Intune-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
 > [!IMPORTANT]
-> [!IMPORTANT] Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
+> Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
 
 När du är klar, fortsätt till Steg 3.
 ### Steg 3: Konfigurera Dynamics CRM-principen
@@ -96,6 +97,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO5-->
 
 

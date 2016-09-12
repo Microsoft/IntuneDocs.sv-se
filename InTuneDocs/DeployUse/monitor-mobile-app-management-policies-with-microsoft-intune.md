@@ -1,10 +1,10 @@
 ---
-title: "Övervaka hanteringsprinciper för mobilappar med Microsoft Intune | Microsoft Intune"
-description: 
+title: "Övervaka MAM-principer med Microsoft Intune | Microsoft Intune"
+description: "Se hur många användare som har principen och öka detaljnivån om du vill ha mer information."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 99b50bd040bbbdfa3ad7937d7703700526c9c4d5
+ms.sourcegitcommit: 644860abcd351d24f08d7a517a3a4b5f44824689
+ms.openlocfilehash: 1d22d26c1a1c52dda4f9b01658d22f8de8187f0f
 
 
 ---
@@ -49,6 +49,9 @@ Du kan söka efter en enskild användare och titta på efterlevnadsstatus för a
 
   **Inte incheckad:** Det innebär att principen har distribuerats till användaren, men att appen inte har använts i arbetskontexten sedan dess.
 
+>[!NOTE]
+> Om MAM-principen inte har distribuerats till den användare som du sökte efter visas ett meddelande om att inga apprinciper tillämpas för användaren.
+
 Visa rapporter för en användare genom att följa anvisningarna:
 
 **Steg 1:** Välj en användare genom att klicka på panelen Sammanfattning eller välja alternativet **APPRAPPORTERING AV ANVÄNDARE** på bladet **Inställningar** enligt nedan:
@@ -72,6 +75,6 @@ I den detaljerade vyn visas felmeddelandet, appen som användes när felet intr�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

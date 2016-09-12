@@ -9,7 +9,7 @@
 ### [Företagsportal](microsoft-intune-company-portal.md)
 ### [Integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)
 ### [Användning av nätverksbandbredd](network-bandwidth-use.md)
-### [Domännamn](domain-names-for-microsoft-intune.md)
+### [Anpassade domännamn](domain-names-for-microsoft-intune.md)
 
 ## [Snabbstartsguide för Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logga in i Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
@@ -23,11 +23,11 @@
 ### [Publicera konfigurationsuppgifter](post-configuration-tasks.md)
 
 ## [Välj hur du vill hantera enheter](choose-how-to-manage-devices.md)
-### [Funktioner för hantering av mobila enheter](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Windows-datorhanteringsfunktioner](windows-pc-management-capabilities-in-microsoft-intune.md)
+### [Funktioner för hantering av registrerade enheter](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Funktioner i Intune-klientprogrammet](windows-pc-management-capabilities-in-microsoft-intune.md)
 
 ## [Distributionsfaser för Intune-distributioner](rollout-phases-for-microsoft-intune-deployment.md)
-### [Projektets omfattning](project-scope.md)
+### [Projektomfång](project-scope.md)
 ### [Konceptbevis](proof-of-concept.md)
 ### [Pilot](pilot.md)
 ### [Företagsomfattande distribution](enterprise-rollout.md)
@@ -39,6 +39,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

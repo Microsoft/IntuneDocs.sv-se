@@ -1,10 +1,10 @@
 ---
 title: "Begränsa åtkomsten till SharePoint Online | Microsoft Intune"
-description: 
+description: "Skydda och styr åtkomsten till företagets data på SharePoint Online med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 06/16/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: f8fcb01629c68e9c04b0e0319b937178859877ec
+ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
+ms.openlocfilehash: ab765d181cb2eb9e3e6a9c79c597241c4fd5985f
 
 
 ---
@@ -26,6 +26,8 @@ Villkorlig åtkomst består av två komponenter:
 - Principen för villkorlig åtkomst där du anger de villkor som enheten måste uppfylla för att komma åt tjänsten.
 Mer information om hur villkorlig åtkomst fungerar finns i avsnittet [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
+Principerna för efterlevnad och villkorlig åtkomst distribueras till användaren. Alla enheter som användaren använder för att komma åt tjänsterna kontrolleras för att se att de följer principerna.
+
 När en användare försöker ansluta till en fil med en app som stöds, till exempel OneDrive på sin enhet, görs följande utvärdering:
 
 ![Diagram som visar beslutspunkterna som avgör om en enhet får åtkomst till SharePoint eller blockeras ](../media/ConditionalAccess8-6.png)
@@ -33,7 +35,7 @@ När en användare försöker ansluta till en fil med en app som stöds, till ex
 >[!IMPORTANT]
 >Villkorlig åtkomst för datorer och Windows 10 Mobile-enheter med appar som använder modern autentisering är inte tillgängligt för alla Intune-kunder för närvarande. Om du redan använder dessa funktioner behöver du inte göra något. Du kan fortsätta använda dem.
 
->Om du inte har skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar som använder modern autentisering och vill göra det, måste du skicka en begäran.  Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [Connect-webbplatsen](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Om du inte skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar med modern autentisering, men vill göra detta, måste du registrera dig för en allmän förhandsversion av Azure Active Directory som innehåller enhetsbaserad villkorlig åtkomst för Intune-hanterade enheter eller domänanslutna Windows-datorer. Läs [det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/) om du vill veta mer.
 
 **Innan** du konfigurerar en princip för villkorlig åtkomst för SharePoint Online måste du:
 - Ha en **SharePoint Online-prenumeration**, och användarna måste ha licens för SharePoint Online.
@@ -55,6 +57,10 @@ Om ett villkor inte är uppfyllt, kommer användaren att visas ett följande med
 
 -   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
 
+**Villkorlig åtkomst tillämpas på alla SharePoint-platser och extern delning är blockerad**
+
+>[!NOTE]
+>Om du aktiverar villkorlig åtkomst för SharePoint Online rekommenderar vi att inaktiverar domänen i listan enligt beskrivningen i [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
 ## Stöd för mobila enheter
 - iOS 7.1 och senare
 - Android 4.0 och senare, Samsung Knox Standard 4.0 eller senare
@@ -128,7 +134,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
         *   Windows-enheter måste registreras och vara kompatibla, domänanslutna med lokal Active Directory, eller båda
         * Plattformar som inte stöds, t.ex. Mac.  Appar som använder modern autentisering som kommer från dessa plattformar kommer dock fortfarande att blockeras.
         >[!TIP]
-        >Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [webbplatsen för Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+        >Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Det finns mer information om hur du kan få åtkomst till den här funktionen  [i det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Vissa plattformar**
 
@@ -183,6 +189,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

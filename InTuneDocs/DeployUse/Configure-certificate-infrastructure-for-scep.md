@@ -1,10 +1,10 @@
 ---
 title: "Konfigurera certifikatinfrastrukturen för SCEP | Microsoft Intune"
-description: 
+description: "Infrastruktur för att skapa och distribuera SCEP-certifikatprofiler."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 05/16/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ca06fa26127935e08f35006730dd367fb8f6669
-ms.openlocfilehash: 942bdc4e1629a9d7e16d0994f27dab4424670a4f
+ms.sourcegitcommit: 5b9d201200d2b18553778ba2234831854658c6c2
+ms.openlocfilehash: 1f8e692e1938822342fda399df3832d2749de7c3
 
 ---
 # Konfigurera certifikatinfrastruktur för SCEP
-Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna skapa och distribuera certifikatprofiler.
+Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna skapa och distribuera SCEP-certifikatprofiler.
 
 ### Lokal infrastruktur
 
@@ -44,6 +44,8 @@ I
 Tillåt port 443 från Internet till perimeternätverk från alla värdar/IP-adresser på Internet till NDES-servern.
 
 Tillåt alla portar och protokoll som behövs för åtkomst till domänen på den domänanslutna NDES-servern från perimeternätverket till det betrodda nätverket. NDES-servern måste ha åtkomst till certifikatservrar, DNS-servrar, Configuration Manager-servrar och domänkontrollanter.
+
+Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/en-us/library/dn584107.aspx) eller en proxy från en annan leverantör.
 
 
 ### <a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
@@ -347,6 +349,6 @@ Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfig
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

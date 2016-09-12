@@ -1,10 +1,10 @@
 ---
-title: Aktivera hantering av mobilprogram i appar med SDK | Microsoft Intune
+title: Aktivera hantering av mobilprogram (MAM) i appar med SDK | Microsoft Intune
 description: 
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: karthikaraman
+manager: angrobe
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 26b00081-7c05-4969-ace1-0585e44d5cd2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6d435c2c9773040d6870aea274d3879c00461457
-ms.openlocfilehash: 2bb9ac819b63ea47ebc890d23cf83ee127c8e994
+ms.sourcegitcommit: eec08a92ff38f55ca04e9c1822c041e8bd0273fd
+ms.openlocfilehash: 5c7f25b31288a112fbfb1744c061c4cc2eb73e49
 
 
 ---
@@ -39,7 +39,6 @@ En översikt över SDK finns på sidan [Översikt](/intune/develop/intune-app-sd
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
-title: "Begränsa åtkomsten för e-post till Exchange Online och nya Exchange Online Dedicated | Microsoft Intune"
-description: 
+title: "Begränsa e-poståtkomst till Exchange Online | Microsoft Intune"
+description: "Skydda och styr åtkomsten till företagets e-post på Exchange Online med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a445f06d6c2328f7689468ca4d68a969af1e825
-ms.openlocfilehash: 87663f2677a006e5db525f8897fea4bf05cb5912
+ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
+ms.openlocfilehash: 38273970b6bb6f576786e6a7a2aeaaa65ee07d37
 
 
 ---
@@ -29,7 +29,7 @@ Mer information om hur villkorlig åtkomst fungerar finns i avsnittet [Begränsa
 >[!IMPORTANT]
 >Villkorlig åtkomst för datorer och Windows 10 Mobile-enheter med appar som använder modern autentisering är inte tillgängligt för alla Intune-kunder för närvarande. Om du redan använder dessa funktioner behöver du inte göra något. Du kan fortsätta använda dem.
 
->Om du inte har skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar som använder modern autentisering och vill göra det, måste du skicka en begäran.  Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [webbplatsen för Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+>Om du inte skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar med modern autentisering, men vill göra detta, måste du registrera dig för en allmän förhandsversion av Azure Active Directory som innehåller enhetsbaserad villkorlig åtkomst för Intune-hanterade enheter eller domänanslutna Windows-datorer. Läs [det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/) om du vill veta mer.  
 
 **Innan** du konfigurerar villkorlig åtkomst måste du:
 
@@ -196,7 +196,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
         * Plattformar som inte stöds, t.ex. Mac OS.  Appar som använder modern autentisering som kommer från dessa plattformar kommer dock fortfarande att blockeras.
 
         >[!TIP]
-           Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Mer information om kända problem och hur du får åtkomst till den här funktionen finns på [webbplatsen för Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=761472).
+           Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Det finns mer information om hur du kan få åtkomst till den här funktionen [i det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Vissa plattformar**
 
@@ -260,6 +260,6 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

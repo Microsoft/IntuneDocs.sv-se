@@ -1,10 +1,10 @@
 ---
 title: "Vanliga hanteringsuppgifter för Windows-dator | Microsoft Intune"
-description: 
+description: "Läs mer om hur du hanterar datorer som kör Intune-klienten."
 keywords: 
-author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+author: NathBarn
+manager: angrobe
+ms.date: 08/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 530bf3234001946776593ae0257ea72a06c8612f
-ms.openlocfilehash: 222b9aac19993f184ff68800a00f8d9df8b36237
+ms.sourcegitcommit: 6ddb0fda0e818b09d274276076fd6310d29b99cb
+ms.openlocfilehash: 8ce6b10478927177e5d6d8de0677cf06bed00f08
 
 
 ---
 
 # Vanliga hanteringsuppgifter för Windows-dator med Microsoft Intune datorklient
-Studera det här avsnittet om du vill veta mer om hur du hanterar datorer som kör Intune-klienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Läs mer om hur du hanterar datorer som kör Intune-klienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 ## Använd principer för att förenkla datorhantering
@@ -36,7 +36,7 @@ Med Microsoft Intune Center kan användarna:
 
 -   Hantera Microsoft Intune Endpoint Protection.
 
-<!--- -   Request remote assistance.--->
+-  Begära fjärrhjälp.
 
 Microsoft Intune Center är installerat på alla hanterade datorer. Du kan konfigurera följande inställningar i en Intune-princip och dessa visas för användaren i Microsoft Intune Center:
 
@@ -160,60 +160,57 @@ Innan du kan distribuera programvara till en användare måste du koppla använd
 > [!TIP]
 > Om du vill begränsa slutanvändarnas möjlighet att länka sig själva till datorer aktiverar du alternativet **Begränsa användarnas möjlighet att länka sig själva till datorer** i principen **Agentinställningar för Microsoft Intune**.
 
-<!--- ## Request and provide remote assistance to Windows PCs that use the Intune client software
+## Begär och ge fjärrhjälp till Windows-datorer som använder Intune-klientprogrammet
 
-> [!IMPORTANT]
-> You might not see the options to configure TeamViewer integration for remote assistance in the Intune admin console. This capability is not currently available to all customers, but will be rolling our more widely soon.
-     
-
-Microsoft Intune can use the [TeamViewer](https://www.teamviewer.com) software to let users of PCs that run the Intune client software get remote assistance help from you. When a user requests help from the Microsoft Intune Center, you are informed by an alert, can accept the request, and then provide assistance.
-This functionality replaces the existing Windows Remote Assistance functionality in Intune.
+Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran så att användare av datorer som kör Intune-klientprogrammet kan få fjärrhjälp från dig. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp.
+Den här funktionen ersätter den befintliga Windows-fjärrhjälpsfunktionen i Intune.
 
 
-### Before you start
+### Innan du börjar
 
-Before you can begin to establish and respond to remote assistance requests, you must ensure the following prerequisites are in place:
+Innan du börjar upprätta och svara på förfrågningar om fjärrhjälp måste du kontrollera att följande krav är uppfyllda:
 
-- You must have [signed up for a TeamViewer account](https://login.teamviewer.com/LogOn#register) to log into the TeamViewer website.
-- Windows PCs that you want to administer must be [managed by the Windows PC client](manage-windows-pcs-with-microsoft-intune.md)
-- All Windows PC operating systems supported by Intune can be administered.
+- Du måste ha [registrerat ett TeamViewer-konto](https://login.teamviewer.com/LogOn#register) om du vill kunna logga in på TeamViewer-webbplatsen.
+- Windows-datorer som du vill administrera måste [hanteras av Windows-datorklienten](manage-windows-pcs-with-microsoft-intune.md)
+- Alla Windows-datoroperativsystem som stöds av Intune kan administreras.
 
-### Configure the TeamViewer Connector
+### Konfigurera TeamViewer-anslutningen
 
-1. In the [Microsoft Intune administration console](https://manage.microsoft.com), choose **Admin**.
-2. In the **Admin** workspace, choose **TeamViewer**.
-3. On the **TeamViewer** page, under **TeamViewer Connector**, choose **Enable**.
-4. In the **Enable TeamViewer** dialog box, view, then **Accept** the license terms. If you don't already own a TeamViewer license, choose **Purchase a TeamViewer license**.
-5. After the TeamViewer browser window opens, sign into the site with your TeamViewer credentials.
-6. On the TeamViewer site, read, then accept the options to allow Intune to connect with TeamViewer.
-7. In the Intune console, verify that the **TeamViewer Connector** item shows as **Enabled**.
-
-
-### Open a remote assistance request (end user)
-
-1. On a client Windows PC, open the **Microsoft Intune Center**.
-2. Under **Remote Assistance**, choose **Request Remote Assistance**.
-3. After you approve the request (see below), TeamViewer opens on the client. The user must accept any messages indicating that the web browser is trying to open the TeamViewer application.
-4. The user sees a message asking if you can control their PC. They must accept this message to continue.
-5. During the remote assistance session, the user sees a window that shows them you are connected. If they close this window, the remote session ends.
-
-### Respond to a remote assistance request
-
-1. When a user submits a remote assistance request, you can view it in the **Alerts** workspace, under **Monitoring** > **Remote Assistance**. For example:
-> ![Screenshot of a remote assistance request](./media/team-viewer.png)
-
-<br>If a request goes unanswered for more than 4 hours, it is removed.
-2. To accept the request, choose **Approve request and launch Remote Assistance**.
-3. In the **A New Remote Assistance Request is Pending** dialog box, choose **Accept the remote assistance request**. If it's not already installed, TeamViewer will install any necessary apps on your computer.
-4. TeamViewer then notifies the end user that you want to take control of their PC. After the user has accepted the request, the TeamViewer windows opens, and you can control the PC. 
- 
-While in a remote assistance session, you can use all available TeamViewer commands to control the remote PC. For help with these commands, download the [Manual for remote control](http://www.teamviewer.com/en/support/documents/) from the TeamViewer website.
-
-### Close the remote assistance session
-
-From the **Actions** menu of the **TeamViewer** window, choose **End Session**.--->
+1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin**.
+2. På arbetsytan **Admin** väljer du **TeamViewer**.
+3. Välj **Aktivera** på sidan **TeamViewer** under **TeamViewer-anslutningsprogram**.
+4. I dialogrutan **Aktivera TeamViewer** läser du igenom licensvillkoren och väljer **Godkänn**. Om du inte redan har en licens för TeamViewer, väljer du **Köp en licens för TeamViewer**.
+5. När webbläsarfönstret till TeamViewer öppnas loggar du in på webbplatsen med autentiseringsuppgifterna till TeamViewer.
+6. På TeamViewer-webbplatsen läser du igenom och godkänner alternativen för att tillåta att Intune ansluter till TeamViewer.
+7. I Intune-konsolen kontrollerar du att objektet **TeamViewer-anslutningsprogram** visas som **Aktiverat**.
 
 
-<!--HONumber=Jun16_HO4-->
+### Öppna en begäran om fjärrhjälp (slutanvändare)
+
+1. Öppna **Microsoft Intune Center** på en Windows-klientdator.
+2. Välj **Begär fjärrhjälp** under **Fjärrhjälp**.
+3. När du har godkänt förfrågan (se nedan) öppnas TeamViewer på klienten. Användaren måste godkänna alla meddelanden som indikerar att webbläsaren försöker öppna TeamViewer-programmet.
+4. Användaren ser ett meddelande med en förfrågan om du får styra personens dator. Användaren måste godkänna meddelandet för att kunna fortsätta.
+5. Under fjärrhjälpssessionen ser användaren ett fönster som visar att du är ansluten. Om användaren stänger fönstret avslutas fjärrsessionen.
+
+### Svara på en begäran om fjärrhjälp
+
+1. När en användare skickar en begäran om fjärrhjälp kan du visa den på arbetsytan **Aviseringar** under **Övervakning** > **Fjärrhjälp**. Exempel:
+> ![Skärmbild av en begäran om fjärrhjälp](./media/team-viewer.png)
+
+<br>Om en begäran inte besvaras på fyra timmar tas den bort.
+2. Välj om du vill acceptera begäran väljer du **Godkänn begäran och starta Fjärrhjälp**.
+3. I dialogrutan **En ny begäran om fjärrhjälp väntar** väljer du **Godkänn begäran om fjärrhjälp**. Om det inte redan är installerat installerar TeamViewer alla nödvändiga appar på datorn.
+4. TeamViewer meddelar därefter slutanvändaren att du vill ta kontroll över datorn. När användaren har accepterat begäran öppnas TeamViewer-fönstren och du kan styra datorn.
+
+Du kan använda alla tillgängliga TeamViewer-kommandon i en fjärrhjälpssession när du styr en fjärransluten dator. Om du vill få hjälp med de här kommandona hämtar det [Handbok för fjärrstyrning](http://www.teamviewer.com/en/support/documents/) från TeamViewer-webbplatsen.
+
+### Stänga fjärrhjälpssessionen
+
+Från menyn **Åtgärder** i fönstret **TeamViewer** väljer du **Avsluta sessionen**.
+
+
+
+<!--HONumber=Aug16_HO1-->
 
 

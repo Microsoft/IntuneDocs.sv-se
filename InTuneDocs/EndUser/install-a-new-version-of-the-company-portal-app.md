@@ -3,33 +3,40 @@ title: "Installera en ny version av företagsportalappen | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 05/30/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: 
 ms.technology: 
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
+ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: 29d409f272800e0c5ccaf71494b5e98d1edaae4e
+ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
+ms.openlocfilehash: fb347fac40d201f94d1b8847ba72b0bd31dd6e23
 
 
 ---
 
 # Installera en ny version av företagsportalappen
 
-Om din version av företagsportalen inte längre stöds eller om det finns en nyare version av företagsportalen tillgänglig, kan du uppdatera enheten på följande sätt.
+Om din version av företagsportalen inte längre stöds, eller om det finns en nyare version av företagsportalen tillgänglig, måste du uppdatera företagsportalappen till en senare version. Följ anvisningarna nedan för din typ av enhet.
 
-## Så här uppdaterar du en Android-enhet
+## Uppdatera Intune-företagsportalappen på en Android-enhet
 
 Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Det visas inget meddelande i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
 
-## Uppdatera din iOS-enhet
+## Uppdatera Intune-företagsportalappen på en iOS-enhet
 
-Apple AppStore aviserar när en ny version av företagsportalen är tillgänglig. Uppdatera enheten genom att följa anvisningarna i aviseringen.
+När en ny version är tillgänglig visas alternativet Uppdatera vid appen i listan över installerade appar.  
 
-## Uppdatera din Windows-enhet
+Så här uppdaterar du företagsportalappen:
+
+1. Öppna App Store och sök efter **intune**.
+
+2. När du har hittat appen trycker du på **Uppdatera** till höger om appnamnet.
+
+## Uppdatera Intune-företagsportalappen på en Windows-enhet
 
 1.  Navigera till Windows Store och sök efter **företagsportalen**.
 
@@ -41,15 +48,10 @@ Apple AppStore aviserar när en ny version av företagsportalen är tillgänglig
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-Information om andra uppgifter som du kan utföra med din enhet får du via den länk som matchar den typ av enhet som du har:
-
-- [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)</br>
-- [Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)</br>
-- [Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

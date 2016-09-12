@@ -1,10 +1,10 @@
 ---
-title: "Distribuera och övervaka efterlevnadsprincipen i Microsoft Intune | Microsoft Intune"
-description: 
+title: "Distribuera och övervaka en enhetsefterlevnadsprincip | Microsoft Intune"
+description: "Följ instruktionerna i det här avsnittet om du vill distribuera och övervaka en enhetsefterlevnadsprincip."
 keywords: 
 author: karthikaraman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +13,26 @@ ms.assetid: d8f246d4-0d86-4c8b-a1bf-9977985506d8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ded7bd6c971a9448ad6e6492ebc5e42dfcb5d76e
-ms.openlocfilehash: 52da5cf6d14a5fc3ff3db6bdb07823d3bf373466
+ms.sourcegitcommit: 711e650086d7528f26d9ba7b447ecb0185faff23
+ms.openlocfilehash: 8658df1fb9932fb2cab984a13557aad684569df5
 
 
 ---
 
 # Distribuera och övervaka en enhetsefterlevnadsprincip i Microsoft Intune
 ## Distribuera en efterlevnadsprincip
-Distribuera efterlevnadsprincipen som du har [skapat](create-a-device-compliance-policy-in-microsoft-intune.md) till en eller flera grupper av användare eller enheter i din organisation.
+Distribuera efterlevnadsprincipen som du har [skapat](create-a-device-compliance-policy-in-microsoft-intune.md) till en eller flera grupper av användare i din organisation. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven.
 
-1.  På arbetsytan **Princip** markerar den princip som du vill distribuera och väljer sedan **Hantera distribution**.
+1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 ![Skärmbild av sidan efterlevnadsprincip som visar menyalternativet Hantera distribution överst](./media/intune-sa-3c-deploy-compliance-policy2.png)
 
 2.  I dialogrutan **Hantera distribution** väljer du en eller flera grupper dit du vill distribuera principen och väljer sedan **Lägg till > OK**.
-![Skärmbild av dialogrutan för att hantera distribution](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png) Du kan distribuera en efterlevnadsprincip till användare och/eller enheter. Använd Active Directory-grupper som du redan har skapat och synkroniserat till Intune, eller skapa dessa grupper manuellt i Intune-konsolen. Mer information om att distribuera principer finns i [distribuera en konfigurationsprincip](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+![Skärmbild av dialogrutan för att hantera distribution](./media/intune-sa-3d-deploy-compliance-policy3-Manage.png) Du kan distribuera en efterlevnadsprincip till användare. Använd Active Directory-grupper som du redan har skapat och synkroniserat till Intune, eller skapa dessa grupper manuellt i Intune-konsolen. Mer information om att distribuera principer finns i [distribuera en konfigurationsprincip](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 Använd statussammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** för att identifiera problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan **Instrumentpanel** .
 
-> [!IMPORTANT]Om du inte har implementerat en villkorspolicy och därefter aktiverat en Exchange villkorlig åtkomstpolicy kommer alla målriktade enheter att ges tillgång.
+> [!IMPORTANT]
+> Om du inte har implementerat en villkorspolicy och därefter aktiverat en Exchange villkorlig åtkomstpolicy kommer alla målriktade enheter att ges tillgång.
 
 ## Så här löser du Intunes principkonflikter
 Principkonflikter kan uppstå när flera Intune-principer används på en enhet. Om principinställningarna överlappar varandra löser Intune eventuella konflikter med följande regler:
@@ -71,6 +72,6 @@ Du kan nu använda efterlevnadsprincipen med principer för villkorlig åtkomst 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

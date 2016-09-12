@@ -1,10 +1,10 @@
 ---
 title: Konfigurera certifikatprofiler | Microsoft Intune
-description: 
+description: "Läs om hur du skapar en certifikatprofil för Intune."
 keywords: 
 author: nbigman
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee6b3607688cb02be7316b83e10424dfbea9746b
-ms.openlocfilehash: 8343abe8861468bbba27272aa1f3569390cb826b
+ms.sourcegitcommit: 6a7f2eeb0114f525890d1dcb61344d60a19943d1
+ms.openlocfilehash: 14419092edc77b2229cf980a74e81048941a2c28
 
 
 ---
@@ -54,7 +54,18 @@ Du måste skapa en **betrodd certifikatprofil** innan du kan skapa en SCEP- elle
 
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Ange den information som efterfrågas för att konfigurera inställningar för betrodda certifikatprofiler för Android, iOS, Mac OS X, Windows 8.1 eller Windows Phone 8.1. I inställningen **Certifikatfil** importerar du certifikatet för betrodd rotcertifikatutfärdare (**.cer**) som du exporterade från den utfärdande certifikatutfärdaren. Inställningen **Målarkiv** gäller endast för enheter som kör Windows 8.1 och senare, och endast om enheten har flera certifikatarkiv.
+3.  Ange den information som efterfrågas för att konfigurera inställningar för betrodda certifikatprofiler för Android, iOS, Mac OS X, Windows 8.1 eller Windows Phone 8.1. 
+
+    - I inställningen **Certifikatfil** importerar du certifikatet för betrodd rotcertifikatutfärdare (**.cer**) som du exporterade från den utfärdande certifikatutfärdaren. Inställningen **Målarkiv** gäller endast för enheter som kör Windows 8.1 och senare, och endast om enheten har flera certifikatarkiv.
+
+    
+    - Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare.  
+
+        De två variabler som stöds för närvarande för det anpassade formatet är **Nätverksnamn (cn)** och **E-post (e)**. Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:  
+
+        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
+
+        I det här exemplet har administratören skapat ett format som utöver variablerna cn och e använder strängar för organisationsenhet, organisation, plats, delstat och land. En lista med strängar som stöds finns i avsnittet om [funktionen CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).  
 
 
 4.  När du är klar klickar du på **Spara profilen**.
@@ -83,6 +94,15 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Följ anvisningarna på profilsidan för att konfigurera inställningarna för SCEP-certifikatet.
+    > [!NOTE]
+    > 
+    > Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare.
+    > 
+    >  De två variabler som stöds för närvarande för det anpassade formatet är Nätverksnamn (cn) och E-post (e). Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:
+    
+    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+    
+    >    I det här exemplet har administratören skapat ett format som utöver variablerna *cn* och *e* använder strängar för organisationsenhet, organisation, plats, delstat och land. En lista med strängar som stöds finns i avsnittet om [funktionen CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx).
 
 4.  När du är klar klickar du på **Spara profilen**.
 
@@ -145,6 +165,6 @@ Du kan nu använda certifikat för att skydda e-post-, Wi-Fi- och VPN-profiler:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,20 +1,20 @@
 ---
-title: Installera Windows PC-klienten med Microsoft Intune | Microsoft Intune
-description: 
+title: Installera datorklientprogrammet | Microsoft Intune
+description: "Använd den här guiden för att låta dina Windows-datorer hanteras av Microsoft Intune-klientprogrammet."
 keywords: 
 author: NathBarn
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: arob98
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
-ms.reviewer: jeffgilb
+ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1bdcfa71aab0918fba1f59bd0782fc63eef6994e
-ms.openlocfilehash: 723bef398338946e085e9d04d57a85b433ebc1c8
+ms.sourcegitcommit: 2c162e2a885887d0aa69da2a4cec55c7737bccd1
+ms.openlocfilehash: 7e16d0057b91eece7a5aa92a0ba495eaf159caae
 
 
 ---
@@ -35,8 +35,6 @@ Använd sedan en eller flera av följande metoder för att installera klienten:
 -   [Så här hämtar och distribuerar du klientprogrammet](#to-manually-deploy-the-client-software)
 
 -   [Så här distribuerar du klientprogrammet automatiskt med hjälp av en grupprincip](#to-automatically-deploy-the-client-software-by-using-group-policy)
-
--   [Hur användare kan registrera sina datorer själva](#how-users-can-self-enroll-their-computers)
 
 -   [Installera Microsoft Intune-klientprogramvaran som en del av en avbildning](#install-the-microsoft-intune-client-software-as-part-of-an-image)
 
@@ -81,28 +79,6 @@ Om du inte längre behöver hantera en dator med Intune, kan du inaktivera dator
 3.  Använd grupprinciper för att distribuera programvaran till datorer i nätverket.
 
     Mer information om hur du använder grupprinciper för att automatiskt distribuera programvara finns i dokumentationen för Windows Server.
-
-### Hur användare kan registrera sina datorer själva
-Användare kan självregistrera sina datorer via företagsportalen i Intune. Varje registrerad dator länkas till det användarkonto som användes för att installera klientprogramvaran.
-
-> [!NOTE]
-> -   Användaren måste vara administratör på datorn för att installera klientprogramvaran.
-> -   Självregistrering kräver att Internet Explorer är installerat på klientdatorn.
-> -   Varje gång en användare själv registrerar en dator, används en Intune-licens.
-> -   Du måste använda ett arbets- eller skolkonto för att själv registrera en dator. Du kan inte själv registrera en dator med hjälp av ett Microsoft-konto.
-> -   Om klientprogramvaran redan är installerad på en dator visas ett felmeddelande till slutanvändaren.
-
-### Så här registrerar du själv en dator (information för slutanvändare)
-
-1.  Logga in på företagsportalen från den dator som du vill registrera.
-
-2.  Klicka på **Lägg till enhet**.
-
-3.  Klicka på **Hämta programvara** och klicka sedan på **Kör**.
-
-4.  Klicka på **Nästa** för att starta Intune-installationsguiden.
-
-5.  När guiden är klar klickar du på **Slutför**.
 
 ### Installera Microsoft Intune-klientprogramvaran som en del av en avbildning
 Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som bas:
@@ -159,9 +135,10 @@ Använd en av följande procedurer som hjälper dig att övervaka och kontroller
 
 ### Se även
 [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
+[Felsöka klientkonfiguration](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

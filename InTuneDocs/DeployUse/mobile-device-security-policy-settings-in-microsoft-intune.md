@@ -1,29 +1,30 @@
 ---
 title: "Säkerhetsprincipinställningar för mobila enheter | Microsoft Intune"
-description: 
+description: "Använd Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 42e21b802fb605c98f688485c3b77703b3950e94
-ms.openlocfilehash: 8b7dac0bef8505567a9d0485fe6e952a3f6aa305
+ms.sourcegitcommit: 388426657c5fa96289f5e14a85e8c299e4b50037
+ms.openlocfilehash: ac19128499f078b4fe7d16713f18c78b248d38db
+
 
 
 ---
 
 # Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune
 > [!IMPORTANT]
-> Microsoft Intune har nu separata konfigurationsprinciper för respektive enhetsplattform, och dessa principer innehåller de senaste uppdaterade inställningar som du kan använda. Du kan fortsätta att använda den mobila enhetens säkerhetsprincip och alla befintliga distributioner kommer att fungera. Du bör planera att migrera till de nya konfigurationaprinciperna så snart som möjligt eftersom den mobila enhetens säkerhetsprincip tas bort i framtiden.
+> I Microsoft Intune finns nu separata konfigurationsprinciper för varje enhetsplattform. Dessa principer innehåller de mest aktuella inställningarna som du kan använda. Du kan fortsätta att använda den mobila enhetens säkerhetsprincip. Alla befintliga distributioner kommer att fungera. Du bör planera att migrera till de nya konfigurationsprinciperna så snart som möjligt eftersom den mobila enhetens säkerhetsprincip kommer att tas bort i framtiden.
 
-Använd säkerhetsprinciper för mobila enheter i Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen. De här inställningarna kan användas för att kontrollera funktioner och säkerheten på dina enheter.
+Du kan använda säkerhetsprinciper för mobila enheter i Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen. De här inställningarna används för att kontrollera funktioner och säkerheten på dina enheter.
 
 Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följande enhetstyper:
 
@@ -45,10 +46,10 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Kräv ett lösenord för att låsa upp mobila enheter**|Nej|Nej|Ja|Ja|Ja|
-|**Lösenordstyp krävs**<br /><br />(specificerar den typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt)|Ja|Ja|Ja|Ja|Nej|
-|**Krävd lösenordstyp – minsta antal teckenuppsättningar**<br /><br />Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. Den här inställningen anger hur många olika teckenuppsättningar som måste inkluderas i lösenordet. För iOS-enheter specificerar detta dock det antal symboltecken som måste inkluderas i lösenordet.|Ja|Ja|Ja|Ja|Nej|
+|**Lösenordstyp krävs**<br /><br />Den här inställningen anger vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.|Ja|Ja|Ja|Ja|Nej|
+|**Krävd lösenordstyp – minsta antal teckenuppsättningar**<br /><br />Det finns fyra teckenuppsättningar: gemener, versaler, siffror och symboler. Den här inställningen anger hur många olika teckenuppsättningar som lösenordet måste innehålla. För iOS-enheter specificerar detta dock det antal symboltecken som måste inkluderas i lösenordet.|Ja|Ja|Ja|Ja|Nej|
 |**Minsta längd på lösenord**|Ja|Ja|Ja|Ja|Ja|
-|**Tillåt enkla lösenord**<br /><br />Exempel på enkla lösernord är "0000" och "1234"|Nej|Nej|Ja|Ja|Nej|
+|**Tillåt enkla lösenord**<br /><br />Exempel på enkla lösenord är "0000" och "1234".|Nej|Nej|Ja|Ja|Nej|
 |**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Ja|Ja|Ja|Ja|Ja|
 |**Minuter av inaktivitet innan skärmen stängs av**<sup>1</sup>|Ja|Ja|Ja|Ja|Ja|
 |**Lösenordets giltighetstid (i dagar)**|Ja|Ja|Ja|Ja|Ja|
@@ -58,17 +59,17 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 |**Tillåt bildlösenord och PIN**|Ja|Ja|Nej|Nej|Nej|
 |**Antal minuters inaktivitet innan lösenord krävs**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt fingeravtrycksupplåsning**|Nej|Nej|Nej|iOS 7 och senare|Nej|
-När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
+<sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
-När du ställer in en princip för lösenordslängd för enheter som kör Windows RT tvingas användare att återställa sina lösenord, även om deras aktuella lösenord uppfyller principkraven.
+Om du distribuerar en princip för lösenordslängd för enheter som kör Windows RT tvingas användarna att återställa sina lösenord, även om deras aktuella lösenord uppfyller principkraven.
 
 ## Krypteringsinställningar
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Kräv kryptering på den mobila enheten**<sup>1</sup><br /><br />För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
-|**Kräv kryptering på minneskort**<br /><br />Gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas (appar och associerade data krypteras automatiskt)|saknas|Ja|
-Ytterligare information för enheter som kör Windows 8.1
+|**Kräv kryptering på minneskort**<br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas <br />Appar och associerade data krypteras automatiskt.|saknas|Ja|
+<sup>1</sup>Här finns ytterligare information för enheter som kör Windows 8.1:
 
 -   Om du vill framtvinga kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](http://support.microsoft.com/kb/3013816) på varje enhet.
 
@@ -90,7 +91,7 @@ Ytterligare information för enheter som kör Windows 8.1
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Kräver automatiska uppdateringar**|Ja|Nej|Nej|Nej|Nej|
-|**Kräver automatiska uppdateringar – Minimumklassificering för uppdateringar som ska installeras automatiskt**<br /><br />Välj den klassificering av uppdateringar som ska installeras automatiskt:<br /><br />**Viktiga** – Installerar alla uppdateringar som klassificeras som viktiga.<br /><br />**Rekommenderade** – Installerar alla uppdateringar som klassificeras som viktiga eller rekommenderade.|Ja|Nej|Nej|Nej|Nej|
+|**Kräver automatiska uppdateringar – Minimumklassificering för uppdateringar som ska installeras automatiskt**<br /><br />Välj den klassificering av uppdateringar som ska installeras automatiskt:<br /><br />- **Viktiga**. Installerar alla uppdateringar som klassificeras som viktiga.<br /><br />- **Rekommenderade**. Installerar alla uppdateringar som klassificeras som viktiga eller rekommenderade.|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt skärmbild**|Nej|Nej|Endast Windows Phone 8.1|Ja|Ja (enbart Samsung KNOX)|
 |**Tillåt Kontrollcenter på låsskärm**|Nej|Nej|Nej|iOS 7 och senare|Nej|
 |**Tillåt notisvy på låsskärm**|Nej|Nej|Nej|iOS 7 och senare|Nej|
@@ -110,7 +111,7 @@ Ytterligare information för enheter som kör Windows 8.1
 |**Tillåt dokumentsynkronisering till iCloud**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt bildströmssynkronisering till iCloud**|Nej|Nej|Nej|Ja|Nej|
 |**Kräv krypterad säkerhetskopiering**|Nej|Nej|Nej|Ja|Nej|
-|**URL till arbetsmappar**<br /><br />(ställer in arbetsmappens URL för att låta dokument synkroniseras mellan enheter)|Ja|Nej|Nej|Nej|Nej|
+|**URL till arbetsmappar**<br /><br />Den här inställningen anger arbetsmappens URL så att dokument kan synkroniseras mellan enheter.|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt Google säkerhetskopiering**|Nej|Nej|Nej|Nej|Ja (enbart Samsung KNOX)|
 
 ## Molninställningar – konton och synkronisering
@@ -125,8 +126,8 @@ Ytterligare information för enheter som kör Windows 8.1
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt att användare hämtar bifogade filer i e-post**<sup>1</sup>|saknas|saknas|saknas|saknas|saknas|
-|**Synkroniseringsperiod för e-post** Gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
-|**Tillåt att mobila enheter som inte har fullständigt stöd för dessa inställningar synkroniseras med Exchange (Exchange ActiveSync)** Gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
+|**E-postsynkroniseringsperiod** <br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
+|**Tillåt mobila enheter som inte helt stöder dessa inställningar att synkroniseras med Exchange (Exchange ActiveSync)** <br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
 |**Gör Microsoft-kontot valfritt i Windows Mail-programmet**|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt anpassade e-postkonton**|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
 
@@ -141,7 +142,7 @@ Ytterligare information för enheter som kör Windows 8.1
 |**Tillåt insticksprogram**|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt active scripting**|Ja|Nej|Nej|Ja|Ja (enbart Samsung KNOX)|
 |**Tillåt bedrägerivarning**|Ja|Nej|Nej|Ja|Nej|
-|**Tillåt intranätsplats för enstaka ord**<br /><br />(tillåter användning av enstaka ord för att rikta Internet Explorer till en webbplats, t.ex. Bing)|Ja|Nej|Nej|Nej|Nej|
+|**Tillåt intranätsplats för enstaka ord**<br /><br />(Med den här inställningen tillåts användning av ett enstaka ord för att dirigera Internet Explorer till en webbplats, t.ex. Bing.)|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt automatisk identifiering av intranätsnätverk**|Ja|Nej|Nej|Nej|Nej|
 |**Säkerhetsnivå för Internet**|Ja|Nej|Nej|Nej|Nej|
 |**Säkerhetsnivå för intranät**|Ja|Nej|Nej|Nej|Nej|
@@ -180,11 +181,11 @@ Ytterligare information för enheter som kör Windows 8.1
 |**Tillåt Wi-Fi**|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
 |**Tillåt Wi-Fi -delning**|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
 |**Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter**|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
-|**Tillåt rapportering av trådlösa surfpunkter**<br /><br />(skicka information om Wi-Fi-anslutningar för att lättare upptäcka närliggande anslutningar)|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
-|**Tillåt geolokalisering**<br /><br />(tillåter enheten att använda platsinformation)|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
-|**Tillåt NFC**<br /><br />(tillåter åtgärder som använder närfältskommunikation)|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
+|**Tillåt rapportering av trådlösa surfpunkter**<br /><br />Den här inställningen skickar information om Wi-Fi-anslutningar för att lättare upptäcka närliggande anslutningar.|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
+|**Tillåt geolokalisering**<br /><br />Med den här inställningen tillåts att enheten använder platsinformation.|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
+|**Tillåt NFC**<br /><br />Med den här inställningen tillåts åtgärder som använder närfältskommunikation.|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
 |**Tillåt Bluetooth**|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (enbart Samsung KNOX)|
-|**Tillåt kraftavstängning**<br>Om den är inaktiverad fungerar inte inställningen **Antal inloggningsförsök innan enheten rensas** för Samsung KNOX-enheter.|Nej|Nej|Nej|Nej|Ja (enbart Samsung KNOX)|
+|**Tillåt kraftavstängning**<br>Om du inaktiverar den här inställningen så fungerar inte inställningen **Antal tillåtna upprepade felinloggningar innan enheten rensas** för Samsung KNOX-enheter.|Nej|Nej|Nej|Nej|Ja (enbart Samsung KNOX)|
 
 ## Enhetskapacitetsinställningar - mobil
 
@@ -211,7 +212,6 @@ Ytterligare information för enheter som kör Windows 8.1
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

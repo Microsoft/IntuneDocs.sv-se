@@ -1,10 +1,10 @@
 ---
 title: Registrera mobila enheter och installera en app | Microsoft Intune
-description: 
+description: "Beskriver hur du registrerar mobila enheter och installerar en app på en enhet som registrerats i Intune"
 keywords: 
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+author: barlanmsft
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6cb729533107d511fa0cc863ec6ab842e7624982
-ms.openlocfilehash: 78cf5472a6069e09b5072253635066d95094a89e
+ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
+ms.openlocfilehash: 182601f7e4a4bd38c70f7961188eb4af593f6107
 
 
 ---
@@ -56,7 +56,7 @@ Läs mer om hantering av mobila enheter med hjälp av [!INCLUDE[wit_nextref](../
 
 
 ### Nästa steg
-Grattis! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu när den första konfigurationen är klar kan du välja att aktivera ytterligare MDM-funktioner.
+Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu när den första konfigurationen är klar kan du välja att aktivera ytterligare MDM-funktioner.
 
 >[!div class="step-by-step"]
 
@@ -64,6 +64,6 @@ Grattis! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

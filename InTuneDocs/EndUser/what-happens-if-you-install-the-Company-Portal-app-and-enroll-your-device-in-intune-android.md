@@ -1,26 +1,27 @@
 ---
-title: "Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune? | Microsoft Intune"
+title: "Vad händer om du installerar företagsportalappen och registrerar din Android-enhet i Intune? Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 05/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d22f5aea-7be4-419b-b51b-a522ca037b69
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: e2f5849a63dceabb42b910b50f0257bc823a251a
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: df5cf2d5a78ccf58ba5920ad1856675538794874
 
 
 ---
 
 
-# Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?
+# Vad händer om du installerar företagsportalappen och registrerar din Android-enhet i Intune?
 
 När du installerar företagsportalappen och registrerar en Android-enhet i Intune kan du använda företagsportalappen för att:
 
@@ -54,12 +55,14 @@ När du registrerar en Android-enhet ger du IT-administratören tillstånd att h
 
     -   Skicka eventuella uppdateringar av förteckningar över företagsappar (dessa uppdateringar innehåller inte någon personlig information).
 
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+
 
 ### Se även
 [Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 

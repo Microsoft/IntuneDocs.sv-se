@@ -1,27 +1,27 @@
 ---
-title: "Principreferens för Microsoft Intune | Microsoft Intune"
-description: 
+title: "Referens för konfigurationsprinciper | Microsoft Intune"
+description: "Använd informationen i det här avsnittet för att avgöra vilken Microsoft Intune-princip som du behöver använda för att hantera dina enheter."
 keywords: 
 author: robstackmsft
-manager: jeffgilb
-ms.date: 04/28/2016
+manager: angrobe
+ms.date: 07/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
-ms.reviewer: jeffgilb
+ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 779127bfd39145010f0d9b6609286aaf4dedfdc8
-ms.openlocfilehash: 3d9e03a3c89af72caeaa9c9c47426f331adb0fca
+ms.sourcegitcommit: 6716a3d1fb53dc3de0189f637d5664d0a2023d05
+ms.openlocfilehash: 50bfa96a334f2253550e1344179dc99b8ac68817
 
 
 ---
 
 # Principreferens för Microsoft Intune
 
-Använd informationen i det här avsnittet för att avgöra vilken Microsoft Intune-princip som du behöver använda för att hantera dina enheter.
+Informationen i det här avsnittet hjälper dig att avgöra vilken Microsoft Intune-konfigurationsprincip som du behöver för att hantera dina enheter.
 
 > [!TIP]
 > Mer detaljerad information om hur du använder principer finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
@@ -47,11 +47,14 @@ Använd informationen i det här avsnittet för att avgöra vilken Microsoft Int
 |**Anpassad konfiguration (iOS 7.1 och senare)**|Distribuera konfigurationsprofiler till iOS-enheter som du skapat med hjälp av verktyget Apple Configurator. Detta är användbart när inställningen du behöver inte är tillgänglig i en konfigurationsprincip.<br /><br />Mer information finns i [Principinställningar för iOS i Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
 |**E-postprofil (iOS 7.1 och senare)**|Skapa, distribuera och övervaka Exchange Active Sync-e-postinställningar på hanterade enheter. Detta gör att användarna kan komma åt företagets e-post på sina personliga enheter utan att behöva göra några särskilda inställningar.<br /><br />Mer information finns i [Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).|
 |**Allmän konfiguration (iOS 7.1 och senare)**|Konfigurera säkerhets- och funktionsinställningar för mobil enhet.<br />-   Ange appar som är kompatibla eller icke-kompatibla, och rapportera när de används.<br />Konfigurera helskärmsläge som låser enheter så att endast vissa funktioner fungerar, till exempel tillåta att enheten kör endast en app eller inaktivera volymknapparna.<br /><br />Mer information finns i [Principinställningar för iOS i Microsoft Intune](ios-policy-settings-in-microsoft-intune.md).|
+|**Konfigurationsprincip för mobilappar (iOS 7.1 och senare)**|Använd konfigurationsprinciper för mobilappar om du vill definiera inställningar automatiskt som kan krävas när användaren kör en iOS-app.<br /><br />Mer information finns i [Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+|**Etableringsprofilprincip för mobila enheter (iOS 7.1 och senare)**|Verksamhetsspecifika Apple iOS-appar skapas med en inbyggd etableringsprofil och kod som signeras med ett certifikat. När appen körs på en iOS-enhet bekräftar iOS appens integritet och tillämpar de principer som definierats av etableringsprofilen.<br><br>Signeringscertifikatet du använder för att signera appar gäller normalt i 3 år. Däremot upphör etableringsprofilen att gälla efter ett år. Använd den här principen för att distribuera en ny etableringsprofilprincip till enheter som har appar som snart slutar att gälla medan certifikatet fortfarande är giltigt.<br><br>Mer information finns i [Använd etableringsprofilprinciper för iOS för att förhindra att dina appar upphör att gälla](ios-mobile-app-provisioning-profiles.md).|
+|**PKCS #12 (.PFX)-certifikatprofil (iOS 7.1 och senare)**|Använd den här profilen om du vill skapa och distribuera PFX-inställningar för enheternas certifikatförfrågningar.<br /><br />Mer information finns i [Skydda resursåtkomst med certifikatprofiler i Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**SCEP-certifikatprofil (iOS 7.1 och senare)**|Konfigurera ett SCEP-certifikat (Simple Certificate Enrollment Protocol) som kan användas med ett certifikat för betrodd mobil för att autentisera mobila enheter så att de kan komma åt nätverksresurser, till exempel nätverksresurser som konfigurerats av Wi-Fi- och VPN-profiler.<br /><br />Mer information finns i [Skydda resursåtkomst med certifikatprofiler i Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**Certifikatprofil för betrodd mobil enhet (iOS 7.1 och senare)**|Konfigurera ett certifikat för betrodd mobil enhet som kan användas för att autentisera mobila enheter så att de kan komma åt nätverksresurser, till exempel nätverksresurser som konfigurerats av Wi-Fi- och VPN-profiler.<br /><br />Mer information finns i [Skydda resursåtkomst med certifikatprofiler i Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**VPN-profil (iOS 7.1 och senare)**|Konfigurera och distribuera inställningar som ger användare säker åtkomst till företagets nätverk från användarens mobila enhet. Genom att distribuera inställningarna gör du det enklare för slutanvändaren att ansluta till företaget.<br /><br />Mer information finns i [VPN-anslutningar i Microsoft Intune](vpn-connections-in-microsoft-intune.md).|
 |**Wi-Fi-profil (iOS 7.1 och senare)**|Konfigurera och distribuera trådlösa nätverksinställningar till användare i organisationen. Genom att distribuera inställningarna gör du det enklare för slutanvändaren att ansluta till det trådlösa nätverket.<br /><br />Mer information finns i [Wi-Fi-anslutningar i Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
-|**Konfigurationsprincip för mobilappar (iOS 7.1 och senare)**|Använd konfigurationsprinciper för mobilappar om du vill definiera inställningar automatiskt som kan krävas när användaren kör en iOS-app.<br /><br />Mer information finns i [Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md).|
+
 
 ## Principer för Mac OS X-konfiguration
 
@@ -82,6 +85,8 @@ Gäller enbart för Windows Phone och registrerade Windows-enheter.
 |**Betrodd certifikatsprofil (Windows 8.1 och senare)**<br /><br />**Certifikatprofil för betrodd mobil enhet (Windows Phone 8.1 och senare)**|Konfigurera ett certifikat för betrodd mobil enhet som kan användas för att autentisera mobila enheter så att de kan komma åt nätverksresurser, till exempel nätverksresurser som konfigurerats av Wi-Fi- och VPN-profiler.<br /><br />Mer information finns i [Skydda resursåtkomst med certifikatprofiler i Microsoft Intune](secure-resource-access-with-certificate-profiles.md).|
 |**VPN-profil (Windows 10 Desktop och Mobile och senare)**<br /><br />**VPN-profil (Windows 8.1 och senare)**<br /><br />**VPN-profil (Windows Phone 8.1 och senare)**|Konfigurera och distribuera inställningar som ger användare säker åtkomst till företagets nätverk från användarens mobila enhet. Genom att distribuera inställningarna gör du det enklare för slutanvändaren att ansluta till företaget.<br /><br />Mer information finns i [VPN-anslutningar i Microsoft Intune](vpn-connections-in-microsoft-intune.md).|
 |**Wi-Fi-import**|Importera och distribuera Windows Wi-Fi-konfigurationer som du tidigare har exporterat till en fil.<br /><br />Mer information finns i [Wi-Fi-anslutningar i Microsoft Intune](wi-fi-connections-in-microsoft-intune.md).|
+|**Windows informationsskydd**<br>(kallades tidigare företagsdataskydd)|Allt fler anställda använder egna enheter i företaget. Detta innebär en ökad risk för oavsiktliga dataläckage via appar och tjänster, till exempel e-post, sociala media och offentliga moln, som företaget inte har någon kontroll över. En medarbetare kan till exempel skicka de senaste ritningarna via sitt personliga e-postkonto, kopiera och klistra in produktinformation i en tweet eller spara en försäljningsrapport på en offentlig molnlagringsplats.<br><br>Windows informationsskydd bidrar till att skydda mot potentiella dataläckage utan att störa medarbetarnas användning. Informationsskyddet skyddar även företagsappar och företagsdata mot oavsiktliga dataläckage i företagsägda enheter och personliga enheter som medarbetarna tar med sig till jobbet utan att det behövs några ändringar i miljön eller andra appar.<br><br>Den här Intune-principen hanterar listan över appar som skyddas av Windows informationsskydd, företagsnätverksplatser, skyddsnivå och krypteringsinställningar.<br><br>Mer information finns i [Skydda företagsdata med Windows informationsskydd](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp).|
+
 
 ## Principer för programvara
 
@@ -129,7 +134,6 @@ Gäller enbart för Windows Phone och registrerade Windows-enheter.
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Förbereda iOS-appar för hantering med programhanteringsverktyget | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: Omsluta iOS-appar med apphanteringsverktyget | Microsoft Intune
+description: "Använd informationen i det här avsnittet för att lära dig hur du omsluter iOS-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
+keywords: 
+author: karthikaraman
+manager: angrobe
+ms.date: 07/28/2016
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: jeffgilb
+ms.reviewer: matgates
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bebf57269ae41f04a47240063cde4a4dd0bf334f
+ms.openlocfilehash: 3d9def8f906746cf6e3d014d251b94406d839067
+
 
 ---
 
@@ -30,15 +24,16 @@ Använd **Microsoft Intunes programhanteringsverktyg för iOS** för att ändra 
 
 Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har bearbetats kan du ändra appens funktioner med [hanteringsprinciper för mobilprogram](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) som du konfigurerar.
 
-För att ladda ned verktyget går du till [Microsoft Intunes programhanteringsverktyg för iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218)
+För att ladda ned verktyget går du till [Microsoft Intunes apphanteringsverktyg för iOS](http://www.microsoft.com/en-us/download/details.aspx?id=45218).
 
 ## Steg 1 Uppfyll nödvändiga krav för att använda programhanteringsverktyget
+Läs [det här blogginlägget](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) om du vill veta mer om krav och hur du anger dem.
 
 |Krav|Mer information|
 |---------------|--------------------------------|
 |Operativsystem och verktygsuppsättning som stöds|Du måste köra app-wrapping-verktyget på en Mac-dator som kör OS X 10.8.5 eller senare och som har verktygsuppsättningen XCode version 5 eller senare installerad.|
-|Signeringscertifikat och etableringsprofil|Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/)|
-|Bearbeta en app med programhanteringsverktyget|Apparna måste vara utvecklade och signerade av ditt företag eller någon oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 7.0 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om formatet PIE finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
+|Signeringscertifikat och etableringsprofil|Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/).|
+|Bearbeta en app med programhanteringsverktyget|Apparna måste vara utvecklade och signerade av ditt företag eller någon oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 7.1 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om formatet PIE finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
 |Appar som programhanteringsverktyget inte kan bearbeta|Krypterade appar, osignerade appar och appar med utökade filattribut.|
 |Appar som använder Azure Active Directory Library (ADAL)|Om appen använder sig av ADAL måste appen innehålla ADAL version 1.0.2 eller senare, och utvecklaren måste ge appen åtkomst till resursen för hantering av mobilprogram i Intune.<br /><br />Information om hur du använder ADAL finns i [Information om appar som använder Azure Active Directory Library](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#information-for-apps-that-use-the-azure-active-directory-library) i den här artikeln.|
 |Ställa in rättigheter för din app|Du måste ställa in rättigheter, som ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas, innan du omsluter appen. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).|
@@ -59,7 +54,7 @@ För att ladda ned verktyget går du till [Microsoft Intunes programhanteringsve
 
 1.  På Mac-datorn öppnar du ett terminalfönster och går till den mapp där du sparade filerna. Eftersom den körbara filen finns i paketet, måste du köra kommandot på följande sätt:
 ```
-    ./IntuneMAMPackager.app/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -a <client ID of input app> -r <reply URI of input app> -v true
+    ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -a <client ID of input app> -r <reply URI of input app> -v true
 ```
     > [!NOTE]
     > Some parameters are optional as shown in the table below.
@@ -126,7 +121,7 @@ Appar som har varit omslutna med hjälp av appomslutningsverktyget genererar log
 
 1.  Återskapa problemet genom att köra appen.
 
-2.  Samla in konsolens utdata genom att följa Apples instruktioner för att [felsöka distribuerade iOS-appar](https://developer.apple.com/library/ios/qa/qa1747/_index.html)
+2.  Samla in konsolens utdata genom att följa Apples instruktioner för att [felsöka distribuerade iOS-appar](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
 3.  Filtrera de sparade loggarna för utdata från appbegränsningarna genom att ange följande skript i konsolen:
 
@@ -135,6 +130,7 @@ Appar som har varit omslutna med hjälp av appomslutningsverktyget genererar log
     ```
     Du kan skicka de filtrerade loggarna till Microsoft.
 
+    > [!NOTE]
     > I loggfilen representerar objektet 'build-version' Xcode-versionen.
 
     Omslutna appar kommer också att erbjuda användarna möjlighet att skicka loggarna direkt från enheten via e-post när appen kraschar. Användarna kan skicka loggen till dig så att du kan undersöka den och vidarebefordra den till Microsoft om det behövs.
@@ -148,7 +144,7 @@ Följande villkor måste vara uppfyllda för appar som använder ADAL:
 
 -   Appen måste innehålla ADAL version 1.0.2 eller högre
 
--   Utvecklare måste ge sin app åtkomst till resursen för hantering av mobilprogram i Intune, enligt beskrivningen i [Steg för appar som använder ADAL](#steps-to-follow-for-apps-that-use-adal)
+-   Utvecklare måste ge sin app åtkomst till resursen för hantering av mobilprogram i Intune, enligt beskrivningen i [Steg för appar som använder ADAL](#steps-to-follow-for-apps-that-use-adal).
 
 ### Översikt över identifierare som du behöver
 Appar som använder ADAL måste registreras via Azures hanteringsportal för att erhålla två unika identifierare för appen:
@@ -169,9 +165,9 @@ Appar som använder ADAL måste registreras via Azures hanteringsportal för att
 
     2.  Klicka på **befintlig LOB-appregistrering** i Azure Active Directory.
 
-    3.  I avsnittet konfigurera väljer du **Konfigurera åtkomst till webb-API:er i andra program**
+    3.  I avsnittet Konfigurera väljer du **Konfigurera åtkomst till webb-API:er i andra appar**.
 
-    4.  I den första listrutan i avsnittet **Behörighet till andra program** väljer du **Hantering av mobilprogram i Intune**
+    4.  I den första listrutan i avsnittet **Behörighet till andra program** väljer du **Hantering av mobilprogram i Intune**.
 
         Du kan nu använda appens klient-ID i programhanteringsverktyget. Du hittar appens klient-ID i hanteringsportalen för Azure Active Directory enligt beskrivningen i avsnittet [Översikt över identifierare som du behöver](#overview-of-identifiers-you-need-to-get).
 
@@ -198,7 +194,7 @@ Appar som använder ADAL måste registreras via Azures hanteringsportal för att
 -   Dubbla inloggningsprompter förhindras om du tillhandahåller din klientapps klient-ID och omdirigerings-URI. Detta klient-ID måste registreras för att få åtkomst till det publicerade [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] MAM-resurs-ID:t i AAD-instrumentpanelen. Annars misslyckas inloggningen när programmet körs.
 
 ## Ställa in apprättigheter
-Innan du omsluter appen kan du bevilja **rättigheter** för att ge appen ytterligare behörigheter och funktioner som överskrider vad en app vanligtvis kan.  En **rättighetsfil** används under kodsignering för att ange särskilda behörigheter i appen (till exempel åtkomst till en delad nyckelring). Vissa apptjänster, som kallas **funktioner**, aktiveras i Xcode under apputvecklingen. När dessa funktioner har aktiverats visas de i din i din rättighetsfil. Mer information om rättigheter och funktioner finns i [Lägga till funktioner](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) i iOS Developer Library. En fullständig lista över funktioner som stöds finns i [Funktioner som stöds](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)
+Innan du omsluter appen kan du bevilja **rättigheter** för att ge appen ytterligare behörigheter och funktioner som överskrider vad en app vanligtvis kan.  En **rättighetsfil** används under kodsignering för att ange särskilda behörigheter i appen (till exempel åtkomst till en delad nyckelring). Vissa apptjänster, som kallas **funktioner**, aktiveras i Xcode under apputvecklingen. När dessa funktioner har aktiverats visas de i din i din rättighetsfil. Mer information om rättigheter och funktioner finns i [Lägga till funktioner](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) i iOS Developer Library. En fullständig lista över funktioner som stöds finns i [Funktioner som stöds](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### Funktioner som stöds för programhanteringsverktyg för iOS
 
@@ -210,7 +206,7 @@ Innan du omsluter appen kan du bevilja **rättigheter** för att ge appen ytterl
 |Köp via app|Köp i appen bäddar in en butik direkt i din app genom att göra det möjligt för dig att ansluta till butiken och på ett säkert sätt behandla betalningar från användaren. Du kan använda inköp i appen för att samla in betalning för utökad funktionalitet eller för ytterligare innehåll som kan användas med din app.||
 |Nyckelringsdelning|Med aktivering av nyckelringsdelning kan din app dela lösenord i nyckelringen med andra appar som har utvecklats av ditt team.|Använd omvänd DNS-notering när du använder nyckelringsdelning:<br /><br />*com.companyName.KeychainGroup*|
 |Personlig VPN|Du kan aktivera personlig VPN så att din app kan skapa och styra en anpassad system-VPN-konfiguration med hjälp av ramverket för nätverkstillägg||
-|Push-meddelanden|Med hjälp av Apple Push Notification-tjänsten kan en app som inte körs i förgrunden meddela användaren om att den har information till användaren.|Du måste använda en app-specifik etableringsprofil för att push-meddelanden ska fungera.<br /><br />Följ stegen i [dokumentationen för Apple-utvecklare](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)|
+|Push-meddelanden|Med hjälp av Apple Push Notification-tjänsten kan en app som inte körs i förgrunden meddela användaren om att den har information till användaren.|Du måste använda en app-specifik etableringsprofil för att push-meddelanden ska fungera.<br /><br />Följ anvisningarna i [dokumentationen för Apple-utvecklare](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
 |Konfiguration för trådlösa tillbehör|Konfigurationen för att aktivera trådlösa tillbehör lägger till ramverket för externa tillbehör till ditt projekt och gör möjligt att konfigurera MFi Wi-Fi-tillbehör med din app.||
 
 ### Steg för att aktivera rättigheter
@@ -229,7 +225,7 @@ Innan du omsluter appen kan du bevilja **rättigheter** för att ge appen ytterl
 
     1.  Logga in till Apple Developer Member Center.
 
-    2.  Skapa en etableringsprofil för din app. Instruktioner finns i [Skaffa förutsättningarna för Intune-programhanteringsverktyget för iOS](http://blogs.technet.com/b/microsoftintune/archive/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios.aspx)
+    2.  Skapa en etableringsprofil för din app. Instruktioner finns i [Skaffa förutsättningarna för Intune-apphanteringsverktyget för iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
     3.  Aktivera samma rättigheter som du har i din app i din etableringsprofil. Du måste ange samma ID:n som du angav under utvecklingen av din app.
 
@@ -270,7 +266,7 @@ Granska befintliga rättigheter för en signerad app och en etableringsprofil:
 Det här kommandot tar bort alla aktiverade funktioner i appen som inte ingår i rättighetsfilen. Om du tar bort funktioner som används av appen kan appen skadas. Ett exempel på då du kan ta bort funktioner som saknas är om du har en leverantörsutvecklad app där alla funktioner är standard.
 
 ```
-./IntuneMAMPackager.app/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> –p /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
 ```
 
 ## Säkerhet och sekretess för appomslutningsverktyget
@@ -296,6 +292,7 @@ Använd följande metodtips för säkerhet och sekretess när du använder appom
 - [Aktivera hantering av mobilprogram i appar med SDK](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO1-->
 
 

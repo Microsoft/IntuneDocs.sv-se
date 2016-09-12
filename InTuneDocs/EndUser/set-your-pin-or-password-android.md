@@ -3,22 +3,22 @@ title: "Ange din PIN-kod eller ditt lösenord | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 05/31/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b29ac1bb-ef57-4ef1-9ea5-191ee8694e58
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bb435b87c937ea118a0794c8332b9a8f268d36e
-ms.openlocfilehash: 349f2a1332dfcb75b5664b80c159eb39982a2093
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: b6fe892098e382079a6259c4fe192baee501f74a
 
 
 ---
-
 
 # Ange din PIN-kod eller ditt lösenord
 
@@ -31,10 +31,9 @@ IT-administratören kan kräva att du ställer in en PIN-kod eller ett lösenord
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 

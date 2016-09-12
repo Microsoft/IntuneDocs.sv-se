@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Lägg till användare till din 30-dagars utvärderingsversion av Microsoft Intune | Microsoft Intune
-description:
-keywords:
-author: Staciebarker
-manager: jeffgilb
-ms.date: 04/28/2016
+title: "Lägga till användare till din 30-dagars utvärderingsversion av Microsoft Intune | Microsoft Intune"
+description: "Hur du lägger till användare, individuellt eller i grupp, när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
+keywords: 
+author: lindavr
+manager: angrobe
+ms.date: 08/09/2016
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: microsoft-intune
-ms.technology:
+ms.technology: 
 ms.assetid: 9e40999b-46f7-447b-8974-72af82bec7ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: jeffgilb
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
+ms.openlocfilehash: 4276d0fed0fc30490a640a067d78096ff0cf78ae
+
 
 ---
 
@@ -37,7 +31,7 @@ Du kan visa information om innehavaradministratören med hjälp av Intune-admini
 ## Lägga till enskilda användarkonton
 Använd följande steg om du vill skapa fler användarkonton för din utvärderingsinnehavare. Kom ihåg att varje användarkonto som du lägger till räknas av mot de 100 licenser som är tillgängliga som en del av din kostnadsfria Intune-utvärderingsversion.
 
-1.  I [Office 365-administrationscentret](http://go.microsoft.com/fwlink/p/?LinkId=698854) väljer du **Lägg till användare** &gt; **Ny**&gt; **Användare** för att starta guiden **Nya användare**.
+1.  I [Office 365-administrationscentret](http://go.microsoft.com/fwlink/?LinkID=787455) väljer du **Lägg till användare** &gt; **Ny**&gt; **Användare** för att starta guiden **Nya användare**.
 
 2.  Fyll i de obligatoriska fälten på sidan **Information** .
 
@@ -51,14 +45,14 @@ Använd följande steg om du vill skapa fler användarkonton för din utvärderi
 
 7.  När den nya användaren visas i Office 365-administrationscentret kontrollerar du att den nya användaren skapades:
 
-    1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Administratör** &gt; **Företagsportal** och bläddrar sedan till längst ned på sidan. Kopiera den URL som visas under **Intune-företagsportalen**
+    1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Admin** &gt; **Företagsportal** och bläddrar sedan till längst ned på sidan. Kopiera den URL som visas under **Intune-företagsportalen**.
 
     2.  Öppna ett nytt webbläsarfönster i ”sekretessläge” (välj **Verktyg** &gt; **InPrivate-surfning** i Internet Explorer) eller öppna ett nytt webbläsarfönster på en annan enhet och gå sedan till den URL som du kopierade i föregående steg. När användare loggar in för första gången måste de ange ett nytt lösenord för kontot.
 
 ## Lägga till användare i grupp
-Du kan lägga till användare i grupp till Intune med hjälp av guiden **Lägg till användare** i grupp för att överföra en fil med kommaseparerade värden (CSV) som innehåller användardata. Länkar i guiden medför att du kan  ladda ned en tom mall och en exempel-CSV-fil. Den första raden i CSV-filen måste innehålla, i rätt ordning, var och en av kolumnetiketterna för användardata. Sedan måste du för varje användare i För varje användare i CSV-filen måste du sedan inkludera **användarnamnet** (t.ex. **bob@contoso.com**) och ett **visningsnamn** (t.ex. **Bob Kelly**
+Du kan lägga till användare i grupp till Intune med hjälp av guiden **Lägg till användare** i grupp för att överföra en fil med kommaseparerade värden (CSV) som innehåller användardata. Länkar i guiden medför att du kan  ladda ned en tom mall och en exempel-CSV-fil. Den första raden i CSV-filen måste innehålla, i rätt ordning, var och en av kolumnetiketterna för användardata. För varje användare i CSV-filen måste du sedan inkludera **användarnamnet** (t.ex. **bob@contoso.com**) och ett **visningsnamn** (t.ex. **Bob Kelly**).
 
-1.  I [Office 365-administrationscentret](http://go.microsoft.com/fwlink/p/?LinkId=698854) väljer du **Användare** &gt; **Ny**
+1.  I [Office 365-administrationscentret](http://go.microsoft.com/fwlink/?LinkID=787455) väljer du **Användare** &gt; **Ny**.
 
 2.  Välj **Masstillägg** för att starta guiden Masstillägg av användare.
 
@@ -84,6 +78,7 @@ Gratulerar! Du har precis slutfört steg 2 i genomgången av *Microsoft Intune-u
 >[&larr; **Registrera dig för en utvärdering**](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)     [**Skapa grupper** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO2-->
 
 

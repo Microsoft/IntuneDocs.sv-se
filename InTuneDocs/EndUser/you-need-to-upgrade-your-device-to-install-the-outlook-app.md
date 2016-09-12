@@ -3,24 +3,26 @@ title: "Du måste uppgradera enheten för att installera Outlook-appen | Microso
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
+manager: angrobe
 ms.date: 06/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ccb7451e-5ffc-4604-b28e-8322cc64c58c
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vadona
 ms.suite: ems
-ms.sourcegitcommit: b76c04545b9b26a0e2470b95a3f5ac0a81b07817
-ms.openlocfilehash: 635c6c007c031f7465b527a7b952d684b8d64522
+translationtype: Human Translation
+ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
+ms.openlocfilehash: e88f5cd8cee07fef9e1d51688219a2b7093e0ff1
 
 
 ---
 
 # Du måste uppgradera enheten för att installera Outlook-appen
 
-Om du försöker hämta Outlook-e-postappen och ett meddelande visas om att operativsystemversionen för din Android- eller iOS-enhet är lägre än minimikravet, måste du uppgradera enheten innan du fortsätter. 
+Om du försöker hämta Outlook-e-postappen och ett meddelande visas om att operativsystemversionen för din Android- eller iOS-enhet är lägre än minimikravet, måste du uppgradera enheten innan du fortsätter.
 
 Uppgradera enheten enligt instruktionerna nedan för din enhetstyp:
 
@@ -32,7 +34,6 @@ Välj **Inställningar** &gt; **Allmänt** &gt; **Programvaruuppdatering**.
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

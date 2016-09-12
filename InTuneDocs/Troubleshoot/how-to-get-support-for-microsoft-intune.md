@@ -1,19 +1,20 @@
 ---
 title: "Ta reda på hur du kan få support | Microsoft Intune"
-description: 
+description: "Support finns tillgängligt både online och per telefon både för betal- och utvärderingsprenumerationer."
 keywords: 
 author: Nbigman
-manager: jeffgilb
-ms.date: 05/26/2016
+manager: angrobe
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
-ms.reviewer: jeffgilb
+ms.reviewer: cacamp
 ms.suite: ems
-ms.sourcegitcommit: 632115d1010217f927e20a7e9532311d48f2b106
-ms.openlocfilehash: a6cb77b441c7c44f33c0353232409f8d7b2daa6a
+translationtype: Human Translation
+ms.sourcegitcommit: f400f8b2ffd85b6328eceb74b97de1e67203ee6b
+ms.openlocfilehash: 3342ee86179348dbff880cb5884bf2975d26b50d
 
 
 ---
@@ -24,36 +25,40 @@ ms.openlocfilehash: a6cb77b441c7c44f33c0353232409f8d7b2daa6a
 Det här avsnittet beskrivs hur du öppnar en servicebegäran eller kontaktar telefonsupport på flera språk.
 
 För självhjälp med Intune, se [Allmänna felsökningstips för Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) eller något av felsökningsavsnitten för specifika problem, som anges i avsnittet **Se även** i detta avsnitt.
+
+>[!NOTE]
+>
+>Premier-kunder kan öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/en-us/premier/contacts).
+
 ## Skapa en serviceförfrågan online
 
-1.  Logga in på Intune och gå sedan till [administrationscentret för Office 365](https://portal.office.com/Support/SupportEntry.aspx).
+1.  Logga in på [administrationscentret för Office 365](https://portal.office.com/admin/default.aspx#Overview_SupportPage_AltUSupportPage) med dina Intune-autentiseringsuppgifter.
 
-2.  Under rubriken **Skapa en tjänstförfrågan** väljer du den problemkategori som du vill skapa ett ärende för:
+2.  Under **Skapa en tjänstförfrågan** väljer du den problemkategori som du vill skapa ett ärende för:
 
-    -   Välj **Fakturerings- och produktinfo** för fakturerings- och licensieringsproblem.
+    -   Välj **Fakturerings- och produktinfo** för fakturerings-, licensierings- och kontoproblem.
 
-    -   För alla andra Intune-problem väljer du **Hantering av mobilenheter**. Det här alternativet omfattar även Office 365 MDM och System Center Configuration Manager med Intune.
+    -   För alla andra Intune-problem väljer du **Hantering av mobilenheter**.
 
     > [!NOTE]
-    > [!NOTE] Du kanske måste klicka på **mer** längst ned i listan om du vill se alla kategorier.
+    > Klicka på **mer** längst ned i listan om du vill visa alla kategorier.
 
 3.  På sidan för att **identifiera problemet** väljer du **Funktion** och **Symtom** för vilka du behöver hjälp. Du ombeds ange en **problemsammanfattning** och **probleminformation**.
 
-4.  På sidan **Granska förslag** hittar du länkar till innehåll som kan hjälpa dig att lösa problemet på egen hand.  Om du inte kan lösa problemet kan du klicka på **Ja, fortsätt** längst ned på sidan för att skicka din tjänsteförfrågan.
+4.  På sidan **Granska förslag** hittar du länkar till innehåll som kan hjälpa dig att lösa problemet på egen hand.  Om du inte kan lösa problemet kan du välja **Ja, fortsätt** längst ned på sidan för att skicka din tjänsteförfrågan.
 
-5.  På sidan **Lägg till information** anger du den information som efterfrågas. Du kan bifoga skärmdumpar eller andra dokument genom att klicka på **Bifoga en fil**.
+5.  På sidan **Lägg till information** anger du den information som efterfrågas. Du kan bifoga skärmdumpar eller andra dokument genom att välja **Bifoga en fil**.
 
-6.  På sidan **Bekräfta och skicka** anger du kontaktinformation, går igenom din begäran och klickar på **Skicka begäran**. När begäran har skickats skickas du till en lista över dina tjänstbegäranden.
+6.  På sidan **Bekräfta och skicka** anger du kontaktinformation, går igenom din begäran och väljer **Skicka begäran**. När begäran har skickats skickas du till en lista över dina tjänstbegäranden.
 
 ## Telefonsupport
 I [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) finns en lista över supportnummer efter land och region, supporttider och språk som stöds för varje region.
 
 ## Spåra dina tjänstförfrågningar
-Om du vill spåra dina förfrågningar går du till [administrationscentret för Office 365](https://portal.office.com/admin/default.aspx). Klicka på **Visa alla supportärenden** längst ned i listan **Skapa en tjänstförfrågan**. Som standard visas alla dina tjänstbegäranden som är öppna. Klicka på filterikonen i det övre navigeringsfältet och välj önskad vyn för att ändra vilka tjänstbegäranden som ska visas, till exempel för att visa stängda begäranden.
+Om du vill spåra dina förfrågningar går du till [administrationscentret för Office 365](https://portal.office.com/admin/default.aspx). Välj **Visa alla supportärenden** längst ned i listan **Skapa en tjänstförfrågan**. Som standard visas alla dina tjänstbegäranden som är öppna. Välj filterikonen i det övre navigeringsfältet och välj önskad vy för att ändra vilka tjänstbegäranden som ska visas, till exempel för att visa stängda begäranden.
 
 > [!NOTE]
-> [!NOTE]
-**Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support för Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) där du hittar utförligt självhjälpsmaterial och har möjlighet att öppna en supportbegäran online eller via telefon.
+> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** För teknisk support med Configuration Manager eller Endpoint Protection, kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx) för att hitta utförligt självhjälpsmaterial och möjligheten att öppna en supportbegäran online eller via telefon.
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 
@@ -140,6 +145,6 @@ Vår roll är att:
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

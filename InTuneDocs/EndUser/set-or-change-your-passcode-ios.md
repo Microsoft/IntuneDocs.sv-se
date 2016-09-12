@@ -3,15 +3,17 @@ title: "Ange eller ändra ditt lösenord | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
-manager: jeffgilb
-ms.date: 5/25/2016
+manager: angrobe
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
-ms.sourcegitcommit: e52ebdd62ca68f1d9226def654961075400184a8
-ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
+ROBOTS: NOINDEX,NOFOLLOW
+translationtype: Human Translation
+ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
+ms.openlocfilehash: cb508a92db99533502914f1b5dba69b956838d1e
 
 
 ---
@@ -20,7 +22,7 @@ ms.openlocfilehash: ca7c8d3f87c90b5f586af6b43d214edb3b99ce4a
 
 Om din iOS-enhet inte följer IT-administratörens princip för lösenord visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
-IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. 
+IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken och en blandning av siffror och bokstäver osv. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
 
 Om du har problem med att ange ett lösenord som uppfyller alla krav för lösenord kan du be IT-administratören om hjälp.
 
@@ -39,10 +41,9 @@ Om du har problem med att ange ett lösenord som uppfyller alla krav för lösen
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Using your iOS or Mac OS X device with Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 
