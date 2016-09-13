@@ -4,7 +4,7 @@ description: "Sex vanliga saker som Intune kan hjälpa dig med"
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 08/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 76d0d9c620000864a4a554600985ba351c18d359
-ms.openlocfilehash: e9315040972df39c543a1e99d197a64cf280b7ff
+ms.sourcegitcommit: 2ebb8fcf348cfdc7600c37b40824f5bba37a7f36
+ms.openlocfilehash: 4614c13d98c4b05882bbeabfbbd7de83d9bea2da
 
 
 ---
@@ -26,10 +26,14 @@ Innan du ger dig in på implementeringsåtgärder är det viktigt att samla för
 >[!NOTE]
 >Vill du veta hur Microsoft IT använder Intune för att göra det möjligt för Microsofts medarbetare att få åtkomst till företagsresurser på sina mobila enheter, samtidigt som man skyddar företagsdata? [Läs denna tekniska fallstudie](https://www.microsoft.com/itshowcase/Article/Content/588) för att få reda på hur Microsoft IT använder Intune och andra tjänster för att hantera identitet, enheter, appar och data.  
 
+>[!IMPORTANT]
+>Kontrollera att mobila enheter är uppdaterade<br>
+>Mot bakgrunden av de nyligen inträffade "Trident"-attackerna med skadlig kod på iOS-enheter har vi publicerat ett nytt blogginlägg, [Ensuring mobile devices are up to date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Kontrollera att mobila enheter är uppdaterade med Microsoft Intune).
+
 ## Skydda lokal e-post och lokala data så att det går att komma åt dem på ett säkert sätt från mobila enheter
 De flesta Enterprise Mobility-strategier börjar med en plan för att möjliggöra säker åtkomst till e-post för anställda med mobila enheter på Internet. Många organisationer har fortfarande lokala data och programservrar, t.ex. Microsoft Exchange, som finns på företagets nätverk. Med Intune och Enterprise Mobility Suite (EMS) får ni en unikt integrerad [lösning för villkorlig åtkomst](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) för Exchange Server som ser till att inga mobilappar kan få åtkomst till e-post förrän enheten har registrerats med Intune, helt utan att distribuera någon annan gateway-dator i utkanten av företagets nätverk!
 
-Förutom e-post har Intune stöd för att hantera åtkomst till mobilappar som kräver säker åtkomst till lokala data, t.ex. branschspecifik appserver.  Detta görs normalt med [Intune-hanterade certifikat](/en-us/intune/deploy-use/secure-resource-access-with-certificate-profiles) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Microsoft Azure AD-programproxy.  I dessa fall är det enda sättet att komma åt företagets data att registrera enheten i hanteringen.  När registreringen är klar säkerställer hanteringssystemet att enheter som får åtkomst till företagsdata är kompatibla med principerna.  Dessutom kan Intunes [programhanteringsverktyg och App SDK](/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune) användas för att hjälpa till att hålla kvar data i den verksamhetsspecifika appen, så att det inte går att vidareföra företagsdata till konsumentappar eller -tjänster.
+Förutom e-post har Intune stöd för att hantera åtkomst till mobilappar som kräver säker åtkomst till lokala data, t.ex. branschspecifik appserver.  Detta görs normalt med [Intune-hanterade certifikat](/intune/deploy-use/secure-resource-access-with-certificate-profiles) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Microsoft Azure AD-programproxy.  I dessa fall är det enda sättet att komma åt företagets data att registrera enheten i hanteringen.  När registreringen är klar säkerställer hanteringssystemet att enheter som får åtkomst till företagsdata är kompatibla med principerna.  Dessutom kan Intunes [programhanteringsverktyg och App SDK](/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune) användas för att hjälpa till att hålla kvar data i den verksamhetsspecifika appen, så att det inte går att vidareföra företagsdata till konsumentappar eller -tjänster.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
@@ -68,6 +72,6 @@ Ibland behöver medarbetarna använda enheter, appar eller webbläsare som du in
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
