@@ -13,16 +13,16 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
+ms.sourcegitcommit: d0cc50bb5d79f4840afee7984cf3f58f6dd26dac
+ms.openlocfilehash: 8832235ffdc8cd0b5b3eec244315711cfa59e069
 
 
 ---
 
 # Att använda din Windowsenhet med Intune
 
-Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
-- Installation av företagsportalappen och registrering av Intune 
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
+- Installation av företagsportalappen och registrering av Intune
 - Hanteringsuppgifter efter registrering
 - Efterlevnadsproblem
 
@@ -60,6 +60,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

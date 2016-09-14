@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d70a46d9c13aad1bc0a940836d83a99b93bb95e
-ms.openlocfilehash: 7f84ad1566431a7a72897750fadbc90cb56ec5ce
+ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
+ms.openlocfilehash: f45fc02003c6b40cc15fabeffff35cf0cde1a830
 
 
 ---
@@ -102,7 +102,7 @@ I den version av iOS-företagsportalsappen som släpptes i september uppmanar en
 
 ## Tjänstens utfasning
 ### Företagsportalappar för Windows 8 och Windows Phone 8 blir inaktuella med början i september 2016
-Med början i september 2016 upphör Microsoft Intunes stöd för Microsoft Intune-företagsportalappar för Windows Phone 8- och Windows 8-plattformarna. Uppdatera enheter till Windows 8.1 och Windows Phone 8.1 och använd motsvarande företagsportalappar för Windows 8.1 och Windows Phone 8.1 om du vill fortsätta att distribuera appar till dessa enheter.
+Från och med oktober 2016 kommer Microsoft Intune inte längre stödja företagsportalappar för Windows 8 och Windows Phone 8. Microsoft Intunes stöd för Windows Phone 8-plattformen kommer också att upphöra. Följaktligen kommer du inte att kunna registrera eller uppdatera Windows Phone 8-enheter. Men du kan fortsätta att hantera Windows Phone 8- och Windows 8-enheter som redan har registrerats. Uppdatera enheter med Windows Phone 8 och Windows 8 till Windows Phone 8.1 respektive Windows 8.1 och använd motsvarande företagsportalappar för Windows 8.1 och Windows Phone 8.1. På så sätt kan du fortsätta att distribuera appar till dessa enheter utan avbrott.
 <!---TFS 1255391--->
 
 ### Borttagning av anpassade meddelanderegler för specifika grupper
@@ -135,6 +135,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

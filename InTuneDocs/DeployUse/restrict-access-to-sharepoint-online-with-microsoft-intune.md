@@ -13,8 +13,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e285cadd63e711ddf5d37b878d298b47bacf3333
-ms.openlocfilehash: ab765d181cb2eb9e3e6a9c79c597241c4fd5985f
+ms.sourcegitcommit: a1d0b330b42ea920af9512552a9f3d9c875e99da
+ms.openlocfilehash: 2d8304964908986943c82ebed1dd7fd23b2c222e
 
 
 ---
@@ -83,6 +83,9 @@ AAD DRS aktiveras automatiskt för Intune och Office 365-kunder. Kunder som reda
   - Om principen är konfigurerad att kräva domänanslutning och datorn inte är domänansluten visas ett meddelande som uppmanar användaren att kontakta IT-administratören.
 
   - Om principen är konfigurerad att kräva domänsanslutning eller efterlevnad och datorn inte uppfyller något av kraven visas ett meddelande med instruktioner som hjälper användaren att installera företagsportalappen och registrera sig.
+  >[!NOTE]
+  >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
+
 -    [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
 
     Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentication Library) inloggning i Windows-baserade Office 2013-klienter och förbättrar säkerheten med bland annat **multifaktorautentisering** och **certifikatbaserad autentisering**.
@@ -189,6 +192,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

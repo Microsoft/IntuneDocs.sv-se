@@ -13,38 +13,27 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c162e2a885887d0aa69da2a4cec55c7737bccd1
-ms.openlocfilehash: 7e16d0057b91eece7a5aa92a0ba495eaf159caae
+ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
+ms.openlocfilehash: 8ceeca6735267ab66ab14e72570ace3dc8a9b524
 
 
 ---
 
-# Installera Windows PC-klienten med Microsoft Intune
-Använd den här guiden för att låta dina Windows-datorer hanteras av Microsoft Intune-klientprogrammet.
+# Installera Intune-klientprogrammet på Windows-datorer
+Windows-datorer kan registreras genom att installera Intune-klientprogrammet. Intune-klientprogrammet kan installeras på följande sätt:
 
-## Innan du börjar
-Innan du börjar installera klientprogramvaran för Intune bör du läsa artikeln [Åtgärda konflikter mellan grupprincipobjekt och Microsoft Intune-principer](resolve-gpo-and-microsoft-intune-policy-conflicts.md) för att förstå vad som behövs för att installera klienten korrekt. Återkom sedan till dessa instruktioner.
+- Manuell installation
+- Installation med hjälp av en grupprincip
+- Installation som en del av en diskavbildning
+- Installation av användare
 
-## Installera klienten
-Använd de här stegen för att installera klienten:
+## Ladda ned Intune-klientprogrammet
 
--   [Så här hämtar du klientprogramvaran](#to-download-the-client-software)
-
-Använd sedan en eller flera av följande metoder för att installera klienten:
-
--   [Så här hämtar och distribuerar du klientprogrammet](#to-manually-deploy-the-client-software)
-
--   [Så här distribuerar du klientprogrammet automatiskt med hjälp av en grupprincip](#to-automatically-deploy-the-client-software-by-using-group-policy)
-
--   [Installera Microsoft Intune-klientprogramvaran som en del av en avbildning](#install-the-microsoft-intune-client-software-as-part-of-an-image)
-
-Om du inte längre behöver hantera en dator med Intune, kan du inaktivera datorn, vilket även tar bort klientprogramvaran från datorn. Mer information finns i [Vanliga hanteringsuppgifter för Windows-dator med Microsoft Intune-datorklienten](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
-
-### Så här hämtar du klientprogramvaran
+Alla metoder, utom då användarna själva installerar Intune-klientprogrammet, kräver att du laddar ned programvaran så att du kan distribuera den.
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) klickar du på **Administratör** &gt; **Hämtning av klientprogramvara**.
 
-  ![Hämta Intune PC-klienten](./media/pc-SA-client-download.png)
+  ![Hämta Intune PC-klienten](../media/pc-sa-client-download.png)
 
 2.  På sidan **Hämtning av klientprogramvara** klickar du på **Hämta klientprogramvara** och sparar paketet **Microsoft_Intune_Setup.zip** som innehåller programvaran på en säker plats i nätverket.
 
@@ -56,14 +45,14 @@ Om du inte längre behöver hantera en dator med Intune, kan du inaktivera dator
     > [!IMPORTANT]
     > Byt inte namn eller ta inte bort filen **ACCOUNTCERT** som extraheras. Om du gör det, kommer installationen av klientprogramvaran att misslyckas.
 
-### Så här hämtar och distribuerar du klientprogrammet
+## Distribuera manuellt
 
 1.  Bläddra till den mapp där installationsfilerna för klientprogramvaran finns och kör sedan **Microsoft_Intune_Setup.exe** för att installera klientprogramvaran.
 
     > [!NOTE]
     > Installationsförloppet visas när du hovrar över ikonen i verktygsfältet på klientdatorn.
 
-### Så här distribuerar du klientprogrammet automatiskt med hjälp av en grupprincip
+## Distribuera med hjälp av en grupprincip
 
 1.  I mappen som innehåller filerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** kör du följande kommando för att extrahera Windows Installer-baserade installationsprogram för 32-bitars och 64-bitars datorer:
 
@@ -80,7 +69,7 @@ Om du inte längre behöver hantera en dator med Intune, kan du inaktivera dator
 
     Mer information om hur du använder grupprinciper för att automatiskt distribuera programvara finns i dokumentationen för Windows Server.
 
-### Installera Microsoft Intune-klientprogramvaran som en del av en avbildning
+## Installera som en del av en avbildning
 Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som bas:
 
 1.  Kopiera klientinstallationsfilerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** till mappen **%Systemdrive%\Temp\Microsoft_Intune_Setup** på referensdatorn.
@@ -109,6 +98,12 @@ När måldatorn startar efter att installationsprogrammet för Windows slutfört
 När den automatiska registreringsuppgiften körs vid nästa schemalagda tidpunkt, kontrolleras förekomsten av registervärdet **WindowsIntuneEnrollPending** och ett försök görs för att registrera måldatorn i Intune. Om registreringen misslyckas av någon anledning försöks registreringsprocessen nästa gång uppgiften körs. Återförsöken fortsätter under en period av en månad.
 
 Den automatiska registreringsuppgiften för Intune registervärdet **WindowsIntuneEnrollPending** och kontocertifikatet tas bort från måldatorn när registreringen lyckas eller efter en månad.
+
+## Be användaren att göra registreringen själv
+
+Användare kan installera Intune-klientprogrammet genom att gå till  [http://portal.manage.microsoft.com](http://portal..manage.microsoft.com). Om webbportalen kan identifiera enheten som en Windows-dator visas en uppmaning om att registrera datorn genom att ladda ned Intune-klientprogrammet. När den har laddats ned kan användare installera programvaran för att lägga till datorerna i hanteringen.
+
+![På Intune-portalen visas en uppmaning om att hämta Intune-klientprogrammet](../media/software-client-download.png)
 
 ## Övervaka och kontrollera lyckade klientdistributioner
 Använd en av följande procedurer som hjälper dig att övervaka och kontrollera lyckade klientdistributioner.
@@ -139,6 +134,6 @@ Använd en av följande procedurer som hjälper dig att övervaka och kontroller
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d70a46d9c13aad1bc0a940836d83a99b93bb95e
-ms.openlocfilehash: a753ecfa08adcd27049c70889c50e10618ecddba
+ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
+ms.openlocfilehash: 1f6a4b3988dbebce23a59b4ba14c79cd28cf6882
 
 
 ---
@@ -24,6 +24,11 @@ Läs mer om nyheterna i den här versionen av Microsoft Intune. Du kan också l�
 
 Hybriddistributioner (Configuration Manager med Intune) kommer också att ha stöd för alla dessa funktioner. Mer information om nya hybridfunktioner finns på [sidan med nyheter om hybridfunktioner](https://technet.microsoft.com/en-US/library/mt718155(TechNet.10).aspx).
 <!---@Barry, the above blurb stays in each version, but make sure Tyler signs off each time. Also, remember to set the ms.date in the metadata to the sprint release. --->
+
+>[!IMPORTANT] 
+>Blogginlägg – Se till att mobila enheter uppdateras med Microsoft Intune<br>
+>Mot bakgrund av de nyligen inträffade "Trident"-attackerna med skadlig kod på iOS-enheter har vi publicerat ett nytt blogginlägg, [Ensuring mobile devices are up to date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Kontrollera att mobila enheter är uppdaterade med Microsoft Intune).
+
 
 ## Augusti 2016
 ## Apphantering
@@ -122,8 +127,8 @@ I september krävs det av alla användare att de använder den senaste versionen
 I augusti släpper Intune en uppdaterad Microsoft Intune Managed Browser-app för iOS som bara stöder enheter som kör iOS 8.0 eller senare. Enheter som kör iOS 7.1 kan fortfarande använda Managed Browser-appen, men uppmana ändå användarna att uppdatera till iOS 8.0 eller senare så att de får åtkomst till och kan dra full nytta av de nya funktionerna i Managed Browser.  
 <!---TFS 1313253--->
 
-- **Företagsportalappar för Windows 8 och Windows Phone 8 blir inaktuella från september 2016** <br/>
-Med början i september 2016 upphör Microsoft Intunes stöd för Microsoft Intune-företagsportalappar för Windows Phone 8- och Windows 8-plattformarna. Uppdatera enheter till Windows 8.1 och Windows Phone 8.1 och använd motsvarande företagsportalappar för Windows 8.1 och Windows Phone 8.1 om du vill fortsätta att distribuera appar till dessa enheter.
+- **Företagsportalappar för Windows 8 och Windows Phone 8 blir inaktuella** <br/>
+Från och med oktober 2016 kommer Microsoft Intune inte längre stödja företagsportalappar för Windows 8 och Windows Phone 8. Microsoft Intunes stöd för Windows Phone 8-plattformen kommer också att upphöra. Följaktligen kommer du inte att kunna registrera eller uppdatera Windows Phone 8-enheter. Men du kan fortsätta att hantera Windows Phone 8- och Windows 8-enheter som redan har registrerats. Uppdatera enheter med Windows Phone 8 och Windows 8 till Windows Phone 8.1 respektive Windows 8.1 och använd motsvarande företagsportalappar för Windows 8.1 och Windows Phone 8.1. På så sätt kan du fortsätta att distribuera appar till dessa enheter utan avbrott.
 <!---TFS 1255391--->
 
 <!--- - **Custom Group Targeting of Notification Rules Removal.**<br/>
@@ -153,6 +158,6 @@ Information om det senaste halvårets nyheter i Intune finns i artikeln [Tidigar
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -14,16 +14,16 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: 83564abcfcbb6597656e19031e5af1c7d7a3252d
+ms.sourcegitcommit: 20101b6c65bcab413441e16b3ac6a08a982e6a28
+ms.openlocfilehash: 3794a610996f5001e52f4d19d4cdafd849de3455
 
 
 ---
 
 # Using your iOS or Mac OS X device with Intune
 
-Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
-- Installation av företagsportalappen och registrering av Intune 
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
+- Installation av företagsportalappen och registrering av Intune
 - Hanteringsuppgifter efter registrering
 - Efterlevnadsproblem
 
@@ -64,6 +64,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Vanliga hanteringsuppgifter för Windows-dator | Microsoft Intune"
-description: "Läs mer om hur du hanterar datorer som kör Intune-klienten."
+description: "Studera det här avsnittet om du vill veta mer om hur du hanterar Windows-datorer som kör Intune-klientprogrammet."
 keywords: 
 author: NathBarn
 manager: angrobe
@@ -13,22 +13,24 @@ ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6ddb0fda0e818b09d274276076fd6310d29b99cb
-ms.openlocfilehash: 8ce6b10478927177e5d6d8de0677cf06bed00f08
+ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
+ms.openlocfilehash: 9ef18ee054928fcfb12a36fe8ac3ad3c2909f6c1
 
 
 ---
 
-# Vanliga hanteringsuppgifter för Windows-dator med Microsoft Intune datorklient
-Läs mer om hur du hanterar datorer som kör Intune-klienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+# Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet
+Läs anvisningarna i det här avsnittet om hur du hanterar datorer som kör Intune-klientprogrammet. Om du inte har installerat klienten på dina datorer än läser du [Installera Intune-klientprogrammet](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 ## Använd principer för att förenkla datorhantering
-### Hantera Windows-brandväggen
-Med principer förenklas administrationen av Windows-brandväggen på hanterade datorer. Mer information finns i [Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
+
+Windows-datorer som kör Intune-klientprogrammet kan hanteras med hjälp av Intunes principer för **datorhantering**.
+
+![Principmall för Windows-datorer](../media/pc_policy_template.png)
 
 ### Hantera Microsoft Intune Center
-Med Microsoft Intune Center kan användarna:
+Användarna ser Intune-klientprogrammet som **Microsoft Intune Center**. Med Microsoft Intune Center kan användarna:
 
 -   Hämta program från företagsportalen.
 
@@ -49,11 +51,14 @@ Microsoft Intune Center är installerat på alla hanterade datorer. Du kan konfi
 |**Webbadress**|Webbadressen till supportwebbplatsen.<br /><br />Maxlängd: 150 tecken|
 |**Anteckningar**|En kommentar som visas för användarna.<br /><br />Maxlängd: 120 tecken|
 
-### Hantera inställningar för programuppdateringar
-Använd principer för att konfigurera de inställningar som hanterade datorer använder för att söka efter och hämta uppdateringar från Microsoft och från tredje part. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
+## Inställningar för programuppdateringar
+Använd principer för att konfigurera de inställningar som hanterade datorer använder för att söka efter och hämta uppdateringar från Microsoft och från tredje part. De här uppdateringarna innefattar inte operativsystemsuppgraderingar (dvs. uppgradering från Windows 7 till Windows 10 eller uppgradering från en version av Windows 10 till en senare version). Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
 
-### Hantera Endpoint Protection-inställningar
+### Endpoint Protection-inställningar
 Använd principer för att konfigurera inställningar för Endpoint Protection , som du sedan distribuerar till hanterade datorer. De omfattar bland annat genomsökningsscheman och åtgärder som ska vidtas om skadlig kod upptäcks. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
+
+## Inställningar för Windows-brandväggen
+Med principer förenklas administrationen av Windows-brandväggen på hanterade datorer. Mer information finns i [Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md).
 
 ## Visa maskinvaru- och programvaruinventering.
 Intune samlar in detaljerad information om de hanterade datorernas maskinvara och programvara. Använd informationen i följande procedurer för att lära dig skapa:
@@ -113,17 +118,17 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 2.  Markera de enheter som du vill dra tillbaka och välj sedan **Dra tillbaka/Rensa**.
 
-Om du vill återregistrera en dator i Intune installerar du om klientprogrammet på datorn med hjälp av informationen i avsnittet [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Om du vill återregistrera en dator i Intune installerar du om klientprogrammet på datorn enligt anvisningarna i avsnittet [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Om en dator inte kan ansluta till Intune visas ett meddelande i arbetsytan **Instrumentpanel**.
 
 När du drar tillbaka en dator:
 
--   Tas den bort från Intune-inventeringen och licensen som är kopplad till datorn görs tillgänglig så att den kan användas igen.
+-   Tas den bort från hanteringen och inventeringen i Intune, och licensen som är kopplad till datorn görs tillgänglig så att den kan användas igen. Ta ur bruk/Rensa tar bort Intune-programvaruklienten, men tar inte bort appar eller data från datorn. Det görs ingen fullständig rensning på datorn.
 
 -   Visas dess status inte längre i Intune-konsolen.
 
--   Intune tar bort klientprogrammet från datorn. Om datorn inte är ansluten till Intune-tjänsten tas klientprogrammet bort nästa gång datorn ansluts.
+-   Tar Intune bort klientprogrammet från datorn. Om datorn inte är ansluten till Intune-tjänsten tas klientprogrammet bort nästa gång datorn ansluts.
 
 -   Microsoft Endpoint Protection tas bort från datorn. Om datorn har ett annat slutpunktsprogram installerat och det inaktiveras kan programmet aktiveras igen efter att Microsoft Intune Endpoint Protection har tagits bort, så att datorerna skyddas.
 
@@ -160,9 +165,9 @@ Innan du kan distribuera programvara till en användare måste du koppla använd
 > [!TIP]
 > Om du vill begränsa slutanvändarnas möjlighet att länka sig själva till datorer aktiverar du alternativet **Begränsa användarnas möjlighet att länka sig själva till datorer** i principen **Agentinställningar för Microsoft Intune**.
 
-## Begär och ge fjärrhjälp till Windows-datorer som använder Intune-klientprogrammet
+## Begära och tillhandahålla hjälp för Windows-datorer
 
-Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran så att användare av datorer som kör Intune-klientprogrammet kan få fjärrhjälp från dig. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp.
+Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran (köps separat) så att användare av datorer som kör Intune-klientprogrammet kan få fjärrhjälp från dig. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp.
 Den här funktionen ersätter den befintliga Windows-fjärrhjälpsfunktionen i Intune.
 
 
@@ -211,6 +216,6 @@ Från menyn **Åtgärder** i fönstret **TeamViewer** väljer du **Avsluta sessi
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO1-->
 
 

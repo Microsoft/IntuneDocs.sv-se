@@ -4,7 +4,7 @@ description: "Använd Intune för att visa information om maskinvara för enhete
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/17/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,15 @@ ms.assetid: 312911fe-b963-4949-9911-ae425e0590b2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: df4e0bc8a818f22d6f7327f9f1348f67882e0c49
-ms.openlocfilehash: 80b157c021099513854b8ffc1fe09cd2922ee0c2
+ms.sourcegitcommit: 18ef1ca18244b202a35fc8fc23fc994105b7b47e
+ms.openlocfilehash: ff55533499494488cd4cd692c6e36fe547ade3e4
 
 
 ---
 
 # Förstå dina enheter inventering i Microsoft Intune
 Med Microsoft Intune kan du visa inventeringen för registrerade enheter och Windows-datorer som kör Intune-klientprogrammet.
+Vanligtvis samlar Intune in inventering från hanterade enheter var sjunde dag. Det gör att det kan dröja ett tag innan nyligen gjorda ändringar återspeglas i rapporterna, t.ex. om enhetsnamnet eller mängden ledigt lagringsutrymme ändras.
 
 ## Vad samlas in från registrerade enheter?
 Om du vill se inventeringen som samlas in av mobila enheter kör du [Rapporter om inventering av mobila enheter](understand-microsoft-intune-operations-by-using-reports.md). Intune samlar in följande inventering från registrerade enheter:
@@ -114,6 +115,6 @@ Om du vill visa inventeringen som samlas in av Windows-datorer kör du [datorinv
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

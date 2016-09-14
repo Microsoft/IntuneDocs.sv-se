@@ -2,7 +2,7 @@
 title: "Felsöka problem med appdistributionen | Microsoft Intune"
 description: "Det här avsnittet innehåller information om hur du löser problem med appdistributionen i Microsoft Intune."
 keywords: 
-author: robstack
+author: robstackmsft
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -13,29 +13,18 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 44af28c18980e549924139badd8f3ca439dc29b3
+ms.sourcegitcommit: aa96cf3a1909e3ea2187a3beb0aede3228894504
+ms.openlocfilehash: 9f4b91bd523c82665bcac54902b2e8cc9c72ef75
 
 
 ---
 
 # Felsöka problem med appdistributionen i Microsoft Intune
-Det här avsnittet innehåller information om hur du löser problem med appdistributionen i Microsoft Intune.
-
-Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
-
+Börja här om du har problem med att distribuera och hantera appar med Intune. Det här avsnittet innehåller några vanliga problem du kan stöta på samt lösningar på problemen.
 
 ## Vanliga appdistributionsproblem
 
-### Om du inte kan logga in på Microsoft Intune-företagsportalen
-
-1.  Kontrollera om ditt konto finns på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) eller om det har inaktiverats.
-
-2.  Kontrollera att du är etablerad på det här kontot i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854).
-
-3.  I [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) kontrollerar du att du använder rätt användarnamn och lösenord när du loggar in till Intune och att formatet är: **joe@domain.com**.
-
-### Om Kontakta IT-informationen saknas i företagsportalen
+### Kontakta IT-informationen saknas i företagsportalen
 
 1.  I Intune-administrationskonsolen väljer du **Admin**&gt;**Företagsportal**
 
@@ -57,15 +46,6 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 4.  Om iOS-förloppsindikatorn för appnedladdning visar på slutförd nedladdning men installationen misslyckas, kan det bero på att det är något fel på appfilerna som du tillhandahöll.
 
-### Om du kommer till en tidigare plats i iTunes App Store när du klickar på en länk till en iOS-app
-
-1.  Den aktuella iTunes App Store-sessionen öppnas till den föregående appsidan.
-
-2.  Stäng iTunes App Store på enheten och försök använda länken på nytt.
-
-### Om det inträffar ett fel när du startar en iOS-app
-
-1.  Appens utgångsdatum är kanske inte giltigt.
 
 ### Om appen fastnar i pågående läge under hämtning
 
@@ -78,12 +58,6 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 1.  Kontrollera att din organisations brandvägg tillåter åtkomst till Apples etablerings- och certifieringswebbplatser.
 
 2.  Mer information finns i Dokumentation för Apple-utvecklare.
-
-### Fel: Utgivaren finns inte
-Du använder **Lägg till ytterligare programvaruavtal** för att lägga till ett tredjeparts licensavtal. Du försöker lägga till utgivaren från sidan **Andra avtal för programvarulicenser**. Sidan innehåller en lista med befintliga utgivare i alfabetisk ordning.
-Du anger utgivaren som saknas men får ett felmeddelande som anger **Utgivaren finns inte**.
-
-Detta beteende är inbyggt. Intune tillhandahåller endast licensspårning för populära program. Intune kräver att programvaran rapporteras av minst fyra separata konton innan den görs tillgänglig som ett alternativ i licensieringsbelastningen.
 
 ### Om hanterade appar inte rapporterar installationsstatus
 
@@ -98,13 +72,13 @@ I följande tabell listas vanliga fel som kan inträffa under Intune-appdistribu
 |0x80073CF0|Paketet kunde inte öppnas.|Möjliga orsaker:<br /><br />-   Paketet är osignerat.<br />-   Utgivarens namn matchar inte signeringscertifikatets ämne.<br /><br />Mer information finns i AppxPackagingOM-händelseloggen.|
 |0x80073CF3|Paketet klarade inte av uppdaterings-, beroende- eller konfliktverifiering|Möjliga orsaker:<br /><br />-   Det inkommande paketet är i konflikt med ett installerat paket.<br />-   Det gick inte att hitta ett angivet paketberoende.<br />-   Paketet stöder inte korrekt processorarkitektur.<br /><br />Mer information finns i AppXDeployment-Server-händelseloggen.|
 |0x80073CFB|Det tillhandahållna paketet har redan installerats, och återinstallering av paketet är blockerad|Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt till det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<br /><br />-   Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.<br />-   Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.|
-|0x87D1041C|Programinstallationen lyckades men programmet identifieras inte.|- Användarinstallerad app från företagsportalen som sedan har avinstalleras direkt från enheten. Installera om appen från företagsportalen.<br /><br />- Det kan finnas ett matchningsfel mellan versionsnumret för en branschspecifik app som identifieras av Intune och den version som är installerad på enheten. Se till att Intune har rätt version och installera om appen.|
+|0x87D1041C|Programinstallationen lyckades men programmet identifieras inte.|- Appen har distribuerats av Intune och sedan avinstallerats (troligtvis av slutanvändaren). Be användaren att installera om appen via företagsportalen. De appar som krävs ominstalleras automatiskt nästa gång enheten checkar in.|
 
 ### Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

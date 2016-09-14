@@ -9,8 +9,9 @@
 ## [Registrera enheter](enroll-devices-in-microsoft-intune.md)
 ### [Dags att registrera enheter i Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
 #### [iOS- och Mac-hantering](set-up-ios-and-mac-management-with-microsoft-intune.md)
-#### [Windows 10 Mobile och Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
+#### [Android-hantering](set-up-android-management-with-microsoft-intune.md)
 #### [Hantering av Windows-enheter ](set-up-windows-device-management-with-microsoft-intune.md)
+#### [Windows 10 Mobile och Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Hantera företagsägda enheter](manage-corporate-owned-devices.md)
 #### [Registrera företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Installationsassistent för iOS-registrering](ios-setup-assistant-enrollment-in-microsoft-intune.md)
@@ -24,6 +25,7 @@
 #### [Exchange-åtkomstregler](exchange-access-rules-for-mobile-devices.md)
 ### [Hantera datorer](manage-windows-pcs-with-microsoft-intune.md)
 #### [Installera PC-klienten](install-the-windows-pc-client-with-microsoft-intune.md)
+#### [Vanliga datorhanteringsuppgifter](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Lösa PC-principkonflikter](resolve-gpo-and-microsoft-intune-policy-conflicts.md)
 
 ## [Konfigurera enheter](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
@@ -49,7 +51,7 @@
 ### [Hantera användare och enheter med hjälp av grupper](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
 ### [Mappa enheter till grupper](categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Förstå dina enheter med inventering](understand-your-devices-with-inventory-in-microsoft-intune.md)
-### [Vanliga datorhanteringsuppgifter](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
+
 
 ## [Skydda enheter](protect-your-devices-with-microsoft-intune.md)
 ### [Fjärrlåsning och lösenordsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
@@ -76,6 +78,7 @@
 ## [Konfigurera appar](update-apps-using-microsoft-intune.md)
 ### [Uppdatera appar ](update-apps-using-microsoft-intune.md)
 ### [Konfigurationsprinciper för iOS-appar](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md)
+### [Etableringsprofiler för iOS-mobilappar](ios-mobile-app-provisioning-profiles.md)
 ### [Hantera Internetåtkomst](manage-internet-access-using-managed-browser-policies.md)
 
 
@@ -105,6 +108,7 @@
 #### [Skapa och distribuera MAM-principer](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 #### [MAM-principer för Android](android-mam-policy-settings.md)
 #### [MAM-principer för iOS](ios-mam-policy-settings.md)
+#### [Verifiera MAM-principer](validate-mobile-application-management.md)
 #### [Övervaka principefterlevnad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 #### [Slutanvändarupplevelse](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
@@ -133,6 +137,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

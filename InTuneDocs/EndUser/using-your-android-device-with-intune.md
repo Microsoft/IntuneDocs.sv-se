@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
+ms.sourcegitcommit: 63f86f135d369d8c96903c0add1e194fd9d5ded2
+ms.openlocfilehash: e98aa19d38af47ba2d19a2a67b7a836796aded2a
 
 
 ---
@@ -22,9 +22,9 @@ ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 # Med hjälp av en Android-enhet med Intune
 
-Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
 
-- Installation av företagsportalappen och registrering av Intune 
+- Installation av företagsportalappen och registrering av Intune
 - Hanteringsuppgifter efter registrering
 - Efterlevnadsproblem
 
@@ -71,6 +71,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 
