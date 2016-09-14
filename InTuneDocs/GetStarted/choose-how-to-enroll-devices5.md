@@ -13,8 +13,8 @@ ms.assetid: ed9250aa-e894-4eac-92b8-5f1a3748e255
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: a5f80058e004f119acc9a918123c897b72b71314
-ms.openlocfilehash: 026ac12f12046f59eaac6e8bedc0669bcd93fb75
+ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
+ms.openlocfilehash: fea9e10de761fa1bacfb87d07ce571d40f8286bc
 
 
 ---
@@ -26,7 +26,11 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 ## **Hur ska du hantera dina delade iOS-enheter?**
 
   > [!div class="button"]
-  [DEP-registrering av iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)<br>[Direktregistrering av iOS >](/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)<br>[DEM-registrering >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
+  [DEP-registrering av iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
+  > [!div class="button"]
+  [Direktregistrering av iOS >](/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+  > [!div class="button"]
+  [DEM-registrering >](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
   - **Apples enhetsregistreringsprogram (DEP)** – Köpta eller hanterade iOS-enheter med DEP kan vara mål för en registreringsprofil. När användarna sätter på sina enheter för första gången laddar enheten ned DEP-profilen och registreras med DEP-profilen.
 
@@ -39,6 +43,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

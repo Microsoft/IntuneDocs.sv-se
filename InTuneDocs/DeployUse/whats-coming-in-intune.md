@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
-ms.openlocfilehash: f45fc02003c6b40cc15fabeffff35cf0cde1a830
+ms.sourcegitcommit: b0653af30aa6e75888dd72c5b3a4afa0b2b1d596
+ms.openlocfilehash: a3cc5ea639c31e3fec08e86f27f118e193b8f4b3
 
 
 ---
@@ -84,9 +84,6 @@ Förutom ändringarna i grupphantering kommer **följande funktion att bli inakt
 På företagsportalens webbplats kan slutanvändare trycka på en ny "Feedback"-länk, längst ned på sidan, för att skicka feedback till Microsoft om sina erfarenheter av webbplatsen. Den insamlade, avidentifierade feedbacken hjälper Microsoft att förbättra företagsportalens webbplats för användare.
 <!--- TFS 1313657--->
 
-### Tillägg av Meddelanden på företagsportalen för Android
-Vi publicerar en uppdatering av företagsportalen för Android i september där vi lägger till en ny **Meddelanden**-ikon på startsidan. När användaren trycker på ikonen visas sidan **Meddelanden**. På sidan visas alla objekt som kräver åtgärder i företagsportalappen, till exempel inkompatibla enheter, registreringsuppdatering och aktivering av registreringar. Om du också använder företagsportalappen för iOS kan du redan se dessa meddelanden. När sidan **Meddelanden** läggs till kommer sidan **Konfiguration av företagsåtkomst** inte att visas varje gång du startar eller återupptar företagsportalen för Android, förutsatt att enheten redan är registrerad. Vi vet att många av er har skapat instruktioner till användarna och uppskattar att få veta på förhand när era instruktioner/skärmbilder behöver uppdateras. Uppdatera din dokumentation med de kommande ändringarna. Om du behöver nya skärmbilder kan du gå till https://aka.ms/androidcpupdate.  
-
 ### Förbättringar i hur iOS-slutanvändare får sina appar
 Följande ändringar av app-panelerna i företagsportalsappen för iOS görs i september så att användarna ska kunna få flera vyer på en och samma plats, nämligen företagsportalens webbplats för alla deras appar. Apples begränsningar förhindrar för närvarande att verksamhetsspecifika appar och hanterade App Store-appar listas i företagsportalsappen, och kräver att besöker olika vyer om de vill hitta alla sina appar.
 
@@ -135,6 +132,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 24b8ecbf-7336-4543-8094-32688bda0b8f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: a5f80058e004f119acc9a918123c897b72b71314
-ms.openlocfilehash: 43bbb8590738182a26efcbeead1e59eff9e5f20d
+ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
+ms.openlocfilehash: fc2f95b0e780b42dbeab977c340f3b2b7c9881e5
 
 
 ---
@@ -25,7 +25,9 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 ## **Är de företagsägda enheterna delade eller har de särskilda användare?**
 
 > [!div class="button"]
-[Delad >](choose-how-to-enroll-devices4.md)<br>[Dedikerad >](choose-how-to-enroll-devices6.md)
+[Delad >](choose-how-to-enroll-devices4.md)
+> [!div class="button"]
+[Dedikerad >](choose-how-to-enroll-devices6.md)
 
 - **Delade företagsägda enheter** – Dessa enheter har inte en enskild användare och är vanligtvis inte konfigurerade för åtkomst till e-post. Exempel är till exempel kioskenheter eller aktivitetsbaserade enheter som användare hämtar från en pool vid behov och sedan lämnar tillbaka. Vilka registreringsmetoder som rekommenderas beror på enheternas plattform.
 
@@ -36,6 +38,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
