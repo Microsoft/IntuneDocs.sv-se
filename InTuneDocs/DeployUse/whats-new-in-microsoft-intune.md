@@ -13,8 +13,8 @@ ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 500cc93b595e04cea987bda699abf94ae010443a
-ms.openlocfilehash: 1f6a4b3988dbebce23a59b4ba14c79cd28cf6882
+ms.sourcegitcommit: c636efee82331d6feac75153b872526f7af7c882
+ms.openlocfilehash: 814312b0ac6055ffff2efad2ddbdaa8664f84fde
 
 
 ---
@@ -29,6 +29,21 @@ Hybriddistributioner (Configuration Manager med Intune) kommer också att ha st�
 >Blogginlägg – Se till att mobila enheter uppdateras med Microsoft Intune<br>
 >Mot bakgrund av de nyligen inträffade "Trident"-attackerna med skadlig kod på iOS-enheter har vi publicerat ett nytt blogginlägg, [Ensuring mobile devices are up to date using Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/) (Kontrollera att mobila enheter är uppdaterade med Microsoft Intune).
 
+## September 2016
+
+## Uppdateringar av företagsportalen
+### Android
+
+**Tillägg av "Meddelanden" på företagsportalen för Android**
+
+En ny ikon för meddelanden har lagts till på företagsportalen för Android på startsidan. När användaren trycker på ikonen visas sidan Meddelanden. På sidan visas alla objekt som kräver åtgärder i företagsportalappen, till exempel inkompatibla enheter, registreringsuppdatering och aktivering av registreringar. Om du använder företagsportalappen för iOS kan du redan se dessa meddelanden. Den nya sidan Meddelanden innebär att användarna inte kommer att se sidan Konfiguration av företagsåtkomst varje gång de startar eller återupptar företagsportalen, förutsatt att enheten redan är registrerad. Om du skapar din egen vägledning för slutanvändare kanske du vill uppdatera din dokumentation för den här ändringen. Sök efter uppdaterade skärmbilder [här](https://aka.ms/androidcpupdate).  
+<!---TFS 1095560--->
+
+### Windows
+**En feedback-knapp har lagts till i Windows Phone 8.1-företagsportalappen**
+
+I företagsportalappen för Windows Phone 8.1 kan slutanvändarna skicka feedback om appen med hjälp av en ny "skicka feedback"-knapp. För att hitta knappen trycker användare på "trepunkts"-menyn längst ned till höger på skärmen Företagsportalapp och sedan på **skicka feedback**. Den insamlade, avidentifierade feedbacken hjälper Microsoft att förbättra företagsportalappen för användare.
+<!---TFS 1317806--->
 
 ## Augusti 2016
 ## Apphantering
@@ -87,6 +102,10 @@ Microsoft Intune Managed Browser-appen för iOS har uppdaterats för att stödja
 <!---TFS 1313253 checked--->
 
 ## Kommande nyheter
+
+### Stöd för iOS 10
+Intune kommer att stöda iOS 10 fullt ut. Mer information kommer att följa publiceringen av iOS 10.
+
 ### Intune-grupper övergår till Azure Active Directory-grupper i början av september 2016
 Intune får en ny grupphanteringsupplevelse. ADD-säkerhetsgrupper (Azure Active Directory) kommer att användas som användargrupper och enhetsgrupper i Intune. Dessa grupper kommer att användas för all grupphantering, principdistribution och profildistribution **när vi introducerar den nya Azure-baserade Intune-administratörsportalen**.
 
@@ -158,6 +177,6 @@ Information om det senaste halvårets nyheter i Intune finns i artikeln [Tidigar
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
