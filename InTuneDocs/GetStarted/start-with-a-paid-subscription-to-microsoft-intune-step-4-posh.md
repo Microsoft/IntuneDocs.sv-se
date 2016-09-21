@@ -13,14 +13,14 @@ ms.assetid: d2d31c80-c32c-4315-8271-1b0cf9a1f78a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: a2dbb6dadb2b68ace349e8b9b0567c132ac55482
+ms.sourcegitcommit: 8f99159079002b9e44dd1ba328b0f2fc079770d8
+ms.openlocfilehash: 9a3e28cad00f99035b18182a33c24bcb714cca19
 
 
 ---
 
 # Hantera Intune-licenser med PowerShell
-Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste du först tilldela varje användare en licens till din Intune-prenumeration enligt beskrivningen i [Hantera Intune-licenser](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Men organisationer som använder Microsoft EMS (Enterprise Mobility Suite) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
+Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste du först tilldela varje användare en licens till din Intune-prenumeration enligt beskrivningen i [Hantera Intune-licenser](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Organisationer som använder Microsoft Enterprise Mobility + Security har kanske dock användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
 
 Om du vill tilldela användarlicenser för EMS-tjänster öppnar du PowerShell som administratör på en dator där [Azure Active Directory-modulen för Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) är installerad. Du kan installera PowerShell på en lokal dator eller på en AD FS-server.
 
@@ -67,6 +67,6 @@ Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 
