@@ -56,7 +56,7 @@
 ## [Skydda enheter](protect-your-devices-with-microsoft-intune.md)
 ### [Fjärrlåsning och lösenordsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
 ### [Skydda Windows-enheter med MFA](protect-windows-devices-with-multi-factor-authentication.md)
-### [Kontrollera Microsoft Passport-inställningar på enheter](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
+### [Kontrollera inställningarna för Windows Hello för företag](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Kringgå aktiveringslåset på iOS](help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
 ### [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
 #### [Programuppdateringar](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)

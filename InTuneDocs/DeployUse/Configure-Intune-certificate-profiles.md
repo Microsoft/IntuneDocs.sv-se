@@ -4,7 +4,7 @@ description: "Läs om hur du skapar en certifikatprofil för Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e3f7cac8eb3495aad3835ec4713d67a58383c66
-ms.openlocfilehash: 8b08f8fde6136b8eca61f6ae7a8c21635f7d452e
+ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
+ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
 
 
 ---
@@ -48,15 +48,9 @@ Du måste skapa en certifikatprofil för en betrodd certifikatutfärdare innan d
 
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Ange den information som efterfrågas för att konfigurera inställningar för betrodda certifikatprofiler för Android, iOS, Mac OS X, Windows 8.1 eller Windows Phone 8.1.
-
-    - I inställningen **Certifikatfil** importerar du certifikatet för betrodd rotcertifikatutfärdare (CER-fil) som du exporterade från den utfärdande certifikatutfärdaren. Inställningen **Målarkiv** gäller endast för enheter som kör Windows 8.1 och senare, och endast om enheten har flera certifikatarkiv.
-    -  Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare.  
-        De två variabler som stöds för närvarande för det anpassade formatet är `Common Name (CN)` och `Email (E)`. Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:  
-
-        `CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US`  
-
-        I det här exemplet har administratören skapat ett format som utöver variablerna `CN` och `E` använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [Funktionen CertStrToName](https://msdn.microsoft.com/en-us/library/windows/desktop/aa377160.aspx) visar en lista över strängar som stöds.  
+3.  Ange den information som efterfrågas för att konfigurera inställningar för betrodda certifikatprofiler för Android, iOS, Mac OS X, Windows 8.1 eller Windows Phone 8.1. 
+4.  I inställningen **Certifikatfil** importerar du certifikatet för betrodd rotcertifikatutfärdare (CER-fil) som du exporterade från den utfärdande certifikatutfärdaren. Inställningen **Målarkiv** gäller endast för enheter som kör Windows 8.1 och senare, och endast om enheten har flera certifikatarkiv.
+    
 4.  Välj **Spara princip**.
 
 Den nya principen visas på arbetsytan **Princip**. Nu kan du distribuera den.
@@ -79,7 +73,7 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 3.  Följ anvisningarna på profilsidan för att konfigurera inställningarna för SCEP-certifikatet.
     > [!NOTE]
     >
-    > Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare.
+    > Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare (endast i iOS-profiler).
     >
     > De två variabler som stöds för närvarande för det anpassade formatet är `Common Name (CN)` och `Email (E)`. Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:
 
@@ -136,6 +130,6 @@ Nästa steg är att läsa om hur du skyddar e-post-, Wi-Fi- och VPN-profiler med
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 564edd672052f41215294a9562101289f20128db
+ms.sourcegitcommit: f86fe2710318209a2a4373beea1590c5343cbf4c
+ms.openlocfilehash: 08e112bfae9a3655f428d53f68922fd3ff4713b4
 
 
 ---
@@ -30,7 +30,7 @@ När användarkonton synkroniseras från din lokala Active Directory eller lägg
 Om din prenumeration delar Azure AD med andra molntjänster som är associerade med din prenumeration har du också tillgång till användare som har lagts till i dessa tjänster. Dessa användare har ingen licens till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] förrän du tilldelar licenser till var och en av dem.
 
 > [!TIP]
-> Om alternativet för att tilldela eller återkalla en licens till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] är inaktiverat kan din prenumeration inkludera alternativ för volymlicensiering, t.ex. alternativen som är tillgängliga när du använder [Enterprise Mobility Suite](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx). Information om hur du tilldelar eller återkallar licenser finns i dokumentationen för dina licensalternativ.
+> Om alternativet för att tilldela eller återkalla en licens till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] är inaktiverat kan din prenumeration inkludera alternativ för volymlicensiering, t.ex. alternativen som är tillgängliga när du använder [Enterprise Mobility Suite + Security](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx). Information om hur du tilldelar eller återkallar licenser finns i dokumentationen för dina licensalternativ.
 
 ## Tilldela en Intune-användarlicens
 
@@ -92,6 +92,6 @@ Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 
