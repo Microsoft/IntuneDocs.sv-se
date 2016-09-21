@@ -4,7 +4,7 @@ description: "Använd VPN-profiler för att distribuera VPN-inställningar till 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 475c68f8812627cd58f86bb74d8c48988f53f7ed
+ms.sourcegitcommit: 957edcf6910dd15f15ab5020773233c6a6ba0ea7
+ms.openlocfilehash: fb5fbbe50295d3fc26f3cd4def4f40898bb6ffd2
 
 
 ---
@@ -27,7 +27,7 @@ Exempel: Anta att du vill förse alla enheter som kör iOS med de inställningar
 Du kan konfigurera följande enhetstyper med VPN-profiler:
 
 * Enheter som kör Android 4 och senare
-* Enheter som kör iOS 7.1 och senare
+* Enheter som kör iOS 8.0 och senare
 * Enheter som kör Mac OS X 10.9 och senare
 * Registrerade enheter som kör Windows 8.1 och senare
 * Enheter som kör Windows Phone 8.1 och senare
@@ -45,6 +45,8 @@ Intune har stöd för att skapa VPN-profiler som använder följande anslutnings
 Anslutningstyp |iOS och Mac OS X  |Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop och Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Ja |Ja   |Nej    |     Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
+Cisco (IPsec)|Ja |Nej   |Nej  |  Nej|Nej  |Nej | Nej|
+Citrix|Ja |Nej   |Nej  |  Nej|Nej  |Nej | Nej|
 Pulse Secure|Ja  |Ja |Ja   |Nej  |Ja  |Ja| Ja|        
 F5 Edge Client|Ja |Ja |Ja |Nej  |Ja  |   Ja |  Ja|   
 Dell SonicWALL Mobile Connect|Ja |Ja |Ja |Nej  |Ja |Ja |Ja|         
@@ -83,7 +85,7 @@ Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösen
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
     * **VPN-profil (Android 4 och senare)**
-    * **VPN-profil (iOS 7.1 och senare)**
+    * **VPN-profil (iOS 8.0 och senare)**
     * **VPN-profil (Mac OS X 10.9 och senare)**
     * **VPN-profil (Windows 8.1 och senare)**
     * **VPN-profil (Windows Phone 8.1 och senare)**
@@ -111,6 +113,7 @@ Inställningsnamn  |Mer information
 **Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas endast när anslutningstypen är **Dell SonicWALL Mobile Connect**.
 **Fingeravtryck**|Ange en sträng, till exempel ”Contoso fingeravtryckskod” som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på VPN-servern medan fingeravtrycket visas. (Användaren verifierar fingeravtrycket manuellt och väljer **betrodd** för att ansluta.) Det här alternativet visas endast när anslutningstypen är **CheckPoint Mobile VPN**.
 **VPN per app**|Välj det här alternativet om du vill koppla VPN-anslutningen till en iOS- eller Mac OS X-app så att anslutningen öppnas när appen körs. Du kan associera VPN-profilen med en app när du distribuerar programvaran. Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+**VPN på begäran**|Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare. Anvisningar för hur du konfigurerar detta finns i [VPN på begäran för iOS-enheter](#on-demand-vpn-for-ios-devices).
 **Identifiera proxyinställningar automatiskt** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
 **Använd automatiskt konfigurationsskript** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill använda ett automatiskt konfigurationsskript för att ange inställningarna och sedan ange en URL till den fil som innehåller inställningarna. Mer information finns i dokumentationen till Windows Server.
 **Använd proxyserver** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Välj det här alternativet om VPN-servern kräver en proxyserver för anslutningen och ange proxyserverns adress och portnummer. Mer information finns i dokumentationen till Windows Server.
@@ -141,6 +144,32 @@ Du kan begränsa VPN-användningen på Windows 10-enheter till specifika appar g
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
+### VPN på begäran för iOS-enheter
+Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
+
+> [!NOTE]
+>  
+> Du kan inte använda per app-VPN och VPN på begäran i samma princip.
+ 
+1. Leta reda på principkonfigurationssidan och sök efter **på begäran-regler för den här VPN-anslutningen**. Kolumnerna som är märkta med **Matchning**, villkoret som reglerna söker efter och **Åtgärd**, den åtgärd som principen utlöser när villkoret matchas. 
+2. Skapa en regel genom att välja **Lägg till**. Det finns två typer av matchningar som du kan konfigurera i regeln. Du kan bara konfigurera en typ per regel.
+  - **SSID:er**, som refererar till trådlösa nätverk. 
+  - **DNS-sökdomäner**, som är...  Du kan använda fullständiga kvalificerade domännamn som *team. corp.contoso.com* eller använda domäner som *contoso.com*, vilket är detsamma som att använda * *. contoso.com*.
+3. Valfritt: Ange en URL-strängavsökning som är en URL som regeln använder som ett test. Om den enhet där den här profilen har installerats kan få tillgång till denna URL utan omdirigering upprättas VPN-anslutningen och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängavsökningsplatsen. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att URL:en testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till mål-URL:en via VPN.
+4. Välj någon av följande åtgärder:
+  - **Ansluta**
+  - **Utvärdera anslutning**, som har tre inställningar A. **Domänåtgärd**  – välj **Anslut om det behövs** eller **Anslut aldrig**
+      B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs** 
+      C. **Nödvändig URL-strängsavsökning** – en URL av typen HTTP eller HTTPS (rekommenderas), t.ex. *https://vpntestprobe.contoso.com*. Den regel som ska kontrollera om det finns ett svar från den här adressen. Om inte, och om **Domänåtgärd** är **Anslut om det behövs** utlöses VPN-anslutningen.
+     > [!TIP]
+     >
+     >Ett exempel på när du kan använda den här åtgärden är när vissa platser i företagsnätverk kräver en direkt anslutning eller en VPN-företagsnätverksanslutning, medan andra inte gör det. Om du listar *corp.contoso.com* i en **kommaavgränsad lista över DNS-sökdomäner** kan du välja **Anslut om det behövs** och sedan lista specifika platser i nätverket som kan kräva VPN, t.ex. *sharepoint.corp.contoso.com*. Regeln kontrollerar sedan om *vpntestprobe.contoso.com* kan nås. Om den inte nås utlöses VPN för SharePoint-webbplatsen.
+  - **Ignorera** – detta orsakar inte någon ändring i VPN-anslutningen. Om VPN-nätverket är anslutet, så låt det vara anslutet. Om det inte är anslutet, så anslut det inte. Du kan till exempel ha en regel som ansluter VPN-nätverket för alla dina interna företagswebbplatser, men vill göra något av dessa interna webbplatser tillgänglig enbart när enheten faktiskt är ansluten till företagsnätverket. I så fall kan skapa du en ignoreringsregel för den webbplatsen.
+  - **Koppla från** – koppla från enheter från VPN-nätverket när villkoren uppfylls. Du kan t.ex. lista din företags trådlösa nätverk i fältet **SSID** och skapa en regel som kopplar bort enheter från VPN-nätverket när de ansluter till något av dessa nätverk.
+
+Domänspecifika regler utvärderas före allmänna domänregler. 
+
+
 ## Distribuera principen
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
@@ -163,6 +192,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
