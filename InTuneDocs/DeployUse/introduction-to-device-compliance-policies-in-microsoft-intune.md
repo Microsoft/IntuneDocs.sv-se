@@ -13,8 +13,8 @@ ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44443db664753b202cc3fa07f8b76894320dc55d
-ms.openlocfilehash: f3bb686dda7bdf1e9557be2b5f5e0da2fb4d27e4
+ms.sourcegitcommit: 0be23ec10b8e380d57fc8263c68f08c0287c1b93
+ms.openlocfilehash: 7a9d68de99c624ccfe4d7d741c1c8ac5c0044314
 
 
 ---
@@ -32,9 +32,9 @@ Du distribuerar efterlevnadsprinciper till användare. När en efterlevnadsprinc
 
 I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprinciper och hur inkompatibla inställningar hanteras när principen används med en princip för villkorlig åtkomst.
 
---------------
+-----------------------------
 
-|Principinställning| Windows 8.1 och senare| Windows Phone 8.1 och senare| iOS 6.0 och senare|Android 4.0 och senare<br/>Samsung KNOX Standard 4.0 och senare|
+|Principinställning| Windows 8.1 och senare| Windows Phone 8.1 och senare| iOS 8.0 och senare|Android 4.0 och senare<br/>Samsung KNOX Standard 4.0 och senare|
 |-----|----|----|----|----|
 |**Konfiguration av PIN-kod eller lösenord** |Åtgärdad|Åtgärdad|Åtgärdad|I karantän|
 |**Enhetskryptering**|E.t.|Åtgärdad|Åtgärdad (genom angiven PIN-kod)|I karantän|
@@ -43,7 +43,9 @@ I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprincipe
 |**Lägsta version av operativsystemet**|I karantän|I karantän|I karantän|I karantän|
 |**Högsta version av operativsystemet**|I karantän| I karantän| I karantän| I karantän|
 |**Attesteringen av hälsotillstånd i Windows**|Windows 10 och Windows 10 Mobile är i karantän.<br /><br />Inställningen gäller inte för Windows 8.1|E.t.|E.t.|E.t.|
---------------
+
+------------------------------
+
 **Åtgärdad** = Efterlevnad påtvingas av enhetens operativsystem (t.ex. om användaren tvingas ange en PIN-kod).  Det finns inga fall där inställningen inte uppfyller efterlevnadskraven.
 
 **I karantän** = Enhetens operativsystem påtvingar inte efterlevnad (Android-enheter tvingar t.ex. inte användaren att kryptera enheten). När enheterna inte uppfyller efterlevnadskraven utförs följande åtgärder:
@@ -62,6 +64,6 @@ I följande tabell förtecknas de enhetstyper som stöds av efterlevnadsprincipe
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

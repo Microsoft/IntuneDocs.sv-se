@@ -13,8 +13,8 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16be49504b24269f9463905ab5767acbda136a0a
-ms.openlocfilehash: a13c03cde29c46a78577b58f85daad30a076bf89
+ms.sourcegitcommit: a4cc8b7e34e8809eebd7fdec8ffac0599c96d309
+ms.openlocfilehash: ce27fc737fdf47903d7554eb15f24f07b3524406
 
 
 ---
@@ -43,7 +43,7 @@ Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som A
 
 |Krav|Mer information|
 |---------------|--------------------|
-|Operativsystem | Windows-enheten måste köra Windows 7 eller senare. |
+|Operativsystem | Windows-enheten måste köra Windows Vista eller senare. Home edition-versioner stöds inte.|
 |Administrativ behörighet|Det konto som installerar klientprogramvaran måste ha lokal administratörsbehörighet på enheten.|
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.<br /><br />Så visar du versionen för Windows Installer på en dator:<br /><br />-   Högerklicka på **%windir%\System32\msiexec.exe**, och sedan på **Egenskaper**.<br /><br />Du kan hämta den senaste versionen av Windows Installer från [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) på webbplatsen Microsoft Developer Network.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogramvaran måste du avinstallera Configuration Manager- eller System Management Server-klientprogramvara från datorn.|
@@ -75,6 +75,6 @@ Intune-klientagenten körs vanligtvis tyst i bakgrunden och kräver sällan omfa
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

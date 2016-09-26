@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55d3bd060b5567e98ca9ee6f4c4a003ce40a0371
-ms.openlocfilehash: 370a21f559fd1f86f60aeef5cbddea05d6fea682
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: c51c5ae199ca2950dc0371b400727af534a70f09
 
 
 ---
@@ -41,7 +41,7 @@ Du måste skapa en certifikatprofil för en betrodd certifikatutfärdare innan d
 1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
 2.  Lägg till en av dessa principtyper:
     - **Android &gt; Betrodd certifikatprofil (Android 4 och senare)**
-    - **iOS &gt; Betrodd certifikatprofil (iOS 7.1 och senare)**
+    - **iOS &gt; Betrodd certifikatprofil (iOS 8.0 och senare)**
     - **Mac OS X &gt; Betrodd certifikatprofil (Mac OS X 10.9 och senare)**
     - **Windows &gt; Betrodd certifikatprofil (Windows 8.1 och senare)**
     - **Windows &gt; Betrodd certifikatprofil (Windows Phone 8.1 och senare)**
@@ -63,7 +63,7 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
 2.  Lägg till en av dessa principtyper:
     - **Android &gt; SCEP-certifikatprofil (Android 4 och senare)**
-    - **iOS &gt; SCEP-certifikatprofil (iOS 7.1 och senare)**
+    - **iOS &gt; SCEP-certifikatprofil (iOS 8.0 och senare)**
     - **Mac OS X &gt; SCEP-certifikatprofil (Mac OS X 10.9 och senare)**
     - **Windows &gt; SCEP-certifikatprofil (Windows 8.1 och senare)**
     - **Windows &gt; SCEP-certifikatprofil (Windows Phone 8.1 och senare)**
@@ -92,7 +92,7 @@ Den nya principen visas på arbetsytan **Princip**. Nu kan du distribuera den.
   - **Android &gt; .PFX-certifikatprofil (Android 4 och senare)**
   - **Windows &gt; PKCS #12-certifikatprofil (.PFX) (Windows 10 och senare)**
   - **Windows &gt; PKCS #12-certifikatprofil (.PFX) (Windows Phone 10 och senare)**
-  - **iOS > PKCS #12 (.PFX)-certifikatprofil (iOS 7.1 och senare)**    
+  - **iOS > PKCS #12 (.PFX)-certifikatprofil (iOS 8.0 och senare)**    
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Ange den information som efterfrågas i principformuläret.
 4.  Välj **Spara princip**.
@@ -130,6 +130,6 @@ Nästa steg är att läsa om hur du skyddar e-post-, Wi-Fi- och VPN-profiler med
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

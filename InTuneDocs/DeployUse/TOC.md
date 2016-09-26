@@ -66,8 +66,9 @@
 ## [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md)
 
 ## [Lägga till appar](add-apps.md)
-### [Lägga till appar för mobila enheter](add-apps-for-mobile-devices-in-microsoft-intune.md)
-### [Lägga till appar för Windows-datorer](add-apps-for-windows-pcs-in-microsoft-intune.md)
+### [Lägga till appar för registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md)
+### [Lägga till appar för datorer med Intune-klienten](add-apps-for-windows-pcs-in-microsoft-intune.md)
+#### [Hantera licensavtal för datorer med Intune-klienten](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Distribuera appar](deploy-apps.md)
 ### [Distribuera appar till enheter och datorer](deploy-apps-in-microsoft-intune.md)
 ### [Övervakning av appar](monitor-apps-in-microsoft-intune.md)
@@ -101,6 +102,11 @@
 #### [Begränsa e-poståtkomsten: exempel](restrict-email-access-example-scenarios.md)
 
 ### [Begränsa åtkomsten till nätverk (Cisco ISE)](restrict-access-to-networks.md)
+### [Begränsa åtkomsten baserat på enhet, nätverk och programrisk](restrict-access-based-on-device-network-app-risk.md)
+#### [Konfigurera Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+#### [Aktivera Lookout i Intune](enable-lookout-mtp-connection-in-intune.md)
+#### [Distribuera Lookout for Work-appar](configure-and-deploy-lookout-for-work-apps.md)
+#### [Aktivera skydd mot enhetshot i policyn för efterlevnad](enable-device-threat-protection-rule-in-compliance-policy.md)
 
 ### [Skydda appdata med MAM](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Azure Portal för MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md)
@@ -137,6 +143,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

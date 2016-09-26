@@ -4,7 +4,7 @@ description: "Skapa principer som styr inställningar och funktioner på iOS-enh
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/30/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cac39b60226939334032d954eb49d1417493b28d
-ms.openlocfilehash: 00e3a1b65c8475384bb05e64a4ef9f5d9de348ff
+ms.sourcegitcommit: cd5930995a6da130fedcb6d89851460e6f0614eb
+ms.openlocfilehash: 24540a74ce98adbf3f908cbea401328f027867ca
 
 
 ---
@@ -39,7 +39,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vil
 Om den inställning som du söker efter inte visas i det här avsnittet kan du eventuellt skapa den med hjälp av en anpassad iOS-princip med vilken du kan importera inställningar som du har skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Mer information finns i "Anpassade principinställningar" senare i det här avsnittet.
 
 ### Säkerhetsinställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -58,7 +58,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
 ### Systeminställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -71,7 +71,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt sparbok när låst**|Tillåt användare att komma åt appen Sparbok när enheten är låst.|
 
 ### Molninställningar för dokument och data
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -85,7 +85,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt iCloud-bildbibliotek**|Tillåt att användaren lagrar bilder på iCloud. Om den här inställningen inaktiveras raderas de bilder som redan finns lagrade på iCloud.|
 
 ### Programinställningar för webbläsaren
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -97,7 +97,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt bedrägerivarning**|Tillåt bedrägerivarningar i webbläsaren.|
 
 ### Programinställningar för appar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -111,7 +111,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 
 
 ### Programinställningar för spel
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -119,7 +119,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt spel för flera personer**|Tillåt användaren att spela spel för flera personer på enheten.|
 
 ### Programinställningar för medieinnehåll
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -129,7 +129,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 
 
 ### Enhetskapacitetsinställningar för maskinvara
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -138,7 +138,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Kräv ett kopplat lösenord för utgående AirPlay-begäranden**|Kräv ett kopplat lösenord när användaren använder AirPlay för att strömma innehåll till andra Apple-enheter.|
 
 ### Enhetskapacitetsinställningar för mobil
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -147,7 +147,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt hämtning av global bakgrund under nätverksväxling**|Tillåt att enheten att hämtar data, till exempel e-post när den nätverksväxlar på ett mobilnät.|
 
 ### Enhetskapacitetsinställningar för funktioner
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -196,7 +196,7 @@ I listan över **kompatibla &amp; inkompatibla appar** skapar du en lista över 
 > [!NOTE]
 > Följande information gäller inställningar för helskärmsläge på iOS-enheter:
 >
-> -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller enhetsregistreringshanteraren för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
+> -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller [Apples enhetsregistreringsprogram](ios-device-enrollment-program-in-microsoft-intune) för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 > -   Om iOS-appen som du anger har installerats efter det att du har distribuerat konfigurationsprincipen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
 
 ### Referensinformation för kompatibla och icke-kompatibla appar
@@ -222,14 +222,14 @@ Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla a
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
 ### Registreringsinställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
 |**Tillåt aktiveringslås när enheten är i övervakat läge**|Aktivera aktiveringslåset på övervakade iOS-enheter.|
 
 ### Inställningar för övervakat läge
-Du kan konfigurera följande inställningar på enheter som kör iOS 7.1 och senare i övervakat läge.
+Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och senare i övervakat läge.
 
 ### Inställningar för enhetsbegränsningar för övervakat läge
 
@@ -265,9 +265,9 @@ Du kan konfigurera följande inställningar på enheter som kör iOS 7.1 och sen
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
-|**Tillåt ändringar av inställningar för att betro företagsappar**||
-|**Tillåt installation av appar endast med hjälp av Apple-konfiguration och iTunes**||
-|**Tillåt automatisk nedladdning av appar**||
+|**Tillåt ändringar av inställningar för att betro företagsappar**|Låter användarna att ändra förtroendeinställningarna för företagsappar.|
+|**Tillåt installation av appar endast med hjälp av Apple-konfiguration och iTunes**|Aktiverar eller inaktiverar App Store på enhetens startsida. Användarna kan fortfarande använda iTunes eller Apple Configurator-verktyget för att installera och uppdatera appar.|
+|**Tillåt automatisk nedladdning av appar**|Tillåt att appar som köpts på andra enheter automatiskt laddas ned till den här enheten. Den här inställningen påverkar inte uppdateringar av appar.|
 |**Tillåt ändringar i Find My Friends-appinställningar**|Tillåt att användaren ändrar inställningarna för Find My Friends-appen.|
 |**Tillåt åtkomst till iBooks-butiken**|Tillåt användare att bläddra bland och köpa böcker i iBooks-butiken.|
 |**Tillåt användning av appen Meddelanden på enheten**|Tillåt att appen Meddelanden används för att skicka sms.|
@@ -382,6 +382,6 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

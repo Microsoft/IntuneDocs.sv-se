@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d8a4fd4673560d6e2ffb4264ba8d8e56b0e5cb8d
-ms.openlocfilehash: 59b8cc2ad33521fd4575e46d78129c168da757b3
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: ef4041b7d9f47d9e1e1463e62274f93597fc6503
 
 
 ---
@@ -31,7 +31,7 @@ IT-administratörer eller användare kan också välja att installera alternativ
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
 -   Windows Phone 8 och senare
 -   Windows 10 (för datorer), Windows 10 Mobile, och senare
--   iOS 7.1 och senare
+-   iOS 8.0 och senare
 -   Samsung KNOX Standard (4.0 och senare)
 
 Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur många e-postmeddelanden som ska synkroniseras och, beroende på enhetstypen, vilka innehållstyper som ska synkroniseras.
@@ -71,7 +71,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
 
     -   **E-postprofil för Samsung KNOX Standard (4.0 och senare)**
 
-    -   **E-postprofil (iOS 7.1 och senare)**
+    -   **E-postprofil (iOS 8.0 och senare)**
 
     -   **E-postprofil (Windows Phone 8 och senare)**
 
@@ -122,6 +122,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

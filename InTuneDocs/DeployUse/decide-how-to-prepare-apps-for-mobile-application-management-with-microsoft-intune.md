@@ -4,23 +4,23 @@ description: "Informationen i det här avsnittet hjälper dig att avgöra när d
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-ms.reviewer: jeffgilb
+ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: d2d11cc8bed7575b2fe818c9aa5b2359a62a77e0
+ms.sourcegitcommit: 70f9fb5580b114fe1ba14a1bd05de58467d5cd00
+ms.openlocfilehash: b5dd5bec0910a8ce3a940b5ed288907aba0f7ee4
 
 
 ---
 
 # Förbereda appar för hantering av mobilprogram med Microsoft Intune
-Du kan använda principer för hantering av mobilprogram i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
+Du kan använda principer för hantering av mobilprogram (MAM) i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## Intunes apphanteringsverktyg
 Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en wrapper runt appen, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram. Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering.  Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) respektive [Appomslutningsverktyget för iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
@@ -29,10 +29,24 @@ Apphanteringsverktyget stöder inte appar i App Store eller Play Store eller fun
 
 Du bör använda apphanteringsverktyget i stället för SDK, om appen har redan skrivits eller om källkoden är inte tillgänglig.
 
+**Programhanteringsverktyget för MAM på enheter som inte har registrerats i Intune stöds för närvarande i förhandsversionen. För mer information, se artikeln [Skydda verksamhetsspecifika appar på enheter som inte har registrerats i Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)**.
+
+### Plattformar som stöds
+
+|**Apphanteringsverktyg** | **Xamarin** |**Cordova** |
+|------|----|----|
+|**iOS** |Ja|Ja|
+|**Android**| Nej |Ja|
 ## Intune App SDK
 App SDK är utformat främst för kunder som har appar i App Store eller Play Store och vill kunna hantera appar med Intune. Alla appar kan dock dra nytta av integrera SDK, även interna affärsappar.
 
 Mer information om SDK:n finns i [Översikt](/intune/develop/intune-app-sdk). Om du vill börja använda SDK:n läser du [Komma igång med Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
+
+### Plattformar som stöds
+|**Intune App SDK** |**Xamarin** |**Cordova**
+|------|----|----|
+|**iOS**|Ja – Använd Xamarin-komponenten för Intune App SDK|Ja – Använd Cordova-insticksprogrammet för Intune App SDK|
+|**Android**| Ja – Använd Xamarin-komponenten för Intune App SDK|Ja – Använd Cordova-insticksprogrammet för Intune App SDK|
 
 ## Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
@@ -61,14 +75,14 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Selektiv rensning <br></br>**Obs!** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
 |Förhindra ”Spara som” |X||
 |Stöd för flera identiteter|X||
-
 ### Se även
+
 [Apphanteringsverktyg för Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)</br>
 [Apphanteringsverktyg för iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md)</br>
 [Aktivera hantering av mobilprogram i appar med SDK](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

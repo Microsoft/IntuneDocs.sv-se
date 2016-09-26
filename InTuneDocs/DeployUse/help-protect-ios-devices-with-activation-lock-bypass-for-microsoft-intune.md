@@ -13,14 +13,14 @@ ms.assetid: bb49e926-15c4-4f01-b6eb-cee6f7ee1984
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d0e2b79a19dfce1541506bc1da89cb716a1d0af
-ms.openlocfilehash: c03c309e1e27a47b65a87aae8833b88680b0d8e8
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: 2b44779fdac0764a3e7a18f1c365050e9800f902
 
 
 ---
 
 # Skydda iOS-enheter med Kringgå Aktiveringslås för Microsoft Intune
-Microsoft Intune kan hjälpa dig att hantera iOS aktiveringslås, en funktion i Hitta Min iPhone appen för enheter med iOS 7.1 och senare. Aktiveringslås aktiveras automatiskt när en användare öppnar appen Hitta min iPhone på en enhet. När den har aktiverats måste användarens Apple-ID och lösenord anges innan någon kan: 
+Microsoft Intune kan hjälpa dig att hantera iOS-aktiveringslåset, en funktion i Hitta min iPhone-appen för enheter med iOS 8.0 och senare. Aktiveringslås aktiveras automatiskt när en användare öppnar appen Hitta min iPhone på en enhet. När den har aktiverats måste användarens Apple-ID och lösenord anges innan någon kan: 
 
 -   Inaktivera Hitta Min iPhone
 
@@ -43,7 +43,7 @@ För att hjälpa att lösa de här problemen, så introducerade Apple med iOS 7.
 > Övervakat läge för iOS-enheter gör att du kan använda Apple Configurator för att låsa en enhet och begränsa funktionerna till specifika företagsändamål. Övervakat läge är generellt sett bara till för företagsägda enheter.
 
 ## Hur Intune hjälper dig att hantera aktiveringslås
-Intune kan begära status för aktiveringslås för både övervakade och oövervakade enheter som kör iOS 7.1 och senare. Enbart för övervakade enheter kan Intune hämta koden för att kringgå aktiveringslåset och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda koden som användarnamn och ett tomt lösenord.
+Intune kan begära status för aktiveringslåset för både övervakade och oövervakade enheter som kör iOS 8.0 och senare. Enbart för övervakade enheter kan Intune hämta koden för att kringgå aktiveringslåset och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda koden som användarnamn och ett tomt lösenord.
 
 **Företagets fördelar med detta är att**:
 
@@ -76,7 +76,7 @@ Du kan se vilka enheter som använder aktiveringslås på två sätt:
 
     -   Inte aktiverad
 
-    Rutan **Status Aktiveringslås** är tom för enheter som inte kör iOS 7.1 eller senare.
+    Rutan **Status för aktiveringslås** är tom för enheter som inte kör iOS 8.0 eller senare.
 
 -   Välj en enhet i en gruppvy för att se status för aktiveringslås i informationspanelen.
 
@@ -92,6 +92,6 @@ Du kan se vilka enheter som använder aktiveringslås på två sätt:
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 
