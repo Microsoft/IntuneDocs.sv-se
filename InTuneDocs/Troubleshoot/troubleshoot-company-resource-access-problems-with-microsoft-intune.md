@@ -4,7 +4,7 @@ description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb0aeac2f94dfde50d9398b09c6b21c7ae40624
-ms.openlocfilehash: 144fa2e18670805ef46cf2d3db86ec254cdfdf77
+ms.sourcegitcommit: 03f7433bc46d6a24498104bed7e5f1f366aca890
+ms.openlocfilehash: 114d4107dc73b3ad905de3fe02ffb81fa2e0e954
 
 
 ---
@@ -33,7 +33,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Hämtar innehåll|Möjlig orsak: Jobbstatus 30 visar att en användare misslyckades med att ladda ned en app.<br /><br />Troliga orsaker till detta kan vara:<br /><br />Enheten förlorade internetanslutning medan nedladdningen pågick.<br /><br />Certifikatet som utfärdades för enheten vid registreringen kan ha löpt ut.<br /><br />Lösningar:<br /><br />Starta företagsapparna från kontrollpanelen på enheten för att kontrollera att enhetens certifikat inte har löpt ut. Om det har det måste du omregistrera enheten.<br /><br />Kontrollera att enheten är ansluten till internet och försök att begära appen igen.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Nedladdning av innehåll klart||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Installation pågår||
-|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|InstallationFel uppstod|Installationen av appen misslyckades efter nedladdning.<br /><br />Kodsigneringscertifikatet som appen undertecknades med finns inte på enheten.<br /><br />Programmet är beroende av ett ramverk som inte är installerat på enheten.<br /><br />Se till att kodsigneringscertifikatet som appen undertecknats med finns på enheten och kontrollera med administratören att ett sådant certifikat utfärdats för alla företagets registrerade Windows RT-enheter.<br /><br />Om installationsproblemet inte beror på ett saknat ramverk, måste administratören återpublicera programmet genom att paketera ramverket tillsammans med applikationspaketet.<br /><br />Det nedladdade applikationspaketet är inte giltigt, det kan ha skadats, eller är kanske inte kompatibelt med enhetens OS-version.|
+|60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Ett fel med installationen uppstod|Installationen av appen misslyckades efter nedladdning.<br /><br />Kodsigneringscertifikatet som appen undertecknades med finns inte på enheten.<br /><br />Programmet är beroende av ett ramverk som inte är installerat på enheten.<br /><br />Se till att kodsigneringscertifikatet som appen undertecknats med finns på enheten och kontrollera med administratören att ett sådant certifikat utfärdats för alla företagets registrerade Windows RT-enheter.<br /><br />Om installationsproblemet inte beror på ett saknat ramverk, måste administratören återpublicera programmet genom att paketera ramverket tillsammans med applikationspaketet.<br /><br />Det nedladdade applikationspaketet är inte giltigt, det kan ha skadats, eller är kanske inte kompatibelt med enhetens OS-version.|
 |70 (APP_CI_ENFORCEMENT_SUCCEEDED)|Installationen lyckades||
 |80 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Avinstallation pågår||
 |90 (APP_CI_ENFORCEMENT_ERROR)|Avinstallationsfel inträffade.||
@@ -127,7 +127,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016314112|0x87D17D00|22000:Ogiltig nyckelanvändning|
 |-2016315105|0x87D1791F|21007:Kan inte verifiera konto|
 |-2016315106|0x87D1791E|21006:Kan inte dekryptera certifikat|
-|-2016315107|0x87D1791D|21005:Kontot inte unikt|
+|-2016315107|0x87D1791D|21005: Kontot är inte unikt (En e-postprofil finns redan på enheten)|
 |-2016315108|0x87D1791C|21004:Kan inte skapa konto|
 |-2016315109|0x87D1791B|21003:Inget värdnamn|
 |-2016315110|0x87D1791A|21002:Kan inte uppfylla krypteringspolicyn från servern|
@@ -372,6 +372,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 
