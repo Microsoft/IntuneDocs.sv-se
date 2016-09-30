@@ -11,6 +11,12 @@
 ### [Användning av nätverksbandbredd](network-bandwidth-use.md)
 ### [Anpassade domännamn](domain-names-for-microsoft-intune.md)
 
+## [Välj hur du vill hantera enheter](choose-how-to-manage-devices.md)
+### [Funktioner för hantering av registrerade enheter](mobile-device-management-capabilities-in-microsoft-intune.md)
+### [Funktioner i Intune-klientprogrammet](windows-pc-management-capabilities-in-microsoft-intune.md)
+
+## [Migrera till Intune](migrate-to-intune.md)
+
 ## [Snabbstartsguide för Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logga in i Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Så här konfigurerar du ett eget domännamn](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
@@ -22,10 +28,6 @@
 ### [Registrera mobila enheter och installera en app](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](post-configuration-tasks.md)
 
-## [Välj hur du vill hantera enheter](choose-how-to-manage-devices.md)
-### [Funktioner för hantering av registrerade enheter](mobile-device-management-capabilities-in-microsoft-intune.md)
-### [Funktioner i Intune-klientprogrammet](windows-pc-management-capabilities-in-microsoft-intune.md)
-
 ## [Distributionsfaser för Intune-distributioner](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Projektomfång](project-scope.md)
 ### [Konceptbevis](proof-of-concept.md)
@@ -34,11 +36,12 @@
 ### [Åtgärder och underhåll](operations-and-maintenance.md)
 
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
+# [Nyheter](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
