@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: daecea644300ee1e47db9b028b72d71b3211f46d
+ms.sourcegitcommit: b7f11f752f6c38736a2dfa5875050f50bd86bae4
+ms.openlocfilehash: 14e43dadc0d7bc20238ec87447f311fdc864d891
 
 
 
@@ -64,9 +64,10 @@ Här är ett exempel på XML-koden för en Wi-Fi-profil för Android eller Windo
 
 > [!IMPORTANT]
 > 
-> `<protected>false</protected>`: Ställ in på **falskt**, eftersom **sant** kan orsaka att enheten förväntar sig ett krypterat lösenord och försöka att dekryptera det, vilket kan resultera i en misslyckad anslutning.
+> `<protected>false</protected>`måste vara inställt på **falskt**, eftersom **sant** kan orsaka att enheten förväntar sig ett krypterat lösenord och försöker att dekryptera det, vilket kan resultera i en misslyckad anslutning.
 > 
 >  `<hex>53534944</hex>` ska vara inställt på det hexadecimala värdet `<name><SSID of wifi profile></name>`.
+>  Windows 10-enheter kan returnera ett falskt *0x87D1FDE8 Reparationen misslyckades*-felmeddelande, men kommer ändå att ha etablerats med profilen.
 
     <!--
     <Name of wifi profile> = Name of profile
