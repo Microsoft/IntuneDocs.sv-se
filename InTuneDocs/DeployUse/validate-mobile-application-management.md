@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 translationtype: Human Translation
-ms.sourcegitcommit: 52d9301f6297065f752cea1dd19024efb11f0730
-ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
+ms.sourcegitcommit: 0736b5f24065f55d8fbd312395e4bb7226ebf619
+ms.openlocfilehash: 5b6253d3d4c969b6947d83b5c8695a484f8c1d27
 
 
 ---
@@ -24,10 +24,10 @@ ms.openlocfilehash: a92334871301523c33f7453038df3ae0fc1fd1a4
 Det här avsnittet innehåller information om hur du felsöker problem när du har konfigurerat hantering av mobila program (MAM). Dessa anvisningar gäller MAM-principer i Azure Portal.
 
 ### Söka efter problem
-Det är inte troligt att användarna rapporterar dessa fel eftersom MAM är ett verktyg för att skydda data. Om det finns ett problem med MAM-konfigurationen har användaren obegränsad åtkomst (vilket användaren även skulle ha utan MAM) och användaren är inte medveten om felet. Därför rekommenderar vi att du verifierar din MAM-konfiguration genom att testa MAM-principerna med en liten grupp användare som avsiktligt kan testa MAM-begränsningarna. 
+Det är inte troligt att användarna rapporterar dessa fel eftersom MAM är ett verktyg för att skydda data. Om det finns ett problem med MAM-konfigurationen har användaren obegränsad åtkomst (vilket användaren även skulle ha utan MAM) och användaren är inte medveten om felet. Därför rekommenderar vi att du verifierar din MAM-konfiguration genom att testa MAM-principerna med en liten grupp användare som avsiktligt kan testa MAM-begränsningarna.
 
 
-### Vad som ska kontrolleras 
+### Vad som ska kontrolleras
 
 Om testningen visar att MAM-principen inte fungerar som förväntat rekommenderar vi att du kontrollerar följande:
 
@@ -40,7 +40,7 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 
 2. Välj en användare i listan (eller sök efter och välj en användare) och välj sedan **Välj användare**. Längst upp i kolumnen **Apprapportering** kan du se om användaren är licensierad för MAM. Nedanför det kan du se om användaren är licensierad för O365 och appstatus för alla användarens enheter.
 
-![Appstatus för MAM](..\media\ts-mam-use-apps.png) 
+![Appstatus för MAM](..\media\ts-mam-user-apps.png) 
 
 ### Vad bör jag göra
 Åtgärder som kan vidtas baserat på användarens status:
@@ -57,6 +57,6 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
