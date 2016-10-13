@@ -4,7 +4,7 @@ description: "Använd principinställningarna som anges i det här avsnittet om 
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/31/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ce69e8a22f1b25dac7060ff575bbd97934eff91
-ms.openlocfilehash: 712883874f022ceb3f38473839fe0d6e4c373164
+ms.sourcegitcommit: b8522406a3c73746b09616c3ec917464cf751312
+ms.openlocfilehash: 6e482beb5e2edce648ecb6f1821baa6214fa0f2f
 
 
 ---
@@ -53,7 +53,7 @@ Ange följande information för varje OMA-URI-inställning som du vill lägga ti
 - **Värde** – Ange det värde som ska associeras med den OMA-URI som du har angett.
 
 ### Exempel
-Inställningen **Conectivity/AllowVPNOverCellular** är aktiverad på skärmbilden nedan. Detta innebär att en Windows 10-enhet öppnar en VPN-anslutning när enheten använder ett mobilnät.
+I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** aktiverats. Detta innebär att en Windows 10-enhet öppnar en VPN-anslutning när enheten använder ett mobilnät.
 
 > ![Exempel på en anpassad princip som innehåller VPN-inställningar](./media/custom-policy-example.png)
 
@@ -326,6 +326,6 @@ Alla inställningar gäller endast Windows 10 Desktop.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

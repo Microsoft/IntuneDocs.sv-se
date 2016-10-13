@@ -13,8 +13,8 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 27d993974d71b34b36cbd3216b83a1303689bf15
+ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
+ms.openlocfilehash: 0abe3a79135a9b6db14502f1132da0bd1537d445
 
 
 ---
@@ -32,7 +32,8 @@ När en målanvändare försöker använda Skype för företag – Online på si
 
 **Innan** du konfigurerar en princip för villkorlig åtkomst för Skype för företag – Online måste du:
 - Ha en **prenumeration på Skype för företag – Online** och tilldela användare Skype för Business Online-licenser.
-- Ha en prenumeration på **Enterprise Mobility Suite** eller **Azure Active Directory Premium**.
+- Ha en **Enterprise Mobility + Security- eller Azure Active Directory Premium-prenumeration**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). 
+
 -   [Aktivera modern autentisering](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) för Skype för företag – Online.
 -  Alla dina slutanvändare måste använda **Skype för företag – Online**. Om du har en distribution med både Skype för företag – Online och Skype för företag lokalt tillämpas inte principen för villkorlig åtkomst på slutanvändarna.
 
@@ -116,6 +117,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

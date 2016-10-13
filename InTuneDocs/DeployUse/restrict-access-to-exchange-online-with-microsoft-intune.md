@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b01f5ca5bb389fc8a9d87e956796823fee6c0d
-ms.openlocfilehash: dd5ae411cc2541566805131d0076efc15875c988
+ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
+ms.openlocfilehash: e840783f3c50155a6f4f8801047ed474074218f6
 
 
 ---
@@ -26,14 +26,12 @@ Om du har en Exchange Online Dedicated-miljö och vill veta om den har den nya e
 Du kontrollerar e-poståtkomsten till Exchange Online eller till din nya Exchange Online Dedicated-miljö genom att konfigurera villkorlig åtkomst till Exchange Online i Intune.
 Mer information om hur villkorlig åtkomst fungerar finns i avsnittet [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
->[!IMPORTANT]
->Villkorlig åtkomst för datorer och Windows 10 Mobile-enheter med appar som använder modern autentisering är inte tillgängligt för alla Intune-kunder för närvarande. Om du redan använder dessa funktioner behöver du inte göra något. Du kan fortsätta använda dem.
-
->Om du inte skapat principer för villkorlig åtkomst för datorer eller Windows 10 Mobile för appar med modern autentisering, men vill göra detta, måste du registrera dig för en allmän förhandsversion av Azure Active Directory som innehåller enhetsbaserad villkorlig åtkomst för Intune-hanterade enheter eller domänanslutna Windows-datorer. Läs [det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/) om du vill veta mer.  
 
 **Innan** du konfigurerar villkorlig åtkomst måste du:
 
 -   Ha en **Office 365-prenumeration med Exchange Online (t.ex. E3)**, och användarna måste ha licens för Exchange Online.
+
+- Ha en **Enterprise Mobility + Security- eller Azure Active Directory Premium-prenumeration**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 -  Överväga att konfigurera den valfria **tjänst-till-tjänst-anslutningen i Microsoft Intune** som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Microsoft Exchange Online och som gör att du kan hantera enhetsinformationen via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen. Du måste inte använda anslutningen för att kunna använda efterlevnadsprinciper eller principer för villkorlig åtkomst, men den krävs för att köra rapporter som utvärderar effekten av villkorlig åtkomst.
 
@@ -84,9 +82,7 @@ Du kan begränsa åtkomst till **Outlook Web Access (OWA)** i Exchange Online vi
 
 **Webbläsare som inte stöds blockeras**.
 
-OWA-appar för iOS och Android stöds inte.  De ska blockeras via ADFS-anspråksregler.
-
-
+**OWA-appen för iOS och Android kan ändras så att modern autentisering inte används och inte stöds.  Åtkomst från OWA-appen måste blockeras via ADFS-anspråksregler.**
 
 
 Du kan begränsa åtkomsten till Exchange-e-post från den inbyggda **Exchange ActiveSync-e-postklienten** på följande plattformar:
@@ -101,14 +97,18 @@ Du kan begränsa åtkomsten till Exchange-e-post från den inbyggda **Exchange A
 
 Du kan konfigurera villkorlig åtkomst för datorer som kör Office-datorprogram om du vill komma åt **Exchange Online** och **SharePoint Online** för datorer som uppfyller följande krav:
 
--   Datorn måste köra Windows 7.0 eller Windows 8.1.
+-   Datorn måste köra Windows 7.0, Windows 8.1 eller Windows 10.
 
--   Datorn måste antingen vara domänansluten eller kompatibel med reglerna för efterlevnadsprinciper.
+  >[!NOTE]
+  > Om du vill använda villkorlig åtkomst med Windows 10-datorer måste du uppdatera dessa datorer med Windows 10 Anniversary Update.
 
-    För att vara kompatibel måste datorn vara registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och uppfylla principerna.
+  Datorn måste antingen vara domänansluten eller kompatibel med reglerna för efterlevnadsprinciper.
 
-    Domänanslutna datorer måste ställas in att [automatiskt registrera enheten](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) i Azure Active Directory.
-    >[!NOTE]
+  För att vara kompatibel måste datorn vara registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och uppfylla principerna.
+
+  Domänanslutna datorer måste ställas in att [automatiskt registrera enheten](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) i Azure Active Directory.
+
+  >[!NOTE]
     >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
 
 -   [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
@@ -177,6 +177,10 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 ### Steg 4: Konfigurera principen för villkorlig åtkomst
 
+>[!NOTE]
+> Du kan även skapa principer för villkorlig åtkomst i Azure AD-hanteringskonsolen. Azure AD-hanteringskonsolen låter dig skapa principer för villkorlig åtkomst för Intune-enheter (kallas för **device-based conditional access policy** (enhetsbaserad princip för villkorlig åtkomst) i Azure AD) utöver andra principer för villkorlig åtkomst som multifaktorautentisering.  Du kan även ange principer för villkorlig åtkomst för tredje parts företagsappar som Salesforce och Box som Azure AD stöder. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Så ställer du in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
+
+
 1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Exchange Online-princip**.
 ![Skärmbild av sidan för principer för villkorlig åtkomst för Exchange Online](../media/mdm-ca-exo-policy-configuration.png)
 
@@ -196,9 +200,6 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
         Om alternativet **Alla plattformar** väljs innebär det att Azure Active Directory använder denna princip på alla autentiseringsbegäranden, oavsett vilken plattform som rapporteras av klientprogrammet.  Alla plattformar måste registreras och vara kompatibla, med undantag för:
         *   Windows-enheter måste registreras och vara kompatibla, domänanslutna med lokal Active Directory, eller båda
         * Plattformar som inte stöds, t.ex. Mac OS.  Appar som använder modern autentisering som kommer från dessa plattformar kommer dock fortfarande att blockeras.
-
-        >[!TIP]
-           Du kanske inte ser det här alternativet om du inte redan använder villkorlig åtkomst för datorer.  Använd **Specifika plattformar** i stället. Villkorlig åtkomst för datorer är inte tillgängligt för alla Intune-kunder för närvarande.   Det finns mer information om hur du kan få åtkomst till den här funktionen [i det här blogginlägget](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azuread-conditional-access-policies-for-ios-android-and-windows-are-in-preview/).
 
     -   **Vissa plattformar**
 
@@ -262,6 +263,6 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 
