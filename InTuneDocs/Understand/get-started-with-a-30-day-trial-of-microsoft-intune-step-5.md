@@ -13,8 +13,8 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: 66dc46eb9dc1010b8c176ccfdea68b9a6e4b0618
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 7bd5f5d8f4931133a8ef1e697b2fec4cccd07b83
 
 
 ---
@@ -49,16 +49,10 @@ Installera appen **Intune-företagsportal** från Microsoft Corporation som finn
 ### Windows Phone 8.1
 Användarna installerar appen **Företagsportal** från Microsoft Corporation som finns i Windows Phone-butiken och loggar in med Intune-användarautentiseringsuppgifterna som lades till ovan.  Visa **Registrerade enheter** för att lägga till din enhet.
 
- ### Windows Phone 8.0
- Användare klickar på **Systeminställningar** &gt; **Företagsappar** och loggar in med de Intune-autentiseringsuppgifter som har lagts till ovan. Företagsportalappen distribueras till din telefon.
-
-Om du tillfrågas om en **Serveradress**skriver du manage.microsoft.com.
-
-
 ## Installera appen som distribuerades tidigare
 Öppna företagsportalen på den mobila enheten, välj **Appar**och installera sedan **Microsoft Skype**.
 
-Mer information om hantering av mobila enheter med hjälp av Intune finns i [Dags att registrera enheter i Microsoft Intune](/Intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
+Mer information om hantering av mobila enheter med hjälp av Intune finns i [Dags att registrera enheter i Microsoft Intune](/Intune/deploy-use/prerequisites-for-enrollment).
 
 ### Nästa steg
 Gratulerar! Du har precis slutfört steg 5 i genomgången av *Microsoft Intune-utvärderingen*.
@@ -69,6 +63,6 @@ Gratulerar! Du har precis slutfört steg 5 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 
