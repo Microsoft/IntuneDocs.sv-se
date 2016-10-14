@@ -151,7 +151,7 @@ Följande hjälper dig att utföra olika hanteringsuppgifter på hanterade dator
 Du kan visa statusen för en fjärraktivitet genom att trycka på länken **Fjärraktiviteter** i det nedre högra hörnet av Intune-konsolen. Dialogrutan **Aktivitetsstatus** visar aktuella fjärrhanteringsaktiviteter, aktivitetsstatus, enhetsnamn och eventuella rapporterade fel. Där finns även en länk till felsökningsinformation, om det är lämpligt.
 
 ## Övervaka Endpoint Protection
-Du övervaka status för skadlig kod på datorer med hjälp av arbetsytan **Skydd** i administrationskonsolen för [Microsoft Intune](https://manage.microsoft.com/). Den här arbetsytan innehåller två sidor:
+Du övervaka status för skadlig kod på datorer med hjälp av arbetsytan **Skydd** i [administrationskonsolen för Microsoft Intune](https://manage.microsoft.com/). Den här arbetsytan innehåller två sidor:
  - **Översikt av skydd** – Visar viktiga problem som länkar som du kan trycka på för mer information. Problem som kan visas är:
   - **Förekomst av skadlig kod som behöver åtgärder** – Klicka på länken om du vill se en lista över problem och åtgärder som krävs för att lösa problemen. Du kan utforska ytterligare detaljer i listan för att se vilka datorer som påverkas.
   - **Datorer med skadlig kod som behöver åtgärder** – Klicka på länken om du vill se en lista över alla datorer med olösta problem med skadlig kod samt åtgärder som krävs för att lösa problemen.
