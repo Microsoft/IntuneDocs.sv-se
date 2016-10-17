@@ -4,7 +4,7 @@ description: "Intune hjälper dig att hantera appar som du volyminköpt av Apple
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 164f9656246a46bf39e263fc3c5f16828674e1fd
-ms.openlocfilehash: a5c37c470f937c682d9138a636d1211f641da784
+ms.sourcegitcommit: 611cfb0176a922234c29642c305dd03699922c5f
+ms.openlocfilehash: 5981a2e147c89776d304226250170ec4114e35d8
 
 
 ---
@@ -26,6 +26,7 @@ Microsoft Intune hjälper dig att hantera appar som du har köpt via det här pr
 
 > [!Important]
 > Intune tilldelar för närvarande iOS-applicenser via volyminköpsprogrammet för företag (VPP) till användare och inte enheter. Därför måste användare ange sitt Apple-ID-lösenord för att installera appen.
+> Apple VPP för utbildning stöds inte för den här versionen.
 
 ## Hantera appar som köpts genom volyminköpsprogrammet för iOS-enheter
 Du kan köpa flera licenser för iOS-appar genom [Apples volyminköpsprogram för företag](http://www.apple.com/business/vpp/). När du gör det måste du bland annat skapa ett Apple VPP-konto från Apples webbplats och ladda upp din Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
@@ -89,6 +90,6 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 
