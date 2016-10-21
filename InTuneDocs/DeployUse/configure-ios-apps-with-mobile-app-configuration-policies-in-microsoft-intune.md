@@ -4,7 +4,7 @@ description: "Använd konfigurationsprinciper för mobilappar i Intune om du vil
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 917761ab6be2ccd94f32e7d2f12c0ed18d335d41
+ms.sourcegitcommit: 360865bcd97230e264ee3439407e8dd3017d0055
+ms.openlocfilehash: 1f239270c26a70b161e52c24e94ca5c2cae9ca3a
 
 
 ---
@@ -37,7 +37,7 @@ Med konfigurationsprinciper för mobilappar slipper du den här typen av problem
 Du distribuerar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och distribuerar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
 
 > [!TIP]
-> Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 7.1 och senare. Den stöder följande appinstallationstyper:
+> Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
 >
 > -   **Hanterade iOS-appar från App Store**
 > -   **App-paket för iOS**
@@ -139,6 +139,6 @@ När du skapar en konfigurationsfil för mobilappar kan du ange en eller flera a
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

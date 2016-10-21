@@ -4,7 +4,7 @@ description: "Läs om hur du uppgraderar Windows 10-enheter automatiskt till den
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 09/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 8589866a-3f13-489b-a5cd-cee017d16d54
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06a9c78300d7ff384299957102114c69c43a1ad5
-ms.openlocfilehash: 45130e3e12968d9df579a7a9d0cade0343b7c165
+ms.sourcegitcommit: f2aa531744dbd0774958e0450819e45e60a91086
+ms.openlocfilehash: 93a632f0f0b8d31149fa1d5fbe15b31d715d20a8
 
 
 ---
@@ -24,6 +24,12 @@ Med Microsoft Intunes **princip för versionsuppgradering** kan du automatiskt u
 * Windows 10 Desktop
 * Windows 10 Holographic
 * Windows 10 Mobil
+
+Följande uppgraderingsvägar stöds:
+- Från Windows 10 Pro till Windows 10 Enterprise
+- Från Windows 10 Home till Windows 10 Education
+- Från Windows 10 Mobile till Windows 10 Mobile Enterprise
+- Från Windows 10 Holographic Pro till Windows 10 Holographic Enterprise
 
 ## Innan du börjar
 Innan du börjar uppgradera enheter till den senaste versionen behöver du något av följande:
@@ -46,6 +52,6 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO5-->
 
 

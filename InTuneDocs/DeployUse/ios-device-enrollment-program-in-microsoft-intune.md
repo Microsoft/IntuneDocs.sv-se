@@ -13,8 +13,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08d4352ef88a266d05047d386247815f3765f552
-ms.openlocfilehash: affcca7ea406ea8a9d60f29add4385998b0ae29d
+ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
+ms.openlocfilehash: e898d070eb61583ff379821c9bf24f3997ae177e
 
 
 ---
@@ -50,7 +50,7 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 5.  **Lägg till princip för att registrera företagsenheter** I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsenhetsregistrering** och klickar sedan på **Lägg till**.
 
     Ange **Allmän** information, inklusive **Namn** och **Beskrivning**. Ange om enheter som är tilldelade till profilen har användartillhörighet eller tillhör en grupp.
-      - **Fråga efter användartillhörighet**: Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post som användaren.  **Användartillhörighet** ska konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (d.v.s. för att installera appar).
+      - **Fråga efter användartillhörighet**: Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post som användaren.  **Användartillhörighet** ska konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (d.v.s. för att installera appar). **Obs:** DEP-enheter med användartillhörigheter har inte stöd för multifaktorautentisering.
       - **Ingen användartillhörighet**: Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 
     Du kan också **Tilldela enheter till följande grupp**. Klicka på **Välj...** för att välja en grupp.
@@ -89,7 +89,7 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 
 6.  **Tilldela DEP-enheter för hantering** Gå till [DEP-portalen (Device Enrollment Program Portal)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med ditt företags Apple-ID. Gå till **Distribution av program** &gt; **Enhetsregistreringsprogram** &gt; **Hantera enheter**. Ange hur du ska **Välja enheter**, ange information om enheten och ange information om enhetens **serienummer**, **ordningsnummer**eller **Överför CSV-fil**. Välj därefter **Tilldela till server**, välj det &lt;ServerName&gt; som har angetts för Microsoft Intune och klicka sedan på **OK**.
 
-7.  **Synkronisera DEP-hanterade enheter** Öppna [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) som administratör, gå till **Administration** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram** och klicka på **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple. Om du vill se DEP-hanterade enheter efter synkroniseringen går du till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och sedan till **Grupper** &gt; **Alla företagsägda enheter**. På arbetsytan **Företagsägda enheter** visas ”Ej ansluten” för **Tillstånd** för en hanterad enhet tills enheten har startats och kör installationsassistenten för registrering.
+7.  **Synkronisera DEP-hanterade enheter** Öppna [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) som administratör, gå till **Administration** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram** och klicka på **Synkronisera nu**. En synkroniseringsbegäran skickas till Apple. Om du vill se DEP-hanterade enheter efter synkroniseringen går du till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och sedan till **Grupper** &gt; **Alla enheter**&gt;**Företagets förregistrerade enheter**&gt;**Efter iOS-serienummer**. På arbetsytan **Efter iOS-serienummer** visas ”Ej ansluten” för **Tillstånd** för en hanterad enhet tills enheten har startats och kör installationsassistenten för registrering.
 
     Om du vill följa Apples villkor för godkänd DEP-trafik tillämpar Intune följande begränsningar:
      -  En fullständig DEP-synkronisering kan endast köras var 7: e dag. Under en fullständig synkronisering uppdaterar Intune varje serienummer Apple har tilldelat Intune vare sig serien tidigare har synkroniserats eller inte. Om en fullständig synkronisering prövas inom 7 dagar efter den föregående fullständiga synkroniseringen, uppdaterar Intune endast serienummer som inte redan visas i Intune.
@@ -99,13 +99,13 @@ Innan du kan registrera företagsägda iOS-enheter med DEP måste du ha en DEP-t
 
 ## Ändringar i Intune-grupptilldelningar
 
-Från och med oktober flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil. Den här processen säkerställer att enheter som tilldelats till en enhetsgrupp i förväg automatiskt registreras i gruppen med principer och program distribuerade. [Läs mer om Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+Från och med november flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil. Den här processen säkerställer att enheter som tilldelats till en enhetsgrupp i förväg automatiskt registreras i gruppen med principer och program distribuerade. [Läs mer om Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
 ### Se även
 [Dags att registrera enheter](get-ready-to-enroll-devices-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

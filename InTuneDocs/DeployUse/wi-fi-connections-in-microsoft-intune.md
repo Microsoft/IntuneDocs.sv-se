@@ -1,10 +1,10 @@
 ---
 title: Wi-Fi-anslutningar | Microsoft Intune
-description: "Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i organisationen."
+description: "Använd Wi-Fi-profiler för att hjälpa användarna att ansluta till trådlösa nätverk."
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,19 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 300df17fd5844589a1e81552d2d590aee5615897
-ms.openlocfilehash: 271d2be675ab808365cd6869c69d386058f76ae8
+ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
+ms.openlocfilehash: beba0471f31a19dad78ddf71c07e323b18af18e8
 
 
 ---
 
-# Wi-Fi-anslutningar i Microsoft Intune
-Använd Wi-Fi-profiler i Microsoft Intune om du vill distribuera trådlösa nätverksinställningar till användare och enheter i din organisation. Med dessa inställningar blir det lättare för användarna att ansluta till trådlösa nätverk.
+# Konfigurera enheter för att ansluta till företagets trådlösa nätverk
+
+Använd Wi-Fi-profiler i Microsoft Intune om du vill distribuera trådlösa nätverksinställningar till användare och enheter i din organisation. När du distribuerar en Wi-Fi-profil får användarna åtkomst till ditt företags trådlösa nätverk utan att de behöver göra några inställningar själva.
 
 Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet **Contoso Wi-Fi** och att du vill konfigurera alla iOS-enheter så att de ansluter till det här nätverket. Så här ser processen ut:
+
+![Processammanfattning av Wi-Fi-profil](..\media\wi-fi-process-diagram.png) 
 
 1.   Skapa en Wi-Fi-profil som innehåller alla inställningar som behövs för att ansluta till det trådlösa nätverket **Contoso Wi-Fi**.
 
@@ -30,67 +33,38 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet **Contos
 
 3.   Det nya nätverket **Contoso Wi-Fi** visas i listan över trådlösa nätverk så att användarna enkelt kan ansluta till nätverket.
 
+
+## Skapa en Wi-Fi-profil
+
 Du kan distribuera Wi-Fi-profiler till följande plattformar:
 
 -   Android 4.0 och senare
 
--   iOS 7.1 och senare
+-   iOS 8.0 och senare
 
 -   Mac OS X 10.9 och senare
 
-För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil. Mer information finns i **Importera en Wi-Fi-profil** senare i det här avsnittet.
+För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil. Mer information finns i [Exportera eller importera en Wi-Fi-konfigurationsprofil för Windows-enheter](#export-or-import-a-wi-fi-configuration-profile-for-windows-devices).
 
-## Skapa en Wi-Fi-profil
-
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Princip** &gt; **Lägg till princip**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Lägg till princip**.
 
 2.  Välj en av följande principtyper och klicka sedan på **Skapa princip**:
 
-    -   **Wi-Fi-profil (Android 4 och senare)**
+    -   Wi-Fi-profil (Android 4 och senare)
 
-    -   **Wi-Fi-profil (iOS 7.1 och senare)**
+    -   Wi-Fi-profil (iOS 8.0 och senare)
 
-    -   **Wi-Fi-profil (Mac OS X 10.9 och senare)**
+    -   Wi-Fi-profil (Mac OS X 10.9 och senare)
 
     Det finns inga rekommenderade inställningar för den här principtypen. Du måste skapa en anpassad princip.
 
 3.  Ange ett namn och en beskrivning för profilen.
 
-4. Ange värdena för **nätverksanslutningar** :
-
-  |Inställningar|Mer information|
-|-----------|--------------------|
-|**Nätverksnamn**|Ange ett beskrivande namn för det trådlösa nätverket. Det här är namnet som visas på användarnas enheter när de väljer ett nätverk.|
-|**SSID (Service Set Identifier)**|Ange ett SSID för det trådlösa nätverk som enheterna ska anslutas till. SSID är skiftlägeskänsligt och visas inte för användaren.|
-|**Anslut automatiskt när det här nätverket är inom räckhåll**|Välj det här alternativet om enheterna automatiskt ska ansluta till det trådlösa nätverket när det är inom räckhåll.|
-|**Anslut när nätverket inte sänder sitt namn (SSID):**|Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan med nätverk (eftersom det är dolt).|
-
-5. Konfigurera **säkerhetsinställningarna** för den valda plattformen. De tillgängliga inställningarna beror på vilken säkerhetstyp du väljer.
-
-  #### För Android-enheter
-
-  |Inställningsnamn|Mer information|Använd när:|
-|----------------|--------------------|-------------|
-|**Säkerhetstyp**|Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|
-|**EAP-typ**|Välj typen EAP (Extensible Authentication Protocol) som används för att autentisera säkra trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.|
-|**Välj rotcertifikat för serververifiering**|Klicka på **Välj**och välj sedan den betrodda rotcertifikatsprofil som används för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Valfri **EAP-typ** är markerad.|
-|**Autentiseringsmetod**|Välj autentiseringsmetod för anslutningen:<br /><br />-   **Certifikat** för att ange klientcertifikatet<br />-   **Användarnamn och lösenord** för att ange en annan metod för autentisering|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
-|**Välj en annan metod än EAP för autentisering (inre identitet)**|Välj hur du ska autentisera anslutningen:<br /><br />-   **Inga**<br />-   **Okrypterat lösenord (PAP)**<br />-   **CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Microsoft CHAP (MS-CHAP)**<br />-   **Microsoft CHAP Version 2 (MS-CHAP v2)**<br /><br />Vilka alternativ som är tillgängliga beror på vilken EAP-typ du väljer.| **Autentiseringsmetoden** är **användarnamn och lösenord**.|
-|**Aktivera identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
-|**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Klicka på **Välj**och välj sedan den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda SCEP-certifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och en **EAP-typ** är markerad.|
-
-  #### För iOS- och Mac OS X-enheter
-
-  |Inställningsnamn|Mer information|Använd när:|
-|----------------|--------------------|-------------|
-|**Säkerhetstyp**|Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Personal/WPA2-Personal**<br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **WEP**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|
-|**EAP-typ**|Välj typen EAP (Extensible Authentication Protocol) som används för att autentisera säkra trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TLS**<br />-   **EAP-AST**<br />-   **LEAP**<br />-   **EAP-SIM**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.|
-|**Namn på betrodda servercertifikat**|Markera den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Du har valt EAP-typen **EAP-TLS**, **PEAP**, **EAP-TTLS** eller **EAP-FAST**.|
-|**Använd PAC (Protected Access Credential)**|Välj det här alternativet om du vill etablera en autentiserad tunnel mellan klienten och autentiseringsservern. En befintlig PAC-fil används om det finns en sådan.|**EAP-typen** är **EAP-FAST**.|
-|**Etablera PAC**|Etablerar PAC-filen till enheterna.<br /><br />När detta används kan du också välja **Etablera PAC anonymt** för att säkerställa att PAC-filen etableras utan att servern autentiseras.|**Använd PAC** är markerat|
-|**Autentiseringsmetod**|Välj den autentiseringsmetod som ska användas för anslutningen:<br /><br /><ul><li>**Certifikat** för att ange klientcertifikatet</li><li>**Användarnamn och lösenord** för att ange någon av följande icke-EAP-metoder för autentisering (även kallat inre identitet):<br /><br /><ul><li>**Inga**</li><li>**Okrypterat lösenord (PAP)**</li><li>**CHAP (Challenge Handshake Authentication Protocol)**</li><li>**Microsoft CHAP (MS-CHAP)**</li><li>**Microsoft CHAP Version 2 (MS-CHAP v2)**</li><li>**EAP-TLS**</li></ul></li></ul>|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
-|**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Markera den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda SCEP-certifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|När säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och **EAP-typen** är **EAP-TLS**, **PEAP** eller **EAP-TTLS**.|
-|**Aktivera identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst.<br /><br />Under autentiseringen skickas den här anonyma identiteten från början, följd av den av den verkliga identifieringen som skickas i en säker tunnel.|Om **EAP-typen** har angetts till **PEAP**, **EAP-TTLS** eller **EAP-FAST**.|
+4. Ange värden för **nätverksanslutningar**.
+ - **SSID (Service Set Identifier)**: Användarna ser nätverksnamnet, inte SSID.
+ - **Anslut när nätverket inte sänder sitt namn (SSID)**: Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan med nätverk (eftersom det är dolt och inte sänder sitt namn).
+ 
+5. Konfigurera **säkerhetsinställningarna** för den valda plattformen. Vilka inställningar som är tillgängliga beror på vilken säkerhetstyp du väljer. Dessa beskrivs i [Säkerhetsinställningar](#security-settings).
 
 6. (endast iOS och MAC OS X) Konfigurera **Proxyinställningar**
 
@@ -104,7 +78,9 @@ För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du i
 
 Ny princip som visas i noden **Konfigurationsprinciper** på arbetsytan **Princip** . Information om hur du distribuerar profilen finns under **Nästa steg**.
 
-## Exportera eller importera en Wi-Fi-konfigurationsprofil (endast Windows 8.1 och senare)
+## Exportera eller importera en Wi-Fi-konfigurationsprofil för Windows-enheter
+ 
+För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil. 
 
 ### Exportera en Wi-Fi-profil
 I Windows kan du använda verktyget **netsh wlan** för att exportera en befintlig Wi-Fi-profil till en XML-fil som kan läsas av Intune. Följ stegen nedan på en Windows-dator som redan har nödvändig WiFi-profil installerad.
@@ -148,7 +124,9 @@ Använd **Importprincipen för Windows Wi-Fi** för att importera en uppsättnin
 
 6.  Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principer** .
 
-## Distribuera principen
+## Distribuera profilen
+
+En profil är en typ av princip. Det innebär att du kan distribuera den via arbetsytan Princip.
 
 1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
 
@@ -161,11 +139,40 @@ Använd **Importprincipen för Windows Wi-Fi** för att importera en uppsättnin
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
+## Säkerhetsinställningar
+Dessa tabeller visar detaljerad information för de säkerhetsinställningar som är tillgängliga för Wi-Fi-profiler för Android, iOS och Mac OS X. 
+
+### Säkerhetsinställningar för Android-enheter
+
+  |Inställningsnamn|Mer information|Använd när:|
+|----------------|--------------------|-------------|
+|**Säkerhetstyp**|Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|
+|**EAP-typ**|Välj typen EAP (Extensible Authentication Protocol) som används för att autentisera säkra trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TTLS**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.|
+|**Välj rotcertifikat för serververifiering**|Klicka på **Välj**och välj sedan den betrodda rotcertifikatsprofil som används för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Valfri **EAP-typ** är markerad.|
+|**Autentiseringsmetod**|Välj autentiseringsmetod för anslutningen:<br /><br />-   **Certifikat** för att ange klientcertifikatet<br />-   **Användarnamn och lösenord** för att ange en annan metod för autentisering|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
+|**Välj en annan metod än EAP för autentisering (inre identitet)**|Välj hur du ska autentisera anslutningen:<br /><br />-   **Inga**<br />-   **Okrypterat lösenord (PAP)**<br />-   **CHAP (Challenge Handshake Authentication Protocol)**<br />-   **Microsoft CHAP (MS-CHAP)**<br />-   **Microsoft CHAP Version 2 (MS-CHAP v2)**<br /><br />Vilka alternativ som är tillgängliga beror på vilken EAP-typ du väljer.| **Autentiseringsmetoden** är **användarnamn och lösenord**.|
+|**Aktivera identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
+|**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Klicka på **Välj**och välj sedan den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda SCEP-certifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och en **EAP-typ** är markerad.|
+
+### Säkerhetsinställningar för iOS- och Mac OS X-enheter
+
+  |Inställningsnamn|Mer information|Använd när:|
+|----------------|--------------------|-------------|
+|**Säkerhetstyp**|Välj säkerhetsprotokoll för det trådlösa nätverket:<br /><br />-   **WPA-Personal/WPA2-Personal**<br />-   **WPA-Enterprise/WPA2-Enterprise**<br />-   **WEP**<br />-   **Ingen autentisering (öppet)** om nätverket är oskyddat.|Alltid|
+|**EAP-typ**|Välj typen EAP (Extensible Authentication Protocol) som används för att autentisera säkra trådlösa anslutningar:<br /><br />-   **EAP-TLS**<br />-   **PEAP**<br />-   **EAP-TLS**<br />-   **EAP-AST**<br />-   **LEAP**<br />-   **EAP-SIM**|Du har valt säkerhetstypen **WPA-Enterprise/WPA2-Enterprise**.|
+|**Namn på betrodda servercertifikat**|Markera den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda rotcertifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|Du har valt EAP-typen **EAP-TLS**, **PEAP**, **EAP-TTLS** eller **EAP-FAST**.|
+|**Använd PAC (Protected Access Credential)**|Välj det här alternativet om du vill etablera en autentiserad tunnel mellan klienten och autentiseringsservern. En befintlig PAC-fil används om det finns en sådan.|**EAP-typen** är **EAP-FAST**.|
+|**Etablera PAC**|Etablerar PAC-filen till enheterna.<br /><br />När detta används kan du också välja **Etablera PAC anonymt** för att säkerställa att PAC-filen etableras utan att servern autentiseras.|**Använd PAC** är markerat|
+|**Autentiseringsmetod**|Välj den autentiseringsmetod som ska användas för anslutningen:<br /><br /><ul><li>**Certifikat** för att ange klientcertifikatet</li><li>**Användarnamn och lösenord** för att ange någon av följande icke-EAP-metoder för autentisering (även kallat inre identitet):<br /><br /><ul><li>**Inga**</li><li>**Okrypterat lösenord (PAP)**</li><li>**CHAP (Challenge Handshake Authentication Protocol)**</li><li>**Microsoft CHAP (MS-CHAP)**</li><li>**Microsoft CHAP Version 2 (MS-CHAP v2)**</li><li>**EAP-TLS**</li></ul></li></ul>|**EAP-typen** är **PEAP** eller **EAP-TTLS**.|
+|**Välj ett certifikat för klientautentisering (identitetscertifikat)**|Markera den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. **Viktigt!** Information om hur du skapar betrodda SCEP-certifikatprofiler finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).|När säkerhetstypen är **WPA-Enterprise/WPA2-Enterprise** och **EAP-typen** är **EAP-TLS**, **PEAP** eller **EAP-TTLS**.|
+|**Aktivera identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst.<br /><br />Under autentiseringen skickas den här anonyma identiteten från början, följd av den av den verkliga identifieringen som skickas i en säker tunnel.|Om **EAP-typen** har angetts till **PEAP**, **EAP-TTLS** eller **EAP-FAST**.|
+
+
 ### Se även
 Läs om hur du skapar en Wi-Fi-profil med en i förväg delad nyckel i [Wi-Fi-profil med i förväg delad nyckel](pre-shared-key-wi-fi-profile.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

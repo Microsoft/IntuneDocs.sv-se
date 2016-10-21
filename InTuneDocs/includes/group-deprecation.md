@@ -1,11 +1,7 @@
-> [!NOTE]
-> Från och med augusti flyttas grupphantering för enheter till Azure Active Directory. **Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för företagets registreringsprofil.** Eftersom ändringar görs över ett antal månader kan du kanske inte se ändringen i konsolen ännu.
-
-> **Företagets registreringsprofil** krävs för att registrera iOS-enheter via Apples enhetsregistreringsprogram eller verktyget Apple Configurator.
-
->Nya dynamiska enhetsgruppstilldelningar kan definieras i Azure Active Directory baserat på namnet på företagets registreringsprofil. Den här processen säkerställer att enheter som tilldelats till en enhetsgrupp i förväg automatiskt registreras i gruppen med principer och program distribuerade. Mer information kommer att publiceras snart.
+>[!Important]
+>Grupptilldelningar flyttas från Intune till Azure Active Directory. Alternativet **Tilldela enheter till följande grupp** visas inte för Intune-konton med den här uppdateringen. [Läs mer](../deploy-use/ios-device-enrollment-program-in-microsoft-intune#changes-to-intune-group-assignments)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

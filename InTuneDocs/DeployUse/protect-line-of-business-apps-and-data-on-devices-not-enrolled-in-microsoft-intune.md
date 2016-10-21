@@ -13,8 +13,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 3e09af2cd329d556a9a0a1b2fb4750856e336ab1
+ms.sourcegitcommit: 45c6622624230e3486d2498b1b023f2efcdc2970
+ms.openlocfilehash: eb04f0e7b9627ad1869ef677f1b32380db868490
 
 
 ---
@@ -27,7 +27,7 @@ I det här avsnittet beskrivs de steg som krävs för att tillämpa MAM-principe
 ##  Steg 1: Förbered appen
 Innan du kan tillämpa MAM-principer på en app måste du först omsluta appen med verktyget för Microsoft Intune-appomslutning.  Anvisningarna för att installera och använda appomslutningsverktyget ingår i hämtningen.  
 >[!IMPORTANT]  
->Den här version av appomslutningsverktyget har stöd för enheter som inte har registrerats i Intune och blir tillgängligt i den privata förhandsgranskningen under de kommande veckorna. Om du vill delta skickar du ett e-postmeddelande till msintuneappsdk@microsoft.com för mer information.
+>Den här versionen av programhanteringsverktyget, som har stöd för enheter som inte har registrerats i Intune, är tillgänglig som förhandsversion. Om du vill prova den allmänt tillgängliga förhandsversionen kan du hämta verktyget från [this github page](https://github.com/msintuneappsdk/intune-app-wrapper-ios-preview) (den här github-sidan) för iOS och [this github page](https://github.com/msintuneappsdk/intune-app-wrapper-android-preview) (den här github-sidan) för Android.
 
 ## Steg 2: Lägg till appen
 
@@ -75,6 +75,6 @@ Du kan ta bort en branschspecifik app från applistan.  Den här åtgärden tar 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

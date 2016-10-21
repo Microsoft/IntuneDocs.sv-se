@@ -13,26 +13,14 @@ ms.assetid: dbe5cad1-3e0d-41a9-966b-738156089700
 ms.reviewer: lacranda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 95b3401b66256ef44623b74e6e0b549ec1e7fc2c
-ms.openlocfilehash: 27af2b714ff51f8710f67e7445225366d2722fb7
+ms.sourcegitcommit: 3d737c44e3586a4339a324dcb6701f7c86a29d01
+ms.openlocfilehash: 3bf0e6f8bc010c23712f9908cff7d515c2c62671
 
 
 ---
 
 # Konfigurera Android-enhetshantering
-Om du vill konfigurera din Android-enhet kan du få hjälp [här](../enduser/using-your-android-device-with-intune.md).
-
-Med Microsoft Intune kan du aktivera BYOD (”Bring Your Own Device”) för Android-enheter utan ytterligare plattformsbelastning.
-
-Välj följande alternativ för enhetsplattformar om du vill veta mer:
-
-> [!div class="op_single_selector"]
-- [Konfigurera Android-hantering med Microsoft Intune](set-up-android-management-with-microsoft-intune.md)
-- [Konfigurera iOS- och Mac-hantering med Microsoft Intune](set-up-ios-and-mac-management-with-microsoft-intune.md)
-- [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md)
-- [Konfigurera Windows-enhetshantering med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md)
-
-Med mobila Android-enheter kan användarna registrera sig med hjälp av företagsportalappen som finns i Google Play. Gör så här om du vill tillåta att användarna registrerar sina enheter i Intune.
+Som Intune-administratör kan du hantera Android-enheter via företagsportalen. Användarna kan sedan registrera sina enheter med hjälp av företagsportalappen som finns på Google Play.
 
 1.  **Konfigurera Intune**<br>
     Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [utfärdare av mobilenhetshantering](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) och genom att konfigurera MDM.
@@ -52,6 +40,6 @@ Med mobila Android-enheter kan användarna registrera sig med hjälp av företag
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

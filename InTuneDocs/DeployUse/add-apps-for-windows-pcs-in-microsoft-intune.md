@@ -1,5 +1,5 @@
 ---
-title: "Lägg till appar för Windows-datorer | Microsoft Intune"
+title: "Lägg till program för Windows-datorer som kör Intune-klientprogramvaran | Microsoft Intune"
 description: "I det här avsnittet kan du läsa om hur du lägger till appar för Windows-datorer i Intune innan du distribuerar dem."
 keywords: 
 author: robstackmsft
@@ -13,18 +13,18 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 24767de9ad5a1f0ebe6f713018098a5dd692466e
+ms.sourcegitcommit: f01f2715ebd5666b53de848f06300e7aa3344caf
+ms.openlocfilehash: 33ef6a417c38ab04095afc8fb7573ea92253f229
 
 
 ---
 
-# Lägg till appar för Windows-datorer i Microsoft Intune
+# Lägg till program för Windows-datorer som kör Intune-klientprogramvaran
 
 Använd informationen i det här avsnittet för att lära dig hur du lägger till appar i Intune innan du distribuerar dem.
 
 > [!IMPORTANT]
-> Informationen i det här avsnittet hjälper dig att lägga till appar för Windows-datorer som du hanterar med Intune-klientprogrammet. Om du vill lägga till appar för registrerade Windows-datorer och andra mobila enheter kan du läsa [Lägga till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
+> Informationen i det här avsnittet hjälper dig att lägga till program för Windows-datorer som du hanterar med Intune-klientprogramvaran. Om du vill lägga till appar för registrerade Windows-datorer och andra mobila enheter kan du läsa [Lägga till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
 
 ## Lägg till appen
@@ -90,6 +90,6 @@ När du har skapat en app är nästa steg att distribuera den. Mer information f
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

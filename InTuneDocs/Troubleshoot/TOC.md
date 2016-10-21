@@ -1,5 +1,6 @@
 # [Förstå och utforska](/intune/understand-explore/introduction-to-microsoft-intune)
 # [Kom igång](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Nyheter](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
@@ -17,6 +18,11 @@
 ## [Felsöka villkorlig åtkomst](troubleshoot-conditional-access.md)
 ## [Felsöka Exchange Connector](troubleshoot-exchange-connector.md)
 
-<!--HONumber=Aug16_HO1-->
+## [Felsök hantering av mobilprogram](troubleshoot-mam.md)
+
+## [Felsöka Lookout-integrering](troubleshooting-lookout-integration.md)
+
+
+<!--HONumber=Sep16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Skapa principer som styr inställningar och funktioner på iOS-enh
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 13b8bd8c3269be60d66c4e79551f662205afcea0
+ms.sourcegitcommit: cd5930995a6da130fedcb6d89851460e6f0614eb
+ms.openlocfilehash: 24540a74ce98adbf3f908cbea401328f027867ca
 
 
 ---
@@ -39,7 +39,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vil
 Om den inställning som du söker efter inte visas i det här avsnittet kan du eventuellt skapa den med hjälp av en anpassad iOS-princip med vilken du kan importera inställningar som du har skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Mer information finns i "Anpassade principinställningar" senare i det här avsnittet.
 
 ### Säkerhetsinställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -58,7 +58,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
 ### Systeminställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -71,7 +71,7 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt sparbok när låst**|Tillåt användare att komma åt appen Sparbok när enheten är låst.|
 
 ### Molninställningar för dokument och data
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -81,9 +81,11 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Kräv krypterad säkerhetskopiering**|Kräv att säkerhetskopior av enheter måste vara krypterade.|
 |**Tillåt att hanterade appar synkroniserar data till iCloud**|Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konto.|
 |**Tillåt Handoff för att fortsätta med aktiviteter på en annan enhet**|Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller Mac OS X-enhet.|
+|**Tillåt iCloud-bilddelning**|Tillåt användning av funktionen för delad bildström i iOS.|
+|**Tillåt iCloud-bildbibliotek**|Tillåt att användaren lagrar bilder på iCloud. Om den här inställningen inaktiveras raderas de bilder som redan finns lagrade på iCloud.|
 
 ### Programinställningar för webbläsaren
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -95,37 +97,48 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt bedrägerivarning**|Tillåt bedrägerivarningar i webbläsaren.|
 
 ### Programinställningar för appar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
-|**Tillåt appbutik**|Tillåt enheten att få åtkomst till appbutiken.|
+|**Tillåt installation av appar**|Tillåt åtkomst till appbutiken och installation av appar på enheten.|
 |**Kräv ett lösenord om du vill komma åt programbutiken.**|Kräv att användarna anger ett lösenord innan de kan besöka appbutiken.|
 |**Tillåt köp via app**|Tillåt att inköp görs från en app som körs.|
 |**Tillåt hanterade dokument i andra ohanterade appar**|Tillåt visning av företagsdokument i vilken app som helst.<br>**Exempel:** Du vill förhindra att användare sparar filer från OneDrive-appen i Dropbox. Konfigurera den här inställningen till Nej. När enheten har hämtat principen (till exempel efter en omstart) kommer den inte längre att tillåta att spara.|
 |**Tillåt ohanterade dokument i andra hanterade appar**|Tillåt visning av valfria dokument i hanterade företagsappar.|
 |**Tillåt videokonferens**|Tillåt videokonferensappar, till exempel FaceTime, på enheten.|
-|**Tillåt innehåll för vuxna i mediebutik**|Tillåt att enheten får åtkomst till innehåll som är klassificerade som för vuxna i butiken.|
-|**Tillåt att användaren laddar ned innehåll från iBook-butiken som flaggats som ”Erotik”**|Tillåt att användare laddar ned böcker i kategorin Erotik.|
+|**Tillåt användaren att betro nya företagsapputvecklare**|Låter användaren välja att lita på appar som inte laddats ned från App Store.|
+
 
 ### Programinställningar för spel
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
 |**Tillåt att Game Center-vänner läggs till**|Tillåt användaren att lägga till vänner i Game Center.|
 |**Tillåt spel för flera personer**|Tillåt användaren att spela spel för flera personer på enheten.|
 
+### Programinställningar för medieinnehåll
+Alla inställningar gäller för iOS 8.0 och senare.
+
+|Inställningsnamn|Information|
+|----------------|-------|
+|**Klassificeringsregion**|Välj en region och välj sedan högsta tillåtna klassificering som användare får ladda ned för **Filmer**, **TV-program** och **Appar**.|
+|**Tillåt innehåll för vuxna i mediebutik**|Tillåt att enheten får åtkomst till innehåll som är klassificerade som för vuxna i butiken.|
+|**Tillåt att användaren laddar ned innehåll från iBook-butiken som flaggats som ”Erotik”**|Tillåt att användare laddar ned böcker i kategorin Erotik.|
+
+
 ### Enhetskapacitetsinställningar för maskinvara
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
 |**Tillåt kamera**|Ange om kameran på enheten får användas.|
+|**Tvinga parkopplade Apple Watches att använda handledsavkänningen**|När den här inställningen är aktiverad visas meddelanden bara när användaren bär sin Apple Watch runt handleden.|
 |**Kräv ett kopplat lösenord för utgående AirPlay-begäranden**|Kräv ett kopplat lösenord när användaren använder AirPlay för att strömma innehåll till andra Apple-enheter.|
 
 ### Enhetskapacitetsinställningar för mobil
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
@@ -134,13 +147,14 @@ Alla inställningar gäller för iOS 7.1 och senare.
 |**Tillåt hämtning av global bakgrund under nätverksväxling**|Tillåt att enheten att hämtar data, till exempel e-post när den nätverksväxlar på ett mobilnät.|
 
 ### Enhetskapacitetsinställningar för funktioner
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|-------|
 |**Tillåt Siri**|Tillåt användning av röstassistenten Siri på enheten.|
 |**Tillåt Siri när enheten är låst**|Tillåt användning av röstassistenten Siri på enheten när den är låst|
 |**Tillåt röstsamtal**|Tillåt användning av röstsamtalsfunktionen på enheten.|
+|**Tillåt inte Airdrop från hanterade appar**|Hindrar hanterade appar från att kunna skicka data via Airdrop.|
 
 
 ### Inställningar för kompatibla och icke-kompatibla appar
@@ -182,7 +196,7 @@ I listan över **kompatibla &amp; inkompatibla appar** skapar du en lista över 
 > [!NOTE]
 > Följande information gäller inställningar för helskärmsläge på iOS-enheter:
 >
-> -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller enhetsregistreringshanteraren för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
+> -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller [Apples enhetsregistreringsprogram](ios-device-enrollment-program-in-microsoft-intune) för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 > -   Om iOS-appen som du anger har installerats efter det att du har distribuerat konfigurationsprincipen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
 
 ### Referensinformation för kompatibla och icke-kompatibla appar
@@ -208,30 +222,61 @@ Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla a
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
 ### Registreringsinställningar
-Alla inställningar gäller för iOS 7.1 och senare.
+Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
 |**Tillåt aktiveringslås när enheten är i övervakat läge**|Aktivera aktiveringslåset på övervakade iOS-enheter.|
 
-### Övervakning
-Du kan konfigurera följande inställningar på enheter som kör iOS 7.1 och senare i övervakat läge.
+### Inställningar för övervakat läge
+Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och senare i övervakat läge.
+
+### Inställningar för enhetsbegränsningar för övervakat läge
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
 |**Tillåt kontoändring**|Tillåt att användaren ändrar kontoinställningar, till exempel inställningar för e-post.|
-|**Tillåt AirDrop**|Tillåt att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.|
 |**Tillåt ändringar i inställningar för mobildataanvändning i appar**|Tillåt att användaren bestämmer vilka appar som ska få använda mobildata.|
-|**Tillåt att Siri skickar frågor om innehåll som skapats av användare från Internet**|Tillåt att Siri besöker webbplatser för att besvara frågor.|
-|**Tillåt åtkomst till iBooks-butiken**|Tillåt användare att bläddra bland och köpa böcker i iBooks-butiken.|
-|**Tillåt ändringar i Find My Friends-appinställningar**|Tillåt att användaren ändrar inställningarna för Find My Friends-appen.|
 |**Tillåt att alternativet att radera allt innehåll och alla inställningar på enheten används**|Tillåt att användaren använder alternativet att radera allt innehåll och alla inställningar på enheten.|
 |**Tillåt att användaren aktiverar begränsningar i enhetsinställningarna**|Tillåt att användaren konfigurerar enhetsbegränsningar (kontrollfunktioner för föräldrar) på enheten.|
-|**Tillåt Spotlight-sökning för att returnera resultat från Internet**|Tillåt att Spotlight-sökning ansluter till Internet för att visa ytterligare resultat.|
-|**Tillåt att Game Center-appen används**|Tillåt att Game Center-appen används.|
-|**Tillåt värdkoppling för att övervaka med vilka enheter en iOS-enhet kan kopplas**|Tillåt värdkoppling så att administratören kan styra vilka enheter en iOS 7-enhet kan sammankopplas med.|
+|**Tillåt värdkoppling för att övervaka med vilka enheter en iOS-enhet kan kopplas**|Tillåt värdkoppling så att administratören kan styra vilka enheter en iOS-enhet kan sammankopplas med.|
 |**Tillåt att användaren installerar konfigurationsprofiler och certifikat**|Tillåt att användaren installerar konfigurationsprofiler och certifikat.|
+|**Tillåt namnbyte för enhet**|Tillåt att användaren ändrar namnet på enheten.|
+|**Tillåt ändring av lösenord**|Tillåt att enhetens lösenord läggs till, ändras eller tas bort.|
+|**Tillåt Apple Watch-parkoppling**|Tillåt att enheten parkopplas med en Apple Watch.|
+|**Tillåt ändring av meddelandeinställningar**|Tillåt att användaren ändrar meddelandeinställningarna för enheten.|
+|**Tillåt ändring av bakgrundsbild**|Tillåt att användaren ändrar enhetens bakgrundsbild.|
+
+### Inställningar för funktionsbegränsningar för övervakat läge
+
+|Inställningsnamn|Information|
+|----------------|--------------------|
+|**Tillåt AirDrop**|Tillåt att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.|
+|**Tillåt att Siri skickar frågor om innehåll som skapats av användare från Internet**|Tillåt att Siri besöker webbplatser för att besvara frågor.|
+|**Använd Siris filter mot olämpligt språk**|Förhindrar att Siri från dikterar eller talar ett olämpligt språk.|
+|**Tillåt Spotlight-sökning för att returnera resultat från Internet**|Tillåt att Spotlight-sökning ansluter till Internet för att visa ytterligare resultat.|
+|**Tillåt orddefinitionssökning**|Tillåt iOS-funktionen som gör att du kan markera ett ord och leta upp dess definition.|
+|**Tillåt förutseende tangentbord**|Tillåt användning av förutseende tangentbord som föreslår ord som användaren kanske vill använda.|
+|**Tillåt autokorrigering**|Låter enheten automatiskt korrigera felstavade ord.|
+|**Tillåt tangentbord med stavningskontroll**|Tillåter stavningskontroll på enheten.|
+|**Tillåt kortkommandon**|Tillåter användning av kortkommandon.|
+
+### Inställningar för appbegränsningar för övervakat läge
+
+|Inställningsnamn|Information|
+|----------------|--------------------|
+|**Tillåt ändringar av inställningar för att betro företagsappar**|Låter användarna att ändra förtroendeinställningarna för företagsappar.|
+|**Tillåt installation av appar endast med hjälp av Apple-konfiguration och iTunes**|Aktiverar eller inaktiverar App Store på enhetens startsida. Användarna kan fortfarande använda iTunes eller Apple Configurator-verktyget för att installera och uppdatera appar.|
+|**Tillåt automatisk nedladdning av appar**|Tillåt att appar som köpts på andra enheter automatiskt laddas ned till den här enheten. Den här inställningen påverkar inte uppdateringar av appar.|
+|**Tillåt ändringar i Find My Friends-appinställningar**|Tillåt att användaren ändrar inställningarna för Find My Friends-appen.|
+|**Tillåt åtkomst till iBooks-butiken**|Tillåt användare att bläddra bland och köpa böcker i iBooks-butiken.|
 |**Tillåt användning av appen Meddelanden på enheten**|Tillåt att appen Meddelanden används för att skicka sms.|
+|**Tillåt användning av Podcaster**|Tillåt användning av appen Podcaster.|
+|**Tillåt användning av musiktjänsten**|Tillåt användning av appen Apple Music.|
+|**Tillåt iTunes Radio-tjänsten**|Tillåt användning av appen iTunes Radio.|
+|**Tillåt Apple News**|Tillåt användning av appen Apple News.|
+|**Tillåt Game Center**|Tillåt att Game Center-appen används.|
+
 
 ### Visa eller dölja appar
 
@@ -337,6 +382,6 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

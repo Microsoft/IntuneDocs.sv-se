@@ -1,54 +1,33 @@
 ---
-title: "Återställa (radera) en borttappad eller stulen Android-enhet | Microsoft Intune"
+title: "Kontrollera efterlevnad på din Android-enhet | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 8bb47a5c-f66d-491b-b909-e6a8844f773a
+ms.assetid: d98d9bbe-98fa-48a9-8808-110435eac9e4
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08eeb1f330ed8fcea5da41f71ded0ccf124da7c5
-ms.openlocfilehash: 2b759c45a045fff29c6d21a16b3798482886d587
+ms.sourcegitcommit: 52b9e786fe22b04081441db88a3629062fc85668
+ms.openlocfilehash: e5f519253cfa380a973db428bc5acaac3a2101df
 
 
 ---
 
 
-# Återställa (radera) en Android-enhet som förlorats eller stulits
+# Kontrollera efterlevnad på din Android-enhet
 
-Om en telefon som har registrerats i Intune är borttappad eller om den har blivit stulen kan du återställa den till fabriksinställningarna via företagsportalappen från en annan enhet eller via [företagsportalwebbplatsen](http://portal.manage.microsoft.com).
+Du kanske inte kan komma åt resurser i ditt företag eller din skola om din enhet inte har haft kontakt med Intune på ett tag. Om du vill återfå åtkomst kan du prova följande:
 
-Läs mer om vad som händer när du återställer en enhet i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md).
+1. Öppna Androids Företagsportal-appen på din enhet.
 
-> [!WARNING]
-> När du återställer en enhet till standardinställningarna tas all privat, arbetsrelaterad och studierelaterad information bort från den.
-
-## Återställa en enhet från företagsportalappen
-
-1.  Öppna företagsportalappen från en annan registrerad enhet och logga in med ditt arbets- eller skolkonto.
-
-2.  Tryck på **Mina enheter** och välj namnet på den borttappade eller stulna enheten.
-
-3.  Klicka på **Återställ** &gt; **Återställ**.
-
-## Återställa en enhet med företagsportalens webbplats
-
-Följ dessa anvisningar eller titta på den här videon:
-
-<iframe width="675" height="379" src="https://www.youtube.com/embed/6e73o7f8gxE" frameborder="0" allowfullscreen></iframe>
-
-1.  Öppna [företagsportalen](http://portal.manage.microsoft.com) i webbläsaren och logga in på ditt arbetskonto.
-
-2.  Under **Mina enheter** väljer du enheten som förlorats eller stulits.
-
-3.  Tryck på **Återställ** &gt; **Återställ**.
+2. 
 
 Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
@@ -56,6 +35,6 @@ Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-ad
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

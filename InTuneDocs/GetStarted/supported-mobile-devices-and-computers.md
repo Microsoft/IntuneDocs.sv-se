@@ -13,8 +13,8 @@ ms.assetid: aeeccfa4-0f14-447e-a3df-c8435c8a4bb2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: e14a56fce0aa57b3744946d7dbf6641b8d98773b
+ms.sourcegitcommit: 5f8a145fa2c0355eaffc403084872c1f9524b6e5
+ms.openlocfilehash: 2cb4920663019f8a1ff66a7c52e12b1313f33871
 
 
 ---
@@ -29,7 +29,7 @@ Du kan registrera enheterna och sedan hantera följande enhetstyper:
 
 Om du registrerar enheterna får du [dessa funktioner](/Intune/get-started/choose-how-to-manage-devices).
 
-Alternativt kan du hantera Windows-datorer med Intune PC-klientprogramvaran. Intune PC-klientprogramvaran stöder Windows 7 och senare, förutom Windows 10 Home. Om du hanterar datorer med klientprogramvaran får du [dessa funktioner](/Intune/).
+Alternativt kan du hantera Windows-datorer med Intune PC-klientprogramvaran. Intune PC-klientprogramvaran stöder Windows 7 och senare, förutom Windows 10 Home. Genom att hantera datorer med klientprogramvaran får du tillgång till [dessa funktioner](set-up-windows-device-management-with-microsoft-intune.md).
 
 Kunder med Enterprise Management Suite kan även använda Azure Active Directory (Azure AD) för att registrera Windows 10-enheter.
 
@@ -38,6 +38,6 @@ Kunder med Enterprise Management Suite kan även använda Azure Active Directory
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
