@@ -13,8 +13,8 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
-ms.openlocfilehash: 212dcd31697180dae61569dda13b56704a079bf4
+ms.sourcegitcommit: 52b9e786fe22b04081441db88a3629062fc85668
+ms.openlocfilehash: a215d547507dcc460e83009cc6a04baf3fd8f4a4
 
 
 ---
@@ -32,15 +32,15 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Ohanterade appar** - Appar som inte kan hanteras med principer eller som inte har wrappats av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
-Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade App Store-appar listas i företagsportalsappen, vilket innebär att användarna måste välja olika vyer om de vill hitta alla sina appar. Appar för varje panel som visas på företagsportalsappens appsida är tillgängliga enligt följande:
+Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade App Store-appar listas i företagsportalsappen. För att undvika problemet visar app-panelerna i företagsportalsappen för iOS användarna flera vyer på en och samma plats (företagsportalens webbplats) för alla deras appar enligt följande:
 
-- Panelen **Företagsappar** pekar på en lista över alla appar på fliken **ALLA** på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+- Panelen **Företagsappar** visade tidigare en lista över alla program under fliken ALLA på [företagsportalens webbplats](http://portal.manage.microsoft.com), och den kommer att fortsätta fungera på samma sätt. Namnet på panelen har ändrats till **Alla appar**.
 
-- Panelen **Andra appar** pekar för tillfället pekar på en vy i företagsportalsappen som visar alla appar som Apple tillåter att företagsportalsappen visar. Detta inkluderar alla appar utom verksamhetsspecifika appar och hanterade App Store-appar.
+- Panelen **Andra appar** visade tidigare en vy i företagsportalsappen som visar alla appar som Apple tillåter att företagsportalsappen visar. Namnet på panelen har ändrats till **Aktuella appar**, och om du trycker på panelen öppnas fliken AKTUELLT på företagsportalens webbplats.
 
-- Panelen **Kategorier** pekar för tillfället pekar på en vy i företagsportalsappen som listar appkategorier.
+-  Panelen **Kategorier** visade tidigare en vy i företagsportalsappen som listar appkategorier. Panelens namn har inte ändras, men den nu att pekar nu på fliken KATEGORIER på företagsportalens webbplats.
+Du kan söka efter uppdaterade skärmbilder [här](https://gallery.technet.microsoft.com/Improvements-in-how-iOS-d1104186).
 
-    ![ios-hur-man-synkroniserar-enhet-med-intune](./media/ios-sync-comp-portal-apps.png)
 
 
 ###Se även
@@ -49,6 +49,6 @@ Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade A
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

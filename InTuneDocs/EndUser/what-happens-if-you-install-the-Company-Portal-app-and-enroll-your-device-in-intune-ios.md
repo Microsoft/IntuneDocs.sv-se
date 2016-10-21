@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 7/7/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: b5ecb5b4c7629b04c679995b5788ee307bac79f0
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
 
 
 ---
@@ -75,7 +75,7 @@ När enheten har registrerats kan din IT-administratör:
 
 -   Kräva att du accepterar villkoren.
 
--   Aktivera eller inaktivera kameran på enheten.
+-   Aktivera eller inaktivera kameran på enheten för att förhindra dig från att ta bilder av känsliga företagsdata.
 
 -   Aktivera eller inaktivera webbläsare på enheten.
 
@@ -91,12 +91,10 @@ När enheten har registrerats kan din IT-administratör:
 
 -   Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan det tillkomma avgifter för nätverksväxling.
 
-Anvisningar för hur du registrerar enheten finns i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md)
-
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

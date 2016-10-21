@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 05/26/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 5454a9ddfb7489e6d048abea3acca089752c2f45
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: 2631541ea974769308aea30d2b37a3a79c22db99
 
 
 ---
@@ -57,14 +57,12 @@ När du registrerar en Windows-enhet i Intune ger du IT-administratören tillst�
 
 -   Tillverkare
 
-
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
+Du kan [läsa mer](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows).
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Sep16_HO4-->
 
 

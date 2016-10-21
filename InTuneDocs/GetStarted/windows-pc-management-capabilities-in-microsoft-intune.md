@@ -4,7 +4,7 @@ description: "Läs om funktionerna du kan använda i Intune när du hanterar Win
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/25/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +13,25 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 12d75bc67fd61a2e807eed2543f21b756a65a900
-ms.openlocfilehash: 3066ef98c0a1df6fc0ae455860635e7c12f82c4f
+ms.sourcegitcommit: 453323aa38eed0a01aa8d583376162734439a69c
+ms.openlocfilehash: 0d4ec8077e2521b23808fcb537c4b2389fee714a
 
 
 ---
 
-# Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet)
+# Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet
 I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
--   **Hantering av programvaruuppdateringar** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
+-   **[Hantering av programvaruuppdateringar](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
 
--   **Princip för Windows-brandväggen** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
+-   **[Princip för Windows-brandväggen](/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune)** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
 
--   **Skydd mot skadlig programvara** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
+-   **[Skydd mot skadlig programvara](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
 
--   **Fjärrhjälp** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
+-   **[Fjärrhjälp](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-to-windows-pcs-that-use-the-intune-client-software )** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
--   **Hantera programvarulicenser** –Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
--   **Appdistribution** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
+-   **[Hantera programvarulicenser](/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)** – Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
+-   **[Appdistribution](/intune/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune)** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
 
 
 Intune stöder installation av klientprogrammet på upp till 7 000 Windows-enheter.
@@ -74,6 +74,6 @@ Minimikraven på programvara för installation av Intune-klientprogrammet är:
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 05fa5dc9-9bad-4557-987a-9b8ce4edebb0
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 1aabf820170483eacc83bec5e2b275e84dc07ffd
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: a6438bb3ca21e5c46dca5ebe69266fd9bce9a4b8
 
 
 ---
@@ -29,7 +29,7 @@ Använd den här informationen för att ansluta Microsoft Intune och Exchange On
 |Krav|Mer information|
 |---------------|--------------------|
 |Exchange Online konfigurerad och körs|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
-|Utfärdare för hantering av mobila enheter| [Ange Microsoft Intune som utfärdare för hantering av mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority)|
+|Utfärdare för hantering av mobila enheter| [Ange Microsoft Intune som utfärdare för hantering av mobila enheter](prerequisites-for-enrollment.md#set-mobile-device-management-authority)|
 |Microsoft Exchange-version|Exchange Online eller ny Exchange Online Dedicated-tjänst|
 |Active Directory-synkronisering|Innan du kan använda Intune Connector måste du [konfigurera Active Directory-synkronisering](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
 
@@ -64,6 +64,6 @@ Du kan också kontrollera datum och tid för det senaste lyckade synkroniserings
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

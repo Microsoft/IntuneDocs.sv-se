@@ -4,7 +4,7 @@ description:
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 05/31/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: df5cf2d5a78ccf58ba5920ad1856675538794874
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: 1d810d903ecf719e40cfb31b62e5e7882f549270
 
 
 ---
@@ -39,13 +39,13 @@ När du registrerar en Android-enhet ger du IT-administratören tillstånd att h
 
 -   Ta bort alla företagsrelaterade data. Dina personliga data och inställningar tas inte bort.
 
--   Göra så att du måste använda ett lösenord eller en PIN-kod på enheten, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också återställs fabriksinställningarna på enheten, vilket kan innebära att information försvinner.
+-   Ange krav för enheten, till exempel att du har ett lösenord eller en PIN-kod för enheten för att skydda företagsdata. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ut från enheten om du försöker för många gånger.
 
 -   Kräva att du accepterar villkoren.
 
--   Aktivera eller inaktivera kameran på enheten.
+-   Inaktivera kameran (endast på Samsung Knox-enheter, inte Nexus-enheter) för att hindra dig från att ta bilder av känsligt arbetsmaterial som inte bör delas.
 
--   Göra så att alla data på enheten, inklusive företagsrelaterade och personliga data, måste vara krypterade. Det skyddar dina data om enheten tappas bort eller blir stulen.
+-   Kräva att alla data på enheten krypteras för att skydda data om enheten förloras eller blir stulen.
 
 -   När din enhet har lagts till på företagsportalen kommer den cirka var åttonde timme att:
 
@@ -58,11 +58,8 @@ När du registrerar en Android-enhet ger du IT-administratören tillstånd att h
 Behöver du hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
 
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

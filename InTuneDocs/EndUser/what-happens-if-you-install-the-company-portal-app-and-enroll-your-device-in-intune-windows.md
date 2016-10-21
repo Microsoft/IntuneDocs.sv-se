@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 7/8/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 840d985fd2c4771831f722cdff214026a383f606
+ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
+ms.openlocfilehash: ac4fdc73122fb5dc82771f174d9bd783c186bf9d
 
 
 ---
@@ -23,10 +23,10 @@ ms.openlocfilehash: 840d985fd2c4771831f722cdff214026a383f606
 
 # Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
 
-När du installerar företagsportalappen och sedan använder den för att registrera en Windows- eller Windows Phone-enhet kan IT-administratören hantera din enhet och skydda företagets eller skolans data. Detta beskrivs nedan för enheter före Windows 10. Information om Windows 10-enheter finns på [den här sidan](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
+När du installerar företagsportalappen och sedan använder den för att registrera en Windows- eller Windows Phone-enhet kan IT-administratören hantera din enhet och skydda företagets eller skolans data. Detta beskrivs nedan för enheter före Windows 10. Information för Windows 10-enheter finns på [den här sidan](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
 ## Vad händer med alla Windows-enheter efter registreringen?
-När du har registrerat din Windows- eller Windows Phone-enhet i Intune kan du:
+Om du registrerar en Windows- eller Windows Phone-enhet i Intune kan du:
 
 -   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler
 
@@ -40,19 +40,17 @@ När du registrerar en enhet ger du IT-administratören tillstånd att till exem
 
 -   Återställa enheten till dess standardinställningar. Det är bra om enheten tappas bort eller blir stulen.
 
--   Ta bort alla företagsrelaterade data och affärsappar som installerats. Dina personliga data och inställningar tas inte bort.
+-   Ta bara bort företagsrelaterade filer och företagsappar. **Dina personliga data och inställningar tas inte bort.**
 
--   IT-administratören kan göra en förteckning över alla program som finns installerade på datorn, inklusive sådana du har installerat själv.
+-   IT-administratören kan programvaran som finns installerad på enheten, inklusive sådana du har installerat själv.
 
--   Göra så att du måste använda ett lösenord eller en PIN-kod på enheten. Och om alltför många felaktiga lösenord knappas in låser sig datorn eller också återställs fabriksinställningarna på enheten, vilket kan innebära att information försvinner.
+-   Ange krav för enheten, till exempel att du har ett lösenord eller en PIN-kod för enheten för att skydda företagsdata. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ut från enheten om du försöker för många gånger.
 
--   Göra så att alla data på enheten krypteras. Det hjälper till att skydda data om enheten tappas bort eller blir stulen.
+-   Kräva att du krypterar data på din enhet för att skydda företagsdata, om enheten förloras eller blir stulen. 
 
 -   Kräva att du accepterar villkoren.
 
--   IT-administratören kan genomdriva principer på datorn. Du kan till exempel bli ombedd att ange ett lösenord eller en PIN-kod för datorn, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också försvinner all information från hårddisken.
-
--   Inaktivera SD-kortet.
+-   Förhindra dig att ta bilder av företagsrelaterade data.
 
 ## Vad händer med alla Windows-datorer efter registreringen?
 
@@ -60,16 +58,9 @@ När du registrerar en enhet ger du IT-administratören tillstånd att till exem
 
 -  Intune Endpoint Protection kan installeras på datorn. Det är ett program som söker efter virus och skadlig kod.
 
--  IT-administratören kan göra en förteckning över alla program som finns installerade på datorn, inklusive sådana du har installerat själv.
-
--  Du kan behöva acceptera användningsvillkoren.
-
--  IT-administratören kan samla in eller radera data från datorns hårddisk. IT-administratören kan också radera hela hårddisken.
+-  IT-administratören kan samla in eller radera data från datorns hårddisk.
 
 -  IT-administratören kan installera appar och uppdateringar på datorn.
-
--  IT-administratören kan genomdriva principer på datorn. Du kan till exempel bli ombedd att ange ett lösenord eller en PIN-kod för datorn, och om alltför många felaktiga lösenord knappas in låser sig datorn eller också försvinner all information från hårddisken.
-
 
 ## Vad händer var åttonde timme efter enhetsregistreringen?
 Ungefär var åttonde timme kommer registrerade enheter att:
@@ -80,15 +71,11 @@ Ungefär var åttonde timme kommer registrerade enheter att:
 
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar.
 
-Registreringsanvisningar finns i [Registrera din Windows-enhet i Intune](enroll-your-device-in-intune-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
-
 Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Att använda din Windowsenhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

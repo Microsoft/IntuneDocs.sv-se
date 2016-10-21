@@ -1,4 +1,6 @@
 ---
+experimental: true
+experiment_id: lindavr-hubpage-20160925
 asset_id: 3414479e-e548-4753-bcf7-6322b43221fd
 layout: HubPage
 title: "Intune-dokumentation – MDM-dokumentation | Microsoft Docs"
@@ -12,8 +14,8 @@ ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: c200c191168a8c5ae9382d62b3a25e9cfd1db3ac
-ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
+ms.sourcegitcommit: bbab228b86bbec49bf68c7d91a05c4d0e7f37209
+ms.openlocfilehash: a478d1dce92e9bf9de2b485e613c607ebc2de88c
 
 
 ---
@@ -282,6 +284,6 @@ ms.openlocfilehash: 5861856d91a439919f28fca3d0b4d797ab6cbd3f
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

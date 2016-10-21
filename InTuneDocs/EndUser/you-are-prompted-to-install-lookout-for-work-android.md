@@ -1,10 +1,10 @@
 ---
-title: "Du uppmanas att installera Håll utkik efter arbete | Microsoft Intune"
+title: "Du uppmanas att installera Lookout for Work på din Android-enhet | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 05/27/2016
+ms.date: 09/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,29 +12,72 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 7be786dafa5b4707688bacd1f2b4790db91bad6c
+ms.sourcegitcommit: 5c522c12325925c45f47bc7b521e3d8aa87454f4
+ms.openlocfilehash: d4ffed6fa0a2380ebfc5c4cf9999233635a3469f
 
 
 ---
 
 # Du uppmanas att installera Håll utkik efter arbete
-Obs: Den här funktionen har lagts till i Android-företagsportalappen, men den fungerar inte förrän i augusti 2016.
 
-Håll utkik efter arbete är en app som hjälper till att skydda din enhet genom att söka efter risker och säkerhetshot. När du ser ett meddelande om att du måste installera Håll utkik efter arbete, innebär det att IT-administratören har angett en princip som kräver att du hämtar och installerar appen från Play Store.
+Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
+
 
 **Vad du behöver göra:**
 
-1.  Följ anvisningarna för att hämta och installera appen.
-2.  När installationen är klar, och du har kommit tillbaka till företagsportalappen slutför du processen genom att trycka på **Kontrollera efterlevnaden**. Du kan sedan fortsätta att använda enheten när du vill komma åt företagets data och resurser.
+1.  Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
+
+    ![du uppmanas att installera Lookout for Work](./media/lookout-required-app-install-android.png)
+
+    Du kommer till installationssidan för Lookout for Work i Play Store.
+
+2.  Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
+
+    ![tryck på acceptera för att ge Lookout for Work behörighet till åtkomst till din enhet](./media/lookout-accept-store-permissions-android.png)
+
+3. Öppna Lookout for Work och tryck på **Aktivera**.
+
+    ![öppna Lookout for Work och tryck på aktivera](./media/lookout-activate-button-android.png)
+
+4. Tryck på **Logga in med ett arbetskonto** och ange det konto som du använder för att komma åt e-postmeddelanden och filer för ditt arbete eller din skola.
+
+    ![loggar du in med ditt arbets- eller skolkonto](./media/lookout-sign-in-android.png)
+
+5. Välj det konto som du använder för att komma åt filer och e-postmeddelanden för arbetet eller skolan och tryck sedan på **LÄGG TILL KONTO**.
+
+    ![välj ditt arbets- eller skolkonto och tryck på Lägg till konto](./media/lookout-pick-account-android.png)
+
+6. Tryck på **Acceptera** för att ge Lookout for Work behörighet att logga in och läsa din profil.
+
+    ![tryck på Acceptera för att ge Lookout for Work behörighet att logga in och läsa din profil](./media/lookout-needs-permission-to-view-profile-android.png)
+
+    På skärmen visas att Lookout for Work ansluter till Lookout Security Cloud.
+
+7. Granska informationen om hur Lookout skyddar din enhet och tryck sedan på **OK**.
+
+    ![granska hur Lookout for Work skyddar din enhet](./media/lookout-how-it-protects-your-device-android.png)
+
+    När följande skärmbild visas betyder det att Lookout är installerat och anslutet.
+
+    ![du är nu ansluten till Lookout for Work](./media/lookout-you-are-now-connected-android.png)
+
+    Lookout for Work börjar direkt leta efter säkerhetshot på din enhet. Om inga hot hittas visas följande skärmbild.
+
+    ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/lookout-scan-no-threats-found-android.png)
+
+    Skärmen Information om efterlevnad på företagsportalen visar att du nu uppfyller företagets säkerhetskrav.
+
+    ![din enhet följer nu principerna](./media/lookout-device-now-compliant-android.png)
+
+    Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Med hjälp av en Android-enhet med Intune](using-your-android-device-with-intune.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Sep16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Länkar till information som du kan dela med dina slutanvändare"
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
-ms.openlocfilehash: d29649c204f50aec1d1604b55bebc6018a3c7ef2
+ms.sourcegitcommit: e07685a26329b7374d9fe50d64bf9e4699c03180
+ms.openlocfilehash: 51b281a6799fa89ed49082acea34024a6214e835
 
 
 ---
@@ -57,14 +57,12 @@ Välj bland följande enhetsplattformsalternativ för att förstå hur dina slut
 - [Så får dina iOS-användare sina appar](how-your-ios-users-get-their-apps.md)
 - [Så får dina Windows-användare sina appar](how-your-windows-users-get-their-apps.md)
 
-## Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
-För att hjälpa användarna att lösa problem som kan uppstå när de använder företagsportalen kan du läsa [meddelanden som kan visas för användarna på företagsportalen](/Intune/Plan-Design/help-end-users-understand-company-portal-app-messages).
 
 Om det finns annan information som du vill ska ingå i den här artikeln så föreslå detta i kommentarsfältet längst ned i det här avsnittet. Tack!
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

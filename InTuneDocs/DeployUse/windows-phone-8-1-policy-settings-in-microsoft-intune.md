@@ -4,7 +4,7 @@ description: "I Intune finns en uppsättning inbyggda allmänna inställningar s
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/30/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c6b3f193606f13427a68c561d688b75d38221950
-ms.openlocfilehash: 315e492b301387c2030440e7188dfdb35a99ddd9
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 3c9c75e5e9e19574a5b4525688103dc95e3d6b9b
 
 
 ---
@@ -39,75 +39,75 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 
 ### Inställningar för lösenord
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|------|-----|------------------------------|
-|**Kräv ett lösenord för att låsa upp mobila enheter**|Anger om användarna måste ange ett lösenord för att få åtkomst till sina enheter.|Ja|Ja|
-|**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|Ja|Ja|
-|**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. För iOS-enheter specificerar detta dock det antal symboler som måste inkluderas i lösenordet.|Ja|Ja|
-|**Minsta längd på lösenord**|Anger det minsta antalet tecken som lösenordet måste innehålla.|Ja|Ja|
-|**Tillåt enkla lösenord**|Anger att enkla lösenord kan användas, till exempel "0000" och "1234".|Ja|Ja|
-|**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.|Ja|Ja|
-|**Antal minuter av inaktivitet innan skärmen stängs av**|Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses automatiskt.|Ja|Ja|
+|Inställningsnamn|Information|
+|----------------|------|
+|**Kräv ett lösenord för att låsa upp mobila enheter**|Anger om användarna måste ange ett lösenord för att få åtkomst till sina enheter.|
+|**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|
+|**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. För iOS-enheter specificerar detta dock det antal symboler som måste inkluderas i lösenordet.|
+|**Minsta längd på lösenord**|Anger det minsta antalet tecken som lösenordet måste innehålla.|
+|**Tillåt enkla lösenord**|Anger att enkla lösenord kan användas, till exempel "0000" och "1234".|
+|**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.|
+|**Antal minuter av inaktivitet innan skärmen stängs av**|Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses automatiskt.|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|Ja|Ja|
-|**Kom ihåg tidigare lösenord**|Anger om tidigare använda lösenord ska sparas så att användaren inte kan använda dem igen.|Ja|Ja|
-|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Anger hur många tidigare använda lösenord som ska lagras.|Ja|Ja|
+|**Kom ihåg tidigare lösenord**|Anger om tidigare använda lösenord ska sparas så att användaren inte kan använda dem igen.|
+|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Anger hur många tidigare använda lösenord som ska lagras.|
 
 ### Krypteringsinställningar
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|------|------|-----------------------------|
-|**Filkryptering på mobil enhet**|Kräver att data på mobila enheter som stöds krypteras.<br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.|Ja|Ja|
+|Inställningsnamn|Information|
+|----------------|------|
+|**Filkryptering på mobil enhet**|Kräver att data på mobila enheter som stöds krypteras.|
 
 ### Systeminställningar
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----|------|------------------------------|
-|**Tillåt skärmbild**|Låter användaren fånga innehållet på skärmen som en bildfil.|Nej|Ja|
-|**Tillåt sändning av diagnostikdata**|Gör att enheten skickar diagnostikinformation till Microsoft.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|-----|
+|**Tillåt skärmbild**|Låter användaren fånga innehållet på skärmen som en bildfil.|
+|**Tillåt sändning av diagnostikdata**|Gör att enheten skickar diagnostikinformation till Microsoft.|
 
 ### Molninställningar – konton och synkronisering
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|------|-----|------------------------------|
-|**Tillåt Microsoft-konto**|Gör att ett Microsoft-konto kopplas till enheten.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|------|
+|**Tillåt Microsoft-konto**|Gör att ett Microsoft-konto kopplas till enheten.|
 
 ### E-postinställningar
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----|-----|-------------------------------|
-|**Tillåt anpassade e-postkonton**|Gör att enheten ansluter till andra e-postkonton än Microsoft-e-postkonton.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|-----|
+|**Tillåt anpassade e-postkonton**|Gör att enheten ansluter till andra e-postkonton än Microsoft-e-postkonton.|
 
 ### Programinställningar - webbläsare
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----|-----|-------------------------------|
-|**Tillåt webbläsare**|Tillåter eller blockerar den inbyggda webbläsaren på enheter.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|-----|
+|**Tillåt webbläsare**|Tillåter eller blockerar den inbyggda webbläsaren på enheter.|
 
 ### Programinställningar - appar
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----|------|------------------------------|
-|**Tillåt appbutik**|Tillåter att användarna ansluter till appbutiken från enheten.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|-----|
+|**Tillåt appbutik**|Tillåter att användarna ansluter till appbutiken från enheten.|
 
 ### Enhetskapacitetsinställningar - maskinvara
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|-----|----|--------------------------------|
-|**Tillåt kamera**|Tillåter eller blockerar kameran på enheten.|Nej|Ja|
-|**Tillåt flyttbara lagringsenheter**|Tillåter att enheten använder flyttbara lagringsenheter, till exempel SD-kort.|Ja|Ja|
-|**Tillåt Wi-Fi**|Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.|Nej|Ja|
-|**Tillåt Wi-Fi -delning**|Tillåter att Wi-Fi-delning används på enheten.|Nej|Ja
-|**Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter**|Gör att enheten ansluter automatiskt till kostnadsfria trådlösa surfzoner och att den automatiskt godkänner användningsvillkoren.|Nej|Ja|
-|**Tillåt rapportering av trådlösa surfpunkter**|Skickar information om Wi-Fi-anslutningar så att användaren lättare kan upptäcka närliggande anslutningar.|Nej|Ja|
-|**Tillåt geolokalisering**|Gör att enheten använder platsinformation.|Nej|Ja|
-|**Tillåt NFC**|Tillåter åtgärder som använder närfältskommunikation.|Nej|Ja|
-|**Tillåt Bluetooth**|Aktiverar eller inaktiverar Bluetooth-funktionen på enheten.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|-----|
+|**Tillåt kamera**|Tillåter eller blockerar kameran på enheten.|
+|**Tillåt flyttbara lagringsenheter**|Tillåter att enheten använder flyttbara lagringsenheter, till exempel SD-kort.|
+|**Tillåt Wi-Fi**|Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.|
+|**Tillåt Wi-Fi -delning**|Tillåter att Wi-Fi-delning används på enheten.|
+|**Tillåt automatisk anslutning till kostnadsfria, trådlösa surfpunkter**|Gör att enheten ansluter automatiskt till kostnadsfria trådlösa surfzoner och att den automatiskt godkänner användningsvillkoren.|
+|**Tillåt rapportering av trådlösa surfpunkter**|Skickar information om Wi-Fi-anslutningar så att användaren lättare kan upptäcka närliggande anslutningar.|
+|**Tillåt geolokalisering**|Gör att enheten använder platsinformation.|
+|**Tillåt NFC**|Tillåter åtgärder som använder närfältskommunikation.|
+|**Tillåt Bluetooth**|Aktiverar eller inaktiverar Bluetooth-funktionen på enheten.|
 
 ### Enhetskapacitetsinställningar - funktioner
 
-|Inställningsnamn|Information|Windows Phone 8|Windows Phone 8.1|
-|----------------|----|------|-------------------------------|
-|**Tillåt kopiera och klistra in**|Tillåter kopierings- och inklistringsfunktioner på enheter.|Nej|Ja|
+|Inställningsnamn|Information|
+|----------------|----|
+|**Tillåt kopiera och klistra in**|Tillåter kopierings- och inklistringsfunktioner på enheter.|
 
 ### Inställningar för tillåtna och blockerade appar
 I **Lista över tillåtna och blockerade appar** anger du en lista över appar som du vill tillåta eller blockera med hjälp av följande information:
@@ -171,6 +171,6 @@ I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följa
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

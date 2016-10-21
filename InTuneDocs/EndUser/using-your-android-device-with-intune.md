@@ -4,7 +4,7 @@ description: "Lista med länkar till saker du kan göra på din mobila Android-e
 keywords: 
 author: staciebarker
 manager: angrobe
-ms.date: 07/26/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
+ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
+ms.openlocfilehash: 43b43aa82aa69bea95d6d521193bd32c53e881fe
 
 
 ---
@@ -22,9 +22,9 @@ ms.openlocfilehash: ba7ac081f2b8b2228b0052a1d288957bfc11267f
 
 # Med hjälp av en Android-enhet med Intune
 
-Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
 
-- Installation av företagsportalappen och registrering av Intune 
+- Installation av företagsportalappen och registrering av Intune
 - Hanteringsuppgifter efter registrering
 - Efterlevnadsproblem
 
@@ -68,9 +68,11 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 - [Du uppmanas att stänga av USB-felsökning](you-are-asked-to-turn-off-usb-debugging-android.md)
 - [Du uppmanas att aktivera alternativet att genomsöka enheten efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
 - [Enheten uppfyller inte minimikraven för säkerhetskorrigering](your-device-does-not-meet-the-minimum-security-patch-android.md)
+- [Du uppmanas att installera Lookout for Work på din Android-enhet](you-are-prompted-to-install-lookout-for-work-android.md)
+- [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

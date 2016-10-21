@@ -4,7 +4,7 @@ description: "Med hjälp av principer för hantering av mobilprogram i Microsoft
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b1d92786bd9f4d4893dd19c3116dcd5a047744ea
-ms.openlocfilehash: af9d8dd7830efe28aa5c994a2b5ec2bdcd4cc3cb
+ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
+ms.openlocfilehash: a4ab7287b2328fccbea5203bbfe5d87cbfc912b8
 
 
 ---
@@ -26,7 +26,7 @@ Principerna för hantering av mobilprogram har stöd för:
 
 -   Enheter som kör Android 4 och senare.
 
--   Enheter som kör iOS 7 och senare.
+-   Enheter som kör iOS 8.0 och senare.
 
 > [!TIP]
 > Principer för hantering av mobilprogram stöder enheter som registrerats med Intune.
@@ -112,7 +112,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
     -   **Princip för hantering av mobila program (Android 4 och senare)**
 
-    -   **Princip för hantering av mobila program (iOS 7 och senare)**
+    -   **Hanteringsprincip för mobilprogram (iOS 8.0 och senare)**
 
     Du kan använda rekommenderade inställningar eller anpassa inställningarna. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -134,7 +134,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
     |**Kräv enhetens efterlevnad med företagsprinciper för att få åtkomst**|Den här inställningen tillåter användning av appen endast om enheten inte är jailbreakad eller rotad.|
     |**Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**|I fältet **Tidsgräns** anger du hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt efter att den har öppnats.|
     |**Offline-respitperiod**|Ange hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.|
-    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 7 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är inte FIPS 140-2-certifierad.|
+    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är inte FIPS 140-2-certifierad.|
     |**Blockera skärmdump** (endast Android-enheter)|Den här inställningen anger att skärmdumpsfunktionen i enheten är blockerad när någon använder den här appen.|
     
 4. När du är klar väljer du **Spara princip**.
@@ -147,8 +147,6 @@ Se till att du väljer hanteringsprincipen för mobilprogram på sidan **Hanteri
 Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md).
 
 > [!IMPORTANT]
-> För enheter som kör operativsystem tidigare än iOS 7.1, tas associerade principer inte bort när appen avinstalleras.
->
 > Om enheten har avregistrerats från Intune tas inte principerna bort från apparna. Alla appar med tillämpade principer behåller principinställningarna när de avinstalleras och installeras om.
 
 ### Vad du gör om en app redan har distribuerats på enheter
@@ -195,6 +193,6 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

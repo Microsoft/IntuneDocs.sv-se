@@ -13,8 +13,8 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fe47a5843414fbe4add7f77df63c0d6466273cd
-ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
+ms.sourcegitcommit: b7f11f752f6c38736a2dfa5875050f50bd86bae4
+ms.openlocfilehash: 14e43dadc0d7bc20238ec87447f311fdc864d891
 
 
 
@@ -22,14 +22,14 @@ ms.openlocfilehash: f15fce6890d6e5850d12115a97bf7331ce515508
 # Skapa en Wi-Fi-profil med en i förväg delad nyckel
 Så här använder du Intunes **Anpassad konfiguration** för att skapa en Wi-Fi-profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
 
-Obs!
+> [!NOTE]
 -   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
 - För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
 -   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
--  För iOS använder du Apple Configurator på en Mac-dator för att konfigurera profilen. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
+-  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
 
 
-1.  Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en WiFi-profil.
+1.  Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
 
 2.  Ange ett namn och en beskrivning.
 3.  Lägg till en ny OMA-URI-inställning:
@@ -40,18 +40,34 @@ Obs!
 
    c.   **Datatyp**: Inställd på "Sträng (XML)"
 
-   d.   **OMA-URI**: 
-        
-- **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-- **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   d.   **OMA-URI**:
 
-Obs! Se till att ta med punkttecknet i början.
+    - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+    - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-SSID är det SSID som du skapar principen för. Exempel:
-`./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+    > [!NOTE]
+Se till att ta med punkttecknet i början.
 
-  e.    Värdefält: Det är här du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
+    SSID är det SSID som du skapar principen för. Exempel:
+    `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
+  e. **Värdefält** är där du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
+4. Välj **OK**, spara och distribuera sedan principen.
+
+    > [!NOTE]
+    > Den här principen kan bara distribueras till användargrupper.
+
+Nästa gång varje enhet checkar in tillämpas principen och en Wi-Fi-profil skapas på enheten. Enheten kan ansluta till nätverket automatiskt.
+## Wi-Fi-profil för Android eller Windows
+
+Här är ett exempel på XML-koden för en Wi-Fi-profil för Android eller Windows:
+
+> [!IMPORTANT]
+> 
+> `<protected>false</protected>`måste vara inställt på **falskt**, eftersom **sant** kan orsaka att enheten förväntar sig ett krypterat lösenord och försöker att dekryptera det, vilket kan resultera i en misslyckad anslutning.
+> 
+>  `<hex>53534944</hex>` ska vara inställt på det hexadecimala värdet `<name><SSID of wifi profile></name>`.
+>  Windows 10-enheter kan returnera ett falskt *0x87D1FDE8 Reparationen misslyckades*-felmeddelande, men kommer ändå att ha etablerats med profilen.
 
     <!--
     <Name of wifi profile> = Name of profile
@@ -61,6 +77,7 @@ SSID är det SSID som du skapar principen för. Exempel:
     <Type of encryption> = Type of encryption used by the network
     <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
     <password> = Password to connect to the network
+    <hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
     -->
     <WLANProfile
     xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -173,33 +190,31 @@ Här är ett exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
       </MSM>
     </WLANProfile>
 
-4.  Klicka på OK, och spara och distribuera sedan principen.
-Obs! Den här principen kan bara distribueras till användargrupper
-
-Nästa gång varje enhet checkar in tillämpas principen och en Wi-Fi-profil skapas på enheten. Enheten kan ansluta till nätverket automatiskt.
 ## Skapa XML-filen utifrån en befintlig Wi-Fi-anslutning
 Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
-1.     På en dator som är ansluten till eller nyligen har anslutit till det trådlösa nätverket öppnar du följande mapp: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}. Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
+1. På en dator som är ansluten till eller nyligen har anslutit till det trådlösa nätverket öppnar du följande mapp: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
+
+    Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
 3.     Sök igenom XML-filerna för att hitta den med rätt namn.
 4.     När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
 
 ## Distribuera principen
 
-1.  Välj den princip på arbetsytan **Princip** som du vill distribuera och klicka sedan på **Hantera distribution**.
+1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
 2.  I dialogrutan **Hantera distribution** :
 
-    -   **Om du vill distribuera principen** markerar du en eller flera grupper som du vill distribuera principen till och klickar sedan på **Lägg till** &gt; **OK**.
+    -   **Om du vill distribuera principen** – Välj en eller flera grupper som du vill distribuera principen till. Välj sedan **Lägg till** &gt; **OK**.
 
-    -   **Om du vill stänga dialogrutan utan att distribuera den** – Klicka på **Avbryt**.
+    -   **Om du vill stänga dialogrutan utan att distribuera den** – Välj **Avbryt**.
 
-När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
+När du väljer en distribuerad princip visas mer information om distributionen i den nedre delen av principlistan.
 
 ### Se även
 [Wi-Fi-anslutningar i Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

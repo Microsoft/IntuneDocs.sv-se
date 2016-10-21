@@ -13,8 +13,8 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1a8d80ad2b0ee66101ad9e67532e806ebc4b690
-ms.openlocfilehash: 3361c9069a3258621b9349a0cf332a38c206d041
+ms.sourcegitcommit: 26c62a000470030ef0109b397261b3049d3984ed
+ms.openlocfilehash: 710e5b2a59121d6ace53bd23f125dbe398c9ddae
 
 
 ---
@@ -140,30 +140,24 @@ Om du använder en Android-enhet kan ett blockeringsmeddelande visas med instruk
 
 ![Skärmbild av felmeddelande och anvisningar för att ta bort kontot](../media/AppManagement/Android_SwitchUser.png)
 
-##  Visa mediefiler med delningsappen Rights Management
-Om du vill visa företagets AV-, PDF- och bildfiler på Android-enheter använder du [delningsappen Microsoft Rights Management (RMS)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
+##  Visa mediefiler med Azure Information Protection-appen (tidigare delningsapplikationen för Rights Management)
+Om du vill visa företagets AV-, PDF- och bildfiler på Android-enheter använder du [Azure Information Protection-appen](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
 
-Hämta den här appen från Google Play Store.  När appen har installerats på enheten startar du appen och verifierar med dina autentiseringsuppgifter för företaget. Du bör nu kunna visa oskyddade och skyddade filer från andra principhanterade appar.
+Hämta den här appen från Google Play Store.  
 
 Följande filtyper stöds:
 
 * **Ljud:** AAC LC, HE-AACv1 (AAC+), HE-AACv2 (förbättrad AAC+), AAC ELD (Enhanced Low Delay AAC), AMR-NB, AMR-WB, FLAC, MP3, MIDI, Vorbis, PCM/WAVE.
 * **Video:** H.263, H.264 AVC, MPEG-4 SP, VP8.
 * **Bild:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg.
-* PDF, PPDF
+* **PDF, PPDF**
 
 ------------
 |**pfile**|**text**|
 |----|----|
-|Pfile är ett allmänt “wrapper”-format för skyddade filer som kapslar in det krypterade innehållet och RMS-licenserna. Det kan användas för att skydda alla filtyper.|Textfiler, till exempel XML och CSV, kan visas i appen även när de skyddas. Filtyper: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
+|Pfile är ett allmänt “wrapper”-format för skyddade filer som kapslar in det krypterade innehållet och Azure Information Protection-licenserna. Det kan användas för att skydda alla filtyper.|Textfiler, till exempel XML och CSV, kan visas i appen även när de skyddas. Filtyper: txt, ptxt, csv, pcsv, log, plog, xml, pxml.|
 ---------------
-**Android-enheter som inte har registrerats i Intune**
 
-Innan du kan använda RMS-delningsappen för att visa filer från andra appar som hanteras av Intune startar du RMS-appen och autentiserar med ditt arbetskonto.  När du loggar in visas följande meddelande **endast om du inte har en licens för RMS**:
-
-**Autentisering lyckades – Nu kan du visa företagets filer, men din organisation har inte ställts in så att du kan skydda filer. Kontakta IT-administratören om du vill har mer information.**
-
-Detta förhindrar inte att du använder RMS-delningsappen för att visa företagets filer. Du kan fortfarande öppna och visa företagets filer från andra appar som hanteras av Intune och MAM-principerna gäller fortfarande.  Meddelandet betyder att du inte kan lägga till ytterligare skyddsfunktioner som RMS-delningsappen innehåller.  Du måste ha en RMS-licens om du vill kunna lägga till skydd åt dina filer. Läs mer om RMS-funktionerna för filskydd i [Skydda en fil på en enhet](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-in-place) och [Skydda en fil som du delar via e-post](https://docs.microsoft.com/en-us/rights-management/rms-client/sharing-app-protect-by-email).
 
 
 ### Se även
@@ -171,6 +165,6 @@ Detta förhindrar inte att du använder RMS-delningsappen för att visa företag
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -4,7 +4,7 @@ description: "Lista med länkar till saker du kan göra på din Windows-enhet n�
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,16 @@ ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 11760810110ddb34e1a5371ce45206212eab0790
-ms.openlocfilehash: ba1e9ae9b17b6cb3ef9bccdcd19bafd9443915ff
+ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
+ms.openlocfilehash: 28062ec58760a793d0e19f281efd026c3d8070da
 
 
 ---
 
 # Att använda din Windowsenhet med Intune
 
-Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användare följer för att göra en rad olika uppgifter. Dessa är grupperade i kategorier: 
-- Installation av företagsportalappen och registrering av Intune 
+Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
+- Installation av företagsportalappen och registrering av Intune
 - Hanteringsuppgifter efter registrering
 - Efterlevnadsproblem
 
@@ -60,6 +60,6 @@ Det här avsnittet innehåller information om hur du löser problem som kan upps
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

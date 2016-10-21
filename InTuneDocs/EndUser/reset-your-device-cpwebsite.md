@@ -4,7 +4,7 @@ description:
 keywords: 
 author: Staciebarker
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: 005992d7d763b67db4d65aa30f19a209f82e3811
+ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
+ms.openlocfilehash: 05f54088f3b18d90368e1b408b7012d28021abfc
 
 
 ---
@@ -29,7 +29,7 @@ Om du återställer en enhet kommer den inte längre att visas på företagsport
 
 Så här återställer du en enhet:
 
-1.  Öppna [företagsportalens webbplats](http://portal.manage.microsoft.com) och tryck på den enhet vars namn du vill ändra.
+1.  Öppna [företagsportalens webbplats](http://portal.manage.microsoft.com) och tryck på den enhet som du vill återställa.
 
 2.  Tryck på **Återställ**.
 
@@ -41,11 +41,10 @@ Nu har enheten återställts.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-### Se även
-[Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+<!--HONumber=Sep16_HO3-->
 
 

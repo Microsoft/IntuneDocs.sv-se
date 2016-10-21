@@ -13,8 +13,8 @@ ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 727d28cff074124b5401f6c2931f87df3a9d2d23
-ms.openlocfilehash: 93c05ecd0154bb637f421dcc5d7ee56ff8d3ab2d
+ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
+ms.openlocfilehash: c4b1e5d3bb8b949096f7d15ddbbf0d1540485d0d
 
 
 ---
@@ -46,7 +46,7 @@ Appar som är baserade på externa länkar lagras inte i Intune-molnlagringsutry
 Du kan använda hanterade iOS-appar till att hantera och distribuera kostnadsfria iOS-appar från App Store. Och även till att associera [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
 
 > [!TIP]
-> Alternativ för mobila enheter är inte tillgängliga förrän du [anger Intune som MDM-utfärdare](get-ready-to-enroll-devices-in-microsoft-intune.md).
+> Alternativ för mobila enheter är inte tillgängliga förrän du [anger Intune som MDM-utfärdare](prerequisites-for-enrollment.md).
 
 ## Intune-programvaruutgivare
 Microsoft Intune programvaruutgivare startar när du lägger till eller ändrar appar från Intune-administratörskonsolen. Från utgivaren väljer du en typ av installationsprogram som gör något av följande:
@@ -82,6 +82,6 @@ Du måste lägga till appar i Intune-konsolen innan du kan distribuera dem. Du k
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

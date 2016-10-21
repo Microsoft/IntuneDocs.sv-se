@@ -2,7 +2,7 @@
 title: "Planera dina användar- och enhetsgrupper | Microsoft Intune"
 description: "Planera grupper för att uppfylla organisationens behov."
 keywords: 
-author: nbigman
+author: sanchusa
 manager: angrobe
 ms.date: 07/21/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: f11bb256-1094-4f7e-b826-1314c57f3356
 ms.reviewer: lpatha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55e21f56c3d1b73427e4019054a0f9fab862f26d
-ms.openlocfilehash: 70949301499efedd99eeddb60dd2fa0efc6d2309
+ms.sourcegitcommit: 0ea1aeee65381420af8662e7c0e16741879948e2
+ms.openlocfilehash: 9fc92c7724a9e1f256faa8b028bcf93e354e7997
 
 
 ---
@@ -136,13 +136,13 @@ På liknande sätt kan du skapa en grupp för de som använder företagsägda en
 ### Grupper för geografiska områden
 Om organisationen behöver principer för vissa regioner kan du skapa grupper baserat på geografiskt område. Du kan basera dem på regionala grupper som du kanske redan har skapat i din instans av Active Directory och synkronisera dem med Azure Active Directory-tjänsten. Du kan också skapa regionala grupper direkt i Azure Active Directory.
 
-Följande skärmbilder visar hur du skapar Intune-grupper baserat på de grupper som du synkroniserar med din lokala instans av Active Directory. Dessa exempel förutsätter att du har en Active Directory-säkerhetsgrupp som heter **US Users Group**.
+Följande skärmbilder visar hur du skapar Intune-grupper baserat på de grupper som du synkroniserar med din lokala instans av Active Directory. Dessa exempel förutsätter att du har en Active Directory-säkerhetsgrupp som heter **US Users Group** (grupp för USA-användare).
 
 Börja med att ange allmän information.
 
 ![Skärmbild av området Redigera grupp](../media/Intune_Planning_Groups_AD_General_small.png)
 
-Under **Kriterier för medlemskap** väljer du **US Users Group**, som är synkroniserat med Active Directory, som den säkerhetsgrupp som ska användas under medlemskapsregler.
+Under **Kriterier för medlemskap** väljer du **US Users Group** (grupp för USA-användare), som är synkroniserat med Active Directory, som den säkerhetsgrupp som ska användas under medlemskapsregler.
 
 ![Skärmbild av dialogrutan Redigera grupp](../media/Intune_Planning_Groups_AD_Criteria_small.png)
 
@@ -156,11 +156,11 @@ I vårt exempel har vi också skapat en grupp som heter **MEA** för Mellanöste
 > Om gruppmedlemskapet inte har fyllts i baserat på medlemskap i säkerhetsgruppen kontrollerar du att gruppmedlemmarna har tilldelats Intune-licenser.
 
 ### Grupper för särskild maskinvara
-Om organisationen kräver principer som tillämpas för specifika maskinvarutyper kan du skapa grupper utifrån det här kravet. Du kan basera principerna på regionala grupper som du redan har skapat i din lokala instans av Active Directory och sedan synkronisera dem med Azure Active Directory. Du kan också skapa grupper direkt i Azure Active Directory. I det här exemplet använder vi **US Users Group** som överordnad grupp till gruppen **Laptop Users**.
+Om organisationen kräver principer som tillämpas för specifika maskinvarutyper kan du skapa grupper utifrån det här kravet. Du kan basera principerna på regionala grupper som du redan har skapat i din lokala instans av Active Directory och sedan synkronisera dem med Azure Active Directory. Du kan också skapa grupper direkt i Azure Active Directory. I det här exemplet använder vi **US Users Group** (grupp för USA-användare) som överordnad grupp till gruppen **Laptop Users** (Användare av bärbara datorer).
 
 ![Dialogrutan Välj säkerhetsgrupp](../media/Intune_Planning_Groups_Laptop_small.png)
 
-Nu bör hierarkin för din grupp se ut ungefär som på nästa skärmbild. Som du ser finns det nu medlemmar i Intune-gruppen **Laptop Users**. Alla principer som tillämpas på den här gruppen gäller för användare av bärbara BYOD-datorer från regionen USA.
+Nu bör hierarkin för din grupp se ut ungefär som på nästa skärmbild. Som du ser finns det nu medlemmar i Intune-gruppen **Laptop Users** (användare av bärbara datorer). Alla principer som tillämpas på den här gruppen gäller för användare av bärbara BYOD-datorer från regionen USA.
 
 ![Visning av gruppen Användare av bärbara datorer](../media/Intune_Planning_Groups_Laptop_Hierarchy_small.png)
 
@@ -215,6 +215,6 @@ När du namnger principerna på det här sättet kan du snabbt identifiera princ
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -4,7 +4,7 @@ description: "Använd Cisco ISE med Intune så att enheterna registreras av Intu
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 06/24/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40194f4359d0889806e080a4855b8e1934b667f9
-ms.openlocfilehash: 9d6b7198e3c2e30898a8ec83785c7f3b777eda5f
+ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
+ms.openlocfilehash: 44dc8ce90537580ef30ba4b8c9f3ee2dd5e20c24
 
 
 ---
@@ -27,7 +27,7 @@ Med Intune-integration i Cisco Identity Services Engine (ISE) kan du skapa nätv
 Om du vill aktivera den här integreringen behöver du inte göra några inställningar i Intune-klienten. Du måste ge behörighet till Cisco ISE-servern för att få åtkomst till din Intune-klient. När det är klart görs de resterande inställningarna på Cisco ISE-servern. Den här artikeln innehåller anvisningar om hur du ger ISE-servern behörighet att komma åt Intune-klienten.
 
 ### Steg 1: Hantera certifikaten
-1. Exportera certifikatet i Azure Active Directory-konsolen (Azure AD).
+Exportera certifikatet från Azure Active Directory (Azure AD)-konsolen och importera den sedan till arkivet Betrodda certifikat i ISE-konsolen:
 
 #### Internet Explorer 11
 
@@ -44,6 +44,8 @@ Om du vill aktivera den här integreringen behöver du inte göra några instäl
 
    f. På sidan **Fil som ska exporteras** väljer du **Bläddra** för att välja en plats där filen ska sparas och anger ett filnamn. Även om det verkar som om du väljer en fil att exportera namnger du faktiskt filen som det exporterade certifikatet ska sparas till. Välj **Nästa** &gt; **Slutför**.
 
+   g. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
+
 #### Safari
 
  a. Logga in på Azure AD-konsolen.
@@ -52,14 +54,13 @@ b. Välj låsikonen &gt;  **Mer information**.
 
    c. Välj **Visa certifikat** &gt; **Information**.
 
-   d. Välj certifikatet och välj sedan **Exportera**.  
+   d. Välj certifikatet och välj sedan **Exportera**. 
+
+   e. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
 
 > [!IMPORTANT]
 >
 > Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
-
-
-2. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
 
 
 ### Skaffa ett självsignerat certifikat från ISE 
@@ -97,8 +98,44 @@ Se till att all text är på en enda rad
 |OAuth 2.0-token för slutpunkt|Tokenutfärdande URL|
 |Uppdatera koden med klient-ID|Klient-ID|
 
+### Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
+1.     Hämta det base64-kodade certifikatvärdet och tumavtrycket från en offentlig .cer-X509-cert-fil. Det här exemplet använder PowerShell:
+   
+      
+      $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2    $cer.Import(“mycer.cer”)    $bin = $cer.GetRawCertData()    $base64Value = [System.Convert]::ToBase64String($bin)    $bin = $cer.GetCertHash()    $base64Thumbprint = [System.Convert]::ToBase64String($bin)    $keyid = [System.Guid]::NewGuid().ToString()
+ 
+    Lagra värdena för $base64Thumbprint, $base64Value och $keyid, som ska användas i nästa steg.
+2.       Överför certifikatet via manifestfilen. Logga in på [Windows Azure-hanteringsportal](https://manage.windowsazure.com)
+2.      Hitta det program som du vill konfigurera med ett X.509-certifikat i Azure AD-snapin-modulen.
+3.      Hämta program-manifestfilen. 
+5.      Ersätt den tomma egenskapen "KeyCredentials": [], med följande JSON.  Den komplexa typen av KeyCredentials dokumenteras i [Entity and complex type reference](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType) (Entitet och komplex typreferens).
 
-### Steg 3: Konfigurera ISE-inställningar
+ 
+    “keyCredentials“: [ { “customKeyIdentifier“: “$base64Thumbprint_from_above”, “keyId“: “$keyid_from_above“, “type”: “AsymmetricX509Cert”, “usage”: “Verify”, “value”:  “$base64Value_from_above” }2. 
+     ], 
+ 
+Exempel:
+ 
+    “keyCredentials“: [
+    {
+    “customKeyIdentifier“: “ieF43L8nkyw/PEHjWvj+PkWebXk=”,
+    “keyId“: “2d6d849e-3e9e-46cd-b5ed-0f9e30d078cc”,
+    “type”: “AsymmetricX509Cert”,
+    “usage”: “Verify”,
+    “value”: “MIICWjCCAgSgAwIBA***omitted for brevity***qoD4dmgJqZmXDfFyQ”
+    }
+    ],
+ 
+6.      Spara ändringen till program-manifestfilen.
+7.      Överför den redigerade programmanifestfilen genom Azure-hanteringsportalen.
+8.      Valfritt: Hämta manifestet igen för att kontrollera att ditt X.509-certifikat finns på programmet.
+
+>[!NOTE]
+>
+> KeyCredentials är en samling, så du kan överföra flera X.509-certifikat för förnyelser eller ta bort certifikat i komprometterande scenarier.
+
+
+### Steg fyra: Konfigurera ISE-inställningar
 Ange dessa inställningsvärden i ISE-administrationskonsolen:
   - **Servertyp**: Mobile Device Manager
   - **Autentiseringstyp**: OAuth – klientens autentiseringsuppgifter
@@ -150,6 +187,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO1-->
 
 
