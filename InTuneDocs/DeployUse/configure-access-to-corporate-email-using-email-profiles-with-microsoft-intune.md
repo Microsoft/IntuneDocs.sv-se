@@ -4,7 +4,7 @@ description: "Inställningar för e-postprofiler kan användas för att konfigur
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: ef4041b7d9f47d9e1e1463e62274f93597fc6503
+ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
+ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
 
 
 ---
@@ -33,13 +33,16 @@ Du kan använda e-postprofiler för att konfigurera den interna e-postklienten p
 -   Windows 10 (för datorer), Windows 10 Mobile, och senare
 -   iOS 8.0 och senare
 -   Samsung KNOX Standard (4.0 och senare)
+-   Android for Work
+
+>[!NOTE]
+>Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen 
 
 Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur många e-postmeddelanden som ska synkroniseras och, beroende på enhetstypen, vilka innehållstyper som ska synkroniseras.
+
 >[!NOTE]
 >
 >Om användaren har installerat en e-postprofil innan en profil skapas av Intune, beror resultatet av e-postprofildistributionen i Intune på enhetsplattformen:
-
-[kommentar]: <> Passiv konstruktion är nödvändig i de följande tre styckena tills processen med dubblettidentifiering har klargjorts av PM.
 
 >**iOS**: En befintlig duplicerad e-postprofil identifieras baserat på värdnamn och e-postadress. Den duplicerade e-postprofilen som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen meddelar användarna att de inte är kompatibla på grund av deras manuellt konfigurerade e-postprofil och uppmanar dem att ta bort profilen. Användarna bör ta bort e-postprofilen så att Intune-profilen kan konfigureras. För att förhindra det här problemet ber du användarna att göra registreringen före installation av en e-postprofil så att Intune kan konfigurera profilen.
 
@@ -48,6 +51,8 @@ Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur mång
 >**Samsung KNOX**: En befintlig duplicerad e-postprofil identifieras baserat på e-postadressen, och den skrivs över med Intune-profilen. Om användaren konfigurerar det kontot skrivs det över igen av Intune-profilen. Observera att detta kan orsaka förvirring för användaren.
 
 >Samsung KNOX använder inte värdnamn för att identifiera profilen. Därför rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom de kommer att skriva över varandra.
+
+>**Android for Work**: Intune-profilen tillämpas bara på enhetens arbetsprofil och påverkar inte e-postprofiler på enhetens användarprofil.
 
 
 ## Skydda e-postprofiler
@@ -76,6 +81,10 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
     -   **E-postprofil (Windows Phone 8 och senare)**
 
     -   **E-postprofil (Windows 10 Desktop och Mobile och senare)**
+    
+    -   **E-postprofil (Android for Work – Gmail)**
+
+    -   **E-postprofil (Android for Work – Nine Work)**
 
     Du kan bara skapa och distribuera en princip för anpassad e-postprofil. Rekommenderade inställningar är inte tillgängliga.
 
@@ -89,14 +98,14 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
     |**Kontonamn**|Visningsnamnet för e-postkontot som kommer att visas på användarnas enheter.|
     |**Användarnamn**|Hur användarnamn för e-postkontot hämtas. Välj **Användarnamn** för en lokal Exchange-server eller välj **UPN (User Principal Name)** för Office 365.|
     |**E-postadress**|Hur e-postadressen för användaren på varje enhet genereras. Välj **Primär SMTP-adress** om du vill använda den primära SMTP-adressen för att logga in på Exchange eller använd **UPN (User Principal Name)** om du vill använda det fullständiga huvudnamnet som e-postadress.|
-    |**Autentiseringsmetod** (Samsung KNOX och iOS)|Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som används av e-postprofilen.|
-    |**Välj ett certifikat för klientautentisering (identitetscertifikat)** (Samsung KNOX och iOS)|Välj SCEP klientcertifikatet som du skapade tidigare som ska användas för att autentisera Exchange-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.|
+    |**Autentiseringsmetod** (Android for Work, Samsung KNOX och iOS)|Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som används av e-postprofilen.|
+    |**Välj ett certifikat för klientautentisering (identitetscertifikat)** (Android for Work, Samsung KNOX och iOS)|Välj SCEP klientcertifikatet som du skapade tidigare som ska användas för att autentisera Exchange-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.|
     |**Använd S/MIME** (Samsung KNOX och iOS)|Skicka utgående e-post med S/MIME-kryptering.|
     |**Signeringscertifikat** (Samsung KNOX och iOS)|Välj signeringscertifikatet som ska användas för att signera utgående e-post. Det här alternativet visas bara om du väljer **Använd S/MIME**.|
     |**Antal dagars e-postmeddelande att synkronisera**|Ange hur många dagar e-post ska synkroniseras eller välj **Obegränsad** om du vill synkronisera alla tillgängliga e-postmeddelanden.|
-    |**Synkroniseringsschema** (Samsung KNOX, Windows Phone 8 och senare, Windows 10)|Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.|
+    |**Synkroniseringsschema** (Android for Work, Samsung KNOX, Windows Phone 8 och senare, Windows 10)|Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.|
     |**Använd SSL**|Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern. För enheter som kör Samsung KNOX 4.0 eller senare kan du exportera Exchange-serverns SSL-certifikat och distribuera det som en Android-betrodd certifikatprofil i Intune. Intune stöder inte åtkomst till det här certifikatet om det installeras på Exchange-servern på annat sätt.|
-    |**Innehållstyp som ska synkroniseras**|Välj vilka typer av innehåll du vill synkronisera till enheterna.|
+    |**Innehållstyp som ska synkroniseras** (alla plattformar förutom Android for Work Gmail)|Välj vilka typer av innehåll du vill synkronisera till enheterna.|
     |**Tillåt att e-post skickas från tredjepartsprogram** (endast iOS)|Tillåt att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.|
     > [!IMPORTANT]
     > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
@@ -122,6 +131,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

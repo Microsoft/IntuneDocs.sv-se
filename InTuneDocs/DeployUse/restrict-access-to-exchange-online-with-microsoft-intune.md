@@ -13,8 +13,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: e840783f3c50155a6f4f8801047ed474074218f6
+ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
+ms.openlocfilehash: 602be42b75c091cb43359f30256d51eabe597008
 
 
 ---
@@ -64,7 +64,7 @@ Diagrammet nedan illustrerar flödet som används av principerna för villkorlig
 ## Stöd för mobila enheter
 Du kan begränsa åtkomsten till Exchange Online-e-post från **Outlook** och andra **appar som använder modern autentisering**:
 
-- Android 4.0 och senare, Samsung Knox Standard 4.0 och senare
+- Android 4.0 och senare, Samsung Knox Standard 4.0 och senare samt Android for Work
 - iOS 8.0 och senare
 - Windows Phone 8.1 och senare
 
@@ -225,6 +225,9 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 5.  Under **Exchange ActiveSync-appar** kan du välja att hindra icke-kompatibla enheter från att komma åt Exchange Online. Du kan också välja om du vill tillåta eller blockera åtkomst till e-post om enheten inte kör en plattform som stöds. Exempel på plattformar som stöds är Android, iOS, Windows och Windows Phone.
 
+ Exchange Active Sync-appar **Android for Work**-enheter:
+ -  Endast **Gmail** och **Nine Work**-appar i **arbetsprofilen** stöds på Android for Work-enheter. För villkorlig åtkomst till arbete på Android for Work-enheter måste du distribuera en e-postprofil för Gmail eller Nine Work-appen och distribuera den som en **nödvändig** installation. 
+
 6.  Under **Målgrupper**, välja aktiva säkerhetsgrupper av användare för vilka policyn kommer att gälla. Du kan välja att tillämpa principen på alla användare eller en vald lista med användargrupper.
 ![Skärmbild av sidan för Exchange Online-principer för villkorlig åtkomst med alternativen Målgrupper och Undantagna grupper](../media/IntuneSA5eTargetedExemptedGroups.PNG)
     > [!NOTE]
@@ -263,6 +266,6 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

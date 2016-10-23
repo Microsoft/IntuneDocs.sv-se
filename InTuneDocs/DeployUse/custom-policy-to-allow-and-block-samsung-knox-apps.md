@@ -4,7 +4,7 @@ description: "Anpassad profil för att skapa en lista över tillåtna och blocke
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65d2c9c1f5d81dae33422bd4bf7c0e2e21bb96e4
-ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
+ms.sourcegitcommit: c7679d624ba22b2a062ef2534a642e38a5f57fde
+ms.openlocfilehash: 273627573f58e1bde4fd19c548ce87639f25ca4b
 
 
 
@@ -23,7 +23,7 @@ ms.openlocfilehash: 937e291f193f61329598395baa63c24d7fefa25f
 
 I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
 
-- En lista över appar som blockeras från att köras på enheten. Inga andra appar kommer att kunna köras. Appar i den här listan blockeras från att köras även om de redan är installerade när principen tillämpas.
+- En lista över appar som blockeras från att köras på enheten. Appar i den här listan blockeras från att köras även om de redan är installerade när principen tillämpas.
 - En lista över appar som enhetens användare tillåts att installera från Google Play Store. Endast de appar som du tar med i listan kan installeras. Inga andra appar kan installeras från butiken.
 
 De här inställningarna kan endast användas av enheter som kör Samsung KNOX.
@@ -51,7 +51,8 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX.
 
 4. Klicka på **OK** och sedan på **Spara princip**. 
 
->[TIPS] Du kan hitta paket-ID för en app genom att gå till appen i Google Play. Paket-ID finns i webbadressen på appens sida. Paket-ID för Microsoft Word-appen är till exempel **com.microsoft.office.word**.
+>[!TIP]
+> Du kan hitta paket-ID:et för en app genom att gå till appen i Google Play. Paket-ID finns i webbadressen på appens sida. Paket-ID för Microsoft Word-appen är till exempel **com.microsoft.office.word**.
 
 Appinställningarna tillämpas nästa gång en målenhet checkar in.
 
@@ -70,6 +71,6 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

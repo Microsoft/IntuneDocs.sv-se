@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: 381364e42430842032ced3b5c8c9cc8de19e8186
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 57e3175af6364e7dacbf8941f10292fc9dc58b15
 Om du har tappat bort PIN-koden eller lösenordet för en enhet som du har registrerat i Intune kan du återställa det på [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune och för att utföra de flesta av de aktiviteter som du kan göra när du använder företagsportalappen.
 
 > [!NOTE]
-> Knappen Återställ lösenordskod kanske inte visas på webbplatsen för företagsportalen beroende på hur IT-administratören har konfigurerat Intune. Återställning av lösenord stöds inte för Windows 8.1- och Windows RT-enheter.
+> Knappen Återställ lösenordskod kanske inte visas på webbplatsen för företagsportalen beroende på hur IT-administratören har konfigurerat Intune. Återställning av lösenord stöds inte för Windows 8.1-enheter.
 
 Så här återställer du lösenordet:
 
@@ -64,6 +64,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

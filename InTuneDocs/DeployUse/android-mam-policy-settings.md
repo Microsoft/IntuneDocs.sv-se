@@ -4,7 +4,7 @@ description: "I det här avsnittet beskrivs principinställningarna för hanteri
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 09/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 652f3aac9bd0925bd8e8718df04c0eb4b5629902
+ms.sourcegitcommit: 7313854dc9cee26412ed4759e570f0aecc5f156b
+ms.openlocfilehash: e8b1ccca0c905ccdefd5c4a97b78561c6edb7908
 
 
 ---
@@ -67,6 +67,9 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 - **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.<br/>När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för **Microsoft Outlook**-appen.
 
   **Standardvärde = Ja**
+- **Disable printing:** (Inaktivera utskrifter:) Välj **Ja** att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
+
+  **Standardvärde – Ja**
 
 ##  Principinställningar för Android-åtkomst
 Termen **principhanterade appar** används för att hänvisa till appar som är konfigurerade med MAM-principer
@@ -96,6 +99,6 @@ Termen **principhanterade appar** används för att hänvisa till appar som är 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

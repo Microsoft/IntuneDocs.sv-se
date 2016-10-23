@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: 2631541ea974769308aea30d2b37a3a79c22db99
+ms.sourcegitcommit: f69d2b222e9409a79dae07fd77f29c46876f11cb
+ms.openlocfilehash: 38a8a92581a990c321c6c57bfaa5a506733eb1b4
 
 
 ---
@@ -57,12 +57,10 @@ När du registrerar en Windows-enhet i Intune ger du IT-administratören tillst�
 
 -   Tillverkare
 
-Du kan [läsa mer](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows).
+Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar Windows-enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows)
 
 
 
-
-
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

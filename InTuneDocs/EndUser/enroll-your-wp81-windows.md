@@ -13,8 +13,8 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: d1c65c826a978fc5d263cfc0ed4eeee0854d0c3b
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 843011aca535d8416b931f43bb622bc5c01ed546
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: d1c65c826a978fc5d263cfc0ed4eeee0854d0c3b
 
 # Registrera din Windows Phone 8.1-enhet i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Följ de anvisningar som gäller för företaget eller skolan för att registrera din Phone 8.1-enhet för Intune:
@@ -36,7 +36,7 @@ Installera Företagsportal-applikationen på din enhet:
 
 1.  Tryck på **Start** &gt; **Store**.
 
-2.  Tryck på **Sök** och skriv in **Företagsportalen**.
+2.  Tryck på **Sök** och skriv sedan **företagsportal**.
 
 3.  Tryck på **Företagsportalen** i resultatlistan.
 
@@ -66,7 +66,7 @@ Registrera din enhet:
 
     ![Skärmen Inställningar för arbetsplats](./media/WP81-enroll-3-workplace-add-acct.png)
 
-7.  Ange ytterligare information som begärs och tryck sedan på **logga in** för att slutföra registreringen. Du bör nu se ditt arbetsplatskonto i listan om du trycker på **Inställningar** &gt; **Arbetsplats**.
+7.  Ange mer information som begärs och tryck sedan på **logga in** för att slutföra registreringen. Du bör nu se ditt arbetsplatskonto i listan om du trycker på **Inställningar** &gt; **Arbetsplats**.
 
     ![Skärmen Kontot har lagts till](./media/WP81-enroll-4-account-added.png)
 
@@ -76,7 +76,7 @@ Registrera din enhet:
 
 2.  Tryck på **lägg till konto** och logga sedan in med ditt arbetskonto.
 
-3.  Ange ytterligare information som begärs och tryck sedan på **logga in** för att slutföra registreringen.
+3.  Ange mer information som begärs och tryck sedan på **logga in** för att slutföra registreringen.
 
 4.  Om du uppmanas att installera företagets app eller Hub, se då till att rätt ruta är ikryssad och tryck på **klar**.
 
@@ -86,7 +86,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

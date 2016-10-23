@@ -1,6 +1,6 @@
 ---
-title: "Inställningar för efterlevnadsprinciper för Android-enheter | Microsoft Intune"
-description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter."
+title: "Inställningar för efterlevnadsprinciper för Android for Work | Microsoft Intune"
+description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter som är kompatibla med Android for Work."
 keywords: 
 author: karthikaraman
 manager: angrobe
@@ -10,22 +10,23 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
-ms.reviewer: chrisgre
+ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
-ms.openlocfilehash: ed8f280de4582863f77e5b0e9cb5dfb2f20159c4
+ms.sourcegitcommit: 609d3ab2c96d9a3dff7a6bb6aa085f9cda83ba38
+ms.openlocfilehash: 845604fb97927abcc267884dbea6096a82eb170c
 
 
 ---
 
 
-# Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
+# Inställningar för efterlevnadsprinciper för Android for Work-enheter i Microsoft Intune
 
-Principinställningarna som beskrivs i det här avsnittet gäller enheter som kör Android 4.0 och senare eller Samsung KNOX 4.0 och senare.
+Principinställningarna som beskrivs i det här avsnittet gäller för Android for Work-enheter.
 
 Om du letar efter information om andra plattformar väljer du något av följande:
 > [!div class="op_single_selector"]
+- [Inställningar för policy för efterlevnad för Android](android-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för efterlevnadsprinciper för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för policy för efterlevnad för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
@@ -54,18 +55,16 @@ Om du letar efter information om andra plattformar väljer du något av följand
 - **Kräv lösenord när enheten lämnar inaktivt läge:** Den här inställningen bör användas tillsammans med inställningen **Minuter av inaktivitet innan lösenord måste anges**. Användarna uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i inställningen **Minuter av inaktivitet innan lösenord måste anges**.
 
 ### Kryptering
-- **Kräv kryptering på den mobila enheten:** Välj **Ja** för den här inställningen om du vill kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du konfigurerar inställningen **Kräv lösenord för att låsa upp mobila enheter**.
+- **Kräv kryptering på den mobila enheten:** Du behöver inte konfigurera den här inställningen eftersom Android for Work-enheter tvingar fram kryptering.
 
 ## Inställningar för enhetens för hälsotillstånd och säkerhet
 
 - **Enheten får inte vara jailbrokad eller rotad:** Om du aktiverar den här inställningen kommer jailbrokade enheter att utvärderas som inkompatibla.
-- **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)** Om du vill blockera enheter som har aktiverat **Säkerhet > Okända källor** på enheten aktiverar du och väljer **Ja** för inställningen.  
->[!IMPORTANT]
->Inställningen **Okända källor** måste vara aktiverad för program med separat inläsning.  Du bör endast tillämpa denna efterlevnadsprincip om du inte läser in Android-appar separat på enheter.
+- **Kräv att enheter förhindrar installation av appar från okända källor:** Du behöver inte konfigurera den här inställningen eftersom Android for Work-enheter alltid begränsar installationer från okända källor. .  
 
-- **Kräv att USB-felsökning är inaktiverat (Android 4.2 eller senare)**: Den här inställningen anger om du vill kontrollera om USB-felsökning är aktiverad på enheten.
-- **Kräv att ”Genomsök enhet efter säkerhetshot” (Android 4.2-4.4) är aktiverat på enheter**: Den här inställningen anger att funktionen **Verifiera appar** är aktiverad på enheten.
-- **Lägsta Android-säkerhetskorrigeringsnivå (Android 6.0 eller senare)**: Använd den här inställningen för att ange den lägsta Android-korrigeringsnivå.  Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste ha formatet ÅÅÅÅ-MM-DD.
+- **Kräv att USB-felsökning är inaktiverat**: Du behöver inte konfigurera de här inställningarna eftersom USB-felsökning redan är inaktiverat på Android for Work-enheter.
+
+- **Lägsta Android-säkerhetskorrigeringsnivå**: Använd den här inställningen för att ange den lägsta Android-korrigeringsnivån.  Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste ha formatet ÅÅÅÅ-MM-DD.
 - **Kräv att enhetsskydd är aktiverat**: Använd den här inställningen för att ta riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Välj den högsta tillåtna hotnivån, som är en av följande:
 
   - **Ingen (skyddad)**: Det här är det säkraste alternativet. Detta innebär att enheten inte kan ha några hot. Om hot identifieras på enheten kommer den utvärderas som icke-kompatibel.

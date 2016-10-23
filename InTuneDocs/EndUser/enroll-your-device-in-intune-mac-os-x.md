@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 4a682db8e949fa087fdffe945a758554c1bfb164
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 0460982186386378d5461861d9098ac3269e6fd0
 
 # Registrera din Mac OS X-enhet i Intune
 
-Genom att registrera Mac OS X-enheten i Intune kan du få åtkomst till företagets nätverk, din e-post och filer för arbetet och kan hämta företagsappar. Mer information om vad som händer när du registrerar din enhet finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+När du registrerar din Mac OS X-enhet i Intune får du åtkomst till företagets nätverk, din arbets-e-post och dina arbetsfiler. Du kan även hämta företagsappar. Mer information om vad som händer när du registrerar din enhet finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Om du försöker registrera en iOS-enhet kan du läsa [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md).
 
@@ -40,11 +40,11 @@ Så här registrerar du din Mac OS X-enhet:
 
     ![tap-install-to-enroll](./media/2-macosx-enroll--install-button.png)
 
-4.  Tryck på **Installera** i dialogrutan **Installera hanteringsprofil**. Om en dialogruta visas där du ombes ange inloggningsinformation anger du användarnamn och lösenord och trycker sedan på **Fortsätt** &gt; **Installera**.
+4.  Tryck på **Installera** i dialogrutan **Installera hanteringsprofil**. Om en dialogruta ber dig att ange inloggningsinformation anger du användarnamn och lösenord och trycker sedan på **Fortsätt** &gt; **Installera**.
 
     ![install-management-profile](./media/3-macosx-enroll-tap-install.png)
 
-    När du är klar med registreringen visas en hanteringsprofilsida som visar att profilen har verifierats.
+    När du är klar med registreringen ser du en **hanteringsprofilsida** som visar att profilen har verifierats.
 
     ![management-profile-verified](./media/4-macosx-enroll-done.png)
 
@@ -52,7 +52,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

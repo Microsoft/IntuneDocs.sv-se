@@ -1,6 +1,6 @@
 ---
 title: "Skicka fel till IT-administratören | Microsoft Intune"
-description: 
+description: "Skicka fel till administratören"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
+ms.sourcegitcommit: 881a2d90a863f5c7f3809f890bb82850b6145982
+ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 
 
 ---
@@ -25,16 +25,14 @@ ms.openlocfilehash: 8890929dc1338946dbaa9a3df2aec99df22c1a82
 
 Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper IT-administratören att felsöka problemet. Du kan skicka information om fel på olika sätt:
 
--   I felmeddelanden: Tryck på **Rapportera**.
+-   Tryck på **Rapportera** i felmeddelanden.
 
--   På skärmen **Om** i företagsportalappen: tryck på **Skicka diagnostikrapport**.
+-   Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
 
--   När du använder företagsportalappen: Skaka enheten och tryck på **E-post** när diagnostikmeddelandet visas. Om aviseringen inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
-
-
+-   Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om aviseringen inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Skicka registreringsfel till IT-administratören | Microsoft Intune"
-description: 
+description: "Skicka registreringsfel till IT-administratören"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,18 +14,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 081764e59649cbc486ad3a757ad4bf9c65c91112
+ms.sourcegitcommit: c10f9548c00972a018e742601586f6e03e1a05cc
+ms.openlocfilehash: 93f4d2c93f17146a704031dae0d35cfde077b384
 
 
 ---
 
 
-# Skicka registreringsfel till IT-administratören
+# Skicka fel vid registrering till din IT-administratör
 
-Om du får ett fel när du försöker registrera din Android-enhet i Intune kan du försöka igen genom att trycka på **Försök igen**. Du kan också skicka felinformationen till IT-administratören i ett e-postmeddelande genom att trycka på **Skicka info**.
+Om du får ett felmeddelande när du försöker registrera Android-enheten i Intune kan du försöka registrera igen genom att trycka på **Försök igen**. Du kan även skicka felinformation till din IT-administratör i ett e-postmeddelande genom att trycka på **Skicka information**.
 
-Ett e-postmeddelande till din IT-administratör skapas automatiskt och innehåller de loggar som administratören behöver för att felsöka enheten.
+När du trycker på **Skicka information** skapas automatiskt ett e-postmeddelande till din IT-administratör som innehåller de loggar som administratören behöver för att felsöka enheten.
 
 Du kan skicka enhetens dataloggar till IT-administratören för att få hjälp med fel på olika sätt:
 
@@ -34,7 +34,6 @@ Du kan skicka enhetens dataloggar till IT-administratören för att få hjälp m
 
 
 
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

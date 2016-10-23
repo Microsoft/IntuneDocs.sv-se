@@ -13,16 +13,34 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 91385bdbe4aa4252311db106c04de7d04df5109c
-ms.openlocfilehash: 5e94e4efa5a3ecb055ce416c3ee8dd21e56bad65
+ms.sourcegitcommit: 77c8df8f1886786a2e772429d93b034798b22a66
+ms.openlocfilehash: 8c500a5bfd59f801d1177a681fa9d55d1aa1ee0e
 
 
 ---
 
 # Krav för hantering av mobila enheter i Intune
-Om du vill låta medarbetarna registrera mobila enheter (däribland [Android](set-up-android-management-with-microsoft-intune.md), [iOS och Mac](set-up-ios-and-mac-management-with-microsoft-intune.md), [Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md) och [Windows PC](set-up-windows-device-management-with-microsoft-intune.md)) i Intune eller om du vill hantera företagsägda enheter måste du aktivera registrering av enheter. Om du vill tillåta registrering måste du ange en utfärdare för hantering av mobila enheter (MDM), konfigurera Intunes företagsportal, tilldela licenser och aktivera registrering för enhetsplattformen.
+Du kan göra det möjligt för anställda att registrera sina mobila enheter i Intune med följande steg. Samma steg krävs för att hantera företagsägda enheter.
 
-## Ange auktoritet för hantering av mobila enheter
+|Steg|Information|  
+|-----------|-------------|  
+|**Steg 1:** [Beroenden för enhetsregistrering](#step-1-device-enrollment-dependencies)|Se till att det anpassade domännamnet är konfigurerat och att nätverkskommunikation är redo|  
+|**Steg 2:** [Konfigurera auktoritet för enhetshantering](#step-2-set-mobile-device-management-authority)|Utfärdaren för hantering av mobila enheter definierar den tjänst som har tilldelats enheterna|
+|**Steg 3:** [Konfigurera Intune-företagsportalen](#step-3-configure-the-intune-company-portal)|Konfigurera användarinriktade inställningar för företagsportalappen|  
+|**Steg 4:** [Tilldela Intune-användarlicenser](#step-4-assign-intune-user-licenses)|Tilldela Intune-licenser till användare så att de kan registrera enheter|
+|**Steg 5:** [Konfigurera enhetshantering](#step-5-set-up-device-management)|Aktivera plattformsspecifika inställningar för iOS- och Windows-hantering. Android-enheter behöver ingen ytterligare konfigurering.|
+
+Letar du efter Intune med Configuration Manager?
+> [!div class="button"]
+[Se SCCM-dokument >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+
+## Steg 1: Beroenden för enhetsregistrering
+
+Innan du aktiverar registrering av mobila enheter ser du till att du har gjort följande:
+- [Granska webbadresser och portar som krävs i nätverket](../get-started/network-infrastructure-requirements-for-microsoft-intune)
+- [Lägga till och verifiera en egen domän](../get-started/domain-names-for-microsoft-intune)
+
+## Steg 2: Ange auktoritet för hantering av mobila enheter
 Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
 
 >[!IMPORTANT]
@@ -38,7 +56,7 @@ Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst so
 
 3.  Intune begär bekräftelse på att du vill ha Intune som MDM-utfärdare. Markera kryssrutan och välj sedan **Ja** om du vill hantera mobila enheter med Microsoft Intune.
 
-## Konfigurera Intune-företagsportalen
+## Steg 3: Konfigurera Intune-företagsportalen
 
 Intune-företagsportalen är den plats där användare kan komma åt företagets data och utföra vanliga aktiviteter som att registrera enheter, installera appar och hitta information för att få hjälp från IT-avdelningen.
 
@@ -79,14 +97,14 @@ Du kan anpassa företagsportalen med företagets logotyp, företagets namn, tema
     |----------|----------------|
     |Temafärg|Välj en temafärg som ska användas på företagsportalen.|
     |Infoga företagslogotyp|Om du aktiverar det här alternativet kan du ladda upp företagets logotyp så att den visas på företagsportalen. Du kan ladda upp två logotyper: en logotyp som visas när företagsportalens bakgrund är vit och en logotyp som visas när företagsportalens bakgrund har din valda temafärg. En logotyp måste vara en PNG- eller JPG-fil med en högsta upplösning på 400 × 100 bildpunkter och en största storlek på 750 kB.|
-    |Välj en bakgrund för företagsportalappen i [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]|Den här inställningen påverkar bara bakgrunden i [!INCLUDE[win8_client_2](../includes/win8_client_2_md.md)]-företagsportalappen.|
+    |Välj en bakgrund för företagsportalappen|Den här inställningen påverkar bara bakgrunden i företagsportalappen.|
 
 
 När du har sparat ändringarna kan du använda länkarna längst ned på sidan **Företagsportal** i administratörskonsolen för att gå till företagsportalen. Dessa länkar kan inte ändras. När en användare loggar in visar dessa länkar dina prenumerationer på företagsportalen.
 
-## Tilldela en Intune-användarlicens
+## Steg 4: Tilldela Intune-användarlicenser
 
-Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure Active Directory (Azure AD).
+Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure Active Directory (Azure AD). Du kan [synkronisera lokala användare med Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
 
 1.  Logga in på [hanteringsportalen för Office 365](https://portal.office.com/Admin/Default.aspx) med dina klientadministratörsuppgifter.
 
@@ -94,7 +112,14 @@ Du använder **hanteringsportalen för Office 365** för att manuellt lägga til
 
 3.  Nu läggs användarkontot till i Microsoft Intune-användargruppen, vilket beviljar användaren behörighet att använda tjänsten och registrera sina enheter för hantering.
 
-## Konfigurera enhetshantering
+### Så här synkroniserar du lokala användare med Azure AD
+
+1. [Lägg till UPN-suffixet](https://technet.microsoft.com/en-us/library/cc772007.aspx) för din egna domän i din lokala Active Directory.
+2. Ange det nya UPN-suffixet för de lokala användare som du tänker importera.
+3. Kör [Azure AD Connect-synkronisering](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) för att integrera dina lokala användare med Azure AD.
+4. När informationen om användarkontot har synkroniserats kan du tilldela Microsoft Intune-licenser med [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx).
+
+## Steg 5: Konfigurera enhetshantering
 När du har konfigurerat MDM-utfärdare måste du konfigurera enhetshantering för de operativsystem som organisationen vill ha stöd för. Stegen för att konfigurera enhetshantering varierar beroende på operativsystem. I Android OS krävs till exempel inte att du gör någonting i Intune-administratörskonsolen. Å andra sidan kräver Windows och iOS en förtroenderelation mellan enheter och Intune för att tillåta hantering.
 
 Ställ in hantering för följande plattformar:
@@ -109,6 +134,6 @@ Du kan också:
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

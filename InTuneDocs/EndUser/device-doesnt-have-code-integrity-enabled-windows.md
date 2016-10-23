@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 00bd999dc8d49b2f01e0eb52a8fa28600f050246
+ms.sourcegitcommit: 85cdfd1aac6fdf738754539c746aee8e5d045ae9
+ms.openlocfilehash: 60e29209718ca206ae96ccc2df330650e2f93c1d
 
 
 ---
@@ -23,20 +23,18 @@ ms.openlocfilehash: 00bd999dc8d49b2f01e0eb52a8fa28600f050246
 
 # Kodintegritet är inte aktiverat i enheten
 
-Din organisation kräver att du aktiverar Windows Kodintegritet. Det är en funktion som kontrollerar att drivrutiner och systemfiler på enheten är säkra.
+Din organisation kräver att du aktiverar Kodintegritet. Den här funktionen kontrollerar drivrutiner och systemfiler på enheten för att se att de är säkra.
 
 För att kunna aktivera Kodintegritet måste du aktivera funktionen Säker start. Funktionen Kodintegritet aktiveras sedan automatiskt.
 
 Att aktivera Säker start är en avancerad uppgift. Om du använder en mobil enhet kan du kontakta IT-administratören om du behöver hjälp.
 
-Om du använder en dator kan du kontakta IT-administratören eller läsa avsnittet “Återaktivera Säker start” på sidan [Inaktivera Säker start](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) om du vill aktivera Säker start på egen hand.
+Om du använder en persondator kan du kontakta IT-administratören. Alternativt kan du läsa avsnittet “Återaktivera Säker start” på sidan [Inaktivera Säker start](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) om du vill aktivera Säker start på egen hand.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

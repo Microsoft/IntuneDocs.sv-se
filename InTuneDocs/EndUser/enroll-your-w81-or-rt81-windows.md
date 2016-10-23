@@ -13,8 +13,8 @@ ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 53e9313bc85c149960fa985b655a22065b55b8a0
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: ce39a013186942e3d5a2b355d1425edbed4fa769
 
 # Registrera din Windows 8.1- eller Windows RT 8.1-enhet i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Registrera din Windows 8.1- eller Windows RT 8.1-enhet:
@@ -55,7 +55,7 @@ Vi rekommenderar också att du installerar appen Företagsportalen som gör att 
 
 1.  Tryck på **Start** &gt; **Store**.
 
-2.  Tryck på **Sök** och skriv in **Företagsportalen**.
+2.  Tryck på **Sök** och skriv sedan **företagsportal**.
 
 3.  Tryck på **Företagsportalen** i resultatlistan.
 
@@ -65,7 +65,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -14,22 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: a497a3e9372a89326f31d6eb869e38200ebe6802
+ms.sourcegitcommit: 703878a70227716213f5a25b1b5dfa99fce42ee5
+ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 
 
 ---
 
 
 # Fel vid utvärdering av enhet
-Enheten har visat sig vara inkompatibel med en eller flera av företagets principer och ett fel inträffade vid utvärdering av enheten för detta tillstånd.
+Enheten är icke-kompatibel med en eller flera av ditt företags principer, men det går inte att visa felet just nu eftersom systemet stötte på ett problem vid försöket att utvärdera din enhet.  
 
-Lös problemet genom att vänta några minuter och sedan trycka på **Kontrollera efterlevnad**.
-
-Om problemet kvarstår kontaktar du IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Lös problemet genom att vänta några minuter och sedan trycka på **Kontrollera efterlevnad**. Om problemet kvarstår kontaktar du IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
