@@ -4,7 +4,7 @@ description: "Med Intune kan du skapa och distribuera principer som styr instäl
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fa665c758460b8bbd95b237da6a22eda741b8b95
-ms.openlocfilehash: 0dc10ea029d078840a584424f7900f340189b960
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 058843a1cdd0ca4c32c7cc4d7a901e7547da633e
 
 
 ---
@@ -61,6 +61,7 @@ En fullständig lista över Intune-principer finns i [Principreferens för Micro
 
     - [Inställningar för iOS-enheter](ios-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Android-enheter](android-policy-settings-in-microsoft-intune.md)
+    - [Inställningar för Android for Work-enheter](android-for-work-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Windows 8- och Windows 8.1-enheter](windows-configuration-policy-settings-in-microsoft-intune.md)
     - [Inställningar för Windows Phone 8.1-enheter](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
     - [Inställningar för stationära och mobila Windows 10-enheter](windows-10-policy-settings-in-microsoft-intune.md)
@@ -115,7 +116,6 @@ Om enheten inte kontaktar tjänsten för att be om principen när den första av
 - iOS och Mac OS X: Var 6:e timme.
 - Android: Var 8:e timme.
 - Windows Phone: Var 8:e timme.
-- Registrerade Windows RT-enheter: Var 24:e timme.
 - Windows 8.1- och Windows 10-datorer som har registrerats som enheter: Var 8:e timme.
 
 Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
@@ -212,6 +212,6 @@ Se [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

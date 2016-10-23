@@ -1,6 +1,6 @@
 ---
 title: "Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel | Microsoft Intune"
-description: 
+description: Skicka dataloggar med en USB-kabel
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,33 +14,31 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: e88afa6d8cc2720a001e7ee138e169bd3f1c67fa
+ms.sourcegitcommit: 42720b0e0613be10e83cb0e8aae7170a85f473e5
+ms.openlocfilehash: e26a97d52cc753f83eb49e3f733668eb83ef4932
 
 
 ---
 
 
-# Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel
+# Skicka loggar med diagnostikdata till din IT-administratör via USB-kabel
 
-Om du vill skicka dataloggar till IT-administratören för att få hjälp med ett problem kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet. Så här gör du:
+Om du vill skicka dataloggar till IT-administratören kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet.
+
+ Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
 
 1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
 
-2.  Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
-
 2.  Anslut din Android-enhet till en dator via en USB-kabel.
 
-3.  Leta efter en mapp med namnet på din telefon på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files i den katalogen\.
+3.  Leta efter en mapp med namnet på din enhet på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\ i katalogen.
 
-4.  Bifoga alla filer i ett e-postmeddelande och skicka dem till din IT-administratör.
+4.  Bifoga filerna i ett e-postmeddelande och skicka dem till din IT-administratör.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
