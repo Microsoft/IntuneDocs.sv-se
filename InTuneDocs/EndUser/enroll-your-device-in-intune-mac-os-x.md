@@ -3,6 +3,7 @@ title: Registrera din Mac OS X-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Mac OS X-enhet i Intune
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

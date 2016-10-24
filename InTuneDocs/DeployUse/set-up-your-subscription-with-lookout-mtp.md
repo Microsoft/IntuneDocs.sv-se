@@ -3,6 +3,7 @@ title: Konfigurera din prenumeration med Lookout | Microsoft Intune
 description: "Detta avsnitt tillhandahåller information om hur du konfigurerar Lookout-skydd mot enhetshot."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

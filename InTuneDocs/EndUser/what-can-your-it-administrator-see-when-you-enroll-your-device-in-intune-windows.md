@@ -3,6 +3,7 @@ title: "Vad kan IT-administratören se när du registrerar din enhet i Intune? M
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

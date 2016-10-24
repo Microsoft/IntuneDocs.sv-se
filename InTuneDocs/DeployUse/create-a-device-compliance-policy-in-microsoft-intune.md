@@ -3,6 +3,7 @@ title: Skapa en enhetsefterlevnadsprincip | Microsoft Intune
 description: "Skapa en efterlevnadsprincip för att skydda mobila enheter och datorer som används för att komma åt företagets data."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

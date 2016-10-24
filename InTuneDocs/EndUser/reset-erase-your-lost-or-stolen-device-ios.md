@@ -3,6 +3,7 @@ title: "Återställa (radera) en borttappad eller stulen iOS-enhet | Microsoft I
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

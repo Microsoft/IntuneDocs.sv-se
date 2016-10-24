@@ -3,6 +3,7 @@ title: Omsluta iOS-appar med apphanteringsverktyget | Microsoft Intune
 description: "Använd informationen i det här avsnittet för att lära dig hur du omsluter iOS-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

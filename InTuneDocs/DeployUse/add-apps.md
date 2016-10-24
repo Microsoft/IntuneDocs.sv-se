@@ -3,6 +3,7 @@ title: "Lägg till appar | Microsoft Intune"
 description: "Innan du börjar distribuera appar med Intune är det bra om du bekantar dig med de olika begreppen i det här avsnittet."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

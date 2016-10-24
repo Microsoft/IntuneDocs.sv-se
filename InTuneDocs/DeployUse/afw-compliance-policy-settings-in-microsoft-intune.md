@@ -3,6 +3,7 @@ title: "Inställningar för efterlevnadsprinciper för Android for Work | Micros
 description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter som är kompatibla med Android for Work."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/13/2016
 ms.topic: article

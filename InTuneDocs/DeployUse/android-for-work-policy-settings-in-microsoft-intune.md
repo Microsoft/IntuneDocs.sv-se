@@ -4,6 +4,7 @@ title: "Principinställningar för Android for Work | Microsoft Intune"
 description: "Skapa principer som styr inställningar och funktioner på Android for Work-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

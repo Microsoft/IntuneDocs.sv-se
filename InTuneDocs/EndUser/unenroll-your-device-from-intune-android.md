@@ -3,6 +3,7 @@ title: "Avregistrera din Android-enhet från Intune | Microsoft Intune"
 description: "Beskriver hur du avregistrerar en Android-enhet från Intune"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

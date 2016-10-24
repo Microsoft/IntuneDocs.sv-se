@@ -3,6 +3,7 @@ title: "Multifaktorautentisering som använder Azure AD | Microsoft Intune"
 description: "Så här kräver du multifaktorautentisering i Azure AD vid enhetsregistrering."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angerobe
 ms.date: 09/22/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Skicka loggar med diagnostikdata till IT-administratören via en USB-kab
 description: Skicka dataloggar med en USB-kabel
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

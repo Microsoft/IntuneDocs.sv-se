@@ -3,6 +3,7 @@ title: "Använda konfigurationsprinciper för iOS-mobilappar | Microsoft Intune"
 description: "Använd konfigurationsprinciper för mobilappar i Intune om du vill definiera inställningar som kan krävas när användaren kör en iOS-app."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

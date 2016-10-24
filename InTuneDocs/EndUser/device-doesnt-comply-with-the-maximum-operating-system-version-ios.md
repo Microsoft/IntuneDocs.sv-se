@@ -3,6 +3,7 @@ title: "iOS-enheten är inte kompatibel med den senaste versionen av operativsys
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

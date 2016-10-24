@@ -3,6 +3,7 @@ title: Registrera din Android-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Android-enhet i Intune
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/09/2016
 ms.topic: article

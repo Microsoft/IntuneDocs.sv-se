@@ -3,6 +3,7 @@ title: "Använda grupper för att hantera användare och enheter | Microsoft Int
 description: Skapa och hantera grupper med arbetsytan Grupper.
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

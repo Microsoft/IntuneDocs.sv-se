@@ -3,6 +3,7 @@ title: "Använda en Android-enhet med Intune | Microsoft Intune"
 description: "Lista med länkar till saker du kan göra på din mobila Android-enhet när enheten har registrerats i Intune"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

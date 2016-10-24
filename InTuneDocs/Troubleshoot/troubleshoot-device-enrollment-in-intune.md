@@ -3,6 +3,7 @@ title: "Felsöka enhetsregistrering | Microsoft Intune"
 description: "Förslag på hur du kan felsöka problem med enhetsregistrering."
 keywords: 
 author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article

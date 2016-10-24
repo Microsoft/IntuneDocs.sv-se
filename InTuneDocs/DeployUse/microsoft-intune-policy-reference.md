@@ -3,6 +3,7 @@ title: "Referens för konfigurationsprinciper | Microsoft Intune"
 description: "Använd informationen i det här avsnittet för att avgöra vilken Microsoft Intune-princip som du behöver använda för att hantera dina enheter."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

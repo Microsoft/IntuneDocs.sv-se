@@ -3,6 +3,7 @@ title: "Ge åtkomst till företagsresurser | Microsoft Intune"
 description: "Wi-Fi-, VPN- och e-postprofiler fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/14/2016
 ms.topic: article

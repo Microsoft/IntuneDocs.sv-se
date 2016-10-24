@@ -3,6 +3,7 @@ title: "Uppgradera principinställningar för Windows-version | Microsoft Intune
 description: "Läs om hur du uppgraderar Windows 10-enheter automatiskt till den senaste versionen med Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

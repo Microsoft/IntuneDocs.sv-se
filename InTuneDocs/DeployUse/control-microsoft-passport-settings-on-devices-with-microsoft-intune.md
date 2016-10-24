@@ -3,6 +3,7 @@ title: "Kontrollera inställningarna för Windows Hello för företag på enhete
 description: "Läs om hur Intune kan integreras med Windows Hello för företag, en alternativ inloggningsmetod som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/20/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Ställa in efter hur lång tid en Android-enhet ska låsas | Microsoft I
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft I
 description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att felsöka problem med att få åtkomst till resurser."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article

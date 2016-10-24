@@ -3,6 +3,7 @@ title: Registrera din Windows 10-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Windows 10 Mobile- eller Windows 10-enhet i Intune
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

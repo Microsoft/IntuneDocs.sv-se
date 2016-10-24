@@ -3,6 +3,7 @@ title: "Begränsa e-poståtkomst till Dynamics CRM Online | Microsoft Intune"
 description: "Skydda och styr åtkomsten till Dynamics CRM Online med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Begränsa e-poståtkomst till Exchange Online | Microsoft Intune"
 description: "Skydda och styr åtkomsten till företagets e-post på Exchange Online med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

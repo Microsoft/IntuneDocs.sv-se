@@ -3,6 +3,7 @@ title: "Appbaserad villkorlig åtkomst till 0365 | Microsoft Intune"
 description: "Förstå hur MAM CA kan hjälpa till med att styra vilka program som har åtkomst till O365-tjänster."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/15/2016
 ms.topic: article

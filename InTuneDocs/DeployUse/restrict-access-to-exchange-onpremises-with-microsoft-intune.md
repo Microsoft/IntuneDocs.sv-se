@@ -3,6 +3,7 @@ title: "Begränsa e-poståtkomst till Exchange On-premises | Microsoft Intune"
 description: "Skydda och styr åtkomsten till företagets e-post på Exchange On-premises med villkorlig åtkomst."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

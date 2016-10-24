@@ -3,6 +3,7 @@ title: "Använda utförlig loggning för att hjälpa IT-administratören att åt
 description: "Hjälp IT-administratören att åtgärda enhetsproblem med hjälp av utförlig loggning"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

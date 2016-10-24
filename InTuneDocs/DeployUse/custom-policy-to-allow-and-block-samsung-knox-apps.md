@@ -3,6 +3,7 @@ title: "Tillåtna och blockerade appar för KNOX | Microsoft Intune"
 description: "Anpassad profil för att skapa en lista över tillåtna och blockerade appar för KNOX."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

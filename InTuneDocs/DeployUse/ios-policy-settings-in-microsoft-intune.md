@@ -3,6 +3,7 @@ title: "iOS-principinställningar | Microsoft Intune"
 description: "Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article
