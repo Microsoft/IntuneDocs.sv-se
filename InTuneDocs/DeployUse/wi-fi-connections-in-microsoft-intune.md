@@ -4,7 +4,7 @@ description: "Använd Wi-Fi-profiler för att hjälpa användarna att ansluta ti
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/01/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: beba0471f31a19dad78ddf71c07e323b18af18e8
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 7b49b7d9b6054f7d153359c1ee1b6cf5875fba32
 
 
 ---
@@ -29,7 +29,7 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet **Contos
 
 1.   Skapa en Wi-Fi-profil som innehåller alla inställningar som behövs för att ansluta till det trådlösa nätverket **Contoso Wi-Fi**.
 
-2. Distribuera profilen till gruppen med användare med iOS-enheter.
+2.   Distribuera profilen till gruppen med användare med iOS-enheter.
 
 3.   Det nya nätverket **Contoso Wi-Fi** visas i listan över trådlösa nätverk så att användarna enkelt kan ansluta till nätverket.
 
@@ -39,6 +39,8 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet **Contos
 Du kan distribuera Wi-Fi-profiler till följande plattformar:
 
 -   Android 4.0 och senare
+
+-   Android for Work   
 
 -   iOS 8.0 och senare
 
@@ -52,10 +54,13 @@ För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du i
 
     -   Wi-Fi-profil (Android 4 och senare)
 
+    -   Wi-Fi-profil (Android for Work)
+
     -   Wi-Fi-profil (iOS 8.0 och senare)
 
     -   Wi-Fi-profil (Mac OS X 10.9 och senare)
-
+    
+    
     Det finns inga rekommenderade inställningar för den här principtypen. Du måste skapa en anpassad princip.
 
 3.  Ange ett namn och en beskrivning för profilen.
@@ -173,6 +178,6 @@ Läs om hur du skapar en Wi-Fi-profil med en i förväg delad nyckel i [Wi-Fi-pr
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

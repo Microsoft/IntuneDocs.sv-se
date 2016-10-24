@@ -4,7 +4,7 @@ description: "Använd Intune om du vill konfigurera ett flertal inställningar s
 keywords: 
 author: robstackmsft
 manager: angrobe
-ms.date: 07/12/2016
+ms.date: 10/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 388426657c5fa96289f5e14a85e8c299e4b50037
-ms.openlocfilehash: ac19128499f078b4fe7d16713f18c78b248d38db
+ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
+ms.openlocfilehash: 279b2fbcbdc7bace99d99eca5bc766972dcea3b8
 
 
 
@@ -40,6 +40,7 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 
 > [!NOTE]
 > Vissa inställningar gäller inte för vissa enheter. En fullständig lista över inställningar som du kan konfigurera finns i tabellen nedan.
+> Från oktober 2016 upphör Microsoft Intunes stöd för Windows 8-företagsportalapparna. Microsoft Intunes stöd för Windows Phone 8- och WinRT-plattformarna upphör också. Det betyder att du inte kommer att kunna registrera eller uppdatera Windows Phone 8- eller WinRT-enheter. Men du kan fortsätta att hantera Windows Phone 8-, WinRT- och Windows 8-enheter som redan har registrerats. Uppdatera enheter med Windows Phone 8 och Windows 8 till Windows Phone 8.1 respektive Windows 8.1 och använd motsvarande företagsportalappar för Windows 8.1 och Windows Phone 8.1. På så sätt kan du fortsätta att distribuera appar till dessa enheter utan avbrott.
 
 ## Säkerhetsinställningar
 
@@ -212,6 +213,6 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -14,14 +14,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: ce231116ad405d274546cee81dbdd0b0909b2d01
+ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
+ms.openlocfilehash: f33287c51fb769505cd1fb4fcfe2bbc1e4da0ea2
 
 
 ---
 
 # Befintligt e-postkonto för företag hittat
-Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta till e-posten för företag måste du vidta följande steg för att göra det möjligt för IT-administratören att konfigurera och hantera kontot korrekt:
+Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta till e-posten för företag, vidta följande steg för att göra det möjligt för IT-administratören att konfigurera och hantera kontot korrekt:
 
 1.  Öppna **Inställningar** på enheten och ta bort den anslutning som du tidigare har konfigurerat för e-posten för företag.
 
@@ -35,6 +35,6 @@ Kontakta IT-administratören om de nya e-postinställningarna inte visas efter e
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

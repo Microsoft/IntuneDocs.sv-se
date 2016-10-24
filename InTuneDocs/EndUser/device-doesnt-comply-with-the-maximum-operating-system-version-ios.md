@@ -14,21 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: e9ffe9caddf6c0f6bf93f19b49672f197dc64708
+ms.sourcegitcommit: 994fbd726b5173ce18e284c94a658189f100a9b0
+ms.openlocfilehash: 99c41c884d1e6e4e0d1ba6d2edb0d902551ea21a
 
 
 ---
 
 
-# iOS-enheten är inte kompatibel med den senaste versionen av operativsystemet
+# iOS-enheten är inte kompatibel med inställningen för den senaste versionen av operativsystemet
 
-iOS-enheten är inte kompatibel med IT-administratörens princip för högsta operativsystemversion. Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
+iOS-enheten är inte kompatibel med IT-administratörens princip för den senaste operativsystemversionen som du kan använda. Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

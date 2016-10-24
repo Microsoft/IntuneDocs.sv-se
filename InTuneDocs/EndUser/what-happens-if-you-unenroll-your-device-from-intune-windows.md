@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
+ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
+ms.openlocfilehash: ebd1300c490f3d69110a5f1920fd25d1dc5cb850
 
 
 ---
@@ -23,11 +23,7 @@ ms.openlocfilehash: cb7510d92019f27e15ecc7d8666df3f4e09c8707
 
 # Vad händer om du avregistrerar din Windows-enhet från Intune?
 
-Mer information om vad som händer får du via länken som matchar den typ av enhet du använder och som visas i avsnittet ”I den här artikeln” ovan.
-
-- [Windows 10 Mobile, 8.1, Windows 8, Windows 7, Vista](#windows-10-mobile--8-1,-windows-8,-windows-7,-vista)
-- [Windows 10, Windows 8.1 eller Windows Phone 8](#windows-10--windows-8-1-or-windows-phone-8)
-- [Windows RT som kör Windows 8.1 eller Windows RT](#windows-rt-running-windows-8-1-or-windows-rt)
+Använd länkarna under "I den här artikeln" till höger på den här sidan för att hitta information om vilken typ av enhet som du använder.
 
 
 ## Windows 10, Windows 8.1, Windows 8, Windows 7, Vista
@@ -55,7 +51,7 @@ För Windows 8.1 gäller även följande:
 
 -   Eventuellt har du inte åtkomst till vissa företagsresurser från din enhet längre, exempelvis fildelningar eller interna webbplatser.
 
-## Windows 10 mobile, Windows Phone 8.1 eller Windows Phone 8
+## Windows 10 Mobile och Windows Phone 8.1
 
 -   Företagsportalappen avinstalleras från enheten. Det innebär att din enhet inte längre visas på företagsportalen och du kan inte längre installera appar från företagsportalappen eller företagsportalens webbplats.
 
@@ -66,7 +62,7 @@ För Windows 8.1 gäller även följande:
     > [!IMPORTANT]
     > Det enda undantaget är krypteringsprinciper, som fortfarande gäller. Om företagsprinciperna anger att din Windows Phone ska vara krypterad kan telefonen bara dekrypteras genom att den återställs via **Inställningar**-menyn i Windows Phone.
 
-## Windows RT som kör Windows 8.1 eller Windows RT
+## Windows RT som kör Windows 8.1
 
 -   Företagsportalappen avinstalleras från enheten. Det innebär att din enhet inte längre visas på företagsportalen och att du inte längre kan installera appar från företagsportalen.
 
@@ -93,6 +89,6 @@ Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

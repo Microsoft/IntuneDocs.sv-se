@@ -4,7 +4,7 @@ description: "Skydda och styr åtkomsten till företagets e-post på Exchange On
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 9a6455ded35bf77fbd5da1d4f345759836f38c7f
+ms.sourcegitcommit: b6e647c66d6de7d455d290dfa3358499a3f13453
+ms.openlocfilehash: e5c9d2a19f588ddd067a1e194568186f66afb85b
 
 
 ---
@@ -64,17 +64,19 @@ Följande diagram illustrerar flödet som används av principer för villkorlig 
 -   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats eller till företagsportalappen, som innehåller mer information om problemet och hur det kan åtgärdas.
 
 ## Stöd för mobila enheter
--   Windows Phone 8 och senare
+-   Windows Phone 8.1 och senare
 
 -   Intern e-postapp för iOS.
 
--   Intern e-post-app på Android 4 eller senare
+-   EAS-e-postklienter som Gmail på Android 4 eller senare.
+- EAS-e-postklienter och **Android for Work-enheter:** Endast **Gmail** och **Nine Work**-appar i **arbetsprofilen** stöds på Android for Work-enheter. För villkorlig åtkomst till arbete med Android for Work måste du distribuera en e-postprofil för Gmail eller Nine Work-appen och distribuera de apparna som en nödvändig installation. 
+
 > [!NOTE]
 > Microsoft Outlook-appen for Android and iOS stöds inte.
 
 ## Stöd för datorer
 
-Programmet **E-post** i Windows 8 och senare (om det har registrerats med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
+**E-post**-programmet i Windows 8.1 och senare (om det har registrerats med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)])
 
 ##  Konfigurera en princip för villkorlig åtkomst
 
@@ -123,6 +125,6 @@ Programmet **E-post** i Windows 8 och senare (om det har registrerats med [!INCL
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

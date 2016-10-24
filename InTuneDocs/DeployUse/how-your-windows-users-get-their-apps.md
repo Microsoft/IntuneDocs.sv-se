@@ -1,6 +1,6 @@
 ---
 title: "Så får dina Windows-användare sina appar | Microsoft Intune"
-description: "Metoder för att göra Windows-appar tillgängliga för slutanvändare"
+description: "Metoder för att göra Windows-appar tillgängliga för användare"
 keywords: 
 author: Staciebarker
 manager: angrobe
@@ -13,8 +13,8 @@ ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f1946c02c6267a22844106e8f72555ec5e9cabb
-ms.openlocfilehash: 205821f1e6a9685b2a60f6c6d3e0ba3e9e961d85
+ms.sourcegitcommit: 5d2cb9258ea84c50c04670e51172020ed27a5eaf
+ms.openlocfilehash: 67b0b8ef58f184329a54c8e9ca96107911d0e37a
 
 
 ---
@@ -22,22 +22,22 @@ ms.openlocfilehash: 205821f1e6a9685b2a60f6c6d3e0ba3e9e961d85
 
 # Så får dina Windows-användare sina appar
 
-Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune.
+Använd informationen för att förstå hur och var dina användare får de appar som du distribuerar via Microsoft Intune.
 
-**Obligatoriska appar** - Appar som krävs av administratören och som installeras på enheten med minimal inblandning av användaren, beroende på plattform.
+**Obligatoriska appar** – Appar som krävs av administratören och som installeras på enheten med minimal inblandning av användaren, beroende på plattform.
 
 **Tillgängliga appar** – Appar som finns i företagsportalens applista och som en användare kan välja att installera.
 
-**Hanterade appar** - Appar som kan hanteras med principer eller som har blivit "wrappade" av Intune eller som har skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
+**Hanterade appar** – Appar som kan hanteras med principer eller som har blivit "omslutna" av Intune eller som har skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
 
-**Ohanterade appar** - Appar som inte kan hanteras med principer eller som inte har wrappats av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
+**Ohanterade appar** – Appar som inte kan hanteras med principer eller som inte har omslutits av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
-###Se även
+### Se även
 [Så får dina Android-användare sina appar](how-your-android-users-get-their-apps.md)</br>
 [Så får dina iOS-användare sina appar](how-your-ios-users-get-their-apps.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "I det här avsnittet beskrivs principinställningarna för hanteri
 keywords: 
 author: karthikaraman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 09/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: ba258bfb3140ffc79aa38ef2f46497346cdc6bfa
+ms.sourcegitcommit: 3f6e500ef942e0f0e89ffd9ddb4889384f296e16
+ms.openlocfilehash: 36d21aee42c8a4812b1ed9623be2da3e65442bff
 
 
 ---
@@ -84,8 +84,13 @@ Termen **principhanterade appar** används för att referera till appar som är 
   När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för **Microsoft Outlook**-appen.
 
   **Standardvärde = Ja**
+  
+- **Disable printing:** (Inaktivera utskrifter:) Välj **Ja** att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
+
+    **Standardvärde – Ja**
+
 ##  Principinställningar för iOS-åtkomst
-Termen **principhanterade appar** används för att referera till appar som är konfigurerade med MAM-principer.
+Termen **principhanterade appar** används för att hänvisa till appar som är konfigurerade med MAM-principer.
 - **Kräv PIN-kod för åtkomst:** Välj **Ja** om du vill kräva en PIN-kod för användning av principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
 
   **Standardvärde = Ja**
@@ -114,6 +119,6 @@ På iOS-enheter kan du tillåta att användarna identifierar sig med fingeravtry
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

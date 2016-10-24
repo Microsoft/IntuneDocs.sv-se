@@ -1,5 +1,5 @@
 ---
-title: "Windows-enheten är inte kompatibel med den senaste versionen av operativsystemet | Microsoft Intune"
+title: "Windows-enheten är inte kompatibel med inställningen för den senaste versionen av operativsystemet | Microsoft Intune"
 description: 
 keywords: 
 author: Staciebarker
@@ -14,20 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7549b5af84e5a1712c2e1649b1afe03718d53dcc
-ms.openlocfilehash: 0a83e44f95ad1619cd0eff94d70c3dcc81852acb
+ms.sourcegitcommit: 964f39fa7a3971f37777e93f7cddd75367e6c026
+ms.openlocfilehash: edd9aa9b7c2dabbc90bb3777f855478c703c7882
 
 
 ---
 
 
-# Windows-enheten är inte kompatibel med den senaste versionen av operativsystemet
+# Windows-enheten är inte kompatibel med inställningen för den senaste versionen av operativsystemet
 
-IT-administratören har angett en högsta version av operativsystemet som du kan ha på Windows-enheten, men enheten uppfyller inte den inställningen. Om du vill ta reda på vilket det högsta tillåtna operativsystemet är för enheten måste du kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
+IT-administratören har angett den senaste versionen av operativsystemet som du kan ha på Windows-enheten, men enheten uppfyller inte den inställningen. Om du vill ta reda på vilket det senaste tillåtna operativsystemet är för enheten kan du kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Oct16_HO2-->
 
 

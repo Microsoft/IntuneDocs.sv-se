@@ -1,6 +1,6 @@
 ---
 title: "Skicka loggar med diagnostikdata till IT-administratören via e-post | Microsoft Intune"
-description: 
+description: "Skicka dataloggar med e-post på en Android-enhet"
 keywords: 
 author: staciebarker
 manager: angrobe
@@ -14,16 +14,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: 87b0e188824368116dce5ea154821084b8db16ce
+ms.sourcegitcommit: 6be7193a5f04768a59b5c73fb9c2f51241156ada
+ms.openlocfilehash: 9dd0f089d220538a5526979a84dc165151b86f4f
 
 
 ---
 
 
-# Skicka loggar med diagnostikdata till IT-administratören via e-post
+# Skicka loggar med diagnostikdata till din IT-administratör med e-post
 
-Om det uppstår ett fel på din Android-enhet när du arbetar med dina skol- eller företagsappar eller när du använder företagsportalappen kan du skicka loggar med diagnostikdata som hjälper IT-administratören att identifiera och åtgärda felet. Om du vill inkludera alla detaljer i loggarna, vilket gör det lättare för IT-administratören att lösa problemet, aktiverar du Utförlig loggning. Läs mer om [utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+Om det uppstår ett fel på din Android-enhet när du arbetar med dina skol- eller företagsappar eller när du använder företagsportalappen kan du skicka loggar med diagnostikdata som hjälper IT-administratören att diagnosticera och åtgärda felet. Om du vill inkludera alla detaljer i loggarna, vilket gör det lättare för IT-administratören att lösa problemet, aktiverar du utförlig loggning. Se [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem på Android](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) för mer information om utförlig loggning.
 
 Så här skickar du loggar till IT-administratören via e-post:
 
@@ -39,6 +39,7 @@ Så här skickar du loggar till IT-administratören via e-post:
 Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
-<!--HONumber=Sep16_HO4-->
+
+<!--HONumber=Oct16_HO2-->
 
 

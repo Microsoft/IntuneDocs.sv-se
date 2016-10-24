@@ -14,18 +14,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: afe5beb508796244b914d6b0bae59eaa571e9c3a
+ms.sourcegitcommit: 8450facfe63d947df6e6a152805ad882ae220c3e
+ms.openlocfilehash: d7c2fb804e01df6689044d6ca2e72ff00ee95fbc
 
 
 ---
 
 
 # Synkronisera Windows-enheten manuellt
-Om appinstallationen tar för lång tid synkroniserar du Windows-enheten manuellt genom att följa anvisningarna nedan, vilket kan påskynda installationen. De enda versioner som stöds är de som visas. Använd den länk som visas i avsnittet ”I den här artikeln” ovan som matchar den typ av enhet som du har:
+Om installationen av appen tar för lång tid kan du testa att synkronisera Windows-enheten manuellt. Manuell synkronisering kan påskynda installationen.
+
+Endast följande versioner stöds. Följ instruktionerna för din typ av enhet.
 
 * [Windows 10 Mobil](#windows-10-mobile)
-* [Windows 10 Desktop](#windows-10-desktop)
+* [Windows 10 desktop](#windows-10-desktop)
 * [Windows Phone 8.1](#windows-phone-8-1)
 
 
@@ -34,61 +36,61 @@ Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda
 
 1. Gå till **Alla appar** > **Inställningar** > **Konton**.
 
-    ![win10m-sync-1-settings-accounts](./media/win10m-sync-1-settings-accounts.png)
+    ![Välj konton på skärmen Inställningar](./media/win10m-sync-1-settings-accounts.png)
 
 2. Tryck på **Åtkomst till arbetsplats**.
 
-    ![win10m-sync-2-work-access](./media/win10m-sync-2-work-access.png)
+    ![Välj arbetsåtkomst som kontotyp](./media/win10m-sync-2-work-access.png)
 
-3. Under **Registrera dig för hantering av mobilenheter (MDM)** trycker du på företagets namn, som du ser nedan.
+3. Välj företagets namn under **Registrera dig för hantering av mobilenheter**.
 
-    ![win10m-sync-3-tap-comp-name](./media/win10m-sync-3-tap-comp-name.png)
+    ![Välj företagsnamnet för enhetshantering](./media/win10m-sync-3-tap-comp-name.png)
 
 4. Tryck på ikonen **Synkronisera**.
 
-    ![win10m-sync-4-tap-sync](./media/win10m-sync-4-tap-sync.png)
+    ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)
 
-    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen Synkronisera är nedtonad tills synkroniseringen är klar.
+    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
 
 ## Windows 10 desktop
 Så här synkroniserar du en Windows 10 Desktop-enhet manuellt för att påskynda en långsam appinstallation:
 
-1. Klicka på knappen **Start** som visas nedan och välj sedan **Inställningar**.
+1. Välj **Start**-knappen och sedan **Inställningar**.
 
-    ![win10pc-sync-1-start-button](./media/win10pc-sync-1-start-button.png)
+    ![Startknappen](./media/win10pc-sync-1-start-button.png)
 
 2. Välj **Konton** på sidan **Inställningar**.
 
-    ![win10pc-sync-2-settings-accounts](./media/win10pc-sync-2-settings-accounts.png)
+    ![Välj konton på sidan Inställningar](./media/win10pc-sync-2-settings-accounts.png)
 
 3. Välj **Åtkomst till arbetsplats** på sidan **Konton**.
 
-    ![win10pc-sync-3-work-access](./media/win10pc-sync-3-work-access.png)
+    ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 
-4. Under avsnittet **Registrera dig för hantering av mobilenheter (MDM)** klickar du på namnet på ditt företag, som du ser i blått nedan.
+4. Under avsnittet **Registrera dig för hantering av mobilenheter (MDM)** väljer du namnet på ditt företag.
 
-    ![win10pc-sync-4-tap-com-name](./media/win10pc-sync-4-tap-com-name.png)
+    ![Välj företagsnamnet för enhetshantering](./media/win10pc-sync-4-tap-com-name.png)
 
 5. Välj knappen **Synkronisera**.
 
-    ![win10pc-sync-5-tap-sync](./media/win10pc-sync-5-tap-sync.png)
+    ![Välj knappen Synkronisera](./media/win10pc-sync-5-tap-sync.png)
 
-   Knappen är nedtonad tills synkroniseringen är klar.
+   Knappen är nedtonad tills synkroniseringen är färdig.
 
 ## Windows Phone 8.1
 Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda en långsam appinstallation:
 
 1. Gå till **Alla appar** > **Inställningar** > **arbetsplats**.
 
-    ![wp81-1-sync-settings-workplace](./media/wp81-1-sync-settings-workplace.png)
+    ![Lista över inställningar](./media/wp81-1-sync-settings-workplace.png)
 
-2. Tryck på namnet på ditt företag, som du ser i blått nedan.
+2. Välj namnet på ditt företag.
 
-    ![wp81-2-sync-tap-compname](./media/wp81-2-sync-tap-compname.png)
+    ![Välj företagsnamnet för arbetsplatskontot](./media/wp81-2-sync-tap-compname.png)
 
 3. Tryck på ikonen **Synkronisera**.
 
-    ![wp81-3-sync-tap-sync-button](./media/wp81-3-sync-tap-sync-button.png)
+    ![Tryck på ikonen Synkronisera](./media/wp81-3-sync-tap-sync-button.png)
 
    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen tills synkroniseringen är klar.
 
@@ -96,8 +98,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
