@@ -13,8 +13,8 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d9e08429fb6c834476fd0029d559059c5132afca
-ms.openlocfilehash: a4ab7287b2328fccbea5203bbfe5d87cbfc912b8
+ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
+ms.openlocfilehash: d7978e558c68ad3209f1503619a9113dba126028
 
 
 ---
@@ -37,7 +37,7 @@ Till skillnad från andra Intune-principer kan du inte distribuera en princip f�
 
 Om du vill tillämpa begränsningar i en app måste den innehålla Microsoft Intune App SDK. Det finns tre metoder för att hämta den här typen av app:
 
--   **Använda en principhanterad app**. En principhanterad app har en inbyggd App SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Mer information finns i [listan med appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx).
+-   **Använda en principhanterad app**. En principhanterad app har en inbyggd App SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Mer information finns i [listan med appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps).
 
 -   **Använda en omsluten app**. En omsluten app är en app som du paketerar på nytt för att inkludera App SDK med hjälp av Microsoft Intunes programhanteringsverktyg. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Du kan inte använda verktyget för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
@@ -136,7 +136,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
     |**Offline-respitperiod**|Ange hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.|
     |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är inte FIPS 140-2-certifierad.|
     |**Blockera skärmdump** (endast Android-enheter)|Den här inställningen anger att skärmdumpsfunktionen i enheten är blockerad när någon använder den här appen.|
-    
+
 4. När du är klar väljer du **Spara princip**.
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
@@ -193,6 +193,6 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 
