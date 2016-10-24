@@ -21,7 +21,7 @@ Den automatiska registreringen gör att användarna kan registrera sina företag
 
 5. Ange URL: er för Intune:
 
-  - **URL för MDM-registrering** – Använd `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` för URL för MDM-registrering.
+  - **MDM Enrollment URL** (URL för MDM-registrering) – Använd standardvärdet.
   - **URL för MDM-villkor** – Använd standardvärdet. Denna URL visar villkoren för användarna när de registrerar enheter.
   - **URL för MDM-efterlevnad** – Använd standardvärdet. Om en enhet inte är kompatibel visas ett **Åtkomst nekas**-meddelande med denna URL. URL:en pekar till en sida som förklarar för användarna varför deras enhet inte uppfyller kraven för principen och vad de kan göra för att enheten ska uppfylla kraven.
 
@@ -34,6 +34,6 @@ Den automatiska registreringen gör att användarna kan registrera sina företag
 7. Välj **Spara**.
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

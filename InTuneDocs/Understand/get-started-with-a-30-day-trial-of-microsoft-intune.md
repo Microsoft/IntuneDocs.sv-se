@@ -13,8 +13,8 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: cbf863619a385d596630ee4ff0b216a4cbbe6cb7
+ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
+ms.openlocfilehash: 3973ac11d4734b17f905e88259863d7ddb59c1f4
 
 
 ---
@@ -37,12 +37,12 @@ Innan du börjar med Intune behöver du följande:
 
 -   Om du har ett befintligt Microsoft Online Services-konto behöver du ha tillgång till autentiseringsuppgifterna för kontots administratör. Om du inte har något sådant konto, eller om du vill använda denna Intune-innehavare enbart i utvärderingssyfte, behöver du inte dessa autentiseringsuppgifter för administratören.
 
--   Om du ska hantera iOS- eller Windows Phone-enheter med Intune-utvärderingsversionen behöver du certifikat (eller nycklar) och konton för att hämta dessa certifikat (se följande tabell). Android-enheter behöver inte några ytterligare certifikat.
+-   Om du ska hantera iOS- eller Windows Phone 8.1-enheter med Intune-utvärderingsversionen behöver du certifikat (eller nycklar) och konton för att hämta dessa certifikat (se följande tabell). Android-enheter behöver inte några ytterligare certifikat.
 
     |Plattform|Certifikatkrav|Mer information|
     |------------|----------------------------|--------------------|
-    |Windows Phone 8.1 och Windows Phone 8 |Inga certifikat krävs för Windows Phone 8.1-användare som installerar företagsportalappen från Store. Ett Symantec-certifikat krävs för Windows Phone 8.0 eller för att använda Intune för att distribuera företagets portalapp till Windows Phone 8.1-enheter.|Dessa riktlinjer förutsätter att användarna hämtar företagsportalappen från Store på en Windows Phone 8.1 eller senare enhet. Information om Windows Phone 8.0-stöd finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](/Intune/Deploy-Use/set-up-windows-phone-management-with-microsoft-intune).|
-    |Windows 10-, Windows RT 8.1-, Windows RT- eller Windows 8.1-enheter|Det finns inga certifikatkrav vid registrering av Windows RT- eller Windows-enheter.|[Installera Windows PC-klienten med Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
+    |Windows Phone 8.1 |Inga certifikat krävs för Windows Phone 8.1-användare som installerar företagsportalappen från Store. |Dessa riktlinjer förutsätter att användarna hämtar företagsportalappen från Store på en Windows Phone 8.1 eller senare enhet. |
+    |Windows 10-, Windows RT 8.1 eller Windows 8.1-enheter|Det finns inga certifikatkrav vid registrering av Windows RT- eller Windows-enheter.|[Installera Windows PC-klienten med Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
     |iOS 7.1 och senare|Hämta ett certifikat för Apple Push-aviseringstjänsten.|Begär ett certifikat för Apple Push Notification Service från Apple genom att följa anvisningarna i [Konfigurera iOS-hantering med Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
 ## Steg för att slutföra en 30-dagars utvärderingsversion av Intune
@@ -66,6 +66,6 @@ Det är dags att komma igång med din prenumeration på 30-dagars utvärderingsv
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

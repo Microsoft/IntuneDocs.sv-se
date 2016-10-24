@@ -14,8 +14,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 3d8b33e5227ed7d13ffc0e6fb7867618c48cac6f
+ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
+ms.openlocfilehash: 577d14f29880d16046bbb703773d6362c2458c1b
 
 
 ---
@@ -23,10 +23,15 @@ ms.openlocfilehash: 3d8b33e5227ed7d13ffc0e6fb7867618c48cac6f
 
 # Registrera din iOS-enhet i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan IT-avdelningen hantera dessa arbets- eller skolresurser och skydda dem, samtidigt som du får friheten att använda den enhet du önskar för att utföra arbetet. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
 
+**Innan du börjar:**
+
+- Se till att du avslutar registreringen efter att du påbörjat stegen. Om du börjar men inte slutför kanske registreringen inte fungerar om du kommer tillbaka senare och försöker igen.
+- Kontrollera att din Wi-Fi fungerar. Annars misslyckas registreringen.
+- Om du har blockerat Safari på enheten, avblockera Safari. Du måste använda Safari för att registrera.
 
 
 **Registrera din iOS-enhet:**
@@ -41,7 +46,7 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 
     ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
 
-4. Läs igenom listan över vad IT-administratören kan och inte kan se på den registrerade enheten och tryck på **Fortsätt**.
+4. Läs igenom listan över vad IT-administratören kan och inte kan se på den registrerade enheten och tryck sedan på **Fortsätt**.
 
     ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
 
@@ -69,9 +74,9 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 
     ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
 
-    Meddelandet "Registrerar enheten" visas på skärmen.
+    Ett meddelande om att enheten registreras visas på skärmen.
 
-11.  När ett meddelande visas som frågar om du vill öppna sidan i företagsportalen trycker du på **Öppna**.
+11.  När ett meddelande frågar om du vill öppna sidan i företagsportalen trycker du på **Öppna**.
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
@@ -85,12 +90,11 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 
 Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
 
+
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

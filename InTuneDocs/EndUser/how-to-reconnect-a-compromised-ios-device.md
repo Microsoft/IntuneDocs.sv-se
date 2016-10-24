@@ -14,17 +14,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: c47a7097d86ded8e6f38f0270352a7c432110464
+ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
+ms.openlocfilehash: 166c0708645d191abaaa73aa3143ca558d64ffd0
 
 
 ---
 
 # Återansluta en komprometterad iOS-enhet
-IT-administratören har upptäckt att du använder en jailbreakad enhet. "Jailbrokad" innebär att programbegränsningar, som fastställts av iOS, har tagits bort, vilket kan påverka säkerheten och utgöra ett hot mot företagets resurser. Om det här inträffar kan enheten inte längre komma åt företagets resurser och du måste be IT-administratören om hjälp. IT-administratörens kontaktuppgifter hittar du på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+IT-administratören har upptäckt att du använder en ”jailbrokad” enhet. "Jailbrokad" innebär att programvarubegränsningar som har införts av iOS har tagits bort. Borttagningen av dessa begränsningar kan påverka säkerheten och utgöra ett hot mot företagets resurser. 
+
+Om det här inträffar kan enheten inte längre komma åt företagets resurser och du måste be IT-administratören om hjälp. IT-administratörens kontaktuppgifter hittar du på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

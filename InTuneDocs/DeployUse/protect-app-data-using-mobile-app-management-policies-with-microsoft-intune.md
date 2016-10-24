@@ -13,8 +13,8 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 6163f2b2a1c562e5315785b8b4c486fe2347f89d
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: e751619f6d65e10099d1f8ff5a2342185181af69
 
 
 ---
@@ -122,8 +122,6 @@ Med appar som stöder flera identiteter kan du använda olika konton – arbete 
 
 Om slutanvändaren exempelvis startar appen OneDrive med ett arbetskonto kan han eller hon inte flytta filerna till en personlig lagringsplats. Om slutanvändaren däremot använder OneDrive med ett personligt konto kan han eller hon kopiera och flytta data från sin personliga OneDrive utan begränsningar.  
 
-En detaljerad förklaring av användningen av appar som är associerade med MAM-principer, och hur appar med stöd för flera identiteter gör det möjligt att tillämpa MAM-principer endast i arbetskontexten, finns i avsnittet [Använda appar med stöd för flera identiteter](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md#using-apps-with-multi-identity-support)
-
 Alla mobila Office-appar stöder multiidentitet.
 
 ##  Nästa steg
@@ -133,6 +131,6 @@ Alla mobila Office-appar stöder multiidentitet.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Återställa (radera) en borttappad eller stulen Windows-enhet | Microsoft Intune"
-description: 
+description: "Återställ en förlorad eller stulen Windows-enhet"
 keywords: 
 author: Staciebarker
 manager: angrobe
@@ -14,8 +14,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: c83dc6768dcd000fefedd4bae4ef87a2d69cef3b
+ms.sourcegitcommit: f2283b5896541e58d7ae515cab9d4faa1e9df735
+ms.openlocfilehash: 4a206e30c1334681f82b8077da6191ef3e28e4b1
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: c83dc6768dcd000fefedd4bae4ef87a2d69cef3b
 
 # Återställa (radera) en enhet som förlorats eller stulits
 
-Om en telefon som har registrerats i Intune tappas bort eller blir stulen, kan du återställa den till fabriksinställningarna via [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om en enhet som har registrerats i Intune tappas bort eller blir stulen kan du återställa den till fabriksinställningarna via [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 > [!WARNING]
@@ -40,8 +40,6 @@ Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-ad
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

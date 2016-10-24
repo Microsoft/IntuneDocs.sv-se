@@ -13,8 +13,8 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: 182601f7e4a4bd38c70f7961188eb4af593f6107
+ms.sourcegitcommit: 3306d772b074ddcfd1bfcf7178b32f9b371321e7
+ms.openlocfilehash: f57728bb41b750f53b021bed532de18187e764a0
 
 
 ---
@@ -52,7 +52,7 @@ I [steg 6](start-with-a-paid-subscription-to-microsoft-intune-step-6.md) i den h
 
 Öppna Företagsportalen på den registrerade mobila enheten, välj **appar** och installera sedan **Microsoft Skype**.
 
-Läs mer om hantering av mobila enheter med hjälp av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] i [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune).
+Se [Krav för att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment) för att läsa mer om hantering av mobila enheter med hjälp av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
 
 ### Nästa steg
@@ -64,6 +64,6 @@ Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

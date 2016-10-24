@@ -2,14 +2,16 @@
 # [Kom igång](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 
+# [Nyheter](/intune/whats-new/whats-new-in-microsoft-intune)
 # [Distribuera och använda](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ## [Översikt över enhets- och applivscykler](overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
 ### [Enhetslivscykel](overview-of-device-lifecycle-in-microsoft-intune.md)
 ### [Applivscykel](overview-of-app-lifecycle-in-microsoft-intune.md)
 ## [Registrera enheter](enroll-devices-in-microsoft-intune.md)
-### [Dags att registrera enheter i Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### [Krav för MDM](prerequisites-for-enrollment.md)
 #### [iOS- och Mac-hantering](set-up-ios-and-mac-management-with-microsoft-intune.md)
 #### [Android-hantering](set-up-android-management-with-microsoft-intune.md)
+#### [Hantering med Android for Work](set-up-android-for-work.md)
 #### [Hantering av Windows-enheter ](set-up-windows-device-management-with-microsoft-intune.md)
 #### [Windows 10 Mobile och Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Hantera företagsägda enheter](manage-corporate-owned-devices.md)
@@ -33,6 +35,7 @@
 ### [Hantera inställningar och funktioner på dina enheter med principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Inställningar för iOS](ios-policy-settings-in-microsoft-intune.md)
 #### [Android- och Samsung KNOX-inställningar](android-policy-settings-in-microsoft-intune.md)
+#### [Inställningar för Android for Work](android-for-work-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows 8 och Windows 8.1](windows-configuration-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows Phone 8.1](windows-phone-8-1-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows 10 Desktop och Mobile](windows-10-policy-settings-in-microsoft-intune.md)
@@ -71,6 +74,7 @@
 #### [Hantera licensavtal för datorer med Intune-klienten](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Distribuera appar](deploy-apps.md)
 ### [Distribuera appar till enheter och datorer](deploy-apps-in-microsoft-intune.md)
+### [Distribuera appar till Android for Work-enheter](android-for-work-apps.md)
 ### [Övervakning av appar](monitor-apps-in-microsoft-intune.md)
 ### [Hantera volyminköpta appar](manage-volume-purchased-apps-in-microsoft-intune.md)
 #### [Hantera volyminköpta iOS-appar](manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
@@ -79,6 +83,7 @@
 ## [Konfigurera appar](update-apps-using-microsoft-intune.md)
 ### [Uppdatera appar ](update-apps-using-microsoft-intune.md)
 ### [Konfigurationsprinciper för iOS-appar](configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune.md)
+### [Konfigurationsprinciper för Android for Work-appar](afw-app-configuration-policy.md)
 ### [Etableringsprofiler för iOS-mobilappar](ios-mobile-app-provisioning-profiles.md)
 ### [Hantera Internetåtkomst](manage-internet-access-using-managed-browser-policies.md)
 
@@ -86,12 +91,13 @@
 ## [Skydda appar och data](protect-apps-and-data-with-microsoft-intune.md)
 ### [Efterlevnadsprinciper för enheter](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 #### [Skapa en enhetsefterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md)
-#### [För Android](android-compliance-policy-settings-in-microsoft-intune.md)
-#### [För iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
-#### [För Windows och Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
+#### [ Android](android-compliance-policy-settings-in-microsoft-intune.md)
+#### [Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
+#### [iOS](ios-compliance-policy-settings-in-microsoft-intune.md)
+#### [Windows och Windows Phone](windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Distribuera en enhetsefterlevnadsprincip](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Begränsa åtkomst baserat på enhetens efterlevnad](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 #### [Exchange Online och nya Exchange Online Dedicated](restrict-access-to-exchange-online-with-microsoft-intune.md)
@@ -100,10 +106,12 @@
 #### [Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 #### [Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Begränsa e-poståtkomsten: exempel](restrict-email-access-example-scenarios.md)
-
+### [Tillåt endast åtkomst för principhanterade appar till O365-tjänster](allow-policy-managed-apps-access-to-o365.md)
+#### [Exchange Online](mam-ca-for-exchange-online.md)
+#### [Blockera appar utan ADAL](block-apps-with-no-modern-authentication.md)
 ### [Begränsa åtkomsten till nätverk (Cisco ISE)](restrict-access-to-networks.md)
 ### [Begränsa åtkomsten baserat på enhet, nätverk och programrisk](restrict-access-based-on-device-network-app-risk.md)
-#### [Konfigurera Lookout MTP](set-up-your-subscription-with-lookout-mtp.md)
+#### [Konfigurera Lookout skydd mot enhetshot](set-up-your-subscription-with-lookout-mtp.md)
 #### [Aktivera Lookout i Intune](enable-lookout-mtp-connection-in-intune.md)
 #### [Distribuera Lookout for Work-appar](configure-and-deploy-lookout-for-work-apps.md)
 #### [Aktivera skydd mot enhetshot i policyn för efterlevnad](enable-device-threat-protection-rule-in-compliance-policy.md)
@@ -132,17 +140,13 @@
 ### [Ta bort appar ](retire-apps-using-microsoft-intune.md)
 ### [Rensa hanterade företagsdata från appar](Wipe-managed-company-app-data-with-microsoft-intune.md)
 
-## [Vad du ska säga till slutanvändarna](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-
-## [Migrera till Intune](migrate-to-intune.md)
-
-## [Nyheter](whats-new-in-microsoft-intune.md)
+## [Resurser om slutanvändarens upplevelse](what-to-tell-your-end-users-about-using-microsoft-intune.md)
 
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

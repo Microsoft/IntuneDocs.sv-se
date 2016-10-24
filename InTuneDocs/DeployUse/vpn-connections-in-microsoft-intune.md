@@ -4,7 +4,7 @@ description: "Använd VPN-profiler för att distribuera VPN-inställningar till 
 keywords: 
 author: Nbigman
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,22 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 957edcf6910dd15f15ab5020773233c6a6ba0ea7
-ms.openlocfilehash: fb5fbbe50295d3fc26f3cd4def4f40898bb6ffd2
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 026e7c918f8b2457dd1afb9a5134ad3bd6f65cd5
 
 
 ---
 
 # VPN-anslutningar i Microsoft Intune
- Med virtuella privata nätverk (VPN, Virtual Private Networks) får användarna säker fjärråtkomst till företagets nätverk. Externa användare kan arbeta som om deras enheter är anslutna till nätverket. Enheterna använder en profil för VPN-anslutning för att initiera en anslutning till VPN-servern. Använd *VPN-profiler* i Microsoft Intune för att distribuera VPN-inställningar till användare och enheter i din organisation. Genom att distribuera inställningarna gör du det enklare för slutanvändaren att ansluta till resurser i företagsnätverket.
+
+Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheter använder en *profil för VPN-anslutning* för att initiera en anslutning till VPN-servern. Använd *VPN-profiler* i Microsoft Intune för att distribuera VPN-inställningar till användare och enheter i din organisation så att de enkelt och säkert kan ansluta till nätverket. 
 
 Exempel: Anta att du vill förse alla enheter som kör iOS med de inställningar som krävs för att ansluta till en filresurs i företagsnätverket. Då kan du skapa en VPN-profil som innehåller de inställningar som behövs för att ansluta till företagsnätverket och sedan distribuera profilen till alla användare som har enheter som kör iOS. Användarna ser VPN-anslutningen i listan över tillgängliga nätverk och kan enkelt ansluta.
 
 Du kan konfigurera följande enhetstyper med VPN-profiler:
 
 * Enheter som kör Android 4 och senare
+* Android for Work-enheter
 * Enheter som kör iOS 8.0 och senare
 * Enheter som kör Mac OS X 10.9 och senare
 * Registrerade enheter som kör Windows 8.1 och senare
@@ -70,9 +72,7 @@ VPN-profiler kan använda ett antal olika anslutningstyper och protokoll från o
 
 ### Certifikat
 
-När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som du tidigare har skapat i Intune.
-
-Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller ett rotcertifikat) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
+När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
@@ -85,6 +85,7 @@ Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösen
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
     * **VPN-profil (Android 4 och senare)**
+    * **VPN-profil (Android for Work)**
     * **VPN-profil (iOS 8.0 och senare)**
     * **VPN-profil (Mac OS X 10.9 och senare)**
     * **VPN-profil (Windows 8.1 och senare)**
@@ -92,6 +93,9 @@ Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösen
     * **VPN-profil (Windows 10 Desktop och Mobile och senare)**
 
  Du kan skapa och distribuera endast en anpassad VPN-profilprincip. Rekommenderade inställningar är inte tillgängliga.
+
+> [!Note]
+> En VPN-profil för Android for Work-enheter aktiverar endast en VPN-anslutning för appar som är installerade på enhetens arbetsprofil.
 
 3. Använd följande tabell för att konfigurera inställningarna för VPN-profilen:
 
@@ -192,6 +196,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Läs om hur du skapar en certifikatprofil för Intune."
 keywords: 
 author: nbigman
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 679a20a1-e66f-4b6b-bd8f-896daf1f8175
 ms.reviewer: kmyrup
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ced62efd04803943cbbfd8cecef907409a03c0b
-ms.openlocfilehash: c51c5ae199ca2950dc0371b400727af534a70f09
+ms.sourcegitcommit: 27ba29f57bba1f3807c4b593ecac8c0af0851962
+ms.openlocfilehash: 3f657e6a49fb83faddf9c139985369f27656b4bd
 
 
 ---
@@ -38,13 +38,22 @@ Du måste skapa en certifikatprofil för en betrodd certifikatutfärdare innan d
 
 ### Så här skapar du en betrodd certifikatprofil
 
-1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
-2.  Lägg till en av dessa principtyper:
-    - **Android &gt; Betrodd certifikatprofil (Android 4 och senare)**
-    - **iOS &gt; Betrodd certifikatprofil (iOS 8.0 och senare)**
-    - **Mac OS X &gt; Betrodd certifikatprofil (Mac OS X 10.9 och senare)**
-    - **Windows &gt; Betrodd certifikatprofil (Windows 8.1 och senare)**
-    - **Windows &gt; Betrodd certifikatprofil (Windows Phone 8.1 och senare)**
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip** och sedan en enhetsplattform. Du kan skapa en betrodd certifikatprofil för dessa enheter:
+
+-  Android 4 och senare
+
+-  Android for Work
+
+-  iOS 7.1 och senare
+
+-  Mac OS X 10.9 och senare
+
+-  Windows 8.1 och senare
+
+-  Windows Phone 8.1 och senare
+
+
+2.  Lägg till en princip för **betrodd certifikatprofil**.
 
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
@@ -60,14 +69,22 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 
 ### Så här skapar du en SCEP-certifikatprofil
 
-1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
-2.  Lägg till en av dessa principtyper:
-    - **Android &gt; SCEP-certifikatprofil (Android 4 och senare)**
-    - **iOS &gt; SCEP-certifikatprofil (iOS 8.0 och senare)**
-    - **Mac OS X &gt; SCEP-certifikatprofil (Mac OS X 10.9 och senare)**
-    - **Windows &gt; SCEP-certifikatprofil (Windows 8.1 och senare)**
-    - **Windows &gt; SCEP-certifikatprofil (Windows Phone 8.1 och senare)**
+1.  [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip** och sedan en enhetsplattform.  Du kan skapa en SCEP-certifikatprofil för dessa enheter:
 
+-  Android 4 och senare
+
+-  Android for Work
+
+-  iOS 7.1 och senare
+
+-  Mac OS X 10.9 och senare
+
+-  Windows 8.1 och senare
+
+-  Windows Phone 8.1 och senare
+
+2.  Lägg till en princip för **SCEP-certifikatprofiler**
+    
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
 3.  Följ anvisningarna på profilsidan för att konfigurera inställningarna för SCEP-certifikatet.
@@ -87,13 +104,16 @@ Den nya principen visas på arbetsytan **Princip**. Nu kan du distribuera den.
 
 ### Så här skapar du en .PFX-certifikatprofil
 
-1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
-2.  Lägg till en av dessa principtyper:
-  - **Android &gt; .PFX-certifikatprofil (Android 4 och senare)**
-  - **Windows &gt; PKCS #12-certifikatprofil (.PFX) (Windows 10 och senare)**
-  - **Windows &gt; PKCS #12-certifikatprofil (.PFX) (Windows Phone 10 och senare)**
-  - **iOS > PKCS #12 (.PFX)-certifikatprofil (iOS 8.0 och senare)**    
-    Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip** och sedan en enhetsplattform. .PFX-certifikat har stöd för:
+  - Android 4 och senare
+  - Android for Work
+  - Windows 10 och senare
+  - Windows Phone 10 och senare
+  - iOS 8.0 och senare)    
+
+    
+2.  Lägg till en princip för **.PFX-certifikatprofiler**. 
+      Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 3.  Ange den information som efterfrågas i principformuläret.
 4.  Välj **Spara princip**.
 
@@ -130,6 +150,6 @@ Nästa steg är att läsa om hur du skyddar e-post-, Wi-Fi- och VPN-profiler med
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

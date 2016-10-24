@@ -12,15 +12,15 @@ ms.technology:
 ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 5c522c12325925c45f47bc7b521e3d8aa87454f4
-ms.openlocfilehash: e79c0d74dd35d7177fb3c83c587ab00e891a0d93
+ms.sourcegitcommit: 53f432e5fb63d89dc4d7494182f95aace6dd0918
+ms.openlocfilehash: 319c2378027f89809a4e28eda56bd7b062d4e5bb
 
 
 ---
 
 # Du måste åtgärda ett hot som Lookout for Work har hittat
 
-Lookout for Work har hittat ett potentiellt hot på enheten och du måste korrigera problemet för att få åtkomst till din e-post och arbete.
+Lookout for Work har hittat ett potentiellt hot på enheten och du måste korrigera problemet för att få åtkomst till din e-post och arbete. Meddelandet som visas kan se ut ungefär så här:
 
 ![Lookout for Work har hittat ett hot på din enhet](./media/lookout-threat-found-android.png)
 
@@ -46,6 +46,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO2-->
 
 

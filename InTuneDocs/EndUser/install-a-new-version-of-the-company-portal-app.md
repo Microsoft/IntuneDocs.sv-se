@@ -12,19 +12,19 @@ ms.technology:
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 15a685f4839cd1c4d60c1f99a6bd6d954352a60c
+ms.sourcegitcommit: 849632d4b07b2e4417fd955d945fed21461edc6a
+ms.openlocfilehash: e3ccc0fda42c00ced108401c31df4106fe4049a3
 
 
 ---
 
 # Installera en ny version av företagsportalappen
 
-Om din version av företagsportalen inte längre stöds, eller om det finns en nyare version av företagsportalen tillgänglig, måste du uppdatera företagsportalappen till en senare version. Följ anvisningarna nedan för din typ av enhet.
+Om din version av företagsportalappen inte längre stöds, eller om det finns en nyare version av företagsportalappen tillgänglig, måste du uppdatera den till en senare version. Följ stegen för den typ av enhet som du har för att registrera dig.
 
 ## Uppdatera Intune-företagsportalappen på en Android-enhet
 
-Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Det visas inget meddelande i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
+Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Du kommer inte att bli uppmanad att uppdatera i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
 
 ## Uppdatera Intune-företagsportalappen på en iOS-enhet
 
@@ -50,8 +50,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
