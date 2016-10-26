@@ -2,8 +2,8 @@
 title: "Skicka loggar med diagnostikdata till IT-administratören via e-post | Microsoft Intune"
 description: "Skicka dataloggar med e-post på en Android-enhet"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article

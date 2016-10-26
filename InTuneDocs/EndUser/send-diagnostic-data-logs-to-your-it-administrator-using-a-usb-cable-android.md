@@ -2,8 +2,8 @@
 title: "Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel | Microsoft Intune"
 description: Skicka dataloggar med en USB-kabel
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlan
+ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article

@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/22/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -27,7 +27,7 @@ Du kan kontrollera åtkomsten till Microsoft Dynamics CRM Online från iOS- och 
 
 Om du vill ha mer information om hur villkorlig åtkomst fungerar läser du artikeln [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
-[!IMPORTANT] Om du vill distribuera villkorlig åtkomst måste du ha prenumerationer för Intune och Azure Active Directory Premium och användarna måste ha licens för båda produkterna. **Enterprise Mobility + Security-prenumerationen (EMS)** innehåller både Intune- och Azure Active Directory Premium-prenumerationer. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Om du inte har EMS-prenumerationen kan du skaffa en Azure Active Directory Premium-prenumeration. Mer information finns på [sidan med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/). 
+[!IMPORTANT] Om du vill distribuera villkorlig åtkomst måste du ha prenumerationer för Intune och Azure Active Directory Premium och användarna måste ha licens för båda produkterna. **Enterprise Mobility + Security-prenumerationen (EMS)** innehåller både Intune- och Azure Active Directory Premium-prenumerationer. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Om du inte har EMS-prenumerationen kan du skaffa en Azure Active Directory Premium-prenumeration. Mer information finns på [sidan med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 När en målanvändare försöker använda Dynamics CRM-appen på sin enhet görs följande utvärdering:
 
