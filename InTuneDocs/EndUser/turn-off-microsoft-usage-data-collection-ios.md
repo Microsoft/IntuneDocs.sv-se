@@ -2,8 +2,8 @@
 title: "Inaktivera Microsofts insamling av användningsdata för iOS | Microsoft Intune"
 description: 
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -22,7 +22,7 @@ ms.openlocfilehash: 1b193a401c05ae649456e27222503ee5bd9e150f
 ---
 
 
-# Inaktivera Microsofts insamling av användningsdata
+# <a name="turn-off-microsoft-usage-data-collection"></a>Inaktivera Microsofts insamling av användningsdata
 
 Microsoft samlar automatiskt in anonymiserade data om företagsportalappens tillförlitlighet och prestanda och hur den används för att kunna förbättra sina produkter och tjänster.
 

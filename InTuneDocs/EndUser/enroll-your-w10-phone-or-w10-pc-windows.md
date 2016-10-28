@@ -2,8 +2,8 @@
 title: Registrera din Windows 10-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Windows 10 Mobile- eller Windows 10-enhet i Intune
 keywords: 
-author: barlan
-ms.author: barlan
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 10/18/2016
 ms.topic: article
@@ -21,7 +21,7 @@ ms.openlocfilehash: 75f19a1c613b2d018e0cb89862f15aa4be2bc138
 ---
 
 
-# Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune
+# <a name="enroll-your-windows-10-mobile-or-windows-10-desktop-device-in-intune"></a>Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -42,7 +42,7 @@ Registrera din Windows 10 Mobile- eller Windows 10-enhet:
 
     ![Ditt konto](./media/w10-enroll-2-accounts-your-account.png)
 
-## Steg för att följa om du ser Åtkomst för arbete eller skola
+## <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Steg för att följa om du ser Åtkomst för arbete eller skola
 
 1.  Tryck på **Åtkomst till arbete eller skola** och tryck sedan på **Anslut**.
 
@@ -69,7 +69,7 @@ Registrera din Windows 10 Mobile- eller Windows 10-enhet:
 Om du har följt de föregående stegen, men ändå inte kan komma åt din e-post eller dina filer på arbetet eller i skolan, kan du följa anvisningarna i [Felsökningssteg att följa för Åtkomst för arbete eller skola](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 
-## Steg för att följa för Ditt konto
+## <a name="steps-to-follow-if-you-see-your-account"></a>Steg för att följa för Ditt konto
 
 1.  Gå till Windows **Inställningar** och tryck på **Konton**.
 
