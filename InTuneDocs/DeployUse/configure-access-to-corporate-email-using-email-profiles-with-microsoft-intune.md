@@ -3,8 +3,9 @@ title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Intu
 description: "Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
-ms.date: 10/10/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +14,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: befe1b3446770509c83a360c854993d4aaada09d
-ms.openlocfilehash: 1bd5d64dfff1cf1fc42247c5f89861e216da77d5
+ms.sourcegitcommit: 9f8767f191df76e8f166767c51fff357b251bbd4
+ms.openlocfilehash: f736c408f5a4ece65eeef35fb8d1be9a9b29c1b1
 
 
 ---
@@ -29,14 +30,14 @@ Om du behöver vidta ytterligare åtgärder mot dataförlust (DLP) kan du använ
 IT-administratörer eller användare kan också välja att installera alternativa e-postklienter, t.ex. Microsoft Outlook för Android eller iOS. Dessa e-postklienter stöder inte e-postprofiler och kan inte konfigureras med hjälp av e-postprofiler i Microsoft Intune.  
 
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
--   Windows Phone 8 och senare
+-   Windows Phone 8.1 och senare
 -   Windows 10 (för datorer), Windows 10 Mobile, och senare
 -   iOS 8.0 och senare
 -   Samsung KNOX Standard (4.0 och senare)
 -   Android for Work
 
 >[!NOTE]
->Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen 
+>Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen.
 
 Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur många e-postmeddelanden som ska synkroniseras och, beroende på enhetstypen, vilka innehållstyper som ska synkroniseras.
 
@@ -52,11 +53,11 @@ Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur mång
 
 >Samsung KNOX använder inte värdnamn för att identifiera profilen. Därför rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom de kommer att skriva över varandra.
 
->**Android for Work**: Intune-profilen tillämpas bara på enhetens arbetsprofil och påverkar inte e-postprofiler på enhetens användarprofil.
+>**Android for Work**: Intune-profilen används bara för specifika e-postappar i enhetens arbetsprofil och påverkar inte e-postkonfigurationen i användarprofilen för enheten.
 
 
 ## Skydda e-postprofiler
-Du kan skydda e-postprofiler på två sätt: antingen med ett certifikat eller med ett lösenord.
+Du kan skydda e-postprofiler med ett certifikat eller med ett lösenord.
 
 ### Certifikat
 När du skapar en e-postprofil väljer du en certifikatprofil som du har skapat tidigare i Intune. Detta kallas identitetscertifikat och används för att autentisera mot en betrodd certifikatprofil (eller ett rotcertifikat) för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som verifierar e-postanslutningen, vanligtvis den interna e-postservern.
@@ -78,10 +79,10 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
 
     -   **E-postprofil (iOS 8.0 och senare)**
 
-    -   **E-postprofil (Windows Phone 8 och senare)**
+    -   **E-postprofil (Windows Phone 8.1 och senare)**
 
     -   **E-postprofil (Windows 10 Desktop och Mobile och senare)**
-    
+
     -   **E-postprofil (Android for Work – Gmail)**
 
     -   **E-postprofil (Android for Work – Nine Work)**
@@ -107,8 +108,10 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
     |**Använd SSL**|Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern. För enheter som kör Samsung KNOX 4.0 eller senare kan du exportera Exchange-serverns SSL-certifikat och distribuera det som en Android-betrodd certifikatprofil i Intune. Intune stöder inte åtkomst till det här certifikatet om det installeras på Exchange-servern på annat sätt.|
     |**Innehållstyp som ska synkroniseras** (alla plattformar förutom Android for Work Gmail)|Välj vilka typer av innehåll du vill synkronisera till enheterna.|
     |**Tillåt att e-post skickas från tredjepartsprogram** (endast iOS)|Tillåt att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.|
-    > [!IMPORTANT]
-    > If you have deployed an email profile and then wish to change the values for **host** or **Email address**, you must delete the existing email profile and create a new one with the required values.
+
+> [!IMPORTANT]
+>
+> Om du har distribuerat en e-postprofil och vill ändra värdena för **värd** eller **E-postadress** måste du ta bort den befintliga e-postprofilen och skapa en ny med nödvändiga värden.
 
 4.  När du är klar klickar du på **Spara profilen**.
 
@@ -127,10 +130,11 @@ Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principe
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
 > [!NOTE]
-> Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem.
+> - För Android for Work distribuerar du även Gmail- eller Nine Work-apparna, förutom lämplig e-postprofil.
+> - Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 
