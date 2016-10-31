@@ -2,9 +2,10 @@
 title: "Du uppmanas att installera Lookout for Work på din iOS-enhet | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,66 +13,48 @@ ms.technology:
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: a8f198633bcaf460f2a94257a052284003230d58
+ms.sourcegitcommit: 2edbb8a70458290e69626d85f734d38243a2002a
+ms.openlocfilehash: 03eee971fe74b73983111549338b13bf4068a85c
 
 
 ---
 
 # Du uppmanas att installera Lookout for Work på din iOS-enhet
 
-Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
-
+Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur IT-administratören har konfigurerat Lookout for Work.
 
 **Vad du behöver göra:**
 
-1.  Tryck på meddelandet **Required application – Install Lookout for Work from App Store** (Nödvändigt program – Installera Lookout for Work från App Store) när det visas. Du kommer till installationssidan för Lookout for Work i App Store.
+1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att Lookout for Work installeras på enheten.
 
-2.  Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
+    ![Tryck på Installera för att installera Lookout for Work](./media/ios-lfw-install-app-request.png)
 
-    ![tryck på acceptera för att ge Lookout for Work behörighet till åtkomst till din enhet](./media/lookout-accept-store-permissions-android.png)
+2. När följande meddelande visas trycker du på **Inställningar**, sätter på **Platstjänster** och trycker sedan på **Fortsätt**.
 
-3. Öppna Lookout for Work och tryck på **Aktivera**.
+    ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-location-services.png)
 
-    ![öppna Lookout for Work och tryck på aktivera](./media/lookout-activate-button-android.png)
+3. Granska de behörigheter som Lookout for Work behöver och tryck på **Fortsätt**.
 
-4. Tryck på **Sign in with Azure Active Directory** (Logga in med Azure Active Directory) och ange det konto som du använder för att komma åt e-postmeddelanden och filer för ditt arbete eller din skola.
+    ![du är nu ansluten till Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
-    ![loggar du in med ditt arbets- eller skolkonto](./media/lookout-sign-in-azure-android.png)
+4. Vid meddelandet som ber dig att tillåta att Lookout for Work skickar aviseringar till dig trycker du på **Tillåt**.
 
-5. Välj det konto som du använder för att komma åt filer och e-postmeddelanden för arbetet eller skolan och tryck sedan på **LÄGG TILL KONTO**. Du kommer att se en skärm som ser ut ungefär så här.
+    ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-notifications.png)
 
-    ![välj ditt arbets- eller skolkonto och tryck på Lägg till konto](./media/lookout-pick-account-android.png)
+    
+Lookout for Work avslutar installationen och följande skärm visas om inga säkerhetshot har hittats på enheten.
 
-6. Tryck på **Acceptera** för att ge Lookout for Work behörighet att logga in och läsa din profil.
+![Lookout for Work hittade inga säkerhetshot på din enhet](./media/ios-lfw-no-threats-found.png)
 
-    ![tryck på Acceptera för att ge Lookout for Work behörighet att logga in och läsa din profil](./media/lookout-needs-permission-to-view-profile-android.png)
+Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
 
-    På skärmen visas att Lookout for Work ansluter till Lookout Security Cloud.
+**Om installationen inte fungerar**
 
-7. Granska informationen om hur Lookout skyddar din enhet och tryck sedan på **OK**.
-
-    ![granska hur Lookout for Work skyddar din enhet](./media/lookout-how-it-protects-your-device-android.png)
-
-    När följande skärmbild visas betyder det att Lookout är installerat och anslutet.
-
-    ![du är nu ansluten till Lookout for Work](./media/lookout-you-are-now-connected-android.png)
-
-    Lookout for Work börjar direkt leta efter säkerhetshot på din enhet. Om inga hot hittas visas följande skärmbild.
-
-    ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/lookout-scan-no-threats-found-android.png)
-
-    Skärmen Information om efterlevnad på företagsportalen visar att du nu uppfyller företagets säkerhetskrav.
-
-    Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
-
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta IT-administratören om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
 
-
-
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

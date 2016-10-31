@@ -1,8 +1,9 @@
 ---
 title: Ange IMEI-nummer | Microsoft Intune
-description: "Med Microsoft Intune kan administratörer importera IMEI-nummer för plattformar för mobila enheter för att identifiera företagsägda mobila enheter"
+description: "Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilenhetsplattformar för att identifiera företagsägda mobila enheter"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -13,18 +14,18 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 4e2092182dbda4523c19afeabc34aa0166962c40
+ms.sourcegitcommit: c6b01a5efc0f60622b95623fd91f192c267ff766
+ms.openlocfilehash: 9bd2b4bb676e23712c0a668161b81c4e352bce87
 
 
 ---
 
 # Ange enheter som ägs av företaget med IMEI-nummer (International Mobile Equipment Identity)
-Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilplattformar för att identifiera de mobila enheter som företaget äger. När enheterna har registrerats i Intune visas enheter med importerade IMEI-nummer under **Grupper** > **Översikt** > **Alla enheter**. I **Enhetsgrupp** visas enheter med importerade IMEI-nummer som **Företag** i kolumnen **Ägarskap**.
+Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (International Mobile Equipment Identity) för mobilenhetsplattformar för att identifiera företagsägda mobila enheter. När enheterna har registrerats i Intune kan du se enheter som har importerade IMEI-nummer under **Grupper** > **Översikt** > **Alla enheter**. **Enhetsgrupp** visar en lista över enheter som har importerade IMEI-nummer med **Företag** i kolumnen **Ägarskap**.
 
-1. Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Alla förregistrerade företagsenheter** &gt; **Av IMEI (alla plattformar)** och välj sedan **Lägg till enheter…**. Du kan lägga till enheter på två sätt:
+1. Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Företagets förregistrerade enheter** &gt; **Efter IMEI (alla plattformar)** och välj sedan **Lägg till enheter**. Du kan lägga till enheter på två sätt:
 
-    -   **Överför en CSV-fil som innehåller serienummer** – Skapa en kommaavgränsad lista med två kolumner utan rubrik som är begränsad till 5 000 enheter eller 5 MB per CSV-fil.
+    -   **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil.
 
         |||
         |-|-|
@@ -37,18 +38,18 @@ Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilplattf
         AABBBBBBCCCCCCE,PO 1234
         ```
 
-    -   **Information om manuellt tillagd enhet** – Ange IMEI-nummer och enhetsinformation om upp till fem enheter
+    -   **Lägg till enhetsinformation manuellt** – Ange IMEI-nummer och enhetsinformation för upp till fem enheter.
 
-   *Informationen* är avsedd för administrativt bruk för att identifiera vilket IMEI-nummer som är associerat med en viss enhet. Informationen skickas inte till enheten, men den visas i Intune-konsolen.
+   *Informationen* är avsedd för administrativ användning och hjälper dig att identifiera vilket IMEI-nummer som associeras med en viss enhet. Informationen skickas inte till enheten, men den visas i Intune-konsolen.
 
 2.   Välj **Nästa**.
-3.  På sidan **Granska enheter** kan du granska vilka IMEI-nummer som har importerats. Du kan också bestämma om du vill skriva över **informationen** för IMEI-nummer som importeras på nytt. Du kan avmarkera kryssrutan **Skriv över** om du vill bevara den aktuella informationen. Importera IMEI-numren genom att klicka på **Slutför**.
-4.  IMEI-numren och beskrivningarna läggs till i listan **Efter IMEI (alla plattformar)**.
+3.  I rutan **Granska enheter** kan du kontrollera IMEI-numren för importerade enheter. Du kan också bestämma om du vill skriva över **informationen** för IMEI-nummer som importeras igen. Du kan avmarkera rutan **Skriv över** om du vill bevara den aktuella informationen. Importera IMEI-numren genom att klicka på **Slutför**.
+4.  De importerade IMEI-numren och beskrivningarna läggs till i listan **Efter IMEI (alla plattformar)**.
 
-När en enhet som har ett sådant IMEI-nummer registreras (vanligtvis när en användare installerar företagsportalappen och gör registreringen) märks enheten som en företagsägd enhet och visas som registrerad i gruppen **IMEI-enheter**.
+När en enhet som har ett IMEI-nummer registreras i Intune (vanligtvis när en användare installerar företagsportalappen och slutför registreringen) märks enheten som företagsägd och visas som registrerad i gruppen **IMEI-enheter**.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

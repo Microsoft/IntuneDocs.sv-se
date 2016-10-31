@@ -3,8 +3,9 @@ title: "Du uppmanas att installera Lookout for Work på din Android-enhet | Micr
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 10/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +13,8 @@ ms.technology:
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 5c522c12325925c45f47bc7b521e3d8aa87454f4
-ms.openlocfilehash: d4ffed6fa0a2380ebfc5c4cf9999233635a3469f
+ms.sourcegitcommit: 2edbb8a70458290e69626d85f734d38243a2002a
+ms.openlocfilehash: f152da14c347cd41edbaf7cc8f4d16abc57bedbb
 
 
 ---
@@ -21,6 +22,8 @@ ms.openlocfilehash: d4ffed6fa0a2380ebfc5c4cf9999233635a3469f
 # Du uppmanas att installera Håll utkik efter arbete
 
 Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
+
+Prova felsökningsstegen i slutet av det här avsnittet om du har problem med installationen.
 
 
 **Vad du behöver göra:**
@@ -35,13 +38,13 @@ Innan du kan komma åt ditt arbete måste IT-administratören be dig att install
 
     ![tryck på acceptera för att ge Lookout for Work behörighet till åtkomst till din enhet](./media/lookout-accept-store-permissions-android.png)
 
-3. Öppna Lookout for Work och tryck på **Aktivera**.
+3. Öppna Lookout for Work och tryck sedan på **AKTIVERA**.
 
     ![öppna Lookout for Work och tryck på aktivera](./media/lookout-activate-button-android.png)
 
-4. Tryck på **Logga in med ett arbetskonto** och ange det konto som du använder för att komma åt e-postmeddelanden och filer för ditt arbete eller din skola.
+4. Tryck på **Sign in with Azure Active Directory** (Logga in med Azure Active Directory) och ange sedan det konto som du använder för att komma åt e-postmeddelanden och filer för ditt arbete eller din skola.
 
-    ![loggar du in med ditt arbets- eller skolkonto](./media/lookout-sign-in-android.png)
+    ![loggar du in med ditt arbets- eller skolkonto](./media/lookout-sign-in-azure-android.png)
 
 5. Välj det konto som du använder för att komma åt filer och e-postmeddelanden för arbetet eller skolan och tryck sedan på **LÄGG TILL KONTO**.
 
@@ -51,17 +54,17 @@ Innan du kan komma åt ditt arbete måste IT-administratören be dig att install
 
     ![tryck på Acceptera för att ge Lookout for Work behörighet att logga in och läsa din profil](./media/lookout-needs-permission-to-view-profile-android.png)
 
-    På skärmen visas att Lookout for Work ansluter till Lookout Security Cloud.
+    En skärm visar att Lookout for Work ansluter till Lookout Security Cloud.
 
 7. Granska informationen om hur Lookout skyddar din enhet och tryck sedan på **OK**.
 
     ![granska hur Lookout for Work skyddar din enhet](./media/lookout-how-it-protects-your-device-android.png)
 
-    När följande skärmbild visas betyder det att Lookout är installerat och anslutet.
+    När följande skärmbild visas är Lookout installerat och anslutet.
 
     ![du är nu ansluten till Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
-    Lookout for Work börjar direkt leta efter säkerhetshot på din enhet. Om inga hot hittas visas följande skärmbild.
+    Lookout for Work börjar direkt leta efter säkerhetshot på enheten. Om inga hot hittas visas följande skärmbild.
 
     ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/lookout-scan-no-threats-found-android.png)
 
@@ -69,15 +72,16 @@ Innan du kan komma åt ditt arbete måste IT-administratören be dig att install
 
     ![din enhet följer nu principerna](./media/lookout-device-now-compliant-android.png)
 
-    Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
+    Om Lookout for Work hittar ett säkerhetshot på enheten visas instruktioner för hur du löser problemet.
+
+**Om installationen inte fungerar**
+
+Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om det händer kan du prova att installera Lookout for Work manuellt från Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

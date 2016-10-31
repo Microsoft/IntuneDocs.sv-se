@@ -3,6 +3,7 @@ title: "Du får ett felmeddelande när du använder företagsportalappen | Micro
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6d8b46a20e415f03d23b58b22ecf77fe887d344c
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: d1bcda779c051e4455def755a92f47b5ec7475ea
 
 
 ---
@@ -25,17 +26,14 @@ ms.openlocfilehash: 6d8b46a20e415f03d23b58b22ecf77fe887d344c
 
 Om du får ett felmeddelande när du använder företagsportalappen på en iOS-enhet kan du skicka information om felet för att hjälpa din IT-administratör att felsöka problemet. Du kan skicka information om fel på olika sätt:
 
--   Genom att trycka på **Rapport** på felmeddelanden.
+-   Tryck på **Rapportera** i felmeddelanden.
 
--   Genom att trycka på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
+-   Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
 
--   Genom att skaka enheten då du är i företagsportalappen och sedan trycka på **E-post** när diagnostikaviseringen visas. Om aviseringen inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
-
-
+-   Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om aviseringen inte visas när du skakar enheten öppnar du **Inställningar** &gt; **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

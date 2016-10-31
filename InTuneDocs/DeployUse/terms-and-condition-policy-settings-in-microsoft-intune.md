@@ -3,6 +3,7 @@ title: "Inställningar för användarvillkor | Microsoft Intune"
 description: "Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, tillgång till arbetsresurser och användning av företagsportalappen påverkar enheter och användare."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: b6eff361a30afc965d0a1375d25232833acab03d
+ms.sourcegitcommit: 70fcc08a5619892387aaf8223e9a74661d9c90f6
+ms.openlocfilehash: 1ab7f0b1979e8bc4dad8ce9244a5270935433f9c
 
 
 ---
 
 # Inställningar för användarvillkor i Microsoft Intune
-Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, tillgång till arbetsresurser och användning av företagsportalappen påverkar enheter och användare. Användare måste godkänna de allmänna villkoren innan de kan använda företagsportalen för att registrera sig och komma åt sina arbeten.
+Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, åtkomst till arbetsresurser och företagsportalappen påverkar enheter och användare. Användare måste godkänna de allmänna villkoren innan de kan använda företagsportalen för att registrera sig och komma åt sina arbeten.
 
 Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan också skapa versioner av samma användarvillkor på olika språk och sen distribuera dessa till relevanta grupper.
 
@@ -36,42 +37,42 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
 3.  På sidan **Skapa allmänna villkor** anger du följande information:
 
-    -   **Namn** – Ett unikt namn på principen som visas i Intune-konsolen
+    -   **Namn** – Ett unikt namn på principen som visas i Intune-konsolen.
 
-    -   **Beskrivning** – Detaljer som hjälper dig att identifiera principen i Intune-konsolen
+    -   **Beskrivning** – Information som hjälper dig att identifiera principen i Intune-konsolen.
 
-    -   **Rubrik** – Rubriken som visas för användare i företagsportalen
+    -   **Rubrik** – Rubriken som användarna ser på företagsportalen.
 
-    -   **Text som förklarar vad det innebär att användaren godkänner** – En notis som användare ser angående godkännande. **Exempel**: ”Jag godkänner de allmänna villkoren.”
+    -   **Text som förklarar vad det innebär att användaren godkänner** – Texten som användarna ser angående godkännande. Exempel: ”Jag godkänner de allmänna villkoren.”
 
 4.  När du är klar klickar du på **Spara**. Den nya principen sparas i noden **Allmänna villkor** i arbetsytan **Princip**.
 
 ## Distribuera en princip för allmänna villkor
 
-1.  I [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  I listan **Principer för allmänna villkor** väljer du den princip du vill distribuera och klickar på **Hantera distribution**.
 
-3.  I dialogrutan **Hantera distribution** väljer du de användargrupper som du vill distribuera principen till och klickar på **Ok**.
+3.  I dialogrutan **Hantera distribution** väljer du de användargrupper som du vill distribuera principen till och klickar på **OK**.
 
     När målanvändare sen går in på företagsportalen, så visar Intune användarvillkoren som du distribuerat ut. Användare måste då acceptera villkoren innan de får åtkomst till företagsresurser.
 
 ## Övervaka en princip för allmänna villkor
 
-1.  I [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  I fönstret **Skapa ny rapport** klickar du sedan på **Visa rapport**. Rapporten öppnas med detaljer om vilka användare som godkänt de distribuerade användarvillkoren.
 
 ### Uppdateringar och versionskontroll för användarvillkor
-När du redigerar en befintlig policy för användarvillkor, kan du välja dess beteende när du distribuerar den. Använd följande procedur för att uppdatera befintliga användarvillkorspolicys.
+När du redigerar en befintlig policy för användarvillkor kan du välja vad som ska hända när du distribuerar den. Använd följande procedur för att uppdatera befintliga användarvillkorspolicys.
 
-## Så här jobbar du med multipla versioner av användarvillkor
+## Arbeta med flera versioner av användarvillkor
 
-1.  I [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  Välj den princip för allmänna villkor som du vill redigera och klicka på **Redigera**.
 
-3.  På sidan **Redigera allmänna villkor** kan du göra alla nödvändiga ändringar och sen ange om den nya versionen kräver att alla användare godkänner eller om det räcker att nya användare får den.
+3.  På sidan **Redigera allmänna villkor** gör du alla nödvändiga ändringar och anger sedan om den nya versionen kräver att alla användare godkänner villkoren eller om det räcker att nya användare ser den nya versionen.
 
     Vi rekommenderar att du ökar versionsnumret och kräver godkännande varje gång du gör betydande ändringar i din användarvillkorspolicy. Behåll det nuvarande versionsnumret om du exempelvis bara fixar stavfel eller ändrar formateringen.
 
@@ -80,6 +81,6 @@ När du redigerar en befintlig policy för användarvillkor, kan du välja dess 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

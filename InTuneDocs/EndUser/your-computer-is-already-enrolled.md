@@ -3,6 +3,7 @@ title: "Din dator är redan registrerad | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: f61840073cdb6a41c98e20bb5e1457e22f02d5bb
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: cf382c1c6633f8483059bc52146a66f26438e817
 
 
 ---
@@ -23,11 +24,11 @@ ms.openlocfilehash: f61840073cdb6a41c98e20bb5e1457e22f02d5bb
 
 # Din dator är redan registrerad.
 
-Om ett felmeddelande om att datorn redan har registrerats visas, innebär det att datorn redan har lagts till i företagsportalen, men inte länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.  
+Om ett felmeddelande om att datorn redan har registrerats visas har datorn redan lagts till i företagsportalen, men den har inte länkats till ditt användarkonto ännu. Gör så här om du vill länka datorn till ditt användarkonto och slutföra processen.  
 
 Så här länkar du datorn:
 
-1.  Klicka på **Start** på den dator som du vill länka till ditt konto och klicka sedan på **Microsoft Intune Center**.
+1.  Välj **Start** på den dator som du vill länka till ditt konto och välj sedan **Microsoft Intune Center**.
 
 2.  Öppna företagsportalen.
 
@@ -39,6 +40,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

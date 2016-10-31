@@ -2,9 +2,10 @@
 title: "Enheten uppfyller inte minimikraven för säkerhetskorrigering | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,8 +13,8 @@ ms.technology:
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: ee858ef820cb78e05078b24fff023f29134b1dcf
+ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
+ms.openlocfilehash: 8569d99d7f79b0a27f31aec33f364d30499c6520
 
 
 ---
@@ -22,11 +23,11 @@ ms.openlocfilehash: ee858ef820cb78e05078b24fff023f29134b1dcf
 
 Om meddelandet ”Lägsta Android-säkerhetskorrigeringsnivå har inte konfigurerats” (eller liknande) visas måste du minst installera den lägsta säkerhetskorrigeringen, eller en senare säkerhetskorrigering. IT-administratören kräver den här installationen för att skydda företagsdata på din Android-enhet.
 
-Den aktuella säkerhetskorrigeringsnivån kan finnas på olika platser, beroende på vilken typ av Android-enhet du har. Du måste ta reda på om du har en Samsung Knox-enhet eller någon annan typ av Android-enhet. Om du vill ta reda på om du har en Samsung Knox-enhet väljer du **Inställningar** > **Om telefonen**. Om du inte ser ordet ”Knox” i listan har du inte en Samsung Knox-enhet.
+Platsen för säkerhetskorrigeringen med den aktuella nivån varierar beroende på vilken typ av Android-enhet du har. Du måste ta reda på om du har en Samsung Knox-enhet eller en annan typ av Android-enhet. Du kan kontrollera om du har en Samsung Knox-enhet genom att välja **Inställningar** > **Om telefonen**. Om du inte ser ordet ”Knox” i listan har du inte en Samsung Knox-enhet.
 
-**Så här hittar du den senaste programvaruversionen på enheten:**
+**Så här kontrollerar du den senaste programvaruversionen på din enhet:**
 
-- Ej Samsung Knox-enheter: Välj **Inställningar** > **Om** > **Programvaruinformation** > **Mer** och se **Android-säkerhetskorrigeringsnivå**. Menynamnen och platserna varierar lite mellan olika Android-enheter.
+- Ej Samsung Knox-enheter: Välj **Inställningar** > **Om** > **Programvaruinformation** > **Mer** och se **Android-säkerhetskorrigeringsnivå**. Menynamnen och platserna kan variera något mellan olika Android-enheter.
 
 - Samsung Knox-enheter: Välj **Inställningar** > **Om telefonen** > **Säkerhetsprogramvaruversion**.
 
@@ -40,8 +41,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-adm
 
 
 
-
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

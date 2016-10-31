@@ -1,5 +1,5 @@
 ---
-title: "Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet | Microsoft Intune"
+title: "Du måste åtgärda ett hot som Lookout for Work har hittat på din iOS-enhet | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
@@ -10,20 +10,20 @@ ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
+ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: c5b1be5043b5e0ad2774d9214a3e09ccd8d9d991
-ms.openlocfilehash: aae9d4666ab356bb6d3c5e929d311c53ea065485
+ms.openlocfilehash: 88b6a7107efb04accac4e7028e04a5505d8c865b
 
 
 ---
 
 # <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Du måste åtgärda ett hot som Lookout for Work har hittat
 
-Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas kan se ut ungefär så här:
+Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas kan se ut ungefär så här: 
 
-![Lookout for Work har hittat ett hot på din enhet](./media/lookout-threat-found-android.png)
+![Meddelande om bristande kompatibilitet från Lookout from Work](./media/ios-lfw-noncompliant-in-ssp.png)
 
 Åtgärda problemet genom att öppna appen Lookout for Work och följa anvisningarna som visas i appen.
 
@@ -39,9 +39,11 @@ Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats
 
 Om du har installerat en app som Lookout for Work uppfattar som ett hot visas en skärmbild som liknar denna:
 
-![exempel på ett virusvarningsmeddelande från Lookout for Work](./media/lookout-virus-alert-android.png)
+![exempel på ett virusvarningsmeddelande från Lookout for Work](./media/ios-lfw-threat-example.png)
 
-När du har avinstallerat appen återfår du omedelbart åtkomst till e-post och data hos företaget. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data fram till dess att du avinstallerar appen.
+Om du ser något som liknar detta trycker du på appnamnet som visas längst upp på skärmen och följer anvisningarna för att ta bort hotet.
+
+När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
