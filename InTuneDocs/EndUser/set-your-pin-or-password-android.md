@@ -3,6 +3,7 @@ title: "Ange din PIN-kod eller ditt lösenord | Microsoft Intune"
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -14,15 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e050c7b4947f0a3aae87c545ec8cca282c22fe55
-ms.openlocfilehash: 2c9fd5714f64477e7e07d66429ae68e17e2e1bb7
+ms.sourcegitcommit: 7f08be661936b092cfa100b2454a3f2a3dd24746
+ms.openlocfilehash: c2480f168d5ee06a8419c68d1b90bac62c2879b1
 
 
 ---
 
 # Ange din PIN-kod eller ditt lösenord
 
-IT-administratören kan kräva att du ställer in en PIN-kod eller ett lösenord på en Android-enhet när du använder Intune för att komma åt data på ett arbets- eller skolkonto. Följ stegen nedan om ett meddelande visas där du uppmanas att ange en PIN-kod eller ett lösenord.
+IT-administratören kan kräva att du ställer in en PIN-kod eller ett lösenord på en Android-enhet när du använder Intune för att komma åt data på ett arbets- eller skolkonto. Du kan även få meddelanden som uppmanar dig att göra en PIN-kod eller ett lösenord längre eller mer komplext så att de blir säkrare.  
+
+Följ stegen nedan för att ange en PIN-kod eller ett lösenord.
 
 1.  Tryck på **Inställningar** &gt; **Säkerhet** &gt; **Skärmlås** &gt; **Lösenord**.
 
@@ -33,6 +36,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

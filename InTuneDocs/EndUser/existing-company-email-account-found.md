@@ -2,7 +2,8 @@
 title: "Befintligt e-postkonto för företag hittat | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,14 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8eb98946c39b98d3c338b32a7d955818020ef478
-ms.openlocfilehash: f33287c51fb769505cd1fb4fcfe2bbc1e4da0ea2
+ms.sourcegitcommit: eebc35277aedabb2575b753afbaf9ea05b1555e8
+ms.openlocfilehash: 6b7123dc4ec0b7a73e6e3151ca9c66a65354f9de
 
 
 ---
 
-# Befintligt e-postkonto för företag hittat
-Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta till e-posten för företag, vidta följande steg för att göra det möjligt för IT-administratören att konfigurera och hantera kontot korrekt:
+# <a name="existing-company-email-account-found"></a>Befintligt e-postkonto för företag hittat
+
+Du har redan ett e-postkonto för företag. Om du vill fortsätta att ansluta till ditt företags-e-postkonto utför du följande steg så att IT-administratören kan konfigurera och hantera kontot:
 
 1.  Öppna **Inställningar** på enheten och ta bort den anslutning som du tidigare har konfigurerat för e-posten för företag.
 
@@ -35,6 +37,6 @@ Kontakta IT-administratören om de nya e-postinställningarna inte visas efter e
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

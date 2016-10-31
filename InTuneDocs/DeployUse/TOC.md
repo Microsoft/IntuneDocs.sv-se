@@ -125,7 +125,7 @@
 #### [Verifiera MAM-principer](validate-mobile-application-management.md)
 #### [Övervaka principefterlevnad](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
-#### [Slutanvändarupplevelse](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+
 #### [Administrationskonsolen för Intune för MAM-principer](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Förbereda affärsappar för MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)
@@ -141,12 +141,15 @@
 ### [Rensa hanterade företagsdata från appar](Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Resurser om slutanvändarens upplevelse](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+### [Återställa hanterade iOS-enheter](restore-managed-ios-devices-from-backup.md)
+### [Android-appar med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+### [iOS-appar med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 # [Utveckla och anpassa appar](/intune/develop/intune-app-sdk)
 
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

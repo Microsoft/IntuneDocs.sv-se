@@ -3,6 +3,7 @@ title: "Använda Intune-företagsportalens webbplats | Microsoft Intune"
 description: "Beskriver företagsportalens webbplats och innehåller länkar till anvisningar för saker du kan göra på webbplatsen"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: f44f4785f768e6fea8532199b28d3621248e2dd4
+ms.sourcegitcommit: d69ae68d704a7a4178c43cb1239b27d132221f5a
+ms.openlocfilehash: 1078832ee0296674ea96ee2827795e86148031d4
 
 
 ---
 
 # Använda Intune-företagsportalens webbplats
- [Företagsportalens webbplats](http://portal.manage.microsoft.com) är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune.
+[Företagsportalens webbplats](http://portal.manage.microsoft.com) är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune.
 
 Du kan använda företagsportalens webbplats för att:
 
@@ -36,7 +37,7 @@ Du kan använda företagsportalens webbplats för att:
 
 -   [Synkronisera enheten manuellt för att påskynda långsamma appinstallationer](sync-your-device-manually-cpwebsite.md)
 
--   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta.
+-   Hitta kontaktuppgifter till din IT-administratör, om IT-administratören har konfigurerat detta
 
 -   Se information om enheten, till exempel om den är kompatibel med principer för ditt företag eller din skola
 
@@ -50,6 +51,6 @@ Du kan utföra de flesta av samma uppgifter på **Företagsportalens webbplats**
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -2,7 +2,8 @@
 title: Skapa en arbetsprofil och registrera din enhet i Intune | Microsoft Intune
 description: Beskriver hur du krypterar en Android-enhet
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlanmsft
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,16 +14,16 @@ ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29eb7c7fb17eb640eefb0cb4a58834d5e3d77591
-ms.openlocfilehash: 528f2e3c2e4acbc45132d12e127dc9b7a4e3f49b
+ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
+ms.openlocfilehash: f3aa8f3169eebb19301d4bdc5624817f54a29aa0
 
 
 ---
 
 
-# Skapa en arbetsprofil och registrera din enhet i Intune
+# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Skapa en arbetsprofil och registrera din enhet i Intune
 
-En arbetsprofil är något som du ställer in på din enhet så att du kan komma åt arbets- eller skolrelaterade e-postmeddelanden, appar och filer. Du kan lära dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
+När du registrerar din Android-enhet får du åtkomst till företagets e-post, appar och andra arbetsdata. Som en del av registreringen skapar du en arbetsprofil, som avgränsar personliga data på enheten från dina arbetsdata. IT-administratören kan bara hantera arbetsprofilen, som innehåller dina arbetsrelaterade data. IT-administratören kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
 
 För att skapa en arbetsprofil:
 
@@ -56,11 +57,11 @@ För att skapa en arbetsprofil:
 
     Du kommer att se några meddelanden om att ställa in din arbetsprofil och registrera din enhet.
 
-8. På skärmen **Nu är det nästan klart!** trycker du på ikonen för företagsportalappen som har en bricka.
+8. På skärmen **Nu är det nästan klart!** Skärmbild, vänta några sekunder tills företagsportalappen öppnas.
 
     ![Tryck på ikonen för företagsportalappen som har en bricka](./media/andr-afw-tap-work-badged-company-portal-icon2.png)
 
-9. På Android-företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto.
+9. På **välkomstsidan** på Android-företagsportalen trycker du på **Logga in** och loggar sedan in med samma arbets- eller skolkonto som du använde för att logga in tidigare i den här processen.
 
 10. Se till att konfigurationen av arbetsprofilen på skärmen **Konfiguration av företagsåtkomst** har slutförts och tryck sedan på **FORTSÄTT**.
 
@@ -72,11 +73,11 @@ För att skapa en arbetsprofil:
 
     ![Konfiguration av företagsåtkomst visar att arbetsprofilen och registreringen är färdiga](./media/andr-afw-company-access-setup-green-checks.png)
 
-12. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**.
+12. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Du kan behöva utföra ytterligare steg om IT-administratören har lagt till andra krav.
 
     ![Konfiguration av företagsåtkomst är slutförd](./media/andr-afw-company-access-setup-complete.png)
 
-    Du kommer att dirigeras till Play Store for Work där du kan nu hämta företagsappar.
+    Nu kan du hämta företagsappar från Play-butiken för arbete.
 
     ![Appsida på Play Store for Work](./media/andr-afw-tap-work-play-store-icon.png)
 
