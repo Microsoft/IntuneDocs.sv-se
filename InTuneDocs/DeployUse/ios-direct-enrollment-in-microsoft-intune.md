@@ -2,8 +2,8 @@
 title: "Direktregistrering för iOS-enheter | Microsoft Intune"
 description: "Använd verktyget Apple Configurator för att registrera företagsägda iOS-enheter direkt med en fördefinierade princip genom att ansluta dem via USB till en Mac-dator."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -20,7 +20,7 @@ ms.openlocfilehash: 9526ac2eb902198597ba811c5d957d69e1b991c6
 
 ---
 
-# Registrera iOS-enheter direkt med hjälp av Apple Configurator
+# <a name="directly-enroll-ios-devices-by-using-apple-configurator"></a>Registrera iOS-enheter direkt med hjälp av Apple Configurator
 Intune stöder registrering av företagsägda iOS-enheter via [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator. Den här processen fabriksåterställer inte enheten och registrerar enheten med en fördefinierad princip. Den här metoden gäller för enheter som **inte har någon användartillhörighet** och kräver att du utför företagsregistreringen genom att ansluta iOS-enheten till en Mac-dator via en USB-anslutning.
 
 När du registrerar iOS-enheter direkt kan du registrera dem utan att hämta enhetens serienummer. Du kan också namnge enheten i identifieringssyfte innan Intune samlar in enhetens namn under registreringen. Företagsportalappen stöds inte för direktregistrerade enheter. Den här vägledningen förutsätter att du använder Apple Configurator 2.0 på en Mac-dator.
