@@ -3,7 +3,7 @@ title: "Din Android-enhet är rotad och du kan inte ansluta | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -22,7 +22,7 @@ ms.openlocfilehash: 5b7586c57f3f2825edfa9ae45a3fdec9af0fe956
 ---
 
 
-# <a name="your-android-device-is-rooted-and-you-can't-connect"></a>Din Android-enhet är rotad och du kan inte ansluta
+# <a name="your-android-device-is-rooted-and-you-cant-connect"></a>Din Android-enhet är rotad och du kan inte ansluta
 
 Om Android-enheten är rotad har enheten ändrats för att aktivera vissa funktioner som kan äventyra företagets resurser och säkerhet. Om du ser det här meddelandet kan du inte komma åt företagets resurser förrän problemet är löst.
 

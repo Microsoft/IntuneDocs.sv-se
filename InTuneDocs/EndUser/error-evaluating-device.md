@@ -3,7 +3,7 @@ title: "Fel vid utvärdering av enhet | Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article

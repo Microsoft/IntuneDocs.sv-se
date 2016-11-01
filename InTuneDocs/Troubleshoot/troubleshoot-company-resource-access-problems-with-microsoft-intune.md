@@ -2,8 +2,8 @@
 title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Intune"
 description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att felsöka problem med att få åtkomst till resurser."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article
@@ -44,7 +44,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |130 (APP_CI_ENFORCEMENT_ERROR)|Installation av MSADP misslyckades||
 |Ingen status (APP_CI_ENFORCEMENT_UNKNOWN)|saknas|Statusen är för närvarande okänd.|
 
-## <a name="company-resource-access-(common-errors)"></a>Åtkomst till företagets resurser
+## <a name="company-resource-access-common-errors"></a>Åtkomst till företagets resurser
 
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|

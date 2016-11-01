@@ -2,8 +2,8 @@
 title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Intune"
 description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att felsöka problem med att få åtkomst till resurser."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -20,12 +20,12 @@ ms.openlocfilehash: 98b93ca894cfc616b023a313e19c5553b2284769
 
 ---
 
-# Felsökning av problem med åtkomst till företagsresurser med Microsoft Intune
+# <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Felsökning av problem med åtkomst till företagsresurser med Microsoft Intune
 Använd fel- och statuskoderna i det här avsnittet för att felsöka problem när en åtgärd i Microsoft Intune returnerar en felkod.
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
-## Statuskoder för MDM-hanterade Windows enheter
+## <a name="status-codes-for-mdm-managed-windows-devices"></a>Statuskoder för MDM-hanterade Windows enheter
 
 |Statuskod|Felmeddelande|Vad bör jag göra|
 |---------------|-----------------|--------------|
@@ -44,7 +44,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |130 (APP_CI_ENFORCEMENT_ERROR)|Installation av MSADP misslyckades||
 |Ingen status (APP_CI_ENFORCEMENT_UNKNOWN)|saknas|Statusen är för närvarande okänd.|
 
-## Åtkomst till företagets resurser
+## <a name="company-resource-access-common-errors"></a>Åtkomst till företagets resurser
 
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|
@@ -73,7 +73,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016341111|0x87D11389|iOS-enheten har returnerat en oväntad inaktiv status|
 |-2016341112|0x87D11388|iOS-enheten är förnärvarande upptagen|
 
-## iOS-enheterna returnerade fel
+## <a name="errors-returned-by-ios-devices"></a>iOS-enheterna returnerade fel
 
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|
@@ -283,7 +283,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016335111|0x87D12AF9|1001:Profilversionen stöds inte|
 |-2016335112|0x87D12AF8|1000:Felaktigt utformad profil|
 
-## OMA-svarskoder
+## <a name="oma-response-codes"></a>OMA-svarskoder
 
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|
@@ -368,7 +368,7 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016345912|0x87D100C8|SyncML-kommandot har utförts.|
 |-2016346011|0x87D10065|Det angivna SyncML-kommandot genomförs, men har ännu inte slutförts.|
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 

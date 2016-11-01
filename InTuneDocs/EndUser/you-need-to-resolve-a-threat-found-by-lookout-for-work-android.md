@@ -3,7 +3,7 @@ title: "Du måste åtgärda ett hot som Lookout for Work har hittat på din Andr
 description: 
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/17/2016
 ms.topic: article

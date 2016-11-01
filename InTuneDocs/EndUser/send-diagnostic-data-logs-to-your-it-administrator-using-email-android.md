@@ -3,7 +3,7 @@ title: "Skicka loggar med diagnostikdata till IT-administratören via e-post | M
 description: "Skicka dataloggar med e-post på en Android-enhet"
 keywords: 
 author: barlanmsft
-ms.author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/21/2016
 ms.topic: article
