@@ -3,8 +3,9 @@ title: Synkronisera Windows-enheten manuellt | Microsoft Intune
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8450facfe63d947df6e6a152805ad882ae220c3e
-ms.openlocfilehash: d7c2fb804e01df6689044d6ca2e72ff00ee95fbc
+ms.sourcegitcommit: 2d7630d71505fadc22ab135ff0c8988b314793ad
+ms.openlocfilehash: e0f18e4e1077f7843b4f8d8ea6d9e485f715bc3c
 
 
 ---
@@ -53,7 +54,7 @@ Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda
     Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
 
 ## Windows 10 desktop
-Så här synkroniserar du en Windows 10 Desktop-enhet manuellt för att påskynda en långsam appinstallation:
+Det finns mer än en version av Windows 10, vilket innebär att det finns två uppsättningar steg. Om du är osäker på vilka steg du ska följa tittar du på skärmbilderna och följer de steg som liknar vad du ser på din enhet. 
 
 1. Välj **Start**-knappen och sedan **Inställningar**.
 
@@ -63,15 +64,46 @@ Så här synkroniserar du en Windows 10 Desktop-enhet manuellt för att påskynd
 
     ![Välj konton på sidan Inställningar](./media/win10pc-sync-2-settings-accounts.png)
 
-3. Välj **Åtkomst till arbetsplats** på sidan **Konton**.
+3. Ta en titt på följande två skärmar och se om någon av dem liknar den som visas på din enhet. Följ anvisningarna för den skärm som motsvarar den som visas på din enhet.
+
+    Om du ser den här skärmen, som visar ”Åtkomst till arbete eller skola”, följer du anvisningarna i [Steg som du följer om du ser Åtkomst till arbete eller skola](#steps-to-follow-if-you-see-access-work-or-school).
+
+    ![Steg som du följer om du ser Åtkomst till arbete eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+
+    Om du ser den här skärmen, som visar ”Åtkomst till arbete”, följer du stegen i [Steg som du följer om du ser Åtkomst till arbete](#steps-to-follow-if-you-see-your-account).
+
+    ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png) 
+
+### Steg för att följa om du ser Åtkomst för arbete eller skola
+
+1. Välj **Åtkomst till arbete eller skola** på sidan **Konton**.
+
+    ![Välj Åtkomst till arbete eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+
+2. Välj ditt arbets- eller skolkonto. Beroende på hur IT-administratören har konfigurerat inställningarna kanske du ser två konton som liknar de i exemplet nedan. Ett konto visas med en portfölj och det andra med Microsoft-logotypen. 
+
+    - Om du ser kontot med portföljen väljer du det och letar efter knappen **Information** under kontot. 
+    - Om du bara ser kontot med Microsoft-logotypen väljer du kontot och letar efter knappen **Information** under kontot.
+
+    ![Välj namnet på ditt konto bredvid portföljikonen eller Microsoft-logotypen](./media/win10pc-rs1-sync-info-button.png)
+
+3. Välj knappen **Information**. En dialogruta öppnas som liknar den i exemplet nedan.
+
+    ![Välj namnet på ditt konto bredvid portföljikonen eller Microsoft-logotypen](./media/win10pc-rs1-sync-button.png)
+
+4. Välj knappen **Synkronisera**. Enheten kommer att synkroniseras med Intune.
+
+### Steg som du följer om du ser Åtkomst till arbete
+    
+1. Välj **Åtkomst till arbetsplats** på sidan **Konton**.
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 
-4. Under avsnittet **Registrera dig för hantering av mobilenheter (MDM)** väljer du namnet på ditt företag.
+2. Under avsnittet **Registrera dig för hantering av mobilenheter (MDM)** väljer du namnet på ditt företag.
 
     ![Välj företagsnamnet för enhetshantering](./media/win10pc-sync-4-tap-com-name.png)
 
-5. Välj knappen **Synkronisera**.
+3. Välj knappen **Synkronisera**.
 
     ![Välj knappen Synkronisera](./media/win10pc-sync-5-tap-sync.png)
 
@@ -98,6 +130,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

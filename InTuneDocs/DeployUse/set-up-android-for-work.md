@@ -3,6 +3,7 @@ title: Konfigurera Android for Work-hantering | Microsoft Intune
 description: "Aktivera hantering av mobila enheter (MDM) för Android for Work-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

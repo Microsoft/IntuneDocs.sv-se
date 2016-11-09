@@ -3,6 +3,7 @@ title: "Felsöka Lookout-integrering | Microsoft Intune"
 description: "I det här avsnittet beskrivs felsökning av problem som ofta uppstår vid Lookout-integrering"
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

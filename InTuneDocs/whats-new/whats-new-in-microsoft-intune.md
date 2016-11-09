@@ -3,6 +3,7 @@ title: "Vad är nytt | Microsoft Intune"
 description: "Ta reda på vad är nytt den här månaden och i tidigare versioner av Microsoft Intune"
 keywords: 
 author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/13/2016
 ms.topic: article

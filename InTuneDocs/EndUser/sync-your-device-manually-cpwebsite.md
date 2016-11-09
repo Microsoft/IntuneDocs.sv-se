@@ -3,6 +3,7 @@ title: "Synkronisera enheten manuellt med företagsportalens webbplats | Microso
 description: 
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Resurser om slutanvändarens upplevelse med Microsoft Intune | Microsoft
 description: "Länkar till information som du kan dela med dina slutanvändare"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: get-started-article

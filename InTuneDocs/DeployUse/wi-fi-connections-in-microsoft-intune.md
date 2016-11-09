@@ -3,6 +3,7 @@ title: Wi-Fi-anslutningar | Microsoft Intune
 description: "Använd Wi-Fi-profiler för att hjälpa användarna att ansluta till trådlösa nätverk."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/10/2016
 ms.topic: article

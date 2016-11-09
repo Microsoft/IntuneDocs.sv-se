@@ -3,6 +3,7 @@ title: "Så får dina Android-användare sina appar | Microsoft Intune"
 description: "Metoder för att göra Android-appar tillgängliga för slutanvändare"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 7/7/2016
 ms.topic: article

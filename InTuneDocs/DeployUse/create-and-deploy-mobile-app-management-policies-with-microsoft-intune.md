@@ -3,6 +3,7 @@ title: Skapa och distribuera MAM-principer | Microsoft Intune
 description: "Följ instruktionerna i det här avsnittet om du vill skapa och distribuera hanteringsprinciper för mobilappar."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/22/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 74d9c9843fd6119095c9670a76afd26443bcc796
-ms.openlocfilehash: dab86ce2210c1f0cec81e402d730a6b996db64fc
+ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
+ms.openlocfilehash: e5befdd4925f88d41c454d9c1c36eaf02fdb598d
 
 
 ---
@@ -111,8 +112,9 @@ Endast användare med tilldelade [!INCLUDE[wit_nextref](../includes/wit_nextref_
 >[!IMPORTANT]
 > Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt.  Medlemmar i underordnade grupper till den grupp du valt påverkas inte.
 
-Slutanvändarna kan hämta apparna från App Store eller Google Play. En detaljerad genomgång av hur MAM skyddar företagsdata på enheten finns i [slutanvändarupplevelse med MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md).
-
+Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer information finns i:
+* [Vad som händer när din Android-app hanteras med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Vad som händer när din iOS-app hanteras med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 ##  Ändra befintliga principer
 Du kan redigera en befintlig princip och tillämpa den på inriktade användare. När du ändrar befintliga principer ser dock inte användare som redan är inloggade i apparna ändringarna förrän efter åtta timmar.
 
@@ -165,10 +167,11 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 [Övervaka efterlevnad och användarstatus](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### Se även
-[Slutanvändarupplevelse för MAM-aktiverade appar](end-user-experience-for-mam-enabled-apps-with-microsoft-intune.md)
+* [Vad som händer när din Android-app hanteras med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Vad som händer när din iOS-app hanteras med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

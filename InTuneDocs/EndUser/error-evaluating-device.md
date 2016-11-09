@@ -2,9 +2,10 @@
 title: "Fel vid utvärdering av enhet | Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -21,7 +22,7 @@ ms.openlocfilehash: 43688a00d61785ddabdfef3c45bd30a533a85fe7
 ---
 
 
-# Fel vid utvärdering av enhet
+# <a name="error-evaluating-device"></a>Fel vid utvärdering av enhet
 Enheten är icke-kompatibel med en eller flera av ditt företags principer, men det går inte att visa felet just nu eftersom systemet stötte på ett problem vid försöket att utvärdera din enhet.  
 
 Lös problemet genom att vänta några minuter och sedan trycka på **Kontrollera efterlevnad**. Om problemet kvarstår kontaktar du IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).

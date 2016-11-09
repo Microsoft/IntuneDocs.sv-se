@@ -3,6 +3,7 @@ title: "Beskrivning av tjänst | Microsoft Intune"
 description: "Intune är en molnbaserad tjänst som hjälper dig att hantera Windows-datorer och mobila enheter med iOS, Mac OS X, Android och Windows."
 keywords: 
 author: Nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 09/22/2016
 ms.topic: article

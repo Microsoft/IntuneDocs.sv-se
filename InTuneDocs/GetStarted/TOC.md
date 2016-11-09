@@ -17,7 +17,7 @@
 
 ## [Migrera till Intune](migrate-to-intune.md)
 
-## [Snabbstartsguide för Intune](start-with-a-paid-subscription-to-microsoft-intune.md)
+## [Snabbstartsguide](start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Logga in i Intune](start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Så här konfigurerar du ett eget domännamn](start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
 ### [Synkronisera AD och lägga till användare](start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
@@ -27,6 +27,13 @@
 ### [Anpassa företagsportalen.](start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
 ### [Registrera mobila enheter och installera en app](start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](post-configuration-tasks.md)
+
+## [Snabbstartsguider](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Snabbstartsguide: Förhindra läckage av företagsdata från Office 365-mobilappar](prevent-company-data-leaks-from-Office-365-mobile-apps.md)
+### [Snabbstartsguide: Skydda företagsdata med datakryptering](protect-data-encryption.md)
+### [Snabbstartsguide: Publicera mobilappar till användarna](publish-mobile-apps-to-users.md)
+### [Snabbstartsguide: Förenkla e-postkonfigurationen på mobila enheter](simplify-email-configuration-on-mobile-devices.md)
+### [Snabbstartsguide: Skydda Windows-datorer mot skadlig kod](protect-pcs-against-malware-threats.md)
 
 ## [Distributionsfaser för Intune-distributioner](rollout-phases-for-microsoft-intune-deployment.md)
 ### [Projektomfång](project-scope.md)
@@ -42,6 +49,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

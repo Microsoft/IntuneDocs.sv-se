@@ -3,6 +3,7 @@ title: "Ange eller ändra ditt lösenord | Microsoft Intune"
 description: "Ange eller ändra ditt lösenord"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article

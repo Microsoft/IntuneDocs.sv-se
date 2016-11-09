@@ -3,6 +3,7 @@ title: "Ta bort enheten från företagsportalen | Microsoft Intune"
 description: "Ta bort en enhet från företagsportalen"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

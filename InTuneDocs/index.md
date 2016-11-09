@@ -7,6 +7,7 @@ title: Intune-dokumentation | Microsoft Docs
 description: "Teknisk dokumentation för Microsoft Intune – mobilenhet och programhantering"
 keywords: intune documentation, app management, device management, MDM documentation, MAM documentation
 author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 10/07/2016
 ms.topic: hubpage

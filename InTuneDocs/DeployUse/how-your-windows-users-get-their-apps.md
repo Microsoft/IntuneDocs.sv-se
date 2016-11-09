@@ -3,6 +3,7 @@ title: "Så får dina Windows-användare sina appar | Microsoft Intune"
 description: "Metoder för att göra Windows-appar tillgängliga för användare"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article

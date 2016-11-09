@@ -3,6 +3,7 @@ title: Konfigurera MAM-principer i Intune-konsolen | Microsoft Intune
 description: "Med hjälp av principer för hantering av mobilprogram i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/06/2016
 ms.topic: article

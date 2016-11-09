@@ -2,9 +2,10 @@
 title: "Vad händer om du installerar företagsportalappen och registrerar din iOS- eller Mac OS X-enhet i Intune? Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlan
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4881d765a6a79d380ab6d3facdb55d9f0c81bf97
-ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
+ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
+ms.openlocfilehash: fd5ad37706bc4d7f780c5059bda5305335b4ff68
 
 
 ---
@@ -25,15 +26,15 @@ ms.openlocfilehash: e6e08b1947f93fde6c9e7bff966042647386e7d0
 
 När du installerar företagsportalappen och registrerar en iOS- eller Mac OS X-enhet i Intune kan du använda företagsportalappen för att:
 
--   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler
+-   Kom åt företagets nätverk, din e-post och dina arbetsfiler.
 
--   Hämta företagsappar från Företagsportalen.
+-   Hämta företagsappar från företagsportalen.
 
--   Fjärråterställ din telefon till fabriksinställningarna om den tappas bort eller blir stulen
+-   Fjärråterställ din telefon till fabriksinställningarna om den tappas bort eller blir stulen.
 
--   Konfigurera ditt företags e-postkonto automatiskt
+-   Konfigurera ditt företags-e-postkonto automatiskt.
 
-När du registrerar enheten i Intune, ger du också IT-administratören tillstånd att hantera din enhet, så att företagsinformation på enheten hålls skyddad.
+När du registrerar din enhet i Intune ger du IT-administratören tillstånd att hantera din enhet, så att företagsinformation på enheten kan skyddas.
 
 **IT-avdelningen kan inte se**
 
@@ -65,7 +66,7 @@ När du registrerar enheten i Intune, ger du också IT-administratören tillstå
 
 -   Enhetsnamn
 
-När enheten har registrerats kan din IT-administratör:
+När enheten har registrerats kan IT-administratören:
 
 -   Återställa enheten till standardinställningarna om den stjäls eller tappas bort.
 
@@ -85,16 +86,16 @@ När enheten har registrerats kan din IT-administratör:
 
 -   Aktivera eller inaktivera bildströmmen i iCloud.
 
--   Aktivera eller inaktivera data-roaming på enheten. Om data-roaming tillåts kan det tillkomma avgifter för nätverksväxling.
+-   Aktivera eller inaktivera data-roaming på enheten. Om dataroaming tillåts kan roamingavgifter tillkomma.
 
--   Aktivera eller inaktivera röstroaming på enheten. Om röstroaming tillåts kan det tillkomma avgifter för nätverksväxling.
+-   Aktivera eller inaktivera röstroaming på enheten. Om röstroaming tillåts kan roamingavgifter tillkomma.
 
--   Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan det tillkomma avgifter för nätverksväxling.
+-   Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan roamingavgifter tillkomma.
 
 Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

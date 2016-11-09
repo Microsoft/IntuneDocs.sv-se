@@ -2,9 +2,10 @@
 title: "Skicka fel till IT-administratören | Microsoft Intune"
 description: "Skicka fel till administratören"
 keywords: 
-author: staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -21,7 +22,7 @@ ms.openlocfilehash: c7ddd516273360d42426d05528f7846f144c6667
 ---
 
 
-# Skicka fel till IT-administratören
+# <a name="send-errors-to-your-it-admin"></a>Skicka fel till IT-administratören
 
 Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper IT-administratören att felsöka problemet. Du kan skicka information om fel på olika sätt:
 

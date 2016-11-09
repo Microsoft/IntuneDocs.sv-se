@@ -3,6 +3,7 @@ title: "Begränsa åtkomst med enhetsskydd | Microsoft Intune"
 description: "Begränsa åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article

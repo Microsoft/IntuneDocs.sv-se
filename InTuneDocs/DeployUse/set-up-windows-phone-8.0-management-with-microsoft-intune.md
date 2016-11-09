@@ -3,6 +3,7 @@ title: Konfigurera hantering av Windows Phone 8.0 | Microsoft Intune
 description: "Aktivera hantering av mobila enheter (MDM) för Windows Phone 8.0-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/09/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 61e9b6c3-8795-49b0-8ab2-a9a05ee3ea1f
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: 5b659bb63c34887684f90fd56ea853bade8bf791
+ms.sourcegitcommit: 067b46c4e537f6def75142411a6d6b60a63cd642
+ms.openlocfilehash: 32d1272d1e125c8a1a5b9f7c6291fb4acf14ea6e
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: 5b659bb63c34887684f90fd56ea853bade8bf791
 Windows Phone 8.0 kräver ett Symantec-certifikat för att installera appen för Intune-företagsportalen och möjliggöra hantering av enheter. Ett certifikat krävs även för att signera branschspecifika företagsappar. Följande avsnitt avser endast Windows Phone 8.0. Information om att hantera Windows Phone 8.1 eller senare, inklusive Windows 10 Mobile, finns i [Konfigurera Windows Phone-registreringen](set-up-windows-phone-management-with-microsoft-intune.md).
 
 > [!IMPORTANT]
-> Från september 2016 kommer företagsportalappen för Windows 8.0 och Windows Phone 8.0 inte längre vara tillgänglig för hämtning.
+> Från september 2016 är företagsportalappen för Windows Phone 8 och Windows 8 inte längre tillgänglig för nedladdning.
 
 -   **Windows Phone 8** – Certifikat som krävs
 -   **Windows Phone 8.1 och Windows 10 Mobile** kräver bara ett certifikat om:
@@ -42,7 +43,7 @@ Windows Phone 8.0 kräver ett Symantec-certifikat för att installera appen för
 Kraven för konfiguration av enhetshantering för mobila enheter som använder Windows Phone beror på hur du kommer att hantera enheter.  Genom att skapa två CNAME-poster i företagets DNS gör du registrering enklare för användare. Om användarna kommer att ladda ned företagsportalappen från butiken behöver du efter att du konfigurerat DNS-inställningarna endast konfigurera företagsportalen och informera användarna om hur de registrerar sig.  För Windows Phone 8.0 eller Windows Phone 8.1 där du ska distribuera företagsportalen behöver du ett Symantec-certifikat för att kodsignera appen.
 
 ## Ange konfigurationskraven för Windows Phone-hantering
-1.  **Konfigurera Intune** Om du inte redan gjort det förbereder du för hantering av mobila enheter genom att [konfigurera hanteringsauktoritet för mobila enheter](get-ready-to-enroll-devices-in-microsoft-intune.md#set-mobile-device-management-authority) som **Microsoft Intune** och ställa in MDM.
+1.  **Konfigurera Intune** Om du inte redan gjort det förbereder du för hantering av mobila enheter genom att [konfigurera hanteringsauktoritet för mobila enheter](prerequisites-for-enrollment.md#set-mobile-device-management-authority) som **Microsoft Intune** och ställa in MDM.
 
 2.  **Ange ett DNS-alias för registreringsserverns adress** (valfritt)
 
@@ -183,6 +184,6 @@ Du kan distribuera företagsportalappen till Windows Phone 8.1-enheter med Intun
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 

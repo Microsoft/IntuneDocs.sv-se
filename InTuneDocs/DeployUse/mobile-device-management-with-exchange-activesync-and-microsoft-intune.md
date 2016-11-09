@@ -3,6 +3,7 @@ title: Enhetshantering med Exchange ActiveSync | Microsoft Intune
 description: Hantera mobila enheter med Exchange ActiveSync-hantering (EAS) med Exchange Connector
 keywords: 
 author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/29/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: de3296e81c88b3ac04e3ba3f3d3ca222a59df7bd
-ms.openlocfilehash: 96d8911dafe7897458297867ddfef97206fdfc9c
+ms.sourcegitcommit: d5d5345dc6ef022e385a33ccc19b19cc022af2d5
+ms.openlocfilehash: c67ad198c1693f84c9e00d15da00a131f7d0af87
 
 
 ---
 
 # Exchange ActiveSync-hantering av mobila enheter med Microsoft Intune
-För att Microsoft Intune ska kunna hantera mobila enheter direkt måste enheterna [registreras i Intune](get-ready-to-enroll-devices-in-microsoft-intune.md). Alternativt kan administratörer aktivera en mer begränsad hanteringslösning som använder Exchange ActiveSync-hantering (EAS) med Exchange Connector. Enheter kan hanteras med lokala Exchange-servrar och Exchange Online med Office 365. Intune har endast stöd för en Exchange Connector-anslutning av valfri typ per prenumeration.
+För att Microsoft Intune ska kunna hantera mobila enheter direkt måste enheterna [registreras i Intune](prerequisites-for-enrollment.md). Alternativt kan administratörer aktivera en mer begränsad hanteringslösning som använder Exchange ActiveSync-hantering (EAS) med Exchange Connector. Enheter kan hanteras med lokala Exchange-servrar eller Exchange Online med Office 365. Intune har endast stöd för en Exchange Connector-anslutning av valfri typ per prenumeration.
 
 ## Exchange-åtkomstregler för mobila enheter ##
 
@@ -29,14 +30,14 @@ Exchange behöver en uppsättning regler som definierar vad som händer när mob
 [Exchange-åtkomstregler för mobila enheter](exchange-access-rules-for-mobile-devices.md)
 
 ## Installera Exchange Connector
-Med Exchange Connector kan du hantera Exchange-distributionen i Intune-konsolen. Du måste först installera och konfigurera lämplig Intune-till-Exchange-anslutningstjänst. Välj lämpligt alternativ beroende på om Exchange-servern är lokal eller värdbaserad som en tjänst i molnet:
+Med Exchange Connector kan du hantera Exchange-distributionen i Intune-konsolen. Du måste först installera och konfigurera lämplig Intune-till-Exchange-anslutningstjänst. Välj lämpligt alternativ beroende på om Exchange-servern är lokal eller om den finns som en tjänst i molnet:
 
 -   [Konfigurera Intune för Exchange Online eller nya Exchange Online Dedicated-miljöer](intune-service-to-service-exchange-connector.md)
 -   [Installera Intune Connector för lokala Exchange-servrar och äldre Exchange Online Dedicated-miljöer](intune-on-premises-exchange-connector.md)
 
 
 ## Använda princip för Exchange-hanterade mobila enheter
-Intune-konsolen kan användas för att hantera [EAS-principinställningar](exchange-activesync-policy-settings-in-microsoft-intune.md) och [begränsa åtkomsten till företagsresurser](restrict-access-to-email-and-o365-services-with-microsoft-intune.md). En lista över Exchange ActiveSync-principinställningar och -funktioner som stöds av specifika mobila enheter finns i [Jämförelsetabell för Exchange ActiveSync-klienten](http://go.microsoft.com/fwlink/?LinkId=247270).
+Intune-konsolen kan användas för att hantera [EAS-principinställningar](exchange-activesync-policy-settings-in-microsoft-intune.md) och [begränsa åtkomsten till företagsresurser](restrict-access-to-email-and-o365-services-with-microsoft-intune.md). En lista över Exchange ActiveSync-principinställningar och Exchange ActiveSync-funktioner som stöds av specifika mobila enheter finns i [Jämförelsetabell för Exchange ActiveSync-klienten](http://go.microsoft.com/fwlink/?LinkId=247270).
 
 > [!NOTE]
 > Efter anslutning av Intune till en Microsoft Exchange-miljö återställs EAS-principen för alla användare som hanteras via Intune till den aktuella standardprincipen på Microsoft Exchange-servern, om inte en mer specifik princip har definierats i Intune.
@@ -46,6 +47,6 @@ Slutligen kan du [rensa företagsdata på EAS-hanterade mobila enheter](wipe-for
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

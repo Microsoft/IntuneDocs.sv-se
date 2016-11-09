@@ -1,5 +1,6 @@
 # [Förstå och utforska](introduction-to-microsoft-intune.md)
 ## [Introduktion till Intune](introduction-to-microsoft-intune.md)
+## [Modern Windows-hantering](modern-windows-management)
 ## [Utvärderingsguiden för Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md)
 ### [Logga in eller registrera dig för en 30-dagars utvärderingsversion](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 ### [Lägg till användare](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md)
@@ -19,6 +20,6 @@
 # [Felsöka](/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune)
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

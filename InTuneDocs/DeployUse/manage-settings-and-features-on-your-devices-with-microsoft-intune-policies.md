@@ -3,6 +3,7 @@ title: "Hantera enhetsinställningar med principer | Microsoft Intune"
 description: "Med Intune kan du skapa och distribuera principer som styr inställningar och funktioner på de registrerade enheter som du hanterar."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

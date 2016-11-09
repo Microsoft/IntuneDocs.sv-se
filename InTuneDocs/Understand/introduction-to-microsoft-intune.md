@@ -5,6 +5,7 @@ title: Introduktion till Microsoft Intune | Microsoft Intune
 description: "Läs om hur Intune fungerar som en komponent för hantering av mobila enheter för Enterprise Mobility + Security."
 keywords: 
 author: Lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/10/2016
 ms.topic: article

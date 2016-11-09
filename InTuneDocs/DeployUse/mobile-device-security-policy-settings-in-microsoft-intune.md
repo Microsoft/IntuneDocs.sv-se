@@ -3,6 +3,7 @@ title: "Säkerhetsprincipinställningar för mobila enheter | Microsoft Intune"
 description: "Använd Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article

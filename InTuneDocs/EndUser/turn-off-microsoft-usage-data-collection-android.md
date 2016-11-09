@@ -3,6 +3,7 @@ title: "Inaktivera Microsofts insamling av användningsdata för Android | Micro
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

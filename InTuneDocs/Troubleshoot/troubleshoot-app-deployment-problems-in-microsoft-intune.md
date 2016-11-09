@@ -3,6 +3,7 @@ title: "Felsöka problem med appdistributionen | Microsoft Intune"
 description: "Det här avsnittet innehåller information om hur du löser problem med appdistributionen i Microsoft Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 09/27/2016
 ms.topic: article

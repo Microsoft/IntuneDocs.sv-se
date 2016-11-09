@@ -4,6 +4,7 @@ title:
 description: "Detta avsnitt beskriver hur du kan testa och verifiera om din MAM-princip är korrekt konfigurerad och fungerar som förväntat."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angerobe
 ms.date: 08/16/2016
 ms.topic: article

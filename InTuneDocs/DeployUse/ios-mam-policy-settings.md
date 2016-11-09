@@ -3,6 +3,7 @@ title: "iOS MAM-principinställningar | Microsoft Intune"
 description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för iOS-enheter."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article

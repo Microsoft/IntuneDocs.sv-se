@@ -3,6 +3,7 @@ title: "Vad händer om Android-enheten avregistreras från Intune? Microsoft Int
 description: 
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -14,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: fb6f92dccb823d34b977cd42c004a17acf8fa090
+ms.sourcegitcommit: 2bc39ae41779e02882a5edf3698cb0e6976caec2
+ms.openlocfilehash: 5508b359329465e6f53fa3f5b4a93918932dfd8b
 
 
 ---
@@ -25,15 +26,15 @@ ms.openlocfilehash: fb6f92dccb823d34b977cd42c004a17acf8fa090
 
 När du avregistrera en Android-enhet från Intune:
 
--   Du avregistrerar enheten från Intune, vilket innebär att din IT-administratör inte längre hanterar enheten.
+-   IT-administratören hanterar inte enheten längre.
 
--   Du förlorar åtkomst till företagets data och resurser.
+-   Du kan inte längre komma åt företagets data och resurser.
 
--   Enheten visas inte på företagsportalen längre.
+-   Din enhet visas inte längre på företagsportalen.
 
 -   Det går inte att installera appar från företagsportalen längre.
 
--   Inställningar som ändrades på enheten när du lade till den, exempelvis inaktivering av kameran eller att en viss längd på lösenorden krävdes, gäller inte längre.
+-   Inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
 
 Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post och du avregistrerar enheten kommer den inte längre att visas i företagsportalen.
 
@@ -43,7 +44,6 @@ Behöver du hjälp? Kontakta IT-administratören (kontaktinformation finns på [
 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 

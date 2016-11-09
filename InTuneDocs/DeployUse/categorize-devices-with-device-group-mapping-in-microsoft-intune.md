@@ -3,6 +3,7 @@ title: Kategorisera enheter med gruppmappning av enheter | Microsoft Intune
 description: "Använd mappning av enhetsgrupp i Microsoft Intune för att gruppera enheter i kategorier som du definierar för att göra det enklare att hantera dessa enheter."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

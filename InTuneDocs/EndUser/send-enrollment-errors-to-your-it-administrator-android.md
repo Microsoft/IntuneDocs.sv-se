@@ -3,6 +3,7 @@ title: "Skicka registreringsfel till IT-administratören | Microsoft Intune"
 description: "Skicka registreringsfel till IT-administratören"
 keywords: 
 author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/08/2016
 ms.topic: article

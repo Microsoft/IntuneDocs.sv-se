@@ -3,6 +3,7 @@ title: "Avregistrera Windows-enheten från Intune | Microsoft Intune"
 description: "Beskriver hur du avregistrerar en Windows-enhet från Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 93374a2098447a11b164ae3fb5d7b1b3d4824806
+ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
+ms.openlocfilehash: b3dda0cda3600721db5f2ea73166652abff7a44d
 
 
 ---
@@ -44,11 +45,11 @@ Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”
 
 1.  Gå till **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats**.
 
-2.  Tryck på **Lämna** under **Anslut till arbetsplats **.
+2.  Under **Anslut till arbetsplats** väljer du **Lämna**.
 
-3.  Tryck på **Inaktivera** under **Aktivera enhetshantering**.
+3.  Under **Turn on device management** (Aktivera enhetshantering) väljer du **Inaktivera**.
 
-4.  Tryck på **Inaktivera** i popup-fönstret som öppnas.
+4.  I popup-fönstret som öppnas väljer du **Inaktivera**.
 
 ## Avregistrera din Windows Phone 8.1-enhet
 
@@ -64,7 +65,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 952cfa4f23f8ba080ce53f6785baceb8a0a367c6
-ms.openlocfilehash: 9adcf9ce1c2c6e40b3fcbb6c733585bb73a5cc01
+ms.sourcegitcommit: ed1008c786285821c608a8404805c6615c60507f
+ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 
 ---
@@ -27,58 +27,91 @@ Den här guiden går igenom de viktigaste stegen när du ska aktivera hantering 
 
 # Komma igång
 
-## Registrera dig för Microsoft Connect
+## Registrera din Store-app med Microsoft
 
-Intune App SDK är tillgängligt via Microsoft Connect och kräver registrering. Det gör du genom att registrera dig för ett [Microsoft-konto](https://connect.microsoft.com/ConfigurationManagervnext/InvitationUse.aspx?ProgramID=8967&InvitationID=8967-YJYJ-8G6X) med företagets e-postadress.
+**Om din app är en intern företagsapp som inte ska publiceras i en offentlig appbutik**:
 
-Registreringen har väntande status tills Intune-teamet har granskat din begäran. Svarstiden är normalt 2–3 arbetsdagar. När registreringen har godkänts får du ett e-postmeddelande med en nedladdningslänk för Intune App SDK för din eller dina plattformar samt relaterade handböcker. Du kan också komma åt dessa guider på webbplatsen MSDN.
+Du **behöver inte** att registrera din app. För interna affärsappar distribuerar IT-administratören appen internt. Intune identifierar att appen har skapats med SDK och tillåter IT-administratören att tillämpa MAM-principinställningarna på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-mobilapp för MAM med SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
 
-## Registrera din Store-app med Microsoft Intune
+**Om din app kommer att publiceras på en offentlig appbutik som Apple App Store eller Google Play**: 
 
-**Om din aktiverade app är en intern företagsapp som inte ska publiceras i Apple Store eller Google App Store**: Du behöver inte registrera appen. IT-administratören läser in sådana interna appar direkt i Microsoft Intune-konsolen för distribution. Intune känner av att appen har byggts med SDK och IT-administratören kan välja att tillämpa MAM-principen på den. Du kan hoppa till avsnittet [Aktivera din iOS- eller Android-mobilapp för MAM med SDK](#enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk).
+**Måste** du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Efter registrering kan IT-administratörer använda Intune MAM-principinställningar för RMS-appen, som visas som en Intune-appartner. Intune administratörer kommer inte att ha möjlighet att tillämpa MAM-principen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till appen till [Microsoft Intune-partnerplatsen](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) där appens ikon kommer att visas så att kunder vet att den stöder Microsoft Intunes MAM-princip.
 
-**Om du är en oberoende programvaruleverantör (ISV) och utvecklar en app som ska göras tillgänglig för kunder via Apple  eller Google App Store**: Du måste först registrera din app med Microsoft Intune och acceptera registreringsvillkoren. Du kan uppge appens djuplänk vid detta tillfälle. Därefter kan en IT-administratör tillämpa Intune MAM-principen på appen. MAM-principen kan inte tillämpas på appens djuplänk i administrationskonsolen förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft har också en Microsoft Intune-partnerwebbplats där appen registreras så att kunder vet att den stöder Microsoft Intunes MAM-princip.
+Du börjar registreringen genom att fylla i **[formuläret för Microsoft Intune-appartner](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u)**. 
 
-Börja registreringen genom att **läsa och underteckna** [partneravtalet för Microsoft Intune](https://connect.microsoft.com/ConfigurationManagervnext/Survey/Survey.aspx?SurveyID=17806). Det här avtalet beskriver villkoren som ditt företag måste acceptera för att bli en Microsoft Intune-appartner. Du måste logga in innan du kan visa det här dokumentet. Du hittar avtalet på Microsoft Connect-webbplatsen för Intune App SDK under fliken för undersökningar eller här. Vi ber dig även att uppge namnet på appen, företagets namn, samt Google Stores eller iTunes Stores djuplänk till din app.
+Microsoft använder den eller de e-postadresser som du uppger i formuläret för att kontakta dig och fortsätta registreringsprocessen. Vi använder även samma e-postadress för att kontakta dig om vi har frågor.
 
-![Microsoft Connect](../media/microsoft-connect.png)
+> [!NOTE]
+> All information som samlas in i formuläret ovan och via e-postkommunikation med Intune-teamet följer [Microsofts sekretesspolicy](https://www.microsoft.com/en-us/privacystatement/default.aspx).
 
-Vi använder e-postadressen som du angav när du registrerade dig för att bekräfta och slutföra registreringen. Vi använder även samma e-postadress för att kontakta dig om vi har frågor.
+**Hur ser registreringsprocessen ut?**: 
 
-**Hur ser registreringsprocessen ut?**När du har skickat formuläret kontaktar Microsoft dig på den e-postadress som du uppgav vid registreringen, antingen för att bekräfta att registreringen mottagits eller för att be om ytterligare information som krävs för att slutföra registreringen. Du blir också kontaktad när din app har registrerats med Microsoft Intune och när appen publiceras på Microsoft Intunes partnerwebbplats. När vi har bekräftat att vi tagit emot din information tas din apps djuplänk med i nästa månads Intune-tjänstuppdatering. Om registreringsinformationen exempelvis är komplett i juli, stöds appens djuplänk i mitten av augusti. Om appens djuplänk ändras i framtiden måste du registrera om appen. Meddela oss också om du uppdaterar appen med en ny version av Intune App SDK.
+1. När du har skickat frågeformuläret kontaktar Microsoft dig på den e-postadress som du uppgav vid registreringen, antingen för att bekräfta att registreringen mottagits eller för att be om ytterligare information som krävs för att slutföra registreringen. 
+2. När vi har fått all nödvändig information från dig skickar vi avtalet för Microsoft Intune-appartner till dig för underskrift. Det här avtalet beskriver villkoren som ditt företag måste acceptera för att bli en Microsoft Intune-appartner. 
+3. Du meddelas när din app har registrerats med Microsoft Intune-tjänsten och när appen publiceras på webbplatsen för [Microsoft Intune-partner](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). 
+4. Djuplänken för din app läggs sedan till i nästa månatliga Intune Service-uppdatering. Om registreringsinformationen exempelvis är komplett i juli, stöds appens djuplänk i mitten av augusti. 
 
-**Obs!**All information som samlas in i formuläret ovan och via e-postkommunikation med Intune-teamet följer [Microsofts sekretesspolicy](https://www.microsoft.com/en-us/privacystatement/default.aspx).
+Om appens djuplänk ändras i framtiden måste du registrera om appen. Informera oss också om du uppdaterar din app med en ny version av Intune App SDK.
+
+
+
+## Hämta SDK-filerna
+
+Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft GitHub-konto. De offentliga lagringsplatserna nedan innehåller SDK-filer för iOS och Android, respektive:
+
+* [Intune App SDK för iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
+* [Intune App SDK för Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
+
+**Om din app är en Xamarin- eller Cordova-app använder du utvecklingsverktygen nedan**:
+
+* [Intune App SDK Xamarin-komponenten](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Intune App SDK Cordova-plugin-programmet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
+
+Vi rekommenderar att du registrerar dig för ett GitHub-konto som du kan använda för att skapa förgreningar och använda pull i våra databaser. GitHub gör att utvecklare kan kommunicera med vårt produktteam, öppna frågor och få snabba svar, se versionsanmärkningar och lämna feedback till Microsoft. Kontakta msintuneappsdk@microsoft.com för frågor om GitHub-kontot och lagringsplatser.
+
+
+
+
 
 ## Aktivera din iOS- eller Android-mobilapp för MAM med SDK
 
-Du behöver följande för att aktivera din iOS-mobilapp:
+Om du vill integrera Intune App SDK med en intern iOS-app behöver du följande: 
 
-1. **[Utvecklarhandbok för Intune App SDK för iOS](intune-app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din iOS-mobilapp med Intune App SDK. Du  hittar det här dokumentet i dokumentationsmappen som hämtas som en del av Intune App SDK-paketet.
-2. **Intune App SDK för iOS**: Som en del av Intune App SDK-paketet som du hämtar från Microsoft Intune hittar du den signerade mappen ”Intune App SDK for iOS”. Den här mappen innehåller allt innehåll för Intune App SDK för iOS.
+* **[Utvecklarhandbok för Intune App SDK för iOS](intune-app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din iOS-mobilapp med Intune App SDK. 
 
-Du behöver följande för att aktivera din Android-mobilapp med Intune App SDK:
 
-1. **[Utvecklarhandbok för Intune App SDK för Android](intune-app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din Android-mobilapp med Intune App SDK. Du  hittar det här dokumentet i dokumentationsmappen som hämtas som en del av Intune App SDK-paketet.
-2. **Intune App SDK för Android**: Som en del av Intune App SDK-paketet som du hämtar från Microsoft Intune hittar du den signerade mappen ”Intune App SDK for Android”. Den här mappen innehåller allt innehåll för Intune App SDK för Android.
+Om du vill integrera Intune App SDK med en intern Android-app behöver du följande:
 
-## Inaktivera telemetri för din app
+* **[Utvecklarhandbok för Intune App SDK för Android](intune-app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din Android-mobilapp med Intune App SDK. 
 
-**Intune App SDK för iOS**: SDK loggar SDK-telemetridata om användningshändelser som standard. Dessa data skickas till Microsoft Intune.
+Dokumentationen för Intune App SDK Xamarin-komponenten och Intune App SDK Cordova-plugin-programmet finns i deras respektive GitHub-databaser. 
 
-Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från ditt program **måste du inaktivera** SDK-telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i `IntuneMAMSettings`.
 
-**Intune App SDK för Android**: SDK-telemetridata loggas inte via SDK.
+## Konfigurera telemetri för din app
+
+Microsoft Intune samlar in data för användningsstatistik för din app.
+
+* **Intune App SDK för iOS**: SDK loggar SDK-telemetridata om användningshändelser som standard. Dessa data skickas till Microsoft Intune.
+
+    * Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från din app måste du inaktivera telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i IntuneMAMSettings-ordlistan.
+
+* **Intune App SDK för Android**: Telemetridata loggas inte via SDK.
 
 ## Testa din MAM-aktiverade app med Microsoft Intune
 
-När du har slutfört nödvändiga steg för att integrera Intune App SDK med iOS eller Android Intune App SDK måste du se till att alla apphanteringsprinciper är aktiverade och fungerar för slutanvändaren och IT-administratören. Du behöver följande för att testa integreringen:
+När du har slutfört de nödvändiga stegen för att integrera din iOS- eller Android-app med Intune App SDK måste du se till att alla apphanteringsprinciper är aktiverade och fungerar för slutanvändaren och IT-administratören. Du behöver följande för att testa din integrerade app:
 
-1. **Testa din MAM-aktiverade app med Microsoft Intune**: Det här dokumentet beskriver steg för steg hur du testar dina MAM-aktiverade iOS- eller Android-appar med Microsoft Intune. Du  hittar det här dokumentet i dokumentationsmappen som hämtas som en del av Intune App SDK-paketet.
-2. **Microsoft Intune-konto**: Du behöver ett Microsoft Intune-konto för att kunna testa dina MAM-aktiverade appar med Microsoft Intune. Om du är en oberoende programvaruleverantör (ISV) som aktiverar iOS- eller Android-appar för MAM får du en kampanjkod när du har slutfört registreringen med Microsoft Intune (se beskrivningen i registreringsavsnittet). Med kampanjkoden kan du registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning. Om du utvecklar en affärsapp som inte ska publiceras i butiken måste du ha åtkomst till Microsoft Intune via din organisation. Du kan också registrera dig för en kostnadsfri 1-månads utvärderingsversion med [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+<!--TODO-->
+
+* **Testa din MAM-aktiverade app med Microsoft Intune**: Det här dokumentet beskriver steg för steg hur du testar dina MAM-aktiverade iOS- eller Android-appar med Microsoft Intune. Du hittar det här dokumentet i GitHub-lagringsplatserna för SDK:erna.
+
+* **Microsoft Intune-konto**: Du behöver ett Microsoft Intune-konto för att kunna testa dina MAM-aktiverade appar med Microsoft Intune. 
+    * Om du är en oberoende programvaruleverantör (ISV) som aktiverar iOS- eller Android-appar för Intune MAM får du en kampanjkod när du har slutfört registreringen med Microsoft Intune (se beskrivningen i registreringsavsnittet). Med kampanjkoden kan du registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning. 
+    * Om du utvecklar en affärsapp som inte ska publiceras i butiken måste du ha åtkomst till Microsoft Intune via din organisation. Du kan också registrera dig för en kostnadsfri 1-månads utvärderingsversion med [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

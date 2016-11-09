@@ -3,6 +3,7 @@ title: "Använda en Windows-enhet med Intune | Microsoft Intune"
 description: "Lista med länkar till saker du kan göra på din Windows-enhet när enheten har registrerats i Intune"
 keywords: 
 author: Staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article

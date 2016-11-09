@@ -3,6 +3,7 @@ title: "Använda konfigurationsprinciper för Android for Work-mobilappar | Micr
 description: "Använd konfigurationsprinciper för mobilappar i Intune om du vill definiera inställningar som kan krävas när användaren kör en Android for Work-app."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Intune"
 description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN som styrs av Cisco ISE."
 keywords: 
 author: nbigman
+ms.author: nbigman
 manager: angrobe
 ms.date: 10/05/2016
 ms.topic: article

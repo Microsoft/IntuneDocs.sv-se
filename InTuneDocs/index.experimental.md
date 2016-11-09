@@ -6,6 +6,7 @@ title: "Intune-dokumentation – MDM-dokumentation | Microsoft Docs"
 description: "Teknisk dokumentation för Microsoft Intune – mobilenhet och programhantering"
 keywords: Intune-dokumentation, MDM-dokumentation, dokumentation om hantering av mobila enheter, dokumentation om mobila enheter och program
 author: jeffgilb
+ms.author: jeffgilb
 manager: jeffgilb
 ms.date: 04/28/2016
 ms.topic: hubpage

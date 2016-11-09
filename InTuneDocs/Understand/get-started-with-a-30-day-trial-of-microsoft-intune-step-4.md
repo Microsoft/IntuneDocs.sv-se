@@ -3,6 +3,7 @@ title: "Skapa principer och publicera en app för användare | Microsoft Intune"
 description: "Så här skapar du principer och publicerar en app när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article

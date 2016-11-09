@@ -1,8 +1,9 @@
 ---
 title: Aktivera hantering av mobilprogram (MAM) i appar med SDK | Microsoft Intune
-description: 
+description: "Det här avsnittet ger en snabb överblick över varför du bör använda Intune SDK."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 26b00081-7c05-4969-ace1-0585e44d5cd2
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eec08a92ff38f55ca04e9c1822c041e8bd0273fd
-ms.openlocfilehash: 5c7f25b31288a112fbfb1744c061c4cc2eb73e49
+ms.sourcegitcommit: 37e12d1d78f40acb616ad5762eeb5f034ecc0081
+ms.openlocfilehash: 57b7cefce3715568b77a8c16a857a16434d72821
 
 
 ---
 
 # Aktivera hantering av mobilprogram i appar med SDK
-Med Microsoft Intune App SDK kan du göra så att vissa funktioner i iOS- eller Android-mobilappar hanteras med Intune. När din app är aktiverad kan du distribuera principer till appen. Principerna använder dessa funktioner för att skydda företagets data. Exempel på olika typer av skydd som du kan implementera med SDK:
+Använd Microsoft Intune App SDK och gör så att Intune kan hantera vissa funktioner i iOS- eller Android-appar. När din app är aktiverad kan du distribuera principer till appen. Principerna använder dessa funktioner för att skydda företagets data. Exempel på olika typer av skydd som du kan implementera med SDK:
 
 -   Hindra användare från att kopiera företagsdokument till molnet
 
@@ -39,6 +40,6 @@ En översikt över SDK finns på sidan [Översikt](/intune/develop/intune-app-sd
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO3-->
 
 
