@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 11/3/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -20,7 +20,10 @@ ms.openlocfilehash: a986e859e38e0936f53c57a75872dc86de3ee181
 
 ---
 
-# Konfigurera Android for Work-appar med konfigurationsprinciper för mobilappar i Microsoft Intune
+# <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurera Android for Work-appar med konfigurationsprinciper för mobilappar i Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Använd konfigurationsprinciper för mobilappar i Microsoft Intune om du vill definiera inställningar som kan krävas när användaren kör en app. En app kan till exempel kräva att användarna anger:
 
 -   ett anpassat portnummer
@@ -37,7 +40,7 @@ Om du vill använda konfigurationsprinciper för appar måste utvecklaren av app
 
 Du kan distribuera appkonfigurationsprincipen till samma användare som du har distribuerat appen som du vill konfigurera till. Principinställningarna används när appen körs.
 
-## Konfigurera en konfigurationsprincip för mobilappar
+## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurera en konfigurationsprincip för mobilappar
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
@@ -61,7 +64,7 @@ Du kan distribuera appkonfigurationsprincipen till samma användare som du har d
 Den nya principen visas i noden **Konfigurationsprinciper** .
 
 
-## Distribuera appkonfigurationsprincipen
+## <a name="deploy-the-app-configuration-policy"></a>Distribuera appkonfigurationsprincipen
 När du har skapat en konfigurationsprincip för mobilappar så måste du distribuera den till samma användare som appen som inställningarna ska gälla för distribueras till.
 
 Mer information om att distribuera principer finns i [distribuera en konfigurationsprincip](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#deploy-a-configuration-policy)
@@ -72,10 +75,6 @@ När den distribuerade appen körs på en enhet körs den med de inställningar 
 
 > [!TIP]
 > Distribuera endast en princip för app-konfiguration för varje app till en användare.
-
-
-
-
 
 
 
