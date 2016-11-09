@@ -14,8 +14,8 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eba2421fb929d21eb36c273eb6cb43a06ac03cb4
-ms.openlocfilehash: ed92874cce2877d31d83a619ec8ffb63a57cd5c3
+ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
+ms.openlocfilehash: 7d239a80ed68d39b2a7179a45178ba6ae11c5423
 
 
 ---
@@ -106,7 +106,7 @@ Den automatiska registreringsuppgiften för Intune, registervärdet **WindowsInt
 
 ## <a name="instruct-users-to-selfenroll"></a>Be användarna att göra registreringen själv
 
-Användare kan installera Intune-klientprogramvaran genom att gå till  [företagsportalens webbplats](http://portal..manage.microsoft.com). Om webbportalen kan identifiera enheten som en Windows-dator visas en uppmaning om att registrera datorn genom att ladda ned Intune-klientprogramvaran. När programvaran har laddats ned kan användare installera den för att lägga till datorerna i hanteringen.
+Användare kan installera Intune-klientprogramvaran genom att gå till  [företagsportalens webbplats](http://portal.manage.microsoft.com). Om webbportalen kan identifiera enheten som en Windows-dator visas en uppmaning om att registrera datorn genom att ladda ned Intune-klientprogramvaran. När programvaran har laddats ned kan användare installera den för att lägga till datorerna i hanteringen.
 
 ![På Intune-portalen visas en uppmaning om att hämta Intune-klientprogramvaran](../media/software-client-download.png)
 
