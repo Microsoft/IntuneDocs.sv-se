@@ -2,9 +2,10 @@
 title: Hantera aviseringar | Microsoft Intune
 description: "Använd arbetsytan Aviseringar i Intune när du ska utvärdera den övergripande hälsan för enheter i din organisation."
 keywords: 
-author: Nbigman
+author: karthikaraman
+ms.author: karaman
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +15,20 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pbala
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed8b7e42bd7c6f3839cc93cc3efcdd3241e88e2a
-ms.openlocfilehash: f254c1a486305e54305392b9688c563b8be93237
+ms.sourcegitcommit: ab9ad1fb42176f2fc2babaa6fa3c91cea40b4ca5
+ms.openlocfilehash: 3bbeafbe78148d038b7673ee8c1abfd5bc6c5f87
 
 
 ---
 
-# Hantera aviseringar i Microsoft Intune
+# <a name="manage-alerts-in-microsoft-intune"></a>Hantera aviseringar i Microsoft Intune
 Använd arbetsytan **Aviseringar** i administratörskonsolen för Intune när du ska utvärdera den övergripande hälsan för enheter i din organisation och för att identifiera problem.
 
-## Visa aktiva aviseringar
+## <a name="view-active-alerts"></a>Visa aktiva aviseringar
 
 Se allmän information och sammanfattningsdata om aktiva aviseringar.
 
-#### Visa aktiva aviseringar
+#### <a name="to-view-active-alerts"></a>Visa aktiva aviseringar
 
 Följ något av dessa alternativ i Intune-administratörskonsolen:
 
@@ -55,10 +56,10 @@ Följ något av dessa alternativ i Intune-administratörskonsolen:
 
     -   **Allvarlighetsgrad**. I den här kolumnen anges aviseringens allvarlighetsgrad.
 
-## Visa anslagstavleaviseringar
+## <a name="view-notice-board-alerts"></a>Visa anslagstavleaviseringar
 Anslagstavleaviseringar tillhandahåller viktiga tjänstmeddelanden. De kan till exempel informera om kommande tjänstuppgraderingar, underhåll eller status för ett avbrott.
 
-#### Visa och hantera anslagstavleaviseringar
+#### <a name="to-view-and-manage-notice-board-alerts"></a>Visa och hantera anslagstavleaviseringar
 
 1.  Välj **Systemöversikt** i Intune-administratörskonsolen.
 
@@ -66,10 +67,10 @@ Anslagstavleaviseringar tillhandahåller viktiga tjänstmeddelanden. De kan till
 
 3.  Om du vill exportera en anslagstavleavisering till en CSV- eller HTML-fil väljer du **Aviseringar** > **Alla aviseringar** >    **Meddelanden**. Markera ett meddelande, välj ikonen **Exportera lista** och följ anvisningarna.
 
-## Granska Intune-systemstatus
+## <a name="review-intune-system-status"></a>Granska Intune-systemstatus
 På arbetsytan **Systemöversikt** kan du visa sammanfattningar av **systemstatus** för Endpoint Protection, uppdateringar, agenthälsa, principer och program så att du enkelt kan identifiera och prioritera problem som kräver din omedelbara uppmärksamhet. Felmeddelanden som genereras vid systemavbrott länkar till sammanfattningen **Tjänststatus**. Sammanfattningen **Tjänststatus** innehåller information om problemen vid respektive plats och visar tidpunkten då statussammanfattningen senast uppdaterades.
 
-#### Visa status för din prenumeration
+#### <a name="to-view-the-status-of-your-subscription"></a>Visa status för din prenumeration
 
 1.  Välj **Systemöversikt** i Intune-administratörskonsolen.
 
@@ -77,7 +78,7 @@ På arbetsytan **Systemöversikt** kan du visa sammanfattningar av **systemstatu
 
   Många av objekten har länkar så att du kan se mer information. Om du till exempel väljer antal instanser under **Endpoint Protection** visas arbetsytan **Endpoint Protection** med en lista över skadlig kod som har identifierats. Om du väljer antal enheter visas arbetsytan **Grupper** med en lista över enheter som skadlig kod har hittats på.
 
-## Stänga eller återaktivera aviseringar
+## <a name="close-and-reactivate-alerts"></a>Stänga eller återaktivera aviseringar
 Intune-aviseringar förblir aktiva tills någon av dessa typer av händelser inträffar:
 
 -   Det problem som orsakade aviseringen har åtgärdats.
@@ -88,7 +89,7 @@ Intune-aviseringar förblir aktiva tills någon av dessa typer av händelser int
 
 Aviseringar som har markerats som stängda tas bort permanent efter 90 dagar.
 
-#### Stänga en varning manuellt
+#### <a name="to-manually-close-an-alert"></a>Stänga en varning manuellt
 
 Följ något av dessa alternativ i Intune-administratörskonsolen:
 
@@ -98,7 +99,7 @@ Följ något av dessa alternativ i Intune-administratörskonsolen:
 
 - **Om du vill stänga en anslagstavleavisering** väljer du **Systemöversikt**. Välj **X** bredvid anslagstavleaviseringen.
 
-#### Visa och återaktivera stängda aviseringar
+#### <a name="to-view-and-reactivate-closed-alerts"></a>Visa och återaktivera stängda aviseringar
 
 1.  I Intune-administratörskonsolen väljer du **Aviseringar** > **Alla aviseringar**.
 
@@ -108,11 +109,11 @@ Följ något av dessa alternativ i Intune-administratörskonsolen:
 
 3.  Om du vill återaktivera den markerade aviseringen klickar du på **Återaktivera avisering**.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Håll dig informerad med aviseringar från Microsoft Intune](../deploy-use/get-notified-by-alerts.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

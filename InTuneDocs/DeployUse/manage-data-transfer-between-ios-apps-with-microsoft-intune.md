@@ -3,6 +3,7 @@ title: "Hantera dataöverföring mellan iOS-appar | Microsoft Intune"
 description: "I det här avsnittet beskrivs hur du kan hantera dataöverföringar mellan appar med funktionen Öppna med i iOS och hanteringsprinciper för mobilappar."
 keywords: 
 author: karthikaraman
+ms.author: karaman
 manager: angrobe
 ms.date: 07/18/2016
 ms.topic: article
@@ -13,14 +14,14 @@ ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: be1ebcdf2514e45d383dd49890e0e21acf6ede44
-ms.openlocfilehash: 488ecb801eac2b591db87683bbe9f371879483c4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 080d861e8fd2d0140ffe5d9987032213ae0e4d4c
 
 
 ---
 
-# Hantera dataöverföring mellan iOS-appar med Microsoft Intune
-## Hantera iOS-appar
+# <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
+## <a name="manage-ios-apps"></a>Hantera iOS-appar
 För att skydda företagets data måste du se till att filöverföringar begränsas till appar som hanteras av dig.  Du kan hantera iOS-appar på följande sätt:
 
 -   Förhindra förlust av företagets data genom att konfigurera MAM-principen för appar, något som vi kommer att referera till som **principhanterade** appar.
@@ -28,7 +29,7 @@ För att skydda företagets data måste du se till att filöverföringar begrän
 -   Du kan också distribuera och hantera appar via **MDM-kanalen**.  Detta kräver att enheterna har registrerats i MDM-lösningen. Det kan vara **principhanterade** appar eller andra hanterade appar.
 
 Med funktionen **Öppna i hantering** för iOS-enheter kan du begränsa överförandet av filer mellan appar som är distribuerade via **MDM-kanalen**. Begränsningar för funktionen anges i inställningarna för konfiguration och distribueras via din MDM-lösning.  Begränsningarna du angett tillämpas när användaren installerar den distribuerade appen.
-##  Använda MAM med iOS-appar
+##  <a name="using-mam-with-ios-apps"></a>Använda MAM med iOS-appar
 Hanteringsprinciper för mobilappar (MAM) kan användas med iOS-funktionen **Öppna i hantering** för att skydda företagets data på följande sätt:
 
 -   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera MAM-principinställningarna med **Tillåt endast att appen överför data till hanterade appar**. När slutanvändaren öppnar en skyddad fil i en app som inte är principhanterad går det inte att läsa filen.
@@ -41,7 +42,7 @@ För att säkerställa att appar som du distribuerar med en tredje parts MDM-lö
 > [!IMPORTANT]
 > Inställningen för UPN krävs endast för appar som distribueras till enheter som hanteras av en tredje parts MDM.  Den här inställningen behövs inte för Intune-hanterade enheter.
 
-## Konfigurera UPN-inställning
+## <a name="configure-user-upn-setting"></a>Konfigurera UPN-inställning
 Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM-lösning. Nedan visas ett vanligt flöde för hur du implementerar UPN-inställningen och den resulterande användarupplevelsen:
 
 
@@ -53,7 +54,7 @@ Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM
 
 4.  Distribuera principen Öppna i hantering till registrerade enheter.
 
-### Exempel på slutanvändarupplevelse
+### <a name="example-end-user-experience"></a>Exempel på slutanvändarupplevelse
 
 1.  Slutanvändaren installerar Microsoft Word-appen på enheten.
 
@@ -70,11 +71,11 @@ Den här konfigurationen krävs för enheter som hanteras av en tredje parts MDM
 
 6.  Nu fungerar dataöverföringen och dokumentet märks med företagets ID i appen. Dessutom behandlas data i en arbetskontext och motsvarande principinställningar tillämpas.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

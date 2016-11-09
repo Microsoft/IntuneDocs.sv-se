@@ -2,8 +2,8 @@
 title: Dra tillbaka enheter | Microsoft Intune
 description: "Du kan använda en selektiv eller fullständig rensning för att ta bort enheten från Intune-hanteringen genom att ta bort enhetens princip och företagsportalen."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -14,13 +14,13 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f2ecd0c90df60dce3a610c00fa0bc35ea7c3a7d3
-ms.openlocfilehash: c96f320856270281772cc3abc891d142eab97ac7
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 834f20a0280c2e3c4301e1a0769ed44c82a6bad0
 
 
 ---
 
-# Dra tillbaka enheter från Intune-hanteringen
+# <a name="retire-devices-from-intune-management"></a>Dra tillbaka enheter från Intune-hanteringen
 
 Beroende på om enheter är företags- eller privatägda kanske en hanterad enhet måste tas bort från Intune-hanteringen. Du kan behöva dra tillbaka en enhet av flera olika skäl:
 
@@ -31,14 +31,14 @@ Beroende på om enheter är företags- eller privatägda kanske en hanterad enhe
 
 Du kan göra en selektiv rensning eller en fullständig rensning av en enhet som hanteras som en mobil enhet, eller så kan du låsa en enhet och återställa dess lösenord. Genom att rensa en enhet frigör du användarens prenumeration så att en annan enhet kan läggas till. Du kan också dra tillbaka datorer som hanteras med Intune-klientprogrammet.
 
-## Rensa data och appar från enheter
+## <a name="wipe-data-and-apps-from-devices"></a>Rensa data och appar från enheter
 Enheten tas bort från Intune-hanteringen både vid en selektiv och vid en fullständig rensning genom att dess princip och företagsportalen tas bort. Det betyder att enheten inte längre har nödvändiga autentiseringsuppgifter för att logga in till företagsresurser som Microsoft SharePoint, e-post eller Office 365.
 
 [Selektiv rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) är det bästa alternativet för medarbetare som registrerat sin egen enhet i Intune eftersom det inte påverkar personlig information på enheten. Endast företagsdata tas bort.
 
 För enheter som ska användas i ett nytt syfte kan du också göra en [fullständig rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) för att återställa enheten till fabriksinställningarna.
 
-## Ta bort enheter i Azure Active Directory-portalen
+## <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
 
 1.  Logga in på [http://aka.ms/accessaad](http://aka.ms/accessaad) eller [https://portal.office.com](https://portal.office.com) med inloggningsuppgifterna för organisationen och välj sedan **Administratörscentra** &gt; **Azure AD**.
 
@@ -54,22 +54,22 @@ För enheter som ska användas i ett nytt syfte kan du också göra en [fullstä
 
 8.  Välj lämpliga enheter och välj sedan **Ta bort enhet**. Enheten tas bort nästa gång den synkroniseras med Active Directory. Normalt sker detta inom fyra timmar. Efter synkroniseringen tas enheten bort från hanteringen. Därmed tas en enhet bort från användarens enhetsgräns.
 
-## Dra tillbaka hanterade datorer
+## <a name="retire-managed-computers"></a>Dra tillbaka hanterade datorer
 Datorer som Intune-klientprogrammet hanterar kan tas bort från hanteringen i Intune-administratörskonsolen. Detta gör också att klientprogramvaran avinstalleras och att Intune-principen tas bort från datorn. Läs mer om att [dra tillbaka datorer som hanteras av Intune-klientprogramvaran](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
 
-## Blockera åtkomst till en enhet
+## <a name="block-access-a-device"></a>Blockera åtkomst till en enhet
 Om en enhet tappas bort eller om du måste dra tillbaka en enhet på grund av att en anställd har lämnat företaget utan att lämna tillbaka maskinvara som ägs av företaget kan du också [återställa lösenordet och fjärrlåsa](use-remote-lock-and-passcode-reset-in-microsoft-intune.md) enheten. På så sätt kan du förhindra att obehöriga använder företagets information, även om du kanske blir tvungen att skriva av enheten som en förlust.
 
 Du bör också återkalla licensen för medarbetarens Intunekonto. Detta frigör licensen och du kan tilldela den till ett nytt användarkonto.
 
-## Göra sig av med maskinvara
+## <a name="retire-hardware"></a>Göra sig av med maskinvara
 Ibland är det själva enheten som blivit för gammal. I sådana fall tar en [återställning till fabriksinställningarna](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md) med en fullständig rensning bort alla data och tar bort enheten från Intune. Sedan kan du göra dig av med maskinvaran i enlighet med företagets policy.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Skydda dina data med en fullständig eller selektiv rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
