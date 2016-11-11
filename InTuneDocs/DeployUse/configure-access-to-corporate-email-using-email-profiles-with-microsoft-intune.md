@@ -2,8 +2,8 @@
 title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Intune"
 description: "Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f8767f191df76e8f166767c51fff357b251bbd4
-ms.openlocfilehash: f736c408f5a4ece65eeef35fb8d1be9a9b29c1b1
+ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
+ms.openlocfilehash: dcd8f956d1706f4bdcb2dca79e9f1ff5d5bb57b0
 
 
 ---
 
-# Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune
+# <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
 Många mobila plattformar har en intern e-postklient som levereras som en del av operativsystemet. En del av dessa klienter kan konfigureras med e-postprofiler, enligt beskrivningen i det här avsnittet.
 
 Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter. På plattformar som stöds kan de interna e-postklienterna konfigureras med Microsoft Intune så att användarna kan komma åt sin e-post för företaget på sina personliga enheter utan ytterligare inställningar.
@@ -56,20 +59,20 @@ Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur mång
 >**Android for Work**: Intune-profilen används bara för specifika e-postappar i enhetens arbetsprofil och påverkar inte e-postkonfigurationen i användarprofilen för enheten.
 
 
-## Skydda e-postprofiler
+## <a name="secure-email-profiles"></a>Skydda e-postprofiler
 Du kan skydda e-postprofiler med ett certifikat eller med ett lösenord.
 
-### Certifikat
+### <a name="certificates"></a>Certifikat
 När du skapar en e-postprofil väljer du en certifikatprofil som du har skapat tidigare i Intune. Detta kallas identitetscertifikat och används för att autentisera mot en betrodd certifikatprofil (eller ett rotcertifikat) för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som verifierar e-postanslutningen, vanligtvis den interna e-postservern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
-### Användarnamn och lösenord
+### <a name="user-name-and-password"></a>Användarnamn och lösenord
 Användaren autentiseras mot den interna e-postservern genom att ange sitt användarnamn och lösenord.
 
 Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de ansluter till sin e-post.
 
-### Skapa en e-postprofil
+### <a name="create-an-email-profile"></a>Skapa en e-postprofil
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip**.
 
@@ -103,7 +106,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
     |**Välj ett certifikat för klientautentisering (identitetscertifikat)** (Android for Work, Samsung KNOX och iOS)|Välj SCEP klientcertifikatet som du skapade tidigare som ska användas för att autentisera Exchange-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.|
     |**Använd S/MIME** (Samsung KNOX och iOS)|Skicka utgående e-post med S/MIME-kryptering.|
     |**Signeringscertifikat** (Samsung KNOX och iOS)|Välj signeringscertifikatet som ska användas för att signera utgående e-post. Det här alternativet visas bara om du väljer **Använd S/MIME**.|
-    |**Antal dagars e-postmeddelande att synkronisera**|Ange hur många dagar e-post ska synkroniseras eller välj **Obegränsad** om du vill synkronisera alla tillgängliga e-postmeddelanden.|
+    |**Antal dagar som e-post ska synkroniseras**|Ange hur många dagar e-post ska synkroniseras eller välj **Obegränsad** om du vill synkronisera alla tillgängliga e-postmeddelanden.|
     |**Synkroniseringsschema** (Android for Work, Samsung KNOX, Windows Phone 8 och senare, Windows 10)|Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.|
     |**Använd SSL**|Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern. För enheter som kör Samsung KNOX 4.0 eller senare kan du exportera Exchange-serverns SSL-certifikat och distribuera det som en Android-betrodd certifikatprofil i Intune. Intune stöder inte åtkomst till det här certifikatet om det installeras på Exchange-servern på annat sätt.|
     |**Innehållstyp som ska synkroniseras** (alla plattformar förutom Android for Work Gmail)|Välj vilka typer av innehåll du vill synkronisera till enheterna.|
@@ -117,7 +120,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
 
 Ny princip som visas i noden **Konfigurationsprinciper** i arbetsytan **Principer** .
 
-## Distribuera principen
+## <a name="deploy-the-policy"></a>Distribuera principen
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
@@ -135,6 +138,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
