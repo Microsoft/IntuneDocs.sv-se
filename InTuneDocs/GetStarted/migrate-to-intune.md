@@ -74,6 +74,6 @@ Om du vill hämta en kopia av hela handboken går du till [TechNet-galleriet](ht
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -116,6 +116,6 @@ Från och med november flyttas grupphantering för enheter till Azure Active Dir
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
