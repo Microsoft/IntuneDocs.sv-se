@@ -19,15 +19,15 @@ ms.openlocfilehash: c80868fdee79df62aae0aa64e378be5dcc9664ae
 
 ---
 
-# Komma igång med Microsoft Intune App SDK
+# <a name="getting-started-with-the-microsoft-intune-app-sdk"></a>Komma igång med Microsoft Intune App SDK
 
 Den här Kom igång-guiden hjälper dig att snabbt aktivera din mobilapp för hantering av mobilprogram med Microsoft Intune. Det kan vara bra att först förstå fördelarna med Intune App SDK som räknas upp i [översikten över Intune App SDK](intune-app-sdk.md).
 
 Den här guiden går igenom de viktigaste stegen när du ska aktivera hantering av mobilappar i en app med Microsoft Intune. Intune App SDK stöder liknande scenarier mellan plattformar och är avsett att ge IT-administratörer en enhetlig miljö på olika plattformar. På grund av plattformsbegränsningar förekommer det dock mindre skillnader vad gäller stödet av vissa funktioner.
 
-# Komma igång
+# <a name="getting-started"></a>Komma igång
 
-## Registrera din Store-app med Microsoft
+## <a name="register-your-store-app-with-microsoft"></a>Registrera din Store-app med Microsoft
 
 **Om din app är en intern företagsapp som inte ska publiceras i en offentlig appbutik**:
 
@@ -55,7 +55,7 @@ Om appens djuplänk ändras i framtiden måste du registrera om appen. Informera
 
 
 
-## Hämta SDK-filerna
+## <a name="download-the-sdk-files"></a>Hämta SDK-filerna
 
 Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft GitHub-konto. De offentliga lagringsplatserna nedan innehåller SDK-filer för iOS och Android, respektive:
 
@@ -65,7 +65,7 @@ Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft Gi
 **Om din app är en Xamarin- eller Cordova-app använder du utvecklingsverktygen nedan**:
 
 * [Intune App SDK Xamarin-komponenten](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-* [Intune App SDK Cordova-plugin-programmet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
+* [Intune App SDK Cordova-insticksprogrammet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Vi rekommenderar att du registrerar dig för ett GitHub-konto som du kan använda för att skapa förgreningar och använda pull i våra databaser. GitHub gör att utvecklare kan kommunicera med vårt produktteam, öppna frågor och få snabba svar, se versionsanmärkningar och lämna feedback till Microsoft. Kontakta msintuneappsdk@microsoft.com för frågor om GitHub-kontot och lagringsplatser.
 
@@ -73,7 +73,7 @@ Vi rekommenderar att du registrerar dig för ett GitHub-konto som du kan använd
 
 
 
-## Aktivera din iOS- eller Android-mobilapp för MAM med SDK
+## <a name="enable-your-ios-or-android-mobile-app-for-mam-with-the-sdk"></a>Aktivera din iOS- eller Android-mobilapp för MAM med SDK
 
 Om du vill integrera Intune App SDK med en intern iOS-app behöver du följande: 
 
@@ -87,7 +87,7 @@ Om du vill integrera Intune App SDK med en intern Android-app behöver du följa
 Dokumentationen för Intune App SDK Xamarin-komponenten och Intune App SDK Cordova-plugin-programmet finns i deras respektive GitHub-databaser. 
 
 
-## Konfigurera telemetri för din app
+## <a name="configuring-telemetry-for-your-app"></a>Konfigurera telemetri för din app
 
 Microsoft Intune samlar in data för användningsstatistik för din app.
 
@@ -97,7 +97,7 @@ Microsoft Intune samlar in data för användningsstatistik för din app.
 
 * **Intune App SDK för Android**: Telemetridata loggas inte via SDK.
 
-## Testa din MAM-aktiverade app med Microsoft Intune
+## <a name="test-your-mam-enabled-app-with-microsoft-intune"></a>Testa din MAM-aktiverade app med Microsoft Intune
 
 När du har slutfört de nödvändiga stegen för att integrera din iOS- eller Android-app med Intune App SDK måste du se till att alla apphanteringsprinciper är aktiverade och fungerar för slutanvändaren och IT-administratören. Du behöver följande för att testa din integrerade app:
 
