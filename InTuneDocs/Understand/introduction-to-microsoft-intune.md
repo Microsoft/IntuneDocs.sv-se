@@ -16,13 +16,13 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3318201cd77ec16f72e65275eda0e65c0dd9e05c
-ms.openlocfilehash: 256a1e7873a6603226843d2936e44c09424b8050
+ms.sourcegitcommit: b3b46c1025ad0792ed4623656c878c53bd69d6cb
+ms.openlocfilehash: f2f5d901ae3b6ffb298b56eef4ae593842b80cfb
 
 
 ---
 
-# Introduktion till Intune
+# <a name="introduction-to-intune"></a>Introduktion till Intune
 Microsoft Intune är hanteringsarmen i Microsoft Enterprise Mobility + Security (EMS, tidigare Enterprise Mobility Suite). Enterprise mobility handlar om göra det möjligt för dina anställda att vara produktiva på alla enheter samtidigt som din organisation information skyddas.  
 
 EMS är en komplett integrerad svit för företagsmobilitet, inklusive produktivitet, identitet, åtkomstkontroll, hantering och dataskydd. Den ger dig ett effektivt sätt att distribuera och hantera en mobilitetslösning i din organisation.  
@@ -49,13 +49,13 @@ Verktygen används i olika kombinationer för att aktivera de vanliga affärssce
 
 I den här dokumentationen förklarar vi hur du använder de verktyg som Intune tillhandahåller för att stödja din verksamhets scenarier.  Vi förklarar också hur du använder dessa verktyg med Office 365, Azure AD Azure RMS och andra delar av Microsofts mobility-svit. Du får en översikt över olika sätt som tekniken används och hur du kan utnyttja den i din miljö och vilka procedurer som krävs för att införa den. Tekniken är flexibel och kan anpassas till alla typer av scenarier utöver de som beskrivs här.
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 * Läs om några av de [vanliga sätten att använda Intune](common-ways-to-use-intune.md).
 * Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Fördjupa dig i de [tekniska kraven och möjligheterna](/intune/get-started/what-to-know-before-you-start-microsoft-intune) med Intune.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 
