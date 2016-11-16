@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/11/2016
+ms.date: 11/02/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e95db6d0ccbe350984f11ce08749b700c2f5ad01
-ms.openlocfilehash: 058843a1cdd0ca4c32c7cc4d7a901e7547da633e
+ms.sourcegitcommit: 0238350139837a06a48d0bff7c53e4c39e07168c
+ms.openlocfilehash: b2cba92c4cf75412b562267aef9d6a138f25952b
 
 
 ---
 
-# Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer
+# <a name="manage-settings-and-features-on-your-devices-with-microsoft-intune-policies"></a>Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer
 Microsoft Intune-*principer* är grupper med inställningar som styr funktioner på datorer och mobila enheter. Du skapar principer med hjälp av mallar som innehåller rekommenderade eller anpassade inställningar och distribuerar dem till enhets- eller användargrupper.
 
-## Typer av principer
+## <a name="types-of-policies"></a>Typer av principer
 
 Intune-principer hör till följande kategorier. Den kategori som du använder påverkar hur du skapar och distribuerar principen.
 
@@ -37,13 +37,11 @@ Mer information finns i [Begränsa åtkomsten till e-post och O365-tjänster med
 - **Resursåtkomstprinciper**: Dessa principer fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver för att utföra sitt arbete, oavsett var de befinner sig.
 Mer information finns i [Ge åtkomst till företagsresurser med Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
 
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 En fullständig lista över Intune-principer finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
 
-
-
-
-## Skapa en konfigurationsprincip
+## <a name="create-a-configuration-policy"></a>Skapa en konfigurationsprincip
 
 1.  Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Princip** &gt; **Konfigurationsprinciper** &gt; **Lägg till**.
 
@@ -84,7 +82,7 @@ När du har skapat en princip vill du förmodligen distribuera den till en eller
 > [!TIP]
 > Du distribuerar inte alla principtyper. Exempelvis distribuerar du inte hanteringsprincipen för mobilprogram (MAM). Den här principtypen associeras i stället med en app, som du sedan distribuerar.
 
-## Distribuera en konfigurationsprincip
+## <a name="deploy-a-configuration-policy"></a>Distribuera en konfigurationsprincip
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
@@ -96,7 +94,7 @@ När du har skapat en princip vill du förmodligen distribuera den till en eller
 
 När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
 
-## Hantera principer
+## <a name="manage-policies"></a>Hantera principer
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Princip** och bläddrar sedan till, och markerar, den princip som du vill hantera.
 
@@ -107,9 +105,9 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 - **Hantera distribution**: Välj den grupp som du vill distribuera principen till och välj sedan **Lägg till**.
 
 
-## Vanliga frågor om Intune-principer
+## <a name="frequently-asked-questions-about-intune-policies"></a>Vanliga frågor om Intune-principer
 
-### Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har distribuerats?
+### <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-deployed"></a>Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har distribuerats?
 När en princip eller app distribueras börjar Intune genast att uppmana enheten att kontakta Intune-tjänsten. Detta brukar ta mindre än fem minuter.
 
 Om enheten inte kontaktar tjänsten för att be om principen när den första aviseringen har skickats, görs ytterligare tre försök.  Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
@@ -128,12 +126,12 @@ Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
 
 Användarna kan också söka efter principer när som helst genom att öppna företagsportalappen och synkronisera enheten.
 
-### Vilka åtgärder gör att Intune genast skickar en avisering till en enhet?
+### <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Vilka åtgärder gör att Intune genast skickar en avisering till en enhet?
 Enheter kontaktar Intune antingen när de får en avisering som uppmanar dem att göra det, eller enligt schemalagda intervall.  När du specifikt riktar en åtgärd mot en enhet eller användare, t.ex. en rensning, låsning, återställning av lösenord, appdistribution, profildistribution (Wi-Fi, VPN, e-post osv.) eller principdistribution, börjar Intune genast att försöka meddela enheten att den ska kontakta Intune-tjänsten för att få dessa uppdateringar.
 
 Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsportalen, utlöser inte en omedelbar avisering till enheter.
 
-### Hur vet jag vilka inställningar som tillämpas om flera principer distribueras till samma användare eller enhet?
+### <a name="if-multiple-policies-are-deployed-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer distribueras till samma användare eller enhet?
 När två eller fler principer distribueras till samma användare eller enhet så görs utvärderingen av vilken inställning som ska tillämpas på inställningsnivå:
 
 -   Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprinciper.
@@ -142,22 +140,22 @@ När två eller fler principer distribueras till samma användare eller enhet s�
 
 -   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Intune-konsolen. Du måste lösa dessa konflikter manuellt.
 
-### Vad händer om hanteringsprinciper för mobilprogram (MAM) är i konflikt med varandra? Vilken används för appen?
+### <a name="what-happens-when-mobile-application-management-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Vad händer om hanteringsprinciper för mobilprogram (MAM) är i konflikt med varandra? Vilken används för appen?
 Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en MAM-princip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning).  Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
 
 Konflikter uppstår om två principinställningar är samma.  Anta att du har konfigurerat två MAM-principer som är identiska förutom inställningen för kopiera/klistra in.  I detta scenario används det mest restriktiva värdet för kopierings- och inklistringsinställningen, men resten av inställningarna tillämpas så som de konfigurerats.
 
 Om en princip distribueras till appen och börjar tillämpas, och en andra princip distribueras senare, har den första principen företräde och fortsätter att tillämpas, medan den andra visas som i konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående princip, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
 
-### Vad händer om anpassade iOS-principer är i konflikt med varandra?
+### <a name="what-happens-when-ios-custom-policies-conflict"></a>Vad händer om anpassade iOS-principer är i konflikt med varandra?
 Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
 
 När du distribuerar en anpassad princip bör du se till att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad princip har inställningar som är i konflikt med varandra tillämpas dessa inställningar i slumpmässig ordning.
 
-### Vad händer när en princip tas bort eller inte längre är tillämplig?
+### <a name="what-happens-when-a-policy-is-deleted-or-no-longer-applicable"></a>Vad händer när en princip tas bort eller inte längre är tillämplig?
 När du tar bort en princip, eller när du tar bort en enhet från en grupp som en princip har distribuerats till, tas principer och inställningar bort från enheten enligt följande listor.
 
-#### Registrerade enheter
+#### <a name="enrolled-devices"></a>Registrerade enheter
 
 - Wi-Fi-, VPN-, certifikat- och e-postprofiler – De här profilerna tas bort från alla registrerade enheter som stöds.
 - Alla andra principtyper:
@@ -194,7 +192,7 @@ När du tar bort en princip, eller när du tar bort en enhet från en grupp som 
         - Tillåt dataroaming
         - Tillåt automatisk synkronisering vid roaming
 
-#### Windows-datorer med Intune-klientprogramvaran
+#### <a name="windows-pcs-running-the-intune-client-software"></a>Windows-datorer med Intune-klientprogramvaran
 
 - **Endpoint Protection-inställningar**: Inställningarna återställs till rekommenderade värden. Det enda undantaget är inställningen **Delta i Microsoft Active Protection Service** där standardvärdet är **Nej**. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 - **Inställningar för programuppdateringar**: Inställningarna återställs till standardläget för operativsystemet. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).
@@ -202,17 +200,17 @@ När du tar bort en princip, eller när du tar bort en enhet från en grupp som 
 - **Inställningar för Windows-brandväggen**: Inställningarna återställs till standardinställningarna för datorns operativsystem. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md).
 
 
-### Hur kan jag uppdatera principerna på en enhet för att säkerställa att de är aktuella (gäller endast Windows-datorer med Intune-klientprogramvaran)?
+### <a name="how-can-i-refresh-the-policies-on-a-device-to-ensure-that-they-are-current-applies-to-windows-pcs-running-the-intune-client-software-only"></a>Hur kan jag uppdatera principerna på en enhet för att säkerställa att de är aktuella (gäller endast Windows-datorer med Intune-klientprogramvaran)?
 
 1.  Markera de enheter i en enhetsgrupp som du vill uppdatera principerna på och välj sedan **Fjärruppgifter** &gt; **Uppdatera principer**.
 2.  Välj **Fjärruppgifter** i det nedre högra hörnet i Intune-administratörskonsolen för att kontrollera aktivitetsstatusen.
 
-### Var kan jag få hjälp med att felsöka principer?
+### <a name="where-can-i-find-help-troubleshooting-policies"></a>Var kan jag få hjälp med att felsöka principer?
 
 Se [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

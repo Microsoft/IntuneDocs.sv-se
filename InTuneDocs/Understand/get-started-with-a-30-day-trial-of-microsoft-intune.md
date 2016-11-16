@@ -14,13 +14,13 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 581e880fa4308ec627f5b2c1242fb5b30b713743
-ms.openlocfilehash: 3973ac11d4734b17f905e88259863d7ddb59c1f4
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 559917b5b3c12534a5aa5d5eb5247d36e4ac1728
 
 
 ---
 
-# Utvärderingsguiden för Intune
+# <a name="intune-evaluation-guide"></a>Utvärderingsguiden för Intune
 Det går snabbt och enkelt att ställa in en kostnadsfri 30-dagars utvärderingsversion av Intune för att hantera dina mobila enheter och datorer. Du kan lägga till upp till 100 användare och enheter med några enkla steg i utvärderingsversionen, ställa in grupper, konfigurera efterlevnadspolicyer och registrera och hantera mobila enheter och datorer.
 
 I det här avsnittet lär du dig grunderna för att få igång en utvärderingsversion av Intune och få en översikt över tjänsten så att du kan utvärdera Intunes funktioner och möjligheter.
@@ -29,7 +29,7 @@ Titta på den här fem minuter långa demonstrationsvideon och se hur lätt det 
 
 <iframe width="675" height="480" src="https://www.youtube.com/embed/ltcZvm4VOFU" frameborder="0" allowfullscreen></iframe>
 
-## Innan du börjar
+## <a name="before-you-begin"></a>Innan du börjar
 Innan du börjar med Intune behöver du följande:
 
 -   En enhet med en Silverlight-aktiverad webbläsare som du kan använda för att få åtkomst till de webbplatser där du skapar Intune-användarkonton (**Office 365-administrationscentret**) och där du hanterar enheter, grupper och principer (**Intune-administratörskonsolen**).
@@ -46,7 +46,7 @@ Innan du börjar med Intune behöver du följande:
     |Windows 10-, Windows RT 8.1 eller Windows 8.1-enheter|Det finns inga certifikatkrav vid registrering av Windows RT- eller Windows-enheter.|[Installera Windows PC-klienten med Microsoft Intune](/Intune/Deploy-Use/install-the-windows-pc-client-with-microsoft-intune).|
     |iOS 7.1 och senare|Hämta ett certifikat för Apple Push-aviseringstjänsten.|Begär ett certifikat för Apple Push Notification Service från Apple genom att följa anvisningarna i [Konfigurera iOS-hantering med Microsoft Intune](/Intune/Deploy-Use/set-up-ios-and-mac-management-with-microsoft-intune).|
 
-## Steg för att slutföra en 30-dagars utvärderingsversion av Intune
+## <a name="steps-to-complete-a-30day-evaluation-of-intune"></a>Steg för att slutföra en 30-dagars utvärderingsversion av Intune
 - [Steg 1: Logga in eller registrera dig för en 30-dagars utvärderingsversion](get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md). Innan du registrerar dig eller loggar in på Intune bör du bestämma dig för om du vill logga in med ett befintligt konto eller skapa ett tillfälligt konto som ska användas endast för 30-dagars utvärderingsversionen av Microsoft Intune.
 - [Steg 2: Lägg till användare](get-started-with-a-30-day-trial-of-microsoft-intune-step-2.md). Nu när du har lagt upp ditt konto, ska du antingen lägga till enskilda användarkonton till Intune eller lägga till användare i grupp (se anvisningarna i det här avsnittet). Det är viktigt att du förstår hur Intune hanterar administratörskonton innan du börjar.
 - [Steg 3: Skapa grupper för att organisera användare och enheter](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md). Grupper i Intune ger stor flexibilitet för att hantera dina enheter och användare. Du kan konfigurera grupper efter organisationens behov (till exempel genom geografisk plats, avdelning eller maskinvaruegenskaper) och använda dem för att utföra olika administrativa uppgifter i skala, från att ange principer för en uppsättning användare till att distribuera program till en uppsättning enheter.
@@ -56,17 +56,17 @@ Innan du börjar med Intune behöver du följande:
 - [Steg 7: Nästa steg](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md). Förbered för att flytta till en betald prenumeration och dra nytta av Intune "FastTrack Center Benefit.
 
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Det är dags att komma igång med din prenumeration på 30-dagars utvärderingsversionen!
 
 >[!div class="step-by-step"]
 [**Registrera dig för Intune** &rarr;](.\get-started-with-a-30-day-trial-of-microsoft-intune-step-1.md)
 
-### Se även
+### <a name="see-also"></a>Se även
 [Snabbstartsguide för Intune](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

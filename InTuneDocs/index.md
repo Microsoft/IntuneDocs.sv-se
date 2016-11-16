@@ -15,12 +15,12 @@ ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: 63317c16082b1fb2764bd698c97fa1d435f58dfe
-ms.openlocfilehash: 1108adb5622c3cdb7720e07a53a35957ce80cca6
+ms.sourcegitcommit: 315c159869303fd6a26caa35160d5ba3c7ccdc1f
+ms.openlocfilehash: db637ebb1165466493b633012ab170059678996c
 
 
 ---
-# Intune-dokumentation
+# <a name="intune-documentation"></a>Intune-dokumentation
 <article id="main">
     <section id="hero-content">
       <h1>Intune-dokumentation</h1>
@@ -263,7 +263,7 @@ ms.openlocfilehash: 1108adb5622c3cdb7720e07a53a35957ce80cca6
       <div class="resource-list row">
           <ul class="column-half">
           <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Ge feedback för Intune-funktioner</a></li>
-          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Ge feedback för Intune-dokumentation</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/forums/291681-ideas/category/115707-documentation" target="_blank">Ge feedback för dokumentation</a></li>
           <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Nedladdningar av Intune-dokumentation</a></li>
           </ul>
           <ul class="column-half">
@@ -285,6 +285,6 @@ ms.openlocfilehash: 1108adb5622c3cdb7720e07a53a35957ce80cca6
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

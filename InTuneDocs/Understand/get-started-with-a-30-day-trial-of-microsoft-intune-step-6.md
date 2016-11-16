@@ -3,6 +3,7 @@ title: "Andra alternativ och tillägg till Intune-utvärderingsprenumerationer |
 description: "I det här avsnittet beskrivs aviseringar, meddelanden och rapporter samt allmänna Intune-funktioner som du behöver känna till när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article
@@ -13,15 +14,15 @@ ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: ae624aed9ea09467c212e0bf16fef72bfef1956d
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: ede6429d334608a326c6c2eed311df37ab9e344b
 
 
 ---
 
-# Andra alternativ och tillägg till Intune-utvärderingsprenumerationer
+# <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Andra alternativ och tillägg till Intune-utvärderingsprenumerationer
 
-## Aviseringar, meddelanden och rapporter
+## <a name="alerts-notifications-and-reports"></a>Aviseringar, meddelanden och rapporter
 I Intune-administrationskonsolen används **aviseringar** för att snabbt uppskatta den övergripande hälsan för de hanterade enheterna i din organisation. Du kan konfigurera och anpassa aviseringar så att de rapporterar och visar enbart den information som du behöver för din organisation. Du kan ange om en avisering ska vara aktiv eller inaktiv, konfigurera allvarlighetsgraden, använda tröskelvärdet för att visa hur ofta en varning avisering måste initieras innan en varning visas. Du kan även konfigurera de inställningar som är specifika för vissa typer av aviseringar.
 
 **Meddelanden** är e-post som används för att meddela administratörer (och andra användare) när vissa typer av aviseringar har utlösts.
@@ -30,7 +31,7 @@ I Intune-administrationskonsolen används **aviseringar** för att snabbt uppska
 
 Mer information om varningar, aviseringar och rapporter finns i [Övervakning och rapporter med Microsoft Intune](/Intune/Deploy-Use/monitoring-and-reports-with-microsoft-intune).
 
-## Intune-funktioner
+## <a name="intune-capabilities"></a>Intune-funktioner
 Intune har flera olika funktioner utöver de som visas i den här korta genomgången. Några exempel på dessa funktioner är:
 
 -   **Kontrollera åtkomsten till Exchange och Office 365.** Mer information finns i [Hantera appåtkomst till Exchange Online](https://technet.microsoft.com/library/dn705841.aspx) och [Hantera appåtkomst till Office 365-tjänster](https://technet.microsoft.com/library/dn818907.aspx).
@@ -49,7 +50,7 @@ Mer information om funktioner som nyligen har introducerats i Intune finns i [Ny
 
 Supportalternativen beskrivs i [Ta reda på hur du kan få support för Microsoft Intune](/Intune/Troubleshoot/how-to-get-support-for-microsoft-intune) och du kan delta i diskussioner om Intune i [Microsoft Intune-forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Gratulerar! Du har precis slutfört genomgången av *Microsoft Intune-utvärderingen*.
 
 >[!div class="step-by-step"]
@@ -58,6 +59,6 @@ Gratulerar! Du har precis slutfört genomgången av *Microsoft Intune-utvärderi
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

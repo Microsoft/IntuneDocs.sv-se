@@ -2,10 +2,10 @@
 title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Intune"
 description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN som styrs av Cisco ISE."
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 10/05/2016
+ms.date: 11/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,23 +14,23 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 625d0851446c9cf54e704a62c9afe79cac263665
-ms.openlocfilehash: 44dc8ce90537580ef30ba4b8c9f3ee2dd5e20c24
+ms.sourcegitcommit: 1dd3fde8119b54f574265c2ca9cf62cee9e77b01
+ms.openlocfilehash: bd6307cd8ff465bbce3de124ffdb444333d12efe
 
 
 ---
 
-# Använda Cisco ISE med Microsoft Intune
+# <a name="using-cisco-ise-with-microsoft-intune"></a>Använda Cisco ISE med Microsoft Intune
 Med Intune-integration i Cisco Identity Services Engine (ISE) kan du skapa nätverksprinciper i ISE-miljön med hjälp av enhetsregistrering och kompatibilitetstillstånd i Intune. Med dessa principer kan du säkerställa att åtkomsten till företagets nätverk är begränsad till enheter som hanteras av Intune och är kompatibla med Intune-principer.
 
-## Konfigurationssteg
+## <a name="configuration-steps"></a>Konfigurationssteg
 
 Om du vill aktivera den här integreringen behöver du inte göra några inställningar i Intune-klienten. Du måste ge behörighet till Cisco ISE-servern för att få åtkomst till din Intune-klient. När det är klart görs de resterande inställningarna på Cisco ISE-servern. Den här artikeln innehåller anvisningar om hur du ger ISE-servern behörighet att komma åt Intune-klienten.
 
-### Steg 1: Hantera certifikaten
+### <a name="step-1-manage-the-certificates"></a>Steg 1: Hantera certifikaten
 Exportera certifikatet från Azure Active Directory (Azure AD)-konsolen och importera den sedan till arkivet Betrodda certifikat i ISE-konsolen:
 
-#### Internet Explorer 11
+#### <a name="internet-explorer-11"></a>Internet Explorer 11
 
 
    a. Kör Internet Explorer som administratör och logga in på Azure AD-konsolen.
@@ -47,7 +47,7 @@ Exportera certifikatet från Azure Active Directory (Azure AD)-konsolen och impo
 
    g. I ISE-konsolen importerar du Intune-certifikatet (filen du exporterade) till lagringsplatsen **Betrodda certifikat**.
 
-#### Safari
+#### <a name="safari"></a>Safari
 
  a. Logga in på Azure AD-konsolen.
 
@@ -64,18 +64,19 @@ b. Välj låsikonen &gt;  **Mer information**.
 > Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
 
 
-### Skaffa ett självsignerat certifikat från ISE 
+### <a name="obtain-a-selfsigned-cert-from-ise"></a>Skaffa ett självsignerat certifikat från ISE 
 
 1.  I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
 2.       Exportera det självsignerade certifikatet.
-3. Redigera det exporterade certifikatet i en textredigerare: [kommentar]: <> Jag tycker inte att det ska vara en punkt i slutet av dessa två uttryck. Jag tror att det kan vara förvirrande.
+3. Redigera det exporterade certifikatet i en textredigerare:
+
  - Ta bort ** -----BEGIN CERTIFICATE-----**
  - Ta bort ** -----END CERTIFICATE-----**
  
 Se till att all text är på en enda rad
 
 
-### Steg 2: Skapa en app för ISE i Azure AD-klienten
+### <a name="step-2-create-an-app-for-ise-in-your-azure-ad-tenant"></a>Steg 2: Skapa en app för ISE i Azure AD-klienten
 1. I Azure AD-konsolen väljer du **Program** > **Lägg till ett program** > **Lägg till ett program som min organisation utvecklar**.
 2. Ange ett namn och en webbadress för appen. Webbadressen kan vara företagets webbplats.
 3. Hämta appmanifestet (en JSON-fil).
@@ -99,7 +100,7 @@ Se till att all text är på en enda rad
 |OAuth 2.0-token för slutpunkt|Tokenutfärdande URL|
 |Uppdatera koden med klient-ID|Klient-ID|
 
-### Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
+### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
 1.     Hämta det base64-kodade certifikatvärdet och tumavtrycket från en offentlig .cer-X509-cert-fil. Det här exemplet använder PowerShell:
    
       
@@ -136,7 +137,7 @@ Exempel:
 > KeyCredentials är en samling, så du kan överföra flera X.509-certifikat för förnyelser eller ta bort certifikat i komprometterande scenarier.
 
 
-### Steg fyra: Konfigurera ISE-inställningar
+### <a name="step-4-configure-ise-settings"></a>Steg fyra: Konfigurera ISE-inställningar
 Ange dessa inställningsvärden i ISE-administrationskonsolen:
   - **Servertyp**: Mobile Device Manager
   - **Autentiseringstyp**: OAuth – klientens autentiseringsuppgifter
@@ -147,7 +148,7 @@ Ange dessa inställningsvärden i ISE-administrationskonsolen:
 
 
 
-## Information som delas mellan Intune-klienten och Cisco ISE-servern
+## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Information som delas mellan Intune-klienten och Cisco ISE-servern
 Den här tabellen innehåller den information som delas mellan Intune-klienten och Cisco ISE-servern för enheter som hanteras av Intune.
 
 |Egenskap|  Beskrivning|
@@ -166,7 +167,7 @@ Den här tabellen innehåller den information som delas mellan Intune-klienten o
 |lastContactTimeUtc|Datum och tid när enheten senast checkade in hos Intune-hanteringstjänsten.
 
 
-## Användarupplevelse
+## <a name="user-experience"></a>Användarupplevelse
 
 När en användare försöker få åtkomst till resurser med en enhet som inte är registrerad får användaren en uppmaning att registrera sin enhet, t.ex. en sådan som visas här:
 
@@ -175,19 +176,19 @@ När en användare försöker få åtkomst till resurser med en enhet som inte �
 När en användare väljer att registrera sin enhet dirigeras användaren om till Intune-registreringsprocessen. Användarupplevelsen för registrering i Intune beskrivs i följande avsnitt:
 
 - [Registrera en Android-enhet i Intune](/intune/enduser/enroll-your-device-in-Intune-android)</br>
-- [Registrera din iOS-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
-- [Registrera din Mac OS X-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
-- [Registrera din Windows-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br>
+- [Registrera en iOS-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-ios)</br>
+- [Registrera en Mac OS X-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-mac-os-x)</br>
+- [Registrera en Windows-enhet i Intune](/intune/enduser/enroll-your-device-in-intune-windows)</br>
 
 Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistrering](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) som du kan använda för att skapa anpassad vägledning för användarupplevelsen.
 
 
-### Se även
+### <a name="see-also"></a>Se även
 
 [Administratörsguide för Cisco Identity Services Engine, version 2.1](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html#task_820C9C2A1A6647E995CA5AAB01E1CDEF)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 
