@@ -14,13 +14,13 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9a442d9472159757333a9ebe081d86eac9907cdc
-ms.openlocfilehash: d7978e558c68ad3209f1503619a9113dba126028
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 90b5a9f78a93cde7466937d0ce9dac3d83f3ff64
 
 
 ---
 
-# Configure and deploy mobile application management policies in the Microsoft Intune console
+# <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 Med hjälp av hanteringsprinciper för mobilprogram (MAM) i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper. Du kan till exempel begränsa åtgärder för att klippa ut, kopiera och klistra in inom en hanterad app eller konfigurera en app så att den öppnar alla länkar i en hanterad webbläsare.
 
 Principerna för hantering av mobilprogram har stöd för:
@@ -59,7 +59,7 @@ Om du t.ex. använder Outlook-appen:
 > [!TIP]
 > Om du använder Intune med Configuration Manager läser du [Kontrollera appar med principer för hantering av mobilprogram i Configuration Manager](https://technet.microsoft.com/library/mt131414.aspx).
 
-## Skapa och distribuera en app med en princip för hantering av mobila program
+## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>Skapa och distribuera en app med en princip för hantering av mobila program
 
 -   **Steg 1:** Hämta en länk till en principhanterad app, skapa en omsluten app eller använd Intune App SDK för att skriva en MAM-aktiverad app.
 
@@ -71,15 +71,15 @@ Om du t.ex. använder Outlook-appen:
 
 -   **Steg 5:** Övervaka appdistributionen.
 
-## Steg 1: Hämta en länk till en principhanterad app, skapa en omsluten app eller använd Intune App SDK för att skriva en MAM-aktiverad app
+## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mamenabled-app"></a>Steg 1: Hämta en länk till en principhanterad app, skapa en omsluten app eller använd Intune App SDK för att skriva en MAM-aktiverad app
 
 Gå till appbutiken och leta reda på och skriv ner webbadressen till den principhanterade app som du vill distribuera. Exempelvis är webbadressen till Microsoft Word för iPad-appen **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 
-## Steg 2: Publicera appen i ditt molnlagringsutrymme
+## <a name="step-2-publish-the-app-to-your-cloud-storage-space"></a>Steg 2: Publicera appen i ditt molnlagringsutrymme
 När du publicerar en hanterad app varierar procedurerna beroende på om du publicerar en principhanterad app eller en app som bearbetats med Microsoft Intunes programhanteringsverktyg för iOS.
 
-#### Så här publicerar du en principhanterad app
+#### <a name="to-publish-a-policy-managed-app"></a>Så här publicerar du en principhanterad app
 
 1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
@@ -93,7 +93,7 @@ När överföringen har slutförts visas **Ja** för **Apphanteringsprinciper** 
 
 När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
-#### Så här publicerar du en app som har bearbetats med Microsoft Intunes programhanteringsverktyg
+#### <a name="to-publish-an-app-that-was-processed-through-the-microsoft-intune-app-wrapping-tool"></a>Så här publicerar du en app som har bearbetats med Microsoft Intunes programhanteringsverktyg
 
 1.  När du är redo att överföra appen till molnlagringsutrymmet följer du anvisningarna i [Lägg till appar för mobila enheter i Microsoft Intune](add-apps-for-mobile-devices-in-microsoft-intune.md).
 
@@ -105,7 +105,7 @@ När överföringen har slutförts visas **Ja** för **Apphanteringsprinciper** 
 
 När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
-## Steg 3: Skapa en princip för hantering av mobila program
+## <a name="step-3-create-a-mobile-application-management-policy"></a>Steg 3: Skapa en princip för hantering av mobila program
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
@@ -142,7 +142,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
-## Steg 4: Associera appen till en hanteringsprincip för mobilprogram och distribuera sedan appen
+## <a name="step-4-associate-the-app-with-a-mobile-application-management-policy-and-then-deploy-the-app"></a>Steg 4: Associera appen till en hanteringsprincip för mobilprogram och distribuera sedan appen
 Se till att du väljer hanteringsprincipen för mobilprogram på sidan **Hantering av mobilappar** i dialogrutan **Hantera distribuering** för att associera principen med appen.
 
 Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md).
@@ -150,7 +150,7 @@ Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps.md).
 > [!IMPORTANT]
 > Om enheten har avregistrerats från Intune tas inte principerna bort från apparna. Alla appar med tillämpade principer behåller principinställningarna när de avinstalleras och installeras om.
 
-### Vad du gör om en app redan har distribuerats på enheter
+### <a name="what-to-do-when-an-app-is-already-deployed-on-devices"></a>Vad du gör om en app redan har distribuerats på enheter
 Det kan finnas situationer då du distribuerar en app och en av målanvändarna eller målenheterna redan har en ohanterad version av appen installerad. Till exempel kan användaren ha installerat Microsoft Word från App Store.
 
 I så fall måste du be användaren att manuellt avinstallera den ohanterade versionen så att det går att installera den hanterade version som du har konfigurerat.
@@ -160,10 +160,10 @@ För enheter som kör iOS 9 och senare ber Intune dock användaren om tillstånd
 > [!TIP]
 > Om enheten är i övervakat läge tar Intune över hanteringen av den befintliga appen utan att be om användarens tillstånd.
 
-## Steg 5: Övervaka appdistributionen
+## <a name="step-5-monitor-the-app-deployment"></a>Steg 5: Övervaka appdistributionen
 När du har skapat och distribuerat en app som är associerad med en princip för hantering av mobila program, kan du använda följande procedurer för att övervaka appen och lösa eventuella principkonflikter.
 
-#### Så här visar du status för distributionen
+#### <a name="to-view-the-status-of-the-deployment"></a>Så här visar du status för distributionen
 
 1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Grupper** &gt; **Översikt**.
 
@@ -181,7 +181,7 @@ När du har skapat och distribuerat en app som är associerad med en princip fö
 
 6.  När du har identifierat en konflikt kan du ändra motstridiga principinställningar till att använda samma inställning, eller så kan du distribuera endast en princip till appen och användaren.
 
-### Så här löser du principkonflikter
+### <a name="how-policy-conflicts-are-resolved"></a>Så här löser du principkonflikter
 Om det finns en konflikt i principen för hantering av mobila program under den första distributionen till användare eller enhet, kommer det specifika konfliktvärdet tas bort från principen som distribueras till appen. Appen kommer att använda ett inbyggt konfliktvärde.
 
 Om det finns en konflikt i principen för hantering av mobila program vid senare distributioner till app eller användare, kommer det specifika konfliktvärdet inte uppdateras i principen för hantering av mobila program som distribueras till appen. Appen kommer att använda det befintliga värdet för inställningen.
@@ -194,6 +194,6 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

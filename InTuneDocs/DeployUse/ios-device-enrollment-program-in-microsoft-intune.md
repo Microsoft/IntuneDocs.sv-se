@@ -2,8 +2,8 @@
 title: "Hantering med Apples DEP för iOS-enheter | Microsoft Intune"
 description: "Distribuera en registreringsprofil som registrerar iOS-enheter som har köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst) för att hantera Apple-enheter."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -14,16 +14,16 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 021c02c9a148746a76309efc819b9e28a2748c4f
-ms.openlocfilehash: b608d6353db2f37eed03d34c9216726fa7cd1cb2
+ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
+ms.openlocfilehash: 1bc39e7e91b1511ffb99e92e569df0a7153cc06f
 
 
 ---
 
-# Registrera företagsägda iOS-enheter i Enhetsregistreringsprogrammet
+# <a name="enroll-corporateowned-device-enrollment-program-ios-devices"></a>Registrera företagsägda iOS-enheter i Enhetsregistreringsprogrammet
 Microsoft Intune kan distribuera en registreringsprofil som registrerar iOS-enheter som köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst). Registreringspaketet kan innehålla installationsassistentalternativ för enheten. Enheter som har registrerats via DEP kan inte avregistreras av användarna.
 
-## Hantering med Apples DEP för iOS-enheter med Microsoft Intune
+## <a name="apple-dep-management-for-ios-devices-with-microsoft-intune"></a>Hantering med Apples DEP för iOS-enheter med Microsoft Intune
 Ett företag som vill hantera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) måste gå med i Apples program och skaffa enheter genom det. Information om den här processen finns på:  [https://deploy.apple.com](https://deploy.apple.com). Exempel på fördelar med programmet är obevakade enhetsinstallationer utan användning av en USB-kabel för att ansluta varje enhet till en dator.
 
 Innan du kan registrera företagsägda iOS-enheter med DEP behöver du en DEP-token från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till DEP och som ditt företag äger. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler.
@@ -31,12 +31,12 @@ Innan du kan registrera företagsägda iOS-enheter med DEP behöver du en DEP-to
 1.  **Börja hantera iOS-enheter med Microsoft Intune**</br>
     Du måste aktivera iOS-hantering för Intune innan du kan registrera DEP-enheter (Device Enrollment Program) för iOS.
 
-2.  **Skaffa en krypteringsnyckel**</br>
+2.  **Få en krypteringsnyckel**</br>
     Som en administratörsanvändare öppnar du [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com), går till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer **Hämta krypteringsnyckel**. Spara filen med krypteringsnyckeln (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
 
       ![Uppdatera en token för enhetsregistreringsprogrammet](../media/dev-sa-ios-dep.png)
 
-3.  **Skaffa en token för enhetsregistreringsprogrammet**</br>
+3.  **Hämta en token för enhetsregistreringsprogrammet**</br>
     Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID. Detta Apple-ID måste användas senare för att förnya din DEP-token.
 
     1.  På [DEP-portalen (Device Enrollment Program Portal)](https://deploy.apple.com) går du till **Enhetsregistreringsprogram (DEP)** &gt; **Hantera servrar** och väljer **Lägg till MDM-server**.
@@ -52,7 +52,7 @@ Innan du kan registrera företagsägda iOS-enheter med DEP behöver du en DEP-to
 4.  **Lägg till DEP-token i Intune**</br>
     I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer sedan **Ladda upp en DEP-token**. **Bläddra** till certifikatfilen (.p7m), ange ditt **Apple-ID** och välj sedan **Överför**.
 
-5.  **Lägg till principen för registrering av företagsenheter**</br>
+5.  **Lägg till princip för att registrera företagsenheter**</br>
     I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
 
     Ange **Allmän** information, inklusive **Namn** och **Beskrivning**, och ange om enheter som är tilldelade till profilen har användartillhörighet eller tillhör en grupp.
@@ -107,15 +107,15 @@ Innan du kan registrera företagsägda iOS-enheter med DEP behöver du en DEP-to
 
 8.  **Distribuera enheter till användare** Dina företagsägda enheter kan nu distribueras till användarna. När en iOS-enhet aktiveras, kommer den att registreras för hantering av Intune.
 
-## Ändringar i Intune-grupptilldelningar
+## <a name="changes-to-intune-group-assignments"></a>Ändringar i Intune-grupptilldelningar
 
 Från och med november flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för **Företagets registreringsprofil**. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil. Den här processen ser till att enheter som redan har tilldelats till en enhetsgrupp registreras automatiskt i gruppen med principer och appar distribuerade. [Läs mer om Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
 
-### Se även
+### <a name="see-also"></a>Se även
 [Förutsättningar för att registrera enheter](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

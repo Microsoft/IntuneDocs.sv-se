@@ -1,9 +1,9 @@
 ---
+
 title: Installera datorklientprogrammet | Microsoft Intune
 description: "Använd den här guiden för att låta dina Windows-datorer hanteras av Microsoft Intune-klientprogrammet."
 keywords: 
 author: NathBarn
-ms.author: nathbarn
 manager: arob98
 ms.date: 07/19/2016
 ms.topic: article
@@ -14,46 +14,50 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c880bd9dfb998355a18e78af898a96d4cee393f7
-ms.openlocfilehash: 13fa09a2b029818467062a5c589292c5f0bd0a58
+ms.sourcegitcommit: 738b6bedcefbfd8bf0fa7bde5b86c79293af527e
+ms.openlocfilehash: 7d239a80ed68d39b2a7179a45178ba6ae11c5423
 
 
 ---
 
-# Installera Intune-klientprogrammet på Windows-datorer
+# <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 Windows-datorer kan registreras genom att installera Intune-klientprogrammet. Intune-klientprogrammet kan installeras på följande sätt:
 
 - Manuell installation
 - Installation med hjälp av en grupprincip
-- Installation som en del av en diskavbildning
+- Inkluderad i en diskavbildning
 - Installation av användare
 
-## Ladda ned Intune-klientprogrammet
+Klienten för Intune-programvara som hämtas först innehåller lägsta nödvändiga programvara för att registrera datorn i Intune-hanteringen. När en dator har registrerats hämtar sedan Intune-programvaruklienten den fullständiga klientprogramvaran som behövs för datorhantering.
 
-Alla metoder, utom då användarna själva installerar Intune-klientprogrammet, kräver att du laddar ned programvaran så att du kan distribuera den.
+Den här serien med hämtningar minimerar den tid som krävs för att börja registrera datorn i Intune. Det garanterar även att klienten har den senaste tillgängliga programvaran efter att den andra hämtningen har slutförts.
+
+## <a name="download-the-intune-client-software"></a>Hämta Intune-klientprogramvaran
+
+Alla metoder, förutom då användarna själva installerar Intune-klientprogramvaran, kräver att du hämtar programvaran så att du kan distribuera den.
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) klickar du på **Administratör** &gt; **Hämtning av klientprogramvara**.
 
   ![Hämta Intune PC-klienten](../media/pc-sa-client-download.png)
 
-2.  På sidan **Hämtning av klientprogramvara** klickar du på **Hämta klientprogramvara** och sparar paketet **Microsoft_Intune_Setup.zip** som innehåller programvaran på en säker plats i nätverket.
+2.  På fliken **Hämtning av klientprogram** klickar du på **Hämta klientprogram**. Spara sedan paketet **Microsoft_Intune_Setup.zip** som innehåller programvaran på en säker plats i nätverket.
 
     > [!NOTE]
-    > Installationspaketet för Intune-klientprogramvaran innehåller information om ditt konto. Om obehöriga användare får tillgång till installationspaketet, kan de registrera datorer till kontot som representeras av dess inbäddade certifikat.
+    > Installationspaketet för Intune-klientprogramvaran innehåller information om ditt konto. Om obehöriga användare får tillgång till installationspaketet, kan de registrera datorer till kontot som representeras av dess inbäddade certifikat och kan då få tillgång till företagsresurser.
 
 3.  Extrahera innehållet i installationspaket till en säker plats i nätverket.
 
     > [!IMPORTANT]
     > Byt inte namn eller ta inte bort filen **ACCOUNTCERT** som extraheras. Om du gör det, kommer installationen av klientprogramvaran att misslyckas.
 
-## Distribuera manuellt
+## <a name="deploy-the-client-software-manually"></a>Distribuera klientprogramvaran manuellt
 
-1.  Bläddra till den mapp där installationsfilerna för klientprogramvaran finns och kör sedan **Microsoft_Intune_Setup.exe** för att installera klientprogramvaran.
+Gå till den mapp på en dator där installationsfilerna för klientprogramvaran finns. Kör sedan **Microsoft_Intune_Setup.exe** för att installera klientprogramvaran.
 
     > [!NOTE]
-    > Installationsförloppet visas när du hovrar över ikonen i verktygsfältet på klientdatorn.
+    > The status of the installation is displayed when you hover over the icon in the taskbar on the client computer.
 
-## Distribuera med hjälp av en grupprincip
+## <a name="deploy-the-client-software-by-using-group-policy"></a>Distribuera klientprogramvaran automatiskt med hjälp av en grupprincip
 
 1.  I mappen som innehåller filerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** kör du följande kommando för att extrahera Windows Installer-baserade installationsprogram för 32-bitars och 64-bitars datorer:
 
@@ -70,8 +74,8 @@ Alla metoder, utom då användarna själva installerar Intune-klientprogrammet, 
 
     Mer information om hur du använder grupprinciper för att automatiskt distribuera programvara finns i dokumentationen för Windows Server.
 
-## Installera som en del av en avbildning
-Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som bas:
+## <a name="deploy-the-client-software-as-part-of-an-image"></a>Distribuera klientprogramvaran som en del av en avbildning
+Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som vägledning:
 
 1.  Kopiera klientinstallationsfilerna **Microsoft_Intune_Setup.exe** och **MicrosoftIntune.accountcert** till mappen **%Systemdrive%\Temp\Microsoft_Intune_Setup** på referensdatorn.
 
@@ -96,32 +100,32 @@ Du kan distribuera Intune-klientprogramvaran till datorer som en del av en opera
 
 När måldatorn startar efter att installationsprogrammet för Windows slutförts, skapas registernyckeln **WindowsIntuneEnrollPending** . Registreringspaketet kontrollerar om datorn har registrerats. Om datorn har registrerats, vidtas inga ytterligare åtgärder. Om datorn inte har registrerats, skapar registreringspaketet en automatisk registreringsuppgift för Microsoft Intune.
 
-När den automatiska registreringsuppgiften körs vid nästa schemalagda tidpunkt, kontrolleras förekomsten av registervärdet **WindowsIntuneEnrollPending** och ett försök görs för att registrera måldatorn i Intune. Om registreringen misslyckas av någon anledning försöks registreringsprocessen nästa gång uppgiften körs. Återförsöken fortsätter under en period av en månad.
+När den automatiska registreringsuppgiften körs vid nästa schemalagda tidpunkt, kontrolleras förekomsten av registervärdet **WindowsIntuneEnrollPending** och ett försök görs för att registrera måldatorn i Intune. Om registreringen misslyckas av någon anledning försöks registreringsprocessen nästa gång uppgiften körs. Återförsöken fortsätter under en månad.
 
-Den automatiska registreringsuppgiften för Intune registervärdet **WindowsIntuneEnrollPending** och kontocertifikatet tas bort från måldatorn när registreringen lyckas eller efter en månad.
+Den automatiska registreringsuppgiften för Intune, registervärdet **WindowsIntuneEnrollPending** och kontocertifikatet tas bort från måldatorn antingen när registreringen lyckas eller efter en månad (beroende på vad som kommer först).
 
-## Be användaren att göra registreringen själv
+## <a name="instruct-users-to-selfenroll"></a>Be användarna att göra registreringen själv
 
-Användare kan installera Intune-klientprogrammet genom att gå till  [http://portal.manage.microsoft.com](http://portal..manage.microsoft.com). Om webbportalen kan identifiera enheten som en Windows-dator visas en uppmaning om att registrera datorn genom att ladda ned Intune-klientprogrammet. När den har laddats ned kan användare installera programvaran för att lägga till datorerna i hanteringen.
+Användare kan installera Intune-klientprogramvaran genom att gå till  [företagsportalens webbplats](http://portal.manage.microsoft.com). Om webbportalen kan identifiera enheten som en Windows-dator visas en uppmaning om att registrera datorn genom att ladda ned Intune-klientprogramvaran. När programvaran har laddats ned kan användare installera den för att lägga till datorerna i hanteringen.
 
-![På Intune-portalen visas en uppmaning om att hämta Intune-klientprogrammet](../media/software-client-download.png)
+![På Intune-portalen visas en uppmaning om att hämta Intune-klientprogramvaran](../media/software-client-download.png)
 
-## Övervaka och kontrollera lyckade klientdistributioner
+## <a name="monitor-and-validate-successful-client-deployment"></a>Övervaka och kontrollera lyckade klientdistributioner
 Använd en av följande procedurer som hjälper dig att övervaka och kontrollera lyckade klientdistributioner.
 
-### Så här kontrollerar du installationen av klientprogrammet från Microsoft Intune-administrationskonsolen
+### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Så här kontrollerar du installationen av klientprogrammet från Microsoft Intune-administrationskonsolen
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** &gt; **Alla enheter** &gt; **Alla datorer**.
 
-2.  Bläddra nedåt i listan över datorer för att hitta hanterade datorer som kommunicerar med Intune, eller sök efter en viss hanterad dator genom att skriva namnet på datorn eller någon del av namnet i rutan **Sök enheter**.
+2.  I listan letar du reda på de hanterade datorer som kommunicerar med Intune, eller söker efter en viss hanterad dator genom att skriva namnet på datorn (eller någon del av namnet) i rutan **Sök enheter**.
 
-3.  Kontrollera status för datorn längst ned i fönstret i konsolen och åtgärda eventuella fel.
+3.  Kontrollera status för datorn längst ned i fönstret i konsolen. Åtgärda eventuella fel.
 
-### Så här skapar du en datorinventeringsrapport för att visa alla datorer som har registrerats
+### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Så här skapar du en datorinventeringsrapport för att visa alla datorer som har registrerats
 
 1.  I [Microsoft Intune administrationskonsol](https://manage.microsoft.com/) klickar du på **Rapporter** &gt; **Datorinventeringsrapport**.
 
-2.  På sidan **Skapa ny rapport** lämnar du alla fält som standardvärden (om du inte vill använda filter) och klickar på **Visa rapport**.
+2.  På sidan **Skapa ny rapport** lämnar du alla fält som standardvärden (om du inte vill använda filter) och klickar sedan på **Visa rapport**.
 
 3.  Sidan **Datorinventeringsrapport** öppnas i ett nytt fönster och visar alla datorer som registrerats i Intune.
 
@@ -129,12 +133,12 @@ Använd en av följande procedurer som hjälper dig att övervaka och kontroller
     > Klicka på valfri kolumnrubrik i rapporten för att sortera listan efter innehållet i den kolumnen.
 
 
-### Se även
+### <a name="see-also"></a>Se även
 [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Felsöka klientkonfiguration](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

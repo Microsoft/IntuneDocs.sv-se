@@ -3,6 +3,7 @@ title: "Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intun
 description: "Hur du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune och vad du behöver tänka på innan du registrerar dig"
 keywords: 
 author: lindavr
+ms.author: lindavr
 manager: angrobe
 ms.date: 08/09/2016
 ms.topic: get-started-article
@@ -13,17 +14,17 @@ ms.assetid: dad88d43-0054-4be6-9e5d-ada5a957dd6c
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51fba2b01d8978bc062c50c4388714609be0fdf0
-ms.openlocfilehash: 081d396975473cd605e9619498aef78fb2d0e1dd
+ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
+ms.openlocfilehash: 0eb72fba9bd299a29c8da1b3477582fb4a0a31ab
 
 
 ---
 
-# Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intune
+# <a name="sign-up-for-a-30day-evaluation-of-microsoft-intune"></a>Registrera dig för en 30-dagars utvärderingsversion av Microsoft Intune
 
 Det går snabbt och enkelt att ställa in en kostnadsfri 30-dagars utvärderingsversion av Microsoft Intune för att hantera dina mobila enheter och datorer. Du kan lägga till upp till 100 användare och enheter med några enkla steg i utvärderingsversionen, ställa in grupper, konfigurera efterlevnadspolicyer och registrera och hantera mobila enheter och datorer. I det här avsnittet lär du dig grunderna för att få igång en utvärderingsversion av Intune och få en översikt över tjänsten så att du kan utvärdera Intunes funktioner och möjligheter.
 
-## Att överväga innan du registrerar dig
+## <a name="what-to-consider-before-you-sign-up"></a>Att överväga innan du registrerar dig
 
 Innan du antingen registrerar dig för eller loggar in på Intune, bör du tänka på följande:
 
@@ -37,7 +38,7 @@ Innan du antingen registrerar dig för eller loggar in på Intune, bör du tänk
 |-----------------------------------------------------------------|------------------------------------------------|
 |**Du har inget arbets- eller skolkonto** . Ett arbets- eller skolkonto tillhandahålls vid tecknandet av volymlicensavtal med Microsoft eller i samband med prenumerationer på Office 365. Om din organisation inte har undertecknat något företagsavtal eller motsvarande volymlicensavtal med Microsoft (och inte har något Office 365-konto) så har du inte något Microsoft Online Services-konto som du kan använda för att logga in på Microsoft Online Services.<br /><br />**Intune-innehavaren ignoreras när 30-dagars utvärderingsversionen är slut.** Du måste registrera dig för ett nytt konto om du använder din kostnadsfria Intune-utvärderingsprenumeration i utvärderingssyfte och sedan tänker göra om konfigurationen av Intune-tjänsten och enhetsetableringen när du är klar med utvärderingsversionen. Detta är det rekommenderade alternativet om du tänker använda Intune med System Center 2012 Configuration Manager.<br /><br />Om du registrerar dig för ett nytt konto kan du inte senare ändra till att använda ett befintligt arbets- eller skolkonto för att hantera det kontot, eller kombinera det med befintliga volymlicensavtal.|**Du har ett arbets- eller skolkonto med ett volymlicensavtal eller en prenumeration på Office 365, och du använder den här utvärderingsversionen för att utvärdera Intune.**<br /><br />Om du konfigurerar Intune för ett befintligt konto rekommenderar vi att du läser [Välj hur du hanterar enheter](/intune/get-started/choose-how-to-manage-devices) innan du fortsätter med de här stegen.|
 
-## Registrering eller inloggning på Intune
+## <a name="sign-up-or-sign-in-to-intune"></a>Registrering eller inloggning på Intune
 
 1.  Börja med att [klicka här, så kommer du till registreringssidan för Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
@@ -52,7 +53,7 @@ Innan du antingen registrerar dig för eller loggar in på Intune, bör du tänk
 
 När du har fyllt i registreringsformuläret och har accepterat prenumerationsavtalet för Microsoft Online loggas du in automatiskt på Office 365-administrationscentret med innehavaradministratörens konto. Ett e-postmeddelande som innehåller din kontoinformation skickas även till den e-postadress som du angav under registreringen. Detta e-postmeddelande bekräftar att din prenumeration är aktiv.
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Gratulerar! Du har precis slutfört steg 1 i genomgången av *Microsoft Intune-utvärderingen*.
 
 >[!div class="step-by-step"]
@@ -61,6 +62,6 @@ Gratulerar! Du har precis slutfört steg 1 i genomgången av *Microsoft Intune-u
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

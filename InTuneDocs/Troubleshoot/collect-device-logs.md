@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 10/18/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: d97fb610-9d88-40e5-bb06-447eec533630
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a081109cd499d3bdda75cb6c8a4dab9d9d28fab
-ms.openlocfilehash: ec7d522e8dcff66d1b84fed3c4c0cc708e555e67
+ms.sourcegitcommit: 19b0b502d2c8c261947c461f27a0e8153df5b186
+ms.openlocfilehash: 1e65c1fa25e273ba03218f79ebeff611138e8013
 
 
 ---
@@ -24,14 +24,24 @@ ms.openlocfilehash: ec7d522e8dcff66d1b84fed3c4c0cc708e555e67
 
 Som en del av ditt arbete med felsökning kanske du vill samla in loggar från användarenheter. Anvisningar om att samla in dessa loggar finns här. Vanligtvis kan du behöva åtkomst till enheten eller en begäran från användaren om att personen samlar in loggarna och skickar dem till dig.
 
-### <a name="android-log-location"></a>Plats för Android-loggar
-Android-loggar finns i *<Android Device>\Phone\Android\data\com.microsoft.windowsintune.companyportal\files*. Användaren kan även skicka loggfiler via e-post, enligt beskrivningen i [Skicka loggar med Android-diagnostikdata till IT-administratören via e-post](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android).
+### <a name="android-logs"></a>Android-loggar
+Android-loggar finns i *<Android Device>\Phone\Android\data\com.microsoft.windowsintune.companyportal\files*. 
+
+Ibland visas filerna inte, särskilt på nyare Android-enheter. Om detta händer, be dina slutanvändare att öppna företagsportalappen för Android och gå till **Inställningar**, välja **Kopiera loggar**, och sedan starta om enheten. 
+
+Mer information om hur dina användare kan skicka dataloggar till dig finns i följande artiklar:
+
+- [Use Verbose Logging to help your IT admin fix device issues](/intune/enduser/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) (Använd utförlig loggning för att hjälpa din IT-administratör att åtgärda problem med enheter) – Beskriver hur användare aktiverar utförlig loggning som gör att alla dataloggar skickas till dig automatiskt. Utförlig loggning är aktiverat som standard.
+
+- [Send Android diagnostic data logs to your IT admin using email](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android) (Skicka loggar med diagnostikdata för Android till din IT-administratör med e-post) 
+
+- [Skicka loggar med diagnostikdata till din IT-administratör via USB-kabel](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 
 ### <a name="ios-logs"></a>iOS-loggar
 
-Användaren kan skicka registreringsfelen till dig enligt beskrivningen i [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios)
+Användare kan skicka registreringsfelen till dig enligt beskrivningen i [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios).
 
-### <a name="mac-os-x-devices"></a>Mac OS X-enheter
+### <a name="mac-os-x-logs"></a>Mac OS X-loggar
 
 1. Öppna appen **Konsol**.
 2. Välj **system.log** under **FILER** .
@@ -39,7 +49,7 @@ Användaren kan skicka registreringsfelen till dig enligt beskrivningen i [Skick
 
 ### <a name="windows-phone"></a>Windows Phone
 
-I den **Företagsportalen för Windows Phone** måste användaren välja **...** för att komma åt menyn, och sedan välja **Skicka loggar**. Det här alternativet är tillgängligt både före och efter inloggning till portalen.
+I Windows Phone-företagsportalappen väljer användarna **...** för att komma åt menyn, och sedan välja **Skicka loggar**. Det här alternativet är tillgängligt både före och efter inloggning till företagsportalappen.
 
 ### <a name="windows"></a>Windows
 
@@ -47,6 +57,6 @@ Loggarna för Windows-företagsportalen finns i *%localappdata%\Packages\Microso
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
