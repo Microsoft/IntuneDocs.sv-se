@@ -2,9 +2,10 @@
 title: "Konfigurera certifikatinfrastrukturen för PFX | Microsoft Intune"
 description: Skapa och distribuera .PFX-certifikatprofiler.
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 11/17/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c4ce620e073608f6bcbfc9d698255dd75deae4be
-ms.openlocfilehash: 3d50aa40b6c3e8aa34c5699a0c53befce9549055
+ms.sourcegitcommit: 7d1f37a2ba2e634fb75058d33eaaccf3aa5845b0
+ms.openlocfilehash: 8fc1cc718fd0edae8b8ec4a0a8dc25487eafda2b
 
 
 
 ---
-# Konfigurera infrastrukturen för certifikat
+# <a name="configure-certificate-infrastructure"></a>Konfigurera infrastrukturen för certifikat
 Det här avsnittet beskriver vad du behöver för att skapa och distribuera .PFX-certifikatprofiler.
 
 Om du vill utföra certifikatbaserad autentisering i organisationen måste du ha en utfärdare av företagscertifikat.
@@ -30,7 +31,7 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
 
 -  Intunes certifikat Connector, som körs på datorn som kan kommunicera med certifikatutfärdaren.
 
-## Beskrivning av lokal infrastruktur
+## <a name="onpremises-infrastructure-description"></a>Beskrivning av lokal infrastruktur
 
 
 -    **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
@@ -50,7 +51,7 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
     Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
-### Certifikat och mallar
+### <a name="certificates-and-templates"></a>Certifikat och mallar
 
 |Objekt|Information|
 |----------|-----------|
@@ -58,16 +59,16 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
 |**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta som en **CER** -fil från den utfärdande certifikatutfärdare eller en enhet som litar på certifikatutfärdaren och distribuerar den till enheter med hjälp av certifikatprofilen för den betrodda certifikatutfärdaren.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
 
-## Konfigurera infrastrukturen
+## <a name="configure-your-infrastructure"></a>Konfigurera infrastrukturen
 Innan du kan konfigurera certifikatprofiler måste du slutföra följande uppgifter. Dessa uppgifter kräver kunskaper om Windows Server 2012 R2 och Active Directory Certificate Services (ADCS):
 
 - **Uppgift 1** – Konfigurera certifikatmallar på certifikatutfärdaren.
 - **Uppgift 2** – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen.
 
-### Uppgift 1 – konfigurera certifikatmallar på certifikatutfärdaren
+### <a name="task-1-configure-certificate-templates-on-the-certification-authority"></a>Uppgift 1 – konfigurera certifikatmallar på certifikatutfärdaren
 I det här steget kommer du att publicera certifikatmallen.
 
-##### Så här konfigurerar du certifikatutfärdaren
+##### <a name="to-configure-the-certification-authority"></a>Så här konfigurerar du certifikatutfärdaren
 
 1.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatmallar och skapar en ny anpassad mall eller kopierar och redigerar en befintlig mall (t.ex. mallen Användare) för användning med .PFX.
 
@@ -75,7 +76,7 @@ I det här steget kommer du att publicera certifikatmallen.
 
     -   Ange ett eget **visningsnamn för mallen** .
 
-    -   På fliken **Ämnesnamn** väljer du **Anges i begäran**. (Säkerhet tvingas av Intune-principmodulen för NDES).
+    -   På fliken **Ämnesnamn** väljer du **Anges i begäran**. 
 
     -   På fliken **Tillägg** kontrollerar du att **beskrivningen av användningsprinciper** omfattar **Klientautentisering**.
 
@@ -97,18 +98,18 @@ I det här steget kommer du att publicera certifikatmallen.
 
 3.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatutfärdaren för att publicera certifikatmallen.
 
-    a.  Välj noden **Certifikatmallar**, klicka på **Åtgärd**-&gt; **Ny** &gt; **Certifikatmall som ska utfärdas**, och välj sedan den mall som du skapade i steg 2.
+    a.  Välj noden **Certifikatmallar**, klicka på **Åtgärd**-&gt; **Ny** &gt; **Certifikatmall som ska utfärdas** och välj sedan den mall som du skapade i steg 2.
 
     b.  Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
 4.  På certifikatutfärdardatorn ser du till att den dator som har Intunes certifikatanslutningsapp har registreringsrättigheter, så att den kommer åt den mall som användes för att skapa .PFX-profilen. Ställ in behörighet på **säkerhetsfliken** i datoregenskaper för Certifikatutfärdar-datorn.
 
-### Uppgift 2 – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen
+### <a name="task-2-enable-install-and-configure-the-intune-certificate-connector"></a>Uppgift 2 – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen
 I det här steget kommer du att:
 
 Hämta, installera och konfigurera certifikatanslutningsappen.
 
-##### Så här aktiverar du stöd för Certifikat Connectorn
+##### <a name="to-enable-support-for-the-certificate-connector"></a>Så här aktiverar du stöd för Certifikat Connectorn
 
 1.  Öppna [Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Admin** &gt; **Certifikatanslutningsapp**.
 
@@ -116,7 +117,7 @@ Hämta, installera och konfigurera certifikatanslutningsappen.
 
 3.  Markera **Aktivera certifikatanslutningsapp** och välj sedan **OK**.
 
-##### Så här laddar du ned, installerar och konfigurerar certifikatanslutningsappen
+##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här laddar du ned, installerar och konfigurerar certifikatanslutningsappen
 
 1.  Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och välj sedan **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
 
@@ -141,8 +142,6 @@ Hämta, installera och konfigurera certifikatanslutningsappen.
 
     a. Välj **Logga in** och ange dina autentiseringsuppgifter som tjänstadministratör i Intune eller för en klientadministratör med behörighet för global administration.
 
-  <!--  If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, click **Use proxy server** and then provide the proxy server name, port, and account credentials to connect.-->
-
     b. Välj fliken **Avancerat** och ange autentiseringsuppgifter för ett konto som har behörigheten **Utfärda och hantera certifikat** på den utfärdande certifikatutfärdaren.
 
     c. Välj **Använd**.
@@ -151,15 +150,12 @@ Hämta, installera och konfigurera certifikatanslutningsappen.
 
 6.  Öppna en kommandotolk och skriv **services.msc**. Tryck på **Retur**, högerklicka på **Intune-anslutningstjänsten** och välj **Starta om**.
 
-Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följande URL, vilket borde returnera ett **403** -fel:
 
-**http:// &lt;FQDN_of_your_NDES_server&gt;/certsrv/mscep/mscep.dll**
-
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
