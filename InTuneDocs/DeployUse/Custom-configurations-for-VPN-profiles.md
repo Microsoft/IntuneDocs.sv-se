@@ -2,9 +2,10 @@
 title: "Anpassade konfigurationer för VPN-profiler | Microsoft Intune"
 description: "Använd anpassade konfigurationer för att skapa VPN-profiler i Intune."
 keywords: 
-author: Nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,18 +14,26 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 374a56612b5c2a4dfd65d920307d5a4deb709b9b
-ms.openlocfilehash: e96daf7f10db82adf0f4f92412128fabbe652d51
+ms.sourcegitcommit: fb3b6cccaa3e62be3a7271ae6a67e76f8cf8d858
+ms.openlocfilehash: a1c7648a4ee4ab91e00f5305a8124a07570824fc
 
 
 ---
 
-# Anpassade konfigurationer för VPN-profiler
+# <a name="custom-configurations-for-vpn-profiles"></a>Anpassade konfigurationer för VPN-profiler
 
-## Skapa en anpassad konfiguration
-Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune. Skapa en anpassad konfiguration:
+## <a name="create-a-custom-configuration"></a>Skapa en anpassad konfiguration
+Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune för:
 
-   1. Gå till Intune-administratörskonsolen och välj **Princip** > **Lägg till princip** > *<Expand platform>* > **Anpassad konfiguration** > **Skapa princip**.
+* Enheter som kör Android 4 och senare
+* Android for Work-enheter
+* Registrerade enheter som kör Windows 8.1 och senare
+* Enheter som kör Windows Phone 8.1 och senare
+* Enheter som kör Windows 10 Desktop och Mobile
+
+Skapa en anpassad konfiguration:
+
+   1. I Intune-administrationskonsolen klickar du på **Princip** > **Lägg till princip** > *Expandera plattform* > **Anpassad konfiguration** > **Skapa princip**.
    2. Ange ett namn för principen.
    3. För varje URI-inställning väljer du **Lägg till** och anger önskad information. Här är ett exempel:
 
@@ -32,7 +41,7 @@ Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune. 
 
    4.  När du har angett alla URI-inställningar väljer du **Spara princip** och distribuerar sedan principen.
 
-## Distribuera en konfigurationsprincip
+## <a name="deploy-a-configuration-policy"></a>Distribuera en konfigurationsprincip
 
 1.  På arbetsytan **Princip** väljer du den princip som du vill distribuera och klickar sedan på **Hantera distribution**.
 
@@ -44,7 +53,7 @@ Du kan använda anpassade konfigurationer för att skapa VPN-profiler i Intune. 
 
 När du väljer en distribuerad princip visas ytterligare information om distributionen i den nedre delen av principlistan.
 
-##Exempel på URI-inställningar för en anpassad konfiguration av VPN-profil
+##<a name="example-of-uri-settings-for-a-custom-vpn-profile-configuration"></a>Exempel på URI-inställningar för en anpassad konfiguration av VPN-profil
 Följande är exempelposter för URI-värden för att skapa en anpassad konfiguration för VPN i det fiktiva företaget Contoso. Mer information, t.ex. om datatypen för varje post, finns i [VPNv2 CSP](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
 
 Native Contoso VPN (IKEv2): ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Servers
@@ -85,10 +94,10 @@ Eap ./Vendor/MSFT/VPNv2/ContosoVPN/NativeProfile/Authentication/Eap/Configuratio
 
 Kunder som har frågor om hur dessa inställningar ska användas eller som vill veta mer om vad inställningarna gör, kan läsa CSP-dokumentationen (Configuration Service Provider): https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776(v=vs.85).aspx.
 
-## URI-inställningar för Android per-app-VPN på PulseSecure
-### ANPASSAD URI FÖR PAKETLISTA
+## <a name="uri-settings-for-android-perapp-vpn-on-pulsesecure"></a>URI-inställningar för Android per-app-VPN på PulseSecure
+### <a name="custom-uri-for-package-list"></a>ANPASSAD URI FÖR PAKETLISTA
 -  Datatyp = Sträng
--  OMA-URI = ./Vendor/MSFT/VPN/Profile/<Name>/PackageList
+-  OMA-URI = ./Vendor/MSFT/VPN/Profile/Name/PackageList
 -  Värde = Paketlista avskild med avgränsare.
    - Avgränsare: semikolon (;), kolon (:), kommatecken (,), lodstreck (|)
 
@@ -96,7 +105,7 @@ Exempel:
 - com.android.chrome
 - com.android.chrome;com.android.browser
 
-### ANPASSAD URI FÖR LÄGE (VALFRITT)
+### <a name="custom-uri-for-mode-optional"></a>ANPASSAD URI FÖR LÄGE (VALFRITT)
 - Datatyp = Sträng
 - OMA-URI = ./Vendor/MSFT/VPN/Profile/NAME/Mode
 
@@ -107,11 +116,11 @@ Exempel:
 > - Anges som standard som *WHITELIST* om en PackageList anges
 
 
-### Se även
+### <a name="see-also"></a>Se även
 (VPN-anslutningar i Microsoft Intune)[vpn-connections-in-microsoft-intune.md]
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

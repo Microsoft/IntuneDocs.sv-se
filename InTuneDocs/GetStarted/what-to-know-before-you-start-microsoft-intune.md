@@ -1,10 +1,11 @@
 ---
 title: "Vad du behöver veta innan du startar Microsoft Intune | Microsoft Intune"
-description: "Sida med länkar till krav och förutsättningar för Intune"
+description: "Länkar till krav och förutsättningar för Intune"
 keywords: 
-author: barlanmsft
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,23 +14,23 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0c1e08cc49d75303f6793894e3c8a040f6e7a8b1
-ms.openlocfilehash: d236a084caa3f82cb22d1f47583f1a0417e86d81
+ms.sourcegitcommit: 1ed86339103f165092776ec94b50c5a02d054236
+ms.openlocfilehash: 7a5ff0f021b487f4586ca3199c6db2cb0ada3930
 
 
 ---
 
-# Vad du behöver veta innan du startar Microsoft Intune
+# <a name="what-to-know-before-you-start-microsoft-intune"></a>Vad du behöver veta innan du startar Microsoft Intune
 
-Innan du börjar konfigurera Microsoft Intune granskar du varje enskilt krav:
+Innan du börjar konfigurera Microsoft Intune, bör du granska följande krav:
 
 - [Mobila enheter och datorer som stöds](supported-mobile-devices-and-computers.md)
 - [Webbläsare som stöds av Intune](supported-web-browsers.md)
 - [Krav på nätverksinfrastruktur för Microsoft Intune](network-infrastructure-requirements-for-microsoft-intune.md)
-- [Administrativa konton, webbplatser och behörigheter i Microsoft Intune](administrative-accounts-websites-perms.md)
-- [Microsoft Intune-företagsportal](microsoft-intune-company-portal.md)
-- [Intune-integration med Microsofts molntjänster och produkter](integration-with-cloud-services.md)
-- [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md)
+- [Administrativa konton, webbsidor och behörigheter i Microsoft Intune](administrative-accounts-websites-perms.md)
+- [Microsoft Intune-företagsportalen](microsoft-intune-company-portal.md)
+- [Intune integration med Microsoft-molntjänster och produkter](integration-with-cloud-services.md)
+- [Intunes användning av nätverksbandbredd](network-bandwidth-use.md)
 - [Anpassade domännamn med Microsoft Intune](domain-names-for-microsoft-intune.md)
 
 
@@ -37,6 +38,6 @@ Innan du använder Intune kan du också läsa [Funktioner för hantering av mobi
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

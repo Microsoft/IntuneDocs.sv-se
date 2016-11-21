@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,25 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e24de6814d9e01c64768f425e961a7822f4b27a1
-ms.openlocfilehash: 5f02618da6fb3c538ad131fe8abaf35a6be6e177
+ms.sourcegitcommit: 8cde3ffb3be8656d5f256e16eb71ed4aaa7ceb5b
+ms.openlocfilehash: 2fd4d3c7cb92e27a01090fdec85e02db4010f859
 
 
 ---
 
 
-# Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
+# <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
 
-Principinställningarna som beskrivs i det här avsnittet gäller enheter som kör Android 4.0 och senare eller Samsung KNOX 4.0 och senare.
+Principinställningarna som beskrivs i det här avsnittet gäller enheter som kör Android 4.0 och senare eller Samsung KNOX 4.0 Standard och senare.
 
 Om du letar efter information om andra plattformar väljer du något av följande:
-> [!div class="op_single_selector"]
-- [Inställningar för efterlevnadsprinciper för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för policy för efterlevnad för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
+> [!div class = "op_single_selector"]
+- [Kompatibilitetsprincipinställlningar för Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
-## Systemsäkerhetsinställningar
-### Lösenord
+## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+### <a name="password"></a>Lösenord
 - **Kräv lösenord för att låsa upp mobila enheter**: Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 
 -  **Minsta längd på lösenord**: Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
@@ -43,7 +44,7 @@ Om du letar efter information om andra plattformar väljer du något av följand
   -   **Minst numeriskt**
   -   **Minst alfabetiskt**
   -   **Minst alfanumeriskt**
-  -   **Alfanumeriskt med symboler **
+  -   **Alfanumeriskt med symboler**
 
 - **Minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
 
@@ -55,10 +56,10 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 - **Kräv lösenord när enheten lämnar inaktivt läge**: Använd den här inställningen tillsammans med inställningen **Minuter av inaktivitet innan lösenord måste anges**. Användaren uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i inställningen **Minuter av inaktivitet innan lösenord måste anges**.
 
-### Kryptering
+### <a name="encryption"></a>Kryptering
 - **Kräv kryptering på den mobila enheten**: Välj **Ja** för den här inställningen om du vill kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
 
-## Inställningar för enhetens för hälsotillstånd och säkerhet
+## <a name="device-health-and-security-settings"></a>Inställningar för enhetens för hälsotillstånd och säkerhet
 
 - **Enheten får inte vara jailbrokad eller rotad**: Om du aktiverar den här inställningen kommer jailbrokade enheter att utvärderas som inkompatibla.
 - **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)**: Om du vill blockera enheter som har aktiverat **Säkerhet** > **Okända källor** på enheten aktiverar du och väljer **Ja** för inställningen.  
@@ -77,7 +78,7 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
   Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](enable-device-threat-protection-rule-in-compliance-policy.md) för mer information.
 
-## Inställningar för enhetsegenskaper
+## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 - **Lägsta operativsystemversion som krävs:** När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel.
   En länk med information om hur du uppgraderar visas. Användaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 
@@ -85,6 +86,6 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
