@@ -2,7 +2,8 @@
 title: "Registrera företagsägda iOS-enheter | Microsoft Intune"
 description: "Registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) eller Apple Configurator"
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 09/07/2016
 ms.topic: article
@@ -13,20 +14,20 @@ ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bee93334e7b868ef6c827fba9efc3318c8419527
-ms.openlocfilehash: b295ee11d566fbfbe84513c045f3a76dfd51cda4
+ms.sourcegitcommit: 00ca6ea06aa63646d6ede6337f8e70d1ab956c5f
+ms.openlocfilehash: cfc97f4ed931a5c7dc5b38eafd0a2d081bc30975
 
 
 ---
 
-# Registrera företagsägda iOS-enheter i Microsoft Intune
+# <a name="enroll-corporate-owned-ios-devices-in-microsoft-intune"></a>Registrera företagsägda iOS-enheter i Microsoft Intune
 Microsoft Intune stöder registrering av företagsägda iOS-enheter med hjälp av Apples enhetsregistreringsprogram (DEP) eller verktyget [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator.
 
 **Krav:** Ett [certifikat för Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md) krävs.
 
 Du kan registrera företagsregistrerade iOS-enheter på tre sätt: via Apple Configurator, DEP eller företagsportalen.
 
-## Använd Apple Configurator
+## <a name="use-apple-configurator"></a>Använd Apple Configurator
 
 Du kan registrera iOS-enheter genom att exportera en företagsregistreringsprofil och sedan ansluta de mobila enheterna till en Mac som kör Apple Configurator. Apple Configurator stöder två typer av registrering:
 
@@ -34,10 +35,10 @@ Du kan registrera iOS-enheter genom att exportera en företagsregistreringsprofi
 
 - **Direktregistrering**: Skapar en Apple Configurator-kompatibel fil som används vid förberedelse av enheten. Den registrerade enheten är inte fabriksåterställd, men den har ingen anknytning till användaren. Den här metoden kräver att administratören ansluter iOS-enheten via USB till en Mac-dator som kör [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) för att registrera enheten. Mer information finns i [Registrera iOS-enheter som använder direktregistrering i Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
-## Använd enhetsregistreringsprogrammet (DEP)
+## <a name="use-the-device-enrollment-program-dep"></a>Använd enhetsregistreringsprogrammet (DEP)
 DEP distribuerar en registreringsprofil trådlöst till enheter som köpts via DEP. Enheten registreras i Intune när användaren kör installationsassistenten på enheten.  Enheter som har registrerats via DEP kan inte avregistreras av användarna. Mer information finns i [Registrera iOS-enheter med enhetsregistreringsprogrammet](ios-device-enrollment-program-in-microsoft-intune.md).
 
-## Använda företagsportalen på enheter som registrerats med enhetsregistreringsprogrammet eller Apple Configurator
+## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Använda företagsportalen på enheter som registrerats med enhetsregistreringsprogrammet eller Apple Configurator
 
 Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ett antal ytterligare steg för att slutföra installationen och installera företagsportalsappen.
 
@@ -67,7 +68,7 @@ Användartillhörighet krävs för att ge stöd åt följande:
 
 8. Registreringen är slutförd. Användaren kan nu använda den här enheten med fullständiga funktioner.
 
-### Om företagsägda hanterade enheter som saknar användartillhörighet
+### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>Om företagsägda hanterade enheter som saknar användartillhörighet
 
 Det går inte att använda företagsportalen i enheter som har konfigurerats utan användartillhörighet. Appen ska därför inte installeras på dessa. Företagsportalen är avsedd för användare som har företagsautentiseringsuppgifter och behöver åtkomst till anpassade företagsresurser (t.ex. e-post). Enheter som har registrerats utan användartillhörighet är inte avsedda för dedikerad användarinloggning. Informationsenheter, POS-enheter (Point Of Sale) och enheter med delade verktyg är typiska exempel på enheter som registrerats utan användartillhörighet.
 
@@ -75,11 +76,11 @@ Om användartillhörighet krävs måste du välja **Användartillhörighet** fö
 
 
 
-### Se även
-[Dags att registrera enheter i Microsoft Intune](get-ready-to-enroll-devices-in-microsoft-intune.md)
+### <a name="see-also"></a>Se även
+[Krav för att registrera enheter i Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af4c84d0e317f5903d22cdfead9ce0ab4fbddc8f
-ms.openlocfilehash: 602be42b75c091cb43359f30256d51eabe597008
+ms.sourcegitcommit: 07f18c0011624f760f4d1db05cf954551dee3a85
+ms.openlocfilehash: d63f62011acaad154790b88f710eb4eda4fb261b
 
 
 ---
 
-# Begränsa åtkomsten för e-post till Exchange Online och nya Exchange Online Dedicated med Microsoft Intune
+# <a name="restrict-email-access-to-exchange-online-and-new-exchange-online-dedicated-with-intune"></a>Begränsa åtkomsten för e-post till Exchange Online och nya Exchange Online Dedicated med Microsoft Intune
 
 Om du har en Exchange Online Dedicated-miljö och vill veta om den har den nya eller gamla konfigurationen kontaktar du din kontoansvariga.
 
@@ -62,12 +62,14 @@ Diagrammet nedan illustrerar flödet som används av principerna för villkorlig
 
 ![Diagram som visar beslutspunkter som avgör om enheten beviljas åtkomst eller blockeras](../media/ConditionalAccess8-1.png)
 
-## Stöd för mobila enheter
+## <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 Du kan begränsa åtkomsten till Exchange Online-e-post från **Outlook** och andra **appar som använder modern autentisering**:
 
 - Android 4.0 och senare, Samsung Knox Standard 4.0 och senare samt Android for Work
 - iOS 8.0 och senare
 - Windows Phone 8.1 och senare
+
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Med **modern autentisering** kan Microsoft Office-klienter använda ADAL-baserad (Active Directory Authentication Library) inloggning.
 
@@ -79,7 +81,7 @@ Du kan begränsa åtkomst till **Outlook Web Access (OWA)** i Exchange Online vi
 
 * Safari (iOS)
 * Chrome (Android)
-* Hanterad webbläsare (iOS och Android)
+* Managed Browser (iOS och Android 5.0 och senare)
 
 **Webbläsare som inte stöds blockeras**.
 
@@ -94,7 +96,7 @@ Du kan begränsa åtkomsten till Exchange-e-post från den inbyggda **Exchange A
 
 - Windows Phone 8.1 och senare
 
-## Stöd för datorer
+## <a name="support-for-pcs"></a>Stöd för datorer
 
 Du kan konfigurera villkorlig åtkomst för datorer som kör Office-datorprogram om du vill komma åt **Exchange Online** och **SharePoint Online** för datorer som uppfyller följande krav:
 
@@ -118,15 +120,15 @@ Du kan konfigurera villkorlig åtkomst för datorer som kör Office-datorprogram
 
 -   Konfigurera ADFS-anspråksregler och blockera protokoll som inte stöder modern autentisering. Detaljerade anvisningar finns i scenario 3 – [blockera all åtkomst till O365 utom webbläsarbaserade program](https://technet.microsoft.com/library/dn592182.aspx).
 
-## Konfigurera villkorlig åtkomst
-### Steg 1: Konfigurera och distribuera en efterlevnadsprincip
+## <a name="configure-conditional-access"></a>Konfigurera villkorlig åtkomst
+### <a name="step-1-configure-and-deploy-a-compliance-policy"></a>Steg 1: Konfigurera och distribuera en efterlevnadsprincip
 Se till att du [skapar](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuerar](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip till de användargrupper som även ska omfattas av principen för villkorlig åtkomst.
 
 
 > [!IMPORTANT]
 > Om du inte har distribuerat någon efterlevnadsprincip betraktas enheterna som kompatibla och beviljas åtkomst till Exchange.
 
-### Steg 2: Utvärdera effekten av principen för villkorlig åtkomst
+### <a name="step-2-evaluate-the-effect-of-the-conditional-access-policy"></a>Steg 2: Utvärdera effekten av principen för villkorlig åtkomst
 Du kan använda **inventeringsrapporterna för mobila enheter** för att identifiera enheter som kan hindras från att komma åt Exchange när du har konfigurerat principen för villkorlig åtkomst.
 
 Om du vill göra det konfigurerar du en anslutning mellan [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och Exchange med hjälp av [Microsoft Intunes tjänst-till-tjänst-anslutning](intune-service-to-service-exchange-connector.md).
@@ -161,7 +163,7 @@ Enheter som är en del av en målgrupp kommer att blockeras från att komma åt 
 ----------------------
 Du kan exportera innehållet i rapporten och använda kolumnen **E-postadress** för att meddela användarna att de kommer att blockeras.
 
-### Steg 3: Konfigurera användargrupper för principen för villkorlig åtkomst
+### <a name="step-3-configure-user-groups-for-the-conditional-access-policy"></a>Steg 3: Konfigurera användargrupper för principen för villkorlig åtkomst
 Principer för villkorlig åtkomst är avsedda för olika Azure Active Directory-säkerhetsgrupper med användare. Du kan också undanta vissa användargrupper från den här principen.  När en användare är angiven som mål för en policy, måste varje enhet de använder vara kompatibla för att få åtkomst till email.
 
 Du kan konfigurera dessa grupper i **Office 365 admin center**, eller **Intune kontoportal**.
@@ -176,14 +178,14 @@ Om en användare finns i båda grupperna, kommer de att vara befriade från poli
 
 Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas.
 
-### Steg 4: Konfigurera principen för villkorlig åtkomst
+### <a name="step-4-configure-the-conditional-access-policy"></a>Steg 4: Konfigurera principen för villkorlig åtkomst
 
 >[!NOTE]
 > Du kan även skapa principer för villkorlig åtkomst i Azure AD-hanteringskonsolen. Azure AD-hanteringskonsolen låter dig skapa principer för villkorlig åtkomst för Intune-enheter (kallas för **device-based conditional access policy** (enhetsbaserad princip för villkorlig åtkomst) i Azure AD) utöver andra principer för villkorlig åtkomst som multifaktorautentisering.  Du kan även ange principer för villkorlig åtkomst för tredje parts företagsappar som Salesforce och Box som Azure AD stöder. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Så ställer du in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
 
 
 1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Exchange Online-princip**.
-![Skärmbild av sidan för principer för villkorlig åtkomst för Exchange Online](../media/mdm-ca-exo-policy-configuration.png)
+
 
 2.  På **Exchange Online policy** sidan, välj **Aktivera villkorlig åtkomstpolicy för Exchange Online**.
 
@@ -214,11 +216,11 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
   3.    Tryck på knappen **Aktivera webbläsaråtkomst**.
   4.    I webbläsaren Chrome loggar du ut från Office 365 och startar om Chrome.
 
-  På **iOS- och Android**-plattformar kommer för Azure Active Directory att utfärda ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten.  Enheten visar certifikatet med en uppmaning till slutanvändaren om att markera certifikatet på det sätt som visas i skärmbilderna nedan. Slutanvändaren måste välja detta certifikat innan det går att fortsätta med att använda webbläsaren.
+  På **iOS- och Android**-plattformar kommer för Azure Active Directory att utfärda ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten.  Enheten visar certifikatet med en uppmaning till slutanvändaren om att markera certifikatet på det sätt som visas i skärmbilderna nedan. Användarna måste välja det här certifikatet innan de kan fortsätta att använda webbläsaren.
 
   **iOS**
 
-  ![skärmbild av certifikatuppmaning på en ipad](../media/mdm-browser-ca-ios-cert-prompt.png)
+  ![skärmbild av certifikatfråga på en iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
   **Android**
 
@@ -227,7 +229,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 5.  Under **Exchange ActiveSync-appar** kan du välja att hindra icke-kompatibla enheter från att komma åt Exchange Online. Du kan också välja om du vill tillåta eller blockera åtkomst till e-post om enheten inte kör en plattform som stöds. Exempel på plattformar som stöds är Android, iOS, Windows och Windows Phone.
 
  Exchange Active Sync-appar **Android for Work**-enheter:
- -  Endast **Gmail** och **Nine Work**-appar i **arbetsprofilen** stöds på Android for Work-enheter. För villkorlig åtkomst till arbete på Android for Work-enheter måste du distribuera en e-postprofil för Gmail eller Nine Work-appen och distribuera den som en **nödvändig** installation. 
+ -  Endast **Gmail** och **Nine Work**-appar i **arbetsprofilen** stöds på Android for Work-enheter. För villkorlig åtkomst till arbete på Android for Work-enheter måste du distribuera en e-postprofil för Gmail eller Nine Work-appen och distribuera den som en **nödvändig** installation.
 
 6.  Under **Målgrupper**, välja aktiva säkerhetsgrupper av användare för vilka policyn kommer att gälla. Du kan välja att tillämpa principen på alla användare eller en vald lista med användargrupper.
 ![Skärmbild av sidan för Exchange Online-principer för villkorlig åtkomst med alternativen Målgrupper och Undantagna grupper](../media/IntuneSA5eTargetedExemptedGroups.PNG)
@@ -251,22 +253,22 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 -   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka 6 timmar.
 
-**Några exempelscenarier på hur du konfigurerar principer för villkorlig åtkomst för att begränsa enhetsåtkomsten finns i [exempelscenarier för att begränsa e-poståtkomst](restrict-email-access-example-scenarios.md).**
+**Några exempelscenarier som beskriver hur du konfigurerar principer för villkorlig åtkomst för att begränsa enhetsåtkomsten finns i [exempelscenarier för att begränsa e-poståtkomst](restrict-email-access-example-scenarios.md).**
 
-## Övervaka efterlevnaden och villkorlig åtkomstpolicy
+## <a name="monitor-the-compliance-and-conditional-access-policies"></a>Övervaka efterlevnaden och villkorlig åtkomstpolicy
 
-#### För att visa enheter som är blockerade från Exchange
+#### <a name="to-view-devices-that-are-blocked-from-exchange"></a>För att visa enheter som är blockerade från Exchange
 
 På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen väljer du rutan **Blockerade enheter från Exchange** för att visa antalet blockerade enheter och länkar till mer information.
 ![Skärmbild av Intune-instrumentpanelen som visar antalet enheter som hindras från att komma åt Exchange](../media/IntuneSA6BlockedDevices.PNG)
 
-## Nästa steg
+## <a name="next-steps"></a>Nästa steg
 [Begränsa åtkomsten till SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 [Begränsa åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

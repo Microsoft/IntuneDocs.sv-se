@@ -14,8 +14,8 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
-ms.openlocfilehash: 5900894ded0518f731ac76c3eac0332e5a3f6c4b
+ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
+ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
 
 
 ---
@@ -64,6 +64,25 @@ Du kan rensa appar och data från Intune-hanterade enheter som inte längre beh�
 
 Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
 
+#### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
+
+1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
+
+2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
+
+3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
+
+4.  Välj **Active Directory** och välj sedan din organisation.
+
+5.  Välj fliken **Användare** .
+
+6.  Välj den användare vars enheter du vill ta bort.
+
+7.  Välj **Enheter**.
+
+8.  Ta bort enheter efter behov, till exempel de som inte längre används eller som har felaktiga definitioner.
+
+
 ## <a name="selective-wipe"></a>Selektiv rensning
 
 En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil apphanteringsdata (MAM), inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten. Enheten tas bort från Intune. Följande tabell beskriver vilka data som tas bort och hur data som lämnas kvar på enheten påverkas vid en selektiv rensning. (Tabellerna är ordnade efter plattform.)
@@ -95,7 +114,7 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|Tas bort.|
 |Certifikatprofilinställningar|Certifikat återkallas, men tas inte bort.|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Behörigheten som enhetsadministratör återkallas.|Behörigheten som enhetsadministratör återkallas.|
-|E-post|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort. Om Microsoft Exchange finns lokalt, tas e-postprofiler och cachelagrade e-postmeddelanden inte bort.|
+|E-post|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
 |Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|
 |Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|AAD-posten tas bort.|
 |Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
@@ -111,7 +130,7 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |E-post|Tar bort e-post som är EFS-aktiverad (krypterande filsystem), vilket även omfattar e-post och bifogade filer i Mail-appen för Windows.|Stöds inte.|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|Tar bort e-post som är EFS-aktiverad (krypterande filsystem), vilket även omfattar e-post och bifogade filer i Mail-appen för Windows. Tar bort e-postkonton som etablerats av Intune.</br>**Undantag**: Om Microsoft Exchange finns lokalt så tas inte e-postkonton bort.|
 |Frånkoppling från Azure Active Directory (AAD)|Nej.|Nej.|AAD-posten tas bort.|Inte tillämpligt. Windows 10 har inte stöd för selektiv rensning för Azure Active Directory-anslutna enheter.|
 
-## <a name="wipe-encryption-file-system-efsenabled-content"></a>Rensa EFS-aktiverat innehåll (Encryption File System)
+## <a name="wipe-encryption-file-system-efs-enabled-content"></a>Rensa EFS-aktiverat innehåll (Encryption File System)
 Selektiv radering av EFS-krypterat innehåll stöds av Windows 8.1 och Windows RT 8.1. Följande gäller för en selektiv radering av EFS-aktiverat innehåll:
 
 -   Endast program och data som skyddas med krypterande filsystem (EFS) som använder samma Internetdomän som Intune-kontot raderas selektivt. Mer information finns i [Selektiv Windows-rensning för hantering av enhetsdata](http://technet.microsoft.com/library/dn486874.aspx).
@@ -146,6 +165,6 @@ Den här rapporten visar även vem som utförde åtgärden.
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
