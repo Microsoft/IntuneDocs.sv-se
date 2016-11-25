@@ -14,17 +14,17 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
-ms.openlocfilehash: 7577cbab528d88635e8551bf8de1ffd49becaa84
+ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
+ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
 
 
 ---
 
-# <a name="enroll-corporateowned-devices-by-using-intune"></a>Registrera företagsägda enheter med hjälp av Intune
+# <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrera företagsägda enheter med hjälp av Intune
 
 Du kan registrera organisationsägda eller företagsägda enheter för hantering med Intune på flera olika sätt beroende på typen av enhet, hur enheten köptes och organisationens behov. Du kan också installera företagsportalappen för att registrera och hantera företagsägda enheter, som i ett BYOD-scenario (”Bring Your Own Device”).
 
-## <a name="enroll-corporateowned-ios-devices"></a>Registrera företagsägda iOS-enheter
+## <a name="enroll-corporate-owned-ios-devices"></a>Registrera företagsägda iOS-enheter
 
 Registreringsmetoderna för företagsägda enheter är ett bra alternativ för CYOD-scenarier (”Choose Your Own Device”). I en CYOD-miljö betalar organisationen för en enhet som användaren väljer, och organisationen hanterar enheten.
 
@@ -40,7 +40,7 @@ Du kan använda ett DEM-konto för att endast registrera enheter som inte använ
 
 Lär dig hur du [registrerar företagsägda enheter med ett DEM-konto](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
 
-## <a name="enroll-corporateowned-windows-10-enterprise-devices"></a>Registrera företagsägda Windows 10 Enterprise-enheter
+## <a name="enroll-corporate-owned-windows-10-enterprise-devices"></a>Registrera företagsägda Windows 10 Enterprise-enheter
 
 Om du använder Azure Active Directory Premium eller Microsoft Enterprise Mobility Suite i din organisation kan du [registrera Windows 10 Enterprise-enheter](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview). När en användare lägger till ett arbets- eller skolkonto på en enhet märks enheten automatiskt som ”företagsägd”.
 
@@ -50,17 +50,19 @@ Många tillverkare av mobila enheter använder ett unikt nummer kallat IMEI (Int
 
 Lär dig hur du [märker företagsägda enheter med hjälp av IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
 
-## <a name="identify-a-device-as-corporateowned"></a>Identifiera en enhet som företagsägd
+## <a name="identify-a-device-as-corporate-owned"></a>Identifiera en enhet som företagsägd
 
-I en lista över enheter är värdet för **Ägarskap** **Företag**. En företagsägd enhet har någon av följande egenskaper:
+Intune identifierar en enhet som "företagets" när något av följande villkor är uppfyllt:
 
- - Enheten [registrerades med ett DEM-konto ](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md).
- - Enheten registrerades med hjälp av [Apple DEP](ios-device-enrollment-program-in-microsoft-intune.md) eller [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md).
- - Enhetstillverkaren [fördeklarerade enheten genom att använda IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md).
- - Enheten är registrerad i [Azure Active Directory eller Enterprise Mobility Suite som en Windows 10 Enterprise-enhet](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview).
+ - Enheten [registrerades med ett DEM-konto](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) (alla plattformar).
+ - Enheten registrerades med [Apple DEP](ios-device-enrollment-program-in-microsoft-intune.md) eller [Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md) (endast iOS).
+ - Enhetstillverkaren [fördeklarerade enheten genom att använda IMEI-nummer](specify-corporate-owned-devices-with-international-mobile-equipment-identity-imei-numbers.md) (alla plattformar med IMEI-nummer).
+ - Enheten är registrerad i [Azure Active Directory eller Enterprise Mobility Suite som en Windows 10 Enterprise-enhet](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (endast Windows 10).
+
+När en enhet har taggats som företagets ser du **Företag** i kolumnen **Ägarskap** för den enhetens post i administratörskonsolen. 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
