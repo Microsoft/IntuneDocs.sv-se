@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 389daf0ed39fa2cd4b2e5d6e52cbd6809a568c9e
-ms.openlocfilehash: e751619f6d65e10099d1f8ff5a2342185181af69
+ms.sourcegitcommit: 027e7e56e6f7d3a604336e0465f688af514c69e6
+ms.openlocfilehash: fc484be99d0956e707f96c0c285b2750754f746c
 
 
 ---
 
-# Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune
+# <a name="protect-app-data-using-mobile-app-management-policies-with-microsoft-intune"></a>Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune
 
-## Hur du kan skydda appdata
+## <a name="how-you-can-protect-app-data"></a>Hur du kan skydda appdata
 Dina anställda använder mobila enheter för både personliga och arbetsrelaterade uppgifter.  Samtidigt som du vill se till att de anställda kan vara produktiva vill du även förhindra dataförlust, både avsiktlig och oavsiktlig.  Dessutom vill du kunna skydda företagsdata som nås med enheter även i de fall då de inte hanteras av dig.
 
 Du kan använda Intunes hanteringsprinciper för mobila appar (MAM) för att skydda företagets data. Eftersom Intunes MAM-principer kan användas **oberoende av en hanteringslösning för mobila enheter (MDM)** kan du använda dem för att skydda företagets data både om du registrerar eller inte registrerar enheter i en enhetshanteringslösning. Genom att implementera **principer på appnivå** kan du begränsa åtkomsten till företagsresurser och hålla data inom IT-avdelningens kontroll.
@@ -54,21 +54,21 @@ Det finns ytterligare fördelar med att använda MDM med MAM-principer. Företag
 - **MAM-principer ser till att det finns skydd på appnivå**. Du kan till exempel kräva en PIN-kod för att öppna en app i arbetssammanhang eller om data kan delas mellan appar, eller förhindra att företagets appdata sparas till en personlig lagringsplats.
 
 
-### MAM-principer stöds för närvarande på:
+### <a name="mam-polices-are-currently-supported-on"></a>MAM-principer stöds för närvarande på:
 -   iOS 8.1 eller senare
 
 -   Android 4 eller senare
 
 Windows-enheter stöds inte för tillfället.
-##  Hur MAM-principer skyddar appdata
+##  <a name="how-mam-policies-protect-app-data"></a>Hur MAM-principer skyddar appdata
 
-####  Appar utan MAM-principer:
+####  <a name="apps-without-mam-policies"></a>Appar utan MAM-principer:
 
 ![Bild som visar hur data kan flyttas fritt mellan appar när inga MAM-principer tillämpas](../media/Apps_without_MAM_policies.png)
 
 När appar används utan begränsningar kan företagsrelaterade och personliga data blandas.  Företagsdata kan hamna på platser som personlig lagring eller överföras till appar som du inte har kontroll över, vilket leder till dataförlust. Pilarna i diagrammet visar hur data flyttas utan begränsningar mellan appar (företagsdata och personliga data) och till lagringsplatser.
 
-### Dataskydd med MAM-principer:
+### <a name="data-protection-with-mam-policies"></a>Dataskydd med MAM-principer:
 
 ![Bild som visar hur företagsdata skyddas när MAM-principer tillämpas ](../media/Apps_with_mobile_app_policies.png)
 
@@ -76,7 +76,7 @@ Du kan använda MAM-principer för att förhindra att företagets data sparas ti
 - Principer för dataflytt som **Förhindra spara som**, **Begränsa klipp ut, kopiera och klistra in**.
 - Inställningar för åtkomstprinciper som **Kräv enkel PIN för åtkomst** eller **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**.
 
-### Dataskydd med MAM-principer på enheter som hanteras av en MDM-lösning:
+### <a name="data-protection-with-mam-policies-on-devices-managed-by-a-mdm-solution"></a>Dataskydd med MAM-principer på enheter som hanteras av en MDM-lösning:
 
 ![Bild som visar hur MAM-principer fungerar på BYOD-enheter](../media/MAM_BYOD_November.png)
 
@@ -101,7 +101,7 @@ MDM-lösningen:
 -   Rensa företagsdata från appar utan att ta bort dessa appar från enheten
 
 
-### Dataskydd med MAM-principer för enheter utan registrering
+### <a name="data-protection-with-mam-policies-for-devices-without-enrollment"></a>Dataskydd med MAM-principer för enheter utan registrering
 
 ![Bild som visar hur MAM-principer fungerar på hanterade enheter](../media/MAM_ManagedDevices_November.png)
 
@@ -117,7 +117,7 @@ Det finns dock vissa begränsningar som du bör känna till, t.ex.:
 -   Du kan inte etablera företagets Wi-Fi- och VPN-inställningar på enheterna.
 
 
-## Flera identiteter
+## <a name="multi-identity"></a>Flera identiteter
 
 Med appar som stöder flera identiteter kan du använda olika konton – arbete och privat – för att få åtkomst till samma appar när MAM-principer tillämpas och apparna används i arbetskontexten.  
 
@@ -125,13 +125,13 @@ Om slutanvändaren exempelvis startar appen OneDrive med ett arbetskonto kan han
 
 Alla mobila Office-appar stöder multiidentitet.
 
-##  Nästa steg
+##  <a name="next-steps"></a>Nästa steg
 [Förbered dig för att konfigurera hanteringsprinciper för mobilappar](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

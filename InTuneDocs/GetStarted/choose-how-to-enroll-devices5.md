@@ -3,27 +3,28 @@ title: "Välj hur du vill registrera mobila enheter | Microsoft Intune"
 description: "Bestäm hur du ska registrera mobila enheter i Intune genom att besvara några enkla frågor"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ed9250aa-e894-4eac-92b8-5f1a3748e255
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
-ms.openlocfilehash: fea9e10de761fa1bacfb87d07ce571d40f8286bc
+ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
+ms.openlocfilehash: 5581e80612286471b29d35f193fba5146f9ca90f
 
 
 ---
-# Välj hur du vill registrera mobila enheter
+# <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
 
 Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
 
-## **Hur ska du hantera dina delade iOS-enheter?**
+## <a name="how-will-you-manage-shared-ios-devices"></a>**Hur ska du hantera dina delade iOS-enheter?**
 
   > [!div class="button"]
   [DEP-registrering av iOS >](/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
@@ -43,6 +44,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

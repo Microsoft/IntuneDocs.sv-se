@@ -3,26 +3,27 @@ title: "Välj hur du vill registrera mobila enheter | Microsoft Intune"
 description: "Bestäm hur du ska registrera mobila enheter i Intune genom att besvara några enkla frågor"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 242de106-36a0-469f-a89c-4173ae8bdd7f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
-ms.openlocfilehash: 1e7c4f9963aaba3389a903e2fe2fd3fd582c8ce6
+ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
+ms.openlocfilehash: 515f1edfc078e2061f74fc103ede42248cbea759
 
 
 ---
-# Välj hur du vill registrera mobila enheter
+# <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
 
 Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
-## **Vilken BYOD-plattform vill du aktivera?**
+## <a name="which-byod-platform-do-you-want-to-enable"></a>**Vilken BYOD-plattform vill du aktivera?**
 
 > [!div class="button"]
 [Android >](/intune/deploy-use/set-up-android-management-with-microsoft-intune)
@@ -39,6 +40,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

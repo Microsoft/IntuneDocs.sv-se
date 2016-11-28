@@ -2,9 +2,9 @@
 
 > Android for Work distribueras för närvarande på Intune-innehavare under de kommande månaderna.
 
-> Mer information om supportstatus för Android for Work finns i avsnittet om Android for Work i [Nyheter i Microsoft Intune](/intune/whats-new/whats-new-in-microsoft-intune).
+> Om du vill ha mer information om statusen för Android for Work-stöd läser du Android for Work-meddelandet i oktober 2016-utgåvan av [Nyheter i Microsoft Intune](/intune/whats-new/whats-new-archive#october-2016).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

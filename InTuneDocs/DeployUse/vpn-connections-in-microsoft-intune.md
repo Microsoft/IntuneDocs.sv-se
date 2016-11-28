@@ -2,10 +2,10 @@
 title: VPN-anslutningar | Microsoft Intune
 description: "Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i organisationen."
 keywords: 
-author: Nbigman
-ms.author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 10/14/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4acce1b1861ca2c2d1432b0258ad1e95e46d2a
-ms.openlocfilehash: 188cb3890da83332431743445959bba73e7f2484
+ms.sourcegitcommit: 4cab83c3d1a63a0e4f16ee838443ec032bcf1532
+ms.openlocfilehash: 6d5d97a8e91ba3a99db5714a5634904c62320e76
 
 
 ---
 
-# VPN-anslutningar i Microsoft Intune
+# <a name="vpn-connections-in-microsoft-intune"></a>VPN-anslutningar i Microsoft Intune
 
-Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheter använder en *profil för VPN-anslutning* för att initiera en anslutning till VPN-servern. Använd *VPN-profiler* i Microsoft Intune för att distribuera VPN-inställningar till användare och enheter i din organisation så att de enkelt och säkert kan ansluta till nätverket. 
+Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheter använder en *profil för VPN-anslutning* för att initiera en anslutning till VPN-servern. Använd *VPN-profiler* i Microsoft Intune för att distribuera VPN-inställningar till användare och enheter i din organisation så att de enkelt och säkert kan ansluta till nätverket.
 
 Exempel: Anta att du vill förse alla enheter som kör iOS med de inställningar som krävs för att ansluta till en filresurs i företagsnätverket. Då kan du skapa en VPN-profil som innehåller de inställningar som behövs för att ansluta till företagsnätverket och sedan distribuera profilen till alla användare som har enheter som kör iOS. Användarna ser VPN-anslutningen i listan över tillgängliga nätverk och kan enkelt ansluta.
 
@@ -38,7 +38,9 @@ Du kan konfigurera följande enhetstyper med VPN-profiler:
 
 Konfigurationsalternativen för VPN-profiler varierar beroende på vilken enhetstyp du väljer.
 
-## VPN-anslutningstyper
+[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+
+## <a name="vpn-connection-types"></a>VPN-anslutningstyper
 
 Intune har stöd för att skapa VPN-profiler som använder följande anslutningstyper:
 
@@ -48,7 +50,7 @@ Intune har stöd för att skapa VPN-profiler som använder följande anslutnings
 Anslutningstyp |iOS och Mac OS X  |Android och Android for Work|Windows 8,1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop och Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Ja |Ja   |Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
-Cisco (IPsec)|Ja |Nej   |Nej  |Nej  |Nej | Nej|
+Cisco (IPsec)|Ja |Ja   |Nej  |Nej  |Nej | Nej|
 Citrix|Ja |Nej   |Nej  |Nej  |Nej | Nej|
 Pulse Secure|Ja  |Ja |Ja   |Ja  |Ja| Ja|        
 F5 Edge Client|Ja |Ja |Ja |Ja  |   Ja |  Ja|   
@@ -67,21 +69,21 @@ L2TP|Anpassad profil för iOS|Nej |Nej |Nej|Ja (OMA-URI)|Ja|
 
  Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](custom-configurations-for-vpn-profiles.md).     
 
-## Metoder för att skydda VPN-profiler
+## <a name="methods-of-securing-vpn-profiles"></a>Metoder för att skydda VPN-profiler
 
 VPN-profiler kan använda ett antal olika anslutningstyper och protokoll från olika tillverkare. Dessa anslutningar skyddas vanligtvis med en av följande metoder.
 
-### Certifikat
+### <a name="certificates"></a>Certifikat
 
 När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
-### Användarnamn och lösenord
+### <a name="user-name-and-password"></a>Användarnamn och lösenord
 
 Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösenord.
 
-## Skapa en VPN-profil
+## <a name="create-a-vpn-profile"></a>Skapa en VPN-profil
 
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
@@ -107,7 +109,7 @@ Inställningsnamn  |Mer information
 **Namn**     |Ange ett unikt namn för VPN-profilen som hjälper dig att identifiera den i Intune-konsolen.         
 **Beskrivning**     |Ange en lämplig beskrivning av VPN-profilen och annan information som gör det enkelt att hitta profilen.         
 **VPN-anslutningens namn (visas för användare)**     |Ange ett namn på VPN-profilen. Detta är det namn som användarna ser i listan över tillgängliga VPN-anslutningar på sina enheter.         
-**Anslutningstyp**     |  Välj någon av följande anslutningstyper som ska användas i VPN-profilen: **Cisco AnyConnect** (inte tillgänglig för Windows 8.1 eller Windows Phone 8.1), **Pulse Secure**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
+**Anslutningstyp**     |  Välj någon av följande anslutningstyper som ska användas i VPN-profilen: **Cisco AnyConnect** (inte tillgänglig för Windows 8.1 eller Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
 **VPN-serverbeskrivning**     | Ange en beskrivning för den VPN-server som enheterna ska ansluta till. Exempel: **Contoso VPN Server**. Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.
 **Serverns IP-adress eller fullständiga domännamn**    |Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.  Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.         |         
 **Serverlista**     |Välj **Lägg till** om du vill lägga till en ny VPN-server som ska användas för VPN-anslutningen. Du kan även ange vilken server som ska vara standardserver för anslutningen. Det här alternativet visas endast när anslutningstypen är **F5 Edge Client**.         
@@ -115,11 +117,11 @@ Inställningsnamn  |Mer information
 **Autentiseringsmetod**| Välj den autentiseringsmetod som används av VPN-anslutningen: **Certifikat** eller **Användarnamn och lösenord**. (**Användarnamn och lösenord** är inte tillgängligt om anslutningstypen är Cisco AnyConnect.) Alternativet **Autentiseringsmetod** är inte tillgängligt för Windows 8.1.
 **Spara autentiseringsuppgifterna för varje inloggning**|Välj det här alternativet om användarnas autentiseringsuppgifter ska sparas, så att användarna slipper ange dem varje gång som en anslutning ska upprättas.
 **Välj ett certifikat för klientautentisering (identitetscertifikat)**|Välj det SCEP-klientcertifikat du skapade tidigare och som ska användas för att autentisera VPN-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.
-**Roll**| Ange namnet för den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner. Det här alternativet visas endast när anslutningstypen är **Pulse Secure**.
-**Område**|Ange namnet för den autentiseringssfär som ska användas. En autentiseringssfär är en grupp av autentiseringsresurser som används av Pulse Secure-anslutningstypen. Det här alternativet visas endast när anslutningstypen är **Pulse Secure**.
+**Roll**| Ange namnet för den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner. Det här alternativet visas endast när anslutningstypen är **Pulse Secure** eller **Citrix**.
+**Område**|Ange namnet för den autentiseringssfär som ska användas. En autentiseringssfär är en grupp autentiseringsresurser som används av Pulse Secure- eller Citrix-anslutningstypen. Det här alternativet visas endast när anslutningstypen är **Pulse Secure** eller **Citrix**.
 **Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas endast när anslutningstypen är **Dell SonicWALL Mobile Connect**.
 **Fingeravtryck**|Ange en sträng, till exempel ”Contoso fingeravtryckskod” som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på VPN-servern medan fingeravtrycket visas. (Användaren verifierar fingeravtrycket manuellt och väljer **betrodd** för att ansluta.) Det här alternativet visas endast när anslutningstypen är **CheckPoint Mobile VPN**.
-**VPN per app**|Välj det här alternativet om du vill koppla VPN-anslutningen till en iOS- eller Mac OS X-app så att anslutningen öppnas när appen körs. Du kan associera VPN-profilen med en app när du distribuerar programvaran. Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
+**Per app-VPN**|Välj det här alternativet om du vill koppla VPN-anslutningen till en iOS- eller Mac OS X-app så att anslutningen öppnas när appen körs. Du kan associera VPN-profilen med en app när du distribuerar programvaran. Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 **VPN på begäran**|Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare. Anvisningar för hur du konfigurerar detta finns i [VPN på begäran för iOS-enheter](#on-demand-vpn-for-ios-devices).
 **Identifiera proxyinställningar automatiskt** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
 **Använd automatiskt konfigurationsskript** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill använda ett automatiskt konfigurationsskript för att ange inställningarna och sedan ange en URL till den fil som innehåller inställningarna. Mer information finns i dokumentationen till Windows Server.
@@ -151,22 +153,22 @@ Du kan begränsa VPN-användningen på Windows 10-enheter till specifika appar g
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
-### VPN på begäran för iOS-enheter
+### <a name="on-demand-vpn-for-ios-devices"></a>VPN på begäran för iOS-enheter
 Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 
 > [!NOTE]
 >  
 > Du kan inte använda per app-VPN och VPN på begäran i samma princip.
- 
-1. Leta reda på principkonfigurationssidan och sök efter **på begäran-regler för den här VPN-anslutningen**. Kolumnerna som är märkta med **Matchning**, villkoret som reglerna söker efter och **Åtgärd**, den åtgärd som principen utlöser när villkoret matchas. 
+
+1. Leta reda på principkonfigurationssidan och sök efter **på begäran-regler för den här VPN-anslutningen**. Kolumnerna som är märkta med **Matchning**, villkoret som reglerna söker efter och **Åtgärd**, den åtgärd som principen utlöser när villkoret matchas.
 2. Skapa en regel genom att välja **Lägg till**. Det finns två typer av matchningar som du kan konfigurera i regeln. Du kan bara konfigurera en typ per regel.
-  - **SSID:er**, som refererar till trådlösa nätverk. 
+  - **SSID:er**, som refererar till trådlösa nätverk.
   - **DNS-sökdomäner**, som är...  Du kan använda fullständiga kvalificerade domännamn som *team. corp.contoso.com* eller använda domäner som *contoso.com*, vilket är detsamma som att använda * *. contoso.com*.
 3. Valfritt: Ange en URL-strängavsökning som är en URL som regeln använder som ett test. Om den enhet där den här profilen har installerats kan få tillgång till denna URL utan omdirigering upprättas VPN-anslutningen och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängavsökningsplatsen. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att URL:en testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till mål-URL:en via VPN.
 4. Välj någon av följande åtgärder:
   - **Ansluta**
   - **Utvärdera anslutning**, som har tre inställningar A. **Domänåtgärd**  – välj **Anslut om det behövs** eller **Anslut aldrig**
-      B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs** 
+      B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs**
       C. **Nödvändig URL-strängsavsökning** – en URL av typen HTTP eller HTTPS (rekommenderas), t.ex. *https://vpntestprobe.contoso.com*. Den regel som ska kontrollera om det finns ett svar från den här adressen. Om inte, och om **Domänåtgärd** är **Anslut om det behövs** utlöses VPN-anslutningen.
      > [!TIP]
      >
@@ -174,10 +176,10 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
   - **Ignorera** – detta orsakar inte någon ändring i VPN-anslutningen. Om VPN-nätverket är anslutet, så låt det vara anslutet. Om det inte är anslutet, så anslut det inte. Du kan till exempel ha en regel som ansluter VPN-nätverket för alla dina interna företagswebbplatser, men vill göra något av dessa interna webbplatser tillgänglig enbart när enheten faktiskt är ansluten till företagsnätverket. I så fall kan skapa du en ignoreringsregel för den webbplatsen.
   - **Koppla från** – koppla från enheter från VPN-nätverket när villkoren uppfylls. Du kan t.ex. lista din företags trådlösa nätverk i fältet **SSID** och skapa en regel som kopplar bort enheter från VPN-nätverket när de ansluter till något av dessa nätverk.
 
-Domänspecifika regler utvärderas före allmänna domänregler. 
+Domänspecifika regler utvärderas före allmänna domänregler.
 
 
-## Distribuera principen
+## <a name="deploy-the-policy"></a>Distribuera principen
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
@@ -192,13 +194,13 @@ Efter slutförd distribution ser användarna det namn du gav VPN-anslutningen i 
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Anpassade konfigurationer för VPN-profiler](Custom-configurations-for-VPN-profiles.md)
 
 [Per app-VPN för Android Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

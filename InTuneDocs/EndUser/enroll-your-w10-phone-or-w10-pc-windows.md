@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/18/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,99 +14,45 @@ ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e0321b23bbbaaa16c28c23e56b5fbcaee0d3c24
-ms.openlocfilehash: 75f19a1c613b2d018e0cb89862f15aa4be2bc138
+ms.sourcegitcommit: 5fa0e9db799c7b3a9619d63ebc1ba5ffe010b1fd
+ms.openlocfilehash: ff780fa8ead4b1e54fb6b8dd2da6246c77c76b38
 
 
 ---
 
 
-# <a name="enroll-your-windows-10-mobile-or-windows-10-desktop-device-in-intune"></a>Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune
+# <a name="enroll-your-windows-10-devices-in-intune"></a>Registrera dina Windows 10-enheter i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. Genom att registrera dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter få åtkomst till organisationens skyddade data, t.ex. e-post, filer och andra resurser. Detta gäller för både Windows 10 Desktop- och Windows 10 Mobile-enheter. Genom att registrera dina enheter kan du skydda både din och organisationens åtkomst och dessutom hålla arbetsdata åtskilda från personliga data.
 
+Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) och hur [informationen på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows) påverkas.
 
-Registrera din Windows 10 Mobile- eller Windows 10-enhet:
+## <a name="windows-10-desktop-devices"></a>Windows 10 Desktop-enheter
+1.  Gå till __Start__.
 
-1.  Gå till Windows **Inställningar** och tryck sedan på **Konton**.
+ ![Start-menyn i Windows](../media/windows-start-menu.png).
 
-    ![Windows-inställningar](./media/w10-enroll-rs1-settings-accounts.png)
+2. Skriv frasen ”om din dator” i __sökfältet__ och välj sedan __Om din dator__.
 
-2.  Ta en titt på följande två skärmar och se om någon av dem liknar den som visas på din enhet. Följ anvisningarna för den skärm som motsvarar den som visas på din enhet.
+ ![search settings for about your pc](../media/searching_for_about_your_pc.png)
 
-    Om du ser den här skärmen följer du anvisningarna i [Steg för att följa om du ser Åtkomst för arbete eller skola](#steps-to-follow-if-you-see-access-work-or-school).
+2.  I __Inställningar__ visas en lista med information om versionen av Windows 10 som är installerad på datorn. Leta upp __versionen__ i den här listan.
 
-    ![Ansluta till arbetsplats eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+ ![Om din dator i Windows 10 Desktop](../media/settings_about_pc.png)
 
-    Om denna skärm visas följer du stegen i [Steg att följa om du ser Ditt konto](#steps-to-follow-if-you-see-your-account).
+3.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account).
 
-    ![Ditt konto](./media/w10-enroll-2-accounts-your-account.png)
+## <a name="windows-10-mobile-devices"></a>Windows 10 Mobile-enheter
 
-## <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Steg för att följa om du ser Åtkomst för arbete eller skola
-
-1.  Tryck på **Åtkomst till arbete eller skola** och tryck sedan på **Anslut**.
-
-    ![Trycka på arbetskontot eller skolkontot](./media/w10-enroll-rs1-connect-to-work-or-school.png)
-
-2.  Ange e-postadressen för arbetet eller skolan och tryck sedan på **Nästa**.
-
-    ![Ange ditt arbetskonto eller skolkonto](./media/w10-enroll-rs1-set-up-work-or-school-account.png)
-
-3. Logga in på Intune med ditt arbetskonto eller skolkonto.
-
-    ![Lägg till ett arbetsplats- eller skolkonto](./media/w10-enroll-rs1-enter-your-credentials.png)
-
-    Ett meddelande visas som anger att ditt företag eller din skola registrerar din enhet.
-
-4. När sidan **Allt är klart!** visas trycker du på **Stäng**. Klart.
-
-  ![Tryck på Stäng på sidan Allt är klart!  skärmen](./media/w10-enroll-rs1-youre-all-set.png)
-
-5. Om du vill kontrollera att anslutningen är korrekt går du tillbaka till **Inställningar**, där ditt arbets- eller skolkonto nu ska visas.
-
-    ![Verifiera att anslutningen är korrekt konfigurerad](./media/w10-enroll-rs1-validate-successful-enrollment.png)
-
-Om du har följt de föregående stegen, men ändå inte kan komma åt din e-post eller dina filer på arbetet eller i skolan, kan du följa anvisningarna i [Felsökningssteg att följa för Åtkomst för arbete eller skola](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
-
-
-## <a name="steps-to-follow-if-you-see-your-account"></a>Steg för att följa för Ditt konto
-
-1.  Gå till Windows **Inställningar** och tryck på **Konton**.
-
-    ![Välj Inställningar och sedan Konton](./media/W10-enroll-1-settings-accounts.png)
-
-2.  Tryck på **Ditt konto**.
-
-    ![Tryck på ditt konto](./media/W10-enroll-2-accounts-your-account.png)
-
-3.  Tryck på **Lägg till ett arbetsplats- eller skolkonto**.
-
-    ![Tryck på Lägg till ett arbetsplats- eller skolkonto](./media/w10-enroll-3-add-work-school-acct.png)
-
-4.  Logga in med dina uppgifter för arbets- eller skolkontot.
-
-    ![sign-in](./media/W10-enroll-4-sign-in.png)
-
-Om du har följt stegen ovan, men ändå inte får åtkomst till din e-post, dina filer eller annan information på arbetet eller i skolan, kan du följa anvisningarna i [Felsökningssteg att följa för Ditt konto](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account).
-
-Vi rekommenderar också att du installerar appen Företagsportalen som gör att du lätt kan identifiera och ladda ner de företagsappar som är relevanta för dig och din arbetsroll. Företagsportalen kan ha installerats som en del i din registrering, beroende på hur ditt företag har konfigurerat Intune.
-
-Du kan kontrollera att du har appen genom att se om **Företagsportalen** finns i din applista. Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
-
-1.  Tryck på **Start** &gt; **Store**.
-
-2.  Tryck på **Sök** och skriv sedan **företagsportal**.
-
-3.  Tryck på **Företagsportal** &gt; **Installera** i listan över resultat.
-
-4.  Tryck på antingen **Installera** eller på **Ledigt**. Vilket alternativ som visas beror på hur ditt företag har konfigurerat appen.
+1.  På __Start__-menyn sveper du över till listan __Alla appar__ och väljer sedan appen __Inställningar__.
+2.  Tryck på __System__ och sedan på __Om__.
+3.  Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.
+4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

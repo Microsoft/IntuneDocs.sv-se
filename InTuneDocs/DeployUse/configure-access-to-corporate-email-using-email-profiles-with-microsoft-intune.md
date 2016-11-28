@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56988f0a69e6ff281439e6e77d1814ec130c8b49
-ms.openlocfilehash: dcd8f956d1706f4bdcb2dca79e9f1ff5d5bb57b0
+ms.sourcegitcommit: f0c5920f7cc46e40bf4d1795a68ba1d67840fcfa
+ms.openlocfilehash: 6ac7034ba0713c7b6bdd28c7b53b99c247d3aeb3
 
 
 ---
@@ -100,7 +100,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
     |**Beskrivning**|En beskrivning som hjälper dig att identifiera den här profilen.|
     |**Värd**|Värdnamnet för företagsservern som är värd för den interna e-posttjänsten.|
     |**Kontonamn**|Visningsnamnet för e-postkontot som kommer att visas på användarnas enheter.|
-    |**Användarnamn**|Hur användarnamn för e-postkontot hämtas. Välj **Användarnamn** för en lokal Exchange-server eller välj **UPN (User Principal Name)** för Office 365.|
+    |**Användarnamn**|Det här är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamn för den här e-postprofilen. Välj Primär SMTP-adress, t.ex. *user1@contoso.com* eller Användarens huvudnamn (UPN) som *user1* eller *user1@contoso.com*.|
     |**E-postadress**|Hur e-postadressen för användaren på varje enhet genereras. Välj **Primär SMTP-adress** om du vill använda den primära SMTP-adressen för att logga in på Exchange eller använd **UPN (User Principal Name)** om du vill använda det fullständiga huvudnamnet som e-postadress.|
     |**Autentiseringsmetod** (Android for Work, Samsung KNOX och iOS)|Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som används av e-postprofilen.|
     |**Välj ett certifikat för klientautentisering (identitetscertifikat)** (Android for Work, Samsung KNOX och iOS)|Välj SCEP klientcertifikatet som du skapade tidigare som ska användas för att autentisera Exchange-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.|
@@ -138,6 +138,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

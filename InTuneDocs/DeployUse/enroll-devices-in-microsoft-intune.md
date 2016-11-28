@@ -14,8 +14,8 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: 0b60e7a7a921762e682185af273bb94f24441a0c
+ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
+ms.openlocfilehash: d880123a9b4d4afd74e9941ce0590f5dae554667
 
 
 ---
@@ -27,14 +27,15 @@ Om du använder [Exchange ActiveSync](#mobile-device-management-with-exchange-ac
 
 ## <a name="overview-of-device-enrollment-methods"></a>Översikt över registreringsmetoder för enheter
 
-I följande tabell visas Intunes registreringsmetoder med de funktioner som de stöder. Dessa funktioner är:
-- **Rensa** – Fabriksåterställer enheten och ta bort alla data. Mer information finns i [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md).
+Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds och kraven för varje metod. Funktionerna och kraven beskrivs nedan.
+
+- **Rensa** – Anger om enheten måste rensas innan användarna kan registrera enheten. Termen ”rensa” innebär en fabriksåterställning av enheten, vilket tar bort alla data. Mer information finns i [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md).
 - **Tillhörighet** – Kopplar enheter till användare. Krävs för hantering av mobila program (MAM) och villkorlig åtkomst till företagsdata. Mer information finns i [Användartillhörighet](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#using-company-portal-on-dep-or-apple-configurator-enrolled-devices).
 - **Lås** – Förhindrar att användare kan ta bort enheten från hanteringen. iOS-enheter kräver Övervakat läge för Lås. Mer information finns i [Fjärrlåsning](retire-devices-from-microsoft-intune-management.md#block-access-a-device).
 
 **Metoder för iOS-registrering**
 
-| **Metod** |  **Rensning** |  **Tillhörighet**    |   **Lås** | **Information** |
+| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information** |
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#byod)** | Nej|    Ja |   Nej | [Mer information](prerequisites-for-enrollment.md#set-up-device-management)|
 |**[DEM](#dem)**|   Nej |Nej |Nej  | [Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
@@ -44,14 +45,14 @@ I följande tabell visas Intunes registreringsmetoder med de funktioner som de s
 
 **Metoder för Windows-registrering**
 
-| **Metod** |  **Rensning** |  **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#byod)** | Ja|   Ja |   Nej | [Mer information](prerequisites-for-enrollment.md#set-up-device-management)|
 |**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metoder för Android-registrering**
 
-| **Metod** |  **Rensning** |  **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#byod)** | Nej|    Ja |   Nej | [Mer information](prerequisites-for-enrollment.md#set-up-device-management)|
 |**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
@@ -61,7 +62,7 @@ Ett antal frågor som hjälper dig att hitta rätt metod finns i [Välj hur du v
 ## <a name="byod"></a>BYOD
 "Bring your own device"-användare installerar företagsportalsappen och registrerar sina enheter. Detta gör det möjligt för användare att ansluta till företagets nätverk och till domänen eller Azure Active Directory. För de flesta plattformar måste du aktivera BYOD-registrering för många COD-scenarier. Mer information finns i [Krav för enhetsregistrering](prerequisites-for-enrollment.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
-## <a name="corporateowned-devices"></a>Företagsägda enheter
+## <a name="corporate-owned-devices"></a>Företagsägda enheter
 Företagsägda enheter (COD) kan hanteras med Intune-konsolen. iOS-enheter kan registreras direkt via de verktyg som tillhandahålls av Apple. Alla enhetstyper kan registreras av en administratör eller chef med hjälp av hanteraren för enhetsregistrering. Enheter med ett IMEI kan också identifieras och taggas som företagsägda för att möjliggöra COD-scenarier.
 
 Mer information finns i [Registrera enheter som ägs av företaget](manage-corporate-owned-devices.md).
@@ -78,7 +79,7 @@ Med Apples program för enhetsregistrering kan du skapa och distribuera principe
 
 Läs mer om [DEP](ios-device-enrollment-program-in-microsoft-intune.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
-### <a name="usbsa"></a>USB-SA
+### <a name="usb-sa"></a>USB-SA
 USB-anslutna företagsägda enheter förbereds med Intune-principen. Vid registrering med Installationsagenten skapar administratören den här Intune-principen och exporterar den till Apple Configurator. Administratören måste registrera varje enhet manuellt. Användarna får sina enheter och kör Installationsassistenten, där de registrerar sina enheter. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
   - Villkorlig åtkomst
   - Upplåsningsidentifiering
@@ -86,7 +87,7 @@ USB-anslutna företagsägda enheter förbereds med Intune-principen. Vid registr
 
 Läs mer om [Registrering av installationsassistenten med Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
-### <a name="usbdirect"></a>USB-Direct
+### <a name="usb-direct"></a>USB-Direct
 Vid direkt registrering skapar administratören en Intune-princip och exporterar den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen fabriksåterställning. Administratören måste registrera varje enhet manuellt. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program. Läs mer om [direktregistrering med Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
 ## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Hantering av mobila enheter med Exchange ActiveSync och Intune
@@ -119,6 +120,6 @@ Intune kan hantera följande enhetsplattformar:
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
