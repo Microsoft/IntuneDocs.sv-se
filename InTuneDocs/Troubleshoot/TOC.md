@@ -1,5 +1,5 @@
 # [Förstå och utforska](/intune/understand-explore/introduction-to-microsoft-intune)
-# [Komma igång](/intune/get-started/what-to-know-before-you-start-microsoft-intune)
+# [Komma igång](/intune/get-started/get-started)
 # [Nyheter](/intune/whats-new/whats-new-in-microsoft-intune)
 <!-- # [Plan and Design](/intune/plan-design/ways-to-do-enterprise-mobility) -->
 # [Distribuera och använda](/intune/deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune)
@@ -23,6 +23,6 @@
 ## [Felsöka Lookout-integrering](troubleshooting-lookout-integration.md)
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
