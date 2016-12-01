@@ -3,6 +3,7 @@ title: Distribuera appar | Microsoft Intune
 description: "Ta hjälp av informationen i den här artikeln när du distribuerar appar med Microsoft Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ms.date: 08/29/2016
 ms.topic: article
@@ -13,19 +14,19 @@ ms.assetid: 3b42019e-73da-4538-a496-212f11d5bf9b
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b6a5e2435a3cdffeaf27b0045dee9b8263cdc7a
-ms.openlocfilehash: 1e6e0656fb3da0d77dab10736e7b1607d77e6335
+ms.sourcegitcommit: d73df65a36b348f0941b1e7889d083406bc082f9
+ms.openlocfilehash: b13d1a6a1a0f995b1169fabd09a2f0a4cf9b630d
 
 ---
-# Distribuera appar i Microsoft Intune
+# <a name="deploy-apps-in-microsoft-intune"></a>Distribuera appar i Microsoft Intune
 
 Ta hjälp av informationen i den här artikeln när du distribuerar appar med Microsoft Intune.
 
 
-## Distribuera en app
+## <a name="deploy-an-app"></a>Distribuera en app
 I den här proceduren ska du distribuera en app till valda grupper av enheter eller användare.
 
-### Distribuera en app
+### <a name="to-deploy-an-app"></a>Distribuera en app
 
 1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och klicka på **Appar** &gt; **Appar** så visas listan över appar som du hanterar.
 
@@ -49,7 +50,12 @@ I den här proceduren ska du distribuera en app till valda grupper av enheter el
 6. Om appen du distribuerar är kompatibel med Intune VPN-profiler visas sidan **VPN-profil**. På den här sidan kan du associera iOS-appar med en VPN-profil som du har distribuerat. VPN-anslutningen öppnas automatiskt när appen startas. Om du vill göra en VPN-profil tillgänglig måste den ha profilinställningen **Per app-VPN** aktiverad.
  Information om hur du konfigurerar VPN-profiler, inklusive information om hur du associerar profiler med appar, finns i [VPN-anslutningar i Microsoft Intune](vpn-connections-in-microsoft-intune.md).
 
-## Exempel
+<!---
+>[!TIP]
+>If an end user previously installed an iOS app and you now deploy it with a deployment action of **Available**, Intune will automatically begin to manage that app with no further action required by you, or the end-user.
+--->
+
+## <a name="example"></a>Exempel
 
 I det här exemplet distribuerade du appen som **Tillgänglig** på en iOS-enhet.
 Appen visas på användarnas enheter i företagsportalen och användarna kan installera den därifrån.
@@ -60,12 +66,12 @@ I den här skärmbilden har till exempel Bing for iOS-appen distribuerats med in
 Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får användaren ett meddelande om att en app är redo att installera. I den här skärmbilden har till exempel Work Folders for iOS-appen distribuerats med installationstypen **Hanterad iOS-app från App Store**.  
 ![Obligatorisk iOS-app](./media/iOS-Required-install.PNG)
 
-## Nästa steg
+## <a name="next-steps"></a>Nästa steg
 
 När du har distribuerat en app vill du övervaka dess förlopp. Mer information finns i [Övervaka appar i Microsoft Intune](monitor-apps-in-microsoft-intune.md).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

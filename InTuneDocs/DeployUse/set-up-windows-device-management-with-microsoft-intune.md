@@ -2,9 +2,8 @@
 title: Konfigurera Windows-enhetshantering med Microsoft Intune | Microsoft Intune
 description: "Aktivera hantering av mobila enheter (MDM) för Windows-datorer, till exempel Windows 10-enheter, med Microsoft Intune."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
+author: staciebarker
+manager: stabar
 ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
@@ -14,13 +13,13 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dfc5241376033471a232b059ac07fa4488f05514
-ms.openlocfilehash: c405408bd6a1e2b0743566e413436aefbaa7018b
+ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
+ms.openlocfilehash: 78137299b1c4e18fe68e1f9720a2111d1794e177
 
 
 ---
 
-# Konfigurera Windows-enhetshantering
+# <a name="set-up-windows-device-management"></a>Konfigurera Windows-enhetshantering
 
 Som Intune-administratör kan du aktivera registrering och hantering för Windows-datorer på två sätt:
 
@@ -29,7 +28,7 @@ Som Intune-administratör kan du aktivera registrering och hantering för Window
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## Konfigurera registrering via företagsportalappen
+## <a name="set-up-company-portal-app-enrollment"></a>Konfigurera registrering via företagsportalappen
 Du kan låta användarna installera och registrera sina enheter med hjälp av företagsportalappen. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange ett servernamn.
 
 1. **Konfigurera Intune**<br>
@@ -42,7 +41,7 @@ Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom at
   |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com |1 timme|
   |CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 timme|
 
-  `EnterpriseEnrollment-s.manage.microsoft.com` – Stöder en omdirigering till Intune-tjänsten med domänidentifiering från e-postens domännamn.
+  `EnterpriseEnrollment-s.manage.microsoft.com` – Stöder en omdirigering till Intune-tjänsten med domänidentifiering från e-postens domännamn
 
   `EnterpriseRegistration.windows.net` – Stöder Windows 8.1- och Windows 10 Mobile-enheter som registreras med Azure Active Directory med deras associerade arbets- eller skolkonto
 
@@ -54,17 +53,21 @@ Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom at
 
   ![Dialogrutan Windows-enhetshantering](../media/enroll-intune-winenr.png)
 
-4.  **Valfria steg**<br>Steget **Lägg till nycklar för separat inläsning** behövs inte för Windows 10. Steget **Överför certifikat för kodsignering ** behövs bara om du ska distribuera affärsappar som inte är tillgängliga från Windows Store. [Läs mer](set-up-windows-phone-8.0-management-with-microsoft-intune.md).
+4.  **Valfria steg**<br>Steget **Lägg till nycklar för separat inläsning** behövs inte för Windows 10. Steget **Överför certifikat för kodsignering ** behövs bara om du ska distribuera affärsappar som inte är tillgängliga från Windows Store.
 
-6.  **Informera användare**<br>Du måste informera användarna om hur de registrerar sina enheter och vad som händer när de registrerat dem för hantering:
-      - [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
+6.  **Berätta för dina användare hur de registrerar sina enheter och vad de kan förvänta sig när de registrerat sig för hantering.**
+
+    Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](../enduser/enroll-your-device-in-intune-windows.md).
+
+    Information om slutanvändaraktiviteter finns i de här artiklarna:
+      - [Resurser om slutanvändarens upplevelse med Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
       - [Vägledning för slutanvändare för Windows-enheter](../enduser/using-your-windows-device-with-intune.md)
 
-### Se även
+### <a name="see-also"></a>Se även
 [Krav för att registrera enheter i Microsoft Intune](prerequisites-for-enrollment.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

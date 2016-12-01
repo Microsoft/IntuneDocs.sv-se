@@ -3,27 +3,28 @@ title: "Välj hur du vill registrera mobila enheter | Microsoft Intune"
 description: "Bestäm hur du ska registrera mobila enheter i Intune genom att besvara några enkla frågor"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: d2989e39-9b76-411b-b6fb-7209adb3bfb6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
-ms.openlocfilehash: 509a0af6949d95a0c66c72043e67567b70ace22d
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 09c2940a99577769df1482314c488acf5823b51f
 
 
 ---
 
-# Välj hur du vill registrera mobila enheter
+# <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
 
 Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
-## **Tar de anställda med sina egna enheter (BYOD) eller tillhandahålls enheter av din organisation (COD)?**
+## <a name="do-employees-bring-their-own-devices-byod-or-are-devices-provided-by-your-organization-cod"></a>**Tar de anställda med sina egna enheter (BYOD) eller tillhandahålls enheter av din organisation (COD)?**
 
 > [!div class="button"]
 [BYOD >](choose-how-to-enroll-devices2.md)
@@ -36,6 +37,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

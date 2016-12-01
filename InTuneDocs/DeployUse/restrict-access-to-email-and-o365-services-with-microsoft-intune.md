@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/29/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,15 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b01f5ca5bb389fc8a9d87e956796823fee6c0d
-ms.openlocfilehash: 6e11d71265f01ae31ab3124a46aaa544ad2f453a
+ms.sourcegitcommit: 027e7e56e6f7d3a604336e0465f688af514c69e6
+ms.openlocfilehash: 68fc47ba9f63f2ba05abae1f0e5ae5c6b3dca463
 
 
 ---
 
-# Begränsa åtkomsten till e-post, O365 och andra tjänster med Microsoft Intune
+# <a name="restrict-access-to-email-o365-and-other-services-with-microsoft-intune"></a>Begränsa åtkomsten till e-post, O365 och andra tjänster med Microsoft Intune
 Du kan begränsa åtkomsten till företagsrelaterad e-post och O365-tjänster med villkorlig åtkomst i Intune. Med Intunes funktioner för villkorlig åtkomst kan du se till att åtkomsten till företagsrelaterad e-post och O365-tjänster är begränsad till enheter som är kompatibla med de regler som du anger.
-## Hur fungerar villkorlig åtkomst?
+## <a name="how-does-conditional-access-work"></a>Hur fungerar villkorlig åtkomst?
 Inställningar för efterlevnadsprinciper används för att utvärdera enhetens kompatibilitet. Principen för villkorlig åtkomst använder utvärderingen för att begränsa eller tillåta åtkomst till en specifik tjänst. När en princip för villkorlig åtkomst används i kombination med en efterlevnadsprincip kommer endast kompatibla enheter att kunna komma åt tjänsten. Principen för efterlevnad och principen för villkorlig åtkomst distribueras till användaren. Alla enheter som användaren använder för att komma åt tjänsterna kontrolleras för att se att de följer principerna.
 
 Tänk på att en efterlevnadsprincip måste distribueras till enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas.
@@ -34,7 +34,7 @@ Så här ser ett typiskt flöde för villkorlig åtkomst ut:
 
 ![Diagrammet visar beslutspunkterna som används för att avgöra om en enhet har åtkomst till en tjänst eller om den blockeras](../media/ConditionalAccess4.png)
 
-## Hur konfigurerar jag villkorlig åtkomst?
+## <a name="how-to-configure-conditional-access"></a>Hur konfigurerar jag villkorlig åtkomst?
 Använd villkorlig åtkomst om du vill hantera åtkomsten till Microsoft **Exchange On-premises**, **Exchange Online**, **Exchange Online Dedicated**, **SharePoint Online** och **Skype för företag – Online**.
 
 Du konfigurerar villkorlig åtkomst genom att konfigurera en efterlevnadsprincip för enheter och en princip för villkorlig åtkomst.
@@ -49,8 +49,8 @@ Du kan ange en princip för villkorlig åtkomst för att begränsa åtkomst base
 Till skillnad från andra Intune-principer kan principer för villkorlig åtkomst inte distribueras. När du har konfigurerat principen och valt de användare som den ska gälla för, tillämpas principen i stället på alla målanvändare. När en användare är angiven som mål för en policy, måste varje enhet de använder vara godkänd för att få åtkomst till resurser.
 
 
-## Nästa steg
-1. [Läs mer om principer för enhetsefterlevnad och hur de fungerar ](introduction-to-device-compliance-policies-in-microsoft-intune.md)
+## <a name="next-steps"></a>Nästa steg
+1. [Läs mer om principer för enhetsefterlevnad och hur de fungerar](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 2. [Skapa en efterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md)
 
@@ -66,6 +66,6 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

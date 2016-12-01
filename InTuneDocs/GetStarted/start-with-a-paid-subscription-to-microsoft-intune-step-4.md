@@ -1,11 +1,11 @@
 ---
 title: Hantera Intune-licenser | Microsoft Intune
-description: "Beskriver hur du tilldelar licenser till användare för din Intune-prenumeration"
+description: "Tilldela licenser till användare för din Intune-prenumeration"
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 11/22/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f86fe2710318209a2a4373beea1590c5343cbf4c
-ms.openlocfilehash: 08e112bfae9a3655f428d53f68922fd3ff4713b4
+ms.sourcegitcommit: 149f3a3310907d131affeaad4bd372aa60be9206
+ms.openlocfilehash: 325373a19de96265d3605ef22e633eb60e6be2b3
 
 
 ---
 
-# Hantera Intune-licenser
+# <a name="manage-intune-licenses"></a>Hantera Intune-licenser
 Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste du först tilldela varje användare en licens för Intune-prenumerationen med hjälp av [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854).
 
 Organisationer som använder Microsoft Enterprise Mobility + Security (EMS) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx). Mer information finns i [Hantera Intune-licenser med PowerShell](start-with-a-paid-subscription-to-microsoft-intune-step-4-posh.md).
 
-## Så här tilldelas Intune-licenser
+## <a name="how-intune-licenses-are-assigned"></a>Så här tilldelas Intune-licenser
 När användarkonton synkroniseras från din lokala Active Directory eller läggs till manuellt i din molntjänstprenumeration via [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) så tilldelas de inte en Intune-licens automatiskt. I stället måste en Intune-klientadministratör senare redigera användarkontot och tilldela en licens till användaren från Office 365-portalen.
 
 Om din prenumeration delar Azure AD med andra molntjänster som är associerade med din prenumeration har du också tillgång till användare som har lagts till i dessa tjänster. Dessa användare har ingen licens till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] förrän du tilldelar licenser till var och en av dem.
@@ -33,7 +33,7 @@ Om din prenumeration delar Azure AD med andra molntjänster som är associerade 
 > [!TIP]
 > Om alternativet för att tilldela eller återkalla en licens till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] är inaktiverat kan din prenumeration inkludera alternativ för volymlicensiering, t.ex. alternativen som är tillgängliga när du använder [Enterprise Mobility Suite + Security](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx). Information om hur du tilldelar eller återkallar licenser finns i dokumentationen för dina licensalternativ.
 
-## Tilldela en Intune-användarlicens
+## <a name="assign-an-intune-user-license"></a>Tilldela en Intune-användarlicens
 
 Du använder [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure AD.
 
@@ -43,9 +43,10 @@ Du använder [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=6988
 
 3.  Användarkontot har nu de nödvändiga behörigheterna som krävs för att använda tjänsten och registrera enheter för hantering.
 
-> [!NOTE] Användarna visas i konsolen när de har registrerat en enhet. 
+> [!NOTE]
+> Användarna visas i konsolen när de har registrerat en enhet.
 
-### Använda PowerShell för att hantera EMS-användarlicenser selektivt
+### <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Använda PowerShell för att hantera EMS-användarlicenser selektivt
 Organisationer som använder Microsoft Enterprise Mobility + Security (tidigare Enterprise Mobility Suite) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
 
 Om du vill tilldela användarlicenser för EMS-tjänster öppnar du PowerShell som administratör på en dator där [Azure Active Directory-modulen för Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) är installerad. Du kan installera PowerShell på en lokal dator eller på en AD FS-server.
@@ -85,7 +86,7 @@ Kontrollera med:
 
 ![PoSH-AddLic-Verify](./media/posh-addlic-verify.png)
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 >[!div class="step-by-step"]
 
@@ -93,6 +94,6 @@ Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -3,8 +3,9 @@ title: Funktioner i Intune-klientprogrammet | Microsoft Intune
 description: "Läs om funktionerna du kan använda i Intune när du hanterar Windows-datorer med Intune-klientprogrammet."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 09/14/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 453323aa38eed0a01aa8d583376162734439a69c
-ms.openlocfilehash: 0d4ec8077e2521b23808fcb537c4b2389fee714a
+ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
+ms.openlocfilehash: 1bc5370574c038d0fe34746aa89067d06cc80c31
 
 
 ---
 
-# Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet
+# <a name="windows-pc-management-capabilities-when-you-use-the-intune-software-client"></a>Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet
 I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
 -   **[Hantering av programvaruuppdateringar](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
@@ -36,7 +37,7 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 
 Intune stöder installation av klientprogrammet på upp till 7 000 Windows-enheter.
 
-## Krav på operativsystem
+## <a name="operating-system-requirements"></a>Krav på operativsystem
 Intune kan hantera datorer som kör följande Windows-versioner (både 32-bitars och 64-bitars):
 
 
@@ -51,7 +52,7 @@ Intune kan hantera datorer som kör följande Windows-versioner (både 32-bitars
 - **Windows 10** – Pro-, Education- och Enterprise-versionerna
 
 
-## Minsta maskinvarukrav
+## <a name="minimum-hardware-requirements"></a>Minsta maskinvarukrav
 Minimikraven på maskinvara för installation av Intune-klientprogrammet är:
 
 |Krav|Information|
@@ -60,7 +61,7 @@ Minimikraven på maskinvara för installation av Intune-klientprogrammet är:
 |Processor och minne|Se RAM- och processorkraven för datorns operativsystem.|
 |Diskutrymme|200 MB ledigt diskutrymme innan klientprogrammet har installerats.|
 
-## Ytterligare krav
+## <a name="further-requirements"></a>Ytterligare krav
 Minimikraven på programvara för installation av Intune-klientprogrammet är:
 
 |Krav|Information|
@@ -69,11 +70,11 @@ Minimikraven på programvara för installation av Intune-klientprogrammet är:
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune PC-klientprogrammet måste du avinstallera följande klientprogram från datorn:<br /><br />– Alla versioner av Configuration Manager<br />– Alla versioner av Microsoft Systems Management Server (SMS)|
 
-### Se även
+### <a name="see-also"></a>Se även
 [Funktioner för hantering av registrerade enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
