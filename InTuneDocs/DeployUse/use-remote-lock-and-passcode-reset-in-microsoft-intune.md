@@ -1,10 +1,11 @@
 ---
-title: "Använda fjärrlåsning och lösenordsåterställning | Microsoft Intune"
+title: "Fjärrlåsning och lösenordsåterställning | Microsoft Intune"
 description: "Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: staciebarker
 manager: angrobe
-ms.date: 07/21/2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,15 +13,15 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: e9cbf5858cc4e860b540f421b6d463b8e7a429cf
-ms.openlocfilehash: c2b4b6308569e1e67a1c3da18c12d19bdeecf08e
+ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
+ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
 
 ---
-# Skydda dina enheter med fjärrlåsning och lösenordsåterställning
+# <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Skydda dina enheter med fjärrlåsning och lösenordsåterställning
 Microsoft Intune tillhandahåller både funktioner för fjärrlåsning och lösenordsåterställning.
 
-## Fjärrlåsa en enhet
-Om en användare förlorar sin enhet kan du låsa enheten via fjärranslutning. Tabellen nedan visar hur fjärrlåsning fungerar på olika mobilplattformar.
+## <a name="lock-a-device-remotely"></a>Fjärrlåsa en enhet
+Om en användare förlorar en enhet kan du fjärrlåsa enheten. Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
 
 |Plattform|Fjärrlåsning|
 |------------|---------------|
@@ -29,33 +30,36 @@ Om en användare förlorar sin enhet kan du låsa enheten via fjärranslutning. 
 |Windows 10 och Windows 10 Mobile|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
-|Windows 8.1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
+|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 
+Fjärrlås stöds inte för Windows-datorer som registrerats i Intune-programklienten.
 
-### Så här fjärrlåser du en mobil enhet via Intune-konsolen
+### <a name="lock-a-mobile-device-remotely-through-the-intune-console"></a>Fjärrlåsa en mobil enhet via Intune-konsolen
 
 1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**.
 
 2.  Välj **Alla direkthanterade enheter** för enheter som registrerats i Intune eller **Alla hanterade enheter i Exchange ActiveSync**.
 
     > [!TIP]
-    > Du kan också navigera till en enhet efter användare. Välj **Alla användare**. Öppna sidan med egenskaper för användaren, välj **Enheter** och välj sedan namnet på den mobila enhet som du vill rensa.
+    > Du kan också navigera till en enhet efter användare. Välj **Alla användare**. Öppna sidan med egenskaper för användaren, välj **Enheter** och välj sedan namnet på den mobila enhet som du vill låsa.
 
 3.  Välj den eller de enheter i listan som du vill låsa. I verktygsfältet väljer du **Fjärruppgifter** och sedan **Fjärrlås**.
 
-## Återställa lösenordet på en enhet
-Om en användare glömmer sitt lösenord, kan du hjälpa dem genom att ta bort lösenordet från enheten eller genom att tvinga ett nytt tillfälligt lösenord till en enhet. Tabellen nedan visar hur lösenordsåterställning fungerar på olika mobilplattformar.
+## <a name="reset-the-passcode-on-a-device"></a>Återställa lösenordet på en enhet
+Om användare glömmer ett lösenord kan du hjälpa dem genom att ta bort lösenordet från enheten eller genom att framtvinga användningen av ett nytt tillfälligt lösenord på en enhet. Följande tabell visar hur lösenordsåterställning fungerar på olika mobilplattformar.
 
 |Plattform|Återställning av lösenord|
 |------------|------------------|
 |iOS|Stöd för att rensa lösenord från en enhet. Skapar inte ett nytt tillfälligt lösenord.|
-|Android|Stöds och ett tillfälligt lösenord skapas.|
+|Android|Stöds på versioner tidigare än Android 7.0. Skapar ett tillfälligt lösenord.|
 |Windows 10 Mobil|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds inte|
-|Windows 8.1|Stöds inte|
+|Windows 8,1|Stöds inte|
 
-### Så här återställer du ett lösenord
+Lösenordsåterställning stöds inte för Windows-datorer som registrerats i Intune-programklienten.
+
+### <a name="reset-a-passcode"></a>Återställa ett lösenord
 
 1.  I [Intune-administratörskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** &gt; **Alla mobila enheter**.
 
@@ -67,12 +71,11 @@ Om en användare glömmer sitt lösenord, kan du hjälpa dem genom att ta bort l
 3.  Välj den eller de enheter i listan som du vill låsa. I verktygsfältet väljer du **Fjärruppgifter** och sedan **Återställ lösenord**.
 
 
-### Se även
-[Ta enheter ur bruk](retire-devices-from-microsoft-intune-management.md)
-[Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)
+### <a name="see-also"></a>Se även
+[Ta enheter ur bruk](retire-devices-from-microsoft-intune-management.md) och [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx) (Selektiv Windows-rensning för datahantering på enheter)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

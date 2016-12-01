@@ -14,41 +14,41 @@ ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fea2e479273af7ff915449c96a72aeebba85a9
-ms.openlocfilehash: 3f434fc4cb9c90e28e516620383def8d91f11138
+ms.sourcegitcommit: 376c9bce811ffd986242678929469f3e28bfad4c
+ms.openlocfilehash: 43c8d5e065e785269b9d0cbf1813dcea83464975
 
 
 ---
 
-# Skapa en enhetsefterlevnadsprincip i Microsoft Intune
+# <a name="create-a-device-compliance-policy-in-microsoft-intune"></a>Skapa en enhetsefterlevnadsprincip i Microsoft Intune
 Det här avsnittet beskriver de steg du kan använda för att skapa en efterlevnadsprincip som en enhet måste följa för att anses vara kompatibel.
 
-##  Steg 1: Lägg till en ny princip
+##  <a name="step-1-add-a-new-policy"></a>Steg 1: Lägg till en ny princip
   I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Efterlevnadsprinciper** &gt; **Lägg till**.
 
   ![Skärmbild av sidan för efterlevnadsprincip i Intune-administratörskonsolen, som visar alternativet Lägg till på menyn överst på sidan](./media/intune-sa-3a-add-compliance-policy.png)
 
-##  Steg 2: Konfigurera inställningar
+##  <a name="step-2-configure-settings"></a>Steg 2: Konfigurera inställningar
 Aktivera önskade inställningar på sidan **Skapa princip**:
-  -   Inställningar för systemsäkerhet, t.ex. lösenord och kryptering
+  -   Inställningar för systemsäkerhet, t.ex. lösenord och kryptering.
   -   Inställningar för enhetens hälsotillstånd, t.ex. om en enhet är jailbrokad eller inte, eller om den rapporteras som felfri av Windows-tjänsten för attestering av hälsotillstånd.
-  -   Inställningar för enhetsegenskaper, t.ex. lägsta operativsystemsversion som krävs eller högsta operativsystemsversion som tillåts.
-![Sidan Skapa princip på fliken Allmänt ](./media/intune-sa-3b-create-policy.png)
+  -   Inställningar för enhetsegenskaper, t.ex. minsta operativsystemversion som krävs eller högsta operativsystemversion som tillåts.
+![Sidan Skapa princip på fliken Allmänt](./media/intune-sa-3b-create-policy.png)
 
 
-##  Steg 3: Spara principen
+##  <a name="step-3-save-the-policy"></a>Steg 3: Spara principen
 När du är klar väljer du **Spara princip**.
 
-Du kan välja att distribuera principen direkt efter att du har sparat principen eller så kan du välja att distribuera den senare. Den nya principen visas i noden **Efterlevnadsprinciper** på arbetsytan **Principer**.
+Du kan välja att distribuera principen direkt efter att du har sparat den eller välja att distribuera den senare. Den nya principen visas i noden **Efterlevnadsprinciper** på arbetsytan **Principer**.
 
-##  Steg 4: Ange giltighetsperioden för efterlevnadsstatus
-Om du vill ange hur lång tid enheten har på sig att checka in innan den anses vara ej kompatibel, går du till inställningarna för efterlevnadsprincip och ändrar tiden.  Standardinställningen är 30 dagar.
+##  <a name="step-4-set-the-compliance-status-validity-period"></a>Steg 4: Ange giltighetsperioden för efterlevnadsstatus
+Om du vill ange hur lång tid enheten har på sig att checka in innan den betraktas som icke-kompatibel, går du till inställningarna för efterlevnadsprinciper och ändrar tiden. Standardinställningen är 30 dagar.
 
-![alternativet Inställningar för efterlevnadsprinciper på principmenyraden](../media/mdm-compliance-policy-settings.png)
+![Alternativet Inställningar för efterlevnadsprinciper på principmenyraden](../media/mdm-compliance-policy-settings.png)
 
-![dialogrutan Efterlevnadsprincip](../media/mdm-ca-compliance-status-validity-period.png)
+![Dialogrutan Efterlevnadsprincip](../media/mdm-ca-compliance-status-validity-period.png)
 
-## Principinställningar som stöds
+## <a name="supported-policy-settings"></a>Principinställningar som stöds
 I följande tabell visas inställningarna för efterlevnadsprincip och de plattformar där de stöds.
 
 -------------
@@ -75,19 +75,19 @@ I följande tabell visas inställningarna för efterlevnadsprincip och de plattf
 
 Välj något av följande om du vill veta mer om efterlevnadsinställningar som stöds på varje plattform:
 > [!div class="op_single_selector"]
-- [Inställningar för efterlevnadsprinciper för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för policy för efterlevnad för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för efterlevnadsprinciper för Windows- och Windows Phone-enheter ](windows-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för efterlevnadsprinciper för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för efterlevnadsprinciper för Windows- och Windows Phone-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
 
-## Nästa steg
+## <a name="next-steps"></a>Nästa steg
 [Distribuera och övervaka en efterlevnadsprincip](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### Se även
+### <a name="see-also"></a>Se även
 [Introduktion till efterlevnadsprinciper för enheter](introduction-to-device-compliance-policies-in-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

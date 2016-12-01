@@ -3,26 +3,27 @@ title: "Välj hur du vill registrera mobila enheter | Microsoft Intune"
 description: "Bestäm hur du ska registrera mobila enheter i Intune genom att besvara några enkla frågor"
 keywords: 
 author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
-ms.service: 
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 24b8ecbf-7336-4543-8094-32688bda0b8f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 translationtype: Human Translation
-ms.sourcegitcommit: 899f50cfec9e7c20d2981c077f93e0fccf37dc2b
-ms.openlocfilehash: fc2f95b0e780b42dbeab977c340f3b2b7c9881e5
+ms.sourcegitcommit: 3a00f9cdfb137306a28b33f9d1acdb6bc108670f
+ms.openlocfilehash: 09007527fe4c2c94c02a674ccef01c0bb8893709
 
 
 ---
-# Välj hur du vill registrera mobila enheter
+# <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
 
 Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
-## **Är de företagsägda enheterna delade eller har de särskilda användare?**
+## <a name="are-your-company-owned-devices-shared-or-do-they-have-dedicated-users"></a>**Är de företagsägda enheterna delade eller har de särskilda användare?**
 
 > [!div class="button"]
 [Delad >](choose-how-to-enroll-devices4.md)
@@ -38,6 +39,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

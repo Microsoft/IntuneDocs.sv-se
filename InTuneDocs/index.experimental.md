@@ -5,33 +5,33 @@ layout: HubPage
 title: "Intune-dokumentation – MDM-dokumentation | Microsoft Docs"
 description: "Teknisk dokumentation för Microsoft Intune – mobilenhet och programhantering"
 keywords: Intune-dokumentation, MDM-dokumentation, dokumentation om hantering av mobila enheter, dokumentation om mobila enheter och program
-author: jeffgilb
-ms.author: jeffgilb
-manager: jeffgilb
-ms.date: 04/28/2016
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.date: 11/15/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bbab228b86bbec49bf68c7d91a05c4d0e7f37209
-ms.openlocfilehash: 1dd09018114ba68deae1adbde8e2c8167017bef7
+ms.sourcegitcommit: f9ab2200b1d357d6a805e3e5cd37f3c4391e3571
+ms.openlocfilehash: 89789e5b5f7b5030f8ec1bd0c62e8e410b9ed8be
 
 
 ---
-# Intune-dokumentation
+# <a name="intune-documentation"></a>Intune-dokumentation
 <article id="main">
     <section id="hero-content">
       <h1>Intune-dokumentation</h1>
       <h2>Lär dig att distribuera och hantera Microsoft Intune, en hanteringstjänst för mobila enheter och program.</h2>
-      <h3>Hantera Intune med Configuration Manager? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Se Configuration Manager-dokumentation &rarr;</a></h3>
+      <h3>Hantera Intune med Configuration Manager? <a href="http://go.microsoft.com/fwlink/?LinkId=816854" target="_blank">Se Configuration Manager-dokumentationen&rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/intune/understand-explore/introduction-to-microsoft-intune">Introduktion till Microsoft Intune</a></li>
+          <li><a href="http://fasttrack.microsoft.com/ems">Har du mer än 150 licenser? Utnyttja dina FastTrack-förmåner</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Vanliga scenarier som förlitar sig på Intune</a></li>
           <li><a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">Snabbstartsguide för Intune</a></li>
         </ul>
@@ -285,6 +285,6 @@ ms.openlocfilehash: 1dd09018114ba68deae1adbde8e2c8167017bef7
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

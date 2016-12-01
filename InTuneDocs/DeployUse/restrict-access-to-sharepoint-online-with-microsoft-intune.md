@@ -5,7 +5,7 @@ keywords:
 author: karthikaraman
 ms.author: karaman
 manager: angrobe
-ms.date: 07/13/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db1d43dd647122e7ba8ebd4e6df48e3c970a3392
-ms.openlocfilehash: 76ac4c92d090ef0057bd7c9687b169cd12b901a1
+ms.sourcegitcommit: 027e7e56e6f7d3a604336e0465f688af514c69e6
+ms.openlocfilehash: 5e8fa073cfd98d77ad7fd269fa14bce117e3e9e5
 
 
 ---
 
-# Begränsa åtkomsten till SharePoint Online med Microsoft Intune
+# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Begränsa åtkomsten till SharePoint Online med Microsoft Intune
 Använd villkorlig åtkomst i [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] om du vill kontrollera åtkomsten till filer i SharePoint Online.
 Villkorlig åtkomst består av två komponenter:
 - Principen för enhetsefterlevnad som enheten måste uppfylla för att anses vara kompatibel.
@@ -55,12 +55,12 @@ Om ett villkor inte är uppfyllt, kommer användaren att visas ett följande med
 
 -   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
 
-**Villkorlig åtkomst tillämpas på alla SharePoint-platser och extern delning är blockerad**
+**Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön ](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US)
 
 >[!NOTE]
 >Om du aktiverar villkorlig åtkomst för SharePoint Online rekommenderar vi att inaktiverar domänen i listan enligt beskrivningen i [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
 
-## Stöd för mobila enheter
+## <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 - iOS 8.0 och senare
 - Android 4.0 och senare, Samsung Knox Standard 4.0 eller senare
 - Windows Phone 8.1 och senare
@@ -68,11 +68,11 @@ Om ett villkor inte är uppfyllt, kommer användaren att visas ett följande med
 Du kan begränsa åtkomst till SharePoint Online vid åtkomst till denna från en webbläsare från **iOS**- och **Android**-enheter.  Åtkomst tillåts endast från endast webbläsare som stöds på kompatibla enheter:
 * Safari (iOS)
 * Chrome (Android)
-* Hanterad webbläsare (iOS och Android)
+* Managed Browser (iOS och Android 5.0 och senare)
 
 **Webbläsare som inte stöds blockeras**.
 
-## Stöd för datorer
+## <a name="support-for-pcs"></a>Stöd för datorer
 - Windows 8.1 och senare (efter att ha registrerats i Intune)
 - Windows 7.0, Windows 8.1 eller Windows 10 (om datorn är domänansluten),
 > [!NOTE]
@@ -92,9 +92,9 @@ AAD DRS aktiveras automatiskt för Intune och Office 365-kunder. Kunder som reda
     Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentication Library) inloggning i Windows-baserade Office 2013-klienter och förbättrar säkerheten med bland annat **multifaktorautentisering** och **certifikatbaserad autentisering**.
 
 
-## Konfigurera villkorlig åtkomst för SharePoint Online
+## <a name="configure-conditional-access-for-sharepoint-online"></a>Konfigurera villkorlig åtkomst för SharePoint Online
 
-### Steg 1: Konfigurera Active Directory-säkerhetsgrupper
+### <a name="step-1-configure-active-directory-security-groups"></a>Steg 1: Konfigurera Active Directory-säkerhetsgrupper
 Konfigurera säkerhetsgrupper för Azure Active Drive Directory för villkorlig åtkomstpolicy innan du börjar. Du kan konfigurera dessa grupper i **Office 365 admin center**, eller **Intune kontoportal**. Dessa grupper används för att bestämma målanvändare eller undantagna användare för principen. När en användare är angiven som mål för en policy, måste varje enhet de använder vara godkänd för att få åtkomst till resurser.
 
 Du kan ange två grupptyper i en SharePoint Online policy:
@@ -105,7 +105,7 @@ Du kan ange två grupptyper i en SharePoint Online policy:
 
 Om en användare finns i båda grupperna, kommer de att vara befriade från policyn.
 
-### Steg 2: Ställ in och distribuera en efterlevnadsprincip
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>Steg 2: Ställ in och distribuera en efterlevnadsprincip
 Om du inte redan har gjort det skapar du och distribuerar en efterlevnadsprincip för de användare som SharePoint Online-principen ska tillämpas på.
 
 > [!NOTE]
@@ -118,7 +118,7 @@ Mer information om hur du konfigurerar efterlevnadsprincipen finns i [Skapa en e
 
 När du är klar, fortsätt till **Steg 3**.
 
-### Steg 3: Ställ in SharePoint Online-principen
+### <a name="step-3-configure-the-sharepoint-online-policy"></a>Steg 3: Ställ in SharePoint Online-principen
 Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter kan komma åt SharePoint Online. Denna policy kommer att lagras i Azure Active Directory.
 
 #### <a name="bkmk_spopolicy"></a>
@@ -162,11 +162,11 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
   3.    Tryck på knappen **Aktivera webbläsaråtkomst**.
   4.  I webbläsaren Chrome loggar du ut från Office 365 och startar om Chrome.
 
-  På **iOS- och Android**-plattformar kommer för Azure Active Directory att utfärda ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten.  Enheten visar certifikatet med en uppmaning till slutanvändaren om att markera certifikatet på det sätt som visas i skärmbilderna nedan. Slutanvändaren måste välja detta certifikat innan det går att fortsätta med att använda webbläsaren.
+  På **iOS- och Android**-plattformar kommer för Azure Active Directory att utfärda ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten.  Enheten visar certifikatet med en uppmaning till slutanvändaren om att markera certifikatet på det sätt som visas i skärmbilderna nedan. Användarna måste välja det här certifikatet innan de kan fortsätta att använda webbläsaren.
 
   **iOS**
 
-  ![skärmbild av certifikatuppmaning på en ipad](../media/mdm-browser-ca-ios-cert-prompt.png)
+  ![skärmbild av certifikatfråga på en iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
   **Android**
 
@@ -179,7 +179,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
 Du behöver inte använda den villkorliga åtkomstpolicyn, den träder i kraft omedelbart.
 
-### Steg 4: Övervaka efterlevnaden och principer för villkorlig åtkomst
+### <a name="step-4-monitor-the-compliance-and-conditional-access-policies"></a>Steg 4: Övervaka efterlevnaden och principer för villkorlig åtkomst
 På arbetsytan **Grupper** kan du visa enheternas status.
 
 Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du något av följande **Filter**:
@@ -190,11 +190,11 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 -   **Enheter som är registrerade i AAD samt godkända** – Enheterna kan komma åt SharePoint Online.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

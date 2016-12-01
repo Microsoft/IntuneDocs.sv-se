@@ -2,9 +2,10 @@
 title: "Nästa steg efter att Intune-utvärderingen har slutförts | Microsoft Intune"
 description: "Vad du behöver veta om prenumerationer och licensiering när du har skapat din kostnadsfria 30-dagars utvärderingsversion av Intune"
 keywords: 
-author: Staciebarker
+author: lindavr
+ms.author: lindavr
 manager: angrobe
-ms.date: 04/28/2016
+ms.date: 08/09/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,14 @@ ms.assetid: cad9ae15-26e5-418d-8ce5-c2dafc2071f0
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60ee39a7eeeb9068a7350ec87f60e7148ccb7826
-ms.openlocfilehash: 3edd1821f910f9c2ea9e8324a3ac08e373ec7b0a
+ms.sourcegitcommit: 3f28cce75626df1115283dc98547adcb97ee1cb4
+ms.openlocfilehash: ea0e43d93a3e388d55329142292595a8b3b3dbd2
 
 
 ---
 
-# Nästa steg efter att Intune-utvärderingen har slutförts
-Om du köper minst 150 licenser för Microsoft Intune i ett tillgängligt abonnemang kan du använda FastTrack Center Benefit, en tjänst där Microsoft-specialister samarbetar med dig för att förbereda din miljö för Intune. Se [FastTrack Center-förmån för Enterprise Mobility Suite (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
+# <a name="next-steps-after-your-intune-evaluation-is-completed"></a>Nästa steg efter att Intune-utvärderingen har slutförts
+Om du köper minst 150 licenser för Microsoft Intune i ett tillgängligt abonnemang kan du använda FastTrack Center Benefit, en tjänst där Microsoft-specialister samarbetar med dig för att förbereda din miljö för Intune. Mer information finns i [FastTrack Center-förmån för Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility/Solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems).
 
 Du kan konvertera en kostnadsfri utvärderingsversion av Intune till en betald prenumeration på följande sätt:
 
@@ -30,10 +31,10 @@ Du kan konvertera en kostnadsfri utvärderingsversion av Intune till en betald p
 
 -   **Enterprise-avtal** (&gt;250 användare) – Det bästa licensieringsprogrammet för organisationer med fler än 250 användare. Enterprise-avtalet ger dig möjlighet att välja mellan lokal programvara och onlinetjänster beroende på dina behov så att du kan optimera organisationens teknikinvestering. Kontakta din kontoansvariga på Microsoft eller din lokala återförsäljare om du vill ha mer information, eller gå till [webbplatsen för volymlicensiering för företag](http://www.microsoft.com/licensing/licensing-options/enterprise.aspx).
 
--   **Online-prenumerationsprogram** (&lt;250 användare) – Programmet [Volymlicensiering för onlinetjänster](http://www.microsoft.com/licensing/online-services/default.aspx) är utformat särskilt för organisationen med färre än 250 användare. Använd det här programmet när du ska prenumerera på, hantera och distribuera Intune-tjänster.
+-   **Online-prenumerationsprogram** (&lt;250 användare) – Programmet [Volymlicensiering för onlinetjänster](http://www.microsoft.com/licensing/online-services/default.aspx) är utformat särskilt för organisationer med färre än 250 användare. Använd det här programmet när du ska prenumerera på, hantera och distribuera Intune-tjänster.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

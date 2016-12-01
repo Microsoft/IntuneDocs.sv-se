@@ -2,7 +2,8 @@
 title: Registrera med enhetsregistreringshanteraren | Microsoft Intune
 description: "Med kontot för enhetsregistreringshanterare (DEM) kan du hantera ett stort antal delade, företagsägda mobila enheter med ett enda användarkonto."
 keywords: 
-author: NathBarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/12/2016
 ms.topic: article
@@ -13,15 +14,15 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e2daff5dae435df55c866adbf602f554500d50e0
-ms.openlocfilehash: 4ed3222f45cb438dea807b1df268f47fff660d5f
+ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
+ms.openlocfilehash: fd289e355aca46eb0abe55edf09ebe5e030bcc63
 
 
 ---
 
 
-# Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune
-Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt Intune-konto som kan registrera upp till 1 000 enheter. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD). Användarna kan till exempel inte använda ”interna” e-postappar.
+# <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune
+Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt Intune-konto som kan registrera upp till 1 000 enheter. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD). Användarna kan till exempel inte använda ”interna” e-postappar.
 
 Du kan, exempelvis, tilldela en lagringshanterare eller övervakare ett användarkonto för enhetsregistreringshantering, så att denna kan göra följande:
 
@@ -50,10 +51,10 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 > Om du vill distribuera appar till enheter som hanteras med enhetsregistreringshanteraren distribuerar du företagsportalappen som en **obligatorisk installation** till enhetsregistreringshanterarens användarkonto.
 > I syfte att förbättra prestanda visar företagsportalappen på en enhet i DEM enbart den lokala enheten. Fjärrhantering av andra DEM-enheter kan bara utföras från Intune-administratörskonsolen.
 
-## Skapa konton för enhetsregistreringshanterare
+## <a name="create-device-enrollment-manager-accounts"></a>Skapa konton för enhetsregistreringshanterare
 Konton för enhetsregistreringshanteraren är användarkonton med behörighet att registrera ett stort antal enheter som ägs av företaget. Endast användare i Intune-konsolen kan vara enhetsregistreringshanterare.
 
-#### Lägg till en enhetsregistreringshanterare i Intune
+#### <a name="add-a-device-enrollment-manager-to-intune"></a>Lägg till en enhetsregistreringshanterare i Intune
 
 1.  Gå till [Microsoft Intune-kontoportalen](http://go.microsoft.com/fwlink/?LinkId=698854) och logga in på ditt administratörskonto.
 
@@ -71,7 +72,7 @@ Konton för enhetsregistreringshanteraren är användarkonton med behörighet at
 
 8.  Enhetsregistreringshanteraren kan nu registrera mobila enheter på samma sätt som när en slutanvändare registrerar en BYOD i företagsportalen.
 
-## Ta bort en enhetsregistreringshanterare från Intune
+## <a name="delete-a-device-enrollment-manager-from-intune"></a>Ta bort en enhetsregistreringshanterare från Intune
 
 1.  Logga in på [Microsoft Intune-administrationsportalen](http://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
 
@@ -95,6 +96,6 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

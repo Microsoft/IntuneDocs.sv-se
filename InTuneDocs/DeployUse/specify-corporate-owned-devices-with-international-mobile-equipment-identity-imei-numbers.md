@@ -2,8 +2,8 @@
 title: Ange IMEI-nummer | Microsoft Intune
 description: "Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilenhetsplattformar för att identifiera företagsägda mobila enheter"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/25/2016
 ms.topic: article
@@ -14,13 +14,13 @@ ms.assetid: 1712bd39-562b-4409-9cec-155d5f4d8a39
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c6b01a5efc0f60622b95623fd91f192c267ff766
-ms.openlocfilehash: 9bd2b4bb676e23712c0a668161b81c4e352bce87
+ms.sourcegitcommit: 9d44a6494bed0758b9768045bd204ea0eb481636
+ms.openlocfilehash: 040413b59c81c20cf579660a83acebc494c0a1b9
 
 
 ---
 
-# Ange enheter som ägs av företaget med IMEI-nummer (International Mobile Equipment Identity)
+# <a name="specify-corporateowned-devices-with-international-mobile-equipment-identity-imei-numbers"></a>Ange enheter som ägs av företaget med IMEI-nummer (International Mobile Equipment Identity)
 Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (International Mobile Equipment Identity) för mobilenhetsplattformar för att identifiera företagsägda mobila enheter. När enheterna har registrerats i Intune kan du se enheter som har importerade IMEI-nummer under **Grupper** > **Översikt** > **Alla enheter**. **Enhetsgrupp** visar en lista över enheter som har importerade IMEI-nummer med **Företag** i kolumnen **Ägarskap**.
 
 1. Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Företagets förregistrerade enheter** &gt; **Efter IMEI (alla plattformar)** och välj sedan **Lägg till enheter**. Du kan lägga till enheter på två sätt:
@@ -29,8 +29,8 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
 
         |||
         |-|-|
-        |&lt;IMEI #1&gt;|&lt;Information om enhet nr 1&gt;|
-        |&lt;IMEI #2&gt;|&lt;Information om enhet nr 2&gt;|
+        |&lt;IMEI-nummer 1&gt;|&lt;Information om enhet nr 1&gt;|
+        |&lt;IMEI-nummer 2&gt;|&lt;Information om enhet nr 2&gt;|
         CSV-filen när den visas i en textredigerare:
 
         ```
@@ -38,7 +38,7 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
         AABBBBBBCCCCCCE,PO 1234
         ```
 
-    -   **Lägg till enhetsinformation manuellt** – Ange IMEI-nummer och enhetsinformation för upp till fem enheter.
+    -   **Lägg till enhetsinformation manuellt** – Ange IMEI-nummer och enhetsinformation för upp till 15 enheter.
 
    *Informationen* är avsedd för administrativ användning och hjälper dig att identifiera vilket IMEI-nummer som associeras med en viss enhet. Informationen skickas inte till enheten, men den visas i Intune-konsolen.
 
@@ -50,6 +50,6 @@ När en enhet som har ett IMEI-nummer registreras i Intune (vanligtvis när en a
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,8 +2,8 @@
 title: "Inställningar för användarvillkor | Microsoft Intune"
 description: "Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, tillgång till arbetsresurser och användning av företagsportalappen påverkar enheter och användare."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article
@@ -14,18 +14,18 @@ ms.assetid: 6edf0ac1-4f46-4543-a9e5-f484ac37e9a5
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 70fcc08a5619892387aaf8223e9a74661d9c90f6
-ms.openlocfilehash: 1ab7f0b1979e8bc4dad8ce9244a5270935433f9c
+ms.sourcegitcommit: cba0d6d781d3050f4dd8aabd661d677ae849eff1
+ms.openlocfilehash: bc9a7b837ab4dcd402aeec572b819d56070eba82
 
 
 ---
 
-# Inställningar för användarvillkor i Microsoft Intune
+# <a name="terms-and-condition-policy-settings-in-microsoft-intune"></a>Inställningar för användarvillkor i Microsoft Intune
 Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, åtkomst till arbetsresurser och företagsportalappen påverkar enheter och användare. Användare måste godkänna de allmänna villkoren innan de kan använda företagsportalen för att registrera sig och komma åt sina arbeten.
 
 Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan också skapa versioner av samma användarvillkor på olika språk och sen distribuera dessa till relevanta grupper.
 
-## Skapa princip för allmänna villkor
+## <a name="create-a-terms-and-conditions-policy"></a>Skapa princip för allmänna villkor
 
 1.  I [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
 
@@ -47,7 +47,7 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
 4.  När du är klar klickar du på **Spara**. Den nya principen sparas i noden **Allmänna villkor** i arbetsytan **Princip**.
 
-## Distribuera en princip för allmänna villkor
+## <a name="deploy-a-terms-and-conditions-policy"></a>Distribuera en princip för allmänna villkor
 
 1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
@@ -57,16 +57,16 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
     När målanvändare sen går in på företagsportalen, så visar Intune användarvillkoren som du distribuerat ut. Användare måste då acceptera villkoren innan de får åtkomst till företagsresurser.
 
-## Övervaka en princip för allmänna villkor
+## <a name="monitor-a-terms-and-conditions-policy"></a>Övervaka en princip för allmänna villkor
 
 1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  I fönstret **Skapa ny rapport** klickar du sedan på **Visa rapport**. Rapporten öppnas med detaljer om vilka användare som godkänt de distribuerade användarvillkoren.
 
-### Uppdateringar och versionskontroll för användarvillkor
+### <a name="updates-and-version-control-for-terms-and-conditions"></a>Uppdateringar och versionskontroll för användarvillkor
 När du redigerar en befintlig policy för användarvillkor kan du välja vad som ska hända när du distribuerar den. Använd följande procedur för att uppdatera befintliga användarvillkorspolicys.
 
-## Arbeta med flera versioner av användarvillkor
+## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Arbeta med flera versioner av användarvillkor
 
 1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
@@ -76,11 +76,11 @@ När du redigerar en befintlig policy för användarvillkor kan du välja vad so
 
     Vi rekommenderar att du ökar versionsnumret och kräver godkännande varje gång du gör betydande ändringar i din användarvillkorspolicy. Behåll det nuvarande versionsnumret om du exempelvis bara fixar stavfel eller ändrar formateringen.
 
-### Se även
+### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

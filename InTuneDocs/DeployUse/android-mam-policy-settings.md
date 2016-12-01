@@ -14,97 +14,99 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e5e41cbbf3bac3ed78ee3a6929e364f829fa1d4b
-ms.openlocfilehash: f8a25815662333fd48d7ea9df24f5f228cee8217
+ms.sourcegitcommit: 13477a66ca8e89345334476445aae037ea8d9702
+ms.openlocfilehash: 55bf3ebde7d1185aebdb874c46aae72d8e179d85
 
 
 ---
 
-# Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune
+# <a name="android-mobile-app-management-policy-settings-in-microsoft-intune"></a>Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för en MAM-princip (hanteringsprincip för mobilappar) på **inställningsbladet** på Azure Portal.
 Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen *principhanterade appar* för att hänvisa till appar som är konfigurerade med MAM-principer.
 
-##  Inställningar för dataflytt
+##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
 
-- **Förhindra Android-säkerhetskopieringar:** Välj **Ja** om du vill förhindra eller **Nej** om du vill tillåta säkerhetskopiering av företagsdata från principhanterade appar.
+- **Förhindra Android-säkerhetskopieringar:** Välj **Ja** om du vill inaktivera eller **Nej** om du vill aktivera säkerhetskopiering av företagsdata från principhanterade appar.
 
-  Standardvärde = **Ja**.
-- **Tillåt att appen överför data till andra appar**: Välj ett alternativ för att ange de appar som kan ta emot företagsdata från principhanterade appar:
-  -   **Principhanterade appar**: Tillåt överföring endast till appar som har MAM-principen
-  -   **Alla appar**: Tillåt överföring till alla appar.
-  -   **Ingen**: Tillåt inte dataöverföring till någon app.
+  Standardvärde = **Ja**
+- **Tillåt att appen överför data till andra appar**: Välj ett alternativ för att ange vilken typ av appar som kan ta emot företagsdata från principhanterade appar:
+  -   **Principhanterade appar**: Tillåter endast överföring till appar som MAM-principen tillämpas på.
+  -   **Alla appar**: Aktiverar överföring till alla appar.
+  -   **Ingen**: Tillåter inte dataöverföring till någon app.
 
-  Standardvärde = **Principhanterade appar**.
-- **Tillåt att appen tar emot data från andra appar**: Ange appar som tillåts att överföra data till principhanterade appar:
-  -   **Principhanterade appar**: Tillåt endast dataöverföring från andra principhanterade appar.
-  -   **Alla appar**: Tillåt dataöverföring från alla appar.
-  -   **Inga**: Tillåt inte dataöverföring från någon app.
+ Standardvärde = **Principhanterade appar**.
+- **Tillåt att appen tar emot data från andra appar**: Ange vilka appar som kan överföra data till de principhanterade apparna:
+  -   **Principhanterade appar**: Tillåter endast dataöverföringar från andra principhanterade appar.
+  -   **Alla appar**: Tillåter dataöverföring från alla appar.
+  -   **Inga**: Tillåter inte dataöverföring från någon app.
 
-  Standardvärde = **Alla appar**.
+  Standardvärde = **Alla appar**
 
--   **Förhindra Spara som**: Välj **Ja** om du vill inaktivera alternativet Spara som i appar som använder den här principen. Välj **Nej** om du vill tillåta att Spara som används.
+-   **Förhindra Spara som**: Välj **Ja** om du vill inaktivera alternativet Spara som i appar som använder den här principen. Välj **Nej** om du vill tillåta användningen av Spara som.
 
-  Standardvärde = **Ja**.
-- **Begränsa klipp ut, kopiera och klistra in med andra appar**: Ange när åtgärder för klipp ut, kopiera och klistra in ska begränsas. Välj mellan:
-  -   **Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan principhanterade appar.
-  -   **Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan principhanterade appar.
-  -   **Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan principhanterade appar. Tillåt att data som klipps ut eller kopieras från en annan app kan klistras in i den här appen.
+  Standardvärde = **Ja**
+- **Begränsa klipp ut, kopiera och klistra in med andra appar**: Ange när åtgärderna Klipp ut, Kopiera och Klistra in ska begränsas. Välj mellan:
+  -   **Blockerad**: Tillåter inte åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
+  -   **Principhanterade appar**: Tillåter endast åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
+  -   **Principhanterade appar med inklistring**: Tillåter åtgärderna Klipp ut och Kopiera mellan principhanterade appar. Tillåter att utklippta eller kopierade data från alla appar kan klistras in i den här appen.
   -   **Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in mellan appar.
 
-  Standardvärde = **Principhanterade appar med inklistring**.
--   **Begränsa webbinnehåll till visning i Managed Browser**: När den här inställningen är aktiverad öppnas alla länkar i appen i Managed Browser.
+  Standardvärde = **Principhanterade appar med inklistring**
+-   **Begränsa webbinnehåll till visning i Managed Browser**: Välj **Ja** om du vill ange att alla länkar i appen ska öppnas i Managed Browser-appen.
 
-  För enheter som inte är registrerade i Intune öppnas webblänkar i principhanterade appar endast i appen Managed Browser med MAM-principen.
+  För enheter som inte har registrerats i Intune öppnas bara länkar i principhanterade appar i Managed Browser-appen om du använder MAM-principen.
 
   Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
 
-  Standardvärde = **Ja**.
-- **Kryptera appdata:** Välj **Ja** för att aktivera kryptering. När den här inställningen är aktiverad tillhandahålls krypteringen av Microsoft för appar som associeras med en MAM-princip. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid.
+  Standardvärde = **Ja**
+- **Kryptera appdata:** Välj **Ja** för att aktivera kryptering. När den här inställningen är aktiverad tillhandahåller Microsoft kryptering för appar som är associerade med en MAM-princip. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid.
   >[!NOTE]
   >Krypteringsmetoden är inte FIPS 140-2-certifierad.
 
-  Standardvärde = **Ja**.
+  Standardvärde = **Ja**
 
-- **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.
+- **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras med den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformationen till den interna adressboken på enheten.
 
-  När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen.
+  När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniseras direkt mellan appen och den interna adressboken bort. Kontakter som synkroniseras mellan den interna adressboken och en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen.
 
-  Standardvärde = **Ja**.
-- **Inaktivera utskrifter**: Välj **Ja** att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
+  Standardvärde = **Ja**
+- **Inaktivera utskrifter**: Välj **Ja** för att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
 
-  Standardvärde = **Ja**.
+  Standardvärde = **Ja**
 
-##  Åtkomstinställningar
+##  <a name="access-settings"></a>Åtkomstinställningar
 
 - **Kräv PIN-kod för åtkomst**: Välj **Ja** om du vill kräva en PIN-kod för användning av principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
 
- Standardvärde = **Ja**.
+ Standardvärde = **Ja**
 
  -  **Tillåt enkel PIN-kod:** Ange du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Standardvärde = **Ja**.
  - **PIN-kodslängd:** Ange det minsta antalet siffror i en PIN-kod. Standardvärde = **4**.
  - **Antal försök innan PIN-koden återställs**: Ange antalet tillåtna PIN-inmatningsförsök innan användaren måste återställa PIN-koden. Det finns inget standardvärde för den här inställningen.
-- **Kräv företagets autentiseringsuppgifter för åtkomst**: Välj **Ja** om du vill kräva att företagets autentiseringsuppgifter anges i stället för en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID. Användaren uppmanas att ange sina autentiseringsuppgifter för företaget.
+ - **Kräv fingeravtryck istället för PIN (Android 6.0+):** Välj **Ja** om du vill kräva att ett fingeravtryck används i stället för en PIN-kod för åtkomst till appen.
+ På Android-enheter kan du tillåta att användare identifierar sig med fingeravtryck i stället för med en numrerad PIN-kod. När de försöker öppna appen med ett arbetskonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod.
+ - **Kräv företagsautentiseringsuppgifter för åtkomst**: Välj **Ja** om du vill kräva att företagets autentiseringsuppgifter anges i stället för en PIN-kod eller fingeravtryck för åtkomst till appen. Om du väljer **Ja** åsidosätter den här inställningen kraven på PIN-kod eller Touch-ID. Användaren uppmanas att ange sina autentiseringsuppgifter för företaget. Standardvärde = **Nej**.
 
-  Standardvärde = **Nej**.
-- **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**: Välj **Ja** för att blockera appar från att köras på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för arbete.
 
-  Standardvärde = **Ja**.
+- **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**: Välj **Ja** för att blockera appar från att köras på jailbrokade eller rotade enheter. Användaren kan fortsätta att använda appar för personliga uppgifter, men måste använda en annan enhet för arbete.
+
+  Standardvärde = **Ja**
 - **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**
   -   **Tidsgräns**: Ange tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen.
   -   **Offlinerespittid**: Specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen om enheten är offline.
 
   Standardvärden = **30** minuters tidsgräns och **720** minuters offlinerespittid.
 
--   **Intervallet innan appdata rensas efter att enheten varit offline (dagar)**: Du kan välja att rensa företagsdata om en enhet har varit offline en viss tid.  Ange hur många dagar en enhet kan vara offline innan företagsdata tas bort från enheten.
+-   **Intervallet innan appdata rensas efter att enheten varit offline (dagar)**: Välj att rensa företagsdata om en enhet har varit offline en viss tid.  Ange hur många dagar en enhet kan vara offline innan företagsdata tas bort från enheten.
 
     >[!TIP]
     >Ange värdet **0** för att inaktivera den här inställningen.
 
-  Standardvärde = **90** dagar.
-- **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare)**: Välj **Ja** för att blockera funktioner för skärmdump och **Android Assistant** på enheten när den här appen används.
+  Standardvärde = **90** dagar
+- **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare)**: Välj **Ja** för att blockera funktioner för skärmdumpar och **Android Assistant** på enheten när den här appen används.
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

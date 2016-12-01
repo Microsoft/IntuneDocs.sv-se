@@ -2,9 +2,10 @@
 title: "Per app-VPN för Android med Pulse Secure | Microsoft Intune"
 description: "Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune."
 keywords: 
-author: nbigman
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/28/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,35 +14,35 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eb2260f6bd37647d34871c9776dba3628d0aa8f6
-ms.openlocfilehash: a2af91827f3a5ebc549e7f474943f1b0cc6208dd
+ms.sourcegitcommit: 4cab83c3d1a63a0e4f16ee838443ec032bcf1532
+ms.openlocfilehash: ace975b8a53e3ccd8b754019ec7f155c563339b5
 
 
 ---
 
-# Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter
+# <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter
 
-Du kan skapa en VPN-profil per app för enheter som kör Android 5.0 och senare som hanteras av Intune. Börja med att skapa en VPN-profil som använder anslutningstypen Pulse Secure. Skapa sedan en princip för anpassad konfiguration som associerar VPN-profilen med specifika appar. 
+Du kan skapa en VPN-profil per app för enheter som kör Android 5.0 och senare som hanteras av Intune. Börja med att skapa en VPN-profil som använder Pulse Secure- eller Citrix-anslutningstypen. Skapa sedan en princip för anpassad konfiguration som associerar VPN-profilen med specifika appar. 
 
-När du har distribuerat principen till din Android-enhet eller användargrupper ska användarna starta PulseSecure VPN. PulseSecure kommer sedan att endast att ge trafik från de angivna apparna tillåtelse att använda den öppna VPN-anslutningen.
+När du har distribuerat principen till din Android-enhet eller till användargrupper måste användarna starta Pulse Secure eller Citrix VPN. Anslutningen kommer sedan endast att ge trafik från de angivna apparna tillåtelse att använda den öppna VPN-anslutningen.
 
 > [!NOTE]
 >
 > Endast anslutningstypen Pulse Secure stöds för den här profilen.
 
 
-### Steg 1: Skapa en VPN-profil
+### <a name="step-1-create-a-vpn-profile"></a>Steg 1: Skapa en VPN-profil
 
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Du väljer en mall för den nya principen genom att expandera **Android** och välja **VPN-profil (Android 4 och senare)**.
-3. I mallen väljer du **Pulse Secure** som **Anslutningstyp**.
+3. I mallen väljer du **Pulse Secure** eller **Citrix** för **Anslutningstyp**.
 4. Slutför och spara VPN-profilen. Mer information om VPN-profiler finns i [VPN-anslutningar](../deploy-use/vpn-connections-in-microsoft-intune.md).
 
 > [!NOTE]
 >
 > Anteckna VPN-profilnamnet som ska användas i nästa steg. Till exempel MyAppVpnProfile.
 
-### Steg 2: Skapa en princip för anpassad konfigurering
+### <a name="step-2-create-a-custom-configuration-policy"></a>Steg 2: Skapa en princip för anpassad konfigurering
 
    1. I Intune-administratörskonsolen väljer du **Princip** > **Lägg till princip** > **Android** > **Anpassad konfiguration** > **Skapa princip**.
    2. Ange ett namn för principen.
@@ -53,7 +54,7 @@ När du har distribuerat principen till din Android-enhet eller användargrupper
 
 ![Exempel på VPN-anpassad princip per app för Android](./media/android_per_app_vpn_oma_uri.png)
 
-#### Ange applistan som svartlistad eller vitlistad (valfritt)
+#### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Ange applistan som svartlistad eller vitlistad (valfritt)
   Du kan ange en lista över appar som *inte* kan använda VPN-anslutning med hjälp av värdet **SVARTLISTAT**. Alla andra appar ansluter via VPN.
 Du kan också använda värdet **VITLISTAT** för att ange en lista över appar som *kan* använda VPN-anslutning. Appar som inte finns med i listan kan inte ansluta via VPN.
   1.    Välj **Lägg till** under **OMA-URI-inställningar**.
@@ -64,7 +65,7 @@ Du kan också använda värdet **VITLISTAT** för att ange en lista över appar 
 
 
 
-### Steg 3: Distribuera båda principerna
+### <a name="step-3-deploy-both-policies"></a>Steg 3: Distribuera båda principerna
 
 Du måste distribuera *båda* principerna för *samma* Intune-grupp.
 
@@ -77,6 +78,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

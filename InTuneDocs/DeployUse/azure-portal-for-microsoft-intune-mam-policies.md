@@ -14,54 +14,59 @@ ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9eb7e79bee2bc36dffab97ffdb6f665218bc739e
-ms.openlocfilehash: 0acef421f179ebf922ec8af71ba336e3e5f96bd2
+ms.sourcegitcommit: 03410d1e82cfeb8d354ee1d010ada07ca86191bc
+ms.openlocfilehash: e9d917401a8927099bdf8558e9f7e7185351f709
 
 
 ---
 
-# Azure Portal för Microsoft Intune MAM-principer
-## Använda Azure-portalen
+# <a name="azure-portal-for-microsoft-intune-mam-policies"></a>Azure Portal för Microsoft Intune MAM-principer
+
+## <a name="use-the-azure-portal"></a>Använda Azure-portalen
 På Azure-portalen kan du skapa och hantera MAM-principer för hantering av mobila appar.
 
 Azure Portal har stöd för att skapa MAM-principer för:
-- Appar som körs på enheter **som har registrerats i och som hanteras av Intune**.
+- Appar som körs på enheter **som har registrerats och som hanteras i Intune**.
+
 - Appar som körs på enheter som **inte är registrerade** i någon MDM-lösning.
 - Appar som körs på enheter som **har registrerats i en MDM-lösning från tredje part**.
 
 >[!IMPORTANT]
 
+
 > Om du hanterar enheter via Intune-administratörskonsolen kan du skapa en MAM-princip som kan användas med appar på enheter som har registrerats i Intune via [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
 > Du kanske inte ser alla MAM-principinställningar på Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer. Om du skapar MAM-principer i både Intune-administratörskonsolen och på Azure-portalen är det principen i Azure Portal som tillämpas på apparna och distribueras till användarna.
 
-## Logga in på Azure-portalen och anpassa startsidan
+
+## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Logga in på Azure-portalen och anpassa startsidan
 
 1.  Gå till [Azure-portalen](https://portal.azure.com) och logga in med dina autentiseringsuppgifter för [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
     ![Skärmbild av inloggningssidan för Azure-portalen](../media/AppManagement/AzurePortal_MAMSigninPage.png)
 
-2.  När du har loggat in visas **instrumentpanelsidan**. **Instrumentpanelssidan** kan anpassas.
+2.  När du har loggat in visas **instrumentpanelen**. **Instrumentpanelssidan** kan anpassas.
 
     ![Skärmbild av instrumentpanelen i Azure portal](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  På menyn **Bläddra** letar du upp **Intune**.![Skärmbild av menyn Bläddra med Intune markerat](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
+3.  På **Bläddra**-menyn letar du upp **Intune**.![Skärmbild av Bläddra-menyn med Intune markerat](../media/AppManagement/AzurePortal_MAM_Browse_Intune.png)
 
 4.  Välj **Intune** > **Hantering av mobilprogram i Intune** > **Inställningar**.
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
 
     > [!TIP]
-    > Om du vill fästa bladet på **startsidan** väljer du fästikonen på bladet **Hantering av mobilprogram i Intune**.
+
+    > Om du vill fästa ett blad på sidan **Start** kan du använda alternativet **fäst** på bladet. Klicka på fästikonen på **bladet för hantering av mobilappar i Intune** för att fästa bladet på sidan **Start** .
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune med fästikonen markerad](../media/AppManagement/AzurePortal_MAM_PinBladeAction.png)
 
     ![Skärmbild av instrumentpanelen med den fästa Intune-panelen](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
-## Nästa steg
+## <a name="next-steps"></a>Nästa steg
 [Förbered dig för att konfigurera hanteringsprinciper för mobilappar](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

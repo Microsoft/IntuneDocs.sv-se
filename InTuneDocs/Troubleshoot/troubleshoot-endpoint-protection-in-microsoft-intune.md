@@ -2,7 +2,8 @@
 title: "Felsöka Endpoint Protection i Microsoft Intune"
 description: "Lösa problem när du använder Microsoft Intune Endpoint Protection."
 keywords: 
-author: nathbarn
+author: staciebarker
+ms.author: stabar
 manager: angrobe
 ms.date: 08/02/2016
 ms.topic: article
@@ -13,20 +14,20 @@ ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ms.reviewer: tscott
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7b16c19c95384655e170c199597dd6bd31afb90d
-ms.openlocfilehash: 71f976fba252950fd9a8818fb27fbbb294369894
+ms.sourcegitcommit: cba0d6d781d3050f4dd8aabd661d677ae849eff1
+ms.openlocfilehash: bdcbe263529844cab04b1e5b715fe6eafd3feb86
 
 
 ---
 
-# Troubleshoot Endpoint Protection in Microsoft Intune
+# <a name="troubleshoot-endpoint-protection-in-microsoft-intune"></a>Troubleshoot Endpoint Protection in Microsoft Intune
 
 Använd informationen i det här avsnittet för att lösa problem när du använder Endpoint Protection i Microsoft Intune.
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
 
-### Endpoint Protection-felmeddelanden
+### <a name="endpoint-protection-error-messages"></a>Endpoint Protection-felmeddelanden
 I det här avsnittet beskrivs möjliga orsaker och lösningar för följande fel och varningar som visas i fönstret **Status för Endpoint Protection** i [Intune-administrationskonsolen](https://manage.microsoft.com).
 
 |Statusobjekt|Möjliga orsaker|Möjliga lösningar|
@@ -35,7 +36,7 @@ I det här avsnittet beskrivs möjliga orsaker och lösningar för följande fel
 |**Endpoint Protection är inaktiverat**|Endpoint Protection i Intune har inaktiverats av en administratör med hjälp av en princip eller av en användare på en hanterad dator.|Om Endpoint Protection har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Du kan aktivera Endpoint Protection från [Intune-administrationskonsolen](https://manage.microsoft.com) genom att öppna arbetsytan **Princip** och sedan ändra inställningen **Aktivera Endpoint Protection** i de principer som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera Endpoint Protection från en hanterad dator, startar du Intunes Endpoint Protection-klient från meddelandefältet så uppmanas du att aktivera Endpoint Protection.|
 |**Realtidsskydd är inaktiverat**|Realtidsskydd har inaktiverats av en administratör (med hjälp av en princip) eller av en användare på en hanterad dator.|Om realtidsskydd har inaktiverats kan du aktivera det från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera realtidsskydd från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip** och ändrar sedan inställningen **Aktivera realtidsskydd** till **Ja** i principerna som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera realtidsskydd från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. När du gör det uppmanas du att aktivera realtidsskydd.|
 |**Genomsökning av hämtningar är inaktiverat**|Hämtningsgenomsökning har inaktiverats av en administratör med hjälp av en princip eller av en användare på en hanterad dator.|Om genomsökning av hämtningar har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera genomsökning av hämtningar från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip** och ändrar sedan inställningen **Sök igenom alla hämtade filer** till **Ja** i de principer som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera genomsökning av hämtningar från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Klicka på fliken **Inställningar**, välj **Realtidsskydd**, markera kryssrutan **Sök igenom alla hämtade filer** och klicka sedan på **Spara ändringar**.|
-|**Övervakningen av fil- och programaktivitet är inaktiverat**|Övervakningen av fil- och programaktivitet har inaktiverats av en administratör med hjälp av en princip eller av en användare på en hanterad dator.|Om övervakningen av fil- och programaktivitet har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera övervakning av fil- och programaktivitet från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip** och ändrar sedan inställningen **Övervaka fil- och programaktivitet på datorn** till **Ja** i de principer som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera övervakning av fil- och programaktivitet från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Klicka på fliken **Inställningar**, välj **Realtidsskydd**, markera kryssrutan **Övervaka fil- och programaktivitet på datorn** och klicka sedan på **Spara ändringar**.|
+|**Fil- och programaktivitetsövervakning inaktiverad**|Övervakningen av fil- och programaktivitet har inaktiverats av en administratör med hjälp av en princip eller av en användare på en hanterad dator.|Om övervakningen av fil- och programaktivitet har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera övervakning av fil- och programaktivitet från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip** och ändrar sedan inställningen **Övervaka fil- och programaktivitet på datorn** till **Ja** i de principer som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera övervakning av fil- och programaktivitet från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Klicka på fliken **Inställningar**, välj **Realtidsskydd**, markera kryssrutan **Övervaka fil- och programaktivitet på datorn** och klicka sedan på **Spara ändringar**.|
 |**Beteendeövervakning är inaktiverat**|Beteendeövervakning har inaktiverats av en administratör (med hjälp av en princip) eller av en användare på en hanterad dator.|Om beteendeövervakning har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera beteendeövervakning från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip**, ändrar inställningen **Aktivera beteendeövervakning** till **Ja** i principerna som tillämpas på datorn och startar sedan om den hanterade datorn.<br /><br />Eller,<br /><br />om du vill aktivera beteendeövervakning från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Välj fliken **Inställningar**, välj **Realtidsskydd**, markera kryssrutan **Aktivera beteendeövervakning** och välj sedan **Spara ändringar**. Starta om datorn.|
 |**Genomsökning av skript är inaktiverat**|Skriptgenomsökning har inaktiverats av en administratör (med hjälp av en princip) eller av en användare på en hanterad dator.|Om skriptgenomsökning har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera skriptgenomsökning från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip** och ändrar sedan inställningen **Aktivera skriptgenomsökning** till **Ja** i de principer som tillämpas på datorn.<br /><br />Eller,<br /><br />om du vill aktivera skriptgenomsökning från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Välj **Realtidsskydd** på fliken **Inställningar**, markera kryssrutan **Aktivera skriptgenomsökning** och välj sedan **Spara ändringar**.|
 |**Kontrollsystem för nätverk är inaktiverat**|Nätverkskontrollsystemet har inaktiverats av en administratör med hjälp av en princip eller av en användare på en hanterad dator.|Om kontrollsystem för nätverk har inaktiverats kan du aktivera funktionen från [Intune-administrationskonsolen](https://manage.microsoft.com) eller från en hanterad dator. Gör något av följande:<br /><br />Om du vill aktivera kontrollsystem för nätverk från [Intune-administrationskonsolen](https://manage.microsoft.com) öppnar du arbetsytan **Princip**, ändrar inställningen **Aktivera kontrollsystem för nätverk** till **Ja** i de principer som tillämpas på datorn och startar sedan om den hanterade datorn.<br /><br />Eller,<br /><br />om du vill aktivera kontrollsystem för nätverk från en hanterad dator, startar du Endpoint Protection-klientprogrammet från meddelandefältet. Välj fliken **Inställningar**, välj **Realtidsskydd**, markera kryssrutan **Aktivera kontrollsystem för nätverk** och klicka sedan på **Spara ändringar**. Starta om datorn.|
@@ -44,11 +45,11 @@ I det här avsnittet beskrivs möjliga orsaker och lösningar för följande fel
 |**En snabbgenomsökning är försenad**|En snabbgenomsökning har inte utförts på 14 dagar. Detta kan bero på en omstart av datorn under en snabbgenomsökning.|Om snabbgenomsökningen är försenad kan du köra en snabbgenomsökning en gång eller schemalägga återkommande snabbgenomsökningar från [Intune-administrationskonsolen](https://manage.microsoft.com) med hjälp av informationen i avsnittet [Vanliga hanteringsuppgifter för Windows-dator med Microsoft Intune-datorklient](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).|
 |**Ett annat program för slutpunktsskydd körs**|Ett annat program för slutpunktsskydd körs och datorn är felfri.|Om ett annat Endpoint Protection-program har installerats och Intune identifierar programmet inaktiveras Endpoint Protection automatiskt som standard. Om Intune inte identifierar det andra slutpunktsprogrammet förblir Endpoint Protection aktiverat. Mer information finns i [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).|
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
