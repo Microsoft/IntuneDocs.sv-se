@@ -14,60 +14,64 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b25c7d7063ce586bb1cd960534f3e2ed57f6aec4
-ms.openlocfilehash: f70a32cf7db4d46f15cdef85e111a8857a1a0215
+ms.sourcegitcommit: ba4ace8106e83f3579cbaf98dcea8ef240a202a9
+ms.openlocfilehash: d150c97197e11d4a81727dca5ddd8eb1310aa193
 
 
 ---
 
 # <a name="prepare-ios-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg
 
-Använd Microsoft Intunes programhanteringsverktyg för iOS om du vill ändra beteendet för interna iOS-appar genom att begränsa funktionerna i appen utan att ändra koden i själva appen.
+Använd Microsoft Intunes programhanteringsverktyg för iOS om du vill ändra beteendet för interna iOS-appar genom att möjliggöra skyddsfuntionerna för Intune-appar utan att ändra koden i själva appen.
 
-Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har bearbetats kan du ändra appens funktioner med [Intunes hanteringsprinciper för mobilprogram](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) som du konfigurerar.
+Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har bearbetats kan du ändra appens funktioner med [Intunes hanteringsprinciper för mobilprogram](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) utvecklad av IT-administratören.
 
-Om du vill ladda ned verktyget går du till [Microsoft Intunes appomslutningsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
+Om du vill ladda ned verktyget går du till [Microsoft Intunes appomslutningsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) på GitHub.
 
 
 
-## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Kontrollera att du uppfyller kraven för att använda programhanteringsverktyget
-Mer information om kraven och hur du konfigurerar dem finns i [Skype för Business Online: Aktivera din klient för modern autentisering](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+## <a name="fulfill-the-prerequisites-for-the-app-wrapping-tool"></a>Kontrollera att du uppfyller kraven för programhanteringsverktyget
+Se blogginlägget om [Hur du skaffar förutsättningar för Intunes programhanteringsverktyg för iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) för att lära dig mer om hur du skaffar förutsättningarna.
 
 |Krav|Mer information|
 |---------------|--------------------------------|
-|Operativsystem och verktygsuppsättning som stöds|Du måste köra programhanteringsverktyget på en Mac OS-dator som kör OS X 10.8.5 eller senare och som har verktygsuppsättningen XCode version 5 eller senare installerad.|
-|Signeringscertifikat och etableringsprofil|Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/).|
-|Bearbeta en app med programhanteringsverktyget|Apparna måste vara utvecklade och signerade av ditt företag eller en oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 8.0 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om PIE-formatet finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
-|Appar som verktyget inte kan bearbeta|Krypterade appar, osignerade appar och appar med utökade filattribut.|
+|Operativsystem och verktygsuppsättning som stöds | Du måste köra programhanteringsverktyget på en Mac OS-dator som kör OS X 10.8.5 eller senare och som har verktygsuppsättningen XCode version 5 eller senare installerad.|
+|Signeringscertifikat och etableringsprofil | Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/).|
+|Bearbeta en app med programhanteringsverktyget  |Apparna måste vara utvecklade och signerade av ditt företag eller en oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 8.0 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om PIE-formatet finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
+|Appar som verktyget inte kan bearbeta | Krypterade appar, osignerade appar och appar med utökade filattribut.|
 |Ställa in rättigheter för din app|Innan du omsluter appen måste du ställa in rättigheter, som ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).|
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
-1.  Ladda ned filerna för programhanteringsverktyget till en Mac OS-dator från databasen för Microsoft Intunes programhanteringsverktyg för iOS på [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
+1.  Hämta filerna för programhanteringsverktyget från [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) till en macOS-dator.
 
 2.  Dubbelklicka på **Microsoft Intune App Wrapping Tool for iOS.dmg**. Ett fönster med licensavtalet för slutanvändare (EULA) visas. Läs igenom dokumentet noggrant.
 
 3. Välj **Godkänn** för att godkänna licensavtalet och montera paketet på datorn.
 
-4.  Öppna IntuneMAMPackager och spara filerna i en lokal mapp på Mac OS-datorn. Nu kan du börja köra programhanteringsverktyget.
+4.  Öppna mappen **IntuneMAMPackager** och spara innehållet på macOS-datorn. Nu kan du börja köra programhanteringsverktyget.
 
 ## <a name="run-the-app-wrapping-tool"></a>Kör App-Wrapping-verktyget
-* Öppna en terminal och gå till mappen där du sparade filerna för programhanteringsverktyget. Det körbara verktyget heter IntuneMAMPackager och finns i IntuneMAMPackager/Contents/MacOS. Kör kommandot så här:
 
-    ```
+### <a name="use-terminal"></a>Använd terminal
+
+Öppna macOS-terminalprogrammet och navigera till mappen där du sparade programhanteringsverktygets filer. Det körbara verktyget heter IntuneMAMPackager och finns i IntuneMAMPackager/Contents/MacOS. Kör kommandot så här:
+
+```
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
+```
 
-    ```
+> [!NOTE]
+> Vissa parametrar är valfria, som du ser i följande tabell.
 
-    > [!NOTE]
-    > Vissa parametrar är valfria, som du ser i följande tabell.
+**Exempel:** Följande exempelkommando kör programhanteringsverktyget i appen MyApp.ipa. En etableringsprofil och en SHA-1-hash för signeringscertifikatet anges och används för att signera den omslutna appen. Utdata-appen (MyApp_Wrapped.ipa) skapas och lagras i mappen Skrivbord.
 
-    **Exempel:** Följande exempelkommando kör programhanteringsverktyget på appen MyApp.ipa. En etableringsprofil och en SHA-1-hash anges. Den bearbetade appen (MyApp_Wrapped.ipa) skapas och lagras i mappen Skrivbord.
+```
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true
+```
 
-    ```
-    ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true
-    ```
-    Du kan använda följande kommandoradsegenskaper med programhanteringsverktyget:
+### <a name="command-line-parameters"></a>Kommandoradsparametrar
+Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 
 |Egenskap|Använd så här|
 |---------------|--------------------------------|
@@ -103,20 +107,20 @@ I mappen IntuneMAMPackager/Contents/MacOS öppnar du `Parameters.plist` (en tom 
 
 Kör IntuneMAMPackager med plist som enda argument:
 
-```
+```bash
 ./IntuneMAMPackager –f Parameters.plist
 ```
 
-* När bearbetningen är klar visas meddelandet ”Appen har omslutits”.
+### <a name="post-wrapping"></a>Efter omslutning
 
-    Om ett fel inträffar hittar du hjälp i [Felmeddelanden](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md#error-messages).
+När omslutningen är klar visas meddelandet ”Appen har omslutits”. Om ett fel inträffar hittar du hjälp i [Felmeddelanden](#error-messages-and-log-files).
 
-*   Den omslutna appen sparas i den utdatamapp du har angett tidigare. Du kan ladda upp appen till [wit_nextref](../includes/wit_nextref_md.md) och koppla den till en princip för hantering av mobila appar.
+Den omslutna appen sparas i den utdatamapp du har angett tidigare. Du kan ladda upp appen till Intune-administratörskonsol och koppla den till en princip för hantering av mobila appar.
 
-    > [!IMPORTANT]
-    > När du överför en omsluten app kan du försöka att uppdatera en äldre version av appen om en äldre version (omsluten eller intern) redan har distribuerats till Intune. Om det uppstår ett fel kan du ladda upp appen som en ny app och ta bort den äldre versionen.
+> [!IMPORTANT]
+> När du överför en omsluten app kan du försöka att uppdatera en äldre version av appen om en äldre version (omsluten eller intern) redan har distribuerats till Intune. Om det uppstår ett fel kan du ladda upp appen som en ny app och ta bort den äldre versionen.
 
-    Nu kan du distribuera appen till dina [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper, så körs appen på enheten med de begränsningar som du anger.
+Du kan nu distribuera appen till användargrupper och ange programskyddsprinciper till appen. Appen körs på enheten med de programskyddsprinciper som du har angett.
 
 ## <a name="error-messages-and-log-files"></a>Felmeddelanden och loggfiler
 Använd följande information för att felsöka problem med programhanteringsverktyget.
@@ -166,13 +170,13 @@ Appar som har omslutits med hjälp av programhanteringsverktyget genererar logga
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Certifikat, etableringsprofil och autentiseringskrav
 
-Programhanteringsverktyget har vissa krav som måste uppfyllas för att säkerställa fullständig funktionalitet.
+Programhanteringsverktyget för iOS har vissa krav som måste uppfyllas för att säkerställa fullständig funktionalitet.
 
 |Krav|Information|
 |---------------|-----------|
-|Etableringsprofil|Kontrollera att etableringsprofilen är giltig innan du lägger till den. Programhanteringsverktyget kontrollerar inte om etableringsprofilen har gått ut när en iOS-app bearbetas. Om en förfallen etableringsprofil har angetts tar programhanteringsverktyget med den förfallna etableringsprofilen och du märker inte att det är något problem förrän det visar sig att appen inte kan installeras på en iOS-enhet.|
-|Certifikat|Kontrollera att certifikatet är giltigt innan du anger det. Verktyget kontrollerar inte om ett certifikat har upphört att gälla när iOS-appar bearbetas. Om hash-värdet för ett utgånget certifikat anges, behandlar verktyget appen och signerar den, men kommer inte att kunna installera den på enheterna.<br /><br />Kontrollera att certifikatet som angavs för signering av den paketerade appen har en motsvarighet i etableringsprofilen. Verktyget validerar inte om etableringsprofilen har en motsvarighet för det certifikat som angavs för signering av den omslutna appen.|
-|Autentisering|En enhet måste ha en PIN-kod för att krypteringen ska fungera. På enheter där du har distribuerat en omsluten app måste användaren autentiseras igen med [wit_nextref](../includes/wit_nextref_md.md) när han eller hon trycker i statusfältet på enheten. Standardprincipen i en omsluten app är *autentisering vid omstart*. iOS hanterar externa meddelanden (till exempel ett telefonsamtal) genom att avsluta appen och sedan starta om den.
+|iOS-etableringsprofil|Kontrollera att etableringsprofilen är giltig innan du lägger till den. Programhanteringsverktyget kontrollerar inte om etableringsprofilen har gått ut när en iOS-app bearbetas. Om en förfallen etableringsprofil har angetts tar programhanteringsverktyget med den förfallna etableringsprofilen och du märker inte att det är något problem förrän det visar sig att appen inte kan installeras på en iOS-enhet.|
+|iOS-signeringscertifikat|Kontrollera att signeringscertifikatet är giltigt innan du anger det. Verktyget kontrollerar inte om ett certifikat har upphört att gälla när iOS-appar bearbetas. Om hash-värdet för ett utgånget certifikat anges, behandlar verktyget appen och signerar den, men kommer inte att kunna installera den på enheterna.<br /><br />Kontrollera att certifikatet som angavs för signering av den omslutna appen har en motsvarighet i etableringsprofilen. Verktyget validerar inte om etableringsprofilen har en motsvarighet för det certifikat som angavs för signering av den omslutna appen.|
+|Autentisering|En enhet måste ha en PIN-kod för att krypteringen ska fungera. På enheter där du har distribuerat en omsluten app måste användaren loggar in igen med ett arbets- eller skolkonto när hen trycker i statusfältet på enheten. Standardprincipen i en omsluten app är *autentisering vid omstart*. iOS hanterar externa meddelanden (till exempel ett telefonsamtal) genom att avsluta appen och sedan starta om den.
 
 
 ## <a name="setting-app-entitlements"></a>Ställa in apprättigheter
@@ -195,27 +199,27 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 1.  Aktivera funktioner i din app:
 
-    1.  Gå till målet för din app i Xcode och klicka på **Funktioner**.
+    a.  Gå till målet för din app i Xcode och klicka på **Funktioner**.
 
-    2.  Aktivera lämpliga funktioner. Detaljerad information om varje funktion och hur du fastställer rätt värden finns i [Lägga till funktioner](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) i iOS Developer Library.
+    b.  Aktivera lämpliga funktioner. Detaljerad information om varje funktion och hur du fastställer rätt värden finns i [Lägga till funktioner](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) i iOS Developer Library.
 
-    3.  Notera eventuella ID:n som du skapade under processen.
+    c.  Notera eventuella ID:n som du skapade under processen.
 
-    4.  Skapa och registrera den app som ska omslutas.
+    d.  Skapa och registrera den app som ska omslutas.
 
 2.  Aktivera rättigheter i din etableringsprofil:
 
-    1.  Logga in på Apple Developer Member Center.
+    a.  Logga in på Apple Developer Member Center.
 
-    2.  Skapa en etableringsprofil för din app. Instruktioner finns i [Skaffa förutsättningarna för Intune-apphanteringsverktyget för iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
+    b.  Skapa en etableringsprofil för din app. Instruktioner finns i [Skaffa förutsättningarna för Intune-apphanteringsverktyget för iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
-    3.  Aktivera samma rättigheter som du har i din app i din etableringsprofil. Du måste ange samma ID:n som du angav under utvecklingen av din app.
+    c.  Aktivera samma rättigheter som du har i din app i din etableringsprofil. Du måste ange samma ID:n som du angav under utvecklingen av din app.
 
-    4.  Slutför guiden för etableringsprofiler och ladda ner filen.
+    d.  Slutför guiden för etableringsprofiler och ladda ner filen.
 
 3.  Kontrollera att du har uppfyllt alla krav och omslut därefter appen.
 
-### <a name="troubleshooting-common-errors-with-entitlements"></a>Felsökning av vanliga fel med rättigheter
+### <a name="troubleshoot-common-errors-with-entitlements"></a>Felsökning av vanliga fel med rättigheter
 Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporterar ett rättighetsfel.
 
 |Problem|Orsak|Lösning|
@@ -223,7 +227,7 @@ Prova följande felsökningssteg om programhanteringsverktyget för iOS rapporte
 |Det gick inte att parsa rättigheter som genererats av indataappen.|Programhanteringsverktyget kan inte läsa rättighetsfilen som har extraherats från appen. Rättighetsfilen kan vara felaktig.|Kontrollera rättighetsfilen för din app. Följande anvisningar beskriver hur du gör. Sök efter felaktig syntax vid kontroll av rättighetsfilen. Filen bör vara i XML-format.|
 |Rättigheter saknas i etableringsprofilen (saknade rättigheter anges i listan). Paketera om appen med en etableringsprofil som har dessa rättigheter.|Det finns ett matchningsfel mellan rättigheter aktiverade i etableringsprofilen och de funktioner som aktiverats i appen. Denna felmatchning gäller även de ID:n som associeras med specifika funktioner (som appgrupper och nyckelringsåtkomst).|I allmänhet kan du skapa en ny etableringsprofil som möjliggör samma funktioner som appen. När ID:n mellan profilen och appen inte matchar ersätter programhanteringsverktyget dessa ID:n om så är möjligt. Om felet fortfarande visas när du har skapat en ny etableringsprofil kan du prova att ta bort rättigheter från appen med hjälp av parametern -e (se avsnittet Använda parametern -e för att ta bort rättigheter från en app).|
 
-### <a name="finding-the-existing-entitlements-of-a-signed-app"></a>Hitta befintliga rättigheter för en signerad app
+### <a name="find-the-existing-entitlements-of-a-signed-app"></a>Hitta befintliga rättigheter för en signerad app
 Granska befintliga rättigheter för en signerad app och en etableringsprofil:
 
 1.  Hitta .ipa-filen och ändra dess tillägg till .zip.
@@ -254,7 +258,7 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 
 -   Signeringscertifikatet, etableringsprofilen och affärsappen som du anger måste finnas på samma Mac OS-dator som den som du använder för att köra programhanteringsverktyget. Om filerna finns på en UNC-sökväg kontrollerar du att de är tillgängliga från Mac OS-datorn. Sökvägen måste skyddas via IPsec- eller SMB-signering.
 
-    Den omslutna appen som importeras till [wit_nextref](../includes/wit_nextref_md.md)-konsolen måste finnas på samma datorn som du kör verktyget på. Om filen finns på en UNC-sökväg kontrollerar du att den är tillgänglig på den dator som [wit_nextref](../includes/wit_nextref_md.md)-konsolen körs på. Sökvägen måste skyddas via IPsec- eller SMB-signering.
+    Den omslutna appen importerats till administratörskonsolen bör vara på detsamma datorn som du körs verktyget på. Om filén finns på en UNC-sökväg, måste du kontrollera att det är tillgängligt på den dator som kör administratörskonsolen. Sökvägen måste skyddas via IPsec- eller SMB-signering.
 
 -   Miljön där programhanteringsverktyget hämtas från GitHub-databasen måste vara skyddad med IPsec eller SMB-signering.
 
@@ -273,6 +277,6 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

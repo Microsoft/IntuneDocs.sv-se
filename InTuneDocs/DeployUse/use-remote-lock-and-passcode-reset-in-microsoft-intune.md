@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: f69855f27ddc8ab6903c317383ef715f98590caf
+ms.sourcegitcommit: aae739b5ea8640449f180535a6d8f1550c7ae228
+ms.openlocfilehash: 8dc7f1c7eb32828854b4e2309c915f4fd0cba9a2
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Skydda dina enheter med fjärrlåsning och lösenordsåterställning
@@ -25,12 +25,13 @@ Om en användare förlorar en enhet kan du fjärrlåsa enheten. Följande tabell
 
 |Plattform|Fjärrlåsning|
 |------------|---------------|
+|macOS|Stöds inte|
 |iOS|Stöds|
 |Android|Stöds|
 |Windows 10 och Windows 10 Mobile|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
-|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
+|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 
 Fjärrlås stöds inte för Windows-datorer som registrerats i Intune-programklienten.
 
@@ -50,12 +51,14 @@ Om användare glömmer ett lösenord kan du hjälpa dem genom att ta bort lösen
 
 |Plattform|Återställning av lösenord|
 |------------|------------------|
+|macOS|Stöds inte|
 |iOS|Stöd för att rensa lösenord från en enhet. Skapar inte ett nytt tillfälligt lösenord.|
 |Android|Stöds på versioner tidigare än Android 7.0. Skapar ett tillfälligt lösenord.|
 |Windows 10 Mobil|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
-|Windows RT 8.1 och Windows RT|Stöds inte|
-|Windows 8,1|Stöds inte|
+|Windows RT 8.1|Stöds inte|
+|Windows 8,1|Stöds inte|
+|Windows 10 desktop|Stöds inte|
 
 Lösenordsåterställning stöds inte för Windows-datorer som registrerats i Intune-programklienten.
 
@@ -76,6 +79,6 @@ Lösenordsåterställning stöds inte för Windows-datorer som registrerats i In
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

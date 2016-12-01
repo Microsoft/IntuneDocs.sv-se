@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 11/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
+ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
+ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
 
 
 ---
@@ -29,7 +29,7 @@ Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhe
 
 Kontrollerar att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Du kan läsa om konfigurationskraven i:
 
--   [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
+-   [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment.md)
 -   [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -   [Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -   [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
@@ -50,13 +50,13 @@ Dessa problem kan uppstå på alla enhetsplattformar.
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
 **Problem:** En användare får ett fel på enheten under registreringen, som **Företagsportalen är för tillfället otillgänglig** på en iOS-enhet och DMPdownloader.log på Configuration Manager innehåller felet **DeviceCapReached**.
 
-**Lösning:** På grund av utformningen kan användarna inte registrera fler än fem enheter.
+**Lösning:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrollera antalet enheter som har registrerats och som tillåts
 
-1.  Validera i Intunes administrationsportal att användaren inte har fler än fem enheter tilldelade
+1.  Validera i Intunes administrationsportal att användaren inte har fler än maximalt tillåtna 15 enheter tilldelade.
 
-2.  Kontrollera i Intunes administrationsportal  under Admin\Hantering av mobila enheter\Registreringsregler att gränsen för enhetsregistrering är inställd på fem.
+2.  Kontrollera i Intunes administrationskonsol under Admin\Hantering av mobila enheter\Registreringsregler att gränsen för enhetsregistrering är inställd på 15.
 
 Användare av mobila enheter kan ta bort enheter på följande URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
 
@@ -89,7 +89,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 ### <a name="company-portal-temporarily-unavailable"></a>Företagsportalen är för tillfället otillgänglig
 **Problem:** Användaren får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
 
-#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Felsökning för felet Företagsportalen är för tillfället otillgänglig
+**Lösning:**
 
 1.  Ta bort företagsportalappen för Intune från enheten.
 
@@ -104,7 +104,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
 **Problem:** Användaren får felet **MDM-utfärdare har inte definierats**.
 
-#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Felsöka MDM-auktoritet har inte definierats
+**Lösning:**
 
 1.  Kontrollera att MDM-auktoriteten har ställts in korrekt för den version av Intune-tjänsten som du använder, det vill säga för Intune, O365 MDM eller System Center Configuration Manager med Intune. För Intune ställs MDM-utfärdaren in under **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i O365 är det en inställning under **Mobila enheter**.
 
@@ -152,16 +152,65 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 
 ## <a name="android-issues"></a>Android-problem
+### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Enheter kan inte checka in med Intune-tjänsten och visas som "Ohälsosamma" i Intune-administrationskonsolen
+**Problem:** vissa Samsung-enheter som kör Android 4.4.x och 5.x kan sluta checka in med Intune-tjänsten. Om enheter inte checkar in:
+
+- Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
+- Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
+- Användare som är skyddade med principer för villkorlig åtkomst kan förlora åtkomst till företagets resurser.
+
+Samsung har bekräftat att Samsung Smart Manager-programvaran, som medföljer vissa Samsung-enheter, kan inaktivera Intunes företagsportal och dess komponenter. När företagsportalen är i ett inaktiverat tillstånd, kan den inte köras i bakgrunden och kan därför kan inte kontakta tjänsten Intune.
+
+**Lösning nr 1:**
+
+Be användarna att starta företagsportalappen manuellt. När appen startar om, checkar enheten in med Intune-tjänsten.
+
+> [!IMPORTANT]
+> Att öppna företagsportalappen manuellt är en tillfällig lösning eftersom Samsung Smart Manager kan inaktivera företagsportalenappen igen.
+
+**Lösning nr 2:**
+
+Be användarna att försöka uppgradera till Android 6.0. Inaktiveringsproblemet inträffar inte på Android 6.0-enheter. För att kontrollera om en uppdatering är tillgänglig, kan användare gå till **Inställningar** > **Om enheten** > **Hämta uppdateringar manuellt** och följa anvisningarna på enheten.
+
+**Lösning nr 3:**
+
+Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen så att Smart Manager exkluderar företagsportalappen:
+
+1. Starta Smart Manager-appen på enheten.
+
+  ![Välj Smart Manager-ikonen på enheten](./media/smart-manager-app-icon.png)
+
+2. Välj panelen **Batteri**.
+
+  ![Välj panelen Batteri](./media/smart-manager-battery-tile.png)
+
+3. Under **App-energibesparing** eller **App-optimering**, väljer du **Detaljer**.
+
+  ![Välj Detaljer under App-energibesparing eller App-optimering](./media/smart-manager-app-power-saving-detail.png)
+
+4. Välj **Företagsportalen** från listan över appar.
+
+  ![Välj Företagsportalen från listan över appar](./media/smart-manager-company-portal.png)
+
+5. Välj **Avstängd**.
+
+  ![Välj Avstängd från dialogrutan App-optimering](./media/smart-manager-app-optimization-turned-off.png)
+
+6. Under **App-energibesparing** eller **App-optimering**, bekräftar du att Företagsportalen är avstängd.
+
+  ![Kontrollera att Företagsportalen är avstängd](./media/smart-manager-verify-comp-portal-turned-off.png)
+
+
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
 **Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en Android-enhet.
 
-### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Felsökningssteg för misslyckad profilinstallation
+**Lösning:**
 
 1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
 2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
 
-4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+3.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
@@ -255,7 +304,7 @@ En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokume
 
 ## <a name="pc-issues"></a>Datorproblem
 
-### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Datorn har redan registrerats – Fel hr 0x8007064c
+### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Datorn har redan registrerats – Fel hr 0x8007064c
 **Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
 
 Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
@@ -307,6 +356,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
