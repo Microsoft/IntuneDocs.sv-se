@@ -14,8 +14,8 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 027e7e56e6f7d3a604336e0465f688af514c69e6
-ms.openlocfilehash: 5e8fa073cfd98d77ad7fd269fa14bce117e3e9e5
+ms.sourcegitcommit: 4f6e7525ae2a125851ad402644d5fbc8767c77dc
+ms.openlocfilehash: 9bfc8886b464452f8fe35d4b740607ef3bc07a71
 
 
 ---
@@ -55,7 +55,7 @@ Om ett villkor inte är uppfyllt, kommer användaren att visas ett följande med
 
 -   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
 
-**Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön ](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US)
+**Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US)
 
 >[!NOTE]
 >Om du aktiverar villkorlig åtkomst för SharePoint Online rekommenderar vi att inaktiverar domänen i listan enligt beskrivningen i [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
@@ -195,6 +195,6 @@ Välj en mobil enhetsgrupp och klicka på **enheter** -fliken, där väljer du n
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

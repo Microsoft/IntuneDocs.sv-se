@@ -14,31 +14,40 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: karthikaraman
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ca4623db80d711f3543b6d688fb1bb1ef228c62c
-ms.openlocfilehash: e2d43fff8772046fe7426b267e39d53b278d4e5c
+ms.sourcegitcommit: af7df3fcf50c3508d495522341bb287c638f40a3
+ms.openlocfilehash: 2ea1763881a7d10ae8bc21c98754d2767b2fc954
 
 
 ---
 
 # <a name="microsoft-intune-app-sdk-xamarin-component"></a>Microsoft Intune App SDK Xamarin-komponenten
 
+> [!NOTE]
+> Börja gärna med att läsa artikeln [Komma igång med Intune App SDK](intune-app-sdk-get-started.md). Den här guiden beskriver hur du förbereder dig för integreringen på de plattformar som stöds.
+
+
+
 ## <a name="overview"></a>Översikt
-[Intune App SDK Xamarin-komponenten](https://components.xamarin.com/view/microsoft.intune.mam) aktiverar [Intunes hanteringsfunktioner för mobilappar](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) i iOS- och Android-appar som skapats med Xamarin. Komponenten hjälper utvecklare att enkelt bygga in funktioner för appbegränsningar och dataskydd i Xamarin-baserade appar.
+[Intune App SDK Xamarin-komponenten](https://components.xamarin.com/view/microsoft.intune.mam) aktiverar [Intunes hanteringsfunktioner för mobilappar](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) i iOS- och Android-appar som skapats med Xamarin. Komponenten hjälper utvecklare att enkelt bygga in funktioner för appskydd med Intune i Xamarin-baserade appar.
 
-Som du kommer märka kan du aktivera SDK-funktioner utan att ändra appens beteende. När du har byggt in komponenten i din iOS- eller Android-mobilapp kan IT-administratören distribuera principer via Microsoft Intune som stöder olika funktioner som aktiverar dataskydd.
+Som du kommer märka kan du aktivera SDK-funktioner utan att ändra appens beteende. När du har byggt in komponenten i din iOS- eller Android-mobilapp kan IT-administratören distribuera principer via Microsoft Intune Mobile Application Management (MAM), som stöder olika funktioner för dataskydd.
 
-## <a name="supported-scenarios"></a>Scenarier som stöds
+## <a name="whats-supported"></a>Vad stöds?
 
-### <a name="platforms"></a>Plattformar
+### <a name="developer-machines"></a>Datorer för utvecklare
+* Windows
+
+
+### <a name="mobile-app-platforms"></a>Plattformar för mobilappar
 * Android
 * iOS
 
 
-### <a name="emm-scenarios"></a>EMM-scenarier
+### <a name="intune-mobile-application-management-scenarios"></a>Scenarion för Intune Mobile Application Management
 
-* Intune MAM på Intune MDM-registrerade enheter
-* Intune MAM på EMM-registrerade enheter från tredje part
-* Intune MAM på oregistrerade, ohanterade enheter
+* Intune MDM-registrerade enheter
+* EMM-registrerade enheter från tredje part
+* Icke-hanterade enheter (inte registrerade för hantering av mobilenheter)
 
 Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intune MAM-principer för hantering av mobilprogram både på Intune MAM-registrerade enheter och oregistrerade enheter.
 
@@ -116,6 +125,6 @@ Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följ
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
