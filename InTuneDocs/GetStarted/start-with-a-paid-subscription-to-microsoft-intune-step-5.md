@@ -14,8 +14,8 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4f8db75ed17e70dae5d3507b6af33a835c1658e9
-ms.openlocfilehash: 5195de40f35085c45ae63957da1a9058ed7d6493
+ms.sourcegitcommit: dcca68485db7e2c206077ce457081fdbf5cccea4
+ms.openlocfilehash: 92c59bd8061648cedaf31e50c5c599a96302a50f
 
 
 ---
@@ -31,7 +31,7 @@ Grupper i Intune ger stor flexibilitet att hantera enheter och användare. Du ka
 
 >[!IMPORTANT]
 >
->Om du öppnar arbetsytan Grupper i Intune-portalen och ser **Intune-användargrupper hanteras nu som grupper i Azure Active Directory** med en länk till Azure Active Directory-portal, använder du redan den *nya* metoden för Azure AD-säkerhetsgrupper för grupphantering i Intune. Information om hur du skapar grupper finns i [Hantera grupper i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-accessmanagement-manage-groups).
+>Om du öppnar arbetsytan Grupper i Intune-portalen och ser **Intune-användargrupper hanteras nu som grupper i Azure Active Directory** med en länk till Azure Active Directory-portal, använder du redan den *nya* metoden för Azure AD-säkerhetsgrupper för grupphantering i Intune. Information om hur du skapar grupper finns i [Hantera grupper i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
 >
 >Om du inte ser länken till Azure AD-portalen använder du fortfarande Intune-portalen för hantering av grupper.
 
@@ -89,6 +89,6 @@ Gratulerar! Du är klar med steg 5 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
