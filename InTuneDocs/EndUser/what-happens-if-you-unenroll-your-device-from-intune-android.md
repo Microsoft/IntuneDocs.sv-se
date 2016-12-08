@@ -2,10 +2,10 @@
 title: "Vad händer om Android-enheten avregistreras från Intune? Microsoft Intune"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2bc39ae41779e02882a5edf3698cb0e6976caec2
-ms.openlocfilehash: 5508b359329465e6f53fa3f5b4a93918932dfd8b
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: d846b1aa3d5526f0e73cb6b3a8ca17b3cdc67db2
 
 
 ---
 
 
-# Vad händer om Android-enheten avregistreras från Intune?
+# <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Vad händer om Android-enheten avregistreras från Intune?
 
 När du avregistrera en Android-enhet från Intune:
 
@@ -40,10 +40,10 @@ Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post oc
 
 Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md).
 
-Behöver du hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+Behöver du hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

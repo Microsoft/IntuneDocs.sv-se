@@ -2,10 +2,10 @@
 title: Unenroll your device from Intune if you declined "Terms of Use" | Microsoft Intune
 description: "Beskriver hur du avregistrerar en Android-enhet från Intune om du avvisade användningsvillkoren och inte kan logga in på företagsportalappen"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: 4278f000-0258-4de5-93a1-195b48e5061e
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: 4f5088bc645fed0451885078f5ab0dcd04a33d81
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 6303400645bf26ede733413fe2dabdb360e3bafb
 
 
 ---
 
 
-# Avregistrera enheten från Intune om du avvisade användningsvillkoren
+# <a name="unenroll-your-device-from-intune-if-you-declined-terms-of-use"></a>Avregistrera enheten från Intune om du avvisade användningsvillkoren
 
-Det bästa sättet att avregistrera en Android-enhet är att acceptera användningsvillkoren, logga in i företagsportalappen och sedan följa dessa [anvisningar](unenroll-your-device-from-intune-android.md) för att avregistrera enheten. Om du valde att inte acceptera användningsvillkoren när du försökte logga in i företagsportalappen kan du inte logga in i appen vid senare försök. I så fall följer du anvisningarna i den här ”lösningen” för att avregistrera enheten.
+Det bästa sättet att avregistrera en Android-enhet är att acceptera användningsvillkoren, logga in i företagsportalappen och sedan följa dessa [anvisningar](unenroll-your-device-from-intune-android.md) för att avregistrera enheten. Om du avböjde användningsvillkoren när du försökte logga in i företagsportalappen hindras du från att logga in i företagsportalappen vid framtida försök. Därför måste du följa särskilda anvisningar för att avregistrera enheten.
 
 När du avinstallerar företagsportalappen avregistrerar du även enheten från Intune. Enheten kommer inte längre att kunna komma åt företagsresurser. Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
@@ -39,10 +39,10 @@ Avregistrera enheten från Intune och avinstallera företagsportalappen
 
     Nu kan du installera företagsportalappen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
