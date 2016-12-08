@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 11/30/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f287a0ad082fa20a2e84abbf8f5585117aae6f57
-ms.openlocfilehash: e604b8809bd444d9069d449a6c691a8444296623
+ms.sourcegitcommit: 6dd584397451d38be86fa0780efff435ffb9b2af
+ms.openlocfilehash: d70ebf87bc930f853741ddc0d572d2174c636dac
 
 
 ---
@@ -51,6 +51,13 @@ Du kan nu använda multifaktorautentisering (MFA) på en grupp av användare nä
 ### <a name="conditional-access-for-mam-with-sharepoint-online---vso-679339--"></a>Villkorlig åtkomst för MAM med SharePoint Online <!--VSO 679339-->
 Du kan blockera appar som inte stöds av principer för hantering av mobilappar (MAM) i Intune från att komma åt SharePoint Online.  Du kan komma igång med hantering av mobilappar i Intune i Azure Portal. Leta efter avsnittet __Villkorlig åtkomst__ i bladet __Inställningar__ som innehåller alternativet för SharePoint Online. Den här funktionen skickas separat från resten av versionen av tjänsten.
 
+### <a name="ability-to-restrict-intune-mobile-device-enrollment"></a>Möjlighet att begränsa registrering av mobila enheter för Intune
+Intune lägger till nya registreringsbegränsningar som avgör vilka plattformar som mobila enheter ska kunna registrera. Intune skiljer mellan mobilplattformar som iOS, macOS, Android, Windows och Windows Mobile. 
+* macOS och Windows 8.1 eller senare kan förhindras från att registreras som mobilenhetsplattformar. 
+* Begränsningen av registrering av mobila enheter begränsar inte registreringen av datoragenter. 
+* För iOS finns det ytterligare ett alternativ för att blockera registrering av personligt ägda enheter. Intune markerar alla nya enheter som personliga såvida inte IT-administratören vidtar åtgärder för att markera dem som företagsägda, vilket beskrivs i [den här artikeln](https://docs.microsoft.com/en-us/intune/deploy-use/manage-corporate-owned-devices).
+
+
 ## <a name="notices"></a>Meddelanden
 
 ### <a name="multi-factor-authentication-on-enrollment-moving-to-the-azure-portal---vso-750545--"></a>Multifaktorautentisering då registreringen flyttar till Azure-portalen <!--VSO 750545-->
@@ -82,6 +89,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
