@@ -2,10 +2,10 @@
 title: Kryptera din enhet | Microsoft Intune
 description: Beskriver hur du krypterar en Android-enhet
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 11/7/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ff5e76e5d768b9feccb42c91c72aa71b3f724002
-ms.openlocfilehash: 4d12314ffc6126cd740012c301c39b7fb72a5bb4
+ms.sourcegitcommit: 81c0c29e1b874a7f5c7faa1c1216dbaa99ec4543
+ms.openlocfilehash: b8214506ae4609cb5316c66b854fbd572fbac94f
 
 
 ---
 
 
-# Kryptera din enhet
+# <a name="encrypt-your-device"></a>Kryptera din enhet
 
 Om företaget eller organisationen ber dig att kryptera Android-enheten innan du får åtkomst till företagets filer, e-post eller data, följer du stegen nedan för att kryptera enheten. Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om IT-administratören kräver det.
 
@@ -34,7 +34,7 @@ Om du avregistrerar telefonen förblir den krypterad.
 
 3.  Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
 
-### Vad du gör om du har problem
+### <a name="what-to-do-if-you-have-issues"></a>Vad du gör om du har problem
 **Problem**: Du har redan krypterat enheten och du ser något av följande:
 
 - Krypteringsknappen är inaktiverad.
@@ -57,10 +57,10 @@ Om du avregistrerar telefonen förblir den krypterad.
 
     5. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
