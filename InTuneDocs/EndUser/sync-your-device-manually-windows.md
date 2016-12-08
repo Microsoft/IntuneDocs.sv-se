@@ -2,8 +2,8 @@
 title: Synkronisera Windows-enheten manuellt | Microsoft Intune
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 10/19/2016
 ms.topic: article
@@ -15,24 +15,24 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2d7630d71505fadc22ab135ff0c8988b314793ad
-ms.openlocfilehash: e0f18e4e1077f7843b4f8d8ea6d9e485f715bc3c
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 2fad0ea18485290a513d175fecf0a4947786e5eb
 
 
 ---
 
 
-# Synkronisera Windows-enheten manuellt
+# <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 Om installationen av appen tar för lång tid kan du testa att synkronisera Windows-enheten manuellt. Manuell synkronisering kan påskynda installationen.
 
-Endast följande versioner stöds. Följ instruktionerna för din typ av enhet.
+Endast följande versioner stöds. Om din enhet inte visas i listan så betyder det att synkronisering inte stöds. Följ instruktionerna för din typ av enhet.
 
-* [Windows 10 Mobil](#windows-10-mobile)
-* [Windows 10 desktop](#windows-10-desktop)
+* [Windows 10 Mobile](#windows-10-mobile)
+* [Windows 10 Desktop](#windows-10-desktop)
 * [Windows Phone 8.1](#windows-phone-8-1)
 
 
-## Windows 10 Mobil
+## <a name="windows-10-mobile"></a>Windows 10 Mobil
 Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda en långsam appinstallation:
 
 1. Gå till **Alla appar** > **Inställningar** > **Konton**.
@@ -53,7 +53,7 @@ Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda
 
     Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
 
-## Windows 10 desktop
+## <a name="windows-10-desktop"></a>Windows 10 desktop
 Det finns mer än en version av Windows 10, vilket innebär att det finns två uppsättningar steg. Om du är osäker på vilka steg du ska följa tittar du på skärmbilderna och följer de steg som liknar vad du ser på din enhet. 
 
 1. Välj **Start**-knappen och sedan **Inställningar**.
@@ -74,7 +74,7 @@ Det finns mer än en version av Windows 10, vilket innebär att det finns två u
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png) 
 
-### Steg för att följa om du ser Åtkomst för arbete eller skola
+### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Steg för att följa om du ser Åtkomst för arbete eller skola
 
 1. Välj **Åtkomst till arbete eller skola** på sidan **Konton**.
 
@@ -93,7 +93,7 @@ Det finns mer än en version av Windows 10, vilket innebär att det finns två u
 
 4. Välj knappen **Synkronisera**. Enheten kommer att synkroniseras med Intune.
 
-### Steg som du följer om du ser Åtkomst till arbete
+### <a name="steps-to-follow-if-you-see-work-access"></a>Steg som du följer om du ser Åtkomst till arbete
     
 1. Välj **Åtkomst till arbetsplats** på sidan **Konton**.
 
@@ -109,7 +109,7 @@ Det finns mer än en version av Windows 10, vilket innebär att det finns två u
 
    Knappen är nedtonad tills synkroniseringen är färdig.
 
-## Windows Phone 8.1
+## <a name="windows-phone-81"></a>Windows Phone 8.1
 Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda en långsam appinstallation:
 
 1. Gå till **Alla appar** > **Inställningar** > **arbetsplats**.
@@ -126,10 +126,10 @@ Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda
 
    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen tills synkroniseringen är klar.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
