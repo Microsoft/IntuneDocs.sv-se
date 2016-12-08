@@ -2,7 +2,7 @@
 title: Registrera din Windows Phone 8.1-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Windows Phone 8.1-enhet i Intune
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
@@ -14,25 +14,25 @@ ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 843011aca535d8416b931f43bb622bc5c01ed546
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: b4569ec01a0b8c6a8ec06cb9036d7753e34b38d2
 
 
 ---
 
 
-# Registrera din Windows Phone 8.1-enhet i Intune
+# <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrera din Windows Phone 8.1-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
 
 Följ de anvisningar som gäller för företaget eller skolan för att registrera din Phone 8.1-enhet för Intune:
 
--   [Om ditt företag tillåter att du använder Företagsportalen från Windows Store](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
+-   [Om ditt företag tillåter att du använder företagsportalen från Windows Store](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
 
 -   [Om du inte tillåts åtkomst till Windows Store från din Windows Phone eller om du inte har ett Microsoft-konto](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
 
-## Om ditt företag tillåter att du använder Företagsportalen från Windows Store
+## <a name="if-your-company-lets-you-use-the-company-portal-from-the-windows-store"></a>Om ditt företag tillåter att du använder Företagsportalen från Windows Store
 Installera Företagsportal-applikationen på din enhet:
 
 1.  Tryck på **Start** &gt; **Store**.
@@ -71,7 +71,7 @@ Registrera din enhet:
 
     ![Skärmen Kontot har lagts till](./media/WP81-enroll-4-account-added.png)
 
-## Om du inte tillåts åtkomst till Windows Store från din Windows Phone eller om du inte har ett Microsoft-konto
+## <a name="if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Om du inte tillåts åtkomst till Windows Store från din Windows Phone eller om du inte har ett Microsoft-konto
 
 1.  Tryck på **Inställningar** &gt; **Arbetsplats**.
 
@@ -87,6 +87,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

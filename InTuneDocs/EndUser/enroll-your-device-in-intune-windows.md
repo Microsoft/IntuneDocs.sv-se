@@ -2,7 +2,7 @@
 title: Registrera din Windows-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en Windows-enhet i Intune
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/24/2016
@@ -14,14 +14,14 @@ ms.assetid: d217ddcf-4908-4047-97a1-716bd433a13c
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1a1975bb10d4a35f6ab52d724405f77300c40feb
-ms.openlocfilehash: 4dae33a2991573cca778852ab81d3087fac97d80
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 1515eef929d08f8639921313d1cfcb0ea6964fa9
 
 
 ---
 
 
-# Registrera din Windows-enhet i Intune
+# <a name="enroll-your-windows-device-in-intune"></a>Registrera din Windows-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din Windows-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -33,6 +33,6 @@ Om du vill registrera dig väljer du den länk som motsvarar den enhet som du an
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

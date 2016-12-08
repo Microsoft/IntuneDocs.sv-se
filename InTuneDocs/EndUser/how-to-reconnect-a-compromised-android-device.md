@@ -2,9 +2,10 @@
 title: "Återansluta en komprometterad Android-enhet | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +15,19 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: eff3eee3d655e27c62b9083a98813cf24c10cba4
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 0d2b62eb8e487e555d568a1ad968081a1929f019
 
 
 ---
 
-# Återansluta en komprometterad Android-enhet
+# <a name="how-to-reconnect-a-compromised-android-device"></a>Återansluta en komprometterad Android-enhet
 IT-administratören har upptäckt att du använder en rotad enhet. "Rotad" innebär att enheten har ändrats för att ge åtkomst till operativsystemet, vilket kan påverka säkerheten och utgöra ett hot mot företagets resurser. När detta sker har enheten inte längre åtkomst till företagets resurser.
 
-Behöver du hjälp? Kontakta IT-administratören (kontaktinformation finns på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till Microsoft Android-teamet på wintunedroidfbk@microsoft.com.
+Behöver du hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

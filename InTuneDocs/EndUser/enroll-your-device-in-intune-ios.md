@@ -2,10 +2,10 @@
 title: Registrera din iOS-enhet i Intune | Microsoft Intune
 description: Beskriver hur du registrerar en iOS-enhet i Intune
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,27 +15,27 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7eefcefa5e1cd0f789c77bf020c256e449099273
-ms.openlocfilehash: 577d14f29880d16046bbb703773d6362c2458c1b
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
 
 
 ---
 
 
-# Registrera din iOS-enhet i Intune
+# <a name="enroll-your-ios-device-in-intune"></a>Registrera din iOS-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
 
-**Innan du börjar:**
+**Innan du börjar**
 
 - Se till att du avslutar registreringen efter att du påbörjat stegen. Om du börjar men inte slutför kanske registreringen inte fungerar om du kommer tillbaka senare och försöker igen.
 - Kontrollera att din Wi-Fi fungerar. Annars misslyckas registreringen.
 - Om du har blockerat Safari på enheten, avblockera Safari. Du måste använda Safari för att registrera.
 
 
-**Registrera din iOS-enhet:**
+**Så här registrerar du din iOS-enhet:**
 
 1.  Följ stegen i [Installera och logga in på Intune-företagsportalappen](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
@@ -92,10 +92,10 @@ Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac O
 Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
 
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
