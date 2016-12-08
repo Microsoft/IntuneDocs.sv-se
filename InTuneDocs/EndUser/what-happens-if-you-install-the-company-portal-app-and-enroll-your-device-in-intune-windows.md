@@ -2,10 +2,10 @@
 title: "Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune? Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: 678ef01b215442e3d767a38388a579c6ee329975
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 2d56c2f23fd70ab0ca593d1ad5d60889e5855a7a
 
 
 ---
 
 
-# Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
 
 När du installerar företagsportalappen och sedan använder den för att registrera en Windows- eller Windows Phone-enhet låter du IT-administratören hantera din enhet för att skydda företags- eller skoldata. Det här avsnittet beskriver vad som händer med enheter som är äldre än Windows 10. För Windows 10-enheter läser du [motsvarande avsnitt](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md).
 
-## Vad händer med alla Windows-enheter efter registreringen?
+## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Vad händer med alla Windows-enheter efter registreringen?
 Om du registrerar en Windows- eller Windows Phone-enhet i Intune kan du:
 
 -   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler.
@@ -53,7 +53,7 @@ När du registrerar en enhet ger du IT-administratören tillstånd att till exem
 
 -   Förhindra dig att ta bilder av företagsrelaterade data.
 
-## Vad händer med alla Windows-datorer efter registreringen?
+## <a name="what-happens-to-all-windows-pcs-after-enrollment"></a>Vad händer med alla Windows-datorer efter registreringen?
 
 -  Programvara installeras på datorn så att IT-administratören kan hantera datorn och så att du kan komma åt företagsresurser som appar och kompletterande information. IT-administratören kan automatiskt uppdatera den här programvaran.
 
@@ -63,7 +63,7 @@ När du registrerar en enhet ger du IT-administratören tillstånd att till exem
 
 -  IT-administratören kan installera appar och uppdateringar på datorn.
 
-## Vad händer var åttonde timme efter enhetsregistreringen?
+## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Vad händer var åttonde timme efter enhetsregistreringen?
 Ungefär var åttonde timme kommer registrerade enheter att:
 
 -   Hämta eventuella uppdateringar av principer eller appar som din IT-administratör har gjort tillgängliga.
@@ -72,10 +72,10 @@ Ungefär var åttonde timme kommer registrerade enheter att:
 
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar.
 
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

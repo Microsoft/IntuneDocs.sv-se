@@ -2,10 +2,10 @@
 title: "Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune? Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: 0462635a4c995866f8ad504ea724e795424b4405
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 94868431ce100a252ddfc7df5f9c2e287f0eedaf
 
 
 ---
 
 
-# Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune?
 
 När du installerar företagsportalappen och sedan använder appen för att registrera din Windows 10 Enterprise- eller Professional-enhet i Intune kan du använda företagsportalappen för att:
 
@@ -52,10 +52,10 @@ När du lägger till en dator:
 
 -   IT-administratören kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
 
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

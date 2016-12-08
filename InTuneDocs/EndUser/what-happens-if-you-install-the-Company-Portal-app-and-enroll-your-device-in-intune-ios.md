@@ -2,7 +2,7 @@
 title: "Vad händer om du installerar företagsportalappen och registrerar din iOS- eller Mac OS X-enhet i Intune? Microsoft Intune"
 description: 
 keywords: 
-author: barlan
+author: barlanmsft
 ms.author: barlan
 manager: angrobe
 ms.date: 10/25/2016
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fd54ec104a26ebae845dfe3942dac2e8d9dae4a9
-ms.openlocfilehash: fd5ad37706bc4d7f780c5059bda5305335b4ff68
+ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
+ms.openlocfilehash: 737effbcd9d7e70186d874c3aefd8afaab05fca8
 
 
 ---
 
 
-# Vad händer om du installerar företagsportalappen och registrerar din iOS- eller Mac OS X-enhet i Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-mac-os-x-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din iOS- eller Mac OS X-enhet i Intune?
 
 När du installerar företagsportalappen och registrerar en iOS- eller Mac OS X-enhet i Intune kan du använda företagsportalappen för att:
 
@@ -96,6 +96,6 @@ Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 
