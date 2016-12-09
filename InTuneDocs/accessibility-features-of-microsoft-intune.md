@@ -3,8 +3,9 @@ title: "Hjälpmedelsfunktioner | Microsoft Intune"
 description: "Läs om funktionerna som gör Intune mer tillgängligt personer med funktionshinder."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/24/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.assetid: 6d7ed613-be97-4973-9532-8cb5bd434a1b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55bdbaf5e521caa05d44bc45d4ec226dc05bf64b
-ms.openlocfilehash: 819fdb5bf4fd06a2b3b5010057cdd003e46f4758
+ms.sourcegitcommit: b99c90bfafd65e87e258e1e0ac01691e83581659
+ms.openlocfilehash: 9915f85e6bc2dc20b061618fc8ccc6da8f3cec36
 
 
 ---
 
-# Hjälpmedelsfunktioner i Microsoft Intune
+# <a name="accessibility-features-of-microsoft-intune"></a>Hjälpmedelsfunktioner i Microsoft Intune
 Utöver hjälpmedelsfunktionerna i Microsoft Windows kan följande funktioner användas för att göra [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] mer tillgängligt för personer med funktionshinder:
 
 -   Använda snabbtangenter
@@ -27,7 +28,7 @@ Utöver hjälpmedelsfunktionerna i Microsoft Windows kan följande funktioner an
 > [!NOTE]
 > [!INCLUDE[accessibility6](./includes/accessibility6_md.md)]
 
-## Användning av kortkommandon
+## <a name="using-keyboard-shortcuts"></a>Användning av kortkommandon
 
 |Om du vill göra det här|Använder du det här kortkommandot|
 |--------------|------------------------------|
@@ -43,11 +44,10 @@ Utöver hjälpmedelsfunktionerna i Microsoft Windows kan följande funktioner an
 |Flytta till nästa programgrupp|Uppil|
 |Visa åtgärderna för en vald enhet|Högerpil|
 > [!NOTE]
-> [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)] Du kan navigera på portalerna med de vanliga tangentbordsgenvägarna i Internet Explorer.
+> Du kan navigera på [!INCLUDE[wit_firstref](./includes/wit_firstref_md.md)]-portalerna med de vanliga tangentbordsgenvägarna i Internet Explorer.
 
 
 
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

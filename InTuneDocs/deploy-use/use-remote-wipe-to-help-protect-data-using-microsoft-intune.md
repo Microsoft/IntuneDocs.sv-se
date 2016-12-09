@@ -14,8 +14,8 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
-ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: cbfdb0e5db6862fcf046f42b85b8c9aabbba8721
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: df7f2683d8ae8860b7eaa0d1c37c7443830291a0
 Du kan rensa appar och data från Intune-hanterade enheter som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Du kan göra detta med funktionerna för fullständig och selektiv rensning i Intune. Användare kan dessutom utfärda ett fjärrensningskommando från Intune-företagsportalappen på privatägda enheter som registrerats i Intune.
 
   > [!NOTE]
-  > Den här artikeln handlar enbart om hur du rensar enheter som hanteras av Intune MDM (hantering av mobilenheter). Du kan också använda [Azure-portalen](https://portal.azure.com) om du vill [rensa företagsdata från appar](wipe-managed-company-app-data-with-microsoft-intune.md). Du kan också [dra tillbaka datorer som hanteras av Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+  > Den här artikeln handlar enbart om hur du rensar enheter som hanteras av Intune MDM (hantering av mobilenheter). Du kan också använda [Azure-portalen](https://portal.azure.com) om du vill [rensa företagsdata från appar](wipe-managed-company-app-data-with-microsoft-intune.md). Du kan också [dra tillbaka datorer som hanteras av Intune-klientprogrammet](retire-a-windows-pc-with-microsoft-intune.md).
 
 ## <a name="full-wipe"></a>Fullständig rensning
 
@@ -165,6 +165,6 @@ Den här rapporten visar även vem som utförde åtgärden.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

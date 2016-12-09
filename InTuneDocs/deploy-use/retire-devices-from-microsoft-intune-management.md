@@ -14,8 +14,8 @@ ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b76e9e16ef1fa6870783326630ae74d07ae59cbb
-ms.openlocfilehash: be3a30535fc9cebad5d4a167b75c484ddafd7f85
+ms.sourcegitcommit: 8f3a8e42688bf830e3050cf387ccb15a1af811fa
+ms.openlocfilehash: e7f861adc757b4037c5d0ef97c361a57948386bf
 
 
 ---
@@ -55,7 +55,7 @@ För enheter som ska användas i ett nytt syfte kan du också göra en [fullstä
 8.  Välj lämpliga enheter och välj sedan **Ta bort enhet**. Enheten tas bort nästa gång den synkroniseras med Active Directory. Normalt sker detta inom fyra timmar. Efter synkroniseringen tas enheten bort från hanteringen. Därmed tas en enhet bort från användarens enhetsgräns.
 
 ## <a name="retire-managed-computers"></a>Dra tillbaka hanterade datorer
-Datorer som Intune-klientprogrammet hanterar kan tas bort från hanteringen i Intune-administratörskonsolen. Detta gör också att klientprogramvaran avinstalleras och att Intune-principen tas bort från datorn. Läs mer om att [dra tillbaka datorer som hanteras av Intune-klientprogramvaran](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#retire-a-computer.md).
+Datorer som Intune-klientprogrammet hanterar kan tas bort från hanteringen i Intune-administratörskonsolen. Detta gör också att klientprogramvaran avinstalleras och att Intune-principen tas bort från datorn. Läs mer om att [dra tillbaka datorer som hanteras av Intune-klientprogramvaran](retire-a-windows-pc-with-microsoft-intune.md).
 
 ## <a name="block-access-a-device"></a>Blockera åtkomst till en enhet
 Om en enhet tappas bort eller om du måste dra tillbaka en enhet på grund av att en anställd har lämnat företaget utan att lämna tillbaka maskinvara som ägs av företaget kan du också [återställa lösenordet och fjärrlåsa](use-remote-lock-and-passcode-reset-in-microsoft-intune.md) enheten. På så sätt kan du förhindra att obehöriga använder företagets information, även om du kanske blir tvungen att skriva av enheten som en förlust.
@@ -70,6 +70,6 @@ Ibland är det själva enheten som blivit för gammal. I sådana fall tar en [å
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

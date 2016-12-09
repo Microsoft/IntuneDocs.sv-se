@@ -2,8 +2,8 @@
 title: "Rensa hanterade företagsdata från appar | Microsoft Intune"
 description: "Läs om hur du tar bort företagsdata från enheter selektivt via fjärranslutning."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 11/08/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1877fc4a76932d550cc8c4be3cb4ebd089cd6ad3
-ms.openlocfilehash: 3939d732057c7fd9365d7fab93ed37ec62f6993d
+ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
+ms.openlocfilehash: d32a66ee283906586e25173e736c02ee8bf23042
 
 
 ---
@@ -55,7 +55,7 @@ Bladet **Hantering av mobilprogram i Intune** innehåller en sammanfattad rappor
 
 2.  På bladet **Rensningsbegäran** ser du listan med dina begäranden grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
 
-Användaren måste öppna appen för att rensningen ska ske och rensningen kan ta upp till 30 minuter att slutföra efter att en begäran har gjorts. 
+Användaren måste öppna appen för att rensningen ska ske och rensningen kan ta upp till 30 minuter att slutföra efter att en begäran har gjorts.
 
 Rensningar med väntande status visas tills du tar bort dem manuellt.  Högerklicka och välj Ta bort för att ta bort en rensningsbegäran manuellt.
 
@@ -66,6 +66,6 @@ Rensningar med väntande status visas tills du tar bort dem manuellt.  Högerkli
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

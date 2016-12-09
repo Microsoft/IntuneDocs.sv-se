@@ -1,8 +1,8 @@
 ---
 title: Distribuera Lookout for work-appen | Microsoft Intune
 description: "Konfigurera och distribuera Lookout for work-appar för Android."
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 10/12/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: 646bd62dcf95b37ce9154e4852612b17ab71f954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 720fe241e7f1205dbad4b64af5cf7f16a80db23e
 
 
 ---
@@ -40,14 +40,15 @@ När du klickar på **Appar** i Intune-konsolen så kommer du nu att se Lookout 
 
 * **Steg 5**: Distribuera appar till användare genom att välja Lookout for Work-appen och välja  **Hantera distribution**.
 
-  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout MTP-konsolen.  Se steg tre i [configure your subscription with Lookout MTP section](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp) (avsnittet konfigurera din prenumeration med Lookout MTP) för information om att lägga till användargrupper i Lookout MTP.
+  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout MTP-konsolen.  Se steg tre i [configure your subscription with Lookout MTP section](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection) (avsnittet konfigurera din prenumeration med Lookout MTP) för information om att lägga till användargrupper i Lookout MTP.
+
   >[!IMPORTANT]
   > Appdistributionsguiden för Intune kan inte använda Azure AD-användargrupper utan använder istället Intune-användargrupper. Därför måste du skapa en Intune-användargrupp baserat på Azure AD-användargruppen som har registrerats i Lookout MTP-konsolen enligt beskrivningarna i [den här](plan-your-user-and-device-groups.md)artikeln.
 
 * **Steg 6**: Välj alternativet **Nödvändig installation** för att kräva att Lookout-appen installeras på användarens enhet.
 
 
-## <a name="ios-enterprisesigned-version-of-lookout-app"></a>iOS (Företagssignerad version av Lookout-appen)
+## <a name="ios-enterprise-signed-version-of-lookout-app"></a>iOS (Företagssignerad version av Lookout-appen)
 
 * **Steg ett:** Kontrollera att **iOS management** (iOS-hantering) är inställt på enheten. Anvisningar om hur du ställer in din enhet för iOS-hantering finns i [Set up iOS and Mac device management](set-up-ios-and-mac-management-with-microsoft-intune.md) (Konfigurera iOS- och Mac-enhetshantering).
 
@@ -76,7 +77,8 @@ När du klickar på **Appar** i Intune-konsolen så kommer du nu att se Lookout 
 
 * **Steg sex:** Välj Lookout for Work-appen och markera **Hantera distribuering** **för att distribuera appen till användare**.
 
-  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout-konsolen.  Se steg 3 i [avsnittet om att konfigurera prenumerationen med Lookout-skydd mot enhetshot](set-up-your-subscription-with-lookout-mtp#configure-your-subscription-with-lookout-mtp) för information om hur du lägger till användargrupper i Lookout MTP.
+  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout-konsolen.  Se steg 3 i [avsnittet om att konfigurera prenumerationen med Lookout-skydd mot enhetshot](set-up-your-subscription-with-lookout-mtp.md#configure-your-subscription-with-lookout-device-threat-protection) för information om hur du lägger till användargrupper i Lookout MTP.
+
 >[!IMPORTANT]
 > Guiden för att distribuera Intune-appen känner inte till Azure AD-användargrupper utan använder Intune-användargrupper istället. Därför måste du skapa en Intune-användargrupp baserat på Azure AD-användargruppen som har registrerats i Lookout-konsolen enligt beskrivningarna i [den här](plan-your-user-and-device-groups.md) artikeln.
 
@@ -98,6 +100,6 @@ När användaren öppnar Lookout for Work på enheten uppmanas de att aktivera a
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

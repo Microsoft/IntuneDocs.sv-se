@@ -14,8 +14,8 @@ ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5fa0e9db799c7b3a9619d63ebc1ba5ffe010b1fd
-ms.openlocfilehash: ff780fa8ead4b1e54fb6b8dd2da6246c77c76b38
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 3e6a4ca1e415eb56dd5792c8d9f6a9fe83f6d362
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ff780fa8ead4b1e54fb6b8dd2da6246c77c76b38
 
 Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter få åtkomst till organisationens skyddade data, t.ex. e-post, filer och andra resurser. Detta gäller för både Windows 10 Desktop- och Windows 10 Mobile-enheter. Genom att registrera dina enheter kan du skydda både din och organisationens åtkomst och dessutom hålla arbetsdata åtskilda från personliga data.
 
-Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) och hur [informationen på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows) påverkas.
+Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och hur [informationen på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md) påverkas.
 
 ## <a name="windows-10-desktop-devices"></a>Windows 10 Desktop-enheter
 1.  Gå till __Start__.
@@ -40,19 +40,19 @@ Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i I
 
  ![Om din dator i Windows 10 Desktop](../media/settings_about_pc.png)
 
-3.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account).
+3.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
 ## <a name="windows-10-mobile-devices"></a>Windows 10 Mobile-enheter
 
 1.  På __Start__-menyn sveper du över till listan __Alla appar__ och väljer sedan appen __Inställningar__.
 2.  Tryck på __System__ och sedan på __Om__.
 3.  Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.
-4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account).
+4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

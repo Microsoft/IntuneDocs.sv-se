@@ -14,8 +14,8 @@ ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 391612c35a7665073ca8a5c629169e5be967ab59
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 270e6015e629c048b01b218793640888706d118e
 
 
 ---
@@ -40,8 +40,8 @@ Letar du efter Intune med Configuration Manager?
 ## <a name="step-1-enable-connections"></a>Steg 1: Aktivera anslutningar
 
 Innan du aktiverar registrering av mobila enheter ser du till att du har gjort följande:
-- [Granska webbadresser och portar som krävs i nätverket](../get-started/network-infrastructure-requirements-for-microsoft-intune)
-- [Lägga till och verifiera en egen domän](../get-started/domain-names-for-microsoft-intune)
+- [Granska webbadresser och portar som krävs i nätverket](../get-started/network-infrastructure-requirements-for-microsoft-intune.md)
+- [Lägga till och verifiera en egen domän](../get-started/domain-names-for-microsoft-intune.md)
 
 ## <a name="step-2-set-mdm-authority"></a>Steg 2: Ange MDM-auktoritet
 Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
@@ -111,7 +111,7 @@ När du har sparat ändringarna kan du använda länkarna längst ned på sidan 
 
 ## <a name="step-5-assign-user-licenses"></a>Steg 5: Tilldela användarlicenser
 
-Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure Active Directory (Azure AD). Du kan [synkronisera lokala användare med Azure AD](../get-started/domain-names-for-microsoft-intune#to-synchronize-on-premises-users-with-azure-ad.md).
+Du använder **hanteringsportalen för Office 365** för att manuellt lägga till molnbaserade användare och tilldela licenser till både molnbaserade användarkonton och konton som synkroniseras från din lokala Active Directory till Azure Active Directory (Azure AD). Du kan [synkronisera lokala användare med Azure AD](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md#how-to-sync-on-premises-users-with-azure-ad).
 
 1.  Logga in på [hanteringsportalen för Office 365](https://portal.office.com/Admin/Default.aspx) med dina klientadministratörsuppgifter.
 
@@ -136,7 +136,7 @@ Ställ in hantering för följande plattformar:
 - [Windows-datorer och bärbara datorer](set-up-windows-device-management-with-microsoft-intune.md)
 - [Windows 10 Mobile och Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
 
-Du kan också aktivera [registrering av företagsägda enheter](manage-corporate-owned-devices).
+Du kan också aktivera [registrering av företagsägda enheter](manage-corporate-owned-devices.md).
 
 ## <a name="step-7-next-steps"></a>Steg 7: Nästa steg
 
@@ -149,6 +149,6 @@ Nu när registreringen har aktiverats bör du konfigurera hanteringen så att de
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

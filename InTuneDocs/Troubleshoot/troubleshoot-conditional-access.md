@@ -2,7 +2,8 @@
 title: "Felsöka villkorlig åtkomst| Microsoft Intune"
 description: "Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune."
 keywords: 
-author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 10/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 289e6019aa1a17deb91b38ed32f0432af0902a9d
-ms.openlocfilehash: d819e2e25e00791793add519694fc34a251178db
+ms.sourcegitcommit: 001bacbfc6a61a1c6b8f75c8e7ca55e311a1fa71
+ms.openlocfilehash: 7d52b3bb05a00b0da5e0845380f8431044b1c121
 
 
 ---
@@ -79,7 +80,7 @@ En enhet kan blockeras från villkorlig åtkomst utan att du får ett aktivering
 - Sök i Exchange Connector-loggarna efter någon SendEmail-aktivitet (SkickaEpost) och sök efter fel. Du kan exempelvis söka efter kommandot SendEmail from notification account to useremail (SkickaE-post från meddelandekontot till AnvEpost).
 - Exchange Connector skickar aktiveringsmeddelandet innan enheten blockeras. Om enheten är offline kanske den inte kan ta emot aktiveringsmeddelandet. Kontrollera om enhetens e-postklient använder hämtningsmetoden Push i stället för Pull eftersom det kan göra att användaren inte får meddelandet. Byt till Pull och se om enheten får e-postmeddelandet.
 
-## <a name="noncompliant-device-not-blocked"></a>En inkompatibel enhet blockeras inte
+## <a name="non-compliant-device-not-blocked"></a>En inkompatibel enhet blockeras inte
 
 Om en enhet har åtkomst trots att den är inkompatibel vidtar du följande åtgärder.
 
@@ -158,6 +159,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

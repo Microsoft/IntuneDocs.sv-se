@@ -14,8 +14,8 @@ ms.assetid: a26d9e3c-8f58-4494-9571-fc88ba91852e
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: aaecaf82bc4635beefa84fed5702476c9e66a90e
+ms.sourcegitcommit: e007f666d2c179dd1dc4bcdd1265cecf8b9e5358
+ms.openlocfilehash: 695a419ea05b6d3ff93cfe45eae3d80012f44568
 
 
 ---
@@ -46,11 +46,11 @@ Från företagsportalens webbplats kan slutanvändarna göra följande:
 Slutanvändarna kan utföra de flesta av samma uppgifter på **företagsportalens webbplats** som de kan göra med **företagsportalappen** som de installerar på enheten. Länkar till alla uppgifter som slutanvändarna kan utföra på sina enheter finns på följande sidor:
 
 - [Använda en Android-enhet med Intune](using-your-android-device-with-intune.md)
-- [Använda en iOS- eller Mac OS X-enhet med Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [Använda en iOS- eller macOS-enhet med Intune](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Använda en Windows-enhet med Intune](using-your-windows-device-with-intune.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

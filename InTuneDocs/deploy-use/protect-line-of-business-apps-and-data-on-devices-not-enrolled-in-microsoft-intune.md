@@ -2,8 +2,8 @@
 title: "Skydda verksamhetsspecifika appar på enheter som inte har registrerats | Microsoft Intune"
 description: "I det här avsnittet beskrivs hur du kan förbereda dina verksamhetsspecifika appar så att du kan skydda dig mot dataförlust med hjälp av principer för hantering av mobila appar."
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 3bce8989944985c36a3d233fbb05d2f3f135b7e7
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: bc1efb1e0c62e6bd52658690db95901c70403d4d
 
 
 ---
@@ -29,9 +29,9 @@ I det här avsnittet beskrivs de steg som krävs för att tillämpa MAM-principe
 
 ##  <a name="step-1-prepare-the-app"></a>Steg 1: Förbered appen
 
-Innan du kan tillämpa MAM-principer på en app, måste du först omsluta appen med hjälp av Microsoft Intunes appomslutningsverktyg för [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool) och [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool), eller använda [Intune App-SDK:n](/../develop/intune-app-sdk) för att integrera Intune-funktionerna för appskydd manuellt.
+Innan du kan tillämpa MAM-principer på en app, måste du först omsluta appen med hjälp av Microsoft Intunes appomslutningsverktyg för [iOS](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Android](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md), eller använda [Intune App-SDK:n](../develop/intune-app-sdk.md) för att integrera Intune-funktionerna för appskydd manuellt.
 
-Mer information om hur du använder Intunes appomslutningsverktyg respektive SDK:n finns i [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune).
+Mer information om hur du använder Intunes appomslutningsverktyg respektive SDK:n finns i [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
 
 ## <a name="step-2-add-the-app"></a>Steg 2: Lägg till appen
 
@@ -81,6 +81,6 @@ Du kan ta bort en verksamhetsspecifik app från applistan. Den här åtgärden t
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 
