@@ -14,7 +14,7 @@ ms.assetid: a23abc61-69ed-44f1-9b71-b86aefc6ba03
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 656c93771776fd317f2b8d91bc59125fba1eb0b9
+ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 83b89d06793f6f3934537408fb600b3b89afd35b
 
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: 83b89d06793f6f3934537408fb600b3b89afd35b
 
 
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune
-Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt Intune-konto som kan registrera upp till 1 000 enheter. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD). Användarna kan till exempel inte använda ”interna” e-postappar. Licensiering för DEM är per enhet, inte per användare.
+Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt Intune-konto som kan registrera upp till 1 000 enheter. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD). Användarna kan till exempel inte använda ”interna” e-postappar. Licensiering för DEM är per enhet, inte per användare.
 
 Du kan, exempelvis, tilldela en lagringshanterare eller övervakare ett användarkonto för enhetsregistreringshantering, så att denna kan göra följande:
 
@@ -96,6 +96,6 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
