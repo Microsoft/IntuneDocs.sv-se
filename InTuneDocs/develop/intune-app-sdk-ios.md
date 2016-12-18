@@ -1,21 +1,21 @@
 ---
-title: "Utvecklarhandbok för Microsoft Intune App SDK för iOS | Microsoft Intune"
+title: "Utvecklarhandbok för Microsoft Intune App SDK för iOS | Microsoft Docs"
 description: 
 keywords: 
-author: Msmbaldwin
+author: mtillman
 manager: angrobe
-ms.author: oydang
-ms.date: 09/08/2016
+ms.author: mtillman
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-ms.reviewer: jeffgilb
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01b927178ad5fb1019781863e243133861887148
-ms.openlocfilehash: eb14be40a94513a21dbd24a62e42afb7a3e57381
+ms.sourcegitcommit: b55147e2be338bd46661695134fd0f0de105bb72
+ms.openlocfilehash: b8a723fce088c1d61bddb5f2479da59a4b5c3771
 
 
 ---
@@ -32,6 +32,8 @@ Med Microsoft Intune App SDK för iOS kan du lägga till principer för appskydd
 * Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-verktygsuppsättningen version 5 eller senare installerad.
 
 * Läs [licensvillkoren för Intune App SDK för iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK för iOS samtycker du till de här licensvillkoren.  Om du inte accepterar villkoren har du inte rätt att använda programvaran.
+
+* Hämta filerna för Intune App SDK för iOS på [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## <a name="whats-in-the-sdk"></a>Vad innehåller SDK?
 
@@ -322,9 +324,9 @@ Om registreringen misslyckas bör appen överväga att anropa detta API igen vid
 
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om.
 
-## <a name="debug-information"></a>Felsökningsinformation
+## <a name="status-result-and-debug-notifications"></a>Status-, resultat- och felsökningsmeddelanden
 
-Appen kan ta emot felsökningsaviseringar om följande begäranden till Intune MAM-tjänsten:
+Appen kan ta emot status-, resultat- och felsökningsmeddelanden om följande begäranden till Intunes MAM-tjänst:
 
  - Begäran om registrering
  - Begäran om principuppdatering
@@ -365,7 +367,7 @@ Dessa ombudsmetoder returnerar ett `IntuneMAMEnrollmentStatus`-objekt som inneh�
 
 Det här objektet definieras i Headers/IntuneMAMEnrollmentStatus.h, tillsammans med de specifika statuskoder som kan returneras.
 
-Det är viktigt att notera att ingen app bör ha affärslogik som baseras på dessa aviseringar. Tanken är att appen kan skicka den här informationen till en telemetritjänst för felsökning och övervakning.
+
 
 
 ## <a name="sample-code"></a>Exempelkod
@@ -637,7 +639,7 @@ Ja, IT-administratören kan skicka ett kommando för selektiv rensning till prog
 
 ## <a name="submit-your-app-to-the-app-store"></a>Skicka in din app till App Store
 
-Både det statiska biblioteket och ramverksversionerna av Intune App SDK är universella binärfiler. Detta innebär att de innehåller kod för alla enhets- och simuleringsarkitekturer. Apple avvisar appar som skickas till App Store om de innehåller simuleringskod. Vid kompileringen mot det statiska biblioteket för versioner för endast enheten kommer länkaren att ta bort simuleringskoden automatiskt.
+Både det statiska biblioteket och ramverksversionerna av Intune App SDK är universella binärfiler. Detta innebär att de innehåller kod för alla enhets- och simuleringsarkitekturer. Apple avvisar appar som skickas till App Store om de innehåller simuleringskod. Vid kompileringen mot det statiska biblioteket för versioner för endast enheten kommer länkaren att ta bort simuleringskoden automatiskt. Följ stegen nedan för att se till att all simuleringskod tas bort innan du laddar upp din app till App Store.
 
 1. Kontrollera att `IntuneMAM.framework` finns på skrivbordet.
 
@@ -654,6 +656,6 @@ Både det statiska biblioteket och ramverksversionerna av Intune App SDK är uni
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

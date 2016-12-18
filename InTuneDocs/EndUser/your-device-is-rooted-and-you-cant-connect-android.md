@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 016449720f6e77b8862fcaa232d252eefa8b20b3
-ms.openlocfilehash: 5b7586c57f3f2825edfa9ae45a3fdec9af0fe956
+ms.sourcegitcommit: 06da6823465521b5784188123aab3544fef9fc2e
+ms.openlocfilehash: 4c58060bad8b269394e577df5bb3ccd50b8fa97b
 
 
 ---
 
+# <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Din Android-enhet är rotad, så du kan inte ansluta
 
-# <a name="your-android-device-is-rooted-and-you-cant-connect"></a>Din Android-enhet är rotad och du kan inte ansluta
+Du omdirigerats hit eftersom du fått ett meddelande om att enheten har _rotats_.
 
-Om Android-enheten är rotad har enheten ändrats för att aktivera vissa funktioner som kan äventyra företagets resurser och säkerhet. Om du ser det här meddelandet kan du inte komma åt företagets resurser förrän problemet är löst.
+Om en Android-enhet har ”rotats” innebär det att en del av enhetens programvara har ändrats för att aktivera funktioner som annars inte kanske finns. Dessa ändringar kan ofta äventyra säker åtkomst till organisationens resurser, t.ex e-post och dokument. Rotade enheter kan därför inte användas för att komma åt resurserna förrän problemet har lösts.  
 
-Om du inte har rotat enheten avsiktligt kan du kontrollera om enheten har rotats av andra orsaker:
+Det finns några vanliga sätt som enheten kan ha blivit rotad på:
 
-- Du kanske har installerat en app på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Om du ser det här meddelandet efter att du har installerat en app kan du prova att avinstallera appen och se om det hjälper.
+- Du kanske har installerat en app på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Om du ser det här meddelandet omedelbart efter att du har installerat en app, bör du försöka att avinstallera appen.
 
-- Enhetstillverkaren har installerat programvara på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Du måste be IT-administratören om hjälp. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+- Enhetstillverkaren har installerat programvara på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Du måste be IT-administratören om hjälp. Kontaktuppgifter finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+Om du har rotat enheten själv måste du återställa enheten till dess icke-rotade tillstånd.
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

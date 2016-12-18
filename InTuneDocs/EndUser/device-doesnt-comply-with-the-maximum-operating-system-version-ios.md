@@ -1,11 +1,11 @@
 ---
-title: "iOS-enheten är inte kompatibel med den senaste versionen av operativsystemet | Microsoft Intune"
+title: "Enheten är inte kompatibel med den senaste versionen av operativsystemet | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,21 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 994fbd726b5173ce18e284c94a658189f100a9b0
-ms.openlocfilehash: 99c41c884d1e6e4e0d1ba6d2edb0d902551ea21a
+ms.sourcegitcommit: 308706452538ea6d87546d72ca4478b227ced0d6
+ms.openlocfilehash: 928845c6e0bc21ae678fd6ba31c3bd0bbde5d338
 
 
 ---
 
 
-# iOS-enheten är inte kompatibel med inställningen för den senaste versionen av operativsystemet
+# <a name="your-devices-operating-system-version-isnt-yet-supported"></a>Din enhets operativsystemversion stöds inte än
 
-iOS-enheten är inte kompatibel med IT-administratörens princip för den senaste operativsystemversionen som du kan använda. Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Med den snabba utvecklingstakten för mobila tekniker kan enheten faktiskt ligga före vad IT-administratören har haft möjlighet att testa. Det är möjligt att den senaste versionen av iOS inte fungerar med några av ditt företags andra verktyg.
+
+Du måste kontakta IT-administratören för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

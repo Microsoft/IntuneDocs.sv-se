@@ -1,11 +1,11 @@
 ---
-title: "Om företagsportalen | Microsoft Intune"
+title: "Vad är företagsportalen? Microsoft Intune"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 12/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,8 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: adf7fc0b7ddeb7fa8361d37efd0fdd5c714a72e4
+ms.sourcegitcommit: 3891d0389df3526ea328fc2952e3d181b1e766c0
+ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
 
 
 ---
@@ -42,7 +42,7 @@ Om du vill se vad du kan göra med företagsportalens webbplats jämfört med va
 
 > [!div class="op_single_selector"]
 - [Android](using-your-android-device-with-intune.md)
-- [iOS och Mac OS X](using-your-ios-or-mac-os-x-device-with-intune.md)
+- [iOS och macOS](using-your-ios-or-mac-os-x-device-with-intune.md)
 - [Windows](using-your-windows-device-with-intune.md)
 - [Företagsportalens webbplats](using-the-intune-company-portal-website.md)
 
@@ -53,12 +53,12 @@ Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på di
 
 > [!div class="op_single_selector"]
 - [Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [iOS och Mac OS X](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [iOS och macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 - [Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Vilken typ av datorer och enheter kan du lägga till i företagsportalen?
 
--   iPhone-, iPad- och Mac OS X-enheter
+-   iPhone-, iPad- och macOS-enheter
 
 -   mobila Android-enheter
 
@@ -75,7 +75,7 @@ När du *tar bort* en dator eller enhet avregistrerar du enheten från Intune. N
 
 > [!div class="op_single_selector"]
 - [Android](unenroll-your-device-from-intune-android.md)
-- [iOS och Mac OS X](unenroll-your-device-from-intune-ios.md)
+- [iOS och macOS](unenroll-your-device-from-intune-ios.md)
 - [Windows](unenroll-your-device-from-intune-windows.md)
 
 När du *återställer* en dator eller enhet försöker företagsportalen återställa datorn eller enheten till tillverkarens standardinställningar. Om du återställer enheten tas alla företagsdata och personliga data bort från enheten! Om du har blivit av med enheten kan du även fjärråterställa den från företagsportalens webbplats.
@@ -84,7 +84,7 @@ Välj någon av följande länkar om du vill se hur du återställer enheten:
 
 > [!div class="op_single_selector"]
 - [Android](reset-erase-your-lost-or-stolen-device-android.md)
-- [iOS och Mac OS X](reset-erase-your-lost-or-stolen-device-ios.md)
+- [iOS och macOS](reset-erase-your-lost-or-stolen-device-ios.md)
 - [Windows](reset-erase-your-lost-or-stolen-device-windows.md)
 - [Återställa en enhet från företagsportalens webbplats](reset-your-device-cpwebsite.md)
 
@@ -96,6 +96,6 @@ Kontakta IT-administratören om du behöver hjälp. Titta efter IT-administratö
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

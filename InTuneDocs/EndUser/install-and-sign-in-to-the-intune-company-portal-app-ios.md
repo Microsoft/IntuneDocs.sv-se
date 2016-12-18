@@ -2,10 +2,10 @@
 title: "Installera och logga in i Intune-företagsportalappen | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1d133011004fa9c684f81c7adc085dc43a4a2ee4
-ms.openlocfilehash: 29bc67a9ce4120cbb9f157c8d0eefb78dce020ca
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: ebb2a164e631388d073d11440eb6072ae4d90468
 
 
 ---
 
 
-# Installera och logga in i Intune-företagsportalappen
+# <a name="install-and-sign-in-to-the-intune-company-portal-app"></a>Installera och logga in i Intune-företagsportalappen
 
 Företagsportalen är en app som du installerar på din iOS-enhet för att få åtkomst till företags- eller skolappar, -e-post och -nätverk.  Innan du får åtkomst måste du installera företagsportalappen och sedan använda appen för att registrera enheten i Microsoft Intune. Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
@@ -34,12 +34,12 @@ Företagsportalen är en app som du installerar på din iOS-enhet för att få �
 
 3.  Öppna företagsportalappen, ange din e-postadress och ditt lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 
-    När du loggar in i företagsportalappen för första gången, och ditt företag eller skola använder Intune, uppmanas du att registrera din enhet i Intune. Om du vill registrera din enhet följer du stegen i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
+    När du loggar in i företagsportalappen för första gången, och ditt företag eller skola använder Intune, uppmanas du att registrera din enhet i Intune. Om du vill registrera dig följer du stegen i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

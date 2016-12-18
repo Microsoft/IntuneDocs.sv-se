@@ -15,8 +15,8 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: 4daf13d683ada52b098ef24363d2d409dc501c06
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 7d11e716750c4920234de5419e262d6c2c6e2d44
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-Om du försöker registrera en Mac OS X-enhet kan du läsa [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
+Om du försöker registrera en macOS-enhet kan du läsa mer i [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
 
 **Innan du börjar**
 
@@ -96,6 +96,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-adm
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

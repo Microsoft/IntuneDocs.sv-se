@@ -9,14 +9,14 @@ keywords: intune documentation, app management, device management, MDM documenta
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 12/7/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: f9ab2200b1d357d6a805e3e5cd37f3c4391e3571
-ms.openlocfilehash: 581bf46694ed339a6405a18a87e9a1aec4d5e3de
+ms.sourcegitcommit: b921a15ca5fd24d9ddbf54789c42a0740b72d7f6
+ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
 
 
 ---
@@ -24,8 +24,8 @@ ms.openlocfilehash: 581bf46694ed339a6405a18a87e9a1aec4d5e3de
 <article id="main">
     <section id="hero-content">
       <h1>Intune-dokumentation</h1>
-      <h2>Lär dig att distribuera och hantera Microsoft Intune, en hanteringstjänst för mobila enheter och program.</h2>
-      <h3>Vill du hantera Intune med Configuration Manager? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management" target="_blank">Läs mer om hybridhantering av mobila enheter &rarr;</a></h3>
+      <h2>Hantering av mobila enheter och appar samt datorhantering från molnet. </h2>
+      <h3>Vill du hantera Intune med Configuration Manager? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Läs mer om hybridhantering av mobila enheter &rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
@@ -33,7 +33,7 @@ ms.openlocfilehash: 581bf46694ed339a6405a18a87e9a1aec4d5e3de
         <ul class="column column-half">
           <li><a href="http://fasttrack.microsoft.com/ems">Har du mer än 150 licenser? Utnyttja dina FastTrack-förmåner</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Vanliga sätt att använda Intune</a></li>
-          <li><a href="/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune">Skydda appdata</a></li>
+          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Förhandsgranskning av Intune i Azure-portalen</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Skydda åtkomst till företagsresurser</a></li>
@@ -285,6 +285,6 @@ ms.openlocfilehash: 581bf46694ed339a6405a18a87e9a1aec4d5e3de
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

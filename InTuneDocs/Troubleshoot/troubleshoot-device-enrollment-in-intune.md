@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33dcb095b1a405b3c8d99ba774aee1832273eaf
-ms.openlocfilehash: f279e79432f70214245854db42641535eaf65824
+ms.sourcegitcommit: 998c24744776e0b04c9201ab44dfcdf66537d523
+ms.openlocfilehash: 9c5963f1413e1cd9f119186f47f46c7f7f16720d
 
 
 ---
@@ -86,7 +86,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 >
 > Ett användarkonto som läggs till i gruppen Enhetsregistreringshanterare kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
-### <a name="company-portal-temporarily-unavailable"></a>Företagsportalen är för tillfället otillgänglig
+### <a name="company-portal-emporarily-unavailable"></a>Företagsportalen är inte tillgänglig för tillfället
 **Problem:** Användaren får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
 
 **Lösning:**
@@ -214,23 +214,40 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
-**Problem**: Användaren får meddelandet *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat* på enheten.
+**Problem**: Användaren får följande meddelande på sin enhet: *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat.*
 
-**Lösning**:
+**Lösning 1**:
 
-- Användaren kan prova att hämta certifikatet som saknas med hjälp av [de här anvisningarna](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Om användaren inte lyckas hämta certifikatet kanske mellanliggande certifikat saknas på ADFS-servern. Mellanliggande certifikat krävs för att Android ska lita på servern.
+Be användaren att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Försök med Lösning 2 om felet fortfarande visas när användaren följt instruktionerna.
 
-Så här importerar du certifikaten till ADFS-servern eller proxyservrar:
+**Lösning 2**:
 
-1.  På ADFS-servern startar du **Microsoft Management Console** och lägger till snapin-modulen för certifikat för **datorkontot**.
-5.  Sök efter certifikatet som ADFS-tjänsten använder och visa dess överordnade certifikat.
-6.  Kopiera det överordnade certifikatet och klistra in det under **Computer\Intermediate Certification Authorities\Certificates**.
-7.  Kopiera certifikaten för ADFS, ADFS-dekryptering och ADFS-signering och klistra in dem i det personliga arkivet för ADFS-tjänsten.
-8.  Starta om ADFS-servrarna.
+Om användaren fortfarande ser ett fel om saknat certifikat efter att ha angett sin företagsinloggning och omdirigerats för federerad inloggning, kan ett mellanliggande certifikat saknas på AD FS-servern (Active Directory Federation Services).
 
+Certifikatfelet uppstår eftersom Android-enheter kräver att mellanliggande certifikat ingår i [SSL-serverns hälsning](https://technet.microsoft.com/library/cc783349.aspx), men för närvarande är standardinställningen att AD FS-serverns eller AD FS-proxyserverns installation endast skickar AD FS-tjänstens SSL-certifikat i SSL-serverns svar på en hälsning från SSL-klienten.
+
+Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
+
+1.  Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
+2.  Expandera **Personligt** och välj **Certifikat**.
+3.  Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
+4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
+5.  På varje överordnat certifikat väljer du **Visa certifikat**.
+6.  Välj fliken **Information** och välj **Kopiera till fil... **.
+7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
+8.  Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
+9.  Starta om AD FS-servrarna.
+10. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 
+**Så här kontrollerar du att certifikatet har installerats**:
+
+Följande steg beskriver bara en av många metoder och verktyg som du kan använda för att kontrollera att certifikatet har installerats.
+
+1. Gå till [det kostnadsfria Digicert-verktyget](ttps://www.digicert.com/help/).
+2. Ange det fullständiga domännamnet (t.ex. sts.contoso.com) för AD FS-servern och välj **KONTROLLERA SERVER**.
+
+Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i resultaten. Om problemet ovan kvarstår, ser du ett rött X i avsnitten ”Certifikatnamnmatchningar” och ”SSL-certifikatet är korrekt installerat” i rapporten.
 
 
 ## <a name="ios-issues"></a>iOS-problem
@@ -356,6 +373,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

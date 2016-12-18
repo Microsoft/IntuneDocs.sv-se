@@ -1,21 +1,21 @@
 ---
-title: Microsoft Intune App SDK Xamarin-komponenten | Microsoft Intune
+title: Microsoft Intune App SDK Xamarin-komponenten | Microsoft Docs
 description: 
 keywords: sdk, Xamarin, intune
-author: oydang
-manager: karthikaraman
-ms.author: oydang
+author: mtillman
+manager: angrobe
+ms.author: mtillman
 ms.date: 11/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
-ms.reviewer: karthikaraman
+ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af7df3fcf50c3508d495522341bb287c638f40a3
-ms.openlocfilehash: 2ea1763881a7d10ae8bc21c98754d2767b2fc954
+ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
+ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
 
 
 ---
@@ -83,7 +83,7 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
 
       ```
 
-2.  Nu när komponenten har lagts till och initierats kan du följa de allmänna stegen som krävs för att skapa App SDK i en iOS-mobilapp. Du kan hitta den fullständiga dokumentationen för att aktivera interna iOS-appar i [utvecklarhandboken för Intune App SDK för iOS](intune-app-sdk-ios).
+2.  Nu när komponenten har lagts till och initierats kan du följa de allmänna stegen som krävs för att skapa App SDK i en iOS-mobilapp. Du kan hitta den fullständiga dokumentationen för att aktivera interna iOS-appar i [utvecklarhandboken för Intune App SDK för iOS](intune-app-sdk-ios.md).
 3. **Viktig!** Det finns flera ändringar som är specifika för Xamarin-baserade iOS-appar. Till exempel måste du, när du aktiverar nyckelringsgrupper, lägga till följande om du vill ta med Xamarin-exempelappen som vi har lagt till i komponenten. Nedan ser du ett exempel på de grupper som måste finnas i dina nyckelhanterargrupper:
 
       ```xml
@@ -102,10 +102,10 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
       </plist>
       ```
 
-Du har slutfört stegen som krävs för att bygga in komponenten i din Xamarin-baserade iOS-app. Om du använder Xcode för att skapa projektet kan du använda `Intune App SDK Settings.bundle`. På så sätt kan du aktivera och inaktivera Intune-principinställningar när du skapar ditt projekt för att testa och felsöka. Om du vill utnyttja det här paketet följer du stegen i [utvecklarguiden för Intune App SDK för iOS](intune-app-sdk-ios) och läser avsnittet om [felsökning i Xcode](intune-app-sdk-ios#debug-information).
+Du har slutfört stegen som krävs för att bygga in komponenten i din Xamarin-baserade iOS-app. Om du använder Xcode för att skapa projektet kan du använda `Intune App SDK Settings.bundle`. På så sätt kan du aktivera och inaktivera Intune-principinställningar när du skapar ditt projekt för att testa och felsöka. Om du vill utnyttja det här paketet följer du stegen i [utvecklarguiden för Intune App SDK för iOS](intune-app-sdk-ios.md) och läser avsnittet om [felsökning i Xcode](intune-app-sdk-ios.md#status-result-and-debug-notifications).
 
 ## <a name="enabling-mam-in-your-android-mobile-app"></a>Aktivera MAM i din Android-mobilapp
-För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser du och följer [utvecklarguiden för Intune App SDK för Android]. För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen](intune-app-sdk-android#replace-classes-methods-and-activities-with-their-mam-equivalent-required) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`.
+För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser du och följer [utvecklarguiden för Intune App SDK för Android]. För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent-required) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`.
 
 För Xamarin Forms och andra UI-ramverk tillhandahåller vi verktyget `MAM.Remapper`. Verktyget utför klassersättningen åt dig. Men du måste dock utföra följande steg:
 
@@ -125,6 +125,6 @@ Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följ
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO2-->
 
 

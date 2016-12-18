@@ -1,9 +1,9 @@
 ---
-title: "Felsöka Lookout-integrering | Microsoft Intune"
+title: "Felsöka Lookout-integrering | Microsoft Docs"
 description: "I det här avsnittet beskrivs felsökning av problem som ofta uppstår vid Lookout-integrering"
 keywords: 
-author: karthikaraman
-ms.author: karaman
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 09/13/2016
 ms.topic: article
@@ -14,8 +14,8 @@ ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9bf5764d1e1bd73fd62e5033b2309fc8d5a912e4
-ms.openlocfilehash: aa29f702803d657f783ff0dfc6ea66981484c569
+ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
+ms.openlocfilehash: 416f200bdb72bae98897cb8d279dbdb767757da9
 
 
 ---
@@ -39,7 +39,7 @@ Du kan få följande fel när den globala Azure AD-administratöranvändaren int
 
 ![skärmbild av inloggningsskärmen för Lookout som visar inloggningsfelet](../media/mtp/lookout-mtp-consent-not-accepted-error.png)
 
-För att lösa problemet måste en global administratör logga in på https://aad.lookout.com/les?action=consent och acceptera uppmaningen att starta installationen. Mer information finns i avsnittet [Set up your subscription with Lookout MTP](set-up-your-subscription-with-lookout-mtp.md) (Konfigurera din prenumeration med Lookout MTP)
+För att lösa problemet måste en global administratör logga in på https://aad.lookout.com/les?action=consent och acceptera uppmaningen att starta installationen. Mer information finns i avsnittet [Set up your subscription with Lookout MTP](../deploy-use/set-up-your-subscription-with-lookout-mtp.md) (Konfigurera din prenumeration med Lookout MTP)
 
 ## <a name="troubleshoot-device-status-issues"></a>Felsöka problem med enhetsstatus
 
@@ -90,6 +90,6 @@ Så länge som den nya användaren är i en av registreringsgrupperna som angett
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

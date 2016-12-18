@@ -2,10 +2,10 @@
 title: "Synkronisera enheten manuellt med företagsportalens webbplats | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,26 +15,27 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6d53602bf4d767341924c4c4af8edae0d376a149
-ms.openlocfilehash: c49aa7e21f002110155e883894d211266ddbcb6c
+ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
+ms.openlocfilehash: 68e4df02fa298af68f6c01a4dbb658cca5bb231b
 
 
 ---
 
 
-# Synkronisera enheten manuellt med företagsportalens webbplats
+# <a name="use-the-company-portal-website-to-sync-your-device"></a>Använda företagsportalens webbplats för att synkronisera enheten
 
-Om installationen av appen eller någon annan åtgärd tar för lång tid kan du synkronisera enheten manuellt. Manuell synkronisering kan påskynda installationen eller åtgärden.
+Ibland kan installationen av en app eller någon annan uppgift ta längre tid än normalt. Om det tar för lång kan du manuellt synkronisera enheten för att påskynda vad du försöker göra.
 
-Synkroniseringsfunktionen fungerar endast för följande versioner. Använd de instruktioner som motsvarar din enhetstyp.
+> [!Note]
+> Synkroniseringsfunktionen är inte tillgänglig för alla enheter. Om enheten inte visas kan du försöka återställa den genom att stänga av WiFi i ungefär 30 sekunder och sedan ansluta till nätverket igen.
 
-* [Windows 10 Mobil](sync-your-device-manually-windows.md#windows-10-mobile)
-* [Windows 10 desktop](sync-your-device-manually-windows.md#windows-10-desktop)
-* [Windows Phone 8.1](sync-your-device-manually-windows.md#windows-phone-8-1)
 * [iOS](sync-your-device-manually-ios.md)
+* [Windows 10 Mobile](sync-your-device-manually-windows.md#windows-10-mobile)
+* [Windows 10 Desktop](sync-your-device-manually-windows.md#windows-10-desktop)
+* [Windows Phone 8.1](sync-your-device-manually-windows.md#windows-phone-81)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

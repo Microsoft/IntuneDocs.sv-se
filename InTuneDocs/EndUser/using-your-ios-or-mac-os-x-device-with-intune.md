@@ -1,6 +1,6 @@
 ---
-title: "Använda en iOS- eller Mac OS X-enhet med Intune | Microsoft Intune"
-description: "Lista med länkar till saker du kan göra på din iOS- eller Mac OS-enhet när enheten har registrerats i Intune"
+title: "Använda en iOS- eller macOS-enhet med Intune | Microsoft Intune"
+description: "Lista med länkar till vad du kan göra på din mobila iOS- eller macOS-enhet när enheten har registrerats i Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -15,13 +15,13 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: bc031fe080cd17b3436388f59ecc83df53a16a32
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: e10c0eb3000bcf3a98a0cab891c40d32fe06d335
 
 
 ---
 
-# <a name="using-your-ios-or-mac-os-x-device-with-intune"></a>Using your iOS or Mac OS X device with Intune
+# <a name="using-your-ios-or-macos-device-with-intune"></a>Använda din iOS- eller macOS-enhet med Intune
 
 Den här artikeln innehåller länkar till alla åtgärder som användarna kan utföra på sina Intune-hanterade enheter. IT-administratörer kan referera till den här informationen för att se de steg som användarna måste följa för att utföra en rad olika uppgifter. Dessa är grupperade i följande kategorier:
 - Installation av företagsportalappen och registrering av Intune
@@ -33,8 +33,8 @@ Den här artikeln innehåller länkar till alla åtgärder som användarna kan u
 Det här avsnittet innehåller information om installationen av Intune-företagsportalen och registreringen av iOS-enheter.
 
 - [Installera och logga in i Intune-företagsportalappen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-- [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md)
-- [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md)
+- [Registrera en iOS-enhet i Intune](enroll-your-device-in-intune-ios.md)
+- [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md)
 - [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
 
 ## <a name="things-users-can-do-when-their-device-is-enrolled-in-intune"></a>Saker användare kan göra när deras enheter har registrerats i Intune
@@ -67,6 +67,6 @@ Informationen i det här avsnittet hjälper användare att åtgärda problem som
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

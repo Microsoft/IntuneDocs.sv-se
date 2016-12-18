@@ -2,10 +2,10 @@
 title: "Använda hanterade appar på iOS-enheten | Microsoft Intune"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: 509a0fda9355cc77a2f7690771dbe086c0cc59fc
+ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
+ms.openlocfilehash: 340c160b2741856c91e7136fa60318c83b1ea8bb
 
 
 ---
 
 
-# Använda hanterade appar på iOS-enheten
+# <a name="use-managed-apps-on-your-ios-device"></a>Använda hanterade appar på iOS-enheten
 
 Hanterade appar är appar som IT-administratören kan konfigurera för att skydda företagsdata som du kan komma åt i appen. När du använder företagets data i en hanterad app på en iOS-enhet kanske du märker att appen inte fungerar riktigt som du förväntat dig. Du kanske inte kan kopiera och klistra in skyddade företagsdata, eller så kanske du inte kan spara data på vissa platser.
 
@@ -32,14 +32,14 @@ När du använder företagsdata i en hanterad app visas ett meddelande (se nedan
 
 ![managed-apps-message-ios](./media/managed-apps-message.png)
 
-### Hur skaffar jag hanterade appar?
+### <a name="how-do-i-get-managed-apps"></a>Hur skaffar jag hanterade appar?
 Du kan hämta hanterade appar på ett par olika sätt:
 
--   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan IT-administratören installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera din Mac OS X-enhet i Intune](enroll-your-device-in-intune-mac-os-x.md).
+-   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan IT-administratören installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
 
 -   Du installerar en app från App Store och loggar sedan in med ditt företagskonto som hanteras av Intune.
 
-### Vad kan IT-administratören hantera i en app?
+### <a name="what-can-my-it-admin-manage-in-an-app"></a>Vad kan IT-administratören hantera i en app?
 Här är några exempel på vad IT-administratören kan hantera i en app och hur det kan påverka din användning av företagsdata på din enhet:
 
 -   Åtkomst till vissa webbplatser
@@ -61,10 +61,10 @@ Här är några exempel på vad IT-administratören kan hantera i en app och hur
 -   Krav på datakryptering
 
 
-Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 
