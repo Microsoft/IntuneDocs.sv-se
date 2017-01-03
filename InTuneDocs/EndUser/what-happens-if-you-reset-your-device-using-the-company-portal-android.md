@@ -1,11 +1,11 @@
 ---
-title: "Vad händer om du återställer en Android-enhet med hjälp av företagsportalen? Microsoft Intune"
+title: "Vad händer om du återställer en Android-enhet med hjälp av företagsportalen? | Microsoft Docs"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3f531adc042677d12c64e2efb4f8e3401e4b5bd4
-ms.openlocfilehash: ff0dca484b7e7a75dcaff69c86985510ee17277e
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: a696858380fe15efd4e40db9f2b4c6b5157051bc
 
 
 ---
 
 
-# Vad händer om du återställer en Android-enhet med hjälp av företagsportalen?
+# <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Vad händer om du återställer en Android-enhet med hjälp av företagsportalen?
 
 När du använder företagsportalen för att återställa en Android-enhet raderas alla appar, inställningar och personliga data på enheten. Den här återställningen återställer enheten till fabriksinställningarna.
 
@@ -32,10 +32,10 @@ Om du har en Samsung Knox-enhet kan du utföra en ”selektiv rensning” genom 
 - E-post, VPN och Wi-Fi.
 - IT-administratörens möjlighet att framtvinga vissa inställningar.
 
-Kontakta IT-administratören om du har frågor. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
