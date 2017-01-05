@@ -1,13 +1,13 @@
-## Azure Active Directory-registrering
+## <a name="azure-active-directory-enrollment"></a>Azure Active Directory-registrering
 
 Den automatiska registreringen gör att användarna kan registrera sina företagsägda eller privata Windows 10-datorer och Windows 10 Mobile-enheter i Intune genom att lägga till ett arbetskonto eller skolkonto och godkänna att datorn/enheten hanteras. Svårare än så är det inte. Användarens enhet registreras och ansluts till Azure Active Directory i bakgrunden. När enheten har registrerats hanteras den med Intune.
 
-**Förutsättningar**
+**Krav**
 - Azure Active Directory Premium-prenumeration ([provprenumeration](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune-prenumeration
 
 
-### Konfigurera automatisk MDM-registrering
+### <a name="configure-automatic-mdm-enrollment"></a>Konfigurera automatisk MDM-registrering
 
 1. Gå till noden **Active Directory** på [Azure-hanteringsportalen](https://manage.windowsazure.com) (https://manage.windowsazure.com) och välj din katalog.
 
@@ -28,12 +28,12 @@ Den automatiska registreringen gör att användarna kan registrera sina företag
 6.  Ange vilka användares enheter som ska hanteras av Microsoft Intune. Dessa användares Windows 10-enheter registreras automatiskt för hantering med Microsoft Intune.
 
   - **Alla**
-  - **Grupper**
+  - **GRUPPER**
   - **Inga**
 
 7. Välj **Spara**.
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
