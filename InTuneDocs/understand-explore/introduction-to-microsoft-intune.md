@@ -21,6 +21,9 @@ ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
 ---
 
 # <a name="what-is-intune"></a>Vad är Intune?
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som hjälper anställda att vara produktiva samtidigt som företagets data skyddas. Med Intune kan du:
 * Hantera mobila enheter som anställda använder för att komma åt företagets data.
 * Hantera mobila appar som används av anställda.

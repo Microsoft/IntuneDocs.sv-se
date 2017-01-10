@@ -20,6 +20,9 @@ ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
 ---
 
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Utvärdera mobilenhetshantering i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Den här utvärderingsguiden visas hur mobilenhetshantering fungerar i Intune. Du kommer att:
 - Registrera en enhet som ska hanteras av Intune.
 - Skapa grupper för att organisera användare och enheter.

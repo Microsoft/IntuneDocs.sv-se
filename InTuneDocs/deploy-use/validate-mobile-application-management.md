@@ -21,6 +21,8 @@ ms.openlocfilehash: 080d8f4fd4b6e1b53df860f4319b1c199d504c06
 
 # <a name="validating-your-mobile-application-management-setup"></a>Verifiera din konfiguration för hantering av mobilprogram
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Det här avsnittet innehåller information om hur du felsöker problem när du har konfigurerat hantering av mobila program (MAM). Dessa anvisningar gäller MAM-principer i Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Söka efter problem
