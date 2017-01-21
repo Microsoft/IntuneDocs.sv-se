@@ -1,5 +1,5 @@
 ---
-title: "Skydda verksamhetsspecifika appar på enheter som inte har registrerats | Microsoft Intune"
+title: "Skydda verksamhetsspecifika appar på enheter som inte har registrerats | Microsoft Docs"
 description: "I det här avsnittet beskrivs hur du kan förbereda dina verksamhetsspecifika appar så att du kan skydda dig mot dataförlust med hjälp av principer för hantering av mobila appar."
 keywords: 
 author: mtillman
@@ -14,13 +14,15 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6ff74f0b46baf384dbdedf13ad75538dd33a089
-ms.openlocfilehash: bc1efb1e0c62e6bd52658690db95901c70403d4d
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
 
 
 ---
 
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Principer för hantering av mobila appar (MAM) skyddar företagsdata genom att begränsa åtgärder som kan läcka företagsdata och tillämpa krav för åtkomst till data, som t.ex. PIN-koder för appar. Om du vill tillämpa MAM-principer för branschspecifika iOS- och Android-appar måste du först omsluta appen med programhanteringsverktyget för Microsoft Intune. Appomslutning är en process för tillämpning av ett hanteringslager på en mobil app utan att det krävs några ändringar av det underliggande programmet. När appen har omslutits kan du tillämpa MAM-principer på den och distribuera den till användarna.  
 

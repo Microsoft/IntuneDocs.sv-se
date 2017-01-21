@@ -1,35 +1,37 @@
 ---
-title: "Återställa (radera) en borttappad eller stulen iOS-enhet | Microsoft Intune"
+title: "Återställa (radera) en borttappad eller stulen iOS-enhet | Microsoft Docs"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 70788dca-765f-47a7-9994-a286f8a88588
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 705c70b034378113a29003891f465a0e88186c69
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9014a09c79287a28502adfbf7e66c4b004336fa9
 
 
 ---
 
 
-# Återställa (radera) en iOS-enhet som förlorats eller stulits
+# <a name="reset-erase-your-lost-or-stolen-ios-device"></a>Återställa (radera) en iOS-enhet som förlorats eller stulits
 
 Om en telefon som har registrerats i Intune är borttappad eller om den har blivit stulen kan du återställa den till fabriksinställningarna via företagsportalappen från en annan enhet eller via [företagsportalwebbplatsen](http://portal.manage.microsoft.com).
 
 > [!WARNING]
 > När du återställer en enhet till standardinställningarna tas både arbetsrelaterad och privat information bort från enheten. Mer information om vad som händer när du återställer din enhet finns i [Vad händer om du återställer din enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md).
 
-## Återställa enheten med företagsportalappen
+## <a name="to-reset-your-device-using-the-company-portal-app"></a>Återställa enheten med företagsportalappen
 
 1.  Öppna företagsportalappen från en annan registrerad enhet och logga in med ditt arbets- eller skolkonto.
 
@@ -37,7 +39,7 @@ Om en telefon som har registrerats i Intune är borttappad eller om den har bliv
 
 3.  Tryck på **Återställ** &gt; **Återställ**.
 
-## Återställa en enhet med företagsportalens webbplats
+## <a name="to-reset-your-device-using-the-company-portal-website"></a>Återställa en enhet med företagsportalens webbplats
 
 Följ dessa anvisningar eller titta på den här videon:
 
@@ -47,12 +49,10 @@ Följ dessa anvisningar eller titta på den här videon:
 
 2.  Tryck på **Återställ** &gt; **Återställ**.
 
-Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Ge åtkomst till företagsresurser | Microsoft Intune"
+title: "Ge åtkomst till företagsresurser | Microsoft Docs"
 description: "Wi-Fi-, VPN- och e-postprofiler fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,16 @@ ms.assetid: 3dd8dd4e-e165-4d0c-97b7-b3e86ebab909
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: f91c3530599b75093f536fd85eaf21d0b4e86e50
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: bda32f27216c7b65bd02334bae2882e840e7a99d
 
 
 ---
 
 # <a name="enable-access-to-company-resources-with-microsoft-intune"></a>Ge åtkomst till företagsresurser med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Wi-Fi-, VPN- och e-postprofiler i Microsoft Intune fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver för att utföra sitt arbete, oavsett var de befinner sig. Certifikatprofiler hjälper till att säkra den åtkomsten.
 
 ## <a name="wi-fi-profileswi-fi-connections-in-microsoft-intunemd-and-supported-platforms"></a>[Wi-Fi-profiler](wi-fi-connections-in-microsoft-intune.md) och plattformar som stöds
@@ -57,6 +60,6 @@ Hjälper till med att säkra åtkomst till företagsresurser som trådlösa nät
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

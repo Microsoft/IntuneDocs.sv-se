@@ -1,5 +1,5 @@
 ---
-title: "Per app-VPN för Android med Pulse Secure | Microsoft Intune"
+title: "Per app-VPN för Android med Pulse Secure | Microsoft Docs"
 description: "Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune."
 keywords: 
 author: robstackmsft
@@ -14,13 +14,15 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cab83c3d1a63a0e4f16ee838443ec032bcf1532
-ms.openlocfilehash: ace975b8a53e3ccd8b754019ec7f155c563339b5
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: afbb103f1deecff323d07c510f42a2083a4ea0d5
 
 
 ---
 
 # <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Du kan skapa en VPN-profil per app för enheter som kör Android 5.0 och senare som hanteras av Intune. Börja med att skapa en VPN-profil som använder Pulse Secure- eller Citrix-anslutningstypen. Skapa sedan en princip för anpassad konfiguration som associerar VPN-profilen med specifika appar. 
 
@@ -78,6 +80,6 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

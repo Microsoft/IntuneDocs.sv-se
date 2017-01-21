@@ -1,5 +1,5 @@
 ---
-title: Registrera enheter | Microsoft Intune
+title: Registrera enheter | Microsoft Docs
 description: "Hantering av mobila enheter (MDM) använder registrering för att skapa hantering för enheterna och tillåta åtkomst till resurser."
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: a6e5148996b1010f0248f5b122246e38c3aa0464
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: bfb1cee100b9c7bfcdc862489254e6ccefe9ecf0
 
 
 ---
 
 # <a name="enroll-devices-for-management-in-intune"></a>Registrera enheter för hantering i Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan registrera enheter, inklusive Windows-datorer, för att aktivera hantering av mobila enheter (MDM) med Microsoft Intune. Det här avsnittet beskriver olika sätt att registrera mobila enheter i Intune-hanteringen. Hur du registrera dina enheter beror på typen av enhet, ägarskapet och vilken hanteringsnivå som krävs. BYOD (Bring Your Own Device)-registrering låter användare att registrera sina personliga telefoner, surfplattor eller datorer. Registrering av företagsägda enheter (COD) gör hanteringsscenarier som fjärrensning, delade enheter och användartillhörighet för en enhet möjliga.
 
 Om du använder [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune), antingen lokalt eller med värd i molnet, kan du aktivera enkel Intune-hantering utan registrering. Windows-datorer kan också hanteras med [Intune-klientprogrammet](#manage-windows-pcs-with-intune).

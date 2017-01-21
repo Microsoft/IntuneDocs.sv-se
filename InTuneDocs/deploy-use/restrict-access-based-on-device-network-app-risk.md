@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomst med enhetsskydd | Microsoft Intune"
+title: "Begränsa åtkomst med enhetsskydd | Microsoft Docs"
 description: "Begränsa åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,65 +14,76 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: d529bd1c2a281c06f70593e73b71d09962a3c714
+ms.sourcegitcommit: 6b83d06ecbe6e202bf022444c288e0866b3507c6
+ms.openlocfilehash: 1dd2c4a46857aef1ba273904d58d5eacae99c7bc
 
 
 ---
 
 # <a name="restrict-access-to-company-resource-based-on-device-network-and-application-risk"></a>Begränsa åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk
-Du kan styra åtkomst från mobila enheter till företagsresurser baserat på riskbedömning som utförs av Lookout, en lösning för enhetsskydd som är integrerad med Microsoft Intune. Risken är baserad på telemetri som Lookout-tjänsten samlar in från enheter för säkerhetsproblem med operativsystem (OS), installerade skadliga appar och skadliga nätverksprofiler. Du kan konfigurera principer för villkorlig åtkomst i Intune baserat på Lookouts rapporterade riskbedömning som aktiveras genom policyer för efterlevnad och tillåta eller blockera enheter som har visats vara inkompatibla på grund av hot som identifieras på enheterna.  
+Du kan styra åtkomst från mobila enheter till företagsresurser baserat på riskbedömning som utförs av Lookout, en lösning för enhetsskydd som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som använder Lookout-tjänsten och inkluderar:
+- Säkerhetsproblem med operativsystemversion
+- Installerade skadliga program
+- Skadliga nätverksprofiler
+
+Du kan konfigurera principer för villkorlig åtkomst baserat på Lookouts riskbedömning som aktiveras via Intunes efterlevnadsprinciper. Med hjälp av inställningarna kan du tillåta eller blockera inkompatibla enheter baserat på de hot som har identifierats.  
 
 ## <a name="what-problem-does-this-solve"></a>Vilka problem kan du lösa så här?
-Företag och organisationer behöver skydda känsliga data från nya hot som inkluderar fysiska, app-baserade och nätverksbaserade hot, samt säkerhetsproblem med operativsystem.
+Företag behöver skydda känsliga data från nya hot som inkluderar fysiska, app-baserade och nätverksbaserade hot, samt säkerhetsproblem med operativsystem.
 
-Företag och organisationer har tidigare tagit en aktiv roll för att skydda datorer mot skadliga angrepp. Mobila tjänster är ett nytt område som ofta förblir oskyddade. Även om de mobila plattformarna har ett inbyggt skydd för operativsystemet med tekniker som appisolering och kontrollerade appbutiker för kunder är dessa plattformar fortfarande sårbara för sofistikerade attacker. Eftersom mobila enheter används mer och mer av anställda för att utföra arbete och de behöver åtkomst till information som kan vara känslig och värdefull måste dessa enheter skyddas från en mängd olika sofistikerade attacker.
+Tidigare har företag varit förutseende med att skydda datorer mot angrepp, medan mobila enheter har fått vara oövervakade och oskyddade. Mobila plattformar har ett inbyggt skydd med appisolering och kontrollerade appbutiker för kunder, men dessa plattformar är fortfarande sårbara för sofistikerade attacker. Idag använder många anställda den här typen av enheter för arbete och behöver ha åtkomst till känslig information. Enheter måste skyddas från allt mer sofistikerade attacker.
 
-Intune gör det möjligt att kontrollera åtkomst till företagets resurser och data baserat på riskbedömning som lösningar för enhetsskydd som Lookout tillhandahåller.
+Intune låter dig kontrollera åtkomst till företagets resurser baserat på riskbedömning som lösningar för enhetsskydd som Lookout tillhandahåller.
 
 ## <a name="how-do-intune-and-lookout-device-threat-protection-help-protect-company-resources"></a>Hur skyddar Intune och Lookout enhetsskydd företagets resurser?
-Lookouts mobilapp (Lookout for work), körs på mobila enheter, avbildar filsystem, nätverksstackar samt telemetri för enheter och program (där det är tillgängligt) och skickar det till molntjänsten Lookout enhetsskydd för att beräkna enhetens sammanställda risk för mobila hot. Du kan även ändra risknivåklassificeringen för hot i Lookout-konsolen så som den passar dig.  
+Lookouts mobilapp, **Lookout for work**, är installerat och körs på mobila enheter. Den här appen avbildar filsystem, nätverksstackar samt telemetri för enheter och program där det är tillgängligt och skickar det sedan till Lookouts molntjänst för att utvärdera enhetens risk för mobila hot. Du kan ändra risknivåklassificeringen för hot i Lookout-konsolen så som den passar dig.  
 
-Efterlevnadsprincipen i Intune innehåller nu en ny regel för Lookout mobilt skydd som baseras på riskbedömningen av hot mot enheten som utförts av Lookout. När den här regeln är aktiverad utvärderar Microsoft Intune enhetens efterlevnad med principen som du har aktiverat.
+Efterlevnadsprincipen i Intune innehåller en regel för Lookout mobilt skydd som baseras på riskbedömningen som utförts av Lookout. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
 
-Om enheten utvärderats som inkompatibel med efterlevnadsprincipen kan åtkomst till resurser som Exchange Online och SharePoint Online blockeras med hjälp av principer för villkorlig åtkomst. När åtkomst blockerats får slutanvändare tillgång till en genomgång för att lösa problemet och få tillgång till företagets resurser. Den här genomgången startas via Lookout for work-appen.
+Om enheten utvärderats som inkompatibel kan åtkomst till resurser som Exchange Online och SharePoint Online blockeras. Användarna på blockerade enheter får information om de steg som de måste vidta för att lösa problemet och återfå åtkomst. Den här vägledningen startas via Lookout for work-appen.
+
 ## <a name="supported-platforms"></a>Plattformar som stöds:
-* **Android 4.1 och senare** och är registrerade i Microsoft Intune.
-* **iOS 8 och senare** och är registrerade i Microsoft Intune.
-Information om plattformar och språk som har stöd i Lookout finns i denna [artikel](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
+Följande plattformar har stöd för Lookout efter att ha registrerats i Intune:
+* **Android 4.1 och senare**
+* **iOS 8 och senare** Mer information om stöd för plattformar och språk finns på [Lookout-webbplatsen](https://personal.support.lookout.com/hc/en-us/articles/114094140253).
 
 ## <a name="prerequisites"></a>Krav:
-* En prenumeration på Microsoft Intune och Azure Active Directory.
-* En Enterprise-prenumeration till Lookout Mobile EndPoint Security.  Se [Lookout Mobile EndPoint Security](https://www.lookout.com/products/mobile-endpoint-security) för mer information
+* Microsoft Intune-prenumeration
+* Azure Active Directory
+* Enterprise-prenumeration för Lookout Mobile EndPoint Security  
 
-## <a name="example-scenarios"></a>Exempelscenarier
+Se [Lookout Mobile EndPoint Security](https://www.lookout.com/products/mobile-endpoint-security) för mer information
+
+## <a name="sample-scenarios"></a>Exempelscenarier
 Nedan följer några vanliga scenarier:
-### <a name="control-access-based-on-threat-from-malicious-apps"></a>Kontrollera åtkomst baserat på hot från skadliga program:
-När skadliga program, till exempel skadlig kod har upptäckts på enheten, kan du blockera sådana enheter från:
-* Att ansluta till företagets e-post innan du oskadliggjort hotet.
-* Att synkronisera företagets filer med OneDrive för arbetet.
-* Att få åtkomst till verksamhetskritiska program.
 
-**Åtkomst som är blockerad när skadliga program upptäcks:**
+### <a name="control-access-based-on-threats-from-malicious-apps"></a>Kontrollera åtkomst baserat på hot från skadliga program
+När skadliga program som till exempel skadlig kod upptäckts på enheter kan du blockera enheterna från följande till dess att hotet har åtgärdats:
+* Ansluta till företagets e-post
+* Synkronisera företagets filer med appen OneDrive för arbetet
+* Åtkomst till företagsappar
+
+**Blockera när skadliga program upptäcks:**
 ![diagram som visar en villkorlig åtkomstprincip som blockerar åtkomst när en enhet bedöms vara icke-kompatibel på grund av skadliga appar på enheten](../media/mtp/malicious-apps-blocked.png)
 
-**Enheten avblockeras och kan få tillgång till företagets resurser när hotet är oskadliggjort:**
+**Åtkomst beviljad när problemet är löst:**
 
 ![diagram som visar hur en princip för villkorlig åtkomst beviljar åtkomst när en enhet bedöms vara kompatibel efter problemet åtgärdats](../media/mtp/malicious-apps-unblocked.png)
-### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket:
+
+### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och begränsa åtkomsten till WiFi-nätverk baserat på enhetens risk för angrepp.
 
-**Åtkomst till nätverket via WiFi blockeras:**
+**Blockera åtkomst till nätverket via WiFi:**
 ![diagram som visar hur villkorlig åtkomst blockerar WiFi-åtkomst baserat på nätverkshot](../media/mtp/network-wifi-blocked.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
 ![diagram som visar hur villkorlig åtkomst beviljar åtkomst efter att hotet har oskadliggjorts](../media/mtp/network-wifi-unblocked.png)
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket:
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
 Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och förhindra synkronisering av företagsfiler baserat på enhetens risk för angrepp.
 
-**Åtkomst till SharePoint Online blockerat baserat på att ett hot mot nätverket har upptäckts på enheten:**
+**Blockera SharePoint Online när hot identifieras på nätverket:**
 
 ![Diagram som visar hur villkorlig åtkomst blockerar enheter från att få åtkomst till SharePoint Online baserat på identifiering av hot](../media/mtp/network-spo-blocked.png)
 
@@ -91,6 +102,6 @@ Här följer de åtgärder du måste utföra för att implementera den här lös
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO4-->
 
 

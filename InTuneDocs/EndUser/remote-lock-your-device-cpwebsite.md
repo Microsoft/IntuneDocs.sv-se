@@ -1,9 +1,9 @@
 ---
-title: "Fjärrlåsa en enhet från företagsportalens webbplats | Microsoft Intune"
+title: "Fjärrlåsa en enhet från företagsportalens webbplats | Microsoft Docs"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 08f31db90f324ef5f93076c4e13bfa5328a15adc
-ms.openlocfilehash: b53e57b28cbf2de2e7820ffd38fc94ef05b994b6
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: 04c7ae7df65a0873e794420c1880aa901aa230b6
 
 
 ---
 
 
-# Fjärrlåsa en enhet från företagsportalens webbplats
+# <a name="remotely-lock-a-device-from-the-company-portal-website"></a>Fjärrlåsa en enhet från företagsportalens webbplats
 
 Om enheten har tappats bort eller blivit stulen kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](http://portal.manage.microsoft.com). Fjärrlås fungerar för följande typer av enheter:
 
@@ -59,11 +59,11 @@ Använda Fjärrlås för att låsa enheten:
 
     Om det andra försöket misslyckas kontaktar du IT-administratören och ber om hjälp. Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

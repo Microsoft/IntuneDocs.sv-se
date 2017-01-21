@@ -1,5 +1,5 @@
 ---
-title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Intune"
+title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Docs"
 description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN som styrs av Cisco ISE."
 keywords: 
 author: robstackmsft
@@ -14,8 +14,8 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1dd3fde8119b54f574265c2ca9cf62cee9e77b01
-ms.openlocfilehash: bd6307cd8ff465bbce3de124ffdb444333d12efe
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 9eb0ea307702f3ae07db4d5c5a82d03f13b727fb
 
 
 ---
@@ -64,7 +64,7 @@ b. Välj låsikonen &gt;  **Mer information**.
 > Kontrollera när certifikatet upphör att gälla, eftersom du måste exportera och importera ett nytt certifikat när det här upphör att gälla.
 
 
-### <a name="obtain-a-selfsigned-cert-from-ise"></a>Skaffa ett självsignerat certifikat från ISE 
+### <a name="obtain-a-self-signed-cert-from-ise"></a>Skaffa ett självsignerat certifikat från ISE 
 
 1.  I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
 2.       Exportera det självsignerade certifikatet.
@@ -100,7 +100,7 @@ Se till att all text är på en enda rad
 |OAuth 2.0-token för slutpunkt|Tokenutfärdande URL|
 |Uppdatera koden med klient-ID|Klient-ID|
 
-### <a name="step-4-upload-the-selfsigned-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
+### <a name="step-4-upload-the-self-signed-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
 1.     Hämta det base64-kodade certifikatvärdet och tumavtrycket från en offentlig .cer-X509-cert-fil. Det här exemplet använder PowerShell:
    
       
@@ -189,6 +189,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

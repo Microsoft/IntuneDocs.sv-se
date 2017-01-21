@@ -1,11 +1,11 @@
 ---
-title: "Förbereda appar för hantering av mobilprogram | Microsoft Intune"
+title: "Förbereda appar för hantering av mobilprogram | Microsoft Docs"
 description: "Informationen i det här avsnittet hjälper dig att avgöra när du ska använda apphanteringsverktyget och App SDK för att förbereda dina verksamhetsspecifika appar för användning av hanteringsprinciper för mobilappar."
 keywords: 
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 3d7b60862942742d663ff23c7b5f3fd135c72640
+ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
+ms.openlocfilehash: 8ee3f539e619d4646013db4982ea96223eea5896
 
 
 ---
 
 # <a name="decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune"></a>Förbereda appar för hantering av mobilprogram med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan använda principer för hantering av mobilprogram (MAM) i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## <a name="intune-app-wrapping-tool"></a>Intunes apphanteringsverktyg
@@ -106,6 +109,6 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

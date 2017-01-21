@@ -1,5 +1,5 @@
 ---
-title: "Hantering med Apples DEP för iOS-enheter | Microsoft Intune"
+title: "Hantering med Apples DEP för iOS-enheter | Microsoft Docs"
 description: "Distribuera en registreringsprofil som registrerar iOS-enheter som har köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst) för att hantera Apple-enheter."
 keywords: 
 author: staciebarker
@@ -14,8 +14,8 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
-ms.openlocfilehash: d1e534677bf5e5098f3a3665765983305a6bac69
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: f8f5c1e5d69cf91413ebc4a71f1f9f8f8e1c8231
 
 
 ---
@@ -116,6 +116,6 @@ Från och med november flyttas grupphantering för enheter till Azure Active Dir
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

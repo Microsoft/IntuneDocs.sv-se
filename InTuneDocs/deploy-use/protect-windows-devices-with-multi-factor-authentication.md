@@ -1,11 +1,11 @@
 ---
-title: "Multi-factor Authentication för Windows | Microsoft Intune"
+title: "Multifaktorautentisering för Windows | Microsoft Docs"
 description: "Intune integrerar Multi-factor Authentication (MFA) för att skydda företagets resurser."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/15/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 1bfd17f9fcc73049254bc77351eae48da874fb4c
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: cc60ffb2cd7a1d0cad141712ba7e2341954b1f02
 
 
 ---
 
 # <a name="protect-windows-devices-with-multi-factor-authentication"></a>Protect Windows devices with multi-factor authentication
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune integrerar multifaktorautentisering (MFA) för att skydda företagets resurser. MFA kräver autentiseringsfaktorer, till exempel textautentisering, utöver användarnamn och lösenord. Intune stöder multifaktorautentisering vid registrering av Windows 8.1-enheter eller senare, Windows Phone 8.1-enheter eller Windows 10 Desktop- och Mobile-enheter.
+
+>[!NOTE]
+>
+>MFA kan krävas per användare eller per grupp på ADFS-servern.  
+
 
 ## <a name="on-premises-infrastructure-requirements-for-adfs-mfa"></a>Krav på lokal infrastruktur för ADFS MFA
 Om du vill konfigurera multifaktorautentisering behöver du:
@@ -40,6 +48,7 @@ Servrarna måste uppfylla systemkraven i [Systemkrav och installationsinformatio
 Om din organisation har en lokal IT-infrastruktur med en Active Directory-domän med ADFS (Active Directory Federation Services) kan du konfigurera MFA på federationsservern och sedan aktivera MFA för registrering i Intune. Genom att konfigurera MFA i Intune behöver användarna bara autentiseras en gång vid registreringen och kan sedan komma åt företagets resurser utan att behöva upprepa MFA-processen varje gång.
 
 >[!NOTE]
+>
 >MFA kan krävas per användare eller per grupp på ADFS-servern.  
 
 #### <a name="mfa-without-intune"></a>MFA utan Intune
@@ -60,6 +69,6 @@ Information om hur du aktiverar multifaktorautentisering i AD FS finns i [Manage
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO5-->
 
 

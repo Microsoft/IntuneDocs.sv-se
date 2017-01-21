@@ -1,5 +1,5 @@
 ---
-title: Omsluta iOS-appar med Intunes programhanteringsverktyg | Microsoft Intune
+title: Omsluta iOS-appar med Intunes programhanteringsverktyg | Microsoft Docs
 description: "Använd informationen i det här avsnittet om du vill lära dig hur du omsluter dina iOS-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
 keywords: 
 author: mtillman
@@ -14,34 +14,154 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 0eee40c3c3c6bdfc3da2e715ef7b46e8408ba319
+ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
+ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
 
 
 ---
 
 # <a name="prepare-ios-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg
 
-Använd Microsoft Intunes programhanteringsverktyg för iOS om du vill ändra beteendet för interna iOS-appar genom att möjliggöra skyddsfuntionerna för Intune-appar utan att ändra koden i själva appen.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har bearbetats kan du ändra appens funktioner med [Intunes hanteringsprinciper för mobilprogram](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) utvecklad av IT-administratören.
+Använd Microsoft Intunes programhanteringsverktyg för iOS för att aktivera appskyddsprinciper från Intune för interna iOS-appar utan att ändra koden i själva appen.
+
+Verktyget är ett kommandoradsprogram för Mac OS som skapar en omslutning runt en app. När en app har behandlats kan du ändra appens funktioner genom att distribuera [appskyddsprinciper](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) till den.
 
 Om du vill ladda ned verktyget går du till [Microsoft Intunes appomslutningsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) på GitHub.
 
 
 
-## <a name="fulfill-the-prerequisites-for-the-app-wrapping-tool"></a>Kontrollera att du uppfyller kraven för programhanteringsverktyget
-Se blogginlägget om [Hur du skaffar förutsättningar för Intunes programhanteringsverktyg för iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/) för att lära dig mer om hur du skaffar förutsättningarna.
+## <a name="general-prerequisites-for-the-app-wrapping-tool"></a>Allmänna krav för programhanteringsverktyget
 
-|Krav|Mer information|
-|---------------|--------------------------------|
-|Operativsystem och verktygsuppsättning som stöds | Du måste köra programhanteringsverktyget på en Mac OS-dator som kör OS X 10.8.5 eller senare och som har verktygsuppsättningen XCode version 5 eller senare installerad.|
-|Signeringscertifikat och etableringsprofil | Du måste ha ett signeringscertifikat från Apple och en etableringsprofil. Mer information finns i [dokumentationen för Apple-utvecklare](https://developer.apple.com/).|
-|Bearbeta en app med programhanteringsverktyget  |Apparna måste vara utvecklade och signerade av ditt företag eller en oberoende programvaruleverantör (ISV). Du kan inte använda verktyget för att bearbeta appar från Apple Store. Apparna måste vara skrivna för iOS 8.0 eller senare. Apparna måste också vara i formatet PIE (Position Independent Executable). Mer information om PIE-formatet finns i dokumentationen för Apple-utvecklare. Slutligen måste appen ha filnamnstillägget **.app** eller **.ipa**.|
-|Appar som verktyget inte kan bearbeta | Krypterade appar, osignerade appar och appar med utökade filattribut.|
-|Ställa in rättigheter för din app|Innan du omsluter appen måste du ställa in rättigheter, som ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).|
+Innan du kör programhanteringsverktyget måste du uppfylla vissa allmänna krav:
 
-## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
+* Ladda ned [Microsoft Intunes programhanteringsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) från GitHub.
+
+* En Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-verktygsuppsättningen version 5 eller senare installerad.
+
+* iOS-appen för indata måste vara utvecklad och signerad av ditt företag eller en oberoende programvaruleverantör (ISV).
+
+  * App-filen för indata måste ha filnamnstillägget **.ipa** eller **.app**.
+
+  * Indataappen måste kompileras för iOS 8.0. eller senare.
+
+  * Indataappen kan vara krypterad.
+
+  * Indataappen kan inte ha utökade filattribut.
+
+  * Indataappen måste ha angivna rättigheter innan den bearbetas av Intunes programhanteringsverktyg. [Rättigheterna](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).
+
+## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Apple Developer-krav för programhanteringsverktyget
+
+
+För att exklusivt distribuera omslutna appar till användare i organisationen behöver du ett konto med [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) och flera entiteter för signering av appar som är länkade till ditt Apple Developer-konto.
+
+Om du vill veta mer om att distribuera iOS-appar internt till användare i organisationen kan du läsa den officiella guiden för att [distribuera appar med Apple Developer Enterprise Program](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingEnterpriseProgramApps/DistributingEnterpriseProgramApps.html#//apple_ref/doc/uid/TP40012582-CH33-SW1).
+
+Du behöver följande för att distribuera appar som är omslutna av Intune:
+
+* Ett utvecklarkonto med Apple Developer Enterprise Program.
+
+* Interna och ad hoc-distributionssigneringscertifikat med giltiga gruppidentifierare.
+
+  * Du behöver SHA1-hashen för signeringscertifikatet som en parameter för Intunes programhanteringsverktyg.
+
+
+* Etableringsprofil för intern distribution.
+
+### <a name="steps-to-create-an-apple-developer-enterprise-account"></a>Steg för att skapa ett Apple Developer Enterprise-konto
+1. Gå till [webbplatsen för Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
+
+2. Klicka på **Registrera** i övre högra hörnet av sidan.
+
+3. Läs checklistan över vad du behöver för att registrera. Klicka på **Start Your Enrollment** (Påbörja din registrering) längst ned på sidan.
+
+4. **Logga in** med din organisations Apple-ID. Om du inte har något ID klickar du på **Skapa Apple-ID**.
+
+5. Välj din **Enhetstyp** och klicka på **Fortsätt**.
+
+6. Fyll i formuläret med information om din organisation. Klicka på **Fortsätt**. Efter detta kontaktar Apple dig för att kontrollera att du har behörighet att registrera din organisation.
+
+8. När kontrollen är klar klickar du på **Agree to License** (Godkänn licens).
+
+9. När du godkänt licensen slutför du genom att **köpa och aktivera programmet**.
+
+10. Om du är gruppagenten (den person som ansluter till Apple Developer Enterprise Program för din organisations räkning) kan du skapa din grupp genom att bjuda in gruppmedlemmar och tilldela dem roller. För att lära dig om hur du hanterar din grupp kan du läsa Apple-dokumentationen i [Managing Your Developer Account Team](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1) (Hantera din Developer-kontogrupp).
+
+### <a name="steps-to-create-an-apple-signing-certificate"></a>Steg för att skapa ett Apple-signeringscertifikat
+
+1. Gå till [Apple Developer-portalen](https://developer.apple.com/).
+
+2. Klicka på **Konto** i övre högra hörnet av sidan.
+
+3. **Logga in** med din organisations Apple-ID.
+
+4. Klicka på **Certifikat, ID och profiler**.
+
+  ![Apple Developer-portalen](../media/app-wrapper/iOS-signing-cert-1.png)
+
+5. Klicka på ![plustecknet i övre högra hörnet av](../media/app-wrapper/iOS-signing-cert-2.png) Apple Developer-portalen för att lägga till ett iOS-certifikat.
+
+6. Välj att skapa ett **In-House and Ad Hoc** (internt och ad hoc)-certifikat under **Produktion**.
+
+  ![Välj internt och ad hoc-certifikat](../media/app-wrapper/iOS-signing-cert-3.png)
+
+7. Klicka på **Nästa** längst ner på sidan.
+
+8. Läs anvisningarna om hur du skapar en **certifikatsigneringsförfrågan** med hjälp av nyckelhanterarprogrammet på din Mac OS-dator.
+
+  ![Läs anvisningarna för att skapa en CSR](../media/app-wrapper/iOS-signing-cert-4.png)
+
+9. Följ anvisningarna ovan för att skapa en signeringsbegäran för certifikat. Starta **Nyckelhanterar**-programmet på din Mac OS-dator.
+
+10. Gå till **Nyckelhanterare > Certificate Assistant (Certifikatassistent) > Request a Certificate From a Certificate Authority (Begär ett certifikat från en certifikatutfärdare)** i Mac OS-menyn överst på skärmen.  
+
+  ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](../media/app-wrapper/iOS-signing-cert-5.png)
+
+11. Följ instruktionerna från Apple-utvecklarwebbplatsen ovanför om hur du skapar en CSR-fil. Spara CSR-filen på din Mac OS-dator.
+
+  ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](../media/app-wrapper/iOS-signing-cert-6.png)
+
+12. Gå tillbaka till Apple-utvecklarwebbplatsen. Klicka på **Fortsätt**. Ladda sedan upp CSR-filen.
+
+13. Apple skapar ett signeringscertifikat åt dig. Hämta och spara den till en plats som är lätt att komma ihåg på din Mac OS-dator.
+
+  ![Hämta ditt signeringscertifikat](../media/app-wrapper/iOS-signing-cert-7.png)
+
+14. Dubbelklicka på certifikatfilen som du precis laddade ned för att lägga till certifikatet i en nyckelring.
+
+15. Öppna **Nyckelhanteraren** igen. Leta upp certifikatet genom att söka efter **"iPhone"** i det övre högra sökfältet i fönstret Nyckelhanteraren. Högerklicka på objektet för att visa menyn och klicka på **Hämta information**.
+
+  ![Lägg till certifikatet i en nyckelring](../media/app-wrapper/iOS-signing-cert-8.png)
+
+16. Ett informationsfönster visas. Bläddra till slutet och titta under etiketten **Fingeravtryck**. Kopiera strängen **SHA1** för att använda den som -c-parametern för programhanteringsverktyget.
+
+  ![Lägg till certifikatet i en nyckelring](../media/app-wrapper/iOS-signing-cert-9.png)
+
+
+
+### <a name="steps-to-create-an-in-house-distribution-provisioning-profile"></a>Steg för att skapa en etableringsprofil för intern distribution
+
+1. Gå tillbaka till [Apple Developer-kontoportalen](https://developer.apple.com/account/) och **logga in** med din organisations Apple-ID.
+
+2. Klicka på **Certifikat, ID och profiler**.
+
+3. Klicka på ![plustecknet i övre högra hörnet av](../media/app-wrapper/iOS-signing-cert-2.png) Apple Developer-portalen för att lägga till en iOS-etableringsprofil.
+
+4. Välj att skapa en **intern** etableringsprofil under **Distribution**.
+
+  ![Välj intern etableringsprofil](../media/app-wrapper/iOS-provisioning-profile-1.png)
+
+5. Klicka på **Fortsätt**. Se till att länka det tidigare skapade signeringscertifikatet till etableringsprofilen.
+
+6. Följ stegen för att hämta din profil (med filtillägget .mobileprovision) till din Mac OS-dator.
+
+7. Spara filen på en plats som är lätt att komma ihåg. Den här filen kommer att användas för -p-parametern när du använder programhanteringsverktyget.
+
+
+
+## <a name="download-the-app-wrapping-tool"></a>Hämta programhanteringsverktyget
 
 1.  Hämta filerna för programhanteringsverktyget från [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) till en macOS-dator.
 

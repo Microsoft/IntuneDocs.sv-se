@@ -1,11 +1,11 @@
 ---
-title: "Aktivera regeln för enhetsskydd i policyn för efterlevnad | Microsoft Intune"
+title: "Aktivera regeln för enhetsskydd i policyn för efterlevnad | Microsoft Docs"
 description: "Aktivera regeln för skydd mot mobila hot i enhetspolicyn för efterlevnad."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 09/13/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,41 +14,41 @@ ms.assetid: c951692d-6538-46c0-a9f0-d607ded189ae
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: efddf7645d0548c842ae8aa3b1ca5222023913b5
+ms.sourcegitcommit: 80e96003c584c67cb6b0289a7e2ed1ff3a833c2c
+ms.openlocfilehash: 3dea6c35d5fc035a5aef6dda52543b64cd5ce177
 
 
 ---
 
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad
-Intune med Lookout mobilt skydd ger dig möjligheter att identifiera mobila hot och göra riskbedömningar på enheten. Du kan skapa en regler för policy för efterlevnad som inkluderar riskbedömningen för att avgöra om enheten är kompatibel. Du kan sedan använda den villkorliga åtkomstprincipen för att tillåta eller blockera åtkomst till Exchange, SharePoint och andra tjänster utifrån enhetens efterlevnad.
 
-Om du vill att Lookout-hotidentifiering för enheter ska påverka policyn för efterlevnad för enheten:
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-* Regeln för **Skydd mot hot på enhet** måste vara aktiverad i policyn för efterlevnad.
+Intune med Lookout mobilt skydd gör det möjligt att identifiera hot på mobila enheter och utvärdera risken på dessa enheter. Du kan skapa en regel för efterlevnadsprincip som bedömer risken för att avgöra om enheten är kompatibel. Du kan sedan använda den villkorliga åtkomstprincipen för att blockera åtkomst till tjänster utifrån enhetens efterlevnad.
 
-* Sidan **Status för Lookout** i **Intune-administratörskonsolen** måste visa **Aktiv**. Se avsnittet [Enable Lookout MTP connection in Intune](enable-lookout-mtp-connection-in-intune.md) (Aktivera Lookout MTP-anslutningen i Intune) för mer information och anvisningar om hur du aktiverar Lookout-integration.
+Krav för efterlevnadsprincip med enhetsskydd i Lookout:
 
+- [Konfigurera prenumeration för Lookout-skydd mot enhetshot](set-up-your-subscription-with-lookout-mtp.md)
+- [Aktivera anslutning till Lookout i Intune](enable-lookout-mtp-connection-in-intune.md)
+- [Konfigurera Lookout for Work-appen](configure-and-deploy-lookout-for-work-apps.md)
 
-Innan du skapar regeln för skydd mot enhetshot i policyn för efterlevnad rekommenderar vi att du [konfigurerar din prenumeration med Lookout-skydd mot enhetshot](set-up-your-subscription-with-lookout-mtp.md), [aktiverar anslutningen till Lookout i Intune](enable-lookout-mtp-connection-in-intune.md) och [konfigurerar Lookout for work-appen](configure-and-deploy-lookout-for-work-apps.md). Regeln för efterlevnad gäller endast efter att installationen har slutförts.
+Som en del av installationsprogrammet för Lookout-skydd mot enhetshot har du skapat en princip i [Lookout-konsolen](https://aad.lookout.com) som klassificerar hot som hög, medel och låg. I efterlevnadsprincipen för Intune ställer du in den maximalt tillåtna hotnivån.
 
-Om du vill aktivera regeln för skydd mot enhetshot kan du antingen använda en befintlig policy för efterlevnad eller skapa en ny.
+1. I [Intune-administratörskonsolen](https://manage.microsoft.com) går du till sidan **Efterlevnadsprinciper**. Du kan antingen använda en befintlig efterlevnadsprincip eller skapa en ny. Gå till **Enhetens hälsotillstånd** och aktivera **Enhetsskydd**.
+  ![skärmbild som visar regeln för skydd mot enhetshot i ](../media/mtp/mtp-compliance-policy-rule.png)
 
-Som en del av installationsprogrammet för Lookout-skydd mot enhetshot har du skapat en princip som klassificerar hot enligt nivåerna hög, medel och låg i [Lookout-konsolen](https://aad.lookout.com). I policyn för efterlevnad för Intune använder du hotnivån för att ställa in den maximalt tillåtna hotnivån.
-
-På sidan **Policy för efterlevnad** i **Intune-administratörskonsolen** går du till **Enhetens hälsotillstånd** och aktiverar regeln för **Skydd mot hot på enhet**. Välj sedan den högsta tillåtna hotnivån, som är en av följande:
-* **Ingen (skyddad)**: Det här är det säkraste alternativet.  Detta innebär att enheten inte kan ha några hot.  Om något hot identifieras på enheten kommer den utvärderas som icke-kompatibel.  
-* **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
-* **Medel**: Enheten utvärderas som kompatibel om hoten som hittas på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-* **Hög**: Det här alternativet är minst säkert. I grunden innebär detta att alla hotnivåer är tillåtna och kanske är detta endast användbart om du använder den här lösningen för rapportering.
-
-![skärmbild som visar regeln för skydd mot enhetshot i ](../media/mtp/mtp-compliance-policy-rule.png)
+2. Välj **Högsta tillåtna hotnivå**:
+  * **Ingen (skyddad)**: Det här är det säkraste alternativet.  Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser.  Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.  
+  * **Låg**: Enheten är kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
+  * **Medel**: Enheten är kompatibel om hoten som hittas på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
+  * **Hög**: Det här alternativet är minst säkert. Detta tillåter alla hotnivåer och använder Lookout mobilt skydd endast för rapportering.
 
 ![skärmbild som visar alternativet för hotnivåer för regeln för skydd mot enhetshot](../media/mtp/mtp-compliance-policy-setting.png)
 
-Om du skapar principer för villkorlig åtkomst till Office 365 och andra tjänster kommer ovanstående utvärdering av efterlevnad beaktas och icke-kompatibla enheter kommer inte att få åtkomst till företagsresurser förrän hotet har lösts.
+Om du skapar principer för villkorlig åtkomst till Office 365 eller andra tjänster kommer denna utvärdering av efterlevnad att bedömas och icke-kompatibla enheter kommer inte att få åtkomst till dessa tjänster förrän hotet har lösts.
 
-Du kan se kompatibilitetstillståndet för en enhet på sidan **All Devices** (Alla enheter) i **Intune-administratörskonsolen**.
+## <a name="monitor-device-threats"></a>Övervaka enhetshot
+Om du vill se kompatibilitetstillståndet för en enhet kan du gå till [Intune-administratörskonsolen](https://manage.microsoft.com) och visa **Alla enheter**.
 
 ![skärmbild som visar enhetssidan i Intune-administratörskonsolen som visar kompatibilitetstillståndet för en enhet](../media/mtp/mtp-device-status-intune-console.png)
 
@@ -62,6 +62,6 @@ Du kan se kompatibilitetstillståndet för en enhet på sidan **All Devices** (A
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO4-->
 
 

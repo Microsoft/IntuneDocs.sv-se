@@ -1,9 +1,9 @@
 ---
-title: "iOS MAM-principinställningar | Microsoft Intune"
+title: "iOS MAM-principinställningar | Microsoft Docs"
 description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för iOS-enheter."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article
@@ -14,115 +14,51 @@ ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 126974152c638fc4bc69ef92b5fa79beeb0eed0c
+ms.sourcegitcommit: d80f548f0c1382e1bd024bd31078d2a4e6366656
+ms.openlocfilehash: a2130fa76f66528f6e77c720bc93286e0d01aba2
 
 
 ---
 
 #  <a name="ios-mobile-app-management-policy-settings"></a>Inställningar för iOS-princip för hantering av mobila program
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för en MAM-princip (hanteringsprincip för mobilappar) på **inställningsbladet** på Azure Portal.
 
-Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen *principhanterade appar* för att hänvisa till appar som är konfigurerade med MAM-principer.
+Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen _**principhanterade appar**_ för att hänvisa till appar som är konfigurerade med MAM-principer.
 
 ##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
 
-- **Förhindra iTunes- och iCloud-säkerhetskopieringar**: Välj **Ja** om du vill förhindra eller **Nej** om du vill tillåta säkerhetskopiering av företagsdata från principhanterade appar.
+| Inställningar | Använd så här | Standardvärde |
+|------|------|------|
+| **Förhindra säkerhetskopiering av iTunes och iCloud** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud. Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud.| Ja |
+| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar. <br><br> | Alla appar |
+| **Tillåt att appen hämtar data från andra appar** | Ange vilka appar som kan överföra data till den här appen: <ul><li>**Principhanterade appar**: Tillåt endast överföring från andra principhanterade appar.</li><li>**Alla appar**: Tillåt dataöverföring från alla appar.</li><li>**Ingen**: Tillåt inte dataöverföring från någon app, inklusive andra principhanterade appar. | Alla appar |
+| **Förhindra "Spara som"** | Välj **Ja** om du vill inaktivera alternativet Spara som i den här appen. Välj **Nej** om du vill tillåta att Spara som används. | Nej |
+| **Begränsa klipp ut, kopiera och klistra in med andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | Alla appar |
+|**Begränsa webbinnehåll till visning i Managed Browser** | Välj **Ja** för att tvinga webblänkar i appen att öppnas i appen Managed Browser. <br><br> För enheter som inte har registrerats i Intune kan webblänkar i principhanterade appar endast öppnas i appen Managed Browser. <br><br> Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md). | Nej |
+| **Kryptera appdata** | För principer för hanterade program krypteras data i viloläge med hjälp av krypteringsschemat på enhetsnivån som tillhandahålls av iOS. När en PIN-kod krävs krypteras data enligt inställningarna i appskyddsprincipen. <br><br> Gå till den officiella Apple-dokumentationen [här](https://support.apple.com/HT202739) för att se vilka iOS-krypteringsmoduler som är FIPS 140-2-certifierade eller väntar på FIPS 140-2-certifiering. <br><br> Ange när arbets- eller skoldata i den här appen ska krypteras. Välj mellan: <ul><li>**När enheten är låst**: Alla appdata som är associerade med den här principen krypteras när enheten är låst.</li><li>**När enheten är låst och det finns öppna filer**: Alla appdata som är associerade med den här principen krypteras när enheten är låst, utom data i filer som är öppna i appen.</li><li>**Efter omstart av enheten**: Alla appdata som är associerade med den här principen krypteras när enheten startas om, tills den första gången enheten låses upp.</li><li>**Använd enhetsinställningar**: Appdata krypteras baserat på standardinställningarna på enheten. <br><br> När du aktiverar den här inställningen måste användaren konfigurera och använda en PIN-kod för att komma åt sin enhet.  Om det inte finns någon PIN-kod startar inte apparna och användaren uppmanas att ange en PIN-kod. Ett meddelande visas som informerar användaren om att dennes organisation kräver att enheten har en PIN-kod för att det ska gå att komma åt appen. </li></ul> | När enheten är låst |
+| **Inaktivera synkronisering av kontakter** | Välj **Ja** att förhindra att appen sparar data i den interna appen Kontakter på enheten. Om du väljer **Nej** kan appen spara data i den interna appen Kontakter på enheten. <br><br>När du utför en selektiv rensning för att ta bort arbets- eller skoldata från appen kommer kontakter som har synkats direkt från appen till den inbyggda appen Kontakter att tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen. | Nej |
+| **Inaktivera utskrift** | Välj **Ja** att förhindra att appen skriver ut arbets- eller skoldata. | Nej |
 
-  Standardvärde = **Ja**.
 
-- **Tillåt att appen överför data till andra appar**: Välj ett alternativ för att ange vilka appar som kan ta emot data från principhanterade appar:
-  - **Principhanterade appar**: Tillåt överföring endast till appar som har MAM-principen
-  - **Alla appar**: Tillåt överföring till alla appar.
-  - **Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.
+> [!NOTE]
+> Ingen av inställningarna för dataflytt styr den Apple-hanterade ”öppna med”-funktionen på iOS-enheter. Se [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md) för hantering av ”öppna med”.
 
-  Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar.
 
-  >[!NOTE]
-  >Den här inställningen styr inte användningen av funktionen Öppna med på mobila enheter. Information om Öppna med finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](manage-data-transfer-between-ios-apps-with-microsoft-intune.md).
+## <a name="access-settings"></a>Åtkomstinställningar
 
-  Standardvärde = **Principhanterade appar**.
-
-- **Tillåt att appen tar emot data från andra appar**: Ange appar som tillåts att överföra data till principhanterade appar:
-  -  **Principhanterade appar**: Tillåt endast dataöverföring från andra principhanterade appar.
-  -  **Alla appar**: Tillåt dataöverföring från alla appar.
-  -  **Inga**: Tillåt inte dataöverföring från någon app.
-
-  Standardvärde = **Alla appar**.
-
-- **Förhindra Spara som**: Välj **Ja** om du vill inaktivera alternativet Spara som i appar som använder den här principen. Välj **Nej** om du vill tillåta att Spara som används.
-
-  Standardvärde = **Ja**.
-
-- **Begränsa klipp ut, kopiera och klistra in med andra appar**: Ange när åtgärder för klipp ut, kopiera och klistra in ska begränsas. Välj mellan:
-  -   **Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan principhanterade appar.
-  -   **Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan principhanterade appar.
-  -   **Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan principhanterade appar. Tillåt att data som klipps ut eller kopieras från en annan app kan klistras in i den här appen.
-  - **Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in mellan appar.
-
-  Standardvärde = **Principhanterade appar med inklistring**.
-
-- **Begränsa webbinnehåll till visning i Managed Browser**: När den här inställningen är aktiverad öppnas alla länkar i appen i Managed Browser.
-
-  För enheter som inte har registrerats i Intune kan webblänkar i principhanterade appar endast öppnas i appen Managed Browser.
-
-  Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
-
-  Standardvärde = **Ja**.
-
-- **Kryptera appdata**: För appar som associeras med en Intune MAM-princip krypteras data i vila med kryptering på enhetsnivå som tillhandahålls av operativsystemet. När en PIN-kod krävs krypteras data enligt inställningarna i MAM-principen. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 7 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).
-
-  Du kan ange PIN-krypteringsvärden i principinställningarna. Dessa värden avgör när data krypteras. Alternativen är:
-  -   **När enheten är låst**: Alla appdata som är associerade med den här principen krypteras när enheten är låst.
-  -   **När enheten är låst (förutom för öppna filer)**: Alla appdata som är associerade med den här principen krypteras när enheten är låst, utom data i filer som är öppna i appen.
-  -   **Efter omstart av enheten**: Alla appdata som är associerade med den här principen krypteras när enheten startas om, tills den första gången enheten låses upp.
-  -   **Använd enhetsinställningar**: Appdata krypteras baserat på standardinställningarna på enheten.
-  När du aktiverar den här inställningen måste användaren konfigurera och använda en PIN-kod för att komma åt sin enhet.  Om det inte finns någon PIN-kod startar inte apparna och användaren uppmanas att ange en PIN-kod. Ett meddelande visas som informerar användaren om att dennes företag kräver att enheten har en PIN-kod för att det ska gå att komma åt programmet.
-
-  Standardvärde = Krypteringsalternativet är inte valt.
-- **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras till den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformation till den interna adressboken på enheten.
-
-  När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniserats direkt från appen till den interna adressboken bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen.
-
-  Standardvärde = **Ja**.
-
-- **Inaktivera utskrifter**: Välj **Ja** att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
-
-    Standardvärde = **Ja**.
-
-##  <a name="access-settings"></a>Åtkomstinställningar
-
-- **Kräv PIN-kod för åtkomst**: Välj **Ja** om du vill kräva en PIN-kod för användning av principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
-
-  Standardvärde = **Ja**.
-    -  **Tillåt enkel PIN-kod:** Ange du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Standardvärde = **Ja**.
-    - **PIN-kodslängd:** Ange det minsta antalet siffror i en PIN-kod. Standardvärde = **4**.
-    - **Antal försök innan PIN-koden återställs**: Ange antalet tillåtna PIN-inmatningsförsök innan användaren måste återställa PIN-koden. Det finns inget standardvärde för den här inställningen.
-
-- **Kräv fingeravtryck istället för PIN (iOS 8.0+)**: Välj **Ja** om du vill kräva att ett fingeravtryck används i stället för en PIN-kod för åtkomst till appen.
-På iOS-enheter kan du låta användarna identifiera sig med hjälp av ett fingeravtryck i stället för en PIN-kod. När användarna försöker öppna appen med ett arbetskonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod.
-
-  Standardvärde = **Ja**.
-- **Kräv företagets autentiseringsuppgifter för åtkomst**: Välj **Ja** om du vill kräva att företagets autentiseringsuppgifter anges i stället för en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID. Användaren uppmanas att ange sina autentiseringsuppgifter för företaget.
-
-  Standardvärde = **Nej**.
-- **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**: Välj **Ja** för att blockera appar från att köras på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för arbete.
-
-  Standardvärde = **Ja**.
-- **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**
-  -   **Tidsgräns**: Ange tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen.
-  -   **Offlinerespittid**: Specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen om enheten är offline.
-
-  Standardvärden = **30** minuters tidsgräns och **720** minuters offlinerespittid.
-- **Intervallet innan appdata rensas efter att enheten varit offline (dagar)**: Du kan välja att rensa företagsdata om en enhet har varit offline en viss tid. Ange hur många dagar en enhet kan vara offline innan företagsdata tas bort från enheten.
-
-  >[!TIP]
-  >Ange värdet **0** för att inaktivera den här inställningen.
-
-  Standardvärde = **90** dagar.
+| Inställningar | Använd så här | Standardvärde |
+|------|------|------|
+| **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. Standardvärde = **Ja**. </li><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**. </li><li> **Kräv fingeravtryck istället för PIN (iOS 8.0+)**: Välj **Ja** om du vill kräva att [Touch-ID](https://support.apple.com/en-us/HT201371) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**.<br><br> På iOS-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Touch-ID](https://support.apple.com/en-us/HT201371) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
+| **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |
+| **Hindra hanterade appar från att köras på jailbrokade eller rotade enheter** |  Välj **Ja** om du vill förhindra att den här appen körs på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för att komma åt arbets- eller skoldata i denna app. | Ja |
+| **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Ange tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **30** minuter.</li><li>**Offlinerespittid**: Specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen om enheten är offline. Standardvärde = **720** minuter (12 timmar).</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
+| **Offlineintervall innan appdata rensas (dagar)** | Arbets- eller skoldata i den här appen kan rensas om en enhet har varit offline längre än en viss tid. Ange hur många dagar en enhet kan vara offline innan arbets- eller skoldata tas bort från enheten. <br><br> | 90 dagar |
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

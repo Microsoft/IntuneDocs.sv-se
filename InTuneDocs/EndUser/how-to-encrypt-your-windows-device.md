@@ -1,26 +1,29 @@
 ---
-title: Hur du krypterar din Windows-enhet | Microsoft Intune
+title: Hur du krypterar din Windows-enhet | Microsoft Docs
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7d9645a9-6058-4112-aa31-8cdbccdc5463
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 38301b4e6964550008b08e99bf7016f1cc2561c3
-ms.openlocfilehash: 3b775464b494f5d28c870df4b2c58bb59f58eb78
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: a3cf36eae0342d2047910d1a7ca0da2acb7d2ae6
 
 
 ---
 
-# Hur du krypterar din Windows-enhet
+# <a name="how-to-encrypt-your-windows-device"></a>Hur du krypterar din Windows-enhet
 
 I syfte att skydda företags- eller skoldata kan IT-administratören kräva att du krypterar Windows-enheten. Om du har en Windows Phone som du har registrerat krypteras enheten automatiskt om kryptering krävs.
 
@@ -30,10 +33,10 @@ Om du har en stationär enhet följer du anvisningarna nedan för att kryptera d
 
 2.  Klicka på **Aktivera BitLocker** och följ anvisningarna som visas för att kryptera var och en av dina enheter.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO3-->
 
 

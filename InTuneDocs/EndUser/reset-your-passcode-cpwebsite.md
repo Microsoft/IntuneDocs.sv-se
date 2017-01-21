@@ -1,9 +1,9 @@
 ---
-title: "Återställa enhetens lösenord från företagsportalens webbplats | Microsoft Intune"
+title: "Återställa enhetens lösenord från företagsportalens webbplats | Microsoft Docs"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
 ms.date: 09/19/2016
 ms.topic: article
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2aea845bc00c153f070e04abb67582a5d5a726ca
-ms.openlocfilehash: 47b36616f7a8ee23d4d47b41a1db2c41c185c6f5
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: 975759db98854c8276999592d6ecdba195438681
 
 
 ---
 
 
-# Återställa enhetens lösenord från företagsportalens webbplats
+# <a name="reset-your-device-passcode-from-the-company-portal-website"></a>Återställa enhetens lösenord från företagsportalens webbplats
 
 Om du har tappat bort PIN-koden eller lösenordet för en enhet som du har registrerat i Intune kan du återställa det på [företagsportalens webbplats](http://portal.manage.microsoft.com). Du kan använda webbplatsen för företagsportalen för att hantera datorer och enheter som du har registrerat i Intune och för att utföra de flesta av de uppgifter som du kan utföra när du använder företagsportalappen.
 
@@ -59,10 +59,10 @@ Så här återställer du lösenordet:
 
     Om du vill visa ett meddelande som bekräftar att lösenordet har återställts klickar du på meddelandeflaggan längst upp till höger på företagsportalens webbplats.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: VPN-anslutningar | Microsoft Intune
+title: VPN-anslutningar | Microsoft Docs
 description: "Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i organisationen."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cab83c3d1a63a0e4f16ee838443ec032bcf1532
-ms.openlocfilehash: 6d5d97a8e91ba3a99db5714a5634904c62320e76
+ms.sourcegitcommit: 0ba06e1d698e051ba72e9f88a654d37041c57cf1
+ms.openlocfilehash: cd9785889ca8b2a78a49ea2b04284d32b3fa8a65
 
 
 ---
 
 # <a name="vpn-connections-in-microsoft-intune"></a>VPN-anslutningar i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheter använder en *profil för VPN-anslutning* för att initiera en anslutning till VPN-servern. Använd *VPN-profiler* i Microsoft Intune för att distribuera VPN-inställningar till användare och enheter i din organisation så att de enkelt och säkert kan ansluta till nätverket.
 
@@ -67,7 +69,7 @@ L2TP|Anpassad profil för iOS|Nej |Nej |Nej|Ja (OMA-URI)|Ja|
 > [!IMPORTANT]
 > Innan du kan använda de VPN-profiler som har distribuerats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md) när du ska distribuera appar med hjälp av Intune.  
 
- Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](custom-configurations-for-vpn-profiles.md).     
+ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](create-custom-vpn-profiles.md).     
 
 ## <a name="methods-of-securing-vpn-profiles"></a>Metoder för att skydda VPN-profiler
 
@@ -194,13 +196,10 @@ Efter slutförd distribution ser användarna det namn du gav VPN-anslutningen i 
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
 
-### <a name="see-also"></a>Se även
-[Anpassade konfigurationer för VPN-profiler](Custom-configurations-for-VPN-profiles.md)
-
-[Per app-VPN för Android Pulse Secure](per-app-vpn-for-android-pulse-secure.md)
 
 
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Dec16_HO3-->
 
 

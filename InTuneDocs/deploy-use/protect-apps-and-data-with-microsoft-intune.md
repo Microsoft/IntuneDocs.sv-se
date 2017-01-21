@@ -1,11 +1,11 @@
 ---
-title: Skydda data och appar | Microsoft Intune
+title: Skydda data och appar | Microsoft Docs
 description: "I det här avsnittet beskrivs de olika Intune-funktionerna och hur du kan skydda företagets appar och data."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 07/18/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,15 @@ ms.assetid: 5c46e188-87eb-4ce2-b184-24809e8bf783
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee7e0491c0635c45cbc0377a5de01d5eba851132
-ms.openlocfilehash: 4f8cb86126a982b21ad3288108295d1784f08df3
+ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
+ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
 
 
 ---
 
 # <a name="protect-apps-and-data-with-microsoft-intune"></a>Skydda data och appar med Microsoft Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune skyddar företagets data via flera tekniklager. I identitetslagret skyddas åtkomsten till tjänster med villkorlig åtkomst som endast tillåter åtkomst från hanterade och godkända enheter. I klientprogramlagret skyddar MAM (Mobile App Management) mot dataförlust genom att förhindra att data flyttas till appar eller lagringsplatser som inte är skyddade, och genom att rensa data om en enhet blir borttappad eller stulen. Vi rekommenderar att dessa två skyddslager används tillsammans för att bidra till dataskydet samtidigt som den mobila arbetsstyrkans produktivitet bibehålls.
 
@@ -54,6 +55,6 @@ Förutom att du kan förhindra eller begränsa dataflyttning om en enhet blir st
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

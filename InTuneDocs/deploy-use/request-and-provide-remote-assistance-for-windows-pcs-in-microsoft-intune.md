@@ -1,11 +1,11 @@
 ---
-title: "Begära och tillhandahålla fjärrhjälp för Windows-datorer | Microsoft Intune"
-description: "Beskriver de steg som slutanvändarna och IT-administratören måste vidta för att fjärrhjälp ska tillhandahållas och för att Windows-datorer ska kunna fjärrstartas."
+title: "Begära och tillhandahålla fjärrhjälp för Windows-datorer | Microsoft Docs"
+description: "Beskriver de steg som slutanvändarna och IT-administratören måste vidta för att fjärrhjälp ska tillhandahållas och för att stationära Windows-datorer som hanteras som datorer ska kunna fjärrstartas."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,17 @@ ms.assetid: c2654491-5144-408a-a45a-644eb91ac1bb
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ab954204fffa6ad67a4a0d0f5e2e521c795eae31
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: 628875c2f874c824761befd9886d7f7987c045df
 
 
 ---
 
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Begära och tillhandahålla hjälp för Windows-datorer
 
-Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran, som köps separat, för att göra det möjligt för dig att ge fjärrhjälp till de användare som kör Intune-programklienten. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp. Den här funktionen ersätter den befintliga Windows-fjärrhjälpsfunktionen i Intune.
+Informationen i det här avsnittet gäller endast för stationära Windows-datorer som du hanterar som datorer med Intune-klientprogramvaran.
+
+Intune kan använda [TeamViewer](https://www.teamviewer.com)-programvaran, som köps separat, för att göra det möjligt för dig att ge fjärrhjälp till de användare som kör Intune-programklienten. När en användare begär hjälp från Microsoft Intune Center informeras du genom en avisering, kan acceptera begäran och sedan erbjuda hjälp. Den här funktionen ersätter den befintliga Windows-fjärrhjälpsfunktionen i Intune.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -30,7 +32,7 @@ Microsoft Intune kan använda [TeamViewer](https://www.teamviewer.com)-programva
 Innan du börjar upprätta och svara på förfrågningar om fjärrhjälp måste du kontrollera att följande krav är uppfyllda:
 
 - Du måste ha [registrerat ett TeamViewer-konto](https://login.teamviewer.com/LogOn#register) om du vill kunna logga in på TeamViewer-webbplatsen.
-- Windows-datorer som du vill administrera måste [hanteras av Windows-datorklienten](manage-windows-pcs-with-microsoft-intune.md)
+- Windows-datorer som du vill administrera måste [hanteras av Windows-klientprogrammet](manage-windows-pcs-with-microsoft-intune.md)
 - Alla Windows-datoroperativsystem som stöds av Intune kan administreras.
 
 ## <a name="configure-the-teamviewer-connector"></a>Konfigurera TeamViewer-anslutningen
@@ -71,7 +73,7 @@ Från menyn **Åtgärder** i fönstret **TeamViewer** väljer du **Avsluta sessi
 ## <a name="remotely-restart-a-windows-pc"></a>Starta om en Windows-dator via en fjärranslutning
 När du hjälper dina användare med deras problem kan du emellanåt behöva fjärrstarta om deras datorer. Fjärrstarta om en Windows-dator enligt följande steg.
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill starta om).
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator som du vill starta om).
 
 2.  Markera en eller flera datorer, och välj sedan **Fjärruppgifter** &gt; **Starta om datorn**.
 
@@ -84,6 +86,6 @@ När du hjälper dina användare med deras problem kan du emellanåt behöva fj�
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

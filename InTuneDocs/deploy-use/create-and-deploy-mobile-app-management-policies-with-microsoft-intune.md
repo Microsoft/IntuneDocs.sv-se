@@ -1,9 +1,9 @@
 ---
-title: Skapa och distribuera MAM-principer | Microsoft Intune
+title: Skapa och distribuera MAM-principer | Microsoft Docs
 description: "Följ instruktionerna i det här avsnittet om du vill skapa och distribuera hanteringsprinciper för mobilappar."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,13 +14,16 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 05b898ffdd0b76eb04d344adb3cfb20ec15aeb52
+ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
+ms.openlocfilehash: 3e077bfa8a03526b9472b4e9fdd4a75da22c28c8
 
 
 ---
 
 # <a name="create-and-deploy-mobile-app-management-policies-with-microsoft-intune"></a>Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Hanteringsprinciper för mobilappar (MAM) kan tillämpas på appar som körs på enheter som kan, men som inte måste, hanteras av Intune. En detaljerad beskrivning av hur MAM-principer fungerar och de scenarier som stöds av Intunes MAM-principer finns i [Skydda appdata med hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure Portal**. Azure Portal är en ny administratörskonsol som används för att skapa MAM-principer och vi rekommenderar att du använder den här portalen när MAM-principerna skapas. Azure Portal har stöd för följande MAM-scenarier:
@@ -173,6 +176,6 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

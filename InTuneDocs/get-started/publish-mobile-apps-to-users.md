@@ -1,12 +1,12 @@
 ---
-title: "Publicera mobilappar till användarna | Microsoft Intune"
+title: "Publicera mobilappar till användarna | Microsoft Docs"
 description: 
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
 ms.date: 11/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,16 @@ ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: 21e79e5dc5fa47c3612182bbc7040c488f94849b
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: fc2fb3c2c59b4fc2de048d8a27a6eadec592fba3
 
 
 ---
 
 # <a name="quick-start-guide-publish-mobile-apps-to-your-users"></a>Snabbstartsguide: Publicera mobilappar till användarna
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med Microsoft Intune kan du öka användarnas produktivitet och enkelt ge dem åtkomst till de appar och program de behöver, oavsett vilken enhet de använder. Genom att göra apparna lättillgängliga för användarna kan du minska tiden och kraften användarna lägger på att söka efter och installera rätt appar. Det minskar också supportsamtalen som uppstår när användarna inte hittar de appar de behöver.   
 
 ## <a name="is-this-quick-start-guide-right-for-me"></a>Är den här snabbstartsguiden rätt för mig?
@@ -42,6 +45,6 @@ Om du publicerar Office-mobilappar med avsikt att använda Intunes MAM-funktione
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,12 +1,12 @@
 ---
-title: "Förhindra företagsdataläckor från Office 365-mobilappar | Microsoft Intune"
+title: "Förhindra företagsdataläckor från Office 365-mobilappar | Microsoft Docs"
 description: "Använd Intune för att skydda din organisations data med MAM-principer för hantering av mobilappar som förhindrar läckage av företagsdata från Office 365-mobilappar eller andra affärsappar (LOB)."
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
 ms.date: 11/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -14,13 +14,16 @@ ms.assetid: 19be3de7-539c-49f5-8c46-5363b987fef9
 ms.reviewer: pchacon
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ee5f39ac31c2a35770b88c937f138f9c0b525b6
-ms.openlocfilehash: bf3976b0ffbcc74f860c904f0e5829a5a02b6a3e
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: 0288ecd940d650304d83b7dd5803a56f69b936f7
 
 
 ---
 
 # <a name="quick-start-guide-prevent-company-data-leaks-from-office-365-mobile-apps"></a>Snabbstartsguide: Förhindra företagsdataläckor från Office 365-mobilappar
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med Microsoft Intune kan du skydda organisationens data med hanteringsprinciper för mobilprogram (MAM) som skyddar mot företagsdataläckor från Office 365-mobilappar eller andra verksamhetsspecifika appar. Du kan också använda Intune MAM-principer utan att användarna registrerar sina enheter i Intunes hantering av mobilenheter (MDM). Om du har användare som inte vill registrera sin iOS- eller Android-enhet i en Microsoft MDM-lösning (Intune, Configuration Manager eller EAS), om du vill skydda företagsdata utan att hantera användarnas enheter eller om du redan använder en annan lösning än Microsoft MDM, kan Intune ändå hjälpa dig att öka datasäkerheten i ditt företag.   
 
 ## <a name="is-this-quick-start-guide-right-for-me"></a>Är den här snabbstartsguiden rätt för mig?
@@ -45,6 +48,6 @@ I så fall kan du ange MAM-principer för Office 365-mobilappar på iOS- och And
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO3-->
 
 
