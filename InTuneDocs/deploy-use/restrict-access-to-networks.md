@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomsten till nätverk med Cisco ISE | Microsoft Docs"
+title: "Skydda åtkomsten till nätverk med Cisco ISE | Microsoft Docs"
 description: "Använd Cisco ISE med Intune så att enheterna registreras av Intune och följer principen innan de får åtkomst till Wi-Fi och VPN som styrs av Cisco ISE."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/06/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 9eb0ea307702f3ae07db4d5c5a82d03f13b727fb
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 8ef24e4d413662012f091c1be318d1d274e16439
 
 
 ---
 
 # <a name="using-cisco-ise-with-microsoft-intune"></a>Använda Cisco ISE med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med Intune-integration i Cisco Identity Services Engine (ISE) kan du skapa nätverksprinciper i ISE-miljön med hjälp av enhetsregistrering och kompatibilitetstillstånd i Intune. Med dessa principer kan du säkerställa att åtkomsten till företagets nätverk är begränsad till enheter som hanteras av Intune och är kompatibla med Intune-principer.
 
 ## <a name="configuration-steps"></a>Konfigurationssteg
@@ -189,6 +192,6 @@ Det finns också en [nedladdningsbar uppsättning anvisningar för direktregistr
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

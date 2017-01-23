@@ -5,26 +5,27 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: c539af3b4ac901029faeaa4947491eec8ff0c378
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: b8452e55f8ba76e787e43e2239510d7665a561f4
 
 
 ---
 
-
 # <a name="rename-your-device-from-the-company-portal-website"></a>Byta namn på enheten från företagsportalens webbplats
 
-Om du vill byta namn på din enhet kan du göra det via en fjärranslutning från [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune och för att utföra de flesta av de aktiviteter som du kan göra när du använder företagsportalappen.
+Du kanske vill byta namn på din enhet för att göra den enklare att identifiera. Du kan göra det från [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning.
 
 Så här byter du namn på din enhet:
 
@@ -34,12 +35,12 @@ Så här byter du namn på din enhet:
 
     ![rename-device-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
-3.  Skriv det nya namnet för enheten i rutan där det nuvarande enhetsnamnen visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
+3.  Skriv ett nytt namn för din enhet i rutan där enhetsnamnet visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

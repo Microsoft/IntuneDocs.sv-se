@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomsten till Dynamics CRM Online | Microsoft Intune"
+title: "Skydda åtkomsten till Dynamics CRM Online | Microsoft Docs"
 description: "Skydda och styr åtkomsten till Dynamics CRM Online med villkorlig åtkomst."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: dae04661289c79798c2f37272a0f941d30335ea5
-ms.openlocfilehash: 2f4ba24ca6c56cee684931519937525fcde1c211
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 0049da7a47070e42cf0f377da5a99d3222d9ed82
 
 
 ---
 
-# <a name="restrict-access-to-dynamics-crm-online-with-intune"></a>Begränsa åtkomsten till Dynamics CRM Online med Intune
+# <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Skydda åtkomsten till Dynamics CRM Online med Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan kontrollera åtkomsten till Microsoft Dynamics CRM Online från iOS- och Android-enheter med villkorlig åtkomst i Microsoft Intune.  Villkorlig åtkomst i Intune består av två komponenter:
 * En [princip för enhetsefterlevnad](introduction-to-device-compliance-policies-in-microsoft-intune.md) som enheten måste uppfylla för att anses vara kompatibel.
 * En [princip för villkorlig åtkomst](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) där du anger de villkor som enheten måste uppfylla för att komma åt tjänsten.
 
-Om du vill ha mer information om hur villkorlig åtkomst fungerar läser du artikeln [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Om du vill ha mer information om hur villkorlig åtkomst fungerar läser du artikeln [Skydda åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 > [!IMPORTANT]
 > Om du vill distribuera villkorlig åtkomst måste du ha prenumerationer för Intune och Azure Active Directory Premium och användarna måste ha licens för båda produkterna. **Enterprise Mobility + Security-prenumerationen (EMS)** innehåller både Intune- och Azure Active Directory Premium-prenumerationer. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing). Om du inte har EMS-prenumerationen kan du skaffa en Azure Active Directory Premium-prenumeration. Mer information finns på [sidan med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
@@ -92,15 +95,15 @@ Välj en mobil enhetsgrupp och välj sedan något av följande **filter** på fl
 * **Enheter som är AAD-registrerade och uppfyller kraven**. De här enheterna har åtkomst till Dynamics CRM.
 
 ##  <a name="next-steps"></a>Nästa steg
-* [Begränsa åtkomsten till Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
+* [Skydda åtkomsten till Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
 
-* [Begränsa åtkomsten till Exchange lokalt](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
-* [Begränsa åtkomsten till SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
+* [Skydda åtkomsten till Exchange lokalt](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
+* [Skydda åtkomsten till SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
-* [Begränsa åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
+* [Skydda åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

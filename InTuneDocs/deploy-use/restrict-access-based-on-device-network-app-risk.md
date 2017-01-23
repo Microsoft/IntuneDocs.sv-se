@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomst med enhetsskydd | Microsoft Docs"
-description: "Begränsa åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk."
+title: "Skydda åtkomst med enhetsskydd | Microsoft Docs"
+description: "Skydda åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6b83d06ecbe6e202bf022444c288e0866b3507c6
-ms.openlocfilehash: 1dd2c4a46857aef1ba273904d58d5eacae99c7bc
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 184002a3a9f4af671a467ce9fe79fe0050bd00df
 
 
 ---
 
-# <a name="restrict-access-to-company-resource-based-on-device-network-and-application-risk"></a>Begränsa åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk
+# <a name="protect-access-to-company-resource-based-on-device-network-and-application-risk"></a>Skydda åtkomsten till företagets resurser baserat på enhets-, nätverks- och programrisk
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan styra åtkomst från mobila enheter till företagsresurser baserat på riskbedömning som utförs av Lookout, en lösning för enhetsskydd som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som använder Lookout-tjänsten och inkluderar:
 - Säkerhetsproblem med operativsystemversion
 - Installerade skadliga program
@@ -71,7 +74,7 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 ![diagram som visar hur en princip för villkorlig åtkomst beviljar åtkomst när en enhet bedöms vara kompatibel efter problemet åtgärdats](../media/mtp/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
-Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och begränsa åtkomsten till WiFi-nätverk baserat på enhetens risk för angrepp.
+Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och skydda åtkomsten till WiFi-nätverk baserat på enhetens risk för angrepp.
 
 **Blockera åtkomst till nätverket via WiFi:**
 ![diagram som visar hur villkorlig åtkomst blockerar WiFi-åtkomst baserat på nätverkshot](../media/mtp/network-wifi-blocked.png)
@@ -102,6 +105,6 @@ Här följer de åtgärder du måste utföra för att implementera den här lös
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

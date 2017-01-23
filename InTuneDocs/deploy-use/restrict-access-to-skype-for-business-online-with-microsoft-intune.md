@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomsten till Skype för företag – Online | Microsoft Intune"
+title: "Skydda åtkomsten till Skype för företag – Online | Microsoft Docs"
 description: "Skydda och styr åtkomsten till Skype för företag – Online med villkorlig åtkomst."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 04fcdceb593051a32b715cb39b53cc328f167d09
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 37915fcfc0f10e65aa65d400422d72adc63513fa
 
 
 ---
 
-# <a name="restrict-access-to-skype-for-business-online-with-microsoft-intune"></a>Begränsa åtkomsten till Skype för företag – Online med Microsoft Intune
+# <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Skydda åtkomsten till Skype för företag – Online med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan använda principen för villkorlig åtkomst för **Skype för företag – Online** om du vill kontrollera åtkomsten till Skype för företag – Online.
 Villkorlig åtkomst består av två komponenter:
 - En princip för enhetsefterlevnad som enheten måste uppfylla för att anses vara kompatibel.
 - En princip för villkorlig åtkomst där du anger de villkor som enheten måste uppfylla för att du ska kunna komma åt tjänsten.
-Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Begränsa åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 När en målanvändare försöker använda Skype för företag – Online på sin enhet görs följande utvärdering:
 
@@ -117,6 +120,6 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

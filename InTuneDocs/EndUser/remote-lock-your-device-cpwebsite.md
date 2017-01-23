@@ -1,43 +1,43 @@
 ---
-title: "Fjärrlåsa en enhet från företagsportalens webbplats | Microsoft Docs"
+title: "Fjärrlås din enhet från företagsportalens webbplats | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: adc6af23-b22f-42e5-955a-4dffbdb8b42b
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: 04c7ae7df65a0873e794420c1880aa901aa230b6
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: fad219ca06ceb62e8bad0b3dbd30b330d90ac977
 
 
 ---
 
+# <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Fjärrlås din enhet från företagsportalens webbplats
 
-# <a name="remotely-lock-a-device-from-the-company-portal-website"></a>Fjärrlåsa en enhet från företagsportalens webbplats
+Olyckor händer och ibland kan enheter tappas bort. Om du har tappat bort din enhet, eller blivit bestulen, är kanske det första problemet du oroar dig för att vem som helst kan komma åt informationen på den, oavsett var enheten är.
 
-Om enheten har tappats bort eller blivit stulen kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](http://portal.manage.microsoft.com). Fjärrlås fungerar för följande typer av enheter:
+[!INCLUDE[wit_nextref](../includes/end-user-password-guidance.md)]
 
-Plattform  |Information om stöd  
----------|---------
-Android | Stöds       
-iOS | Stöds
-Windows 10 Mobil | Stöds endast om telefonen har ett konfigurerat lösenord     
-Windows 10 Desktop | Stöds inte  
-Windows Phone 8.1 | Stöds endast om telefonen har ett konfigurerat lösenord
-PC (Windows 8.0 och tidigare) | Stöds inte       
-PC (Windows 8.1) | Stöds inte
+För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](http://portal.manage.microsoft.com). Fjärrlåset fungerar på:
 
-</br>
-Använda Fjärrlås för att låsa enheten:
+* Android
+* iOS
+* macOS
+* Windows 10 Mobile (om enheten redan har ett angivet lösenord)
+* Windows Phone 8.1 (om enheten redan har ett angivet lösenord)
+
+## <a name="to-use-remote-lock-to-lock-your-device"></a>Använda Fjärrlås för att låsa enheten
 
 1.  Tryck på namnet på den enhet som du vill låsa på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
@@ -45,25 +45,25 @@ Använda Fjärrlås för att låsa enheten:
 
     ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
-3.  Läs varningsmeddelandet om att du håller på att låsa enheten och tryck sedan på **Fjärrlås**. Därmed låses enheten av företagsportalens webbplats.
+3.  Ett meddelande visas så att du vet att du håller på att låsa enheten. Tryck på **Fjärrlåsning** så kommer företagsportalens webbplats att försöka låsa enheten.
 
-    När du trycker på **Fjärrlås** visas statusen ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
+    När du trycker på **Fjärrlåsning** visas meddelandet ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
 
     Fjärrlåsningens status visas på tre platser:
 
     * Meddelandefältet på webbplatsen.
-    * Sidan Information för enheten.
-    * Panelen som visar namnet på enheten i avsnittet Mina enheter på sidan.
+    * Sidan **Information** för enheten.
+    * Panelen som visar namnet på enheten i avsnittet **Mina enheter** på sidan.
 
-    Om meddelandet ”Det gick inte att fjärrlåsa” visas väntar du några minuter och provar sedan att låsa enheten igen. När du trycker för att försöka igen ändras statusen till ”Fjärrlås väntar” igen.
+> [!Note]
+> Om meddelandet ”Det gick inte att fjärrlåsa” visas väntar du några minuter och provar sedan att låsa enheten igen. När du försöker igen ändras statusen till ”Fjärrlås väntar” igen. Om åtgärden inte fungerar måste du kontakta IT-administratören.
 
-    Om det andra försöket misslyckas kontaktar du IT-administratören och ber om hjälp. Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
+Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

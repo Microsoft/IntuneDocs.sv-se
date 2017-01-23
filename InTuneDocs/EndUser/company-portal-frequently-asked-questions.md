@@ -1,22 +1,24 @@
 ---
-title: "Vad är företagsportalen? Microsoft Intune"
+title: "Vad är företagsportalen? | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3891d0389df3526ea328fc2952e3d181b1e766c0
-ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
+ms.sourcegitcommit: d2ed7b2e713f5efd4161eb8015ab43c8f97a017b
+ms.openlocfilehash: fa9c3fd2c995615e9aa9a16f3bd834b0c145b6d0
 
 
 ---
@@ -24,7 +26,7 @@ ms.openlocfilehash: a0424ada754a210fb34acd49cf47d1c457ed86af
 # <a name="about-the-company-portal"></a>Vanliga frågor om företagsportalen
 
 ## <a name="what-is-the-company-portal-and-what-can-you-do-with-it"></a>Vad är företagsportalen och hur kan jag använda den?
-Via Microsoft Intune-företagsportalen får du tillgång till ditt företags eller din skolas data och appar. Du kan skaffa företagsportalen på två olika sätt:
+Företagsportalen ger dig tillgång till ditt företags eller din skolas data och appar. Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen åt dig.
 - Genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat.
@@ -41,10 +43,10 @@ Det finns några mindre skillnader mellan företagsportalappen och företagsport
 Om du vill se vad du kan göra med företagsportalens webbplats jämfört med vad du kan göra med företagsportalappen på enheten kan du klicka på någon av följande länkar:
 
 > [!div class="op_single_selector"]
-- [Android](using-your-android-device-with-intune.md)
-- [iOS och macOS](using-your-ios-or-mac-os-x-device-with-intune.md)
-- [Windows](using-your-windows-device-with-intune.md)
-- [Företagsportalens webbplats](using-the-intune-company-portal-website.md)
+- [Använda en Android-enhet med Intune](using-your-android-device-with-intune.md)
+- [Använda iOS- eller macOS-enheter med Intune](using-your-ios-or-macOS-device-with-intune.md)
+- [Använda en Windows-enhet med Intune](using-your-windows-device-with-intune.md)
+- [Använda företagsportalswebbplatsen](using-the-intune-company-portal-website.md)
 
 ## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Vad händer när du lägger till en dator eller enhet i företagsportalen?
 När du lägger till en dator eller enhet på företagsportalen kan det hända att vissa program installeras eller att en app laddas ned (beroende på enhet).  Du ger också IT-administratören tillstånd att hantera dina enheter, så att företagsinformation på enheten hålls skyddad.
@@ -58,9 +60,9 @@ Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på di
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Vilken typ av datorer och enheter kan du lägga till i företagsportalen?
 
--   iPhone-, iPad- och macOS-enheter
+-   Apple-enheter med iOS (iPhone, iPad) och macOS (iMac MacBook)
 
--   mobila Android-enheter
+-   Android-enheter:
 
 -   Windows-enheter
     -   Windows 10 Mobil
@@ -96,6 +98,6 @@ Kontakta IT-administratören om du behöver hjälp. Titta efter IT-administratö
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

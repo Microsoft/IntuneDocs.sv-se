@@ -1,11 +1,11 @@
 ---
-title: "Begränsa åtkomsten till SharePoint Online | Microsoft Docs"
+title: "Skydda åtkomsten till SharePoint Online | Microsoft Docs"
 description: "Skydda och styr åtkomsten till företagets data på SharePoint Online med villkorlig åtkomst."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,21 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6b900f2bf41ea84088f8453f59b71136e013a884
+ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
+ms.openlocfilehash: 2efac12d3564932ebcb3cbe4165fbc7ad4595172
 
 
 ---
 
-# <a name="restrict-access-to-sharepoint-online-with-microsoft-intune"></a>Begränsa åtkomsten till SharePoint Online med Microsoft Intune
+# <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Skydda åtkomsten till SharePoint Online med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Använd villkorlig åtkomst i [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] om du vill kontrollera åtkomsten till filer som finns i SharePoint Online.
 Villkorlig åtkomst består av två komponenter:
 - En princip för enhetsefterlevnad som enheten måste uppfylla för att anses vara kompatibel.
 - En princip för villkorlig åtkomst där du anger de villkor som enheten måste uppfylla för att komma åt tjänsten.
-Mer information om hur villkorlig åtkomst fungerar finns i avsnittet [Begränsa åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+Mer information om hur villkorlig åtkomst fungerar finns i avsnittet [Skydda åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
 
 Du distribuerar efterlevnaden och villkorlig åtkomstpolicy till användare. Alla enheter som en användare använder för att komma åt tjänsterna kontrolleras för att se att de följer principerna.
 
@@ -66,7 +69,7 @@ Följande stöds:
 - Android 4.0 och senare, Samsung Knox Standard 4.0 eller senare
 - Windows Phone 8.1 och senare
 
-Du kan begränsa åtkomst till SharePoint Online när **iOS**- och **Android**-enheter får åtkomst via en webbläsare. Åtkomst tillåts endast från webbläsare som stöds på kompatibla enheter:
+Du kan skydda åtkomst till SharePoint Online när **iOS**- och **Android**-enheter får åtkomst via en webbläsare. Åtkomst tillåts endast från webbläsare som stöds på kompatibla enheter:
 * Safari (iOS)
 * Chrome (Android)
 * Intune Managed Browser (iOS och Android 5.0 och senare)
@@ -192,10 +195,10 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 -   **Enheter som är AAD-registrerade och uppfyller kraven**. Enheterna kan komma åt SharePoint Online.
 
 ### <a name="see-also"></a>Se även
-[Begränsa åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+[Skydda åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
