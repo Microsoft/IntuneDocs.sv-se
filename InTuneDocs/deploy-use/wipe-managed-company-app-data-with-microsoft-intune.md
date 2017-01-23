@@ -1,11 +1,11 @@
 ---
-title: "Rensa hanterade företagsdata från appar | Microsoft Intune"
+title: "Rensa hanterade företagsdata från appar | Microsoft Docs"
 description: "Läs om hur du tar bort företagsdata från enheter selektivt via fjärranslutning."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: stabar
+ms.author: staciebarker
 manager: angrobe
-ms.date: 11/08/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,16 @@ ms.assetid: 2742e1d5-d2d5-42cd-b719-665dd6e0a0e9
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: d32a66ee283906586e25173e736c02ee8bf23042
+ms.sourcegitcommit: 89f5dc1581571cfcb6e03b5dce740bc7f8a8a9ce
+ms.openlocfilehash: a02a015ce1208ee5fa081e60ce0b88c69d4efa50
 
 
 ---
 
 # <a name="wipe-managed-company-app-data-with-microsoft-intune"></a>Rensa hanterade företagsdata från appar med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Om en enhet tappas bort eller blir stulen eller om medarbetaren som använder enheten slutar på företaget vill du förmodligen ta bort företagets appdata från enheten. Men du kanske inte vill ta bort personliga data på enheten, särskilt inte om enheten ägs av den anställda.
 
 Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran genom att följa stegen i det här avsnittet. När begäran har slutförts tas företagsdata bort från appen nästa gång den körs på enheten.
@@ -31,29 +34,31 @@ Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran 
 
 ## <a name="create-a-wipe-request"></a>Skapa en rensningsbegäran
 
-1.  Välj panelen **Rensningsförfrågningar** på bladet **Hantering av mobilprogram i Intune** .
+1.  Logga in på Azure Portal och välj **Fler tjänster** > **Andra** > **Intune**.
 
-    ![Skärmbild av bladet Hantering av mobilprogram i Intune med sammanfattningspaneler](../media/AppManagement/AzurePortal_MAM_WipeRequests.png)
+2.  Välj **Hantera appar** på Intune-bladet.
 
-2.  Välj  **Ny rensningsförfrågan**. Nu öppnas bladet **Ny rensningsförfrågan**.
+3.  Välj  **Ny rensningsförfrågan**. Nu öppnas bladet **Ny rensningsförfrågan**.
 
     ![Skärmbild av bladet Ny rensningsförfrågan](../media/AppManagement/AzurePortal_MAM_NewWipeRequest.png)
 
-3.  Välj **Användare** för att öppna bladet **Användare** och välj den användare vars appdata du vill rensa.
+4.  Välj **Användare** för att öppna bladet **Användare** och välj den användare vars appdata du vill rensa.
 
-4.  Välj **Enhet**.  När du gör det öppnas bladet **Enhet** som visar en lista över alla enheter som är associerade med den valda användaren.  Välj den enhet som du vill rensa.
+5.  Välj **Enhet**.  När du gör det öppnas bladet **Enhet** som visar en lista över alla enheter som är associerade med den valda användaren.  Välj den enhet som du vill rensa.
 
-5.  Nu är du tillbaka på bladet **Ny rensningsförfrågan**. Välj **OK** för att skicka en rensningsförfrågan. Tjänsten skapar och spårar en separat rensningsbegäran för varje skyddad app på enheten.
-
+6.  Nu är du tillbaka på bladet **Ny rensningsförfrågan**. Välj **OK** för att skicka en rensningsförfrågan. Tjänsten skapar och spårar en separat rensningsbegäran för varje skyddad app på enheten.
 
 ![Skärmbild av rutan Rensningsförfrågningar ](../media/AppManagement/AzurePortal_MAM_WipeRequestsSummary.png)
 
 ## <a name="monitor-your-wipe-requests"></a>Övervaka dina rensningsbegäranden
-Bladet **Hantering av mobilprogram i Intune** innehåller en sammanfattad rapport på ikonen **Rensningsbegäran** .  Bladet visar den allmänna statusen och innehåller antalet väntande begäranden och misslyckade begäranden. Du kan få mer information genom att följa dessa steg:
 
-1.  Öppna bladet **Rensningsförfrågan** genom att välja panelen **Rensningsförfrågan** på bladet **Hantering av mobilprogram i Intune** .
+På panelen **Rensningsbegäran** finns en sammanfattande rapport som visar den övergripande statusen av rensningsbegäran och innehåller antalet väntande begäranden och fel. Följ dessa steg för mer information:
 
-2.  På bladet **Rensningsbegäran** ser du listan med dina begäranden grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
+1.  Välj **Hantera appar** på Intune-bladet.
+
+2.  Öppna bladet **Rensningsbegäran** genom att välja panelen **Rensningsbegäran** på bladet **Rensningsbegäran**.
+
+3.  På bladet **Rensningsbegäran** ser du listan med dina begäranden grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
 
 Användaren måste öppna appen för att rensningen ska ske och rensningen kan ta upp till 30 minuter att slutföra efter att en begäran har gjorts.
 
@@ -66,6 +71,6 @@ Rensningar med väntande status visas tills du tar bort dem manuellt.  Högerkli
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

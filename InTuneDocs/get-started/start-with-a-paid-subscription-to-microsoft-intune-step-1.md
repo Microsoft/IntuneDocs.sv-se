@@ -1,5 +1,5 @@
 ---
-title: Logga in eller registrera dig i Intune | Microsoft Intune
+title: Logga in eller registrera dig i Intune | Microsoft Docs
 description: "Registrera dig för en Intune-prenumeration eller logga in för att starta din prenumeration"
 keywords: 
 author: nathbarn
@@ -14,14 +14,17 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: bf4a57146a77ce83a86112e08f5e839cf5f9eaf6
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 029ef5aedc8177c13fa1ac89cb00b961a04e88d5
 
 
 ---
 
 
 # <a name="sign-up-or-sign-in-to-intune"></a>Registrering eller inloggning på Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Innan du kan logga in i eller registrera dig för Intune måste du kontrollera om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services eller om din organisation har ett Enterprise-avtal eller motsvarande volymlicensavtal med Microsoft. Ett arbets- eller skolkonto erhålls när du signerar ett volymlicensavtal med Microsoft eller prenumererar på andra Microsoft-molntjänster som Office 365.
 
 Om du redan har ett arbets- eller skolkonto behöver du bara **logga in** med det kontot för att lägga till Intune i din befintliga prenumerationsmiljö. Annars måste du **registrera dig** och skapa ett nytt konto som du kan använda för att hantera Intune för din organisation.
@@ -50,6 +53,6 @@ När du har slutfört inloggningsprocessen blir du omdirigerad till en sida där
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

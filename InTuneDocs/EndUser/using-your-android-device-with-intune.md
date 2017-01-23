@@ -1,5 +1,5 @@
 ---
-title: "Använda en Android-enhet med Intune | Microsoft Intune"
+title: "Använda en Android-enhet med Intune | Microsoft Docs"
 description: "Lista med länkar till uppgifter som slutanvändare kan utföra på sina Android-mobilenheter när enheten har registrerats i Intune"
 keywords: 
 author: barlanmsft
@@ -14,8 +14,8 @@ ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: 7751d5661f3fb9235820c716fdbded3dab385ec4
+ms.sourcegitcommit: b264ea53e727f706bc635ed9c738ad605e1ac750
+ms.openlocfilehash: a88b0eafdf72f00b5c28d0347010eeee3c9effc4
 
 
 ---
@@ -59,22 +59,22 @@ Informationen i det här avsnittet hjälper användare med åtgärder som de kan
 Informationen i det här avsnittet hjälper användare att åtgärda problem som de kan stöta på när deras Android-enhet registreras i Intune.
 
 - [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Skicka loggar med diagnostikdata till IT-administratören via e-post](send-diagnostic-data-logs-to-your-it-administrator-using-email-android.md)
-- [Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel](send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android.md)
-- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-administrator-android.md)
-- [Enheten uppfyller inte kraven för äldsta tillåtna version av operativsystemet](device-doesnt-have-the-required-minimum-operating-system-version-android.md)
-- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](device-doesnt-comply-with-maximum-operating-system-version-android.md)
+- [Skicka loggar till IT-administratören via e-post](send-logs-to-your-it-admin-by-email-android.md)
+- [Skicka loggar till din IT-administratör via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
+- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-admin-android.md)
+- [Enheten uppfyller inte kraven för äldsta tillåtna version av operativsystemet](you-need-to-update-your-android-device.md)
+- [Enheten är inte kompatibel med den senaste versionen av operativsystemet](your-android-version-isnt-yet-supported.md)
 - [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
-- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-android.md)
+- [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-landing-android.md)
 - [Du uppmanas att stänga av okända källor](you-are-asked-to-turn-off-unknown-sources-android.md)
 - [Du uppmanas att stänga av USB-felsökning](you-are-asked-to-turn-off-usb-debugging-android.md)
-- [Du uppmanas att aktivera alternativet Genomsök enhet efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Du uppmanas att aktivera alternativet genomsök enhet efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
 - [Enheten uppfyller inte minimikraven för säkerhetskorrigering](your-device-does-not-meet-the-minimum-security-patch-android.md)
 - [Du uppmanas att installera Lookout for Work på din Android-enhet](you-are-prompted-to-install-lookout-for-work-android.md)
 - [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

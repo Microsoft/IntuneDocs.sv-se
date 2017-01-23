@@ -1,21 +1,23 @@
 ---
-title: Registrera din Android-enhet i Intune | Microsoft Intune
+title: Registrera din Android-enhet i Intune | Microsoft Docs
 description: Beskriver hur du registrerar en Android-enhet i Intune
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/09/2016
+ms.date: 12/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
+searchScope:
+- Company Portal
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6dc3173207d1e99e1bd0207f8ea5a5b137b36be1
-ms.openlocfilehash: b87799b0ee8dcf98b82bd8353ca7684ede0d8bc2
+ms.sourcegitcommit: 3da636b15807623bb60895870e6d43cd2e0aa01c
+ms.openlocfilehash: 4e28ce37559d209672dd4180eebfb07ffddd60c6
 
 
 ---
@@ -25,11 +27,11 @@ ms.openlocfilehash: b87799b0ee8dcf98b82bd8353ca7684ede0d8bc2
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din Android-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer när jag installerar företagsportalappen och registrerar min enhet?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-android.md).
 
-De här registreringsanvisningarna är för Samsung KNOX Android-enheter och ”ursprungliga” Android-enheter (inte Samsung Knox). Se om du har en Samsung KNOX-enhet genom att välja **Inställningar** &gt; **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
+De här registreringsanvisningarna är för Samsung KNOX Android-enheter och ”ursprungliga” Android-enheter (inte Samsung Knox). Du kan kontrollera om du har en Samsung KNOX-enhet genom att välja **Inställningar** > **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
 
 Före eller efter registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Din IT-administratör använder den här kategorin för att se vilka appar du har åtkomst till.
 
-Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka registreringsfel till din IT-administratör](send-enrollment-errors-to-your-it-administrator-android.md).
+Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka registreringsfel till din IT-administratör](send-enrollment-errors-to-your-it-admin-android.md).
 
 **Registrera en Android-enhet:**
 
@@ -114,6 +116,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontakti
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

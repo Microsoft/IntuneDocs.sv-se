@@ -1,11 +1,11 @@
 ---
-title: "Fjärrlåsning och lösenordsåterställning | Microsoft Intune"
+title: "Fjärrlåsning och lösenordsåterställning | Microsoft Docs"
 description: "Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/08/2016
+ms.date: 01/06/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,20 @@ ms.technology:
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
 translationtype: Human Translation
-ms.sourcegitcommit: aae739b5ea8640449f180535a6d8f1550c7ae228
-ms.openlocfilehash: 8dc7f1c7eb32828854b4e2309c915f4fd0cba9a2
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: b3504cc1aab8bbe553581d822af63363668a8ef7
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Skydda dina enheter med fjärrlåsning och lösenordsåterställning
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune tillhandahåller både funktioner för fjärrlåsning och lösenordsåterställning.
 
 ## <a name="lock-a-device-remotely"></a>Fjärrlåsa en enhet
-Om en användare förlorar en enhet kan du fjärrlåsa enheten. Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
+Om en användare förlorar en enhet kan du fjärrlåsa enheten. Enheten måste redan ha en PIN-kod eller lösenord konfigurerat för den innan du kan använda fjärrlåsning. 
+
+Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
 
 |Plattform|Fjärrlåsning|
 |------------|---------------|
@@ -31,7 +36,7 @@ Om en användare förlorar en enhet kan du fjärrlåsa enheten. Följande tabell
 |Windows 10 och Windows 10 Mobile|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
-|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
+|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 
 Fjärrlås stöds inte för Windows-datorer som registrerats i Intune-programklienten.
 
@@ -57,7 +62,7 @@ Om användare glömmer ett lösenord kan du hjälpa dem genom att ta bort lösen
 |Windows 10 Mobil|Stöds|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1|Stöds inte|
-|Windows 8,1|Stöds inte|
+|Windows 8,1|Stöds inte|
 |Windows 10 desktop|Stöds inte|
 
 Lösenordsåterställning stöds inte för Windows-datorer som registrerats i Intune-programklienten.
@@ -79,6 +84,6 @@ Lösenordsåterställning stöds inte för Windows-datorer som registrerats i In
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 
