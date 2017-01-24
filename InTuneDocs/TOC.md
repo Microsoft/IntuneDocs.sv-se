@@ -7,21 +7,20 @@
 ### [Övriga alternativ och tillägg](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Konvertera till en betald prenumeration](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 ## [Vanliga scenarier](understand-explore/common-ways-to-use-intune.md)
-## [Ordlista](understand-explore/intune-glossary.md)
+
 
 # [Komma igång](get-started/get-started.md)
-## [Snabbstartsguide](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
+## [Konfigurera Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
 ### [Krav](get-started/what-to-know-before-you-start-microsoft-intune.md)
-#### [Enheter och webbläsare som stöds](get-started/supported-mobile-devices-and-computers.md)
-#### [Användning av nätverksbandbredd](get-started/network-bandwidth-use.md)
+#### [Nätverksanvändning](get-started/network-bandwidth-use.md)
 ### [Logga in i Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
-### [Konfigurera domännamn](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
+### [Konfigurera domäner](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
 ### [Lägga till användare](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md)
-### [Hantera Intune-licenser](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
+### [Hantera licenser](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md)
 ### [Ordna användare och enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
 ### [Distribuera principer och appar](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
 ### [Anpassa företagsportalen](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
-### [Registrera mobila enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
+### [Registrera enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](get-started/post-configuration-tasks.md)
 ## [Migrera till Intune](get-started/migrate-to-intune.md)
 ## Nästa steg
@@ -30,14 +29,23 @@
 ### [Publicera mobilappar till användarna](get-started/publish-mobile-apps-to-users.md)
 ### [Förenkla e-postkonfigurationen på mobila enheter](get-started/simplify-email-configuration-on-mobile-devices.md)
 ### [Skydda Windows-datorer mot skadlig kod](get-started/protect-pcs-against-malware-threats.md)
-## [Distributionsfaserna för Intune](get-started/rollout-phases-for-microsoft-intune-deployment.md)
-### [Projektomfång](get-started/project-scope.md)
-### [Konceptbevis](get-started/proof-of-concept.md)
-### [Pilot](get-started/pilot.md)
-### [Företagsomfattande distribution](get-started/enterprise-rollout.md)
-### [Åtgärder och underhåll](get-started/operations-and-maintenance.md)
 
-# [Nyheter](whats-new/whats-new-in-microsoft-intune.md)
+# [Planera och utforma](plan-design/introduction.md)
+## [Avsnitt 1: Fastställa distributionsmål, delmål och utmaningar](plan-design/section-1-determine-deployment-goals-objectives-challenges.md)
+## [Avsnitt 2: Identifiera användningsfall](plan-design/section-2-identify-use-case-scenarios.md)
+## [Avsnitt 3: Fastställa krav för användningsfall](plan-design/section-3-determine-use-case-requirements.md)
+## [Avsnitt 4: Utveckla en distributionsplan](plan-design/section-4-develop-a-rollout-plan.md)
+## [Avsnitt 5: Utveckla en kommunikationsplan](plan-design/section-5-develop-a-rollout-communication-plan.md)
+## [Avsnitt 6: Utveckla en supportplan](plan-design/section-6-develop-a-support-plan.md)
+## [Avsnitt 7: Skapa en Intune-utformning](plan-design/section-7-create-an-intune-design.md)
+## [Avsnitt 8: Intune-implementering](plan-design/section-8-onboarding-process.md)
+## [Avsnitt 9: Testning och validering](plan-design/section-9-test-and-validation.md)
+## [Ytterligare resurser](plan-design/additional-resources.md)
+
+# Nyheter
+## [Nyheter](whats-new/whats-new-in-microsoft-intune.md)
+## [Vad är nytt i förhandsversionen av Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
+## [Nyhetsarkiv](whats-new/whats-new-archive.md)
 
 # Distribuera och använda
 ## [Översikt över enhets- och applivscykler](deploy-use/overview-of-device-and-app-lifecycles-in-microsoft-intune.md)
@@ -65,6 +73,7 @@
 #### [Installera PC-klienten](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 #### [Vanliga datorhanteringsuppgifter](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Lösa PC-principkonflikter](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+### [Hantera Android for arbetet](deploy-use/android-for-work.md)
 
 ## Konfigurera enheter
 ### [Hantera inställningar och funktioner på dina enheter med principer](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
@@ -90,6 +99,7 @@
 #### [VPN-anslutningar i Intune](deploy-use/vpn-connections-in-microsoft-intune.md)
 #### [E-postprofiler i Intune](deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md)
 ### [Hantera användare och enheter med hjälp av grupper](deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
+#### [Migrera grupper till Azure](deploy-use/migrating-groups-to-azure-active-directory.md)
 ### [Mappa enheter till grupper](deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune.md)
 ### [Förstå dina enheter med inventering](deploy-use/understand-your-devices-with-inventory-in-microsoft-intune.md)
 
@@ -135,24 +145,24 @@
 #### [Windows och Windows Phone](deploy-use/windows-compliance-policy-settings-in-microsoft-intune.md)
 #### [Distribuera en enhetsefterlevnadsprincip](deploy-use/deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md)
 
-### [Begränsa åtkomst baserat på enhetens efterlevnad](deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
+### [Skydda åtkomst baserat på enhetens efterlevnad](deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
 #### [Exchange Online och nya Exchange Online Dedicated](deploy-use/restrict-access-to-exchange-online-with-microsoft-intune.md)
 #### [Exchange On-premises och äldre Exchange Online Dedicated](deploy-use/restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
 #### [SharePoint Online](deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 #### [Skype för företag – Online](deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
 #### [Dynamics CRM Online](deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-#### [Begränsa e-poståtkomsten: exempel](deploy-use/restrict-email-access-example-scenarios.md)
+#### [Skydda e-poståtkomsten: exempel](deploy-use/restrict-email-access-example-scenarios.md)
 ### [Tillåt endast åtkomst för principhanterade appar till O365-tjänster](deploy-use/allow-policy-managed-apps-access-to-o365.md)
 #### [Appar med MAM CA](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blockera appar utan ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
-### [Begränsa åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
-### [Begränsa åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/restrict-access-based-on-device-network-app-risk.md)
-#### [Konfigurera Lookout-skydd mot enhetshot](deploy-use/set-up-your-subscription-with-lookout-mtp.md)
-#### [Aktivera Lookout i Intune](deploy-use/enable-lookout-mtp-connection-in-intune.md)
-#### [Distribuera Lookout for Work-appar](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-#### [Aktivera skydd mot enhetshot i policyn för efterlevnad](deploy-use/enable-device-threat-protection-rule-in-compliance-policy.md)
+### [Skydda åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
+### [Skydda åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/device-threat-protection.md)
+#### [Konfigurera Lookout-skydd mot enhetshot](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Aktivera Lookout i Intune](deploy-use/device-threat-protection-enable.md)
+#### [Distribuera Lookout for Work-appar](deploy-use/device-threat-protection-apps.md)
+#### [Aktivera skydd mot enhetshot i policyn för efterlevnad](deploy-use/device-threat-protection-policy.md)
 
 ### [Skydda appdata med MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Azure Portal för MAM-principer](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
@@ -172,6 +182,7 @@
 #### [LOB-appar på enheter som inte hanteras av Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Använda SDK när du skriver en app](deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
+### [Vanliga frågor och svar om MAM och appskydd](deploy-use/mam-faq.md)
 
 ## Dra tillbaka appar och data
 ### [Använda fullständig eller selektiv rensning](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
@@ -208,7 +219,9 @@
 
 ## [Felsöka Lookout-integrering](troubleshoot/troubleshooting-lookout-integration.md)
 
+# [Ordlista](understand-explore/intune-glossary.md)
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO3-->
 
 

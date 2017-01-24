@@ -11,11 +11,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
+searchScope:
+- Company Portal
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b264ea53e727f706bc635ed9c738ad605e1ac750
-ms.openlocfilehash: a88b0eafdf72f00b5c28d0347010eeee3c9effc4
+ms.sourcegitcommit: bb949c9a83fdde630dd2023765d32e98c43a1c20
+ms.openlocfilehash: 22a5cab46a6ca8cf2d350ba9844328a3dea13766
 
 
 ---
@@ -66,15 +68,15 @@ Informationen i det här avsnittet hjälper användare att åtgärda problem som
 - [Enheten är inte kompatibel med den senaste versionen av operativsystemet](your-android-version-isnt-yet-supported.md)
 - [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
 - [Enheten saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-landing-android.md)
-- [Du uppmanas att stänga av okända källor](you-are-asked-to-turn-off-unknown-sources-android.md)
-- [Du uppmanas att stänga av USB-felsökning](you-are-asked-to-turn-off-usb-debugging-android.md)
-- [Du uppmanas att aktivera alternativet genomsök enhet efter säkerhetshot](you-are-asked-to-turn-on-scan-device-for-security-threats-android.md)
+- [Du behöver stänga av okända källor](you-need-to-turn-off-unknown-sources-android.md)
+- [Du behöver stänga av USB-felsökning](you-need-to-turn-off-usb-debugging-android.md)
+- [Du behöver slå på sökning efter säkerhetshot](you-need-to-turn-on-scanning-for-security-threats-android.md)
 - [Enheten uppfyller inte minimikraven för säkerhetskorrigering](your-device-does-not-meet-the-minimum-security-patch-android.md)
 - [Du uppmanas att installera Lookout for Work på din Android-enhet](you-are-prompted-to-install-lookout-for-work-android.md)
 - [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

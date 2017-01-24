@@ -14,8 +14,8 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a567d55141c4510a5c81861df1522f118104de61
-ms.openlocfilehash: 900b3a9bcc9ce58cd165b14592c850b50739a33a
+ms.sourcegitcommit: e2810513646828cc5da734f3af9cc8d81e0c03fc
+ms.openlocfilehash: 444d08d1a5e709572efbc2f639cef037453b9c0e
 
 
 ---
@@ -43,7 +43,7 @@ Intunes hantering av enheter ger [dessa funktioner](mobile-device-management-cap
 
 ### <a name="windows-pc-software-client"></a>Windows PC-programvaruklient
 
-En [Intune-programvaruklient](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) kan distribueras och installeras på Windows-datorer som en alternativ metod för registrering. Du kan använda Intune-programvaruklienten för att hantera datorer med Windows 7 och senare. Genom att hantera datorer med klientprogramvaran får du tillgång till [dessa funktioner](windows-pc-management-capabilities-in-microsoft-intune.md).
+En [Intune-programvaruklient](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) kan distribueras och installeras på Windows-datorer som en alternativ metod för registrering. Du kan använda Intune-programvaruklienten för att hantera datorer med Windows 7 och senare, förutom Windows 10 Home Edition. Genom att hantera datorer med klientprogramvaran får du tillgång till [dessa funktioner](windows-pc-management-capabilities-in-microsoft-intune.md).
 
 ### <a name="exchange-activesync-management"></a>Exchange ActiveSync-hantering
 
