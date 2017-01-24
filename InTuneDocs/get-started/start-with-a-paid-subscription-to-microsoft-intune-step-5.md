@@ -1,5 +1,5 @@
 ---
-title: "Ordna användare och enheter genom att skapa grupper | Microsoft Intune"
+title: "Skapa grupper för att organisera användare och enheter | Microsoft Docs"
 description: "Skapa användare och grupper för din Intune-prenumeration"
 keywords: 
 author: nathbarn
@@ -14,14 +14,17 @@ ms.assetid: 5fdf98c8-fe67-4d7a-9837-ed1234348014
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 85b2e7c50f4ea1e07bd1474e3902cebcbccc1467
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 446156265047994f0a15890d7699991d032c0bd5
 
 
 ---
 
 
 # <a name="create-groups-to-organize-users-and-devices"></a>Skapa grupper för att organisera användare och enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Grupper i Intune ger stor flexibilitet att hantera enheter och användare. Du kan konfigurera grupper efter organisationens behov (till exempel genom geografisk plats, avdelning eller maskinvaruegenskaper) och använda dem för att utföra olika administrativa uppgifter, från att distribuera principer för en uppsättning användare till att distribuera program till en uppsättning enheter.
 
 ## <a name="group-management-moving-to-azure-ad"></a>Grupphantering flyttar till Azure AD
@@ -84,6 +87,6 @@ Du kan hitta de nyligen skapade grupperna i listan **Grupper** under **Alla anv�
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

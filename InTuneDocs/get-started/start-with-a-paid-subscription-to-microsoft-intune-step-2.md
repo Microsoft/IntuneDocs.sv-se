@@ -1,5 +1,5 @@
 ---
-title: "Konfigurera ett eget domännamn | Microsoft Intune"
+title: "Konfigurera ett eget domännamn | Microsoft Docs"
 description: "Lägga till ett anpassat domännamn för din Intune-prenumeration"
 keywords: 
 author: nathbarn
@@ -14,14 +14,17 @@ ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 26b019b2b4c079daa89d15c783be0abf2b61dfee
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: e51746bbd114476e394c44f813fb8cb329879172
 
 
 ---
 
 
 # <a name="configure-a-custom-domain-name"></a>Så här konfigurerar du ett eget domännamn
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 
 När organisationen registrerar sig för en molnbaserad tjänst från Microsoft, till exempel Intune, får du ett första domännamn i Azure Active Directory (AD) som ser ut ungefär så här: **dindomän.onmicrosoft.com**. I det här exemplet är **dindomän** det domännamn som du angav när du registrerade dig och **onmicrosoft.com** är det suffix som tilldelas de konton som du lägger till i din prenumeration. Om din organisation äger en anpassad domän kan du konfigurera din instans av Intune att använda den domänen i stället för domännamnet som följer med din prenumeration.
 
@@ -59,6 +62,6 @@ Ta reda på mer [om din första onmicrosoft.com-domän i Office 365](https://sup
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

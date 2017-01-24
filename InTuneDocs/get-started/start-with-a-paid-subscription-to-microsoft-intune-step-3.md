@@ -1,5 +1,5 @@
 ---
-title: "Lägg till användare och tilldela behörigheter | Microsoft Intune"
+title: "Lägg till användare och tilldela behörigheter | Microsoft Docs"
 description: "Synkronisera lokala användare med Azure AD och bevilja administratörsbehörighet för din Intune-prenumeration"
 keywords: 
 author: nathbarn
@@ -14,13 +14,15 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 18d31a306549bae6dd44ab78d1dd08649ee71158
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: 02b6dd389c94d2b31bd96b2095ae48b685084370
 
 
 ---
 
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Lägg till användare och ge administrativ behörighet till Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Som administratör kan du lägga till användare direkt eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan även ge användarna ytterligare behörighet inklusive *innehavaradministratör*, *tjänstadministratör* och *hanteringsbehörigheter för enhetsregistrering*.
 
@@ -101,6 +103,6 @@ Hanterare av enhetsregistrering är vanliga standardanvändarkonton med ytterlig
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

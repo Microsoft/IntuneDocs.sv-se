@@ -1,11 +1,11 @@
 ---
-title: "Lägga till appar för registrerade enheter | Microsoft Intune"
+title: "Lägga till appar för registrerade enheter | Microsoft Docs"
 description: "Innan du kan distribuera en app måste du lägga till den i Intune. Sedan är den tillgänglig i Intune-konsolen där du kan distribuera och hantera den."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/28/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,15 @@ ms.assetid: f5b1f1ae-f177-450a-9af9-936a02d052e3
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 00facaf07d8cb5ad7f1827eee9b0efb3547cec95
+ms.sourcegitcommit: 18f200ca30cfcd4c9fb00519c149f48e9b9fa8cb
+ms.openlocfilehash: b566b13f8c93c8a6bddccdbc0da5eb508907dac2
 
 
 ---
 
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Lägga till appar för registrerade enheter i Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Innan du kan distribuera och hantera en app måste du lägga till den i Microsoft Intune. Det här avsnittet visar hur du lägger till appar för registrerade enheter.
 
@@ -57,6 +59,9 @@ Du använder Intune programvaruutgivare för att konfigurera egenskaper för app
         Om du till exempel vill distribuera appen Microsoft Word från iTunes-butiken till enheterna skulle sidan se ut så här:
 
         ![Intune Software Publisher](./media/publisher-for-mobile.png)
+
+> [!NOTE]
+> När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
 
 3.  På sidan **Programvarubeskrivning** konfigurerar du följande:
 
@@ -100,6 +105,6 @@ När du har skapat en app är nästa steg att distribuera den. Mer information f
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 
