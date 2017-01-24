@@ -1,5 +1,5 @@
 ---
-title: "Ordna användare och enheter genom att skapa grupper | Microsoft Intune"
+title: "Skapa grupper för att organisera användare och enheter i den kostnadsfria förhandsversionen | Microsoft Docs"
 description: "Så här skapar du enhetsgrupper och användargrupper när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Microsoft Intune."
 keywords: 
 author: lindavr
@@ -13,13 +13,16 @@ ms.technology:
 ms.assetid: 7162cad3-5c14-43f3-a760-833ffd7786b1
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ab451a1213923ecd27dfc0b8ca353041e70435ed
+ms.sourcegitcommit: 89e190e6a3e514c0f38b33409cde2abea0776885
+ms.openlocfilehash: 0cdf5bf8f9fad1f44dbb0ef11de71aea55949d89
 
 
 ---
 
 # <a name="create-groups-to-organize-evaluation-subscription-users-and-devices"></a>Skapa grupper för att organisera användare och enheter som prenumererar på utvärderingen
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Grupper i Intune ger stor flexibilitet för att hantera dina enheter och användare. Du kan konfigurera grupper efter organisationens behov (till exempel genom geografisk plats, avdelning eller maskinvaruegenskaper) och använda dem för att utföra olika administrativa uppgifter i skala, från att ange principer för en uppsättning användare till att distribuera program till en uppsättning enheter.
 
 ## <a name="create-a-device-group"></a>Skapa en enhetsgrupp
@@ -61,6 +64,6 @@ Mer information om hur du använder grupper finns i [Använda grupper för att h
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,32 +1,31 @@
 ---
-title: "Ta bort enheten från företagsportalen | Microsoft Intune"
+title: "Ta bort enheten från företagsportalen | Microsoft Docs"
 description: "Ta bort en enhet från företagsportalen"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e240419a-a836-4be3-8fd9-39a4ec890226
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5a0f3e42568634a4c5369919ad4feaf1be4b941e
-ms.openlocfilehash: 4c0186214893e9a056e331e7ec081dbdbee3a71e
+ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
+ms.openlocfilehash: f557aab61a61bde8937d72c99ccf652787170002
 
 
 ---
 
+# <a name="remove-your-device-from-the-company-portal"></a>Ta bort enheten från företagsportalen
 
-# Ta bort enheten från företagsportalen
-
-Om du inte längre vill att enheten ska hanteras av Intune och IT-administratören kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune. På webbplatsen för företagsportalen kan du utföra de flesta uppgifter som är tillgängliga i företagsportalappen.
-
-Om du tar bort din enhet kommer den inte längre att visas på företagsportalen och du kanske inte längre kan komma åt företags- eller skoldata, appar och e-post.
+Om du inte längre vill att enheten ska hanteras av ditt företag eller din organisation kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning. Om du tar bort din enhet kommer den inte längre att visas på företagsportalen och du kanske inte längre kan komma åt företags- eller skoldata, appar och e-post.
 
 Så här tar du bort din enhet:
 
@@ -38,12 +37,10 @@ Så här tar du bort din enhet:
 
 3. Läs varningsmeddelandet och tryck sedan på **Ta bort** för att ta bort enheten från företagsportalen.
 
-Nu har enheten tagits bort.
-
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Se [företagsportalens webbplats](http://portal.manage.microsoft.com) för att hitta IT-administratörens kontaktuppgifter.
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

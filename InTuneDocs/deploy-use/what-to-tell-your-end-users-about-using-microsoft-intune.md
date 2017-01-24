@@ -1,5 +1,5 @@
 ---
-title: "Resurser om slutanvändarens upplevelse med Microsoft Intune | Microsoft Intune"
+title: "Resurser om slutanvändarens upplevelse med Microsoft Intune | Microsoft Docs"
 description: "Dela informationen med dina slutanvändare för en lyckad Intune-distribution."
 keywords: end users, users, communication
 author: barlanmsft
@@ -14,13 +14,15 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: jeffgilb
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 83436b7d8e554eef0cf48d0f07999f06bf811bbc
+ms.sourcegitcommit: 77f1af3a07e5a5758227c81010ce853906803b08
+ms.openlocfilehash: a822559a55ee495065eca7eef5ec645cf4522e4b
 
 
 ---
 
 # <a name="resources-about-the-end-user-experience-with-microsoft-intune"></a>Resurser om slutanvändarens upplevelse med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Använd följande länkar för att lära dig om de steg som slutanvändarna tar för att utföra olika uppgifter i Intune.
 
@@ -35,7 +37,7 @@ Du kan använda den här [customizable, end-user Intune enrollment template for 
 Använd följande länkar för att se de steg som användarna skickas till från företagsportalens webbplats eller app. Länkarna är indelade i avsnitt om installation av företagsportalsappen och Intune-registrering, uppgifter som användarna kan utföra på sina enheter, och felsökning.
 
 - [Använda en Android-enhet med Intune](/Intune/EndUser/using-your-android-device-with-intune)
-- [Använda en iOS- eller macOS-enhet med Intune](/Intune/EndUser/using-your-ios-or-mac-os-x-device-with-intune)
+- [Använda en iOS- eller macOS-enhet med Intune](/Intune/EndUser/using-your-iOS-or-macOS-device-with-intune)
 - [Använda en Windows-enhet med Intune](/Intune/EndUser/using-your-windows-device-with-intune)
 - [Använda Intune-företagsportalens webbplats](/Intune/EndUser/using-the-intune-company-portal-website)
 
@@ -50,6 +52,6 @@ Välj bland följande enhetsplattformsalternativ för att förstå hur dina slut
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 
