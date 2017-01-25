@@ -1,11 +1,11 @@
 ---
-title: "Multifaktorautentisering för Windows | Microsoft Docs"
+title: "Multifaktorautentisering för enhetsregistreringar i Intune | Microsoft Docs"
 description: "Intune integrerar Multi-factor Authentication (MFA) för att skydda företagets resurser."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 01/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 9b4f197d-bc10-4bee-91c9-19bcc8287d36
 ms.reviewer: vinaybha
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: cc60ffb2cd7a1d0cad141712ba7e2341954b1f02
+ms.sourcegitcommit: d3771ed940c969ac675e089ad80e93ea960bedfa
+ms.openlocfilehash: ae338e63d1f478b6550d669ca1f7c098d6d4df0a
 
 
 ---
 
-# <a name="protect-windows-devices-with-multi-factor-authentication"></a>Protect Windows devices with multi-factor authentication
+# <a name="protect-windows-devices-with-multi-factor-authentication-for-intune-device-enrollments"></a>Skydda Windows-enheter med multifaktorautentisering för enhetsregistreringar i Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -69,6 +69,6 @@ Information om hur du aktiverar multifaktorautentisering i AD FS finns i [Manage
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO3-->
 
 

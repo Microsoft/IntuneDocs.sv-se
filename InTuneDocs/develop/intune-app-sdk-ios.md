@@ -14,8 +14,8 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b068da7685792757825a4bc0d555e28ee0168cb1
-ms.openlocfilehash: cb80d531a28eaccbd26bc53df3e13ad233522dcf
+ms.sourcegitcommit: 3fdbf7f561f526b68972c6f66d1b72b56f7fa8ad
+ms.openlocfilehash: 5aa384197036adf0c373a08c3750f453812c9fba
 
 
 ---
@@ -119,7 +119,8 @@ Följ dessa steg för att aktivera Intune App SDK:
 6. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
     > [!NOTE]
-    > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempelvis:     ```xml
+    > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
+    ```xml
     <key>keychain-access-groups</key>
     <array>
     <string>YOURBUNDLESEEDID.*</string>
@@ -150,7 +151,7 @@ Följ dessa steg för att aktivera Intune App SDK:
 
 9. Mobilappar som utvecklas för iOS 9 och senare måste inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Lägg dessutom till ett nytt protokoll med `-intunemam` för varje nytt protokoll som listas. Du måste även inkludera `http-intunemam`, `https-intunemam`och `ms-outlook-intunemam` i matrisen.
 
-10. Om appen har definierade appgrupper i sina behörigheter lägger du till dessa grupper i ordlistan IntuneMAMSettings under nyckeln `AppGroupIdentitifiers` som en matris med strängar.
+10. Om appen har definierade appgrupper i sina behörigheter lägger du till dessa grupper i ordlistan IntuneMAMSettings under nyckeln `AppGroupIdentifiers` som en matris med strängar.
 
 11. Länka mobilappen till Azure Directory Authentication Library (ADAL). ADAL-biblioteket för Objective C [finns på GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
 
@@ -509,7 +510,7 @@ Tänk på att en identitet endast definieras som en sträng. Identiteter är ski
 
 ### <a name="identity-overview"></a>Översikt över identitet
 
-En identitet är helt enkelt kontots användarnamn (till exempel kan user@contoso.com).-utvecklare ange appens identitet på följande nivåer:
+En identitet är bara användarnamnet för ett konto (t.ex. user@contoso.com). Utvecklare kan ange appens identitet på följande nivåer:
 
 * **Processidentitet**: Anger identiteten för hela processen och används främst för program med endast en identitet. Den här identiteten påverkar alla åtgärder, filer och användargränssnittet.
 * **Gränssnittsidentitet**: Avgör vilka principer som används för gränssnittsåtgärder på huvudtråden, t.ex. klipp ut/kopiera/klistra in, PIN-kod, autentisering och datadelning. Gränssnittsidentiteten påverkar inte filåtgärder som kryptering och säkerhetskopiering osv.
@@ -604,6 +605,12 @@ Här är några rekommenderade metodtips för att utveckla med iOS:
 
 ## <a name="faq"></a>Vanliga frågor
 
+
+**Är alla API:erna adresserbara via samverkan med intern Swift eller Objective-C och Swift?**
+
+Intune App SDK-API:er finns endast i Objective-C och har inte stöd för intern Swift.  
+
+
 **Måste alla användare av mitt program registreras med MAM-tjänsten?**
 
 Nej. I själva verket är det bara arbets- eller skolkonton som ska registreras med Intune App SDK. Appar ansvarar för att fastställa om ett konto används i ett arbets- eller skolsammanhang.   
@@ -637,6 +644,8 @@ Den här metoden ska anropas innan användaren loggas ut från programmet.  Om a
 
 Ja, IT-administratören kan skicka ett kommando för selektiv rensning till programmet. Detta avregistrerar användaren och raderar användarens data. SDK hanterar det här scenariot automatiskt och skickar en avisering via ombudsmetoden för avregistrering.
 
+
+
 ## <a name="submit-your-app-to-the-app-store"></a>Skicka in din app till App Store
 
 Både det statiska biblioteket och ramverksversionerna av Intune App SDK är universella binärfiler. Detta innebär att de innehåller kod för alla enhets- och simuleringsarkitekturer. Apple avvisar appar som skickas till App Store om de innehåller simuleringskod. Vid kompileringen mot det statiska biblioteket för versioner för endast enheten kommer länkaren att ta bort simuleringskoden automatiskt. Följ stegen nedan för att se till att all simuleringskod tas bort innan du laddar upp din app till App Store.
@@ -656,6 +665,6 @@ Både det statiska biblioteket och ramverksversionerna av Intune App SDK är uni
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

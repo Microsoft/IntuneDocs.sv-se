@@ -14,8 +14,8 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: oldang
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0abdd44716f8fe0ff8298fa8f6b9f4197964cb9
-ms.openlocfilehash: 06f0f7c436eef63a63182196d4d124b2d928a083
+ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
+ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
 
 
 ---
@@ -107,6 +107,9 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
   ![Välj internt och ad hoc-certifikat](../media/app-wrapper/iOS-signing-cert-3.png)
 
+>[!NOTE]
+>Om du inte planerar att distribuera appen och endast vill testa den internt kan du använda ett iOS-apputvecklingscertifikat i stället för ett certifikat för produktion. Om du använder ett utvecklingscertifikat kontrollerar du att den mobila etableringsprofilen hänvisar till de enheter där appen ska installeras.
+
 7. Klicka på **Nästa** längst ner på sidan.
 
 8. Läs anvisningarna om hur du skapar en **certifikatsigneringsförfrågan** med hjälp av nyckelhanterarprogrammet på din Mac OS-dator.
@@ -131,11 +134,12 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 14. Dubbelklicka på certifikatfilen som du precis laddade ned för att lägga till certifikatet i en nyckelring.
 
-15. Öppna **Nyckelhanteraren** igen. Leta upp certifikatet genom att söka efter **"iPhone"** i det övre högra sökfältet i fönstret Nyckelhanteraren. Högerklicka på objektet för att visa menyn och klicka på **Hämta information**.
+15. Öppna **Nyckelhanteraren** igen. Leta upp certifikatet genom att söka efter dess namn i det övre högra sökfältet. Högerklicka på objektet för att visa menyn och klicka på **Hämta information**. På exempelbilderna använder vi ett utvecklingscertifikat i stället för ett produktionscertifikat.
+
 
   ![Lägg till certifikatet i en nyckelring](../media/app-wrapper/iOS-signing-cert-8.png)
 
-16. Ett informationsfönster visas. Bläddra till slutet och titta under etiketten **Fingeravtryck**. Kopiera strängen **SHA1** för att använda den som -c-parametern för programhanteringsverktyget.
+16. Ett informationsfönster visas. Bläddra till slutet och titta under etiketten **Fingeravtryck**. Kopiera strängen **SHA1** (har gjorts suddig) för att använda den som argument för "-c" för programhanteringsverktyget.
 
   ![Lägg till certifikatet i en nyckelring](../media/app-wrapper/iOS-signing-cert-9.png)
 
@@ -397,6 +401,6 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

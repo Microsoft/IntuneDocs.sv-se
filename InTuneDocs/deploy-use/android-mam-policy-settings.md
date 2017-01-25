@@ -1,9 +1,9 @@
 ---
-title: "MAM-principinställningar för Android | Microsoft Intune"
+title: "MAM-principinställningar för Android | Microsoft Docs"
 description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för Android-enheter."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 09/30/2016
 ms.topic: article
@@ -14,99 +14,54 @@ ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ms.reviewer: andcerat
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: d0a1a2b3f4e5dbac8b333db3a5cc4bb32c0d61ef
+ms.sourcegitcommit: ece31db49b004d8ae6e83c356d6816231f84923e
+ms.openlocfilehash: aa3ead63d9bb7dce36a07929c39d72fe1178bc87
 
 
 ---
 
 # <a name="android-mobile-app-management-policy-settings-in-microsoft-intune"></a>Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för en MAM-princip (hanteringsprincip för mobilappar) på **inställningsbladet** på Azure Portal.
-Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen *principhanterade appar* för att hänvisa till appar som är konfigurerade med MAM-principer.
+Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen _**principhanterade appar**_ för att hänvisa till appar som är konfigurerade med MAM-principer.
+
 
 ##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
 
-- **Förhindra Android-säkerhetskopieringar:** Välj **Ja** om du vill inaktivera eller **Nej** om du vill aktivera säkerhetskopiering av företagsdata från principhanterade appar.
+| Inställningar | Använd så här | Standardvärde(n) |
+|------|------|------|
+| **Förhindra Android-säkerhetskopieringar** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata i [Android Backup Service](https://developer.android.com/google/backup/index.html) Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata.| Ja |
+| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> | Alla appar |
+| **Tillåt att appen hämtar data från andra appar** | Ange vilka appar som kan överföra data till den här appen: <ul><li>**Principhanterade appar**: Tillåt endast överföring från andra principhanterade appar.</li><li>**Alla appar**: Tillåt dataöverföring från alla appar.</li><li>**Ingen**: Tillåt inte dataöverföring från någon app, inklusive andra principhanterade appar. | Alla appar |
+| **Förhindra "Spara som"** | Välj **Ja** om du vill inaktivera alternativet Spara som i den här appen. Välj **Nej** om du vill tillåta att Spara som används. | Nej |
+| **Begränsa klipp ut, kopiera och klistra in med andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | Alla appar |
+|**Begränsa webbinnehåll till visning i Managed Browser** | Välj **Ja** för att tvinga webblänkar i appen att öppnas i appen Managed Browser. <br><br> För enheter som inte har registrerats i Intune kan webblänkar i principhanterade appar endast öppnas i appen Managed Browser. <br><br> Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md). | Nej |
+| **Kryptera appdata** | Välj **Ja** om du vill aktivera kryptering av arbets- eller skoldata i den här appen. Intune använder ett OpenSSL-krypteringsschema tillsammans med Android Keystore-systemet för att kryptera appdata på ett säkert sätt. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid. <br><br> Krypteringsmetoden är **inte** FIPS 140-2-certifierad.  | Ja |
+| **Inaktivera synkronisering av kontakter** | Välj **Ja** att förhindra att appen sparar data i den interna appen Kontakter på enheten. Om du väljer **Nej** kan appen spara data i den interna appen Kontakter på enheten. <br><br>När du utför en selektiv rensning för att ta bort arbets- eller skoldata från appen kommer kontakter som har synkats direkt från appen till den inbyggda appen Kontakter att tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen. | Nej |
+| **Inaktivera utskrift** | Välj **Ja** att förhindra att appen skriver ut arbets- eller skoldata. | Nej |
 
-  Standardvärde = **Ja**
-- **Tillåt att appen överför data till andra appar**: Välj ett alternativ för att ange vilken typ av appar som kan ta emot företagsdata från principhanterade appar:
-  -   **Principhanterade appar**: Tillåter endast överföring till appar som MAM-principen tillämpas på.
-  -   **Alla appar**: Aktiverar överföring till alla appar.
-  -   **Ingen**: Tillåter inte dataöverföring till någon app.
 
- Standardvärde = **Principhanterade appar**.
-- **Tillåt att appen tar emot data från andra appar**: Ange vilka appar som kan överföra data till de principhanterade apparna:
-  -   **Principhanterade appar**: Tillåter endast dataöverföringar från andra principhanterade appar.
-  -   **Alla appar**: Tillåter dataöverföring från alla appar.
-  -   **Inga**: Tillåter inte dataöverföring från någon app.
-
-  Standardvärde = **Alla appar**
-
--   **Förhindra Spara som**: Välj **Ja** om du vill inaktivera alternativet Spara som i appar som använder den här principen. Välj **Nej** om du vill tillåta användningen av Spara som.
-
-  Standardvärde = **Ja**
-- **Begränsa klipp ut, kopiera och klistra in med andra appar**: Ange när åtgärderna Klipp ut, Kopiera och Klistra in ska begränsas. Välj mellan:
-  -   **Blockerad**: Tillåter inte åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
-  -   **Principhanterade appar**: Tillåter endast åtgärderna Klipp ut, Kopiera och Klistra in mellan principhanterade appar.
-  -   **Principhanterade appar med inklistring**: Tillåter åtgärderna Klipp ut och Kopiera mellan principhanterade appar. Tillåter att utklippta eller kopierade data från alla appar kan klistras in i den här appen.
-  -   **Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in mellan appar.
-
-  Standardvärde = **Principhanterade appar med inklistring**
--   **Begränsa webbinnehåll till visning i Managed Browser**: Välj **Ja** om du vill ange att alla länkar i appen ska öppnas i Managed Browser-appen.
-
-  För enheter som inte har registrerats i Intune öppnas bara länkar i principhanterade appar i Managed Browser-appen om du använder MAM-principen.
-
-  Om du använder Intune för att hantera dina enheter läser du [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).
-
-  Standardvärde = **Ja**
-- **Kryptera appdata:** Välj **Ja** för att aktivera kryptering. När den här inställningen är aktiverad tillhandahåller Microsoft kryptering för appar som är associerade med en MAM-princip. Data krypteras synkront under I/O-åtgärder. Innehållet i enhetens lagringsutrymme krypteras alltid.
   >[!NOTE]
-  >Krypteringsmetoden är inte FIPS 140-2-certifierad.
+  >Krypteringsmetoden för inställningen **Kryptera appdata** är **inte** FIPS 140-2-certifierad.
 
-  Standardvärde = **Ja**
 
-- **Inaktivera kontaktsynkronisering:** Välj **Ja** för att förhindra att kontaktinformation synkroniseras med den interna adressboken på enheten. Om du väljer **Nej** sparar appen kontaktinformationen till den interna adressboken på enheten.
 
-  När du gör en selektiv rensning för att ta bort företagsdata tas kontakter som synkroniseras direkt mellan appen och den interna adressboken bort. Kontakter som synkroniseras mellan den interna adressboken och en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen.
-
-  Standardvärde = **Ja**
-- **Inaktivera utskrifter**: Välj **Ja** för att förhindra utskrifter av företagsdata från appar som är associerade med MAM-principen.
-
-  Standardvärde = **Ja**
 
 ##  <a name="access-settings"></a>Åtkomstinställningar
 
-- **Kräv PIN-kod för åtkomst**: Välj **Ja** om du vill kräva en PIN-kod för användning av principhanterade appar. Användarna uppmanas att konfigurera detta första gången de kör appen i en arbetskontext.
-
- Standardvärde = **Ja**
-
- -  **Tillåt enkel PIN-kod:** Ange du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Standardvärde = **Ja**.
- - **PIN-kodslängd:** Ange det minsta antalet siffror i en PIN-kod. Standardvärde = **4**.
- - **Antal försök innan PIN-koden återställs**: Ange antalet tillåtna PIN-inmatningsförsök innan användaren måste återställa PIN-koden. Det finns inget standardvärde för den här inställningen.
- - **Kräv fingeravtryck istället för PIN (Android 6.0+):** Välj **Ja** om du vill kräva att ett fingeravtryck används i stället för en PIN-kod för åtkomst till appen.
- På Android-enheter kan du tillåta att användare identifierar sig med fingeravtryck i stället för med en numrerad PIN-kod. När de försöker öppna appen med ett arbetskonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod.
- - **Kräv företagsautentiseringsuppgifter för åtkomst**: Välj **Ja** om du vill kräva att företagets autentiseringsuppgifter anges i stället för en PIN-kod eller fingeravtryck för åtkomst till appen. Om du väljer **Ja** åsidosätter den här inställningen kraven på PIN-kod eller Touch-ID. Användaren uppmanas att ange sina autentiseringsuppgifter för företaget. Standardvärde = **Nej**.
-
-
-- **Blockera hanterade appar från att köras på jailbrokade eller rotade enheter**: Välj **Ja** för att blockera appar från att köras på jailbrokade eller rotade enheter. Användaren kan fortsätta att använda appar för personliga uppgifter, men måste använda en annan enhet för arbete.
-
-  Standardvärde = **Ja**
-- **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**
-  -   **Tidsgräns**: Ange tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen.
-  -   **Offlinerespittid**: Specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen om enheten är offline.
-
-  Standardvärden = **30** minuters tidsgräns och **720** minuters offlinerespittid.
-
--   **Intervallet innan appdata rensas efter att enheten varit offline (dagar)**: Välj att rensa företagsdata om en enhet har varit offline en viss tid.  Ange hur många dagar en enhet kan vara offline innan företagsdata tas bort från enheten.
-
-    >[!TIP]
-    >Ange värdet **0** för att inaktivera den här inställningen.
-
-  Standardvärde = **90** dagar
-- **Blockera skärmdump och Android Assistant (Android 6 Marshmallow eller senare)**: Välj **Ja** för att blockera funktioner för skärmdumpar och **Android Assistant** på enheten när den här appen används.
+| Inställningar | Använd så här | Standardvärde(n) |
+|------|------|------|
+| **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. Standardvärde = **Ja**. </li><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**. </li><li> **Kräv fingeravtryck istället för PIN (Android 6.0+)**: Välj **Ja** om du vill kräva att [autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**.<br><br> På Android-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Android-autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
+| **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |
+| **Hindra hanterade appar från att köras på jailbrokade eller rotade enheter** |  Välj **Ja** om du vill förhindra att den här appen körs på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för att komma åt arbets- eller skoldata i denna app. | Ja |
+| **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (definieras tidigare i principen) kontrolleras. En administratör kan till exempel aktivera PIN-kod i principen, så om en användare öppnar en MAM-app måste denne ange en PIN-kod. När du använder den här inställningen behöver användaren inte ange en PIN-kod i någon MAM-app under ytterligare **30 minuter** (standardvärde).</li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna tid har gått ut kräver appen användarautentisering till AAD, så att appen kan fortsätta att köras.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
+| **Offlineintervall innan appdata rensas (dagar)** | Efter så här många dagar (anges av administratören) med användning offline genomför appen själv en selektiv rensning. Den här selektiva rensningen är samma rensning som kan startas av administratören i MAM-arbetsflödet för rensning. <br><br> | 90 dagar |
+| **Blockera skärmdump och Android Assistant (Android 6.0+)** | Välj **Ja** om du vill blockera funktionerna för skärmdumpar och **Android-assistenten** på enheten när appen används. Om du väljer **Ja** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto. | Nej |
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 

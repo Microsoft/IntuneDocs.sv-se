@@ -14,8 +14,8 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e208608d50c9b5f7fe66743de0d3c7e741dbfbd
-ms.openlocfilehash: 3e077bfa8a03526b9472b4e9fdd4a75da22c28c8
+ms.sourcegitcommit: 9909c6064483e8b19e2e324943fc3d54b1228b38
+ms.openlocfilehash: 7b0eda848d0f08d7657913ed4d7564db264e16a7
 
 
 ---
@@ -24,9 +24,8 @@ ms.openlocfilehash: 3e077bfa8a03526b9472b4e9fdd4a75da22c28c8
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Hanteringsprinciper för mobilappar (MAM) kan tillämpas på appar som körs på enheter som kan, men som inte måste, hanteras av Intune. En detaljerad beskrivning av hur MAM-principer fungerar och de scenarier som stöds av Intunes MAM-principer finns i [Skydda appdata med hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
-
 Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure Portal**. Azure Portal är en ny administratörskonsol som används för att skapa MAM-principer och vi rekommenderar att du använder den här portalen när MAM-principerna skapas. Azure Portal har stöd för följande MAM-scenarier:
+
 - Enheter som har registrerats i Intune.
 - Enheter som hanteras av en MDM-lösning från tredje part.
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
@@ -49,14 +48,22 @@ Om du vill se en lista över principinställningar som stöds för Android- och 
 - [iOS-principer](ios-mam-policy-settings.md)
 - [Android-principer](android-mam-policy-settings.md)
 
+- En detaljerad beskrivning av hur MAM-principer fungerar och de scenarier som stöds av Intunes MAM-principer finns i [Skydda appdata med hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+
 ##  <a name="create-a-mam-policy"></a>Skapa en MAM-princip
-Innan du skapar en MAM-princip granskar du informationen om [krav och support](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md).
-1.  Välj **Hantering av mobilprogram i Intune &gt; Inställningar** för att öppna bladet **Inställningar**.
+MAM-principer skapas i Azure Portal. Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med Azure Portal. Innan du skapar en MAM-princip granskar du informationen om [krav och support](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md).
 
-    ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade.png)
+Följ stegen nedan för att skapa MAM-principer:
 
-    > [!TIP]
-    > Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med portalen.
+1. Gå till [Azure Portal](http://portal.azure.com) och logga in med dina autentiseringsuppgifter.
+
+2. Välj **Fler tjänster** och ange "Intune".
+
+3. Välj **Intune App Protection**.
+
+4. Välj **Hantering av mobilprogram i Intune &gt; Inställningar** för att öppna bladet **Alla inställningar**.
+
+    ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade-2.png)
 
 2.  På bladet **Inställningar** väljer du **Apprincip**. När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga. Välj **Lägg till en princip**.
 
@@ -176,6 +183,6 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

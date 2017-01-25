@@ -1,5 +1,5 @@
 ---
-title: "Skydda data med hjälp av fjärrensning | Microsoft Intune"
+title: "Skydda data med hjälp av fjärrensning | Microsoft Docs"
 description: "I Intune finns funktioner för selektiv och fullständig rensning så att du kan ta bort känsliga företagsdata och ta bort åtkomsten till många företagsresurser."
 keywords: 
 author: staciebarker
@@ -14,13 +14,16 @@ ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ms.reviewer: lancecra
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: cbfdb0e5db6862fcf046f42b85b8c9aabbba8721
+ms.sourcegitcommit: ebc0a4d00fd4886cc51f6d8d8bb97938ad814e04
+ms.openlocfilehash: bddbe1de0751161355d432f0276cc187f06e3a74
 
 
 ---
 
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Skydda data med fullständig eller selektiv rensning med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan rensa appar och data från Intune-hanterade enheter som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Du kan göra detta med funktionerna för fullständig och selektiv rensning i Intune. Användare kan dessutom utfärda ett fjärrensningskommando från Intune-företagsportalappen på privatägda enheter som registrerats i Intune.
 
   > [!NOTE]
@@ -119,6 +122,10 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|AAD-posten tas bort.|
 |Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
 
+**Android for Work**
+
+Om selektiv rensning utförs på en Android for Work-enhet tas alla data, appar och inställningar i arbetsprofilen på den enheten bort. Detta drar tillbaka enheten från hantering med Intune.
+
 **Windows**
 
 |Datatyp|Windows 8.1 (MDM) och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|Windows 10|
@@ -165,6 +172,6 @@ Den här rapporten visar även vem som utförde åtgärden.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 
