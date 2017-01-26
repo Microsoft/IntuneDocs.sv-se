@@ -62,7 +62,8 @@ MAM-principer stöds för närvarande på:
 
 >[!NOTE]
 >Windows-enheter stöds inte i MAM utan registreringsscenario. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
->
+
+
 ##  <a name="how-mam-policies-protect-app-data"></a>Hur MAM-principer skyddar appdata
 
 ###  <a name="apps-without-mam-policies"></a>Appar utan MAM-principer
