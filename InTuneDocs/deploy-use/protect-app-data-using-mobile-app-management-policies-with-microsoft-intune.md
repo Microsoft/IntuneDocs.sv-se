@@ -1,9 +1,9 @@
 ---
-title: "Skydda appdata med hanteringsprinciper för mobila appar (MAM) | Microsoft Intune"
+title: "Skydda appdata med hanteringsprinciper för mobila appar (MAM) | Microsoft Docs"
 description: "I det här avsnittet beskrivs hur du kan använda hanteringsprinciper för mobila appar för att skydda dina företagsdata, förhindra dataförlust och hålla isär privat och arbetsrelaterad information."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
@@ -14,13 +14,15 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 66a5814ba34f9fd15460512b0a6d40566ec33401
+ms.sourcegitcommit: af067236e27a65c52c78107fefdb956ad0fd5aa5
+ms.openlocfilehash: b4672b19517f1871a276000c6e8f5d01c0280e35
 
 
 ---
 
 # <a name="protect-app-data-using-mobile-application-management-policies-with-microsoft-intune"></a>Skydda data med hanteringsprinciper för mobilprogram i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="how-you-can-protect-app-data"></a>Hur du kan skydda appdata
 Dina anställda använder mobila enheter för både personliga och arbetsrelaterade uppgifter. Samtidigt som du vill se till att de anställda kan vara produktiva vill du även förhindra dataförlust, både avsiktlig och oavsiktlig.  Dessutom kan vill du ha möjlighet att skydda företagets data som de anställda har åtkomst till via enheter som du inte hanterar.
@@ -58,7 +60,9 @@ MAM-principer stöds för närvarande på:
 -   iOS 8.1 eller senare
 -   Android 4 eller senare
 
-Windows-enheter stöds inte för tillfället.
+>[!NOTE]
+>Windows-enheter stöds inte i MAM utan registreringsscenario. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+>
 ##  <a name="how-mam-policies-protect-app-data"></a>Hur MAM-principer skyddar appdata
 
 ###  <a name="apps-without-mam-policies"></a>Appar utan MAM-principer
@@ -130,6 +134,6 @@ Alla mobila Office-appar stöder multiidentitetsåtkomst.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

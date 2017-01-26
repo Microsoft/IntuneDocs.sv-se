@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 01/10/17
+ms.date: 01/24/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 151e71f719b459a4f2c9612035201908d2610980
-ms.openlocfilehash: f6cbca6207b0e253077682bbf213a916b20c5247
+ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
+ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
 
 
 ---
@@ -294,32 +294,20 @@ När de registrerats återgår enheterna till ett felfritt tillstånd och återf
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen i Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
-- Du kanske har registrerat Intune Connector för ett konto och sedan för ett annat.
+- Microsoft Intune Connector på din plats för konfigurationshanteraren kommunicerar inte med Intune-tjänsten.
+- Antingen bearbetar inte Data Discovery Manager (ddm)-komponenten eller State Manager (statmgr)-komponenten meddelanden från Intune-tjänsten.
 - Du kanske har hämtat MDM-certifikatet från ett konto och använt det för ett annat.
 
 
-**Lösning:** Utför följande steg:
+**Lösning:** Granska följande loggfiler efter möjliga fel:
 
-1. Inaktivera iOS i Windows Intune Connector.
-    1. Högerklicka på Intune-prenumerationen och välj **Egenskaper**.
-    1. På fliken iOS avmarkerar du Aktivera iOS-registrering.
+- dmpdownloader.log
+- ddm.log
+- statmgr.log
 
-
-
-1. I SQL kör du följande steg mot CAS-databasen
-
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 7
-    1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 11
-    1. delete from MDMPolicyAssignment where PolicyType = 11
-    1. DELETE Drs_Signals
-1. Starta om SMS Executive-tjänsten eller CM-servern
+Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
 
-
-1. Skaffa ett nytt APN-certifikat och ladda upp det: Högerklicka på Intune-prenumerationen i den vänstra rutan i Configuration Manager. Välj **Skapa APNs-certifikatförfrågan** och följ instruktionerna.
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
 **Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
@@ -400,6 +388,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
