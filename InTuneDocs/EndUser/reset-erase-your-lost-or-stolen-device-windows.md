@@ -1,28 +1,30 @@
 ---
-title: "Återställa (radera) en borttappad eller stulen Windows-enhet | Microsoft Intune"
+title: "Återställa (radera) borttappade eller stulna Windows-enheter | Microsoft Docs"
 description: "Återställ en förlorad eller stulen Windows-enhet"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cefb485f-f555-4da9-b4bf-d569cc4d5581
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f2283b5896541e58d7ae515cab9d4faa1e9df735
-ms.openlocfilehash: 4a206e30c1334681f82b8077da6191ef3e28e4b1
+ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
+ms.openlocfilehash: 71a02dcf8a557548bebe52a3ed8d908c5bddf249
 
 
 ---
 
 
-# Återställa (radera) en enhet som förlorats eller stulits
+# <a name="reset-erase-your-lost-or-stolen-device"></a>Återställa (radera) en enhet som förlorats eller stulits
 
 Om en enhet som har registrerats i Intune tappas bort eller blir stulen kan du återställa den till fabriksinställningarna via [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
@@ -37,10 +39,10 @@ Om en enhet som har registrerats i Intune tappas bort eller blir stulen kan du �
 
 3.  Tryck på ikonen **Återställ** och sedan på **återställ**.
 
-Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du inte kan återställa den förlorade eller stulna enheten ber du din IT-administratör återställa den åt dig. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

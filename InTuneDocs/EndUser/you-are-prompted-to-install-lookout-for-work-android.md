@@ -1,25 +1,27 @@
 ---
-title: "Du uppmanas att installera Lookout for Work på din Android-enhet | Microsoft Intune"
+title: "Du måste installera Lookout for Work på Android-enheten | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/17/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: d55c7d4a7c77472453e6d317a22c4ad6209255a5
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 356de226dce12a1e079b0f58214d9bc590f3a71d
 
 
 ---
 
-# <a name="you-are-prompted-to-install-lookout-for-work"></a>Du uppmanas att installera Håll utkik efter arbete
+# <a name="you-need-to-install-lookout-for-work"></a>Du måste installera Lookout for Work
 
 Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
 
@@ -76,12 +78,12 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 **Om installationen inte fungerar**
 
-Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om det händer kan du prova att installera Lookout for Work manuellt från Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise) 
+Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om det händer kan du prova att installera Lookout for Work manuellt från Play Store: [https://play.google.com/store/apps/details?id=com.lookout.enterprise](https://play.google.com/store/apps/details?id=com.lookout.enterprise)
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

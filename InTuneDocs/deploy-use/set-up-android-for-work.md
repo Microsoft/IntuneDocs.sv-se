@@ -1,24 +1,26 @@
 ---
-title: Konfigurera Android for Work-hantering | Microsoft Intune
+title: Konfigurera Android for Work | Microsoft Docs
 description: "Aktivera hantering av mobila enheter (MDM) för Android for Work-enheter med Microsoft Intune."
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 01/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b2fdcea9-9ad7-4d73-88e2-854b7a774bb2
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: cfb1ba8ad3d737538fe1e54167121552571d7a1b
+ms.sourcegitcommit: 00994a92eb555827d17ad633ffcf765804365621
+ms.openlocfilehash: b419a07ef13d386fc08aa7fd5605fbb0bea79348
 
 
 ---
 
 # <a name="enable-enrollment-of-android-for-work-devices"></a>Aktivera registrering av Android for Work-enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
@@ -64,6 +66,6 @@ Du kan inaktivera Android for Work-registrering och hantering. Klicka på **Ta b
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

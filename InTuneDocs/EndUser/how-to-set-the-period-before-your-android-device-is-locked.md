@@ -1,30 +1,33 @@
 ---
-title: "Ställa in efter hur lång tid en Android-enhet ska låsas | Microsoft Intune"
+title: "Ange hur lång tid det tar innan skärmlåset aktiveras | Microsoft-dokument"
 description: 
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 98034875-cd3a-4367-a8d7-c5d4a438d496
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 6fd49127321b665c4c23eafc0dabab6787307881
+ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
+ms.openlocfilehash: be3307165b420ef0fe9c143a3a55f88285a344da
 
 
 ---
 
-# Ställa in efter hur lång tid en Android-enhet ska låsas
+# <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Så här ställer du in hur lång tid det tar innan Android-enhetens skärmlås aktiveras
+
 För att återansluta till ditt arbete måste du ange tidsgränsen för lösenord på enheten genom att följa anvisningarna nedan för din typ av enhet.
 
-## Ursprunglig enhet (inte Samsung KNOX)
+## <a name="native-non-samsung-knox-device"></a>Ursprunglig enhet (inte Samsung KNOX)
 
 1.  I **Inställningar** på enheten trycker du på **Säkerhet** &gt; **Lås automatiskt** (på vissa enheter står det i stället **Lås telefon efter**).
 
@@ -32,7 +35,7 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 
 2.  Ange tidsgränsen för lösenord.
 
-## Samsung KNOX-enhet
+## <a name="samsung-knox-device"></a>Samsung KNOX-enhet
 
 1.  I **Inställningar** på enheten trycker du på **Låsskärm och säkerhet** &gt; **Lås automatiskt**.
 
@@ -40,10 +43,10 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 
 2.  Välj en tidsgräns för lösenord.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

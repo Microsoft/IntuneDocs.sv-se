@@ -1,11 +1,11 @@
 ---
-title: "Inställningar för efterlevnadsprinciper för Android for Work | Microsoft Intune"
+title: "Efterlevnadsinställningar för Android for Work | Microsoft Docs"
 description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter som är kompatibla med Android for Work."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/13/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,16 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisbal
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 050da562fb03bbc32c4a7c293b6faad4f87ab78e
+ms.sourcegitcommit: 1afe7093b80bb5fe3ea873cb065c8ca2673160e8
+ms.openlocfilehash: a36427c6fe00c4ad105e615dd96342f7ab31863a
 
 
 ---
 
 
 # <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android for Work-enheter i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
@@ -85,6 +87,6 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

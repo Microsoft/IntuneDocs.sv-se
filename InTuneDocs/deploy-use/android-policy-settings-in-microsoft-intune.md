@@ -1,12 +1,12 @@
 ---
 
-title: "Inställningar för Android- och Samsung KNOX Standard-principer | Microsoft Intune"
+title: "Inställningar för Android- och Samsung KNOX-principer | Microsoft Docs"
 description: "Skapa principer som styr inställningar och funktioner på Android-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/02/2016
+ms.date: 12/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,15 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 08ec9963bf00d81f080c0cf4f26e23a3104763ea
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 2da96c2ffb6cc826494972ab8c88ce62981eeae6
 
 
 ---
 
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Inställningar för Android- och Samsung KNOX Standard-principer i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Android-enheter. Du kan också ange OMA-URI-värden (Open Mobile Alliance Uniform Resource Identifier) för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
@@ -144,6 +146,8 @@ I listan över **kompatibla och &amp;inkompatibla appar** skapar du en lista öv
 |**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
 |**Ta bort**|Tar bort den markerade appen från listan.|
 
+Principer som innehåller inställningar för kompatibla och ej kompatibla appar måste distribueras till användargrupper.
+
 ### <a name="kiosk-mode-settings"></a>Helskärmsinställningar
 Ange följande inställningar för **Samsung KNOX Standard-enheter**:
 
@@ -177,9 +181,7 @@ Exempel: Sök på Google Play efter Microsoft Office Mobile. Webbadressen du ska
 Använd **Anpassad konfigurationsprincip för Android** i Microsoft Intune för att distribuera OMA-URI-inställningar som kan användas till att styra funktioner på Android-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
 Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer.
-
-> [!NOTE]
-> För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel.
+Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i det här avsnittet för att ta reda på vilka principer du kan konfigurera.
 
 ### <a name="general-settings"></a>Allmänna inställningar
 
@@ -192,7 +194,7 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
    |Inställningsnamn|Information|
     |--------|--------------------|
-    |**Inställningsnamn**|Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.|
+    |**Namn**|Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.|
     |**Beskrivning av inställning**|Tillhandahåll en beskrivning som ger en översikt över inställningen och annan relevant information som gör det enkelt att hitta den.|
     |**Datatyp**|Ange den datumtyp med vilken du vill specificera den här OMA-URI-inställningen. Välj **sträng, sträng (XML), datum och tid, heltal, flyttal** eller **booleskt**.|
     |**OMA-URI (skiftlägeskänslig)**|Ange den OMA-URI som du vill tillhandahålla en inställning för.|
@@ -209,6 +211,6 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

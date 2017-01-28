@@ -1,3 +1,25 @@
+---
+title: "Vanliga frågor och svar om MAM och appskydd"
+description: "Den här artikeln ger svar på några vanliga frågor om Intune mobile application management (MAM) och Intune appskydd."
+keywords: 
+author: oydang
+ms.author: oydang
+manager: mtillman
+ms.date: 01/20/2017
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
+ms.reviewer: oydang
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 474bb04d743290ff78aa0772595b744be46ae1af
+ms.openlocfilehash: b6b2d066b773e91003884a8735b6663ebf125aa3
+
+
+---
+
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -86,15 +108,17 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 
   2. **Vad krypteras?** Endast data som har markerats som "företagets" krypteras enligt IT-administratörens appskyddsprincip. Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag). För branschspecifika appar upplysta av Intunes programhanteringsverktyg betraktas all appdata som "företagets."
 
-**Hur fjärrensar Intune data?** Intune kan rensa appdata på två olika sätt: fullständig rensning och selektiv rensning. Mer information fjärrensning finns i [Skydda dina data med en fullständig eller selektiv rensning med Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md).
+**Hur fjärrensar Intune data?** Intune kan rensa AppData på tre olika sätt: fullständig rensning av enheten, selektiv rensning för MDM och MAM-selektiv rensning. Mer information om fjärrensning för MDM finns i [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md). Mer information om selektiv rensning med MAM finns i [Rensa hanterade företagsdata från appar med Microsoft Intune](wipe-managed-company-app-data-with-microsoft-intune.md)
 
   1. **Vad är fullständig rensning?** [Fullständig rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) tar bort all användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
   >[!NOTE]
   > Fullständig rensning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
 
-  2. **Vad är selektiv rensning?** Se [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) för att läsa om selektiv rensning.
+  2. **Vad är selektiv rensning för MDM?** Se [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) för att läsa om selektiv rensning.
 
-  3. **Hur snabbt sker selektiv rensning?** Om användaren använder appen när selektiv rensning initieras söker Intune App SDK var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
+  3. **Vad är selektiv rensning för MAM?** Selektiv rensning för MAM tar helt enkelt bort företagsdata från en app. Begäran initieras med hjälp av Intune Azure-portalen. Information om hur du startar en rensningsbegäran finns i [Rensa hanterade företagsdata från appar med Microsoft Intune](wipe-managed-company-app-data-with-microsoft-intune.md)
+
+  4. **Hur snabbt sker selektiv rensning för MAM?** Om användaren använder appen när selektiv rensning initieras söker Intune App SDK var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
 
 **Varför fungerar inte tjänster på plats med Intunes appskydd?** Intunes appskydd är beroende av att användarens identiteten är konsekvent mellan appen och Intune App SDK. Det enda sättet att garantera detta är via modern autentisering. Det finns scenarier där appar kan fungera med en lokal konfiguration, men de är varken konsekventa eller garanterade.
 
@@ -109,7 +133,15 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 
 **Jag kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _ **"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 
+### <a name="see-also"></a>Se även
+- [Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune](android-mam-policy-settings.md)
+- [Inställningar för hanteringsprincip för iOS-mobilappar](ios-mam-policy-settings.md)
+- [Verifiera din konfiguration för hantering av mobilprogram](validate-mobile-application-management.md)
+- [Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+- [Så kan du få support för Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md)
 
-<!--HONumber=Jan17_HO1-->
+
+
+<!--HONumber=Jan17_HO4-->
 
 

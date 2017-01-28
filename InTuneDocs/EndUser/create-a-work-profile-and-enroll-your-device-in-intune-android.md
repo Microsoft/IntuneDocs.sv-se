@@ -1,11 +1,11 @@
 ---
-title: Skapa en arbetsprofil och registrera din enhet i Intune | Microsoft Docs
+title: Registrera din enhet med en arbetsprofil | Microsoft Docs
 description: Beskriver hur du krypterar en Android-enhet
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,8 +16,8 @@ searchScope:
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: d4e3d60115bf5e2f41a40cd3746c9678cfb915bd
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: 179f0ba2a70637f91856037e132eeeea9a57c68c
 
 
 ---
@@ -71,7 +71,7 @@ För att skapa en arbetsprofil:
 
     Du kommer att under en kort period se ett meddelande om att din enhet registreras.
 
-11. När skärmen **Konfiguration av företagsåtkomst** visar att allt har konfigurerats korrekt trycker du på **FORTSÄTT**. 
+11. När skärmen **Konfiguration av företagsåtkomst** visar att allt har konfigurerats korrekt trycker du på **FORTSÄTT**.
 
     ![Konfiguration av företagsåtkomst visar att arbetsprofilen och registreringen är färdiga](./media/andr-afw-company-access-setup-green-checks.png)
 
@@ -87,8 +87,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-adm
 
 
 
-
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

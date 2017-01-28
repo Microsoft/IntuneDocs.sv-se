@@ -1,11 +1,11 @@
 ---
 title: "Så registrerar du din Windows 8.1- eller Windows RT 8.1-enhet | Microsoft Docs"
-description: "Lär dig hur du registrerar en Windows 8.1- eller Windows RT 8.1-enhet i Intune"
+description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,13 +16,13 @@ searchScope:
 ms.reviewer: priyar
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a1e346047fb029689c0c9c68073b89b9bac20530
-ms.openlocfilehash: 70a7f590ba19cc672086671edfdaa5faf5f3e568
+ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
+ms.openlocfilehash: be9117d917ff0c90ebe604383e37451a9fc856b6
 
 
 ---
 
-# <a name="enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrera din Windows 8.1- eller Windows RT 8.1-enhet i Intune
+# <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Så här registrerar din Windows 8.1- eller Windows RT 8.1-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera dina enheter så att de får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan organisationen skydda företagsdata. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och [Vad IT-administratören kan se och inte kan se på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -67,6 +67,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

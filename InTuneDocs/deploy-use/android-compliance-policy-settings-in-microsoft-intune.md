@@ -1,11 +1,11 @@
 ---
-title: "Inställningar för efterlevnadsprinciper för Android-enheter | Microsoft Intune"
+title: "Inställningar för policyer för efterlevnad för Android | Microsoft Docs"
 description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/08/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,16 @@ ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 398f0c8bc789d9106a296e50f0e0cdc27d5920a7
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 90484c98e58203696e0acbfebd71eeb36b274969
 
 
 ---
 
 
 # <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Principinställningarna som beskrivs i det här avsnittet gäller enheter som kör Android 4.0 och senare eller Samsung KNOX 4.0 och senare.
 
@@ -87,6 +89,6 @@ Om du letar efter information om andra plattformar väljer du något av följand
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

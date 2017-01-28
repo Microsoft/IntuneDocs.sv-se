@@ -1,5 +1,5 @@
 ---
-title: "Skydda e-poståtkomst till Exchange On-premises | Microsoft Docs"
+title: Skydda e-post till Exchange On-premises | Microsoft Docs
 description: "Skydda och styr åtkomsten till företagets e-post på Exchange On-premises med villkorlig åtkomst."
 keywords: 
 author: andredm7
@@ -14,8 +14,8 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 24d000f650cafffc0c998ef80ba52bd06b56afe2
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 590a5df066c69e2369d0b586d52def1abd64a379
 
 
 ---
@@ -136,6 +136,6 @@ Följande stöds:
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

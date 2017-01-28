@@ -1,5 +1,5 @@
 ---
-title: "Skydda e-poståtkomst till Exchange Online | Microsoft Docs"
+title: Skydda e-post till Exchange Online | Microsoft Docs
 description: "Skydda och styr åtkomsten till företagets e-post på Exchange Online med villkorlig åtkomst."
 keywords: 
 author: andredm7
@@ -14,8 +14,8 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
-ms.openlocfilehash: 6078684e3f8e5821f057b890eac5caf388206a82
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 185f6fd051946ab118490717ecfb7250521fb764
 
 
 ---
@@ -254,7 +254,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 -   Om en blockerad användare registrerar enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och åtgärdar inkompatibilitetsproblem försvinner blockeringen av åtkomst till e-post inom två minuter.
 
--   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka 6 timmar.
+-   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka&6; timmar.
 
 Några **exempelscenarier som beskriver hur du konfigurerar principer för villkorlig åtkomst som skyddar enhetsåtkomsten** finns i [Exempelscenarier för skydd av e-poståtkomst](restrict-email-access-example-scenarios.md).
 
@@ -272,6 +272,6 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

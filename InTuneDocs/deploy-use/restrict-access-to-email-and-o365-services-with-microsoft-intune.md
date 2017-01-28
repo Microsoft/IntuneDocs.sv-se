@@ -1,5 +1,5 @@
 ---
-title: "Skydda åtkomst till e-post och Office 365-tjänster | Microsoft Docs"
+title: Skydda e-post och Office 365 | Microsoft Docs
 description: "I det här avsnittet beskrivs hur du kan använda villkorlig åtkomst för att endast tillåta att kompatibla enheter får åtkomst till e-post och företagsdata i SharePoint Online och andra tjänster."
 keywords: 
 author: andredm7
@@ -14,8 +14,8 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 911c97a724c28b97bb2bc6e236532e4e0d89c7b1
+ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
+ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
 
 
 ---
@@ -82,6 +82,6 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
