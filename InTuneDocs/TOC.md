@@ -42,8 +42,8 @@
 ## [Avsnitt 9: Testning och validering](plan-design/section-9-test-and-validation.md)
 ## [Ytterligare resurser](plan-design/additional-resources.md)
 
-# Nyheter
-## [Nyheter](whats-new/whats-new-in-microsoft-intune.md)
+# [Nyheter](whats-new/whats-new-in-microsoft-intune.md)
+## [Nyheter i appens användargränssnitt](whats-new/whats-new-in-intune-app-ui.md)
 ## [Vad är nytt i förhandsversionen av Azure](/intune-azure/introduction/whats-new?toc=%2fintune%2ftoc.json)
 ## [Nyhetsarkiv](whats-new/whats-new-archive.md)
 
@@ -106,7 +106,7 @@
 
 ## [Skydda enheter](deploy-use/protect-your-devices-with-microsoft-intune.md)
 ### [Fjärrlåsning och lösenordsåterställning](deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-### [Skydda Windows-enheter med MFA](deploy-use/protect-windows-devices-with-multi-factor-authentication.md)
+### [Skydda Windows-enheter med MFA](deploy-use/multi-factor-authentication-azure-active-directory.md)
 ### [Kontrollera inställningarna för Windows Hello för företag](deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Kringgå aktiveringslåset på iOS](deploy-use/help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
 ### [Principer för att skydda Windows-datorer](deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune.md)
@@ -159,9 +159,9 @@
 #### [Blockera appar utan ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Skydda åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
 ### [Skydda åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/device-threat-protection.md)
-#### [Konfigurera Lookout-skydd mot enhetshot](deploy-use/device-threat-protection-subscription-setup.md)
-#### [Aktivera Lookout i Intune](deploy-use/device-threat-protection-enable.md)
-#### [Distribuera Lookout for Work-appar](deploy-use/device-threat-protection-apps.md)
+#### [Konfigurera skydd mot hot på enhet](deploy-use/device-threat-protection-subscription-setup.md)
+#### [Aktivera skydd mot hot på enhet](deploy-use/device-threat-protection-enable.md)
+#### [Distribuera appar med skydd mot hot på enhet](deploy-use/device-threat-protection-apps.md)
 #### [Aktivera skydd mot enhetshot i policyn för efterlevnad](deploy-use/device-threat-protection-policy.md)
 
 ### [Skydda appdata med MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
@@ -217,11 +217,11 @@
 
 ## [Felsöka hantering av mobilprogram](troubleshoot/troubleshoot-mam.md)
 
-## [Felsöka Lookout-integrering](troubleshoot/troubleshooting-lookout-integration.md)
+## [Felsök skydd mot hot på enhet](troubleshoot/device-threat-protection-troubleshooting.md)
 
 # [Ordlista](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 
