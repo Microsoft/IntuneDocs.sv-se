@@ -1,5 +1,5 @@
 ---
-title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone | Microsoft Intune
+title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone | Microsoft Docs
 description: "Aktivera hantering av mobila enheter (MDM) för Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,14 +13,16 @@ ms.assetid: f5615051-2dd1-453b-9872-d3fdcefb2cb8
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: 3141d4b2ad1a21e2ac5ba7b6cafb74f567d07f7a
+ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
+ms.openlocfilehash: ac22478c1de2421e1a7345aca92510fbda73f7e8
 
 
 ---
 
 
 # <a name="set-up-windows-phone-and-windows-10-mobile-management-with-microsoft-intune"></a>Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Som Intune-administratör kan du aktivera registrering och hantering för Windows 10 Mobile- och Windows Phone-enheter på två sätt:
 
@@ -37,7 +39,7 @@ Du kan låta användarna installera och registrera sina enheter med hjälp av f�
 
 2.  **Skapa CNAME-poster** (valfritt)<br>Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
 
-    Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas uppmanas användarna att manuellt ange MDM-servernamnet, https://manage.microsoft.com.
+    Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas uppmanas användarna att manuellt ange MDM-servernamnet, https://enrollment.manage.microsoft.com.
 
     Om du har en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till manage.microsoft.com så föreslår vi att du ersätter den med en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com. Den här ändringen rekommenderas eftersom slutpunkten manage.microsoft.com kommer att föråldras för registreringar i en framtida version.
 
@@ -60,9 +62,7 @@ Du kan låta användarna installera och registrera sina enheter med hjälp av f�
 
     ![Dialogrutan Ställa in hantering av mobila enheter för Windows](../media/windows-phone-enrollment.png)
 
-4.  **Valfria steg**<br>Steget **Lägg till nycklar för separat inläsning** behövs inte för Windows 10. Steget **Överför certifikat för kodsignering ** behövs bara om du ska distribuera affärsspecifika appar (LOB) som inte är tillgängliga från Windows Store.
-
-5.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**
+4.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**
 
     Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](../enduser/enroll-your-device-in-intune-windows.md). Du kan också skicka användarna till [Vad kan din IT-administratör se när du registrerar din enhet i Intune?](../enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
 
@@ -74,6 +74,6 @@ Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen til
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

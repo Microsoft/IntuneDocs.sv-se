@@ -14,8 +14,8 @@ ms.assetid: 725d9e40-e70c-461a-9413-72ff1b89a938
 ms.reviewer: sandera
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 53862e49c922b75b414fd5aceec3bba2b10299a6
-ms.openlocfilehash: eaf121f99dddab6f7c45c58ca9decf2504b00f67
+ms.sourcegitcommit: 931f222898a224c2f646ad203f12676c39b78946
+ms.openlocfilehash: aaa0965c2bd4d4093da0c57eaa2e3bd05eb6779a
 
 
 ---
@@ -97,14 +97,14 @@ Identifiera hot mot ditt nätverk, till exempel man-in-the-middle-angrepp, och f
 
 ## <a name="next-steps"></a>Nästa steg
 Här följer de åtgärder du måste utföra för att implementera den här lösningen:
-1.  [Konfigurera din prenumeration med Lookout mobilt skydd](set-up-your-subscription-with-lookout-mtp.md)
-2.  [Aktivera anslutning till Lookout MTP i Intune](enable-lookout-mtp-connection-in-intune.md)
-3.  [Konfigurera och distribuera Lookout for Work-appen](configure-and-deploy-lookout-for-work-apps.md)
-4.  [Konfigurera efterlevnadsprincipen](enable-device-threat-protection-rule-in-compliance-policy.md)
-5.  [Felsöka Lookout-integrering](http://docs.microsoft.com/en-us/intune/troubleshoot/troubleshooting-lookout-integration)
+1.  [Konfigurera din prenumeration med skydd mot enhetshot](device-threat-protection-subscription-setup.md)
+2.  [Aktivera anslutning för skydd mot enhetshot i Intune](device-threat-protection-enable.md)
+3.  [Konfigurera och distribuera appen för skydd mot enhetshot](device-threat-protection-apps.md)
+4.  [Konfigurera skydd mot enhetshot i policyn för efterlevnad](device-threat-protection-policy.md)
+5.  [Felsök integrering av skydd mot enhetshot](http://docs.microsoft.com/intune/troubleshoot/device-threat-protection-troubleshooting)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
