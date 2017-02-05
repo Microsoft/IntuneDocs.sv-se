@@ -199,6 +199,6 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

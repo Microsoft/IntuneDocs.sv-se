@@ -82,6 +82,6 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

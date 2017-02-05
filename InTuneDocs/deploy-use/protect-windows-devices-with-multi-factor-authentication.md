@@ -69,6 +69,6 @@ Information om hur du aktiverar multifaktorautentisering i AD FS finns i [Manage
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
