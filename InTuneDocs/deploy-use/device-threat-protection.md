@@ -2,8 +2,8 @@
 title: "Skydda åtkomst med enhetsskydd | Microsoft Docs"
 description: "Skydda åtkomsten till företagets resurser baserat på enhet, nätverk och programrisk."
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
