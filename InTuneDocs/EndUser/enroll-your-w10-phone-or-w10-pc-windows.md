@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 36250832-c6fd-4e8d-b681-de735023ebc3
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jieyan
 ms.suite: ems
 translationtype: Human Translation
@@ -30,7 +31,7 @@ Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter f�
 Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och hur [informationen på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md) påverkas.
 
 ## <a name="windows-10-desktop-devices"></a>Windows 10 Desktop-enheter
-1.  Gå till __Start__.
+1.    Gå till __Start__.
 
  ![Start-menyn i Windows](../media/windows-start-menu.png).
 
@@ -38,18 +39,18 @@ Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i I
 
  ![search settings for about your pc](../media/searching_for_about_your_pc.png)
 
-2.  I __Inställningar__ visas en lista med information om versionen av Windows 10 som är installerad på datorn. Leta upp __versionen__ i den här listan.
+2.    I __Inställningar__ visas en lista med information om versionen av Windows 10 som är installerad på datorn. Leta upp __versionen__ i den här listan.
 
  ![Om din dator i Windows 10 Desktop](../media/settings_about_pc.png)
 
-3.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
+3.    Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
 ## <a name="windows-10-mobile-devices"></a>Windows 10 Mobile-enheter
 
-1.  På __Start__-menyn sveper du över till listan __Alla appar__ och väljer sedan appen __Inställningar__.
-2.  Tryck på __System__ och sedan på __Om__.
-3.  Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.
-4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
+1.    På __Start__-menyn sveper du över till listan __Alla appar__ och väljer sedan appen __Inställningar__.
+2.    Tryck på __System__ och sedan på __Om__.
+3.    Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.
+4.    Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
