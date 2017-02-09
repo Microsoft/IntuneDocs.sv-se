@@ -4,6 +4,7 @@
 <!---(introduction/get-started.md) --->
 ### [Registrera dig för en kostnadsfri utvärderingsversion](introduction/sign-up-free-trial-microsoft-intune.md)
 ## [Nyheter](introduction/whats-new.md)
+## [Kända problem](introduction/known-issues-in-the-intune-preview.md)
 <!--- ## [Get support](introduction/get-support.md)
 ## [Related resources](introduction/related-resources.md)
 
@@ -37,9 +38,7 @@
 #### [Lägg till Apple Configurator-serienummer](enroll-devices/add-apple-configurator-serial-numbers.md)
 #### [Registrera iOS-enheter med programmet för enhetsregistrering](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
 ### [Registrera enheter med enhetsregistreringshanteraren](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
-### Registrera Windows-enheter
-#### [Registrera mobila enheter med Windows Phone och Windows 10](enroll-devices/enroll-windows-mobile-devices.md)
-#### [Registrera Windows-datorer som mobila enheter](enroll-devices/enroll-windows-pcs-as-mobile-devices.md)
+### [Registrera Windows-enheter](enroll-devices/enroll-window-devices.md)
 ### Hantera enhetsregistrering
 #### [Skapa allmänna villkor](enroll-devices/create-terms-and-conditions.md)
 #### [Ange registreringsbegränsningar](enroll-devices/set-enrollment-restrictions.md)
@@ -81,14 +80,14 @@
 ### [Tilldela appar](manage-apps/deploy-apps.md)
 ### [Övervakning av appar](manage-apps/monitor-apps.md)
 ### [Använd konfigurationsprinciper för appar](manage-apps/app-configuration-policies.md)
-<!--- ### [Selectively wipe apps](manage-apps/app-selective-wipe.md)--->
+### [Rensa appar selektivt](manage-apps/app-selective-wipe.md)
 <!---Is this specific to app protection policy or more general app management?--->
 ### [Arbeta med volyminköpta appar](manage-apps/volume-purchased-apps.md)
 #### [iOS VPP-appar](manage-apps/ios-vpp-apps.md)
 #### [Windows Store för företag-appar](manage-apps/wsfb-apps.md)
 ### [Konfigurera företagsportalappen](manage-apps/company-portal-app.md)
 ## Så här använder du appskyddsprinciper
-### [Skapa och distribuera appskyddsprinciper](manage-apps/app-protection-policies.md)
+### [Skapa och tilldela appskyddsprinciper](manage-apps/app-protection-policies.md)
 #### [Inställningar för Android](manage-apps/android-app-protection-policy-settings.md)
 #### [Inställningar för iOS](manage-apps/ios-app-protection-policy-settings.md)
 ### [Verifiera appskyddsprinciper](manage-apps/validate-app-protection-policies.md)
@@ -187,6 +186,6 @@
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
