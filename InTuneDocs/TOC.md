@@ -11,7 +11,8 @@
 
 # [Komma igång](get-started/get-started.md)
 ## [Konfigurera Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
-### [Krav](get-started/what-to-know-before-you-start-microsoft-intune.md)
+### [Förutsättningar]
+#### [Enheter som stöds](get-started/what-to-know-before-you-start-microsoft-intune.md)
 #### [Nätverksanvändning](get-started/network-bandwidth-use.md)
 ### [Logga in i Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
 ### [Konfigurera domäner](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2.md)
@@ -57,7 +58,6 @@
 #### [Android-hantering](deploy-use/set-up-android-management-with-microsoft-intune.md)
 #### [Android for Work-hantering](deploy-use/set-up-android-for-work.md)
 #### [Hantering av Windows-enheter](deploy-use/set-up-windows-device-management-with-microsoft-intune.md)
-#### [Windows 10 Mobile och Windows Phone](deploy-use/set-up-windows-phone-management-with-microsoft-intune.md)
 ### [Hantera företagsägda enheter](deploy-use/manage-corporate-owned-devices.md)
 #### [Registrera företagsägda iOS-enheter](deploy-use/enroll-corporate-owned-ios-devices-in-microsoft-intune.md)
 ##### [Registrering med Installationsassistenten](deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune.md)
@@ -222,6 +222,6 @@
 # [Ordlista](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Jan17_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 
