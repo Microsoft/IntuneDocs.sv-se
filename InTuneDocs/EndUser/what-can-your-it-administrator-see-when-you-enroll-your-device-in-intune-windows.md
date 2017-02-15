@@ -30,35 +30,35 @@ När du registrerar en Windows-enhet i Intune ger du IT-administratören tillst�
 
 **IT-avdelningen kan inte se**
 
--   Anrops- och webbhistorik
+- Anrops- och webbhistorik
 
--   Plats
+-    Plats
 
--   E-post och textmeddelanden
+- E-post och textmeddelanden
 
--   Kontakter
+- Kontakter
 
--   Lösenord
+-    Lösenord
 
--   Kalender
+- Kalender
 
--   Kamerarulle
+- Kamerarulle
 
 **IT-avdelningen kan se**
 
--   Modell
+- Modell
 
--   Serienummer
+- Serienummer
 
--   Operativsystem
+- Operativsystem
 
--   Appnamn
+- Appnamn
 
--   Ägare
+- Ägare
 
--   Enhetsnamn
+- Enhetsnamn
 
--   Tillverkare
+- Tillverkare
 
 Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar Windows-enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 
