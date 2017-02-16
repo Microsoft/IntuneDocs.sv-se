@@ -6,6 +6,7 @@
 ### [Skapa principer och publicera en app](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
 ### [Övriga alternativ och tillägg](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 ### [Konvertera till en betald prenumeration](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
+## [Vanliga frågor och svar om MAM och appskydd](understand-explore/mam-faq.md)
 ## [Vanliga scenarier](understand-explore/common-ways-to-use-intune.md)
 
 
@@ -165,13 +166,13 @@
 #### [Aktivera skydd mot enhetshot i policyn för efterlevnad](deploy-use/device-threat-protection-policy.md)
 
 ### [Skydda appdata med MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Azure Portal för MAM-principer](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
-#### [Gör dig redo att konfigurera MAM-principer](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Skapa och distribuera MAM-principer](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-#### [MAM-principer för Android](deploy-use/android-mam-policy-settings.md)
-#### [MAM-principer för iOS](deploy-use/ios-mam-policy-settings.md)
-#### [Verifiera MAM-principer](deploy-use/validate-mobile-application-management.md)
-#### [Övervaka principefterlevnad](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Azure Portal för appskyddsprinciper](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
+#### [Bli redo att konfigurera appskyddsprinciper](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Skapa och distribuera appskyddsprinciper](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Appskyddsprinciper för Android](deploy-use/android-mam-policy-settings.md)
+#### [Appskyddsprinciper för iOS](deploy-use/ios-mam-policy-settings.md)
+#### [Verifiera appskyddsprinciper](deploy-use/validate-mobile-application-management.md)
+#### [Övervaka efterlevnad av appskyddsprinciper](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Hantera dataöverföring mellan iOS-appar](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 #### [Administrationskonsolen för Intune för MAM-principer](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
@@ -182,7 +183,6 @@
 #### [LOB-appar på enheter som inte hanteras av Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)
 #### [Använda SDK när du skriver en app](deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management.md)
 
-### [Vanliga frågor och svar om MAM och appskydd](deploy-use/mam-faq.md)
 
 ## Dra tillbaka appar och data
 ### [Använda fullständig eller selektiv rensning](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
@@ -222,6 +222,6 @@
 # [Ordlista](understand-explore/intune-glossary.md)
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
