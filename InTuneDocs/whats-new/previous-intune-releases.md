@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: 45dad14a-d412-488d-bb1e-ad990ea503df
 ROBOTS: noindex,nofollow
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e4d08c4fd66bb1ae3fe683db503915725bc3134
-ms.openlocfilehash: 5f09c46e7dcd5aabc603838ce60a1e8e7fed694e
+ms.sourcegitcommit: 6bc3afe58d5e0f1f12c8b6c6fc62e37d01cd5132
+ms.openlocfilehash: cab9833a1e1b92c156a2eb77411436289c70ad71
 
 
 ---
@@ -25,6 +25,54 @@ ms.openlocfilehash: 5f09c46e7dcd5aabc603838ce60a1e8e7fed694e
 Den här sidan är en lista över de senaste meddelandena i [Nyheter i Microsoft Intune](whats-new-in-microsoft-intune.md).
 
 [!INCLUDE[wit_nextref](../includes/whats-new-last-six-months.md)]
+
+## <a name="july-2016"></a>Juli 2016
+
+### <a name="app-management"></a>Apphantering
+
+__Förbättrad uppdateringsmiljö för appetableringsprofil__ Affärsspecifika Apple iOS-mobilappar skapas med en medföljande etableringsprofil och kod som signerats med ett certifikat. När appen körs på en iOS-enhet bekräftar iOS appens integritet och tillämpar de principer som definierats av etableringsprofilen.
+
+Signeringscertifikatet du använder för att signera appar gäller normalt i 3 år. Däremot upphör etableringsprofilen att gälla efter ett år. Med den här uppdateringen tillhandahåller Intune verktyg för att distribuera en ny etableringsprofilprincip till enheter som har appar som snart slutar att gälla medan certifikatet fortfarande är giltigt. Mer information finns i [Använda etableringsprofilprinciper för iOS för att hålla verksamhetsspecifika appar uppdaterade](/intune/deploy-use/ios-mobile-app-provisioning-profiles).
+<!--- TFS 1280247--->
+
+__Xamarin SDK för Intune-appar är tillgängliga__ Med Intune App SDK Xamarin-komponenten kan du aktivera funktionerna för hantering av mobilappar i Intune i iOS- och Android-mobilappar som utvecklats med Xamarin. Komponenten hittar du i [Xamarin store](https://components.xamarin.com/view/Microsoft.Intune.MAM) eller på [Github-sidan för Microsoft Intune](https://github.com/msintuneappsdk).
+<!--- TFS 1061478 --->
+
+### <a name="device-management"></a>Enhetshantering
+__Ökade enhetsregistreringsgränser__ Den högsta gränsen för konfigurerbar enhetsregistrering i Intune har ökats från 5 till 15 enheter per användare.
+<!---TFS 1289896 --->
+
+__TeamViewer-integrering för Windows-datorer som kör Intune-klientprogramvaran__
+[TeamViewer](https://www.teamviewer.com)-integreringen för Windows-datorer som kör Intune-klienten gör att du kan upprätta fjärrhjälpsessioner med Windows-datorer för att hjälpa supportpersonal som betjänar slutanvändare. Detta gäller Windows 7, 8, 8.1 och Windows 10. Mer information finns i [Vanliga hanteringsuppgifter för Windows-datorer med Microsoft Intune-datorklienten](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client).
+<!---TFS 1284856--->
+
+### <a name="company-portal-updates"></a>Uppdateringar av företagsportalen
+
+__Företagsportalens webbplats__
+- **Förbättrad användarupplevelse vid registrering av Windows-enheter**<br/>
+När du använder villkorlig åtkomst har registreringsanvisningarna för Windows 8.1, Windows 10 Desktop och Windows 10 Mobile förenklats på företagsportalens webbplats. Nu visas separata steg för ”enhetsregistrering” och ”anslutning till arbetsplatsen”, vilket gör det lättare att se status för enheterna och slutföra processen om användarna inte lyckas ansluta till arbetsplatsen. De separata stegen förväntas också underlätta felsökningen för IT-administratörer. När slutanvändarna försökte registrera en enhet och alla steg lyckades utom anslutningen till arbetsplatsen visades inte den registrerade enheten i listan med enheter som användarna skulle identifiera, vilket orsakade förvirring för användarna.
+
+__Android__
+- **Android-företagsportalappen**<br/>
+Om Android-användarna ser ett felmeddelande om att enheten saknar ett nödvändigt certifikat kan de trycka på ”Så här löser du problemet” och få [anvisningar](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator) om hur de installerar certifikatet som saknas. Om användarna slutför stegen men får ett felmeddelande om att ”certifikat saknas” ombeds de kontakta IT-administratören och ange den här [länken](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#android-certificate-issues) som innehåller anvisningar som IT-administratörer kan använda för att åtgärda certifikatproblem.
+
+- **Begränsa appinstallationer med separat inläsning till registrerade enheter**<br/>
+Det går inte längre att installera program på Android-enheter via företagsportalens webbplats om de inte har registrerats i Intune via Intune-företagsportalappen för Android.
+<!---TFS 1299082--->
+
+__iOS__
+- **Ändringar av konton för enhetsregistreringshanterare i iOS-företagsportalappen**<br/>
+För att förbättra prestanda och skalning visar Intune inte längre alla enheter i Enhetsregistreringshanteraren (DEM) i fönstret **Mina enheter** i företagsportalappen för iOS. Endast den lokala enheten som kör appen visas och endast om den har registrerats via företagsportalappen.
+
+DEM-användaren kan utföra åtgärder på den lokala enheten, men fjärrhanteringen av andra registrerade enheter kan endast utföras från Intune-administrationskonsolen. Dessutom kommer Intune sluta använda DEM-konton med antingen Apples DEP-program för enhetsregistrering (Device Enrollment Program) eller verktyget Apple Configurator. Båda dessa registreringsmetoder stöder redan användarlös registrering för delade iOS-enheter.
+
+Använd endast DEM-konton om användarlös registrering för delade enheter inte är tillgängligt. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+<!---TFS 1233681--->
+
+### <a name="change-of-names-for-windows-features"></a>Ändrade namn på Windows-funktioner
+- [Microsoft Passport for Windows](/intune/deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune) heter numera **Windows Hello för företag**.
+- [Företagsdataskydd](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune) kallas nu **Windows informationsskydd**.
+
 
 ## <a name="june-2016"></a>Juni 2016
 ### <a name="intune-service-health"></a>Hälsotillstånd för Intune-tjänsten
@@ -170,6 +218,6 @@ Innan dessa statusar lades till var det förvirrande för användarna när en ap
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
