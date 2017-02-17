@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 11/16/2016
+ms.date: 01/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 4682b6b6-c9ef-483e-a6de-b8830cb98b63
 ms.reviewer: cacamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1a83bd41e4dc3aaa2e98b78b918b0cfe4c74dfe3
+ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
+ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
 
 
 ---
 
-# <a name="how-to-get-admin-support-for-microsoft-intune"></a>Ta reda på hur du kan få administratörssupport för Microsoft Intune
+# <a name="how-admins-get-support-for-microsoft-intune"></a>Så kan administratörer få support för Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -28,7 +28,35 @@ Microsoft tillhandahåller global teknisk, förförsäljnings-, fakturerings- oc
 
 Support för Intune, och för Intune när det används med Configuration Manager, är kostnadsfritt. Premier Support-kunder debiteras en avgift för procedurfrågor (t.ex. hur man gör för att konfigurera en Intune-funktion).
 
-## <a name="create-an-online-service-ticket"></a>Skapa en tjänstbiljett online
+## <a name="find-help-without-opening-a-support-ticket"></a>Få hjälp utan att skapa någon supportbegäran
+
+Innan du skapar en supportbegäran kan du gå igenom följande resurser och leta efter svar och information. Du kan även gå igenom [de allmänna felsökningstipsen för Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
+
+### <a name="microsoft-intune-technet-forums"></a>TechNet-forum om Microsoft Intune
+
+Ställ en fråga till eller starta en diskussion med Microsofts tekniska experter! Vi ger svar och tips på det sökbara [TechNet-forumet om Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
+
+![TechNet-forum om Microsoft Intune](./media/technet-forum-for-support.png)
+
+### <a name="microsoft-intune-uservoice-product-feedback-site"></a>UserVoice-webbplatsen för produktfeedback för Microsoft Intune
+
+Har du feedback om hur Microsoft kan göra Intune ännu bättre? Berätta genom att lägga till dina idéer på Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas)-feedbackwebbplatsen. Du kan även rösta på förslag som andra har lagt till genom UserVoice. 
+
+![UserVoice-feedbacksidan för Microsoft Intune](./media/intune-uservoice-feedback-page.png)
+
+## <a name="create-an-online-support-ticket"></a>Skapa en supportbegäran online
+
+Om du inte kan hitta svaren med hjälp av självhjälpsresurserna kan du skapa en supportbegäran online.
+
+**Begränsa varje supportbegäran till ett enda problem**, så blir det lättare för oss att hjälpa dig. Detta beror på följande:
+
+- Supportteknikerna är specialister inom specifika områden och det blir lättare att identifiera rätt ämnesområden för att hjälpa dig med ditt problem.
+- Teknikteamen kan prioritera sitt arbete inom de produktområden där de flesta problemen inträffar.
+- Det blir enklare att snabbt utse rätt resurs för ärendena.
+
+Läs igenom [definitionen av ett supportärende](#definition-of-a-support-incident) innan du skapar en supportbegäran.
+
+**Så här skapar du en supportbegäran online**:
 
 1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina Intune-autentiseringsuppgifter.
     >[!NOTE]
@@ -71,12 +99,12 @@ Följ den här metoden om din supportsida ser ut så här:
 ## <a name="get-phone-support"></a>Få telefonsupport
 I [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) finns en lista över supportnummer efter land och region, supporttider och språk som stöds för varje region.
 
-## <a name="track-your-service-requests"></a>Spåra dina tjänstförfrågningar
+## <a name="track-your-support-requests"></a>Följ dina supportärenden
 1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina Intune-autentiseringsuppgifter.
 2.  Välj **administratörspanelen**.
 3.  Välj **Tjänstförfrågningar** till vänster under **Support**. Sedan kan du granska dina förfrågningar.
 
-Vårt första svar på tjänsteförfrågningar beror på hur allvarligt problemet är. Vårt första svar för Professional-kunder ges inom två timmar för de allvarligaste problemen. För Premier Support-kunder varierar svaret beroende på supportavtalet. Dessa är fall då:
+Vårt första svar på supportförfrågningar beror på hur allvarligt problemet är. Vårt första svar för Professional-kunder ges inom två timmar för de allvarligaste problemen. För Premier Support-kunder varierar svaret beroende på supportavtalet. Dessa är fall då:
 
 - Åtminstone en tjänst är inte tillgänglig eller är oanvändbar.
 - Tidsgränser för produktion, åtgärder eller distribution drabbas eller tillverkning eller lönsamhet påverkas allvarligt.
@@ -99,12 +127,6 @@ Vårt första svar för Professional-kunder ges inom åtta timmar för övriga p
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 
-## <a name="resolve-issues-without-opening-a-support-ticket"></a>Lösa problem utan att öppna någon supportbiljett
-
-Du kanske kan lösa problemet utan att behöva öppna någon supportbiljett.
-
-Information om självhjälp med Intune finns i [Allmänna felsökningstips för Microsoft Intune](general-troubleshooting-tips-for-microsoft-intune.md) och i de olika felsökningsavsnitten för specifika problem. Du kan också söka efter en lösning eller lägga upp din fråga i [Intune-forumet](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
-
 ## <a name="find-support-for-volume-licensing"></a>Hitta support för volymlicensiering
 Om du redan har köpt licenser från Microsoft under ett volymlicensprogram kan du använda följande resurser för support:
 
@@ -114,8 +136,18 @@ Om du redan har köpt licenser från Microsoft under ett volymlicensprogram kan 
 
 -   Allmän information om volymlicensiering finns i [Volymlicensiering](http://go.microsoft.com/fwlink/p/?LinkID=282015).
 
+## <a name="definition-of-a-support-incident"></a>Definition av ett supportärende
+
+Ett supportärende definieras som ett enskilt supportproblem och det arbete som krävs för att lösa problemet. Ett enskilt supportproblem kan inte delas upp i underordnade problem. Om du kan identifiera underordnade problem anses varje underordnat problem vara ett separat ärende. Flera kontakter och efterforskningar offline kan behövas för att lösa ett visst problem. Den tid som läggs ner på att hitta dessa lösningar är oberoende av beloppet som du debiteras.
+
+Support i form av reparation ingår i prenumerationer på Microsoft Intune och Mobile Device Management för Office 365, så det tillkommer inga ytterligare avgifter om ytterligare supportärenden skapas.
+
+Om en supporttekniker ber dig att skapa ytterligare supportärenden för ytterligare problem så beror det på att det är för allas bästa. Tack för att du förstår och för att du samarbetar med oss så att vi kan erbjuda supportupplevelser i världsklass!
+
+Priser per ärende och säkerhetsnivåer finns i [Professional-supportalternativ](https://support.microsoft.com/gp/offerprophone).
 
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 
