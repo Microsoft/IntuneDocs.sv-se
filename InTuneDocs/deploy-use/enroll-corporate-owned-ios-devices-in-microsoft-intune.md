@@ -1,11 +1,11 @@
 ---
-title: "Registrera företagsägda iOS-enheter | Microsoft Intune"
+title: "Registrera företagsägda iOS-enheter | Microsoft Docs"
 description: "Registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) eller Apple Configurator"
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 09/07/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,32 @@ ms.technology:
 ms.assetid: 2d3ca4ab-f20c-4d56-9413-f8ef19cf0722
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 00ca6ea06aa63646d6ede6337f8e70d1ab956c5f
-ms.openlocfilehash: cfc97f4ed931a5c7dc5b38eafd0a2d081bc30975
+ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
+ms.openlocfilehash: 03f5da3a819768ff8221257f091a000f18f00fb4
 
 
 ---
 
 # <a name="enroll-corporate-owned-ios-devices-in-microsoft-intune"></a>Registrera företagsägda iOS-enheter i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune stöder registrering av företagsägda iOS-enheter med hjälp av Apples enhetsregistreringsprogram (DEP) eller verktyget [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator.
 
-**Krav:** Ett [certifikat för Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md) krävs.
+**Förutsättning:** Ett [certifikat för Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
-Du kan registrera företagsregistrerade iOS-enheter på tre sätt: via Apple Configurator, DEP eller företagsportalen.
+Du kan registrera företagsregistrerade iOS-enheter på tre sätt:
+
+- Apple Configurator med installationsassistenten eller direktregistrering
+- Program för enhetsregistrering
+- Företagsportalappen
+
+>[!NOTE]
+>Registreringsmetoderna för Apple Configurator och Programmet för enhetsregistrering (DEP) kan inte användas med metoden för [Enhetsregistreringshanteraren](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) (DEM).
+
+Som standard tillåts alla iOS-enheter registreras i Intune. Om du vill blockera personliga eller företagsägda enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](http://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera de tillämpliga alternativen.
 
 ## <a name="use-apple-configurator"></a>Använd Apple Configurator
 
@@ -44,8 +57,8 @@ Enheter som har konfigurerats med mappning mellan användare kan installera och 
 
 Användartillhörighet krävs för att ge stöd åt följande:
   - Hantering av mobilprogramsappar (MAM, Mobile Application Management)
-  - Villkorlig åtkomst till e-post och företagsdata
-  - Företagsportalappen
+  -    Villkorlig åtkomst till e-post och företagsdata
+  -    Företagsportalappen
 
 **Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet**
 1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
@@ -81,6 +94,6 @@ Om användartillhörighet krävs måste du välja **Användartillhörighet** fö
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

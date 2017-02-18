@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 8fc415f7-0053-4aa5-8d2b-03202eca4b87
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9d891933178d4bdf1079287efc151fe8859c7e83
-ms.openlocfilehash: ab2bf9bbc3e7b15d581c4b0c3e55e6af25a40b4c
+ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
+ms.openlocfilehash: 483fd327be25a1cb08e5295d72a27987ab018062
 
 
 ---
@@ -28,6 +29,8 @@ Du kan registrera enheter, inklusive Windows-datorer, för att aktivera hanterin
 
 Om du använder [Exchange ActiveSync](#mobile-device-management-with-exchange-activesync-and-intune), antingen lokalt eller med värd i molnet, kan du aktivera enkel Intune-hantering utan registrering. Windows-datorer kan också hanteras med [Intune-klientprogrammet](#manage-windows-pcs-with-intune).
 
+Som standard tillåts enheter för alla plattformar registreras i Intune. Om du vill blockera enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](http://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera de tillämpliga kryssrutorna för plattformarna du vill blockera.
+
 ## <a name="overview-of-device-enrollment-methods"></a>Översikt över registreringsmetoder för enheter
 
 Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds och kraven för varje metod. Funktionerna och kraven beskrivs nedan.
@@ -38,41 +41,41 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 **Metoder för iOS-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information** |
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |   Nej | [Mer information](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|   Nej |Nej |Nej  | [Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
-|**[DEP](#dep)**|   Ja |   Valfri |  Valfri|[Mer information](ios-device-enrollment-program-in-microsoft-intune.md)|
-|**[USB-SA](#usb-sa)**| Ja |   Valfri |  Nej| [Mer information](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
-|**[USB-Direct](#usb-direct)**| Nej |    Nej  | Nej|[Mer information](ios-direct-enrollment-in-microsoft-intune.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|    Nej |Nej |Nej    | [Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[DEP](#dep)**|    Ja |    Valfri |    Valfri|[Mer information](ios-device-enrollment-program-in-microsoft-intune.md)|
+|**[USB-SA](#usb-sa)**|    Ja |    Valfri |    Nej| [Mer information](ios-setup-assistant-enrollment-in-microsoft-intune.md)|
+|**[USB-Direct](#usb-direct)**|    Nej |    Nej    | Nej|[Mer information](ios-direct-enrollment-in-microsoft-intune.md)|
 
 **Metoder för Windows-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Ja|   Ja |   Nej | [Mer information](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[BYOD](#byod)** | Ja|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metoder för Android-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |   Nej | [Mer information](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Ange registreringsmetoder för Android for Work**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |   Nej | [Mer information](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Registreringsmetoder för macOS**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Ja|   Ja |   Nej | [Mer information](prerequisites-for-enrollment.md)|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
+|**[BYOD](#byod)** | Ja|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+
 
 Ett antal frågor som hjälper dig att hitta rätt metod finns i [Välj hur du vill registrera enheter](/intune/get-started/choose-how-to-enroll-devices1).
 
@@ -89,15 +92,15 @@ Enhetsregistreringshanteraren är ett särskilt Intune-konto som används för a
 
 ### <a name="dep"></a>DEP
 Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
-  - Låst registrering
-  - Helskärmsläge och andra avancerade konfigurationer och begränsningar
+  -    Låst registrering
+  -    Helskärmsläge och andra avancerade konfigurationer och begränsningar
 
 Läs mer om [DEP](ios-device-enrollment-program-in-microsoft-intune.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
 ### <a name="usb-sa"></a>USB-SA
 IT-administratörer använder Apple Configurator, via USB, för att förbereda varje företagsägd enhet manuellt för registrering med installationsassistenten. IT-administratören skapar en registreringsprofil och exporterar den till Apple Configurator. När användarna får sina enheter uppmanas de att köra installationsassistenten för att registrera sin enhet. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
-  - Låst registrering
-  - Helskärmsläge och andra avancerade konfigurationer och begränsningar
+  -    Låst registrering
+  -    Helskärmsläge och andra avancerade konfigurationer och begränsningar
 
 Läs mer om [Registrering av installationsassistenten med Apple Configurator](ios-setup-assistant-enrollment-in-microsoft-intune.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
@@ -130,6 +133,6 @@ Intune kan hantera följande enhetsplattformar:
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

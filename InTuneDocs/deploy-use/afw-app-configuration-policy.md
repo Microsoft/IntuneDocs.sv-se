@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/3/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: fc6b645a-e837-4b2a-a10f-144065cbd8dd
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 008c0d20312e90f3897c3da8ae2226e3e2595225
-ms.openlocfilehash: 6cb6b4b989d88289c5dffb693f98198ba6439aae
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
 
 
 ---
@@ -28,19 +29,17 @@ ms.openlocfilehash: 6cb6b4b989d88289c5dffb693f98198ba6439aae
 
 Använd konfigurationsprinciper för mobilappar i Microsoft Intune om du vill definiera inställningar som kan krävas när användaren kör en app. En app kan till exempel kräva att användarna anger:
 
--   ett anpassat portnummer
+-   Ett anpassat portnummer
+-   Språkinställningar
+-   Anpassade inställningar, t.ex. en företagslogotyp
 
--   språkinställningar
+Om användarna inte anger inställningarna på ett korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
 
--   anpassade inställningar, t.ex. en företagslogotyp.
-
-Om användarna inte anger dessa inställningar på korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
-
-Med konfigurationsprinciper för mobilappar slipper du den här typen av problem eftersom du kan distribuera dessa inställningar till användarna innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
+Med konfigurationsprinciper för mobilappar kan du distribuera dessa inställningar till enheterna innan användarna kör appen. Inställningarna distribueras automatiskt utan att användarna behöver göra något.
 
 Om du vill använda konfigurationsprinciper för appar måste utvecklaren av appen ha gjort konfigurationer för företagsappar tillgängliga när de skapade den. Google Chrome gör till exempel inställningar som låter dig ange standardbokmärken, tillåtna respektive nekade platser och mycket annat tillgängliga. Kontakta apputvecklaren för att se om de här inställningarna stöds och hur du anger dem i principen.
 
-Du kan distribuera appkonfigurationsprincipen till samma användare som du har distribuerat appen som du vill konfigurera till. Principinställningarna används när appen körs.
+Du kan distribuera appkonfigurationsprincipen till samma användare som du har distribuerat appen som du vill konfigurera till. Appinställningarna tillämpas när appen körs.
 
 ## <a name="configure-a-mobile-app-configuration-policy"></a>Konfigurera en konfigurationsprincip för mobilappar
 
@@ -80,6 +79,6 @@ När den distribuerade appen körs på en enhet körs den med de inställningar 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

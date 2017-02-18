@@ -1,12 +1,12 @@
 ---
 
-title: "Principinställningar för Android for Work | Microsoft Intune"
+title: "Principinställningar för Android for Work | Microsoft Docs"
 description: "Skapa principer som styr inställningar och funktioner på Android for Work-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,19 @@ ms.technology:
 ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 748b9b74b65e8d17bb3956d0ce1859c160d8c10a
+ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
+ms.openlocfilehash: b95f7dbf37a159a62894ae27d1fdb731ede5570c
 
 
 ---
 
 # <a name="android-for-work-policy-settings-in-microsoft-intune"></a>Principinställningar för Android for Work i Microsoft Intune
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Android for Work-enheter.
+I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i [Android for Work-enheter](android-for-work.md).
 
 ## <a name="general-configuration-policy"></a>Allmän konfigurationsprincip
 
@@ -60,15 +61,11 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Ange standardprincipen för behörigheter för appar**<br>(Android 6 och senare)|Ange standardprincipen för behörighet för alla appar i arbetsprofilen.|
 
 
-
-
 ## <a name="custom-policy-settings"></a>Anpassade principinställningar
 Använd **Anpassad konfigurationsprincip för Android for Work** i Microsoft Intune för att distribuera OMA-URI-inställningar som kan användas till att styra funktioner på Android for Work-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
 Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer.
-
-> [!NOTE]
-> För närvarande stöder de anpassade Android-principerna enbart konfiguration av Wi-Fi-inställningar i Android-enheter som innehåller en i förväg delad nyckel.
+Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i det här avsnittet för att ta reda på vilka principer du kan konfigurera.
 
 ### <a name="general-settings"></a>Allmänna inställningar
 
@@ -97,6 +94,6 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
