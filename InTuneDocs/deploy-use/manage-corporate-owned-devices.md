@@ -1,11 +1,11 @@
 ---
-title: "Registrera företagsägda enheter | Microsoft Intune"
+title: "Registrera företagsägda enheter | Microsoft Docs"
 description: "Registrera företagsägda enheter på flera olika sätt beroende på typen av enhet, hur den köptes och organisationens behov."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 07/20/2016
+ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,21 @@ ms.technology:
 ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: cfbf04627892dd700d2e31fabe8bca357f692d51
-ms.openlocfilehash: 2c8dc4917c3ef85955f017c4619c0d7496d03dbf
+ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
+ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
 
 
 ---
 
 # <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrera företagsägda enheter med hjälp av Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan registrera organisationsägda eller företagsägda enheter för hantering med Intune på flera olika sätt beroende på typen av enhet, hur enheten köptes och organisationens behov. Du kan också installera företagsportalappen för att registrera och hantera företagsägda enheter, som i ett BYOD-scenario (”Bring Your Own Device”).
+
+Som standard Som standard tillåts enheter för alla plattformar registreras i Intune. Om du vill blockera enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](http://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera de tillämpliga kryssrutorna för plattformarna du vill blockera.
 
 ## <a name="enroll-corporate-owned-ios-devices"></a>Registrera företagsägda iOS-enheter
 
@@ -63,6 +68,6 @@ När en enhet har taggats som företagets ser du **Företag** i kolumnen **Ägar
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

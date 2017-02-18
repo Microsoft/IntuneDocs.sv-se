@@ -1,11 +1,11 @@
 ---
-title: Kryptera din enhet | Microsoft Docs
-description: Beskriver hur du krypterar en Android-enhet
+title: Skydda en Android-enhet med kryptering | Microsoft Docs
+description: Skydda din Android-enhet
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/7/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,24 @@ ms.technology:
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 54439c96b75efd60e2068207eb1602e669504831
+ms.sourcegitcommit: 5ca9814992edd0a18d48145243a4be524dbb4f23
+ms.openlocfilehash: 727b99f9ca2f0322eb1fee5fec29cd71dc901e01
 
 
 ---
 
 
-# <a name="encrypt-your-device"></a>Kryptera din enhet
+# <a name="how-to-protect-your-android-device-using-encryption"></a>Skydda en Android-enhet med kryptering
 
-Om företaget eller organisationen ber dig att kryptera Android-enheten innan du får åtkomst till företagets filer, e-post eller data, följer du stegen nedan för att kryptera enheten. Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om IT-administratören kräver det.
+När du krypterar en enhet omsluter du informationen på den i ett lager med skyddande kod som förhindrar att obehöriga personer får åtkomst till den. Organisationen kräver att du krypterar din Android-enhet för att skydda innan du kommer åt företagsfiler, -e-post eller -data som ett steg mot att se till att informationen är skyddad.
+
+> [!Note]
+> Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om IT-administratören kräver det.
 
 Om du avregistrerar telefonen förblir den krypterad.
 
@@ -63,6 +68,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontakti
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO5-->
 
 

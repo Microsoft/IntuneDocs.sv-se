@@ -1,26 +1,30 @@
 ---
-title: "Hantera Windows Store för företag-appar | Microsoft Intune"
+title: "Hantera Windows Store för företag-appar | Microsoft Docs"
 description: "Anslut Microsoft Intune till Windows Store för företag om du vill hantera och distribuera volyminköpsappar från Intune-konsolen"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/28/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8e38d47d-0c5e-40ce-b379-29d3657f5c28
-ms.reviewer: jeffgilb
+ms.reviewer: coryfe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 37044da4c7a58749c7b3423b1872b07d1673603d
+ms.sourcegitcommit: a57ac0e6cb29dbfc87bb09c04bb372228a1d72be
+ms.openlocfilehash: 34e9ce6a5c0b7cb912a54644e6323574c2e041a7
 
 
 ---
 
 # <a name="manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune"></a>Hantera appar som du har köpt från Windows Store för företag med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 [Windows Store för företag](https://www.microsoft.com/business-store) ger dig en plats för att söka efter och köpa appar för din organisation, enskilt eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta appar från Intune-konsolen. Exempel:
 * Du kan synkronisera listan över appar som du har köpt från Windows Store med Intune.
 * Appar som är synkroniserade visas i administrationskonsolen för Intune och du kan distribuera dem precis som andra appar.
@@ -42,6 +46,9 @@ Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt W
 1. Se till att du loggar in i Windows Store för företag med samma klientkonto som du använder för att logga in på Intune.
 2. Välj **Inställningar** > **Hanteringsverktyg** i Business Store.
 3. Välj **Lägg till ett hanteringsverktyg** och välj **Microsoft Intune** på sidan Hanteringsverktyg.
+
+> [!NOTE]
+> Om du använder fler än ett hanteringsverktyg för att distribuera Windows Store för affärsappar kunde du tidigare bara koppla ett av dem till Windows Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager.
 
 Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
@@ -80,6 +87,6 @@ När du distribuerar en app från Windows Store för företag används en licens
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
