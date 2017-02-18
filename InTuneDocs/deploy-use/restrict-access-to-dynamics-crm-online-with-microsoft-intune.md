@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: 827c7cd1b6b3ef98a681eef26bb7742228fca5e9
@@ -81,8 +82,8 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
   * **iOS**
   * **Android**
 4.  Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen ska gälla för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
-5.  Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
-6.  När du är klar väljer du **Spara**.
+5.    Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
+6.    När du är klar väljer du **Spara**.
 
 Nu har du konfigurerat villkorlig åtkomst för Dynamics CRM. Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Övervaka efterlevnaden och villkorlig åtkomstpolicy

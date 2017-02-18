@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 19be3de7-539c-49f5-8c46-5363b987fef9
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: 0288ecd940d650304d83b7dd5803a56f69b936f7
@@ -32,9 +33,9 @@ Vill du ge användarna åtkomst till data i Office 365 och verksamhetsspecifika 
 I så fall kan du ange MAM-principer för Office 365-mobilappar på iOS- och Android-enheter med Microsoft Intune, till exempel ange begränsningar för att klippa ut, kopiera och klistra in data, förhindra ”spara som” och ange PIN-kodskrav. Du kan också fjärrensa MAM-skyddade data.  På så sätt kan du skydda företagsdata utan att kräva att användarna registrerar sina enheter i en MDM-lösning. Och får samtidigt en bra användarupplevelse i Office-mobilapparna.
 
 ## <a name="how-do-i-do-it"></a>Hur gör jag?
-1.  Läs grundläggande information om [hur Intunes hantering av mobilprogram (MAM)](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) fungerar.
-2.  Ta reda på [vad du behöver göra innan du kan skapa MAM-principer](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) i Azure Portal.
-3.  [Skapa och distribuera MAM-principer](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) med Intune.
+1.    Läs grundläggande information om [hur Intunes hantering av mobilprogram (MAM)](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) fungerar.
+2.    Ta reda på [vad du behöver göra innan du kan skapa MAM-principer](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) i Azure Portal.
+3.    [Skapa och distribuera MAM-principer](/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) med Intune.
 
 ### <a name="additional-information"></a>Ytterligare information:
 - [Slutanvändarupplevelse](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune) med MAM-aktiverade appar.

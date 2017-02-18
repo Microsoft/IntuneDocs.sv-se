@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 5631bac3-921d-438e-a320-d9061d88726c
 ms.reviewer: muhosabe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f34d54710f0ec662eecec85f7fa041061132a0d
 ms.openlocfilehash: 8ef24e4d413662012f091c1be318d1d274e16439
@@ -154,7 +155,7 @@ Ange dessa inställningsvärden i ISE-administrationskonsolen:
 ## <a name="information-shared-between-your-intune-tenant-and-your-cisco-ise-server"></a>Information som delas mellan Intune-klienten och Cisco ISE-servern
 Den här tabellen innehåller den information som delas mellan Intune-klienten och Cisco ISE-servern för enheter som hanteras av Intune.
 
-|Egenskap|  Beskrivning|
+|Egenskap|    Beskrivning|
 |---------------|------------------------------------------------------------|
 |complianceState|Sant- eller falskt-strängen som anger om enheten är kompatibel eller inkompatibel.|
 |isManaged|Sant- eller falskt-strängen som anger om klienten hanteras av Intune eller inte.|

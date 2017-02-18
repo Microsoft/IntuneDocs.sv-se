@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
@@ -46,7 +47,7 @@ Om du vill associera verksamhetsspecifika appar med MAM-principer måste du läg
 2. Välj **Lägg till en anpassad app** på bladet **Verksamhetsspecifika appar**.
 
   ![Skärmbild av bladet med verksamhetsspecifika appar med knappen Lägg till anpassad app överst](../media/mam-azure-portal-add-lob-app-action.png)
-3.  Ge appen ett namn och ange paket-ID i fältet App-ID och plattform (iOS eller Android).
+3.    Ge appen ett namn och ange paket-ID i fältet App-ID och plattform (iOS eller Android).
 
   ![Skärmbild av bladet Lägg till en anpassad app](../media/mam-azure-portal-add-app-details.png)
 
@@ -71,11 +72,11 @@ Om du behöver ändra appinformationen om en app, t.ex. appens namn eller paket-
 ##  <a name="remove-apps"></a>Ta bort appar
 Du kan ta bort en verksamhetsspecifik app från applistan. Den här åtgärden tar bort appen från listan och tar bort kopplingen till MAM-principerna, men tar inte bort eller avinstallerar appen från användarens enhet.  
 
-1.  Gå till **Intune-mobilapphantering** > **Inställningar** i [Azure Portal](https://portal.azure.com/). Välj **Branschspecifik** på bladet **Inställningar** så öppnas listan över befintliga appar.  
-2.  Välj den app som du vill ta bort och välj menyn **(...) kontext**.
+1.    Gå till **Intune-mobilapphantering** > **Inställningar** i [Azure Portal](https://portal.azure.com/). Välj **Branschspecifik** på bladet **Inställningar** så öppnas listan över befintliga appar.  
+2.    Välj den app som du vill ta bort och välj menyn **(...) kontext**.
 
   ![Skärmbild av bladet med ellipsen för verksamhetsspecifika appar](../media/mam-azure-portal-lob-context-menu.png)
-3.  Ta bort appen genom att välja **Ta bort program**.
+3.    Ta bort appen genom att välja **Ta bort program**.
 
   ![Skärmbild av det verksamhetsspecifika bladet med alternativet för att ta bort program](../media/mam-azure-portal-delete-app.png)
 

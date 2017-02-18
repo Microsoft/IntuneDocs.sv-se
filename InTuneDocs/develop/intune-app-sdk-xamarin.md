@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: oydang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
 ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
@@ -57,22 +58,22 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
 
 ## <a name="get-started"></a>Kom igång
 
-1.  Ladda ned **Xamarin-component.exe** [här](https://components.xamarin.com/submit/xpkg) och extrahera den.
+1.    Ladda ned **Xamarin-component.exe** [här](https://components.xamarin.com/submit/xpkg) och extrahera den.
 
 2. Läs [licensvillkoren](https://components.xamarin.com/license/microsoft.intune.mam) för Microsoft Intune MAM Xamarin-komponenten.
 
-3.  Ladda ned mappen med Intune App SDK Xamarin-komponenten från [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) eller [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) och extrahera den. Båda filerna som du laddade ned i steg 1 och steg 2 bör ligga på samma katalognivå.
+3.    Ladda ned mappen med Intune App SDK Xamarin-komponenten från [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) eller [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) och extrahera den. Båda filerna som du laddade ned i steg 1 och steg 2 bör ligga på samma katalognivå.
 
-4.  Kör `Xamain.Component.exe install <.xam> file` som administratör på kommandoraden.
+4.    Kör `Xamain.Component.exe install <.xam> file` som administratör på kommandoraden.
 
-5.  I Visual Studio högerklickar du på **komponenter** i Xamarin-projektet som du skapat tidigare.
+5.    I Visual Studio högerklickar du på **komponenter** i Xamarin-projektet som du skapat tidigare.
 
-6.  Välj **Redigera komponenter** och lägg till Intune App-SDK-komponenten som du har laddat ned lokalt till datorn.
+6.    Välj **Redigera komponenter** och lägg till Intune App-SDK-komponenten som du har laddat ned lokalt till datorn.
 
 
 
 ## <a name="enabling-intune-mam-in-your-ios-mobile-app"></a>Aktivera Intune MAM i din iOS-mobilapp
-1.  För att initiera App SDK Intune behöver du anropa API:er i `AppDelegate.cs`-klassen. Exempel:
+1.    För att initiera App SDK Intune behöver du anropa API:er i `AppDelegate.cs`-klassen. Exempel:
 
       ```csharp
       public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -83,7 +84,7 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
 
       ```
 
-2.  Nu när komponenten har lagts till och initierats kan du följa de allmänna stegen som krävs för att skapa App SDK i en iOS-mobilapp. Du kan hitta den fullständiga dokumentationen för att aktivera interna iOS-appar i [utvecklarhandboken för Intune App SDK för iOS](intune-app-sdk-ios.md).
+2.    Nu när komponenten har lagts till och initierats kan du följa de allmänna stegen som krävs för att skapa App SDK i en iOS-mobilapp. Du kan hitta den fullständiga dokumentationen för att aktivera interna iOS-appar i [utvecklarhandboken för Intune App SDK för iOS](intune-app-sdk-ios.md).
 3. **Viktig!** Det finns flera ändringar som är specifika för Xamarin-baserade iOS-appar. Till exempel måste du, när du aktiverar nyckelringsgrupper, lägga till följande om du vill ta med Xamarin-exempelappen som vi har lagt till i komponenten. Nedan ser du ett exempel på de grupper som måste finnas i dina nyckelhanterargrupper:
 
       ```xml
@@ -109,15 +110,15 @@ För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser du 
 
 För Xamarin Forms och andra UI-ramverk tillhandahåller vi verktyget `MAM.Remapper`. Verktyget utför klassersättningen åt dig. Men du måste dock utföra följande steg:
 
-1.  Lägg till en referens till ` Microsoft.Intune.MAM.Remapper.Tasks` NuGet paketversion 0.1.0.0 eller senare.
+1.    Lägg till en referens till ` Microsoft.Intune.MAM.Remapper.Tasks` NuGet paketversion 0.1.0.0 eller senare.
 
-2.  Lägg till följande rad i Android csproj:
+2.    Lägg till följande rad i Android csproj:
   ```xml
   <Import
   Project="$(NugetPack)\\Microsoft.Intune.MAM.Remapper.Tasks.0.1.X.X\\build\\MonoAndroid10\\Microsoft.Intune.MAM.Remapper.targets" />
   ```
 
-3.  Ange build-åtgärden för den tillagda `remapping-config.json`-filen till **RemappingConfigFile**. Den `remapping-config.json`-fil som ingår fungerar endast med Xamarin.Forms. För andra UI-ramverk läser du Viktigt-filen som ingår i Remapper NuGet-paketet.
+3.    Ange build-åtgärden för den tillagda `remapping-config.json`-filen till **RemappingConfigFile**. Den `remapping-config.json`-fil som ingår fungerar endast med Xamarin.Forms. För andra UI-ramverk läser du Viktigt-filen som ingår i Remapper NuGet-paketet.
 
 ## <a name="test-your-app"></a>Testa appen
 

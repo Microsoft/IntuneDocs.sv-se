@@ -16,6 +16,7 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: 16d970e13bfac29460bab885188f45df1202a4d9
@@ -30,7 +31,7 @@ När du avregistrera en Android-enhet från Intune:
 
 -   IT-administratören hanterar inte enheten längre.
 
--   Du kan inte längre komma åt företagets data och resurser.
+-    Du kan inte längre komma åt företagets data och resurser.
 
 -   Din enhet visas inte längre på företagsportalen.
 

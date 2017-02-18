@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: fad731fe01ba4782b64e8a5af97bd536ae9478d3
@@ -143,7 +144,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
         Detta kräver att alla enheter som används för att komma åt **SharePoint Online** registreras i Intune och att de uppfyller principkraven. Klientprogram som använder **modern autentisering** omfattas av principen för villkorlig åtkomst. Om plattformen inte stöds av Intune för närvarande blockeras åtkomsten till **SharePoint Online**.
 
         Om alternativet **Alla plattformar** väljs innebär det att Azure Active Directory använder denna princip på alla autentiseringsbegäranden, oavsett vilken plattform som rapporteras av klientprogrammet. Alla plattformar måste registreras och vara kompatibla, med undantag för:
-        *   Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
+        *    Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
         * Plattformar som inte stöds, t.ex. Mac. Appar med modern autentisering som kommer från dessa plattformar blockeras dock fortfarande.
 
     -   **Vissa plattformar**

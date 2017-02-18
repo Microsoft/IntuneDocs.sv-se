@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
 ms.openlocfilehash: b0006416f2b078c8c0cf5eb14ccea4749604e1dc
@@ -71,10 +72,10 @@ Här är den information som har hämtats för OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Hitta en PFN om appen inte har installerats på en dator
 
-1.  Gå till https://www.microsoft.com/en-us/store/apps.
-2.  Ange namnet på appen i sökfältet. I vårt exempel söker du efter OneNote.
-3.  Välj länken till appen. Observera att URL:en har en serie bokstäver i slutet. I vårt exempel ser URL:en ut så här: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
-4.  Klistra in följande URL på en annan flik: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Ersätt `<app id>` med det app-id som du har fått från https://www.microsoft.com/en-us/store/apps – serien med bokstäver i slutet av URL:en i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+1.    Gå till https://www.microsoft.com/en-us/store/apps.
+2.    Ange namnet på appen i sökfältet. I vårt exempel söker du efter OneNote.
+3.    Välj länken till appen. Observera att URL:en har en serie bokstäver i slutet. I vårt exempel ser URL:en ut så här: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`.
+4.    Klistra in följande URL på en annan flik: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Ersätt `<app id>` med det app-id som du har fått från https://www.microsoft.com/en-us/store/apps – serien med bokstäver i slutet av URL:en i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 I Microsoft Edge visas den information som du vill ha. Välj **Öppna** i Internet Explorer om du vill se informationen. PFN-värdet anges på första raden. Här följer resultaten i vårt exempel:
 

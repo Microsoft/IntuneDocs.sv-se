@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
 ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
@@ -31,10 +32,10 @@ Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhe
 
 Kontrollerar att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Du kan läsa om konfigurationskraven i:
 
--   [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
--   [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--   [Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
--   [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-    [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
+-    [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-    [Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+-    [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
@@ -227,16 +228,16 @@ Certifikatfelet uppstår eftersom Android-enheter kräver att mellanliggande cer
 
 Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
 
-1.  Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
-2.  Expandera **Personligt** och välj **Certifikat**.
-3.  Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
-4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
-5.  På varje överordnat certifikat väljer du **Visa certifikat**.
-6.  Välj fliken **Information** och välj **Kopiera till fil... **.
-7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
-8.  Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
-9.  Starta om AD FS-servrarna.
-10. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
+1.    Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
+2.    Expandera **Personligt** och välj **Certifikat**.
+3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
+4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
+5.    På varje överordnat certifikat väljer du **Visa certifikat**.
+6.    Välj fliken **Information** och välj **Kopiera till fil... **.
+7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
+8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
+9.    Starta om AD FS-servrarna.
+10.    Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 
 **Så här kontrollerar du att certifikatet har installerats**:

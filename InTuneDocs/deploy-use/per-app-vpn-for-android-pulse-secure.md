@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: b268bb16b7fc7e38021441bb16517e754b5e395f
 ms.openlocfilehash: 4a52d714d47a0b3af56be6eb5096fffae160e435
@@ -52,7 +53,7 @@ När du har distribuerat principen till din Android-enhet eller till användargr
    4. Ange ett namn på inställningen.
    5. Ange **Sträng** för **Datatyp**.
    6. För **OMA-URI** anger du strängen: **./Vendor/MSFT/VPN/Profile/*Namn*/PackageList**, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
-   7.   För **Värde** skapar du en semikolonavgränsad lista över paket som ska associeras med profilen. Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du **com.microsoft.office.excel;com.android.chrome**.
+   7.    För **Värde** skapar du en semikolonavgränsad lista över paket som ska associeras med profilen. Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du **com.microsoft.office.excel;com.android.chrome**.
 
 ![Exempel på VPN-anpassad princip per app för Android](./media/android_per_app_vpn_oma_uri.png)
 

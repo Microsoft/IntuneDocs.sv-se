@@ -12,6 +12,7 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
@@ -78,13 +79,13 @@ Innan användarna kan registrera sina iOS-enheter, måste du konfigurera Intune 
 
 1. **Hämta en certifikatsigneringsbegäran**<br/>
 Logga in till Intune med ditt administratörskonto och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj sedan **Hämta begäran om APN-certifikat**. Spara begäran om certifikatsignering (.csr) lokalt. CSR-filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen. <!--- screen shot--->
-2.  **Hämta ett certifikat för Apple Push Notification Service**<BR/>
+2.    **Hämta ett certifikat för Apple Push Notification Service**<BR/>
 Gå till [Apple Push-certifikatprofilen](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) och logga in med ditt företags Apple-ID för att skapa APN-certifikatet med hjälp av CSR-filen. När du har valt **Överför** på Apple Push-certifikatportalen får du en JSON-fil som inte kan användas för APN. Slutför hämtningen, gå tillbaka till Apple Push-certifikatportalen, leta upp Certifikat för servrar från tredje part och klicka på **Hämta**.
 
  Hämta APN-certifikatet (.pem) och spara filen lokalt. Det här Apple-ID:t måste användas senare för att förnya ditt APN-certifikat.
-3.  **Lägg till APN-certifikatet i Intune**<BR/>
+3.    **Lägg till APN-certifikatet i Intune**<BR/>
 Öppna Microsoft Intune-administratörskonsolen och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj **Överför APN-certifikatet**. Gå till certifikatfilen (.pem), välj **Öppna** och ange ditt Apple-ID. Med APN-certifikatet. Intune kan registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
-4.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
+4.    **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
 Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) och [Registrera din Mac OS X-enhet i Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
 

@@ -14,6 +14,7 @@ ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: 356de226dce12a1e079b0f58214d9bc590f3a71d
@@ -30,13 +31,13 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 **Vad du behöver göra:**
 
-1.  Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
+1.    Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
 
     ![du uppmanas att installera Lookout for Work](./media/lookout-required-app-install-android.png)
 
     Du kommer till installationssidan för Lookout for Work i Play Store.
 
-2.  Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
+2.    Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
 
     ![tryck på acceptera för att ge Lookout for Work behörighet till åtkomst till din enhet](./media/lookout-accept-store-permissions-android.png)
 

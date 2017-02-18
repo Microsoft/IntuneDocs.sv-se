@@ -13,6 +13,7 @@ ms.technology:
 ms.assetid: b1e84ef8-a260-4e3d-aaf1-8b3facfecafa
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
 ms.openlocfilehash: fc2fb3c2c59b4fc2de048d8a27a6eadec592fba3
@@ -32,9 +33,9 @@ Vill du att användarna snabbt ska kunna komma åt alla appar som de behöver f�
 I så fall kan du använda Microsoft Intune för att publicera appar (Office-appar, interna företagsappar eller andra appar och program) i en gemensam portal: [Intunes företagsportal (app eller webbplats)](/intune/enduser/company-portal-frequently-asked-questions).
 
 ## <a name="how-do-i-do-it"></a>Hur gör jag?
-1.  [Registrera enheter](/intune/deploy-use/enroll-devices-in-microsoft-intune) i Intune MDM (hantering av mobilenheter).
-2.  [Lägg till appar i Intune](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) som du vill distribuera till registrerade enheter.
-3.  [Distribuera appar med Intune](/intune/deploy-use/deploy-apps) till registrerade enheter.
+1.    [Registrera enheter](/intune/deploy-use/enroll-devices-in-microsoft-intune) i Intune MDM (hantering av mobilenheter).
+2.    [Lägg till appar i Intune](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) som du vill distribuera till registrerade enheter.
+3.    [Distribuera appar med Intune](/intune/deploy-use/deploy-apps) till registrerade enheter.
 
 ### <a name="additional-information"></a>Ytterligare information:
 Om du publicerar Office-mobilappar med avsikt att använda Intunes MAM-funktioner för att hantera skydd mot dataförlust för dessa appar måste varje slutanvändare som tilldelats MAM-principer [tilldelas en användarlicens för Office 365](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).

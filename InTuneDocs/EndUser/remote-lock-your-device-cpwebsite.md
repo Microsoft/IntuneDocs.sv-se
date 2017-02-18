@@ -16,6 +16,7 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mamoriss
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
 ms.openlocfilehash: a888592c4bf4f71cba44cebadb5cf90d2cc9aef6
@@ -39,13 +40,13 @@ För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet 
 
 ## <a name="to-use-remote-lock-to-lock-your-device"></a>Använda Fjärrlås för att låsa enheten
 
-1.  Tryck på namnet på den enhet som du vill låsa på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+1.    Tryck på namnet på den enhet som du vill låsa på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
-2.  Tryck på **Fjärrlåsning**.
+2.    Tryck på **Fjärrlåsning**.
 
     ![remote-lock-option-on-company-portal-website](./media/iwp-screen-with-all-options.png)
 
-3.  Ett meddelande visas så att du vet att du håller på att låsa enheten. Tryck på **Fjärrlåsning** så kommer företagsportalens webbplats att försöka låsa enheten.
+3.    Ett meddelande visas så att du vet att du håller på att låsa enheten. Tryck på **Fjärrlåsning** så kommer företagsportalens webbplats att försöka låsa enheten.
 
     När du trycker på **Fjärrlåsning** visas meddelandet ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
 
