@@ -1,11 +1,11 @@
 ---
-title: Nyhetsarkiv | Microsoft Intune
+title: Nyhetsarkiv | Microsoft Docs
 description: "Arkiverade nyhetsmeddelanden för Microsoft Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/11/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,13 +13,14 @@ ms.technology:
 ms.assetid: ed2db991-4729-49a7-a1e6-be2ffa0d03d1
 ROBOTS: noindex,nofollow
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b4dab832da4490c3df045d2c627b231028c92b25
-ms.openlocfilehash: 8e8c4f9708994275c36a2e9bd5ad4dff171a8756
+ms.sourcegitcommit: 43e951d763d788d94e97c35ea4c25a9c700baf1e
+ms.openlocfilehash: 1b1775507b454d45a673ca30c1674ac54b92a056
 
 
 ---
-# <a name="whats-new---archive"></a>Nyhetsarkiv
+# <a name="whats-new-archive"></a>Nyhetsarkiv
 
 Den här sidan är en rullande lista över de senaste sex månaderna av meddelanden som gjorts i [Vad är nytt i Microsoft Intune](whats-new-in-microsoft-intune.md).
 
@@ -30,6 +31,6 @@ Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
