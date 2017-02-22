@@ -1,10 +1,10 @@
 ---
 title: Konfigurera Windows-enhetshantering med Microsoft Intune | Microsoft Docs
-description: "Aktivera hantering av mobila enheter (MDM) för Windows-datorer, till exempel Windows 10-enheter, med Microsoft Intune."
+description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter med Microsoft Intune."
 keywords: 
 author: staciebarker
 manager: stabar
-ms.date: 01/26/2016
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
-ms.openlocfilehash: f4f3b89cf066bcc98d043f66d4d40fd9d9ca3fd5
+ms.sourcegitcommit: 45c32cf08e4d6fd570af287ed64411edc9d9b394
+ms.openlocfilehash: e020ac2a4f600a94e7409e04c4c48f0c405c56cf
 
 
 ---
@@ -23,23 +23,29 @@ ms.openlocfilehash: f4f3b89cf066bcc98d043f66d4d40fd9d9ca3fd5
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Som Intune-administratör kan du aktivera registrering och hantering för Windows-datorer på två sätt:
+Använd någon av följande metoder för att konfigurera registrering av Windows-enheter:
 
-- **[Automatisk registrering med Azure Active Directory](#azure-active-directory-enrollment)** – Windows 10- och Windows 10 Mobile-användare registrerar sina enheter genom att lägga till ett arbetskonto eller skolkonto till enheten.
+- **[Windows 10 och Windows 10 Mobile, automatisk registrering med Azure Active Directory Premium](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)** 
+ -  Den här metoden gäller endast för Windows 10- och Windows 10 Mobile-enheter.
+ -  Du måste ha Azure Active Directory Premium för att kunna använda den här metoden. Annars använder du registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
+ -  Om du väljer att inte aktivera automatisk registrering, kan du använda registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
 
-- **[Registrering med företagsportalen](#set-up-company-portal-app-enrollment)** – Användare av Windows 8.1 och senare registrerar sina enheter genom att hämta och installera företagsportalappen och sedan ange autentiseringsuppgifterna för deras arbetskonto eller skolkonto i appen.
+
+- **[Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME](#set-up-windows-8--1-and-windows-phone-8--1-enrollment-by-configuring-cname)** 
+ - Du måste använda den här metoden för att kunna registrera Windows 8.1- och Windows Phone 8.1-enheter.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="set-up-company-portal-app-enrollment"></a>Konfigurera registrering via företagsportalappen
-Du kan låta användarna installera och registrera sina enheter med hjälp av företagsportalappen. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange ett servernamn.
+## <a name="set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname"></a>Konfigurera registrering av Windows 8.1 och Windows Phone 8.1 genom att konfigurera CNAME
+Du kan låta användarna installera och registrera sina enheter med hjälp av Intune-företagsportalen. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange ett servernamn.
 
 1. **Konfigurera Intune**<br>
 Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [MAM-auktoritet (hantering av mobilenheter)](prerequisites-for-enrollment.md#step-2-set-mdm-authority) och sedan konfigurera MDM.
 
-2. **Skapa CNAME-poster** (valfritt)<br>Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
+2. **Skapa CNAME-poster** (valfritt)<br>
+Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
 
-    Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas uppmanas användarna att manuellt ange MDM-servernamnet, https://enrollment.manage.microsoft.com. 
+    Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas, uppmanas användarna att manuellt ange MDM-servernamnet, enrollment.manage.microsoft.com.    
 
     Om du har en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till manage.microsoft.com så föreslår vi att du ersätter den med en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com. Den här ändringen rekommenderas eftersom slutpunkten manage.microsoft.com kommer att föråldras för registreringar i en framtida version.
 
@@ -72,6 +78,6 @@ Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom at
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

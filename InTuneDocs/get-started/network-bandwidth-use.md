@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e13a9c426e07ebb2443bd403d1a5c7274afd387e
-ms.openlocfilehash: 213e2e43635dd64cd64c850d74f7fd05f649bd64
+ms.sourcegitcommit: 0f5972171349325eeb750e552481cbcf903fdf95
+ms.openlocfilehash: 9f1cd7ea3e92ac2e3a1b828e8185961060a7c619
 
 
 ---
@@ -23,6 +24,8 @@ ms.openlocfilehash: 213e2e43635dd64cd64c850d74f7fd05f649bd64
 # <a name="intune-network-bandwidth-use"></a>Användning av nätverksbandbredd i Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Den här vägledningen är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. För hjälp med att använda Intune på din mobila enhet se [vanliga frågor om Intune-företagsportalen](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Innan du konfigurerar Microsoft Intune går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
 
@@ -231,6 +234,6 @@ I följande tabell visas de portar och tjänster som Intune-klienten har åtkoms
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

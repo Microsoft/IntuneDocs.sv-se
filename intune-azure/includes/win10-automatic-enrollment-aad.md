@@ -9,13 +9,13 @@ Den automatiska registreringen gör att användarna kan registrera sina företag
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurera automatisk MDM-registrering
 
-1. Gå till noden **Active Directory** på [Azure-hanteringsportalen](https://manage.windowsazure.com) (https://manage.windowsazure.com) och välj din katalog.
+1. Gå till noden **Active Directory** på [Azure-hanteringsportalen](https://portal.azure.com) (https://manage.windowsazure.com) och välj din katalog.
 
 2. Välj fliken **Program**. **Microsoft Intune** visas i listan över program.
 
     ![Azure AD-appar med Microsoft Intune](../media/aad-intune-app.png)
 
-3. Välj pilen för **Microsoft Intune**. En sida visas där du kan konfigurera Microsoft Intune.
+3. Välj pilen för **Microsoft Intune**. En sida öppnas där du kan konfigurera Microsoft Intune.
 
 4. Välj **Konfigurera** och börja konfigurera automatisk MDM-registrering med Microsoft Intune.
 
@@ -23,7 +23,7 @@ Den automatiska registreringen gör att användarna kan registrera sina företag
 
   - **MDM Enrollment URL** (URL för MDM-registrering) – Använd standardvärdet.
   - **URL för MDM-villkor** – Använd standardvärdet. Denna URL visar villkoren för användarna när de registrerar enheter.
-  - **URL för MDM-efterlevnad** – Använd standardvärdet. Om en enhet inte är kompatibel visas ett **Åtkomst nekas**-meddelande med denna URL. URL:en pekar till en sida som förklarar för användarna varför deras enhet inte uppfyller kraven för principen och vad de kan göra för att enheten ska uppfylla kraven.
+  - **URL för MDM-efterlevnad** – Använd standardvärdet. Om en enhet inte är kompatibel visas ett **Åtkomst nekas**-meddelande med denna URL. URL:en pekar till en sida som förklarar för användarna varför deras enhet inte uppfyller kraven för principen och vad de kan göra för att enheten ska uppfylla kraven igen.
 
 6.  Ange vilka användares enheter som ska hanteras av Microsoft Intune. Dessa användares Windows 10-enheter registreras automatiskt för hantering med Microsoft Intune.
 

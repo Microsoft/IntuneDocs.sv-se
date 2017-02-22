@@ -1,0 +1,37 @@
+---
+title: "Övervaka apptilldelningar | Förhandsversion av Intune Azure | Microsoft Docs"
+description: "Förhandsversion av Intune Azure: När du har tilldelat en app till användare eller enheter, kan du använda den här informationen för att övervaka dess status."
+keywords: 
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
+ms.date: 01/23/2017
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
+ms.reviewer: mghadial
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 424fae862592c1ab5b4221fb5ad40a52c39f6760
+ms.openlocfilehash: c4e634bb584e2b593b441a7d81d9ecf72bafa79f
+
+---
+
+# <a name="how-to-monitor-app-assignments"></a>Så här övervakar du apptilldelningar
+
+[!INCLUDE[azure_preview](../includes/azure_preview.md)]
+
+Du kan övervaka tilldelningsförloppet för Intune-appar på två sätt:
+
+1. Välj **Hantera** > **Appar** i arbetsbelastningen **Mobilappar**.
+2. I listan över appblad väljer du önskad app och sedan ett av följande:
+    - På bladet <*appnamn*> väljer du **Översikt** för att visa grundläggande information om appen och dess tilldelningar.
+    - På bladet <*appnamn*> väljer du **Rapporter** för att visa mer detaljerad information om appen och dess tilldelningar.
+
+
+
+<!--HONumber=Feb17_HO1-->
+
+
