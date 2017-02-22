@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b15f56f6e771faeb924668aa68140ab89a174b8d
-ms.openlocfilehash: c9bba34d2252e6b9dff295724f9c935c558aa179
+ms.sourcegitcommit: 06e0a74dd2c0b861497062f2d659c5eb08126fca
+ms.openlocfilehash: 6ec9f6136cf23b9015da125817bfeb86ecfbfca6
 
 
 ---
@@ -55,7 +56,7 @@ Mer information om programhanteringsverktyget för MAM på enheter som inte har 
 ## <a name="intune-app-sdk"></a>Intune App SDK
 App SDK är främst utformat för kunder som har appar i Apple App Store eller Google Play Store och som vill kunna hantera appar med Intune. Alla appar kan dock dra nytta av integrera SDK, även branschspecifika appar.
 
-Mer information om SDK:n finns i [Översikt](/intune/develop/intune-app-sdk). Om du vill börja använda SDK:n läser du [Komma igång med Microsoft Intune App SDK](/intune/develop/intune-app-sdk-get-started).
+Mer information om SDK:n finns i [Översikt](../develop/intune-app-sdk.md). Om du vill börja använda SDK:n läser du [Komma igång med Microsoft Intune App SDK](../develop/intune-app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Skäl för att använda SDK
 * Din app har inte några inbyggda dataskyddsfunktioner.
@@ -69,8 +70,8 @@ Mer information om SDK:n finns i [Översikt](/intune/develop/intune-app-sdk). Om
 
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ja – Använd [Xamarin-komponenten för Intune App SDK](/../develop/intune-app-sdk-xamarin).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](/../develop/intune-app-sdk-cordova).|
-|**Android**| Ja – Använd [Xamarin-komponenten för Intune App SDK](/../develop/intune-app-sdk-xamarin).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](/../develop/intune-app-sdk-cordova).|
+|**iOS**|Ja – Använd [Xamarin-komponenten för Intune App SDK](../develop/intune-app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](../develop/intune-app-sdk-cordova.md).|
+|**Android**| Ja – Använd [Xamarin-komponenten för Intune App SDK](../develop/intune-app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](../develop/intune-app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
