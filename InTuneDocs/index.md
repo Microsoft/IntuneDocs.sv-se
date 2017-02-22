@@ -9,14 +9,14 @@ keywords: intune documentation, app management, device management, MDM documenta
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 12/7/2016
+ms.date: 12/20/2016
 ms.topic: hubpage
 ms.service: microsoft-intune
 ms.suite: ems
 ms.assetid: 3414479e-e548-4753-bcf7-6322b43221fd
 translationtype: Human Translation
-ms.sourcegitcommit: b921a15ca5fd24d9ddbf54789c42a0740b72d7f6
-ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
+ms.sourcegitcommit: 8c4351761b1e4047a0e997cdfabe3deb35b31e54
+ms.openlocfilehash: 9d35de896e21abd8b7e0026e915745aa6dbcb80f
 
 
 ---
@@ -25,20 +25,20 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
     <section id="hero-content">
       <h1>Intune-dokumentation</h1>
       <h2>Hantering av mobila enheter och appar samt datorhantering från molnet. </h2>
-      <h3>Vill du hantera Intune med Configuration Manager? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Läs mer om hybridhantering av mobila enheter &rarr;</a></h3>
+      <h3>Vill du hantera Intune med Configuration Manager? <a href="https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management" target="_blank">Läs mer om hybridhantering av mobila enheter&rarr;</a></h3>
     </section>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Aktuellt innehåll</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="http://fasttrack.microsoft.com/ems">Har du mer än 150 licenser? Utnyttja dina FastTrack-förmåner</a></li>
+          <li><a href="http://fasttrack.microsoft.com/ems">Har du fler än&150; licenser? Utnyttja dina FastTrack-förmåner</a></li>
           <li><a href="/intune/understand-explore/common-ways-to-use-intune">Vanliga sätt att använda Intune</a></li>
-          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Förhandsgranskning av Intune i Azure-portalen</a></li>
+          <li><a href="/intune-azure/introduction/what-is-microsoft-intune">Förhandsgranskning av Intune i Azure Portal</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/intune/deploy-use/restrict-access-based-on-device-network-app-risk">Skydda åtkomst till företagsresurser</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-ios">Utvecklarhandbok för Microsoft Intune App SDK för iOS</a></li>
-          <li><a href="/intune/develop/intune-app-sdk-android">Utvecklarhandbok för Microsoft Intune App SDK för Android</a></li>
+          <li><a href="https://graph.microsoft.io/en-us/docs/api-reference/beta/intune_graph_overview">Arbeta med Intune i Microsoft Graph</a></li>
+          <li><a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">Resurser om slutanvändarupplevelsen med Microsoft Intune</a></li>
         </ul>
       </div>
     </section>
@@ -61,13 +61,13 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
               <ul class="row">
                 <li class="column-third">
                   <a href="/intune/understand-explore/introduction-to-microsoft-intune">
-                    <h3>Introduktion till Intune</h3>
+                    <h3>Vad är Intune?</h3>
                     <p>Lär dig om hur Intune tillhandahåller funktioner för enhets-, program- och datahantering för mobila enheter (iOS-enheter, Android-enheter, Windows Phone-enheter) och Windows-datorer.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune">
-                    <h3>Utvärderingsguiden för Intune</h3>
+                    <h3>Är Intune rätt för dig?</h3>
                     <p>Använd guiden för utvärderingsversionen för att gå igenom stegen för att konfigurera din utvärderingsversion med upp till 100 användare och enheter.</p>
                   </a>
                 </li>
@@ -94,21 +94,21 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/intune/get-started/what-to-know-before-you-start-microsoft-intune">
-                    <h3>Vad du behöver veta innan du börjar</h3>
-                    <p>Bekanta dig snabbt med de grundläggande kraven för distribution av Intune.</p>
-                  </a>
-                </li>
-                <li class="column-third">
                   <a href="/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune">
-                    <h3>Snabbstartsguide för Intune</h3>
-                    <p>Det här avsnittet vägleder dig genom Azure Active Directory-synkronisering, domän- och DNS-frågor samt andra anpassningar för Intune, och bygger på guiden för 30-dagars utvärderingsversionen.</p>
+                    <h3>Guide för att komma igång</h3>
+            <p>Det här avsnittet vägleder dig genom Azure Active Directory-synkronisering, domän- och DNS-frågor samt andra anpassningar för Intune, och bygger på guiden för 30-dagars utvärderingsversionen.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/intune/get-started/rollout-phases-for-microsoft-intune-deployment">
-                    <h3>Distributionsfaser</h3>
-                    <p>Definiera dina Intune-mål, arkitektur, pilotprojekt och planer för produktionsdistribution.</p>
+                  <a href="/intune/get-started/prevent-company-data-leaks-from-office-365-mobile-apps">
+                    <h3>Förhindra företagsdataläckor från Office 365-mobilappar</h3>
+                    <p>Skydda din organisations data med hjälp av appskyddsprinciper som hjälper till att förhindra läckor av företagets data.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/intune/get-started/simplify-email-configuration-on-mobile-devices">
+                    <h3>Förenkla e-postkonfigurationen på mobila enheter</h3>
+                    <p>Sparar tid och resurser för ditt företag genom att distribuera e-postprofiler (även VPN och WiFi) till Windows-, iOS- och Android-mobilenheter som hanteras av Intune-tjänsten.</p>
                   </a>
                 </li>
               </ul>
@@ -140,7 +140,7 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune">
+                  <a href="/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune">
                     <h3>Vad du ska säga till slutanvändarna</h3>
                     <p>Förstå de steg som slutanvändarna behöver utföra för att använda sina enheter med Intune och dela information med slutanvändare för att hjälpa dem att utföra uppgifter på egen hand.</p>
                   </a>
@@ -155,8 +155,8 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
                 </li>
                 <li class="column-third">
                   <a href="/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune">
-                    <h3>Begränsa åtkomst till e-post och O365-tjänster</h3>
-                    <p>Använd Intunes funktion för villkorlig åtkomst för att begränsa åtkomsten till företagets e-post och Office 365-tjänster.</p>
+                    <h3>Skydda åtkomst till e-post och O365-tjänster</h3>
+                    <p>Använd Intunes funktion för villkorlig åtkomst för att skydds åtkomsten till företagets e-post och Office 365-tjänster.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -262,14 +262,14 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
       <h2 class="section-heading"><span class="icon icon-note"></span>Fler resurser för Intune</h2>
       <div class="resource-list row">
           <ul class="column-half">
-          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Ge feedback för Intune-funktioner</a></li>
-          <li><a href="https://microsoftintune.uservoice.com/forums/291681-ideas/category/115707-documentation" target="_blank">Ge feedback för dokumentation</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Ge feedback om Intune-funktioner</a></li>
+          <li><a href="https://microsoftintune.uservoice.com/forums/291681-ideas/category/115707-documentation" target="_blank">Ge feedback om dokumentation</a></li>
           <li><a href="https://gallery.technet.microsoft.com/site/search?f%5B0%5D.Type=User&f%5B0%5D.Value=ECM%20Docs%20Team%20-%20MSFT" target="_blank">Nedladdningar av Intune-dokumentation</a></li>
           </ul>
           <ul class="column-half">
           <li><a href="/enterprise-mobility/solutions/fasttrack-center-benefit-for-enterprise-mobility-suite-ems" target="_blank">Fast Track Center för Enterprise Mobility Suite</a></li>
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">TechNet-forum om Microsoft Intune</a></li>
-          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Produktsidan för Intune</a></li>
+          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Intune-produktsida</a></li>
           </ul>
       </div>
       </section>
@@ -285,6 +285,6 @@ ms.openlocfilehash: 61855f89dd2aa70bf9b6d7be72acae90e5463b7d
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

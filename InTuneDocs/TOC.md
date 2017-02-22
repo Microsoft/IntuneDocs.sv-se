@@ -79,6 +79,7 @@
 ## Konfigurera enheter
 ### [Hantera inställningar och funktioner på dina enheter med principer](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Inställningar för iOS](deploy-use/ios-policy-settings-in-microsoft-intune.md)
+#### [Återställa hanterade iOS-enheter](deploy-use/restore-managed-ios-devices-from-backup.md)
 #### [Android- och Samsung KNOX-inställningar](deploy-use/android-policy-settings-in-microsoft-intune.md)
 ##### [Använda en anpassad princip för att skapa en Wi-Fi-profil med en i förväg delad nyckel](deploy-use/pre-shared-key-wi-fi-profile.md)
 ##### [Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter](deploy-use/per-app-vpn-for-android-pulse-secure.md)
@@ -107,7 +108,7 @@
 
 ## [Skydda enheter](deploy-use/protect-your-devices-with-microsoft-intune.md)
 ### [Fjärrlåsning och lösenordsåterställning](deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-### [Skydda Windows-enheter med MFA](deploy-use/multi-factor-authentication-azure-active-directory.md)
+### [Skydda enheter med multifaktorautentisering](deploy-use/multi-factor-authentication-azure-active-directory.md)
 ### [Kontrollera inställningarna för Windows Hello för företag](deploy-use/control-microsoft-passport-settings-on-devices-with-microsoft-intune.md)
 ### [Kringgå aktiveringslåset på iOS](deploy-use/help-protect-ios-devices-with-activation-lock-bypass-for-microsoft-intune.md)
 ### [Principer för att skydda Windows-datorer](deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune.md)
@@ -140,7 +141,7 @@
 ## [Skydda appar och data](deploy-use/protect-apps-and-data-with-microsoft-intune.md)
 ### [Efterlevnadsprinciper för enheter](deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune.md)
 #### [Skapa en enhetsefterlevnadsprincip](deploy-use/create-a-device-compliance-policy-in-microsoft-intune.md)
-#### [ Android](deploy-use/android-compliance-policy-settings-in-microsoft-intune.md)
+#### [Android](deploy-use/android-compliance-policy-settings-in-microsoft-intune.md)
 #### [Android for Work](deploy-use/afw-compliance-policy-settings-in-microsoft-intune.md)
 #### [iOS](deploy-use/ios-compliance-policy-settings-in-microsoft-intune.md)
 #### [Windows och Windows Phone](deploy-use/windows-compliance-policy-settings-in-microsoft-intune.md)
@@ -173,6 +174,7 @@
 #### [Appskyddsprinciper för iOS](deploy-use/ios-mam-policy-settings.md)
 #### [Verifiera appskyddsprinciper](deploy-use/validate-mobile-application-management.md)
 #### [Övervaka efterlevnad av appskyddsprinciper](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
+
 #### [Hantera dataöverföring mellan iOS-appar](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 #### [Administrationskonsolen för Intune för MAM-principer](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
@@ -189,10 +191,10 @@
 ### [Ta bort appar](deploy-use/retire-apps-using-microsoft-intune.md)
 ### [Rensa hanterade företagsdata från appar](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
-## [Resurser om slutanvändarens upplevelse](deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune.md)
-### [Återställa hanterade iOS-enheter](deploy-use/restore-managed-ios-devices-from-backup.md)
-### [Android-appar med MAM-principer](deploy-use/user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-### [iOS-appar med MAM-principer](deploy-use/user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+## [Informera dina slutanvändare om Intune](deploy-use/how-to-educate-your-end-users-about-microsoft-intune.md)
+### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
+### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
+### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
 
 # Utveckla och anpassa appar
 ## [Översikt över Microsoft Intune App SDK](develop/intune-app-sdk.md)
