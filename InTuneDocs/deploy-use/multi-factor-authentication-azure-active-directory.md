@@ -1,11 +1,11 @@
 ---
-title: "Multifaktorautentisering som använder Azure AD | Microsoft Docs"
+title: "Multifaktorautentisering för enhetsregistreringar i Intune | Microsoft Docs"
 description: "Så här kräver du multifaktorautentisering i Azure AD vid enhetsregistrering."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angerobe
-ms.date: 12/12/2016
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: 
@@ -13,26 +13,31 @@ ms.technology:
 ms.assetid: 47abdabd-dcd6-48d8-aade-3f3eefb92ee1
 ROBOTS: 
 translationtype: Human Translation
-ms.sourcegitcommit: 85462d6cb5e3dc6ce8e94fe8fd1bc1c1c2b6e4f3
-ms.openlocfilehash: 6e20eca60886781ae884107a224245639c5f107c
+ms.sourcegitcommit: 30ed470200a830caa3c31be284f27e4b2347a71a
+ms.openlocfilehash: fa14ab5d4297a31d80b48611708e8a78d7513b8d
 
 
 ---
 
-# <a name="multi-factor-authentication-for-microsoft-intune"></a>Multifaktorautentisering för Microsoft Intune
+# <a name="multi-factor-authentication-for-intune-device-enrollments"></a>Multifaktorautentisering för enhetsregistreringar i Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Intune integrerar Azure multifaktorautentisering (MFA) för enhetsregistrering så att du enklare kan skydda dina företagsresurser. MFA kräver autentiseringsfaktorer, till exempel textautentisering, utöver användarnamn och lösenord. Detta stöds för iOS, Android, Windows 8.1 eller senare, eller Windows Phone 8.1 eller senare enheter.
+Intune integrerar Azure multifaktorautentisering (MFA) för enhetsregistrering så att du enklare kan skydda dina företagsresurser.
+
+MFA fungerar genom att kräva två eller flera av följande verifieringsmetoder: 
+
+- Något du känner till (vanligtvis ett lösenord eller PIN-kod).
+- Något du har (betrodda enheter som inte enkelt dupliceras, t.ex. en telefon).
+- Något du är (biometrik).
+
+MFA stöds för iOS, Android, Windows 8.1 eller senare, eller Windows Phone 8.1 eller senare enheter.
 
 > [!NOTE]
->
-> Så här använder du nu MFA i Intune. Det tidigare sättet, som kunder nu migreras från, beskrivs i [Protect Windows devices with multi-factor authentication](protect-windows-devices-with-multi-factor-authentication.md) (Skydda Windows-enheter med multifaktorautentisering).
->
 > I tidigare versioner av Configuration Manager (äldre än version 1610) ser du fortfarande MFA-inställningarna i administrationskonsolen i Configuration Manager. Försök inte att konfigurera MFA i administrationskonsolen för Configuration Manager. Det fungerar nämligen inte. Konfigurera MFA så som beskrivs i det här avsnittet.
 
-### <a name="configuring-intune-to-require-multi-factor-authentication-at-device-enrollment"></a>Så här konfigurerar du Intune så att multifaktorautentisering krävs vid enhetsregistrering
-Gör så här om du vill kräva MFA vid enhetsregistrering:
+### <a name="configure-intune-to-require-multi-factor-authentication-at-device-enrollment"></a>Konfigurera Intune så att multifaktorautentisering krävs vid enhetsregistrering
+Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 
 1. Logga in med dina administratörsautentiseringsuppgifter på [Microsoft Azure-portalen](https://manage.windowsazure.com).
 2. Välj klient.
@@ -54,6 +59,6 @@ Gör så här om du vill kräva MFA vid enhetsregistrering:
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

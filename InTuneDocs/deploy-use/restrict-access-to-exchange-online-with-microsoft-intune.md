@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 185f6fd051946ab118490717ecfb7250521fb764
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: ab4b244e733f973581216f3358fce0653609aaaa
 
 
 ---
@@ -25,24 +26,26 @@ ms.openlocfilehash: 185f6fd051946ab118490717ecfb7250521fb764
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Du kan konfigurera villkorlig åtkomstkontroll för Exchange Online eller Exchange Online Dedicated med hjälp av Microsoft Intune. Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 >Om du har en Exchange Online Dedicated-miljö och vill veta om den har den nya eller gamla konfigurationen kontaktar du din kontoansvariga.
 
-Du kontrollerar e-poståtkomsten till Exchange Online eller till den nya Exchange Online Dedicated-miljön genom att konfigurera villkorlig åtkomst till Exchange Online med hjälp av Microsoft Intune. Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post, O365 och andra tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+## <a name="before-you-begin"></a>Innan du börjar
 
-
-**Innan** du konfigurerar villkorlig åtkomst måste du:
+För att konfigurera villkorlig åtkomst måste du:
 
 -   Ha en **Office 365-prenumeration med Exchange Online (t.ex. E3)**, och användarna måste ha licens för Exchange Online.
 
 - Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
 
 -  Överväg att konfigurera den valfria **tjänst-till-tjänst-anslutningen i Intune** som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange Online och som gör att du kan hantera enhetsinformationen via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen. Du måste inte använda anslutningen för att kunna använda efterlevnadsprinciper eller principer för villkorlig åtkomst, men den krävs för att köra rapporter som utvärderar effekten av villkorlig åtkomst.
+    -  Läs mer om [Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
 
    > [!NOTE]
-   > Konfigurera inte tjänst-till-tjänst-anslutningen om du planerar att använda villkorlig åtkomst för både Exchange Online och Exchange On-premises.
+   > Konfigurera inte tjänst-till-tjänstanslutningen för Intune om du tänker använda villkorlig åtkomst för både Exchange Online och Exchange on-premises.
 
-   Anvisningar för hur du konfigurerar anslutningen finns i avsnittet om [Intunes tjänst-till-tjänst-anslutning](intune-service-to-service-exchange-connector.md).
+### <a name="device-compliance-requirements"></a>Krav på efterlevnad för enhet
 
 När du konfigurerar och tillämpar principer för villkorlig åtkomst för en användare, och innan användaren kan ansluta till sin e-post, måste användarens **enhet**:
 
@@ -54,12 +57,15 @@ När du konfigurerar och tillämpar principer för villkorlig åtkomst för en a
 
 -   Vara **kompatibel** med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper som distribuerats till enheten, eller vara domänansluten till en lokal domän.
 
-Om en princip för villkorlig åtkomst inte uppfylls, ser användaren något av följande meddelanden när hen loggar in:
+### <a name="when-the-device-is-not-compliant"></a>När enheten inte är kompatibel
+
+Om en princip för villkorlig åtkomst inte uppfylls, sätts enheten omedelbart i karantän och användaren får ett e-postmeddelande med något av följande karantänmeddelanden när de loggar in:
 
 - Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med posten i Azure Active Directory.
 
 -   Om enheten utvärderas som icke-kompatibel med reglerna för efterlevnadsprinciper dirigeras användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats eller företagsportalappen som innehåller information om problemet och hur det kan åtgärdas.
 
+### <a name="how-conditional-access-works-with-exchange-online"></a>Så här fungerar villkorlig åtkomst med Exchange Online
 
 Följande diagram illustrerar flödet som används av principerna för villkorlig åtkomst för Exchange Online.
 
@@ -70,7 +76,6 @@ Du kan skydda åtkomsten till e-post i Exchange Online från **Outlook** och and
 
 - Android 4.0 och senare, Samsung Knox Standard 4.0 och senare samt Android for Work
 - iOS 8.0 och senare
-- Windows Phone 8.1 och senare
 
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
@@ -85,7 +90,8 @@ Du kan skydda åtkomst till **Outlook Web Access (OWA)** i Exchange Online när 
 * Chrome (Android)
 * Intune Managed Browser (iOS, Android 5.0 och senare)
 
-**Webbläsare utan stöd blockeras**.
+   > [!IMPORTANT]
+   > **Webbläsare utan stöd blockeras**.
 
 **OWA-appen för iOS och Android kan ändras så att modern autentisering inte används och inte stöds. Åtkomst från OWA-appen måste blockeras via ADFS-anspråksregler.**
 
@@ -204,7 +210,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
         Detta kräver att alla enheter som används för att komma åt **Exchange Online** registreras i Intune och uppfyller principkraven. Klientprogram som använder **modern autentisering** omfattas av principen för villkorlig åtkomst. Om plattformen inte stöds av Intune för närvarande blockeras åtkomsten till **Exchange Online**.
 
         Om alternativet **Alla plattformar** väljs innebär det att Azure Active Directory använder denna princip på alla autentiseringsbegäranden, oavsett vilken plattform som rapporteras av klientprogrammet. Alla plattformar måste registreras och vara kompatibla, med undantag för:
-        *   Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
+        *    Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
         * Plattformar som inte stöds, t.ex. Mac OS. Appar som använder modern autentisering som kommer från dessa plattformar blockeras dock fortfarande.
 
     -   **Vissa plattformar**
@@ -272,6 +278,6 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

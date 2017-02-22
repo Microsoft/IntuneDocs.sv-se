@@ -1,22 +1,25 @@
 ---
-title: Registrera din iOS-enhet i Intune | Microsoft Intune
+title: Registrera din iOS-enhet i Intune | Microsoft Docs
 description: Beskriver hur du registrerar en iOS-enhet i Intune
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
-ROBOTS: 
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 2f92ce22c9e6a87bccc7ab17144d0d52ff6cfc7b
-ms.openlocfilehash: 4daf13d683ada52b098ef24363d2d409dc501c06
+ms.sourcegitcommit: 9530eb45bf027c66c4a36e4cea1ec05c5f15a6e5
+ms.openlocfilehash: c7fa06ea443523c51a79c33af7e8094d7a7777c5
 
 
 ---
@@ -24,9 +27,12 @@ ms.openlocfilehash: 4daf13d683ada52b098ef24363d2d409dc501c06
 
 # <a name="enroll-your-ios-device-in-intune"></a>Registrera din iOS-enhet i Intune
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om du installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 
-Om du försöker registrera en macOS-enhet kan du läsa mer i [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
+<iframe src="https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+
+> [!NOTE]
+> Om du försöker registrera en macOS-enhet, t.ex. en MacBook Pro eller iMac, [kan du prova de här anvisningarna i stället](enroll-your-device-in-intune-macos.md).
 
 **Innan du börjar**
 
@@ -53,7 +59,7 @@ Om du försöker registrera en macOS-enhet kan du läsa mer i [Registrera en mac
 
 5.  På skärmen **Vad kommer härnäst** kan du läsa om vad som händer under registreringen. Tryck sedan på **Registrera**.
 
-    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
+     ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
 
 6.  Tryck på **Installera** på skärmen **Installera profil** och ange ditt lösenord om du uppmanas att göra det.
 
@@ -65,15 +71,15 @@ Om du försöker registrera en macOS-enhet kan du läsa mer i [Registrera en mac
 
 8.  Tryck på **Installera** för att visa att du har läst varningen.
 
-    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
+       ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
 
 9.  Tryck på **Förtroende**.
 
-    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
+       ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
 
 10.  När skärmen ändras och visar att installationen av profilen är klar trycker du på **Klar**.
 
-    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
+     ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
 
     Ett meddelande om att enheten registreras visas på skärmen.
 
@@ -91,11 +97,10 @@ Om du försöker registrera en macOS-enhet kan du läsa mer i [Registrera en mac
 
 Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
 
-
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

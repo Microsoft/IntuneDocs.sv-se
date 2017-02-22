@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 590a5df066c69e2369d0b586d52def1abd64a379
+ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
+ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
 
 
 ---
@@ -24,18 +25,19 @@ ms.openlocfilehash: 590a5df066c69e2369d0b586d52def1abd64a379
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
+Du kan konfigurera villkorlig åtkomstkontroll för e-post i Exchange On-premises eller till äldre Exchange Online Dedicated med hjälp av Microsoft Intune.
+Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
+
 > [!NOTE]
 > Om du har en Exchange Online Dedicated-miljö och vill veta om den har den nya eller gamla konfigurationen kontaktar du din kontoansvariga.
 
+## <a name="before-you-begin"></a>Innan du börjar
 
-Om du vill kontrollera e-poståtkomsten till Exchange On-premises eller till den äldre Exchange Online Dedicated-miljön kan du konfigurera villkorlig åtkomst till Exchange On-premises med hjälp av Microsoft Intune.
-Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
-
-**Innan** du konfigurerar villkorlig åtkomst kontrollerar du följande:
+Se till att kontrollera följande:
 
 -   Din Exchange-version måste vara **Exchange 2010 eller senare**. Matrisen för Exchange Server-klientåtkomstservern (CAS) stöds.
 
--   Du måste använda den **lokala Exchange Connector**, som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange On-premises. Den här anslutningen gör att du kan hantera enheter via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen. Mer information om anslutningsappen finns i avsnittet om [Intunes lokala Exchange-anslutningsapp](intune-on-premises-exchange-connector.md).
+-   Du måste använda [Intune On-Premises Connector](intune-on-premises-exchange-connector.md), som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange On-premises. Den här anslutningen gör att du kan hantera enheter via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen.
 
     -   Intune-konsolens lokala Exchange Connector är specifik för din Intune-klientorganisation och kan inte användas med andra innehavare. Vi rekommenderar att du också kontrollerar att Exchange Connector för klienten är installerad **på endast en dator**.
 
@@ -47,6 +49,8 @@ Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åt
 
 -   Du måste konfigurera **Exchange ActiveSync** med certifikatbaserad autentisering eller genom att användaren anger autentiseringsuppgifter.
 
+### <a name="device-compliance-requirements"></a>Krav på efterlevnad för enhet
+
 När du konfigurerar och tillämpar principer för villkorlig åtkomst för en användare, och innan användaren kan ansluta till sin e-post, måste användarens **enhet**:
 
 -  Antingen vara en domänansluten dator eller **registrerad** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
@@ -57,11 +61,13 @@ När du konfigurerar och tillämpar principer för villkorlig åtkomst för en a
 
 -   Vara **kompatibel** med eventuella [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper som har distribuerats till den enheten.
 
+### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Så här fungerar villkorlig lokal åtkomst till Exchange on-premises
+
 Följande diagram illustrerar flödet som används av principer för villkorlig åtkomst för Exchange On-premises för att utvärdera om enheter ska tillåtas eller blockeras.
 
 ![Diagram som visar beslutspunkter som avgör om en enhet kan komma åt Exchange On-premises eller om den ska blockeras](../media/ConditionalAccess8-2.png)
 
-Om en princip för villkorlig åtkomst inte uppfylls, ser användaren något av följande meddelanden när hen loggar in:
+Om en princip för villkorlig åtkomst inte uppfylls, öppnas ett tidsfönster på 10 minuter mellan det att enheten blockeras och användaren får något av följande karantänmeddelanden vid inloggning:
 
 - Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med enhetsposten i Azure Active Directory.
 
@@ -136,6 +142,6 @@ Följande stöds:
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Förutsättningar | Microsoft Docs"
-description: "Länkar till krav och förutsättningar för Intune"
+title: "Enheter som stöds – Microsoft Intune | Microsoft Docs"
+description: "Visar en lista över enhetsplattformar och webbläsare som stöds för Intunes enhetshantering"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/10/2017
+ms.date: 02/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,19 @@ ms.technology:
 ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e2810513646828cc5da734f3af9cc8d81e0c03fc
-ms.openlocfilehash: 444d08d1a5e709572efbc2f639cef037453b9c0e
+ms.sourcegitcommit: b3732d0c6461f9fb8462ae5584055204d597aae0
+ms.openlocfilehash: 0af4f49713a65900079d69a09f20d210797c935c
 
 
 ---
 
-# <a name="prerequisites-to-getting-started-with-intune"></a>Förutsättningar för att komma igång med Intune
+# <a name="supported-devices-and-browsers"></a>Enheter och webbläsare som stöds
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Den här artikeln är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. Hjälp om hur du installerar Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Innan du börjar konfigurera Microsoft Intune, bör du granska följande krav:
 
@@ -74,6 +77,6 @@ Endast användare med behörighet som tjänsteadministratör eller innehavaradmi
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

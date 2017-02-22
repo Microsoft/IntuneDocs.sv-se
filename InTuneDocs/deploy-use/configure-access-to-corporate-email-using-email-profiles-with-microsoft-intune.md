@@ -1,11 +1,11 @@
 ---
-title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Intune"
+title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Docs"
 description: "Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/10/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,17 @@ ms.technology:
 ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f0c5920f7cc46e40bf4d1795a68ba1d67840fcfa
-ms.openlocfilehash: 6ac7034ba0713c7b6bdd28c7b53b99c247d3aeb3
+ms.sourcegitcommit: 3ee87c8f6104b06c8a9492566ff160540624f17e
+ms.openlocfilehash: 8f35cf70d0c97afc88eba38b1eaff5e2e38425d0
 
 
 ---
 
 # <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Många mobila plattformar har en intern e-postklient som levereras som en del av operativsystemet. En del av dessa klienter kan konfigureras med e-postprofiler, enligt beskrivningen i det här avsnittet.
 
@@ -33,11 +34,11 @@ Om du behöver vidta ytterligare åtgärder mot dataförlust (DLP) kan du använ
 IT-administratörer eller användare kan också välja att installera alternativa e-postklienter, t.ex. Microsoft Outlook för Android eller iOS. Dessa e-postklienter stöder inte e-postprofiler och kan inte konfigureras med hjälp av e-postprofiler i Microsoft Intune.  
 
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
--   Windows Phone 8.1 och senare
--   Windows 10 (för datorer), Windows 10 Mobile, och senare
--   iOS 8.0 och senare
--   Samsung KNOX Standard (4.0 och senare)
--   Android for Work
+-    Windows Phone 8.1 och senare
+-    Windows 10 (för datorer), Windows 10 Mobile, och senare
+-    iOS 8.0 och senare
+-    Samsung KNOX Standard (4.0 och senare)
+-    Android for Work
 
 >[!NOTE]
 >Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen.
@@ -88,7 +89,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
 
     -   **E-postprofil (Android for Work – Gmail)**
 
-    -   **E-postprofil (Android for Work – Nine Work)**
+    -    **E-postprofil (Android for Work – Nine Work)**
 
     Du kan bara skapa och distribuera en princip för anpassad e-postprofil. Rekommenderade inställningar är inte tillgängliga.
 
@@ -134,10 +135,10 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 
 > [!NOTE]
 > - För Android for Work distribuerar du även Gmail- eller Nine Work-apparna, förutom lämplig e-postprofil.
-> - Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem.
+> - Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem. Observera att du inte kan ta bort en e-postprofil på det här sättet om det är den enda e-postprofilen på en enhet.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

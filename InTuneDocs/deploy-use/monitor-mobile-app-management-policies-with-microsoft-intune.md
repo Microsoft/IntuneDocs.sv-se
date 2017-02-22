@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 02/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,14 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fe44466fbcef67d02b16d3d2d335f657251451d3
-ms.openlocfilehash: e60d707833ee276971000411e50564f39b41b207
+ms.sourcegitcommit: 22c30f51bf83219053f97310ed1830ad9e01acd8
+ms.openlocfilehash: bd270cd4b04894d4824487d36ea4f0c1929dd568
 
 
 ---
 
 # <a name="monitor-mobile-app-management-policies-with-microsoft-intune"></a>Övervaka hanteringsprinciper för mobilappar med Microsoft Intune
-Du kan övervaka efterlevnadsstatusen för principer för hantering av mobila appar (MAM) som du tillämpat på användare på bladet för Intunes appskydd på [Azure-portalen](https://portal.azure.com). Du kan hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
+Du kan övervaka efterlevnadsstatusen för de hanteringsprinciper för mobilappar (MAM) som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
 
 Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
@@ -36,7 +36,7 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 Följ de tre stegen nedan för att öppna sammanfattningsvyn:
 
 1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina autentiseringsuppgifter.
-2. Välj **Fler tjänster**, och ange "Intune".
+2. Välj **Fler tjänster** och skriv **Intune** i filtrets textruta.
 3. Välj **Intune App Protection**.
 
 På bladet **Hantering av mobilprogram i Intune** visas en sammanfattning av efterlevnadsstatusen:
@@ -95,8 +95,6 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
 -   **Rapport om appskyddsappar:** Tillhandahåller två olika statusar om appskydd som administratörer kan välja innan de skapar rapporten. Statusen kan vara skyddad eller oskyddad.
 
-    ![Skärmbild-1](../media/MAM-reporting-1.png)
-
     -   Användarstatus för hanterad MAM-aktivitet (Skyddad): Den här rapporten ger en översikt över hur alla hanterade MAM-appar opererar, per användare.
 
         -   Den visar alla appar som är mål för MAM-principer för varje användare. Den visar även status för varje app, som incheckade med MAM-principer eller som mål för MAM-principer men inte incheckade.
@@ -109,6 +107,27 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
 ![Skärmbild-2](../media/MAM-reporting-4.png)
 
+## <a name="table-grouping"></a>Tabellgruppering
+
+När data för **användarrapporten för appskydd** visas kan du sammanställa informationen enligt följande:
+
+- **Verifieringsresultat:** Informationen visas grupperad efter appskyddsstatus, vilken kan vara fel, varning eller klar.
+- **Appnamn:** Informationen visas grupperad efter appar (det faktiska appnamnet) som fel, varning eller klar.
+
+## <a name="export-app-protection-activities-to-csv"></a>Exportera appskyddsaktiviteter till CSV
+
+Du kan exportera alla dina appskyddsprincipsaktiviteter till en enda CSV-fil. Detta kan du ha nytta av om du vill analysera alla de appskyddsstatusar som rapporteras från användarna.
+
+Generera appskyddsrapporten genom att följa dessa anvisningar:
+
+1. Välj Appskyddsrapport på bladet Hantering av mobilappar i Intune.
+
+    ![Skärmbild&6;](../media/app-protection-report-csv-2.png)
+
+2. Välj först Ja om du vill spara rapporten, välj sedan Spara som och ange den mapp som du vill spara rapporten i.
+
+    ![Skärmbild&7;](../media/app-protection-report-csv-1.png)
+
 ## <a name="see-also"></a>Se även
 [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
@@ -117,6 +136,6 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

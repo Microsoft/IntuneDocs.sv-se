@@ -14,8 +14,8 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
-ms.openlocfilehash: 7cef6b6eac01c0056f7c75a7010ee280932a5dfb
+ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
+ms.openlocfilehash: 4b1b466c62ac1c8e03bc6cebd5e214649160185f
 
 
 ---
@@ -56,8 +56,8 @@ Alla metoder, förutom då användarna själva installerar Intune-klientprogramv
 
 Gå till den mapp där installationsfilerna för klientprogramvaran finns på de datorer där klienten programvara ska installeras. Kör sedan **Microsoft_Intune_Setup.exe** för att installera klientprogramvaran.
 
-    > [!NOTE]
-    > The status of the installation is displayed when you hover over the icon in the taskbar on the client computer.
+> [!NOTE]
+> Installationsförloppet visas när du hovrar över ikonen i verktygsfältet på klientdatorn.
 
 ## <a name="deploy-the-client-software-by-using-group-policy"></a>Distribuera klientprogramvaran automatiskt med hjälp av en grupprincip
 
@@ -74,7 +74,7 @@ Gå till den mapp där installationsfilerna för klientprogramvaran finns på de
 
 3.  Använd grupprinciper för att distribuera programvaran till datorer i nätverket.
 
-    Mer information om hur du använder grupprinciper för att automatiskt distribuera programvara finns i dokumentationen för Windows Server.
+    Mer information om hur du använder grupprinciper för automatisk distribution av programvara finns i [Grupprincip för nybörjare](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Distribuera klientprogramvaran som en del av en avbildning
 Du kan distribuera Intune-klientprogramvaran till datorer som en del av en operativsystemsavbildning med hjälp av följande procedur som vägledning:
@@ -100,11 +100,11 @@ Du kan distribuera Intune-klientprogramvaran till datorer som en del av en opera
 
 5.  Avbilda referensdatorn och distribuera avbildningen till måldatorerna.
 
-När måldatorn startar efter att installationsprogrammet för Windows slutförts, skapas registernyckeln **WindowsIntuneEnrollPending** . Registreringspaketet kontrollerar om datorn har registrerats. Om datorn har registrerats, vidtas inga ytterligare åtgärder. Om datorn inte har registrerats, skapar registreringspaketet en automatisk registreringsuppgift för Microsoft Intune.
+    När måldatorn startar efter att installationsprogrammet för Windows slutförts, skapas registernyckeln **WindowsIntuneEnrollPending** . Registreringspaketet kontrollerar om datorn har registrerats. Om datorn har registrerats, vidtas inga ytterligare åtgärder. Om datorn inte har registrerats, skapar registreringspaketet en automatisk registreringsuppgift för Microsoft Intune.
 
-När den automatiska registreringsuppgiften körs vid nästa schemalagda tidpunkt, kontrolleras förekomsten av registervärdet **WindowsIntuneEnrollPending** och ett försök görs för att registrera måldatorn i Intune. Om registreringen misslyckas av någon anledning försöks registreringsprocessen nästa gång uppgiften körs. Återförsöken fortsätter under en månad.
+    När den automatiska registreringsuppgiften körs vid nästa schemalagda tidpunkt, kontrolleras förekomsten av registervärdet **WindowsIntuneEnrollPending** och ett försök görs för att registrera måldatorn i Intune. Om registreringen misslyckas av någon anledning försöks registreringsprocessen nästa gång uppgiften körs. Återförsöken fortsätter under en månad.
 
-Den automatiska registreringsuppgiften för Intune, registervärdet **WindowsIntuneEnrollPending** och kontocertifikatet tas bort från måldatorn antingen när registreringen lyckas eller efter en månad (beroende på vad som kommer först).
+    Den automatiska registreringsuppgiften för Intune, registervärdet **WindowsIntuneEnrollPending** och kontocertifikatet tas bort från måldatorn antingen när registreringen lyckas eller efter en månad (beroende på vad som kommer först).
 
 ## <a name="instruct-users-to-self-enroll"></a>Be användarna att göra registreringen själv
 
@@ -143,6 +143,6 @@ Använd en av följande procedurer som hjälper dig att övervaka och kontroller
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 
