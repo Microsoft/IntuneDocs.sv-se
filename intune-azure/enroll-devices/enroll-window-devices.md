@@ -4,7 +4,7 @@ description: "Förhandsversion av Intune Azure: Aktivera hantering av mobila enh
 keywords: 
 author: staciebarker
 manager: stabar
-ms.date: 02/09/17
+ms.date: 02/15/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,8 +13,8 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 45c32cf08e4d6fd570af287ed64411edc9d9b394
-ms.openlocfilehash: ec623e7d102e8a8ddf1cc86a750f592ca765cfce
+ms.sourcegitcommit: a4103a4cef393df585b9b9daa92ab63dd7805e9e
+ms.openlocfilehash: a55118e60750616f8b058846148364cbeccb5784
 
 
 ---
@@ -25,13 +25,12 @@ ms.openlocfilehash: ec623e7d102e8a8ddf1cc86a750f592ca765cfce
 
 Använd någon av följande metoder för att konfigurera registrering av Windows-enheter:
 
-- **[Windows 10 och Windows 10 Mobile, automatisk registrering med Azure Active Directory Premium](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)** 
+- [**Windows 10 och Windows 10 Mobile, automatisk registrering med Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)
  -  Den här metoden gäller endast för Windows 10- och Windows 10 Mobile-enheter.
  -  Du måste ha Azure Active Directory Premium för att kunna använda den här metoden. Annars använder du registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
  -  Om du väljer att inte aktivera automatisk registrering, kan du använda registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
 
-
-- **[Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME](#set-up-windows-8.1-and-windows-phone-8.1-enrollment-by-configuring-cname)** 
+- [**Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME**](#set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname)
  - Du måste använda den här metoden för att kunna registrera Windows 8.1- och Windows Phone 8.1-enheter.
 
 
@@ -54,8 +53,6 @@ Du kan låta användarna installera och registrera sina enheter med hjälp av In
  Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
 
     Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas, uppmanas användarna att manuellt ange MDM-servernamnet, enrollment.manage.microsoft.com.
-
-    Om du har en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till manage.microsoft.com så föreslår vi att du ersätter den med en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com. Den här ändringen rekommenderas eftersom slutpunkten manage.microsoft.com kommer att föråldras för registreringar i en framtida version.
 
     Om det finns fler än en verifierad domän, skapar du en CNAME-post för varje domän. CNAME-resursposten måste innehålla följande information:
 
@@ -88,6 +85,6 @@ Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen til
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
