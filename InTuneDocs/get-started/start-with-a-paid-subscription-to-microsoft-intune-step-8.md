@@ -1,11 +1,11 @@
 ---
-title: Aktivera enhetsregistrering | Microsoft Intune
+title: Aktivera enhetsregistrering | Microsoft Docs
 description: "Ange utfärdare för hantering av mobila enheter och aktivera registrering av iOS-, Windows-, Android- och Mac-enheter."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,20 @@ ms.technology:
 ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 031cf995da4fa46b244b65a6b1c51b6a1aa00d9f
-ms.openlocfilehash: 8c3076b26844669f9927478b5847f88f2265c6c9
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
 
 
 ---
 
-# <a name="enroll-mobile-devices-and-install-an-app"></a>Registrera mobila enheter och installera en app
+# <a name="enable-enrollment-for-mobile-devices"></a>Aktivera registrering av mobila enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Det här avsnittet beskriver hur en Intune-administratör kan aktivera registreringen av mobila enheter. Hjälp med att använda Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions). 
+
 Om du vill konfigurera hantering av mobila enheter med Intune måste du först ange *hanteringsutfärdare för mobila enheter*, som identifierar den tjänst som kan hantera enheter som är kopplade till ditt konto. I den här vägledningen antar vi att du använder tjänsten Intune i stället för System Center Configuration Manager. När utfärdare för Hantering av mobila enheter har angetts kan du aktivera hantering för enhetsplattformar och registrera dina enheter med företagsportalappen.
 
 ## <a name="enable-device-enrollment"></a>Aktivera registrering av enheter
@@ -43,7 +49,7 @@ Registreringen måste aktiveras för iOS, Mac och Android för arbetsenheter som
 
 Aktivera registrering av enheter för den enhetsplattform som du vill hantera. Beroende på din plattform behövs olika krav:
 
--  [iOS och macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune.md)
+-  [iOS och macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 -  [Window PC](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 -  [Window 10 Mobile och Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 - [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
@@ -66,6 +72,6 @@ Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

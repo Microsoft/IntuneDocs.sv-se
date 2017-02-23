@@ -13,18 +13,19 @@ ms.technology:
 ms.assetid: 7d6dae94-a833-40b7-9016-14ea234bb33c
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fe44466fbcef67d02b16d3d2d335f657251451d3
-ms.openlocfilehash: fa8d839da1cf0b2d207edc0b28de8a714ba0df02
+ms.sourcegitcommit: e2503c44f434e67f45064f28d1e921eb5accb0b6
+ms.openlocfilehash: 2707e3fae32e73aa17696886f493932e903ffc10
 
 
 ---
 
-# <a name="azure-portal-for-microsoft-intune-mam-policies"></a>Azure Portal för Microsoft Intune MAM-principer
+# <a name="azure-portal-for-intune-app-protection-policies"></a>Azure-portalen för Intune-appskyddsprinciper
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-På Azure Portal kan du skapa och hantera principer för hantering av mobila appar (MAM) för:
+Du använder Azure-portalen för att skapa och hantera appskyddsprinciper för:
 
 - Appar som körs på enheter **som har registrerats och som hanteras i Intune**.
 
@@ -32,9 +33,9 @@ På Azure Portal kan du skapa och hantera principer för hantering av mobila app
 - Appar som körs på enheter som **har registrerats i en MDM-lösning från tredje part**.
 
 >[!IMPORTANT]
-> Azure Portal är den nya administratörskonsolen för att skapa MAM-principer, men du kan även skapa en MAM-princip som stöder appar för enheter som har registrerats i Intune via [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) för MDM-scenarier.
+> Azure-portalen är den nya administratörskonsolen för att skapa appskyddsprinciper, men du kan även skapa en appskyddsprincip som stöder appar för enheter som har registrerats i Intune via [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) för MDM-scenarier.
 
-> Du kanske inte ser alla MAM-principinställningar som är tillgängliga i Intune-administratörskonsolen. Om du dessutom skapar MAM-principer i både Intune-administratörskonsolen och på Azure Portal åsidosätter principerna som skapats i Azure Portal de som skapats i Intune-administratörskonsolen. I det här scenariot tillämpas Azure Portals MAM-principer på appar och distribueras till användare.
+> Du kanske inte ser alla inställningar för appskyddsprinciper i Intune-administratörskonsolen. Och om du skapar appskyddsprinciper i både Intune-administratörskonsolen och på Azure-portalen åsidosätter principerna som du skapat på Azure-portalen de som du skapat i Intune-administratörskonsolen. I det här scenariot används appskyddsprinciperna på Azure-portalen för apparna och distribueras till användare.
 
 
 ## <a name="sign-in-to-the-azure-portal-and-customize-your-start-page"></a>Logga in på Azure-portalen och anpassa startsidan
@@ -47,11 +48,11 @@ På Azure Portal kan du skapa och hantera principer för hantering av mobila app
 
     ![Skärmbild av instrumentpanelen i Azure portal](../media/AppManagement/AzurePortal_MAMStartboard_NoMAM.png)
 
-3.  Öppna menyn **Bläddra** och leta reda på **Intune**.
+3.  Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
     ![Skärmbild av Bläddra-menyn med Intune markerat](../media/AppManagement/MAM-Azure-Portal-1.png)
 
-4.  Välj **Intune** > **Hantering av mobilprogram i Intune** > **Inställningar**.
+4.  Välj **Intune-appskydd** > **Hantering av mobilprogram i Intune** > **Alla inställningar**.
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/MAM-Azure-Portal-2.png)
 
@@ -62,10 +63,10 @@ På Azure Portal kan du skapa och hantera principer för hantering av mobila app
     ![Skärmbild av instrumentpanelen med den fästa Intune-panelen](../media/AppManagement/AzurePortal_MAM_Startboard_withMAM.png)
 
 ## <a name="next-steps"></a>Nästa steg
-[Förbered dig för att konfigurera hanteringsprinciper för mobilappar](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+[Bli redo att konfigurera appskyddsprinciper](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

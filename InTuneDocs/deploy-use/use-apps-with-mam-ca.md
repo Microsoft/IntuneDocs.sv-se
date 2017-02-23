@@ -13,21 +13,22 @@ ms.technology:
 ms.assetid: 71dcf9bc-bfd1-4e06-b7ad-14b33a2288d0
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 22746475bf50f8e4775c81e6833428c7f2ef9eba
+ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
+ms.openlocfilehash: 2ab3769ff878cf8b6223e4f46244f16eab8743a0
 
 
 ---
-# <a name="what-to-expect-when-using-an-app-with-mam-ca"></a>Vad du kan förvänta dig när du använder en app med MAM CA
+# <a name="what-to-expect-when-using-an-app-with-app-based-ca"></a>Vad som händer när du använder en app med appbaserad CA
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-MAM CA verifierar det godkända programmets identitet med hjälp av en koordinatorapp som måste finnas på enheten:
+Appbaserad CA verifierar det godkända programmets identitet med hjälp av en koordinatorapp som måste finnas på enheten:
 *  På **iOS** fungerar **Azure Authenticator-appen** som en koordinatorapp.
 * På **Android** fungerar **Intune-företagsportalappen** som en koordinatorapp. 
 
-Slutanvändare som loggar in för första gången till en app som stöds av MAM CA, t.ex. OneDrive eller Outlook, uppmanas att installera koordinatorappen och registrera enheten med Azure AD. Registrering av enheter i Azure AD (tidigare kallat Workplace Join) skapar en post för enheten och ett certifikat mot vilket token utfärdas.  Detta är **inte** **MDM-registrering**. Inga hanteringsprofiler eller principer tillämpas och ingen inventering av appar på enheten utförs.  Processen att installera koordinatorappen och att registrera enheten sker endast den första gången en hanterad app används.
+Slutanvändare som loggar in för första gången i en app som stöds av appbaserad CA, t.ex. OneDrive eller Outlook, uppmanas att installera koordinatorappen och registrera enheten med Azure AD. Registrering av enheter i Azure AD (tidigare kallat Workplace Join) skapar en post för enheten och ett certifikat mot vilket token utfärdas.  Detta är **inte** **MDM-registrering**. Inga hanteringsprofiler eller principer tillämpas och ingen inventering av appar på enheten utförs.  Processen att installera koordinatorappen och att registrera enheten sker endast den första gången en hanterad app används.
 
 Här följer en lista över egenskaper som härleds direkt från enheten:
 
@@ -45,16 +46,14 @@ Du kan ta bort enhetsregistreringen via Azure AD-administrationskonsolen, vilket
 
 
 
-## <a name="mam-ca-with-conditional-access-based-on-device-compliance"></a>MAM CA med villkorlig åtkomst baserat på enhetens efterlevnad  
+## <a name="app-based-ca-with-conditional-access-based-on-device-compliance"></a>Appbaserad CA med villkorlig åtkomst baserat på enhetsefterlevnad  
 
-Du kan konfigurera [Villkorlig åtkomst baserat på enhetens efterlevnad](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**Enhets-CA**) i [Intune-administratörskonsolen](https://manage.microsoft.com) eller [Azure AD Premium-hanteringskonsolen] (https://manage.windowsazure.com). Enhets-CA kräver att användare ansluter till Exchange Online via Intune-hanterade enheter som är kompatibla med Intunes policy för enhetsefterlevnad eller genom domänanslutna datorer.  Om en användare hör till en eller flera säkerhetsgrupper som hanteras av både MAM CA- och enhets-CA-principer så måste användaren uppfylla ett av dessa två krav:
-* Appen som används för att komma åt tjänsten är en mobilapp som stöds av MAM CA och den enhet som appen körs på har **iOS Authenticator (för iOS-enheter)**, eller **Företagsportalappen (för Android-enheter)** installerad.
+Du kan konfigurera [Villkorlig åtkomst baserat på enhetens efterlevnad](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**Enhets-CA**) i [Intune-administratörskonsolen](https://manage.microsoft.com) eller [Azure AD Premium-hanteringskonsolen] (https://manage.windowsazure.com). Enhets-CA kräver att användare ansluter till Exchange Online via Intune-hanterade enheter som är kompatibla med Intunes policy för enhetsefterlevnad eller genom domänanslutna datorer.  Om en användare hör till en eller flera säkerhetsgrupper som hanteras av principer för både appbaserad CA och enhets-CA, måste användaren uppfylla ett av dessa två krav:
+* Appen som används för att komma åt tjänsten är en mobilapp som stöds av 
+* och **iOS Authenticator (för iOS-enheter)** eller **företagsportalappen (för Android-enheter)** måste vara installerat på den enhet som appen körs på.
 * Enheten som används för att komma åt tjänsten **hanteras av Intune och är kompatibel** med Intunes policy för enhetsefterlevnad, eller är en **domänansluten dator**.  Här följer några exempel för att illustrera detta:
-  * Om en användare försöker ansluta från den **interna iOS e-postappen** måste de använda en **hanterad och kompatibel enhet** eftersom interna e-postappar inte stöds av MAM CA.
+  * Om en användare försöker ansluta från den **interna iOS e-postappen** måste användarens enhet **vara hanterad och kompatibel** eftersom interna e-postappar inte stöds av appbaserad CA.
   * Om en användare försöker ansluta från en **Windows home PC** (Windows Home-dator) kommer **Device CA policy** (principen för enhets-CA) att gälla och kräva att användaren använder en domänansluten dator.
-
-
-
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa en Exchange Online-princip för MAM-appar](mam-ca-for-exchange-online.md)
@@ -63,10 +62,10 @@ Du kan konfigurera [Villkorlig åtkomst baserat på enhetens efterlevnad](restri
 
 ### <a name="see-also"></a>Se även
 
-[Skydda appdata med MAM-principer](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+[Skydda appdata med appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

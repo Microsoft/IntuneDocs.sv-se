@@ -1,11 +1,11 @@
 ---
-title: "Lägg till appar | Microsoft Intune"
+title: "Lägg till appar | Microsoft Docs"
 description: "Innan du börjar distribuera appar med Intune är det bra om du bekantar dig med de olika begreppen i det här avsnittet."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 2b770f4f-6d36-41e4-b535-514b46e29aaa
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: f896f51c21beaf7561168f3f622cfc7b0d0c8068
+ms.sourcegitcommit: f7998da5566f9b963807b613a47d35b629620f96
+ms.openlocfilehash: 9e8b9e1c935dd771c3e37bea5a552fba2374bf68
 
 
 ---
 
 # <a name="add-apps-with-microsoft-intune"></a>Lägg till appar med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Innan du börjar distribuera appar med Microsoft Intune är det bra om du bekantar dig med de olika begreppen i det här avsnittet. Det hjälper dig att förstå vilka appar som du kan distribuera till vilken plattform. Det hjälper dig också att förstå de krav som måste vara uppfyllda innan du börjar distribuera appar.
 
 ## <a name="app-types-that-you-can-deploy"></a>Apptyper som du kan distribuera
@@ -60,7 +64,7 @@ Innan du börjar använda programvaruutgivaren måste du installera den komplett
 ## <a name="cloud-storage-space"></a>Molnlagringsutrymme
 Alla appar som du skapar med installationstypen Programinstallation (till exempel en verksamhetsspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. 20 GB lagringsutrymme ingår i den fullständiga prenumerationen.
 
-Du kan se hur mycket utrymme som du använder i noden **Lagringsanvändning** i arbetsytan **Admin**.
+Du kan se hur mycket utrymme som du använder i noden **Lagringsanvändning** i arbetsytan **Admin**. Du kan köpa ytterligare lagringsutrymme för Intune med din ursprungliga köpmetod.  Om du betalade via faktura eller med kreditkort besöker du [prenumerationshanteringsportalen](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Annars kontaktar du din partner eller säljrepresentant.
 
 Krav för lagringsutrymme i molnet:
 
@@ -93,6 +97,6 @@ Du måste lägga till appar i Intune-konsolen innan du kan distribuera dem. Du k
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

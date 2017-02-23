@@ -1,11 +1,11 @@
 ---
-title: "Felsök enhetsregistrering | Förhandsversion av Intune Azure | Microsoft Docs"
-description: "Förhandsversion av Intune Azure: Lär dig felsökning av enhetsregistrering."
+title: "Felsöka enhetsregistrering | Förhandsversion av Intune Azure | Microsoft Docs"
+description: "Förhandsversion av Intune Azure: Lär dig hur du felsöker enhetsregistrering."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/010/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,8 @@ ms.assetid: c324c74e-e225-40ad-88b7-72a6d9ea09b5
 ms.reviewer: damionw
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 151e71f719b459a4f2c9612035201908d2610980
-ms.openlocfilehash: 78f0ff9a1b7bdaf30721d8702c36ff0e613b109e
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 8d56b6600ca86faabbb50d29405969385eb29940
 
 
 ---
@@ -29,7 +29,7 @@ Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhe
 
 ## <a name="initial-troubleshooting-steps"></a>Inledande felsökningssteg
 
-Säkerställ att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Se [Registrera Android- och Standard Knox-enheter](/intune-azure/enroll-devices/enroll-android-and-knox-standard-devices.md) för länkar till registreringssteg för varje plattform.
+Kontrollera att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Länkar till registreringssteg för varje plattform finns i [Registrera Android- och Standard Knox-enheter](/intune-azure/enroll-devices/enroll-android-and-knox-standard-devices.md).
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
@@ -46,7 +46,7 @@ Dessa problem kan uppstå på alla enhetsplattformar.
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrollera antalet enheter som har registrerats och som tillåts
 
-På Intune-bladet i Azure-portalen går du till **Registrera enheter** > **Registreringsbegränsningar** och kontrollerar att användaren inte har mer än maximalt 15 enheter tilldelade.
+På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På Intune-bladet i Azure-portalen går du till **Registrera enheter** > **Registreringsbegränsningar** och kontrollerar att användaren inte har mer än maximalt 15 enheter tilldelade.
 
 <!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
@@ -218,16 +218,16 @@ Certifikatfelet uppstår eftersom Android-enheter kräver att mellanliggande cer
 
 Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
 
-1.  Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
-2.  Expandera **Personligt** och välj **Certifikat**.
-3.  Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
-4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
-5.  På varje överordnat certifikat väljer du **Visa certifikat**.
-6.  Välj fliken **Information** och välj **Kopiera till fil... **.
-7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
-8.  Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
-9.  Starta om AD FS-servrarna.
-10. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
+1.    Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
+2.    Expandera **Personligt** och välj **Certifikat**.
+3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
+4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
+5.    På varje överordnat certifikat väljer du **Visa certifikat**.
+6.    Välj fliken **Information** och välj **Kopiera till fil... **.
+7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
+8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
+9.    Starta om AD FS-servrarna.
+10.    Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 
 **Så här kontrollerar du att certifikatet har installerats**:
@@ -389,6 +389,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

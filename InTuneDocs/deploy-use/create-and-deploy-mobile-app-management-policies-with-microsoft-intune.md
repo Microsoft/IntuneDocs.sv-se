@@ -13,18 +13,19 @@ ms.technology:
 ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9909c6064483e8b19e2e324943fc3d54b1228b38
-ms.openlocfilehash: 7b0eda848d0f08d7657913ed4d7564db264e16a7
+ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
+ms.openlocfilehash: f4bc5a2092585c91e224c390eaae717985055b10
 
 
 ---
 
-# <a name="create-and-deploy-mobile-app-management-policies-with-microsoft-intune"></a>Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune
+# <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Skapa och distribuera appskyddsprinciper med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure Portal**. Azure Portal är en ny administratörskonsol som används för att skapa MAM-principer och vi rekommenderar att du använder den här portalen när MAM-principerna skapas. Azure Portal har stöd för följande MAM-scenarier:
+Det här avsnittet beskriver hur du skapar en appskyddsprincip på **Azure-portalen**. Azure-portalen är den nya administratörskonsolen för att skapa appskyddsprinciper och vi rekommenderar att du använder den här portalen när du skapar appskyddsprinciper. Azure Portal har stöd för följande MAM-scenarier:
 
 - Enheter som har registrerats i Intune.
 - Enheter som hanteras av en MDM-lösning från tredje part.
@@ -33,14 +34,14 @@ Det här avsnittet beskriver processen för att skapa en MAM-princip i **Azure P
 >[!IMPORTANT]
 Tänk på följande om du hanterar dina enheter med **Intune-administratörskonsolen**:
 
-> * Du kan skapa en MAM-princip som stöder appar för enheter som registrerats i Intune med hjälp av [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
-> * MAM-principer som skapas i Intune-administratörskonsolen kan inte importeras till Azure Portal.  MAM-principer måste återskapas i Azure Portal.
+> * Du kan skapa en appskyddsprincip som stöder appar för enheter som registrerats i Intune med hjälp av [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+> * Appskyddsprinciper som skapats i Intune-administratörskonsolen kan inte importeras till Azure-portalen.  Appskyddsprinciperna måste återskapas på Azure-portalen.
 
-> * Du kanske inte kan se alla MAM-principinställningar i Intune-administratörskonsolen. Azure Portal är den nya administratörskonsolen för att skapa MAM-principer.
+> * Du kanske inte ser alla inställningar för appskyddsprinciper i Intune-administratörskonsolen. Azure-portalen är den nya administratörskonsolen för att skapa appskyddsprinciper.
 
-> * För att kunna distribuera hanterade appar måste du skapa en MAM-princip i Intune-administratörskonsolen. Du kanske vill skapa MAM-principer i både Intune-administratörskonsolen och på Azure Portal: I Intune-administratörskonsolen så att du kan distribuera hanterade appar och på Azure Portal eftersom det är den nya administratörskonsolen där alla MAM-principinställningar finns.
+> * För att distribuera hanterade appar måste du skapa en appskyddsprincip i Intune-administratörskonsolen. I detta fall kanske du vill skapa appskyddsprinciper i både Intune-administratörskonsolen och på Azure-portalen: I Intune-administratörskonsolen så att du kan distribuera hanterade appar och på Azure-portalen eftersom det är den nya administratörskonsolen där alla inställningar för appskyddsprinciper finns.
 
-> * Om du skapar MAM-principer i både Intune-administratörskonsolen och i Azure Portal tillämpas de principer som skapas i Azure Portal för apparna.
+> * Om du skapar appskyddsprinciper i både Intune-administratörskonsolen och på Azure-portalen används de principer som du skapar på Azure-portalen för apparna.
 
 Om du vill se en lista över principinställningar som stöds för Android- och iOS-plattformar kan du välja något av följande:
 
@@ -48,12 +49,12 @@ Om du vill se en lista över principinställningar som stöds för Android- och 
 - [iOS-principer](ios-mam-policy-settings.md)
 - [Android-principer](android-mam-policy-settings.md)
 
-- En detaljerad beskrivning av hur MAM-principer fungerar och de scenarier som stöds av Intunes MAM-principer finns i [Skydda appdata med hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+- En mer detaljerad beskrivning av hur appskyddsprinciper fungerar och scenarier som stöds av appskyddsprinciper i Intune finns i avsnittet om [hur du skyddar appdata med hjälp av appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
-##  <a name="create-a-mam-policy"></a>Skapa en MAM-princip
-MAM-principer skapas i Azure Portal. Om det är första gången du använder Azure Portal läser du först [Azure Portal för Microsoft Intune MAM-principer](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med Azure Portal. Innan du skapar en MAM-princip granskar du informationen om [krav och support](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md).
+##  <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
+Appskyddsprinciper skapas på Azure-portalen. Om det är första gången du använder Azure-portalen läser du avsnittet om [Azure-portalen för appskyddsprinciper i Microsoft Intune](azure-portal-for-microsoft-intune-mam-policies.md) för att bekanta dig med portalen. Läs avsnittet om [krav och support](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md) innan du skapar en appskyddsprincip.
 
-Följ stegen nedan för att skapa MAM-principer:
+Du skapar appskyddsprinciper genom att följa stegen nedan:
 
 1. Gå till [Azure Portal](http://portal.azure.com) och logga in med dina autentiseringsuppgifter.
 
@@ -65,7 +66,7 @@ Följ stegen nedan för att skapa MAM-principer:
 
     ![Skärmbild av bladet Hantering av mobilprogram i Intune](../media/AppManagement/AzurePortal_MAM_Mainblade-2.png)
 
-2.  På bladet **Inställningar** väljer du **Apprincip**. När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga. Välj **Lägg till en princip**.
+2.  På bladet **Alla inställningar** väljer du **Apprincip**. När du gör det öppnas bladet **Apprincip** där du kan skapa nya principer och redigera befintliga. Välj **Lägg till en princip**.
 
     ![Skärmbild av bladet Apprincip med menyalternativet Lägg till en princip markerat ](../media/AppManagement/AzurePortal_MAM_AddPolicy.png)
 
@@ -97,10 +98,10 @@ Följ stegen nedan för att skapa MAM-principer:
 När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i avsnittet ”Distribuera en princip till användare” nedan.
 
 > [!IMPORTANT]
-> Om du skapar en MAM-princip för en app med Intune-administratörskonsolen och MAM-principen med Azure Portal har principen som du skapade med Azure Portal företräde. I Intune- eller Configuration Manager-konsolen rapporteras dock principinställningarna som skapats från Intune-administrationskonsolen. Exempel:
+> Om du skapar en appskyddsprincip för en app med hjälp av Intune-administratörskonsolen och en appskyddsprincip med hjälp av Azure-portalen prioriteras principen som du skapade med Azure-portalen. I Intune- eller Configuration Manager-konsolen rapporteras dock principinställningarna som skapats från Intune-administrationskonsolen. Exempel:
 >
-> -   Du har skapat en MAM-princip i Intune-administrationskonsolen som blockerar kopiering från en app.
-> -   Du har skapat en MAM-princip i Azure-konsolen som tillåter kopiering från en app.
+> -   Du har skapat en appskyddsprincip i Intune-administratörskonsolen som blockerar kopiering från en app.
+> -   Du har skapat en appskyddsprincip i Azure-konsolen som tillåter kopiering från en app.
 > -   Du associerar båda principerna med samma app.
 > -   Den princip som du skapade från Azure-konsolen prioriteras och kopiering tillåts.
 > -   Dock indikerar statusen och rapporterna i Intune-konsolen felaktigt att kopiering är blockerat.
@@ -123,8 +124,8 @@ Endast användare med tilldelade [!INCLUDE[wit_nextref](../includes/wit_nextref_
 > Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.
 
 Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer information finns i:
-* [Vad som händer när din Android-app hanteras med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 ##  <a name="change-existing-policies"></a>Ändra befintliga principer
 Du kan redigera en befintlig princip och tillämpa den på inriktade användare. När du ändrar befintliga principer ser dock inte användare som redan är inloggade i apparna ändringarna förrän efter åtta timmar.
@@ -178,11 +179,11 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 [Övervaka efterlevnad och användarstatus](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Se även
-* [Vad som händer när din Android-app hanteras med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 12/30/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 3dbec400-5d8a-47be-b892-7745811d9de2
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 464e6d73765a75aaefb3eca95281bf54b4cc7a2d
-ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
+ms.sourcegitcommit: 00e9dfd165a449182c5b937372db7085c981c68f
+ms.openlocfilehash: cca12024ba12cff5cdb8c515f7719a7592ba97ea
 
 
 ---
@@ -24,16 +25,16 @@ ms.openlocfilehash: 2bb4eb56bea4f640fa304c03b0f86b78625fe6a7
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Beroende på om enheter är företags- eller privatägda kanske en hanterad enhet måste tas bort från Intune-hanteringen. 
+Beroende på om enheter är företags- eller privatägda kanske en hanterad enhet måste tas bort från Intune-hanteringen.
 
-Enheter tas aldrig bort från Intune utan att du gör något, även om enheterna inte har anslutit till Intune-tjänsten under en längre tid. 
+Enheter tas aldrig bort från Intune utan att du gör något, även om enheterna inte har anslutit till Intune-tjänsten under en längre tid.
 
 Du kan behöva dra tillbaka en enhet av flera olika skäl:
 
--   Användaren lämnar företaget på ett planerat sätt ("hanterad" avgång)
--   Användaren lämnar tvärt (får sparken, säger upp sig, etc.).
--   Enheten går förlorad
--   Enheten får ett nytt syfte (övertas av en annan användare, återanvänds för ett annat ändamål osv.)
+-    Användaren lämnar företaget på ett planerat sätt ("hanterad" avgång)
+-    Användaren lämnar tvärt (får sparken, säger upp sig, etc.).
+-    Enheten går förlorad
+-    Enheten får ett nytt syfte (övertas av en annan användare, återanvänds för ett annat ändamål osv.)
 
 Du kan göra en selektiv rensning eller en fullständig rensning av en enhet som hanteras som en mobil enhet, eller så kan du låsa en enhet och återställa dess lösenord. Genom att rensa en enhet frigör du användarens prenumeration så att en annan enhet kan läggas till. Du kan också dra tillbaka datorer som hanteras med Intune-klientprogrammet.
 
@@ -43,6 +44,9 @@ Enheten tas bort från Intune-hanteringen både vid en selektiv och vid en fulls
 [Selektiv rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) är det bästa alternativet för medarbetare som registrerat sin egen enhet i Intune eftersom det inte påverkar personlig information på enheten. Endast företagsdata tas bort.
 
 För enheter som ska användas i ett nytt syfte kan du också göra en [fullständig rensning](use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) för att återställa enheten till fabriksinställningarna.
+
+### <a name="removing-user-licenses-and-managed-devices"></a>Ta bort användarlicenser och hanterade enheter
+När du tar bort en användarlicens avregistreras användarens registrerade enheter. Vi rekommenderar att du använder selektiv rensning för att ta bort företagsdata från hanterade enheter innan du tar bort Intune-licensen för en användare. När du tar bort användarlicensen kan du inte längre köra fjärråtgärder mot enheten.
 
 ## <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
 
@@ -76,6 +80,6 @@ Ibland är det själva enheten som blivit för gammal. I sådana fall tar en [å
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO2-->
 
 

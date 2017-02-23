@@ -2,19 +2,20 @@
 title: "Fjärrlåsning och lösenordsåterställning | Microsoft Docs"
 description: "Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: NathBarn
+ms.author: NathBarn
 manager: angrobe
-ms.date: 01/06/17
+ms.date: 02/16/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ms.reviewer: chrisgre
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: b3504cc1aab8bbe553581d822af63363668a8ef7
+ms.sourcegitcommit: 87589903acd3c2e7c45d62c619571a1273e7fb76
+ms.openlocfilehash: 8de91a0e0640b9c0fb281686d4ecd4983134d4af
 
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Skydda dina enheter med fjärrlåsning och lösenordsåterställning
@@ -24,7 +25,7 @@ ms.openlocfilehash: b3504cc1aab8bbe553581d822af63363668a8ef7
 Microsoft Intune tillhandahåller både funktioner för fjärrlåsning och lösenordsåterställning.
 
 ## <a name="lock-a-device-remotely"></a>Fjärrlåsa en enhet
-Om en användare förlorar en enhet kan du fjärrlåsa enheten. Enheten måste redan ha en PIN-kod eller lösenord konfigurerat för den innan du kan använda fjärrlåsning. 
+Om en användare förlorar en enhet kan du fjärrlåsa enheten. Enheten måste redan ha en PIN-kod eller lösenord konfigurerat för den innan du kan använda fjärrlåsning.
 
 Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
 
@@ -33,7 +34,8 @@ Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
 |macOS|Stöds inte|
 |iOS|Stöds|
 |Android|Stöds|
-|Windows 10 och Windows 10 Mobile|Stöds|
+|Windows 10 Mobile|Stöds|
+|Windows 10 Desktop|Stöds inte|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 |Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
@@ -84,6 +86,6 @@ Lösenordsåterställning stöds inte för Windows-datorer som registrerats i In
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

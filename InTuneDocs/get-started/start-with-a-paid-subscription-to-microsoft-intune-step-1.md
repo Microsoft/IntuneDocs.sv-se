@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 029ef5aedc8177c13fa1ac89cb00b961a04e88d5
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: af147a50f533e4be948261898b60c4d522a9e4eb
 
 
 ---
@@ -24,6 +25,8 @@ ms.openlocfilehash: 029ef5aedc8177c13fa1ac89cb00b961a04e88d5
 # <a name="sign-up-or-sign-in-to-intune"></a>Registrering eller inloggning på Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Det här avsnittet beskriver hur systemadministratörer kan registrera sig för ett Intune-konto.
 
 Innan du kan logga in i eller registrera dig för Intune måste du kontrollera om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services eller om din organisation har ett Enterprise-avtal eller motsvarande volymlicensavtal med Microsoft. Ett arbets- eller skolkonto erhålls när du signerar ett volymlicensavtal med Microsoft eller prenumererar på andra Microsoft-molntjänster som Office 365.
 
@@ -53,6 +56,6 @@ När du har slutfört inloggningsprocessen blir du omdirigerad till en sida där
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

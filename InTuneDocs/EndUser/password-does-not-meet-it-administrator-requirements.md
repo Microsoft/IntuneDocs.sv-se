@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,10 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 395c9bdc8aad13123b6a22b6edac0b8714323f2f
+ms.sourcegitcommit: c5c857b46c13aee790ab5f780a59d9cd51029cd2
+ms.openlocfilehash: a2af33a5b274b01f6651c76bd0b0038dc74b785f
 
 
 ---
@@ -45,12 +46,12 @@ Beskrivningar av problem relaterade till PIN-koder eller lösenord:
 
 - **Lösenordet har använts nyligen**. IT-administratören tillåter inte att du använder tidigare lösenord som du har använt förut. Välj ett lösenord som du inte har använt tidigare.
 
-- **Lösenordet är inte tillräckligt komplext för att uppfylla kraven**. IT-administratören kräver att du använder mer komplexa tecken i lösenordet. Pröva att använda tecken som siffror och versaler och symboler som $, % och #.
+- **Lösenordet är inte tillräckligt komplext för att uppfylla kraven**. IT-administratören kräver att du använder mer komplexa tecken i lösenordet. Pröva att använda tecken som siffror och versaler och symboler som $, % och #. Detta kan också gälla andra konton på enheten, så tänk på att kontrollera andra arbetskonton för att säkerställa att lösenordet uppfyller kraven som konfigurerats av administratören för din enhet.
 
 Kontakta IT-administratören om du har problem med att skapa ett lösenord som uppfyller kraven. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

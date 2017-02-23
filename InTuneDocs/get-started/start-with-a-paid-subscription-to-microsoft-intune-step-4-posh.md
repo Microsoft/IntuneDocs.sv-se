@@ -1,11 +1,11 @@
 ---
-title: Hantera Intune-licenser med PowerShell | Microsoft Intune
+title: Hantera Intune-licenser med PowerShell | Microsoft Docs
 description: Hantera Intune-licenser med PowerShell
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,20 @@ ms.technology:
 ms.assetid: d2d31c80-c32c-4315-8271-1b0cf9a1f78a
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: 8f0786bc821c4a93e5f1ff4bf3d693dd6d59ca8e
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: dd71cc8f0d1fc5802f7f24e5f275089ffa24a1c5
 
 
 ---
 
 # <a name="manage-intune-licenses-using-powershell"></a>Hantera Intune-licenser med PowerShell
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Det här avsnittet riktar sig till administratörer och beskriver hur de kan använda PowerShell för att hantera Intune-användarlicenser.
+
 Innan användarna kan logga in för att använda Intune-tjänsten eller registrera sina enheter för hantering måste du först tilldela varje användare en licens till din Intune-prenumeration enligt beskrivningen i [Hantera Intune-licenser](start-with-a-paid-subscription-to-microsoft-intune-step-4.md). Organisationer som använder Microsoft Enterprise Mobility + Security har kanske dock användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
 
 Om du vill tilldela användarlicenser för EMS-tjänster öppnar du PowerShell som administratör på en dator där [Azure Active Directory-modulen för Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) är installerad. Du kan installera PowerShell på en lokal dator eller på en AD FS-server.
@@ -68,6 +74,6 @@ Gratulerar! Du är nu klar med steg 4 i *snabbstartsguiden för Intune*.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

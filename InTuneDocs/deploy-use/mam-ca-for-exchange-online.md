@@ -1,5 +1,5 @@
 ---
-title: "Konfigurera appåtkomst för Exchange Online | Microsoft Docs"
+title: "Appåtkomst för Exchange Online | Microsoft Docs"
 description: "Det här avsnittet beskriver hur du konfigurerar en princip för villkorlig åtkomst för MAM-appar."
 keywords: 
 author: andredm7
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: f2cd1a1f-fd29-4081-8dfa-c40993a107d5
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b0e938b842388004e919fdf1fc911783e6cd22ac
-ms.openlocfilehash: 184558b29cdbae36154eb18a52b8608a09fe47de
+ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
+ms.openlocfilehash: ab6d1cf6a6b77be6aff6398ff99135674471ba35
 
 
 ---
@@ -24,11 +25,11 @@ ms.openlocfilehash: 184558b29cdbae36154eb18a52b8608a09fe47de
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Det här avsnittet innehåller stegvisa anvisningar för hur du konfigurerar villkorlig åtkomst för Exchange Online så att endast mobila appar som stöder MAM (Hantering av mobilprogram i Intune)-principer tillåts åtkomst.
+Det här avsnittet innehåller stegvisa anvisningar som beskriver hur du konfigurerar villkorlig åtkomst för Exchange Online så att endast mobila appar som stöder Intunes appskyddsprinciper tillåts åtkomst.
 
 
 ## <a name="create-an-exchange-online-policy"></a>Skapa en Exchange Online-princip
-1.  Logga in på [Azure Portal](https://portal.azure.com) som innehåller appåtkomstfunktionen. Om du inte har använt Azure Portal tidigare kan du läsa avsnittet [Azure portal for MAM policies](azure-portal-for-microsoft-intune-mam-policies.md) (Azure Portal för MAM-principer).
+1.  Logga in på [Azure Portal](https://portal.azure.com) som innehåller appåtkomstfunktionen. Om du inte har använt Azure-portalen tidigare kan du läsa avsnittet [Azure portal for MAM policies](azure-portal-for-microsoft-intune-mam-policies.md) (Azure-portal för MAM-principer).
 
 2.  Välj **Fler tjänster** och ange "Intune".
 
@@ -40,7 +41,7 @@ Det här avsnittet innehåller stegvisa anvisningar för hur du konfigurerar vil
 
     ![Skärmbild av bladet inställningar som visar avsnittet villkorlig åtkomst med alternativet Exchange Online markerat](../media/MAM-conditional-access-1.png)
 
-6. På bladet **Tillåtna appar** väljer du alternativet **Allow apps that support Intune app policies** (Tillåt appar som stöder Intunes apprinciper) för att endast tillåta att appar som stöds av Intunes MAM-principer får åtkomst till Exchange Online. När du väljer det här alternativet visas listan över appar som stöds.
+6. På bladet **Tillåtna appar** väljer du alternativet **Allow apps that support Intune app policies** (Tillåt appar som stöder Intunes apprinciper) för att endast tillåta att appar som stöds av Intunes appskyddsprinciper får åtkomst till Exchange Online. När du väljer det här alternativet visas listan över appar som stöds.
 
     >[!NOTE]
     >Alla e-postklienter för Exchange Active Sync, inklusive inbyggda e-postklienter på iOS och >Android som ansluter till Exchange Online, kommer inte att kunna skicka eller ta emot >e-post. I stället får användarna ett enda e-postmeddelande som informerar dem om att de måste använda e-postprogrammet >Outlook.
@@ -60,10 +61,10 @@ För att **delete a user group** (ta bort en användargrupp) från listan **begr
 ## <a name="next-steps"></a>Nästa steg
 [Blockera appar som inte har modern autentisering](block-apps-with-no-modern-authentication.md)
 ### <a name="see-also"></a>Se även
-[Skydda appdata med MAM-principer](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+[Skydda appdata med appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

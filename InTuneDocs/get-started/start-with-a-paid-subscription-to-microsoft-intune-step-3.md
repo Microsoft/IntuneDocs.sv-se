@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
+ms.date: 02/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: 02b6dd389c94d2b31bd96b2095ae48b685084370
+ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
+ms.openlocfilehash: b1f16df329c01aeb45885f3981e2d9d7ef854e8b
 
 
 ---
@@ -23,6 +24,8 @@ ms.openlocfilehash: 02b6dd389c94d2b31bd96b2095ae48b685084370
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Lägg till användare och ge administrativ behörighet till Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Det här avsnittet beskriver hur administratörer kan lägga till användare i Intune och vilka administrativa behörigheter som är tillgängliga i Intune-tjänsten.
 
 Som administratör kan du lägga till användare direkt eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan även ge användarna ytterligare behörighet inklusive *innehavaradministratör*, *tjänstadministratör* och *hanteringsbehörigheter för enhetsregistrering*.
 
@@ -35,7 +38,7 @@ Det här avsnittet hjälper dig att:
   - [Hanterare av enhetsregistrering](#device-enrollment-managers)
 
 ## <a name="add-users-to-intune"></a>Lägg till användare i Intune
-Du kan manuellt lägga till användare till din Intune-prenumeration via [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854), de tilldelas inte automatiskt en licens för Intune. I stället måste en Intune-klientadministratör senare redigera användarkontot och tilldela en licens till användaren från Office 365-portalen. Anvisningar finns i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+Du kan lägga till användare i din Intune-prenumeration manuellt via [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854), men de tilldelas inte automatiskt en Intune-licens. I stället måste en Intune-klientadministratör senare redigera användarkontot och tilldela en licens till användaren från Office 365-portalen. Anvisningar finns i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### <a name="sync-active-directory-and-add-users-to-intune"></a>Synkronisera Active Directory och lägga till användare i Intune
 Du kan konfigurera katalogsynkronisering om du vill importera användarkonton från organisationens lokala Active Directory till Microsoft Azure Active Directory (Azure AD) som inkluderar Intune-användare. När din lokala Active Directory-tjänst är ansluten till alla dina Azure Active Directory-baserade tjänster blir hanteringen av användaridentiteter mycket enklare. Du kan också konfigurera funktioner för enkel inloggning som gör autentiseringen av dina användare välbekant och enkel. Genom att länka samma [Azure AD-klient](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) med flera tjänster, är de användarkonton som du tidigare har synkroniserat tillgängliga för alla molnbaserade tjänster.
@@ -95,7 +98,7 @@ Som tjänstadministratör kan du använda portalen för att hantera dagliga uppg
 
 ### <a name="device-enrollment-managers"></a>Hanterare av enhetsregistrering
 
-Hanterare av enhetsregistrering är vanliga standardanvändarkonton med ytterligare behörighet att registrera många användarlösa enheter. Som standard kan varje Intune-användare registrera upp till 15 enheter. Som administratör kan ge du ett användarkonto behörighet som hanterare av enhetsregistrering. Kontot kan registrera ett stort antal företagsägda enheter. Detta är praktiskt när enheterna ska tilldelas användare tillfälligt eller kan fungera i ett helskärmsläge där en koppling mellan användare och enhet inte krävs. Mer information finns i [Hanterare av enhetsregistrering](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+Hanterare av enhetsregistrering är vanliga standardanvändarkonton med ytterligare behörighet att registrera många användarlösa enheter. Som standard kan varje Intune-användare registrera upp till&15; enheter. Som administratör kan ge du ett användarkonto behörighet som hanterare av enhetsregistrering. Kontot kan registrera ett stort antal företagsägda enheter. Detta är praktiskt när enheterna ska tilldelas användare tillfälligt eller kan fungera i ett helskärmsläge där en koppling mellan användare och enhet inte krävs. Mer information finns i [Hanterare av enhetsregistrering](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 
 >[!div class="step-by-step"]
 
@@ -103,6 +106,6 @@ Hanterare av enhetsregistrering är vanliga standardanvändarkonton med ytterlig
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
