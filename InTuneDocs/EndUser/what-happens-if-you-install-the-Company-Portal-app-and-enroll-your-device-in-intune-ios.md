@@ -18,8 +18,8 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 8e10aa7c1db7490a462032e1bf86c7509b7b0e18
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: d593b00ee3fd30adec6c36c3939c895647e8dada
 
 
 ---
@@ -38,36 +38,6 @@ När du installerar företagsportalappen och registrerar din iOS- eller macOS-en
 -   Konfigurera ditt företags-e-postkonto automatiskt.
 
 När du registrerar din enhet i Intune ger du IT-administratören tillstånd att hantera din enhet, så att företagsinformation på enheten kan skyddas.
-
-**IT-avdelningen kan inte se**
-
--   Anrops- och webbhistorik
-
--    Plats
-
--   E-post och textmeddelanden
-
--   Kontakter
-
--    Lösenord
-
--   Kalender
-
--   Kamerarulle
-
-**IT-avdelningen kan se**
-
--   Modell
-
--   Serienummer
-
--   Operativsystem
-
--   Appnamn
-
--   Ägare
-
--   Enhetsnamn
 
 När enheten har registrerats kan IT-administratören:
 
@@ -99,6 +69,6 @@ Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

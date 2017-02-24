@@ -15,8 +15,8 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: fad731fe01ba4782b64e8a5af97bd536ae9478d3
+ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
+ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
 
 
 ---
@@ -155,8 +155,6 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
      -   **Enheter måste vara domänanslutna eller godkända.** Välj det här alternativet för att kräva att datorerna antingen måste vara domänanslutna eller godkända enligt de principer som angetts i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Om en dator inte uppfyller något av dessa krav uppmanas användaren att registrera enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
-     -   **Enheter måste vara domänanslutna.** Välj det här alternativet om du vill kräva att datorerna ska vara domänanslutna för att få åtkomst till Exchange Online. Om en dator inte är domänansluten blockeras åtkomst till e-post och användaren uppmanas att kontakta IT-administratören.
-
      -   **Enheter måste vara godkända.** Välj det här alternativet om du vill kräva att datorerna ska vara registrerade i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och kompatibla. Om en dator inte är registrerad visas ett meddelande med anvisningar om hur du registrerar.
 
 4.   Under **Webbläsaråtkomst** till SharePoint Online och OneDrive för företag kan du välja att tillåta åtkomst till Exchange Online endast genom de webbläsare som stöds: Safari (iOS) och Chrome (Android). Åtkomst från andra webbläsare blockeras. De plattformsbegränsningar som du valde för programåtkomst för OneDrive gäller även här.
@@ -200,6 +198,6 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

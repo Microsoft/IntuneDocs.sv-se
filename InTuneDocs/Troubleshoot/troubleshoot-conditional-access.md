@@ -1,5 +1,5 @@
 ---
-title: "Felsöka villkorlig åtkomst| Microsoft Intune"
+title: "Felsöka villkorlig åtkomst| Microsoft Docs"
 description: "Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune."
 keywords: 
 author: andredm7
@@ -13,14 +13,17 @@ ms.technology:
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 001bacbfc6a61a1c6b8f75c8e7ca55e311a1fa71
-ms.openlocfilehash: 7d52b3bb05a00b0da5e0845380f8431044b1c121
+ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
+ms.openlocfilehash: 66a8f72e2560352c2e4f422b41c7e54b4ae124e6
 
 
 ---
 
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Vanligtvis försöker en användare få åtkomst till e-post eller SharePoint och får då ett meddelande med en uppmaning om att registrera enheten. Meddelandet dirigerar användaren till företagsportalen.
 
@@ -31,11 +34,11 @@ I det här avsnittet beskrivs vad du kan göra om användarna inte kan få åtko
 
 För att villkorlig åtkomst ska fungera måste följande villkor uppfyllas:
 
--   Enheten måste hanteras av Intune.
--   Enheten måste vara registrerad i Azure Active Directory. Normalt sker registreringen automatiskt vid Intune-registreringen.
--   Enheten måste vara kompatibel med dina Intune-efterlevnadsprinciper, för både enheten och enhetsanvändaren.  Om det inte finns några efterlevnadsprinciper räcker det med registrering i Intune.
--   Exchange ActiveSync måste vara aktiverat på enheten om användaren tar emot e-post via enhetens inbyggda e-postklient i stället för via Outlook.     Detta sker automatiskt för iOS-, Windows Phone- och Android/KNOX Standard-enheter.
--   Intune Exchange Connector måste vara korrekt konfigurerad. Mer information finns i [Felsöka Exchange Connector i Microsoft Intune](troubleshoot-exchange-connector.md).
+-    Enheten måste hanteras av Intune.
+-    Enheten måste vara registrerad i Azure Active Directory. Normalt sker registreringen automatiskt vid Intune-registreringen.
+-    Enheten måste vara kompatibel med dina Intune-efterlevnadsprinciper, för både enheten och enhetsanvändaren.  Om det inte finns några efterlevnadsprinciper räcker det med registrering i Intune.
+-    Exchange ActiveSync måste vara aktiverat på enheten om användaren tar emot e-post via enhetens inbyggda e-postklient i stället för via Outlook.     Detta sker automatiskt för iOS-, Windows Phone- och Android/KNOX Standard-enheter.
+-    Intune Exchange Connector måste vara korrekt konfigurerad. Mer information finns i [Felsöka Exchange Connector i Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i inventeringsrapporten för enheten.
 
@@ -50,7 +53,7 @@ Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i invent
  -  Det kan ta en stund innan efterlevnadsinformationen har registrerats för enheten. Vänta några minuter och försök igen.
  -  För iOS-enheter:
      -   En befintlig e-postprofil som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen informerar användaren om att de inte uppfyller kraven på grund av den manuellt konfigurerade e-postprofilen, och användaren uppmanas att ta bort profilen. Användaren bör ta bort e-postprofilen så att Intune-profilen kan distribueras. För att förhindra det här problemet ber du användarna att göra registreringen utan att installera en e-postprofil så att Intune kan distribuera profilen.
-     -   En iOS-enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Detta kan åtgärdas genom att starta om företagsportalen så att kompatibilitetstillståndet motsvarar enhetstillståndet i Intune. När alla data har samlats in från en enhetssynkronisering går efterlevnadskontrollen snabbt (mindre än en halv sekund i genomsnitt).
+     -     En iOS-enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Detta kan åtgärdas genom att starta om företagsportalen så att kompatibilitetstillståndet motsvarar enhetstillståndet i Intune. När alla data har samlats in från en enhetssynkronisering går efterlevnadskontrollen snabbt (mindre än en halv sekund i genomsnitt).
 
         Orsaken till att enheter fastnar i det här tillståndet är vanligtvis att de har problem med att ansluta till tjänsten eller att synkroniseringen tar lång tid.  Om problemet kvarstår i olika nätverkskonfigurationer (mobilnät, Wi-Fi, VPN) efter att du har startat om enheterna och har verifierat att SSP är uppdaterad på enheten, kontaktar du Microsoft Support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
@@ -123,7 +126,7 @@ Du kan visa Exchange Connector-loggar med [Server Trace Viewer Tool](visningsver
 
     Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. (Hämtningen av listan med mobila enheter utan tidsfilter (fullständig synkronisering) för 4 användare har slutförts.) Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected',' (Information: Resultat för inventeringskommando - Enheter som synkroniserats: 0 Kommando-ID: commandIDGUID' Exchange-hälsa: 'Serverhälsa 'Namn: 'PowerShellExchangeServer: <Namn=mitte-postservername>' Status: Ansluten',')
 
--   Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync (snabbsynkronisering)**.
+-    Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync (snabbsynkronisering)**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Undantag i Get next command (Hämta nästa kommando)
 Kontrollera om det finns undantag i **Get next command** (Hämta nästa kommando) i Exchange Connector-loggarna och skicka dessa till Microsoft Support.
@@ -132,9 +135,9 @@ Kontrollera om det finns undantag i **Get next command** (Hämta nästa kommando
 
 Så här aktiverar du utförlig loggning:
 
-1.  Öppna konfigurationsfilen för Exchange Connector-spårning. Filen finns på: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
-2.  Leta reda på TraceSourceLine med följande nyckel: OnPremisesExchangeConnectorService
-3.  Ändra värdet för **SourceLevel**-noden från **Warning ActivityTracing** (standardvärdet) till **Verbose ActivityTracing** (se nedan).
+1.    Öppna konfigurationsfilen för Exchange Connector-spårning. Filen finns på: %ProgramData%\Microsoft\Windows Intune Exchange Connector\TracingConfiguration.xml.
+2.    Leta reda på TraceSourceLine med följande nyckel: OnPremisesExchangeConnectorService
+3.    Ändra värdet för **SourceLevel**-noden från **Warning ActivityTracing** (standardvärdet) till **Verbose ActivityTracing** (se nedan).
 
     <TraceSourceLine>
           <Key xsi:type="xsd:string">OnPremisesExchangeConnectorService</Key>
@@ -159,6 +162,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

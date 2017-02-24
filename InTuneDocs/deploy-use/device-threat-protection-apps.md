@@ -14,8 +14,8 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53862e49c922b75b414fd5aceec3bba2b10299a6
-ms.openlocfilehash: a7c1a2b7ec1719a47c36e1fe09d1deccd0eed1b1
+ms.sourcegitcommit: 6f687a1db84b49bc173d2067ab95598b4485daa8
+ms.openlocfilehash: ab94439d9fd5300d61c5991434d41f7fdca693d2
 
 
 ---
@@ -78,7 +78,7 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
 
 6. **När du vill distribuera appen till användare** väljer du Lookout for Work-appen och markerar **Hantera distribuering**.
 
-  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout-konsolen.  Se steg 3 i [avsnittet om att konfigurera prenumerationen med Lookout-skydd mot enhetshot](configure-and-deploy-lookout-for-work-apps.md) för information om hur du lägger till användargrupper i Lookout MTP.
+  Du måste markera samma användare som har lagts till i alternativet Registreringshantering i Lookout-konsolen.  Se steg 3 i [avsnittet om att konfigurera prenumerationen med Lookout-skydd mot enhetshot](https://docs.microsoft.com/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps) för information om hur du lägger till användargrupper i Lookout MTP.
 
   >[!IMPORTANT]
   > Guiden för att distribuera Intune-appen känner inte till Azure AD-användargrupper utan använder Intune-användargrupper istället. Därför måste du skapa en Intune-användargrupp baserat på Azure AD-användargruppen som har registrerats i Lookout-konsolen enligt beskrivningarna i [den här](plan-your-user-and-device-groups.md) artikeln.
@@ -94,10 +94,10 @@ När användaren öppnar Lookout for Work på enheten uppmanas de att aktivera a
 * [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## <a name="next-steps"></a>Nästa steg
-* [Aktivera regeln för skydd mot hot på enhet i kompatibilitetsprincipen](enable-device-threat-protection-rule-in-compliance-policy.md)
+* [Aktivera regeln för skydd mot hot på enhet i kompatibilitetsprincipen](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

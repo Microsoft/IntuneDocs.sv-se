@@ -16,9 +16,10 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jieyan
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 81ee6143d53ca08f03dfd3555b118f77319ccf2d
-ms.openlocfilehash: e72a61b2250c2d048392e025655b81dbc8297176
+ms.sourcegitcommit: aca401cab49230d2bcb9171cf532b52ce5219798
+ms.openlocfilehash: b6e9a357b79b0069e5fadf5aa280dae5b4787212
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: e72a61b2250c2d048392e025655b81dbc8297176
 
 Om du registrerar dina enheter i Microsoft Intune kan dina Windows 10-enheter få åtkomst till organisationens skyddade data, t.ex. e-post, filer och andra resurser. Detta gäller för både Windows 10 Desktop- och Windows 10 Mobile-enheter. Genom att registrera dina enheter kan du skydda både din och organisationens åtkomst och dessutom hålla arbetsdata åtskilda från personliga data.
 
-Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och hur [informationen på enheten](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md) påverkas.
+Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) och hur [informationen på enheten](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) påverkas.
 
 ## <a name="windows-10-desktop-devices"></a>Windows 10 Desktop-enheter
 1.    Gå till __Start__.
@@ -56,6 +57,6 @@ Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontak
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

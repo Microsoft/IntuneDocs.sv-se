@@ -15,8 +15,8 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53862e49c922b75b414fd5aceec3bba2b10299a6
-ms.openlocfilehash: 1297522d0f7b52ebe14eb7b938f3458e7308ae27
+ms.sourcegitcommit: 6f687a1db84b49bc173d2067ab95598b4485daa8
+ms.openlocfilehash: 618819ff8dded925bc4745160dde8c9e75694faf
 
 
 ---
@@ -34,14 +34,14 @@ På sidan **Administration** i [Microsoft Intune-administratörskonsolen](https:
 >[!IMPORTANT]
 > Du **måste** konfigurera Lookout for Work-appen innan du skapar policyn för efterlevnad och konfigurerar villkorlig åtkomst. Detta ser till att appen är redo och tillgänglig för slutanvändarna att installera innan de kan få åtkomst till e-post eller andra företagsresurser.
 
-Nu är du klar med installationen av Lookout och Intune-integration i Intune-administratörskonsolen.  De efterföljande stegen för att implementera den här lösningen består av att distribuera [Lookout for Work apps](configure-and-deploy-lookout-for-work-apps.md) (Lookout for Work-appar) och konfigurera [efterlevnads](enable-device-threat-protection-rule-in-compliance-policy.md)-principen.
+Nu är du klar med installationen av Lookout och Intune-integration i Intune-administratörskonsolen.  De efterföljande stegen för att implementera den här lösningen består av att distribuera [Lookout for Work apps](https://docs.microsoft.com/intune/deploy-use/device-threat-protection-apps) (Lookout for Work-appar) och konfigurera [efterlevnads](https://docs.microsoft.com/intune/deploy-use/device-threat-protection-policy)-principen.
 
 
 ## <a name="next-steps"></a>Nästa steg
-[Konfigurera Lookout for Work-appen](configure-and-deploy-lookout-for-work-apps.md)
+[Konfigurera Lookout for Work-appen](https://docs.microsoft.com/intune/deploy-use/device-threat-protection-apps)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

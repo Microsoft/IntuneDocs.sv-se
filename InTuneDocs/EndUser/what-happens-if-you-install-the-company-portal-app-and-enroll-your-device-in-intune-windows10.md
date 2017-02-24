@@ -16,13 +16,13 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 60b88dfed5afbb808aa056e93f2069d14efe8254
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: 329d34e7a6ad83512e98dce85e1effe9c54a1bce
 
 
 ---
-
 
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune?
 
@@ -36,7 +36,7 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställa din telefon till fabriksinställningar om den tappas bort eller blir stulen.
 
-Registreringsanvisningar finns i [Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md).
+Registreringsanvisningar finns i [Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 När du lägger till en dator:
 
@@ -58,6 +58,6 @@ Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 

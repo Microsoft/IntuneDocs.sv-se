@@ -1,5 +1,5 @@
 ---
-title: Konfigurera iOS- och Mac-enhetshantering | Microsoft Intune
+title: Konfigurera iOS- och Mac-enhetshantering | Microsoft Docs
 description: "Aktivera hantering av mobila enheter (MDM) för iOS-enheter, inklusive iPad och iPhone samt Mac OS X-enheter med Microsoft Intune."
 keywords: 
 author: staciebarker
@@ -13,15 +13,19 @@ ms.technology:
 ms.assetid: dc451224-1372-4b84-b641-cfa67cb3849b
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 641d2db2bfb49ce6c4f88d823188a714e61f683c
+ms.sourcegitcommit: afca2af0b07b939adc66c8804f04a1125e12001b
+ms.openlocfilehash: 9c71a83f9514187753360fa9c2085584d1b76711
 
 
 ---
 
 # <a name="set-up-ios-and-mac-device-management"></a>Konfigurera iOS- och Mac-enhetshantering
-Intunes stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och Mac OS X-enheter och ger användarna åtkomst till företagets e-post och appar. Ett APNs-certifikat (Apple Push Notification Service) från Apple krävs för att kunna hantera iOS- och Mac-enheter med Intune. När certifikatet har lagts till i Intune kan användare installera företagsportalappen och registrera sina enheter, eller så kan administratören konfigurera [hantering av företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Intune stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och macOS-enheter och ger användarna åtkomst till företagets e-post och appar. Ett APNs-certifikat (Apple Push Notification Service) från Apple krävs för att kunna hantera iOS- och Mac-enheter med Intune. När certifikatet har lagts till i Intune kan användare installera företagsportalappen och registrera sina enheter, eller så kan administratören konfigurera [hantering av företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
 1.  **Konfigurera Intune**<br>
     Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [utfärdare av mobilenhetshantering](prerequisites-for-enrollment.md#step-2-set-mdm-authority) och genom att konfigurera MDM.
@@ -44,11 +48,11 @@ Intunes stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och Mac OS
 
 5.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**
 
-    Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](../enduser/enroll-your-device-in-intune-ios.md) och [Registrera din Mac OS X-enhet i Intune](../enduser/enroll-your-device-in-intune-macos.md). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
+    Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](../enduser/enroll-your-device-in-intune-ios.md) och [Registrera din macOS-enhet i Intune](../enduser/enroll-your-device-in-intune-macos.md). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
     Information om andra slutanvändaraktiviteter finns i de här artiklarna:
-    - [Resurser om slutanvändarupplevelsen med Microsoft Intune](what-to-tell-your-end-users-about-using-microsoft-intune.md)
-    - [Vägledning för slutanvändare för iOS- och Mac-enheter](../enduser/using-your-ios-or-mac-os-x-device-with-intune.md)
+    - [Resurser om slutanvändarupplevelsen med Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
+    - [Vägledning för slutanvändare för iOS- och Mac-enheter](../enduser/using-your-ios-or-macOS-device-with-intune.md)
 
 Om företaget eller organisationen köper iOS-enheter åt användarna kan enheterna även registreras för hantering som [företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 
@@ -57,6 +61,6 @@ Om företaget eller organisationen köper iOS-enheter åt användarna kan enhete
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

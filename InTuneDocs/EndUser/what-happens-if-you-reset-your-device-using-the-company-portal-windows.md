@@ -18,8 +18,8 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: b48d3559f776de529c95666d4d4f762c8fbc82d2
+ms.sourcegitcommit: 42e6b4d44dffa457f009e8402d5c429aa55932d6
+ms.openlocfilehash: 74983ab11e1c1763bd5394af483b93b74b715f89
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: b48d3559f776de529c95666d4d4f762c8fbc82d2
 
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Vad händer om du återställer en Windows-enhet med hjälp av företagsportalen?
 
-När du använder företagsportalappen eller [företagsportalens webbplats](reset-your-device-cpwebsite.md) för att återställa din Windows-enhet återställs enheten till fabriksinställningarna. Alla appar, inställningar och data tas bort, inklusive personliga data. Vad som händer på varje enskild enhet beror på typen av enhet och hur du använder den. Mer information finns i tabellen nedan. Anvisningar om hur du återställer en enhet som förlorats eller stulits finns i [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-lost-or-stolen-device-windows.md).
+När du använder företagsportalappen eller [företagsportalens webbplats](reset-erase-your-device-cpwebsite.md) för att återställa din Windows-enhet återställs enheten till fabriksinställningarna. Alla appar, inställningar och data tas bort, inklusive personliga data. Vad som händer på varje enskild enhet beror på typen av enhet och hur du använder den. Mer information finns i tabellen nedan. Anvisningar om hur du återställer en enhet som förlorats eller stulits finns i [Återställa (radera) en enhet som förlorats eller stulits](reset-erase-your-device-cpwebsite.md).
 
 |Enhetskonfiguration och hantering|Enhetstyp|
 |---------------------------------------|---------------|
@@ -39,6 +39,6 @@ Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO4-->
 
 

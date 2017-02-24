@@ -1,11 +1,11 @@
 ---
-title: Migrera till Intune | Microsoft Intune
-description: 
+title: Migrera till Intune | Microsoft Docs
+description: "Migreringen till Intune från din befintliga lösning för mobilitetshantering i företaget kan följa de allmänna stegen nedan."
 keywords: 
-author: jeffgilb
-ms.author: jeffgilb
-manager: jeffgilb
-ms.date: 11/22/2016
+author: andredm7
+ms.author: andredm
+manager: angrobe
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,17 @@ ms.technology:
 ms.assetid: 88936b8a-7453-4410-b6db-29f636ba3e72
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: c5adeb2164a55d029c9d7f86490092a72f04f126
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: 43ac18d298901f24c8d6352537b285bf0108f667
 
 
 ---
 
 # <a name="migrate-to-intune"></a>Migrera till Intune
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Migreringen till Intune från din befintliga lösning för mobilitetshantering i företaget kan följa de allmänna stegen nedan:
 
@@ -45,7 +47,7 @@ Enheter måste avregistreras från din befintliga lösning för mobilitetshanter
 
 ## <a name="enrolling-devices-in-intune"></a>Registrera enheter i Intune
 
-Användare som har schemalagts för migrering bör omedelbart registreras i Intune för att få tillbaka eller förhindra förlorad åtkomst till företagets resurser, e-post och program. Om du har konfigurerat villkorlig åtkomst och användarna försöker ansluta till e-post innan de registrerats i Intune blockeras deras åtkomst och de får ett e-postmeddelande om registrering. I e-postmeddelandet får de hjälp att registrera sin enhet i Intune.  Användarna kan också registreras i Intune via företagsportalappen för Intune eller internt via operativsystemet på Windows 8.1 och Windows 10 Mobile. Mer information om registreringsstegen för varje plattform finns i [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+Användare som har schemalagts för migrering bör omedelbart registreras i Intune för att få tillbaka eller förhindra förlorad åtkomst till företagets resurser, e-post och program. Om du har konfigurerat villkorlig åtkomst och användarna försöker ansluta till e-post innan de registrerats i Intune blockeras deras åtkomst och de får ett e-postmeddelande om registrering. I e-postmeddelandet får de hjälp att registrera sin enhet i Intune.  Användarna kan också registreras i Intune via företagsportalappen för Intune eller internt via operativsystemet på Windows 8.1 och Windows 10 Mobile. Mer information om registreringsstegen för varje plattform finns i [Vad du ska berätta för slutanvändare om att använda Microsoft Intune](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
 
 ## <a name="configure-intune-conditional-access-optional"></a>Konfigurera villkorlig åtkomst i Intune (valfritt)
 
@@ -74,6 +76,6 @@ Om du vill hämta en kopia av hela handboken går du till [TechNet-galleriet](ht
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO3-->
 
 
