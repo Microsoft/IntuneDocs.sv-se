@@ -156,7 +156,7 @@
 #### [Dynamics CRM Online](deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
 #### [Skydda e-poståtkomsten: exempel](deploy-use/restrict-email-access-example-scenarios.md)
 ### [Tillåt endast åtkomst för principhanterade appar till O365-tjänster](deploy-use/allow-policy-managed-apps-access-to-o365.md)
-#### [Appar med MAM CA](deploy-use/use-apps-with-mam-ca.md)
+#### [Använd appar med appbaserad certifikatutfärdare](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blockera appar utan ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Skydda åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
@@ -222,8 +222,3 @@
 ## [Felsök skydd mot hot på enhet](troubleshoot/device-threat-protection-troubleshooting.md)
 
 # [Ordlista](understand-explore/intune-glossary.md)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
