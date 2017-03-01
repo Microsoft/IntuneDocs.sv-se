@@ -206,6 +206,7 @@
 
 # [Felsöka](troubleshoot/general-troubleshooting-tips-for-microsoft-intune.md)
 ## [Hur du kan få support](troubleshoot/how-to-get-support-for-microsoft-intune.md)
+## [Övervaka Intune med rapporter](deploy-use/understand-microsoft-intune-operations-by-using-reports.md)
 ## [Felsöka Endpoint Protection](troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune.md)
 ## [Felsöka problem med åtkomsten till företagsresurser](troubleshoot/troubleshoot-company-resource-access-problems-with-microsoft-intune.md)
 ## [Felsöka problem med appdistributionen](troubleshoot/troubleshoot-app-deployment-problems-in-microsoft-intune.md)

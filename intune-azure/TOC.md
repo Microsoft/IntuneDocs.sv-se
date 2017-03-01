@@ -5,7 +5,9 @@
 ### [Registrera dig för en kostnadsfri utvärderingsversion](introduction/sign-up-free-trial-microsoft-intune.md)
 ## [Nyheter](introduction/whats-new.md)
 ## [Kända problem](introduction/known-issues-in-the-intune-preview.md)
-<!--- ## [Get support](introduction/get-support.md)
+## [Support](introduction/how-to-get-support-for-microsoft-intune.md)
+<!--- 
+
 ## [Related resources](introduction/related-resources.md)
 
 ## [Get started](plan-and-design/get-started.md) --->
@@ -38,11 +40,12 @@
 #### [Lägg till Apple Configurator-serienummer](enroll-devices/add-apple-configurator-serial-numbers.md)
 #### [Registrera iOS-enheter med programmet för enhetsregistrering](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
 ### [Registrera enheter med enhetsregistreringshanteraren](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
+### [Registrera macOS-enheter](enroll-devices/enroll-macos-devices.md)
 ### [Registrera Windows-enheter](enroll-devices/enroll-window-devices.md)
 ### Hantera enhetsregistrering
 #### [Skapa allmänna villkor](enroll-devices/create-terms-and-conditions.md)
 #### [Ange registreringsbegränsningar](enroll-devices/set-enrollment-restrictions.md)
-#### [Mappa enhetsgrupper](enroll-devices/how-to-use-device-group-mapping.md)
+#### [Mappa enheter till grupper](enroll-devices/how-to-use-device-group-mapping.md)
 #### [Lägg till företagsidentifierare](enroll-devices/add-corporate-identifiers.md)
 #### [Använd Windows Hello för företag](enroll-devices/how-to-use-windows-hello.md)
 <!--- ## [Troubleshoot](enroll-devices/troubleshooting.md) --->
@@ -184,8 +187,3 @@
 ### [Programhanteringsverktyg för Android](/intune/deploy-use/prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool?toc=%2fintune-azure%2ftoc.json)
 ## [Intune App SDK](/intune/develop/intune-app-sdk?toc=%2fintune-azure%2ftoc.json)
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-
-
-<!--HONumber=Feb17_HO2-->
-
-
