@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
 ms.openlocfilehash: b6ab60eff3c65244290b7141e81a7b052dd790ed
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -90,16 +91,11 @@ Inaktivera Intune-delen av EMS-licensen för en användare som redan har tilldel
 
 Kontrollera med:
 
-    (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com" .Licenses.ServiceStatus
+    (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 
 ![PoSH-AddLic-Verify](./media/posh-addlic-verify.png)
 
 >[!div class="step-by-step"]
 
 >[&larr; **Synkronisera användare i Intune**](.\start-with-a-paid-subscription-to-microsoft-intune-step-2.md)     [**Ordna användare och enheter** &rarr;](.\start-with-a-paid-subscription-to-microsoft-intune-step-5.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
