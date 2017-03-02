@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 01/24/17
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
 ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
+ms.lasthandoff: 01/25/2017
 
 
 ---
@@ -261,7 +262,7 @@ Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i r
 
 **Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomst till företagets resurser.
 
-När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om appen upptäcker att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta. Användaren ser då det infogade meddelandet **Försöker synkronisera...** . 
+När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om appen upptäcker att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta. Användaren ser då det infogade meddelandet **Försöker synkronisera...** .
 
   ![Meddelandet ”Försöker att synkronisera”](./media/ios_cp_app_trying_to_sync_notification.png)
 
@@ -269,11 +270,11 @@ Om synkroniseringen lyckas visas ett infogat meddelande som lyder **Synkroniseri
 
   ![Meddelandet ”Synkronisering är klar”](./media/ios_cp_app_sync_successful_notification.png)
 
-Om synkroniseringen misslyckas visas ett infogat meddelande som lyder **Det går inte att synkronisera** i iOS-företagsportalappen. 
+Om synkroniseringen misslyckas visas ett infogat meddelande som lyder **Det går inte att synkronisera** i iOS-företagsportalappen.
 
   ![Meddelandet ”Det går inte att synkronisera”](./media/ios_cp_app_unable_to_sync_notification.png)
 
-För att åtgärda problemet måste användarna trycka på knappen **Konfigurera** till höger om meddelandet **Det går inte att synkronisera**. Knappen Konfigurera tar användarna till skärmen Konfiguration av företagsåtkomst, där de kan följa anvisningarna för att registrera sina enheter. 
+För att åtgärda problemet måste användarna trycka på knappen **Konfigurera** till höger om meddelandet **Det går inte att synkronisera**. Knappen Konfigurera tar användarna till skärmen Konfiguration av företagsåtkomst, där de kan följa anvisningarna för att registrera sina enheter.
 
   ![Skärmen Konfiguration av företagsåtkomst](./media/ios_cp_app_company_access_setup.png)
 
@@ -386,9 +387,4 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
