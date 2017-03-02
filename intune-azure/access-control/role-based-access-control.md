@@ -1,11 +1,12 @@
 ---
-title: "Rollbaserad åtkomstkontroll (RBAC) för Microsoft Intune | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Rollbaserad åtkomstkontroll (RBAC) för Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig hur RBAC kan kontrollera vem som ska kunna utföra åtgärder och göra ändringar."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/18/2016
+ms.date: 02/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 1024d2a33d843c628ffbb68f7b01a5d511191e7e
-ms.openlocfilehash: db0f88db8eee33781ccf3ef54e34089a25118726
+ms.sourcegitcommit: f4a80949dafbd3acc0413c75bbb0b8b5f5ae5664
+ms.openlocfilehash: 2507626d23beece9723134191e8747f731478ddb
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -171,8 +174,3 @@ När du skapar en anpassad roll kan konfigurera du en eller fler av följande in
 |**Ta bort**|Ta bort inställningar för användarvillkor.|
 |**Läsa**|Visa information om inställningar för användarvillkor i Intune Portal.|
 |**Uppdatera**|Uppdatera befintliga inställningar för användarvillkor.|
-
-
-<!--HONumber=Feb17_HO1-->
-
-

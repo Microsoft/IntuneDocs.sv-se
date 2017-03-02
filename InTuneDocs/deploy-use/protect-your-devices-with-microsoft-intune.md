@@ -1,11 +1,11 @@
 ---
-title: Skydda enheter | Microsoft Intune
+title: Skydda enheter med Microsoft Intune | Microsoft Docs
 description: "Läs olika exempel på hur Intune kan hjälpa dig att skydda dina enheter mot obehörig åtkomst och andra hot."
 keywords: 
 author: Robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/01/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 71e0cbf3-2bfb-412e-8a12-8503df08b4cf
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 235db7eb1036bfccd074fd83b4b59e75529a5e34
+ms.sourcegitcommit: 10191f27ae7efd097ea6e74b557776f8be8fe6e6
+ms.openlocfilehash: 042c5673c48bb19aacd624028260267670f9846e
+ms.lasthandoff: 02/21/2017
 
 
 ---
 
 # <a name="protect-devices-with-microsoft-intune"></a>Skydda enheter med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 I Microsoft Intune finns en fullständig uppsättning funktioner som hjälper dig att skydda de enheter som du hanterar och de data som lagras på dessa enheter. I det här avsnittet får du lära dig grunderna om funktionerna och veta hur du lär dig mer.
 
@@ -43,10 +47,10 @@ I Intune finns [efterlevnadsprinciper för enheter](introduction-to-device-compl
 ### <a name="protect-apps-and-the-data-they-use"></a>Skydda appar och de data som de använder
 I Intune finns flera funktioner som hjälper dig att skydda appar och deras data. Med principer för hantering av mobilprogram (MAM) kan du till exempel förhindra att data säkerhetskopieras från en skyddad app, begränsa kopiering och inklistring till andra appar och kräva en PIN-kod att få åtkomst till en app. Mer information om hur du skyddar appar finns i [Skydda data och appar med Microsoft Intune](protect-apps-and-data-with-microsoft-intune.md)
 
-## <a name="further-capabilities-for-windows-devices"></a>Ytterligare funktioner för Windows-enheter
+### <a name="add-an-additional-layer-of-protection-to-devices"></a>Lägga till ett extra skyddslager för enheter
+[Multi-Factor Authentication (MFA)](multi-factor-authentication-azure-active-directory.md) är ett säkrare sätt att autentisera enhetsanvändare i nätverket.  Med MFA måste användarna bekräfta sin identitet utöver användarnamn och lösenord, via ett telefonsamtal eller SMS.
 
-### <a name="add-an-additional-layer-of-protection-to-windows-devices"></a>Lägga till ett extra skyddslager för Windows-enheter
-[Multifaktorautentisering (MFA)](protect-windows-devices-with-multi-factor-authentication.md) är ett säkrare sätt att autentisera användare av Windows- och Windows Phone-enheter i nätverket.  Med MFA måste användarna bekräfta sin identitet utöver användarnamn och lösenord, via ett telefonsamtal eller SMS.
+## <a name="further-capabilities-for-windows-devices"></a>Ytterligare funktioner för Windows-enheter
 
 ### <a name="control-windows-hello-for-business-settings-on-windows-devices"></a>Kontrollera Windows Hello för företag-inställningar på Windows-enheter
 Med Intune kan du integrera [Windows Hello för företag](control-microsoft-passport-settings-on-devices-with-microsoft-intune.md) (tidigare Microsoft Passport), som är en alternativ inloggningsmetod för Windows 10 och senare som använder Active Directory eller ett Azure Active Directory-konto i stället för ett lösenord, smartkort eller virtuellt smartkort.
@@ -60,9 +64,4 @@ Aktiveringslåset är en funktion som skyddar användarnas enheter genom att kr�
 
 ## <a name="protect-windows-pcs-managed-with-the-intune-client"></a>Skydda Windows-datorer som hanteras med Intune-klienten
 Intune stöder fortfarande säkerhetsprinciper för Windows-datorer som du inte registrerar utan hanterar med Intune-klientprogrammet. Information om hur du kan skydda dina Windows-datorer med dessa principer finns i [Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran](policies-to-protect-windows-pcs-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -16,9 +16,11 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 30695011befb8c590bbd90656843e38638759443
-ms.openlocfilehash: 148660008fbe0eeea3ee9f7d9490443f60abbf0c
+ms.sourcegitcommit: 4b5f0129d6824a51c36662a1cc7ef4e8a2de9e20
+ms.openlocfilehash: a35fa4ed88f1cb0e0e4e96b26bb76c009a25e436
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -41,9 +43,4 @@ I vissa fall kan en app ta mycket lång tid på sig att hämta något från För
 En förloppsindikator visas på skärmen och laddar tills synkroniseringen är färdig.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

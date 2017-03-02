@@ -1,24 +1,28 @@
 ---
-title: Intune-ordlista | Microsoft Intune
+title: Intune-ordlista | Microsoft Docs
 description: "Lär dig om terminologin i Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.date: 11/17/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0c6c9d44e6a328b4bfb3827f54ac35b83e3c7aac
-ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
+ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
+ms.openlocfilehash: ea5407c284f5408774ee5934ad6151bccfd7e6d1
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -32,7 +36,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 ## <a name="b"></a>B
 |||
 |-|-|
-|BYOD|[Bring your own device](/intune/get-started/choose-how-to-enroll-devices1). Användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.| 
+|BYOD|[Bring your own device](/intune/get-started/choose-how-to-enroll-devices1). Användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.|
 
 ## <a name="c"></a>C
 |||
@@ -59,7 +63,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 |-|-|
 |E-postprofil|Den här principen kan användas för att konfigurera [email access settings](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) (åtkomstinställningar för e-post) för specifika e-postklienter på mobila enheter och minimera hur mycket slutanvändarna själva måste konfigurera.|
 |EMS|Microsoft Enterprise Mobility + Security (tidigare Enterprise Mobility Suite) skyddar företagets data och låter användarna att [få åtkomst till apparna och det innehåll som de behöver](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility).|
-|Slutanvändare|[Users of devices like phones and PCs](/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) (Användare av enheter som telefoner och datorer) som du hanterar med hjälp av Intune.|
+|Slutanvändare|[Användare av enheter som telefoner och datorer](/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) som du hanterar med Intune.|
 |Registrera|Microsoft Intune använder [registrering](/intune/deploy-use/enroll-devices-in-microsoft-intune) för att hantera enheter och tillåta åtkomst till resurser.|
 
 ## <a name="f"></a>F
@@ -95,7 +99,7 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 |-|-|
 |Hanterad webbläsare|Ett [webbläsningsprogram](/intune/deploy-use/manage-internet-access-using-managed-browser-policies) som du kan distribuera i din organisation med Microsoft Intune. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.|
 |Hantering av mobila program|[MAM (Moblie Application Management)](/intune/deploy-use/overview-of-app-lifecycle-in-microsoft-intune) låter dig att publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
-|Hantering av mobila enheter|[MDM (Mobile Device Management)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune)låter dig att registrera enheter i Intune så att du kan etablera, konfigurera, övervaka och utföra åtgärder på enheterna. 
+|Hantering av mobila enheter|[MDM (Mobile Device Management)](/intune/deploy-use/overview-of-device-lifecycle-in-microsoft-intune)låter dig att registrera enheter i Intune så att du kan etablera, konfigurera, övervaka och utföra åtgärder på enheterna.
 |MDM-utfärdare|[MDM-utfärdaren](/intune/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune) definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune.|
 |Etableringsprincip för mobilappar|En iOS-princip som hjälper dig att se till att [etableringsprofilerna](/intune/deploy-use/ios-mobile-app-provisioning-profiles) för iOS-appar som du distribuerar inte upphör att gälla.|
 |Konfigurationsprincip för mobilappar|En iOS-princip som används för att [tillhandahålla inställningar för kompatibla iOS-appar](/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) när de körs, till exempel, ett företagsnamn eller en serveradress.|
@@ -143,12 +147,4 @@ ms.openlocfilehash: e3aec8468dab4796cdc9b4afd783219f8aeef00b
 |||
 |-|-|
 |Wi-Fi-profil|En princip som distribuerar [inställningar för trådlösa nätverk](/intune/deploy-use/wi-fi-connections-in-microsoft-intune) till enheter för att låta användare att ansluta till företagets nätverk utan att behöva känna till eller konfigurera några inställningar.
-
-
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

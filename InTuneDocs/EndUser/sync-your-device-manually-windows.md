@@ -1,57 +1,42 @@
 ---
-title: Synkronisera Windows-enheten manuellt | Microsoft Intune
+title: Synkronisera Windows-enheten manuellt | Microsoft Docs
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/19/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 9561cf77e1569a6ab0da5d9b8e90e03ce5c9e998
+ms.sourcegitcommit: 4b5f0129d6824a51c36662a1cc7ef4e8a2de9e20
+ms.openlocfilehash: ff5a4313337c89da00cb87e0f4dd6c8dcc233361
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
-
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
-Om installationen av appen tar för lång tid kan du testa att synkronisera Windows-enheten manuellt. Manuell synkronisering kan påskynda installationen.
 
-Endast följande versioner stöds. Om din enhet inte visas i listan så betyder det att synkronisering inte stöds. Följ instruktionerna för din typ av enhet.
+Att försöka installera en app på en Windows-enhet kan ibland ta längre tid än du förväntar dig. Om det händer kan du prova att manuellt synkronisera din Windows-enhet. Synkronisering kan påskynda installationen.
 
-* [Windows 10 Mobile](#windows-10-mobile)
-* [Windows 10 Desktop](#windows-10-desktop)
-* [Windows Phone 8.1](#windows-phone-81)
+> [!Note]
+> Det kan ta en stund att installera appar om du är på ett nätverk med lägre hastigheter eller många enheter som laddar ner data på samma gång.
 
+Följande versioner av Windows kan synkroniseras manuellt. Om din enhet använder en annan version av Windows kan du tyvärr inte starta en manuell synkronisering.
 
-## <a name="windows-10-mobile"></a>Windows 10 Mobil
-Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda en långsam appinstallation:
-
-1. Gå till **Alla appar** > **Inställningar** > **Konton**.
-
-    ![Välj konton på skärmen Inställningar](./media/win10m-sync-1-settings-accounts.png)
-
-2. Tryck på **Åtkomst till arbetsplats**.
-
-    ![Välj arbetsåtkomst som kontotyp](./media/win10m-sync-2-work-access.png)
-
-3. Välj företagets namn under **Registrera dig för hantering av mobilenheter**.
-
-    ![Välj företagsnamnet för enhetshantering](./media/win10m-sync-3-tap-comp-name.png)
-
-4. Tryck på ikonen **Synkronisera**.
-
-    ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)
-
-    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
+* [Synkronisera Windows 10 Desktop](#windows-10-desktop)
+* [Synkronisera Windows 10 Mobil](#windows-10-mobile)
+* [Synkronisera Windows Phone 8.1](#windows-phone-81)
 
 ## <a name="windows-10-desktop"></a>Windows 10 desktop
 Det finns mer än en version av Windows 10, vilket innebär att det finns två uppsättningar steg. Om du är osäker på vilka steg du ska följa tittar du på skärmbilderna och följer de steg som liknar vad du ser på din enhet.
@@ -109,6 +94,27 @@ Det finns mer än en version av Windows 10, vilket innebär att det finns två u
 
    Knappen är nedtonad tills synkroniseringen är färdig.
 
+   ## <a name="windows-10-mobile"></a>Windows 10 Mobil
+   Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda en långsam appinstallation:
+
+   1. Gå till **Alla appar** > **Inställningar** > **Konton**.
+
+       ![Välj konton på skärmen Inställningar](./media/win10m-sync-1-settings-accounts.png)
+
+   2. Tryck på **Åtkomst till arbetsplats**.
+
+       ![Välj arbetsåtkomst som kontotyp](./media/win10m-sync-2-work-access.png)
+
+   3. Välj företagets namn under **Registrera dig för hantering av mobilenheter**.
+
+       ![Välj företagsnamnet för enhetshantering](./media/win10m-sync-3-tap-comp-name.png)
+
+   4. Tryck på ikonen **Synkronisera**.
+
+       ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)
+
+       Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
+
 ## <a name="windows-phone-81"></a>Windows Phone 8.1
 Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda en långsam appinstallation:
 
@@ -127,9 +133,4 @@ Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda
    Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen tills synkroniseringen är klar.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

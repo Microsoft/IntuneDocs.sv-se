@@ -2,10 +2,10 @@
 title: Registrera enheter | Microsoft Docs
 description: "Hantering av mobila enheter (MDM) använder registrering för att skapa hantering för enheterna och tillåta åtkomst till resurser."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 39f7de3a94b813cbd7b353cd319ecc54fcbf8694
-ms.openlocfilehash: 483fd327be25a1cb08e5295d72a27987ab018062
+ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
+ms.openlocfilehash: d1b24b745fe1e860e42fa23647976aadea1953cd
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -37,7 +38,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 - **Rensa** – Anger om enheten måste rensas innan användarna kan registrera enheten. Termen ”rensa” innebär en fabriksåterställning av enheten, vilket tar bort alla data. Mer information finns i [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md).
 - **Tillhörighet** – Kopplar enheter till användare. Krävs för hantering av mobila program (MAM) och villkorlig åtkomst till företagsdata. Mer information finns i [Användartillhörighet](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Lås** – Indikerar om användare hindras från att avregistrera sina enheter från hanteringen. Användare kan avregistrera sina enheter på alla plattformar med företagsportalappen. De kan inte använda menyerna i operativsystemet för att avregistrera. 
+- **Lås** – Indikerar om användare hindras från att avregistrera sina enheter via lokala OS-menyer. Användare kan avregistrera sina enheter på alla plattformar med företagsportalappen. 
 
 **Metoder för iOS-registrering**
 
@@ -130,9 +131,4 @@ Intune kan hantera följande enhetsplattformar:
 - [Krav för enhetsregistrering](prerequisites-for-enrollment.md)
 - [Hantera företagsägda enheter](manage-corporate-owned-devices.md)
 - [Mobila enheter och datorer som stöds](../get-started/supported-mobile-devices-and-computers.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

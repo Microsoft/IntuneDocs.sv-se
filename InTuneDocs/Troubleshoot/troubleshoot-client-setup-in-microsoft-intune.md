@@ -1,11 +1,11 @@
 ---
-title: "Felsöka klientinstallationen | Microsoft Intune"
+title: "Felsöka klientinstallationen | Microsoft Docs"
 description: "Felsök vanliga problem med klientinstallationen."
 keywords: 
 author: staciebarker
 ms.author: staciebarker
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: e46d292b-1d16-46db-a87f-d53eefa4d22a
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 889a13bd50943b9cdf0f40d50b6f8ce263dde56d
-ms.openlocfilehash: e37b5da81150f89fce1ee3d57bd84de0ff7fb76f
+ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
+ms.openlocfilehash: 9de1c3f8c3dbb7a5e00c5384cc7321aedfa5b9b5
+ms.lasthandoff: 02/22/2017
 
 
 ---
 
 # <a name="troubleshoot-client-setup-in-microsoft-intune"></a>Felsöka klientinstallationen i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Använd följande information för att felsöka vanliga problem med klientinstallationen. Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
 ## <a name="client-installation-fails"></a>Klientinstallationen misslyckas
@@ -70,7 +75,7 @@ Detta kan bero på att viktiga programuppdateringar saknas på datorn.
 **Lösning:** Kontrollera att din princip för programuppdateringar aktiverar installationen av viktiga uppdateringar. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruuppdateringar i Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)
 
 
-## <a name="microsoft-intune-policyrelated-errors-in-policyplatformlog"></a>Principrelaterade Microsoft Intune-fel i policyplatform.log
+## <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Principrelaterade Microsoft Intune-fel i policyplatform.log
 För icke-MDM Windows-enheter kan principfel i filen policyplatform.log bero på att andra inställningar än standardinställningarna används i Windows User Account Control (UAC) på enheten. Andra inställningar än UAC-standardinställningarna kan påverka Microsoft Intune-klientinstallationer och principkörning.
 
 ### <a name="to-resolve-uac-issues"></a>Så här löser du problem i UAC
@@ -116,17 +121,22 @@ I följande tabell beskrivs felkoder som visas under **Aviseringar** om installa
 |**0x80070032**|Ett eller flera installationskrav för klientprogramvaran kunde inte bekräftas på klientdatorn.|Kontrollera att alla nödvändiga uppdateringar är installerade på klientdatorn och pröva sedan att installera klientprogramvaran igen. Mer information om installationskraven för klientprogramvaran finns i [Krav på nätverksinfrastruktur för Microsoft Intune](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
 |**0x80043008**|Det gick inte att starta tjänsten Microsoft Online Management Updates.|Kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).|
 |**0x80043009**|Klientdatorn har redan registrerats i tjänsten.|Du måste inaktivera klientdatorn innan du kan registrera den igen i tjänsten. Instruktioner finns i [Dra tillbaka enheter från Microsoft Intune-hanteringen](/intune/deploy-use/retire-devices-from-microsoft-intune-management).|
+|**0x8004300A**|(Steg 21) Felet uppstår när registreringspaketet distribueras till grupprincipobjektet som ska installeras i användaromfånget och inte datoromfånget. |Kontrollera att grupprincipobjektet har rätt inriktning via GPSI i datoromfånget. Inlägg om det här ämnet finns i [TechNet-forumet](https://social.technet.microsoft.com/Forums/en-US/bb9fa71c-c132-4954-abb0-70be8acbd925/failed-to-install-windows-intune?forum=microsoftintuneprod).|
 |**0x8004300B**|Det går inte att köra installationspaketet för klientprogramvaran eftersom den version av Windows som körs på klienten inte stöds.|Intune stöder inte den version av Windows som körs på klientdatorn. En lista över operativsystem som stöds finns i [Krav på nätverksinfrastruktur för Microsoft Intune](/intune/get-started/network-infrastructure-requirements-for-microsoft-intune).|
 |**0xAB2**|Windows Installer kunde inte komma åt VBScript-körtiden för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda de verktyg som beskrivs i [Microsoft Support-artikeln KB198038: Användbara verktyg för paket- och distributionsproblem](http://go.microsoft.com/fwlink/?LinkID=234255).|
 |**0x8004300f**|Programvaran kan inte installeras eftersom System Center Configuration Manager-klienten redan är installerad.|Ta bort Configuration Manager-klienten och pröva sedan att installera klientprogramvaran igen.|
 |**0x80043010**|Programvaran kan inte installeras eftersom OMADM-klienten (Open Mobile Alliance Device Management) redan är installerad.|Ta bort OMADM-klienten och pröva sedan att installera klientprogramvaran igen.|
 Om installationsproblemen kvarstår kontaktar du supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md). Ha loggen för registreringen av klientdatorn (finns i %*programfiles*%\Microsoft\OnlineManagement\Logs\Enrollment.log och %*användarprofil*%\AppData\Local\Microsoft\OnlineManagement\Logs\Enrollement.log) och Windows Update-loggen (%*windir*%\windowsupdate.log) till hands när du kontaktar supporten.
 
+## <a name="what-to-do-if-endpoint-protection-is-not-uninstalled-when-you-uninstall-the-client"></a>Vad ska du göra om Endpoint Protection inte har avinstallerats när du avinstallerar klienten?
+
+Ibland kan värdskyddsagenten (Endpoint Protection) finnas kvar efter att du har kört kommandona ovan. I så fall kan du köra kommandot från en upphöjd kommandotolk:
+
+    ```
+    "C:\Program Files\Managed Defender\Setup.exe" /x /q /s
+    ```
+
+
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

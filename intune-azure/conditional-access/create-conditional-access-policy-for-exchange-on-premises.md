@@ -1,5 +1,6 @@
 ---
-title: "Villkorlig åtkomstpolicy för Exchange On-premises| Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Princip för villkorlig åtkomst för Exchange On-Premises"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Hur du kan konfigurera villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Intune"
 keywords: 
 author: andredm7
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 581f9be824ea883fd0208abc3b2ecc09174cb911
-ms.openlocfilehash: a80d6a19948291cc80e42ad5a9a2f016effb2f37
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: a9edd882e2cf0fb7abf50002e9f1e8dfd5634fe1
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -96,9 +99,4 @@ Om du vill ha mer information om statusen för Android for Work-stöd läser du 
   - När du ställer in det här alternativet för att blockera åtkomst kommer alla enheter omedelbart att blockeras från att komma åt Exchange On-Premises från början.  Enheter som tillhör användare i **Inkluderade grupper** får åtkomst först när enheten har registrerats i Intune och utvärderats som kompatibel. Android-enheter som inte kör Samsung KNOX blockeras alltid eftersom de inte stöder den här inställningen.
 10. Under **Undantag för plattformsenhet**, väljer du **Lägg till** för att ange plattformarna. Om inställningen **Ohanterad enhetsåtkomst** är angiven till **blockerad**, kommer enheter som är registrerade och godkända tillåtas även om det finns ett plattformsundantag som ska blockeras. Välj **OK** för att spara inställningarna.
 11. På bladet **Lokalt**, klickar du på **Spara** för att spara principen för villkorlig åtkomst.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

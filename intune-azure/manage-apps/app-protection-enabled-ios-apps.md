@@ -1,5 +1,6 @@
 ---
-title: "iOS-appar med appskyddsprinciper | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "iOS-appar med appskyddsprinciper | Förhandsversion av Intune Azure"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Det här avsnittet beskriver vad som händer när din iOS-app hanteras av appskyddsprinciper."
 keywords: 
 author: NathBarn
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 89afae81076d563f4ebba289f8fa82eaea6ab234
-ms.openlocfilehash: ae646cf3dd1b1469b9f87ac66ad7171d77ef6518
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 5a4ce6d6248378ba48cddeaefb941c139dd990f6
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -63,9 +66,4 @@ Om du använder en iOS-enhet kanske ett blockeringsmeddelande visas om du förs�
 [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-android-apps.md)
 ### <a name="see-also"></a>Se även
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

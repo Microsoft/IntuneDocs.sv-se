@@ -1,5 +1,6 @@
 ---
-title: "Fullständig eller selektiv rensning på enheter med Intune | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Fullständig eller selektiv rensning på enheter med Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Information om hur du gör en selektiv rensning av företagets data på en enhet eller gör en fullständig rensning för att återställa enheten till fabriksinställningarna."
 keywords: 
 author: staciebarker
@@ -12,9 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: 9188f4bb4ea526227ccd9f2029fc9b44cbd4a334
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 22e188e81f2bc278045bb0988642b1b68372d6af
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -122,9 +125,4 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 3.  På bladet som visar enhetens namn väljer du **Ta bort föret...** (står för Ta bort företagsdata) och väljer sedan **Ja** för att bekräfta rensningen.
 
 Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

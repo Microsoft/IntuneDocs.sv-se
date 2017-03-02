@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: ab035d069fa1dbf5f5f38a959dc2f896a0109b6f
+ms.sourcegitcommit: 185b7dd1e486155f90956ea1f6f83246636d421c
+ms.openlocfilehash: bcbf2c877aae34baa42e7a51e347489ec8669a34
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -76,7 +77,7 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 2. Ange **Allmän** information, inklusive **Namn** och **Beskrivning**, och ange om enheter som är tilldelade till profilen har användartillhörighet eller tillhör en grupp:
 
-   - **Fråga efter användartillhörighet**: Enheten måste kopplas till en användare under den ursprungliga installationen innan den kan beviljas samma åtkomst till företagets data och e-post som användaren. **Användartillhörighet** bör konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (dvs. för att installera appar). Multifaktorautentisering (MFA) fungerar inte under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter.
+   - **Fråga efter användartillhörighet**: Enheten måste kopplas till en användare under den ursprungliga installationen innan den kan beviljas samma åtkomst till företagets data och e-post som användaren. **Användartillhörighet** bör konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (dvs. för att installera appar). Multifaktorautentisering (MFA) fungerar inte under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter. Nya användare som måste ändra sina lösenord när de loggar in första gången uppmanas inte under registreringen på DEP-enheter. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under DEP-registreringen. De måste återställa lösenordet från en annan enhet. 
 
    > [!NOTE]
    > DEP med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt aktiveras för att du ska kunna begära en användartoken.
@@ -161,9 +162,4 @@ Från och med december 2016 flyttas grupphantering för enheter till Azure Activ
 
 ### <a name="see-also"></a>Se även
 [Förutsättningar för att registrera enheter](prerequisites-for-enrollment.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -1,5 +1,6 @@
 ---
-title: "Kända problem i Microsoft Intune-förhandsversionen | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Kända problem i förhandsversionen av Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Mer information om kända problem i förhandsversionen"
 keywords: 
 author: robstackmsft
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f479b4236243fd05630229520633a09c451e6e1e
-ms.openlocfilehash: c1f79db598651b6a8a1c2a34627a901eff6a0beb
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -35,9 +38,4 @@ Om du vill föreslå att en ny funktion läggs till i Intune kan du skicka en ra
 ## <a name="administration-and-accounts"></a>Administration och konton
 
 - Globala administratörer (kallas även innehavaradministratörer) kan fortsätta att utföra dagliga administrationsuppgifter utan en separat Intune- eller EMS-licens (Enterprise Mobility Suite). Om globala administratörer vill använda tjänsten, t.ex. för att registrera sina egna enheter, företagsenheter eller för att använda Intunes företagsportal, behöver de dock en Intune- eller EMS-licens precis som andra användare.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

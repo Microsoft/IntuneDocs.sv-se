@@ -18,8 +18,9 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: 7a4b5acea4a4bdce32c42ca33f81778965ee1abb
+ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
+ms.openlocfilehash: bde2ccc0c170a85e926357d54fcf4ffe6ee50fd9
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -34,7 +35,7 @@ Om du registrerar en Windows- eller Windows Phone-enhet i Intune kan du:
 
 -   Komma åt företagets nätverk, samt dina e-post- och arbetsfiler.
 
--   Hämta företagsappar från webbplatsen för företagsportalen. (För Windows 7 och Windows Vista kan du bara hämta företagsappar från webbplatsen för företagsportalen.)
+-   Hämta företagsappar från webbplatsen för företagsportalen. (__Obs!__ För Windows 7 och Windows Vista kan du bara hämta företagsappar från webbplatsen för företagsportalen.)
 
 -   Konfigurera ditt företags eller din skolas e-postkonto automatiskt.
 
@@ -67,6 +68,7 @@ När du registrerar en enhet ger du IT-administratören tillstånd att till exem
 -  IT-administratören kan installera appar och uppdateringar på datorn.
 
 ## <a name="what-happens-every-eight-hours-after-device-enrollment"></a>Vad händer var åttonde timme efter enhetsregistreringen?
+
 Ungefär var åttonde timme kommer registrerade enheter att:
 
 -   Hämta eventuella uppdateringar av principer eller appar som din IT-administratör har gjort tillgängliga.
@@ -76,9 +78,4 @@ Ungefär var åttonde timme kommer registrerade enheter att:
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar.
 
 Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

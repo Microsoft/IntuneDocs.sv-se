@@ -1,11 +1,11 @@
 ---
-title: "Krav för registreringen av mobila enheter | Microsoft Intune"
+title: "Krav för registreringen av mobila enheter | Microsoft Docs"
 description: "Ange krav för hantering av mobila enheter (MDM) och kom igång med att registrera olika operativsystem."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: 270e6015e629c048b01b218793640888706d118e
+ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
+ms.openlocfilehash: fc97e1266c2e859104b21f3bf4ff24f33123f66a
+ms.lasthandoff: 02/22/2017
 
 
 ---
 
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Krav för hantering av mobila enheter i Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Du kan göra det möjligt för anställda att registrera sina mobila enheter i Intune med följande steg. Samma steg krävs för att hantera företagsägda enheter.
 
 |Steg|Information|  
@@ -47,8 +52,7 @@ Innan du aktiverar registrering av mobila enheter ser du till att du har gjort f
 Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune. Om Configuration Manager anges som utfärdare för hanteringen kan inga andra tjänster användas för hantering av mobila enheter.
 
 >[!IMPORTANT]
-> Överväg noggrant om du vill hantera mobila enheter endast med hjälp av Intune (onlinetjänst) eller System Center Configuration Manager med Intune (lokal programvarulösning i samband med onlinetjänsten). När du har angett utfärdare för hantering av mobila enheter går det inte att ändra detta.
-
+> Överväg noggrant om du vill hantera mobila enheter endast med hjälp av Intune (onlinetjänst) eller System Center Configuration Manager med Intune (lokal programvarulösning i samband med onlinetjänsten). När du har angett auktoritet för hantering av mobila enheter kan du inte ändra detta utan hjälp från Microsoft Support. Instruktioner finns i [Vad ska jag göra om jag väljer fel inställning för MDM-auktoritet?](#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 
 1.  Gå till [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter**.
@@ -147,8 +151,63 @@ Nu när registreringen har aktiverats bör du konfigurera hanteringen så att de
 - [Lägg till appar](add-apps.md) och [distribuera appar](deploy-apps.md) till hanterade enheter
 - [Skapa efterlevnadsprinciper för enheter](introduction-to-device-compliance-policies-in-microsoft-intune.md) och [begränsa åtkomsten baserat på efterlevnad](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
 
+## <a name="what-to-do-if-you-choose-the-wrong-mdm-authority-setting"></a>Vad ska jag göra om jag väljer fel inställning för MDM-auktoritet?
 
+Om du har valt fel inställning för MDM-auktoritet och vill ändra inställningen måste du kontakta Microsoft Support. Du kan inte ändra den här inställningen själv. Läs följande information innan du kontaktar Microsoft Support. Den beskriver vilken information Microsoft Support behöver från dig för att kunna göra ändringen.
 
-<!--HONumber=Dec16_HO2-->
+MDM-auktoriteten kan återställas på tre sätt. I supportbegäran väljer du det sätt som passar bäst för ditt fall. Om inget alternativ motsvarar ditt fall meddelar du Microsoft Support om detta.
 
+Microsoft Support ber dig bekräfta följande information:
+
+- Klient-ID: den domän som används för att logga in på tjänsten (till exempel intune.onmicrosoft.com)
+- Den MDM-auktoritet som du vill ändra till
+- Bekräftelse av att nödvändiga steg har slutförts, enligt listan nedan
+
+Om du använder samexistens måste du kontrollera checklistan för både Intune och Office 365.
+
+### <a name="reset-mdm-authority-from-intune-to-configuration-manager"></a>Återställa MDM-auktoritet från Intune till Configuration Manager
+
+Gör följande innan du kontaktar Microsoft Support för att återställa din MDM-auktoritet.
+
+- Dra tillbaka alla enheter från Intune-administratörskonsolen. Försök inte att dra tillbaka en enhet från själva enheten. 
+- Ta bort Service To Service Connector (under **Administration** > **Hantering av mobila enheter** > **Microsoft Exchange**) eller inaktivera Exchange Connector, om du har konfigurerat det. 
+- Ta bort rollen Hanterare av enhetsregistrering från **Administratör** > **Hanterare av enhetsregistrering**.
+- Inaktivera Mappning av enhetsgrupp i **Administratör** > **Hanterings av mobila enheter** > **Mappning av enhetsgrupp**.
+- Ta bort nycklar för separat inläsning from **Administratör** > **Hantering av mobila enheter** > **Windows** > **Nycklar för separat inläsning**.
+- Ta bort APNs-certifikatet för iOS på sidan **Administratör** > **Hantering av mobila enheter** > **iOS**.
+- Ta bort DEP-token för iOS på sidan **Administratör** > **Hantering av mobila enheter** > **iOS**.
+- Ta bort alla principer för dina MDM-enheter under **Princip** > **Konfigurationsprinciper**.
+- Ta bort alla publicerade program för dina MDM-enheter i **Appar** > **Hanterad programvara**.
+
+### <a name="reset-mdm-authority-from-configuration-manager-to-intune"></a>Återställa MDM-auktoritet från Configuration Manager till Intune
+
+Gör följande innan du kontaktar Microsoft Support för att återställa din MDM-auktoritet.
+
+- Dra tillbaka alla enheter (som hanteras som mobila enheter) från Configuration Manager-konsolen. Försök inte att dra tillbaka en enhet från själva enheten. 
+- Ta bort alla användare från Intune-användargruppen. Peka Intune-prenumerationen till en tom användarsamling eller ta bort alla användare från målsamlingen.  Kontrollera att användarna har tagits bort i CloudUserSync.log. 
+- Avmarkera iOS-plattformen för att rensa APNs-certifikatet.
+- Ta bort alla publicerade program för MDM-enheter.
+- Ta bort alla principer för MDM-enheter. 
+- Ta bort Windows Intune Connector från Configuration Manager-konsolen (gäller endast för R2 SP1 eller lägre).
+Ta bort Intune-prenumerationen genom att högerklicka på prenumerationen och välja **Ta bort**.
+- Starta om SMS Executive-tjänsten.
+- Ge oss några exempelanvändare så att vi, när processen är klar, kan kontrollera att Configuration Manager-licenserna har tagits bort.
+
+### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Återställa MDM-auktoritet från Office 365 till Configuration Manager
+
+1. Gå till [https://protection.office.com](https://protection.office.com).
+2. Välj fliken **Säkerhetsprinciper** och välj **Enhetshantering**. 
+3. Dra tillbaka alla enheter genom att välja **Selektiv rensning**. Försök inte att dra tillbaka en enhet från själva enheten. Om selektiv rensning har inaktiverats krävs ingen ytterligare åtgärd.
+4. Välj fliken **Säkerhetsprinciper** och välj **Säkerhetsprinciper för enhet**. 
+5. Välj **Ta bort** för alla befintliga principer. Om principerna är i väntande tillstånd krävs ingen ytterligare åtgärd.
+
+>[!NOTE]
+>Det går inte att ta bort APNs-certifikatet för iOS. Det fortsätter att vara kopplat till kontot. 
+
+### <a name="next-steps-for-mdm-authority-resets"></a>Nästa steg för återställning av MDM-auktoritet
+
+När Microsoft Support har verifierat punkterna i checklistan kan det ta upp till tre arbetsdagar att återställa MDM-auktoritet, men vanligtvis sker det inom en dag. 
+
+>[!IMPORTANT]
+>Konfigurera inte prenumerationen förrän Microsoft Support har bekräftat att återställningen har slutförts! För tidig konfiguration kan leda till skador och kan påverka din möjlighet att använda Intune-tjänsten. 
 

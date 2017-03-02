@@ -1,11 +1,11 @@
 ---
 title: "Använda hanterade enheter för att få arbetet gjort | Microsoft Docs"
-description: "Läs mer om företagsportalappen."
+description: "Förstå vad det innebär att registrera en enhet för hantering med Intune."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,26 @@ ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
 searchScope:
 - Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: jeffgilb
+ms.reviewer: robstack
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 68c7a23dc8769330c14f74e6aebb07eeb188a991
-ms.openlocfilehash: 1ca19828902585bf6011713ab214619b7f8c12c5
+ms.sourcegitcommit: d05b3200d145aa535216dc81c62cc73b022528f2
+ms.openlocfilehash: ae364b9e77876612be4eb6d68b8b57a5d3be9db2
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="using-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
+# <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
 
 När du registrerar en enhet för hantering med Intune kan IT-avdelningen hantera dessa arbets- eller skolresurser, skydda dem och du har samtidigt friheten att använda den enhet du önskar för att utföra ditt arbete. Ett vanligt sätt att göra detta på är genom att registrera enheten för hantering via företagsportalen.
 
+## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Vilken information kan mitt företag se när jag registrerar enheten i Intune?
+Företagets IT-avdelning kan se information som är relevant för arbetet, men inte din personliga information. Detta är särskilt viktigt att känna till när du registrerar en personlig enhet för användning i arbetet. Vi visar mer i detalj vad de [kan se och inte kan se i nästa artikel i användarhjälpen](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+
+## <a name="how-do-i-get-the-company-portal"></a>Hur skaffar jag företagsportalen?
 Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen åt dig.
@@ -57,7 +63,7 @@ Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på di
 
 - [Installera företagsportalappen för Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Installera företagsportalappen för iOS och macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Installera företagsportalappen för Windows](what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows.md)
+- [Installera företagsportalappen för Windows](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Vilken typ av datorer och enheter kan du lägga till i företagsportalen?
 -   Apple-enheter som använder iOS (som iPhone och iPad) och macOS (som MacBook och iMac)
@@ -71,7 +77,7 @@ Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på di
 ## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Kan du ta bort en dator eller enhet från företagsportalen?
 Du kan ta bort eller återställa en dator eller enhet på företagsportalen. Det är skillnad mellan att **ta bort** och att **återställa**.
 
-När du *tar bort* en dator eller enhet avregistrerar du enheten från Intune. När du tar bort en dator eller enhet har du inte längre åtkomst till företagsportalen från den enheten och viss företagsinformation kan tas bort från enheten. Välj någon av följande länkar om du vill se hur du tar bort enheten från företagsportalen:
+När du *tar bort* en dator eller enhet från företagsportalen avregistrerar du enheten från Intune. När du tar bort en dator eller enhet har du inte längre åtkomst till företagsportalen från den enheten och viss företagsinformation kan tas bort från enheten. Välj någon av följande länkar om du vill se hur du tar bort enheten från företagsportalen:
 
 - [Avregistrera din Android-enhet](unenroll-your-device-from-intune-android.md)
 - [Avregistrera din iOS- eller macOS-enhet](unenroll-your-device-from-intune-ios.md)
@@ -79,21 +85,19 @@ När du *tar bort* en dator eller enhet avregistrerar du enheten från Intune. N
 
 När du *återställer* en dator eller enhet försöker företagsportalen återställa datorn eller enheten till tillverkarens standardinställningar. Om du återställer enheten tas alla företagsdata och personliga data bort från enheten! Om du har blivit av med enheten kan du även fjärråterställa den från företagsportalens webbplats.
 
-Välj någon av följande länkar om du vill se hur du återställer enheten:
+Här kan du se hur du återställer en enhet:
 
-- [Återställa (radera) din Android-enhet](reset-erase-your-lost-or-stolen-device-android.md)
-- [Återställa (radera) din iOS eller macOS-enhet](reset-erase-your-lost-or-stolen-device-ios.md)
-- [Återställa din Windows-enhet](reset-erase-your-lost-or-stolen-device-windows.md)
-- [Återställa en enhet från företagsportalens webbplats](reset-your-device-cpwebsite.md)
+- [Återställa (ta bort) en enhet från företagsportalens webbplats](reset-erase-your-device-cpwebsite.md)
 
 ## <a name="what-if-i-cant-see-my-device-in-the-company-portal"></a>Vad händer om jag kan inte se min enhet på företagsportalen?
 För att se en enhet måste du först lägga till den i företagsportalen. Gå till den företagsportal som administratören har rekommenderat och följ anvisningarna för din enhet. Enheter som ägs och hanteras av ditt företag visas inte.
 
-## <a name="if-you-have-questions-contact-your-it-admin"></a>Kontakta IT-administratören om du har frågor
-Kontakta IT-administratören om du behöver hjälp. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+## <a name="where-else-can-i-go-for-help"></a>Var finns ytterligare hjälp?
+Vi rekommenderar att du först försöker se om du kan lösa problemet själv. Vi tillhandahåller en lista med olika saker du kan prova för att lösa problemen för de olika plattformar som Intune stöder.
 
+- [Åtgärda vanliga problem med din Android-enhet](troubleshoot-your-device-android.md)
+- [Åtgärda vanliga problem med din iOS-enhet](troubleshoot-your-device-ios.md)
+- [Åtgärda vanliga problem med din Windows-enhet](troubleshoot-your-device-windows.md)
 
-
-<!--HONumber=Feb17_HO2-->
-
+Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till IT-administratören. Kontaktinformationen ska finnas på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

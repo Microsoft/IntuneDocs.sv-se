@@ -1,5 +1,6 @@
 ---
-title: "Validera appskyddsprinciper | Förhandsversion av Intune Azure | Microsoft Docs"
+title: Verifiera appskyddsprinciper
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Detta avsnitt beskriver hur du kan testa och validera om din appskyddsprincip är korrekt konfigurerad och fungerar som förväntat."
 keywords: 
 author: NathBarn
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 424fae862592c1ab5b4221fb5ad40a52c39f6760
-ms.openlocfilehash: e0d5b4b0c3557c1d8158f9e0ea6e33c426dba925
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 086ea61de3423be254d3d8f2224c4ad96d90385d
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -57,9 +60,4 @@ Om testningen visar att appskyddsprincipen inte fungerar som förväntat rekomme
 ### <a name="see-also"></a>Se även
 
 [Vad är appskyddsprincip i Intune?](app-protection-policies.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

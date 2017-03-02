@@ -1,11 +1,12 @@
 ---
-title: "Ange registreringsbegränsningar i Intune | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Ange registreringsbegränsningar i Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. "
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 11/30/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,9 +14,11 @@ ms.technology:
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: 1bdefce35c20ce24b94ee701a2d13b5408f435ce
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 56996592febf0be5ab74b158a70404728fe17a4d
+ms.lasthandoff: 02/18/2017
 
 ---
 
@@ -23,11 +26,15 @@ ms.openlocfilehash: 1bdefce35c20ce24b94ee701a2d13b5408f435ce
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Du kan begränsa vilka typer av enheter som ska kunna registreras i Intune genom att ange de tillåtna plattformarna. Du kan också ange det maximala antalet enheter en användare har behörighet att registrera.
+Du kan ange vilka typer av enheter du vill registrera och maximalt antal enheter. På bladet Registreringsbegränsningar kan du ange:
+
+- De plattformar som får registreras och om registrering av privatägda enheter ska blockeras för Android och iOS.
+
+- Det maximala antalet enheter som en användare får registrera.
 
 ## <a name="set-device-type-restrictions"></a>Ange begränsningar för enhetstyp
 
-1. Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Registreringsbegränsningar**.
 
@@ -35,28 +42,28 @@ Du kan begränsa vilka typer av enheter som ska kunna registreras i Intune genom
 
 4. På bladet **Alla användare** väljer du **Plattformar**.
 
-5. För plattformar som ska kunna registreras i Intune väljer du **Tillåt**. För plattformar som du vill blockera från registrering väljer du **Blockera**.
+5. För plattformar som ska kunna registreras i Intune väljer du **Tillåt**. För plattformar som du vill blockera från registrering väljer du **Blockera**. Värdet för plattformar är **Tillåt** som standard. 
+
+    >[!NOTE]
+    >Dessa inställningar gäller inte för, och blockerar inte, Windows-registreringar som använder Intune-klientprogrammet. De här inställningarna påverkar endast registrering med hantering av mobila enheter. 
 
 6. Välj **Spara**.
 
 7. Välj **Plattformskonfigurationer**.
 
-8. Välja att Tillåta eller Blockera registrering av privatägda iOS-enheter.
+8. Välj om du vill **Tillåta** eller **Blockera** registrering av privatägda iOS- och Android-enheter.
 
 9. Välj **Spara**.
 
 ## <a name="set-device-limit-restrictions"></a>Ange begränsningar för enhetsgräns
 
-1. Välj **Registrera enheter** på Intune-bladet i Azure-portalen och välj sedan **Registreringsbegränsningar**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. Under **Begränsningar för enhetsgräns** väljer du **Standard**.
+2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Registreringsbegränsningar**.
 
-3. På bladet **Alla användare** väljer du **Enhetsgräns**.
+3. Under **Begränsningar för enhetsgräns** väljer du **Standard**.
 
-4. Välj det maximala antalet enheter som en användare kan registrera och klicka sedan på **Spara**.
+4. På bladet **Alla användare** väljer du **Enhetsgräns**.
 
-
-
-<!--HONumber=Feb17_HO1-->
-
+5. Välj det maximala antalet enheter som en användare kan registrera och klicka sedan på **Spara**.
 

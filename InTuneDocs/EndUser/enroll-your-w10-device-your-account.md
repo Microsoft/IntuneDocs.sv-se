@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,30 +16,34 @@ searchScope:
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 32bde9552e79d91dd967050b96cec62146367f9b
+ms.sourcegitcommit: 580ca62628981016c444b2992e792ecc4a5da442
+ms.openlocfilehash: 7afe4eca15c395806bcc800bc261d5e6b7ba5f0c
+ms.lasthandoff: 02/18/2017
 
 
 ---
 
 # <a name="enroll-your-windows-10-device-in-intune"></a>Registrera din Windows 10-enhet i Intune
 
-1.  Gå till Windows **Inställningar** och tryck på **Konton**.
+1.  Öppna appen **Inställningar** i Windows genom att välja **Inställningar** på **Start-menyn**. Du kan också söka efter "inställningar" i sökfältet.
+
+2. Välj **Konton**.
 
     ![Välj Inställningar och sedan Konton](./media/W10-enroll-1-settings-accounts.png)
 
-2.  Tryck på **Ditt konto**.
+3. Välj **ditt konto**.
 
-    ![Tryck på ditt konto](./media/W10-enroll-2-accounts-your-account.png)
+    ![Välj ditt konto](./media/W10-enroll-2-accounts-your-account.png)
 
-3.  Tryck på **Lägg till ett arbetsplats- eller skolkonto**.
+4. Välj **Lägg till ett arbetsplats- eller skolkonto**.
 
-    ![Tryck på Lägg till ett arbetsplats- eller skolkonto](./media/w10-enroll-3-add-work-school-acct.png)
+    ![Välj lägga till ett arbetsplats- eller skolkonto](./media/w10-enroll-3-add-work-school-acct.png)
 
-4.  Logga in med dina uppgifter för arbets- eller skolkontot.
+5. Logga in med dina uppgifter för arbets- eller skolkontot.
 
-    ![sign-in](./media/W10-enroll-4-sign-in.png)
+    ![Logga in](./media/W10-enroll-4-sign-in.png)
 
 Kan du fortfarande inte komma åt din e-post, dina filer eller andra data för skolan eller arbetet? Försök att åtgärda problemet genom att [felsöka problem med ditt konto](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Om det fortfarande inte fungerar kontaktar du IT-administratören för ytterligare hjälp.
 
@@ -47,16 +51,11 @@ Ett enkelt sätt att få hjälp från IT-administratören är via kontaktinforma
 
 Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
 
-1.  Tryck på **Start** &gt; **Store**.
+1. Välj **Start** > **Store**.
 
-2.  Tryck på **Sök** och skriv sedan **företagsportal**.
+2. Välj **Sök** och skriv sedan **företagsportal**.
 
-3.  Tryck på **Företagsportal** &gt; **Installera** i listan över resultat.
+3. I listan med resultat väljer du **Företagsportal** > **Installera**.
 
-4.  Tryck på **Installera** eller på **Ledigt**. Det finns ingen skillnad mellan de här två alternativen. Vilket alternativ som visas beror på hur din organisation har konfigurerat företagsportalappen.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+4. Välj antingen **Installera** eller på **Ledigt**. Det finns ingen skillnad mellan de här två alternativen. Vilket alternativ som visas beror på hur din organisation har konfigurerat företagsportalappen.
 
