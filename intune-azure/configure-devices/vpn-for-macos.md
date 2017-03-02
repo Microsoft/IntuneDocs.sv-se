@@ -14,13 +14,14 @@ ms.assetid: d203a70d-37df-4195-85f7-ad5ef14ac2a1
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6cd3069a63bd657d1c9f5e33b96db39a3b3f98d2
-ms.openlocfilehash: 6f7bcfaec34c4916f7c916210b00440062b83694
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 758573964627b1d5e4f98ea3729df696bf96bf1c
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="vpn-settings-for-macos-devices-in-intune-azure-preview"></a>VPN-inställningar för macOS-enheter i förhandsversionen av Intune Azure
+# <a name="vpn-settings-for-macos-devices-in-microsoft-intune"></a>VPN-inställningar för macOS-enheter i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -57,9 +58,4 @@ Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 - **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Adress** – Ange proxyns serveradress (som en IP-adress).
 - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

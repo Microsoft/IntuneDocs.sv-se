@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 21c55041-3821-4a62-9f85-855b97dba269
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab494a3dd1e1bdea9703ab314574b192c5208ee
-ms.openlocfilehash: 3656db2d9828dcc16c479ba072de691848fdd23b
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: ab1ad9852b8f9145f405bb71cf52bfcb00e078f6
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="custom-settings-for-windows-phone-81-devices-in-intune-azure-preview"></a>Anpassade inställningar för Windows Phone 8.1-enheter i förhandsversion av Intune Azure
+# <a name="custom-settings-for-windows-phone-81-devices-in-microsoft-intune"></a>Anpassade inställningar för Windows Phone 8.1-enheter i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -40,9 +41,4 @@ Funktionen är avsedd för att kunna distribuera inställningar som inte går at
     - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 
 4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

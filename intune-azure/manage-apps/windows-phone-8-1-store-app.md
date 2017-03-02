@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,12 +14,13 @@ ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 01e5bfeb98aee9314fa04679cc27c8aba0e18fb0
-ms.openlocfilehash: 307819e2416ebefa091166af338e6b1a0a8a6cc7
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 4a08e0ac90faa0715172e7c5355b474822536afe
+ms.lasthandoff: 02/16/2017
 
 ---
 
-# <a name="how-to-add-windows-phone-81-store-apps-to-intune"></a>Lägga till Windows Phone 8.1 Store-appar i Intune
+# <a name="how-to-add-windows-phone-81-store-apps-to-microsoft-intune"></a>Så här lägger du till Windows Phone 8.1 Store-appar i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -44,11 +45,6 @@ ms.openlocfilehash: 307819e2416ebefa091166af338e6b1a0a8a6cc7
     - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
     - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
     - **Ladda upp ikon** – Överför en ikon som ska kopplas till appen. Den här ikonen visas med appen när användare söker i företagsportalen.
-8. När du är klar väljer du **Spara** på bladet **Lägg till App**.
+8. När du är klar väljer du **Spara** på bladet **Lägg till app**.
 
 Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).
-
-
-<!--HONumber=Feb17_HO1-->
-
-

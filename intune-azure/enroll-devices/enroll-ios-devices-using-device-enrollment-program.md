@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 2986e659d384eaa67b64af1ce3ae48a1ac81a600
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -50,7 +51,7 @@ Uppfyll följande krav innan du konfigurerar registrering av iOS-enheter:
 
 En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter. Följande steg visar hur du skapar en enhetsregistreringsprofil för iOS-enheter som registrerats med hjälp av DEP.
 
-1. Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Apple-registrering**.
 
@@ -110,17 +111,19 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 ## <a name="synchronize-dep-managed-devices"></a>Synkronisera DEP-hanterade enheter
 
-1. Välj **Registrera enheter** på Intune-bladet i Azure-portalen och välj sedan **Apple-registrering**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. Välj **DEP-serienummer** under **Hantera inställningar för Apples program för enhetsregistrering (DEP)**.
+2. Välj **Registrera enheter** på Intune-bladet i Azure-portalen och välj sedan **Apple-registrering**.
+
+3. Välj **DEP-serienummer** under **Hantera inställningar för Apples program för enhetsregistrering (DEP)**.
 
 4. Välj **Synkronisera** på bladet **Apple DEP-serienummer**.
 
 5. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
     Om du vill följa Apples villkor för godkänd DEP-trafik tillämpar Intune följande begränsningar:
-     -  En fullständig DEP-synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering uppdaterar Intune varje serienummer som Apple har tilldelat Intune vare sig serien tidigare har synkroniserats eller inte. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
-     -  Varje synkroniseringsbegäran har 10 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
+     -    En fullständig DEP-synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering uppdaterar Intune varje serienummer som Apple har tilldelat Intune vare sig serien tidigare har synkroniserats eller inte. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
+     -    Varje synkroniseringsbegäran har 10 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
 
 >[!NOTE]
 >Du kan även tilldela profiler DEP-serienummer från bladet **Apple DEP-serienummer**.
@@ -153,9 +156,4 @@ Enheter som har konfigurerats med mappning mellan användare kan installera och 
 7. När serienumret har verifierats omdirigeras användaren från företagsportalappen till företagsportalens webbplats för att slutföra registreringen. På webbplatsen uppmanas sedan användaren att återgå till appen.
 
 Registreringen är klar, och användaren kan nu använda den här enheten med fullständiga funktioner.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

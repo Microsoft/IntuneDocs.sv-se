@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/08/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
 ms.reviewer: karanda
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6cd3069a63bd657d1c9f5e33b96db39a3b3f98d2
-ms.openlocfilehash: 23322313bfedb089f2665f53795996a26efe40e0
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 61bb77b24314aca234e20df42c2eaa975dfcee8d
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="vpn-settings-for-ios-devices-in-intune-azure-preview"></a>VPN-inställningar för iOS-enheter i Intune Azure-förhandsversionen
+# <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>VPN-inställningar för iOS-enheter i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -74,12 +75,7 @@ Om du har valt **Anpassat VPN** som anslutningstyp, kan du konfigurera inställn
 
 ## <a name="proxy-settings"></a>Proxyinställningar
 
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Adress** – Ange proxyns serveradress (som en IP-adress).
 - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

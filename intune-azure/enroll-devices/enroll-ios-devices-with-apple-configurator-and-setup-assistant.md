@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: 8c6c92e6e7bd375063f2f19308fe19f6e44962ac
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 888e7b7af7dcca4154f67a1de781eb7908d9a187
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -54,7 +55,7 @@ Uppfyll följande krav innan du konfigurerar registrering av iOS-enheter:
 
 En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter. Följande steg visar hur du skapar en enhetsregistreringsprofil för iOS-enheter som registrerats med hjälp av Apple Configurator.
 
-1. Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Apple-registrering**.
 
@@ -78,11 +79,13 @@ När du har skapat Apple Configurator-profiler kan du tilldela enhetsserienummer
 
 ### <a name="assign-serial-numbers-to-apple-configurator-profiles"></a>Tilldela serienummer till Apple Configurator-profiler
 
-1. Från bladet **Apple Configurator-registreringsprofiler** väljer du den profil som du vill tilldela serienummer till.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. I bladet som uppkallats med profilens namn väljer du **Serienummer** > **Tilldela**.
+2. Från bladet **Apple Configurator-registreringsprofiler** väljer du den profil som du vill tilldela serienummer till.
 
-3. Välj de serienummer som du vill tilldela profilen och sedan knappen **Tilldela**.
+3. I bladet som uppkallats med profilens namn väljer du **Serienummer** > **Tilldela**.
+
+4. Välj de serienummer som du vill tilldela profilen och sedan knappen **Tilldela**.
 
 ## <a name="export-the-profile-to-ios-devices"></a>Exportera profilen till iOS-enheter
 
@@ -90,11 +93,13 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 
 ### <a name="export-a-profile-using-setup-assistant-enrollment"></a>Exportera en profil med hjälp av registrering med installationsassistenten
 
-1. Välj profilen som ska exporteras på bladet **Apple Configurator-registreringsprofiler**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. Välj **Exportera profil** på bladet för profilen.
+2. Välj profilen som ska exporteras på bladet **Apple Configurator-registreringsprofiler**.
 
-3. Kopiera profilens webbadress till [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) med iOS-enheten ansluten. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
+3. Välj **Exportera profil** på bladet för profilen.
+
+4. Kopiera profilens webbadress till [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) med iOS-enheten ansluten. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
 
   För stöd för Apple Configurator 2 måste 2.0-profilens URL redigeras. Det gör du genom att ersätta den här koden:
     ```
@@ -108,7 +113,7 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 
    Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
 
-4. Överför den här profil-URL:en till Apples enhetsregistreringsprogramtjänst för att definiera den Intune-profil som används av iOS-enheter.
+5. Överför den här profil-URL:en till Apples enhetsregistreringsprogramtjänst för att definiera den Intune-profil som används av iOS-enheter.
 
 
     1.  På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
@@ -139,7 +144,7 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 
     10. När iOS-enheten har slutfört förberedelserna kopplar du från USB-kabeln.  
 
-8.  **Distribuera enheter**.
+6.  **Distribuera enheter**.
     Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
 
 ## <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Hur användare installerar och använder företagsportalen på sina enheter
@@ -165,9 +170,4 @@ Enheter som har konfigurerats med mappning mellan användare kan installera och 
 7. När serienumret har verifierats omdirigeras användaren från företagsportalappen till företagsportalens webbplats för att slutföra registreringen. På webbplatsen uppmanas sedan användaren att återgå till appen.
 
 Registreringen är klar, och användaren kan nu använda den här enheten med fullständiga funktioner.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

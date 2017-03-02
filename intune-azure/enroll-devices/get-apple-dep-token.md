@@ -14,8 +14,9 @@ ms.assetid: 7e5c79c5-2883-4841-9be6-74cba16ee447
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 65a6b2e22359bdcb9b0c15a84c6b3586dafe4d6c
-ms.openlocfilehash: c740dedebdc4afd909a8c38447f698c2724de5a1
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: b2c79e92f6378825bdaac03d2d9be699bdaca95b
+ms.lasthandoff: 02/15/2017
 
 ---
 
@@ -31,7 +32,7 @@ Ett företag som vill hantera företagsägda iOS-enheter med Apples enhetsregist
 > Läs det här meddelandet endast om du är en kund som har migrerats från Intune-administrationskonsolen till Azure-portalen. Om du tar bort en Apple DEP-token från Intune-administrationskonsolen under migreringsperioden kan du upptäcka att DEP-token har återställts till ditt Intune-konto. Om detta inträffar, tar du bort DEP-token från Azure-portalen. 
 
 **Hämta ett Apple DEP-certifikat**</br>
-Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**. Välj **Registrera enheter** > **Apple DEP-token** på Intune-bladet och följ stegen i Azure-portalen enligt nedan.
+På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. Välj **Registrera enheter** > **Apple DEP-token** på Intune-bladet och följ stegen i Azure-portalen enligt nedan.
 
 **Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple DEP-token.**<br>
 Välj **Hämta den offentliga nyckeln** om du vill hämta och spara krypteringsnyckelfilen (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
@@ -53,9 +54,4 @@ Välj [Skapa en DEP-token via Apples distributionsprogram](https://deploy.apple.
 
 **Steg 4. Bläddra till din Apple DEP-token och ladda upp. Intune synkroniseras automatiskt med ditt DEP-konto.**<br>
 Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -3,9 +3,9 @@ title: "Lägg till IMEI-identifierare till Intune | Förhandsversion av Intune A
 description: "Förhandsversion av Intune Azure: Läs mer om hur du kan lägga till företagsidentifierare (IMEI-nummer) till Microsoft Intune. "
 keywords: 
 author: staciebarker
-ms.author: stabark
+ms.author: stabar
 manager: angrobe
-ms.date: 11/30/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: e134a6e3ff143dacce1d70ef0ab44ade0722ed57
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 8667f063de65fd5fa86149ac124b236a432eecef
+ms.lasthandoff: 02/15/2017
 
 ---
 
@@ -34,7 +35,7 @@ Om du öppnar CSV-listan i en textredigerare ser den ut ungefär så här:
 
 **Lägga till en CSV-lista över företagets identifierare**
 
-1. Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Id:n för företagsenheter**.
 
@@ -44,12 +45,9 @@ Om du öppnar CSV-listan i en textredigerare ser den ut ungefär så här:
 
 **Ta bort en CSV-lista över företagets identifierare**
 
-1. Välj **Registrera enheter** på Intune-bladet och välj sedan **Id:n för företagsenheter**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. Välj **Ta bort**.
+2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Id:n för företagsenheter**.
 
-
-
-<!--HONumber=Feb17_HO1-->
-
+3. Välj **Ta bort**.
 

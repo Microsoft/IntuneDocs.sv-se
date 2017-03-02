@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: dagerrit
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
-ms.openlocfilehash: 1ab58388f3d126d5d831c65ad3342ec87fb77b91
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 78eca605a277c1e0fc750900ece028d8f2c7c5b2
+ms.lasthandoff: 02/15/2017
 
 ---
 
@@ -66,7 +67,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare
 
-1.  Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**.
+1.  På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2.  Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
 
@@ -88,18 +89,17 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 **Ta bort en enhetsregistreringshanterare**
 
-1. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **ta bort**.
+2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
+
+3. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **ta bort**.
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Visa egenskaper för en enhetsregistreringshanterare
 
-1. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **Egenskaper**.
+2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
 
-
-
-<!--HONumber=Feb17_HO1-->
-
+3. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **Egenskaper**.
 

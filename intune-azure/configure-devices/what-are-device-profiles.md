@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 89afae81076d563f4ebba289f8fa82eaea6ab234
-ms.openlocfilehash: 0e126c067b5c212ae5bfe1cf69e01128a00b1c8e
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: a5f6ad4dd5339b31a6a1fd549a3b29b0ff258a5b
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="what-are-device-profiles"></a>Vad är enhetsprofiler?
-<!--- This topic doesn't really answer the topic title: What are device profiles?" It needs to answer that question, then it can go on to discuss what profiles are in Intune and how to use them. Linda--->
+# <a name="what-are-microsoft-intune-device-profiles"></a>Vad är enhetsprofiler i Microsoft Intune?
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Använd arbetsbelastningen **Konfigurera enheter** i Microsoft Intune för att hantera inställningar och funktioner på alla enheter som du hanterar.
+Använd arbetsbelastningen **Konfigurera enheter** i Microsoft Intune för att hantera inställningar och funktioner på alla enheter som du hanterar. Du kommer mest att använda den här arbetsbelastningen för att skapa enhetsprofiler som låter dig hantera och kontrollera en rad olika funktioner på enheter som du hanterar.
 
 När du öppnar den här arbetsbelastningen ser du följande alternativ:
 
@@ -60,10 +60,6 @@ Stöder: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 och Windows 10.
 Med den här profiltypen kan du konfigurera betrodda, SCEP- och PKCS-certifikat som kan tilldelas till enheter och användas för att autentisera trådlösa profiler, VPN- och e-postprofiler.
 Mer information finns i [Så här konfigurerar du certifikat](how-to-configure-certificates.md) Stöder: Android, iOS, Windows Phone 8.1, Windows 8.1 och Windows 10.
 
-## <a name="education"></a>Utbildning
-Hjälper dig att ange rätt certifikat när iOS-enheter används i en utbildningsmiljö.
-Mer information finns i [Så här konfigurerar du inställningar för Intune-utbildning på iOS-enheter](education-settings-for-ios.md) Stöder: endast iOS.
-
 ## <a name="edition-upgrade"></a>Versionsuppgradering
 Med den här profiltypen kan du automatiskt uppgradera enheter som kör vissa versioner av Windows 10 till en nyare version. För mer information, se [Så här konfigurerar du Windows 10-uppgraderingar](how-to-configure-windows-10-edition-upgrade.md) Stöder: endast Windows 10.
 
@@ -74,9 +70,4 @@ Mer information finns i [Så här konfigurerar du Windows informationsskydd](how
 ## <a name="custom"></a>Anpassad
 Med anpassade inställningar kan du tilldela enhetsinställningar som inte är inbyggda i Intune. Du kan till exempel ange OMA-URI-värden som konfigurerar Android-enheter. På iOS-enheter kan du importera en konfigurationsfil som du har skapat i Apple Configurator.
 Mer information finns i [Så här konfigurerar du anpassade inställningar](how-to-configure-custom-settings.md) Stöder: Android, iOS, macOS och Windows Phone 8.1.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

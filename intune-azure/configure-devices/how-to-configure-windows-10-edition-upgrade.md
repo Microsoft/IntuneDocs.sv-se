@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 89afae81076d563f4ebba289f8fa82eaea6ab234
-ms.openlocfilehash: 9ce16ea61da87aa5087fafeb5c1eaf743fef4a14
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 49da713cfe61ce21501e0a8e0f6e0c225b2bc291
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="how-to-configure-windows-10-edition-upgrades"></a>Så här konfigurerar du uppgraderingar av Windows 10 
+# <a name="how-to-configure-windows-10-edition-upgrades-in-microsoft-intune"></a>Så här konfigurerar du uppgraderingar av Windows 10 i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -62,10 +63,5 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 
 Profilen skapas och visas på bladet med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](how-to-assign-device-profiles.md).
-
-
-
-
-<!--HONumber=Feb17_HO1-->
 
 

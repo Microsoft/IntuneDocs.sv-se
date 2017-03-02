@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/19/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,12 +14,13 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 969ce8deae9142944f3481172277dc252baa5779
-ms.openlocfilehash: a7838f57b2eb8bd36a875f7b5b001b12eafcbf8d
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 472e65be196d1090e89b46271bb97a82b6fb1a9c
+ms.lasthandoff: 02/16/2017
 
 ---
 
-# <a name="how-to-add-an-app"></a>Lägga till en app 
+# <a name="how-to-add-an-app-to-microsoft-intune"></a>Så här lägger du till appar i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -42,6 +43,16 @@ Följande plattformar stöds. Klicka på ett av avsnitten för mer information o
 > [!NOTE]
 > När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
 
+## <a name="cloud-storage-space"></a>Molnlagringsutrymme
+Alla appar som du skapar med installationstypen Programinstallation (till exempel en verksamhetsspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. 20 GB lagringsutrymme ingår i den fullständiga prenumerationen.
+
+Du kan köpa ytterligare lagringsutrymme för Intune med din ursprungliga köpmetod.  Om du betalade via faktura eller med kreditkort besöker du [prenumerationshanteringsportalen](https://portal.office.com/adminportal/home?switchtomodern=true#/subscriptions).  Annars kontaktar du din partner eller säljrepresentant.
+
+Krav för lagringsutrymme i molnet:
+
+-   Alla appinstallationsfiler måste finnas i samma mapp.
+-   Den maximala filstorleken för en fil som du överför är 2 GB.
+
 ## <a name="how-to-create-and-edit-categories-for-apps"></a>Skapa och redigera kategorier för appar 
 
 Appkategorier kan användas för att sortera appar så att slutanvändarna lättare kan hitta dem i företagsportalen. Du kan tilldela en eller flera kategorier till en app, till exempel **Utvecklarprogram** eller **Kommunikationsappar**. När du lägger till en app i Intune ges möjlighet att välja den kategori som du önskar. Använd de plattformsspecifika avsnitten för att lägga till en app och tilldela kategorier. Använd följande procedur för att skapa och redigera dina egna kategorier: 
@@ -52,13 +63,8 @@ Appkategorier kan användas för att sortera appar så att slutanvändarna lätt
 4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**. 
 5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder: 
     - **Skapa en kategori** – Ange ett namn för den nya kategorin på bladet **Skapa kategori**. Namn kan bara anges på ett språk och översätts inte av Intune. Klicka på **Skapa** när du är klar.
-    - **Redigera en kategori** – För valfri kategori i listan, välj ”**... **”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin. --->
+    - **Redigera en kategori** – För valfri kategori i listan, välj ”**... **”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
 
 
-
-
-
-
-<!--HONumber=Feb17_HO1-->
 
 

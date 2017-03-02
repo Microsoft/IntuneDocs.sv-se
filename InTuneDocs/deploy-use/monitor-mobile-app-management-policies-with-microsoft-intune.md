@@ -13,15 +13,17 @@ ms.technology:
 ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 22c30f51bf83219053f97310ed1830ad9e01acd8
-ms.openlocfilehash: bd270cd4b04894d4824487d36ea4f0c1929dd568
+ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
+ms.openlocfilehash: 96c25307c4060a8872ba4f6de47992c4d9f9dd85
+ms.lasthandoff: 02/14/2017
 
 
 ---
 
-# <a name="monitor-mobile-app-management-policies-with-microsoft-intune"></a>Övervaka hanteringsprinciper för mobilappar med Microsoft Intune
-Du kan övervaka efterlevnadsstatusen för de hanteringsprinciper för mobilappar (MAM) som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
+# <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Övervaka appskyddsprinciper med Microsoft Intune
+Du kan övervaka efterlevnadsstatusen för de appskyddsprinciper som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av appskyddsprinciperna, dess efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
 
 Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
@@ -59,7 +61,7 @@ Du kommer till den detaljerade vyn av sammanfattningen genom att välja panelen 
 Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen för användaren. På bladet **Apprapportering** visas följande information för en vald användare:
 - Enheter som är associerade med användarkontot
 
-- Appar med en MAM-princip på enheten
+- Appar med en appskyddsprincip på enheten
 
 - Status:
 
@@ -68,7 +70,7 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
   - **Inte incheckad:** Principen har distribuerats till användaren, men appen har inte använts i arbetskontexten sedan dess.
 
 >[!NOTE]
-> Om MAM-principen inte har distribuerats till de användare som du sökte efter visas ett meddelande om att inga MAM-principer tillämpas på användaren.
+> Om appskyddsprincipen inte har distribuerats till de användare som du sökte efter visas ett meddelande om att inga appskyddsprinciper tillämpas på användaren.
 
 Visa rapporter för en användare genom att följa anvisningarna:
 
@@ -87,7 +89,7 @@ I den detaljerade vyn visas felmeddelandet, appen som användes när felet intr�
 
 ## <a name="reporting-view"></a>Rapporteringsvy
 
-Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer:
+Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter som hjälper dig med efterlevnadsstatusen för appskyddsprinciper:
 
 ![Skärmbild-4](../media/MAM-reporting-7.png)
 
@@ -97,13 +99,13 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
     -   Användarstatus för hanterad MAM-aktivitet (Skyddad): Den här rapporten ger en översikt över hur alla hanterade MAM-appar opererar, per användare.
 
-        -   Den visar alla appar som är mål för MAM-principer för varje användare. Den visar även status för varje app, som incheckade med MAM-principer eller som mål för MAM-principer men inte incheckade.
+        -   Den visar alla appar som är mål för appskyddsprinciper för varje användare. Den visar även status för varje app, som incheckade med appskyddsprinciper eller som mål för appskyddsprinciper men inte incheckade.
 <br></br>
     -   Användarstatus för icke-hanterad MAM-aktivitet (Oskyddad): Den här rapporten ger en översikt över hur MAM-aktiverade appar som är icke-hanterade opererar, per användare. Detta kan inträffa på grund av följande anledningar:
 
-        -   De här apparna används antingen av en användare eller en app som för närvarande inte är mål för en MAM-princip.
+        -   De här apparna används antingen av en användare eller en app som för närvarande inte är mål för en appskyddsprincip.
 
-        -   Alla appar är incheckade men kommer inte åt MAM-principer.
+        -   Alla appar är incheckade men kommer inte åt appskyddsprinciper.
 
 ![Skärmbild-2](../media/MAM-reporting-4.png)
 
@@ -131,11 +133,6 @@ Generera appskyddsrapporten genom att följa dessa anvisningar:
 ## <a name="see-also"></a>Se även
 [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-* [Vad som händer när din Android-app hanteras med MAM-principer](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras med MAM-principer](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
 

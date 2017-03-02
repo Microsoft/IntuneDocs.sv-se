@@ -5,7 +5,7 @@ keywords:
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 01/26/2017
+ms.date: 02/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,8 +14,9 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 10cf9980468eff912557747c31994747c17a3ab4
-ms.openlocfilehash: 01bf32ef874385019ea4b0fb0ce278554459287d
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: a92daf02c6fb2405c1255ff4ff8988f669dd76ce
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -43,33 +44,33 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 **Metoder för iOS-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information** |
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |   Nej | Mer information kommer snart|
-|**[DEM](#dem)**|   Nej |Nej |Nej  | [Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
-|**[DEP](#dep)**|   Ja |   Valfri |  Valfri|[Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
-|**[USB-SA](#usb-sa)**| Ja |   Valfri |  Nej| [Mer information](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
-|**[USB-Direct](#usb-direct)**| Nej |    Nej  | Nej|[Mer information](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | Mer information kommer snart|
+|**[DEM](#dem)**|    Nej |Nej |Nej    | [Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[DEP](#dep)**|    Ja |    Valfri |    Valfri|[Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[USB-SA](#usb-sa)**|    Ja |    Valfri |    Nej| [Mer information](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
+|**[USB-Direct](#usb-direct)**|    Nej |    Nej    | Nej|[Mer information](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
 
 
 
 **Metoder för Windows-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Ja|   Ja |   Nej | Mer information kommer snart|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-devices-using-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | Ja|    Ja |    Nej | Mer information kommer snart|
+|**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-devices-using-device-enrollment-manager.md)|
 
 **Metoder för Android-registrering**
 
-| **Metod** |  **Krävs rensning?** |    **Tillhörighet**    |   **Lås** | **Information**|
+| **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |   Nej | Mer information kommer snart|
-|**[DEM](#dem)**|   Nej |Nej |Nej  |[Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | Mer information kommer snart|
+|**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
 
 
 ## <a name="byod"></a>BYOD
-"Bring your own device"-användare installerar företagsportalsappen och registrerar sina enheter. Detta gör det möjligt för användare att ansluta till företagets nätverk och till domänen eller Azure Active Directory. För de flesta plattformar måste du aktivera BYOD-registrering för många COD-scenarier.
+"Bring your own device"-användare installerar företagsportalsappen och registrerar sina enheter. Detta gör det möjligt för användare att ansluta till företagets nätverk och till domänen eller Azure Active Directory. För de flesta plattformar måste du aktivera BYOD-registrering för många COD-scenarier. Du kan blockera registrering av personligt ägda iOS- och Android-enheter. Anvisningar finns i [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
 
 ## <a name="corporate-owned-devices"></a>Företagsägda enheter
 Företagsägda enheter kan hanteras med Azure-portalen. iOS-enheter kan registreras direkt via de verktyg som tillhandahålls av Apple. Alla enhetstyper kan registreras av en administratör eller chef med hjälp av hanteraren för enhetsregistrering. Enheter med ett IMEI kan också identifieras och taggas som företagsägda för att möjliggöra COD-scenarier.
@@ -80,8 +81,8 @@ Enhetsregistreringshanteraren är ett särskilt användarkonto som används för
 ### <a name="dep"></a>DEP
 Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
 
-  - Låst registrering
-  - Helskärmsläge och andra avancerade konfigurationer och begränsningar
+  -    Låst registrering
+  -    Helskärmsläge och andra avancerade konfigurationer och begränsningar
 
 Mer information om iOS-registrering finns i:
 
@@ -91,8 +92,8 @@ Mer information om iOS-registrering finns i:
 
 ### <a name="usb-sa"></a>USB-SA
 IT-administratörer använder Apple Configurator, via USB, för att förbereda varje företagsägd enhet manuellt för registrering med installationsassistenten. IT-administratören skapar en registreringsprofil och exporterar den till Apple Configurator. När användarna får sina enheter uppmanas de att köra installationsassistenten för att registrera sin enhet. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
-  - Låst registrering
-  - Helskärmsläge och andra avancerade konfigurationer och begränsningar
+  -    Låst registrering
+  -    Helskärmsläge och andra avancerade konfigurationer och begränsningar
 
 Mer information om iOS-registrering finns i:
 
@@ -127,9 +128,4 @@ Se [Enheter och webbläsare som stöds för Intune](https://docs.microsoft.com/i
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 
 MDM-certifikatet förnyas automatiskt när mobila enheter kommunicerar med Intune-tjänsten. Om mobila enheter (inte datorer) raderas eller om de inte kan kommunicera med Intune-tjänsten under en viss tidsperiod, kommer MDM-certifikatet inte att förnyas. Enheten tas bort från Azure-portalen 180 dagar efter att MDM-certifikatet har upphört att gälla.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

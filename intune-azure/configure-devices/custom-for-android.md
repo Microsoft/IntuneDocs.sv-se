@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab494a3dd1e1bdea9703ab314574b192c5208ee
-ms.openlocfilehash: 3a80a69a27b540b66fb96e098c0b0f66a0854297
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 6a49a87984a465c6a656ad40122d0e64b23599fc
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="custom-settings-for-android-devices-in-intune-azure-preview"></a>Anpassade inställningar för Android-enheter i förhandsversionen av Intune Azure
+# <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Anpassade inställningar för Android-enheter i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -39,9 +40,4 @@ Funktionen är avsedd för att kunna distribuera Android-inställningar som inte
     - **OMA-URI** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
     - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

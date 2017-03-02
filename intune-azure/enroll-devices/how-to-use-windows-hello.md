@@ -14,8 +14,9 @@ ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 990062ecf03a117dad74eb71e3f40abb79f22be6
-ms.openlocfilehash: a7249e96e737cc844e742a78d8a34899a428f52b
+ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
+ms.openlocfilehash: 56e78f2c80c860c4cdf1c79bf94d7575d5cd9674
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -49,7 +50,7 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Skapa en princip för Windows Hello för företag
 
-1.  Välj **Fler tjänster** i Azure-portalen, skriv **Intune** i textrutan och välj sedan **Övrigt** > **Intune**.
+1.  På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2.  Välj **Registrera enheter** på Intune-bladet och sedan **Hantera** > **Windows Hello för företag**.
 
@@ -96,9 +97,4 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 ## <a name="further-information"></a>Ytterligare information
 Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft.com/library/mt589441.aspx) i Windows 10-dokumentationen.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,14 @@ ms.assetid: 7bcea136-7260-4042-b21b-c7dab86b380d
 ms.reviewer: heenamac
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0da8c0fe399f76f43439cc66eaecd12bb454f9a6
-ms.openlocfilehash: 05856480f8bb76e561f2b459d4ab800f9909a40a
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: bc740d9e43e2937757075bf84735fe611433f6f0
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="custom-device-settings-for-windows-10-devices-in-intune-azure-preview"></a>Anpassade enhetsinställningar för Windows 10-enheter i förhandsversionen av Intune Azure
+# <a name="custom-device-settings-for-windows-10-devices-in-microsoft-intune"></a>Anpassade enhetsinställningar för Windows 10-enheter i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -167,9 +168,4 @@ I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** ak
 |**Tillåt att spara lösenord**<br>./Vendor/MSFT/Policy/Config/Browser/AllowPasswordManager|Desktop och Mobile<br />**Datatyp:** heltal<br />**Värden:**<br>**0** – Lösenordshanteraren är inaktiverad; <br>**1** – Lösenordshanteraren är aktiverad (standard)|
 |**Tillåt autofyll**<br>./Vendor/MSFT/Policy/Config/Browser/AllowAutofill|Endast Desktop<br />**Datatyp:** heltal<br />**Värden:** **0** – Inaktiverat (standard), **1** – Aktiverat|
 |**Konfigurera företagswebbplatslista**<br>./Vendor/MSFT/Policy/Config/Browser/EnterpriseModeSiteList|Endast Desktop<br />**Datatyp:** Sträng<br />**Värden:<br>**0** – Inte konfigurerat<br>**1** – Använd webbplatslista för företagsläge i IE om konfigurerat (standard)<br>**2** – Ange plats för webbplatslista för företagsläge|
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

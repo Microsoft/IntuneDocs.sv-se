@@ -1,11 +1,12 @@
 ---
-title: "Hur du konfigurerar certifikat med Intune | Förhandsversionen av Intune Azure | Microsoft Docs"
+title: "Så här konfigurerar du certifikat med Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversionen av Intune Azure: Information om hur du kan använda Intune för att skapa och tilldela certifikat som hjälper dig att skydda Wi-Fi, VPN och andra anslutningar."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 02/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +14,16 @@ ms.technology:
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 3f05e0018fb202ab5774e935c3f59855e4aa2e75
-ms.openlocfilehash: a0183f2a170ed458b19c7688b20ee5ba5c2c696e
+ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
+ms.openlocfilehash: 364534ad788466f8b268b4091decee5326b94163
+ms.lasthandoff: 02/16/2017
 
 
 ---
 
-# <a name="how-to-configure-certificates-with-intune-azure-preview"></a>Hur du konfigurerar certifikat med förhandsversionen av Intune Azure
+# <a name="how-to-configure-certificates-in-microsoft-intune"></a>Så här konfigurerar du certifikat i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -42,8 +45,8 @@ När du ger användare åtkomst till företagets resurser via VPN, Wi-Fi eller e
 
     Du kan bara använda en SCEP-certifikatprofil med dessa plattformar:
 
--   macOS 10.9 och senare
--   Windows Phone 8.1 och senare
+-     macOS 10.9 och senare
+-     Windows Phone 8.1 och senare
 
 Du måste skapa en separat profil för varje enhetsplattform. När du skapar profilen kopplar du den med den betrodda rotcertifikatprofilen som du redan skapat.
 
@@ -196,9 +199,4 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 
 ## <a name="next-steps"></a>Nästa steg
 Du hittar allmän information om hur du tilldelar enhetsprofilerna i [Tilldela enhetsprofilerna](how-to-assign-device-profiles.md).
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
