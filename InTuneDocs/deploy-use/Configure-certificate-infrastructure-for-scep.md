@@ -1,5 +1,5 @@
 ---
-title: "Konfigurera certifikatinfrastrukturen för SCEP | Microsoft Intune"
+title: "Konfigurera certifikatinfrastrukturen för SCEP | Microsoft Docs"
 description: "Infrastruktur för att skapa och distribuera SCEP-certifikatprofiler."
 keywords: 
 author: robstackmsft
@@ -13,12 +13,17 @@ ms.technology:
 ms.assetid: 4ae137ae-34e5-4a45-950c-983de831270f
 ms.reviewer: kmyrup
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c68e89755d753b3913004a2c1cb1c41158ce5703
-ms.openlocfilehash: 787533f4b1c24cc4af125cbf6b2a4a18e48c4d3e
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 4140c310bb14faf1731e3c316e1dafae5dc0f97a
+ms.lasthandoff: 12/10/2016
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurera certifikatinfrastruktur för SCEP
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna skapa och distribuera SCEP-certifikatprofiler.
 
 ### <a name="on-premises-infrastructure"></a>Lokal infrastruktur
@@ -93,7 +98,7 @@ I det här steget kommer du att:
 
 ##### <a name="to-configure-the-certification-authority"></a>Så här konfigurerar du certifikatutfärdaren
 
-1.  Logga in som företagsadministratör. 
+1.  Logga in som företagsadministratör.
 
 2.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatmallar för att skapa en ny anpassad mall eller kopiera en befintlig mall och sedan redigera en befintlig mall (t.ex. mallen Användare) för användning med NDES.
 
@@ -109,7 +114,7 @@ I det här steget kommer du att:
         > För iOS- och Mac OS X-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
 
     -   På fliken **Säkerhet** lägger du till NDES-tjänstekontot och ger det **Registreringsrättigheter** för mallen. Intune-administratörer som ska skapa SCEP-profiler behöver **läsrättigheter** så att de kan bläddra till mallen när de skapar SCEP-profiler.
-    
+
     > [!NOTE]
     > Om du vill återkalla certifikat behöver NDES-tjänstkontot rättigheter för att *Utfärda och hantera certifikat* för varje certifikatmall som används av en certifikatprofil.
 
@@ -120,19 +125,19 @@ I det här steget kommer du att:
 
 Här följer skärmdumpar av en exempelkonfiguration av mallen.
 
-![Mall, fliken för hantering av begäran](..\media\scep_ndes_request_handling.png) 
+![Mall, fliken för hantering av begäran](..\media\scep_ndes_request_handling.png)
 
-![Mall, fliken för ämnesrad](..\media\scep_ndes_subject_name.jpg) 
+![Mall, fliken för ämnesrad](..\media\scep_ndes_subject_name.jpg)
 
-![Mall, fliken för säkerhet](..\media\scep_ndes_security.jpg) 
+![Mall, fliken för säkerhet](..\media\scep_ndes_security.jpg)
 
-![Mall, fliken för tillägg](..\media\scep_ndes_extensions.jpg) 
+![Mall, fliken för tillägg](..\media\scep_ndes_extensions.jpg)
 
-![Mall, fliken för utfärdandekrav](..\media\scep_ndes_issuance_reqs.jpg) 
+![Mall, fliken för utfärdandekrav](..\media\scep_ndes_issuance_reqs.jpg)
 
 >   [!IMPORTANT]
     > För Användningsprinciper (på den fjärde skärmbilden) lägger du endast till de användningsprinciper som krävs. Bekräfta dina val med säkerhetsadministratörerna.
-   
+
 
 
 Om du vill konfigurera certifikatutfärdaren att tillåta att den som begär anger giltighetsperioden, kör du följande kommandon på certifikatutfärdaren:
@@ -239,12 +244,12 @@ I det här steget kommer du att:
 
 4. I IIS-hanteraren väljer du **Standardwebbplats** -> **Förfrågningsfiltrering** -> **Redigera inställningen** och ändrar **Högsta URL-längd** och **Maximal frågesträng** till *65534*, som exemplet visar.
 
-    ![Maxlängd för URL och fråga i IIS](..\media\SCEP_IIS_max_URL.png) 
+    ![Maxlängd för URL och fråga i IIS](..\media\SCEP_IIS_max_URL.png)
 
 5.  Starta om servern. Det räcker inte att köra **iisreset** på servern för att genomföra de här ändringarna.
 6. Bläddra till http://*FQDN*/certsrv/mscep/mscep.dll. Du bör se en NDES-sida som ser ur ungefär så här:
 
-    ![Testa NDES](..\media\SCEP_NDES_URL.png) 
+    ![Testa NDES](..\media\SCEP_NDES_URL.png)
 
     Om meddelandet **503 Tjänsten ej tillgänglig** visas kontrollerar du händelsespåraren. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i uppgift 1.
 
@@ -347,9 +352,4 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 ## <a name="next-steps"></a>Nästa steg
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

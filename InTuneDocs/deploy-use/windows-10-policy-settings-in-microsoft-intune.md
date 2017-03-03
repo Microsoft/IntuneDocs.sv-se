@@ -1,5 +1,5 @@
 ---
-title: "Principinställningar för Windows 10 |Microsoft Intune"
+title: "Principinställningar för Windows 10 |Microsoft Docs"
 description: "Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 8c970a4d1362def67e17da656b5e12e5bab2667b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 5a1a861096bdfae461b6ad05e424f770796279a2
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Intune-principinställningar för Windows 10-enheter i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller information om de Intune-principinställningar som du kan använda för att hantera Windows 10-enheter. Läs det här avsnittet och metoderna i [Hantera inställningar och funktioner på enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter. Du kan inte använda dessa principer för datorer som kör [Intune-klientprogrammet](/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 
@@ -322,9 +326,4 @@ Alla inställningar gäller endast Windows 10 Desktop.
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

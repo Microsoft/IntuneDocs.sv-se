@@ -1,5 +1,5 @@
 ---
-title: "Separat inläsning av appar för Windows och Windows Phone | Microsoft Intune"
+title: "Separat inläsning av appar för Windows och Windows Phone | Microsoft Docs"
 description: "Lär dig hur du signerar branschspecifika appar, så att du kan använda Intune för att distribuera dem."
 keywords: 
 author: robstackmsft
@@ -10,13 +10,17 @@ ms.prod:
 ms.service: 
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 938e3a1914f379d115bf24ebd7d990f6e1d319a9
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 2e8220f850e3b38a24aa4c48bcc3a59088251c24
+ms.lasthandoff: 12/10/2016
 
 
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Som Intune-administratör kan du distribuera verksamhetsspecifika (LOB) appar till Windows- och Windows 10 Mobile-enheter, inklusive företagsportalappen. För att distribuera .appx- eller .xap-appar till Windows 10- och Windows 10 Mobile-enheter eller för att distribuera LOB-app till Windows 8.1 eller Windows Phone 8.1-enheter, måste du få ett **Symantec-företagscertifikat för kodsignering**. Endast Symantec-certifikatet är betrott för dessa appar för respektive Windows-enhet. Du kan använda en egen certifikatutfärdare för Windows 10-appar och "universella" appar. Detta certifikat krävs för att:
 
@@ -139,9 +143,4 @@ Symantec-certifikatet som används för att distribuera Windows- och Windows Pho
 4.  När uppladdningen är klar tar du bort den gamla företagsportalversionen i arbetsytan **Programvara**  .
 
 5.  Signera alla nya och uppdaterade branschspecifika företagsappar med det nya certifikatet. Befintliga program behöver inte vara signeras på nytt eller omdistribueras.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

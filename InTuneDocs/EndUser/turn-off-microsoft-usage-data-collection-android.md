@@ -1,34 +1,35 @@
 ---
-title: "Inaktivera Microsofts insamling av användningsdata för Android | Microsoft Intune"
+title: "Så inaktiverar du Microsofts insamling av användningsdata | Microsoft Docs"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 12/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 1e00d2d1e8e46b512eb70c2c594712b9505541ec
-ms.openlocfilehash: 01fce3200a5aa481dde6cd560cbad426592ef381
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: b2554e66150f8b6d61f184bf739750c482b3058e
+ms.lasthandoff: 12/21/2016
 
 
 ---
 
+# <a name="turn-off-microsoft-usage-data-collection"></a>Inaktivera Microsofts insamling av användningsdata
 
-# Inaktivera Microsofts insamling av användningsdata
-Microsoft samlar automatiskt in anonymiserade data om företagsportalappens tillförlitlighet och prestanda och hur den används för att kunna förbättra sina produkter och tjänster. Du kan inaktivera insamlingen av dessa data på en Android-enhet med hjälp av inställningen **Användningsdata** i företagsportalappen. IT-administratörer har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
+Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det gör vi för att förbättra tillförlitlighet och prestanda hos våra produkter, inklusive företagsportalappen. Även om dessa data är maskerade är vissa användare inte bekväma med den här insamlingen. Din IT-administratör har ingen kontroll över denna datainsamling och de kan inte ändra din valda inställning.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du vill så kan du inaktivera insamlingen av dessa data på din Android-enhet genom att öppna inställningen **Användningsdata** i företagsportalappen.
 
-
-
-<!--HONumber=Oct16_HO2-->
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

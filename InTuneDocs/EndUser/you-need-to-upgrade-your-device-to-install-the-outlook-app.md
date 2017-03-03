@@ -1,40 +1,41 @@
 ---
-title: "Du måste uppgradera enheten för att installera Outlook-appen | Microsoft Intune"
+title: "Du måste uppgradera enheten | Microsoft Docs"
 description: 
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 09/19/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ccb7451e-5ffc-4604-b28e-8322cc64c58c
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vadona
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: bff97f79c6e88bbf55c2c3a259891bb6206b690b
-ms.openlocfilehash: 28c0cb63e1d14efb4e80d7d1f3608a354ee1b090
+ms.sourcegitcommit: 1bf478eae73bb7385369e4d5cde26b937831e665
+ms.openlocfilehash: 8ef336e58c7b1d995d314202b5530d2f6b2ff138
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
-# Du måste uppgradera enheten för att installera Outlook-appen
+# <a name="you-need-to-upgrade-your-device-to-install-the-outlook-app"></a>Du måste uppgradera enheten för att installera Outlook-appen
 
-Om du försöker hämta Outlook-e-postappen och ett meddelande visas om att operativsystemversionen för din Android- eller iOS-enhet är lägre än minimikravet, måste du uppgradera enheten innan du fortsätter.
+Outlook-appen hjälper miljontals användare att samla alla sina e-postkonton, kalendrar och filer på en praktisk plats för både [iOS](https://itunes.apple.com/us/app/microsoft-outlook-email-calendar/id951937596?mt=8)- och [Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)-enheter.
 
-Uppgradera enheten enligt instruktionerna nedan för din enhetstyp:
+Om du försöker hämta Outlook och installationen inte sker utan ett meddelande visas på enheten, som säger att enhetens operativsystem inte är tillräckligt aktuellt. Du måste uppgradera enheten för att installera Outlook.
 
-## Så här uppgraderar du en Android-enhet
+## <a name="if-you-have-an-android-device"></a>Om du har en Android-enhet
 Välj **Inställningar** och välj sedan alternativet **uppdatera** eller **systemuppdatering**.
 
-## Så här uppgraderar du en iOS-enhet
-Välj **Inställningar** &gt; **Allmänt** &gt; **Programvaruuppdatering**.
+## <a name="if-you-have-an-ios-device"></a>Om du har en iOS-enhet
+Tryck på **Inställningar** > **Allmänt** > **Programvaruuppdatering**.
 
-
-
-<!--HONumber=Sep16_HO3-->
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

@@ -1,11 +1,11 @@
 ---
-title: "Visa maskin- och programvaruinventering för Windows-datorer | Microsoft Intune"
-description: "Så här visar du maskin- och programvaruinformation om Windows-datorer som du hanterar med Intune."
+title: "Visa maskin- och programvaruinventering för Windows-datorer | Microsoft Docs"
+description: "Så här visar du maskin- och programvaruinformation om stationära Windows-datorer som du hanterar som datorer med Intune-programvaruklienten."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,18 @@ ms.technology:
 ms.assetid: 3c10f4c9-520b-4864-92fc-a45a9f640ad4
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 807599d4a6a979c88732ab969fdecb64552a83d5
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: 8425cee511cdd54e051a93a10a941142c33df893
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Visa maskin- och programvaruinventering för Windows-datorer
 
-Intune samlar in detaljerad information om de hanterade datorernas maskinvara och programvara. Använd informationen i följande procedurer för att lära dig skapa:
+Intune samlar in detaljerad information om maskinvara och programvara för stationära datorer som hanteras som datorer med hjälp av Intune programvaruklienten. Använd informationen i följande procedurer för att lära dig skapa:
 
 -   En rapport som visar information om maskinvarukapaciteten hos de datorer som du hanterar.
 
@@ -30,7 +32,7 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
 -   Så här uppdaterar du en datorinventering för att säkerställa att data i rapporten är aktuella.
 
-## <a name="to-display-information-about-computers-you-manage"></a>Så här visar du information om de datorer du hanterar
+## <a name="to-display-information-about-pcs-you-manage"></a>Så här visar du information om de datorer du hanterar
 
 1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Datorinventeringsrapporter**.
 
@@ -40,7 +42,7 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 
     Du kan sortera rapporten på valfri kolumn, t.ex. **Namn**, **Chassityp** eller **Tillverkare** genom att välja kolumnens rubrik.
 
-## <a name="to-display-software-installed-on-computers-you-manage"></a>Så här visar du vilka program som har installerats på de datorer du hanterar
+## <a name="to-display-software-installed-on-pcs-you-manage"></a>Så här visar du vilka program som har installerats på de datorer du hanterar
 
 1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) och välj **Rapporter** &gt; **Rapporter om identifierad programvara**.
 
@@ -65,8 +67,3 @@ Intune samlar in detaljerad information om de hanterade datorernas maskinvara oc
 ### <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

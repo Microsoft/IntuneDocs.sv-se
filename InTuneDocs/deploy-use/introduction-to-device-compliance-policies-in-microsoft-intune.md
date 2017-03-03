@@ -1,5 +1,5 @@
 ---
-title: Enhetsefterlevnadsprinciper | Microsoft Intune
+title: Enhetsefterlevnadsprinciper | Microsoft Docs
 description: "Det här avsnittet förklarar vad efterlevnadsprinciper för enheter är och hur de fungerar."
 keywords: 
 author: andredm7
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 0775107a-6662-41c8-9404-be14bbb599f3
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: b41307f620284315e4c71b0d0292b229753876ad
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 7b91e52d72704b6beb79a1b35bb1a24ebb340a4b
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="device-compliance-policies-in-microsoft-intune"></a>Enhetsefterlevnadsprinciper i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 ## <a name="what-is-a-compliance-policy"></a>Vad är en efterlevnadsprincip?
 För att skydda företagets data måste du se till att de enheter som används för åtkomst till företagets appar och data följer särskilda regler. Dessa regler kan till exempel kräva att en PIN-kod används för att komma åt enheter samt kryptering av data som lagras på enheter. En samling regler som dessa kallas för en efterlevnadspolicy.
 
@@ -63,9 +68,4 @@ Följande tabell innehåller de enhetstyper som har stöd för efterlevnadsprinc
 
 ### <a name="see-also"></a>Se även
 [Begränsa åtkomst till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

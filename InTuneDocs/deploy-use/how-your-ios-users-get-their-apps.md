@@ -1,5 +1,5 @@
 ---
-title: "Så får dina iOS-användare sina appar | Microsoft Intune"
+title: "Så får dina iOS-användare sina appar | Microsoft Docs"
 description: "Metoder för att göra iOS-appar tillgängliga för slutanvändare"
 keywords: 
 author: barlanmsft
@@ -13,15 +13,19 @@ ms.technology:
 ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 3ba0a5cda91164761c4576df935c54390bc78f8c
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: dbc5f1b106df17aa8875997330dbfbb04a81f82f
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 
 # <a name="how-your-ios-users-get-their-apps"></a>Så får dina iOS-användare sina appar
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Använd informationen för att förstå hur och var dina slutanvändare får de appar som du distribuerar via Microsoft Intune.
 
@@ -52,9 +56,4 @@ Information om hur du lägger till appar och placerar dem på dessa paneler finn
 [Så får dina Android-användare sina appar](how-your-android-users-get-their-apps.md)
 
 [Så får dina Windows-användare sina appar](how-your-windows-users-get-their-apps.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

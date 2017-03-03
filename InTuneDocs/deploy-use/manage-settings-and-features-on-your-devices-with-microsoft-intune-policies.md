@@ -1,5 +1,5 @@
 ---
-title: "Hantera enhetsinställningar med principer | Microsoft Intune"
+title: "Hantera enhetsinställningar med principer | Microsoft Docs"
 description: "Med Intune kan du skapa och distribuera principer som styr inställningar och funktioner på de registrerade enheter som du hanterar."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 09bae0b9-4f79-4658-8ca1-a71ab992c1b2
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0238350139837a06a48d0bff7c53e4c39e07168c
-ms.openlocfilehash: b2cba92c4cf75412b562267aef9d6a138f25952b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: f153e3a58f9655bd1e36094f292098c9f55742b6
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="manage-settings-and-features-on-your-devices-with-microsoft-intune-policies"></a>Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune-*principer* är grupper med inställningar som styr funktioner på datorer och mobila enheter. Du skapar principer med hjälp av mallar som innehåller rekommenderade eller anpassade inställningar och distribuerar dem till enhets- eller användargrupper.
 
 ## <a name="types-of-policies"></a>Typer av principer
@@ -208,9 +213,4 @@ När du tar bort en princip, eller när du tar bort en enhet från en grupp som 
 ### <a name="where-can-i-find-help-troubleshooting-policies"></a>Var kan jag få hjälp med att felsöka principer?
 
 Se [Felsökningsprinciper i Microsoft Intune](/intune/troubleshoot/troubleshoot-policies-in-microsoft-intune).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

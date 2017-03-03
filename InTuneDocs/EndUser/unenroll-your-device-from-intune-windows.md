@@ -1,5 +1,5 @@
 ---
-title: "Avregistrera Windows-enheten från Intune | Microsoft Intune"
+title: "Avregistrera Windows-enheten från Intune | Microsoft Docs"
 description: "Beskriver hur du avregistrerar en Windows-enhet från Intune"
 keywords: 
 author: barlanmsft
@@ -11,11 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 9ddbcde20fac83289c4622f69538ff00fa0cb65b
-ms.openlocfilehash: e71dece9a286ecb086197959739b0f4cb66c856d
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 7d06eabf07039b14a5d24617d94a968bc2e85f22
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -27,9 +32,9 @@ Om du är registrerad i Intune, men inte längre vill använda din Windows-enhet
 
 Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”I den här artikeln” ovan, som matchar den typ av enhet som du använder:
 
--   [Avregistrera din Windows 10-enhet](#unenroll-your-windows-10-device)
--   [Avregistrera din Windows 8.1-dator](#unenroll-your-windows-8-1-computer)
--   [Avregistrera din Windows Phone 8.1-enhet](#unenroll-your-windows-phone-8-1-device)
+-    [Avregistrera din Windows 10-enhet](#unenroll-your-windows-10-device)
+-    [Avregistrera din Windows 8.1-dator](#unenroll-your-windows-8-1-computer)
+-    [Avregistrera din Windows Phone 8.1-enhet](#unenroll-your-windows-phone-8-1-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Avregistrera din Windows 10-enhet
 
@@ -62,9 +67,4 @@ Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”
 4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Din dator är redan registrerad | Microsoft Intune"
+title: "Din dator är redan registrerad | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -11,12 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8d3a40f5-99e9-48dc-9706-f7a3a23e5704
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6a5bf59f3ef25df590625033fca4c114c3ace62f
-ms.openlocfilehash: 6ea001a00007a323c88f2f384bc768edc06eaa87
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 05460d23dce69be00f5f440be07a0b3c08d27280
+ms.lasthandoff: 12/10/2016
 
 
 ---
@@ -36,9 +40,4 @@ Så här länkar du datorn:
 Om du vill avregistrera enheten följer du instruktionerna för den typ av enhet som du har: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) eller [Windows](unenroll-your-device-from-intune-windows.md).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Nov16_HO5-->
-
 

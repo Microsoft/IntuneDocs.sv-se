@@ -1,5 +1,5 @@
 ---
-title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Intune"
+title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Docs"
 description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att felsöka problem med att få åtkomst till resurser."
 keywords: 
 author: robstackmsft
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6adfb7375f9747f64e7037164f48918789bd7ee0
-ms.openlocfilehash: 76056f04440b53aa76f833b5fd4f5cf3cbeb88b5
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: dd1ada2bf6505552e7dbf8b185c929fa4e40104c
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Felsökning av problem med åtkomst till företagsresurser med Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Använd fel- och statuskoderna i det här avsnittet för att felsöka problem när en åtgärd i Microsoft Intune returnerar en felkod.
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
@@ -370,9 +375,4 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

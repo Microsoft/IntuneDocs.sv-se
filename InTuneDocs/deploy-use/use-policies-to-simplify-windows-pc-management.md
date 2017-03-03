@@ -1,11 +1,11 @@
 ---
-title: "Använd principer för att förenkla hanteringen av Windows-datorer | Microsoft Intune"
+title: "Använd principer för att förenkla hanteringen av Windows-datorer | Microsoft Docs"
 description: "Beskriver principerna för hantering av Windows-datorer och inställningarna för Microsoft Intune Center."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 10/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,16 +13,18 @@ ms.technology:
 ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 1c6800ea3fde39603478437de6da7200ecae5afb
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: da0dad4cd40a21aec9485f46ff918a48611b869d
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Använd principer för att förenkla hanteringen av Windows-datorer
 
-Windows-datorer som kör Intune-klientprogrammet kan hanteras med hjälp av Intunes principer för **datorhantering**. Använd Intunes principer för **datorhantering** när du ska konfigurera de inställningar i Microsoft Intune Center som hanterar datoruppdateringar och konfigurationer av Windows-brandväggen för datorer.
+Om du vill hantera stationära Windows-datorer som datorer genom att köra Intune-programvaruklienten på dem kan du endast använda de principer som ligger under principerna för **Datorhantering** i Intune-administratörskonsolen. Alla andra principer som visas i administrationskonsolen gäller endast för mobila enheter. Genom att använda principer för **datorhantering** kan du konfigurera inställningarna i Microsoft Intune Center, hantera datoruppdateringar och konfigurera Windows-brandväggen för datorer.
 
 ![Principmall för Windows-datorer](../media/pc_policy_template.png)
 
@@ -60,9 +62,4 @@ Information om principer och inställningar som du kan konfigurera för Windows-
 ### <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

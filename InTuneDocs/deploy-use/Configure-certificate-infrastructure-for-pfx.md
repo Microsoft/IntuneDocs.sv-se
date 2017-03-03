@@ -1,5 +1,5 @@
 ---
-title: "Konfigurera certifikatinfrastrukturen för PFX | Microsoft Intune"
+title: "Konfigurera certifikatinfrastrukturen för PFX | Microsoft Docs"
 description: Skapa och distribuera .PFX-certifikatprofiler.
 keywords: 
 author: robstackmsft
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 2c543a02-44a5-4964-8000-a45e3bf2cc69
 ms.reviewer: vinaybha
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1f37a2ba2e634fb75058d33eaaccf3aa5845b0
-ms.openlocfilehash: 8fc1cc718fd0edae8b8ec4a0a8dc25487eafda2b
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 12773352970deeacf30b1336a4e560e08b400ee3
+ms.lasthandoff: 12/10/2016
 
 
 
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurera infrastrukturen för certifikat
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Det här avsnittet beskriver vad du behöver för att skapa och distribuera .PFX-certifikatprofiler.
 
 Om du vill utföra certifikatbaserad autentisering i organisationen måste du ha en utfärdare av företagscertifikat.
@@ -31,7 +36,7 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
 
 -  Intunes certifikat Connector, som körs på datorn som kan kommunicera med certifikatutfärdaren.
 
-## <a name="onpremises-infrastructure-description"></a>Beskrivning av lokal infrastruktur
+## <a name="on-premises-infrastructure-description"></a>Beskrivning av lokal infrastruktur
 
 
 -    **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
@@ -65,7 +70,7 @@ Innan du kan konfigurera certifikatprofiler måste du slutföra följande uppgif
 - **Uppgift 1** – Konfigurera certifikatmallar på certifikatutfärdaren.
 - **Uppgift 2** – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen.
 
-### <a name="task-1-configure-certificate-templates-on-the-certification-authority"></a>Uppgift 1 – konfigurera certifikatmallar på certifikatutfärdaren
+### <a name="task-1---configure-certificate-templates-on-the-certification-authority"></a>Uppgift 1 – konfigurera certifikatmallar på certifikatutfärdaren
 I det här steget kommer du att publicera certifikatmallen.
 
 ##### <a name="to-configure-the-certification-authority"></a>Så här konfigurerar du certifikatutfärdaren
@@ -104,7 +109,7 @@ I det här steget kommer du att publicera certifikatmallen.
 
 4.  På certifikatutfärdardatorn ser du till att den dator som har Intunes certifikatanslutningsapp har registreringsrättigheter, så att den kommer åt den mall som användes för att skapa .PFX-profilen. Ställ in behörighet på **säkerhetsfliken** i datoregenskaper för Certifikatutfärdar-datorn.
 
-### <a name="task-2-enable-install-and-configure-the-intune-certificate-connector"></a>Uppgift 2 – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen
+### <a name="task-2---enable-install-and-configure-the-intune-certificate-connector"></a>Uppgift 2 – Aktivera, installera och konfigurera Intune-certifikatanslutningsappen
 I det här steget kommer du att:
 
 Hämta, installera och konfigurera certifikatanslutningsappen.
@@ -153,9 +158,4 @@ Hämta, installera och konfigurera certifikatanslutningsappen.
 
 ### <a name="next-steps"></a>Nästa steg
 Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](Configure-Intune-certificate-profiles.md).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

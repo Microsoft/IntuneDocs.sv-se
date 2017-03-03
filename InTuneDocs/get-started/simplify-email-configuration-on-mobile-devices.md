@@ -1,26 +1,31 @@
 ---
-title: "Förenkla e-postkonfigurationen på mobila enheter | Microsoft Intune"
+title: "Förenkla e-postkonfigurationen på mobila enheter | Microsoft Docs"
 description: 
 keywords: 
 author: jeffgilb
 ms.author: jeffgilb
 manager: angrobe
 ms.date: 12/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1696c715-1e9a-401e-a530-77904fd189ad
 ms.reviewer: pchacon
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: a2ddf2b972f90aea6ac0e47372bd4f0b4de5cf19
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: bf25dd15aa9074692017d94bb94285b4c8e77ca8
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="quick-start-guide-simplify-email-configuration-on-mobile-devices"></a>Snabbstartsguide: Förenkla e-postkonfigurationen på mobila enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med Microsoft Intune kan du spara tid och resurser genom att distribuera e-postprofiler (även VPN och WiFi) till Windows-, iOS- och Android-mobilenheter som hanteras av Intune-tjänsten. Du kan förbättra användarnas upplevelse och nöjdhetsnivå samt minska supportkostnaderna genom att konfigurera e-postprofiler automatiskt.
 
 ## <a name="is-this-quick-start-guide-right-for-me"></a>Är den här snabbstartsguiden rätt för mig?
@@ -31,8 +36,8 @@ I så fall kan Microsoft Intune automatiskt konfigurera e-post för enheter som 
 När e-postprofilen har konfigurerats kan du enkelt begränsa åtkomsten till företagets e-post och Office 365-tjänster med Intunes principer för villkorlig åtkomst. Med dessa principer kan du se till att endast enheter som följer reglerna du angett i Intune har åtkomst till företagets e-post och Office 365-tjänster.
 
 ## <a name="how-do-i-do-it"></a>Hur gör jag?
-1.  [Konfigurera e-postprofiler automatiskt för användare](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) på Windows-, iOS- och Android-enheter.
-2.  [Kontrollera åtkomsten till företagets e-post](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) med hjälp av principer för villkorlig åtkomst.
+1.    [Konfigurera e-postprofiler automatiskt för användare](/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) på Windows-, iOS- och Android-enheter.
+2.    [Kontrollera åtkomsten till företagets e-post](/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune) med hjälp av principer för villkorlig åtkomst.
 
 
 ### <a name="additional-information"></a>Ytterligare information:
@@ -44,9 +49,4 @@ När e-postprofilen har konfigurerats kan du enkelt begränsa åtkomsten till f�
 [Distribuera Wi-Fi-profiler till hanterade enheter](/intune/deploy-use/wi-fi-connections-in-microsoft-intune)
 
 [Skydda resursåtkomst med certifikatprofiler i Microsoft Intune](/intune/deploy-use/secure-resource-access-with-certificate-profiles)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

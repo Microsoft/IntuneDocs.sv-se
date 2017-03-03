@@ -1,25 +1,29 @@
 ---
-title: "Ange eller ändra ditt lösenord | Microsoft Intune"
+title: "Ange eller ändra ditt lösenord | Microsoft Docs"
 description: "Ange eller ändra ditt lösenord"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 596534a5ca50d274472451014db4404b4a5bf2d5
-ms.openlocfilehash: 7273fb674123647e977a25bf9745aa05de7286e7
+ms.sourcegitcommit: fc22acb9f0c08491852592f41dc60bef0fcf0928
+ms.openlocfilehash: 9e616d6368a40e3ae06303cf3556b5e0760fb477
+ms.lasthandoff: 12/21/2016
 
 
 ---
 
-# Ange eller ändra ditt lösenord
+# <a name="set-or-change-your-passcode"></a>Ange eller ändra ditt lösenord
 
 Om din iOS-enhet inte följer IT-administratörens princip för lösenord visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
@@ -27,23 +31,18 @@ IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan t
 
 Om du har problem med att ange ett lösenord som uppfyller kraven för lösenord kan du be IT-administratören om hjälp.
 
-## Ställ in ditt lösenord##
+## <a name="set-your-passcode"></a>Ställ in ditt lösenord
 
 1. Tryck på **Inställningar** > **Touch ID och lösenord**.
 2. I menyn **Touch ID och lösenord** trycker du på **Aktivera lösenord**.
 3. Ange ett nytt lösenord som uppfyller kraven från din IT-administratör och verifiera det sedan genom att ange det igen.
 
-## Ändrar ditt lösenord##
+## <a name="change-your-passcode"></a>Ändrar ditt lösenord
 
 1. Tryck på **Inställningar** > **Touch ID och lösenord**.
 2. Ange ditt lösenord. Menyn **Touch ID och lösenord** öppnas.
 2. Tryck på **Ändra lösenord** och ange ditt gamla lösenord.
 3. Ange ett nytt lösenord som uppfyller kraven från din IT-administratör och verifiera det sedan genom att ange det igen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Oct16_HO2-->
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

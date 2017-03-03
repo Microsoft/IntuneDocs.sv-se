@@ -1,11 +1,11 @@
 ---
-title: "Vanliga hanteringsuppgifter för Windows-dator | Microsoft Intune"
+title: "Vanliga hanteringsuppgifter för Windows-dator | Microsoft Docs"
 description: "Lär dig olika sätt på vilka du kan hantera Windows-datorer som kör Intune-programvaruklienten."
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,17 @@ ms.technology:
 ms.assetid: eb912c73-54d2-4d78-ac34-3cbe825804c7
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 94cb6278e0df458ee3696cc0c8e1018822c44cd8
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: 2fc2d7e57267f82897dac8a0cc222c2b7009d14d
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="common-windows-pc-management-tasks-with-the-intune-software-client"></a>Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet
-Granska en lista över de aktiviteter som du kan genomföra för att hantera de datorer som kör Intune-programvaruklienten. Om du inte har installerat klienten på dina datorer än läser du [Installera Intune-klientprogrammet](install-the-windows-pc-client-with-microsoft-intune.md).
+Det här avsnittet innehåller åtgärder som du kan använda för att hantera datorer som hanteras som datorer genom att installera Intune-klientprogrammet. Det här avsnittet omfattar inte hantering av datorer som mobila enheter. Om du inte har installerat klienten på datorerna än läser du [Installera Intune-klientprogrammet](install-the-windows-pc-client-with-microsoft-intune.md).
 
 
 - [Använd principer för att förenkla datorhanteringen](use-policies-to-simplify-windows-pc-management.md) – Beskriver Intunes principer för **datorhantering** och listar inställningarna för Microsoft Intune Center.
@@ -30,14 +32,9 @@ Granska en lista över de aktiviteter som du kan genomföra för att hantera de 
 
 - [Dra tillbaka en Windows-dator](retire-a-windows-pc-with-microsoft-intune.md) – Listar de steg som måste vidtas för att stegen för att dra tillbaka en Windows-dator och vad som händer när du gör så.
 
-- [Hantera länkning avanvändarenheter för Windows-datorer](manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md) – Här förklaras när och hur du måste länka en användare till en dator innan du kan distribuera programvara till användaren.
+- [Hantera länkning av användarenheter för Windows-datorer](manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md) – Förklarar när och hur du måste länka en användare till en dator innan du kan distribuera programvara till användaren.
 
 - [Begära och tillhandhålla fjärrhjälp för Windows-datorer](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md) – Här beskrivs hur användare av Intune-datorer får fjärrhjälp, vilka krav som finns och hur du konfigurerar TeamViewer.
 
-
-
-
-
-<!--HONumber=Nov16_HO5-->
 
 

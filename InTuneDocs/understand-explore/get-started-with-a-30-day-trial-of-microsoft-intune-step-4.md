@@ -1,11 +1,11 @@
 ---
-title: "Skapa principer och publicera en app för användare | Microsoft Intune"
+title: "Skapa principer och publicera en app för användare | Microsoft Docs"
 description: "Så här skapar du principer och publicerar en app när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 08/09/2016
+ms.date: 12/12/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,20 @@ ms.technology:
 ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 64f857307046ea061e702d0b383968b322b89c33
+ms.sourcegitcommit: 53b05e0ad1be63315dcb5e5b9938a7d9459cb6c3
+ms.openlocfilehash: edcef68c4dd6715c0e3b7c8a164d6266d1c154ae
+ms.lasthandoff: 12/14/2016
 
 
 ---
 
 
 # <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Skapa principer och publicera en app för utvärderingsanvändare
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune-principerna förser dig med inställningar som hjälper dig att kontrollera säkerhetsinställningarna på mobila enheter, underhålla Windows-brandväggen och Endpoint Protection-inställningarna för datorer, samt distribuera program. Om du planerar att använda Intune för enheter som du konfigurerar för produktion efter utvärderingsperioden är det mycket viktigt att du följer anvisningarna i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) och [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
 
 Du kan utföra två typer av appinstallationer med Intune. Den första är en **obligatorisk installation** som automatiskt distribuerar appen till hanterade enheter. Den andra är en **tillgänglig installation**som distribuerar appen, eller en länk till appen, till Intune-företagsportalen så att användarna kan välja om de vill installera den på sina datorer eller på sina mobila enheter.
@@ -99,9 +104,4 @@ Läs mer om andra [Intune-funktioner](get-started-with-a-30-day-trial-of-microso
 Läs om de [vanligaste sätten att använda Intune på](common-ways-to-use-intune.md)
 
 Konvertera till en [betald prenumeration](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-
-
-
-<!--HONumber=Nov16_HO5-->
-
 

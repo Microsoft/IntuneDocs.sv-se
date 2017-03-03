@@ -1,26 +1,31 @@
 ---
-title: "Felsöka registreringen av din Windows 10-enhet | Microsoft Intune"
+title: "Felsöka registreringen av din Windows 10-enhet | Microsoft Docs"
 description: 
 keywords: 
-author: Staciebarker
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 8/18/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
+searchScope:
+- Company Portal
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: d3a2daebdb781ce99aa103e7717ffa1b0297cb3a
-ms.openlocfilehash: ff70fb247133234f1a90113326c5641b4f73b9df
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: b81465ae9ae22cea347a3e052b70ac3b2be465c5
+ms.lasthandoff: 12/21/2016
 
 
 ---
 
-# Felsöka registreringen av din Windows 10-enhet
+# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Felsöka registreringen av din Windows 10-enhet
 Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md), men ändå inte har åtkomst till din e-post eller filer på arbetet eller i skolan, så försök med följande felsökningsåtgärder.
 
 1.  Ta en titt på de två följande skärmarna och se om någon av dem liknar vad du ser på din enhet. Följ de steg som gäller för den skärm som du ser på din enhet.
@@ -33,7 +38,7 @@ Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-en
 
     ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
-## Felsökningssteg för att följa om du ser Åtkomst för arbete eller skola
+## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Felsökningssteg för att följa om du ser Åtkomst för arbete eller skola
 
 1.  Om du följde stegen ovan men ändå inte har åtkomst till din e-post eller dina filer på arbetet eller i skolan går du tillbaka till **Åtkomst för arbete eller skola**.
 
@@ -45,7 +50,7 @@ Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-en
 
     - Om du anslutningsinformationen ovan inte visas, eller om det visas, men utan något eller några av alternativen, så tryck på **Anslut** och logga sedan in med autentiseringsuppgifterna för ditt arbets- eller skolkonto. Nu bör du vara ansluten.
 
-## Felsökningssteg för att följa för Ditt konto
+## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Felsökningssteg för att följa för Ditt konto
 
 Om du följde stegen ovan men ändå inte har åtkomst till din e-post, dina filer eller annan information på arbetet eller i skolan, så gå tillbaka till **Konton** och tryck på **Åtkomst till arbetsplats**.
 
@@ -53,10 +58,5 @@ Om du följde stegen ovan men ändå inte har åtkomst till din e-post, dina fil
 
 - Om du inte ser ditt arbets- eller skolkonto trycker du på **Anslut** och loggar in med dina användaruppgifter.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Aug16_HO4-->
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

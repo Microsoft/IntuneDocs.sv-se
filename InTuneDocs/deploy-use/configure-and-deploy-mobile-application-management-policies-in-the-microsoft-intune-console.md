@@ -1,11 +1,11 @@
 ---
-title: Konfigurera MAM-principer i Intune-konsolen | Microsoft Intune
+title: Konfigurera MAM-principer i Intune-konsolen | Microsoft Docs
 description: "Med hjälp av principer för hantering av mobilprogram i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/06/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4f7a503417938eabb4334757dcf12a63f082fd3
-ms.openlocfilehash: 90b5a9f78a93cde7466937d0ce9dac3d83f3ff64
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: f7504657f5fb2d73242f25f2f059c8c4e7ab1547
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med hjälp av hanteringsprinciper för mobilprogram (MAM) i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper. Du kan till exempel begränsa åtgärder för att klippa ut, kopiera och klistra in inom en hanterad app eller konfigurera en app så att den öppnar alla länkar i en hanterad webbläsare.
 
 Principerna för hantering av mobilprogram har stöd för:
@@ -71,7 +76,7 @@ Om du t.ex. använder Outlook-appen:
 
 -   **Steg 5:** Övervaka appdistributionen.
 
-## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mamenabled-app"></a>Steg 1: Hämta en länk till en principhanterad app, skapa en omsluten app eller använd Intune App SDK för att skriva en MAM-aktiverad app
+## <a name="step-1-get-the-link-to-a-policy-managed-app-create-a-wrapped-app-or-use-the-intune-app-sdk-to-write-a-mam-enabled-app"></a>Steg 1: Hämta en länk till en principhanterad app, skapa en omsluten app eller använd Intune App SDK för att skriva en MAM-aktiverad app
 
 Gå till appbutiken och leta reda på och skriv ner webbadressen till den principhanterade app som du vill distribuera. Exempelvis är webbadressen till Microsoft Word för iPad-appen **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
@@ -191,9 +196,4 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 -   Om principen redan har distribuerats till enheten kommer befintliga principinställningar inte att skrivas över.
 
 -   Om ingen princip har distribuerats till enheten och två motstridiga inställningar distribueras, används standardinställningen som är inbyggd i enheten.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

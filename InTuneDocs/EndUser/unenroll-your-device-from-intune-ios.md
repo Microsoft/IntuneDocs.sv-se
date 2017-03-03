@@ -1,28 +1,32 @@
 ---
-title: "Avregistrera iOS-enheten från Intune | Microsoft Intune"
+title: "Avregistrera en iOS-enhet från Intune | Microsoft Docs"
 description: "Beskriver hur du avregistrerar en iOS-enhet från Intune"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: barlanmsft
+ms.author: barlan
 manager: angrobe
-ms.date: 08/29/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 28914db1-3e62-45f5-9632-b0d2a808a44d
-ROBOTS: 
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: esmich
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 0d32aa982cf9d45da36f71be5554f31375521e35
-ms.openlocfilehash: acd83d6cac946c7cc3c08bc179bf88dcc7475a69
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: eb41be0b4096c2b2ee5711204b34e8c3bb13e25b
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 
-# Avregistrera en iOS-enhet från Intune
+# <a name="unenroll-your-ios-device-from-intune"></a>Avregistrera en iOS-enhet från Intune
 
 När du avregistrerar din iOS-enhet från Intune kan enheten inte längre komma åt företagsresurser och hanteras inte längre av Intune.
 
@@ -53,10 +57,5 @@ När du avregistrerar en enhet från Intune händer följande:
 
 -   Enheter som bara är konfigurerade för e-post visas inte längre i företagsportalappen eller på webbplatsen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Oct16_HO2-->
-
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

@@ -1,25 +1,29 @@
 ---
-title: "Välj hur du vill registrera mobila enheter | Microsoft Intune"
+title: "Välj hur du vill registrera mobila enheter | Microsoft Docs"
 description: "Bestäm hur du ska registrera mobila enheter i Intune genom att besvara några enkla frågor"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 11/22/2016
-ms.topic: article
+ms.date: 02/16/2017
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 242de106-36a0-469f-a89c-4173ae8bdd7f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
+ms.custom: intune-classic EXPIERIMENT
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: a30634f7a33e99083dbb5e1c2cca61352c3eed14
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: b77e98d8bb7b1ef8d19e25eff06aa2423fd32c18
+ms.lasthandoff: 12/16/2016
 
 
 ---
 # <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmetoden för de enheter som du hanterar.
 
@@ -37,9 +41,4 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
 > [!div class="button"]
 [< Bakåt](choose-how-to-enroll-devices1.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

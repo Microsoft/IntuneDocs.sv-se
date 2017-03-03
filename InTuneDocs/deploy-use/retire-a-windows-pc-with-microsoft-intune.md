@@ -1,11 +1,11 @@
 ---
-title: Inaktivera en Windows-dator | Microsoft Intune
+title: Inaktivera en Windows-dator | Microsoft Docs
 description: Hur du inaktiverar en Intune-hanterad Windows-dator.
 keywords: 
 author: staciebarker
 ms.author: stabar
 manager: angrobe
-ms.date: 08/04/2016
+ms.date: 12/15/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,17 +13,19 @@ ms.technology:
 ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 19e8e2b6a7eaa3cf02e4296a6fd147baa1472b61
+ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
+ms.openlocfilehash: fbf188be16ca4a47ee369e3fdde8c0a7f799beab
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="retire-a-windows-pc"></a>Inaktivera en Windows-dator
-Inaktivera datorer som hanteras av Intune enligt följande.
+Använd följande steg för att inaktivera datorer som hanteras som datorer genom att köra Intune-programvaruklienten på dem. När du inaktiverar en dator tas den bort från Intune-hanteringen. Det går inte att fabriksåterställa en dator från Intune så att den återgår till de ursprungliga fabriksinställningarna.
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill dra tillbaka).
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill inaktivera).
 
 2.  Markera de enheter som du vill dra tillbaka och välj sedan **Dra tillbaka/Rensa**.
 
@@ -39,9 +41,9 @@ När du drar tillbaka en dator:
 
 -   Tar Intune bort klientprogrammet från datorn. Om datorn inte är ansluten till Intune-tjänsten tas klientprogrammet bort nästa gång datorn ansluts.
 
--   Microsoft Endpoint Protection tas bort från datorn. Om datorn har ett annat slutpunktsprogram installerat och det inaktiveras kan programmet aktiveras igen efter att Microsoft Intune Endpoint Protection har tagits bort, så att datorerna skyddas.
+-   Microsoft Endpoint Protection tas bort från datorn. Om datorn har ett annat slutpunktsprogram installerat och det inaktiveras kan programmet aktiveras igen efter att Microsoft Intune Endpoint Protection har tagits bort, så att datorn skyddas.
 
--   Principer tas bort från datorn och de värden som angavs av principen kommer att ändras.
+-   Eventuella principer tas bort från datorn och de värden som angavs av principen kommer att ändras.
 
 -   Datorn kommer inte längre att ta emot programuppdateringar eller uppdaterade definitioner för skadlig programvara från Intune-tjänsten.
 
@@ -50,13 +52,8 @@ När du drar tillbaka en dator:
     > [!IMPORTANT]
     > Om klientprogrammet har installerats med en hjälp av ett grupprincipobjekt (GPO), måste du ta bort grupprincipobjektet innan du kan ta bort klientprogrammet, för att förhindra att programvaran installeras på nytt.
 
-    Om det inte går att avinstallera klienten läser du [Felsöka Endpoint Protection](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune) om du behöver mer hjälp.
+    Om det inte går att avinstallera Endpoint Protection-klienten läser du [Felsöka Endpoint Protection](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune) om du behöver mer hjälp.
 
 ### <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

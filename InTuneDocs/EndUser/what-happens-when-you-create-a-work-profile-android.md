@@ -1,5 +1,5 @@
 ---
-title: "Vad händer när du skapar en arbetsprofil | Microsoft Intune"
+title: "Vad händer när du skapar en arbetsprofil | Microsoft Docs"
 description: Beskriver hur du krypterar en Android-enhet
 keywords: 
 author: barlanmsft
@@ -11,11 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b217da11-2cd7-49ab-a91f-2f6d7784c6b6
+searchScope:
+- Company Portal
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: arnab
 ms.suite: ems
+ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 2a3ad9562d271ee67b49db28b0fc62caec9f3050
-ms.openlocfilehash: 77d420bd1a635f8cd64b32c584c2be62f52f1706
+ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
+ms.openlocfilehash: 215e630141aa2739a2fe73926476db965c42922a
+ms.lasthandoff: 12/21/2016
 
 
 ---
@@ -43,11 +48,4 @@ När du skapar en arbetsprofil:
 Se [Create a work profile and enroll your device](create-a-work-profile-and-enroll-your-device-in-intune-android.md) (Skapa en arbetsprofil och registrera din enhet) för att lära dig att skapa en arbetsprofil.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

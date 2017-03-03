@@ -1,10 +1,11 @@
 ---
-title: "Felsöka programuppdateringar | Microsoft Intune"
+title: "Felsöka programuppdateringar | Microsoft Docs"
 description: "Lös problem med programuppdateringar i Microsoft Intune."
 keywords: 
 author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,19 +13,24 @@ ms.technology:
 ms.assetid: d17b70f4-17b4-4d89-88fd-70fa4f34fbea
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 906371576609152aaf61e033da5ce60744ddd255
-ms.openlocfilehash: 07e5737b75870319445f5af4d7038916b155d083
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 66ec65e856c0ab70264b797bb3ef7fe4f5673b54
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
-# Felsökning av programuppdateringar i Microsoft Intune
+# <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Felsökning av programuppdateringar i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Använd informationen i det här avsnittet för att lösa problem med programvaruuppdateringar i Microsoft Intune.
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
-## Felkoder för Update Agent
+## <a name="update-agent-error-codes"></a>Felkoder för Update Agent
 
 I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hittar en viss felkod i den här tabellen går du till [resultatkoder för Windows Update Agent](http://go.microsoft.com/fwlink/?LinkID=221542).
 
@@ -240,7 +246,7 @@ I följande tabell visar felkoderna för Intunes **Update Agent**. Om du inte hi
 |**0x80af0005**|OMC_E_INSTALL_NOT_ALLOWED_REBOOT_REQUIRED|Installationen misslyckades eftersom en obligatorisk omstart väntar.|
 |**0x80af0006**|OMC_E_DOWNLOAD_CANCELLED|Hämtningen avbröts.|
 
-## Windows 7-baserade datorer med många ersatta programuppdateringar slutar rapportera till Microsoft Intune-konsolen
+## <a name="windows-7-based-computers-with-lots-of-superseded-updates-stop-reporting-to-the-microsoft-intune-console"></a>Windows 7-baserade datorer med många ersatta programuppdateringar slutar rapportera till Microsoft Intune-konsolen
 **Problem**: Du kan stöta på en situation där ett eller flera av följande problem uppstår i Microsoft Intune-klienter:
 - De slutar plötsligt rapportera till Microsoft-administrationskonsolen.  
 - De uppvisar hög processoranvändning.
@@ -259,11 +265,6 @@ Det här problemet kan uppstå om ersatta programuppdateringar (uppdateringar so
 
 Om du kör Windows 7 kontrollerar du dessutom att följande uppdatering är installerad: [3050265 Windows Update-klienten för Windows 7: juni 2015](https://support.microsoft.com/kb/3050265).
 
-### Nästa steg
+### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Aug16_HO2-->
-
 

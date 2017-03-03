@@ -1,11 +1,11 @@
 ---
-title: Appetableringsprofiler | Microsoft Intune
+title: Appetableringsprofiler | Microsoft Docs
 description: "Intune tillhandahåller verktyg för att distribuera en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/19/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,18 @@ ms.technology:
 ms.assetid: 86fbe736-7bdb-4f5e-ae21-13c91eb2462c
 ms.reviewer: mghadial
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 409433dbe5ca777b33b21a2655e15cde8003b4a2
-ms.openlocfilehash: d67b26b23e65d4a144c1efda1494de1df94cc33c
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: db76786da0428b0e064f2091089653244d90ee2a
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="use-ios-mobile-provisioning-profile-policies-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilprinciper för iOS för att förhindra att dina appar upphör att gälla
 
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Verksamhetsspecifika Apple iOS-appar som distribueras till iPhone och iPad skapas med en inbyggd etableringsprofil och kod som signeras med ett certifikat. När appen körs bekräftar iOS appens integritet och tillämpar de principer som definieras av etableringsprofilen. Följande verifieringar görs:
 
@@ -50,9 +53,4 @@ När certifikatet upphör att gälla måste du signera appen igen med ett nytt c
     - **Fil för konfigurationsprofil** – Klicka på **Importera** och välj sedan en Apple Mobile-konfigurationsprofilfil (med tillägget **.mobileprovision**) som du laddat ned från webbplatsen Apple Developer.
 4. När du är klar väljer du **Spara princip**.
 5. Distribuera sedan principen till önskade iOS-enheter. Mer information finns i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

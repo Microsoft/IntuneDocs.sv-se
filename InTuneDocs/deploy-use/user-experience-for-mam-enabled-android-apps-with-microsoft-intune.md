@@ -1,5 +1,5 @@
 ---
-title: Android-appar med MAM-principer | Microsoft Intune
+title: Android-appar med MAM-principer | Microsoft Docs
 description: "I det här avsnittet beskrivs vad som händer när din app hanteras av hanteringsprinciper för mobilappar (MAM)."
 keywords: 
 author: NathBarn
@@ -13,14 +13,19 @@ ms.technology:
 ms.assetid: 53c8e2ad-f627-425b-9adc-39ca69dbb460
 ms.reviewer: andcerat
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 87e37cd8334ddb9331c0662b691545cd0ab0553a
-ms.openlocfilehash: 945c9f48846fc37358c44b83990feed1f3694966
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: aeacfddb3ed42938dd9443e2734222c977436430
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="what-to-expect-when-your-android-app-is-managed-by-mam-policies"></a>Vad som händer när din Android-app hanteras med MAM-principer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Det här avsnittet beskriver användargränssnittet för appar med principer för mobil programhantering (MAM). MAM-principer tillämpas endast när appar används i arbetssammanhang: Till exempel när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras i ett företags OneDrive-affärsplats.
 ##  <a name="access-apps"></a>Åtkomstappar
 
@@ -82,9 +87,4 @@ Följande filtyper stöds:
 
 ### <a name="see-also"></a>Se även
 [Skapa och distribuera hanteringsprinciper för mobilappar med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

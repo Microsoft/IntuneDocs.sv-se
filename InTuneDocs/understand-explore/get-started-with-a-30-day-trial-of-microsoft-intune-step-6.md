@@ -1,5 +1,5 @@
 ---
-title: "Andra alternativ och tillägg till Intune-utvärderingsprenumerationer | Microsoft Intune"
+title: "Andra alternativ och tillägg till Intune-utvärderingsprenumerationer | Microsoft Docs"
 description: "I det här avsnittet beskrivs aviseringar, meddelanden och rapporter samt allmänna Intune-funktioner som du behöver känna till när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
@@ -12,14 +12,18 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 21b0cba6cf1d0cd7048cd0abee3a21dd9d74eadd
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 361348939341b580a9abc576938522d166125183
+ms.lasthandoff: 12/10/2016
 
 
 ---
 
 # <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Andra alternativ och tillägg till Intune-utvärderingsprenumerationer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 ## <a name="alerts-notifications-and-reports"></a>Aviseringar, meddelanden och rapporter
 I Intune-administrationskonsolen används **aviseringar** för att snabbt uppskatta den övergripande hälsan för de hanterade enheterna i din organisation. Du kan konfigurera och anpassa aviseringar så att de rapporterar och visar enbart den information som du behöver för din organisation. Du kan ange om en avisering ska vara aktiv eller inaktiv, konfigurera allvarlighetsgraden, använda tröskelvärdet för att visa hur ofta en varning avisering måste initieras innan en varning visas. Du kan även konfigurera de inställningar som är specifika för vissa typer av aviseringar.
@@ -52,10 +56,5 @@ Supportalternativen beskrivs i [Ta reda på hur du kan få support för Microsof
 ## <a name="next-steps"></a>Nästa steg
 Läs om de [vanligaste sätten att använda Intune på](common-ways-to-use-intune.md)
 
-Konvertera en [betald prenumeration](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-
-
-
-<!--HONumber=Nov16_HO5-->
-
+Konvertera till en [betald prenumeration](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 

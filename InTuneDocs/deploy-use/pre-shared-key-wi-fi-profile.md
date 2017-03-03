@@ -1,5 +1,5 @@
 ---
-title: Wi-Fi med PSK | Microsoft Intune
+title: Wi-Fi med PSK | Microsoft Docs
 description: "Använd Anpassad konfiguration för att skapa en Wi-Fi-profil med en i förväg delad nyckel."
 keywords: 
 author: robstackmsft
@@ -13,35 +13,40 @@ ms.technology:
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: ad5bb09eb18463f541ca0cbb60ff1f27bdc3251e
+ms.sourcegitcommit: bb706f122753219d8034bcd25fbe2e25b7142b30
+ms.openlocfilehash: 7fce50c88419a920aa7c4814517523e7a4ced919
+ms.lasthandoff: 12/15/2016
 
 
 
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använda en anpassad princip för att skapa en Wi-Fi-profil med en i förväg delad nyckel
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Så här använder du Intunes **Anpassad konfiguration** för att skapa en Wi-Fi-profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
 
 > [!NOTE]
--   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
+-    Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
 - För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
--   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
+-    Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
 -  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
 
 
-1.  Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
+1.    Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
 
-2.  Ange ett namn och en beskrivning.
-3.  Lägg till en ny OMA-URI-inställning:
+2.    Ange ett namn och en beskrivning.
+3.    Lägg till en ny OMA-URI-inställning:
 
-   a.   Ange ett namn på den här inställningen för Wi-Fi-nätverk.
+   a.    Ange ett namn på den här inställningen för Wi-Fi-nätverk.
 
-   b.   Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
+   b.    Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
 
-   c.   **Datatyp**: Inställd på "Sträng (XML)"
+   c.    **Datatyp**: Inställd på "Sträng (XML)"
 
-   d.   **OMA-URI**:
+   d.    **OMA-URI**:
 
     - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -69,24 +74,24 @@ Här är ett exempel på XML-koden för en Wi-Fi-profil för Android eller Windo
 >  `<hex>53534944</hex>` bör vara inställt på det hexadecimala värdet `<name><SSID of wifi profile></name>`.
 >  Windows 10-enheter kan returnera ett falskt *0x87D1FDE8 Reparationen misslyckades*-felmeddelande, men kommer ändå att ha etablerats med profilen.
 
-    <!--
-    <Name of wifi profile> = Name of profile
-    <SSID of wifi profile> = Plain text of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
-    <nonBroadcast><true/false></nonBroadcast>
-    <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
-    <Type of encryption> = Type of encryption used by the network
-    <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
-    <password> = Password to connect to the network
-    <hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
-    -->
-    <WLANProfile
-    xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
-      <name><Name of wifi profile></name>
-      <SSIDConfig>
-        <SSID>
-          <hex>53534944</hex>
-        <name><SSID of wifi profile></name>
-        </SSID>
+```
+<!--
+<Name of wifi profile> = Name of profile
+<SSID of wifi profile> = Plain text of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
+<nonBroadcast><true/false></nonBroadcast>
+<Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
+<Type of encryption> = Type of encryption used by the network
+<protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
+<password> = Password to connect to the network
+<hex>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
+-->
+<WLANProfile
+xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+  <name><Name of wifi profile></name>
+  <SSIDConfig>
+    <SSID>
+      <hex>53534944</hex>
+ <name><SSID of wifi profile></name>        </SSID>
         <nonBroadcast>false</nonBroadcast>
       </SSIDConfig>
       <connectionType>ESS</connectionType>
@@ -108,10 +113,12 @@ Här är ett exempel på XML-koden för en Wi-Fi-profil för Android eller Windo
         </security>
       </MSM>
     </WLANProfile>
+```
 
 ## <a name="eap-based-wi-fi-profile"></a>EAP-baserad Wi-Fi-profil
 Här är ett exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
 
+```
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
       <name>testcert</name>
       <SSIDConfig>
@@ -189,6 +196,7 @@ Här är ett exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
         </security>
       </MSM>
     </WLANProfile>
+```
 
 ## <a name="create-the-xml-file-from-an-existing-wi-fi-connection"></a>Skapa XML-filen utifrån en befintlig Wi-Fi-anslutning
 Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
@@ -212,9 +220,4 @@ När du väljer en distribuerad princip visas mer information om distributionen 
 
 ### <a name="see-also"></a>Se även
 [Wi-Fi-anslutningar i Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

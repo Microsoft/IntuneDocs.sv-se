@@ -1,5 +1,5 @@
 ---
-title: "Säkerhetsprincipinställningar för mobila enheter | Microsoft Intune"
+title: "Säkerhetsprincipinställningar för mobila enheter | Microsoft Docs"
 description: "Använd Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen."
 keywords: 
 author: robstackmsft
@@ -13,15 +13,20 @@ ms.technology:
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: a64336ad959daad9685bdfbef3c284a14e708894
+ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
+ms.openlocfilehash: 755cf7d87d7145c55eb5fe583748bd98d34e8fb1
+ms.lasthandoff: 12/10/2016
 
 
 
 ---
 
 # <a name="mobile-device-security-policy-settings-in-microsoft-intune"></a>Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 > [!IMPORTANT]
 > I Microsoft Intune finns nu separata konfigurationsprinciper för varje enhetsplattform. Dessa principer innehåller de mest aktuella inställningarna som du kan använda. Du kan fortsätta att använda den mobila enhetens säkerhetsprincip. Alla befintliga distributioner kommer att fungera. Du bör planera att migrera till de nya konfigurationsprinciperna så snart som möjligt eftersom den mobila enhetens säkerhetsprincip kommer att tas bort i framtiden.
 
@@ -53,7 +58,7 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 |**Minsta längd på lösenord**|Ja|Ja|Ja|Ja|Ja|
 |**Tillåt enkla lösenord**<br /><br />Exempel på enkla lösenord är "0000" och "1234".|Nej|Nej|Ja|Ja|Nej|
 |**Antal tillåtna, upprepade felinloggningar innan enheten rensas**|Ja|Ja|Ja|Ja|Ja|
-|**Minuter av inaktivitet innan skärmen stängs av**1|Ja|Ja|Ja|Ja|Ja|
+|**Minuter av inaktivitet innan skärmen stängs av**<sup>1</sup>|Ja|Ja|Ja|Ja|Ja|
 |**Lösenordets giltighetstid (i dagar)**|Ja|Ja|Ja|Ja|Ja|
 |**Kom ihåg tidigare lösenord**|Ja|Ja|Ja|Ja|Ja|
 |**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Ja|Ja|Ja|Ja|Ja|
@@ -61,7 +66,7 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 |**Tillåt bildlösenord och PIN**|Ja|Ja|Nej|Nej|Nej|
 |**Antal minuters inaktivitet innan lösenord krävs**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt fingeravtrycksupplåsning**|Nej|Nej|Nej|iOS 7 och senare|Nej|
-1 När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
+<sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
 Om du distribuerar en princip för lösenordslängd för enheter som kör Windows RT tvingas användarna att återställa sina lösenord, även om deras aktuella lösenord uppfyller principkraven.
 
@@ -69,9 +74,9 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Kräv kryptering på den mobila enheten**1<br /><br />För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
+|**Kräv kryptering på den mobila enheten**<sup>1</sup><br /><br />För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
 |**Kräv kryptering på minneskort**<br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas <br />Appar och associerade data krypteras automatiskt.|saknas|Ja|
-1Här finns ytterligare information för enheter som kör Windows 8.1:
+<sup>1</sup> Här finns ytterligare information för enheter som kör Windows 8.1:
 
 -   Om du vill framtvinga kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](http://support.microsoft.com/kb/3013816) på varje enhet.
 
@@ -105,7 +110,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 |**Tillåt fabriksåterställning**|Nej|Nej|Nej|Nej|Ja (endast Samsung KNOX Standard)|
 
 
-## <a name="cloud-settings-documents-and-data"></a>Molninställningar – dokument och data
+## <a name="cloud-settings--documents-and-data"></a>Molninställningar – dokument och data
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -116,7 +121,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 |**URL till arbetsmappar**<br /><br />Den här inställningen anger arbetsmappens URL så att dokument kan synkroniseras mellan enheter.|Ja|Nej|Nej|Nej|Nej|
 |**Tillåt Google-säkerhetskopiering**|Nej|Nej|Nej|Nej|Ja (endast Samsung KNOX Standard)|
 
-## <a name="cloud-settings-accounts-and-synchronization"></a>Molninställningar – konton och synkronisering
+## <a name="cloud-settings--accounts-and-synchronization"></a>Molninställningar – konton och synkronisering
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
@@ -127,7 +132,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 |Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Tillåt att användare hämtar bifogade filer i e-post**1|saknas|saknas|saknas|saknas|saknas|
+|**Tillåt att användare hämtar bifogade filer i e-post**<sup>1</sup>|saknas|saknas|saknas|saknas|saknas|
 |**E-postsynkroniseringsperiod** <br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
 |**Tillåt att mobilenheter som inte har fullständigt stöd för dessa inställningar synkroniseras med Exchange (Exchange ActiveSync)** <br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
 |**Gör Microsoft-kontot valfritt i Windows Mail-programmet**|Ja|Nej|Nej|Nej|Nej|
@@ -211,9 +216,4 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

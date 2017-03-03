@@ -1,11 +1,11 @@
 ---
-title: "iOS-principinställningar | Microsoft Intune"
+title: "iOS-principinställningar | Microsoft Docs"
 description: "Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/06/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: dfde68e4ef889ba881ff2fa93b226f879d01cbc8
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 05d47e6cf5c7b380ac981d06a3938f38b27a430b
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Principinställningar för iOS i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i iOS-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
@@ -78,12 +82,12 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |----------------|-------|
 |**Tillåt säkerhetskopiering till iCloud**|Tillåt användare att säkerhetskopiera enheten till iCloud.|
 |**Tillåt dokumentsynkronisering till iCloud**|Tillåt synkronisering av dokument och nyckel/värde till ditt lagringsutrymme i iCloud.|
-|**Tillåt bildströmssynkronisering till iCloud**|Tillåt foton på enheten att synkronisera med iCloud.|
+|**Tillåt bildströmssynkronisering till iCloud**|Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkronisera till iCloud och vara tillgängliga på alla användarnas enheter.|
 |**Kräv krypterad säkerhetskopiering**|Kräv att säkerhetskopior av enheter måste vara krypterade.|
 |**Tillåt att hanterade appar synkroniserar data till iCloud**|Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konto.|
 |**Tillåt Handoff för att fortsätta med aktiviteter på en annan enhet**|Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller Mac OS X-enhet.|
-|**Tillåt iCloud-bilddelning**|Tillåt användning av funktionen för delad bildström i iOS.|
-|**Tillåt iCloud-bildbibliotek**|Tillåt att användaren lagrar bilder på iCloud. Om den här inställningen inaktiveras raderas de bilder som redan finns lagrade på iCloud.|
+|**Tillåt iCloud-bilddelning**|Ställ in på **Nej** för att inaktivera **iCloud-bilddelning** på enheten.|
+|**Tillåt iCloud-bildbibliotek**|Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.    Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.|
 
 ### <a name="application-settings-for-the-browser"></a>Programinställningar för webbläsaren
 Alla inställningar gäller för iOS 8.0 och senare.
@@ -172,6 +176,8 @@ I listan över **kompatibla &amp; inkompatibla appar** skapar du en lista över 
 |**Importera appar**|Importera en lista med appar som du har angett i en fil med kommaseparerade värden. I filen använder du det här formatet: appnamn, utgivare, app-URL.|
 |**Redigera**|Redigera namn, utgivare och webbadress för den valda appen.|
 |**Ta bort**|Ta bort den markerade appen från listan.|
+
+Principer som innehåller inställningar för kompatibla och ej kompatibla program måste distribueras till användargrupper.
 
 ### <a name="kiosk-mode-settings"></a>Helskärmsinställningar
 
@@ -380,9 +386,4 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

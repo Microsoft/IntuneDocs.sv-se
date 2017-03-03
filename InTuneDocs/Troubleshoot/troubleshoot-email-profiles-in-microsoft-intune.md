@@ -1,11 +1,11 @@
 ---
-title: "Felsöka e-postprofiler | Microsoft Intune"
+title: "Felsöka e-postprofiler | Microsoft Docs"
 description: "Problem relaterade till e-postprofiler och hur du felsöker och löser dem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/01/2016
+ms.date: 12/27/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,20 +13,25 @@ ms.technology:
 ms.assetid: f5c944ea-32a6-48af-bb57-16d5f1f3c588
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 1b6fcf0cae23581c0391009fd7d63498d3c7eb2d
-ms.openlocfilehash: 504714c09815d8c6fed6515cf7a27b841d77eb57
+ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
+ms.openlocfilehash: 017a7912cb991f00916373acc18f4ab2b97ce8ed
+ms.lasthandoff: 12/30/2016
 
 
 ---
 
 # <a name="troubleshoot-email-profiles-in-microsoft-intune"></a>Felsöka e-postprofiler i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Det här avsnittet innehåller information om problem relaterade till e-postprofiler och hur du felsöker och löser dem.
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
 
-## <a name="unable-to-send-images-from-email-account"></a>Det går inte att skicka bilder från e-postkontot
+## <a name="unable-to-send-images-from--email-account"></a>Det går inte att skicka bilder från e-postkontot
 Användare med automatiskt konfigurerade e-postkonton kan inte skicka bilder från sina enheter.
 Detta inträffar när alternativet **Tillåt att e-post skickas från tredjepartsprogram** inte är aktiverat.
 
@@ -61,16 +66,11 @@ Om användaren har installerat en e-postprofil före etablering av en profil av 
 
 Eftersom Samsung KNOX inte använder värdnamn för att identifiera profilen rekommenderar vi att du inte skapar flera e-postprofiler som ska distribueras till samma e-postadress på olika värdar, eftersom de kommer att skriva över varandra.
 
-## <a name="error-0x87d1fde8-for-knox-standard-device"></a>Fel 0x87D1FDE8 för KNOX Standard-enhet
+## <a name="error--0x87d1fde8-for-knox-standard-device"></a>Fel 0x87D1FDE8 för KNOX Standard-enhet
 **Problem**: När en Exchange Active Sync-e-postprofil har skapats och distribuerats för Samsung KNOX Standard för olika Android-enheter rapporteras felet **0x87D1FDE8** eller **Reparationen misslyckades** på fliken Egenskaper &gt; Princip på enheten.
 
 Granska konfigurationen av din EAS-profil för Samsung KNOX och källprincipen. Synkroniseringsalternativet för Samsung Note stöds inte längre och det alternativet bör inte väljas i din profil. Se till att enheterna har fått tillräckligt med tid för att behandla principen, upp till 24 timmar.
 
 ## <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

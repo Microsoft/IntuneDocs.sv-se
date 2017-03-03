@@ -1,26 +1,31 @@
 ---
-title: Funktioner i Intune-klientprogrammet | Microsoft Intune
+title: Funktioner i Intune-klientprogrammet | Microsoft Docs
 description: "Läs om funktionerna du kan använda i Intune när du hanterar Windows-datorer med Intune-klientprogrammet."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.date: 11/22/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 77fa5c66-a87c-47df-964c-800eea509b33
 ms.reviewer: owenyen
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 29b6e5a3d319c741482fcc2b600842e2e42b96e2
-ms.openlocfilehash: 1bc5370574c038d0fe34746aa89067d06cc80c31
+ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
+ms.openlocfilehash: 36a20feed1756ea8dde2230db81099b6c5f8c7f6
+ms.lasthandoff: 12/16/2016
 
 
 ---
 
 # <a name="windows-pc-management-capabilities-when-you-use-the-intune-software-client"></a>Windows datorhanteringsfunktioner när du använder Intune-klientprogrammet
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
 -   **[Hantering av programvaruuppdateringar](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
@@ -72,9 +77,4 @@ Minimikraven på programvara för installation av Intune-klientprogrammet är:
 
 ### <a name="see-also"></a>Se även
 [Funktioner för hantering av registrerade enheter i Microsoft Intune](./mobile-device-management-capabilities-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 
