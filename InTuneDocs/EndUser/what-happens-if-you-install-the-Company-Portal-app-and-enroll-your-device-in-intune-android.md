@@ -20,10 +20,10 @@ ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: f80c6e7089519860e822f974753ac9dc0356e055
+ms.lasthandoff: 01/24/2017
 
 
 ---
-
 
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-android-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Android-enhet i Intune?
 
@@ -60,9 +60,4 @@ När din enhet har lagts till på företagsportalen kommer den ungefär var ått
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar. (Dessa uppdateringar har ingen personlig information.)
 
 Behöver du hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
