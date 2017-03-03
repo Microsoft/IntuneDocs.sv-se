@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 4b5f0129d6824a51c36662a1cc7ef4e8a2de9e20
-ms.openlocfilehash: 0c594c7a22a86ab576c9bdb191ed02f13cdcc19c
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 57a067684ccada3df4faa15e6bf009b39caf5c94
+ms.openlocfilehash: 598ecac4aafaff5715e311dcfc058c1d2661bd3e
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -40,7 +40,8 @@ Det finns ett antal saker som du kan göra med Intune som gör livet lite lätta
 
 - [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 - [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
-- [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-lost-or-stolen-device-ios.md)
+<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
+- [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-device-cpwebsite.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md)
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
