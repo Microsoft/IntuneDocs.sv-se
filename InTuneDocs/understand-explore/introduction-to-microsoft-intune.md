@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: e373fe71f54472bca538ba4a14beff39d090e23d
+ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
+ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
+ms.lasthandoff: 01/11/2017
 
 
 ---
@@ -71,7 +73,7 @@ Det, i kombination med funktioner i operativsystemet för att skydda data (till 
 När du använder Intune med andra tjänster i EMS kan du genom appkonfigurationer tillämpa organisationens säkerhetskrav för mobilappar utöver säkerhetsfunktionerna i operativsystemet och själva mobilapparna. En app som hanteras med EMS har åtkomst till bredare mobilapps- och dataskydd, bland annat:
 
 * [Enkel inloggning](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Multifaktorautentisering](https://docs.microsoft.com/en-us/multi-factor-authentication/multi-factor-authentication)
+*    [Multifaktorautentisering](https://docs.microsoft.com/en-us/multi-factor-authentication/multi-factor-authentication)
 * [Villkorlig appåtkomst (tillåt åtkomst om mobilappen innehåller företagsdata)](https://docs.microsoft.com/en-us/intune/deploy-use/allow-policy-managed-apps-access-to-o365)
 * [Isolera företagsdata från personliga data i samma app](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
 * [Princip för appskydd (PIN-kod, kryptering, Spara som, Urklipp osv.)](https://docs.microsoft.com/en-us/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
@@ -95,7 +97,7 @@ De flesta lösningar för hantering av företagsmobilitet stöder grundläggande
 
 Organisationer skiljer sig åt i den grad de implementerar scenarier ”utan registrering”. Vissa organisationer har det som standard. Vissa tillåter det för kompletterande enheter, till exempel en personlig surfplatta. Andra stöder det inte alls. Även i det sista fallet, då en organisation kräver att alla medarbetares enheter registreras i MDM, stöder dessa företag vanligtvis scenarier ”utan registrering” för leverantörer och för andra enheter som har ett specifikt undantag.
 
-Du kan även använda Intunes ”utan registrering”-teknik på registrerade enheter. Exempelvis kan en enhet som har registrerats i MDM ha ”Öppna i”-skydd som tillhandahålls av mobiloperativsystemet. IT-administratören kan dessutom tillämpa principen för appskydd på EMS-hanterade mobilappar för att styra ”Spara som” eller för att tillhandahålla multifaktorautentisering.
+Du kan även använda Intunes ”utan registrering”-teknik på registrerade enheter. Exempelvis kan en enhet som har registrerats i MDM ha ”Öppna i”-skydd som tillhandahålls av mobiloperativsystemet. (Öppna i-skydd är en iOS-funktion som hindrar dig från att öppna ett dokument från en app, som Outlook, i en annan app, som Word, om inte båda apparna hanteras av MDM-providern.) IT-administratören kan dessutom tillämpa principen för appskydd på EMS-hanterade mobilappar för att styra ”Spara som” eller för att tillhandahålla multifaktorautentisering.
 
 Oavsett hur din organisation förhåller sig till registrerade och oregistrerade mobilenheter och mobilappar har Intune, som en del av EMS, verktyg som kan öka de anställdas produktivitet samtidigt som dina företagsdata är skyddade.
 
@@ -113,9 +115,4 @@ Följande lista över affärsproblem länkar till mer detaljerad information om 
 * Läs om några av de [vanliga sätten att använda Intune](common-ways-to-use-intune.md).
 * Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](get-started-with-a-30-day-trial-of-microsoft-intune.md).
 * Fördjupa dig i de [tekniska kraven och möjligheterna](/intune/get-started/what-to-know-before-you-start-microsoft-intune) med Intune.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -16,6 +16,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
 ms.openlocfilehash: 804c62c3ee840a01ee7b3f7d96bf984bc9501ea0
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -50,9 +51,4 @@ Om du använder Microsoft System Center Configuration Manager för att hantera d
 
 >[!div class="step-by-step"]
 [**Förutsättningar** &rarr;](what-to-know-before-you-start-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
