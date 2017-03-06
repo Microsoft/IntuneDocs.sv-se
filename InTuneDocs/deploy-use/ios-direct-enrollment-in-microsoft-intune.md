@@ -4,7 +4,7 @@ description: "Använd verktyget Apple Configurator för att registrera företags
 keywords: 
 author: staciebarker
 ms.author: stabar
-manager: arob98
+manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
 ms.prod: 
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: f75c4a6412d34923ec45524d765d3eb270f15e13
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -91,9 +92,4 @@ När du registrerar iOS-enheter direkt kan du registrera dem utan att hämta enh
 9.  På iOS-enheten öppnar du **Inställningar** och går till **Allmänt** &gt; **Enhetshantering** &gt; **Management Profile** (Hanteringsprofil). Bekräfta att profilinstallationen visas och kontrollera iOS-principbegränsningarna och installerade appar. Det kan ta upp till tio minuter innan principbegränsningar och appar visas på enheten.
 
 10.  Distribuera enheter. Nu är iOS-enheten registrerad med Intune och hanteras.
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 
