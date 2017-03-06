@@ -160,11 +160,12 @@
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [Blockera appar utan ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Skydda åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
-### [Skydda åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/device-threat-protection.md)
-#### [Konfigurera skydd mot hot på enhet](deploy-use/device-threat-protection-subscription-setup.md)
-#### [Aktivera skydd mot hot på enhet](deploy-use/device-threat-protection-enable.md)
-#### [Distribuera appar med skydd mot hot på enhet](deploy-use/device-threat-protection-apps.md)
-#### [Aktivera skydd mot enhetshot i policyn för efterlevnad](deploy-use/device-threat-protection-policy.md)
+### [Skydda åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/mobile-threat-defense.md)
+#### [Lookout Mobile Threat Defense-anslutningsprogram](deploy-use/lookout-mobile-threat-defense-connector.md)
+##### [Konfigurera Mobile Threat Defense](deploy-use/device-threat-protection-subscription-setup.md)
+##### [Aktivera Mobile Threat Defense](deploy-use/device-threat-protection-enable.md)
+##### [Distribuera Mobile Threat Defense-appar](deploy-use/device-threat-protection-apps.md)
+##### [Aktivera princip för Mobile Threat Defense-efterlevnad](deploy-use/device-threat-protection-policy.md)
 
 ### [Skydda appdata med MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Azure Portal för appskyddsprinciper](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
@@ -192,9 +193,12 @@
 ### [Rensa hanterade företagsdata från appar](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Informera dina slutanvändare om Intune](deploy-use/how-to-educate-your-end-users-about-microsoft-intune.md)
-### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
-### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
-### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
+### [Använda en Android-enhet med Intune](EndUser/using-your-android-device-with-intune.md)
+#### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
+### [Använda en iOS-enhet med Intune](EndUser/using-your-iOS-or-macos-device-with-intune.md)
+#### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
+### [Använda en Windows-enhet med Intune](EndUser/using-your-windows-device-with-intune.md)
+#### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
 
 # Utveckla och anpassa appar
 ## [Översikt över Microsoft Intune App SDK](develop/intune-app-sdk.md)
