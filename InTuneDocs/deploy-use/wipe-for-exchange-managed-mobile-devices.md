@@ -2,8 +2,8 @@
 title: Rensning av Exchange-hanterade mobila enheter | Microsoft Docs
 description: "Med Microsoft Intune kan du rensa eller återställa mobila enheter som hanteras med hjälp av Exchange ActiveSync (EAS) med Intune Exchange Connector"
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ms.date: 11/14/2016
 ms.topic: article
