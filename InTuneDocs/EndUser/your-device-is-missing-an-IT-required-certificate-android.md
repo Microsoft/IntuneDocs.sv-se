@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f0ba4cbb-ef0a-4335-86bf-f1d006867fa2
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: d6fcfac7c8bd469f5163ec9b4017ae8c3d486428
 ms.openlocfilehash: 88770ba06718a767f8229e1b5aa4d543c87bc852
+ms.lasthandoff: 01/05/2017
 
 ---
 
@@ -71,9 +72,4 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta IT-administratören om du behöver hjälp.
 
 Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som IT-administratören måste hjälpa dig att installera. Kontakta IT-administratören för att få hjälp med den kontaktinformation som finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

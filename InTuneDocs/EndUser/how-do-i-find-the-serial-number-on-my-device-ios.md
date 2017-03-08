@@ -12,8 +12,8 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e6c4fedc-47b6-44b1-8c59-2fb81417f978
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser

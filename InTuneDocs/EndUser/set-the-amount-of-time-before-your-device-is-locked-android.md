@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5f365c7d-5889-4072-a994-613ce3c26ce4
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: eab9321df021972c91af66ca8b4dc69c8cc8795b
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -34,9 +35,4 @@ För att skydda data på en Android-enhet kan IT-administratören ställa in en 
 2.  Ange tidsgränsen för lösenord.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

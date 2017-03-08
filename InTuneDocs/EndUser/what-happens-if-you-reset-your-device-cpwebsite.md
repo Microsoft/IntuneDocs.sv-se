@@ -12,8 +12,8 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: fe110bbc-479b-4d11-beeb-70d15b199eda
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: mamoriss
 ms.suite: ems
 ms.custom: intune-enduser

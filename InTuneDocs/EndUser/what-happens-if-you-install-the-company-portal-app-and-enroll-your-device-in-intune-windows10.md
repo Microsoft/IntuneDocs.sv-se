@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0dc35efe-4fd4-4d4a-8569-d649ea704fea
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 0e6b7ae1794ff0857dfb203eb3c67d7ba494bd8e
 ms.openlocfilehash: 329d34e7a6ad83512e98dce85e1effe9c54a1bce
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -55,9 +56,4 @@ När du lägger till en dator:
 -   IT-administratören kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
 
 Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 51f1594d-0283-41d2-b4c3-a7a4ad70b369
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 3bda44c401ae7cf5dd796486d2d1a6332828bed1
 ms.openlocfilehash: fc48199acad7a65bd4a06b5a51f6f5b851997edb
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -32,9 +33,4 @@ Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det
 Om du vill kan du inaktivera insamlingen av användningsdata på en Windows-enhet med hjälp av inställningen **Användningsdata** i företagsportalappen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

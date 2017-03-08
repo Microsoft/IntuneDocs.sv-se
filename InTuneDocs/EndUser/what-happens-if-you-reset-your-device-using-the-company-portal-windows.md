@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: 42e6b4d44dffa457f009e8402d5c429aa55932d6
 ms.openlocfilehash: 74983ab11e1c1763bd5394af483b93b74b715f89
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,9 +37,4 @@ När du använder företagsportalappen eller [företagsportalens webbplats](rese
 |Stationära och bärbara datorer|**Windows 8.1 och Windows 8**<br />Det går inte att återställa en dator med Windows 8 eller Windows 8.1 såvida den inte enbart används för e-post.<br /><br />**Windows 7 eller Windows Vista**<br />Det går inte att återställa en dator med Windows 7 eller tidigare.|
 
 Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

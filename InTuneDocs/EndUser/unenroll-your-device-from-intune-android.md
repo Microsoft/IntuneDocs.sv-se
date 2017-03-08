@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: d10e764b5444f21f6151286e85d6f47dd02d5206
 ms.openlocfilehash: febc9a65ac004a05d6fdbf86a033a5a993ee7ec9
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -50,9 +51,4 @@ Avregistrera enheten från Intune och avinstallera företagsportalappen genom at
     ![Ta bort enheten.](./media/andr-3-warning-about-remove.png)
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

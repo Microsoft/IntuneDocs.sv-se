@@ -12,14 +12,15 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0321062d-1363-4ac3-81d4-5405f3b79481
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
 ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
 ms.openlocfilehash: 16d970e13bfac29460bab885188f45df1202a4d9
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -44,9 +45,4 @@ Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post oc
 Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md).
 
 Behöver du hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till [Microsoft Android-teamet](mailto:wintunedroidfbk@microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
