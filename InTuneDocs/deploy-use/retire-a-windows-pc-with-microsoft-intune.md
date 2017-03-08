@@ -2,8 +2,8 @@
 title: Inaktivera en Windows-dator | Microsoft Docs
 description: Hur du inaktiverar en Intune-hanterad Windows-dator.
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

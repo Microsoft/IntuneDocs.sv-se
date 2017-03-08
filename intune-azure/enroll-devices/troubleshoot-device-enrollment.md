@@ -3,8 +3,8 @@ title: "Felsöka enhetsregistrering"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig hur du felsöker enhetsregistrering."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
@@ -18,6 +18,7 @@ ms.custom: intune-azure
 translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 9fff350240e4313994056bc5aebf82e204ab3c62
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -388,9 +389,4 @@ Detta fel kan bero på att datorn har registrerats tidigare eller att den har de
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -3,8 +3,8 @@ title: "Ange utfärdare för hantering av mobila enheter"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig ange hantering av mobila enheter i Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/06/2016
 ms.topic: article

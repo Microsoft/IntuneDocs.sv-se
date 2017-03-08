@@ -3,8 +3,8 @@ title: "Lägg till Apple Configurator-serienummer"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs om hur du lägger till serienummer till företagsägda iOS-enheter med Apple Configurator."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

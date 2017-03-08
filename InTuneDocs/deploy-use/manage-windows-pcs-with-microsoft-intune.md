@@ -2,8 +2,8 @@
 title: Hantera datorer med klientprogrammet | Microsoft Docs
 description: Hantera Windows genom att installera Intune-klientprogramvaran.
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/09/2017
 ms.topic: article

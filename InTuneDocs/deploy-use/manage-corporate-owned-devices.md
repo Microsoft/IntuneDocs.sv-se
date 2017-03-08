@@ -2,8 +2,8 @@
 title: "Registrera företagsägda enheter | Microsoft Docs"
 description: "Registrera företagsägda enheter på flera olika sätt beroende på typen av enhet, hur den köptes och organisationens behov."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
 ms.openlocfilehash: ae077d80e05b33d625285d796917f4f6c153ca3f
+ms.lasthandoff: 01/31/2017
 
 
 ---
@@ -65,9 +66,4 @@ Intune identifierar en enhet som "företagets" när något av följande villkor 
  - Enheten är registrerad i [Azure Active Directory eller Enterprise Mobility Suite som en Windows 10 Enterprise-enhet](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (endast Windows 10).
 
 När en enhet har taggats som företagets ser du **Företag** i kolumnen **Ägarskap** för den enhetens post i administratörskonsolen. 
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

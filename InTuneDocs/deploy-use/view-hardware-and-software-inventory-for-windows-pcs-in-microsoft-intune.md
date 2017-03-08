@@ -2,8 +2,8 @@
 title: "Visa maskin- och programvaruinventering för Windows-datorer | Microsoft Docs"
 description: "Så här visar du maskin- och programvaruinformation om stationära Windows-datorer som du hanterar som datorer med Intune-programvaruklienten."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

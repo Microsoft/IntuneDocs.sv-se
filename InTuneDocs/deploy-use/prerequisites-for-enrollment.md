@@ -2,8 +2,8 @@
 title: "Krav för registreringen av mobila enheter | Microsoft Docs"
 description: "Ange krav för hantering av mobila enheter (MDM) och kom igång med att registrera olika operativsystem."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/21/2017
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Felsöka klientinstallationen | Microsoft Docs"
 description: "Felsök vanliga problem med klientinstallationen."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/22/2017
 ms.topic: article

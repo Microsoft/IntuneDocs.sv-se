@@ -2,8 +2,8 @@
 title: "Begära och tillhandahålla fjärrhjälp för Windows-datorer | Microsoft Docs"
 description: "Beskriver de steg som slutanvändarna och IT-administratören måste vidta för att fjärrhjälp ska tillhandahållas och för att stationära Windows-datorer som hanteras som datorer ska kunna fjärrstartas."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 10dd2caa9ce1b96424f55e373e904a778390eb15
 ms.openlocfilehash: 628875c2f874c824761befd9886d7f7987c045df
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -85,8 +86,3 @@ När du hjälper dina användare med deras problem kan du emellanåt behöva fj�
 ### <a name="see-also"></a>Se även
 
 [Vanliga hanteringsuppgifter för Windows-datorer med Intune-klientprogrammet](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

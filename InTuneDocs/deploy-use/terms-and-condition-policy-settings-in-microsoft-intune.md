@@ -2,8 +2,8 @@
 title: "Inställningar för användarvillkor | Microsoft Docs"
 description: "Du kan distribuera de allmänna villkoren för Intune till användargrupper och förklara hur registrering, tillgång till arbetsresurser och användning av företagsportalappen påverkar enheter och användare."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 07/11/2016
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Använd principer för att förenkla hanteringen av Windows-datorer | Microsoft Docs"
 description: "Beskriver principerna för hantering av Windows-datorer och inställningarna för Microsoft Intune Center."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

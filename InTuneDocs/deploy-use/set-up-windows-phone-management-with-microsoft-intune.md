@@ -2,7 +2,8 @@
 title: Konfigurera hanteringen av Windows 10 Mobile och Windows Phone | Microsoft Docs
 description: "Aktivera hantering av mobila enheter (MDM) för Windows 10 Mobile- eller Windows Phone-enheter med Microsoft Intune."
 keywords: 
-author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/08/2017
 ms.topic: article

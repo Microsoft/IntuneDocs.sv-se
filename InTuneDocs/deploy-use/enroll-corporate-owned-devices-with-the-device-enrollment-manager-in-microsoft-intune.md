@@ -2,8 +2,8 @@
 title: Registrera med enhetsregistreringshanteraren | Microsoft Docs
 description: "Med kontot för enhetsregistreringshanterare (DEM) kan du hantera ett stort antal delade, företagsägda mobila enheter med ett enda användarkonto."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/17
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
 ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -106,9 +107,4 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 -   De borttagna kontoautentiseringsuppgifterna för den borttagna enhetsregistreringshanteraren kan ändå inte rensa eller dra tillbaka enheter.
 
 -   Det borttagna enhetsregistreringshanterarkontots relation till registrerade enheter finns kvar, men inga ytterligare enheter kan registreras.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

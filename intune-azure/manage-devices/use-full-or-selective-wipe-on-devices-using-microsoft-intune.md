@@ -3,8 +3,8 @@ title: "Fullständig eller selektiv rensning på enheter med Intune"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Information om hur du gör en selektiv rensning av företagets data på en enhet eller gör en fullständig rensning för att återställa enheten till fabriksinställningarna."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/07/2016
 ms.topic: article

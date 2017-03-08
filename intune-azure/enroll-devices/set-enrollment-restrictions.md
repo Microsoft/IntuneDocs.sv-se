@@ -3,8 +3,8 @@ title: "Ange registreringsbegränsningar i Intune"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. "
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Vanliga hanteringsuppgifter för Windows-dator | Microsoft Docs"
 description: "Lär dig olika sätt på vilka du kan hantera Windows-datorer som kör Intune-programvaruklienten."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 12/15/2016
 ms.topic: article

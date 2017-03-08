@@ -2,8 +2,8 @@
 title: "Direktregistrering för iOS-enheter | Microsoft Docs"
 description: "Använd verktyget Apple Configurator för att registrera företagsägda iOS-enheter direkt med en fördefinierade princip genom att ansluta dem via USB till en Mac-dator."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 01/29/2017
 ms.topic: article

@@ -2,8 +2,8 @@
 title: "Ta reda på hur du kan få support | Microsoft Docs"
 description: "Support finns tillgängligt både online och per telefon både för betal- och utvärderingsprenumerationer."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 01/27/2016
 ms.topic: article
@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
 ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
+ms.lasthandoff: 01/28/2017
 
 
 ---
@@ -146,9 +147,4 @@ Support i form av reparation ingår i prenumerationer på Microsoft Intune och M
 Om en supporttekniker ber dig att skapa ytterligare supportärenden för ytterligare problem så beror det på att det är för allas bästa. Tack för att du förstår och för att du samarbetar med oss så att vi kan erbjuda supportupplevelser i världsklass!
 
 Priser per ärende och säkerhetsnivåer finns i [Professional-supportalternativ](https://support.microsoft.com/gp/offerprophone).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -3,8 +3,8 @@ title: Registrera iOS-enheter med Apple Configurator och direktregistrering
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs om hur du använder Apple Configurator för att registrera företagsägda iOS-enheter med direktregistrering."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article

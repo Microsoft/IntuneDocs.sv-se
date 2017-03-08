@@ -2,8 +2,8 @@
 title: "Felsöka enhetsregistrering | Microsoft Docs"
 description: "Förslag på hur du kan felsöka problem med enhetsregistrering."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 03/01/2017
 ms.topic: article
