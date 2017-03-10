@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
 searchScope:
-- Company Portal
-ROBOTS: NOINDEX,NOFOLLOW
+- User help
+ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a87fe0cf9591040f1455d71b1f40cd0705ba8abf
-ms.openlocfilehash: a49f27dd42d2c9d16be49cb222e56147c4699208
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: e60b049e9dd137993d38b822f6268419a27bdc2a
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -47,9 +48,4 @@ Om du har installerat en app som Lookout for Work uppfattar som ett hot visas en
 När du har avinstallerat appen återfår du omedelbart åtkomst till e-post och data hos företaget. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data fram till dess att du avinstallerar appen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

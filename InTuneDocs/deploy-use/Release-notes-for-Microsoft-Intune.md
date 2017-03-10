@@ -2,10 +2,10 @@
 title: "Viktig information för Microsoft Intune | Microsoft Docs"
 description: "Viktig information för Intune"
 keywords: 
-author: Staciebarker
-ms.author: stabar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fd300a5dfe6d6976491988453ec69e99668889fb
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: f0e027d1c63435084c434c591fed7bb71b5c07f2
+ms.openlocfilehash: 8369cc039ac1c4c24b29927a96360cd872f8e9bc
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -28,21 +28,21 @@ ms.lasthandoff: 12/10/2016
 
 Microsoft Intune är en integrerad, molnbaserad klienthanteringslösning som tillhandahåller verktyg, rapporter och uppgraderingslicenser för den senaste versionen av Windows. Lösningen hjälper dig även att hålla dina datorer uppdaterade och säkra. Med Intune kan du också hantera mobila enheter i nätverket via Exchange ActiveSync eller direkt via Intune. Följande versionsinformation innehåller viktig information och kända problem i Microsoft Intune.
 
+<!-- 3-6-17: customer asked if this is still current; Stacie asked Chris Baldwin about it. Chris said it's a Samsung issue, but that he hasn't heard any reports about it for months, so he suggested that I share that with the customer and remove this item from the release notes. I'm only going to comment it out in case it resurfaces.
+## Android users can’t send email when conditional access for Exchange Online is implemented
 
-## <a name="android-users-cant-send-email-when-conditional-access-for-exchange-online-is-implemented"></a>Android-användare kan inte skicka e-post när villkorlig åtkomst för Exchange Online har implementerats
+**Issue:** Users running Samsung Android 5.1.1 and later on their devices can't send email when conditional access for Exchange Online has been set up. Samsung acknowledges that the issue is in its built-in email client in Android 5.1.1 and later, and is investigating a fix.
 
-**Problem:** Användare som kör Samsung Android 5.1.1 och senare på sina enheter kan inte skicka e-post när villkorlig åtkomst för Exchange Online har konfigurerats. Samsung bekräftar att problemet ligger i den inbyggda e-postklienten i Android 5.1.1 och senare, och arbetar med att åtgärda felet.
+**Workaround 1:** Advise users to use the Outlook app for Android.
 
-**Lösning 1:** Rekommendera för användare att använda Outlook-appen för Android.
+**Workaround 2:** To let affected users send email, you can follow these steps:
 
-**Lösning 2:** Se till att berörda användare kan skicka e-post genom att följa dessa steg:
+1. Put each affected user in a security group in the “exempted groups” section of the conditional access policy for Exchange Online.
+2. Let the user temporarily sync email on the built-in email client.
+3. Remove the affected user from the exempted group, and confirm that the user can now send email.
 
-1. Lägg till de berörda användarna i en säkerhetsgrupp under Undantagna grupper i principen för villkorlig åtkomst för Exchange Online.
-2. Tillåt att användaren tillfälligt synkroniserar e-post i den inbyggda e-postklienten.
-3. Ta bort den berörda användaren från den undantagna gruppen och bekräfta att användaren kan skicka e-post.
-
-Microsoft och Samsung arbetar tillsammans med att ta fram en lösning eller fler sätt att komma runt problemet.
-
+Microsoft will continue to work closely with Samsung on a fix or additional workarounds.
+-->
 
 
 ## <a name="changing-resource-access-profiles-between-groups-for-ios-and-android-might-fail"></a>Det kanske inte går att ändra resursåtkomstprofiler mellan grupper för iOS och Android
