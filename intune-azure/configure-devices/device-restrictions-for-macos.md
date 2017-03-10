@@ -1,5 +1,6 @@
 ---
-title: "Inställning av begränsningar i Intune-enheter för macOS | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Inställningar för enhetsbegränsning för macOS i Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på macOS-enheter."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 3129cbaf-96c2-4837-8907-ca87a605a496
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: b666f442fe2f71b2a04747a50951da38d8d8b3b4
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: e6b308547331e20a8373aca56f9a0781dcd210a2
+ms.lasthandoff: 02/18/2017
 
 
 ---

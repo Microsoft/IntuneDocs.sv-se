@@ -1,9 +1,10 @@
 ---
-title: "Registrera iOS-enheter – Programmet för enhetsregistrering | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Registrera iOS-enheter – Enhetsregistreringsprogrammet"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig hur du registrerar företagsägda iOS-enheter med programmet för enhetsregistrering."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: article
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: da6d377c94ce5db7bbfa1cb3fc165581d649a1fb
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
+ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -63,7 +65,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 6. Ange om enheter med den här profilen ska registreras med eller utan användartillhörighet under **Användartillhörighet**.
 
- - **Registrera med användartillhörighet** – Enheten måste registreras med en användare under den ursprungliga installationen och kan sedan beviljas åtkomst till företagets data och e-post. Välj användartillhörighet för DEP-hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar. Observera att multifaktorautentisering (MFA) inte fungerar under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter.
+ - **Registrera med användartillhörighet** – Enheten måste registreras med en användare under den ursprungliga installationen och kan sedan beviljas åtkomst till företagets data och e-post. Välj användartillhörighet för DEP-hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar. Observera att multifaktorautentisering (MFA) inte fungerar under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter. Nya användare som måste ändra sina lösenord när de loggar in första gången uppmanas inte under registreringen på DEP-enheter. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under DEP-registreringen. De måste återställa lösenordet från en annan enhet.
 
     >[!NOTE]
     >DEP med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt aktiveras för att du ska kunna begära en användartoken.
@@ -101,11 +103,11 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 ## <a name="assign-apple-dep-serial-numbers-to-your-mdm-server"></a>Tilldela din MDM-server Apple DEP-serienummer
 
-1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID. 
+1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID.
 
-2. Gå till **Distributionsprogram** &gt; **Enhetsregistreringsprogram (DEP)** &gt; **Hantera enheter**. 
+2. Gå till **Distributionsprogram** &gt; **Enhetsregistreringsprogram (DEP)** &gt; **Hantera enheter**.
 
-3. Ange hur du avser att **välja enheter** och tillhandahåll sedan information om enheten och specifikationer genom **serienummer**, **ordningsnummer** eller genom att välja **Överför CSV-fil**. 
+3. Ange hur du avser att **välja enheter** och tillhandahåll sedan information om enheten och specifikationer genom **serienummer**, **ordningsnummer** eller genom att välja **Överför CSV-fil**.
 
 4. Välj **Tilldela till server** och välj &lt;servernamnet&gt; som angetts för Microsoft Intune och sedan **OK**.
 
@@ -137,7 +139,7 @@ Nu kan du distribuera företagsägda enheter till användare. När en iOS-enhet 
 
 Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ytterligare några steg, vilka beskrivs nedan, för att kunna slutföra installationen och installera företagsportalappen.
 
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet 
+### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet
 
 1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
 
