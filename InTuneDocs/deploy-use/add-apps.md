@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/13/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f7998da5566f9b963807b613a47d35b629620f96
-ms.openlocfilehash: 9e8b9e1c935dd771c3e37bea5a552fba2374bf68
+ms.sourcegitcommit: 0945fb2f67c6cc49ca8d10bb5c24f3c4a5f9b2c5
+ms.openlocfilehash: c65dc8ec22f717c5dcce51bb3c45d65bad8d8bde
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -33,7 +34,7 @@ Innan du börjar distribuera appar med Microsoft Intune är det bra om du bekant
 
 |Typ av app|Information|
 |----------------|-------|
-|**Windows Installer (&#42;.exe, &#42;.msi)**|Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns i [Kommandoradsväxlar för Microsoft Windows Installer-verktyget](https://support.microsoft.com/en-us/kb/227091).<br><br>Alla eventuella ytterligare filer och mappar som krävs för appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.<br><br>I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) att Intune installerar några kommandoradsargument. Läs dokumentationen till din app.<br><br>Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).|
+|**Windows Installer (&#42;.exe, &#42;.msi)**|Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns i [Kommandoradsväxlar för Microsoft Windows Installer-verktyget](https://support.microsoft.com/en-us/kb/227091).<br><br>Alla eventuella ytterligare filer och mappar som krävs för appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.<br><br>I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) att Intune installerar några kommandoradsargument. Läs dokumentationen till din app.<br><br>Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).<br><br>Den här apptypen gäller endast för datorer som kör Intune-programklienten.|
 |**Appaket för Android (&#42;.apk)**|För att kunna distribuera Android-appar måste du ha ett giltigt APK-paket.|
 |**Appaket för iOS (&#42;.ipa)**|Om du vill distribuera iOS-appar måste du ha ett giltigt IPA-paket.<br><br>IPA-paketet måste ha signerats av Apple och det utgångsdatum som anges i etableringsprofilen måste vara giltigt. Intune kan distribuera iOS-appar med företagscertifikat<br><br>Inte alla Apple-utvecklarcertifikatsappar stöds.<br><br>Ditt företag måste vara registrerat för iOS Developer Enterprise-programmet.<br><br>Kontrollera att din organisations brandvägg tillåter åtkomst till iOS-etablerings- och certifieringswebbplatserna.<br><br>Du behöver inte distribuera en manifestfil (.plist) med appen.|
 |**Appaket för Windows Phone (&#42;.xap, .appx, .appxbundle)**|För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).|
@@ -94,9 +95,4 @@ När du överför appen till Intune, kommer filer i mappen **Beroenden** också 
 ## <a name="next-steps"></a>Nästa steg
 
 Du måste lägga till appar i Intune-konsolen innan du kan distribuera dem. Du kan lägga till appar för [registrerade enheter](add-apps-for-mobile-devices-in-microsoft-intune.md) eller för [Windows-datorer som du hanterar med Intune-klientprogrammet](add-apps-for-windows-pcs-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

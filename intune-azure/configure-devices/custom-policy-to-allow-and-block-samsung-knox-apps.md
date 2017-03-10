@@ -1,5 +1,6 @@
 ---
-title: "Intune-princip för att tillåta/blockera appar för Samsung KNOX | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Intune-principer för att tillåta/blockera appar för Samsung KNOX"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Skapa en anpassad profil för att tillåta och blockera appar för Samsung KNOX Standard-enheter."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: f5267d2e06f1cd7ec471fd1782bfd965843d1c7e
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: f7680666ca466bd37711eeb363fe2c1f9d52e371
+ms.lasthandoff: 02/18/2017
 
 
 

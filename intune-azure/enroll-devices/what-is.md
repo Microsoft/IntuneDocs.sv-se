@@ -1,9 +1,10 @@
 ---
-title: "Vad är enhetsregistrering i Microsoft Intune | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Vad är enhetsregistrering i Microsoft Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig mer om registrering av iOS-, Android- och Windows-enheter."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 02/15/2017
 ms.topic: get-started-article
@@ -11,12 +12,12 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
-ms.reviewer: 
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 08dad848a48adad7d9c6f0b5b3286f6550a266bd
-ms.openlocfilehash: a92daf02c6fb2405c1255ff4ff8988f669dd76ce
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: 900883ea9e38342cced195f97693447fafd0e73f
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/15/2017
 
 I det här avsnittet beskrivs olika sätt att registrera mobila enheter i Intune-hanteringen.
 
-Du kan registrera enheter, inklusive Windows-datorer, i Intune för att kunna hantera de enheterna. Vi refererar till den här funktionen i Intune-dokumentationen som hantering av mobila enheter (MDM). När enheterna har registrerats som mobila enheter (inte som datorer), utfärdas ett MDM-certifikat som enheterna sedan använder för att kommunicera med Intune-tjänsten. 
+Du kan registrera enheter, inklusive Windows-datorer, i Intune för att kunna hantera de enheterna. Vi refererar till den här funktionen i Intune-dokumentationen som hantering av mobila enheter (MDM). När enheterna har registrerats som mobila enheter (inte som datorer), utfärdas ett MDM-certifikat som enheterna sedan använder för att kommunicera med Intune-tjänsten.
 
 Hur du registrerar dina enheter beror på typen av enhet, ägarskapet och vilken hanteringsnivå som krävs. BYOD (Bring Your Own Device)-registrering låter användare att registrera sina personliga telefoner, surfplattor eller datorer. Registrering av företagsägda enheter möjliggör hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav.
 
@@ -76,7 +77,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 Företagsägda enheter kan hanteras med Azure-portalen. iOS-enheter kan registreras direkt via de verktyg som tillhandahålls av Apple. Alla enhetstyper kan registreras av en administratör eller chef med hjälp av hanteraren för enhetsregistrering. Enheter med ett IMEI kan också identifieras och taggas som företagsägda för att möjliggöra COD-scenarier.
 
 ### <a name="dem"></a>DEM
-Enhetsregistreringshanteraren är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Läs mer om [DEM](enroll-devices-using-device-enrollment-manager.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
+Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Läs mer om [DEM](enroll-devices-using-device-enrollment-manager.md). ([Tillbaka till tabellen](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>DEP
 Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur stöder:
@@ -87,7 +88,7 @@ Med Apples program för enhetsregistrering kan du skapa och distribuera principe
 Mer information om iOS-registrering finns i:
 
 - [Välj hur du vill registrera iOS-enheter](choose-ios-enrollment-method.md)
-- [Registrera iOS-enheter med enhetsregistreringsprogrammet](enroll-ios-devices-using-device-enrollment-program.md). 
+- [Registrera iOS-enheter med enhetsregistreringsprogrammet](enroll-ios-devices-using-device-enrollment-program.md)
 - [Gå tillbaka till tabellen ovan](#overview-of-device-enrollment-methods)
 
 ### <a name="usb-sa"></a>USB-SA
@@ -98,10 +99,10 @@ IT-administratörer använder Apple Configurator, via USB, för att förbereda v
 Mer information om iOS-registrering finns i:
 
 - [Välj hur du vill registrera iOS-enheter](choose-ios-enrollment-method.md)
-- [Registrera iOS-enheter med Configurator och Installationsassistenten](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md). 
+- [Registrera iOS-enheter med Configurator och Installationsassistenten](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
 
 ### <a name="usb-direct"></a>USB-Direct
-För direkt registrering måste administratören registrera varje enhet manuellt genom att skapa en registreringsprincip och exportera den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen fabriksåterställning. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program. 
+För direkt registrering måste administratören registrera varje enhet manuellt genom att skapa en registreringsprincip och exportera den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen fabriksåterställning. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program.
 
 Mer information om iOS-registrering finns i:
 

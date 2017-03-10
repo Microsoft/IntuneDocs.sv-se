@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: 2ab3769ff878cf8b6223e4f46244f16eab8743a0
+ms.sourcegitcommit: e55cf608c2e5157feeb40ba20d3988b5b35064db
+ms.openlocfilehash: 22ea926719efc788c53861bc91f78d24631d54c1
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -44,9 +45,7 @@ Du kan ta bort enhetsregistreringen via Azure AD-administrationskonsolen, vilket
 * **iOS-enhet**: Öppna Azure Authenticator-appen, svep åt vänster på kontot och välj Avregistrera.  
 * **Android-enhet**: Avinstallera företagsportalappen eller ta bort kontot från **Systeminställningar**.
 
-
-
-## <a name="app-based-ca-with-conditional-access-based-on-device-compliance"></a>Appbaserad CA med villkorlig åtkomst baserat på enhetsefterlevnad  
+## <a name="app-based-ca-with-device-based-ca"></a>Appbaserad CA med enhetsbaserad CA  
 
 Du kan konfigurera [Villkorlig åtkomst baserat på enhetens efterlevnad](restrict-access-to-email-and-o365-services-with-microsoft-intune.md) (**Enhets-CA**) i [Intune-administratörskonsolen](https://manage.microsoft.com) eller [Azure AD Premium-hanteringskonsolen] (https://manage.windowsazure.com). Enhets-CA kräver att användare ansluter till Exchange Online via Intune-hanterade enheter som är kompatibla med Intunes policy för enhetsefterlevnad eller genom domänanslutna datorer.  Om en användare hör till en eller flera säkerhetsgrupper som hanteras av principer för både appbaserad CA och enhets-CA, måste användaren uppfylla ett av dessa två krav:
 * Appen som används för att komma åt tjänsten är en mobilapp som stöds av 
@@ -63,9 +62,4 @@ Du kan konfigurera [Villkorlig åtkomst baserat på enhetens efterlevnad](restri
 ### <a name="see-also"></a>Se även
 
 [Skydda appdata med appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

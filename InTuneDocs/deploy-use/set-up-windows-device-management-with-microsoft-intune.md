@@ -2,9 +2,9 @@
 title: Konfigurera Windows-enhetshantering med Microsoft Intune | Microsoft Docs
 description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter med Microsoft Intune."
 keywords: 
-author: staciebarker
-manager: stabar
-ms.date: 02/15/2017
+author: NathBarn
+manager: angrobe
+ms.date: 02/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: 6277f82483eb8fb7f5a4e4a832a909490ba0050c
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 255c3e47464ac7670a971881cf399e8e2bb17044
+ms.openlocfilehash: 4acbae2aba4cff21286d45cb7cb1691864c281dc
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -27,13 +27,13 @@ ms.lasthandoff: 02/18/2017
 
 Använd någon av följande metoder för att konfigurera registrering av Windows-enheter:
 
-- [**Windows 10 och Windows 10 Mobile, automatisk registrering med Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium) 
+- [**Windows 10 och Windows 10 Mobile, automatisk registrering med Azure Active Directory Premium**](#set-up-windows-10-and-windows-10-mobile-automatic-enrollment-with-azure-active-directory-premium)
  -  Den här metoden gäller endast för Windows 10- och Windows 10 Mobile-enheter.
  -  Du måste ha Azure Active Directory Premium för att kunna använda den här metoden. Annars använder du registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
  -  Om du väljer att inte aktivera automatisk registrering, kan du använda registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
 
 
-- [**Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME**](#set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname) 
+- [**Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME**](#set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname)
  - Du måste använda den här metoden för att kunna registrera Windows 8.1- och Windows Phone 8.1-enheter.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
@@ -41,17 +41,18 @@ Använd någon av följande metoder för att konfigurera registrering av Windows
 ## <a name="set-up-windows-81-and-windows-phone-81-enrollment-by-configuring-cname"></a>Konfigurera registrering av Windows 8.1 och Windows Phone 8.1 genom att konfigurera CNAME
 Du kan låta användarna installera och registrera sina enheter med hjälp av Intune-företagsportalen. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange ett servernamn.
 
-1. **Konfigurera Intune**<br>
+### <a name="step-1-set-up-intune"></a>Steg 1: Konfigurera Intune
+
 Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [MAM-auktoritet (hantering av mobilenheter)](prerequisites-for-enrollment.md#step-2-set-mdm-authority) och sedan konfigurera MDM.
 
-2. **Skapa CNAME-poster** (valfritt)<br>
+### <a name="step-2-create-cnames-optional"></a>Steg 2: Skapa CNAME-poster (valfritt)
+
 Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
 
 
-    Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas uppmanas användarna att manuellt ange MDM-servernamnet, https://enrollment.manage.microsoft.com.
+   Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användarna om du gör det. Om ingen CNAME-post hittas, uppmanas användarna att manuellt ange MDM-servernamnet, enrollment.manage.microsoft.com.
 
-
-    CNAME-resursposter måste ha följande information:
+   CNAME-resursposter måste ha följande information:
 
   |TYP|Värdnamn|Pekar på|TTL|
   |--------|-------------|-------------|-------|
@@ -66,16 +67,15 @@ Skapa **CNAME**-DNS-resursposter för din företagsdomän. Om ditt företags web
 
   Om ditt företags webbplats till exempel är contoso.com skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till EnterpriseEnrollment-s.manage.microsoft.com. Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte verifiera DNS-ändringen i Intune förrän DNS-posten har spridits.
 
-3.  **Verifiera CNAME**<br>I [Intune-administrationskonsolen](http://manage.microsoft.com) väljer du **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows**. Ange webbadressen till företagswebbplatsens verifierade domän i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
+### <a name="step-3-verify-cname"></a>Steg 3: Verifiera CNAME
 
-4.  **Berätta för dina användare hur de registrerar sina enheter och vad de kan förvänta sig när de registrerat sig för hantering.**
+I [Intune-administrationskonsolen](http://manage.microsoft.com) väljer du **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows**. Ange webbadressen till företagswebbplatsens verifierade domän i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
 
-    Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
+### <a name="step-4-tell-your-users-how-to-enroll-their-devices-and-what-to-expect-after-theyre-brought-into-management"></a>Steg 4: Berätta för dina användare hur de registrerar sina enheter och vad de kan förvänta sig när de registrerat sig för hantering.
 
-    Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+   Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
 
-Mer information om slutanvändarnas aktiviteter finns i       - [Resurser om slutanvändarens upplevelse med Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
-      - [Användarguiden för Windows-enheter](../enduser/using-your-windows-device-with-intune.md)
+   Mer information om slutanvändarnas aktiviteter finns i [Informera slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) och [End user guidance for Windows devices](../enduser/using-your-windows-device-with-intune.md) (Vägledning om Windows-enheter för slutanvändare).
 
 ### <a name="see-also"></a>Se även
 [Krav för att registrera enheter i Microsoft Intune](prerequisites-for-enrollment.md)

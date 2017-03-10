@@ -2,10 +2,10 @@
 title: Ange IMEI-nummer | Microsoft Docs
 description: "Med Microsoft Intune kan administratörer importera IMEI-nummer för mobilenhetsplattformar för att identifiera företagsägda mobila enheter"
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: NathBarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 07/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbc9e94d3fc5dc7e69f5d59ca1d52493b2beefc3
-ms.openlocfilehash: 5fa3c62553403dfafd182a691f611ba12a2d729c
+ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
+ms.openlocfilehash: 97bedfdd2d756ae79350496f54076c16ada64def
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -50,13 +51,11 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
 3.  I rutan **Granska enheter** kan du kontrollera IMEI-numren för importerade enheter. Du kan också bestämma om du vill skriva över **informationen** för IMEI-nummer som importeras igen. Du kan avmarkera rutan **Skriv över** om du vill bevara den aktuella informationen. Importera IMEI-numren genom att klicka på **Slutför**.
 4.  De importerade IMEI-numren och beskrivningarna läggs till i listan **Efter IMEI (alla plattformar)**.
 
+> [!IMPORTANT]
+> Om du importerar IMEI-nummer för Android-enheter bör du vara medveten om att vissa Android-enheter kan ha flera IMEI-nummer. Om du importerar ett IMEI-nummer men det inte är det IMEI-nummer som rapporterats till Intune av enheten så kommer enheten att klassificeras som en personlig enhet i stället för en enhet som ägs av företaget.
+
 När en enhet som har ett IMEI-nummer registreras i Intune (vanligtvis när en användare installerar företagsportalappen och slutför registreringen) märks enheten som företagsägd och visas som registrerad i gruppen **IMEI-enheter**.
 
->[!NOTE] 
+>[!NOTE]
 > När din organisation migreras till den nya Azure-portalen ser du en ändring av den här funktionen. I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda maskinvaruidentifierare. I den nya Azure-portalen kan du automatiskt skriva över informationen för alla maskinvaruidentifierare eller ignorera all ny information för befintliga identifierare.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
