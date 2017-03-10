@@ -1,5 +1,6 @@
 ---
-title: "Inställning av begränsningar i Intune-enheter för iOS | Förhandsversion av Intune Azure | Microsoft Docs"
+title: "Inställningar för enhetsbegränsningar för iOS i Intune"
+titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på iOS-enheter."
 keywords: 
 author: robstackmsft
@@ -13,10 +14,11 @@ ms.technology:
 ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
+ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b4d095506215b775d56d172e9aabae1737757310
-ms.openlocfilehash: 2b8bf6d3944f9968d0f4020fbb5c57ef8180062c
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
+ms.openlocfilehash: a062b92cba0042153ffe22b949ce8a3b7b740b3f
+ms.lasthandoff: 02/18/2017
 
 
 ---

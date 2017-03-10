@@ -1,22 +1,23 @@
 ---
 title: "Vad är nytt | Microsoft Docs"
-description: "Ta reda på vad är nytt den här månaden och i tidigare versioner av Microsoft Intune"
+description: "Ta reda på vad som är nytt i den här månadens och i tidigare versioner av Microsoft Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: fab51ee0-638d-4dd4-8d8f-1f263bc11e5c
-ms.reviewer: cacampbell
+ms.reviewer: priyar
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 846084a3810e43d9fd6a6c254f1b0167a36f37ff
-ms.openlocfilehash: b99731c7becd90f4092ec758234a96e202d95130
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: cb1679deda0ba325ee3bd7288713f12317489006
+ms.openlocfilehash: 37d44dc2752815ef7abf47e5d4a658a126892a86
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -37,7 +38,7 @@ Från och med mars innehåller företagsportalen för Windows 10 en guidad Intun
 ## <a name="notices"></a>Meddelanden
 
 ### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Gruppmigrering kräver inte några uppdateringar för grupper eller principer för iOS-enheter<!--898837-->
-För varje Intune-enhetsgrupp som tilldelas i förväg av en profil för registrering av företagsenhet skapas en motsvarande dynamisk enhetsgrupp i AAD. Det görs baserat på namnet på profilen för registrering av företagsenhet under migreringen till Azure Active Directory-enhetsgrupper. Detta säkerställer att enheter automatiskt grupperas och tar emot samma principer och appar som den ursprungliga Intune-gruppen när de registreras. 
+För varje Intune-enhetsgrupp som tilldelas i förväg av en profil för registrering av företagsenhet skapas en motsvarande dynamisk enhetsgrupp i AAD. Det görs baserat på namnet på profilen för registrering av företagsenhet under migreringen till Azure Active Directory-enhetsgrupper. Detta säkerställer att enheter automatiskt grupperas och tar emot samma principer och appar som den ursprungliga Intune-gruppen när de registreras.
 
 När en klient startar migreringsprocessen för att gruppera och ange mål skapar Intune automatiskt en dynamisk AAD-grupp som motsvarar en Intune-grupp som är mål för en profil för registrering av företagsenheter. Om Intune-administratören tar bort Intune-målgruppen tas inte motsvarande dynamiska AAD-grupp bort. Gruppens medlemmar och den dynamiska frågan kommer att tas bort, men själva gruppen finns kvar tills IT-administratören tar bort den via AAD-portalen.
 
@@ -53,7 +54,7 @@ Slutanvändare får ytterligare vägledning för hur de kan återfå åtkomsten 
 Länkar i företagsportalappen för iOS, inklusive sådana som leder till dokumentation och appar, öppnas direkt i företagsportalappen med en Safari-vy i appen. Den här uppdateringen skickas separat från tjänstuppdateringen i januari.
 
 ### <a name="new-mdm-server-address-for-windows-devices---893007--"></a>Ny MDM-serveradress för Windows-enheter <!--893007-->
-Windows och Windows Phone-användare som försöker registrera en enhet misslyckas om de anger __manage.microsoft.com__ som MDM-serveradressen (om de uppmanas till det). MDM-serveradressen ändras från __manage.microsoft.com__ till __enrollment.manage.microsoft.com__. Meddela användarna att de ska använda adressen __enrollment.manage.microsoft.com__ som MDM-serveradress om de tillfrågas om den under registreringen av en Windows- eller och Windows Phone-enhet. Mer information om den här ändringen finns på [aka.ms/intuneenrollsvrchange](https://aka.ms/intuneenrollsvrchange).
+Windows och Windows Phone-användare som försöker registrera en enhet misslyckas om de anger __manage.microsoft.com__ som MDM-serveradressen (om de uppmanas till det). MDM-serveradressen ändras från __manage.microsoft.com__ till __enrollment.manage.microsoft.com__. Meddela användarna att de ska använda adressen __enrollment.manage.microsoft.com__ som MDM-serveradress om de tillfrågas om den under registreringen av en Windows- eller och Windows Phone-enhet. Inga ändringar krävs för din CNAME-installation. Mer information om den här ändringen finns på [aka.ms/intuneenrollsvrchange](https://aka.ms/intuneenrollsvrchange).
 
 ### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Ny användarupplevelse för företagsportalappen för Android <!--621622-->
 Från och med mars följer företagsportalsappen för Android [riktlinjer för materialdesign](https://material.io/guidelines/material-design/introduction.html) för att skapa en modernare känsla och ett modernare utseende. Den här förbättrade användarupplevelsen innehåller:
