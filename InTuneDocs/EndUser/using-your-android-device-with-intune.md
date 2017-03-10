@@ -43,7 +43,6 @@ Det finns ett antal saker som du kan göra med Intune som gör livet lite lätta
 - [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
 - [Installera företagets VPN (Virtual Private Network)](install-your-companys-virtual-private-network-VPN-android.md)
 - [Ställa in hur lång tid det tar innan enheten låser sig](set-the-amount-of-time-before-your-device-is-locked-android.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-device-cpwebsite.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-android.md)

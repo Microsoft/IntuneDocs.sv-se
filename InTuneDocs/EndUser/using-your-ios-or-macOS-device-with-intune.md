@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -40,7 +40,6 @@ Det finns ett antal saker som du kan göra med Intune som gör livet lite lätta
 
 - [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 - [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-device-cpwebsite.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md)
