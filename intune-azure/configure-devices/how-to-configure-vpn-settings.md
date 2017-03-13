@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -35,8 +35,8 @@ Exempel: Anta att du vill förse alla enheter som kör iOS med de inställningar
 
 Du kan skapa VPN-profiler med följande anslutningstyper:
 
-|||
-|-|-|
+||||||||
+|-|-|-|-|-|-|-|
 |Anslutningstyp|Android|iOS|macOS|Windows Phone 8.1|Windows 8,1|Windows 10|
 |Pulse Secure|Ja|Ja|Ja|Ja|Ja|Ja|
 |Cisco (IPSec)|Nej|Ja|Nej|Nej|Nej|Nej|
