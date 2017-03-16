@@ -193,12 +193,10 @@
 ### [Rensa hanterade företagsdata från appar](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Informera dina slutanvändare om Intune](deploy-use/how-to-educate-your-end-users-about-microsoft-intune.md)
-### [Använda en Android-enhet med Intune](EndUser/using-your-android-device-with-intune.md)
-#### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
-### [Använda en iOS-enhet med Intune](EndUser/using-your-iOS-or-macos-device-with-intune.md)
-#### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
-### [Använda en Windows-enhet med Intune](EndUser/using-your-windows-device-with-intune.md)
-#### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
+### [Meddelanden från företagsportalen som slutanvändarna ser](deploy-use/help-end-users-understand-company-portal-app-messages.md)
+### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
+### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
+### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
 
 # Utveckla och anpassa appar
 ## [Översikt över Microsoft Intune App SDK](develop/intune-app-sdk.md)
