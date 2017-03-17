@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 22e188e81f2bc278045bb0988642b1b68372d6af
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 6b723069108ff2cbe85951f7d65ef803323eceb9
+ms.lasthandoff: 03/13/2017
 
 
 ---
 
-# <a name="use-full-or-selective-wipe"></a>Använda fullständig eller selektiv rensning 
+# <a name="use-full-or-selective-wipe"></a>Använda fullständig eller selektiv rensning
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -104,6 +104,10 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|
 |Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|AAD-posten tas bort.|
 |Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
+
+**Android for Work**
+
+Om selektiv rensning utförs på en Android for Work-enhet tas alla data, appar och inställningar i arbetsprofilen på den enheten bort. Detta drar tillbaka enheten från hantering med Intune. Fullständig rensning stöds inte för Android for Work.
 
 **Windows**
 

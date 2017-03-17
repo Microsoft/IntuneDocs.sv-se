@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/11/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 207297601634f390051a6345b96bf09e1d031747
-ms.openlocfilehash: 6b37cede797f965b82c067b274517277d8597939
-ms.lasthandoff: 01/12/2017
+ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
+ms.openlocfilehash: 910fe2bc4e616c3b60d351efaffe173f58c04bc6
+ms.lasthandoff: 03/16/2017
 
 ---
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/12/2017
 
 ## <a name="whats-a-certificate"></a>Vad är ett certifikat?
 
-[Kryptografi](https://technet.microsoft.com/en-us/library/cc962030.aspx) är läran om informationssäkerhet. Traditionellt har kryptografi använts för att överföra kodade meddelanden för att [säkerställa att kommunikation förblir hemlig](https://technet.microsoft.com/en-us/library/cc962019.aspx). I sin enklaste form ersätter eller flyttar kryptografi om bokstäver för att skapa ett meddelande som är kodat, oläsbart, förvrängt eller dolt. Endast användare med en avkodningsnyckel eller _certifikat_ kan omvandla det kodade meddelandet till sin ursprungliga, läsbara form. Din Android-enhet använder certifikat tillsammans med Intune för att se till att kommunikationen mellan enheten och din organisations resurser, t.ex e-post och dokument, hela tiden hålls säker när den överförs trådlöst.
+[Kryptografi](https://technet.microsoft.com/library/cc962030.aspx) är läran om informationssäkerhet. Traditionellt har kryptografi använts för att överföra kodade meddelanden för att [säkerställa att kommunikation förblir hemlig](https://technet.microsoft.com/library/cc962019.aspx). I sin enklaste form ersätter eller flyttar kryptografi om bokstäver för att skapa ett meddelande som är kodat, oläsbart, förvrängt eller dolt. Endast användare med en avkodningsnyckel eller _certifikat_ kan omvandla det kodade meddelandet till sin ursprungliga, läsbara form. Din Android-enhet använder certifikat tillsammans med Intune för att se till att kommunikationen mellan enheten och din organisations resurser, t.ex e-post och dokument, hela tiden hålls säker när den överförs trådlöst.
 
 ## <a name="fixing-certificate-issues"></a>Åtgärda problem med certifikat
 

@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/21/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
-ms.openlocfilehash: d1b24b745fe1e860e42fa23647976aadea1953cd
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
+ms.openlocfilehash: 8f18f9ff2c32bb24b68fa987a8aad990b911a549
+ms.lasthandoff: 03/11/2017
 
 
 ---
@@ -38,7 +38,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 - **Rensa** – Anger om enheten måste rensas innan användarna kan registrera enheten. Termen ”rensa” innebär en fabriksåterställning av enheten, vilket tar bort alla data. Mer information finns i [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md).
 - **Tillhörighet** – Kopplar enheter till användare. Krävs för hantering av mobila program (MAM) och villkorlig åtkomst till företagsdata. Mer information finns i [Användartillhörighet](enroll-corporate-owned-ios-devices-in-microsoft-intune.md#use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices).
-- **Lås** – Indikerar om användare hindras från att avregistrera sina enheter via lokala OS-menyer. Användare kan avregistrera sina enheter på alla plattformar med företagsportalappen. 
+- **Lås** – Indikerar om användare hindras från att avregistrera sina enheter via lokala OS-menyer. Användare kan avregistrera sina enheter på alla plattformar med företagsportalappen.
 
 **Metoder för iOS-registrering**
 
@@ -54,7 +54,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 | **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Ja|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
 |**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md)|
 
 **Metoder för Android-registrering**
@@ -75,7 +75,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 | **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Ja|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](prerequisites-for-enrollment.md)|
 
 
 Ett antal frågor som hjälper dig att hitta rätt metod finns i [Välj hur du vill registrera enheter](/intune/get-started/choose-how-to-enroll-devices1).

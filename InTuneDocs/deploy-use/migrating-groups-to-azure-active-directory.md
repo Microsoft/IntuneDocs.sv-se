@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: dd4c8f1d810338912b4926be8419ccf9a52ae722
-ms.openlocfilehash: 8d3900da91c89700b97d8774f893d82d3a74ea83
-ms.lasthandoff: 12/22/2016
+ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
+ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
+ms.lasthandoff: 03/11/2017
 
 
 ---
@@ -90,11 +90,5 @@ Attribut är enhetsegenskaper som kan användas för att definiera grupper. Den 
 ## <a name="what-happens-to-policies-and-apps-youve-already-deployed"></a>Vad händer med principer och appar som du redan har distribuerat?
 
 Principer och appar fortsätter att distribueras till grupper precis som tidigare. Men du kan nu hantera dessa grupper från Azure Portal i stället för från den klassiska Intune-konsolen.
-
-
-## <a name="how-to-get-more-information"></a>Så får du mer information
-
-Kontakta vårt migrering-team på [intunegrps@microsoft.com](mailto:intunegrps@microsoft.com).    
-     
-
+ 
 
