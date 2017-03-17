@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 0154e3bfeac0457de57257045e3e7ce833325bce
 ms.openlocfilehash: a462bcfa107bf1a37ea4e84bc3d88d0dd81f9fc8
+ms.lasthandoff: 02/03/2017
 
 
 ---
@@ -169,6 +170,7 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
   - **Utvärdera anslutning**, som har tre inställningar A. **Domänåtgärd**  – välj **Anslut om det behövs** eller **Anslut aldrig**
       B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs**
       C. **Nödvändig URL-strängsavsökning** – en URL av typen HTTP eller HTTPS (rekommenderas), t.ex. *https://vpntestprobe.contoso.com*. Den regel som ska kontrollera om det finns ett svar från den här adressen. Om inte, och om **Domänåtgärd** är **Anslut om det behövs** utlöses VPN-anslutningen.
+      
      > [!TIP]
      >
      >Ett exempel på när du kan använda den här åtgärden är när vissa platser i företagsnätverk kräver en direkt anslutning eller en VPN-företagsnätverksanslutning, medan andra inte gör det. Om du listar *corp.contoso.com* i en **kommaavgränsad lista över DNS-sökdomäner** kan du välja **Anslut om det behövs** och sedan lista specifika platser i nätverket som kan kräva VPN, t.ex. *sharepoint.corp.contoso.com*. Regeln kontrollerar sedan om *vpntestprobe.contoso.com* kan nås. Om den inte nås utlöses VPN för SharePoint-webbplatsen.
@@ -192,9 +194,4 @@ Domänspecifika regler utvärderas före allmänna domänregler.
 Efter slutförd distribution ser användarna det namn du gav VPN-anslutningen i listan över VPN-anslutningar på sina enheter.
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
