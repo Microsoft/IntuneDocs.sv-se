@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7ac6041fb33f95e5b0c53b81c2af9aef42767a38
-ms.openlocfilehash: 115a27512930fa995a2781afc8a94c1d7f97958e
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9894fdb696f4e010e176efc47068827bddaf7d4e
+ms.openlocfilehash: 8c84703828db3c5da2aa88fa3dc16329f3a4a1e1
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -57,6 +57,13 @@ Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i invent
      -     En iOS-enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Detta kan åtgärdas genom att starta om företagsportalen så att kompatibilitetstillståndet motsvarar enhetstillståndet i Intune. När alla data har samlats in från en enhetssynkronisering går efterlevnadskontrollen snabbt (mindre än en halv sekund i genomsnitt).
 
         Orsaken till att enheter fastnar i det här tillståndet är vanligtvis att de har problem med att ansluta till tjänsten eller att synkroniseringen tar lång tid.  Om problemet kvarstår i olika nätverkskonfigurationer (mobilnät, Wi-Fi, VPN) efter att du har startat om enheterna och har verifierat att SSP är uppdaterad på enheten, kontaktar du Microsoft Support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+
+ - För Android-enheter:
+     - Vissa Android-enheter kan verka vara krypterade, men företagsportalappen identifierar dessa enheter som inte krypterade. 
+    
+        -    Enheter i det här tillståndet kräver att användaren anger ett lösenord för säker start. Användaren ser ett meddelande om enheten från företagsportalappen som ber användaren att ange ett lösenord för att starta enheten. När du tryckt på enhetsmeddelandet och bekräftat den befintliga PIN-koden eller lösenordet väljer du alternativet att **kräva PIN-kod för att starta enheten** på skärmen för **säker start**. Tryck sedan på knappen **Kontrollera efterlevnad** för enheten från företagsportalappen. Enheten bör nu identifieras som krypterad.
+    
+        -     Vissa enhetstillverkare krypterar sina enheter med en standard-PIN-kod i stället för den hemliga PIN-koden som användaren anger. Intune identifierar kryptering med standard-PIN-koden som osäker eftersom den här metoden för kryptering kan utsätta data på enheten för risker i form av användare med tillgång till enheten som vill vålla skada. Om det här är ett problem kan du överväga att använda [appskyddsprinciper](https://docs.microsoft.com/en-us/intune/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>Principfrågor
 
