@@ -120,6 +120,7 @@
 
 ## [Lägga till appar](deploy-use/add-apps.md)
 ### [Lägga till appar för registrerade enheter](deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md)
+### [Läs in Windows-appar separat](deploy-use/sideload-apps-for-windows.md)
 ### [Lägga till appar för datorer med Intune-klienten](deploy-use/add-apps-for-windows-pcs-in-microsoft-intune.md)
 #### [Hantera licensavtal för datorer med Intune-klienten](deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ## [Distribuera appar](deploy-use/deploy-apps.md)
@@ -136,7 +137,6 @@
 ### [Konfigurationsprinciper för Android for Work-appar](deploy-use/afw-app-configuration-policy.md)
 ### [Etableringsprofiler för iOS-mobilappar](deploy-use/ios-mobile-app-provisioning-profiles.md)
 ### [Hantera Internetåtkomst](deploy-use/manage-internet-access-using-managed-browser-policies.md)
-### [Läsa in LOB-appar separat](deploy-use/sideload-apps-for-windows.md)
 
 ## [Skydda appar och data](deploy-use/protect-apps-and-data-with-microsoft-intune.md)
 ### [Efterlevnadsprinciper för enheter](deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune.md)

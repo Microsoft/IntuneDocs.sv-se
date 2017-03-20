@@ -169,6 +169,8 @@
 ### [Skapa en policy för efterlevnad för Android for Work](set-device-compliance/create-a-compliance-policy-for-android-for-work.md)
 ### [Skapa en policy för efterlevnad för iOS](set-device-compliance/create-a-compliance-policy-for-ios.md)
 ### [Skapa en policy för efterlevnad för Windows](set-device-compliance/create-a-compliance-policy-for-windows.md)
+### [Skapa åtgärder för inkompatibilitet](set-device-compliance/actions-for-noncompliance.md)
+### [Övervaka enhetsefterlevnad](set-device-compliance/monitor-intune-device-compliance-policies.md)
 <!--- ### [Monitor device compliance](set-device-compliance/monitor-device-compliance.md)--->
 
 
