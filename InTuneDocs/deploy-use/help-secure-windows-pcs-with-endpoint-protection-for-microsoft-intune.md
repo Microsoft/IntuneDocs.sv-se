@@ -4,8 +4,8 @@ description: "Skydda dina hanterade datorer med Endpoint Protection och få real
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
-ms.date: 01/31/2017
+manager: arob98
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 6e2658cdfcd0b78a254c375fe39b67f7ef9afad6
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -172,11 +172,12 @@ Du övervaka status för skadlig kod på datorer med hjälp av arbetsytan **Skyd
 ### <a name="how-to-view-recent-detection-paths-for-malware-on-computers"></a>Hur man visar de senaste upptäckta sökvägar för sabotageprogram på datorer
 Intune kan visa sökvägar för upp till 10 av de senaste upptäckta fallen av skadlig kod på en enhet. **Senast upptäckt sökväg** är inaktiverad som standard. När du vill aktivera den här visningen:
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** > **Alla enheter** > **Skadlig kod**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) klickar du på **Grupper** > **Alla enheter** > **Alla datorer**.
+2. Högerklicka på den dator vars senaste sökvägar du vill visa och välj **Egenskaper**.
+3. Välj **Skadlig kod** på flikarna längst upp.
 
-2.  Högerklicka på en kolumnrubrik. En lista över tillgängliga kolumner visas.
-
-3.  Tryck på kryssrutan **Senaste upptäckta sökvägar** i listan. Kolumnen **Senaste upptäckta sökvägar** visas på skärmen och visar upp till de 10 senaste tillfällena av skadlig kod som upptäckts på enheten.
+   ![Välj fliken Skadlig kod och klicka sedan på kryssrutan Senaste sökvägar](../media/malware-path-column.png)
+4. Högerklicka på en kolumnrubrik. En lista över tillgängliga kolumner visas. Tryck på kryssrutan **Senaste upptäckta sökvägar** i listan. Kolumnen **Senaste upptäckta sökvägar** visas på skärmen och visar upp till de 10 senaste tillfällena av skadlig kod som upptäckts på enheten.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Köra en sökning efter skadlig kod eller uppdatera definitionerna för skadlig kod på en dator
 Intune kan antingen köra en fullständig sökning eller snabbsökning efter skadlig kod med Endpoint Protection eller Windows Defender på en fjärrhanterad dator som har Intune-klienten installerad.
@@ -184,9 +185,6 @@ Intune kan antingen köra en fullständig sökning eller snabbsökning efter ska
 1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) går du till **Grupper** > **Översikt** > **Alla enheter** > **Alla datorer** och sedan markerar du den dator som du vill använda.
 
 2. Klicka på listrutan **Fjärråtgärder** och välj sedan aktiviteten som du vill köra på fjärrdatorn.
-
-
-
 
 ## <a name="need-more-help"></a>Behöver du mer hjälp?
 Mer hjälp och support finns i [Felsöka slutpunktsskydd i Microsoft Intune](/intune/troubleshoot/troubleshoot-endpoint-protection-in-microsoft-intune).

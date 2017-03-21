@@ -5,7 +5,7 @@ keywords: what is Intune
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 03/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pmay
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d0057f1e3d2ead729c2143587571fa4b16a3dd2f
-ms.openlocfilehash: 9b4eed086853c0feeb8266a8087a275f2b70e40f
-ms.lasthandoff: 01/11/2017
+ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
+ms.openlocfilehash: ee1f41384df083d6479804ba05c0252d9ba12e1b
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -32,7 +32,7 @@ Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som
 * Skydda företagets information genom att styra hur anställda får åtkomst till och delar den.
 * Säkerställa att enheter och program är kompatibla med företagets säkerhetskrav.
 
-Intune är nära integrerat med Azure Active Directory (Azure AD) för identitets- och åtkomstkontroll och Azure Rights Management (Azure RMS) för dataskydd. Det är *hanteringskomponenten* i Microsoft Enterprise Mobility + Security (EMS), medan Office 365 är *produktivitetskomponenten* i Microsofts mobilitetslösning.  
+Intune är nära integrerat med Azure Active Directory (Azure AD) för identitets- och åtkomstkontroll och Azure Information Protection för dataskydd. Det är *hanteringskomponenten* i Microsoft Enterprise Mobility + Security (EMS), medan Office 365 är *produktivitetskomponenten* i Microsofts mobilitetslösning.  
 
 Tillsammans hjälper Office 365 och EMS anställda att vara produktiva på alla deras enheter samtidigt som organisationens information är skyddad. Office 365 med EMS är en komplett integrerad svit för företagsmobilitet, inklusive produktivitet, identitet, åtkomstkontroll, hantering och dataskydd. Den ger dig ett effektivt sätt att distribuera och hantera en mobilitetslösning i din organisation.
 

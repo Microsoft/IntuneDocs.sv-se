@@ -15,9 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 526830839aa801a7ac78aeb4baaa790d6bb5da5c
-ms.openlocfilehash: 8f43dc529b2da2c97500c03056ba7908bb8ab0fa
-ms.lasthandoff: 01/28/2017
+ms.sourcegitcommit: 5726934501b3d6b243de94951cf0c57cbd79a811
+ms.openlocfilehash: ccc0502c81cb16d2ca13e5d6a702c0ff863b83e4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -42,15 +42,13 @@ Ställ en fråga till eller starta en diskussion med Microsofts tekniska experte
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>UserVoice-webbplatsen för produktfeedback för Microsoft Intune
 
-Har du feedback om hur Microsoft kan göra Intune ännu bättre? Berätta genom att lägga till dina idéer på Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas)-feedbackwebbplatsen. Du kan även rösta på förslag som andra har lagt till genom UserVoice. 
+Har du feedback om hur Microsoft kan göra Intune ännu bättre? Berätta genom att lägga till dina idéer på Microsoft Intune [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas)-feedbackwebbplatsen. Du kan även rösta på förslag som andra har lagt till genom UserVoice.
 
 ![UserVoice-feedbacksidan för Microsoft Intune](./media/intune-uservoice-feedback-page.png)
 
-## <a name="create-an-online-support-ticket"></a>Skapa en supportbegäran online
+## <a name="create-a-support-ticket"></a>Skapa ett supportärende
 
-Om du inte kan hitta svaren med hjälp av självhjälpsresurserna kan du skapa en supportbegäran online.
-
-**Begränsa varje supportbegäran till ett enda problem**, så blir det lättare för oss att hjälpa dig. Detta beror på följande:
+Om du inte kan hitta svaren med hjälp av självhjälpsresurserna kan du skapa en supportbegäran online. **Begränsa varje supportbegäran till ett enda problem**, så blir det lättare för oss att hjälpa dig. Detta beror på följande:
 
 - Supportteknikerna är specialister inom specifika områden och det blir lättare att identifiera rätt ämnesområden för att hjälpa dig med ditt problem.
 - Teknikteamen kan prioritera sitt arbete inom de produktområden där de flesta problemen inträffar.
@@ -58,9 +56,12 @@ Om du inte kan hitta svaren med hjälp av självhjälpsresurserna kan du skapa e
 
 Läs igenom [definitionen av ett supportärende](#definition-of-a-support-incident) innan du skapar en supportbegäran.
 
-**Så här skapar du en supportbegäran online**:
+### <a name="steps-to-create-an-online-support-ticket"></a>Så här skapar du ett supportärende online
 
 1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina Intune-autentiseringsuppgifter.
+
+    Om du är en Premier Support-kund kan du öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/en-us/premier/contacts).
+
     >[!NOTE]
     >
     >Premier Support-kunder kan öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/en-us/premier/contacts).
@@ -84,9 +85,9 @@ Läs igenom [definitionen av ett supportärende](#definition-of-a-support-incide
 
 3.  Följ anvisningarna för att öppna supportärendet.
 
-### <a name="create-a-support-ticket-with-alternate-methods"></a>Skapa en supportbiljett med alternativa metoder
+### <a name="steps-to-create-a-support-ticket-with-alternate-methods"></a>Anvisningar för att skapa en supportbiljett med alternativa metoder
 
-Följ den här metoden om din supportsida ser ut så här:
+Följ den här metoden om din supportsida i administrationscentret för Office 365 ser ut så här:
 
 ![Alternativ Intune-support](../media/alternate-support-ui.png)
 
@@ -102,30 +103,30 @@ Följ den här metoden om din supportsida ser ut så här:
 I [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md) finns en lista över supportnummer efter land och region, supporttider och språk som stöds för varje region.
 
 ## <a name="track-your-support-requests"></a>Följ dina supportärenden
-1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina Intune-autentiseringsuppgifter.
+1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina autentiseringsuppgifter som Intune-administratör.
 2.  Välj **administratörspanelen**.
 3.  Välj **Tjänstförfrågningar** till vänster under **Support**. Sedan kan du granska dina förfrågningar.
 
-Vårt första svar på supportförfrågningar beror på hur allvarligt problemet är. Vårt första svar för Professional-kunder ges inom två timmar för de allvarligaste problemen. För Premier Support-kunder varierar svaret beroende på supportavtalet. Dessa är fall då:
+Vårt första svar på supportförfrågningar beror på hur allvarligt problemet är. Vårt första svar för Professional-kunder ges inom två timmar för de allvarligaste problemen. För Premier Support-kunder varierar svaret beroende på supportavtalet. Ett ärende är **allvarligast** om:
 
 - Åtminstone en tjänst är inte tillgänglig eller är oanvändbar.
 - Tidsgränser för produktion, åtgärder eller distribution drabbas eller tillverkning eller lönsamhet påverkas allvarligt.
 - Flera användare eller tjänster påverkas.
 
-Vårt första svar för Professional-kunder ges inom fyra timmar för mindre allvarliga problem. För Premier Support-kunder varierar svaret beroende på supportavtalet.  Dessa är fall då:
+Vårt första svar för Professional-kunder ges inom fyra timmar för mindre allvarliga problem. För Premier Support-kunder varierar svaret beroende på supportavtalet. Ett ärende är **måttligt allvarligt** om:
 
 - Tjänsten är användbar men fungerar inte lika bra som vanligt.
 - Situationen har begränsad påverkan på verksamheten och kan hanteras under kontorstid.
 - En enskild användare, kund eller tjänst påverkas delvis.
 
-Vårt första svar för Professional-kunder ges inom åtta timmar för övriga problem. För Premier Support-kunder varierar svaret beroende på supportavtalet.  Dessa är fall då:
+Vårt första svar för Professional-kunder ges inom åtta timmar för övriga problem. För Premier Support-kunder varierar svaret beroende på supportavtalet. Ett ärende är minst allvarligt om:
 
 - Situationen har minimal inverkan på verksamheten.
 - Problemet är betydande men har inte någon omedelbar inverkan på aktuella tjänster eller produktiviteten för kundens del.
 - En enskild användare upplever partiella avbrott, men en godtagbar lösning finns.
 
 > [!NOTE]
-> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** Om du vill ha teknisk support för Configuration Manager eller Endpoint Protection, så kontakta din partner eller besök [Microsoft System Center Configuration Manager och System Center Endpoint Protection Solution Center](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/resources.aspx), där du hittar utförligt självhjälpsmaterial. Här finns också möjlighet att öppna en supportförfrågan online eller via telefon.
+> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** Om du vill ha teknisk support för Configuration Manager eller Endpoint Protection, så kontakta din partner eller läs dokumentationen om [Microsoft System Center Configuration](https://docs.microsoft.com/sccm/) och [Endpoint Protection](https://technet.microsoft.com/en-us/library/hh508836.aspx) där du hittar utförligt självhjälpsmaterial. Här finns också möjlighet att öppna en supportförfrågan online eller via telefon.
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 

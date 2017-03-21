@@ -15,9 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 96861614075d4eed41ca440af8a8cc42e5f2ff38
-ms.openlocfilehash: 8633de5aea6cc3f98c5e331fc3de43daf85903ae
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
+ms.openlocfilehash: 8c67fc70b5b1678df29605fe3ba4dae907bc7bd1
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -27,11 +27,13 @@ ms.lasthandoff: 02/23/2017
 > [!NOTE]
 > Börja gärna med att läsa artikeln [Get Started with Intune App SDK Guide](intune-app-sdk-get-started.md) (Kom igång med Intune App SDK). Den här guiden beskriver hur du förbereder dig för integreringen på de plattformar som stöds.
 
-Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade MAM-principer) i din iOS-app. Ett MAM-aktiverat program är ett program som är integrerat med Intune App SDK. Det kan användas av IT-administratörer för att distribuera appskyddsprinciper till din mobilapp om Intune aktivt hanterar appen.
+Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade **APP**- eller **MAM**-principer) i din iOS-app. Ett MAM-aktiverat program är ett program som är integrerat med Intune App SDK. Det kan användas av IT-administratörer för att distribuera appskyddsprinciper till din mobilapp om Intune aktivt hanterar appen.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
-* Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-verktygsuppsättningen version 5 eller senare installerad.
+* Du behöver en Mac OS-dator som kör OS X 10.8.5 eller senare och som har Xcode-version 8 eller senare installerad.
+
+* Din app måste vara anpassad för iOS 9 eller senare.
 
 * Läs [licensvillkoren för Intune App SDK för iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Skriv ut och behåll en kopia av licensvillkoren för framtida referens. Genom att ladda ned och använda Intune App SDK för iOS samtycker du till de här licensvillkoren.  Om du inte accepterar villkoren har du inte rätt att använda programvaran.
 
@@ -70,56 +72,53 @@ Målet med Intune App SDK för iOS är att lägga till hanteringsfunktioner i iO
 Följ dessa steg för att aktivera Intune App SDK:
 
 1. **Alternativ 1**: Länka till `libIntuneMAM.a`-biblioteket. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
+
     ![Intune App SDK iOS: länkade ramverk och bibliotek](../media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     > [!NOTE]
     > Om du planerar att lansera appen i App Store bör du använda den version av `libIntuneMAM.a` som skapats för lanseringen, alltså inte felsökningsversionen. Slutversionen ligger i **slutversionsmappen**. Felsökningsversionen innehåller utförliga data som hjälper till att felsöka problem med Intune App SDK.
 
-    **Alternativ 2**: Länka `IntuneMAM.framework` till projektet. Dra `IntuneMAM.framework` till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
+    Lägg till `-force_load {PATH_TO_LIB}/libIntuneMAM.a` i någon av följande och ersätt `{PATH_TO_LIB}` med platsen för Intune App SDK:
+      * Projektets konfigurationsinställning för `OTHER_LDFLAGS`
+      * Användargränssnittets **Other Linker Flags** (Andra länkarflaggor)
+
+        > [!NOTE]
+        > Leta reda på `PATH_TO_LIB` genom att välja filen `libIntuneMAM.a` och välja **Get Info** (Hämta information) från menyn **Arkiv**. Kopiera och klistra in informationen om **Var** (sökvägen) från avsnittet **Allmänt** i fönstret **Information**.
+
+2. **Alternativ 2**: Länka `IntuneMAM.framework` till projektet. Dra `IntuneMAM.framework` till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
     > [!NOTE]
-    > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se avsnittet "Skicka in din app till App Store".
+    > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#Submit-your-app-to-the-App-Store)
 
-2. Lägg till dessa iOS-ramverk i projektet:
+3. Lägg till dessa iOS-ramverk i projektet:
     * MessageUI.framework
     * Security.framework
     * MobileCoreServices.framework
     * SystemConfiguration.framework
-    * libsqlite3.dylib
-    * libc++.dylib
+    * libsqlite3.TBD
+    * libc ++ .tbd
     * ImageIO.framework
     * LocalAuthentication.framework
     * AudioToolbox.framework
 
-    > [!NOTE]
-    > Om programmet är avsett för iOS 7 anger du attributet `Status` i `LocalAuthentication.framework` som Valfri. Om inget värde har angetts för `Status` kan inte programmet starta i iOS 7.
-    >
-    > Xcode 7 har även bytt `.dylib`-tilläggen till `.tbd`.
 
-3. Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
-![Intune App SDK iOS: kopiera paketresurser](../media/intune-app-sdk-ios-copy-bundle-resources.png)
+4. Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
 
-4. Lägg till `-force_load {PATH_TO_LIB}/libIntuneMAM.a` i någon av följande och ersätt `{PATH_TO_LIB}` med platsen för Intune App SDK:
-    * Projektets konfigurationsinställning för `OTHER_LDFLAGS`
-    * Användargränssnittets **Other Linker Flags** (Andra länkarflaggor)<br>
+    ![Intune App SDK iOS: kopiera paketresurser](../media/intune-app-sdk-ios-copy-bundle-resources.png)
 
-    > [!NOTE]
-    > Leta reda på `PATH_TO_LIB` genom att välja filen `libIntuneMAM.a` och välja **Get Info** (Hämta information) från menyn **Arkiv**. Kopiera och klistra in informationen om **Var** (sökvägen) från avsnittet **Allmänt** i fönstret **Information**.
-
-5. Om mobilappen definierar en main nib- eller storyboard-fil i Info.plist-filen tar du bort fältet för **Main Storyboard** eller **Main Nib**. Lägg till värdena för storyboard eller nib som du tidigare tog bort under en ny ordlista som heter IntuneMAMSettings med följande namn, i tillämpliga fall:
+5. Om mobilappen definierar en main nib- eller storyboard-fil i Info.plist-filen tar du bort fältet eller fälten för **Main Storyboard** eller **Main Nib**. Gå till Info-plist och klistra in dessa fält samt deras motsvarande värden under en ny ordlista som heter **IntuneMAMSettings** med följande namn, i tillämpliga fall:
     * MainStoryboardFile
     * MainStoryboardFile~ipad
     * MainNibFile
     * MainNibFile~ipad
-
     > [!NOTE]
-    > Om mobilappen inte definierar någon main nib eller storyboard-fil i Info.plist-filen är dessa inställningar inte obligatoriska.
+  > Om mobilappen inte definierar någon main nib eller storyboard-fil i Info.plist-filen är dessa inställningar inte obligatoriska.
 
     Du kan visa filen Info.plist i obearbetat format (för att visa nyckelnamnen) genom att högerklicka någonstans i dokumentets brödtext och ändra visningstypen till **Show Raw Keys/Values** (Visa obearbetade nycklar/värden).
 
 6. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
-    > [!NOTE]
+  > [!NOTE]
     > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
     ```xml
     <key>keychain-access-groups</key>
@@ -132,46 +131,46 @@ Följ dessa steg för att aktivera Intune App SDK:
 
     Om du använder användargränssnittet för att skapa en åtkomstgrupp för nyckelringar:
 
-    a. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
+    1. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
 
-    b. Lägg till den delade nyckelringsgruppen `com.microsoft.intune.mam`. Intune App SDK använder den här åtkomstgruppen för att lagra data.
+    2. Lägg till den delade nyckelringsgruppen `com.microsoft.intune.mam`. Intune App SDK använder den här åtkomstgruppen för att lagra data.
 
-    c. Lägg till `com.microsoft.adalcache` i dina befintliga åtkomstgrupper.
+    3. Lägg till `com.microsoft.adalcache` i dina befintliga åtkomstgrupper.
 
     ![Intune App SDK iOS: delning av nyckelringar](../media/intune-app-sdk-ios-keychain-sharing.png)
 
-    Lägg till åtkomstgruppen för nyckelringar med `$(AppIdentifierPrefix)` i behörighetsfilen om du använder behörighetsfilen för att skapa en åtkomstgrupp för nyckelringar. Exempel:  
+    Lägg till åtkomstgruppen för nyckelringar med `$(AppIdentifierPrefix)` i behörighetsfilen om du använder behörighetsfilen för att skapa en åtkomstgrupp för nyckelringar. Exempel:
 
-    * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
-    * `$(AppIdentifierPrefix)com.microsoft.adalcache`
+          * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
+        * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
     > [!NOTE]
     > En behörighetsfil är en XML-fil som är unik för ditt mobila program. Den används för att ange särskilda behörigheter och funktioner i din iOS-app.
 
-8. Om appen definierar URL-scheman i filen Info.plist lägger du till ytterligare ett schema med suffixet `-intunemam` för varje URL-schema.
+7. Om appen definierar URL-scheman i filen Info.plist lägger du till ytterligare ett schema med suffixet `-intunemam` för varje URL-schema.
 
-9. Mobilappar som utvecklas för iOS 9 och senare måste inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Lägg dessutom till ett nytt protokoll med `-intunemam` för varje nytt protokoll som listas. Du måste även inkludera `http-intunemam`, `https-intunemam`och `ms-outlook-intunemam` i matrisen.
+8. Mobilappar som utvecklas för iOS 9 och senare måste inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Lägg dessutom till ett nytt protokoll med `-intunemam` för varje nytt protokoll som listas. Du måste även inkludera `http-intunemam`, `https-intunemam`och `ms-outlook-intunemam` i matrisen.
 
-10. Om appen har definierade appgrupper i sina behörigheter lägger du till dessa grupper i ordlistan IntuneMAMSettings under nyckeln `AppGroupIdentifiers` som en matris med strängar.
+9. Om appen har definierade appgrupper i sina behörigheter lägger du till dessa grupper i ordlistan IntuneMAMSettings under nyckeln `AppGroupIdentifiers` som en matris med strängar.
 
-11. Länka mobilappen till Azure Directory Authentication Library (ADAL). ADAL-biblioteket för Objective C [finns på GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
+10. Länka mobilappen till Azure Directory Authentication Library (ADAL) för iOS. ADAL-biblioteket för Objective C finns på [GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
 
     > [!NOTE]
-    > Intune App SDK har testats enligt ADAL-hanterarens kod från 19 juni 2015. Se till att du länkar till den senaste fungerande versionen av ADAL-biblioteket.
+    > Du rekommenderas att appen kopplas till den senaste/aktuella version av ADAL.
 
-12. Inkludera resurspaketet `ADALiOSBundle.bundle` i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
+11. Inkludera resurspaketet `ADALiOSBundle.bundle` i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
 
-13. Använd länkaralternativet `-force_load PATH_TO_ADAL_LIBRARY` när du länkar till biblioteket.
+12. Använd länkaralternativet `-force_load PATH_TO_ADAL_LIBRARY` när du länkar till biblioteket.
 
     Lägg till `-force_load {PATH_TO_LIB}/libADALiOS.a` i projektets `OTHER_LDFLAGS`-konfigurationsinställning eller **Other Linker Flags** (Andra länkarflaggor) i användargränssnittet. `PATH_TO_LIB` ska ersättas med platsen för ADAL-binärfilerna.
 
 
 
-## <a name="set-up-azure-directory-authentication-library"></a>Konfigurera Azure Directory Authentication Library
+## <a name="configure-azure-directory-authentication-library-adal"></a>Konfigurera Azure Directory Authentication Library (ADAL)
 
 Intune App SDK använder ADAL för autentisering och villkorliga startscenarier. Den förlitar sig även på ADAL för att registrera användarens identitet i MAM-tjänsten för hantering utan enhetsregistreringsscenarier.
 
-Normalt kräver ADAL att appar registreras med Azure Active Directory (Azure AD) och erhåller ett unikt ID (även kallat klient-ID) och andra identifierare, för att garantera säkerheten i de token som appen beviljats. Intune App SDK använder standardvärden för registrering när Azure AD kontaktas.  
+Normalt kräver ADAL att appar registreras med Azure Active Directory (AAD) och erhåller ett unikt ID (klient-ID) och andra identifierare, för att garantera säkerheten i de token som appen beviljats. Intune App SDK använder standardvärden för registrering när Azure AD kontaktas.  
 
 Om själva appen använder ADAL för autentiseringsscenariot måste appen använda de befintliga registreringsvärdena och åsidosätta standardvärdena för Intune App SDK. Detta garanterar att användare inte uppmanas att autentisera sig två gånger (en gång av Intune App SDK och en gång av appen).
 
@@ -187,13 +186,13 @@ Lägg till `-force_load {PATH_TO_LIB}/libADALiOS.a` i projektets `OTHER_LDFLAGS`
 
 Mer information finns i instruktionerna från [ADAL på GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-objc).
 
-**Hur gör jag för att dela ADAL-cache med andra appar som signeras med samma etableringsprofil?**
+**Hur gör jag för att dela ADAL-tokencache med andra appar som signeras med samma etableringsprofil?**
 
-Om appen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
+1. Om appen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
 
-Aktivera enkel inloggning (SSO) med ADAL genom att lägga till åtkomstgrupperna `com.microsoft.adalcache` och `com.microsoft.workplacejoin` i nyckelringens rättigheter.
+2. Aktivera enkel inloggning (SSO) med ADAL genom att lägga till åtkomstgrupperna `com.microsoft.adalcache` och `com.microsoft.workplacejoin` i nyckelringens rättigheter.
 
-Om du ställer in nyckelringsgruppen för ADAL-delad cache ser du till att den är inställd på `<app_id_prefix>.com.microsoft.adalcache`. ADAL ställer in detta åt dig förutsatt att du inte åsidosätter det. Om du vill ange en anpassad nyckelringsgrupp som ersätter `com.microsoft.adalcache` anger du det i Info.plist-filen under IntuneMAMSettings med hjälp av nyckeln `ADALCacheKeychainGroupOverride`.
+3. Om du ställer in nyckelringsgruppen för ADAL-delad cache ser du till att den är inställd på `<app_id_prefix>.com.microsoft.adalcache`. ADAL ställer in detta åt dig förutsatt att du inte åsidosätter det. Om du vill ange en anpassad nyckelringsgrupp som ersätter `com.microsoft.adalcache` anger du det i Info.plist-filen under IntuneMAMSettings med hjälp av nyckeln `ADALCacheKeychainGroupOverride`.
 
 **Hur gör jag för att tvinga Intune App SDK att använda ADAL-inställningar som min app redan använder?**
 
@@ -211,7 +210,7 @@ Om appen redan använder ADAL kan du läsa [Konfigurera inställningar för Intu
 Ställ in egenskapen `aadAuthorityUriOverride` på IntuneMAMPolicyManager-instansen.
 
 > [!NOTE]
-> Du behöver detta i ett MAM-scenario utan enhetsregistrering för att tillåta att SDK återanvänder ADAL-uppdateringstoken som hämtas av appen.
+> Detta är en obligatorisk APP utan enhetsregistrering för att tillåta att SDK återanvänder ADAL-uppdateringstoken som hämtas av appen.
 
 SDK fortsätter att använda denna utfärdar-URL för principuppdatering och eventuella efterföljande registreringsbegäranden såvida inte värdet rensas eller ändras.  Det är därför viktigt att rensa värdet när företagsanvändare loggar ut från appen och att återställa det när en ny företagsanvändare loggar in.
 
@@ -229,18 +228,18 @@ Följande steg krävs om appen redan använder ADAL för autentisering:
 
 Intune App SDK tillhandahåller standardvärden för ADAL-parametrar och hanterar autentisering mot Azure AD om din app inte använder ADAL.
 
-## <a name="register-your-app-with-the-intune-mam-service"></a>Registrera din app med Intune MAM-tjänsten
+## <a name="app-protection-policy-without-device-enrollment"></a>Appskyddsprincip utan enhetsregistrering
 
-### <a name="use-the-apis"></a>Använda API:erna
-Med Intune App SDK kan nu iOS-appar ta emot appskyddsprinciper från Intune utan att de behöver vara registrerade med Intune genom hantering av mobilenheter (MDM). SDK innehåller nya API:er som gör det möjligt för appen att ta emot appskyddsprinciper för att stödja den här nya funktionen. Följ dessa steg för att använda de nya API:erna:
+### <a name="overview"></a>Översikt
+Med Intune-appskyddsprincip utan enhetsregistrering, så kallad **APP-WE** eller MAM-WE, kan appar hanteras av Intune utan att enheten behöver registreras i Intunes hantering av mobila enheter (MDM). För att stödja den här nya funktionerna, måste appen registrera användarkonton som ska hanteras. Följ dessa steg för att använda de nya API:erna:
 
-1. Använd den senaste versionen av Intune App SDK som stöder hantering av appar med eller utan enhetsregistrering. .
+1. Använd den senaste versionen av Intune App SDK som stöder hantering av appar med eller utan enhetsregistrering.
 
 2. Lägg till IntuneMAMEnrollment.h i alla filer som kommer att anropa API:erna.
 
-### <a name="register-accounts"></a>Registrera konton
+### <a name="register-user-accounts"></a>Registrera användarkonton
 
-En app kan ta emot appskyddsprinciper från Intune-tjänsten om appen registreras för ett angivet användarkonto. Det är appens ansvar att registrera eventuella nyligen inloggade användare i Intune App SDK. När det nya användarkontot har autentiserats måste appen anropa `registerAndEnrollAccount`-metoden i Headers/IntuneMAMEnrollment.h:
+En app kan ta emot appskyddsprinciper från Intune-tjänsten om appen registreras med tjänsten APP-WE för ett angivet användarkonto. Det är appens ansvar att registrera eventuella nyligen inloggade användare i SDK. När det nya användarkontot har autentiserats måste appen anropa `registerAndEnrollAccount`-metoden i Headers/IntuneMAMEnrollment.h:
 
 ```objc
 /**
@@ -258,17 +257,17 @@ Genom att anropa `registerAndEnrollAccount`-metoden registrerar SDK användarkon
 
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om. Användaren kan då starta om appen omedelbart.
 
-### <a name="deregister-accounts"></a>Avregistrera konton
+### <a name="deregister-user-accounts"></a>Avregistrera användarkonton
 
 Innan en användare loggas ut från en app bör appen avregistrera användaren från SDK. Detta säkerställer följande:
 
 1. Nya registreringsförsök sker inte längre för användarens konto.
 
-2. Om användaren har registrerat programmet kommer användaren och appen att avregistreras från Intune MAM-tjänsten och appskyddsprincipen tas bort.
+2. Appskyddsprincipen tas bort.
 
-3. Om appen startar en selektiv rensning (valfritt) raderas eventuella arbets- eller skolrelaterade data.
+3. Om appen startar en selektiv rensning (valfritt) raderas eventuella företagsdata.
 
-Innan användaren loggas ut måste appen anropa följande API i Headers/IntuneMAMEnrollment.h:
+Innan användaren loggas ut måste appen anropa följande API i `Headers/IntuneMAMEnrollment.h`:
 
 ```objc
 /*
@@ -286,17 +285,17 @@ Innan användaren loggas ut måste appen anropa följande API i Headers/IntuneMA
 (void)deRegisterAndUnenrollAccount:(NSString *)identity withWipe:(BOOL)doWipe;
 ```
 
-Den här metoden måste anropas innan användarkontots Azure AD-token tas bort. SDK behöver användarens apptoken för att göra specifika begäranden till Intune MAM-tjänsten för användarens räkning.
+Den här metoden måste anropas innan användarkontots Azure AD-token tas bort. SDK behöver användarens ADD-token för att göra specifika begäranden till APP-WE-tjänsten för användarens räkning.
 
-Om appen ska ta bort användarens arbetsrelaterade eller skolrelaterade data på egen hand ska `doWipe`-flaggan anges till falskt. Annars kan appen få SDK att initiera en selektiv rensning. Detta resulterar i ett anrop till appens ombud för selektiv rensning.
+Om appen ska ta bort användarens företagsdata på egen hand ska `doWipe`-flaggan anges till falskt. Annars kan appen få SDK att initiera en selektiv rensning. Detta resulterar i ett anrop till appens ombud för selektiv rensning.
 
 ```objc
 [[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccount:@”user@foo.com” withWipe:YES];
 ```
 
-### <a name="enroll-without-prior-sign-in"></a>Registrera dig utan tidigare inloggning
+### <a name="apps-that-do-not-use-adal"></a>Appar som inte använder ADAL
 
-En app som inte loggar in användaren med Azure Active Directory kan fortfarande ta emot appskyddsprinciper från Intune-tjänsten genom att anropa API:t och låta SDK hantera den autentiseringen. Appar bör använda den här metoden när de inte har autentiserat en användare med Azure AD men ändå måste hämta appskyddsprinciper för att skydda data. Ett exempel är om en annan autentiseringstjänst används för inloggning i en app, eller om appen inte stöder inloggning över huvud taget. Programmet måste anropa `loginAndEnrollAccount`-metoden i Headers/IntuneMAMEnrollment.h för att göra detta:
+En app som inte loggar in användaren med ADAL kan fortfarande ta emot appskyddsprinciper från Intune-tjänsten genom att anropa API:t och låta SDK hantera den autentiseringen. Appar bör använda den här metoden när de inte har autentiserat en användare med Azure AD men ändå måste hämta appskyddsprinciper för att skydda data. Ett exempel är om en annan autentiseringstjänst används för inloggning i en app, eller om appen inte stöder inloggning över huvud taget. Programmet måste anropa `loginAndEnrollAccount`-metoden i Headers/IntuneMAMEnrollment.h för att göra detta:
 
 ```objc
 /**
@@ -309,9 +308,9 @@ En app som inte loggar in användaren med Azure Active Directory kan fortfarande
 
 ```
 
-Genom att anropa den här metoden frågar SDK användaren om autentiseringsuppgifter om ingen befintlig token kan hittas. SDK försöker sedan att registrera programmet för det här kontot. Metoden kan anropas med "noll" som identitet. I sådant fall registrerar SDK med den befintliga MAM-användaren på enheten eller frågar användaren om ett användarnamn om det inte går att hitta en befintlig användare.
+Genom att anropa den här metoden frågar SDK användaren om autentiseringsuppgifter om ingen befintlig token kan hittas. SDK försöker därefter registrera appen med APP-WE-tjänsten för det angivna användarkontot. Metoden kan anropas med "noll" som identitet. I sådant fall registrerar SDK med den befintliga hanterade användaren på enheten eller frågar användaren om ett användarnamn om det inte går att hitta en befintlig användare.
 
-Om registreringen misslyckas bör appen överväga att anropa detta API igen vid ett senare tillfälle, beroende på detaljerna kring felet. Appen kan ta emot aviseringar om resultaten av eventuella registreringsbegäranden via ett ombud.
+Om registreringen misslyckas bör appen överväga att anropa detta API igen vid ett senare tillfälle, beroende på detaljerna kring felet. Appen kan ta emot [aviseringar](#Status-result-and-debug-notifications) om resultaten av eventuella registreringsbegäranden via ett ombud.
 
 När detta API har anropats kan appen fortsätta att fungera som vanligt. Om registreringen lyckas meddelar SDK användaren att appen behöver startas om.
 
@@ -323,7 +322,7 @@ Appen kan ta emot status-, resultat- och felsökningsmeddelanden om följande be
  - Begäran om principuppdatering
  - Begäran om avregistrering
 
-Aviseringarna visas via delegeringsmetoderna i Headers/IntuneMAMEnrollmentDelegate.h:
+Meddelanden visas via delegerade metoder i `Headers/IntuneMAMEnrollmentDelegate.h`:
 
 ```objc
 /**
@@ -356,9 +355,7 @@ Dessa ombudsmetoder returnerar ett `IntuneMAMEnrollmentStatus`-objekt som inneh�
 - En felsträng med en beskrivning av statuskoden
 - Ett `NSError`-objekt
 
-Det här objektet definieras i IntuneMAMEnrollmentStatus.h, tillsammans med de specifika statuskoder som kan returneras.
-
-
+Det här objektet definieras i `IntuneMAMEnrollmentStatus.h`, tillsammans med de specifika statuskoder som kan returneras.
 
 
 ### <a name="sample-code"></a>Exempelkod
@@ -396,7 +393,7 @@ När en app tar emot appskyddsprinciper för första gången måste den startas 
 ```
 Returvärdet för den här metoden talar om för SDK om programmet ska hantera den omstart som krävs:   
 
- - Om sant returneras hanterar programmet omstarten.   
+ - Om sant returneras måste programmet hantera omstarten.   
 
  - Om falskt returneras startar SDK om programmet när den här metoden returneras. SDK visar direkt en dialogruta som ber användaren att starta om programmet.
 
@@ -404,7 +401,7 @@ Returvärdet för den här metoden talar om för SDK om programmet ska hantera d
 
 Intune App SDK har flera API: er som du kan använda för att hämta information om den Intune-appskyddsprincip som distribueras till appen. Du kan använda informationen för att ändra appens beteende. De flesta inställningar för appskyddsprinciper tillämpas automatiskt av SDK och inte av appen. Den enda inställning som appen ska implementera är Spara som-kontrollen.
 
-### <a name="get-the-app-protection-policy-settings"></a>Hämta inställningar för appskyddsprinciper
+### <a name="get-app-protection-policy"></a>Hämta appskyddsprincipen
 
 #### <a name="intunemampolicymanagerh"></a>IntuneMAMPolicyManager.h
 Klassen IntuneMAMPolicyManager visar Intune-appskyddsprincipen som distribuerats till programmet. Klassen visar främst de API: er som är användbara för att [aktivera flera identiteter](#-enable-multi-identity-optional).
@@ -442,7 +439,9 @@ Platser som är "personliga" representeras av `IntuneMAMSaveLocationOther`-konst
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Konfigurera inställningar för Intune App SDK
 
-Du kan använda ordlistan **IntuneMAMSettings** i filen Info.plist i programmet för att installera och konfigurera Intune App SDK. Följande tabell är en lista över konfigurationer som stöds.
+Du kan använda ordlistan **IntuneMAMSettings** i filen Info.plist i programmet för att installera och konfigurera Intune App SDK. Om ordlistan IntuneMAMSettings inte visas i filen Info.plist bör du skapa en ordlista i din app Info.plist med fältnamnet "IntuneMAMSettings."
+
+Du kan lägga till nyckel-/värde-rader för konfigurationsinställningar för att konfigurera SDK under ordlistan IntuneMAMSettings. Följande tabell är en lista över konfigurationer som stöds.
 
 Några av de här inställningarna kan ha beskrivits i föregående avsnitt och vissa gäller inte för alla appar.
 
@@ -590,15 +589,15 @@ Här är några rekommenderade metodtips för att utveckla med iOS:
 
 * Om Xcode har problem med att hitta `libIntuneMAM.a` så kan du åtgärda problemet genom att lägga till sökvägen till biblioteket i sökvägarna för länkare.
 
-## <a name="faq"></a>Vanliga frågor
+## <a name="faqs"></a>Vanliga frågor och svar
 
 
 **Är alla API:erna adresserbara via samverkan med intern Swift eller Objective-C och Swift?**
 
-Intune App SDK-API:er finns endast i Objective-C och har inte stöd för intern Swift.  
+Intune App SDK-API:er finns endast i Objective-C och har inte stöd för **intern** Swift. Snabb samverkan med Objective-C krävs.
 
 
-**Måste alla användare av mitt program registreras med MAM-tjänsten?**
+**Måste alla användare av mitt program registreras med APP-WE-tjänsten?**
 
 Nej. I själva verket är det bara arbets- eller skolkonton som ska registreras med Intune App SDK. Appar ansvarar för att fastställa om ett konto används i ett arbets- eller skolsammanhang.   
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: e67ec317b22e18d0be8bca449b9382f74935d6e8
+ms.sourcegitcommit: 0936051b5c33a2e98f275ef7a3a32be2e8f5a8b0
+ms.openlocfilehash: 3b608d42f04b9fce457b6b61587d05ab5d59bb0a
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -59,18 +60,28 @@ Mer information om hur du överför och publicerar Android-appar finns i [Google
 
 ## <a name="deploy-an-android-for-work-app"></a>Distribuera en Android for Work-app
 
-Vanligtvis synkroniserar Intune med Google Play for Work-butiken två gånger om dagen. Om du har godkänt en app från butiken men den ännu inte visas i noden **Volyminköpta appar** i arbetsytan **Appar** kan du framtvinga en omedelbar synkronisering genom att göra följande:
+Om du har godkänt en app från butiken men den ännu inte visas i noden **Volyminköpta appar** i arbetsytan **Appar** kan du framtvinga en omedelbar synkronisering genom att göra följande:
 
 1. I [Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Admin** > **Hantering av mobila enheter** > **Android for Work**.
 2. På sidan **Android for Work Mobile Device Management Setup** (Konfiguration av hantering av mobila enheter med Android for Work) väljer **Synkronisera nu**.
 3. Sidan visar även tid och status för den senaste synkroniseringen.
 
-När appen visas i noden **Volyminköpta appar** i arbetsytan **appar** kan du [deploy it just like you would any other app](deploy-apps-in-microsoft-intune.md) (distribuera den på samma sätt som andra appar). Du kan endast distribuera appen till grupper av användare. För närvarande kan du bara välja åtgärderna **Nödvändig** och **Avinstallera**. Från oktober 2016 kommer vi börja lägga till distributionsåtgärden **Tillgänglig** till nya klienter.
+När appen visas i noden **Volyminköpta appar** i arbetsytan **appar** kan du [deploy it just like you would any other app](deploy-apps-in-microsoft-intune.md) (distribuera den på samma sätt som andra appar). Du kan endast distribuera appen till grupper av användare. För närvarande kan du bara välja åtgärderna **Nödvändig** och **Avinstallera**.
+
+Möjligheten att distribuera en app som **Tillgänglig** utnyttjar den nya grupperings- och målmiljön. Nyligen etablerade Intune Service-konton kan använda den här funktionen när den lanseras. Befintliga Intune-kunder kan använda den här funktionen när deras klientorganisationer har migrerats till Intune Azure-portalen. Befintliga kunder är välkomna att skapa ett Intune-utvärderingskonto för att planera för och testa den här funktionen tills deras klientorganisationer har migrerats.
 
 När du har distribuerat appen kommer den att installeras på de enheter du angett. Användaren av enheten kommer inte att bli ombedd att godkänna installationen.
 
+## <a name="manage-app-permissions"></a>Hantera programbehörigheter
+Android for Work kräver att du godkänner appar i Googles Play-webbskonsol innan de synkroniseras i Intune and distribueras till användarna.  Eftersom Android for Work låter dig distribuera dessa appar till användarnas enheter tyst och automatiskt måste du acceptera appens behörigheter för alla användare.  Slutanvändare kan inte se några programbehörigheter när de installerar så det är viktigt att du har läst och förstått dessa behörigheter.
 
+När apputvecklare publicerar en ny version av appen med uppdaterade behörigheter tillåts de inte automatiskt, även om du har godkänt tidigare behörigheter. Enheter som kör den gamla versionen av programmet kan fortfarande använda det, men appen uppgraderas inte förrän de nya behörigheterna har godkänts. Enheter utan appen kan inte installera den förrän du har godkänt dess nya behörigheter.
 
-<!--HONumber=Feb17_HO1-->
+### <a name="how-to-update-app-permissions"></a>Så här uppdaterar du programbehörigheter
 
+Du bör regelbundet besöker konsolen Google Play för att söka efter nya behörigheter. Om du distribuerar en app och noterar att den inte är installerad på enheterna ska du söka efter nya behörigheter med följande steg:
+
+1. Besök http://play.google.com/work
+2. Logga in med det Google-konto som du använde för att publicera och godkänna apparna.
+3. Besök fliken **uppdateringar** för att se om några appar kräver en uppdatering.  Alla angivna appar kräver nya behörigheter och kan inte distribueras utan dessa.  
 

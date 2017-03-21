@@ -16,8 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
-ms.openlocfilehash: b95f7dbf37a159a62894ae27d1fdb731ede5570c
+ms.sourcegitcommit: 02c844a5b38023a6dfc6c4ef1de81e1416601fba
+ms.openlocfilehash: b0c3520c7c1fd29a631587fe1a69d4c411099cb4
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -58,7 +59,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |----------------|-|
 |**Tillåt datadelning mellan arbetsprofiler och personliga profiler**|Låter appar i arbetsprofilen att dela data med appar i användarens personliga profil. Välj mellan:<br><br>- **Förhindra all delning över gränser**<br>- **Appar i arbetsprofilen kan hantera delningsförfrågningar från den personliga profilen**<br>- **Inga delningsbegränsningar**|
 |**Dölj arbetsprofilaviseringar när enheten är låst**<br>(Android 6 och senare)|Kontrollera om du vill visa några meddelanden från arbetsprofilen när enheten är låst.|
-|**Ange standardprincipen för behörigheter för appar**<br>(Android 6 och senare)|Ange standardprincipen för behörighet för alla appar i arbetsprofilen.|
+|**Ange standardprincipen för behörigheter för appar**<br>(Android 6 och senare)|Ange standardprincipen för behörighet för alla appar i arbetsprofilen. Från och med Android 6 visas behörigheter som krävs av appen för slutanvändaren vid körning.  Denna principinställning låter IT bestämma hur eller om användarna uppmanas att bevilja behörighet för appar i arbetsprofilen. <br/><br/>Till exempel kan IT tilldela en app till den arbetsprofil som behöver åtkomst till en plats.  Vanligtvis visas en dialogruta i appen som frågar användaren om denne vill ge platsåtkomst till appen, varpå användaren kan godkänna eller avvisa detta.  Med den här principen kan IT avgöra om alla behörigheter ska beviljas automatiskt utan att användaren tillfrågas, nekad automatiskt utan att användaren tillfrågas eller låta användaren bestämma.|
 
 
 ## <a name="custom-policy-settings"></a>Anpassade principinställningar
@@ -91,9 +92,4 @@ Intune har för närvarande stöd för ett begränsat antal anpassade Android-pr
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
