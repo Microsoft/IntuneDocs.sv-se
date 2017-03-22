@@ -74,7 +74,7 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
 2. [Skapa en enhetsefterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md).
 
 2.  Skapa en princip för villkorlig åtkomst för någon av följande tjänster/produkter för Microsoft-moln:
-> [!div class="op_single_selector"]
+
   - [Skapa en princip för villkorlig åtkomst för Exchange Online](restrict-access-to-exchange-online-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för Exchange On-premises](restrict-access-to-exchange-onpremises-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för nya Exchange Online Dedicated](restrict-access-to-exchange-online-with-microsoft-intune.md)
