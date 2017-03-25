@@ -4,7 +4,7 @@ description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter me
 keywords: 
 author: NathBarn
 manager: angrobe
-ms.date: 02/26/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,9 +14,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 255c3e47464ac7670a971881cf399e8e2bb17044
-ms.openlocfilehash: 4acbae2aba4cff21286d45cb7cb1691864c281dc
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: f66bc5a26f137f62defef4a83a36b22247be4ec1
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -73,9 +73,9 @@ I [Intune-administrationskonsolen](http://manage.microsoft.com) väljer du **Adm
 
 ### <a name="step-4-tell-your-users-how-to-enroll-their-devices-and-what-to-expect-after-theyre-brought-into-management"></a>Steg 4: Berätta för dina användare hur de registrerar sina enheter och vad de kan förvänta sig när de registrerat sig för hantering.
 
-   Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows).
+   Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows).
 
-   Mer information om slutanvändarnas aktiviteter finns i [Informera slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) och [End user guidance for Windows devices](../enduser/using-your-windows-device-with-intune.md) (Vägledning om Windows-enheter för slutanvändare).
+   Mer information om slutanvändarnas aktiviteter finns i [Informera slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) och [End user guidance for Windows devices](https://docs.microsoft.com/intune-user-help/using-your-windows-device-with-intune) (Vägledning om Windows-enheter för slutanvändare).
 
 ### <a name="see-also"></a>Se även
 [Krav för att registrera enheter i Microsoft Intune](prerequisites-for-enrollment.md)

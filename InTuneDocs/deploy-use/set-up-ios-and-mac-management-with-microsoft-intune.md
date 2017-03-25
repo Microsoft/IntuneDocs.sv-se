@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: afca2af0b07b939adc66c8804f04a1125e12001b
-ms.openlocfilehash: 9c71a83f9514187753360fa9c2085584d1b76711
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
+ms.openlocfilehash: 825acdb4452aa7fc9369be653b8afcdd4312ab23
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -49,11 +49,11 @@ Intune stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och macOS-e
 
 5.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**
 
-    Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](../enduser/enroll-your-device-in-intune-ios.md) och [Registrera din macOS-enhet i Intune](../enduser/enroll-your-device-in-intune-macos.md). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
+    Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) och [Registrera din macOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
     Information om andra slutanvändaraktiviteter finns i de här artiklarna:
     - [Resurser om slutanvändarupplevelsen med Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
-    - [Vägledning för slutanvändare för iOS- och Mac-enheter](../enduser/using-your-ios-or-macOS-device-with-intune.md)
+    - [Vägledning för slutanvändare för iOS- och Mac-enheter](https://docs.microsoft.com/intune-user-help/using-your-ios-or-macOS-device-with-intune)
 
 Om företaget eller organisationen köper iOS-enheter åt användarna kan enheterna även registreras för hantering som [företagsägda iOS-enheter](enroll-corporate-owned-ios-devices-in-microsoft-intune.md).
 

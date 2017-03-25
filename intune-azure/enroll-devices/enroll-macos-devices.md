@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 63ac5ecf6fbe9ae66c879466c7785b051dfb7a61
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 3ef80446889e40464aed39fc83d9777dbfcc4d11
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -42,17 +42,18 @@ Uppfyll följande krav innan du konfigurerar registreringen av macOS-enheter:
 
 ## <a name="set-up-macos-enrollment"></a>Konfigurera registrering av macOS
 
-Som standard tillåter Intune redan registrering av macOS-enheter. 
+Som standard tillåter Intune redan registrering av macOS-enheter.
 
-Se [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions) för att blockera macOS-enheter från registrering. 
+Se [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions) för att blockera macOS-enheter från registrering.
 
 Se [Ange begränsningar för enhetsgräns](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions) för att ange det maximala antalet enheter som en användare kan registrera.
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurserna
 
-Du måste be slutanvändarna att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) och följa anvisningarna för att registrera sina enheter. Du kan även skicka dem en länk till stegen för registrering online: [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos). 
+Du måste be slutanvändarna att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) och följa anvisningarna för att registrera sina enheter. Du kan även skicka dem en länk till stegen för registrering online: [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-macos).
 
 Information om andra slutanvändaraktiviteter finns i de här artiklarna:
 
-- [Resurser om slutanvändarupplevelsen med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
+- [Resurser om slutanvändarupplevelsen med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
 - [Använda en iOS- eller macOS-enhet med Intune](https://docs.microsoft.com/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune)
+

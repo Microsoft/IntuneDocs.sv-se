@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 01/29/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6b99854e17e00a0dd0f91fa82fd1b79d1dfe5663
-ms.openlocfilehash: 8e2588e2bb0537877f0164bc996fa973f25ea4dd
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
+ms.openlocfilehash: a5a4f11ae341480b2e674ca55a514b62831bdd60
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -38,11 +38,11 @@ Som standard tillåts Android-enheter registreras i Intune. Om du vill blockera 
 
 3.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**
 
-    Registreringsinstruktioner för slutanvändare finns i [Registrera din Android-enhet i Intune](../enduser/enroll-your-device-in-intune-android.md). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
+    Registreringsinstruktioner för slutanvändare finns i [Registrera din Android-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
     Information om andra slutanvändaraktiviteter finns i de här artiklarna:
   - [Resurser om slutanvändarupplevelsen med Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
-  - [Vägledning för slutanvändare för Android-enheter](../enduser/using-your-android-device-with-intune.md)
+  - [Vägledning för slutanvändare för Android-enheter](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 På grund av avsaknad av Google Play-butik i Kina måste Android-enheter hämta Företagsportalen från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)

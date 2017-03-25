@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b7188dd8163334429396e7b7c8687810a6e63bb2
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: b664620f424f9ef612d17beb810564dbdd68ff79
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -31,13 +31,13 @@ Intune låter dig hantera Android-enheter, inklusive Samsung Knox Standard-enhet
 
 ## <a name="prerequisite"></a>Krav
 
-Du måste ange MDM-utfärdare för **Microsoft Intune** så att du kan hantera mobila enheter. Fler anvisningar finns i [Ange MDM-utfärdare](set-mdm-authority.md). Du anger det här objektet bara en gång, och det är när du först konfigurerar Intune för hantering av mobila enheter. Så det kan hända att du redan har gjort de här inställningarna. 
+Du måste ange MDM-utfärdare för **Microsoft Intune** så att du kan hantera mobila enheter. Fler anvisningar finns i [Ange MDM-utfärdare](set-mdm-authority.md). Du anger det här objektet bara en gång, och det är när du först konfigurerar Intune för hantering av mobila enheter. Så det kan hända att du redan har gjort de här inställningarna.
 
 ## <a name="set-up-android-enrollment"></a>Konfigurera Android-registrering
 
-Som standard tillåter redan Intune registrering av Android- och Samsung Knox Standard-enheter. 
+Som standard tillåter redan Intune registrering av Android- och Samsung Knox Standard-enheter.
 
-Se [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions) för att blockera Android-enheter eller endast blockera personligt ägda Android-enheter från registrering. 
+Se [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions) för att blockera Android-enheter eller endast blockera personligt ägda Android-enheter från registrering.
 
 Se [Ange begränsningar för enhetsgräns](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions) för att ange det maximala antalet enheter som en användare kan registrera.
 
@@ -45,9 +45,10 @@ Se [Ange begränsningar för enhetsgräns](https://docs.microsoft.com/intune-azu
 
 Du måste instruera slutanvändarna att de ska gå till Google Play för att hämta Intune-företagsportalappen, öppna appen och följa anvisningarna för att registrera sina enheter. Appen hjälper användarna genom registreringsprocessen och förklarar vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
-Du kan även skicka dem en länk till stegen för registrering online: [Registrera en Android-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-android). 
+Du kan även skicka dem en länk till stegen för registrering online: [Registrera en Android-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-android).
 
 Information om andra slutanvändaraktiviteter finns i de här artiklarna:
 
-- [Resurser om slutanvändarupplevelsen med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
+- [Resurser om slutanvändarupplevelsen med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
 - [Använda en Android-enhet med Intune](https://docs.microsoft.com/intune/enduser/using-your-android-device-with-intune)
+
