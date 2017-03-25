@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/28/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 874146573898e8a28de83ed599dbd4829ea8f335
-ms.openlocfilehash: fb72b74d922cef8659c34ef9d3d36e14b1a22ac1
-ms.lasthandoff: 01/13/2017
+ms.sourcegitcommit: 6df87e20011f20b99b91d88e669c67bb97ad2277
+ms.openlocfilehash: e21b088dbb7fdcef9996e2b970bb406cab5ee0aa
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,9 +28,9 @@ ms.lasthandoff: 01/13/2017
 
 Det kan vara fördelaktigt att ha en supportplan för Intune eftersom det kan hjälpa till att mer effektivt identifiera och lösa Intune-relaterade problem och förbättra slutanvändarens övergripande Intune-upplevelse. Följande är några frågor att tänka på när du utvecklar supportplanen för Intune:
 
--   Vilket eller vilka team kommer att ansvara för att tillhandahålla support för Intune?
+-   Vilka team kommer att ha ansvaret för att tillhandahålla Intune-support?
 
--   Vilka supportansvar för Intune finns för nivåerna om supportorganisationen har flera nivåer (t.ex. nivå 1–3)?
+-   Om supportorganisationen har flera nivåer (t.ex. nivå 1–3), vilket supportansvar finns då för respektive Intune-nivå?
 
 -   Vilken process ska användas för att tillhandahålla support för Intune?
 

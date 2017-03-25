@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 1bf478eae73bb7385369e4d5cde26b937831e665
-ms.openlocfilehash: 5ce680b35ff2a931b13e0395d7bb550f534d2b29
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
+ms.openlocfilehash: 3794f6c908dabb1946a262a7238a38537b7b06ec
+ms.lasthandoff: 03/16/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/30/2016
 
 # <a name="send-logs-to-your-it-admin-using-email"></a>Skicka loggar till IT-administratören via e-post
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg__.
+Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
 > Underlätta för IT-administratören att lösa problemet genom att aktivera _utförlig loggning_. Utförlig loggning inkluderar all relevant information i rapporten. Läs hur du kan [aktivera utförlig loggning här](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).

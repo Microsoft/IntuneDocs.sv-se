@@ -16,34 +16,35 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b245dac28f88e7eab70dfa9d759b15e155f8a7df
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
+ms.lasthandoff: 03/10/2017
 
 
 ---
 
 # <a name="what-is-device-compliance-in-intune-azure-preview"></a>Vad är enhetsefterlevnad i Intune Azure-förhandsversionen?
 
-
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-För att skydda företagets data måste du se till att de enheter som används för åtkomst till företagets appar och data följer särskilda regler. Dessa regler kan till exempel kräva att en PIN-kod används för att komma åt enheter samt kryptering av data som lagras på enheter. En uppsättning med sådana regler kallas för en **efterlevnadsprincip**.
+Principerna för enhetsfterlevnad i Intune definierar de regler och inställningar som en enhet måste följa för att den ska anses vara kompatibel med principerna för villkorlig åtkomst för Intune och EMS. Du kan också använda principer för enhetsefterlevnad för att övervaka och åtgärda enheters efterlevnadsproblem. 
 
-##  <a name="how-should-i-use-a-device-compliance-policy"></a>Hur använder jag en efterlevnadsprincip för enheter?
-Du kan använda efterlevnadsprinciper med villkorlig åtkomst om du endast vill tillåta enheter som uppfyller efterlevnadsprincipens regler för åtkomst till e-post och andra tjänster.
+Reglerna omfattar följande:
 
-Du kan också använda efterlevnadsprinciper utan villkorlig åtkomst.
-När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. Men när du använder efterlevnadsprinciper separat tillämpas inga åtkomstbegränsningar på företagsresurser.
+- Använd lösenord för att få åtkomst till enheter
+- Kryptering
+- Om enheten är jailbrokad eller rotad
+- Lägsta tillåtna version av operativsystemet
+- Högsta tillåtna version av operativsystemet
+- Enheten måste ligga på eller under nivån för skydd mot mobilhot
 
-Du distribuerar efterlevnadsprinciper till användarna. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven. Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats, finns i Hantera inställningar och funktioner på dina enheter.
+<!---##  Concepts
+Following are some terms and concepts that are useful to understanding how to use compliance policies.
 
-##  <a name="concepts"></a>Begrepp
-Nedan visas några termer och begrepp som är användbara för att förstå hur du kan använda efterlevnadsprinciper.
+### Device compliance requirements
+Compliance requirements are essentially rules like requiring a device PIN or encryption that you can specify as required or not required for a compliance policy.
 
-### <a name="compliance-requirements"></a>Efterlevnadskrav
-Efterlevnadskrav är i stort sett regler som kräver en enhets PIN-kod eller kryptering, vilket du kan ange att det krävs eller inte krävs för en efterlevnadsprincip.
-
-<!---### Actions for noncompliance
+### Actions for noncompliance
 
 You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
 When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
@@ -66,14 +67,22 @@ compliance issues on the device. You can also use this time to create your actio
 
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
-##  <a name="differences-between-the-classic-intune-admin-console-and-intune-in-the-azure-portal"></a>Skillnader mellan den klassiska Intune-administratörskonsolen och Intune i Azure-portalen
+##  <a name="how-should-i-use-a-device-compliance-policy"></a>Hur använder jag en efterlevnadsprincip för enheter?
 
+### <a name="using-ems-conditional-access"></a>Använda villkorlig EMS-åtkomst
+Du kan använda efterlevnadsprinciper med villkorlig EMS-åtkomst om du endast vill tillåta enheter som uppfyller en eller flera efterlevnadsprincipens regler för åtkomst till e-post och andra företagsresurser.
 
-Om du har använt den klassiska Intune-administratörskonsolen tidigare, bör du observera följande skillnader om du ska övergå till det nya efterlevnadsarbetsflödet i Azure-portalen:
+### <a name="not-using-ems-conditional-access"></a>Inte använda villkorlig EMS-åtkomst
+Du kan också använda principer för enhetsefterlevnad oberoende av villkorlig EMS-åtkomst.
+När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. Men när du använder efterlevnadsprinciper separat tillämpas inga åtkomstbegränsningar på företagsresurser.
 
+Du distribuerar efterlevnadsprinciper till användarna. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven. Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats, finns i Hantera inställningar och funktioner på dina enheter.
+
+##  <a name="intune-classic-admin-console-vs-intune-azure-preview-portal"></a>Den klassiska Intune-administratörskonsolen och Intune Azure Preview-portalen
+
+Om du har använt den klassiska Intune-administratörskonsolen bör du observera följande skillnader om du ska övergå till det nya efterlevnadsarbetsflödet i Azure Portal:
 
 -   Efterlevnadsprinciper skapas separat för varje plattform som stöds i Azure-portalen. I Intune-administratörskonsolen är en efterlevnadsprincip gemensam för alla plattformar som stöds.
-
 
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
@@ -81,15 +90,10 @@ Om du har använt den klassiska Intune-administratörskonsolen tidigare, bör du
 
 ##  <a name="next-steps"></a>Nästa steg
 
-[Kom igång med efterlevnadsprinciper](get-started-with-device-compliance.md)
+[Komma igång med principer för enhetsefterlevnad](get-started-with-device-compliance.md)
 
 
 <!---### See also
 
 Conditional access--->
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

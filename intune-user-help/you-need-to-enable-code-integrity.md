@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: db5714009d4d0bcdd77be23314e4f2ff4db44b6e
-ms.openlocfilehash: d73777a0fb6cb981d57c92740a70e9d3058c03cb
-ms.lasthandoff: 12/21/2016
+ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
+ms.openlocfilehash: 4a1639c289e335d4f50c549da7b7d895dd2a10bb
+ms.lasthandoff: 03/16/2017
 
 
 ---
@@ -32,9 +32,9 @@ För att skydda organisationens information krävs olika säkerhetstyper som fö
 Kodintegritet aktiveras automatiskt när systemet är aktivt använder Säker start.
 
 > [!Tip]
-> Att aktivera Säker start är en avancerad uppgift. Om du använder en mobil Windows-enhet kan du kontakta IT-administratören om du behöver hjälp. Om du använder en datorenhet kan du kontakta IT-administratören.
+> Att aktivera Säker start är en avancerad uppgift. Vi rekommenderar att du kontaktar IT-administratören om du behöver hjälp med åtgärden.
 
-<!--Or, see the section “To re-enable Secure Boot” on the [Disabling Secure Boot](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) page to try enabling Secure Boot yourself.-->
+Om du känner dig trygg och vill fortsätta med att aktivera säker start på egen hand kan du läsa avsnittet ”Återaktivera Säker start” på sidan [Inaktivera Säker start](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

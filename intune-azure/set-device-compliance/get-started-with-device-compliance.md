@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: a3e3d4968623f29e320f1fcca8243c861c7caab4
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
+ms.openlocfilehash: 0c0d2f73e48864caabdec6e83c2fdf58db5a0630
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -28,19 +28,20 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-I det här avsnittet får du lära dig mer om vad som krävs innan du kan börja skapa en enhetsefterlevnadsprincip. Du får också en snabb överblick över vad du kan se och göra i Azure-portalen. Om enhetsefterlevnad är ett nytt begrepp för dig kan du vill läsa det här avsnittet. Här får du information om vad enhetsefterlevnad är och hur du kan använda den i ditt företag.
+I det här avsnittet lär du dig följande: 
+
+- Vad du behöver innan du kan börja skapa en princip för enhetsefterlevnad.
+- En snabb överblick över vad du kan se och göra i Intune Azure Preview Portal. 
+
+Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du läser [det här avsnittet](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance). Här får du information om vad enhetsefterlevnad är och hur du kan använda den i din organisation.
 
 ##  <a name="pre-requisites"></a>Förutsättningar
-
 
 -   En prenumeration på Intune
 
 -   En prenumeration med Azure Active Directory
 
-
-
 ##  <a name="supported-platforms"></a>Plattformar som stöds:
-
 
 -   Android
 
@@ -54,8 +55,7 @@ I det här avsnittet får du lära dig mer om vad som krävs innan du kan börja
 
 ##  <a name="azure-portal-workflow"></a>Arbetsflöde i Azure-portalen
 
-
-Här är en översikt över hur du kan skapa och hantera enhetsefterlevnad i Azure-portalen.
+Här är en översikt över hur du kan skapa och hantera enhetsefterlevnad i Azure Preview Portal.
 
 <!---### Overview
 

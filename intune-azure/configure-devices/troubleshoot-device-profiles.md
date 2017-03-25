@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,8 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 962eb30ada84355c1aceacbf8f487b0f5b3cf1f2
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -34,14 +35,14 @@ När en princip eller app distribueras börjar Intune genast att uppmana enheten
 
 Om enheten inte kontaktar tjänsten för att be om principen när den första aviseringen har skickats, görs ytterligare tre försök.  Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
 
-- iOS och Mac OS X: Var 6:e timme.
+- iOS och macOS: Var 6:e timma.
 - Android: Var 8:e timme.
 - Windows Phone: Var 8:e timme.
 - Windows 8.1- och Windows 10-datorer som har registrerats som enheter: Var 8:e timme.
 
 Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
 
-- iOS och Mac OS X: Var 15:e minut i 6 timmar och därefter var 6:e timme.
+- iOS och macOS: Var 15:e minut i 6 timmar och därefter var 6:e timma.
 - Android: Var 3:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme.
 - Windows Phone: Var 5:e minut i 15 minuter, därefter var 15:e minut i 2 timmar och sedan var 8:e timme.
 - Windows-datorer som registrerats som enheter: Var 3:e minut i 30 minuter och därefter var 8:e timme.
@@ -499,8 +500,3 @@ Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöv
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
-
-
-<!--HONumber=Feb17_HO3-->
-
-

@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 2b60f327c2e48c3c933a6cff0a68df138df4dd3d
-ms.openlocfilehash: ffc912af791c4b243877f026a554cc14b614ffa0
-ms.lasthandoff: 01/05/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/05/2017
 
 # <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Skicka loggar till din IT-administratör via USB-kabel
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa din IT-administratör att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg__.
+Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
 > Innan du börjar ska du kontrollera att du har din IT-administratörs e-postadress redo. Du hittar den på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen.

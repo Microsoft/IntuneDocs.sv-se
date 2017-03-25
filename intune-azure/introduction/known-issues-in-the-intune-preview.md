@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: ee4422f462270b6466f11721aa7dc8cb2d432f7d
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
+ms.openlocfilehash: ec3f87994b19591bda4ec201eac3c839798d634c
+ms.lasthandoff: 03/15/2017
 
 
 ---
@@ -38,4 +38,7 @@ Om du vill föreslå att en ny funktion läggs till i Intune kan du skicka en ra
 ## <a name="administration-and-accounts"></a>Administration och konton
 
 - Globala administratörer (kallas även innehavaradministratörer) kan fortsätta att utföra dagliga administrationsuppgifter utan en separat Intune- eller EMS-licens (Enterprise Mobility Suite). Om globala administratörer vill använda tjänsten, t.ex. för att registrera sina egna enheter, företagsenheter eller för att använda Intunes företagsportal, behöver de dock en Intune- eller EMS-licens precis som andra användare.
+
+## <a name="apple-enrollment-profile-migration"></a>Migrering av Apple-registreringsprofil
+- Under de kommande månaderna kommer Intune att aktivera distributionshanteringen av Apples program för enhetsregistrering och Apple Configurator via nya Azure Portal. Om du tar bort Apples DEP-token och inte överför en uppdaterad token, så återställs den ursprungliga token i nya Azure Portal som en del av migreringen av ditt Intune-konto. Om du vill ta bort denna token och förhindra DEP-registrering tar du helt enkelt bort token i Azure Portal. 
 

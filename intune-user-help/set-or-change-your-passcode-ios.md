@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/24/2016
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: fc22acb9f0c08491852592f41dc60bef0fcf0928
-ms.openlocfilehash: 9e616d6368a40e3ae06303cf3556b5e0760fb477
-ms.lasthandoff: 12/21/2016
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: fbb3143baa0063343d639d2df6101ebaec98ee65
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2016
 
 Om din iOS-enhet inte följer IT-administratörens princip för lösenord visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
-IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken eller en blandning av siffror, bokstäver och tecken. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
+IT-administratören kan ange fler än ett krav för lösenord. Lösenordet kan till exempel behöva innehålla ett visst antal tecken eller en blandning av siffror, bokstäver och tecken. Eftersom mer än ett krav kan anges kan de här anvisningarna enbart förklara hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav. Dessa lösenord används exempelvis för att komma åt enheten från låsskärmen.
 
 Om du har problem med att ange ett lösenord som uppfyller kraven för lösenord kan du be IT-administratören om hjälp.
 

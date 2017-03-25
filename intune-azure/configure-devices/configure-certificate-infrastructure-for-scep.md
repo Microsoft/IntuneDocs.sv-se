@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 8f713769e0b8a13e91e6d9991e4e7415e1da22a2
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: ea910594195313978d6defae529a526bc0310022
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurera certifikatinfrastrukturen för SCEP i Microsoft Intune
@@ -54,7 +54,7 @@ Tillåt alla portar och protokoll som behövs för åtkomst till domänen på de
 Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/en-us/library/dn584107.aspx) eller en proxy från en annan leverantör.
 
 
-### <a name="a-namebkmkcertsandtemplatesacertificates-and-templates"></a><a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
+### <a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
 
 |Objekt|Information|
 |----------|-----------|
@@ -63,13 +63,13 @@ Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel
 |**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från offentlig certifikatutfärdare, du installerar och binder SSL-certifikatet i IIS på NDES-servern.|
 |**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren och distribuerar den till enheterna med hjälp av certifikatprofilen för den betrodda certifikatutfärdaren.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
-### <a name="a-namebkmkaccountsaaccounts"></a><a name="BKMK_Accounts"></a>Konton
+### <a name="BKMK_Accounts"></a>Konton
 
 |Namn|Information|
 |--------|-----------|
 |**NDES-tjänstkonto**|Du anger ett domänanvändarkonto som används som NDES-tjänstkontot|
 
-## <a name="a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure"></a><a name="BKMK_ConfigureInfrastructure"></a>Konfigurera infrastrukturen
+## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurera infrastrukturen
 Innan du kan konfigurera certifikatprofiler måste du utföra följande åtgärder, som kräver kunskaper om Windows Server 2012 R2 och Active Directory-certifikattjänster (ADCS):
 
 **Uppgift 1**: Skapa ett NDES-tjänstkonto
@@ -108,7 +108,7 @@ I det här steget kommer du att:
     -   På fliken **Tillägg** kontrollerar du att **beskrivningen av användningsprinciper** omfattar **Klientautentisering**.
 
         > [!IMPORTANT]
-        > För iOS- och Mac OS X-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
+        > För iOS- och macOS-certifikatmallar: På fliken **Tillägg** redigerar du **Nyckelanvändning** och ser till att **Signaturen är bevis för ursprung** inte är markerat.
 
     -   På fliken **Säkerhet** lägger du till NDES-tjänstekontot och ger det **Registreringsrättigheter** för mallen. Intune-administratörer som ska skapa SCEP-profiler behöver **läsrättigheter** så att de kan bläddra till mallen när de skapar SCEP-profiler.
 
@@ -118,7 +118,7 @@ I det här steget kommer du att:
 3.  Granska **Giltighetsperioden** på mallens flik **Allmänt** . Som standard använder Intune värdet som konfigurerats i mallen. Du kan dock välja att konfigurera certifikatutfärdaren att tillåta att den som begär anger ett annat värde, som du sedan kan ställa in i Intune-administratörskonsolen. Om du alltid vill använda värdet i mallen kan du hoppa över resten av det här steget.
 
     > [!IMPORTANT]
-    > iOS- och Mac OS X-plattformen använder alltid värdet i mallen, oavsett andra konfigurationer som du gör.
+    > iOS och macOS använder alltid värdet i mallen, oavsett andra konfigurationer som du gör.
 
 Här följer skärmdumpar av en exempelkonfiguration av mallen.
 

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,9 +17,9 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 9862ef9fd1d4827ae99480cd2cf2eac8dfca54d8
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
+ms.openlocfilehash: b80ced5cbaee26dfe8cb4b2f5e46d93af9733788
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,6 +28,7 @@ ms.lasthandoff: 02/21/2017
 
 Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar din IT-administratör via kontaktinformationen på [Företagsportalens webbplats](http://portal.manage.microsoft.com).
 
+- [Kontrollera efterlevnad på din Android-enhet](check-compliance-on-your-device-android.md)
 - [Använda utförlig loggning för att hjälpa IT-administratören att åtgärda enhetsproblem](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 - [Skicka loggar till IT-administratören via e-post](send-logs-to-your-it-admin-by-email-android.md)
 - [Skicka loggar till din IT-administratör via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
