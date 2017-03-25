@@ -41,7 +41,7 @@
 #### [Registrera iOS-enheter med programmet för enhetsregistrering](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
 ### [Registrera enheter med enhetsregistreringshanteraren](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrera macOS-enheter](enroll-devices/enroll-macos-devices.md)
-### [Registrera Windows-enheter](enroll-devices/enroll-window-devices.md)
+### [Registrera Windows-enheter](enroll-devices/enroll-windows-devices.md)
 ### Hantera enhetsregistrering
 #### [Skapa allmänna villkor](enroll-devices/create-terms-and-conditions.md)
 #### [Ange registreringsbegränsningar](enroll-devices/set-enrollment-restrictions.md)
@@ -108,6 +108,11 @@
 ## [Plan and design](configure-devices/plan-and-design.md) --->
 ## Gör så här för att
 ### [Konfigurera enhetsprofiler](configure-devices/how-to-create-device-profiles.md)
+
+### [Konfigurera enhetsfunktioner](configure-devices/how-to-configure-device-features.md)
+#### [iOS](configure-devices/device-features-for-ios.md)
+#### [macOS](configure-devices/device-features-for-macos.md)
+
 ### [Konfigurera enhetsbegränsningar](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
 #### [iOS](configure-devices/device-restrictions-for-ios.md)
