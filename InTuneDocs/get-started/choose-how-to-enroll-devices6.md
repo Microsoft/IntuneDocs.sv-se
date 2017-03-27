@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/14/2017
+ms.date: 03/27/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,6 +17,7 @@ ms.custom: intune-classic EXPIERIMENT
 translationtype: Human Translation
 ms.sourcegitcommit: b4295fbc9df88fa537f18b1280dfcc32702ccc51
 ms.openlocfilehash: 173e95ac2d0039accb3465386bf67fb3dee90723
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -43,11 +44,6 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 
   - **Tagga med IMEI-nummer** – Genom att importera IMEI-numren (International Mobile Equipment Identity) för de företagsägda enheterna kan du tagga dem som företagsägda enheter i Intune. Detta är det enda sättet på vilket du an identifiera dedikerade ("enanvändarläge") Windows- och Android-enheter (i ”enandvändarläge”) som företagsägda. iOS-enheter som inte har registreras med Apples enhetsregistreringsprogram eller Apple Configurator kan även taggas med IMEI-nummer. När du har fördeklarerat enheten så att den taggas som företagsenhet kan du distribuera enheterna till användarna. Användarna kan sedan registrera sina enheter som dedikerade enheter genom att installera företagsportalen så att du får åtkomst till företagsresurser som e-post, appar och data.
 
-  > [!div class="button"]
-  [< Bakåt](choose-how-to-enroll-devices3.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+> [!div class="button"]
+[< Bakåt](choose-how-to-enroll-devices3.md)
 

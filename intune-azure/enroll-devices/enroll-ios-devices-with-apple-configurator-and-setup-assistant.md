@@ -23,7 +23,7 @@ ms.lasthandoff: 02/18/2017
 
 ---
 
-# <a name="enroll-ios-devices-with-apple-configurator-and-setup-assistant"></a>Registrera iOS-enheter med Apple Configurator och installationsassistenten 
+# <a name="enroll-ios-devices-with-apple-configurator-and-setup-assistant"></a>Registrera iOS-enheter med Apple Configurator och installationsassistenten
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -102,50 +102,39 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 3. Välj **Exportera profil** på bladet för profilen.
 
 4. Kopiera profilens webbadress till [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) med iOS-enheten ansluten. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
-
   För stöd för Apple Configurator 2 måste 2.0-profilens URL redigeras. Det gör du genom att ersätta den här koden:
     ```
     https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
     ```
     Med den här koden:
-
     ```
     https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
     ```
-
-   Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
+Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
 
 5. Överför den här profil-URL:en till Apples enhetsregistreringsprogramtjänst för att definiera den Intune-profil som används av iOS-enheter.
+ 1.  På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
 
+  > [!WARNING]
+  > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du ansluter den.
 
-    1.  På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
+  2. I fönstret **inställningar** väljer du **Servrar** och väljer plustecknet (+) för att starta MDM-serverguiden. Välj **Nästa**.
 
-         > [!WARNING]
-         > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du ansluter den.
+  3. Ange **namnet** och **registrerings-URL:en** för MDM-servern från steg 6 under Registrering av installationsassistent för iOS-enheter med Microsoft Intune. För registrerings-URL:en anger du URL:en för registreringsprofilen som exporterats från Intune. Välj **Nästa**.  
 
-    2. I fönstret **inställningar** väljer du **Servrar** och väljer plustecknet (+) för att starta MDM-serverguiden. Välj **Nästa**.
+  Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
 
-    3. Ange **namnet** och **registrerings-URL:en** för MDM-servern från steg 6 under Registrering av installationsassistent för iOS-enheter med Microsoft Intune. För registrerings-URL:en anger du URL:en för registreringsprofilen som exporterats från Intune. Välj **Nästa**.  
+  4.  Anslut iOS-mobilenheterna till Mac-datorn med en USB-adapter.
 
-       Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
+  > [!WARNING]
+  > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du startar Installationsassistenten.
 
-    4.  Anslut iOS-mobilenheterna till Mac-datorn med en USB-adapter.
-
-        > [!WARNING]
-        > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du startar Installationsassistenten.
-
-    5.  Välj **Förbereda**. I fönstret **Förbered iOS-enhet** väljer du först **Manuellt** och sedan **Nästa**.
-
-    6. I fönstret **Registrera i MDM-server** väljer du först servernamnet som du skapat och sedan **Nästa**.
-
-    7. I fönstret **Övervaka enheter** väljer du först övervakningsnivån och sedan **Nästa**.
-
-    8. I fönstret **Skapa en organisation** väljer du **Organisation** eller skapar en ny organisation och väljer sedan **Nästa**.
-
-    9. I fönstret **Konfigurera installationsassistenten för iOS** väljer du stegen som visas för användaren och väljer sedan **Förbered**. Autentisera för att uppdatera förtroendeinställningarna om du uppmanas att göra det.  
-
-    10. När iOS-enheten har slutfört förberedelserna kopplar du från USB-kabeln.  
-
+  5.  Välj **Förbereda**. I fönstret **Förbered iOS-enhet** väljer du först **Manuellt** och sedan **Nästa**.
+  6. I fönstret **Registrera i MDM-server** väljer du först servernamnet som du skapat och sedan **Nästa**.
+  7. I fönstret **Övervaka enheter** väljer du först övervakningsnivån och sedan **Nästa**.
+  8. I fönstret **Skapa en organisation** väljer du **Organisation** eller skapar en ny organisation och väljer sedan **Nästa**.
+  9. I fönstret **Konfigurera installationsassistenten för iOS** väljer du stegen som visas för användaren och väljer sedan **Förbered**. Autentisera för att uppdatera förtroendeinställningarna om du uppmanas att göra det.  
+  10. När iOS-enheten har slutfört förberedelserna kopplar du från USB-kabeln.  
 6.  **Distribuera enheter**.
     Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
 
