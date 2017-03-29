@@ -18,6 +18,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
 ms.openlocfilehash: 2da96c2ffb6cc826494972ab8c88ce62981eeae6
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -53,7 +54,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Antal minuter av inaktivitet innan skärmen stängs av**|Anger antalet minuter av inaktivitet innan enheten låses automatiskt.|Ja|Ja|
 |**Lösenordets giltighetstid (i dagar)**|Anger antal dagar innan ett lösenord måste ändras.|Ja|Ja|
 |**Kom ihåg tidigare lösenord**|Anger antalet lösenord som har använts tidigare som ska sparas.|Ja|Ja|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Förhindrar återanvändning av tidigare lösenord.|Ja|Ja|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord**|Förhindrar återanvändning av tidigare lösenord.|Ja|Ja|
 |**Lösenordskvalitet**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.|Ja|Ja|
 |**Tillåt fingeravtrycksupplåsning**|Tillåter att enheten kan låsas upp med ett fingeravtryck.|Nej|Ja|
 |**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 5 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja|Nej|
@@ -209,9 +210,4 @@ Intune har för närvarande stöd för ett begränsat antal anpassade Android-pr
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
