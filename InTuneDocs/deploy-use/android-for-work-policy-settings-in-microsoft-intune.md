@@ -48,7 +48,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 6 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|
 |**Antal tillåtna upprepade felinloggningar innan arbetsprofilen tas bort**|Anger antalet tillåtna felinloggningar innan arbetsprofilen på enheten tas bort. En fullständig enhetsrensning utförs inte.|
 |**Kom ihåg tidigare lösenord**|Hindrar återanvändning av lösenord som har använts tidigare.|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Anger antalet lösenord som har använts tidigare som ska sparas.|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord**|Anger antalet lösenord som har använts tidigare som ska sparas.|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|
 |**Tillåt fingeravtrycksupplåsning**<br>(Android 6 och senare)|Låter dig använda ett fingeravtryck för att låsa upp enheter med den här funktionen.|
 
