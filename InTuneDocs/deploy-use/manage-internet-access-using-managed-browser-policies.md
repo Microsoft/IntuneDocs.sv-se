@@ -110,7 +110,7 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
     -   Port 443 för http
 
-    Jokertecken i portnummer stöds inte. Till exempel stöds inte **http&colon;//www&period;contoso&period;com:*;** och **http&colon;//www&period;contoso&period;com: /*;**.
+    Jokertecken i portnummer stöds inte. Till exempel stöds inte **http&colon;//www&period;contoso&period;com:*;**och**http&colon;//www&period;contoso&period;com: /*;**.
 
 -   Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
 

@@ -199,7 +199,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Antal minuter av inaktivitet innan skärmen stängs av**|Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses|
 |**Lösenordets giltighetstid (i dagar)**|Anger efter hur lång tid enhetens lösenord måste ändras|
 |**Kom ihåg tidigare lösenord**|Anger om du vill förhindra att användaren återanvänder tidigare använda lösenord|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Anger antalet tidigare använda lösenord som enheten sparar|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord**|Anger antalet tidigare använda lösenord som enheten sparar|
 |**Kräv lösenord när enheten återgår från viloläge**|Anger att användaren måste ange ett lösenord för att låsa upp enheten (endast Windows 10 Mobile)|
 
 ### <a name="encryption"></a>Kryptering
