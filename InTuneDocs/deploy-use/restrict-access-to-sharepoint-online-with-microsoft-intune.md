@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
 ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -100,7 +101,7 @@ Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentica
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>Konfigurera villkorlig åtkomst för SharePoint Online
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Steg 1: Konfigurera Active Directory-säkerhetsgrupper
-Konfigurera säkerhetsgrupper för Azure Active Drive Directory för villkorlig åtkomstpolicy innan du börjar. Du kan konfigurera dessa grupper i **administrationscenter för Office 365 **, eller i **Intune-kontoportal**. Du använder de här grupperna när du vill fokusera på eller undanta användare från principen. När en användare är angiven som mål för en policy, måste varje enhet som de använder vara godkänd för att få åtkomst till resurser.
+Konfigurera säkerhetsgrupper för Azure Active Drive Directory för villkorlig åtkomstpolicy innan du börjar. Du kan konfigurera dessa grupper i **administrationscenter för Office 365**, eller i **Intune-kontoportal**. Du använder de här grupperna när du vill fokusera på eller undanta användare från principen. När en användare är angiven som mål för en policy, måste varje enhet som de använder vara godkänd för att få åtkomst till resurser.
 
 Du kan ange två grupptyper i en SharePoint Online policy:
 
@@ -195,9 +196,4 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 
 ### <a name="see-also"></a>Se även
 [Skydda åtkomsten till e-post och O365-tjänster med Microsoft Intune](restrict-access-to-email-and-o365-services-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
