@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b0157f1021ae7c98392dc3c96481a4514758b059
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 9f98a786e97afbb93628609808637def0a7e8fe8
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -41,7 +41,7 @@ I Windows kan du använda verktyget **netsh wlan** för att exportera en befintl
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
+3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.

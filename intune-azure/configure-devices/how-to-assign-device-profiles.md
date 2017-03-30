@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 861e14227b847422d584d69364315a2418a986de
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 238c67c3edb843ef62deccb42cfa2879232e1434
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/18/2017
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
-1. På bladet **Konfigurera enheter** väljer du **Hantera** > **Profiler**.
+3. Välj **Enhetskonfiguration** på **Intune**-bladet.
+1. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 2. I listan över profilblad väljer du den profil som du vill hantera och sedan **Hantera** > **Tilldelningar** på bladet <*profilnamn*> **Rapporter** .
 3. Klicka på **Välj grupper** på nästa blad och välj sedan de Azure AD-grupper som du vill tilldela profilen på bladet **Välj grupper**. Du kan hålla ned **CTRL**-tangenten för att markera flera grupper.
 4. När du är klar väljer du **Välj** på bladet **Välj grupper**.

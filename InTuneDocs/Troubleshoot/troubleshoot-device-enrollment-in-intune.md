@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/01/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 785e7514c6c6109cfec61a47ae2fc7183c7c2330
-ms.openlocfilehash: 91c6a040f8fd3990c8d48087ac7397db8360f666
-ms.lasthandoff: 01/25/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 3d4a89cd8e6e57f5a1e268dcda98cfb3c68c5587
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -35,9 +35,9 @@ Kontrollerar att du har konfigurerat Intune korrekt så att registrering är akt
 
 -    [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
 -    [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--    [Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
 -    [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
-
+-    [Konfigurera hantering av Android-enhet](/intune/deploy-use/set-up-android-management-with-microsoft-intune) – Inga ytterligare åtgärder krävs
+-    [Konfigurera hantering av Android for Work-enhet](/intune/deploy-use/set-up-android-for-work)
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
@@ -149,7 +149,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
 
 
-**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com)) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
@@ -234,7 +234,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5.    På varje överordnat certifikat väljer du **Visa certifikat**.
-6.    Välj fliken **Information** och välj **Kopiera till fil... **.
+6.    Välj fliken **Information** och välj **Kopiera till fil...**.
 7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
 8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
 9.    Starta om AD FS-servrarna.
@@ -279,6 +279,18 @@ För att åtgärda problemet måste användarna trycka på knappen **Konfigurera
   ![Skärmen Konfiguration av företagsåtkomst](./media/ios_cp_app_company_access_setup.png)
 
 När de registrerats återgår enheterna till ett felfritt tillstånd och återfår åtkomst till företagets resurser.
+
+### <a name="verify-ws-trust-13-is-enabled"></a>Kontrollera att WS-Trust 1.3 är aktiverat
+**Problem** Det går inte att registrera iOS-enheter med programmet för enhetsregistrering (DEP)
+
+Registrering av DEP-enheter med användartillhörighet kräver att WS-Trust 1.3-slutpunkten användarnamn/kombinerad är aktiverad för att kunna begära användartokens. Active Directory aktiverar den här slutpunkten som standard. Hämta en lista med aktiverade slutpunkter med hjälp av PowerShell-cmdleten Get-AdfsEndpoint, som söker efter slutpunkten trust/13/UsernameMixed. Exempel:
+
+      Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
+
+Mer information finns i [dokumentationen för Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+Mer information finns i [Metodtips för att skydda Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Om du behöver ytterligare hjälp för att avgöra om WS-Trust 1.3 användarnamn/kombinerad är aktiverat hos din identitetsfederationsprovider, kontaktar du Microsoft Support om du använder ADFS eller din tredjeparts identitetsleverantör.
+
 
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
 **Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS-enhet.

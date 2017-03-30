@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: f7504657f5fb2d73242f25f2f059c8c4e7ab1547
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 4a921334b0cd402dba91eab665ff1a23290c82eb
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -140,7 +140,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
     |**Kräv enhetens efterlevnad med företagsprinciper för att få åtkomst**|Den här inställningen tillåter användning av appen endast om enheten inte är jailbreakad eller rotad.|
     |**Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**|I fältet **Tidsgräns** anger du hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt efter att den har öppnats.|
     |**Offline-respitperiod**|Ange hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.|
-    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är inte FIPS 140-2-certifierad.|
+    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är endast FIPS 140-2-kompatibel för Samsung KNOX-enheter.|
     |**Blockera skärmdump** (endast Android-enheter)|Den här inställningen anger att skärmdumpsfunktionen i enheten är blockerad när någon använder den här appen.|
 
 4. När du är klar väljer du **Spara princip**.

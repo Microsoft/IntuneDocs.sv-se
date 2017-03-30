@@ -3,10 +3,10 @@ title: "Nyheter i Microsoft Intune-förhandsversionen"
 titleSuffix: Intune Azure preview
 description: "Ta reda på vad som är nytt i förhandsversionen av Intune Azure"
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: mtillman
+ms.author: mtillman
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 03/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 92bb81440b9374b2b0b433b32fc0a1301998ea80
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 586bdab54ee60ba8d620857ab3506aa27622d17a
+ms.lasthandoff: 03/17/2017
 
 ---
 
@@ -37,7 +37,9 @@ I takt med att den offentliga förhandsversionen utvecklas och fler funktioner l
 
 För iOS 9.3-enheter och senare har Intune lagt till stöd för **Borttappat läge**. Nu kan du låsa en enhet för att förhindra all användning och visa ett meddelande och ett telefonnummer på enhetens låsskärm.
 
-Användaren kommer inte att kunna låsa upp enheten förrän en administratör har inaktiverat borttappat läge. När Bortappat läge har aktiverats kan du använda åtgärden Hitta enhet för att visa enhetens geografiska plats på en karta i Intune-konsolen.
+Användaren kommer inte att kunna låsa upp enheten förrän en administratör har inaktiverat borttappat läge. När Borttappat läge har aktiverats kan du använda åtgärden **Hitta enhet** för att visa enhetens geografiska plats på en karta i Intune-konsolen.
+
+Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge.
 
 Mer information finns i [Vad är Microsoft Intune-enhetshantering](/intune-azure/manage-devices/what-is)?
 

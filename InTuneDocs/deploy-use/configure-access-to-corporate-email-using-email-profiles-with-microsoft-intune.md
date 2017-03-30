@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
-ms.openlocfilehash: d60b9afdf7fe9f78dd5cc4693259b8667fb17299
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 832c7dd8016bb30a24cc1748f84e5692130cb658
+ms.openlocfilehash: a37f217d3ce3c87b9aa673a8a7fc93ad390c6a68
+ms.lasthandoff: 03/23/2017
 
 
 ---
@@ -39,27 +39,21 @@ Du kan använda e-postprofiler för att konfigurera den interna e-postklienten p
 -    Windows 10 (för datorer), Windows 10 Mobile, och senare
 -    iOS 8.0 och senare
 -    Samsung KNOX Standard (4.0 och senare)
--    Android for Work
-
->[!NOTE]
->Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
+-    Android for Work (e-postappar från tredje part, den inbyggda e-postappen finns bara i den personliga profilen)
 
 Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur många e-postmeddelanden som ska synkroniseras och, beroende på enhetstypen, vilka innehållstyper som ska synkroniseras.
 
->[!NOTE]
->
->Om användaren har installerat en e-postprofil innan en profil skapas av Intune, beror resultatet av e-postprofildistributionen i Intune på enhetsplattformen:
+Om användaren har installerat en e-postprofil innan en profil skapas av Intune, beror resultatet av e-postprofildistributionen i Intune på enhetsplattformen:
 
->**iOS**: En befintlig duplicerad e-postprofil identifieras baserat på värdnamn och e-postadress. Den duplicerade e-postprofilen som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen meddelar användarna att de inte är kompatibla på grund av deras manuellt konfigurerade e-postprofil och uppmanar dem att ta bort profilen. Användarna bör ta bort e-postprofilen så att Intune-profilen kan konfigureras. För att förhindra det här problemet ber du användarna att göra registreringen före installation av en e-postprofil så att Intune kan konfigurera profilen.
+**iOS**<br>En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Den duplicerade e-postprofilen som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen meddelar användarna att de inte är kompatibla på grund av deras manuellt konfigurerade e-postprofil och uppmanar dem att ta bort profilen. Användarna bör ta bort e-postprofilen så att Intune-profilen kan konfigureras. För att förhindra det här problemet ber du användarna att göra registreringen före installation av en e-postprofil så att Intune kan konfigurera profilen.
 
->**Windows**: En befintlig duplicerad e-postprofil identifieras baserat på värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
+**Windows**<br>En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
 
->**Samsung KNOX**: En befintlig duplicerad e-postprofil identifieras baserat på e-postadressen, och den skrivs över med Intune-profilen. Om användaren konfigurerar det kontot skrivs det över igen av Intune-profilen. Observera att detta kan orsaka förvirring för användaren.
+**Samsung KNOX**<br>En befintlig duplicerad e-postprofil identifieras utifrån e-postadressen, och den skrivs över med Intune-profilen. Om användaren konfigurerar det kontot skrivs det över igen av Intune-profilen. Observera att detta kan orsaka förvirring för användaren.
 
->Samsung KNOX använder inte värdnamn för att identifiera profilen. Därför rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom de kommer att skriva över varandra.
+Samsung KNOX använder inte värdnamn för att identifiera profilen. Därför rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom de kommer att skriva över varandra.
 
->**Android for Work**: Intune-profilen används bara för specifika e-postappar i enhetens arbetsprofil och påverkar inte e-postkonfigurationen i användarprofilen för enheten.
-
+**Android for Work**<br>Intune tillhandahåller två Android for Work-e-postprofiler, en för Gmail- och en för Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store, installeras i enhetens arbetsprofil och har stöd för anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postanslutningen. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
 
 ## <a name="secure-email-profiles"></a>Skydda e-postprofiler
 Du kan skydda e-postprofiler med ett certifikat eller med ett lösenord.

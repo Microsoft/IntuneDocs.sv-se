@@ -1,11 +1,11 @@
 ---
-title: "Så återställer du lösenordet från företagsportalens webbplats | Microsoft Docs"
+title: "Så här återställer du lösenordet från företagsportalens webbplats | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
 searchScope:
 - User help
 ROBOTS: 
-ms.reviewer: mamoriss
+ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: f293901d3865f0b10ed876e83b151cf59a046cba
-ms.openlocfilehash: 68725bb63ae2750e89a03c16027f8b4fd9111255
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 1c3b986df3e0d8a5ee54da0a91f37b445b4dd9f7
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -48,23 +48,23 @@ Så här återställer du lösenordet:
 
   ![Meddelande om att återställa lösenordet med en varning om att lösenordet för enheten återställs och information om hur användaren loggas ut. Knapparna för indata från användaren är Logga ut och Avbryt.](./media/iwp-reset-passcode-popup.png)
 
-4.  Välj **Logga ut** så får du ett meddelande om att lösenordet tas bort från enheten. Ta inte bort lösenordet om du inte har enheten med dig. Om någon annan har fysisk åtkomst till enheten har den personen åtkomst till nästan all information på enheten, både privat information och företagsinformation.
+5.  Välj **Logga ut** så får du ett meddelande om att lösenordet tas bort från enheten. Ta inte bort lösenordet om du inte har enheten med dig. Om någon annan har fysisk åtkomst till enheten har den personen åtkomst till nästan all information på enheten, både privat information och företagsinformation.
 
   ![Det andra meddelandet om återställning av lösenord med en varning om att lösenordet återställs för enheten och information om hur lösenordet tas bort från enheten. Meddelandet innehåller också information om hur du anger ett nytt lösenord via enhetsinställningarna.](./media/iwp-reset-passcode-2nd-popup.png)
 
+  Olika enheter har olika typer av lösenord.
 
-Eftersom olika enheter har olika typer av lösenord kan du se i tabellen nedan hur en återställning av lösenordet kan påverka din specifika enhet. 
+  **Android**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror
 
-    |Enhetstyp|Vad händer när du återställer|
-    |------------|-----------|
-    |Android|Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror|
-    |iOS|Tar bort det befintliga lösenordet men skapar inte ett tillfälligt lösenord. Om du använder Touch-IDs fingeravtryckskanner för att öppna din enhet eller för att utföra inköp måste du konfigurera det igen.|
-    |Windows 10 Mobil|Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror. Om du använder Windows Hello-ansiktsigenkänning för att logga in stöds det fortfarande.|
-    |Windows Phone 8.1|Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som endast innehåller siffror.|
+  **iOS**: Tar bort det befintliga lösenordet, men skapar inte något tillfälligt lösenord. Om du använder Touch-ID:s fingeravtrycksläsare för att öppna din enhet eller för att utföra inköp, måste du konfigurera den igen.
 
-    5.  Lås upp enheten och ange ett nytt lösenord eller ändra det tillfälliga lösenordet genom att gå till enhetens **Inställningar**.
+  **Windows 10 Mobile**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror. Om du använder Windows Hello-ansiktsigenkänning för att logga in, stöds det fortfarande.
+    
+  **Windows Phone 8.1**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller siffror
 
-    Om du vill visa ett meddelande som bekräftar att lösenordet har återställts klickar du på meddelandeflaggan längst upp till höger på företagsportalens webbplats.
+6.  Lås upp enheten och ange ett nytt lösenord eller ändra det tillfälliga lösenordet genom att gå till enhetens **Inställningar**.
+
+Om du vill visa ett meddelande som bekräftar att lösenordet har återställts klickar du på meddelandeflaggan längst upp till höger på företagsportalens webbplats.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
 

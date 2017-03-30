@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/08/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: d8cb15d1b8c1c100f15084e43d2c3c4633fd64b5
-ms.openlocfilehash: f12d538b1f4cd327b893d234f2b558185cdd9d85
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -26,14 +26,24 @@ ms.lasthandoff: 03/09/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Du kan skapa en lista med IMEI-nummer (International Mobile Equipment Identity) för att identifiera dina företagsenheter. Enheterna behöver inte vara registrerade och har antingen statusen ”Registrerad” eller ”Ej kontaktad”. ”Ej kontaktad” innebär att enheten aldrig checkar in med Intune-tjänsten.
+Som IT-administratör kan du skapa och importera en fil med kommateckenavgränsade värden (CSV) som innehåller en lista med IMEI-nummer (International Mobile Equipment Identity) som identifierar företagsägda enheter. Varje IMEI-nummer kan innehålla information som anges i listan för administrativa ändamål.
 
-För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv) i två kolumner men utan rubrik. Lägg till IMEI-identifieraren i den vänstra kolumnen och informationen i den högra kolumnen. Det maximala antalet rader i kolumnen är för närvarande 500.
+## <a name="create-a-csv-file"></a>Skapa en CSV-fil
+För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv) i två kolumner men utan rubrik. Lägg till IMEI-identifieraren i den vänstra kolumnen och informationen i den högra kolumnen. Informationen är begränsad till 128 tecken. Den aktuella gränsen är 500 rader per CSV-fil.
 
-Om du öppnar CSV-listan i en textredigerare ser den ut ungefär så här:
+**Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil.
 
-01 234567 890123, enhetsinformation</br>
-02 234567 890123, enhetsinformation
+|||
+|-|-|
+|&lt;IMEI-nummer 1&gt;|&lt;Information om enhet nr 1&gt;|
+|&lt;IMEI-nummer 2&gt;|&lt;Information om enhet nr 2&gt;|
+
+    This .csv file when viewed in a text editor appears as:
+
+    ```
+    01 234567 890123,device details
+    02 234567 890123,device details
+    ```
 
 **Lägga till en CSV-lista över företagets identifierare**
 
@@ -48,11 +58,15 @@ Om du öppnar CSV-listan i en textredigerare ser den ut ungefär så här:
 > [!IMPORTANT]
 > Vissa Android-enheter har flera IMEI-nummer. Intune inventerar ett IMEI-nummer per enhet. Om du importerar ett IMEI-nummer men det inte är det IMEI-nummer som är inventerat i Intune så kommer enheten att klassificeras som en personlig enhet i stället för en enhet som ägs av företaget. Om du importerar flera IMEI-nummer för en enhet så visas registreringsstatus för icke-inventerade nummer som **Okänt**.
 
-**Ta bort en CSV-lista över företagets identifierare**
+Enheterna behöver inte vara registrerade när de har importerats och kan antingen ha statusen **Registrerad** eller **Ej kontaktad**. **Ej kontaktad** innebär att enheten aldrig har kommunicerat med Intune-tjänsten.
+
+## <a name="delete-a-csv-list"></a>Ta bort en CSV-lista
 
 1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Id:n för företagsenheter**.
 
 3. Välj **Ta bort**.
+
+Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers) finns i [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 

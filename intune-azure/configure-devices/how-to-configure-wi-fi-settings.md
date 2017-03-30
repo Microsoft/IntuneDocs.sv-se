@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: aea6d9868d91260dd7a3a4c3b1426f12fcc9f47d
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 34b906301fca2e91f2c014b9959c305a39f46af1
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -49,7 +49,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
+3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen på bladet **Skapa profil**.

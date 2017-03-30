@@ -16,9 +16,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 2d93edb688dbf296137a133f0b7ae065fc1cc89d
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 96756c4aa5afa52821614d5f7fbc6d0bca15895b
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -61,7 +61,7 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
+3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. Ange **Namn** och **Beskrivning** för VPN-profilen på bladet **Skapa profil**.

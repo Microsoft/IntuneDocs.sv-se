@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
-ms.openlocfilehash: ab4b244e733f973581216f3358fce0653609aaaa
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 9a814f6df407802b8e48626ed0e3f828c52c661b
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -59,7 +60,7 @@ När du konfigurerar och tillämpar principer för villkorlig åtkomst för en a
 
 ### <a name="when-the-device-is-not-compliant"></a>När enheten inte är kompatibel
 
-Om en princip för villkorlig åtkomst inte uppfylls, sätts enheten omedelbart i karantän och användaren får ett e-postmeddelande med något av följande karantänmeddelanden när de loggar in:
+Om en princip för villkorlig åtkomst inte uppfylls, sätts enheten omedelbart i karantän och användarna får ett e-postmeddelande med något av följande karantänmeddelanden när de loggar in:
 
 - Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med posten i Azure Active Directory.
 
@@ -174,7 +175,7 @@ Du kan exportera innehållet i rapporten och använda kolumnen **E-postadress** 
 ### <a name="step-3-configure-user-groups-for-the-conditional-access-policy"></a>Steg 3: Konfigurera användargrupper för principen för villkorlig åtkomst
 Principer för villkorlig åtkomst är avsedda för olika Azure Active Directory-säkerhetsgrupper med användare. Du kan också undanta vissa användargrupper från en princip för villkorlig åtkomst. När en användare är angiven som mål för en princip måste varje enhet de använder vara kompatibla för att få åtkomst till e-post.
 
-Du kan konfigurera dessa grupper i **administrationscenter för Office 365 **, eller i **Intune-kontoportal**.
+Du kan konfigurera dessa grupper i **administrationscenter för Office 365**, eller i **Intune-kontoportal**.
 
 Du kan ange två grupptyper i varje policy:
 
@@ -260,7 +261,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 -   Om en blockerad användare registrerar enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och åtgärdar inkompatibilitetsproblem försvinner blockeringen av åtkomst till e-post inom två minuter.
 
--   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka&6; timmar.
+-   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka 6 timmar.
 
 Några **exempelscenarier som beskriver hur du konfigurerar principer för villkorlig åtkomst som skyddar enhetsåtkomsten** finns i [Exempelscenarier för skydd av e-poståtkomst](restrict-email-access-example-scenarios.md).
 
@@ -275,9 +276,4 @@ På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen vä
 - [Skydda åtkomsten till SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 - [Skydda åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

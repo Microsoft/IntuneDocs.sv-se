@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: eb48265e4655117976c9847b1f5bee712f0c2e3c
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/18/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Använd arbetsbelastningen **Konfigurera enheter** i Microsoft Intune för att hantera inställningar och funktioner på alla enheter som du hanterar. Du kommer mest att använda den här arbetsbelastningen för att skapa enhetsprofiler som låter dig hantera och kontrollera en rad olika funktioner på enheter som du hanterar.
+Använd arbetsbelastningen **Enhetskonfiguration** i Microsoft Intune för att hantera inställningar och funktioner på alla enheter som du hanterar. Du kommer mest att använda den här arbetsbelastningen för att skapa enhetsprofiler som låter dig hantera och kontrollera en rad olika funktioner på enheter som du hanterar.
 
 När du öppnar den här arbetsbelastningen ser du följande alternativ:
 
@@ -41,8 +41,13 @@ Arbetsflödet för att skapa enhetsprofiler är likadant för alla profiler. Lä
 
 Du kan hantera följande funktioner på dina enheter:
 
+## <a name="device-features"></a>Enhetsfunktioner
+
+Med enhetsfunktioner kan du styra funktioner på iOS- och macOS-enheter, som t.ex. AirPrint, meddelanden och delade enhetskonfigurationer.
+Mer information finns i [Så här konfigurerar du inställningar för enhetsfunktioner](how-to-configure-device-features.md) Har stöd för: iOS och macOS.
+
 ## <a name="device-restrictions"></a>Enhetsbegränsningar
-Med enhetsbegränsningar kan du kontrollera en mängd olika inställningar och funktioner som du hanterar i flera kategorier, bland annat säkerhet, webbläsare, maskinvara och datadelning. Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS-enheter från att komma åt kameran på enheten.
+Med enhetsbegränsningar kan du styra en mängd olika inställningar för enheter som du hanterar i flera kategorier, bland annat säkerhet, webbläsare, maskinvara och datadelning. Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS-enheter från att komma åt kameran på enheten.
 Mer information finns i [Så här konfigurerar du inställningar för enhetsbegränsningar](how-to-configure-device-restrictions.md) Stöder: Android, iOS, macOS, Windows 10 och Windows 10 Team.
 
 ## <a name="email"></a>E-post
@@ -57,6 +62,10 @@ Mer information finns i [Så här konfigurerar du trådlösa inställningar](how
 Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheterna använder en profil för VPN-anslutning för att initiera en anslutning till VPN-servern. Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i din organisation, så att de enkelt och säkert kan ansluta till nätverket.
 Mer information finns i [Så här konfigurerar du VPN-inställningar](how-to-configure-vpn-settings.md).
 Stöder: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 och Windows 10.
+
+## <a name="education"></a>Utbildning
+Konfigurera alternativ för Windows Gör ett prov-app. När du konfigurerar dessa alternativ kan inga andra appar köras på enheten förrän provet har slutförts.
+Mer information finns i [Så här konfigurerar du utbildningsinställningar](how-to-configure-education-settings.md)
 
 ## <a name="certificates"></a>Certifikat
 Med den här profiltypen kan du konfigurera betrodda, SCEP- och PKCS-certifikat som kan tilldelas till enheter och användas för att autentisera trådlösa profiler, VPN- och e-postprofiler.

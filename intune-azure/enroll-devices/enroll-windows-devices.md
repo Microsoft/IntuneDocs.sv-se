@@ -5,7 +5,7 @@ description: "Förhandsversion av Intune Azure: Aktivera hantering av mobila enh
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 03/15/17
+ms.date: 03/21/17
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: a95aca706a4996d40e268a80c7c334ebb9854df5
-ms.openlocfilehash: 6cbaf8414452f11f0aa97616bbed2cf164b49ac0
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 609656c2831c09c67e911c8150d31f38faad020b
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -33,23 +33,13 @@ Använd någon av följande metoder för att konfigurera registrering av Windows
  -  Du måste ha Azure Active Directory Premium för att kunna använda den här metoden. Annars använder du registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
  -  Om du väljer att inte aktivera automatisk registrering, kan du använda registreringsmetoden för Windows 8.1 och Windows Phone 8.1.
 
-- [**Windows 8.1- och Windows Phone 8.1-registrering genom att konfigurera CNAME**](#simplify-enrollment-by-configuring-cname)
+- [**Registrering utan automatisk registrering med Azure AD Premium**](#enable-windows-enrollment-without-azure-ad-premium)
  - Du måste använda den här metoden för att kunna registrera Windows 8.1- och Windows Phone 8.1-enheter.
- - Du kan också använda den här metoden om du inte har Azure Active Directory (AD) Premium.
-
-
-## <a name="prerequisites"></a>Krav
-
-Om några av följande förutsättningar ännu inte finns i Intune Azure-förhandsversionen behöver du skapa dem från den klassiska Intune-administratörskonsolen.
-
-- [Konfigurera ett eget domännamn](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Ange **Microsoft Intune** som utfärdare ](set-mdm-authority.md) för hantering av mobila enheter
-- [Konfigurera företagsportalappen](/intune-azure/manage-apps/company-portal-app.md)
-- Tilldela licenser till användare
+ - Du kan använda den här metoden för Windows 8.1 och senare enheter om du inte vill använda Azure Active Directory (AD) Premium.
 
 [!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
-## <a name="enable-windows-workplace-enrollment"></a>Aktivera registrering av Windows-arbetsplats
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Aktivera Windows-registrering utan Azure AD Premium
 
 Du kan låta användarna installera och registrera sina enheter utan automatisk registrering i Azure AD Premium. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange ett servernamn.
 
@@ -79,7 +69,7 @@ Du kan låta användarna installera och registrera sina enheter utan automatisk 
 
     Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows). Du kan även hänvisa användarna till [Vad kan min IT-administratör se på min enhet?](https://docs.microsoft.com/intune/enduser/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
 
-    Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune).
+    Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
 
 Inget ytterligare arbete krävs om du inte ska distribuera företagsportalen till enheter.  Du kan ignorera steg 2 och 3 i administrationskonsolen.
 

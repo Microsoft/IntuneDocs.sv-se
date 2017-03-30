@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
-ms.openlocfilehash: c6a9c0aa97a06f7b54768ee6927ea8866c40eb13
-ms.lasthandoff: 03/16/2017
+ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
+ms.openlocfilehash: 1e501c1a94a44c677569b8b85be7704844587694
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -33,7 +33,7 @@ Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan
 
 -   Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
 
--   Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
+-   Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
 Om du har problem med det här sättet för att skicka loggar kan du försöka med att [skicka dina IT administratörsloggar med e-post](send-logs-to-your-it-admin-by-email-iOS.md).
 

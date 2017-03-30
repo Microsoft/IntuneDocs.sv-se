@@ -16,9 +16,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: f7680666ca466bd37711eeb363fe2c1f9d52e371
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
+ms.openlocfilehash: a47ea4c8d3027cb34fd8ecd8324fac52c9846a77
+ms.lasthandoff: 03/17/2017
 
 
 
@@ -35,7 +35,7 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX S
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
+3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 2. Välj **Skapa profil** från bladet med lista över profiler.
 3. Ange **Namn** och en valfri **Beskrivning** för denna enhetsprofil på bladet **Skapa profil**.

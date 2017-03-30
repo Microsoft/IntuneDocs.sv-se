@@ -4,7 +4,7 @@ description: "Intune har stöd för Android for Work och ger tillgång till ytte
 keywords: 
 author: nathbarn
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -12,9 +12,9 @@ ms.technology:
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a5c024c2139536f004799b18a0f6d1d1eb4875b2
-ms.openlocfilehash: bdacb61d1713bf24b2f33f144afa0db356e10ee0
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: e04ab9c14ea6e7cc38430ec6a4d478a65e23ba96
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -41,9 +41,9 @@ I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konf
 
 ## <a name="app-publishing-and-distribution"></a>Publicering och distribution av appar
 
-Google Play for Work-tjänsten är en viktig del av distributionen och hanteringen av Android for Work-appar. Alla appar som har distribuerats till Android for Work-enheter i arbetsprofilen kommer från Play for Work-tjänsten. Om du vill hantera och distribuera appar i Play Store loggar du in som Intune-administratör på webbplatsen för Play for Work och godkänner appar för din Intune-klientorganisation. De här apparna synkroniseras med Intune-konsolen där de sedan kan distribueras och hanteras med hjälp av Intune. Affärsappar (LOB) som utvecklats av din organisation måste publiceras till Play for Work med hjälp av Googles publiceringskonsol för Android-appar. Affärsappar måste konfigureras i publiceringskonsolen för Android-appar för att begränsa åtkomsten till din organisation.
+Google Play for Work-tjänsten är en viktig del av distributionen och hanteringen av Android for Work-appar. Alla appar som har distribuerats till Android for Work-enheter i arbetsprofilen kommer från Play for Work-tjänsten. För att hantera och distribuera appar i Play Store måste du logga in på Google Plays webbplats med ditt företags administratörsautentiseringsuppgifter för Google-hantering. Du kan godkänna appar för Android for Work-distribution så att de visas i enheternas arbetsprofiler. De här apparna synkroniseras sedan med Intune-konsolen där de sedan kan distribueras och hanteras med hjälp av Intune. Affärsappar (LOB) som utvecklats av din organisation måste publiceras till Play for Work med hjälp av Googles publiceringskonsol för Android-appar. Affärsappar måste konfigureras i publiceringskonsolen för Android-appar för att begränsa åtkomsten till din organisation.
 
-Appar kan installeras utan användarinteraktion och utan att användaren måste tillåta **installation från okända källor**. Användarna kan bläddra igenom och installera valfria eller tillgängliga appar genom att bläddra igenom Play Store på sin enhet. Lär dig mer om hur du [distribuerar appar för Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
+Appar kan installeras utan användarinteraktion och utan att användaren måste tillåta **installation från okända källor**. Användarna kan söka och installera valfria eller tillgängliga appar i Play for Work-butiken på sin enhet. Lär dig mer om hur du [distribuerar appar för Android for Work](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps).
 
 ## <a name="app-configuration"></a>Appkonfiguration
 
@@ -51,15 +51,15 @@ Android for Work tillhandahåller infrastruktur för distribution av appkonfigur
 
 ## <a name="email-configuration"></a>E-postkonfiguration
 
-Android for Work tillhandahåller inte en standardapp för e-post eller ett internt objekt för e-postprofiler som iOS gör. I stället kan du ange e-postkonfigurationer genom att använda appkonfigurationsinställningar för e-postappar som stöder dem. Gmail och Nine Work är två EAS-klientappar (Exchange ActiveSync) i Play Store som stöder konfiguration med en Android for Work-appkonfiguration.
+Android for Work innehåller inte någon standardapp för e-post eller en inbyggd e-postprofil som iOS gör. I stället kan du ange e-postkonfigurationer genom att använda appkonfigurationsinställningar för e-postappar som stöder dem. Gmail och Nine Work är två EAS-klientappar (Exchange ActiveSync) i Play Store som stöder konfiguration med en Android for Work-appkonfiguration.
 
-Intune tillhandahåller konfigurationsmallar för Gmail- och Nine Work-appar. Andra e-postappar som stöder appkonfigurationsprofiler kan konfigureras med konfigurationsprinciper för mobilappar.
+Intune tillhandahåller konfigurationsmallar för Gmail- och Nine Work-appar när de hanteras som arbetsappar. Andra e-postappar som stöder appkonfigurationsprofiler kan konfigureras med konfigurationsprinciper för mobilappar.
 
 Om du använder villkorlig Exchange ActiveSync-åtkomst för Android for Work-enheter måste du antingen använda Gmail- eller Nine Work-e-postappen. Microsoft Outlook för Android-appen, eller andra e-postappar som använder modern autentisering via ADAL, stöds också. Lär dig mer om [e-postprofiler för företags-e-post](configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune.md).
 
-## <a name="mobile-app-management-policies"></a>Hanteringsprinciper för mobilappar
+## <a name="app-protection-policies"></a>Appskyddsprinciper
 
-Begränsningsprinciper som tillämpas på appar som har aktiverats för hantering av mobila program (MAM) stöds helt och hållet i arbetsprofilen och i den personliga profilen. Du kan publicera affärsappar i publiceringskonsolen för Android-appar på https://play.google.com/apps/publish. Den här konsolen innehåller ett alternativ för att göra appar privata i din organisation. Lär dig mer om [Inställningar för efterlevnadsprinciper för Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Allmän information om MAM-principer finns i [Hanteringsprinciper för mobilappar](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
+Skyddsprinciperna för appar som tillämpas stöds helt och hållet i arbetsprofilen och i den personliga profilen. Du kan publicera affärsappar i publiceringskonsolen för Android-appar på https://play.google.com/apps/publish. Den här konsolen innehåller ett alternativ för att göra appar privata i din organisation. Lär dig mer om [Inställningar för efterlevnadsprinciper för Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md). Allmän information om skyddsprinciper för appar finns i [Apprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
 ## <a name="vpn-profiles"></a>VPN-profiler
 

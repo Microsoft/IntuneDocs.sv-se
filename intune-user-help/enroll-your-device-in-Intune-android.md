@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 499ec16ffa04ec6c5d1fff829729fddc3f74a02b
-ms.openlocfilehash: 464b9b60e9e8a5cb3e195bbec88d496eb4dc9ecf
-ms.lasthandoff: 03/16/2017
+ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
+ms.openlocfilehash: a4886c9fb780f2748aa767e426f404e03671f42e
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -60,10 +60,10 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![Skärmen Konfiguration av företagsåtkomst](./media/and-enroll-4a-comp-access-setup.png)
 
-> [!NOTE]
-> De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
+    > [!NOTE]
+    > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
 
-7.  På skärmen **Varför ska jag registrera enheten?** kan du läsa vad du kan göra när du har registrerat enheten. Tryck sedan på **FORTSÄTT**.
+7. På skärmen **Varför ska jag registrera enheten?** kan du läsa vad du kan göra när du har registrerat enheten. Tryck sedan på **FORTSÄTT**.
 
     ![Skärmen Varför ska jag registrera enheten](./media/and-enroll-4b-why-enroll.png)
 
@@ -90,13 +90,19 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
         ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du beviljar åtkomst låter det endast företagsportalappen att skapa, använda och hantera ditt arbetskonto.
+        Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du beviljar åtkomst låter det endast företagsportalappen att skapa, använda och hantera ditt arbetskonto.
 
-    Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
+        Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
 
 11.  På skärmen **Aktivera enhetsadministratör** trycker du på **Aktivera**.
 
     ![Skärmen Aktivera enhetsadministratör](./media/and-enroll-5-activate.png)
+
+    Företagsportalen måste innehålla enhetsadministratörens roll för att kunna hantera enheten. Det innebär att administratören kan se vissa saker – t.ex. hur många gånger som du har försökt att låsa upp din skärm – och utföra vissa åtgärder.
+
+    Det är viktigt att komma ihåg att dessa åtgärder vidtas av säkerhetsskäl. IT-administratören försöker inte inkräkta på din integritet eller radera din information utan anledning, utan vill se till att företagets data förblir säkra.
+
+    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta IT-administratören med hjälp av kontaktinformationen på [Företagsportalen](http://portal.manage.microsoft.com) om du har frågor som är specifika för användningen i din organisation.
 
 12.  Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.
 
@@ -108,21 +114,21 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     Den här skärmen visar att enheten registreras.
 
-      ![Skärmen Registrerar enheten](./media/and-enroll-8-device-enrolling.png)
+    ![Skärmen Registrerar enheten](./media/and-enroll-8-device-enrolling.png)
 
 14. När skärmen **Konfigurera företagsåtkomst** visas trycker du på **FORTSÄTT**. Om ett meddelande indikerar att enheten är inkompatibel följer du anvisningarna för att åtgärda problemet. Tryck sedan på **FORTSÄTT**.
 
-  ![Enheten är inte kompatibel, men har registrerats](./media/and-enroll-9a-noncompliant-enrolled-device.png)
+    ![Enheten är inte kompatibel, men har registrerats](./media/and-enroll-9a-noncompliant-enrolled-device.png)
 
-  ![Det förekommer enhetsefterlevnadsproblem som måste lösas](./media/and-enroll-9b-resolve-compliance-issues.png)
+    ![Det förekommer enhetsefterlevnadsproblem som måste lösas](./media/and-enroll-9b-resolve-compliance-issues.png)
 
-Du hittar mer information om problemen genom att trycka på dem. 
+    Du hittar mer information om problemen genom att trycka på dem.
 
-  ![Utvidgade enhetsefterlevnadsproblem](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
+    ![Utvidgade enhetsefterlevnadsproblem](./media/and-enroll-9c-resolve-compliance-issues-expanded.png)
 
-    ![Company access setup screen](./media/and-enroll-9d-comp-access-setup.png)  
+    ![Skärmen Konfiguration av företagsåtkomst](./media/and-enroll-9d-comp-access-setup.png)  
 
-11. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Enheten har nu registrerats.
+15. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Enheten har nu registrerats.
 
     ![Skärmen Konfiguration av företagsåtkomst slutförd](./media/and-enroll-10-comp-access-setup-complete.png)
 

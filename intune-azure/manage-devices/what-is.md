@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/14/2017
+ms.date: 03/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.assetid:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
-ms.openlocfilehash: 957192c744bf05cd835dfae60b6bb521b8f8b26b
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
+ms.openlocfilehash: 8a43e1646476696b978a7f8a3e92f920606a698b
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -73,9 +73,10 @@ Om en iOS-enhet har blivit tappats bort eller blivit stulen kan du aktivera bort
 2.    Aktivera borttappat läge på bladet **Borttappat läge** och ange det meddelandet som ska visas och, vilket är valfritt, ett telefonnummer.
 3.    Klicka på **OK**.
 När du aktiverar borttappat läge blockerar du all användning av enheten. Slutanvändaren kan inte öppna enheten förrän du inaktiverar borttappat läge. Borttappat läge är aktiverat, men du kan använda åtgärden **Leta upp enheten** om du vill veta var enheten finns.
+För att kunna använda Borttappat läge måste enheten vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge.
 
 ### <a name="locate-device"></a>**Hitta enhet**
-Använd den här fjärråtgärder om du vill visa platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet som är i övervakat läge. Innan du använder den här åtgärden måste enheten har placerats i borttappat läge.
+Använd den här fjärråtgärder om du vill visa platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten har placerats i borttappat läge.
 1.    Välj **Mer** > **Hitta enhet** på en iOS-enhets egenskapsblad.
 2.    När enheten har hittats visas dess plats visas på bladet **Hitta enhet**. 
     ![Hitta enhetsblad](./media/locate-device.png)

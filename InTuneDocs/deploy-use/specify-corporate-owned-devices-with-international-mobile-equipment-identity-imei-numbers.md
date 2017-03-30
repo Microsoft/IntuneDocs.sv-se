@@ -5,7 +5,7 @@ keywords:
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/24/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 51f9d7bad6a1411ff68fa94c62421e2c0a43ab5a
-ms.openlocfilehash: 97bedfdd2d756ae79350496f54076c16ada64def
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
+ms.openlocfilehash: 02743ee216ce09c74a9d0ab2455e826b36e8aa4a
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -30,7 +30,7 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
 
 1. Gå till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Företagets förregistrerade enheter** &gt; **Efter IMEI (alla plattformar)** och välj sedan **Lägg till enheter**. Du kan lägga till enheter på två sätt:
 
-    -   **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil.
+    -   **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil. Informationsfältet får inte innehålla fler än 128 tecken.
 
         |||
         |-|-|
@@ -39,8 +39,8 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
         CSV-filen när den visas i en textredigerare:
 
         ```
-        AABBBBBBCCCCCCD,PO 1234
-        AABBBBBBCCCCCCE,PO 1234
+        01 234567 890123,device details
+        02 234567 890123,device details
         ```
 
     -   **Lägg till enhetsinformation manuellt** – Ange IMEI-nummer och enhetsinformation för upp till 15 enheter.
@@ -58,4 +58,6 @@ När en enhet som har ett IMEI-nummer registreras i Intune (vanligtvis när en a
 
 >[!NOTE]
 > När din organisation migreras till den nya Azure-portalen ser du en ändring av den här funktionen. I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda maskinvaruidentifierare. I den nya Azure-portalen kan du automatiskt skriva över informationen för alla maskinvaruidentifierare eller ignorera all ny information för befintliga identifierare.
+
+Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers) finns i [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 
