@@ -163,7 +163,7 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 1. Leta reda på principkonfigurationssidan och sök efter **på begäran-regler för den här VPN-anslutningen**. Kolumnerna som är märkta med **Matchning**, villkoret som reglerna söker efter och **Åtgärd**, den åtgärd som principen utlöser när villkoret matchas.
 2. Skapa en regel genom att välja **Lägg till**. Det finns två typer av matchningar som du kan konfigurera i regeln. Du kan bara konfigurera en typ per regel.
   - **SSID:er**, som refererar till trådlösa nätverk.
-  - **DNS-sökdomäner**, som är...  Du kan använda fullständiga kvalificerade domännamn som *team. corp.contoso.com* eller använda domäner som *contoso.com*, vilket är detsamma som att använda * *. contoso.com*.
+  - **DNS-sökdomäner**, som är...  Du kan använda fullständiga kvalificerade domännamn som *team. corp.contoso.com* eller använda domäner som *contoso.com*, vilket är detsamma som att använda **. contoso.com*.
 3. Valfritt: Ange en URL-strängavsökning som är en URL som regeln använder som ett test. Om den enhet där den här profilen har installerats kan få tillgång till denna URL utan omdirigering upprättas VPN-anslutningen och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängavsökningsplatsen. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att URL:en testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till mål-URL:en via VPN.
 4. Välj någon av följande åtgärder:
   - **Ansluta**
