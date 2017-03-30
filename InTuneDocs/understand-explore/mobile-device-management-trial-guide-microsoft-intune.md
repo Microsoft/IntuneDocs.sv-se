@@ -16,6 +16,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
 ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
+ms.lasthandoff: 01/05/2017
 
 
 ---
@@ -80,9 +81,8 @@ Innan användarna kan registrera sina iOS-enheter, måste du konfigurera Intune 
 1. **Hämta en certifikatsigneringsbegäran**<br/>
 Logga in till Intune med ditt administratörskonto och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj sedan **Hämta begäran om APN-certifikat**. Spara begäran om certifikatsignering (.csr) lokalt. CSR-filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen. <!--- screen shot--->
 2.    **Hämta ett certifikat för Apple Push Notification Service**<BR/>
-Gå till [Apple Push-certifikatprofilen](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) och logga in med ditt företags Apple-ID för att skapa APN-certifikatet med hjälp av CSR-filen. När du har valt **Överför** på Apple Push-certifikatportalen får du en JSON-fil som inte kan användas för APN. Slutför hämtningen, gå tillbaka till Apple Push-certifikatportalen, leta upp Certifikat för servrar från tredje part och klicka på **Hämta**.
-
- Hämta APN-certifikatet (.pem) och spara filen lokalt. Det här Apple-ID:t måste användas senare för att förnya ditt APN-certifikat.
+Gå till [Apple Push-certifikatprofilen](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) och logga in med ditt företags Apple-ID för att skapa APN-certifikatet med hjälp av CSR-filen. När du har valt **Överför** på Apple Push-certifikatportalen får du en JSON-fil som inte kan användas för APN. Slutför hämtningen, gå tillbaka till Apple Push-certifikatportalen, leta upp Certifikat för servrar från tredje part och klicka på **Hämta**.<br/>
+Hämta APN-certifikatet (.pem) och spara filen lokalt. Det här Apple-ID:t måste användas senare för att förnya ditt APN-certifikat.
 3.    **Lägg till APN-certifikatet i Intune**<BR/>
 Öppna Microsoft Intune-administratörskonsolen och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj **Överför APN-certifikatet**. Gå till certifikatfilen (.pem), välj **Öppna** och ange ditt Apple-ID. Med APN-certifikatet. Intune kan registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
 4.    **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
@@ -118,9 +118,4 @@ Open the Company Portal on the mobile device, choose **Apps**, and then install 
 
 ## <a name="next-steps"></a>Nästa steg
 [Organisera användare och enheter genom att skapa grupper](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
