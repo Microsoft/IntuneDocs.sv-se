@@ -33,6 +33,7 @@
 ### [Hämta en Apple DEP-token](enroll-devices/get-apple-dep-token.md)
 ### [Välj hur du vill registrera iOS-enheter](enroll-devices/choose-ios-enrollment-method.md)
 ## Gör så här för att
+### [Tilldela licenser till användare](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Registrera Android-enheter](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Registrera iOS-enheter
 #### [Registrera iOS-enheter med installationsassistenten](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
