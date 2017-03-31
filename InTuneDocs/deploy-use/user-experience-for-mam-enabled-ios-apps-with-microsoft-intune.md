@@ -2,8 +2,8 @@
 title: iOS-appar med appskyddsprinciper | Microsoft Docs
 description: "Det här avsnittet beskriver vad som händer när din iOS-app hanteras av appskyddsprinciper."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 ms.date: 03/06/2017
 ms.topic: article
