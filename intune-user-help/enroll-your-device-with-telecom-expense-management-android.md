@@ -18,9 +18,9 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a1968bedeba42758c36e7b9bb9cddfc26309ca71
-ms.openlocfilehash: 982588ddc808123efd107759ed15c31ced6f110e
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
+ms.openlocfilehash: f2f93bccd17d16f258e90268f0ddef3e3cb7a598
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/08/2017
 
 Din organisation kanske använder ett kostnadshanteringsprogram för telekomtjänster för att se till att samtal- och dataförbrukningen förblir inom rimliga gränser. När du har registrerat enheten visas ett meddelande som uppmanar dig att välja en lämplig kategori för enheten.
 
-  ![En skärmbild av skärmen "Välja den bästa kategorin för en enhet" på en iOS-enhet. Den visar ett val mellan företagsregistrering och personlig registrering.](./media/and-enroll-11-tem-select-best-category.png)
+![En skärmbild av skärmen "Välja den bästa kategorin för en enhet" på en iOS-enhet. Den visar ett val mellan företagsregistrering och personlig registrering.](./media/and-enroll-11-tem-select-best-category.png)
 
 1. Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://play.google.com/store/apps/details?id=fr.memobox.databox) från Google Play Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsätta.
 

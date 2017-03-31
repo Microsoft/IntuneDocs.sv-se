@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 01/23/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ searchScope:
 ROBOTS: 
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 6157cef87c5cdad6d0e293946321fa8bdf18e61a
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 62e37d42aef9a828551db1fbbcf5e3cb1b3eeec9
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -31,24 +31,23 @@ Innan du kan komma åt ditt arbete måste IT-administratören be dig att install
 
 1.    Om följande meddelande visas trycker du på **Installera** för att tillåta att Lookout for Work installeras på enheten.
 
-    ![Tryck på Installera för att installera Lookout for Work](./media/ios-lfw-install-app-request.png)
+  ![Tryck på Installera för att installera Lookout for Work](./media/ios-mtd-install-app-request.png)
 
 2. När följande meddelande visas trycker du på **Inställningar**, sätter på **Platstjänster** och trycker sedan på **Fortsätt**.
 
-    ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-location-services.png)
+  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-location-services.png)
 
 3. Granska de behörigheter som Lookout for Work behöver och tryck på **Fortsätt**.
 
-    ![du är nu ansluten till Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
+  ![du är nu ansluten till Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
 4. Vid meddelandet som ber dig att tillåta att Lookout for Work skickar aviseringar till dig trycker du på **Tillåt**.
 
-    ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-notifications.png)
-
+  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-notifications.png)
 
 Lookout for Work avslutar installationen och följande skärm visas om inga säkerhetshot har hittats på enheten.
 
-![Lookout for Work hittade inga säkerhetshot på din enhet](./media/ios-lfw-no-threats-found.png)
+  ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/ios-lfw-no-threats-found.png)
 
 Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
 
