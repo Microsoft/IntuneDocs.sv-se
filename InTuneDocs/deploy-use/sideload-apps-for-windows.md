@@ -154,7 +154,8 @@ Du kan distribuera Windows 10 företagsportalappen manuellt direkt från Intune,
 2. När du har införskaffat appen markerar du den på sidan **Inventering**.  
 3. Välj **Windows 10 – alla enheter** som **plattform**, sedan lämplig **arkitektur** och ladda ned. Det behövs inte någon applicensfil för den här appen.
 ![Bild av Windows 10 – alla enheter och information om Architecture X86-paketet för hämtning](../media/Win10CP-all-devices.png)
-4. Hämta alla paket under Nödvändiga ramverk. Detta måste göras för x86-, x64- och ARM-arkitekturer – vilket ger totalt 9 paket så som visas nedan.  
+4. Hämta alla paket under Nödvändiga ramverk. Detta måste göras för x86-, x64- och ARM-arkitekturer – vilket ger totalt 9 paket så som visas nedan.
+
 ![Bild av beroendefiler att hämta ](../media/Win10CP-dependent-files.png)
 5. Innan du skickar företagsportalappen till Intune så skapa en mapp (t.ex. C:\Company Portal) med paketen strukturerade på följande sätt:
   1. Placera företagsportalspaketet i C:\Company Portal. Skapa även en undermapp för beroenden på den här platsen.  
