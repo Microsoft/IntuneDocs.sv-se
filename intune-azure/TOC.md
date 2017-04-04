@@ -1,5 +1,6 @@
 # Introduktion
 ## [Vad är förhandsversionen av Azure Portal?](introduction/what-is-microsoft-intune.md)
+## [Intune-funktioner i Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Kom igång
 <!---(introduction/get-started.md) --->
 ### [Registrera dig för en kostnadsfri utvärderingsversion](introduction/sign-up-free-trial-microsoft-intune.md)
