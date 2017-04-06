@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/09/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7062169ceb855f03a13d1afb4b4de41af593ac
-ms.openlocfilehash: 10ba007095182c9cb07710656ba5f275e254d92e
-ms.lasthandoff: 02/15/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 74f2848dcd2863022dac44cf302b330a99cf1a55
+ms.lasthandoff: 03/29/2017
 
 
 ---
 
 # <a name="manage-windows-pcs-with-intune-pc-client-software"></a>Hantera Windows-datorer med Intune-klientprogramvara
-[Att registrera Windows-datorer som mobila enheter](set-up-windows-device-management-with-microsoft-intune.md) är den bästa metoden för att registrera Windows-datorer i Intune, men du kan även välja att registrera och hantera Windows-datorer genom att installera Intune-klientprogrammet enligt beskrivningen i det här avsnittet.
+[Att registrera Windows-datorer som mobila enheter](set-up-windows-device-management-with-microsoft-intune.md) är den bästa metoden för att registrera Windows-datorer i Intune, men som IT-administratör kan du även välja att registrera och hantera Windows-datorer genom att installera Intune-klientprogrammet enligt beskrivningen i det här avsnittet. Intune-programvaruklienten stöds inte med registrering som mobil enhet.
 
 Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som AD DS-grupprincipobjekt (Active Directory Domain Services) för Windows Server gör. [Försäkra dig om att Intune-principerna inte står i konflikt med grupprincipobjekt](resolve-gpo-and-microsoft-intune-policy-conflicts.md) som används i din organisation om du ska hantera domänanslutna Active Directory-datorer med Intune. Läs mer om [GPO:er](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="policies-and-app-deployments-for-the-intune-software-client"></a>Principer för distributioner av appar för Intune-klientprogrammet
 
-Även om Intune-klientprogrammet har stöd för [hanteringsfunktioner som skyddar datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md) med hjälp av hantering av programuppdateringar, Windows-brandväggen och Endpoint Protection, så kan inte datorer som hanteras med Intune-klientprogrammet användas med andra Intune-principer, t.ex. de **Windows**-principinställningar som är specifika för hantering av mobila enheter. 
+Även om Intune-klientprogrammet har stöd för [hanteringsfunktioner som skyddar datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md) med hjälp av hantering av programuppdateringar, Windows-brandväggen och Endpoint Protection, så kan inte datorer som hanteras med Intune-klientprogrammet användas med andra Intune-principer, t.ex. de **Windows**-principinställningar som är specifika för hantering av mobila enheter.
 
 När du använder Intune-klientprogrammet för att hantera Windows-datorer kan du använda de principer som visas i avsnittet **Datorhantering**.
 
@@ -70,7 +70,7 @@ När du distribuerar appar behöver du dessutom bara använda Windows Installer 
 
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Datorhanteringsfunktioner med Intune-klientprogrammet
 
-När Intune-klientprogrammet har installerats kan du använda följande hanteringsfunktioner: 
+När Intune-klientprogrammet har installerats kan du använda följande hanteringsfunktioner:
 
 - [Programhantering](deploy-apps-in-microsoft-intune.md)
 

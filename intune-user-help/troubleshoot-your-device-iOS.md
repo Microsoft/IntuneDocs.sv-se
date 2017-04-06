@@ -18,9 +18,9 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: cd5d97ec4524477fe6ac08a863eaf5cc03913e50
-ms.openlocfilehash: 53062067c250434b65911c47b8c2eda052a353c3
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 1d0284ca2b5fd935a8657e3dd73d23d45071fd50
+ms.openlocfilehash: 200c992caa36ca74bf3e4ad82a21099a4b7ada4c
+ms.lasthandoff: 03/25/2017
 
 
 ---
@@ -37,6 +37,6 @@ Ibland kan problem uppstå med en iOS-enhet som eventuellt kan åtgärdas genom 
 - [Hur hittar jag serienumret på enheten?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Jag behöver uppdatera min iOS-enhet](you-need-to-update-your-ios-device.md)
 - [Min iOS-version stöds inte ännu](your-ios-version-isnt-yet-supported.md)
-- [Jag måste installera Lookout for Work på min iOS-enhet](you-are-prompted-to-install-lookout-for-work-ios.md)
-- [Jag måste åtgärda ett hot som Lookout for Work har hittat på min iOS-enhet](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
+- [Jag måste installera en Mobile Threat Defense-app på min iOS-enhet](you-are-prompted-to-install-mtd-ios.md)
+- [Jag måste lösa ett hot som en Mobile Threat Defense-app har påträffats på min iOS-enhet](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 

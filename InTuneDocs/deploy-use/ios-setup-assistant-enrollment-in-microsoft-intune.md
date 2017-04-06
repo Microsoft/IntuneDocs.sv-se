@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/13/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a2e840797c06322b9efc59438e0675e57b7cdb24
-ms.openlocfilehash: facae5f49b52760dcea0653bd261e16e13e11bbf
-ms.lasthandoff: 02/14/2017
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: 5bb9c68db8edb68531fc40bc93c28881a95b6940
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -85,7 +85,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Lägg till iOS-enheter som ska registreras med installationsassistenten
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter** &gt; **Alla enheter** och väljer **Lägg till enheter**. 
+1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter** &gt; **Alla enheter** och väljer **Lägg till enheter**.
 
    Du kan lägga till enheter på två sätt:
 
@@ -96,7 +96,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
     |||
     |-|-|
     |&lt;Serienr 1&gt;|&lt;Information om enhet nr 1&gt;|
-    |&lt;Serienr&2;&gt;|&lt;Information om enhet nr 2&gt;|
+    |&lt;Serienr 2&gt;|&lt;Information om enhet nr 2&gt;|
 
   När den öppnas i en textredigerare visas den här CSV-filen som:
 
@@ -107,13 +107,13 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
   -  **Lägg till enhetsinformation manuellt**&mdash;Ange serienummer och anteckningar eller information för upp till 15 enheter.
 
-  I rutan **Granska enheter** kan du bekräfta serienumren. Du kan också bestämma om du vill skriva över **informationen** för serienummer som importeras igen, eller så kan du avmarkera rutan **Skriv över** och behålla den nuvarande informationen. 
+  I rutan **Granska enheter** kan du bekräfta serienumren. Du kan också bestämma om du vill skriva över **informationen** för serienummer som importeras igen, eller så kan du avmarkera rutan **Skriv över** och behålla den nuvarande informationen.
 
-> [!NOTE] 
+> [!NOTE]
 > I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda serienummer. I den nya Azure-portalen kan du endast skriva över information för alla serienummer eller ignorera ny information för alla serienummer.
 
-  > [!NOTE]
-  > Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
+> [!NOTE]
+> Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
 
 2. Välj **Nästa**.
 
@@ -128,23 +128,22 @@ Ange profilen som ska tilldelas till enheter som lagts till i listan över tillg
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Exportera en profil som ska distribueras till iOS-enheter
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsenhetsregistrering** och väljer den enhetsprofil som ska distribueras till mobilenheter. 
+1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsenhetsregistrering** och väljer den enhetsprofil som ska distribueras till mobilenheter.
 
 2. Välj **Exportera** i Aktivitetsfältet. Kopiera och spara **Profil-URL**. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
 
   För stöd för Apple Configurator 2 måste 2.0-profilens URL redigeras. Det gör du genom att ersätta den här koden:
-    ```
-    https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
-    ```
-    Med den här koden:
 
-    ```
-    https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
-    ```
+  ```
+  https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
+  ```
+  Med den här koden:
+
+  ```
+  https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
+  ```
 
    Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
-
-
 
 ### <a name="prepare-the-device-with-apple-configurator"></a>Förbered enheten med Apple Configurator
 
@@ -180,9 +179,10 @@ iOS-enheter är anslutna till Mac-datorn och registreras för hantering av mobil
 
 ### <a name="distribute-devices"></a>Distribuera enheter
 
-Enheterna är nu klara för företagets registrering. 
+Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
 
-Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
+>[!NOTE]
+>Om en användare försöker att registrera en DEP-enhet, men har överskridit sin enhetsgräns, så misslyckas registreringen utan att användaren får någon varning.
 
 
 ### <a name="see-also"></a>Se även

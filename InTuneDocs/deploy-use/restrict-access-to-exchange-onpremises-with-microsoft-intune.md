@@ -5,7 +5,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 01/03/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 53d2c0d5b2157869804837ae2fa08b1cce429982
-ms.openlocfilehash: e3b404526d8e662fd8ae285c144b1d6f5cf22bf3
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: f1d8ecdf64b680940e46afc90dec79d237d80030
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -80,11 +81,12 @@ Följande stöds:
 -   Den interna e-postappen för iOS.
 
 -   Exchange ActiveSync-e-postklienter som Gmail på Android 4 eller senare.
-- Exchange ActiveSync-e-postklienter och **Android for Work-enheter:** Endast **Gmail**- och **Nine Work**-apparna i **arbetsprofilen** stöds på Android for Work-enheter. För att villkorlig åtkomst ska fungera med Android for Work måste du distribuera en e-postprofil för Gmail- eller Nine Work-appen och distribuera de apparna som en obligatorisk installation. 
+-   Exchange ActiveSync-e-postklienter och **Android for Work-enheter:** Endast **Gmail**- och **Nine Work**-apparna i **arbetsprofilen** stöds på Android for Work-enheter. För att villkorlig åtkomst ska fungera med Android for Work måste du distribuera en e-postprofil för Gmail- eller Nine Work-appen och distribuera de apparna som en obligatorisk installation. 
 
+<!---
 [!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
-> [!NOTE]
+--->
+> [!NOTE] 
 > Microsoft Outlook-appen for Android and iOS stöds inte.
 
 ## <a name="support-for-pcs"></a>Stöd för datorer
@@ -110,14 +112,12 @@ Följande stöds:
   - **Plattformsundantag:** Välj **Lägg till regel** om du vill konfigurera en regel som definierar åtkomstnivåer för angivna familjer och modeller av mobila enheter. Eftersom dessa enheter kan tillhöra vilken typ som helst kan du även konfigurera enhetstyper som inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
 
   - **Standardregel:** För en enhet som inte omfattas av någon av de andra reglerna kan du välja att ge enheten åtkomst till Exchange, blockera den eller placera den i karantän. När du ställer in regeln för att tillåta åtkomst för enheter som är registrerade och kompatibla beviljas e-poståtkomst automatiskt för iOS-, Windows- och Samsung KNOX-enheter. Användaren behöver inte gå igenom någon särskild process för att få sin e-post.
-
-        Användare av Android-enheter som inte kör Samsung KNOX får ett karantänmeddelande med stegvisa anvisningar för att verifiera registreringen och efterlevnaden innan de kan komma åt e-posten. Om du ställer in regeln för att blockera åtkomst eller sätta enheten i karantän blir alla enheter blockerade från att få åtkomst till Exchange oavsett om de redan har registrerats i Intune eller inte. Om du vill förhindra att registrerade och kompatibla enheter påverkas av den här regeln markerar du rutan **Åsidosätt standardregel**.
+      - Användare av Android-enheter som inte kör Samsung KNOX får ett karantänmeddelande med stegvisa anvisningar för att verifiera registreringen och efterlevnaden innan de kan komma åt e-posten. Om du ställer in regeln för att blockera åtkomst eller sätta enheten i karantän blir alla enheter blockerade från att få åtkomst till Exchange oavsett om de redan har registrerats i Intune eller inte. Om du vill förhindra att registrerade och kompatibla enheter påverkas av den här regeln markerar du rutan **Åsidosätt standardregel**.
 >[!TIP]
 >Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] påverkas.
 
   - **Meddelande till användare:** Förutom e-postmeddelandet som skickas från Exchange skickar Intune ett e-postmeddelande med stegvisa anvisningar för att låsa upp enheten. Du kan redigera standardmeddelandet och anpassa det efter dina behov. Om användarens enhet blockeras innan Intunes e-postmeddelande med instruktionerna har kommit fram (det här meddelandet skickas till användarens Exchange-postlåda) kan användaren använda en enhet som inte är blockerad eller en annan metod för att komma åt Exchange och läsa meddelandet.
-
-        This is especially true when the **Default Rule** is set to block or quarantine. In this case, the user has to go to their app store, download the Microsoft Company Portal app, and enroll their device. This is applicable to iOS, Windows, and Samsung KNOX devices. For devices that don't run Samsung KNOX, you need to send the quarantine email to an alternate email account. The user has to copy the email to their blocked device to complete the enrollment and compliance process.
+      - Detta är särskilt viktigt om **standardregeln** har konfigurerats att blockera eller placera enheter i karantän. I så fall måste användaren besöka sin appbutik, ladda ned Microsofts företagsportalsapp och registrera sin enhet. Detta gäller iOS-, Windows- och Samsung KNOX-enheter. Du måste skicka e-postmeddelandet om karantän till ett alternativt e-postkonto för enheter som inte kör Samsung KNOX. Användaren måste kopiera e-postmeddelandet till sin blockerade enhet för att kunna slutföra registreringen och efterlevnadsprocessen.
   > [!NOTE]
   > För att Exchange ska kunna skicka e-postmeddelandet måste du ange det konto som används för att skicka meddelandet.
   >
@@ -139,9 +139,4 @@ Följande stöds:
 -   [Skydda åtkomsten till SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
 
 -   [Skydda åtkomsten till Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

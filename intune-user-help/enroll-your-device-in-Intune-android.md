@@ -18,9 +18,9 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: 07a1f63d02e2517e4ab64305304127a40922263c
-ms.openlocfilehash: a4886c9fb780f2748aa767e426f404e03671f42e
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: 1d0284ca2b5fd935a8657e3dd73d23d45071fd50
+ms.openlocfilehash: 9e70ef08eabb1595804f84247fc1663c5c6f985e
+ms.lasthandoff: 03/25/2017
 
 
 ---
@@ -48,7 +48,7 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![Välkomstskärmen i företagsportalsappen för Android, som uppmanar användarna att logga in med sina obligatoriska arbets- eller skolkonton. Här informeras även om att Microsoft-konton och andra personliga konton inte godkänns.](./media/and-enroll-0-welcome-screen.png)   
 
-4.  Om IT-administratören konfigurerar allmänna villkor trycker du på **GODKÄNN** för att godkänna villkoren.
+4.  Om IT-administratören konfigurerar allmänna villkor trycker du på **GODKÄNN** för att godkänna villkoren. Den här skärmen kan skilja sig från bilden nedan beroende på vilken version av Android som du använder.
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 

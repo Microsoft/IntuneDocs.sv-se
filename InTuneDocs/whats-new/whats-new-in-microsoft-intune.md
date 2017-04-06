@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
-ms.openlocfilehash: 2a602b351cf7f345bd56f20394943ea25f2d2060
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
+ms.openlocfilehash: bddd8c0dc74835f74a71af1d900d43d84aab894c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -28,6 +28,17 @@ Läs mer om nyheterna i den här versionen av Microsoft Intune. Du kan också l�
 > Hybriddistributioner (Configuration Manager med Intune) kommer också att ha stöd för alla dessa funktioner. Mer information om nya hybridfunktioner finns på [sidan med nyheter om hybridfunktioner](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 ## <a name="new-capabilities"></a>Nya funktioner
+
+### <a name="support-for-skycure"></a>Stöd för Skycure
+
+Du kan nu styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
+
+- Fysiskt skydd
+- Nätverksskydd
+- Programskydd
+- Skydd mot säkerhetsrisker
+
+Du kan konfigurera EMS-principer för villkorlig åtkomst baserat på Skycures riskbedömning som aktiveras via Intunes principer för enhetsefterlevnad. Du kan använda dessa principer för att tillåta eller blockera inkompatibla enheters åtkomst till företagets resurser utifrån identifierade hot. Mer information finns i [Skycure Mobile Threat Defense-anslutningsprogram](/intune/deploy-use/skycure-mobile-threat-defense-connector).
 
 ### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Ny användarupplevelse för företagsportalappen för Android <!--621622-->
 
@@ -51,6 +62,12 @@ Om du behöver hämta och läsa in Windows 10-företagsportalsappen separat kan 
 
 
 ## <a name="notices"></a>Meddelanden
+
+### <a name="support-for-ios-103"></a>Stöd för iOS 10.3
+
+Version 10.3 av iOS började distribueras till iOS-användare den 27 mars 2017. Alla befintliga Intune MDM- och MAM-scenarion är kompatibla med senaste versionen av Apples operativsystem. Vi utgår från att alla befintliga Intune-funktioner som för närvarande är tillgängliga för hantering av iOS-enheter även kommer att fungera efter det att dina användare har uppgraderat sina enheter och appar till iOS 10.3.
+
+Det finns för närvarande inga kända problem att rapportera. Om du stöter på problem med iOS 10.3 så kontakta gärna [Intunes supportgrupp](/intune/troubleshoot/contact-assisted-phone-support-for-microsoft-intune).
 
 ### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Förbättrat stöd för Android-användare i Kina <!--720444-->
 
@@ -82,10 +99,15 @@ Tidigt under 2017 kommer vi att migrera vår fullständiga administratörsupplev
 
 Nya utvärderingsklienter kan se den offentliga förhandsversionen av den nya administratörsupplevelsen i Azure-portalen denna månad. I förhandsgranskningen levereras funktioner och paritet med den befintliga Intune-konsolen upprepade gånger.
 
-Administratörsupplevelsen i Azure-portalen använder den redan meddelade nya grupperings- och målfunktionen. När din befintliga klient migreras till den nya grupperingsupplevelsen migreras du även till att förhandsgranska den nya administratörsupplevelsen på din klient. Om du under tiden vill testa eller titta på någon av de nya funktionerna fram tills klienten har migrerats kan du registrera dig för ett nytt utvärderingskonto för Intune eller ta en titt på den [nya dokumentationen](https://docs.microsoft.com/intune-azure/introduction/whats-new).
+Administratörsupplevelsen i Azure-portalen använder den redan meddelade nya grupperings- och målfunktionen. När din befintliga klient migreras till den nya grupperingsupplevelsen migreras du även till att förhandsgranska den nya administratörsupplevelsen på din klient. Om du under tiden vill testa eller titta på någon av de nya funktionerna fram tills klienten har migrerats kan du registrera dig för ett nytt utvärderingskonto för Intune eller ta en titt på den [nya dokumentationen](/intune-azure/introduction/whats-new).
 
 > [!Note]
 > För Azure Portal Preview lanserar vi uppdateringarna för den här månaden. Det kan dock vara så att ändringarna inte är tillgängliga direkt pga hur Intune-tjänsten distribueras.  Flera av tjänstens komponenter måste uppdateras sekventiellt innan de nya portalfunktionerna blir tillgängliga. Sök efter ändringar i Azure Portal Preview i takt med att de lanseras senare under månaden. Den fullständiga listan med ändringar finns i [Nyheter i Microsoft Intune Preview](/intune-azure/introduction/whats-new).
+
+### <a name="administration-roles-being-replaced-in-azure-portal"></a>Administratörsroller ersätts i Azure Portal
+
+De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) som används i den klassiska Intune-portalen (Silverlight) ersätts med en helt ny uppsättning rollbaserade administratörskontroller (RBAC) i Intune Azure Portal. När du har migrerat till Azure Portal måste du tilldela dina administratörer dessa nya administratörsroller. Mer information om RBAC och nya de nya rollerna finns i [Rollbaserad åtkomstkontroll för Microsoft Intune](/intune-azure/access-control/role-based-access-control).
+
 
 ## <a name="whats-coming"></a>Kommande nyheter
 

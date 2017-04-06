@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c09c0b5d76a3035b2af82fe32d4b6c6e35d06baf
-ms.openlocfilehash: 46b140db09163187c68385d0919edb9a58056923
+ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
+ms.openlocfilehash: e71ebacec9d7b890b41e7650c8c50f42952c6326
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -39,7 +40,7 @@ Appskyddsprinciper kan användas med iOS-funktionen **Öppna i hantering** för 
 
 -   **Personalägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera [inställningar för appskyddsprinciper](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) med **Tillåt endast att appen överför data till hanterade appar**. När slutanvändaren öppnar en skyddad fil i en app som inte är principhanterad går det inte att läsa filen.
 
--   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. Om du vill tillåta överföring av data mellan appar med appskyddsprinciper aktiverar du inställningen **Tillåt att appen överför data endast till hanterade appar**. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune.   
+-   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. För att tillåta överföring av data mellan appar med appskyddsprinciper aktivera inställningen **Tillåt att appen överför data endast till hanterade appar**. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune.   
 
 -   **Enheter som hanteras av en tredje parts MDM-lösning:** Du kan begränsa dataöverföringen till endast hanterade appar med hjälp av iOS-funktionen **Öppna i hantering**.
 För att säkerställa att appar som du distribuerar med en tredje parts MDM-lösning också är associerade med appskyddsprinciper som du har konfigurerat i Intune, måste du konfigurera inställningen för UPN enligt beskrivningen i [Konfigurera UPN-inställningar](#configure-user-upn-setting-for-third-party-emm).  När appar distribueras med inställningen för användar-UPN tillämpas appskyddsprinciperna när slutanvändaren loggar in med sitt arbetskonto.
@@ -76,9 +77,9 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 |MDM-tredjepartsleverantör| Konfigurationsnyckel | Värdetyp | Konfigurationsvärde|
 | ------- | ---- | ---- | ---- |
-|VMware AirWatch| IntuneMAMUPN | Sträng | {UserPrincipalName}|
-|MobileIron | IntuneMAMUPN | Sträng | ${userUPN} **eller** ${userEmailAddress} |
-
+| VMware AirWatch | IntuneMAMUPN | Sträng | {UserPrincipalName}|
+| MobileIron Core | IntuneMAMUPN | Sträng | $EMAIL$ **eller** $USER_UPN$ |
+| MobileIron Cloud | IntuneMAMUPN | Sträng | ${userUPN} **eller** ${userEmailAddress} |
 
 ### <a name="example-2-end-user-experience"></a>Exempel 2: Slutanvändarupplevelse
 
@@ -91,11 +92,11 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 4.  När Word startas ombeds slutanvändaren logga in med sitt arbetskonto.  Arbetskontot användaren anger när den uppmanas ange ett konto bör matcha kontot som du angav i konfigurationsinställningarna för Microsoft Word-app.
 
     > [!NOTE]
-    > Slutanvändaren kan lägga till andra personliga konton till Word för att utföra privat arbete och inte påverkas av appskyddsprinciperna när de använder Word-appen i en personlig kontext.
+    > Slutanvändaren kan lägga till andra personliga konton till Word för att utföra sitt personliga arbete och inte påverkas av appskyddsprinciperna när de använder Word-appen i en personlig kontext.
 
 5.  När inloggningen är klar tillämpas inställningarna för appskyddsprinciperna för Word-appen.
 
-6.  Nu fungerar dataöverföringen och dokumentet märks med företagets ID i appen. Dessutom behandlas data i en arbetskontext och motsvarande principinställningar tillämpas.
+6.  Nu har filöverföringen slutförts och dokumentet märkts med företagets ID i appen. Dessutom behandlas filen i en arbetskontext och motsvarande principinställningar tillämpas.
 
 ### <a name="validate-user-upn-setting-for-third-party-emm"></a>Verifiera inställningen för användar-UPN för en EMM-lösning från tredje part
 
@@ -109,9 +110,4 @@ Börja med att [skapa och distribuera en appskyddsprincip](create-and-deploy-mob
 
 ### <a name="see-also"></a>Se även
 [Skydda appdata med hjälp av appskyddsprinciper med Microsoft Intune](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

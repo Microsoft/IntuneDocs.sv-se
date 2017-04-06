@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: 7d5a1859ef1a373ce424dd4f351fc137c6052fb7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 8cc5e12308871a3b023bed49e9647b888971f849
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -87,6 +87,12 @@ Om du har använt den klassiska Intune-administratörskonsolen bör du observera
 <!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
+
+##  <a name="migration-from-intune-classic-console-to-intune-azure-preview-portal"></a>Migrering från den klassiska Intune-konsolen till Intune Azure Preview Portal
+
+Principer för enhetsfterlevnad som skapats i den [klassiska Intune-konsolen](https://manage.microsoft.com) visas inte i nya [Intune Azure Portal](https://portal.azure.com). De kommer dock fortfarande att vara riktade till användarna och kunna hanteras via den klassiska Intune-konsolen.
+
+Om du vill dra nytta av de funktioner i Intune Azure Portal som relaterar till den nya enhetsefterlevnaden, så måste du skapa nya principer för enhetsefterlevnad i Intune Azure Portal. Om du tilldelar en användare en ny princip för enhetsefterlevnad i Intune Azure Portal-portalen, och denna användare även har tilldelats en princip för enhetsefterlevnad från den klassiska Intune-portalen, så har principerna för enhetsefterlevnad från Intune Azure Portal företräde framför dem från den klassiska Intune-konsolen.
 
 ##  <a name="next-steps"></a>Nästa steg
 

@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: fafc2b14d3060f79b92bb9d18aabda6b08737881
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
+ms.openlocfilehash: 009c6491b8ce457a371f5db31de3f122fa41fb95
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -28,32 +28,43 @@ ms.lasthandoff: 02/18/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 ## <a name="general"></a>Allmänt
--     **Kamera** – Enhetens kamera kan användas.
--     **Kopiera och klistra in** – Tillåter funktioner för att kopiera och klistra in på enheten.
--     **Urklippsdelning mellan appar** – Tillåter användning av Urklipp vid funktionen Kopiera och klistra in mellan appar (endast Samsung KNOX Standard).
--     **Sändning av diagnostikdata** – Hindrar användaren från att skicka diagnostikdata från enheten.    
--     **Fabriksåterställning** – Tillåter att användaren utför en fabriksåterställning på enheten.
--     **Geoplats** – Tillåter att enheten använder platsinformation (endast Samsung KNOX Standard).
--     **Avstängning** – Tillåter att användaren stänger av enheten.<br>Om du inaktiverar den här inställningen kommer inte inställningen **Antal felaktiga inloggningar innan enheten rensas** att fungera för Samsung KNOX Standard-enheter.
--     **Skärmdump** – Låter användaren fånga skärminnehållet som en bild.
--     **Röstassistent** – Tillåter användning av röstassistentens programvara på enheten (endast Samsung KNOX Standard).
--     **YouTube** – Tillåter användning av YouTube-appen på enheten (endast Samsung KNOX Standard).
+
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Kamera**|Enhetens kamera får användas.|Ja|Ja|
+|**Kopiera och Klistra in**|Tillåter funktioner för att kopiera och klistra in på enheten.|Nej|Ja|
+|**Delning av urklipp mellan appar**|Tillåter att urklipp används för att kopiera och klistra in mellan appar.|Nej|Ja|
+|**Sändning av diagnostikdata**|Hindrar användaren från att skicka diagnostikdata från enheten.|Nej|Ja|
+|**Fabriksåterställning**|Tillåter att användaren utför en fabriksåterställning på enheten.|Nej|Ja|
+|**Geolocation**|Tillåter att enheten använder platsinformation (endast Samsung KNOX Standard).|Nej|Ja|
+|**Avstängning**|Tillåter att användaren stänger av enheten.<br>Om du inaktiverar den här inställningen kommer inte inställningen **Antal felaktiga inloggningar innan enheten rensas** att fungera för Samsung KNOX Standard-enheter.|Nej|Ja|
+|**Skärmdump**|Låter användaren fånga skärminnehållet som en bild.|Nej|Ja|
+|**Röstassistent**|Tillåter att röstassistentprogramvaran används på enheten.|Nej|Ja|
+|**YouTube**|Tillåter att YouTube-appen används på enheten.|Nej|Ja|
 
 ## <a name="password"></a>Lösenord
--     **Lösenord krävs** – Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
--     **Minsta längd på lösenord** – Ange den minsta längden på lösenord som en användare måste konfigurera (mellan 4 och 16 tecken).
--     **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger antalet minuter av inaktivitet innan enheten låses automatiskt.
--     **Antal felaktiga inloggningar innan enheten rensas** – Anger antalet tillåtna felinloggningar innan enheten rensas.
--     **Lösenordets giltighetstid (dagar)** – Anger antal dagar innan lösenordet för enheten måste ändras.
--     **Krav på lösenordstyp** – Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.
--     **Förhindra återanvändning av tidigare lösenord** – Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.
--     **Upplåsning med fingeravtryck** – Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.
--     **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
--     **Kryptering** – Kräver att filer på enheten krypteras.
+
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Lösenord**|Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.|Ja|Ja|
+|**Minsta längd på lösenord**|Ange den minsta längden på lösenord som en användare måste konfigurera (mellan 4 och 16 tecken).|Ja|Ja|
+|**Maximalt antal minuter av inaktivitet innan skärmen låses**|Anger antalet minuter av inaktivitet innan enheten låses automatiskt.|Ja|Ja|
+|**Antal felaktiga inloggningar innan enheten rensas**|Anger antalet tillåtna felinloggningar innan enheten rensas.|Ja|Ja|
+|**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|Ja|Ja|
+|**Lösenordstyp krävs**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.|Ja|Ja|
+|**Förhindra återanvändning av tidigare lösenord**|Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.|Ja|Ja|
+|**Upplåsning med fingeravtryck**|Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.|Nej|Ja|
+|**Smart Lock och andra betrodda agenter**|Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja (5.0 och senare)|Nej|
+|**Kryptering**|Kräver att filer på enheten krypteras.|Ja|Ja|
 
 ## <a name="google-play-store"></a>Google Play Store
 
--     **Google Play Store** – Ger användaren åtkomst till Google Play Store på enheten (endast Samsung KNOX Standard).
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Google Play Store**|Tillåter att användaren kommer åt Google Play Store på enheten|Nej|Ja|
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
@@ -80,30 +91,42 @@ Exempel: Sök på Google Play efter Microsoft Office Mobile. Webbadressen du ska
 Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.        
 
 ## <a name="browser"></a>Webbläsare
--     **Webbläsare** – Anger om enhetens standardwebbläsare får användas.
--     **Autofyll** – Tillåter att webbläsarens autofyllfunktion används.
--     **Cookies** – Tillåter att enhetens webbläsare använder cookies.
--     **JavaScript** – Tillåter att enhetens webbläsare kör Java-skript.
--     **Popup-fönster** – Tillåter att blockering av popup-fönster används i webbläsaren.
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Webbläsare**|Anger om enhetens standardwebbläsare får användas.|Nej|Ja|
+|**Autofyll**|Tillåter att webbläsarens autofyllfunktion används.|Nej|Ja|
+|**Cookies**|Tillåter att enhetens webbläsare använder cookies.|Nej|Ja|
+|**Javascript**|Tillåter att enhetens webbläsare kör Java-skript.|Nej|Ja|
+|**Popup-fönster**|Tillåter att blockering av popup-fönster används i webbläsaren.|Nej|Ja|
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
--     **Google-säkerhetskopiering** – Tillåter användning av Google-säkerhetskopiering.
--     **Automatisk synkronisering av Google-konto** – Tillåter att Google-kontoinställningarna får synkroniseras automatiskt.
--     **Flyttbara lagringsmedier** – Tillåter att enheten använder flyttbara lagringsmedier, som t.ex. SD-kort (endast Samsung KNOX Standard).
--     **Kryptering på minneskort** – Anger om enhetens minneskort måste vara krypterat.
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Google-säkerhetskopiering**|Tillåter användning av Google-säkerhetskopiering.|Nej|Ja|
+|**Automatisk synkronisering av Google-konto**|Google-kontoinställningarna får synkroniseras automatiskt.|Nej|Ja|
+|**Flyttbart lagringsmedium**|Tillåter att enheten använder flyttbara lagringsenheter, t.ex. ett SD-kort.|Nej|Ja|
+|**Kryptering på minneskort**|Anger om enhetens minneskort måste vara krypterat.|Nej|Ja|
 
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
--     **Datanätverksväxling** – Tillåter datanätverksväxling när enheten är i ett mobilnät (endast Samsung KNOX Standard).
--     **SMS och MMS** – Tillåter användning av SMS och MMS på enheten (endast Samsung KNOX Standard).
--     **Röstsamtal** – Aktiverar eller inaktiverar röstsamtal på enheten (endast Samsung KNOX Standard).
--     **Röstnätverksväxling** – Tillåter röstnätverksväxling när enheten är i ett mobilnät (endast Samsung KNOX Standard).
--     **Bluetooth** – Tillåter användning av Bluetooth på enheten (endast Samsung KNOX Standard).
--     **NFC** – Tillåter åtgärder som använder närfältskommunikation, om enheten har stöd för det (endast Samsung KNOX Standard).
--     **Trådlöst** – Tillåter trådlösa funktioner på enheten (endast Samsung KNOX Standard).
--     **Trådlös Internetdelning** – Tillåter användning av trådlös Internetdelning på enheten (endast Samsung KNOX Standard).
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Datanätverksväxling**|Tillåter dataroaming när enheten är i ett mobilnät.|Nej|Ja|
+|**SMS/MMS-meddelanden**|Tillåter att SMS och MMS används på enheten.|Nej|Ja|
+|**Röstsamtal**|Aktiverar eller inaktiverar röstsamtalsfunktionen på enheten.|Nej|Ja|
+|**Röstnätverksväxling**|Tillåter röstroaming när enheten är i ett mobilnät.|Nej|Ja|
+|**Bluetooth**|Tillåter att Bluetooth används på enheten.|Nej|Ja|
+|**NFC**|Tillåter åtgärder som använder närfältskommunikation, om enheten har stöd för det.|Nej|Ja|
+|**Wi-Fi**|Tillåter att enhetens Wi-Fi-funktioner används.|Nej|Ja|
+|**Trådlös Internetdelning**|Tillåter att Wi-Fi-delning används på enheten.|Nej|Ja|
 
 ## <a name="kiosk"></a>Helskärmsläge
--     **Välj en hanterad app** – Bläddra till och välj en hanterad app som kan köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.
--     **Viloläge för skärmknapp** – Aktiverar eller inaktiverar knappen för viloläge på enheten.
--     **Volymknappar** – Aktiverar eller inaktiverar användningen av volymknapparna på enheten.
+|||||
+|-|-|-|-|
+|Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
+|**Välj en hanterad app**|Bläddra till och välj en hanterad app som kan köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.|Nej|Ja|
+|**Viloläge för skärm-knapp**|Aktiverar eller inaktiverar aktiveringsknappen på enhetens skärm.|Nej|Ja|
+|**Volymknappar**|Aktiverar eller inaktiverar användningen av volymknapparna på enheten.|Nej|Ja|
 

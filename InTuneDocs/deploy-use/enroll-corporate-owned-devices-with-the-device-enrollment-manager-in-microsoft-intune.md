@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: adb2fd27d7f2b3f0ef4dce6b26fcb20d74b69a00
-ms.openlocfilehash: f099fdf942795b128fe46f9bd1d82432d89f6f75
-ms.lasthandoff: 02/04/2017
+ms.sourcegitcommit: a4b6d8b0a63d707631e3f0e231b2e9b40f2609cf
+ms.openlocfilehash: 1d8109fca8170ad127f6377918d7c0313ba26d78
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Organisationer kan använda Intune för att hantera ett stort antal mobila enhet
 Användarna måste finnas i Azure Portal för att kunna läggas till som enhetsregistreringshanterare. För optimal säkerhet bör DEM-användare inte även vara Intune-administratörer.
 
 >[!NOTE]
->DEM-registreringsmetoden kan inte användas med [Apple Configurator-installationsassistenten](ios-setup-assistant-enrollment-in-microsoft-intune.md), [direktregistrering](ios-direct-enrollment-in-microsoft-intune.md) eller [DEP-registreringsmetoden](ios-device-enrollment-program-in-microsoft-intune.md). 
+>DEM-registreringsmetoden kan inte användas med [Apple Configurator-installationsassistenten](ios-setup-assistant-enrollment-in-microsoft-intune.md), [direktregistrering](ios-direct-enrollment-in-microsoft-intune.md) eller [DEP-registreringsmetoden](ios-device-enrollment-program-in-microsoft-intune.md).
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Exempelscenario för enhetsregistreringshanterare
 
@@ -42,9 +42,9 @@ Endast användare i Intune-konsolen kan vara enhetsregistreringshanterare. Den a
 
 DEM-användaren kan:
 
--   Registrera upp till 1000 enheter i Intune.
--   Logga in på företagsportalen och hämta företagsappar.
--   Konfigurera åtkomst till företagets data genom att distribuera rollspecifika appar till surfplattorna.
+-   Registrera upp till 1000 enheter i Intune
+-   Logga in på företagsportalsappen och hämta företagsappar
+-   Konfigurera åtkomst till företagets data genom att distribuera rollspecifika appar till surfplattorna
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Begränsningar för enheter som registreras med ett DEM-konto
 
@@ -57,9 +57,9 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
   - DEM-användaren kan inte avregistrera DEM-registrerade enheter på själva enheten genom företagsportalen. Intune-administratörer kan använda den funktionen, men inte DEM-användare.
 
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
- 
+
   - Användare kan inte använda apparna för Apples volymköpsprogram (VPP) på grund av Apple-ID-kraven per användare för apphantering.
- 
+
   - (Endast iOS) Om du använder DEM för att registrera iOS-enheter kan du inte använda Apple Configurator eller Apples enhetsregistreringsprogram (DEP) för att registrera enheter.
 
 > [!NOTE]
@@ -77,7 +77,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 4.  Välj **Lägg till...**. Dialogrutan **Lägg till enhetsregistreringshanterare** öppnas.
 
-5.  Ange Intune-kontots **användar-ID** och välj sedan **OK**. 
+5.  Ange Intune-kontots **användar-ID** och välj sedan **OK**.
 
     DEM-användaren kan nu registrera mobila enheter på samma sätt som när en slutanvändare registrerar en BYOD i företagsportalen. Användaren av hanteraren kan installera företagsportalappen och registrera enheten med sina autentiseringsuppgifter för DEM på upp till 1000 enheter. Stegen för att registrera slutanvändare för varje plattform finns i:
 
