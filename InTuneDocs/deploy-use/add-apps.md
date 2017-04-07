@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0945fb2f67c6cc49ca8d10bb5c24f3c4a5f9b2c5
-ms.openlocfilehash: c65dc8ec22f717c5dcce51bb3c45d65bad8d8bde
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: c294a0abaf69017b6c098a95870fc035f28d0787
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -37,7 +37,7 @@ Innan du börjar distribuera appar med Microsoft Intune är det bra om du bekant
 |**Windows Installer (&#42;.exe, &#42;.msi)**|Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns i [Kommandoradsväxlar för Microsoft Windows Installer-verktyget](https://support.microsoft.com/en-us/kb/227091).<br><br>Alla eventuella ytterligare filer och mappar som krävs för appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.<br><br>I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) att Intune installerar några kommandoradsargument. Läs dokumentationen till din app.<br><br>Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).<br><br>Den här apptypen gäller endast för datorer som kör Intune-programklienten.|
 |**Appaket för Android (&#42;.apk)**|För att kunna distribuera Android-appar måste du ha ett giltigt APK-paket.|
 |**Appaket för iOS (&#42;.ipa)**|Om du vill distribuera iOS-appar måste du ha ett giltigt IPA-paket.<br><br>IPA-paketet måste ha signerats av Apple och det utgångsdatum som anges i etableringsprofilen måste vara giltigt. Intune kan distribuera iOS-appar med företagscertifikat<br><br>Inte alla Apple-utvecklarcertifikatsappar stöds.<br><br>Ditt företag måste vara registrerat för iOS Developer Enterprise-programmet.<br><br>Kontrollera att din organisations brandvägg tillåter åtkomst till iOS-etablerings- och certifieringswebbplatserna.<br><br>Du behöver inte distribuera en manifestfil (.plist) med appen.|
-|**Appaket för Windows Phone (&#42;.xap, .appx, .appxbundle)**|För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-phone-management-with-microsoft-intune.md).|
+|**Appaket för Windows Phone (&#42;.xap, .appx, .appxbundle)**|För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Windows-app-paket (.appx, .appxbundle)**|För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows-enheter med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
 |**Windows Installer via MDM (&#42;.msi)**|Med den här appen kan du skapa och distribuera Windows Installer-baserade appar till registrerade datorer som kör Windows 10. Dessa datorer hanteras via hantering av mobila enheter (MDM).<br /><br />Du kan bara överföra en enstaka fil med filnamnstillägget .msi.<br><br>Filens produktkod och produktversion används för appidentifiering.<br><br>Appens standardbeteende för omstart används. Intune styr inte det här.<br><br>MSI-paket per användare installeras för en enskild användare.<br><br>MSI-paket per dator installeras för alla användare på enheten.<br><br>MSI-paket för dubbla lägen installeras för närvarande endast för alla användare på enheten.<br><br>Appuppdateringar stöds om MSI-produktkoden för respektive version är densamma.<br>
 Alla typer av programinstallationsappar överförs till ditt molnlagringsutrymme.
