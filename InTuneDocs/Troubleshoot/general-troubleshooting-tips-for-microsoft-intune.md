@@ -1,11 +1,11 @@
 ---
-title: "Allmänna felsökningstips | Microsoft Intune"
+title: "Allmänna felsökningstips | Microsoft Docs"
 description: "Allmänna resurser för att lösa problem med Intune."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,15 +13,20 @@ ms.technology:
 ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 266ee94f0c61a3f99824a0210ec6f7a205343b21
-ms.openlocfilehash: 93add0c558be2288cd4776f1976101c2eaa2a378
+ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
+ms.openlocfilehash: ef6c482a45a7c759cec1062b129d2644562d0da2
+ms.lasthandoff: 01/10/2017
 
 
 ---
 
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Allmänna felsökningstips för Microsoft Intune
-Det kan hända att du upptäcker problem med konfigurationen eller med klienter efter att du har distribuerat Microsoft Intune. Resurserna nedan kan hjälpa dig att ta reda på vad som kan vara orsaken till problemet så att du kan lösa det.
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Det kan hända att du upptäcker problem med konfigurationen eller med klientenheter efter att du har distribuerat Microsoft Intune. Använd följande resurser för att identifiera vad som orsakar problemet så att du kan lösa det.
 
 > [!NOTE]
 > Om du vill skapa en supportbegäran eller visa en befintlig begäran [går du till Office 365-administrationscentret](https://portal.office.com/admin/default.aspx). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
@@ -36,7 +41,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
 -   Vilka ändringar gjorde du i Intune eller enhetskonfigurationen?
 
--   Tänk efter om andra ändringar än konfigurationsändringar har gjorts i den aktuella miljön.
+-   Har andra ändringar än konfigurationsändringarna gjorts i den aktuella miljön?
 
 -   Hur ofta uppstår problemet och förekommer det sporadiska eller hela tiden?
 
@@ -46,25 +51,25 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klienter 
 
 ## <a name="collect-available-data"></a>Samla in tillgängliga data
 
--   Enhetsloggar. Lär dig mer om att samla in enhetsloggar i:
+-   Med hjälp av följande resurser kan du lära dig att samla in enhetens loggar:
   - [Skicka loggar med Android-diagnostikdata till IT-administratören via en USB-kabel](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
   - [Skicka loggar med Android-diagnostikdata till IT-administratören via e-post](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
   - [Skicka Android-registreringsfel till IT-administratören](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
   - [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios)
 
--   Data från administratörskonsolen. Vid problem relaterade till principimplementeringen bör du till exempel undersöka den avsedda principen och principens status genom att följa anvisningarna i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Du kan använda data från administratörskonsolen (t.ex. vid problem med principimplementering) för att undersöka den avsedda principen och principens status genom att följa anvisningarna i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/intune/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## <a name="research-the-solution"></a>Undersök lösningen
 
--   Sök efter en lösning på webben. Om du till exempel får felmeddelandet 0x80073CF0 kan du söka på **technet intune 0x80073cf0** på webben så returneras artikeln [Felsöka problem med appdistributionen i Microsoft Intune](troubleshoot-app-deployment-problems-in-microsoft-intune.md), där du får förslag på hur du kan lösa problemet
+-   Sök efter en lösning på webben. Om du till exempel får felmeddelandet 0x80073CF0 kan du söka på **technet intune 0x80073cf0** på webben för att läsa artikeln [Felsöka problem med appdistribution i Microsoft Intune](troubleshoot-app-deployment-problems-in-microsoft-intune.md). Artikeln innehåller förslag på hur du åtgärdar det här felet.
 
--   Du kan söka efter svar i [Intune TechNet-forumet](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  Om problemet inte har diskuterats tidigare kan du ställa din fråga och se vilka förslag community-medlemmarna kan ha.
+-   Sök efter ett svar i [Intune TechNet-forumet](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  Om problemet inte har diskuterats tidigare kan du ställa din fråga och se vilka förslag community-medlemmarna kan ha.
 
--   Du kan öppna en supportbegäran. Det är lättare för Intunes support att hjälpa dig att lösa ett problem om du har definierat problemet och samlat in tillgängliga data.
+-   Öppna en supportbegäran. Det är lättare för Intunes support att hjälpa dig att lösa ett problem om du har definierat problemet och samlat in tillgängliga data.
 
-    Om du vill skapa en supportbegäran går du till [administrationscenter för Office 365.](https://portal.office.com/admin/default.aspx) Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    Om du vill skapa en supportbegäran går du till [administrationscenter för Office 365](https://portal.office.com/admin/default.aspx). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
-## <a name="community-resources"></a>Gruppresurser
+## <a name="find-community-resources"></a>Hitta community-resurser
 Du kan hitta annan användbar information i dessa gruppresurser:
 
 -   [Överlevnadsguide till Microsoft Intune](http://social.technet.microsoft.com/wiki/contents/articles/23431.microsoft-intune-survival-guide.aspx) innehåller länkar till många resurser som kan hjälpa dig att konfigurera, underhålla och felsöka Intune.
@@ -76,7 +81,7 @@ Du kan hitta annan användbar information i dessa gruppresurser:
 -   [Intune-forum](https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 
 ### <a name="next-steps"></a>Nästa steg
-Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den informationen inte hjälper kan du kontakta Microsofts support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+Följande artiklar innehåller felsökningshjälp för specifika problem. Om den informationen inte hjälper kan du kontakta Microsofts support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 [Felsöka Endpoint Protection i Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md)
 
@@ -91,9 +96,4 @@ Artiklarna nedan innehåller felsökningshjälp för specifika problem. Om den i
 [Felsöka klientinstallationen i Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Felsöka programuppdateringar i Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

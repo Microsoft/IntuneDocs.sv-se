@@ -1,11 +1,11 @@
 ---
-title: "Felsöka Endpoint Protection i Microsoft Intune"
+title: "Felsöka Endpoint Protection i Microsoft Docs"
 description: "Lösa problem när du använder Microsoft Intune Endpoint Protection."
 keywords: 
-author: staciebarker
-ms.author: stabar
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 01/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,19 +13,21 @@ ms.technology:
 ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ms.reviewer: tscott
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: cba0d6d781d3050f4dd8aabd661d677ae849eff1
-ms.openlocfilehash: bdcbe263529844cab04b1e5b715fe6eafd3feb86
+ms.sourcegitcommit: a43fc6fcd33f65725d325060a513d5380baae10f
+ms.openlocfilehash: b47469c8c5d35098e2e932e5ae9c9de4f5cdafb8
 
 
 ---
 
 # <a name="troubleshoot-endpoint-protection-in-microsoft-intune"></a>Troubleshoot Endpoint Protection in Microsoft Intune
 
-Använd informationen i det här avsnittet för att lösa problem när du använder Endpoint Protection i Microsoft Intune.
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
+Använd informationen i det här avsnittet för att lösa problem när du använder Endpoint Protection i Microsoft Intune. Du kan också granska informationen om att [felsöka Windows Defender](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-windows-defender-in-windows-10).
 
 Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
-
 
 ### <a name="endpoint-protection-error-messages"></a>Endpoint Protection-felmeddelanden
 I det här avsnittet beskrivs möjliga orsaker och lösningar för följande fel och varningar som visas i fönstret **Status för Endpoint Protection** i [Intune-administrationskonsolen](https://manage.microsoft.com).
@@ -50,6 +52,6 @@ Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformation
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 
