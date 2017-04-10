@@ -1,11 +1,11 @@
 ---
-title: "Felsöka enhetsregistrering | Microsoft Intune"
+title: "Felsöka enhetsregistrering | Microsoft Docs"
 description: "Förslag på hur du kan felsöka problem med enhetsregistrering."
 keywords: 
-author: staciebarker
-ms.author: staciebarker
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.date: 08/02/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,18 @@ ms.technology:
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
+ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d51f34dea3463bec83ea39cdfb79c7bedf9e3926
-ms.openlocfilehash: bdc462023f36d60c19dea9d67c7fb4be6d2a3043
+ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
+ms.openlocfilehash: 3d4a89cd8e6e57f5a1e268dcda98cfb3c68c5587
+ms.lasthandoff: 03/21/2017
 
 
 ---
 
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhetsregistrering. Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
@@ -29,19 +33,16 @@ Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhe
 
 Kontrollerar att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Du kan läsa om konfigurationskraven i:
 
--   [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/gprerequisites-for-enrollment.md)
--   [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--   [Konfigurera hanteringen av Windows Phone och Windows 10 Mobile med Microsoft Intune](/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
--   [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
-
+-    [Dags att registrera enheter i Microsoft Intune](/intune/deploy-use/prerequisites-for-enrollment)
+-    [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+-    [Konfigurera Windows-enhetshantering](/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+-    [Konfigurera hantering av Android-enhet](/intune/deploy-use/set-up-android-management-with-microsoft-intune) – Inga ytterligare åtgärder krävs
+-    [Konfigurera hantering av Android for Work-enhet](/intune/deploy-use/set-up-android-for-work)
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
-- [Skicka loggar med Android-diagnostikdata till IT-administratören via en USB-kabel](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-- [Skicka loggar med Android-diagnostikdata till IT-administratören via e-post](/intune/enduser/send-diagnostic-data-logs-to-your-it-administrator-using-email-android)
-- [Skicka Android-registreringsfel till IT-administratören](/intune/enduser/send-enrollment-errors-to-your-it-administrator-android)
-- [Skicka iOS-registreringsfel till IT-administratören](/intune/enduser/send-errors-to-your-it-admin-ios)
-
+- [Skicka Android-registreringsfel till IT-administratören](https://docs.microsoft.com/intune/enduser/send-enrollment-errors-to-your-it-admin-android)
+- [Skicka iOS-fel till IT-administratören](https://docs.microsoft.com/intune/enduser/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Allmänna registreringsproblem
@@ -50,15 +51,15 @@ Dessa problem kan uppstå på alla enhetsplattformar.
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
 **Problem:** En användare får ett fel på enheten under registreringen, som **Företagsportalen är för tillfället otillgänglig** på en iOS-enhet och DMPdownloader.log på Configuration Manager innehåller felet **DeviceCapReached**.
 
-**Lösning:** På grund av utformningen kan användarna inte registrera fler än fem enheter.
+**Lösning:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrollera antalet enheter som har registrerats och som tillåts
 
-1.  Validera i Intunes administrationsportal att användaren inte har fler än fem enheter tilldelade
+1.  Validera i Intunes administrationsportal att användaren inte har fler än maximalt tillåtna 15 enheter tilldelade.
 
-2.  Kontrollera i Intunes administrationsportal  under Admin\Hantering av mobila enheter\Registreringsregler att gränsen för enhetsregistrering är inställd på fem.
+2.  Kontrollera att gränsen för enhetsregistrering är inställd på 15 under **Admin** > **Hantering av mobila enheter** > **Registreringsregler** i Intunes administratörskonsol.
 
-Användare av mobila enheter kan ta bort enheter på följande URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/).
+<!--- Mobile device users can delete devices at the following URL: [https://byodtestservice.azurewebsites.net/](https://byodtestservice.azurewebsites.net/). --->
 
 Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
@@ -68,7 +69,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
 
-3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
+3.  Skapa en Azure-prenumeration om du inte redan har en genom att välja prenumerationslänken för att **registrera Azure Active Directory kostnadsfritt**. Om du har ett betalt konto behöver du inte använda något kreditkort eller utföra någon betalning.
 
 4.  Välj **Active Directory** och välj sedan din organisation.
 
@@ -82,36 +83,36 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 > [!NOTE]
 
-> Du kan undvika taket för enhetsregistrering genom att använda enhetsregistreringshanterare. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+> Du kan undvika taket för enhetsregistrering genom att använda ett enhetsregistreringshanterarkonto. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
 >
-> Ett användarkonto som läggs till i gruppen Enhetsregistreringshanterare kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
+> Ett användarkonto som läggs till i enhetsregistreringshanterarkontot kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Företagsportalen är för tillfället otillgänglig
-**Problem:** Användaren får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
+**Problem:** Användare får felet **Företagsportalen är för tillfället otillgänglig** på enheten.
 
-#### <a name="troubleshooting-company-portal-temporarily-unavailable-error"></a>Felsökning för felet Företagsportalen är för tillfället otillgänglig
+**Lösning:**
 
 1.  Ta bort företagsportalappen för Intune från enheten.
 
 2.  Öppna enheten, öppna webbläsaren och bläddra till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)och prova att logga in.
 
-3.  Låt användaren prova ett annat nätverk om denne inte kan logga in.
+3.  Be användaren att prova ett annat nätverk om de inte kan logga in.
 
 4.  Om det inte går ska du validera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory.
 
-5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste man manuellt installera företagsportalappen för Intune, och sedan prova igen att registrera sig.
+5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera företagsportalappen för Intune, och sedan kan du prova att registrera dig igen.
 
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
 **Problem:** Användaren får felet **MDM-utfärdare har inte definierats**.
 
-#### <a name="troubleshooting-mdm-authority-not-defined-error"></a>Felsöka MDM-auktoritet har inte definierats
+**Lösning:**
 
-1.  Kontrollera att MDM-auktoriteten har ställts in korrekt för den version av Intune-tjänsten som du använder, det vill säga för Intune, O365 MDM eller System Center Configuration Manager med Intune. För Intune ställs MDM-utfärdaren in under **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i O365 är det en inställning under **Mobila enheter**.
+1.  Kontrollera att MDM-utfärdare har ställts in korrekt för den typ av Intune-tjänsten som du använder, det vill säga för Intune, Office 365 eller System Center Configuration Manager med Intune. För Intune ställs MDM-utfärdaren in under **Admin** &gt; **Hantering av mobila enheter**. Om du har Configuration Manager med Intune anger du utfärdaren när du konfigurerar Intune Connector, och i Office 365 är det en inställning under **Mobila enheter**.
 
     > [!NOTE]
-    > När du har angett MDM-utfärdaren kan du bara ändra inställningen genom att kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    > När du har angett MDM-utfärdare kan du endast ändra inställningen genom att kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
-2.  Kontrollera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory genom att kontrollera att deras UPN matchar Active Directory-informationen i kontoportalen.
+2.  Kontrollera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory genom att kontrollera att användarens UPN matchar Active Directory-informationen i Office 365-portalen.
     Om aktuellt UPN inte överensstämmer med Active Directory-informationen:
 
     1.  Inaktivera DirSync på den lokala servern.
@@ -148,43 +149,149 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
 
 
-**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com)) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
+### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Enheter kan inte checka in med Intune-tjänsten och visas som "Ohälsosamma" i Intune-administrationskonsolen
+**Problem:** vissa Samsung-enheter som kör Android 4.4.x och 5.x kan sluta checka in med Intune-tjänsten. Om enheter inte checkar in:
+
+- Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
+- Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
+- Användare som är skyddade med principer för villkorlig åtkomst kan förlora åtkomst till företagets resurser.
+
+Samsung har bekräftat att Samsung Smart Manager-programvaran, som medföljer vissa Samsung-enheter, kan inaktivera Intunes företagsportal och dess komponenter. När företagsportalen är i ett inaktiverat tillstånd, kan den inte köras i bakgrunden och kan därför kan inte kontakta tjänsten Intune.
+
+**Lösning nr 1:**
+
+Be användarna att starta företagsportalappen manuellt. När appen startar om, checkar enheten in med Intune-tjänsten.
+
+> [!IMPORTANT]
+> Att öppna företagsportalappen manuellt är en tillfällig lösning eftersom Samsung Smart Manager kan inaktivera företagsportalenappen igen.
+
+**Lösning nr 2:**
+
+Be användarna att försöka uppgradera till Android 6.0. Inaktiveringsproblemet inträffar inte på Android 6.0-enheter. För att kontrollera om en uppdatering är tillgänglig, kan användare gå till **Inställningar** > **Om enheten** > **Hämta uppdateringar manuellt** och följa anvisningarna på enheten.
+
+**Lösning nr 3:**
+
+Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen så att Smart Manager exkluderar företagsportalappen:
+
+1. Starta Smart Manager-appen på enheten.
+
+  ![Välj Smart Manager-ikonen på enheten](./media/smart-manager-app-icon.png)
+
+2. Välj panelen **Batteri**.
+
+  ![Välj panelen Batteri](./media/smart-manager-battery-tile.png)
+
+3. Under **App-energibesparing** eller **App-optimering**, väljer du **Detaljer**.
+
+  ![Välj Detaljer under App-energibesparing eller App-optimering](./media/smart-manager-app-power-saving-detail.png)
+
+4. Välj **Företagsportalen** från listan över appar.
+
+  ![Välj Företagsportalen från listan över appar](./media/smart-manager-company-portal.png)
+
+5. Välj **Avstängd**.
+
+  ![Välj Avstängd från dialogrutan App-optimering](./media/smart-manager-app-optimization-turned-off.png)
+
+6. Under **App-energibesparing** eller **App-optimering**, bekräftar du att Företagsportalen är avstängd.
+
+  ![Kontrollera att Företagsportalen är avstängd](./media/smart-manager-verify-comp-portal-turned-off.png)
+
+
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
 **Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en Android-enhet.
 
-### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Felsökningssteg för misslyckad profilinstallation
+**Lösning:**
 
 1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
 2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
 
-4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+3.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
-**Problem**: Användaren får meddelandet *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat* på enheten.
+**Problem**: Användaren får följande meddelande på sin enhet: *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat.*
 
-**Lösning**:
+**Lösning 1**:
 
-- Användaren kan prova att hämta certifikatet som saknas med hjälp av [de här anvisningarna](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator).
-- Om användaren inte lyckas hämta certifikatet kanske mellanliggande certifikat saknas på ADFS-servern. Mellanliggande certifikat krävs för att Android ska lita på servern.
+Be användaren att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune/enduser/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Försök med Lösning 2 om felet fortfarande visas när användaren följt instruktionerna.
 
-Så här importerar du certifikaten till ADFS-servern eller proxyservrar:
+**Lösning 2**:
 
-1.  På ADFS-servern startar du **Microsoft Management Console** och lägger till snapin-modulen för certifikat för **datorkontot**.
-5.  Sök efter certifikatet som ADFS-tjänsten använder och visa dess överordnade certifikat.
-6.  Kopiera det överordnade certifikatet och klistra in det under **Computer\Intermediate Certification Authorities\Certificates**.
-7.  Kopiera certifikaten för ADFS, ADFS-dekryptering och ADFS-signering och klistra in dem i det personliga arkivet för ADFS-tjänsten.
-8.  Starta om ADFS-servrarna.
+Om användaren fortfarande ser ett fel om saknat certifikat efter att ha angett sin företagsinloggning och omdirigerats för federerad inloggning, kan ett mellanliggande certifikat saknas på AD FS-servern (Active Directory Federation Services).
 
+Certifikatfelet uppstår eftersom Android-enheter kräver att mellanliggande certifikat ingår i [SSL-serverns hälsning](https://technet.microsoft.com/library/cc783349.aspx), men för närvarande är standardinställningen att AD FS-serverns eller AD FS-proxyserverns installation endast skickar AD FS-tjänstens SSL-certifikat i SSL-serverns svar på en hälsning från SSL-klienten.
+
+Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
+
+1.    Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
+2.    Expandera **Personligt** och välj **Certifikat**.
+3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
+4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
+5.    På varje överordnat certifikat väljer du **Visa certifikat**.
+6.    Välj fliken **Information** och välj **Kopiera till fil...**.
+7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
+8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
+9.    Starta om AD FS-servrarna.
+10.    Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 
+**Så här kontrollerar du att certifikatet har installerats**:
+
+Följande steg beskriver bara en av många metoder och verktyg som du kan använda för att kontrollera att certifikatet har installerats.
+
+1. Gå till [det kostnadsfria Digicert-verktyget](ttps://www.digicert.com/help/).
+2. Ange det fullständiga domännamnet (t.ex. sts.contoso.com) för AD FS-servern och välj **KONTROLLERA SERVER**.
+
+Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i resultaten. Om problemet ovan kvarstår, ser du ett rött X i avsnitten ”Certifikatnamnmatchningar” och ”SSL-certifikatet är korrekt installerat” i rapporten.
 
 
 ## <a name="ios-issues"></a>iOS-problem
+
+### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
+**Problem:** iOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:
+
+- Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
+- Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
+- Användare som är skyddade med principer för villkorlig åtkomst kan förlora åtkomst till företagets resurser.
+
+**Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomst till företagets resurser.
+
+När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om appen upptäcker att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta. Användaren ser då det infogade meddelandet **Försöker synkronisera...** .
+
+  ![Meddelandet ”Försöker att synkronisera”](./media/ios_cp_app_trying_to_sync_notification.png)
+
+Om synkroniseringen lyckas visas ett infogat meddelande som lyder **Synkronisering är klar** i iOS-företagsportalappen. Detta betyder att enheten är i felfri.
+
+  ![Meddelandet ”Synkronisering är klar”](./media/ios_cp_app_sync_successful_notification.png)
+
+Om synkroniseringen misslyckas visas ett infogat meddelande som lyder **Det går inte att synkronisera** i iOS-företagsportalappen.
+
+  ![Meddelandet ”Det går inte att synkronisera”](./media/ios_cp_app_unable_to_sync_notification.png)
+
+För att åtgärda problemet måste användarna trycka på knappen **Konfigurera** till höger om meddelandet **Det går inte att synkronisera**. Knappen Konfigurera tar användarna till skärmen Konfiguration av företagsåtkomst, där de kan följa anvisningarna för att registrera sina enheter.
+
+  ![Skärmen Konfiguration av företagsåtkomst](./media/ios_cp_app_company_access_setup.png)
+
+När de registrerats återgår enheterna till ett felfritt tillstånd och återfår åtkomst till företagets resurser.
+
+### <a name="verify-ws-trust-13-is-enabled"></a>Kontrollera att WS-Trust 1.3 är aktiverat
+**Problem** Det går inte att registrera iOS-enheter med programmet för enhetsregistrering (DEP)
+
+Registrering av DEP-enheter med användartillhörighet kräver att WS-Trust 1.3-slutpunkten användarnamn/kombinerad är aktiverad för att kunna begära användartokens. Active Directory aktiverar den här slutpunkten som standard. Hämta en lista med aktiverade slutpunkter med hjälp av PowerShell-cmdleten Get-AdfsEndpoint, som söker efter slutpunkten trust/13/UsernameMixed. Exempel:
+
+      Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
+
+Mer information finns i [dokumentationen för Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+
+Mer information finns i [Metodtips för att skydda Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Om du behöver ytterligare hjälp för att avgöra om WS-Trust 1.3 användarnamn/kombinerad är aktiverat hos din identitetsfederationsprovider, kontaktar du Microsoft Support om du använder ADFS eller din tredjeparts identitetsleverantör.
+
+
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
 **Problem:** En användare får felmeddelandet **Det gick inte att installera profilen** på en iOS-enhet.
 
@@ -201,32 +308,20 @@ Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
 **Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen i Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
-- Du kanske har registrerat Intune Connector för ett konto och sedan för ett annat.
+- Microsoft Intune Connector på din plats för konfigurationshanteraren kommunicerar inte med Intune-tjänsten.
+- Antingen bearbetar inte Data Discovery Manager (ddm)-komponenten eller State Manager (statmgr)-komponenten meddelanden från Intune-tjänsten.
 - Du kanske har hämtat MDM-certifikatet från ett konto och använt det för ett annat.
 
 
-**Lösning:** Utför följande steg:
+**Lösning:** Granska följande loggfiler efter möjliga fel:
 
-1. Inaktivera iOS i Windows Intune Connector.
-    1. Högerklicka på Intune-prenumerationen och välj **Egenskaper**.
-    1. På fliken iOS avmarkerar du Aktivera iOS-registrering.
+- dmpdownloader.log
+- ddm.log
+- statmgr.log
 
-
-
-1. I SQL kör du följande steg mot CAS-databasen
-
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 7
-    1. delete from MDMPolicyAssignment where PolicyType = 7
-    1. update SC_ClientComponent_Property set Value2 = '' where Name like '%APNS%'
-    1. delete from MDMPolicy where PolicyType = 11
-    1. delete from MDMPolicyAssignment where PolicyType = 11
-    1. DELETE Drs_Signals
-1. Starta om SMS Executive-tjänsten eller CM-servern
+Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
 
-
-1. Skaffa ett nytt APN-certifikat och ladda upp det: Högerklicka på Intune-prenumerationen i den vänstra rutan i Configuration Manager. Välj **Skapa APNs-certifikatförfrågan** och följ instruktionerna.
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
 **Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
@@ -251,11 +346,11 @@ Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
 
 
 ### <a name="other-ios-enrollment-errors"></a>Övriga iOS-registreringsfel
-En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-ios-or-mac-os-x-device-with-intune).
+En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune/enduser/using-your-iOS-or-macOS-device-with-intune).
 
-## <a name="pc-issues"></a>Datorproblem
+## <a name="pc--issues"></a>Datorproblem
 
-### <a name="the-machine-is-already-enrolled-error-hr-0x8007064c"></a>Datorn har redan registrerats – Fel hr 0x8007064c
+### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Datorn har redan registrerats – Fel hr 0x8007064c
 **Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
 
 Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
@@ -264,15 +359,15 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 
 **Lösning:**
 
-1. Öppna **Start**-menyn och välj **Kör** -> **MMC**.
-1. **Arkiv** -> **Lägg till eller ta bort snapin-moduler**.
-1. Dubbelklicka på **Certifikat**, välj **Datorkonto**, **Nästa** och sedan **Lokal dator**.
+1. Öppna **Start**-menyn och ange **Kör** -> **MMC**.
+1. Välj **Arkiv** > **Lägg till eller ta bort snapin-moduler**.
+1. Dubbelklicka på **Certifikat**, välj **Datorkonto** > **Nästa** och sedan **Lokal dator**.
 1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**.
-1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas
+1. Leta efter Intune-certifikat som utfärdats av Sc_Online_Issuing och ta bort det om det visas.
 1. Ta bort följande registernyckel om den finns: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** och alla undernycklar.
-1. Försök att registrera datorn igen.
+1. Försök att registrera igen.
 1. Om datorn fortfarande inte kan registreras letar du upp och tar bort följande nyckel, om den finns: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
-1. Försök att registrera datorn igen.
+1. Försök att registrera igen.
 
     > [!IMPORTANT]
     > Avsnittet, metoden eller uppgiften som beskrivs innehåller information om hur du ändrar registret. Tänk på att allvarliga problem kan inträffa om du ändrar registret på fel sätt. Se därför till att du följer anvisningarna noga. För extra skydd rekommenderar vi att du säkerhetskopierar registret innan du gör några ändringar. Du kan sedan återställa registret om det uppstår problem.
@@ -304,9 +399,4 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

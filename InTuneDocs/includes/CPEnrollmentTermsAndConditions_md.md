@@ -16,6 +16,6 @@ Du kan se [information om villkoren](https://technet.microsoft.com/library/mt405
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
