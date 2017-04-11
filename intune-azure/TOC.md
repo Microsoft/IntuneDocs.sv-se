@@ -31,17 +31,16 @@
 ### [Ange MDM-auktoritet](enroll-devices/set-mdm-authority.md)
 ## Planera och utforma
 ### [Hämta ett Apple MDM-pushcertifikat](enroll-devices/get-an-apple-mdm-push-certificate.md)
-### [Hämta en Apple DEP-token](enroll-devices/get-apple-dep-token.md)
 ### [Välj hur du vill registrera iOS-enheter](enroll-devices/choose-ios-enrollment-method.md)
 ## Gör så här för att
 ### [Tilldela licenser till användare](/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4?toc=%2fintune-azure%2ftoc.json)
 ### [Registrera Android-enheter](enroll-devices/enroll-android-and-knox-standard-devices.md)
 ### Registrera iOS-enheter
-#### [Registrera iOS-enheter med installationsassistenten](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
-#### [Registrera iOS-enheter med direktregistrering](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
+#### [Apple Configurator – Installationsassistenten](enroll-devices/enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)
+#### [Apple Configurator – Direkt registrering](enroll-devices/enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)
 #### [Lägg till Apple Configurator-serienummer](enroll-devices/add-apple-configurator-serial-numbers.md)
-#### [Registrera iOS-enheter med programmet för enhetsregistrering](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
-### [Registrera enheter med enhetsregistreringshanteraren](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
+#### [DEP](enroll-devices/enroll-ios-devices-using-device-enrollment-program.md)
+### [Enhetsregistreringshanterare](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrera macOS-enheter](enroll-devices/enroll-macos-devices.md)
 ### [Registrera Windows-enheter](enroll-devices/enroll-windows-devices.md)
 ### Hantera enhetsregistrering
