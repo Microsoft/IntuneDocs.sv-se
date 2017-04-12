@@ -24,7 +24,6 @@
 ### [Anpassa företagsportalen](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-7.md)
 ### [Registrera enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](get-started/post-configuration-tasks.md)
-## [Migrera till Intune](get-started/migrate-to-intune.md)
 ## Nästa steg
 ### [Förhindra företagsdataläckor från Office 365-mobilappar](get-started/prevent-company-data-leaks-from-Office-365-mobile-apps.md)
 ### [Skydda företagsdata med datakryptering](get-started/protect-data-encryption.md)
