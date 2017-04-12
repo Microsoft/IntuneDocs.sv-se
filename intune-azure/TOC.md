@@ -74,9 +74,7 @@
 ## [Plan and design](manage-apps/plan-and-design.md) --->
 ## Så här hanterar du appar
 ### [Lägga till appar](manage-apps/add-apps.md)
-#### [Verksamhetsspecifika appar för Android](manage-apps/android-lob-app.md)
 #### [Android Store-appar](manage-apps/android-store-app.md)
-#### [Verksamhetsspecifika appar för iOS](manage-apps/ios-lob-app.md)
 #### [iOS Store-appar](manage-apps/ios-store-app.md)
 #### [Webbappar](manage-apps/web-app.md)
 #### [Windows Phone 8.1 Store-appar](manage-apps/windows-phone-8-1-store-app.md)
