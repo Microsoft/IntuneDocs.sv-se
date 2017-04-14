@@ -15,8 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f807d6e4b20b98ecf622d1ebdd9db33b132a2e6a
-ms.openlocfilehash: 2e46c5612c120a24d3f8fe32decd3eb7a0d4e709
+ms.sourcegitcommit: d10906ee3fb69458738b31bb1d4252d632a9a0cf
+ms.openlocfilehash: 6014527422ea3dae4d1333965ccd9e48e8216afb
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -91,12 +92,7 @@ Distributionsutmaningar är problem som är viktigast för en organisation och s
 <br>
     -   **Lösning:** Du kanske vill sätta igång med projektet direkt, men se till att det finns tydligt definierade mål och delmål. Ta med dessa i alla medvetenhets- och utbildningsaktiviteter för att säkerställa att användarna förstår varför organisationen har valt Intune.
 
-## <a name="next-section"></a>Nästa avsnitt
+## <a name="next-steps"></a>Nästa steg
 
 Nu när du har identifierat dina distributionsmål, delmål och potentiella utmaningar går vi vidare till nästa avsnitt: [Identifiera användningsscenarier](section-2-identify-use-case-scenarios.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
