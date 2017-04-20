@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 64b59ccb29e05af0472d463f426a06509d242034
-ms.openlocfilehash: 7a13afcbfd6b37a209c2cb879a47370f9a00b937
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 9759c1331a3fb5308e1dbc53564059618a8ef45c
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -57,9 +58,10 @@ Anvisningar för hur du skapar en apprincip i Intune-administratörskonsolen fin
 ##  <a name="supported-platforms"></a>Plattformar som stöds
 - iOS 8.1 eller senare
 - Android 4 eller senare
+- Windows 10
 
 >[!NOTE]
->Windows-enheter stöder inte dessa appskyddsprinciper. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+>Från och med version 1703 kan appskyddsprinciper definieras för Windows 10-enheter i MAM utan registreringsscenario. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ##  <a name="supported-apps"></a>Appar som stöds
 * **Microsoft-appar:** Dessa appar har en inbyggd app-SDK för Intune och kräver ingen ytterligare bearbetning innan du tillämpar appskyddsprinciper.
@@ -106,9 +108,4 @@ Globala administratörer har åtkomst till [Azure Portal](https://portal.azure.c
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

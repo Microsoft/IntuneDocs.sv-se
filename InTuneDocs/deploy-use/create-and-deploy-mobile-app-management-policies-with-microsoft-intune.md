@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fbb41a8cf6fada76b72213b8cb04fdc0428515e9
-ms.openlocfilehash: f4bc5a2092585c91e224c390eaae717985055b10
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -93,8 +94,6 @@ Du skapar appskyddsprinciper genom att följa stegen nedan:
 
     ![Skärmbild av bladet Lägg till en princip som visar att appar och inställningar har konfigurerats](../media/AppManagement/AzurePortal_MAM_CreatePolicy.png)
 
-
-
 När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i avsnittet ”Distribuera en princip till användare” nedan.
 
 > [!IMPORTANT]
@@ -105,6 +104,46 @@ När du har skapat en princip genom att följa stegen i föregående procedur di
 > -   Du associerar båda principerna med samma app.
 > -   Den princip som du skapade från Azure-konsolen prioriteras och kopiering tillåts.
 > -   Dock indikerar statusen och rapporterna i Intune-konsolen felaktigt att kopiering är blockerat.
+
+## <a name="line-of-business-lob-apps-optional"></a>Branschspecifika appar (LOB) (valfritt)
+
+Från och med Intune version 1703 kan du välja att allmänt lägga till branschspecifika appar i Intune när du skapar en ny appskyddsprincip. Det ger dig möjlighet att definiera appskyddsprinciper för LOB-appar med hjälp av MAM SDK utan att fullständiga appdistributionsbehörigheter krävs.
+
+> [!TIP] 
+> Du kan också lägga till branschspecifika appar i Intune med hjälp av arbetsflödet för [Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
+
+> [!IMPORTANT]
+> Om användarna bara har specifik behörighet för distribution av MAM-appar och inte fullständiga appdistributionsbehörigheter, som skulle tillåta att de distribuerar valfria appar i Intune, kan de inte gå igenom arbetsflödet för Intune SDK, men de kan ändå lägga till sina branschspecifika appar via arbetsflödet för att skapa skyddsprinciper för MAM-appar.
+
+### <a name="to-add-lob-apps-ios-and-android"></a>Lägga till branschspecifika appar (iOS och Android)
+
+1.  På bladet Lägg till en princip väljer du Konfigurera **appar** för att öppna bladet Appar.
+
+    ![MAM-bladet Lägg till en princip](../media/AppManagement/mam-lob-apps-1.png)
+
+2.  Klicka på **Fler appar**, ange sedan **ID för programpaket** (för iOS), **Paket-ID** (för Android), och klicka sedan på Välj för att lägga till de branschspecifika apparna.
+
+    ![MAM-bladet Fler appar](../media/AppManagement/mam-lob-apps-2.png)
+
+### <a name="to-add-lob-apps-windows"></a>Lägga till branschspecifika appar (Windows)
+
+> [!IMPORTANT] 
+> Du måste välja Windows 10 i listrutan för plattform när du skapar en ny appskyddsprincip.
+
+1.  På bladet Lägg till en princip väljer du **Tillåtna appar** eller **Undanta appar** för att öppna något av bladen för tillåtna eller undantagna appar.
+
+    > [!NOTE]
+    > 
+    - **Tillåtna appar**: detta är de appar som måste följa den här principen.
+    - **Undanta appar**: de här apparna är undantagna från denna princip och kan komma åt företagets data utan begränsningar.
+<br></br>
+2. Klicka på **Lägg till appar** på bladet för tillåtna eller undantagna appar. Du kan lägga till rekommenderade Microsoft-appar, butiks- eller skrivbordsappar.
+
+    a.  **Rekommenderade appar:** en förifylld lista med appar (huvudsakligen för Office) som administratörer enkelt kan importera till principen.
+
+    b.  **Store-appar:** administratören kan lägga till valfri app från Windows Store i principen.
+
+    c.  **Windows-skrivbordsappar:** administratören kan lägga till valfria traditionella Windows-skrivbordsappar i principen (t.ex. exe, dll osv.)
 
 ## <a name="deploy-a-policy-to-users"></a>Distribuera en princip för användare
 
@@ -181,9 +220,4 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 ### <a name="see-also"></a>Se även
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
 * [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
