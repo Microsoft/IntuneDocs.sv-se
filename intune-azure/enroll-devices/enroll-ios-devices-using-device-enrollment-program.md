@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 3e1898441b7576c07793e8b70f3c3f09f1cac534
-ms.openlocfilehash: ddeaeb2d532635802c615d09b4625dee0a824919
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 61fbc2af9a7c43d01c20f86ff26012f63ee0a3c2
+ms.openlocfilehash: c56bea46c8b505e0d357cfe90678ab149559b896
+ms.lasthandoff: 04/07/2017
 
 
 ---
@@ -27,48 +27,64 @@ ms.lasthandoff: 02/23/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Microsoft Intune kan distribuera en registreringsprofil som registrerar iOS-enheter som köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst). En profil innehåller hanteringsinställningar som du vill tillämpa på enheter. Registreringspaketet kan innehålla installationsassistentalternativ för enheten. Enheter som har registrerats via DEP kan inte avregistreras av användarna.
+Det här avsnittet hjälper IT-administratörer att registrera företagsägda iOS-enheter som köpts via [Apples enhetsregistreringsprogram (DEP)](https://deploy.apple.com). Microsoft Intune kan distribuera en registreringsprofil som registrerar DEP "i luften" så att administratören inte behöver ha fysisk kontakt med varje hanterad enhet. En DEP-profil innehåller hanteringsinställningar som du vill tillämpa på enheter vid registreringen. Registreringspaketet kan innehålla installationsassistentalternativ för enheten.
 
 >[!NOTE]
->Den här registreringsmetoden kan inte användas med metoden [hanterare av enhetsregistrering](enroll-devices-using-device-enrollment-manager.md).
+>DEP-registreringen kan inte användas med [enhetsregistreringshanteraren](enroll-devices-using-device-enrollment-manager.md).
+>Om användare dessutom registrerar sina iOS-enheter med företagsportalappen och dessa enheters serienummer sedan importeras och tilldelas en DEP-profil, så måste enheten avregistreras från Intune.
 
-Ett företag som vill hantera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) måste gå med i Apples program och skaffa enheter genom det. Information om den här processen finns på:  [https://deploy.apple.com](https://deploy.apple.com). Exempel på fördelar med programmet är obevakade enhetsinstallationer utan användning av en USB-kabel för att ansluta varje enhet till en dator.
+**DEP-registreringssteg**
+1. [Hämta en Apple DEP-token](#get-the-apple-dep-certificate)
+2. [Skapa en DEP-profil](#create-anapple-dep-profile)
+3. [Tilldela Intune-servern Apple DEP-serienummer](#assign-apple-dep-serial-numbers-to-your-mdm-server)
+4. [Synkronisera DEP-hanterade enheter](#synchronize-dep-managed-devices)
+5. Distribuera enheter till användare
 
-Innan du kan registrera företagsägda iOS-enheter med DEP måste du [skaffa en DEP-token](get-apple-dep-token.md) från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till DEP och som ditt företag äger. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler.
 
-Andra metoder för att registrera iOS-enheter beskrivs i [Välj hur du vill registrera iOS-enheter i Intune](choose-ios-enrollment-method.md).
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="get-the-apple-dep-certificate"></a>Hämta Apple DEP-certifikatet
+Innan du kan registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) behöver du en DEP-certifikatfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till DEP och som ditt företag äger. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler.
 
-Uppfyll följande krav innan du konfigurerar registrering av iOS-enheter:
+Ett företag som vill hantera företagsägda iOS-enheter med DEP måste gå med i Apples program och skaffa enheter genom det. Information om den här processen finns på https://deploy.apple.com. Exempel på fördelar med programmet är obevakade enhetsinstallationer utan användning av en USB-kabel för att ansluta varje enhet till en dator.
 
-- [Konfigurera domäner](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Ange MDM-utfärdare](set-mdm-authority.md)
-- [Skapa grupper](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- Tilldela användarlicenser i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Hämta ett Apple MDM-pushcertifikat](get-an-apple-mdm-push-certificate.md)
-- [Hämta en Apple DEP-token](get-apple-dep-token.md)
+> [!NOTE]
+> Om Intune-klienten har migrerats från den klassiska Intune-konsolen till Azure-portalen och du har tagit bort en Apple DEP-token från Intune-administrationskonsolen under migreringsperioden kan DEP-token ha återställts till ditt Intune-konto. Du kan ta bort DEP-token från Azure-portalen igen.
 
-## <a name="create-an-apple-dep-profile-for-devices"></a>Skapa en Apple DEP-profil för enheter
+
+
+
+**Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple DEP-token.**<br>
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På bladet Intune väljer du **Enhetsregistrering** > **Apple DEP-Token**.
+2. Välj **Hämta den offentliga nyckeln** om du vill hämta och spara krypteringsnyckelfilen (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
+
+**Steg 2. Ladda ned en Apple DEP-token från en lämplig Apple-webbplats.**<br>
+Välj [Skapa en DEP-token via Apples distributionsprogram](https://deploy.apple.com) (https://deploy.apple.com) och logga in med ditt företags Apple-ID. Du måste använda detta Apple-ID för att kunna förnya DEP-token.
+
+   1.  I Apples [DEP-portal (Device Enrollment Program)](https://deploy.apple.com) går du till **Enhetsregistreringsprogram** &gt; **Hantera servrar** och väljer **Lägg till MDM-server**.
+   2.  Ange **MDM-servernamnet** och välj **Nästa**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
+   3.  Dialogrutan **Lägg till &lt;ServerName&gt;** öppnas. Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
+   4.  Dialogrutan **Lägg till &lt;ServerName&gt;** visar länken **Din servertoken**. Hämta servertokenfilen (.p7m) till datorn och klicka sedan på **Klar**.
+
+**Steg 3. Ange det Apple-ID som användes för att skapa din Apple DEP-token. Detta ID kan du använda för att förnya din Apple DEP-token.**
+
+**Steg 4. Bläddra till din Apple DEP-token och ladda upp. Intune synkroniseras automatiskt med ditt DEP-konto.**<br>
+Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
+
+## <a name="create-an-apple-dep-profile"></a>Skapa en Apple DEP-profil
 
 En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter. Följande steg visar hur du skapar en enhetsregistreringsprofil för iOS-enheter som registrerats med hjälp av DEP.
 
 1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Apple-registrering**.
-
 3. Välj **DEP-profiler** under **Hantera inställningar för Apples program för enhetsregistrering (DEP)**.
-
 4. Välj **skapa** på bladet **Apple DEP-profiler**.
-
 5. Ange ett namn och en beskrivning för profilen på bladet **Skapa registreringsprofil**.
-
 6. Ange om enheter med den här profilen ska registreras med eller utan användartillhörighet under **Användartillhörighet**.
 
  - **Registrera med användartillhörighet** – Enheten måste registreras med en användare under den ursprungliga installationen och kan sedan beviljas åtkomst till företagets data och e-post. Välj användartillhörighet för DEP-hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar. Observera att multifaktorautentisering (MFA) inte fungerar under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter. Nya användare som måste ändra sina lösenord när de loggar in första gången uppmanas inte under registreringen på DEP-enheter. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under DEP-registreringen. De måste återställa lösenordet från en annan enhet.
 
     >[!NOTE]
-    >DEP med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt aktiveras för att du ska kunna begära en användartoken.
+    >DEP med användartillhörighet kräver att [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/en-us/library/adfs2-help-endpoints) aktiveras för att du ska kunna begära en användartoken. [Läs mer om WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
  - **Registrera utan användartillhörighet** – Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 

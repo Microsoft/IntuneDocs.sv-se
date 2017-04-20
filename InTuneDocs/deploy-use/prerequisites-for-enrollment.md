@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7beff3bf4579d9fb79f0c3f2fb8fbf9bb1ea160
-ms.openlocfilehash: fc97e1266c2e859104b21f3bf4ff24f33123f66a
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: e3c3f834a80eaf5e8b992ba41b19a1d53b89fdc3
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -137,8 +137,8 @@ Ställ in hantering för följande plattformar:
 - [iOS och Mac](set-up-ios-and-mac-management-with-microsoft-intune.md)
 - [Android](set-up-android-management-with-microsoft-intune.md)
 - [Android for Work](set-up-android-for-work.md)
-- [Windows-datorer och bärbara datorer](set-up-windows-device-management-with-microsoft-intune.md)
-- [Windows 10 Mobile och Windows Phone](set-up-windows-phone-management-with-microsoft-intune.md)
+- [Windows 10 Mobile och Windows Phone](set-up-windows-device-management-with-microsoft-intune.md)
+- [Windows-datorer och bärbara datorer](manage-windows-pcs-with-microsoft-intune.md) (Intune-klientprogramvara)
 
 Du kan också aktivera [registrering av företagsägda enheter](manage-corporate-owned-devices.md).
 
@@ -170,7 +170,7 @@ Om du använder samexistens måste du kontrollera checklistan för både Intune 
 Gör följande innan du kontaktar Microsoft Support för att återställa din MDM-auktoritet.
 
 - Dra tillbaka alla enheter från Intune-administratörskonsolen. Försök inte att dra tillbaka en enhet från själva enheten. 
-- Ta bort Service To Service Connector (under **Administration** > **Hantering av mobila enheter** > **Microsoft Exchange**) eller inaktivera Exchange Connector, om du har konfigurerat det. 
+- Ta bort Service To Service Connector (under **Administration** > **Hantering av mobila enheter** > **Microsoft Exchange**) eller inaktivera Exchange Connector, om du har konfigurerat det.
 - Ta bort rollen Hanterare av enhetsregistrering från **Administratör** > **Hanterare av enhetsregistrering**.
 - Inaktivera Mappning av enhetsgrupp i **Administratör** > **Hanterings av mobila enheter** > **Mappning av enhetsgrupp**.
 - Ta bort nycklar för separat inläsning from **Administratör** > **Hantering av mobila enheter** > **Windows** > **Nycklar för separat inläsning**.
@@ -187,7 +187,7 @@ Gör följande innan du kontaktar Microsoft Support för att återställa din MD
 - Ta bort alla användare från Intune-användargruppen. Peka Intune-prenumerationen till en tom användarsamling eller ta bort alla användare från målsamlingen.  Kontrollera att användarna har tagits bort i CloudUserSync.log. 
 - Avmarkera iOS-plattformen för att rensa APNs-certifikatet.
 - Ta bort alla publicerade program för MDM-enheter.
-- Ta bort alla principer för MDM-enheter. 
+- Ta bort alla principer för MDM-enheter.
 - Ta bort Windows Intune Connector från Configuration Manager-konsolen (gäller endast för R2 SP1 eller lägre).
 Ta bort Intune-prenumerationen genom att högerklicka på prenumerationen och välja **Ta bort**.
 - Starta om SMS Executive-tjänsten.
@@ -196,18 +196,18 @@ Ta bort Intune-prenumerationen genom att högerklicka på prenumerationen och v�
 ### <a name="reset-mdm-authority-from-office-365-to-configuration-manager"></a>Återställa MDM-auktoritet från Office 365 till Configuration Manager
 
 1. Gå till [https://protection.office.com](https://protection.office.com).
-2. Välj fliken **Säkerhetsprinciper** och välj **Enhetshantering**. 
+2. Välj fliken **Säkerhetsprinciper** och välj **Enhetshantering**.
 3. Dra tillbaka alla enheter genom att välja **Selektiv rensning**. Försök inte att dra tillbaka en enhet från själva enheten. Om selektiv rensning har inaktiverats krävs ingen ytterligare åtgärd.
-4. Välj fliken **Säkerhetsprinciper** och välj **Säkerhetsprinciper för enhet**. 
+4. Välj fliken **Säkerhetsprinciper** och välj **Säkerhetsprinciper för enhet**.
 5. Välj **Ta bort** för alla befintliga principer. Om principerna är i väntande tillstånd krävs ingen ytterligare åtgärd.
 
 >[!NOTE]
->Det går inte att ta bort APNs-certifikatet för iOS. Det fortsätter att vara kopplat till kontot. 
+>Det går inte att ta bort APNs-certifikatet för iOS. Det fortsätter att vara kopplat till kontot.
 
 ### <a name="next-steps-for-mdm-authority-resets"></a>Nästa steg för återställning av MDM-auktoritet
 
-När Microsoft Support har verifierat punkterna i checklistan kan det ta upp till tre arbetsdagar att återställa MDM-auktoritet, men vanligtvis sker det inom en dag. 
+När Microsoft Support har verifierat punkterna i checklistan kan det ta upp till tre arbetsdagar att återställa MDM-auktoritet, men vanligtvis sker det inom en dag.
 
 >[!IMPORTANT]
->Konfigurera inte prenumerationen förrän Microsoft Support har bekräftat att återställningen har slutförts! För tidig konfiguration kan leda till skador och kan påverka din möjlighet att använda Intune-tjänsten. 
+>Konfigurera inte prenumerationen förrän Microsoft Support har bekräftat att återställningen har slutförts! För tidig konfiguration kan leda till skador och kan påverka din möjlighet att använda Intune-tjänsten.
 

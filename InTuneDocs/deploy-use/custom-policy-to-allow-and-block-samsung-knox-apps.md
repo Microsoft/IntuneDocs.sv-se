@@ -15,8 +15,9 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: be3cfc0120caf6e702139b829fc6ee1fa9bf9a1e
+ms.sourcegitcommit: adf7e2d0f76e63f67b7cf3d26d26df0da0e50bd0
+ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
+ms.lasthandoff: 03/31/2017
 
 
 
@@ -43,7 +44,7 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX S
     - **Beskrivning av inställning.** Ange en valfri beskrivning (valfritt), till exempel ”lista över appar som har blockerats från att köras”.
     -     **Datatyp.** Välj **Sträng** i listrutan.
     -     **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Värde.** Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+    -     **Värde.** Ange en lista över de appaketnamn som du vill blockera. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
     För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
 
@@ -72,9 +73,4 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 
 ### <a name="see-also"></a>Se även
 [Inställningar för Android- och Samsung KNOX-principer i Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

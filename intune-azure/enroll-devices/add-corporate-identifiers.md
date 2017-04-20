@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: e0a853c34c6d38e8fae6f4712ba6c2b767e5d0ba
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4ebd74c77145464574a1fed878ec4dbc2eb3c271
+ms.openlocfilehash: 7bb8168c442a3340e8c185f1908acd9be15cab05
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -27,6 +27,8 @@ ms.lasthandoff: 03/22/2017
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
 Som IT-administratör kan du skapa och importera en fil med kommateckenavgränsade värden (CSV) som innehåller en lista med IMEI-nummer (International Mobile Equipment Identity) som identifierar företagsägda enheter. Varje IMEI-nummer kan innehålla information som anges i listan för administrativa ändamål.
+
+När du överför serienummer för företagsägda iOS-enheter måste de kopplas till en profil för företagsregistrering. Enheter måste sedan registreras med antingen Apples enhetsregistreringsprogram (DEP) eller Apple Configurator om de ska visas som företagsägda. 
 
 ## <a name="create-a-csv-file"></a>Skapa en CSV-fil
 För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv) i två kolumner men utan rubrik. Lägg till IMEI-identifieraren i den vänstra kolumnen och informationen i den högra kolumnen. Informationen är begränsad till 128 tecken. Den aktuella gränsen är 500 rader per CSV-fil.

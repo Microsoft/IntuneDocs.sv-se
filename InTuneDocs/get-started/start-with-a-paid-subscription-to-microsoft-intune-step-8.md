@@ -15,8 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ad13897fe7bbe4fe13167bb4ce7f558b436a7a90
-ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
+ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
+ms.openlocfilehash: a2f8067bc169147a60db582d796631bea1ea5a8d
+ms.lasthandoff: 04/01/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: c4ef429722f5e33092473641839b59de3bee1c1c
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Det här avsnittet beskriver hur en Intune-administratör kan aktivera registreringen av mobila enheter. Hjälp med att använda Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions). 
+Det här avsnittet beskriver hur en Intune-administratör kan aktivera registreringen av mobila enheter. Hjälp med att använda Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
 
 Om du vill konfigurera hantering av mobila enheter med Intune måste du först ange *hanteringsutfärdare för mobila enheter*, som identifierar den tjänst som kan hantera enheter som är kopplade till ditt konto. I den här vägledningen antar vi att du använder tjänsten Intune i stället för System Center Configuration Manager. När utfärdare för Hantering av mobila enheter har angetts kan du aktivera hantering för enhetsplattformar och registrera dina enheter med företagsportalappen.
 
@@ -49,9 +50,9 @@ Registreringen måste aktiveras för iOS, Mac och Android för arbetsenheter som
 
 Aktivera registrering av enheter för den enhetsplattform som du vill hantera. Beroende på din plattform behövs olika krav:
 
--  [iOS och macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
--  [Window PC](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
--  [Window 10 Mobile och Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-phone-management-with-microsoft-intune)
+- [iOS och macOS](https://docs.microsoft.com/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
+- [Windows 10 och Windows Phone](https://docs.microsoft.com/intune/deploy-use/set-up-windows-device-management-with-microsoft-intune)
+- [Windows-dator](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune) (Intune-programvaruklient)
 - [Android for Work](https://docs.microsoft.com/intune/deploy-use/set-up-android-for-work)
 
 När registreringen är aktiverad kan användare ladda ned företagsportalappen till sin enhet och slutföra registreringen för enheten.
@@ -60,18 +61,12 @@ När registreringen är aktiverad kan användare ladda ned företagsportalappen 
 Du kan också aktivera olika scenarier för [registrering av företagsägda enheter](https://docs.microsoft.com/intune/deploy-use/manage-corporate-owned-devices) inklusive:
 - [Apples program för enhetsregistrering (Device Enrollment Program)](https://docs.microsoft.com/intune/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
 - [Apple Configurator-registrering med installationsassistenten](https://docs.microsoft.com/intune/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
-- [Apple Configurator-registrering med installationsassistenten](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
+- [Apple Configurator – direkt registrering](https://docs.microsoft.com/intune/deploy-use/ios-direct-enrollment-in-microsoft-intune)
 - [Hanterare av enhetsregistrering](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
 ### <a name="next-steps"></a>Nästa steg
 Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu när den första konfigurationen är klar kan du välja att aktivera ytterligare MDM-funktioner.
 
 >[!div class="step-by-step"]
-
 >[&larr; **Registrera enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md) [**Åtgärder efter konfigurering** &rarr;](.\post-configuration-tasks.md)  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
