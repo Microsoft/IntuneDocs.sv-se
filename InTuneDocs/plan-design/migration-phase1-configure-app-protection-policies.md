@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: 35543604ed68393e859517e32f5186247be001df
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f30ab8799b2e049372139c7f9ee7213547736bb0
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -32,7 +32,7 @@ Appskyddsprinciperna tillämpar säkerhet på appnivå och kräver inte någon e
 
 ## <a name="app-protection-policies-with-lob-apps"></a>Appskyddsprinciper med verksamhetsspecifika appar
 
-Du kan också utöka principerna för mobilappsskydd till dina verksamhetsspecifika appar med hjälp av [Microsoft Intune App-SDK:n](https://docs.microsoft.com/intune/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management) eller Microsoft Intune App Wrapping-verktyget för både [IOS](https://www.microsoft.com/en-us/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True)- och [Android](https://www.microsoft.com/en-us/download/details.aspx?id=47267)-plattformar.
+Du kan också utöka principerna för mobilappsskydd till dina verksamhetsspecifika appar med hjälp av [Microsoft Intune App-SDK:n](https://docs.microsoft.com/intune/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management) eller Microsoft Intune App Wrapping-verktyget för både [IOS](https://www.microsoft.com/download/details.aspx?id=45218&751be11f-ede8-5a0c-058c-2ee190a24fa6=True)- och [Android](https://www.microsoft.com/download/details.aspx?id=47267)-plattformar.
 
 ## <a name="how-do-app-protection-policies-help-during-migration"></a>Vad bidrar principerna för appskydd med under migreringen?
 
@@ -46,9 +46,9 @@ När du inaktiverar villkorlig åtkomst i den gamla MDM-providern kan användarn
 
 ## <a name="task-list-for-app-protection-policies"></a>Uppgiftslista för appskyddsprinciper
 
--   Uppgift 1: Lär dig [hur du förbereder konfiguration av skyddsprinciper för mobilappar](https://docs.microsoft.com/en-us/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
+-   Uppgift 1: Lär dig [hur du förbereder konfiguration av skyddsprinciper för mobilappar](https://docs.microsoft.com/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)
 
--   Uppgift 2: Lär dig [hur du skapar och distribuerar skyddsprinciper för mobilappar](https://docs.microsoft.com/en-us/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
+-   Uppgift 2: Lär dig [hur du skapar och distribuerar skyddsprinciper för mobilappar](https://docs.microsoft.com/intune/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Nästa steg 
 

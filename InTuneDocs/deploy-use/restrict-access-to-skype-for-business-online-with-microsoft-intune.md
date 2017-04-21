@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 182ca17c53b672d70ff1b30a63c0662050db95c3
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 312a3ae8a74b0a8460f969f96bee14077c6c7161
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -37,9 +38,9 @@ När en målanvändare försöker använda Skype för företag – Online på si
 
 **Innan** du konfigurerar en princip för villkorlig åtkomst för Skype för företag – Online måste du:
 - Ha en **prenumeration på Skype för företag – Online** och tilldela användare Skype för företag – Online-licenser.
-- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [Priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [Priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [Priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [Priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
--   [Aktivera modern autentisering](https://docs.microsoft.com/en-us/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) för Skype för företag – Online.
+-   [Aktivera modern autentisering](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune) för Skype för företag – Online.
 -  Låt alla dina användare använda **Skype för företag – Online**. Om du har en distribution med både Skype för företag – Online och Skype för företag lokalt tillämpas inte principen för villkorlig åtkomst på användarna.
 
 Enheten som behöver åtkomst till Skype för företag – Online måste:
@@ -118,9 +119,4 @@ Välj en mobil enhetsgrupp. Klicka på fliken **Enheter**, välj något av följ
 * **Enheter som inte är kompatibla**: Dessa enheter blockeras från Skype för företag – Online.
 
 * **Enheter som är registrerade i AAD och kompatibla**: Dessa enheter kan komma åt Skype för företag – Online.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

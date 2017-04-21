@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 9a814f6df407802b8e48626ed0e3f828c52c661b
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: cfb3a7cc4e70a062bc511cd4fe80a50b6262864f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -38,7 +38,7 @@ För att konfigurera villkorlig åtkomst måste du:
 
 -   Ha en **Office 365-prenumeration med Exchange Online (t.ex. E3)**, och användarna måste ha licens för Exchange Online.
 
-- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 -  Överväg att konfigurera den valfria **tjänst-till-tjänst-anslutningen i Intune** som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange Online och som gör att du kan hantera enhetsinformationen via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen. Du måste inte använda anslutningen för att kunna använda efterlevnadsprinciper eller principer för villkorlig åtkomst, men den krävs för att köra rapporter som utvärderar effekten av villkorlig åtkomst.
     -  Läs mer om [Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
@@ -83,7 +83,7 @@ Du kan skydda åtkomsten till e-post i Exchange Online från **Outlook** och and
 Med **modern autentisering** kan Microsoft Office-klienter använda ADAL-baserad (Active Directory Authentication Library) inloggning.
 
 -   ADAL-baserad autentisering gör det möjligt för Office-klienter att delta i webbläsarbaserad autentisering (även kallat passiv autentisering). Användare som vill autentiseras omdirigeras till en inloggningswebbsida.
--   Den här nya inloggningsmetoden ökar säkerheten med till exempel **multifaktorautentisering** och **certifikatbaserad autentisering**. Mer information finns i [Hur modern autentisering fungerar](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Du kan konfigurera ADFS-anspråksregler och blockera protokoll som inte stöder modern autentisering. Detaljerade anvisningar finns i [Scenario 3: blockera all åtkomst till O365 förutom webbläsarbaserade program](https://technet.microsoft.com/library/dn592182.aspx).
+-   Den här nya inloggningsmetoden ökar säkerheten med till exempel **multifaktorautentisering** och **certifikatbaserad autentisering**. Mer information finns i [Hur modern autentisering fungerar](https://support.office.com/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517). Du kan konfigurera ADFS-anspråksregler och blockera protokoll som inte stöder modern autentisering. Detaljerade anvisningar finns i [Scenario 3: blockera all åtkomst till O365 förutom webbläsarbaserade program](https://technet.microsoft.com/library/dn592182.aspx).
 
 Du kan skydda åtkomst till **Outlook Web Access (OWA)** i Exchange Online när en användare får åtkomst från en webbläsare på **iOS**- och **Android**-enheter. Åtkomst tillåts endast från webbläsare som stöds på kompatibla enheter:
 
@@ -123,7 +123,7 @@ Du kan konfigurera villkorlig åtkomst för datorer som kör Office-datorprogram
   >[!NOTE]
     >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
 
--   [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
+-   [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
 
     Med modern autentisering kan Office 2013-/Windows-klienter använda ADAL-baserad (Active Directory Authentication Library) inloggning. Det ökar säkerheten med till exempel **multifaktorautentisering** och **certifikatbaserad autentisering**.
 
@@ -192,7 +192,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 >[!NOTE]
 > Du kan även skapa en princip för villkorlig åtkomst i Azure AD-hanteringskonsolen. Azure AD-hanteringskonsolen gör det möjligt att skapa principer för villkorlig åtkomst för Intune-enheter (kallas för **enhetsbaserad princip för villkorlig åtkomst** i Azure AD) utöver andra principer för villkorlig åtkomst som multifaktorautentisering.
 
->Du kan även ange principer för villkorlig åtkomst för tredje parters företagsappar som Azure AD stöder, som Salesforce och Box. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Ställa in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
+>Du kan även ange principer för villkorlig åtkomst för tredje parters företagsappar som Azure AD stöder, som Salesforce och Box. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Ställa in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
 
 
 1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Exchange Online-princip**.

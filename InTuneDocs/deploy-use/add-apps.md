@@ -15,9 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: c294a0abaf69017b6c098a95870fc035f28d0787
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23037cdb5a474b2c62c231ac1966989902a983e1
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -34,7 +34,7 @@ Innan du börjar distribuera appar med Microsoft Intune är det bra om du bekant
 
 |Typ av app|Information|
 |----------------|-------|
-|**Windows Installer (&#42;.exe, &#42;.msi)**|Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns i [Kommandoradsväxlar för Microsoft Windows Installer-verktyget](https://support.microsoft.com/en-us/kb/227091).<br><br>Alla eventuella ytterligare filer och mappar som krävs för appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.<br><br>I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) att Intune installerar några kommandoradsargument. Läs dokumentationen till din app.<br><br>Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).<br><br>Den här apptypen gäller endast för datorer som kör Intune-programklienten.|
+|**Windows Installer (&#42;.exe, &#42;.msi)**|Den här typen av app måste ha stöd för obevakad installation utan användarindata. Dokumentationen till din app ska innehålla relevanta kommandoradsalternativ för obevakad installation av appen (t.ex. **/q**). En lista över vanliga kommandoradsalternativ finns i [Kommandoradsväxlar för Microsoft Windows Installer-verktyget](https://support.microsoft.com/kb/227091).<br><br>Alla eventuella ytterligare filer och mappar som krävs för appens installationsprogram måste vara tillgängliga från den plats som du anger för appens installationsfiler.<br><br>I de flesta fall kräver inte Windows Installer-filer (.msi) eller Windows Installer Patch-filer (.msp) att Intune installerar några kommandoradsargument. Läs dokumentationen till din app.<br><br>Om det krävs kommandoradsargument måste de anges som Name=Value pairs (t.ex. TRANSFORMS=custom_transform.mst).<br><br>Den här apptypen gäller endast för datorer som kör Intune-programklienten.|
 |**Appaket för Android (&#42;.apk)**|För att kunna distribuera Android-appar måste du ha ett giltigt APK-paket.|
 |**Appaket för iOS (&#42;.ipa)**|Om du vill distribuera iOS-appar måste du ha ett giltigt IPA-paket.<br><br>IPA-paketet måste ha signerats av Apple och det utgångsdatum som anges i etableringsprofilen måste vara giltigt. Intune kan distribuera iOS-appar med företagscertifikat<br><br>Inte alla Apple-utvecklarcertifikatsappar stöds.<br><br>Ditt företag måste vara registrerat för iOS Developer Enterprise-programmet.<br><br>Kontrollera att din organisations brandvägg tillåter åtkomst till iOS-etablerings- och certifieringswebbplatserna.<br><br>Du behöver inte distribuera en manifestfil (.plist) med appen.|
 |**Appaket för Windows Phone (&#42;.xap, .appx, .appxbundle)**|För att kunna distribuera appar behöver du ett företagskodsigneringscertifikat för mobila enheter. Mer information finns i [Konfigurera hantering av Windows Phone med Microsoft Intune](set-up-windows-device-management-with-microsoft-intune.md).|
@@ -49,7 +49,7 @@ Använd en extern länk om du har en:
 
 Appar som är baserade på externa länkar lagras inte i Intune-molnlagringsutrymmet.
 ### <a name="managed-ios-app-from-the-app-store"></a>**Hanterade iOS-appar från App Store**
-Du kan använda hanterade iOS-appar till att hantera och distribuera kostnadsfria iOS-appar från App Store. Och även till att associera [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
+Du kan använda hanterade iOS-appar till att hantera och distribuera kostnadsfria iOS-appar från App Store. Och även till att associera [hanteringsprinciper för mobila program](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md) med [kompatibla appar](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx) och granska deras status i administratörskonsolen.<br /><br />Hanterade iOS-appar lagras inte i ditt Intune-molnlagringsutrymme.
 
 > [!TIP]
 > Alternativ för mobila enheter är inte tillgängliga förrän du [anger Intune som MDM-utfärdare](prerequisites-for-enrollment.md).

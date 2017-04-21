@@ -15,9 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: fa33bd3833f7f7198eed3f4f486c27bae3ba47d7
-ms.openlocfilehash: 87832ec7f295c08678052d19164af9a8db051f9f
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 23d40a31c43a061e0f3b1fbb05827697ca7380ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -62,7 +62,7 @@ Följande är en översikt över varje åtgärd vid implementering av Intune.
 
 En EMS- eller Intune-prenumeration krävs, vilket identifieras i föregående kravavsnitt. Om organisationen inte har en EMS- eller Intune-prenumeration kan du kontakta Microsoft eller Microsoft-kontoteamet angående att du är intresserad av att köpa Enterprise Mobility + Security (EMS) eller Intune.
 
--   Läs mer om att [köpa Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing).
+-   Läs mer om att [köpa Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
 #### <a name="task-2-add-office-365-subscription"></a>Åtgärd 2: Lägga till Office 365-prenumeration
 
@@ -116,7 +116,7 @@ Microsoft Intune har stöd för e-post-, Wi-Fi- och VPN-profiler. Du lägger til
 
 Microsoft Intune har stöd för distribution av webb-, LOB- och offentliga butiksappar. Dessutom stöds hantering av appar som har Intune SDK integrerat genom att koppla dem till MAM-principer. Du lägger till och distribuerar appar i Intune-administratörsportalen, i arbetsytan App. Du lägger till MAM-principer i Intune-administratörsportalen, i arbetsytan Princip. Lägg till appar efter behov och distribuera till målgrupperna baserat på användningsfall och krav för Intune-distributionen.
 
--   Läs mer om att [lägga till och distribuera program](https://docs.microsoft.com/en-us/intune/deploy-use/deploy-apps).
+-   Läs mer om att [lägga till och distribuera program](https://docs.microsoft.com/intune/deploy-use/deploy-apps).
 
 #### <a name="task-11-add-and-deploy-compliance-policies"></a>Åtgärd 11: Lägga till och distribuera efterlevnadsprinciper
 

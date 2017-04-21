@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 8da2695c4c6dc8b45559323b83a4bb77167303b7
-ms.openlocfilehash: 2e7bcedebdf777db64a9ec90aa758822634ed435
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 4bf9bd15f3f22e0609c4f56f5651454a62dbb7a8
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -58,7 +58,7 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 -   Är användarnas allmänna kunskaper om teknik och IT goda?
 
-### <a name="what-is-your-device-security-policy"></a>Vilken är din säkerhetsprincip för enheter? 
+### <a name="what-is-your-device-security-policy"></a>Vilken är din säkerhetsprincip för enheter?
 
 -   Behöver du använda kryptering på enhetsnivå?
 
@@ -84,7 +84,7 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 ## <a name="additional-information"></a>Ytterligare information
 
--   Mer detaljerade exempel ges i dessa [fallstudier](https://customers.microsoft.com/en-US/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) som kommer från olika branscher inom industrin. Där kan du se hur olika organisationer utvärderar sina krav på hantering av mobila enheter.
+-   Mer detaljerade exempel ges i dessa [fallstudier](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) som kommer från olika branscher inom industrin. Där kan du se hur olika organisationer utvärderar sina krav på hantering av mobila enheter.
 
 ## <a name="next-steps"></a>Nästa steg
 

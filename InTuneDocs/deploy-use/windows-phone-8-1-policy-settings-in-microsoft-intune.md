@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 2fd7ebc53c3b033982297dbce4a091cd9336fbb1
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 65d3b454531084008bdbb01dd17f5ce34ef5890f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -137,7 +137,7 @@ I **Lista över tillåtna och blockerade appar** anger du en lista över appar s
 #### <a name="how-to-specify-urls-to-app-stores"></a>Så här anger du webbadresser till appbutiker
 Om du vill ange en app-URL i listan över tillåtna och blockerade appar använder du följande format:
 
-Gå till sidan [Appar+spel i Windows Phone appar och spel](http://www.windowsphone.com/en-us/store/overview) och sök efter den app du vill använda.
+Gå till sidan [Appar+spel i Windows Phone appar och spel](http://www.windowsphone.com/store/overview) och sök efter den app du vill använda.
 
 Öppna appens sida och kopiera webbadressen till Urklipp. Nu kan du använda den som webbadress i listan över tillåtna eller blockerade appar.
 

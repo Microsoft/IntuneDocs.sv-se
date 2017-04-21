@@ -15,8 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 7447a85e03e38aa0f536ce008bae9f3c82528cec
-ms.openlocfilehash: 1ab1645a8c25bf51fc42788364e498d18c2f15d9
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: aea41c86e1fe784d6234f4ff90e299632b2a6d5f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -25,14 +26,16 @@ ms.openlocfilehash: 1ab1645a8c25bf51fc42788364e498d18c2f15d9
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Den här artikeln ger svar på några vanliga frågor om Intune mobile application management (MAM) och Intune appskydd.
+Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Application Management) och appskyddet i Intune.
+
 
 ## <a name="mam-basics"></a>Grundläggande om MAM
 
 
 **Vad är MAM?** Med [Intune mobile application management](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) avses den svit av Intune-hanteringsfunktioner som låter dig publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
 
-**Vilka är fördelarna med MAM appskydd?** MAM skyddar företagets data inom ett program. Med hjälp av MAM-WE kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i bring-your-own-device (BYOD)-scenarier. Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+**Vilka är fördelarna med appskyddet i MAM?** MAM skyddar företagets data inom ett program. Med hjälp av MAM-WE kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i BYOD-scenarier (BringYour Own Device).
+ Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka enhetskonfigurationer har MAM stöd för?** Intune MAM stöder två konfigurationer:
   1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). För att hantera appar med hjälp av MDM + MAM ska kunder använda den fristående Intune-konsolen på http://manage.microsoft.com.
@@ -48,29 +51,30 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Appar som du kan hantera med appskyddsprinciper
 
-**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](../develop/intune-app-sdk.md) eller hanteras av [Intunes apphanteringsverktyg](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](../develop/intune-app-sdk.md) eller hanteras av [Intunes apphanteringsverktyg](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka är de grundläggande kraven för att använda appskyddsprinciper på en Intune-upplyst app?**
   1. Slutanvändaren måste ha ett Azure Active Directory (AAD)-konto. Se [Lägg till användare och ge administrativ behörighet till Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md) för information om hur du skapar Intune-användare i Azure Active Directory.
 
   2. Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md) för information om hur du tilldelar Intune-licenser till slutanvändarna.
 
-  3. Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsskyddsprincip måste ha den specifika app som används som mål. Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](http://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](http://portal.office.com).
+  3. Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
+ Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](http://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](http://portal.office.com).
 
   4. Slutanvändaren måste logga in på appen med sitt AAD-konto.
 
-**Vilka är de ytterligare krav som ställs för användning av [Outlook-mobilappen](https://www.microsoft.com/en-us/outlook-com/mobile/)?**
+**Vilka är de ytterligare krav som ställs för användning av [Outlook-mobilappen](https://www.microsoft.com/outlook-com/mobile/)?**
 
   1. Slutanvändaren måste ha Outlook-mobilappen installerad på sin enhet.
 
-  2. Slutanvändaren måste ha en [Office 365 Exchange Online](https://products.office.com/en-us/exchange/exchange-online)-postlåda och licens kopplad till deras Azure Active Directory-konto.
+  2. Slutanvändaren måste ha en [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postlåda och licens kopplad till deras Azure Active Directory-konto.
 
   >[!NOTE]
   > Outlook-mobilappen har för närvarande endast stöd för Microsoft Exchange Online och har inte stöd för Exchange på plats eller Exchange i Office 365 Dedicated.
 
 **Vilka är de ytterligare krav som ställs för användning av [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 
-  1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc?ui=en-US&rs=en-US&ad=US).
+  1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
   2. Slutanvändaren måste ha [OneDrive](https://onedrive.live.com/about/)-appen installerad på sin enhet och logga in med sitt AAD-konto.
 
@@ -87,7 +91,8 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 
 ## <a name="app-protection-features"></a>Appskyddsfunktioner
 
-**Vad är stöd för flera identiteter?** Stöd för flera identiteter är möjligheten för Intune App SDK att bara tillämpa appskyddsprinciper på arbets- eller skolkontot som använts för inloggning i appen. Om ett personligt konto är inloggat i appen förblir datan orörd.
+**Vad är stöd för flera identiteter?** Stöd för flera identiteter är möjligheten för Intune App SDK att bara tillämpa appskyddsprinciper på arbets- eller skolkontot som använts för inloggning i appen. Om ett personligt konto är inloggat i appen ändras inga data.
+
 
 **Vad är syftet med stöd för flera identiteter?** Stöd för flera identiteter gör att appar med både "företags-" och konsumentanvändare (t.ex. Office-appar) kan släppas offentligt med Intunes appskyddsfunktioner för "företagets" konton.
 
@@ -128,11 +133,12 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 
 ## <a name="app-experience-on-android"></a>App-upplevelse på Android
 
-**Varför behövs företagsportalappen för att Intunes appskydd ska fungera på Android-enheter?** Mycket av appskyddsfunktionaliteten är inbyggd i företagsportalappen. Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För MAM-WE behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
+**Varför behövs företagsportalappen för att Intunes appskydd ska fungera på Android-enheter?** Många av appskyddets funktioner är inbyggda i företagsportalappen.
+ Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För MAM-WE behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
 
 ## <a name="app-experience-on-ios"></a>App-upplevelse på iOS
 
-**Jag kan använda iOS resurstillägg för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _ **"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+**Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 
 ### <a name="see-also"></a>Se även
 - [Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune](../deploy-use/android-mam-policy-settings.md)
@@ -140,9 +146,4 @@ Den här artikeln ger svar på några vanliga frågor om Intune mobile applicati
 - [Verifiera din konfiguration för hantering av mobilprogram](../deploy-use/validate-mobile-application-management.md)
 - [Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 - [Så kan du få support för Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

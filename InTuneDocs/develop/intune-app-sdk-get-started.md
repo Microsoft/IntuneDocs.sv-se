@@ -15,8 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: dc059b2865cef32091582b0f0d2a2ced8b35e8fa
-ms.openlocfilehash: 55e4be001c3ff946b8a63291ed9227bc3d185001
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 95c12111693e00fb6f67d20464dd159aeb4bb609
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -37,14 +38,14 @@ Du *behöver inte* att registrera din app. För interna affärsappar distribuera
 
 _**Måste**_ du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Därefter kan IT-administratörer tillämpa appskyddsprinciper för den upplysta appen, som listas som en Intune-appartner.
 
-Intune administratörer kommer inte att ha möjlighet att tillämpa appskyddsprincipen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till din app till sin [Microsoft Intune-partnersida](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps). Där kommer appikonen att visas för att visa att den stöder Intunes appskyddsprinciper.
+Intune administratörer kommer inte att ha möjlighet att tillämpa appskyddsprincipen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till din app till sin [Microsoft Intune-partnersida](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Där kommer appikonen att visas för att visa att den stöder Intunes appskyddsprinciper.
 
 Fyll i [Microsoft Intune-appartner frågeformuläret](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u) för att påbörja registreringsprocessen.
 
 Vi använder e-postadresserna som står i frågeformulärets svar för att kontakta dig och fortsätta registreringsprocessen. Vi använder även din e-postadress från registreringen för att kontakta dig om vi har frågor.
 
 > [!NOTE]
-> All information som samlas in i formuläret ovan och via e-postkommunikation med Microsoft Intune-teamet följer [Microsofts sekretesspolicy](https://www.microsoft.com/en-us/privacystatement/default.aspx).
+> All information som samlas in i formuläret ovan och via e-postkommunikation med Microsoft Intune-teamet följer [Microsofts sekretesspolicy](https://www.microsoft.com/privacystatement/default.aspx).
 
 **Hur ser registreringsprocessen ut?**:
 
@@ -52,7 +53,7 @@ Vi använder e-postadresserna som står i frågeformulärets svar för att konta
 
 2. När vi har fått all nödvändig information från dig skickar vi avtalet för Microsoft Intune-appartner till dig för underskrift. Det här avtalet beskriver villkoren som ditt företag måste godkänna för att bli en Microsoft Intune-appartner.
 
-3. Du meddelas när din app har registrerats med Microsoft Intune-tjänsten och när appen publiceras på webbplatsen för [Microsoft Intune-partner](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps).
+3. Du meddelas när din app har registrerats med Microsoft Intune-tjänsten och när appen publiceras på webbplatsen för [Microsoft Intune-partner](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 4. Slutligen läggs djuplänken för din app till i nästa månatliga Intune Service-uppdatering. Om registreringsinformationen exempelvis slutfördes i juli, stöds appens djuplänk i mitten av augusti.
 
@@ -137,9 +138,4 @@ Skylten är en ikon föreställande en portfölj och syns i exemplen nedan:
 * Ett bildhanteringsprogram som kan läsa **.eps**-filer eller ett Adobe-program som kan läsa **.ai**-filer.
 
 * Du hittar [tillgångarna och riktlinjerna för Intunes appskyltar](https://github.com/msintuneappsdk/intune-app-partner-badge) på Microsoft Intune GitHub.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

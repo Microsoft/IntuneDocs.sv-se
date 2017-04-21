@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c4077c41da897e570e5d29702ba0e776c7deee6b
-ms.openlocfilehash: c72d4525a41e7b1498232526c6e05cc4b7bef978
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9e4fca9e29c8f0c2ec3ef088c3f91ad15ac11804
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -41,7 +41,7 @@ När en användare försöker ansluta till en fil med en app som stöds, till ex
 
 **Innan** du konfigurerar en princip för villkorlig åtkomst för SharePoint Online måste du:
 - Ha en **SharePoint Online-prenumeration** och användarna måste ha licens för SharePoint Online.
-- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 
   För att kunna ansluta till de nödvändiga filerna måste enheten vara:
@@ -60,10 +60,10 @@ Om ett villkor inte är uppfyllt, ser användaren något av följande meddelande
 
 -   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
 
-**Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön](https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&rs=en-US&ad=US).
+**Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
 >[!NOTE]
->Om du aktiverar villkorlig åtkomst för SharePoint Online rekommenderar vi att du inaktiverar domänen i listan enligt beskrivningen i [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/en-us/library/dn917451.aspx).  
+>Om du aktiverar villkorlig åtkomst för SharePoint Online rekommenderar vi att du inaktiverar domänen i listan enligt beskrivningen i [Remove-SPOTenantSyncClientRestriction](https://technet.microsoft.com/library/dn917451.aspx).  
 
 ## <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 Följande stöds:
@@ -85,7 +85,7 @@ Följande stöds:
 > [!NOTE]
 >Om du vill använda villkorlig åtkomst med Windows 10-datorer måste du uppdatera dessa datorer med Windows 10 Anniversary Update.
 
-  - Domänanslutna datorer måste vara konfigurerade att [registreras automatiskt](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) med Azure Active Directory. Registreringstjänst för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger.
+  - Domänanslutna datorer måste vara konfigurerade att [registreras automatiskt](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) med Azure Active Directory. Registreringstjänst för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger.
 
   - Om principen är konfigurerad att kräva en domänanslutning och datorn inte är domänansluten visas ett meddelande som uppmanar användaren att kontakta IT-administratören.
 
@@ -93,7 +93,7 @@ Följande stöds:
   >[!NOTE]
   >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
 
-[Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
+[Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
 
 Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentication Library) inloggning i Windows-baserade Office 2013-klienter och förbättrar säkerheten med bland annat **multifaktorautentisering** och **certifikatbaserad autentisering**.
 
@@ -130,7 +130,7 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 #### <a name="bkmk_spopolicy"></a>
 
 >[!NOTE]
-> Du kan också skapa en princip för villkorlig åtkomst för Intune-enheter i Azure AD-hanteringskonsolen (principen kallas **enhetsbaserad villkorlig åtkomstpolicy** i Azure AD). Dessutom kan du skapa andra principer för villkorlig åtkomst som multifaktorautentisering. Du kan även ange principer för villkorlig åtkomst för tredje parters företagsappar som Azure AD stöder, som Salesforce och Box. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Så ställer du in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
+> Du kan också skapa en princip för villkorlig åtkomst för Intune-enheter i Azure AD-hanteringskonsolen (principen kallas **enhetsbaserad villkorlig åtkomstpolicy** i Azure AD). Dessutom kan du skapa andra principer för villkorlig åtkomst som multifaktorautentisering. Du kan även ange principer för villkorlig åtkomst för tredje parters företagsappar som Azure AD stöder, som Salesforce och Box. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Så ställer du in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
 
 
 1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **SharePoint Online-princip**.

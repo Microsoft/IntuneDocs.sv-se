@@ -14,8 +14,9 @@ ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ca4af205f8f391089e86e0ee7787e32813d54cca
-ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 55556d781149b97af3556f3a6774b4bc5b3b76ac
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 6bd6cc3470c93f96e7c71b5d1efe6d9ffc045a7e
 Den här artikeln tar dig igenom registreringsproceduren för en utvärderingsversion av Intune och hjälper dig att förbereda utvärderingsversionen med några användare, så att du sedan kan följa den associerade utvärderingsguiden om du vill se hur Intune hanterar mobila enheter. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Från och med december 2016 övergår Microsoft Intune till Azure-portalen, och vissa registreringar för kostnadsfri utvärderingsversion kommer att finnas i Intune i Azure-portalen och vissa finns i klassiska Intune. Om din utvärderingsversion finns i Azure-portalen kommer du att tycka att [förhandsgranskningsinnehåll för Intune Azure](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune) är mer användbart efter att du har slutfört stegen i den här artikeln.
+> Från och med december 2016 övergår Microsoft Intune till Azure-portalen, och vissa registreringar för kostnadsfri utvärderingsversion kommer att finnas i Intune i Azure-portalen och vissa finns i klassiska Intune. Om din utvärderingsversion finns i Azure-portalen kommer du att tycka att [förhandsgranskningsinnehåll för Intune Azure](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune) är mer användbart efter att du har slutfört stegen i den här artikeln.
 
 ## <a name="assumptions"></a>Antaganden
 I den här registrerings- och utvärderingsguiden förutsätter vi att du använder utvärderingsversionen i utvärderingssyfte och vill börja med en ren miljö när du prenumererar.
@@ -39,7 +40,7 @@ Du kan göra allt i utvärderingsversion som du kan göra i en prenumerationsver
 ## <a name="sign-up-for-your-trial"></a>Registrera dig för din utvärderingsversion
 Besök sidan för [Intune-registrering](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) och fyll i registreringsformuläret för en utvärderingsprenumeration.
 
-Om du har ett arbets- eller skolkonto och vill använda det för din Intune-utvärderingsversion av följer du [de här inloggningsanvisningarna](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1) i stället. I den här artikeln och utvärderingen förutsätts det att du inte använder något sådant konto.
+Om du har ett arbets- eller skolkonto och vill använda det för din Intune-utvärderingsversion av följer du [de här inloggningsanvisningarna](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1) i stället. I den här artikeln och utvärderingen förutsätts det att du inte använder något sådant konto.
 
 > [!TIP]
 > Om de flesta av dina IT-åtgärder och användare använder ett annat språk än du gör, vill du kanske ange detta språk för testversionen för att kunna testa prestanda.
@@ -54,7 +55,7 @@ Om din utvärderingsversion finns i **Azure-portalen** går du till https://port
 ## <a name="add-users"></a>Lägg till användare
 Innan du lämnar Office 365 Administrationscenter för att gå till Intune måste du lägga till några användare till ditt utvärderingskonto.
 
-I Office 365 Administrationscenter kan du lägga till användare individuellt eller i grupp genom att ladda upp en .csv-fil. Vi konfigurerar din utvärderingsversion genom att göra båda sakerna. I din produktionsmiljö vill du dock förmodligen utnyttja dina Azure Active Directory-användarkonton, vilket du kan läsa mer om i guiden [Komma igång](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) och i avsnittet [Nästa steg](#Next-steps) i den här artikeln.
+I Office 365 Administrationscenter kan du lägga till användare individuellt eller i grupp genom att ladda upp en .csv-fil. Vi konfigurerar din utvärderingsversion genom att göra båda sakerna. I din produktionsmiljö vill du dock förmodligen utnyttja dina Azure Active Directory-användarkonton, vilket du kan läsa mer om i guiden [Komma igång](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) och i avsnittet [Nästa steg](#Next-steps) i den här artikeln.
 
 ### <a name="add-an-individual-user"></a>Lägg till en enskild användare
 1. Välj ett av alternativen för att lägga till en användare. Då öppnas ett formulär där du kan skapa en användare. Endast de objekt som är markerade med en asterisk (\*) är obligatoriska.
@@ -137,18 +138,13 @@ Om du vill gå från Intune tillbaka till Office 365-administratörscentret skri
 Utvärderingsscenario: [Utvärdera mobilenhetshantering i Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
 ### <a name="intune-azure-preview"></a>Förhandsversion av Intune Azure
-Läs mer om [Förhandsgranskning av Intune i Azure-portalen](https://docs.microsoft.com/en-us/intune-azure/introduction/what-is-microsoft-intune)
+Läs mer om [Förhandsgranskning av Intune i Azure-portalen](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune)
 
 ### <a name="integration-with-other-products"></a>Integrering med andra produkter
 Lär dig mer om hur du kan använda dina Azure Active Directory-användarkonton med Intune:
-- [Identitetskrav](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
-- [Katalogsynkroniseringskrav](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
-- [Multifaktorautentiseringskrav](https://docs.microsoft.com/en-us/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
+- [Identitetskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Katalogsynkroniseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Multifaktorautentiseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
-Läs mer om hur du kan använda [Intune med System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+Läs mer om hur du kan använda [Intune med System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
 
