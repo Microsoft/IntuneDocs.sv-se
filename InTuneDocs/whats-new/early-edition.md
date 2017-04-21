@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f051d8366ba9c6ca2183b5661c64087eb4cce9f0
-ms.openlocfilehash: 682545af10a7dc1f66158f95f871b889e9f85c4a
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 0a39abc7f19f4c2c8074de66a9cd5df9cef78ed5
+ms.openlocfilehash: 2b6e29e7323d42b1ce3d75a46648203a7a43165c
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -49,7 +49,7 @@ Microsoft MyApps har nu bättre stöd i den hanterade webbläsaren. Användare a
 
 ### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nya ikoner för den hanterade webbläsaren och företagsportalen <!--918433, 918431-->
 
-Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det blir mer konsekvent med andra appar i Enterprise Mobility + Security (EM+S).
+Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det blir mer konsekvent med andra appar i Enterprise Mobility + Security (EM+S). Du kan se den nya ikonen för Managed Browser på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md).
 
 Företagsportalen får också uppdaterade ikoner för Android-, iOS- och Windows-versioner av appen för att förbättra enhetligheten med andra appar i EM+S. Dessa ikoner släpps gradvis över plattformar från april till slutet av maj.
 
@@ -59,7 +59,7 @@ Användarna behöver inte längre logga in i Outlook-appen om de är inloggade p
 
 ### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
 
-En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen.
+En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen. Du kan se de nya skärmarna för företagsportalsappen för Android på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md). 
 
 
 ## <a name="notices"></a>Meddelanden
@@ -175,11 +175,6 @@ Du kan tilldela volyminköpta (VPP) appar i iOS som **Tillgängliga** installati
 ### <a name="synchronize-ebooks-from-apple-vpp-store----800878---"></a>Synkronisera e-böcker från Apple VPP Store <!-- 800878 -->
 
 Du kan synkronisera böcker som du har köpt från Apples butik för volyminköpta program med Intune och tilldela dem till användarna.
-
-### <a name="shared-shift-worker-devices-for-samsung-knox-standard-devices----773753---"></a>Delade skiftarbetarenheter för Samsung KNOX Standard-enheter <!-- 773753 -->
-
-Du kan konfigurera en Samsung KNOX Standard-enhet som en delad skiftarbetarenhet i Intune-portalen. När enheten är i delat läge kopplas appar, principer och e-post på den enheten till identiteten för den användare som loggar in på företagsportalen.
-Användare kan logga in på företagsportalappen med sina autentiseringsuppgifter för Azure Active Directory, så verkställs deras appar, principer och e-postanställningar i enheten automatiskt.
 
 ### <a name="multi-user-management-for-samsung-knox-standard-devices----971988---"></a>Hantering av flera användare för Samsung KNOX Standard-enheter <!-- 971988 -->
 
