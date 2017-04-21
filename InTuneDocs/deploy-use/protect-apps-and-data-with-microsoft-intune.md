@@ -15,8 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f46f13e9dbf03fa2b3e2ec7339cad927ea0b38e0
-ms.openlocfilehash: 16e4b6ddd1df9c56e36318dfd3050d1a1f627adc
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -48,14 +49,9 @@ Du kan skydda företagets data genom att använda MAM-principer för enheter som
 
 Om du vill associera en app med en MAM-princip måste Microsoft Intune App Software Development Kit (SDK) ingå i appen, eller så kan du använda appomslutningsverktyget.
 
-I appar som Microsoft Office-apparna är Intune App-SDK:n inbyggd. Du kan visa en fullständig lista över appar som stöds i [Microsoft Intune-galleriet för mobilprogram](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) på sidan för Microsoft Intune-programpartner. Välj appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen stöder flera identiteter.
+I appar som Microsoft Office-apparna är Intune App-SDK:n inbyggd. Du kan visa en fullständig lista över appar som stöds i [Microsoft Intune-galleriet för mobilprogram](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) på sidan för Microsoft Intune-programpartner. Välj appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen stöder flera identiteter.
 
 Du kan också [aktivera dina egna anpassade affärsappar](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) så att de kan användas med MAM-principer.
 
 Förutom att du kan förhindra eller begränsa dataflyttning om en enhet blir stulen eller borttappad eller om användaren inte längre arbetar på ditt företag kan du [rensa företagsdata selektivt](wipe-managed-company-app-data-with-microsoft-intune.md), så att bara personliga data finns kvar.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

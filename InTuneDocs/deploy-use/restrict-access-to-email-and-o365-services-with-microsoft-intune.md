@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: 399c6260a98d51417a067d001c0fd42c926c1513
-ms.lasthandoff: 02/05/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f66772dd318e97b9fef124776e80d9d9a4c7de7f
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -30,7 +30,7 @@ Du kan skydda åtkomsten till företagsrelaterad e-post, Office 365-tjänster so
 ## <a name="how-does-conditional-access-work"></a>Hur fungerar villkorlig åtkomst?
 Du kan utvärdera enhetens kompatibilitet med hjälp av inställningarna för efterlevnadsprinciper. En princip för villkorlig åtkomst använder utvärderingen för att begränsa eller tillåta åtkomst till en specifik tjänst. När du använder en princip för villkorlig åtkomst i kombination med en enhetsefterlevnadsprincip kommer endast kompatibla enheter åt tjänsten. Principen för efterlevnad och principen för villkorlig åtkomst distribueras till användaren. Alla enheter som användaren använder för att komma åt tjänsterna kontrolleras för att se att de följer principerna.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Tänk på att en efterlevnadsprincip måste distribueras till enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas.
 > Om ingen efterlevnadsprincip har distribuerats till användaren behandlas enheten som kompatibel och inga åtkomstbegränsningar tillämpas.
 
@@ -48,7 +48,7 @@ Microsoft Intune och Azure Active Directory (Azure AD) fungerar sömlöst med va
 
 **Azure AD Premium-licenser** kan köpas som en fristående tjänst eller kan köpas (tillsammans med Intune) som en del av Enterprise-avtalet. Om du har distribuerat principer för villkorlig åtkomst med Intune ser du till att du har hämtat rätt Azure AD Premium- eller **EMS-licenser**.
 
-- Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-pricing) eller [sidan med priser för Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+- Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sidan med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 Se även till att de användare som du vill använda villkorliga åtkomstprinciper för har [tilldelats Azure AD Premium- eller EMS-licenser](/Intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
 

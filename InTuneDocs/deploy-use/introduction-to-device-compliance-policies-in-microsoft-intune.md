@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 7b91e52d72704b6beb79a1b35bb1a24ebb340a4b
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 2de9a7d639ee667ee195ded2875a8ac8e478fffb
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -35,7 +35,7 @@ Du kan använda efterlevnadsprinciper med principer för villkorlig åtkomst om 
 Du kan också använda principer för efterlevnad oberoende av villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kanske vill rapportera om hur många enheter som inte är krypterade eller vilka enheter som är jailbreakade eller rootade. Men när du använder efterlevnadsprinciper separat tillämpas inga åtkomstbegränsningar på företagsresurser.
 
 Du distribuerar efterlevnadsprinciper till användare. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven.
-Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats finns i [Hantera inställningar och funktioner på dina enheter](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#frequently-asked-questions-about-intune-policies).
+Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats finns i [Hantera inställningar och funktioner på dina enheter](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies#frequently-asked-questions-about-intune-policies).
 
 Följande tabell innehåller de enhetstyper som har stöd för efterlevnadsprinciper. Tabellen beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 

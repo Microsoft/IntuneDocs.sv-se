@@ -14,9 +14,9 @@ ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: eeb85a28ea6f99a0123ec5df3b0d476a678b85cb
-ms.openlocfilehash: 4133c64d283682f0be37cd6ac69164ef872a5026
-ms.lasthandoff: 01/05/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 9a988945c499c3145208b86d6832d02c28136ece
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -43,8 +43,8 @@ Du kan göra allt i utvärderingsversion som du kan göra i en prenumerationsver
 ## <a name="whats-not-covered"></a>Vad som inte ingår
 |Om du är intresserad av |Läs detta |
 |------------------------|----------|
-|MDM i en icke-testmiljö | [Komma igång](https://docs.microsoft.com/en-us/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
-|MDM med Intune och System Center Configuration Manager | [Hantering av hybridmobilenheter](https://docs.microsoft.com/en-us/sccm/mdm/understand/hybrid-mobile-device-management) |
+|MDM i en icke-testmiljö | [Komma igång](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|MDM med Intune och System Center Configuration Manager | [Hantering av hybridmobilenheter](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Eftersom guiderna ovan hjälper dig att konfigurera Intune i produktionsmiljöer, så är de längre, och innehåller många fler beslutspunkter, än utvärderingsguiden.
 
@@ -61,7 +61,7 @@ Det första steget du måste vidta när du hanterar mobila enheter med Intune ä
 
 Om du använder Intune fristående, vilket den här utvärderingsversionen förutsätter att du gör, eller om du använder Intune som en del av en EMS-prenumeration, så måste du konfigurera Intune som din MDM-auktoritet. Det innebär att du utser Intune till att vara den tjänst som du använder för att hantera mobilenheter i din organisation.
 
-Kunder som vill använda Intune med System Center Configuration Manager för att hantera mobila enheter måste bestämma sig för om de vill använda Intune eller Configuration Manager för sin hantering av mobilenheter. Detta är ett viktigt beslut att fatta i en produktionsmiljö, eftersom det för närvarande är mycket svårt att ändra inställningarna när man väl har gjort dem, men det ligger utanför den här utvärderingsguidens område. Mer information om konsekvenserna av att konfigurera Intune eller Configuration Manager som din MDM-auktoritet finns i [Välja mellan fristående Intune-hantering och hybridmobilenhetshantering](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Kunder som vill använda Intune med System Center Configuration Manager för att hantera mobila enheter måste bestämma sig för om de vill använda Intune eller Configuration Manager för sin hantering av mobilenheter. Detta är ett viktigt beslut att fatta i en produktionsmiljö, eftersom det för närvarande är mycket svårt att ändra inställningarna när man väl har gjort dem, men det ligger utanför den här utvärderingsguidens område. Mer information om konsekvenserna av att konfigurera Intune eller Configuration Manager som din MDM-auktoritet finns i [Välja mellan fristående Intune-hantering och hybridmobilenhetshantering](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 Vi konfigurerar Intune som MDM-auktoritet för utvärderingsversionen. Detta påverkar inte din produktionsmiljö såvida du inte vill använda utvärderingsversionen för din produktionsmiljö.
 
@@ -86,7 +86,7 @@ Hämta APN-certifikatet (.pem) och spara filen lokalt. Det här Apple-ID:t måst
 3.    **Lägg till APN-certifikatet i Intune**<BR/>
 Öppna Microsoft Intune-administratörskonsolen och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj **Överför APN-certifikatet**. Gå till certifikatfilen (.pem), välj **Öppna** och ange ditt Apple-ID. Med APN-certifikatet. Intune kan registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
 4.    **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
-Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-ios) och [Registrera din Mac OS X-enhet i Intune](https://docs.microsoft.com/en-us/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
+Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-ios) och [Registrera din Mac OS X-enhet i Intune](https://docs.microsoft.com/Intune/enduser/enroll-your-device-in-intune-mac-os-x). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Läs mer om enhetsregistrering

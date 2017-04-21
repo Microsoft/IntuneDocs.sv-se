@@ -15,8 +15,9 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d87cbc82b55c4c7615decf8d37d59e2194de9922
-ms.openlocfilehash: 59e376202ee268a9b99c017f813a7ef870e79548
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0325f60e83b6e339c96b38b36465f53d6ee5421b
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -89,7 +90,7 @@ Den nyskapade gruppen visas i listan **Grupper** under den överordnade gruppen 
     > Om din grupp innehåller medlemmar från specifika säkerhetsgrupper eller hanterar-grupper och du exkluderar medlemmar från vissa grupper tas medlemmarna du ursprungligen inkluderade för närvarande bort. Om du vill skapa en grupp som både har inkluderade medlemmar och exkluderade medlemmar, rekommenderar vi att du först skapar en överordnad grupp som innehåller de inkluderade medlemmarna. Skapa sedan en underordnad grupp för den överordnade gruppen. Ta med de exkluderade medlemmar i den nya underordnade gruppen. Använd sedan den underordnade gruppen för att hantera Intune-principer, profiler och app-distribution.
 
     > [!NOTE]
-    > Du kan skapa grupper baserad på den hanterare som användarna rapporterar till i Azure-portalen. Den här typen av grupper är dynamiska, och den kommer att ändras då anställda läggs till eller tas bort från en hanterares team i Azure Active Directory. Hur du skapar en Azure-grupp baserat på en hanterares namn beskrivs i [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) i avsnittet **Konfigurera en grupp som en ”Hanterar”-grupp**.
+    > Du kan skapa grupper baserad på den hanterare som användarna rapporterar till i Azure-portalen. Den här typen av grupper är dynamiska, och den kommer att ändras då anställda läggs till eller tas bort från en hanterares team i Azure Active Directory. Hur du skapar en Azure-grupp baserat på en hanterares namn beskrivs i [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) i avsnittet **Konfigurera en grupp som en ”Hanterar”-grupp**.
 
 4.  På sidan **Definiera direkt medlemskap** klickar du på **Bläddra** för att ta med eller utesluta enskilda användare. Om du väljer användare som inte ingår i den överordnade gruppen som du angav läggs enheterna automatiskt till den överordnade gruppen. Alternativet att manuellt lägga till en användare finns längst ned i dialogrutan **Välj medlemmar**. Detta är praktiskt om du vill lägga till en användare som ännu inte har en registrerad enhet.
 
@@ -151,9 +152,4 @@ Varje princip har ett **Avsett värde** och en **Status**. Det avsedda värdet �
 
 > [!NOTE]
 > Kom ihåg att om två principer som har olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -15,9 +15,9 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 4140c310bb14faf1731e3c316e1dafae5dc0f97a
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 924dc37b310b27fe40ece9f8019061b02cb7ac2d
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurera certifikatinfrastruktur för SCEP
@@ -33,7 +33,7 @@ Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna ska
 -  **Certifikatutfärdare** (CA): En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
     Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 I
--  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter. NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/en-us/library/dn473016.aspx).
+-  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter. NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
 -  **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
 -  **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramsproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
@@ -51,10 +51,10 @@ Tillåt port 443 från Internet till perimeternätverk från alla värdar/IP-adr
 
 Tillåt alla portar och protokoll som behövs för åtkomst till domänen på den domänanslutna NDES-servern från perimeternätverket till det betrodda nätverket. NDES-servern måste ha åtkomst till certifikatservrar, DNS-servrar, Configuration Manager-servrar och domänkontrollanter.
 
-Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/en-us/library/dn584107.aspx) eller en proxy från en annan leverantör.
+Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/library/dn584107.aspx) eller en proxy från en annan leverantör.
 
 
-### <a name="a-namebkmkcertsandtemplatesacertificates-and-templates"></a><a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
+### <a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
 
 |Objekt|Information|
 |----------|-----------|
@@ -63,13 +63,13 @@ Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel
 |**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från offentlig certifikatutfärdare, du installerar och binder SSL-certifikatet i IIS på NDES-servern.|
 |**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren och distribuerar den till enheterna med hjälp av certifikatprofilen för den betrodda certifikatutfärdaren.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
-### <a name="a-namebkmkaccountsaaccounts"></a><a name="BKMK_Accounts"></a>Konton
+### <a name="BKMK_Accounts"></a>Konton
 
 |Namn|Information|
 |--------|-----------|
 |**NDES-tjänstkonto**|Du anger ett domänanvändarkonto som används som NDES-tjänstkontot|
 
-## <a name="a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure"></a><a name="BKMK_ConfigureInfrastructure"></a>Konfigurera infrastrukturen
+## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurera infrastrukturen
 Innan du kan konfigurera certifikatprofiler måste du utföra följande åtgärder, som kräver kunskaper om Windows Server 2012 R2 och Active Directory-certifikattjänster (ADCS):
 
 **Uppgift 1**: Skapa ett NDES-tjänstkonto

@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: 9759c1331a3fb5308e1dbc53564059618a8ef45c
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 53b86bf579af6af29fd36ce58f9cdf1e92b98abc
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -61,11 +61,11 @@ Anvisningar för hur du skapar en apprincip i Intune-administratörskonsolen fin
 - Windows 10
 
 >[!NOTE]
->Från och med version 1703 kan appskyddsprinciper definieras för Windows 10-enheter i MAM utan registreringsscenario. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+>Från och med version 1703 kan appskyddsprinciper definieras för Windows 10-enheter i MAM utan registreringsscenario. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ##  <a name="supported-apps"></a>Appar som stöds
 * **Microsoft-appar:** Dessa appar har en inbyggd app-SDK för Intune och kräver ingen ytterligare bearbetning innan du tillämpar appskyddsprinciper.
-Om du vill se en fullständig lista över Microsoft-appar som stöds går du till [galleriet för Microsoft Intune-mobilprogram](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps) på sidan för Microsoft Intune-programpartner. Klicka på appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen har stöd för flera identiteter.
+Om du vill se en fullständig lista över Microsoft-appar som stöds går du till [galleriet för Microsoft Intune-mobilprogram](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) på sidan för Microsoft Intune-programpartner. Klicka på appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen har stöd för flera identiteter.
 
 * **Verksamhetsspecifika appar:** Du måste förbereda dessa appar så att de integrerar Intune App SDK innan du kan tillämpa appskyddsprinciper.
 
@@ -76,7 +76,7 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 ## <a name="prerequisites"></a>Förutsättningar
 
 -   **En Microsoft Intune-prenumeration**. Användarna behöver [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licenser för att kunna hämta appar med appskyddsprinciper.
-Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du för närvarande använder [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att hantera enheter. Du har också en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [Sidan för Microsoft Intune](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/).
+Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du för närvarande använder [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att hantera enheter. Du har också en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [Sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
 
     Du kan kontrollera om du har en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration på sidan **Fakturering** på Office-portalen.  Om du har en prenumeration bör du se [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] som **Aktiv** i prenumerationerna.
 
@@ -98,13 +98,13 @@ Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumera
 
 1.  Logga in som administratör på [Office-portalen](http://portal.office.com).
 
-2.  Lägg till användare såsom beskrivs i avsnittet **Steg för att slutföra en 30-dagars utvärderingsversion av Intune** i [utvärderingsguiden för Intune](https://docs.microsoft.com/en-us/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) och tilldela sedan Intune-licenser. Om du vill ge en användare möjlighet att komma åt Office-portalen, Azure AD-portalen och Azure Portal tilldelar du användaren rollen **Global administratör**.
+2.  Lägg till användare såsom beskrivs i avsnittet **Steg för att slutföra en 30-dagars utvärderingsversion av Intune** i [utvärderingsguiden för Intune](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) och tilldela sedan Intune-licenser. Om du vill ge en användare möjlighet att komma åt Office-portalen, Azure AD-portalen och Azure Portal tilldelar du användaren rollen **Global administratör**.
 
-5.  Appskyddsprinciper distribueras till användargrupper i Azure Active Directory. Du skapar användargrupper för appskyddsprinciper genom att först skapa en användargrupp. Följ anvisningarna i avsnittet **Skapa en användargrupp** i [Skapa grupper för att organisera användare och enheter som prenumererar på utvärderingen](https://docs.microsoft.com/en-us/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3).
+5.  Appskyddsprinciper distribueras till användargrupper i Azure Active Directory. Du skapar användargrupper för appskyddsprinciper genom att först skapa en användargrupp. Följ anvisningarna i avsnittet **Skapa en användargrupp** i [Skapa grupper för att organisera användare och enheter som prenumererar på utvärderingen](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3).
 
 ### <a name="assign-roles-to-non-global-admin-users"></a>Tilldela roller till icke-globala administratörer
 
-Globala administratörer har åtkomst till [Azure Portal](https://portal.azure.com).  Om du vill att användare som inte är globala administratörer ska kunna konfigurera principer och utföra andra hanteringsuppgifter för mobila appar läser du artikeln [Use role assignments to manage access to your Azure subscription resources](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/) (Använda rolltilldelningar för att hantera åtkomsten till Azure-prenumerationsresurser).
+Globala administratörer har åtkomst till [Azure Portal](https://portal.azure.com).  Om du vill att användare som inte är globala administratörer ska kunna konfigurera principer och utföra andra hanteringsuppgifter för mobila appar läser du artikeln [Use role assignments to manage access to your Azure subscription resources](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure/) (Använda rolltilldelningar för att hantera åtkomsten till Azure-prenumerationsresurser).
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)

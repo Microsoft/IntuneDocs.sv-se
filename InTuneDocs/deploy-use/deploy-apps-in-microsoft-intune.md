@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 32653a46d8758eac5b884f4f6f7a2e07447c1e36
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 7451b1872a848ac322db4ec485564f2ebf983f0d
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="deploy-apps-in-microsoft-intune"></a>Distribuera appar i Microsoft Intune
@@ -48,7 +49,7 @@ I den här proceduren ska du distribuera en app till valda grupper av enheter el
 
 5. Om appen du distribuerar kan konfigureras med en hanteringsprincip för mobilappar visas sidan **Hantering av mobilappar**. På den här sidan väljer du den hanteringsprincip för mobilprogram som du vill koppla till den här appen.
 
-    [Se vilka Microsoft-appar som är kompatibla med hanteringsprinciper för mobilappar.](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)
+    [Se vilka Microsoft-appar som är kompatibla med hanteringsprinciper för mobilappar.](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx)
 
 6. Om appen du distribuerar är kompatibel med Intune VPN-profiler visas sidan **VPN-profil**. På den här sidan kan du associera iOS-appar med en VPN-profil som du har distribuerat. VPN-anslutningen öppnas automatiskt när appen startas. Om du vill göra en VPN-profil tillgänglig måste den ha profilinställningen **Per app-VPN** aktiverad.
  Information om hur du konfigurerar VPN-profiler, inklusive information om hur du associerar profiler med appar, finns i [VPN-anslutningar i Microsoft Intune](vpn-connections-in-microsoft-intune.md).
@@ -72,9 +73,4 @@ Om du har distribuerat appen som **Obligatorisk** till en iOS-enhet får använd
 ## <a name="next-steps"></a>Nästa steg
 
 När du har distribuerat en app vill du övervaka dess förlopp. Mer information finns i [Övervaka appar i Microsoft Intune](monitor-apps-in-microsoft-intune.md).
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -14,9 +14,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: ad1133d17f8d64c79c08437b914ae28e00cae638
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: eaf30c8a59013af6359743227edc8aa6709577c5
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -57,7 +57,7 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
 
 1. Kontrollera att **iOS management** (iOS-hantering) är inställt på enheten. Anvisningar om hur du ställer in din enhet för iOS-hantering finns i [Set up iOS and Mac device management](set-up-ios-and-mac-management-with-microsoft-intune.md) (Konfigurera iOS- och Mac-enhetshantering).
 
-2. **Omsignera** iOS-appen Lookout for Work. Lookout distribuerar iOS-appen Lookout for Work utanför iOS App Store. **Before distributing the app** (Innan du distribuerar appen) måste du omsignera appen med din iOS Enterprise Developer-certifikat. Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns i [Omsigneringsprocessen för iOS-appen Lookout for Work](https://personal.support.lookout.com/hc/en-us/articles/114094038714) på Lookout-platsen.
+2. **Omsignera** iOS-appen Lookout for Work. Lookout distribuerar iOS-appen Lookout for Work utanför iOS App Store. **Before distributing the app** (Innan du distribuerar appen) måste du omsignera appen med din iOS Enterprise Developer-certifikat. Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns i [Omsigneringsprocessen för iOS-appen Lookout for Work](https://personal.support.lookout.com/hc/articles/114094038714) på Lookout-platsen.
 
 3. Aktivera Azure Active Directory-autentisering för iOS-användare genom att göra följande:
   1.  Logga in på [hanteringsportalen för Azure Active Directory](https://manage.windowsazure.com) och gå till programsidan.
@@ -67,13 +67,13 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
   4.  Lägg till ytterligare omdirigerings-URI: **&lt;companyportal://code/ >** följt av en URL-kodad version av din ursprungliga omdirigerings-URI.
   5.  Lägg till **Delegerad behörighet** till din app.
 
-  Mer information finns i [Configure a native client application](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application) (Konfigurera ett internt klientprogram).
+  Mer information finns i [Configure a native client application](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application) (Konfigurera ett internt klientprogram).
 
-4. Ladda upp den omsignerade .ipa-filen enligt beskrivningen i artikeln [Lägg till appar för mobila enheter i Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Ange den lägsta operativsystemsversionen till iOS 8.0 eller senare.
+4. Ladda upp den omsignerade .ipa-filen enligt beskrivningen i artikeln [Lägg till appar för mobila enheter i Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune). Ange den lägsta operativsystemsversionen till iOS 8.0 eller senare.
 
   ![Skärmbild av sidan appar i Intune-administratörskonsolen där Lookout for Work-appen visas i listan över appar](../media/mtp/ios-app-uploaded-intune.png)
 
-5. Skapa en konfigurationsprincip för hanterade appar enligt beskrivningen i avsnittet [Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
+5. Skapa en konfigurationsprincip för hanterade appar enligt beskrivningen i avsnittet [Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
 
   ![skärmbild av guiden skapa en ny princip med appkonfigurationsprincipen för iOS 8.0 eller senare markerad](../media/mtp/ios-app-config.png)
 

@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: e3c3f834a80eaf5e8b992ba41b19a1d53b89fdc3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: f57323fe0b093f2478d71d3f01b9c0e5ee2727eb
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -125,9 +125,9 @@ Du använder **hanteringsportalen för Office 365** för att manuellt lägga til
 
 ### <a name="to-synchronize-on-premises-users-with-azure-ad"></a>Så här synkroniserar du lokala användare med Azure AD
 
-1. [Lägg till UPN-suffixet](https://technet.microsoft.com/en-us/library/cc772007.aspx) för din egna domän i din lokala Active Directory.
+1. [Lägg till UPN-suffixet](https://technet.microsoft.com/library/cc772007.aspx) för din egna domän i din lokala Active Directory.
 2. Ange det nya UPN-suffixet för de lokala användare som du tänker importera.
-3. Kör [Azure AD Connect-synkronisering](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect/) för att integrera dina lokala användare med Azure AD.
+3. Kör [Azure AD Connect-synkronisering](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) för att integrera dina lokala användare med Azure AD.
 4. När informationen om användarkontot har synkroniserats kan du tilldela Microsoft Intune-licenser med [Office 365-hanteringsportalen](https://portal.office.com/Admin/Default.aspx).
 
 ## <a name="step-6-enable-enrollment"></a>Steg 6: Aktivera registrering

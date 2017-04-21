@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
-ms.openlocfilehash: 4a921334b0cd402dba91eab665ff1a23290c82eb
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: dbc5c6afc9f2748b50e064b912e519e8f2de9022
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -43,7 +43,7 @@ Till skillnad från andra Intune-principer kan du inte distribuera en princip f�
 
 Om du vill tillämpa begränsningar i en app måste den innehålla Microsoft Intune App SDK. Det finns tre metoder för att hämta den här typen av app:
 
--   **Använda en principhanterad app**. En principhanterad app har en inbyggd App SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Mer information finns i [listan med appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-apps).
+-   **Använda en principhanterad app**. En principhanterad app har en inbyggd App SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Mer information finns i [listan med appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 -   **Använda en omsluten app**. En omsluten app är en app som du paketerar på nytt för att inkludera App SDK med hjälp av Microsoft Intunes programhanteringsverktyg. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Du kan inte använda verktyget för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
 
@@ -140,7 +140,7 @@ När du har kontrollerat att appen överförts, fortsätter du till steg 3.
     |**Kräv enhetens efterlevnad med företagsprinciper för att få åtkomst**|Den här inställningen tillåter användning av appen endast om enheten inte är jailbreakad eller rotad.|
     |**Kontrollera åtkomstbehörigheterna på nytt efter (minuter)**|I fältet **Tidsgräns** anger du hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt efter att den har öppnats.|
     |**Offline-respitperiod**|Ange hur lång tid som ska gå innan åtkomstkraven för appen kontrolleras på nytt om enheten är offline.|
-    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/en-us/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är endast FIPS 140-2-kompatibel för Samsung KNOX-enheter.|
+    |**Kryptera appdata**|Den här inställningen anger att alla data som är associerade med appen krypteras. Detta innefattar data som lagras externt, till exempel på SD-kort.<br /><br />**Kryptering för iOS**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram krypteras data i viloläge med hjälp av den enhetskryptering som finns i operativsystemet. Detta aktiveras via enhetens PIN-princip som anges av IT-administratören. När en PIN-kod krävs krypteras data enligt inställningarna i hanteringsprincipen för mobilprogram. Enligt informationen i Apples dokumentation är [modulerna som används i iOS 140-2 FIPS 140-2-certifierade](http://support.apple.com/HT202739).<br /><br />**Kryptering för Android**<br /><br />För appar som är associerade med Intunes hanteringsprincip för mobilprogram tillhandahålls krypteringen av Microsoft. Data krypteras synkront under I/O-åtgärder.  Innehållet på enhetens lagring krypteras alltid. Krypteringsmetoden är endast FIPS 140-2-kompatibel för Samsung KNOX-enheter.|
     |**Blockera skärmdump** (endast Android-enheter)|Den här inställningen anger att skärmdumpsfunktionen i enheten är blockerad när någon använder den här appen.|
 
 4. När du är klar väljer du **Spara princip**.

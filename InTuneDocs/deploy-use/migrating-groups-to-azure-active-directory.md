@@ -13,9 +13,9 @@ ms.technology:
 ms.assetid: 03b69afa-3548-4033-9039-191528f3fd99
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: d3b4b823683196148d4fb8aa296b59c9c712e99f
-ms.lasthandoff: 03/11/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 2296490a8c3984e79eeeb553d90591048ed46711
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -51,9 +51,9 @@ Vissa befintliga funktioner i Intune-grupper är inte tillgängliga i Azure AD:
 ## <a name="how-to-get-ready"></a>Hur du förbereder dig
 
 - Läs följande Azure AD-avsnitt för mer information om Azure AD-säkerhetsgrupper och hur de fungerar:
-    -  [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://azure.microsoft.com/en-us/documentation/articles/active-directory-manage-groups/).
-    -  [Hantera grupper i Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-manage-groups/).
-    -  [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/en-us/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+    -  [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
+    -  [Hantera grupper i Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
+    -  [Använda attribut för att skapa avancerade regler](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
 - Överväg att ta bort de Intune-grupper som du inte längre använder innan du migrerar.
 -  Kontrollera att alla administratörer som behöver skapa grupper läggs till i Azure AD-rollen **Administratör för Intune-tjänsten**. Notera att Azure AD-rollen Tjänstadministratör inte har behörighet att **hantera grupper**.
 -  Överväg om du kan göra om grupper så att de inte använder undantag, eller om du kan använda avancerade regler i din Azure AD-fråga för att uppnå samma resultat om du använder grupper med alternativet **Exkludera särskilda medlemmar**.

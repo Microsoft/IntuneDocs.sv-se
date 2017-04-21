@@ -15,9 +15,9 @@ ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: 61851f7669e9a5c3a192b2eda344fcde9c4fa3e6
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 0fa045d31125ba0d67f19bb46aa2728ae9bbcc93
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -67,7 +67,7 @@ Olika administrativa uppgifter som kräver att du använder en av följande admi
 |**Företagsportalens webbplats**     |**På mobila enheter:** använd standardwebbläsaren för varje plattform som stöds   <br /><br />**På Windows-datorer:** Internet Explorer 10 eller senare eller Microsoft Edge<br /><br />**På Mac OS X 10.9 eller senare:** Apple Safari    |
 
 > [!Note]
-> Administrationskonsolen stöder inte Microsoft Edge och mobila webbläsare eftersom de inte stöder [Microsoft Silverlight](https://msdn.microsoft.com/en-us/library/cc838158(v=vs.95).aspx). Intune-konsolen håller på att migreras från Silverlight-miljön. När det är klart kommer alla Intunes funktioner för hantering av mobila enheter och program att [göras tillgängliga på den nya Microsoft Azure-portalen](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
+> Administrationskonsolen stöder inte Microsoft Edge och mobila webbläsare eftersom de inte stöder [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx). Intune-konsolen håller på att migreras från Silverlight-miljön. När det är klart kommer alla Intunes funktioner för hantering av mobila enheter och program att [göras tillgängliga på den nya Microsoft Azure-portalen](https://blogs.technet.microsoft.com/enterprisemobility/2015/11/17/enhancing-managed-mobile-productivity/).
 
 
 Endast användare med behörighet som tjänsteadministratör eller innehavaradministratören med den globala administratörsrollen kan logga in på den här portalen. Om du vill få åtkomst till administrationskonsolen måste kontot ha en licens för att använda Intune och inloggningsstatusen **Tillåten**.

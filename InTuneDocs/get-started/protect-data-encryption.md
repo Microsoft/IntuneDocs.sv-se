@@ -15,9 +15,9 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 11ed6b14bc940940e6fa22f6760420e690ac364f
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: c47106ddfebcd1df8c1bc5090bf3f047015b6c45
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -41,7 +41,7 @@ Den här snabbstartsguiden är en bra resurs om du uppfyller följande krav:
 > [!NOTE]
 > Windows-plattformen stöds inte ännu för Office-mobilappar. Hantering av mobila program utan registrering är inte ännu kompatibelt med Exchange eller SharePoint. Du kan bara skydda data som finns i onlineversioner.
 
-Den här guiden hjälper dig att skydda ditt företag mot dataförlust genom att kräva lösenord och datakryptering med hjälp av principer för mobila appar som dina anställda använder för att komma åt känsliga data, utan krav på fullständig registrering i en enhetshanteringslösning. Med Microsoft Intune kan du ange MAM-principer för hantering av mobila program för Office-mobilappar för [iOS](https://products.office.com/en-us/mobile/office-mobile-apps-for-ios) och [Android](https://products.office.com/en-us/mobile/office-mobile-apps-for-android). Den här metoden skyddar O365-data utan att kräva att användarna registrerar sina enheter i en lösning för hantering av mobila enheter och ger samtidigt en mycket bra användarupplevelse med Office-mobilappar.
+Den här guiden hjälper dig att skydda ditt företag mot dataförlust genom att kräva lösenord och datakryptering med hjälp av principer för mobila appar som dina anställda använder för att komma åt känsliga data, utan krav på fullständig registrering i en enhetshanteringslösning. Med Microsoft Intune kan du ange MAM-principer för hantering av mobila program för Office-mobilappar för [iOS](https://products.office.com/mobile/office-mobile-apps-for-ios) och [Android](https://products.office.com/mobile/office-mobile-apps-for-android). Den här metoden skyddar O365-data utan att kräva att användarna registrerar sina enheter i en lösning för hantering av mobila enheter och ger samtidigt en mycket bra användarupplevelse med Office-mobilappar.
 
 ## <a name="how-do-i-do-it"></a>Hur gör jag?
 1.    [Se hur du kan skydda appdata](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune)
@@ -51,5 +51,5 @@ Den här guiden hjälper dig att skydda ditt företag mot dataförlust genom att
 ## <a name="additional-information"></a>Ytterligare information:
 - [Läs mer om slutanvändarens upplevelse i MAM-aktiverade appar med Microsoft Intune.](/intune/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune)
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](/intune/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
-- [Se en lista över Microsoft Intune-programpartner](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners)
+- [Se en lista över Microsoft Intune-programpartner](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)
 

@@ -15,9 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 074af85385a843bd5fac9747abf0209a3ba92b9c
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 60dbfa644a53fec3823e1182f5dec7eb97d8b5df
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -55,12 +55,12 @@ Använd följande steg för att samla in den information du måste förse Lookou
 
 1. Logga in på [Azure AD-hanteringsportalen](https://manage.windowsazure.com) och välj din prenumeration. 
   ![skärmbild av Azure AD-sidan som visar namnet på klienten](../media/mtp/aad_tenant_name.png)
-2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US) och få hjälp. 
+2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) och få hjälp. 
 3. Hitta ditt grupp-ID för Azure AD. Lookout-konsolen stöder två åtkomstnivåer:  
   * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som kommer att ha fullständig åtkomst och de kan även skapa en grupp med användare som har begränsad tillgång.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
   * **Begränsad åtkomst:** Användarna i den här gruppen kommer inte ha åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen, och ha skrivskyddad åtkomst till **Säkerhetsprincip**-modulen i Lookout-konsolen.  
 
-  Mer information om behörigheterna finner du i [den här artikeln](https://personal.support.lookout.com/hc/en-us/articles/114094105653) på webbplatsen Lookout.
+  Mer information om behörigheterna finner du i [den här artikeln](https://personal.support.lookout.com/hc/articles/114094105653) på webbplatsen Lookout.
 
   **Grupp-objekt-ID:t** finns på **egenskapssidan** för gruppen i **Azure AD-hanteringskonsolen**.
 
@@ -127,7 +127,7 @@ Logga in i [Lookout-konsolen](https://aad.lookout.com) med det användarkonto so
 ![skärmbild som visar sidan för inställningar där användarkontot visas](../media/mtp/lookout-mtp-email-notifications.png) Om du inte längre vill ta emot e-postaviseringar väljer du alternativet **AV** för meddelanden och sparar ändringarna.
 
 ### <a name="configure-threat-classification"></a>Konfigurera hotklassificering
-Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-hotklassificeringar](http://personal.support.lookout.com/hc/en-us/articles/114094130693) är kopplade till standardrisknivåer. Dessa kan ändras när som helst för att passa företagets krav.
+Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-hotklassificeringar](http://personal.support.lookout.com/hc/articles/114094130693) är kopplade till standardrisknivåer. Dessa kan ändras när som helst för att passa företagets krav.
 
 ![skärmbild av sidan för principer som visar hot och klassificeringar](../media/mtp/lookout-mtp-threat-classification.png)
 
@@ -137,5 +137,5 @@ Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-
 ## <a name="watching-enrollment"></a>Bevakar registreringen
 När installationen är klar börjar Lookout Mobile Threat Defense avsöka Azure AD efter enheter som motsvarar de angivna registreringsgrupperna.  Du hittar information om de enheter som registrerats i modulen Enheter.  Den första statusen för enheterna är ”väntar”.  Enhetens status ändras när Lookout for Work-appen har installerats, öppnats och aktiverats på enheten.  Mer information om hur du skickar Lookout for work-appen till enheten finner du i artikeln [Configure and deploy Lookout for work apps](configure-and-deploy-lookout-for-work-apps.md) (Konfigurera och distribuera Lookout for work-appar).
 ## <a name="next-steps"></a>Nästa steg
-[Aktivera anslutning till Lookout MTP i Intune](enable-lookout-mtp-connection-in-intune.md)
+[Aktivera anslutning till Lookout MTP i Intune](https://docs.microsoft.com/intune/deploy-use/enable-lookout-mtd-connection)
 

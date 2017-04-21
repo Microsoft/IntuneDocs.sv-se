@@ -15,9 +15,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 8e8257a426bd6b9a99e21e928b08c84f162d5da3
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 5975ba0219f464c8f5aa1735657ff3d1c186b991
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -30,7 +30,7 @@ Microsoft Intune är en molnbaserad tjänst som hjälper dig att hantera enheter
 
 Microsoft erbjuder Intune Onboarding-förmåner för berättigade tjänster i berättigade planer. Med Onboarding-förmånerna kan du arbeta på distans med Microsoft-specialister för att färdigställa din Intune-miljö. Mer information om Onboarding-förmånen finns i [beskrivningen av Microsoft Intune Onboarding-förmånen](http://go.microsoft.com/fwlink/?LinkId=619281).
 
-Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
+Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
 
 > [!NOTE]
 > Om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services och kanske kommer att fortsätta med den här Intune-prenumerationen i produktion efter det att utvärderingsperioden har löpt ut, väljer du alternativet **Logga in** på sidan Logga in och autentiserar med hjälp av din organisations globala administratörskonto. Den här åtgärden säkerställer att din Intune-utvärderingsversion länkar till det befintliga arbets- eller skolkontot.
@@ -70,13 +70,13 @@ Du kan konfigurera Intune på flera olika sätt för att hantera och skydda för
 
 -**Fristående Intune-konfiguration.** Använd den webbaserade administrationskonsolen i Intune för att hantera enheter i organisationen. Intune kan användas utan en lokal IT-infrastruktur. Om du använder Intune med Active Directory Domain Services kan du använda domänanvändarkonton som du hanterar med Domain Services med Intune.
 
--**Intune med System Center Configuration Manager.** Använd hanteringskonsolen i Configuration Manager för att hantera datorer och mobila enheter i företaget. Den här konfigurationen kan hjälpa dig att hantera organisationens enheter genom en enda konsol, nämligen administratörskonsolen i Configuration Manager. Configuration Manager stöder ett stort antal mobila enheter, servrar och datorer. Mer information om Configuration Manager finns i [Hantering av mobila hybridenheter (MDM) med System Center Configuration Manager och Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Mer hjälp för att bestämma vilken metod som är bäst för dig finns i [Välj mellan fristående Microsoft Intune och hantering av mobila hybridenheter med Configuration Manager](https://technet.microsoft.com/en-us/library/mt706478.aspx).
+-**Intune med System Center Configuration Manager.** Använd hanteringskonsolen i Configuration Manager för att hantera datorer och mobila enheter i företaget. Den här konfigurationen kan hjälpa dig att hantera organisationens enheter genom en enda konsol, nämligen administratörskonsolen i Configuration Manager. Configuration Manager stöder ett stort antal mobila enheter, servrar och datorer. Mer information om Configuration Manager finns i [Hantering av mobila hybridenheter (MDM) med System Center Configuration Manager och Microsoft Intune](https://technet.microsoft.com/library/mt627883.aspx). Mer hjälp för att bestämma vilken metod som är bäst för dig finns i [Välj mellan fristående Microsoft Intune och hantering av mobila hybridenheter med Configuration Manager](https://technet.microsoft.com/library/mt706478.aspx).
 
 
 ## <a name="learn-more-about-intune"></a>Läs mer om Intune
 Använd dessa resurser om du vill veta mer om Intune:
 
-- [Microsoft Intune Trust Center](http://www.microsoft.com/en-us/server-cloud/products/intune-trust-center/) innehåller information om säkerhet och sekretess samt efterlevnadsregler för Intune och beskriver även några av certifieringarna för Intune.
+- [Microsoft Intune Trust Center](https://www.microsoft.com/server-cloud/products/intune-trust-center/) innehåller information om säkerhet och sekretess samt efterlevnadsregler för Intune och beskriver även några av certifieringarna för Intune.
 
 - [Funktioner för hantering av registrerade enheter i Microsoft Intune](/intune/get-started/mobile-device-management-capabilities-in-microsoft-intune)
 
