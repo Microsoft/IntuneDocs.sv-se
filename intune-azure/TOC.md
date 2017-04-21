@@ -43,6 +43,7 @@
 ### [Enhetsregistreringshanterare](enroll-devices/enroll-devices-using-device-enrollment-manager.md)
 ### [Registrera macOS-enheter](enroll-devices/enroll-macos-devices.md)
 ### [Registrera Windows-enheter](enroll-devices/enroll-windows-devices.md)
+### [Massregistrera Windows-enheter](enroll-devices/bulk-enroll-windows.md)
 ### Hantera enhetsregistrering
 #### [Skapa allmänna villkor](enroll-devices/create-terms-and-conditions.md)
 #### [Ange registreringsbegränsningar](enroll-devices/set-enrollment-restrictions.md)
@@ -57,6 +58,7 @@
 <!--- ## [Plan and design](manage-devices/plan-and-design.md) --->
 ## Gör så här för att
 ### [Använda fullständig eller selektiv rensning](manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md)
+### [Fjärrstyr Android-enheter](manage-devices/control-android-devices-with-teamviewer.md)
 <!--- ## [Troubleshoot](manage-devices/troubleshooting.md) --->
 
 # Hantera användare
@@ -75,7 +77,9 @@
 ## Så här hanterar du appar
 ### [Lägga till appar](manage-apps/add-apps.md)
 #### [Android Store-appar](manage-apps/android-store-app.md)
+#### [Android LOB-appar](manage-apps/android-lob-app.md)
 #### [iOS Store-appar](manage-apps/ios-store-app.md)
+#### [iOS LOB-appar](manage-apps/ios-lob-app.md)
 #### [Webbappar](manage-apps/web-app.md)
 #### [Windows Phone 8.1 Store-appar](manage-apps/windows-phone-8-1-store-app.md)
 #### [Windows Store-appar](manage-apps/windows-store-app.md)
@@ -109,8 +113,12 @@
 ### [Konfigurera enhetsprofiler](configure-devices/how-to-create-device-profiles.md)
 
 ### [Konfigurera enhetsfunktioner](configure-devices/how-to-configure-device-features.md)
-#### [iOS](configure-devices/device-features-for-ios.md)
-#### [macOS](configure-devices/device-features-for-macos.md)
+#### [AirPrint för iOS och MacOS](configure-devices/air-print-settings-for-ios-and-macos.md)
+#### [AirPlay för iOS](configure-devices/airplay-settings-for-ios-devices.md)
+#### [Startsidelayout för iOS](configure-devices/home-screen-settings-for-ios.md)
+#### [Appmeddelanden för iOS](configure-devices/app-notification-settings-for-ios.md)
+#### [Delade enheter för iOS](configure-devices/shared-device-settings-for-ios.md)
+#### [Webbinnehållsfilter för iOS](configure-devices/web-content-filter-settings-for-ios.md)
 
 ### [Konfigurera enhetsbegränsningar](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
@@ -120,6 +128,7 @@
 #### [Windows Phone 8.1](configure-devices/device-restrictions-for-windows-phone-8-1.md)
 #### [Windows 10](configure-devices/device-restrictions-for-windows-10.md)
 #### [Windows 10-teamet](configure-devices/device-restrictions-for-windows-10-team.md)
+#### [Android for Work](configure-devices/device-restrictions-for-afw.md)
 
 ### [Konfigurera e-postinställningar](configure-devices/how-to-configure-email-settings.md)
 #### [Android](configure-devices/email-profile-settings-for-android.md)
@@ -142,6 +151,7 @@
 #### [Windows 8.1 och Windows 10](configure-devices/wi-fi-import-for-windows-8-1.md)
 
 ### [Konfigurera inställningar för Windows 10-versionsuppgradering](configure-devices/how-to-configure-windows-10-edition-upgrade.md)
+### [Konfigurera inställningar för Windows 10-utbildning](configure-devices/how-to-configure-education-settings.md)
 ### [Konfigurera inställningar för Windows Update för företag](configure-devices/how-to-configure-windows-update-for-business.md)
 ### [Konfigurera certifikat](configure-devices/how-to-configure-certificates.md)
 #### [SCEP](configure-devices/configure-certificate-infrastructure-for-scep.md)
@@ -159,6 +169,7 @@
 #### [macOS](configure-devices/custom-for-macos.md)
 #### [Windows Phone 8.1](configure-devices/custom-for-windows-phone-8-1.md)
 #### [Windows 10](configure-devices/custom-for-windows-10.md)
+#### [Android for Work](configure-devices/custom-android-for-work.md)
 
 ### [Tilldela enhetsprofiler](configure-devices/how-to-assign-device-profiles.md)
 ### [Övervaka enhetsprofiler](configure-devices/how-to-monitor-device-profiles.md)
