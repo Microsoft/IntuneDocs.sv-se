@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/27/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 4c790438911b06915c49bd76a4ae413b7a9471d1
-ms.openlocfilehash: 70f9638941b61309fc2d97987ab20b3d54e529ee
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: df54ac3a62b5ef21e8a32f3a282dd5299974a1b0
+ms.openlocfilehash: 679ac408349a82b17ec63109770126e0ad072c6d
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -31,6 +31,10 @@ Microsoft tillhandahåller global teknisk, förförsäljnings-, fakturerings- oc
 
 Support för Intune, och för Intune när det används med Configuration Manager, är kostnadsfritt. Premier Support-kunder debiteras en avgift för procedurfrågor (t.ex. hur man gör för att konfigurera en Intune-funktion).
 
+>[!IMPORTANT]
+> Om du behöver teknisk support för produkter som används med Intune och som inte tillverkats av Microsoft, till exempel SaaSwedo, Cisco eller Lookout, kontaktar du leverantören av produkten först för att kontrollera att du har konfigurerat korrekt innan du öppnar ett ärende hos Intune-supporten.
+
+
 ## <a name="find-help-without-opening-a-support-ticket"></a>Få hjälp utan att skapa någon supportbegäran
 
 Innan du skapar en supportbegäran kan du gå igenom följande resurser och leta efter svar och information. Du kan även gå igenom [de allmänna felsökningstipsen för Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
@@ -40,6 +44,13 @@ Innan du skapar en supportbegäran kan du gå igenom följande resurser och leta
 Ställ en fråga till eller starta en diskussion med Microsofts tekniska experter! Vi ger svar och tips på det sökbara [TechNet-forumet om Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
 
 ![TechNet-forum om Microsoft Intune](./media/technet-forum-for-support.png)
+
+### <a name="get-started-with-the-forum"></a>Kom igång med forumet
+
+1. Ange Microsoft Intune i rutan Forum på forumsidan och välj sedan det från listan.<br>
+![Kontroll för att välja Intune-forum](./media/forum-select-intune.png)
+2. Microsoft Intune visas nu i din lista med valda forum.<br>
+![Intune som valts i forumkontrollen](./media/forum-selected-intune.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>UserVoice-webbplatsen för produktfeedback för Microsoft Intune
 
