@@ -16,9 +16,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b6c245d60c661c04b4c4d29c9bdcdd752254d978
-ms.openlocfilehash: 6932e75fd002661245baa7754824ec6cfe500a22
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 15415f9f31d520d66257df3a7e134e4b1de8467c
+ms.openlocfilehash: d70b3bc82b528184b5cfb4d4cad19cb034093e94
+ms.lasthandoff: 04/07/2017
 
 
 ---
@@ -46,5 +46,5 @@ Inställningskompatibilitetsrapporten ger detaljerad information om de enskilda 
 - Antalet enheter som inte är kompatibla med inställningen.
 - Den plattform som inställningen gäller.
 
-Du kan öka detaljnivån för varje inställning om du vill se mer information om de profiler för vilka dessa inställningar har aktiverats, och inställningens konfigurerade värde.
+Du kan öka detaljnivån för varje inställning om du vill se mer information om de profiler som inställningarna har aktiverats för, samt inställningens värde.
 

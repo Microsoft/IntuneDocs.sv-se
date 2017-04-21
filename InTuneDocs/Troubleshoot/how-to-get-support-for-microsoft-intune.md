@@ -5,7 +5,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 01/27/2016
+ms.date: 04/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,23 @@ ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 5726934501b3d6b243de94951cf0c57cbd79a811
-ms.openlocfilehash: ccc0502c81cb16d2ca13e5d6a702c0ff863b83e4
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: 15229d2dff3b5e9a13bf1f9321ba09df81717052
+ms.lasthandoff: 04/14/2017
 
 
 ---
 
-# <a name="how-admins-get-support-for-microsoft-intune"></a>Så kan administratörer få support för Microsoft Intune
+# <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Microsoft tillhandahåller global teknisk, förförsäljnings-, fakturerings- och prenumerationssupport för Microsoft Intune. Support är tillgängligt både online och per telefon för såväl betal- som utvärderingsprenumerationer. Teknisk support online finns på engelska och japanska. Telefonsupport och faktureringssupport online är tillgänglig på fler språk.
 
 Support för Intune, och för Intune när det används med Configuration Manager, är kostnadsfritt. Premier Support-kunder debiteras en avgift för procedurfrågor (t.ex. hur man gör för att konfigurera en Intune-funktion).
+
+>[!IMPORTANT]
+> Om du behöver teknisk support för produkter som används med Intune och som inte tillverkats av Microsoft, till exempel SaaSwedo, Cisco eller Lookout, kontaktar du leverantören av produkten först för att kontrollera att du har konfigurerat korrekt innan du öppnar ett ärende hos Intune-supporten.
 
 ## <a name="find-help-without-opening-a-support-ticket"></a>Få hjälp utan att skapa någon supportbegäran
 
@@ -39,6 +42,13 @@ Innan du skapar en supportbegäran kan du gå igenom följande resurser och leta
 Ställ en fråga till eller starta en diskussion med Microsofts tekniska experter! Vi ger svar och tips på det sökbara [TechNet-forumet om Microsoft Intune](https://social.technet.microsoft.com/Forums/home).
 
 ![TechNet-forum om Microsoft Intune](./media/technet-forum-for-support.png)
+
+### <a name="get-started-with-the-forum"></a>Kom igång med forumet
+
+1. Ange Microsoft Intune i rutan Forum på forumsidan och välj sedan det från listan.<br>
+![Kontroll för att välja Intune-forum](./media/forum-select-intune.png)
+2. Microsoft Intune visas nu i din lista med valda forum.<br>
+![Intune som valts i forumkontrollen](./media/forum-selected-intune.png)
 
 ### <a name="microsoft-intune-uservoice-product-feedback-site"></a>UserVoice-webbplatsen för produktfeedback för Microsoft Intune
 
@@ -60,11 +70,11 @@ Läs igenom [definitionen av ett supportärende](#definition-of-a-support-incide
 
 1.  Logga in på [administrationscentret för Office 365](https://portal.office.com) med dina Intune-autentiseringsuppgifter.
 
-    Om du är en Premier Support-kund kan du öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/en-us/premier/contacts).
+    Om du är en Premier Support-kund kan du öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/premier/contacts).
 
     >[!NOTE]
     >
-    >Premier Support-kunder kan öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/en-us/premier/contacts).
+    >Premier Support-kunder kan öppna ett Intune-supportärende på [Premier Support-sidan](https://support.microsoft.com/premier/contacts).
 
 2.  Välj **administratörspanelen**.
 3.  Öppna ett ärende genom att välja **Support** till vänster under **Support**.
@@ -126,7 +136,7 @@ Vårt första svar för Professional-kunder ges inom åtta timmar för övriga p
 - En enskild användare upplever partiella avbrott, men en godtagbar lösning finns.
 
 > [!NOTE]
-> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** Om du vill ha teknisk support för Configuration Manager eller Endpoint Protection, så kontakta din partner eller läs dokumentationen om [Microsoft System Center Configuration](https://docs.microsoft.com/sccm/) och [Endpoint Protection](https://technet.microsoft.com/en-us/library/hh508836.aspx) där du hittar utförligt självhjälpsmaterial. Här finns också möjlighet att öppna en supportförfrågan online eller via telefon.
+> **Om du använder Microsoft System Center Configuration Manager** eller **Microsoft System Center Endpoint Protection:** Om du vill ha teknisk support för Configuration Manager eller Endpoint Protection, så kontakta din partner eller läs dokumentationen om [Microsoft System Center Configuration](https://docs.microsoft.com/sccm/) och [Endpoint Protection](https://technet.microsoft.com/library/hh508836.aspx) där du hittar utförligt självhjälpsmaterial. Här finns också möjlighet att öppna en supportförfrågan online eller via telefon.
 >
 > Teknisk support för System Center Configuration Manager eller System Center Endpoint Protection kräver antingen betalning eller dras av från det befintliga licens- eller Premier Support-avtalet.
 
