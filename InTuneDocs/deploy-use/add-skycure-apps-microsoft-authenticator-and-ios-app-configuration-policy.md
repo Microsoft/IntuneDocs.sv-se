@@ -46,7 +46,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-skycure-app-for-android"></a>Så här lägger du till Skycure-appen för Android
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Extern länk**. Klistra sedan in [URL för Skycures Android-app](https://play.google.com/store/apps/details?id=com.skycure.skycure) under **Ange URL**.
 
@@ -60,7 +60,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-skycure-app-for-ios"></a>Så här lägger du till Skycures iOS-app
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Hanterad iOS-app från App Store**. Klistra sedan in [URL för Skycures iOS-app](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) under **Ange URL**.
 
@@ -76,7 +76,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-microsoft-authenticator-app-for-ios"></a>Så här lägger du till Microsoft Authenticator-appen för iOS
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Hanterad iOS-app från App Store**. Klistra sedan in [URL för Microsoft Authenticator-appen för iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) under **Ange URL**.
 
