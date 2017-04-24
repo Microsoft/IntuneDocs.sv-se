@@ -239,7 +239,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt popup-fönster**|Gäller endast för Windows 10 Desktop|
 |**Tillåt cookies**||
 |**Tillåt autofyll**|Tillåter att användarna kan ändra inställningarna för att automatiskt komplettera i webbläsaren<br>(endast Windows 10 Desktop)|
-|**Tillåt lösenordshanteraren**|Aktiverar eller inaktiverar lösenordshanteraren i Edge|
+|**Tillåt lösenordshanteraren**|Aktiverar eller inaktiverar lösenordshanteraren i Microsoft Edge|
 |**Listplats för Företagsläge-webbplats**|Anger var du hittar listan över webbsidor som öppnas i Enterprise-läge. Användare kan inte redigera den här listan.<br>(endast Windows 10 Desktop)|
 
 ### <a name="apps"></a>Appar
