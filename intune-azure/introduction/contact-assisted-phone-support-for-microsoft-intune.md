@@ -115,7 +115,7 @@ ms.lasthandoff: 02/28/2017
 |Turkiet|24 × 7|Måndag-fredag<br /><br />09:00 – 18:00 EET (UTC + 3)|Turkiska&#42;, engelska|00800 448824556||
 |UAE|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 AST (UTC +4)|Engelska|8000 4441578||
 |Ukraina|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 EET (UTC + 2)|Ryska&#42;, engelska|0 800 308 800<br /><br />Steg 1: Välj 5||
-|Storbritannien|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 GMT (UTC)|Engelska|0800 032 6417|02034506455|
+|Storbritannien och Nordirland|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 GMT (UTC)|Engelska|0800 032 6417|02034506455|
 |USA|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PST (UTC -8)|Engelska|800-865-9408||
 |Uruguay|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 UYST (UTC -2)|Spanska&#42;, engelska|000-411-002-7131||
 |Venezuela|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 VET (UTC -4:30)|Spanska&#42;, engelska|0-800-100-8763||
