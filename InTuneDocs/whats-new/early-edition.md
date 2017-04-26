@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 04/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0a39abc7f19f4c2c8074de66a9cd5df9cef78ed5
-ms.openlocfilehash: 2b6e29e7323d42b1ce3d75a46648203a7a43165c
-ms.lasthandoff: 04/13/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 31f984fabd2373d242e5e3399bd0c82fbaf53070
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -59,7 +59,7 @@ Användarna behöver inte längre logga in i Outlook-appen om de är inloggade p
 
 ### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
 
-En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen. Du kan se de nya skärmarna för företagsportalsappen för Android på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md). 
+En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen. Du kan se de nya skärmarna för företagsportalsappen för Android på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md).
 
 
 ## <a name="notices"></a>Meddelanden
@@ -186,7 +186,7 @@ Vi har lagt till stöd för ytterligare begränsningsinställningar för Windows
 
 ### <a name="multi-user-support-for-windows-10-creators-update----822547---"></a>Stöd för flera användare för Windows 10 Creators Update <!-- 822547 -->
 
-Vi har lagt till stöd för hantering av flera användare för enheter som kör Windows 10 Creators Update och är domänanslutna med Azure Active Directory. Det innebär att när olika användare loggar in på enheten med sina autentiseringsuppgifter för AAD får de alla appar och principer som har tilldelats till deras användarnamn.
+Vi har lagt till stöd för hantering av flera användare för enheter som kör Windows 10 Creators Update och är domänanslutna med Azure Active Directory. Det innebär att när olika standardanvändare loggar in på enheten med sina autentiseringsuppgifter för Azure AD, får de alla appar och principer som har tilldelats till deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
 
 ### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Fresh Start för Windows 10-datorer<!-- 1004830 -->
 
@@ -203,7 +203,7 @@ Nu kan du skapa en uppgraderingsprincip för att uppgradera enheter till följan
 
 ### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
 
-Du kan koppla ett stort antal Windows 10-enheter till Azure Active Directory och Intune med IT-automatiseringsverktyg. Om du vill aktivera automatisk MDM-registrering för Azure AD-klienten kan du skapa ett etableringspaket som kopplar enheten till Azure AD-klienten med hjälp av Windows Configuration Designer. Använd det paketet på företagsägda enheter som du vill massregistrera och hantera.  När paketet har verkställts ansluter enheterna till Azure AD, registreras i Intune och är redo för att Azure AD-användarna ska logga in.
+Du kan ansluta ett stort antal enheter som kör Windows 10 Creators Update till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera MDM-massregistrering för din Azure AD-klient, genom att skapa ett etableringspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer och tillämpa paketet på företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter så kommer de anslutas till Azure AD, registreras i Intune och vara klara för dina Azure AD-användare att logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
 
 ### <a name="new-mam-settings-for-pin-and-managed-storage-locations----58112-736644---"></a>Nya MAM-inställningar för PIN-kod och hanterade lagringsplatser <!-- 58112, 736644 -->
 
