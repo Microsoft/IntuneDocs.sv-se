@@ -51,7 +51,7 @@ Dessutom kan du distribuera dina egna verksamhetsspecifika (LOB)-appar som du ha
 1. Gå till Google Play-utvecklarkonsolen [play.google.com/apps/publish](https://play.google.com/apps/publish).
 2. Logga in med samma konto som du använde för att konfigurera anslutningen mellan Intune och Android for Work. Om du loggar in för första gången måste du registrera dig och betala en avgift för att bli medlem i Google-utvecklarprogrammet.
 3. I konsolen väljer du **Lägg till nytt program**.
-4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Men du måste välja inställningen *Only make this application available to my organization*(Gör det här programmet tillgängligt endast för min organisation) (<*organisationsnamn*>)** som visas nedan.<br>
+4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Men du måste välja inställningen **Only make this application available to my organization(Gör det här programmet tillgängligt endast för min organisation) (<* organisationsnamn* >)** som visas nedan.<br>
   ![Alternativ för att endast göra appen tillgänglig för din organisation](media/restrict.png)<br>
 Detta säkerställer att appen endast är tillgänglig för din organisation och inte är tillgänglig i den offentliga Google Play-butiken.
 Mer information om hur du överför och publicerar Android-appar finns i [Google Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469) (Hjälp med Google-utvecklarkonsolen).
