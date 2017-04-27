@@ -12,7 +12,7 @@
 
 # [Komma igång](get-started/get-started.md)
 ## [Konfigurera Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune.md)
-### [Förutsättningar]
+### Förutsättningar
 #### [Enheter som stöds](get-started/what-to-know-before-you-start-microsoft-intune.md)
 #### [Nätverksanvändning](get-started/network-bandwidth-use.md)
 ### [Logga in i Intune](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1.md)
@@ -189,10 +189,13 @@
 
 ### [Skydda appdata med MAM](deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
 #### [Azure Portal för appskyddsprinciper](deploy-use/azure-portal-for-microsoft-intune-mam-policies.md)
-#### [Bli redo att konfigurera appskyddsprinciper](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
-#### [Skapa och distribuera appskyddsprinciper](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Förbered konfigurationen av appskyddsprinciper för iOS och Android](deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Förbered konfigurationen av appskyddsprinciper för Windows 10](deploy-use/get-ready-to-configure-app-protection-policies-for-windows-10.md)
 #### [Appskyddsprinciper för Android](deploy-use/android-mam-policy-settings.md)
 #### [Appskyddsprinciper för iOS](deploy-use/ios-mam-policy-settings.md)
+#### [Appskyddsprinciper för Windows](deploy-use/create-windows-information-protection-policy-with-intune.md)
+#### [Skapa och distribuera appskyddsprinciper för iOS och Android](deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
+#### [Skapa och distribuera WIP-appskyddsprinciper för Windows 10](deploy-use/create-windows-information-protection-policy-with-intune.md)
 #### [Verifiera appskyddsprinciper](deploy-use/validate-mobile-application-management.md)
 #### [Övervaka efterlevnad av appskyddsprinciper](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
