@@ -58,13 +58,13 @@
 <!--- ## [Plan and design](manage-devices/plan-and-design.md) --->
 ## Gör så här för att
 ### [Använda fullständig eller selektiv rensning](manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md)
-### [Fjärrstyr Android-enheter](manage-devices/control-android-devices-with-teamviewer.md)
 <!--- ## [Troubleshoot](manage-devices/troubleshooting.md) --->
 
 # Hantera användare
 ## [Vad är användarhantering?](manage-users/what-is.md)
 <!--- Was What is users & group management--->
-## [Kom igång](manage-users/get-started-with-groups.md)
+## [Komma igång](manage-users/get-started-with-groups.md)
+## [Hjälp användare](manage-users/help-desk.md)
 <!--- ## [Plan and design](manage-users/plan-and-design.md) --->
 
 <!--- ## [Troubleshoot](manage-users/troubleshooting.md) --->
