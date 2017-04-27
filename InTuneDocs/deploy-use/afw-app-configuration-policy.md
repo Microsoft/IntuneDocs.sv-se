@@ -17,6 +17,7 @@ ms.custom: intune-classic
 translationtype: Human Translation
 ms.sourcegitcommit: 31e28514ab4bdb0f5af261a1f7c87633ca0bd4a6
 ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
+ms.lasthandoff: 02/04/2017
 
 
 ---
@@ -24,8 +25,6 @@ ms.openlocfilehash: 58671d037c7f62e5fdaa56657737a4470c90bdb7
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurera Android for Work-appar med konfigurationsprinciper för mobilappar i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
-
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 Använd konfigurationsprinciper för mobilappar i Microsoft Intune om du vill definiera inställningar som kan krävas när användaren kör en app. En app kan till exempel kräva att användarna anger:
 
@@ -76,9 +75,4 @@ När den distribuerade appen körs på en enhet körs den med de inställningar 
 
 > [!TIP]
 > Distribuera endast en princip för app-konfiguration för varje app till en användare.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

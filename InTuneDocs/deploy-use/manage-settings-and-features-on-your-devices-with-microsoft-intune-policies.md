@@ -42,7 +42,6 @@ Mer information finns i [Begränsa åtkomsten till e-post och O365-tjänster med
 - **Resursåtkomstprinciper**: Dessa principer fungerar tillsammans så att användarna får åtkomst till de filer och resurser som de behöver för att utföra sitt arbete, oavsett var de befinner sig.
 Mer information finns i [Ge åtkomst till företagsresurser med Microsoft Intune](enable-access-to-company-resources-with-microsoft-intune.md).
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
 
 En fullständig lista över Intune-principer finns i [Principreferens för Microsoft Intune](microsoft-intune-policy-reference.md).
 

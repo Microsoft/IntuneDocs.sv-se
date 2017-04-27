@@ -78,8 +78,6 @@ Du kan skydda åtkomsten till e-post i Exchange Online från **Outlook** och and
 - Android 4.0 och senare, Samsung Knox Standard 4.0 och senare samt Android for Work
 - iOS 8.0 och senare
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 Med **modern autentisering** kan Microsoft Office-klienter använda ADAL-baserad (Active Directory Authentication Library) inloggning.
 
 -   ADAL-baserad autentisering gör det möjligt för Office-klienter att delta i webbläsarbaserad autentisering (även kallat passiv autentisering). Användare som vill autentiseras omdirigeras till en inloggningswebbsida.
