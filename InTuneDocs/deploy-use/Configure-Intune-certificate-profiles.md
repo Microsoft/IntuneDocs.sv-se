@@ -58,8 +58,6 @@ Du måste skapa en certifikatprofil för en betrodd certifikatutfärdare innan d
 
 -  Windows Phone 8.1 och senare
 
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
-
 2.  Lägg till en princip för **betrodd certifikatprofil**.
 
     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).

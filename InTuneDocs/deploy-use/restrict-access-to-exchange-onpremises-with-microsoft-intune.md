@@ -83,10 +83,7 @@ Följande stöds:
 -   Exchange ActiveSync-e-postklienter som Gmail på Android 4 eller senare.
 -   Exchange ActiveSync-e-postklienter och **Android for Work-enheter:** Endast **Gmail**- och **Nine Work**-apparna i **arbetsprofilen** stöds på Android for Work-enheter. För att villkorlig åtkomst ska fungera med Android for Work måste du distribuera en e-postprofil för Gmail- eller Nine Work-appen och distribuera de apparna som en obligatorisk installation. 
 
-<!---
-[!INCLUDE[wit_nextref](../includes/afw_rollout_disclaimer.md)]
---->
-> [!NOTE] 
+> [!NOTE]
 > Microsoft Outlook-appen for Android and iOS stöds inte.
 
 ## <a name="support-for-pcs"></a>Stöd för datorer
