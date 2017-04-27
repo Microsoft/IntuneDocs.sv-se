@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 03/15/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -81,9 +81,7 @@ Den nya rollen visas i listan på bladet **Roller**.
 ## <a name="how-to-assign-a-role"></a>Så här tilldelar du en roll
 
 1. På bladet **Roller** i **Åtkomstkontroll** arbetsbelastning väljer du den inbyggda eller anpassade roll som du vill tilldela.
-2. På bladet <*rollnamn*> – **Egenskaper** väljer du **Hantera** > **Tilldelningar**.
-    >[!TIP]
-    >På det här bladet kan du även redigera eller ta bort befintliga roller.
+2. På bladet <*rollnamn*> – **Egenskaper** väljer du **Hantera** > **Tilldelningar**. På det här bladet kan du även redigera eller ta bort befintliga roller.
 3. Välj **Tilldela** på nästa blad.
 4. På bladet **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
