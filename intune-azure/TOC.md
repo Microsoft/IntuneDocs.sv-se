@@ -118,7 +118,6 @@
 #### [Startsidelayout för iOS](configure-devices/home-screen-settings-for-ios.md)
 #### [Appmeddelanden för iOS](configure-devices/app-notification-settings-for-ios.md)
 #### [Delade enheter för iOS](configure-devices/shared-device-settings-for-ios.md)
-#### [Webbinnehållsfilter för iOS](configure-devices/web-content-filter-settings-for-ios.md)
 
 ### [Konfigurera enhetsbegränsningar](configure-devices/how-to-configure-device-restrictions.md)
 #### [Android](configure-devices/device-restrictions-for-android.md)
@@ -194,7 +193,8 @@
 ## [Vad är villkorlig åtkomst?](conditional-access/what-is-conditional-access.md)
 ## Gör så här för att
 ### [Installera Exchange On-premises Connector](conditional-access/install-intune-on-premises-exchange-connector.md)
-### [Skapa en princip för villkorlig åtkomst](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Skapa och tilldela princip för villkorlig åtkomst](conditional-access/create-conditional-access-policy-for-exchange-on-premises.md)
+### [Övervaka kompatibilitet för villkorlig åtkomst](conditional-access/monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online.md)
 
 # Åtkomstkontroll
 ## [Vad är rollbaserad åtkomstkontroll?](access-control/role-based-access-control.md)
