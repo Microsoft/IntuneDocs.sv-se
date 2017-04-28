@@ -1,5 +1,5 @@
 ---
-title: Blockera appar utan modern autentisering | Microsoft Docs
+title: Blockera appar utan modern autentisering
 description: 
 keywords: 
 author: andredm7
@@ -15,9 +15,9 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e55cf608c2e5157feeb40ba20d3988b5b35064db
-ms.openlocfilehash: b2d708e35a7993ff7c5e3db170b1025794b33baf
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 0f192c0e41cf3b639cbfdac3f8c4fc3b8167266d
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -26,11 +26,18 @@ ms.lasthandoff: 02/25/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Appbaserad villkorlig åtkomst med appskyddsprinciper är beroende av program som använder [modern autentisering](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) som är en implementering av OAuth2. De senaste mobila och stationära Office-programmen använder modern autentisering. Det finns dock tredjepartsappar och äldre Office-program som använder andra autentiseringsmetoder, som grundläggande autentisering och formulärbaserad autentisering.
+Appbaserad villkorlig åtkomst med appskyddsprinciper är beroende av program som använder [modern autentisering](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) som är en implementering av OAuth2. De senaste mobila och stationära Office-programmen använder modern autentisering. Det finns dock tredjepartsappar och äldre Office-program som använder andra autentiseringsmetoder, som grundläggande autentisering och formulärbaserad autentisering.
 
 Om du vill blockera åtkomst till de här apparna rekommenderar vi följande:
 
 * Konfigurera ADFS-anspråksregler och blockera protokoll som inte stöder modern autentisering. Detaljerade anvisningar finns i scenario tre – [block all access to O365 except browser-based applications](https://technet.microsoft.com/library/dn592182.aspx) (blockera all åtkomst till O365 förutom webbläsarbaserade program).
+* I **SharePoint Online** inaktiverar du inaktuell autentisering i SharePoint Online-tjänsten med PowerShell-kommandot [Set-SPOTenant](https://technet.microsoft.com/library/fp161390.aspx) för att ange egenskapen för äldre autentiseringsprotokoll till falskt:
+
+```
+ Set-SPOTenant -LegacyAuthProtocolsEnabled $false
+
+```
+
 
 >[!IMPORTANT]
 >Appbaserad CA kan inte användas med Azure Active Directory (Azure AD)-certifikatbaserad autentisering. Du kan endast ha en av dessa konfigurerade åt gången.
