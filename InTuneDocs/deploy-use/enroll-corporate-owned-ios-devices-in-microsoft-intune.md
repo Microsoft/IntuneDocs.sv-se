@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2ed76d2905042f299022f1625ce7215c6834ad3f
-ms.openlocfilehash: 7fcb910dfc566cdf7112a48558cda375ea1c39a8
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 44b4fbad45decde806fb5be41ea12f0d8bcf9c95
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/21/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Microsoft Intune stöder registrering av företagsägda iOS-enheter med hjälp av Apples enhetsregistreringsprogram (DEP) eller verktyget [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator.
+Microsoft Intune stöder registrering av företagsägda iOS-enheter med hjälp av Apples enhetsregistreringsprogram (DEP) eller verktyget [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator.
 
 **Förutsättning:** Ett [certifikat för Apple Push Notification Service](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
@@ -39,15 +39,15 @@ Du kan registrera företagsregistrerade iOS-enheter på tre sätt:
 >[!NOTE]
 >Registreringsmetoderna för Apple Configurator och Programmet för enhetsregistrering (DEP) kan inte användas med [hanteraren av enhetsregistrering](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) (DEM).
 
-Som standard tillåts alla iOS-enheter registreras i Intune. Om du vill blockera personliga eller företagsägda enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](http://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera de tillämpliga alternativen.
+Som standard tillåts alla iOS-enheter registreras i Intune. Om du vill blockera personliga eller företagsägda enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](https://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera de tillämpliga alternativen.
 
 ## <a name="use-apple-configurator"></a>Använd Apple Configurator
 
 Du kan registrera iOS-enheter genom att exportera en företagsregistreringsprofil och sedan ansluta de mobila enheterna till en Mac som kör Apple Configurator. Apple Configurator stöder två typer av registrering:
 
-- **Registrering av installationsassistenten**: Återställer enheten till fabriksinställningarna och förbereder den för installation av enhetens nya användare. Den här metoden kräver att administratören ansluter iOS-enheten via USB till en Mac-dator som kör [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) så att registreringen kan förkonfigureras. Enheterna levereras sedan till de användare som kör installationsassistensprocessen. Den här processen konfigurerar enheten med användarnas autentiseringsuppgifter arbetet eller skolan och slutför registreringen. Mer information finns i [Registrera iOS-enheter med hjälp av Apple Configurator och installationsassistenten](ios-setup-assistant-enrollment-in-microsoft-intune.md).
+- **Registrering av installationsassistenten**: Återställer enheten till fabriksinställningarna och förbereder den för installation av enhetens nya användare. Den här metoden kräver att administratören ansluter iOS-enheten via USB till en Mac-dator som kör [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017) så att registreringen kan förkonfigureras. Enheterna levereras sedan till de användare som kör installationsassistensprocessen. Den här processen konfigurerar enheten med användarnas autentiseringsuppgifter arbetet eller skolan och slutför registreringen. Mer information finns i [Registrera iOS-enheter med hjälp av Apple Configurator och installationsassistenten](ios-setup-assistant-enrollment-in-microsoft-intune.md).
 
-- **Direktregistrering**: Skapar en Apple Configurator-kompatibel fil som används vid förberedelse av enheten. Den registrerade enheten är inte fabriksåterställd, men den har ingen anknytning till användaren. Den här metoden kräver att administratören ansluter iOS-enheten via USB till en Mac-dator som kör [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) för att registrera enheten. Mer information finns i [Registrera iOS-enheter som använder direktregistrering i Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
+- **Direktregistrering**: Skapar en Apple Configurator-kompatibel fil som används vid förberedelse av enheten. Den registrerade enheten är inte fabriksåterställd, men den har ingen anknytning till användaren. Den här metoden kräver att administratören ansluter iOS-enheten via USB till en Mac-dator som kör [Apple Configurator](https://go.microsoft.com/fwlink/?LinkId=518017) för att registrera enheten. Mer information finns i [Registrera iOS-enheter som använder direktregistrering i Apple Configurator](ios-direct-enrollment-in-microsoft-intune.md).
 
 ## <a name="use-the-device-enrollment-program-dep"></a>Använd enhetsregistreringsprogrammet (DEP)
 DEP distribuerar en registreringsprofil trådlöst till enheter som köpts via DEP. Enheten registreras i Intune när användaren kör installationsassistenten på enheten. Mer information finns i [Registrera iOS-enheter med enhetsregistreringsprogrammet](ios-device-enrollment-program-in-microsoft-intune.md).

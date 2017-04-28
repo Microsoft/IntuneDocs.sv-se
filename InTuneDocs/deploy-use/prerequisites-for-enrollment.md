@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: f57323fe0b093f2478d71d3f01b9c0e5ee2727eb
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 160b8a7fe883b8af61831b30b711ad0243a3ec08
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -55,7 +55,7 @@ Utfärdaren för hantering av mobila enheter definierar den hanteringstjänst so
 > Överväg noggrant om du vill hantera mobila enheter endast med hjälp av Intune (onlinetjänst) eller System Center Configuration Manager med Intune (lokal programvarulösning i samband med onlinetjänsten). När du har angett auktoritet för hantering av mobila enheter kan du inte ändra detta utan hjälp från Microsoft Support. Instruktioner finns i [Vad ska jag göra om jag väljer fel inställning för MDM-auktoritet?](#what-to-do-if-you-choose-the-wrong-mdm-authority-setting).
 
 
-1.  Gå till [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter**.
+1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Admin** &gt; **Hantering av mobila enheter**.
 
 2.  Klicka på **Ange auktoritet för hantering av mobila enheter** i **Uppgiftslistan**. Dialogrutan **Ange MDM-auktoritet** öppnas.
 

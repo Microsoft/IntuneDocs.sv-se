@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: fa8f4b1df83e37ab20d5b4a045ba535758368835
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 47d1437159da85b958e6e6fa91fa743d7746c5ce
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -47,7 +47,7 @@ Följande procedur beskriver hur du skapar en anpassad regel.
 
 ## <a name="create-a-default-access-rule"></a>Skapa en standardregel för åtkomst
 
-1.  Välj **Princip** &gt; **Exchange ActiveSync** på [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com).
+1.  Välj **Princip** &gt; **Exchange ActiveSync** på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com).
 
 2.  Gå till listan **Standardregel** och markera den åtkomstregel som du vill koppla till alla mobila enheter som inte omfattas av en regel eller ett personligt undantag. Välj **Spara**.
 
@@ -55,7 +55,7 @@ Följande procedur beskriver hur du skapar en anpassad regel:
 
 ## <a name="create-a-custom-access-rule"></a>Skapa en anpassad åtkomstregel
 
-1. Välj **Princip** &gt; **Exchange ActiveSync** på [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com).
+1. Välj **Princip** &gt; **Exchange ActiveSync** på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com).
 
 2.  Välj **Lägg till regel** i listan **Plattformsundantag** och skapa sedan en anpassad regel. Välj **Spara**.
 

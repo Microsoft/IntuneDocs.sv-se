@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a4b6d8b0a63d707631e3f0e231b2e9b40f2609cf
-ms.openlocfilehash: 1d8109fca8170ad127f6377918d7c0313ba26d78
-ms.lasthandoff: 03/24/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: ea57a51f2855dea416ad4a76e657e1846ffe41f1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -69,9 +69,9 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare
 
-1.  Kontrollera att användaren som du vill lägga till i DEM-kontot redan finns. Om du behöver lägga till användaren loggar du in på [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854) och följer stegen i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1.  Kontrollera att användaren som du vill lägga till i DEM-kontot redan finns. Om du behöver lägga till användaren loggar du in på [Office 365-portalen](https://go.microsoft.com/fwlink/p/?LinkId=698854) och följer stegen i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Logga in på [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
+2.  Logga in på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
 
 3.  Gå till navigeringsfönstret och välj **Admin**, så sedan till **Administratörshantering** och välj **Enhetsregistreringshanteraren**. Sidan **Enhetsregistreringshanterare** visas.
 
@@ -88,7 +88,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Ta bort en enhetsregistreringshanterare från Intune
 
-1.  Logga in på [Microsoft Intune-administrationsportalen](http://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
+1.  Logga in på [Microsoft Intune-administrationsportalen](https://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
 
 2.  Gå till navigeringsfönstret och välj **Admin**, så sedan till **Administratörshantering** och välj **Enhetsregistreringshanteraren**. Sidan **Enhetsregistreringshanterare** visas.
 

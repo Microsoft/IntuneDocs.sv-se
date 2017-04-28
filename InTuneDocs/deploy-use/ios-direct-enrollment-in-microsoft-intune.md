@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 521a37044d6721fe905db7740329688ba2c24b35
-ms.openlocfilehash: f75c4a6412d34923ec45524d765d3eb270f15e13
-ms.lasthandoff: 01/31/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: ee0320db2c4a1a977326f62fcd20597fa39aba24
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -35,7 +35,7 @@ När du registrerar iOS-enheter direkt kan du registrera dem utan att hämta enh
 
 1.  Om du inte redan har gjort det skapar du en registreringsprofil för iOS-enheter som registreras via Apple Configurator. En enhets registreringsprofil definierar inställningarna som tillämpas på enheter.
 
-    1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
+    1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
 
         ![Skapa sida för mobilenhetsregistrering](../media/pol-sa-corp-enroll.png)
 

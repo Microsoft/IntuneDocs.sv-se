@@ -15,9 +15,9 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 2b3041019a7fe5a1ed7421401b36a72321af6cea
-ms.openlocfilehash: 0498aebe8e06314cb6f63f3f4def7011a3badf64
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 19cfb242fbd1be613b38c8aa06c12b741bc6cd74
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -106,7 +106,7 @@ Du kan distribuera Intune-klientprogramvaran till datorer som en del av en opera
 
 ## <a name="instruct-users-to-self-enroll"></a>Be användarna att göra registreringen själv
 
-Användare installerar Intune-klientprogrammet genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com). Den exakta informationen som användarna ser i webbportalen kan variera beroende på ditt kontos MDM-auktoritet och OS-plattformen/versionen på användarens dator.
+Användare installerar Intune-klientprogrammet genom att gå till [företagsportalens webbplats](https://portal.manage.microsoft.com). Den exakta informationen som användarna ser i webbportalen kan variera beroende på ditt kontos MDM-auktoritet och OS-plattformen/versionen på användarens dator.
 
 Om användarna inte har tilldelats en licens för Intune eller om organisationens MDM-auktoritet inte har konfigurerats för Intune kan användarna inte se några alternativ för att registrera sig.
 

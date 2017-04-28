@@ -14,9 +14,9 @@ ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: a0ae4d74ad99adcfab596eb0c441c845fbca3a9e
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: abba595672fa88efc022128ec8751cb27d14b089
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -50,7 +50,7 @@ Distributionen blir smidigare om du dämpar oron. Vi har en lista över saker so
 
 * __Var personlig.__ Om du tillhandahåller instruktioner som inte gäller för din specifika distribution kan användarna uppleva att du inte har ägnat någon tanke på deras situation. Du kan använda den här [anpassningsbara mallen för slutanvändarregistrering i Intune för IT-administratörer](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c) för att skapa egna registreringsanvisningar för slutanvändare.
 
-* __Hitta olika sätt att kommunicera.__ Användare har [olika sätt att lära sig saker](http://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) och på samma sätt har de olika sätt att använda information. För användare som föredrar video framför dokumentation erbjuder vi [videor om hur du registrerar olika enhetstyper](https://channel9.msdn.com/Series/IntuneEnrollment) och annat på Channel 9. Dessa videor går att bädda in direkt på din egen [SharePoint-plats](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581), eller så kan du ladda ned egna lokala kopior, antingen av videon eller bara ljudspåret.
+* __Hitta olika sätt att kommunicera.__ Användare har [olika sätt att lära sig saker](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) och på samma sätt har de olika sätt att använda information. För användare som föredrar video framför dokumentation erbjuder vi [videor om hur du registrerar olika enhetstyper](https://channel9.msdn.com/Series/IntuneEnrollment) och annat på Channel 9. Dessa videor går att bädda in direkt på din egen [SharePoint-plats](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581), eller så kan du ladda ned egna lokala kopior, antingen av videon eller bara ljudspåret.
 
 * __Var informerad.__ Användarens upplevelse påverkar företagets produktivitet. Om du har bättre förståelse för deras upplevelse blir det enklare för dig att felsöka deras problem. Om du vet hur användarna får sina appar blir det mycket enklare för dig att diagnosticera vilka fel de upplever och det går snabbare att åtgärda deras problem.
 
