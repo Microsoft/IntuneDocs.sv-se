@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: a85b9f603e022b3296cb16754effd06087074a72
-ms.openlocfilehash: 34d4dc309044336eb3e625a1ecdc50abb48d6fa3
-ms.lasthandoff: 04/01/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 31b7ff2b9644f47107199f0f1d237847169c3143
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -57,7 +57,7 @@ Appskyddsprinciper skapas på Azure-portalen. Om det är första gången du anv�
 
 Du skapar appskyddsprinciper genom att följa stegen nedan:
 
-1. Gå till [Azure Portal](http://portal.azure.com) och logga in med dina autentiseringsuppgifter.
+1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina autentiseringsuppgifter.
 
 2. Välj **Fler tjänster** och ange "Intune".
 
@@ -109,7 +109,7 @@ När du har skapat en princip genom att följa stegen i föregående procedur di
 
 Från och med Intune version 1703 kan du välja att allmänt lägga till branschspecifika appar i Intune när du skapar en ny appskyddsprincip. Det ger dig möjlighet att definiera appskyddsprinciper för LOB-appar med hjälp av MAM SDK utan att fullständiga appdistributionsbehörigheter krävs.
 
-> [!TIP] 
+> [!TIP]
 > Du kan också lägga till branschspecifika appar i Intune med hjälp av arbetsflödet för [Intune App SDK](https://docs.microsoft.com/intune/develop/intune-app-sdk-get-started).
 
 > [!IMPORTANT]
@@ -127,13 +127,13 @@ Från och med Intune version 1703 kan du välja att allmänt lägga till bransch
 
 ### <a name="to-add-lob-apps-windows"></a>Lägga till branschspecifika appar (Windows)
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Du måste välja Windows 10 i listrutan för plattform när du skapar en ny appskyddsprincip.
 
 1.  På bladet Lägg till en princip väljer du **Tillåtna appar** eller **Undanta appar** för att öppna något av bladen för tillåtna eller undantagna appar.
 
     > [!NOTE]
-    > 
+    >
     - **Tillåtna appar**: detta är de appar som måste följa den här principen.
     - **Undanta appar**: de här apparna är undantagna från denna princip och kan komma åt företagets data utan begränsningar.
 <br></br>

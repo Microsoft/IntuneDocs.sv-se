@@ -15,9 +15,9 @@ ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 6673c8de8d5deb74005b40a58274efcb10783fcc
-ms.openlocfilehash: 7f94d420529ff365504b2bb053d034cf36d30953
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 39dab717810aa5f900cbb4f4371491b05de1ecd1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -89,7 +89,7 @@ Om du har ställt in principvärden för inställningarna **Installera Endpoint 
 |**Övervaka fil- och programaktivitet på datorer**|Aktiverar övervakning av inkommande och utgående filer samt programaktivitet på datorer. Med den här inställningen kan Endpoint Protection övervaka när filer och program startar och varnar om att åtgärder som de vidtar eller åtgärder som vidtas på dem.<br /><br />Rekommenderat värde: **Ja**|
 |**Övervakade filer**|Låter dig välja om endast inkommande, endast utgående eller om alla filer ska övervakas.<br /><br />Rekommenderat värde: **Övervaka alla filer**|
 |**Aktivera prestandaövervakning**|Gör det möjligt för Microsoft Intune Endpoint Protection att kontrollera vissa mönster på misstänkt aktivitet på klientdatorer.<br /><br />Rekommenderat värde: **Ja**|
-|**Aktivera kontrollsystem för nätverk**|Aktiverar kontrollsystem för nätverk (NIS) på klientdatorer. NIS använder signaturer för kända problem från [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkId=234249) för att identifiera och blockera skadlig nätverkstrafik.<br /><br />Rekommenderat värde: **Ja**|
+|**Aktivera kontrollsystem för nätverk**|Aktiverar kontrollsystem för nätverk (NIS) på klientdatorer. NIS använder signaturer för kända problem från [Microsoft Malware Protection Center](https://go.microsoft.com/fwlink/?LinkId=234249) för att identifiera och blockera skadlig nätverkstrafik.<br /><br />Rekommenderat värde: **Ja**|
 
   ![Realtidsinställningar för Endpoint Protection](./media/pol-sa-pc-policy-realtime.png)
 

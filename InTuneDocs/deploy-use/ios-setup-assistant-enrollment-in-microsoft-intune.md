@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 2a1a9bb4e49e997a6f152cadcf0c7a75b553cb42
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 5c57a069fc9d2ca561954f50cbefa21b13a563d1
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -58,7 +58,7 @@ Om ditt företag kräver mobila enhetsgrupper för att hantera enheter kan du v�
 
 En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter.
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
 
   ![Skapa profil för mobilenhetsregistrering](../media/pol-sa-corp-enroll.png)
 
@@ -85,7 +85,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Lägg till iOS-enheter som ska registreras med installationsassistenten
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter** &gt; **Alla enheter** och väljer **Lägg till enheter**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Grupper** &gt; **Alla enheter** &gt; **Alla företagsägda enheter** &gt; **Alla enheter** och väljer **Lägg till enheter**.
 
    Du kan lägga till enheter på två sätt:
 
@@ -128,7 +128,7 @@ Ange profilen som ska tilldelas till enheter som lagts till i listan över tillg
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Exportera en profil som ska distribueras till iOS-enheter
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsenhetsregistrering** och väljer den enhetsprofil som ska distribueras till mobilenheter.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsenhetsregistrering** och väljer den enhetsprofil som ska distribueras till mobilenheter.
 
 2. Välj **Exportera** i Aktivitetsfältet. Kopiera och spara **Profil-URL**. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
 

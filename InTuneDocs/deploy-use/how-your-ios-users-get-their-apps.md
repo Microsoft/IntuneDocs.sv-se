@@ -15,9 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: dbc5f1b106df17aa8875997330dbfbb04a81f82f
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 02e54d4ae2ffa860fb95725c74fdff913e88365b
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -41,13 +41,13 @@ Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade a
 
 Registrerade användare får sina appar genom att trycka på följande paneler på skärmen Appar i företagsportalappen:
 
-- **Alla appar** pekar på en lista över alla appar på fliken ALLA på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+- **Alla appar** pekar på en lista över alla appar på fliken ALLA på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 
 - **Aktuella appar** omdirigerar användarna till fliken AKTUELLA på företagsportalens webbplats.
 
 - **Kategorier** pekar på fliken KATEGORIER på företagsportalens webbplats.
 
- 
+
 ![Skärmen Appar på företagsportalen för iOS](./media/ios-cp-app-main-apps-screen.png)
 
 Information om hur du lägger till appar och placerar dem på dessa paneler finns i [Lägga till appar för registrerade enheter i Intune](https://docs.microsoft.com/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md).
