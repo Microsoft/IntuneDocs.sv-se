@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: dd53e547a8f834eff528e79cf2506be1e6c2dc2a
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: fddd4963ceea09b37ad4d8c739f437dbcf3b053e
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -44,8 +44,11 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **macOS**
 6. I listrutan **Profiltyp** väljer du **Enhetsfunktioner**. 
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-    - [Inställningar för iOS](device-features-for-ios.md)
-    - [Inställningar för macOS](device-features-for-macos.md)
+    - [AirPrint-inställningar för iOS och MacOS](air-print-settings-for-ios-and-macos.md)
+     - [AirPlay-inställningar för iOS](airplay-settings-for-ios-devices.md)
+    - [Layoutinställningar för iOS-startskärm](home-screen-settings-for-ios.md)
+    - [Appaviseringsinställningar för iOS](app-notification-settings-for-ios.md)
+    - [Konfigurationsinställningar för delade enheter för iOS](shared-device-settings-for-ios.md)
 
 8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
 
