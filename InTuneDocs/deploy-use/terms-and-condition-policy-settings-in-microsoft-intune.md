@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: a6d5f19b1d5f5bac3cd5e6d8bc445d765d703de0
-ms.lasthandoff: 12/10/2016
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 177485a0b09a2b0213a293914799a34a3bfa1136
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -32,7 +32,7 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
 ## <a name="create-a-terms-and-conditions-policy"></a>Skapa princip för allmänna villkor
 
-1.  I [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
+1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) klickar du på **Policy** &gt; **Villkor**.
 
     ![Skärmbild av princip för allmänna villkor](./media/pol-sa-terms-conditions.png)
 
@@ -54,7 +54,7 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
 ## <a name="deploy-a-terms-and-conditions-policy"></a>Distribuera en princip för allmänna villkor
 
-1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  I listan **Principer för allmänna villkor** väljer du den princip du vill distribuera och klickar på **Hantera distribution**.
 
@@ -64,7 +64,7 @@ Du kan skapa och distribuera flera policys med olika användarvillkor. Du kan oc
 
 ## <a name="monitor-a-terms-and-conditions-policy"></a>Övervaka en princip för allmänna villkor
 
-1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  I fönstret **Skapa ny rapport** klickar du sedan på **Visa rapport**. Rapporten öppnas med detaljer om vilka användare som godkänt de distribuerade användarvillkoren.
 
@@ -73,7 +73,7 @@ När du redigerar en befintlig policy för användarvillkor kan du välja vad so
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Arbeta med flera versioner av användarvillkor
 
-1.  I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) klickar du på **Princip** &gt; **Villkor**.
 
 2.  Välj den princip för allmänna villkor som du vill redigera och klicka på **Redigera**.
 

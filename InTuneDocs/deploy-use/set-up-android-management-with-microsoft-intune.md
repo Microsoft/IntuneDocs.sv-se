@@ -15,9 +15,9 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 86fd9d7212277f9524eb4d7f225df2c7beda1313
-ms.openlocfilehash: a5a4f11ae341480b2e674ca55a514b62831bdd60
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 4042a22ecfbab7970ea4b3dab8ee6a82b0da5f78
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/21/2017
 
 Som Intune-administratör kan du aktivera hanteringen av Android-enheter, inklusive Samsung Knox Standard-enheter, från företagsportalen. Användarna kan sedan registrera sina enheter med hjälp av företagsportalappen som finns på Google Play.
 
-Som standard tillåts Android-enheter registreras i Intune. Om du vill blockera Android-enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](http://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera kryssrutan	**Tillåt Android-enheter**.
+Som standard tillåts Android-enheter registreras i Intune. Om du vill blockera Android-enheter från registrering loggar du in på [administrationsportalen för Microsoft Intune](https://manage.microsoft.com) med dina autentiseringsuppgifter som administratör. Välj **Admin** > **Hantering av mobila enheter** > **Registreringsregler** och avmarkera kryssrutan	**Tillåt Android-enheter**.
 
 1.  **Konfigurera Intune**<br>
     Om du inte redan gjort det förbereder du hanteringen av mobila enheter genom att definiera **Microsoft Intune** som [utfärdare av mobilenhetshantering](prerequisites-for-enrollment.md#step-2-set-mdm-authority) och genom att konfigurera MDM.
