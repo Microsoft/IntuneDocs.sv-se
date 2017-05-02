@@ -16,16 +16,16 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 7edbba3a86213db71e41bd0d0de6c5d285025b8b
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: b0d0ad102942c65ac3988ea4659b34b397289126
+ms.lasthandoff: 04/19/2017
 
 ---
 
 # <a name="set-up-a-telecom-expense-management-service-in-intune-azure-preview"></a>Konfigurera en tjänst för kostnadsuppföljning av telekommunikation i förhandsversionen av Intune Azure
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos lösning för kostnadsuppföljning av telekommunikation, Datalert. Datalert är ett program för kostnadsuppföljning av telekommunikation i realtid, som hjälper dig att hantera dataanvändningen och undvika kostsam och oväntad överförbrukning av data och roaming på Intune-hanterade enheter. 
+Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos lösning för kostnadsuppföljning av telekommunikation, Datalert. Datalert är ett program för kostnadsuppföljning av telekommunikation i realtid, som hjälper dig att hantera dataanvändningen och undvika kostsam och oväntad överförbrukning av data och roaming på Intune-hanterade enheter.
 
 Med Intunes Datalert-integrering kan du centralt konfigurera, övervaka och upprätthålla begränsningar för roaming och inrikes dataanvändning genom att definiera automatiska varningar när fastställda tröskelvärden överskrids. Du kan konfigurera tjänsten så att olika åtgärder tillämpas på enskilda individer eller grupper med slutanvändare, t.ex. inaktivering av roaming, när tröskelvärdet överskrids. Rapporter med information om övervakning och dataanvändning är tillgängliga från Datalerts hanteringskonsol.
 
@@ -85,7 +85,7 @@ När du har slutfört steg 1 ovan bör anslutningen aktiveras automatiskt, och a
 
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 
-4. På bladet **Enhetskonfigurationen** väljer du **Konfiguration** > **Kostnadsuppföljning av telekommunikation**. 
+4. På bladet **Enhetskonfigurationen** väljer du **Konfiguration** > **Kostnadsuppföljning av telekommunikation**.
 
    Anslutningsstatusen **Aktiv** bör visas längst upp på sidan.
 
@@ -97,7 +97,7 @@ För att säkerställa att dataanvändning endast samlas in från företagsägda
 
 #### <a name="define-device-categories-and-device-groups-mapped-to-the-categories"></a>Definiera enhetskategorier och enhetsgrupper som hör till olika kategorier
 
-Beroende på organisationens behov måste du skapa minst två enhetskategorier (till exempel Företag och Personliga) och skapa dynamiska enhetsgrupper för varje kategori. Du kan skapa fler kategorier för din organisation om det behövs. 
+Beroende på organisationens behov måste du skapa minst två enhetskategorier (till exempel Företag och Personliga) och skapa dynamiska enhetsgrupper för varje kategori. Du kan skapa fler kategorier för din organisation om det behövs.
 
 Dessa kategorier visas för användarna under registreringen. Beroende på vilken kategori användarna väljer flyttas den registrerade enheten till motsvarande enhetsgrupp. Steg som beskriver hur du skapar enhetskategorier finns i [Mappa enheter till grupper](https://docs.microsoft.com/intune-azure/enroll-devices/how-to-use-device-group-mapping).
 
@@ -109,7 +109,7 @@ Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iO
 
 1. På bladet **Intune** på Azure-portalen väljer du **Hantera appar**.
 
-2. På bladet **Hantera appar** väljer du **Hantera** > **Appar**. 
+2. På bladet **Hantera appar** väljer du **Hantera** > **Appar**.
 
 3. Välj **Lägg till** för att lägga till en app.
 
@@ -129,7 +129,7 @@ Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iO
 
 1. Välj Datalert-appen för iOS som du skapade i föregående steg.
 
-2. På bladet **Appar** går du till **Hantera** > **Tilldelningar**. 
+2. På bladet **Appar** går du till **Hantera** > **Tilldelningar**.
 
 3. Välj **Välj grupper** och följ anvisningarna för att välja gruppen med företagsenheter.
 
@@ -137,9 +137,9 @@ Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iO
 
   ![Skärmbild av bladet Lägg till en princip](../media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Steg 4: Lägga till företagsägda telefonlinjer i Datalert-konsolen 
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Steg 4: Lägga till företagsägda telefonlinjer i Datalert-konsolen
 
-Du har konfigurerat Intune- och Datalert-tjänsterna så att de kommunicerar med varandra. Nu måste du lägga till företagets telefonlinjer i Datalert-konsolen och definiera tröskelvärden och åtgärder för överträdelser av roaming- eller mobiltelefonanvändning. 
+Du har konfigurerat Intune- och Datalert-tjänsterna så att de kommunicerar med varandra. Nu måste du lägga till företagets telefonlinjer i Datalert-konsolen och definiera tröskelvärden och åtgärder för överträdelser av roaming- eller mobiltelefonanvändning. Du kan antingen lägga till företagets betalda telefonlinjer till Datalert-konsolen manuellt, eller låta dem läggas till automatiskt när enheten registreras i Intune.
 
 Du konfigurerar dessa objekt genom att gå till sidan för [Datalert-konfiguration för Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (http://www.datalert.fr/microsoft-intune/intune-setup). Följ sedan anvisningarna i installationsguiden på fliken **Inställningar**.
 
@@ -147,6 +147,11 @@ Du konfigurerar dessa objekt genom att gå till sidan för [Datalert-konfigurati
 
 
 Nu är Datalert-tjänsten aktiv och övervakar dataanvändningen och inaktiverar roaming- och mobildata på enheter som överskrider de konfigurerade användningsbegränsningarna.
+
+## <a name="client-enrollment-experience"></a>Klientregistrering
+Läs följande om registrering av klienten:
+-    [Registrera iOS-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+-    [Registrera Android-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turning-off-the-datalert-service"></a>Stänga av Datalert
 

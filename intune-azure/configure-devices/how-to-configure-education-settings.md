@@ -1,12 +1,12 @@
 ---
-title: "Konfigurera inställningar för Intune-utbildning"
+title: "Konfigurera inställningar för Intune-utbildning för Windows 10"
 titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du använder Intune för att konfigurera utbildningsinställningar för de enheter som du hanterar."
+description: "Förhandsversion av Intune Azure: Läs om hur du använder Intune för att konfigurera Windows 10-utbildningsinställningar för de enheter som du hanterar."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 5c73719c4fd2805f91c6af3ba48c39f5d798aaeb
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: d3fdf8884a0b7c035cde89da930ef74172b76873
+ms.lasthandoff: 04/19/2017
 
 
 ---
 
-# <a name="how-to-configure-education-settings-in-microsoft-intune"></a>Så här konfigurerar du utbildningsinställningar i Microsoft Intune
+# <a name="how-to-configure-windows-10-education-settings-in-microsoft-intune"></a>Så här konfigurerar du utbildningsinställningar för Windows 10 i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 

@@ -1,12 +1,12 @@
 ---
-title: "Konfigurera certifikatinfrastruktur för SCEP"
+title: Konfigurera och hantera SCEP-certifikat med Intune
 titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du kan konfigurera din infrastruktur innan du skapar och distribuerar Intune SCEP-certifikatprofiler."
+description: "Förhandsversion av Intune Azure: Läs om hur du kan konfigurera din infrastruktur. Skapa och tilldela sedan Intune SCEP-certifikatprofiler."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,27 +16,28 @@ ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: ea910594195313978d6defae529a526bc0310022
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: 6838993b5b19bc1e23c9efe0911a01a2c66c6886
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="configure-certificate-infrastructure-for-scep-in-microsoft-intune"></a>Konfigurera certifikatinfrastrukturen för SCEP i Microsoft Intune
+# <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna skapa och distribuera SCEP-certifikatprofiler.
+I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan skapa och tilldela SCEP-certifikatprofiler (Simple Certificate Enrollment Protocol) med Intune.
 
-### <a name="on-premises-infrastructure"></a>Lokal infrastruktur
+## <a name="configure-on-premises-infrastructure"></a>Konfigurera den lokala infrastrukturen
 
 -    **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
 
--  **Certifikatutfärdare** (CA): En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
+-  **Certifikatutfärdare** (CA): En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Mer information finns i [Installera certifikatutfärdare](http://technet.microsoft.com/library/jj125375.aspx).
     Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 
--  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter. NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/en-us/library/dn473016.aspx).
+-  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter.
+NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
--  **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramsproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
+-  **Microsoft Intune Certificate Connector**: Använd Intune-portalen för att hämta installationsprogrammet för **Certificate Connector** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
+-  **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som en Web Application Proxy-server (WAP). Den här konfigurationen:
     -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
     -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
 
@@ -51,49 +52,49 @@ Tillåt port 443 från Internet till perimeternätverk från alla värdar/IP-adr
 
 Tillåt alla portar och protokoll som behövs för åtkomst till domänen på den domänanslutna NDES-servern från perimeternätverket till det betrodda nätverket. NDES-servern måste ha åtkomst till certifikatservrar, DNS-servrar, Configuration Manager-servrar och domänkontrollanter.
 
-Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/en-us/library/dn584107.aspx) eller en proxy från en annan leverantör.
+Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel [Azure AD-programproxy](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/), [Web Access-proxy](https://technet.microsoft.com/library/dn584107.aspx) eller en proxy från en annan leverantör.
 
 
-### <a name="BKMK_CertsAndTemplates"></a>Certifikat och mallar
+### <a name="certificates-and-templates"></a>Certifikat och mallar
 
 |Objekt|Information|
 |----------|-----------|
-|**Certifikatmall**|Du konfigurerar den här mallen på den utfärdande certifikatutfärdaren.|
-|**Certifikat för klientautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från offentlig certifikatutfärdare, du installerar certifikatet på NDES-servern.|
-|**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från offentlig certifikatutfärdare, du installerar och binder SSL-certifikatet i IIS på NDES-servern.|
-|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren och distribuerar den till enheterna med hjälp av certifikatprofilen för den betrodda certifikatutfärdaren.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
+|**Certifikatmall**|Konfigurera den här mallen hos den utfärdande certifikatutfärdaren.|
+|**Certifikat för klientautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar certifikatet på NDES-servern.|
+|**Certifikat för serverautentisering**|Begärs från den utfärdande certifikatutfärdaren eller från en offentlig certifikatutfärdare. Du installerar och binder SSL-certifikatet i IIS på NDES-servern.|
+|**Certifikat från betrodd rotcertifikatutfärdare**|Du exporterar detta som en **.cer**-fil från rotcertifikatutfärdaren eller en enhet som litar på rotcertifikatutfärdaren. Tilldela det till enheterna med hjälp av certifikatprofilen för den betrodda certifikatutfärdaren.<br /><br />Du använder ett enstaka certifikat från en betrodd rotcertifikatutfärdare per operativsystemplattform och associerar det med varje betrodd rotcertifikatprofil som du skapar.<br /><br />Du kan använda ytterligare certifikat från betrodda rotcertifikatutfärdare när det behövs. Exempel: du kan göra detta för att ge ett förtroende till en certifikatutfärdare som signerar serverautentiseringscertifikaten för dina WiFi-åtkomstpunkter.|
 
-### <a name="BKMK_Accounts"></a>Konton
+### <a name="accounts"></a>Konton
 
 |Namn|Information|
 |--------|-----------|
-|**NDES-tjänstkonto**|Du anger ett domänanvändarkonto som används som NDES-tjänstkontot|
+|**NDES-tjänstkonto**|Ange ett domänanvändarkonto som ska användas som NDES-tjänstkonto.|
 
-## <a name="BKMK_ConfigureInfrastructure"></a>Konfigurera infrastrukturen
+## <a name="configure-your-infrastructure"></a>Konfigurera infrastrukturen
 Innan du kan konfigurera certifikatprofiler måste du utföra följande åtgärder, som kräver kunskaper om Windows Server 2012 R2 och Active Directory-certifikattjänster (ADCS):
 
-**Uppgift 1**: Skapa ett NDES-tjänstkonto
+**Steg 1** – Skapa ett NDES-tjänstkonto
 
-**Uppgift 2**: Konfigurera certifikatmallar på certifikatutfärdaren
+**Steg 2** – Konfigurera certifikatmallar hos certifikatutfärdaren
 
-**Uppgift 3**: Konfigurera förhandskrav på NDES-servern
+**Steg 3** – Konfigurera krav på NDES-servern
 
-**Uppgift 4**: Konfigurera NDES för användning med Intune
+**Steg 4** – Konfigurera NDES för användning med Intune
 
-**Uppgift 5**: Aktivera, installera och konfigurera Intune Certificate Connector
+**Steg 5** – Aktivera, installera och konfigurera Intune Certificate Connector
 
-### <a name="task-1---create-an-ndes-service-account"></a>Uppgift 1 – Skapa ett NDES-tjänstkonto
+#### <a name="step-1---create-an-ndes-service-account"></a>Steg 1 – Skapa ett NDES-tjänstkonto
 
 Skapa domänanvändarkonto som används som NDES-tjänstkontot Du anger det här kontot när du konfigurerar mallar på den utfärdande certifikatutfärdaren innan du installerar och konfigurerar NDES. Kontrollera att användaren har behörigheten standard **Inloggning lokalt**, **Inloggning som tjänst** och **Inloggning som batchjobb**. En del organisationer har härdningsprinciper som inaktiverar dessa rättigheter.
 
-### <a name="task-2---configure-certificate-templates-on-the-certification-authority"></a>Uppgift 2 – Konfigurera certifikatmallar för certifikatutfärdaren
+#### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Steg 2 – Konfigurera certifikatmallar hos certifikatutfärdaren
 I det här steget kommer du att:
 
 -   Konfigurera en certifikatmall för NDES
 
 -   Publicera certifikatmallen för NDES
 
-#### <a name="to-configure-the-certification-authority"></a>Så här konfigurerar du certifikatutfärdaren
+##### <a name="to-configure-the-certification-authority"></a>Så här konfigurerar du certifikatutfärdaren
 
 1.  Logga in som företagsadministratör.
 
@@ -133,24 +134,22 @@ Här följer skärmdumpar av en exempelkonfiguration av mallen.
 ![Mall, fliken för utfärdandekrav](.\media\scep_ndes_issuance_reqs.jpg)
 
 >   [!IMPORTANT]
-    > För Användningsprinciper (på den fjärde skärmbilden) lägger du endast till de användningsprinciper som krävs. Bekräfta dina val med säkerhetsadministratörerna.
+    > I Användningsprinciper lägger du endast till de användningsprinciper som krävs. Bekräfta dina val med säkerhetsadministratörerna.
 
 
 
-Om du vill konfigurera certifikatutfärdaren att tillåta att den som begär anger giltighetsperioden, kör du följande kommandon på certifikatutfärdaren:
+Så här konfigurerar du att certifikatutfärdaren tillåter att beställaren anger giltighetsperioden:
 
-   1.  **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   2.  **net stop certsvc**
-   3.  **net start certsvc**
-
-4.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatutfärdaren för att publicera certifikatmallen.
-
-    1.  Välj noden **Certifikatmallar**, klicka på **Åtgärd** -&gt;**Ny** &gt; **Certifikatmall som ska utfärdas** och välj sedan den mall som du skapade i steg 2.
-
-    2.  Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
+1. Kör följande kommandon hos certifikatutfärdaren:
+    - **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
+    - **net stop certsvc**
+    - **net start certsvc**
+2. På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatutfärdaren för att publicera certifikatmallen.
+    Välj noden **Certifikatmallar**, klicka på **Åtgärd** -&gt;**Ny** &gt; **Certifikatmall som ska utfärdas** och välj sedan den mall som du skapade i steg 2.
+3. Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
 
-### <a name="task-3---configure-prerequisites-on-the-ndes-server"></a>Uppgift 3 – Konfigurera förhandskrav på NDES-servern
+#### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Steg 3 – Konfigurera krav på NDES-servern
 I det här steget kommer du att:
 
 -   Lägga till NDES till en Windows Server och konfigurera IIS för att stöda NDES
@@ -191,7 +190,7 @@ I det här steget kommer du att:
 
 `**setspn –s http/Server01.contoso.com contoso\NDESService**`
 
-### <a name="task-4---configure-ndes-for-use-with-intune"></a>Uppgift 4 – Konfigurera NDES för användning med Intune
+#### <a name="step-4---configure-ndes-for-use-with-intune"></a>Steg 4 – Konfigurera NDES för användning med Intune
 I det här steget kommer du att:
 
 -   Konfigurera NDES för användning med den utfärdande certifikatutfärdaren
@@ -200,7 +199,6 @@ I det här steget kommer du att:
 
 -   Konfigurera begäransfiltrering i IIS
 
-##### <a name="to-configure-ndes-for-use-with-intune"></a>Konfigurera NDES för användning med Intune
 
 1.  Öppna guiden AD CS-konfiguration och gör följande konfigurationer på NDES-servern.
 
@@ -273,7 +271,7 @@ I det här steget kommer du att:
 
     **Ämnesnamn** – Måste vara samma som DNS-namnet på servern där du installerar certifikatet (NDES-servern).
 
-##### <a name="to-configure-iis-request-filtering"></a>Så här konfigurerar du IIS-begäransfiltrering
+##### <a name="to-configure-iis-request-filtering"></a>Så här konfigurerar du IIS-begärandefiltrering
 
 1.  På NDES-servern: öppna **IIS-hanteraren**, välj **Standardwebbplats** i rutan **Anslutningar** och öppna **Begäransfiltrering**.
 
@@ -295,14 +293,14 @@ I det här steget kommer du att:
 
 4.  Starta om NDES-servern. Servern är nu klar att stödja Certifikat Connectorn.
 
-### <a name="task-5---enable-install-and-configure-the-intune-certificate-connector"></a>Uppgift 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
+#### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Steg 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
 I det här steget kommer du att:
 
 Aktivera stöd för NDES i Intune.
 
 Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 
-##### <a name="to-enable-support-for-the-certificate-connector"></a>Så här aktiverar du stöd för Certifikat Connectorn
+##### <a name="to-enable-support-for-the-certificate-connector"></a>Så här aktiverar du stöd för certifikatanslutningsappen
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
@@ -310,7 +308,7 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 4. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
 5.  Välj **Aktivera certifikatanslutningsapp**.
 
-##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här laddar du ner, installerar och konfigurerar Certifikat Connectorn
+##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här hämtar, installerar och konfigurerar du certifikatanslutningsappen
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
@@ -349,6 +347,61 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 **http:// &lt;FQDN_of_your_NDES_server&gt;/certsrv/mscep/mscep.dll**
 
-## <a name="next-steps"></a>Nästa steg
-Du är nu redo att konfigurera certifikatprofiler enligt beskrivningen i [Konfigurera certifikatprofiler](how-to-configure-certificates.md).
+## <a name="how-to-create-a-scep-certificate-profile"></a>Så här skapar du en SCEP-certifikatprofil
+
+1. I Azure-portalen väljer du arbetsbelastningen **Konfigurera enheter**.
+2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
+3. Välj **Skapa profil** på profilbladet.
+4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för SCEP-certifikatprofilen.
+5. Från listrutan **Plattform** väljer du enhetsplattformen för detta SCEP-certifikat. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
+    - **Android**
+    - **iOS**
+    - **macOS**
+    - **Windows Phone 8.1**
+    - **Windows 8.1 och senare**
+    - **Windows 10 och senare**
+6. Från listrutan **Profil** väljer du **SCEP-certifikat**.
+7. På bladet **SCEP-certifikat**, konfigurerar du följande inställningar:
+    - **Certifikatets giltighetsperiod** – Om du har kört kommandot **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE** på certifikatutfärdaren, vilket gör att en anpassad giltighetsperiod kan användas, kan du ange hur lång tid som återstår innan certifikatet går ut.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i den angivna certifikatmallen. Om giltighetsperioden i certifikatmallen är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 
+    - **Nyckellagringsprovider (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) – Ange var nyckeln till certifikatet ska lagras. Välj något av följande värden:
+        - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module) om TPM finns, annars till programvaruprovider för nyckellagring**
+        - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module), rapportera annars fel**
+        - **Registrera på Passport, rapportera annars fel (Windows 10 och senare)**
+        - **Registrera till programvaruprovider för nyckellagring**
+    - **Format för namn på certifikatmottagare** – Välj i listan hur mottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om certifikatet avser en användare kan du ange användarens e-postadress i mottagarnamnet. Välj mellan:
+        - **Inte konfigurerat**
+        - **Allmänt namn**
+        - **Eget namn, inklusive e-post**
+        - **Eget namn som e-post**
+    - **Alternativt namn för certifikatmottagare** – Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet ska användas för att autentisera mot en nätverksprincipserver måste du ange användarens huvudnamn som alternativt mottagarnamn. 
+    - **Nyckelanvändning** – Ange alternativ för nyckelanvändning för certifikatet. Du kan välja bland följande alternativ: 
+        - **Nyckelchiffrering:** Tillåt bara nyckelutbyte när nyckeln är krypterad. 
+        - **Digital signatur:** Tillåt bara nyckelutbyte när en digital signatur skyddar nyckeln. 
+    - **Nyckelstorlek (bitar)** – Välj antalet bitar som ska finnas i nyckeln. 
+    - **Hash-algoritm** (Android, Windows Phone 8.1, Windows 8.1, Windows 10) – Välj en av de tillgängliga typerna av hash-algoritmer som ska användas med det här certifikatet. Välj den högsta säkerhetsnivå som de anslutande enheterna har stöd för. 
+    - **Rotcertifikat** – Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som kommer att utfärda det certifikat som du konfigurerar i den här certifikatprofilen. 
+    - **Utökad nyckelanvändning** – Välj **Lägg till** om du vill lägga till värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov. 
+    - **Registreringsinställningar**
+        - **Tröskelvärde för förnyelse (%)** – Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
+        - **Webbadresser för SCEP-server** – Ange en eller flera webbadresser för NDES-servrar som ska utfärda certifikat via SCEP. 
+8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+
+Profilen skapas och visas på bladet med profillistan.
+
+>[!Note]
+> Endast för iOS-enheter: Välj Anpassad under Format för namn på certifikatmottagare om du vill ange ett eget format för namn på certifikatmottagare.
+> De två variabler som stöds för närvarande för det anpassade formatet är **Nätverksnamn (cn)** och **E-post (e)**. Genom att använda en kombination av dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare som det här: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US** I det här exemplet har du skapat ett format för namn som, utöver CN- och E-variabler, använder strängar för värden för organisationsenhet, organisation, plats, stat och land. [Det här avsnittet](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visar funktionen **CertStrToName** och dess strängar som stöds.
+
+## <a name="how-to-assign-the-certificate-profile"></a>Så här tilldelar du certifikatprofilen
+
+Tänk på följande innan du tilldelar certifikatprofiler till grupper:
+
+- När du tilldelar certifikatprofiler till grupper installeras certifikatfilen från certifikatprofilen för betrodd certifikatutfärdare på enheten. Enheten använder SCEP-certifikatprofilen för att skapa en certifikatbegäran från enheten.
+- Certifikatprofiler installeras endast på enheter som kör den plattform som du använder när du skapade profilen.
+- Du kan tilldela certifikatprofiler till användarsamlingar eller enhetssamlingar.
+- Om du vill publicera certifikat till enheter kort efter att enheten registrerats, tilldelar du certifikatprofilen till en användargrupp i stället för en enhetsgrupp. Om du tilldelar till en enhetsgrupp krävs en fullständig enhetsregistrering innan enheten kan ta emot principer.
+- Även om du tilldelar varje profil separat, måste du också tilldela den betrodda rotcertifikatutfärdaren och SCEP- eller PKCS-profilen. Annars misslyckas SCEP- eller PKCS-certifikatprincipen.
+
+Du hittar allmän information om hur du tilldelar profiler i [Så här tilldelar du enhetsprofiler](how-to-assign-device-profiles.md).
+
 

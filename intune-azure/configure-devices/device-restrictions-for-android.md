@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/29/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
-ms.openlocfilehash: 009c6491b8ce457a371f5db31de3f122fa41fb95
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 3ba986b624e602f05eb6ab25ec30e9d58173dbd8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -42,6 +42,7 @@ ms.lasthandoff: 03/30/2017
 |**Skärmdump**|Låter användaren fånga skärminnehållet som en bild.|Nej|Ja|
 |**Röstassistent**|Tillåter att röstassistentprogramvaran används på enheten.|Nej|Ja|
 |**YouTube**|Tillåter att YouTube-appen används på enheten.|Nej|Ja|
+|**Delade enheter**|Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget kan användarna logga in och ut från enheten med sina Azure AD-autentiseringsuppgifter, enheten hanteras centralt oavsett om den används eller inte.<br>När användarna loggar in får de tillgång till appar och dessutom verkställs eventuella principer som gäller för dem. Alla appdata rensas när användaren loggar ut.|Nej|Ja|
 
 ## <a name="password"></a>Lösenord
 
@@ -53,11 +54,18 @@ ms.lasthandoff: 03/30/2017
 |**Maximalt antal minuter av inaktivitet innan skärmen låses**|Anger antalet minuter av inaktivitet innan enheten låses automatiskt.|Ja|Ja|
 |**Antal felaktiga inloggningar innan enheten rensas**|Anger antalet tillåtna felinloggningar innan enheten rensas.|Ja|Ja|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|Ja|Ja|
-|**Lösenordstyp krävs**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.|Ja|Ja|
+|**Lösenordstyp krävs**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas. Välj mellan:<br><br>    -     **Standard för enheten**<br>-     **Låg säkerhetsbiometri**<br>    -     **Minst numeriskt**<br>    -     **Numeriskt avancerat komplexa** – (upprepande eller efterföljande siffror som ”1111” eller ”1234” tillåts inte)<sup>1</sup><br>    -     **Minst alfabetiskt**<br>    -     **Minst alfanumeriskt**<br>    -     **Minst alfanumeriskt med symboler**|Ja|Ja|
 |**Förhindra återanvändning av tidigare lösenord**|Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.|Ja|Ja|
 |**Upplåsning med fingeravtryck**|Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.|Nej|Ja|
 |**Smart Lock och andra betrodda agenter**|Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja (5.0 och senare)|Nej|
 |**Kryptering**|Kräver att filer på enheten krypteras.|Ja|Ja|
+
+<sup>1</sup>Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
+
+Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar den till en enhet som kör en tidigare version av Android än 5.0, gäller följande.
+- Om företagsportalappen kör en version före 1704, kommer ingen PIN-kod-princip att tillämpas på enheten och ett fel visas i Intune-portalen.
+- Om företagsportalappen har uppdaterats till 1704-versionen, tillämpas endast en enkel PIN-kod. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Intune-portalen.
+
 
 ## <a name="google-play-store"></a>Google Play Store
 

@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: ae5cf453d578dd7df4ce0590b14e97468c893093
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 7d0821ee6941e9e6f05e2da59cf1c0ddd25a9501
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -35,6 +35,6 @@ Du kan övervaka tilldelningsförloppet för enhetsprofiler i Intune på två s�
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 2. Från bladet med lista över profiler väljer du den profil som du vill hantera och gör sedan något av följande:
-    - På bladet <*profilnamn*> **Rapporter** väljer du **Översikt** för att visa grundläggande information om profilen och dess tilldelningar.
+    - På bladet <*profilnamn*> **Rapporter** väljer du **Översikt** för att se grundläggande information om profilen och dess tilldelningar.
     - På bladet <*profilnamn*> **Rapporter** väljer du **Rapporter** för att visa mer detaljerad information om profilen och dess tilldelningar.
 

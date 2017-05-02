@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/10/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e4a6aaa1a8e23dc2c58345f73ff8db86018843e1
-ms.openlocfilehash: fe12a6b890c2d5cba874e820afbe7671b754deb5
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: d85544bdfaa3a369e1d2d03e5454ff7aa2d75467
+ms.lasthandoff: 04/19/2017
 
 ---
 
@@ -28,20 +28,28 @@ ms.lasthandoff: 04/11/2017
 
 Innan du kan hantera och tilldela appar för dina användare, måste du lägga till dem i Intune. Intune stöder en stor variation av olika apptyper och alternativen kan vara olika för varje typ.
 
-Intune stöder tillägg och tilldelning av följande apptyper:
+I Intune kan du lägga till och tilldela följande apptyper:
 
 ![Apptyper som stöds av Intune](./media/app-types.png)
 
 Följande plattformar stöds. Klicka på ett av avsnitten för mer information om hur du lägger till varje apptyp.
 
 - [Android Store-appar](/intune-azure/manage-apps/android-store-app)
+- [Android LOB-appar](/intune-azure/manage-apps/android-lob-app)
 - [iOS Store-appar](/intune-azure/manage-apps/ios-store-app)
+- [iOS LOB-appar](/intune-azure/manage-apps/ios-lob-app)
 - [Webbappar (för alla plattformar)](/intune-azure/manage-apps/web-app)
 - [Windows Phone 8.1 Store-appar](/intune-azure/manage-apps/windows-phone-8-1-store-app)
 - [Windows Store-appar](/intune-azure/manage-apps/windows-store-app)
 
-> [!NOTE]
-> När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
+Dessutom kan vissa Microsoft-appar läggas till automatiskt av Intune när du konfigurerar din klient. Du hittar en lista över dessa senare i det här avsnittet.
+
+## <a name="before-you-start"></a>Innan du börjar
+
+Tänk på följande innan du börjar lägga till och tilldela appar.
+
+- När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
+- Vissa appar eller objekt som du distribuerar kan vara beroende av inbyggda iOS-appar. Om du till exempel distribuerar en bok från iOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
 
 ## <a name="cloud-storage-space"></a>Molnlagringsutrymme
 Alla appar som du skapar med installationstypen Programinstallation (till exempel en verksamhetsspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. 20 GB lagringsutrymme ingår i den fullständiga prenumerationen.
@@ -53,18 +61,48 @@ Krav för lagringsutrymme i molnet:
 -   Alla appinstallationsfiler måste finnas i samma mapp.
 -   Den maximala filstorleken för en fil som du överför är 2 GB.
 
-## <a name="how-to-create-and-edit-categories-for-apps"></a>Skapa och redigera kategorier för appar 
+## <a name="how-to-create-and-edit-categories-for-apps"></a>Skapa och redigera kategorier för appar
 
-Appkategorier kan användas för att sortera appar så att slutanvändarna lättare kan hitta dem i företagsportalen. Du kan tilldela en eller flera kategorier till en app, till exempel **Utvecklarprogram** eller **Kommunikationsappar**. När du lägger till en app i Intune ges möjlighet att välja den kategori som du önskar. Använd de plattformsspecifika avsnitten för att lägga till en app och tilldela kategorier. Använd följande procedur för att skapa och redigera dina egna kategorier: 
+Appkategorier kan användas för att sortera appar så att slutanvändarna lättare kan hitta dem i företagsportalen. Du kan tilldela en eller flera kategorier till en app, till exempel **Utvecklarprogram** eller **Kommunikationsappar**.
+När du lägger till en app i Intune ges möjlighet att välja den kategori som du önskar. Använd de plattformsspecifika avsnitten för att lägga till en app och tilldela kategorier. Använd följande procedur för att skapa och redigera dina egna kategorier:
 
-1. Logga in på Azure-portalen. 
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**. 
-3. Välj **Hantera appar** på **Intune**-bladet. 
-4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**. 
-5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder: 
+1. Logga in på Azure-portalen.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. Välj **Hantera appar** på **Intune**-bladet.
+4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**.
+5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder:
     - **Skapa en kategori** – Ange ett namn för den nya kategorin på bladet **Skapa kategori**. Namn kan bara anges på ett språk och översätts inte av Intune. Klicka på **Skapa** när du är klar.
-    - **Redigera en kategori** – För valfri kategori i listan, välj ”**...**”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
+    - **Redigera en kategori** – För valfri kategori i listan, välj ”**...** ”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
 
 
+## <a name="apps-added-automatically-by-intune"></a>Appar som läggs till automatiskt av Intune
 
+Följande appar, som publicerats av Microsoft, är inbyggda i Intune och klara att tilldela:
+
+|||
+|-|-|
+|Namn|Plattform|Typ av app|
+|Azure Information Protection|Android|Hanterad Google Play-app|
+|Dynamics CRM för telefoner|Android|Hanterad Google Play-app|
+|Dynamics CRM för surfplattor|Android|Hanterad Google Play-app|
+|Excel|iOS|Hanterad iOS Store-app|
+|Excel|Android|Hanterad Google Play-app|
+|Hanterad webbläsare|Android|Hanterad Google Play-app|
+|Hanterad webbläsare|iOS|Hanterad iOS Store-app|
+|Microsoft Dynamics CRM för telefoner|iOS|Hanterad iOS Store-app|
+|Microsoft Dynamics CRM för surfplattor|iOS|Hanterad iOS Store-app|
+|Microsoft Power BI|iOS|Hanterad iOS Store-app|
+|Microsoft Power BI|Android|Hanterad Google Play-app|
+|Microsoft SharePoint|iOS|Hanterad iOS Store-app|
+|Microsoft SharePoint|Android|Hanterad Google Play-app|
+|Microsoft Teams|Android|Hanterad Google Play-app|
+|Microsoft Teams|iOS|Hanterad iOS Store-app|
+|OneDrive|iOS|Hanterad iOS Store-app|
+|OneDrive|Android|Hanterad Google Play-app|
+|OneNote|iOS|Hanterad iOS Store-app|
+|Outlook|Android|Hanterad Google Play-app|
+|Outlook|iOS|Hanterad iOS Store-app|
+|Outlook Groups|Android|Hanterad Google Play-app|
+|Outlook Groups|iOS|Hanterad iOS Store-app|
+|PowerPoint|iOS|Hanterad iOS Store-app|
 

@@ -15,8 +15,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: b02a5247cec36b45679a76bf3d637cf8b5c031f4
+ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
+ms.openlocfilehash: de2f224f203257fe539196557180f0b5da5d8373
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -36,7 +37,7 @@ Lookout MTP tillåter endast att användare från en konfigurerad Azure AD-grupp
 
 * E-post: enterprisesupport@lookout.com
 * Logga in på [MTP Console](http://aad.lookout.com) (MTP-konsolen), och gå till **support**-modulen.
-* Gå till: https://enterprise.support.lookout.com/hc/en-us/requests och fyll i en supportförfrågan.
+* Gå till: https://enterprise.support.lookout.com/hc/requests och skapa en supportförfrågan.
 
 ## <a name="unable-to-sign-in"></a>Det går inte att logga in
 Du får följande fel när den globala Azure AD-administratöranvändaren inte har godkänt den inledande Lookout-installationen.
@@ -55,7 +56,7 @@ Detta kan inträffa i något av följande scenarier:
 
 ### <a name="device-reported-as-pending"></a>Enheten rapporteras som **väntar**
 
-En enhet visas som **väntar** om användaren inte har öppnat Lookout for Work-appen och tryckt på knappen **Aktivera**. Mer information om enhetsaktivering med Lookout for Work-appen finns i [Du uppmanas att installera Lookout for Work på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) eller [Du uppmanas att installera Lookout for Work på din iOS-enhet](https://docs.microsoft.com/en-us/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios)
+En enhet visas som **väntar** om användaren inte har öppnat Lookout for Work-appen och tryckt på knappen **Aktivera**. Mer information om enhetsaktivering med Lookout for Work-appen finns i [Du uppmanas att installera Lookout for Work på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android) eller [Du uppmanas att installera Lookout for Work på din iOS-enhet](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-ios)
 
 ## <a name="device-whos-active-but-has-no-device-id"></a>Enhet som är aktiv, men inte har något enhets-ID
 I Lookout MTP-konsolen finns inte enhetsanvändaren i registreringsgruppen om en aktiv enhet inte har ett enhets-ID. En enhet kan hamna i det här tillståndet om användaren tas bort från registreringsgruppen eller om registreringsgruppen har tagits bort.
@@ -83,14 +84,9 @@ Om den nya användaren finns i en av Lookout MTP-registreringsgrupperna kommer e
 ## <a name="compliance-remediation-workflows"></a>Arbetsflöden för reparation av efterlevnadsproblem
 - [Du uppmanas att installera Lookout for Work på din Android-enhet]( http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 - [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
-- [Du måste åtgärda ett hot som Lookout for Work har hittat på din iOS-enhet](https://docs.microsoft.com/en-us/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
+- [Du måste åtgärda ett hot som Lookout for Work har hittat på din iOS-enhet](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 
 
 ### <a name="see-also"></a>Se även
-[Konfigurera din prenumeration med Lookout MTP](https://docs.microsoft.com/en-us/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+[Konfigurera din prenumeration med Lookout MTP](https://docs.microsoft.com/intune/deploy-use/set-up-your-subscription-with-lookout-mtp)
 
