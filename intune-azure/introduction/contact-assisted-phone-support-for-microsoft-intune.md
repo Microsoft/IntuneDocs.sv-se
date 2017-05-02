@@ -85,7 +85,7 @@ ms.lasthandoff: 02/28/2017
 |Nya Zeeland|24 × 7|Måndag-fredag<br /><br />09:00 – 18:00 EDT (UTC +13)|Engelska|0800 194197|09 9127298|
 |Nigeria|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 WAT (UTC +1)|Engelska||+234 127 10 156<br /><br />Steg 1: Välj alternativ: 9<br /><br />Steg 2: Ange kod: 7705|
 |Norge|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Norska&#42;, engelska|80031068|22310748|
-|Oman|24 × 7|Söndag – torsdag<br /><br />09:00 – 17:00 GST (UTC +4)|Arabiska*, engelska|80073332<br /><br />Steg 1: Välj alternativ 1 för arabiska eller 2 för engelska<br /><br />Steg 2: Välj alternativ 9<br /><br />Steg 3. Ange kod: 7702||
+|Oman|24 × 7|Söndag – torsdag<br /><br />09:00 – 17:00 GST (UTC +4)|Arabiska, engelska|80073332<br /><br />Steg 1: Välj alternativ 1 för arabiska eller 2 för engelska<br /><br />Steg 2: Välj alternativ 9<br /><br />Steg 3. Ange kod: 7702||
 |Pakistan|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PKT (UTC +5)|Engelska|Endast online||
 |Panama|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 EST (UTC -5)|Spanska&#42;, engelska|00-800-051-0398<br /><br />Steg 1: Välj alternativ 4 (för särskild åtkomst)<br /><br />Steg 2: Ange kod: 7007||
 |Paraguay|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PYST (UTC -3)|Spanska&#42;, engelska|009-800-441-0088||
