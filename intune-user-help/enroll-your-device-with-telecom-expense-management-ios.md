@@ -1,11 +1,11 @@
 ---
 title: "Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster med Intune"
-description: 
+description: "Lär dig hur du registrerar en iOS-enhet i kostnadsuppföljningen av telekommunikation."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/03/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,14 +13,14 @@ ms.technology:
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
 - User help
-ROBOTS: NOINDEX,NOFOLLOW
+ROBOTS: 
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: a1968bedeba42758c36e7b9bb9cddfc26309ca71
-ms.openlocfilehash: 439adf2481eef00f22f809724c121dd58b5788d7
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: a71b8d1a100100e204eb7e90ba0ab00573ffc5c6
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -31,19 +31,36 @@ Din organisation kanske använder ett kostnadshanteringsprogram för telekomtjä
 
   ![En skärmbild av skärmen "Välja den bästa kategorin för en enhet" på en iOS-enhet. Den visar ett val mellan företagsregistrering och personlig registrering.](./media/ios-enroll-10-tem-select-best-category.png)
 
-1. Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://itunes.apple.com/us/app/datalert/id771029268?mt=8) från App Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Du måste ange information, till exempel ditt telefonnummer, och bekräfta med av en kod. .
+Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://itunes.apple.com/app/datalert/id771029268?mt=8) från App Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering i Microsoft, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
 
   ![En skärmbild på välkomstskärmen i programmet Datalert, där du uppmanas att fortsätta till nästa steg samt en kort förklaring om hur Datalert låter dig få ut det mesta av din dataförbrukning.](./media/ios-enroll-11-tem-datalert-setup.png)
 
-2. Ange enhetens telefonnummer.
+## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registrera till Datalert med ditt arbets- eller skolkonto hos Microsoft
+
+> [!NOTE]
+> Du måste ha appen [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) installerad och aktiv på din telefon för att kunna registrera på det här sättet.
+
+1. Välj __Registrera med Microsoft-konto__.
+
+  ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
+
+2. Du får ett meddelande om att __”Datalert” vill öppna ”Authenticator”__. Välj __Öppna__.
+
+  ![En bild av popup-frågan till användaren om att öppna autentiseringsappen på begäran av Datalert-appen.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
+
+3. Logga in med ditt __skol- eller arbetskonto i Microsoft__. Datalert-installationen körs en liten stund och bör sedan ha slutförts. Tryck på __Slutför__ när den är klar.
+
+## <a name="enroll-into-datalert-using-your-phone-number"></a>Registrera till Datalert med ditt telefonnummer
+
+1. Ange enhetens telefonnummer.
 
   ![En skärmbild på när programmet Datalert begär ett telefonnummer.](./media/ios-enroll-12-tem-datalert-phone-number.png)
 
-3. Du får sedan en verifieringskod via SMS. Ange koden och tryck på __OK__.
+2. Du får sedan en verifieringskod via SMS. Ange koden och tryck på __OK__.
 
   ![En skärmbild på när programmet verifieringskoden via SMS.](./media/ios-enroll-13-tem-datalert-sms.png)
 
-4. När du har angett verifieringskoden är installationen av Datalert färdig. När du har tryckt på __Slutför__ kan du övervaka dina data från Datalert.
+3. När du har angett verifieringskoden är installationen av Datalert färdig. När du har tryckt på __Slutför__ kan du övervaka dina data från Datalert.
 
   ![En skärmbild av Datalerts övervakning av dagens dataförbrukning.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
 

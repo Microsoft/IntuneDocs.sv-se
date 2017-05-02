@@ -15,8 +15,9 @@ ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ee3a0b80f7e534262fbcc8d897e069cff1e35727
-ms.openlocfilehash: a68ffc7be5bcaf55a789ab96035a3f23be0b8b3a
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: 991393e0caf64c44cc10c7775fba45083212659e
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -108,8 +109,8 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
   ![Välj internt och ad hoc-certifikat](../media/app-wrapper/iOS-signing-cert-3.png)
 
->[!NOTE]
->Om du inte planerar att distribuera appen och endast vill testa den internt kan du använda ett iOS-apputvecklingscertifikat i stället för ett certifikat för produktion. Om du använder ett utvecklingscertifikat kontrollerar du att den mobila etableringsprofilen hänvisar till de enheter där appen ska installeras.
+  >[!NOTE]
+  >Om du inte planerar att distribuera appen och endast vill testa den internt kan du använda ett iOS-apputvecklingscertifikat i stället för ett certifikat för produktion. Om du använder ett utvecklingscertifikat kontrollerar du att den mobila etableringsprofilen hänvisar till de enheter där appen ska installeras.
 
 7. Klicka på **Nästa** längst ner på sidan.
 
@@ -136,7 +137,6 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 14. Dubbelklicka på certifikatfilen som du precis laddade ned för att lägga till certifikatet i en nyckelring.
 
 15. Öppna **Nyckelhanteraren** igen. Leta upp certifikatet genom att söka efter dess namn i det övre högra sökfältet. Högerklicka på objektet för att visa menyn och klicka på **Hämta information**. På exempelbilderna använder vi ett utvecklingscertifikat i stället för ett produktionscertifikat.
-
 
   ![Lägg till certifikatet i en nyckelring](../media/app-wrapper/iOS-signing-cert-8.png)
 
@@ -205,7 +205,7 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**|Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget.|
-|**-v**|(Valfri) Returnerar utförliga meddelanden till konsolen.|
+|**-v**|(Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel.|
 |**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i Ställa in apprättigheter.|
 |**-xe**| (Valfri) Skriver ut information om iOS-tilläggen i appen och vilka rättigheter som krävs för att använda dem. Mer information finns i Ställa in apprättigheter. |
 |**-x**| (Valfritt) `<An array of paths to extension provisioning profiles>`. Använd det här alternativet om appen behöver tilläggsetableringsprofiler.|
@@ -399,9 +399,4 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md)</br>
 - [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
 - [Aktivera hantering av mobilprogram i appar med SDK](use-the-sdk-to-enable-apps-for-mobile-application-management.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

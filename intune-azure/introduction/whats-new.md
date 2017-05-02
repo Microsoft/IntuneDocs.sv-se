@@ -6,7 +6,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 04/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
-ms.openlocfilehash: 586bdab54ee60ba8d620857ab3506aa27622d17a
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
+ms.openlocfilehash: 9554a431859665312daf414f2c6cdfb47baf8547
+ms.lasthandoff: 04/20/2017
 
 ---
 
@@ -30,6 +30,127 @@ I takt med att den offentliga förhandsversionen utvecklas och fler funktioner l
 
 > [!Note]
 > Vi lansera ändringarna på den här sidan för Azure Portal Preview. Det kan dock vara så att ändringarna inte är tillgängliga direkt pga hur Intune-tjänsten uppdateras.  Flera av tjänstens komponenter måste uppdateras sekventiellt innan de nya portalfunktionerna blir tillgängliga. Sök efter dessa ändringar i takt med att de lanseras senare under månaden.
+
+## <a name="april-2017"></a>April 2017
+
+### <a name="support-for-managed-configuration-options-for-android-apps----621621---"></a>Stöd för hanterade konfigurationsalternativ för Android-appar <!-- 621621 -->
+
+Android-appar i Play Store som har stöd för hanterade konfigurationsalternativ kan nu konfigureras av Intune.  Med hjälp av den här funktionen kan IT-personal visa listan över konfigurationsvärden som stöds av en app, vilket ger ett tydligt gränssnitt som gör det möjligt att konfigurera dessa värden.
+
+### <a name="new-android-policy-for-complex-pins----722069---"></a>Ny Android-princip för komplexa PIN-koder <!-- 722069 -->
+
+Du kan ange den obligatoriska [lösenords](/intune-azure/configure-devices/device-restrictions-for-android#password)typen Numeriskt avancerat i en Android-enhetsprofil för enheter som kör Android 5.0 och senare.  Använd den här inställningen för att hindra att enhetsanvändare skapar en PIN-kod som innehåller upprepande eller efterföljande siffror, t.ex. 1111 eller 1234.
+
+### <a name="additional-support-for-android-for-work-devices"></a>Ytterligare stöd för Android for Work-enheter
+
+- **Hantera inställningar för lösenord och arbetsprofil** <!-- 612808 -->
+
+  Med den här nya enhetsbegränsningsprincipen för Android for Work kan du nu hantera inställningar för lösenord och arbetsprofil på de Android for Work-enheter som du hanterar.
+
+- **Tillåt datadelning mellan arbetsprofiler och personliga profiler** <!-- 1045102 -->
+
+Den här enhetsbegränsningsprofilen för Android for Work har nu nya alternativ som hjälper dig att konfigurera datadelning mellan arbetsprofiler och personliga profiler.
+
+- **Begränsa kopiera och klistra in mellan arbetsprofiler och personliga profiler** <!-- 1046094 -->
+
+  En ny anpassad enhetsprofil för Android for Work-enheter gör det nu möjligt att begränsa om åtgärderna för att kopiera och klistra in mellan arbetsappar och personliga appar ska vara tillåtna.
+
+Mer information finns i [Enhetsbegränsningar för Android for Work](/intune-azure/configure-devices/device-restrictions-for-afw).
+
+### <a name="assign-lob-apps-to-ios-and-android-devices----1057568---"></a>Tilldela branschspecifika appar till iOS- och Android-enheter <!-- 1057568 -->
+
+Du kan nu tilldela branschspecifika appar för [iOS](/intune-azure/manage-apps/ios-lob-app) (.ipa-filer) och [Android](/intune-azure/manage-apps/android-lob-app) (.apk-filer) till användare eller enheter.
+
+###  <a name="new-device-policies-for-ios----723774-723815-723826-723830---"></a>Nya enhetsprinciper för iOS <!-- 723774, 723815, 723826, 723830 -->
+
+- **Appar på startskärmen** – Styr vilka appar användarna ser på [startskärmen på sina iOS-enheter](/intune-azure/configure-devices/home-screen-settings-for-ios). Den här principen ändrar layouten på startskärmen, men distribuerar inte några appar som du har angett som inte är installerade.
+
+- **Anslutningar till AirPrint-enheter** – Styr vilka [AirPrint-enheter](/intune-azure/configure-devices/air-print-settings-for-ios-and-macos) (nätverksskrivare) som användarna av iOS-enheter kan ansluta till.
+
+- **Anslutningar till AirPlay-enheter** – Styr vilka [AirPlay-enheter](/intune-azure/configure-devices/airplay-settings-for-ios-devices) (t.ex. Apple TV) som användarna av iOS-enheter kan ansluta till.
+
+- **Anpassat meddelande på låsskärmen** – Konfigurerar ett anpassat meddelande som ersätter det standardmeddelande som användarna ser på låsskärmen på sina iOS-enheter. Mer information finns i [Tillgängliga enhetsåtgärder](/intune-azure/manage-devices/what-is#available-device-actions)
+
+
+### <a name="restrict-push-notifications-for-ios-apps----723767---"></a>Begränsa push-meddelanden för iOS-appar <!-- 723767 -->
+
+Du kan nu konfigurera följande [aviseringsinställningar](/intune-azure/configure-devices/app-notification-settings-for-ios) för iOS-enheter i en begränsningsprofil för Intune-enheter:
+
+- Aktivera eller inaktivera aviseringar helt för en angiven app.
+- Aktivera eller inaktivera aviseringar i aviseringscentret för en angiven app.
+- Ange aviseringstypen, antingen **Ingen**, **Banderoll** eller **Modal avisering**.
+- Ange om aktivitetsikoner tillåts för den här appen.
+- Ange om aviseringsljud tillåts.
+
+### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously----737837---"></a>Konfigurera iOS-appar för att köras i autonomt enkelappsläge <!-- 737837 -->
+
+Du kan nu använda en Intune-enhetsprofil för att konfigurera iOS-enheter till att köra angivna appar i [autonomt enkelt appläge](/intune-azure/configure-devices/device-restrictions-for-ios#autonomous-single-app-mode-supervised-only). När det här läget är konfigurerat och appen körs kommer enheten att låsas så att den endast kan köra den appen. Ett exempel på detta är när du konfigurerar en app som gör att användarna kan genomföra ett test på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
+
+### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices----723765---"></a>Konfigurera betrodda domäner för e-post och webbläsare på iOS-enheter <!-- 723765 -->
+
+Du kan nu konfigurera följande [domäninställningar](/intune-azure/configure-devices/device-restrictions-for-ios#domains) i en begränsningsprofil för iOS-enheter:
+
+- **Omarkerade e-postdomäner** – E-postmeddelanden som användaren skickar eller tar emot och som inte matchar de domäner du anger här, markeras som icke tillförlitliga.
+
+- **Hanterade webbdomäner** – Dokument som laddats ned från de webbadresser du anger här betraktas som hanterade (endast Safari).  
+
+- **Fyll i lösenord automatiskt för Safari-domäner** – Användare kan spara lösenord endast i Safari från URL:er som matchar de mönster du anger här. Om du vill använda den här inställningen måste enheten vara i övervakat läge och får inte vara konfigurerad för flera användare. (iOS 9.3+)
+
+
+### <a name="vpp-apps-available-in-ios-company-portal----748782---"></a>VPP-appar som är tillgängliga i iOS-företagsportalen <!-- 748782 -->
+
+Du kan nu tilldela volyminköpsappar för iOS som **Tillgängliga** installationer till användarna. Användarna behöver ett Apple Store-konto för att installera appen.
+
+### <a name="synchronize-ebooks-from-apple-vpp-store----800878---"></a>Synkronisera e-böcker från Apple VPP Store <!-- 800878 -->
+
+Du kan nu [synkronisera böcker](/intune-azure/manage-apps/ios-vpp-apps) som du har köpt från Apples butik för volyminköpsappar med Intune och tilldela dem till användarna.
+
+### <a name="multi-user-management-for-samsung-knox-standard-devices----971988---"></a>Hantering av flera användare för Samsung KNOX Standard-enheter <!-- 971988 -->
+
+Enheter som kör Samsung KNOX Standard har nu stöd för [hantering av flera användare](/intune-azure/enroll-devices/enroll-android-and-knox-standard-devices) i Intune. Det innebär att slutanvändarna kan logga in och ut från enheten med sina autentiseringsuppgifter för Azure Active Directory, och enheten hanteras centralt oavsett om den används eller inte.  När användarna loggar in får de tillgång till appar och dessutom verkställs eventuella principer som gäller för dem. Alla appdata rensas när användaren loggar ut.
+
+### <a name="additional-windows-device-restriction-settings----818566---"></a>Ytterligare begränsningsinställningar för Windows-enheter <!-- 818566 -->
+
+Vi har lagt till stöd för fler [begränsningsinställningar för Windows-enheter](/intune-azure/configure-devices/device-restrictions-for-windows-10), t.ex. ytterligare Edge-webbläsarstöd, anpassning av enhetens låsskärm, anpassning av startmenyn, bakgrund för Windows Spotlight-sökning och proxyinställningar.
+
+### <a name="multi-user-support-for-windows-10-creators-update----822547---"></a>Stöd för flera användare för Windows 10 Creators Update <!-- 822547 -->
+
+Vi har lagt till stöd för [hantering av flera användare](/intune-azure/enroll-devices/enroll-windows-devices) för enheter som kör Windows 10 Creators-uppdateringen och som är domänanslutna med Azure Active Directory. Det innebär att när olika standardanvändare loggar in på enheten med sina autentiseringsuppgifter för Azure AD, får de alla appar och principer som har tilldelats till deras användarnamn. Användarna kan för närvarande inte använda företagsportalen för självbetjäningsscenarier som att installera appar.
+
+### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Fresh Start för Windows 10-datorer<!-- 1004830 -->
+
+En ny [Fresh Start-enhetsåtgärd](/intune-azure/manage-devices/what-is#available-device-actions) för Windows 10-datorer finns nu tillgänglig.  När du kör den här åtgärden tas alla appar som har installerats på datorn bort, och datorn uppdateras automatiskt till den senaste Windows-versionen. Detta kan användas för att ta bort förinstallerade OEM-appar som ofta levereras med en ny dator. Du kan konfigurera om användardata ska behållas när den här enhetsåtgärden utförs.
+
+### <a name="additional-windows-10-upgrade-paths----903672---"></a>Ytterligare uppgraderingsvägar i Windows 10 <!-- 903672 -->
+
+Nu kan du skapa en [uppgraderingsprincip för utgåvor för att uppgradera enheter](/intune-azure/configure-devices/how-to-configure-windows-10-edition-upgrade) till följande Windows 10-utgåvor:
+
+- Windows 10 Professional
+- Windows 10 Professional N
+- Windows 10 Professional Education
+- Windows 10 Professional Education N
+
+### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
+
+Nu kan du ansluta ett stort antal enheter som kör Windows 10 Creators-uppdateringen till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera [MDM-massregistrering](/intune-azure/enroll-devices/bulk-enroll-windows) för din Azure AD-klient genom att skapa ett konfigurationspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer. Tillämpa sedan paketet på de företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter kommer Azure AD att anslutas, registreras i Intune och vara redo för att Azure AD-användarna ska logga in.  Azure AD-användare är standardanvändare på enheterna som tar emot tilldelade principer och appar som krävs. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
+
+### <a name="new-mam-settings-for-pin-and-managed-storage-locations----581122-736644---"></a>Nya MAM-inställningar för PIN-kod och hanterade lagringsplatser <!-- 581122, 736644 -->
+
+Det finns nu två nya appinställningar som hjälper dig med scenarier för hantering av mobilprogram (MAM):
+
+- **Inaktivera app-PIN när enhets-PIN är hanterad** – Identifierar om det finns en enhets-PIN på den registrerade enheten och förbigår i så fall den app-PIN som utlöses av appskyddsprinciperna. Den här inställningen minskar antalet gånger en PIN-uppmaning visas för användare som öppnar ett MAM-aktiverat program på en registrerad enhet. Den här funktionen är tillgänglig för både Android och iOS.
+
+- **Välj med vilka lagringstjänster företagsdata ska sparas** – Gör det möjligt att ange de lagringsplatser där företagsdata ska sparas. Användare kan spara i valda lagringsplatstjänster, vilket innebär att alla lagringsplatstjänster som inte anges kommer att blockeras.
+
+  Lista över lagringsplatstjänster som stöds:
+
+  - OneDrive
+  - Business SharePoint Online
+  - Lokal lagring
+
+### <a name="help-desk-troubleshooting-portal----907448---"></a>Supportavdelningens felsökningsportal <!-- 907448 -->
+
+Med den nya [felsökningsportalen](/intune-azure/manage-users/help-desk) kan supportansvariga och Intune-administratörer se användarna och deras enheter, samt utföra åtgärder för att lösa tekniska problem i Intune.
 
 ## <a name="march-2017"></a>Mars 2017
 

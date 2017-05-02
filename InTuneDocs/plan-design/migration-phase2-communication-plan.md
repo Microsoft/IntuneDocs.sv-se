@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: d59ddb11ef96e90fdc47ad556c300cfa1dd53de5
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9178404c1ed0b09ac4ae21c9c3a1b8d817241ea0
+ms.openlocfilehash: 4c5e436373303d44e01a9ee8d1474334cf8655db
+ms.lasthandoff: 04/17/2017
 
 
 ---
@@ -42,7 +42,7 @@ Här följer ett exempel på hur du kan kommunicera migrering till din organisat
     -   [Hämta e-post \#2 mall som ska användas i din organisation.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
 <br></br>
 
--   **E-post \#3:** Ge användarna tid innan åtkomsten påverkas. Påminn återigen användarna om fördelarna med och de strategiska skälen för migrering. E-tidsinställning ska ha ett skjutfönster som matchar pipelinefaserna. Exempel: Skicka e-post i juni \#1 till fasanvändare, e-post \#2 till fas 2-användare och e-post \#1 till fas 3-användare.
+-   **E-post \#3:** Ge användarna tid innan åtkomsten påverkas. Påminn återigen användarna om fördelarna med och de strategiska skälen för migrering. E-tidsinställning ska ha ett skjutfönster som matchar pipelinefaserna. Exempel: Skicka e-post i juni \#1 till fas 1-användare, e-post \#2 till fas 2-användare och e-post \#1 till fas 3-användare.
 
     -   [Hämta e-post \#3 mall som ska användas i din organisation.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 
@@ -54,7 +54,7 @@ Efter en viss period kan du börja framtvinga kompatibilitet med principer för 
 
 Intune har ytterligare mallresurser som du kan använda för att stimulera enhetsregistrering hos slutanvändarna:
 
--   Mer information om registreringsstegen för varje plattform finns i [Vad du ska berätta för slutanvändare om att använda per mobil OS-plattform](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
+-   Mer information om registreringsstegen för varje plattform finns i [Vad du ska berätta för slutanvändare om att använda per mobil OS-plattform](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)
 
 -   Hämta en anpassningsbar [Intune-registreringsmall för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a)
 

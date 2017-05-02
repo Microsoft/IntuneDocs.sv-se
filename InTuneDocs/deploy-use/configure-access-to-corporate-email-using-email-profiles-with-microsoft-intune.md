@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/27/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: c473a1f05b0a7b0ce5205598b2b9a9b86bfe6c1d
-ms.openlocfilehash: f76b65ad97771d6b40c4e3bff75a19fd1f922eea
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
+ms.openlocfilehash: 21eee53a4e3674dc28b01311a61dda0d71f9f7fa
+ms.lasthandoff: 04/20/2017
 
 
 ---
@@ -131,4 +131,5 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 > [!NOTE]
 > - För Android for Work distribuerar du även Gmail- eller Nine Work-apparna, förutom lämplig e-postprofil.
 > - Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem. Observera att du inte kan ta bort en e-postprofil på det här sättet om det är den enda e-postprofilen på en enhet.
+> - Om du gör ändringar i en e-postprofil som du tidigare distribuerat, kan användarna få ett meddelande som ber dem att godkänna omkonfigurationen av deras e-postinställningar.
 

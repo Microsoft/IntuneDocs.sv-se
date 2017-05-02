@@ -15,14 +15,14 @@ ms.assetid:
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 24498abc504f05bd22dc7309bc22948292f9b1e6
-ms.openlocfilehash: 731d57859474276b51c0cb0b17a3354eaec17348
-ms.lasthandoff: 04/13/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 25a46754f6c7e44b3f4fef7e8eef015cf559e31f
+ms.lasthandoff: 04/19/2017
 
 
 ---
 
-# <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune? 
+# <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
@@ -38,13 +38,13 @@ Välj nu något av följande:
 - **Översikt** – Hämta information om enheter som du har registrerat och operativsystemen som körs för varje enhet.
 - **Hantera** – Välj **Alla enheter** för att visa en lista över alla enheter som du hanterar.
     Välj en av enheterna i listan för att öppna bladet <*enhetsnamn*> **Översikt** där du kan välja:
-    - **Översikt** – Visa allmän information om enheten inklusive information om dess namn, ägare, om det är en BYOD-enhet, när den senast var incheckad, med mera. 
-                
+    - **Översikt** – Visa allmän information om enheten inklusive information om dess namn, ägare, om det är en BYOD-enhet, när den senast var incheckad, med mera.
+
     - **Maskinvara** – Visa mer detaljerad information om enheten, inklusive dess lediga lagringsutrymme, modell, tillverkare och mycket annat.
     ![Maskinvaruinventering för hanterade enheter](./media/hardware-inventory.png)
     - **Identifierade program** – Visar en lista över alla appar som Intune hittar installerade på enheten.
     ![Identifierad programnod](./media/detected-applications.png)
-- **Övervaka** Välj **Enhetsåtgärder** för att se en lista över enhetsåtgärder som har utförts på enheter som du hanterar och det aktuella tillståndet för dessa åtgärder.
+- **Övervaka** Välj **Enhetsåtgärder**  för att se en lista över enhetsåtgärder som har utförts på enheter som du hanterar och det aktuella tillståndet för dessa åtgärder.
 ![Övervaka enhetsåtgärder](./media/monitor-device-actions.png)
 - **Hjälp och Support** – Visar länkar till dokumentationen för felsökning och support.
 
@@ -67,6 +67,12 @@ Genererar ett nytt lösenord för enheten som visas på bladet <*enhetsnamn*> **
 ### <a name="bypass-activation-lock"></a>**Kringgå aktiveringslås**
 Detta tar bort aktiveringslåset från en iOS-enhet utan användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startar. Kringgå bara aktiveringslåset om du har fysisk åtkomst till enheten.
 
+### <a name="fresh-start"></a>**Fresh Start**
+
+Tar bort alla appar som har installerats på en Windows 10-dator som kör Creators-uppdateringen och uppdaterar sedan automatiskt datorn till den senaste versionen av Windows.
+Detta kan användas för att ta bort förinstallerade OEM-appar som ofta levereras med en ny dator. Du kan konfigurera om användardata ska behållas när den här enhetsåtgärden utförs. I det här fallet tas appar och inställningar bort, men innehållet i användarens startmapp bevaras.
+
+
 ### <a name="lost-mode"></a>**Borttappat läge**
 Om en iOS-enhet har blivit tappats bort eller blivit stulen kan du aktivera borttappat läge. Det gör att du kan ange ett meddelande och ett telefonnummer som ska visas på enhetens låsskärm. Gör så här:
 1.    Välj **Mer** > **Borttappat läge**på en iOS-enhets egenskapsblad.
@@ -78,7 +84,7 @@ För att kunna använda Borttappat läge måste enheten vara en företagsägd iO
 ### <a name="locate-device"></a>**Hitta enhet**
 Använd den här fjärråtgärder om du vill visa platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten har placerats i borttappat läge.
 1.    Välj **Mer** > **Hitta enhet** på en iOS-enhets egenskapsblad.
-2.    När enheten har hittats visas dess plats visas på bladet **Hitta enhet**. 
+2.    När enheten har hittats visas dess plats visas på bladet **Hitta enhet**.
     ![Hitta enhetsblad](./media/locate-device.png)
 
 >[!NOTE]

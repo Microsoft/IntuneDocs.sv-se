@@ -1,12 +1,12 @@
 ---
 title: Konfigurera uppgraderingar av Windows 10 med Intune
 titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om hur du kan använda Intune för att uppgradera Windows 10-enheter som du hanterar."
+description: "Förhandsversion av Intune Azure: Läs mer om hur du kan använda Intune för att uppgradera Windows 10-enheter till andra utgåvor."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 04/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 3d0616601509b310034cdbf6e34cf185712c91d2
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 66be6716df38d868e8247131b49ffb50fc48e60b
+ms.openlocfilehash: 0274a76fa7dd301ab19d1e8bc155c4ef2c79266f
+ms.lasthandoff: 04/15/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/17/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Använd informationen i det här avsnittet för att lära dig hur du konfigurerar en Windows 10-uppgraderingsprofil. Med den här profilen kan du automatiskt uppgradera enheter som kör någon av följande Windows 10-versioner till en senare version:
+Använd informationen i det här avsnittet för att lära dig hur du konfigurerar en Windows 10-uppgraderingsprofil. Med den här profilen kan du automatiskt uppgradera enheter som kör någon av följande Windows 10-versioner till en annan utgåva:
 
 - Windows 10 Home
 - Windows 10 Holographic

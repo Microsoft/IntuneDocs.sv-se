@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/05/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 771aed4e1c57171183b9a9ea7d9e0f702dc1859c
-ms.openlocfilehash: 3b0a674fadf30c660ff3e8e8db172a590f07c8be
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
+ms.openlocfilehash: 1c13d39b8b193c56439602a6e9d9a34e547aef81
+ms.lasthandoff: 04/19/2017
 
 ---
 
@@ -30,6 +30,11 @@ ms.lasthandoff: 04/06/2017
 I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
 
 Microsoft Intune hjälper dig att hantera appar som du har köpt via det här programmet genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.
+
+Du kan dessutom synkronisera, hantera och tilldela böcker som du har köpt från Apples butik för volymköpsprogram med Intune och tilldela dem till användarna. Använd arbetsbelastningen **Böcker** i Intune-portalen för att hantera böcker. Metoden för att hantera böcker är samma som du använder när du hanterar appar.
+Du måste ha laddat ner en token för Apples volymköpsprogram för att kunna göra detta. För närvarande kan du endast tilldela böcker som en **obligatorisk** installation.
+När du tilldelar en bok till en enhet måste enheten ha den inbyggda iBooks-appen installerad. Om den inte finns måste användaren installera appen på nytt för att kunna läsa boken. Du kan för närvarande inte använda Intune för att återställa borttagna inbyggda appar.
+
 
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Hantera appar som köpts genom volyminköpsprogrammet för iOS-enheter
 Du köper flera licenser för iOS-appar via [Apples volymköpsprogram för företag](http://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](http://volume.itunes.apple.com/us/store). När du gör det måste du bland annat skapa ett Apple VPP-konto från Apples webbplats och ladda upp din Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
@@ -43,7 +48,6 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
 * Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobila enheter). Intune synkroniserar inte de användarkontona till Intune som en säkerhetsåtgärd. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
-* Du kan inte tilldela iOS VPP-appar till enheter som har registrerats med hjälp av Device Enrollment Protocol (DEP).
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Så här skaffar du och laddar upp en Apple VPP-token
 
@@ -66,10 +70,10 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
 1. I arbetsbelastningen **Hantera appar**, väljer du **Hantera** > **Licensierade appar**.
-2. I listan över appblad, väljer du den app du vill tilldela och väljer sedan **...** > **Tilldela grupper**.
+2. I listan över appblad, väljer du den app du vill tilldela och väljer sedan **...**  > **Tilldela grupper**.
 3. På bladet <*appnamn*> - **Tilldelade grupper**, väljer du **hantera** > **Tilldelade grupper**.
 4. Välj **Tilldela grupper**, klicka sedan på bladet **Välj grupper**, välj de Azure AD-användare eller enhetsgrupper som du vill tilldela appen.
-Du måste välja en tilldelningsåtgärd för **Krävd**. Tillgängliga installationer stöds för närvarande inte. Tilldelningar till enhetsgrupper är även tillgängliga för nya klienter som har skapats efter januari 2017. Om klienten har skapats före detta och du inte har tillgång till alternativet för att tilldela VPP-appar till enhetsgrupper kan du kontakta Intunes support.
+Du måste välja en tilldelningsåtgärd för **Krävd**. Tilldelningar till enhetsgrupper är även tillgängliga för nya klienter som har skapats efter januari 2017. Om klienten har skapats före detta och du inte har tillgång till alternativet för att tilldela VPP-appar till enhetsgrupper kan du kontakta Intunes support.
 5. När du är klar väljer du **Spara**.
 
 Du hittar mer information i [Hur du övervakar appar](monitor-apps.md) som hjälper dig att övervaka apptilldelningar.
@@ -81,4 +85,6 @@ När du tilldelar appar som en **Krävd** installation använder alla användare
 Om du vill frisläppa en licens måste du ändra tilldelningsåtgärden till **Avinstallera**. Licensen frisläpps när appen avinstalleras.
 
 När användare med kvalificerande enheter försöker installera en VPP-app ombeds de att gå med i Apples volyminköpsprogram. De måste göra detta innan appinstallationen fortsätter.
+
+När du distribuerar en VPP-app som Tillgänglig, har appinnehåll och licens distribuerats direkt från appbutiken.
 

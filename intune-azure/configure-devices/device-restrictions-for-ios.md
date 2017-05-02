@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 881ce40cb093b1817c9c4b84c9f8ca78b19de727
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
+ms.openlocfilehash: 9e348278f62b2b9ba10f0f77c9fda214b43812a7
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -103,7 +103,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 -     **Visa dokument som inte gäller företag i företagsappar** – Tillåt att alla dokument visas i företagshanterade appar.
 -     **Behandla AirDrop som ett ohanterat mål** – Stoppar hanterade appar från att kunna skicka data. Airdrop.
 -     **Lägga till Game Center-vänner (endast övervakat)** – Tillåt användaren att lägga till vänner i Game Center.
--     **Game Center (endast övervakat)** – Blockera eller aktivera användning av appen Game Center.
+-     **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
 -     **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
 -     **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
 -     **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
@@ -225,6 +225,67 @@ Med informationen i den här listan kan du identifiera namn, utgivare och paket-
 -     **Delad bildström** – Ställ in på **Nej** om du vill inaktivera **iCloud-bilddelning** på enheten.
 -     **Aktivitetsfortsättning** – Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller macOS-enhet (överlämning).
 
+## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomt enkelt appläge (endast övervakat)
+
+Använd inställningarna för att konfigurera iOS-enheter så att de kör angivna appar i autonomt enkelt appläge. När det här läget är konfigurerat och appen körs kommer enheten att låsas så att den endast kan köra den appen. Ett exempel på detta är när du konfigurerar en app som gör att användarna kan genomföra ett test på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
+
+### <a name="settings"></a>Inställningar
+
+- **Appnamn** – Ange det namn på appen som kommer att visas i applistan på det här bladet.
+- **Appsamlings-id** – Ange samlings-ID för appen. Hjälp finns i **Referens till samlings-ID för inbyggda iOS-appar** i det här avsnittet.
+
+När du har angett varje appnamn och appsamlings-ID väljer du **Lägg till** för att lägga till dem i listan.
+
+- **Importera** – Importera en fil med kommaavgränsade värden (.csv), som innehåller en lista med appnamn och deras associerade appsamlings-ID:n.
+- **Exportera** – Exportera appnamnen och associerade appsamlings-ID:n som du har konfigurerat, till en fil med kommaavgränsade värden (.csv).
+
+### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referens till samlings-ID för inbyggda iOS-appar
+
+I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
+
+|||
+|-|-|
+|Appnamn|Appsamlings-ID|
+|Appbutik|com.apple.AppStore|
+|Kalkylator|com.apple.calculator|
+|Kalender|com.apple.mobilecal|
+|Kamera|com.apple.camera|
+|Klocka|com.apple.mobiletimer|
+|Kompass|com.apple.compass|
+|Kontakter|com.apple.MobileAddressBook|
+|FaceTime|com.apple.facetime|
+|Hitta vänner|com.apple.mobileme.fmf1|
+|Hitta iPhone|com.apple.mobileme.fmip1|
+|Spelcenter|com.apple.gamecenter|
+|GarageBand|com.apple.mobilegarageband|
+|Hälsa|com.apple.Health|
+|iBooks|com.apple.iBooks|
+|iTunes Store|com.apple.MobileStore|
+|iTunes U|com.apple.itunesu|
+|Keynote|com.apple.Keynote|
+|E-post|com.apple.mobilemail|
+|Kartor|com.apple.Maps|
+|Meddelanden|com.apple.MobileSMS|
+|Musik|com.apple.Music|
+|Nyheter|com.apple.news|
+|Anteckningar|com.apple.mobilenotes|
+|Siffror|com.apple.Numbers|
+|Sidor|com.apple.Pages|
+|Photo Booth|com.apple.Photo-Booth|
+|Foton|com.apple.mobileslideshow|
+|Poddsändningar|com.apple.podcasts|
+|Påminnelser|com.apple.reminders|
+|Safari|com.apple.mobilesafari|
+|Inställningar|com.apple.Preferences|
+|Aktier|com.apple.stocks|
+|Tips|com.apple.tips|
+|Videor|com.apple.videos|
+|VoiceMemos|com.apple.VoiceMemos|
+|Plånbok|com.apple.Passbook|
+|Titta på|com.apple.Bridge|
+|Väder|com.apple.weather|
+
+
 ## <a name="kiosk"></a>Helskärmsläge
 -     **Aktiveringslås** – Aktivera aktiveringslåset på övervakade iOS-enheter.
 -     **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
@@ -256,4 +317,21 @@ Med informationen i den här listan kan du identifiera namn, utgivare och paket-
 -     **JavaScript** – Tillåt att JavaScript körs i webbläsaren.
 -     **Bedrägerivarningar** – Tillåt bedrägerivarningar i webbläsaren.
 -     **Popup-fönster** – Aktivera eller inaktivera webbläsarens blockering av popup-fönster.
+
+
+## <a name="domains"></a>Domains
+
+### <a name="unmarked-email-domains"></a>Avmarkerade e-postdomäner
+
+I fältet **Webbadress till e-postdomän** lägger du till en eller flera webbadresser i listan. När användarna får ett e-postmeddelande från en annan domän än de som du har konfigurerat, kommer e-postmeddelandet att markeras som ej betrott i iOS e-postapp.
+
+
+### <a name="managed-web-domains"></a>Hanterade webbdomäner
+
+I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här, anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
+
+
+### <a name="safari-password-auto-fill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner
+
+I fältet **Domänwebbadress** lägger du till en eller flera webbadresser i listan. Användarna kan bara spara webblösenord från webbadresser i den här listan. Den här inställningen gäller enbart för Safari-webbläsaren, samt för iOS 9.3 och senare enheter i övervakat läge. Om du inte anger någon webbadress, kan lösenorden sparas från alla webbplatser.
 
