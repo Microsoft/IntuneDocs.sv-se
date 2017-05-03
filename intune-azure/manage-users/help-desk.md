@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 03/18/17
+ms.date: 03/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: e0ecc775f70703574c4e1adf0f0aa204f2745b72
-ms.openlocfilehash: 723830f686991fe13de13f75c6a5d1bc84e6920b
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 4916b66e1f2eeabb42401645dbece28dad28eb19
+ms.lasthandoff: 04/26/2017
 
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Hjälpa användarna med felsökningsportalen i Microsoft Intune
@@ -40,7 +40,8 @@ Mer information om Intune-roller finns i [Intune-roller (RBAC)](https://docs.mic
 ## <a name="access-the-troubleshooting-portal"></a>Åtkomst till felsökningsportalen
 
 Supportpersonal och Intune-administratörer kan få åtkomst till felsökningsportalen på två sätt:
-- I [Azure-portalen](https:portal.azure.com)väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. I det vänstra navigeringsbladet väljer du sedan **Felsök**. Andra arbetsbelastningar syns i det vänstra navigeringsbladet, men de är inte tillgängliga.
+- I [Azure-portalen](https://portal.azure.com)väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. I det vänstra navigeringsbladet väljer du sedan **Felsök**. Andra arbetsbelastningar syns i det vänstra navigeringsbladet, men de är inte tillgängliga.
+
 ![Skärmbild av Intunes arbetsbelastning för felsökning med länken Välj användare](media/help-desk-user.png)
 - Öppna [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting) i en webbläsare. Det är endast felsökningsportalen som visas.
 
