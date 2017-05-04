@@ -30,7 +30,7 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
 
 1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Grupper** &gt; **Alla enheter** &gt; **Företagets förregistrerade enheter** &gt; **Efter IMEI (alla plattformar)** och välj sedan **Lägg till enheter**. Du kan lägga till enheter på två sätt:
 
-    -   **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil. Informationsfältet får inte innehålla fler än 128 tecken.
+    -   **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil. Informationsfältet får inte innehålla fler än 128 tecken. 
 
         |||
         |-|-|
@@ -39,8 +39,8 @@ Med Microsoft Intune kan administratörer importera och använda IMEI-nummer (In
         CSV-filen när den visas i en textredigerare:
 
         ```
-        01 234567 890123,device details
-        02 234567 890123,device details
+        01234567890123,device details
+        02234567890123,device details
         ```
 
     -   **Lägg till enhetsinformation manuellt** – Ange IMEI-nummer och enhetsinformation för upp till 15 enheter.
