@@ -33,7 +33,7 @@ Som IT-administratör kan du skapa och importera en fil med kommateckenavgränsa
 ## <a name="add-corporate-identifiers"></a>Lägg till företagsidentifierare
 För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv) i två kolumner men utan rubrik. Lägg till IMEI-identifieraren i den vänstra kolumnen och informationen i den högra kolumnen. Informationen är begränsad till 128 tecken och används endast i administrationssyfte. Informationen visas inte på enheten. Den aktuella gränsen är 500 rader per CSV-fil.
 
-**Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil.
+**Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil. 
 
 |||
 |-|-|
@@ -43,8 +43,8 @@ För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv
 CSV-filen när den visas i en textredigerare:
 
 ```
-01 234567 890123,device details
-02 234567 890123,device details
+01234567890123,device details
+02234567890123,device details
 ```
 
 
