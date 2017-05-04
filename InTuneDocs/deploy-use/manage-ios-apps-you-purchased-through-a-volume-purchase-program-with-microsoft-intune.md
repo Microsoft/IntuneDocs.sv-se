@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 01/20/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 56ef80138d0790933ae216bb02101c3f408311c7
-ms.openlocfilehash: 5bea5a9f1a69193543fa3c5e8997a6527721d3ef
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: b81228ccd1c515bfd82486475996eecf20655993
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -66,7 +67,7 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 ## <a name="to-deploy-a-volume-purchased-app"></a>Distribuera en volyminköpt app
 
-1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Hanterad programvara** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
+1.  Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Appar** &gt; **Volyminköpta appar**. I listan visas alla appar som har synkroniserats från Apple VPP-tjänsten.
 
 2.  Välj den app som du vill distribuera, välj sedan **Hantera distribution** och slutför överföringen, skapa och distribuera appen med hjälp av anvisningarna i avsnittet [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 
@@ -79,22 +80,14 @@ Om du vill frisläppa en licens måste du ändra distributionsåtgärden till **
 
 När användare med kvalificerande enheter försöker installera en VPP-app ombeds de att gå med i Apples volyminköpsprogram. De måste göra detta innan appinstallationen fortsätter.
 
-> [!TIP]
-> Titta i kolumnen **Status för VPP-villkor** så ser du godkännandestatusen för varje användare som appen har distribuerats till.
-
 Distributionen misslyckas om det inte finns fler tillgängliga licenser.
 
 ## <a name="to-monitor-apple-vpp-apps"></a>För att övervaka Apple VPP-appar
-Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser som används från arbetsýtan **Appar** i noden **Hanterad programvara** &gt; **Volyminköpta appar**.
+Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser som används från arbetsýtan **Appar** i noden **Volyminköpta appar**.
 
 > [!TIP]
 > Du kan också använda **appfilter** för att kontrollera statusen för varje appinstallation.
 
 ### <a name="see-also"></a>Se även
 [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

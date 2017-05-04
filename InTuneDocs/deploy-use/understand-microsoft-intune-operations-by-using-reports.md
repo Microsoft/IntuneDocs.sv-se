@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/27/2017
+ms.date: 04/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: cc1a3c8c3e2f25ee154db964de2601510e32f1ea
-ms.openlocfilehash: 41354f0eee051bd9c691a27830264f6c95502fa5
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
+ms.lasthandoff: 04/24/2017
 
 
 
@@ -32,7 +32,7 @@ Använd informationen i det här avsnittet om du vill ha hjälp med att skapa oc
 ## <a name="using-reports"></a>Använda rapporter
 Intune-rapporter tillhandahåller information om programvara, maskinvara och licenser i din organisation. Rapporter kan hjälpa dig att bekräfta aktuella behov och göra prognoser för framtida utgifter. Arbetsytan **Rapporter** ger dig de verktyg du behöver för att skapa och hantera rapporter. 
 
-### <a name="report-types"></a>Rapporttyper
+## <a name="report-types"></a>Rapporttyper
 
 |Rapporttyp|Beskrivning|
 |---------------|---------------|
@@ -49,8 +49,10 @@ Intune-rapporter tillhandahåller information om programvara, maskinvara och lic
 |**Hälsoattesteringsrapporter**|Visa hälsotillståndet för mobila enheter.|
 |**Rapport för Mac OS X-maskinvara**|Visar information om maskinvara för alla registrerade Mac OS X-enheter i de grupper som du har valt. Information om maskinvaruinventering som samlas in från dessa enheter finns i [Förstå dina enheter med inventering i Microsoft Intune](understand-your-devices-with-inventory-in-microsoft-intune.md).|
 |**Rapport för Mac OS X-programvara**|Visar de program som har installerats på alla Mac OS X-enheter i de grupper som du har valt. Rapporten innehåller programnamnen (som ett paket-ID), den korta namnversionen (eller eget namn), versionen och antalet enheter som programvaran är installerad på.|
+|**Rapporter för Windows informationsskydd**|Visar information om Windows informationsskyddsåtgärder på enheter som du hanterar.|
+|**Hälsoattesteringsrapporter**|Visar information som rapporterats av tjänsten Windows hälsoattestering för enheter som du hanterar.|
 
-#### <a name="to-create-a-report"></a>Skapa en rapport
+## <a name="to-create-a-report"></a>Skapa en rapport
 
 1.  Välj **Rapporter** i Intune-administratörskonsolen. Välj den rapporttyp som du vill generera, enligt beskrivningen i föregående tabell.
 

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,8 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: a6fa910c0a8ec1a9542e03a276dbb8d0757d75b4
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 742fac9c401c24bfc0f2500a238c41fa00c47fd3
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -47,6 +48,8 @@ För att hjälpa att lösa de här problemen, så introducerade Apple med iOS 7.
 > [!TIP]
 > Övervakat läge för iOS-enheter gör att du kan använda Apple Configurator för att låsa en enhet och begränsa funktionerna till specifika företagsändamål. Övervakat läge är generellt sett bara till för företagsägda enheter.
 
+Du kan läsa mer om aktiveringslåset [här](https://support.apple.com/en-us/HT201365).
+
 ## <a name="how-intune-helps-you-manage-activation-lock"></a>Hur Intune hjälper dig att hantera aktiveringslås
 Intune kan begära status för aktiveringslåset för övervakade enheter som kör iOS 8.0 och senare. Enbart för övervakade enheter kan Intune hämta koden för att kringgå aktiveringslåset och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda ett tomt användarnamn och koden som lösenord.
 
@@ -55,6 +58,14 @@ Intune kan begära status för aktiveringslåset för övervakade enheter som k�
 -   Användaren får säkerhetsfördelarna i Hitta Min iPhone-appen.
 
 -   Du kan låta användarna sköta sitt arbete och samtidigt vara säker på att du kan avaktivera eller låsa upp en enhet när den behöver återanvändas.
+
+## <a name="before-you-start"></a>Innan du börjar
+
+Innan du kan kringgå aktiveringslåset på enheter måste du först aktivera det. Gör så här:
+
+1. Skapa en [enhetskonfigurationsprincip](/intune/deploy-use/ios-policy-settings-in-microsoft-intune) för iOS genom att använda informationen i avsnittet [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies).
+2. Ställ in **Tillåt aktiveringslås när enheten är i övervakat läge** på **Ja** i avsnittet **Registrering** på sidan för inställningar.
+3. Spara principen och distribuera den till de enheter för vilka du vill kringgå aktiveringslåset.
 
 ## <a name="how-to-use-activation-lock-bypass-from-the-intune-admin-console"></a>Att kringgå aktiveringslås från Intunes administrationskonsol
 > [!IMPORTANT]
@@ -94,9 +105,4 @@ Du kan se vilka enheter som använder aktiveringslås på två sätt:
 ### <a name="see-also"></a>Se även
 [Dra tillbaka enheter](retire-devices-from-microsoft-intune-management.md)
 [Skydda dina enheter med fjärrlås och lösenordskodsåterställning](use-remote-lock-and-passcode-reset-in-microsoft-intune.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

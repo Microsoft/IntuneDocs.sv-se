@@ -16,9 +16,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 61fbc2af9a7c43d01c20f86ff26012f63ee0a3c2
-ms.openlocfilehash: c56bea46c8b505e0d357cfe90678ab149559b896
-ms.lasthandoff: 04/07/2017
+ms.sourcegitcommit: 53f1c688aad2f810d8a887435dd8d122d4f471ae
+ms.openlocfilehash: d8fa3a19915076f1a603449dd426172fbc5a613a
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -38,9 +38,8 @@ Det här avsnittet hjälper IT-administratörer att registrera företagsägda iO
 2. [Skapa en DEP-profil](#create-anapple-dep-profile)
 3. [Tilldela Intune-servern Apple DEP-serienummer](#assign-apple-dep-serial-numbers-to-your-mdm-server)
 4. [Synkronisera DEP-hanterade enheter](#synchronize-dep-managed-devices)
-5. Distribuera enheter till användare
-
-
+5. [Tilldela enheter en DEP-profil](#assign-a-dep-profile-to-devices)
+6. [Distribuera enheter till användare](#distribute-devices-to-users)
 
 ## <a name="get-the-apple-dep-certificate"></a>Hämta Apple DEP-certifikatet
 Innan du kan registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) behöver du en DEP-certifikatfil (.p7m) från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till DEP och som ditt företag äger. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler.
@@ -49,9 +48,6 @@ Ett företag som vill hantera företagsägda iOS-enheter med DEP måste gå med 
 
 > [!NOTE]
 > Om Intune-klienten har migrerats från den klassiska Intune-konsolen till Azure-portalen och du har tagit bort en Apple DEP-token från Intune-administrationskonsolen under migreringsperioden kan DEP-token ha återställts till ditt Intune-konto. Du kan ta bort DEP-token från Azure-portalen igen.
-
-
-
 
 **Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple DEP-token.**<br>
 1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På bladet Intune väljer du **Enhetsregistrering** > **Apple DEP-Token**.
@@ -75,7 +71,7 @@ Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med p
 En enhets registreringsprofil definierar inställningarna som tillämpas på en grupp av enheter. Följande steg visar hur du skapar en enhetsregistreringsprofil för iOS-enheter som registrerats med hjälp av DEP.
 
 1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Apple-registrering**.
+2. Välj **Enhetsregistrering** på Intune-bladet och välj sedan **Apple-registrering**.
 3. Välj **DEP-profiler** under **Hantera inställningar för Apples program för enhetsregistrering (DEP)**.
 4. Välj **skapa** på bladet **Apple DEP-profiler**.
 5. Ange ett namn och en beskrivning för profilen på bladet **Skapa registreringsprofil**.
@@ -118,6 +114,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 9. Om du vill spara profilinställningarna väljer du **Skapa** på bladet **Skapa registreringsprofil**.
 
 ## <a name="assign-apple-dep-serial-numbers-to-your-mdm-server"></a>Tilldela din MDM-server Apple DEP-serienummer
+Intune MDM-servern måste tilldelas enhetsserienumren i Apple DEP-webbportalen så att Intune kan hantera enheterna.
 
 1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID.
 
@@ -128,10 +125,11 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 4. Välj **Tilldela till server** och välj &lt;servernamnet&gt; som angetts för Microsoft Intune och sedan **OK**.
 
 ## <a name="synchronize-dep-managed-devices"></a>Synkronisera DEP-hanterade enheter
+Nu när Intune har tilldelats behörighet att hantera din DEP-enheter, kan du synkronisera Intune med DEP-tjänsten och se dina hanterade enheter i Intune-portalen.
 
 1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. Välj **Registrera enheter** på Intune-bladet i Azure-portalen och välj sedan **Apple-registrering**.
+2. Välj **Enhetsregistrering** på Intune-bladet i Azure Portal och välj sedan **Apple-registrering**.
 
 3. Välj **DEP-serienummer** under **Hantera inställningar för Apples program för enhetsregistrering (DEP)**.
 
@@ -146,12 +144,29 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 >[!NOTE]
 >Du kan även tilldela profiler DEP-serienummer från bladet **Apple DEP-serienummer**.
 
+## <a name="assign-a-dep-profile-to-devices"></a>Tilldela enheter en DEP-profil
+DEP-enheter som hanteras av Intune måste tilldelas en DEP-profil innan de har registrerats.
+
+1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+
+2. Välj **Enhetsregistrering** > **Apple-registrering** på Intune-bladet i Azure Portal och välj sedan **DEP-profiler**.
+
+3. Välj den profil du vill tilldela enheter i listan över **Apple DEP-registreringsprofiler** och välj sedan **Enhetstilldelningar**
+
+4. Välj **Tilldela** och markera sedan de DEP-enheter som du vill tilldela den här profilen. Du kan filtrera så att tillgängliga DEP-enheter visas:
+  - **ej tilldelad**
+  - **alla**
+  - **&lt;DEP-profilnamn&gt;**
+
+  ![Skärmbild av knappen Tilldela som används för att tilldela DEP-profiler i Intune-portalen](media/dep-profile-assignment.png)
+
+5. Markera de enheter som du vill tilldela. Du kan använda kryssrutan ovanför kolumnen för välja upp till 1 000 listade enheter och sedan klicka på **Tilldela**. Om du vill registrera mer än 1 000 enheter måste du upprepa tilldelningsproceduren till dess att alla enheter har tilldelats en DEP-profil.
+
 ## <a name="distribute-devices-to-users"></a>Distribuera enheter till användare
 
-Nu kan du distribuera företagsägda enheter till användare. När en iOS-enhet aktiveras registreras den för hantering av Intune.
+Nu kan du distribuera företagsägda enheter till användare. När en iOS DEP-enhet aktiveras, så registreras den för hantering av Intune. Om enheten har aktiverats och används kan profilen inte användas förrän enheten har fabriksåterställts.
 
-
-## <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Hur användare installerar och använder företagsportalen på sina enheter
+### <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Hur användare installerar och använder företagsportalen på sina enheter
 
 Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ytterligare några steg, vilka beskrivs nedan, för att kunna slutföra installationen och installera företagsportalappen.
 
@@ -159,7 +174,7 @@ Enheter som har konfigurerats med mappning mellan användare kan installera och 
 
 1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
 
-2. Under installationen uppmanas användarna att ange ett Apple-ID. Användaren måste ange ett Apple-ID för att företagsportalen ska få installeras på enheten. Användaren kan även ange ID från iOS-inställningsmenyn när installationen har slutförts.
+2. Under installationen uppmanas användarna att ange ett Apple-ID. Användaren måste ange ett Apple-ID för att företagsportalen ska få installeras på enheten. Användaren kan även ange sitt Apple-ID på menyn för iOS-inställningar när installationen har slutförts.
 
 3. När installationen har slutförts måste användaren installera företagsportalappen från App Store.
 

@@ -15,14 +15,14 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: 6ff56f736c289dbc9a8340ad76e044363acbfea5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 18afa2b84c90e77280daf7ed9b1b8357365f7380
+ms.lasthandoff: 04/25/2017
 
 
 ---
 
-# <a name="setup-the-skycure-integration-with-intune"></a>Konfigurera Skycure-integrering med Intune
+# <a name="set-up-the-skycure-integration-with-intune"></a>Konfigurera Skycure-integrering med Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -54,7 +54,7 @@ Skycure har stöd för två integreringslägen med Intune:
 
 ## <a name="to-set-up-the-read-only-integration-between-intune-and-skycure"></a>Så här konfigurerar du skrivskyddad integrering mellan Intune och Skycure
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Skycure-administratörens autentiseringsuppgifter är ett e-postmeddelande som måste tillhöra en giltig användare i Azure Active Directory, annars misslyckas inloggningen. Skycure använder Azure Active Directory till att autentisera sin administratör med enkel inloggning (SSO).
 
 1.  Gå till [Skycure Management Console](https://aad.skycure.com).
@@ -75,7 +75,7 @@ Skycure har stöd för två integreringslägen med Intune:
 
     ![iOS-app, slutförandeskärm](../media/mtp/skycure-setup-3.png)
 
-> [!NOTE] 
+> [!NOTE]
 > Upprepa samma steg för **Skycure Android**- och **hanterings**apparna.
 
 ### <a name="add-an-azure-ad-security-group-into-skycure"></a>Lägga till en Azure AD-säkerhetsgrupp i Skycure

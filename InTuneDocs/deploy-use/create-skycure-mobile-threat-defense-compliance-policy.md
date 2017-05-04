@@ -15,9 +15,9 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: a2597a43e48d8cdde6c29070986528dcba473d8e
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: c28ba63136c1037c8c8191e9a7f46fa9a4823b4e
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -56,7 +56,7 @@ Som en del av installationen av Skycure Mobile Threat Defense har du skapat en p
 
     d.  **Hög**: Det här alternativet är minst säkert. Detta tillåter alla hotnivåer och använder endast Skycure Mobile Threat Defense för rapportering.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Om du skapar principer för villkorlig åtkomst till Office 365 eller andra tjänster kommer denna utvärdering av efterlevnad att bedömas och icke-kompatibla enheter kommer inte att få åtkomst till dessa tjänster förrän hotet har lösts.
 
 ## <a name="span-idmonitor-device-threats-classanchorspan-idnext-steps-classanchorspan-idtoc477360344-classanchorspanspanspannext-steps"></a><span id="monitor-device-threats" class="anchor"><span id="next-steps" class="anchor"><span id="_Toc477360344" class="anchor"></span></span></span>Nästa steg

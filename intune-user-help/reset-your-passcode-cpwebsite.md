@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/20/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -18,9 +18,9 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 translationtype: Human Translation
-ms.sourcegitcommit: d42fa20a3bc6b6f4a74dd0872aae25cfb33067b9
-ms.openlocfilehash: 1c3b986df3e0d8a5ee54da0a91f37b445b4dd9f7
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 53f1c688aad2f810d8a887435dd8d122d4f471ae
+ms.openlocfilehash: 9220eecc32ee27725454a48484608af5f4ea0e83
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -48,7 +48,7 @@ Så här återställer du lösenordet:
 
   ![Meddelande om att återställa lösenordet med en varning om att lösenordet för enheten återställs och information om hur användaren loggas ut. Knapparna för indata från användaren är Logga ut och Avbryt.](./media/iwp-reset-passcode-popup.png)
 
-5.  Välj **Logga ut** så får du ett meddelande om att lösenordet tas bort från enheten. Ta inte bort lösenordet om du inte har enheten med dig. Om någon annan har fysisk åtkomst till enheten har den personen åtkomst till nästan all information på enheten, både privat information och företagsinformation.
+5.  Välj **Logga ut**. Då får du ett sista meddelande om att lösenkoden tas bort från enheten. Ta inte bort lösenordet om du inte har enheten med dig. Om någon annan har fysisk åtkomst till enheten har den personen åtkomst till nästan all information på enheten, både privat information och företagsinformation. 
 
   ![Det andra meddelandet om återställning av lösenord med en varning om att lösenordet återställs för enheten och information om hur lösenordet tas bort från enheten. Meddelandet innehåller också information om hur du anger ett nytt lösenord via enhetsinställningarna.](./media/iwp-reset-passcode-2nd-popup.png)
 
@@ -61,6 +61,8 @@ Så här återställer du lösenordet:
   **Windows 10 Mobile**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror. Om du använder Windows Hello-ansiktsigenkänning för att logga in, stöds det fortfarande.
     
   **Windows Phone 8.1**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller siffror
+
+  För Android- och Windows-enheter visas det temporära lösenordet i **Enhetsinformation**. 
 
 6.  Lås upp enheten och ange ett nytt lösenord eller ändra det tillfälliga lösenordet genom att gå till enhetens **Inställningar**.
 

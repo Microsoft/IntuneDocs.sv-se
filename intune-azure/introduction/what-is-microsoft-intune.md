@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 03/15/2017
+ms.date: 04/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,9 +15,9 @@ ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: deea78dcea9ade031441bf12b388a862235a8e9c
-ms.openlocfilehash: 13d20cd985dbc22cd6d833fa333f31be809ffae5
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 92e07a49205ffaf287fc3aa2da6a6376b75fda4f
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -80,20 +80,26 @@ Det här avsnittet innehåller information om [nyheter](/intune-azure/introducti
 Information som hjälper dig att [planera och utforma](/intune-azure/plan-and-design/get-started) din Intune-miljö.
 ### <a name="device-enrollment"></a>Enhetsregistrering
 [Hur du får dina enheter att hanteras av Intune](/intune-azure/enroll-devices/what-is).
-### <a name="devices"></a>Egenskaper
-[Bekanta dig med de enheter du hanterar med hjälp av inventering och rapporter](/intune-azure/manage-devices/what-is).
-### <a name="manage-users-and-groups"></a>Hantera användare och grupper
-[Lär dig mer om användarna av de enheter du hanterar och sortera resurser i grupper](/intune-azure/manage-users/what-is).
-### <a name="manage-apps"></a>Hantera appar
-[Så publicerar, hanterar, konfigurerar och skyddar du appar](/intune-azure/manage-apps/what-is-app-management).
-### <a name="device-configuration"></a>Enhetskonfiguration
-[Lär dig om profilerna som du kan använda för att konfigurera inställningar och funktioner på enheter som du hanterar](/intune-azure/configure-devices/what-are-device-profiles).
 ### <a name="device-compliance"></a>Efterlevnad för enhet
 [Definiera en efterlevnadsnivå för dina enheter och rapportera sedan om alla enheter som inte är kompatibla](/intune-azure/set-device-compliance/what-is-device-compliance).
+### <a name="device-configuration"></a>Enhetskonfiguration
+[Lär dig om profilerna som du kan använda för att konfigurera inställningar och funktioner på enheter som du hanterar](/intune-azure/configure-devices/what-are-device-profiles).
+### <a name="devices"></a>Egenskaper
+[Bekanta dig med de enheter du hanterar med hjälp av inventering och rapporter](/intune-azure/manage-devices/what-is).
+### <a name="mobile-apps"></a>Mobilappar
+[Så publicerar, hanterar, konfigurerar och skyddar du appar](/intune-azure/manage-apps/what-is-app-management).
 ### <a name="conditional-access"></a>Villkorlig åtkomst
 [Begränsa åtkomsten till Exchange-tjänster utifrån de villkor som du anger](/intune-azure/conditional-access/what-is-conditional-access).
+### <a name="on-premises-access"></a>Lokal åtkomst
+[Konfigurera åtkomst till Exchange ActiveSync och Exchange On-premises](/intune/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
+### <a name="users"></a>Användare
+[Lär dig mer om användarna av de enheter du hanterar och sortera resurser i grupper](/intune-azure/manage-users/what-is).
+### <a name="groups"></a>Grupper
+[Läs om hur du kan använda Azure Active Directory-grupper med Intune](/intune-azure/manage-users/get-started-with-groups)
 ### <a name="intune-roles"></a>Intune-roller
 [Kontrollera vem som kan utföra olika Intune-åtgärder och vem dessa åtgärder gäller för](/intune-azure/access-control/role-based-access-control). Du kan antingen använda de inbyggda roller täcker vissa vanliga scenarier för Intune eller du kan skapa egna roller.
+### <a name="software-updates"></a>Programuppdateringar
+[Läs om hur du konfigurerar programuppdateringar för Windows 10-enheter](/intune-azure/configure-devices/how-to-configure-windows-update-for-business).
 
 
 
