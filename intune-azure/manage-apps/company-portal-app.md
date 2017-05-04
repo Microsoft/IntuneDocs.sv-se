@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 9ebfadd945916b6be8225b9e07d67100e3f91222
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: eae3a7d0771724076680ec7152b09e7364603880
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -31,7 +31,7 @@ Microsofts företagsportal för Intune är den plats där användare kan komma �
 > [!Tip]
 > När du anpassar företagsportalen gäller konfigurationerna både företagsportalens webbplats och företagsportalens appar.
 
-Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. För att göra det från arbetsbelastningen **Hantera appar** väljer du **Installation** > **Företagsspecifik anpassning i företagsportalappen** och konfigurerar därefter de inställningar som krävs.
+Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina slutanvändare. Du gör det genom att välja **Installation** > **Anpassning av företagsportalen** på arbetsbelastningen **Mobila appar**  och konfigurera sedan de inställningar som krävs.
 
 ## <a name="company-contact-information-and-privacy-statement"></a>Företagets kontaktinformation och sekretesspolicy
 Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och informationen visas för användarna på skärmen **Kontakta IT** på företagsportalen. Sekretesspolicyn visas när användaren klickar på sekretesslänken.

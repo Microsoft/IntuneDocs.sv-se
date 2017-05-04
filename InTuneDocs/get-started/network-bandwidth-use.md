@@ -15,9 +15,9 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5972171349325eeb750e552481cbcf903fdf95
-ms.openlocfilehash: 9f1cd7ea3e92ac2e3a1b828e8185961060a7c619
-ms.lasthandoff: 02/10/2017
+ms.sourcegitcommit: c8715f96f532ee6bacda231e1147d03226ecbb48
+ms.openlocfilehash: 5211d2222e5e8ef9328f60ed13f0146925194c5f
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -26,11 +26,7 @@ ms.lasthandoff: 02/10/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Den här vägledningen är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. För hjälp med att använda Intune på din mobila enhet se [vanliga frågor om Intune-företagsportalen](https://docs.microsoft.com/intune/enduser/company-portal-frequently-asked-questions).
-
-Innan du konfigurerar Microsoft Intune går du igenom det här avsnittet och andra krav som anges i [Vad du behöver veta innan du startar Microsoft Intune](what-to-know-before-you-start-microsoft-intune.md).
-
-Använd informationen i följande avsnitt när du planerar nätverkstrafiken för Microsoft Intune-klienter.
+Den här vägledningen hjälper Intune-administratörerna att förstå Intune-tjänstens nätverkskrav. Du kan använda den här informationen för att förstå de krav på bandbredd, IP-adress och portinställningar som proxyinställningarna kräver.
 
 ## <a name="average-network-traffic"></a>Genomsnittlig nätverkstrafik
 I den här tabellen visas den ungefärliga storleken och frekvensen för vanligt innehåll som skickas via nätverket för varje klient.

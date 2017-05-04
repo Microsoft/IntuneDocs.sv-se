@@ -16,8 +16,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 1809422e7f5a3d5aa5e2ef32e1aa7cadf00ecabb
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 330dba6b9402ef354d0925da27ee1b37ef50db00
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -42,8 +43,8 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Hantera appar** på **Intune**-bladet.
-4. I arbetsbelastningen **Hantera appar** väljer du **Övervaka** > **Användarstatus för appskydd** för att visa sammanfattningsvyn:
+3. Välj **Mobilappar** på **Intune**-bladet.
+4. Visa sammanfattningsvyn genom att välja **Övervaka** > **Användarstatus för appskydd** i arbetsbelastningen **Mobile Apps**:
 
 ![Panelen Sammanfattning på bladet Hantering av mobilprogram i Intune](../media/app-protection-user-status-summary.png)
 
@@ -126,20 +127,15 @@ Generera appskyddsrapporten genom att följa dessa anvisningar:
 
 1. Välj Appskyddsrapport på bladet Hantering av mobilappar i Intune.
 
-    ![Skärmbild&6;](../media/app-protection-report-csv-2.png)
+    ![Skärmbild 6](../media/app-protection-report-csv-2.png)
 
 2. Välj först Ja om du vill spara rapporten, välj sedan Spara som och ange den mapp som du vill spara rapporten i.
 
-    ![Skärmbild&7;](../media/app-protection-report-csv-1.png)
+    ![Skärmbild 7](../media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Se även
 [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-android-apps.md)
 * [Vad som händer när din iOS-app hanteras av appskyddsprinciper](app-protection-enabled-ios-apps.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

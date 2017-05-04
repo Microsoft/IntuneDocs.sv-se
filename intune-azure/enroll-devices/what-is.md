@@ -15,9 +15,9 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: 671d862c8d9a98e02f33d96cf6ceba712e740dec
-ms.openlocfilehash: 6127604afb01a9482eadc3d03b566304e2acdd21
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: a816ee8fd2738cf244fd46a91af46d2b137a5dfb
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -27,11 +27,11 @@ ms.lasthandoff: 03/17/2017
 
 I det här avsnittet beskrivs olika sätt att registrera mobila enheter i Intune-hanteringen.
 
-Du kan registrera enheter, inklusive Windows-datorer, i Intune för att kunna hantera de enheterna. Vi refererar till den här funktionen i Intune-dokumentationen som hantering av mobila enheter (MDM). När enheterna har registrerats som mobila enheter (inte som datorer), utfärdas ett MDM-certifikat som enheterna sedan använder för att kommunicera med Intune-tjänsten.
+Registrera enheterna i Intune så att du kan hantera dem. Vi refererar till den här funktionen i Intune-dokumentationen som hantering av mobila enheter (MDM). När enheterna har registrerats i Intune utfärdas ett MDM-certifikat som enheterna sedan använder för att kommunicera med Intune-tjänsten.
 
 Hur du registrerar dina enheter beror på typen av enhet, ägarskapet och vilken hanteringsnivå som krävs. BYOD (Bring Your Own Device)-registrering låter användare att registrera sina personliga telefoner, surfplattor eller datorer. Registrering av företagsägda enheter möjliggör hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav.
 
-Om du använder Exchange ActiveSync, antingen lokalt eller med värd i molnet, kan du aktivera enkel Intune-hantering utan registrering (mer information kommer snart). Du kan hantera Windows-datorer som mobila enheter, vilket är den rekommenderade metod som beskrivs nedan. Du kan också hantera dem som datorer med hjälp av [Intune-klientprogrammet](https://docs.microsoft.com/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
+Om du använder Exchange ActiveSync, antingen lokalt eller med värd i molnet, kan du aktivera enkel Intune-hantering utan registrering (mer information kommer snart). Du kan hantera Windows-datorer som mobila enheter, vilket är den rekommenderade metod som beskrivs nedan.
 
 
 ## <a name="overview-of-device-enrollment-methods"></a>Översikt över registreringsmetoder för enheter
@@ -53,21 +53,20 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 |**[USB-SA](#usb-sa)**|    Ja |    Valfri |    Nej| [Mer information](enroll-ios-devices-with-apple-configurator-and-setup-assistant.md)|
 |**[USB-Direct](#usb-direct)**|    Nej |    Nej    | Nej|[Mer information](enroll-ios-devices-with-apple-configurator-and-direct-enrollment.md)|
 
-
-
 **Metoder för Windows-registrering**
 
 | **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej |    Ja |    Nej | Mer information kommer snart|
+|**[BYOD](#byod)** | Nej |    Ja |    Nej | [Mer information](#enroll-windows-devices.md)|
 |**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-devices-using-device-enrollment-manager.md)|
 
 **Metoder för Android-registrering**
 
 | **Metod** |    **Krävs rensning?** |    **Tillhörighet**    |    **Lås** | **Information**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | Nej|    Ja |    Nej | Mer information kommer snart|
+|**[BYOD](#byod)** | Nej|    Ja |    Nej | [Mer information](#enroll-android-and-knox-standard-devices.md)|
 |**[DEM](#dem)**|    Nej |Nej |Nej    |[Mer information](enroll-ios-devices-using-device-enrollment-program.md)|
+|[**Android for Work**](#android-for-work)| Nej | Ja | Nej| [Mer information](#enroll-android-and-knox-standard-devices.md) |
 
 
 ## <a name="byod"></a>BYOD
@@ -112,21 +111,11 @@ Mer information om iOS-registrering finns i:
 ## <a name="mobile-device-management-with-exchange-activesync-and-intune"></a>Hantering av mobila enheter med Exchange ActiveSync och Intune
 Mobila enheter som inte är registrerade men som ansluter till Exchange ActiveSync (EAS) kan hanteras av Intune med EAS MDM-principen. Intune använder en Exchange-anslutning för att kommunicera med EAS, antingen lokalt eller i molnet. Mer information kommer snart.
 
-
-## <a name="windows-pc-management-with-intune"></a>Hantera Windows-datorer med Intune  
-Du kan också använda Microsoft Intune för att hantera Windows-datorer med klientprogramvaran för Intune för Windows. Datorer som hanteras med Intune-klienten kan:
-
- - Rapportera program- och maskinvaruinventering
- - Installera skrivbordsprogram (till exempel .exe och .msi-filer)
- - Hantera Brandväggsinställningar
-
-Datorer som hanteras med Intune-klientprogrammet kan inte rensas helt, men selektiv rensning är tillgängligt. Datorer som hanteras med Intune-klientprogrammet kan inte dra nytta av många av Intunes hanteringsfunktioner, t.ex. villkorlig åtkomst, VPN- och Wi-Fi-inställningar eller distribution av certifikat och e-postkonfigurationer. Mer information kommer snart.
-
 ## <a name="supported-device-platforms-and-browsers"></a>Enhetsplattformar och webbläsare som stöds
 
 Se [Enheter och webbläsare som stöds för Intune](https://docs.microsoft.com/intune/get-started/supported-mobile-devices-and-computers)
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 
-MDM-certifikatet förnyas automatiskt när mobila enheter kommunicerar med Intune-tjänsten. Om mobila enheter (inte datorer) raderas eller om de inte kan kommunicera med Intune-tjänsten under en viss tidsperiod, kommer MDM-certifikatet inte att förnyas. Enheten tas bort från Azure-portalen 180 dagar efter att MDM-certifikatet har upphört att gälla.
+MDM-certifikatet förnyas automatiskt när mobila enheter kommunicerar med Intune-tjänsten. Om mobila enheter raderas eller om de inte kan kommunicera med Intune-tjänsten under en viss tidsperiod, kommer MDM-certifikatet inte att förnyas. Enheten tas bort från Azure-portalen 180 dagar efter att MDM-certifikatet har upphört att gälla.
 

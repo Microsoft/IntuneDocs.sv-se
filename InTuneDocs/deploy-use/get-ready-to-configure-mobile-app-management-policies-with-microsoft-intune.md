@@ -15,9 +15,9 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 53b86bf579af6af29fd36ce58f9cdf1e92b98abc
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 71ebb310699cf80310b33be1b665a968ac102bde
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -86,7 +86,7 @@ Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumera
 
   - Skapa konton för SharePoint Online och Exchange Online-arbete. Lokalt Exchange och lokalt SharePoint stöds inte.
 
--   **Installation av Skype för företag – Online för modern autentisering**. Mer information finns i [Aktivera modern autentisering](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+-   **Installation av Skype för företag – Online för modern autentisering**. Mer information finns i [Aktivera modern autentisering](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Azure Active Directory (Azure AD) för att skapa användare. Azure AD autentiserar användare när de öppnar appen och anger sina autentiseringsuppgifter för arbetet.
@@ -96,7 +96,7 @@ Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumera
 
 ### <a name="create-users-and-assign-microsoft-intune-licenses"></a>Skapa användare och tilldela Microsoft Intune-licenser
 
-1.  Logga in som administratör på [Office-portalen](http://portal.office.com).
+1.  Logga in som administratör på [Office-portalen](https://portal.office.com).
 
 2.  Lägg till användare såsom beskrivs i avsnittet **Steg för att slutföra en 30-dagars utvärderingsversion av Intune** i [utvärderingsguiden för Intune](https://docs.microsoft.com/intune/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune) och tilldela sedan Intune-licenser. Om du vill ge en användare möjlighet att komma åt Office-portalen, Azure AD-portalen och Azure Portal tilldelar du användaren rollen **Global administratör**.
 

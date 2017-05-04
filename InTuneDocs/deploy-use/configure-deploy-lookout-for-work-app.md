@@ -14,9 +14,9 @@ ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: eaf30c8a59013af6359743227edc8aa6709577c5
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 44429b8694d15006f77a9eb5206293a6bcc8090b
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -55,7 +55,7 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
 
 ## <a name="ios-enterprise-signed-version-of-lookout-app"></a>iOS (Företagssignerad version av Lookout-appen)
 
-1. Kontrollera att **iOS management** (iOS-hantering) är inställt på enheten. Anvisningar om hur du ställer in din enhet för iOS-hantering finns i [Set up iOS and Mac device management](set-up-ios-and-mac-management-with-microsoft-intune.md) (Konfigurera iOS- och Mac-enhetshantering).
+1. Kontrollera att **iOS management** (iOS-hantering) är inställt på enheten. Anvisningar om hur du ställer in din enhet för iOS-hantering finns i [Konfigurera iOS- och Mac-enhetshantering](set-up-ios-and-mac-management-with-microsoft-intune.md).
 
 2. **Omsignera** iOS-appen Lookout for Work. Lookout distribuerar iOS-appen Lookout for Work utanför iOS App Store. **Before distributing the app** (Innan du distribuerar appen) måste du omsignera appen med din iOS Enterprise Developer-certifikat. Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns i [Omsigneringsprocessen för iOS-appen Lookout for Work](https://personal.support.lookout.com/hc/articles/114094038714) på Lookout-platsen.
 
@@ -87,12 +87,11 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
   Välj alternativet **Nödvändig installation** för att kräva att Lookout-appen installeras på användarens enhet.
 
 ## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Vad händer när den distribuerade appen öppnas på enheten
+https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md När användaren öppnar Lookout for Work på enheten uppmanas hen att aktivera appen och att välja alternativet att logga in med Azure Active Directory. En detaljerad genomgång som visar vad slutanvändaren ska göra finns i följande avsnitt:
 
-När användaren öppnar Lookout for Work på enheten uppmanas de att aktivera appen och att välja alternativet att logga in med Azure Active Directory. En detaljerad genomgång som visar vad slutanvändaren ska göra finns i följande avsnitt:
+* [Du uppmanas att installera Lookout for Work på din Android-enhet](https://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
 
-* [Du uppmanas att installera Lookout for Work på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-are-prompted-to-install-lookout-for-work-android)
-
-* [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
+* [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](https://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## <a name="next-steps"></a>Nästa steg
 * [Skapa en efterlevnadsprincip för Lookout-enheten i Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)

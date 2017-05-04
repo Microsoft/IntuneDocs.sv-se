@@ -15,9 +15,9 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab5aa4e12d951d818c5afb4e1ac5e866b05733fb
-ms.openlocfilehash: 26d11bc64802005bcce8cc1962d531af6ffe5cd5
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 12584743534a76d0b2ce92e5de6cb5f916453938
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -50,7 +50,7 @@ Detta är en vanlig metod när man vill förbättra en migreringskampanj med vil
 
 -   Användare av den tidigare lösningen kan eventuellt få åtkomst till resurser som använder ohanterade enheter innan den villkorliga åtkomsten aktiveras för dessa användare.
 
-> [!TIP] 
+> [!TIP]
 > Det här är ett sätt av flera. Du kan välja en enklare process som skjuter upp all villkorlig åtkomst till efter det att varje fas har instruerats om registrering, eller så kan du välja en striktare process som tillämpar villkorlig åtkomst direkt från start och som kräver fullständig efterlevnad för all åtkomst.
 
 -   Läs mer om [villkorlig åtkomst](https://docs.microsoft.com/intune-azure/conditional-access/what-is-conditional-access).
@@ -61,7 +61,7 @@ Detta är en vanlig metod när man vill förbättra en migreringskampanj med vil
 
 -   Lär dig [hur man konfigurerar villkorlig åtkomst](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 
-### <a name="task-2-setup-intune-conditional-access"></a>Uppgift 2: Konfigurera villkorlig åtkomst för Intune
+### <a name="task-2-set-up-intune-conditional-access"></a>Uppgift 2: Konfigurera villkorlig åtkomst för Intune
 
 Välj någon av följande principtyper för villkorlig åtkomst om du vill veta mer:
 

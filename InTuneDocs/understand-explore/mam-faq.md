@@ -15,9 +15,9 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: aea41c86e1fe784d6234f4ff90e299632b2a6d5f
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: 32446d9a6f9383b5449dbabf288b0eac0b483ebb
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -38,7 +38,7 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
  Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka enhetskonfigurationer har MAM stöd för?** Intune MAM stöder två konfigurationer:
-  1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). För att hantera appar med hjälp av MDM + MAM ska kunder använda den fristående Intune-konsolen på http://manage.microsoft.com.
+  1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). Om kunderna vill hantera appar med hjälp av MDM + MAM bör de använda den fristående Intune-konsolen på https://manage.microsoft.com.
 
   2. **MAM utan enhetsregistrering**: Med MAM utan enhetsregistrering, eller MAM-WE, kan IT-administratörer hantera appar med hjälp av MAM och appskyddsprinciper på enheter som inte har registrerats med Intune MDM. Detta innebär att appar kan hanteras av Intune på enheter som registrerats med tredje parts EMM-leverantörer. För att hantera appar med hjälp av MAM-WE ska kunder använda Intune-konsolen i Azure-portalen på http://portal.azure.com.
 
@@ -138,7 +138,7 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 ## <a name="app-experience-on-ios"></a>App-upplevelse på iOS
 
-**Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+**Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune  _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
 
 ### <a name="see-also"></a>Se även
 - [Inställningar för hanteringsprincip för Android-mobilappar i Microsoft Intune](../deploy-use/android-mam-policy-settings.md)

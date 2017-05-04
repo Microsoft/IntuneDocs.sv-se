@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,9 +16,9 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 translationtype: Human Translation
-ms.sourcegitcommit: b372d4ee505ca39a4739069e5798918ecde134ea
-ms.openlocfilehash: abf45b835d13ef5fe4acb769194542611448504e
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
+ms.lasthandoff: 04/24/2017
 
 ---
 
@@ -76,8 +76,8 @@ Alla ändringar till grupper för användare och enhetsgrupper måste göras i [
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Hantera appar** på **Intune**-bladet.
-1. Välj **Hantera** > **Appar** i arbetsbelastningen **Hantera appar**.
+3. Välj **Mobilappar** på **Intune**-bladet.
+1. Välj **Hantera** > **Appar** i arbetsbelastningen **Mobilappar**.
 2. I listan på appbladet klickar du på den app som du vill tilldela.
 3. På bladet <*appnamn*>- **Översikt** väljer du **Hantera** > **Tilldelningar**.
 4. Välj **Välj grupper**, klicka sedan på bladet **Välj grupper** och välj de Azure AD-grupper som du vill tilldela appen.

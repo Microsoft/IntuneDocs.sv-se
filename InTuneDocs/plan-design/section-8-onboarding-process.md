@@ -15,9 +15,9 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 23d40a31c43a061e0f3b1fbb05827697ca7380ac
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
+ms.openlocfilehash: 307a4aec1d9b86a92bde9114fdfd45846a82a2f3
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -84,7 +84,7 @@ Alla användare som ska vara mål för distributionen av EMS/Intune och Office 3
 
 #### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>Åtgärd 5: Ange utfärdare för hantering av mobila enheter till Intune
 
-Innan du kan börja installera, konfigurera, hantera och registrera enheter med Intune måste du ange utfärdare för hantering av enheter i Intune. Du anger utfärdare för hantering av enheter i Intune-administratörsportalen, i arbetsytan Admin.
+Innan du kan börja installera, konfigurera, hantera och registrera enheter med Intune måste du ange Intune som enhetshanteringsutfärdare. Du anger utfärdare för hantering av enheter i Intune-administratörsportalen, i arbetsytan Admin.
 
 -   Läs mer om att [ställa in utfärdare för hantering av enheter](https://docs.microsoft.com/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority).
 

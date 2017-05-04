@@ -15,9 +15,9 @@ ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
 translationtype: Human Translation
-ms.sourcegitcommit: 905be6a926dc5bab8e9b1016ba82751ee47313e5
-ms.openlocfilehash: 68dbebbd7d29514bde438b7dff3142dc45e8471d
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
+ms.openlocfilehash: f760d567ac339bbb60240ee9f8d28cb550656a59
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -63,7 +63,7 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Ladda ner programinstallationspaketet för den lokala Exchange Connector
 
-1. I ett Windows Server-operativsystem som stöder den lokala Exchange Connector öppnar du [Microsoft Intune-administratörskonsolen](http://manage.microsoft.com) (http://manage.microsoft.com) med ett användarkonto som är en administratör i Exchange-klientorganisationen och som har en licens för att använda Exchange Server.
+1. Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) (https://manage.microsoft.com) i ett Windows Server-operativsystem som stöder Exchange Connector lokalt. Använd ett användarkonto som är administratör i Exchange-klienten och som har en licens för att använda Exchange Server.
 ![Öppna Konfigurera Exchange Connection](../media/ExchangeConnector.gif)
 
 2.  I rutan med genvägar till arbetsytor väljer du **Admin**>**Hantering av mobila enheter** > **Microsoft Exchange**>**Installera Exchange Connection**.
@@ -129,7 +129,7 @@ När Exchange Connector har konfigurerat anslutningen synkroniseras automatiskt 
 
 ## <a name="validate-the-exchange-connection"></a>Validera Exchange-anslutningen
 
-När du har konfigurerat Exchange Connector kan du se status för anslutningen och det senaste lyckade synkroniseringsförsöket. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) väljer du arbetsytan **ADMIN**. Under **Hantering av mobila enheter** väljer du **Microsoft Exchange** och kontrollerar sedan att informationen som du angett visas under **Anslutningsinformation för Exchange**.
+När du har konfigurerat Exchange Connector kan du se status för anslutningen och det senaste lyckade synkroniseringsförsöket. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du arbetsytan **ADMIN**. Under **Hantering av mobila enheter** väljer du **Microsoft Exchange** och kontrollerar sedan att informationen som du angett visas under **Anslutningsinformation för Exchange**.
 
 
 Du kan också kontrollera datum och tid för det senaste lyckade synkroniseringsförsöket.
