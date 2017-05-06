@@ -94,6 +94,8 @@
 ### [Konfigurera företagsportalappen](manage-apps/company-portal-app.md)
 ## Så här använder du appskyddsprinciper
 ### [Skapa och tilldela appskyddsprinciper](manage-apps/app-protection-policies.md)
+### [Bli redo för WIP-appskyddsprinciper](manage-apps/get-ready-to-configure-app-protection-policies-for-windows-10.md)
+### [Skapa och tilldela WIP-appskyddsprinciper](manage-apps/create-windows-information-protection-policy-with-intune.md)
 #### [Inställningar för Android](manage-apps/android-app-protection-policy-settings.md)
 #### [Inställningar för iOS](manage-apps/ios-app-protection-policy-settings.md)
 ### [Verifiera appskyddsprinciper](manage-apps/validate-app-protection-policies.md)
@@ -151,6 +153,7 @@
 
 ### [Konfigurera inställningar för Windows 10-versionsuppgradering](configure-devices/how-to-configure-windows-10-edition-upgrade.md)
 ### [Konfigurera inställningar för Windows 10-utbildning](configure-devices/how-to-configure-education-settings.md)
+### [Konfigurera utbildningsinställningar för iOS](configure-devices/how-to-configure-ios-edu-settings.md)
 ### [Konfigurera inställningar för Windows Update för företag](configure-devices/how-to-configure-windows-update-for-business.md)
 ### [Konfigurera certifikat](configure-devices/how-to-configure-certificates.md)
 #### [SCEP](configure-devices/configure-certificate-infrastructure-for-scep.md)
