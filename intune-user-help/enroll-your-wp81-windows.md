@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: aca401cab49230d2bcb9171cf532b52ce5219798
-ms.openlocfilehash: ad18e2bdfe8a045077a1c91abfcc123afec72cb9
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a1968bedeba42758c36e7b9bb9cddfc26309ca71
+ms.openlocfilehash: 307999a7bb18a7b33d111bec212922558a5e10bf
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -48,7 +49,7 @@ Installera Företagsportal-applikationen på din enhet:
 
     ![Sökresultat för företagsportal](./media/WP81-1-CP-search-store-v2.png)
 
-4.  Tryck på **Företagsportal** &gt; ** Installera**.
+4.  Tryck på **Företagsportal**  &gt; **Installera**.
 
     ![Installera företagsportalen](./media/WP81-2-CP-install-v2.png)
 
