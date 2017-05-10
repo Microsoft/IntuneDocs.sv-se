@@ -8,10 +8,11 @@ ms.assetid: 99e91b60-d6a5-44a8-908f-442161fbb077
 ms.topic: hub-page
 title: Microsoft Intune-dokumentation | Microsoft Docs
 description: "Lär dig att använda Microsoft Intune."
-translationtype: Human Translation
-ms.sourcegitcommit: e96413a9f1398e7f025bbc2fbd66153c1c54c504
-ms.openlocfilehash: af6af39a041582bd93bac6aad551881be4cf0291
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7db42e591df8ec6c21f73b7ce49be624e1e29690
+ms.openlocfilehash: 3d44038d316977ad0dedef2aee844a64ca24b744
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/02/2017
 
 ---
 <div id="main" class="v2">
@@ -40,6 +41,7 @@ ms.lasthandoff: 04/24/2017
                             </div>
                         </li>
                         <li>
+                        <a href="/intune-azure/introduction/what-is-microsoft-intune">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -49,14 +51,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune-azure/introduction/what-is-microsoft-intune">Förhandsgranskning av Intune i Azure Portal</a></h3>
+                                            <h3>Förhandsgranskning av Intune i Azure-portalen</h3>
                                             <p>Läs om ändringarna i de nya portalen nu när Microsoft Intune flyttas till Azure Portal. </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                        <a href="/intune/plan-design/introduction">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -66,14 +70,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/plan-design/introduction">Distributionsplanering och design</a></h3>
+                                            <h3>Distributionsplanering och design</h3>
                                             <p>Gå stegvis igenom hela processen med att utveckla en distributionsplan, skapa en design, integrera Intune och genomföra en produktionsdistribution.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="/intune-education/what-is-intune-for-education">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -83,14 +89,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune">Informera slutanvändare om Microsoft Intune</a></h3>
-                                            <p>Lär dig hur du kan få dina slutanvändare att använda den säkra åtkomst som Intune tillhandahåller.</p>
+                                            <h3>Vad är Intune för utbildning?</h3>
+                                            <p>Läs hur du utför vanliga saker du behöver göra med enheter i ett klassrum.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -100,14 +108,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview">Arbeta med Intune i Microsoft Graph</a></h3>
+                                            <h3>Arbeta med Intune i Microsoft Graph</h3>
                                             <p>Använd Microsoft Graph API:erna när du ska konfigurera Intunes kontroller och principer.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -117,14 +127,16 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">Har du fler än 150 licenser? Utnyttja dina FastTrack-förmåner</a></h3>
+                                            <h3>Har du mer än 150 licenser? Utnyttja dina FastTrack-förmåner</h3>
                                             <p>Arbeta tillsammans med Microsofts experter för att få åtkomst till, åtgärda, aktivera och implementera användningen av dina tjänster.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
                         <li>
+                            <a href="/intune/understand-explore/mam-faq">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -134,12 +146,13 @@ ms.lasthandoff: 04/24/2017
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3><a href="/intune/understand-explore/mam-faq">Vanliga frågor och svar om MAM och appskydd</a></h3>
+                                            <h3>Vanliga frågor och svar om MAM och appskydd</h3>
                                             <p>Hitta svaren på några vanliga frågor om Intunes hantering av mobilappar och dess appskydd.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </li>
 <!--                        <li>
                             <div class="cardSize">
@@ -241,18 +254,18 @@ ms.lasthandoff: 04/24/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/understand-explore/mobile-device-management-trial-guide-microsoft-intune">
-                            <div class="cardSize">
+                            <a href="/intune-education/what-is-intune-for-education">
+                           <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage bgdAccent1">
-                                                <img src="/media/hubs/intune/intune-intro-devicemgmt.svg" alt="" />
+                                                <img src="/media/hubs/intune/intune-featured-educateusers.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Hantering av mobilenheter i Microsoft Intune</h3>
-                                            <p>Utvärdera hur hanteringen av mobilenheter fungerar i Intune.</p>
+                                            <h3>Vad är Intune för utbildning?</h3>
+                                            <p>Läs hur du utför vanliga saker du behöver göra med enheter i ett klassrum.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -470,7 +483,7 @@ ms.lasthandoff: 04/24/2017
                             </a>
                         </li>
                         <li>
-                            <a href="/intune/plan-design/section-2-identify-use-case-scenarios">
+                            <a href="/intune/plan-design/introduction">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
