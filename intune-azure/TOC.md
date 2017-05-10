@@ -1,5 +1,6 @@
 # Introduktion
 ## [Vad är förhandsversionen av Azure Portal?](introduction/what-is-microsoft-intune.md)
+## [Vad är Intune för utbildning?](/intune/understand-explore/introduction-to-intune-education?toc=/intune/toc.json)
 ## [Intune-funktioner i Azure](introduction/ui-changes-in-microsoft-intune.md)
 ## Kom igång
 <!---(introduction/get-started.md) --->
@@ -82,10 +83,13 @@
 #### [iOS LOB-appar](manage-apps/ios-lob-app.md)
 #### [Webbappar](manage-apps/web-app.md)
 #### [Windows Phone 8.1 Store-appar](manage-apps/windows-phone-8-1-store-app.md)
+#### [Windows Phone LOB-appar](manage-apps/windows-phone-line-of-business-app.md)
 #### [Windows Store-appar](manage-apps/windows-store-app.md)
+#### [Windows LOB-appar](manage-apps/windows-line-of-business-app.md)
 ### [Tilldela appar](manage-apps/deploy-apps.md)
 ### [Övervakning av appar](manage-apps/monitor-apps.md)
-### [Använd konfigurationsprinciper för appar](manage-apps/app-configuration-policies.md)
+### [Använd appkonfigurationsprofiler](manage-apps/app-configuration-policies.md)
+### [Använd iOS-appetableringsprofiler](manage-apps/ios-app-provisioning-profile.md)
 ### [Rensa appar selektivt](manage-apps/app-selective-wipe.md)
 <!---Is this specific to app protection policy or more general app management?--->
 ### [Arbeta med volyminköpta appar](manage-apps/volume-purchased-apps.md)
