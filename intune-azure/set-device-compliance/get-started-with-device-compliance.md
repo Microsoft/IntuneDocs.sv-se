@@ -15,10 +15,11 @@ ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: 0c0d2f73e48864caabdec6e83c2fdf58db5a0630
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: a0fa37130948126ea08e4cc0140d4c326c26782b
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -33,7 +34,7 @@ I det här avsnittet lär du dig följande:
 - Vad du behöver innan du kan börja skapa en princip för enhetsefterlevnad.
 - En snabb överblick över vad du kan se och göra i Intune Azure Preview Portal. 
 
-Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du läser [det här avsnittet](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance). Här får du information om vad enhetsefterlevnad är och hur du kan använda den i din organisation.
+Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du läser [det här avsnittet](what-is-device-compliance.md). Här får du information om vad enhetsefterlevnad är och hur du kan använda den i din organisation.
 
 ##  <a name="pre-requisites"></a>Förutsättningar
 

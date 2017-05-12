@@ -15,10 +15,11 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e76d66768ac58df25313e102b7f60d2bc7bbc59b
-ms.openlocfilehash: 3ef80446889e40464aed39fc83d9777dbfcc4d11
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 6fcbeb30fb11b6bc8def3a1c245bff56b3f7cca4
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/22/2017
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
-Med Intune kan du hantera macOS-enheter. För att aktivera hantering av enheter måste användarna registrera sina enheter genom att gå till [Företagsportalens webbplats](http://portal.manage.microsoft.com) och följa anvisningarna. När macOS-enheter hanteras kan du [skapa anpassade inställningar för macOS-enheter](https://docs.microsoft.com/intune-azure/configure-devices/custom-for-macos). Fler funktioner kommer snart att bli tillgängliga.
+Med Intune kan du hantera macOS-enheter. För att aktivera hantering av enheter måste användarna registrera sina enheter genom att gå till [Företagsportalens webbplats](http://portal.manage.microsoft.com) och följa anvisningarna. När macOS-enheter hanteras kan du [skapa anpassade inställningar för macOS-enheter](../configure-devices/custom-for-macos.md). Fler funktioner kommer snart att bli tillgängliga.
 
 ## <a name="prerequisites"></a>Förutsättningar
 
@@ -36,7 +37,7 @@ Uppfyll följande krav innan du konfigurerar registreringen av macOS-enheter:
 - [Konfigurera domäner](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
 - [Ange MDM-utfärdare](set-mdm-authority.md)
 - [Skapa grupper](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- [Konfigurera företagsportalen](/intune-azure/manage-apps/company-portal-app.md)
+- [Konfigurera företagsportalen](../manage-apps/company-portal-app.md)
 - Tilldela användarlicenser i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Hämta ett Apple MDM-pushcertifikat](get-an-apple-mdm-push-certificate.md)
 
@@ -44,9 +45,9 @@ Uppfyll följande krav innan du konfigurerar registreringen av macOS-enheter:
 
 Som standard tillåter Intune redan registrering av macOS-enheter.
 
-Se [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions) för att blockera macOS-enheter från registrering.
+Se [Ange begränsningar för enhetstyp](set-enrollment-restrictions.md#set-device-type-restrictions) för att blockera macOS-enheter från registrering.
 
-Se [Ange begränsningar för enhetsgräns](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-limit-restrictions) för att ange det maximala antalet enheter som en användare kan registrera.
+Se [Ange begränsningar för enhetsgräns](set-enrollment-restrictions.md#set-device-limit-restrictions) för att ange det maximala antalet enheter som en användare kan registrera.
 
 ## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurserna
 

@@ -1,12 +1,12 @@
 ---
-title: Tilldela appar till grupper
+title: "Så här tilldelar du grupper appar | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: När du har lagt till en app till Intune, behöver du tilldela den till grupper av användare eller enheter."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: a6a6992ab450a5601468c5d5e3eff112fc7ea222
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 21ccb23023e9cb4f4b827887f8191ea73474c5de
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -38,7 +39,7 @@ Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. An
 |Tilldela omslutna appar eller appar med Intune SDK (för appskyddsprinciper)|Ja|Ja|
 |Tilldela appar som är tillgängliga|Ja|Ja|
 |Tilldela appar vid behov|Ja|Nej|
-|Avinstallera appar|Ja|Ja|
+|Avinstallera appar|Ja|Nej|
 |Slutanvändarna installerar tillgängliga appar från företagsportalappen|Ja|Nej|
 |Slutanvändarna installerar tillgängliga appar från den webbaserade företagsportalen|Ja|Ja|
 
@@ -53,21 +54,21 @@ Det viktigaste är att notera att konceptet underordnade grupper inte finns i Az
 ||||||
 |-|-|-|-|-|
 |**Klassiska Intune (före migrering av klient)**|-|**Intune Azure (när migreringen av klienten är klar)**|-|**Mer information**|
-|**Distributionsavsikt för överordnad grupp**|**Distributionsavsikt för underordnad grupp**|**Resulterande tilldelningsavsikt för vanliga medlemmar i föregående överordnade och underordnade grupper**|**Resulterande tilldelningsåtgärd för medlemmar i överordnade grupp**|-|    
+|**Tilldelningsavsikt för överordnad grupp**|**Tilldelningsavsikt för underordnad grupp**|**Resulterande tilldelningsavsikt för vanliga medlemmar i föregående överordnade och underordnade grupper**|**Resulterande tilldelningsåtgärd för medlemmar i överordnade grupp**|-|    
 |Tillgänglig|Obligatoriskt|Nödvändig och Tillgänglig|Tillgänglig|Nödvändig och Tillgänglig innebär att appar som har tilldelats som nödvändig också kan visas i företagsportalappen.
-|Ej tillämpligt|Tillgänglig|Ej tillämpligt|Ej tillämpligt|Lösning: Ta bort distributionsavsikten ”Inte tillämplig” från den överordnade gruppen i Intune.
+|Ej tillämpligt|Tillgänglig|Ej tillämpligt|Ej tillämpligt|Lösning: Ta bort tilldelningsavsikten ”Inte tillämplig” från den överordnade gruppen i Intune.
 |Obligatoriskt|Tillgänglig|Nödvändig och Tillgänglig|Obligatoriskt|-|
 |Nödvändig och Tillgänglig<sup>1</sup>|Tillgänglig|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|    
 |Obligatoriskt|Ej tillämpligt|Obligatoriskt|Obligatoriskt|-|    
 |Nödvändig och Tillgänglig|Ej tillämpligt|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|    
 |Obligatoriskt|Avinstallera|Obligatoriskt|Obligatoriskt|-|    
 |Nödvändig och Tillgänglig|Avinstallera|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|
-<sup>1</sup> Endast för hanterade iOS store-appar. När du lägger till dem i Intune och distribuerar dem som Nödvändiga skapas de automatiskt med både avsikterna Nödvändig och Tillgänglig.
+<sup>1</sup> Endast för hanterade iOS store-appar. När du lägger till dem i Intune och tilldelar dem som Nödvändiga skapas de automatiskt med både avsikterna Nödvändig och Tillgänglig.
 
-Du kan utföra följande åtgärder för att undvika distributionskonflikter:
+Du kan utföra följande åtgärder för att undvika tilldelningskonflikter:
 
-1.    Överväg att ta bort de här distributionerna innan du påbörjar migreringen om du tidigare har distribuerat appar till relaterade överordnade och underordnade grupper i Intune.
-2.    Ta bort underordnade grupper från överordnade grupper och skapa en ny grupp som innehåller medlemmarna i den gamla underordnade gruppen. Du kan sedan skapa en ny appdistribution till den här gruppen.
+1.    Överväg att ta bort de här tilldelningarna innan du påbörjar migreringen om du tidigare har tilldelat appar till relaterade överordnade och underordnade grupper i Intune.
+2.    Ta bort underordnade grupper från överordnade grupper och skapa en ny grupp som innehåller medlemmarna i den gamla underordnade gruppen. Du kan sedan skapa en ny apptilldelning till den här gruppen.
 Kommentar: Om den tidigare överordnade gruppen var "Alla användare" måste du skapa en dynamisk grupp som inte innehåller medlemmarna i den underordnade gruppen.
 Alla ändringar till grupper för användare och enhetsgrupper måste göras i [Azure Portal](https://portal.azure.com/). Den [klassiska Azure-portalen](https://manage.windowsazure.com/) låter dig endast att göra ändringar till användargrupper.
 

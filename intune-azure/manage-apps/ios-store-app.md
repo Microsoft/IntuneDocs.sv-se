@@ -1,12 +1,12 @@
 ---
-title: "Så här lägger du till iOS Store-appar i Intune"
+title: "Så här lägger du till iOS Store-appar i Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs mer om att lägga till iOS Store-appar i Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,21 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 21e6089bf8a88f107518c7bccfa7bf79b3021a23
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 011f33d1d8569a079f73baaca6ba2a665131691d
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Så här lägger du till iOS Store-appar i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
+
+## <a name="before-you-start"></a>Innan du börjar
+
+Du kan endast tilldela appar med den här metoden om de är gratis i App Store. Om du vill tilldela betalappar med hjälp av Intune bör du använda [volyminköpsprogrammet för iOS](ios-vpp-apps.md).
 
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Steg 1 – Sök efter appen i butiken
@@ -57,4 +62,5 @@ ms.lasthandoff: 02/18/2017
 - **Ladda upp ikon** – Överför en ikon som ska kopplas till appen. Den här ikonen visas med appen när användare söker i företagsportalen.
 3. När du är klar väljer du **Spara** på bladet **Lägg till app**.
 
-Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).
+Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](deploy-apps.md).
+

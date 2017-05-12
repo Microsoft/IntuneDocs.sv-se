@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
-ms.openlocfilehash: a816ee8fd2738cf244fd46a91af46d2b137a5dfb
-ms.lasthandoff: 04/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: adeea52461f58bd03b291c4b2cc336e9da19d429
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -38,7 +39,7 @@ Om du använder Exchange ActiveSync, antingen lokalt eller med värd i molnet, k
 
 Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds och kraven för varje metod. Funktionerna och kraven beskrivs nedan. I tabellen används följande termer:
 
-- **Rensa** – Anger om enheten måste rensas innan användarna kan registrera enheten. Termen ”rensa” innebär en fabriksåterställning av enheten, vilket tar bort alla data. Mer information finns i [Använd fullständig eller selektiv rensning av enheter](/intune-azure/manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune).
+- **Rensa** – Anger om enheten måste rensas innan användarna kan registrera enheten. Termen ”rensa” innebär en fabriksåterställning av enheten, vilket tar bort alla data. Mer information finns i [Använd fullständig eller selektiv rensning av enheter](../manage-devices/use-full-or-selective-wipe-on-devices-using-microsoft-intune.md).
 - **Tillhörighet** – Kopplar enheter till användare. Krävs för hantering av mobila program (MAM) och villkorlig åtkomst till företagsdata. Mer information finns i [Användartillhörighet](enroll-ios-devices-using-device-enrollment-program.md).
 - **Lås** – Indikerar om användare hindras från att avregistrera sina enheter från hanteringen. Användare kan avregistrera sina enheter på alla plattformar med företagsportalappen. De kan inte använda menyerna i operativsystemet för att avregistrera.
 
@@ -70,7 +71,7 @@ Följande tabell visar Intune-registreringsmetoder och de funktioner som stöds 
 
 
 ## <a name="byod"></a>BYOD
-"Bring your own device"-användare installerar företagsportalsappen och registrerar sina enheter. Detta gör det möjligt för användare att ansluta till företagets nätverk och till domänen eller Azure Active Directory. För de flesta plattformar måste du aktivera BYOD-registrering för många COD-scenarier. Du kan blockera registrering av personligt ägda iOS- och Android-enheter. Anvisningar finns i [Ange begränsningar för enhetstyp](https://docs.microsoft.com/intune-azure/enroll-devices/set-enrollment-restrictions#set-device-type-restrictions).
+"Bring your own device"-användare installerar företagsportalsappen och registrerar sina enheter. Detta gör det möjligt för användare att ansluta till företagets nätverk och till domänen eller Azure Active Directory. För de flesta plattformar måste du aktivera BYOD-registrering för många COD-scenarier. Du kan blockera registrering av personligt ägda iOS- och Android-enheter. Anvisningar finns i [Ange begränsningar för enhetstyp](set-enrollment-restrictions.md#set-device-type-restrictions).
 
 ## <a name="corporate-owned-devices"></a>Företagsägda enheter
 Företagsägda enheter kan hanteras med Azure-portalen. iOS-enheter kan registreras direkt via de verktyg som tillhandahålls av Apple. Alla enhetstyper kan registreras av en administratör eller chef med hjälp av hanteraren för enhetsregistrering. Enheter med ett IMEI kan också identifieras och taggas som företagsägda för att möjliggöra COD-scenarier.

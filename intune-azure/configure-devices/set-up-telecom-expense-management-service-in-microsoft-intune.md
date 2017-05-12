@@ -15,10 +15,11 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: b0d0ad102942c65ac3988ea4659b34b397289126
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e0f40d21412e261d31a0a492c260a6097d4dd007
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -99,7 +100,7 @@ För att säkerställa att dataanvändning endast samlas in från företagsägda
 
 Beroende på organisationens behov måste du skapa minst två enhetskategorier (till exempel Företag och Personliga) och skapa dynamiska enhetsgrupper för varje kategori. Du kan skapa fler kategorier för din organisation om det behövs.
 
-Dessa kategorier visas för användarna under registreringen. Beroende på vilken kategori användarna väljer flyttas den registrerade enheten till motsvarande enhetsgrupp. Steg som beskriver hur du skapar enhetskategorier finns i [Mappa enheter till grupper](https://docs.microsoft.com/intune-azure/enroll-devices/how-to-use-device-group-mapping).
+Dessa kategorier visas för användarna under registreringen. Beroende på vilken kategori användarna väljer flyttas den registrerade enheten till motsvarande enhetsgrupp. Steg som beskriver hur du skapar enhetskategorier finns i [Mappa enheter till grupper](../enroll-devices/how-to-use-device-group-mapping.md).
 
   ![Skärmbild av bladet Lägg till en princip](../media/tem-dynamic-membership-rules.png)
 

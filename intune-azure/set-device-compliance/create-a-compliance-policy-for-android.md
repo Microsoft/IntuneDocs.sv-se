@@ -15,10 +15,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: cddeb6bf854b9ffbbc1744d5d164c8ceea34ff49
-ms.openlocfilehash: a0950e3b816128ccd042620eb1344f908c915a21
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 49c06de8ae4b04a3f6ea81cc17bc303b842374a5
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -75,7 +76,7 @@ Inställningen **Okända källor** måste vara aktiverad för program med separa
   - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
   - **Hög**: Det här alternativet är minst säkert. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
 
-Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https://docs.microsoft.com/en-us/intune/deploy-use/enable-device-threat-protection-rule-in-compliance-policy) för mer information.
+Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https://docs.microsoft.com/intune/deploy-use/enable-device-threat-protection-rule-in-compliance-policy) för mer information.
 
 ## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
 

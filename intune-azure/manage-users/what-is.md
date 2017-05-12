@@ -14,10 +14,11 @@ ms.technology:
 ms.assetid: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 03860275184824e72c94937ef3bb32c76cfef933
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 41de68c6962056164e8ac62aea657a74dd9b229e
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 02/18/2017
 
 Om du är nybörjare på Intune i Azure Portal ska du komma ihåg att du inte längre skapar grupper för Intune. Intune använder Azure AD-grupper precis som många andra program som du använder.
 
-Se [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-manage-groups) för att lära dig mer om att använda grupper i Azure AD.
+Se [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups) för att lära dig mer om att använda grupper i Azure AD.
 
 För att hantera grupper i [Azure Portal](https://portal.azure.com) söker du efter **Intune** och väljer **Hantera användare**. Du dirigeras då till arbetsbelastningen **Användare och grupper**, där du kan utföra följande åtgärder:
 
@@ -43,5 +44,5 @@ För att hantera grupper i [Azure Portal](https://portal.azure.com) söker du ef
 
 ## <a name="next-step"></a>Nästa steg
 
-[Kom igång med grupper](/intune-azure/manage-users/get-started-with-groups)
+[Kom igång med grupper](../manage-users/get-started-with-groups.md)
 

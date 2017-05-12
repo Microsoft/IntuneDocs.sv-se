@@ -15,10 +15,11 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: cb3342812a8b77f0b2ee8e2cdd1532ba6dfc651b
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.openlocfilehash: f9b828c7546b2dafe03177c193a18203e5905e5a
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/06/2017
 
 
 ---
@@ -128,11 +129,11 @@ Det finns dock vissa begränsningar som du bör känna till, t.ex.:
 
 ## <a name="multi-identity"></a>Flera identiteter
 
-Med appar som stöder flera identiteter kan du använda olika konton – arbete och privat – för att få åtkomst till samma appar när appskyddsprinciper tillämpas och apparna används i arbetskontexten.
+Med appar som stöder flera identiteter kan du använda olika konton (arbetskonton och privata konton) för att få åtkomst till samma appar, där appskyddsprinciperna endast tillämpas när apparna används i arbetskontexten.
 
-Om slutanvändaren exempelvis startar appen OneDrive med ett arbetskonto kan han eller hon inte flytta filerna till en personlig lagringsplats. Om slutanvändaren däremot använder OneDrive med ett personligt konto kan han eller hon kopiera och flytta data från sin personliga OneDrive utan begränsningar.
+Om en användare t.ex. startar appen OneDrive med sitt arbetskonto kan hen inte flytta filerna till en personlig lagringsplats. Om användaren däremot använder OneDrive med ett personligt konto kan hen kopiera och flytta data från sin personliga OneDrive utan begränsningar.
 
-Alla mobila Office-appar stöder multiidentitet.
+- Mer information om appar som stöder [MAM och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
 
 ##  <a name="next-steps"></a>Nästa steg
 

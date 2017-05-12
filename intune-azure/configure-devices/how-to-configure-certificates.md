@@ -1,12 +1,12 @@
 ---
-title: "Så här konfigurerar du certifikat med Intune"
+title: "Så här konfigurerar du certifikat med Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversionen av Intune Azure: Information om hur du kan använda Intune för att skapa och tilldela certifikat som hjälper dig att skydda Wi-Fi, VPN och andra anslutningar."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 7d1d3c101aaa3832e36a0b9e9369fd1eeb0a6250
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: ecb6a806e7870fd2b1986c4247607c9374431151
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -47,7 +48,7 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
     - Windows 8.1 och senare
     - Windows Phone 8.1 och senare
     - Windows 10 och senare
-3. Skapa certifikatprofiler så att enheter begär ett certifikat som ska användas för autentisering av VPN, Wi-Fi och åtkomst av e-post. Du kan skapa och distribuera en **PKCS**- eller en **SCEP**-certifikatprofil för enheter som kör följande plattformar:
+3. Skapa certifikatprofiler så att enheter begär ett certifikat som ska användas för autentisering av VPN, Wi-Fi och åtkomst av e-post. Du kan skapa och tilldela en **PKCS**- eller en **SCEP**-certifikatprofil för enheter som kör följande plattformar:
     - iOS 8.0 och senare
     - Android 4.0 och senare
     - Android for Work
@@ -71,8 +72,8 @@ Du måste skapa en separat profil för varje enhetsplattform. När du skapar pro
 
 Se något av följande avsnitt för att få hjälp med att konfigurera infrastrukturen för varje typ av certifikatprofil:
 
-- [Konfigurera och hantera SCEP-certifikat med Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurera och hantera PKCS-certifikat med Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurera och hantera SCEP-certifikat med Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurera och hantera PKCS-certifikat med Intune](configure-certificate-infrastructure-for-pfx.md)
 
 
 ## <a name="step-2---export-your-trusted-root-ca-certificate"></a>Steg 2 – Exportera ditt betrodda rotcertifikat för certifikatutfärdaren
@@ -119,8 +120,8 @@ Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa 
 
 Se något av följande avsnitt för att få hjälp med att konfigurera och tilldela varje typ av certifikatprofil:
 
-- [Konfigurera och hantera SCEP-certifikat med Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-scep)
-- [Konfigurera och hantera PKCS-certifikat med Intune](/intune-azure/configure-devices/configure-certificate-infrastructure-for-pfx)
+- [Konfigurera och hantera SCEP-certifikat med Intune](configure-certificate-infrastructure-for-scep.md)
+- [Konfigurera och hantera PKCS-certifikat med Intune](configure-certificate-infrastructure-for-pfx.md)
 
 När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar du SCEP- eller PKCS-certifikatprofiler för varje plattform som du vill använda. När du skapar en SCEP-certifikatprofil måste du ange en betrodd certifikatprofil för samma plattform. Detta länkar de två certifikatprofilerna, men du måste fortfarande tilldela varje profil separat.
 

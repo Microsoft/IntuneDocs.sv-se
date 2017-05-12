@@ -1,12 +1,12 @@
 ---
-title: "Felsöka enhetsprofiler i Microsoft Intune"
+title: "Felsöka enhetsprofiler i Microsoft Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Om du kört fast kan du använda det här avsnittet som hjälp för att lösa problem med enhetsprofiler i Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 1ba0dab35e0da6cfe744314a4935221a206fcea7
-ms.openlocfilehash: 9bc5b328fc204a12cf7aa992f62ac00b9ddfd45d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e2d0adc25417db96a2aeb1e57c2ef444dc96ff4d
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -30,8 +31,8 @@ ms.lasthandoff: 03/13/2017
 
 Informationen i det här avsnittet kan användas för att felsöka vanliga problem runt enhetsprofiler i Intune.
 
-## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-deployed"></a>Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har distribuerats?
-När en princip eller app distribueras börjar Intune genast att uppmana enheten att kontakta Intune-tjänsten. Detta brukar ta mindre än fem minuter.
+## <a name="how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned"></a>Hur lång tid tar det innan principerna eller apparna når mobilenheterna efter att de har tilldelats?
+När en princip eller app tilldelas börjar Intune genast att uppmana enheten att kontakta Intune-tjänsten. Detta brukar ta mindre än fem minuter.
 
 Om enheten inte kontaktar tjänsten för att be om principen när den första aviseringen har skickats, görs ytterligare tre försök.  Om enheten är offline (till exempel om den är avstängd eller inte är ansluten till ett nätverk) kanske den inte får aviseringarna. I så fall får enheten principen vid nästa schemalagda kontakt med Intune-tjänsten enligt följande:
 
@@ -50,12 +51,12 @@ Om enheten precis har registrerats sker kontrollerna oftare enligt följande:
 Användarna kan också söka efter principer när som helst genom att öppna företagsportalappen och synkronisera enheten.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Vilka åtgärder gör att Intune genast skickar en avisering till en enhet?
-Enheter kontaktar Intune antingen när de får en avisering som uppmanar dem att göra det, eller enligt schemalagda intervall.  När du specifikt riktar en åtgärd mot en enhet eller användare, t.ex. en rensning, låsning, återställning av lösenord, appdistribution, profildistribution (Wi-Fi, VPN, e-post osv.) eller principdistribution, börjar Intune genast att försöka meddela enheten att den ska kontakta Intune-tjänsten för att få dessa uppdateringar.
+Enheter kontaktar Intune antingen när de får en avisering som uppmanar dem att göra det, eller enligt schemalagda intervall.  När du specifikt riktar en åtgärd mot en enhet eller användare, t.ex. en rensning, låsning, återställning av lösenord, apptilldelning, profiltilldelning (Wi-Fi, VPN, e-post o.s.v.) eller principtilldelning, börjar Intune genast att försöka meddela enheten att den ska kontakta Intune-tjänsten för att få dessa uppdateringar.
 
 Andra ändringar, t.ex. en uppdatering av kontaktinformationen på företagsportalen, utlöser inte en omedelbar avisering till enheter.
 
-## <a name="if-multiple-policies-are-deployed-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer distribueras till samma användare eller enhet?
-När två eller fler principer distribueras till samma användare eller enhet så görs utvärderingen av vilken inställning som ska tillämpas på inställningsnivå:
+## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-will-get-applied"></a>Hur vet jag vilka inställningar som tillämpas om flera principer tilldelas samma användare eller enhet?
+När två eller fler principer tilldelas samma användare eller enhet så görs utvärderingen av vilken inställning som ska tillämpas på inställningsnivå:
 
 -   Inställningar för efterlevnadsprinciper har alltid högre prioritet än inställningar för konfigurationsprinciper.
 
@@ -63,25 +64,25 @@ När två eller fler principer distribueras till samma användare eller enhet s�
 
 -   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Intune-konsolen. Du måste lösa dessa konflikter manuellt.
 
-## <a name="what-happens-when-mobile-application-management-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Vad händer om hanteringsprinciper för mobilprogram (MAM) är i konflikt med varandra? Vilken används för appen?
-Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en MAM-princip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning).  Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
+## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Vad händer när appskyddsprinciper står i konflikt med varandra? Vilken används för appen?
+Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en appskyddsprincip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning).  Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.
 
-Konflikter uppstår om två principinställningar är samma.  Anta att du har konfigurerat två MAM-principer som är identiska förutom inställningen för kopiera/klistra in.  I detta scenario används det mest restriktiva värdet för kopierings- och inklistringsinställningen, men resten av inställningarna tillämpas så som de konfigurerats.
+Konflikter uppstår om två profilinställningar är samma.  Anta att du har konfigurerat två MAM-principer som är identiska förutom inställningen för kopiera/klistra in.  I detta scenario används det mest restriktiva värdet för kopierings- och inklistringsinställningen, men resten av inställningarna tillämpas så som de konfigurerats.
 
-Om en princip distribueras till appen och börjar tillämpas, och en andra princip distribueras senare, har den första principen företräde och fortsätter att tillämpas, medan den andra visas som i konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående princip, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
+Om en profil tilldelas appen och börjar tillämpas, och en andra profil tilldelas senare, har den första profilen företräde och fortsätter att tillämpas, medan den andra visas som i konflikt. Om båda tillämpas samtidigt, och det inte finns någon föregående profil, kommer båda att vara i konflikt. Som med alla inställningar i konflikt tillämpas de mest restriktiva värdena.
 
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Vad händer om anpassade iOS-principer är i konflikt med varandra?
-Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-principer (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
+Intune utvärderar inte nyttolasten för Apple Configuration-filer eller anpassade OMA-URI-profiler (Open Mobile Alliance Uniform Resource Identifier). Den fungerar bara som själva leveransmekanismen.
 
-När du distribuerar en anpassad princip bör du se till att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad princip har inställningar som är i konflikt med varandra tillämpas dessa inställningar i slumpmässig ordning.
+När du tilldelar en anpassad profil bör du se till att de konfigurerade inställningarna inte är i konflikt med efterlevnadsprinciper, konfigurationsprinciper eller andra anpassade principer. Om en anpassad profil har inställningar som är i konflikt med varandra tillämpas dessa inställningar i slumpmässig ordning.
 
-## <a name="what-happens-when-a-policy-is-deleted-or-no-longer-applicable"></a>Vad händer när en princip tas bort eller inte längre är tillämplig?
-När du tar bort en princip, eller när du tar bort en enhet från en grupp som en princip har distribuerats till, tas principer och inställningar bort från enheten enligt följande listor.
+## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Vad händer när en profil tas bort eller inte längre är tillämplig?
+När du tar bort en profil, eller när du tar bort en enhet från en grupp som en profil hade tilldelats, tas profil och inställningar bort från enheten enligt följande listor.
 
 ### <a name="enrolled-devices"></a>Registrerade enheter
 
 - Wi-Fi-, VPN-, certifikat- och e-postprofiler – De här profilerna tas bort från alla registrerade enheter som stöds.
-- Alla andra principtyper:
+- Alla andra profiltyper:
     - **Windows- och Android-enheter**: Inställningarna tas inte bort från enheten.
     - **Windows Phone 8.1-enheter**: Följande inställningar tas bort:
         - Kräv ett lösenord för att låsa upp mobila enheter
@@ -115,44 +116,13 @@ När du tar bort en princip, eller när du tar bort en enhet från en grupp som 
         - Tillåt dataroaming
         - Tillåt automatisk synkronisering vid roaming
 
-### <a name="windows-pcs-running-the-intune-client-software"></a>Windows-datorer med Intune-klientprogramvaran
+## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Jag ändrade en enhets begränsningsprofil, men ändringarna har inte börjar gälla
+Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in via MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva profilen har redan tillämpats för enheten.
 
-- **Endpoint Protection-inställningar**: Inställningarna återställs till rekommenderade värden. Det enda undantaget är inställningen **Delta i Microsoft Active Protection Service** där standardvärdet är **Nej**. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-- **Inställningar för programuppdateringar**: Inställningarna återställs till standardläget för operativsystemet. Mer information finns i [Hålla Windows-datorer uppdaterade med programvaruppdateringar i Microsoft Intune](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune).
-- **Microsoft Intune Center-inställningar**: All kontaktinformation för support som konfigurerats av principen tas bort från datorerna.
-- **Inställningar för Windows-brandväggen**: Inställningarna återställs till standardinställningarna för datorns operativsystem. Mer information finns i [Skydda Windows-datorer med Endpoint Protection](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune).
-
-
-## <a name="how-can-i-refresh-the-policies-on-a-device-to-ensure-that-they-are-current-applies-to-windows-pcs-running-the-intune-client-software-only"></a>Hur kan jag uppdatera principerna på en enhet för att säkerställa att de är aktuella (gäller endast Windows-datorer med Intune-klientprogramvaran)?
-
-1.  Markera de enheter i en enhetsgrupp som du vill uppdatera principerna på och välj sedan **Fjärruppgifter** &gt; **Uppdatera principer**.
-2.  Välj **Fjärruppgifter** i det nedre högra hörnet i Intune-administratörskonsolen för att kontrollera aktivitetsstatusen.
-
-
-
-### <a name="how-do-i-know-that-my-profile-was-assigned-to-a-device"></a>Hur vet jag att min profil har tilldelats till en enhet?
-
-I Intune-administratörskonsolen har varje enhet en principflik under **Egenskaper för enhet**. Varje princip har ett **Avsett värde** och en **Status**. Det avsedda värdet är vad du hade för avsikt att uppnå när du tilldelade principen. Statusen är vad som i själva verket har tillämpats när samtliga principer som gäller för enheten och de begränsningar och krav som gäller för maskinvara och operativsystem bedöms tillsammans. Möjliga statusar:
-
--   **Överensstämmer**: Enheten har tagit emot principen och rapporterar till tjänsten att den överensstämmer med inställningen.
-
--   **Inte tillämpligt**: Principinställningen är inte tillämplig. Till exempel kan e-postinställningar för iOS-enheter inte tillämpas för en Android-enhet.
-
--   **Väntar**: Principen skickades till enheten men har inte rapporterat statusen till tjänsten. Exempelvis kräver kryptering på Android att användaren aktiverar kryptering och kan därför vara ”väntande”.
-
-
-> [!NOTE]
-> Kom ihåg att om två principer med olika begränsningsnivåer tillämpas på samma enhet eller användare, så tillämpas i praktiken den mer restriktiva principen.
-
-
-## <a name="i-changed-a-device-restriction-policy-but-the-changes-havent-taken-effect"></a>Jag ändrade en enhets begränsningsprincip, men ändringarna har inte börjar gälla
-Windows Phone-enheter tillåter inte att säkerheten minskas för säkerhetsprinciper som har ställts in via MDM eller EAS när de väl har ställts in. Som om du exempelvis ställer in **minsta antalet tecken för lösenord** till 8 och sedan försöker att minska det till 4. Den mer restriktiva principen har redan tillämpats för enheten.
-
-Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra principen till ett mindre säkert värde.
+Du kan, beroende på enhetsplattform, vara tvungen att återställa säkerhetsprinciperna om du vill ändra profilen till ett mindre säkert värde.
 I Windows sveper du till exempel in från höger på skrivbordet så öppnas menyraden för **Snabbknappar** och väljer **Inställningar** &gt; **Kontrollpanelen**.  Välj appleten **Användarkonton** .
 I den vänstra navigeringsmenyn finns länken **Återställ säkerhetsprinciper** längst ned. Välj den och klicka sedan på **Återställ principer**.
-Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande princip.
-
+Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöva dras tillbaka och sedan registreras på nytt för tjänsten för att du ska kunna tillämpa en mindre begränsande profil.
 
 <!--- ## Status codes for MDM managed Windows devices
 
@@ -499,4 +469,4 @@ Andra MDM-enheter, som Android, Windows Phone 8.1 och senare och iOS, kan behöv
 --->
 
 ### <a name="next-steps"></a>Nästa steg
-Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
+Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](../introduction/how-to-get-support-for-microsoft-intune.md).

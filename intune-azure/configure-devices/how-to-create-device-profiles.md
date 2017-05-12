@@ -15,10 +15,11 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 17c5649e7ece5becd17e8ef9a74d748b6202693f
-ms.lasthandoff: 03/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 74a905ed2ba9ec04ae14df96fcd3f6b6caf1241c
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -39,16 +40,16 @@ ms.lasthandoff: 03/17/2017
     - **Plattform** – Välj plattformstyp för profilen som du vill skapa.
     - **Profiltyp** – Välj typ för den profil som du vill skapa. Listan över tillgängliga typer varierar beroende på vilken plattform som du har valt.
     - **Inställningar** – Se följande avsnitt för information om inställningarna för varje profiltyp:
-        -  [Inställningar av enhetsfunktion](/intune-azure/configure-devices/how-to-configure-device-features)
-        -  [Inställningar för enhetsbegränsning](/intune-azure/configure-devices/how-to-configure-device-restrictions)
-        -  [E-postinställningar](/intune-azure/configure-devices/how-to-configure-email-settings)
-        -  [VPN-inställningar](/intune-azure/configure-devices/how-to-configure-vpn-settings)
-        -  [Trådlösa inställningar](/intune-azure/configure-devices/how-to-configure-wi-fi-settings)
-        -  [Inställningar för uppgradering av Windows 10](/intune-azure/configure-devices/how-to-configure-windows-10-edition-upgrade)
-        -  [Certifikatinställningar](/intune-azure/configure-devices/how-to-configure-certificates)
-        -  [Inställningar för Windows informationsskydd](/intune-azure/configure-devices/how-to-configure-windows-information-protection)
-        -  [Utbildningsinställningar](/intune-azure/configure-devices/how-to-configure-education-settings)
-        -  [Anpassade inställningar](/intune-azure/configure-devices/how-to-configure-custom-settings)
+        -  [Inställningar av enhetsfunktion](how-to-configure-device-features.md)
+        -  [Inställningar för enhetsbegränsning](how-to-configure-device-restrictions.md)
+        -  [E-postinställningar](how-to-configure-email-settings.md)
+        -  [VPN-inställningar](how-to-configure-vpn-settings.md)
+        -  [Trådlösa inställningar](how-to-configure-wi-fi-settings.md)
+        -  [Inställningar för uppgradering av Windows 10](how-to-configure-windows-10-edition-upgrade.md)
+        -  [Certifikatinställningar](how-to-configure-certificates.md)
+        -  [Inställningar för Windows informationsskydd](how-to-configure-windows-information-protection.md)
+        -  [Utbildningsinställningar](how-to-configure-education-settings.md)
+        -  [Anpassade inställningar](how-to-configure-custom-settings.md)
 
     ![Skapa enhetsprofil](./media/create-device-profile.png)
 4. När du är klar med att konfigurera inställningar går du till bladet **Skapa profil** och väljer **Skapa**.
@@ -58,5 +59,5 @@ Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa 
 
 
 ### <a name="next-steps"></a>Nästa steg
-Information om hur du tilldelar enhetsprofiler finns i [Så här tilldelar du enhetsprofiler med Microsoft Intune](/intune-azure/configure-devices/how-to-assign-device-profiles).
+Information om hur du tilldelar enhetsprofiler finns i [Så här tilldelar du enhetsprofiler med Microsoft Intune](how-to-assign-device-profiles.md).
 

@@ -14,10 +14,11 @@ ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: ab91737586103ecc6f279daf6a55eb8988ad991a
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: a14f308102d677015dae93eb2c1a36ca95662056
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -46,7 +47,7 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 ### <a name="get-an-encryption-key"></a>Skaffa en krypteringsnyckel
 
-1. Som en administratörsanvändare öppnar du [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com), går till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer **Hämta krypteringsnyckel**.
+1. Som en administratörsanvändare öppnar du [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com), går till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer **Hämta krypteringsnyckel**.
 
 2. Spara filen med krypteringsnyckeln (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
 
@@ -68,20 +69,20 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 ### <a name="add-the-dep-token-to-intune"></a>Lägg till DEP-token i Intune
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram**.
 
 2. Välj **Överför DEP-token**. **Bläddra** till certifikatfilen (.p7m), ange ditt **Apple-ID** och välj sedan **Överför**.
 
 ### <a name="add-the-corporate-device-enrollment-policy"></a>Lägg till principen för registrering av företagsenheter
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
 
 2. Ange **Allmän** information, inklusive **Namn** och **Beskrivning**, och ange om enheter som är tilldelade till profilen har användartillhörighet eller tillhör en grupp:
 
    - **Fråga efter användartillhörighet**: Enheten måste kopplas till en användare under den ursprungliga installationen innan den kan beviljas samma åtkomst till företagets data och e-post som användaren. **Användartillhörighet** bör konfigureras för de DEP-hanterade enheter som tillhör användare och som behöver använda företagsportalen (dvs. för att installera appar). Multifaktorautentisering (MFA) fungerar inte under registreringen på DEP-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter. Nya användare som måste ändra sina lösenord när de loggar in första gången uppmanas inte under registreringen på DEP-enheter. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under DEP-registreringen. De måste återställa lösenordet från en annan enhet.
 
-   > [!NOTE]
-   > DEP med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt aktiveras för att du ska kunna begära en användartoken.
+       >[!NOTE]
+       >DEP med användartillhörighet kräver att [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/en-us/library/adfs2-help-endpoints) aktiveras för att du ska kunna begära en användartoken. [Läs mer om WS-Trust 1.3](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
    - **Ingen användartillhörighet**: Enheten är inte kopplad till någon användare. Använd den här tillhörighetstypen för enheter som utför uppgifter utan att komma åt lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för att installera affärsappar, kommer inte att fungera.
 
@@ -122,7 +123,7 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 ### <a name="assign-the-profile-to-devices"></a>Tilldela profilen till enheter
 
-1. I [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Tilldela**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Tilldela**.
 
 2. Välj de enheter som du vill tilldela den profil som du skapat. Du kan välja **Alla enheter** eller markera specifika enheter och sedan välja **Lägg till**.
 
@@ -143,9 +144,9 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 I det här steget synkroniseras enheter med Apples DEP-tjänst och gör så att enheterna visas i Intune-konsolen.
 
-1. Som en administratörsanvändare öppnar du [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com), går till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer **Hämta krypteringsnyckel**. En synkroniseringsbegäran skickas till Apple.
+1. Som en administratörsanvändare öppnar du [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com), går till **Admin** &gt; **Hantering av mobila enheter** &gt; **iOS** &gt; **Enhetsregistreringsprogram (DEP)** och väljer **Hämta krypteringsnyckel**. En synkroniseringsbegäran skickas till Apple.
 
-2. Om du vill se DEP-hanterade enheter efter synkroniseringen går du till [Microsoft Intune-administrationskonsolen](http://manage.microsoft.com), går till **Grupper** &gt; **Alla enheter**&gt;**Företagets förregistrerade enheter**&gt;**Efter iOS-serienummer**. På arbetsytan **Efter iOS-serienummer** visas ”Ej ansluten” för **Tillstånd** för en hanterad enhet tills enheten har startats och kör installationsassistenten för registrering.
+2. Om du vill se DEP-hanterade enheter efter synkroniseringen går du till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com), går till **Grupper** &gt; **Alla enheter**&gt;**Företagets förregistrerade enheter**&gt;**Efter iOS-serienummer**. På arbetsytan **Efter iOS-serienummer** visas ”Ej ansluten” för **Tillstånd** för en hanterad enhet tills enheten har startats och kör installationsassistenten för registrering.
 
    Om du vill följa Apples villkor för godkänd DEP-trafik tillämpar Intune följande begränsningar:
 
@@ -162,7 +163,11 @@ Nu kan dina företagsägda enheter distribueras till användarna. När en iOS-en
 
 ## <a name="changes-to-intune-group-assignments"></a>Ändringar i Intune-grupptilldelningar
 
-Från och med april 2017 flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för företagets registreringsprofil. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil. För varje Intune-enhetsgrupp som tilldelas i förväg av en profil för registrering av företagsenhet skapas en motsvarande dynamisk enhetsgrupp i AAD. Det görs baserat på namnet på profilen för registrering av företagsenhet under migreringen till Azure Active Directory-enhetsgrupper. Den här processen ser till att enheter som redan har tilldelats till en enhetsgrupp registreras automatiskt i gruppen med principer och appar distribuerade. Mer information om hur detta påverkar registrering av företagsägda iOS-enheter finns i [Ändringar i automatisk gruppering av företagets förregistrerade iOS-enheter](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/).
+Från och med april 2017 flyttas grupphantering för enheter till Azure Active Directory. Efter övergången till Azure Active Directory-grupper visas grupptilldelning inte i alternativen för företagets registreringsprofil. Eftersom ändringen görs över ett antal månader kan du kanske inte se ändringen direkt. Efter flytten till den nya portalen kan dynamiska enhetsgruppstilldelningar definieras baserat på namnet på företagets registreringsprofil.
+
+För varje Intune-enhetsgrupp som tilldelas i förväg av en profil för registrering av företagsenhet skapas en motsvarande dynamisk enhetsgrupp i AAD vid migreringstillfället. Det görs baserat på namnet på profilen för registrering av företagsenhet under migreringen till Azure Active Directory-enhetsgrupper. Nya profilnamn har formatet *EnrollmentProfile:&lt;namnet på tillhörande profilen&gt;*. Den här processen ser till att enheter som redan har tilldelats till en enhetsgrupp registreras automatiskt i gruppen med principer och appar distribuerade.
+
+Gruppen skapas endast automatiskt vid ett tillfälle: vid gruppmigreringen. Efter migreringen måste Intune-administratörer skapa grupper med hjälp av Azure-portalen. Mer information om hur detta påverkar registrering av företagsägda iOS-enheter finns i [Ändringar i automatisk gruppering av företagets förregistrerade iOS-enheter](https://blogs.technet.microsoft.com/intunesupport/2017/04/19/changes-to-automatic-grouping-for-corporate-pre-enrolled-ios-devices/).
 
 Du kan också välja [Läs mer om Azure Active Directory-grupper](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
 
