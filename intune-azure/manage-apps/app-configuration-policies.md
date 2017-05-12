@@ -1,12 +1,12 @@
 ---
-title: "Så här använder du appkonfigurationsprinciper i Intune"
+title: "Så här använder du appkonfigurationsprinciper i Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig hur du använder appkonfigurationsprinciper för att ange konfigurationsdata till en iOS-app när den körs."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/24/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 82af84bc3e31317023a2f8f7089431b1dbcaed52
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 847ddf08fdd7308475895af36f43c5391c9556fa
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -40,7 +41,7 @@ Om användarna inte anger dessa inställningar på korrekt sätt kan det öka su
 
 Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
 
-Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och distribuerar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
+Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
 
 > [!TIP]
 > Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
@@ -48,7 +49,7 @@ Du tilldelar inte principerna direkt till användare och enheter. I stället ass
 > -   **Hanterade iOS-appar från App Store**
 > -   **App-paket för iOS**
 >
-> Mer information om appinstallationstyper finns i [Så här lägger du till en app i Microsoft Intune](/intune-azure/manage-apps/add-apps).
+> Mer information om appinstallationstyper finns i [Så här lägger du till en app i Microsoft Intune](add-apps.md).
 
 ## <a name="create-an-app-configuration-policy"></a>Skapa en appkonfigurationsprincip
 

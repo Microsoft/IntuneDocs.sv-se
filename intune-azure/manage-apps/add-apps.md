@@ -1,12 +1,12 @@
 ---
-title: "Så här lägger du till appar i Microsoft Intune"
+title: "Så här lägger du till appar i Microsoft Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: De här procedurerna hjälper dig att få dina appar till Intune, redo att tilldelas till användare och enheter. "
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: d85544bdfaa3a369e1d2d03e5454ff7aa2d75467
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 529a3e91e1f86129de77df0529f48a42f86a6521
+ms.openlocfilehash: 69ae0926631edc00cc2dc12be559d366e1623140
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 ---
 
@@ -32,24 +33,27 @@ I Intune kan du lägga till och tilldela följande apptyper:
 
 ![Apptyper som stöds av Intune](./media/app-types.png)
 
-Följande plattformar stöds. Klicka på ett av avsnitten för mer information om hur du lägger till varje apptyp.
+Följande plattformar stöds.
 
-- [Android Store-appar](/intune-azure/manage-apps/android-store-app)
-- [Android LOB-appar](/intune-azure/manage-apps/android-lob-app)
-- [iOS Store-appar](/intune-azure/manage-apps/ios-store-app)
-- [iOS LOB-appar](/intune-azure/manage-apps/ios-lob-app)
-- [Webbappar (för alla plattformar)](/intune-azure/manage-apps/web-app)
-- [Windows Phone 8.1 Store-appar](/intune-azure/manage-apps/windows-phone-8-1-store-app)
-- [Windows Store-appar](/intune-azure/manage-apps/windows-store-app)
+- Android Store-appar
+- Verksamhetsspecifika appar för Android
+- iOS Store-appar
+- Verksamhetsspecifika appar för iOS
+- Webbappar
+- Windows Phone 8.1 Store-appar
+- Verksamhetsspecifika appar för Windows Phone (.xap-filer)
+- Windows Store-appar
+- Verksamhetsspecifika appar för Windows (endast .xap-filer)
 
-Dessutom kan vissa Microsoft-appar läggas till automatiskt av Intune när du konfigurerar din klient. Du hittar en lista över dessa senare i det här avsnittet.
+>[!TIP]
+> Verksamhetsspecifika appar (eller LOB) är sådana som du inte installerar från en appbutik utan installerar från appens installationsfil. Till exempel om du vill installera en LOB-app för iOS lägger du till en arkivfil för appen (med filnamnstillägget .ipa). Detta är vanligen appar som du har skrivit internt.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
 Tänk på följande innan du börjar lägga till och tilldela appar.
 
-- När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
-- Vissa appar eller objekt som du distribuerar kan vara beroende av inbyggda iOS-appar. Om du till exempel distribuerar en bok från iOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
+- När du lägger till och tilldelar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.
+- Vissa appar eller objekt som du tilldelar kan vara beroende av inbyggda iOS-appar. Om du till exempel tilldelar en bok från iOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
 
 ## <a name="cloud-storage-space"></a>Molnlagringsutrymme
 Alla appar som du skapar med installationstypen Programinstallation (till exempel en verksamhetsspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. 20 GB lagringsutrymme ingår i den fullständiga prenumerationen.
@@ -68,7 +72,7 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Hantera appar** på **Intune**-bladet.
+3. Välj **Mobilappar** på **Intune**-bladet.
 4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**.
 5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder:
     - **Skapa en kategori** – Ange ett namn för den nya kategorin på bladet **Skapa kategori**. Namn kan bara anges på ett språk och översätts inte av Intune. Klicka på **Skapa** när du är klar.
@@ -105,4 +109,18 @@ Följande appar, som publicerats av Microsoft, är inbyggda i Intune och klara a
 |Outlook Groups|Android|Hanterad Google Play-app|
 |Outlook Groups|iOS|Hanterad iOS Store-app|
 |PowerPoint|iOS|Hanterad iOS Store-app|
+
+## <a name="next-steps"></a>Nästa steg
+
+Välj något av följande avsnitt för att ta reda på hur du lägger till appar för varje Intune-plattform:
+
+- [Android Store-appar](android-store-app.md)
+- [Android LOB-appar](android-lob-app.md)
+- [iOS Store-appar](ios-store-app.md)
+- [iOS LOB-appar](ios-lob-app.md)
+- [Webbappar (för alla plattformar)](web-app.md)
+- [Windows Phone 8.1 Store-appar](windows-phone-8-1-store-app.md)
+- [Windows Phone LOB-appar](windows-phone-line-of-business-app.md)
+- [Windows Store-appar](windows-store-app.md)
+- [Windows LOB-appar](windows-line-of-business-app.md)
 

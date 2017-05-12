@@ -13,10 +13,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 911d2887791cf16d4290c3ac5189aa44086f4603
-ms.openlocfilehash: 5e2516611b933bb9c74c2b8dc973f85e1d82237f
-ms.lasthandoff: 03/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: e825d47860924de1350299c8998d958ed68c0418
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -54,7 +55,7 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
     ![Windows-inställning för diagnostik och användningsdata](./media/telemetry-basic.png)
 
-    Du kan konfigurera den här inställningen manuellt, eller så kan du använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Det gör du genom att ställa in **Allmänt** > **Diagnostikdata** på minst **Basic**. Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](/intune-azure/configure-devices/how-to-configure-device-restrictions).
+    Du kan konfigurera den här inställningen manuellt, eller så kan du använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Det gör du genom att ställa in **Allmänt** > **Diagnostikdata** på minst **Basic**. Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](how-to-configure-device-restrictions.md).
 
 - Den klassiska Intune-administrationskonsolen innehåller fyra inställningar som styr beteendet för programuppdateringar. De här inställningarna är en del av den allmänna konfigurationsprincipen för Windows 10 Desktop- och Mobile-enheter:
     - **Tillåt automatiska uppdateringar**
@@ -142,7 +143,7 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Programuppdateringar** på **Intune**-bladet.
 4. Välj **Hantera** > **Windows 10-uppdateringsringar** på bladet **Programuppdateringar**.
-5. På det blad där listan över uppdateringsringar visas markerar du den ring som du vill pausa och väljer sedan **...**  >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
+5. På det blad där listan över uppdateringsringar visas markerar du den ring som du vill pausa och väljer sedan **...**   >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
 
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando tar enheterna emot detta kommando nästa gång som de kontaktar tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.

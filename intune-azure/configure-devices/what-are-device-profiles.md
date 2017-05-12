@@ -1,5 +1,5 @@
 ---
-title: Vilka enhetsprofiler finns i Microsoft Intune?
+title: Vilka enhetsprofiler finns i Microsoft Intune? | Microsoft Docs
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Mer information om enhetsprofiler i Intune och hur de kan hjälpa dig att hantera och skydda enheter i företaget."
 keywords: 
@@ -15,10 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: ca4f1adc5704ecd66d2af7823f95ca63ec20469e
-ms.openlocfilehash: 5383e20081285131f91418b47162e0cd5ba92c90
-ms.lasthandoff: 03/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: b33d8ec48c057ce1e67487d5772ca203793d8a79
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -37,7 +38,7 @@ När du öppnar den här arbetsbelastningen ser du följande alternativ:
 
 ## <a name="getting-started"></a>Komma igång
 
-Arbetsflödet för att skapa enhetsprofiler är likadant för alla profiler. Läs [Så här skapar du enhetskonfigurationsprofiler i Microsoft Intune](/intune-azure/configure-devices/how-to-create-device-profiles) för information om hur du skapar profiler. Läs vidare för specifik information om att skapa inställningar för varje profiltyp.
+Arbetsflödet för att skapa enhetsprofiler är likadant för alla profiler. Läs [Så här skapar du enhetskonfigurationsprofiler i Microsoft Intune](how-to-create-device-profiles.md) för information om hur du skapar profiler. Läs vidare för specifik information om att skapa inställningar för varje profiltyp.
 
 Du kan hantera följande funktioner på dina enheter:
 
@@ -51,15 +52,15 @@ Med enhetsbegränsningar kan du styra en mängd olika inställningar för enhete
 Mer information finns i [Så här konfigurerar du inställningar för enhetsbegränsningar](how-to-configure-device-restrictions.md) Stöder: Android, iOS, macOS, Windows 10 och Windows 10 Team.
 
 ## <a name="email"></a>E-post
-Med e-postprofiler kan du skapa, distribuera och övervaka e-postinställningarna för Exchange ActiveSync på enheterna som du hanterar. Genom att distribuera inställningarna uppnår du konsekvens, minskar supportsamtalen och ger slutanvändarna åtkomst till företagets e-post på sina personliga enheter utan de behöver konfigurera något själva.
+Med e-postprofiler kan du skapa, tilldela och övervaka e-postinställningarna för Exchange ActiveSync på enheterna som du hanterar. Genom att tilldela inställningarna uppnår du konsekvens, minskar supportsamtalen och ger slutanvändarna åtkomst till företagets e-post på sina personliga enheter utan de behöver konfigurera något själva.
 Mer information finns i [Så här konfigurerar du e-postinställningar](how-to-configure-email-settings.md) Stöder: Android, iOS, Windows 8.1 och Windows 10.
 
 ## <a name="wi-fi"></a>Wi-Fi
-Använd trådlösa profiler för att distribuera trådlösa nätverksinställningar till användare och enheter i din organisation. När du distribuerar en Wi-Fi-profil får användarna åtkomst till ditt företags trådlösa nätverk utan att de behöver göra några inställningar själva.
+Använd trådlösa profiler för att tilldela trådlösa nätverksinställningar till användare och enheter i din organisation. När du tilldelar en Wi-Fi-profil får användarna åtkomst till ditt företags trådlösa nätverk utan att de behöver göra några inställningar själva.
 Mer information finns i [Så här konfigurerar du trådlösa inställningar](how-to-configure-wi-fi-settings.md) Stöder: Android, iOS, macOS och Windows 8.1 (endast import).
 
 ## <a name="vpn"></a>VPN
-Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheterna använder en profil för VPN-anslutning för att initiera en anslutning till VPN-servern. Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i din organisation, så att de enkelt och säkert kan ansluta till nätverket.
+Virtuella privata nätverk (VPN, Virtual Private Networks) ger användarna säker fjärråtkomst till företagets nätverk. Enheterna använder en profil för VPN-anslutning för att initiera en anslutning till VPN-servern. Använd VPN-profiler för att tilldela VPN-inställningar till användare och enheter i din organisation, så att de enkelt och säkert kan ansluta till nätverket.
 Mer information finns i [Så här konfigurerar du VPN-inställningar](how-to-configure-vpn-settings.md).
 Stöder: Android, iOS, macOS, Windows Phone 8.1, Windows 8.1 och Windows 10.
 

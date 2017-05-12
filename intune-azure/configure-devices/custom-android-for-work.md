@@ -15,23 +15,24 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: ac27b1915483568b9b9857405f7acaf704fd53d9
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 05afa9140e34b372cc49ace03a3ada965b907c17
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
 
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Skapa anpassade profilinställningar i Intune för Android for Work-enheter
 
-Använd en anpassad konfigurationsprincip för Android for Work i Intune för att distribuera OMA-URI-inställningar som kan användas till att styra funktioner på Android for Work-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
+Använd en anpassad konfigurationsprincip för Android for Work i Intune för att tilldela OMA-URI-inställningar som kan användas till att styra funktioner på Android for Work-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
-Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer. Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i det här avsnittet för att ta reda på vilka principer du kan konfigurera.
+Funktionen är avsedd för att kunna tilldela Android-inställningar som inte går att konfigurera med Intune-principer. Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i det här avsnittet för att ta reda på vilka principer du kan konfigurera.
 
 ## <a name="create-a-custom-profile"></a>Skapa en anpassad profil
 
-1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar](/intune-azure/configure-devices/how-to-configure-custom-settings).
+1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar](how-to-configure-custom-settings.md).
 2. På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till** för att lägga till en ny inställning.
 3. På bladet **Lägg till rad** konfigurerar du följande:
     - **Namn** – Ange ett unikt namn för den anpassade Android for Work-principen, som hjälper dig att identifiera den i Intune-portalen.

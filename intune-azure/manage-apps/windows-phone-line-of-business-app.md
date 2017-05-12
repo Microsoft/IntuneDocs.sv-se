@@ -1,7 +1,7 @@
 ---
-title: "Så här lägger du till branschspecifika iOS-appar i Intune"
+title: "Så här lägger du till branschspecifika Windows Phone-appar i Intune | Microsoft Docs"
 titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om att lägga till branschspecifika iOS-appar i Intune."
+description: "Förhandsversion av Intune Azure: Läs mer om att lägga till branschspecifika Windows Phone-appar i Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -11,19 +11,19 @@ ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
+ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
-ms.openlocfilehash: 70f0b575c92fb000f267e8b2585aff4482c5518c
+ms.openlocfilehash: 95d0c1b5598785ff30bfd912f65c39cc5e46b85c
 ms.contentlocale: sv-se
 ms.lasthandoff: 05/10/2017
 
 ---
 
-# <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika iOS-appar i Microsoft Intune
+# <a name="how-to-add-windows-phone-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Windows Phone-appar i Microsoft Intune
 
 [!INCLUDE[azure_preview](../includes/azure_preview.md)]
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
 
 1. På bladet **Lägg till app** väljer du filen **Appaket**.
-2. På bladet **Appaket** klickar du på knappen Bläddra och väljer en iOS-installationsfil med filnamnstillägget **.ipa**.
+2. På bladet **Appaket** väljer du knappen Bläddra. Välj sedan en Windows Phone-installationsfil med filnamnstillägget **.xap**.
 3. Välj **OK** när du är klar.
 
 
@@ -51,7 +51,6 @@ ms.lasthandoff: 05/10/2017
     - **Namn** – Ange namnet på appen så som det ska visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
     - **Beskrivning** – Ange en beskrivning för appen. Detta visas för användare i företagsportalen.
     - **Utgivare** – Ange namnet på appens utgivare.
-    - **Minsta operativsystem** – Välj den minsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
     - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det enklare för användarna att hitta appen när de söker i företagsportalen.
     - **Visa den här som aktuell app på företagsportalen** – Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
     - **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användare i företagsportalen.
