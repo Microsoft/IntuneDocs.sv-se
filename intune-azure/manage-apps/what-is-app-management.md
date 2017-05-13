@@ -1,12 +1,12 @@
 ---
-title: "Vad är apphantering"
+title: "Vad är apphantering | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Använd informationen i det här avsnittet för att lära dig grunderna om apphantering med Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 05/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 33def827fc7417930338e56c650d01df4dad85fb
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 34970d6adcfe41a6de9636a5605a17f9f5ef2d82
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -46,6 +47,7 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 |Lägga till och tilldela appar till enheter och användare|Ja|Ja|Ja|Ja|
 |Tilldela appar till enheter som inte registrerats med Intune|Ja|Ja|Nej|Nej|
 |Använda principer för appkonfigurering för att styra appars startfunktion|Nej|Ja|Nej|Nej|
+|Använda principer för etablering av mobilappar för att förnya utgångna appar|Nej|Ja|Nej|Nej|
 |Skydda företagets data i appar med appskyddsprinciper|Ja|Ja|Nej|Nej<sup>1</sup>|
 |Ta bort endast företagsdata från en installerad app (Selektiv rensning)|Ja|Ja|Ja|Ja|
 |Övervaka apptilldelningar|Ja|Ja|Ja|Ja|
@@ -68,7 +70,7 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Hantera appar** på **Intune**-bladet.
+3. Välj **Mobilappar** på **Intune**-bladet.
 
     ![Arbetsbelastningen mobilappar](./media/apps-workload.png)
 
@@ -77,16 +79,18 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
     - [Lägga till appar](add-apps.md)
     - [Tilldela appar](deploy-apps.md)
     - [Övervakning av appar](monitor-apps.md)
-- **Licensierade appar** – Visa, distribuera och övervaka volyminköpta appar från appbutiker.
-    - [Volyminköpta appar från Windows Store för företag](wsfb-apps.md)
 - **Konfigurationsprinciper för appar** – Konfigurationsprinciper för appar gör att du kan definiera inställningar som kan krävas när användaren kör en app. Mer information finns i:
     - [Konfigurationsprinciper för appar](app-configuration-policies.md)
 - **Appskyddsprinciper** – Låter dig koppla inställningar till en app för att skydda företagets data som den använder. Du kan till exempel begränsa möjligheterna för en app att kommunicera med andra appar eller kräva att användaren anger en PIN-kod för att få åtkomst till en företagsapp.
     - [Appskyddsprinciper](app-protection-policies.md)
 - **Appselektiv rensning** – Ta endast bort företagsdata från en användares enhet som du väljer.
     - [Appselektiv rensning](app-selective-wipe.md)
+- **Etableringsprofiler för iOS** – iOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla.
+    - [iOS-appetableringsprofiler](ios-app-provisioning-profile.md)
 
 ### <a name="monitor"></a>Övervakare
+- **Licensierade appar** – Visa, tilldela och övervaka volyminköpta appar från appbutiker.
+    - [Volyminköpta appar från Windows Store för företag](wsfb-apps.md)
 - **Identifierade appar** – Visar alla appar som har tilldelats av Intune och installerats på en enhet.
 - **Appinstallationsstatus** – Visar status för en apptilldelning som du skapat.
 - **Användarstatus för appskydd** – Visar status för en skyddsprincip hos en användare som du väljer.

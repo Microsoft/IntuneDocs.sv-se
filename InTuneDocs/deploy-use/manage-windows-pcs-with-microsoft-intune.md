@@ -14,40 +14,26 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
-ms.openlocfilehash: 74f2848dcd2863022dac44cf302b330a99cf1a55
-ms.lasthandoff: 03/29/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 271459e3faf886a45bcd673d2450f36a4a33a5db
+ms.openlocfilehash: 0060eb9c912c3a770220c16acde9f4705fa27194
+ms.contentlocale: sv-se
+ms.lasthandoff: 04/28/2017
 
 
 ---
 
-# <a name="manage-windows-pcs-with-intune-pc-client-software"></a>Hantera Windows-datorer med Intune-klientprogramvara
-[Att registrera Windows-datorer som mobila enheter](set-up-windows-device-management-with-microsoft-intune.md) är den bästa metoden för att registrera Windows-datorer i Intune, men som IT-administratör kan du även välja att registrera och hantera Windows-datorer genom att installera Intune-klientprogrammet enligt beskrivningen i det här avsnittet. Intune-programvaruklienten stöds inte med registrering som mobil enhet.
+# <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
-Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som AD DS-grupprincipobjekt (Active Directory Domain Services) för Windows Server gör. [Försäkra dig om att Intune-principerna inte står i konflikt med grupprincipobjekt](resolve-gpo-and-microsoft-intune-policy-conflicts.md) som används i din organisation om du ska hantera domänanslutna Active Directory-datorer med Intune. Läs mer om [GPO:er](https://technet.microsoft.com/library/hh147307.aspx).
+Intune är en omfattande lösning som gör att organisationer kan hantera mobila enheter. Intune kan hantera Windows-datorer som mobila enheter med hjälp av de hanteringsfunktioner för moderna enheter som är inbyggda i operativsystemet Windows 10. För att uppfylla organisationens hanteringsbehov kan Intune även hantera Windows-datorer som datorer med Intune-programvaruklienten. Den här hanteringsmetoden använder traditionella funktioner för datorhantering i tidigare Windows-operativsystem.
 
-## <a name="policies-and-app-deployments-for-the-intune-software-client"></a>Principer för distributioner av appar för Intune-klientprogrammet
+Intune-programvaruklienten passar bäst för Windows-datorer som kör äldre operativsystem som Windows 7 som inte kan hanteras som mobila enheter. Intune-programvaruklienten använder hanteringsfunktioner som Grupprincip för att hantera datorer från molnet.
 
-Även om Intune-klientprogrammet har stöd för [hanteringsfunktioner som skyddar datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md) med hjälp av hantering av programuppdateringar, Windows-brandväggen och Endpoint Protection, så kan inte datorer som hanteras med Intune-klientprogrammet användas med andra Intune-principer, t.ex. de **Windows**-principinställningar som är specifika för hantering av mobila enheter.
+Intune stöder hantering av Windows-datorer som datorer med hjälp av programvaruklienten för upp till 7 000 datorer. Hantera Windows 10-datorer som mobila enheter för större distributioner. Varje version av Intune och varje uppdatering av Windows 10 innehåller hanteringsfunktioner som baseras på den mobila arkitekturen för enhetshantering. Vi rekommenderar starkt att du flyttar din organisation till Windows 10 hanterad som mobila enheter.
 
-När du använder Intune-klientprogrammet för att hantera Windows-datorer kan du använda de principer som visas i avsnittet **Datorhantering**.
-
-  ![Välj mall för ny Windows-datorprincip](../media/select-template-for-pc-policy.png)
-
-Mer information om de principer som du kan ställa in finns här:
-
-- [Använd principer för att skydda Windows-datorer som kör Intune-klientprogramvaran](https://docs.microsoft.com/intune/deploy-use/policies-to-protect-windows-pcs-in-microsoft-intune)
-- [Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)
-- [Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune)
-- [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
-
-När du distribuerar appar behöver du dessutom bara använda Windows Installer (.exe, .msi).
-
-  ![Välj plattform och plats för PC-klientprogramsfiler](../media/select-platform-of-software-files-for-pc-agent.png)
 
 > [!NOTE]
-> Du kan hantera Windows 8.1-enheter eller senare som datorer med hjälp av Intune-klientprogrammet eller som mobila enheter genom att använda funktionen för hantering av mobilenheter (MDM). Du kan använda båda metoderna tillsammans, så tänk dig för innan du bestämmer dig att hantera datorer med hjälp av Intune-klientprogrammet. Det här avsnittet gäller endast för att hantera enheter som datorer genom att köra Intune-klientprogrammet.
+> Du kan hantera Windows 8.1-enheter och senare som datorer med hjälp av Intune-klientprogrammet eller som mobila enheter. Du kan inte använda båda metoderna på samma enhet. Överväg noggrant innan du bestämmer dig för att hantera datorer med Intune-klientprogrammet. Det här avsnittet gäller endast för att hantera enheter som datorer genom att köra Intune-klientprogrammet.
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Krav för hantering av Intune-klienten
 
@@ -68,31 +54,48 @@ När du distribuerar appar behöver du dessutom bara använda Windows Installer 
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.<br /><br />Så visar du versionen för Windows Installer på en dator:<br /><br />  Högerklicka på **%windir%\System32\msiexec.exe**, och sedan på **Egenskaper**.<br /><br />Du kan hämta den senaste versionen av Windows Installer från [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) på webbplatsen Microsoft Developer Network.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogrammet avinstallerar du all Configuration Manager-, Operations Manager-, Operations Management Suite- och Service Manager-klientprogramvara från datorn.|
 
+## <a name="deploying-the-intune-software-client"></a>Distribuera Intune-programklienten
+Som Intune-administratör kan du göra Intune programklienten tillgänglig för användarna på en mängd olika sätt. Vägledning finns i [Installera Intune-klientprogrammet på Windows-datorer](install-the-windows-pc-client-with-microsoft-intune.md).
+
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Datorhanteringsfunktioner med Intune-klientprogrammet
+I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger tillgång till fler funktioner. Men du kan också hantera datorer med hjälp av Intune-klientprogrammet, vilket innehåller följande funktioner:
 
-När Intune-klientprogrammet har installerats kan du använda följande hanteringsfunktioner:
+-   **[Hantering av programvaruuppdateringar](/intune/deploy-use/keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune)** – Du kan hålla datorerna uppdaterade och bestämma när nya uppdateringar tillämpas.
 
-- [Programhantering](deploy-apps-in-microsoft-intune.md)
+-   **[Princip för Windows-brandväggen](/intune/deploy-use/help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune)** – Den här typen av princip säkerställer att Windows-brandväggen är aktiverad och korrekt konfigurerad på alla datorer som används på företaget.
 
-- [Realtidsövervakning och Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md) – Endpoint Protection är detsamma som Windows Defender. Endpoint Protection gäller för Windows 7 och Windows 8. För Windows 10 och senare har produktens namn ändrats till Windows Defender.
+-   **[Skydd mot skadlig programvara](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)** – Intune innehåller Endpoint Protection, som hjälper dig att skydda datorer mot skadlig kod.
 
-- [Hantering av inställningar för Windows-brandväggen](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md), inventering av maskinvara och programvara, fjärrkontroll (via förfrågningar om fjärrhjälp)
+-   **[Fjärrhjälp](/intune/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-to-windows-pcs-that-use-the-intune-client-software )** – Intune låter användarna kontakta IT-supportpersonalen som sedan kan ge hjälp via en fjärrskrivbordsfunktion som ingår i Intune (kräver TeamViewer-programvara).
 
-- [Inställningar för programvaruuppdatering](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)
+-   **[Hantera programvarulicenser](/intune/deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune)** – Spåra hur många programlicenser som är tillgängliga och hur många tillgängliga licenser som används.
+-   **[Appdistribution](/intune/deploy-use/add-apps-for-windows-pcs-in-microsoft-intune)** – Distribuera programvara till datorer som du hanterar. Vissa apphanteringsfunktioner är inte tillgängliga när du hanterar datorer med klientprogrammet.
 
-- Rapportering om kompatibilitetsinställningar
+<!-- - **Compliance settings reporting** -->
 
-I Intune-administrationskonsolen visas vissa avsnitt, t.ex. "Uppdateringar", "Skydd" och "Licenser" bara om du har registrerat enheter med Intune-klientprogrammet.
+## <a name="policies-and-app-deployments-for-the-intune-software-client"></a>Principer för distributioner av appar för Intune-klientprogrammet
 
-  ![Administratörskonsolobjekt som bara visas för PC-klienter](../media/admin-console-settings-only-for-pc-agent.png)
+Även om Intune-klientprogrammet har stöd för [hanteringsfunktioner som skyddar datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md) med hjälp av hantering av programuppdateringar, Windows-brandväggen och Endpoint Protection, så kan inte datorer som hanteras med Intune-klientprogrammet användas med andra Intune-principer, t.ex. de **Windows**-principinställningar som är specifika för hantering av mobila enheter.
 
-Du kan också använda Intune-administratörskonsolen för att utföra andra vanliga datorhanteringsaktiviteter på Windows-datorer där klienten har installerats:
+När du använder Intune-klientprogrammet för att hantera Windows-datorer kan du använda de principer som visas i avsnittet **Datorhantering**.
 
--   Visa maskin- och programvaruinventering för hanterade datorer
--   Starta om en dator via en fjärranslutning
--   Dra tillbaka en dator för att avinstallera klientprogramvaran och ta bort den från hantering i Intune
--   Länka användare till specifika hanterade datorer
--   Svara på en begäran om Fjärrhjälp
+Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som AD DS-grupprincipobjekt (Active Directory Domain Services) för Windows Server gör. Om du hanterar domänanslutna Active Directory-datorer med Intune ska du [försäkra dig om att Intune-principerna inte står i konflikt med andra grupprincipobjekt](https://docs.microsoft.com/intune/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) som används i din organisation. Läs mer i avsnittet [Grupprincip för nybörjare](https://technet.microsoft.com/library/hh147307.aspx).
+
+  ![Välj mall för ny Windows-datorprincip](../media/select-template-for-pc-policy.png)
+
+När du distribuerar appar behöver du bara använda Windows Installer (.exe, .msi).
+
+  ![Välj plattform och plats för PC-klientprogramsfiler](../media/select-platform-of-software-files-for-pc-agent.png)
+
+## <a name="common-tasks-for-windows-pcs"></a>Vanliga åtgärder för Windows-datorer
+
+Du kan använda Intune-administratörskonsolen för att utföra andra vanliga datorhanteringsaktiviteter på Windows-datorer där klienten har installerats:
+- [Använd principer för att förenkla datorhanteringen](use-policies-to-simplify-windows-pc-management.md) – Beskriver Intunes principer för **datorhantering** och listar inställningarna för Microsoft Intune Center.
+
+- [Visa maskin- och programvaruinventering för Windows-datorer](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md) – Här förklaras hur du kan skapa rapporter som visar information om datorernas maskinvarukapacitet och de program som installerats på dem. Här förklaras även hur du uppdaterar datorinventeringen så att den hålls aktuell.
+- [Dra tillbaka en Windows-dator](retire-a-windows-pc-with-microsoft-intune.md) – Listar de steg som måste vidtas för att stegen för att dra tillbaka en Windows-dator och vad som händer när du gör så.
+- [Hantera länkning av användarenheter för Windows-datorer](manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md) – Förklarar när och hur du måste länka en användare till en dator innan du kan distribuera programvara till användaren.
+- [Begära och tillhandhålla fjärrhjälp för Windows-datorer](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md) – Här beskrivs hur användare av Intune-datorer får fjärrhjälp, vilka krav som finns och hur du konfigurerar TeamViewer.
 
 Mer information om ovanstående aktiviteter finns i [vanliga datorhanteringsaktiviteter ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
@@ -101,8 +104,11 @@ Mer information om ovanstående aktiviteter finns i [vanliga datorhanteringsakti
 Vissa hanteringsalternativ som kan användas för att hantera datorer som mobila enheter kan inte användas för datorer som hanteras med Intune-klientprogrammet:
 
 -   Fullständig rensning (selektiv rensning är tillgänglig)
-
 -   Villkorlig åtkomst
+
+Observera också att vissa avsnitt, t.ex. **Uppdateringar**, **Skydd** och **Licenser**bara visas i Intune-administrationskonsolen om du har registrerat enheter i Intune-klientprogrammet.
+
+  ![Administratörskonsolobjekt som bara visas för PC-klienter](../media/admin-console-settings-only-for-pc-agent.png)
 
 ## <a name="help-with-troubleshooting"></a>Hjälp med felsökning
 

@@ -14,10 +14,11 @@ ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 312a3ae8a74b0a8460f969f96bee14077c6c7161
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 5888ffa6f16e9a9807ce1f9a9eb0594ed31b5b18
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -47,18 +48,18 @@ Enheten som behöver åtkomst till Skype för företag – Online måste:
 
 -   Vara en **Android**- eller **iOS**-enhet.
 
--   Vara **registrerad** med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Vara **registrerad** i Intune.
 
--   Vara **kompatibel** med eventuella [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper.
+-   Vara **kompatibel** med alla distribuerade efterlevnadsprinciper för Intune.
 
 
 Enhetens tillstånd lagras i Azure Active Directory som beviljar eller blockerar åtkomst baserat på de villkor som du anger.
 
 Om ett villkor inte är uppfyllt, kommer användaren att visas ett följande meddelanden när de loggar in:
 
--   Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller om den inte är registrerad i Azure Active Directory, så visas ett meddelande med instruktioner om hur du installerar företagsportalappen och registrerar dig.
+-   Om enheten inte har registrerats för Intune, eller registrerats i Azure Active Directory, visas ett meddelande med instruktioner om hur du installerar företagsportalsappen och registrerar dig.
 
--   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats eller till företagsportalappen som innehåller mer information om problemet och hur det kan åtgärdas.
+-   Om enheten inte är kompatibel visas ett meddelande som leder användaren till Intune-företagsportalens webbplats eller till företagsportalappen som innehåller mer information om problemet och hur det kan åtgärdas.
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Konfigurera villkorlig åtkomst för Skype för företag – Online
 
@@ -77,7 +78,7 @@ Om en användare finns i båda grupperna, kommer de att vara befriade från poli
 [Skapa](create-a-device-compliance-policy-in-microsoft-intune.md) och [distribuera](deploy-and-monitor-a-device-compliance-policy-in-microsoft-intune.md) en efterlevnadsprincip för alla enheter som påverkas av principen. Detta motsvarar alla enheter som används av användarna i **Målgrupper**.
 
 > [!NOTE]
-> Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
+> Medan efterlevnadsprinciper distribueras till Intune-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
 
 > [!IMPORTANT]

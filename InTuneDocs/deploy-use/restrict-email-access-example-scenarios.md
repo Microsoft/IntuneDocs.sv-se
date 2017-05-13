@@ -14,9 +14,11 @@ ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 9f05e516723976dcf6862475dbb78f9dce2913be
-ms.openlocfilehash: c02961aa984f8041394639a872bf4cfcdfc0be91
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 7d0b9cee72e8810b4f39bd81bd8f49d0818618c4
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: c02961aa984f8041394639a872bf4cfcdfc0be91
 ## <a name="scenario-1-block-users-from-using-noncompliant-devices-to-access-exchange-online"></a>Scenario 1: Förhindra att användare kommer åt Exchange Online från icke-kompatibla enheter
 ### <a name="scenario-requirements"></a>Krav för scenario
 - Alla användare i Azure Active Directory-säkerhetsgruppen **Bokföring** måste hindras från att komma åt Exchange Online om deras enhet inte är kompatibel med en efterlevnadsprincip som du har distribuerat.
-- Om det finns användare i den här gruppen vars enheter inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]måste de hindras från att komma åt Exchange Online på den enheten.
+- Om det finns användare i den här gruppen vars enheter inte stöds av Intune måste de hindras från att komma åt Exchange Online på den enheten.
 - Användare i Azure Active Directory-säkerhetsgruppen **Finans** måste undantas från principen, även om de även ingår i säkerhetsgruppen **Bokföring**.
 
 För att åstadkomma detta konfigurerar du en princip för villkorlig åtkomst för Exchange Online med följande inställningar:
@@ -68,7 +70,7 @@ Du använder följande flöde för att bestämma vilka enheter som kan få tillg
 ## <a name="scenario-3-no-android-devices-can-access-exchange-on-premises"></a>Scenario 3: Inga Android-enheter kan komma åt Exchange On-premises
 ### <a name="scenario-requirements"></a>Krav för scenario
 - Alla Android-enheter ska blockeras från att komma åt Exchange.
-- Alla andra enheter som stöds kan få åtkomst till Exchange under förutsättning att de hanteras av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+- Alla andra enheter som stöds kan få åtkomst till Exchange under förutsättning att de hanteras av Intune.
 
 Du åstadkommer detta genom att konfigurera en princip för villkorlig åtkomst för Exchange On-premises med följande inställningar:
 
@@ -82,9 +84,4 @@ Du åstadkommer detta genom att konfigurera en princip för villkorlig åtkomst 
 Du använder följande flöde för att bestämma vilka enheter som kan få tillgång till Exchange:
 
 ![Åtkomstflöde för enheter](./media/ConditionalAccess8-4.png)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

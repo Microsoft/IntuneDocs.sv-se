@@ -14,10 +14,11 @@ ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: f316b332c3f1b80b9d6af488943298fcfea13741
-ms.openlocfilehash: f1d8ecdf64b680940e46afc90dec79d237d80030
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 3098a301550413a982d3ce9664646f7dfc0b1d1f
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -38,7 +39,7 @@ Se till att kontrollera följande:
 
 -   Din Exchange-version måste vara **Exchange 2010 eller senare**. Matrisen för Exchange Server-klientåtkomstservern (CAS) stöds.
 
--   Du måste använda [Intune On-Premises Connector](intune-on-premises-exchange-connector.md), som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange On-premises. Den här anslutningen gör att du kan hantera enheter via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen.
+-   Du måste använda [Intune On-Premises Connector](intune-on-premises-exchange-connector.md) som ansluter Intune till Exchange On-premises. Den här anslutningen gör att du kan hantera enheter via Intune-konsolen.
 
     -   Intune-konsolens lokala Exchange Connector är specifik för din Intune-klientorganisation och kan inte användas med andra innehavare. Vi rekommenderar att du också kontrollerar att Exchange Connector för klienten är installerad **på endast en dator**.
 
@@ -54,13 +55,13 @@ Se till att kontrollera följande:
 
 När du konfigurerar och tillämpar principer för villkorlig åtkomst för en användare, och innan användaren kan ansluta till sin e-post, måste användarens **enhet**:
 
--  Antingen vara en domänansluten dator eller **registrerad** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-  Antingen vara en domänansluten dator eller **registrerad** i Intune.
 
 -  **Registreras i Azure Active Directory**. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
 
   Registreringstjänsten för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger. **Detta gäller inte för Windows-datorer och Windows Phone-enheter**.
 
--   Vara **kompatibel** med eventuella [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper som har distribuerats till den enheten.
+-   Vara **kompatibel** med eventuella Intune-efterlevnadsprinciper som har distribuerats till den enheten.
 
 ### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Så här fungerar villkorlig lokal åtkomst till Exchange on-premises
 
@@ -70,9 +71,9 @@ Följande diagram illustrerar flödet som används av principer för villkorlig 
 
 Om en princip för villkorlig åtkomst inte uppfylls, öppnas ett tidsfönster på 10 minuter mellan det att enheten blockeras och användaren får något av följande karantänmeddelanden vid inloggning:
 
-- Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med enhetsposten i Azure Active Directory.
+- Om enheten inte är registrerad i Intune eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med enhetsposten i Azure Active Directory.
 
--   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats eller till företagsportalappen, som innehåller mer information om problemet och hur det kan åtgärdas.
+-   Om enheten inte är godkänd visas ett meddelande som leder användaren till webbplatsen för Intune-företagsportalen eller företagsportalappen där de kan hitta information om problemet och hur det kan åtgärdas.
 
 ## <a name="support-for-mobile-devices"></a>Stöd för mobila enheter
 Följande stöds:
@@ -88,7 +89,7 @@ Följande stöds:
 
 ## <a name="support-for-pcs"></a>Stöd för datorer
 Följande stöds:
--   **E-post**-programmet i Windows 8.1 och senare (om datorn har registrerats med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   **E-post**-programmet i Windows 8.1 och senare (om datorn har registrerats i Intune).
 
 ##  <a name="configure-a-conditional-access-policy"></a>Konfigurera en princip för villkorlig åtkomst
 
@@ -97,21 +98,21 @@ Följande stöds:
 
 2.  Konfigurera principen med de inställningar som du behöver: ![Skärmbild av sidan för Exchange On-premises-princip](../media/IntuneSA5bExchangeOnPremPolicy.png)
 
-  - **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad i Microsoft Intune:** Om du väljer det här alternativet kan inte enheter som inte hanteras av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller som inte är kompatibla med en efterlevnadsprincip komma åt Exchange-tjänster.
+  - **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad i Microsoft Intune:** Om du väljer det här alternativet kan inte enheter som inte hanteras av Intune eller som inte är kompatibla med en efterlevnadsprincip komma åt Exchange-tjänster.
 
   - **Åsidosätt standardregel – Tillåt att registrerade och kompatibla enheter alltid får åtkomst till Exchange:** Om du väljer det här alternativet kan enheter som är registrerade i Intune och kompatibla med efterlevnadsprinciper komma åt Exchange.
   Den här regeln åsidosätter **standardregeln**, vilket innebär att även om du ställer in **standardregeln** för att blockera åtkomstförsök eller sätta dem i karantän så kommer registrerade och kompatibla enheter fortfarande att kunna få åtkomst till Exchange.
 
-  - **Målgrupper:** Välj de [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-användargrupper som måste registrera sina enheter med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] innan de kan komma åt Exchange.
+  - **Målgrupper:** Välj de Intune-användargrupper som måste registrera sina enheter i Intune innan de kan komma åt Exchange.
 
-  - **Undantagna grupper:** Välj de [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-användargrupper som är undantagna från principen för villkorlig åtkomst. Användare i den här listan undantas även om de också finns med i listan **Målgrupper**.
+  - **Undantagna grupper:** Välj de Intune-användargrupper som är undantagna från principen för villkorlig åtkomst. Användare i den här listan undantas även om de också finns med i listan **Målgrupper**.
 
-  - **Plattformsundantag:** Välj **Lägg till regel** om du vill konfigurera en regel som definierar åtkomstnivåer för angivna familjer och modeller av mobila enheter. Eftersom dessa enheter kan tillhöra vilken typ som helst kan du även konfigurera enhetstyper som inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+  - **Plattformsundantag:** Välj **Lägg till regel** om du vill konfigurera en regel som definierar åtkomstnivåer för angivna familjer och modeller av mobila enheter. Eftersom dessa enheter kan tillhöra vilken typ som helst kan du även konfigurera enhetstyper som inte stöds av Intune.
 
   - **Standardregel:** För en enhet som inte omfattas av någon av de andra reglerna kan du välja att ge enheten åtkomst till Exchange, blockera den eller placera den i karantän. När du ställer in regeln för att tillåta åtkomst för enheter som är registrerade och kompatibla beviljas e-poståtkomst automatiskt för iOS-, Windows- och Samsung KNOX-enheter. Användaren behöver inte gå igenom någon särskild process för att få sin e-post.
       - Användare av Android-enheter som inte kör Samsung KNOX får ett karantänmeddelande med stegvisa anvisningar för att verifiera registreringen och efterlevnaden innan de kan komma åt e-posten. Om du ställer in regeln för att blockera åtkomst eller sätta enheten i karantän blir alla enheter blockerade från att få åtkomst till Exchange oavsett om de redan har registrerats i Intune eller inte. Om du vill förhindra att registrerade och kompatibla enheter påverkas av den här regeln markerar du rutan **Åsidosätt standardregel**.
 >[!TIP]
->Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] påverkas.
+>Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av Intune påverkas.
 
   - **Meddelande till användare:** Förutom e-postmeddelandet som skickas från Exchange skickar Intune ett e-postmeddelande med stegvisa anvisningar för att låsa upp enheten. Du kan redigera standardmeddelandet och anpassa det efter dina behov. Om användarens enhet blockeras innan Intunes e-postmeddelande med instruktionerna har kommit fram (det här meddelandet skickas till användarens Exchange-postlåda) kan användaren använda en enhet som inte är blockerad eller en annan metod för att komma åt Exchange och läsa meddelandet.
       - Detta är särskilt viktigt om **standardregeln** har konfigurerats att blockera eller placera enheter i karantän. I så fall måste användaren besöka sin appbutik, ladda ned Microsofts företagsportalsapp och registrera sin enhet. Detta gäller iOS-, Windows- och Samsung KNOX-enheter. Du måste skicka e-postmeddelandet om karantän till ett alternativt e-postkonto för enheter som inte kör Samsung KNOX. Användaren måste kopiera e-postmeddelandet till sin blockerade enhet för att kunna slutföra registreringen och efterlevnadsprocessen.
@@ -124,11 +125,11 @@ Följande stöds:
 
 -   Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 
--   När en användare har konfigurerat en Exchange ActiveSync-profil kan det ta en till tre timmar innan enheten blockeras (om den inte hanteras av [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   När en användare har konfigurerat en Exchange ActiveSync-profil kan det ta en till tre timmar innan enheten blockeras (om den inte hanteras av Intune).
 
--   Om en blockerad användare sedan registrerar enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och åtgärdar efterlevnadsproblemet avblockeras e-poståtkomsten inom två minuter.
+-   Om en blockerad användare sedan registrerar enheten i Intune och åtgärdar efterlevnadsproblemet avblockeras e-poståtkomsten inom två minuter.
 
--   Om användaren avregistrerar sig från [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] kan det ta en till tre timmar innan enheten blockeras.
+-   Om användaren avregistrerar sig från Intune kan det ta en till tre timmar innan enheten blockeras.
 
 **Några exempelscenarier som beskriver hur du konfigurerar principer för villkorlig åtkomst som skyddar enhetsåtkomsten finns i [Exempelscenarier för skydd av e-poståtkomst](restrict-email-access-example-scenarios.md).**
 

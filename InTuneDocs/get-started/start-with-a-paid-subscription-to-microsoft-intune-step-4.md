@@ -14,10 +14,11 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: c66226b7fc31f91669c4f4f0693ccbd7c679189f
-ms.openlocfilehash: b2fc3a3dc47466313a54d2f6aef6b67dff8d7343
-ms.lasthandoff: 03/29/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7db42e591df8ec6c21f73b7ce49be624e1e29690
+ms.openlocfilehash: 793df9f3734b84c74ecac9b8192d0b06306607e8
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -42,6 +43,17 @@ Du kan använda [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 > [!NOTE]
 > Användarna visas i administratörskonsolen när de har registrerat en enhet. Du kan också välja en grupp användare som redigeras samtidigt, genom att välja att lägga till eller ersätta en licens för alla markerade användare.
+
+## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Använd synkronisering av skolinformation för att tilldela användare licenser till Intune for Education
+Om du representerar en utbildningsorganisation kan du använda synkronisering av skolinformation (SDS) för att tilldela Intune for Education-licenser till synkroniserade användare. Markera bara kryssrutan Intune for Education när du konfigurerar din SDS-profil.  
+
+![Bild av SDS-profilinställningen](./media/i4e-sds-profile-setup-setting.png)
+
+Kontrollera att Intune A Direct-licensen också tilldelas när du tilldelar en Intune for Education-licens.
+
+![Bild av konfiguration av produktlicens](./media/i4e-set-licenses.png)
+
+Se den här [översikten över synkronisering av skolinformation](https://support.office.com/en-us/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91?ui=en-US&rs=en-US&ad=US) om du vill veta mer om SDS.
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Använda PowerShell för att hantera EMS-användarlicenser selektivt
 Organisationer som använder Microsoft Enterprise Mobility + Security (tidigare Enterprise Mobility Suite) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).

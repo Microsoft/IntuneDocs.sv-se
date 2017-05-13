@@ -14,10 +14,11 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 31b7ff2b9644f47107199f0f1d237847169c3143
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: a7d38caac1cfd035c66d02579766d60d4394dd5e
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -157,7 +158,7 @@ Från och med Intune version 1703 kan du välja att allmänt lägga till bransch
 
     Nu har du skapat en princip och distribuerat den till användare.
 
-Endast användare med tilldelade [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licenser påverkas av principen. Användare som ingår i säkerhetsgruppen som du valde och som inte har tilldelats någon [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licens påverkas inte.
+Endast användare med tilldelade Intune-licenser påverkas av principen. Användare som ingår i den säkerhetsgrupp som du valde och som inte har tilldelats någon Intune-licens påverkas inte.
 
 >[!IMPORTANT]
 > Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.

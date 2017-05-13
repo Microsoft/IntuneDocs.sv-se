@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/20/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,26 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 62dcb40ad5a7921c514a9d41da14b991e39f3bcd
-ms.openlocfilehash: f4a48b889702147abe20fd513fdb0f774020a54a
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
+ms.openlocfilehash: 68dbaa2209ad1432279683a291734641e39ff736
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/05/2017
 
 
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
-> [!Note]
-> Observera att bilderna nedan är förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
+## <a name="coming-soon-in-the-ui"></a>Kommer snart i användargränssnittet
+Det här är våra planer för hur vi kan förbättra användarupplevelsen genom att uppdatera användargränssnittet.
 
-## <a name="april-2017"></a>April 2017
+> [!Note]
+> Observera att bilderna nedan kan vara förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
 
-Vi förbättrar inloggningen för appar i Intunes företagsportal för Android, iOS och Windows.  Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
+Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
 
 Nedan kan du se föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
 
@@ -51,17 +53,17 @@ __Ny inloggning__
 
 ![Användaren uppmanas att ange lösenordet när e-postadressen har accepterats.](./media/cp_ios_aad_signin_after_1704_003.png)
 
+![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
 __Ny inloggning vid inloggning från en annan enhet__
 
 ![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
 Tryck på länken __Logga in från en annan enhet__.
 
-![Användaren ombeds endast att ange sin e-postadress, i stället för sin e-post och lösenord på samma skärm. Länken under e-postfältet visar ”Logga in från en annan enhet”.](./media/cp_ios_aad_signin_from_another_device_after_1704_002.png)
-
 ![Instruktioner visas för att gå till sidan aka.ms/devicelogin med ett unikt lösenord från din arbetsdator. Därefter använder du koden för att logga in.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Starta en webbläsare och gå till [http://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Starta en webbläsare och gå till [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
 
 ![En bild av användarens webbläsare på arbetsdatorn, i stället för företagsportalappen. Sidan ”Inloggning på enhet” visas och uppmanar användarna ange koden de fick i företagsportalsappen.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -75,9 +77,11 @@ Företagsportalappen börjar logga in.
 
 ![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
+## <a name="april-2017"></a>April 2017
+
 ### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nya ikoner för Managed Browser och företagsportalen <!--918433, 918431-->
 
-Managed Browser har fått uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det överensstämmer med andra appar i Enterprise Mobility + Security (EM+S).
+Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det överensstämmer med andra appar i Enterprise Mobility + Security (EM+S).
 
 <html>
 <body>
@@ -98,25 +102,34 @@ Företagsportalen har också fått uppdaterade ikoner för Android-, iOS- och Wi
 
 ### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
 
-En uppdatering av Android-företagsportalsappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn visar nya statusmeddelanden, med början på ”Ansluter...”, sedan ”Loggar in...”, följt av ”Kontrollerar säkerhetskrav...” innan användaren får åtkomst till appen.
+En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn visar nya statusmeddelanden, med början på ”Ansluter...”, sedan ”Loggar in...”, följt av ”Kontrollerar säkerhetskrav...” innan användaren får åtkomst till appen.
 
 <html>
 <body>
    <table id="wrapper">
       <tr>
          <td>
-            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
+            <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
           </td>
           <td>
-             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
+             <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
            </td>
            <td>
-              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
+              <img src="https://docs.microsoft.com/InTune/whats-new/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
            </td>
       </tr>
    </table>
 </body>
 </html>
+
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Appens installationsstatus har förbättrats för Företagsportalappen för Windows 10 <!--676495-->
+Företagsportalappen för Windows 10 innehåller nu en förloppsindikator för installation på appinformationssidan. Den stöds för moderna appar på enheter som kör Windows 10 Anniversary Update och senare.
+
+__Före__
+  ![En avbildning av den tidigare versionen av inläsningsskärmen där status bara angavs som "Installerar".](./media/cp_win10_install_status_before_1704.png)
+
+__Efter__
+  ![En avbildning av den uppdaterade versionen av inläsningsskärmen nu visar en förloppsindikator för installationen.](./media/cp_win10_install_status_after_1704.png)
 
 ## <a name="february-2017"></a>Februari 2017
 
