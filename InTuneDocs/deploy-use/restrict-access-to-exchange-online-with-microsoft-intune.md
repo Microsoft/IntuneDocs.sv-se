@@ -14,10 +14,11 @@ ms.assetid: 09c82f5d-531c-474d-add6-784c83f96d93
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: cfb3a7cc4e70a062bc511cd4fe80a50b6262864f
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 742a989744a11dbc1c9e17a25b70388e06dd5ae7
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -40,7 +41,7 @@ För att konfigurera villkorlig åtkomst måste du:
 
 - Ha en **Enterprise Mobility + Security-prenumeration (EMS)** eller en **Azure Active Directory Premium-prenumeration (Azure AD)**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
--  Överväg att konfigurera den valfria **tjänst-till-tjänst-anslutningen i Intune** som ansluter [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] till Exchange Online och som gör att du kan hantera enhetsinformationen via [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-konsolen. Du måste inte använda anslutningen för att kunna använda efterlevnadsprinciper eller principer för villkorlig åtkomst, men den krävs för att köra rapporter som utvärderar effekten av villkorlig åtkomst.
+-  Överväg att konfigurera den valfria **tjänst-till-tjänst-anslutningen i Intune** som ansluter Intune till Exchange Online och som gör att du kan hantera enhetsinformationen via Intune-konsolen. Du måste inte använda anslutningen för att kunna använda efterlevnadsprinciper eller principer för villkorlig åtkomst, men den krävs för att köra rapporter som utvärderar effekten av villkorlig åtkomst.
     -  Läs mer om [Intune Service to Service Connector](intune-service-to-service-exchange-connector.md).
 
    > [!NOTE]
@@ -50,21 +51,21 @@ För att konfigurera villkorlig åtkomst måste du:
 
 När du konfigurerar och tillämpar principer för villkorlig åtkomst för en användare, och innan användaren kan ansluta till sin e-post, måste användarens **enhet**:
 
--   Vara en domänansluten dator eller **registrerad** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   Vara en domänansluten dator eller **registrerad** i Intune.
 
--  **Registreras i Azure Active Directory**. Detta sker automatiskt när enheten registreras med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
+-  **Registreras i Azure Active Directory**. Detta sker automatiskt när enheten registreras i Intune. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
 
   Registreringstjänsten för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger.
 
--   Vara **kompatibel** med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-efterlevnadsprinciper som distribuerats till enheten, eller vara domänansluten till en lokal domän.
+-   Vara **kompatibel** med Intunes efterlevnadsprinciper som distribuerats till enheten, eller vara domänansluten till en lokal domän.
 
 ### <a name="when-the-device-is-not-compliant"></a>När enheten inte är kompatibel
 
 Om en princip för villkorlig åtkomst inte uppfylls, sätts enheten omedelbart i karantän och användarna får ett e-postmeddelande med något av följande karantänmeddelanden när de loggar in:
 
-- Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med posten i Azure Active Directory.
+- Om enheten inte är registrerad i Intune eller i Azure Active Directory visas ett meddelande med instruktioner för att installera företagsportalappen, registrera enheten och aktivera e-post. Den här processen associerar även enhetens Exchange ActiveSync-ID med posten i Azure Active Directory.
 
--   Om enheten utvärderas som icke-kompatibel med reglerna för efterlevnadsprinciper dirigeras användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats eller företagsportalappen som innehåller information om problemet och hur det kan åtgärdas.
+-   Om enheten utvärderas som icke-kompatibel med efterlevnadsprinciperna dirigeras användaren till Intune-företagsportalens webbplats eller företagsportalappen som innehåller information om problemet och hur det kan åtgärdas.
 
 ### <a name="how-conditional-access-works-with-exchange-online"></a>Så här fungerar villkorlig åtkomst med Exchange Online
 
@@ -114,7 +115,7 @@ Du kan konfigurera villkorlig åtkomst för datorer som kör Office-datorprogram
 
   Datorn måste antingen vara domänansluten eller kompatibel med reglerna för efterlevnadsprinciper.
 
-  För att vara kompatibel måste datorn vara registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och uppfylla principerna.
+  För att vara kompatibel måste datorn vara registrerad i Intune och uppfylla principerna.
 
   För domänanslutna datorer måste du konfigurera villkorlig åtkomst på att [automatiskt registrera enheten](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) i Azure Active Directory.
 
@@ -138,11 +139,11 @@ Se till att du [skapar](create-a-device-compliance-policy-in-microsoft-intune.md
 ### <a name="step-2-evaluate-the-effect-of-the-conditional-access-policy"></a>Steg 2: Utvärdera effekten av principen för villkorlig åtkomst
 Du kan använda **inventeringsrapporterna för mobila enheter** för att identifiera enheter som kan hindras från att komma åt Exchange när du har konfigurerat principen för villkorlig åtkomst.
 
-Om du vill göra det konfigurerar du en anslutning mellan [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och Exchange med hjälp av [Microsoft Intunes tjänst-till-tjänst-anslutning](intune-service-to-service-exchange-connector.md).
+Om du vill göra det konfigurerar du en anslutning mellan Intune och Exchange med hjälp av [Microsoft Intunes tjänst-till-tjänst-anslutning](intune-service-to-service-exchange-connector.md).
 1.  Gå till **Rapporter** > **Inventeringsrapporter för mobila enheter**.
 ![Skärmbild av sidan Inventeringsrapport för mobila enheter](../media/IntuneSA2bMobileDeviceInventoryReport.png)
 
-2.  I rapportparametrarna väljer du den [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupp som du vill utvärdera och, om det behövs, de enhetsplattformar som principen ska gälla för.
+2.  I rapportparametrarna väljer du den Intune-grupp som du vill utvärdera och, om det behövs, de enhetsplattformar som principen ska gälla för.
 3.  När du har valt kriterierna som uppfyller organisationens behov väljer du **Visa rapport**.
 Rapportvisningsprogrammet öppnas i ett nytt fönster.
 ![Skärmbild av en exempelinventeringsrapport för mobila enheter](../media/IntuneSA2cViewReport.PNG)
@@ -173,7 +174,7 @@ Du kan exportera innehållet i rapporten och använda kolumnen **E-postadress** 
 ### <a name="step-3-configure-user-groups-for-the-conditional-access-policy"></a>Steg 3: Konfigurera användargrupper för principen för villkorlig åtkomst
 Principer för villkorlig åtkomst är avsedda för olika Azure Active Directory-säkerhetsgrupper med användare. Du kan också undanta vissa användargrupper från en princip för villkorlig åtkomst. När en användare är angiven som mål för en princip måste varje enhet de använder vara kompatibla för att få åtkomst till e-post.
 
-Du kan konfigurera dessa grupper i **administrationscenter för Office 365**, eller i **Intune-kontoportal**.
+Du kan konfigurera dessa grupper i **administrationscenter för Office 365** , eller i **Intune-kontoportal**.
 
 Du kan ange två grupptyper i varje policy:
 
@@ -200,7 +201,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
     > [!NOTE]
     > Om du inte har distribuerat någon efterlevnadsprincip behandlas enheterna som kompatibla.
     >
-    > Oavsett kompatibilitetstillstånd måste alla användare som principen tillämpas på registrera sina enheter i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+    > Oavsett kompatibilitetstillstånd måste alla användare som principen tillämpas på registrera sina enheter i Intune.
 
 3.  För appar som använder modern autentisering kan du välja vilka plattformar som principen ska gälla för på något av två sätt under **Programåtkomst**. Exempel på plattformar som stöds är Android, iOS, Windows och Windows Phone.
 
@@ -257,7 +258,7 @@ Endast de grupper som omfattas av principen för villkorlig åtkomst utvärderas
 
 -   Efter att en användare skapar ett emailkonto, blockeras enheten omedelbart.
 
--   Om en blockerad användare registrerar enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och åtgärdar inkompatibilitetsproblem försvinner blockeringen av åtkomst till e-post inom två minuter.
+-   Om en blockerad användare registrerar enheten i Intune och åtgärdar inkompatibilitetsproblem försvinner blockeringen av åtkomst till e-post inom två minuter.
 
 -   Om användaren avregistrerar sin enhet blockeras e-posten efter cirka 6 timmar.
 
@@ -267,7 +268,7 @@ Några **exempelscenarier som beskriver hur du konfigurerar principer för villk
 
 #### <a name="to-view-devices-that-are-blocked-from-exchange"></a>För att visa enheter som är blockerade från Exchange
 
-På [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-instrumentpanelen väljer du rutan **Blockerade enheter från Exchange** för att visa antalet blockerade enheter och länkar till mer information.
+På Intune-instrumentpanelen väljer du rutan **Blockerade enheter från Exchange** för att visa antalet blockerade enheter och länkar till mer information.
 ![Skärmbild av Intune-instrumentpanelen som visar antalet enheter som hindras från att komma åt Exchange](../media/IntuneSA6BlockedDevices.PNG)
 
 ## <a name="next-steps"></a>Nästa steg

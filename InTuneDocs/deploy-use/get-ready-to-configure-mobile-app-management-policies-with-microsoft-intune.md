@@ -14,10 +14,11 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 71ebb310699cf80310b33be1b665a968ac102bde
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 7901508dc482af55f0ef2296cf35576f09340fb0
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -75,10 +76,10 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 
 ## <a name="prerequisites"></a>Förutsättningar
 
--   **En Microsoft Intune-prenumeration**. Användarna behöver [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-licenser för att kunna hämta appar med appskyddsprinciper.
-Du har redan en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du för närvarande använder [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att hantera enheter. Du har också en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [Sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
+-   **En Microsoft Intune-prenumeration**. Användarna behöver Intune-licenser för att kunna hämta appar med appskyddsprinciper.
+Du har redan en Intune-prenumeration om du för närvarande använder Intune för att hantera enheter. Du har också en Intune-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar Intune för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
 
-    Du kan kontrollera om du har en [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-prenumeration på sidan **Fakturering** på Office-portalen.  Om du har en prenumeration bör du se [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] som **Aktiv** i prenumerationerna.
+    Du kan kontrollera om du har en Intune-prenumeration på sidan **Fakturering** på Office-portalen.  Om du har en prenumeration bör du se Intune som **Aktiv** i prenumerationerna.
 
 -   **En prenumeration på Office 365**, vilket krävs för följande:
 

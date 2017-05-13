@@ -1,5 +1,5 @@
 ---
-title: "Inställningar av begränsningar i Intune-enheter för Android for Work"
+title: "Inställningar av begränsningar i Intune-enheter för Android for Work | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på Android for Work-enheter."
 keywords: 
@@ -15,10 +15,11 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 03fec9d22e705ccb27f4eb1f8f82c7ace95e841e
-ms.openlocfilehash: c5cff131e7bcedadbad42fe6ab8bf00017f933ff
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: be6303f2db508c2aca9ba9a40fcd43278f83c045
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -62,9 +63,9 @@ Till exempel kan du tilldela en app till den arbetsprofil som kräver platsåtko
 - **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla enheter. Med den här telefonfunktionen, som ibland kallas för en betrodd agent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats (till exempel när den är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg). Du kan använda inställningen för att förhindra att användarna konfigurerar Smart Lock.
 
 ## <a name="custom-policy-settings"></a>Anpassade principinställningar
-Använd **Anpassad konfigurationsprincip för Android for Work** i Microsoft Intune för att distribuera OMA-URI-inställningar som kan användas till att styra funktioner på Android for Work-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
+Använd **Anpassad konfigurationsprincip för Android for Work** i Microsoft Intune för att tilldela OMA-URI-inställningar som kan användas till att styra funktioner på Android for Work-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
-Funktionen är avsedd för att kunna distribuera Android-inställningar som inte går att konfigurera med Intune-principer.
+Funktionen är avsedd för att kunna tilldela Android-inställningar som inte går att konfigurera med Intune-principer.
 Intune har för närvarande stöd för ett begränsat antal anpassade Android-principer. Se exemplen i det här avsnittet för att ta reda på vilka principer du kan konfigurera.
 
 ### <a name="general-settings"></a>Allmänna inställningar

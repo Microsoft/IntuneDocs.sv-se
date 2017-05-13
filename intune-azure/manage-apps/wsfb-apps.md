@@ -1,12 +1,12 @@
 ---
-title: "Hantera appar från Windows Store för företag"
+title: "Hantera appar från Windows Store för företag | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversion av Intune Azure: Lär dig hur du kan synkronisera appar i Intune från Windows Store för företag och sedan tilldela och spåra dem."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/24/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 6e410a37f91e0828d5f6b205acb4d340dae86c6d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: 40b07a011d0d4126945f6cce6304a4cbf5e8b6aa
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/24/2017
 * Du kan synkronisera listan över appar som du har köpt från Windows Store med Intune.
 * Appar som är synkroniserade visas i administrationskonsolen för Intune och du kan tilldela dem precis som andra appar.
 * Du kan spåra hur många licenser som är tillgängliga och hur många som används i administrationskonsolen för Intune.
-* Intune blockerar distribution och installation av appar om det inte finns tillräckligt många tillgängliga licenser.
+* Intune blockerar tilldelning och installation av appar om det inte finns tillräckligt många tillgängliga licenser.
 
 ## <a name="before-you-start"></a>Innan du börjar
-Granska följande information innan du börjar synkronisera och distribuera appar från Windows Store för företag:
+Granska följande information innan du börjar synkronisera och tilldela appar från Windows Store för företag:
 * Du måste konfigurera Intune som utfärdare för hantering av mobila enheter för din organisation.
 * Du måste ha registrerat dig för ett konto i Windows Store för företag.
 * När du har associerat ett konto i Windows Store för företag med Intune kan du inte ändra till ett annat konto i framtiden.
@@ -50,7 +51,7 @@ Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt W
 3. Välj **Lägg till ett hanteringsverktyg** och välj **Microsoft Intune** på sidan Hanteringsverktyg.
 
 > [!NOTE]
-> Om du använder fler än ett hanteringsverktyg för att distribuera Windows Store för affärsappar kunde du tidigare bara koppla ett av dem till Windows Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager.
+> Om du använder fler än ett hanteringsverktyg för att tilldela Windows Store för affärsappar kunde du tidigare bara koppla ett av dem till Windows Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager.
 
 Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
@@ -72,13 +73,13 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 
 ## <a name="assign-apps"></a>Tilldela appar
 
-Du kan tilldela appar från Windows Store på samma sätt som du distribuerar andra Intune-appar. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](deploy-apps.md). I stället för att tilldela appar från sidan **Alla appar** kan du tilldela dem från sidan **Licensierade appar**.
+Du kan tilldela appar från Windows Store på samma sätt som du tilldelar andra Intune-appar. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](deploy-apps.md). I stället för att tilldela appar från sidan **Alla appar** kan du tilldela dem från sidan **Licensierade appar**.
 
-När du tilldelar en app från Windows Store för företag används en licens för varje användare som installerar appen. Om du använder alla tillgängliga licenser för en distribuerad app kommer du inte att kunna distribuera fler kopior. Du måste vidta någon av följande åtgärder:
+När du tilldelar en app från Windows Store för företag används en licens för varje användare som installerar appen. Om du använder alla tillgängliga licenser för en tilldelad app kommer du inte att kunna tilldela fler kopior. Du måste vidta någon av följande åtgärder:
 * Avinstallera appen från vissa enheter.
-* Minska omfånget för den aktuella distributionen för att fokusera på de användare som du har tillräckligt många licenser för.
+* Minska omfånget för den aktuella tilldelningen för att fokusera på de användare som du har tillräckligt många licenser för.
 * Köpa fler kopior av appen från Windows Store för företag.
 
 > [!Important]
-> Distribuerade appar är bara tillgängliga för den användare som ursprungligen registrerat enheten. Inga andra användare kan komma åt appen.
+> Tilldelade appar är bara tillgängliga för den användare som ursprungligen registrerat enheten. Inga andra användare kan komma åt appen.
 

@@ -14,10 +14,11 @@ ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: 9e4fca9e29c8f0c2ec3ef088c3f91ad15ac11804
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33febef8787887401960592d95356347f6917681
+ms.openlocfilehash: 4a8b3f5a3ab5df9f31741e3331d2b6bbfd2c0c9f
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 04/14/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-Använd villkorlig åtkomst i [!INCLUDE[wit_firstref](../includes/wit_firstref_md.md)] om du vill kontrollera åtkomsten till filer som finns i SharePoint Online.
+Använd villkorlig åtkomst i Microsoft Intune om du vill kontrollera åtkomsten till filer som finns i SharePoint Online.
 Villkorlig åtkomst består av två komponenter:
 - En princip för enhetsefterlevnad som enheten måste uppfylla för att anses vara kompatibel.
 - En princip för villkorlig åtkomst där du anger de villkor som enheten måste uppfylla för att komma åt tjänsten.
@@ -45,20 +46,20 @@ När en användare försöker ansluta till en fil med en app som stöds, till ex
 
 
   För att kunna ansluta till de nödvändiga filerna måste enheten vara:
--   **Registrerad** i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] eller vara en domänansluten dator.
+-   **Registrerad** i Intune eller vara en domänansluten dator.
 
--   **Registrerad** i Azure Active Directory (detta sker automatiskt när enheten registreras med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]).
+-   **Registrerad** i Azure Active Directory (detta sker automatiskt när enheten registreras i Intune).
 
 
--   **Kompatibel** med alla distribuerade efterlevnadsprinciper för [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+-   **Kompatibel** med alla distribuerade efterlevnadsprinciper för Intune.
 
 Enhetens tillstånd lagras i Azure Active Directory som beviljar eller blockerar tillgång till filerna baserat på de villkor som du angivit.
 
 Om ett villkor inte är uppfyllt, ser användaren något av följande meddelanden när hen loggar in:
 
--   Om enheten inte är registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)], eller om den inte är registrerad i Azure Active Directory, så visas ett meddelande med instruktioner om hur du installerar företagsportalappen och registrerar dig.
+-   Om enheten inte är registrerad i Intune, eller om den inte är registrerad i Azure Active Directory, så visas ett meddelande med instruktioner om hur du installerar företagsportalappen och registrerar dig.
 
--   Om enheten inte är kompatibel visas ett meddelande som leder användaren till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
+-   Om enheten inte är kompatibel visas ett meddelande som leder användaren till Intune-företagsportalens webbplats, som innehåller mer information om problemet och hur det kan åtgärdas.
 
 **Villkorlig åtkomst gäller inte för extern delning**. Information om hur du förhindrar extern delning i din klientorganisation eller i en webbplatssamling finns i [Hantera extern delning i SharePoint Online-miljön](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
@@ -101,7 +102,7 @@ Modern autentisering skapar stöd för ADAL-baserad (Active Directory Authentica
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>Konfigurera villkorlig åtkomst för SharePoint Online
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>Steg 1: Konfigurera Active Directory-säkerhetsgrupper
-Konfigurera säkerhetsgrupper för Azure Active Drive Directory för villkorlig åtkomstpolicy innan du börjar. Du kan konfigurera dessa grupper i **administrationscenter för Office 365**, eller i **Intune-kontoportal**. Du använder de här grupperna när du vill fokusera på eller undanta användare från principen. När en användare är angiven som mål för en policy, måste varje enhet som de använder vara godkänd för att få åtkomst till resurser.
+Konfigurera säkerhetsgrupper för Azure Active Drive Directory för villkorlig åtkomstpolicy innan du börjar. Du kan konfigurera dessa grupper i **administrationscenter för Office 365** , eller i **Intune-kontoportal**. Du använder de här grupperna när du vill fokusera på eller undanta användare från principen. När en användare är angiven som mål för en policy, måste varje enhet som de använder vara godkänd för att få åtkomst till resurser.
 
 Du kan ange två grupptyper i en SharePoint Online policy:
 
@@ -115,7 +116,7 @@ Användare som finns i båda grupperna undantas från principen.
 Om du inte redan har gjort det skapar du en efterlevnadsprincip och distribuerar den för de användare som SharePoint Online-principen ska tillämpas på.
 
 > [!NOTE]
-> Medan efterlevnadsprinciper distribueras till [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
+> Medan efterlevnadsprinciper distribueras till Intune-grupper är principer för villkorlig åtkomst avsedda för Azure Active Directory-säkerhetsgrupper.
 
 Mer information om hur du konfigurerar efterlevnadsprincipen finns i [Skapa en efterlevnadsprincip](create-a-device-compliance-policy-in-microsoft-intune.md).
 
@@ -152,11 +153,11 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
          Principen för villkorlig åtkomst gäller alla klientappar som använder modern autentisering på de plattformar som du anger.
 
-     För Windows-datorer måste en dator antingen vara domänansluten eller registrerad i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och kompatibel. Du kan ange följande krav:
+     För Windows-datorer måste en dator antingen vara domänansluten eller registrerad i Intune och kompatibel. Du kan ange följande krav:
 
-     -   **Enheter måste vara domänanslutna eller godkända.** Välj det här alternativet för att kräva att datorerna antingen måste vara domänanslutna eller godkända enligt de principer som angetts i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)]. Om en dator inte uppfyller något av dessa krav uppmanas användaren att registrera enheten med [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)].
+     -   **Enheter måste vara domänanslutna eller godkända.** Välj det här alternativet för att kräva att datorerna antingen måste vara domänanslutna eller godkända enligt de principer som angetts i Intune. Om en dator inte uppfyller något av dessa krav uppmanas användaren att registrera enheten i Intune.
 
-     -   **Enheter måste vara godkända.** Välj det här alternativet om du vill kräva att datorerna ska vara registrerade i [!INCLUDE[wit_nextref](../includes/wit_nextref_md.md)] och kompatibla. Om en dator inte är registrerad visas ett meddelande med anvisningar om hur du registrerar.
+     -   **Enheter måste vara godkända.** Välj det här alternativet om du vill kräva att datorerna ska vara registrerade i Intune och kompatibla. Om en dator inte är registrerad visas ett meddelande med anvisningar om hur du registrerar.
 
 4.   Under **Webbläsaråtkomst** till SharePoint Online och OneDrive för företag kan du välja att tillåta åtkomst till Exchange Online endast genom de webbläsare som stöds: Safari (iOS) och Chrome (Android). Åtkomst från andra webbläsare blockeras. De plattformsbegränsningar som du valde för programåtkomst för OneDrive gäller även här.
 

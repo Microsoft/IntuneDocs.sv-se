@@ -14,9 +14,11 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: c59707ba2967b069dc30aee71d2642e91d71b23b
-ms.openlocfilehash: 74607fc704234e6ac85eae3bf55c186000c6e68a
+ms.translationtype: Human Translation
+ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
+ms.openlocfilehash: a9780dd3a951cc074a38061bf67aa5485c1eab68
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -62,9 +64,9 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
 
 2. Läs [licensvillkoren](https://components.xamarin.com/license/microsoft.intune.mam) för Microsoft Intune MAM Xamarin-komponenten.
 
-3.    Ladda ned mappen med Intune App SDK Xamarin-komponenten från [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) eller [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) och extrahera den. Båda filerna som du laddade ned i steg 1 och steg 2 bör ligga på samma katalognivå.
+3.    Ladda ned mappen med Intune App SDK Xamarin-komponenten från [GitHub](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) eller [Xamarin](https://components.xamarin.com/license/microsoft.intune.mam) och extrahera den. Båda filerna som du laddade ned i steg 1 och steg 3 bör ligga på samma katalognivå.
 
-4.    Kör `Xamain.Component.exe install <.xam> file` som administratör på kommandoraden.
+4.    Kör `Xamarin.Component.exe install <.xam> file` som administratör på kommandoraden.
 
 5.    I Visual Studio högerklickar du på **komponenter** i Xamarin-projektet som du skapat tidigare.
 
@@ -123,9 +125,4 @@ För Xamarin Forms och andra UI-ramverk tillhandahåller vi verktyget `MAM.Remap
 ## <a name="test-your-app"></a>Testa appen
 
 Du har slutfört stegen för att bygga in komponenten i din app. Nu kan du följa stegen i Xamarin Android-exempelappen. Vi tillhandahåller två exempel, ett för Xamarin.Forms och ett för Android.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

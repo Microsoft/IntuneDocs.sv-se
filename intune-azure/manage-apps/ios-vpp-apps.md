@@ -1,12 +1,12 @@
 ---
-title: "Hantera volyminköpta iOS-appar"
+title: "Hantera volyminköpta iOS-appar | Microsoft Docs"
 titleSuffix: Intune Azure preview
 description: "Förhandsversionen av Intune Azure: Lär dig mer om hur du kan synkronisera appar som du har köpt i volym från iOS Store i Intune och sedan hantera och spåra deras användning."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 1c13d39b8b193c56439602a6e9d9a34e547aef81
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
+ms.openlocfilehash: 1909549b321f51069bb6ad83f2f245afbf60b7dd
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -53,8 +54,8 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3. Välj **Hantera appar** på **Intune**-bladet.
-1.  I arbetsbelastningen **Hantera appar** väljer du **Installationsprogrammet** > **iOS VPP-token**.
+3. Välj **Mobilappar** på **Intune**-bladet.
+1.  I arbetsbelastningen **Mobilappar** väljer du **Installationsprogrammet** > **iOS VPP-token**.
 2.  På listan över VPP-tokenblad, väljer du **Lägg till**.
 3.  Ange följande information på bladet för ny VPP-token:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företaget eller volymköpsprogram för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
@@ -86,5 +87,5 @@ Om du vill frisläppa en licens måste du ändra tilldelningsåtgärden till **A
 
 När användare med kvalificerande enheter försöker installera en VPP-app ombeds de att gå med i Apples volyminköpsprogram. De måste göra detta innan appinstallationen fortsätter.
 
-När du distribuerar en VPP-app som Tillgänglig, har appinnehåll och licens distribuerats direkt från appbutiken.
+När du tilldelar en VPP-app som Tillgänglig har appinnehåll och licens tilldelats direkt från appbutiken.
 
