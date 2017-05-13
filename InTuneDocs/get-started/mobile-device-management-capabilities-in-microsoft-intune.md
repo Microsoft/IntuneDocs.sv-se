@@ -14,10 +14,11 @@ ms.assetid: f23b3ee7-78da-4e53-9fc2-78e58401bcf9
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: f268cf29461447306d0f5c3ca06d541d9a03a49d
-ms.openlocfilehash: 898975338edcd3267fd47d62d23b35e295f0d99b
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 271459e3faf886a45bcd673d2450f36a4a33a5db
+ms.openlocfilehash: 54a424677ef2df62c7a1fb18f2419f7b419112c0
+ms.contentlocale: sv-se
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -69,8 +70,4 @@ Hantering, inventering, appdistribution, etablering och tillbakadragning hantera
 |Funktion|Information|Mer information|
 |--------------|-----------|--------------------|
 |Inventering och rapporter|Hittar information om de enheter som du hanterar och den programvara som används i enheterna.|[Förstå dina enheter med inventering i Microsoft Intune](/intune/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune)|
-
-
-### <a name="see-also"></a>Se även
-[Windows-datorhanteringsfunktioner i Microsoft Intune](windows-pc-management-capabilities-in-microsoft-intune.md)
 
