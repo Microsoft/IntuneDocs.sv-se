@@ -15,9 +15,10 @@ ms.assetid: 677c41a2-5344-4c52-85f0-809dce3a5d5b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 4df8afe50912912e42e03b6b9bc1c397fff2d6db
+ms.contentlocale: sv-se
 ms.lasthandoff: 02/18/2017
 
 
@@ -34,6 +35,6 @@ ms.lasthandoff: 02/18/2017
     - **Visa endast kalender och tid**
     - **Visa kalender, tid och ämne (ämnet är dolt för privata möten)**
 - **Webbadress till bakgrundsbild för välkomstskärm** – Aktivera den här inställningen om du vill visa en anpassad bakgrund på **välkomstskärmen** på Windows 10 Team-enheter från den webbadress som du anger.<br>Bilden måste vara i PNG-format och webbadressen måste börja med **https://**.
-- **Underhållsperiod för programuppdateringar ** – Konfigurerar tidsperioden då uppdateringar till enheten kan göras. Du kan konfigurera starttiden och varaktigheten (mellan 1–5 timmar).
+- **Underhållsperiod för programuppdateringar** – Konfigurerar tidsperioden då uppdateringar till enheten kan göras. Du kan konfigurera starttiden och varaktigheten (mellan 1–5 timmar).
 - **Åtgärdsinformation i Azure** – Åtgärdsinformation i Azure är en del av Microsoft Operations Manager-programsviten och samlar in, lagrar och analyserar loggfilsdata från Windows 10 Team-enheter.<br>Om du vill kunna ansluta till Azure-åtgärdsinformationen måste du ange ett **Arbetsyte-ID** och en **Arbetsytenyckel**.
 
