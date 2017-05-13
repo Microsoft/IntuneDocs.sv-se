@@ -84,7 +84,7 @@
 #### [Exchange-åtkomstregler](deploy-use/exchange-access-rules-for-mobile-devices.md)
 ### [Hantera Android for arbetet](deploy-use/android-for-work.md)
 
-## [Hantera datorer med programvaruagent](deploy-use/manage-windows-pcs-with-microsoft-intune.md)
+## [Hantera datorer med programvara klienten](deploy-use/manage-windows-pcs-with-microsoft-intune.md)
 ### [Installera PC-klienten](deploy-use/install-the-windows-pc-client-with-microsoft-intune.md)
 ### [Vanliga datorhanteringsuppgifter](deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
 #### [Datorprinciper](deploy-use/use-policies-to-simplify-windows-pc-management.md)
