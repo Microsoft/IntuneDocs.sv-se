@@ -15,9 +15,10 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
 ms.openlocfilehash: 5a4ce6d6248378ba48cddeaefb941c139dd990f6
+ms.contentlocale: sv-se
 ms.lasthandoff: 02/18/2017
 
 
@@ -40,7 +41,7 @@ För enheter som **har registrerats för hantering i Intune** ser slutanvändare
 
 Appskyddsprinciper tillämpas bara i arbetskontexten när du använder appen, och appens beteende kan skilja sig beroende på kontexten: arbete eller personligt.  
 
-För appar som stöder flera identiteter tillämpar Intune endast appskyddsprinciperna när slutanvändaren använder appen i arbetskontexten.  Slutanvändaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata.  För **Outlook-appen** uppmanas slutanvändaren att ange en PIN-kod när appen startas. För **OneDrive-appen** sker detta när slutanvändaren anger arbetskontot.  För Microsoft **Word**, **PowerPoint* och **Excel** sker detta när användaren kommer åt dokument som lagras på platsen för företagets OneDrive för företag.
+För appar som stöder flera identiteter tillämpar Intune endast appskyddsprinciperna när slutanvändaren använder appen i arbetskontexten.  Slutanvändaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata.  För **Outlook-appen** uppmanas slutanvändaren att ange en PIN-kod när appen startas. För **OneDrive-appen** sker detta när slutanvändaren anger arbetskontot.  För Microsoft **Word**, **PowerPoint* och* *Excel** sker detta när användaren kommer åt dokument som lagras på platsen för företagets OneDrive för företag.
 ##  <a name="managing-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
 
 Intune har endast stöd för distribution av appskyddsprinciper till ett användarkonto per enhet.
