@@ -86,6 +86,7 @@
 #### [Windows Phone LOB-appar](manage-apps/windows-phone-line-of-business-app.md)
 #### [Windows Store-appar](manage-apps/windows-store-app.md)
 #### [Windows LOB-appar](manage-apps/windows-line-of-business-app.md)
+#### [Android for Work-appar](/manage-apps/android-for-work-apps.md)
 ### [Tilldela appar](manage-apps/deploy-apps.md)
 ### [Övervakning av appar](manage-apps/monitor-apps.md)
 ### [Använd appkonfigurationsprofiler](manage-apps/app-configuration-policies.md)
