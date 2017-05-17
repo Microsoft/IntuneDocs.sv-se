@@ -15,10 +15,11 @@ ms.assetid: c324c74e-e225-40ad-88b7-72a6d9ea09b5
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 9fff350240e4313994056bc5aebf82e204ab3c62
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 061eae7b0fba54876b820d54cd9cb2e68ee94a33
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -32,7 +33,7 @@ Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhe
 
 ## <a name="initial-troubleshooting-steps"></a>Inledande felsökningssteg
 
-Kontrollera att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Länkar till registreringssteg för varje plattform finns i [Registrera Android- och Standard Knox-enheter](/intune-azure/enroll-devices/enroll-android-and-knox-standard-devices.md).
+Kontrollera att du har konfigurerat Intune korrekt så att registrering är aktiverat innan du påbörjar felsökningen. Länkar till registreringssteg för varje plattform finns i [Registrera Android- och Standard Knox-enheter](enroll-android-and-knox-standard-devices.md).
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
@@ -75,7 +76,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 > [!NOTE]
 
-> Du kan undvika taket för enhetsregistrering genom att använda enhetsregistreringshanterare, vilket beskrivs i [Registrera enheter med enhetsregistreringshanteraren](/intune-azure/enroll-devices/enroll-devices-using-device-enrollment-manager.md).
+> Du kan undvika taket för enhetsregistrering genom att använda enhetsregistreringshanterare, vilket beskrivs i [Registrera enheter med enhetsregistreringshanteraren](enroll-devices-using-device-enrollment-manager.md).
 >
 > Ett användarkonto som läggs till i gruppen Enhetsregistreringshanterare kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
@@ -99,7 +100,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 **Lösning:**
 
-1.  Kontrollera att MDM-utfärdare har ställts in korrekt för den typ av Intune-tjänsten som du använder, det vill säga för Intune, Office 365 eller System Center Configuration Manager med Intune. Följ anvisningarna i [Ange utfärdare för hantering av mobila enheter](https://docs.microsoft.com/en-us/intune-azure/enroll-devices/set-mdm-authority).
+1.  Kontrollera att MDM-utfärdare har ställts in korrekt för den typ av Intune-tjänsten som du använder, det vill säga för Intune, Office 365 eller System Center Configuration Manager med Intune. Följ anvisningarna i [Ange utfärdare för hantering av mobila enheter](set-mdm-authority.md).
 
     > [!NOTE]
     > När du har angett MDM-utfärdare kan du endast ändra inställningen genom att kontakta supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot/how-to-get-support-for-microsoft-intune).
@@ -141,7 +142,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
 
 
-**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com)) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix.  Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
@@ -226,7 +227,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5.    På varje överordnat certifikat väljer du **Visa certifikat**.
-6.    Välj fliken **Information** och välj **Kopiera till fil... **.
+6.    Välj fliken **Information** och välj **Kopiera till fil...** .
 7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
 8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
 9.    Starta om AD FS-servrarna.
@@ -349,7 +350,7 @@ Detta fel kan bero på att datorn har registrerats tidigare eller att den har de
 
 **Lösning:**
 
-1.. Öppna **Start**-menyn och ange **Kör** -> **MMC**.
+1. Öppna **Start**-menyn och ange **Kör** -> **MMC**.
 1. Välj **Arkiv** > **Lägg till eller ta bort snapin-moduler**.
 1. Dubbelklicka på **Certifikat**, välj **Datorkonto** > **Nästa** och sedan **Lokal dator**.
 1. Dubbelklicka på **Certifikat (lokal dator)** och välj **Personliga certifikat**.

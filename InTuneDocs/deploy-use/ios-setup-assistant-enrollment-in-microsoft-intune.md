@@ -14,10 +14,11 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 8b2bd3ecba0b597bc742ea08872ffe8fc58155cf
-ms.openlocfilehash: 5c57a069fc9d2ca561954f50cbefa21b13a563d1
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: d5fd4658369534213c40c777039785ff138d0c39
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -70,7 +71,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
    -   **Registreringsinformation**: Anger hur enheterna registreras.
 
-       -   **Fråga efter användartillhörighet**: Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post. **Användartillhörighet** bör konfigureras för DEP-hanterade enheter som tillhör användare och måste använda företagsportalen för tjänster som appinstallation.
+       -   **Fråga efter användartillhörighet**: Enheten måste vara kopplad till en användare under den ursprungliga installationen och kan sedan beviljas samma åtkomst till företagets data och e-post. **Användartillhörighet** bör konfigureras för hanterade enheter som tillhör användarna och måste använda företagsportalen för tjänster som t.ex. appinstallation.
 
        -   **Ingen användartillhörighet**: Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 
@@ -109,11 +110,11 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
   I rutan **Granska enheter** kan du bekräfta serienumren. Du kan också bestämma om du vill skriva över **informationen** för serienummer som importeras igen, eller så kan du avmarkera rutan **Skriv över** och behålla den nuvarande informationen.
 
-> [!NOTE]
-> I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda serienummer. I den nya Azure-portalen kan du endast skriva över information för alla serienummer eller ignorera ny information för alla serienummer.
+  > [!NOTE]
+  > I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda serienummer. I den nya Azure-portalen kan du endast skriva över information för alla serienummer eller ignorera ny information för alla serienummer.
 
-> [!NOTE]
-> Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
+  > [!NOTE]
+  > Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
 
 2. Välj **Nästa**.
 
@@ -124,7 +125,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 Ange profilen som ska tilldelas till enheter som lagts till i listan över tillgängliga profiler, granska **profilregistreringsinformationen** och välj **Slutför**. Manuellt tillagda enheter kan associeras med valfri registreringsprofil.
 
 > [!Important]
-> I Intune kan du för närvarande utse en ”standardprofil för enhetsregistrering." Det innebär att nya serienummer automatiskt tilldelas den standardprofilen när du synkroniserar nya serienummer med Apple DEP-tjänsten. När din klient migreras till den nya Azure-portalen inom en snar framtid kommer du inte längre att kunna ange en standardprofil och tilldela serienummer automatiskt till den profilen. Du måste istället tilldela serienummer till en profil. [Läs mer](https://docs.microsoft.com/intune-azure/enroll-devices/enroll-ios-devices-using-device-enrollment-program)
+> I Intune kan du för närvarande använda en ”standardprofil för enhetsregistrering”. Det innebär att nya serienummer automatiskt tilldelas standardprofilen när du synkroniserar nya serienummer med Apple-tjänsten. När din klient migreras till den nya Azure-portalen inom en snar framtid kommer du inte längre att kunna ange en standardprofil och tilldela serienummer automatiskt till den profilen. Du måste istället tilldela serienummer till en profil. [Läs mer](https://docs.microsoft.com/intune-azure/enroll-devices/enroll-ios-devices-using-device-enrollment-program)
 
 ### <a name="export-a-profile-to-deploy-to-ios-devices"></a>Exportera en profil som ska distribueras till iOS-enheter
 
@@ -132,18 +133,7 @@ Ange profilen som ska tilldelas till enheter som lagts till i listan över tillg
 
 2. Välj **Exportera** i Aktivitetsfältet. Kopiera och spara **Profil-URL**. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
 
-  För stöd för Apple Configurator 2 måste 2.0-profilens URL redigeras. Det gör du genom att ersätta den här koden:
-
-  ```
-  https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
-  ```
-  Med den här koden:
-
-  ```
-  https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
-  ```
-
-   Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
+   Du kommer att överföra den här profil-URL:en till Apple-tjänsten med hjälp av Apple Configurator, genom följande procedur som definierar den Intune-profil som används av iOS-enheter.
 
 ### <a name="prepare-the-device-with-apple-configurator"></a>Förbered enheten med Apple Configurator
 
@@ -156,7 +146,7 @@ iOS-enheter är anslutna till Mac-datorn och registreras för hantering av mobil
 
 2. I inställningsrutan väljer du **Servrar** och väljer plustecknet (+) för att starta MDM-serverguiden. Välj **Nästa**.
 
-3. Ange **namnet** och **registrerings-URL:en** för MDM-servern från steg 6 under Registrering av installationsassistent för iOS-enheter med Microsoft Intune. För registrerings-URL:en anger du URL:en för registreringsprofilen som exporterats från Intune. Välj **Nästa**.  
+3. Ange **Namn** och **Registrerings-URL** för MDM-servern under installationsassistentens registrering för iOS-enheter med Microsoft Intune. För registrerings-URL:en anger du URL:en för registreringsprofilen som exporterats från Intune. Välj **Nästa**.  
 
    Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
 
@@ -181,8 +171,6 @@ iOS-enheter är anslutna till Mac-datorn och registreras för hantering av mobil
 
 Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
 
->[!NOTE]
->Om en användare försöker att registrera en DEP-enhet, men har överskridit sin enhetsgräns, så misslyckas registreringen utan att användaren får någon varning.
 
 
 ### <a name="see-also"></a>Se även

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 09/27/2016
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: 2640df8eb3f8505320f965ee1f6edbf5d4f8cfe7
-ms.lasthandoff: 12/30/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: 50780a8e516848bed41169c597dd2a964a1d296f
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -79,6 +80,18 @@ Om du inte lyckas lösa problemet med hjälp av den här informationen läser du
 |-2016341112|0x87D11388|iOS-enheten är förnärvarande upptagen|
 
 ## <a name="errors-returned-by-ios-devices"></a>iOS-enheterna returnerade fel
+
+### <a name="company-portal-errors"></a>Företagsportalfel
+
+|Feltext i företagsportalen|HTTP-statuskod|Ytterligare felinformation|
+|---|---|---|
+|__Internt serverfel__ <br>Det verkar som att du inte kunde kontakta oss på grund av ett internt fel på vår server. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 500|Det här felet beror sannolikt på problem i Intune-tjänsten. Problemet ska lösas hos Intune och beror förmodligen inte på något fel hos kunden.|
+|__Tillfälligt otillgänglig__ <br>Det verkar som det gick inte att nå oss eftersom tjänsten för tillfället är otillgänglig. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 503|Detta beror troligen på ett tillfälligt Intune-tjänstproblem, till exempel att underhåll utförs i tjänsten. Problemet ska lösas hos Intune och beror förmodligen inte på något fel hos kunden.|
+|__Det gick inte att ansluta till servern__ <br>Det verkar som om du inte kan nå oss. Försök igen och kontakta IT-administratören om problemet kvarstår.|Inte associerad med någon HTTP-statuskod|Det går inte att upprätta någon säker anslutning till servern, förmodligen på grund av ett SSL-problem med de certifikat som används. Det här problemet kan bero på kundkonfigurationer som inte är kompatibla med Apples krav för App Transport Security (ATS).|
+|__Något verkar ha gått fel__ <br>Företagsportalens klient kunde inte läsas in. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 400|Fel med en HTTP-statuskod i 400-intervallet som inte har ett mer specifikt felmeddelande visar den här felkoden. Det här är ett klientfel i företagsportalappen för iOS.|
+|__Det går inte att nå servern__ <br>Det verkar som om du inte kan nå oss. Försök igen och kontakta IT-administratören om problemet kvarstår.|Fel 500|Fel med en HTTP-statuskod i 500-intervallet som inte har ett mer specifikt felmeddelande visar den här felkoden. Det här är ett tjänstfel som uppstår i Intune-tjänsten.|
+
+### <a name="service-errors"></a>Tjänstfel
 
 |Statuskod|Hexadecimal felkod|Felmeddelande|
 |---------------|--------------------------|-----------------|

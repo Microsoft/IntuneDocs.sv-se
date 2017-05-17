@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/18/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: a981b0253f56d66292ce77639faf4beba8832a9e
-ms.openlocfilehash: 6838993b5b19bc1e23c9efe0911a01a2c66c6886
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 7a2ab1e64fd1ca37f4d086624321201896a989ac
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
@@ -36,7 +37,7 @@ I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan
 -  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter.
 NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune Certificate Connector**: Använd Intune-portalen för att hämta installationsprogrammet för **Certificate Connector** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
+-  **Microsoft Intune Certificate Connector**: Använd Intune-portalen för att hämta installationsprogrammet för **Certificate Connector** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector. 
 -  **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som en Web Application Proxy-server (WAP). Den här konfigurationen:
     -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
     -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
@@ -309,6 +310,9 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 5.  Välj **Aktivera certifikatanslutningsapp**.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här hämtar, installerar och konfigurerar du certifikatanslutningsappen
+
+> [!NOTE]
+> På grund av ett känt problem måste du hämta, installera och konfigurera certifikatanslutningsappen på följande sätt: [Konfigurera infrastruktur för certifikat för SCEP -> Konfigurera din infrastruktur -> Uppgift 5](https://docs.microsoft.com/intune/deploy-use/configure-certificate-infrastructure-for-scep#a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure)
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övrigt** > **Intune**.

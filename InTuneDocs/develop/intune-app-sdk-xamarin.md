@@ -15,10 +15,10 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: cce2cd69808937f3e088aa04f6142611a4594895
-ms.openlocfilehash: a9780dd3a951cc074a38061bf67aa5485c1eab68
+ms.sourcegitcommit: 1445c29c9b2b1754bad733096dbc08a76481f85b
+ms.openlocfilehash: e8922fa67381f410194b9db333758a533cecb3c4
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2017
 
 
 ## <a name="overview"></a>Översikt
-[Intune App SDK Xamarin-komponenten](https://components.xamarin.com/view/microsoft.intune.mam) aktiverar [Intunes hanteringsfunktioner för mobilappar](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) i iOS- och Android-appar som skapats med Xamarin. Komponenten hjälper utvecklare att enkelt bygga in funktioner för appskydd med Intune i Xamarin-baserade appar.
+[Intune App SDK Xamarin-komponenten](https://components.xamarin.com/view/microsoft.intune.mam) aktiverar [Intunes appskyddsprincip](/intune/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) i iOS- och Android-appar som skapats med Xamarin. Komponenten hjälper utvecklare att enkelt bygga in funktioner för appskydd med Intune i Xamarin-baserade appar.
 
 Som du kommer märka kan du aktivera SDK-funktioner utan att ändra appens beteende. När du har byggt in komponenten i din iOS- eller Android-mobilapp kan IT-administratören distribuera principer via Microsoft Intune Mobile Application Management (MAM), som stöder olika funktioner för dataskydd.
 
@@ -108,7 +108,7 @@ Nu stöder Xamarin-appar som skapats med Intune App SDK Xamarin-komponenten Intu
 Du har slutfört stegen som krävs för att bygga in komponenten i din Xamarin-baserade iOS-app. Om du använder Xcode för att skapa projektet kan du använda `Intune App SDK Settings.bundle`. På så sätt kan du aktivera och inaktivera Intune-principinställningar när du skapar ditt projekt för att testa och felsöka. Om du vill utnyttja det här paketet följer du stegen i [utvecklarguiden för Intune App SDK för iOS](intune-app-sdk-ios.md) och läser avsnittet om [felsökning i Xcode](intune-app-sdk-ios.md#status-result-and-debug-notifications).
 
 ## <a name="enabling-mam-in-your-android-mobile-app"></a>Aktivera MAM i din Android-mobilapp
-För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser du och följer [utvecklarguiden för Intune App SDK för Android]. För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent-required) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`.
+För Xamarin-baserade Android-appar som inte använder ett UI-ramverk läser du och följer [utvecklarguiden för Intune App SDK för Android]. För din Xamarin-baserade Android-app måste du ersätta klassen, metoder och aktiviteter med deras MAM-motsvarigheter baserat på [tabellen](intune-app-sdk-android.md#replace-classes-methods-and-activities-with-their-mam-equivalent) som ingår i handboken. Om din app inte definierar en `android.app.Application`-klass måste du skapa en och se till att du ärver från `MAMApplication`.
 
 För Xamarin Forms och andra UI-ramverk tillhandahåller vi verktyget `MAM.Remapper`. Verktyget utför klassersättningen åt dig. Men du måste dock utföra följande steg:
 

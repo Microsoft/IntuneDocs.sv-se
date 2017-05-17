@@ -14,10 +14,11 @@ ms.assetid: b23d4007-1866-42e9-b6cb-d45408562da4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 9e3d509cf404c89b27f92ad54c900e927ce3878b
-ms.openlocfilehash: a848e92be9896016159533c0ba7291fe193a217a
-ms.lasthandoff: 12/30/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ca5baca6bb9814d7ab4075c65eb2274c8b6e9e08
+ms.openlocfilehash: 73934aaa762f99f70912e197e27c125a31e999e2
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/30/2016
 ### <a name="free-step-by-step-tutorials"></a>Kostnadsfria steg-för-steg-anvisningar
 [!INCLUDE[accessibility8](./includes/accessibility8_md.md)]
 
-### <a name="assistive-technology-products-for-windows"></a>Handikapphjälpmedelsprodukter för Windows
+### <a name="assistive-technology-products-for-windows"></a>Hjälpmedelsteknikprodukter för Windows
 [!INCLUDE[accessibility9](./includes/accessibility9_md.md)]
 
 ## <a name="documentation-in-alternative-formats"></a>Dokumentation i andra format
@@ -67,6 +68,6 @@ ms.lasthandoff: 12/30/2016
 
 [!INCLUDE[accessibility16](./includes/accessibility16_md.md)]
 
-## <a name="for-more-information"></a>Om du vill ha mer information
+## <a name="for-more-information"></a>Mer information
 [!INCLUDE[accessibility17](./includes/accessibility17_md.md)]
 

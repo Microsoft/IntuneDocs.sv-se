@@ -15,10 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: e10453155343bb7fd91a4fd3874d393ef78d0b1a
-ms.openlocfilehash: 08e2f65bcd600489f6599d37e5ef56c205176cd7
-ms.lasthandoff: 04/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: 329d675f2d084cd843a7029060e77c8bca8564af
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -43,11 +44,11 @@ När du migrerar från klassiska Intune till Azure Portal, kan det visas en ny g
 
 Vid förberedelserna för migreringen kopieras grupper från Intune till Azure AD. Övriga ändringar som du gör i den klassiska Intune-portalen kommer att uppdateras i Azure AD-gruppen. Dock synkroniseras inte ändringar som görs i Azure AD tillbaka till den klassiska Intune-konsolen. Detta kan resultera i att migreringen till Azure-portalen misslyckas och att migreringen försenas.
 
-### <a name="compliance-policies-from-intune-will-not-show-up-in-new-console"></a>Efterlevnadsprinciper från Intune visas inte i någon ny konsol 
+### <a name="compliance-policies-from-intune-will-not-show-up-in-new-console"></a>Efterlevnadsprinciper från Intune visas inte i någon ny konsol
 
 Alla efterlevnadsprinciper som du har skapat i den klassiska Intune-portalen har migrerats, men de visas inte i Azure-portalen. Det beror på en designändring i Azure-portalen. Efterlevnadsprinciper som du skapade i den klassiska Intune-portalen används fortfarande, men du måste visa och redigera dem i den klassiska portalen.
 Dessutom syns nya efterlevnadsprinciper som du skapar i Azure-portalen inte i den klassiska portalen.
-Mer information finns i [Vad är enhetsefterlevnad?](https://docs.microsoft.com/intune-azure/set-device-compliance/what-is-device-compliance).
+Mer information finns i [Vad är enhetsefterlevnad?](../set-device-compliance/what-is-device-compliance.md).
 
 
 
@@ -58,4 +59,7 @@ Globala administratörer (kallas även innehavaradministratörer) kan fortsätta
 
 ### <a name="apple-enrollment-profile-migration"></a>Migrering av Apple-registreringsprofil
 Under de kommande månaderna kommer Intune att aktivera distributionshanteringen av Apples program för enhetsregistrering och Apple Configurator via nya Azure Portal. Om du tar bort Apples DEP-token och inte överför en uppdaterad token, så återställs den ursprungliga token i nya Azure Portal som en del av migreringen av ditt Intune-konto. Om du vill ta bort denna token och förhindra DEP-registrering tar du helt enkelt bort token i Azure Portal. 
+
+### <a name="rbac-for-apple-corporate-owned-device-enrollment"></a>RBAC för registrering av företagsägda Apple-enheter
+Klientens eller tjänstadministratörens Azure AD-roller är nödvändiga för att kunna utföra registrering i Apple DEP och Apple Configurator, trots att RBAC-behörigheter visas och är tillgängliga under den anpassade användarrollen. RBAC-rollstöd för dessa funktioner kommer att finnas i framtiden.
 

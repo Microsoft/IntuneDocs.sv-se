@@ -14,9 +14,11 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: 18ec39a15f9cc2ac8ce912eaa91e54371e7dd423
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: bb77dd8d7eee788d65d7cfecd3d888c7f55bd3dc
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -33,9 +35,9 @@ Villkorlig åtkomst från Enterprise Mobility + Security (EMS) utnyttjar kraften
 
 Med villkorlig åtkomst kan du kan definiera villkor som begränsar åtkomsten till företagets data baserat på plats, enhet och användare och programmets känslighet.
 
-Ur enhetsperspektiv arbetar Intune och Azure Active Directory tillsammans för att se till att endast hanterade och kompatibla enheter får åtkomst till e-post och Office 365-tjänster. Du kan till exempel ange en princip i Azure Active Directory för att endast göra det möjligt för datorer som är anslutna till en domän, eller mobila enheter som är registrerade i ett program för mobil enhetshantering som Intune, till att få åtkomst till Office 365-tjänster. Du kan använda Intune för att ange en kompabilitetsprofil för enheter som utvärderar enhetens kompatibilitetsstatus. Kompatibilitetsstatusen rapporteras till Azure Active Directory för att användas för verkställande av principer i Azure Active Directory när användaren försöker få åtkomst till företagets resurser. Mer information om enhetskompatibilitet i Intune finns i [Vad är enhetsefterlevnad?](/intune-azure/set-device-compliance/what-is-device-compliance)
+Ur enhetsperspektiv arbetar Intune och Azure Active Directory tillsammans för att se till att endast hanterade och kompatibla enheter får åtkomst till e-post och Office 365-tjänster. Du kan till exempel ange en princip i Azure Active Directory för att endast göra det möjligt för datorer som är anslutna till en domän, eller mobila enheter som är registrerade i ett program för mobil enhetshantering som Intune, till att få åtkomst till Office 365-tjänster. Du kan använda Intune för att ange en kompabilitetsprofil för enheter som utvärderar enhetens kompatibilitetsstatus. Kompatibilitetsstatusen rapporteras till Azure Active Directory för att användas för verkställande av principer i Azure Active Directory när användaren försöker få åtkomst till företagets resurser. Mer information om enhetsefterlevnad i Intune finns i [Vad är enhetsefterlevnad?](../set-device-compliance/what-is-device-compliance.md).
 
-Villkorlig åtkomst för molnappar, till exempel Exchange Online, kan konfigureras via Azure Active Directory. Mer information finns i den här [artikeln](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal).
+Villkorlig åtkomst för molnappar, till exempel Exchange Online, kan konfigureras via Azure Active Directory. Mer information finns i den här [artikeln](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## <a name="on-premises-conditional-access-in-intune"></a>Lokal villkorlig åtkomst i Intune
 
@@ -51,10 +53,5 @@ När en enhet inte uppfyller de angivna villkoren leds slutanvändaren genom en 
 
 [Skapa en princip för villkorlig åtkomst för Exchange On-premises](create-conditional-access-policy-for-exchange-on-premises.md)
 
-[Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
+[Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 

@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 153cce3809e24303b8f88a833e2fc7bdd9428a4a
-ms.openlocfilehash: b2d2e4e0210526ff70b86526bd0b2e17bab0286b
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: ababc7f8238079ce02a587e1829e8eedfb117937
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -40,11 +41,6 @@ Andra metoder för att registrera iOS-enheter beskrivs i [Välj hur du vill regi
 
 Uppfyll följande krav innan du konfigurerar registrering av iOS-enheter:
 
-- [Konfigurera domäner](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
-- [Ange MDM-utfärdare](set-mdm-authority.md)
-- [Skapa grupper](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
-- [Konfigurera företagsportalen](/intune-azure/manage-apps/company-portal-app.md)
-- Tilldela användarlicenser i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Hämta ett Apple MDM-pushcertifikat](get-an-apple-mdm-push-certificate.md)
 - Kontrollera att du har fysisk åtkomst till iOS-enheter
 - Ta reda på enhetens serienummer (se [Hämta ett iOS-serienummer](https://support.apple.com//HT204308))
@@ -69,7 +65,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 6. Ange om enheter med den här profilen ska registreras med eller utan användartillhörighet under **Användartillhörighet**.
 
-   - **Registrera med användartillhörighet** – Enheten måste registreras med en användare under den ursprungliga installationen och kan sedan beviljas åtkomst till företagets data och e-post. Användartillhörighet ska konfigureras för DEP-hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som appinstallation.
+   - **Registrera med användartillhörighet** – Enheten måste registreras med en användare under den ursprungliga installationen och kan sedan beviljas åtkomst till företagets data och e-post. Användartillhörighet ska konfigureras för hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som t.ex. appinstallation.
 
    - **Registrera utan användartillhörighet** – Enheten är inte kopplad till någon användare. Använd den här anknytningen för enheter som utför uppgifter utan att öppna lokala användardata. Appar som kräver användartillhörighet, inklusive företagsportalappen som används för installation av branschspecifika appar, fungerar inte.
 
@@ -102,30 +98,21 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 3. Välj **Exportera profil** på bladet för profilen.
 
 4. Kopiera profilens webbadress till [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) med iOS-enheten ansluten. Du kommer att överföra den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
-  För stöd för Apple Configurator 2 måste 2.0-profilens URL redigeras. Det gör du genom att ersätta den här koden:
-    ```
-    https://manage.microsoft.com/EnrollmentServer/Discovery.svc/iOS/ESProxy?id=
-    ```
-    Med den här koden:
-    ```
-    https://appleconfigurator2.manage.microsoft.com/MDMServiceConfig?id=
-    ```
-Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsprogramtjänst med hjälp av Apple Configurator genom följande procedur för att definiera den Intune-profil som används av iOS-enheter.
 
-5. Överför den här profil-URL:en till Apples enhetsregistreringsprogramtjänst för att definiera den Intune-profil som används av iOS-enheter.
+  Du kommer att överföra den här profil-URL:en till Apple-tjänsten med hjälp av Apple Configurator, genom följande procedur som definierar den Intune-profil som används av iOS-enheter.
+
+5. Överför den här profil-URL:en till Apple-tjänsten med Apple Configurator för att definiera den Intune-profil som används av iOS-enheter.
  1.  På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
-
   > [!WARNING]
   > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du ansluter den.
 
-  2. I fönstret **inställningar** väljer du **Servrar** och väljer plustecknet (+) för att starta MDM-serverguiden. Välj **Nästa**.
+  2. I rutan för **inställningar** väljer du **Servrar** och plustecknet (+) för att starta MDM-serverguiden. Välj **Nästa**.
 
   3. Ange **namnet** och **registrerings-URL:en** för MDM-servern från steg 6 under Registrering av installationsassistent för iOS-enheter med Microsoft Intune. För registrerings-URL:en anger du URL:en för registreringsprofilen som exporterats från Intune. Välj **Nästa**.  
 
-  Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
+    Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
 
   4.  Anslut iOS-mobilenheterna till Mac-datorn med en USB-adapter.
-
   > [!WARNING]
   > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du startar Installationsassistenten.
 
@@ -138,27 +125,9 @@ Du kommer att överföra den här profil-URL:en till Apples enhetsregistreringsp
 6.  **Distribuera enheter**.
     Enheterna är nu klara för företagets registrering. Stäng av enheterna och distribuera dem till användarna. När användarna sätter på sina enheter startar Installationsassistenten.
 
+    Se [Informera dina slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune). Du kan också dirigera dina slutanvändare till [Använda din iOS- eller macOS-enhet med Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) 
+
 ## <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Hur användare installerar och använder företagsportalen på sina enheter
 
 Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ytterligare några steg, vilka beskrivs nedan, för att kunna slutföra installationen och installera företagsportalappen.
-
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet
-
-1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
-
-2. Under installationen uppmanas användarna att ange ett Apple-ID. Användaren måste ange ett Apple-ID för att företagsportalen ska få installeras på enheten. Användaren kan även ange ID från iOS-inställningsmenyn när installationen har slutförts.
-
-3. När installationen har slutförts måste företagsportalappen installeras på iOS-enheten från App Store.
-
-4. Användaren kan nu logga in på företagsportalen med det UPN som angavs när enheten konfigurerades.
-
-5. Efter inloggningen uppmanas användaren att registrera enheten. Det första steget är att identifiera enheten. I appen visas en lista över iOS-enheter som redan är företagsregistrerade och har tilldelats till användarens Intune-konto. Användaren ska välja motsvarande enhet. Om enheten inte är företagsregistrerad måste användaren välja ny enhet och fortsätta med standardregistreringsflödet.
-
-6. På nästa skärm måste användaren bekräfta den nya enhetens serienummer. Användare kan trycka på länken Bekräfta serienumret och starta inställningsappen för att verifiera serienumret. Sedan måste användaren ange de fyra sista tecknen i serienumret i företagsportalappen.
-
-    I det här steget verifieras att enheten är den företagsenhet som har registrerats i Intune. Om serienumret på enheten inte matchar har fel enhet valts. Användaren bör gå tillbaka till föregående sida och välja en annan enhet.
-
-7. När serienumret har verifierats omdirigeras användaren från företagsportalappen till företagsportalens webbplats för att slutföra registreringen. På webbplatsen uppmanas sedan användaren att återgå till appen.
-
-Registreringen är klar, och användaren kan nu använda den här enheten med fullständiga funktioner.
 

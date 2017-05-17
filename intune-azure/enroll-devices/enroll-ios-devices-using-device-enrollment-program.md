@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 04/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,10 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-translationtype: Human Translation
-ms.sourcegitcommit: 53f1c688aad2f810d8a887435dd8d122d4f471ae
-ms.openlocfilehash: d8fa3a19915076f1a603449dd426172fbc5a613a
-ms.lasthandoff: 04/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: 18c6af67aebf5745ed4950a1ed44fce82d18f7d7
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -166,27 +167,9 @@ DEP-enheter som hanteras av Intune måste tilldelas en DEP-profil innan de har r
 
 Nu kan du distribuera företagsägda enheter till användare. När en iOS DEP-enhet aktiveras, så registreras den för hantering av Intune. Om enheten har aktiverats och används kan profilen inte användas förrän enheten har fabriksåterställts.
 
+Se [Informera dina slutanvändare om Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune). Du kan också dirigera dina slutanvändare till [Använda din iOS- eller macOS-enhet med Intune](https://docs.microsoft.com/intune/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) 
+
 ### <a name="how-users-install-and-use-the-company-portal-on-their-devices"></a>Hur användare installerar och använder företagsportalen på sina enheter
 
 Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ytterligare några steg, vilka beskrivs nedan, för att kunna slutföra installationen och installera företagsportalappen.
-
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet
-
-1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
-
-2. Under installationen uppmanas användarna att ange ett Apple-ID. Användaren måste ange ett Apple-ID för att företagsportalen ska få installeras på enheten. Användaren kan även ange sitt Apple-ID på menyn för iOS-inställningar när installationen har slutförts.
-
-3. När installationen har slutförts måste användaren installera företagsportalappen från App Store.
-
-4. Användaren kan nu logga in på företagsportalen med det UPN som angavs när enheten konfigurerades.
-
-5. Efter inloggningen uppmanas användaren att registrera enheten. Det första steget är att identifiera enheten. I appen visas en lista över iOS-enheter som redan är företagsregistrerade och har tilldelats till användarens Intune-konto. Användaren ska välja motsvarande enhet. Om enheten inte är företagsregistrerad måste användaren välja ny enhet och fortsätta med standardregistreringsflödet.
-
-6. På nästa skärm måste användaren bekräfta den nya enhetens serienummer. Användaren gör detta genom att välja den länk som visas. Länken öppnar appen Inställningar, med vars hjälp användaren kan verifiera sitt serienummer. Sedan måste användaren ange de fyra sista tecknen i serienumret i företagsportalappen.
-
-   I det här steget verifieras att enheten är den företagsenhet som har registrerats i Intune. Om serienumret på enheten inte stämmer, så innebär det att användaren har valt fel enhet. Användaren måste gå tillbaka till föregående sida och välja en annan enhet.
-
-7. När serienumret har verifierats omdirigeras användaren från företagsportalappen till företagsportalens webbplats för att slutföra registreringen. På webbplatsen uppmanas sedan användaren att återgå till appen.
-
-Registreringen är klar, och användaren kan nu använda den här enheten med fullständiga funktioner.
 

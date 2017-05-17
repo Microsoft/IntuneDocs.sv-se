@@ -2,10 +2,10 @@
 title: iOS-appar med appskyddsprinciper | Microsoft Docs
 description: "Det här avsnittet beskriver vad som händer när din iOS-app hanteras av appskyddsprinciper."
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 03/06/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.assetid: b57e6525-b57c-4cb4-a84c-9f70ba1e8e19
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 665d3347636d5ec0c698ffb93b768028c9d59ce3
-ms.openlocfilehash: fba18027039a0e49c5301f9d1a16947e97408034
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.openlocfilehash: 92a91fab353c78c751ae5eb25c9853df5cbcfe53
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/06/2017
 
 
 ---
@@ -26,11 +27,11 @@ ms.lasthandoff: 03/07/2017
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
- Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang: Till exempel när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras i ett företags OneDrive-affärsplats.
+ Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper tillämpas endast när appar används i arbetssammanhang, exempelvis när användaren har åtkomst till appar med ett arbetskonto eller har åtkomst till filer som lagras på en OneDrive för företag-plats.
 
 ##  <a name="access-apps"></a>Åtkomstappar
 
-Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om appen första gången de använder den.  En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen. 
+Om enheten **inte har registrerats i Intune** uppmanas användarna att starta om appen första gången de använder den. En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen. 
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
@@ -41,9 +42,13 @@ För enheter som **har registrerats för hantering i Intune** ser användaren et
 
 ##  <a name="use-apps-with-multi-identity-support"></a>Använda appar med stöd för flera identiteter
 
-Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen fungerar på olika sätt beroende på om sammanhanget är arbete eller personligt.
+Med appar som stöder flera identiteter kan du använda olika konton (arbetskonton och privata konton) för att få åtkomst till samma appar, där appskyddsprinciperna endast tillämpas när apparna används i arbetskontexten.  
 
- Användaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata. För **Outlook-appen**, uppmanas användaren att ange en PIN-kod när hen startar appen. För **OneDrive-appen**, uppmanas användaren att ange en PIN-kod när hen skriver i arbetskontot.  För Microsoft **Word**, **PowerPoint** och **Excel**, uppmanas användaren att ange en PIN-kod när hen har åtkomst till dokument som lagras i företagets OneDrive för företag.
+Användaren uppmanas till exempel att ange en PIN-kod för att kunna komma åt arbetsdata. För **Outlook-appen**, uppmanas användaren att ange en PIN-kod när hen startar appen. För **OneDrive-appen**, uppmanas användaren att ange en PIN-kod när hen skriver i arbetskontot.  För Microsoft **Word**, **PowerPoint** och **Excel**, uppmanas användaren att ange en PIN-kod när hen har åtkomst till dokument som lagras i företagets OneDrive för företag.
+
+- Mer information om appar som stöder [MAM och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
+
+Appskyddsprinciper tillämpas bara i arbetssammanhang. Därför kan appen fungerar på olika sätt beroende på om sammanhanget är arbete eller personligt.
 
 ##  <a name="manage-user-accounts-on-the-device"></a>Hantera användarkonton på enheten
 

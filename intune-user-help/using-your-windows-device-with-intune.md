@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/17/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 2cb089cc9b6e76e13b2f5da65efb3452aa5274af
-ms.openlocfilehash: e3993c97475b699da90a0634bdb3ac1ba4f5a28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: 64cfbf02e54244457aeaefb84e3049350764c410
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -28,6 +29,17 @@ ms.lasthandoff: 02/24/2017
 # <a name="using-your-windows-device-with-intune"></a>Att använda din Windowsenhet med Intune
 
 Det finns ett antal saker som du kan göra med Intune som gör livet lite lättare. Här är en lista över de vanligaste sakerna som företaget kan be dig att göra.
+
+## <a name="supported-versions"></a>Versioner som stöds
+
+Intune har för närvarande stöd för följande Windows-versioner.
+
+* Windows 10 (Home, Pro, Education och Enterprise)
+* Windows Phone 8.1 och senare
+* Windows 8.1 RT
+* Windows 8,1
+
+Det finns några andra versioner av Windows, till exempel [Windows 10 Holographic](https://www.microsoft.com/hololens), som också stöds av Intune. De visas inte här eftersom de är avsedda för mycket specifik användning.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrera enheten i Intune och installera företagsportalen
 
