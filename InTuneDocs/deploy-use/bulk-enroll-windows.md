@@ -13,10 +13,11 @@ ms.technology:
 ms.assetid: 0053e37a-f26e-452f-9524-5039a635b52e
 ms.reviewer: damionw
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: dfe63ba7e1825db8d8b6b1e74c442b125ccafd46
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 529a3e91e1f86129de77df0529f48a42f86a6521
+ms.openlocfilehash: 3c7d92c89c74a665c02fd64a66255beb08dcfb50
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
@@ -47,7 +48,7 @@ Massregistrering av Windows-enheter kräver följande:
   - **Projektmapp** – Där det nya projektet ska sparas
   - **Beskrivning** – En valfri beskrivning av projektet ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-name.png)
 
-4.    Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.
+4.    Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.<BR>
 ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-device.png)
 
 5.    Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om detta inte är konfigurerat krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.

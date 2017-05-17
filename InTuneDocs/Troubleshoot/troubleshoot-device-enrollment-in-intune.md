@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/21/2017
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: fe30e9be50eac610c5694502f0e16de453ddf4e3
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: f4aa655254d008eeea662f2cb35cc1fba633ef5e
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -234,7 +235,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 3.    Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4.    Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5.    På varje överordnat certifikat väljer du **Visa certifikat**.
-6.    Välj fliken **Information** och välj **Kopiera till fil...**.
+6.    Välj fliken **Information** och välj **Kopiera till fil...** .
 7.    Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
 8.    Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
 9.    Starta om AD FS-servrarna.
@@ -252,6 +253,19 @@ Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i r
 
 
 ## <a name="ios-issues"></a>iOS-problem
+
+### <a name="ios-enrollment-errors"></a>Fel vid iOS-registrering
+I följande tabell finns de felmeddelanden som kan visas när användarna registrerar iOS-enheter i Intune.
+
+|Felmeddelande|Problem|Lösning|
+|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|NoEnrollmentPolicy|Ingen registreringsprincip hittades|Kontrollera att alla krav för registrering har konfigurerats, till exempel APNs-certifikatet (Apple Push Notification Service), och att ”iOS som en plattform” är aktiverat. Anvisningar finns i [Konfigurera iOS- och Mac-enhetshantering](/intune/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
+|DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningar för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
+|APNSCertificateNotValid|Det är problem med det certifikat som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att nå ut till registrerade iOS-enheter. Om alla steg för att erhålla ett APNs-certifikat inte utfördes, eller om APNs-certifikatet har upphört att gälla, misslyckas registreringsförsöket och det här meddelandet visas.<br /><br />Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) och [Ordna användare och enheter](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|AccountNotOnboarded|Det är problem med det certifikat som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att nå ut till registrerade iOS-enheter. Om alla steg för att erhålla ett APNs-certifikat inte utfördes, eller om APNs-certifikatet har upphört att gälla, misslyckas registreringsförsöket och det här meddelandet visas.<br /><br />Mer information finns i [Konfigurera och iOS- och Mac-hantering med Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune).|
+|DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den typ av mobil enhet som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS-version 8.0 eller senare.<br /><br />|Kontrollera att användarens enhet kör iOS version 8.0 eller senare.|
+|UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br /><br />Läs följande om du vill ha mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](/Intune/Deploy-use/set-up-ios-and-mac-management-with-microsoft-intune) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-3) och [Ordna användare och enheter](/Intune/Get-Started/start-with-a-paid-subscription-to-microsoft-intune-step-5).|
+|MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte angetts i Intune.<br /><br />Läs punkt 1 i avsnittet ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](/Intune/Understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
 **Problem:** iOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:

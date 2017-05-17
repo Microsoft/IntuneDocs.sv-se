@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 05/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 5f172290d493717308446c4f9e2313a03ba8f3aa
-ms.openlocfilehash: d7f25657fc7cfb9298809f76f198810718e58c39
-ms.lasthandoff: 04/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 33f3c8d91d5e4f17a4542d828d1883e33a339221
+ms.openlocfilehash: afe06e523e7688cab2effeb6999be3193066add8
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/05/2017
 
 
 ---
 
-
-# <a name="the-early-edition-for-microsoft-intune---april-2017"></a>Den tidiga utgåvan för Microsoft Intune – april 2017
+# <a name="the-early-edition-for-microsoft-intune---may-2017"></a>Den tidiga utgåvan för Microsoft Intune – maj 2017
 
 Den **tidiga utgåvan** innehåller en lista över funktioner som är planerade för kommande versioner av Microsoft Intune. Den här informationen omfattas av vårt sekretessavtal och tillhandahålls på ett ytterst begränsat sätt. Informationen kan komma att ändras. Vissa funktioner som beskrivs här kanske inte blir klara i tid och kanske därför inte blir aktuella förrän i framtida versioner. Andra funktioner pilottestas (förhandsversionstestning) för att säkerställa att de är kundklara. Kontakta din Intune- eller PM-representant om du har frågor eller funderingar.
 
@@ -35,32 +35,23 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 ## <a name="new-capabilities"></a>Nya funktioner
 
-### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Appens installationsstatus har förbättrats för Företagsportalappen för Windows 10 <!--676495-->
-
-Företagsportalappen för Windows 10 har nu en förloppsindikatorn vid installation för alla moderna appinstallationer som startas från Företagsportalen. Du kan se de nya statusmeddelandena för företagsportalsappen för Windows 10 på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md).
-
-### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Förbättrade statusmeddelanden i Företagsportalappen för iOS <!--744866-->
-
-Nya och mer specifika felmeddelanden visas nu i Företagsportalappen för iOS för att ger mer tillgänglig information om vad som händer i enheter. Dessa felärenden inkluderades tidigare i ett allmänt felmeddelande med titeln "Företagsportalen är för tillfället otillgänglig". Om en användare startar Företagsportalen på iOS när det inte finns en internetanslutning visas dessutom ett permanent statusfält på startsidan med texten "Ingen internetanslutning".
-
-### <a name="myapps-available-for-managed-browser---822308-822303--"></a>MyApps tillgängligt för hanterad webbläsare <!--822308, 822303-->
-
-Microsoft MyApps har nu bättre stöd i den hanterade webbläsaren. Användare av hanterad webbläsare som inte är mål för hantering flyttas direkt till tjänsten MyApps där de kan komma åt sina administratörsetablerade SaaS-appar. Användare som är mål för Intune-hantering har även i fortsättningen åtkomst till MyApps från det inbyggda bokmärket för hanterad webbläsare.
-
-### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nya ikoner för den hanterade webbläsaren och företagsportalen <!--918433, 918431-->
-
-Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-versionerna av appen. Den nya ikonen innehåller det uppdaterade Intune-märket så att det blir mer konsekvent med andra appar i Enterprise Mobility + Security (EM+S). Du kan se den nya ikonen för Managed Browser på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md).
-
-Företagsportalen får också uppdaterade ikoner för Android-, iOS- och Windows-versioner av appen för att förbättra enhetligheten med andra appar i EM+S. Dessa ikoner släpps gradvis över plattformar från april till slutet av maj.
-
 ### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
 
 Användarna behöver inte längre logga in i Outlook-appen om de är inloggade på företagsportalappen för iOS på samma enhet med samma konto. När användarna startar Outlook-appen kan de välja sitt konto och logga in automatiskt. Vi arbetar också med att lägga till den här funktionen för andra Microsoft-appar.
 
-### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
+### <a name="improved-notification-for-samsung-knox-startup-pins---1087143--"></a>Förbättrat meddelande för PIN-koder vid start av Samsung KNOX <!--1087143-->
 
-En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen. Du kan se de nya skärmarna för företagsportalsappen för Android på sidan med [nyheter i användargränssnittet i Intune-appen](whats-new-in-intune-app-ui.md).
+När användarna måste ange en PIN-kod för start på Samsung KNOX-enheter för att bli kompatibla med kryptering, visas meddelandet för användarna. De kommer till rätt plats i appen Inställningar när de trycker på meddelandet.  Meddelandet tog tidigare användaren till skärmen där lösenord ändras.
 
+### <a name="promoting-the-most-current-version-of-the-company-portal-for-android---1098661--"></a>Använda den senaste versionen i företagsportalen för Android <!--1098661-->
+
+Användarna ser ett meddelande på appens meddelandeskärm när en ny rekommenderad version av företagsportalappen för Android har släppts. Meddelandet är ”En uppdatering av företagsportalen finns tillgänglig”. När de trycker på meddelandet öppnas en webbsida med en lista över de tillgängliga appbutiker där de kan hämta den uppdaterade versionen. 
+
+### <a name="improvements-to-app-syncing-with-windows-10-creators-update----676505---"></a>Förbättringar av appsynkronisering med Windows 10 Creators Update <!-- 676505 -->
+
+Företagsportalen för Windows 10 kommer automatiskt att initiera en synkronisering för appinstallationsbegäranden för enheter med Windows 10 Creators Update (1704). Detta minskar problemen där appen fastnar vid tillståndet ”Väntar på synkronisering” när installationer utförs. Dessutom kommer användare att kunna initiera en synkronisering från appen manuellt. 
+
+Företagsportalen för Windows 10 kommer också att innehålla en uppdateringsknapp för att ge användarna möjlighet att uppdatera innehållet i appen vid behov. 
 
 ## <a name="notices"></a>Meddelanden
 
@@ -80,11 +71,7 @@ Som en del av migreringen till Intune på Azure gör vi tre appx-ändringar:
 2. Vi ändrar syfte för den befintliga appx-apptypen så att den endast kan riktas mot datorer som hanteras via Intune PC-agenten.
 3. Vi konverterar alla befintliga appx till MDM appx med migreringen.
 
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-
 Detta påverkar inte någon av dina befintliga distributioner till enheter som hanteras via Intune PC-agenten. Efter migreringen kommer du dock inte att kunna distribuera dessa migrerade appx-versioner till nya enheter som hanteras via Intune PC-agenten och som inte utgjorde mål tidigare.
-
-#### <a name="what-action-do-i-need-to-take"></a>Vad behöver jag göra
 
 Efter migreringen behöver du överföra appx igen som en PC-appx om du vill göra nya PC-distributioner. Läs mer i [Appx-ändringar i Intune på Azure](https://aka.ms/appxchange) på Intune-supportteamets blogg.  
 
@@ -99,125 +86,85 @@ Administratörsupplevelsen i Azure-portalen använder den redan meddelade nya gr
 
 ### <a name="support-for-managed-configuration-options-for-android-apps----621621---"></a>Stöd för hanterade konfigurationsalternativ för Android-appar <!-- 621621 -->
 
-Android-appar i Play Store som har stöd för hanterade konfigurationsalternativ kan endast konfigureras av Intune.  Med hjälp av den här funktionen kan IT-personal visa listan över konfigurationsvärden som stöds av en app, vilket ger ett tydligt gränssnitt som gör det möjligt att konfigurera dessa värden.
+Du kommer att kunna konfigurera Android-appar i Play Store som har stöd för hanterade konfigurationsalternativ.  Med hjälp av den här funktionen kan du se listan med konfigurationsvärden som stöds av en app, vilket ger ett tydligt gränssnitt som gör det möjligt att konfigurera dessa värden.
 
 ### <a name="remote-assistance-for-android-devices----675418---"></a>Fjärrhjälp för Android-enheter <!-- 675418 -->
 
 Intune kommer att använda [TeamViewer](https://www.teamviewer.com)-programvaran, som köps separat, för att göra det möjligt för dig att ge fjärrhjälp till de användare som kör Android-enheter.
 
-### <a name="new-android-policy-for-complex-pins----722069---"></a>Ny Android-princip för komplexa PIN-koder <!-- 722069 -->
+### <a name="preconfigure-device-permissions-for-android-for-work-apps----621614---"></a>Förkonfigurera enhetsbehörigheter för Android for Work-appar <!-- 621614 -->
 
-Du kan ange den obligatoriska lösenordstypen Numerisk komplex i en Android-enhetsprofil för enheter som kör Android 5.0 och senare.  Använd den här inställningen för att hindra att enhetsanvändare skapar en PIN-kod som innehåller upprepande eller efterföljande siffror, t.ex. 1111 eller 1234.
+För appar som distribuerats till Android for Work-arbetsprofiler, kommer du att kunna konfigurera behörighetstillstånd för enskilda appar. Som standard kommer Android-appar som kräver enhetsbehörigheter, som t.ex. åtkomst till en plats eller enhetens kamera, att uppmana användarna att godkänna eller neka behörigheter.  Om till exempel en app ska använda enhetens mikrofon, ombeds användaren att bevilja appen behörighet att använda mikrofonen. Med den här funktionen kan du ange behörigheter åt användaren.  Administratören kan konfigurera behörigheter att
 
-### <a name="additional-support-for-android-for-work-devices"></a>Ytterligare stöd för Android for Work-enheter
+- Neka automatiskt utan att meddela användaren
+- Godkänn automatiskt utan att meddela användaren
+- Uppmana användaren att godkänna eller neka.
 
-- **Hantera inställningar för lösenord och arbetsprofil** <!-- 612808 -->
+### <a name="define-app-specific-pin-for-android-for-work-devices---728976--"></a>Definiera en appspecifik PIN-kod för Android for Work-enheter <!--728976-->
 
-  Vi har lagt till en ny enhetsbegränsningsprincip för Android for Work som gör det möjligt att hantera inställningar för lösenord och arbetsprofil på Android for Work-enheter som du hanterar.
+Du kommer att kunna definiera en princip för lösenord som bara gäller för appar i arbetsprofilen för Android 7.0 och senare enheter som hanteras som en Android for Work-enhet.  Alternativen är:
 
-- **Tillåt datadelning mellan arbetsprofiler och personliga profiler** <!-- 1045102 -->
+- Definiera bara en enhetsomfattande lösenordsprincip. Detta är det lösenord som användaren måste använda för att låsa upp hela enheten
+- Definiera bara en lösenordsprincip för arbetsprofilen. Användarna uppmanas att ange ett lösenord varje gång en app i arbetsprofilen öppnas.
+- Definiera både en enhets- och en arbetsprofilprincip. IT-avdelningen kan välja att definiera både en lösenordsprincip för enheten och en lösenordsprincip för arbetsprofilen med olika styrkor (t.ex. en 4-siffrig PIN-kod för att låsa upp enheten, men en 6-siffrig PIN-kod för att öppna arbetsappar)
 
-  Vi har uppdaterat inställningen **Datadelning mellan arbetsprofiler och personliga profiler** i en begränsningsprofil för Android for Work-enheter med nya alternativ för att konfigurera datadelning mellan arbetsprofiler och personliga profiler.
+>[!NOTE]
+> Det här är bara tillgängligt på Android 7.0 och högre.  Användaren kan som standard välja att använda två separat definierade PIN-koder, eller välja att kombinera de två definierade PIN-koderna till den starkaste av de två.
 
-- **Begränsa kopiera och klistra in mellan arbetsprofiler och personliga profiler** <!-- 1046094 -->
+### <a name="manage-password-and-other-android-for-work-settings---1102534--"></a>Hantera lösenord och andra Android for Work-inställningar <!--1102534-->
 
-  När du hanterar Android for Work-enheter med Intune tillåts kopiera och klistra in mellan arbetsappar och personliga appar. Vi har nu lagt till en anpassad enhetsprofil för Android for Work-enheter som gör det möjligt att begränsa om åtgärderna kopiera och klistra in mellan arbetsappar och personliga appar är tillåtet.
+Vi har lagt till en ny enhetsbegränsningsprincip för Android for Work som gör det möjligt att hantera inställningar för lösenord och arbetsprofil på Android for Work-enheter.
 
-### <a name="assign-lob-apps-to-ios-and-android-devices----1057568---"></a>Tilldela branschspecifika appar till iOS- och Android-enheter <!-- 1057568 -->
+###  <a name="new-web-content-filter-policy-for-ios-devices----723832---"></a>Ny princip för webbinnehållsfilter på iOS-enheter <!-- 723832 -->
 
-Du kan tilldela branschspecifika appar för iOS (.ipa-filer) och Android (.apk-filer) till användare eller enheter.
-
-###  <a name="new-policies-for-ios-devices----723774-723815-723826-723830-723832---"></a>Nya principer för iOS-enheter <!-- 723774, 723815, 723826, 723830, 723832 -->
-
-- **Appar på startskärmen** – Du kan använda en enhetsprincip för att styra vilka appar användare ser på startskärmen på sina iOS-enheter. Den här principen ändrar layouten på startskärmen, men distribuerar inte några appar som du har angett som inte är installerade.
-
-- **Anslutningar till AirPrint-enheter** – Du kan använda en Intune-enhetsprincip för att styra vilka AirPrint-enheter (nätverksskrivare) som användare av iOS-enheter kan ansluta till.
-
-- **Anslutningar till AirPlay-enheter** – Du kan använda en Intune-enhetsprincip för att styra vilka AirPlay-enheter (t.ex. Apple TV) som användare av iOS-enheter kan ansluta till.
-
-- **Anpassat meddelande på låsskärmen** – Du kan konfigurera ett anpassat meddelande som användarna ser på låsskärmen på sina iOS-enheter, som ersätter standardmeddelandet på låsskärmen.
-
-- **Webbinnehållsfilter** – Du kan styra vilka webbplatser iOS-enhetsanvändare kan besöka, med hjälp av någon av följande två metoder:
+Du kommer att kunna styra vilka webbplatser iOS-enhetsanvändarna kan besöka, med hjälp av någon av följande två metoder:
 
   - Lägg till tillåtna och blockerade URL:er med hjälp av Apples inbyggda webbinnehållsfilter.
   - Tillåt endast åtkomst till angivna webbplatser från webbläsaren Safari. Bokmärken skapas i Safari för varje plats som du anger.
 
+### <a name="apple-school-manager-asm-support---748864--"></a>Stöd för Apple School Manager (ASM) <!--748864-->
 
-### <a name="restrict-push-notifications-for-ios-apps----723767---"></a>Begränsa push-meddelanden för iOS-appar <!-- 723767 -->
+Intune stöder användning av Apple School Manager (ASM) för extern registrering av iOS-enheter, i stället för Apples program för enhetsregistrering. ASM-integrering krävs för att använda Classroom-appen på delade iPads, samt krävs för att aktivera datasynkronisering från ASM till Azure Active Directory via Microsoft School Data Sync (SDS).  
 
-Du kan konfigurera följande meddelandeinställningar för iOS-enheter i en begränsningsprofil för Intune-enheter:
+### <a name="shared-ipad-support---770395-1044681---"></a>Stöd för delad iPad <!--770395, 1044681 -->
 
-- Aktivera eller inaktivera aviseringar helt för en angiven app.
-- Aktivera eller inaktivera aviseringar i aviseringscentret för en angiven app.
-- Ange aviseringstypen, antingen **Ingen**, **Banderoll** eller **Modal avisering**.
-- Ange om aktivitetsikoner tillåts för den här appen.
-- Ange om aviseringsljud tillåts.
+Intune stöder konfiguration av delat iPad- läge i registreringsprofilen för Apples program för enhetsregistrering eller Apple School Manager. Med den här inställningen kan flera hanterade Apple-ID:n logga in på samma enhet.
 
-### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously----737837---"></a>Konfigurera iOS-appar för att köras i autonomt enkelappsläge <!-- 737837 -->
+Vi kommer även att expandera stödet för att hantera iOS Classroom-app, för att kunna inkludera elever som loggar in på delade iPads med sina hanterade Apple-ID:n.
 
-Du kan använda en Intune-enhetsprofil för att konfigurera iOS-enheter så att de kör angivna appar i autonomt enkelappsläge. När det här läget är konfigurerat och appen körs kommer enheten att låsas så att den endast kan köra den appen. Ett exempel på detta är när du konfigurerar en app som gör att användarna kan genomföra ett test på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
+### <a name="new-windows-device-restriction-settings---978585--"></a>Nya begränsningsinställningar för Windows-enheter <!--978585-->
 
-### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices----723765---"></a>Konfigurera betrodda domäner för e-post och webbläsare på iOS-enheter <!-- 723765 -->
+Vi lägger till inställningar i begränsningsprofilen för Windows-enheter som styr funktioner som trådlösa skärmar, enhetsidentifiering, programväxling och felmeddelanden för SIM-kort.
 
-Du kan konfigurera följande domäninställningar i en begränsningsprofil för iOS-enheter:
+### <a name="office-365-proplus-app-available-for-windows-10-devices---1121362--"></a>Office 365 ProPlus-appen är tillgänglig för Windows 10-enheter <!--1121362-->
 
-- **Omarkerade e-postdomäner** – E-postmeddelanden som användaren skickar eller tar emot och som inte matchar de domäner du anger här, markeras som icke tillförlitliga.
+Vi lägger till den nya Office 365 ProPlus-apptypen som gör det enkelt att tilldela Office 365 ProPlus-appar till Windows 10-enheter. Dessutom kommer du även att kunna installera Microsoft Project och Microsoft Visio om du har licenser för dem. Appar som du vill använda paketeras tillsammans och visas som en enda app i listan med appar i Intune-konsolen.
 
-- **Hanterade webbdomäner** – Dokument som laddats ned från de webbadresser du anger här betraktas som hanterade (endast Safari).  
+### <a name="new-allowblock-list-for-the-managed-browser---682960--"></a>Ny lista för Tillåt/blockera för Managed Browser <!--682960-->
 
-- **Fyll i lösenord automatiskt för Safari-domäner** – Användare kan spara lösenord endast i Safari från URL:er som matchar de mönster du anger här. Om du vill använda den här inställningen måste enheten vara i övervakat läge och får inte vara konfigurerad för flera användare. (iOS 9.3+)
+Du kommer att kunna konfigurera listan Tillåt/blockera för domäner och webbadresser i Managed Browser med Intunes inställningar för programkonfiguration i Azure-portalen. Detta kan konfigureras för Managed Browser oavsett om den används på en hanterad eller ohanterad enhet.
 
+### <a name="new-app-configuration-capabilities----677969---"></a>Nya funktioner för appkonfiguration <!-- 677969 -->
 
-### <a name="vpp-apps-available-in-ios-company-portal----748782---"></a>VPP-appar som är tillgängliga i iOS-företagsportalen <!-- 748782 -->
+Den här funktionen kommer att motsvara appkonfigurationen för hantering av mobila enheter (MDM). Med denna funktion kan administratörer tillämpa fler appkonfigurationsvärden än de som bara är tillgängliga via appskyddsprinciperna i MAM utan registreringskanal.
 
-Du kan tilldela volyminköpta (VPP) appar i iOS som **Tillgängliga** installationer för slutanvändare. Användarna behöver ett Apple Store-konto för att installera appen.
+### <a name="new-app-protection-policies-conditions-for-mam---679864--"></a>Nya villkor för appskyddsprinciper i MAM <!--679864-->
 
-### <a name="synchronize-ebooks-from-apple-vpp-store----800878---"></a>Synkronisera e-böcker från Apple VPP Store <!-- 800878 -->
+Du kommer att kunna ange ett krav för MAM utan att registrera användare via administratörskonsolen för följande:
 
-Du kan synkronisera böcker som du har köpt från Apples butik för volyminköpta program med Intune och tilldela dem till användarna.
+- Lägsta programversion
+- Lägsta operativsystemversion
+- Lägsta Intune APP SDK-version i det aktuella programmet (endast iOS)
 
-### <a name="multi-user-management-for-samsung-knox-standard-devices----971988---"></a>Hantering av flera användare för Samsung KNOX Standard-enheter <!-- 971988 -->
+Den här funktionen kommer att vara tillgänglig för både Android och iOS. Intune stöder krav på minimiversion för operativsystemversioner, programversioner och Intune APP SDK. I iOS kan program som har integrerat SDK också ange ett lägsta versionskrav på SDK-nivå.
 
-Enheter som kör Samsung KNOX Standard stöds nu för hantering av flera användare i Intune. Det innebär att slutanvändarna kan logga in och ut från enheten med sina autentiseringsuppgifter för Azure Active Directory, och enheten hanteras centralt oavsett om den används eller inte.  När användarna loggar in får de tillgång till appar och dessutom verkställs eventuella principer som gäller för dem. Alla appdata rensas när användaren loggar ut.
+Användaren kommer inte att få åtkomst till det aktuella programmet om minimikraven via appskyddsprincipen inte uppfylls på de tre olika nivåer som nämns ovan. Nu kan användaren kan antingen ta bort sitt konto (för program med flera identiteter), stänga programmet och/eller uppdatera sitt operativsystem eller program för att uppfylla kravet.
 
-### <a name="additional-windows-device-restriction-settings----818566---"></a>Ytterligare begränsningsinställningar för Windows-enheter <!-- 818566 -->
+Dessutom kan du också konfigurera ytterligare inställningar via administratörskonsolen för ett icke-blockerande meddelande som rekommenderar en uppgradering av operativsystemet eller programmet. Det här meddelandet kan stängas och programmet kan då användas som vanligt.
 
-Vi har lagt till stöd för ytterligare begränsningsinställningar för Windows-enheter, t.ex. ytterligare Edge-webbläsarstöd, anpassning av enhetens låsskärm, anpassning av startmenyn, bakgrund för Windows Spotlight-sökning och proxyinställningar.
+### <a name="change-your-mdm-authority-without-unenrolling-managed-devices---1103950--"></a>Ändra din utfärdare för hantering av mobila enheter utan att avregistrera hanterade enheter <!--1103950-->
 
-### <a name="multi-user-support-for-windows-10-creators-update----822547---"></a>Stöd för flera användare för Windows 10 Creators Update <!-- 822547 -->
-
-Vi har lagt till stöd för hantering av flera användare för enheter som kör Windows 10 Creators Update och är domänanslutna med Azure Active Directory. Det innebär att när olika standardanvändare loggar in på enheten med sina autentiseringsuppgifter för Azure AD, får de alla appar och principer som har tilldelats till deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
-
-### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Fresh Start för Windows 10-datorer<!-- 1004830 -->
-
-I den här versionen har vi lagt till en ny Fresh Start-enhetsåtgärd för Windows 10-datorer.  När du kör den här åtgärden tas alla appar som har installerats på datorn bort, och datorn uppdateras automatiskt till den senaste Windows-versionen. Detta kan användas för att ta bort förinstallerade OEM-appar som ofta levereras med en ny dator. Du kan konfigurera om användardata ska behållas när den här enhetsåtgärden utförs.
-
-### <a name="additional-windows-10-upgrade-paths----903672---"></a>Ytterligare uppgraderingsvägar i Windows 10 <!-- 903672 -->
-
-Nu kan du skapa en uppgraderingsprincip för att uppgradera enheter till följande ytterligare Windows 10-utgåvor:
-
-- Windows 10 Professional
-- Windows 10 Professional N
-- Windows 10 Professional Education
-- Windows 10 Professional Education N
-
-### <a name="bulk-enroll-windows-10-devices----747607---"></a>Massregistrera Windows 10-enheter <!-- 747607 -->
-
-Du kan ansluta ett stort antal enheter som kör Windows 10 Creators Update till Azure Active Directory och Intune med Windows Configuration Designer (WCD). Aktivera MDM-massregistrering för din Azure AD-klient, genom att skapa ett etableringspaket som ansluter enheter till din Azure AD-klient med hjälp av Windows Configuration Designer och tillämpa paketet på företagsägda enheter som du vill massregistrera och hantera. När paketet har tillämpats på dina enheter så kommer de anslutas till Azure AD, registreras i Intune och vara klara för dina Azure AD-användare att logga in.  Azure AD-användare är standardanvändare på de här enheterna och tar emot tilldelade principer och nödvändiga appar. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
-
-### <a name="new-mam-settings-for-pin-and-managed-storage-locations----58112-736644---"></a>Nya MAM-inställningar för PIN-kod och hanterade lagringsplatser <!-- 58112, 736644 -->
-
-Det finns två nya appinställningar som hjälper dig med scenarier för hantering av mobila program (MAM):
-
-- **Inaktivera app-PIN när enhets-PIN är hanterad** – Identifierar om det finns en enhets-PIN på den registrerade enheten och förbigår i så fall den app-PIN som utlöses av appskyddsprinciperna. Den här inställningen minskar antalet gånger en PIN-uppmaning visas för användare som öppnar ett MAM-aktiverat program på en registrerad enhet. Den här funktionen är tillgänglig för både Android och iOS.
-
-- **Välj med vilka lagringstjänster företagsdata ska sparas** – Gör det möjligt att ange de lagringsplatser där företagsdata ska sparas. Användare kan spara i valda lagringsplatstjänster, vilket innebär att alla lagringsplatstjänster som inte anges kommer att blockeras.
-
-  Lista över lagringsplatstjänster som stöds:
-
-  - OneDrive
-  - Business SharePoint Online
-  - Lokal lagring
+Du kommer att kunna ändra din utfärdare för hantering av mobila enheter utan att behöva kontakta Microsoft Support och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. I Configuration Manager-konsolen kan du ändra utfärdare för hantering av mobila enheter från Ange till Configuration Manager (hybrid) till Microsoft Intune (fristående) eller vice versa.
 
 
 ### <a name="see-also"></a>Se även

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 05/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,10 +14,11 @@ ms.assetid: dc946303-e09b-4d73-8bf4-87742299bc54
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: ab6d9b6b296fb4e1fb0aaa9496fede28976728dc
-ms.openlocfilehash: e45d1f0cec7d07ea7d01be0f6ec8443e6521681a
-ms.lasthandoff: 04/14/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90222b10832fd8251ad897348eeebed5b3d1e552
+ms.openlocfilehash: 49ad005846265deb7d4b34b52a1c139e8f61372b
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/11/2017
 
 
 ---
@@ -28,12 +29,12 @@ ms.lasthandoff: 04/14/2017
 
 Den hanterade webbläsaren är ett webbläsningsprogram som med hjälp av Microsoft Intune kan distribueras i organisationen. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.
 
-Eftersom den här appen är en hanterad app kan du dessutom använda principer för hantering av mobila appar på appen. De här principerna kan omfatta att kontrollera användningen av klipp ut, kopiera och klistra in, hindra skärmdumpar och säkerställa att länkar till innehåll som användare väljer endast öppnas i andra hanterade appar. Mer information finns i avsnittet [Konfigurera och distribuera hanteringsprinciper för mobilprogram i konsolen för Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
+Eftersom den här appen har integrering med Intune SDK kan du också använda appskyddsprinciper för den. De här principerna kan omfatta att kontrollera användningen av klipp ut, kopiera och klistra in, hindra skärmdumpar och säkerställa att länkar till innehåll som användare väljer endast öppnas i andra hanterade appar. Mer information finns i avsnittet [Konfigurera och distribuera hanteringsprinciper för mobilprogram i konsolen för Microsoft Intune](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 
-> [!IMPORTANT]
->Om användarna installerar den hanterade webbläsaren, Managed Browser, från App Store och Intune inte hanterar den gäller följande:<br /><br />
-iOS – Den hanterade webbläsaren kan användas som en grundläggande webbläsare, men vissa funktioner är inte tillgängliga och den kan inte komma åt data från andra Intune-hanterade appar.<br />
-Android – Den hanterade webbläsaren kan inte användas.<br /><br />
+>[!IMPORTANT]
+>Managed Browser-appen hämtar och använder Intunes appskyddsprinciper enbart när en annan app på enheten har hämtat en appskyddsprincip.<br><br> Om användarna installerar den hanterade webbläsaren från App Store och Intune inte hanterar den, gäller dessutom följande:<br /><br />
+>**iOS** – Den hanterade webbläsarappen kan användas som en grundläggande webbläsare, men vissa funktioner är inte tillgängliga och den kan inte komma åt data från andra Intune-hanterade appar.<br />
+**Android** – Den hanterade webbläsarappen kan inte användas.<br /><br />
 Om användaren själv installerar den hanterade webbläsaren på en iOS-enhet med en tidigare version än iOS 9 hanterar inga principer som du skapar webbläsaren. För att säkerställa att Intune hanterar webbläsaren måste användarna avinstallera appen innan du kan distribuera den till dem som en hanterad app. Om användarna själva installerar den hanterade webbläsaren i iOS 9 och senare uppmanas de att tillåta att den hanteras av principer.
 
 Du kan skapa principer för hanterade webbläsare för följande enhetstyper:

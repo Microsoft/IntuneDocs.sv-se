@@ -16,10 +16,10 @@ ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9e8a5deb17ebb77d480213567e5ccf6550e3493
-ms.openlocfilehash: 3c7ab3e33f7a1a97cd8048be059cf2f74deb00c1
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 066fdacab7530122ed325238c0db3a9d3df580c9
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -45,7 +45,7 @@ Använda Intunes enhetsprofil för iOS **Utbildning** och informationen i det h�
 Tänk på följande innan du börjar konfigurera inställningarna:
 
 - Både lärarens och elevernas iPad-enheter måste registreras i Intune
-- Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan göra detta manuellt eller använda [Intune apphantering](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-management).
+- Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan göra detta manuellt eller använda [Intune apphantering](../manage-apps/what-is-app-management.md).
 - Du måste konfigurera certifikat för att autentisera anslutningar mellan lärarens och elevernas enheter (se steg 2)
 - Lärarens och elevernas iPad-enheter måste finnas i samma Wi-Fi-nätverk och även ha Bluetooth aktiverat
 - Appen Klassrum appen körs på övervakade iPad-enheter som kör iOS 9.3 eller senare
@@ -70,7 +70,7 @@ Du kan importera information till SDS på något av följande sätt:
 
 - [Läs mer om hur du kan synkronisera lokal skolinformation till Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 - [Läs mer om Microsofts synkronisering av skolinformation](https://sds.microsoft.com/)
-- [Läs mer om licensiering i Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Läs mer om licensiering i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Steg 2 – Skapa och tilldela en iOS-utbildningsprofil i Intune
 
@@ -148,7 +148,7 @@ När du har konfigurerat certifikaten klickar du på **OK**.
     
 Profilen skapas och visas på bladet med profillistan.
 
-Tilldela profilen till elevenheter i de klassrumsgrupper som skapades när du synkroniserade skolinformationen med Azure AD (se [Så tilldelar du enhetsprofiler](/intune-azure/configure-devices/how-to-assign-device-profiles)).
+Tilldela profilen till elevenheter i de klassrumsgrupper som skapades när du synkroniserade skolinformationen med Azure AD (se [Så här tilldelar du enhetsprofiler](how-to-assign-device-profiles.md)).
 
 ## <a name="next-steps"></a>Nästa steg
 

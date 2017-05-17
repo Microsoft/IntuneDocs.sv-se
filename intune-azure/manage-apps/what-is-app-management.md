@@ -16,10 +16,10 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a9748a0ad6b9bbe10e36ba133ba74edb6aa6e09a
-ms.openlocfilehash: 34970d6adcfe41a6de9636a5605a17f9f5ef2d82
+ms.sourcegitcommit: 3758df744311392528be01c826527c2a9d879975
+ms.openlocfilehash: 430329939c99fefcc2ace551545e079f874e83cb
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -59,7 +59,7 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 |Appar från en butik|Ja|Ja|Ja|Ja|
 |Uppdatera appar|Ja|Ja|Ja|Ja|
 
-<sup>1</sup> Överväg att använda [Windows informationsskydd](/intune-azure/configure-devices/how-to-configure-windows-information-protection) för att skydda appar på enheter som kör Windows 10.
+<sup>1</sup> Fundera på att använda [Windows Information Protection]../configure-devices/how-to-configure-windows-information-protection.md) för att skydda appar på enheter som kör Windows 10.
 
 <sup>2</sup>Gäller endast enheter som hanteras med Intune.
 

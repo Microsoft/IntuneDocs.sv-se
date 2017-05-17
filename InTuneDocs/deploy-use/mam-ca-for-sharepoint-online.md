@@ -1,11 +1,11 @@
 ---
-title: "Konfigurera appåtkomst för SharePoint Online"
+title: "Skapa en appbaserad princip för villkorlig åtkomst för SharePoint Online"
 description: 
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/15/2016
+ms.date: 05/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,46 +13,72 @@ ms.technology:
 ms.assetid: 531b09bb-ddfd-498f-8ee3-6675d2466208
 ms.reviewer: chrisgre
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: e5dd7cb5b320df7f443b52a1b502027fa3c4acaf
-ms.openlocfilehash: 992273f88e4bbe234f11f936d6416dbaf0d394e9
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.openlocfilehash: 2d9065281436d4c44e6af7d7a4401786a2a01965
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/06/2017
 
 
 ---
 
-# <a name="create-a-sharepoint-online-conditional-access-policy-to-only-allow-apps-supported-by-mam"></a>Skapa en princip för villkorlig åtkomst för SharePoint Online så att endast appar som stöds av MAM får åtkomst
-Det här avsnittet innehåller stegvisa anvisningar för hur du konfigurerar villkorlig åtkomst för Exchange Online så att endast mobila appar som stöder MAM (Hantering av mobilprogram i Intune)-principer tillåts åtkomst.
+# <a name="set-up-app-based-conditional-access-ca-policies-for-sharepoint-online"></a>Konfigurera principer för appbaserad villkorlig åtkomst för SharePoint Online
 
-## <a name="configure-a-sharepoint-online-policy"></a>Konfigurera en SharePoint Online-princip
-**Steg 1:** Logga in på [Azure-portalen](https://portal.azure.com) där appåtkomstfunktionen finns. Om du inte har använt Azure Portal tidigare kan du läsa avsnittet [Azure portal for MAM policies](azure-portal-for-microsoft-intune-mam-policies.md) (Azure Portal för MAM-principer).
+[!INCLUDE[note for both-portals](../includes/note-for-both-portals.md)]
 
-**Steg 2:** Gå till **Bläddra > Intune > Hantering av mobilprogram i Intune > Inställningar**. I avsnittet för **villkorlig åtkomst**, väljer du **SharePoint Online**.
+Det här avsnittet innehåller information om hur du ställer in en appbaserad villkorlig åtkomstprincip för SharePoint Online. Den appbaserade villkorliga åtkomsten hjälper administratörer att endast tillåta de mobilappar som Intunes appskyddsprinciper tillämpas på.
 
-![Skärmbild av inställningsbladet som visar avsnittet för villkorlig åtkomst och det öppna SharePoint Online-bladet](../media/mam-ca-settings-spo.png)
+## <a name="to-create-the-app-based-ca-policy-for-sharepoint-online"></a>Skapa den appbaserade villkorliga åtkomstprincipen för SharePoint Online
 
-**Steg 3:** På bladet **Tillåtna appar** väljer du alternativet **Tillåt appar som stöder Intune-apprinciper** för att endast tillåta att appar som stöds av Intunes MAM-principer får åtkomst till SharePoint Online. När du väljer att endast tillåta appar som stöds av Intunes MAM-principer, visas listan med appar som stöds.
+1. Gå till [Azure-portalen](https://portal.azure.com) och logga in med dina autentiseringsuppgifter.
 
-![Skärmbild av bladet med tillåtna appar som visar listan med appar](../media/mam-ca-spo-allowed-apps.png)
+    > [!NOTE]
+    > Om du inte har använt Azure-portalen tidigare, kan du läsa avsnittet [Azure-portal for appskyddsprinciper](azure-portal-for-microsoft-intune-mam-policies.md).
 
-**Steg 4:** Om du vill tillämpa den här principen på användarna, öppnar du bladet **Begränsade användargrupper** och väljer **Lägg till användargrupp**. Välj en eller flera användargrupper som du vill tillämpa den här principen på.
+2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
-![Skärmbild av bladet begränsade användargrupper med alternativet lägg till användargrupp markerat](../media/mam-ca-spo-restricted-groups.png)
+3. Välj **Intune-appskydd** > **Hantering av mobilprogram i Intune** > **Alla inställningar**.
 
+4. Välj panelen SharePoint Online på bladet Hantering av mobilprogram i Intune.
 
-**Steg 5:** Du kanske vill att vissa användare i den användargrupp du valde i föregående steg inte ska påverkas av den här principen. I sådana fall måste du lägga till dessa användare till listan över undantagna användare. Välj **Undantagna användargrupper** på bladet **SharePoint Online**. Välj **Lägg till användargrupp** för att öppna en lista med användargrupper. Välj de grupper som du vill undanta från den här principen.  
+5. På bladet **Tillåtna appar** väljer du alternativet **Tillåt appar som stöder Intunes apprinciper** för att endast tillåta appar som stöds av Intunes appskyddsprinciper.
 
-## <a name="modifying-an-existing-policy"></a>Ändra en befintlig princip
-### <a name="adding-or-deleting-user-groups"></a>Lägga till eller ta bort användargrupper
-Om du vill **ta bort en användargrupp** från listan med **begränsade användargrupper**, öppnar du bladet Begränsade användargrupper, markerar den grupp du vill ta bort och klickar sedan på ... för att se alternativet Ta bort. Välj **Ta bort** att ta bort användargruppen från listan. Du kan använda samma procedur för att ta bort en grupp från listan **exempted user group** (undantagna användargrupper).
+    > [!NOTE] 
+    > När du väljer att endast tillåta appar som stöds av Intunes appskyddsprinciper, visar listan **enbart** de appar som stöds.
 
+    ![Skärmbild av bladet med tillåtna appar som visar listan med appar](../media/mam-ca-spo-allowed-apps.png)
+
+## <a name="to-assign-app-based-ca-policies-to-your-users"></a>Tilldela appbaserade villkorliga åtkomstprinciper till dina användare
+
+1. Öppna bladet **Begränsade användargrupper** och välj sedan **Lägg till användargrupp**.
+
+2. Välj en eller flera användargrupper som du vill tillämpa den här principen på.
+
+    ![Skärmbild av bladet begränsade användargrupper med alternativet lägg till användargrupp markerat](../media/mam-ca-spo-restricted-groups.png)
+
+    > [!IMPORTANT] 
+    > Du kanske vill att vissa användare i den grupp du valde i föregående steg inte ska påverkas av den här principen. I sådana fall måste du lägga till dessa användare till listan över undantagna användare. 
+
+3. På bladet **SharePoint Online** väljer du **Undantagna användargrupper** och sedan **Lägg till användargrupp** för att öppna listan med användargrupper.
+
+4. Välj de grupper som du vill undanta från den här principen.  
+
+## <a name="to-modify-or-delete-user-groups-from-an-existing-app-based-ca-policy"></a>Ändra eller ta bort användargrupper från en befintlig appbaserad villkorlig åtkomstprincip
+
+1. Öppna bladet **Begränsade användargrupper** och markera sedan den användargrupp du vill ta bort.
+2. Klicka på ellipsen för att se borttagningsalternativen.
+3. Välj **Ta bort** att ta bort användargruppen från listan.
+
+> [!NOTE] 
+> Du kan använda samma procedur för att ta bort en användargrupp från listan **Undantagna användargrupper**.
 
 ## <a name="next-steps"></a>Nästa steg
-[Konfigurera appåtkomst för Exchange Online](mam-ca-for-exchange-online.md)
 
-[Blockera appar som inte har modern autentisering](block-apps-with-no-modern-authentication.md)
+[Blockera appar som inte använder modern autentisering](block-apps-with-no-modern-authentication.md)
 
-### <a name="see-also"></a>Se även
+## <a name="see-also"></a>Se även
 
-[Skydda appdata med MAM-principer](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+[Skydda appdata med appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+
+[Konfigurera appbaserad villkorlig åtkomst för Exchange Online](mam-ca-for-exchange-online.md)
 

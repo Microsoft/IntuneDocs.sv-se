@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/09/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -17,10 +17,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-translationtype: Human Translation
-ms.sourcegitcommit: 57a067684ccada3df4faa15e6bf009b39caf5c94
-ms.openlocfilehash: 598ecac4aafaff5715e311dcfc058c1d2661bd3e
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc32b2f4b1ea26cc4487ac8576ec5fb7cd333aaa
+ms.openlocfilehash: 5de619d98ab78384e42c8a3a2264ce4deebc2602
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -28,6 +29,10 @@ ms.lasthandoff: 03/02/2017
 # <a name="using-your-ios-or-macos-device-with-intune"></a>Använda din iOS- eller macOS-enhet med Intune
 
 Det finns ett antal saker som du kan göra med Intune som gör livet lite lättare. Här är en lista över de vanligaste sakerna som företaget kan be dig att göra.
+
+## <a name="supported-versions"></a>Versioner som stöds
+
+Intune stöder för närvarande iOS 8.0 och senare. Det stöder också macOS 10.9 Mavericks och senare. 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrera enheten i Intune och installera företagsportalen
 
@@ -40,6 +45,7 @@ Det finns ett antal saker som du kan göra med Intune som gör livet lite lätta
 
 - [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 - [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
+<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-device-cpwebsite.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md)
