@@ -2,8 +2,8 @@
 title: "Felsökning av problem med åtkomst till företagsresurser | Microsoft Docs"
 description: "Felkoderna och statuskoderna i det här avsnittet hjälper dig att felsöka problem med att få åtkomst till resurser."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -14,10 +14,11 @@ ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: dd1ada2bf6505552e7dbf8b185c929fa4e40104c
-ms.lasthandoff: 12/10/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 9956d92c5d1b294c4ccf04ebecd15cdb59794c90
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---

@@ -14,10 +14,11 @@ ms.assetid: 01c096eb-088b-4d2b-a1fa-dce6cdb12294
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: d05c9d7a78474c19e142bca94e232289fbfba1d9
-ms.openlocfilehash: d5460d5e68fcc5346c2e0b745ea694c6875b5480
-ms.lasthandoff: 01/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: e514aaf67881a754eb2e75b2920445536978a68c
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/10/2017
 |Nya Zeeland|24 × 7|Måndag-fredag<br /><br />09:00 – 18:00 EDT (UTC +13)|Engelska|0800 194197|09 9127298|
 |Nigeria|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 WAT (UTC +1)|Engelska||+234 127 10 156<br /><br />Steg 1: Välj alternativ: 9<br /><br />Steg 2: Ange kod: 7705|
 |Norge|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Norska&#42;, engelska|80031068|22310748|
-|Oman|24 × 7|Söndag – torsdag<br /><br />09:00 – 17:00 GST (UTC +4)|Arabiska*, engelska|80073332<br /><br />Steg 1: Välj alternativ 1 för arabiska eller 2 för engelska<br /><br />Steg 2: Välj alternativ 9<br /><br />Steg 3. Ange kod: 7702||
+|Oman|24 × 7|Söndag – torsdag<br /><br />09:00 – 17:00 GST (UTC +4)|Arabiska, engelska|80073332<br /><br />Steg 1: Välj alternativ 1 för arabiska eller 2 för engelska<br /><br />Steg 2: Välj alternativ 9<br /><br />Steg 3. Ange kod: 7702||
 |Pakistan|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PKT (UTC +5)|Engelska|Endast online||
 |Panama|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 EST (UTC -5)|Spanska&#42;, engelska|00-800-051-0398<br /><br />Steg 1: Välj alternativ 4 (för särskild åtkomst)<br /><br />Steg 2: Ange kod: 7007||
 |Paraguay|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PYST (UTC -3)|Spanska&#42;, engelska|009-800-441-0088||
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/10/2017
 |Turkiet|24 × 7|Måndag-fredag<br /><br />09:00 – 18:00 EET (UTC + 3)|Turkiska&#42;, engelska|00800 448824556||
 |UAE|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 AST (UTC +4)|Engelska|8000 4441578||
 |Ukraina|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 EET (UTC + 2)|Ryska&#42;, engelska|0 800 308 800<br /><br />Steg 1: Välj 5||
-|Storbritannien|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 GMT (UTC)|Engelska|0800 032 6417|02034506455|
+|Storbritannien och Nordirland|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 GMT (UTC)|Engelska|0800 032 6417|02034506455|
 |USA|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 PST (UTC -8)|Engelska|800-865-9408||
 |Uruguay|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 UYST (UTC -2)|Spanska&#42;, engelska|000-411-002-7131||
 |Venezuela|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 VET (UTC -4:30)|Spanska&#42;, engelska|0-800-100-8763||

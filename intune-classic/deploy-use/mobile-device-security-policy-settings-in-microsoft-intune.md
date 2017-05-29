@@ -14,10 +14,11 @@ ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 755cf7d87d7145c55eb5fe583748bd98d34e8fb1
-ms.lasthandoff: 12/10/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 95adade7940e99768feb8e4cf50eca1401a46dd6
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 
