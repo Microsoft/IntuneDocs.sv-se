@@ -15,10 +15,10 @@ ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2b064d14e8a46c19c0eafc3276b470dead114438
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 92a91fab353c78c751ae5eb25c9853df5cbcfe53
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/06/2017
+ms.lasthandoff: 05/31/2017
 
 
 ---

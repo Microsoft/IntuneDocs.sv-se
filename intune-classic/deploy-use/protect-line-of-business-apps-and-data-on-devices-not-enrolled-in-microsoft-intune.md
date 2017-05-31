@@ -14,9 +14,11 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b6d5ea579b675d85d4404f289db83055642ffddd
-ms.openlocfilehash: 1d3efa5d35e346ea668c71ba8b46ba21b11c39e7
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: f30837d90954b9b30b27e77240bb241db6e2b037
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -81,9 +83,4 @@ Du kan ta bort en verksamhetsspecifik app från applistan. Den här åtgärden t
   ![Skärmbild av det verksamhetsspecifika bladet med alternativet för att ta bort program](../media/mam-azure-portal-delete-app.png)
 
   Detta tar bort apparna från listan över verksamhetsspecifika appar och mållistan över appar i MAM-principen.
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

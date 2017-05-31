@@ -14,9 +14,11 @@ ms.assetid: 38e08253-14a0-4cc4-87be-7b110c12a523
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: e7d1760a10e63233fe7cc7f6fd57a68c5283647c
-ms.openlocfilehash: c2e4087790cc6fe7025f2b3b634ba115f13a7856
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: da14fe58510f54e099ae6aeb2e9f656b9f68a470
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -32,9 +34,4 @@ Behoven hos enskilda organisationer kan variera, men det finns vissa vanliga åt
 Alla enheter har, av hanteringsskäl, en livscykel. Den inleds när du registrerar enheten och fortsätter hela vägen tills enheten dras tillbaka. [Enhetens hanteringslivscykel](overview-of-device-lifecycle-in-microsoft-intune.md) vägleder dig igenom hela processen med registrering, konfigureration och skydd av enheten och fram till och med att den tas bort från hanteringen.
 
 På liknande sätt har appar som du arbetar med en egen [applivscykel](overview-of-app-lifecycle-in-microsoft-intune.md) som innehåller steg från att lägga till en app i Intune ända till att ta bort dem när de inte längre behövs.
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
