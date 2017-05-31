@@ -15,10 +15,11 @@ ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: 02c844a5b38023a6dfc6c4ef1de81e1416601fba
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: b0c3520c7c1fd29a631587fe1a69d4c411099cb4
-ms.lasthandoff: 03/07/2017
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -48,7 +49,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 6 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|
 |**Antal tillåtna upprepade felinloggningar innan arbetsprofilen tas bort**|Anger antalet tillåtna felinloggningar innan arbetsprofilen på enheten tas bort. En fullständig enhetsrensning utförs inte.|
 |**Kom ihåg tidigare lösenord**|Hindrar återanvändning av lösenord som har använts tidigare.|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord**|Anger antalet lösenord som har använts tidigare som ska sparas.|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord** |Anger antalet lösenord som har använts tidigare som ska sparas.|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|
 |**Tillåt fingeravtrycksupplåsning**<br>(Android 6 och senare)|Låter dig använda ett fingeravtryck för att låsa upp enheter med den här funktionen.|
 

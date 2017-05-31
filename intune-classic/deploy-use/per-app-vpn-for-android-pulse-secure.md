@@ -14,9 +14,11 @@ ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-translationtype: Human Translation
-ms.sourcegitcommit: b268bb16b7fc7e38021441bb16517e754b5e395f
-ms.openlocfilehash: 4a52d714d47a0b3af56be6eb5096fffae160e435
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
+ms.openlocfilehash: 6786ac87c34e913ba71cd203f431f746df816459
+ms.contentlocale: sv-se
+ms.lasthandoff: 05/23/2017
 
 
 ---
@@ -51,7 +53,7 @@ När du har distribuerat principen till din Android-enhet eller till användargr
    2. Ange ett namn för principen.
    3. Välj **Lägg till** under **OMA-URI-inställningar**.
    4. Ange ett namn på inställningen.
-   5. Ange **Sträng** för **Datatyp**.
+   5. Ange **Sträng** som **Datatyp**.
    6. För **OMA-URI** anger du strängen: **./Vendor/MSFT/VPN/Profile/*Namn*/PackageList**, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
    7.    För **Värde** skapar du en semikolonavgränsad lista över paket som ska associeras med profilen. Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du **com.microsoft.office.excel;com.android.chrome**.
 
@@ -78,9 +80,4 @@ Du måste distribuera *båda* principerna för *samma* Intune-grupp.
     -   **Om du vill stänga dialogrutan utan att distribuera principen** väljer du **Avbryt**.
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan **Instrumentpanel**.
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
