@@ -80,8 +80,7 @@ Om [ProGuard](http://proguard.sourceforge.net/) (eller annan metod för krympand
 Azure ADAL (Active Directory Authentication Libraries) kan ha egna ProGuard-begränsningar. Om din app integrerar ADAL måste du följa ADAL-dokumentationen om dessa begränsningar.
 
 ### <a name="entry-points"></a>Startpunkter
-=======
-Azure ADAL ([Active Directory Authentication Library](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) kräver dessa behörigheter för att kunna utföra asynkron autentisering. Om dessa behörigheter inte beviljas till appen eller om de återkallas av användaren så inaktiveras autentiseringsflöden som kräver koordinering (av företagsportalappen).
+======= Dessa behörigheter krävs av Azures autentiseringsbibliotek för Active Directory ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) för att kunna utföra asynkron autentisering. Om dessa behörigheter inte beviljas till appen eller om de återkallas av användaren så inaktiveras autentiseringsflöden som kräver koordinering (av företagsportalappen).
 
 Intune App SDK kräver ändringar i appens källkod för att Intunes appskyddsprinciper ska kunna aktiveras. Detta gör du genom att ersätta Android-basklasserna med motsvarande Intune-basklasser, vars namn har prefixet **MAM**. SDK-klasserna finns mellan Android-basklassen och appens egen härledda version av den klassen. Om vi tar en aktivitet som exempel blir resultatet en arvshierarki som ser ut så här: `Activity` > `MAMActivity` > `AppSpecificActivity`.
 
