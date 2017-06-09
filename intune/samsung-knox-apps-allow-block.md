@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Använd anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter i Microsoft Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
 
 - En lista över appar som blockeras från att köras på enheten. Appar i den här listan blockeras från att köras även om de redan är installerade när principen tillämpas.
 - En lista över appar som enhetens användare tillåts att installera från Google Play Store. Endast de appar som du tar med i listan kan installeras. Inga andra appar kan installeras från butiken.
