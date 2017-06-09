@@ -127,7 +127,7 @@ Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool](visningsverkt
 
 #### <a name="locating-sync-logs"></a>Hitta synkroniseringsloggar
 
--    Leta upp en fullständig synkronisering i loggarna genom att söka efter **fullständig synkronisering**. Början av en fullständig synkronisering markeras med följande text:
+-    Leta upp en fullständig synkronisering i loggarna genom att söka efter **full sync**. Början av en fullständig synkronisering markeras med följande text:
 
     'Handling command: Getting the mobile device list without a time filter (full sync) for <number> users` (Hanteringskommando: Hämtar listan med mobila enheter utan tidsfilter (fullständig synkronisering) för <number> användare)
 
@@ -135,7 +135,7 @@ Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool](visningsverkt
 
     Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. (Hämtningen av listan med mobila enheter utan tidsfilter (fullständig synkronisering) för 4 användare har slutförts.) Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected',' (Information: Resultat för inventeringskommando - Enheter som synkroniserats: 0 Kommando-ID: commandIDGUID' Exchange-hälsa: 'Serverhälsa 'Namn: 'PowerShellExchangeServer: <Namn=mitte-postservername>' Status: Ansluten',')
 
--    Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync (snabbsynkronisering)**.
+-    Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Undantag i Get next command (Hämta nästa kommando)
 Kontrollera om det finns undantag i **Get next command** (Hämta nästa kommando) i Exchange Connector-loggarna och skicka dessa till Microsoft Support.

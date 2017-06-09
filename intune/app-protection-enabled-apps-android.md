@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 ---
 
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Vad som händer när din Android-app hanteras av appskyddsprinciper 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
 ##  <a name="accessing-apps"></a>Komma åt appar
 
 Företagsportalappen krävs för alla appar som är kopplade till appskyddsprinciper på Android-enheter.

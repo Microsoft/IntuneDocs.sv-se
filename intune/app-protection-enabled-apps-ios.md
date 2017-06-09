@@ -25,7 +25,7 @@ ms.lasthandoff: 05/23/2017
 ---
 
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
-[!INCLUDE[azure_preview](./includes/azure_preview.md)] Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
+[!INCLUDE[azure_preview](./includes/azure_preview.md)]Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
 ##  <a name="accessing-apps"></a>Komma åt appar
 
 Om enheten **inte har registrerats i Intune** uppmanas slutanvändarna att starta om appen första gången de använder den.  En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen. Följande skärmbild illustrerar detta med hjälp av Skype-appen:
