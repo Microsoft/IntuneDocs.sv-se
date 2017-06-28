@@ -15,10 +15,10 @@ ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 32446d9a6f9383b5449dbabf288b0eac0b483ebb
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: a39f67a532f53ef6ab2e3cc5d17b2d593a3483ae
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -33,7 +33,7 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 ## <a name="mam-basics"></a>Grundläggande om MAM
 
 
-**Vad är MAM?** Med [Intune mobile application management](../deploy-use/overview-of-app-lifecycle-in-microsoft-intune.md) avses den svit av Intune-hanteringsfunktioner som låter dig publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
+**Vad är MAM?** Med [Intune mobile application management](/intune/app-lifecycle) avses den svit av Intune-hanteringsfunktioner som låter dig publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
 
 **Vilka är fördelarna med appskyddet i MAM?** MAM skyddar företagets data inom ett program. Med hjälp av MAM-WE kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i BYOD-scenarier (BringYour Own Device).
  Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
@@ -52,12 +52,12 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Appar som du kan hantera med appskyddsprinciper
 
-**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](../develop/intune-app-sdk.md) eller hanteras av [Intunes apphanteringsverktyg](../deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](/intune/app-sdk) eller hanteras av [Intunes apphanteringsverktyg](/intune/apps-prepare-mobile-application-management) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka är de grundläggande kraven för att använda appskyddsprinciper på en Intune-upplyst app?**
-  1. Slutanvändaren måste ha ett Azure Active Directory (AAD)-konto. Se [Lägg till användare och ge administrativ behörighet till Intune](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3.md) för information om hur du skapar Intune-användare i Azure Active Directory.
+  1. Slutanvändaren måste ha ett Azure Active Directory (AAD)-konto. Se [Lägg till användare och ge administrativ behörighet till Intune](/intune/users-permissions-add) för information om hur du skapar Intune-användare i Azure Active Directory.
 
-  2. Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](../get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md) för information om hur du tilldelar Intune-licenser till slutanvändarna.
+  2. Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](/intune/licenses-assign) för information om hur du tilldelar Intune-licenser till slutanvändarna.
 
   3. Slutanvändaren måste tillhöra en säkerhetsgrupp som är målet för en appskyddsprincip. Samma appskyddsprincip måste ha den specifika app som används som mål.
  Appskyddsprinciper kan skapas och distribueras i Intune-konsolen i [Azure-portalen](http://portal.azure.com). Säkerhetsgrupper kan för närvarande skapas i [Office-portalen](http://portal.office.com).

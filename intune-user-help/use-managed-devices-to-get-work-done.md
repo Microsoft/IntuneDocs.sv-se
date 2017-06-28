@@ -18,10 +18,10 @@ ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 748fce44b696675d4b7fe4b1d3048633fba1b490
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -38,7 +38,7 @@ Företagets IT-avdelning kan se information som är relevant för arbetet, men i
 Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen åt dig.
-- Genom att gå till [företagsportalens webbplats](http://portal.manage.microsoft.com) som IT-administratören har konfigurerat.
+- Genom att gå till [företagsportalens webbplats](https://portal.manage.microsoft.com) som IT-administratören har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
 Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:
@@ -100,5 +100,5 @@ Vi rekommenderar att du först försöker se om du kan lösa problemet själv. V
 - [Åtgärda vanliga problem med din iOS-enhet](troubleshoot-your-device-ios.md)
 - [Åtgärda vanliga problem med din Windows-enhet](troubleshoot-your-device-windows.md)
 
-Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till IT-administratören. Kontaktinformationen ska finnas på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till IT-administratören. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 

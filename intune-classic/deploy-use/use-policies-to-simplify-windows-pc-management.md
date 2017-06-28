@@ -1,5 +1,5 @@
 ---
-title: "Använd principer för att förenkla hanteringen av Windows-datorer | Microsoft Docs"
+title: "Använd principer för att förenkla hanteringen av Windows-datorer"
 description: "Beskriver principerna för hantering av Windows-datorer och inställningarna för Microsoft Intune Center."
 keywords: 
 author: nathbarn
@@ -15,15 +15,17 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a2b956f8c999ec5489152a63a9af6e24da8ec536
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: e14b5c56356812fdc3ea775cddde0f668b344177
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Använd principer för att förenkla hanteringen av Windows-datorer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Om du vill hantera stationära Windows-datorer som datorer genom att köra Intune-programvaruklienten på dem kan du endast använda de principer som ligger under principerna för **Datorhantering** i Intune-administratörskonsolen. Alla andra principer som visas i administrationskonsolen gäller endast för mobila enheter. Genom att använda principer för **datorhantering** kan du konfigurera inställningarna i Microsoft Intune Center, hantera datoruppdateringar och konfigurera Windows-brandväggen för datorer.
 

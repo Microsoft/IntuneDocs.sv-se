@@ -1,5 +1,5 @@
 ---
-title: Skapa en enhetsefterlevnadsprincip | Microsoft Docs
+title: Skapa en enhetsefterlevnadsprincip
 description: "Skapa en efterlevnadsprincip för att skydda mobila enheter och datorer som används för att komma åt företagets data."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 018fc2ff3b5609d3cc5f130db548f1dd3c839020
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 3dcafbd3cfdbccdfa851e8d21572d834d629564b
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
