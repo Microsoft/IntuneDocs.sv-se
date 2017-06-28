@@ -1,12 +1,12 @@
 ---
-title: Skapa och distribuera en WIP-appskyddsprincip med Intune | Microsoft Docs
-titleSuffix: Intune Azure preview
+title: Skapa och distribuera en WIP-appskyddsprincip med Intune
+titleSuffix: Intune on Azure
 description: Skapa och distribuera WIP-appskyddsprinciper med Intune
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,17 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ca8e309653aa43292c7bd1ae1cb72cbb282d37dc
+ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
+ms.openlocfilehash: 17736751a6cd1813bd03f8092739d8433eb5d9dc
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Från och med version 1704 av Intune kan du använda appskyddsprinciper med Windows 10 i hanteringen av mobila program utan något registreringsscenario.
 
@@ -52,7 +52,7 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 
 Du måste konfigurera MAM-providern innan du kan skapa någon WIP-appskyddsprincip.
 
--   Läs mer i [Konfigurera din MAM-provider med Intune](https://docs.microsoft.comapp-protection-policies-configure-windows-10.md).
+-   Läs mer i [Konfigurera din MAM-provider med Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Du måste dessutom ha följande:
 

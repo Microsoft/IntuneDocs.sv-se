@@ -18,10 +18,10 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: db7c3b4c5722bea449dc7185b179b7a85fa59018
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: 0f5c1eb76f823c72904bad7543409d9efa9e93e6
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -56,5 +56,5 @@ När du lägger till en dator:
 
 -   IT-administratören kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
 
-Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 

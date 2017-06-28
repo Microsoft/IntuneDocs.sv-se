@@ -1,5 +1,5 @@
 ---
-title: "Lösa konflikter mellan grupprincipobjekt och Intune-principer | Microsoft Docs"
+title: "Åtgärda konflikter mellan grupprincipobjekt och Intune-principer"
 description: "Läs om hur du löser konflikter mellan Grupprincip och Intune-konfigurationsprinciper."
 keywords: 
 author: robstackmsft
@@ -15,15 +15,18 @@ ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 250ddb35aa33523141ae0f5af19b48b75ce0bef0
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 42debb9e26a226da6b2485a2ab1be2855d309747
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
 
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Lösa konflikter mellan grupprincipobjekt och Microsoft Intune-principer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Intune använder principer som hjälper dig att hantera inställningarna på Windows PC-datorer. Du använder t.ex. en princip för att kontrollera PC-datorernas inställningar för Windows-brandväggen. Många Intune-inställningar påminner om de inställningar som du kan konfigurera med Grupprincip i Windows. Emellanåt kan det dock hända att de två metoderna hamnar i konflikt med varandra.
 
 När sådana konflikter uppstår har grupprinciper på domännivå företräde framför Intune-principer, såvida PC-datorn inte kan logga in till domänen. I detta fall tillämpas Intune-principen på klientdatorn.

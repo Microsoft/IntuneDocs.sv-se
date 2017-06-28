@@ -1,5 +1,5 @@
 ﻿---
-title: Dra tillbaka enheter | Microsoft Docs
+title: Dra tillbaka enheter
 description: "Du kan använda en selektiv eller fullständig rensning för att ta bort enheten från Intune-hanteringen genom att ta bort enhetens princip och företagsportalen."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 88a18975049158ca632d51796e8b4022c42dff94
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 493b5bfce7ab9b78f5f7c48d0d18524d1b191f1f
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -33,10 +33,10 @@ Enheter tas aldrig bort från Intune utan att du gör något, även om enheterna
 
 Du kan behöva dra tillbaka en enhet av flera olika skäl:
 
--    Användaren lämnar företaget på ett planerat sätt ("hanterad" avgång)
--    Användaren lämnar tvärt (får sparken, säger upp sig, etc.).
--    Enheten går förlorad
--    Enheten får ett nytt syfte (övertas av en annan användare, återanvänds för ett annat ändamål osv.)
+-   Användaren lämnar företaget på ett planerat sätt ("hanterad" avgång)
+-   Användaren lämnar tvärt (får sparken, säger upp sig, etc.).
+-   Enheten går förlorad
+-   Enheten får ett nytt syfte (övertas av en annan användare, återanvänds för ett annat ändamål osv.)
 
 Du kan göra en selektiv rensning eller en fullständig rensning av en enhet som hanteras som en mobil enhet, eller så kan du låsa en enhet och återställa dess lösenord. Genom att rensa en enhet frigör du användarens prenumeration så att en annan enhet kan läggas till. Du kan också dra tillbaka datorer som hanteras med Intune-klientprogrammet.
 

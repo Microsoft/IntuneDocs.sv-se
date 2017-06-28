@@ -1,5 +1,5 @@
 ---
-title: Skydda data och appar | Microsoft Docs
+title: Skydda appar och data
 description: "I det här avsnittet beskrivs de olika Intune-funktionerna och hur du kan skydda företagets appar och data."
 keywords: 
 author: andredm7
@@ -15,10 +15,10 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fdd85177f21a430eb940d1f88b3bb016c56cee55
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 09b7a1d4901a52845719e8d7094f665b12b91ab4
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -52,7 +52,7 @@ Om du vill associera en app med en MAM-princip måste Microsoft Intune App Softw
 
 I appar som Microsoft Office-apparna är Intune App-SDK:n inbyggd. Du kan visa en fullständig lista över appar som stöds i [Microsoft Intune-galleriet för mobilprogram](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) på sidan för Microsoft Intune-programpartner. Välj appen om du vill se vilka scenarier och plattformar som stöds och huruvida appen stöder flera identiteter.
 
-Du kan också [aktivera dina egna anpassade affärsappar](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md) så att de kan användas med MAM-principer.
+Du kan också [aktivera dina egna anpassade affärsappar](/intune/apps-prepare-mobile-application-management) så att de kan användas med MAM-principer.
 
 Förutom att du kan förhindra eller begränsa dataflyttning om en enhet blir stulen eller borttappad eller om användaren inte längre arbetar på ditt företag kan du [rensa företagsdata selektivt](wipe-managed-company-app-data-with-microsoft-intune.md), så att bara personliga data finns kvar.
 

@@ -18,16 +18,16 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0a4f5cbc81ed1fa7a1d1110080cc298a18463b22
+ms.sourcegitcommit: 5ed0e84c16ea540c08e97cb55ef8a09cbc7339f6
+ms.openlocfilehash: f01d8b31f493b7103fe788aa62d37f9c73981984
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
 
 # <a name="using-the-intune-company-portal-website"></a>Använda Intune-företagsportalens webbplats
-[Företagsportalens webbplats](http://portal.manage.microsoft.com) är en webbsida som slutanvändarna kan använda för att hantera datorer och enheter som de har registrerat i Intune.
+[Företagsportalens webbplats](https://portal.manage.microsoft.com) är en webbsida som slutanvändarna kan använda för att hantera datorer och enheter som de har registrerat i Intune.
 
 Från företagsportalens webbplats kan slutanvändarna göra följande:
 

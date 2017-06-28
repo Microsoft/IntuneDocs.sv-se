@@ -1,12 +1,12 @@
 ---
-title: "Förbered konfigurationen av appskyddsprinciper för Windows 10 | Microsoft Docs"
-titleSuffix: Intune Azure preview
+title: "Förbered konfigurationen av appskyddsprinciper för Windows 10"
+titleSuffix: Intune on Azure
 description: Konfigurera MAM-providern i Azure AD
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 04/25/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,17 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e179f72e4cd99a8cd1bdc017e9965f7d1eb608bf
+ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
+ms.openlocfilehash: bf56d3a80f0d167baa95e9dfdb20d08e02590984
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Förbered konfigurationen av appskyddsprinciper för Windows 10
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Innan du skapar en appskyddsprincip för Windows 10 måste du aktivera hantering av mobila program (MAM) för Windows 10 genom att ställa in MAM-providern i Azure AD. Med den här konfigurationen kan du definiera registreringstillståndet när du skapar en ny Windows Information Protection-princip (WIP) med Intune.
 
@@ -59,5 +59,5 @@ Innan du skapar en appskyddsprincip för Windows 10 måste du aktivera hantering
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Skapa en WIP-appskyddsprincip](https://docs.microsoft.comwindows-information-protection-policy-create.md)
+[Skapa en WIP-appskyddsprincip](windows-information-protection-policy-create.md)
 

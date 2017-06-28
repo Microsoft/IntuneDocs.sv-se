@@ -1,5 +1,5 @@
 ---
-title: "Registrera företagsägda iOS-enheter | Microsoft Docs"
+title: "Registrera företagsägda iOS-enheter"
 description: "Registrera företagsägda iOS-enheter med Apples enhetsregistreringsprogram (DEP) eller Apple Configurator"
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 44b4fbad45decde806fb5be41ea12f0d8bcf9c95
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 42da9c874183287bc9485035ae39e94efbaa3e8b
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -59,8 +59,8 @@ Enheter som har konfigurerats med mappning mellan användare kan installera och 
 
 Användartillhörighet krävs för att ge stöd åt följande:
   - Hantering av mobilprogramsappar (MAM, Mobile Application Management)
-  -    Villkorlig åtkomst till e-post och företagsdata
-  -    Företagsportalappen
+  - Villkorlig åtkomst till e-post och företagsdata
+  - Företagsportalappen
 
 **Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet**
 1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
