@@ -1,5 +1,5 @@
 ---
-title: "Använda grupper för att hantera användare och enheter | Microsoft Docs"
+title: "Använda grupper för att hantera användare och enheter."
 description: Skapa och hantera grupper med arbetsytan Grupper.
 keywords: 
 author: Mtillman
@@ -15,10 +15,10 @@ ms.reviewer: lpatha
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 095b8db0cb5097edca98d138edccafbe8e55b9ba
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 13c8946dd75d6bdede0e2a8941030250c6b12ef6
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -108,7 +108,7 @@ I filtrerade gruppvyer kan du anpassa vad en IT-administratör kan se baserat p�
 -   Du vill att dina IT-administratörer endast ska kunna distribuera objekt till särskilda användare och enheter
 -   Du vill att din IT-administratörer endast ska kunna se de grupper som är relevanta för den administratören
 
-Du kan konfigurera filtrerade gruppvyer för administratörer i Intune-administratörskonsolen. Mer information finns i [Vad du behöver veta innan du startar Microsoft Intune](/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune).
+Du kan konfigurera filtrerade gruppvyer för administratörer i Intune-administratörskonsolen. Mer information finns i [Vad du behöver veta innan du startar Microsoft Intune](/intune/supported-devices-browsers).
 
 När en tjänstadministratör distribuerar programvaran eller principerna, eller kör rapporter, kan administratören endast se och välja de grupper som du har angett om du har konfigurerat filtrerade gruppvyer för administratören. Administratören kan inte heller se statusinformation på dessa sidor i administratörskonsolen:
 

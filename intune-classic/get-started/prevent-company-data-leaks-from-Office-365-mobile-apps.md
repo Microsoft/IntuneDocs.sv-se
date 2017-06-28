@@ -1,5 +1,5 @@
 ---
-title: "Förhindra företagsdataläckor från Office 365-mobilappar | Microsoft Docs"
+title: "Förhindra företagsdataläckor från Office 365-mobilappar"
 description: "Använd Intune för att skydda din organisations data med MAM-principer för hantering av mobilappar som förhindrar läckage av företagsdata från Office 365-mobilappar eller andra affärsappar (LOB)."
 keywords: 
 author: jeffgilb
@@ -15,10 +15,10 @@ ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: db350fbefe5ed9b1aa796ee8430000d33ebd1b4e
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 3f35dcb7168e9c76a8286a1425a26306914cfdb3
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -35,13 +35,13 @@ Vill du ge användarna åtkomst till data i Office 365 och verksamhetsspecifika 
 I så fall kan du ange MAM-principer för Office 365-mobilappar på iOS- och Android-enheter med Microsoft Intune, till exempel ange begränsningar för att klippa ut, kopiera och klistra in data, förhindra ”spara som” och ange PIN-kodskrav. Du kan också fjärrensa MAM-skyddade data.  På så sätt kan du skydda företagsdata utan att kräva att användarna registrerar sina enheter i en MDM-lösning. Och får samtidigt en bra användarupplevelse i Office-mobilapparna.
 
 ## <a name="how-do-i-do-it"></a>Hur gör jag?
-1.    Lär dig grunderna om [hantering av mobilprogram i Intune /intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).
-2.    Ta reda på [vad du behöver göra innan du kan skapa MAM-principer](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) i Azure Portal.
-3.    [Skapa och distribuera MAM-principer](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) med Intune.
+1.  Läs grundläggande information om [hur Intunes hantering av mobilprogram (MAM)](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) fungerar.
+2.  Ta reda på [vad du behöver göra innan du kan skapa MAM-principer](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) i Azure Portal.
+3.  [Skapa och distribuera MAM-principer](/intune-classic/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) med Intune.
 
 ### <a name="additional-information"></a>Ytterligare information:
 - [Slutanvändarupplevelse](/intune-classic/deploy-use/end-user-experience-for-mam-enabled-apps-with-microsoft-intune) med MAM-aktiverade appar.
-- [Förbereda verksamhetsspecifika appar för MAM med Intune](/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune)
+- [Förbereda verksamhetsspecifika appar för MAM med Intune](/intune/apps-prepare-mobile-application-management)
 - <a href="https://www.microsoft.com/cloud-platform/microsoft-intune-partners" target="_blank"> Lista över Microsoft Intune-partner &rarr;</a> som tillhandahåller MAM-aktiverade appar.
 
 ## <a name="what-should-i-do-next"></a>Vad ska jag göra sedan?

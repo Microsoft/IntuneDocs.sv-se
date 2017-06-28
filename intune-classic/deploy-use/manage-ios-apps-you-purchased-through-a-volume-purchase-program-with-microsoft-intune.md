@@ -1,5 +1,5 @@
 ---
-title: "Hantera volyminköpta iOS-appar | Microsoft Docs"
+title: "Hantera volyminköpta iOS-appar"
 description: "Intune hjälper dig att hantera appar som du volyminköpt av Apple genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger."
 keywords: 
 author: robstackmsft
@@ -15,10 +15,10 @@ ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c05c9cb1a0de468f1a6663a7870631af159d9b04
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: f2600864eaf127810639e76932adbd422b4e0008
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---

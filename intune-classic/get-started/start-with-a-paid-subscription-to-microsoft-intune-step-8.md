@@ -1,5 +1,5 @@
 ---
-title: Aktivera enhetsregistrering | Microsoft Docs
+title: Aktivera registrering av enheter
 description: "Ange utfärdare för hantering av mobila enheter och aktivera registrering av iOS-, Windows-, Android- och Mac-enheter."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 76d6000c87843d1a785cd1027eb927f565784ca2
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 64c6eb58246ac3ad232c1b8ee89d12a83e7e1784
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -38,7 +38,7 @@ Om du vill konfigurera hantering av mobila enheter med Intune måste du först a
 
 2. Klicka på **Ja** i dialogrutan Ange utfärdare för Hantering av mobila enheter.
 
-    ![Administrationskonsolen. Ange MDM till Intune](./media/mdmAuthority.png)
+    ![Administrationskonsolen. Ange MDM till Intune](../media/intune-mdm-authority.png)
 
 ## <a name="choose-how-to-enroll-devices"></a>Välj hur du vill registrera enheter
 

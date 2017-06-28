@@ -1,5 +1,5 @@
 ---
-title: Konfigurera Android-hantering | Microsoft Docs
+title: Konfigurera Android-hantering
 description: "Aktivera hantering av mobila enheter (MDM) för Android- och KNOX Standard-enheter med Microsoft Intune."
 keywords: 
 author: nathbarn
@@ -15,10 +15,10 @@ ms.reviewer: lacranda
 ms.suite: ems
 ms.custom: intune-classic
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4042a22ecfbab7970ea4b3dab8ee6a82b0da5f78
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 927259d2f3b3078c9fdb0f1ba3bb22a69b555ab6
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -42,7 +42,7 @@ Som standard tillåts Android-enheter registreras i Intune. Om du vill blockera 
     Registreringsinstruktioner för slutanvändare finns i [Registrera din Android-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
     Information om andra slutanvändaraktiviteter finns i de här artiklarna:
-  - [Resurser om slutanvändarupplevelsen med Microsoft Intune](how-to-educate-your-end-users-about-microsoft-intune.md)
+  - [Resurser om slutanvändarupplevelsen med Microsoft Intune](/intune/end-user-educate)
   - [Vägledning för slutanvändare för Android-enheter](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 På grund av avsaknad av Google Play-butik i Kina måste Android-enheter hämta Företagsportalen från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:

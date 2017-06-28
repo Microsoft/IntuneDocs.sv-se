@@ -1,12 +1,12 @@
 ---
 title: "Så här skapar du anpassade VPN-profiler med Microsoft Intune"
-titleSuffix: Intune Azure preview
+titleSuffix: Intune on Azure
 description: "Använd anpassade konfigurationer för att skapa VPN-profiler i Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/19/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,10 +16,10 @@ ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b38cbfb323ad4165e6cfc3edbc3c156e4fc1d6a4
+ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
+ms.openlocfilehash: 11da0d31a9a00364a6105006c3e75b6bb6f2cb77
 ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -40,7 +40,7 @@ Den här typen av princip kan vara praktisk när VPN-standardprinciperna i Intun
 ## <a name="to-create-a-custom-configuration-policy"></a>Skapa en anpassad konfigurationsprincip:
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 4. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 5. Välj **Skapa profil** på profilbladet.
