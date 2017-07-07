@@ -1,7 +1,7 @@
 ---
 title: "Komma igång med enhetsefterlevnad"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: I det här avsnittet får du information om vilka förutsättningar du för att kunna skapa efterlevnadsprinciper i Microsoft Intune"
+titleSuffix: Intune on Azure
+description: "Använd det här ämnet för att förstå vilka förutsättningar du behöver för att skapa efterlevnadsprinciper i Microsoft Intune”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,24 +15,21 @@ ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: f59801abf29d15581fcdc577c5320942208595b1
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: aa9a5c8c44b82dcbc1ae7a4609b12e22c6599e9e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="get-started-with-device-compliance-in-intune"></a>Kom igång med enhetsefterlevnad i Intune
 
-# <a name="get-started-with-device-compliance-in-intune-azure-preview"></a>Kom igång med enhetsefterlevnad i förhandsversion av Intune Azure
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 I det här avsnittet lär du dig följande: 
 
 - Vad du behöver innan du kan börja skapa en princip för enhetsefterlevnad.
-- En snabb överblick över vad du kan se och göra i Intune Azure Preview Portal. 
+- En snabb överblick över vad du kan se och göra i Intune Azure Portal. 
 
 Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du läser [det här avsnittet](device-compliance.md). Här får du information om vad enhetsefterlevnad är och hur du kan använda den i din organisation.
 
@@ -56,7 +53,7 @@ Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du l�
 
 ##  <a name="azure-portal-workflow"></a>Arbetsflöde i Azure-portalen
 
-Här är en översikt över hur du kan skapa och hantera enhetsefterlevnad i Azure Preview Portal.
+Här är en översikt över hur du kan skapa och hantera enhetsefterlevnad i Intune Azure Portal.
 
 <!---### Overview
 
@@ -83,4 +80,3 @@ Giltighetsperiod för efterlevnadsstatus
 [Skapa en efterlevnadsprincip för iOS](compliance-policy-create-ios.md)
 
 [Skapa en efterlevnadsprincip för Windows](compliance-policy-create-windows.md)
-

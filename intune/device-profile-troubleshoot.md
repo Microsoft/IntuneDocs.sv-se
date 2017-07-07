@@ -1,7 +1,7 @@
 ---
-title: "Felsöka enhetsprofiler i Microsoft Intune | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Om du kört fast kan du använda det här avsnittet som hjälp för att lösa problem med enhetsprofiler i Intune."
+title: "Felsöka enhetsprofiler i Microsoft Intune"
+titleSuffix: Intune on Azure
+description: "Om du kört fast, kan du använda det här ämnet för att hjälpa dig läsa problem med Intune-enhetsprofiler.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,19 +15,16 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2f3586c4cbe37c44cc289ba3ea47bf127c150d35
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ed238f35927f17b20402f64586686246afabb900
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshooting-device-profiles-in-microsoft-intune"></a>Felsöka enhetsprofiler i Microsoft Intune
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Informationen i det här avsnittet kan användas för att felsöka vanliga problem runt enhetsprofiler i Intune.
 

@@ -1,7 +1,7 @@
 ---
-title: Appetableringsprofiler | Microsoft Docs
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Intune tillhandahåller verktyg för att tilldela en ny etableringsprofil till enheter som har appar som snart upphör att gälla."
+title: Appetableringsprofiler
+titleSuffix: Intune on Azure
+description: "Intune ger dig verktyg för att proaktivt tilldela en ny etableringsprofil till enheter som har appar som snart går ut.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 966c097280ebebac68749e71c20381ee816360da
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bf2da880f0f092b9948a400f6a10bd9ad032f959
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-ios-mobile-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilen för iOS för att förhindra att dina appar upphör att gälla
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Introduktion
 
@@ -42,7 +40,7 @@ När certifikatet upphör att gälla måste du signera appen igen med ett nytt c
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Så här skapar du en etableringsprofil för iOS-mobilappar
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning +hantering** > **Intune**.
 3. Välj **Mobilappar** på **Intune**-bladet.
 1.  Välj **Hantera** > **Etableringsprofiler för iOS** i arbetsbelastningen **Mobilappar**.
 2.  Välj **Skapa profil** på bladet med listan över profiler.
@@ -55,4 +53,3 @@ När certifikatet upphör att gälla måste du signera appen igen med ett nytt c
 ## <a name="next-steps"></a>Nästa steg
 
 Koppla profilen till nödvändiga iOS-enheter. Mer information finns i stegen i [Så här tilldelar du enhetsprofiler](device-profile-assign.md).
-

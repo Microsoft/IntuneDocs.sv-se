@@ -1,7 +1,7 @@
 ---
 title: "Så här lägger du till branschspecifika iOS-appar i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om att lägga till branschspecifika iOS-appar i Intune."
+titleSuffix: Intune on Azure
+description: "Läs om att lägga till verksamhetsspecifika iOS-appar till Intune."
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1e9dea2b44279c26de2b2ea4141fe010645ba942
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bb26ca341fbef6ae02556b09044f43cec23dae2b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika iOS-appar i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
@@ -68,4 +66,3 @@ ms.lasthandoff: 05/23/2017
 2. Välj **Lägg till** för att överföra appen till Intune.
 
 Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
-

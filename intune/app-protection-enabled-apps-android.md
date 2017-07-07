@@ -1,7 +1,7 @@
 ---
 title: Android-appar med appskyddsprinciper
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Det här avsnittet beskriver vad som händer när din Android-app hanteras av appskyddsprinciper."
+titleSuffix: Intune on Azure
+description: "Det här ämnet beskriver vad som händer när din Android-app hanteras av appskyddsprinciper.”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,17 +15,14 @@ ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: c1704e5e63be434eaacaeec6e575640310ce74b3
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 63badd001958f22339415e0cd03da9ade275c6f3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Vad som händer när din Android-app hanteras av appskyddsprinciper 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
 ##  <a name="accessing-apps"></a>Komma åt appar
 
 Företagsportalappen krävs för alla appar som är kopplade till appskyddsprinciper på Android-enheter.
@@ -84,4 +81,3 @@ Följande filtyper stöds:
 
 ### <a name="see-also"></a>Se även
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
-

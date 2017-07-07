@@ -1,7 +1,7 @@
 ---
-title: "Ange grundläggande datahantering för Office 365-appar – Intune Azure-förhandsgranskning"
-titleSuffix: Intune Azure preview
-description: "Intune Azure-förhandsgranskning: Supportdokumentation för guiden Hantera Office 365-appar."
+title: "Ange grundläggande datahantering för Office 365-appar i Intune"
+titleSuffix: Intune on Azure
+description: "Supportdokumentation för guiden Hantera Office 365-appar.\""
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -16,16 +16,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 639d045e036ecdc6ff40d6ae335d2c5109d9e420
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 302f646bfb9ff0ac024687fa0b3926d83158995c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Hur användarna upplever det grundläggande skyddet på hanterade Office 365-appar
 
 Guiden **Hantera Office 365-appar** skapar en appskyddsprincip för varje enhetsplattform.
@@ -129,9 +125,8 @@ För appar på Android som har associerats med en Intune MAM-princip krypteras d
 Du kan alltid redigera dessa principinställningar så att de uppfyller organisationens krav.
 
 ### <a name="how-can-i-view-and-edit-the-policies-created-by-the-wizard"></a>Hur kan jag visa och redigera de principer som har skapats av guiden?
-Om du vill visa eller uppdatera dessa principer eller alla de principer som du skapat i förhandsversionen av Intune Azure väljer du **Hantera appar** > **Appskyddsprinciper** på instrumentpanelen. Listan över principer öppnas till höger. Välj den princip som du vill använda för att visa och redigera inställningarna. <br/>
+Om du vill visa eller uppdatera dessa principer eller alla de principer som du skapat i Intune Azure Portal väljer du **Hantera appar** > **Appskyddsprinciper** på instrumentpanelen. Listan över principer öppnas till höger. Välj den princip som du vill använda för att visa och redigera inställningarna. <br/>
 ![Bild av användargränssnittets sökväg för att visa principer](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Nästa steg
 Läs mer om [appskyddsprinciper](https://docs.microsoft.comapp-protection-policy.md).
-

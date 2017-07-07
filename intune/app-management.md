@@ -1,12 +1,12 @@
 ---
-title: "Vad är apphantering | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Använd informationen i det här avsnittet för att lära dig grunderna om apphantering med Microsoft Intune"
+title: "Vad är apphantering"
+titleSuffix: Intune on Azure
+description: "Använd informationen i det här avsnittet för att lära dig grunderna om apphantering med Microsoft Intune”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,25 +15,22 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 56eefde5969f5426886c07bd6e9a548c8526e82e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Som IT-administratör kommer du troligen att ha uppgiften att se till att slutanvändarna har åtkomst till de appar som de behöver för att utföra sitt arbete. Detta kan vara en utmaning eftersom:
+Som IT-administratör är du ansvarig för att se till att slutanvändarna har åtkomst till de appar som de behöver för att utföra sitt arbete. Detta kan vara en utmaning eftersom:
 - Det finns en mängd olika enhetsplattformar och apptyper.
-- Du kan behöva hantera appar på företagets enheter liksom på användarnas egna enheter.
-- Du behöver göra allt detta och ska samtidigt se till att nätverket och dina data förblir säkra. 
+- Du kan behöva hantera appar på företagets enheter samt på användarnas egna enheter.
+- Du måste se till att ditt nätverk och dina data förblir säkra.
 
 Dessutom kanske du vill tilldela och hantera appar på enheter som inte har registrerats med Intune.
 
@@ -63,7 +60,6 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 
 <sup>2</sup>Gäller endast enheter som hanteras med Intune.
 
-
 ## <a name="how-to-get-started"></a>Komma igång
 
 Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** som du kommer åt enligt följande:
@@ -75,12 +71,13 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
     ![Arbetsbelastningen mobilappar](./media/apps-workload.png)
 
 ### <a name="manage"></a>Hantera
-- **Appar** – Det är här du lägger till, tilldelar och övervakar de flesta av dina appar. 
+- **Appar** – Det är här du lägger till, tilldelar och övervakar de flesta av dina appar.
     - [Lägga till appar](apps-add.md)
     - [Tilldela appar](apps-deploy.md)
     - [Övervakning av appar](apps-monitor.md)
-- **Konfigurationsprinciper för appar** – Konfigurationsprinciper för appar gör att du kan definiera inställningar som kan krävas när användaren kör en app. Mer information finns i:
-    - [Konfigurationsprinciper för appar](app-configuration-policies.md)
+- **Konfigurationsprinciper för appar** – Konfigurationsprinciper för appar gör att du kan definiera inställningar som kan krävas när användaren kör en app.
+    - [Konfigurationsprinciper för iOS-appar](app-configuration-policies-use-ios.md)
+    - [Konfigurationsprinciper för Android-appar](app-configuration-policies-use-android.md)
 - **Appskyddsprinciper** – Låter dig koppla inställningar till en app för att skydda företagets data som den använder. Du kan till exempel begränsa möjligheterna för en app att kommunicera med andra appar eller kräva att användaren anger en PIN-kod för att få åtkomst till en företagsapp.
     - [Appskyddsprinciper](app-protection-policies.md)
 - **Appselektiv rensning** – Ta endast bort företagsdata från en användares enhet som du väljer.
@@ -100,8 +97,7 @@ Mer information finns i [Övervakning av appar](apps-monitor.md)
 ### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Windows Store för företag** – Installationsintegrering till Windows Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser. 
+- **Windows Store för företag** – Installationsintegrering till Windows Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser.
     - [Volyminköpta appar från Windows Store för företag](windows-store-for-business.md)
-- **Anpassa företagsportalen.** – Anpassa företagsportalen enligt ert varumärke. 
+- **Anpassa företagsportalen.** – Anpassa företagsportalen enligt ert varumärke.
     - [Företagsportalkonfiguration](company-portal-app.md)
-

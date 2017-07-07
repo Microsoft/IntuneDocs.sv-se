@@ -1,7 +1,7 @@
 ---
 title: "Anpassade inställningar för Windows 10-enheter i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig om inställningarna du kan använda i en anpassad Windows 10-profil."
+titleSuffix: Intune on Azure
+description: "Läs om inställningarna du kan använda i en anpassad Windows 10-profil.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: 7bcea136-7260-4042-b21b-c7dab86b380d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 52ad4f141c3b2b73a400c69fb9d9beb174bbac64
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: bda9e939e2d4aba4c4d005ea55ba65bec9c6e217
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-device-settings-for-windows-10-devices-in-microsoft-intune"></a>Anpassade enhetsinställningar för Windows 10-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
  Använd Microsoft Intunes **anpassade** profil för Windows 10 och Windows 10 Mobile för att distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) som kan användas för att styra funktioner på enheter. I Windows 10 är många CSP-inställningar tillgängliga, t.ex. [Princip-CSP (Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 Kom ihåg att om du letar efter en viss inställning, innehåller [enhetsbegränsningsprofilen i Windows 10](device-restrictions-windows-10.md) många inställningar som är inbyggda i Intune och som innebär att du inte behöver ange några anpassade värden.
@@ -62,6 +59,5 @@ Du hittar en lista med alla CSP:er som har stöd för Windows 10 i [Referens til
 Alla inställningar är inte kompatibla med alla versioner av Windows 10. I tabellen i avsnittet om Windows kan du se vilka versioner som stöds för varje CSP.
 
 Dessutom stöder Intune inte alla inställningar som anges i avsnittet. Om du vill veta om Intune har stöd för den inställning som du vill använda, öppnar du avsnittet för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
-
 
 

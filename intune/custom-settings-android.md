@@ -1,7 +1,7 @@
 ---
 title: "Anpassade inställningar för Android-enheter i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig mer om vilka inställningar du kan använda i en anpassad Android-profil."
+titleSuffix: Intune on Azure
+description: "Läs om vilka inställningar du kan använda i en anpassad Android-profil.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ff3d3b1596f58213bed2509b1bfd5ae81c63f440
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 014e59c017eac0d54a632e545692e1a1a8053164
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Anpassade inställningar för Android-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd **Anpassad** profil för Android i Microsoft Intune för att tilldela OMA-URI-inställningar som kan användas för att styra funktioner på Android-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
@@ -43,4 +40,3 @@ Funktionen är avsedd för att kunna tilldela Android-inställningar som inte g�
     - **OMA-URI** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
     - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
-

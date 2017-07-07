@@ -1,12 +1,12 @@
 ---
 title: "Så här konfigurerar du anpassade enhetsinställningar i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur använder Intune för att konfigurera anpassade inställningar för enheter som du hanterar."
+titleSuffix: Intune on Azure
+description: "Läs hur du använder Intune för att konfigurera anpassade inställningar på enheter som du hanterar.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 40a37a02ac49a74e3f715b0e2191868ecf2e264b
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 769c566c7ebb91743fc0f18ebf8f3e76377ca847
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-custom-device-settings-in-microsoft-intune"></a>Så här konfigurerar du anpassade enhetsinställningar i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="when-to-use-custom-settings"></a>När anpassade inställningar används
 
@@ -38,7 +35,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 ## <a name="create-a-device-profile-containing-custom-settings"></a>Skapa en enhetsprofil som innehåller anpassade inställningar
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
@@ -53,7 +50,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android](custom-settings-android.md)
     - [Inställningar för iOS](custom-settings-ios.md)
-    - [Inställningar för macOS](custom settings-macos.md)
+    - [Inställningar för macOS](custom-settings-macos.md)
     - [Inställningar för Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](custom-settings-windows-10.md)
     - [Inställningar för Android for Work](custom-settings-android-for-work.md)
@@ -61,4 +58,3 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 
 Profilen skapas och visas på bladet med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
-

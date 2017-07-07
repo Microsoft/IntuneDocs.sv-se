@@ -1,7 +1,7 @@
 ---
-title: "iOS-appar med appskyddsprinciper | Förhandsversion av Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Det här avsnittet beskriver vad som händer när din iOS-app hanteras av appskyddsprinciper."
+title: iOS-appar med appskyddsprinciper
+titleSuffix: Intune on Azure
+description: "Det här ämnet beskriver vad du kan förvänta dig när din iOS-app hanteras av appskyddsprinciper.”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,17 +15,14 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5e172b940dfae32213c870b29f05f56573192704
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 912bc5230904f5798b2e0026dcf0dd1cecdb811c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
+[!INCLUDE[azure_portal](./includes/azure_portal.md)] Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
 ##  <a name="accessing-apps"></a>Komma åt appar
 
 Om enheten **inte har registrerats i Intune** uppmanas slutanvändarna att starta om appen första gången de använder den.  En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen. Följande skärmbild illustrerar detta med hjälp av Skype-appen:
@@ -67,4 +64,3 @@ Om du använder en iOS-enhet kanske ett blockeringsmeddelande visas om du förs�
 [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-apps-android.md)
 ### <a name="see-also"></a>Se även
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
-

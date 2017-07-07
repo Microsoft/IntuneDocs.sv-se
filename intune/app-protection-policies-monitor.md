@@ -1,7 +1,7 @@
 ---
 title: "Så här övervakar du appskyddsprinciper"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Se hur många användare som principen tillämpas på och öka detaljnivån om du vill ha mer information."
+titleSuffix: Intune on Azure
+description: "Se hur många användare som principen tillämpas på och öka detaljnivån om du vill ha mer information.”"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1e7294e5c7bb1136718ca6d651d9375a22796fa7
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: de40d149818b2655a8fc3b647a7e850973814165
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-**Om du inte är i förhandsversionen av Intune Azure**, förklarar det här avsnittet [hur du skapar appskyddsprinciper](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) i den klassiska Intune-konsolen.
+**Om du inte är i Azure-portalen**, förklarar det här ämnet [hur du skapar appskyddsprinciper](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) i den klassiska Intune-konsolen.
 
 
 Du kan övervaka efterlevnadsstatusen för principer för hantering av mobila appar (MAM) som du tillämpat på användare på bladet för Intunes appskydd på [Azure-portalen](https://portal.azure.com). Du kan hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
@@ -43,7 +40,7 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 ## <a name="summary-view"></a>Sammanfattningsvy
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Mobilappar** på **Intune**-bladet.
 4. Visa sammanfattningsvyn genom att välja **Övervaka** > **Användarstatus för appskydd** i arbetsbelastningen **Mobile Apps**:
 
@@ -139,4 +136,3 @@ Generera appskyddsrapporten genom att följa dessa anvisningar:
 
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-apps-android.md)
 * [Vad som händer när din iOS-app hanteras av appskyddsprinciper](app-protection-enabled-apps-ios.md)
-

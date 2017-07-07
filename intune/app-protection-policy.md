@@ -1,7 +1,7 @@
 ---
 title: "Vad är appskyddsprinciper?"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: I det här avsnittet kan du lära dig att skydda företagets data med hjälp av Microsoft Intune appskyddsprinciper."
+titleSuffix: Intune on Azure
+description: "I det här ämnet kan du lära dig att skydda företagets data med hjälp av Microsoft Intune-appskyddsprinciper.”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,19 +15,16 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 01f77e3511785d2c8da2edcd92df809b3b7e73e7
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 13b3199108c34a61d117e4d89d118bdd05d7d20f
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/03/2017
 ---
-
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune appskyddsprinciper hjälper till att skydda företagets data och att förhindra dataförluster.
 
@@ -68,7 +65,7 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 
 -   Android 4 eller senare
 
-Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 ##  <a name="how-app-protection-policies-protect-app-data"></a>Hur appskyddsprinciper skyddar appdata
 
 ####  <a name="apps-without-app-protection-policies"></a>Appar utan appskyddsprinciper
@@ -138,4 +135,3 @@ Om en användare t.ex. startar appen OneDrive med sitt arbetskonto kan hen inte 
 ##  <a name="next-steps"></a>Nästa steg
 
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
-

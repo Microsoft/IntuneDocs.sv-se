@@ -1,7 +1,7 @@
 ---
 title: "Anpassade inställningar i Intune för Windows Phone 8.1-enheter"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig om inställningarna du kan använda i en anpassad Windows 8.1-profil."
+titleSuffix: Intune on Azure
+description: "Läs om inställningarna du kan använda i en anpassad Windows 8.1-profil.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: 21c55041-3821-4a62-9f85-855b97dba269
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 646d0ec4274e068487ad9546ff0b5dabfc815e46
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b3dcad95b85d967e48c8b05d655a5e679daa0aee
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-settings-for-windows-phone-81-devices-in-microsoft-intune"></a>Anpassade inställningar för Windows Phone 8.1-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd profilen **Anpassad** för Windows Phone 8.1 i Microsoft Intune för att tilldela OMA-URI-inställningar som kan användas till att styra funktioner på Windows Phone 8.1-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
@@ -44,4 +41,3 @@ Funktionen är avsedd för att kunna tilldela inställningar som inte går att k
     - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 
 4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
-
