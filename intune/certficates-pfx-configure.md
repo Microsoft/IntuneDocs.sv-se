@@ -1,12 +1,12 @@
 ---
 title: Konfigurera och hantera PKCS-certifikat med Intune
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om hur du kan konfigurera din infrastruktur. Skapa och tilldela sedan PKCS-certifikat med Intune."
+titleSuffix: Intune on Azure
+description: "Läs hur du kan konfigurera din infrastruktur och därefter skapa och tilldela PKCS-certifikat med Intune.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 04/22/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,14 @@ ms.assetid: e189ebd1-6ca1-4365-9d5d-fab313b7e979
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16fa26ae8ed06c4959807b30e430fd69fc503936
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 305a4d79aa81bd599369e72bc0cb307fdf452643
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurera och hantera PKCS-certifikat med Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan skapa och tilldela PKCS-certifikatprofiler med Intune.
 
@@ -118,7 +115,7 @@ I det här steget kommer du att:
 ### <a name="to-enable-support-for-the-certificate-connector"></a>Så här aktiverar du stöd för certifikatanslutningsappen
 
 1.  Logga in på Azure-portalen.
-2.  Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3.  Välj **Konfigurera enheter** på **Intune**-bladet.
 2.  Välj **Installation** > **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
 2.  Under **Steg 1** väljer du **Aktivera**.
@@ -190,10 +187,11 @@ I Azure-portalen väljer du arbetsbelastningen **Konfigurera enheter**.
         - **Allmänt namn**
         - **Eget namn, inklusive e-post**
         - **Eget namn som e-post**
-    - **Alternativt namn för certifikatmottagare** – Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet ska användas för att autentisera mot en nätverksprincipserver måste du ange användarens huvudnamn som alternativt mottagarnamn.
+    - **Alternativt namn för certifikatmottagare** – Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet används för att autentisera mot en nätverksprincipserver, måste du ange alternativt mottagarnamn som UPN. 
+    Du kan också välja **anpassat Azure AD-attribut**. När du väljer det här alternativet visas ett annat listrutefält. Från listrutefältet **anpassat Azure AD-attribut**, finns det ett alternativ: **avdelning**. Certifikatet utfärdas inte om du väljer det alternativet och avdelningen inte identifieras i Azure AD. Du löser det problemet genom att identifiera avdelningen och spara ändringarna. Vid nästa enhetsincheckning är problemet löst och certifikatet utfärdas. ASN.1-notation används för det här fältet. 
     - **Utökad nyckelanvändning** (Android) – Välj **Lägg till** om du vill lägga till värden för certifikatets avsedda syfte. I de flesta fall kräver certifikatet **Klientautentisering** så att användaren eller enheten kan autentisera till en server. Du kan dock lägga till alla andra nyckelanvändningar efter behov. 
     - **Rotcertifikat** (Android) – Välj en certifikatprofil från en rotcertifikatutfärdare som du tidigare har konfigurerat och tilldelat till användaren eller enheten. Detta CA-certifikat måste vara rotcertifikatet för den certifikatutfärdare som kommer att utfärda det certifikat som du konfigurerar i den här certifikatprofilen. Det här är den betrodda certifikatprofil som du skapade tidigare.
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. När du är klar, går du tillbaka till bladet **skapa profil** och trycker på **skapa**.
 
 Profilen skapas och visas på bladet med profillistan.
 
@@ -208,4 +206,3 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 - Även om du tilldelar varje profil separat, måste du också tilldela den betrodda rotcertifikatutfärdaren och PKCS-profilen. Annars misslyckas PKCS-certifikatprincipen.
 
 Du hittar allmän information om hur du tilldelar profiler i [Så här tilldelar du enhetsprofiler](device-profile-assign.md).
-

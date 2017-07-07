@@ -1,7 +1,7 @@
 ---
 title: "Skapa en efterlevnadsprincip för Android for Work"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig hur du skapar en efterlevnadsprincip för Android for Work-enheter."
+titleSuffix: Intune on Azure
+description: "Lär dig hur du skapar en efterlevnadsprincip för Android for Work-enheter.\""
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,19 +15,16 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: af5aa4f336df0f47695484b7dce1d7df29bea03d
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 518b74703de88a1cded2ad38d33c52b54699dc44
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android for Work-enheter i Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune-azure-preview"></a>Så här skapar du en efterlevnadsprincip för Android for Work-enheter i Intune Azure-förhandsversionen
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Efterlevnadsprinciper skapas för varje plattform.  Du kan skapa en efterlevnadsprincip i Azure-portalen. Mer information om vad en efterlevnadsprincip är finns i artikeln [Vad är enhetsefterlevnad?](device-compliance.md). Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i artikeln [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
@@ -123,4 +120,3 @@ Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https:/
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

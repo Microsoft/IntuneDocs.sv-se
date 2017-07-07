@@ -1,6 +1,7 @@
 ---
-title: "Konfigurera inställningarna för Windows Update för företag – Intune | Intune Azure Preview | Microsoft Docs"
-description: "Intune Azure Preview: Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Intune, så att du kan kontrollera uppdateringarna för Windows 10-enheter."
+title: "Konfigurera inställningar för Windows Update för företag - Intune"
+titleSuffix: Intune on Azure
+description: "Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Intune, så att du kan kontrollera uppdateringarna för Windows 10-enheter.”"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -13,18 +14,15 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b0bc3e557f303cd80c780634ba47b24405c327e1
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c05a6c007b147d81c4d98b708c0e0ae92392f0e0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-windows-update-for-business-settings-with-microsoft-intune"></a>Konfigurera inställningarna för Windows Update för företag med Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Introduktion
 Windows som en tjänst är det nya sättet för att tillhandahålla uppdateringar för Windows 10. Från och med Windows 10 innehåller alla nya funktions- och kvalitets även innehållet från alla tidigare uppdateringar. Det innebär att så länge som du har installerat den senaste uppdateringen så vet du att dina Windows 10-enheter är helt uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
@@ -87,7 +85,7 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
     - **Beteende för automatiska uppdateringar**: Ange hur du vill hantera automatiska uppdateringsbeteenden när det gäller att söka efter, hämta och installera uppdateringar. Mer information finns i [Uppdatera/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
     - **Fördröjningsperiod för kvalitetsuppdateringar (dagar)** – Ange det antal dagar under vilka kvalitetsuppdateringar ska fördröjas. Du kan fördröja mottagandet av dessa kvalitetsuppdateringar under en period på upp till 30 dagar från det att de har släppts.  
 
-      Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner, och publiceras vanligtvis den första tisdagen varje månad, men Microsoft kan publicera dem när som helst. Du kan ange om, och hur länge, du vill skjuta upp mottagandet av kvalitetsuppdateringar från det att de har gjorts tillgängliga.
+    Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner, och publiceras vanligtvis den första tisdagen varje månad, men Microsoft kan publicera dem när som helst. Du kan ange om, och hur länge, du vill skjuta upp mottagandet av kvalitetsuppdateringar från det att de har gjorts tillgängliga.
     - **Fördröjningsperiod för funktionsuppdateringar (dagar)** – Ange det antal dagar under vilka funktionsuppdateringar ska fördröjas. Du kan fördröja mottagandet av dessa funktionsuppdateringar under en period på upp till 180 dagar från det att de har släppts.
 
     Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Servicing Branch** (**CB** eller **CBB**), kan du definiera om, och hur länge, du vill fördröja mottagandet av funktionsuppdateringarna efter det att de gjorts tillgängliga av Microsoft på Windows Update.
@@ -148,4 +146,3 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando tar enheterna emot detta kommando nästa gång som de kontaktar tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.
 > Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
-

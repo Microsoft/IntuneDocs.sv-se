@@ -13,16 +13,15 @@ ms.technology:
 ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
-ms.openlocfilehash: 623ed8dda2b35a895e5a00c0639a647624f74e59
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.openlocfilehash: 3f60ee6334ac8fa00dcaaa524485c5339b040381
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Informera slutanvändare om Microsoft Intune
+
+[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
 Med Microsoft Intune kan du ge personalen tillgång till mobila enheter samtidigt som företagets information skyddas. Det finns många åtgärder som du kan vidta för att säkerställa en lyckad distribution. Ett exempel är att utvärdera Intune med en [kostnadsfri utvärderingsversion](app-sdk.md).
 
@@ -57,15 +56,15 @@ Distributionen blir smidigare om du dämpar oron. Vi har en lista över saker so
 
 * **Android**
   * [Använda en Android-enhet med Intune](/intune-user-help/using-your-android-device-with-intune)
-  * [Så får dina Android-användare sina appar](/intune-classic/deploy-use/how-your-android-users-get-their-apps)
+  * [Så får dina Android-användare sina appar](end-user-apps-android.md)
 
 * **iOS**
   * [Använda en iOS-enhet med Intune](/intune-user-help/using-your-ios-or-macos-device-with-intune)
-  * [Så får dina iOS-användare sina appar](/intune-classic/deploy-use/how-your-ios-users-get-their-apps)
+  * [Så får dina iOS-användare sina appar](end-user-apps-ios.md)
 
 * **Windows**
   * [Använda en Windows-enhet med Intune](/intune-user-help/using-your-windows-device-with-intune)
-  * [Så får dina Windows-användare sina appar](/intune-classic/deploy-use/how-your-windows-users-get-their-apps)
+  * [Så får dina Windows-användare sina appar](end-user-apps-windows.md)
 
 * __Var tydlig.__ Var tydlig med att berätta för användarna vad du tänker hantera på deras enheter. Berätta vilka typer av data som du samlar in och varför du samlar in dem. Informera dem om hur du tänker använda alla data. [Microsoft anser att du har rätt till så mycket information som möjligt om hur vi hanterar din kundinformation i molnet](https://www.microsoft.com/trustcenter/about/transparency), och vi tror att den här filosofin kan göra att dina användare blir mer nöjda med Intune.
 
@@ -73,4 +72,3 @@ Distributionen blir smidigare om du dämpar oron. Vi har en lista över saker so
 > Transparens är nyckeln till en lyckad distribution.
 
 Försök att kombinera förtroende med gedigna efterlevnadsprinciper. Se till att användarna vet att du *inte vill* titta på vissa typer av data, även om du *hade kunnat* göra det, och att du vet vilken skada det skulle medföra att inkräkta på deras integritet. Att utforma ett utlåtande tillsammans med den juridiska avdelningen och personalavdelningen kan vara till hjälp för anställda som är skeptiska.
-

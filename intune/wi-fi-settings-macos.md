@@ -1,7 +1,7 @@
 ---
 title: "Wi-Fi-inställningar för macOS-enheter i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig mer om Intune-inställningar som du kan använda för att konfigurera Wi-Fi-anslutningar på macOS-enheter."
+titleSuffix: Intune on Azure
+description: "Lär dig mer om Intune-inställningar som du kan använda för att konfigurera Wi-Fi-anslutningar på macOS-enheter.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 322a38d5-21f5-48ee-bc59-0a4f9da78d38
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: eeccc30962ae64fea31a43d423d7bd0760a01168
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 539c4d97f6f868ea2c4d4e6f2f58bfffa9cf7ce6
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Wi-Fi-inställningar för macOS-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Wi-Fi-inställningar för bas- och företagsprofiler
 
@@ -80,4 +77,3 @@ ms.lasthandoff: 05/23/2017
 |--------------|-------------|----------|
 |**Klientcertifikat för klientautentisering (identitetscertifikat)**|Välj den SCEP- eller PKCS-certifikatsprofil som ska användas för att autentisera anslutningen.|EAP-typen är **EAP-TLS**|
 |**Autentiseringsmetod**|Välj autentiseringsmetod för anslutningen:<br>- **Certifikat** för att markera det SCEP- eller PKCS- klientcertifikat som är identitetscertifikatet som presenterats för servern.<br><br>- **Användarnamn och lösenord** för att ange en annan metod för autentisering. <br><br>Om du har valt **Användarnamn och lösenord**, konfigurera:<br><br>-  **Annan metod än EAP (inre identitet)** och välj sedan hur du ska autentisera anslutningen:<br>- **Inga**<br>- **Okrypterat lösenord (PAP)**<br>- **CHAP (Challenge Handshake Authentication Protocol)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP Version 2 (MS-CHAP v2)**<br>Vilka alternativ som är tillgängliga beror på vilken EAP-typ du väljer.<br><br>**och**<br><br>- **Identitetssekretess (yttre identitet)** – Ange texten som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|EAP-typen är **EAP-TTLS** eller **PEAP**|
-

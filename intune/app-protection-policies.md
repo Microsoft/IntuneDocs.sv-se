@@ -1,7 +1,7 @@
 ---
 title: Skapa och distribuera appskyddsprinciper
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Se hur Intunes skyddsprinciper för appar kan hjälpa dig att skydda företagets data som används av appar som du hanterar."
+titleSuffix: Intune on Azure
+description: "Läs hur Intunes appskyddsprinciper kan hjälpa dig att skydda företagets data som används av appar som du hanterar.”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,21 +15,23 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d63e99561766268941b2c6d8b3bb6a1dd028f72c
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 56a19bc4d970f230f719af9369dada45ffb65e76
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-**Om du inte är i Intune-tjänsten i förhandsversionen av Azure-portalen**, förklarar det här avsnittet [hur du skapar app-principer](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) i den klassiska Intune-konsolen.
+## <a name="before-you-begin"></a>Innan du börjar
+
+Om du letar efter instruktioner i den klassiska Intune-konsolen, se [hur du skapar appskyddsprinciper](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune).
 
 Appskyddsprinciper kan tillämpas på appar som körs på enheter som kan, men som inte nödvändigtvis, hanteras av Intune. En mer detaljerad beskrivning av hur appskyddsprinciper fungerar och scenarier som stöds av appskyddsprinciper i Intune finns i [Vad är appskyddsprinciper i Microsoft Intune](app-protection-policy.md).
+
+Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
 1.  Välj **Hantera** > **Appskyddsprinciper** i arbetsbelastningen **Mobile Apps**.
@@ -116,7 +118,6 @@ Om användaren ska kunna se effekten av ändringarna direkt måste användaren l
 ## <a name="policy-settings"></a>Principinställningar
 Välj något av följande om du vill se en fullständig lista med principinställningar för iOS och Android:
 
-> [!div class="op_single_selector"]
 - [iOS-principer](app-protection-policy-settings-ios.md)
 - [Android-principer](app-protection-policy-settings-android.md)
 
@@ -126,4 +127,3 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 ### <a name="see-also"></a>Se även
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-apps-android.md)
 * [Vad som händer när din iOS-app hanteras av appskyddsprinciper](app-protection-enabled-apps-ios.md)
-

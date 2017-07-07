@@ -1,12 +1,12 @@
 ---
-title: "Hantera dataöverföring mellan iOS-appar | Förhandsversion av Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: I det här avsnittet beskrivs hur du kan hantera dataöverföringar mellan appar med funktionen Öppna med i iOS och hanteringsprinciper för mobilappar."
+title: "Hantera dataöverföring mellan iOS-appar"
+titleSuffix: Intune on Azure
+description: "I det här ämnet beskrivs hur du kan använda iOS öppna-i-funktionen och mobila apphanteringsprinciper för att hantera dataöverföringar mellan appar.”"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,12 @@ ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 44747236ba1bda84ccb01f613e1702c536720a2c
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e3c588d2237f48501d78af364760acf1ef290639
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-manage-data-transfer-between-ios-apps"></a>Hur du hanterar dataöverföring mellan iOS-appar
 ## <a name="manage-ios-apps"></a>Hantera iOS-appar
 För att skydda företagets data måste du se till att filöverföringar begränsas till appar som hanteras av dig.  Du kan hantera iOS-appar på följande sätt:
@@ -36,7 +33,7 @@ Med funktionen **Öppna i hantering** för iOS-enheter kan du begränsa överfö
 ##  <a name="using-app-protection-with-ios-apps"></a>Använda appskydd med iOS-appar
 Appskyddsprinciper kan användas med iOS-funktionen **Öppna i hantering** för att skydda företagets data på följande sätt:
 
--   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningar för appskyddsprincip med **Tillåt endast att appen överför data till hanterade appar**. Slutanvändaren kan inte öppna den skyddade filen i en app som inte är principhanterad.
+-   **Medarbetarägda enheter som inte hanteras av en MDM-lösning:** Du kan konfigurera inställningarna för appskyddsprincipen med **Tillåt endast att appen överför data till principhanterade appar**. Beteendet öppna-i för en principhanterad app, visar enbart andra principhanterade appar som alternativ för delning. Om en användare försöker skicka en principskyddad fil som en bilaga från OneDrive i den inbyggda e-postappen, kommer filen att vara oläslig.
 
 -   **Enheter som hanteras av Intune:** Enheter som registreras i Intune tillåts automatiskt att överföra data mellan appar med appskyddsprinciper och andra hanterade iOS-appar som distribueras via Intune. För att tillåta överföring av data mellan appar med appskyddsprinciper aktivera inställningen **Tillåt att appen överför data endast till hanterade appar**. Med funktionen **Öppna i hantering** kan du kontrollera dataöverföringen mellan appar som distribueras via Intune.   
 
@@ -108,4 +105,3 @@ Börja med att [skapa och tilldela en appskyddsprincip](app-protection-policies.
 
 ### <a name="see-also"></a>Se även
 [Vad är appskyddsprincip i Intune](app-protection-policy.md)
-

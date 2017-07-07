@@ -11,26 +11,22 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 7394ff8f-3a21-414d-be4a-4626ec370720
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: ca6072ce66482f5986d37b2f61a123587ad8313f
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-install-skycure-on-your-ios-device"></a>Du måste installera Skycure på din iOS-enhet
 
 Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Skycure-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur IT-administratören har konfigurerat Skycure.
 
 **Vad du behöver göra:**
 
-1.    Om följande meddelande visas trycker du på **Installera** för att tillåta att Skycure installeras på enheten.
+1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att Skycure installeras på enheten.
 
   ![Installera genom att trycka på Skycure](./media/ios-mtd-install-app-request.png)
 
@@ -57,4 +53,3 @@ Om Skycure hittar ett säkerhetshot på enheten, visas instruktioner om hur du l
 **Om installationen inte fungerar**
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta IT-administratören om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

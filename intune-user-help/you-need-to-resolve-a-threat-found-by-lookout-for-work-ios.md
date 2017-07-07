@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 4b51ad3fcc04d8e4b2cb6da6982f62885f466080
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-lookout-for-work"></a>Du måste åtgärda ett hot som Lookout for Work har hittat
 
 Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas kan se ut ungefär så här:
@@ -51,4 +47,3 @@ Om du ser något som liknar detta trycker du på appnamnet som visas längst upp
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

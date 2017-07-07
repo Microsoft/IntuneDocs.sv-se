@@ -1,12 +1,12 @@
 ---
 title: "Inställningar för enhetsbegränsningar för Android i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på Android-enheter."
+titleSuffix: Intune on Azure
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android-enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/12/2017
+ms.date: 06/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3627b28b60908c225ce1797968123ce854a70a8b
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 44d80e1c72b58eccd4e69b1d561c7d651f39b3c3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung KNOX Standard-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Använd de här inställningarna med en princip för begränsning av Android-enhet för att konfigurera enheter i din organisation.
 
 ## <a name="general"></a>Allmänt
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 05/23/2017
 |**Sändning av diagnostikdata**|Hindrar användaren från att skicka diagnostikdata från enheten.|Nej|Ja|
 |**Fabriksåterställning**|Tillåter att användaren utför en fabriksåterställning på enheten.|Nej|Ja|
 |**Geolocation**|Tillåter att enheten använder platsinformation (endast Samsung KNOX Standard).|Nej|Ja|
-|**Avstängning**|Tillåter att användaren stänger av enheten.<br>Om du inaktiverar den här inställningen kommer inte inställningen **Antal felaktiga inloggningar innan enheten rensas** att fungera för Samsung KNOX Standard-enheter.|Nej|Ja|
+|**Avstängning**|Tillåter att användaren stänger av enheten.<br>Om det är inaktiverat så går det inte att ställa in **antal felaktiga inloggningar innan enheten rensas**.|Nej|Ja|
 |**Skärmdump**|Låter användaren fånga skärminnehållet som en bild.|Nej|Ja|
 |**Röstassistent**|Tillåter att röstassistentprogramvaran används på enheten.|Nej|Ja|
 |**YouTube**|Tillåter att YouTube-appen används på enheten.|Nej|Ja|
-|**Delade enheter**|Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget kan användarna logga in och ut från enheten med sina Azure AD-autentiseringsuppgifter, enheten hanteras centralt oavsett om den används eller inte.<br>När användarna loggar in får de tillgång till appar och dessutom verkställs eventuella principer som gäller för dem. Alla appdata rensas när användaren loggar ut.|Nej|Ja|
+|**Delade enheter**|Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När slutanvändare loggar in så får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.|Nej|Ja|
 
 ## <a name="password"></a>Lösenord
 
@@ -58,14 +57,14 @@ ms.lasthandoff: 05/23/2017
 |**Lösenordstyp krävs**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas. Välj mellan:<br><br>    -     **Standard för enheten**<br>-     **Låg säkerhetsbiometri**<br>    -     **Minst numeriskt**<br>    -     **Numeriskt avancerat komplexa** – (upprepande eller efterföljande siffror som ”1111” eller ”1234” tillåts inte)<sup>1</sup><br>    -     **Minst alfabetiskt**<br>    -     **Minst alfanumeriskt**<br>    -     **Minst alfanumeriskt med symboler**|Ja|Ja|
 |**Förhindra återanvändning av tidigare lösenord**|Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.|Ja|Ja|
 |**Upplåsning med fingeravtryck**|Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.|Nej|Ja|
-|**Smart Lock och andra betrodda agenter**|Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja (5.0 och senare)|Ja|
+|**Smart Lock och andra betrodda agenter**|Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Den här telefonfunktionen, som ibland kallas förtroendeagent, låter dig inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats. Det kan till exempel användas när enheten är ansluten till en specifik bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja (5.0 och senare)|Ja|
 |**Kryptering**|Kräver att filer på enheten krypteras.|Ja|Ja|
 
-<sup>1</sup>Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
+<sup>1</sup> Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
 
 Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar den till en enhet som kör en tidigare version av Android än 5.0, gäller följande.
-- Om företagsportalappen kör en version före 1704, kommer ingen PIN-kod-princip att tillämpas på enheten och ett fel visas i Intune-portalen.
-- Om företagsportalappen har uppdaterats till 1704-versionen, tillämpas endast en enkel PIN-kod. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Intune-portalen.
+- Om företagsportalappen kör en tidigare version än 1704 så kommer ingen PIN-kodsprincip att tillämpas på enheten och ett fel visas i Intune-portalen.
+- Om företagsportalappen kör version 1704 eller senare, kan bara en enkel PIN-kod användas. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Intune-portalen.
 
 
 ## <a name="google-play-store"></a>Google Play Store
@@ -77,10 +76,10 @@ Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar de
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
-Du kan konfigurera en av följande listor i listan med begränsade appar:
+I listan över begränsade appar, kan du konfigurera någon av följande listor för både Android och Samsung KNOX Standard-enheter:
 
 Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra.
-Listan **Godkända appar** – Ange de appar som användare tillåts att installera. För att fortsätta vara kompatibla får användarna inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt.
+Listan **Godkända appar** – Ange de appar som användare tillåts att installera. För att fortsätta vara kompatibla, får användare inte installera andra appar. Appar som hanteras av Intune tillåts automatiskt.
 Enhetsprofiler som innehåller inställningar för begränsade appar måste tilldelas grupper av användare.
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
@@ -91,13 +90,13 @@ Gör så här om du vill ange en app-URL i listan över kompatibla och inkompati
 
 I [App-delen i Google Play](https://play.google.com/store/apps) söker du efter den app du vill använda.
 
-Öppna installationssidan för appen och kopiera webbadressen till Urklipp. Nu kan du använda denna som webbadress, i listan över kompatibla eller inkompatibla appar.
+Öppna installationssidan för appen och kopiera webbadressen till Urklipp. Nu kan du använda den URL:en i antingen listan över kompatibla eller inkompatibla appar.
 
-Exempel: Sök på Google Play efter Microsoft Office Mobile. Webbadressen du ska använda är **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
+Exempel: Sök på Google Play efter Microsoft Office Mobile. URL:en du ska använda är: **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.
 
 ### <a name="additional-options"></a>Ytterligare alternativ
 
-Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.        
+Du kan också klicka på **importera** för att hämta listan från en csv-fil. Använd formatet <*app-url*>, <*appnamn*>, <*appleverantör*> eller klicka på **Exportera** i csv-filen som innehåller listan med begränsade appar i samma format.      
 
 ## <a name="browser"></a>Webbläsare
 |||||
@@ -135,7 +134,6 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 |||||
 |-|-|-|-|
 |Inställningsnamn|Information|Android 4.0+|Samsung KNOX Standard|
-|**Välj en hanterad app**|Bläddra till och välj en hanterad app som kan köras när enheten är i helskärmsläge (appar som har angetts som en länk till butiken stöds inte för närvarande). Inga andra appar kommer att kunna köras på enheten.|Nej|Ja|
+|**Välj en hanterad app**|Välj något av följande alternativ för att lägga till en eller flera appar som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten.<br><br>- **Lägg till appar efter paketnamn**<br>- **Lägg till appar efter URL**<br>- **Lägg till hanterade appar**|Nej|Ja|
 |**Viloläge för skärm-knapp**|Aktiverar eller inaktiverar aktiveringsknappen på enhetens skärm.|Nej|Ja|
 |**Volymknappar**|Aktiverar eller inaktiverar användningen av volymknapparna på enheten.|Nej|Ja|
-

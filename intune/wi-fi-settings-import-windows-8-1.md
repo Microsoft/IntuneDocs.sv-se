@@ -1,12 +1,12 @@
 ---
 title: "Importera Wi-Fi-inställningar för Windows 8.1- och senare"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Så här importerar du trådlösa inställningar från Windows till en trådlös Intune-profil."
+titleSuffix: Intune on Azure
+description: "Så här importerar du trådlösa inställningar från Windows till en trådlös Intune-profil.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 2c4e9b19-b268-4f6d-9663-7cdbe4e4a8dd
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 80181ce809265dc4289e56ef65aff66214d2e765
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c4ef9bf6ed3f731afada55d2af71d56367f4638d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Så här importerar du trådlösa inställningar för enheter med Windows 8.1 och senare i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil.
 
@@ -41,7 +38,7 @@ I Windows kan du använda verktyget **netsh wlan** för att exportera en befintl
 ## <a name="import-the-wi-fi-settings-into-intune"></a>Importera trådlösa inställningar till Intune
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
@@ -55,4 +52,3 @@ I Windows kan du använda verktyget **netsh wlan** för att exportera en befintl
 8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
 
 Profilen skapas och visas på bladet med profillistan.
-

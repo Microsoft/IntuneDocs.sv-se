@@ -1,7 +1,7 @@
 ---
 title: "Skapa en efterlevnadsprincip för Android"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig hur du skapar en efterlevnadsprincip för Android-enheter."
+titleSuffix: Intune on Azure
+description: "Lär dig hur du skapar en efterlevnadsprincip för Android-enheter.\""
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,21 +15,18 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 08d503fad2304b25e6feb7f41cf0b93546dd26fd
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: cc68bf4a52e5fcf9a8fbb3550a5bee814f4f46f0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i Intune
 
-# <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune-azure-preview-portal"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i förhandsversionen av Intune Azure Portal
 
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Principer för enhetsefterlevnad skapas för varje plattform i förhandsversionen av Intune Azure Portal. 
+Principer för enhetsefterlevnad skapas för varje plattform i Intune Azure Portal. 
 
 - Mer information om vad en efterlevnadsprincip är finns i artikeln [Vad är enhetsefterlevnad](device-compliance.md).
 - Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i artikeln [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
@@ -134,4 +131,3 @@ I tabellen nedan visas hur inkompatibla inställningar hanteras när en efterlev
 <!--- ## Next steps
 
 [How to monitor device compliance](device-compliance-monitor.md)--->
-

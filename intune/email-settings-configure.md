@@ -1,12 +1,12 @@
 ---
 title: "Hur du konfigurerar e-postinställningar i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om hur du kan konfigurera Intune för att skapa anslutningar till företagets e-post på enheter som du hanterar."
+titleSuffix: Intune on Azure
+description: "Läs om hur du kan konfigurera Intune för att skapa anslutningar till företagets e-post på enheter som du hanterar.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8e22d95dbaa51e8a799c771ec2cfe34f09e527d8
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ae3e8ec9f9c791d536fe311bc4d30cae41b9482
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Så här konfigurerar du e-postinställningar i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Du kan använda e-postprofiler för att konfigurera de enheter som du hanterar med de inställningar som behövs för att ansluta till och synkronisera med företagets e-post. Detta gör det enklare för dig att se till att standardinställningarna är gemensamma för alla dina enheter, och det bidrar även till att minska antalet supportsamtal från slutanvändare som vill veta de rätta e-postinställningarna.
 
@@ -45,19 +42,20 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 ## <a name="create-a-device-profile-containing-email-settings"></a>Skapa en enhetsprofil som innehåller e-postinställningar
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. Ange **Namn** och **Beskrivning** för e-postprofilen på bladet **Skapa profil**.
 5. Välj den enhetsplattform på vilken du vill tillämpa e-postinställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsinställningar för e-post:
-    - **Android**
+    - **Android** (endast Samsung Android KNOX Standard)
+    - **Android for Work**
     - **iOS**
     - **Windows Phone 8.1**
     - **Windows 10 och senare**
 6. Välj **E-post** i listrutan **Profil**.
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-    - [Inställningar för Android](email-settings-android.md)
+    - [Android for Work- och Samsung KNOX Standard-inställningar](email-settings-android.md)
     - [Inställningar för iOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
@@ -88,10 +86,10 @@ Om användaren redan har konfigurerat ett e-postkonto beror resultatet av tillde
 
 - **iOS**: En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. E-postprofilsdubbletten blockerar tilldelningen av en Intune-profil. I det här fallet informerar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar användaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här problemet bör du uppmana användarna registrera sig innan de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
 - **Windows** En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
-- **Android** En befintlig duplicerad e-postprofil identifieras utifrån e-postadressen, och skrivs över med Intune-profilen.
+- **Android Samsung KNOX Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen.
 Eftersom Android inte använder värdnamn för att identifiera profilen, rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom dessa kommer att skriva över varandra.
+- **Android for Work** Intune har två olika e-postprofiler för Android for Work, en vardera för e-postapparna Gmail och Nine Work. Dessa appar är tillgängliga i Google Play Store och installeras i enhetens arbetsprofil. Så de kan inte resultera i dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postprofil. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
 
 ### <a name="update-an-email-profile"></a>Uppdatera en e-postprofil
 
 Om du gör ändringar i en e-postprofil som du tidigare tilldelat, kan användarna få ett meddelande som ber dem godkänna omkonfigurationen av deras e-postinställningar.
-

@@ -1,7 +1,7 @@
 ---
 title: "Övervaka efterlevnadsprinciper för Intune-enheter"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du kan övervaka principer för enhetsefterlevnad."
+titleSuffix: Intune on Azure
+description: "Lär dig hur du övervakar principer för enhetsefterlevnad.\""
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,13 +15,11 @@ ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9c57a45ed93b12c3b9fd9635bfa1aec465f63bbc
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6d0105e49bac2af0c241fe9203c411ef7f9e7d76
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -123,8 +121,6 @@ Om du klickar på **filterknappen** visas följande alternativ:
 
 Om du klickar på knappen **Uppdatera** stängs fältet och resultatet uppdateras enligt de valda filtervillkoren.
 
-![Filteruppdateringsknappen](./media/idc-5.png)
-
 ##### <a name="device-details"></a>Information om enhet
 
 Om du klickar på en enhet öppnas bladet **Enheter** med den valda enheten markerad. Här får du mer information om inställningarna för enhetens efterlevnadsprincip.
@@ -154,4 +150,3 @@ Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet
 Om du klickar på ikonen för inställningsefterlevnad, så klicka sedan vidare på någon av enhetsefterlevnadsinställningarna. Då visas **efterlevnadsstatus**, **e-postalias**, **enhetsmodell** och **plats** för de enheter som varit mål för inställningarna för enhetsefterlevnad.
 
 ![Ikonen för inställningsefterlevnad](./media/idc-11.png)
-

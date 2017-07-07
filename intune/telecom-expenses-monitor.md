@@ -1,7 +1,7 @@
 ---
 title: "Konfigurera tjänsten för kostnadsuppföljning av telekommunikation"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Konfigurera Saaswedos tjänst för kostnadsuppföljning av telekommunikation för integrering med Intune."
+titleSuffix: Intune on Azure
+description: "Konfigurera Saaswedos tjänst för kostnadsuppföljning av telekommunikation för integrering med Intune.”"
 keywords: Saaswedo
 author: nathbarn
 ms.author: nathbarn
@@ -15,16 +15,14 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 41ac9ad43b6ddaa2b78d588cb01b467d37f2178a
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: fe3735afccb30da9ea863943808e7cfad667899f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="set-up-a-telecom-expense-management-service-in-intune-azure-preview"></a>Konfigurera en tjänst för kostnadsuppföljning av telekommunikation i förhandsversionen av Intune Azure
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+# <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos lösning för kostnadsuppföljning av telekommunikation, Datalert. Datalert är ett program för kostnadsuppföljning av telekommunikation i realtid, som hjälper dig att hantera dataanvändningen och undvika kostsam och oväntad överförbrukning av data och roaming på Intune-hanterade enheter.
 
@@ -43,7 +41,7 @@ Innan du kan använda Datalert med Intune måste du konfigurera inställningar i
 
 ## <a name="prerequisites"></a>Förutsättningar
 
-- En prenumeration på Microsoft Intune och åtkomst till Azure-portalen, som för närvarande är tillgänglig som en offentlig förhandsversion.
+- En prenumeration på Microsoft Intune och åtkomst till Azure-portalen.
 - En prenumeration på Datalert-tjänsten för kostnadsuppföljning av telekommunikation
 
 ## <a name="list-of-telecom-expense-management-providers"></a>Lista med leverantörer som erbjuder kostnadsuppföljning av telekommunikation
@@ -108,9 +106,9 @@ Dessa kategorier visas för användarna under registreringen. Beroende på vilke
 
 Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iOS används som exempel i dessa steg.
 
-1. På bladet **Intune** på Azure-portalen väljer du **Hantera appar**.
+1. På bladet **Intune** på Azure-portalen väljer du **Mobilappar**.
 
-2. På bladet **Hantera appar** väljer du **Hantera** > **Appar**.
+2. På bladet **Mobilappar** väljer du **Hantera** > **Appar**.
 
 3. Välj **Lägg till** för att lägga till en app.
 
@@ -151,8 +149,8 @@ Nu är Datalert-tjänsten aktiv och övervakar dataanvändningen och inaktiverar
 
 ## <a name="client-enrollment-experience"></a>Klientregistrering
 Läs följande om registrering av klienten:
--    [Registrera iOS-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
--    [Registrera Android-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
+-   [Registrera iOS-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+-   [Registrera Android-enheten i kostnadsuppföljningen av telekommunikation](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turning-off-the-datalert-service"></a>Stänga av Datalert
 
@@ -173,4 +171,3 @@ Om du inaktiverar Datalert-tjänsten på Azure-portalen:
 För tillfället är dataanvändningsrapporter endast tillgängliga i Saaswedos Datalert-hanteringskonsol.
 
 Anvisningarna som dina slutanvändarna följer för att installera Datalert-appen kommer snart.
-
