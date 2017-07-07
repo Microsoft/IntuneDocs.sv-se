@@ -1,5 +1,5 @@
 ---
-title: "Appåtkomst för Exchange Online | Microsoft Docs"
+title: "Appåtkomst för Exchange Online"
 description: "Det här avsnittet beskriver hur du konfigurerar en princip för villkorlig åtkomst för MAM-appar."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: f2cd1a1f-fd29-4081-8dfa-c40993a107d5
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: df84bdf2358b596905299c7099ce22e128e9d17d
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ef4a0c0e642026d625d7139b2ea2629cdd96930
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-an-exchange-online-conditional-access-to-only-allow-apps-supported-by-mam"></a>Konfigurera villkorlig åtkomst för Exchange Online så att endast appar som stöds av MAM får åtkomst
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -64,4 +61,3 @@ För att **delete a user group** (ta bort en användargrupp) från listan **begr
 [Blockera appar som inte har modern autentisering](block-apps-with-no-modern-authentication.md)
 ### <a name="see-also"></a>Se även
 [Skydda appdata med appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-

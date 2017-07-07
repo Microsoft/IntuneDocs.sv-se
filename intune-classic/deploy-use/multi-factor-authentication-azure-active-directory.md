@@ -1,5 +1,5 @@
 ---
-title: "Multifaktorautentisering för enhetsregistrering i Intune | Microsoft Docs"
+title: "Multifaktorautentisering för enhetsregistrering i Intune"
 description: "Så här kräver du multifaktorautentisering i Azure AD vid enhetsregistrering."
 keywords: 
 author: robstackmsft
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 47abdabd-dcd6-48d8-aade-3f3eefb92ee1
 ROBOTS: 
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: dba070ef76de8015b347e760b424a5e28ce6ddec
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 805ca79932788786636d365109e06aee836d8a0e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="multi-factor-authentication-for-intune-device-enrollments"></a>Multifaktorautentisering för enhetsregistreringar i Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -59,4 +56,3 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 > [!IMPORTANT]
 > 
 > Konfigurera inte **Enhetsbaserade åtkomstregler** för Microsoft Intune-registrering.
-

@@ -1,5 +1,5 @@
 ---
-title: "Övervaka MAM-principer med Microsoft Intune | Microsoft Docs"
+title: "Övervaka MAM-principer med Microsoft Intune"
 description: "Se hur många användare som principen tillämpas på och öka detaljnivån om du vill ha mer information."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d80632aceaa675f08eb4b23ce59e3bcabb72b4d0
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Övervaka appskyddsprinciper med Microsoft Intune
 Du kan övervaka efterlevnadsstatusen för de appskyddsprinciper som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av appskyddsprinciperna, dess efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
 
@@ -134,6 +131,5 @@ Generera appskyddsrapporten genom att följa dessa anvisningar:
 ## <a name="see-also"></a>Se även
 [Hantera dataöverföring mellan iOS-appar](manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
 
-* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-android)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-ios)

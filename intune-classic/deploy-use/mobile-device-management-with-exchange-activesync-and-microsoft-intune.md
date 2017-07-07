@@ -1,5 +1,5 @@
 ---
-title: Enhetshantering med Exchange ActiveSync | Microsoft Docs
+title: Enhetshantering med Exchange ActiveSync
 description: Hantera mobila enheter med Exchange ActiveSync-hantering (EAS) med Exchange Connector
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 14f5cf53-6764-4e22-a18b-fa750b3acd41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: b9e6d1def269bc80d54f259bc8b7c12dbb520e06
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 8982072b93c22e0294b6e454d597e0aa5bbb7b71
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="exchange-activesync-mobile-device-management-with-microsoft-intune"></a>Exchange ActiveSync-hantering av mobila enheter med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -50,4 +47,3 @@ Intune-konsolen kan användas för att hantera [EAS-principinställningar](excha
 
 ## <a name="wipe-company-data-from-mobile-devices"></a>Rensa företagsdata på mobila enheter
 Slutligen kan du [rensa företagsdata på EAS-hanterade mobila enheter](wipe-for-exchange-managed-mobile-devices.md) när de inte längre används, eller om enheter tappas bort eller blir stulna.
-

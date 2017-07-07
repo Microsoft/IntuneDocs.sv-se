@@ -14,15 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: a39f67a532f53ef6ab2e3cc5d17b2d593a3483ae
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -147,4 +144,3 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 - [Verifiera din konfiguration för hantering av mobilprogram](../deploy-use/validate-mobile-application-management.md)
 - [Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 - [Så kan du få support för Microsoft Intune](../troubleshoot/how-to-get-support-for-microsoft-intune.md)
-

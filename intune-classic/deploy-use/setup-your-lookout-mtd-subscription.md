@@ -1,5 +1,5 @@
 ---
-title: Konfigurera din prenumeration med Lookout | Microsoft Docs
+title: Konfigurera din prenumeration med Lookout
 description: "Detta avsnitt tillhandahåller information om hur du konfigurerar Lookout-skydd mot enhetshot."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 8477a2f1-2e1d-4d42-8bcb-e1181cc900bb
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3c777d8857fd177e5a27840ab8a97c8a137aa189
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5acbf2aacc747113ff8b3889dba306e30567f24a
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="set-up-your-lookout-mobile-threat-defense-subscription"></a>Konfigurera din prenumeration för Lookout Mobile Threat Defense
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -76,7 +73,7 @@ Använd följande steg för att samla in den information du måste förse Lookou
 
   ![skärmbild som visar inloggningssidan första gången användaren loggar in i Lookout-konsolen](../media/mtp/lookout_mtp_initial_login.png) När du har accepterat och godkänt villkoren omdirigeras du till Lookout-konsolen.
 
-  Se [felsöka Lookout-integrering](/intune-classic/troubleshoot/troubleshooting-lookout-integration) om du vill ha hjälp med inloggningsproblem.
+  Se [felsöka Lookout-integrering](/intune-classic/Troubleshoot/device-threat-protection-troubleshooting.md) om du vill ha hjälp med inloggningsproblem.
 
 3.  I [Lookout-konsolen](https://aad.lookout.com) går du till **System**-modulen och väljer fliken **Kopplingar** och sedan **Intune**.
 
@@ -139,4 +136,3 @@ Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-
 När installationen är klar börjar Lookout Mobile Threat Defense avsöka Azure AD efter enheter som motsvarar de angivna registreringsgrupperna.  Du hittar information om de enheter som registrerats i modulen Enheter.  Den första statusen för enheterna är ”väntar”.  Enhetens status ändras när Lookout for Work-appen har installerats, öppnats och aktiverats på enheten.  Mer information om hur du skickar Lookout for work-appen till enheten finner du i artikeln [Configure and deploy Lookout for work apps](configure-deploy-lookout-for-work-app.md) (Konfigurera och distribuera Lookout for work-appar).
 ## <a name="next-steps"></a>Nästa steg
 [Aktivera anslutning till Lookout MTP i Intune](/intune-classic/deploy-use/enable-lookout-mtd-connection)
-

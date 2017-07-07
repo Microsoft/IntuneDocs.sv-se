@@ -1,5 +1,5 @@
 ---
-title: "Förstå aktiviteter med hjälp av rapporter | Microsoft Docs"
+title: "Förstå åtgärder med hjälp av rapporter"
 description: Skapa och hantera rapporter om programvara, maskinvara och programlicenser i din organisation.
 keywords: 
 author: robstackmsft
@@ -14,16 +14,12 @@ ms.assetid: 857309c2-61c9-4c22-becf-4839fedeaece
 ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d16374606d60f3b09dc24b3c4ef4f196a739b32e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: c433acc553b1f89789cdb72a33e8dbbc7929bae0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="understand-microsoft-intune-operations-by-using-reports"></a>Förstå Microsoft Intune-aktiviteter med hjälp av rapporter
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -73,6 +69,5 @@ Rapporterna stöder dessutom följande åtgärder:
 |**Spara**|På sidan **Skapa ny rapport** kan varje användare spara upp till 100 rapporter. Konfigurera rapportparametrarna enligt dina behov och välj sedan **Spara**, eller **Spara som** om du vill använda ett annat namn.|
 |**Läs in**|Välj **Läs in** på sidan **Skapa ny rapport** om du vill läsa in en tidigare sparad uppsättning rapportparametrar.|
 |**Ta bort**|Välj önskad rapporttyp på arbetsytan **Rapporter** och välj **Läs in**. Välj sedan borttagningsikonen (X) bredvid rapporten i listan med rapporter.|
-
 
 

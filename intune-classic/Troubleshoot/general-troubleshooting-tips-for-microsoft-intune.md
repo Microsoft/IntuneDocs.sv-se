@@ -1,5 +1,5 @@
 ---
-title: "Allmänna felsökningstips | Microsoft Docs"
+title: "Allmänna felsökningstips"
 description: "Allmänna resurser för att lösa problem med Intune."
 keywords: 
 author: arob98
@@ -14,15 +14,12 @@ ms.assetid: c86a4e4a-6b9f-4835-a3d3-61a3f5f4c1ec
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 63bb7ca097390582d85f3ea7daced42d2a97fbb4
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d348cc2850864206552bf53ab1beec9b9cb55bab
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Allmänna felsökningstips för Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -58,7 +55,7 @@ Det kan hända att du upptäcker problem med konfigurationen eller med klientenh
   - [Skicka Android-registreringsfel till IT-administratören](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
   - [Skicka iOS-registreringsfel till IT-administratören](/intune-user-help/send-errors-to-your-it-admin-ios)
 
--   Med data på administratörskonsolen /intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
+-   Du kan använda data från administratörskonsolen (t.ex. vid problem med principimplementering) för att undersöka den avsedda principen och principens status genom att följa anvisningarna i [Använda grupper för att hantera användare och enheter med Microsoft Intune](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune).
 
 ## <a name="research-the-solution"></a>Undersök lösningen
 
@@ -97,4 +94,3 @@ Följande artiklar innehåller felsökningshjälp för specifika problem. Om den
 [Felsöka klientinstallationen i Microsoft Intune](troubleshoot-client-setup-in-microsoft-intune.md)
 
 [Felsöka programuppdateringar i Microsoft Intune](troubleshoot-software-updates-in-microsoft-intune.md)
-

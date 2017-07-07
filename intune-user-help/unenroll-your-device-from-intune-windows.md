@@ -11,31 +11,26 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 10e6bda2001b5dfeb380e9a553aa0fe5a060746b
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="unenroll-your-windows-device-from-intune"></a>Avregistrera din Windows-enhet från Intune
 
 Om du är registrerad i Intune, men inte längre vill använda din Windows-enhet på arbetet eller skolan och inte har behov av att komma åt e-postmeddelanden, appar eller andra resurser på arbetet eller skolan, så måste du avregistrera din enhet. När du avregistrerat enheten från Intune kommer du inte längre ha åtkomst till dessa resurser. Mer information om vad som händer när du avregistrerar enheten finns i [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
 Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”I den här artikeln” ovan, som matchar den typ av enhet som du använder:
 
--    [Avregistrera din Windows 10-enhet](#unenroll-your-windows-10-device)
--    [Avregistrera din Windows 8.1-dator](#unenroll-your-windows-81-computer)
--    [Avregistrera din Windows Phone 8.1-enhet](#unenroll-your-windows-phone-81-device)
+-   [Avregistrera din Windows 10-enhet](#unenroll-your-windows-10-device)
+-   [Avregistrera din Windows 8.1-dator](#unenroll-your-windows-81-computer)
+-   [Avregistrera din Windows Phone 8.1-enhet](#unenroll-your-windows-phone-81-device)
 
 ## <a name="unenroll-your-windows-10-device"></a>Avregistrera din Windows 10-enhet
 
@@ -68,4 +63,3 @@ Om du vill avregistrera enheten använder du den länk som visas i avsnittet ”
 4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

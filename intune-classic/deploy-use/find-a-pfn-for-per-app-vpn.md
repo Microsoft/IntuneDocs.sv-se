@@ -1,5 +1,5 @@
 ---
-title: "Hitta ett paketfamiljenamn (PFN) för per app-VPN | Microsoft Docs"
+title: "Hitta ett paketfamiljenamn (PFN) för per app-VPN"
 description: "Hitta ett PFN så att du kan konfigurera en per app-VPN."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 74643d1d-4fd9-4cff-ac79-1a42281d2f76
 ms.reviewer: tycast
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0fd7d7e1e09f193479c6ad221c8ace7470942c5a
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: eea3b9e2888f07399c8cda1e81ae8a5318d02d42
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn-configuration"></a>Hitta ett paketfamiljenamn (PFN) för per app-VPN-konfiguration
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -74,10 +71,10 @@ Här är den information som har hämtats för OneNote:
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>Hitta en PFN om appen inte har installerats på en dator
 
-1.    Gå till https://www.microsoft.com/store/apps.
-2.    Ange namnet på appen i sökfältet. I vårt exempel söker du efter OneNote.
-3.    Välj länken till appen. Observera att URL:en har en serie bokstäver i slutet. I vårt exempel ser URL:en ut så här: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
-4.    Klistra in följande URL på en annan flik: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Ersätt `<app id>` med det app-ID som du har fått från https://www.microsoft.com/store/apps – serien med bokstäver i slutet av webbadressen i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
+1.  Gå till https://www.microsoft.com/store/apps.
+2.  Ange namnet på appen i sökfältet. I vårt exempel söker du efter OneNote.
+3.  Välj länken till appen. Observera att URL:en har en serie bokstäver i slutet. I vårt exempel ser URL:en ut så här: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`.
+4.  Klistra in följande URL på en annan flik: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`. Ersätt `<app id>` med det app-ID som du har fått från https://www.microsoft.com/store/apps – serien med bokstäver i slutet av webbadressen i steg 3. I vårt exempel med OneNote skulle du klistra in: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 I Microsoft Edge visas den information som du vill ha. Välj **Öppna** i Internet Explorer om du vill se informationen. PFN-värdet anges på första raden. Här följer resultaten i vårt exempel:
 
@@ -88,4 +85,3 @@ I Microsoft Edge visas den information som du vill ha. Välj **Öppna** i Intern
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
-

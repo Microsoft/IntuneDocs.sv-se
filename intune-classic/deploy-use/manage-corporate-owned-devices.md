@@ -14,15 +14,12 @@ ms.assetid: 2b60bbff-25e6-489b-9621-c71b4275fa06
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 8dae789ad1996543ddf9b92d031ac995beff6a46
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-corporate-owned-devices-by-using-intune"></a>Registrera företagsägda enheter med hjälp av Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -67,4 +64,3 @@ Intune identifierar en enhet som "företagets" när något av följande villkor 
  - Enheten är registrerad i [Azure Active Directory eller Enterprise Mobility Suite som en Windows 10 Enterprise-enhet](https://docs.microsoft.com/active-directory/active-directory-azureadjoin-windows10-devices-overview) (endast Windows 10).
 
 När en enhet har taggats som företagets ser du **Företag** i kolumnen **Ägarskap** för den enhetens post i administratörskonsolen. 
-

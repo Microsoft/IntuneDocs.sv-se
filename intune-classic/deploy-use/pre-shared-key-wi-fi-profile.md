@@ -1,5 +1,5 @@
 ---
-title: Wi-Fi med PSK | Microsoft Docs
+title: Wi-Fi med PSK
 description: "Använd Anpassad konfiguration för att skapa en Wi-Fi-profil med en i förväg delad nyckel."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6845097b768e67c7fbc6ff16bf41f27982c4b33e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: 7f3432f914c2f4a76d7a9303924d106b270220a1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använda en anpassad princip för att skapa en Wi-Fi-profil med en i förväg delad nyckel
 
@@ -30,24 +27,24 @@ ms.lasthandoff: 05/23/2017
 Så här använder du Intunes **Anpassad konfiguration** för att skapa en Wi-Fi-profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
 
 > [!NOTE]
--    Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
+-   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
 - För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
--    Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
+-   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
 -  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
 
 
-1.    Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
+1.  Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
 
-2.    Ange ett namn och en beskrivning.
-3.    Lägg till en ny OMA-URI-inställning:
+2.  Ange ett namn och en beskrivning.
+3.  Lägg till en ny OMA-URI-inställning:
 
-   a.    Ange ett namn på den här inställningen för Wi-Fi-nätverk.
+   a.   Ange ett namn på den här inställningen för Wi-Fi-nätverk.
 
-   b.    Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
+   b.   Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
 
-   c.    **Datatyp**: Inställd på "Sträng (XML)"
+   c.   **Datatyp**: Inställd på "Sträng (XML)"
 
-   d.    **OMA-URI**:
+   d.   **OMA-URI**:
 
     - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -221,4 +218,3 @@ När du väljer en distribuerad princip visas mer information om distributionen 
 
 ### <a name="see-also"></a>Se även
 [Wi-Fi-anslutningar i Microsoft Intune](wi-fi-connections-in-microsoft-intune.md)
-

@@ -14,15 +14,12 @@ ms.assetid: 1dafc28a-7f8b-4fe0-8619-f977c93d1140
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: f2600864eaf127810639e76932adbd422b4e0008
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Hantera iOS-appar som du har köpt via ett volyminköpsprogram med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -90,4 +87,3 @@ Du kan övervaka vilka VPP-appar som har distribuerats och hur många licenser s
 
 ### <a name="see-also"></a>Se även
 [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md)
-

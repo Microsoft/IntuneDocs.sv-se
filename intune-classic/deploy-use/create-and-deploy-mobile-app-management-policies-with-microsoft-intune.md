@@ -1,5 +1,5 @@
 ---
-title: Skapa och distribuera MAM-principer | Microsoft Docs
+title: Skapa och distribuera MAM-principer
 description: "Följ instruktionerna i det här avsnittet om du vill skapa och distribuera hanteringsprinciper för mobilappar."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c1b9a343-1737-4a65-a9c6-aca48acad11c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d91ce526650166197520d37c82084c0ff141ec80
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ebb4b03307f8af7e1390c6db994d3120942fae89
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Skapa och distribuera appskyddsprinciper med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -109,9 +106,9 @@ När du har skapat en princip genom att följa stegen i föregående procedur di
 ## <a name="line-of-business-lob-apps-optional"></a>Branschspecifika appar (LOB) (valfritt)
 
 Från och med Intune version 1703 kan du välja att allmänt lägga till branschspecifika appar i Intune när du skapar en ny appskyddsprincip. Det ger dig möjlighet att definiera appskyddsprinciper för LOB-appar med hjälp av MAM SDK utan att fullständiga appdistributionsbehörigheter krävs.
-
+/intune/app-sdk-get-started
 > [!TIP]
-> Du kan också lägga till branschspecifika appar i Intune med hjälp av arbetsflödet för [Intune App SDK](/intune-classic/develop/intune-app-sdk-get-started).
+> Du kan också lägga till branschspecifika appar i Intune med hjälp av arbetsflödet för [Intune App SDK](/intune/app-sdk-get-started).
 
 > [!IMPORTANT]
 > Om användarna bara har specifik behörighet för distribution av MAM-appar och inte fullständiga appdistributionsbehörigheter, som skulle tillåta att de distribuerar valfria appar i Intune, kan de inte gå igenom arbetsflödet för Intune SDK, men de kan ändå lägga till sina branschspecifika appar via arbetsflödet för att skapa skyddsprinciper för MAM-appar.
@@ -164,8 +161,8 @@ Endast användare med tilldelade Intune-licenser påverkas av principen. Använd
 > Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.
 
 Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer information finns i:
-* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-android)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-ios)
 
 ##  <a name="change-existing-policies"></a>Ändra befintliga principer
 Du kan redigera en befintlig princip och tillämpa den på inriktade användare. När du ändrar befintliga principer ser dock inte användare som redan är inloggade i apparna ändringarna förrän efter åtta timmar.
@@ -219,6 +216,5 @@ Välj något av följande om du vill se en fullständig lista med principinstäl
 [Övervaka efterlevnad och användarstatus](monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
 ### <a name="see-also"></a>Se även
-* [Vad som händer när din Android-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-
+* [Vad som händer när din Android-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-android)
+* [Vad som händer när din iOS-app hanteras av appskyddsprinciper](/intune/end-user-mam-apps-ios)

@@ -226,12 +226,12 @@
 ## [Ändra MDM-auktoritet](deploy-use/change-mdm-authority.md)
 
 ## [Informera dina slutanvändare om Intune](/intune/end-user-educate?toc=/intune-classic/toc.json)
-### [Meddelanden från företagsportalen som slutanvändarna ser](deploy-use/help-end-users-understand-company-portal-app-messages.md)
-### [Slutanvändarupplevelse för Android med MAM-aktiverade appar](deploy-use/user-experience-for-mam-enabled-android-apps-with-microsoft-intune.md)
-### [Slutanvändarupplevelse för iOS med MAM-aktiverade appar](deploy-use/user-experience-for-mam-enabled-ios-apps-with-microsoft-intune.md)
-### [Så får dina Android-användare sina appar](deploy-use/how-your-android-users-get-their-apps.md)
-### [Så får dina iOS-användare sina appar](deploy-use/how-your-ios-users-get-their-apps.md)
-### [Så får dina Windows-användare sina appar](deploy-use/how-your-windows-users-get-their-apps.md)
+### [Meddelanden från företagsportalen som slutanvändarna ser](/intune/end-user-company-portal-messages?toc=/intune-classic/toc.json)
+### [Slutanvändarupplevelse för Android med MAM-aktiverade appar](/intune/end-user-mam-apps-android?toc=/intune-classic/toc.json)
+### [Slutanvändarupplevelse för iOS med MAM-aktiverade appar](/intune/end-user-mam-apps-ios?toc=/intune-classic/toc.json)
+### [Så får dina Android-användare sina appar](/intune/end-user-apps-android?toc=/intune-classic/toc.json)
+### [Så får dina iOS-användare sina appar](/intune/end-user-apps-ios?toc=/intune-classic/toc.json)
+### [Så får dina Windows-användare sina appar](/intune/end-user-apps-windows?toc=/intune-classic/toc.json)
 
 
 # Utveckla och anpassa appar

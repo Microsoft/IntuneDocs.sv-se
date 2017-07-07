@@ -1,5 +1,5 @@
 ---
-title: Hantera datorer med klientprogrammet | Microsoft Docs
+title: Hantera datorer med klientprogram
 description: Hantera Windows genom att installera Intune-klientprogramvaran.
 keywords: 
 author: nathbarn
@@ -14,16 +14,15 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6bd4e3315fd27201e8005b1053fa6e15bf2c21b5
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e217648c744d76d4cde6b8927137cd569b8d0a2e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 Intune är en omfattande lösning som gör att organisationer kan hantera mobila enheter. Intune kan hantera Windows-datorer som mobila enheter med hjälp av de hanteringsfunktioner för moderna enheter som är inbyggda i operativsystemet Windows 10. För att uppfylla organisationens hanteringsbehov kan Intune även hantera Windows-datorer som datorer med Intune-programvaruklienten. Den här hanteringsmetoden använder traditionella funktioner för datorhantering i tidigare Windows-operativsystem.
 
@@ -79,7 +78,7 @@ I de flesta fall registrerar du dina enheter i Microsoft Intune, vilket ger till
 
 När du använder Intune-klientprogrammet för att hantera Windows-datorer kan du använda de principer som visas i avsnittet **Datorhantering**.
 
-Intune hanterar Windows-datorer med principer, på liknande sätt som Windows Server Active Directory Domain Services /intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) används i din organisation. Läs mer i avsnittet [Grupprincip för nybörjare](https://technet.microsoft.com/library/hh147307.aspx).
+Intune hanterar Windows-datorer med hjälp av principer på liknande sätt som AD DS-grupprincipobjekt (Active Directory Domain Services) för Windows Server gör. Om du hanterar domänanslutna Active Directory-datorer med Intune ska du [försäkra dig om att Intune-principerna inte står i konflikt med andra grupprincipobjekt](/intune-classic/deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts) som används i din organisation. Läs mer i avsnittet [Grupprincip för nybörjare](https://technet.microsoft.com/library/hh147307.aspx).
 
   ![Välj mall för ny Windows-datorprincip](../media/select-template-for-pc-policy.png)
 
@@ -115,4 +114,3 @@ Observera också att vissa avsnitt, t.ex. **Uppdateringar**, **Skydd** och **Lic
 Intune-klientprogrammet körs vanligtvis tyst i bakgrunden och kräver sällan omfattande användarinteraktion eller felsökning. Om du behöver lösa datorhanteringsproblem kan kontrollera du loggarna. Intune-klientprogrammet och motsvarande loggar installeras i katalogen %Program Files%\Microsoft\OnlineManagement.
 
 Du kan också läsa [Felsöka klientinstallationen i Microsoft Intune](/intune-classic/troubleshoot/troubleshoot-client-setup-in-microsoft-intune) om du vill söka efter specifika problem som kan uppstå, och vilka eventuella lösningar eller åtgärder som finns.
-

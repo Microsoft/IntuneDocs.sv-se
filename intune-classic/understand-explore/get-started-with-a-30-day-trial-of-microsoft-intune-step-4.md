@@ -1,5 +1,5 @@
 ---
-title: "Skapa principer och publicera en app för användare | Microsoft Docs"
+title: "Skapa principer och publicera en app för användare"
 description: "Så här skapar du principer och publicerar en app när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
@@ -14,16 +14,12 @@ ms.assetid: c3a17884-442a-44f5-bc81-4589e823f65e
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 0e836571b869e7a32b19968da1d78035a6bae7f2
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 335d91cd6583052bfcc72fc018b387eed8823b7e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="create-policies-and-publish-an-app-to-evaluation-users"></a>Skapa principer och publicera en app för utvärderingsanvändare
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -102,7 +98,6 @@ Härmed avslutas guiden för mobila Intune-enheter, men du kan läsa mer om Intu
 ## <a name="next-steps"></a>Nästa steg
 Läs mer om andra [Intune-funktioner](get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
 
-Läs om de [vanligaste sätten att använda Intune på](common-ways-to-use-intune.md)
+Läs om de [vanligaste sätten att använda Intune på](/intune/common-scenarios)
 
 Konvertera till en [betald prenumeration](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-

@@ -1,6 +1,5 @@
 ---
-
-title: Installera datorklientprogrammet | Microsoft Docs
+title: Installera PC-klientprogramvaran
 description: "Använd den här guiden för att låta dina Windows-datorer hanteras av Microsoft Intune-klientprogrammet."
 keywords: 
 author: nathbarn
@@ -14,16 +13,16 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 19cfb242fbd1be613b38c8aa06c12b741bc6cd74
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 356ada64224f8982baf93ddaccb44df123c4568c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Windows-datorer kan registreras genom att installera Intune-klientprogrammet. Intune-klientprogrammet kan installeras med följande metoder:
 
 - Av en IT-administratör som använder någon av följande metoder: manuell installation, grupprincip, installation som finns i en diskavbildning
@@ -261,4 +260,3 @@ Avregistreringsprocessen tar inte bort mappen OnlineManagement. Vänta i 30 minu
 ### <a name="see-also"></a>Se även
 [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Felsöka klientkonfiguration](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)
-

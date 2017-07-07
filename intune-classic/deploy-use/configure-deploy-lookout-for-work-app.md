@@ -1,5 +1,5 @@
 ---
-title: Distribuera Lookout for work-appen | Microsoft Docs
+title: Distribuera Lookout for Work-app
 description: "Konfigurera och distribuera Lookout for Work-appar för Android."
 author: andredm7
 ms.author: andredm
@@ -13,15 +13,12 @@ ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 95f7c782558f98d5be3a89d24b9e9721a7bd40c0
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 5d4f496709a8607b0d6d473355c96e8fc502838b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-and-deploy-lookout-for-work-app"></a>Konfigurera och distribuera Lookout for Work-appen
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -30,12 +27,12 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
 
 ## <a name="android-google-play-store-app"></a>Android (Google Play Store-app)
 
-1.    I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Appar** och väljer **Lägg till appar**.
-2.    På sidan **Programvaruinstallation** för utgivaren väljer du **Extern länk** och anger följande URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
+1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Appar** och väljer **Lägg till appar**.
+2.  På sidan **Programvaruinstallation** för utgivaren väljer du **Extern länk** och anger följande URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
   >[!NOTE]
   >Klicka inte på rutan för att kräva en hanterad webbläsare.
 
-3.    Fyll i följande på sidan **Programvarubeskrivning**:
+3.  Fyll i följande på sidan **Programvarubeskrivning**:
   * **Utgivare:** Lookout Mobile Security
   * **Namn:** Lookout for Work
   * **Beskrivning:** Lookout tillhandahåller det bästa skyddet mot mobila hot för att skydda din enhet. När appen Lookout är installerad på enheten skyddar den din enhet från hot och varnar dig och din företagsadministratör om några hittas.
@@ -96,4 +93,3 @@ https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md När anv
 
 ## <a name="next-steps"></a>Nästa steg
 * [Skapa en efterlevnadsprincip för Lookout-enheten i Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-device-threat-protection-rule-compliance-policy)
-
