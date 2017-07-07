@@ -1,7 +1,7 @@
 ---
 title: "Konfigurera inställningar för Windows informationsskydd – Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig mer om Intune-inställningar som du kan använda för att hantera Windows informationsskydd."
+titleSuffix: Intune on Azure
+description: "Lär dig mer om Intune-inställningar som du kan använda för att hantera Windows informationsskydd.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,18 +15,15 @@ ms.assetid: f233672c-7d9b-4554-af1f-92c001a1a3c5
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fc58b07fe33ff6223dfa182fb4f81f15379295fa
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 7ac59456dd2bc59a0a50eeab4e483dea2033c0fa
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Hur du konfigurerar inställningar för Windows informationsskydd i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Allt fler anställda använder egna enheter i företaget. Detta innebär en ökad risk för oavsiktliga dataläckage via appar och tjänster, till exempel e-post, sociala media och offentliga moln, som företaget inte har någon kontroll över. En medarbetare kan till exempel skicka de senaste ritningarna via sitt personliga e-postkonto, kopiera och klistra in produktinformation i en tweet eller spara en försäljningsrapport på en offentlig molnlagringsplats.
 
@@ -39,4 +36,3 @@ Den här Intune-principen hanterar listan över appar som skyddas av Windows inf
 
 ### <a name="next-steps"></a>Nästa steg
 Mer information finns i [Skydda företagsdata med Windows informationsskydd](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-

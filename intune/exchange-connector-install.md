@@ -1,12 +1,12 @@
 ---
-title: "Exchange Connector för lokal EAS"
+title: "Konfigurera Exchange Connector för lokal EAS med Intune"
 titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Exchange ActiveSync MDM – Använd anslutningsverktyget för att möjliggöra kommunikation mellan Intune-administratörskonsolen och lokal Exchange Server"
+description: "Förhandsversion av Intune Azure: Exchange ActiveSync MDM – Använd anslutningsverktyget för att möjliggöra kommunikation mellan Intune och Exchange Server lokalt"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,24 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 317b88e289fce216916dfa4ec3890ba7c9559c16
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9f4a310078a30f7dfefe66a9aba60cc74ad4e29b
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Konfigurera Exchange Connector lokalt i förhandsversion av Microsoft Intune Azure
 
-# <a name="install-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure-preview"></a>Installera lokal Exchange Connector för Intune i förhandsversion av Microsoft Intune Azure
+Lokala Exchange Server-miljöer kan använda Intunes lokala Exchange Connector för att hantera enhetsåtkomst till lokala Exchange-postlådor baserat på huruvida enheterna har registrerats i Intune och är kompatibla med Intunes principer för enhetsefterlevnad eller inte. Lokala Exchange Connector har även i uppgift att identifiera mobila enheter som ansluter till lokala Exchange-servrar genom att synkronisera den befintliga EAS-posten (Exchange Active Sync) med Intune.
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+> [!IMPORTANT]
+> Intune har endast stöd för en lokal Exchange Connector-anslutning av valfri typ per prenumeration.
 
+Om du vill konfigurera en anslutning som gör det möjligt för Microsoft Intune att kommunicera med den lokala Exchange-servern måste du följa anvisningarna nedan:
 
-Om du vill skapa en anslutning som gör det möjligt för Microsoft Intune att kommunicera med Exchange-servern som är värd för postlådorna för de mobila enheterna måste du ladda ned och konfigurera den lokala Exchange Connector från Intunes administratörskonsol. Intune har endast stöd för en Exchange Connector-anslutning av valfri typ per prenumeration.
+1.  Hämta Intunes lokala Exchange Connector från Intune-portalen.
+2.  Installera och konfigurera Intune Exchange Connector lokalt.
+3.  Verifiera Exchange-anslutningen.
 
 ## <a name="on-premises-exchange-connector-requirements"></a>Krav för den lokala Exchange Connector
 Följande tabell innehåller kraven för datorn där du installerar den lokala Exchange Connector.
@@ -39,8 +42,8 @@ Följande tabell innehåller kraven för datorn där du installerar den lokala E
 |Operativsystem|Intune stöder lokal Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012 eller Windows Server 2012 R2.<br /><br />Connector stöds inte i Server Core-installationer.|
 |Microsoft Exchange|Lokala anslutningar kräver Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den **nya** eller **äldre** konfigurationen kontaktar du din kontoansvariga.|
 |Utfärdare för hantering av mobila enheter| [Ange utfärdare för hantering av mobila enheter till Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Maskinvara|Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.|
-|Active Directory-synkronisering|Innan du kan använda Connector-anslutningen för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
+|Maskinvara|Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.|users-permissions-add.md
+|Active Directory-synkronisering|Innan du kan använda Connector-anslutningen för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](users-permissions-add.md) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
 |Tilläggsprogramvara|En fullständig installation av Microsoft .NET Framework 4.5 och Windows PowerShell 2.0 måste installeras på den dator som är värd för anslutningen.|
 |Nätverk|Datorn där du installerar anslutningen måste finnas i en domän som har en förtroenderelation till domänen som är värd för Exchange Server.<br /><br />Datorn kräver konfigurationer för att kunna komma åt Intune-tjänsten genom brandväggar och proxyservrar via portarna 80 och 443. Exempel på domäner som används av Intune är manage.microsoft.com, &#42;manage.microsoft.com och &#42;.manage.microsoft.com.|
 
@@ -65,17 +68,18 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Ladda ner programinstallationspaketet för den lokala Exchange Connector
 
-1. I ett Windows Server-operativsystem som stöder den lokala Exchange Connector öppnar du [Azure-portalen](http://portal.azure.com) med ett användarkonto som är en administratör i Exchange-innehavaren och som har en licens för att använda Exchange Server.
+1. I ett Windows Server-operativsystem som stöder den lokala Exchange Connector öppnar du [Azure Portal](http://portal.azure.com) och loggar in med ett användarkonto som är administratör på den lokala Exchange-servern och som har licens för att använda Exchange Server.
 
-2.  Välj arbetsbelastningen **Villkorlig åtkomst**.
-3.  Välj arbetsbelastningen **Villkorlig åtkomst** i Azure-portalen för att öppna bladet **Lokalt**.
+2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
-4. I avsnittet **Installation** väljer du **Exchange ActiveSync-On-Premises Connector** och sedan **Ladda ned On-Premises Connector**.
+3. Välj **Intune**. Intune- instrumentpanelen öppnas. Välj **Lokal åtkomst**.
 
-4.  Den lokala Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
+4. Välj **Hämta On-Premises Connector** i avsnittet **Installation** på bladet **Lokal åtkomst – Exchange ActiveSync Connector**.
 
-> [!IMPORTANT]
-> Byt inte namn på eller flytta filerna i mappen för den lokala Exchange Connector. Installationen misslyckas om du flyttar eller byter namn på mappens innehåll.
+5.  Den lokala Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
+
+    > [!IMPORTANT]
+    > Byt inte namn på eller flytta filerna i mappen för den lokala Exchange Connector. Installationen av Exchange Connector misslyckas om du flyttar eller byter namn på mappens innehåll.
 
 ## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Installera och konfigurera den lokala Intune Exchange Connector
 Utför följande steg för att installera den lokala Intune Exchange Connector. Den lokala Exchange Connector kan bara installeras en gång per Intune-prenumeration och bara på en dator. Om du försöker konfigurera ytterligare en lokal Exchange Connector ersätts den ursprungliga anslutningen med den nya.
@@ -120,7 +124,8 @@ Utför följande steg för att installera den lokala Intune Exchange Connector. 
 
     8. Välj **Anslut**.
 
-Det kan ta några minuter innan anslutningen har konfigurerats.
+    > [!NOTE]
+    > Det kan ta några minuter innan anslutningen har konfigurerats.
 
 Under konfigurationen lagrar Exchange Connector dina proxyinställningar för att möjliggöra åtkomst till Internet. Om proxyinställningarna ändras måste du konfigurera om Exchange Connector för att kunna tillämpa de uppdaterade proxyinställningarna på Exchange Connector.
 
@@ -131,10 +136,11 @@ När Exchange Connector har konfigurerat anslutningen synkroniseras automatiskt 
 
 ## <a name="validate-the-exchange-connection"></a>Validera Exchange-anslutningen
 
-När du har konfigurerat Exchange Connector kan du se status för anslutningen och det senaste lyckade synkroniseringsförsöket. I [Azure-portalen](http://portal.azure.com) väljer du arbetsbelastningen **Intune** > **Villkorlig åtkomst**. Under **Installation** väljer du **Exchange On-Premises Connector** och kontrollerar att anslutningen visas som aktiv.
+När du har konfigurerat Exchange Connector kan du se status för anslutningen och det senaste lyckade synkroniseringsförsöket. Verifiera Exchange Connector-anslutningen:
+
+- Välj **Lokal åtkomst** på Intune-instrumentpanelen. Verifiera anslutningsstatusen genom att välja **Lokal Exchange-åtkomst** under **Hantera**.
 
 Du kan också kontrollera datum och tid för det senaste lyckade synkroniseringsförsöket.
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa en princip för villkorlig åtkomst för lokal Exchange](conditional-access-exchange-create.md)
-

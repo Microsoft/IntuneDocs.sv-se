@@ -1,12 +1,12 @@
 ---
 title: "Fullständig eller selektiv rensning på enheter med Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Information om hur du gör en selektiv rensning av företagets data på en enhet eller gör en fullständig rensning för att återställa enheten till fabriksinställningarna."
+titleSuffix: Intune on Azure
+description: "Läs hur du gör en selektiv rensning av företagets data på en enhet eller gör en fullständig rensning för att fabriksåterställa enheten.”"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,15 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a8233ba1b5ea05a46f46219d98625e4d4bea6bb9
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2063612ee11d2bc7915ebe4bb28c67854a2599c3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-full-or-selective-wipe"></a>Använda fullständig eller selektiv rensning
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Du kan rensa appar och data från Intune-hanterade enheter som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Du kan göra detta med funktionerna för fullständig och selektiv rensning i Intune. Användare kan dessutom utfärda ett fjärrensningskommando från Intune-företagsportalappen på privatägda enheter som registrerats i Intune.
 
@@ -101,8 +98,8 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|Tas bort.|
 |Certifikatprofilinställningar|Certifikat återkallas, men tas inte bort.|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Behörigheten som enhetsadministratör återkallas.|Behörigheten som enhetsadministratör återkallas.|
-|E-post|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
-|Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|
+|E-post|Ej tillämpligt (e-post profiler stöds inte av Android-enheter)|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
+|Outlook|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.</br>Undantag: Om Exchange finns lokalt så tas inte e–post bort.|
 |Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|AAD-posten tas bort.|
 |Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
 
@@ -130,4 +127,3 @@ Om selektiv rensning utförs på en Android for Work-enhet tas alla data, appar 
 3.  På bladet som visar enhetens namn väljer du **Ta bort föret...** (står för Ta bort företagsdata) och väljer sedan **Ja** för att bekräfta rensningen.
 
 Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
-

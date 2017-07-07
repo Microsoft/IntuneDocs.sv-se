@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: c7cdb0106da1d81843f7dd07d0986d597b94a77c
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-skycure"></a>Du måste åtgärda ett hot som Skycure har påträffat
 
 Skycure har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, dina appar och filer hos företaget eller i skolan. Meddelandet som visas kan se ut ungefär så här:
@@ -49,4 +45,3 @@ Tryck på appnamnet som visas längst upp på skärmen och ta bort hotet genom a
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

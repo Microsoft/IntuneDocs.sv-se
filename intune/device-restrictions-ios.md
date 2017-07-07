@@ -1,7 +1,7 @@
 ---
 title: "Inställningar för enhetsbegränsningar för iOS i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på iOS-enheter."
+titleSuffix: Intune on Azure
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på iOS-enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,42 +15,39 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e860c99154f4695e5f4ad0122def8221e583c483
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 365b56082207c2110965681663432cce10f27c99
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
--     **Kamera** – Ange om kameran på enheten får användas.     
--     **Sändning av diagnostikdata** – Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.
--     **FaceTime** -Tillåt att appen FaceTime får användas på enheten.
--     **Skärmdump** – Tillåt användare att fånga innehållet på skärmen som en bild.
--     **Siri** – Tillåt användning av röstassistenten Siri på enheten.
-    -     **Tillåt Siri när enheten är låst** – Tillåt användning av röstassistenten Siri på enheten när den är låst.
-    -     **Filtrering av grovt språk i Siri (endast övervakat)** – Förhindrar att Siri från dikterar eller talar ett olämpligt språk.
-    -     **Siri skickar frågor om innehåll som skapats av användare från Internet (endast övervakat)** – Ger Siri åtkomst till webbplatser för att kunna besvara frågor.
--     **Ej betrodda TLS-certifikat** – Tillåt ej betrodda Transport Layer Security-certifikat på enheten.
--     **Åtkomst till Kontrollcenter när enheten är låst** – Tillåt användare att komma åt kontrollcenterappen när enheten är låst.
--     **Notiser när enheten är låst** – Tillåter användaren att få åtkomst till aviseringsvyn utan att låsa upp enheten.
--     **Sparbok när enheten är låst** – Tillåt användare att komma åt appen Sparbok när enheten är låst.
--     **Dagsvyn när enheten är låst** – Tillåt användare att se vyn Idag när enheten är låst.
--     **Företagsappförtroende** – Låter användaren välja att lita på appar som inte laddats ned från App Store.
--     **AirDrop (endast övervakat)** – Tillåt att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
--     **Spotlight-sökning för att returnera resultat från Internet (endast övervakat)** – Låt Spotlight-sökningen ansluta till Internet så att ytterligare resultat kan tillhandahållas.
--     **Namn på sökdefinition (endast övervakat)** – Tillåt iOS-funktionen som gör att du kan markera ett ord och leta upp dess definition.
--     **Förutseende tangentbord (endast övervakat)** – Tillåt användning av förutseende tangentbord som föreslår ord som användaren kanske vill använda.
--     **Autokorrigering (endast övervakat)** – Låter enheten automatiskt korrigera felstavade ord.
--     **Tangentbord med stavningskontroll (endast övervakat)** – Tillåter att stavningskontroll används.
--     **Kortkommandon (endast övervakat)** – Tillåter att kortkommandon används.
--     **Handledsavkänning för parkopplad Apple Watch** – När den här inställningen är aktiverad visas meddelanden bara när användaren bär sin Apple Watch runt handleden.
+-   **Kamera** – Ange om kameran på enheten får användas.   
+-   **Sändning av diagnostikdata** – Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.
+-   **FaceTime** -Tillåt att appen FaceTime får användas på enheten.
+-   **Skärmdump** – Tillåt användare att fånga innehållet på skärmen som en bild.
+-   **Siri** – Tillåt användning av röstassistenten Siri på enheten.
+    -   **Tillåt Siri när enheten är låst** – Tillåt användning av röstassistenten Siri på enheten när den är låst.
+    -   **Filtrering av grovt språk i Siri (endast övervakat)** – Förhindrar att Siri från dikterar eller talar ett olämpligt språk.
+    -   **Siri skickar frågor om innehåll som skapats av användare från Internet (endast övervakat)** – Ger Siri åtkomst till webbplatser för att kunna besvara frågor.
+-   **Ej betrodda TLS-certifikat** – Tillåt ej betrodda Transport Layer Security-certifikat på enheten.
+-   **Åtkomst till Kontrollcenter när enheten är låst** – Tillåt användare att komma åt kontrollcenterappen när enheten är låst.
+-   **Notiser när enheten är låst** – Tillåter användaren att få åtkomst till aviseringsvyn utan att låsa upp enheten.
+-   **Sparbok när enheten är låst** – Tillåt användare att komma åt appen Sparbok när enheten är låst.
+-   **Dagsvyn när enheten är låst** – Tillåt användare att se vyn Idag när enheten är låst.
+-   **Företagsappförtroende** – Låter användaren välja att lita på appar som inte laddats ned från App Store.
+-   **AirDrop (endast övervakat)** – Tillåt att funktionen AirDrop används för att utbyta innehåll med enheter i närheten.
+-   **Spotlight-sökning för att returnera resultat från Internet (endast övervakat)** – Låt Spotlight-sökningen ansluta till Internet så att ytterligare resultat kan tillhandahållas.
+-   **Namn på sökdefinition (endast övervakat)** – Tillåt iOS-funktionen som gör att du kan markera ett ord och leta upp dess definition.
+-   **Förutseende tangentbord (endast övervakat)** – Tillåt användning av förutseende tangentbord som föreslår ord som användaren kanske vill använda.
+-   **Autokorrigering (endast övervakat)** – Låter enheten automatiskt korrigera felstavade ord.
+-   **Tangentbord med stavningskontroll (endast övervakat)** – Tillåter att stavningskontroll används.
+-   **Kortkommandon (endast övervakat)** – Tillåter att kortkommandon används.
+-   **Handledsavkänning för parkopplad Apple Watch** – När den här inställningen är aktiverad visas meddelanden bara när användaren bär sin Apple Watch runt handleden.
 - **Kräv parkopplingslösenord för utgående AirPlay-förfrågningar** – Kräv ett parkopplingslösenord när användaren använder AirPlay för att strömma innehåll till andra Apple-enheter.
 - **Kontoändring (endast övervakat)** – När en blockering sker förhindras användaren från att ändra enhetsspecifika inställningar från iOS-appens inställningar, som t.ex. att skapa nya enhetskonton och ändra användarnamn eller lösenord.
 Detta gäller även för inställningar som kan nås från appen för iOS-inställningar som E-post, Kontakter, Kalender, Facebook och Twitter. Detta gäller inte för appar med kontoinställningar som inte konfigureras från appen för iOS-inställningar, till exempel Microsoft Outlook-appen.
@@ -77,17 +74,17 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Ändra konfigurationsprofil** – Tillåt att användaren installerar konfigurationsprofiler.
 
 ## <a name="password"></a>Lösenord
--     **Lösenord krävs** – Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
--     **Enkla lösenord** – Tillåt enkla lösenord som 0000 och 1234.
--     **Krav på lösenordstyp** – Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.
--     **Antal icke-alfanumeriska tecken i lösenord** – Ange det antal symboltecken i lösenordet (som **#** eller **@**) som måste ingå i lösenordet.
--     **Minsta längd på lösenord** – Ange det minsta antalet tecken som lösenordet måste innehålla.
--     **Antal felaktiga inloggningar innan enheten rensas** – Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.
--     **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**<sup>1</sup> – Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.
--     **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup> – Ange hur många minuter som ska förflyta innan skärmen stängs av.
--     **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan lösenordet för enheten måste ändras.
--     **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som enheten kommer ihåg.
--     **Upplåsning med fingeravtryck** – Tillåt att fingeravtryck används för att låsa upp kompatibla enheter.
+-   **Lösenord krävs** – Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
+-   **Enkla lösenord** – Tillåt enkla lösenord som 0000 och 1234.
+-   **Krav på lösenordstyp** – Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.
+-   **Antal icke-alfanumeriska tecken i lösenord** – Ange det antal symboltecken i lösenordet (som **#** eller **@**) som måste ingå i lösenordet.
+-   **Minsta längd på lösenord** – Ange det minsta antalet tecken som lösenordet måste innehålla.
+-   **Antal felaktiga inloggningar innan enheten rensas** – Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.
+-   **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**<sup>1</sup> – Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.
+-   **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup> – Ange hur många minuter som ska förflyta innan skärmen stängs av.
+-   **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan lösenordet för enheten måste ändras.
+-   **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som enheten kommer ihåg.
+-   **Upplåsning med fingeravtryck** – Tillåt att fingeravtryck används för att låsa upp kompatibla enheter.
 
 <sup>1</sup> När du konfigurerar inställningarna **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
@@ -95,19 +92,19 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 
 
 -   **App Store (endast övervakat)** – Blockera åtkomst till App Store på övervakade enheter.
--     **Lösenord till App Store** – Kräv att användarna anger ett lösenord innan de kan besöka App Store.
--     **Köp via app** – Tillåt att inköp görs från en app som körs.
--     **Automatisk nedladdning av appar (endast övervakat)** -
--     **Stötande innehåll i iTunes-musik, podcast eller nyheter (endast övervakat)** – Tillåt att enheten får åtkomst i butiken till innehåll som är klassificerat som vuxet (olämpligt för barn).
--     **Ladda ned innehåll från iBook-butiken flaggat som Erotik** – Tillåt att användaren laddar ned innehåll från iBook-butiken som flaggats som Erotik.
--     **Visa företagsdokument i ohanterade appar** – Tillåt att företagets dokument visas i alla appar.<br>**Exempel:** Du vill förhindra att användare sparar filer från OneDrive-appen i Dropbox. Konfigurera den här inställningen till Nej. När enheten har hämtat principen (till exempel efter en omstart) kommer den inte längre att tillåta att spara.
--     **Visa dokument som inte gäller företag i företagsappar** – Tillåt att alla dokument visas i företagshanterade appar.
--     **Behandla AirDrop som ett ohanterat mål** – Stoppar hanterade appar från att kunna skicka data. Airdrop.
--     **Lägga till Game Center-vänner (endast övervakat)** – Tillåt användaren att lägga till vänner i Game Center.
--     **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
--     **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
--     **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
--     **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
+-   **Lösenord till App Store** – Kräv att användarna anger ett lösenord innan de kan besöka App Store.
+-   **Köp via app** – Tillåt att inköp görs från en app som körs.
+-   **Automatisk nedladdning av appar (endast övervakat)** -
+-   **Stötande innehåll i iTunes-musik, podcast eller nyheter (endast övervakat)** – Tillåt att enheten får åtkomst i butiken till innehåll som är klassificerat som vuxet (olämpligt för barn).
+-   **Ladda ned innehåll från iBook-butiken flaggat som Erotik** – Tillåt att användaren laddar ned innehåll från iBook-butiken som flaggats som Erotik.
+-   **Visa företagsdokument i ohanterade appar** – Tillåt att företagets dokument visas i alla appar.<br>**Exempel:** Du vill förhindra att användare sparar filer från OneDrive-appen i Dropbox. Konfigurera den här inställningen till Nej. När enheten har hämtat principen (till exempel efter en omstart) kommer den inte längre att tillåta att spara.
+-   **Visa dokument som inte gäller företag i företagsappar** – Tillåt att alla dokument visas i företagshanterade appar.
+-   **Behandla AirDrop som ett ohanterat mål** – Stoppar hanterade appar från att kunna skicka data. Airdrop.
+-   **Lägga till Game Center-vänner (endast övervakat)** – Tillåt användaren att lägga till vänner i Game Center.
+-   **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
+-   **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
+-   **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
+-   **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
@@ -164,21 +161,21 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 
 
 ## <a name="cellular"></a>Mobilnät
--     **Dataroaming** – Tillåt dataroaming när enheten använder ett mobilnät.
--     **Hämtning av global bakgrund under nätverksväxling** – Tillåt att enheten att hämtar data, t.ex. e-post, när den nätverksväxlar i ett mobilnät.
--     **Röstsamtal** – Tillåt att röstsamtalsfunktionen används på enheten.
--     **Röstroaming** – Tillåt att röstroaming används när enheten är ansluten till ett mobilnät.
--     **Ändringar av inställningar för mobildataanvändning (endast övervakat)** – Tillåt användaren att kontrollera vilka appar som får använda mobildata.
+-   **Dataroaming** – Tillåt dataroaming när enheten använder ett mobilnät.
+-   **Hämtning av global bakgrund under nätverksväxling** – Tillåt att enheten att hämtar data, t.ex. e-post, när den nätverksväxlar i ett mobilnät.
+-   **Röstsamtal** – Tillåt att röstsamtalsfunktionen används på enheten.
+-   **Röstroaming** – Tillåt att röstroaming används när enheten är ansluten till ett mobilnät.
+-   **Ändringar av inställningar för mobildataanvändning (endast övervakat)** – Tillåt användaren att kontrollera vilka appar som får använda mobildata.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
--     **Säkerhetskopiera till iCloud** – Tillåt användare att säkerhetskopiera enheten till iCloud.
--     **Dokumentsynkronisering till iCloud (endast övervakat)** – Tillåt synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud.
--     **Synkronisering av Bildström till iCloud** – Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkronisera till iCloud och vara tillgängliga på alla användarnas enheter.
--     **Krypterad säkerhetskopiering** – Kräv att säkerhetskopior av enheter måste vara krypterade.
--     **iCloud-bildbiblioteket** – Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.    Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.
--     **Synkronisering av hanterade appar till molnet** – Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konton.
--     **Delad bildström** – Ställ in på **Nej** om du vill inaktivera **iCloud-bilddelning** på enheten.
--     **Aktivitetsfortsättning** – Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller macOS-enhet (överlämning).
+-   **Säkerhetskopiera till iCloud** – Tillåt användare att säkerhetskopiera enheten till iCloud.
+-   **Dokumentsynkronisering till iCloud (endast övervakat)** – Tillåt synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud.
+-   **Synkronisering av Bildström till iCloud** – Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkronisera till iCloud och vara tillgängliga på alla användarnas enheter.
+-   **Krypterad säkerhetskopiering** – Kräv att säkerhetskopior av enheter måste vara krypterade.
+-   **iCloud-bildbiblioteket** – Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.    Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.
+-   **Synkronisering av hanterade appar till molnet** – Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konton.
+-   **Delad bildström** – Ställ in på **Nej** om du vill inaktivera **iCloud-bilddelning** på enheten.
+-   **Aktivitetsfortsättning** – Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller macOS-enhet (överlämning).
 
 ## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomt enkelt appläge (endast övervakat)
 
@@ -242,36 +239,36 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 
 
 ## <a name="kiosk"></a>Helskärmsläge
--     **Aktiveringslås** – Aktivera aktiveringslåset på övervakade iOS-enheter.
--     **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
--     **AssistiveTouch** – Aktivera eller inaktivera hjälpmedelsinställningen **AssistiveTouch** som hjälper användare att utföra gester på skärmen som annars kan vara svåra att utföra.
--     **Invertera färger** – Aktivera eller inaktivera hjälpmedelsinställningen Invertera färger som anpassar skärmen för att hjälpa användare med synfel.
--     **Monoljud** – Aktivera eller inaktivera hjälpmedelsinställningen Monoljud.
--     **VoiceOver** – Aktivera eller inaktivera hjälpmedelsinställningen **VoiceOver** som läser upp text på enhetens skärm.
--     **Zoom** – Aktivera eller inaktivera hjälpmedelsinställningen **Zoom** som gör att användare kan använda pekskärmen för att zooma in det som visas på enheten.
--     **Autolås** – Aktivera eller inaktivera automatisk låsning av enheten.
--     **Ringsignalsknapp** – Aktiverar eller inaktiverar tyst läge på enheten.
--     **Skärmrotation** – Aktivera eller inaktivera ändring av skärmens orientering när användaren roterar enheten.
--     **Viloläge för skärmknapp** – Aktivera eller inaktivera enhetens knapp för viloläge.
--     **Touch** – Aktivera eller inaktivera enhetens pekskärm.
--     **Volymknappar** – Aktivera eller inaktivera användningen av enhetens volymknappar.
--     **AssistiveTouch-knapp** – Aktivera eller inaktivera anpassning av funktionen AssistiveTouch.
--     **Invertera färger-knapp** – Aktivera eller inaktivera justeringar i funktionen för inverterade färger.
--     **Läs upp markerad text** – Aktivera eller inaktivera hjälpmedelsinställningen Läs upp markerad text som kan läsa upp den text som användaren markerar.
--     **VoiceOver-knapp** – Aktivera eller inaktivera justeringar av VoiceOver-funktionen så att användare kan justera VoiceOver-funktionen (t.ex. hur snabbt texten ska läsas upp).
--     **Zoomkontroll** – Aktivera eller inaktivera justeringar i zoomfunktionen.
+-   **Aktiveringslås** – Aktivera aktiveringslåset på övervakade iOS-enheter.
+-   **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
+-   **AssistiveTouch** – Aktivera eller inaktivera hjälpmedelsinställningen **AssistiveTouch** som hjälper användare att utföra gester på skärmen som annars kan vara svåra att utföra.
+-   **Invertera färger** – Aktivera eller inaktivera hjälpmedelsinställningen Invertera färger som anpassar skärmen för att hjälpa användare med synfel.
+-   **Monoljud** – Aktivera eller inaktivera hjälpmedelsinställningen Monoljud.
+-   **VoiceOver** – Aktivera eller inaktivera hjälpmedelsinställningen **VoiceOver** som läser upp text på enhetens skärm.
+-   **Zoom** – Aktivera eller inaktivera hjälpmedelsinställningen **Zoom** som gör att användare kan använda pekskärmen för att zooma in det som visas på enheten.
+-   **Autolås** – Aktivera eller inaktivera automatisk låsning av enheten.
+-   **Ringsignalsknapp** – Aktiverar eller inaktiverar tyst läge på enheten.
+-   **Skärmrotation** – Aktivera eller inaktivera ändring av skärmens orientering när användaren roterar enheten.
+-   **Viloläge för skärmknapp** – Aktivera eller inaktivera enhetens knapp för viloläge.
+-   **Touch** – Aktivera eller inaktivera enhetens pekskärm.
+-   **Volymknappar** – Aktivera eller inaktivera användningen av enhetens volymknappar.
+-   **AssistiveTouch-knapp** – Aktivera eller inaktivera anpassning av funktionen AssistiveTouch.
+-   **Invertera färger-knapp** – Aktivera eller inaktivera justeringar i funktionen för inverterade färger.
+-   **Läs upp markerad text** – Aktivera eller inaktivera hjälpmedelsinställningen Läs upp markerad text som kan läsa upp den text som användaren markerar.
+-   **VoiceOver-knapp** – Aktivera eller inaktivera justeringar av VoiceOver-funktionen så att användare kan justera VoiceOver-funktionen (t.ex. hur snabbt texten ska läsas upp).
+-   **Zoomkontroll** – Aktivera eller inaktivera justeringar i zoomfunktionen.
 
 >[!NOTE]
 > Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda Apple Configurator-verktyget eller Apples enhetsregistreringsprogram för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 >Om iOS-appen som du anger har installerats efter det att du har tilldelat profilen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
 
 ## <a name="safari"></a>Safari
--     **Safari (endast övervakat)** – Ange om webbläsaren Safari kan användas på enheten.
--     **Autofyll** – Tillåt användare att ändra inställningarna för Autofyll i webbläsaren.
--     **Cookies** – Tillåt webbläsaren att använda cookies.
--     **JavaScript** – Tillåt att JavaScript körs i webbläsaren.
--     **Bedrägerivarningar** – Tillåt bedrägerivarningar i webbläsaren.
--     **Popup-fönster** – Aktivera eller inaktivera webbläsarens blockering av popup-fönster.
+-   **Safari (endast övervakat)** – Ange om webbläsaren Safari kan användas på enheten.
+-   **Autofyll** – Tillåt användare att ändra inställningarna för Autofyll i webbläsaren.
+-   **Cookies** – Tillåt webbläsaren att använda cookies.
+-   **JavaScript** – Tillåt att JavaScript körs i webbläsaren.
+-   **Bedrägerivarningar** – Tillåt bedrägerivarningar i webbläsaren.
+-   **Popup-fönster** – Aktivera eller inaktivera webbläsarens blockering av popup-fönster.
 
 
 ## <a name="domains"></a>Domains
@@ -289,4 +286,3 @@ I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadre
 ### <a name="safari-password-auto-fill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner
 
 I fältet **Domänwebbadress** lägger du till en eller flera webbadresser i listan. Användarna kan bara spara webblösenord från webbadresser i den här listan. Den här inställningen gäller enbart för Safari-webbläsaren, samt för iOS 9.3 och senare enheter i övervakat läge. Om du inte anger någon webbadress, kan lösenorden sparas från alla webbplatser.
-

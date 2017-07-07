@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 5de619d98ab78384e42c8a3a2264ce4deebc2602
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="using-your-ios-or-macos-device-with-intune"></a>Använda din iOS- eller macOS-enhet med Intune
 
 Det finns ett antal saker som du kan göra med Intune som gör livet lite lättare. Här är en lista över de vanligaste sakerna som företaget kan be dig att göra.
@@ -52,4 +48,3 @@ Intune stöder för närvarande iOS 8.0 och senare. Det stöder också macOS 10.
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 - [Vad händer om du återställer en enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
 - [Synkronisera enheten manuellt](sync-your-device-manually-ios.md)
-

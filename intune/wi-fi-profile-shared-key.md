@@ -1,7 +1,7 @@
 ---
 title: "Skapa en Wi-Fi-profil med en i förväg delad nyckel"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Använd en anpassad Intune-profil för att skapa en trådlös profil med en i förväg delad nyckel."
+titleSuffix: Intune on Azure
+description: "Använd en anpassad Intune-profil för att skapa en trådlös profil med en i förväg delad nyckel.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,39 +15,36 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fe7d9e9998156825bfd9637c3f9d80df80b916cf
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: b56a6da04ae53a812a7d153de2618b72fa14ec44
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använd en anpassad enhetsprofil för Microsoft Intune för att skapa en Wi-Fi-profil med en i förväg delad nyckel
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Så här använder du Intunes **anpassade enhetsprofiler** för att skapa en trådlös profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
 
 > [!NOTE]
--    Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
+-   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
 - För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
--    Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
+-   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
 -  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
 
 
-1.    Om du vill skapa en trådlös profil med en i förväg delad nyckel för Android eller Windows eller en EAP-baserad trådlös profil, väljer du **Anpassad** för den enhetsplattformen när du skapar en enhetsprincip, i stället för en trådlös profil.
+1.  Om du vill skapa en trådlös profil med en i förväg delad nyckel för Android eller Windows eller en EAP-baserad trådlös profil, väljer du **Anpassad** för den enhetsplattformen när du skapar en enhetsprincip, i stället för en trådlös profil.
 
-2.    Ange ett namn och en beskrivning.
-3.    Lägg till en ny OMA-URI-inställning:
+2.  Ange ett namn och en beskrivning.
+3.  Lägg till en ny OMA-URI-inställning:
 
-   a.    Ange ett namn på den här inställningen för Wi-Fi-nätverk.
+   a.   Ange ett namn på den här inställningen för Wi-Fi-nätverk.
 
-   b.    Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
+   b.   Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
 
-   c.    **Datatyp**: Ange som **Sträng**.
+   c.   **Datatyp**: Ange som **Sträng**.
 
-   d.    **OMA-URI**:
+   d.   **OMA-URI**:
 
     - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
@@ -208,4 +205,3 @@ Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
     Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
 3.     Sök igenom XML-filerna för att hitta den med rätt namn.
 4.     När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
-

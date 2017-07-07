@@ -1,12 +1,12 @@
 ---
 title: "Hur du konfigurerar Wi-Fi-inställningar i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om hur använder Intune för att konfigurera Wi-Fi-anslutningar på enheter som du hanterar."
+titleSuffix: Intune on Azure
+description: "Läs om hur använder Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3378df904936def8737ca3b5b791feebdb95823b
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0e191fe443757a5ea43ccc2b4ef2e9cb331b2142
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd Wi-Fi-profiler i Microsoft Intune om du vill tilldela trådlösa nätverksinställningar till användare och enheter i din organisation. När du tilldelar en Wi-Fi-profil får användarna åtkomst till ditt företags Wi-Fi-nätverk utan att de behöver göra några inställningar själva.
 
@@ -39,6 +36,7 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet Contoso 
 Wi-Fi-profiler stöder följande enhetsplattformar:
 
 - Android 4 och senare
+- Android for Work
 - iOS 8.0 och senare
 - macOS (Mac OS X 10.9 och senare)
 
@@ -49,13 +47,14 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Skapa en enhetsprofil som innehåller Wi-Fi-inställningar
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen på bladet **Skapa profil**.
 5. Välj den enhetsplattform på vilken du vill tillämpa Wi-Fi-inställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för Wi-Fi-inställningar:
     - **Android**
+    - **Android for Work**
     - **iOS**
     - **macOS**
     - **Windows 8.1 och senare (importera en profil)**
@@ -63,7 +62,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     >[!TIP]
     >Använd **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. Med **Wi-Fi-import** (för Windows 8.1 och Windows 10) kan du importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-    - [Inställningar för Android](wi-fi-settings-android.md)
+    - [Inställningar för Android och Android for Work](wi-fi-settings-android.md)
     - [Inställningar för iOS](wi-fi-settings-ios.md)
     - [Inställningar för macOS](wi-fi-settings-macos.md)
     - [Inställningar för Windows Phone 8.1](wi-fi-settings-import-windows-8-1.md)
@@ -71,5 +70,3 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 
 Profilen skapas och visas på bladet med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
-
-

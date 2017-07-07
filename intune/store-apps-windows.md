@@ -1,7 +1,7 @@
 ---
 title: "Lägga till Windows Store-appar i Intune"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig mer om hur man lägger till Windows Store-appar i Intune."
+titleSuffix: Intune on Azure
+description: "Läs hur man lägger till Windows Store-appar i Intune.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -15,17 +15,15 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5ae37b805ee2ddb6b6720190cbe4918d5b793818
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 7ad1156076f0ec34d5ac110e32a19a8332c8f863
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Så här lägger du till Windows Store-appar i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 1. Logga in på Azure-portalen.
@@ -107,4 +105,3 @@ Så här registrerar och tilldelar du appen:
 |PublisherId |Företagets publicerings-ID. Om det ej finns, används ämnes-fältet i Symantec-certifikatet med mobil kodsignering för företag.|
 |SdkPath | Sökvägen till rotkatalogen på Windows SDK för Windows 10. Det här argumentet är valfritt och är som standard ${env:ProgramFiles(x86)}\Windows Kits\10|
 Skriptets utdata är den signerade versioneb av företagsportalsappen för Windows 10. Du kan sedan tilldela den signerade versionen av appen som en LOB-app via Intune, som kommer att uppgraderas till de för tillfället tilldelade versionerna av den nya appen.  
-

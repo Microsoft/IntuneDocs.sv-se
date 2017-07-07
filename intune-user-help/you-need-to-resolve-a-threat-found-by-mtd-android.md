@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 9e176e10-72fd-42fe-94ef-b41d57a4914f
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: d1276c983cdf0e22e2e78e79b6646e045c8fb135
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Du måste lösa hot som påträffas av Mobile Threat Defense-appar
 
 Mobile Threat Defense har påträffat ett potentiellt hot på din Android-enhet och du måste åtgärda problemet för att få åtkomst till din e-post, dina appar och filer hos företaget eller i skolan. Beroende på hur IT-administratören har konfigurerat Mobile Threat Defense, kommer du att använda någon av följande appar för att lösa dessa typer av problem.
@@ -40,4 +36,3 @@ Om du har installerat en app som Mobile Threat Defense uppfattar som ett hot, s�
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

@@ -1,7 +1,7 @@
 ---
 title: "Så här använder du Windows Hello för företag"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs mer om att skapa en princip för att kontrollera användningen av Windows Hello för företag på hanterade enheter."
+titleSuffix: Intune on Azure
+description: "Läs mer om att skapa en princip för att kontrollera användningen av Windows Hello för företag på hanterade enheter.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,19 +15,16 @@ ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 4d375a40283a5f3c1e9b7302d659739d4ca3d508
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0ef9e70dc918b485f893cf3193f7e76f6084a896
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="use-windows-hello-for-business"></a>Använda Windows Hello för företag
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune integreras med Windows Hello för företag (tidigare Microsoft Passport for Work), en alternativ inloggningsmetod som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort.
 
@@ -100,4 +97,3 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 ## <a name="further-information"></a>Ytterligare information
 Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft.com/library/mt589441.aspx) i Windows 10-dokumentationen.
-

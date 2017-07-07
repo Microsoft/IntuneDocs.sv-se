@@ -1,7 +1,7 @@
 ---
 title: "VPN-inställningar i Intune för iOS-enheter"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig mer om Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på iOS-enheter."
+titleSuffix: Intune on Azure
+description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på iOS-enheter.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
@@ -15,18 +15,15 @@ ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 17859701baa3dc4750ba51482db2228de092c93f
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: a6cc079b05037cc18b7d27dd0d2674e87e1d54d0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>VPN-inställningar för iOS-enheter i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Beroende på vilka inställningar du väljer, är inte alla värden i listan nedan konfigurerbara.
 
@@ -81,4 +78,3 @@ Om du har valt **Anpassat VPN** som anslutningstyp, kan du konfigurera inställn
 - **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Adress** – Ange proxyns serveradress (som en IP-adress).
 - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.
-
