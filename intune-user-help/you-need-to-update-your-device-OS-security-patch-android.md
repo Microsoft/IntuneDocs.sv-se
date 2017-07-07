@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 6b25c4551cd66e2e58b12c90ca9055c14b4e33cd
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Du måste uppdatera Android-enhetens operativsystem
 
 Om du ser ett meddelande som säger att "lägsta säkerhetskorrigeringsnivå för Android inte har konfigurerats" måste du installera en uppdatering för att se till att enheten förblir säker. En _korrigering_ lanseras för att underhålla programvaran så att den körs smidigt och är uppdaterad. IT-administratören kräver att du måste installera korrigeringen för att säkerställa att företagets data sparas så skyddat som möjligt på enheten. Platsen där den säkerhetskorrigeringsfil du behöver finns varierar beroende på typ av Samsung-enhet.
@@ -43,4 +39,3 @@ Gå till **Inställningar** > **Systemuppdateringar** > **Sök efter ny systemup
 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

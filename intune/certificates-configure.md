@@ -1,12 +1,12 @@
 ---
-title: "Så här konfigurerar du certifikat med Intune | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Förhandsversionen av Intune Azure: Information om hur du kan använda Intune för att skapa och tilldela certifikat som hjälper dig att skydda Wi-Fi, VPN och andra anslutningar."
+title: "Så här konfigurerar du certifikat med Intune"
+titleSuffix: Intune on Azure
+description: "Läs hur du kan använda Intune för att skapa och tilldela certifikat som hjälper dig att skydda Wi-Fi, VPN och andra anslutningar.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 81c7e04d4b4cc7599b63917e5507775b38b65ba7
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: da23a0c79c5e0e178e52e956561e2764268d09df
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-configure-certificates-in-microsoft-intune"></a>Så här konfigurerar du certifikat i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. Certifikaten innebär att man inte längre behöver ange användarnamn och lösenord för att autentisera anslutningar.
 
@@ -56,8 +53,8 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
 
     Du kan bara använda en SCEP-certifikatprofil med dessa plattformar:
 
--     macOS 10.9 och senare
--     Windows Phone 8.1 och senare
+-   macOS 10.9 och senare
+-   Windows Phone 8.1 och senare
 
 Du måste skapa en separat profil för varje enhetsplattform. När du skapar profilen kopplar du den med den betrodda rotcertifikatprofilen som du redan skapat.
 
@@ -88,7 +85,7 @@ Du måste skapa en betrodd certifikatprofil innan du kan skapa en SCEP- eller PK
 ### <a name="to-create-a-trusted-certificate-profile"></a>Så här skapar du en betrodd certifikatprofil
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
@@ -128,4 +125,3 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 
 ## <a name="next-steps"></a>Nästa steg
 Du hittar allmän information om hur du tilldelar enhetsprofilerna i [Tilldela enhetsprofilerna](device-profile-assign.md).
-

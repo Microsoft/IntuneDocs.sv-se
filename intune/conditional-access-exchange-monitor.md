@@ -1,6 +1,6 @@
 ---
 title: "Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online"
-titleSuffix: Intune Azure preview
+titleSuffix: Intune on Azure
 description: "Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online via Intune Azure Portal"
 keywords: 
 author: andredm7
@@ -14,16 +14,13 @@ ms.technology:
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d170958bbdc00423081aa606c9c7f4e7a8ec4b06
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 2ec9bcc605486258203f49f9f7631bd2a04cdf22
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune-azure-preview"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i förhandsversionen av Intune Azure
+# <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
 Från och med version 1704 av Intune kan administratörer se den rapportinformation som relaterar till Exchange ActiveSync-enhetsposter som har synkroniserats med Intune via Exchange Connector lokalt eller Intune Service to Service Connector (Exchange Online Connector). Efterlevnadsrapporteringen för villkorlig åtkomst innehåller en översikt över enheter med olika synkroniseringstillstånd:
 
@@ -70,4 +67,3 @@ På bladet med enhetsinformation visas mer information:
 -   **Enhetskonfiguration:** Här visas all information om enhetens konfiguration.
 
 -   **Exchange-åtkomst:** Här kan du läsa mer om enhetens tillstånd efter det att principerna för villkorlig åtkomst har tillämpats.
-

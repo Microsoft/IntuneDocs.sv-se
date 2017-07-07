@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 957a0f5104030043e8049bf65ba30e4579a0acb0
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="you-need-to-install-lookout-for-work"></a>Du måste installera Lookout for Work
 
 Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
@@ -32,11 +28,11 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 **Vad du behöver göra:**
 
-1.    Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
+1.  Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
 
   ![du uppmanas att installera Lookout for Work](./media/lookout-required-app-install-android.png)
 
-2.    Du kommer till installationssidan för Lookout for Work i Play Store. Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
+2.  Du kommer till installationssidan för Lookout for Work i Play Store. Installera Lookout for Work och tryck sedan på **ACCEPTERA** så att Lookout for Work får åtkomst till din enhet.
 
   ![tryck på acceptera för att ge Lookout for Work behörighet till åtkomst till din enhet](./media/lookout-accept-store-permissions-android.png)
 
@@ -79,4 +75,3 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan försöka installera Lookout for Work [manuellt från Play Store](https://play.google.com/store/apps/details?id=com.lookout.enterprise).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

@@ -15,15 +15,12 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f2f0b610b900bb41a3c2bd7416b6db28434a155
 ms.openlocfilehash: bf56d3a80f0d167baa95e9dfdb20d08e02590984
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Förbered konfigurationen av appskyddsprinciper för Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -60,4 +57,3 @@ Innan du skapar en appskyddsprincip för Windows 10 måste du aktivera hantering
 ## <a name="next-steps"></a>Nästa steg
 
 [Skapa en WIP-appskyddsprincip](windows-information-protection-policy-create.md)
-

@@ -1,12 +1,12 @@
 ---
-title: "Skapa Intune-enhetens konfigurationsprofiler | Förhandsversion av Intune Azure"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Information om hur du skapar Intune-enhetens konfigurationsprofiler."
+title: Skapa Intune-enhetens konfigurationsprofiler
+titleSuffix: Intune on Azure
+description: "Så här skapar du enhetskonfigurationsprofiler i Intune.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 05/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,15 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: a719b3f53076a55f1e888a9ddf8e98c7074dd25f
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 6df6813667241d3ad5f8768585f2e1a34f0fe6e3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-create-device-configuration-profiles-in-microsoft-intune"></a>Så här skapar du enhetens konfigurationsprofiler i Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
 1. Logga in på Azure-portalen.
@@ -34,11 +31,11 @@ ms.lasthandoff: 05/23/2017
 3. Välj **Konfigurera enheter** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 2. På bladet visas en lista med profiler. Välj **Skapa profil**.
-3. Ange följande på bladet **Skapa profil**:
+3. På bladet **Skapa profil** anger du följande objekt:
     - **Namn** – Ange ett beskrivande namn på den nya profilen.
     - **Beskrivning** – Ange en valfri beskrivning av profilen.
     - **Plattform** – Välj plattformstyp för profilen som du vill skapa.
-    - **Profiltyp** – Välj typ för den profil som du vill skapa. Listan över tillgängliga typer varierar beroende på vilken plattform som du har valt.
+    - **Profiltyp** – Välj typ för den profil som du vill skapa. Listan över tillgängliga typer varierar beroende på vilken plattform du väljer.
     - **Inställningar** – Se följande avsnitt för information om inställningarna för varje profiltyp:
         -  [Inställningar av enhetsfunktion](device-features-configure.md)
         -  [Inställningar för enhetsbegränsning](device-restrictions-configure.md)
@@ -60,4 +57,3 @@ Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa 
 
 ### <a name="next-steps"></a>Nästa steg
 Information om hur du tilldelar enhetsprofiler finns i [Så här tilldelar du enhetsprofiler med Microsoft Intune](device-profile-assign.md).
-

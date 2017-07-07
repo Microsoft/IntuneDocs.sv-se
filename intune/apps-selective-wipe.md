@@ -1,7 +1,7 @@
 ---
 title: "Hur du rensar endast företagsdata från appar"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Information om hur du selektivt rensar appar med Microsoft Intune."
+titleSuffix: Intune on Azure
+description: "Läs hur du selektivt rensar appar med Microsoft Intune.”"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,17 +15,15 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: affe7323b8572aa17122011b293cb6a3a2fd7747
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: bfebc391997ac4e63466eb3a09044318cf807dbc
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Om en enhet tappas bort eller blir stulen eller om medarbetaren som använder enheten slutar på företaget vill du förmodligen ta bort företagets appdata från enheten. Men du kanske inte vill ta bort personliga data på enheten, särskilt inte om enheten ägs av den anställda.
 
@@ -38,7 +36,7 @@ Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran 
 
 1.  Logga in på [Azure Portal](https://portal.azure.com).
 
-2.  Välj **Fler tjänster**, skriv **Intune** i filtrets textruta och välj **Intune**. Bladet Förhandsvisning av Intune öppnas, välj bladet **Hantera appar**.
+2.  Välj **Fler tjänster**, skriv **Intune** i filtrets textruta och välj **Intune**. Intune-bladet öppnas, välj bladet **hantera appar**.
 
     ![Skärmbild av bladet Ny rensningsförfrågan](./media/intune-azure-preview-blade.png)
 

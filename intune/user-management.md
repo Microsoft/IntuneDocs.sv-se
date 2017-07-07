@@ -1,7 +1,7 @@
 ---
 title: "Vad är arbetsbelastningen Hantera användare?"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azur: Lär dig att visa och hantera användare med Microsoft Intune och Azure."
+titleSuffix: Intune on Azure
+description: "Lär dig att visa och hantera användare med Microsoft Intune och Azure.\""
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -14,19 +14,16 @@ ms.technology:
 ms.assetid: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 29c8f436d611e590ef1304d221e27da0ceef2450
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1cbdb92928411ff56e6740e83e081ee966fb7af8
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="what-is-user-management"></a>Vad är användarhantering?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Om du är nybörjare på Intune i Azure Portal ska du komma ihåg att du inte längre skapar grupper för Intune. Intune använder Azure AD-grupper precis som många andra program som du använder.
 
@@ -45,4 +42,3 @@ För att hantera grupper i [Azure Portal](https://portal.azure.com) söker du ef
 ## <a name="next-step"></a>Nästa steg
 
 [Kom igång med grupper](groups-get-started.md)
-

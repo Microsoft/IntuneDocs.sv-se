@@ -1,7 +1,7 @@
 ---
 title: "Hur du övervakar enhetsefterlevnad"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du kan övervaka enhetsefterlevnad."
+titleSuffix: Intune on Azure
+description: "Läs hur du övervakar enhetsefterlevnad.”"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,20 +15,18 @@ ms.assetid: 0790934b-48b9-435b-a8aa-e83ed5b73191
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e073ca318d7db23239fc68b79718198dbee54b6e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 8f18bfa7fb045dbad4ab785c2c8e1bc13fc439db
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-# <a name="how-to-monitor-device-compliance-in-intune-azure-preview"></a>Övervaka enhetsefterlevnad i Intune Azure Preview
+# <a name="how-to-monitor-device-compliance-in-intune"></a>Så här övervakar du enhetsefterlevnad i Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Du kan visa en sammanfattning av statusen för dina **efterlevnadsprofiler** på bladet **Översikt**.
-Du kan klicka dig igenom diagrammen interaktivt eller gå ner på detaljnivå. Om du har flera konfigurerade efterlevnadsprofiler kan du även visa statusen för varje enskild princip genom att gå till principbladet och välja **Rapporter** i avsnittet **Hantera**.  Information från rapporterna som är tillgängliga för förhandsgranskning listas nedan.
+Du kan klicka dig igenom diagrammen interaktivt eller gå ner på detaljnivå. Om du har flera konfigurerade efterlevnadsprofiler kan du även visa statusen för varje enskild princip genom att gå till principbladet och välja **Rapporter** i avsnittet **Hantera**.  Information från rapporterna som finns tillgängliga listas nedan.
 
 ##  <a name="device-compliance"></a>Efterlevnad för enhet
 
@@ -48,4 +46,3 @@ Inställningskompatibilitetsrapporten ger detaljerad information om de enskilda 
 - Den plattform som inställningen gäller.
 
 Du kan öka detaljnivån för varje inställning om du vill se mer information om de profiler som inställningarna har aktiverats för, samt inställningens värde.
-

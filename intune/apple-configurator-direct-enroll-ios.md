@@ -1,7 +1,7 @@
 ---
 title: Registrera iOS-enheter med Apple Configurator och direktregistrering
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du använder Apple Configurator för att registrera företagsägda iOS-enheter med direktregistrering."
+titleSuffix: Intune on Azure
+description: "Läs hur du använder Apple Configurator för att registrera företagsägda iOS-enheter med direktregistrering.”"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: e6c0a430-1851-4108-812a-87e0fc2623b5
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 5347e2023a9ce19f8e8ab960e2eebf8107530220
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: dd856cc3c9d11d1079c6092025200059f0ace437
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-and-direct-enrollment"></a>Registrera iOS-enheter med Apple Configurator och direktregistrering 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) på en Mac-dator. Den här processen fabriksåterställer inte enheten och registrerar enheten med en fördefinierad princip. Den här metoden gäller för enheter som **inte har någon användartillhörighet** och kräver att du utför företagsregistreringen genom att ansluta iOS-enheten till en Mac-dator via en USB-anslutning.
 
@@ -42,7 +39,7 @@ Andra metoder för att registrera iOS-enheter beskrivs i [Välj hur du vill regi
 
 Uppfyll följande krav innan du konfigurerar registrering av iOS-enheter:
 
-- [Konfigurera domäner](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-2)
+- [Konfigurera domäner](custom-domain-name-configure.md)
 - [Ange MDM-utfärdare](mdm-authority-set.md)
 - [Skapa grupper](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
 - [Konfigurera företagsportalen](company-portal-app.md)
@@ -102,4 +99,3 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 4. Öppna **Inställningar** på iOS-enheten och gå till **Allmänt** > **Enhetshantering** > **Hanteringsprofil**. Bekräfta att profilinstallationen visas och kontrollera iOS-principbegränsningarna och installerade appar. Det kan ta upp till tio minuter innan principbegränsningar och appar visas på enheten.
 
 5. Distribuera enheter. Nu är iOS-enheten registrerad med Intune och hanteras.
-

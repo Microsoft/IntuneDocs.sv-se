@@ -1,12 +1,12 @@
 ---
-title: "Vad är villkorlig åtkomst?"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig hur du anger de villkor som användare och enheter måste uppfylla för att få åtkomst till företagets resurser i Microsoft förhandsversion av Intune Azure."
+title: "Villkorlig åtkomst med Intune"
+titleSuffix: Intune on Azure
+description: "Lär dig hur du anger de villkor som användare och enheter måste uppfylla för att få åtkomst till företagets resurser i Microsoft Intune.\""
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 05/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,44 +14,51 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 8ab6d782460a857a0901abd9bd567365ee2e3f70
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: d3e6b720eeed65c81e5f3a4dbf06890ea8fd09ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="whats-conditional-access"></a>Vad är villkorlig åtkomst?
 
-# <a name="what-is-conditional-access"></a>Vad är villkorlig åtkomst?
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+I det här avsnittet beskrivs villkorlig åtkomst så som den fungerar i Enterprise Mobility + Security (EMS). Därefter följer några vanliga scenarion för villkorlig åtkomst i Intune.
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+Villkorlig åtkomst i Enterprise Mobility + Security (EMS) är inte någon fristående produkt, utan en lösning som förekommer i alla tjänster och produkter som ingår i EMS. Den ger detaljerad åtkomstkontroll så att företagets data skyddas, samtidigt den gör det möjligt för användarna att utföra sitt arbete på bästa sätt från vilken enhet som helst och oavsett var de befinner sig.
 
+Du kan definiera villkor som reglerar åtkomsten till företagets data baserat på plats, enhet och användare och programmets känslighet.
 
-I det här avsnittet beskriver vi villkorlig åtkomst som gäller för Enterprise Mobility + Security, därefter beskriver vi funktioner för villkorlig åtkomst i Intune.
+> [!NOTE] 
+> Funktionerna för villkorlig åtkomst omfattar även [tjänster i Office 365](https://blogs.technet.microsoft.com/wbaer/2017/02/17/conditional-access-policies-with-sharepoint-online-and-onedrive-for-business/).
 
-Villkorlig åtkomst från Enterprise Mobility + Security (EMS) utnyttjar kraften i Azure Active Directory Premium och Microsoft Intune för att tillhandahålla den kontroll du behöver för att skydda företagets data, samtidigt som det ger användarna en upplevelse som gör att de utföra sitt arbete på bästa sätt från en valfri enhet.
+![Arkitekturdiagram för villkorlig åtkomst](./media/ca-diagram-1.png)
 
-Med villkorlig åtkomst kan du kan definiera villkor som begränsar åtkomsten till företagets data baserat på plats, enhet och användare och programmets känslighet.
+## <a name="conditional-access-with-intune"></a>Villkorlig åtkomst med Intune
 
-Ur enhetsperspektiv arbetar Intune och Azure Active Directory tillsammans för att se till att endast hanterade och kompatibla enheter får åtkomst till e-post och Office 365-tjänster. Du kan till exempel ange en princip i Azure Active Directory för att endast göra det möjligt för datorer som är anslutna till en domän, eller mobila enheter som är registrerade i ett program för mobil enhetshantering som Intune, till att få åtkomst till Office 365-tjänster. Du kan använda Intune för att ange en kompabilitetsprofil för enheter som utvärderar enhetens kompatibilitetsstatus. Kompatibilitetsstatusen rapporteras till Azure Active Directory för att användas för verkställande av principer i Azure Active Directory när användaren försöker få åtkomst till företagets resurser. Mer information om enhetsefterlevnad i Intune finns i [Vad är enhetsefterlevnad?](device-compliance.md).
+I Intune finns nu efterlevnad för mobila enheter och funktioner för hantering av mobila program, vilket stöder lösningen för villkorlig åtkomst i EMS.
 
-Villkorlig åtkomst för molnappar, till exempel Exchange Online, kan konfigureras via Azure Active Directory. Mer information finns i den här [artikeln](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+![Intune och villkorlig åtkomst vid användning av EMS](./media/intune-with-ca-1.png)
 
-## <a name="on-premises-conditional-access-in-intune"></a>Lokal villkorlig åtkomst i Intune
+Olika sätt att använda villkorlig åtkomst på med Intune:
 
-Villkorlig åtkomst i Intune kan användas för att tillåta eller blockera åtkomst till **Exchange On-premises** baserat på enhetshantering och registrering.
+-   **Enhetsbaserad villkorlig åtkomst**
 
-Profilinställningar för enhetsefterlevnad används för att utvärdera enhetens kompatibilitet. Villkorlig åtkomst använder utvärderingen för att tillåta eller blockera åtkomst till Exchange On-premises. När villkorlig åtkomst använd i kombination med en profil för enhetsefterlevnad ges endast kompatibla enheter åtkomst till Exchange On-premises. Du kan konfigurera avancerade inställningar i villkorlig åtkomst för detaljerad kontroll, som att till exempel tillåta eller blockera vissa plattformar eller omedelbart blockera enheter som inte hanteras av Intune.
+    -   Villkorlig åtkomst för Exchange lokalt
 
-Profilen för enhetsefterlevnad och villkorlig åtkomst tilldelas till användaren. Alla olika enheter som användaren använder för att få åtkomst till Exchange On-premises kontrolleras. Tänk på att en efterlevnadsprofil måste tilldelas enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas. Om ingen efterlevnadsprincip har distribuerats till användaren behandlas enheten som kompatibel och inga åtkomstbegränsningar tillämpas.
+    -   Villkorlig åtkomst baserad på åtkomstkontroll för nätverk
 
-När en enhet inte uppfyller de angivna villkoren leds slutanvändaren genom en process för att registrera enheten och åtgärda de problem som gör att enheten inte är kompatibel.
+    -   Villkorlig åtkomst baserad på enhetsrisk
+
+    -   Villkorlig åtkomst för Windows-datorer
+
+        -   Företagsägd
+
+        -   BYOD (Bring Your Own Device)
+
+-   **Appbaserad villkorlig åtkomst**
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Skapa en princip för villkorlig åtkomst för Exchange On-premises](conditional-access-exchange-create.md)
-
-[Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-
+[Vanliga sätt att använda villkorlig åtkomst på med Intune](conditional-access-intune-common-ways-use.md)

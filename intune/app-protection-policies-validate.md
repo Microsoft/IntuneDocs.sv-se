@@ -1,7 +1,7 @@
 ---
 title: Verifiera appskyddsprinciper
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Detta avsnitt beskriver hur du kan testa och validera om din appskyddsprincip är korrekt konfigurerad och fungerar som förväntat."
+titleSuffix: Intune on Azure
+description: "Det här ämnet beskriver hur du kan testa och validera om din appskyddsprincip är korrekt konfigurerad och fungerar som förväntat.”"
 keywords: 
 author: NathBarn
 ms.author: nathbarn
@@ -15,21 +15,18 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 26e191965eff482cf97b920e028cdf60d1881d32
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ddfecbcd8709569ff177e6c7021d3e8fdab39290
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Hur du validerar inställningen av din appskyddsprincip
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Det här avsnittet innehåller information om hur du felsöker problem när du har konfigurerat en appskyddsprincip. Dessa anvisningar gäller appskyddsprinciper i **förhandsversion** av Intune Azure.
+Det här avsnittet innehåller information om hur du felsöker problem när du har konfigurerat en appskyddsprincip. Den här vägledningen gäller för appskyddsprinciper i Azure-portalen.
 
 ### <a name="checking-for-symptoms"></a>Söka efter problem
 Det är inte troligt att användarna rapporterar dessa fel eftersom appskyddet är ett verktyg för att skydda data. Om det finns ett problem med konfigureringen av appskyddet har användaren obegränsad åtkomst, vilket användaren även skulle ha utan appskydd, och användaren är inte medveten om felet. Därför rekommenderar vi att du verifierar din appskyddskonfiguration genom att testa appskyddsprinciperna med en liten grupp användare som avsiktligt kan testa appskyddsbegränsningarna.
@@ -61,4 +58,3 @@ Om testningen visar att appskyddsprincipen inte fungerar som förväntat rekomme
 ### <a name="see-also"></a>Se även
 
 [Vad är appskyddsprincip i Intune?](app-protection-policies.md)
-
