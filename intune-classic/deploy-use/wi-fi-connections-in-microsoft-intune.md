@@ -1,5 +1,5 @@
 ---
-title: Wi-Fi-anslutningar | Microsoft Docs
+title: Wi-Fi-anslutningar
 description: "Använd Wi-Fi-profiler för att hjälpa användarna att ansluta till trådlösa nätverk."
 keywords: 
 author: lleonard-msft
@@ -14,15 +14,12 @@ ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 65fe17c42921d2c53153dca386ea40b9dea47d04
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 9b99762dfc8e527fc845755365a09fab8a0d3a0c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurera enheter för att ansluta till företagets trådlösa nätverk
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,7 +43,7 @@ Du kan distribuera Wi-Fi-profiler till följande plattformar:
 
 -   Android 4.0 och senare
 
--    Android for Work   
+-   Android for Work   
 
 -   iOS 8.0 och senare
 
@@ -181,4 +178,3 @@ Dessa tabeller visar detaljerad information för de säkerhetsinställningar som
 
 ### <a name="see-also"></a>Se även
 Läs om hur du skapar en Wi-Fi-profil med en i förväg delad nyckel i [Wi-Fi-profil med i förväg delad nyckel](pre-shared-key-wi-fi-profile.md).
-

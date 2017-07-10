@@ -1,5 +1,5 @@
 ---
-title: Skydda e-post och Office 365 | Microsoft Docs
+title: Skydda e-post och Office 365
 description: "I det här avsnittet beskrivs hur du kan använda villkorlig åtkomst för att endast tillåta att kompatibla enheter får åtkomst till e-post och företagsdata i SharePoint Online och andra tjänster."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c564d292-b83b-440d-bf08-3f5b299b7a5e
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: fc89c1b5b502f00bab5ed02f6e7df6422241aeb1
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 3405671130a58aa944d6c689264379a254face1d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-access-to-email-office-365-and-other-services-with-microsoft-intune"></a>Skydda åtkomsten till e-post, Office 365 och andra tjänster med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -51,7 +48,7 @@ Microsoft Intune och Azure Active Directory (Azure AD) fungerar sömlöst med va
 
 - Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sidan med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
-Se även till att de användare som du vill använda villkorliga åtkomstprinciper för har [tilldelats Azure AD Premium- eller EMS-licenser](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4.md).
+Se även till att de användare som du vill använda villkorliga åtkomstprinciper för har [tilldelats Azure AD Premium- eller EMS-licenser](/intune/licenses-assign).
 
 ### <a name="device-compliance-settings"></a>Enhetskompatibilitetsinställningar
 
@@ -83,4 +80,3 @@ Till skillnad från andra Intune-principer kan principer för villkorlig åtkoms
   - [Skapa en princip för villkorlig åtkomst för SharePoint Online](restrict-access-to-sharepoint-online-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för Skype för företag – Online](restrict-access-to-skype-for-business-online-with-microsoft-intune.md)
   - [Skapa en princip för villkorlig åtkomst för Dynamics CRM Online](restrict-access-to-dynamics-crm-online-with-microsoft-intune.md)
-

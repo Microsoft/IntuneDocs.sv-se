@@ -1,5 +1,5 @@
 ---
-title: "Brandväggsprinciper för Windows-datorer | Microsoft Docs"
+title: "Brandväggsprinciper för Windows-datorer"
 description: "Intune hjälper dig att skydda dina hanterade datorer med Intune-klienten på många olika sätt, till exempel att konfigurera inställningar för Windows-brandväggen."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: d96fd3cf4d8963f1e79ef4ed27c1b826c8893b5f
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 13ec6a424c3665e48938315d4af11cc986a83339
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Hjälp till att skydda Windows-datorer med principer för Windows-brandväggen i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune hjälper dig att skydda dina hanterade Windows-datorer med Intune-klienten på många olika sätt. Ett sätt är att tillhandahålla principer som gör att du kan konfigurera inställningar för Windows-brandväggen på datorer.
 
 Om du inte har installerat Intune-klienten på dina Windows-datorer än läser du [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -135,4 +135,3 @@ Du kan konfigurera undantag som tillåter specifika typer av nätverkstrafik att
 
 ### <a name="see-also"></a>Se även
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-

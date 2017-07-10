@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 2b2c86a46c671d35551a8485b5b1a70674168ac5
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="your-password-does-not-meet-your-it-admins-requirements"></a>Ditt lösenord uppfyller inte din IT-administratörs krav
 
 Lösenordet som du använder för att komma åt företags- eller skolresurser uppfyller inte ett eller flera krav som IT-administratören har konfigurerat. Åtgärda problemet genom att följa anvisningarna som visas på enheten. Beskrivningar av problemen visas nedan.
@@ -51,4 +47,3 @@ Beskrivningar av problem relaterade till PIN-koder eller lösenord:
 - **Lösenordet är inte tillräckligt komplext för att uppfylla kraven**. IT-administratören kräver att du använder mer komplexa tecken i lösenordet. Pröva att använda tecken som siffror och versaler och symboler som $, % och #. Detta kan också gälla andra konton på enheten, så tänk på att kontrollera andra arbetskonton för att säkerställa att lösenordet uppfyller kraven som konfigurerats av administratören för din enhet.
 
 Kontakta IT-administratören om du har problem med att skapa ett lösenord som uppfyller kraven. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

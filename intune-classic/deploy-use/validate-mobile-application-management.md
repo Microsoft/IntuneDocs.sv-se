@@ -1,5 +1,5 @@
 ---
-title: Verifiera din MAM-konfiguration | Microsoft Doc
+title: Verifiera din MAM-konfiguration
 description: "Detta avsnitt beskriver hur du kan testa och verifiera om din MAM-princip är korrekt konfigurerad och fungerar som förväntat."
 keywords: 
 author: andredm7
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ms.reviewer: joglocke
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ab04c85d6704d7011cc5d4ea2a9f83d78b5b73e3
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 1e22be7b238cce195ee88c938b1cca009c0b21d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="validating-your-mobile-application-management-setup"></a>Verifiera din konfiguration för hantering av mobilprogram
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -50,7 +47,7 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 ### <a name="what-to-do"></a>Vad bör jag göra
 Åtgärder som kan vidtas baserat på användarens status:
 
-- Om användaren inte är licensierad för MAM tilldelar du en Intune-licens till användaren enligt beskrivningen i [Hantera Intune-licenser](..\get-started\start-with-a-paid-subscription-to-microsoft-intune.md).
+- Om användaren inte är licensierad för MAM tilldelar du en Intune-licens till användaren enligt beskrivningen i [Hantera Intune-licenser](/intune/setup-steps).
 - Om användaren inte är licensierad för O365 skaffar du en licens för användaren.
 - Om en användares app har status **Inte incheckad** kontrollerar du om MAM-principen för appen är korrekt konfigurerad.
 - Se till att dessa villkor används för alla användare som du vill att MAM-principerna ska gälla för.
@@ -59,4 +56,3 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 [Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](..\deploy-use\get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 [Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](..\deploy-use\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
-

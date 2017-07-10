@@ -1,5 +1,5 @@
 ---
-title: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Microsoft Intune | Microsoft Docs"
+title: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Microsoft Intune"
 description: "Registrera dig för och konfigurera en 30-dagars kostnadsfri utvärderingsversion av Microsoft Intune."
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 619a1d11-3d22-4635-8f70-770eba3e1712
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 560765fa9d9afa4a1050515e1b2304c998f8c158
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ffa07d5e36abc8686cedd600123494180c286011
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/23/2017
 Den här artikeln tar dig igenom registreringsproceduren för en utvärderingsversion av Intune och hjälper dig att förbereda utvärderingsversionen med några användare, så att du sedan kan följa den associerade utvärderingsguiden om du vill se hur Intune hanterar mobila enheter. <!---or app data when devices are not enrolled in Intune.--->
 
 >[!Note]
-> Från och med december 2016 övergår Microsoft Intune till Azure-portalen, och vissa registreringar för kostnadsfri utvärderingsversion kommer att finnas i Intune i Azure-portalen och vissa finns i klassiska Intune. Om din utvärderingsversion finns i Azure-portalen kommer du att tycka att [förhandsgranskningsinnehåll för Intune Azure](/intune/what-is--intune) är mer användbart efter att du har slutfört stegen i den här artikeln.
+> Från och med december 2016 övergår Microsoft Intune till Azure-portalen, och vissa registreringar för kostnadsfri utvärderingsversion kommer att finnas i Intune i Azure-portalen och vissa finns i klassiska Intune. Om din utvärderingsversion finns i Azure-portalen kommer du att tycka att [förhandsgranskningsinnehåll för Intune Azure](/intune/what-is-intune) är mer användbart efter att du har slutfört stegen i den här artikeln.
 
 ## <a name="assumptions"></a>Antaganden
 I den här registrerings- och utvärderingsguiden förutsätter vi att du använder utvärderingsversionen i utvärderingssyfte och vill börja med en ren miljö när du prenumererar.
@@ -41,7 +38,7 @@ Du kan göra allt i utvärderingsversion som du kan göra i en prenumerationsver
 ## <a name="sign-up-for-your-trial"></a>Registrera dig för din utvärderingsversion
 Besök sidan för [Intune-registrering](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) och fyll i registreringsformuläret för en utvärderingsprenumeration.
 
-Om du har ett arbets- eller skolkonto och vill använda det för din Intune-utvärderingsversion av följer du [de här inloggningsanvisningarna](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-1) i stället. I den här artikeln och utvärderingen förutsätts det att du inte använder något sådant konto.
+Om du har ett arbets- eller skolkonto och vill använda det för din Intune-utvärderingsversion av följer du [de här inloggningsanvisningarna](/intune/account-sign-up) i stället. I den här artikeln och utvärderingen förutsätts det att du inte använder något sådant konto.
 
 > [!TIP]
 > Om de flesta av dina IT-åtgärder och användare använder ett annat språk än du gör, vill du kanske ange detta språk för testversionen för att kunna testa prestanda.
@@ -56,7 +53,7 @@ Om din utvärderingsversion finns i **Azure-portalen** går du till https://port
 ## <a name="add-users"></a>Lägg till användare
 Innan du lämnar Office 365 Administrationscenter för att gå till Intune måste du lägga till några användare till ditt utvärderingskonto.
 
-I Office 365 Administrationscenter kan du lägga till användare individuellt eller i grupp genom att ladda upp en .csv-fil. Vi konfigurerar din utvärderingsversion genom att göra båda sakerna. I din produktionsmiljö vill du dock förmodligen utnyttja dina Azure Active Directory-användarkonton, vilket du kan läsa mer om i guiden [Komma igång](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-3) och i avsnittet [Nästa steg](#Next-steps) i den här artikeln.
+I Office 365 Administrationscenter kan du lägga till användare individuellt eller i grupp genom att ladda upp en .csv-fil. Vi konfigurerar din utvärderingsversion genom att göra båda sakerna. I din produktionsmiljö vill du dock förmodligen utnyttja dina Azure Active Directory-användarkonton, vilket du kan läsa mer om i guiden [Komma igång](/intune/users-permissions-add) och i avsnittet [Nästa steg](#next-steps) i den här artikeln.
 
 ### <a name="add-an-individual-user"></a>Lägg till en enskild användare
 1. Välj ett av alternativen för att lägga till en användare. Då öppnas ett formulär där du kan skapa en användare. Endast de objekt som är markerade med en asterisk (\*) är obligatoriska.
@@ -110,8 +107,8 @@ Om du vill gå från Intune tillbaka till Office 365 Administrationscenter välj
 
 ![Bild av länk tillbaka till Office 365-administratörscenter](./media/sign-up/task-add-users.png)
 
-### <a name="intune-azure-preview"></a>Förhandsversion av Intune Azure
-Det finns tre portaler som du använder för förhandsversionen av Intune Azure:
+### <a name="intune-on-azure"></a>Intune på Azure
+Det finns tre portaler som du använder för Intune Azure:
 - Administrationscentret för Office 365 ([portal.office.com](https://portal.office.com))
 - Intune-instrumentpanelen i Azure ([portal.azure.com](https://portal.azure.com))
 - Den klassiska Intune-administratörskonsolen ([manage.microsoft.com](https://manage.microsoft.com))
@@ -138,8 +135,8 @@ Om du vill gå från Intune tillbaka till Office 365-administratörscentret skri
 ### <a name="classic-intune"></a>Klassisk Intune
 Utvärderingsscenario: [Utvärdera mobilenhetshantering i Microsoft Intune](mobile-device-management-trial-guide-microsoft-intune.md)
 
-### <a name="intune-azure-preview"></a>Förhandsversion av Intune Azure
-Läs mer om [Förhandsgranskning av Intune i Azure-portalen](/intune/what-is-intune)
+### <a name="intune-on-azure"></a>Intune på Azure
+Läs mer om [Intune på Azure](/intune/what-is-intune)
 
 ### <a name="integration-with-other-products"></a>Integrering med andra produkter
 Lär dig mer om hur du kan använda dina Azure Active Directory-användarkonton med Intune:
@@ -148,4 +145,3 @@ Lär dig mer om hur du kan använda dina Azure Active Directory-användarkonton 
 - [Multifaktorautentiseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
 Läs mer om hur du kan använda [Intune med System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
-

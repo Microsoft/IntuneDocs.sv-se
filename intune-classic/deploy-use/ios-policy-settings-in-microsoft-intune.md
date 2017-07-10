@@ -1,5 +1,5 @@
 ---
-title: "iOS-principinställningar | Microsoft Docs"
+title: "iOS-principinställningar"
 description: "Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3a59391aaf241e52f59bb3ff5de3eae84c496c51
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ba270c2bb8780db6bc230022446f982b81f8a2ee
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Principinställningar för iOS i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -88,7 +85,7 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt att hanterade appar synkroniserar data till iCloud**|Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konto.|
 |**Tillåt Handoff för att fortsätta med aktiviteter på en annan enhet**|Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller Mac OS X-enhet.|
 |**Tillåt iCloud-bilddelning**|Ställ in på **Nej** för att inaktivera **iCloud-bilddelning** på enheten.|
-|**Tillåt iCloud-bildbibliotek**|Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.    Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.|
+|**Tillåt iCloud-bildbibliotek**|Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.   Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.|
 
 ### <a name="application-settings-for-the-browser"></a>Programinställningar för webbläsaren
 Alla inställningar gäller för iOS 8.0 och senare.
@@ -387,4 +384,3 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 
 ### <a name="see-also"></a>Se även
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
-

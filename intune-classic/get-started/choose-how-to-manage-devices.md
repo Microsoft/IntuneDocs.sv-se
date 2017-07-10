@@ -1,5 +1,5 @@
 ---
-title: "Välj hur du vill hantera enheter | Microsoft Docs"
+title: "Välj hur du vill hantera enheter"
 description: "Läs om de olika sätten att registrera och hantera enheter."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: 770aad50-fd7a-4cf1-a793-f95fe47fc3f8
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: dfd79323c7db53cb3291f729878bcd1d36f93fe7
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 0dbe387ee6b8130e3dc64323f89b38e868087dfe
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="choose-how-to-manage-devices"></a>Välj hur du vill hantera enheter
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -48,12 +45,11 @@ Du får mest funktioner om du registrerar Windows-datorerna. Intune-klientprogra
 - Endpoint Protection och Windows-brandväggen
 - Fjärrhjälp till användare med programmet TeamViewer
 
-En detaljerad lista över de hanteringsfunktioner som du får tillgång till med respektive metod finns i avsnittet om [hanteringsfunktioner för mobila enheter](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
-Information om vilka enheter och datorer som Intune stöder finns i [Mobila enheter och datorer som stöds](/intune-classic/get-started/what-to-know-before-you-start-microsoft-intune#intune-supported-devices).
+En detaljerad lista över de hanteringsfunktioner som du får tillgång till med respektive metod finns i [Mobile device managem/intune/supported-devices-browserssoft-intune).
+Information om vilka enheter och datorer som Intune stöder finns i [Mobila enheter och datorer som stöds](/intune/supported-devices-browsers#intune-supported-devices).
 
 ## <a name="next-steps"></a>Nästa steg
 
 - [Välj hur du vill registrera mobila enheter](/intune-classic/get-started/choose-how-to-enroll-devices1)
 - [Hantera Windows-datorer med Intune-klientprogramvara](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune)
 - [Exchange ActiveSync-hantering av mobila enheter med Microsoft Intune](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune).
-

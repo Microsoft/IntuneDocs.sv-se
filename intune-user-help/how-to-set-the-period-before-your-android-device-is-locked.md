@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 98034875-cd3a-4367-a8d7-c5d4a438d496
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: af2625387e6d2d454200e851ce5e64f8eb5607c7
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Så här ställer du in hur lång tid det tar innan Android-enhetens skärmlås aktiveras
 
 För att återansluta till ditt arbete måste du ange tidsgränsen för lösenord på enheten genom att följa anvisningarna nedan för din typ av enhet.
@@ -47,4 +43,3 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 2.  Välj en tidsgräns för lösenord.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

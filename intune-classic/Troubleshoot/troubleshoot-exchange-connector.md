@@ -1,5 +1,5 @@
 ---
-title: "Felsöka Exchange Connector | Microsoft Docs"
+title: "Felsök Exchange Connector"
 description: "Felsöka problem med Intune Exchange Connector."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: c5cb5465-fd8e-4524-83b9-ccdf3393b6dc
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ad0519145b6cc7c837490892089c18bf20e08d57
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ebcbcbc36c925b3c3d9600eb9a5039b70d7e056d
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="troubleshoot-the-exchange-connector"></a>Felsöka Exchange Connector
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -54,4 +51,3 @@ Kontrollera att Exchange Connector synkroniserar med Exchange-servern. Det gör 
 
 ### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
-

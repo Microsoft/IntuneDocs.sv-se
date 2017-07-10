@@ -1,5 +1,5 @@
 ---
-title: Konfigurera MAM-principer i Intune-konsolen | Microsoft Docs
+title: Konfigurera MAM-principer i Intune-konsolen
 description: "Med hjälp av principer för hantering av mobilprogram i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: b4fb33a8-a2fa-4353-bd89-5bda48b68e83
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 65b2eb20aea4bbadba9d470590b6c344ac37b9f5
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ce97f18a799725a86ef3ab7f4f7c0cc8cdf8f062
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,11 +43,10 @@ Om du vill tillämpa begränsningar i en app måste den innehålla Microsoft Int
 
 -   **Använda en principhanterad app**. En principhanterad app har en inbyggd App SDK. Om du vill lägga till den här typen av app måste ange du en länk till appen från en appbutik som iTunes eller Google Play. Ingen ytterligare bearbetning krävs för den här typen av app. Mer information finns i [listan med appar som du kan använda med Microsoft Intunes hanteringsprinciper för mobilprogram](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
--   **Använda en omsluten app**. En omsluten app är en app som du paketerar på nytt för att inkludera App SDK med hjälp av Microsoft Intunes programhanteringsverktyg. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Du kan inte använda verktyget för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-ios-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md) och [Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](prepare-android-apps-for-mobile-application-management-with-the-microsoft-intune-app-wrapping-tool.md).
+-   **Använda en omsluten app**. En omsluten app är en app som du paketerar på nytt för att inkludera App SDK med hjälp av Microsoft Intunes programhanteringsverktyg. Det här verktyget används vanligtvis för att bearbeta företagsappar som har skapats internt. Du kan inte använda verktyget för att bearbeta appar som har hämtats från App Store. Mer information finns i [Förbereda iOS-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](/intune/app-wrapper-prepare-ios) och [Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg](/intune/app-wrapper-prepare-android).
 
-- **Skriv egna app som införlivar Intune App SDK**. Med Intunes App SDK kan du införliva apphanteringsfunktioner i en app när du skriver den. Mer information finns i [Översikt över Intune App SDK](/intune-classic/develop/intune-app-sdk).
-
-Om du behöver hjälp med att välja mellan Intunes programhanteringsverktyg och Intune App SDK läser du [Förbereda appar för hantering av mobilprogram med Microsoft Intune](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+- **Skriv egna app som införlivar Intune App SDK**. Med Intunes App SDK kan du införliva apphanteringsfunktioner i en app när du skriver den. Mer information finns i [Översikt över Intune App SDK](/intune/app-sdk).
+/intune/apps-prepare-mobile-application-management Om du behöver hjälp med att välja mellan Intunes programhanteringsverktyg och Intune App SDK läser du [Förbereda appar för hantering av mobilprogram med Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 
 Vissa hanterade appar, t.ex. Outlook-appen för iOS och Android, stöder *flera identiteter*. Detta innebär att Intune tillämpar hanteringsinställningar endast för företagskonton eller data i appen.
 
@@ -197,4 +193,3 @@ I de fall där enheten eller användaren får två motstridiga principer, gälle
 -   Om principen redan har distribuerats till enheten kommer befintliga principinställningar inte att skrivas över.
 
 -   Om ingen princip har distribuerats till enheten och två motstridiga inställningar distribueras, används standardinställningen som är inbyggd i enheten.
-

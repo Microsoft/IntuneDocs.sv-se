@@ -1,5 +1,5 @@
 ---
-title: "Tillåtna och blockerade appar för KNOX | Microsoft Docs"
+title: "Lista över tillåtna och blockerade appar för KNOX"
 description: "Anpassad profil för att skapa en lista över tillåtna och blockerade appar för KNOX."
 keywords: 
 author: robstackmsft
@@ -14,14 +14,11 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 933a47163ccc66a1bab636982ca422c4a704656d
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
-
+ms.openlocfilehash: b215425534e833db7e92e3f60fc507a168ef576f
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Använda anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter
 
@@ -43,9 +40,9 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX S
     
     - **Inställningsnamn.** Ange **PreventStartPackages**.
     - **Beskrivning av inställning.** Ange en valfri beskrivning (valfritt), till exempel ”lista över appar som har blockerats från att köras”.
-    -     **Datatyp.** Välj **Sträng** i listrutan.
-    -     **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -     **Värde.** Ange en lista över de appaketnamn som du vill blockera. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+    -   **Datatyp.** Välj **Sträng** i listrutan.
+    -   **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+    -   **Värde.** Ange en lista över de appaketnamn som du vill blockera. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
     För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
 
@@ -74,4 +71,3 @@ När du väljer en distribuerad princip visas ytterligare information om distrib
 
 ### <a name="see-also"></a>Se även
 [Inställningar för Android- och Samsung KNOX-principer i Microsoft Intune](android-policy-settings-in-microsoft-intune.md)
-

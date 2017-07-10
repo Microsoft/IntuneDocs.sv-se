@@ -1,5 +1,5 @@
 ---
-title: "Kom åt företagets e-post med hjälp av e-postprofiler | Microsoft Docs"
+title: "Ha åtkomst till företagets e-post med hjälp av e-postprofiler"
 description: "Inställningar för e-postprofiler kan användas för att konfigurera åtkomstinställningar för e-post för specifika e-postklienter på mobila enheter."
 keywords: 
 author: robstackmsft
@@ -14,15 +14,12 @@ ms.assetid: 10f0cd61-e514-4e44-b13e-aeb85a8e53ae
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 21eee53a4e3674dc28b01311a61dda0d71f9f7fa
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 87bf5c96ee29f8a39b875543c4f6a3731f3e604e
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune"></a>Konfigurera åtkomst till företagets e-post med hjälp av e-postprofiler med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -36,11 +33,11 @@ Om du behöver vidta ytterligare åtgärder mot dataförlust (DLP) kan du använ
 IT-administratörer eller användare kan också välja att installera alternativa e-postklienter, t.ex. Microsoft Outlook för Android eller iOS. Dessa e-postklienter stöder inte e-postprofiler och kan inte konfigureras med hjälp av e-postprofiler i Microsoft Intune.  
 
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
--    Windows Phone 8.1 och senare
--    Windows 10 (för datorer), Windows 10 Mobile, och senare
--    iOS 8.0 och senare
--    Samsung KNOX Standard (4.0 och senare)
--    Android for Work (e-postappar från tredje part, den inbyggda e-postappen finns bara i den personliga profilen)
+-   Windows Phone 8.1 och senare
+-   Windows 10 (för datorer), Windows 10 Mobile, och senare
+-   iOS 8.0 och senare
+-   Samsung KNOX Standard (4.0 och senare)
+-   Android for Work (e-postappar från tredje part, den inbyggda e-postappen finns bara i den personliga profilen)
 
 Förutom att konfigurera ett e-postkonto på enheten kan du ställa in hur många e-postmeddelanden som ska synkroniseras och, beroende på enhetstypen, vilka innehållstyper som ska synkroniseras.
 
@@ -85,7 +82,7 @@ Lösenordet finns inte i e-postprofilen. Användarna måste ange detta när de a
 
     -   **E-postprofil (Android for Work – Gmail)**
 
-    -    **E-postprofil (Android for Work – Nine Work)**
+    -   **E-postprofil (Android for Work – Nine Work)**
 
     Du kan bara skapa och distribuera en princip för anpassad e-postprofil. Rekommenderade inställningar är inte tillgängliga.
 
@@ -133,4 +130,3 @@ En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Pr
 > - För Android for Work distribuerar du även Gmail- eller Nine Work-apparna, förutom lämplig e-postprofil.
 > - Om du vill ta bort en e-postprofil från en enhet, redigera distributionen och ta bort alla grupper där enheten är medlem. Observera att du inte kan ta bort en e-postprofil på det här sättet om det är den enda e-postprofilen på en enhet.
 > - Om du gör ändringar i en e-postprofil som du tidigare distribuerat, kan användarna få ett meddelande som ber dem att godkänna omkonfigurationen av deras e-postinställningar.
-
