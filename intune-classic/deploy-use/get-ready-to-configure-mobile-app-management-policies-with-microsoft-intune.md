@@ -1,5 +1,5 @@
 ---
-title: "Krav för MAM-principer | Microsoft Docs"
+title: "Krav för MAM-principer"
 description: "I det här avsnittet beskrivs förutsättningar för hur du konfigurerar användare innan du skapar hanteringsprinciper för mobilappar."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3c209a350a7de7ba7ddb71468c5cd4230dcf5423
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 67c261a3a31229f84d02d4536ab78857369391f1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Förbereda konfigurationen av appskyddsprinciper på Azure-portalen
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -70,7 +67,7 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 
 * **Verksamhetsspecifika appar:** Du måste förbereda dessa appar så att de integrerar Intune App SDK innan du kan tillämpa appskyddsprinciper.
 
-  * För enheter som hanteras av Intune, se [Besluta hur du ska förbereda appar för MAM](decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune.md).
+  * För enheter som hanteras av Intune, se [Besluta hur du ska förbereda appar för MAM](/intune/apps-prepare-mobile-application-management).
 
   * Mer information om enheter som inte hanteras (t.ex. personalägda enheter) eller om enheter som hanteras av en annan lösning för hantering av mobila enheter finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
@@ -109,4 +106,3 @@ Globala administratörer har åtkomst till [Azure Portal](https://portal.azure.c
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-

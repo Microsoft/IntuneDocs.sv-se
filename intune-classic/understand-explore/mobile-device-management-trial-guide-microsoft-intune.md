@@ -1,5 +1,5 @@
 ---
-title: "Utvärdera mobilenhetshantering i Microsoft Intune | Microsoft Docs"
+title: "Utvärdera mobilenhetshantering i Microsoft Intune"
 description: "Utvärdera MDM i din kostnadsfria utvärderingsversion av Intune."
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 47806f69-303d-41d9-9b0e-9b9445ea24ac
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e0eb48c5bb2e0158d7b780af1c16139f10602c4e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: adef9335d8f199e8dec56e92eb1fda8c180ac6ce
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="evaluate-mobile-device-management-in-microsoft-intune"></a>Utvärdera mobilenhetshantering i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -44,7 +41,7 @@ Du kan göra allt i utvärderingsversion som du kan göra i en prenumerationsver
 ## <a name="whats-not-covered"></a>Vad som inte ingår
 |Om du är intresserad av |Läs detta |
 |------------------------|----------|
-|MDM i en icke-testmiljö | [Komma igång](/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune) |
+|MDM i en icke-testmiljö | [Komma igång](/intune/setup-steps) |
 |MDM med Intune och System Center Configuration Manager | [Hantering av hybridmobilenheter](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
 
 Eftersom guiderna ovan hjälper dig att konfigurera Intune i produktionsmiljöer, så är de längre, och innehåller många fler beslutspunkter, än utvärderingsguiden.
@@ -67,7 +64,7 @@ Kunder som vill använda Intune med System Center Configuration Manager för att
 Vi konfigurerar Intune som MDM-auktoritet för utvärderingsversionen. Detta påverkar inte din produktionsmiljö såvida du inte vill använda utvärderingsversionen för din produktionsmiljö.
 
 1. I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Admin** &gt; **Hantering av mobila enheter**.
-2. Välj **Ange MDM-auktoritet** i listan **Uppgifter** . Dialogrutan **Ange MDM-auktoritet** öppnas. <!---screen shot--->
+2. Välj **Ange MDM-auktoritet** i listan **Uppgifter** . Dialogrutan **Ange MDM-auktoritet** öppnas.
 3. Intune begär bekräftelse på att du vill ha Intune som MDM-utfärdare. Markera kryssrutan och välj sedan **Ja** om du vill hantera mobila enheter med Intune.
 
 ## <a name="enroll-your-test-devices-into-intune"></a>Registrera dina testenheter i Intune
@@ -80,14 +77,14 @@ Installera appen **Intune Company Portal** från Microsoft Corporation, som finn
 Innan användarna kan registrera sina iOS-enheter, måste du konfigurera Intune för att hantera dessa enheter.
 
 1. **Hämta en certifikatsigneringsbegäran**<br/>
-Logga in till Intune med ditt administratörskonto och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj sedan **Hämta begäran om APN-certifikat**. Spara begäran om certifikatsignering (.csr) lokalt. CSR-filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen. <!--- screen shot--->
-2.    **Hämta ett certifikat för Apple Push Notification Service**<BR/>
+Logga in till Intune med ditt administratörskonto och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj sedan **Hämta begäran om APN-certifikat**. Spara begäran om certifikatsignering (.csr) lokalt. CSR-filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.
+2.  **Hämta ett certifikat för Apple Push Notification Service**<BR/>
 Gå till [Apple Push-certifikatprofilen](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) och logga in med ditt företags Apple-ID för att skapa APN-certifikatet med hjälp av CSR-filen. När du har valt **Överför** på Apple Push-certifikatportalen får du en JSON-fil som inte kan användas för APN. Slutför hämtningen, gå tillbaka till Apple Push-certifikatportalen, leta upp Certifikat för servrar från tredje part och klicka på **Hämta**.<br/>
 Hämta APN-certifikatet (.pem) och spara filen lokalt. Det här Apple-ID:t måste användas senare för att förnya ditt APN-certifikat.
-3.    **Lägg till APN-certifikatet i Intune**<BR/>
+3.  **Lägg till APN-certifikatet i Intune**<BR/>
 Öppna Microsoft Intune-administratörskonsolen och gå till **Administration** > **Hantering av mobila enheter** > **iOS och Mac OS X** > **Överför ett APN-certifikat** och välj **Överför APN-certifikatet**. Gå till certifikatfilen (.pem), välj **Öppna** och ange ditt Apple-ID. Med APN-certifikatet. Intune kan registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter.
-4.    **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
-Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) och [Registrera din Mac OS X-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-mac-os-x). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
+4.  **Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurser.**<br/>
+Registreringsinstruktioner för slutanvändare finns i [Registrera din iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) och [Registrera din Mac OS X-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos). Registreringsprocessen förklarar för användarna vad de kan förvänta sig och vad IT-administratörer kan och inte kan se på deras enheter.
 
 
 ### <a name="learn-more-about-device-enrollment"></a>Läs mer om enhetsregistrering
@@ -98,25 +95,14 @@ Intune stöder följande enhetsplattformar:
 
 Kraven för att aktivera enhetshanteringen beror på vilka plattformar du vill hantera.
 - Med mobila **Android**-enheter kan användarna [registrera sig med hjälp av företagsportalsappen](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) som finns i Google Play. Det krävs ingen ytterligare konfiguration i Intune.
-- [Installationskrav för **iOS och Mac OS X**]/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
-- [Installationskrav för **Windows Phone**]/intune-classic/deploy-use/set-up-windows-phone-management-with-microsoft-intune).
+- [Konfigurera kraven för **iOS och Mac OS X**](/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)
 
-<!--- ## Verify enrollment--->
-<!--- START HERE
-
-### iOS and Mac OS X
-Install the **Microsoft Intune Company Portal** app from Microsoft Corporation available in the App Store and sign in with Intune user credentials added above. View **Enrolled devices** to add your device.
+- [Konfigurera kraven för **Windows Phone**](/intune-classic/deploy-use/set-up-windows-phone-8.0-management-with-microsoft-intune).
 
 
 
-### Windows Phone 8.1
-Users install the **Company Portal** app from Microsoft Corporation, available in the Windows Phone store, and sign in with the Intune user credentials added above.  View **Enrolled devices** to add your device.
-
-## Install the previously deployed app
-Open the Company Portal on the mobile device, choose **Apps**, and then install **Microsoft Skype**.--->
 
 
 
 ## <a name="next-steps"></a>Nästa steg
 [Organisera användare och enheter genom att skapa grupper](get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-

@@ -11,22 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ed4a9f15-72fb-4171-84cb-63d2f1a6d04c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 6d18e7c2fc0e0aff071b60f5a51238897c56b247
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-to-install-your-companys-virtual-private-network-vpn"></a>Så här installerar du företagets VPN (Virtual Private Network)
 
 Om din IT-administratör har konfigurerat ett VPN-program så att du kan ansluta till företagets resurser ser du ett meddelande på Android-enheten som anger att du måste installera en VPN-app. Installera VPN-appen genom att följa dessa steg:
@@ -39,4 +34,3 @@ Om din IT-administratör har konfigurerat ett VPN-program så att du kan ansluta
 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

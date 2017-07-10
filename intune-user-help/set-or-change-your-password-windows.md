@@ -11,19 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="make-your-device-safer-with-the-right-password"></a>Gör din enhet säkrare med rätt lösenord
 
 Åtkomst till företagets resurser, t.ex e-post och dokument, är något som personer behöver ha varje dag från sina Windows-enheter. Din organisation vill säkerställa att din enhet gör detta på ett säkert sätt. Ett sätt att kontrollera att enheten har säker åtkomst till dessa resurser är att kräva ett enheterna ska använda lösenord. Dessa lösenord används exempelvis för att komma åt enheten från låsskärmen.
@@ -49,4 +45,3 @@ Om din Windows-enhet inte följer IT-administratörens lösenordsprincip visas e
 4. Välj **Klar**.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

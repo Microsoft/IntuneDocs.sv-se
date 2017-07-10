@@ -1,11 +1,11 @@
 ---
-title: Kategorisera enheter med gruppmappning av enheter | Microsoft Docs
+title: Kategorisera enheter med enhetsgruppmappning
 description: "Använd mappning av enhetsgrupp i Microsoft Intune för att gruppera enheter i kategorier som du definierar för att göra det enklare att hantera dessa enheter."
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/26/2016
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,12 @@ ms.assetid: 8b8c06a3-6b6c-4cf1-8646-b24fa9b1a39e
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 618827ed6baf7a9dec6aef804f19bcbca08ed39f
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: ff136d430496392b6ca8e5b944820fe9e14553d3
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategorisera enheter med gruppmappning av enheter i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -32,7 +30,7 @@ Mappning av enhetsgrupp använder följande arbetsflöde:
 1. Skapa kategorier som användare väljer från när de registrerar sina enheter
 2. Du skapar grupper eller använder befintliga grupper för varje kategori som du vill använda. Beroende på vilken version av Intune som du använder ska dessa antingen vara Intune-grupper eller Azure Active Directory-säkerhetsgrupper.
 2. Du konfigurerar regler som mappar den kategori som du valt åt enhetsgruppen du skapat.
-3. När slutanvändare registrerar sina enheter måste de välja en kategori från de listan över kategorier som du har konfigurerat. Efter att de har valt läggs enheten automatiskt till i motsvarande grupp som du har skapat. Om en enhet redan har registrerats kommer användaren uppmanas att välja en kategori nästa gång de öppnar appen i företagsportalen.
+3. När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. Om de vill tilldela en kategori till en Windows-enhet, måste slutanvändare använda företagsportalen (se **När du har konfigurerat enhetsgrupper** i det här ämnet för mer information).
 4. Du kan sedan distribuera principer och appar för dessa grupper.
 
 Du kan skapa vilken typ av enhetskategori som du vill, till exempel:
@@ -86,8 +84,13 @@ Till exempel (**device.deviceCategory - eq** "<*enhetskategorinamnet som du fick
 
 ## <a name="after-you-configure-device-groups"></a>När du har konfigurerat enhetsgrupper
 
-När användare registrerar sina enheter får de se en lista med de kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
+När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
+
+Om de vill tilldela en kategori till en Windows-enhet, måste slutanvändare använda företagsportalen (portal.manage.microsoft.com) efter att de registrerat enheten. Gå in på webbplatsen på en Windows-enhet och gå till **Meny** > **Mina enheter**. Välj en registrerad enhet som listas på sidan och välj en kategori. 
+
+Efter att du har valt en kategori, läggs enheten automatiskt till i motsvarande grupp som du har skapat. Om en enhet redan är registrerad innan du konfigurerar kategorier, får slutanvändaren ett meddelande om enheten på företagsportalen och uppmanas att välja en kategori nästa gång de går in på företagsportalappen på iOS eller Android.
+
+
 
 ### <a name="see-also"></a>Se även
 [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md)
-

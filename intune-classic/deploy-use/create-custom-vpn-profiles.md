@@ -14,15 +14,12 @@ ms.assetid: 4c0bd439-3b58-420b-9a9a-282886986786
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 2ee20ce0b9f7794132c3a56046b1680f940b3424
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="custom-configurations-for-microsoft-intune-vpn-profiles"></a>Anpassade konfigurationer för VPN-profiler i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -167,4 +164,3 @@ Exempel:
 
 ### <a name="see-also"></a>Se även
 [VPN-anslutningar i Microsoft Intune](vpn-connections-in-microsoft-intune.md)
-

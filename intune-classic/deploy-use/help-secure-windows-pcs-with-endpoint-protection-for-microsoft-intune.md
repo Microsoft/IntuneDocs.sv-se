@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection för Windows-datorer| Microsoft Docs"
+title: "Endpoint Protection för Windows-datorer"
 description: "Skydda dina hanterade datorer med Endpoint Protection och få realtidsskydd mot skadlig kod."
 keywords: 
 author: nathbarn
@@ -14,16 +14,16 @@ ms.assetid: 002241bf-6cd0-4c75-a4f0-891ac7e6721a
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 180da5e2e0d6980214fff1cfffa3fb1d5b0058d3
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c51f9e471b432b13e0680538c5cf4ad68c1c12f1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Skydda Windows-datorer med Endpoint Protection för Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Microsoft Intune kan hjälpa dig att skydda dina hanterade datorer med Endpoint Protection som ger realtidsskydd mot skadlig kod, bibehåller uppdaterade definitioner för skadlig kod och skannar datorer automatiskt. Endpoint Protection innehåller dessutom verktyg som hjälper dig att hantera och övervaka angrepp från skadlig kod.
 
 Om du ännu inte har installerat Intune-klienten på dina datorer, se [Installera Windows PC-klienten med Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
@@ -192,4 +192,3 @@ Mer hjälp och support finns i [Felsöka slutpunktsskydd i Microsoft Intune](/in
 
 ### <a name="see-also"></a>Se även
 [Principer för att skydda Windows-datorer](policies-to-protect-windows-pcs-in-microsoft-intune.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Registrera iOS-enheter med installationsassistenten | Microsoft Docs
+title: Registrera iOS-enheter med installationsassistenten
 description: "Registrera företagsägda iOS-enheter med hjälp av Apple Configurator-verktyget för att återställa enheten till fabriksinställningarna och förbereda den för Installationsassistenten."
 keywords: 
 author: nathbarn
@@ -14,15 +14,12 @@ ms.assetid: 46e5b027-4280-4809-b45f-651a6ab6d0cd
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 12466562ea8431156e9644e63fda16231ac70f32
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 402b5b469b1536e9f2ea13948e45c9232baca458
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Registrera iOS-enheter med Apple Configurator med hjälp av Installationsassistenten
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -175,4 +172,3 @@ Enheterna är nu klara för företagets registrering. Stäng av enheterna och di
 
 ### <a name="see-also"></a>Se även
 [Förutsättningar för att registrera enheter](prerequisites-for-enrollment.md)
-

@@ -11,20 +11,16 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f720befe-a6f9-4422-aa9b-4d85c9fc94e2
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: f46a93d42427ea41adf71403c91fa95052c0bba2
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="fix-common-issues-with-your-android-device"></a>Åtgärda vanliga problem med din Android-enhet
 
 Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar din IT-administratör via kontaktinformationen på [Företagsportalens webbplats](http://portal.manage.microsoft.com).
@@ -45,4 +41,3 @@ Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtg�
 - [Enheten visas krypterad, men företagsportalens app säger något annat](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 - [Du uppmanas att installera en Device Threat Protection-app på din Android-enhet](you-are-prompted-to-install-mtd-android.md)
 - [Du måste åtgärda ett hot som en Device Threat Protection-app hittade på din Android-enhet](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-

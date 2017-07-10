@@ -11,21 +11,17 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 64cfbf02e54244457aeaefb84e3049350764c410
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="using-your-windows-device-with-intune"></a>Att använda din Windowsenhet med Intune
 
 Det finns ett antal saker som du kan göra med Intune som gör livet lite lättare. Här är en lista över de vanligaste sakerna som företaget kan be dig att göra.
@@ -57,4 +53,3 @@ Det finns några andra versioner av Windows, till exempel [Windows 10 Holographi
 - [Vad händer om du återställer en enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-windows.md)
 - [Synkronisera enheten manuellt](sync-your-device-manually-windows.md)
-

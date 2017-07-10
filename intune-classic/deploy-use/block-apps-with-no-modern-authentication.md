@@ -14,15 +14,12 @@ ms.assetid: 098b652c-01e0-45d1-a731-620b0d3dc7c1
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
 ms.openlocfilehash: 0f192c0e41cf3b639cbfdac3f8c4fc3b8167266d
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="block-apps-that-do-not-use-modern-authentication-adal"></a>Blockera appar som inte använder modern autentisering (ADAL)
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -45,4 +42,3 @@ Om du vill blockera åtkomst till de här apparna rekommenderar vi följande:
 
 ### <a name="see-also"></a>Se även
 [Tillåt endast appar som stöds av Intune att komma åt O365-tjänster](allow-policy-managed-apps-access-to-o365.md)
-

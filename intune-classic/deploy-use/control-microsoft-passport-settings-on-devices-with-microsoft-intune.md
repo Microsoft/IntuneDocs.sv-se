@@ -1,5 +1,5 @@
 ---
-title: "Kontrollera inställningarna för Windows Hello för företag på enheter | Microsoft Docs"
+title: "Kontrollera Windows Hello för företagsinställningar på enheter"
 description: "Läs om hur Intune kan integreras med Windows Hello för företag, en alternativ inloggningsmetod som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort."
 keywords: 
 author: lleonard-msft
@@ -14,15 +14,12 @@ ms.assetid: 402bc5a1-ada3-4c4c-a0de-292d026b4444
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9a223f7fb1fd0736541da0d6a15ad5285241577a
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 7c4ac0b79e30283b90612c77acf1462a25bb6093
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="control-windows-hello-for-business-settings-on-devices-with-microsoft-intune"></a>Kontrollera inställningarna för Windows Hello för företag på enheter med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -83,4 +80,3 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 ## <a name="further-information"></a>Ytterligare information
 Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft.com/library/mt589441.aspx) i Windows 10-dokumentationen.
-

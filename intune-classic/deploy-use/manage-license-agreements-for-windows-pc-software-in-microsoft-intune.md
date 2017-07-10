@@ -1,5 +1,5 @@
 ---
-title: "Hantera licensavtal för datorer som kör Intune-klientprogrammet | Microsoft Docs"
+title: "Hantera licensavtal för datorer som kör Intune-klientprogrammet"
 description: "Med Intune kan du hantera licensavtal för programvara som köpts via Microsofts volymlicensieringsavtal och för programvara som köpts på annat sätt."
 keywords: 
 author: robstackmsft
@@ -14,16 +14,16 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 18fbeb0e5bbf46795a02590a8dce205342a3a357
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: afaeb5b1af35008e6aa778e4391cafeda979bdc0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
+
+[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+
 Med Microsoft Intune kan du lägga till och hantera licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan också göra detta för programvara från Microsoft eller andra företag som köpts på annat sätt. Du kan ordna informationen i logiska grupper.
 
 > [!IMPORTANT]
@@ -181,4 +181,3 @@ Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licen
 |Byta namn på en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Redigera licensgrupp** på menyn **Aktiviteter** .|
 |Ta bort en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Ta bort licensgrupp** på menyn **Aktiviteter** . **Tips!** Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen **Otilldelade avtal**.|
 |Ta bort ett licensavtal|I arbetsytan **Licenser** väljer du ett avtal och sedan **Ta bort**. **Tips!** När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att välja **Uppdatera nu** på sidan **Licensöversikt** eller på fliken **Allmänt** för en viss licensgrupp.|
-

@@ -1,5 +1,5 @@
 ---
-title: "Skydda appdata med hanteringsprinciper för mobila appar (MAM) | Microsoft Docs"
+title: Skydda appdata med MAM-principer
 description: "I det här avsnittet beskrivs hur du kan använda hanteringsprinciper för mobila appar för att skydda dina företagsdata, förhindra dataförlust och hålla isär privat och arbetsrelaterad information."
 keywords: 
 author: andredm7
@@ -14,15 +14,12 @@ ms.assetid: ab6cd622-b738-4a63-9c91-56044aaafa6d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9959e9f757e83c7aa4274b7e7b9df949fff022cc
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/31/2017
-
-
+ms.openlocfilehash: 40a6badf072c254f635a2656189d626e4f13a320
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Skydda appdata med appskyddsprinciper med Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -38,8 +35,8 @@ Du kan konfigurera appskyddsprinciper för appar som körs på enheter som:
 
 -   **Har registrerats i en MDM-lösning från tredje part:** Enheter i den här kategorin är vanligtvis företagsägda enheter.
 
-      > [!NOTE]
-      > Vi rekommenderar inte att du använder appskyddsprinciper med tredjepartslösningar för hantering av mobila program eller säkra behållare.
+    > [!NOTE]
+    > Vi rekommenderar inte att du använder appskyddsprinciper med tredjepartslösningar för hantering av mobila program eller säkra behållare.
 
 -   **Inte har registrerara i någon MDM-lösning:** Enheter i den här kategorin är vanligtvis personalägda enheter som inte hanteras eller som inte har registrerats i Intune eller någon annan MDM-lösning.
 
@@ -135,4 +132,3 @@ Om en användare t.ex. startar appen OneDrive med sitt arbetskonto kan hen inte 
 - [Bli redo att konfigurera appskyddsprinciper](get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
 - [Skapa och distribuera appskyddsprinciper med Microsoft Intune](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md)
-

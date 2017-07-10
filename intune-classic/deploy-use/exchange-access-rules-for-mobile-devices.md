@@ -14,15 +14,12 @@ ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: a57b1f51fabfdc8896ecbb5bfbe6422f40672b18
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="exchange-access-rules-for-mobile-devices"></a>Exchange-åtkomstregler för mobila enheter
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -59,4 +56,3 @@ Följande procedur beskriver hur du skapar en anpassad regel:
 1. Välj **Princip** &gt; **Exchange ActiveSync** på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com).
 
 2.  Välj **Lägg till regel** i listan **Plattformsundantag** och skapa sedan en anpassad regel. Välj **Spara**.
-

@@ -1,26 +1,24 @@
 ---
-title: Intune-ordlista | Microsoft Docs
+title: Intune-ordlista
 description: "Lär dig om terminologin i Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 11/17/2016
+ms.date: 06/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
+ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 43b6dbfc004e8687eaf2a0ee185728136f457bfc
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: be3b078edc4e133fb586bb9476ba1dd770d0f389
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -29,10 +27,17 @@ ms.lasthandoff: 05/23/2017
 
 |||
 |-|-|
-|App SDK|[Microsoft Intune App-SDK](/intune-classic/develop/intune-app-sdk) låter dig lägga till funktioner till dina egenprogrammerade appar som gör det möjligt för dem att hanteras av Intunes principer för hantering av mobila program.|
-|Apphanteringsverktyg|Ett [kommandoradsprogram](/intune-classic/deploy-use/decide-how-to-prepare-apps-for-mobile-application-management-with-microsoft-intune) som skapar en omslutning runt en branschspecifik app, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram.|
+|Appkonfigurationsprofil|Konfigurerar en iOS-app med [specifika inställningar](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) innan den körs.|
+|Appdistribution|Låter användare [hitta, ladda ned och installera](/intune-classic/deploy-use/deploy-apps) de appar de behöver.|
+|Appövervakning|Låter dig [granska senaste status och aktiviteter](/intune-classic/deploy-use/monitor-apps-in-microsoft-intune) relaterad till appdistribution.|
+|Borttagningsåtgärd för appskyddsdata|[Tar bort appdata](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) från användarens enhet.|
+|Appskyddsprincip|Säkerställer att användarens appar är kompatibla med [företagets dataskyddsprinciper](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune).|
+|Apprapportering|Låter dig [granska historiska data](/intune-classic/deploy-use/understand-microsoft-intune-operations-by-using-reports) om appens distributionsstatus och aktivitet.|
+|App SDK|[Microsoft Intune App-SDK](/intune/app-sdk) låter dig lägga till funktioner till dina egenprogrammerade appar som gör det möjligt för dem att hanteras av Intunes principer för hantering av mobila program.|
+|Appens avinstallationsåtgärd|Låter dig [avinstallera appar](/intune-classic/deploy-use/deploy-apps) från användarnas enheter.|
+|Apphanteringsverktyg|Ett [kommandoradsprogram](/intune/apps-prepare-mobile-application-management) som skapar en omslutning runt en branschspecifik app, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram.|
 |Tillgänglig installation|När du distribuerar en app med den här åtgärden visas den i företagsportalen och användare kan [installera den på begäran](/intune-classic/deploy-use/deploy-apps).|
-|Azure Portal|En ny konsol för Intune som snart kommer att introduceras. För tillfället kan du använda Azure Portal för att skapa [Intune MAM policies](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies) (MAM-principer för Intune) för enheter.|
+|Azure Portal|Den nya konsolen för Intune som snart kommer att introduceras. [Läs mer om den nya portalen](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
 |||
@@ -56,7 +61,7 @@ ms.lasthandoff: 05/23/2017
 |-|-|
 |distribution|Att skicka en app eller en princip till en enhet eller användare som du hanterar.|
 |Distributionsåtgärd|En åtgärd som du utför när du [distribuerar en app](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune). Du kan välja att göra installationen av appen obligatoriskt, valfri, och du kan även välja att avinstallera appen.|
-|Hanterare av enhetsregistrering|Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. [Kontot för enhetsregistreringshanteraren /intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) är ett särskilt Intune-konto som kan användas för att registrera upp till 1 000 enheter.|
+|Hanterare av enhetsregistrering|Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för [enhetsregistreringshanteraren (DEM)](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune) är ett särskilt Intune-konto som kan registrera upp till 1 000 enheter.|
 |Mappning av enhetsgrupp|Hjälper dig att [automatically add devices to groups](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune) (automatiskt lägga till enheter till grupper) baserat på en kategori för enheten (till exempel "Personlig" eller "Försäljning") som du eller slutanvändaren kan tilldela enheten.|
 
 ## <a name="e"></a>E
@@ -64,7 +69,7 @@ ms.lasthandoff: 05/23/2017
 |-|-|
 |E-postprofil|Den här principen kan användas för att konfigurera [email access settings](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) (åtkomstinställningar för e-post) för specifika e-postklienter på mobila enheter och minimera hur mycket slutanvändarna själva måste konfigurera.|
 |EMS|Microsoft Enterprise Mobility + Security (tidigare Enterprise Mobility Suite) skyddar företagets data och låter användarna att [få åtkomst till apparna och det innehåll som de behöver](https://www.microsoft.com/cloud-platform/enterprise-mobility).|
-|Slutanvändare|[Användare av enheter som telefoner och datorer](/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune) som du hanterar med Intune.|
+|Slutanvändare|[Användare av enheter som telefoner och datorer](/intune/end-user-educate) som du hanterar med Intune.|
 |Registrera|Microsoft Intune använder [registrering](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) för att hantera enheter och tillåta åtkomst till resurser.|
 
 ## <a name="f"></a>F
@@ -99,8 +104,8 @@ ms.lasthandoff: 05/23/2017
 |||
 |-|-|
 |Hanterad webbläsare|Ett [webbläsningsprogram](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies) som du kan distribuera i din organisation med Microsoft Intune. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.|
-|Hantering av mobila program|[Med Hantering av mobilprogram /intune-classic/deploy-use/overview-of-app-lifecycle-in-microsoft-intune) kan du publicera, skicka via push-teknik, konfigurera, skydda, övervaka och uppdatera mobila appar för dina användare.
-|Hantering av mobila enheter|[Med Hantering av mobila enheter /intune-classic/deploy-use/overview-of-device-lifecycle-in-microsoft-intune) kan du registrera enheter i Intune så att du kan etablera, konfigurera, övervaka och vidta åtgärder med dessa enheter.
+|Hantering av mobila program|[MAM (Moblie Application Management)](/intune/app-lifecycle) låter dig att publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
+|Hantering av mobila enheter|[MDM (Mobile Device Management)](/intune/device-lifecycle)låter dig att registrera enheter i Intune så att du kan etablera, konfigurera, övervaka och utföra åtgärder på enheterna.
 |MDM-utfärdare|[MDM-utfärdaren](/intune-classic/deploy-use/get-ready-to-enroll-devices-in-microsoft-intune) definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune.|
 |Etableringsprincip för mobilappar|En iOS-princip som hjälper dig att se till att [etableringsprofilerna](/intune-classic/deploy-use/ios-mobile-app-provisioning-profiles) för iOS-appar som du distribuerar inte upphör att gälla.|
 |Konfigurationsprincip för mobilappar|En iOS-princip som används för att [tillhandahålla inställningar för kompatibla iOS-appar](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) när de körs, till exempel, ett företagsnamn eller en serveradress.|
@@ -148,4 +153,3 @@ ms.lasthandoff: 05/23/2017
 |||
 |-|-|
 |Wi-Fi-profil|En princip som distribuerar [inställningar för trådlösa nätverk](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) till enheter för att låta användare att ansluta till företagets nätverk utan att behöva känna till eller konfigurera några inställningar.
-

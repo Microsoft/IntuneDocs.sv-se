@@ -14,15 +14,12 @@ ms.assetid: d2989e39-9b76-411b-b6fb-7209adb3bfb6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.custom: intune-classic EXPIERIMENT
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 7d1e5fb629aaac768aefabad90caf98fc1cee37a
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="choose-how-to-enroll-mobile-devices"></a>Välj hur du vill registrera mobila enheter
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -39,4 +36,3 @@ Dina svar på dessa frågor hjälper dig att avgöra den bästa registreringsmet
 - **Användarägda enheter** – BYOD-registrering (Bring your own device) – användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.  
 
 - **Företagsägda enheter** – Företagsägda enheter (COD, Company-owned devices) kan registreras på en rad olika sätt beroende på organisationens behov och vilka typer av enheter som hanteras.
-

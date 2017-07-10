@@ -1,5 +1,5 @@
 ---
-title: "Massregistrering för Windows 10 | Microsoft Docs"
+title: "Massregistrering för Windows 10"
 description: "Skapa ett massregistreringspaket för Microsoft Intune"
 keywords: 
 author: NathBarn
@@ -13,12 +13,11 @@ ms.technology:
 ms.assetid: 0053e37a-f26e-452f-9524-5039a635b52e
 ms.reviewer: damionw
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 027f2ff4e822f7800405bd0f318afe28a47c5a00
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: ab52ba70403da5192cd3539dfd6d1e64bd79268c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -48,19 +47,19 @@ Massregistrering av Windows-enheter kräver följande:
   - **Projektmapp** – Där det nya projektet ska sparas
   - **Beskrivning** – En valfri beskrivning av projektet ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-name.png)
 
-4.    Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.<BR>
+4.  Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.<BR>
 ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-device.png)
 
-5.    Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om detta inte är konfigurerat krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
+5.  Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om detta inte är konfigurerat krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
 ![Skärmbild över att aktivera Wi-Fi, inklusive nätverks-SSID och nätverkstyper i Windows Configuration Designer-appen](../media/bulk-enroll-network.png)
 
-6.    Välj **Registrera i Azure AD**, ange ett datum i **Förfallodatum för masstoken** och välj sedan **Hämta masstoken**.
+6.  Välj **Registrera i Azure AD**, ange ett datum i **Förfallodatum för masstoken** och välj sedan **Hämta masstoken**.
 ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-account.png)
 
 7. Ange dina Azure AD-autentiseringsuppgifter för att kunna hämta en masstoken.
 ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](../media/bulk-enroll-cred.png)
 
-8.    Klicka på **Nästa** när **Masstoken** har hämtats.
+8.  Klicka på **Nästa** när **Masstoken** har hämtats.
 
 9. Du kan också **Lägga till program** och **Lägga till certifikat**. Dessa appar och certifikat är konfigurerade på enheten.
 
@@ -88,4 +87,3 @@ Konfigurationen är avsedd att användas på nya Windows-enheter. Konfigurations
 
 - Ett konfigurationspaket som försöker ansluta till en Active Directory-domän eller Azure Active Directory-klient som inte skapar ett lokalt konto, kan innebära att enheten inte kan nås om domänanslutningen misslyckas på grund av bristande nätverksanslutning.
 - Skript som körs av konfigurationspaketet körs i systemkontexten, och kan komma att ändra enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en fabriksåterställning av enheten.
-

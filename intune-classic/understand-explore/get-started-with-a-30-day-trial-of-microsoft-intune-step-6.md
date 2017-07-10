@@ -1,5 +1,5 @@
 ---
-title: "Andra alternativ och tillägg till Intune-utvärderingsprenumerationer | Microsoft Docs"
+title: "Andra alternativ och tillägg till Intune-utvärderingsprenumerationer"
 description: "I det här avsnittet beskrivs aviseringar, meddelanden och rapporter samt allmänna Intune-funktioner som du behöver känna till när du registrerar dig för en kostnadsfri 30-dagars utvärderingsversion av Intune"
 keywords: 
 author: lindavr
@@ -13,15 +13,12 @@ ms.technology:
 ms.assetid: 170cd959-d35b-4129-ae60-117d7e881bc9
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3dcaf3ccc8c8581704351a19bce0a0ab57013040
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c0299b9bcb8c4cf35e2ddf60da428cc04bbdb4f0
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="other-options-and-extras-for-intune-evaluation-subscriptions"></a>Andra alternativ och tillägg till Intune-utvärderingsprenumerationer
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
@@ -46,16 +43,13 @@ Intune har flera olika funktioner utöver de som visas i den här korta genomgå
 
 -   **Kontrollera åtkomsten till företagsresurser.** Du kan distribuera certifikat, e-postprofiler, VPN-profiler och Wi-Fi-profiler till mobila enheter, vilket gör det lättare att snabbt konfigurera mobila enheter. Mer information finns i [Ge åtkomst till företagsresurser med Microsoft Intune](/intune-classic/Deploy-Use/enable-access-to-company-resources-with-microsoft-intune).
 
-Läs mer om alla funktioner i Intune i:
-- [Funktioner för hantering av registrerade enheter i Microsoft Intune](/intune-classic/get-started/mobile-device-management-capabilities-in-microsoft-intune)
-- [Windows-datorhanteringsfunktioner i Microsoft Intune](/intune-classic/get-started/windows-pc-management-capabilities-in-microsoft-intune)
+Mer information om alla funktioner i Intune finns i [registrerade funktioner för enhetshantering i Microsoft Intune](/intune-classic/get-started/mobile-device-management-capabilities-in-microsoft-intune).
 
-Mer information om funktioner som nyligen har introducerats i Intune finns i [Nyheter i Microsoft Intune](/intune-classic/Deploy-Use/whats-new-in-microsoft-intune).
+Mer information om funktioner som nyligen har introducerats i Intune finns i [Nyheter i Microsoft Intune](/intune-classic/whats-new/whats-new-in-microsoft-intune).
 
 Supportalternativen beskrivs i [Ta reda på hur du kan få support för Microsoft Intune](/intune-classic/Troubleshoot/how-to-get-support-for-microsoft-intune) och du kan delta i diskussioner om Intune i [Microsoft Intune-forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
 ## <a name="next-steps"></a>Nästa steg
-Läs om de [vanligaste sätten att använda Intune på](common-ways-to-use-intune.md)
+Läs om de [vanligaste sätten att använda Intune på](/intune/common-scenarios)
 
 Konvertera till en [betald prenumeration](get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
-
