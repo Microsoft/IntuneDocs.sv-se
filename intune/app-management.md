@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/16/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,14 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 515d4e2b089d077ec708fc1dea1e1747169a60ae
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
+# Vad är apphantering i Microsoft Intune?
+<a id="what-is-microsoft-intune-app-management" class="xliff"></a>
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,7 +37,8 @@ Dessutom kanske du vill tilldela och hantera appar på enheter som inte har regi
 
 Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du behöver, på de enheter som du önskar.
 
-## <a name="app-management-capabilities-by-platform"></a>Apphanteringsfunktioner efter plattform
+## Apphanteringsfunktioner efter plattform
+<a id="app-management-capabilities-by-platform" class="xliff"></a>
 
 ||||||
 |-|-|-|-|-|
@@ -56,11 +58,12 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 |Appar från en butik|Ja|Ja|Ja|Ja|
 |Uppdatera appar|Ja|Ja|Ja|Ja|
 
-<sup>1</sup> Överväg att använda [Windows Information Protection]windows-information-protection-configure.md) för att skydda appar på enheter som kör Windows 10.
+<sup>1</sup> Överväg att använda [Windows informationsskydd](windows-information-protection-configure.md) för att skydda appar på enheter som kör Windows 10.
 
 <sup>2</sup>Gäller endast enheter som hanteras med Intune.
 
-## <a name="how-to-get-started"></a>Komma igång
+## Komma igång
+<a id="how-to-get-started" class="xliff"></a>
 
 Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** som du kommer åt enligt följande:
 
@@ -70,7 +73,8 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
     ![Arbetsbelastningen mobilappar](./media/apps-workload.png)
 
-### <a name="manage"></a>Hantera
+### Hantera
+<a id="manage" class="xliff"></a>
 - **Appar** – Det är här du lägger till, tilldelar och övervakar de flesta av dina appar.
     - [Lägga till appar](apps-add.md)
     - [Tilldela appar](apps-deploy.md)
@@ -85,7 +89,8 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 - **Etableringsprofiler för iOS** – iOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla.
     - [iOS-appetableringsprofiler](app-provisioning-profile-ios.md)
 
-### <a name="monitor"></a>Övervakare
+### Övervakare
+<a id="monitor" class="xliff"></a>
 - **Licensierade appar** – Visa, tilldela och övervaka volyminköpta appar från appbutiker.
     - [Volyminköpta appar från Windows Store för företag](windows-store-for-business.md)
 - **Identifierade appar** – Visar alla appar som har tilldelats av Intune och installerats på en enhet.
@@ -94,7 +99,8 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
 Mer information finns i [Övervakning av appar](apps-monitor.md)
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
 - **Windows Store för företag** – Installationsintegrering till Windows Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser.

@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 12/27/2016
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,21 @@ ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ba270c2bb8780db6bc230022446f982b81f8a2ee
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8036dbbb6486d06fa46f7f96199055b9ca7a398c
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="ios-policy-settings-in-microsoft-intune"></a>Principinställningar för iOS i Microsoft Intune
+# Principinställningar för iOS i Microsoft Intune
+<a id="ios-policy-settings-in-microsoft-intune" class="xliff"></a>
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
 I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i iOS-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
-## <a name="general-configuration-policy-settings"></a>Generella inställningar för konfigurationsprinciper
+## Generella inställningar för konfigurationsprinciper
+<a id="general-configuration-policy-settings" class="xliff"></a>
 
 Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vill konfigurera inställningar för:
 
@@ -41,7 +43,8 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip** för iOS om du vil
 
 Om den inställning som du söker efter inte visas i det här avsnittet kan du eventuellt skapa den med hjälp av en anpassad iOS-princip med vilken du kan importera inställningar som du har skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12). Mer information finns i "Anpassade principinställningar" senare i det här avsnittet.
 
-### <a name="security-settings"></a>Säkerhetsinställningar
+### Säkerhetsinställningar
+<a id="security-settings" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -60,7 +63,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt fingeravtrycksupplåsning**|Tillåt att enheten kan låsas upp med ett fingeravtryck.|
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
-### <a name="system-settings"></a>Systeminställningar
+### Systeminställningar
+<a id="system-settings" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -73,7 +77,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt sändning av diagnostikdata**|Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.|
 |**Tillåt sparbok när låst**|Tillåt användare att komma åt appen Sparbok när enheten är låst.|
 
-### <a name="cloud-settings-for-documents-and-data"></a>Molninställningar för dokument och data
+### Molninställningar för dokument och data
+<a id="cloud-settings-for-documents-and-data" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -87,7 +92,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt iCloud-bilddelning**|Ställ in på **Nej** för att inaktivera **iCloud-bilddelning** på enheten.|
 |**Tillåt iCloud-bildbibliotek**|Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.   Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.|
 
-### <a name="application-settings-for-the-browser"></a>Programinställningar för webbläsaren
+### Programinställningar för webbläsaren
+<a id="application-settings-for-the-browser" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -99,7 +105,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt Java-skript**|Tillåt att Java-skript körs i webbläsaren.|
 |**Tillåt bedrägerivarning**|Tillåt bedrägerivarningar i webbläsaren.|
 
-### <a name="application-settings-for-apps"></a>Programinställningar för appar
+### Programinställningar för appar
+<a id="application-settings-for-apps" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -113,7 +120,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt användaren att betro nya företagsapputvecklare**|Låter användaren välja att lita på appar som inte laddats ned från App Store.|
 
 
-### <a name="application-settings-for-games"></a>Programinställningar för spel
+### Programinställningar för spel
+<a id="application-settings-for-games" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -121,7 +129,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt att Game Center-vänner läggs till**|Tillåt användaren att lägga till vänner i Game Center.|
 |**Tillåt spel för flera personer**|Tillåt användaren att spela spel för flera personer på enheten.|
 
-### <a name="application-settings-for-media-content"></a>Programinställningar för medieinnehåll
+### Programinställningar för medieinnehåll
+<a id="application-settings-for-media-content" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -131,7 +140,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt att användaren laddar ned innehåll från iBook-butiken som flaggats som ”Erotik”**|Tillåt att användare laddar ned böcker i kategorin Erotik.|
 
 
-### <a name="device-capabilities-settings-for-hardware"></a>Enhetskapacitetsinställningar för maskinvara
+### Enhetskapacitetsinställningar för maskinvara
+<a id="device-capabilities-settings-for-hardware" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -140,7 +150,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tvinga parkopplade Apple Watches att använda handledsavkänningen**|När den här inställningen är aktiverad visas meddelanden bara när användaren bär sin Apple Watch runt handleden.|
 |**Kräv ett kopplat lösenord för utgående AirPlay-begäranden**|Kräv ett kopplat lösenord när användaren använder AirPlay för att strömma innehåll till andra Apple-enheter.|
 
-### <a name="device-capabilities-settings-for-cellular"></a>Enhetskapacitetsinställningar för mobil
+### Enhetskapacitetsinställningar för mobil
+<a id="device-capabilities-settings-for-cellular" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -149,7 +160,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt datanätverksväxling**|Tillåt datanätverksväxling när enheten använder ett mobilnät.|
 |**Tillåt hämtning av global bakgrund under nätverksväxling**|Tillåt att enheten att hämtar data, till exempel e-post när den nätverksväxlar på ett mobilnät.|
 
-### <a name="device-capabilities-settings-for-features"></a>Enhetskapacitetsinställningar för funktioner
+### Enhetskapacitetsinställningar för funktioner
+<a id="device-capabilities-settings-for-features" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
@@ -160,7 +172,8 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Tillåt inte Airdrop från hanterade appar**|Hindrar hanterade appar från att kunna skicka data via Airdrop.|
 
 
-### <a name="settings-for-compliant-and-noncompliant-apps"></a>Inställningar för kompatibla och icke-kompatibla appar
+### Inställningar för kompatibla och icke-kompatibla appar
+<a id="settings-for-compliant-and-noncompliant-apps" class="xliff"></a>
 I listan över **kompatibla &amp; inkompatibla appar** skapar du en lista över kompatibla eller inkompatibla appar med hjälp av följande information:
 
 > [!NOTE]
@@ -177,7 +190,8 @@ I listan över **kompatibla &amp; inkompatibla appar** skapar du en lista över 
 
 Principer som innehåller inställningar för kompatibla och ej kompatibla program måste distribueras till användargrupper.
 
-### <a name="kiosk-mode-settings"></a>Helskärmsinställningar
+### Helskärmsinställningar
+<a id="kiosk-mode-settings" class="xliff"></a>
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
@@ -204,17 +218,20 @@ Principer som innehåller inställningar för kompatibla och ej kompatibla progr
 > -   Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) eller [Apples enhetsregistreringsprogram](ios-device-enrollment-program-in-microsoft-intune.md) för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 > -   Om iOS-appen som du anger har installerats efter det att du har distribuerat konfigurationsprincipen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
 
-### <a name="reference-information-for-compliant-and-noncompliant-apps"></a>Referensinformation för kompatibla och icke-kompatibla appar
+### Referensinformation för kompatibla och icke-kompatibla appar
+<a id="reference-information-for-compliant-and-noncompliant-apps" class="xliff"></a>
 
 Använd **Inkompatibilitetsrapporter för appar** för att visa kompatibiliteten för tillåtna och blockerade appar.
 
-##### <a name="to-run-the-noncompliant-apps-report"></a>Så här kör du Inkompatibilitetsrapporter för appar
+##### Så här kör du Inkompatibilitetsrapporter för appar
+<a id="to-run-the-noncompliant-apps-report" class="xliff"></a>
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Rapporter** &gt; **Inkompatibilitetsrapport för appar**.
 
 2.  Välj de enhetsgrupper du vill kontrollera, välj om du vill söka efter kompatibla appar, icke kompatibla appar eller båda och välj sedan **Visa rapport**.
 
-#### <a name="how-to-specify-urls-to-app-stores"></a>Så här anger du webbadresser till appbutiker
+#### Så här anger du webbadresser till appbutiker
+<a id="how-to-specify-urls-to-app-stores" class="xliff"></a>
 Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla appar eller i alternativet **Välj en hanterad app som kommer att kunna köras när enheten är i helskärmsläge** (endast iOS), använder du följande format:
 
 1. Använd en sökmotor för att hitta den app du vill använda i iTunes App Store och öppna appens sida.
@@ -226,17 +243,20 @@ Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla a
 > [!NOTE]
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
-### <a name="enrollment-settings"></a>Registreringsinställningar
+### Registreringsinställningar
+<a id="enrollment-settings" class="xliff"></a>
 Alla inställningar gäller för iOS 8.0 och senare.
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
 |**Tillåt aktiveringslås när enheten är i övervakat läge**|Aktivera aktiveringslåset på övervakade iOS-enheter.|
 
-### <a name="supervised-mode-settings"></a>Inställningar för övervakat läge
+### Inställningar för övervakat läge
+<a id="supervised-mode-settings" class="xliff"></a>
 Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och senare i övervakat läge.
 
-### <a name="supervised-mode-settings-for-device-restrictions"></a>Inställningar för enhetsbegränsningar för övervakat läge
+### Inställningar för enhetsbegränsningar för övervakat läge
+<a id="supervised-mode-settings-for-device-restrictions" class="xliff"></a>
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
@@ -252,7 +272,8 @@ Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och sen
 |**Tillåt ändring av meddelandeinställningar**|Tillåt att användaren ändrar meddelandeinställningarna för enheten.|
 |**Tillåt ändring av bakgrundsbild**|Tillåt att användaren ändrar enhetens bakgrundsbild.|
 
-### <a name="supervised-mode-settings-for-feature-restrictions"></a>Inställningar för funktionsbegränsningar för övervakat läge
+### Inställningar för funktionsbegränsningar för övervakat läge
+<a id="supervised-mode-settings-for-feature-restrictions" class="xliff"></a>
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
@@ -266,7 +287,8 @@ Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och sen
 |**Tillåt tangentbord med stavningskontroll**|Tillåter stavningskontroll på enheten.|
 |**Tillåt kortkommandon**|Tillåter användning av kortkommandon.|
 
-### <a name="supervised-mode-settings-for-app-restrictions"></a>Inställningar för appbegränsningar för övervakat läge
+### Inställningar för appbegränsningar för övervakat läge
+<a id="supervised-mode-settings-for-app-restrictions" class="xliff"></a>
 
 |Inställningsnamn|Information|
 |----------------|--------------------|
@@ -283,7 +305,8 @@ Du kan konfigurera följande inställningar på enheter som kör iOS 8.0 och sen
 |**Tillåt Game Center**|Tillåt att Game Center-appen används.|
 
 
-### <a name="show-or-hide-apps"></a>Visa eller dölja appar
+### Visa eller dölja appar
+<a id="show-or-hide-apps" class="xliff"></a>
 
 Med **listan över dolda och visade appar** kan du styra följande på övervakade enheter som kör iOS 9.3 eller senare:
 
@@ -291,7 +314,8 @@ Med **listan över dolda och visade appar** kan du styra följande på övervaka
 - Ange en lista över appar som användare kan visa och starta. Inga andra appar kan visas eller startas.
 
 
-#### <a name="how-to-create-a-hidden-or-shown-app-list"></a>Så här skapar du en lista över dolda eller visade appar
+#### Så här skapar du en lista över dolda eller visade appar
+<a id="how-to-create-a-hidden-or-shown-app-list" class="xliff"></a>
 
 Ange följande inställningar.
 
@@ -305,49 +329,50 @@ Ange följande inställningar.
 |**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
 |**Ta bort**|Tar bort den markerade appen från listan.|
 
-#### <a name="app-information-for-built-in-ios-apps"></a>Appinformation för inbyggda iOS-appar
+#### Appinformation för inbyggda iOS-appar
+<a id="app-information-for-built-in-ios-apps" class="xliff"></a>
 
 Med informationen i den här listan kan du identifiera namn, utgivare och paket-ID för de inbyggda iOS-appar som du kan välja att visa eller dölja. Om du vill visa eller dölja alla appar i listan kan du kopiera data till en textfil med filnamnstillägget **.csv** och sedan importera alla appar samtidigt med alternativet **Importera appar**.
 
 ```
-App Store,Apple,com.apple.AppStore
-Calculator,Apple,com.apple.calculator
-Calendar,Apple,com.apple.mobilecal
-Camera,Apple,com.apple.camera
-Clock,Apple,com.apple.mobiletimer
-Compass,Apple,com.apple.compass
-Contacts,Apple,com.apple.MobileAddressBook
-FaceTime,Apple,com.apple.facetime
-Find Friends,Apple,com.apple.mobileme.fmf1
-Find iPhone,Apple,com.apple.mobileme.fmip1
-Game Center,Apple,com.apple.gamecenter
-GarageBand,Apple,com.apple.mobilegarageband
-Health,Apple,com.apple.Health
-iBooks,Apple,com.apple.iBooks
-iTunes Store,Apple,com.apple.MobileStore
-iTunes U,Apple,com.apple.itunesu
-Keynote,Apple,com.apple.Keynote
-Mail,Apple,com.apple.mobilemail
-Maps,Apple,com.apple.Maps
-Messages,Apple,com.apple.MobileSMS
-Music,Apple,com.apple.Music
-News,Apple,com.apple.news
-Notes,Apple,com.apple.mobilenotes
-Numbers,Apple,com.apple.Numbers
-Pages,Apple,com.apple.Pages
-Photo Booth,Apple,com.apple.Photo-Booth
-Photos,Apple,com.apple.mobileslideshow
-Podcasts,Apple,com.apple.podcasts
-Reminders,Apple,com.apple.reminders
-Safari,Apple,com.apple.mobilesafari
-Settings,Apple,com.apple.Preferences
-Stocks,Apple,com.apple.stocks
-Tips,Apple,com.apple.tips
-Videos,Apple,com.apple.videos
-VoiceMemos,Apple,com.apple.VoiceMemos
-Wallet,Apple,com.apple.Passbook
-Watch,Apple,com.apple.Bridge
-Weather,Apple,com.apple.weather
+,com.apple.AppStore,App Store,Apple
+,com.apple.calculator,Calculator,Apple
+,com.apple.mobilecal,Calendar,Apple
+,com.apple.camera,Camera,Apple
+,com.apple.mobiletimer,Clock,Apple
+,com.apple.compass,Compass,Apple
+,com.apple.MobileAddressBook,Contacts,Apple
+,com.apple.facetime,FaceTime,Apple
+,com.apple.mobileme.fmf1,Find Friends,Apple
+,com.apple.mobileme.fmip1,Find iPhone,Apple
+,com.apple.gamecenter,Game Center,Apple
+,com.apple.mobilegarageband,GarageBand,Apple
+,com.apple.Health,Health,Apple
+,com.apple.iBooks,iBooks,Apple
+,com.apple.MobileStore,iTunes Store,Apple
+,com.apple.itunesu,iTunes U,Apple
+,com.apple.Keynote,Keynote,Apple
+,com.apple.mobilemail,Mail,Apple
+,com.apple.MapsMaps,Apple
+,com.apple.MobileSMS,Messages,Apple
+,com.apple.Music,Music,Apple
+,com.apple.news,News,Apple
+,com.apple.mobilenotes,Notes,Apple
+,com.apple.Numbers,Numbers,Apple
+,com.apple.Pages,Pages,Apple
+,com.apple.Photo-Booth,Photo Booth,Apple
+,com.apple.mobileslideshow,Photos,Apple
+,com.apple.podcasts,Podcasts,Apple
+,com.apple.reminders,Reminders,Apple
+,com.apple.mobilesafariSafari,Apple
+,com.apple.Preferences,Settings,Apple
+,com.apple.stocks,Stocks,Apple
+,com.apple.tips,Tips,Apple
+,com.apple.videos,Videos,Apple
+,com.apple.VoiceMemos,VoiceMemos,Apple
+,com.apple.Passbook,Wallet,Apple
+,com.apple.Bridge,Watch,Apple
+,com.apple.weather,Weather,Apple
 
 
 ```
@@ -355,26 +380,30 @@ Weather,Apple,com.apple.weather
 
 
 
-## <a name="custom-policy-settings"></a>Anpassade principinställningar
+## Anpassade principinställningar
+<a id="custom-policy-settings" class="xliff"></a>
 
 Använd Microsoft Intunes **anpassade princip för iOS** för att distribuera inställningar som du har skapat med hjälp av [Apple Configurator-verktyget](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12) till iOS-enheter. Med detta verktyg kan du skapa många inställningar som styr driften av dessa enheter och exportera dem till en konfigurationsprofil. Du kan sedan importera denna konfigurationsprofil till en anpassad princip för Intune iOS och distribuera inställningarna för användare och enheter i organisationen.
 
 Med den här funktionen kan du distribuera iOS-inställningar som inte kan konfigureras med allmänna konfigurationsprinciper för Intune.
 
-### <a name="prerequisites"></a>Förutsättningar
+### Förutsättningar
+<a id="prerequisites" class="xliff"></a>
 Innan du börjar måste du ha installerat Apple Configurator och skapat en konfigurationsfil som innehåller de inställningar som du vill distribuera till användare eller enheter. Du kan ladda ned och lära dig om Apple Configurator från [Mac App Store](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12).
 
 > [!NOTE]
 > Intune rapporterar inte efterlevnaden för enskilda inställningar i en anpassad princip för iOS. Dock rapporteras uppfyllande av principen som helhet.
 
-### <a name="general-settings"></a>Allmänna inställningar
+### Allmänna inställningar
+<a id="general-settings" class="xliff"></a>
 
 |Inställningsnamn|Information|
     |----------------|--------------------|
     |**Namn**|Ange ett unikt namn för en anpassad princip för iOS som hjälper dig att identifiera den i Intune-konsolen.|
     |**Beskrivning**|Ange en beskrivning som ger en översikt över en anpassad princip för iOS och annan relevant information som hjälper dig att hitta den.|
 
-### <a name="custom-settings"></a>Anpassade inställningar
+### Anpassade inställningar
+<a id="custom-settings" class="xliff"></a>
 
 |Inställningsnamn|Information|
     |----------------|--------------------|
@@ -382,5 +411,6 @@ Innan du börjar måste du ha installerat Apple Configurator och skapat en konfi
 |**Konfigurationsprofilfil**|Välj **Importera** och bläddra sedan till den konfigurationsprofil som du skapat med hjälp av Apple Configurator. **Obs!** Se till att de inställningar som du exporterar från verktyget Apple Configurator är kompatibla med iOS-versionen på de enheter som du distribuerar den anpassade iOS-principen till. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).|
     |**Information om konfigurationsprofilen**|Visa XML-koden för den konfigurationsprofil du har importerat.|
 
-### <a name="see-also"></a>Se även
+### Se även
+<a id="see-also" class="xliff"></a>
 [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)

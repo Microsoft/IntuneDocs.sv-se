@@ -16,19 +16,20 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8885b82cf452bcc6bb99efb1d7e7394706edac57
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b2af07817b15c2afd2d2674aa0c6d8a403147421
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="unenroll-your-ios-device-from-intune"></a>Avregistrera en iOS-enhet från Intune
+# Avregistrera en iOS-enhet från Intune
+<a id="unenroll-your-ios-device-from-intune" class="xliff"></a>
 
 När du avregistrerar din iOS-enhet från Intune kan enheten inte längre komma åt företagsresurser och hanteras inte längre av Intune.
 
 Använd följande instruktioner om du vill avregistrera enheten från Intune eller titta på denna video:
 
-<iframe width="675" height="379" src="https://www.youtube.com/embed/6UFtBrBWUUI" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/6UFtBrBWUUI]
 
 
 1.  Välj den enhet som du vill avregistrera under **Mina enheter** i företagsportalappen.

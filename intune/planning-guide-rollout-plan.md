@@ -14,17 +14,19 @@ ms.assetid: 3a63f78f-a7e7-4f44-9288-16b28d5d58ca
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b3f13dbc5abb8110627cfb39aa61040a977bf38
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9dda530be47b5449a9c1ed610d8e409fd62148d7
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
-# <a name="develop-a-rollout-plan"></a>Utveckla en distributionsplan
+# Utveckla en distributionsplan
+<a id="develop-a-rollout-plan" class="xliff"></a>
 
 Din distributionsplan identifierar de målgrupper för Intune-distributionen som du vill ha i organisationen, vilka tidsramarna ska vara för distributionen för respektive grupp och vilka registreringsmetoder som du vill använda.
 
-## <a name="targeted-groups-and-timeframes"></a>Målgrupper och tidsramar
+## Målgrupper och tidsramar
+<a id="targeted-groups-and-timeframes" class="xliff"></a>
 
 Granska först Intune-distributionens målgrupper som du identifierade i dina [användningsscenarier](planning-guide-scenarios.md).
 
@@ -36,17 +38,20 @@ Sedan bestämmer du tidsramen för respektive målgrupp. Den här uppgiften krä
 * Geografisk plats
 * Affärsrisk
 
-## <a name="rollout-phases"></a>Distributionsfaser
+## Distributionsfaser
+<a id="rollout-phases" class="xliff"></a>
 Organisationer väljer ofta att starta Intune-installationen med ett inledande pilottest som riktar in sig på en liten grupp användare på IT-avdelningen. Pilottestet kan utökas med ett större antal IT-användare och kan eventuellt även omfatta deltagare från andra organisationsgrupper.
 
-### <a name="pilot"></a>Pilot
+### Pilot
+<a id="pilot" class="xliff"></a>
 Den första fasen i distributionen ska vara ämnad för pilotanvändare. Pilotanvändarna bör informeras om att de är de första användarna i en ny lösning. De måste vara villiga att ge feedback som kan bidra till att förbättra konfiguration, dokumentation och meddelanden, vilket underlättar för övriga användare i senare installationsfaser. Dessa användare får inte vara företagsledare eller VIP-användare.
 
 Pilotdistributionen ger en bra möjlighet att testa nya [utmaningar](planning-guide-deployment-goals.md) och förfina de [krav](planning-guide-requirements.md) som du samlade in tidigare.
 
 Utnyttja din [kommunikationsplan](planning-guide-communication-plan.md), [supportplan](planning-guide-support-plan.md) och [testning och verifiering](planning-guide-test-validation.md) så att du kan lösa eventuella problem medan effekterna för användarna fortfarande är förhållandevis begränsade.
 
-### <a name="production-rollout"></a>Produktionsdistribution
+### Produktionsdistribution
+<a id="production-rollout" class="xliff"></a>
 Efter en lyckad pilotdistribution är du redo att påbörja en fullständig driftssättning för resterande grupper i organisationen. Några exempel på distributionsgrupper och faser:
 
 -   **Avdelningar** <br/>Varje avdelning kan vara en distributionsfas. Du har en hel avdelning i taget som mål. I den här typen av distribution tenderar alla användare på de olika avdelningarna att använda den mobila enheten på samma sätt och har åtkomst till samma program. Användarna har förmodligen samma typer av principer.
@@ -66,22 +71,26 @@ Följande är ett exempel på en Intune-distributionsplan som innehåller målgr
 | Produktionsdistributionsfas 3 |  |  |  | Personalavdelning (50 användare), ekonomi (40 användare), chefer (30 användare) |
 
 Du kan [ladda ned en mall för ovanstående tabell](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) och ange din organisations distributionsfaser.
-## <a name="match-rollout-groups-to-enrollment-approaches"></a>Matcha distributionsgrupper med registreringsmetoder
+## Matcha distributionsgrupper med registreringsmetoder
+<a id="match-rollout-groups-to-enrollment-approaches" class="xliff"></a>
 
 När du har fastställt målgrupper och tidsplaner för Intune-distributionen är nästa steg att välja den mest lämpliga Intune-registreringsmetoden för varje grupp. Du kan använda olika registreringsmetoder som t.ex.:
 * Självbetjäning för användare
 * Registrering med användarhjälp
 * IT-teknikmässa
 
-### <a name="user-self-service"></a>Självbetjäning för användare
+### Självbetjäning för användare
+<a id="user-self-service" class="xliff"></a>
 
 I det här fallet är det användarens ansvar att registrera sin egen enhet, vanligtvis enligt de registreringsanvisningar som IT-avdelningen tillhandahåller. Den här metoden används oftast i organisationer och är mer skalbar än registrering med användarhjälp.
 
-### <a name="user-assisted-enrollment"></a>Användarstödd registrering
+### Användarstödd registrering
+<a id="user-assisted-enrollment" class="xliff"></a>
 
 Detta kallas för assisterad metod. En medlem i IT-teamet hjälper användaren genom registreringsprocessen, antingen personligen eller via Skype. Den här metoden används vanligtvis för chefer och andra grupper som kan behöva mer hjälp vid registreringen.
 
-### <a name="it-tech-fair"></a>IT-teknikmässa
+### IT-teknikmässa
+<a id="it-tech-fair" class="xliff"></a>
 
 Ett annat alternativ för Intune-användarregistrering är att ha en IT-teknikmässa. Vid ett sådant evenemang ställer IT-gruppen upp ett bås för hjälp med Intune-registrering, där användarna kan få information om Intune-registrering, ställa frågor och få hjälp med registreringsprocessen. Det här alternativet kan vara fördelaktigt både för IT-gruppen och användarna, särskilt under tidiga faser av Intune-distributionen.
 
@@ -102,6 +111,7 @@ Här följer ett uppdaterat exempel på ovanstående Intune-distributionsplan. D
 | Självbetjäning |  |  |  | Personalavdelning, ekonomi |
 | Assisterad |  |  |  | Chefer |
 
-## <a name="next-section"></a>Nästa avsnitt
+## Nästa steg
+<a id="next-steps" class="xliff"></a>
 
 Nästa avsnitt innehåller råd om att [utveckla en kommunikationsplan för Intune-registreringen](planning-guide-communication-plan.md).

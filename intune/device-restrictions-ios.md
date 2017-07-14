@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,19 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 365b56082207c2110965681663432cce10f27c99
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7ec66c3864aae3d680c006ada95859df0e7f0e84
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
+# Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
+<a id="ios-device-restriction-settings-in-microsoft-intune" class="xliff"></a>
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="general"></a>Allmänt
+## Allmänt
+<a id="general" class="xliff"></a>
 -   **Kamera** – Ange om kameran på enheten får användas.   
 -   **Sändning av diagnostikdata** – Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.
 -   **FaceTime** -Tillåt att appen FaceTime får användas på enheten.
@@ -73,7 +75,8 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Apple News (endast övervakat)** – Tillåt att appen Apple News används.
 - **Ändra konfigurationsprofil** – Tillåt att användaren installerar konfigurationsprofiler.
 
-## <a name="password"></a>Lösenord
+## Lösenord
+<a id="password" class="xliff"></a>
 -   **Lösenord krävs** – Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
 -   **Enkla lösenord** – Tillåt enkla lösenord som 0000 och 1234.
 -   **Krav på lösenordstyp** – Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.
@@ -88,7 +91,8 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 
 <sup>1</sup> När du konfigurerar inställningarna **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
-## <a name="app-store-doc-viewing-gaming"></a>App Store, dokumentvisning, spel
+## App Store, dokumentvisning, spel
+<a id="app-store-doc-viewing-gaming" class="xliff"></a>
 
 
 -   **App Store (endast övervakat)** – Blockera åtkomst till App Store på övervakade enheter.
@@ -106,7 +110,8 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 -   **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
 -   **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
 
-## <a name="restricted-apps"></a>Begränsade appar
+## Begränsade appar
+<a id="restricted-apps" class="xliff"></a>
 
 Du kan konfigurera en av följande listor i listan med begränsade appar:
 
@@ -115,7 +120,8 @@ Listan **Godkända appar** – Ange de appar som användare tillåts att install
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Så här anger du webbadressen till appen i butiken
+### Så här anger du webbadressen till appen i butiken
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Om du vill ange en app-URL i applistan använder du följande format:
 
@@ -130,11 +136,13 @@ Exempel: Sök efter Microsoft Word för iPad. Webbadressen du använder är http
 
 
 
-### <a name="additional-options"></a>Ytterligare alternativ
+### Ytterligare alternativ
+<a id="additional-options" class="xliff"></a>
 
 Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.
 
-## <a name="show-or-hide-apps"></a>Visa eller dölja appar
+## Visa eller dölja appar
+<a id="show-or-hide-apps" class="xliff"></a>
 
 I listan för att visa eller dölja appar kan du konfigurera en av följande listor (kräver övervakade enheter som kör iOS 9.3 eller senare).
 
@@ -143,7 +151,8 @@ En lista över **synliga appar** – Ange en lista över appar som användarna s
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
 
-### <a name="how-to-specify-the-url-to-an-app-in-the-store"></a>Så här anger du webbadressen till appen i butiken
+### Så här anger du webbadressen till appen i butiken
+<a id="how-to-specify-the-url-to-an-app-in-the-store" class="xliff"></a>
 
 Om du vill ange en app-URL i applistan använder du följande format:
 
@@ -155,19 +164,22 @@ Exempel: Sök efter Microsoft Word för iPad. Webbadressen du använder är http
 > [!Note]
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
-### <a name="additional-options"></a>Ytterligare alternativ
+### Ytterligare alternativ
+<a id="additional-options" class="xliff"></a>
 
 Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över dolda eller synliga appar i samma format.
 
 
-## <a name="cellular"></a>Mobilnät
+## Mobilnät
+<a id="cellular" class="xliff"></a>
 -   **Dataroaming** – Tillåt dataroaming när enheten använder ett mobilnät.
 -   **Hämtning av global bakgrund under nätverksväxling** – Tillåt att enheten att hämtar data, t.ex. e-post, när den nätverksväxlar i ett mobilnät.
 -   **Röstsamtal** – Tillåt att röstsamtalsfunktionen används på enheten.
 -   **Röstroaming** – Tillåt att röstroaming används när enheten är ansluten till ett mobilnät.
 -   **Ändringar av inställningar för mobildataanvändning (endast övervakat)** – Tillåt användaren att kontrollera vilka appar som får använda mobildata.
 
-## <a name="cloud-and-storage"></a>Moln och lagring
+## Moln och lagring
+<a id="cloud-and-storage" class="xliff"></a>
 -   **Säkerhetskopiera till iCloud** – Tillåt användare att säkerhetskopiera enheten till iCloud.
 -   **Dokumentsynkronisering till iCloud (endast övervakat)** – Tillåt synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud.
 -   **Synkronisering av Bildström till iCloud** – Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkronisera till iCloud och vara tillgängliga på alla användarnas enheter.
@@ -177,11 +189,13 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 -   **Delad bildström** – Ställ in på **Nej** om du vill inaktivera **iCloud-bilddelning** på enheten.
 -   **Aktivitetsfortsättning** – Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller macOS-enhet (överlämning).
 
-## <a name="autonomous-single-app-mode-supervised-only"></a>Autonomt enkelt appläge (endast övervakat)
+## Autonomt enkelt appläge (endast övervakat)
+<a id="autonomous-single-app-mode-supervised-only" class="xliff"></a>
 
 Använd inställningarna för att konfigurera iOS-enheter så att de kör angivna appar i autonomt enkelt appläge. När det här läget är konfigurerat och appen körs kommer enheten att låsas så att den endast kan köra den appen. Ett exempel på detta är när du konfigurerar en app som gör att användarna kan genomföra ett test på enheten. När appens åtgärder har slutförts, eller om du tar bort principen, återgår enheten till sitt normala tillstånd.
 
-### <a name="settings"></a>Inställningar
+### Inställningar
+<a id="settings" class="xliff"></a>
 
 - **Appnamn** – Ange det namn på appen som kommer att visas i applistan på det här bladet.
 - **Appsamlings-id** – Ange samlings-ID för appen. Hjälp finns i **Referens till samlings-ID för inbyggda iOS-appar** i det här avsnittet.
@@ -191,54 +205,57 @@ När du har angett varje appnamn och appsamlings-ID väljer du **Lägg till** f�
 - **Importera** – Importera en fil med kommaavgränsade värden (.csv), som innehåller en lista med appnamn och deras associerade appsamlings-ID:n.
 - **Exportera** – Exportera appnamnen och associerade appsamlings-ID:n som du har konfigurerat, till en fil med kommaavgränsade värden (.csv).
 
-### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referens till samlings-ID för inbyggda iOS-appar
+### Referens till samlings-ID för inbyggda iOS-appar
+<a id="bundle-id-reference-for-built-in-ios-apps" class="xliff"></a>
 
 I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
 
-|||
-|-|-|
-|Appnamn|Appsamlings-ID|
-|Appbutik|com.apple.AppStore|
-|Kalkylator|com.apple.calculator|
-|Kalender|com.apple.mobilecal|
-|Kamera|com.apple.camera|
-|Klocka|com.apple.mobiletimer|
-|Kompass|com.apple.compass|
-|Kontakter|com.apple.MobileAddressBook|
-|FaceTime|com.apple.facetime|
-|Hitta vänner|com.apple.mobileme.fmf1|
-|Hitta iPhone|com.apple.mobileme.fmip1|
-|Spelcenter|com.apple.gamecenter|
-|GarageBand|com.apple.mobilegarageband|
-|Hälsa|com.apple.Health|
-|iBooks|com.apple.iBooks|
-|iTunes Store|com.apple.MobileStore|
-|iTunes U|com.apple.itunesu|
-|Keynote|com.apple.Keynote|
-|E-post|com.apple.mobilemail|
-|Kartor|com.apple.Maps|
-|Meddelanden|com.apple.MobileSMS|
-|Musik|com.apple.Music|
-|Nyheter|com.apple.news|
-|Anteckningar|com.apple.mobilenotes|
-|Siffror|com.apple.Numbers|
-|Sidor|com.apple.Pages|
-|Photo Booth|com.apple.Photo-Booth|
-|Foton|com.apple.mobileslideshow|
-|Poddsändningar|com.apple.podcasts|
-|Påminnelser|com.apple.reminders|
-|Safari|com.apple.mobilesafari|
-|Inställningar|com.apple.Preferences|
-|Aktier|com.apple.stocks|
-|Tips|com.apple.tips|
-|Videor|com.apple.videos|
-|VoiceMemos|com.apple.VoiceMemos|
-|Plånbok|com.apple.Passbook|
-|Titta på|com.apple.Bridge|
-|Väder|com.apple.weather|
+```
+,com.apple.AppStore,App Store,Apple
+,com.apple.calculator,Calculator,Apple
+,com.apple.mobilecal,Calendar,Apple
+,com.apple.camera,Camera,Apple
+,com.apple.mobiletimer,Clock,Apple
+,com.apple.compass,Compass,Apple
+,com.apple.MobileAddressBook,Contacts,Apple
+,com.apple.facetime,FaceTime,Apple
+,com.apple.mobileme.fmf1,Find Friends,Apple
+,com.apple.mobileme.fmip1,Find iPhone,Apple
+,com.apple.gamecenter,Game Center,Apple
+,com.apple.mobilegarageband,GarageBand,Apple
+,com.apple.Health,Health,Apple
+,com.apple.iBooks,iBooks,Apple
+,com.apple.MobileStore,iTunes Store,Apple
+,com.apple.itunesu,iTunes U,Apple
+,com.apple.Keynote,Keynote,Apple
+,com.apple.mobilemail,Mail,Apple
+,com.apple.MapsMaps,Apple
+,com.apple.MobileSMS,Messages,Apple
+,com.apple.Music,Music,Apple
+,com.apple.news,News,Apple
+,com.apple.mobilenotes,Notes,Apple
+,com.apple.Numbers,Numbers,Apple
+,com.apple.Pages,Pages,Apple
+,com.apple.Photo-Booth,Photo Booth,Apple
+,com.apple.mobileslideshow,Photos,Apple
+,com.apple.podcasts,Podcasts,Apple
+,com.apple.reminders,Reminders,Apple
+,com.apple.mobilesafariSafari,Apple
+,com.apple.Preferences,Settings,Apple
+,com.apple.stocks,Stocks,Apple
+,com.apple.tips,Tips,Apple
+,com.apple.videos,Videos,Apple
+,com.apple.VoiceMemos,VoiceMemos,Apple
+,com.apple.Passbook,Wallet,Apple
+,com.apple.Bridge,Watch,Apple
+,com.apple.weather,Weather,Apple
 
 
-## <a name="kiosk"></a>Helskärmsläge
+```
+
+
+## Helskärmsläge
+<a id="kiosk" class="xliff"></a>
 -   **Aktiveringslås** – Aktivera aktiveringslåset på övervakade iOS-enheter.
 -   **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
 -   **AssistiveTouch** – Aktivera eller inaktivera hjälpmedelsinställningen **AssistiveTouch** som hjälper användare att utföra gester på skärmen som annars kan vara svåra att utföra.
@@ -262,7 +279,8 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 > Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda Apple Configurator-verktyget eller Apples enhetsregistreringsprogram för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 >Om iOS-appen som du anger har installerats efter det att du har tilldelat profilen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
 
-## <a name="safari"></a>Safari
+## Safari
+<a id="safari" class="xliff"></a>
 -   **Safari (endast övervakat)** – Ange om webbläsaren Safari kan användas på enheten.
 -   **Autofyll** – Tillåt användare att ändra inställningarna för Autofyll i webbläsaren.
 -   **Cookies** – Tillåt webbläsaren att använda cookies.
@@ -271,18 +289,22 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 -   **Popup-fönster** – Aktivera eller inaktivera webbläsarens blockering av popup-fönster.
 
 
-## <a name="domains"></a>Domains
+## Domains
+<a id="domains" class="xliff"></a>
 
-### <a name="unmarked-email-domains"></a>Avmarkerade e-postdomäner
+### Avmarkerade e-postdomäner
+<a id="unmarked-email-domains" class="xliff"></a>
 
 I fältet **Webbadress till e-postdomän** lägger du till en eller flera webbadresser i listan. När användarna får ett e-postmeddelande från en annan domän än de som du har konfigurerat, kommer e-postmeddelandet att markeras som ej betrott i iOS e-postapp.
 
 
-### <a name="managed-web-domains"></a>Hanterade webbdomäner
+### Hanterade webbdomäner
+<a id="managed-web-domains" class="xliff"></a>
 
 I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här, anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner
+### Fyll i lösenord automatiskt på Safari-domäner
+<a id="safari-password-auto-fill-domains" class="xliff"></a>
 
 I fältet **Domänwebbadress** lägger du till en eller flera webbadresser i listan. Användarna kan bara spara webblösenord från webbadresser i den här listan. Den här inställningen gäller enbart för Safari-webbläsaren, samt för iOS 9.3 och senare enheter i övervakat läge. Om du inte anger någon webbadress, kan lösenorden sparas från alla webbplatser.

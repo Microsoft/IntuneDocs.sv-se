@@ -14,13 +14,14 @@ ms.assetid: fd8cb5f7-19f0-4d80-8825-2bafa49624af
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8806dc965653deaca5ab370c290403ae049e5c58
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 032427a9965f368d7be17339e3cbe5b426800347
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
-# <a name="determine-use-case-scenario-requirements"></a>Fastställa scenariokrav för användningsfall
+# Fastställa scenariokrav för användningsfall
+<a id="determine-use-case-scenario-requirements" class="xliff"></a>
 
 I det här avsnittet kommer att du fastställa kraven för varje organisationsgrupp inom varje användningsfall. Med den här processen kan du förbereda dig inför andra planeringsområden för Intune-distribution, t.ex. arkitektur och utformning, integration och distribution. Det kan också identifiera eventuella luckor och utmaningar gällande Intune-distributionsprojektet.
 
@@ -41,7 +42,8 @@ Följande är några exempel på krav för användningsfall i en organisation, s
 Du kan [ladda ned en mall för ovanstående tabell](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) där du kan ange din organisations krav för användningsfall och underanvändningsfall.
 
 
-## <a name="examples-of-requirements"></a>Exempel på krav
+## Exempel på krav
+<a id="examples-of-requirements" class="xliff"></a>
 
 Här är några fler exempel som kan användas i kolumnen ”Krav”:
 
@@ -62,6 +64,7 @@ Här är några fler exempel som kan användas i kolumnen ”Krav”:
     - Office 365 med appskyddsprinciper
     - Branschspecifikt (LOB) med appskyddsprinciper
 
-## <a name="next-section"></a>Nästa avsnitt
+## Nästa steg
+<a id="next-steps" class="xliff"></a>
 
 Nästa avsnitt innehåller råd om [att utveckla en plan för Intune-distributionen](planning-guide-rollout-plan.md).

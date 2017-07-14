@@ -14,13 +14,14 @@ ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 ms.reviewer: lindavr
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d69727762e63f0258eacc084801827c50eaa1454
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c094d59d7261b602c51196233286d10c27732236
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="what-is-intune-for-education"></a>Vad är Intune for Education?
+# Vad är Intune for Education?
+<a id="what-is-intune-for-education" class="xliff"></a>
 
 Intune for Education har utformats för att göra det möjligt för lärare och elever att vara produktiva medan skolinformation skyddas. Intune är en molnbaserad EMM-tjänst (Enterprise Mobility Management) som utgör grunden till Intune for Education.
 
@@ -30,7 +31,7 @@ Med Intune for Education kan du hantera Windows 10-enheter med hjälp av de full
 
 Intune for Education kan användas separat eller tillsammans med den [fullständiga enhetshanteringen i Intune](introduction-intune.md). Det kan också användas tillsammans med resten av verktygen i [Microsoft Education](https://microsoft.com/education), vilket gör det enkelt att använda Intune for Education med andra bra utbildningsverktyg från Microsoft.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ukrnCwcLvV8" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 
 Med både Intune och Intune for Education kan du:
 * Hantera mobila enheter som anställda använder för att komma åt data.
@@ -38,7 +39,8 @@ Med både Intune och Intune for Education kan du:
 * Skydda organisationens information genom att styra hur användarna får åtkomst till och delar informationen.
 * Säkerställa att enheter och program är kompatibla med säkerhetskraven.
 
-### <a name="next-steps"></a>Nästa steg
+### Nästa steg
+<a id="next-steps" class="xliff"></a>
 * Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune).
 * Mer information om det snabbaste sättet att [börja använda Intune for Education](/intune-education/what-is-express-configuration).
 * Fördjupa dig i de [tekniska kraven och möjligheterna](/intune/supported-devices-browsers) med Intune.
