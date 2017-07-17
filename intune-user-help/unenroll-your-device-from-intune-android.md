@@ -5,51 +5,38 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 06/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f40aab26-7613-48cc-a74e-de83df9465a4
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 3fe1ec94f3112a252b9694449d341f336e97e635
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: c17389164df2f458ad5e3185f37a92791a83b129
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
-# <a name="how-to-unenroll-your-android-device-from-intune"></a>Så här avregistrerar du en Android-enhet från Intune
+# Så här avregistrerar du en Android-enhet från Intune
+<a id="how-to-unenroll-your-android-device-from-intune" class="xliff"></a>
 
 När du avregistrerar din Android-enhet från Intune kan enheten inte längre komma åt företagets resurser.  Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 
-Avregistrera enheten från Intune och avinstallera företagsportalappen genom att följa dessa steg eller titta på den här videon:
+Avregistrera enheten från Intune och avinstallera företagsportalappen genom att följa dessa steg:
 
-<iframe width="675" height="379" src="https://www.youtube.com/embed/K-Vi7lNfaMk" frameborder="0" allowfullscreen></iframe>
+1. Öppna **menyn Åtgärder** genom att trycka på de tre lodräta punkterna i det övre högra hörnet av företagsportalappen. 
 
-1. Öppna appen **Inställningar** och öppna **Enhetsadministratörer** och stäng av **företagsportalen**. Beroende på din enhet kan inställningen i **Enhetsadministratörer** avvika något när det gäller namn eller plats i listan över inställningar.
+  ![En bild av företagsportalappen för Android med åtgärdsmenyn öppnad i det övre högra hörnet. Det nya alternativet ”ta bort företagsportal” finns tillgängligt som det tredje alternativet under ”min profil” och ”inställningar” och ovanför ”användarvillkor”, ”hjälp och feedback” och ”om”.](./media/android_remove_cp_menu_action_after_1705.png)
 
-2.  Logga in på företagsportalappen.
+2. Tryck på **Ta bort företagsportal**.
 
-3.  Tryck på **Mina enheter** och välj sedan den enhet som du vill avregistrera.
+3. Ett meddelande kommer att visas som frågar om du är säker på att du vill ta bort företagsportalen. Den innehåller information om vad som händer när du avregistrerar din enhet. När du har läst det här meddelandet trycker du på **OK** för att ta bort appen. 
 
-    ![Välj den enhet som du vill avregistrera.](./media/andr-1-my-devices-choose.png)
-
-4.  Tryck på papperskorgen.
-
-    ![Tryck på papperskorgen.](./media/andr-2-tap-trashcan.png)
-
-5.  Tryck på **OK** på varningssidan för att avregistrera enheten.
-
-    ![Ta bort enheten.](./media/andr-3-warning-about-remove.png)
+  ![En bild av dialogrutan som visas när du har valt det nya alternativet ”ta bort företagsportalen” i åtgärdsmenyn. Dialogrutan informerar användaren att ”genom att ta bort företagsportalen kommer enheten inte längre att hanteras av IT-administratören och åtkomst till företagsdata, företagsappar och företagets e-post kan tas bort." Användaren ombes sedan att bekräfta att de vill ta bort företagsportalappen genom att välja ”Ja”.](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

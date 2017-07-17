@@ -1,4 +1,5 @@
-## <a name="enable-windows-10-automatic-enrollment"></a>Aktivera automatisk registrering i Windows 10
+## Aktivera automatisk registrering i Windows 10
+<a id="enable-windows-10-automatic-enrollment" class="xliff"></a>
 
 Med automatisk registrering kan användarna registrera sina Windows 10-enheter i Intune genom att lägga till sina arbetskonton till sina egna enheter, eller ansluta sina företagsägda enheter till din Azure Active Directory. Användarens enhet registreras och ansluts till Azure Active Directory i bakgrunden. När enheten har registrerats hanteras den med Intune.
 
@@ -7,7 +8,8 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
 - Microsoft Intune-prenumeration
 
 
-### <a name="configure-automatic-mdm-enrollment"></a>Konfigurera automatisk MDM-registrering
+### Konfigurera automatisk MDM-registrering
+<a id="configure-automatic-mdm-enrollment" class="xliff"></a>
 
 1. Logga in på [Azure-hanteringsportalen](https://portal.azure.com) (https://manage.windowsazure.com) och välj **Azure Active Directory**.
 
@@ -33,6 +35,9 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
     - **Webbadress till MDM-användarvillkor**
     - **Webbadress till MDM-identifiering**
     - **Webbadress till MDM-kompatibilitet**
+
+    > [!IMPORTANT]
+    > Om en användare är medlem i en grupp som både har automatisk MDM-registrering och MAM aktiverat och användaren försöker arbetsplatsansluta sina personliga enheter så aktiveras MAM. 
 
 6. Välj **Spara**.
 
