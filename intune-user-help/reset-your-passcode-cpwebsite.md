@@ -5,43 +5,40 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/26/2017
+ms.date: 06/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
-searchScope:
-- User help
+searchScope: User help
 ROBOTS: 
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 9220eecc32ee27725454a48484608af5f4ea0e83
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: ae85e523a2c5b87e172a2bfc01254f87093c71b1
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Så återställer du enhetens lösenord från företagsportalens webbplats
+# Så återställer du enhetens lösenord från företagsportalens webbplats
+<a id="how-to-reset-your-device-passcode-from-the-company-portal-website" class="xliff"></a>
 
 Om du har tappat bort PIN-koden eller lösenordet för en enhet som du har registrerat i Intune kan du återställa det på [företagsportalens webbplats](http://portal.manage.microsoft.com). Du kan använda webbplatsen för företagsportalen för att hantera datorer och enheter som du har registrerat i Intune och för att utföra de flesta av de uppgifter som du kan utföra när du använder företagsportalappen.
 
 > [!NOTE]
-> Det kan hända att du inte kan se knappen **Återställ lösenord** på företagsportalens webbplats. Om du inte gör det måste du kontakta din IT-administratör för att få support via företagsportalens webbplats.
+> Det kan hända att du inte kan se knappen Återställ lösenord på företagsportalens webbplats om du använder en företagsregistrerad enhet. Om du inte gör det måste du kontakta din IT-administratör för att denne ska återställa lösenordet åt dig.
 
 Så här återställer du lösenordet:
 
-1.    På [webbplatsen för företagsportalen](http://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1.  På [webbplatsen för företagsportalen](http://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/intune/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
 
 2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill återställa lösenordet för.
 
   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.    Enheten öppnas i ett popup-fönster. Välj knappen **Återställ lösenord**.
+3.  Enheten öppnas i ett popup-fönster. Välj knappen **Återställ lösenord**.
 
     ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
 
@@ -55,7 +52,10 @@ Så här återställer du lösenordet:
 
   Olika enheter har olika typer av lösenord.
 
-  **Android**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror
+  **Android**: Tar bort det befintliga lösenordet och skapar ett tillfälligt lösenord som innehåller både bokstäver och siffror 
+  
+  > [!NOTE]
+  > Du kan inte återställa lösenord för enheter med Android 7.0 och senare. Du måste återställa de här enheterna till fabriksinställningarna om du glömmer ditt lösenord.
 
   **iOS**: Tar bort det befintliga lösenordet, men skapar inte något tillfälligt lösenord. Om du använder Touch-ID:s fingeravtrycksläsare för att öppna din enhet eller för att utföra inköp, måste du konfigurera den igen.
 
@@ -70,4 +70,3 @@ Så här återställer du lösenordet:
 Om du vill visa ett meddelande som bekräftar att lösenordet har återställts klickar du på meddelandeflaggan längst upp till höger på företagsportalens webbplats.
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
-

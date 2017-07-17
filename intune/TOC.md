@@ -2,6 +2,7 @@
 ## [Vad är Azure-portalen?](what-is-intune.md)
 ## [Vad är Intune för utbildning?](introduction-intune-education.md)
 ## [Intune-funktioner i Azure](ui-changes.md)
+### [Ändringar till grupper](groups-get-started.md)
 ## [Registrera dig för en kostnadsfri utvärderingsversion](free-trial-sign-up.md)
 ## [Nyheter](whats-new.md)
 ### [Nyheter i användargränssnittet för appen](whats-new-app-ui.md)
@@ -16,12 +17,13 @@
 ## [Vanliga scenarier](common-scenarios.md)
 ## [Kända problem](known-issues.md)
 ## [Support](get-support.md)
-## [Beskrivning av Intune-tjänst](microsoft-intune-service-description.md)
 
-<!--# Get started
-## [Manage devices](/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune?toc=/intune/toc.json)
-## [Create policies](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3?toc=/intune/toc.json)
-## [Manage apps](/intune-classic/understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4?toc=/intune/toc.json) -->
+# [Komma igång](get-started-evaluation.md)
+## [Skapa en grupp](get-started-groups.md)
+## [Skapa en användare](get-started-users.md)
+## [Registrera enheter](get-started-enroll.md)
+## [Tilldela principer](get-started-policies.md)
+## [Tilldela appar](get-started-apps.md)
 
 
 # Planera distribution
@@ -63,6 +65,7 @@
 ### [Logga in på Intune](account-sign-up.md)
 ### [Konfigurera domäner](custom-domain-name-configure.md)
 ### [Lägga till användare](users-permissions-add.md)
+### [Lägg till grupper](groups-add.md)
 ### [Tilldela licenser](licenses-assign.md)       
 ### [Anpassa företagsportalen](company-portal-customize.md)     
 ### [Ange MDM-auktoritet](mdm-authority-set.md)
@@ -75,7 +78,8 @@
 #### [Företagsidentifierare](corporate-identifiers-add.md)
 #### [Enhetsregistreringshanterare](device-enrollment-manager-enroll.md)
 #### [Mappa enheter till grupper](device-group-mapping.md)
-### [Konfigurera Windows-registrering](windows-enroll.md)
+### Konfigurera Windows-registrering
+#### [Windows-registrering](windows-enroll.md)
 #### [Massregistrering](windows-bulk-enroll.md)
 ### [Konfigurera Android-registrering](android-enroll.md)
 ### Ställ in iOS-registrering
@@ -95,11 +99,13 @@
 ### [Ta bort företagsdata](device-company-data-remove.md)
 ### [Återställ lösenord](device-passcode-reset.md)
 ### [Starta om enheten](device-restart.md)
+### [Logga ut aktuell användare](device-logout-user.md)
+### [Ta bort användare](device-remove-user.md)
 ### [Fjärrstyrning för Android](device-profile-android-teamviewer.md)
+### [Återställning av Windows 10-PIN](device-windows-pin-reset.md)
 ### [Granska enhetsinventering](device-inventory.md)
 
 ## [Hantera användare](user-management.md)
-### [Kom igång med grupper](groups-get-started.md)
 <!--### Add and delete users -->
 
 ## [Hantera appar](app-management.md)
@@ -126,16 +132,6 @@
 #### [iOS e-böcker](vpp-ebooks-ios.md)
 ### [Konfigurera företagsportalappen](company-portal-app.md)
 ### [Konfigurera den hanterade webbläsaren](app-configuration-managed-browser.md)
-## [Använd appskyddsprinciper](app-protection-policies.md)
-### [Bli redo för WIP-appskyddsprinciper](app-protection-policies-configure-windows-10.md)
-### [Skapa och tilldela WIP-appskyddsprinciper](windows-information-protection-policy-create.md)
-### [Inställningar för Android](app-protection-policy-settings-android.md)
-### [Inställningar för iOS](app-protection-policy-settings-ios.md)
-### [Verifiera appskyddsprinciper](app-protection-policies-validate.md)
-### [Övervaka användarstatus för appskydd](app-protection-policies-monitor.md)
-### [Bli redo för WIP-appskyddsprinciper](app-protection-policies-configure-windows-10.md)
-### [Skapa och tilldela WIP-appskyddsprinciper](windows-information-protection-policy-create.md)
-### [Hantera dataöverföring mellan iOS-appar](data-transfer-between-apps-manage-ios.md)
 
 ## [Konfigurera enheter](device-profiles.md)
 ### [Konfigurera enhetsprofiler](device-profile-create.md)
@@ -173,13 +169,16 @@
 #### [macOS](wi-fi-settings-macos.md)
 #### [Windows 8.1 och Windows 10](wi-fi-settings-import-windows-8-1.md)
 ### [Konfigurera inställningar för Windows 10-versionsuppgradering](edition-upgrade-configure-windows-10.md)
+### [Slutpunktsskydd för Windows 10](endpoint-protection-windows-10.md)
 ### [Konfigurera inställningar för Windows 10-utbildning](education-settings-configure.md)
 ### [Konfigurera utbildningsinställningar för iOS](education-settings-configure-ios.md)
+### [Konfigurera delade iOS-enheter för utbildning](education-settings-configure-ios-shared.md)
 ### [Konfigurera inställningar för Windows Update för företag](windows-update-for-business-configure.md)
 ### [Konfigurera certifikat](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
 ### [Konfigurera inställningar för Windows informationsskydd](windows-information-protection-configure.md)
+### [Övervaka telekomkostnader](telecom-expenses-monitor.md)
 ### [Tilldela profiler](device-profile-assign.md)
 ### [Övervaka profiler](device-profile-monitor.md)
 ### [Felsökning av profiler](device-profile-troubleshoot.md)
@@ -190,20 +189,31 @@
 ### [Principinställningar för Android for Work](compliance-policy-create-android-for-work.md)
 ### [Skapa iOS-princip](compliance-policy-create-ios.md)
 ### [Skapa Windows-princip](compliance-policy-create-windows.md)
-<!--### Create Actions for noncompliance-->
+### Skapa åtgärder för inkompatibilitet
 ### [Övervaka enhetsefterlevnad](compliance-policy-monitor.md)
 
 ## [Ställ in villkorlig åtkomst](conditional-access.md)
 ### [Vanliga sätt att använda villkorlig åtkomst](conditional-access-intune-common-ways-use.md)
-### [Appbaserad villkorlig åtkomst](app-based-conditional-access-intune.md)
 ### [Installera Exchange On-premises Connector](exchange-connector-install.md)
 ### [Skapa och tilldela princip för villkorlig åtkomst](conditional-access-exchange-create.md)
-### [Konfigurera appbaserad villkorlig åtkomst för Exchange Online](app-based-conditional-access-intune-exchange-online-create.md)
-### [Konfigurera appbaserad villkorlig åtkomst för SharePoint Online](app-based-conditional-access-intune-sharepoint-online-create.md)
+### [Tilldela principer för villkorlig åtkomst med den klassiska Intune-portalen](conditional-access-intune-reassign.md)
+### [Appbaserad villkorlig åtkomst](app-based-conditional-access-intune.md)
+### [Konfigurera appbaserad villkorlig åtkomst](app-based-conditional-access-intune-create.md)
 ### [ADAL och Intune](app-modern-authentication-block.md)
 ### [Övervaka kompatibilitet för villkorlig åtkomst](conditional-access-exchange-monitor.md)
 
-## Skydda data och enheter
+## Skydda app- och enhetsdata
+
+### [Använd appskyddsprinciper](app-protection-policy.md)
+#### [Skapa appskyddsprinciper](app-protection-policies.md)
+##### [Inställningar för Android](app-protection-policy-settings-android.md)
+##### [Inställningar för iOS](app-protection-policy-settings-ios.md)
+#### [Verifiera appskyddsprinciper](app-protection-policies-validate.md)
+#### [Övervaka användarstatus för appskydd](app-protection-policies-monitor.md)
+#### [Bli redo för WIP-appskyddsprinciper](app-protection-policies-configure-windows-10.md)
+#### [Skapa och tilldela WIP-appskyddsprinciper](windows-information-protection-policy-create.md)
+#### [Hantera dataöverföring mellan iOS-appar](data-transfer-between-apps-manage-ios.md)
+
 
 ### [Mobile Threat Defense](mobile-threat-defense.md)
 
@@ -211,21 +221,29 @@
 ##### [Lookout- och Intune-integrering](lookout-mtd-connector-integration.md)
 #### [Ställ in Skycure](skycure-mobile-threat-defense-connector.md)
 ##### [Konfigurera Azure AD SSO](skycure-azure-sso-configure.md)
-##### [Hämta konfigurationsprincip för iOS-appar](skycure-ios-app-configuration-policy-download.md)
+##### [Ladda ned en konfigurationsprincip för iOS-appar](skycure-ios-app-configuration-policy-download.md)
 ##### [Skycure- och Intune-integrering](skycure-mtd-connector-integration.md)
-#### [Lägg till och tilldela MTD-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+#### [Lägg till MTD-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
 #### [Aktivera MTD i Intune](mtd-connector-enable.md)
-#### [Skapa och tilldela en policy för efterlevnad för en MTD-enhet](mtd-device-compliance-policy-create.md)
+#### [Skapa en MTD-enhetsefterlevnadsprincip](mtd-device-compliance-policy-create.md)
 
 ### [Åtkomstkontroll för nätverk](network-access-control-integrate.md)
 
+
+<!-- ### Set up mobile threat protection        
+#### Prerequisites
+#### Set up Lookout
+#### Set up Skycure
+#### Enable mobile threat protection in Intune
+#### Create a mobile threat protection compliance policy -->
+
 ### [Konfigurera Windows Hello](windows-hello.md)        
-<!-- ### Protect devices with remote actions        -->
+<!-- ### Protect devices with remote actions -->
 
 ## [Hantera roller](role-based-access-control.md)
 <!-- ### Create a custom role
 ### Assign a role -->
-### [Använda rollen supportoperatör](help-desk-operators.md)
+
 <!-- ### Custom role settings -->
 
 ## [Hantera datorer med programvaruagent](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
@@ -254,8 +272,7 @@
 ### [Så här hämtar du Windows-appar](end-user-apps-windows.md)
 
 # Övervaka och felsöka
-## [Övervaka telekomkostnader](telecom-expenses-monitor.md)
-
+## [Använda rollen supportoperatör](help-desk-operators.md)
 
 # Utveckla och anpassa
 ## [Konfigurera anpassade enhetsinställningar](custom-settings-configure.md)
@@ -280,6 +297,5 @@
 ### [Intune App SDK Xamarin-komponenten](app-sdk-xamarin.md)
 ## [Så här använder du Intune Graph API](intune-graph-apis.md)
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-
 
 # [Ordlista](intune-glossary.md)

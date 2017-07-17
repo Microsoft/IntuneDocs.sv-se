@@ -14,16 +14,14 @@ ms.assetid: 5d3215e7-0a5c-44bd-afb0-aeafce98c43f
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
 ms.openlocfilehash: 64c6eb58246ac3ad232c1b8ee89d12a83e7e1784
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="enable-enrollment-for-mobile-devices"></a>Aktivera registrering av mobila enheter
+# Aktivera registrering av mobila enheter
+<a id="enable-enrollment-for-mobile-devices" class="xliff"></a>
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -31,22 +29,24 @@ Det här avsnittet beskriver hur en Intune-administratör kan aktivera registrer
 
 Om du vill konfigurera hantering av mobila enheter med Intune måste du först ange *hanteringsutfärdare för mobila enheter*, som identifierar den tjänst som kan hantera enheter som är kopplade till ditt konto. I den här vägledningen antar vi att du använder tjänsten Intune i stället för System Center Configuration Manager. När utfärdare för Hantering av mobila enheter har angetts kan du aktivera hantering för enhetsplattformar och registrera dina enheter med företagsportalappen.
 
-## <a name="enable-device-enrollment"></a>Aktivera registrering av enheter
+## Aktivera registrering av enheter
+<a id="enable-device-enrollment" class="xliff"></a>
 
-1. **Gör Intune till din utfärdare för hantering av mobila enheter**
-    I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Admin** > **Hantering av mobila enheter** och väljer sedan **Ange utfärdare för Hantering av mobila enheter** under **Uppgifter**.  
+1. **Gör Intune till din utfärdare för hantering av mobila enheter**. I [Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Admin** > **Hantering av mobila enheter** och väljer sedan **Ange utfärdare för Hantering av mobila enheter** under **Uppgifter**.  
 
 2. Klicka på **Ja** i dialogrutan Ange utfärdare för Hantering av mobila enheter.
 
     ![Administrationskonsolen. Ange MDM till Intune](../media/intune-mdm-authority.png)
 
-## <a name="choose-how-to-enroll-devices"></a>Välj hur du vill registrera enheter
+## Välj hur du vill registrera enheter
+<a id="choose-how-to-enroll-devices" class="xliff"></a>
 
 Intune kan hantera enheter på en mängd olika sätt beroende på företagets krav. BYOD-enheter (Bring your own device) som ägs av företag, CYOD-enheter (choose your own device) och helskärmsläge är bara några tillgängliga registreringsscenarier.
 
 Följ de här stegen för att [välja hur du registrerar enheter](choose-how-to-enroll-devices1.md).
 
-## <a name="enable-mdm-for-your-device-platform"></a>Aktivera MDM för din enhetsplattform
+## Aktivera MDM för din enhetsplattform
+<a id="enable-mdm-for-your-device-platform" class="xliff"></a>
 Registreringen måste aktiveras för iOS, Mac och Android för arbetsenheter som upprättar en relation mellan plattformsprovidern och din Intune-klient. Windows- och Android-enheter kräver inte ytterligare steg, men för Windows-enheter du kan förenkla registrering av enheter för dina användare genom att skapa en särskild DNS-registerpost.
 
 Aktivera registrering av enheter för den enhetsplattform som du vill hantera. Beroende på din plattform behövs olika krav:
@@ -58,16 +58,17 @@ Aktivera registrering av enheter för den enhetsplattform som du vill hantera. B
 
 När registreringen är aktiverad kan användare ladda ned företagsportalappen till sin enhet och slutföra registreringen för enheten.
 
-### <a name="enable-company-owned-device-enrollment"></a>Aktivera registrering av företagsägda enheter
+### Aktivera registrering av företagsägda enheter
+<a id="enable-company-owned-device-enrollment" class="xliff"></a>
 Du kan också aktivera olika scenarier för [registrering av företagsägda enheter](/intune-classic/deploy-use/manage-corporate-owned-devices) inklusive:
 - [Apples program för enhetsregistrering (Device Enrollment Program)](/intune-classic/deploy-use/ios-device-enrollment-program-in-microsoft-intune)
 - [Apple Configurator-registrering med installationsassistenten](/intune-classic/deploy-use/ios-setup-assistant-enrollment-in-microsoft-intune)
 - [Apple Configurator – direkt registrering](/intune-classic/deploy-use/ios-direct-enrollment-in-microsoft-intune)
 - [Hanterare av enhetsregistrering](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune)
 
-### <a name="next-steps"></a>Nästa steg
+### Nästa steg
+<a id="next-steps" class="xliff"></a>
 Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu när den första konfigurationen är klar kan du välja att aktivera ytterligare MDM-funktioner.
 
 >[!div class="step-by-step"]
 >[&larr; **Registrera enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md) [**Åtgärder efter konfigurering** &rarr;](.\post-configuration-tasks.md)  
-

@@ -1,5 +1,5 @@
 ---
-title: VPN-anslutningar | Microsoft Docs
+title: VPN-anslutningar
 description: "Använd VPN-profiler för att distribuera VPN-inställningar till användare och enheter i organisationen."
 keywords: 
 author: lleonard-msft
@@ -14,16 +14,14 @@ ms.assetid: abc57093-7351-408f-9f41-a30877f96f73
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 51096dedbc29726b2622e0a156b0d2516522e497
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: e1498cb88fe99129a5ee7f24b618f78fefcf42a6
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-# <a name="vpn-connections-in-microsoft-intune"></a>VPN-anslutningar i Microsoft Intune
+# VPN-anslutningar i Microsoft Intune
+<a id="vpn-connections-in-microsoft-intune" class="xliff"></a>
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -43,7 +41,8 @@ Du kan konfigurera följande enhetstyper med VPN-profiler:
 
 Konfigurationsalternativen för VPN-profiler varierar beroende på vilken enhetstyp du väljer.
 
-## <a name="vpn-connection-types"></a>VPN-anslutningstyper
+## VPN-anslutningstyper
+<a id="vpn-connection-types" class="xliff"></a>
 
 Intune har stöd för att skapa VPN-profiler som använder följande anslutningstyper:
 
@@ -70,21 +69,25 @@ L2TP|Anpassad profil för iOS|Nej |Nej |Nej|Ja (OMA-URI)|Ja|
 
  Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](create-custom-vpn-profiles.md).     
 
-## <a name="methods-of-securing-vpn-profiles"></a>Metoder för att skydda VPN-profiler
+## Metoder för att skydda VPN-profiler
+<a id="methods-of-securing-vpn-profiles" class="xliff"></a>
 
 VPN-profiler kan använda ett antal olika anslutningstyper och protokoll från olika tillverkare. Dessa anslutningar skyddas vanligtvis med en av följande metoder.
 
-### <a name="certificates"></a>Certifikat
+### Certifikat
+<a id="certificates" class="xliff"></a>
 
 När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
-### <a name="user-name-and-password"></a>Användarnamn och lösenord
+### Användarnamn och lösenord
+<a id="user-name-and-password" class="xliff"></a>
 
 Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösenord.
 
-## <a name="create-a-vpn-profile"></a>Skapa en VPN-profil
+## Skapa en VPN-profil
+<a id="create-a-vpn-profile" class="xliff"></a>
 
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
@@ -154,7 +157,8 @@ Du kan begränsa VPN-användningen på Windows 10-enheter till specifika appar g
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
-### <a name="on-demand-vpn-for-ios-devices"></a>VPN på begäran för iOS-enheter
+### VPN på begäran för iOS-enheter
+<a id="on-demand-vpn-for-ios-devices" class="xliff"></a>
 Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 
 > [!NOTE]
@@ -168,9 +172,7 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 3. Valfritt: Ange en URL-strängavsökning som är en URL som regeln använder som ett test. Om den enhet där den här profilen har installerats kan få tillgång till denna URL utan omdirigering upprättas VPN-anslutningen och enheten ansluter till mål-URL:en. Användaren ser inte URL-strängavsökningsplatsen. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att URL:en testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till mål-URL:en via VPN.
 4. Välj någon av följande åtgärder:
   - **Ansluta**
-  - **Utvärdera anslutning**, som har tre inställningar A. **Domänåtgärd**  – välj **Anslut om det behövs** eller **Anslut aldrig**
-      B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs**
-      C. **Nödvändig URL-strängsavsökning** – en URL av typen HTTP eller HTTPS (rekommenderas), t.ex. *https://vpntestprobe.contoso.com*. Den regel som ska kontrollera om det finns ett svar från den här adressen. Om inte, och om **Domänåtgärd** är **Anslut om det behövs** utlöses VPN-anslutningen.
+  - **Utvärdera anslutning**, som har tre inställningar A. **Domänåtgärd**  – välj **Anslut om det behövs** eller **Anslut aldrig** B. **Kommaavgränsad lista över domäner** – du konfigurerar detta endast om du väljer en **domänåtgärd** för **Anslut om det behövs** C. **Nödvändig URL-strängsavsökning** – en URL av typen HTTP eller HTTPS (rekommenderas), t.ex. *https://vpntestprobe.contoso.com*. Den regel som ska kontrollera om det finns ett svar från den här adressen. Om inte, och om **Domänåtgärd** är **Anslut om det behövs** utlöses VPN-anslutningen.
       
      > [!TIP]
      >
@@ -181,7 +183,8 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 Domänspecifika regler utvärderas före allmänna domänregler.
 
 
-## <a name="deploy-the-policy"></a>Distribuera principen
+## Distribuera principen
+<a id="deploy-the-policy" class="xliff"></a>
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 
@@ -195,4 +198,3 @@ Domänspecifika regler utvärderas före allmänna domänregler.
 Efter slutförd distribution ser användarna det namn du gav VPN-anslutningen i listan över VPN-anslutningar på sina enheter.
 
 En statssammanfattning och varningar på sidan **Översikt** på arbetsytan **Principer** identifierar problem med principer som kräver din uppmärksamhet. Dessutom visas en statussammanfattning på arbetsytan Instrumentpanel.
-
