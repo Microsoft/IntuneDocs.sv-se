@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5eab3fb933b2999e23115091cf0ded3f140e114c
-ms.sourcegitcommit: f5c6e8b218431dc9a8d85464d7f58adebd048866
+ms.openlocfilehash: b8d281e3af2458bd5ab343dfa5123b31075d28ed
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/13/2017
 ---
 # Den tidiga utgåvan för Microsoft Intune – juli 2017
 <a id="the-early-edition-for-microsoft-intune---july-2017" class="xliff"></a>
@@ -41,13 +41,13 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 
 
-## Nyheter i Intune på Azure-portalen
-<a id="whats-coming-to-intune-on-the-azure-portal" class="xliff"></a>
+## Intune på Azure Portal
+<a id="intune-on-the-azure-portal" class="xliff"></a>
 
 ### Enklare installation av Office 365-appar <!--- 1121362 --->
 <a id="easier-installation-of-office-365-apps-----1121362----" class="xliff"></a>
 En ny **Office 365 ProPlus**-apptyp gör det enkelt att tilldela Office 365 ProPlus-appar till enheter som du hanterar och som körs på den senaste versionen av Windows 10. Dessutom kommer du att kunna installera Microsoft Project och Microsoft Visio om du har licenser för dem. Appar som du vill använda paketeras tillsammans och visas som en enda app i listan med appar i Intune-konsolen.
- 
+
 
 ### Ny enhetsåtgärd för att tvinga enheter att synkronisera med Intune <!-- 711369 -->
 <a id="new-device-action-to-force-devices-to-sync-with-intune----711369---" class="xliff"></a>    
@@ -124,8 +124,8 @@ Du kommer snart att kunna skapa en princip för villkorlig åtkomst som kräver 
 <a id="end-of-support-for-ios-80----1164477---" class="xliff"></a>
 Hanterade appar och företagsportalappen för iOS kräver iOS 9.0 och högre för åtkomst till företagets resurser. Enheter som inte är uppdaterade innan september kommer inte längre att ha åtkomst till Företagsportalen eller apparna. I december kommer all åtkomst till företagets resurser inklusive e-post att förhindras. 
 
-### Stöd för Android 4.3 och lägre upphör <!---1171127--->
-<a id="end-of-support-for-android-43-and-lower----1171127---" class="xliff"></a>
+### Stöd för Android 4.3 och lägre upphör <!---1171127, 1326920 --->
+<a id="end-of-support-for-android-43-and-lower----1171127-1326920----" class="xliff"></a>
 Hanterade appar och företagsportalappen för Android kräver Android 4.4 och högre för åtkomst till företagets resurser. Enheter som inte har uppdaterats innan början i oktober kommer inte längre att ha åtkomst till företagsportalen eller apparna. I december kommer alla registrerade enheter att tvingas att dras tillbaka, vilket innebär att de förlorar åtkomst till företagets resurser. Om du använder principer för appskydd utan MDM kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid.
 
 
@@ -143,8 +143,8 @@ Vi rekommenderar att du uppgraderar berättigade Windows Phone 8.1-enheter till 
 
 
 
-## Nyheter i Intunes appar
-<a id="whats-coming-to-intune-apps" class="xliff"></a>
+## Intune-appar
+<a id="intune-apps" class="xliff"></a>
 
 ### Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
 <a id="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--" class="xliff"></a>    

@@ -38,9 +38,9 @@
 ### [Implementera](planning-guide-onboarding.md)
 ### [Testning och validering](planning-guide-test-validation.md)
 ### [Ytterligare resurser](planning-guide-resources.md)
-<!-- ## Scenario implementation guides
-### [BYOD](/enterprise-mobility-security/solutions/enable-byod?toc=/intune/toc.json)
-### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
+## Guider för implementeringsscenarier
+### [BYOD](byod-enable.md)
+<!--### [Protect O365 data](/enterprise-mobility-security/solutions/protect-office365-data-with-intune?toc=/intune/toc.json)
 ### [Protect on-premises data](/enterprise-mobility-security/solutions/protect-on-premises-data-with-intune?toc=/intune/toc.json)
 ### [Protect data without enrollment](/enterprise-mobility-security/solutions/protect-company-data-without-managing-devices?toc=/intune/toc.json)
 ### [Manage company-owned devices](/enterprise-mobility-security/solutions/issue-corp-devices?toc=/intune/toc.json)
@@ -62,16 +62,15 @@
 ## [Konfigurera Intune](setup-steps.md)
 ### [Krav](supported-devices-browsers.md)
 #### [Användning av nätverksbandbredd](network-bandwidth-use.md)
-### [Logga in på Intune](account-sign-up.md)
+### [Logga in i Intune](account-sign-up.md)
 ### [Konfigurera domäner](custom-domain-name-configure.md)
-### [Lägga till användare](users-permissions-add.md)
+### [Lägga till användare](users-add.md)
 ### [Lägg till grupper](groups-add.md)
-### [Tilldela licenser](licenses-assign.md)       
-### [Anpassa företagsportalen](company-portal-customize.md)     
+### [Tilldela licenser](licenses-assign.md)
 ### [Ange MDM-auktoritet](mdm-authority-set.md)
 
 ## [Registrera enheter](device-enrollment.md)
-### Konfigurationsalternativ
+### [Registreringsalternativ](enrollment-options.md)
 #### [Allmänna villkor](terms-and-conditions-create.md)
 #### [Begränsningar](enrollment-restrictions-set.md)
 #### [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
@@ -105,7 +104,6 @@
 ### [Återställning av Windows 10-PIN](device-windows-pin-reset.md)
 ### [Granska enhetsinventering](device-inventory.md)
 
-## [Hantera användare](user-management.md)
 <!--### Add and delete users -->
 
 ## [Hantera appar](app-management.md)
@@ -219,32 +217,24 @@
 
 #### [Konfigurera Lookout](lookout-mobile-threat-defense-connector.md)
 ##### [Lookout- och Intune-integrering](lookout-mtd-connector-integration.md)
+
 #### [Ställ in Skycure](skycure-mobile-threat-defense-connector.md)
-##### [Konfigurera Azure AD SSO](skycure-azure-sso-configure.md)
-##### [Ladda ned en konfigurationsprincip för iOS-appar](skycure-ios-app-configuration-policy-download.md)
 ##### [Skycure- och Intune-integrering](skycure-mtd-connector-integration.md)
+
+#### [Konfigurera Check Point](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+##### [Check Point och Intune-integrering](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+
 #### [Lägg till MTD-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
 #### [Aktivera MTD i Intune](mtd-connector-enable.md)
 #### [Skapa en MTD-enhetsefterlevnadsprincip](mtd-device-compliance-policy-create.md)
 
 ### [Åtkomstkontroll för nätverk](network-access-control-integrate.md)
 
-
-<!-- ### Set up mobile threat protection        
-#### Prerequisites
-#### Set up Lookout
-#### Set up Skycure
-#### Enable mobile threat protection in Intune
-#### Create a mobile threat protection compliance policy -->
-
 ### [Konfigurera Windows Hello](windows-hello.md)        
 <!-- ### Protect devices with remote actions -->
 
 ## [Hantera roller](role-based-access-control.md)
-<!-- ### Create a custom role
-### Assign a role -->
 
-<!-- ### Custom role settings -->
 
 ## [Hantera datorer med programvaruagent](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Jämför datorhantering](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)
