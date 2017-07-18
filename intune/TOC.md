@@ -118,6 +118,7 @@
 #### [Windows Store-appar](store-apps-windows.md)
 #### [Windows LOB-appar](lob-apps-windows.md)
 #### [Android for Work-appar](apps-add-android-for-work.md)
+#### [Office 365-appar för Windows 10](apps-add-office365.md)
 ### [Tilldela appar](apps-deploy.md)
 ### [Övervakning av appar](apps-monitor.md)
 ### [iOS-appkonfigurationsprofiler](app-configuration-policies-use-ios.md)
