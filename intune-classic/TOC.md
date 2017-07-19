@@ -1,12 +1,6 @@
 # Förstå och utforska
 ## [Introduktion till Intune](/intune/introduction-intune?toc=/intune-classic/toc.json)
 ## [Intune för utbildning](/intune/introduction-intune-education?toc=/intune-classic/toc.json)
-## [Registrera dig för en kostnadsfri utvärderingsversion](understand-explore/sign-up-for-30-day-trial-microsoft-intune.md)
-## [Utvärdera Intune MDM](understand-explore/mobile-device-management-trial-guide-microsoft-intune.md)
-### [Skapa grupper för att organisera användare och enheter](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-3.md)
-### [Skapa principer och publicera en app](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-4.md)
-### [Övriga alternativ och tillägg](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-6.md)
-### [Konvertera till en betald prenumeration](understand-explore/get-started-with-a-30-day-trial-of-microsoft-intune-step-7.md)
 ## [Vanliga frågor och svar om MAM och appskydd](understand-explore/mam-faq.md)
 ## [Vanliga scenarier](/intune/common-scenarios?toc=/intune-classic/toc.json)
 
