@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 manager: angrobe
 ms.author: mtillman
-ms.date: 12/15/2016
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df3c42d8b52d1a01ddab82727e707639d5f77c16
-ms.openlocfilehash: 9fad536aab83f0e8ae12aff8cab44943ae1ac82d
-ms.contentlocale: sv-se
-ms.lasthandoff: 06/08/2017
-
-
+ms.openlocfilehash: 0fb1d52a97a03609ddefb94caf707bd8cbee8f12
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
 > [!NOTE]
@@ -460,6 +457,17 @@ MAMTelemetryDisabled| Boolesk| Anger om SDK inte ska skicka några telemetridata
 > [!NOTE]
 > Om din app ska lanseras på App Store måste `MAMPolicyRequired` anges till "NO" enligt App Stores standarder.
 
+## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Aktivera MAM-riktad konfiguration för iOS-appar
+Med hjälp av en MAM-riktad konfiguration kan en app att ta emot konfigurationsdata via Intune App SDK. Dataformat och eventuella varianter av dessa data måste definieras och kommuniceras till Intune-kunderna av ägaren/programutvecklaren. Intune-administratörerna kan rikta in och distribuera konfigurationsdata via Intune Azure-konsolen. Appar som deltar i MAM-riktad konfiguration kan tillhandahållas MAM-riktade konfigurationsdata via MAM-tjänsten fr.o.m. Intune App SDK för iOS (v 7.0.1). Programmets konfigurationsdata push-överförs med vår MAM-tjänst direkt till appen i stället för via MDM-kanalen. Intune App SDK tillhandahåller en klass för att komma åt data som hämtats från dessa konsoler. Överväg att ha följande som förutsättningar: <br>
+* Appen måste vara MAM-WE-registrerad innan du kan komma åt användargränssnittet för MAM-riktad konfiguration. Mer information om MAM-WE finns i[App protection policy without device enrollment in the Intune App SDK guide](https://docs.microsoft.com/en-us/intune/app-sdk-ios#app-protection-policy-without-device-enrollment) (appskyddsprincip utan enhetsregistrering i Intune App SDK-guiden).
+* Inkludera ```IntuneMAMAppConfigManager.h``` i appens källfil.
+* Anropa ```[[IntuneMAMAppConfig instance] appConfigForIdentity:]``` för åtkomst till App Config-objektet.
+* Anropa lämplig väljare för ```IntuneMAMAppConfig```-objektet. Om appnyckeln är en sträng t.ex. ska du använda ```stringValueForKey``` eller ```allStringsForKey```. Filen ```IntuneMAMAppConfig.h header``` innehåller information om returvärden/felvillkor.
+
+Mer information om funktionerna i Graph API med avseende på MAM-riktade konfigurationsvärden, finns i [Graph API-referens för MAM-riktad konfiguration](https://graph.microsoft.io/en-us/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+
+Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i iOS finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for iOS](https://docs.microsoft.com/en-us/intune/app-configuration-policies-use-ios) (använda Microsoft Intune-appkonfigurationsprinciper för iOS).
+
 ## <a name="telemetry"></a>Telemetri
 
 Som standard loggar Intune App SDK för iOS telemetridata vid följande användningshändelser. Dessa data skickas till Microsoft Intune.
@@ -656,4 +664,3 @@ Både det statiska biblioteket och ramverksversionerna av Intune App SDK är uni
     cp ~/Desktop/IntuneMAM.device_only ~/Desktop/IntuneMAM.framework/IntuneMAM
     ```
     Det första kommandot rensar simuleringsarkitektur från ramverkets DYLIB-fil. Det andra kommandot kopierar DYLIB-filen som endast är för enheten tillbaka till ramverkskatalogen.
-

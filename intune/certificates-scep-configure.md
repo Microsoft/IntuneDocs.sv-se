@@ -1,12 +1,12 @@
 ---
 title: Konfigurera och hantera SCEP-certifikat med Intune
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du kan konfigurera din infrastruktur. Skapa och tilldela sedan Intune SCEP-certifikatprofiler."
+titleSuffix: Intune on Azure
+description: "Läs hur du konfigurerar din infrastruktur och därefter skapar och tilldelar Intune SCEP-certifikatprofiler.”"
 keywords: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,14 @@ ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: ad0dc380eca386438e9568bf212ac9c5ad66ceb6
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: e29e79b8598eddba951b3f8ee7a7bcd5c6271f83
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan skapa och tilldela SCEP-certifikatprofiler (Simple Certificate Enrollment Protocol) med Intune.
 
@@ -84,9 +83,13 @@ Innan du kan konfigurera certifikatprofiler måste du utföra följande åtgärd
 
 **Steg 5** – Aktivera, installera och konfigurera Intune Certificate Connector
 
+> [!NOTE]
+> På grund av ett känt problem måste du hämta, installera och konfigurera certifikatanslutningsappen på följande sätt: [Konfigurera infrastruktur för certifikat för SCEP -> Konfigurera din infrastruktur -> Uppgift 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
+
+
 #### <a name="step-1---create-an-ndes-service-account"></a>Steg 1 – Skapa ett NDES-tjänstkonto
 
-Skapa domänanvändarkonto som används som NDES-tjänstkontot Du anger det här kontot när du konfigurerar mallar på den utfärdande certifikatutfärdaren innan du installerar och konfigurerar NDES. Kontrollera att användaren har behörigheten standard **Inloggning lokalt**, **Inloggning som tjänst** och **Inloggning som batchjobb**. En del organisationer har härdningsprinciper som inaktiverar dessa rättigheter.
+Skapa domänanvändarkonto som används som NDES-tjänstkontot Du anger det här kontot när du konfigurerar mallar på den utfärdande certifikatutfärdaren innan du installerar och konfigurerar NDES. Kontrollera att användaren har standardrättigheterna, **logga in lokalt**, **logga in som en tjänst** och **logga in som ett batchjobb**. En del organisationer har härdningsprinciper som inaktiverar dessa rättigheter.
 
 #### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Steg 2 – Konfigurera certifikatmallar hos certifikatutfärdaren
 I det här steget kommer du att:
@@ -100,6 +103,9 @@ I det här steget kommer du att:
 1.  Logga in som företagsadministratör.
 
 2.  På den utfärdande certifikatutfärdaren använder du snapin-modulen för certifikatmallar för att skapa en ny anpassad mall eller kopiera en befintlig mall och sedan redigera en befintlig mall (t.ex. mallen Användare) för användning med NDES.
+
+    >[!NOTE]
+    > NDES-certifikatmallen måste baseras på en v2-certifikatmall (med Windows 2003-kompatibilitet).
 
     Mallen måste ha följande konfigurationer:
 
@@ -246,7 +252,7 @@ I det här steget kommer du att:
 
     ![Testa NDES](.\media\SCEP_NDES_URL.png)
 
-    Om meddelandet **503 Tjänsten ej tillgänglig** visas kontrollerar du händelsespåraren. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i uppgift 1.
+    Om du får ett **503 tjänsten ej tillgänglig**, kontrollerar du loggboken. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i uppgift 1.
 
 ##### <a name="to-install-and-bind-certificates-on-the-ndes-server"></a>Så här installerar och binder du certifikat på NDES-servern
 
@@ -304,7 +310,7 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 ##### <a name="to-enable-support-for-the-certificate-connector"></a>Så här aktiverar du stöd för certifikatanslutningsappen
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Konfigurera enheter** på **Intune**-bladet.
 4. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
 5.  Välj **Aktivera certifikatanslutningsapp**.
@@ -312,10 +318,10 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här hämtar, installerar och konfigurerar du certifikatanslutningsappen
 
 > [!NOTE]
-> På grund av ett känt problem måste du hämta, installera och konfigurera certifikatanslutningsappen på följande sätt: [Konfigurera infrastruktur för certifikat för SCEP -> Konfigurera din infrastruktur -> Uppgift 5](https://docs.microsoft.com/intune-classic/deploy-use/certificates-scep-configure#a-namebkmkconfigureinfrastructureaconfigure-your-infrastructure)
+> På grund av ett känt problem måste du hämta, installera och konfigurera certifikatanslutningsappen på följande sätt: [Konfigurera infrastruktur för certifikat för SCEP -> Konfigurera din infrastruktur -> Uppgift 5](/intune-classic/deploy-use/configure-certificate-infrastructure-for-scep)
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Konfigurera enheter** på **Intune**-bladet.
 4. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
 5. Välj **Ladda ned certifikatanslutningsappen**.
@@ -377,6 +383,8 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
         - **Allmänt namn**
         - **Eget namn, inklusive e-post**
         - **Eget namn som e-post**
+        - **Anpassad** – när du väljer det här alternativet, visas ett annat listrutefält. Du kan använda det fältet för att ange ett anpassat format för namn på certifikatmottagaren. De två variablerna som stöds för det anpassade formatet är **eget namn (cn)** och **e-post (e)**. Genom att använda en kombination av dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare som det här: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US** I det här exemplet har du skapat ett format för namn på certifikatmottagaren som, utöver CN- och E-variablerna, använder strängar för värdena organisationsenhet, organisation, plats, stat och land. [Det här ämnet](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visar funktionen **CertStrToName** och dess strängar som stöds.
+        
     - **Alternativt namn för certifikatmottagare** – Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet ska användas för att autentisera mot en nätverksprincipserver måste du ange användarens huvudnamn som alternativt mottagarnamn. 
     - **Nyckelanvändning** – Ange alternativ för nyckelanvändning för certifikatet. Du kan välja bland följande alternativ: 
         - **Nyckelchiffrering:** Tillåt bara nyckelutbyte när nyckeln är krypterad. 
@@ -392,10 +400,6 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 Profilen skapas och visas på bladet med profillistan.
 
->[!Note]
-> Endast för iOS-enheter: Välj Anpassad under Format för namn på certifikatmottagare om du vill ange ett eget format för namn på certifikatmottagare.
-> De två variabler som stöds för närvarande för det anpassade formatet är **Nätverksnamn (cn)** och **E-post (e)**. Genom att använda en kombination av dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare som det här: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US** I det här exemplet har du skapat ett format för namn som, utöver CN- och E-variabler, använder strängar för värden för organisationsenhet, organisation, plats, stat och land. [Det här avsnittet](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visar funktionen **CertStrToName** och dess strängar som stöds.
-
 ## <a name="how-to-assign-the-certificate-profile"></a>Så här tilldelar du certifikatprofilen
 
 Tänk på följande innan du tilldelar certifikatprofiler till grupper:
@@ -407,5 +411,4 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 - Även om du tilldelar varje profil separat, måste du också tilldela den betrodda rotcertifikatutfärdaren och SCEP- eller PKCS-profilen. Annars misslyckas SCEP- eller PKCS-certifikatprincipen.
 
 Du hittar allmän information om hur du tilldelar profiler i [Så här tilldelar du enhetsprofiler](device-profile-assign.md).
-
 

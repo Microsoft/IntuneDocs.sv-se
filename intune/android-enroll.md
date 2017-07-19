@@ -1,23 +1,29 @@
-mdm-authority-set---
-# <a name="required-metadata"></a>nödvändiga metadata
-
-title: Registrera Android-enheter i Intune titleSuffix: "Förhandsversion av Intune Azure" description: "Förhandsversion av Intune Azure: Lär dig hur du registrerar Android-enheter i förhandsversionen av Intune Azure."
-keywords: author: nathbarn ms.author: nathbarn manager: angrobe ms.date: 04/12/2017 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: f276d98c-b077-452a-8835-41919d674db5
-
-# <a name="optional-metadata"></a>valfria metadata
-
-#<a name="robots"></a>ROBOTAR:
-#<a name="audience"></a>målgrupp:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: chrisbal ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ---
-
+title: Registrera Android-enheter i Intune
+titleSuffix: Intune on Azure
+description: "Läs hur du registrerar Android-enheter i Intune.”"
+keywords: 
+author: nathbarn
+ms.author: nathbarn
+manager: angrobe
+ms.date: 06/28/2017
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: f276d98c-b077-452a-8835-41919d674db5
+ms.reviewer: chrisbal
+ms.suite: ems
+ms.custom: intune-azure
+ms.openlocfilehash: 295315dae52662c386055747862717b85ed4b877
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
+---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Som Intune-administratör kan du hantera Android-enheter, inklusive Samsung Knox Standard-enheter. Du kan också hantera arbetsprofilen på [Android for Work-enheter](#enable-enrollment-of-android-for-work-devices).
 
@@ -25,15 +31,13 @@ Enheter som kör Samsung KNOX Standard har stöd för hantering av flera använd
 
 ## <a name="prerequisite"></a>Krav
 
-Du måste ange MDM-utfärdare för **Microsoft Intune** så att du kan hantera mobila enheter. Fler anvisningar finns i [Ange MDM-utfärdare](mdm-authority-set.md). Du anger det här objektet bara en gång, och det är när du först konfigurerar Intune för hantering av mobila enheter. Så det kan hända att du redan har gjort de här inställningarna.
+Du måste ange MDM-utfärdare för **Microsoft Intune** så att du kan hantera mobila enheter. Fler anvisningar finns i [Ange MDM-utfärdare](mdm-authority-set.md). Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter.
 
 ## <a name="set-up-android-enrollment"></a>Konfigurera Android-registrering
 
 Som standard tillåter Intune registrering av Android- och Samsung Knox Standard-enheter.
 
-Se [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md#set-device-type-restrictions) för att blockera Android-enheter eller endast blockera personligt ägda Android-enheter från registrering.
-
-Se [Ange begränsningar för enhetsgräns](enrollment-restrictions-set.md#set-device-limit-restrictions) för att ange det maximala antalet enheter som en användare kan registrera.
+Se [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md) för att blockera Android-enheter eller endast blockera personligt ägda Android-enheter från registrering.
 
 Användarna måste registrera sina enheter genom att hämta Intunes företagsportalapp som är tillgänglig från Google Play och sedan öppna appen och följa anvisningarna för att registrera sig för att aktivera hantering av enheter. När Android-enheter hanteras kan du [tilldela efterlevnadsprinciper](compliance-policy-create-android.md), [hantera appar](app-management.md) med mera.
 
@@ -47,7 +51,7 @@ Om du vill aktivera hantering av arbetsprofilen på enheter som har [stöd för 
 Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 
 2. **Konfigurera Android for Work-bindning**<br>
-    Som Intune-administratör väljer du i Azure-portalen **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+    Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.
 
     1. På bladet **Intune** väljer du **Enhetsregistrering**, > **Android for Work-registrering**. Klicka sedan på **Konfigurera** för att öppna Google Play-webbplatsen Android for Work. Det här kommer att öppna en ny flik i webbläsaren.
   ![Skärmbild som visar länk till Konfigurera Android for Work-bindning](./media/android-work-bind.png)
@@ -78,7 +82,7 @@ Du kan även skicka dem en länk till stegen för registrering online: [Registre
 
 Information om andra slutanvändaraktiviteter finns i de här artiklarna:
 
-- [Resurser om slutanvändarupplevelsen med Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune)
+- [Resurser om slutanvändarupplevelsen med Microsoft Intune](end-user-educate.md)
 - [Använda en Android-enhet med Intune](https://docs.microsoft.com/intune-user-help/using-your-android-device-with-intune)
 
 ## <a name="unbinding-your-android-for-work-administrative-account"></a>Ta bort bindning för ditt administratörskonto för Android for Work
@@ -88,7 +92,7 @@ Du kan inaktivera Android for Work-registrering och hantering. Klicka på **Ta b
 ### <a name="how-to-unbind-an-android-for-work-account"></a>Så här tar du bort bindningen för ett Android for Work-konto
 
 1. **Ta bort en Android for Work-bindning**<br>
-    Som Intune-administratör väljer du i Azure-portalen **Fler tjänster** > **Övervakning + hantering** > **Intune**.  På bladet **Intune** väljer du **Enhetsregistrering**, > **Android for Work-registrering** och klickar sedan på **Ta bort bindning**.
+    Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.  På bladet **Intune** väljer du **Enhetsregistrering**, > **Android for Work-registrering** och klickar sedan på **Ta bort bindning**.
 
 2. **Godkänn borttagningen av Android for Work-bindningen**<br>
   Klicka på **Ja** att ta bort bindningen och avregistrera alla Android for Work-enheter från Intune.

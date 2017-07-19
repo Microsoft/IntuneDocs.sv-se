@@ -15,6 +15,7 @@
 ### [Enhetslivscykel](device-lifecycle.md)
 ### [Applivscykel](app-lifecycle.md)
 ## [Vanliga scenarier](common-scenarios.md)
+## [Beskrivning av tjänst](microsoft-intune-service-description.md)
 ## [Kända problem](known-issues.md)
 ## [Support](get-support.md)
 
@@ -81,10 +82,10 @@
 #### [Windows-registrering](windows-enroll.md)
 #### [Massregistrering](windows-bulk-enroll.md)
 ### [Konfigurera Android-registrering](android-enroll.md)
-### Ställ in iOS-registrering
-#### [Med program för enhetsregistrering](device-enrollment-program-enroll-ios.md)
-#### [Med stöd för Apple School Manager](apple-school-manager-set-up-ios.md)
-#### [Med Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
+### [Ställ in iOS-registrering](ios-enroll.md)
+#### [Program för enhetsregistrering](device-enrollment-program-enroll-ios.md)
+#### [Apple School Manager](apple-school-manager-set-up-ios.md)
+#### [Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
 ### [Konfigurera registrering av macOS](macos-enroll.md)
 
 ## [Hantera enheter](device-management.md)

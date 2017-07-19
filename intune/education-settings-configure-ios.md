@@ -1,33 +1,29 @@
 ---
-title: "Intune-inställningar för iOS-appen Klassrum | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att styra inställningar i Klassrum-appen på iOS-enheter."
+title: "Intune-inställningar för iOS Klassrum-appen"
+titleSuffix: Intune on Azure
+description: "Läs om vilka Intune-inställningar du kan använda för att kontrollera inställningarna för klassrum-appen på iOS-enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/02/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
-ms.reviewer: heenamac
+ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6f24636687291ff55686277c3f24b2774cfb32f4
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 4188c3951c9cb864b77bde52a5d19f022f17c11c
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
-
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Introduktion
 [Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Med hjälp av appen kan läraren till exempel:
@@ -45,7 +41,7 @@ Använda Intunes enhetsprofil för iOS **Utbildning** och informationen i det h�
 Tänk på följande innan du börjar konfigurera inställningarna:
 
 - Både lärarens och elevernas iPad-enheter måste registreras i Intune
-- Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan göra detta manuellt eller använda [Intune apphantering](app-management.md).
+- Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan antingen installera appen manuellt eller använda [Intune-apphantering](app-management.md).
 - Du måste konfigurera certifikat för att autentisera anslutningar mellan lärarens och elevernas enheter (se steg 2)
 - Lärarens och elevernas iPad-enheter måste finnas i samma Wi-Fi-nätverk och även ha Bluetooth aktiverat
 - Appen Klassrum appen körs på övervakade iPad-enheter som kör iOS 9.3 eller senare
@@ -57,7 +53,7 @@ Tänk på följande innan du börjar konfigurera inställningarna:
 Använd Microsoft SDS (School Data Sync) för att importera skolinformation från ett befintligt elevinformationssystem (SIS) till Azure Active Directory (Azure AD).
 SDS synkroniserar information från din SIS och lagrar den i Azure AD. Azure AD är ett Microsoft-hanteringssystem som hjälper dig att organisera användare och enheter. Du kan sedan använda dessa data för att hantera dina elever och klasser. [Läs mer om att distribuera SDS](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
-### <a name="how-to-import-data-using-sds"></a>Hur importerar jag data med SDS?
+### <a name="how-to-import-data-using-sds"></a>Importera data med SDS
 
 Du kan importera information till SDS på något av följande sätt:
 
@@ -77,14 +73,14 @@ Du kan importera information till SDS på något av följande sätt:
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övrigt** > **Intune**.
-3.    Välj **Konfigurera enheter** på **Intune**-bladet.
-4.    Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-5.    Välj **Skapa profil** på profilbladet.
-6.    Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen på bladet **Skapa profil**.
-7.    Välj **iOS** i listrutan **Plattform**.
-8.    Välj **Utbildning** i listrutan **Profiltyp**.
-9.    Välj **Inställningar** > **Konfigurera**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3.  Välj **Konfigurera enheter** på **Intune**-bladet.
+4.  Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
+5.  Välj **Skapa profil** på profilbladet.
+6.  Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen på bladet **Skapa profil**.
+7.  Välj **iOS** i listrutan **Plattform**.
+8.  Välj **Utbildning** i listrutan **Profiltyp**.
+9.  Välj **Inställningar** > **Konfigurera**.
 
 
 Du behöver sedan certifikat för att upprätta en förtroenderelation mellan lärarens och elevernas iPad-enheter. Certifikat används för att smidigt och tyst autentisera anslutningar mellan enheter utan att behöva ange användarnamn och lösenord.
@@ -92,7 +88,7 @@ Du behöver sedan certifikat för att upprätta en förtroenderelation mellan l�
 >[!IMPORTANT]
 >De lärar- och elevcertifikat som du använder måste utfärdas av olika certifikatutfärdare (CA). Du måste skapa två nya underordnade certifikatutfärdare som är anslutna till din befintliga infrastruktur för certifikat; en för lärare och en för elever.
 
-iOS-utbildningsprofiler stöder endast PFX-certifikat, SCEP-certifikat stöds inte.
+Profiler för iOS-utbildning stöder endast PFX-certifikat. SCEP-certifikat stöds inte.
 
 Certifikat som du skapar måste ha stöd för serverautentisering förutom användarautentisering.
 
@@ -120,8 +116,8 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurera elevcertifikat
 
-1.    Välj **Elevcertifikat** på bladet **Utbildning**.
-2.    Välj **1:1** på bladet **Elevcertifikat** i typlistan **Elevcertifikat**.
+1.  Välj **Elevcertifikat** på bladet **Utbildning**.
+2.  Välj **1:1** på bladet **Elevcertifikat** i typlistan **Elevcertifikat**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurera rotcertifikat för elev
 
@@ -143,8 +139,8 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ## <a name="finish-up"></a>Slutför
 
-1.    Klicka på OK på bladet **Utbildning**.
-2.    Välj **Skapa** på bladet **Skapa profil**.
+1.  Klicka på OK på bladet **Utbildning**.
+2.  Välj **Skapa** på bladet **Skapa profil**.
     
 Profilen skapas och visas på bladet med profillistan.
 
@@ -156,3 +152,4 @@ När en lärare nu använder Klassrum-appen kommer hen att ha full kontroll öve
 
 Mer information om Klassrum-appen finns i [Hjälp om Klassrum](https://help.apple.com/classroom/ipad/2.0/) på Apples webbplats.
 
+Om du vill konfigurera delade iPad-enheter för elever läser du [How to configure Intune education settings for shared iPad devices](education-settings-configure-ios-shared.md) (konfigurera Intune-utbildningsinställningar för delade iPad-enheter).
