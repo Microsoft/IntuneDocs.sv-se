@@ -13,16 +13,13 @@ ms.technology:
 ms.assetid: 63060896-e00e-4ef0-b2ad-276e55164895
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 4f893c0c8308a246d7bab15fed68a78c4e10b70a
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 828dd9406d308d9bdb7af686b31689df79633940
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Fler resurser för planeringen av din Intune-distribution
-
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
 
 ## <a name="templates"></a>Mallar
 
@@ -45,7 +42,7 @@ Här följer en lista över mallarna för respektive avsnitt.
 | | Princip för villkorlig åtkomst|-|
 
 
-## <a name="links"></a>Links
+## <a name="further-reading"></a>Läs mer
 
 Ta en titt på dessa resurser om du vill ha ytterligare information som kan vara till hjälp när du planerar, utformar och implementerar Intune-distributionen.
 

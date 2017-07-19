@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f8be4f6bf47ceb966e9042465dc8839d9aa9119
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c01099888ed4cfd04264ad902c73cf475385f1e3
+ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Windows-appar i Microsoft Intune
 
@@ -38,31 +38,33 @@ ms.lasthandoff: 07/01/2017
 ## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
 
 1. På bladet **Lägg till app** väljer du filen **Appaket**.
-2. På bladet **Appaket** klickar du på knappen Bläddra och väljer en Windows-installationsfil med filnamnstillägget **.msi** (övriga installationsfiltyper stöds inte).
+2. På bladet **Appaketfil** väljer du bläddringsknappen och väljer en Windows-installationsfil med filnamnstillägget **.msi**, **.appx** eller **.appxbundle**.
 3. Välj **OK** när du är klar.
 
 
 ## <a name="step-3---configure-app-information"></a>Steg 3 – Konfigurera appinformation
 
 1. På bladet **Lägg till app** väljer du filen **Appaket**.
-2. Konfigurera följande information på bladet **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här bladet har fyllts i automatiskt:
-    - **Namn** – Ange namnet på appen så som det ska visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
-    - **Beskrivning** – Ange en beskrivning för appen. Detta visas för användare i företagsportalen.
+2. På bladet **Appinformation** konfigurerar du följande information (vissa värden på det här bladet kanske har fyllts i automatiskt):
+    - **Namn** – Ange namnet på appen så som det visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
+    - **Beskrivning** – Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare** – Ange namnet på appens utgivare.
-    - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det enklare för användarna att hitta appen när de söker i företagsportalen.
+    - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Om du kategoriserar apparna blir det enklare för användarna att hitta appen när de söker på företagsportalen.
     - **Visa den här som aktuell app på företagsportalen** – Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användare i företagsportalen.
-    - **Sekretess-URL (valfritt)** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användare i företagsportalen.
-    - **Kommandoradsargument** – Du kan också ange de kommandoradsargument som du vill använda för msi-filen när den körs, som **/q**.
+    - **Informations-URL** – Om du vill anger du webbadressen till en webbplats som innehåller information om appen. Webbadressen visas för användarna på företagsportalen.
+    - **Sekretess-URL** – Om du vill anger du webbadressen till en webbplats som innehåller sekretessinformation för appen. Webbadressen visas för användarna på företagsportalen.
+    - **Kommandoradsargument** – Om du vill anger du kommandoradsargument som du vill tillämpa på MSI-filen när den körs, t.ex. **/q**.
     - **Utvecklare (valfritt)** – Ange apputvecklarens namn.
     - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
     - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-    - **Logotyp** – Överför en ikon som ska associeras med appen. Den här ikonen visas med appen när användare söker i företagsportalen.
+    - **Logotyp** – Ladda upp en ikon som är associerad med appen. Ikonen visas tillsammans med appen när användarna söker på företagsportalen.
 3. Välj **OK** när du är klar.
 
 ## <a name="step-4---finish-up"></a>Steg 4 – Slutför
 
-1. På bladet **Lägg till app** kontrollerar du att den information som du har konfigurerat är korrekt.
+1. På bladet **Lägg till app** kontrollerar du att appinformationen är korrekt konfigurerad.
 2. Välj **Lägg till** för att överföra appen till Intune.
 
-Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+## <a name="next-steps"></a>Nästa steg
+
+Appen som du har skapat visas i applistan. Nu kan du tilldela den till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).

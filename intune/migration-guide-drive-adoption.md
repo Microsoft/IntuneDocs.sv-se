@@ -1,6 +1,6 @@
 ---
 title: "Genomför slutanvändarinförande med villkorlig åtkomst"
-description: "Syftet med den här artikeln är att ge insikter om hur du kan använda villkorlig åtkomst för att underlätta Intune-registreringen."
+description: "Den här artikeln innehåller information om hur du använder villkorlig åtkomst för att underlätta Intune-registreringen."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,18 +13,15 @@ ms.technology:
 ms.assetid: c2d7ce3f-fe97-4044-ad9e-25ac8fa301c9
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 0b2fbcc1d63f229e1b63873841bc300bdde92fa3
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 7a9c3bef955239ad653a9ca45c55c533be36c5ce
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="drive-end-user-adoption-with-conditional-access"></a>Genomför slutanvändarinförande med villkorlig åtkomst
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-Att aktivera villkorliga åtkomstfunktioner med Intune, t.ex. blockera e-post för ej registrerade enheter, kan bidra till att underlätta registrering och efterlevnad, men det krävs inte för att migreringen ska lyckas. Dina migreringsmål och säkerhetskrav ska ge önskat resultat.
+Att aktivera funktioner för villkorlig åtkomst med Intune, t.ex. blockering av e-post för oregistrerade enheter, kan vara positivt i registrerings- och efterlevnadshänseende, men det krävs inte för att migreringen ska lyckas. Dina migreringsmål och säkerhetskrav ska ge önskat resultat.
 
 ## <a name="migration-campaign-with-conditional-access"></a>Migreringskampanj med villkorlig åtkomst
 
@@ -46,18 +43,18 @@ Detta är en vanlig metod när man vill förbättra en migreringskampanj med vil
 
 ### <a name="disadvantages"></a>Nackdelar
 
--   Användare av den tidigare lösningen kan eventuellt få åtkomst till resurser som använder ohanterade enheter innan den villkorliga åtkomsten aktiveras för dessa användare.
+-   Potentiellt kan användare av en tidigare lösning få åtkomst till resurser med hjälp av ohanterade enheter innan den villkorliga åtkomsten aktiveras för dessa användare.
 
-> [!TIP]
-> Det här är ett sätt av flera. Du kan välja en enklare process som skjuter upp all villkorlig åtkomst till efter det att varje fas har instruerats om registrering, eller så kan du välja en striktare process som tillämpar villkorlig åtkomst direkt från start och som kräver fullständig efterlevnad för all åtkomst.
 
--   Läs mer om [villkorlig åtkomst](/intune/conditional-access).
+Det här är ett sätt av flera. Du kan välja en enklare process som skjuter upp all villkorlig åtkomst till efter det att varje fas har instruerats om registrering, eller så kan du välja en striktare process som tillämpar villkorlig åtkomst direkt från start och som kräver fullständig efterlevnad för all åtkomst.
+
+-   Läs mer om [villkorlig åtkomst](conditional-access.md).
 
 ## <a name="task-list-for-conditional-access"></a>Uppgiftslista för villkorlig åtkomst
 
 ### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Uppgift 1: Bestäm hur du tänker implementera villkorlig åtkomst
 
-[Vanliga sätt att använda villkorlig åtkomst på](/intune/conditional-access-intune-common-ways-use).
+[Vanliga sätt att använda villkorlig åtkomst på](conditional-access-intune-common-ways-use.md).
 
 ### <a name="task-2-set-up-intune-conditional-access"></a>Uppgift 2: Konfigurera villkorlig åtkomst för Intune
 
@@ -65,14 +62,14 @@ Välj något av följande alternativ:
 
 -   [Konfigurera villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
--   [Install Exchange Connector lokalt med Intune](/intune/exchange-connector-install)
+-   [Install Exchange Connector lokalt med Intune](exchange-connector-install.md)
 
--   [Konfigurera appbaserade principer för villkorlig åtkomst för Exchange Online](/intune/app-based-conditional-access-intune-exchange-online-create)
+-   [Konfigurera appbaserade principer för villkorlig åtkomst för Exchange Online](app-based-conditional-access-intune-create.md)
 
--   [Konfigurera appbaserade principer för villkorlig åtkomst för SharePoint Online](/intune/app-based-conditional-access-intune-sharepoint-online-create)
+-   [Konfigurera appbaserade principer för villkorlig åtkomst för SharePoint Online](app-based-conditional-access-intune-create.md)
 
--   [Blockera appar som inte använder modern autentisering (ADAL)](/intune/app-modern-authentication-block)
+-   [Blockera appar som inte använder modern autentisering (ADAL)](app-modern-authentication-block.md)
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Typisk migreringscykel](migration-guide-cycle.md)
+Läs mer om [den typiska migreringscykeln](migration-guide-cycle.md).

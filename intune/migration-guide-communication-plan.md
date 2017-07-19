@@ -1,11 +1,11 @@
 ---
 title: Planera kommunikation
-description: "Syftet med den här artikeln är att tillhandahålla en plan och strategi för migrationskommunikation."
+description: "Den här artikeln innehåller en kommunikationsplan och kommunikationsstrategi för migreringen."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,49 +13,46 @@ ms.technology:
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: ba85331629f88a4fc6df9f7c2ee5fcf1eda2d8ee
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 59b978fa9c9084c5a70c912ca6a9b1e6c364722c
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
-# <a name="plan-communications"></a>Planera kommunikation 
+# <a name="plan-communications"></a>Planera kommunikation
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
+Kommunikationsplanen är en nyckelfaktor i en Intune-migrering. Du kan följa samma kommunikationsplan för varje fas av migreringen.
 
-Kommunikationsplanen är en nyckelfaktor i en Intune-migrering. Du kan följa samma kommunikationsplan för varje fas så som tidigare diskuterats i avsnittet Nycklar till en lyckad migrering.
+## <a name="email-templates"></a>E-postmallar
 
-## <a name="e-mail-templates"></a>E-postmallar
+Vi rekommenderar följande kommunikationsplan för e-post. Vi har samlat mallar som du kan anpassa för din kommunikationsplan:
 
-Här följer ett exempel på hur du kan kommunicera migrering till din organisation:
+-   **E-post \#1:** Förklara fördelarna, förväntningarna och schemat. Ta chansen att demonstrera andra nya tjänster vars åtkomst beviljas på Intune-hanterade enheter.<br/><br/>
 
--   **E-post \#1:** Förklara fördelar, förväntningar och schema. Ta chansen att demonstrera andra nya tjänster till vilka åtkomst beviljas på Intune-hanterade enheter.
 
-    -   [Hämta e-post \#1 mall som ska användas i din organisation](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35).
+    -   [Ladda ned e-post \#1-mall](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35)
 <br></br>
 
--   **E-post \#2:** Meddela att tjänster nu är åtkomliga via Intune. Be användarna att registrera sig nu. Påminn användarna om fördelarna med och de strategiska skälen för migrering.
+-   **E-post \#2:** Meddela att tjänster nu är åtkomliga via Intune. Be användarna att registrera sig nu. Påminn användarna om fördelarna med och de strategiska skälen för migrering.<br/><br/>
 
-    -   [Hämta e-post \#2 mall som ska användas i din organisation.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
+
+    -   [Ladda ned e-post \#2-mall](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
 <br></br>
 
--   **E-post \#3:** Ge användarna tid innan åtkomsten påverkas. Påminn återigen användarna om fördelarna med och de strategiska skälen för migrering. E-tidsinställning ska ha ett skjutfönster som matchar pipelinefaserna. Exempel: Skicka e-post i juni \#1 till fas 1-användare, e-post \#2 till fas 2-användare och e-post \#1 till fas 3-användare.
+-   **E-post \#3:** Ge användarna en tidslinje så att de vet när deras åtkomst kommer att påverkas. Påminn återigen användarna om fördelarna med och de strategiska skälen för migrering. E-postutskicken bör överensstämma med dina faser. I juni kan du till exempel skicka e-post \#1 till fas 1-användare, e-post \#2 till fas 2-användare och e-post \#3 till fas 3-användare.<br/><br/>
 
-    -   [Hämta e-post \#3 mall som ska användas i din organisation.](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
+    -   [Ladda ned e-post \#3-mall](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 
-Efter en viss period kan du börja framtvinga kompatibilitet med principer för villkorlig åtkomst och använda den som villkor för att få åtkomst till företagsdata.
-
--   Mer information finns i [Genomför slutanvändarinförande med villkorlig åtkomst.](migration-guide-drive-adoption.md)
+Efter en viss tid kan du börja tillämpa efterlevnadskrav genom principer för villkorlig åtkomst och använda dem som villkor för åtkomst till företagsdata. Mer information finns i [Genomför slutanvändarinförande med villkorlig åtkomst](migration-guide-drive-adoption.md).
 
 ## <a name="additional-communication-templates"></a>Ytterligare kommunikationsmallar
 
-Intune har ytterligare mallresurser som du kan använda för att stimulera enhetsregistrering hos slutanvändarna:
+Intune har ytterligare mallar som du kan använda för att underlätta användarnas enhetsregistrering:
 
--   Mer information om registreringsstegen för respektive plattform finns i [Informera slutanvändarna om Microsoft Intune](/intune/end-user-educate)
+-   [Informera slutanvändare om Microsoft Intune](end-user-educate.md) beskriver registreringsstegen baserat på OS-mobilplattform.
 
--   Hämta en anpassningsbar [Intune-registreringsmall för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a)
+-   [Mallen för Intune-slutanvändarregistrering för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) är ett anpassningsbart Word-dokument som beskriver hur du registrerar Android-, iOS- och Mac-enheter i Intune.
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Genomför slutanvändarinförande med villkorlig åtkomst](migration-guide-drive-adoption.md)
+[Genomför slutanvändarinförande med villkorlig åtkomst](migration-guide-drive-adoption.md).

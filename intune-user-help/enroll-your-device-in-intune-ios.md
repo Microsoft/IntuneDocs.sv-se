@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 07/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,27 +16,27 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af3313e6ba5cbf9184aaaa9b197f7a3b2b9d4c3e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 4d7ad138a8aa59ceeff00866469e59e2e1d19520
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="enroll-your-ios-device-in-intune"></a>Registrera din iOS-enhet i Intune
 
 Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 
-<iframe src="https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+> [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player]
 
 > [!NOTE]
-> Om du försöker registrera en macOS-enhet, t.ex. en MacBook Pro eller iMac, [kan du prova de här anvisningarna i stället](enroll-your-device-in-intune-macos.md).
+> Om du försöker registrera en Mac OS-enhet, t.ex. en MacBook Pro eller iMac, [kan du prova de här anvisningarna i stället](enroll-your-device-in-intune-macos.md).
 
 **Innan du börjar**
 
-- Se till att du avslutar registreringen efter att du påbörjat stegen. Om du pausar under mer än ett par minuter, så stoppas vanligtvis processen, och du måste att starta om den.
-- Om din registrering av någon anledning misslyckas måste du gå tillbaka till företagsportalsappen och försöka igen.
+- Se till att du avslutar registreringen efter att du påbörjat stegen. Om du pausar under mer än ett par minuter stoppas vanligtvis processen och du måste starta om den.
+- Om din registrering av någon anledning misslyckas måste du gå tillbaka till företagsportalappen och försöka igen.
 - Kontrollera att din Wi-Fi fungerar. Annars misslyckas registreringen.
-- Om du har blockerat Safari på enheten, avblockera Safari. Du måste använda Safari för att registrera.
+- Om du har blockerat Safari på enheten, avblockera Safari. Safari används under enhetsregistreringsprocessen.
 
 
 **Så här registrerar du din iOS-enhet:**
@@ -51,8 +51,8 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-
 
     ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
 
-> [!NOTE]
-> De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
+  > [!NOTE]
+  > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
 
 4. Läs igenom listan över vad IT-administratören kan och inte kan se på den registrerade enheten och tryck sedan på **Fortsätt**.
 
@@ -88,7 +88,7 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-
 
     ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
 
-12. Tryck på **Fortsätt** på skärmen **Konfiguration av företagsåtkomst**. Om IT-administratören har konfigurerat ytterligare säkerhetskrav, t.ex. att ett lösenord måste anges, följer du anvisningarna på skärmen tills du uppfyller alla kompatibilitetskrav och kommer tillbaka till skärmen Konfiguration av företagsåtkomst. Tryck sedan på **Fortsätt**.
+12. Tryck på **Fortsätt** på skärmen **Konfiguration av företagsåtkomst**. På den här skärmen ser du vilka andra krav som du kan behöva uppfylla för att enheten ska vara kompatibel, t.ex. ange ett lösenord. Följ anvisningarna på skärmen tills du uppfyller alla efterlevnadskrav. När du är klar kommer du tillbaka till skärmen Konfiguration av företagsåtkomst. Tryck på **Fortsätt**.
 
     ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
 
@@ -99,6 +99,6 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-
 Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
 
 > [!Note]
-> Om din organisation använder kostnad hanteringsprogramvara för telekomtjänster måste ytterligare ett part steg utföras innan enheten har registrerats fullständigt. Läs mer [här](enroll-your-device-with-telecom-expense-management-ios.md).
+> Du måste utföra några få steg till innan enheten har registrerats helt. Lär dig mer om [hur du registrerar enheten med kostnadsuppföljning av telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation använder Apples enhetsregistreringsprogram (DEP) kan du läsa mer [här](enroll-your-device-dep-ios.md).
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
