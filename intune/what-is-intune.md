@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ae42ab64945982fedc2d6858e2f3eca8fbed334c
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Introduktion till Microsoft Intune i Azure-portalen
 
@@ -91,7 +91,7 @@ Information som hjälper dig att [planera och utforma](/intune-classic/plan-desi
 ### <a name="on-premises-access"></a>Lokal åtkomst
 [Konfigurera åtkomst till Exchange ActiveSync och Exchange On-premises](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
 ### <a name="users"></a>Användare
-[Lär dig mer om användarna av de enheter du hanterar och sortera resurser i grupper](user-management.md).
+[Lär dig mer om användarna av de enheter du hanterar och sortera resurser i grupper](users-add.md).
 ### <a name="groups"></a>Grupper
 [Läs om hur du kan använda Azure Active Directory-grupper med Intune](groups-get-started.md)
 ### <a name="intune-roles"></a>Intune-roller
