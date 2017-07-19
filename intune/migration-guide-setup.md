@@ -1,6 +1,6 @@
 ---
 title: "Grundläggande Intune-konfiguration"
-description: "Syftet med den här artikeln är att tillhandahålla nödvändiga åtgärder för hur du konfigurerar Microsoft Intune."
+description: "Den här artikeln beskriver de steg du följer för att konfigurera Microsoft Intune."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -13,49 +13,44 @@ ms.technology:
 ms.assetid: 60cfa440-0723-4ea0-bacf-3c5d26f9a1d3
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: c3129b2a8d93e91493455da5f3e5fd1a59dd77bb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9ea12f3707b830f0e3426526a7ae91d176d6e809
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="basic-setup"></a>Grundläggande konfiguration
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
-
-När du utvärderat miljön är det dags att konfigurera Intune.
+När du har utvärderat din miljö är det dags att konfigurera Intune.
 
 ## <a name="external-dependencies-for-an-intune-deployment"></a>Externa beroenden för en Intune-distribution
 
 ### <a name="identity"></a>Identitet
 
-Intune kräver Azure Active Directory (AAD) som leverantör av identitet och användargruppering.
+Intune kräver Azure Active Directory (AAD) som leverantör av identitet och användargruppering. Läs mer om:
 
--   Läs mer om [identitetskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview).
+-  [Identitetskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   Läs mer om [katalogsynkroniseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements).
+-   [Katalogsynkroniseringskrav](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   Läs mer om [krav för multifaktorautentisering](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements).
+-   [Krav på multifaktorautentisering (MFA)](https://docs.microsoft.com/active-directory/active-directory-hybrid-identity-design-considerations-multifactor-auth-requirements)
 
--   Läs mer om att [planera användar- och enhetsgrupper](/intune/users-permissions-add).
+-   [Planera dina användar- och enhetsgrupper](users-add.md)
 
--   Läs om att [skapa användar- och enhetsgrupper](/intune/groups-get-started).
+-   [Skapa användar- och enhetsgrupper](groups-get-started.md)
 
-Om företaget redan använder Office 365 är det viktigt att Intune använder samma Azure Active Directory-miljö.
+Om din organisation redan använder Office 365 måste Intune använda samma Azure Active Directory-miljö.
 
 ### <a name="pki-optional"></a>PKI (valfritt)
 
-Om du planerar att använda certifikatbaserad autentisering för VPN-, Wi-Fi- eller e-postprofiler med Intune måste du kontrollera att du har en [PKI-infrastruktur på plats](/intune/certificates-configure) som stöds och är redo att skapa och distribuera certifikatprofiler.
+Om du planerar att använda certifikatbaserad autentisering för VPN-, Wi-Fi- eller e-postprofiler med Intune måste du kontrollera att du har en [PKI-infrastruktur på plats](certificates-configure.md) som stöds och är redo att skapa och distribuera certifikatprofiler. Lär dig mer om hur du konfigurerar certifikat i Intune:
 
-Mer information om hur man konfigurerar certifikat i Intune finns nedan.
-
--   [Konfigurera certifikatinfrastruktur för SCEP](/intune/certificates-scep-configure).
+-   [Konfigurera certifikatinfrastrukturen för SCEP](/intune/certificates-scep-configure)
 
 -   [Konfigurera certifikatinfrastruktur för PFX](/intune/certficates-pfx-configure).
 
 
-## <a name="task-list-for-an-intune-setup"></a>Uppgiftslista för en Intune-installation
+## <a name="task-list-for-an-intune-setup"></a>Uppgiftslista för en Intune-konfiguration
 
 ### <a name="task-1-intune-subscription"></a>Uppgift 1: Intune-prenumeration
 
@@ -75,15 +70,15 @@ Innan du kan migrera till Intune måste du ha en Intune-prenumeration.
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Uppgift 3: Konfigurera Intune som utfärdare för hantering av mobilenheter
 
-Du kan hantera Intune via Azure Portal eller konsolen Configuration Manager Current Branch. Såvida du inte behöver integrera Intune med en Configuration Manager Current Branch-distribution så rekommenderar vi att du hanterar Intune från [Azure Portal](https://portal.azure.com).
+Du kan hantera Intune via Azure Portal eller konsolen Configuration Manager Current Branch. Såvida du inte behöver integrera Intune med en Configuration Manager Current Branch-distribution rekommenderar vi att du hanterar Intune från [Azure-portalen](https://portal.azure.com).
 
-Aktivera Intune Azure Portal genom att ange **Intune** som utfärdare för hantering av mobilenheter. Genom att använda en annan utfärdare för hantering av mobilenheter kan du låta Intune överföra hanteringen av mobilenheter till alternativa Microsoft-hanteringskonsoler. Dessa fall är ovanliga.
+Aktivera Intune Azure-portalen genom att ange **Intune** som utfärdare för hantering av mobilenheter (MDM). Genom att använda en annan utfärdare för hantering av mobilenheter kan du låta Intune överföra hanteringen av mobilenheter till alternativa Microsoft-hanteringskonsoler. Dessa fall är ovanliga.
 
 > [!IMPORTANT]
 > Om du överför hanteringen av mobila enheter till Intune för första gången måste du ange Intune som utfärdare för hantering av mobilenheter.
 
--   Lär dig hur [man anger utfärdare för hantering av mobilenheter](/intune/mdm-authority-set).
+Lär dig hur [man anger utfärdare för hantering av mobilenheter](mdm-authority-set.md).
 
 ## <a name="next-step"></a>Nästa steg
 
-[Konfigurera principer för enhets- och apphantering](migration-guide-configure-policies.md)
+Konfigurera [principer för enhets- och apphantering](migration-guide-configure-policies.md).

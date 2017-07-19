@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ca51c413e3148039b05a9d05a9a511e7158c9a1c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 361777884187937632b2af02d7a7f15f0574193f
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 07/01/2017
 ### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 - **Kräv lösenord för arbetsprofilen** –(Android 7.0 och senare med arbetsprofil aktiverad) definiera en lösenordsprincip som bara gäller för appar i arbetsprofilen. Som standard kan slutanvändaren använda de två separat definierade PIN-koderna, eller så kan de välja att kombinera de två definierade PIN-koderna till den starkare av de två.
 - **Minsta lösenordslängd** – Ange det minsta antal tecken som användarens lösenord måste innehålla (från **4**-**16**)
-- **Maximalt antal inaktiva minuter tills skärmen låser sig** – Välj hur lång tid innan en inaktiv enhet kräver en att en användare anger arbetsprofilens lösenord för att köra en app i arbetsprofilen.
+- **Maximalt antal minuter av inaktivitet innan skärmen låses** – Välj efter hur lång tid arbetsprofilen ska låsas. Därefter måste användaren ange sina autentiseringsuppgifter för att få åtkomst igen.
 - **Antal felaktiga inloggningar innan enheten rensas** – Ange hur många gånger ett felaktigt lösenord kan anges innan arbetsprofilen rensas från enheten.
 - **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**).
 - **Krav på lösenordstyp** – Välj den typ av lösenord som måste anges på enheten. Välj mellan:
@@ -77,3 +77,7 @@ ms.lasthandoff: 07/01/2017
 - **Förhindra återanvändning av tidigare lösenord** – Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas (från **1**-**24**).
 - **Upplåsning med fingeravtryck** – Blockerar en användare från att använda enhetens fingeravtrycksläsare för att låsa upp den.
 - **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla enheter. Med den här telefonfunktionen, som ibland kallas för en betrodd agent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats (till exempel när den är ansluten till en specifik Bluetooth-enhet eller när den är nära en NFC-tagg). Du kan använda inställningen för att förhindra att användarna konfigurerar Smart Lock.
+
+## <a name="next-steps"></a>Nästa steg
+
+Använd informationen i avsnittet [Konfigurera inställningar för enhetsbegränsningar](device-restrictions-configure.md) för att spara och tilldela profilen till användare och enheter.

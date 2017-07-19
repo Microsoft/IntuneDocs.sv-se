@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 06/07/2017
+ms.date: 07/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d75292ce60eb1db232aed12fc80a7cbccc063fb4
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1223d215058509a6a672c7a34bb22eee893b1350
+ms.sourcegitcommit: b287025b1a0d09d41faf51cf98c34b676fa1d98e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="configure-a-custom-domain-name"></a>Så här konfigurerar du ett eget domännamn
 
@@ -26,16 +26,16 @@ ms.lasthandoff: 07/01/2017
 
 Det här avsnittet beskriver hur administratörer kan skapa ett DNS CNAME för att förenkla och anpassa inloggningen.
 
-När organisationen registrerar sig för en molnbaserad tjänst från Microsoft, till exempel Intune, får du ett första domännamn i Azure Active Directory (AD) som ser ut ungefär så här: **dindomän.onmicrosoft.com**. I det här exemplet är **dindomän** det domännamn som du angav när du registrerade dig och **onmicrosoft.com** är det suffix som tilldelas de konton som du lägger till i din prenumeration. Om din organisation äger en anpassad domän kan du konfigurera din instans av Intune att använda den domänen i stället för domännamnet som följer med din prenumeration.
+När organisationen registrerar sig för en molnbaserad tjänst från Microsoft, till exempel Intune, får du ett första domännamn i Azure Active Directory (AD) som ser ut så här: **din-domän.onmicrosoft.com**. I det här exemplet är **din-domän** det domännamn som du valde när du registrerade dig. **onmicrosoft.com** är det suffix som tilldelas de konton som du lägger till i din prenumeration. Du kan konfigurera och använda din organisations anpassade domän för att ansluta till Intune i stället för domännamnet som du fick med din prenumeration.
 
-Innan du skapar användarkonton eller synkroniserar Active Directory, rekommenderar vi starkt att du bestämmer om du bara ska använda domänen .onmicrosoft.com eller om du ska lägga till ett eller flera av dina egna domännamn. Att konfigurera en anpassad domän innan du lägger till användare kan underlätta hanteringen av användaridentiteter för prenumerationen, genom att du gör det möjligt för användarna att logga in med de autentiseringsuppgifter de använder för att komma åt andra resurser i domänen.
+Innan du skapar användarkonton eller synkroniserar Active Directory, rekommenderar vi starkt att du bestämmer om du bara ska använda domänen .onmicrosoft.com eller om du ska lägga till ett eller flera av dina egna domännamn. Konfigurera en anpassad domän innan du lägger till användare för att förenkla användarhanteringen. På så sätt kan användarna logga in med de autentiseringsuppgifter som de använder för att komma åt andra resurser i domänen.
 
 När du prenumererar på en molnbaserad tjänst från Microsoft blir din instans av den tjänsten en Microsoft [Azure AD-klient](http://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant), som tillhandahåller identitets- och katalogtjänster för din molnbaserade tjänst. Och eftersom stegen för att konfigurera Intune att använda din organisations anpassade domännamn är samma som för andra Azure AD-klienter, kan du använda informationen och procedurerna i [Lägg till din domän](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
 
 > [!TIP]
-> Mer information om hur du använder domänen med en molnbaserad tjänst från Microsoft finns i [Översikt över anpassade domännamn i Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
+> Mer information om anpassade domäner finns i [Conceptual overview of custom domain names in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/) (Begreppsbaserad översikt över anpassade domännamn i Azure Active Directory).
 
-Du kan inte byta namn på eller ta bort det inledande domännamnet. Men du kan lägga till, verifiera eller ta bort egna domännamn i Intune, om du till exempel vill använda företagsnamnet.
+Du kan inte byta namn på eller ta bort det första onmicrosoft.com-domännamnet. Du kan lägga till, verifiera eller ta bort anpassade domännamn som används med Intune så att din företagsidentitet alltid är tydlig.
 
 ## <a name="to-add-and-verify-your-custom-domain"></a>Så här lägger du till och verifierar en egen domän
 
@@ -44,7 +44,7 @@ Du kan inte byta namn på eller ta bort det inledande domännamnet. Men du kan l
 2. I navigeringsfönstret väljer du **Inställningar** &gt; **Domäner**.
 
 3. Välj **Lägg till domän** och skriv namnet på din domän.
-
+   ![Skärmbild av administrationscenter för Office 365, där Inställningar > Domäner har valts och ett nytt domännamn läggs till](./media/domain-custom-add.png)
 4. Därmed öppnas dialogrutan **Verifiera domän** som visar värdena för att skapa TXT-posten i din DNS-värdtjänst.
     - **GoDaddy-användare**: Office 365-hanteringsportalen omdirigerar dig till inloggningssidan för GoDaddy. När du har angett dina autentiseringsuppgifter och accepterat avtalet för domänändringsbehörighet skapas TXT-posten automatiskt. Du kan också [skapa en TXT-post](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a) själv.
     - **Register.com-användare**: Följ [instruktionerna](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) för att skapa TXT-posten.

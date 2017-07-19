@@ -14,11 +14,11 @@ ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 389196cd5c36859589e68ccadd576ceeac1bc279
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ead4f7308679359398383a2821b9c7e015ce59de
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="sign-up-or-sign-in-to-intune"></a>Registrering eller inloggning på Intune
 
@@ -26,23 +26,22 @@ ms.lasthandoff: 07/01/2017
 
 Det här avsnittet beskriver hur systemadministratörer kan registrera sig för ett Intune-konto.
 
-Innan du kan logga in i eller registrera dig för Intune måste du kontrollera om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services eller om din organisation har ett Enterprise-avtal eller motsvarande volymlicensavtal med Microsoft. Ett arbets- eller skolkonto erhålls när du signerar ett volymlicensavtal med Microsoft eller prenumererar på andra Microsoft-molntjänster som Office 365.
+Innan du registrerar dig för Intune kontrollerar du om du redan har ett Microsoft Online Services-konto, Enterprise-avtal eller motsvarande volymlicensavtal. Ett Microsoft-volymlicensavtal eller en annan prenumeration på Microsoft-molntjänster som Office 365 innefattar vanligtvis ett arbets- eller skolkonto.
 
-Om du redan har ett arbets- eller skolkonto behöver du bara **logga in** med det kontot för att lägga till Intune i din befintliga prenumerationsmiljö. Annars måste du **registrera dig** och skapa ett nytt konto som du kan använda för att hantera Intune för din organisation.
+Om du redan har ett arbets- eller skolkonto **loggar du in** med det kontot och lägger till Intune i din prenumeration. Annars kan du **registrera dig** för ett nytt konto så att du kan använda Intune i din organisation.
 
 >[!WARNING]
->Om du registrerar dig för ett nytt konto kan du senare använda ett befintligt arbets- eller skolkonto för att hantera din prenumeration eller kombinera den med befintliga volymlicensavtal.
+>Du kan inte kombinera ett befintligt arbets- eller skolkonto efter att du har registrerat dig för ett nytt konto.
 
 ## <a name="how-to-sign-up-or-sign-in-to-intune"></a>Registrera dig eller logga in i Intune
 
 1.  Besök [Intune-registreringssidan](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
-2.  Logga in eller registrera dig på **inloggningssidan** om du vill hantera en ny prenumeration på Intune.
+  ![Skärmbild av webbsidan för kontoregistrering för en utvärderingsversion av Microsoft Intune](./media/account-sign-up-site.png)
+
+2.  Logga in eller registrera dig på inloggningssidan om du vill hantera en ny prenumeration på Intune.
 
 ## <a name="post-sign-up-considerations"></a>Att tänka på efter registreringen
-Om du registrerar dig för en ny prenumeration skickas ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din prenumeration är aktiv.
+När du har registrerat dig för en ny prenumeration skickas ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din prenumeration är aktiv.
 
-När du har slutfört inloggningsprocessen blir du omdirigerad till en sida där du kan lägga till användare och tilldela dem licenser med hjälp av Office 365 Administrationscenter. Om du bara ska använda molnbaserade konton med standarddomännamnet onmicrosoft.com kan du fortsätta och lägga till användare och tilldela licenser nu. Om du däremot ska använda organisationens anpassade domännamn eller vill synkronisera information om användarkonton från lokala Active Directory stänger du webbläsarfönstret och går vidare till steg 2 i den här snabbstartsguide. Ta även reda på mer [Om din första onmicrosoft.com-domän i Office 365](https://support.office.com/article/Domains-FAQ-1272bad0-4bd4-4796-8005-67d6fb3afc5a?ui=en-US&rs=en-US&ad=US&fromAR=1#bkmk_whydoihaveanonmicrosoft.comdomain)
-
->[!TIP]
-> Nästa gång du loggar in i Intune omdirigeras du automatiskt till Intune-administrationskonsolen.
+När du har slutfört registreringsprocessen dirigeras du till administrationscenter för Office 365, där du kan lägga till användare och tilldela dem licenser. Om du bara ska använda molnbaserade konton med standarddomännamnet onmicrosoft.com kan du fortsätta och lägga till användare och tilldela licenser nu. Om du däremot planerar att använda din organisations [domännamn](custom-domain-name-configure.md) eller [synkronisera information om användarkonton](users-add.md#sync-active-directory-and-add-users-to-intune) från lokala Active Directory, kan du stänga webbläsarfönstret.

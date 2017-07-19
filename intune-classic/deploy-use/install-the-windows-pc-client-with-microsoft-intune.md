@@ -4,7 +4,7 @@ description: "Använd den här guiden för att låta dina Windows-datorer hanter
 keywords: 
 author: nathbarn
 ms.author: nathbarn
-ms.date: 03/27/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 356ada64224f8982baf93ddaccb44df123c4568c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
+ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 
@@ -32,6 +32,8 @@ Windows-datorer kan registreras genom att installera Intune-klientprogrammet. In
 Intune-klientprogrammet innehåller lägsta nödvändiga programvara för att registrera datorn i Intune-hanteringen. När en dator har registrerats hämtar Intune-klientprogrammet det fullständiga klientprogrammet som behövs för datorhantering.
 
 Den här serien med hämtningar minskar påverkan på nätverkets bandbredd och minimerar den tid som krävs för att börja registrera datorn i Intune. Det garanterar även att klienten har den senaste tillgängliga programvaran efter att den andra hämtningen har slutförts.
+
+En Intune-licens ger rätt att installera Intune-klientprogramvaran på upp till fem datorer.
 
 ## <a name="download-the-intune-client-software"></a>Hämta Intune-klientprogramvaran
 

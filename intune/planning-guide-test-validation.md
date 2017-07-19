@@ -1,11 +1,11 @@
 ---
 title: Testning och validering av Intune
-description: "Den här artikeln hjälper dig med alla detaljer som ska övervägas vid testning och validering av Intune-molnlösningen i miljön."
+description: "Den information som du bör ha i åtanke när du testar och validerar en Intune-molnlösning i din miljö."
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 12/20/2016
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,48 +13,41 @@ ms.technology:
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 4ea2974c4724564cd8f9972fdb238b06d1b100e6
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: ddeb71c6a678ff42b5075d65c2bb4e0d89ae47f1
+ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="intune-testing-and-validation"></a>Testning och validering av Intune
 
-[!INCLUDE[note for both-portals](./includes/note-for-both-portals.md)]
+Testningsfasen sker både under och efter implementeringsfasen. Du behöver testkonton, grupper och enheter för att testa alla nödvändiga IT-scenarier (administratör) och slutanvändarscenarier (användningsfall) som du tidigare har identifierat.
 
-Testfasen bör vara under och efter implementeringsfasen, eftersom du måste testa konton, grupper och enheter för alla IT- (admin) och slutanvändarscenarier (användningsfall) som har identifierats tidigare.
-
-Vi rekommenderar att IT-support-/supportavdelningspersonalen inkluderas i testfasen så att supportdokumentation skapas och IT-support-/supportavdelningspersonalen känner sig trygg med att tillhandahålla support för produkten. Om en komponent eller ett scenario inte fungerar baserat på användningsfallen ser du till att dokumentera de ändringar som krävs och inkludera orsaken till att en ändring har gjorts.
+Vi rekommenderar att du involverar IT-supporten och annan supportpersonal i testningsfasen så att supportdokumentation kan tas fram, och så att de känner sig trygga med att ge support för produkten. Om en komponent eller ett scenario inte fungerar baserat på användningsfallen, dokumenterar du de ändringar som krävs och beskriver orsaken till ändringen.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 Vi rekommenderar att du dokumenterar följande:
 
--   **Testkriterier:** Identifierar prestandamått att mäta mot.
+-   **Testkriterier:** Identifiera de referensvärden som testningen ska mätas mot.
 
--   **Utformningskomponenter:** Måste finnas i minst 1 testkriterium.
+-   **Designkomponenter:** Måste finnas i minst ett testningskriterium.
 
-Om en utformningskomponent inte finns i minst 1 testkriterium som är anpassat till ett krav eller scenario kan du överväga om utformningskomponenten är nödvändig eller inte. Se även till att ha följande poster:
+Om en designkomponent inte finns i minst ett testningskriterium som är knutet till ett krav eller scenario bör du överväga om designkomponenten är nödvändig eller inte. Se även till att ha följande poster:
 
--   **Konton:** De konton som används vid testning bör vara testkonton som är licensierade för EMS och Office 365 för att testa alla användningsfall.
+-   **Konton:** Testkonton som licensierats för EMS och Office 365 för att testa alla användningsfallsscenarier.
 
--   **Enheter:** De enheter som används vid den här tidpunkten ska vara testenheter som potentiellt kan rensas eller återställas till fabriksinställningarna.
+-   **Enheter:** Testenheter som kan rensas eller återställas till fabriksinställningarna.
 
--   **Integrationskomponenter:** Alla integrationskomponenter (Certificate Connector, Intune Service-to-Service Connector för värdbaserad Exchange och Intune lokal Exchange Connector) ska installeras och konfigureras vid behov.
+-   **Integrationskomponenter:** Alla integrationskomponenter (Certificate Connector, Intune Service-to-Service Connector för värdbaserad Exchange och Intune On-Premises Connector för lokal Exchange) bör installeras och konfigureras efter behov.
 
-Utformningsändringar kan behövas för att hantera oförutsedda problem. Dessutom bör alla ändringar dokumenteras fullständigt med orsaken för varje ändring. Här visas ett exempel som illustrerar vad en ändring kan vara:
+Designändringar kan krävas i händelse av oförutsedda problem. Dessutom bör alla ändringar dokumenteras fullständigt med orsaken för varje ändring. Här visas ett exempel som illustrerar vad en ändring kan vara:
 
--   Du kanske upptäcker att du inte uppfyller kraven för Network Device Enrollment Service (NDES) och du lär dig också att VPN- och Wi-Fi-profiler kan konfigureras med en rotcertifikatutfärdare som uppfyller samma krav utan en NDES-implementering.
+<blockquote>Du kanske upptäcker att du inte uppfyller kraven för Network Device Enrollment Service (NDES), och du inser också att VPN- och Wi-Fi-profiler kan konfigureras med en rotcertifikatutfärdare som uppfyller samma krav utan en NDES-implementering.</blockquote>
 
-Du kanske upplever utmaningar eller problem som kräver teknisk hjälp eller specialiserad felsökning under testnings- och valideringsprocessen. Vi rekommenderar att du begär hjälp via Microsofts supportkanaler.
+Du kanske ställs inför utmaningar eller problem som kräver teknisk hjälp eller särskild felsökning under testnings- och valideringsprocessen. Vi rekommenderar att du ber om hjälp via Microsofts supportkanaler.
 
--   [Så här får du support för Intune](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune)
-
--   [Allmänna felsökningstips för Microsoft Intune](/intune-classic/troubleshoot/general-troubleshooting-tips-for-microsoft-intune).
-
--   [Så här får du support för Microsoft Intune.](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune)
+-   [Så här får du support för Intune](get-support.md)
 
 -   [Kontakta telefonsupporten för Microsoft Intune](/intune-classic/troubleshoot/contact-assisted-phone-support-for-microsoft-intune)
 
@@ -64,22 +57,24 @@ Funktionell validering består av testa varje komponent och konfiguration för a
 
 ![Avsnitt 9 tabell 1](./media/section-9-image-1-table.PNG)
 
-## <a name="use-case-validation-testing"></a>Valideringstestning av användningsfall
+## <a name="use-case-validation-testing"></a>Valideringstestning för användningsfall
 
-Valideringstestning av användningsfall bör utföras för att verifiera att scenarierna är fullständiga och funktionella. Det finns två typer av användningsfall, IT-administratör och slutanvändare.
+Kör valideringstestning för användningsfall för att bekräfta att scenarierna är fullständiga och funktionella. Det finns två typer av användningsfall: IT-administratör och slutanvändare.
 
 ### <a name="it-admin"></a>IT-administratör
 
-Valideringstestning för IT-administratörer utförs för att validera att administrativa åtgärder utförs på en enhet eller att användarfunktioner fungerar korrekt. Nedan visas ett exempel på ett valideringsscenario slutpunkt till slutpunkt för IT-administratörer.
+Kör valideringstestning för IT-administratörer för att bekräfta att administrativa åtgärder som utförs på en enhet eller användare fungerar korrekt. Nedan är ett exempel på ett valideringsscenario från slutpunkt till slutpunkt för IT-administratörer.
 
 ![Avsnitt 9 tabell 2](./media/section-9-image-2-table.PNG)
 
 ### <a name="end-user"></a>Slutanvändare
 
-Valideringstestning för slutanvändare bör utföras för att validera att slutanvändarupplevelsen är som förväntat och att den presenteras korrekt i all användarkommunikation. Det är viktigt att validera att slutanvändarupplevelsen är korrekt eftersom om detta inte valideras kan det leda till lägre införandefrekvens och fler samtal till supportavdelningen.
+Kör valideringstestning för slutanvändare för att kontrollera att slutanvändarupplevelsen är som förväntat och att den presenteras korrekt i all användarkommunikation. Det är viktigt att verifiera att slutanvändarupplevelsen är korrekt. Om du inte verifierar slutanvändarupplevelsen kan det leda till lägre integreringsfrekvens av användarna och fler supportsamtal.
 
 ![Avsnitt 9 tabell 3](./media/section-9-image-3-table.PNG)
 
 ## <a name="next-steps"></a>Nästa steg
 
-Nu när du har testat och validerat Intunes funktionella scenarier och användningsfall är du redo för produktionsdistribution av Intune. Läs [Ytterligare resurser](planning-guide-resources.md) om du vill ha mer information.
+Nu när du har testat och validerat Intunes funktionella scenarier och användningsfall är du redo att [distribuera Intune i produktionsmiljön](planning-guide-rollout-plan.md).
+
+Fler planeringsmallar och mer information finns i [Fler resurser](planning-guide-resources.md).
