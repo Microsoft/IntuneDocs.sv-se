@@ -1,32 +1,29 @@
 ---
 title: Hantera enheter med Intune
-titleSuffix: Intune Azure preview
-description: "Intune Azure Preview: Lär dig hur du visar de enheter som du hanterar med Intune och utför olika åtgärder på dem."
+titleSuffix: Intune on Azure
+description: "Läs hur du visar de enheter som du hanterar med Intune och utför olika åtgärder på dem.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/13/2017
+ms.date: 07/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 
+ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1fdb86184875d7082659d608b445b41b2ad9aa9e
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 8f066e62e323fffb7c6954d83b2b55ee63f4be46
+ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/06/2017
 ---
-
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och låter dig utföra fjärråtgärder på dessa enheter. För att få åtkomst till arbetsbelastningen:
 
@@ -34,71 +31,46 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enheter** på bladet **Intune**.
 
-Välj nu något av följande:
+Nu kan du utföra följande åtgärder:
 
-- **Översikt** – Hämta information om enheter som du har registrerat och operativsystemen som körs för varje enhet.
-- **Hantera** – Välj **Alla enheter** för att visa en lista över alla enheter som du hanterar.
-    Välj en av enheterna i listan för att öppna bladet <*enhetsnamn*> **Översikt** där du kan välja:
-    - **Översikt** – Visa allmän information om enheten inklusive information om dess namn, ägare, om det är en BYOD-enhet, när den senast var incheckad, med mera.
+- [Visa enhetsinventeringen](device-inventory.md)
+- Utför åtgärder för fjärransluten enhet:
+    - [Ta bort företagsdata](device-company-data-remove.md) 
+    - [Fabriksåterställning](device-factory-reset.md)
+    - [Fjärrlåsning](device-remote-lock.md)
+    - [Återställ lösenord](device-passcode-reset.md)
+    - [Kringgå aktiveringslås](device-activation-lock-bypass.md)
+    - [Fresh Start](device-fresh-start.md)
+    - [Borttappat läge](device-lost-mode.md)
+    - [Hitta enhet](device-locate.md)
+    - [Starta om](device-restart.md)
+    - [PIN-återställning av Windows 10](device-windows-pin-reset.md)
+    - [Fjärrstyrning för Android](device-profile-android-teamviewer.md)
 
-    - **Maskinvara** – Visa mer detaljerad information om enheten, inklusive dess lediga lagringsutrymme, modell, tillverkare och mycket annat.
-    ![Maskinvaruinventering för hanterade enheter](./media/hardware-inventory.png)
-    - **Identifierade program** – Visar en lista över alla appar som Intune hittar installerade på enheten.
-    ![Identifierad programnod](./media/detected-applications.png)
-- **Övervaka** Välj **Enhetsåtgärder**  för att se en lista över enhetsåtgärder som har utförts på enheter som du hanterar och det aktuella tillståndet för dessa åtgärder.
+
+## <a name="support-for-each-device-action"></a>Stöd för varje enhetsåtgärd
+
+Använd följande tabell för att förstå vilka enhetsplattformar som stöds av vilken åtgärd.
+
+|||||||
+|-|-|-|-|-|-|
+|Enhetsåtgärd|Windows|Windows Phone|iOS|macOS|Android|
+|**Ta bort företagsdata**|Ja|Ja|Ja|Ja|Ja|
+|**Fabriksåterställning**|Windows 8.1 och senare (ej EAS-hanterade enheter)|Ja|Ja|Nej|Android for Work stöds inte|
+|**Ta bort**|Ja|Ja|Ja|Ja|Ja|
+|**Fjärrlåsning**|Nej|Windows Phone 8.1 och senare|Ja|Nej|Ja|
+|**Återställ lösenord**|Nej|Windows Phone 8.1 till Windows 10 Creators Update som ej är ansluten till Azure AD, Windows 10 Creators Update och senare – alla|Ja|Nej|Android for Work tidigare än i Android 7 stöds inte|
+|**Nytt lösenord** (för Windows 10-enheter)|Nej|Windows 10 Creators Update och senare (ansluten till Azure AD)|Nej|Nej|Android for Work stöds inte|
+|**Kringgå aktiveringslås**|Nej|Nej|Endast företagsägda enheter|Nej|Nej|
+|**Borttappat läge**|Nej|Nej|iOS 9.3 och senare, övervakade och företagsägda enheter|Nej|Nej|
+|**Hitta enhet**|Nej|Nej|iOS 9.3 och senare, övervakade och företagsägda enheter i borttappat läge|Nej|Nej|
+|**Logga ut aktuell användare**|Nej|Nej|iOS 9.3 och senare (endast delade iPad-enheter)|Nej|Nej|
+|**Starta om**|Windows 8.1 och senare|Windows Phone 8.1 och senare|Nej|Nej|Nej|
+|**Fresh Start**|Windows 10 Creators Update och senare|Nej|Nej|Nej|Nej|
+|**Ny fjärrhjälpsession**|Nej|Nej|Nej|Nej|Ja|
+|**Ta bort användare**|Nej|Nej|iOS 9.3 och senare (endast delade iPad-enheter)|Nej|Nej|
+
+## <a name="next-steps"></a>Nästa steg
+
+- Välj **Enhetsåtgärder** om du vill visa status för åtgärder som vidtas på enheter som du hanterar. 
 ![Övervaka enhetsåtgärder](./media/monitor-device-actions.png)
-- **Hjälp och Support** – Visar länkar till dokumentationen för felsökning och support.
-
-## <a name="available-device-actions"></a>Tillgängliga enhetsåtgärder
-
-Dessutom kan du utföra följande fjärråtgärder på enheten (alla åtgärderna stöds inte av alla enhetsplattformar):
-
-### <a name="remove-company-data"></a>**Ta bort företagsdata**
-Tar endast bort företagsdata som hanteras av Intune. Personliga data tas inte bort från enheten. Enheten kommer inte längre att hanteras av Intune och kommer inte längre att kunna komma åt företagets resurser (stöds inte för Windows-enheter som är anslutna till Azure Active Directory).
-
-### <a name="factory-reset"></a>**Fabriksåterställning**
-Återställer enheten till standardinställningarna. Enheten kommer inte längre att hanteras av Intune och både företagsdata och personliga data tas bort. Du kan inte ångra den här åtgärden.
-
-### <a name="remote-lock"></a>**Fjärrlåsning**
-Låser enheten. Enhetens ägare måste använda sitt lösenord för att låsa upp den. Du kan endast fjärrlåsa en enhet som har en PIN-kod eller angett lösenord.
-
-### <a name="reset-passcode"></a>**Återställ lösenord**
-Genererar ett nytt lösenord för enheten som visas på bladet <*enhetsnamn*> **Översikt**.
-
-### <a name="bypass-activation-lock"></a>**Kringgå aktiveringslås**
-Detta tar bort aktiveringslåset från en iOS-enhet utan användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startar. Kringgå bara aktiveringslåset om du har fysisk åtkomst till enheten.
-
-### <a name="fresh-start"></a>**Fresh Start**
-
-Tar bort alla appar som har installerats på en Windows 10-dator som kör Creators-uppdateringen och uppdaterar sedan automatiskt datorn till den senaste versionen av Windows.
-Detta kan användas för att ta bort förinstallerade OEM-appar som ofta levereras med en ny dator. Du kan konfigurera om användardata ska behållas när den här enhetsåtgärden utförs. I det här fallet tas appar och inställningar bort, men innehållet i användarens startmapp bevaras.
-
-
-### <a name="lost-mode"></a>**Borttappat läge**
-Om en iOS-enhet har blivit tappats bort eller blivit stulen kan du aktivera borttappat läge. Det gör att du kan ange ett meddelande och ett telefonnummer som ska visas på enhetens låsskärm. Gör så här:
-1.    Välj **Mer** > **Borttappat läge**på en iOS-enhets egenskapsblad.
-2.    Aktivera borttappat läge på bladet **Borttappat läge** och ange det meddelandet som ska visas och, vilket är valfritt, ett telefonnummer.
-3.    Klicka på **OK**.
-När du aktiverar borttappat läge blockerar du all användning av enheten. Slutanvändaren kan inte öppna enheten förrän du inaktiverar borttappat läge. Borttappat läge är aktiverat, men du kan använda åtgärden **Leta upp enheten** om du vill veta var enheten finns.
-För att kunna använda Borttappat läge måste enheten vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge.
-
-### <a name="locate-device"></a>**Hitta enhet**
-Använd den här fjärråtgärder om du vill visa platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten har placerats i borttappat läge.
-1.    Välj **Mer** > **Hitta enhet** på en iOS-enhets egenskapsblad.
-2.    När enheten har hittats visas dess plats visas på bladet **Hitta enhet**.
-    ![Hitta enhetsblad](./media/locate-device.png)
-
->[!NOTE]
->Av sekretesskäl är avståndet du kan zooma på kartan begränsat.
-
-### <a name="restart"></a>**Starta om**
-Gör så att enheten startas om. Enhetens ägare meddelas inte automatiskt om omstarten, och kan därför förlora arbete.
-
-
-## <a name="security-and-privacy-information-for-the-lost-mode-and-locate-device-actions"></a>Information om säkerhet och sekretess för åtgärderna för borttappat läge och hitta enhet
-- Ingen platsinformation för enheten skickas till Intune förrän du har aktiverat den här åtgärden.
-- När du använder åtgärden Hitta enhet skickas enhetens latitud- och longitudkoordinater till Intune och visas i Azure Portal.
-- Data lagras i 24 timmar och tas sedan bort. Du kan inte ta bort platsdata manuellt.
-- Platsinformationen krypteras både under lagring och vid överföring.
-- När du konfigurerar borttappat läge, rekommenderar vi att det meddelande du skriver och som visas på låsskärmen innehåller information så att enhetens plats kan fastställas.
-

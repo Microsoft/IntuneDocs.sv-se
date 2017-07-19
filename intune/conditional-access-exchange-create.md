@@ -1,7 +1,7 @@
 ---
 title: "Skapa och tilldela en lokal princip för villkorlig åtkomst för Exchange"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Hur du kan konfigurera villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Intune"
+titleSuffix: Intune on Azure
+description: "Hur du kan konfigurera villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Intune\""
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,18 +14,15 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 2f1775eb98d6518ce35dcc38852e167c5eada616
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b72dbe27b52be187a907392aea5a1803fb36e4d3
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/03/2017
 ---
+# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Så här skapar och tilldelar du en princip för villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Microsoft Intune
 
-# <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune-azure-preview"></a>Så här skapar och tilldelar du en princip för villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i förhandsversionen av Microsoft Intune Azure
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Den här artikeln vägleder dig genom processen med att konfigurera villkorlig åtkomst för Exchange On-premises baserat på enhetsefterlevnad.
 
@@ -85,7 +82,7 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 4. Välj **Intune**. **Intune-instrumentpanelen** visas.
 
-5.  Välj först **Villkorlig åtkomst** och sedan
+5. Välj **On-Premise Access** (Lokal åtkomst) och välj sedan
 
 6. Bladet **Lokalt** visar status för princip för villkorlig åtkomst och de enheter som påverkas av den.
 
@@ -93,8 +90,8 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 8. På bladet **Åtkomst till Exchange On-Premises** väljer du **Ja** för att aktivera åtkomstkontroll för Exchange On-Premises.
 
-      > [!NOTE]
-      > Det här alternativet inaktiveras om du inte har konfigurerat lokal anslutning för Exchange Active Sync.  Du måste först installera och konfigurera den här anslutningen innan du aktiverar villkorlig åtkomst för Exchange On-Premises. Du hittar mer information i [Installera Intune On-premises Exchange Connector](exchange-connector-install.md)
+    > [!NOTE]
+    > Det här alternativet inaktiveras om du inte har konfigurerat lokal anslutning för Exchange Active Sync.  Du måste först installera och konfigurera den här anslutningen innan du aktiverar villkorlig åtkomst för Exchange On-Premises. Du hittar mer information i [Installera Intune On-premises Exchange Connector](exchange-connector-install.md)
 
 9. Under **Tilldelning**, väljer du **Inkluderade grupper**.  Använd den säkerhetsgrupp för användare där villkorlig åtkomst ska tillämpas. Detta skulle innebära att användarna måste registrera sina enheter i Intune och vara kompatibla med kompatibilitetsprofiler.
 
@@ -114,12 +111,12 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 15. På bladet **Lokalt**, klickar du på **Spara** för att spara principen för villkorlig åtkomst.
 
-## <a name="create-azure-ad-conditional-access-policies-in-intune-azure-preview"></a>Skapa principer för villkorlig åtkomst för Azure AD i förhandsversionen av Intune Azure
+## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Skapa principer för villkorlig åtkomst för Azure AD i Intune
 
-Från och med version 1704 av Intune kan administratörer skapa principer för villkorlig åtkomst för Azure AD från förhandsversionen av Intune Azure, vilket ger högre bekvämlighet eftersom du inte behöver växla mellan Azure och Intune-arbetsbelastningar.
+Från och med version 1704 av Intune kan administratörer skapa principer för villkorlig åtkomst för Azure AD från Intune Azure Portal, vilket ger högre bekvämlighet eftersom du inte behöver växla mellan Azure och Intune-arbetsbelastningar.
 
 > [!IMPORTANT]
-> Du måste ha en Azure AD Premium-licens för att kunna skapa Azure AD-principer för villkorlig åtkomst från förhandsversionen av Intune Azure Portal.
+> Du måste ha en Azure AD Premium-licens för att kunna skapa Azure AD-principer för villkorlig åtkomst från Intune Azure Portal.
 
 ### <a name="to-create-azure-ad-conditional-access-policy"></a>Skapa en princip för villkorlig åtkomst för Azure AD
 

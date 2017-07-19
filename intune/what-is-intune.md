@@ -1,12 +1,12 @@
 ---
-title: "Introduktion till Intune i förhandsversionen av Azure Portal"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Lär dig grunderna om Intune i förhandsversionen av Azure-portalen och hur det kan hjälpa dig att hantera dina enheter."
+title: Introduktion till Intune i Azure Portal
+titleSuffix: Intune on Azure
+description: "Lär dig grunderna om Intune i Azure-portalen och hur det kan hjälpa dig att hantera dina enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 04/24/2017
+ms.date: 06/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,35 +14,30 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 16d7ff50eb821e0927c3c6ea21f3cdb1257762a0
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 7549f3277c23c3951090502f2babfe7c47b0a201
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
+# <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Introduktion till Microsoft Intune i Azure-portalen
 
 
-# <a name="introduction-to-microsoft-intune-in-the-azure-portal-preview"></a>Introduktion till Microsoft Intune i förhandsversionen av Azure-portalen
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
-
-Microsoft Intune flyttar till Azure-portalen och detta innebär att de arbetsflöden och de funktioner som du har vant dig vid kommer att ändras.
-Den nya portalen erbjuder en förhandsversion av nya och uppdaterade funktioner i Azure Portal där du kan hantera din organisations mobila enheter, datorer och appar.
-Alla Intune-funktioner kommer så småningom att flytta till Azure, men du kan utföra många Intune-aktiviteter i Azure-portalen redan idag. Eftersom det här är en förhandsversion kanske vissa funktioner inte finns i portalen ännu. Mer information finns i avsnittet [Nyheter](#whats-new).
+Microsoft Intune finns nu i Azure-portalen och detta innebär att de arbetsflöden och de funktioner som du har vant dig vid har ändrats.
+Den nya portalen erbjuder nya och uppdaterade funktioner i Azure Portal där du kan hantera din organisations mobila enheter, datorer och appar.
 
 > [!IMPORTANT]
 > **Ser du inte den nya portalen?**<br>
-> Vi har redan börjat lansera förhandsversionen till vissa klienter. Befintliga klienter kommer att migreras med start tidigt 2017. Du kommer att få ett meddelande i Office Message Center innan migreringen av din klientorganisation.
+> Befintliga klienter ska migreras till den nya miljön. Ett meddelande visas i Office-meddelandecenter innan din klient migreras.
 >
-> Intune-konton som skapats före januari 2017 måste migreras vid ett tillfälle innan registrerade Apple-arbetsflöden finns tillgängliga i Azure. Schemat för migreringen har inte tillkännagivits än men informationen kommer att vara tillgänglig så snart som möjligt. Vi rekommenderar starkt att skapa ett utvärderingskonto för att testa den nya upplevelsen om ditt befintliga konto har inte åtkomst till förhandsversionen.
+> Intune-konton som skapats före januari 2017 måste migreras vid ett tillfälle innan registrerade Apple-arbetsflöden finns tillgängliga i Azure. Schemat för migrering har ännu inte tillkännagivits. Om ditt befintliga konto inte kan komma åt Azure-portalen, rekommenderar vi att du skapar ett utvärderingskonto.
+>
+> Granska listan över möjliga blockerare https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
 
 
-Du kommer att hitta ny produktdokumentationen i det här biblioteket och den kommer att uppdateras kontinuerligt. Om du har några förslag är du välkommen att lämna feedback i kommentarsavsnittet. Vi vill gärna att du hör av dig.
-
-<!--- You can view the new Intune technical preview console in Azure at [portal.azure.com]. --->
+Du kan hitta information om den nya portalen i det här biblioteket som uppdateras kontinuerligt. Om du har några förslag är du välkommen att lämna feedback i kommentarsavsnittet. Vi vill gärna att du hör av dig.
 
 Viktiga nya funktioner:
 
@@ -78,9 +73,9 @@ Dokumentationen visar layouten för Intune-portalen för att göra det lättare 
 ![Arbetsbelastningar i Azure-portalen](./media/azure-portal-workloads.png)
 
 ### <a name="introduction-and-get-started"></a>Introduktion och att komma igång
-Det här avsnittet innehåller information om [nyheter](whats-new.md), [kända problem](known-issues.md), [hur du kan få support](get-support.md) och hur du [kommer igång med en kostnadsfri utvärderingsversion](free-trial-sign-up.md) av Intune.
+Det här avsnittet innehåller [en introduktion](introduction-intune.md) som hjälper dig att komma igång med Intune.
 ### <a name="plan-and-design"></a>Planera och utforma
-Information som hjälper dig att [planera och utforma](/intune-classic/plan-and-design/introduction) din Intune-miljö.
+Information som hjälper dig att [planera och utforma](/intune-classic/plan-design/introduction) din Intune-miljö.
 ### <a name="device-enrollment"></a>Enhetsregistrering
 [Hur du får dina enheter att hanteras av Intune](device-enrollment.md).
 ### <a name="device-compliance"></a>Efterlevnad för enhet
@@ -108,5 +103,4 @@ Information som hjälper dig att [planera och utforma](/intune-classic/plan-and-
 
 ## <a name="whats-new"></a>Nyheter
 
-[Ta reda på vad är nytt i förhandsversionen](whats-new.md).
-
+[Nyheter i Intune](whats-new.md).

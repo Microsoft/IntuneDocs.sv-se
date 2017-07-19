@@ -1,12 +1,12 @@
 ---
-title: "Så här tilldelar du grupper appar | Microsoft Docs"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: När du har lagt till en app till Intune, behöver du tilldela den till grupper av användare eller enheter."
+title: Tilldela appar till grupper
+titleSuffix: Intune on Azure
+description: "När du har lagt till en app till Intune, behöver du tilldela den till grupper med användare eller enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/09/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,17 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 1246ef539c044b894b4e4a93f449e60e6462600a
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: 059c6d2c65c78b6a94f93c26d606abe0451edbbb
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-När du har lagt till en app till Intune, behöver du dela den till användare och enheter. Det gör du genom att tilldela den.
+När du har lagt till en app i Intune kan du tilldela det till användare och enheter.
 
 Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. Använd följande tabell för att förstå de olika alternativen för att tilldela appar till användare och enheter:
 
@@ -46,33 +44,6 @@ Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. An
 > [!NOTE]
 > För närvarande kan du tilldela iOS- och Android-appar (både branschspecifika och butiksköpta appar) till enheter som inte har registrerats med Intune.
 
-## <a name="changes-to-how-you-assign-apps-to-groups-in-the-intune-preview"></a>Ändringar för hur du tilldelar appar i grupper i förhandsversionen av Intune
-
-I förhandsversion av Intune Azure kan du inte längre använda Intune-grupper för att tilldela appar. Du använder nu Active Directory Azure (Azure AD)-säkerhetsgrupper istället. På grund av det här behöver du lära dig om några förändringar i hur tilldelning av appar fungerar, särskilt när du har tilldelat appar till underordnade grupper i Intune.
-Det viktigaste är att notera att konceptet underordnade grupper inte finns i Azure AD. Men kan vissa grupper kan innehålla samma medlemmar. I det här fallet är funktionerna i klassiska Intune och förhandsversionen av Intune Azure olika. Det här visas i följande tabell:
-
-||||||
-|-|-|-|-|-|
-|**Klassiska Intune (före migrering av klient)**|-|**Intune Azure (när migreringen av klienten är klar)**|-|**Mer information**|
-|**Tilldelningsavsikt för överordnad grupp**|**Tilldelningsavsikt för underordnad grupp**|**Resulterande tilldelningsavsikt för vanliga medlemmar i föregående överordnade och underordnade grupper**|**Resulterande tilldelningsåtgärd för medlemmar i överordnade grupp**|-|
-|Tillgänglig|Obligatoriskt|Nödvändig och Tillgänglig|Tillgänglig|Nödvändig och Tillgänglig innebär att appar som har tilldelats som nödvändig också kan visas i företagsportalappen.
-|Ej tillämpligt|Tillgänglig|Ej tillämpligt|Ej tillämpligt|Lösning: Ta bort tilldelningsavsikten ”Inte tillämplig” från den överordnade gruppen i Intune.
-|Obligatoriskt|Tillgänglig|Nödvändig och Tillgänglig|Obligatoriskt|-|
-|Nödvändig och Tillgänglig<sup>1</sup>|Tillgänglig|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|
-|Obligatoriskt|Ej tillämpligt|Obligatoriskt|Obligatoriskt|-|
-|Nödvändig och Tillgänglig|Ej tillämpligt|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|
-|Obligatoriskt|Avinstallera|Obligatoriskt|Obligatoriskt|-|
-|Nödvändig och Tillgänglig|Avinstallera|Nödvändig och Tillgänglig|Nödvändig och Tillgänglig|-|
-<sup>1</sup> Endast för hanterade iOS store-appar. När du lägger till dem i Intune och tilldelar dem som Nödvändiga skapas de automatiskt med både avsikterna Nödvändig och Tillgänglig.
-
-Du kan utföra följande åtgärder för att undvika tilldelningskonflikter:
-
-1.    Överväg att ta bort de här tilldelningarna innan du påbörjar migreringen om du tidigare har tilldelat appar till relaterade överordnade och underordnade grupper i Intune.
-2.    Ta bort underordnade grupper från överordnade grupper och skapa en ny grupp som innehåller medlemmarna i den gamla underordnade gruppen. Du kan sedan skapa en ny apptilldelning till den här gruppen.
-Kommentar: Om den tidigare överordnade gruppen var "Alla användare" måste du skapa en dynamisk grupp som inte innehåller medlemmarna i den underordnade gruppen.
-Alla ändringar till grupper för användare och enhetsgrupper måste göras i [Azure Portal](https://portal.azure.com/). Den [klassiska Azure-portalen](https://manage.windowsazure.com/) låter dig endast att göra ändringar till användargrupper.
-
-
 ## <a name="how-to-assign-an-app"></a>Så här tilldelar du en app
 
 1. Logga in på Azure-portalen.
@@ -87,10 +58,53 @@ Alla ändringar till grupper för användare och enhetsgrupper måste göras i [
     - **Inte tillämpligt** – Appen varken installeras eller visas i företagsportalen.
     - **Obligatoriskt** – Appen installeras på enheter i valda grupper.
     - **Avinstallera** – Appen avinstalleras från enheter i valda grupper.
-    - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Se tabellen ovan för hjälp.
+    - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune.
 6. När du är klar väljer du **Spara**.
 
-Appen har nu tilldelats den grupp som du valde.
+Appen har nu tilldelats den grupp du valde.
+
+## <a name="how-conflicts-between-app-intents-are-resolved"></a>Lösa konflikter mellan appavsikter
+
+Ibland har samma app tilldelats flera grupper, men med olika avsikter. I dessa fall kan du använda följande tabellen till att utröna den resulterande avsikten.
+
+||||
+|-|-|-|
+|Avsikt för grupp 1|Avsikt för grupp 2|Resulterande avsikt|
+|Nödvändig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
+|Nödvändig för användare|Inte tillgänglig för användare|Obligatoriskt|
+|Nödvändig för användare|Avinstallation av användare|Obligatoriskt|
+|Tillgänglig för användare|Inte tillgänglig för användare|Inte tillgängligt|
+|Tillgänglig för användare|Avinstallation av användare|Avinstallera|
+|Inte tillgänglig för användare|Avinstalleras för användare|Avinstallera
+|Nödvändig för användare|Nödvändig för enhet|Båda finns, hanteras som nödvändig av gateway 
+|Nödvändig för användare|Avinstalleras för enhet|Båda finns, matchas som nödvändig av gateway 
+|Tillgänglig för användare|Nödvändig för enhet|Båda finns, matchas som nödvändig av gateway (nödvändig och tillgänglig)
+|Tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som tillgänglig av gateway.<br>Appen visas i företagsportalen.<br>Appen avinstalleras om den redan har installerats (som nödvändig app med föregående avsikt).<br>Avinstallationsavsikten åsidosätts dock om appen installeras genom att användaren klickar på Installera i företagsportalen.|
+|Inte tillgänglig för användare|Nödvändig för enhet|Obligatoriskt|
+|Inte tillgänglig för användare|Avinstalleras för enhet|Avinstallera|
+|Avinstalleras för användare|Nödvändig för enhet|Båda finns, matchas som nödvändig av gateway|
+|Avinstalleras för användare|Avinstalleras för enhet|Både finns, matchas som avinstallation av gateway|
+|Nödvändig för enhet|Avinstalleras för enhet|Obligatoriskt|
+|Nödvändig och tillgänglig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
+|Nödvändig och tillgänglig för användare|Avinstalleras för användare|Nödvändig och Tillgänglig|
+|Nödvändig och tillgänglig för användare|Inte tillgänglig för användare|Nödvändig och Tillgänglig|
+|Nödvändig och tillgänglig för användare|Nödvändig för enhet|Båda finns, nödvändig och tillgänglig
+|Nödvändig och tillgänglig för användare|Inte tillgänglig för enhet|Nödvändig och Tillgänglig|
+|Nödvändig och tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som nödvändig av gateway. Nödvändig och tillgänglig
+|Inte tillgänglig för användare|Inte tillgänglig för enhet|Inte tillgängligt|
+|Tillgänglig för användare|Inte tillgänglig för enhet|Tillgänglig|
+|Nödvändig för användare|Inte tillgänglig för enhet|Obligatoriskt|
+|Tillgänglig för användare utan registrering|Nödvändig och tillgänglig för användare|Nödvändig och Tillgänglig
+|Tillgänglig för användare utan registrering|Nödvändig för användare|Obligatoriskt
+|Tillgänglig för användare utan registrering|Inte tillgänglig för användare|Inte tillgängligt
+|Tillgänglig för användare utan registrering|Tillgänglig för användare|Tillgänglig|
+|Tillgänglig för användare utan registrering|Nödvändig för enhet|Nödvändig och tillgänglig utan registrering|
+|Tillgänglig för användare utan registrering|Inte tillgänglig för enhet|Tillgänglig utan registrering|
+|Tillgänglig för användare utan registrering|Avinstalleras för enhet|Avinstalleras och tillgänglig utan registrering.<br>Avinstallationsavsikten åsidosätts inte om användaren inte har installerat appen från företagsportalen.<br>Om användaren installerar appen från företagsportalen prioriteras installation framför avinstallation.|
+
+>[!NOTE]
+>Endast för hanterade iOS Store-appar. När du lägger till dem i Intune och tilldelar dem som Nödvändiga skapas de automatiskt med både avsikterna Nödvändig och Tillgänglig.
+
+## <a name="next-steps"></a>Nästa steg
 
 Du hittar mer information i [Hur du övervakar appar](apps-monitor.md) som hjälper dig att övervaka apptilldelningar.
-

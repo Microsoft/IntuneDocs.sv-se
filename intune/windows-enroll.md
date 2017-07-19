@@ -1,11 +1,11 @@
 ---
 title: Registrera Windows-enheter
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Aktivera hantering av mobila enheter (MDM) för Windows-enheter."
+titleSuffix: Intune on Azure
+description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter.”"
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 04/12/2017
+ms.date: 06/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,37 +14,42 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 687be18cedd063b3c2701937f2522e801e51644b
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: b873e72e39c5c6f1d96ddac138f920be9dc673dd
+ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/03/2017
 ---
-
 # <a name="enroll-windows-devices"></a>Registrera Windows-enheter
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Det här avsnittet hjälper IT-administratörer att förenkla Windows-registrering för sina användare.  Windows-enheter kan registreras utan några ytterligare steg, men du kan göra registreringen enklare för användare.
+Det här avsnittet hjälper IT-administratörer att förenkla Windows-registrering för sina användare. När du har [konfigurerat Intune](setup-steps.md) kan användarna registrera Windows-enheter genom att [logga in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) med sina arbets- eller skolkonton.  
 
-Enheter som kör Windows 10 Creator-uppdateringen och är domänanslutna till Azure Active Directory, har nu stöd för fleranvändarhantering med Intune. Det innebär att när olika standardanvändare loggar in på enheten med sina autentiseringsuppgifter för Azure AD, får de alla appar och principer som har tilldelats till deras användarnamn. Användarna kan för närvarande inte använda företagsportalen för självbetjäningsscenarier som att installera appar.
+I egenskap av Intune-administratör kan du förenkla registreringen på följande sätt:
+- Aktivera automatisk registrering (kräver Azure AD Premium)
+- CNAME-registrering
+- Aktivera massregistrering (Azure AD Premium och Windows Configuration Designer krävs)
 
 Två saker som innebär att du kan förenkla Windows-enhetsregistreringen:
 
 - **Använder du Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) ingår i Enterprise Mobility + Security och andra licensieringsplaner.
-- **Vilka versioner av Windows-klienter ska registreras?** <br>Windows 10-enheter kan registreras automatiskt genom att lägga till ett arbets- eller skolkonto. Tidigare versioner måste registreras via företagsportalappen.
+- **Vilka versioner av Windows-klienterna kommer användarna att registrera?** <br>Windows 10-enheter kan registreras automatiskt genom att lägga till ett arbets- eller skolkonto. Tidigare versioner måste registreras via företagsportalappen.
 
 ||**Azure AD Premium**|**Övriga AD**|
 |----------|---------------|---------------|  
 |**Windows 10**|[Automatisk registrering](#enable-windows-10-automatic-enrollment) |[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|
 |**Tidigare Windows-versioner**|[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|[Användarregistrering](#enable-windows-enrollment-without-azure-ad-premium)|
 
+Organisationer som använder automatisk registrering kan också konfigurera [massregistrering av enheter](windows-bulk-enroll.md) med hjälp av Windows Configuration Designer-appen.
+
+**Stöd för flera användare**<br>
+Enheter som kör Windows 10 Creator-uppdateringen och är domänanslutna till Azure Active Directory, har nu stöd för fleranvändarhantering med Intune. När vanliga användare loggar in med sina autentiseringsuppgifter för Azure AD får de tillgång till de appar och principer som har tilldelats deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
+
 [!INCLUDE[AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Aktivera Windows-registrering utan Azure AD Premium
-Du kan låta användarna registrera sina enheter utan automatisk registrering i Azure AD Premium. När du tilldelar licenser kan användarna registrera sig när de har lagt till sina arbetskonton till sina egna enheter, eller anslutit sina företagsägda enheter till din Azure AD. Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange Intune-servernamnet.
+Du kan förenkla registreringen för dina användare genom att skapa ett DNS-alias (CNAME-posttyp) som automatiskt omdirigerar registreringsbegäranden till Intune-servrarna. Om du inte skapar en DNS CNAME-resurspost måste alla användare som försöker ansluta till Intune ange Intune-servernamnet under registreringen.
 
 **Steg 1: Skapa CNAME-poster** (valfritt)<br>
 Skapa CNAME-DNS-resursposter för företagsdomänen. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
@@ -55,7 +60,7 @@ Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användar
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 timme|
 
-Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domännamn och leda var och en till EnterpriseEnrollment-s.manage.microsoft.com. Om användare på Contoso till exempel använder name@contoso.com, men även använder name@us.contoso.com och name@eu.constoso.com som e-post/UPN måste Contoso DNS-administratören skapa följande CNAME-poster.
+Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domännamn och leda var och en till EnterpriseEnrollment-s.manage.microsoft.com. Om användare på Contoso använder name@contoso.com, men även använder name@us.contoso.com och name@eu.constoso.com som e-post/UPN måste Contosos DNS-administratör skapa följande CNAME-poster:
 
 |Typ|Värdnamn|Pekar på|TTL|  
 |----------|---------------|---------------|---|
@@ -68,10 +73,9 @@ Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domä
 Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte verifiera DNS-ändringen i Intune förrän DNS-posten har spridits.
 
 **Steg 2: Verifiera CNAME** (valfritt)<br>
-I Azure Intune-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. Välj **Registrera enheter** > **Windows-registrering** på Intune-bladet. Ange webbadressen till företagswebbplatsens verifierade domän i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
+I Azure Intune-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. Välj **Registrera enheter** > **Windows-registrering** på Intune-bladet. Ange webbadressen till företagswebbplatsen i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Berätta för användare hur de ska registrera Windows-enheter
-Berätta för användarna hur de ska registrera sina Windows-enheter och vad de kan förvänta sig när de har registrerat sig för hantering. Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Du kan även berätta för användarna [vad IT-administratören kan se på enheten](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+Berätta för användarna hur de ska registrera sina Windows-enheter och vad de kan förvänta sig när de har registrerat sig för hantering. Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Du kan även be användarna granska [vad IT-administratören kan se på enheten](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
 
-Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/how-to-educate-your-end-users-about-microsoft-intune).
-
+Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](end-user-educate.md).

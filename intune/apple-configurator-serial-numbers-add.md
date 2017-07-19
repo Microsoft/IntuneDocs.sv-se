@@ -1,7 +1,7 @@
 ---
 title: "Lägg till Apple Configurator-serienummer"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om hur du lägger till serienummer till företagsägda iOS-enheter med Apple Configurator."
+titleSuffix: Intune on Azure
+description: "Läs hur du lägger till serienummer till företagsägda iOS-enheter med Apple Configurator.”"
 keywords: 
 author: nathbarn
 ms.author: nathbarn
@@ -15,18 +15,15 @@ ms.assetid: d408aa38-7d1e-40df-9067-246e53f6e26f
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: e3d56d93e2e229faad8effa63eeb91e627468a3a
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 689008f278e676ce0bab075c6ad6b54748e56313
+ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/01/2017
 ---
-
 # <a name="add-apple-configurator-serial-numbers"></a>Lägg till Apple Configurator-serienummer
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Följ de här stegen när du ska lägga till serienummer till Intune när du vill [registrera företagsägda iOS-enheter med hjälp av Apple Configurator med installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md). Du kan lägga till serienumren ett i taget eller ladda upp en fil med kommateckenavgränsade fält (CSV) med serienummer. När du har lagt till serienumren tilldelar du dem en profil. Profilen innehåller specifika hanteringsinställningar som du tillämpar på enheter.
 
@@ -37,9 +34,9 @@ Andra metoder för att registrera iOS-enheter beskrivs i [Välj hur du vill regi
 1. Skapa en fil med kommaseparerade värden (CSV) med två kolumner och ingen rubrik. Lägg till IMEI-identifieraren i den vänstra kolumnen och informationen i den högra kolumnen. Det maximala antalet rader i kolumnen är för närvarande 500. Om du öppnar CSV-listan i en textredigerare ser den ut ungefär så här:
 
     F7TLWCLBX196, enhetsinformation</br>
-   DLXQPCWVGHMJ, enhetsinformation
+    DLXQPCWVGHMJ, enhetsinformation
 
-2. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+2. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 3.  Välj **Registrera enheter** på Intune-bladet och välj sedan **Apple-registrering**.
 
@@ -76,4 +73,3 @@ Enhetens serienummer kan ha ett av två tillstånd:
 **Visa ett serienummers tillstånd**
 
 Välj det serienummer vars tillstånd du vill se på bladet **Apple Configurator-serienummer** och kontrollera det sedan under **Tillstånd**.
-

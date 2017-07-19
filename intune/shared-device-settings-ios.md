@@ -1,12 +1,12 @@
 ---
 title: "Konfigurationsinställningar för delad Intune-enhet för iOS"
-titleSuffix: Intune Azure preview
-description: "Förhandsversion av Intune Azure: Läs om de Intune-inställningar du kan använda för att visa information på iOS-enhetens låsskärm."
+titleSuffix: Intune on Azure
+description: "Läs om de Intune-inställningar du kan använda för att visa information på iOS-enhetens låsskärm.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/12/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,27 +15,30 @@ ms.assetid: f122e4ee-90e7-4b42-b801-8c1c7c0a5bf7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff1adae93fe6873f5551cf58b1a2e89638dee85
-ms.openlocfilehash: 6a2aba8b2f062a3e06d517a572992b84fd977514
-ms.contentlocale: sv-se
-ms.lasthandoff: 05/23/2017
-
-
+ms.openlocfilehash: 61bb1f8c7a9b6c92c128f32910f2ad8d390b6c64
+ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 07/05/2017
 ---
-
 # <a name="shared-device-configuration-settings-to-display-messages-on-the-ios-device-lock-screen"></a>Den delade enhetens konfigurationsinställningar för att visa meddelanden på iOS-enhetens låsskärm
 
-[!INCLUDE[azure_preview](./includes/azure_preview.md)]
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Med konfigurationsinställningarna för den delade enheten kan du ange valfri text som ska visas i inloggningsfönstret och på låsskärmen (t.ex. ett ”Upphittad enhet återlämnas till”-meddelande och resurstagginformation). 
+Med konfigurationsinställningarna för den delade enheten kan du ange valfri text som ska visas i inloggningsfönstret och på låsskärmen. Du kan t.ex. skriva ett meddelande av typen ”Upphittad enhet återlämnas till” och resurstagginformation. 
 
 >[!IMPORTANT]
 > Den här funktionen stöds för övervakade enheter som kör iOS 9.3 och senare.
 
+## <a name="create-shared-device-settings"></a>Skapa inställningar för delade enheter
+
 1. På bladet **Enhetsfunktioner** väljer du **Konfiguration för delad enhet (endast övervakat)**.
-2. På bladet **Konfiguration för delad enhet (endast övervakat)**, konfigurerar du följande:
-    - **Resurstagginformation** – Ange information om resurstaggen för enheten. Exempelvis: **Ägs av Contoso Corp**. Den information som du anger kommer att tillämpas på alla enheter som du tilldelar den här profilen till.
+2. På bladet **Konfiguration för delad enhet (endast övervakat)**, konfigurerar du följande inställningar:
+    - **Resurstagginformation** – Ange information om resurstaggen för enheten. Exempelvis: **Ägs av Contoso Corp**. Den information som du anger tillämpas på alla enheter som du tilldelar den här profilen till.
     - **Fotnot på låsskärmen** – Ange en kommentar som kan hjälpa dig att få tillbaka enheten om den tappas bort eller blir stulen. Exempelvis: **Ring ”telefonnummer” om du hittar denna**.
 3. När du är klar väljer du **OK** tills du kommer tillbaka till bladet **Skapa profil**. Välj sedan **Skapa**. 
 
+
+## <a name="next-steps"></a>Nästa steg
+
+Du kan nu tilldela enhetsprofilen till de grupper som du väljer. Mer information finns i [Hur du tilldelar enhetsprofiler](device-profile-assign.md).
