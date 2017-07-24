@@ -183,13 +183,12 @@
 ### [Övervaka profiler](device-profile-monitor.md)
 ### [Felsökning av profiler](device-profile-troubleshoot.md)
 
-## [Ange enhetsefterlevnad](device-compliance.md)
-### [Krav](device-compliance-get-started.md)
+## [Ange enhetsefterlevnad](device-compliance-get-started.md)
 ### [Skapa Android-princip](compliance-policy-create-android.md)
 ### [Principinställningar för Android for Work](compliance-policy-create-android-for-work.md)
 ### [Skapa iOS-princip](compliance-policy-create-ios.md)
+### [Skapa macOS-princip](compliance-policy-create-mac-os.md)
 ### [Skapa Windows-princip](compliance-policy-create-windows.md)
-### Skapa åtgärder för inkompatibilitet
 ### [Övervaka enhetsefterlevnad](compliance-policy-monitor.md)
 
 ## [Ställ in villkorlig åtkomst](conditional-access.md)
