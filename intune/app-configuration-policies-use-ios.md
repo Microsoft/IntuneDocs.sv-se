@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 07/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 112f60ff208c27825ddd0f4c812535b255894333
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 0cbcf70af17ba7690f54196790da04becd8ba1eb
+ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Så här använder du appkonfigurationsprinciper för iOS i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Använd appkonfigurationsprinciper i Microsoft Intune om du vill skicka inställningar som kan krävas när användarna kör en iOS-app. En app kan till exempel kräva att användarna anger:
+Använd appkonfigurationsprinciper i Microsoft Intune om du vill skicka de inställningar som krävs när användarna kör en iOS-app. En app kan till exempel kräva att användarna anger:
 
 -   ett anpassat portnummer
 
@@ -39,7 +39,7 @@ Om användarna inte anger dessa inställningar på korrekt sätt kan det öka su
 
 Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
 
-Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs.).
+Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs).
 
 > [!TIP]
 > Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
@@ -50,61 +50,39 @@ Du tilldelar inte principerna direkt till användare och enheter. I stället ass
 > Mer information om appinstallationstyper finns i [Så här lägger du till en app i Microsoft Intune](apps-add.md).
 
 ## <a name="create-an-app-configuration-policy"></a>Skapa en appkonfigurationsprincip
+1.  Logga in på Azure-portalen.
+2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3.  Välj **Mobilappar** på **Intune**-bladet.
+4.  Välj **Hantera** > **Appkonfigurationsprinciper** i arbetsbelastningen **Mobile Apps**.
+5.  I listan med principblad väljer du **Lägg till**.
+6.  På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsprincipen.
+7.  För **Registreringstyp för enhet** väljer du något av följande:
+    - **Registrerad med Intune** – För appar med integrerad Intune App SDK och som hanteras av Intune.
+    - **Inte registrerad med Intune** – För appar med integrerad Intune App SDK och som inte hanteras av Intune eller som hanteras av en annan lösning.
+8.  Under **Plattform** väljer du **iOS** (endast för enheter som registrerats i Intune)
+9.  Välj **Associerad app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
+10. På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**
+11. På bladet **Konfigurationsinställningar** väljer du sedan hur du vill ange de XML-värden som utgör konfigurationsprofilen från:
+    - **Ange XML-data** (endast för enheter som registrerats i Intune) – Ange eller klistra in en XML-egenskapslista som innehåller appkonfigurationsinställningarna som du vill använda. Formatet på XML-egenskapslistan varierar beroende på vilken app du konfigurerar. Kontakta appleverantören för information om vilket format du ska använda.
+Intune kontrollerar att den XML som du angett har ett giltigt format. Intune kontrollerar inte om XML-egenskapslistan fungerar med den app som den är associerad med.
+Mer information om XML-egenskapslistor finns i [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
+    - **Använd Configuration Designer** (oavsett om enheten är registrerad eller inte) – Låter dig ange XML-nyckel och värdepar direkt i portalen.
+11. När du är klar går du tillbaka till bladet **Lägg till konfigurationsprincip** och trycker på **Skapa**.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Mobilappar** på **Intune**-bladet.
-1.  Välj **Hantera** > **Appkonfigurationsprinciper** i arbetsbelastningen **Mobile Apps**.
+Principen skapas och visas på bladet med principlistan.
 
-2.  I listan med principblad väljer du **Lägg till**.
 
-3.  På bladet **Lägg till konfigurationsprincip** anger du ett namn och en valfri beskrivning för appkonfigurationsprincipen.
-4.  Välj **Associerad app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
-5.  På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**. På bladet Konfigurationsinställningar väljer du sedan hur du vill ange de XML-värden som utgör konfigurationsprofilen från:
-    - **Ange XML-data** – Ange eller klistra in en XML-egenskapslista som innehåller appkonfigurationsinställningarna som du vill använda. Formatet på XML-egenskapslistan varierar beroende på vilken app du konfigurerar. Kontakta appleverantören för information om vilket format du ska använda.
-    Intune kontrollerar att den XML som du angett har ett giltigt format. Intune kontrollerar inte om XML-egenskapslistan fungerar med den app som den är associerad med.
-    Mer information om XML-egenskapslistor finns i [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) i iOS Developer Library.
-    - **Använd Configuration Designer** – Låter dig ange XML-nyckel och värdepar direkt i portalen.
-8. När du är klar går du tillbaka till bladet **Lägg till konfigurationsprincip** och trycker på **Skapa**.
 
-Principen kommer att skapas och visas på bladet med principlistan.
+>[!Note]
+>Du kan använda [Intune App SDK](https://docs.microsoft.com/intune/app-sdk-ios) för att förbereda branschspecifika appar som ska hanteras av appskydd- och appkonfigurationsprinciper i Intune – oavsett om enheten har registrerats i Intune eller inte. Du kan till exempel använda en appkonfigurationsprincip för att konfigurera användning av tillåtna respektive blockerade URL:er i [Intune Managed Browser](app-configuration-managed-browser.md). Om en app är kompatibel med dessa principer kan du konfigurera dem med hjälp av en princip.
 
-Fortsätt sedan med att [tilldela](apps-deploy.md) och [övervaka](apps-monitor.md) appen som vanligt.
 
 När den tilldelade appen körs på en enhet, körs den med de inställningar som du konfigurerade i appkonfigurationsprincipen.
+Läs dokumentationen till den app som du konfigurerar för mer information om vad som händer om en eller flera appkonfigurationsprinciper hamnar i konflikt med varandra.
 
-> [!TIP]
-> Om en eller flera appkonfigurationsprinciper är i konflikt med varandra tillämpas ingen av dem.
+>[!Tip]
+>Du kan även använda Graph API för att utföra dessa uppgifter. Mer information finns i [Graph API-referens för MAM-riktad konfiguration](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
 
-## <a name="create-a-mam-targeted-configuration-policy"></a>Skapa en MAM-riktad konfigurationsprincip
-Med hjälp av en MAM-riktad konfiguration kan en app att ta emot konfigurationsdata via Intune App SDK. Dataformat och eventuella varianter av dessa data måste definieras och kommuniceras till Intune-kunderna av ägaren/programutvecklaren. Intune-administratörerna kan rikta in och distribuera konfigurationsdata via Intune Azure-konsolen. MAM-riktade konfigurationsdata kan skickas med MAM-tjänsten till MAM-WE-aktiverade program. [Intune Managed Browser](https://docs.microsoft.com/intune/app-configuration-managed-browser) har t.ex. en lista för tillåtna/blockerade webbadresser. Programmets konfigurationsdata push-överförs med vår MAM-tjänst direkt till appen i stället för via MDM-kanalen. [MDM-appens konfigurationsprinciper](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#create-an-app-configuration-policy) utgör den grundläggande lösningen, via MDM. Den viktigaste skillnaden med en MAM-riktad konfiguration är att den enhet som appen körs på inte behöver vara MDM-registrerad. MAM-riktad konfiguration är tillgänglig för iOS och Android. I iOS måste appen ha Intune App SDK för iOS (version 7.0.1) införlivad, och den måste vara delaktig i inställning av appkonfigurationen. Stegen för att skapa en MAM-riktad konfigurationsprincip är följande: 
-
-1. Logga in på **Azure-portalen**.
-
-2. Välj **Intune > Mobilappar – Appkonfigurationsprinciper**.
-
-3. På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
-
-4. Ange ett **Namn** och en valfri **Beskrivning** för appens konfigurationsinställningar och välj **Inte registrerad med Intune**.
-
-5. Välj **Välj obligatoriska appar** och välj sedan appar för de plattformar som du tänker använda på bladet **Riktade**. <br>
-**Obs!** För LOB-appar väljer du **Fler appar**. Ange paket-ID för programmet.
-
-6. Välj **OK** för att återgå till bladet **Lägg till appkonfiguration**.
-
-7. Välj **Definiera konfiguration**. På bladet **Konfiguration** definierar du nyckel- och värdepar för att kunna tillhandahålla konfigurationer.
-
-8. När du är klar väljer du **OK**.
-
-9. På **bladet Lägg till appkonfiguration** väljer du **Skapa**.
-
-Den nya konfigurationen skapas och visas på bladet Appkonfiguration.
-
-Fortsätt sedan med att [tilldela](apps-deploy.md) och [övervaka](apps-monitor.md) appen som vanligt.
-
-När den tilldelade appen (integrerad med Intune App SDK) körs på en enhet, körs den med de inställningar som du konfigurerade i den MAM-riktade konfigurationsprincipen. Den tilldelade appen måste ha implementerat den version som stöds av Intune APP SDK. Mer information om kraven vid apputveckling som använder MAM-riktade konfigurationsprinciper finns i [Integreringsguide för iOS Intune APP SDK](https://docs.microsoft.com/intune/app-sdk-ios).
-
-Mer information om funktionerna i vår Graph API med avseende på MAM-riktade konfigurationsvärden, finns i [Graph API-referens för MAM-riktad konfiguration](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
 
 ## <a name="information-about-the-xml-file-format"></a>Information om XML-filformatet
 
@@ -161,3 +139,7 @@ När du skapar en appkonfigurationsfil kan du ange ett eller flera av följande 
 </dict>
 
 ```
+
+## <a name="next-steps"></a>Nästa steg
+
+Fortsätt sedan med att [tilldela](apps-deploy.md) och [övervaka](apps-monitor.md) appen som vanligt.

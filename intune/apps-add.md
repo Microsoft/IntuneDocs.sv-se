@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a4dfa9e0066a2ac6f410aa9f8e4d77a40484ea5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 69b1540d325f7cfa49e11f91fcb72a464f8a2e0e
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Så här lägger du till appar i Microsoft Intune
 
@@ -79,34 +79,9 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 
 ## <a name="apps-added-automatically-by-intune"></a>Appar som läggs till automatiskt av Intune
 
-Följande appar, som publicerats av Microsoft, är inbyggda i Intune och klara att tilldela:
-
-|||
-|-|-|
-|Namn|Plattform|Typ av app|
-|Azure Information Protection|Android|Hanterad Google Play-app|
-|Dynamics CRM för telefoner|Android|Hanterad Google Play-app|
-|Dynamics CRM för surfplattor|Android|Hanterad Google Play-app|
-|Excel|iOS|Hanterad iOS Store-app|
-|Excel|Android|Hanterad Google Play-app|
-|Hanterad webbläsare|Android|Hanterad Google Play-app|
-|Hanterad webbläsare|iOS|Hanterad iOS Store-app|
-|Microsoft Dynamics CRM för telefoner|iOS|Hanterad iOS Store-app|
-|Microsoft Dynamics CRM för surfplattor|iOS|Hanterad iOS Store-app|
-|Microsoft Power BI|iOS|Hanterad iOS Store-app|
-|Microsoft Power BI|Android|Hanterad Google Play-app|
-|Microsoft SharePoint|iOS|Hanterad iOS Store-app|
-|Microsoft SharePoint|Android|Hanterad Google Play-app|
-|Microsoft Teams|Android|Hanterad Google Play-app|
-|Microsoft Teams|iOS|Hanterad iOS Store-app|
-|OneDrive|iOS|Hanterad iOS Store-app|
-|OneDrive|Android|Hanterad Google Play-app|
-|OneNote|iOS|Hanterad iOS Store-app|
-|Outlook|Android|Hanterad Google Play-app|
-|Outlook|iOS|Hanterad iOS Store-app|
-|Outlook Groups|Android|Hanterad Google Play-app|
-|Outlook Groups|iOS|Hanterad iOS Store-app|
-|PowerPoint|iOS|Hanterad iOS Store-app|
+Tidigare innehöll Intune ett antal inbyggda appar för snabb tilldelning. Efter feedback från användarna har vi beslutat oss för att ta bort listan och dess inbyggda appar visas inte längre.
+Om du har redan har tilldelat några inbyggda appar kommer dessa även i fortsättningen att finnas kvar i listan över appar. Du kan fortsätta att tilldela dessa appar vid behov.
+I en senare version planerar vi att lägga till en enklare metod för att välja och tilldela inbyggda appar från Intune-portalen.
 
 ## <a name="next-steps"></a>Nästa steg
 

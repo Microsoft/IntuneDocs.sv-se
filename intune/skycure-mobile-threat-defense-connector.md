@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c55fa5b3ea86127648850ae7374107ca65db9764
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2a7c15cf695fd88ba5961611c78ecc28a29238af
+ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/10/2017
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Skycure Mobile Threat Defense-anslutningsprogram
 
@@ -115,14 +115,10 @@ Mer information hittar du på [Skycures webbplats](https://www.skycure.com/skycu
 
 Här är de steg som du måste utföra om du vill integrera Intune med Skycure:
 
-1.  [Konfigurera Skycure till att använda enkel inloggning (SSO) i Azure Active Directory](skycure-azure-sso-configure.md)
+1.  [Lägg till och tilldela Skycure-appar, Microsoft Authenticator och konfigurationsprincip för iOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-2.  [Hämta konfigurationsprincip för Skycures iOS-app](skycure-ios-app-configuration-policy-download.md)
+2.  [Konfigurera Skycure-integrering med Intune](skycure-mtd-connector-integration.md)
 
-3.  [Lägg till och tilldela Skycure-appar, Microsoft Authenticator och konfigurationsprincip för iOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+3.  [Aktivera Skycures MTD-anslutning i Intune](mtd-connector-enable.md)
 
-4.  [Konfigurera Skycure-integrering med Intune](skycure-mtd-connector-integration.md)
-
-5.  [Aktivera Skycure Mobile Threat Defense i Intune](mtd-connector-enable.md)
-
-6.  [Skapa en efterlevnadsprincip för Skycure Mobile Threat Defense-enheten i Intune](mtd-device-compliance-policy-create.md)
+4.  [Skapa Skycure-enhetens efterlevnadsprincip med Intune](mtd-device-compliance-policy-create.md)

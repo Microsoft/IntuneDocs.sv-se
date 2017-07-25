@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/25/2017
+ms.date: 07/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dae92c117bcf8a4a8ff133ed613f9f77ea0c07c2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3618c5ee0b4a7ff0e7b6a4d6ed58f77a2af0ba66
+ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/12/2017
 ---
 # <a name="how-to-view-intune-device-inventory"></a>Så här visar du Intunes enhetsinventering
 
@@ -44,9 +44,13 @@ Välj nu något av följande alternativ:
     ![Maskinvaruinventering för hanterade enheter](./media/hardware-inventory.png)
     - **Identifierade appar** – Visar en lista över alla appar som Intune hittar installerade på enheten.
     ![Noden Identifierade appar](./media/detected-applications.png)
+    
+
+
     - **Enhetsefterlevnad** – Visar kompatibilitetsstatus för alla efterlevnadsprinciper som tilldelats enheten.
     - **Enhetskonfiguration** – Visar kompatibilitetsstatus för alla enhetskonfigurationsprinciper som tilldelats enheten.
 - **Övervaka** Välj **Enhetsåtgärder** för att se en lista över enhetsåtgärder som har utförts på de enheter du hanterar och enheternas aktuella tillstånd.
 - **Konfigurera** > **TeamViewer Connector** – Konfigurera fjärradministration på enheter med hjälp av programmet TeamViewer. Mer information finns i [Ge fjärrhjälp för Intune-hanterade Android-enheter](/intune/device-profile-android-teamviewer).
 
-
+>[!NOTE]
+> Intune samlar endast in appinformation från företagsägda enheter. Ingen appinformation samlas in från personliga enheter. För datorer med Windows 10 samlas endast modern appinformation in från företagsägda enheter. Intune samlar inte in information om Win32-appar på enheten.
