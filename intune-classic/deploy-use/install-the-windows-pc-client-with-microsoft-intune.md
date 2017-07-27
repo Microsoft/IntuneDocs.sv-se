@@ -13,11 +13,11 @@ ms.assetid: 64c11e53-8d64-41b9-9550-4b4e395e8c52
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8e10f3a72cf522888108895f9f7141480b9af0b3
-ms.sourcegitcommit: 2a6ad3c233d15a9fb441362105f64b2bdd550c34
+ms.openlocfilehash: 2720cf6f1c5d6b71966c4b4987734cc40dca8aa9
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installera Intune-klientprogrammet på Windows-datorer
 
@@ -43,11 +43,11 @@ Alla metoder, förutom då användarna själva installerar Intune-klientprogramv
 
   ![Hämta Intune PC-klienten](../media/pc-sa-client-download.png)
 
-2.  På fliken **Hämtning av klientprogram** klickar du på **Hämta klientprogram**. Spara sedan paketet **Microsoft_Intune_Setup.zip** som innehåller programvaran på en säker plats i nätverket.
+2. På fliken **Hämtning av klientprogram** klickar du på **Hämta klientprogram**. Spara sedan paketet **Microsoft_Intune_Setup.zip** som innehåller programvaran på en säker plats i nätverket.
 
-Intune-installationspaketet för klientprogramvaran innehåller unik och specifik information om ditt konto som finns tillgängligt via ett inbäddat certifikat. Om obehöriga användare får tillgång till installationspaketet kan de registrera datorer till kontot som representeras av dess inbäddade certifikat och kan då få tillgång till företagsresurser.
+  Intune-installationspaketet för klientprogramvaran innehåller unik och specifik information om ditt konto som finns tillgängligt via ett inbäddat certifikat. Om obehöriga användare får tillgång till installationspaketet kan de registrera datorer till kontot som representeras av dess inbäddade certifikat och kan då få tillgång till företagsresurser.
 
-3.  Extrahera innehållet i installationspaket till en säker plats i nätverket.
+3. Extrahera innehållet i installationspaket till en säker plats i nätverket.
 
     > [!IMPORTANT]
     > Byt inte namn på eller ta bort filen **ACCOUNTCERT** som har extraheras. Om du gör det kommer installationen av klientprogrammet att misslyckas.
@@ -198,13 +198,10 @@ Kör ett av följande kommandon i en kommandorad med förhöjd behörighet.
 
 **Metod 1**:
 
-    ```
     "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
-    ```
 
 **Metod 2**<br>Observera att alla de här agenterna har installerats på varje Windows-SKU:
 
-    ```
     wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall<br>
     wmic product where name="Microsoft Intune Notification Service" call uninstall<br>
     wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall<br>
@@ -237,7 +234,6 @@ Kör ett av följande kommandon i en kommandorad med förhöjd behörighet.
     wmic product where name="Windows Online Management Update Manager" call uninstall<br>
     wmic product where name="Windows Online Management Agent Installer" call uninstall<br>
     wmic product where name="Windows Intune" call uninstall
-    ```
 
 > [!TIP]
 > Avregistrering av klienten lämnar en inaktuell post på serversidan för den aktuella klienten. Avregistreringsprocessen är asynkron och nio agenter ska avinstalleras så det kan ta upp till 30 minuter att slutföra.
@@ -255,10 +251,8 @@ Kontrollera "%ProgramFiles%\Microsoft\OnlineManagement" och se till att följand
 
 Avregistreringsprocessen tar inte bort mappen OnlineManagement. Vänta i 30 minuter efter avinstallationen och kör sedan det här kommandot. Om du kör det för tidigt kan avinstallationen lämnas i ett okänt tillstånd. Starta en kommandotolk med förhöjd behörighet och kör följande för att ta bort mappen:
 
-    ```
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
-    ```
 
-### <a name="see-also"></a>Se även
+### <a name="next-steps"></a>Nästa steg
 [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md)
 [Felsöka klientkonfiguration](../troubleshoot/troubleshoot-client-setup-in-microsoft-intune.md)

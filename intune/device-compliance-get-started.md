@@ -1,49 +1,92 @@
 ---
-title: "Komma igång med enhetsefterlevnad"
+title: "Efterlevnadsprinciper för Intune-enheter"
 titleSuffix: Intune on Azure
-description: "Använd det här ämnet för att förstå vilka förutsättningar du behöver för att skapa efterlevnadsprinciper i Microsoft Intune”"
+description: "Använd det här ämnet för att läsa mer om enhetsefterlevnad i Microsoft Intune”"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 8103df7f-1700-47b4-9a72-c196d2a02f22
+ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa9a5c8c44b82dcbc1ae7a4609b12e22c6599e9e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9723e5a8b001068e8b7c9994723e6c7111e7a80d
+ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/20/2017
 ---
-# <a name="get-started-with-device-compliance-in-intune"></a>Kom igång med enhetsefterlevnad i Intune
-
+# <a name="get-started-with-intune-device-compliance-policies"></a>Komma igång med principer för Intune-enhetsefterlevnad
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-I det här avsnittet lär du dig följande: 
+## <a name="what-is-device-compliance-in-intune"></a>Vad är enhetsefterlevnad i Intune?
 
-- Vad du behöver innan du kan börja skapa en princip för enhetsefterlevnad.
-- En snabb överblick över vad du kan se och göra i Intune Azure Portal. 
+Efterlevnadsprinciper definierar de regler och inställningar som en Intune-enhet måste följa för att anses vara kompatibla med Intune.
 
-Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du läser [det här avsnittet](device-compliance.md). Här får du information om vad enhetsefterlevnad är och hur du kan använda den i din organisation.
+Reglerna omfattar följande:
+
+- Använd lösenord för att få åtkomst till enheter
+
+- Kryptering
+
+- Om enheten är jailbrokad eller rotad
+
+- Lägsta tillåtna version av operativsystemet
+
+- Högsta tillåtna version av operativsystemet
+
+- Enheten måste ligga på eller under nivån för skydd mot mobilhot
+
+Du kan också använda principer för enhetsefterlevnad för att övervaka enheters efterlevnadsstatus.
+
+### <a name="device-compliance-requirements"></a>Krav på efterlevnad för enhet
+
+Efterlevnadskrav är i stort sett regler som kräver en enhets PIN-kod eller kryptering, vilket du kan ange att det krävs eller inte krävs för en efterlevnadsprincip.
+
+<!---### Actions for noncompliance
+
+You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
+When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
+actions for a device that continues to be in the noncompliant status for
+a week:
+
+-   When the device is first determined to be non-compliant, an email with noncompliant notification is sent to the user.
+
+-   3 days after initial noncompliance state, a follow up reminder is sent to the user.
+
+-   5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+
+-   7 days after initial noncompliance state, access to company resources is blocked. This requires that you have conditional access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+
+### Grace Period
+
+This is the time between when a device is first determined as
+noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
+compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+
+Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ##  <a name="pre-requisites"></a>Förutsättningar
 
--   En prenumeration på Intune
+Du måste ha följande prenumerationer för att använda efterlevnadsprinciper för enheter med Intune:
 
--   En prenumeration med Azure Active Directory
+- Intune EMS
 
-##  <a name="supported-platforms"></a>Plattformar som stöds:
+- Azure AD Premium
+
+###  <a name="supported-platforms"></a>Plattformar som stöds:
 
 -   Android
 
 -   iOS
+
+-   macOS (förhandsversion)
 
 -   Windows 8,1
 
@@ -51,32 +94,48 @@ Om du inte har någon erfarenhet av enhetsefterlevnad kan det var klokt om du l�
 
 -   Windows 10
 
-##  <a name="azure-portal-workflow"></a>Arbetsflöde i Azure-portalen
+> [!IMPORTANT]
+> Enheter måste registreras i Intune för att kunna rapportera efterlevnadsstatus.
 
-Här är en översikt över hur du kan skapa och hantera enhetsefterlevnad i Intune Azure Portal.
+## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Så här fungerar efterlevnadsprinciper för Intune med Azure AD
 
-<!---### Overview
+När en enhet registreras i Intune sker även registreringen i Azure AD, vilket uppdaterar enhetens egenskaper med mer information i Azure AD. En viktig del av informationen är enhetens efterlevnadsstatus, vilket används av villkorlig åtkomstprinciper för att blockera eller tillåta åtkomst till e-post eller andra företagsresurser.
 
-When you choose the **Set device compliance** workload, the blade opens with an  **Overview** section that displays a summary view of your compliance policies that you have created and the status of the devices they have been applied to. If you
-don’t have any policies configured yet, the overview will just include the various reports but with no data.--->
+- Läs mer om [registreringsprocessen i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-overview).
 
-### <a name="manage"></a>Hantera
+##  <a name="ways-to-use-device-compliance-policies"></a>Hantera efterlevnadsprinciper för enheter
 
-Du kan skapa, redigera och ta bort efterlevnadsprinciper. Du kan även tilldela användare principer härifrån.
+### <a name="with-conditional-access"></a>Med villkorlig åtkomst
+Du kan använda efterlevnadsprinciper med villkorlig åtkomst om du endast vill tillåta enheter som uppfyller en eller flera efterlevnadsprincipens regler för åtkomst till e-post och andra företagsresurser.
 
-<!---### Monitor
+### <a name="without-conditional-access"></a>Utan villkorlig åtkomst
+Du kan också använda principer för enhetsefterlevnad oberoende av villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. Men när du använder efterlevnadsprinciper separat tillämpas inga åtkomstbegränsningar på företagsresurser.
 
-This section is a detailed view of what you see in the **Overview**. A list of all the reports are displayed in this section and you can interactively drill down through each of these reports.--->
+Du distribuerar efterlevnadsprinciper till användarna. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven. Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats, finns i Hantera inställningar och funktioner på dina enheter.
 
-### <a name="setup"></a>Setup
+##  <a name="using-device-compliance-policies-in-the-intune-classic-portal-vs-azure-portal"></a>Använda efterlevnadsprinciper för enheter i Intune kontra Azure-portalen
 
-Giltighetsperiod för efterlevnadsstatus
+Observera de viktigaste skillnaderna som hjälper dig att övergå till det nya arbetsflödet med principefterlevnad i Azure Portal.
+
+- Efterlevnadsprinciper skapas separat för varje plattform som stöds i Azure-portalen.
+- I den klassiska Intune-administratörskonsolen är en efterlevnadsprincip gemensam för alla plattformar som stöds.
+
+<!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
+
+-   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
+
+##  <a name="migrate-device-compliance-policies-from-the-intune-classic-portal-to-the-azure-portal"></a>Migrera enhetsefterlevnadsprinciper från den klassiska portalen för Intune till Azure Portal
+
+Principer för enhetsefterlevnad som skapats i den [klassiska Intune-portalen](https://manage.microsoft.com) visas inte i nya [Intune Azure Portal](https://portal.azure.com). De kommer dock fortfarande att vara riktade till användarna och kunna hanteras via den klassiska Intune-portalen.
+
+Om du vill dra nytta av de funktioner i Azure Portal som relaterar till den nya enhetsefterlevnaden, så måste du skapa nya principer för enhetsefterlevnad i Azure Portal. Om du tilldelar en användare en ny princip för enhetsefterlevnad i Azure Portal-portalen, och denna användare även har tilldelats en princip för enhetsefterlevnad från den klassiska Intune-portalen, så har principerna för enhetsefterlevnad från Azure Portal företräde framför dem från den klassiska Intune-konsolen.
 
 ##  <a name="next-steps"></a>Nästa steg
-[Skapa en efterlevnadsprincip för Android](compliance-policy-create-android.md)
 
-[Skapa en efterlevnadsprincip för Android på arbetet](compliance-policy-create-android-for-work.md)
+Skapa en princip för enhetsefterlevnad för följande plattformar:
 
-[Skapa en efterlevnadsprincip för iOS](compliance-policy-create-ios.md)
-
-[Skapa en efterlevnadsprincip för Windows](compliance-policy-create-windows.md)
+- [Android](compliance-policy-create-android.md)
+- [Android for Work](compliance-policy-create-android-for-work.md)
+- [iOS](compliance-policy-create-ios.md)
+- [macOS](compliance-policy-create-mac-os.md)
+- [Windows](compliance-policy-create-windows.md)

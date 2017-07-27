@@ -1,7 +1,7 @@
 ---
-title: "Registrera dig för en 30 dagars kostnadsfri utvärderingsversion"
-titleSuffix: Intune on Azure
-description: "Så här registrerar du dig för Intune på Azure.\""
+title: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Microsoft Intune"
+titleSuffix: 
+description: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Intune.”"
 keywords: 
 author: lindavr
 ms.author: lindavr
@@ -13,22 +13,22 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: 7dafdb974dd975eaa7f3268119de6c047c50f858
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/18/2017
 ---
-# <a name="sign-up-for-a-microsoft-intune-free-trial-for-the-azure-portal"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune i Azure Portal
+# <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune
 
 
 Den här artikeln vägleder dig genom registreringen av en utvärderingsversion av fristående Intune för Azure Portal.
 
 1. Besök sidan för [Intune-registrering](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20) och fyll i registreringsformuläret för en utvärderingsprenumeration.
-account-sign-up.md
+* Om du har ett arbets- eller skolkonto och vill använda det för din Intune-utvärderingsversion av följer du [de här inloggningsanvisningarna](/intune/account-sign-up) i stället.
 
-  Om de flesta av dina IT-åtgärder och användare använder ett annat språk än du gör, vill du kanske ange detta språk under **Var finns ditt företag?**.
+* Om de flesta av dina IT-åtgärder och användare använder ett annat språk än du gör, vill du kanske ange detta språk under **Var finns ditt företag?**.
 
 2. I slutet av registreringsprocessen får du ett meddelande med din nya kontoinformation. <br/> ![Bild av kontoinformation](./media/2-end-of-sign-up-process.png) <br/>Om du klickar på **Du är redo att sätta igång**, kommer du till Administrationscenter för Office 365 där du kan lägga till användare i din testmiljö. <br/><br/>Om du i stället vill gå direkt till Intune Azure Portal, öppnar du ett nytt webbläsarfönster och anger **https://portal.azure.com** i adressfältet. Du kommer till Azure-inloggningssidan där du kan använda autentiseringsuppgifterna som du fick för att kunna logga in. Använd den här adressen när du vill logga in på din utvärderingsversion av Intune. <br/> ![Bild av inloggningssidan för Azure-portalen](./media/azure-portal-signin.png)
 
@@ -70,8 +70,6 @@ Om du vill gå från Intune tillbaka till Office 365-administratörscentret skri
 
 ### <a name="intune-on-azure"></a>Intune på Azure
 Läs mer om [Intune i Azure Portal](what-is-intune.md)
-### <a name="classic-intune"></a>Klassisk Intune
-Utvärderingsscenario: [Utvärdera mobilenhetshantering i Microsoft Intune](https://docs.microsoft.com/intune-classic/understand-explore/mobile-device-management-trial-guide-microsoft-intune)
 
 ### <a name="integration-with-other-products"></a>Integrering med andra produkter
 Lär dig mer om hur du kan använda dina Azure Active Directory-användarkonton med Intune:

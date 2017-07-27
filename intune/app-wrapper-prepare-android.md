@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 07/06/2017
+ms.date: 07/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 299e2ed0a84c7158a582ee874f0711eb3c379532
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
+ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg
 
@@ -121,6 +121,17 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 Du uppmanas att ange **KeyStorePassword** och **KeyPassword**. Ange de autentiseringsuppgifter som du använde för att skapa nyckellagerfilen.
 
 Den omslutna appen och en loggfil genereras och sparas på den utdatasökväg som du angett.
+
+## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Återanvända signeringscertifikat och omslutande appar
+Android kräver att alla appar måste ha signerats av ett giltigt certifikat för att kunna installeras på Android-enheter.
+
+Omslutna appar kan antingen signeras som en del av omslutningsprocessen eller *efter* omslutning med ditt befintliga signeringsverktyg (signering informationen i appen innan radbrytning tas bort).
+ 
+Om möjligt ska signeringsinformationen som redan användes när för byggprocessen användas vid omslutning. I vissa organisationer kan du behöva arbeta med den som äger keystore-informationen (t.ex. apputvecklare). 
+
+Om tidigare signeringscertifikatet kan inte användas eller om appen har inte distribuerats innan kan du skapa ett nytt signeringscertifikat genom att följa anvisningarna i [Android Utvecklarhandboken](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
+
+Om appen har distribuerats tidigare med ett annat signeringscertifikat, kan appen inte överföras till Intune-konsolen efter uppgraderingen. Appuppgraderingsscenarier kommer att brytas om appen har signerats med ett annat certifikat än det som appen har byggts med. Alla nya certifikat för tokensignering bör därför behållas för app-uppgraderingar. 
 
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Säkerhetsaspekter att tänka på när du kör programhanteringsverktyget
 För att förhindra eventuell förfalskning, avslöjande av information och privilegieangrepp:
