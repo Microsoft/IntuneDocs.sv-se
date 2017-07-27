@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ee43647190da705581eaa5a266db3712391e06f2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: e47e6fd8bbb3476beb8bd9df22376fdfd339ba2e
+ms.sourcegitcommit: 83dd7a127898dd9528187aa8d430cc1be9dd7738
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/15/2017
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Använda hanterade appar på iOS-enheten
 
@@ -38,6 +38,8 @@ Du kan hämta hanterade appar på ett par olika sätt:
 -   När enheten har registrerats i Microsoft Intune installerar du appen från företagsportalappen eller företagsportalwebbplatsen. Alternativt kan IT-administratören installera den på enheten. Läs mer om hur du registrerar i [Registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md) eller [Registrera en macOS-enhet i Intune](enroll-your-device-in-intune-macos.md).
 
 -   Du installerar en app från App Store och loggar sedan in med ditt företagskonto som hanteras av Intune.
+
+IT-administratören kan ibland köpa flera licenser för en app som du installerar. Om du ser ett meddelande som ber dig godkänna Apples Volymköpsprogram är det normalt och du kan godkänna det. Om du inte godkänner det kan du inte installera appen.
 
 ### <a name="what-can-my-it-admin-manage-in-an-app"></a>Vad kan IT-administratören hantera i en app?
 Här är några exempel på vad IT-administratören kan hantera i en app och hur det kan påverka din användning av företagsdata på din enhet:

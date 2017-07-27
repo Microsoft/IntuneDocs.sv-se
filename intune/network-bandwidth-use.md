@@ -14,11 +14,11 @@ ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f5af3aefe814a52ae3b43a894242ac972e0cc8fc
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 531112301d0c3827ec7eb3ab4087218caa331b90
+ms.sourcegitcommit: 2b7d644c7a4f85315e11a7d0c5885cc66975c2ad
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="intune-network-bandwidth-use"></a>Användning av nätverksbandbredd i Intune
 
@@ -30,7 +30,7 @@ Den här vägledningen hjälper Intune-administratörerna att förstå Intune-tj
 I den här tabellen visas den ungefärliga storleken och frekvensen för vanligt innehåll som skickas via nätverket för varje klient.
 
 > [!NOTE]
-> För att säkerställa att datorer och mobila enheter får nödvändiga uppdateringar och innehåll från Intune-tjänsten måste de regelbundet vara anslutna till Internet. Hur lång tid det tar att ta emot uppdateringar eller innehåll varierar, men som riktlinje bör de vara kontinuerligt anslutna till Internet minst en timme varje dag.
+> För att säkerställa att enheter tar emot uppdateringar och innehåll från Intune måste de regelbundet anslutas till Internet. Hur lång tid det tar att ta emot uppdateringar eller innehåll varierar, men som riktlinje bör de vara kontinuerligt anslutna till Internet minst en timme varje dag.
 
 |Innehållstyp|Ungefärlig storlek|Frekvens och information|
 |----------------|--------------------|-------------------------|
@@ -51,9 +51,9 @@ I den här tabellen visas den ungefärliga storleken och frekvensen för vanligt
 Du kan använda en eller flera av följande metoder för att minska användningen av nätverksbandbredd för Intune-klienter.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Använd en proxyserver till att cachelagra innehållsbegäranden
-Du kan använda en proxyserver som kan cachelagra innehåll för att minska duplicerade hämtningar och minska användningen av nätverksbandbredd från klienter som begär innehåll från Internet.
+En proxyserver som kan cachelagra innehåll för att minska duplicerade hämtningar och minska användningen av nätverksbandbredd från innehåll från Internet.
 
-En proxyserver med cachelagring tar emot förfrågningar om innehåll från klientdatorer i nätverket, hämtar innehåll från Internet och kan sedan cachelagra både HTTP-svar och binära hämtningar. Servern använder den cachelagrade informationen för att besvara efterföljande förfrågningar från Intune-klientdatorer.
+En cachelagrande proxyserver som tar emot innehållsbegäranden från klienter kan hämta innehållet och cachelagra både webbsvar och hämtade filer. Servern använder den cachelagrade informationen för att besvara efterföljande förfrågningar från klienter.
 
 Nedan visas vanliga inställningar för en proxyserver som cachelagrar innehåll för Intune-klienter.
 
@@ -70,7 +70,7 @@ Intune stöder användningen av BITS (Background Intelligent Transfer Service) p
 Läs mer om BITS och Windows-datorer i [Background Intelligent Transfer Service](http://technet.microsoft.com/library/bb968799.aspx) i TechNet-biblioteket.
 
 ### <a name="use-branchcache-on-computers"></a>Använda BranchCache på datorer
-Intune-klienter kan använda BranchCache för att minska WAN-trafiken (Wide Area Network). Följande operativsystem stöds för klienter som också har stöd för BranchCache:
+Intune-klienter kan använda BranchCache för att minska WAN-trafiken (Wide Area Network). BranchCache stöds i följande operativsystem:
 
 - Windows 7
 - Windows 8.0
@@ -79,22 +79,26 @@ Intune-klienter kan använda BranchCache för att minska WAN-trafiken (Wide Area
 
 Om du vill använda BranchCache måste klientdatorn ha BranchCache aktiverat och dessutom vara konfigurerat för **distribuerat cacheläge**.
 
-Som standard aktiveras BranchCache och distribuerat cacheläge på en dator när Intune-klienten installeras. Men om klienten redan har en grupprincip som inaktiverar BranchCache, åsidosätter inte Intune principen och BranchCache kommer att förbli inaktiverat på datorn.
+Som standard aktiveras BranchCache och distribuerat cacheläge på en dator när Intune-klienten installeras. Om en grupprincip har inaktiverat BranchCache, åsidosätter inte Intune den principen varmed BranchCache förblir inaktiverad.
 
-Om du använder BranchCache bör du kommunicera med andra administratörer i din organisation som hanterar grupprincip och Intune-brandväggsprincip för att säkerställa att de inte distribuerar en princip som inaktiverar BranchCache eller brandväggsundantag. Mer information om BranchCache finns i [BranchCache-översikt](http://technet.microsoft.com/library/hh831696.aspx).
+Om du använder BranchCache bör du arbeta med andra administratörer i din organisation som hanterar grupprincip och Intune-brandväggsprincip. Kontrollera att de inte distribuerar en princip som inaktiverar BranchCache eller brandväggsundantag. Mer information om BranchCache finns i [BranchCache-översikt](http://technet.microsoft.com/library/hh831696.aspx).
 
 ## <a name="network-communication-requirements"></a>Krav för nätverkskommunikation
 
-Du måste aktivera nätverkskommunikationen mellan de enheter du hanterar och använder för att hantera din Intune-prenumeration, samt de webbplatser som krävs för molnbaserade tjänster.
+Du måste aktivera nätverkskommunikationen mellan de enheter du hanterar samt de webbplatser som krävs för molnbaserade tjänster.
 
 Intune använder inte någon lokal infrastruktur såsom servrar med Intune-programvara, men det finns alternativ för att använda lokal infrastruktur, inklusive synkroniseringsverktyg för Exchange och Active Directory.
 
-Om du vill hantera datorer som finns bakom brandväggar och proxyservrar måste du ställa in brandväggarna och proxyservrarna så att kommunikation tillåts för Intune. Tänk på följande om du vill hantera datorer som är bakom en proxyserver:
+Om du vill hantera datorer bakom brandväggar och proxyservrar måste du aktivera kommunikation för Intune.
 
 -   Proxyservern måste ha stöd för både **HTTP (80)** och **HTTPS (443)** eftersom Intune-klienter använder båda protokollen
 -   Intune kräver åtkomst till manage.microsoft.com via oautentiserad proxyserver för åtgärder som t.ex. nedladdning av programvara och uppdateringar
 
 Du kan ändra inställningarna för proxyservern i enskilda klientdatorer, eller använda grupprincipinställningar för att ändra inställningarna för alla klientdatorer bakom en angiven proxyserver.
+
+
+<!--
+> [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Hanterade enheter kräver konfigurationer som låter **Alla användare** komma åt tjänster genom brandväggar.
 

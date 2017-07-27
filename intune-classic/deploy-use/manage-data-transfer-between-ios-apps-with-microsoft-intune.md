@@ -14,11 +14,11 @@ ms.assetid: 3a4515c1-b325-4ac1-9f0a-45ac27e00681
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 05975303bd45764d56f00986aea5aa30399893f9
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6314f6b13ec7fa23c0b3b46ecd3418a75d581db1
+ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
@@ -78,6 +78,7 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 | VMware AirWatch | IntuneMAMUPN | Sträng | {UserPrincipalName}|
 | MobileIron Core | IntuneMAMUPN | Sträng | $EMAIL$ **eller** $USER_UPN$ |
 | MobileIron Cloud | IntuneMAMUPN | Sträng | ${userUPN} **eller** ${userEmailAddress} |
+| ManageEngine Mobile Device Manager | IntuneMAMUPN | Sträng | %upn% |
 
 ### <a name="example-2-end-user-experience"></a>Exempel 2: Slutanvändarupplevelse
 

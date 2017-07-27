@@ -6,19 +6,19 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 nmanager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: ae42ab64945982fedc2d6858e2f3eca8fbed334c
-ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
+ms.custom: 
+ms.openlocfilehash: a51b3c59d922b0c150073017222dca0c90c5b7a0
+ms.sourcegitcommit: 36ae73f59ff5e9fdfe4f930ad0aa4b7795fe11f2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Introduktion till Microsoft Intune i Azure-portalen
 
@@ -28,13 +28,10 @@ ms.lasthandoff: 07/10/2017
 Microsoft Intune finns nu i Azure-portalen och detta innebär att de arbetsflöden och de funktioner som du har vant dig vid har ändrats.
 Den nya portalen erbjuder nya och uppdaterade funktioner i Azure Portal där du kan hantera din organisations mobila enheter, datorer och appar.
 
-> [!IMPORTANT]
-> **Ser du inte den nya portalen?**<br>
-> Befintliga klienter ska migreras till den nya miljön. Ett meddelande visas i Office-meddelandecenter innan din klient migreras.
->
-> Intune-konton som skapats före januari 2017 måste migreras vid ett tillfälle innan registrerade Apple-arbetsflöden finns tillgängliga i Azure. Schemat för migrering har ännu inte tillkännagivits. Om ditt befintliga konto inte kan komma åt Azure-portalen, rekommenderar vi att du skapar ett utvärderingskonto.
->
-> Granska listan över möjliga blockerare https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+* [Var tog mina saker vägen i Azure? ](ui-changes.md) är en referens till specifika arbetsflöden och användargränssnitt som har ändrats med övergången till Azure.
+* [Klassiska Intune-grupper i Azure portal](groups-get-started.md) beskriver konsekvenserna av en övergång till Azure Active Directory-säkerhetsgrupper för grupphantering.
+
+
 
 
 Du kan hitta information om den nya portalen i det här biblioteket som uppdateras kontinuerligt. Om du har några förslag är du välkommen att lämna feedback i kommentarsavsnittet. Vi vill gärna att du hör av dig.
@@ -47,7 +44,14 @@ Viktiga nya funktioner:
 - Azure Active Directory (AD)-grupper för att ge kompatibilitet åt alla dina Azure-program
 - Stöd för de flesta moderna webbläsare
 
-Om du letar efter dokumentation för den klassiska Intune-konsolen kan du gå till [Dokumentationsbiblioteket för Microsoft Intune](https://docs.microsoft.com/intune-classic/).
+> [!IMPORTANT]
+> **Ser du inte den nya portalen?**<br>
+> Befintliga klienter ska migreras till den nya miljön. Ett meddelande visas i Office-meddelandecenter innan din klient migreras.
+>
+> Intune-konton som skapats före januari 2017 måste migreras vid ett tillfälle innan registrerade Apple-arbetsflöden finns tillgängliga i Azure. Schemat för migrering har ännu inte tillkännagivits. Om ditt befintliga konto inte kan komma åt Azure-portalen, rekommenderar vi att du skapar ett utvärderingskonto.
+>
+> Granska listan över möjliga blockerare https://blogs.technet.microsoft.com/intunesupport/2017/05/17/intune-migration-blockers-for-grouping-targeting/
+
 
 ## <a name="before-you-start"></a>Innan du börjar
 
