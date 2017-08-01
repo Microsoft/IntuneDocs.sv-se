@@ -21,8 +21,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/12/2017
 ---
-# Vad är apphantering i Microsoft Intune?
-<a id="what-is-microsoft-intune-app-management" class="xliff"></a>
+# <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,8 +36,7 @@ Dessutom kanske du vill tilldela och hantera appar på enheter som inte har regi
 
 Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du behöver, på de enheter som du önskar.
 
-## Apphanteringsfunktioner efter plattform
-<a id="app-management-capabilities-by-platform" class="xliff"></a>
+## <a name="app-management-capabilities-by-platform"></a>Apphanteringsfunktioner efter plattform
 
 ||||||
 |-|-|-|-|-|
@@ -62,8 +60,7 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 
 <sup>2</sup>Gäller endast enheter som hanteras med Intune.
 
-## Komma igång
-<a id="how-to-get-started" class="xliff"></a>
+## <a name="how-to-get-started"></a>Komma igång
 
 Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** som du kommer åt enligt följande:
 
@@ -73,8 +70,7 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
     ![Arbetsbelastningen mobilappar](./media/apps-workload.png)
 
-### Hantera
-<a id="manage" class="xliff"></a>
+### <a name="manage"></a>Hantera
 - **Appar** – Det är här du lägger till, tilldelar och övervakar de flesta av dina appar.
     - [Lägga till appar](apps-add.md)
     - [Tilldela appar](apps-deploy.md)
@@ -89,8 +85,7 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 - **Etableringsprofiler för iOS** – iOS-appar innehåller en etableringsprofil och en kod som har signerats av ett certifikat. När certifikatet upphör att gälla kan du inte längre köra appen. Intune tillhandahåller verktyg för att tilldela en ny etableringsprofilprincip till enheter som har appar som snart upphör att gälla.
     - [iOS-appetableringsprofiler](app-provisioning-profile-ios.md)
 
-### Övervakare
-<a id="monitor" class="xliff"></a>
+### <a name="monitor"></a>Övervakare
 - **Licensierade appar** – Visa, tilldela och övervaka volyminköpta appar från appbutiker.
     - [Volyminköpta appar från Windows Store för företag](windows-store-for-business.md)
 - **Identifierade appar** – Visar alla appar som har tilldelats av Intune och installerats på en enhet.
@@ -99,8 +94,7 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
 Mer information finns i [Övervakning av appar](apps-monitor.md)
 
-### Setup
-<a id="setup" class="xliff"></a>
+### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
 - **Windows Store för företag** – Installationsintegrering till Windows Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser.
