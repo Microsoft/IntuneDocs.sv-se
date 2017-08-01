@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# Ta reda på hur du kan få support för Microsoft Intune
-<a id="how-to-get-support-for-microsoft-intune" class="xliff"></a>
+# <a name="how-to-get-support-for-microsoft-intune"></a>Ta reda på hur du kan få support för Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -30,8 +29,7 @@ Microsoft tillhandahåller global teknisk, förförsäljnings-, fakturerings- oc
 >[!IMPORTANT]
 > Om du behöver teknisk support för produkter som används med Intune men som inte tillverkats av Microsoft, till exempel SaaSwedo, Cisco eller Lookout, så kontaktar du leverantören av produkten först. Kontrollera att du har konfigurerat den andra produkten korrekt innan du öppnar ett ärende hos Intune-supporten.
 
-## Skapa en supportbegäran online
-<a id="create-an-online-support-ticket" class="xliff"></a>
+## <a name="create-an-online-support-ticket"></a>Skapa en supportbegäran online
 
 Som IT-administratör kan du öppna ett supportärende i Azure Portal genom att utföra följande steg:
 
@@ -73,8 +71,7 @@ Som IT-administratör kan du öppna ett supportärende i Azure Portal genom att 
 >[!IMPORTANT]
 >Om du har en fråga om fakturering eller prenumerationer öppnar du ett ärende för att få support genom [Administrationscenter för Office](https://portal.office.com/Support/SupportEntry.aspx).
 
-## Ytterligare resurser
-<a id="additional-resources" class="xliff"></a>
+## <a name="additional-resources"></a>Ytterligare resurser
 - [Kontakta telefonsupporten för Microsoft Intune](contact-assisted-phone-support-for-microsoft-intune.md)
 - [Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkID=282016)
 - [Support för fakturering och prenumerationer](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b?ui=en-US&rs=en-US&ad=US)

@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# Så här avregistrerar du en Android-enhet från Intune
-<a id="how-to-unenroll-your-android-device-from-intune" class="xliff"></a>
+# <a name="how-to-unenroll-your-android-device-from-intune"></a>Så här avregistrerar du en Android-enhet från Intune
 
 När du avregistrerar din Android-enhet från Intune kan enheten inte längre komma åt företagets resurser.  Mer information om vad som händer när du avregistrerar din enhet finns i [Vad händer om jag avregistrerar min enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 
