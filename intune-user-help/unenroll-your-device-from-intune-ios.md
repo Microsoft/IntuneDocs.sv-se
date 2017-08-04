@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/13/2017
 ---
-# Avregistrera en iOS-enhet från Intune
-<a id="unenroll-your-ios-device-from-intune" class="xliff"></a>
+# <a name="unenroll-your-ios-device-from-intune"></a>Avregistrera en iOS-enhet från Intune
 
 När du avregistrerar din iOS-enhet från Intune kan enheten inte längre komma åt företagsresurser och hanteras inte längre av Intune.
 

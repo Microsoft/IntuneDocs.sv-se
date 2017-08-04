@@ -21,8 +21,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/06/2017
 ---
-# Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
-<a id="manage-internet-access-using-managed-browser-policies-with-microsoft-intune" class="xliff"></a>
+# <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -53,8 +52,7 @@ Du kan skapa Managed Browser-principer för följande enhetstyper:
 
 Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intunes programpartners](https://www.microsoft.com/server-cloud/products/microsoft-intune/partners.aspx).
 
-## Skapa en konfiguration för Managed Browser-programmet
-<a id="create-a-managed-browser-app-configuration" class="xliff"></a>
+## <a name="create-a-managed-browser-app-configuration"></a>Skapa en konfiguration för Managed Browser-programmet
 
 1.  Logga in på Azure-portalen.
 2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
@@ -72,8 +70,7 @@ Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intun
 >[!IMPORTANT]
 >Managed Browser förlitar sig för närvarande på automatisk registrering. För att appkonfigurationer ska tillämpas så måste ett annat program på enheten redan hanteras av Intunes appskyddsprinciper.
 
-## Tilldela de konfigurationsinställningar som du har skapat
-<a id="assign-the-configuration-settings-you-created" class="xliff"></a>
+## <a name="assign-the-configuration-settings-you-created"></a>Tilldela de konfigurationsinställningar som du har skapat
 
 Du kan tilldela inställningarna till Azure AD-grupper med användare. Om användaren har installerat Managed Browser kommer appen hanteras med de inställningar som du har angett.
 
@@ -83,8 +80,7 @@ Du kan tilldela inställningarna till Azure AD-grupper med användare. Om använ
 4. På bladet **Användargrupper** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.
 
 
-## Så här konfigurerar du programproxyinställningar för Managed Browser
-<a id="how-to-configure-application-proxy-settings-for-the-managed-browser" class="xliff"></a>
+## <a name="how-to-configure-application-proxy-settings-for-the-managed-browser"></a>Så här konfigurerar du programproxyinställningar för Managed Browser
 
 Intune Managed Browser och [Azure AD-programproxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) kan användas tillsammans för att stödja följande scenarier för användare av iOS och Android-enheter:
 
@@ -94,8 +90,7 @@ Managed Browser identifierar att den här intranätsplatsen har gjorts tillgäng
 - En fjärranvändare öppnar Managed Browser-appen och navigerar till en intranätplats med den intern webbadressen. Managed Browser identifierar att den här intranätsplatsen har gjorts tillgänglig för användaren via programproxyn. Användaren omdirigeras automatiskt via programproxyn för att autentisera med alla tillämpliga multifaktorautentiseringar och principer för villkorlig åtkomst innan de når intranätplatsen.
 Den här platsen, som tidigare inte hittades när användaren använde en fjärranslutning, kan nu öppnas.  
 
-### Innan du börjar
-<a id="before-you-start" class="xliff"></a>
+### <a name="before-you-start"></a>Innan du börjar
 
 - Se till att dina interna program publiceras via Azure AD-programproxy.
 - Se [installationsdokumentationen]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
@@ -103,12 +98,10 @@ Den här platsen, som tidigare inte hittades när användaren använde en fjärr
 - Användare av Managed Browser-appen har en [princip för Intune-appskydd]( app-protection-policy.md) tilldelad till appen.
 - Användare kan endast se automatisk omdirigering för programproxyappar som har tilldelats till dem.
 
-#### Steg 1: Aktivera automatisk omdirigering till Managed Browser från Outlook
-<a id="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook" class="xliff"></a>
+#### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Steg 1: Aktivera automatisk omdirigering till Managed Browser från Outlook
 Outlook måste konfigureras med en appskyddsprincip som aktiverar inställningen **Begränsa webbinnehåll till visning i Managed Browser**.
 
-#### Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats Managed Browser.
-<a id="step-2-assign-an-app-configuration-policy-assigned-for-the-managed-browser" class="xliff"></a>
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-managed-browser"></a>Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats Managed Browser.
 Den här proceduren konfigurerar Managed Browser-appen för att använda omdirigering av programproxy. Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
 |||
@@ -117,8 +110,7 @@ Den här proceduren konfigurerar Managed Browser-appen för att använda omdirig
 |**com.microsoft.intune.mam.managedbrowser.AppProxyRedirection**|**true**|
 
 
-## Så här konfigurerar du startsidan för Managed Browser
-<a id="how-to-configure-the-homepage-for-the-managed-browser" class="xliff"></a>
+## <a name="how-to-configure-the-homepage-for-the-managed-browser"></a>Så här konfigurerar du startsidan för Managed Browser
 
 Den här inställningen låter dig konfigurera den webbsida som användarna ser när de startar Managed Browser eller skapar en ny flik. Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
@@ -128,8 +120,7 @@ Den här inställningen låter dig konfigurera den webbsida som användarna ser 
 |**com.microsoft.intune.mam.managedbrowser.homepage**|Ange en giltig URL. Felaktiga URL:er är blockerade som en säkerhetsåtgärd.<br>Exempel: **https://www.bing.com**|
 
 
-## Så här konfigurerar du bokmärken för Managed Browser
-<a id="how-to-configure-bookmarks-for-the-managed-browser" class="xliff"></a>
+## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Så här konfigurerar du bokmärken för Managed Browser
 
 Den här inställningen låter dig konfigurera en uppsättning bokmärken som är tillgängliga för användare av Managed Browser.
 
@@ -143,8 +134,7 @@ Använd proceduren att skapa en appkonfiguration för Managed Browser till att a
 |Tangent|Värde|
 |**com.microsoft.intune.mam.managedbrowser.bookmarks**|Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet **&#124;**.<br><br>Exempel: **Microsoft Bing&#124;https://www.bing.com**<br><br>Om du vill konfigurera fler bokmärken avgränsar du varje par med två tecken: **&#124;&#124;**<br><br>Exempel: **Bing&#124;https://www.bing.com&#124;&#124;Contoso&#124;https://www.contoso.com**|
 
-## Så här anger du tillåtna och blockerade URL:er för Managed Browser
-<a id="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser" class="xliff"></a>
+## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Så här anger du tillåtna och blockerade URL:er för Managed Browser
 
 Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
@@ -157,8 +147,7 @@ Använd proceduren att skapa en appkonfiguration för Managed Browser till att a
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.
 >Se även till att du inte blockerar viktiga sidor som t.ex. företagets webbplatser.
 
-### URL-format för tillåtna och blockerade URL:er
-<a id="url-format-for-allowed-and-blocked-urls" class="xliff"></a>
+### <a name="url-format-for-allowed-and-blocked-urls"></a>URL-format för tillåtna och blockerade URL:er
 Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser:
 
 -   Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster:
@@ -208,8 +197,7 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
     -   http://www.contoso.com: /&#42;
 
-## Säkerhet och sekretess för Managed Browser
-<a id="security-and-privacy-for-the-managed-browser" class="xliff"></a>
+## <a name="security-and-privacy-for-the-managed-browser"></a>Säkerhet och sekretess för Managed Browser
 
 -   Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
 
@@ -221,8 +209,7 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
 -   För att tillåta autentisering och få åtkomst till Intune-dokumentationen är **&#42;.microsoft.com** undantaget från listan Tillåt eller blockera. Den tillåts alltid.
 
-### Stäng av användningsdata
-<a id="turn-off-usage-data" class="xliff"></a>
+### <a name="turn-off-usage-data"></a>Stäng av användningsdata
 Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
 

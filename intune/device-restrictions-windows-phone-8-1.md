@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: c2d42714-49ca-43b3-b080-2e67a4268198
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e425b8a3c93c2f5dc73fbe9c75aa9adf49c5cdc8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 54a50ec2195ed2f760f69137418977f417220aa1
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-phone-81-device-restriction-settings-in-microsoft-intune"></a>Inställningar fö enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
+
 -   **Kamera** – Tillåter eller blockerar kameran på enheten.
 -   **Kopiera och klistra in** – Tillåter eller blockerar kopierings- och inklistringsfunktioner på enheter.
 -   **Flyttbara lagringsmedia** – Tillåter att enheten använder flyttbara lagringsmedia, t.ex. SD-kort.
@@ -37,8 +37,8 @@ ms.lasthandoff: 07/01/2017
 -   **Synkronisering av anpassade e-postkonton** – Gör det möjligt för enheten att ansluta till andra e-postkonton än Microsoft-e-postkonton.
 
 ## <a name="password"></a>Lösenord
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
--   **Lösenord krävs** – Slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
+
+-   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
     -   **Krav på lösenordstyp** – Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.
     -   **Minsta längd på lösenord** – Anger det minsta antalet tecken som lösenordet måste innehålla.
     -   **Enkla lösenord** – Anger att enkla lösenord kan användas, t.ex. 0000 och 1234.
@@ -49,12 +49,10 @@ ms.lasthandoff: 07/01/2017
 -   **Kryptering** – Kräver att data på mobila enheter som stöds krypteras.
 
 ## <a name="app-store"></a>Appbutik
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
+
 -   **Appbutik** – Tillåter att användarna ansluter till appbutiken från enheten.
 
 ## <a name="restricted-apps"></a>Begränsade appar
-
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
 
 Du kan konfigurera en av följande listor i listan med begränsade appar:
 
@@ -81,11 +79,11 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 
 
 ## <a name="browser"></a>Webbläsare
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
+
 -   **Webbläsare** – Tillåter eller blockerar den inbyggda webbläsaren på enheter.
 
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
--   **Använd alla inställningar endast för Windows Phone 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om inställningen anges till **Konfigurerad**, tillämpas inställningar endast på Windows Phone 8.1-enheter. Om inställningen anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10 Mobile-enheter.
+
 -   **Wi-Fi** – Aktiverar eller inaktiverar Wi-Fi-funktioner på enheten.
 -   **Trådlös Internetdelning** – Tillåter att trådlös Internetdelning används på enheten.
 -   **Anslut automatiskt till trådlösa surfpunkter** – Gör att enheten ansluter automatiskt till kostnadsfria trådlösa surfpunkter och att den automatiskt godkänner användningsvillkoren.

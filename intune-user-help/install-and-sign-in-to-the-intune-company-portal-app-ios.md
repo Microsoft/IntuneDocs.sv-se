@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# Installera och logga in i företagsportalappen
-<a id="install-and-sign-in-to-the-company-portal-app" class="xliff"></a>
+# <a name="install-and-sign-in-to-the-company-portal-app"></a>Installera och logga in i företagsportalappen
 
 Företagsportalen är en app som du installerar på din iOS-enhet för att få åtkomst till företags- eller skolappar, -e-post och -nätverk.  Innan du får åtkomst måste du installera företagsportalappen och sedan använda appen för att registrera enheten i Microsoft Intune. Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 

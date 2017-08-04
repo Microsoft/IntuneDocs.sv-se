@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# Installera företagsportalappen för Android
-<a id="install-the-company-portal-app-for-android" class="xliff"></a>
+# <a name="install-the-company-portal-app-for-android"></a>Installera företagsportalappen för Android
 
 Företagsportalen är en app som ger dig åtkomst till företags- eller skolappar, e-post och internetanslutningar. Den här appen hjälper dig att skydda både din organisations information genom att din enhet skyddas – till exempel genom att hålla företagets appar uppdaterade – eller genom att se till att din enhet låser sig själv efter en viss tid. Företagsportalappen kan göra detta genom att hjälpa dig att [registrera din enhet i Microsoft Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md).
 

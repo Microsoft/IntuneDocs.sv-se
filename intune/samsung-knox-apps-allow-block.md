@@ -15,14 +15,17 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8245bb3fa8f08e719df903a70f079f4fdf534ca5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c5403c8b81caf84a0c7d4bd126a0903ac3122539
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Använd anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter i Microsoft Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
+
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
 
 - En lista över appar som blockeras från att köras på enheten. Appar i den här listan blockeras från att köras även om de redan är installerade när principen tillämpas.
 - En lista över appar som enhetens användare tillåts att installera från Google Play Store. Endast de appar som du tar med i listan kan installeras. Inga andra appar kan installeras från butiken.

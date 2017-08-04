@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 02/15/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,22 @@ ms.assetid: fe5785e9-8d35-4ad7-95e8-d50f8d87154a
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da190ddeda62ce3385aab4308595b473c3059ed6
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 56a133105df88d0efede1dd8829285cc845d3621
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-81-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 8.1 och senare i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
--   **Använd alla konfigurationer på Windows 10** – Innebär att inställningar i den här principen tillämpas på Windows 10-enheter, utöver Windows 8.1-enheter.
+
 -   **Sändning av diagnostikdata** – Gör att enheten skickar diagnostikinformation till Microsoft.
 -   **Brandvägg** – Kräver att Windows-brandväggen är aktiverad.
 -   **User Account Control** – Kräver användning av UAC (User Account Control) på enheter.
+
 ## <a name="password"></a>Lösenord
 -   **Krav på lösenordstyp** – Kräver att slutanvändaren måste ange ett lösenord för att få åtkomst till enheten.
 -   **Minsta längd på lösenord** – Konfigurerar den minsta tillåtna längden (i antal tecken) för lösenordet.
@@ -62,8 +63,10 @@ När du framtvingar kryptering på en enhet är återställningsnyckeln enbart t
 -   **Menyåtkomst till företagsläge** – Låter användaren komma åt menyalternativen för företagsläget från Internet Explorer.
 Om du väljer den här inställningen kan du även ange en **plats för loggningsrapport** som innehåller en URL till en rapport som visar webbplatser som användarna har aktiverat åtkomst till företagsläge för.
 -   **Plats för webbplatslista för företagsläge** – Anger platsen där listan med webbplatser finns, som ska använda företagsläget när den är aktiv.
+
 ## <a name="cellular"></a>Mobilnät
 -   **Datanätverksväxling** – Gör att det går att använda datanätverksväxling när enheten är i ett mobilnät.
+
 ## <a name="cloud-and-storage"></a>Moln och lagring
 -   **URL till arbetsmappar** – Anger arbetsmappens URL så att dokument kan synkroniseras mellan enheter.
 -   **Åtkomst till Windows Mail-app utan Microsoft-konto** – Ger åtkomst till Windows Mail utan ett Microsoft-konto.    
