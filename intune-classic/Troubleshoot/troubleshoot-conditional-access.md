@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# Felsöka villkorlig åtkomst
-<a id="troubleshoot-conditional-access" class="xliff"></a>
+# <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -30,8 +29,7 @@ Vanligtvis försöker en användare få åtkomst till e-post eller SharePoint oc
 I det här avsnittet beskrivs vad du kan göra om användarna inte kan få åtkomst till resurser via villkorlig åtkomst i Intune.
 
 
-## Grunder i hur du får en lyckad villkorlig åtkomst
-<a id="the-basics-for-success-in-conditional-access" class="xliff"></a>
+## <a name="the-basics-for-success-in-conditional-access"></a>Grunder i hur du får en lyckad villkorlig åtkomst
 
 För att villkorlig åtkomst ska fungera måste följande villkor uppfyllas:
 
@@ -43,14 +41,12 @@ För att villkorlig åtkomst ska fungera måste följande villkor uppfyllas:
 
 Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i inventeringsrapporten för enheten.
 
-## Registreringsproblem
-<a id="enrollment-issues" class="xliff"></a>
+## <a name="enrollment-issues"></a>Registreringsproblem
 
  -  Enheten är inte registrerad. Problemet kan åtgärdas genom att registrera enheten.
  -  Användaren har registrerat enheten men anslutningen till arbetsplatsen misslyckades. Användaren bör uppdatera registreringen från företagsportalen.
 
-## Efterlevnadsproblem
-<a id="compliance-issues" class="xliff"></a>
+## <a name="compliance-issues"></a>Efterlevnadsproblem
 
  -  Enheten uppfyller inte kraven för Intune-principen. Vanliga problem är krav på kryptering och lösenord. Användaren omdirigeras till företagsportalen där de kan konfigurera enheten så att den uppfyller kraven.
  -  Det kan ta en stund innan efterlevnadsinformationen har registrerats för enheten. Vänta några minuter och försök igen.
@@ -67,29 +63,23 @@ Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i invent
     
         -   Vissa enhetstillverkare krypterar sina enheter med en standard-PIN-kod i stället för den hemliga PIN-koden som användaren anger. Intune identifierar kryptering med standard-PIN-koden som osäker eftersom den här metoden för kryptering kan utsätta data på enheten för risker i form av användare med tillgång till enheten som vill vålla skada. Om det här är ett problem kan du överväga att använda [appskyddsprinciper](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
-## Principfrågor
-<a id="policy-issues" class="xliff"></a>
+## <a name="policy-issues"></a>Principfrågor
 
 När du skapar en efterlevnadsprincip och länkar den till en e-postprincip måste båda principerna distribueras till samma användare. Därför bör du tänka dig för när du planerar vilka principer som ska distribueras till olika grupper. Användare med endast en tillämpad princip märker troligtvis att deras enheter inte uppfyller kraven.
 
 
-## Problem med Exchange ActiveSync
-<a id="exchange-activesync-issues" class="xliff"></a>
+## <a name="exchange-activesync-issues"></a>Problem med Exchange ActiveSync
 
-### Karantänmeddelande visas i en kompatibel Android-enhet
-<a id="compliant-android-device-gets-quarantine-notice" class="xliff"></a>
+### <a name="compliant-android-device-gets-quarantine-notice"></a>Karantänmeddelande visas i en kompatibel Android-enhet
 - En Android-enhet som är registrerad och uppfyller efterlevnadskraven kan fortfarande få ett karantänmeddelande när de försöker komma åt företagsresurser. Innan användarna väljer länken **Börja** måste de se till att företagsportalen inte är öppen när de försöker komma åt resurserna. Användarna måste stänga företagsportalen, försöka att få åtkomst till resurserna på nytt och sedan välja länken **Börja**.
 
-### En pensionerad enheten har fortfarande åtkomst.
-<a id="retired-device-continues-to-have-access" class="xliff"></a>
+### <a name="retired-device-continues-to-have-access"></a>En pensionerad enheten har fortfarande åtkomst.
 - När du använder Exchange Online kan en pensionerad enhet fortfarande ha åtkomst flera timmar efter att den tagits bort. Det beror på att Exchange cachelagrar åtkomsträttigheter i 6 timmar. Överväg andra sätt att skydda data på pensionerade enheter i det här scenariot.
 
-### Enheten är kompatibel och registrerad i AAD men är ändå blockerad
-<a id="device-is-compliant-and-registered-with-aad-but-still-blocked" class="xliff"></a>
+### <a name="device-is-compliant-and-registered-with-aad-but-still-blocked"></a>Enheten är kompatibel och registrerad i AAD men är ändå blockerad
 - Ibland är etableringen av Exchange ActiveSync ID (EASID) på AAD fördröjd. Begränsning är en vanlig orsak till detta problem. Vänta några minuter och försök igen.
 
-### Enheten är blockerad
-<a id="device-blocked" class="xliff"></a>
+### <a name="device-blocked"></a>Enheten är blockerad
 
 En enhet kan blockeras från villkorlig åtkomst utan att du får ett aktiveringsmeddelande via e-post.
 
@@ -99,8 +89,7 @@ En enhet kan blockeras från villkorlig åtkomst utan att du får ett aktivering
 - Sök i Exchange Connector-loggarna efter någon SendEmail-aktivitet (SkickaEpost) och sök efter fel. Du kan exempelvis söka efter kommandot SendEmail from notification account to useremail (SkickaE-post från meddelandekontot till AnvEpost).
 - Exchange Connector skickar aktiveringsmeddelandet innan enheten blockeras. Om enheten är offline kanske den inte kan ta emot aktiveringsmeddelandet. Kontrollera om enhetens e-postklient använder hämtningsmetoden Push i stället för Pull eftersom det kan göra att användaren inte får meddelandet. Byt till Pull och se om enheten får e-postmeddelandet.
 
-## En inkompatibel enhet blockeras inte
-<a id="non-compliant-device-not-blocked" class="xliff"></a>
+## <a name="non-compliant-device-not-blocked"></a>En inkompatibel enhet blockeras inte
 
 Om en enhet har åtkomst trots att den är inkompatibel vidtar du följande åtgärder.
 
@@ -110,12 +99,10 @@ Om en enhet har åtkomst trots att den är inkompatibel vidtar du följande åtg
     - Använd denna PowerShell-cmdlet om du vill hämta en lista över alla mobila enheter för en postlåda: "Get-ActiveSyncDeviceStatistics -mailbox mbx'. Om enheten inte visas har den inte åtkomst till Exchange.
     - Om enheten visas använder du cmdleten Get-CASmailbox -identity:’upn’ | fl för att få detaljerad information om enhetens åtkomststatus och ange den informationen till Microsoft Support.
 
-## Innan du skapar ett supportärende
-<a id="before-you-open-a-support-ticket" class="xliff"></a>
+## <a name="before-you-open-a-support-ticket"></a>Innan du skapar ett supportärende
 Om du inte kan lösa problemet med dessa felsökningsanvisningar kanske du ombeds skicka information till Microsoft Support, till exempel OWA-postlådeloggar eller Exchange Connector-loggar.
 
-### Samla in OWA-postlådeloggar
-<a id="collecting-owa-mailbox-logs" class="xliff"></a>
+### <a name="collecting-owa-mailbox-logs"></a>Samla in OWA-postlådeloggar
 
 1. Logga in via OWA och välja inställningsikonen (kugghjulet) bredvid ditt namn i det övre högra hörnet.
 2. Välj **Alternativ**.
@@ -127,18 +114,15 @@ Om du inte kan lösa problemet med dessa felsökningsanvisningar kanske du ombed
 8. Vänta 1 till 2 minuter och gå sedan tillbaka till telefonlistan i OWA. Kontrollera att din telefon är markerad i listan och välj **Hämta logg** på den översta menyn.
 9. Nu får du ett e-postmeddelande med en bilaga från dig själv. När du skapar ett supportärende anger du innehållet i e-postmeddelandet till Microsoft Support.
 
-### Exchange Connector-loggar
-<a id="exchange-connector-logs" class="xliff"></a>
+### <a name="exchange-connector-logs"></a>Exchange Connector-loggar
 
-#### Allmän logginformation
-<a id="general-log-information" class="xliff"></a>
+#### <a name="general-log-information"></a>Allmän logginformation
 Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool]\(visningsverktyg för serverspårning) (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Det här verktyget kräver att du hämtar Windows Server SDK.
 
 >[!NOTE]
 >Loggarna finns i C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Loggarna finns i en serie med 30 loggfiler som börjar med *Connector0.log* och slutar med *Connector29.log*. När 10 MB data har samlats i en logg går loggningen vidare till nästa logg. När loggningen når Connector29 börjar den om med Connector0 igen och de tidigare loggfilerna skrivs över.
 
-#### Hitta synkroniseringsloggar
-<a id="locating-sync-logs" class="xliff"></a>
+#### <a name="locating-sync-logs"></a>Hitta synkroniseringsloggar
 
 -    Leta upp en fullständig synkronisering i loggarna genom att söka efter **full sync**. Början av en fullständig synkronisering markeras med följande text:
 
@@ -150,12 +134,10 @@ Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool]\(visningsverk
 
 -   Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync**.
 
-##### Undantag i Get next command (Hämta nästa kommando)
-<a id="exceptions-in-get-next-command" class="xliff"></a>
+##### <a name="exceptions-in-get-next-command"></a>Undantag i Get next command (Hämta nästa kommando)
 Kontrollera om det finns undantag i **Get next command** (Hämta nästa kommando) i Exchange Connector-loggarna och skicka dessa till Microsoft Support.
 
-#### Utförlig loggning
-<a id="verbose-logging" class="xliff"></a>
+#### <a name="verbose-logging"></a>Utförlig loggning
 
 Så här aktiverar du utförlig loggning:
 
@@ -168,6 +150,5 @@ Så här aktiverar du utförlig loggning:
 
 
 
-### Nästa steg
-<a id="next-steps" class="xliff"></a>
+### <a name="next-steps"></a>Nästa steg
 Om du inte lyckas lösa problemet med hjälp av den här felsökningsinformationen kontaktar du Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).

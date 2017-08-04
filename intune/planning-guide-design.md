@@ -14,11 +14,11 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fdd75bd2b96eb20e0e73b7f8f76cf1a5cc035011
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3f08f110163159c1219492539107cc6b33c8012d
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="create-a-design"></a>Skapa en design
 
@@ -189,7 +189,7 @@ Vi ska gå igenom dessa områden mer detaljerat.
 
 Du behöver veta vilka enheter som kommer att finnas i miljön och bekräfta om de stöds av Intune eller inte när du skapar utformningen. Intune stöder iOS-, Android- och Windows-plattformar.
 
--   Läs mer om [enheter som stöds av Intune](/intune-classic/get-started/supported-mobile-devices-and-computers).
+-   Läs mer om [enheter som stöds av Intune](/intune/supported-devices-browsers).
 
 ### <a name="devices"></a>Egenskaper
 

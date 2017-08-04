@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,17 +16,13 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2e27bdcb6af7d81ed87aa113b11affbff695b808
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 93a08f4c653fe320284821c1532cdbd84d090b2f
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
-# Hur loggar jag in på företagsportalappen? <!--User Story 1132123-->
-<a id="how-do-i-sign-in-to-the-company-portal-app---user-story-1132123--" class="xliff"></a>
-
-> [!IMPORTANT]
-> Den här funktionen håller på att lanseras. Det kan vara annorlunda för dig. Vi tar bort det här meddelandet när distributionen är klar.
+# <a name="how-do-i-sign-in-to-the-company-portal-app---user-story-1132123--"></a>Hur loggar jag in på företagsportalappen? <!--User Story 1132123-->
 
 Du använder företagsportalappen för att komma åt företagets resurser, t.ex. e-post och affärsappar. Det finns två sätt att logga in på företagsportalen:
 
@@ -35,8 +31,7 @@ Du använder företagsportalappen för att komma åt företagets resurser, t.ex.
 
 Även om följande bilder är för iOS är processen praktiskt taget identisk för Android- och Windows-enheter.
 
-## Med din e-postadress och lösenord
-<a id="signing-in-with-your-email-address-and-password" class="xliff"></a>
+## <a name="signing-in-with-your-email-address-and-password"></a>Med din e-postadress och lösenord
 
 1. Öppna företagsportalappen på enheten och tryck på **Logga in**.
 
@@ -56,8 +51,7 @@ Du använder företagsportalappen för att komma åt företagets resurser, t.ex.
 
   ![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
-## Logga in från en annan enhet
-<a id="signing-in-from-another-device" class="xliff"></a>
+## <a name="signing-in-from-another-device"></a>Logga in från en annan enhet
 
 Om du inte använder ett lösenord för att logga in till företagets resurser kan du använda en annan enhet som ett sätt att bekräfta att du är rätt person med rätt åtkomstnivå. Om företaget använder smartkort för att få åtkomst till datorerna är det sannolikt att du behöver logga in med en annan enhet.
 

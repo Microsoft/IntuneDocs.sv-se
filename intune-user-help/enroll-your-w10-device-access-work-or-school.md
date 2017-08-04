@@ -22,8 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/13/2017
 ---
-# Registrera din Windows 10-enhet i Intune
-<a id="enroll-your-windows-10-device-in-intune" class="xliff"></a>
+# <a name="enroll-your-windows-10-device-in-intune"></a>Registrera din Windows 10-enhet i Intune
 
 > [!NOTE]
 > Windows 10 fungerar med alla typer av enheter. Du följer samma steg på datorn, mobiltelefonen eller surfplattan – även om de kan skilja sig något från bilderna på den här sidan.

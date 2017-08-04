@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/01/2017
 ---
-# VPN-anslutningar i Microsoft Intune
-<a id="vpn-connections-in-microsoft-intune" class="xliff"></a>
+# <a name="vpn-connections-in-microsoft-intune"></a>VPN-anslutningar i Microsoft Intune
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -41,8 +40,7 @@ Du kan konfigurera följande enhetstyper med VPN-profiler:
 
 Konfigurationsalternativen för VPN-profiler varierar beroende på vilken enhetstyp du väljer.
 
-## VPN-anslutningstyper
-<a id="vpn-connection-types" class="xliff"></a>
+## <a name="vpn-connection-types"></a>VPN-anslutningstyper
 
 Intune har stöd för att skapa VPN-profiler som använder följande anslutningstyper:
 
@@ -69,25 +67,21 @@ L2TP|Anpassad profil för iOS|Nej |Nej |Nej|Ja (OMA-URI)|Ja|
 
  Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Anpassade konfigurationer för VPN-profiler](create-custom-vpn-profiles.md).     
 
-## Metoder för att skydda VPN-profiler
-<a id="methods-of-securing-vpn-profiles" class="xliff"></a>
+## <a name="methods-of-securing-vpn-profiles"></a>Metoder för att skydda VPN-profiler
 
 VPN-profiler kan använda ett antal olika anslutningstyper och protokoll från olika tillverkare. Dessa anslutningar skyddas vanligtvis med en av följande metoder.
 
-### Certifikat
-<a id="certificates" class="xliff"></a>
+### <a name="certificates"></a>Certifikat
 
 När du skapar VPN-profilen väljer du en SCEP- eller PFX-certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet distribueras till datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md).
 
-### Användarnamn och lösenord
-<a id="user-name-and-password" class="xliff"></a>
+### <a name="user-name-and-password"></a>Användarnamn och lösenord
 
 Användaren autentiseras mot VPN-servern genom att ange användarnamn och lösenord.
 
-## Skapa en VPN-profil
-<a id="create-a-vpn-profile" class="xliff"></a>
+## <a name="create-a-vpn-profile"></a>Skapa en VPN-profil
 
 1. I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** > **Lägg till princip**.
 2. Välj en mall för den nya principen genom att expandera den aktuella enhetstypen. Välj sedan VPN-profilen för den enheten:
@@ -157,8 +151,7 @@ Du kan begränsa VPN-användningen på Windows 10-enheter till specifika appar g
 
 Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
 
-### VPN på begäran för iOS-enheter
-<a id="on-demand-vpn-for-ios-devices" class="xliff"></a>
+### <a name="on-demand-vpn-for-ios-devices"></a>VPN på begäran för iOS-enheter
 Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 
 > [!NOTE]
@@ -183,8 +176,7 @@ Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare.
 Domänspecifika regler utvärderas före allmänna domänregler.
 
 
-## Distribuera principen
-<a id="deploy-the-policy" class="xliff"></a>
+## <a name="deploy-the-policy"></a>Distribuera principen
 
 1.  På arbetsytan **Princip** markerar du den princip som du vill distribuera och väljer sedan **Hantera distribution**.
 

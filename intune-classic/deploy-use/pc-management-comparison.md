@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/13/2017
 ---
-# Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter
-<a id="compare-managing-windows-pcs-as-computers-or-mobile-devices" class="xliff"></a>
+# <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Jämför hanteringen av Windows-datorer som datorer respektive mobila enheter
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -45,8 +44,7 @@ Organisationer kan använda Microsoft Intune för att hantera Windows-datorer so
 |**Appskydd**|Saknas|Tillgänglig <br>[Vad är appskyddsprinciper?](https://docs.microsoft.com/intune-azure/manage-apps/what-is-app-protection-policy)|
 
 
-### Fördelarna med MDM-hantering för Windows-datorer
-<a id="advantages-of-mdm-windows-pc-management" class="xliff"></a>
+### <a name="advantages-of-mdm-windows-pc-management"></a>Fördelarna med MDM-hantering för Windows-datorer
 Hantering av Windows-datorer med modern hantering av mobila enheter har följande fördelar:
 - **Skalbarhet** – MDM-hanteringen skalas med Intunes molnhantering. Intune-programvaruklienten är begränsad till 7000 datorer.
 - **Enkelhet** – Använder de moderna hanteringsfunktioner som ingår i operativsystemet utan att behöva hämta någon programvaruklient

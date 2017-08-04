@@ -15,14 +15,17 @@ ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 912bc5230904f5798b2e0026dcf0dd1cecdb811c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 519a721b19e42c3fe2cc8120f7985b18cd57a1ce
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Vad som händer när din iOS-app hanteras av appskyddsprinciper
-[!INCLUDE[azure_portal](./includes/azure_portal.md)] Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
+
+[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Det här avsnittet beskriver användarupplevelsen för appar med appskyddsprinciper. Appskyddsprinciper används bara när appar används i arbetskontext, t.ex. åtkomst till appar med ditt arbetskonto eller åtkomst till filer som lagras på platsen för ditt företags OneDrive för företag.
 ##  <a name="accessing-apps"></a>Komma åt appar
 
 Om enheten **inte har registrerats i Intune** uppmanas slutanvändarna att starta om appen första gången de använder den.  En omstart krävs för att appskyddsprinciperna ska kunna tillämpas på appen. Följande skärmbild illustrerar detta med hjälp av Skype-appen:

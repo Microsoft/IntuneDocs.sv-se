@@ -20,8 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/11/2017
 ---
-# Fastställa scenariokrav för användningsfall
-<a id="determine-use-case-scenario-requirements" class="xliff"></a>
+# <a name="determine-use-case-scenario-requirements"></a>Fastställa scenariokrav för användningsfall
 
 I det här avsnittet kommer att du fastställa kraven för varje organisationsgrupp inom varje användningsfall. Med den här processen kan du förbereda dig inför andra planeringsområden för Intune-distribution, t.ex. arkitektur och utformning, integration och distribution. Det kan också identifiera eventuella luckor och utmaningar gällande Intune-distributionsprojektet.
 
@@ -42,8 +41,7 @@ Följande är några exempel på krav för användningsfall i en organisation, s
 Du kan [ladda ned en mall för ovanstående tabell](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) där du kan ange din organisations krav för användningsfall och underanvändningsfall.
 
 
-## Exempel på krav
-<a id="examples-of-requirements" class="xliff"></a>
+## <a name="examples-of-requirements"></a>Exempel på krav
 
 Här är några fler exempel som kan användas i kolumnen ”Krav”:
 
@@ -64,7 +62,6 @@ Här är några fler exempel som kan användas i kolumnen ”Krav”:
     - Office 365 med appskyddsprinciper
     - Branschspecifikt (LOB) med appskyddsprinciper
 
-## Nästa steg
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Nästa steg
 
 Nästa avsnitt innehåller råd om [att utveckla en plan för Intune-distributionen](planning-guide-rollout-plan.md).
