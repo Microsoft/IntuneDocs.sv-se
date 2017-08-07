@@ -8,9 +8,7 @@
 ### [Nyheter i användargränssnittet för appen](whats-new-app-ui.md)
 ### [Vad är nytt arkiv (Azure portal)](whats-new-archive.md)
 ### [Vad är nytt arkiv (klassisk portal)](whats-new-archive-classic.md)
-
-<!--## High-level architecture-->
-
+## [Övergripande arkitektur](high-level-architecture.md)
 ## [Översikt över enhets- och applivscykler](introduction-device-app-lifecycles.md)
 ### [Enhetslivscykel](device-lifecycle.md)
 ### [Applivscykel](app-lifecycle.md)
@@ -264,6 +262,8 @@
 
 # Övervaka och felsöka
 ## [Använda rollen supportoperatör](help-desk-operators.md)
+## [Använda Intune-informationslager](reports-nav-create-intune-reports.md)
+### [Ansluta till informationslagret med Power BI](reports-proc-get-a-link-powerbi.md)
 
 # Utveckla och anpassa
 ## [Konfigurera anpassade enhetsinställningar](custom-settings-configure.md)
@@ -286,7 +286,18 @@
 ### [Intune App SDK för Android](app-sdk-android.md)
 ### [Intune App SDK Cordova-insticksprogrammet](app-sdk-cordova.md)
 ### [Intune App SDK Xamarin-komponenten](app-sdk-xamarin.md)
-## [Så här använder du Intune Graph API](intune-graph-apis.md)
+## [Så här använder du Intune Graph-API:er](intune-graph-apis.md)
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
+## [API för Intune-informationslager](reports-nav-intune-date-warehouse.md)
+<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [API-slutpunkt för informationslager](reports-api-url.md)
+### [Datamodell för informationslager](reports-ref-data-model.md)
+#### [Referens för datumentitet](reports-ref-date.md)
+#### [Referens för användarentitet](reports-ref-user.md)
+#### [Referens för MAM-entiteter (hantering av mobilprogram) ](reports-ref-mobile-app-management.md)
+#### [Referens för enhetsentiteter](reports-ref-devices.md)
+#### [Referens för programentiteter](reports-ref-application.md)
+#### [Referens för principentiteter](reports-ref-policy.md)
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
 
 # [Ordlista](intune-glossary.md)
