@@ -83,7 +83,7 @@
 ### [Ställ in iOS-registrering](ios-enroll.md)
 #### [Program för enhetsregistrering](device-enrollment-program-enroll-ios.md)
 #### [Apple School Manager](apple-school-manager-set-up-ios.md)
-#### [Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md)
+#### [Apple Configurator](apple-configurator-enroll-ios.md)
 ### [Konfigurera registrering av macOS](macos-enroll.md)
 
 ## [Hantera enheter](device-management.md)
@@ -101,6 +101,7 @@
 ### [Ta bort användare](device-remove-user.md)
 ### [Fjärrstyrning för Android](device-profile-android-teamviewer.md)
 ### [Återställning av Windows 10-PIN](device-windows-pin-reset.md)
+### [Synkronisera enhet](device-sync.md)
 ### [Granska enhetsinventering](device-inventory.md)
 
 <!--### Add and delete users -->
@@ -171,6 +172,7 @@
 ### [Konfigurera inställningar för Windows 10-utbildning](education-settings-configure.md)
 ### [Konfigurera utbildningsinställningar för iOS](education-settings-configure-ios.md)
 ### [Konfigurera delade iOS-enheter för utbildning](education-settings-configure-ios-shared.md)
+### [Konfigurera iOS-uppdateringsprinciper](software-updates-ios.md)
 ### [Konfigurera inställningar för Windows Update för företag](windows-update-for-business-configure.md)
 ### [Konfigurera certifikat](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
