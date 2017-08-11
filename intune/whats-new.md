@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 08/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ca98230a54ba7c2067062676420e9e06ff9bf7d7
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: c27ce82d10b927fdecec3ea2952376dc7b1f792e
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -39,7 +39,31 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
   ### Device configuration
 -->   
 
+## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
 
+### <a name="ui-updates-to-the-company-portal-website---1313244-part-1--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 1-->
+Vi har gjort flera uppdateringar i gränssnittet för [företagsportalswebbplatsen](https://portal.manage.microsoft.com) för att förbättra användarupplevelsen.
+
+__Förbättringar av appaneler__ Appikoner som är mindre än 79x79 pixlar visas nu med en automatiskt genererad bakgrund som baseras på ikonens huvudsakliga färg. Detta ersätter den grå kantlinje som tidigare fanns på appaneler med små ikoner. Större ikoner ändras så att de fyller appanelen så mycket som möjligt, samtidigt som bildkvaliteten bibehålls.
+
+Vi rekommenderar att IT-administratörer publicerar appar med ikoner som har en minsta storlek på 120 x120 pixlar.
+
+__Navigeringsändringar__ Objekt i navigeringsraden har flyttats till menyn längst upp till vänster. Sidan Kategorier har tagits bort. Användarna kan nu filtrera innehåll efter kategori när de bläddrar.
+
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
+
+Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.
+
+För att visa skärmbilder med den tidigare inloggningsmiljön, den nya inloggningsmiljön med inloggningsuppgifter och den nya inloggningsmiljön från en annan enhet, se [Nyheter i appgränssnittet](/intune/whats-new-app-ui).
+
+
+## <a name="week-of-july-23rd-2017"></a>Veckan 23 juli 2017
+
+### <a name="light-and-dark-modes-available-for-the-company-portal-app-for-windows-10----676547---"></a>Ljust och mörkt läge är tillgängligt för företagsportalappen för Windows 10 <!---676547--->
+Slutanvändare kan anpassa färgläget för företagsportalappen för Windows 10. Användaren kan göra ändringarna i avsnittet Inställningar i företagsportalappen. Ändringen tillämpas när användaren har startat om appen. För Windows 10 version 1607 och senare kommer standardläget för appen bero på systeminställningen. För Windows 10 version 1511 och tidigare kommer standardläget för appen vara det ljusa läget.
+
+### <a name="enable-end-users-to-tag-their-device-group-in-the-company-portal-app-for-windows-10----807046--"></a>Gör det möjligt för slutanvändare att tagga sin enhetsgrupp i företagsportalappen för Windows 10 <!---807046-->
+Slutanvändare kan nu välja vilken grupp deras enhet tillhör genom att tagga den direkt från företagsportalappen för Windows 10.
 
 ## <a name="week-of-june-26th-2017"></a>Veckan som inleds med 26 juni 2017
 
@@ -270,6 +294,10 @@ De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) s
 
 ## <a name="whats-coming"></a>Kommande nyheter
 
+### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 2-->
+
+__Uppdateringar av aktuella appar__ Vi har lagt till en särskild sida på webbplatsen där användarna kan bläddra bland appar som du har valt att presentera, och vi har gjort några gränssnittsförändringar på avsnittet Aktuella på startsidan. Du kan se hur ändringarna ser ut på sidan [Nyheter i appens användargränssnitt](whats-new-app-ui.md).
+
 ### <a name="end-of-support-for-android-43-and-lower----1171127-1326920----"></a>Stöd för Android 4.3 och lägre upphör <!---1171127, 1326920 --->
 Hanterade appar och företagsportalappen för Android kräver Android 4.4 och högre för åtkomst till företagets resurser. Enheter som inte har uppdaterats innan början i oktober kommer inte längre att ha åtkomst till företagsportalen eller apparna. I december kommer alla registrerade enheter att tvingas att dras tillbaka, vilket innebär att de förlorar åtkomst till företagets resurser. Om du använder principer för appskydd utan MDM kommer appar inte ta emot uppdateringar och kvaliteten på användningsupplevelsen minskar över tid.
 
@@ -296,12 +324,6 @@ I nuläget har vi inte hunnit fastställa några datum, men vi passar på att in
 Uppmana användarna att uppdatera till iOS 9.0 eller senare för att kunna dra full nytta av de nya funktionerna i Intune.  Uppmana användarna att installera den nya versionen av företagsportalen för att kunna dra full nytta av de nya funktionerna.
 
 Gå till Intune på Azure-portalen och visa Enheter > Alla enheter. Filtrera efter iOS-versionen för att se alla befintliga enheter med operativsystem tidigare än iOS 9.
-
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
-
-Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.
-
-För att visa skärmbilder med den tidigare inloggningsmiljön, den nya inloggningsmiljön med inloggningsuppgifter och den nya inloggningsmiljön från en annan enhet, se [Nyheter i appgränssnittet](/intune/whats-new-app-ui).
 
 ### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plan för ändringar: Intune ändrar Intune-partnerportalens gränssnitt<!-- 1050016 -->
 

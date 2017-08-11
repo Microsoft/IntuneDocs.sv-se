@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f6a3cdc2b5d95f57f1ffc1f68b6748b357f2ef4
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: 1a97e58f1d108932e44b0b4e36bda5a30b7a90da
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
 
-Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till enheter som du hanterar och som kör Windows 10. Dessutom kan du också installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda app i listan med appar i Intune-konsolen.
+Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda app i listan med appar i Intune-konsolen.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -34,11 +34,8 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till 
 - Enheterna måste köra Windows 10 Creators Update eller senare.
 - Intune har endast stöd för att lägga till Office-appar från Office 365 ProPlus 2016.
 - Om alla Office-program är öppna när Intune installerar appen kan slutanvändare förlora data från filer som inte sparats.
-- Om du installerar Office på en enhet som redan har installerat Office, bör du läsa följande:
-    - Oavsett vilken version av Office du använder kan du installera 32-bitars och 64-bitars Office-produkter på samma enhet.
-    - Du kan inte installera samma version av Klicka och kör och MSI-versionen av Office på samma enhet men du kan installera olika större versioner.
-    - Om du redan har en tidigare version av Office som du har installerat med Klicka och kör måste du ta bort alla appar som du vill ersätta med den nya versionen. Till exempel, om du har en äldre version av Word på enheten och du vill tilldela den senaste versionen, måste du ta bort den gamla versionen först.
-    - Om en enhet redan har Office 365 installerat, kan tilldelning av programsviten Office 365 ProPlus 2016 innebära att du måste ändra nivån på Office-prenumerationen.
+- Den här installationsmetoden stöds inte på Windows 10S-enheter.
+- Om du tilldelar den här apptypen som tillgänglig och riktar in den på flera användare med olika tilldelningar ser de endast den senast inriktade tilldelningen.
 
 
 ## <a name="get-started"></a>Kom igång

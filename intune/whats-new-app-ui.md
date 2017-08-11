@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,66 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e2e1eb6da9114c689aae5eb06f7d7c780f35817
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 948a7d2e4e0ad80088d864708db5733f08db77c5
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
+## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
+
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
+
+Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
+
+Nedan kan du se föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
+
+__Föregående inloggning__
+
+![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_before_1704_001.png)
+
+![Användarna anger sina autentiseringsuppgifter på den här sidan när de har tryckt på Logga in, vilken begär användarens e-post och lösenord, tillsammans med förslag på att lösa lösenordsfel.](./media/cp_ios_aad_signin_before_1704_002.png)
+
+![När de har angett sina lösenord loggas de in på företagsportalappen, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_before_1704_003.png)
+
+__Ny inloggning__
+
+![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_after_1704_001.png)
+
+![Användaren ombeds endast att ange sin e-postadress, i stället för sin e-post och lösenord på samma skärm.](./media/cp_ios_aad_signin_after_1704_002.png)
+
+![Användaren uppmanas att ange lösenordet när e-postadressen har accepterats.](./media/cp_ios_aad_signin_after_1704_003.png)
+
+![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+__Ny inloggning vid inloggning från en annan enhet__
+
+![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+
+Tryck på länken __Logga in från en annan enhet__.
+
+![Instruktioner visas för att gå till sidan aka.ms/devicelogin med ett unikt lösenord från din arbetsdator. Därefter använder du koden för att logga in.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
+
+Starta en webbläsare och gå till [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+
+![En bild av användarens webbläsare på arbetsdatorn, i stället för företagsportalappen. Sidan ”Inloggning på enhet” visas och uppmanar användarna ange koden de fick i företagsportalsappen.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+
+Ange koden som du såg i företagsportalsappen. När du väljer __Fortsätt__, kommer du att kunna autentisera med någon av metoderna som stöds av ditt företag, till exempel ett smartkort.
+
+![Användaren har matat in sin unika kod i fältet och webbplatsen ”Inloggning på enhet” har begärt en bekräftelse på att Intunes företagsportal är rätt app för att få behörighet att logga in.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
+
+![En bekräftelsesida som anger att användaren har loggat in i företagsportalsappen på sin enhet visas nu, och den här sidan kan stängas.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+
+Företagsportalappen börjar logga in.
+
+![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
 ## <a name="week-of-june-12-2017"></a>Vecka 12 juni 2017
 
-### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Företagsportalappen för Android har nu ett nytt användargränssnitt för appskyddsprinciper<!--1305217-->
+### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Företagsportalappen för Android har nu ett nytt användargränssnitt för appskyddsprinciper <!--1305217-->
 Baserat på feedback från våra kunder har vi ändrat företagsportalappen för Android så att den visar knappen **Åtkomst till företagsinnehåll**. Avsikten är att förhindra användare från att i onödan gå genom registreringsprocessen när de bara behöver åtkomst till appar som stöder appskyddsprinciper, en funktion i Intune för hantering av mobilappar.
 
 Användaren kan då trycka på knappen **Åtkomst till företagsinnehåll** i stället för att börja registrera enheten.
@@ -180,51 +228,12 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 > [!Note]
 > Observera att bilderna nedan kan vara förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
+### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 2-->
 
-Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
+__Uppdateringar av aktuella appar__ Vi har lagt till en särskild sida på webbplatsen där användarna kan bläddra bland appar som du har valt att presentera, och vi har gjort några gränssnittsförändringar på avsnittet Aktuella på startsidan.
 
-Nedan kan du se föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
+![De färggranna ikonerna visar apparna. Det finns stora rutor med färg under varje app, där färgen hämtas från den huvudsakliga färgen i appens logotyp. Avsnittet ”Aktuella appar” visas längst upp i företagsportalappen.](./media/cp_win10_colorful_tiles_after_1708.png)
 
-__Föregående inloggning__
-
-![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_before_1704_001.png)
-
-![Användarna anger sina autentiseringsuppgifter på den här sidan när de har tryckt på Logga in, vilken begär användarens e-post och lösenord, tillsammans med förslag på att lösa lösenordsfel.](./media/cp_ios_aad_signin_before_1704_002.png)
-
-![När de har angett sina lösenord loggas de in på företagsportalappen, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_before_1704_003.png)
-
-__Ny inloggning__
-
-![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_after_1704_001.png)
-
-![Användaren ombeds endast att ange sin e-postadress, i stället för sin e-post och lösenord på samma skärm.](./media/cp_ios_aad_signin_after_1704_002.png)
-
-![Användaren uppmanas att ange lösenordet när e-postadressen har accepterats.](./media/cp_ios_aad_signin_after_1704_003.png)
-
-![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
-
-__Ny inloggning vid inloggning från en annan enhet__
-
-![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
-
-Tryck på länken __Logga in från en annan enhet__.
-
-![Instruktioner visas för att gå till sidan aka.ms/devicelogin med ett unikt lösenord från din arbetsdator. Därefter använder du koden för att logga in.](./media/cp_ios_aad_signin_from_another_device_after_1704_003.png)
-
-Starta en webbläsare och gå till [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
-
-![En bild av användarens webbläsare på arbetsdatorn, i stället för företagsportalappen. Sidan ”Inloggning på enhet” visas och uppmanar användarna ange koden de fick i företagsportalsappen.](./media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
-
-Ange koden som du såg i företagsportalsappen. När du väljer __Fortsätt__, kommer du att kunna autentisera med någon av metoderna som stöds av ditt företag, till exempel ett smartkort.
-
-![Användaren har matat in sin unika kod i fältet och webbplatsen ”Inloggning på enhet” har begärt en bekräftelse på att Intunes företagsportal är rätt app för att få behörighet att logga in.](./media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
-
-![En bekräftelsesida som anger att användaren har loggat in i företagsportalsappen på sin enhet visas nu, och den här sidan kan stängas.](./media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
-
-Företagsportalappen börjar logga in.
-
-![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 ### <a name="see-also"></a>Se även
 * [Microsoft Intune-blogg](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Översikt över molnplattformen](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)

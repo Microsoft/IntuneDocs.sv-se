@@ -14,11 +14,11 @@ ms.assetid: d3aa6c74-6b5d-4b50-aa66-a040ec44393e
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c3c41f5e3b0fc81232b03fe547bee7f72fb427a0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5be08d2535acefe099429ab732d6d5d99205b2e7
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Övervaka appskyddsprinciper med Microsoft Intune
 Du kan övervaka efterlevnadsstatusen för de appskyddsprinciper som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av appskyddsprinciperna, dess efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
@@ -43,11 +43,13 @@ På bladet **Hantering av mobilprogram i Intune** visas en sammanfattning av eft
 
 ![Panelen Sammanfattning på bladet Hantering av mobilprogram i Intune](../media/mam-azure-portal-user-status-summary.png)
 
--   **Användare:** Totalt antal användare på företaget som använder de appar som är associerade med principen.
+-   **Användare:** Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
 
--   **HANTERAS AV PRINCIP:** Antalet användare som har använt minst en av apparna i arbetskontexten.
+-   **HANTERAS AV PRINCIP**: Antal användare som har använt en app som har en princip tilldelad till dem i ett arbetssammanhang.
 
--   **INGEN PRINCIP**: Antalet användare som använder de appar som är associerade med principen, men som inte omfattas av principen. Du kan välja att lägga till dessa användare i principen.
+-   **INGEN PRINCIP**: Antal användare som använder en app som ingen princip i ett arbetssammanhang inriktar sig på. Du kan välja att lägga till dessa användare i principen.
+    > [!NOTE]
+    > Om du har flera principer per plattform anses en användare vara hanterad av en princip när användaren har minst en tilldelad princip.
 
 - **Flaggade användare**: Antalet användare som har problem. För närvarande rapporteras endast användare med upplåsta enheter under **Flaggade användare**.
 

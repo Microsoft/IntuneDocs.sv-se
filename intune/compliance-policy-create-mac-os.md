@@ -15,11 +15,11 @@ ms.assetid: 0444183e-f924-4605-96a8-48fdfbc58fd1
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e442a0ee7953fe5474d39e1a29a88dfcca58800d
-ms.sourcegitcommit: abd8f9f62751e098f3f16b5b7de7eb006b7510e4
+ms.openlocfilehash: 55fa980c79ed178649562189dfe8fb704e26fcd9
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-preview-with-intune"></a>Lär dig hur du skapar en enhetsefterlevnadsprincip för macOS-enheter i Intune
 
@@ -104,6 +104,9 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 - **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som inte får återanvändas.
 
+    > [!IMPORTANT]
+    > När lösenordskravet ändras på en macOS-enhet börjar det inte gälla förrän nästa gång användaren ändrar sitt lösenord. Om du till exempel ställer in begränsning av lösenordslängd på åtta siffror och macOS-enheten för närvarande har lösenord med 6 siffror fortsätter enheten att vara kompatibel till nästa gång användaren uppdaterar sitt lösenord på enheten.
+
 ## <a name="to-create-a-device-compliance-policy"></a>Skapa en princip för enhetsefterlevnad
 
 1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter.
@@ -128,7 +131,7 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnad – principer**.
+Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnadsprinciper**.
 
 1. Välj den efterlevnadsprincip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
 

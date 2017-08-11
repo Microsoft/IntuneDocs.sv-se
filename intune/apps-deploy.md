@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/27/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 059c6d2c65c78b6a94f93c26d606abe0451edbbb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0bb3ca2f63ee963dae61ee6622d41fe4aef7adfd
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -59,9 +59,10 @@ Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. An
     - **Obligatoriskt** – Appen installeras på enheter i valda grupper.
     - **Avinstallera** – Appen avinstalleras från enheter i valda grupper.
     - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune.
+6. **Endast för iOS-appar** – Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja det under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
 6. När du är klar väljer du **Spara**.
 
-Appen har nu tilldelats den grupp du valde.
+Appen har nu tilldelats till de grupper du valde.
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Lösa konflikter mellan appavsikter
 

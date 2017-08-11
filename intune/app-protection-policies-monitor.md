@@ -15,11 +15,11 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de40d149818b2655a8fc3b647a7e850973814165
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 978e32476069183865f7e729de9791e13bc81ebc
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -46,11 +46,13 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
 ![Panelen Sammanfattning på bladet Hantering av mobilprogram i Intune](./media/app-protection-user-status-summary.png)
 
--   **Användare:** Totalt antal användare på företaget som använder de appar som är associerade med principen.
+-   **Användare:** Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
 
--   **HANTERAS AV PRINCIP:** Antalet användare som har använt minst en av apparna i arbetskontexten.
+-   **HANTERAS AV PRINCIP**: Antal användare som har använt en app som har en princip tilldelad till dem i ett arbetssammanhang.
 
--   **INGEN PRINCIP**: Antalet användare som använder de appar som är associerade med principen, men som inte omfattas av principen. Du kan välja att lägga till dessa användare i principen.
+-   **INGEN PRINCIP**: Antal användare som använder en app som ingen princip i ett arbetssammanhang inriktar sig på. Du kan välja att lägga till dessa användare i principen.
+    > [!NOTE]
+    > Om du har flera principer per plattform anses en användare vara hanterad av en princip när användaren har minst en tilldelad princip.
 
 - **Flaggade användare**: Antalet användare som har problem. För närvarande rapporteras endast användare med upplåsta enheter under **Flaggade användare**.
 

@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ebea9fe4cbf0c6c788ba4a209132856eda06445e
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: fed97412df96d0bdffaf3b10ad5306a6f56d0066
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="prepare-android-apps-for-mobile-application-management-with-the-intune-app-wrapping-tool"></a>Förbereda Android-appar för hantering av mobilprogram med Intunes programhanteringsverktyg
 
@@ -50,16 +50,7 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
     > [!NOTE]
     > I vissa fall kan 32-bitarsversionen av Java orsaka minnesproblem. Det är en bra idé att installera 64-bitarsversionen.
 
-- Android kräver att alla appaket (.apk) signeras. Använd Java Keytool för att generera autentiseringsuppgifterna som krävs för att signera den omslutna utdataappen. Följande kommando använder till exempel den körbara Java-filen keytool.exe för att generera nycklar som kan användas av programhanteringsverktyget för att signera den omslutna utdataappen.
-
-    ```
-    keytool.exe -genkeypair -v -keystore mykeystorefile -alias mykeyalias -keyalg RSA -keysize 2048 -validity 50000
-    ```
-    Det här exemplet genererar ett nyckelpar (en offentlig nyckel och en tillhörande privat nyckel på 2 048 bitar) med hjälp av RSA-algoritmen. Därefter omsluts den offentliga nyckeln i ett självsignerat X.509 v3-certifikat som lagras som en certifikatkedja med ett enda element. Den här certifikatkedjan och den privata nyckeln lagras i en nyckellagerpost med namnet "mykeystorefile" och identifieras med alias "mykeyalias". Nyckellagerposten är giltig i 50 000 dagar.
-
-    Kommandot uppmanar dig att ange lösenord för nyckellagret och nyckeln. Använd lösenord som är säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
-
-    Detaljerad dokumentation om [nyckelverktyget](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html) i Java och [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) i Java finns på webbplatsen för Oracle-dokumentation.
+- Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
@@ -95,7 +86,7 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 |**-KeyStorePassword**&lt;SecureString&gt;|Lösenordet som används för att dekryptera keystore. Android kräver att alla appaket (.apk) signeras. Använd Java Keytool för att generera KeyStorePassword. Läs mer om Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) här.| |
 |**-KeyAlias**&lt;String&gt;|Namnet på nyckeln som ska användas för signering.| |
 |**-KeyPassword**&lt;SecureString&gt;|Lösenordet som används för att dekryptera den privata nyckeln som ska användas för signering.| |
-|**-SigAlg**&lt;SecureString&gt;| (Valfritt) Namnet på signaturalgoritmen som ska användas för signering. Algoritmen måste vara kompatibel med den privata nyckeln.|Exempel: SHA256withRSA, SHA1withRSA, MD5withRSA|
+|**-SigAlg**&lt;SecureString&gt;| (Valfritt) Namnet på signaturalgoritmen som ska användas för signering. Algoritmen måste vara kompatibel med den privata nyckeln.|Exempel: SHA256withRSA, SHA1withRSA|
 | **&lt;CommonParameters&gt;** | (Valfritt) Kommandot stöder vanliga PowerShell-parametrar som verbose och debug. |
 
 

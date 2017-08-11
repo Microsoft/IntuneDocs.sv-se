@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2016
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 465d84490f5000b13a2c7371677cee77baadc4d2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 701ee2081d8f696a1c37eaa2857ab92942d79f48
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Felsöka registreringen av din Windows 10-enhet
 Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md), men ändå inte har åtkomst till din e-post eller filer på arbetet eller i skolan, så försök med följande felsökningsåtgärder.
@@ -35,7 +35,7 @@ Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-en
 
     ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Felsökningssteg för att följa om du ser Åtkomst för arbete eller skola
+## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Felsökningssteg att följa om du ser ”Åtkomst till arbete eller skola”
 
 1.  Om du följde stegen ovan men ändå inte har åtkomst till din e-post eller dina filer på arbetet eller i skolan går du tillbaka till **Åtkomst för arbete eller skola**.
 
@@ -47,12 +47,16 @@ Om du har följt stegen i [Registrera din mobila eller stationära Windows 10-en
 
     - Om du anslutningsinformationen ovan inte visas, eller om det visas, men utan något eller några av alternativen, så tryck på **Anslut** och logga sedan in med autentiseringsuppgifterna för ditt arbets- eller skolkonto. Nu bör du vara ansluten.
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Felsökningssteg för att följa för Ditt konto
+## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Felsökningssteg att följa om du ser ”Ditt konto”
 
 Om du följde stegen ovan men ändå inte har åtkomst till din e-post, dina filer eller annan information på arbetet eller i skolan, så gå tillbaka till **Konton** och tryck på **Åtkomst till arbetsplats**.
 
 - Ser du ditt konto för arbetet eller skolan? Grattis! Du är ansluten.
 
 - Om du inte ser ditt arbets- eller skolkonto trycker du på **Anslut** och loggar in med dina användaruppgifter.
+
+## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Felsökningssteg att följa om du ser ”Skapa ett arbets- eller skolkonto”
+
+Om du ser meddelandet __Det gick inte att automatiskt identifiera en hanteringsslutpunkt som matchar användarnamnet. Kontrollera användarnamnet och försök igen. Ange URL:en till hanteringsslutpunkten om du känner till den.__ ska du inte försöka ange ditt användarnamn och lösenord på nytt. Om det fortfarande inte fungerar ska du kontakta IT-administratören för att få information om den webbplats du ska ange i textrutan **Hanteringsslutpunkt**. Detta är en webbplats som troligtvis har formatet **www.dittföretag.onmicrosoft.com**. 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).

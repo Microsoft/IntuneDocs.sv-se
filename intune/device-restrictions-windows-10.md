@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3819042d3b6e7236506c288156f98a0e55c15ea
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b49c227e3cae6c5dca8655362cfbfa6fd3f94807
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
@@ -43,14 +43,9 @@ ms.lasthandoff: 07/01/2017
 -   **Telefonåterställning** – Styr om användaren kan göra en fabriksåterställning på enheten eller inte.
 -   **USB-anslutning (endast mobil)** – Styr om enheter har åtkomst till externa lagringsenheter via en USB-anslutning.
 -   **Stöldskyddsläge (endast mobil)** – Konfigurera om stöldskyddsläget i Windows ska vara aktiverat.
--   **Aviseringar från säkerhet och underhåll (endast mobil)** – Aktivera eller inaktivera aviseringar från säkerhet och underhåll på enhetens låsskärm (endast Windows 10 Mobile).
 -   **Cortana** – Aktivera eller inaktivera röstassistenten Cortana.
 -   **Röstinspelning (endast mobil)** – Tillåt eller blockera användning av enhetens röstinspelare.
--   **Ändra energialternativinställningar (endast skrivbord)** – Förhindrar att användaren ändrar energialternativinställningar på enheten.
--   **Ändra nationella inställningar (endast skrivbord)** – Förhindrar att användaren ändrar de nationella inställningarna på enheten.
--   **Ändra språkinställningar (endast skrivbord)** – Förhindrar att användaren ändrar språkinställningarna på enheten.
--   **Ändra systemtid** – Förhindrar att användaren ändrar enhetens datum och tid.
--   **Ändra enhetsnamn** – Förhindrar att användaren ändrar enhetens namn.
+-   **Ändra enhetsnamn** – Förhindrar att slutanvändaren ändrar enhetens namn (endast Windows 10 Mobile)
 -   **Lägg till konfigurationspaket** – Blockerar runtime-konfigurationsagenten som installerar konfigurationspaket.
 -   **Ta bort konfigurationspaket** – Blockerar runtime-konfigurationsagenten som tar bort konfigurationspaket.
 -   **Enhetsidentifiering** – Blockerar en enhet från att identifieras av andra enheter.
@@ -67,7 +62,7 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
     -   **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger hur lång tid en enhet måste vara i viloläge innan skärmen låses.
     -   **Lösenordets giltighetstid (dagar)** – Anger efter hur lång tid enhetens lösenord måste ändras.
     -   **Förhindra återanvändning av tidigare lösenord** – Anger hur många tidigare använda lösenord enheten kommer ihåg.
-    -   **Kräv lösenord när enheten lämnar inaktivt läge** – Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten (endast Windows 10 Mobile).
+    -   **Kräv lösenord när enheten lämnar inaktivt läge (endast Mobile)** – Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten (endast Windows 10 Mobile).
     -   **Enkla lösenord** – Du kan använda enkla lösenord som 1111 och 1234. Dessutom tillåter eller blockerar den här inställningen användningen av Windows-bildlösenord.
 -   **Kryptering** – Aktivera kryptering på målenheter (endast Windows 10 Mobile).
 
@@ -105,6 +100,7 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 -   **Installera appdata på systemvolym** – Hindrar appar från att lagra data på enhetens systemvolym.
 -   **Installera appar på systemenhet** – Hindrar appar från att lagra data på enhetens systemenhet.
 -   **Game DVR (endast skrivbord)** – Konfigurerar om registrering och sändning av spel tillåts.
+-   **Apps from store only** (Endast appar från butik) – Konfigurerar om användare kan installera appar från andra platser än appbutiken.
 
 
 
@@ -112,7 +108,6 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
 -   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
--   **SmartScreen** – Aktiverar eller inaktiverar SmartScreen som blockerar bedrägliga webbplatser.
 -   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
 -   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
@@ -130,13 +125,16 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 -   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Edge-webbläsaren (endast skrivbord).
 -   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Edge startar.
 -   **Blockera åtkomst till about:flags** – Förhindra att användaren kommer åt sidan about:flags i Edge som innehåller inställningar för utvecklare och experiment.
--   **Åsidosätt SmartScreen-meddelande** – Tillåt att användaren kringgår SmartScreen-filtrets varningar om potentiellt skadliga webbplatser.
--   **Åsidosätt SmartScreen-meddelande om filer** – Tillåt att användaren kringgår SmartScreen-filtrets varningar vid hämtning av potentiellt skadliga filer.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
 -   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Edge.
 
+## <a name="edge-browser-smartscreen"></a>Edge-webbläsaren SmartScreen
+
+-   **SmartScreen** – Aktiverar eller inaktiverar SmartScreen som blockerar bedrägliga webbplatser.
+-   **Åsidosätt SmartScreen-meddelande** – Tillåt att användaren kringgår SmartScreen-filtrets varningar om potentiellt skadliga webbplatser.
+-   **Åsidosätt SmartScreen-meddelande om filer** – Tillåt att användaren kringgår SmartScreen-filtrets varningar vid hämtning av potentiellt skadliga filer.
 
 ## <a name="search"></a>Sök
 - **Säker sökning (endast mobil)** – Styr hur Cortana filtrerar innehåll för vuxna i sökresultaten. Du kan välja **Strikt**, **Måttlig** eller tillåta att användaren väljer sina egna inställningar.
@@ -156,7 +154,6 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 -   **Bluetooth-identifiering** – Tillåter att enheten kan upptäckas av andra Bluetooth-aktiverade enheter.
 -   **Bluetooth-förhandsparkoppling** – Med den här inställningen kan du konfigurera vissa Bluetooth-enheter till att automatiskt parkopplas med en värdenhet.
 -   **Bluetooth-annonsering** – Låter enheten ta emot annonser via Bluetooth.
--   **Enhetens Bluetooth-namn** – Ange Bluetooth-namnet för en enhet. Om du inte anger ett namn, används standardanslutningsnamnet.
 -   **Connected Devices Service** – Låter dig välja om du vill tillåta tjänsten Connected Devices Service. Tjänsten aktiverar identifiering av och anslutning till andra Bluetooth-enheter.
 -   **NFC** – Låter användaren aktivera och konfigurera närfältskommunikation på enheten.
 -   **Trådlöst** – Låter användaren aktivera och konfigurera trådlösa funktioner på enheten (endast Windows 10 Mobile).
@@ -170,11 +167,16 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 -   **Inställningsapp** – Blockera åtkomst till appen för Windows-inställningar.
     -   **System** – Blockerar åtkomsten till systemområdet för inställningsappen.
+        -   **Ändra energialternativinställningar (endast skrivbord)** – Förhindrar att användaren ändrar energialternativinställningar på enheten.
     -   **Enheter** – Blockerar åtkomsten till enhetsområdet för inställningsappen.
     -   **Nätverk och Internet** – Blockerar åtkomsten till nätverket och Internetområdet för inställningsappen.
     -   **Anpassning** – Blockerar åtkomsten till anpassningsområdet för inställningsappen.
     -   **Konton** – Blockerar åtkomsten till kontoområdet för inställningsappen.
     -   **Tid och språk** – Blockerar åtkomsten till tid- och språkområdet för inställningsappen.
+        -   **Ändra systemtid** – Förhindrar att användaren ändrar enhetens datum och tid.
+        -   **Ändra nationella inställningar (endast skrivbord)** – Förhindrar att användaren ändrar de nationella inställningarna på enheten.
+        -   **Ändra språkinställningar (endast skrivbord)** – Förhindrar att användaren ändrar språkinställningarna på enheten.
+    -   **Spel** – Blockerar åtkomsten till spelappen i inställningar.
     -   **Hjälpmedel** – Blockerar åtkomsten till området Hjälpmedel för inställningsappen.
     -   **Sekretess** – Blockerar åtkomsten till sekretessområdet för inställningsappen.
     -   **Uppdatering och säkerhet** – Blockerar åtkomst till uppdaterings- och säkerhetsområdet i inställningsappen.
@@ -237,17 +239,17 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
 
-- Windows Spotlight – Använd den här inställningen för att blockera alla Windows Spotlight-funktioner på Windows 10-enheter. Följande inställningar är inte tillgängliga om du blockerar den här inställningen.
+- **Windows Spotlight** – Använd den här inställningen för att blockera alla Windows Spotlight-funktioner på Windows 10-enheter. Följande inställningar är inte tillgängliga om du blockerar den här inställningen.
     - **Windows Spotlight på låsskärm** – Hindra Windows Spotlight från att visa information på enhetens låsskärm.
     - **Tredjepartsförslag i Windows Spotlight** – Hindra Windows Spotlight från att föreslå innehåll som inte har publicerats av Microsoft.
-    - **Windows-tips** – Låter dig blockera popup-tips från att visas i Windows.
     - **Konsumentfunktioner** – Låter dig blockera konsumentfunktioner som t.ex. förslag för startmenyn och medlemskapsaviseringar.
+    - **Windows-tips** – Låter dig blockera popup-tips från att visas i Windows.
     - **Windows Spotlight i Åtgärdscenter** – Blockera Windows Spotlight-förslag, på t.ex. nya appar eller säkerhetsinnehåll, från att visas i Windows Åtgärdscenter.
     - **Windows Spotlight-anpassning** – Hindra Windows Spotlight från att anpassa resultat baserat på användningen av en enhet.
     - **Välkommen till Windows-skärm** – Blockera Välkommen till Windows-skärmen där användarinformation om nya eller uppdaterade funktioner visas.
 
 
-## <a name="display"></a>Visning
+## <a name="projection"></a>Projektion
 
 - **Användarindata från trådlösa visningsmottagare** – Blockerar användarindata från trådlösa visningsmottagare.
 - **Projektion till den här datorn** – Stoppar andra enheter från att upptäcka datorn för projektion.

@@ -15,16 +15,27 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b9d1ac3930e29bc024ece7e6b9b11c91a4e14c1
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 18e5ea572bde503600bc33a0b4401efed2e35d18
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här guiden för dem som är bekanta med Intune i den klassiska konsolen och undrar hur de ska arbeta i Intune på Azure. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
 ## <a name="quick-reference-guide"></a>Snabbguide
-|Funktion |Sökväg i den klassiska konsolen|Sökväg i Intune på Azure| |------------||---------------|---------------| |Programmet för enhetsregistrering (DEP) |Admin > Mobil enhetshantering > iOS och Mac OS X > Programmet för enhetsregistrering|[Enhetsregistrering > Apple-registrering > Token för registreringsprogram](#where-did-apple-dep-go) | |Programmet för enhetsregistrering (DEP)| Admin > Mobil enhetshantering > iOS och Mac OS X > Programmet för enhetsregistrering |[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogrammet](#where-did-apple-dep-go) | |Registreringsregler |Admin > Mobil enhetshantering > Registreringsregler |[Enhetsregistrering > Registreringsbegränsningar](#where-did-enrollment-rules-go) | |Grupper efter iOS-serienummer |Grupper > Alla enheter > Förregistrerade företagsenheter > Efter iOS-serienummer|[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogrammet](#where-did-corporate-pre-enrolled-devices-go) | |Grupper efter iOS-serienummer |Grupper > Alla enheter > Förregistrerade företagsenheter > Efter iOS-serienummer| [Enhetsregistrering > Apple-registrering > AC-serienummer](#where-did-corporate-pre-enrolled-devices-go)| |Grupper efter IMEI (alla plattformar)| Grupper > Alla enheter > Förregistrerade företagsenheter > Efter IMEI (Alla plattformar) | [Enhetsregistrering > Identifierare för företagsenheter](#by-imei-all-platforms)| | Registreringsprofil för företagsenheter | Princip > Registrering av företagsenheter | [Enhetsregistrering > Apple-registrering > Profiler för registreringsprogrammet](#where-did-corporate-pre-enrolled-devices-go) | | Profil för registrering av företagsenheter | Princip > Registrering av företagsenheter | [Enhetsregistrering > Apple-registrering > AC-profiler](#where-did-corporate-pre-enrolled-devices-go) | | Android for Work | Admin > Mobil enhetshantering > Android for Work | Enhetsregistrering > Android for Work-registrering | | Allmänna villkor | Princip > Allmänna villkor | Enhetsregistrering > Allmänna villkor |
+|Funktion |Sökväg i klassisk konsol|Sökväg i Intune på Azure|
+|------------|---------------|---------------|
+|Enhetsregistreringsprogram (DEP) |Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram|[Enhetsregistrering > Apple-registrering > Registreringsprogramtoken](#where-did-apple-dep-go) |
+|Enhetsregistreringsprogram (DEP)| Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram |[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-apple-dep-go) |
+|Registreringsregler |Admin > Hantering av mobila enheter > Registreringsregler|[Enhetsregistrering > Registreringsbegränsningar](#where-did-enrollment-rules-go) |
+|Grupper efter iOS-serienummer |Grupper > Alla enheter > Företagets förregistrerade enheter > Efter iOS-serienummer|[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-corporate-pre-enrolled-devices-go) |
+|Grupper efter iOS-serienummer |Grupper > Alla enheter > Företagets förregistrerade enheter > Efter iOS-serienummer| [Enhetsregistrering > Apple-registrering > AC-serienummer](#where-did-corporate-pre-enrolled-devices-go)|
+|Grupper efter IMEI (alla plattformar)| Grupper > Alla enheter > Företagets förregistrerade enheter > Efter IMEI (alla plattformar) | [Enhetsregistrering > ID:n för företagsenheter](#by-imei-all-platforms)|
+| Registreringsprofil för företagsenheter| Princip > Företagsenhetsregistrering | [Enhetsregistrering > Apple-registrering > Registreringsprogramprofiler](#where-did-corporate-pre-enrolled-devices-go) |
+| Registreringsprofil för företagsenheter | Princip > Företagsenhetsregistrering | [Enhetsregistrering > Apple-registrering > AC-profiler](#where-did-corporate-pre-enrolled-devices-go) |
+| Android for Work | Admin > Hantering av mobila enheter > Android for Work | Enhetsregistrering > Android for Work-registrering |
+| Villkor | Princip > Villkor | Enhetsregistrering > Villkor |
 
 
 ## <a name="where-do-i-manage-groups"></a>Var hanterar jag grupper?

@@ -263,7 +263,7 @@
 ### [Så här hämtar du Windows-appar](end-user-apps-windows.md)
 
 # Övervaka och felsöka
-## [Använda rollen supportoperatör](help-desk-operators.md)
+## [Hjälpa användare att felsöka problem](help-desk-operators.md)
 ## [Använda Intune-informationslager](reports-nav-create-intune-reports.md)
 ### [Ansluta till informationslagret med Power BI](reports-proc-get-a-link-powerbi.md)
 

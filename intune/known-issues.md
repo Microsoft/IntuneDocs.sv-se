@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/17/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b08a097e785f85d8b9260cdaa60e720ed88cb4a1
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -37,7 +37,7 @@ Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport 
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupper som skapats av Intune under migreringen kan påverka funktionen för andra Microsoft-produkter
 
-När du migrerar från klassiska Intune till Azure, kan det visas en ny grupp med namnet **Alla användare – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
+När du migrerar från klassiska Intune till Azure-portalen kan det visas en ny grupp med namnet **All Users - b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Sekundär migrering som krävs för utvalda funktioner
 
@@ -51,7 +51,7 @@ Intune-konton som skapats före januari 2017 måste migreras innan de här funkt
 
 Eftersom de här funktionerna inte kan hanteras både från klassiska Silverlight- och Azure-konsoler, gör migreringen att:
 - De inaktiveras i den klassiska konsolen
-- De aktiveras i Azure-konsolen.  
+- De aktiveras i Azure-konsolen  
 
 Om du hanterar de här Intune-funktioner i Azure-portalen nu så måste du vara medveten om följande punkter:
 
@@ -64,13 +64,12 @@ Om du tog bort en Apples DEP-token i den klassiska Intune-portalen (Silverlight)
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
 
-Du kan inte visa statusinformation för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen.
-Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
+Du kan inte visa statusinformation för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
 
 ## <a name="apps"></a>Appar
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Volyminköpta iOS-appar är endast tillgängliga i standardspråket för Intune-klienten
-Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i den amerikanska butiken, men ditt Intune-konto är tyska, visas inte appen i Intune.
+Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i den amerikanska butiken, men ditt Intune-konto är tyskt, visas inte appen i Intune.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Flera kopior av samma volyminköpta iOS-program laddas upp
 Klicka inte på knappen **Ladda upp** flera gånger för samma VPP-token. Det leder till att dubbla VPP-token laddas upp och att appar synkroniseras flera gånger för samma VPP-token. 
@@ -111,7 +110,7 @@ Mer information finns i [Vad är enhetsefterlevnad?](device-compliance.md).
 
 ### <a name="ios-app-protection-policies"></a>iOS-appskyddsprinciper
 
-Du kan definiera [appskyddsprinciper för iOS](app-protection-policy-settings-ios.md) som är tillgängliga för användarna på enheter som hanteras via MAM utan registrering. Du kan bara definiera dessa principer för iOS-versioner med ett decimaltecken i versionnumret i stället för flera decimaltecken på grund av ett tillfälligt fel. I stället för att ange en lägsta version av iOS som 10.3.1 kan du kalla den iOS 10.3. Detta kommer att lösas med en kommande uppdatering av iOS SDK.
+Du kan definiera [appskyddsprinciper för iOS](app-protection-policy-settings-ios.md) som är tillgängliga för användarna på enheter som hanteras via hantering av mobilappar (MAM) utan registrering. Du kan bara definiera dessa principer för iOS-versioner med ett decimaltecken i versionnumret i stället för flera decimaltecken på grund av ett tillfälligt fel. I stället för att ange en lägsta version av iOS som 10.3.1 kan du kalla den iOS 10.3. Detta kommer att lösas med en kommande uppdatering av iOS SDK.
 
 
 ## <a name="administration-and-accounts"></a>Administration och konton
