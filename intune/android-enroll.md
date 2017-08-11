@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 295315dae52662c386055747862717b85ed4b877
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 183e60af4d6174c18fc3883f2cdd9827505d2aba
+ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -49,7 +49,6 @@ Om du vill aktivera hantering av arbetsprofilen på enheter som har [stöd för 
 
 1. **Konfigurera Intune MDM**<br>
 Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
-
 2. **Konfigurera Android for Work-bindning**<br>
     Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.
 
