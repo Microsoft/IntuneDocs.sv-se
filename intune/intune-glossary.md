@@ -1,37 +1,35 @@
 ---
 title: Intune-ordlista
-titleSuffix: Intune on Azure
+titleSuffix: 
 description: "Läs mer om den terminologi som används i Microsoft Intune"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/15/2017
+ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: a9b43fc1a1877a3fc8bf4c5ee00e02dfee3cdea8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="a"></a>A
 
 |||
 |-|-|
 |Apptilldelning|Låter användare [hitta, ladda ned och installera](/intune/app-management) de appar de behöver. Detta kallades tidigare för *appdistribution*.|
-|Appkonfigurationsprofil|Konfigurerar en [iOS](/intune/app-configuration-policies-use-ios)- eller [Android](/intune/app-configuration-policies-use-android)-app med specifika inställningar innan den körs.|
+|Appkonfigurationsprofil <br/><br/>Appkonfigurationsprincip|Tillgänglig för mobilappar med leverantörsspecifika konfigurationer. Konfigurerar en [iOS](/intune/app-configuration-policies-use-ios)- eller [Android](/intune/app-configuration-policies-use-android)-app med specifika inställningar innan den körs.|
 |Appövervakning|Låter dig [granska senaste status och aktivitet](/intune/apps-monitor) relaterad till apptilldelning.|
 |Borttagningsåtgärd för appskyddsdata|[Tar bort appdata](/intune/app-protection-policies) från användarens enhet.|
-|Appskyddsprincip|Säkerställer att användarens appar är kompatibla med [företagets dataskyddsprinciper](/intune/app-protection-policies).|
+|Appskyddsprincip|Tillgänglig för mobilappar som integreras med Enterprise Mobility + Security-teknik (EMS). Säkerställer att användarens appar är kompatibla med [företagets dataskyddsprinciper](/intune/app-protection-policies).|
 |App SDK|Med [Microsoft Intune App SDK](/intune/app-sdk) kan du lägga till funktioner i dina interna skrivna appar som innebär att de kan hanteras av Intunes appskyddsprinciper.|
 |Appens avinstallationsåtgärd|Låter dig [avinstallera appar](/intune/apps-deploy) från användarnas enheter.|
 |Apphanteringsverktyg|Ett [kommandoradsprogram](/intune/apps-prepare-mobile-application-management) som skapar en omslutning runt en branschspecifik app, så att den kan hanteras av en Intune-appskyddsprincip.|
@@ -103,7 +101,7 @@ ms.lasthandoff: 07/01/2017
 |-|-|
 |Hanterad webbläsare|Ett [webbläsningsprogram](/intune/app-configuration-managed-browser) som du kan tilldela i din organisation med Intune. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.|
 |MDM-utfärdare|[MDM-utfärdaren](/intune/mdm-authority-set) definierar den hanteringstjänst som har behörighet att hantera en uppsättning enheter. Alternativen för MDM-utfärdare innefattar själva Intune och Configuration Manager med Intune.|
-|Konfigurationsprincip för mobilappar|En [iOS](/intune/app-configuration-policies-use-ios)- eller [Android](/intune/app-configuration-policies-use-android)-princip som används för att skicka inställningar till kompatibla appar när de körs, exempelvis ett företagsnamn eller en serveradress.|
+|Konfigurationsprincip för mobilappar|Tillgänglig för mobilappar med leverantörsspecifika konfigurationer. Till exempel en [iOS](/intune/app-configuration-policies-use-ios)- eller [Android](/intune/app-configuration-policies-use-android)-princip som används för att skicka inställningar till kompatibla appar när de körs, exempelvis ett företagsnamn eller en serveradress.|
 |Etableringsprincip för mobilappar|En iOS-princip som hjälper dig säkerställa att de [etableringsprofiler](/intune/app-provisioning-profile-ios) för iOS-appar som du tilldelar inte upphör att gälla.|
 |Hantering av mobila program|[MAM (Moblie Application Management)](/intune/app-lifecycle) låter dig att publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
 |Hantering av mobila enheter|Med [hanteringen av mobila enheter(MDM)](/intune/device-lifecycle) kan du registrera enheter i Intune så att du kan etablera, konfigurera, övervaka och hantera dessa enheter.
@@ -131,7 +129,7 @@ ms.lasthandoff: 07/01/2017
 ## <a name="s"></a>S
 |||
 |-|-|
-|Selektiv rensning|En [selektiv radering](/intune/device-company-data-remove) tar endast bort företagets data inklusive eventuella MAM-data (Mobile App Management), inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten.|
+|Selektiv rensning|En [selektiv rensning](/intune/device-company-data-remove) tar endast bort företagsdata som skyddas av en appskyddsprincip, inklusive inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten.|
 |Sidladdning|Åtgärden att installera en branschspecifik app utan att ha åtkomst till den i en appbutik.|
 |Prenumeration|Det avtal som du ingår och som ger dig tillgång till en Intune-klient.|
 

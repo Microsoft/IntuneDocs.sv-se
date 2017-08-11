@@ -1,11 +1,11 @@
 ---
 title: Aktivera BYOD med Microsoft Intune
-description: 
+description: "Generella steg för att konfigurera Intune för en BYOD-lösning (Bring-Your-Own Device) för din organisation."
 keywords: 
 author: lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 880b83a63eefe13a96ab8838c7092c185aa32cd0
-ms.sourcegitcommit: ce363409d1206e4a3d669709863ccc9eb22b7d5f
+ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="enable-byod-with-intune"></a>Aktivera BYOD med Intune
 
@@ -27,7 +27,7 @@ Arbetsflödet är indelat i följande tre processer. Du kan anpassa olika aspekt
 
 -   **[Registrera enheter och kontrollera efterlevnad](#enroll-devices-and-check-for-compliance)** beskriver hur användarna kan registrera sina personliga enheter för hantering med Intune. Intune kan hantera iOS-, Mac OS-, Android- och Windows-enheter. Det här avsnittet beskriver också hur du distribuerar principer till enheter och ser till att de uppfyller grundläggande säkerhetskrav.
 
-- **[Ge åtkomst till företagsresurser](#provide-access-to-company-resources)** beskriver hur IT-personalen enkelt och säkert kan ge användare åtkomst till företagsresurser. Du gör detta genom att distribuera profiler till hanterade enheter. Det här avsnittet beskriver också hur du hanterar volyminköpta appdistributioner med Intune.
+- **[Ge åtkomst till företagsresurser](#provide-access-to-company-resources)** beskriver hur du enkelt och säkert kan ge användare åtkomst till företagsresurser. Du gör detta genom att distribuera profiler till hanterade enheter. Det här avsnittet beskriver också hur du hanterar volyminköpta appdistributioner med Intune.
 
 -   **[Skydda företagsdata](#protect-company-data)** beskriver hur du ger villkorlig åtkomst till företagsresurser, förhindrar dataförlust och tar bort företagsappar och data från enheter när de inte längre behövs för arbetet eller när de tappats bort eller blivit stulna.
 
@@ -38,19 +38,17 @@ Arbetsflödet är indelat i följande tre processer. Du kan anpassa olika aspekt
 ## <a name="before-you-begin"></a>Innan du börjar
 Innan användarna kan registrera enheter måste du förbereda själva Intune-tjänsten. Det gör du genom att [tilldela licenser till användare](licenses-assign.md) och [ange utfärdaren för hantering av mobila enheter](mdm-authority-set.md).
 
-När du ändå håller på bör du även passa på att [anpassa företagsportalen](company-portal-customize.md). Lägg till företagsinformation och ge användarna tillgång till supportinformation. Allt detta gör att dina användare får en bra registrerings- och supportupplevelse.
+När du ändå håller på bör du även passa på att [anpassa företagsportalen](company-portal-customize.md). Lägg till företagsinformation och ge användarna tillgång till supportinformation. Allt detta gör att dina användare får en bra registrerings- och supportupplevelse. Du kan också skapa [användningsvillkor](terms-and-conditions-create.md) som användarna måste godkänna före registrering, eller [enhetsbegränsningar](enrollment-restrictions-set.md) som anger vilka plattformar som du stöder.
 
 ## <a name="enroll-devices-and-check-for-compliance"></a>Registrera enheter och kontrollera kompatibilitet
 
 När du har förberett Intune-tjänsten måste du uppfylla de olika registreringskraven för de olika enhetstyper som du vill hantera. Processen för att registrera enheter för hantering är enkel, men varierar en aning beroende på enhetstyp.
 
--   **iOS- och Mac-enheter** Du måste [skaffa ett APNs-certifikat (Apple Push Notification service)](apple-mdm-push-certificate-get.md) för att registrera iPad-, iPhone- eller Mac OS-enheter. När du har överfört ditt APNs-certifikat till Intune kan användarna [registrera iOS-enheter](/intune-user-help/enroll-your-device-in-intune-ios) med hjälp av företagsportalappen, och använda webbplatsen för företagsportalen för att [registrera Mac OS X-enheter](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **iOS- och Mac-enheter** Du måste [skaffa ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md) för att registrera iPad-, iPhone- eller Mac OS-enheter. När du har överfört MDM-pushcertifikatet till Intune kan användarna [registrera iOS-enheter](/intune-user-help/enroll-your-device-in-intune-ios) med hjälp av företagsportalappen, och använda webbplatsen för företagsportalen för att [registrera Mac OS X-enheter](/intune-user-help/enroll-your-device-in-intune-macos).
 
--   **Android-enheter** Du behöver inte göra något för att förbereda Intune-tjänsten för registreringen av Android-enheter. Användarna behöver bara [registrera sina Android-enheter](/intune-user-help/enroll-your-device-in-intune-android.md) i hanteringen med företagsportalappen som är tillgänglig från Google Play.
+-   **Android-enheter** Du behöver inte göra något för att förbereda Intune-tjänsten för registreringen av Android-enheter. Användarna behöver bara [registrera sina Android-enheter](/intune-user-help/enroll-your-device-in-intune-android) i hanteringen med företagsportalappen som är tillgänglig från Google Play.
 
--   **Windows Phone- och Windows PC-enheter** Du bör [ange ett DNS-alias för registreringsservern](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) för att underlätta registreringen av Windows-enheter. Användarna kan också [registrera Windows-enheter](/intune-user-help/enroll-your-w10-phone-or-w10-pc-windows) genom att lägga till ett arbets- eller skolkonto.
-
-  - Om du har Azure AD Premium kan du göra det enklare för användarna att registrera Windows-enheter genom att [aktivera automatisk registrering](windows-enroll.md). Med den här funktionen registreras en enhet automatiskt i Intune när en användare lägger till ett arbets- eller skolkonto för att registrera en personlig enhet. Den fungerar även för en företagsägd enhet som ansluts till din organisations Azure AD.
+-   **Windows Phone-enheter och datorer** Windows-enheter kan registreras med ytterligare konfiguration. Förenkla användarnas upplevelse genom att aktivera automatisk registrering för Windows 10-datorer och mobila Windows 10-enheter i Azure Active Directory (AD) Premium. Om du inte har Azure AD Premium eller om du behöver stöd för Windows 8.1 kan du skapa [ett DNS-alias för registreringsservern](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) för att göra registreringen enklare.
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Kontrollera att hanterade enheter uppfyller grundläggande säkerhetskrav
@@ -61,13 +59,13 @@ När du [distribuerar en efterlevnadsprincip](device-compliance-get-started.md) 
 
 ## <a name="provide-access-to-company-resources"></a>Ge åtkomst till företagsresurser
 
-Det första som de flesta anställda vill ha på sina mobila enheter är tillgång till företagets e-post och dokument. Och de förväntar sig att kunna konfigurera detta utan att gå igenom komplexa steg och utan att behöva ringa supportavdelningen. Intune gör det enkelt för dig att [skapa och distribuera e-postinställningar](conditional-access-intune-common-ways-use.md) för interna e-postappar som är förinstallerade på mobila enheter.
-<!--- this was old link: (https://docs.microsoft.com/intune/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune). check with Andre--->
+Det första som de flesta anställda vill ha på sina mobila enheter är tillgång till företagets e-post och dokument. Och de förväntar sig att kunna konfigurera detta utan att gå igenom komplexa steg och utan att behöva ringa supportavdelningen. Intune gör det enkelt för dig att [skapa och distribuera e-postinställningar](email-settings-configure.md) för interna e-postappar som är förinstallerade på mobila enheter.
+
 
 > [!NOTE]
 > Intune har stöd för konfiguration av e-postprofiler i Android for Work för e-postapparna Gmail och Nine Work som finns i Google Play Store.
 
-Intune hjälper dig också att styra och skydda åtkomsten till lokala företagsdata när användarna arbetar på en annan plats. Intunes [Wi-Fi-](https://docs.microsoft.com/intune/deploy-use/wi-fi-connections-in-microsoft-intune), [VPN-](https://docs.microsoft.com/intune/deploy-use/vpn-connections-in-microsoft-intune#create-a-vpn-profile) och e-postprofiler fungerar tillsammans för att tillåta åtkomst till filer och resurser som användarna behöver för att utföra sitt arbete, oavsett var de är. Företagets webbprogram och tjänster som finns lokalt går också att komma åt på säkert sätt och skydda med Azure Active Directory-programproxyn och villkorlig åtkomst.
+Intune hjälper dig också att styra och skydda åtkomsten till lokala företagsdata när användarna arbetar på en annan plats. Intunes [Wi-Fi-](wi-fi-settings-configure.md), [VPN-](vpn-settings-configure.md) och e-postprofiler fungerar tillsammans för att tillåta åtkomst till filer och resurser som användarna behöver för att utföra sitt arbete, oavsett var de är. Företagets webbprogram och tjänster som finns lokalt går också att komma åt på säkert sätt och skydda med Azure Active Directory-programproxyn och villkorlig åtkomst.
 
 ### <a name="manage-volume-purchased-apps"></a>Hantera volyminköpta appar
 Med Intune är det enkelt att:
@@ -109,8 +107,8 @@ Använd [Windows Information Protection (WIP) principer](app-protection-policies
 
 ### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Rensa företagsdata och lämna personlig data intakt
 
-Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den bara är borttappad, måste du kunna ta bort företagsappar och företagsdata från den. För att göra det kan du använda Intunes funktioner för selektiv rensning och fullständig rensning. Användarna kan också fjärrensa sina egna personligt ägda enheter från Intunes företagsportal om enheterna är registrerade i Intune.
+Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den bara är borttappad, kan du ta bort företagsappar och företagsdata från den. För att göra det kan du använda Intunes funktioner för selektiv rensning och fullständig rensning. Användarna kan också fjärrensa sina egna personligt ägda enheter från Intunes företagsportal om enheterna är registrerade i Intune.
 
 Med en [fullständig rensning](devices-wipe.md) återställs enheten till fabriksinställningarna, och användardata och inställningar tas bort. Med en [selektiv rensning](devices-wipe.md#selective-wipe) tas endast företagsdata bort från enheten, men användarnas personliga data förblir intakta.
 
-När processen påbörjas inleder enheten genast den selektiva rensningen för att tas bort från hanteringen. När processen är klar har alla företagsdata raderats och enhetsnamnet har tagits bort från Intune-administratörskonsolen. Här upphör enhetens hanteringslivscykel.
+När processen påbörjas inleder enheten genast den selektiva rensningen för att tas bort från hanteringen. När processen är klar har alla företagsdata raderats och enhetsnamnet har tagits bort från Intune-portalen. Här upphör enhetens hanteringslivscykel.

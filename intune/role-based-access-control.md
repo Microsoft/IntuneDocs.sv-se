@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e2302b0e53254b945215aadbb13107c85f345412
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
+ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Rollbaserad administrationskontroll (RBAC) med Intune
 
@@ -38,7 +38,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
 - **Intune Service-administratör:** användarna med den här rollen har globala behörigheter i Intune när tjänsten finns. Dessutom kan ger den här rollen möjlighet att hantera användare och enheter, samt skapa och hantera grupper.
 
-- **Conditional Access Administrator (administratör av villkorlig åtkomst):** Användare med den här rollen endast har behörighet att visa, skapa, ändra och ta bort principer för villkorlig åtkomst.
+- **Conditional Access Administrator (Administratör för villkorlig åtkomst):** Användare med den här rollen har endast behörighet att visa, skapa, ändra och ta bort principer för villkorlig åtkomst.
 
     > [!IMPORTANT]
     > Rollen som Intune Service-administratör ger inte möjlighet att hantera inställningar för villkorlig åtkomst i Azure AD.
@@ -57,9 +57,9 @@ Endast Intune **Service-administratörer** med ”Full” behörighet migreras f
 
 Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan någon ytterligare konfiguration:
 
-- **Supportavdelning**: utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter. 
-- **Princip- och profilhanterare**: hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering och företagets enhetsidentifierare.
-- **Användare med skrivskydd**: Visar information om användare, enhet, registrering, konfiguration och programmet men det går inte att göra ändringar i Intune.
+- **Supportavdelning**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
+- **Princip- och profilhanterare**: Hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering och företagets enhetsidentifierare.
+- **Användare med skrivskydd**: Visar information om användare, enhet, registrering, konfiguration och programmet. Kan inte göra ändringar i Intune.
 - **Programhanterare**: hanterar mobila och hanterade program och kan läsa enhetsinformation.
 
 ### <a name="to-assign-a-built-in-role"></a>Tilldela en inbyggd roll
@@ -68,9 +68,9 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 
 2. På bladet <*rollnamn*> – **Egenskaper** väljer du **Hantera** och därefter **Tilldelningar**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Du kan inte ta bort eller redigera inbyggda roller
-    
+
 3. På bladet anpassad roll väljer du **Tilldela**.
 
 4. På bladet **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:

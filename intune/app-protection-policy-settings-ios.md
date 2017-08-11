@@ -15,11 +15,11 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 272628c501d15dc9661a1110e7dcab2d0e9f1d02
-ms.sourcegitcommit: 21a9db380956a50031dbea360b4c76664cbc2768
+ms.openlocfilehash: f9274daf30a89f75c5c664a17a5f890540e9f562
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -69,7 +69,7 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 | **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |
 | **Hindra hanterade appar från att köras på jailbrokade eller rotade enheter** |  Välj **Ja** om du vill förhindra att den här appen körs på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för att komma åt arbets- eller skoldata i denna app. | Ja |
 | **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (definieras tidigare i principen) kontrolleras. En administratör kan till exempel aktivera PIN-kod i principen, så om en användare öppnar en MAM-app måste denne ange en PIN-kod. När du använder den här inställningen behöver användaren inte ange en PIN-kod i någon MAM-app under ytterligare **30 minuter** (standardvärde).</li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna tid har gått ut kräver appen användarautentisering till AAD, så att appen kan fortsätta att köras.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
-| **Offlineintervall innan appdata rensas (dagar)** | Efter så här många dagar (anges av administratören) med användning offline genomför appen själv en selektiv rensning. Den här selektiva rensningen är samma rensning som kan startas av administratören i MAM-arbetsflödet för rensning. <br><br> | 90 dagar |
+| **Offlineintervall innan appdata rensas (dagar)** | Efter detta antal dagar (definieras av administratören) med offlinekörning kräver appen att användaren ansluter till nätverket och autentiserar igen. Vid lyckad autentisering kan användaren fortsätta att få åtkomst till sina data och offlineintervallet återställs.  Om autentiseringen misslyckas utför appen en selektiv rensning av användarens konto och data.  Se [Hur du rensar endast företagsdata från Intune-hanterade appar](https://docs.microsoft.com/en-us/intune/apps-selective-wipe) om du vill ha mer information om vilka data som tas bort med en selektiv rensning. <br><br> | 90 dagar |
 | **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. | Nej |
 | **Minimikrav på iOS-operativsystem** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att blockeras från åtkomst om iOS-versionen på enheten inte uppfyller kraven. Den här principen stöder ettn enda decimaltecken, som iOS 10.3. | Nej |
 | **Minimikrav på iOS-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att få ett meddelande om iOS-versionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas. Den här principen stöder ettn enda decimaltecken, som iOS 10.3. | Nej |

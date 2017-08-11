@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/12/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0cbcf70af17ba7690f54196790da04becd8ba1eb
-ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
+ms.openlocfilehash: b261834c85a9dd3cbc6f8fae40933dd7a79acf93
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-use-microsoft-intune-app-configuration-policies-for-ios"></a>Så här använder du appkonfigurationsprinciper för iOS i Microsoft Intune
 
@@ -37,7 +37,7 @@ Använd appkonfigurationsprinciper i Microsoft Intune om du vill skicka de inst�
 
 Om användarna inte anger dessa inställningar på korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
 
-Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
+Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något. Appar måste ha skrivits för att stödja användning av appkonfigurationer. Kontakta appleverantören om du vill ha mer information.
 
 Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs).
 
@@ -57,8 +57,8 @@ Du tilldelar inte principerna direkt till användare och enheter. I stället ass
 5.  I listan med principblad väljer du **Lägg till**.
 6.  På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsprincipen.
 7.  För **Registreringstyp för enhet** väljer du något av följande:
-    - **Registrerad med Intune** – För appar med integrerad Intune App SDK och som hanteras av Intune.
-    - **Inte registrerad med Intune** – För appar med integrerad Intune App SDK och som inte hanteras av Intune eller som hanteras av en annan lösning.
+    - **Registrerad med Intune** – för appar som hanteras av Intune.
+    - **Inte registrerad med Intune** – för appar som inte hanteras av Intune eller som hanteras av en annan lösning.
 8.  Under **Plattform** väljer du **iOS** (endast för enheter som registrerats i Intune)
 9.  Välj **Associerad app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
 10. På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**

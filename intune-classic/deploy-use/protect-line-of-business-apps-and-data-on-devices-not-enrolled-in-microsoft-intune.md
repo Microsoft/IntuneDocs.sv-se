@@ -14,11 +14,11 @@ ms.assetid: 00219467-a62e-43b6-954b-3084f54c45ba
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1627627ab1744f963d738dcedde6a772bb3ae663
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 205c9c52759d5fee2429fe46d19c8882aacafa7a
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="protect-line-of-business-apps-and-data-on-devices-that-are-not-enrolled-in-microsoft-intune"></a>Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune
 
@@ -31,7 +31,7 @@ I det här avsnittet beskrivs de steg som krävs för att tillämpa MAM-principe
 
 ##  <a name="step-1-prepare-the-app"></a>Steg 1: Förbered appen
 
-Innan du kan tillämpa MAM-principer på en app, måste du först omsluta appen med hjälp av Microsoft Intunes appomslutningsverktyg för [iOS](prepare-ios-apps-for-mo/intune/apps-prepare-mobile-application-managementoid](/intune/app-wrapper-prepare-android), eller använda [Intune App-SDK:n](/intune/app-sdk) för att integrera Intune-funktionerna för appskydd manuellt.
+Innan du kan tillämpa MAM-principer på en app, måste du först omsluta appen med hjälp av Microsoft Intunes appomslutningsverktyg för [iOS](/intune/app-wrapper-prepare-ios) och [Android](/intune/app-wrapper-prepare-android), eller använda [Intune App-SDK:n](/intune/app-sdk) för att integrera Intune-funktionerna för appskydd manuellt.
 
 Mer information om hur du använder Intunes appomslutningsverktyg respektive SDK:n finns i [Förbereda appar för hantering av mobilprogram med Microsoft Intune](/intune/apps-prepare-mobile-application-management).
 

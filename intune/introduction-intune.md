@@ -5,7 +5,7 @@ keywords: what is Intune
 author: Lindavr
 ms.author: lindavr
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 07/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology:
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: b1fbc73c0bc3589856f09bd3b9858fef66b82b08
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.custom: 
+ms.openlocfilehash: 53115eba5e5150139b8ff0f359cde279df297d47
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="what-is-intune"></a>Vad är Intune?
 
@@ -72,10 +72,10 @@ När du använder Intune med andra tjänster i EMS kan du genom appkonfiguration
 
 * [Enkel inloggning](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
 *   [Multifaktorautentisering](https://docs.microsoft.com/multi-factor-authentication/multi-factor-authentication)
-* [Villkorlig appåtkomst – tillåt åtkomst om mobilappen innehåller företagsdata](app-based-conditional-access-intune.md) ([den klassiska konsolen](/intune-classic/deploy-use/allow-policy-managed-apps-access-to-o365))
-* [Isolera företagsdata från personliga data i samma app](app-protection-policy.md) ([den klassiska konsolen](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune))
-* [Appskyddsprincip (PIN-kodskryptering, spara som, Urklipp osv.)](app-protection-policies.md) ([den klassiska konsolen](/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune))
-* [Rensa företagsdata från en mobilapp](/intune-classic/deploy-use/wipe-managed-company-app-data-with-microsoft-intune)
+* [Villkorlig appåtkomst – tillåt åtkomst om mobilappen innehåller företagsdata](app-based-conditional-access-intune.md)
+* [Isolera företagsdata från personliga data i samma app](app-protection-policy.md)
+* [Princip för appskydd (PIN-kod, kryptering, Spara som, Urklipp osv.)](app-protection-policies.md)
+* [Rensa företagsdata från en mobilapp](apps-selective-wipe.md)
 * [Stöd för rättighetshantering](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms)
 
 ![Bild som visar datasäkerhetsnivåerna för apphantering](./media/managing-mobile-apps.png)
@@ -110,6 +110,6 @@ Följande lista över affärsproblem länkar till mer detaljerad information om 
 * [Dela ut delade surfplattor med begränsad användning till uppdragspersonal](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
 
 ### <a name="next-steps"></a>Nästa steg
-* Läs om några av de [vanliga sätten att använda Intune](common-scenarios.md) ([den klassiska konsolen](/intune-classic/understand-explore/common-ways-to-use-intune)).
-* Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](free-trial-sign-up.md) ([den klassiska konsolen](/intune-classic/understand-explore/sign-up-for-30-day-trial-microsoft-intune)).
-* Fördjupa dig i de [tekniska kraven och möjligheterna](supported-devices-browsers.md) ([den klassiska konsolen](/intune-classic/get-started/what-to-know-before-you-start-microsoft-in)) med Intune.
+* Läs om några av de [vanliga sätten att använda Intune](common-scenarios.md).
+* Bekanta dig med produkten [med en 30-dagars utvärderingsversion av Intune](free-trial-sign-up.md).
+* Fördjupa dig i de [tekniska kraven och möjligheterna](supported-devices-browsers.md) med Intune.

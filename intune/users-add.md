@@ -5,7 +5,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/07/2017
+ms.date: 07/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4289fdbdadbef34f06514b62722f84354534ae65
-ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
+ms.openlocfilehash: 7873481ccd33d2eaf4ec1a4c7fadf30c61b8d42e
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Lägg till användare och ge administrativ behörighet till Intune
 
@@ -32,7 +32,7 @@ Som administratör kan du lägga till användare direkt eller synkronisera anvä
 Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-portalen](https://www.office.com/signin) eller [Intune Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). En administratör kan redigera användarkonton för att tilldela Intune-licenser. Du kan tilldela licenser antingen på Office 365-portalen eller på Intune Azure-portalen. Mer information om hur du använder Office 365-portalen finns i [Lägga till användare individuellt eller flera samtidigt på Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### <a name="add-intune-users-in-the-office-365-admin-center"></a>Lägga till Intune-användare i administrationscenter för Office 365
-1. Logga in på [Office 365-portalen](https://www.office.com/signin).
+1. Logga in på [Office 365-portalen](https://www.office.com/signin) med ett konto som global administratör eller användarhanteringsadministratör.
 2. Välj **Admin** på Office 365-menyn.
 3. Välj **Lägg till en användare** i administrationscentret.
 
@@ -41,54 +41,68 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
 4. Ange följande användarinformation:
   - **Förnamn**
   - **Efternamn**
-  - **Visningsnamn** – Visas på Intune-portalen
-  - **Användarnamn** –UPN-namnet på Intune-portalen
+  - **Visningsnamn**
+  - **Användarnamn** – Användarens huvudnamn (UPN) som är lagrat i Azure Active Directory och används för att få åtkomst till tjänsten
   - **Position**
   - **Kontaktinformation** (valfritt)
   - **Lösenord** –Generera automatiskt eller ange manuellt
 
      ![Skärmbild av administrationscenter för Office 365](media/office-add-user-details.png)
 
-5. Tilldela en Intune-licens. Välj **Produktlicenser** och välj produktlicensen.
+5. Tilldela en Intune-licens. Välj **Produktlicenser** och välj produktlicensen. En licens som omfattar Intune krävs.
 6. Välj **Lägg till** för att skapa den nya användaren.
 
 ### <a name="add-intune-users-in-the-azure-intune-portal"></a>Lägg till Intune-användare på Azure Intune-portalen
-1. Logga in på [Azure-portalen](https://portal.azure.com). Gå till **Övervakning + hantering** > **Intune**. Du kan också *söka efter resurser* för **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com) och gå till **Fler tjänster** > **Övervakning + hantering** > **Intune**. Du kan också *söka efter resurser* för **Intune**.
 2. Välj **Användare**.
-3. Välj **Lägg till en användare** i administrationscentret.
+3. Välj **Ny användare** i administrationscentret.
   ![Skärmbild av administrationscenter för Office 365](media/intune-add-user.png)
 4. Ange följande användarinformation:
   - **Namn**
   - **Användarnamn** –Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter för Office 365](media/intune-add-user-info.png) Fortsätt genom att välja **OK**.
 5. Om du vill kan du ange följande användaregenskaper:
   - **Profil** – Arbetsrelaterad information inklusive **befattning** och **avdelning**
-  -  **Grupper** – Välj grupper som du vill lägga till för användaren
-  - **Katalogroll** – Ge användaren administratörsbehörighet för Intune
+  -  **Grupper** – Välj de grupper du vill lägga till för användaren
+  - **Katalogroll** – Ge användaren administratörsbehörighet, inklusive en administratörsroll för Intune-tjänsten.
 
   Välj **Skapa** för att lägga till den nya användaren i Intune.
-6. Välj **Profil** och sedan en **användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
+6. Välj **Profil** och sedan en **Användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
     ![Skärmbild av administrationscenter för Office 365](media/intune-add-user-loc.png)
-7. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens för den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
+7. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens till den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
 
-## <a name="grant-admin-permissions"></a>Bevilja administratörsbehörighet
+## <a name="grant-admin-permissions"></a>Bevilja administratörsbehörigheter
 
-När du har lagt till fler användare i din Intune-prenumeration rekommenderar vi att du ger några av användarna administratörsbehörighet:
--   [Global administratör](#tenant-administrator): Använd Office 365-portalen om du vill tilldela den här typen av administratörsroll. Den globala administratören kan hantera din prenumeration, inklusive fakturering, molnlagring och hantering av användare som kan använda Intune.
--   [Anpassad eller begränsad administratör](#service-administrator): Använd Office 365 eller Azure Intune-konsolen om du vill tilldela den här typen av administratörsroll för dagliga uppgifter, t.ex. enhets- och datorhantering, distribution av principer och appar samt rapportkörning.
+När du har lagt till användare i Intune-prenumerationen rekommenderar vi att du ger några av användarna administratörsbehörighet.  Följ dessa steg för att bevilja administratörsbehörighet:
 
-![Bild av rolltilldelning på Office 365-portalen.](./media/office-assign-roles.png)
+### <a name="give-admin-permissions-in-office-365"></a>Ge administratörsbehörigheter i Office 365
+1. Logga in på [Office 365-portalen](https://www.office.com/signin) med ett konto som global administratör.
+2. Välj **Admin** på Office 365-menyn.
+3. I administrationscentret väljer du **Aktiva användare** och väljer sedan den användare som ska få administratörsbehörighet.
+4. I kolumnen **Roller** väljer du **Redigera**.
+  ![Skärmbild av skärmen för att tilldela roller i Office 365](./media/office-assign-roles-open.png)
+5. Välj den administratörsbehörighet som ska beviljas från listan över tillgängliga roller.
+![Bild av rolltilldelning i Office 365-portalen.](./media/office-assign-roles.png)
+6. Välj **Spara**.
 
-### <a name="types-of-administrators"></a>Typer av administratörer
+### <a name="give-admin-permissions-in-the-intune-portal"></a>Ge administratörsbehörigheter i Intune-portalen
+1. Logga in på [Intune-portalen](https://www.office.com/signin) med ett konto som global administratör.
+2. I Intune-portalen väljer du **Användare** och väljer den användare som du vill ge administratörsbehörigheter.
+3. Välj **Katalogroll** och välj sedan behörigheten.
+  ![Skärmbild](./media/add-intune-directory-role.png)
+4. Välj **Spara**.
 
-Tilldela användare en eller flera administratörsbehörigheter. Dessa behörigheter definierar den administrativa omfattningen för användare och de uppgifter som de kan hantera. Administratörsbehörigheter är gemensamma mellan de olika Microsoft-molntjänsterna, men vissa tjänster kanske inte stöder vissa behörigheter. Följande administratörsbehörigheter används i Intune:
+### <a name="types-of-administrators"></a>Administratörstyper
+
+Tilldela användare en eller flera administratörsbehörigheter. Dessa behörigheter definierar den administrativa omfattningen för användare och de uppgifter som de kan hantera. Administratörsbehörigheter är gemensamma mellan de olika Microsoft-molntjänsterna, men vissa tjänster kanske inte stöder vissa behörigheter. Både Intune-portalen och Office 365-portalen visar begränsade administratörsroller som inte används av Intune. Administratörsbehörighet för Intune innehåller följande alternativ:
 
 - **Global administratör** – (Office 365 och Intune) Har åtkomst till alla administrativa funktioner i Intune. Som standard blir den person som registrerar sig för Intune en global administratör. Globala administratörer är de enda administratörer som kan tilldela andra administratörsroller. Du kan ha fler än en global administratör i din organisation. Vi rekommenderar att endast ett fåtal personer på företaget tilldelas den här rollen för att minska risken för företaget.
-- **Faktureringsadministratör** – (Office 365 och Intune) Gör inköp, hanterar prenumerationer, hanterar supportärenden och övervakar tjänstens hälsostatus.
 - **Lösenordsadministratör** – (Office 365 och Intune) Återställer lösenord, hanterar tjänstförfrågningar och övervakar tjänstens hälsostatus. Lösenordsadministratörer är begränsade till att återställa lösenord för användare.
-- **Tjänstadministratör** – (Office 365) Öppnar supportförfrågningar med Microsoft och övervakar instrumentpanelen och meddelandecenter. Användaren har behörigheter för "Visa endast" utom för att öppna stödbiljetter och läsa dem.
-- **Administratör för användarhantering** – (Office 365 och Intune) Återställer lösenord, övervakar tjänstens hälsostatus, lägger till och tar bort användarkonton och hanterar tjänstförfrågningar. Administratören för användarhantering kan inte ta bort en global administratör, skapa andra administratörsroller eller återställa lösenord för andra administratörer.
+- **Tjänstadministratör** – (Office 365 och Intune) Öppnar supportförfrågningar med Microsoft och övervakar instrumentpanelen och meddelandecenter. Användaren har behörigheter för "Visa endast" utom för att öppna stödbiljetter och läsa dem.
+- **Faktureringsadministratör** – (Office 365 och Intune) Gör inköp, hanterar prenumerationer, hanterar supportärenden och övervakar tjänstens hälsostatus.
+- **Användaradministratör** – (Office 365 och Intune) Återställer lösenord, övervakar tjänstens hälsostatus, lägger till och tar bort användarkonton och hanterar tjänstförfrågningar. Administratören för användarhantering kan inte ta bort en global administratör, skapa andra administratörsroller eller återställa lösenord för andra administratörer.
+- **Intune-tjänstadministratör** – Alla globala administratörsbehörigheter för Intune förutom behörighet att skapa administratörer med alternativ för **Katalogroll**.
 
-Som standard är det konto som du använder för att skapa Microsoft Intune-prenumerationen en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. En administratör behöver ingen licens för Intune för att komma åt Intune-administratörskonsolen. Se avsnittet Azure AD-klient i [Vad är en Azure AD-katalog?](http://technet.microsoft.com/library/jj573650.aspx) för mer information.
+Det konto som du använder för att skapa Microsoft Intune-prenumerationen är en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. En administratör behöver inte någon licens till Intune för att få åtkomst till Intune-portalen. 
 
 För att få åtkomst till Office 365-portalen måste ditt konto ha statusen **Sign-in allowed** (Inloggning tillåts). Under **Profil** på Intune-portalen anger du **Blockera inloggning** till **Nej** för att tillåta åtkomst. Denna status skiljer sig från att ha en licens för prenumerationen. Som standard har alla användarkonton statusen **Tillåten**. Användare utan administratörsbehörighet kan använda Office 365-portalen för att återställa lösenord för Intune.
 

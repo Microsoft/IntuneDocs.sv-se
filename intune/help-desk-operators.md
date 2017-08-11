@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7a61c3703cd1016ef63c8baa371c3a21dca127fc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7aad054f0861522174faa01b979083a818c106af
+ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="help-users-with-the-troubleshooting-portal-in-microsoft-intune"></a>Hjälpa användarna med felsökningsportalen i Microsoft Intune
 
@@ -26,52 +26,50 @@ ms.lasthandoff: 07/01/2017
 
 I felsökningsportalen kan supportansvariga och Intune-administratörer visa användarinformation för att tillgodose användarnas begäran om hjälp. Organisationer med supportansvariga bland personalen kan tilldela rollen **Supportansvarig** till en grupp användare. Användare i gruppen kan då sedan använda felsökningsbladet till att hjälpa användare.
 
-När t.ex. en användare kontaktar supporten om ett tekniskt problem i Intune kan supportansvarig ange användarens namn. Intune visar relevant information som kan hjälpa supportpersonalen att lösa många nivå 1-problem som användarstatus, appinstallationsfel eller efterlevnadsproblem. Bland sådana problem inkluderar följande:
+När t.ex. en användare kontaktar supporten om ett tekniskt problem i Intune kan supportansvarig ange användarens namn. Intune visar användbara data som kan hjälpa dig att lösa många nivå 1-problem, inklusive:
+- Användarstatus
+- Tilldelningar
+- Fel vid appinstallation
+- Efterlevnadsproblem
 - Enheten svarar inte
 -   Enheten saknar VPN- eller Wi-Fi-inställningar
 -   Appinstallationsfel
 
 
 ## <a name="add-help-desk-operators"></a>Lägga till supportansvariga
-En Intune-administratör kan tilldela supportansvariga behörigheter för användare på två sätt:
-- Tilldela den inbyggda rollen **Supportansvarig**
-- Skapa och tilldela en anpassad roll
+I egenskap av Intune-administratör kan du tilldela rollen Supportansvarig till en användargrupp. Medlemmar i gruppen kan använda administrationsportalen för att felsöka användarnas problem. Varje supportansvarig måste ha en Intune-licens för åtkomst till Intune-portalen. Lär dig [tilldela Intune-användarlicenser](licenses-assign.md).
 
-## <a name="assign-help-desk-operator-role"></a>Tilldela rollen Supportansvarig
-I egenskap av Intune-administratör kan du tilldela rollen Supportansvarig till en användargrupp. Medlemmar av den gruppen kan använda administrationsportalen. Varje supportansvarig måste ha en Intune-licens för åtkomst till Intune-portalen. Lär dig [tilldela Intune-användarlicenser](licenses-assign.md).
+Lägga till supportanvändare:
+1. [Lägga till en användare i Intune](users-add.md) vid behov
+2. [Skapa en supportgrupp](groups-add.md) och lägga till användare i gruppen
+3. [Tilldela rollen RBAC-supportoperatör](role-based-access-control.md#built-in-roles) eller [skapa en anpassad roll](role-based-access-control.md#custom-roles) med följande behörigheter:
+  - MobileApps: Läsbehörighet
+  - ManagedApps: Läsbehörighet
+  - ManagedDevices: Läsbehörighet
+  - Organization: Läsbehörighet
+  - DeviceCompliancePolices: Läsbehörighet
+  - DeviceConfigurations: Läsbehörighet
 
-1. Logga in på Intune-portalen som Intune-administratör och välj **Intune-roller**.
-2. I arbetsbelastningen **Intune-roller** väljer du **Supportansvarig** > **Tilldelningar** och sedan **Tilldela**.
-  ![Bild av Intune-portalen med Intune-roller markerat och en lista över inbyggda roller, inklusive Supportansvarig med Tilldelningar markerat och en röd ram runt Tilldela](./media/help-desk-user-assign.png)
-3. Skriv ett **Namn på tilldelning** (obligatoriskt), en **Tilldelningsbeskrivning** (valfritt) och tilldela sedan **Medlemmar (grupper)** och **Omfång (grupper)**.
-4. Medlemmar i rollen som supportansvarig kan nu använda felsökningsportalen.
+  ![Skärmbild av Intune-portalen med Intune-roller markerat och en lista över inbyggda roller, inklusive Supportansvarig](./media/help-desk-user-add.png)
 
-Mer information om Intune-roller finns i [Intune-roller (RBAC)](role-based-access-control.md).
-
-## <a name="create-a-custom-role-for-troubleshooting"></a>Skapa en anpassad roll för felsökning
-I egenskap av Intune-administratör kan du skapa en anpassad roll som låter användare använda felsökningsportalen med de behörigheter som passar organisationens behov. Mer information om Intune-roller finns i [Intune-roller (RBAC)](role-based-access-control.md).
-
-![Skärmbild av Intune-portalen med Intune-roller markerat och en lista över inbyggda roller, inklusive Supportansvarig](./media/help-desk-user-add.png)
-
-Om du vill använda Intune-konsolen för en supportvy, ska en anpassad supportroll ha följande behörigheter:
-- MobileApps: Läsbehörighet
-- ManagedApps: Läsbehörighet
-- ManagedDevices: Läsbehörighet
-- Organization: Läsbehörighet
+4. Om du vill ge supportoperatörer behörighet att visa tjänstens hälsa och öppna supportärenden för Intune ska du [bevilja användarna administratörsbehörighet](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal) som **Tjänstadministratör**. Ge inte behörigheten **Intune-tjänstadministratör** eftersom den här katalogrollen har fler behörigheter än vad som krävs för supportoperatörer.
 
 ## <a name="access-the-troubleshooting-portal"></a>Åtkomst till felsökningsportalen
 
 Supportpersonal och Intune-administratörer kan få åtkomst till felsökningsportalen på två sätt:
-- Öppna [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting) i en webbläsare.
-- I Intune-portalen går du till **Hjälp och support** > **Felsök**.
+- Öppna [http://aka.ms/intunetroubleshooting](http://aka.ms/intunetroubleshooting) i en webbläsare för att se bara felsökningsportalen.
+  ![Skärmbild av felsökningskonsolen](./media/help-desk-console.png)
+- Logga in på Azure-portalen, välj **Fler tjänster** > **Övervakning + hantering** > **Intune** och gå sedan till **Hjälp och support** > **Felsök**.
+
+Klicka på **Välj användare** för att visa en användare och dennes användarinformation.
 
 ![Skärmbild av Intunes arbetsbelastning för felsökning med länken Välj användare](media/help-desk-user.png)
 
 ## <a name="use-the-troubleshooting-portal"></a>Använda felsökningsportalen
 
 I felsökningsportalen kan du välja **Välj användare** för att visa information om en användare. Med hjälp av användarinformation kan du få en bättre förståelse för det aktuella tillståndet för användarna och deras enheter. Felsökningsportalen visar följande felsökningsinformation:
-- **Status för klient**
+- **Kontostatus**
 - **Användarstatus**
-- **Enheter** och enhetsåtgärder
+- **Enheter** med enhetsåtgärder
 - **Gruppmedlemskap**
 - **Appskyddsstatus**
