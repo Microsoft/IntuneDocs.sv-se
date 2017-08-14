@@ -74,6 +74,7 @@
 #### [Begränsningar](enrollment-restrictions-set.md)
 #### [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 #### [Företagsidentifierare](corporate-identifiers-add.md)
+#### [Multifaktorautentisering](multi-factor-authentication.md)
 #### [Enhetsregistreringshanterare](device-enrollment-manager-enroll.md)
 #### [Mappa enheter till grupper](device-group-mapping.md)
 ### Konfigurera Windows-registrering
@@ -291,7 +292,7 @@
 ## [Så här använder du Intune Graph-API:er](intune-graph-apis.md)
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
 ## [API för Intune-informationslager](reports-nav-intune-date-warehouse.md)
-<!-- ### [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md) -->
+### [Hämta data från API för informationslager med en REST-klient](reports-proc-data-rest.md)
 ### [API-slutpunkt för informationslager](reports-api-url.md)
 ### [Datamodell för informationslager](reports-ref-data-model.md)
 #### [Referens för datumentitet](reports-ref-date.md)
@@ -300,6 +301,6 @@
 #### [Referens för enhetsentiteter](reports-ref-devices.md)
 #### [Referens för programentiteter](reports-ref-application.md)
 #### [Referens för principentiteter](reports-ref-policy.md)
-<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) !-->
+<!-- #### [Relationship of Entities](reports-api-entity-relationships.md) -->
 
 # [Ordlista](intune-glossary.md)
