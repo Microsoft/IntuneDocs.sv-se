@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b49c227e3cae6c5dca8655362cfbfa6fd3f94807
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: bd84f24400c5ca0828fb13a36963ffda274ba073
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
@@ -72,7 +72,7 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 ## <a name="privacy"></a>Sekretess
 
--   **Anpassning av inmatning** – Tillåt inte användning av molnbaserade taltjänster för Cortana, diktering eller Windows Store-appar. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
+-   **Anpassning av inmatning** – Tillåt inte användning av molnbaserade taltjänster för Cortana, diktering eller Microsoft Store-appar. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
 -   **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess** – Tillåt Windows att automatiskt godkänna meddelanden om medgivande till parkoppling och sekretess när appar körs.
 
 
@@ -91,12 +91,12 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 ## <a name="app-store"></a>Appbutik
 
 -   **Appbutik (endast mobil)** – Aktivera eller blockera användning av appbutiken på Windows 10 Mobile-enheter.
--   **Uppdatera appar automatiskt från Store** – Appar som installeras från Windows Store uppdateras automatiskt.
+-   **Uppdatera appar automatiskt från Store** – Appar som installeras från Microsoft Store uppdateras automatiskt.
 -   **Installation av betrodd app** – Appar som signeras med ett betrott certifikat läses in separat.
 -   **Lås upp via utvecklare** – Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av användaren.
 -   **Dela appdata mellan användare** – Tillåter att appar delar data mellan olika användare på samma enhet.
 -   **Använd endast privat katalog** – Aktivera det här alternativet för att endast tillåta att användarna hämtar appar från din privata katalog.
--   **Start av appar från Store** – Används för att inaktivera alla appar som har förinstallerats på enheten eller hämtats från Windows Store.
+-   **Start av appar från Store** – Används för att inaktivera alla appar som har förinstallerats på enheten eller hämtats från Microsoft Store.
 -   **Installera appdata på systemvolym** – Hindrar appar från att lagra data på enhetens systemvolym.
 -   **Installera appar på systemenhet** – Hindrar appar från att lagra data på enhetens systemenhet.
 -   **Game DVR (endast skrivbord)** – Konfigurerar om registrering och sändning av spel tillåts.

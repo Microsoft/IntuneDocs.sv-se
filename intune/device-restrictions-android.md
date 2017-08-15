@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/01/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,20 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b9e009e94fb4d9bdb99960e0d238d5471d1f4b50
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 09641b5e34ab8200e7dd9d4c27f0dabf59fa62d2
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung KNOX Standard-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd de här inställningarna med en princip för begränsning av Android-enhet för att konfigurera enheter i din organisation.
+
+>[!TIP]
+>Om de önskade inställningarna inte är tillgängliga så kan du konfigurera dina enheter med hjälp av en [anpassad profil](custom-settings-android.md). 
 
 ## <a name="general"></a>Allmänt
 
@@ -132,3 +135,8 @@ Inställningar för helskärmsläge gäller endast för Samsung KNOX Standard-en
     - **Lägg till hanterade appar**.
 - **Viloläge för skärmknapp** – Aktiverar eller inaktiverar knappen för viloläge på enheten.
 - **Volymknappar** – Aktiverar eller inaktiverar användningen av volymknapparna på enheten.
+
+
+## <a name="next-steps"></a>Nästa steg
+
+Fortsätt använda instruktionerna i [Så här konfigurerar du inställningar för enhetsbegränsning](device-restrictions-configure.md) för att skapa och sedan tilldela enhetsbegränsningsprofilen.
