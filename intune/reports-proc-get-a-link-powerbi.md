@@ -14,17 +14,17 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a9d99b71b9f84eea45ae597ed0f69010f6e95805
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
+ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen. Informationslagrets Power BI-fil (pbix) innehåller inställningar för att ansluta till klientorganisationen, samt följande exempelrapporter och diagram: 
+Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen. Informationslagrets Power BI-fil (pbix) innehåller inställningar för att ansluta till klientorganisationen, samt följande exempelrapporter och diagram:  
 
   -  Egenskaper
   -  Registrering
@@ -45,6 +45,9 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Läsa in data och rapporter med Power BI-filen (pbix)
 
 Power BI-filen (pbix) innehåller anslutningsinformation för klientorganisationen och en uppsättning fördefinierade rapporter baserade på informationslagerdatamodellen. Öppna filen i Power BI Desktop och logga in på Azure AD. Rapporten läser in informationen från Intune-klientorganisationen.
+
+> [!Important]  
+> Varje Power BI-fil (pbix) kan vara olika beroende på klientens plats. Om du hanterar flera Intune-klienter så måste du använda den fil som hämtats från Azure Portal när du är inloggad i den klienten.  
 
 1.  Logga in på Azure Portal och välj **Övervakning + hantering** > **Intune**. Du kan också söka efter resurser för **Intune**.  
 2.  Öppna bladet **API för Microsoft Intune-informationslager (förhandsversion)** .

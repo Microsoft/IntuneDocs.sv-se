@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/30/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a97e58f1d108932e44b0b4e36bda5a30b7a90da
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: e41eceed55a323a7f3c07c7b5d8ab2da7764ff53
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
 
@@ -36,6 +36,7 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till 
 - Om alla Office-program är öppna när Intune installerar appen kan slutanvändare förlora data från filer som inte sparats.
 - Den här installationsmetoden stöds inte på Windows 10S-enheter.
 - Om du tilldelar den här apptypen som tillgänglig och riktar in den på flera användare med olika tilldelningar ser de endast den senast inriktade tilldelningen.
+- Intune stöder inte installation av Office 365-skrivbordsappar från Windows Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
 
 
 ## <a name="get-started"></a>Kom igång

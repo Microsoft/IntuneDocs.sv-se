@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 8684ea31420edd836038dc9337bd8bdf56e78ba6
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="enable-byod-with-intune"></a>Aktivera BYOD med Intune
 
@@ -75,14 +75,14 @@ Med Intune är det enkelt att:
 * [Leverera Store-appar till hanterade enheter](apps-deploy.md)
 * Rikta appar till ohanterade enheter via webbplatsen för företagsportalen
 
-Med Intune kan du även hantera och distribuera appar som du har köpt i större volymer från App Store för iOS-enheter och Windows Store för företag. Det här hjälper dig minska den administrativa kostnaden för att spåra volyminköpta appar.
+Med Intune kan du även hantera och distribuera appar som du har köpt i större volymer från App Store för iOS-enheter och Microsoft Store för företag. Det här hjälper dig minska den administrativa kostnaden för att spåra volyminköpta appar.
 
 > [!TIP]
 > Du kan [konfigurera enkel inloggning (SSO) med Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect). Med enkel inloggning kan användarna logga in i appar med de domänanvändarnamn och domänlösenord som de använder lokalt. Du kan också [ge Internetbaserad åtkomst till webbappar som finns lokalt](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) med hjälp av Azure Active Directory Application Proxy.
 
 -   [Hantera volyminköpta appar för iOS-enheter](vpp-apps-ios.md). Du kan köpa flera licenser för iOS-appar genom [Apples volyminköpsprogram för företag](http://www.apple.com/business/vpp/). Du måste skapa ett Apple VPP-konto från Apples webbplats och ladda upp Apple VPP-token till Intune. Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
 
--   [Hantera appar som du har köpt från Windows Store för företag](windows-store-for-business.md). I [Windows Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Intune kan du hantera volyminköpta appar från Intune-portalen.
+-   [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md). I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Intune kan du hantera volyminköpta appar från Intune-portalen.
 
 ## <a name="protect-company-data"></a>Skydda företagsdata
 
@@ -105,10 +105,10 @@ Du kan använda [Intunes principer för appskydd](app-protection-policies.md) f�
 
 Använd [Windows Information Protection (WIP) principer](app-protection-policies-configure-windows-10.md) för att göra detsamma för hanterade Windows 10 enheter. Dessa principer fungerar utan att påverka de anställdas upplevelse. De kräver inga ändringar i din nätverksmiljö eller andra appar.
 
-### <a name="wipe-company-data-while-leaving-personal-data-intact"></a>Rensa företagsdata och lämna personlig data intakt
+### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Ta bort företagsdata och lämna personlig data intakt
 
-Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den bara är borttappad, kan du ta bort företagsappar och företagsdata från den. För att göra det kan du använda Intunes funktioner för selektiv rensning och fullständig rensning. Användarna kan också fjärrensa sina egna personligt ägda enheter från Intunes företagsportal om enheterna är registrerade i Intune.
+Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den bara är borttappad, kan du ta bort företagsappar och företagsdata från den. Om du vill göra detta kan du använda Intunes funktioner för att ta bort företagsdata och fabriksåterställning. Användarna kan även fjärråterställa sina egna personligt ägda enheter från Intune-företagsportalen om enheterna är registrerade i Intune.
 
-Med en [fullständig rensning](devices-wipe.md) återställs enheten till fabriksinställningarna, och användardata och inställningar tas bort. Med en [selektiv rensning](devices-wipe.md#selective-wipe) tas endast företagsdata bort från enheten, men användarnas personliga data förblir intakta.
+Med en [fabriksåterställning](devices-wipe.md) återställs enheten till fabriksinställningarna. Användardata och inställningar tas bort och enheten tas även bort från Intune-hanteringen. [Ta bort företagsinformation](devices-wipe.md#remove-company-data) tar endast bort företagsdata från enheten, men användarnas personliga data förblir intakta.
 
-När processen påbörjas inleder enheten genast den selektiva rensningen för att tas bort från hanteringen. När processen är klar har alla företagsdata raderats och enhetsnamnet har tagits bort från Intune-portalen. Här upphör enhetens hanteringslivscykel.
+När processen påbörjas inleder enheten genast återställningsprocessen. När processen är klar har alla företagsdata raderats och enhetsnamnet har tagits bort från Intune. Här upphör enhetens hanteringslivscykel.
