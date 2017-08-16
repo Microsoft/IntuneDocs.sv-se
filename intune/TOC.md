@@ -291,7 +291,7 @@
 ### [Intune App SDK Xamarin-komponenten](app-sdk-xamarin.md)
 ## [Så här använder du Intune Graph-API:er](intune-graph-apis.md)
 ## [Intune Graph-API](https://graph.microsoft.io/docs/api-reference/beta/resources/intune_graph_overview)
-## [API för Intune-informationslager](reports-nav-intune-date-warehouse.md)
+## [API för Intune-informationslager](reports-nav-intune-data-warehouse.md)
 ### [Hämta data från API för informationslager med en REST-klient](reports-proc-data-rest.md)
 ### [API-slutpunkt för informationslager](reports-api-url.md)
 ### [Datamodell för informationslager](reports-ref-data-model.md)
