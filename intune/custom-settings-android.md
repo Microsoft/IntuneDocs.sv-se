@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/04/2017
+ms.date: 08/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 014e59c017eac0d54a632e545692e1a1a8053164
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 45a3a8fe4960cc1bb8c5f2150f57d34d59c08e0a
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Anpassade inställningar för Android-enheter i Microsoft Intune
 
@@ -40,3 +40,13 @@ Funktionen är avsedd för att kunna tilldela Android-inställningar som inte g�
     - **OMA-URI** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
     - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 4. Klicka på **OK** när du är klar och fortsätt sedan att lägga till fler inställningar efter behov.
+
+## <a name="next-steps"></a>Nästa steg
+
+När du slutför inställningarna skapas profilen och den visas på bladet med profillistan. Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
+
+Om du vill ha några exempel på anpassade inställningar som du kan skapa kan du se:
+
+- [Använd en anpassad enhetsprofil för Microsoft Intune för att skapa en Wi-Fi-profil med en i förväg delad nyckel](/intune/wi-fi-profile-shared-key)
+- [Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter](/intune/android-pulse-secure-per-app-vpn)
+- [Använd anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter i Microsoft Intune](/intune/samsung-knox-apps-allow-block)

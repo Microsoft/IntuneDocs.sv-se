@@ -14,11 +14,11 @@ ms.assetid: 674c8f4c-00be-4c69-85b7-cf7bdaa71c94
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ba965dfdfa91920c0f76b4142dec05516c472cab
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 4527f7ccf1125992841b8f317024cc64837484ab
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="manage-volume-purchased-apps-using-microsoft-intune"></a>Hantera volyminköpta appar med Microsoft Intune
 
@@ -30,8 +30,8 @@ Microsoft Intune hjälper dig att hantera appar som du har köpt via ett sådant
 
 ## <a name="which-types-of-apps-can-you-manage"></a>Vilka typer av appar kan du hantera?
 
-Med Intune kan du hantera appar som du har köpt i volym från iOS App Store och Windows Store för företag.
+Med Intune kan du hantera appar som du har köpt i volym från iOS App Store och Microsoft Store för företag.
 Om du vill se hur du hanterar licensierade appar från varje butik väljer du något av följande avsnitt:
 
 - [Hantera volyminköpta iOS-appar](manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
-- [Hantera volyminköpta appar från Windows Store för företag](manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)
+- [Hantera volyminköpta appar från Microsoft Store för företag](manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)

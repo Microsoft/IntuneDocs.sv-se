@@ -17,11 +17,12 @@
 ## [Kända problem](known-issues.md)
 ## [Support](get-support.md)
 
-# [Komma igång](get-started-evaluation.md)
-## [Skapa en grupp](get-started-groups.md)
+# [Komma igång med Intune](get-started-evaluation.md)
+## [Navigering i Azure-portalen](get-started-azure.md)
 ## [Skapa en användare](get-started-users.md)
-## [Registrera enheter](get-started-enroll.md)
+## [Skapa en grupp](get-started-groups.md)
 ## [Tilldela principer](get-started-policies.md)
+## [Registrera enheter](get-started-enroll.md)
 ## [Tilldela appar](get-started-apps.md)
 
 
