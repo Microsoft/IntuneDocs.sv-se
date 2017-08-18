@@ -15,11 +15,11 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ad1156076f0ec34d5ac110e32a19a8332c8f863
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 812bdf5bde724798289668937ed2502438c524e0
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Så här lägger du till Windows Store-appar i Microsoft Intune
 
@@ -51,12 +51,12 @@ ms.lasthandoff: 07/01/2017
 Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
 
 ## <a name="manually-assign-windows-10-company-portal-app"></a>Tilldela företagsportalsappen för Windows 10 manuellt
-Slutanvändarna kan installera företagsportalappen från Windows Store för att hantera enheter och installera appar. Om företaget i stället kräver att du tilldelar företagsportalappen kan du tilldela företagsportalappen för Windows 10 manuellt direkt från Intune, även om du inte har integrerat Intune med Windows Store för företag.
+Slutanvändarna kan installera företagsportalappen från Microsoft Store för att hantera enheter och installera appar. Om företaget i stället kräver att du tilldelar företagsportalappen kan du tilldela företagsportalappen för Windows 10 manuellt direkt från Intune, även om du inte har integrerat Intune med Microsoft Store för företag.
 
  > [!NOTE]
  > Det här alternativet kräver att du tilldelar manuella uppdateringar varje gång som en appuppdatering släpps.
 
-1. Logga in på kontot i [Windows Store för företag](https://www.microsoft.com/business-store) och hämta **offline-licensversionen** av företagsportalsappen.  
+1. Logga in på kontot i [Microsoft Store för företag](https://www.microsoft.com/business-store) och hämta **offline-licensversionen** av företagsportalappen.  
 2. När du har införskaffat appen markerar du den på sidan **Inventering**.  
 3. Välj **Windows 10 – alla enheter** som **plattform**, sedan lämplig **arkitektur** och ladda ned. Det behövs inte någon applicensfil för den här appen.
 ![Bild av Windows 10 – alla enheter och information om Architecture X86-paketet för hämtning](./media/Win10CP-all-devices.png)
@@ -93,7 +93,7 @@ Om företagsportalappen för Windows 10 signeras och tilldelas på det här sät
 Så här registrerar och tilldelar du appen:
 
 1. Hämta signeringsskriptet för Microsoft Intune Windows 10-företagsportalappen på [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Det här skriptet kräver att Windows SDK för Windows 10 har installerats på värddatorn. Du kan hämta Windows-SDK:n för Windows 10 på [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Hämta Windows 10-företagsportalsappen från Windows Store för företag så som beskrivs ovan.  
+2. Hämta Windows 10-företagsportalappen från Microsoft Store för företag så som beskrivs ovan.  
 3. Kör skriptet med de indataparametrar som beskrivs i skripthuvudet, så att Windows 10-företagsportalsappen signeras (se utdrag nedan). Beroenden behöver inte överföras till skriptet. Detta krävs enbart om appen överförs till Intune-aministratörskonsolen.
 
 |Parameter | Beskrivning|

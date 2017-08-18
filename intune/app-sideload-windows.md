@@ -11,11 +11,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: d668e50b3880bdaf569380fa5a5fd25f5ed4564e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 790b9b0a5feb40cd22d366438fca566b93d2138b
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -64,7 +64,7 @@ Stegen nedan hjälper dig att få nödvändiga certifikat och signera appen. Du 
 
 ## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Exempel: Hämta, signera och distribuera företagsportalappen för Windows-enheter
 
-Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows Phone- och Windows 10 Mobile-enheter med Intune istället för att installera från Windows Store. Du måste ladda ned företagsportalappen och signera den med ditt certifikat.  Detta är bara nödvändigt om användarna inte kommer att använda företagsbutiken och du vill distribuera företagsportalen till Windows Phone 8.1-enheter.
+Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows Phone- och Windows 10 Mobile-enheter med Intune istället för att installera från Microsoft Store. Du måste ladda ned företagsportalappen och signera den med ditt certifikat.  Detta är bara nödvändigt om användarna inte kommer att använda företagsbutiken och du vill distribuera företagsportalen till Windows Phone 8.1-enheter.
 
 
 1.  **Ladda ned företagsportalen**
@@ -75,7 +75,7 @@ Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows 
 
     -   WinPhoneCompanyPortal.ps1 – Ett Powershell-skript som du kan använda för att signera företagsportalappfilen så att den kan användas för Windows Phone 8.1-enheter
 
-    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Windows Store för företag](http://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Windows Store för företag](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Du kan också hämta Windows Phone 8.1-företagsportalen (offline-licensierat paket) eller Windows 10-företagsportalen (offline-licensierat paket) från [Microsoft Store för företag](http://businessstore.microsoft.com/). Företagsportalappen måste anskaffas med en offline-licens och lämpligt paket hämtas för användning offline. Listor med plattformar för Windows 8 och Windows Phone 8 i urvalet avser deras 8.1-motsvarigheter. Mer information om hur du gör detta med Intune finns i [Hantera appar som du har köpt från Microsoft Store för företag](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
 
 2.  **Hämta Windows Phone SDK** Hämta Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) och installera SDK:n på datorn. Detta SDK behövs för att generera en token för programregistrering.
 
@@ -144,12 +144,12 @@ Symantec-certifikatet som används för att distribuera Windows- och Windows Pho
 5.  Signera alla nya och uppdaterade branschspecifika företagsappar med det nya certifikatet. Befintliga program behöver inte vara signeras på nytt eller omdistribueras.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Distribuera Windows 10-företagsportalsappen
-Du kan distribuera Windows 10 företagsportalappen manuellt direkt från Intune, även om du inte har integrerat Intune med Windows Store för företag.
+Du kan distribuera Windows 10 företagsportalappen manuellt direkt från Intune, även om du inte har integrerat Intune med Microsoft Store för företag.
 
  > [!NOTE]
  > Det här alternativet kräver att du distribuerar manuella uppdateringar varje gång som en appuppdatering släpps.
 
-1. Logga in på kontot i [Windows Store för företag](https://www.microsoft.com/business-store) och hämta **offline-licensversionen** av företagsportalsappen.  
+1. Logga in på kontot i [Microsoft Store för företag](https://www.microsoft.com/business-store) och hämta **offline-licensversionen** av företagsportalappen.  
 2. När du har införskaffat appen markerar du den på sidan **Inventering**.  
 3. Välj **Windows 10 – alla enheter** som **plattform**, sedan lämplig **arkitektur** och ladda ned. Det behövs inte någon applicensfil för den här appen.
 ![Bild av Windows 10 – alla enheter och information om Architecture X86-paketet för hämtning](./media/Win10CP-all-devices.png)
@@ -186,7 +186,7 @@ Om Windows 10-företagsportalappen signeras och distribueras på det här sätte
 Så här registrerar och distribuerar du appen:
 
 1. Hämta signeringsskriptet för Microsoft Intune Windows 10-företagsportalappen på [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Det här skriptet kräver att Windows SDK för Windows 10 har installerats på värddatorn. Du kan hämta Windows-SDK:n för Windows 10 på [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296).
-2. Hämta Windows 10-företagsportalsappen från Windows Store för företag så som beskrivs ovan.  
+2. Hämta Windows 10-företagsportalappen från Microsoft Store för företag så som beskrivs ovan.  
 3. Kör skriptet med de indataparametrar som beskrivs i skripthuvudet, så att Windows 10-företagsportalsappen signeras (se utdrag nedan). Beroenden behöver inte överföras till skriptet. Detta krävs enbart om appen överförs till Intune-aministratörskonsolen.
 
 |Parameter | Beskrivning|

@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 33ddb60df7aebe36ff652e1da6da592442b96d4b
-ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
+ms.openlocfilehash: c05b2257fe03cd23ad5ba71a3fee217cd4802650
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -87,7 +87,7 @@ Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** so
 
 ### <a name="monitor"></a>Övervakare
 - **Licensierade appar** – Visa, tilldela och övervaka volyminköpta appar från appbutiker.
-    - [Volyminköpta appar från Windows Store för företag](windows-store-for-business.md)
+    - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md)
 - **Identifierade appar** – Visar alla appar som har tilldelats av Intune och installerats på en enhet.
 - **Appinstallationsstatus** – Visar status för en apptilldelning som du skapat.
 - **Användarstatus för appskydd** – Visar status för en skyddsprincip hos en användare som du väljer.
@@ -97,7 +97,7 @@ Mer information finns i [Övervakning av appar](apps-monitor.md)
 ### <a name="setup"></a>Setup
 <!--- **iOS VPP Tokens**
     - [iOS volume-purchased apps](vpp-apps-ios.md) --->
-- **Windows Store för företag** – Installationsintegrering till Windows Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser.
-    - [Volyminköpta appar från Windows Store för företag](windows-store-for-business.md)
+- **Microsoft Store för företag** – Installationsintegrering till Microsoft Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser.
+    - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md)
 - **Anpassa företagsportalen.** – Anpassa företagsportalen enligt ert varumärke.
     - [Företagsportalkonfiguration](company-portal-app.md)

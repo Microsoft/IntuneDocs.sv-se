@@ -14,11 +14,11 @@ ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 586a5355e2ee4b0dda6e0238628fa71bdce6f1a2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1cccc69ab772499183a7f434303d78ecf4308a5f
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Så här uppdaterar du företagsportalappen
 
@@ -40,12 +40,12 @@ Så här uppdaterar du företagsportalappen:
 
 ## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Uppdatera Intune-företagsportalappen på en Windows-enhet
 
-1.  Gå till Windows Store och sök efter **Intune-företagsportalen**.
+1.  Gå till Microsoft Store och sök efter **Intune-företagsportalen**.
 
 2.  Följ installationsanvisningarna.
 
     > [!NOTE]
-    > Kontakta IT-administratören om du inte kan komma åt Windows Store.
+    > Kontakta IT-administratören om du inte kan komma åt Microsoft Store.
 
 
 Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).

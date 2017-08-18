@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2dfcba8c788f262ce816dcd23dc2921fd57f331b
-ms.sourcegitcommit: d1ad84edf4f03cb4c11fe55131556b43fc3a4500
+ms.openlocfilehash: 47dc35e5b50670027a85f395f674345b934d377b
+ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 08/05/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -33,36 +33,44 @@ Som Intune-administratör kan du bestämma vilka enheter som får registreras f�
   - iOS
   - macOS
   - Windows
-- Begränsningar gentemot privatägda enheter (endast iOS och Android)
+- Plattformens operativsystemversion (endast iOS och Android)
+  - Lägsta version
+  - Högsta version
+- Begränsningar gentemot privatägda enheter (endast iOS, Android och macOS)
 
 >[!NOTE]
->Begränsningar vid registrering ska inte betraktas som en säkerhetsfunktion. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
+>Begränsningar vid registrering ska inte betraktas som säkerhetsfunktioner. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
 
 ## <a name="set-device-type-restrictions"></a>Ange begränsningar för enhetstyp
-Standardbegränsningarna vid registrering gäller för alla användare som inte har tilldelats högre prioritet.  
-1. Välj **Enhetsregistrering** på Intune-portalen och välj sedan **Registreringsbegränsningar**.
-![Skärmbild av arbetsytan för enhetsbegränsningar med standardbegränsningar för enheten och enhetsbegränsningar.](media/device-restrictions-set-default.png)
-2. Välj **Standard** under **Registreringsbegränsningar** > **Begränsningar av enhetstyp**.
-3. Välj **Plattformar** under **Alla användare**. Välj **Tillåt** eller **Blockera** för varje plattform:
+Standardregistreringsbegränsningarna gäller för alla användare och användarlösa registreringar.
+1. Logga in på Azure-portalen.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
+4. Välj **Standard** under **Registreringsbegränsningar** > **Begränsningar av enhetstyp**.
+5. Välj **Plattformar** under **Alla användare**. Välj **Tillåt** eller **Blockera** för varje plattform:
   - **Android**
   - **iOS**
   - **macOS**
   - **Windows**
 
   Klicka på **Spara**.
-4. Under **Alla användare** väljer du **Plattformskonfigurationer** och väljer sedan följande konfigurationer:
-  - **Personligt ägda** – Ange om du vill **tillåta** eller **blockera** för Android- och iOS-enheter.
+6. Under **Alla användare** väljer du **Plattformskonfigurationer** och väljer sedan följande konfigurationer. Du kan konfigurera följande alternativ för varje plattform som tillåts:
+  - **Versioner** – Ange **Min** och **Max** för plattformens operativsystemsversioner för Android- och iOS-enheter. Operativsystemversionerna gäller inte för enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
+  - **Personligt ägda** – Ange om du vill **tillåta** eller **blockera** för Android-, iOS- och macOS-enheter.
   ![Skärmbild av arbetsytan för enhetsbegränsningar med standardkonfigurationer för enhetsplattformar visar inställningar för personligt ägda enheter.](media/device-restrictions-platform-configurations.png)
   Klicka på **Spara**.
 
 >[!NOTE]
->Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera Android for Work-enheter.
+>Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android for Work-enheter.
 
 ## <a name="set-device-limit-restrictions"></a>Ange begränsningar för enhetsgräns
-Standardbegränsningarna vid registrering gäller för alla användare som inte har tilldelats högre prioritet.  
-1. Välj **Enhetsregistrering** på Intune-portalen och välj sedan **Registreringsbegränsningar**.
-2. Välj **Registreringsbegränsningar** > **Begränsningar för enhetsgräns**.
-3. Under **Alla användare** väljer du **Enhetsgräns**. Ange högsta tillåtna antal registrerade enheter per användare.  
+Standardregistreringsbegränsningarna gäller för alla användare.
+1. Logga in på Azure-portalen.
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
+4. Välj **Enhetsregistrering** på Intune-portalen och välj sedan **Registreringsbegränsningar**.
+5. Välj **Registreringsbegränsningar** > **Begränsningar för enhetsgräns**.
+6. Under **Alla användare** väljer du **Enhetsgräns**. Ange högsta tillåtna antal registrerade enheter per användare.  
 ![Skärmbild av bladet med begränsningar för enhetsgränsen.](./media/device-restrictions-limit.png)
 
   Klicka på **Spara**.

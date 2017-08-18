@@ -1,12 +1,12 @@
 ---
-title: "Fullständig eller selektiv rensning på enheter med Intune"
+title: "Använd fabriksåterställning eller ta bort företagsdata på enheter som använder Intune"
 titleSuffix: Intune on Azure
-description: "Läs hur du gör en selektiv rensning av företagets data på en enhet eller gör en fullständig rensning för att fabriksåterställa enheten.”"
+description: "Läs om hur du kan ta bort företagsdata på en enhet eller fabriksåterställa enheten."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/21/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,64 +14,40 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 44d1695b3f0297276376fb9cb4367c1411aa31b2
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 331ced93f0697f7c76d1356aae32b955602d17a3
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/10/2017
 ---
-# <a name="use-full-or-selective-wipe"></a>Använda fullständig eller selektiv rensning
+# <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du kan rensa appar och data från Intune-hanterade enheter som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Du kan göra detta med funktionerna för fullständig och selektiv rensning i Intune. Användare kan dessutom utfärda ett fjärrensningskommando från Intune-företagsportalappen på privatägda enheter som registrerats i Intune.
+Du kan ta bort enheter från Intune som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Det kan du göra genom att utfärda ett kommando för att **ta bort företagsdata** eller **fabriksåterställa**. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen på privatägda enheter som registrerats i Intune.
 
-  > [!NOTE]
-  > Den här artikeln handlar enbart om hur du rensar enheter som hanteras av Intune MDM (hantering av mobilenheter). Du kan också använda [Azure-portalen](https://portal.azure.com) om du vill [rensa företagsdata från appar](https://docs.microsoft.com/intune-classic/deploy-use/wipe-managed-company-app-data-with-microsoft-intune). Du kan också [dra tillbaka datorer som hanteras av Intune-klientprogrammet](https://docs.microsoft.com/intune-classic/deploy-use/retire-a-windows-pc-with-microsoft-intune).
+> [!NOTE]
+> Innan du tar bort en användare från Azure Active Directory kan du utfärda ett kommando för **Fabriksåterställning** eller **Ta bort företagsdata** till alla enheter som är kopplade till den användaren. Om du tar bort användare med hanterade enheter från Azure Active Directory kan inte Intune längre utfärda fabriksåterställning eller borttagning av företagsdata till dessa enheter.
 
-## <a name="full-wipe"></a>Fullständig rensning
+## <a name="factory-reset"></a>Fabriksåterställning
 
-**Fullständig rensning** återställer enheten till fabriksinställningarna och tar bort alla företags- och användarrelaterade data och inställningar. Enheten tas bort från Intune. En fullständig rensning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen.  **Var försiktig med att välja fullständig rensning. Det går inte att återställa data på enheten**.
+**Fabriksåterställning** återställer enheten till fabriksinställningarna och tar bort alla företags- och användarrelaterade data och inställningar. Enheten tas bort från Intune-hantering. En fabriksåterställning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja fabriksåterställning. Det går inte att återställa data på enheten.
 
+### <a name="to-factory-reset-a-device"></a>Fabriksåterställa en enhet
 
-> [!Warning]
-> Windows 10 RTM-enheter (enheter med en tidigare version än Windows 10 version 1511) som har mindre än 4 GB RAM-minne kan bli otillgängliga om de rensas. Om du vill komma åt en Windows 10-enhet som inte svarar kan du starta enheten från en USB-enhet.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. På bladet **Enheter och grupper** väljer du **Alla enheter**.
+4. Välj namnet på den enhet som du vill fabriksåterställa.
+5. På bladet som visar enhetens namn väljer du **Fabriksåterställning** och väljer sedan **Ja** för att bekräfta.
 
+Om enheten är på och ansluten tar det mindre än 15 minuter att sprida fabriksåterställningen över alla enhetstyper.
 
-**Göra en fullständig rensning (fabriksåterställning) av en enhet**:
+## <a name="remove-company-data"></a>Ta bort företagsdata
 
-1.  På bladet **Enheter och grupper** väljer du **Alla enheter**.
+Kommandot **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt), inställningar och e-postprofiler som har tilldelats med hjälp av Intune. Med borttagning av företagsdata lämnas användarens personliga data på enheten. Enheten tas bort från Intune-hantering. Följande tabell beskriver vilka data som tas bort och hur data som lämnas kvar på enheten påverkas när företagsdata tas bort.
 
-2.  Välj namnet på den enhet som du vill rensa.
-
-3.  På bladet som visar enhetens namn väljer du **Fabriksåterställning** och väljer sedan **Ja** för att bekräfta rensningen.
-
-Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
-
-### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
-
-1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
-
-2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
-
-3.  Skapa en Azure-prenumeration om du inte har någon. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
-
-4.  Välj **Active Directory** och välj sedan din organisation.
-
-5.  Välj fliken **Användare** .
-
-6.  Välj den användare vars enheter du vill ta bort.
-
-7.  Välj **Enheter**.
-
-8.  Ta bort enheter efter behov, till exempel de som inte längre används eller som har felaktiga definitioner.
-
-
-## <a name="selective-wipe"></a>Selektiv rensning
-
-En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil apphanteringsdata (MAM), inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten. Enheten tas bort från Intune. Följande tabell beskriver vilka data som tas bort och hur data som lämnas kvar på enheten påverkas vid en selektiv rensning. (Tabellerna är ordnade efter plattform.)
-
-**iOS**
+### <a name="ios"></a>iOS
 
 |Datatyp|iOS|
 |-------------|-------|
@@ -82,10 +58,10 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Hanteringsagenten|Hanteringsprofilen tas bort.|
 |E-post|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
 |Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.|
-|Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|
-|Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
+|Frånkoppling från Azure Active Directory (AD)|Azure AD-posten tas bort.|
+|Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
-**Android**
+### <a name="android"></a>Android
 
 |Datatyp|Android|Android Samsung KNOX Standard|
 |-------------|-----------|------------------------|
@@ -100,30 +76,42 @@ En **selektiv rensning** tar bort företagsdata, inklusive eventuell mobil appha
 |Hanteringsagenten|Behörigheten som enhetsadministratör återkallas.|Behörigheten som enhetsadministratör återkallas.|
 |E-post|Ej tillämpligt (e-post profiler stöds inte av Android-enheter)|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
 |Outlook|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|
-|Frånkoppling från Azure Active Directory (AAD)|AAD-posten tas bort.|AAD-posten tas bort.|
-|Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. <br /> <br />För närvarande stöds endast Outlook-appen.
+|Frånkoppling från Azure Active Directory (AD)|Azure AD-posten tas bort.|Azure AD-posten tas bort.|
+|Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
-**Android for Work**
+### <a name="android-for-work"></a>Android for Work
 
-Om selektiv rensning utförs på en Android for Work-enhet tas alla data, appar och inställningar i arbetsprofilen på den enheten bort. Detta drar tillbaka enheten från hantering med Intune. Fullständig rensning stöds inte för Android for Work.
+Borttagning av företagsdata på en Android for Work-enhet tar bort alla data, appar och inställningar i arbetsprofilen på den enheten. Detta drar tillbaka enheten från hantering med Intune. Fabriksåterställning stöds inte för Android for Work.
 
-**Windows**
+### <a name="windows"></a>Windows
 
 |Datatyp|Windows 8.1 (MDM) och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Företagsappar och associerade data som installerats av Intune|Filer som skyddas av EFS får sin nyckel återkallad och användaren kommer inte att kunna öppna filerna.|Företagsappar tas inte bort.|Appar som ursrpungligen installerats via företagsportalen avinstalleras. Data som hör till företagsappar tas bort.|Apparna avinstalleras och nycklarna för separat inläsning tas bort.|
+|Företagsappar och associerade data som installerats av Intune|Filer som skyddas av EFS får sin nyckel återkallad och användaren kommer inte att kunna öppna filerna.|Företagsappar tas inte bort.|Appar som ursrpungligen installerats via företagsportalen avinstalleras. Data som hör till företagsappar tas bort.|Apparna avinstalleras och nycklarna för separat inläsning tas bort.<br>För Windows 10 version 1703 (Creator Update) och senare tas inte Office 365 ProPlus-appar bort.|
 |Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|Tas bort.|Stöds inte.|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|Certifikat tas bort och återkallas.|Stöds inte.|Certifikat tas bort och återkallas.|
 |E-post|Tar bort e-post som är EFS-aktiverad (krypterande filsystem), vilket även omfattar e-post och bifogade filer i Mail-appen för Windows.|Stöds inte.|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|Tar bort e-post som är EFS-aktiverad (krypterande filsystem), vilket även omfattar e-post och bifogade filer i Mail-appen för Windows. Tar bort e-postkonton som etablerats av Intune.|
-|Frånkoppling från Azure Active Directory (AAD)|Nej.|Nej.|AAD-posten tas bort.|Inte tillämpligt. Windows 10 har inte stöd för selektiv rensning för Azure Active Directory-anslutna enheter.|
+|Frånkoppling från Azure Active Directory (AD)|Nej.|Nej.|Azure AD-posten tas bort.|Inte tillämpligt. Windows 10 har inte stöd för att ta bort företagsdata för Azure Active Directory-anslutna enheter.|
 
-**Göra en selektiv rensning**:
+### <a name="to-remove-company-data"></a>Ta bort företagsdata
 
-1.  På bladet **Enheter och grupper** väljer du **Alla enheter**.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. På bladet **Enheter och grupper** väljer du **Alla enheter**.
+4. Välj namnet på den enhet där du vill ta bort företagets data.
+5. På bladet som visar enhetens namn väljer du **Ta bort företagsdata** och väljer sedan **Ja** för att bekräfta.
 
-2.  Välj namnet på den enhet som du vill rensa.
+Om enheten är på och ansluten tar det mindre än 15 minuter att sprida kommandot för att ta bort företagsdata över alla enhetstyper.
 
-3.  På bladet som visar enhetens namn väljer du **Ta bort föret...** (står för Ta bort företagsdata) och väljer sedan **Ja** för att bekräfta rensningen.
+## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Ta bort enheter från Azure Active Directory-portalen
 
-Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
+Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta bort enheter från Azure Active Directory (AD). Borttagningskommandot tar inte bort en enhet från hanteringen, men du kan använda **Ta bort** för att ta bort enhetsposter från Azure-konsolen som du vet inte går att nå och som sannolikt inte kommer att kommunicera med Azure igen.
+
+1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Office 365-portalen](https://portal.office.com) och sedan välja **Admin** &gt; **Azure AD** genom att använda länken till vänster på sidan.
+3.  Skapa en Azure-prenumeration om du inte redan har en. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
+4.  Välj **Active Directory** och välj sedan din organisation.
+5.  Välj fliken **Användare** .
+6.  Välj den användare vars enheter du vill ta bort.
+7.  Välj **Enheter**.
+8.  Ta bort enheter efter behov, till exempel de som inte längre används eller som har felaktiga definitioner.

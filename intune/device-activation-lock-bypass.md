@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/27/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0b92949efca2e4dac5836755e2f32b0527d4762d
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: c771d07cc41d91812a1cfa80ffe08234e58803e5
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Kringgå aktiveringslåset på övervakade iOS-enheter med Intune
 
@@ -39,23 +39,23 @@ Microsoft Intune kan hjälpa dig att hantera iOS-aktiveringslåset, en funktion 
 - Du behöver en rapport med alla enheter som har aktiveringslås aktiverat.
 - Du vill omtilldela några enheter till en annan avdelning under en enhetsuppdatering i organisationen. Du kan bara omtilldela enheter som inte har aktiveringslås aktiverat.
 
-För att hjälpa att lösa de här problemen, så introducerade Apple med iOS 7.1 funktionen Kringgå Aktiveringslås. Den låter dig ta bort aktiveringslås från övervakade enheter utan att ha användarens Apple-ID och lösenord. Övervakade enheter kan generera en enhetsspecifik kod för att kringgå aktiveringslåset, vilken lagras på Apples aktiveringsserver.
+För att hjälpa att lösa de här problemen, så introducerade Apple med iOS 7.1 funktionen Kringgå Aktiveringslås. Kringgå aktiveringslås gör det möjligt att ta bort aktiveringslås från övervakade enheter utan att ha användarens Apple-ID och lösenord. Övervakade enheter kan generera en enhetsspecifik kod för att kringgå aktiveringslåset, vilken lagras på Apples aktiveringsserver.
 
 >[!TIP]
->Övervakat läge för iOS-enheter gör att du kan använda Apple Configurator för att låsa en enhet och begränsa funktionerna till specifika företagsändamål. Övervakat läge är generellt sett bara till för företagsägda enheter.
+>Övervakat läge för iOS-enheter gör att du kan använda Apple Configurator för att låsa en enhet och begränsa funktionerna till specifika företagsändamål. Övervakat läge används endast för företagsägda enheter.
 
 Du kan läsa mer om aktiveringslåset på [Apples webbplats](https://support.apple.com/HT201365).
 
 ## <a name="how-intune-helps-you-manage-activation-lock"></a>Hur Intune hjälper dig att hantera aktiveringslås
 Intune kan begära status för aktiveringslåset för övervakade enheter som kör iOS 8.0 och senare. Enbart för övervakade enheter kan Intune hämta koden för att kringgå aktiveringslåset och skicka den direkt till enheten. Om enheten har rensats kan du få åtkomst till den direkt genom att använda ett tomt användarnamn och koden som lösenord.
 
-**Företagets fördelar med detta är att:**
+**Affärsfördelarna med att använda Intune för att hantera aktiveringslås är:**
 
 - Användaren får säkerhetsfördelarna i Hitta Min iPhone-appen.
 - Du kan låta användarna sköta sitt arbete och samtidigt vara säker på att du kan avaktivera eller låsa upp en enhet när den behöver återanvändas.
 
 ## <a name="before-you-start"></a>Innan du börjar
-Innan du kan kringgå aktiveringslåset på enheter måste du först aktivera det. Gör så här:
+Innan du kan kringgå aktiveringslåset på enheter måste du aktivera det genom att följa dessa anvisningar:
 
 1. Konfigurera en Intune-begränsningsprofil för iOS med hjälp av informationen i [Så här konfigurerar du inställningar för enhetsbegränsning](/intune-azure/configure-devices/how-to-configure-device-restrictions).
 2. Aktivera inställningen **Helskärmsläge** **Aktiveringslås**.
@@ -65,7 +65,7 @@ Innan du kan kringgå aktiveringslåset på enheter måste du först aktivera de
 ## <a name="how-to-use-activation-lock-bypass"></a>Så här kringgår du aktiveringslås
 
 >[!IMPORTANT]
->När du kringgått aktiveringslåset på en enhet aktiveras ett nytt aktiveringslås automatiskt om appen Hitta min iPhone öppnas. Därför **bör du ha fysisk tillgång till enheten innan du följer den här proceduren**.
+>När du har kringgått aktiveringslåset på en enhet aktiveras ett nytt aktiveringslås automatiskt om appen Hitta min iPhone öppnas. Därför **bör du ha fysisk tillgång till enheten innan du följer den här proceduren**.
 
 Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset från en iOS-enhet utan användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startar. Kringgå bara aktiveringslåset om du har fysisk åtkomst till enheten.
 
@@ -74,5 +74,7 @@ Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset f
 3. Välj **Enheter** på bladet **Intune**.
 4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
 5. I listan med enheter som du hanterar väljer du en övervakad iOS-enhet och sedan fjärråtgärden **Kringgå aktiveringslås**.
+
+## <a name="next-steps"></a>Nästa steg
 
 Du kan kontrollera status för upplåsningsbegärandet på informationssidan för enheten i arbetsbelastningen **Hantera enheter**.

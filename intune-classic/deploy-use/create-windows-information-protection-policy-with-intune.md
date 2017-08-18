@@ -2,8 +2,8 @@
 title: Skapa och distribuera en WIP-appskyddsprincip med Intune
 description: Skapa och distribuera WIP-appskyddsprinciper med Intune
 keywords: 
-author: andredm7
-ms.author: andredm
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
 ms.date: 04/18/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 51e53e28-5c34-4d0f-a4b1-6390a337514c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7aa879307ef3b72660d1ba7b3c3c2f99fc82dc97
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 78352c995311f5b097954ce86098165408d5d810
+ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -35,6 +35,13 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 -   **Tillåtna appar**: Dessa appar är de som måste följa den här principen.
 
 -   **Undantagna appar**: De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
+
+> [!IMPORTANT]  
+> Intune rekommenderar att du lägger till företagsportalappen till undantagslistan för att göra det möjligt för appen att fungera korrekt. Det gör du genom att lägga till följande **Store-app** i listan **Undanta appar**:  
+>   - Namn: Företagsportal  
+>   - Utgivare: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US  
+>   - Produktnamn: Microsoft.CompanyPortal”  
+
 
 ### <a name="types-of-apps"></a>Apptyper
 

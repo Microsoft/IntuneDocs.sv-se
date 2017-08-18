@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/27/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80aa0e5afd1f8862b181d455ff6b545e462f90c9
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8c6035ce5119b618ed63cf817082dd3eedc6eda7
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Hitta borttappade eller stulna iOS-enheter med Intune
 
@@ -26,6 +26,16 @@ ms.lasthandoff: 07/01/2017
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Åtgärden **Hitta enhet** visar platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten ha placerats i [Borttappat läge](/intune-azure/manage-devices/lost-mode.md).
+
+## <a name="supported-platforms"></a>Plattformar som stöds
+
+- Windows – stöds inte
+- Windows Phone – stöds inte
+- iOS – stöd på iOS 9.3 och senare (i borttappat läge), övervakad och företagsägd
+- macOS – stöds inte
+- Android – stöds inte
+
+## <a name="how-to-locate-a-lost-or-stolen-device"></a>Hitta en förlorad eller stulen enhet
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
@@ -44,3 +54,8 @@ ms.lasthandoff: 07/01/2017
 - Data lagras i 24 timmar och tas sedan bort. Du kan inte ta bort platsdata manuellt.
 - Platsinformationen krypteras både under lagring och vid överföring.
 - När du konfigurerar borttappat läge rekommenderar vi att det meddelande du skriver och som ska visas på låsskärmen innehåller information som hjälper den som hittar enheten att återlämna den.
+
+
+## <a name="next-steps"></a>Nästa steg
+
+Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter och grupper** och väljer **Enhetsåtgärder**.

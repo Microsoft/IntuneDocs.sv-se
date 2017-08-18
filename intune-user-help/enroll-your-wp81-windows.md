@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 307999a7bb18a7b33d111bec212922558a5e10bf
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c7c03148d4063d0752a7c615222047bc6f02f58e
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrera din Windows Phone 8.1-enhet i Intune
 
@@ -29,11 +29,11 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera dina enh
 
 Följ de anvisningar som gäller för företaget eller skolan för att registrera din Phone 8.1-enhet för Intune:
 
--   [Om ditt företag tillåter att du använder företagsportalen från Windows Store](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
+-   [Om ditt företag tillåter att du använder företagsportalen från Microsoft Store](#if-your-company-lets-you-use-the-company-portal-from-the-windows-store)
 
--   [Om du inte tillåts åtkomst till Windows Store från din Windows Phone eller om du inte har ett Microsoft-konto](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
+-   [Om du inte tillåts åtkomst till Microsoft Store från din Windows Phone eller om du inte har ett Microsoft-konto](#if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account)
 
-## <a name="if-your-company-lets-you-use-the-company-portal-from-the-windows-store"></a>Om ditt företag tillåter att du använder Företagsportalen från Windows Store
+## <a name="if-your-company-lets-you-use-the-company-portal-from-the-microsoft-store"></a>Om ditt företag tillåter att du använder företagsportalen från Microsoft Store
 Installera Företagsportal-applikationen på din enhet:
 
 1.  Tryck på **Start** &gt; **Store**.
@@ -72,7 +72,7 @@ Registrera din enhet:
 
     ![Skärmen Kontot har lagts till](./media/WP81-enroll-4-account-added.png)
 
-## <a name="if-you-are-not-allowed-to-access-the-windows-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Om du inte tillåts åtkomst till Windows Store från din Windows Phone eller om du inte har ett Microsoft-konto
+## <a name="if-you-are-not-allowed-to-access-the-microsoft-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Om du inte tillåts åtkomst till Microsoft Store från din Windows Phone eller om du inte har ett Microsoft-konto
 
 1.  Tryck på **Inställningar** &gt; **Arbetsplats**.
 

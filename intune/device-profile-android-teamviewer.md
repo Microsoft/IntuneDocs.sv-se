@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 05/24/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15a005ae2b84c7bd4f913f892089965c10f3b23e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: bf25ec3fbdec76fb1defb5e4cb12be6dcdf03b0d
+ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="provide-remote-assistance-for-intune-managed-android-devices"></a>Ge fjärrhjälp för Intune-hanterade Android-enheter
 
-Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps separat) för att ge fjärrhjälp till användare med Android-enheter. Använd informationen i det här ämnet för att konfigurera och komma igång.
+Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps separat) för att ge fjärrhjälp till användare med Android-enheter. Använd informationen i det här ämnet för att komma igång.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
@@ -31,7 +31,7 @@ Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps s
 
 Kontrollera att användaren i Azure-portalen har följande behörigheter som [Intune-roll](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control):
 - Om du vill att administratören ska kunna ändra inställningarna för TeamViewer-anslutningsprogrammet beviljar du behörigheten **Uppdatera fjärrhjälp**.
-- Om du vill att administratören ska kunna initiera en ny fjärrhjälpsinställning beviljar du behörigheten **Begär fjärrhjälp**. Användare med den här behörigheten kan begära att en session initieras för valfri användare. Detta begränsas inte av någon rolltilldelningsomfattning i Intune. Intunes rolltilldelningsomfattningar begränsar inte vilka enheter eller användare som kan begära fjärrhjälp.
+- Om du vill att administratören ska kunna initiera en ny begäran om fjärrhjälp beviljar du behörigheten **Begär fjärrhjälp**. Användare med behörigheten **Begär fjärrhjälp** kan begära att initiera en session för valfri användare. De begränsas inte av någon omfattning för Intune-rolltilldelning. Intunes rolltilldelningsomfattningar begränsar inte vilka enheter eller användare som kan begära fjärrhjälp.
 
 >[!NOTE]
 >Genom att aktivera TeamViewer tillåter du att TeamViewer för Intune-anslutningsprogrammet kan skapa TeamViewer-sessioner, läsa Active Directory-data och spara TeamViewer-kontots åtkomsttoken.
@@ -63,9 +63,9 @@ Innan du kan ge fjärrhjälp till Android-enheter måste du konfigurera Intune T
 
 I TeamViewer-fönstret kan du utföra olika fjärråtgärder på Android-enheten, inklusive fjärrstyrning av enheten. Fullständig information om de åtgärder du kan utföra finns i [TeamViewer-dokumentationen](https://www.teamviewer.com/support/documents/).
 
-När du är klar. stäng TeamViewer-fönstret.
+Stäng TeamViewer-fönstret när du är klar.
 
-## <a name="end-user-notifications"></a>Slutanvändarmeddelanden
+## <a name="end-user-notifications"></a>Meddelanden till slutanvändare
 
 Slutanvändarna ser en meddelandeflagga på ikonen för företagsportalappen på sin enhet och får även ett meddelande när appen öppnas. De kan då godkänna begäran om fjärrhjälp.
 

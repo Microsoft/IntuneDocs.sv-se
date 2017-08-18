@@ -14,11 +14,11 @@ ms.assetid: 28ac298e-fb73-4c1c-b3fd-8336639e05e6
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4d214ea9e85d6f08ecff42555cc7fbc36512a825
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f935a454f077caf096c43c892980a948dcd4c3a3
+ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="troubleshoot-app-deployment-problems-in-microsoft-intune"></a>Felsöka problem med appdistributionen i Microsoft Intune
 
@@ -36,9 +36,9 @@ Börja här om du har problem med att distribuera och hantera appar med Intune. 
 |0x80073CFB|Det tillhandahållna paketet har redan installerats, och återinstallering av paketet är blockerad|Du kan råka ut för det här felet om du installerar ett paket som inte är identiskt till det paket som redan har installerats. Bekräftelse av den digitala signaturen ingår också i paketet. När ett paket har byggts om eller signerats på nytt så är det inte längre binärt identiskt med det tidigare installerade paketet. De två möjliga alternativ för att åtgärda det här felet är:<br /><br />-   Öka appens versionsnummer och bygg sedan om och signera paketet på nytt.<br />-   Ta bort det gamla paketet för varje användare i systemet innan du installerar det nya paketet.|
 |0x87D1041C|Programinstallationen lyckades men programmet identifieras inte.|- Appen har distribuerats av Intune och sedan avinstallerats (troligtvis av slutanvändaren). Be användaren att installera om appen via företagsportalen. De appar som krävs ominstalleras automatiskt nästa gång enheten checkar in.|
 
-## <a name="troubleshooting-apps-from-the-windows-store"></a>Felsöka appar från Windows Store
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Felsöka appar från Microsoft Store
 
-Informationen i avsnittet [Troubleshooting packaging, deployment, and query of Windows Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Felsöka paketering, distribution och frågor för Windows Store-appar) hjälper dig att felsöka vanliga problem som kan uppstå när du installerar appar från Windows Store, oavsett om du gör det med Intune eller på annat sätt.
+Informationen i avsnittet [Troubleshooting packaging, deployment, and query of Windows Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Felsöka paketering, distribution och frågor för Windows Store-appar) hjälper dig att felsöka vanliga problem som kan uppstå när du installerar appar från Microsoft Store, oavsett om du gör det med Intune eller på annat sätt.
 
 ## <a name="troubleshooting-app-deployment-to-pcs-managed-by-the-intune-software-client"></a>Felsöka distribution av appar till datorer som hanteras av Intune-klientprogrammet
 För att hjälpa dig att felsöka problem med att distribuera appar till datorer som hanteras av Intune-klientprogrammet kan du se följande två loggfiler:

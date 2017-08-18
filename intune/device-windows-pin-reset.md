@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/05/2017
+ms.date: 08/09/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,15 +14,23 @@ ms.technology:
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3688eef68fc9dcfced976db02c8d50126fa30da8
-ms.sourcegitcommit: fd5b7aa26446d2fa92c21638cb29371e43fe169f
+ms.openlocfilehash: 9cf2549852c5949ff1c95af12b40f59136d56e34
+ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 08/10/2017
 ---
 # <a name="reset-the-passcode-on-windows-devices-integrated-with-the-microsoft-pin-reset-service-using-intune"></a>Återställa lösenordet på Windows-enheter som är kopplade till Microsofts tjänst för PIN-återställning med hjälp av Intune
 
 Funktionen för återställning av lösenord på Windows-enheter som är kopplade till Microsofts tjänst för PIN-återställning ger dig möjlighet att generera ett nytt lösenord för enheter som kör Windows 10 Mobile. Enheterna måste köra Windows 10 Creators Update eller senare.
+
+## <a name="supported-platforms"></a>Plattformar som stöds
+
+- Windows – stöds på Windows 10 Creators Update och senare (ansluten till Azure AD)
+- Windows Phone – stöds inte
+- iOS – stöds inte
+- macOS – stöds inte
+- Android – stöds inte
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -43,10 +51,11 @@ Innan du kan fjärråterställa lösenord på Windows-enheter som du hanterar m�
 Om du vill konfigurera PIN-återställning för de Windows-enheter som du hanterar kan du aktivera funktionen med hjälp av en [anpassad princip för Intune i Windows 10](custom-settings-windows-10.md). Konfigurera principen med hjälp av följande CSP-leverantörer (Configuration Service Provider):
 
 
-- **För användare** - **./User/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
-- **För enheter** - **./Device/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/EnablePinRecovery**
+- **För enheter** - **./Device/Vendor/MSFT/PassportForWork/*klient-ID*/Policies/EnablePinRecovery**
 
-Värdena för dessa CSP-leverantörer måste båda anges till **SANT**.
+*klient-ID* hänvisar till ditt Azure Active Directory katalog-ID, som du kan hämta på sidan **Egenskaper** i Azure Active Directory.
+
+Ange värdet för denna CSP till **Sant**.
 
 ## <a name="steps-to-reset-the-passcode"></a>Steg för att återställa lösenordet
 
