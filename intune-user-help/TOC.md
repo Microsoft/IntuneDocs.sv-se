@@ -1,16 +1,111 @@
 # Användarhjälp för Intune
+
 ## [Använd hanterade enheter för att få arbetet gjort](use-managed-devices-to-get-work-done.md)
+
 ## [Vilken information kan mitt företag se med Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+
 ## [Vad händer när jag återställer min enhet?](what-happens-if-you-reset-your-device-cpwebsite.md)
+
 ## [Så här loggar du in på företagsportalen](sign-in-to-the-company-portal.md)
+
 ## [Använda en Android-enhet med Intune](using-your-android-device-with-intune.md)
 ### [Vad händer när jag registrerar en Android-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
+### [Registrera din enhet](enroll-your-device-in-Intune-android.md)
+#### [Registrera din enhet med Android för arbetet](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-android.md)
+### [Kryptera din enhet](encrypt-your-device-android.md)
+### [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
+### [Vad händer när jag återställer min enhet?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
+### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
+### [Ange tiden för lås](set-the-amount-of-time-before-your-device-is-locked-android.md)
+### [Installera VPN](install-your-companys-virtual-private-network-VPN-android.md)
+### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
+### [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
+#### [Avregistrera enheten](unenroll-your-device-from-intune-android.md)
+#### [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
+
 ### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
+#### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
+
+#### [Använda loggar för att lösa problem]
+##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+##### [Skicka loggar via e-post](send-logs-to-your-it-admin-by-email-android.md)
+##### [Skicka loggar via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
+##### [Skicka registreringsfel](send-enrollment-errors-to-your-it-admin-android.md)
+
+### Frågor om operativsystem
+#### [Uppdatera enheten](you-need-to-update-your-android-device.md)
+#### [Versionen stöds inte](your-android-version-isnt-yet-supported.md)
+#### [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Saknar ett certifikat som krävs](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [Inaktivera okända källor](you-need-to-turn-off-unknown-sources-android.md)
+#### [Stänga av USB-felsökning](you-need-to-turn-off-usb-debugging-android.md)
+#### [Slå på sökning efter säkerhetshot](you-need-to-turn-on-scanning-for-security-threats-android.md)
+#### [Säkerhetskorrigeringen stöds inte](you-need-to-update-your-device-OS-security-patch-android.md)
+#### [Enheter med krypteringsfel](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
+
+### Mobile Threat Defense
+#### [Installera en Mobile Threat Defense-app](you-are-prompted-to-install-mtd-android.md)
+#### [Lösa ett hot](you-need-to-resolve-a-threat-found-by-mtd-android.md)
+
+
 ## [Använda en iOS- eller macOS-enhet med Intune](using-your-iOS-or-macOS-device-with-intune.md)
 ### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
+### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
+### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos.md)
+### [Registrera din macOS-enhet på företagsportalen](enroll-your-device-in-intune-macos-cp.md)
+
+### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
+### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
+### [Vad händer om du återställer en enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
+### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
+### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
+### [Avregistrera din enhet](unenroll-your-device-from-intune-ios.md)
+#### [Vad händer om du avregistrerar din enhet?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
+### [Synkronisera enheten manuellt](sync-your-device-manually-ios.md)
+
 ### [Åtgärda vanliga problem med iOS](troubleshoot-your-device-iOS.md)
-## [Använda en Windows-enhet med Intune](using-your-windows-device-with-intune.md)
+#### [Återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
+#### [Skicka fel till företaget](send-errors-to-your-it-admin-ios.md)
+#### [Skicka fel till Microsoft](send-logs-to-microsoft-ios.md)
+#### [Ett fel uppstod](you-get-an-error-while-using-the-company-portal-app-ios.md)
+#### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
+#### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-ios.md)
+#### [Uppdatera din iOS-enhet](you-need-to-update-your-ios-device.md)
+#### [Min iOS-version stöds inte ännu](your-ios-version-isnt-yet-supported.md)
+
+### Mobile Threat Defense
+#### [Installera en Mobile Threat Defense-app](you-are-prompted-to-install-mtd-ios.md)
+#### [Lösa ett hot](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+
+
+## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 ### [Vad händer när jag registrerar en Windows 10-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Vad händer när jag registrerar en Windows-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+### [Vad händer när du registrerar en Windows-enhet med en annan version av Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+
+### [Registrera en Windows-enhet](enroll-your-device-in-intune-windows.md)
+### [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
+
+### [Kryptera din enhet](encrypt-your-device-windows.md)
+### [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)
+### [Avregistrera enheten från Intune](unenroll-your-device-from-intune-windows.md)
+### [Vad händer om du avregistrerar din enhet?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+### [Vad händer om du återställer din enhet?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-windows.md)
+### [Synkronisera enheten manuellt](sync-your-device-manually-windows.md)
+
 ### [Åtgärda vanliga problem med Windows](troubleshoot-your-device-windows.md)
+#### [Det går inte att registrera min Windows 10-enhet](troubleshoot-your-windows-10-device-windows.md)
+#### [Uppdatera din Windows-enhet](you-need-to-update-your-windows-device.md)
+#### [Skicka loggar från företagsportalappen](send-logs-to-your-it-admin-cp-windows.md)
+#### [Skicka loggar från appen Inställningar](send-logs-to-your-it-admin-settings-windows.md)
+#### [Min Windows-version stöds inte ännu](your-windows-version-isnt-yet-supported.md)
+#### [Aktivera Windows-kryptering](you-need-to-enable-windows-encryption.md)
+#### [Enheten behöver program mot skadlig kod](your-device-needs-antimalware-software.md)
+#### [Aktivera Säker Start](you-need-to-enable-secure-boot-windows.md)
+#### [Aktivera kodintegritet](you-need-to-enable-code-integrity.md)
+
+
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
