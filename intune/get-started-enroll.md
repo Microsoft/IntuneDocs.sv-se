@@ -1,12 +1,12 @@
 ---
 title: "Komma igång med registrering av enheter"
 titleSuffix: Intune on Azure
-description: 
+description: "Lär dig hur hela registreringsprocessen går till med registrering av en iOS-enhet som exempel."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,37 +15,26 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f52c9d44a91ed6547aadd712db42ea68cfd01dc
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b072ca0ee5a1e4d0a4feb6972ee80fe717fe9f83
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="getting-started-enrolling-devices"></a>Komma igång med registrering av enheter
-
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+# <a name="get-started-enrolling-devices"></a>Kom igång med registrering av enheter
 
 Med Microsoft Intune kan du ge personalen tillgång till mobila enheter samtidigt som företagets information skyddas. Eftersom användarna kommer att interagera med Intune på sina enheter i stället för på administrationskonsolen, måste du se till att sätta dig in i registreringsprocessen. På så sätt kan du införliva vettiga efterlevnadsprinciper i processen och hjälpa dina användare på traven. Detta är särskilt viktigt eftersom användarna då kan se exakt vilken information som du som administratör kan se:
 
-## <a name="what-it-cannot-see"></a>IT-avdelningen kan inte se
-* Historik för samtal och surfning
-* Plats
-* Privat e-post
-* Textmeddelanden
-* Kontakter
-* Lösenord till dina personliga konton
-* Kalender-händelser
-* Bilder (inte heller de som ingår i appen Foton eller i Kamerabilder)
-
-## <a name="what-it-can-see"></a>IT-avdelningen kan se
-* Modell
-* Serienummer
-* Operativsystemversion
-* Appnamn
-* Ägare
-* Enhetsnamn
-* Tillverkare (för enheter som inte tillverkats av Apple)
-* Telefonnummer (hela numret för arbetsenheter. För personliga enheter, enbart de sista fyra siffrorna.)
+| IT-avdelningen kan inte se | IT-avdelningen kan se |
+|---|---|
+| Historik för samtal och surfning | Modell |
+| Plats | Serienummer |
+| Privat e-post | Operativsystemversion |
+| Textmeddelanden | Appnamn |
+| Kontakter | Ägare |
+| Lösenord till dina personliga konton | Enhetsnamn |
+| Kalender-händelser | Tillverkare (för enheter som inte tillverkats av Apple) |
+| Bilder (inte heller de som ingår i appen Foton eller i Kamerabilder) | Telefonnummer (hela numret för arbetsenheter. För personliga enheter, enbart de sista fyra siffrorna.) |
 
 ## <a name="how-do-i-enroll-a-device"></a>Hur gör jag för att registrera en enhet?
 
@@ -67,3 +56,13 @@ För många slutanvändare är enhetsregistreringen första gången som de förs
 14. När skärmen ändras och visar att installationen av profilen är klar trycker du på **Klar**.
 15. Meddelandet ”Registrerar enheten” visas på skärmen. Därefter visas en bekräftelse som visar att enheten har registrerats. Ett popup-fönster visas och frågar om du vill öppna sidan i Företagsportalen. Tryck på **Öppna**.
 16. Skärmen **Konfiguration av företagsåtkomst** visas på nytt. Om du inte har konfigurerat några testprinciper ska enheten vara fullständigt kompatibel med alla regler och föreskrifter. Om du använder testprinciper kan du trycka på **Enhetsefterlevnad** och se efter vad du kan göra för att skydda enheten.
+
+## <a name="next-steps"></a>Nästa steg
+
+[Kom igång med att lägga till appar](get-started-apps.md) – Hitta och lägg till appar på enheter så att dina anställda kan få arbete utfört.
+
+## <a name="learn-more"></a>Läs mer
+
+* [Registreringsalternativ för Intune](enrollment-options.md)
+* [Aktivera Bring Your Own Device (ta med egen enhet) med Intune](byod-enable.md)
+* [Informera slutanvändarna om registrering och enhetshantering](end-user-educate.md)

@@ -1,12 +1,12 @@
 ---
-title: "Konfigurera inställningar för Windows Update för företag - Intune"
-titleSuffix: Intune on Azure
+title: Hantera programuppdateringar
+titleSuffix: Configure Windows Update for Business settings - Intune
 description: "Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Intune, så att du kan kontrollera uppdateringarna för Windows 10-enheter.”"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/10/2017
+ms.date: 08/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,20 +14,19 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: c05a6c007b147d81c4d98b708c0e0ae92392f0e0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d88fd62b84c0cc7c3678692cef5ab547bfb8c5d
+ms.sourcegitcommit: f9b01976c0fc479ac8bc3998eb55bbc517ed2d84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/22/2017
 ---
-# <a name="how-to-configure-windows-update-for-business-settings-with-microsoft-intune"></a>Konfigurera inställningarna för Windows Update för företag med Microsoft Intune
+# <a name="manage-software-updates"></a>Hantera programuppdateringar
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="introduction"></a>Introduktion
-Windows som en tjänst är det nya sättet för att tillhandahålla uppdateringar för Windows 10. Från och med Windows 10 innehåller alla nya funktions- och kvalitets även innehållet från alla tidigare uppdateringar. Det innebär att så länge som du har installerat den senaste uppdateringen så vet du att dina Windows 10-enheter är helt uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
+Windows som tjänst är ett sätt att uppdatera Windows 10-enheter. Med Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att så länge som du har installerat den senaste uppdateringen så vet du att dina Windows 10-enheter är helt uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
 
-Med hjälp av Windows Update för företag kan du förenkla hanteringen av uppdateringar så att du inte behöver godkänna varje enskild uppdatering för enhetsgrupperna. Du kan fortfarande hantera risker i din miljö genom att konfigurera en strategi för uppdateringarna installeras, och Windows Update ser till att uppdateringarna installeras vid rätt tidpunkt. Microsoft Intune ger dig möjlighet att konfigurera enheternas inställningar och att skjuta upp installationen av uppdateringar. Intune lagrar inte uppdateringar, utan enbart uppdateringarnas principtilldelning. Enheterna har direkt åtkomst till uppdateringarna via Windows Update. Använd Intune för att konfigurera och hantera **Windows 10-uppdateringsringar**. En uppdateringsring innehåller en grupp med inställningar som anger när och hur uppdateringar av Windows 10 updates installeras. Du kan t.ex. konfigurera följande:
+Med hjälp av Windows Update för företag kan du förenkla hanteringen av uppdateringar så att du inte behöver godkänna varje enskild uppdatering för enhetsgrupperna. Du kan fortfarande hantera risker i dina miljöer genom att konfigurera en strategi för installation av uppdateringar och Windows Update ser till att uppdateringarna installeras vid rätt tidpunkt. Microsoft Intune ger dig möjlighet att konfigurera enheternas inställningar och att skjuta upp installationen av uppdateringar. Intune lagrar inte uppdateringar, utan enbart uppdateringarnas principtilldelning. Enheterna har direkt åtkomst till uppdateringarna via Windows Update. Använd Intune för att konfigurera och hantera **Windows 10-uppdateringsringar**. En uppdateringsring innehåller en grupp med inställningar som anger när och hur uppdateringar av Windows 10 updates installeras. Du kan t.ex. konfigurera följande:
 
 - **Windows 10 Servicing Branch**: Ange om du vill grupper av enheter ska ta emot uppdateringar från Current Branch eller Current Branch for Business.  
 - **Inställningar för uppskjutning**: Konfigurera inställningar för uppskjutning av uppdateringar om du vill fördröja uppdateringsinstallationer för grupper av enheter. Du kommer då att ha en mellanlagrad uppdateringsdistribution, så att du kan granska förloppet medan det pågår.

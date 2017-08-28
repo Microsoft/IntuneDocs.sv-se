@@ -1,12 +1,12 @@
 ---
 title: "Kom igång med användare"
 titleSuffix: Intune on Azure
-description: 
+description: "Lägg till användare i Intune och låt dem få tillgång till företagsresurser på mobila enheter."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,23 +15,21 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e711f32ebd77a83b17e6db468f8cb23a409c8d31
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 1559a265b28627281b484c8250d1c597d2f094c6
+ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="get-started-with-users"></a>Kom igång med användare
+# <a name="get-started-with-managing-users"></a>Kom igång med att hantera användare
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
-Azure Active Directory hanterar organisationens objektgrupper, t.ex. enheter och appar, och även organisationens användargrupper. Du kan gruppera användare eller enheter tillsammans i stället för att hantera varje enhet individuellt. På så sätt kan du enkelt tilldela appar och inställningar till ett stort antal användare och enheter.
+Tänk på alla olika personer i din organisation. Alla som använder företagsinformation behöver en användare som hanterar åtkomst till informationen i Intune. 
 
 ## <a name="how-do-i-create-a-user"></a>Hur skapar jag en användare?
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Sök efter **användare och grupper** med hjälp av **Sök resurser**.
-3. När du har öppnat bladet **Användare och grupper** väljer du **Alla användare** och väljer sedan **+ Ny användare**.
+2. Sök efter **Intune** med hjälp av **Sök resurser**.
+3. När du har öppnat bladet **Microsoft Intune** väljer du **Användare**. På sidan **Alla användare** väljer du **+ Ny användare**.
 4. Ange information om användaren, t.ex. **namn** och **användarnamn**. Domännamndelen av användarnamnet måste antingen vara det inledande standarddomännamnet, t.ex. contoso.onmicrosoft.com, eller ett verifierat, ofedererat domännamn, t.ex. contoso.com.
 5. Välj den testgrupp du vill lägga till användaren i under **Grupper**.
 6. Spara det automatiskt genererade användarlösenordet så att du kan använda det till att logga in på en testenhet. Du måste ge det här lösenordet till användare så att de kan ändra det till ett normalt lösenord som de kan komma ihåg.
@@ -50,3 +48,7 @@ När du har skapat en användare måste du använda [Office 365-portalen](http:/
  > En av de tillgängliga licenserna används nu för den här användaren. Om du använder livemiljön kan du inaktivera användningen av den här licens om du senare vill tilldela den till riktig användare.
 
 5. Välj **Spara**.
+
+## <a name="next-steps"></a>Nästa steg
+
+[Kom igång med grupper](get-started-groups.md) - Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till.

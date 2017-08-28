@@ -14,11 +14,11 @@ ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: db6661dd92b890d711f655a60eb883b417a30d8a
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: cb311429e0537709b3476154bdef24347cb99026
+ms.sourcegitcommit: 294de4d4058de2c625abb8143e90880d27da9284
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="use-the-intune-data-warehouse"></a>Använda Intune-informationslagret
 
@@ -41,4 +41,4 @@ Informationslagret ger dig tillgång till mer information om din mobila miljö �
 **Nästa steg**
 
 - Få en länk och använd Power BI för att få mer information. Mer information finns i [Ansluta till Intune-informationslagret med Power BI](reports-proc-get-a-link-powerbi.md).
-- Mer information om API för Intune-informationslagret, datamodellen och relationerna mellan enheter<!-- , and an example of creating a custom client to retrieve data,--> finns i [API för Intune-datalagret](reports-nav-intune-date-warehouse.md).
+- Mer information om API för Intune-informationslagret, datamodellen och relationerna mellan enheter<!-- , and an example of creating a custom client to retrieve data,--> finns i [API för Intune-datalagret](reports-nav-intune-data-warehouse.md).

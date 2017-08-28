@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 06/13/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e23c40eb4c13fd0d2593742c72086fc943fe2b54
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 43ab9e906f05a069b1399ab53a4861d7289b7024
+ms.sourcegitcommit: 6a089eb45ea3fb18ae0b2dac96683466f52f95bf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
@@ -44,7 +44,6 @@ Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till dit
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
 * Innan du börjar använda iOS-böcker med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobilenheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
-* För närvarande kan du endast tilldela böcker som en **obligatorisk** installation. När du tilldelar en bok som en **Obligatorisk** installation, använder varje användare som installerar boken en licens.
 * När du tilldelar en bok till en enhet måste enheten ha den inbyggda iBooks-appen installerad. Om den inte finns måste slutanvändaren installera appen på nytt för att kunna läsa boken. Du kan för närvarande inte använda Intune för att återställa borttagna inbyggda appar.
 * Du kan bara tilldela böcker från webbplatsen för Apples volymköpsprogram. Du kan inte ladda upp och sedan tilldela böcker som du skapat internt.
 * Du kan för närvarande inte tilldela böcker till slutanvändarkategorier på samma sätt som du gör med appar.
@@ -75,7 +74,7 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 2. I listan med böcker väljer du den bok du vill tilldela och sedan ”**...**” > **Tilldela grupper**.
 3. På bladet <*boknamn*> – **Tilldelade grupper** väljer du **Hantera** > **Tilldelade grupper**.
 4. Välj **Tilldela grupper** och på bladet **Välj grupper** väljer du sedan de Azure AD-användargrupper som du vill tilldela boken till. Enhetsgrupper stöds inte för närvarande.
-Välj en tilldelningsåtgärd i **Obligatorisk**. 
+Du måste välja tilldelningsåtgärden **Tillgänglig** eller **Obligatorisk**. 
 5. När du är klar väljer du **Spara**.
 
 ## <a name="next-steps"></a>Nästa steg

@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8013d7f091c154709f0dd98dcda2e7f5f09056d2
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 2dad8cf3e9a38625b4657e284f8d8bb53ba289c0
+ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -261,96 +261,41 @@ Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabel
 |---------|------------|
 | DateKey |Referens till datumtabellen som visar dag |
 | DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id |
-| DeviceModel |Enhetsmodell |
-| Operativsystem |Enhetens operativsystem |
 | DeviceName |Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
-| SoftwareVersion |I de flesta fall är det här en operativsystemversion förutom på Apple-plattformar där det skiljer sig från operativsystemversionen. |
-| Imei |IMEI-numret |
-| HardwareInventoryTimeUtc |Tid för första rapporterade inventeringen för den här enheten. |
-| InventoryModifiedTimeUtc |Tid för senaste lagrade inventeringen när den här ögonblicksbilden togs |
-| InventoryReportingTimeUtc |Tid för senaste insamlade inventeringen för den här enheten. |
-| ExchangeActiveSyncId |Enhets-id för Exchange ActiveSync |
-| ComputerSystemDescription |Systembeskrivning |
-| ComputerSystemName |Systemnamn |
-| ComputerSystemManufacturer |Systemtillverkare |
-| ComputerSystemModel |Systemmodell |
-| UserName |Användarnamn |
-| OSType |Typ av operativsystem |
-| OSCaption |Operativsystemrubrik |
-| OSName |Namn på operativsystem |
-| OSManufacturer |Operativsystemets tillverkare |
-| OSProductSuite |Operativsystemets produktserie |
-| OSProductType |Operativsystemets produkttyp |
-| Språk |Operativsystemets språk |
-| PhysicalMemoryCapacity |Kapacitet för fysiskt minne (i byte) |
-| PhysicalMemoryRemovable |Flyttbart fysiskt minne (i byte) |
-| SystemEnclosureChassisTypesInnerText |Visar enhetens typ av systemchassi. Siffrorna står för följande värden:  0 eller tomt = Okänt   1 = Skrivbordsdator   2 = Bärbar dator  3 = Arbetsstation  4 = Företagsserver  100 = Telefon  101 = Surfplatta  102/103 = Annan okänd typ av mobilenhet |
-| SystemEnclosureModel |Systemhöljets modell |
-| SystemEnclosureSerialNumber |Systemhöljets serienummer |
-| NetworkAdapterConfigurationText |Konfigurationstext på nätverkskort |
-| MacAddress |MAC-adress |
-| SmsID |Id för Intune-enhet |
-| CertExpiry |Utgångsdatum för certifikatet för mobilenhetshantering |
-| DeviceClientAgentVersion |Klientens agentversion |
-| DeviceClientID |Enhets klient-id |
-| Serienummer |Serienummer |
-| DeviceManufacturer |Enhetstillverkare |
-| DMVersion |Enhetstillverkarversion |
-| Version av inbyggd programvara |Version av fast installerad programvara |
-| HardwareVersion |Maskinvaruversion |
-| PlatformType |Plattformstyp |
-| ProcessorLevel |Processornivå |
-| ProcessorRevision |Processorrevision |
-| Produkt |Produkt |
-| ProductVersion |Produktversion |
-| OEM |Komponenttillverkare |
-| DeviceBuildVersion |Enhetens build-version |
-| Meid |MEID (Mobile Equipment Identifier). |
-| PhoneNumber |Telefonnummer |
-| SubscriberCarrierNetwork |Namn på operatörsnätverk |
-| CellularTechnology |Typ av operatörsnätverk (CDMA/GSM) |
-| Imsi |IMSI-nummer |
-| JailBroken |Sant om enheten är jailbrokad eller rotad. |
-| IsActivationLockEnabled |Sant om aktiveringslås är aktiverat |
-| DeviceType |Enhetstyp |
-| IsSupervised |Övervakas |
-| DeviceDisplayNumberOfColors |Antal färger på enhetens display |
-| HorizontalResolution |Enhetens horisontella skärmupplösning |
-| VerticalResolution |Enhetens vertikala skärmupplösning |
-| StorageFree |Ledigt lagringsutrymme (i byte) |
-| StorageTotal |Totalt lagringsutrymme (i byte) |
-| ProgramFree |Ledigt programminne (i byte) |
-| ProgramTotal |Totalt programminne (i byte) |
-| RemovableStorageFree |Ledigt flyttbart lagringsutrymme (i byte) |
-| RemovableStorageTotal |Totalt flyttbart lagringsutrymme (i byte) |
-| DeviceMemoryDeviceCapacity |Enhetens minneskapacitet |
-| DeviceMemoryAvailableDeviceCapacity |Enhetens tillgängliga minneskapacitet |
-| DeviceOSVersion |OS-version |
-| DeviceOSPlatform |Operativsystemplattform |
-| DeviceOSLanguage |Operativsystemspråk |
-| PasswordMaxAttemptsBeforeWipe |Högsta antal tillåtna lösenordsförsök innan enheten rensas |
-| PasswordMinComplexChars |Lägsta antal avancerade tecken som krävs i lösenordet |
-| PasswordMinLength |Kortast tillåtna längd på lösenord |
-| PasswordHistory |Lösenord: minsta antal tidigare lösenord godkänns ej |
-| PasswordEnabled |Lösenord - aktiverat? |
-| PasswordExpiration |Förfallotid för lösenord |
-| AllowRecoveryPassword |Tillåt lösenordsåterställning |
-| PasswordAutoLockTimeout |Lösenord: tidsgräns för autolås |
-| PasswordType |Typ av lösenord |
-| BacklightACTimeout |Tidsgräns för bakgrundsbelysning vid anslutning till strömkälla |
-| BacklightBatTimeout |Tidsgräns för bakgrundsbelysning på batteri |
-| PowerBackupPercent |Säkerhetskopieringsprocent |
-| BatteryPercent |Återstående batteriprocent. |
-| PlatformID |Plattforms-id |
-| ExchangeDeviceID |Id för Exchange-enhet |
-| SmsProcessorDescription |Beskrivning av processor |
-| OwnerEmailAddress |Ägarens e-postadress |
-| DeviceOSName |Namn på operativsystem |
-| WifiMac |Wifi MAC-adress |
-| EthernetMac |Ethernet MAC-adress |
-| RequireEncryption |Visar om enheten är krypterad eller inte. |
-| ActivationLockBypassCode |Kod för att kringgå aktiveringslås |
-
+| DeviceTypeKey |Nyckel för enhetstypattributet för den här enheten |
+| ClientRegisterationStateKey |Nyckeln för attributet klientregistreringsstatus för den här enheten |
+| OwnerTypeKey |Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
+| objectSourceKey |Ignorera den här kolumnen. |
+| CreatedDate |Datum då enhetens registrerades |
+| LastContact |Senast kända incheckning på Intune |
+| LastContactNotification |Senaste gången Intune aviserade enheten om att checka in på Intune |
+| LastContactWorkplaceJoin |Tidsstämpel som visar senast kända Workplace Join-status för den här enheten. |
+| ManagementAgentKey |Nyckel för den hanteringsagent som är kopplad till den här enheten. |
+| ManagementStateKey |Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
+| ReferenceId |Enhetens id i Azure Active Directory |
+| WorkPlaceJoinStateKey |Nyckel för den arbetsplatsanslutningsstatus som är kopplad till den här enheten. |
+| CategoryId |Ignorera den här kolumnen. |
+| EnrollmentTypeKey |Nyckel för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod. |
+| CertExpirationDate |Utgångsdatum för certifikatet för mobilenhetshantering. |
+| MdmStatusKey |En nyckel till MdmStatus |
+| OSFamily |Operativsystemfamilj (Windows, iOS, Android o.s.v.) |
+| OSVersion |OS-version |
+| OSMajorVersion |Operativsystemets högre versionskomponent (major.minor.build.revision) |
+| OSMinorVersion |Operativsystemets lägre versionskomponent (major.minor.build.revision) |
+| OSBuildNumber |Operativsystemets build-versionskomponent (major.minor.build.revision) |
+| OSRevisionNumber |Operativsystemets revisionsversionskomponent (major.minor.build.revision) |
+| EasID |Enhetens EAS-id, om enheten hanteras av Exchange Active Sync. |
+| GraphDeviceIsManaged |Senaste hanteringsstatus som Intune angett i AAD |
+| GraphDeviceIsCompliant |Senaste efterlevnadsstatus som Intune angett i AAD |
+| Serienummer |Enhetens serienummer, om det är tillgängligt |
+| EnrolledByUser |Id för den användare som registrerade enheten, hänvisar till kolumnen userId i användartabellen. |
+| RowLastModifiedDateTimeUTC |Senaste ändring av den här posten. |
+| ProcessorArchitecture |Processorarkitektur |
+| DeviceAction |Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
+| Tillverkare |Enhetstillverkaren |
+| Modell |Enhetsmodell |
+| LastPolicyUpdateUtc |Senaste principuppdatering på enheten |
+| LastExchangeStatusUtc |Senaste enhetssynkronisering med Exchange. |
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
 Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder av inventeringsinformation för mobilenhetshanterade enheter (MDM) under de senaste 90 dagarna. I kolumnen DateKey visas radens dag. Vissa egenskaper kanske inte kan användas eller har inte fyllts i för alla enheter. Mer information finns på den här sidan. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).

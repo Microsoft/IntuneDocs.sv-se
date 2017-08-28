@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2e12792445b36ba6657cbe6b2f6c924f6d97fe3c
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 6107059888c8d2fb6227277202a5906491ac9092
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="reference-for-application-entities"></a>Referens för programenheter
 
@@ -52,9 +52,9 @@ I entiteten **AppRevision** visas en lista över alla versioner av appen.
 | IsCurrent |Visar om appversionen i informationslagret är aktuell eller inte |Sant/falskt |
 | RowLastModifiedDateTimeUTC |Datum och tid i UTC för senaste ändring av appversionen i informationslagret |2016-11-23 12:00:00 |
 
-## <a name="appinstallertypes"></a>AppInstallerTypes
+## <a name="apptypes"></a>AppTypes
 
-Entiteten **AppInstallerTypes** innehåller en lista över installationskällan för en app.
+Entiteten **AppTypes** visar en lista över installationskällan för en app.
 
 | Egenskap  | Beskrivning |
 |---------|------------|
@@ -80,44 +80,6 @@ Entiteten **AppInstallerTypes** innehåller en lista över installationskällan 
 | 11 |Windows Mobile MSI |En Verksamhetsspecifik app för MSI |
 | 12 |Verksamhetsspecifik Windows Phone-app |Verksamhetsspecifik app för Windows Phone |
 
-## <a name="applicationtypes"></a>ApplicationTypes
-
-Entiteten **ApplicationTypes** innehåller en lista över möjliga typer av appar.
-
-| Egenskap  | Beskrivning |
-|---------|------------|
-| ApplicationTypeID |Id för typen |
-| ApplicationTypeKey |Surrogatnyckel för nyckeln |
-| ApplicationTypeName |Typ av app |
-
-## <a name="example"></a>Exempel
-
-| ApplicationTypeID  | Namn | Beskrivning |
-|---------|------------|--------|
-| 0 |InHouse |En app som utvecklats internt |
-| 1 |DeepLink |En länk till en app i appbutik |
-| 2 |WebLink |En länk till en webbapp |
-
-## <a name="managedsoftwaretypes"></a>ManagedSoftwareTypes
-
-Entiteten **ManagedSoftwareTypes** innehåller en lista över möjliga typer av hanterad programvara för en app.
-
-| Egenskap  | Beskrivning |
-|---------|------------|
-| SoftwareTypeID |Id för typen |
-| SoftwareTypeKey |Surrogatnyckel för nyckeln |
-| SoftwareTypeName |Typ av programvara |
-
-## <a name="example"></a>Exempel
-
-| SoftwareTypeID  | Namn | Beskrivning |
-|---------|------------|--------|
-| 0 |skrivbords- |En skrivbordsapp |
-| 2 |Uppdatera |En Windows-uppdatering |
-| 5 |SideCarAgent | |
-| 1 |Mobiltelefon |En mobilapp |
-| 3 |WebLink |En webblänk |
-| 4 |VppDeepLink |En länk till en app i en appbutik som tillhör ett volymköpsprogram (VPP) |
 
 ## <a name="vppprogramtypes"></a>VppProgramTypes
 

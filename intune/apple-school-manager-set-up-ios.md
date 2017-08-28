@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8197e03e8a3eb42c6a5be3b6357d959ed9428454
-ms.sourcegitcommit: 0e012f25fb22124f66193f20f244362493c6b8bb
+ms.openlocfilehash: 91fd4719a4305f5e422163f9049684ebd9e9e656
+ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/19/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -103,18 +103,16 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 
     - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
-    - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
+     - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
+   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och **Övervakat** läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md).
+   >[!NOTE]
+   >Om **Användartillhörighet** är inställt på **Med användartillhörighet** eller **Övervakat** läge är inställt på **Av**, är det delade iPad-läget inaktiverat för registreringsprofilen.
 
-  - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och **Övervakat** läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen.
-
-  >[!NOTE]
-  >Om **Användartillhörighet** är inställt på **Med användartillhörighet** eller **Övervakat** läge är inställt på **Av**, är det delade iPad-läget inaktiverat för registreringsprofilen.
-
-  - **Maximalt antal cacheanvändare** – (kräver **Delad iPad** = **Ja**) Skapar en partition på enheten för varje användare. Det rekommenderade värdet är antalet studenter som troligen kommer att använda enheten under en viss tidsperiod. Om exempelvis sex studenter använder enheten regelbundet under veckan, anges numret till sex.  
+        - **Maximum Cached Users** - (Requires **Shared iPad** = **Yes**) Creates a partition on the device for each user. The recommended value is the number of students likely to use the device over a period of time. For example, if six students use the device regularly during the week, set this number to six.  
 
     - **Tillåt parkoppling** – Anger huruvida iOS-enheter ska kunna synkroniseras med datorer eller inte. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
 
-    - **Apple Configurator-certifikat** – Om du väljer **Tillåt Apple Configurator efter certifikat** under **Tillåt parkoppling** måste du ange vilket Apple Configurator-certifikat som ska importeras.
+      - **Apple Configurator-certifikat** – Om du väljer **Tillåt Apple Configurator efter certifikat** under **Tillåt parkoppling** måste du ange vilket Apple Configurator-certifikat som ska importeras.
 
 7. Välj **Inställningar för inställningsassistenten**, konfigurera följande profilinställningar och välj sedan **Spara**:
 

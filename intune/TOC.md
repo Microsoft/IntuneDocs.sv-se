@@ -175,7 +175,6 @@
 ### [Konfigurera utbildningsinställningar för iOS](education-settings-configure-ios.md)
 ### [Konfigurera delade iOS-enheter för utbildning](education-settings-configure-ios-shared.md)
 ### [Konfigurera iOS-uppdateringsprinciper](software-updates-ios.md)
-### [Konfigurera inställningar för Windows Update för företag](windows-update-for-business-configure.md)
 ### [Konfigurera certifikat](certificates-configure.md)
 #### [SCEP](certificates-scep-configure.md)
 #### [PKCS](certficates-pfx-configure.md)
@@ -237,7 +236,7 @@
 <!-- ### Protect devices with remote actions -->
 
 ## [Hantera roller](role-based-access-control.md)
-
+## [Hantera programuppdateringar](windows-update-for-business-configure.md)
 
 ## [Hantera datorer med programvaruagent](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json)
 ### [Jämför datorhantering](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json)

@@ -6,7 +6,7 @@ keywords:
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 066f8668ea37e928455792f512e4e337a1f19c20
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 32d3d014abc48eb2c3d0e10a71dc7f4616c49db8
+ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/12/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Använd felsökningsportalen för att hjälpa användare
 
@@ -41,7 +41,7 @@ I egenskap av Intune-administratör kan du tilldela rollen Supportansvarig till 
 Lägga till supportanvändare:
 1. [Lägg till användare i Intune](users-add.md) vid behov.
 2. [Skapa en supportgrupp](groups-add.md) och lägg till användare i gruppen.
-3. [Tilldela rollen RBAC-supportansvarig](role-based-access-control.md#built-in-roles)
+3. [Tilldela rollen RBAC-supportansvarig](role-based-access-control.md#built-in-roles).
 
   ![Bild av Intune-portalen med Intune-roller markerat och en lista över inbyggda roller, inklusive Supportansvarig](./media/help-desk-user-add.png) Du kan även [skapa en anpassad roll](role-based-access-control.md#custom-roles) som du kan ändra ytterligare för att ge åtkomst till supportansvariga.  Supportansvariga kräver följande behörigheter för att felsöka användarproblem:
     - MobileApps: Läsbehörighet
@@ -61,8 +61,6 @@ Supportpersonal och Intune-administratörer kan få åtkomst till felsökningspo
 - Logga in på Azure-portalen, välj **Fler tjänster** > **Övervakning + hantering** > **Intune** och gå sedan till **Hjälp och support** > **Felsök**.
 
 Klicka på **Välj användare** för att visa en användare och dennes användarinformation.
-
-![Skärmbild av Intunes arbetsbelastning för felsökning med länken Välj användare](media/help-desk-user.png)
 
 ## <a name="use-the-troubleshooting-portal"></a>Använda felsökningsportalen
 
