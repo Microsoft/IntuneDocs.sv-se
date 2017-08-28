@@ -3,8 +3,8 @@ title: "Så här lägger du till branschspecifika Windows-appar i Intune"
 titleSuffix: Intune on Azure
 description: "Läs om att lägga till verksamhetsspecifika Windows-appar till Intune.”"
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
 ms.date: 07/13/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c01099888ed4cfd04264ad902c73cf475385f1e3
-ms.sourcegitcommit: f100c943a635f5a08254ba7cf30f1aaebb7e810e
+ms.openlocfilehash: 94c8c2ac583cca88b051404999664bf93c02a9f5
+ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Windows-appar i Microsoft Intune
 

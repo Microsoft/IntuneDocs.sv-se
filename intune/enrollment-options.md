@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
-ms.openlocfilehash: dcc97e5bcffb35752b65e8ce275d38b9578da6fa
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: 3514b580a4e35cc9e0813d6dd7fd0e1eee550d7c
+ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 08/12/2017
 ---
 # <a name="enrollment-options-for-intune"></a>Registreringsalternativ för Intune
 
@@ -41,6 +41,9 @@ Det krävs ett MDM-pushcertifikat för registrering av iOS- och Mac OS enheter. 
 ## <a name="corporate-identifiers"></a>Företagsidentifierare
 
 Du kan visa en lista över IMEI-nummer (International Mobile Equipment Identifier) och serienummer för att identifiera företagsägda enheter. Läs mer om [företagsidentifierare](corporate-identifiers-add.md).
+## <a name="multi-factor-authentication"></a>Multi-Factor Authentication
+
+Du kan kräva att användare använder en extra verifieringsmetod, exempelvis telefon, PIN-kod eller biometriska data när de registrera en enhet. Läs mer om [multifaktorautentisering](multi-factor-authentication.md).
 
 ## <a name="device-enrollment-manager"></a>Hanterare av enhetsregistrering
 Du kan utse användare till enhetsregistreringshanterare (DEM).  Enhetsregistreringshanterare kan registrera många mobila enheter med ett enda användarkonto. Kontot för en enhetsregistreringshanterare kan registrera upp till 1 000 enheter. Läs mer om [enhetsregistreringshanterare](device-enrollment-manager-enroll.md).

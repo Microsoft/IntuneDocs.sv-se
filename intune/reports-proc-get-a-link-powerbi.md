@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b70bf3410e20dd792c0fcff050292ddea714d63e
-ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
+ms.openlocfilehash: 6b3ce7e895920d2bb9ff3537fd0ef87ecb4efcc0
+ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
@@ -60,18 +60,20 @@ Power BI-filen (pbix) innehåller anslutningsinformation för klientorganisation
 
 När en klient har autentiserats med Azure AD ansluter OData-webbadressen till RESTful-slutpunkten i informationslager-API:t som gör datamodellen tillgänglig för rapporteringsklienten. Följ de här anvisningarna för att ansluta och skapa egna rapporter med hjälp av Power BI Desktop. Du är inte begränsad till enbart Power BI Desktop utan kan använda ett valfritt analysverktyg med OData-webbadressen så länge klienten har stöd för OAUTH2.0-autentisering och OData v4.0-standarden.
 
-1.  Hämta **OData-webbadress** från rapportbladet, till exempel `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
-2.  Öppna **Power BI Desktop**.
-3.  Välj **Hem** > **Hämta data**. Välj**OData-feed**.
-4.  Välj **Basic**.
-5.  Skriv eller klistra in **OData-URL** i webbadressrutan.
-6.  Klicka på **OK**.
-7.  Om du inte har autentiserats med Azure AD för klientorganisationen från Power BI-skrivbordsklienten anger du dina autentiseringsuppgifter.  
-    a.  Välj **Organisationskonto**.  
-    b.  Ange användarnamn och lösenord.  
-    c.  Klicka på **Logga in.**  
-    d.  Klicka på **Anslut**.  
-8.  Klicka på **Läs in**.
+1.  Logga in på Azure Portal och välj **Övervakning + hantering** > **Intune**. Du kan också söka efter resurser för **Intune**.  
+2.  Öppna bladet **API för Microsoft Intune-informationslager (förhandsversion)** .
+3. Hämta webbadressen till anpassad feed på rapportbladet, till exempel `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+4. Öppna **Power BI Desktop**.
+5. Välj **Hem** > **Hämta data**. Välj**OData-feed**.
+6. Välj **Basic**.
+7. Skriv eller klistra in **OData-URL** i webbadressrutan.
+8. Klicka på **OK**.
+9. Om du inte har autentiserats med Azure AD för klientorganisationen från Power BI-skrivbordsklienten anger du dina autentiseringsuppgifter.  
+    1.  Välj **Organisationskonto**.  
+    2.  Ange användarnamn och lösenord.  
+    3.  Klicka på **Logga in.**  
+    4.  Klicka på **Anslut**.  
+10. Klicka på **Läs in**.
 
 ## <a name="next-steps"></a>Nästa steg
 
@@ -79,4 +81,4 @@ Du hittar svar på frågor om miljön, till exempel hur många enheter som har r
 
 <!-- -  You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
  -  Klientorganisationsdata sammanställs så att de lätt kan tolkas. Mer information om hur data sammanställs finns i [Datamodellen informationslager](reports-ref-data-model.md). 
-<!-- -  You can also access the data from a RESTful interface and incorporate the data into your own app. For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md). -->
+ -  Du kan också komma åt informationen från ett RESTful-gränssnitt och kan lägga till informationen i din egen app. Mer information finns i [Hämta data från API för informationslager med en REST-klient](reports-proc-data-rest.md).

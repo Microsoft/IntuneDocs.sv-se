@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/01/2017
+ms.date: 08/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,22 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 948a7d2e4e0ad80088d864708db5733f08db77c5
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 33d1f28cd5522ed47c3fdf83b289116728ded12b
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+
+## <a name="week-of-august-14-2017"></a>Veckan 14 augusti 2017
+
+### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10"></a>Uppdateringar av sidan Enhetsinformation i företagsportalappen för Windows 10
+
+Företagsportalappen för Windows 10 flyttar __Kategori__-taggen från under rubriken till en egenskap på sidan __Enhetsinformation__.
+
+![Företagsportalappen för Windows-skärmen Enhetsinformation där nu fältet Kategorier visas som en egenskap istället för direkt under rubriken på skärmen.](./media/cp_win10_category_tag_move_after_1708.png)
 
 ## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
 

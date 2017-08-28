@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a0da2e96e6e80672f666b8bbca160a1fc1515d1c
-ms.sourcegitcommit: 2ee1e8248814d74cef80b609a8e43f59fa0b2618
+ms.openlocfilehash: 51b61fdc20c8d532be23a26f751be8d52cc21f9f
+ms.sourcegitcommit: a4a9bd7c432b58fea738e4bc3455d1221eb314c1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure-portalen.
@@ -83,6 +83,6 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 | **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |
 | **Hindra hanterade appar från att köras på jailbrokade eller rotade enheter** |Välj **Ja** om du vill förhindra att den här appen körs på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för att komma åt arbets- eller skoldata i denna app. | Ja |
 | **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (definieras tidigare i principen) kontrolleras. En administratör kan till exempel aktivera PIN-kod i principen, så om en användare öppnar en MAM-app måste denne ange en PIN-kod. När du använder den här inställningen behöver användaren inte ange en PIN-kod i någon MAM-app under ytterligare **30 minuter** (standardvärde).</li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna tid har gått ut kräver appen användarautentisering till AAD, så att appen kan fortsätta att köras.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
-| **Offlineintervall innan appdata rensas (dagar)** | Efter så här många dagar (anges av administratören) med användning offline genomför appen själv en selektiv rensning. Den här selektiva rensningen är samma rensning som kan startas av administratören i MAM-arbetsflödet för rensning. <br><br> | 90 dagar |
+| **Offlineintervall innan appdata rensas (dagar)** | Efter detta antal dagar (definieras av administratören) med offlinekörning kräver appen att användaren ansluter till nätverket och autentiserar igen. Vid lyckad autentisering kan användaren fortsätta att få åtkomst till sina data och offlineintervallet återställs.  Om autentiseringen misslyckas utför appen en selektiv rensning av användarens konto och data.  Se [Hur du rensar endast företagsdata från Intune-hanterade appar](https://docs.microsoft.com/en-us/intune/apps-selective-wipe) om du vill ha mer information om vilka data som tas bort med en selektiv rensning.<br><br> | 90 dagar |
 | **Blockera skärmdump och Android Assistant (Android 6.0+)** | Välj **Ja** om du vill blockera funktionerna för skärmdumpar och **Android-assistenten** på enheten när appen används. Om du väljer **Ja** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto. | Nej |
 | **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. | Nej |

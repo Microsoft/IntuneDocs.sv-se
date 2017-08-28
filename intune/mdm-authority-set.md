@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97dede1ac393a434342f62d1f8488389dcb28d44
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: dfcd7b97848ed68edb4572429abc53a1cc8f8558
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -40,11 +40,27 @@ I Configuration Manager version 1610 och senare och i Microsoft Intune version 1
 
 ## <a name="set-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-  ![Skärmbild av Intunes arbetsbelastning för felsökning med länken Välj användare](media/set-mdm-auth.png)
+1. På [Azure Portal](https://portal.azure.com) väljer du **Fler tjänster** > **Övdervakning och hantering** > **Intune**.
 2. Välj **Enhetsregistrering** på Intune-bladet och välj sedan **Översikt**.
+![Skärmbild av Intune-skärmen Ange utfärdare för hantering av mobila enheter](media/set-mdm-auth.png)
 
-3. På bladet **Börja hantera enheter** väljer du **Ange Intune som utfärdare för hantering av mobilenheter**. Ett meddelande indikerar att du har angett MDM-utfärdare till Intune.
+3. Under **Utfärdare av Hantering av mobila enheter** väljer du en utfärdare bland följande alternativ:
+  - **Intune-utfärdare av mobilenhetshantering**
+  - **Configuration Manager-utfärdare av mobilenhetshantering**
+  - **Inga**
+
+  Ett meddelande indikerar att du har angett MDM-utfärdare till Intune.
+
+## <a name="enable-device-enrollment"></a>Aktivera registrering av enheter
+
+Med Intune som utfärdare för hantering av mobila enheter kan användare registrera personligt ägda enheter och få åtkomst till resurser, exempelvis e-post, på följande sätt genom att installera företagsportalen (iOS och Android) lägga till autentiseringsuppgifter för arbetet (Windows) eller få åtkomst till företagsportalens webbplats (iOS, Android, macOS).
+
+Flera plattformar har följande krav för att aktivera eller förenkla registrering:
+- **iOS** – (obligatoriskt) [Skaffa ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md) och därefter [aktivera registrering för företagsägda iOS-enheter](ios-enroll.md) (valfritt).
+- **Android** - (obligatoriskt) [Aktivera Android-arbetsprofiler](android-enroll.md)
+- **Windows** – (obligatoriskt) Aktivera [Automatisk registrering](windows-enroll.md) eller [massregistrering](windows-bulk-enroll.md)
+- **macOS** – Inga krav
+
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 

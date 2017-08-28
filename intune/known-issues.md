@@ -6,7 +6,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 08/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d069775cf51e8c077a6f30123bf4fa2fe58b6bd8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5a9b7f69cded9258efb6c8a897e0c026f3228a6b
+ms.sourcegitcommit: c248b5a15894f0ade23bad4644c3b7035a9fcce8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -41,26 +41,28 @@ När du migrerar från klassiska Intune till Azure-portalen kan det visas en ny 
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Sekundär migrering som krävs för utvalda funktioner
 
-Intune-konton som skapats före januari 2017 måste migreras innan de här funktionerna kan användas i Azure-portalen:
+Intune-konton som skapats före januari 2017 måste migreras innan följande funktioner kan användas i Azure Portal:
 
 - Registreringsprofiler för företagsenheter
 - Apples DEP (Device Enrollment Program)
-- Gruppen förregistrerade företagsenheter efter iOS-serienummer
-- Hanterare av enhetsregistrering
+- Förhandsdeklarera företagsenheter via iOS-serienumret
+- Konton för enhetsregistreringshanterare
 - Apples volymköpsprogram
 
-Eftersom de här funktionerna inte kan hanteras både från klassiska Silverlight- och Azure-konsoler, gör migreringen att:
+Eftersom de här funktionerna inte kan hanteras både från den klassiska Intune-konsolen (Silverlight) och Azure Portal gör migreringen att:
 - De inaktiveras i den klassiska konsolen
-- De aktiveras i Azure-konsolen  
+- De aktiveras i Azure Portal  
+
+Efter 11 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal äger den andra migreringen rum mellan den 11 och 22 september 2017. Migreringen av ditt konto slutförs samma dag det påbörjas. Det kan ta upp till 6 timmar att migrera från det att funktionerna inaktiveras i den klassiska Intune-konsolen.
 
 Om du hanterar de här Intune-funktioner i Azure-portalen nu så måste du vara medveten om följande punkter:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Tar bort standardprofiler för registrering av företagsenheter i Apple DEP
-Azure-portalen stöder inte en standardprofil för registrering av företagsenheter för Apples enhetsregistreringsprogram DEP. Den här funktionen, som är tillgänglig i den klassiska Silverlight Intune-konsolen, kommer upphöra för att förhindra oavsiktlig profiltilldelning. När DEP-serienummer synkroniseras i Azure-portalen, tilldelas ingen profil för registrering av företagsenheter. En registreringsprofil måste tilldelas innan du använder enheten.
+Azure-portalen stöder inte en standardprofil för registrering av företagsenheter för Apples enhetsregistreringsprogram DEP. Den här funktionen, som är tillgänglig i den klassiska Intune-konsolen (silverlight), kommer att upphöra för att förhindra oavsiktlig profiltilldelning. När DEP-serienummer synkroniseras i Azure-portalen, tilldelas ingen profil för registrering av företagsenheter. En registreringsprofil måste tilldelas innan du använder enheten.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Apple DEP-token återställs vid migrering
 
-Om du tog bort en Apples DEP-token i den klassiska Intune-portalen (Silverlight) och inte laddar upp en ny token till Azure-portalen, återställs den ursprungliga token i Azure-portalen när du migrerar. Om du vill ta bort denna token och förhindra DEP-registrering, tar du bort token från Azure-portalen.
+Om du tog bort en Apples DEP-token i den klassiska Intune-portalen (Silverlight) och inte laddar upp en ny token till Azure Portal, återställs den ursprungliga token i Azure Portal när du migrerar. Om du vill ta bort denna token och förhindra DEP-registrering, tar du bort token från Azure-portalen.
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
 
@@ -72,7 +74,7 @@ Du kan inte visa statusinformation för principer som har migrerats från den kl
 Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i den amerikanska butiken, men ditt Intune-konto är tyskt, visas inte appen i Intune.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Flera kopior av samma volyminköpta iOS-program laddas upp
-Klicka inte på knappen **Ladda upp** flera gånger för samma VPP-token. Det leder till att dubbla VPP-token laddas upp och att appar synkroniseras flera gånger för samma VPP-token. 
+Klicka inte på knappen **Ladda upp** flera gånger för samma VPP-token. Det leder till att dubbla VPP-token laddas upp och att appar synkroniseras flera gånger för samma VPP-token.
 
 <!-- ## Groups -->
 
@@ -84,8 +86,9 @@ För enheter som inte har registrerats med Intune, kan du bara ange en primär d
 Om du lägger till ytterligare domäner (med hjälp av **avancerade inställningar** > **nätverksperimeter** > **lägg till en skyddad domän**) så går det inte att spara principen. Felmeddelandet du får upp kommer snart att ändras för att bli mer rättvisande.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Stöd för Cisco AnyConnect VPN-klienter
- 
-Den senaste versionen av Cisco AnyConnect VPN-klienten (4.0.07072) är inte kompatibel med Intune. En framtida uppdatering av Intune inkluderar kompatibilitet med den här VPN-klientversionen. Fram till dess rekommenderar vi att du inte uppdaterar Cisco AnyConnect VPN-klienten och fortsätter att använda den befintliga versionen.
+
+Den senaste versionen av Cisco AnyConnect VPN-klienten (4.0.07072) är inte kompatibel med Intune.
+En framtida uppdatering av Intune inkluderar kompatibilitet med den här VPN-klientversionen. Fram till dess rekommenderar vi att du inte uppdaterar Cisco AnyConnect VPN-klienten och fortsätter att använda den befintliga versionen.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Använd den numeriska lösenordstypen med macOS Sierra-enheter
 
@@ -118,16 +121,3 @@ Du kan definiera [appskyddsprinciper för iOS](app-protection-policy-settings-io
 Globala administratörer (även kallade innehavaradministratörer) kan fortsätta att utföra dagliga administrationsuppgifter utan separata Intune- eller EMS-licenser (Enterprise Mobility Suite). Men för att använda tjänsten, till exempel registrera sina egna enheter, en företagsenhet eller för att använda Intunes företagsportal, behöver de en Intune- eller EMS-licens.
 
 <!-- ## Additional items -->
-
-
-
-
-
-
-
-
-
-
-
-
- 

@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 08/10/2017
+ms.date: 08/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f915c805b20e88c661ad52e280a31054bbebce02
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: f28ce989b5907f7e7474543c364508424dc0c9cf
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -40,8 +40,14 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
   ### Intune apps
 -->   
 
-## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
 
+## <a name="week-of-august-21-2017"></a>Veckan 21 augusti 2017
+### <a name="app-management"></a>Apphantering
+#### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Ny inloggad upplevelse för användare av Android-företagsportalen och appskyddsprincip <!-- 621669 -->
+
+Slutanvändarna kan nu bläddra bland appar, hantera enheter och visa it-kontaktinformation med hjälp av Android-företagsportalappen utan att registrera sina Android-enheter. Om en användare dessutom redan använder en app som skyddas av principer för Intune-appskydd och startar Android-företagsportalen får slutanvändaren inte längre någon uppmaning att registrera enheten.
+
+## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
 ### <a name="device-enrollment"></a>Enhetsregistrering  
 
 #### <a name="restrict-android-and-ios-device-enrollment-restriction-by-os-version------1333256--1245463----"></a>Begränsa Android- och iOS-enhetsregistrering per OS-version <!--- 1333256,  1245463 --->
@@ -64,7 +70,6 @@ Mer information finns i [Synkronisera enheten](device-sync.md)
 
 #### <a name="force-supervised-ios-devices-to-automatically-install-the-latest-available-software-update----777100---"></a>Tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen <!-- 777100 -->
 En ny princip är tillgänglig från arbetsytan Programuppdateringar där du kan tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga programuppdateringen. Mer information finns i [Konfigurera iOS-uppdateringsprinciper](/intune/software-updates-ios)
-
 
 #### <a name="check-point-sandblast-mobile---new-mobile-threat-defense-partner-----954651-1172027---"></a>Check Point SandBlast Mobile – Ny partner för skydd mot mobilhot <!-- 954651, 1172027 -->
 Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst baserat på riskbedömning som utförs av Checkpoint SandBlast Mobile, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune.
@@ -95,12 +100,22 @@ Vi har gjort flera uppdateringar i gränssnittet för [företagsportalswebbplats
 #### <a name="ibooks-support-for-the-company-portal-website---1231841--"></a>Stöd för iBooks på Företagsportalens webbplats <!--1231841-->
 Vi har lagt till en särskild sida på Företagsportalens webbplats där användare kan bläddra och hämta iBooks. 
 
+### <a name="monitor-and-troubleshoot"></a>Övervaka och felsöka
+
+#### <a name="additional-help-desk-troubleshooting-details------applies-to-1263399-1326964-1341642----"></a>Ytterligare information om felsökning för supportavdelningen<!---  Applies to 1263399, 1326964, 1341642 --->
+ 
+Intune har uppdaterat felsökningsskärmen och lagt till information för administratörer och supportpersonal. Nu visas tabellen **Tilldelningar** med en sammanfattning av alla användarens tilldelningar baserat på gruppmedlemskap. Listan innehåller:
+- Mobilappar
+- Efterlevnadsprinciper
+- Konfigurationsprofiler
+ 
+Tabellen **Enheter** innehåller nu även kolumnerna **Azure AD-anslutningstyp** och **Azure AD-kompatibel**. Mer information finns i [hjälpa användare att felsöka problem](help-desk-operators.md).
+
 ### <a name="reporting"></a>Rapportering
 
 #### <a name="intune-data-warehouse-public-preview"></a>Intune-informationslager (Allmänt tillgänglig förhandsversion)
 
 Intune-informationslagret samplar data dagligen och visar historik över din klient. Du kan komma åt data med en Power BI-fil (PBIX), en OData-länk som är kompatibel med många analytiska verktyg eller genom att interagera med REST API. Mer information finns i [Använd Intune-informationslagret](reports-nav-create-intune-reports.md).
-
 
 ## <a name="week-of-july-23rd-2017"></a>Veckan 23 juli 2017
 
@@ -152,22 +167,15 @@ Windows Phone 8.1-enheter som hanteras av Intune-tjänsten påverkas inte direkt
 Vi rekommenderar att du uppgraderar berättigade Windows Phone 8.1-enheter till Windows 10 Mobile så snart som möjligt. 
 
 ### <a name="changes-in-support-for-the-intune-ios-company-portal-app-----1164474----"></a>Ändringar i stödet för iOS-företagsportalappen <!-- 1164474  -->
-Snart kommer det en uppdatering för Microsoft Intunes företagsportalapp för iOS som bara har stöd för enheter som kör iOS 9.0 eller senare. Versionen av Företagsportal som har stöd för iOS 8 kommer att finnas kvar under en kortare övergångsperiod. Om du använder MAM-aktiverade iOS-appar har vi även där bara stöd för iOS 9.0 och senare. Se till så att dina slutanvändare uppdaterar till den senaste versionen av operativsystemet. 
+Snart kommer det en uppdatering för Microsoft Intunes företagsportalapp för iOS som bara har stöd för enheter som kör iOS 9.0 eller senare. Versionen av Företagsportal som har stöd för iOS 8 kommer att finnas kvar under en kortare övergångsperiod. Om du använder MAM-aktiverade iOS-appar har vi även där enbart stöd för iOS 9.0 och senare. Se till att slutanvändarna uppdaterar till den senaste versionen av operativsystemet. 
 
 #### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-I nuläget har vi inte hunnit fastställa några datum, men vi passar på att informera om detta i god tid så att du har tid att planera. Se till att dina användare har uppdaterat till iOS 9+. När den nya versionen av företagsportalappen släpps ska du också uppmana användarna att uppdatera sina företagsportalappar.
+I nuläget har vi inte hunnit fastställa några datum, men vi passar på att informera om detta i god tid så att du har tid att planera. Se till att användarna har uppdaterat till iOS 9+. När den nya versionen av företagsportalappen släpps bör du även uppmana användarna att uppdatera sina företagsportalappar.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Uppmana användarna att uppdatera till iOS 9.0 eller senare för att kunna dra full nytta av de nya funktionerna i Intune.  Uppmana användarna att installera den nya versionen av företagsportalen för att kunna dra full nytta av de nya funktionerna.
 
 Gå till Intune på Azure-portalen och visa Enheter > Alla enheter. Filtrera efter iOS-versionen för att se alla befintliga enheter med operativsystem tidigare än iOS 9.
-
-### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plan för ändringar: Intune ändrar Intune-partnerportalens gränssnitt<!-- 1050016 -->
-Vi tar bort sidan Intune-Partner från manage.microsoft.com från och med tjänstuppdateringen i mitten på maj 2017.  
-
-Om du är partneradministratör, kommer du inte längre att kunna visa och vidta åtgärder åt dina kunder från sidan Intune Partner. I stället måste du logga in på en av två andra partnerportaler hos Microsoft.
-
-Både [Microsoft Partner Center](https://partnercenter.microsoft.com/) och [Administrationscenter för Microsoft Office 365 Partner](https://portal.office.com/) gör att du kan logga in på kundkonton som du hanterar. I framtiden kan du som partner använda en av dessa webbplatser för att hantera dina kunder.
 
 
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple kräver uppdateringar för Application Transport Security <!--748318-->

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2016
+ms.date: 08/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4f0364750edf2e97e2b621c27fb25bea8e0f537c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0e1906de7e735174d660bb8508cab49196ff0aef
+ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Så får dina Android-användare sina appar
 
@@ -32,6 +32,14 @@ Läs om hur och var dina Android-slutanvändare får de appar som du distribuera
 | ------------- |-------------| -----|
 | Tillgängliga appar      | Användarna trycker på **Installera** i företagsportalen. Ett meddelande visas och användarna kan sedan trycka på det för att starta installationen. När installationen har slutförts försvinner meddelandet. | När användarna trycker på appen i företagsportalen dirigeras de till en appsida i Play Store där de kan starta installationen.|
 | Required apps      | Ett meddelande som inte kan stängas visas för användarna. I meddelandet står det att de måste installera en app. Användarna trycker på meddelandet för att starta installationen. När installationen har slutförts försvinner meddelandet.    | Ett meddelande som inte kan stängas visas för användarna. I meddelandet står det att de måste installera en app. När användarna trycker på meddelandet dirigeras de till en appsida i Play Store där de kan starta installationen. När installationen har slutförts försvinner meddelandet. |
+
+Slutanvändarna måste tillåta installation från okända källor för att kunna installera [verksamhetsspecifika appar](lob-apps-android.md). De finns vanligtvis på två olika platser:
+
+* **Android 7.1.2 och tidigare**: **Inställningar** > **Säkerhet** > **Okända källor**
+* **Android 8.0 och senare**: **Inställningar** > **Apps & notifications (Appar och aviseringar)** > **Special app access (Särskild appåtkomst)**  > **Install unknown apps (Installera okända appar)** > **Company Portal (Företagsportal)** > **Allow from this source (Tillåt från den här källan)**
+
+Om detta inträffar får slutanvändaren ett meddelande i företagsportalappen och vägleds direkt till rätt inställning. 
+
 
 ## <a name="samsung-knox-standard-android-devices"></a>Samsung Knox Standard Android-enheter
 
