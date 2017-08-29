@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5d5d8e0500a0ee928b1037a978f6d4dadab71495
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: ba953f1f471cc8bdbfdadad75c8f4eeb8acc2279
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---august-2017"></a>Den tidiga utgåvan för Microsoft Intune – augusti 2017
 
@@ -57,15 +57,12 @@ Vi lägger till nya [device restriction settings](device-restrictions-android.md
 Du kan ange appen med hjälp av URL, paketnamn eller från listan över appar som du hanterar.
 
 ### <a name="new-settings-for-windows-10-device-restriction-profile"></a>Nya inställningar för enhetsbegränsningsprofilen i Windows 10
-<!--- 978575, 1308849, 1308850 -->
+<!--- 978575, 1308849, -->
 Vi lägger till nya inställningar i enhetsbegränsningsprofilen i Windows 10 i kategorin Windows Defender SmartScreen.
 
 Mer information om enhetsbegränsningsprofilen för Windows 10 finns i [Inställningar för enhetsbegränsning i Windows 10 och senare]( device-restrictions-windows-10.md).
 
-### <a name="new-device-restriction-settings-for-windows-10------1063965---"></a>Inställningar för enhetsbegränsningar för Windows 10 <!-- 1063965 -->
-Vi har lagt till nya inställningar för [begränsningsprofilen för Windows 10-enheter](/intune/device-restrictions-windows-10). Nyheterna finns i följande kategorier:
-- Windows Defender SmartScreen
-- Appbutik
+
 
 
 ### <a name="android-for-work-support-for-lookout----1087312---"></a>Android for Work-stöd för Lookout <!-- 1087312 -->   
@@ -120,8 +117,6 @@ Slutanvändare behöver snart inte att registrera sina enheter för att komma å
 ### <a name="improved-error-message-for-when-a-user-reaches-the-maximum-number-of-devices-allowed-to-enroll----1270370---"></a>Förbättrat felmeddelande när en användare når det högsta antalet enheter som tillåts för registrering <!-- 1270370 -->
 I stället för ett allmänt felmeddelande ser slutanvändarna ett vänligt felmeddelande med en åtgärd: "You have enrolled the maximum number of devices allowed by your IT admin. Please remove an enrolled device or get help from your IT admin.” (Du har registrerat det högsta antalet enheter som IT-administratören tillåter. Ta bort en registrerad enhet eller be IT-administratören om hjälp.)
 
-### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Ny inloggad upplevelse för användare av Android-företagsportalen och appskyddsprincip <!-- 621669 -->
-Slutanvändarna kan bläddra bland appar, hantera enheter och visa IT-kontaktinformation med hjälp av Android-företagsportalappen utan att registrera sina Android-enheter. Om en användare dessutom redan använder en app som skyddas av Intune-appskyddsprinciper och startar Android-företagsportalen får slutanvändaren inte längre en uppmaning att registrera enheten. 
 
 ### <a name="inform-end-users-what-device-information-can-be-seen-for-ios---739894--"></a>Informera användarna vilken enhetsinformation som kan visas för iOS <!--739894-->
 Vi lägger till **Typ av ägarskap** på skärmen Enhetsinformation i företagsportalappen för iOS. Det gör det möjligt för användarna att få mer information om sekretess direkt från den här sidan från Intunes slutanvändardokument. De kan även hitta denna information på skärmen Om.
