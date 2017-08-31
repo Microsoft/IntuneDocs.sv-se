@@ -14,11 +14,11 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7f054868d0bae061f348239614f3a40b96a15b1
-ms.sourcegitcommit: fd2e8f6f8761fdd65b49f6e4223c2d4a013dd6d9
+ms.openlocfilehash: 88db3730be62a9b481d924b4f09b70be775cb067
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="set-up-app-based-conditional-access-policies"></a>Konfigurera principer för appbaserad villkorlig åtkomst
 
@@ -59,9 +59,30 @@ Det här avsnittet innehåller anvisningar för hur du konfigurerar principer f�
 2. Klicka på ellipsen för att se borttagningsalternativen.
 3. Välj **Ta bort** att ta bort användargruppen från listan.
 
+## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Skapa appbaserade principer för villkorlig åtkomst i Azure AD-arbetsbelastning
+
+Från och med Intune version 1708 kan IT-administratörer skapa appbaserade principer för villkorlig åtkomst i Azure AD-arbetsbelastningen. Det här är bekvämt och gör att du inte behöver växla mellan Azure- och Intune-arbetsbelastningar.
+
+> [!IMPORTANT]
+> Du måste ha en Azure AD Premium-licens för att kunna skapa Azure AD-principer för villkorlig åtkomst från Intune Azure Portal.
+
+### <a name="to-create-an-app-based-conditional-access-policy"></a>Så här skapar du en appbaserad princip för villkorlig åtkomst
+
+> [!IMPORTANT]
+> [Intune-appskyddsprinciper](app-protection-policies.md) måste tillämpas på apparna innan du använder appbaserade principer för villkorlig åtkomst.
+
+1. Välj **villkorlig åtkomst** på **Intune-instrumentpanelen**.
+
+2. På bladet **Principer** väljer du **Ny princip** om du vill skapa en ny appbaserad princip för villkorlig åtkomst.
+
+4. Ange ett principnamn och konfigurera inställningarna i avsnittet **Tilldelningar** och välj sedan **Bevilja** under avsnittet **Åtkomstkontroller**.
+
+5. Välj **Kräv godkänd klientapp** följt av **Välj** och sedan **OK** för att spara den nya principen.
+
 ## <a name="next-steps"></a>Nästa steg
 [Blockera appar som inte har modern autentisering](app-modern-authentication-block.md)
 
 ### <a name="see-also"></a>Se även
 
 [Skydda appdata med appskyddsprinciper](app-protection-policies.md)
+[Villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

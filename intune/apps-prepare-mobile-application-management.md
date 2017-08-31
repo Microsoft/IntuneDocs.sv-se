@@ -14,35 +14,35 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e8b218ce38a7e76135a62b1155dbf9060ba511cc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2394068c43e652accfb428ff644229f794d33f24
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
-# <a name="prepare-line-of-business-apps-for-mam"></a>Förbereda affärsappar för MAM
+# <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Du kan använda principer för hantering av mobilprogram (MAM) i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
+Du kan använda appskyddsprinciper i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## <a name="intune-app-wrapping-tool"></a>Intunes apphanteringsverktyg
-Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en omslutning runt en app, som sedan gör att appen kan hanteras av en Intune MAM-princip.
+Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en omslutning runt en app, som sedan gör att appen kan hanteras av en Intune-appskyddsprincip.
 
-Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering.  Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](app-wrapper-prepare-android.md) respektive [Appomslutningsverktyget för iOS](app-wrapper-prepare-ios.md).
+Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering. Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](app-wrapper-prepare-android.md) respektive [Appomslutningsverktyget för iOS](app-wrapper-prepare-ios.md).
 
 Apphanteringsverktyget stöder **inte** appar i Apple App Store eller Google Play Store. Det stöder inte heller vissa funktioner som kräver utvecklarintegration (se följande tabell med funktionsjämförelser).
 
 
-Mer information om programhanteringsverktyget för MAM på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
+Mer information om programhanteringsverktyget för appskyddsprinciper på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
 
-### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda apphanteringsverktyget:
-* Din app har inte några inbyggda dataskyddsfunktioner.
-* Din app är enkel.
-* Din app distribueras internt.
+### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda programhanteringsverktyget
+* Din app har inte några inbyggda dataskyddsfunktioner
+* Din app är enkel
+* Din app distribueras internt
 * Du har inte tillgång till appens källkod
-* Du har inte utvecklat appen.
-* Din app har minimala användarautentiseringsfunktioner.
+* Du har inte utvecklat appen
+* Din app har minimala användarautentiseringsfunktioner
 
 
 ### <a name="supported-app-development-platforms"></a>Utvecklingsplattformar för program som stöds
@@ -58,12 +58,12 @@ App SDK är främst utformat för kunder som har appar i Apple App Store eller G
 Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja använda SDK:n läser du [Komma igång med Microsoft Intune App SDK](app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Skäl för att använda SDK
-* Din app har inte några inbyggda dataskyddsfunktioner.
-* Din app är komplex och innehåller många funktioner.
-* Din app har distribuerats via en offentlig appbutik som Google Play- eller Apple App Store.
-* Du är en apputvecklare och har de tekniska förutsättningarna att kunna använda SDK:n.
-* Din app har andra SDK-integrationer.
-* Din app uppdateras ofta.
+* Din app har inte några inbyggda dataskyddsfunktioner
+* Din app är komplex och innehåller många funktioner
+* Din app har distribuerats via en offentlig appbutik som Google Play eller Apple App Store
+* Du är en apputvecklare och har de tekniska förutsättningarna att kunna använda SDK:n
+* Din app har andra SDK-integrationer
+* Din app uppdateras ofta
 
 ### <a name="supported-app-development-platforms"></a>Utvecklingsplattformar för program som stöds
 
@@ -102,8 +102,10 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Konfiguration av målprogram |X||
 |Stöd för flera identiteter|X||
 |Anpassningsbar stil |X|||
-### <a name="see-also"></a>Se även
+## <a name="next-steps"></a>Nästa steg
 
-[Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
-[Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)</br>
-[Aktivera hantering av mobilprogram i appar med SDK](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+Mer information om appskyddsprinciper i Intune finns i följande avsnitt:
+
+  -  [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
+  - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)</br>
+  - [Aktivera hantering av mobilprogram i appar med SDK](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)

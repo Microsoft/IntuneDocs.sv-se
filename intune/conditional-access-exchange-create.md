@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b02d7dfd2331db232269869fd941b687465f8221
-ms.sourcegitcommit: 7674efb7de5ad54390801165364f5d9c58ccaf84
+ms.openlocfilehash: be626985a020d518bd4285a4d0b280c6c66932a6
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Så här skapar och tilldelar du en princip för villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Microsoft Intune
 
@@ -122,11 +122,7 @@ Från och med version 1704 av Intune kan administratörer skapa principer för v
 
 1. Välj **villkorlig åtkomst** på **Intune-instrumentpanelen**.
 
-2. Välj **Villkorlig åtkomst i Azure Active Directory** på instrumentpanelen **Villkorlig åtkomst**.
-
-3. Välj **Ny princip** om du vill skapa en ny Azure AD-princip för villkorlig åtkomst.
-
-    ![Azure AD-principer för villkorlig åtkomst](./media/Azure-AD-CA-Intune.png)
+2. På bladet **Principer** väljer du **Ny princip** om du vill skapa en ny Azure AD-princip för villkorlig åtkomst.
 
 ## <a name="see-also"></a>Se även
 

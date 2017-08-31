@@ -14,11 +14,11 @@ ms.assetid: 7e3135c1-df26-48c9-aa4c-cdab6168897a
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0061d4ecd8d71f8b7363193e36b838741aa56a92
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 72291be81df5e0358c9477a2749fb7d9d7cb8fdc
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Så får dina iOS-användare sina appar
 
@@ -30,9 +30,9 @@ Använd informationen för att förstå hur och var dina slutanvändare får de 
 
 **Tillgängliga appar** – Appar som finns i företagsportalens applista och som en användare kan välja att installera.
 
-**Hanterade appar** – Appar som kan hanteras med principer eller som har blivit "omslutna" av Intune eller som har skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
+**Hanterade appar** – Appar som kan hanteras med principer och har blivit "omslutna" av Intune eller skapats med Intune App Software Development Kit (SDK). De här apparna kan hanteras av Intune och appskyddsprinciper kan tillämpas på dem.
 
-**Ohanterade appar** – Appar som inte kan hanteras med principer eller som inte har omslutits av Intune eller som inte inkluderar Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
+**Ohanterade appar** – Appar som inte kan hanteras med principer eller som inte har omslutits av Intune eller som inte inkluderar Intunes App SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
 Apples begränsningar förhindrar att verksamhetsspecifika appar och hanterade appbutiks-appar listas i företagsportalsappen. För att undvika problemet visar panelerna i företagsportalsappen för iOS användarna flera vyer på en och samma plats (företagsportalens webbplats) för alla deras appar.
 

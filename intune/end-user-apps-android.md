@@ -14,11 +14,11 @@ ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0e1906de7e735174d660bb8508cab49196ff0aef
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.openlocfilehash: fac1ce49584af299face679270dcc43decc4d2f5
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Så får dina Android-användare sina appar
 
@@ -50,9 +50,9 @@ Om detta inträffar får slutanvändaren ett meddelande i företagsportalappen o
 
 Appar kan vara hanterade eller ohanterade (se nedan). Processen för att göra appar hanterade är densamma för alla typer av Android-enheter.
 
-**Hanterade appar** – Appar som kan hanteras med principer. De har blivit "omslutna" av Intune eller skapats med Intune Mobile Application Management (MAM) Software Development Kit (SDK). De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
+**Hanterade appar** – Appar som kan hanteras med principer. De har omslutits av Intune eller skapats med Intunes App SDK. De här apparna kan hanteras av Intune och applikations-policys kan tillämpas på dem.
 
-**Ohanterade appar** – Appar som inte kan hanteras med principer. De har inte omslutits av Intune eller inkluderar inte Intunes MAM SDK. Applikations-policys kan inte tillämpas på de här apparna.
+**Ohanterade appar** – Appar som inte kan hanteras med principer. De har inte omslutits av Intune eller inkluderar inte Intunes App SDK. Applikations-policys kan inte tillämpas på de här apparna.
 
 ### <a name="see-also"></a>Se även
 [Lägga till appar med Microsoft Intune](apps-add.md)

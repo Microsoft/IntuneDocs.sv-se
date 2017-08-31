@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: 0d05918a62549559a186376d99e28c952af16b9c
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: fa70e21b9e9f7adfc508e24bd442a48c834ed7db
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="enable-byod-with-intune"></a>Aktivera BYOD med Intune
 
@@ -44,22 +44,22 @@ När du ändå håller på bör du även passa på att [anpassa företagsportale
 
 När du har förberett Intune-tjänsten måste du uppfylla de olika registreringskraven för de olika enhetstyper som du vill hantera. Processen för att registrera enheter för hantering är enkel, men varierar en aning beroende på enhetstyp.
 
--   **iOS- och Mac-enheter** Du måste [skaffa ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md) för att registrera iPad-, iPhone- eller Mac OS-enheter. När du har överfört MDM-pushcertifikatet till Intune kan användarna [registrera iOS-enheter](/intune-user-help/enroll-your-device-in-intune-ios) med hjälp av företagsportalappen, och använda webbplatsen för företagsportalen för att [registrera Mac OS X-enheter](/intune-user-help/enroll-your-device-in-intune-macos).
+-   **iOS- och Mac-enheter** Du måste [skaffa ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md) för att registrera iPad-, iPhone- eller macOS-enheter. När du har överfört MDM-pushcertifikatet till Intune kan användarna [registrera iOS-enheter](/intune-user-help/enroll-your-device-in-intune-ios) med hjälp av företagsportalappen och använda webbplatsen för företagsportalen för att [registrera macOS-enheter](/intune-user-help/enroll-your-device-in-intune-macos).
 
 -   **Android-enheter** Du behöver inte göra något för att förbereda Intune-tjänsten för registreringen av Android-enheter. Användarna behöver bara [registrera sina Android-enheter](/intune-user-help/enroll-your-device-in-intune-android) i hanteringen med företagsportalappen som är tillgänglig från Google Play.
 
--   **Windows Phone-enheter och datorer** Windows-enheter kan registreras med ytterligare konfiguration. Förenkla användarnas upplevelse genom att aktivera automatisk registrering för Windows 10-datorer och mobila Windows 10-enheter i Azure Active Directory (AD) Premium. Om du inte har Azure AD Premium eller om du behöver stöd för Windows 8.1 kan du skapa [ett DNS-alias för registreringsservern](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) för att göra registreringen enklare.
+-   **Windows Phone-enheter och datorer** Windows-enheter kan registreras med ytterligare konfiguration. Du kan aktivera automatisk registrering för Windows 10-datorer och mobila Windows 10-enheter i Azure Active Directory (AD) Premium för att förbättra användarnas upplevelse. Om du inte har Azure AD Premium eller om du behöver stöd för Windows 8.1 kan du skapa [ett DNS-alias för registreringsservern](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) för att göra registreringen enklare.
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Kontrollera att hanterade enheter uppfyller grundläggande säkerhetskrav
 
 När användare registrerar sina enheter för hantering måste IT-avdelningen kontrollera att de enheter som används för att komma åt företagsappar och data uppfyller grundläggande säkerhetskrav. Dessa regler kan till exempel kräva att en PIN-kod används för att komma åt enheter samt kryptering av data som lagras på enheter. En uppsättning med sådana regler kallas för en [efterlevnadsprincip](device-compliance.md).
 
-När du [distribuerar en efterlevnadsprincip](device-compliance-get-started.md) till en användare kontrollerar Intune alla enheter som användaren har hanterat med Intune för att se om de uppfyller de grundläggande säkerhetskraven som du har definierat som en del av din BYOD-princip. När en enhets principefterlevnad har utvärderats skickas enhetens status till Intune. I vissa fall kan användare uppmanas att åtgärda inställningar, till exempel deras PIN-kod eller enhetskryptering. Andra gånger meddelar företagsportalappen bara användaren om eventuella inställningar som inte uppfyller principen.
+När du [distribuerar en efterlevnadsprincip](device-compliance-get-started.md) till en användare kontrollerar Intune alla enheter som användaren har hanterat med Intune för att se om enheterna uppfyller de grundläggande säkerhetskraven som du har definierat som en del av din BYOD-princip. När en enhets principefterlevnad har utvärderats skickas enhetens status till Intune. I vissa fall kan användare uppmanas att åtgärda inställningar, till exempel deras PIN-kod eller enhetskryptering. Andra gånger meddelar företagsportalappen bara användaren om eventuella inställningar som inte uppfyller principen.
 
 ## <a name="provide-access-to-company-resources"></a>Ge åtkomst till företagsresurser
 
-Det första som de flesta anställda vill ha på sina mobila enheter är tillgång till företagets e-post och dokument. Och de förväntar sig att kunna konfigurera detta utan att gå igenom komplexa steg och utan att behöva ringa supportavdelningen. Intune gör det enkelt för dig att [skapa och distribuera e-postinställningar](email-settings-configure.md) för interna e-postappar som är förinstallerade på mobila enheter.
+Det första som de flesta anställda vill få tillgång till på sina mobila enheter är företagets e-post och dokument. De förväntar sig att kunna konfigurera detta utan att gå igenom komplicerade processer och utan att behöva ringa supportavdelningen. Intune gör det enkelt för dig att [skapa och distribuera e-postinställningar](email-settings-configure.md) för interna e-postappar som är förinstallerade på mobila enheter.
 
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Med Intune kan du även hantera och distribuera appar som du har köpt i större
 
 ## <a name="protect-company-data"></a>Skydda företagsdata
 
-Intune skyddar företagets data via flera tekniklager. I identitetslagret används villkorlig åtkomst för att skydda åtkomsten till tjänster. Villkorlig åtkomst tillåter endast att hanterade och kompatibla enheter kommer åt företagsresurser. I klientprogramlagret används hantering av mobilprogram (MAM) för att skydda mot dataförlust.  Appskyddsprinciper förhindra att data flyttas till appar eller lagringsplatser som inte är skyddade. Med dessa principer kan du även rensa företagsdata om en enhet har tappats bort eller blivit stulen.
+Intune skyddar företagets data via flera tekniklager. I identitetslagret används villkorlig åtkomst för att skydda åtkomsten till tjänster. Villkorlig åtkomst tillåter endast att hanterade och kompatibla enheter kommer åt företagsresurser. Appskyddsprinciper skyddar mot dataförluster på klientappnivån. Appskyddsprinciper förhindra att data flyttas till appar eller lagringsplatser som inte är skyddade. Med dessa principer kan du även rensa företagsdata om en enhet har tappats bort eller blivit stulen.
 
 ### <a name="enforce-conditional-access-to-company-resources"></a>Framtvinga villkorlig åtkomst till företagsresurser
 
@@ -97,17 +97,17 @@ third link was (https://docs.microsoft.com/intune/deploy-use/restrict-access-to-
 > [!IMPORTANT]
 > Principer för villkorlig åtkomst fungerar inte om det inte finns en konfigurerad efterlevnadspolicy som kan användas för att verifiera efterlevnad.
 
-### <a name="prevent-data-loss-of-company-data-with-application-protection-policies"></a>Förhindra dataförlust av företagsdata med principer för programskydd
+### <a name="prevent-data-loss-of-company-data-with-app-protection-policies"></a>Förhindra dataförlust av företagsdata med appskyddsprinciper
 
-Med Intunes appskyddsprinciper kan du välja hur dina data kan nås: med eller utan enhetsregistrering. Den här flexibiliteten gör att du kan skydda företagsdata så att användare kan komma åt företagsresurser på ett säkert sätt även om de inte registrerar sina enheter i Intune.
+Med Intunes appskyddsprinciper kan du välja hur åtkomsten till dina data ska hanteras – med eller utan enhetsregistrering. Den här flexibiliteten gör att du kan skydda företagsdata så att användare kan komma åt företagsresurser på ett säkert sätt även om de inte registrerar sina enheter i Intune.
 
-Du kan använda [Intunes principer för appskydd](app-protection-policies.md) för att hjälpa att skydda företagsdata som dina användares iOS- och Android-enheter har åtkomst till. När du använder de här principerna på appnivå kan du styra hur företagsdata används och delas av anställda även om själva enheten inte hanteras av Intune
+Du kan använda [Intunes appskyddsprinciper](app-protection-policies.md) för att skydda företagsdata som iOS- och Android-enheter har åtkomst till. När du använder de här principerna på appnivå kan du styra hur företagsdata används och delas av anställda även om själva enheten inte hanteras av Intune
 
-Använd [Windows Information Protection (WIP) principer](app-protection-policies-configure-windows-10.md) för att göra detsamma för hanterade Windows 10 enheter. Dessa principer fungerar utan att påverka de anställdas upplevelse. De kräver inga ändringar i din nätverksmiljö eller andra appar.
+Använd [Windows Information Protection (WIP)](app-protection-policies-configure-windows-10.md) för att göra detsamma för hanterade Windows 10 enheter. Dessa principer fungerar utan att påverka de anställdas upplevelse. De kräver inga ändringar i din nätverksmiljö eller andra appar.
 
 ### <a name="remove-company-data-while-leaving-personal-data-intact"></a>Ta bort företagsdata och lämna personlig data intakt
 
-Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den bara är borttappad, kan du ta bort företagsappar och företagsdata från den. Om du vill göra detta kan du använda Intunes funktioner för att ta bort företagsdata och fabriksåterställning. Användarna kan även fjärråterställa sina egna personligt ägda enheter från Intune-företagsportalen om enheterna är registrerade i Intune.
+Om en enhet inte längre behövs i arbetet, om den ska användas för ett nytt syfte eller om den är borttappad, så kan du ta bort företagsappar och företagsdata från den. Om du vill göra detta kan du använda Intunes funktioner för att ta bort företagsdata och fabriksåterställning. Användarna kan även fjärråterställa sina egna personligt ägda enheter från Intune-företagsportalen om enheterna är registrerade i Intune.
 
 Med en [fabriksåterställning](devices-wipe.md) återställs enheten till fabriksinställningarna. Användardata och inställningar tas bort och enheten tas även bort från Intune-hanteringen. [Ta bort företagsinformation](devices-wipe.md#remove-company-data) tar endast bort företagsdata från enheten, men användarnas personliga data förblir intakta.
 
