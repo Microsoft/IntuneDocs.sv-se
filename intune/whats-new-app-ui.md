@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/15/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,25 +13,46 @@ ms.technology:
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 33d1f28cd5522ed47c3fdf83b289116728ded12b
-ms.sourcegitcommit: 0b164f806165d312acfc88815a60e325e3d02672
+ms.custom: intune-azure
+ms.openlocfilehash: 6db9bc7a3bafd61d03513ea1b6e1f0246faaab57
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
+## <a name="week-of-august-21-2017"></a>Veckan 21 augusti 2017
+
+### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogrutor för hantering av mobilprogram i Intune (MAM) kommer att få ett modernt gränssnitt <!-- 1199015 -->
+
+Dialogrutor för hantering av mobilprogram i Intune (MAM) kommer att uppdaterats till ett modernt utseende. Dialogrutorna kommer att fungera på samma sätt som tidigare.
+
+**Tidigare upplevelse**
+
+![gammalt gränssnitt](media\NewUI_Old_AttachFileHandler.jpg)
+
+**Modern upplevelse**
+
+![modernt gränssnitt](media\NewUI_Modern_AttachFileHandler.jpg)
+
+
 ## <a name="week-of-august-14-2017"></a>Veckan 14 augusti 2017
 
-### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10"></a>Uppdateringar av sidan Enhetsinformation i företagsportalappen för Windows 10
+### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Uppdateringar av sidan Enhetsinformation i företagsportalappen för Windows 10 <!---1287448--->
 
 Företagsportalappen för Windows 10 flyttar __Kategori__-taggen från under rubriken till en egenskap på sidan __Enhetsinformation__.
 
 ![Företagsportalappen för Windows-skärmen Enhetsinformation där nu fältet Kategorier visas som en egenskap istället för direkt under rubriken på skärmen.](./media/cp_win10_category_tag_move_after_1708.png)
 
 ## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
+
+### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Sidor med appinformation kommer att visa ny information för Android-enheter <!--1287476-->
+
+Sidan med appinformation i företagsportalappen för Android visar nu de appkategorier som IT-administratören har definierat för den appen.
+
+![Den nya appinformationssidan](./media/cp_android_appdetails_after_1708.png)
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
 
@@ -128,7 +149,7 @@ Baserat på användarfeedback har vi lagt till en ny menyåtgärd i företagspor
 
 ## <a name="week-of-june-5-2017"></a>Vecka 5 juni 2017
 
-### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios"></a>Förbättringar av appaneler i företagsportalappen för iOS
+### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Förbättringar av appaneler i företagsportalappen för iOS <!--1230777-->
 Vi har uppdaterat designen av appaneler på startsidan så att de återspeglar anpassningsfärgen som du angett för Företagsportalen.
 
 **Före**

@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: robstackmsft
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 237e141eacb413eb130b17217116b6d0c7e085f8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d5db079d224f145336b5d3c9b9963f8a5f2c306a
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="common-ways-to-use-intune"></a>Vanliga sätt att använda Intune
 
@@ -40,9 +40,9 @@ Nedan följer korta introduktioner till de sex vanligaste scenarierna som förli
 De flesta Enterprise Mobility-strategier börjar med en plan för att möjliggöra säker åtkomst till e-post för anställda med mobila enheter som ansluter till Internet. Många organisationer har fortfarande lokala data och programservrar, t.ex. Microsoft Exchange, som finns i företagets nätverk.
 
 
-Intune och Microsoft Enterprise Mobility + Security (EMS) tillhandahåller en unik integrerad [lösning för villkorlig åtkomst](conditional-access.md) ([den klassiska portalen](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune)) för Exchange Server, som ser till att ingen mobilapp kan komma åt e-post förrän enheten har registrerats med Intune. Du kan göra allt detta utan att distribuera en till gateway-dator vid gränsen till företagets nätverk.
+Intune och Microsoft Enterprise Mobility + Security (EMS) tillhandahåller en unik integrerad [lösning för villkorlig åtkomst](conditional-access.md) ([den klassiska portalen](/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune)) för Exchange Server, som ser till att ingen mobilapp kan komma åt e-post förrän enheten har registrerats med Intune. Du kan göra allt detta utan att distribuera ytterligare en gateway-dator vid gränsen till företagets nätverk.
 
-Med Intune kan du också aktivera åtkomst till mobilappar som kräver säker åtkomst till lokala data, t.ex. servrar för affärsappar. Detta görs normalt med [Intune-hanterade certifikat](certificates-configure.md) ([den klassiska portalen](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Microsoft Azure Active Directory-programproxy.  
+Med Intune kan du också aktivera åtkomst till mobilappar som kräver säker åtkomst till lokala data, t.ex. servrar för affärsappar. Detta görs normalt med [Intune-hanterade certifikat](certificates-configure.md) ([den klassiska portalen](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles)) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Microsoft Azure Active Directory-programproxy. 
 
 I dessa fall är det enda sättet att komma åt företagets data att registrera enheten i hanteringen. När enheterna har registrerats kontrollerar hanteringssystemet att de är kompatibla med dina principer innan de kan komma åt företagsdata. Dessutom kan Intunes [programhanteringsverktyg och App SDK](apps-prepare-mobile-application-management.md) användas för att hålla kvar data i den verksamhetsspecifika appen, så att det inte går att vidareföra företagsdata till konsumentappar eller konsumenttjänster.
 
@@ -61,7 +61,7 @@ Office-mobilapparna i deras respektive appbutiker är redo att användas med dat
 En vanlig Office 365-distributionsmetod är att kräva att enheterna registreras för hantering om de måste vara helt konfigurerade med företagsappar, certifikat, Wi-Fi eller VPN-konfigurationer, som är ett vanligt scenario för företagsägda enheter.  
 
 
-Om användaren bara behöver åtkomst till företagets e-post och dokument, vilket ofta är fallet med personligt ägda enheter, kan du kräva att användaren använder Office-mobilapparna (som du har tillämpat [appskyddsprinciper](app-protection-policies.md) på ([den klassiska portalen](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)). Då behöver inte enheten registreras!  
+Om användaren bara behöver åtkomst till företagets e-post och dokument, vilket ofta är fallet med personligt ägda enheter, kan du kräva att användaren använder Office-mobilapparna (som du har tillämpat [appskyddsprinciper](app-protection-policies.md) på ([den klassiska portalen](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)). Då behöver inte enheten registreras.  
 
 
 
@@ -75,7 +75,7 @@ BYOD blir allt populärare hos organisationer som ett sätt att minska maskinvar
 
 Om enhetsregistrering inte är ett genomförbart alternativ erbjuder Intune en alternativ BYOD-metod som innebär att helt enkelt [hantera de appar som innehåller företagsdata](app-protection-policies.md) ([den klassiska portalen](/intune-classic/deploy-use/protect-apps-and-data-with-microsoft-intune)). Intune skyddar företagets data även om appen i fråga har åtkomst till både företagsrelaterade och personliga data, som är fallet för Office-mobilappar.  
 
-Som administratör kan du kräva att användarna kommer åt Office 365 från Office-mobilapparna och konfigurera apparna med principer som ser till att data är skyddade (t.ex. kryptering, PIN-kod och så vidare). Dessa principer förhindrar dataförlust från ohanterade appar och lagringsplatser – i eller utanför dessa appar. Principerna förhindrar till exempel att en användare kopierar text från en e-postprofil för företaget till en privat e-postprofil, även om båda profilerna är konfigurerade i Outlook Mobile. Liknande konfigurationer kan distribueras för andra tjänster och program som krävs av BYOD-användarna.
+Som administratör kan du kräva att användarna kommer åt Office 365 från Office-mobilapparna och konfigurera apparna med principer som ser till att data är skyddade (t.ex. kryptering, PIN-kod och så vidare). Dessa appskyddsprinciper förhindrar dataförlust från ohanterade appar och lagringsplatser – i eller utanför dessa appar. Principerna förhindrar till exempel att en användare kopierar text från en e-postprofil för företaget till en privat e-postprofil, även om båda profilerna är konfigurerade i Outlook Mobile. Liknande konfigurationer kan distribueras för andra tjänster och program som krävs av BYOD-användarna.
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 

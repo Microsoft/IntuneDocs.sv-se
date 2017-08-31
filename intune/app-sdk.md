@@ -4,7 +4,7 @@ description: "Intune App SDK, som finns för både iOS- och Android-plattformen,
 keywords: 
 author: mtillman
 manager: angrobe
-ms.date: 12/15/2016
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8a9b0c398c4b6dd46823ceaaefd68ee193ab4502
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: c509e324788828d8ce5a3e9ac556c82ce57e9b07
+ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="intune-app-sdk-overview"></a>Översikt över Intune App SDK
 Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du kommer märka kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda våra API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app.
@@ -62,8 +62,7 @@ Funktionen för flera identiteter löser problemet med dataskydd som många orga
 ### <a name="app-protection-without-device-enrollment"></a>Appskydd utan enhetsregistrering
 
 >[!IMPORTANT]
->Intunes appskydd utan registrering av enheter är för närvarande inte tillgängligt med Intune App SDK för Android. Det är tillgänglig för Intunes programhanteringsverktyg, SDK för iOS, SDK Xamarin-komponenten och SDK Cordova-plugin-programmet.
-
+>Intunes appskydd utan enhetsregistrering är tillgängligt för Intunes programhanteringsverktyg, Intune App SDK för Android, Intune App SDK för iOS, SDK Xamarin-komponenten och SDK Cordova-plugin-programmet.
 
 Många användare med personliga enheter vill kunna komma åt företagsdata utan att registrera sina personliga enheter med en MDM-leverantör för hantering av mobila enheter. MDM-registreringen kräver global kontroll över enheten men många användare är ovilliga att ge kontroll över deras personliga enheter till företagen.
 

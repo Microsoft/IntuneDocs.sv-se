@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3e6b720eeed65c81e5f3a4dbf06890ea8fd09ce
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 7f6f7443224b9ec114f0323d1715f343b0adfec4
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="whats-conditional-access"></a>Vad är villkorlig åtkomst?
 
@@ -37,7 +37,7 @@ Du kan definiera villkor som reglerar åtkomsten till företagets data baserat p
 
 ## <a name="conditional-access-with-intune"></a>Villkorlig åtkomst med Intune
 
-I Intune finns nu efterlevnad för mobila enheter och funktioner för hantering av mobila program, vilket stöder lösningen för villkorlig åtkomst i EMS.
+I Intune finns nu efterlevnad för mobila enheter och principer för hantering av appar, vilket stöder lösningen för villkorlig åtkomst i EMS.
 
 ![Intune och villkorlig åtkomst vid användning av EMS](./media/intune-with-ca-1.png)
 

@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1667470154e5d2485e3a372ab25d36eea12109a7
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 204df4648f1d79167e8eb5941d91b48d65b90704
+ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrera enheter med enhetsregistreringshanteraren
 
@@ -40,15 +40,15 @@ Endast användare i Intune-konsolen kan vara enhetsregistreringshanterare. Den a
 
 DEM-användaren kan:
 
--   Registrera upp till 1000 enheter i Intune.
--   Logga in på företagsportalen och hämta företagsappar.
--   Konfigurera åtkomst till företagets data genom att distribuera rollspecifika appar till surfplattorna.
+-   Registrera upp till 1000 enheter i Intune
+-   Logga in på företagsportalen och hämta företagsappar
+-   Konfigurera åtkomst till företagets data genom att distribuera rollspecifika appar till surfplattorna
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Begränsningar för enheter som registreras med ett DEM-konto
 
 Enheter som har registrerats med ett konto för enhetsregistreringshantering har följande begränsningar:
 
-  - Ingen åtkomst per användare. Eftersom enheter inte har en tilldelad användare, har enheten ingen åtkomst till e-post eller företagsdata. VPN-konfigurationer, till exempel, skulle fortfarande kunna användas för att ge enhetens appar åtkomst till data.
+  - Ingen åtkomst per användare. Eftersom enheter inte har en tilldelad användare har enheten ingen åtkomst till e-post eller företagsdata. VPN-konfigurationer, till exempel, skulle fortfarande kunna användas för att ge enhetens appar åtkomst till data.
   - Ingen villkorad åtkomst eftersom de är scenarier per användare
   - DEM-användaren kan inte avregistrera DEM-registrerade enheter på själva enheten genom företagsportalen. Intune-administratören kan göra det här, men inte DEM-användaren.
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
