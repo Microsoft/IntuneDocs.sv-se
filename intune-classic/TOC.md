@@ -94,6 +94,7 @@
 ### [Lägga till appar för datorer med Intune-klienten](deploy-use/add-apps-for-windows-pcs-in-microsoft-intune.md)
 #### [Hantera licensavtal](deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ### [Lösa principkonflikter](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
+### [Hantera aviseringar](deploy-use/get-notified-by-alerts.md)
 ## Konfigurera enheter
 ### [Hantera inställningar och funktioner på dina enheter med principer](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Inställningar för iOS](deploy-use/ios-policy-settings-in-microsoft-intune.md)
