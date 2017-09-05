@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 manager: angrobe
 ms.author: mtillman
-ms.date: 06/27/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 29911cf5a8fa3488640813efd8f33ee07c951c31
-ms.sourcegitcommit: 99ffed621855357de427d6fdf7b70d4e543197e9
+ms.openlocfilehash: 62478796f1f24464503a0d564e0d8972dd04f8b3
+ms.sourcegitcommit: 10e3ab2aeb79a1fb2243bef2748ccc003fdd4cc7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -87,9 +87,6 @@ Följ dessa steg för att aktivera Intune App SDK:
 2. **Alternativ 2**: Länk till biblioteket `libIntuneMAM.a`. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
     ![Intune App SDK iOS: länkade ramverk och bibliotek](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
-
-    > [!NOTE]
-    > Om du planerar att lansera appen i App Store bör du använda den version av `libIntuneMAM.a` som skapats för lanseringen, alltså inte felsökningsversionen. Slutversionen ligger i **slutversionsmappen**. Felsökningsversionen innehåller utförliga data som hjälper till att felsöka problem med Intune App SDK.
 
     Lägg till `-force_load {PATH_TO_LIB}/libIntuneMAM.a` i någon av följande och ersätt `{PATH_TO_LIB}` med platsen för Intune App SDK:
       * Projektets konfigurationsinställning för `OTHER_LDFLAGS`
