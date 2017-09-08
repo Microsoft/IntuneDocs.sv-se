@@ -1,11 +1,11 @@
 ---
-title: "Du måste installera Skycure på din iOS-enhet | Microsoft Docs"
-description: 
+title: "Du måste installera Symantec Endpoint Protection Mobile på din iOS-enhet | Microsoft Docs"
+description: "Lär dig hur du installerar SEP Mobile på din iOS-enhet."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/28/2017
+ms.date: 08/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,42 +14,42 @@ ms.assetid: 7394ff8f-3a21-414d-be4a-4626ec370720
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: ca6072ce66482f5986d37b2f61a123587ad8313f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 5bc687566a82878f47f253ff70aa01d68a328b33
+ms.sourcegitcommit: 1135765fd3ac2149663341d8107f656aba236493
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/30/2017
 ---
-# <a name="you-need-to-install-skycure-on-your-ios-device"></a>Du måste installera Skycure på din iOS-enhet
+# <a name="you-need-to-install-symantec-endpoint-protection-mobile-on-your-ios-device"></a>Du måste installera Symantec Endpoint Protection Mobile på din iOS-enhet
 
-Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Skycure-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur IT-administratören har konfigurerat Skycure.
+Innan du kan komma åt ditt arbete måste företagssupporten be dig att installera mobilappen Symantec Endpoint Protection (SEP) som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur ditt företag har konfigurerat SEP Mobile.
 
 **Vad du behöver göra:**
 
-1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att Skycure installeras på enheten.
+1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att SEP Mobile installeras på enheten.
 
-  ![Installera genom att trycka på Skycure](./media/ios-mtd-install-app-request.png)
+  <!--![Tap install to install Skycure](./media/ios-mtd-install-app-request.png)-->
 
 2. När följande meddelande visas trycker du på **Inställningar**, sätter på **Platstjänster** och trycker sedan på **Fortsätt**.
 
-  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-skycure-allow-location-services.png)
+  <!--![Tap Settings and then Location Services](./media/ios-skycure-allow-location-services.png)-->
 
-3. Granska de behörigheter som Skycure behöver och tryck på **Fortsätt**.
+3. Granska de behörigheter som SEP Mobile behöver och tryck på **Fortsätt**.
 
-4. Vid meddelandet som ber dig att tillåta att Skycure skickar aviseringar till dig trycker du på **Tillåt**.
+4. När meddelandet visas som ber dig att tillåta att SEP Mobile skickar aviseringar till dig trycker du på **Tillåt**.
 
-  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-skycure-allow-notifications.png)
+  <!--![Tap Settings and then Location Services](./media/ios-skycure-allow-notifications.png)-->
 
-5. Installationen av Skycure har slutförts och välkomstskärmen visas.
+5. Installationen av SEP Mobile har slutförts och välkomstskärmen visas.
 
-  ![Skycures välkomstskärmen, som ger en kort beskrivning av vad Skycure är och ger dig alternativ om hur du kan fortsätta.](./media/ios-skycure-welcome-screen.png)
+  <!--![Skycure welcome screen, which displays a short explanation of what Skycure is and presents the option to continue.](./media/ios-skycure-welcome-screen.png)-->
 
 6. När du är klar med konfigurationen visas följande skärm om inga säkerhetshot har hittats på enheten.
 
-  ![Skycure hittade inga säkerhetshot på din enhet](./media/ios-skycure-no-threats-found.png)
+  <!--![Skycure found no security threats](./media/ios-skycure-no-threats-found.png)-->
 
-Om Skycure hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
+Om SEP Mobile hittar ett säkerhetshot på enheten visas instruktioner om hur du löser problemet.
 
 **Om installationen inte fungerar**
 
-Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta IT-administratören om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta företagssupporten om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).

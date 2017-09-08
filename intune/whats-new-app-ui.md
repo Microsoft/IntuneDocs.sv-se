@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,35 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db9bc7a3bafd61d03513ea1b6e1f0246faaab57
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: c5f6c5a4f5d76845c435ce979068988807120769
+ms.sourcegitcommit: 2d67df51af66ec859587b66a6ce3965461601c29
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+
+## <a name="week-of-august-28-2017"></a>Veckan 28 augusti 2017
+
+
+### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth<!---1196951--->
+
+Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter med OAuth. Ett annat flöde på företagsportalappen för iOS kommer att användas för att möjliggöra säkrare autentisering. När användare försöker logga in på ett nytt Exchange-konto i e-postprogrammet visas en dialogruta om webbvyn. Vid registreringen i Intune visas en dialogruta som ger det inbyggda e-postprogrammet åtkomst till ett certifikat. De flesta användarna kommer inte att se e-postmeddelanden i karantän längre. För befintliga e-postkonton används även i fortsättningen det grundläggande protokollet för autentisering, så dessa användare kommer fortfarande att få e-postmeddelanden i karantän levererade till sig. Den här inloggningen för slutanvändare liknar den på Office-mobilappar.
+
+![Välj kontotyp i det inbyggda e-postprogrammet.](./media/ios-11-ca-email-after-1708-01.png)
+
+![När du har valt Exchange visar iOS-enheten en dialogruta som frågar efter e-postadressen och kontonamnet.](./media/ios-11-ca-email-after-1708-02.png)
+
+![Ange e-postadress och kontonamn.](./media/ios-11-ca-email-after-1708-03.png)
+
+![Skickas till den externa Microsoft-inloggningssidan.](./media/ios-11-ca-email-after-1708-04.png)
+
+![Ange ett lösenord på Microsoft-sidan.](./media/ios-11-ca-email-after-1708-05.png)
+
+![Microsoft uppmanar användaren att registrera enheten för hantering.](./media/ios-11-ca-email-after-1708-06.png)
+
+![Användaren uppmanas att registrera från företagsportalens webbplats.](./media/ios-11-ca-email-after-1708-07.png)
 
 ## <a name="week-of-august-21-2017"></a>Veckan 21 augusti 2017
 
@@ -31,11 +52,11 @@ Dialogrutor för hantering av mobilprogram i Intune (MAM) kommer att uppdaterats
 
 **Tidigare upplevelse**
 
-![gammalt gränssnitt](media\NewUI_Old_AttachFileHandler.jpg)
+![gammalt gränssnitt](./media/NewUI_Old_AttachFileHandler.jpg)
 
 **Modern upplevelse**
 
-![modernt gränssnitt](media\NewUI_Modern_AttachFileHandler.jpg)
+![modernt gränssnitt](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
 ## <a name="week-of-august-14-2017"></a>Veckan 14 augusti 2017
