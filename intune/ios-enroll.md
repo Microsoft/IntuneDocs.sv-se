@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/15/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61bdbc7ca68995e23295cf099ce73dfdcaeba37c
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 8bae9bd48493f20bb4abb94290013f27a6a75dd6
+ms.sourcegitcommit: 10e3ab2aeb79a1fb2243bef2748ccc003fdd4cc7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
@@ -32,7 +32,19 @@ Innan du kan aktivera iOS-enheter måste du göra följande:
 - [Konfigurera Intune](setup-steps.md) - följande steg konfigurerar din Intune-infrastruktur. I synnerhet kräver registrering av enheter att du [anger en MDM-utfärdare](mdm-authority-set.md).
 - [Hämta ett certifikat för Apple MDM Push](apple-mdm-push-certificate-get.md) -Apple kräver ett certifikat för att aktivera hantering av iOS- och macOS-enheter.
 
-När kraven har uppfyllts kan användare installera företagsportalappen och registrera sina personliga iOS-enheter, eller så kan administratören konfigurera hantering av företagsägda iOS-enheter. Administratörer kan också tilldela [enhetsregistreringshanterare](device-enrollment-manager-enroll.md) som kan registrera flera enheter med ett enda hanteringskonto. Intune stöder följande registreringsmetoder för iOS-enheter som ägs av företaget:
+## <a name="user-owned-ios-devices-byod"></a>Användarägda iOS-enheter (BYOD)
+
+Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller förhandskraven och har tilldelat licenser till användarna så kan de ladda ned företagsportalappen för iOS från App Store och följa instruktionerna för registrering i appen.
+
+## <a name="company-owned-ios-devices"></a>Företagsägda iOS-enheter
+Intune stöder följande registreringsmetoder för iOS-enheter som ägs av företaget för organisationer som köper enheter för sina användare:
+
+- Apples program för enhetsregistrering (DEP)
+- Apple School Manager
+- Apple Configurator-registrering med installationsassistenten
+- Apple Configurator – direkt registrering
+
+Du kan även registrera företagsägda iOS-enheter med ett konto för [enhetsregistreringshantering](device-enrollment-manager-enroll.md).
 
 ## <a name="device-enrollment-program"></a>Program för enhetsregistrering
 Företag kan nu hantera iOS-enheter som köpts via Apples program för enhetsregistrering (DEP). Med DEP kan du distribuera en registreringsprofil ”over-the-air” för att hantera enheter. Läs mer om [programmet för enhetsregistrering](device-enrollment-program-enroll-ios.md).

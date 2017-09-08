@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 77f433037e4e576b29cf5800e9666008300ce568
-ms.sourcegitcommit: 3d1ec7a68977e6f5727821366ffd25657b459818
+ms.openlocfilehash: b50856bdc500cab4b206a105275b4842680d4423
+ms.sourcegitcommit: 71cdf99d639530e70dbe48d611d399e52c3150b0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/26/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -62,9 +62,15 @@ Du kan dessutom använda filterfönstret för att söka efter enheter efter tele
  
 Mer information om enhetsinventering finns i [Så här visar du Intunes enhetsinventering](device-inventory.md).
 
-#### <a name="conditional-access-support-for-mac-devices"></a>Stöd för villkorlig åtkomst på Mac-enheter 
+#### <a name="conditional-access-support-for-macos-devices"></a>Stöd för villkorlig åtkomst på macOS-enheter 
 <!-- 720172 -->
 Nu kan du skapa en princip för villkorlig åtkomst som kräver att Mac-enheter ska vara registrerade i Intune och kompatibla med dess efterlevnadsprinciper för enheter. Användarna kan till exempel ladda ned appen för Intune-företagsportalen på macOS och registrera sina Mac-enheter i Intune. Intune utvärderar om Mac-enheten följer standard eller inte med krav som PIN, kryptering, OS-version och systemintegritet.
+
+- Läs mer om [stöd för villkorlig åtkomst på macOS-enheter](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+
+#### <a name="company-portal-app-for-macos-is-in-public-preview----1484796---"></a>Företagsportalappen för macOS är tillgänglig som förhandsversion <!---1484796--->
+Företagsportalappen för macOS är nu tillgänglig som en del av den allmänt tillgängliga förhandsversionen för villkorlig åtkomst i Enterprise Mobility + Security. Den här versionen stöder macOS 10.11 och högre. Hämta den på [https://aka.ms/macOScompanyportal](https://aka.ms/macOScompanyportal). 
+
 
 #### <a name="new-device-restriction-settings-for-windows-10"></a>Inställningar för enhetsbegränsningar för Windows 10    
 <!--1063965, 1308850  -->
@@ -87,12 +93,29 @@ Mer information finns i [Endpoint Protection-inställningar för Windows 10 och 
 #### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>Ny inloggad upplevelse för användare av Android-företagsportalen och appskyddsprincip <!-- 621669 -->
 Slutanvändarna kan nu bläddra bland appar, hantera enheter och visa it-kontaktinformation med hjälp av Android-företagsportalappen utan att registrera sina Android-enheter. Om en användare dessutom redan använder en app som skyddas av principer för Intune-appskydd och startar Android-företagsportalen får slutanvändaren inte längre någon uppmaning att registrera enheten.
 
+### <a name="new-setting-in-the-android-company-portal-app-to-toggle-battery-optimization---1405990--"></a>Ny inställning i Android-företagsportalappen för att ändra batterioptimering <!--1405990-->
+Sidan **Inställningar** i företagsportalappen för Android har en ny inställning som gör det enkelt för användarna att stänga av batterioptimering för företagsportalen och Microsoft Authenticator-appar. Appnamnet som visas i inställningen beror på vilken app som hanterar arbetskontot. Vi rekommenderar att användarna stänger av batterioptimering för att få bättre prestanda med arbetsappar som synkroniserar e-post och data. 
+
 #### <a name="multi-identity-support-for-onenote-for-ios---------1234281---"></a>Stöd för flera identiteter med OneNote för iOS...<!-- 1234281 -->
 Slutanvändare kan nu använda olika konton (arbete och personliga) med Microsoft OneNote för iOS. Appskyddsprinciper kan tillämpas på företagsdata i anteckningsböcker för arbete utan att påverka deras personliga anteckningsböcker. En princip kan till exempel tillåta en användare att söka efter information i anteckningsböcker för arbete, men användaren kan inte kopiera och klistra in företagets data från anteckningsboken för arbete till en personlig anteckningsbok.
  
 - Mer information om appar som stöder [appskydd och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
 
+#### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices"></a>Nya inställningar för att tillåta och blockera appar på Samsung KNOX Standard-enheter
+<!-- 1305423 -->  
+Den här versionen innehåller nya [inställningar för enhetsbegränsning](device-restrictions-android.md) som du kan använda för att ange följande applistor:
+ 
+- Appar som användare tillåts att installera
+- Appar som användare är blockerade från att installera
+- Appar som är dolda från användaren på enheten
+ 
+Du kan ange appen med hjälp av URL, paketnamn eller från listan över appar som du hanterar.
 
+#### <a name="new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune"></a>Ny gränssnittslänk för princip för appbaserad villkorlig åtkomst för Azure AD från Intune
+
+IT-administratörer kan nu ange appbaserade villkorsprinciper via det nya gränssnittet för villkorlig åtkomstprincip i Azure AD-arbetsbelastningen. Den appbaserade villkorliga åtkomsten som finns i avsnittet Intune-appskydd i Azure Portal finns kvar där för tillfället och tillämpas sida vid sida. Det finns även en praktisk länk till det nya gränssnittet för villkorlig åtkomstprincip i Intune-arbetsbelastningen.
+
+- Läs mer om [appbaserad villkorlig åtkomst i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
 
 
 ## <a name="notices"></a>Meddelanden
@@ -112,6 +135,9 @@ De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) s
 
 
 ## <a name="whats-coming"></a>Kommande nyheter
+
+#### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth<!---1196951--->
+Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter med OAuth. Ett annat flöde på företagsportalappen för iOS kommer att användas för att möjliggöra säkrare autentisering. När användare försöker logga in på ett nytt Exchange-konto i e-postprogrammet visas en dialogruta om webbvyn. Vid registreringen i Intune visas en dialogruta som ger det inbyggda e-postprogrammet åtkomst till ett certifikat. De flesta användarna kommer inte att se e-postmeddelanden i karantän längre. För befintliga e-postkonton används även i fortsättningen det grundläggande protokollet för autentisering, så dessa användare kommer fortfarande att få e-postmeddelanden i karantän levererade till sig. Den här inloggningen för slutanvändare liknar den på Office-mobilappar.
 
 ### <a name="end-of-support-for-ios-80----1164477---"></a>Stöd för iOS 8.0 upphör <!---1164477--->
 Hanterade appar och företagsportalappen för iOS kräver iOS 9.0 och högre för åtkomst till företagets resurser. Enheter som inte är uppdaterade innan september kommer inte längre att ha åtkomst till Företagsportalen eller apparna. 
