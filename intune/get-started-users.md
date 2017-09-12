@@ -1,10 +1,10 @@
 ---
 title: "Kom igång med användare"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Lägg till användare i Intune och låt dem få tillgång till företagsresurser på mobila enheter."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 08/16/2017
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1559a265b28627281b484c8250d1c597d2f094c6
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: a33eb2d5dc96a2647cf2582bbc6cd4ba2d9c0961
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="get-started-with-managing-users"></a>Kom igång med att hantera användare
 
-Tänk på alla olika personer i din organisation. Alla som använder företagsinformation behöver en användare som hanterar åtkomst till informationen i Intune. 
+Tänk på alla olika personer i din organisation. Alla som använder företagsinformation behöver en användare som hanterar åtkomst till informationen i Intune.
 
 ## <a name="how-do-i-create-a-user"></a>Hur skapar jag en användare?
 
@@ -51,4 +51,4 @@ När du har skapat en användare måste du använda [Office 365-portalen](http:/
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Kom igång med grupper](get-started-groups.md) - Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till.
+[Kom igång med grupper](get-started-groups.md) – Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till.

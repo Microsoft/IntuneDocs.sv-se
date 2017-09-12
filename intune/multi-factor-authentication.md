@@ -1,6 +1,6 @@
 ---
 title: "Multifaktorautentisering för enhetsregistrering i Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Så här kräver du multifaktorautentisering i Azure AD vid enhetsregistrering."
 keywords: 
 author: nathbarn
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: 
 ms.custom: intune-azure
-ms.openlocfilehash: 4789f94d06f61219dea3faa64a4ed0c59afcd56b
-ms.sourcegitcommit: af013af8d9a63c9aa16e5e9eddf38ad9c5a77898
+ms.openlocfilehash: 0355c6ca11d7b1221ad7aa833874eba91eea0600
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="multi-factor-authentication-for-intune-device-enrollments"></a>Multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -58,7 +58,7 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 11. I avsnittet **Tilldelningar** väljer du **Villkor**.
 12. I **Villkor** behöver du inte ange några inställningar för MFA.
 13. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
-14. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** .
+14. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering **.
     Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats.
 15. Välj **Välj**.
 16. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.

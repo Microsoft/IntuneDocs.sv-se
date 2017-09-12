@@ -1,6 +1,6 @@
 ---
 title: Intune-ordlista
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Läs mer om den terminologi som används i Microsoft Intune"
 keywords: 
 author: robstackmsft
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: 2df6c8c79954c2145ffa6eb33782cee690d78b1d
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 8eaf82e995e3b572d897b63aaf36480424603ce6
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="i"></a>I
 |||
 |-|-|
-|Intune-portal|Den Azure-portal som du använder för de flesta hanteringsåtgärderna i Intune.|
+|Azure-portalen|Den Azure-portal som du använder för de flesta hanteringsåtgärderna i Intune.|
 |Intune-klientprogrammet|Ett annat sätt att [hantera vissa Windows-datorer](/intune-classic/get-started/choose-how-to-manage-devices) om du behöver hjälp med att bestämma vilken metod du ska använda.|
 |Intune Software Publisher|Ett verktyg som du använder för att [define apps you want to deploy and upload them to your cloud storage space](/intune-classic/deploy-use/add-apps) (definiera appar som du vill distribuera och överföra dem till ditt molnlagringsutrymme).|
 |Inventering|Använd för att visa [maskinvara och program som finns installerade](/intune/device-inventory) på enheter som du hanterar.|

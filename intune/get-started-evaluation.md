@@ -1,10 +1,10 @@
 ---
 title: "Komma igång med Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Gör ett antal korta praktiska övningar för att lära dig mer om Intune."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 08/16/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 6bfab644-c1e2-4154-a254-e95b9a1d75f2
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5dc7a76ddac12dd3e002c8780541d3dd4e976896
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: abfd1c1a05ce0eac3e6ab835d6ac8b017c9a6d77
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Vad kan Intune göra för mitt företag?
 
@@ -27,7 +27,7 @@ Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som
 
 ![Övergripande arkitekturdiagram för Microsoft Intune](/intune/media/intunearchitecture.svg)
 
-Vi vet att det kan vara svårt att komma igång med att hantering av mobila enheter eftersom man måste fatta många svåra beslut å företagets vägnar. Under de här övningarna går du igenom en rad uppgifter där du lär dig att använda Intune för att skydda företagets resurser. 
+Vi vet att det kan vara svårt att komma igång med att hantering av mobila enheter eftersom man måste fatta många svåra beslut å företagets vägnar. Under de här övningarna går du igenom en rad uppgifter där du lär dig att använda Intune för att skydda företagets resurser.
 
 ## <a name="what-are-the-exercises"></a>Vad är det för övningar?
 

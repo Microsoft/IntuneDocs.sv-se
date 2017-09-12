@@ -1,6 +1,6 @@
 ---
 title: "Inställningar för enhetsbegränsningar för iOS i Intune"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på iOS-enheter.”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eec078fa0ddc0414b2912e3df841841d96b2e79e
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 10b27d6fc806ab2565631353761ed1c31795610d
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
 
@@ -82,7 +82,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 -   **Visa dokument som inte gäller företag i företagsappar** – Tillåt att alla dokument visas i företagshanterade appar.
 -   **Behandla AirDrop som ett ohanterat mål** – Stoppar hanterade appar från att kunna skicka data. Airdrop.
 -   **Lägga till Game Center-vänner (endast övervakat)** – Tillåt användaren att lägga till vänner i Game Center.
--   **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
+-   **Game Center (endast övervakat) ** – Blockera eller aktivera användning av appen Game Center.
 -   **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
 -   **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
 -   **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
