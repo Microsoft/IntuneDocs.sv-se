@@ -1,6 +1,6 @@
 ---
 title: "Så här använder du enhetskategorier i Intune"
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Läs hur man använder enhetskategorier som användare kan välja när de registrerar sina enheter i Intune.”"
 keywords: 
 author: robstackmsft
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6c5d97499545d0ad3899f28ed4e88eb4dc1fe734
-ms.sourcegitcommit: ee7f69efe9f32a1d6bdeb1fab73d03dbfe1ae58c
+ms.openlocfilehash: 00becba338f9a64e341b0b6d220b1a4ace3b40a9
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="map-device-groups"></a>Mappa enhetsgrupper
 
@@ -56,7 +56,7 @@ I det här steget kommer du att skapa dynamiska grupper i Azure Portal baserat p
 
 Se avsnittet [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) (Använda attribut för att skapa avancerade regler) i Azure Active Directory-dokumentationen för att fortsätta. 
 
-Använd informationen i det här avsnittet för att skapa en enhetsgrupp med en avancerad regel med hjälp av **deviceCategory**-attributet. Till exempel (**device.deviceCategory -eq** "*<the device category name you got from the Intune portal>*")
+Använd informationen i det här avsnittet för att skapa en enhetsgrupp med en avancerad regel med hjälp av **deviceCategory**-attributet. Till exempel (**device.deviceCategory -eq** "*<the device category name you got from the Azure portal>*")
 
 När du har konfigurerat enhetsgrupper och användarna då registrerar sina enheter får de se en lista med de kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Active Directory-säkerhetsgrupp som motsvarar den kategori som har valts.
 

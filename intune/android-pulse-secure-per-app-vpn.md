@@ -1,6 +1,6 @@
 ---
 title: "Per app-VPN-profil för Android – Pulse Secure"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune.”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f0e3a8363eb25ba3a3b2c16f15b8188acb694938
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 309156b6bf5f74bc226ce9e30a2e12b03e03705c
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter
 
@@ -47,7 +47,7 @@ När du har tilldelat principen till din Android-enhet eller användargrupper sk
 5. Välj **VPN** i listrutan **Profiltyp**.
 3. Välj **Inställningar** > **Konfigurera** och konfigurera sedan VPN-profilen enligt inställningarna i [Så här konfigurerar du VPN-inställningar](vpn-settings-configure.md) och [Intunes VPN-inställningar för Android-enheter](vpn-settings-android.md).
 
-Notera **anslutningens namn** , det vill säga det värde som du anger när du skapar VPN-profilen. Detta krävs i nästa steg. Till exempel **MyAppVpnProfile**.
+Notera **anslutningens namn **, det vill säga det värde som du anger när du skapar VPN-profilen. Detta krävs i nästa steg. Till exempel **MyAppVpnProfile**.
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Steg 2: Skapa en princip för anpassad konfigurering
 

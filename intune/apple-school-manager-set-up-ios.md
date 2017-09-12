@@ -1,6 +1,6 @@
 ---
 title: "Konfigurera registrering av Apple School Manager-programmet för iOS-enheter"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS-enheter med Intune\""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 91fd4719a4305f5e422163f9049684ebd9e9e656
-ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
+ms.openlocfilehash: 6b3ecc9af91d1a78f84dd6d4b8f47f0bf3e8c742
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -67,7 +67,7 @@ Innan du kan registrera företagsägda iOS-enheter med Apple School Manager beh�
 3.  Ange **MDM-serverns namn**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
    ![Skärmbild av Apple School Manager-portalen med serienummeralternativet markerat](./media/asm-server-assignment.png)
 
-4.  Välj **Ladda upp fil...**  i Apples portal, bläddra till .pem-filen och välj **Spara MDM-server** (längst ned till höger).
+4.  Välj **Ladda upp fil... ** i Apples portal, bläddra till .pem-filen och välj **Spara MDM-server** (längst ned till höger).
 5.  Välj **Hämta token** och ladda ned servertokenfilen (.p7m) till datorn.
 6. Gå till **Enhetstilldelningar** och **Välj enhet** med manuell inmatning av **Serienummer**, **Ordernummer** eller **Överför CSV-fil**.
      ![Skärmbild av Apple School Manager-portalen med serienummeralternativet markerat](./media/asm-device-assignment.png)
