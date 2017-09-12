@@ -1,4 +1,4 @@
-|Gäller för: Intune på den klassiska portalen |
+|Gäller för: Intune i klassiska portalen |
 |--|
-|Letar du efter dokumentation om Intune i Azure? [Gå hit](https://docs.microsoft.com/intune/what-is-intune).|
+|Letar du efter dokumentation om Intune på Azure Portal? [Gå hit](/intune/what-is-intune).|
 | |
