@@ -1,7 +1,7 @@
 ---
 title: "Lägg till och tilldela MTD-appar i Intune"
-titleSuffix: Intune on Azure
-description: "Lägg till MTD-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen i Intune på Azure"
+titleSuffix: Azure portal
+description: "Lägg till MTD-program, Microsoft Authenticator-program och iOS-konfigurationsprincipen med Intune i Azure-portalen"
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7edd80c7bae429c1f4032cf59aaaf8d91786f92c
-ms.sourcegitcommit: 3b21f20108e2bf1cf47c141b36a7bdae609c4ec3
+ms.openlocfilehash: 6d0802107353eee9359e0eff17b69037d9a237a6
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune
 
@@ -115,7 +115,7 @@ Aktivera Azure Active Directory-autentisering för iOS-användare genom att gör
 
 ### <a name="for-skycure"></a>För Skycure
 
--   Använd samma Azure AD-konto som tidigare konfigurerades i [Skycure Management Console](https://aad.skycure.com), vilket ska vara samma konto som används för att logga in på den klassiska Intune-konsolen.
+-   Använd samma Azure AD-konto som tidigare konfigurerades i [Skycure Management Console](https://aad.skycure.com), vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
 
 -   Så här **laddar du ned** konfigurationsprincipen för iOS-appen: 
     -   Gå till [Skycures hanteringskonsol](https://aad.skycure.com) och logga in med dina administratörsautentiseringsuppgifter.

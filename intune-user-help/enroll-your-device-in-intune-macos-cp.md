@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1b177b05f065f66deb8c60be768c123fc7991937
-ms.sourcegitcommit: 091f7b34f1fbf73db2bed5b46d92a78ba0dad1e4
+ms.openlocfilehash: 8eaeb2e0c44870dbebf85d98e2b49d46008068cd
+ms.sourcegitcommit: 1afff0fd464ece84ffea6bc0c71c78215d59e696
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -31,7 +31,7 @@ Med åtkomst till din organisations appar, data och resurser är det enklare fö
   > [!NOTE]
   > [Prova de här instruktionerna i stället](enroll-your-device-in-intune-ios.md) om du vill registrera en iOS-enhet, till exempel en iPhone eller iPad.
 
-1. På din __Docka__ går du till __Safari__ och öppnar sidan [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55770) för företagsportalappen på macOS.
+1.  På din __Docka__ letar du reda på __Safari__ och går till [aka.ms/macoscompanyportal](https://aka.ms/macoscompanyportal). 
 
 2. Ladda ned appen. Mac-enheten kontrollerar att den nedladdade filen **CompanyPortal.dmg** är säker att öppna. När du öppnar den från mappen **Hämtade filer** drar du appen **CompanyPortal** från mappen **Program**.
 

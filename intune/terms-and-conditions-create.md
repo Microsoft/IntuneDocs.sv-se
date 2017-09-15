@@ -1,6 +1,6 @@
 ---
 title: "Ange användarvillkor i Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Ange allmänna villkor som användarna ser i företagsportalen för Intune. "
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0262b8068ddf134de5ffec0965476fb513ceb9ab
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 47b153223e10ec358c61a212bdacd109ee90bbcd
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="ensure-users-accept-company-terms-for-access"></a>Se till att användarna godkänner företagets åtkomstvillkor
 
@@ -32,14 +32,14 @@ Du kan skapa flera uppsättningar med villkor och tilldela dem till olika använ
 ## <a name="create-terms-and-conditions"></a>Skapa allmänna villkor
 Slutför stegen nedan för att skapa allmänna villkor. Namn och beskrivning som visas är för administrativa syften, medan villkorsegenskaperna visas för användarna i företagsportalen.
 
-1. På Intune-portalen väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
+1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Villkor**.
 2. Välj **Skapa**.
-![Skärmbild av Intune-portalen med knappen Skapa för allmänna villkor](media/terms-create-terms.png)
+![Skärmbild av Azure-portalen med knappen Skapa för villkor](media/terms-create-terms.png)
 3. På det expanderade bladet anger du följande information:
 
-   - **Visningsnamn**: Namnet på villkoren i Intune-portalen. Användarna ser inte det här namnet.
+   - **Visningsnamn**: Namnet på villkoren i Azure-portalen. Användarna ser inte det här namnet.
 
-   - **Beskrivning**: Valfri information som hjälper dig att identifiera den här uppsättningen med villkor i Intune-portalen.
+   - **Beskrivning**: Valfri information som hjälper dig att identifiera den här uppsättningen med villkor i Azure-portalen.
 
 4. Välj pilen bredvid Definiera villkor för användning för att öppna bladet Villkor och ange därefter följande information:
 
@@ -64,9 +64,9 @@ I följande exempel visas användarvillkoren i administratörskonsolen och före
 
 Du kan tilldela villkor till grupper av användare som måste godkänna dem innan de kan använda företagsportalen.
 
-1. På Intune-portalen väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
+1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Villkor**.
 2. Välj de allmänna villkor som du vill tilldela i listan med villkor. Välj sedan **Tilldelade grupper**.
-![Skärmbild av Intune-portalens blad Tilldela grupp, som visar knappen Välj grupp och knappen Välj för tilldelning av allmänna villkor](media/terms-assign-groups.png)
+![Skärmbild av Azure-portalens blad Tilldela grupp, som visar knappen Välj grupp och knappen Välj för tilldelning av villkoren](media/terms-assign-groups.png)
 3. Klicka på knappen **Välj grupp**. På bladet **Välj grupper** väljer du de grupper som du vill tilldela villkoren till. Klicka sedan på **Välj**. Dynamiska grupper kan inte tilldelas användarvillkor.
 4. På bladet **Tilldelade grupper** klickar du på **Spara**.  Villkoren har nu tilldelats till användarna i de valda grupperna. Användarna kommer att uppmanas att godkänna villkoren nästa gång de öppnar företagsportalen. De användarvillkoren behöver bara godkännas en gång. Användare med flera enheter behöver inte godkänna på varje enhet.
 

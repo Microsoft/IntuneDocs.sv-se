@@ -1,6 +1,6 @@
 ---
 title: Distribuera Skycure-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen
-description: Distribuera Skycure-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen i den klassiska Intune-konsolen.
+description: Distribuera Skycure-program, Microsoft Authenticator-program och iOS-konfigurationsprincipen i den klassiska Intune-portalen.
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,11 +14,11 @@ ms.assetid: 45826fbc-6df5-41b2-8e80-d1353f904b43
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 60f4ab5a656a2e253d82971d7bea6b3a6c9eb25a
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6334686f350c54e11ef4ef5cbacf39a81e6a1a7e
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="deploy-skycure-apps-microsoft-authenticator-app-and-ios-app-configuration-policy"></a>Distribuera Skycure-appar, Microsoft Authenticator-appen och konfigurationsprincipen för iOS-appen
 
@@ -26,9 +26,9 @@ ms.lasthandoff: 07/01/2017
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
--   Nedanstående steg måste slutföras i den [klassiska Intune-konsolen](https://manage.microsoft.com/).
+-   Nedanstående steg måste slutföras i den [klassiska Intune-portalen](https://manage.microsoft.com/).
 
--   Använd samma Azure AD-konto som tidigare konfigurerades i Skycure Management Console, vilket ska vara samma konto som används för att logga in på den klassiska Intune-konsolen.
+-   Använd samma Azure AD-konto som tidigare konfigurerades i Skycure Management Console, vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
 
 -   Kontrollera att du vet hur man gör för att:
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/01/2017
 
 ## <a name="to-deploy-skycure-apps-microsoft-authenticator-app-and-the-ios-app-configuration-policy"></a>Så här distribuerar du Skycure-appar, Microsoft Authenticator-appen och konfigurationsprincipen för iOS-appen
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Appar** för att se listan med appar som du kan hantera.
+1.  I den klassiska Intune-portalen väljer du **Program** &gt; **Program** för att se listan med program som du kan hantera.
 
 2.  Välj följande appar:
 
@@ -48,19 +48,19 @@ ms.lasthandoff: 07/01/2017
 
     c.  Skycure-app för iOS
 
-       ![Den klassiska Intune-konsolen med alla appar som kan distribueras](../media/mtp/skycure-deploy-app-1.png)
+       ![Den klassiska Intune-portalen med alla program som kan distribueras](../media/mtp/skycure-deploy-app-1.png)
 
 3.  Välj **Hantera distributioner**, välj Azure AD-säkerhetsgruppen som har Skycure-användare och klicka sedan på **Nästa**.
 
 4.  På sidan **Distributionsåtgärd** väljer du alternativet **Nödvändig installation** från listrutan **Godkännande** och klickar sedan på **Nästa**.
 
-    ![Den klassiska Intune-konsolen Distributionsåtgärd](../media/mtp/skycure-deploy-app-2.png)
+    ![Den klassiska Intune-portalen Distributionsåtgärd](../media/mtp/skycure-deploy-app-2.png)
 
 5.  På sidan **VPN-profil** väljer du alternativet **Ingen** från listrutan **VPN-princip**. Klicka sedan på **Nästa**.
 
 6.  På sidan **Mobilappkonfiguration** väljer du iOS-appens konfigurationsprincip som tidigare skapades från listrutan **Princip för appkonfiguration** och klicka sedan på **Slutför**.
 
-    ![Den klassiska Intune-konsolen Mobilappkonfiguration](../media/mtp/skycure-deploy-app-3.png)
+    ![Den klassiska Intune-portalen Mobilappkonfiguration](../media/mtp/skycure-deploy-app-3.png)
 
 ## <a name="next-steps"></a>Nästa steg
 

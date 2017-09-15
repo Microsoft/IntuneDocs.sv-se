@@ -1,6 +1,6 @@
 ---
 title: "Hämta den konfigurationsprincip för Skycures iOS-app som ska användas med Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Hämta den konfigurationsprincip för Skycures iOS-app som ska användas med Intune."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: 1bdc2ecf-32d0-4b6a-80b4-dbcdb9909010
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ffe1027e90203d4e300a2446f15e72cc5bf53973
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 296d5545530e8001c0648bafac3101b94f45529d
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="download-skycure-ios-app-configuration-policy"></a>Hämta konfigurationsprincip för Skycures iOS-app
 
@@ -43,7 +43,7 @@ Du måste logga in på Skycure Management Console för att kunna utföra nästa 
 
 3.  Gå till **Inställningar** &gt; **Integrering med enhetshantering** &gt; **Val av EMM-integrering**, välj **Microsoft Intune** och spara sedan ditt val.
 
-4.  Klicka på länken **Integrering av installationsfiler** och spara den genererade \*ZIP-filen. ZIP-filen innehåller filen **skycure\_configuration.plist**, som används för att skapa iOS-appens konfigurationsprincip i den klassiska Intune-konsolen.
+4.  Klicka på länken **Integrering av installationsfiler** och spara den genererade \*ZIP-filen. ZIP-filen innehåller filen **skycure\_configuration.plist**, som används för att skapa iOS-appens konfigurationsprincip i den klassiska Intune-portalen.
 
 ![Skycure integrering, installationsfiler](./media/skycure-ios-app-2.png)
 

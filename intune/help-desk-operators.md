@@ -1,6 +1,6 @@
 ---
 title: "Supportavdelningens felsökningsportal"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Supportavdelningen använder felsökningsportalen till att lösa användarnas tekniska problem"
 keywords: 
 author: NathBarn
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: c932781f988d63395b98452a4f4739e0bce1d9c8
-ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
+ms.openlocfilehash: 14b47727428fcd6a16f9960e21f70ee64c7757d1
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Använd felsökningsportalen för att hjälpa användare
 
@@ -35,14 +35,14 @@ När t.ex. en användare kontaktar supporten om ett tekniskt problem i Intune ka
 -   Appinstallationsfel
 
 ## <a name="add-help-desk-operators"></a>Lägga till supportansvariga
-I egenskap av Intune-administratör kan du tilldela rollen Supportansvarig till en användargrupp. Medlemmar i gruppen kan använda administrationsportalen för att felsöka användarnas problem. Varje supportansvarig måste ha en Intune-licens för åtkomst till Intune-portalen. Lär dig [tilldela Intune-användarlicenser](licenses-assign.md).
+I egenskap av Intune-administratör kan du tilldela rollen Supportansvarig till en användargrupp. Medlemmar i gruppen kan använda Azure-portalen för att felsöka användarnas problem. Varje supportansvarig måste ha en Intune-licens för att få åtkomst till Azure-portalen. Lär dig [tilldela Intune-användarlicenser](licenses-assign.md).
 
 Lägga till supportanvändare:
 1. [Lägg till användare i Intune](users-add.md) vid behov.
 2. [Skapa en supportgrupp](groups-add.md) och lägg till användare i gruppen.
 3. [Tilldela rollen RBAC-supportansvarig](role-based-access-control.md#built-in-roles).
 
-  ![Bild av Intune-portalen med Intune-roller markerat och en lista över inbyggda roller, inklusive Supportansvarig](./media/help-desk-user-add.png) Du kan även [skapa en anpassad roll](role-based-access-control.md#custom-roles) som du kan ändra ytterligare för att ge åtkomst till supportansvariga.  Supportansvariga kräver följande behörigheter för att felsöka användarproblem:
+  ![Skärmbild av Azure-portalen med Intune-rollerna markerade och en lista med inbyggda roller, inklusive supportansvarig](./media/help-desk-user-add.png) Du kan även [skapa en anpassad roll](role-based-access-control.md#custom-roles) som du kan ändra ytterligare för att ge åtkomst till supportansvariga.  Supportansvariga kräver följande behörigheter för att felsöka användarproblem:
     - MobileApps: Läsbehörighet
     - ManagedApps: Läsbehörighet
     - ManagedDevices: Läsbehörighet

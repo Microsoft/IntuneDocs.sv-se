@@ -1,7 +1,7 @@
 ---
 title: "Var är Intune-funktionen i Azure?"
-titleSuffix: Intune on Azure
-description: "Hjälper dig att hitta Intune-funktioner i Azure-konsolen.”"
+titlesuffix: Azure portal
+description: "Hjälper dig att hitta Intune-funktioner i Azure-portalen.\""
 keywords: 
 author: dagerrit
 ms.author: dagerrit
@@ -15,16 +15,16 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 18e5ea572bde503600bc33a0b4401efed2e35d18
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 105b874523024b58098205d94da47c07ee432dfc
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
-Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här guiden för dem som är bekanta med Intune i den klassiska konsolen och undrar hur de ska arbeta i Intune på Azure. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
+Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här referensguiden för de som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
 ## <a name="quick-reference-guide"></a>Snabbguide
-|Funktion |Sökväg i klassisk konsol|Sökväg i Intune på Azure|
+|Funktion |Sökväg i den klassiska portalen|Sökväg i Intune i Azure-portalen|
 |------------|---------------|---------------|
 |Enhetsregistreringsprogram (DEP) |Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram|[Enhetsregistrering > Apple-registrering > Registreringsprogramtoken](#where-did-apple-dep-go) |
 |Enhetsregistreringsprogram (DEP)| Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram |[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-apple-dep-go) |
@@ -39,10 +39,10 @@ Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyt
 
 
 ## <a name="where-do-i-manage-groups"></a>Var hanterar jag grupper?
-Intune på Azure använder [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) för att hantera grupper.
+Intune i Azure-portalen använder [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) till att hantera grupper.
 
 ## <a name="where-did-enrollment-rules-go"></a>Var finns registreringsreglerna?
-I den klassiska konsolen gick det att ange regler för att styra MDM-registrering av mobila och moderna Windows- och macOS-enheter:
+I den klassiska portalen gick det att ange regler för att styra MDM-registreringen av mobila och moderna Windows- och macOS-enheter:
 
 ![Bild av klassiska regler för registrering av mobil enhet](./media/01-classic-rules.png)
 
@@ -50,11 +50,11 @@ Dessa regler tillämpades på alla användare i Intune-kontot utan undantag. I A
 
 ![Bild av registreringsbegränsningar för mobil enhet](./media/02-azure-enroll-restrictions.png)
 
-Standarden för Begränsningar för enhetsgräns motsvarar enhetsregistreringsgränsen i den klassiska konsolen:
+Standarden i begränsningen för enhetsgränser motsvarar enhetsregistreringsgränsen i den klassiska portalen:
 
 ![Bild av begränsningar för enhetsgräns i Azure](./media/03-azure-device-limit.png)
 
-Standarden för Begränsningar av enhetstyp motsvarar plattformsbegränsningarna i den klassiska konsolen:
+Standarden i begränsningen för enhetstyper motsvarar plattformsbegränsningarna i den klassiska portalen:
 
 ![Bild av begränsningar av enhetstyp i Azure](./media/04-azure-platform-restrictions.png)
 
@@ -65,7 +65,7 @@ Möjligheten att tillåta eller blockera personligt ägda enheter hanteras nu un
 De nya begränsningsfunktionerna läggs endast till i Azure-portalen.
 
 ## <a name="where-did-apple-dep-go"></a>Var finns Apple DEP?
-I den klassiska konsolen kunde du konfigurera Intune för att integrera med Apples enhetsregistreringsprogram och manuellt begära synkronisering med Apple-tjänsten:
+I den klassiska portalen kunde du konfigurera Intune till att integrera med Apples program för enhetsregistrering och manuellt begära synkronisering med Apple-tjänsten:
 
 ![Bild av klassisk DEP-token](./media/06-classic-dep-token.png)
 
@@ -73,13 +73,13 @@ I Azure-portalen konfigurerar du Apples enhetsregistreringsprogram på samma sä
 
 ![Bild av Azure DEP-token](./media/07-azure-dep-token.png)
 
-Alternativet **Synkronisera** har dock flyttats till arbetsflödet för hantering av serienummer, eftersom resultatet av en manuell synkronisering visas där:
+Alternativet **Synkronisera** i den klassiska portalen har dock flyttats till arbetsflödet för hantering av serienummer, eftersom resultatet av en manuell synkronisering visas där:
 
 ![Bild av Azure DEP-synkronisering](./media/08-azure-dep-sync.png)
 
 ## <a name="where-did-corporate-pre-enrolled-devices-go"></a>Var finns företagets förregistrerade enheter?
 ### <a name="by-ios-serial-number"></a>Efter iOS-serienummer
-I den klassiska konsolen går det att registrera iOS-enheter via Apples enhetsregistreringsprogram (DEP) och verktyget Apple Configurator. Båda metoderna ger förregistrering av enheter efter serienummer och omfattar tilldelning av särskilda profiler för registrering av företagsenheter. Innan du registrerar kan tilldelning av registreringsprofiler hanteras via enhetsgruppen **Företagets förregistrerade enhet efter iOS-serienummer**:
+I den klassiska portalen går det att registrera iOS-enheter via Apples program för enhetsregistrering (DEP) och verktyget Apple Configurator. Båda metoderna ger förregistrering av enheter efter serienummer och omfattar tilldelning av särskilda profiler för registrering av företagsenheter. Innan du registrerar kan tilldelning av registreringsprofiler hanteras via enhetsgruppen **Företagets förregistrerade enhet efter iOS-serienummer**:
 
 ![Bild av klassiska Apple-serienummer](./media/09-classic-apple-serials.png)
 
@@ -93,18 +93,18 @@ Här visas serienummer för både Apple DEP- och Configurator-registrering i en 
 
 ### <a name="by-imei-all-platforms"></a>Efter IMEI (alla plattformar)
 
-I den klassiska konsolen kan du på förhand ange en lista med IMEI-nummer för att markera dem som företagsenheter när de registreras i Intune:
+I den klassiska portalen kan du på förhand ange en lista med IMEI-nummer för att markera dem som företagsenheter när de registreras i Intune:
 
 ![Bild av klassisk lista med IMEI-nummer](./media/12-classic-corp-imei.png)
 
-I Azure-konsolen måste du överföra samma IMEI till företagets lista med enhetsidentifierare med hjälp av en fil med kommaavgränsade värden (CSV). Den nya portalen har inte stöd för manuell inmatning av IMEI-nummer:
+I Azure-portalen måste du överföra samma IMEI till företagets lista med enhetsidentifierare med hjälp av en CSV-fil med kommaavgränsade värden. Den nya portalen har inte stöd för manuell inmatning av IMEI-nummer:
 
 ![Bild av Azure-lista med IMEI-nummer](./media/13-azure-corp-imei.png)
 
 Intune i Azure-portalen har framtidssäkrats med stöd för andra typer av identifierare utöver IMEI, men för närvarande kan bara IMEI-nummer användas för förhandslistor.
 
 ## <a name="where-did-corporate-device-enrollment-profiles-go"></a>Var finns profiler för Företagsenhetsregistrering?
-Du måste ange en profil för Företagsenhetsregistrering som ska tilldelas till enheten för att registrera iOS-enheter via Apples enhetsregistreringsprogram eller med verktyget Apple Configurator. I den klassiska konsolen fanns skapande och hantering av dessa profiler i en enda lista:
+Du måste ange en profil för Företagsenhetsregistrering som ska tilldelas till enheten för att registrera iOS-enheter via Apples enhetsregistreringsprogram eller med verktyget Apple Configurator. I den klassiska portalen fanns skapandet och hanteringen av dessa profiler i en enda lista:
 
 ![Bild av klassiska profiler för enhetsregistrering](./media/14-classic-corp-profiles.png)
 

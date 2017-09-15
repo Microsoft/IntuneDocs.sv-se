@@ -1,6 +1,6 @@
 ---
 title: "Så här lägger du till appar i Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "De här procedurerna hjälper dig att få in dina appar i Intune så att de är redo att tilldelas till användare och enheter. \""
 keywords: 
 author: mattbriggs
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 14f2ac5b25cfe3e688363a21775872baaa9ff89a
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 108f789f16304498cf54387326d112353bf70aa2
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Så här lägger du till appar i Microsoft Intune
 
@@ -74,14 +74,14 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**.
 5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder:
     - **Skapa en kategori** – Ange ett namn för den nya kategorin på bladet **Skapa kategori**. Namn kan bara anges på ett språk och översätts inte av Intune. Klicka på **Skapa** när du är klar.
-    - **Redigera en kategori** – För valfri kategori i listan, välj ”**...** ”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
+    - **Redigera en kategori** – För valfri kategori i listan, välj ”**... **”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
 
 
 ## <a name="apps-added-automatically-by-intune"></a>Appar som läggs till automatiskt av Intune
 
 Tidigare innehöll Intune ett antal inbyggda appar för snabb tilldelning. Efter feedback från användarna har vi beslutat oss för att ta bort listan och dess inbyggda appar visas inte längre.
 Om du har redan har tilldelat några inbyggda appar kommer dessa även i fortsättningen att finnas kvar i listan över appar. Du kan fortsätta att tilldela dessa appar vid behov.
-I en senare version planerar vi att lägga till en enklare metod för att välja och tilldela inbyggda appar från Intune-portalen.
+I en senare version planerar vi att lägga till en enklare metod för att välja och tilldela inbyggda appar från Azure-portalen.
 
 ## <a name="next-steps"></a>Nästa steg
 

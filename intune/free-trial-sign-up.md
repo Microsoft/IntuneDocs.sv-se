@@ -1,6 +1,6 @@
 ---
 title: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Microsoft Intune"
-titleSuffix: 
+titleSuffix: Azure portal
 description: "Registrera dig för en 30-dagars kostnadsfri utvärderingsversion av Intune.”"
 keywords: 
 author: lindavr
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: de86b6c9938d4be3f90d62e96080d8b967886792
-ms.sourcegitcommit: 5eb209ae48173ddfdbbab131f12f3ac3498dcd87
+ms.openlocfilehash: 21ee75ab006c1770bc61039facc28d8a0118e706
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune
 
@@ -47,11 +47,11 @@ När du registrerar dig för en utvärderingsversion skickas dessutom ett e-post
 Det finns tre portaler som du använder för Intune Azure-portalen:
 - Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna i Azure-portalen](what-is-intune.md).
 - Administrationscenter för Office 365 ([portal.office.com](https://portal.office.com)) där du kan lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
-- Den klassiska Intune-administratörskonsolen ([manage.microsoft.com](https://manage.microsoft.com)), där du kan utforska funktioner som ännu inte har lagts till i Azure.
+- Intune-administratörskonsolen ([manage.microsoft.com](https://manage.microsoft.com)), där du kan utforska funktioner som ännu inte har lagts till i Azure.
 
 Vanligtvis utför du ditt arbete i Intune-instrumentpanelen, som visas nedan. Detta är den plats där du kan konfigurera och hantera grupper, principer, enheter och appar.
 
-Du kan gå till den klassiska Intune-administratörskonsolen från instrumentpanelen genom att välja **Klassisk portal** överst på instrumentpanelen.
+Du kan gå till Intune-administratörskonsolen från instrumentpanelen genom att välja **Klassisk portal** överst på instrumentpanelen.
 
 Om du vill återgå till Intune Azure Portal skriver du https://portal.azure.com i webbläsarens adressfält och väljer **Intune** igen från listan över tjänster.
 
@@ -68,7 +68,7 @@ Om du vill gå från Intune tillbaka till Office 365-administratörscentret skri
 
 ## <a name="next-steps"></a>Nästa steg
 
-### <a name="intune-on-azure"></a>Intune på Azure
+### <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
 Läs mer om [Intune i Azure Portal](what-is-intune.md)
 
 ### <a name="integration-with-other-products"></a>Integrering med andra produkter

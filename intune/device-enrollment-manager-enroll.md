@@ -1,6 +1,6 @@
 ---
 title: "Registrera enheter – enhetsregistreringshanteraren"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune. \""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 204df4648f1d79167e8eb5941d91b48d65b90704
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: 5caf60d0512a33c0c88f4305b1a9eb189112ba02
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrera enheter med enhetsregistreringshanteraren
 
@@ -36,7 +36,7 @@ Användarna måste finnas i Azure Portal för att kunna läggas till som enhetsr
 
 En restaurang vill tillhandahålla 50 surfplattor vid kassan för servitörerna. Kökspersonalen behöver också surfplattor för att se beställningarna. De anställda behöver aldrig ha tillgång till företagets data eller logga in som användare. Intune-administratören skapar ett konto för enhetsregistreringshantering (DEM) och lägger till en restaurangchef till DEM-kontot, vilket i praktiken ger chefen DEM-funktioner. Chefen kan nu registrera de 50 surfplattorna med hjälp av DEM-autentiseringsuppgifter.
 
-Endast användare i Intune-konsolen kan vara enhetsregistreringshanterare. Den användare som är enhetsregistreringshanterare får inte vara Intune-administratör.
+Endast användare i Azure-portalen kan vara enhetsregistreringshanterare. Den användare som är enhetsregistreringshanterare får inte vara Intune-administratör.
 
 DEM-användaren kan:
 
@@ -95,5 +95,5 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Visa egenskaper för en enhetsregistreringshanterare
 
-1. I Intune-portalen, väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
+1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
 2. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **Egenskaper**.

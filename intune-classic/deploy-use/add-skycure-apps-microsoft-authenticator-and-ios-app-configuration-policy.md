@@ -1,6 +1,6 @@
 ---
 title: "Lägga till Skycure-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen"
-description: "Lägga till Skycure-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen i den klassiska Intune-konsolen."
+description: "Lägga till Skycure-program, Microsoft Authenticator-program och iOS-konfigurationsprincipen i den klassiska Intune-portalen."
 keywords: 
 author: andredm7
 ms.author: andredm
@@ -14,11 +14,11 @@ ms.assetid: 018d26f4-4a75-4e27-bb04-54f54106cb2f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 425b86e92281bb6e3657a6c806be269ccae94311
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6d762e1aed998642db66908549b2d15d54601aed
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-skycure-apps-microsoft-authenticator-app-and-ios-configuration-policy"></a>Lägga till Skycure-appar, Microsoft Authenticator-appen och iOS-konfigurationsprincipen
 
@@ -30,9 +30,9 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
--   Nedanstående steg måste slutföras i den [klassiska Intune-konsolen](https://manage.microsoft.com/).
+-   Nedanstående steg måste slutföras i den [klassiska Intune-portalen](https://manage.microsoft.com/).
 
--   Använd samma Azure AD-konto som tidigare konfigurerades i Skycure Management Console, vilket ska vara samma konto som används för att logga in på den klassiska Intune-konsolen.
+-   Använd samma Azure AD-konto som tidigare konfigurerades i Skycure Management Console, vilket ska vara samma konto som användes för att logga in på den klassiska Intune-portalen.
 
 -   Skycure-integreringsfilen måste vara klar att använda. Detta är ZIP-filen som tidigare hämtades från Skycure Management Console. Den innehåller filen **skycure\_configuration.plist** med iOS-appens parametrar för konfigurationsprincipen.
 
@@ -44,7 +44,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-skycure-app-for-android"></a>Så här lägger du till Skycure-appen för Android
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-portalen väljer du **Program** &gt; **Lägg till program** för att starta Intunes programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Extern länk**. Klistra sedan in [URL för Skycures Android-app](https://play.google.com/store/apps/details?id=com.skycure.skycure) under **Ange URL**.
 
@@ -58,7 +58,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-skycure-app-for-ios"></a>Så här lägger du till Skycures iOS-app
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-portalen väljer du **Program** &gt; **Lägg till program** för att starta Intunes programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Hanterad iOS-app från App Store**. Klistra sedan in [URL för Skycures iOS-app](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) under **Ange URL**.
 
@@ -74,7 +74,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-microsoft-authenticator-app-for-ios"></a>Så här lägger du till Microsoft Authenticator-appen för iOS
 
-1.  I den klassiska Intune-konsolen väljer du **Appar** &gt; **Lägg till appar** för att starta Intune-programvaruutgivare. Klicka sedan på **Nästa**.
+1.  I den klassiska Intune-portalen väljer du **Program** &gt; **Lägg till program** för att starta Intunes programvaruutgivare. Klicka sedan på **Nästa**.
 
 2.  På sidan **Programvaruinstallation** väljer du **Hanterad iOS-app från App Store**. Klistra sedan in [URL för Microsoft Authenticator-appen för iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) under **Ange URL**.
 
@@ -90,7 +90,7 @@ Du måste dessutom ha [Microsoft Authenticator](https://docs.microsoft.com/azure
 
 ## <a name="to-add-the-skycure-ios-app-configuration-policy"></a>Så här lägger du till konfigurationsprincipen för Skycures iOS-app
 
-1.  I den klassiska Intune-konsolen väljer du **Princip** &gt; **Översikt &gt; Lägg till princip**.
+1.  I den klassiska Intune-portalen väljer du **Princip** &gt; **Översikt &gt; Lägg till princip**.
 
 2.  Expandera **iOS**i listan med principer, välj **Princip för mobilappkonfiguration (iOS 8.0 och senare)** och välj sedan **Skapa princip**.
 

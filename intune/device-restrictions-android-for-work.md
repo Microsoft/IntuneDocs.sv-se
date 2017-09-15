@@ -1,6 +1,6 @@
 ---
 title: "Inställningar av begränsningar i Intune-enheter för Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android for Work-enheter.”"
 keywords: 
 author: robstackmsft
@@ -15,18 +15,18 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a8053e54dcad692380b6762b22411f271337f29
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 7e7f74f516a4b60b6a727d6c51ec54dab96aa88e
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Inställningar för arbetsprofil
-- **Datadelning mellan arbetsprofiler och personliga profiler** – Använd den här inställningen för att styra om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Den här inställningen styr delningsåtgärder inom program (till exempel alternativet **Dela...** i Chrome-webbläsarappen) och gäller inte för kopiera och klistra in beteendet för Urklipp. Till skillnad från [principinställningarna för appskydd](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune), hanteras inställningarna för enhetsbegränsning från Intune-portalen och använder partitionen för Android for Work-arbetsprofilen för att isolera hanterade appar. Välj mellan:
+- **Datadelning mellan arbetsprofiler och personliga profiler** – Använd den här inställningen för att styra om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Den här inställningen styr delningsåtgärder inom program (till exempel alternativet **Dela...** i Chrome-webbläsarappen) och gäller inte för kopiera och klistra in beteendet för Urklipp. Till skillnad från [principinställningarna för programskydd](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune), hanteras inställningarna för enhetsbegränsning från Azure-portalen och använder partitionen för Android for Work-arbetsprofilen till att isolera hanterade program. Välj mellan:
     - **Standardbegränsningar för delning** – Detta är standardinställningen för delning av enheten, vilket varierar beroende på den version av Android den använder. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. Google tillhandahåller inget sätt att blockera delning från den personliga profilen till arbetsprofilen för enheter som version 6.0 eller senare.   
     - **Appar i arbetsprofilen kan hantera delningsförfrågningar från personlig profil** – Använd det här alternativet för att aktivera den inbyggda Android-funktionen som tillåter delning från den personliga profilen till arbetsprofilen. När detta är aktiverat, kan en delningsbegäran från en app i den personliga profilen dela med appar i arbetsprofilen. Det här är standardinställningen för Android-enheter som kör tidigare versioner än 6.0.
     - **Tillåt delning över gränser** – aktiverar delning över arbetsprofilgränsen i bägge riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Använd den här inställningen med försiktighet. Den gör att hanterade appar i arbetsprofilen kan dela med appar på den ohanterade delen av enheten.

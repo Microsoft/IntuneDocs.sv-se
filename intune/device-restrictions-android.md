@@ -1,12 +1,12 @@
 ---
 title: "Inställningar för enhetsbegränsningar för Android i Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android-enheter.”"
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 08/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09641b5e34ab8200e7dd9d4c27f0dabf59fa62d2
-ms.sourcegitcommit: 1c71fff769ca0097faf46fc2b58b953ff28386e8
+ms.openlocfilehash: db7287dcccf45e0ce98a6fcae3c953dbebc2bb82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung KNOX Standard-enheter i Microsoft Intune
 
@@ -67,8 +67,8 @@ Använd de här inställningarna med en princip för begränsning av Android-enh
 <sup>1</sup> Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
 
 Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar den till en enhet som kör en tidigare version av Android än 5.0, gäller följande.
-- Om företagsportalappen kör en tidigare version än 1704 så kommer ingen PIN-kodsprincip att tillämpas på enheten och ett fel visas i Intune-portalen.
-- Om företagsportalappen kör version 1704 eller senare, kan bara en enkel PIN-kod användas. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Intune-portalen.
+- Om företagsportalappen kör en tidigare version än 1704 kommer ingen PIN-princip att tillämpas på enheten och ett fel visas i Azure-portalen.
+- Om företagsportalappen kör version 1704 eller senare, kan bara en enkel PIN-kod användas. Android-versioner som är tidigare än 5.0 har inte stöd för den här inställningen. Inget fel visas i Azure-portalen.
 
 
 ## <a name="google-play-store"></a>Google Play Store
@@ -79,7 +79,7 @@ Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar de
 
 I listan över begränsade appar, kan du konfigurera någon av följande listor för både Android och Samsung KNOX Standard-enheter:
 
-Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra.
+Listan **Otillåtna program** – Visar de program (som inte hanteras av Intune) som rapporteras om användarna installerar och kör dem.
 Listan **Godkända appar** – Ange de appar som användare tillåts att installera. För att fortsätta vara kompatibla, får användare inte installera andra appar. Appar som hanteras av Intune tillåts automatiskt.
 Enhetsprofiler som innehåller inställningar för begränsade appar måste tilldelas grupper av användare.
 
@@ -107,6 +107,21 @@ Du kan också klicka på **importera** för att hämta listan från en csv-fil. 
 - **Javascript (endast Samsung KNOX)** – Tillåter att enhetens webbläsare använder Javascript.
 - **Popup-fönster (endast Samsung KNOX)** – Tillåter att blockering av popup-fönster används i webbläsaren.
 
+## <a name="allow-or-block-apps"></a>Tillåt eller blockera program
+
+De här inställningarna kan användas för att ange program som kan installeras eller startas på enheter som endast kör Samsung KNOX Standard.
+Dessutom kan du ange installerade program som ska vara dolda för enhetens användare. Användarna kan inte köra dessa program.
+
+- **Appar som kan installeras (endast Samsung KNOX Standard)**
+- **Appar som blockeras från att starta (endast Samsung KNOX Standard)**
+- **Appar som döljs för användaren (endast Samsung KNOX Standard)**
+
+För varje inställning konfigurerar du en lista med program med hjälp av något av följande:
+
+- **Lägg till appar efter paketnamn** – Används främst för verksamhetsspecifika program. Ange namnet på programmet och namnet på appaketet. 
+- **Lägg till appar efter URL** – Ange namnet på programmet och dess URL i Google Play Butik.
+- **Lägg till hanterade appar** – I listan med program som du hanterar med Intune väljer du det program som du behöver.
+
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
 - **Google-säkerhetskopiering (endast Samsung KNOX)** – Tillåter användning av Google-säkerhetskopiering.
@@ -127,9 +142,9 @@ Du kan också klicka på **importera** för att hämta listan från en csv-fil. 
 
 ## <a name="kiosk"></a>Helskärmsläge
 
-Inställningar för helskärmsläge gäller endast för Samsung KNOX Standard-enheter.
+Inställningarna för helskärmsläget gäller endast för Samsung KNOX Standard-enheter och enbart för program som du hanterar med Intune.
 
-- **Välj en hanterad app** – Välj något av följande alternativ för att lägga till en eller flera appar som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten.
+- **Välj en hanterad app** – Välj något av följande alternativ för att lägga till en eller flera hanterade program som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten.
     - **Lägg till appar efter paketnamn**
     - **Lägg till appar efter URL**
     - **Lägg till hanterade appar**.

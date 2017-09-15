@@ -1,6 +1,6 @@
 ---
-title: Hantera programuppdateringar
-titleSuffix: Configure Windows Update for Business settings - Intune
+title: "Konfigurera inställningar av Windows Update för företag i Intune"
+titleSuffix: Azure portal
 description: "Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Intune, så att du kan kontrollera uppdateringarna för Windows 10-enheter.”"
 keywords: 
 author: dougeby
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 6d88fd62b84c0cc7c3678692cef5ab547bfb8c5d
-ms.sourcegitcommit: f9b01976c0fc479ac8bc3998eb55bbc517ed2d84
+ms.openlocfilehash: 71dad71cdfa9f503a47e301f0b5d3fef2567f886
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -54,20 +54,20 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
     Du kan konfigurera den här inställningen manuellt, eller så kan du använda en begränsningsprofil för Intune-enheter för Windows 10 och senare. Det gör du genom att ställa in **Allmänt** > **Diagnostikdata** på minst **Basic**. Mer information om enhetsprofiler finns i [Konfigurera inställningar för enhetsbegränsning](device-restrictions-configure.md).
 
-- Den klassiska Intune-administrationskonsolen innehåller fyra inställningar som styr beteendet för programuppdateringar. De här inställningarna är en del av den allmänna konfigurationsprincipen för Windows 10 Desktop- och Mobile-enheter:
+- Intune-administrationskonsolen innehåller fyra inställningar som styr beteendet för programuppdateringar. De här inställningarna är en del av den allmänna konfigurationsprincipen för Windows 10 Desktop- och Mobile-enheter:
     - **Tillåt automatiska uppdateringar**
     - **Tillåt förhandsfunktioner**
     - **Schemalagd installationsdag**
     - **Schemalagd installationstid**
 
-  Den klassiska konsolen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar i den klassiska Intune-administratörskonsolen när du migrerar till Azure Portal rekommenderar vi att du gör följande:
+  Den klassiska portalen har också ett begränsat antal andra inställningar för Windows 10-uppdateringar i enhetens konfigurationsprofil. Om du har konfigurerat några av dessa inställningar i Intune-administratörskonsolen när du migrerade till Azure-portalen rekommenderar vi starkt att du gör följande:
 
 1. Skapa uppdateringsringar för Windows 10 i Azure Portal med de inställningar som du behöver. Inställningen **Tillåt förhandsfunktioner** stöds inte i Azure Portal eftersom den inte kan tillämpas på de senaste Windows 10-versionerna. Du kan konfigurera de övriga tre inställningarna, såväl som andra uppdateringsinställningar för Windows 10, när du skapar uppdateringsringar.
 
   > [!NOTE]
-  > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska konsolen visas inte i Azure Portal efter migreringen. Dessa inställningar fortsätter dock att tillämpas. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas dessa inställningar bort från principen.
+  > Uppdateringsinställningar för Windows 10 som har skapats i den klassiska portalen visas inte i Azure-portalen efter migreringen. Dessa inställningar fortsätter dock att tillämpas. Om du har migrerat någon av dessa inställningar och redigerat den migrerade principen från Azure Portal, tas dessa inställningar bort från principen.
 
-2. Ta bort uppdateringsinställningarna i den klassiska konsolen. Efter det att du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, så måste du ta bort inställningarna i den klassiska portalen, så att du undviker eventuella principkonflikter. När samma inställning t.ex. har konfigurerats med olika värden, så uppstår det en konflikt som är svår att upptäcka eftersom inställningen som konfigurerats i den klassiska konsolen inte visas i Azure Portal.
+2. Ta bort uppdateringsinställningarna i den klassiska portalen. Efter det att du har migrerat till Azure Portal och lagt till samma inställningar i en uppdateringsring, så måste du ta bort inställningarna i den klassiska portalen, så att du undviker eventuella principkonflikter. När samma inställning t.ex. har konfigurerats med olika värden uppstår det en konflikt som är svår att upptäcka, eftersom inställningen som har konfigurerats i den klassiska portalen inte visas i Azure-portalen.
 
 ## <a name="how-to-create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
 
@@ -140,7 +140,7 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Programuppdateringar** på **Intune**-bladet.
 4. Välj **Hantera** > **Windows 10-uppdateringsringar** på bladet **Programuppdateringar**.
-5. På det blad där listan över uppdateringsringar visas markerar du den ring som du vill pausa och väljer sedan **...**   >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
+5. På det blad där listan över uppdateringsringar visas markerar du den ring som du vill pausa och väljer sedan **... **  >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
 
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando tar enheterna emot detta kommando nästa gång som de kontaktar tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.

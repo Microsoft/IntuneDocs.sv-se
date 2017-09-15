@@ -1,6 +1,6 @@
 ---
 title: "Anpassade profilinställningar i Intune för Android for Work"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Lär dig hur du skapar anpassade profilinställningar i Intune för Android for Work-enheter.”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b48fc7bd784b5d6d531ef5bf28fe835e394b106
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 47af10ea2eb04b5e5a470aff36d45d41105feb15
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="create-intune-custom-profile-settings-for-android-for-work-devices"></a>Skapa anpassade profilinställningar i Intune för Android for Work-enheter
 
@@ -32,7 +32,7 @@ Funktionen är avsedd för att kunna tilldela Android-inställningar som inte g�
 1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar](custom-settings-configure.md).
 2. På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till** för att lägga till en ny inställning.
 3. På bladet **Lägg till rad** konfigurerar du följande:
-    - **Namn** – Ange ett unikt namn för den anpassade Android for Work-principen, som hjälper dig att identifiera den i Intune-portalen.
+    - **Namn** – Ange ett unikt namn för de anpassade inställningarna för Android for Work, som hjälper dig att identifiera den i Azure-portalen.
     - **Beskrivning** – Ange en beskrivning med en översikt av den anpassade Android-principen, samt annan information som gör det enkelt att hitta den.
     - **OMA-URI** – Ange den OMA-URI som du vill ange en inställning för.
     - **Datatyp** – Ange den datatyp som du vill specificera den här OMA-URI-inställningen med. Välj mellan **Sträng**, **Sträng (XML-fil)**, **Datum och tid**, **Heltal**, **Flyttal**, **Boolesk** eller **Base64 (fil)**.

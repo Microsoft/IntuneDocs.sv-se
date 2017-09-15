@@ -1,6 +1,6 @@
 ---
 title: Nyheter i Microsoft Intune
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Ta reda på vad som är nytt i Intune Azure-portalen"
 keywords: 
 author: brenduns
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b50856bdc500cab4b206a105275b4842680d4423
-ms.sourcegitcommit: 71cdf99d639530e70dbe48d611d399e52c3150b0
+ms.openlocfilehash: c4787c716f94e95ab98badf924273af5d02751f8
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -97,12 +97,12 @@ Slutanvändarna kan nu bläddra bland appar, hantera enheter och visa it-kontakt
 Sidan **Inställningar** i företagsportalappen för Android har en ny inställning som gör det enkelt för användarna att stänga av batterioptimering för företagsportalen och Microsoft Authenticator-appar. Appnamnet som visas i inställningen beror på vilken app som hanterar arbetskontot. Vi rekommenderar att användarna stänger av batterioptimering för att få bättre prestanda med arbetsappar som synkroniserar e-post och data. 
 
 #### <a name="multi-identity-support-for-onenote-for-ios---------1234281---"></a>Stöd för flera identiteter med OneNote för iOS...<!-- 1234281 -->
-Slutanvändare kan nu använda olika konton (arbete och personliga) med Microsoft OneNote för iOS. Appskyddsprinciper kan tillämpas på företagsdata i anteckningsböcker för arbete utan att påverka deras personliga anteckningsböcker. En princip kan till exempel tillåta en användare att söka efter information i anteckningsböcker för arbete, men användaren kan inte kopiera och klistra in företagets data från anteckningsboken för arbete till en personlig anteckningsbok.
+Slutanvändare kan nu använda olika konton (arbete och personliga) med Microsoft OneNote för iOS. Programskyddsprinciper kan tillämpas på företagsdata i arbetsanteckningsböcker utan att de personliga anteckningsböckerna påverkas. En princip kan till exempel tillåta en användare att söka efter information i anteckningsböcker för arbete, men användaren kan inte kopiera och klistra in företagets data från anteckningsboken för arbete till en personlig anteckningsbok.
  
 - Mer information om appar som stöder [appskydd och multiidentitet](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) med Intune.
 
 #### <a name="new-settings-to-allow-and-block-apps-on-samsung-knox-standard-devices"></a>Nya inställningar för att tillåta och blockera appar på Samsung KNOX Standard-enheter
-<!-- 1305423 -->  
+<!-- 1305423 822899-->  
 Den här versionen innehåller nya [inställningar för enhetsbegränsning](device-restrictions-android.md) som du kan använda för att ange följande applistor:
  
 - Appar som användare tillåts att installera
@@ -112,7 +112,7 @@ Den här versionen innehåller nya [inställningar för enhetsbegränsning](devi
 Du kan ange appen med hjälp av URL, paketnamn eller från listan över appar som du hanterar.
 
 #### <a name="new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune"></a>Ny gränssnittslänk för princip för appbaserad villkorlig åtkomst för Azure AD från Intune
-
+<!-- 1016201 -->
 IT-administratörer kan nu ange appbaserade villkorsprinciper via det nya gränssnittet för villkorlig åtkomstprincip i Azure AD-arbetsbelastningen. Den appbaserade villkorliga åtkomsten som finns i avsnittet Intune-appskydd i Azure Portal finns kvar där för tillfället och tillämpas sida vid sida. Det finns även en praktisk länk till det nya gränssnittet för villkorlig åtkomstprincip i Intune-arbetsbelastningen.
 
 - Läs mer om [appbaserad villkorlig åtkomst i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
@@ -124,7 +124,7 @@ IT-administratörer kan nu ange appbaserade villkorsprinciper via det nya gräns
 En [uppdaterad lista med DNS-namn och IP-adresser](/intune/network-bandwidth-use) är tillgänglig för proxy-inställningarna för brandväggen.
 
 ### <a name="use-azure-active-directory-for-conditional-access----967947---"></a>Använd Azure Active Directory för villkorlig åtkomst <!-- 967947 -->
-Villkorlig åtkomst finns i området Azure Active Directory i Azure-konsolen och ger ett mer effektivt och flexibelt ramverk för att ange principer för appmolntjänster som Office 365 Exchange Online och SharePoint Online.  Använd bladet **Villkorlig åtkomst i Azure Active Directory** för att konfigurera principer i stället för klassiska Intune-konsolen. Befintliga principer i den klassiska Intune-konsolen måste återskapas i Azure-konsolen. Se [Skapa villkorliga åtkomstprinciper i Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview) för mer information.
+Villkorlig åtkomst finns i området Azure Active Directory i Azure-portalen och ger ett mer effektivt och flexibelt ramverk för att ange principer för programmolntjänster som Office 365 Exchange Online och SharePoint Online.  Använd bladet **Villkorlig åtkomst i Azure Active Directory** för att konfigurera principer i stället för Intune-konsolen. Befintliga principer i Intune-konsolen måste återskapas i Azure-portalen. Se [Skapa villkorliga åtkomstprinciper i Azure AD](/intune/conditional-access-exchange-create.md#create-azure-ad-conditional-access-policies-in-intune-azure-preview) för mer information.
 
 ### <a name="direct-access-to-apple-enrollment-scenarios---951869--"></a>Direkt åtkomst till Apples registreringscenarier<!--951869-->
 För Intune-konton som skapades efter januari 2017 har Intune aktiverat direktåtkomst till registreringsscenarier i Apple med arbetsflödet Registrera enheter i Azure-portalen. Tidigare var Apples förhandsregistrering enbart tillgänglig från länkar i den klassiska Intune-portalen. Intune-konton som skapades före januari 2017 måste migreras en gång innan dessa funktioner är tillgängliga i Azure. Schemat för migreringen har inte tillkännagivits än men informationen kommer att vara tillgänglig så snart som möjligt. Vi rekommenderar starkt att skapa ett utvärderingskonto för att testa den nya upplevelsen om ditt befintliga konto har inte åtkomst till Azure-portalen.
@@ -168,7 +168,7 @@ I nuläget har vi inte hunnit fastställa några datum, men vi passar på att in
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
 Uppmana användarna att uppdatera till iOS 9.0 eller senare för att kunna dra full nytta av de nya funktionerna i Intune.  Uppmana användarna att installera den nya versionen av företagsportalen för att kunna dra full nytta av de nya funktionerna.
 
-Gå till Intune på Azure-portalen och visa Enheter > Alla enheter. Filtrera efter iOS-versionen för att se alla befintliga enheter med operativsystem tidigare än iOS 9.
+Gå till Intune i Azure-portalen och visa Enheter > Alla enheter. Filtrera efter iOS-versionen för att se alla befintliga enheter med operativsystem som är tidigare än iOS 9.
 
 
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple kräver uppdateringar för Application Transport Security <!--748318-->

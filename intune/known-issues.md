@@ -1,6 +1,6 @@
 ---
-title: "Kända problem i Microsoft Intune på Azure"
-titleSuffix: Intune on Azure
+title: "Kända problem med Microsoft Intune i Azure-portalen"
+titlesuffix: Azure portal
 description: "Läs om kända problem i Intune”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5a9b7f69cded9258efb6c8a897e0c026f3228a6b
-ms.sourcegitcommit: c248b5a15894f0ade23bad4644c3b7035a9fcce8
+ms.openlocfilehash: 7570e7b2f612d1d2a017f82967cdc5baf798a761
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -37,7 +37,7 @@ Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport 
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupper som skapats av Intune under migreringen kan påverka funktionen för andra Microsoft-produkter
 
-När du migrerar från klassiska Intune till Azure-portalen kan det visas en ny grupp med namnet **All Users - b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
+När du migrerar från Intune till Azure-portalen kan det visas en ny grupp med namnet **All Users - b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
 
 ### <a name="secondary-migration-required-for-select-capabilities"></a>Sekundär migrering som krävs för utvalda funktioner
 
@@ -49,20 +49,20 @@ Intune-konton som skapats före januari 2017 måste migreras innan följande fun
 - Konton för enhetsregistreringshanterare
 - Apples volymköpsprogram
 
-Eftersom de här funktionerna inte kan hanteras både från den klassiska Intune-konsolen (Silverlight) och Azure Portal gör migreringen att:
-- De inaktiveras i den klassiska konsolen
+Eftersom de här funktionerna inte kan hanteras både från Intune-konsolen (Silverlight) och Azure-portalen innebär migreringen att:
+- De inaktiveras i den klassiska portalen
 - De aktiveras i Azure Portal  
 
-Efter 11 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal äger den andra migreringen rum mellan den 11 och 22 september 2017. Migreringen av ditt konto slutförs samma dag det påbörjas. Det kan ta upp till 6 timmar att migrera från det att funktionerna inaktiveras i den klassiska Intune-konsolen.
+Efter 11 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal äger den andra migreringen rum mellan den 11 och 22 september 2017. Migreringen av ditt konto slutförs samma dag det påbörjas. Migreringen kan ta upp till 6 timmar från det att funktionerna har inaktiverats i den klassiska Intune-portalen.
 
 Om du hanterar de här Intune-funktioner i Azure-portalen nu så måste du vara medveten om följande punkter:
 
 #### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Tar bort standardprofiler för registrering av företagsenheter i Apple DEP
-Azure-portalen stöder inte en standardprofil för registrering av företagsenheter för Apples enhetsregistreringsprogram DEP. Den här funktionen, som är tillgänglig i den klassiska Intune-konsolen (silverlight), kommer att upphöra för att förhindra oavsiktlig profiltilldelning. När DEP-serienummer synkroniseras i Azure-portalen, tilldelas ingen profil för registrering av företagsenheter. En registreringsprofil måste tilldelas innan du använder enheten.
+Azure-portalen stöder inte en standardprofil för registrering av företagsenheter för Apples enhetsregistreringsprogram DEP. Den här funktionen, som är tillgänglig i Intune-konsolen (Silverlight), kommer att upphöra för att förhindra oavsiktlig profiltilldelning. När DEP-serienummer synkroniseras i Azure-portalen, tilldelas ingen profil för registrering av företagsenheter. En registreringsprofil måste tilldelas innan du använder enheten.
 
 #### <a name="apple-dep-token-restored-with-migration"></a>Apple DEP-token återställs vid migrering
 
-Om du tog bort en Apples DEP-token i den klassiska Intune-portalen (Silverlight) och inte laddar upp en ny token till Azure Portal, återställs den ursprungliga token i Azure Portal när du migrerar. Om du vill ta bort denna token och förhindra DEP-registrering, tar du bort token från Azure-portalen.
+Om du tog bort Apples token för enhetsregistreringsprogram i Intune-portalen (Silverlight) och inte laddade upp någon ny token till Azure-portalen, återställs din ursprungliga token i Azure-portalen när du migrerar. Om du vill ta bort denna token och förhindra DEP-registrering, tar du bort token från Azure-portalen.
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
 
@@ -101,8 +101,9 @@ Mer information om de här inställningarna finns i [macOS-inställningar för e
 
 ### <a name="compliance-policies-from-intune-do-not-show-up-in-new-console"></a>Efterlevnadsprinciper från Intune visas inte i den nya konsolen
 
-Efterlevnadsprinciper som du har skapat i den klassiska portalen migreras, men visas inte i Azure-portalen på grund av designändringar i den. Efterlevnadsprinciper som du skapade i den klassiska Intune-portalen används fortfarande, men du måste visa och redigera dem i den klassiska Intune-portalen.
-Dessutom syns nya efterlevnadsprinciper som du skapar i Azure-portalen inte i den klassiska Intune-portalen.
+Efterlevnadsprinciper som du har skapat i den klassiska portalen migreras, men visas inte i Azure-portalen på grund av designändringar i den. Efterlevnadsprinciper som du skapade i den klassiska Intune-portalen används fortfarande, men du måste visa och redigera dem i den klassiska portalen.
+
+Dessutom syns nya efterlevnadsprinciper som du skapar i Azure-portalen inte i den klassiska portalen.
 
 Mer information finns i [Vad är enhetsefterlevnad?](device-compliance.md).
 

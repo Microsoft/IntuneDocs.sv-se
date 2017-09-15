@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 
 ms.reviewer: vlpetros
 ms.suite: ems
-ms.openlocfilehash: fa70e21b9e9f7adfc508e24bd442a48c834ed7db
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: f4e414f3696c64f8ea450394928aa055ad427afd
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="enable-byod-with-intune"></a>Aktivera BYOD med Intune
 
@@ -48,7 +48,7 @@ När du har förberett Intune-tjänsten måste du uppfylla de olika registrering
 
 -   **Android-enheter** Du behöver inte göra något för att förbereda Intune-tjänsten för registreringen av Android-enheter. Användarna behöver bara [registrera sina Android-enheter](/intune-user-help/enroll-your-device-in-intune-android) i hanteringen med företagsportalappen som är tillgänglig från Google Play.
 
--   **Windows Phone-enheter och datorer** Windows-enheter kan registreras med ytterligare konfiguration. Du kan aktivera automatisk registrering för Windows 10-datorer och mobila Windows 10-enheter i Azure Active Directory (AD) Premium för att förbättra användarnas upplevelse. Om du inte har Azure AD Premium eller om du behöver stöd för Windows 8.1 kan du skapa [ett DNS-alias för registreringsservern](windows-enroll.md#enable-windows-enrollment-without-azure-ad-premium) för att göra registreringen enklare.
+-   **Windows Phone-enheter och datorer** Windows-enheter kan registreras med ytterligare konfiguration. Du kan aktivera automatisk registrering för Windows 10-datorer och mobila Windows 10-enheter i Azure Active Directory (AD) Premium för att förbättra användarnas upplevelse. Om du inte har Azure AD Premium eller om du behöver stöd för Windows 8.1 kan du skapa [ett DNS-alias för registreringsservern](windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) för att göra registreringen enklare.
 
 
 ### <a name="make-sure-that-managed-devices-meet-basic-security-requirements"></a>Kontrollera att hanterade enheter uppfyller grundläggande säkerhetskrav
@@ -82,7 +82,7 @@ Med Intune kan du även hantera och distribuera appar som du har köpt i större
 
 -   [Hantera volyminköpta appar för iOS-enheter](vpp-apps-ios.md). Du kan köpa flera licenser för iOS-appar genom [Apples volyminköpsprogram för företag](http://www.apple.com/business/vpp/). Du måste skapa ett Apple VPP-konto från Apples webbplats och ladda upp Apple VPP-token till Intune. Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
 
--   [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md). I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Intune kan du hantera volyminköpta appar från Intune-portalen.
+-   [Hantera appar som du har köpt från Microsoft Store för företag](windows-store-for-business.md). I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Intune kan du hantera volyminköpta program från Azure-portalen.
 
 ## <a name="protect-company-data"></a>Skydda företagsdata
 

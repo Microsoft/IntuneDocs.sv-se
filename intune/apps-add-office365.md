@@ -1,6 +1,6 @@
 ---
 title: "Installera Office 365 ProPlus-appar för Windows 10-enheter med Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Så här använder du Intune för att underlätta installation av Office 365-appar på Windows 10-enheter."
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 471b4dd524cea553af89acc3e158fd2a05cebe3d
-ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
+ms.openlocfilehash: c3613c1e0482654d799329069f56ec0b0aac7772
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
 
@@ -60,7 +60,7 @@ Välj de Office-appar som du vill tilldela till enheter i det här steget.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
-I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera appen i Intune-konsolen och även hjälpa slutanvändarna att hitta den i företagsportalappen.
+I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera det i Intune och hjälper även användarna att hitta det i företagsportalappen.
 
 1.  Välj **Appinformation** på bladet **Lägg till app**.
 2.  Konfigurera följande information på bladet **Appinformation**: 

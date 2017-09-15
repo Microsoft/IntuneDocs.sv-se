@@ -1,12 +1,12 @@
 ---
 title: "Använd fabriksåterställning eller ta bort företagsdata på enheter som använder Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Läs om hur du kan ta bort företagsdata på en enhet eller fabriksåterställa enheten."
 keywords: 
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/07/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 331ced93f0697f7c76d1356aae32b955602d17a3
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
@@ -106,7 +106,7 @@ Om enheten är på och ansluten tar det mindre än 15 minuter att sprida kommand
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Ta bort enheter från Azure Active Directory-portalen
 
-Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta bort enheter från Azure Active Directory (AD). Borttagningskommandot tar inte bort en enhet från hanteringen, men du kan använda **Ta bort** för att ta bort enhetsposter från Azure-konsolen som du vet inte går att nå och som sannolikt inte kommer att kommunicera med Azure igen.
+Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta bort enheter från Azure Active Directory (AD). Borttagningskommandot tar inte bort någon enhet från hanteringen, men du kan använda **Ta bort** för att ta bort enhetsposter från Azure-portalen som du vet inte går att nå och som sannolikt inte kommer att kommunicera med Azure igen.
 
 1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Office 365-portalen](https://portal.office.com) och sedan välja **Admin** &gt; **Azure AD** genom att använda länken till vänster på sidan.
 3.  Skapa en Azure-prenumeration om du inte redan har en. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).

@@ -1,6 +1,6 @@
 ---
 title: "Ange registreringsbegränsningar i Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. \""
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c8b945cf1722d25a9242a4a7776d023a58fe0036
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: b74faadfc93485023ea71f42b703f3b102aaa5b3
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="add-groups-in-intune"></a>Lägg till grupper i Intune
 Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
@@ -33,8 +33,8 @@ Du kan lägga till följande typer av grupper:
 ## <a name="add-a-new-group"></a>Lägg till en ny grupp
 
 Använd följande anvisningar för att skapa en ny grupp.
-1. Gå till Intune-portalen, gå till **Grupper** och välj **Ny grupp** på bladet **Alla grupper**.
-  ![Skärmbild av Intune-portalen med Ny grupp vald](./media/groups-add-new.png)
+1. Gå till **Grupper** i Azure-portalen och välj sedan **Ny grupp** på bladet **Alla grupper**.
+  ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
 2. Redigera den nya gruppens **namn** och **beskrivning**. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
 
 3. Välj **Medlemskapstyp**:
