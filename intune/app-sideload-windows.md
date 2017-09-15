@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 2a8754d684896f2c945e11ed0fc2577114459069
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -55,7 +55,7 @@ Stegen nedan hjälper dig att få nödvändiga certifikat och signera appen. Du 
 6.  **Överför appen till Intune**<br>
     Överför den signerade appfilen och ditt kodsigneringscertifikat för att göra appen tillgänglig för dina slutanvändare.
 
-    1.  I Intune-portalen klickar du på **Administration** &gt; **Windows Phone**.
+    1.  I Azure-portalen klickar du på **Administration** &gt; **Windows Phone**.
 
     2.  Klicka på **Överför signerad appfil** och logga in med ditt administratörs-ID för Intune.
 
@@ -118,7 +118,7 @@ Du kan distribuera företagsportalappen till Windows-enheter, inklusive Windows 
 
     -   `-EnterpriseId` – Företags-ID. Antingen detta argument eller 'AetxPath' måste tillhandahållas. Om det här argumentet inte anges, läses företags-ID:t från AETX-filen. Till exempel, 1000000001
 
-6.  Distribuera Windows Phone 8.1-företagsportalappen (SSP.appx). Om du behöver hjälp kan du läsa [Så här lägger du till branschspecifika Windows Phone-appar](lob-apps-windows-phone.md) ([klassisk konsol](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Distribuera Windows Phone 8.1-företagsportalappen (SSP.appx). Om du behöver hjälp kan du läsa [Så här lägger du till verksamhetsspecifika Windows Phone-appar (LOB)](lob-apps-windows-phone.md) ([klassisk portal](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Så här förnyar du Symantec-företagscertifikatet för kodsignering
 
@@ -136,7 +136,7 @@ Symantec-certifikatet som används för att distribuera Windows- och Windows Pho
 
 1.  Signera den senaste versionen av din verksamhetsspecifika app.
 
-2.  Öppna Intune-konsolen och gå till **Admin** &gt; **Hantering av mobila enheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
+2.  Öppna Azure-portalen och gå till **Administratör** &gt; **Hantering av mobilenheter** &gt; **Windows Phone** och klicka på **Överför signerad app**.
 
 3.  Överför den nyligen signerade företagsportalen. Du behöver den nyligen signerade SSP.xap och den nya PFX-filen som du har fått från Symantec eller den programregistreringstoken som har skapats med den nya PFX-filen.
 

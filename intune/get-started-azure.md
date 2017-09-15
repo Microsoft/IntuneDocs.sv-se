@@ -1,10 +1,10 @@
 ---
 title: "Komma igång med Azure Portal"
-titleSuffix: Intune on Azure
-description: "Lär dig att skapa och dela instrumentpaneler i Intune på Azure."
+titlesuffix: Azure portal
+description: "Lär dig att skapa och dela instrumentpaneler i Intune på Azure-portalen."
 keywords: 
-author: barlanmsft
-ms.author: barlan
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 08/16/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27ae85160573f6757b20c885e95a280eb7f1155
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: 42c43ca5fa1eee28cb245c7a64e47f7f704183f4
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="getting-started-with-intune-in-the-azure-portal"></a>Komma igång med Intune på Azure Portal
 
@@ -52,7 +52,7 @@ Det här är mer relevant när du har lagt till mer innehåll och fler grupper o
 
 ## <a name="using-services"></a>Använda tjänster
 
-När du öppnar Intune eller någon annan tjänst i Azure, visas den på ett **blad**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas bladet på hela sidan. Övriga blad dras ut från bladets högra sida när de öppnas och komprimeras under det huvudblad som de kom ifrån. 
+När du öppnar Intune eller någon annan tjänst i Azure, visas den på ett **blad**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas bladet på hela sidan. Övriga blad dras ut från bladets högra sida när de öppnas och komprimeras under det huvudblad som de kom ifrån.
 
 ## <a name="next-steps"></a>Nästa steg
 

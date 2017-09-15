@@ -1,6 +1,6 @@
 ---
 title: "Hämta ett Apple MDM-pushcertifikat"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Läs om stegen för att hämta ett Apple MDM-pushcertifikat för att hantera iOS-enheter med Intune.”"
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a100b436ecf257c1e3886c23f15fa967fb877b7c
-ms.sourcegitcommit: 10e3ab2aeb79a1fb2243bef2748ccc003fdd4cc7
+ms.openlocfilehash: 804ea185cf48b6781174b888436211a6d70823ca
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 09/02/2017
 Intune stöder hantering av mobila enheter (MDM) för iPad-, iPhone- och Mac-enheter och ger användarna åtkomst till företagets e-post och appar. Ett MDM Push-certifikat krävs för att Intune ska kunna hantera iOS- och Mac-enheter. När du har lagt till certifikatet i Intune kan dina användare installera företagsportalappen och registrera sina enheter. Du kan också konfigurera hantering av företagsägda iOS-enheter med Apples DEP eller registrera enheter med hjälp av t.ex. Apple Configurator. Mer information om registreringsalternativ för finns [Välj hur du vill registrera iOS-enheter](enrollment-method-choose-ios.md).
 
 ## <a name="steps-to-get-your-certificate"></a>Steg för att få ditt certifikat
-I Intune-portalen väljer du **Enhetsregistrering** > **Apple-registrering** **Apple MDM-pushcertifikat** och följer sedan följande steg i Azure-portalen.
+I Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** **Apple MDM-pushcertifikat**. Utför sedan nedanstående steg i Azure-portalen.
 
 **Steg 1. Hämta Intune certifikatsigneringsförfrågan som krävs för att skapa ett certifikat för Apple MDM-pushcertifikat.**<br>
 Välj **Ladda ned CSR** för att hämta och spara begärandefilen lokalt. Filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.
@@ -55,11 +55,11 @@ Certifikatet associeras med det Apple-ID som användes för att skapa det. Förn
 > [!NOTE]
 > Certifikatet associeras med det Apple-ID som användes för att skapa det. Vi rekommenderar att du använder ett Apple-ID för företag för hanteringsaktiviteter. Använd aldrig ett personligt Apple-ID.
 
-1. I Intune-portalen väljer du **Enhetsregistrering** > **Apple-registrering** och därefter **Apple MDM-pushcertifikat**.
+1. I Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** och därefter **Apple MDM-pushcertifikat**.
 2. Välj **Ladda ned CSR** för att hämta och spara begärandefilen lokalt. Filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.
 3. Leta upp det certifikat som du vill förnya och välj **Förnya**.
 4. På skärmen **Förnya pushcertifikat** lägger du till kommentarer som hjälper dig att identifiera certifikatet i framtiden, väljer **Välj fil** för att bläddra till den nya begärandefilen som du laddade ned och väljer sedan **Ladda upp**.
 5. På skärmen **Bekräftelse** väljer du **Ladda ned** och sparar PEM-filen lokalt.
-6. På Azure Intune-portalen väljer du bläddringsikonen för **Apple MDM-pushcertifikatet**, väljer den PEM-fil som du laddade ned från Apple och väljer sedan **Ladda upp**.
+6. I Azure-portalen väljer du först bläddringsikonen för **Apple MDM-pushcertifikatet** och sedan den PEM-fil som du laddade ned från Apple. Välj sedan **Överför**.
 
 Ditt Apple MDM-pushcertifikat visas som **Aktivt** och har en giltighetstid på 365 dagar.

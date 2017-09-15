@@ -1,6 +1,6 @@
 ---
 title: "Layoutinställningar i Intune för startskärmen för iOS-enheter"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Lär dig vilka inställningar du kan anpassa på startskärmen och dockan på iOS-enheter.”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid: 6aba4491-afb9-43cd-9ccc-14e6a2a5a3b1
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de15a5f5291a6701782d357d24e2e802d7e7e44b
-ms.sourcegitcommit: c9b3a95bf529b6cb2a2bdacbc49127dfa0c233e5
+ms.openlocfilehash: 4a3f175337d521c92c909db9972d844ac6997cb0
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-home-screen-layout-settings-for-ios-devices"></a>Layoutinställningar i Intune för startskärmen för iOS-enheter
 
@@ -60,7 +60,7 @@ Lägg till de sidor som du vill ska visas på startskärmen samt de appar som sk
 
 
 1. På bladet **Sidor** väljer du **Lägg till**.
-2. På bladet **Lägg till rad** anger du ett **Sidnamn**. Det här namnet används för din referens i Intune-portalen och *visas inte* på iOS-enheten.
+2. På bladet **Lägg till rad** anger du ett **Sidnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 3. Välj **Lägg till** och välj sedan om du vill lägga till en **App** eller en **Mapp** på sidan.
 4. Med hjälp av informationen i det här avsnittet kan du ange vilka appar och mappar som ska visas på sidan.
 
@@ -76,7 +76,7 @@ När du tilldelar principen till en iPhone blir resultatet en sida som ser ut un
 
 ## <a name="how-to-add-an-app-to-the-list"></a>Så här lägger du till en app i listan
 
-1. Ange **Appnamn**. Det här namnet används för din referens i Intune-portalen och *visas inte* på iOS-enheten.
+1. Ange **Appnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 2. Ange **Appsamlings-ID** för den app som du vill visa. Hjälp finns i **Referens till samlings-ID för inbyggda iOS-appar** senare i det här avsnittet.
 3. Klicka på **OK** och fortsätt sedan att lägga till objekt, upp till högst **6** för enhetens docka och **60** för en enhetssida.
 4. Klicka på **OK**när du är klar.
@@ -87,8 +87,8 @@ Apparna som du lägger till på en sida i en mapp ordnas från vänster till hö
 
 1. Ange **Mappnamn**. Det här namnet visas för användarna på deras enhet.
 2. Välj **Lägg till** för att skapa en sida i mappen. Du kan lägga till upp till 20 sidor.
-3. På bladet **Lägg till rad** anger du ett namn för sidan. Det här namnet används för din referens i Intune-portalen och *visas inte* på iOS-enheten.
-3. Ange **Appnamn**. Det här namnet används för din referens i Intune-portalen och *visas inte* på iOS-enheten.
+3. På bladet **Lägg till rad** anger du ett namn för sidan. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
+3. Ange **Appnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 2. Ange **Appsamlings-ID** för den app som du vill visa. Se **Så här lägger du till en app i listan** om du behöver hjälp.
 3. Välj **Lägg till**. Du kan lägga till upp till 60 objekt.
 4. Klicka på **OK**när du är klar.

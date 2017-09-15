@@ -1,6 +1,6 @@
 ---
 title: "Registrera iOS-enheter – Enhetsregistreringsprogrammet"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Läs hur du registrerar företagsägda iOS-enheter med programmet för enhetsregistrering.”"
 keywords: 
 author: nathbarn
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d88d191e3212e1999376fb2577a85c3dc957a787
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: c14903d227164089f52c9bd3288a99f29a9141b8
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -55,7 +55,7 @@ Innan du kan registrera iOS-enheter med DEP behöver du en DEP-tokenfil (.p7m) f
 Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också använda DEP-portalen för att tilldela enheter till Intune för hantering.
 
 > [!NOTE]
-> Om du tar bort token från den klassiska Intune-konsolen innan du migrerar till Azure kan Intune återställa en borttagen Apple DEP-token. Du kan ta bort DEP-token från Azure-portalen igen. Du kan ta bort DEP-token från Azure-portalen igen.
+> Om du tar bort denna token från den klassiska Intune-portalen innan du migrerar till Azure, kan Intune återställa en borttagen Apple DEP-token. Du kan ta bort DEP-token från Azure-portalen igen. Du kan ta bort DEP-token från Azure-portalen igen.
 
 **Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple DEP-token.**<br>
 
@@ -76,7 +76,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
    ![Skärmbild av hur någon lägger till ett MDM-servernamn för DEP och sedan klickar på Nästa.](./media/enrollment-program-token-add-server.png)
 
-5. Dialogrutan **Lägg till &lt;ServerName&gt;**  öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
+5. Dialogrutan **Lägg till &lt;ServerName&gt; ** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
 
 6.  Dialogrutan **Lägg till &lt;ServerName&gt;** visar länken **Din servertoken**. Hämta servertokenfilen (.p7m) till datorn och klicka sedan på **Klar**.
 

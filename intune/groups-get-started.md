@@ -1,6 +1,6 @@
 ---
 title: Klassiska Intune-grupper i Azure-portalen
-titleSuffix: Intune on Azure
+titleSuffix: Azure portal
 description: "Läs mer om nyheterna med grupper i Intune i Azure Portal"
 keywords: 
 author: nathbarn
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 ms.custom: intune-azure
-ms.openlocfilehash: c51c3102cc78cf095e27da4ff199cb3fb5ae14a6
-ms.sourcegitcommit: 45204e0fb8cb4cce449e65f2f1d7bb6f6ac4ccf5
+ms.openlocfilehash: 7ba5c3d0e6f241c5734d629a23f092ac007f8300
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="intune-classic-groups-in-the-azure-portal"></a>Klassiska Intune-grupper i Azure-portalen
 
@@ -38,7 +38,7 @@ Vissa av de funktioner för Intune-grupper som du tidigare kan ha använt är in
 - Alternativet att **Exkludera vissa medlemmar** från en grupp finns inte i Azure-portalen. Du kan dock använda en Azure AD-säkerhetsgrupp med avancerade regler för att replikera dessa gruppers beteende. För att till exempel skapa en avancerad regel som inkluderar alla personer i din försäljningsavdelning i en säkerhetsgrupp, men exkluderar grupper som har ordet "Assistent" i sina jobbtitlar, kan du använda den här avancerade regeln:
 
   `(user.department -eq "Sales") -and -not (user.jobTitle -contains "Assistant")`.
-- Gruppen **Alla hanterade enheter i Exchange ActiveSync** i Intune-konsolen migrerades inte till Azure AD. Du kan emellertid fortfarande komma åt information om EAS-hanterade enheter från Azure Portal.
+- Gruppen **Alla hanterade enheter i Exchange ActiveSync** i den klassiska Intune-konsolen migrerades inte till Azure AD. Du kan emellertid fortfarande komma åt information om EAS-hanterade enheter från Azure Portal.
 
 ## <a name="how-to-get-started"></a>Hur kommer man igång?
 
@@ -51,9 +51,9 @@ Vissa av de funktioner för Intune-grupper som du tidigare kan ha använt är in
 
 
 ## <a name="what-happened-to-intune-groups"></a>Vad hände med Intune-grupperna?
-När grupper migreras från den klassiska Intune-portalen till Intune i Azure Portal används följande regler:
+När grupper migreras från Azure-portalen till Intune i Azure-portalen, tillämpas följande regler:
 
-| Grupper i klassiska Intune|Grupper i Azure AD|
+| Grupper i Intune|Grupper i Azure AD|
 |-----------------------------------------------------------------------|-------------------------------------------------------------|
 |Statisk användargrupp|Statisk Azure AD-säkerhetsgrupp|
 |Dynamisk användargrupp|Statiska Azure AD-säkerhetsgrupper med hierarki för Azure AD-säkerhetsgrupper|
@@ -65,7 +65,7 @@ När grupper migreras från den klassiska Intune-portalen till Intune i Azure Po
 
 ## <a name="group-hierarchy"></a>Grupphierarki
 
-I den klassiska Intune-konsolen hade alla grupper en överordnad grupp. Grupper kunde endast innehålla medlemmar från den överordnade gruppen. Underordnade grupper i Azure AD kan innehålla medlemmar som inte är i den överordnade gruppen.
+I Intune-konsolen hade alla grupper en överordnad grupp. Grupper kunde endast innehålla medlemmar från den överordnade gruppen. Underordnade grupper i Azure AD kan innehålla medlemmar som inte är i den överordnade gruppen.
 
 ## <a name="group-attributes"></a>Gruppattribut
 Attribut är enhetsegenskaper som kan användas för att definiera grupper. Den här tabellen beskriver hur dessa villkor migreras till Azure AD-säkerhetsgrupper.
@@ -84,4 +84,4 @@ Attribut är enhetsegenskaper som kan användas för att definiera grupper. Den 
 
 ## <a name="what-happens-to-policies-and-apps-you-previously-deployed"></a>Vad händer med principer och appar som du tidigare har distribuerat?
 
-Principer och appar fortsätter att distribueras till grupper precis som tidigare. Men du kan nu hantera dessa grupper från Azure Portal i stället för från den klassiska Intune-konsolen.
+Principer och appar fortsätter att distribueras till grupper precis som tidigare. Men du kan nu hantera dessa grupper från Azure-portalen i stället för från Intune-konsolen.

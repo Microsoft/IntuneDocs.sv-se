@@ -1,6 +1,6 @@
 ---
 title: "Felsöka enhetsprofiler i Microsoft Intune"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Om du kört fast, kan du använda det här ämnet för att hjälpa dig läsa problem med Intune-enhetsprofiler.”"
 keywords: 
 author: robstackmsft
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed238f35927f17b20402f64586686246afabb900
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 426bed61930e045f38e3c7c658dbb7168dc2f551
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="troubleshooting-device-profiles-in-microsoft-intune"></a>Felsöka enhetsprofiler i Microsoft Intune
 
@@ -59,7 +59,7 @@ När två eller fler principer tilldelas samma användare eller enhet så görs 
 
 -   Den mest restriktiva efterlevnadsprincipinställningen tillämpas om den utvärderas och jämförs med samma inställning i en annan efterlevnadsprincip.
 
--   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip visas konflikten i Intune-konsolen. Du måste lösa dessa konflikter manuellt.
+-   Om en konfigurationsprincipinställning hamnar i konflikt med en inställning i en annan konfigurationsprincip, visas konflikten i Azure-portalen. Du måste lösa dessa konflikter manuellt.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-will-be-applied-to-the-app"></a>Vad händer när appskyddsprinciper står i konflikt med varandra? Vilken används för appen?
 Konfliktvärden är de mest restriktiva inställningarna som är tillgängliga i en appskyddsprincip, förutom fälten för nummerinmatning (t.ex. PIN-försök före återställning).  Nummerinmatningsfälten får samma värden som då du skapar en MAM-princip i konsolen med alternativet för rekommenderade inställningar.

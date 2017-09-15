@@ -5,7 +5,7 @@ keywords:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 10/03/2016
+ms.date: 09/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 85612fc63b3fb738e6135ac71065edc06169fa9e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 1f19b7e9d57350f90baca96562a99b2fde66f91a
+ms.sourcegitcommit: 00352501833818a08479758ba1c9efdf7223e264
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Intune-principinställningar för Windows 10-enheter i Microsoft Intune
 
@@ -41,9 +41,9 @@ Ange ett namn, och eventuellt en beskrivning, för principen så att du kan iden
 
 ### <a name="oma-uri-settings"></a>OMA-URI-inställningar
 
-Ange följande information för varje OMA-URI-inställning som du vill lägga till. Läs [URI-inställningar för Windows 10](/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune#Windows-10-URI-settings) i det här avsnittet om du vill veta mer om vilka inställningar du kan använda:
+Ange följande information för varje OMA-URI-inställning som du vill lägga till:
 
-- **Inställningsnamn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
+- **Inställningsnamn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar. Du hittar mer information om URI-inställningar i [Princip-CSP (Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 - **Inställningsbeskrivning**: Ange en beskrivning för inställningen.
 - **Datatyp**: Välj från följande datatyper:
     - **Sträng**

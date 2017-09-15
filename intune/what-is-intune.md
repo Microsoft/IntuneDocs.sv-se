@@ -1,7 +1,7 @@
 ---
-title: Introduktion till Intune i Azure Portal
-titleSuffix: Intune on Azure
-description: "Lär dig grunderna om Intune i Azure-portalen och hur det kan hjälpa dig att hantera dina enheter.”"
+title: Introduktion till Intune i Azure-portalen
+titlesuffix: Azure portal
+description: "Lär dig grunderna om Intune i Azure-portalen och hur det kan hjälpa dig att hantera dina enheter.\""
 keywords: 
 author: robstackmsft
 ms.author: robstack
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: a51b3c59d922b0c150073017222dca0c90c5b7a0
-ms.sourcegitcommit: 36ae73f59ff5e9fdfe4f930ad0aa4b7795fe11f2
+ms.openlocfilehash: 6150434620f055f17563da6269c85c89c70b8e2b
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Introduktion till Microsoft Intune i Azure-portalen
 
@@ -72,7 +72,7 @@ Kolla på [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-s
 
 ## <a name="whats-in-this-library"></a>Vad finns i det här biblioteket?
 
-Dokumentationen visar layouten för Intune-portalen för att göra det lättare att hitta den information du behöver.
+Dokumentationen visar layouten för Azure-portalen för att göra det lättare att hitta den information du behöver.
 
 ![Arbetsbelastningar i Azure-portalen](./media/azure-portal-workloads.png)
 

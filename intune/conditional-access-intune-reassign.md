@@ -1,6 +1,6 @@
 ---
 title: "Migrera principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen"
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Migrera principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5f1ea2b0ceb32d0aa05a28e0f01f65b80b1ddcf
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 5b0b0982018dcfa3c606ea55b9264e5cd6cd1a82
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Gör om tilldelningen av principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -33,7 +33,7 @@ Om du är redo att gå över till Azure-portalen följer du stegen i det här av
 
 - Följ stegen i detta avsnitt om du vill skapa dessa principer på nytt i Azure-portalen.
 
-- Kontrollera att de nya principerna fungerar som förväntat i Azure-portalen innan du inaktiverar villkorsprinciperna på den klassiska Intune-konsolen.
+- Kontrollera att de nya principerna fungerar som förväntat i Azure-portalen innan du inaktiverar villkorsprinciperna i den klassiska Intune-portalen.
 <br /><br />
     - **Innan du inaktiverar** principer för villkorlig åtkomst i den klassiska Intune-portalen måste du göra upp en plan för hur användarna ska flyttas över till den nya principen. Det finns två sätt:
 <br /><br />
@@ -82,7 +82,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
     ![Jämförelse av användargruppsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Intune-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
+    > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Azure-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
 
 5. När du har valt gruppen klickar du på **Välj** och sedan på **Klar**.
 
@@ -150,7 +150,7 @@ Om du har konfigurerat inställningar för Exchange Active Sync som en del av en
     ![Jämförelse av användargruppsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Intune-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
+    > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Azure-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
 
 5. När du har valt gruppen klickar du på **Välj** och sedan på **Klar**.
 

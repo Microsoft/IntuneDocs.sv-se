@@ -1,6 +1,6 @@
 ---
 title: RBAC med Intune
-titleSuffix: Intune Azure preview
+titleSuffix: Azure portal
 description: "Förhandsversion av Intune Azure: Lär dig hur RBAC kan kontrollera vem som ska kunna utföra åtgärder och göra ändringar."
 keywords: 
 author: andredm7
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3aff61f6201d6569e35aa9d556aa655d28775d2f
-ms.sourcegitcommit: 18cdbdc226f64368de892a8c5cff157c37986c57
+ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Rollbaserad administrationskontroll (RBAC) med Intune
 
@@ -32,7 +32,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
 ![Intune RBAC-exempel](./media/intune-rbac-1.PNG)
 
-**Azure Active Directory (AD Azure)** innehåller två Directory roller som kan användas med Intune, som börjar med den nya Intune-portalen. Rollerna beviljas fullständig behörighet för att utföra alla aktiviteter i Intune:
+**Azure Active Directory (AD Azure)** innehåller två katalogroller som kan användas med Intune, med start i den nya Azure-portalen. Rollerna beviljas fullständig behörighet för att utföra alla aktiviteter i Intune:
 
 - **Global administratör:** användare med den här rollen har åtkomst till alla administrativa funktioner i Azure AD, samt tjänster som är underordnade Azure AD som Exchange Online, SharePoint Online och Skype för företag – Online. Personen som registrerar sig för Azure AD-klient blir global administratör. Endast globala administratörer kan tilldela andra administratörsroller i Azure AD. Det kan finnas mer än en global administratör i din organisation. Globala administratörer kan återställa lösenordet för alla användare och alla andra administratörer.
 
@@ -46,12 +46,12 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
     > [!TIP]
     > Intune visar också tre Azure AD-tillägg: **Användare**, **Grupper** och **Villkorlig åtkomst** som kontrolleras med hjälp av Azure AD RBAC. Dessutom kan den **Användarkontoadministratören** endast utför aktiviteter för AAD-användare/-grupp och har inte fullständig behörighet att utföra alla aktiviteter i Intune. Se [RBAC med Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) för mer information.
 
-## <a name="roles-created-in-the-intune-classic-console"></a>Roller som skapas i den klassiska Intune-konsolen
+## <a name="roles-created-in-the-intune-classic-portal"></a>Roller som skapas i den klassiska Intune-portalen
 
-Endast Intune **Service-administratörer** med ”Full” behörighet migreras från den klassiska Intune-konsolen till Intune i Azure. Du måste tilldela Intune **Service-administratörer** med åtkomsten ”skrivskyddad” eller ”supportavdelning” till Intune-roller i Azure portalen och ta bort dem från den klassiska portalen.
+Endast Intunes **tjänstadministratörer** med fullständig behörighet migreras från den klassiska Intune-portalen till Intune i Azure-portalen. Du måste tilldela Intune **Service-administratörer** med åtkomsten ”skrivskyddad” eller ”supportavdelning” till Intune-roller i Azure portalen och ta bort dem från den klassiska portalen.
 
 > [!IMPORTANT]
-> Du kan behöva bevara Intune Service-administratörsåtkomsten i den klassiska konsolen om dina administratörer fortfarande behöver åtkomst till att hantera datorer med Intune.
+> Du kan behöva behålla Intunes tjänstadministratörsåtkomst i den klassiska portalen om dina administratörer fortfarande behöver åtkomst till att hantera datorer med Intune.
 
 ## <a name="built-in-roles"></a>Inbyggda roller
 

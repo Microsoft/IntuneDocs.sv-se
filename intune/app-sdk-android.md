@@ -5,20 +5,20 @@ keywords: SDK
 author: mtillman
 manager: angrobe
 ms.author: mtillman
-ms.date: 07/05/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-ms.reviewer: oydang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a6e0ea5edc5a174e0400ccca3931323712f3cbbe
-ms.sourcegitcommit: ce8a1f0f4e95444949556600d1837937b6efd769
+ms.openlocfilehash: a28305aab1fff16a46b8142e5869bfa25008017c
+ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -456,8 +456,9 @@ Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appk
     |--|--|
     | Authority | Önskad miljö där AAD-konton har konfigurerats |
     | ClientID | Appens ClientID (genereras av Azure AD när appen registreras) |
-    | NonBrokerRedirectURI | En giltig omdirigerings-URI för appen eller `urn:ietf:wg:oauth:2.0:oob` som standard. <br><br> Konfigurera värdet som en godkänd omdirigerings-URI för din apps ClientID.
-    | SkipBroker | Falskt |
+    | NonBrokerRedirectURI | En giltig omdirigerings-URI för programmet eller `urn:ietf:wg:oauth:2.0:oob` 
+    . <br><br> Konfigurera värdet som en godkänd omdirigerings-URI för din apps ClientID.
+   | SkipBroker | False |
 
 
 3. **Appen integrerar ADAL, men saknar stöd för asynkron autentisering/enhetsomfattande enkel inloggning:**
@@ -665,7 +666,7 @@ android:backupAgent="com.microsoft.intune.mam.client.app.backup.MAMDefaultBackup
     ```
 
 
-2. **[Valfritt]**  Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
+2. **[Valfritt] ** Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
 
 3. När du bestämmer vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) måste du ange attributet `android:fullBackupContent`  till true, false eller till en XML-resurs i appen.
 
@@ -1355,7 +1356,7 @@ Intune SDK använder kontraktet som tillhandahålls av Android-API:et, även om 
 
 ## <a name="telemetry"></a>Telemetri
 
-Intune App SDK för Android styr inte insamling av data från din app. Som standard loggar företagsportalappen telemetridata vid följande användningshändelser. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in någon personligt identifierbar information (PII).
+Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar telemetridata som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in någon personligt identifierbar information (PII).
 
 > [!NOTE]
 > Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/en-us/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

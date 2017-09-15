@@ -23,9 +23,12 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
 
 4. Konfigurera **MDM-användaromfattning**. Ange vilka användares enheter som ska hanteras av Microsoft Intune. Dessa Windows 10-enheter kan registreras automatiskt för hantering med Microsoft Intune.
 
-  - **Inga**
-  - **Vissa**
-  - **Alla**
+  - **Ingen** – Automatisk registrering av MDM är inaktiverad
+  - **Vissa** – Välj de **grupper** som automatiskt kan registrera sina Windows 10-enheter
+  - **Alla** – Alla användare kan automatiskt registrera sina Windows 10-enheter
+
+      > [!IMPORTANT]
+      > Om både **MAM-användaromfattning** och automatisk MDM-registrering (**MDM-användaromfattning**) är aktiverat för en grupp så är endast MAM aktiverat. Endast MAM läggs till för användare i gruppen när de arbetsplatsansluter personliga enheter. Enheter MDM-registreras inte automatiskt.
 
    ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
 
@@ -33,9 +36,6 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
     - **Webbadress till MDM-användarvillkor**
     - **Webbadress till MDM-identifiering**
     - **Webbadress till MDM-kompatibilitet**
-
-    > [!IMPORTANT]
-    > Om både **MAM-användaromfattning** och automatisk MDM-registrering (**MDM-användaromfattning**) är aktiverat för en grupp så är endast MAM aktiverat. Endast MAM läggs till för användare i gruppen när de arbetsplatsansluter personliga enheter. Enheter MDM-registreras inte automatiskt.
 
 6. Välj **Spara**.
 

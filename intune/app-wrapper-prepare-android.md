@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: oldang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e8707253139ee5a12a48d38a333ae49fbb4d3ead
-ms.sourcegitcommit: 4dc5bed94cc965a54eacac2d87fb2d49c9300c3a
+ms.openlocfilehash: b82c0832fc102e4ae30268a6cd08ed0e14e1c931
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -122,14 +122,14 @@ Om möjligt ska signeringsinformationen som redan användes när för byggproces
 
 Om tidigare signeringscertifikatet kan inte användas eller om appen har inte distribuerats innan kan du skapa ett nytt signeringscertifikat genom att följa anvisningarna i [Android Utvecklarhandboken](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
-Om appen har distribuerats tidigare med ett annat signeringscertifikat, kan appen inte överföras till Intune-konsolen efter uppgraderingen. Appuppgraderingsscenarier kommer att brytas om appen har signerats med ett annat certifikat än det som appen har byggts med. Alla nya certifikat för tokensignering bör därför behållas för app-uppgraderingar. 
+Om appen har distribuerats tidigare med ett annat signeringscertifikat, kan appen inte överföras till Intune efter uppgraderingen. Appuppgraderingsscenarier kommer att brytas om appen har signerats med ett annat certifikat än det som appen har byggts med. Alla nya certifikat för tokensignering bör därför behållas för app-uppgraderingar. 
 
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Säkerhetsaspekter att tänka på när du kör programhanteringsverktyget
 För att förhindra eventuell förfalskning, avslöjande av information och privilegieangrepp:
 
 -   Kontrollera att indata för affärsprogrammet (LOB), utdataappen och Java KeyStore finns på samma dator där programhanteringsverktyget körs.
 
--   Importera utdataappen till Intune-konsolen på samma dator där verktyget körs. Mer information om Java Keytool finns i [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
+-   Importera utdataprogrammet till Intune på samma dator som där verktyget körs. Mer information om Java Keytool finns i [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
 -   Om utdataappen och verktyget finns på en UNC-sökväg (Universal Naming Convention) och du inte kör verktyget och indatafilerna på samma dator, konfigurerar du en säker miljö med hjälp av [IPsec (Internet Protocol Security)](http://wikipedia.org/wiki/IPsec) eller [signering med SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 

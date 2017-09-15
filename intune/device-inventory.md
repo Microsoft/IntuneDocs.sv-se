@@ -1,12 +1,12 @@
 ---
 title: Visa Intunes enhetsinventering
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Lär dig hur du visar de enheter som du hanterar med Intune, samt hur deras maskinvara och installerade appar fungerar.\""
 keywords: 
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 07/11/2017
+ms.date: 09/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3618c5ee0b4a7ff0e7b6a4d6ed58f77a2af0ba66
-ms.sourcegitcommit: fb17b59f4aa2b994b149fcc6d32520f74b0de6a5
+ms.openlocfilehash: 45ef07d68248ab4c0c6f3a3e6e8da83cb210c5c7
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-view-intune-device-inventory"></a>Så här visar du Intunes enhetsinventering
 
@@ -54,3 +54,4 @@ Välj nu något av följande alternativ:
 
 >[!NOTE]
 > Intune samlar endast in appinformation från företagsägda enheter. Ingen appinformation samlas in från personliga enheter. För datorer med Windows 10 samlas endast modern appinformation in från företagsägda enheter. Intune samlar inte in information om Win32-appar på enheten.
+> Beroende på vilken operatör du använder med enheterna, är det inte säkert att alla lagerobjekt kan samlas in.

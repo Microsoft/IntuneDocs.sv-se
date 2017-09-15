@@ -1,6 +1,6 @@
 ---
 title: Distribuera appar till Android for Work-enheter
-titleSuffix: Intune on Azure
+titlesuffix: Azure portal
 description: "Använd det här ämnet för att synkronisera och distribuera appar till Android for Work-enheter från Google Play for Work Store.”"
 keywords: 
 author: mattbriggs
@@ -15,18 +15,18 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bbe5be4afead5d80f38e2ef56d12c0b26351dfd8
-ms.sourcegitcommit: 4034ac474bfed358270a32459a2cf2fe02f44e45
+ms.openlocfilehash: 803f1475a220e52a0f7d8a41d58f0a5337ff6555
+ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Så här tilldelar du appar till Android for Work-enheter med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Du tilldelar appar till Android for Work-enheter på ett annat sätt än när du tilldelar dem till vanliga Android-enheter. Alla appar som du installerar för Android for Work kommer från Google Play for Work-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem.
-Appen visas sedan i noden **Licensierade appar** i Intune-portalen. Härifrån kan du hantera tilldelningen av appen på samma sätt som du tilldelar andra appar.
+Programmet visas sedan i noden **Licensierade appar** i Azure-portalen. Härifrån kan du hantera tilldelningen av appen på samma sätt som du tilldelar andra appar.
 
 Om du har skapat dina egna verksamhetsspecifika appar, kan du även tilldela dem på följande sätt:
 - Registrera dig för ett Google-utvecklarkonto som låter dig publicera appar på ett privat område i Google Play-butiken.
@@ -34,7 +34,7 @@ Om du har skapat dina egna verksamhetsspecifika appar, kan du även tilldela dem
 
 ## <a name="before-you-start"></a>Innan du börjar
 
-Kontrollera att du har konfigurerat Intune och Android for Work tillsammans i arbetsbelastningen **Enhetsregistrering** i Intune-portalen.
+Kontrollera att du har konfigurerat Intune och Android for Work så att de fungerar tillsammans i arbetsbelastningen **Enhetsregistrering** i Azure-portalen.
 
 ## <a name="synchronize-an-app-from-the-google-play-for-work-store"></a>Synkronisera en app från Google Play for Work-butiken
 
