@@ -2,8 +2,8 @@
 title: "Lista över tillåtna och blockerade appar för KNOX"
 description: "Anpassad profil för att skapa en lista över tillåtna och blockerade appar för KNOX."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 11/02/2016
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: bbc8e0df-7bf3-494e-8bc4-dac59a98ab41
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b215425534e833db7e92e3f60fc507a168ef576f
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2632da8ca8d149e1519aeac33a57571ae1a55a54
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Använda anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter
 
