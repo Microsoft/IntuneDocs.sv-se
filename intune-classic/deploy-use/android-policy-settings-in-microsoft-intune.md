@@ -2,8 +2,8 @@
 title: "Inställningar för Android- och Samsung KNOX-principer"
 description: "Skapa principer som styr inställningar och funktioner på Android-enheter som du hanterar med Intune."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 12/14/2016
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 71cc39cf-e726-40fd-8d08-78776e099a4b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 07d49d9f9628dd296c3708a063de34d485c77acb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b007a3b038f1d631f1f75f5fea208de75e14fed1
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="android-and-samsung-knox-standard-policy-settings-in-microsoft-intune"></a>Inställningar för Android- och Samsung KNOX Standard-principer i Microsoft Intune
 
@@ -51,7 +51,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Antal minuter av inaktivitet innan skärmen stängs av**|Anger antalet minuter av inaktivitet innan enheten låses automatiskt.|Ja|Ja|
 |**Lösenordets giltighetstid (i dagar)**|Anger antal dagar innan ett lösenord måste ändras.|Ja|Ja|
 |**Kom ihåg tidigare lösenord**|Anger antalet lösenord som har använts tidigare som ska sparas.|Ja|Ja|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord** |Förhindrar återanvändning av tidigare lösenord.|Ja|Ja|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Förhindrar återanvändning av tidigare lösenord.|Ja|Ja|
 |**Lösenordskvalitet**|Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas.|Ja|Ja|
 |**Tillåt fingeravtrycksupplåsning**|Tillåter att enheten kan låsas upp med ett fingeravtryck.|Nej|Ja|
 |**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 5 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|Ja|Nej|

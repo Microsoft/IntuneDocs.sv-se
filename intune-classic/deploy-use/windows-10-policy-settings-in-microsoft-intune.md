@@ -2,8 +2,8 @@
 title: "Principinställningar för Windows 10"
 description: "Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 09/05/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1f19b7e9d57350f90baca96562a99b2fde66f91a
-ms.sourcegitcommit: 00352501833818a08479758ba1c9efdf7223e264
+ms.openlocfilehash: 3264bd25f3a30e12930cc6d89c18baea558ffccc
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Intune-principinställningar för Windows 10-enheter i Microsoft Intune
 
@@ -84,7 +84,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Antal minuter av inaktivitet innan skärmen stängs av**|Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses|
 |**Lösenordets giltighetstid (i dagar)**|Anger efter hur lång tid enhetens lösenord måste ändras|
 |**Kom ihåg tidigare lösenord**|Anger om du vill förhindra att användaren återanvänder tidigare använda lösenord|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord** |Anger antalet tidigare använda lösenord som enheten sparar|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Anger antalet tidigare använda lösenord som enheten sparar|
 |**Kräv lösenord när enheten återgår från viloläge**|Anger att användaren måste ange ett lösenord för att låsa upp enheten (endast Windows 10 Mobile)|
 
 ### <a name="encryption"></a>Kryptering

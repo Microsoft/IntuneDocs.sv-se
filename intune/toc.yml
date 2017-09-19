@@ -115,7 +115,7 @@
     - name: Konfigurera Intune
       href: setup-steps.md
       items:
-        - name: Förutsättningar
+        - name: Konfigurationer som stöds
           href: supported-devices-browsers.md
           items:
             - name: Användning av nätverksbandbredd

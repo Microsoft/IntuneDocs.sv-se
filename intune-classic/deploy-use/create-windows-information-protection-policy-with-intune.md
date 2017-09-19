@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/14/2017
+ms.date: 9/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 51e53e28-5c34-4d0f-a4b1-6390a337514c
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a08296770ee3a326411d3267705ed6a912ab17bd
-ms.sourcegitcommit: c8fb42fcb8735af432c7e07c380d956171012bd4
+ms.openlocfilehash: 040ce88c47eb12bbe9b228189d90ca422e5185e7
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -35,13 +35,6 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 -   **Tillåtna appar**: Dessa appar är de som måste följa den här principen.
 
 -   **Undantagna appar**: De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
-
-> [!IMPORTANT]  
-> Intune rekommenderar att du lägger till företagsportalappen till undantagslistan för att göra det möjligt för appen att fungera korrekt. Det gör du genom att lägga till följande **Store-app** i listan **Undanta appar**:  
->   - Namn: Företagsportal  
->   - Utgivare: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US  
->   - Produktnamn: Microsoft.CompanyPortal  
-
 
 ### <a name="types-of-apps"></a>Apptyper
 
@@ -109,7 +102,7 @@ När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik prin
 5.  När du har fyllt i informationen i fälten, lägger du till appen i listan **Tillåtna appar** genom att välja **OK**.
 
 > [!NOTE]
-> Om du vill lägga till flera Store-appar samtidigt kan du klicka på menyn **(...)**  i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
+> Om du vill lägga till flera Store-appar samtidigt kan du klicka på menyn **(...) ** i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
 
 ## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Lägg till en skrivbordsapp i listan över tillåtna appar
 

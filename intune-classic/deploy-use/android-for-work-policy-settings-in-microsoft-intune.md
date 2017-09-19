@@ -2,8 +2,8 @@
 title: "Principinställningar för Android for Work"
 description: "Skapa principer som styr inställningar och funktioner på Android for Work-enheter som du hanterar med Intune."
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 35a53076-74d6-486d-b201-e0da2e170008
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 858c4a525945694326952e8afe280e4b66cd2ccb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: cb6bd74669a42b2efff0d1f8bee0c1b961a975f6
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="android-for-work-policy-settings-in-microsoft-intune"></a>Principinställningar för Android for Work i Microsoft Intune
 
@@ -45,7 +45,7 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du s
 |**Tillåt Smart Lock och andra betrodda agenter**<br>(Android 6 och senare)|Gör att du kan styra Smart Lock-funktionen i kompatibla Android-enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats, till exempel när det är anslutet till en specifik bluetoothenhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.|
 |**Antal tillåtna upprepade felinloggningar innan arbetsprofilen tas bort**|Anger antalet tillåtna felinloggningar innan arbetsprofilen på enheten tas bort. En fullständig enhetsrensning utförs inte.|
 |**Kom ihåg tidigare lösenord**|Hindrar återanvändning av lösenord som har använts tidigare.|
-|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord** |Anger antalet lösenord som har använts tidigare som ska sparas.|
+|**Spara lösenordshistorik** - **Förhindra återanvändning av tidigare lösenord **|Anger antalet lösenord som har använts tidigare som ska sparas.|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|
 |**Tillåt fingeravtrycksupplåsning**<br>(Android 6 och senare)|Låter dig använda ett fingeravtryck för att låsa upp enheter med den här funktionen.|
 
