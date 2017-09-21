@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/21/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6b3ecc9af91d1a78f84dd6d4b8f47f0bf3e8c742
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 787fbdd470b4e1fbb4cb3e22ba4065e52d4c63f8
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -38,17 +38,8 @@ Apple School Manager-registrering kan inte användas med [Apples program för en
 - Mappning mellan användare kräver [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Enheter som köpts från programmet [Apple School Management](http://school.apple.com)
 
-**Registreringssteg för Apple School Manager**
-1. [Skaffa en Apple School Manager-token och tilldela enheter](#get-the-apple-token-and-assign-devices)
-2. [Skapa en registreringsprofil](#create-an-apple-enrollment-profile)
-3. [Ansluta School Data Sync](#connect-school-data-sync) (valfritt)
-4. [Synkronisera Apple School Manager-hanterade enheter](#sync-managed-devices)
-5. [Tilldela Apple School Manager-profilen till enheter](#assign-a-profile-to-devices)
-6. [Distribuera enheter till användare](#distribute-devices-to-users)
-
 >[!NOTE]
 >Multifaktorautentisering (MFA) fungerar inte vid registrering på Apple School Manager-enheter med användartillhörighet. Efter registreringen fungerar MFA som förväntat på dessa enheter. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
-
 
 ## <a name="get-the-apple-token-and-assign-devices"></a>Skaffa Apple-token och tilldela enheter
 
@@ -104,7 +95,8 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
     - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
      - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
-   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och **Övervakat** läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md).
+   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och **Övervakat** läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md). Du bör också granska [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+
    >[!NOTE]
    >Om **Användartillhörighet** är inställt på **Med användartillhörighet** eller **Övervakat** läge är inställt på **Av**, är det delade iPad-läget inaktiverat för registreringsprofilen.
 

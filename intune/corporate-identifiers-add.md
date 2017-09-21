@@ -15,24 +15,24 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85303c503e068ec23c8321b9359760775bbdb6f8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 58dac14dcc38329cfa0a98746e667bf6e5438170
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Som Intune-administratör kan du identifiera en enhet som företagsägd på en rad olika sätt. Intune kan samla in ytterligare information från företagsägda enheter. Du kan också ställa in enhetsbegränsningar för att förhindra registrering av enheter som inte är företagsägda.
+Som Intune-administratör kan du förfina hanteringen och identifieringen genom att identifiera enheter som företagsägda. Intune kan utföra ytterligare hanteringsuppgifter och samla in ytterligare information, t.ex. telefonnummer och en inventering av appar från företagsägda enheter. Du kan också konfigurera enhetsbegränsningar för att förhindra registrering av enheter som inte är företagsägda.
 
 En enhet identifieras som företagsägd när något av följande villkor är uppfyllt:
 
 - Registrerad med ett [enhetsregistreringshanterar](device-enrollment-manager-enroll.md)-konto (alla plattformar)
 - Registrerat med Apples [program för enhetsregistrering](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md) eller [Apple Configurator](apple-configurator-enroll-ios.md) (endast iOS)
 - [Identifierad som en företagsägd enhet innan registrering](#identify-corporate-owned-devices-with-imei-or-serial-number) med ett IMEI-nummer (alla plattformar med IMEI-nummer) eller serienummer (iOS och Android)
-- Registrerad i Azure Active Directory eller Enterprise Mobility + Security som en Windows 10 Enterprise-enhet (endast Windows 10)
+- Registrerad i Azure Active Directory eller Enterprise Mobility + Security som en Windows 10 Enterprise-enhet
 - Enhetens egenskaper anger att [enheten ägs av företaget](#change-device-ownership)
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identifiera företagsägda enheter med IMEI- eller serienummer

@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c14903d227164089f52c9bd3288a99f29a9141b8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 94eeb453e5c83c2dadaa757b4c7867f9dd3f62ff
+ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -43,7 +43,6 @@ DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device
 - Enheter som köpts i [Apples enhetsregistreringsprogram](http://deploy.apple.com)
 - [MDM-utfärdare](mdm-authority-set.md)
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
-- Mappning mellan användare kräver [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
 > [!NOTE]
 > Multifaktorautentisering (MFA) fungerar inte under inställning av DEP-enheter för användartillhörighet. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
@@ -109,7 +108,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
   Ange om enheter med den här profilen ska registreras med eller utan en tilldelad användare under **Användartillhörighet**.
 
- - Välj **Registrera med användartillhörighet** – Välj detta för enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar.
+ - Välj **Registrera med användartillhörighet** – Välj detta för enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar. Mappning mellan användare kräver [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
  - **Registrera utan användartillhörighet** – Välj detta för enheter som inte är kopplade till en enda användare. Använd detta för enheter som utför uppgifter utan att öppna lokala användardata. Appar som företagsportalappen fungerar inte.
 
@@ -119,6 +118,8 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
     - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
+
+  - **Aktivera delad iPad** – Apples enhetsregistreringsprogram stöder inte delad iPad.
 
     - **Tillåt parkoppling** – Anger huruvida iOS-enheter ska kunna synkroniseras med datorer eller inte. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
 

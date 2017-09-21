@@ -15,19 +15,19 @@ ms.assetid:
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b874523024b58098205d94da47c07ee432dfc
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 41b358f48412585ec40e369225b4263012bfd2f8
+ms.sourcegitcommit: b8987b8dfb009ea55678d7f640ac5f18a6ab167e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här referensguiden för de som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
 ## <a name="quick-reference-guide"></a>Snabbguide
 |Funktion |Sökväg i den klassiska portalen|Sökväg i Intune i Azure-portalen|
 |------------|---------------|---------------|
-|Enhetsregistreringsprogram (DEP) |Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram|[Enhetsregistrering > Apple-registrering > Registreringsprogramtoken](#where-did-apple-dep-go) |
-|Enhetsregistreringsprogram (DEP)| Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram |[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-apple-dep-go) |
+|Programmet för enhetsregistrering (DEP) [endast iOS]|Admin > Hantering av mobila enheter > iOS > Programmet för enhetsregistrering|[Enhetsregistrering > Apple-registrering > Registreringsprogramtoken](#where-did-apple-dep-go) |
+|Programmet för enhetsregistrering (DEP) [endast iOS]| Admin > Hantering av mobila enheter > iOS och Mac OS X > Enhetsregistreringsprogram |[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-apple-dep-go) |
 |Registreringsregler |Admin > Hantering av mobila enheter > Registreringsregler|[Enhetsregistrering > Registreringsbegränsningar](#where-did-enrollment-rules-go) |
 |Grupper efter iOS-serienummer |Grupper > Alla enheter > Företagets förregistrerade enheter > Efter iOS-serienummer|[Enhetsregistrering > Apple-registrering > Serienummer för registreringsprogram](#where-did-corporate-pre-enrolled-devices-go) |
 |Grupper efter iOS-serienummer |Grupper > Alla enheter > Företagets förregistrerade enheter > Efter iOS-serienummer| [Enhetsregistrering > Apple-registrering > AC-serienummer](#where-did-corporate-pre-enrolled-devices-go)|
