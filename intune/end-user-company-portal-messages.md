@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: jeffgilb
 ms.suite: ems
-ms.openlocfilehash: 6e3a5e39cf3ee38820b1ff79eb54c019dbb68d29
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: f1a5c8a15007a38942fe543e6c1062bf957a481c
+ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
@@ -95,6 +95,17 @@ Den andra gången användarna loggar in på företagsportalappen efter att de ne
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
 Hänvisa dina användare till [Skicka loggar till IT-administratören via e-post](/intune-user-help/send-logs-to-your-it-admin-by-email-android). Du kan även hänvisa dem till [Skicka loggar till IT-administratören via kabel](/intune-user-help/send-logs-to-your-it-admin-by-cable-android) om du vill att de jämför de två metoderna.
 
+## <a name="your-company-support-needs-to-give-you-access-to-company-resources"></a>Din företagssupport måste ge dig åtkomst till företagsresurser
+
+### <a name="where-it-appears"></a>Var det visas
+Om du inte har lagt till företagsportalappen i listan **Tillåtna appar** eller **Undanta appar** och en användare försöker logga in, så misslyckas inloggningen. Följande meddelande visas:
+
+> **Your company support needs to give you access to company resources (Din företagssupport måste ge dig åtkomst till företagsresurser)**  
+> Ditt företag skyddar din enhet med Windows Information Protection-principer. Din företagssupport måste se till att företagsportalen kan komma åt dem.
+
+### <a name="what-it-means"></a>Betydelse
+
+Lägg till appen Företagsportal i listan **Tillåtna appar** eller **Undanta appar** i WIP-appskyddsprincipen (Windows Information Protection). Mer information finns i [Skapa och distribuera en WIP-appskyddsprincip med Intune](/intune-classic/deploy-use/create-windows-information-protection-policy-with-intune).
 
 ### <a name="see-also"></a>Se även
 [Vad du ska berätta för slutanvändare om att använda Intune](end-user-educate.md)

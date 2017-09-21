@@ -3,10 +3,10 @@ title: "Anpassade inställningar för Android-enheter i Intune"
 titleSuffix: Azure portal
 description: "Läs om vilka inställningar du kan använda i en anpassad Android-profil.”"
 keywords: 
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.date: 08/08/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 92014eb9fd5564c0527b8cbf68732a51cf83bc96
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 433e79ae1518f86aeb7206d5213fc38a38de5218
+ms.sourcegitcommit: 695bf70a79e20a17168c061afbb675b73ea999f7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="custom-settings-for-android-devices-in-microsoft-intune"></a>Anpassade inställningar för Android-enheter i Microsoft Intune
 
@@ -27,7 +27,14 @@ ms.lasthandoff: 09/09/2017
 
 Använd **Anpassad** profil för Android i Microsoft Intune för att tilldela OMA-URI-inställningar som kan användas för att styra funktioner på Android-enheter. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.
 
-Funktionen är avsedd för att kunna tilldela Android-inställningar som inte går att konfigurera med Intune-principer.
+Med den här funktionen kan du tilldela följande Android-inställningar som inte kan konfigureras med Intune-principer:
+
+- [Använd en anpassad enhetsprofil för Microsoft Intune för att skapa en Wi-Fi-profil med en i förväg delad nyckel](/intune/wi-fi-profile-shared-key)
+- [Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter](/intune/android-pulse-secure-per-app-vpn)
+- [Använd anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter i Microsoft Intune](/intune/samsung-knox-apps-allow-block)
+
+>[!IMPORTANT]
+>För närvarande kan endast inställningarna ovan konfigureras med den här profiltypen. Android-enheter visar inte hela listan med OMA-URI-inställningar som du kan konfigurera. Om du vill se fler inställningar som lagts till kan du begära det på [Uservoice-webbplatsen för Intune](https://microsoftintune.uservoice.com/forums/291681-ideas).
 
 ## <a name="custom-profile-settings-for-android-devices"></a>Anpassade profilinställningar för Android-enheter
 
@@ -45,8 +52,6 @@ Funktionen är avsedd för att kunna tilldela Android-inställningar som inte g�
 
 När du slutför inställningarna skapas profilen och den visas på bladet med profillistan. Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
 
-Om du vill ha några exempel på anpassade inställningar som du kan skapa kan du se:
 
-- [Använd en anpassad enhetsprofil för Microsoft Intune för att skapa en Wi-Fi-profil med en i förväg delad nyckel](/intune/wi-fi-profile-shared-key)
-- [Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter](/intune/android-pulse-secure-per-app-vpn)
-- [Använd anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter i Microsoft Intune](/intune/samsung-knox-apps-allow-block)
+
+
