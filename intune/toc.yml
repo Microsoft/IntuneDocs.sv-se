@@ -81,12 +81,16 @@
           href: planning-guide-resources.md
     - name: Guider för implementeringsscenarier
       items:
-        - name: BYOD
-          href: byod-enable.md
         - name: Skydda Exchange Online
           href: exchange-online-protect.md
         - name: Minska kostnaderna för supportavdelningen
           href: password-reset.md
+        - name: Förhindra obehörig åtkomst
+          href: data-outside-protect.md
+        - name: Förhindra dataläckage på ej hanterade enheter
+          href: data-leak-prevention.md
+        - name: BYOD
+          href: byod-enable.md
     - name: Migreringsguide
       href: migration-guide.md
       items:
@@ -434,12 +438,19 @@
               items:
                 - name: Check Point- och Intune-integrering
                   href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-            - name: Lägg till MTD-program
-              href: mtd-apps-ios-app-configuration-policy-add-assign.md
-            - name: Aktivera MTD i Intune
-              href: mtd-connector-enable.md
-            - name: Skapa en MTD-enhetsefterlevnadsprincip
-              href: mtd-device-compliance-policy-create.md
+            - name: Konfigurera Zimperium
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Zimperium- och Intune-integrering
+                  href: zimperium-mtd-connector-integration.md
+            - name: Konfigurera Intune för MTD
+              items:
+                - name: Lägg till MTD-program
+                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
+                - name: Skapa en MTD-enhetsefterlevnadsprincip
+                  href: mtd-device-compliance-policy-create.md
+                - name: Aktivera MTD i Intune
+                  href: mtd-connector-enable.md
         - name: Åtkomstkontroll för nätverk
           href: network-access-control-integrate.md
         - name: Konfigurera Windows Hello
