@@ -21,13 +21,13 @@
 ### [Installera VPN](install-your-companys-virtual-private-network-VPN-android.md)
 ### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
 ### [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
-#### [Avregistrera enheten](unenroll-your-device-from-intune-android.md)
+#### [Avregistrera din enhet](unenroll-your-device-from-intune-android.md)
 #### [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
 ### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
 
-#### [Använda loggar för att lösa problem]
+#### Använda loggar för att lösa problem
 ##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Skicka loggar via e-post](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Skicka loggar via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
