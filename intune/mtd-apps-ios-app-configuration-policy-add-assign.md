@@ -15,11 +15,11 @@ ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d0802107353eee9359e0eff17b69037d9a237a6
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 98a5b1b705e79b875b83cecb53cd82d7bf5dff30
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune
 
@@ -54,16 +54,6 @@ För iOS-enheter krävs [Microsoft Authenticator](https://docs.microsoft.com/azu
 #### <a name="microsoft-authenticator-app-for-ios"></a>Microsoft Authenticator-appen för iOS
 
 - Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Microsoft Authenticator-appbutiken](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) i **steg 5** under avsnittet **Configure app information** (konfigurera appinformation).
-
-### <a name="skycure"></a>Skycure
-
-#### <a name="android"></a>Android
-
-- Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Skycure-appbutiken](https://play.google.com/store/apps/details?id=com.skycure.skycure) i **steg 7**.
-
-#### <a name="ios"></a>iOS
-
-- Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Skycure-appbutiken](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) i **steg 5** under avsnittet **Configure app information** (konfigurera appinformation).
 
 ### <a name="lookout"></a>Lookout
 
@@ -101,6 +91,16 @@ Aktivera Azure Active Directory-autentisering för iOS-användare genom att gör
 
 - Ladda upp den omsignerade IPA-filen enligt beskrivningen i avsnittet [Add iOS LOB apps with Intune](lob-apps-ios.md) (lägg till iOS LOB-appar med Intune). Du måste också ange den lägsta versionen av operativsystemet till iOS 8.0 eller senare.
 
+### <a name="skycure"></a>Skycure
+
+#### <a name="android"></a>Android
+
+- Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Skycure-appbutiken](https://play.google.com/store/apps/details?id=com.skycure.skycure) i **steg 7**.
+
+#### <a name="ios"></a>iOS
+
+- Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Skycure-appbutiken](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) i **steg 5** under avsnittet **Configure app information** (konfigurera appinformation).
+
 ### <a name="check-point-sandblast-mobile"></a>Check Point SandBlast Mobile
 
 #### <a name="android"></a>Android
@@ -111,7 +111,21 @@ Aktivera Azure Active Directory-autentisering för iOS-användare genom att gör
 
 - Kontakta [Check Point SandBlast Mobile](https://www.checkpoint.com/products/sandblast-mobile/) för att hämta iOS-appen. Läs anvisningarna om [hur man lägger till appar från iOS-butiken i Microsoft Intune](store-apps-ios.md) och använd sedan webbadressen till Apple-butiken i **steg 5** i avsnittet **Configure app information** (Konfigurera appinformation).
 
+### <a name="zimperium"></a>Zimperium
+
+#### <a name="android"></a>Android
+
+- Se anvisningarna för att [lägga till Android Store-appar i Microsoft Intune](store-apps-android.md). Använd denna [webbadress till Zimperium-appbutiken](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) i **steg 7**.
+
+#### <a name="ios"></a>iOS
+
+- Läs anvisningarna för att [lägga till iOS Store-appar i Microsoft Intune](store-apps-ios.md). Använd denna [webbadress till Zimperium-appbutiken](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) i **steg 5** under avsnittet **Konfigurera appinformation**.
+
 ## <a name="to-associate-the-mtd-app-with-an-ios-app-configuration-policy"></a>Associera MTD-appen med en konfigurationsprincip för iOS-appar
+
+### <a name="for-lookout"></a>För Lookout
+
+- Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i avsnittet om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
 
 ### <a name="for-skycure"></a>För Skycure
 
@@ -139,10 +153,6 @@ Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
 </dict>
 
 ```
-### <a name="for-lookout"></a>För Lookout
-
-- Skapa konfigurationsprincipen för iOS-appar enligt beskrivningen i avsnittet om att [använda konfigurationsprincipen för iOS-appar](app-configuration-policies-use-ios.md).
-
 ### <a name="for-check-point-sandblast-mobile"></a>För Check Point SandBlast Mobile
 
 - Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Check Point SandBlast Mobile-konfigurationsprincipen för iOS-appar.
@@ -152,12 +162,30 @@ Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
 <dict><key>MDM</key><string>INTUNE</string></dict>
 
 ```
+
+### <a name="for-zimperium"></a>För Zimperium
+
+- Se anvisningarna för att [använda Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Zimperium-konfigurationsprincipen för iOS-appar.
+    - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet nedan och klistrar in det i konfigurationsprincipen.
+
+```
+<dict>
+<key>provider</key><string>Intune</string>
+<key>userprincipalname</key><string>{{userprincipalname}}</string>
+<key>deviceid</key>
+<string>{{deviceid}}</string>
+<key>serialnumber</key>
+<string>{{serialnumber}}</string>
+<key>udidlast4digits</key>
+<string>{{udidlast4digits}}</string>
+</dict>
+
+```
+
 ## <a name="to-assign-apps-all-mtd-partners"></a>Så här tilldelar du appar (alla MTD partner)
 
 - Se anvisningarna för [tilldelning av appar till grupper med Intune](apps-deploy.md).
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Konfigurera Lookout-integreringen med Intune](lookout-mtd-connector-integration.md)
-- [Konfigurera Skycure-integrering med Intune](skycure-mtd-connector-integration.md)
-- [Konfigurera Check Point SandBlast-integreringen med Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+- [Lägg till enhetsefterlevnadsprincip för MTD](mtd-device-compliance-policy-create.md)

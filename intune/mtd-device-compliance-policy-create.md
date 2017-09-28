@@ -15,11 +15,11 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b2cffc21ba78cbd54edfb75eaa892df1539ad62b
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 2e9b1a3dc42a9c18d61fc9b55d5a7b71f00c3e29
+ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Skapa en princip för Mobile Threat Defense-enhetsefterlevnad med Intune
 
@@ -35,8 +35,6 @@ Som en del av MTD-installationen skapade du i MTD-partnerkonsolen en princip som
 Förutsättningar för principen för enhetsefterlevnad med MTD:
 
 -   Ställ in MTD-integrering med Intune
-
--   Aktivera MTD-anslutningen i Intune
 
 ## <a name="to-create-a-mtd-device-compliance-policy"></a>Så här skapar du en princip för enhetsefterlevnad
 
@@ -77,3 +75,7 @@ Om du vill tilldela en princip för enhetsefterlevnad till användare, väljer d
 
     > [!NOTE] 
     > Du har tillämpat principen på användarna. Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
+
+## <a name="next-steps"></a>Nästa steg
+
+- [Aktivera MTD med Intune](mtd-connector-enable.md)

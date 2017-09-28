@@ -15,17 +15,18 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9149b4d9d263a5d68fdd73e0a3754a24a74ad973
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 9b24ee84d339b728addd753cb309b4d8572e5582
+ms.sourcegitcommit: e5501cdf08d3e79bc51dc726697606be02110e57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/21/2017
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Så här konfigurerar du Intune-utbildningsinställningar för delade iPad-enheter
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Introduktion: Intune stöder iOS-appen Classroom. Det är en app som hjälper lärare att stödja utbildning och hantera elevenheter i klassrummet. Utöver appen Classroom stöder Apple möjligheten att konfigurera elevernas iPad-enheter så att flera elever kan dela på en enhet. Det här dokumentet hjälper dig att uppnå det här målet med Intune.
+Intune stöder iOS-appen Classroom. Det är en app som hjälper lärare att stödja utbildning och hantera elevenheter i klassrummet. Utöver appen Classroom stöder Apple möjligheten att konfigurera elevernas iPad-enheter så att flera elever kan dela på en enhet. Det här dokumentet hjälper dig att uppnå det här målet med Intune.
+
 Information om hur du konfigurerar personliga (1:1) iPad-enheter för användning med appen Classroom finns i [Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune](education-settings-configure-ios.md).
 
 ## <a name="before-you-start"></a>Innan du börjar

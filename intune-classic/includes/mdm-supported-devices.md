@@ -1,17 +1,16 @@
 
 
 ### <a name="apple"></a>Apple
-  - Apple iOS 8.0 och senare
+  - Apple iOS 9.0 och senare
   - Mac OS X 10.9 och senare
 
 ### <a name="windows"></a>Windows
   - Datorer som kör Windows 10 (versionerna Home, Pro, Education och Enterprise)
-  - Windows Phone 8.1 och senare
-  - Windows 8.1 RT
-  - Datorer som kör Windows 8.1
+  - Windows 10 Mobil
   - Enheter som kör Windows 10 IoT Enterprise (x86, x64)
   - Enheter som kör Windows 10 IoT Mobile Enterprise
-  - Windows Holographic & Windows Holographic Enterprise
+  - Windows Holographic &amp; Windows Holographic Enterprise
+  - Windows Phone 8.1, Windows 8.1 RT och datorer som kör Windows 8.1 (hanteringsläge)
 
   Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (AAD)](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
 
