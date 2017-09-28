@@ -14,11 +14,11 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6107059888c8d2fb6227277202a5906491ac9092
-ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
+ms.openlocfilehash: cd684feec1df6b20f9349052496a21895527710b
+ms.sourcegitcommit: 0d9bfd92bf5958261ed83b1f150bf207b7ba7e56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/21/2017
 ---
 # <a name="reference-for-application-entities"></a>Referens för programenheter
 
@@ -98,3 +98,17 @@ Entiteten **VppProgramTypes** innehåller en lista över möjliga typer av volym
 | 3DDA2474-470B-4503-9830-2665C21C1945 |Microsoft |Microsofts volymköpsprogram |
 | 00000000-0000-0000-0000-000000000000 |Inte tillgängligt än |Standardvärde, inget volymköpsprogram |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B |Apple |Apples volymköpsprogram |
+
+
+
+## <a name="applicationinventory"></a>ApplicationInventory
+
+Entiteten **ApplicationInventory** innehåller en lista över program som hittats på enheten under inventeringen.
+
+| Egenskap  | Beskrivning |
+|---------|------------|
+| DeviceKey |Det här är en referens till enhetstabellen som innehåller Intune-enhetens ID |
+| DateKey |Referens till datumtabellen som visar dagen för inventeringen |
+| ApplicationName |Programnamnet |
+| ApplicationVersion |Programmets version |
+| BundleSize |Appens storlek i byte |

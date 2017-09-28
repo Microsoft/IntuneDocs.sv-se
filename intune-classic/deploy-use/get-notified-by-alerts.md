@@ -14,11 +14,11 @@ ms.assetid: 396ea714 0433 4bd5 a934 8d0b477f28e4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: 9a84cc5b294a1a330aab978de5ef0fd8cfa4c259
-ms.sourcegitcommit: 30b51c625311398b371c0326d41216f55315f627
+ms.openlocfilehash: 534af980ff66eaa54273aaabf14609b1e221c322
+ms.sourcegitcommit: 63d862f142e2f40a1eedb7d4cbdff4fbf6dd7296
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/22/2017
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Håll dig informerad med aviseringar från Microsoft Intune
 
@@ -61,6 +61,8 @@ I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) välj
 
 ## <a name="working-with-alerts"></a>Arbeta med aviseringar
 
+Om du vill visa aviseringar i [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Avisering** och sedan den typ av avisering som ska visas.
+
 Använd följande alternativ för att hjälpa dig arbeta med aviseringar från Intunes adminstratörskonsol.
 
 |Alternativ|Beskrivning|
@@ -70,11 +72,12 @@ Använd följande alternativ för att hjälpa dig arbeta med aviseringar från I
 |**Stänga en avisering**|I listan över aviseringar väljer du den avisering som du vill stänga och sedan **Stäng avisering**.<br /><br />Stängda aviseringar tas bort permanent efter 90 dagar.|
 |**Återaktivera en stängd avisering**|I listan över aviseringar öppnar du listrutan **Filter** och väljer **Stängd**.<br /><br />I listan över stängda aviseringar väljer du den avisering som du vill återaktivera och sedan **Återaktivera avisering**.|
 
-Intune-aviseringar är aktiva tills:
+Intune-aviseringar är aktiva i 30 dagar eller tills:
 
-- Det problem som orsakade aviseringen har lösts
-- Aviseringen stängs manuellt.
-- Det har gått 45 dagar sedan aviseringen genererades
+- Det problem som orsakade aviseringen har lösts.
+- Aviseringen har stängts manuellt.
+
+Stängda aviseringar kan återaktiveras i 30 dagar efter stängning. Stängda och inaktiva aviseringar tas bort från Intune efter 30 dagar.
 
 > [!TIP]
 > Om samma avisering genereras av enheter som kör olika operativsystem så är det möjligt att du ser flera versioner av samma avisering i aviseringslistan.
