@@ -46,8 +46,15 @@
 
 ### Mobile Threat Defense
 #### [Installera en Mobile Threat Defense-app](you-are-prompted-to-install-mtd-android.md)
+##### [Installera Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+##### [Installera Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+##### [Installera SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+##### [Installera Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
 #### [Lösa ett hot](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-
+##### [Använd Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
+##### [Använd Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+##### [Använd SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
+##### [Använd Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Använda en iOS- eller macOS-enhet med Intune](using-your-iOS-or-macOS-device-with-intune.md)
 ### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
@@ -77,7 +84,15 @@
 
 ### Mobile Threat Defense
 #### [Installera en Mobile Threat Defense-app](you-are-prompted-to-install-mtd-ios.md)
+##### [Installera Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+##### [Installera Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+##### [Installera SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+##### [Installera Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 #### [Lösa ett hot](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+##### [Använd Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
+##### [Använd Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
+##### [Använd SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
+##### [Använd Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
 
 ## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
