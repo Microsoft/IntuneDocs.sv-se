@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e29819ec65325ad69c51fd155047afa19769ccfa
-ms.sourcegitcommit: bee30f4c9e04129d70305fcafc4152c6e062a8b0
+ms.openlocfilehash: c06146c2a8abe15f346be532cf02e1fe6d97cc99
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-ios-device-in-intune-with-the-device-enrollment-program"></a>Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet
 
@@ -33,4 +33,4 @@ Enhetsregistreringsprogrammet erbjuds av Apple till företag och organisationer 
 5.  Godkänn **villkoren** och välj om du vill skicka diagnostikinformation till Apple eller inte.
 6.  När du har slutfört registreringen kan du uppmanas att utföra fler åtgärder. Du kan till exempel uppmanas att ange ditt lösenord för e-poståtkomst, skapa ett lösenord eller godkänna programinstallationer, allt beroende på vad företagets Intune-administratör har konfigurerat.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

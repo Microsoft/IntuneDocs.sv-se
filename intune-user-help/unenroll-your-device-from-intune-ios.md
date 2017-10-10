@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1753545450d684f366ef4e323104d92ff0a55cbb
-ms.sourcegitcommit: 2ed8d1c39d4b3e3282111f1d758afb3a50f19f8f
+ms.openlocfilehash: 02d955e5f5f15264df8aba3ea380b7f7e6c4d87b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="unenroll-your-ios-device-from-intune"></a>Avregistrera en iOS-enhet från Intune
 
@@ -53,4 +53,4 @@ När du avregistrerar en enhet från Intune händer följande:
 
 -   Enheter som bara är konfigurerade för e-post visas inte längre i företagsportalappen eller på webbplatsen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
