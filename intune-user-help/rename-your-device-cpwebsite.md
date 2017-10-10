@@ -16,19 +16,19 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b3a9ea6fb7134f2be6b05f883e5dab2d1aef1d59
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8023e3a75dbf9a3275654b7ed8f917546d401168
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Byta namn på enheten från företagsportalens webbplats
 
-Du kanske vill byta namn på din enhet för att göra den enklare att identifiera. Du kan göra det från [företagsportalens webbplats](http://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning.
+Du kanske vill byta namn på din enhet för att göra den enklare att identifiera. Du kan göra det från [företagsportalens webbplats](https://portal.manage.microsoft.com). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning.
 
 Så här byter du namn på din enhet:
 
-1.  På [webbplatsen för företagsportalen](http://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1.  På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
 
 2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill byta namn på.
 
@@ -40,4 +40,4 @@ Så här byter du namn på din enhet:
 
 4.  Skriv ett nytt namn för din enhet i rutan där enhetsnamnet visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

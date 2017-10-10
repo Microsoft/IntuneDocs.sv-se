@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ab021708898fe87c2c5acf7d8b33df5a57e36c84
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 32a46b1c82bbe38cf1918ff4053bf650bfe7d26a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Installera företagsportalappen för Android
 
@@ -44,4 +44,4 @@ Företagsportalen är en app som ger dig åtkomst till företags- eller skolappa
 
 När du har hämtat företagsportalappen kommer du antagligen vilja [registrera din enhet i Intune](enroll-your-device-in-Intune-android.md) för att få fullständig åtkomst till din arbetsinformation. Du kan även [sign in using another device](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device) (logga in med en annan enhet).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
