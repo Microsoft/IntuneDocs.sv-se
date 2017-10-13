@@ -16,22 +16,22 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ae85e523a2c5b87e172a2bfc01254f87093c71b1
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0103eb02cd169a224624d46d93645861f7bbbd47
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Så återställer du enhetens lösenord från företagsportalens webbplats
 
-Om du har tappat bort PIN-koden eller lösenordet för en enhet som du har registrerat i Intune kan du återställa det på [företagsportalens webbplats](http://portal.manage.microsoft.com). Du kan använda webbplatsen för företagsportalen för att hantera datorer och enheter som du har registrerat i Intune och för att utföra de flesta av de uppgifter som du kan utföra när du använder företagsportalappen.
+Om du har tappat bort PIN-koden eller lösenordet för en enhet som du har registrerat i Intune kan du återställa det på [företagsportalens webbplats](https://portal.manage.microsoft.com). Du kan använda webbplatsen för företagsportalen för att hantera datorer och enheter som du har registrerat i Intune och för att utföra de flesta av de uppgifter som du kan utföra när du använder företagsportalappen.
 
 > [!NOTE]
-> Det kan hända att du inte kan se knappen Återställ lösenord på företagsportalens webbplats om du använder en företagsregistrerad enhet. Om du inte gör det måste du kontakta din IT-administratör för att denne ska återställa lösenordet åt dig.
+> Det kan hända att du inte kan se knappen Återställ lösenord på företagsportalens webbplats om du använder en företagsregistrerad enhet. Om du inte gör det måste du kontakta företagets support som kan återställa lösenordet åt dig.
 
 Så här återställer du lösenordet:
 
-1.  På [webbplatsen för företagsportalen](http://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/intune/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1.  På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/intune/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
 
 2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill återställa lösenordet för.
 
@@ -68,4 +68,4 @@ Så här återställer du lösenordet:
 
 Om du vill visa ett meddelande som bekräftar att lösenordet har återställts klickar du på meddelandeflaggan längst upp till höger på företagsportalens webbplats.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

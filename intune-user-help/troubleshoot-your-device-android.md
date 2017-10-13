@@ -15,21 +15,21 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: f46a93d42427ea41adf71403c91fa95052c0bba2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 976b58fcc7835b0992c5d53934642bd4fedb5b50
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Åtgärda vanliga problem med din Android-enhet
 
-Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar din IT-administratör via kontaktinformationen på [Företagsportalens webbplats](http://portal.manage.microsoft.com).
+Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 
 - [Kontrollera efterlevnad på din Android-enhet](check-compliance-on-your-device-android.md)
-- [Hjälp din IT-administratör att åtgärda enhetsproblem genom att använda utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Skicka loggar till IT-administratören via e-post](send-logs-to-your-it-admin-by-email-android.md)
-- [Skicka loggar till din IT-administratör via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
-- [Skicka registreringsfel till IT-administratören](send-enrollment-errors-to-your-it-admin-android.md)
+- [Hjälp företagets support att åtgärda enhetsproblem genom att använda utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+- [Skicka loggar till företagets support via e-post](send-logs-to-your-it-admin-by-email-android.md)
+- [Skicka loggar till företagets support via en USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
+- [Skicka registreringsfel till företagets support](send-enrollment-errors-to-your-it-admin-android.md)
 - [Du måste uppdatera Android-enheten](you-need-to-update-your-android-device.md)
 - [Enheten är inte kompatibel med den senaste versionen av operativsystemet](your-android-version-isnt-yet-supported.md)
 - [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)

@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ca763562c96c4c5f4f4e6bcf317bb6ccba68d8d2
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 2958710c0f758e16e2613627782f81e26f1d3051
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-when-you-create-a-work-profile"></a>Vad händer när du skapar en arbetsprofil
 
@@ -28,9 +28,9 @@ En arbetsprofil är något som du konfigurerar på din enhet för att hålla is�
 
 När du skapar en arbetsprofil:
 
-- IT-administratören kan endast hantera arbetsrelaterad e-post, inställningar och data på din enhet, inte dina personliga appar eller data.
+- Företagets support kan endast hantera arbetsrelaterad e-post, appar, inställningar och data på din enhet, inte dina personliga appar eller data.
 
-- Du får arbetsappar från Play Store for Work. Om du vill ha personliga appar kan du fortsätta att använda Google Play-butiken som du alltid använder för att hämta dina personliga appar. IT-administratören kan inte se eller hantera dina personliga appar.
+- Du får arbetsappar från Play Store for Work. Om du vill ha personliga appar kan du fortsätta att använda Google Play-butiken som du alltid använder för att hämta dina personliga appar. Företagets support kan inte se eller hantera dina personliga appar.
 
 - Arbetsappar är avgränsade från din personliga appar, men båda sorterna kan visas på startskärmen på samma gång. Nedan finns ett exempel på hur det kan se ut. Det kan se något annorlunda ut på din skärm.
 
@@ -38,9 +38,9 @@ När du skapar en arbetsprofil:
 
     ![Android Play Store for Work](./media/afw-google-play-store-for-work.png)
 
-- Ditt företag eller din skola äger din arbetsprofil, så IT-administratören kan installera eller ta bort arbetsappar eller din profil, men inte dina personliga appar eller data.
-- IT-administratören kan inte återställa eller rensa din enhet.
+- Företaget eller skolan äger din arbetsprofil så företagets support kan installera eller ta bort arbetsappar eller din profil, men inte dina personliga appar eller data.
+- Företagets support kan inte återställa eller rensa din enhet.
 
 Se [Create a work profile and enroll your device](create-a-work-profile-and-enroll-your-device-in-intune-android.md) (Skapa en arbetsprofil och registrera din enhet) för att lära dig att skapa en arbetsprofil.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

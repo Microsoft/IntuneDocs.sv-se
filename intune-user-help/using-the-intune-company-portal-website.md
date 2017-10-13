@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 90168dae6b73185ae8cdf6c55093c79ab3d729c0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 6213bcf2e7ee2ad1ffd15010d8741b86b065d147
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="using-the-intune-company-portal-website"></a>Använda Intune-företagsportalens webbplats
 [Företagsportalens webbplats](https://portal.manage.microsoft.com) är en webbsida som slutanvändarna kan använda för att hantera datorer och enheter som de har registrerat i Intune.
@@ -39,10 +39,10 @@ Från företagsportalens webbplats kan slutanvändarna göra följande:
 
 -   [Synkronisera enheten manuellt så att appar kan hämtas och installeras snabbare](sync-your-device-manually-cpwebsite.md)
 
--   Hitta IT-administratörens kontaktinformation om du har konfigurerat den
+-   Hitta kontaktinformation till företagets support om du har konfigurerat den
 
 -   Visa information om enheten, till exempel om den är kompatibel med principer för ditt företag eller din skola
 
 -   Fjärrhantera sina PC-datorer (fungerar endast för PC-datorer)
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

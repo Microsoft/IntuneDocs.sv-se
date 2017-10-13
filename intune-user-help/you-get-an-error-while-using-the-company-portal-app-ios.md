@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2208d25b4e27f3a896c431f301a46392a4b21f80
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 407ef838fca1f47a191b5a99648dcc68433621f6
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Du får ett felmeddelande när du använder företagsportalappen
 
-Om du får ett felmeddelande när du använder företagsportalappen på en iOS-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information. Du kan skicka information om fel på olika sätt:
+Om du får ett felmeddelande när du använder företagsportalappen på en iOS-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information. Du kan skicka information om fel på olika sätt:
 
 -   Tryck på **Rapportera** i felmeddelanden.
 
@@ -32,4 +32,4 @@ Om du får ett felmeddelande när du använder företagsportalappen på en iOS-e
 
 -   Skaka enheten när du använder företagsportalappen och tryck på **E-post** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

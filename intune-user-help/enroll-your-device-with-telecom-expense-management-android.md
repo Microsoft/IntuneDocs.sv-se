@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa36b1449cb1ce5d9e0d3b1ca2f3e0db78729f1d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 87704687947aee7c1169b36009ea1960bec37edd
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrera Android-enheten i kostnadshanteringsprogrammet
 
@@ -30,7 +30,7 @@ Din organisation kanske använder ett kostnadshanteringsprogram för telekomtjä
 
 Välj ett lämpligt alternativ och du får en avisering om att installera programmet [ __Datalert__ ](https://play.google.com/store/apps/details?id=fr.memobox.databox) från Google Play Store. Din organisation kan mäta dataanvändningen med programmet Datalert. Om din organisation har konfigurerat alternativet arbets- eller skolregistrering, måste du logga in med ditt arbets- eller skolkonto. Om detta inte har aktiverats måste du ange information som exempelvis ditt telefonnummer, samt verifiera din enhet med en kod för att kunna registrera till Datalert-tjänsten från appen.
 
-Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsätta. IT-administratören bör tala om ifall du ska logga in med ditt __arbets- eller skolkonto hos Microsoft__ eller använda ditt __telefonnummer__.
+Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsätta. Företagets support bör tala om ifall du ska logga in med ditt __arbets- eller skolkonto hos Microsoft__ eller använda ditt __telefonnummer__.
 
   ![En skärmbild på välkomstskärmen i programmet Datalert, där du uppmanas att fortsätta till nästa steg samt en kort förklaring om hur Datalert låter dig få ut det mesta av din dataförbrukning.](./media/and-enroll-12-tem-datalert-setup.png)
 
@@ -62,4 +62,4 @@ Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsä
 
 När du har registrerat enheten, börjar du se din dataanvändning av i appen Datalert.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

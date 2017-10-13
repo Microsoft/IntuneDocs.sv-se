@@ -1,5 +1,5 @@
 ---
-title: "Skicka loggar till din IT-administratör för Windows 10-enheter | Microsoft Docs"
+title: "Skicka loggar till företagets support för Windows 10-enheter | Microsoft Docs"
 description: Registrera en Windows 10 1511-enhet i Intune
 keywords: 
 author: barlanmsft
@@ -16,22 +16,22 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 47e6b663cead876b1b19f61d02efed81be4d0dbc
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f2287700e96c798be7033eac35539e3490bc3f8a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-from-the-company-portal-app-for-windows-10"></a>Skicka loggar till IT-administratören från företagsportalappen för Windows 10
+# <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Skicka loggar till företagets support från företagsportalappen för Windows 10
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Windows 10-enhet, kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
+Om du får ett felmeddelande när du använder företagsportalappen på en Windows 10-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 1.  Öppna appen **Företagsportal**.
 2.  Välj kugghjulet **Inställningar** och sedan **Skicka loggar**.
-3.  **Dela** öppnas. Välj **E-post**. Detta skapar ett e-postmeddelande där företagsportalens loggar är bifogade och som kan skickas till IT-administratören.
+3.  **Dela** öppnas. Välj **E-post**. Detta skapar ett e-postmeddelande där företagsportalens loggar är bifogade och som kan skickas till företagets support.
 
-  ![Dialogrutan Skicka loggar från företagsportalappens inställningssida. Länken visar ”Skicka loggar – Skicka diagnostikloggar till IT-administratören för att lösa problem i företagsportalen”.](./media/w10-share-logs.png)
+  ![Dialogrutan Skicka loggar från företagsportalappens inställningssida. Länken visar ”Skicka loggar – Skicka diagnostikloggar till företagets support för att lösa problem i företagsportalen”.](./media/w10-share-logs.png)
 
-Du kan också behöva skicka [loggar från appen Inställningar](send-logs-to-your-it-admin-settings-windows.md) för att IT-administratören ska få mer hjälp med att felsöka eventuella problem. 
+Du kan också behöva skicka [loggar från inställningsappen](send-logs-to-your-it-admin-settings-windows.md) för att företagets support ska få mer hjälp med att felsöka eventuella problem. 
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

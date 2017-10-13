@@ -1,6 +1,6 @@
 ---
-title: "Hjälp IT-administratören att åtgärda enhetsproblem med utförlig loggning | Microsoft Docs"
-description: "Hjälp IT-administratören att åtgärda enhetsproblem med hjälp av utförlig loggning"
+title: "Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning | Microsoft Docs"
+description: "Hjälp företagets support att åtgärda enhetsproblem genom att använda utförlig loggning"
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -16,16 +16,16 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1756f05fed15bf50c5bb8981e62f87789f14daab
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: a8364778943171bb1a949f61ad696427ff914c99
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="help-your-it-admin-fix-device-issues-with-verbose-logging"></a>Hjälp IT-administratören att åtgärda enhetsproblem med utförlig loggning
+# <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning
 
-När din Android-enhet har registrerats i Intune kan du använda *Utförlig loggning* så att företagsportalappen och Intune-hanterade appar registrerar detaljerade loggar om vad som händer på din enhet. Dessa loggar hjälper IT-administratören att åtgärda eventuella problem som kan uppstå när du använder företagsportalen eller en app som hanteras av Intune. Utförlig loggning är aktiverat på enheten som standard och de loggar som skickas till din IT-administratör innehåller din e-postadress.
+När din Android-enhet har registrerats i Intune kan du använda *Utförlig loggning* så att företagsportalappen och Intune-hanterade appar registrerar detaljerade loggar om vad som händer på din enhet. Dessa loggar hjälper företagets support att åtgärda eventuella problem som kan uppstå när du använder företagsportalen eller en app som hanteras av Intune. Utförlig loggning är aktiverat på enheten som standard och de loggar som skickas till företagets support innehåller din e-postadress.
 
 För att aktivera eller inaktiva Utförlig loggning loggar du in i företagsportalappen med dina inloggningsuppgifter för arbetet eller skolan och trycker på **Inställningar** och sedan på på/av-knappen bredvid **Utförlig loggning**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

@@ -14,16 +14,16 @@ ms.assetid: b3e5994c-d215-4c72-8915-349bd0b2504d
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 668f105b65f5bdd8d05600a935aba3c0d46314d5
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 61a9d7006a19888e0a43762b59300fcc62c1313c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-make-your-device-able-to-scan-for-security-threats"></a>Du måste göra så att din enhet kan söka efter säkerhetshot
 
-Din Android-enhet kan ladda ned och installera appar som kan utföra många olika uppgifter. Alla appar är dock inte lika, och vissa appar kan förorsaka problem. En allmän rekommendation är att endast ladda ned appar från verifierade källor, till exempel Google Play-butiken. Ett sätt som din IT-administratör dessutom har valt för att skydda data på din enhet är att låta Google skanna apparna som du installerar för att kontrollera att de är säkra.
+Din Android-enhet kan ladda ned och installera appar som kan utföra många olika uppgifter. Alla appar är dock inte lika, och vissa appar kan förorsaka problem. En allmän rekommendation är att endast ladda ned appar från verifierade källor, till exempel Google Play-butiken. Ett sätt som företagets support har valt för att skydda data på enheten ytterligare är att låta Google genomsöka apparna som du installerar för att kontrollera att de är säkra.
 
 Du kan aktivera denna sökning genom att gå till **Inställningar** > **Google** > **Säkerhet** och aktivera **Genomsök enhet efter säkerhetshot**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

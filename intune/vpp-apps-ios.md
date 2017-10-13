@@ -1,12 +1,12 @@
 ---
-title: "Hantera volyminköpta iOS-appar"
+title: "Hantera volyminköpta iOS-appar | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Läs mer om synkronisering av volyminköpta appar från iOS store i Intune och hantering och spårning av deras användning.”"
 keywords: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/18/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8be922d6cc839708ff26de2ebe792241b9bf357a
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dc3160d40d4ddabcd0a7d8d5557b07b4086eea7c
+ms.sourcegitcommit: 4184db38d1a9a223e680bcb4c9b732f7069bf510
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 ---
-# <a name="how-to-manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som du har köpt via ett volymköpsprogram med Microsoft Intune
+# <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -48,12 +48,17 @@ När du tilldelar volyminköpta appar till en enhet måste inte enhetens använd
 När du tilldelar en app till användare används en applicens för användaren och kopplas till denne. Appen kan köras på flera enheter som användaren äger (upp till en viss Apple-fastställd gräns).
 När du tilldelar användare en volyminköpt app måste varje användare ha ett giltigt och unikt Apple-ID för att få åtkomst till appbutiken.
 
-
 Du kan dessutom synkronisera, hantera och tilldela böcker som du har köpt från Apples butik för volymköpsprogram med Intune. Mer information finns i [Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram](vpp-ebooks-ios.md).
 
-
 ## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Hantera appar som köpts genom volyminköpsprogrammet för iOS-enheter
+
+### <a name="supports-apple-volume-purchase-program-volume-purchased-apps-for-ios-devices"></a>Stöder volyminköpta appar för Apples volymköpsprogram för iOS-enheter
+
 Du kan köpa flera licenser för iOS-appar via [Apples volymköpsprogram för företag](http://www.apple.com/business/vpp/) eller [Apples volymköpsprogram för utbildning](http://volume.itunes.apple.com/us/store). Processen innebär bland annat att skapa ett Apple VPP-konto från Apples webbplats och ladda upp en Apple VPP-token till Intune.  Sedan kan du synkronisera volyminköpsinformationen med Intune och spåra din användning av appar som du köpt genom volyminköpsprogrammet.
+
+### <a name="supports-business-to-business-volume-purchased-apps-for-ios-devices"></a>Har stöd för volyminköpta appar för samarbete mellan företag för iOS-enheter
+
+Tredjepartsutvecklare kan dessutom distribuera appar privat till auktoriserade medlemmar i volyminköpsprogram för företag som anges i iTunes Connect. Dessa medlemmar i volyminköpsprogram för företag kan logga in i appbutiken för volyminköpsprogram och köpa sina appar. Appar för volyminköpsprogram för företag som slutanvändaren köper synkroniseras med Intune-klienterna.
 
 ## <a name="before-you-start"></a>Innan du börjar
 Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den till ditt Intune-konto. Du bör också känna till följande kriterier:
@@ -64,12 +69,9 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * Som standard synkroniserar Intune med Apple VPP-tjänsten två gånger om dagen. Du kan starta en manuell synkronisering när som helst.
 * Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobila enheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
 * Intune har stöd för att lägga till upp till 256 VPP-token.
-* Om du tilldelar en volyminköpt app till en enhet som har registrerats via en enhetsregistreringsprofil eller Apple Configurator, fungerar endast appar som är riktade till enheter. Du kan inte rikta volyminköpsappar för användare av en DEP-enhet som inte har någon användartillhörighet.
-Det beror på att tusentals enheter kan registreras på samma användarkonto med användarlicensiering för iOS-volymköpsprogrammet. Med iOS VPP-användarlicensiering kan en slutanvändare installera en app på 5-10 enheter.
-Det innebär att volymköpsprogramappen installeras via användarlicensiering på de första apparna som registrerats via enhetsregistreringsprogrammet, men inte de andra.
+* Apples program för enhetsregistreringsprofil (DEP) automatiserar registrering för hantering av mobila enheter (MDM). Med hjälp av DEP kan du konfigurera företagsenheter utan att röra dem. Du kan registrera dig i DEP-programmet med hjälp av samma programagentkonto som du använde med Apples volymköpsprogram. Apples ID för distributionsprogram är unikt för program som anges på webbplatsen för [Apples distributionsprogram](https://deploy.apple.com) och kan inte användas för att logga in på Apple-tjänster som iTunes-butiken. 
 * En VPP-token har endast stöd för användning på ett Intune-konto i taget. Återanvänd inte samma VPP-token för flera Intune-klienter.
-* När du tilldelar VPP-appar med hjälp av användarlicensieringsmodellen till användare eller enheter (med användartillhörighet), måste varje Intune-användare associeras med ett unikt Apple-ID eller en e-postadress när de accepterar Apples villkor på sin enhet.
-När du ställer in en enhet för en ny Intune-användare ser du till att konfigurera den med användarens unika Apple-ID eller e-postadress. Kombinationen av Intune-användare och Apple-ID:t eller e-postadress bildar ett unikt par och kan användas på upp till 5 enheter.
+* När du tilldelar VPP-appar med hjälp av användarlicensieringsmodellen till användare eller enheter (med användartillhörighet), måste varje Intune-användare associeras med ett unikt Apple-ID eller en e-postadress när de accepterar Apples villkor på sin enhet. Använd inte samma Apple-ID som för Apples ID för distributionsprogram. När du konfigurerar en enhet för en ny Intune-användare ser du till att konfigurera den med användarens unika Apple-ID eller e-postadress. Kombinationen av Intune-användare och Apple-ID eller e-postadress bildar ett unikt par och kan användas på upp till fem enheter.
 
 >[!IMPORTANT]
 >När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
@@ -78,17 +80,13 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Mobilappar** på **Intune**-bladet.
-1.  I arbetsbelastningen **Mobilappar** väljer du **Installationsprogrammet** > **iOS VPP-token**.
-2.  På listan över VPP-tokenblad, väljer du **Lägg till**.
-3.  På bladet **Ny VPP-token** anger du följande information:
+2.  På listan över VPP-tokenblad klickar du på **Skapa**.
+4. På bladet **Skapa VPP-token** anger du följande information:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företag eller programmet för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
-    - **Apple-ID** – Ange Apple-ID för det konto som är associerat med inköpsprogrammet för volymen.
-    - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
+    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat uppdaterar Intune alla appar som har köpts för angiven token genom Intune-tjänsten när enheten checkar in. identifiera VPP-appuppdateringar i appbutiken och push-installera dem automatiskt på enheten när den checkar in.
 4. När du är klar klickar du på **Ladda upp**.
 
 Token visas i listan över tokenblad.
-
 
 Du kan synkronisera data från Apple med Intune när som helst genom att välja **Synkronisera nu**.
 
@@ -97,10 +95,9 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
-1.  Välj **Hantera** > **applicenser** i arbetsbelastningen **Mobilappar**.
-2.  I applistan väljer du den app du vill tilldela och väljer sedan ”**...**” > **Tilldela grupper**.
-3.  På bladet *<app name>* - **Tilldelningar** väljer du **Hantera** > **Tilldelningar**.
-4.  Välj **Välj grupper**, klicka sedan på bladet **Välj grupper**, välj de Azure AD-användare eller enhetsgrupper som du vill tilldela appen.
+1.  På bladet **Intune** väljer du **Mobilappar** > **Appar** under **Hantera**.
+2.  I bladet med applistan väljer du den app du vill tilldela och väljer sedan **Tilldelningar**.
+3.  På bladet ***Appnamn*** - **Tilldelningar** väljer du **Välj grupper**. På bladet **Välj grupper** väljer du sedan den Azure AD-användare eller de enhetsgrupper som du vill tilldela appen till.
 5.  Välj följande inställningar för varje grupp som du har valt:
     - **Typ** – Välj om appen ska vara **Tillgänglig** (slutanvändare kan installera appen från företagsportalen) eller **Obligatorisk** (slutanvändare får appen installerad automatiskt).
     - **Licenstyp** – Välj mellan **Användarlicensiering** eller **Enhetslicensiering**.

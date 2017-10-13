@@ -14,20 +14,20 @@ ms.assetid: c4801a78-580e-4e3d-beca-0b09b9b2437c
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: d7d9ce0e1dc17dfafe78757a4bd8e48f9f67132d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0a92a64cdb94376991dfe8bea2e928316201b566
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="make-your-device-safer-with-the-right-password"></a>Gör din enhet säkrare med rätt lösenord
 
 Åtkomst till företagets resurser, t.ex e-post och dokument, är något som personer behöver ha varje dag från sina Windows-enheter. Din organisation vill säkerställa att din enhet gör detta på ett säkert sätt. Ett sätt att kontrollera att enheten har säker åtkomst till dessa resurser är att kräva ett enheterna ska använda lösenord. Dessa lösenord används exempelvis för att komma åt enheten från låsskärmen.
 
-Om din Windows-enhet inte följer IT-administratörens lösenordsprincip visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
+Om Windows-enheten inte följer den lösenordsprincip som har konfigurerats av företagets support visas ett meddelande som kort beskriver problemet och som förklarar vad du behöver göra för att lösenordet ska uppfylla kraven.
 
 > [!Note]
-> IT-administratören kan ange mer än ett lösenordskrav. Lösenordet kanske till exempel måste innehålla ett visst antal tecken och en kombination av siffror och bokstäver. Eftersom mer än ett krav kan definieras förklarar dessa anvisningar endast hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
+> Företagets support kan ange fler än ett krav för lösenord. Lösenordet kanske till exempel måste innehålla ett visst antal tecken och en kombination av siffror och bokstäver. Eftersom mer än ett krav kan definieras förklarar dessa anvisningar endast hur du anger eller ändrar ditt lösenord. De förklarar inte alla möjliga kombinationer av krav.
 
 ## <a name="to-change-your-password-on-windows-phone-81"></a>Så här byter du lösenord i Windows Phone 8.1
 
@@ -44,4 +44,4 @@ Om din Windows-enhet inte följer IT-administratörens lösenordsprincip visas e
 3. Ange ditt nya lösenord i rutan **Nytt lösenord** och ange det sedan igen i rutan **Bekräfta lösenord**.
 4. Välj **Klar**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

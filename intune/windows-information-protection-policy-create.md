@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 10/3/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 524b4b506855b50bb5312dc31e98eb5f451cb66d
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 3cf11c53a5f1ce78dda9c703da32270b0b07874a
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -47,7 +47,7 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 
 ## <a name="pre-requisites"></a>Förutsättningar
 
-Du måste konfigurera MAM-providern innan du kan skapa någon WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
 
 Du måste dessutom ha följande:
 
@@ -102,7 +102,7 @@ När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik prin
 5.  När du har fyllt i informationen i fälten, lägger du till appen i listan **Tillåtna appar** genom att välja **OK**.
 
 > [!NOTE]
-> Om du vill lägga till flera Store-appar samtidigt kan du klicka på menyn **(...) ** i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
+> Om du vill lägga till flera Store-appar samtidigt kan du klicka på menyn **(...)**  i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
 
 ## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Lägg till en skrivbordsapp i listan över tillåtna appar
 
@@ -143,7 +143,7 @@ WIP körs i bakgrunden och loggar olämplig datadelning utan att blockera något
 #### <a name="off-not-recommended"></a>Av (rekommenderas inte)
 WIP har stängts av och bidrar inte till att skydda eller granska dina data.
 
-När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade filer på de lokalt anslutna enheterna. Tänk på att din tidigare dekrypterings- och principinformation inte automatiskt tillämpas på nytt om du aktiverar WIP-skyddet igen.
+När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade filer på de lokalt anslutna enheterna. Tänk på att tidigare dekrypterings- och principinformation inte automatiskt tillämpas på nytt om du aktiverar WIP-skyddet igen.
 
 ### <a name="add-a-protection-mode"></a>Lägga till ett skyddsläge
 
@@ -155,16 +155,13 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 ### <a name="use-wip-learning"></a>Använda WIP-utbildning
 
-1. Gå till Azure-instrumentpanelen. <!---since they're changing from Intune MAM to Intune proper, a screenshot might be helpful.--->
+1. Öppna Azure-portalen. Välj **Fler tjänster**. Skriv **Intune** i textrutefiltret.
 
-2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+3. Välj **Intune** > **Mobilappar**.
 
-3. Välj **Intune**, **. Intune- instrumentpanelen** öppnas. Välj **Mobilappar**.
-
-4. Välj **WIP-utbildning** under **Övervakare**. De okända appar som loggats av WIP-utbildning visas.
-
-> [!IMPORTANT]
-> När apparna väl visas i loggningsrapporten för WIP-utbildning kan du lägga till dem i dina appskyddsprinciper.
+4. Välj **Appskyddsstatus** > **Rapporter** > **Windows informationsskydd-inlärning**.  
+ 
+    När apparna väl visas i loggningsrapporten för WIP-utbildning kan du lägga till dem i appskyddsprinciperna.
 
 ## <a name="deploy-your-wip-app-protection-policy"></a>Distribuera WIP-appskyddsprincipen
 
@@ -175,7 +172,7 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 När du har skapat din WIP-appskyddsprincip måste du distribuera den till din organisation med hjälp av hantering av mobila program.
 
-1.  Välj den appskyddsprincip du precis skapade på bladet **App-princip**, välj **Användargrupper** > **Lägg till användargrupp**.
+1.  Välj den appskyddsprincip du precis skapade på bladet **Apprincip**, välj **Användargrupper** > **Lägg till användargrupp**.
 
     En lista med användargrupper, som består av alla säkerhetsgrupper i Azure Active Directory, öppnas på bladet **Lägg till användargrupp**.
 

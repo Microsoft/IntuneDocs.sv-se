@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4a1639c289e335d4f50c549da7b7d895dd2a10bb
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 4fad2b78b8224fc1a90ad8c81d350917b17e3d57
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="you-need-to-enable-code-integrity"></a>Du måste aktivera kodintegritet
 
@@ -29,8 +29,8 @@ För att skydda organisationens information krävs olika säkerhetstyper som fö
 Kodintegritet aktiveras automatiskt när systemet är aktivt använder Säker start.
 
 > [!Tip]
-> Att aktivera Säker start är en avancerad uppgift. Vi rekommenderar att du kontaktar IT-administratören om du behöver hjälp med åtgärden.
+> Att aktivera Säker start är en avancerad uppgift. Vi rekommenderar att du kontaktar företagets support om du behöver hjälp med åtgärden.
 
 Om du känner dig trygg och vill fortsätta med att aktivera säker start på egen hand kan du läsa avsnittet ”Återaktivera Säker start” på sidan [Inaktivera Säker start](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

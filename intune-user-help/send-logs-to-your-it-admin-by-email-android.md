@@ -1,5 +1,5 @@
 ---
-title: "Skicka loggar till IT-administratören via e-post | Microsoft Docs"
+title: "Skicka loggar till företagets support via e-post | Microsoft Docs"
 description: "Skicka dataloggar med e-post på en Android-enhet"
 keywords: 
 author: barlanmsft
@@ -16,20 +16,20 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3794f6c908dabb1946a262a7238a38537b7b06ec
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: b10e4f6571d581b76d8e9d280767ce09ec8e3684
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-using-email"></a>Skicka loggar till IT-administratören via e-post
+# <a name="send-logs-to-your-company-support-using-email"></a>Skicka loggar till företagets support via e-post
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
+Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
-> Underlätta för IT-administratören att lösa problemet genom att aktivera _utförlig loggning_. Utförlig loggning inkluderar all relevant information i rapporten. Läs hur du kan [aktivera utförlig loggning här](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+> Underlätta för företagets support att lösa problemet genom att aktivera _utförlig loggning_. Utförlig loggning inkluderar all relevant information i rapporten. Läs hur du kan [aktivera utförlig loggning här](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
 
-Så här skickar du loggar till IT-administratören via e-post:
+Skicka loggar till företagets support via e-post:
 
 1.  Öppna företagsportalappen.
 
@@ -40,4 +40,4 @@ Så här skickar du loggar till IT-administratören via e-post:
 
 3.  Tryck på **Få hjälp** under **Hjälp**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
