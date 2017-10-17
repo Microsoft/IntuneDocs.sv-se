@@ -2,8 +2,8 @@
 title: Nyhetsarkiv
 description: "Arkiverade nyhetsmeddelanden för Microsoft Intune"
 keywords: 
-author: mtillman
-ms.author: mtillman
+author: brenduns
+ms.author: brenduns
 manager: angrobe
 ms.date: 06/08/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: ed2db991-4729-49a7-a1e6-be2ffa0d03d1
 ROBOTS: noindex,nofollow
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a12d3aaf6a893291e4818c76c02c8a3708b6b6a0
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: b4d83b8b83cba0dab1fc089309201aa591b3d26e
+ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nyheter i den klassiska Intune-portalen – föregående månader
 
@@ -313,7 +313,7 @@ Intune markerar alla nya enheter som personliga såvida inte IT-administratören
 
 ### <a name="notices"></a>Meddelanden
 
-__Multifaktorautentisering vid registrering flyttar till Azure-portalen __ <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen kommer du nu att logga in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurera MFA-inställningar via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
+__Multifaktorautentisering vid registrering flyttar till Azure-portalen__  <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen kommer du nu att logga in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurera MFA-inställningar via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
 
 __Företagsportalappen för Android är nu tillgänglig i Kina__ <!--VSO 658093--> Vi publicerar företagsportalappen för Android för hämtning i Kina. På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)

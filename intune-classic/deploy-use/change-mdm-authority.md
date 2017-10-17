@@ -10,14 +10,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: f1b4bce3-7932-4a0d-aa92-6dacc7060f42
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9119c9ece21117e916a5b30a6a8d80e518047b5e
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: 64e79da53aec646fc65285e41f86541ecdf6d804
+ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="change-the-mdm-authority"></a>Ändra MDM-utfärdare
 Från och med Configuration Manager version 1610 kan du ändra din MDM-utfärdare utan att behöva kontakta Microsoft Support, och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. Det här avsnittet beskriver hur du ändrar en befintlig Microsoft Intune-klient som konfigurerats i Intune med fristående **Microsoft Intune** som MDM-utfärdare till **Configuration Manager** (hybrid-MDM) utan att du behöver avregistrera och omregistrera befintliga hanterade enheter.

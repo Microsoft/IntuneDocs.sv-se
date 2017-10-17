@@ -2,9 +2,9 @@
 title: "Utvecklarhandbok för Microsoft Intune App SDK för Android"
 description: "Med Microsoft Intune App SDK för Android kan du implementera hantering av mobila appar (MAM, Mobile App Management) med Intune i din Android-app."
 keywords: SDK
-author: mtillman
+author: mattbriggs
 manager: angrobe
-ms.author: mtillman
+ms.author: mabriggs
 ms.date: 09/01/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a28305aab1fff16a46b8142e5869bfa25008017c
-ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
+ms.openlocfilehash: b6fd8525da11fcc376c4850c53ed1b98f37798ae
+ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -666,7 +666,7 @@ android:backupAgent="com.microsoft.intune.mam.client.app.backup.MAMDefaultBackup
     ```
 
 
-2. **[Valfritt] ** Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
+2. **[Valfritt]**  Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
 
 3. När du bestämmer vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) måste du ange attributet `android:fullBackupContent`  till true, false eller till en XML-resurs i appen.
 

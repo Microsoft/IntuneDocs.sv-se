@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dc3160d40d4ddabcd0a7d8d5557b07b4086eea7c
-ms.sourcegitcommit: 4184db38d1a9a223e680bcb4c9b732f7069bf510
+ms.openlocfilehash: 76764155e66ab69b5428712dae8a860233acaeb6
+ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -70,8 +70,8 @@ Innan du börjar måste du skaffa en VPP-token från Apple och ladda upp den til
 * Innan du börjar använda iOS VPP med Intune tar du bort alla befintliga VPP-användarkonton som skapats med andra MDM-leverantörer (hantering av mobila enheter). Av säkerhetsskäl synkroniserar Intune inte dessa användarkonton till Intune. Intune synkroniserar endast data från den Apple VPP-tjänst som skapades av Intune.
 * Intune har stöd för att lägga till upp till 256 VPP-token.
 * Apples program för enhetsregistreringsprofil (DEP) automatiserar registrering för hantering av mobila enheter (MDM). Med hjälp av DEP kan du konfigurera företagsenheter utan att röra dem. Du kan registrera dig i DEP-programmet med hjälp av samma programagentkonto som du använde med Apples volymköpsprogram. Apples ID för distributionsprogram är unikt för program som anges på webbplatsen för [Apples distributionsprogram](https://deploy.apple.com) och kan inte användas för att logga in på Apple-tjänster som iTunes-butiken. 
+* När du tilldelar VPP-appar med hjälp av användarlicensieringsmodellen till användare eller enheter (med användartillhörighet), måste varje Intune-användare associeras med ett unikt Apple-ID eller en e-postadress när de accepterar Apples villkor på sin enhet. När du konfigurerar en enhet för en ny Intune-användare ser du till att konfigurera den med användarens unika Apple-ID eller e-postadress. Kombinationen av Intune-användare och Apple-ID eller e-postadress bildar ett unikt par och kan användas på upp till fem enheter.
 * En VPP-token har endast stöd för användning på ett Intune-konto i taget. Återanvänd inte samma VPP-token för flera Intune-klienter.
-* När du tilldelar VPP-appar med hjälp av användarlicensieringsmodellen till användare eller enheter (med användartillhörighet), måste varje Intune-användare associeras med ett unikt Apple-ID eller en e-postadress när de accepterar Apples villkor på sin enhet. Använd inte samma Apple-ID som för Apples ID för distributionsprogram. När du konfigurerar en enhet för en ny Intune-användare ser du till att konfigurera den med användarens unika Apple-ID eller e-postadress. Kombinationen av Intune-användare och Apple-ID eller e-postadress bildar ett unikt par och kan användas på upp till fem enheter.
 
 >[!IMPORTANT]
 >När du har importerat VPP-token i Intune ska du inte importera samma token till andra enhetshanteringslösningar. Om du gör det kan licenstilldelningen och användarposter gå förlorade.
