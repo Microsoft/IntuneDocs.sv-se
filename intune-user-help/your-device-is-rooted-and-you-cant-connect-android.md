@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 501bbb1d75ec2302f7564e7a62eb5b04f40a2d04
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 0a91b167911d203cd3bd1e7645e5cacbc2eb6534
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Din Android-enhet är rotad, så du kan inte ansluta
 
@@ -32,6 +32,6 @@ Det finns några vanliga sätt som enheten kan ha blivit rotad på:
 
 - Du kanske har installerat en app på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Om du ser det här meddelandet omedelbart efter att du har installerat en app, bör du försöka att avinstallera appen.
 
-- Enhetstillverkaren har installerat programvara på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Du måste be IT-administratören om hjälp. Kontaktuppgifter finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+- Enhetstillverkaren har installerat programvara på enheten som rotidentifieringsprogrammet ser som en säkerhetsrisk. Du måste be företagets support om hjälp. Kontaktuppgifter finns på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 
 Om du har rotat enheten själv måste du återställa enheten till dess icke-rotade tillstånd.

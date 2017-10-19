@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e9057866ac8f8e5d8487a93401282117a72015cd
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 38ee5446c679472927f4dccecfdc56f1228fb92c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-android-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Android-enhet i Intune?
 
@@ -34,13 +34,13 @@ När du installerar företagsportalappen och registrerar en Android-enhet i Intu
 
 -   Återställa din telefon till fabriksinställningar om den tappas bort eller blir stulen.
 
-När du registrerar en Android-enhet ger du IT-administratören tillstånd att hantera enheten. IT-administratören kan exempelvis:
+När du registrerar en Android-enhet ger du företagets support tillstånd att hantera enheten. IT-administratören kan exempelvis:
 
 -   Återställa enheten till tillverkarens standardinställningar. Det är bra om enheten tappas bort eller blir stulen.
 
 -   Ta bort alla företagsrelaterade data. Dina personliga data och inställningar tas inte bort.
 
--   Ange krav för enheten, till exempel krav på lösenord eller PIN-kod för enheten för att skydda företagsdata. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ute från enheten om du försöker för många gånger.
+-   Ange krav för enheten, till exempel för att kräva ett lösenord eller en PIN-kod för enheten för att skydda företagsdata. Företagets support kan också begränsa hur många gånger du kan ange ett felaktigt lösenord, och kan låsa dig ute från enheten om du försöker för många gånger.
 
 -   Kräva att du accepterar villkoren.
 
@@ -50,10 +50,10 @@ När du registrerar en Android-enhet ger du IT-administratören tillstånd att h
 
 När din enhet har lagts till på företagsportalen kommer den ungefär var åttonde timme att:
 
--   Hämta eventuella uppdateringar av principer eller appar som din IT-administratör har gjort tillgängliga.
+-   Hämta eventuella uppdateringar av principer eller appar som företagets support har gjort tillgängliga.
 
 -   Skicka eventuella uppdateringar av hårdvaruförteckningen. (Dessa uppdateringar har ingen personlig information.)
 
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar. (Dessa uppdateringar har ingen personlig information.)
 
-Behöver du hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

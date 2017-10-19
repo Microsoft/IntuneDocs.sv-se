@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 787fbdd470b4e1fbb4cb3e22ba4065e52d4c63f8
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: afb3aeff7a7c6cc481d24bac3a61de0816b4d34b
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -58,7 +58,7 @@ Innan du kan registrera företagsägda iOS-enheter med Apple School Manager beh�
 3.  Ange **MDM-serverns namn**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
    ![Skärmbild av Apple School Manager-portalen med serienummeralternativet markerat](./media/asm-server-assignment.png)
 
-4.  Välj **Ladda upp fil... ** i Apples portal, bläddra till .pem-filen och välj **Spara MDM-server** (längst ned till höger).
+4.  Välj **Ladda upp fil...**  i Apples portal, bläddra till .pem-filen och välj **Spara MDM-server** (längst ned till höger).
 5.  Välj **Hämta token** och ladda ned servertokenfilen (.p7m) till datorn.
 6. Gå till **Enhetstilldelningar** och **Välj enhet** med manuell inmatning av **Serienummer**, **Ordernummer** eller **Överför CSV-fil**.
      ![Skärmbild av Apple School Manager-portalen med serienummeralternativet markerat](./media/asm-device-assignment.png)
@@ -90,12 +90,12 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 
 6. Välj **Enhetshanteringsinställningar**. Dessa objekt anges under aktiveringen och kräver en fabriksåterställning om du vill ändra dem. konfigurera följande profilinställningar och välj sedan **Spara**:
 
-  ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Kontrollerad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
+  ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Övervakad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
 
     - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
-     - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
-   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och **Övervakat** läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md). Du bör också granska [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+     - **Låst registrering** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
+   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och Övervakat läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md). Du bör också granska [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
    >[!NOTE]
    >Om **Användartillhörighet** är inställt på **Med användartillhörighet** eller **Övervakat** läge är inställt på **Av**, är det delade iPad-läget inaktiverat för registreringsprofilen.

@@ -11,14 +11,15 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
+ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1a02a8b092242df369b382b6cdcc2c2bbd10c10a
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8ca8eaede9df070baf1f39023942a8b07c54b814
+ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Registrera företagsägda iOS-enheter i Enhetsregistreringsprogrammet
 
@@ -28,7 +29,7 @@ Microsoft Intune kan distribuera en registreringsprofil som registrerar iOS-enhe
 
 >[!NOTE]
 >DEP-registreringen kan inte användas med [enhetsregistreringshanterarens](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) metod.
->Även om användarna registrerar iOS-enheter (t.ex. med företagsportalsappen) och dessa enheters serienummer sedan importeras och tilldelas en DEP-profil, så måste enheten avregistreras från Intune.
+>Om användare dessutom registrerar iOS-enheter (dvs. med hjälp av företagsportalappen) och dessa enheters serienummer sedan importeras och tilldelas en DEP-profil, så måste enheten avregistreras från Intune.
 
 ## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-dep-management"></a>Förutsättningar för att registrera iOS-enheter med Apple DEP-hantering
 

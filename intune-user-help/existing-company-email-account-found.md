@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 510e35a7c60709a6f002907e0f7963ba5b78f35c
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 21d9e6678c9981b3c1d918f337322d50aa0fecb5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Ett befintligt e-postkonto för företag hittades
 
-Du har redan ett e-postkonto med din organisation eller ditt företag och nu vill du komma åt det kontot på din mobila enhet. IT-administratören behöver din hjälp för att skydda din e-poståtkomst på vägen från personen som skickade e-postmeddelandet till din enhet. Din nuvarande e-postkonfiguration kanske fungerade, men genom att utföra de här stegen är din information säkrare.
+Du har redan ett e-postkonto med din organisation eller ditt företag och nu vill du komma åt det kontot på din mobila enhet. Företagets support behöver din hjälp för att skydda din e-poståtkomst på vägen från personen som skickade e-postmeddelandet till din enhet. Din nuvarande e-postkonfiguration kanske fungerade, men genom att utföra de här stegen är din information säkrare.
 
 1.  Hitta **Inställningarna** för din enhet och ta bort den anslutning som du tidigare konfigurerade för ditt företags-e-postkonto.
 
@@ -34,4 +34,4 @@ Du har redan ett e-postkonto med din organisation eller ditt företag och nu vil
 
 3.  Vänta en stund så att de nya e-postinställningarna kan börja gälla automatiskt på enheten.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

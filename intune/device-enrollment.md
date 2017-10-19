@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 05/29/2017
+ms.date: 10/03/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dda7108aedcc4d3878fe3743ee0b88b26fabbe6f
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: bef73c81d285a6d320cd92b055ff2b5592a55af4
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -35,6 +35,7 @@ Om du använder Exchange ActiveSync, antingen lokalt eller med värd i molnet, k
 ## <a name="overview-of-device-enrollment-methods"></a>Översikt över registreringsmetoder för enheter
 
 Följande tabell ger en översikt över registreringsmetoder för Intune med funktioner och krav beskrivna nedan.
+
 **Förklaring**
 
 - **Återställning krävs** – enheterna fabriksåterställs vid registreringen.
@@ -79,14 +80,55 @@ Här följer några scenarier för registrering av företagsägda enheter (COD).
 Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Läs mer om [DEM](./device-enrollment-manager-enroll.md).
 
 ### <a name="dep"></a>DEP
-Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för **iOS-övervakat** läge, som i sin tur aktiverar följande funktioner:
+Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för iOS-övervakat läge, som gör det möjligt att konfigurera en enhet med följande funktioner:
 
-  - Låst registrering
-  - Helskärmsläge och andra avancerade konfigurationer och begränsningar
+- Applås (enkelt appläge) 
+- Global HTTP-proxy 
+- Kringgå aktiveringslås 
+- Autonomt enkelt appläge 
+- Webbinnehållsfilter 
+- Ange bakgrund och låsskärm 
+- Tyst app-push 
+- VPN alltid på 
+- Tillåt exklusiv installation av hanterad app 
+- iBookstore 
+- iMessages 
+- Spelcenter 
+- Airdrop 
+- AirPlay 
+- Värdkoppling 
+- Molnsynkronisering 
+- Spotlight-sökning 
+- Handoff 
+- Radera enhet 
+- Begränsningar för gränssnitt 
+- Installation av konfigurationsprofiler genom gränssnittet 
+- Nyheter 
+- Kortkommandon 
+- Ändringar av lösenord 
+- Ändringar av enhetsnamn 
+- Ändringar av skrivbordsunderlägg 
+- Automatisk nedladdning av appar 
+- Ändringar till förtroende för företagsapp 
+- Apple Music 
+- Mail Drop 
+- Koppla med Apple Watch 
+
+> [!NOTE]
+> Apple har bekräftat att vissa inställningar flyttas till endast övervakat läge under 2018. Vi rekommenderar att du tänker på detta när du använder de här inställningarna i stället för att vänta på att Apple ska migrera dem till endast övervakat läge:
+> - Appinstallation
+> - Borttagning av app
+> - FaceTime
+> - Safari
+> - iTunes
+> - Barnförbjudet innehåll
+> - Dokument och data i iCloud
+> - Spel för flera personer
+> - Lägg till spelcentervänner
 
 Läs mer om iOS DEP-registrering:
 
-- [Välj hur du vill registrera iOS-enheter](enrollment-method-choose-ios.md)
+- [Välj hur du vill registrera iOS-enheter](ios-enroll.md)
 - [Registrera iOS-enheter med enhetsregistreringsprogrammet](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB-SA

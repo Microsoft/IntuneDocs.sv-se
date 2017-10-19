@@ -1,5 +1,5 @@
 ---
-title: "Skicka loggar till din IT-administratör via USB-kabel | Microsoft Docs"
+title: "Skicka loggar till företagets support via en USB-kabel | Microsoft Docs"
 description: Skicka dataloggar med en USB-kabel
 keywords: 
 author: barlanmsft
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3e91ccb2aae973892044f19d0d26c7f57bd5d786
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: f6df910d60498b0ed272ebeb86d54273e8c6dd1a
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-logs-to-your-it-admin-using-a-usb-cable"></a>Skicka loggar till din IT-administratör via USB-kabel
+# <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Skicka loggar till företagets support via en USB-kabel
 
-Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa IT-administratören att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
+Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
-> Innan du börjar ska du kontrollera att du har din IT-administratörs e-postadress redo. Du hittar den på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen.
+> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://portal.manage.microsoft.com) eller i företagsportalappen.
 
 1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
 
@@ -35,6 +35,6 @@ Om du får ett felmeddelande när du använder företagsportalappen på en Andro
 
 3.  Leta efter en mapp med namnet på din enhet på datorn. Hitta **Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\** i mappen.
 
-4.  Välj filerna och bifoga dem som bilaga till ett e-postmeddelande. Skicka detta e-postmeddelande till IT-administratören.
+4.  Välj filerna och bifoga dem som bilaga till ett e-postmeddelande. Skicka detta e-postmeddelande till företagets support.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

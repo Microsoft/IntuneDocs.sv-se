@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 22144721ba6bfad565009b306e7216ad1e5582af
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 162e2262067d38d792e23c8a98d52e81cf548bbe
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-ios-devices-operating-system-version-isnt-yet-supported"></a>Enhetens version av iOS-operativsystemet stöds inte än
 
-Med den snabba teknikutvecklingstakten kan enheten faktiskt ligga före vad IT-administratören har haft möjlighet att testa. Det är möjligt att den senaste versionen av iOS inte fungerar med några av ditt företags andra verktyg.
+Med den snabba teknikutvecklingstakten kan enheten faktiskt ligga före vad företagets support har haft möjlighet att testa. Det är möjligt att den senaste versionen av iOS inte fungerar med några av ditt företags andra verktyg.
 
-Du måste kontakta IT-administratören för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

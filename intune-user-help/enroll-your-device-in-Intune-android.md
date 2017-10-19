@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 256aa8f52bd25ddcb860aed25b22f1549053d2b1
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 621468db51e7e6172d142501a4637794e4cb57b8
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrera en Android-enhet i Intune
 
@@ -30,21 +30,19 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din Andr
 
 De här registreringsanvisningarna är avsedda för ursprungliga Android-enheter och Samsung KNOX Android-enheter. Samsung KNOX tillhandahåller en typ av säkerhet som vissa Samsung-enheter använder för att ge ytterligare skydd utöver vad den interna säkerheten i Android ger. Du kan kontrollera om du har en Samsung KNOX-enhet genom att välja **Inställningar** > **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
 
-Före eller efter registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Din IT-administratör använder den här kategorin för att se vilka appar du har åtkomst till.
-
-Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka registreringsfel till din IT-administratör](send-enrollment-errors-to-your-it-admin-android.md).
+Före eller efter registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Företagets support använder den här kategorin för att se vilka appar du har åtkomst till.
 
 **Registrera en Android-enhet:**
 
 1.  Installera den kostnadsfria Intune-företagsportalsappen från [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
-2.  Öppna Microsoft Intune företagsportalapp.
+2.  Öppna företagsportalappen.
 
 3.  På företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto.
 
     ![Välkomstskärmen i företagsportalsappen för Android, som uppmanar användarna att logga in med sina obligatoriska arbets- eller skolkonton. Här informeras även om att Microsoft-konton och andra personliga konton inte godkänns.](./media/and-enroll-0-welcome-screen.png)   
 
-4.  Om IT-administratören konfigurerar allmänna villkor trycker du på **GODKÄNN** för att godkänna villkoren. Den här skärmen kan skilja sig från bilden nedan beroende på vilken version av Android som du använder.
+4.  Om företagets support konfigurerar allmänna villkor trycker du på **ACCEPTERA** för att godkänna villkoren. Den här skärmen kan skilja sig från bilden nedan beroende på vilken version av Android som du använder.
 
     ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
@@ -52,28 +50,24 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
 
-6.  Tryck på **BÖRJA** på skärmen **Konfiguration av företagsåtkomst**.
+6.  Tryck på **FORTSÄTT** på skärmen **Konfiguration av företagsåtkomst**.
 
-    ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
 
     > [!NOTE]
     > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
 
-7. Skärmen **Benefits of device management** (Fördelar med enhetsregistrering) innehåller information om vad du kan göra när du registrerar enheten. Tryck på **FORTSÄTT** när du har läst klart.
+7.  Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
 
-    ![Skärmen Benefits of device management (Fördelar med enhetsregistrering)](/intune/media/android_cp_enroll_02_post_1709.png)
+    ![Sekretessinställningar](/intune/media/android_cp_enroll_02_after_1710.png)
 
-8.  Läs informationen om vad IT-administratören kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
+9.  På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
 
-    ![Sekretessinställningar](./media/and-enroll-4c-we-care-privacy.png)
-
-9.  På skärmen **Vad kommer härnäst** läser du om vad som händer under registreringen och trycker sedan på **REGISTRERA**.
-
-    ![Skärmen Vad kommer härnäst](./media/and-enroll-4d-what-comes-next.png)
+    ![Skärmen Vad kommer härnäst](/intune/media/android_cp_enroll_03_after_1710.png)
 
 10.  Gör så här om du använder Android 6.0 eller senare. Annars går du till nästa steg.
 
-    Följande meddelanden kan visas om IT-administratören har konfigurerat vissa principer:
+    Följande meddelanden kan visas om företagets support har konfigurerat vissa principer:
     -   **Tillåt att företagsportalen kan ringa och hantera telefonsamtal?**
 
         ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
@@ -96,9 +90,9 @@ Om du får ett felmeddelande när du försöker registrera enheten i Intune kan 
 
     Företagsportalen måste innehålla enhetsadministratörens roll för att kunna hantera enheten. Det innebär att administratören kan se vissa saker – t.ex. hur många gånger som du har försökt att låsa upp din skärm – och utföra vissa åtgärder.
 
-    Det är viktigt att komma ihåg att dessa åtgärder vidtas av säkerhetsskäl. IT-administratören försöker inte inkräkta på din integritet eller radera din information utan anledning, utan vill se till att företagets data förblir säkra.
+    Det är viktigt att komma ihåg att dessa åtgärder vidtas av säkerhetsskäl. Företagets support försöker inte inkräkta på din integritet eller radera din information utan anledning, utan vill se till att företagets data förblir säkra.
 
-    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta IT-administratören med hjälp av kontaktinformationen på [Företagsportalen](http://portal.manage.microsoft.com) om du har frågor som är specifika för användningen i din organisation.
+    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta företagets support med hjälp av kontaktinformationen på [företagsportalwebbplatsen](https://portal.manage.microsoft.com) om du har frågor som är specifika för användningen i din organisation.
 
 12.  Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.
 
@@ -133,4 +127,6 @@ Innan du försöker installera företagsappar besöker du **Inställningar** &gt
 > [!Note]
 > Om din organisation använder kostnad hanteringsprogramvara för telekomtjänster måste ytterligare ett part steg utföras innan enheten har registrerats fullständigt. Läs mer [här](enroll-your-device-with-telecom-expense-management-android.md).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka registreringsfel till företagets support](send-enrollment-errors-to-your-it-admin-android.md).
+
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

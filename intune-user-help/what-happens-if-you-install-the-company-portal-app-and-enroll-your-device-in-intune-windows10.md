@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 53fe121c5d565fe7bd35843b92f9480cfd5bd5e8
-ms.sourcegitcommit: 79116d4c7f11bafc7c444fc9f5af80fa0b21224e
+ms.openlocfilehash: 31b6545b0518e369b95b6e4830617988aa806112
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune?
 
@@ -34,22 +34,22 @@ När du installerar företagsportalappen och sedan använder appen för att regi
 
 -   Återställa din telefon till fabriksinställningar om den tappas bort eller blir stulen.
 
-Registreringsanvisningar finns i [Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Information om vad IT-administratören kan se på din enhet finns i [Vad kan min IT-administratör se när jag registrerar enheten i Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+Registreringsanvisningar finns i [Registrera din Windows 10 Mobile- eller Windows 10-enhet i Intune](enroll-your-w10-phone-or-w10-pc-windows.md). Information om vad företagets support kan se på din enhet finns i [Vad kan företagets support se när jag registrerar enheten i Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 När du lägger till en dator:
 
--   Programvara installeras på datorn så att IT-administratören kan hantera datorn och så att du kan komma åt företagsresurser som appar och kompletterande information. IT-administratören kan automatiskt uppdatera den här programvaran.
+-   Programvara installeras på datorn så att företagets support kan hantera datorn och så att du kan komma åt företagsresurser som appar och supportinformation. Företagets support kan uppdatera den här programvaran automatiskt.
 
 -   Intune Endpoint Protection kanske är installerat på datorn. Det här programmet söker efter virus och skadlig kod.
 
--   IT-administratören kan göra en förteckning över alla program som finns installerade på datorn, inklusive programvara som du har installerat själv.
+-   Företagets support kan göra en förteckning över alla program som finns installerade på datorn, inklusive programvara som du har installerat själv.
 
 -   Du kan behöva acceptera användningsvillkoren.
 
--   IT-administratören kan samla in eller radera data från datorns hårddisk. IT-administratören kan också radera hela hårddisken.
+-   Företagets support kan samla in eller radera data från datorns hårddisk. Företagets support kan också radera hela hårddisken.
 
--   IT-administratören kan installera appar och uppdateringar på datorn.
+-   Företagets support kan installera appar och uppdateringar på datorn.
 
--   IT-administratören kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. IT-administratören kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
+-   Företagets support kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. Företagets support kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
 
-Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

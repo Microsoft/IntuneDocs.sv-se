@@ -62,6 +62,7 @@
 ### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
 ### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos.md)
 ### [Registrera din macOS-enhet på företagsportalen](enroll-your-device-in-intune-macos-cp.md)
+### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
 
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)

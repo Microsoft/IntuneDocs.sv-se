@@ -14,11 +14,11 @@ ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 4946404a4bdb4968c47904549a581c9c39f6e9e0
-ms.sourcegitcommit: bb1a1e4e0bc26543a9c8fb52cb208e298c6b8e3f
+ms.openlocfilehash: 527a2a1578fcf9ef8e8f80c68091e582f8f2ebd2
+ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="what-is-intune"></a>Vad är Intune?
 
@@ -37,7 +37,7 @@ Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som
 * [Dela ut företagsägda telefoner till anställda](common-scenarios.md#issue-corporate-owned-phones-to-your-employees)
 * [Erbjud BYOD (Bring Your Own Device) eller ett program för personliga enheter till alla anställda](common-scenarios.md#offer-a-bring-your-own-device-program-to-all-employees)
 * [Gör det möjligt för anställda att på ett säkert sätt få åtkomst till Office 365 från en ej hanterad offentlig dator](common-scenarios.md#enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk)
-* [Dela ut delade surfplattor med begränsad användning till uppdragspersonal](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
+* [Utfärda delade surfplattor med begränsad användning till uppdragspersonal](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
 
 
 ## <a name="how-does-intune-work"></a>Hur fungerar Intune?

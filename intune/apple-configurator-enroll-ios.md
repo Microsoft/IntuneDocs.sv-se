@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/12/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b139db1780881e5bc0aed2345f9dc456a18f0e0
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 22a03068c543ebaa410521532dfdfc96e0f10eb0
+ms.sourcegitcommit: 6fae2dfb3a5c8f2e5ccfd120fd15656b26e5d302
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrera iOS-enheter med Apple Configurator
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Intune stöder registrering av iOS-enheter med hjälp av [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) på en Mac-dator. Registrering med Apple Configurator kräver att du USB-ansluter varje iOS-enhet till en Mac-dator för att konfigurera företagsregistrering. Du kan registrera enheter i Intune med Apple Configurator på två sätt:
+Intune stöder registrering av iOS-enheter med hjälp av [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) på en Mac-dator. Registrering med Apple Configurator kräver att du USB-ansluter varje iOS-enhet till en Mac-dator för att konfigurera företagsregistrering. Du kan registrera enheter i Intune med Apple Configurator på två sätt:
 - **Registrering av installationsassistenten** – Fabriksåterställer enheten och förbereder den för registrering med installationsassistenten.
 - **Direktregistrering** – Fabriksåterställer inte enheten och registrerar enheten via iOS-inställningar. Den här metoden har endast stöd för enheter **utan användartillhörighet**.
 
@@ -38,7 +38,7 @@ Registreringsmetoder med Apple Configurator kan inte användas med [enhetsregist
 - [Ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 - Enhetsserienummer (endast registrering med installationsassistenten)
 - USB-anslutningskablar
-- Mac-dator som kör [Apple Configurator 2.0](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12)
+- macOS-dator som kör [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
 
 ## <a name="create-an-apple-configurator-profile-for-devices"></a>Skapa en Apple Configurator-profil för enheter
 
@@ -69,7 +69,7 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas under re
 
 **Lägga till Apple Configurator-serienummer till Intune**
 
-1. Skapa en fil med kommaseparerade värden (CSV) med två kolumner och ingen rubrik. Lägg till serienumret i den vänstra kolumnen och informationen i den högra kolumnen. Det maximala antalet rader i kolumnen är för närvarande 500. I en textredigerare ser CSV-listan ut så här:
+1. Skapa en fil med kommaseparerade värden (CSV) med två kolumner och ingen rubrik. Lägg till serienumret i den vänstra kolumnen och informationen i den högra kolumnen. Det maximala antalet rader i kolumnen är för närvarande 5 000. I en textredigerare ser CSV-listan ut så här:
 
     F7TLWCLBX196, enhetsinformation</br>
     DLXQPCWVGHMJ, enhetsinformation

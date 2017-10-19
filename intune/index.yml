@@ -9,7 +9,7 @@ metadata:
   author: arob98
   ms.author: angrobe
   manager: angrobe
-  ms.date: 08/06/2017
+  ms.date: 10/07/2017
   ms.topic: article
   ms.devlang: na
   ms.service: microsoft-intune
@@ -68,12 +68,12 @@ sections:
             title: Skapa rapporter med Intune-informationslagret (förhandsversion)
             image:
               src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/07/using-the-new-role-based-access-controls-in-intune/'
-            title: '[Blogg] Lär dig mer om de nya rollbaserade åtkomstkontrollerna'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/08/22/pfx-certificates-issued-using-the-intune-certificate-connector-fix-your-intune-migration-configuration-issues/'
+            title: '[Blogg] PFX-certifikat som utfärdas med Intune Certificate Connector'
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/06/28/demystifying-service-health-for-microsoft-intune/'
-            title: '[Blogg] Förstå hälsotillståndet för Intune-tjänsten'
+          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/09/19/support-tip-setting-up-communication-between-mam-managed-and-mdm-managed-apps/'
+            title: '[Blogg] Konfigurera kommunikation mellan MAM-hanterade och MDM-hanterade appar'
             image:
               src: 'https://docs.microsoft.com/media/common/i_blog.svg'
   - title: Videor
@@ -128,6 +128,7 @@ sections:
       - type: list
         style: unordered
         items:
+          - html: '<a href="https://fasttrack.microsoft.com/ems">Har du fler än 150 licenser? Utnyttja dina FastTrack-förmåner</a>'
           - html: '<a href="https://blogs.technet.microsoft.com/enterprisemobility/">Läs bloggen om Enterprise Mobility and Security</a>'
           - html: '<a href="https://blogs.technet.microsoft.com/intunesupport/">Få hjälp i Intunes supportblogg</a>'
           - html: '<a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Ge feedback om Intune i UserVoice</a>'

@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/13/2017
+ms.date: 10/3/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c8ae15dc7b192cbfe3f0759e568b92783f24e1fe
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 33959b941e39d8694387770e1f3264d74647de69
+ms.sourcegitcommit: 4b776d1a87c0707244f4ae0122de882e0eef6fa3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Windows-appar i Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
 
 1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
 3. Välj **Hantera appar** på **Intune**-bladet.
 4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
 5. Välj **Lägg till** ovanför applistan.
@@ -65,6 +65,14 @@ ms.lasthandoff: 09/09/2017
 1. På bladet **Lägg till app** kontrollerar du att appinformationen är korrekt konfigurerad.
 2. Välj **Lägg till** för att överföra appen till Intune.
 
+## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
+
+[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+
 ## <a name="next-steps"></a>Nästa steg
 
 Appen som du har skapat visas i applistan. Nu kan du tilldela den till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+
+Lär dig mer om hur du kan övervaka appens egenskaper och tilldelning. Mer information finns i [Så här övervakar du appinformation och tilldelningar](apps-monitor.md).
+
+Lär dig mer om kontexten för din app i Intune. Mer information finns i [Översikt över enhets- och applivscykler](introduction-device-app-lifecycles.md)

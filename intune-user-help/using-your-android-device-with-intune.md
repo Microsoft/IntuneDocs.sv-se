@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 05/08/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c3f1d42d5998e70982bc279ef99560c486412daf
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 18e0608c28a6a292da7fc766fb50edfd27e5a138
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="using-your-android-device-with-intune"></a>Med hjälp av en Android-enhet med Intune
 
@@ -28,7 +28,7 @@ Det finns ett antal saker som du kan göra med Intune som gör livet lite lätta
 
 ## <a name="supported-versions"></a>Versioner som stöds
 
-Intune stöder för närvarande Android 4.0 och senare. Detta inkluderar enheter med Samsung KNOX 4.0 och senare.
+Intune stöder för närvarande Android 4.4 och senare. Detta inkluderar enheter med Samsung KNOX 4.4 och senare.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrera enheten i Intune och installera företagsportalen
 

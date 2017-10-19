@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/01/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 804ea185cf48b6781174b888436211a6d70823ca
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 8d05199359f7e4ca2c41415c0db13e339c66c162
+ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
@@ -51,9 +51,6 @@ Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med p
 MDM Apple-pushcertifikatet är giltigt i ett år och måste förnyas årligen för iOS- och Mac OS-enhetshantering. Om certifikatet går ut kan inte registrerade Apple-enheter kontaktas.
 
 Certifikatet associeras med det Apple-ID som användes för att skapa det. Förnya MDM-pushcertifikatet med samma Apple-ID som användes för att skapa det.
-
-> [!NOTE]
-> Certifikatet associeras med det Apple-ID som användes för att skapa det. Vi rekommenderar att du använder ett Apple-ID för företag för hanteringsaktiviteter. Använd aldrig ett personligt Apple-ID.
 
 1. I Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** och därefter **Apple MDM-pushcertifikat**.
 2. Välj **Ladda ned CSR** för att hämta och spara begärandefilen lokalt. Filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.

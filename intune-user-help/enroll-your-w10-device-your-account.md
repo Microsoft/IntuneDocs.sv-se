@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 39d2dad94b949a39451dca79431be22782cddcb8
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 3c110bab95cbdb7c0dbe3fbe47d34b4cad5aaf07
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="enroll-your-windows-10-device-in-intune"></a>Registrera din Windows 10-enhet i Intune
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 07/01/2017
 
     ![Logga in](./media/W10-enroll-4-sign-in.png)
 
-Kan du fortfarande inte komma åt din e-post, dina filer eller andra data för skolan eller arbetet? Försök att åtgärda problemet genom att [felsöka problem med ditt konto](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Om det fortfarande inte fungerar kontaktar du IT-administratören för ytterligare hjälp.
+Kan du fortfarande inte komma åt din e-post, dina filer eller andra data för skolan eller arbetet? Försök att åtgärda problemet genom att [felsöka problem med ditt konto](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account). Om det fortfarande inte fungerar kontaktar du företagets support för ytterligare hjälp.
 
-Ett enkelt sätt att få hjälp från IT-administratören är via kontaktinformationen som är tillgänglig i företagsportalappen, där du också kan söka efter och ladda ned rekommenderade och nödvändiga appar för ditt dagliga arbete. Det är möjligt att företagsportalappen redan är installerad på din enhet. Ett snabbt sätt att kontrollera detta är att söka på __företagsportalen__ i listan över __alla appar__.
+Ett enkelt sätt att få hjälp från företagets support är via kontaktinformationen som är tillgänglig i företagsportalappen, där du också kan söka efter och ladda ned rekommenderade och nödvändiga appar för ditt dagliga arbete. Det är möjligt att företagsportalappen redan är installerad på din enhet. Ett snabbt sätt att kontrollera detta är att söka på __företagsportalen__ i listan över __alla appar__.
 
 Om du inte ser Företagsportalen i app-listan kan du följa de här stegen för att installera den.
 

@@ -55,9 +55,9 @@ Du kan se vad som är nytt i Intunes förhandsversion i Azure [här](/intune/wha
 
 För Intune-konto som har skapats senare än januari 2017 har Intune möjliggjort direktåtkomst till Apples-registreringsscenarier med arbetsbelastningen Registrera enheter i Azure Preview-portalen. Tidigare var Apples förhandsregistrering enbart tillgänglig från länkar i den klassiska Intune-portalen. Intune-konton som skapats före januari 2017 behöver migreras vid ett tillfälle innan de här funktionerna finns tillgängliga i Azure. Schemat för migreringen har inte tillkännagivits än men informationen kommer att vara tillgänglig så snart som möjligt. Vi rekommenderar starkt att skapa ett utvärderingskonto för att testa den nya upplevelsen om ditt befintliga konto har inte åtkomst till förhandsversionen.
 
-#### <a name="whats-coming-for-appx-in-intune-on-azure----1000270---"></a>Nyheter för Appx i Intune på Azure <!-- 1000270 -->
+#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Nyheter för AppX i Intune på Azure-portalen <!-- 1000270 -->
 
-Som en del av migreringen till Intune på Azure gör vi tre appx-ändringar:
+Som en del av migreringen till Intune på Azure-portalen gör vi tre AppX-ändringar:
 
 1. Vi lägger till en ny appx-apptyp i den klassiska Intune-konsolen som bara kan distribueras till MDM-registrerade enheter.
 2. Vi ändrar syfte för den befintliga appx-apptypen så att den endast kan riktas mot datorer som hanteras via Intune PC-agenten.
@@ -69,7 +69,7 @@ Detta påverkar inte någon av dina befintliga distributioner till enheter som h
 
 ##### <a name="what-action-do-i-need-to-take"></a>Vad behöver jag göra
 
-Efter migreringen behöver du överföra appx igen som en PC-appx om du vill göra nya PC-distributioner. Läs mer i [Appx-ändringar i Intune på Azure](https://aka.ms/appxchange) på Intune-supportteamets blogg.  
+Efter migreringen behöver du överföra appx igen som en PC-appx om du vill göra nya PC-distributioner. Läs mer i [AppX-ändringar i Intune på Azure-portalen](https://aka.ms/appxchange) på Intune-supportteamets blogg.  
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Administratörsroller ersätts i Azure Portal
 
@@ -204,8 +204,8 @@ Från och med mars följer företagsportalsappen för Android [riktlinjer för m
 
 Du kan hitta före och efter-bilder på [sidan med UI-uppdateringar](/intune/whats-new-app-ui).
 
-### <a name="associate-multiple-management-tools-with-the-windows-store-for-business---926135--"></a>Koppla flera hanteringsverktyg till Windows Store för företag<!--926135-->
-Om du använder fler än ett hanteringsverktyg för att distribuera Windows Store för affärsappar kunde du tidigare bara koppla ett av dem till Windows Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager. Mer information finns i [Hantera appar som du har köpt från Windows Store för företag med Microsoft Intune](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune#associate-your-windows-store-for-business-account-with-intune).
+### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Koppla flera hanteringsverktyg till Microsoft Store för företag<!--926135-->
+Om du använder fler än ett hanteringsverktyg för att distribuera appar från Microsoft Store för företag kunde du tidigare bara koppla ett av dem till Microsoft Store för företag. Du kan nu koppla flera hanteringsverktyg till butiken, exempelvis Intune och Configuration Manager. Mer information finns i [Hantera appar som du har köpt från Microsoft Store för företag med Microsoft Intune](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune#associate-your-windows-store-for-business-account-with-intune).
 
 ## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Vad är nytt i den offentliga förhandsversion av Intunes adminstratörsupplevelse på Azure <!--736542-->
 
@@ -318,7 +318,7 @@ __Apparna Intune AV Player, Image Viewer och PDF Viewer stöds inte längre på 
 
 __Nya Microsoft Intune-företagsportalen för Windows 10-enheter__ Microsoft har lanserat en ny [Microsoft Intune-företagsportalsapp för Windows 10-enheter](https://www.microsoft.com/store/apps/9wzdncrfj3pz). Den här appen, som använder det nya Windows 10 Universal-formatet, ger en uppdaterad användarupplevelse i appen och identiska miljöer på alla Windows 10-enheter, både på datorer och mobila enheter, med samma funktioner som användarna redan använder.
 
-Med den nya appen kan användarna dessutom dra nytta av ytterligare plattformsfunktioner som enkel inloggning (SSO) och certifikatbaserad autentisering på Windows 10-enheter. Appen kommer att vara tillgänglig som en uppgradering till de befintliga installationerna av Windows 8.1-företagsportalen och Windows Phone 8.1-företagsportalen från Windows Store. Mer information finns på [aka.ms/intunecp_universalapp](http://aka.ms/intunecp_universalapp).
+Med den nya appen kan användarna dessutom dra nytta av ytterligare plattformsfunktioner som enkel inloggning (SSO) och certifikatbaserad autentisering på Windows 10-enheter. Appen kommer att vara tillgänglig som en uppgradering till de befintliga installationerna av Windows 8.1-företagsportalen och Windows Phone 8.1-företagsportalen från Microsoft Store. Mer information finns på [aka.ms/intunecp_universalapp](http://aka.ms/intunecp_universalapp).
 
 > [!IMPORTANT]
 > __En uppdatering om Intune och Android for Work__ Även om du kan distribuera Android for Work-appar med åtgärden __Krävs__ kan du bara distribuera appar som __Tillgängliga__ om dina Intune-grupper har migrerats till den nya Azure AD-gruppmiljön.

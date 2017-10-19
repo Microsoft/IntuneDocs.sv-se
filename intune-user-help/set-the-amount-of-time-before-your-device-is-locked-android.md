@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2393b7193a81f9489e56d1fe50b85291e5a2260e
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aa2e08ad0cf2cf101fe602f013a2bc38e90ad631
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Så här ställer du in hur lång tid det tar innan enheten låser sig
 
-För att skydda data på en Android-enhet kan IT-administratören ställa in en princip som gör att du måste ange hur lång tid som enheten kan vara inaktiv innan den låses automatiskt. Följ dessa steg om du vill ange efter hur lång tid enheten ska låsas.
+För att skydda data på en Android-enhet kan företagets support ställa in en princip som gör att du måste ange hur lång tid som enheten kan vara inaktiv innan den låses automatiskt. Följ dessa steg om du vill ange efter hur lång tid enheten ska låsas.
 
 1.  I **Inställningar** på enheten klickar du på **Säkerhet** &gt; **Lås automatiskt** (på vissa enheter visas detta som **Lås telefon efter**).
 
 2.  Ange tidsgränsen för lösenord.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
