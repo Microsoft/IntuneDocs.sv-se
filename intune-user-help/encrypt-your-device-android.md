@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fe406fe2deb89fca1f3ab9d949ea78b779ee13af
-ms.sourcegitcommit: eb726c7e3a6e7defb74e69861447c96de0d1bb65
+ms.openlocfilehash: 3a2622c7c981e64b3e220424c6661a5ba9e30751
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Skydda en Android-enhet med kryptering
 
 När du krypterar en enhet omsluter du informationen på den i ett lager med skyddande kod som förhindrar att obehöriga personer får åtkomst till den. Organisationen kräver att du krypterar din Android-enhet för att skydda innan du kommer åt företagsfiler, -e-post eller -data som ett steg mot att se till att informationen är skyddad.
 
 > [!Note]
-> Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om IT-administratören kräver det.
+> Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om företagets support kräver det.
 
 Om du avregistrerar telefonen förblir den krypterad.
 
@@ -52,7 +52,7 @@ Om du avregistrerar telefonen förblir den krypterad.
 
 - Kontrollera att enheten är laddad och inkopplad.
 - Kontrollera att du har ställt in en PIN-kod eller ett lösenord på enheten.
-- Om du redan har ställt in en PIN-kod eller ett lösenord på enheten kan du prova följande steg, som IT-administratören kan kräva för att göra enheten säkrare. Menynamnen i de här stegen kan skilja sig något från de som visas på din enhet, beroende på vilken typ av Android-enhet du har.
+- Om du redan har ställt in en PIN-kod eller ett lösenord på enheten kan du prova följande steg, som företagets support kan kräva för att göra enheten säkrare. Menynamnen i de här stegen kan skilja sig något från de som visas på din enhet, beroende på vilken typ av Android-enhet du har.
 
     1. Gå till **Inställningar** > **Låsskärm och säkerhet** > **Skärmlås**. Bekräfta din aktuella PIN-kod eller ditt lösenord.
 
@@ -66,4 +66,4 @@ Om du avregistrerar telefonen förblir den krypterad.
 
     6. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören (du hittar kontaktinformation på [företagsportalens webbplats](http://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3869659ea95f561365f40bcfcd164b82a7795ac0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 50b4b9c8399e854e2f5961f6711090778b41ba37
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Åtgärda vanliga problem med din iOS-enhet
 
-Ibland kan problem uppstå med en iOS-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar din IT-administratör via kontaktinformationen på [Företagsportalens webbplats](http://portal.manage.microsoft.com).
+Ibland kan problem uppstå med en iOS-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com).
 
 - [Jag behöver återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
-- [Jag behöver skicka fel till IT-administratören](send-errors-to-your-it-admin-ios.md)
+- [Jag behöver skicka fel till företagets support](send-errors-to-your-it-admin-ios.md)
 - [Jag behöver skicka fel till Microsoft](send-logs-to-microsoft-ios.md)
 - [Jag får ett felmeddelande när jag använder företagsportalappen](you-get-an-error-while-using-the-company-portal-app-ios.md)
 - [Jag behöver identifiera enheten för att registrera](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)

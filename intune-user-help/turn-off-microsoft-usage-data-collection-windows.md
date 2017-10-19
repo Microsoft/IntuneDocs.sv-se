@@ -16,16 +16,16 @@ ROBOTS:
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: cc242a36957ed897198f597ab7864aca21a7820d
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fb082ad8830a5d8e9ab0514a981c9bb4b02592b0
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-turn-off-microsoft-data-collection"></a>Så här stänger du av Microsofts datainsamling
 
-Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det gör vi för att förbättra tillförlitlighet och prestanda hos våra produkter, inklusive företagsportalappen. Även om dessa data är maskerade är vissa användare inte bekväma med den här insamlingen. IT-administratören har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
+Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det gör vi för att förbättra tillförlitlighet och prestanda hos våra produkter, inklusive företagsportalappen. Även om dessa data är maskerade är vissa användare inte bekväma med den här insamlingen. Företagets support har ingen kontroll över denna datainsamling och kan inte ändra din valda inställning.
 
 Om du vill kan du inaktivera insamlingen av användningsdata på en Windows-enhet med hjälp av inställningen **Användningsdata** i företagsportalappen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

@@ -16,16 +16,16 @@ ROBOTS:
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d94e3a79af1951debc4dd04413efff8f4c716545
-ms.sourcegitcommit: d2a4f4477b3bf90aac6a9db77d41747e64ad7df4
+ms.openlocfilehash: e6d5bb79925588e78d2536e3c322ccbf5dd970c5
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="outlook-wont-sync-managed-email-when-battery-optimization-for-android-is-turned-on"></a>Outlook synkroniserar inte hanterad e-post när batterioptimering för Android är aktiverat
 
 > [!IMPORTANT]
-> Det här problemet dokumenteras här eftersom vi har fått in fler och fler kundrapporter om det. Om problemet kvarstår efter att du har utfört stegen nedan kontaktar du [din IT-administratör](https://portal.manage.microsoft.com) för ytterligare hjälp.
+> Det här problemet dokumenteras här eftersom vi har fått in fler och fler kundrapporter om det. Om problemet kvarstår efter att du har utfört de här stegen kontaktar du [företagets support](https://portal.manage.microsoft.com) för ytterligare hjälp.
 
 Genom att registrera din enhet i Intune får du åtkomst till företagsresurser. En av de vanligaste resurserna är åtkomst till e-post. Ett problem som vi har observerat med åtkomsten till e-post via Outlook för Android-enheter är när batterioptimering är aktiverat. Batterioptimering kan aktiveras automatiskt så att din enhet är strömförsörjd så länge som möjligt. Batterioptimering kan i viss mån hjälpa dig på detta sätt eftersom funktionen försöker stoppa automatiska e-posthämtningar.
 
@@ -73,4 +73,4 @@ Ett annat sätt att hitta dessa inställningar är genom att söka i systeminst�
 2. Tap **Battery** > **Battery optimization**.
 3. Select the Company Portal and Outlook apps, then select **Don’t optimize**. Tap **Done**.-->
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d57da14ad070275f7cdef639d971c176c1010634
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
@@ -33,8 +33,8 @@ Företagets IT-avdelning kan se information som är relevant för arbetet, men i
 ## <a name="how-do-i-get-the-company-portal"></a>Hur skaffar jag företagsportalen?
 Du kan skaffa företagsportalen på två olika sätt:
 
-- Genom att installera företagsportalappen på din enhet. Du kommer vanligtvis till företagsportalappen genom att gå till appbutiken på din enhet, men IT-administratören kan även installera företagsportalappen åt dig.
-- Genom att gå till [företagsportalens webbplats](https://portal.manage.microsoft.com) som IT-administratören har konfigurerat.
+- Genom att installera företagsportalappen på din enhet. Du kommer normalt till företagsportalappen genom att gå till appbutiken på enheten, men företagets support kan även installera företagsportalappen åt dig.
+- Genom att gå till [företagsportalwebbplatsen](https://portal.manage.microsoft.com) som företagets support har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
 Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:
@@ -54,9 +54,9 @@ Om du vill se vad du kan göra med företagsportalens webbplats jämfört med va
 - [Använda företagsportalswebbplatsen](using-the-intune-company-portal-website.md)
 
 ## <a name="what-happens-when-you-add-a-computer-or-device-to-the-company-portal"></a>Vad händer när du lägger till en dator eller enhet i företagsportalen?
-När du lägger till en dator eller enhet på företagsportalen kan det hända att vissa program installeras eller att en app laddas ned (beroende på enhet). Du ger också IT-administratören tillstånd att hantera dina enheter, så att företagsinformation på enheten hålls skyddad.
+När du lägger till en dator eller enhet på företagsportalen kan det hända att vissa program installeras eller att en app laddas ned (beroende på enhet). Du ger också företagets support tillstånd att hantera din enhet, så att företagsinformation på enheten hålls skyddad.
 
-Om du vill ta reda på mer om vad IT-administratören kan och inte kan se på din enhet, använder du länken som motsvarar den typ av enhet som du använder:
+Om du vill ta reda på mer om vad företagets support kan och inte kan se på din enhet använder du länken som motsvarar den typ av enhet som du använder:
 
 - [Installera företagsportalappen för Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Installera företagsportalappen för iOS och macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
@@ -96,4 +96,4 @@ Vi rekommenderar att du först försöker se om du kan lösa problemet själv. V
 - [Åtgärda vanliga problem med din iOS-enhet](troubleshoot-your-device-ios.md)
 - [Åtgärda vanliga problem med din Windows-enhet](troubleshoot-your-device-windows.md)
 
-Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till IT-administratören. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till företagets support. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com).

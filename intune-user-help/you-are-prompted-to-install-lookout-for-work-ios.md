@@ -1,11 +1,11 @@
 ---
 title: "Du måste installera Lookout for Work på din iOS-enhet | Microsoft Docs"
-description: 
+description: "Lär dig hur du installerar Lookout for Work för iOS."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,19 @@ ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 62e37d42aef9a828551db1fbbcf5e3cb1b3eeec9
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 46827fa3505fd8c4f2d767ba821ce9d84fc0d16d
+ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="you-need-to-install-lookout-for-work-on-your-ios-device"></a>Du måste installera Lookout for Work på din iOS-enhet
+# <a name="install-lookout-for-work-on-your-ios-device"></a>Installera Lookout for Work på iOS-enheten
 
-Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur IT-administratören har konfigurerat Lookout for Work.
 
-**Vad du behöver göra:**
+Innan du kan komma åt ditt arbete måste företagets support be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot. Du kan se olika meddelanden på enheten, beroende på hur IT-administratören har konfigurerat Lookout for Work.
+
+
+## <a name="what-you-need-to-do"></a>Vad du behöver göra
 
 1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att Lookout for Work installeras på enheten.
 
@@ -40,14 +42,17 @@ Innan du kan komma åt ditt arbete måste IT-administratören be dig att install
 
 4. Vid meddelandet som ber dig att tillåta att Lookout for Work skickar aviseringar till dig trycker du på **Tillåt**.
 
-  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-notifications.png)
+     ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-notifications.png)
 
-Lookout for Work avslutar installationen och följande skärm visas om inga säkerhetshot har hittats på enheten.
+   * Lookout for Work avslutar installationen och följande skärm visas om inga säkerhetshot har hittats på enheten.
 
-  ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/ios-lfw-no-threats-found.png)
+     ![Lookout for Work hittade inga säkerhetshot på din enhet](./media/ios-lfw-no-threats-found.png)
 
-Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
+   * Om Lookout for Work hittar ett säkerhetshot på enheten, visas instruktioner om hur du löser problemet.
 
-**Om installationen inte fungerar**
+## <a name="if-the-installation-doesnt-work"></a>Om installationen inte fungerar
 
-Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta IT-administratören om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan försöka installera Lookout for Work [manuellt från App Store](https://itunes.apple.com/app/lookout-for-work/id997193468).
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+

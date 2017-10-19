@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 09/13/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 94eeb453e5c83c2dadaa757b4c7867f9dd3f62ff
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: 311bb42f2ef9fbf689e32eacca7420c8189251bf
+ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -31,6 +31,9 @@ Om du vill aktivera DEP-registrering kan du använda både Intune och Apples DEP
 
 DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
 
+## <a name="what-is-supervised-mode"></a>Vad är övervakat läge?
+Apple införde övervakat läge i iOS 5. En iOS-enhet i övervakat läge kan hanteras med fler kontroller. Det är därför användbart för företagsägda enheter. Intune har stöd för konfigurering av enheter för övervakat läge som en del av Apples program för enhetsregistrering (DEP). 
+
 <!--
 **Steps to enable enrollment programs from Apple**
 1. [Get an Apple DEP token and assign devices](#get-the-apple-dep-token)
@@ -39,7 +42,7 @@ DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Krav
+## <a name="prerequisites"></a>Förutsättningar
 - Enheter som köpts i [Apples enhetsregistreringsprogram](http://deploy.apple.com)
 - [MDM-utfärdare](mdm-authority-set.md)
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
@@ -75,9 +78,8 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
    ![Skärmbild av hur någon lägger till ett MDM-servernamn för DEP och sedan klickar på Nästa.](./media/enrollment-program-token-add-server.png)
 
-5. Dialogrutan **Lägg till &lt;ServerName&gt; ** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
+5. Dialogrutan **Lägg till &lt;ServerName&gt;**  öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
 
-6.  Dialogrutan **Lägg till &lt;ServerName&gt;** visar länken **Din servertoken**. Hämta servertokenfilen (.p7m) till datorn och klicka sedan på **Klar**.
 
 7. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
 8. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
@@ -114,10 +116,13 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 4. Välj **Enhetshanteringsinställningar** för att konfigurera följande profilinställningar:
 
-  ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Kontrollerad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
-    - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
+  ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Övervakad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
+    - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
 
-    - **Aktivera** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
+ > [!NOTE]
+ > Det går inte att konfigurera en enhet för övervakat läge med Intune efter att enheten har registrerats. Efter registreringen går det bara att aktivera övervakat läge genom att ansluta en iOS-enhet till en Mac-dator med en USB-kabel och använda Apple Configurator. Då återställs enheten och den kan konfigureras i övervakat läge. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3). En övervakad enhet visar meddelandet "This iPhone is managed by Contoso." (Denna iPhone hanteras av Contoso.) på låsskärmen och "This iPhone is supervised. Contoso can monitor your Internet traffic and locate this device." (Denna iPhone är övervakad. Contoso kan övervaka din Internettrafik och hitta denna enhet.) under **Inställningar** > **Allmänt** > **Om**.
+
+    - **Låst registrering** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
 
   - **Aktivera delad iPad** – Apples enhetsregistreringsprogram stöder inte delad iPad.
 
@@ -146,6 +151,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
         - **Diagnostikdata**
 
     Välj **Spara**.
+
 9. Om du vill spara profilinställningarna väljer du **Skapa** på bladet **Skapa registreringsprofil**. Registreringsprofilen visas i listan Registreringsprofiler för Apples registreringsprogram.
 
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter

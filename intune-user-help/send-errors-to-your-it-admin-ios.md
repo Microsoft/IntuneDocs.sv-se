@@ -1,5 +1,5 @@
 ---
-title: "Skicka fel till IT-administratören | Microsoft Docs"
+title: "Skicka fel till företagets support | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 12fe4702217ad180a94dcf4d79326dd6840a7839
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: aff747c4888c0ad9a222735b8eadf40878cc294b
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="send-errors-to-your-it-admin-for-issues-with-your-ios-device"></a>Skicka fel till IT-administratören för problem med din iOS-enhet
+# <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
 
-Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper IT-administratören att felsöka problemet. Du kan skicka information om fel på olika sätt:
+Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper företagets support att felsöka problemet. Du kan skicka information om fel på olika sätt:
 
 -   Tryck på **Rapportera** i felmeddelanden.
 
@@ -32,4 +32,4 @@ Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan
 
 -   Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

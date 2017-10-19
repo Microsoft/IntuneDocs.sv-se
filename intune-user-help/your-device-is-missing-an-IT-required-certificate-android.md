@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b1f4176704ba25f5e4ff1b1572a6f1e5ce0f620b
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 784fec4e29f64db0445c857e5073ddd7e890a795
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="your-android-device-is-missing-a-certificate-required-by-your-it-admin"></a>Android-enheten saknar ett certifikat som krävs av IT-administratören
+# <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Android-enheten saknar ett certifikat som företagets support kräver
 
-Om din enhet inte har registrerats i Intune och den saknar ett certifikat som krävs av IT-administratören kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
+Om enheten inte har registrerats i Intune och den saknar ett certifikat som krävs av företagets support kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -35,15 +35,15 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
 ## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identifiera det saknade certifikatet i företags- eller skoldatorn
 
-1. Öppna Internet Explorer på en dator. Kontakta IT-administratören om du inte har en dator som kan användas för detta ändamål. Se [företagsportalens webbplats](http://portal.manage.microsoft.com) för att hitta IT-administratörens kontaktuppgifter.
+1. Öppna Internet Explorer på en dator. Kontakta företagets support om du inte har en dator som kan användas för detta ändamål. Kontaktuppgifter till företagets support finns på [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
 
-2. Öppna [företagsportalens webbplats](http://portal.manage.microsoft.com) och logga in med autentiseringsuppgifterna för ditt arbets- eller skolkonto.
+2. Öppna [företagsportalens webbplats](https://portal.manage.microsoft.com) och logga in med autentiseringsuppgifterna för ditt arbets- eller skolkonto.
 
 3. Längst till höger i adressfältet i webbläsaren väljer du den symbol som ser ut som ett hänglås, se följande skärmbild.
 
     ![screenshot-internet-explorer-address-bar-padlock-symbol](./media/andr-missing-cert-ie-padlock-symbol.png)
 
-    Om du inte ser hänglåssymbolen avbryter du och kontaktar IT-administratören. Låset innebär att du är inloggad på ett säkert sätt. Om du ser symbolen är det bara att fortsätta.
+    Om du inte ser hänglåssymbolen avbryter du och kontaktar företagets support. Låset innebär att du är inloggad på ett säkert sätt. Om du ser symbolen är det bara att fortsätta.
 
 4. Klicka på **Visa certifikat**.
 
@@ -67,6 +67,6 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
 6. Stäng företagsportalappen.
 
-7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta IT-administratören om du behöver hjälp.
+7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta företagets support om du behöver hjälp.
 
-Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som IT-administratören måste hjälpa dig att installera. Kontakta IT-administratören för att få hjälp med den kontaktinformation som finns på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som företagets support måste hjälpa dig att installera. Kontakta företagets support för att få hjälp med den kontaktinformation som finns på [företagsportalwebbplatsen](https://portal.manage.microsoft.com).

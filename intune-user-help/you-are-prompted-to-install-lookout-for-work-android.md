@@ -1,11 +1,11 @@
 ---
 title: "Du måste installera Lookout for Work på Android-enheten | Microsoft Docs"
-description: 
+description: "Lär dig hur du installerar Lookout for Work för Android."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.assetid: 0d357dc0-3e14-43d0-9874-6886ebc847fc
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 957a0f5104030043e8049bf65ba30e4579a0acb0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 9e0ea429a6fd68bf984f814d512f9e5a8b327358
+ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="you-need-to-install-lookout-for-work"></a>Du måste installera Lookout for Work
+# <a name="install-lookout-for-work"></a>Installera Lookout for Work
 
-Innan du kan komma åt ditt arbete måste IT-administratören be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
+Innan du kan komma åt ditt arbete måste företagets support be dig att installera Lookout for Work-appen, som hjälper dig att skydda din enhet genom att söka efter möjliga säkerhetshot.
 
 Prova felsökningsstegen i slutet av det här avsnittet om du har problem med installationen.
 
-**Vad du behöver göra:**
+## <a name="what-you-need-to-do"></a>Vad du behöver göra
 
 1.  Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Lookout for Work från Play Store)**.
 
@@ -70,8 +70,10 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
   Om Lookout for Work hittar ett säkerhetshot på enheten visas instruktioner för hur du löser problemet.
 
-**Om installationen inte fungerar**
+## <a name="if-the-installation-doesnt-work"></a>Om installationen inte fungerar
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan försöka installera Lookout for Work [manuellt från Play Store](https://play.google.com/store/apps/details?id=com.lookout.enterprise).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+

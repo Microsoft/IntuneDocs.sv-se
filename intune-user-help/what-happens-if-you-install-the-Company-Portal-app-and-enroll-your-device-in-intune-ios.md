@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b0205ebce012912cacc738382cadf56a355482f0
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 8867125c9112089bda574f2bd710ddbc3d0b214c
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-or-macos-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din iOS- eller macOS-enhet i Intune?
 
@@ -34,9 +34,9 @@ När du installerar företagsportalappen och registrerar din iOS- eller macOS-en
 
 -   Konfigurera ditt företags-e-postkonto automatiskt.
 
-När du registrerar din enhet i Intune ger du IT-administratören tillstånd att hantera din enhet, så att företagsinformation på enheten kan skyddas.
+När du registrerar din enhet i Intune ger du företagets support tillstånd att hantera enheten, så att företagsinformation på enheten kan skyddas.
 
-När enheten har registrerats kan IT-administratören:
+När enheten har registrerats kan företagets support:
 
 -   Återställa enheten till standardinställningarna om den stjäls eller tappas bort.
 
@@ -62,4 +62,4 @@ När enheten har registrerats kan IT-administratören:
 
 -   Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan roamingavgifter tillkomma.
 
-Kontakta IT-administratören om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

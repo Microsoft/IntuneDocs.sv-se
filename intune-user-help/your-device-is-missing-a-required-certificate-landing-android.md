@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 910fe2bc4e616c3b60d351efaffe173f58c04bc6
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: 53bb84c3f2f9e8ee0c0bda419015ff35d1a51488
+ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Enheten saknar ett certifikat som krävs
 
@@ -30,12 +30,12 @@ ms.lasthandoff: 07/01/2017
 
 ## <a name="fixing-certificate-issues"></a>Åtgärda problem med certifikat
 
-Om Android-enheten inte har registrerats i Intune och den saknar ett certifikat som krävs av IT-administratören kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
+Om Android-enheten inte har registrerats i Intune och den saknar ett certifikat som krävs av företagets support kan du inte logga in på företagsportalappen. Följande meddelande visas när du försöker logga in:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
 Det första steget du ska ta är att se om enheten [saknar ett certifikat som vanligtvis är förinstallerat på den](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Om detta inte fungerar kan IT-administratören [kräva att du måste installera ett andra certifikat för ytterligare säkerhet](your-device-is-missing-an-IT-required-certificate-android.md).
+Om detta inte fungerar kan företagets support [kräva att du installerar ett andra certifikat för ytterligare säkerhet](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

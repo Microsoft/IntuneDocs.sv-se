@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/16/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,15 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 734856b1598a225f6f3a2aaf640d34d393c744e7
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: fa95dc161adabcf280d9933770ce68b719a47a74
+ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Skapa en arbetsprofil och registrera din enhet i Intune
 
-När du registrerar din Android-enhet får du åtkomst till företagets e-post, appar och andra arbetsdata. Som en del av registreringen skapar du en arbetsprofil, som avgränsar personliga data på enheten från dina arbetsdata. IT-administratören kan bara hantera arbetsprofilen, som innehåller dina arbetsrelaterade data. IT-administratören kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
+När du registrerar din Android-enhet får du åtkomst till företagets e-post, appar och andra arbetsdata. Som en del av registreringen skapar du en arbetsprofil, som avgränsar personliga data på enheten från dina arbetsdata.
+
+Företagets support kan bara hantera arbetsprofilen, som innehåller dina arbetsrelaterade data. Företagets support kan inte hantera personliga data på enheten. Lär dig mer om [vad som händer när du skapar en arbetsprofil](what-happens-when-you-create-a-work-profile-android.md).
 
 För att skapa en arbetsprofil:
 
@@ -32,27 +34,27 @@ För att skapa en arbetsprofil:
 
     ![Android-företagsportalsappens skärm Välkommen](./media/and-enroll-0-welcome-screen.png)
 
-2. Tryck på **BÖRJA** på skärmen **Konfiguration av företagsåtkomst**.
+2. Tryck på **FORTSÄTT** på skärmen **Konfiguration av företagsåtkomst**.
 
-    ![Skärmen Konfiguration av företagsåtkomst](./media/andr-afw-begin-company-access-setup.png)
+    ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
 
 3.  På skärmen **Why create a work profile?** (Varför skapa en arbetsprofil?) kan du läsa vad du kommer att kunna göra. Tryck sedan på **FORTSÄTT**.
 
     ![Varför skapa en arbetsprofil](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Läs informationen om vad IT-administratören kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
+4.  Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
 
-    ![Vad IT-administratören kan se och inte kan se på enheten](./media/andr-afw-what-it-can-see-on-your-device.png)
+    ![Vad företagets support kan se och inte kan se på enheten](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  På skärmen **Vad kommer härnäst** läser du om vad som kommer att ske härnäst och trycker sedan på **FORTSÄTT**.
+5.  På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
 
-    ![Skärmen Vad kommer härnäst](./media/andr-afw-what-comes-next.png)
+    ![Skärmen Vad händer nu](/intune/media/android_work_cp_enroll_03_after_1710.png)
 
 6. På skärmen **Set up work profile** (Konfigurera en arbetsprofil) trycker du på **NÄSTA** för att låta företagsportalappen att komma åt arbetsprofilen.
 
     ![Ge företagsportalappen åtkomst till arbetsprofilen](./media/andr-afw-tap-next-to-set-up-work-profile.png)
 
-7. Granska skärmen Google som beskriver vad IT-administratören kan göra när du skapar en profil för arbete och tryck sedan på **OK**.
+7. Granska Google-skärmen som beskriver vad företagets support kan göra när du skapar en arbetsprofil och tryck sedan på **OK**.
 
     ![Granska Googles information om arbetsprofiler](./media/andr-afw-google-screen-what-it-can-do.png)
 
@@ -70,16 +72,12 @@ För att skapa en arbetsprofil:
 
     Du kommer att under en kort period se ett meddelande om att din enhet registreras.
 
-11. När skärmen **Konfiguration av företagsåtkomst** visar att allt har konfigurerats korrekt trycker du på **FORTSÄTT**.
+11. När sidan **Allt är klart!** visar att allt har konfigurerats korrekt trycker du på **KLAR**.
 
-    ![Konfiguration av företagsåtkomst visar att arbetsprofilen och registreringen är färdiga](./media/andr-afw-company-access-setup-green-checks.png)
-
-12. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Du kan behöva utföra ytterligare steg om IT-administratören har lagt till andra krav.
-
-    ![Konfiguration av företagsåtkomst är slutförd](./media/andr-afw-company-access-setup-complete.png)
+    ![Konfiguration av företagsåtkomst visar att arbetsprofilen och registreringen är färdiga](/intune/media/android_work_cp_enroll_04_after_1710.png)
 
     Nu kan du hämta företagsappar från Play-butiken för arbete.
 
     ![Appsida på Play Store for Work](./media/andr-afw-tap-work-play-store-icon.png)
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
