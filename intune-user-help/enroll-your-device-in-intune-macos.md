@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,32 +13,29 @@ ms.technology:
 ms.assetid: 58eb0e7a-1321-4c66-a281-88fb01e72c1c
 searchScope: User help
 ROBOTS: 
-ms.reviewer: jieyang
+ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 04009fa3fea401e3093a444b0fdbbbe12bd31c84
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: ec1120f8fe040227d513fa5de2c096b34611ed7a
+ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="enroll-your-macos-device-in-intune"></a>Registrera din macOS-enhet i Intune
 
 Genom att få åtkomst till din organisations appar, data och resurser är det möjligt för dig att göra ditt jobb. Om du använder en macOS-enhet på arbetet, innebär det installation av en __Hanteringsprofil__. Detta är bara en fil som har konfigurerats av företagets support och som läser in inställningar och åtkomstinformation till din Mac. Vill du veta mer? Ta reda på [vad som händer om du installerar företagsportalappen och registrerar din enhet i Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-
-  > [!NOTE]
-  > Om du försöker registrera en iOS-enhet, till exempel en iPhone eller iPad, [prova de här instruktionerna i stället](enroll-your-device-in-intune-ios.md).
 
 1. På din __Docka__, går du till __Safari__ och öppnar ett nytt fönster och öppnar sedan [företagsportalens webbplats](https://portal.manage.microsoft.com).
 2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto.
 
   [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
 
-3. När du loggar in visas alla __Start__-, __Appar__- och __Kategorier__-flikar som är tillgängliga. På den här sidan visas alla appar som du kan installera. Om du inte har några registrerade enheter ännu visas ett meddelande om att **vi inte kan visa några appar**. Du kan fortsätta genom att välja __Mina enheter__.
+3. När du har loggat in klickar du på **menyn** i det övre vänstra hörnet på sidan och väljer **Mina enheter**.
 
  ![En skärmbild av webbportalens landningssida och meddelandet om att inga appar kan installeras ännu. Knappen Mina enheter visas nedanför.](./media/macOS_enroll_001_landing_page.png)
 
-4. På sidan __Mina enheter__ visas antingen en lista med registrerade enheter eller bara ett popup-meddelande. Det beror på om du redan har registrerat en enhet, ett macOS eller annat. Om du vill registrera en enhet som inte finns i listan väljer du meddelandet som ser ut ungefär så här: __Identifiera enheten i listan genom att trycka på den. Du kan också trycka här för att registrera din enhet om den inte visas i listan__.
+4. På sidan __Mina enheter__ visas antingen en lista med registrerade enheter eller bara ett popup-meddelande. Det beror på om du redan har registrerat en enhet, ett macOS eller annat. Om du vill registrera en enhet som inte finns i listan väljer du meddelandet som ser ut ungefär så här: __Identifiera enheten i listan genom att trycka på den. Du kan också trycka här för att registrera din enhet om den inte visas i listan__. Om du inte har några registrerade enheter anger banderollen **Du har inga registrerade enheter. Registrera den här genom att trycka här.**
 
   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
 
@@ -64,5 +61,7 @@ Genom att få åtkomst till din organisations appar, data och resurser är det m
 9. Du kan se vissa ytterligare meddelanden från din Mac med mer information om profilen eller om du är säker på att du vill __Installera__. Klicka på __Fortsätt__ och __Installera__ för att fortsätta. När installationen är klar, kan du se din nyligen installerade __Hanteringsprofil__ i listan över __Enhetsprofilerna__.
 
  ![macOS-profilen installerad](./media/macOS_enroll_007_sysprefs_installed_profile.png)
+
+Vissa profiler kanske anger att de är **Inte verifierad**. Så länge de kommer från ditt företag är det normalt.
 
 Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://portal.manage.microsoft.com).
