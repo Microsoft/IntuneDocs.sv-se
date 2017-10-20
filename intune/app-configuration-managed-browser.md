@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 08/02/2017
+ms.date: 10/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f6bdb4e1288e91d78d95ba6e6640111d9af06ed7
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: e9701bbe4f39d310786fb399b3152595744019a1
+ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -64,10 +64,10 @@ Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intun
 3.  På bladet **Mobilappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
 4.  På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
 5.  På bladet **Lägg till appkonfiguration** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
-6.  För **Enhetsregistreringstyp** väljer du **Inte registrerad med Intune**.
+6.  Vid **Enhetsregistrering** väljer du **Hanterade enheter** eller **Hanterade appar**.
 7.  Välj **Välj obligatoriska appar** och klicka sedan på bladet **Målappar**, samt välj **Managed Browser** för iOS, Android eller båda.
 8.  Välj **OK** för att återgå till bladet **Lägg till appkonfiguration**.
-9.  Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Managed Browser. Använd avsnitten senare i det här ämnet för mer information om andra nyckel- och värdepar som du kan definiera.
+9.  Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Managed Browser. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
 10. När du är klar väljer du **OK**.
 11. På bladet **Lägg till appkonfiguration** väljer du **Skapa**.
 12. Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
@@ -127,6 +127,7 @@ Den här inställningen låter dig konfigurera en uppsättning bokmärken som ä
 
 - De här bokmärkena kan inte tas bort eller ändras av användare
 - De här bokmärkena visas överst i listan. Alla bokmärken som användare skapar visas under de här bokmärkena.
+- Om du har aktiverat omdirigering av App Proxy kan du lägga till App Proxy-webbappar med antingen deras interna eller externa URL-adress.
 
 Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
@@ -166,15 +167,15 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 -   Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
 
 |URL|Information|Matchar|Matchar inte|
-    |-------|---------------|-----------|------------------|
-    |http://www.contoso.com|Matchar en enstaka sida|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
-    |http://contoso.com|Matchar en enstaka sida|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
-    |http://www.contoso.com/&#42;|Matchar alla URL:er som börjar med www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
-    |http://&#42;.contoso.com/&#42;|Matchar alla underordnade domäner under contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
-    |http://www.contoso.com/images|Matchar en enstaka mapp|www.contoso.com/images|www.contoso.com/images/dogs|
-    |http://www.contoso.com:80|Matchar en enstaka sida, med ett portnummer|http://www.contoso.com:80|
-    |https://www.contoso.com|Matchar en enstaka, säker sida|https://www.contoso.com|http://www.contoso.com|
-    |http://www.contoso.com/images/&#42;|Matchar en enstaka mapp och alla undermappar|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
+|-------|---------------|-----------|------------------|
+|http://www.contoso.com|Matchar en enstaka sida|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
+|http://contoso.com|Matchar en enstaka sida|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
+|http://www.contoso.com/&#42;|Matchar alla URL:er som börjar med www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
+|http://&#42;.contoso.com/&#42;|Matchar alla underordnade domäner under contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
+|http://www.contoso.com/images|Matchar en enstaka mapp|www.contoso.com/images|www.contoso.com/images/dogs|
+|http://www.contoso.com:80|Matchar en enstaka sida, med ett portnummer|http://www.contoso.com:80|
+|https://www.contoso.com|Matchar en enstaka, säker sida|https://www.contoso.com|http://www.contoso.com|
+|http://www.contoso.com/images/&#42;|Matchar en enstaka mapp och alla undermappar|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
 
 -   Följande är några exempel på indata som du inte kan ange:
 
@@ -200,8 +201,6 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Säkerhet och sekretess för Managed Browser
 
--   Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
-
 -   Managed Browser använder inte inställningar som användare gör i den inbyggda webbläsaren på sina enheter. Managed Browser har inte åtkomst till de här inställningarna.
 
 -   Om du konfigurerar alternativet **Kräv enkel PIN-kod för åtkomst** eller **Kräv företagets autentiseringsuppgifter för åtkomst** i en appskyddsprincip som är associerad med Managed Browser och en användare väljer hjälplänken på autentiseringssidan så kan användaren bläddra på alla webbplatser, oavsett om de har lagts till i en blockeringslista i principen.
@@ -214,3 +213,14 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.
 
 
+-   Webbplatser som har ett utgånget eller ej betrott certifikat kan inte öppnas på iOS-enheter.
+-   Managed Browser använder inte inställningar som användare gör i den inbyggda webbläsaren på sina enheter. Managed Browser har inte åtkomst till de här inställningarna.
+
+-   Om du konfigurerar alternativet **Kräv enkel PIN-kod för åtkomst** eller **Kräv företagets autentiseringsuppgifter för åtkomst** i en appskyddsprincip som är associerad med Managed Browser och en användare väljer hjälplänken på autentiseringssidan så kan användaren bläddra på alla webbplatser, oavsett om de har lagts till i en blockeringslista i principen.
+
+-   Managed Browser kan endast blockera åtkomst till webbplatser när de öppnas direkt. Den blockerar inte åtkomst när mellanliggande tjänster (till exempel en översättningstjänst) används för åtkomst till webbplatsen.
+
+-   För att tillåta autentisering och få åtkomst till Intune-dokumentationen är **&#42;.microsoft.com** undantaget från listan Tillåt eller blockera. Den tillåts alltid.
+
+### <a name="turn-off-usage-data"></a>Stäng av användningsdata
+Microsoft samlar automatiskt in anonyma data om prestanda och användning av Managed Browser för att kunna förbättra Microsofts produkter och tjänster. Användare kan stänga av insamling av data med hjälp av inställningen **Användningsdata** på sina enheter. Du har ingen kontroll över insamlingen av dessa data.

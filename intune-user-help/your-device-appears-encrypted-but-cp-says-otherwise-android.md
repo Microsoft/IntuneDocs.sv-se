@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/29/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 208cf6eb2d29ec5458d97d0a4481cec420acc281
-ms.sourcegitcommit: 59811bf1183b3ef9c9e81eded634bd0d3124d0bb
+ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
+ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -39,6 +39,15 @@ På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att 
 ### <a name="downgrade-your-version-of-android"></a>Nedgradera din version av Android
 
 Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+
+### <a name="encrypt-the-entire-device"></a>Kryptera hela enheten
+
+Med vissa enheter kan du välja mellan att kryptera hela enheten eller bara det använda utrymmet. Välj helst att kryptera hela enheten och inte ”bara det använda utrymmet.” Om du redan har krypterat endast det använda utrymmet:
+
+1. [Ta bort den här enheten från företagsportalen](unenroll-your-device-from-intune-android.md)
+2. Dekryptera använt utrymme
+3. Kryptera hela enheten
+4. Omregistrera enheten
 
 ## <a name="specific-manufacturer-issues"></a>Problem med vissa tillverkare
 

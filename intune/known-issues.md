@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/14/2017
+ms.date: 10/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bddab9000bfe609856b8e003f9bd4c3802f6e6b
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 534441a7ae337f99a251831b456ea5c295184bec
+ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -53,7 +53,7 @@ Eftersom de här funktionerna inte kan hanteras både från Intune-konsolen (Sil
 - De inaktiveras i den klassiska portalen
 - De aktiveras i Azure Portal  
 
-Efter 11 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal äger den andra migreringen rum mellan den 11 och 22 september 2017. Migreringen av ditt konto slutförs samma dag det påbörjas. Migreringen kan ta upp till 6 timmar från det att funktionerna har inaktiverats i den klassiska Intune-portalen.
+Efter 22 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal kan den andra migreringen redan har slutförts. Om inte migreras dessa funktioner till Azure i november. Migreringen av ditt konto slutförs samma dag det påbörjas. Migreringen kan ta upp till 6 timmar från det att funktionerna har inaktiverats i den klassiska Intune-portalen.
 
 Om du hanterar de här Intune-funktioner i Azure-portalen nu så måste du vara medveten om följande punkter:
 
