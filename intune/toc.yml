@@ -536,6 +536,8 @@
       items:
         - name: Ansluta till informationslagret med Power BI
           href: reports-proc-get-a-link-powerbi.md
+        - name: Skapa en rapport från OData-feeden med Power BI
+          href: reports-proc-create-with-odata.md
 - name: Automatisera och anpassa
   items:
     - name: Konfigurera anpassade enhetsinställningar
