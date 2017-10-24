@@ -461,6 +461,8 @@
           href: windows-hello.md
     - name: Hantera roller
       href: role-based-access-control.md
+    - name: Hantera versioner av operativsystem
+      href: manage-os-versions.md
     - name: Hantera programuppdateringar
       href: windows-update-for-business-configure.md
     - name: Hantera datorer med programvaruagent
