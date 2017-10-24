@@ -381,6 +381,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Skapa Windows-princip
           href: compliance-policy-create-windows.md
+        - name: Åtgärder för inkompatibilitet
+          href: actions-for-noncompliance.md
         - name: Övervaka enhetsefterlevnad
           href: compliance-policy-monitor.md
     - name: Konfigurera villkorlig åtkomst
