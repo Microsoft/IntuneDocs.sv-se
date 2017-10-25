@@ -74,7 +74,7 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 4. Välj **Installation** > **Appkategorier** i arbetsbelastningen **Mobilappar**.
 5. På bladet **Appkategorier** visas en lista över aktuella kategorier. Välj en av följande åtgärder:
     - **Skapa en kategori** – Ange ett namn för den nya kategorin på bladet **Skapa kategori**. Namn kan bara anges på ett språk och översätts inte av Intune. Klicka på **Skapa** när du är klar.
-    - **Redigera en kategori** – För valfri kategori i listan, välj ”**... **”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
+    - **Redigera en kategori** – För valfri kategori i listan, välj ”**...** ”. På bladet **Egenskaper** kan du ange ett nytt namn för kategorin eller ta bort kategorin.
 
 
 ## <a name="apps-added-automatically-by-intune"></a>Appar som läggs till automatiskt av Intune

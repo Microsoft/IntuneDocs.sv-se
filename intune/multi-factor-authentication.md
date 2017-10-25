@@ -58,7 +58,7 @@ Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 11. I avsnittet **Tilldelningar** väljer du **Villkor**.
 12. I **Villkor** behöver du inte ange några inställningar för MFA.
 13. I avsnittet **Åtkomstkontroller** väljer du **Bevilja**.
-14. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering **.
+14. I **Bevilja** väljer du **Bevilja åtkomst** och väljer sedan **Kräv multifaktorautentisering** .
     Markera inte **Kräv att enheten är markerad som kompatibel** eftersom det inte går att utvärdera regelefterlevnad för en enhet förrän den har registrerats.
 15. Välj **Välj**.
 16. I **Ny princip**, väljer du **Aktivera princip** > **På** och väljer sedan **Skapa**.
