@@ -26,6 +26,7 @@
 
 ### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
+#### [E-postsynkronisering i Outlook med batterisparfunktionsläge](power-saving-mode-android.md)
 
 #### Använda loggar för att lösa problem
 ##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
