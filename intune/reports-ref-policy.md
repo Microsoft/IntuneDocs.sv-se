@@ -14,11 +14,11 @@ ms.assetid: D5ADB9D8-D46A-43BD-AB0F-D6927508E3F4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6af0ff1f463c153e62f6df63ce811076c5f692f2
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: 079cfe097d6cf462f9ccd0a32d2e327b3b605e40
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="reference-for-policy-entities"></a>Referens för principentiteter
 
@@ -35,14 +35,14 @@ Entiteten **Princip** innehåller en lista över enhetskonfigurationsprofiler, a
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| PolicyKey |Unik nyckel för principen i informationslagret |123 |
-| PolicyId |Unikt id för principen i informationslagret |b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName |Namnet på principen |"Windows 10 Baseline" |
+| PolicyKey |Unik nyckel för principen i informationslagret. |123 |
+| PolicyId |Unikt id för principen i informationslagret. |b66bc706-ffff-7437-0340-032819502773 |
+| PolicyName |Namnet på principen. |"Windows 10 Baseline" |
 | PolicyVersion |Principversion. Varje gång principen redigeras eller ändras skapas en ny version. |1, 2, 3 |
-| IsDeleted |Visar huruvida principposten har uppdaterats.  Sant: principen innehåller en ny post med uppdaterade fält. Falskt: den senaste posten för den här principen. |Sant/falskt |
-| StartDateInclusiveUTC |Datum och tid i UTC när den här principen skapades i informationslagret |2016-11-23 12:00:00 |
-| DeletedDateUTC |Datum och tid i UTC när IsDeleted ändrades till True |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUTC |Datum och tid i UTC när den här principen senast ändrades i informationslagret |2016-11-23 12:00:00 |
+| IsDeleted |Visar huruvida principposten har uppdaterats.  <br>Sant: principen innehåller en ny post med uppdaterade fält. <br>Falskt: den senaste posten för den här principen. |Sant/falskt |
+| StartDateInclusiveUTC |Datum och tid i UTC när den här principen skapades i informationslagret. |2016-11-23 12:00:00 |
+| DeletedDateUTC |Datum och tid i UTC när IsDeleted ändrades till True. |2016-11-23 12:00:00 |
+| RowLastModifiedDateTimeUTC |Datum och tid i UTC när den här principen senast ändrades i informationslagret. |2016-11-23 12:00:00 |
 
 ## <a name="policytype"></a>PolicyType
 
@@ -50,9 +50,9 @@ Entiteten **PolicyType** innehåller en lista över typer av enhetskonfiguration
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| PolicyTypeId |Unikt id för principen i källsystemet |123 |
-| PolicyTypeKey |Unikt id för principen i informationslagret |1 |
-| PolicyTypeName |Namn på principtypen. |Windows 10-efterlevnadsprincip |
+| PolicyTypeId |Unikt id för principen i källsystemet. |123 |
+| PolicyTypeKey |Unikt id för principen i informationslagret. |1 |
+| PolicyTypeName |Namn på principtypen. |Windows 10-efterlevnadsprincip. |
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
@@ -60,11 +60,11 @@ Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista öve
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret |20160703 |
-| Väntar |Antalet unika enheter i väntande läge |123 |
-| Lyckades |Antalet unika enheter i väntande läge |12 |
-| Fel |Antalet unika enheter med feltillstånd |10 |
-| Misslyckades |Antalet unika enheter med tillståndet misslyckades |2 |
+| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
+| Väntar |Antalet unika enheter i väntande läge. |123 |
+| Lyckades |Antalet unika enheter med tillståndet lyckades. |12 |
+| Fel |Antalet unika enheter med feltillstånd. |10 |
+| Misslyckades |Antalet unika enheter med tillståndet misslyckades. |2 |
 
 ## <a name="userconfiguration"></a>UserConfiguration
 
@@ -72,11 +72,11 @@ Entiteten **UserConfigurationProfileDeviceActivity** innehåller en lista över 
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret |20160703 |
-| Väntar |Antalet unika användare i väntande läge |123 |
-| Lyckades |Antalet unika användare med tillståndet lyckades |12 |
-| Fel |Antalet unika användare med feltillstånd |10 |
-| Misslyckades |Antalet unika användare med tillståndet misslyckades |2 |
+| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
+| Väntar |Antalet unika användare i väntande läge. |123 |
+| Lyckades |Antalet unika användare med tillståndet lyckades. |12 |
+| Fel |Antalet unika användare med feltillstånd. |10 |
+| Misslyckades |Antalet unika användare med tillståndet misslyckades. |2 |
 
 ## <a name="policytypeactivity"></a>PolicyTypeActivity
 
@@ -84,10 +84,10 @@ Entiteten **PolicyTypeActivity** visat det sammanlagda antalet enheter med tills
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret |20160703 |
-| PolicyKey |Principnyckel, kan kopplas till princip gör att få namn på princip |Windows 10-baslinje |
-| PolicyTypeKey |Typ av principnyckel, kan kopplas till principtyp gör att få namnet på principtyp |Windows10Compliance Policy |
-| Väntar |Antalet unika enheter i väntande läge |123 |
-| Lyckades |Antalet unika enheter med tillståndet lyckades |12 |
-| Fel |Antalet unika enheter med feltillstånd |10 |
-| Fail- |Antalet unika enheter med tillståndet misslyckades |2 |
+| DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
+| PolicyKey |Principnyckel, kan kopplas till princip gör att få namn på princip. |Windows 10-baslinje |
+| PolicyTypeKey |Typ av principnyckel, kan kopplas till principtyp gör att få namnet på principtyp. |Windows 10-efterlevnadsprincip |
+| Väntar |Antalet unika enheter i väntande läge. |123 |
+| Lyckades |Antalet unika enheter med tillståndet lyckades. |12 |
+| Fel |Antalet unika enheter med feltillstånd. |10 |
+| Fail- |Antalet unika enheter med tillståndet misslyckades. |2 |

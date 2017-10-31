@@ -13,11 +13,11 @@ ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ae828adff5d159c24e436b35ed480033c54560f
-ms.sourcegitcommit: 29ee35da2864b25f4432d2423b285014c77040af
+ms.openlocfilehash: 85e4712a204032497cb7fd31dbee910d52ac08b7
+ms.sourcegitcommit: 128770ecc820f6ff3c99b15752bce7a58257f1d5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="prevent-unauthorized-access-to-company-data"></a>Förhindra obehörig åtkomst till företagsdata 
 
@@ -45,4 +45,4 @@ Du kan dela information om [hur och när man ska skydda dokument och e-postmedde
 Som en del av nästa steg kan du lära dig mer om andra sätt att öka skyddet av företagets data, inklusive: 
 
 * Lär dig att använda [Azure Information Protection på iOS- och Android-enheter](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
-* För Windows Phone och Mac-datorer kan du lära dig om [Microsoft Rights Management SharePoint-programmet](https://technet.microsoft.com/dn451248).
+* För Windows Phone och Mac-datorer kan du lära dig om [delningsapplikationen för Microsoft Rights Management](https://technet.microsoft.com/dn451248).

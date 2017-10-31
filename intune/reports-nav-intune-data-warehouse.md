@@ -14,11 +14,11 @@ ms.assetid: 701D6CE9-43F6-4A29-8E84-E2B59931C635
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 52b498beb024b86282c93be7aa5a248800db6609
-ms.sourcegitcommit: 294de4d4058de2c625abb8143e90880d27da9284
+ms.openlocfilehash: a0d6bcb4ccac3563dd642ec0ad621645b7053dea
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 10/20/2017
 ---
 #  <a name="intune-data-warehouse-api"></a>API för Intune-informationslager
 
@@ -41,9 +41,12 @@ Det här referensavsnittet innehåller en översikt över slutpunkter, HTTP-meto
 
 ## <a name="odata-custom-client"></a>OData anpassad klient
 
-Du kan öppna datamodellen Intune-informationslager via RESTful-slutpunkter. För att få åtkomst till dina data måste klienten auktorisera med Microsoft Azure Active Directory (Azure AD) med hjälp av OAuth 2.0. Först måste du ställa in en webbapp och en klientapp i Azure och bevilja klienten åtkomst. Din lokala klient auktoriseras och kan sedan kommunicera med informationslagrets slutpunkter.
+Du kan öppna datamodellen Intune-informationslager via RESTful-slutpunkter. För att få åtkomst till dina data måste klienten auktorisera Azure Active Directory (Azure AD) med hjälp av OAuth 2.0. Först måste du ställa in en webbapp och en klientapp i Azure och bevilja klienten åtkomst. Din lokala klient auktoriseras och kan sedan kommunicera med informationslagrets slutpunkter.
 
 Mer information finns i [Hämta data från API för informationslager med en REST-klient](reports-proc-data-rest.md)
+
+> [!Note]  
+> Du kan få åtkomst till [GitHub-repo för Intune-informationslager](https://github.com/Microsoft/Intune-Data-Warehouse) på Github och få kodexempel.
 
 ## <a name="interacting-with-the-api"></a>Interagera med API:et
 
@@ -58,6 +61,8 @@ OData definierar en abstrakt datamodell och ett protokoll som ger alla klienter 
 
 ## <a name="next-steps"></a>Nästa steg
 
-[Autentiseringsscenarier i Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)  
-[odata.org](http://www.odata.org)  
-[OData version 4.0](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Läs mer om att arbeta med Azure AD genom att läsa [Autentiseringsscenarier i Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+
+Hitta OData-resurser på [odata.org](http://www.odata.org).
+  
+Granska OData Version 4.0-standarden på [OData Version 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  

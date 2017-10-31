@@ -11,11 +11,11 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: e6334421-85e1-4457-9c44-e5db8d4ee00e
-ms.openlocfilehash: a119f00cc8a92aa6cf7a1009f910df817593e0e8
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 199760a60ee2290560ebdf933192de0eaf569e9e
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="configure-ios-update-policies"></a>Konfigurera iOS-uppdateringsprinciper
 Uppdateringsprinciper för iOS gör det möjligt att tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen. Du kan konfigurera de dagar och tider då du inte vill att enheter ska installera uppdateringen.
@@ -40,3 +40,7 @@ Du har tillämpat principen på användarna. Uppdateringsefterlevnaden hos de en
 1. På bladet **Programuppdateringar** väljer du **iOS-uppdateringsprinciper**.
 2. Välj den iOS-uppdateringsprincip som du vill uppdatera.
 3. Välj **Egenskaper** och uppdatera informationen om begränsade dagar.
+
+## <a name="monitor-ios-devices-with-older-ios-versions"></a>Övervaka iOS-enheter med äldre iOS-versioner 
+<!-- 1352223 -->
+Rapporten **Out-of-date iOS Devices** (Gamla iOS-enheter) är tillgänglig på **Programuppdateringar** > **bladet iOS-uppdateringsprinciper**. I rapporten kan du visa en lista över alla övervakade iOS-enheter som har varit mål för en iOS-uppdateringsprincip och inte kunde uppdateras. Du kan se en status för varje enhet och se varför enheten inte har uppdaterats automatiskt.

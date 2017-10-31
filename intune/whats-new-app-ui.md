@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/05/2017
+ms.date: 10/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,32 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11a3c96046a194e10d952508669b7e8fac0d1ee8
-ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
+ms.openlocfilehash: 4719f31b2ea6144bc8113c596155de70aa22ace1
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+
+## <a name="week-of-october-16-2017"></a>Veckan som börjar med 16 oktober 2017
+
+### <a name="search-improvements-to-the-company-portal-website---1331697--"></a>Sökförbättringar på företagsportalwebbplatsen <!--1331697-->
+Vi förbättrar appsökfunktionerna och börjar med [företagsportalwebbplatsen](https://portal.manage.microsoft.com). Sökningar utförs nu även på appkategorier, utöver fälten Namn och Beskrivning. Resultaten sorteras i fallande relevansordning som standard. 
+
+Även iOS-användare får denna ändring, eftersom företagsportalwebbplatsen också används som en del av företagsportalappen för iOS. Företagsportalapparna för Android och Windows får liknande uppdateringar under de kommande månaderna.
+
+Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur det fungerar via länken "Feedback" längst ned på företagsportalwebbplatsen.
+
+
+### <a name="ios-company-portal-displays-large-icons----1454593---"></a>iOS företagsportal visar stora ikoner <!-- 1454593 -->
+I den här versionen åtgärdas ett känt problem med hur iOS företagsportal visar ikoner i appanelen. Om du överför appikoner på 120 × 120 bildpunkter eller större, visas de nu på [Företagsportalens webbplats](https://portal.manage.microsoft.com) och på appsidorna i Företagsportalen för iOS i full storlek i appanelen.
+
+
+
+
+
 
 ## <a name="week-of-october-2-2017"></a>Veckan då den 2 oktober 2017 infaller
 
@@ -67,7 +85,7 @@ Registreringen av företagsportalappen för Android har förenklats med ny text 
 |![05](./media/android_cp_enroll_05_before_1709.png)|![05](./media/android_cp_enroll_05_post_1709.png)|
 
 
-## <a name="week-of-august-28-2017"></a>Veckan 28 augusti 2017
+## <a name="august-2017"></a>Augusti 2017
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>E-postprogrammet för iOS 11 stöder OAuth<!---1196951--->
 
@@ -87,7 +105,7 @@ Villkorlig åtkomst med Intune stöder säkrare autentisering på iOS-enheter me
 
 ![Användaren uppmanas att registrera från företagsportalens webbplats.](./media/ios-11-ca-email-after-1708-07.png)
 
-## <a name="week-of-august-21-2017"></a>Veckan 21 augusti 2017
+
 
 ### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogrutor för hantering av mobilprogram i Intune (MAM) kommer att få ett modernt gränssnitt <!-- 1199015 -->
 
@@ -102,15 +120,13 @@ Dialogrutor för hantering av mobilprogram i Intune (MAM) kommer att uppdaterats
 ![modernt gränssnitt](./media/NewUI_Modern_AttachFileHandler.jpg)
 
 
-## <a name="week-of-august-14-2017"></a>Veckan 14 augusti 2017
-
 ### <a name="updates-to-the-device-details-page-on-the-company-portal-app-for-windows-10----1287448---"></a>Uppdateringar av sidan Enhetsinformation i företagsportalappen för Windows 10 <!---1287448--->
 
 Företagsportalappen för Windows 10 flyttar __Kategori__-taggen från under rubriken till en egenskap på sidan __Enhetsinformation__.
 
 ![Företagsportalappen för Windows-skärmen Enhetsinformation där nu fältet Kategorier visas som en egenskap istället för direkt under rubriken på skärmen.](./media/cp_win10_category_tag_move_after_1708.png)
 
-## <a name="week-of-july-31-2017"></a>Veckan 31 juli 2017
+## <a name="july-2017"></a>Juli 2017
 
 ### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Sidor med appinformation kommer att visa ny information för Android-enheter <!--1287476-->
 
@@ -164,7 +180,7 @@ Företagsportalappen börjar logga in.
 
 ![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](./media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
 
-## <a name="week-of-june-12-2017"></a>Vecka 12 juni 2017
+## <a name="june-2017"></a>Juni 2017
 
 ### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Företagsportalappen för Android har nu ett nytt användargränssnitt för appskyddsprinciper <!--1305217-->
 Baserat på feedback från våra kunder har vi ändrat företagsportalappen för Android så att den visar knappen **Åtkomst till företagsinnehåll**. Avsikten är att förhindra användare från att i onödan gå genom registreringsprocessen när de bara behöver åtkomst till appar som stöder appskyddsprinciper, en funktion i Intune för hantering av mobilappar.
@@ -210,8 +226,6 @@ Baserat på användarfeedback har vi lagt till en ny menyåtgärd i företagspor
 ![En bild av företagsportalappen för Android med åtgärdsmenyn öppnad i det övre högra hörnet. Det nya alternativet ”ta bort företagsportal” finns tillgängligt som det tredje alternativet under ”min profil” och ”inställningar” och ovanför ”användarvillkor”, ”hjälp och feedback” och ”om”.](./media/android_remove_cp_menu_action_after_1705.png)
 
 ![En bild av dialogrutan som visas när du har valt det nya alternativet ”ta bort företagsportalen” i åtgärdsmenyn. Dialogrutan informerar användaren att ”genom att ta bort företagsportalen kommer enheten inte längre att hanteras av IT-administratören och åtkomst till företagsdata, företagsappar och företagets e-post kan tas bort." Användaren ombes sedan att bekräfta att de vill ta bort företagsportalappen genom att välja ”Ja”.](./media/android_remove_cp_menu_confirmation_after_1705.png)
-
-## <a name="week-of-june-5-2017"></a>Vecka 5 juni 2017
 
 ### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Förbättringar av appaneler i företagsportalappen för iOS <!--1230777-->
 Vi har uppdaterat designen av appaneler på startsidan så att de återspeglar anpassningsfärgen som du angett för Företagsportalen.

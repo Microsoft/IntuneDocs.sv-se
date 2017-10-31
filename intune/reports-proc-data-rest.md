@@ -14,11 +14,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1bbb0e8ba84e221df3a434da79c513939267648b
-ms.sourcegitcommit: b8ef9d8387b4d9b2ea4e6ce937635304771e6532
+ms.openlocfilehash: f1ffc07d87e98666a882415d63e11bd04bbd5461
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -58,7 +58,7 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
 
 Nu har du definierat en app i Azure. Bevilja åtkomst från inbyggda klientappen till Microsoft Intune-API.
 
-1.  Klicka på den inbyggda appen. Du gav appen ett namn i stil med Intune Data Warehouse Client.
+1.  Klicka på den inbyggda appen. Du gav appen ett namn i stil med **Intune Data Warehouse Client**.
 2.  Klicka på **Nödvändiga behörigheter** på bladet **Inställningar**
 3.  Klicka på **Lägg till** på bladet **Nödvändiga behörigheter**.
 4.  Klicka på **Välj ett API**.
@@ -152,14 +152,14 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 1.  Öppna **Microsoft Visual Studio**.
 2.  Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)). 
 3.  Ge projektet namnet ` IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och klicka sedan på **OK**.
-3.  Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Klicka på **Browse** (Bläddra) och skriv Microsoft.IdentityModel.Clients.ActiveDirectory i sökrutan.
-4. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och klicka sedan på **Install** (Installera). 
-5. Klicka på **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
-6. Öppna `Program.cs` från Solution Explorer.
+4.  Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Klicka på **Bläddra** och skriv sedan `Microsoft.IdentityModel.Clients.ActiveDirectory` i sökrutan.
+5. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och klicka sedan på **Install** (Installera). 
+6. Klicka på **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
+7. Öppna `Program.cs` från Solution Explorer.
 
     ![Projekt i Visual Studio](media\reports-get_rest_data_in.png)
 
-7.  Ersätt koden i Program.cs med följande kod:  
+8.  Ersätt koden i Program.cs med följande kod:  
     ```csharp
 namespace IntuneDataWarehouseSamples
 {
@@ -214,12 +214,12 @@ namespace IntuneDataWarehouseSamples
     }
     ```
 
-8.  Uppdatera `TODO`-texten i kodexemplet.
-9.  Tryck på **Ctrl + F5** för att skapa och köra Intune.DataWarehouseAPIClient-klienten i felsökningsläge.
+9.  Uppdatera `TODO`-texten i kodexemplet.
+10.  Tryck på **Ctrl + F5** för att skapa och köra Intune.DataWarehouseAPIClient-klienten i felsökningsläge.
 
     ![Datumentitet som hämtats i JSON-format.](media\reports-get_rest_data_output.png)
 
-10.  Granska konsolutdata. Utdata består av data i ett JSON-format som hämtats från **dates**-entiteten i din Intune-klientorganisation.
+11.  Granska konsolutdata. Utdata består av data i ett JSON-format som hämtats från **dates**-entiteten i din Intune-klientorganisation.
 
 ## <a name="next-steps"></a>Nästa steg
 
