@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/25/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 5b9ee20b-3c4e-4461-86d3-6fd26e7f71a6
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: f3c76f558987cd03a4e6434243b31908cd083807
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: ba3a947060877fe704d4980cb1f25f34f110ff1f
+ms.sourcegitcommit: 2707a5fb68749a51c2a3ff54a1bac631bdaa3b87
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Installera Mobile Threat Defense på iOS-enheten
 
@@ -31,6 +31,17 @@ Innan du kan komma åt ditt arbete måste företagets support be dig att install
 * [SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
 * [Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 
-**Om installationen inte fungerar**
+## <a name="additional-information-your-company-can-see"></a>Ytterligare information som ditt företag kan se
+
+Mobile Threat Defense är ett sätt för företag att se till att dina enheter är skyddade mot appar som kan försöka stjäla företagsinformation. När det här skyddet läggs till krävs att extra information rapporteras om apparna på dina enheter till Mobile Threat Defense-tjänsten som företaget använder. Företaget kan inte se data i dina personliga appar. Alla appar på din enhet läggs till i [det företaget kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) när de använder en Mobile Threat Defense-tjänst. Här följer de delar av appen ditt företag kan se:
+
+*   Appnamn
+* App-ID: det unika namn som identifierar appen i App Store
+*   Appversion och kort versionsnummer: de specifika versionsnumren för en app
+* Appsamling (bundle) och dynamisk storlek: mängden utrymme en app använder på din enhet
+* Appens giltighet: om en app är godkänd för användning
+*   Appens hanteringstillstånd: huruvida en app hanteras av ditt företag eller om det är en privat app
+
+## <a name="if-the-installation-doesnt-work"></a>Om installationen inte fungerar
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Kontakta företagssupporten om detta sker. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).

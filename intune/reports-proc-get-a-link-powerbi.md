@@ -14,11 +14,11 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0b3436a22543eb07cedb0780984766bcb7faa284
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 56f80e7cede68364d1a98b58acab3e7dd2f51b73
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
@@ -38,6 +38,8 @@ Här markeras också trenderna för registrering, regelefterlevnad, enhetens kon
 
 I följande anvisningar visas hur du laddar ned Power BI-filen och använder OData-länken med Power BI.
 
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
+
 ## <a name="install-power-bi"></a>Installera Power BI
 
 Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI Desktop från: [PowerBI.microsoft.com](https://powerbi.microsoft.com/en-us/desktop)
@@ -54,7 +56,7 @@ Power BI-filen (pbix) innehåller anslutningsinformation för klientorganisation
 3.  Klicka på **Ladda ned PowerBI-fil**. Filen med filnamnstillägget pbix laddas ned till den plats du angett.
 4.  Öppna filen med Power BI. *Intune Data Warehouse Reports* läses in men det kan ta någon sekund innan klientorganisationens data nås.
 5.  Klicka på **Uppdatera** så att klientorganisationens data läses in, och granska rapporterna.
-6.  Om Power BI inte har autentiserat dig med Azure Active Directory-autentiseringsuppgifter uppmanas du i Power BI att ange autentiseringsuppgifter. När du väljer autentiseringsuppgifter väljer du **Arbetskonto** som autentiseringsmetod.
+6.  Om Power BI inte har autentiserat dig med Azure Active Directory-autentiseringsuppgifter uppmanas du i Power BI att ange autentiseringsuppgifter. När du väljer autentiseringsuppgifter väljer du **Organisationskonto** som autentiseringsmetod.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Läsa in data i Power BI med OData-länken
 
@@ -68,8 +70,8 @@ När en klient har autentiserats med Azure AD ansluter OData-webbadressen till R
 6. Välj **Basic**.
 7. Skriv eller klistra in **OData-URL** i webbadressrutan.
 8. Klicka på **OK**.
-9. Om du inte har autentiserats med Azure AD för klientorganisationen från Power BI-skrivbordsklienten anger du dina autentiseringsuppgifter.  
-    1.  Väj **Arbetskonto**.  
+9. Om du inte har autentiserats med Azure AD för klientorganisationen från Power BI-skrivbordsklienten anger du dina autentiseringsuppgifter. För att få åtkomst till dina data måste du auktorisera Azure Active Directory (Azure AD) med hjälp av OAuth 2.0.  
+    1.  Välj **Organisationskonto**.  
     2.  Ange användarnamn och lösenord.  
     3.  Klicka på **Logga in.**  
     4.  Klicka på **Anslut**.  

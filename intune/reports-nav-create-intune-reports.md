@@ -5,7 +5,7 @@ keywords: Intune-informationslager
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cb311429e0537709b3476154bdef24347cb99026
-ms.sourcegitcommit: 294de4d4058de2c625abb8143e90880d27da9284
+ms.openlocfilehash: e399c36d4c6a855766ee956b3ca24c503a1f974b
+ms.sourcegitcommit: e57512698a479df0d25ece6ece4492ec0e4f0f3e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="use-the-intune-data-warehouse"></a>Använda Intune-informationslagret
 
@@ -41,4 +41,5 @@ Informationslagret ger dig tillgång till mer information om din mobila miljö �
 **Nästa steg**
 
 - Få en länk och använd Power BI för att få mer information. Mer information finns i [Ansluta till Intune-informationslagret med Power BI](reports-proc-get-a-link-powerbi.md).
+- Med länken skapar du en anpassad rapport med Power BI. Det finns anvisningar i [Skapa en rapport från OData-feeden med Power BI](reports-proc-create-with-odata.md).
 - Mer information om API för Intune-informationslagret, datamodellen och relationerna mellan enheter<!-- , and an example of creating a custom client to retrieve data,--> finns i [API för Intune-datalagret](reports-nav-intune-data-warehouse.md).

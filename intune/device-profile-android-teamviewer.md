@@ -1,12 +1,12 @@
 ---
-title: "Så här fjärradministrerar du Android-enheter med TeamViewer"
+title: "Så här fjärradministrerar du enheter med TeamViewer"
 titlesuffix: Azure portal
-description: "Lär dig hur du fjärradministrerar Android-enheter med TeamViewer.\""
+description: "Lär dig hur du fjärradministrerar enheter med TeamViewer.\""
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,29 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a6286760e1e49cdb090736e9444fe8ce18ddeb7
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 8bb3061baf42b011c98cf7b196e939448f91cff4
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/20/2017
 ---
-# <a name="provide-remote-assistance-for-intune-managed-android-devices"></a>Ge fjärrhjälp för Intune-hanterade Android-enheter
+# <a name="provide-remote-assistance-for-intune-managed-devices"></a>Ge fjärrhjälp för Intune-hanterade enheter
 
-Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps separat) för att ge fjärrhjälp till användare med Android-enheter. Använd informationen i det här ämnet för att komma igång.
+Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps separat) för att ge fjärrhjälp till användare med enheter som du hanterar. Använd informationen i det här ämnet för att komma igång.
 
 ## <a name="before-you-start"></a>Innan du börjar
+
+### <a name="supported-devices"></a>Enheter som stöds
+
+Följande Intune-hanterade enheter stöder fjärradministration:
+
+- Intune-hanterade Android-enheter
+- Intune-hanterade Windows-enheter som kör Windows 10, Windows 10 Mobile eller senare.
+
+>[!NOTE]
+>Windows Holographic (HoloLens), Windows Team (Surface Hub) och Windows 10 S stöds inte av programmet TeamViewer
+
+
 
 ### <a name="required-permissions"></a>Behörigheter som krävs
 
@@ -38,7 +50,7 @@ Kontrollera att användaren i Azure-portalen har följande behörigheter som [In
 
 ### <a name="configure-the-intune-teamviewer-connector"></a>Konfigurera Intune TeamViewer-anslutningsprogrammet
 
-Innan du kan ge fjärrhjälp till Android-enheter måste du konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
+Innan du kan ge fjärrhjälp till enheter måste du konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
 
 
 1. Logga in på Azure-portalen.
@@ -50,22 +62,22 @@ Innan du kan ge fjärrhjälp till Android-enheter måste du konfigurera Intune T
 7. En webbsida öppnas med TeamViewer-webbplatsen. Ange dina autentiseringsuppgifter för TeamViewer-licensen och klicka sedan på **Logga in**.
 
 
-## <a name="how-to-remotely-administer-an-android-device"></a>Så här fjärradministrerar du en Android-enhet
+## <a name="how-to-remotely-administer-a-device"></a>Så här fjärradministrerar du en enhet
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enheter** på bladet **Intune**.
 4. På bladet **Enheter** väljer du **Hantera** > **Alla enheter**.
 5. Välj den enhet som du vill fjärradministrera och välj på egenskapsbladet för enheten **Mer** > **Ny fjärrhjälpssession**.
-6. När Intune ansluter till TeamViewer-tjänsten visas information om Android-enheten. Välj **Anslut** för att starta fjärrsessionen.
+6. När Intune ansluter till TeamViewer-tjänsten visas information enheten. Välj **Anslut** för att starta fjärrsessionen.
 
-![TeamViewer-fönster i Android](./media/android-teamviewer.png)
+![TeamViewer-exempel i Android](./media/android-teamviewer.png)
 
-I TeamViewer-fönstret kan du utföra olika fjärråtgärder på Android-enheten, inklusive fjärrstyrning av enheten. Fullständig information om de åtgärder du kan utföra finns i [TeamViewer-dokumentationen](https://www.teamviewer.com/support/documents/).
+I TeamViewer-fönstret kan du utföra olika fjärråtgärder på enheten, inklusive fjärrstyrning av enheten. Fullständig information om de åtgärder du kan utföra finns i [TeamViewer-dokumentationen](https://www.teamviewer.com/support/documents/).
 
 Stäng TeamViewer-fönstret när du är klar.
 
-## <a name="end-user-notifications"></a>Meddelanden till slutanvändare
+## <a name="next-steps"></a>Nästa steg
 
 Slutanvändarna ser en meddelandeflagga på ikonen för företagsportalappen på sin enhet och får även ett meddelande när appen öppnas. De kan då godkänna begäran om fjärrhjälp.
 

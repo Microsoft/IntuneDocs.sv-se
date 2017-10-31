@@ -14,27 +14,17 @@ ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7723bb42eedcd97142f039ca52b60911fa91838b
-ms.sourcegitcommit: addf6a40caa22c22adfd2e2eff7d666cd1877e3c
+ms.openlocfilehash: f36327f21fbb2f08906a7621b701a4e6c9deee03
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>API-slutpunkt för Intune-informationslager
 
 Du kan använda API:et för Intune-informationslager med ett konto som har särskilda rollbaserade åtkomstkontroller och Azure AD-autentiseringsuppgifter. Sedan kan du godkänna REST-klienten med hjälp av OAuth 2.0. Utforma slutligen en beskrivande webbadress för att anropa en informationslagerresurs.
 
-## <a name="azure-ad-and-intune-credential-requirements"></a>Krav på Azure AD- och Intune-autentiseringsuppgifter
-
-Autentisering och auktorisering bygger på Azure AD-autentiseringsuppgifter och Intune-rollbaserad åtkomstkontroll (RBAC). Alla globala administratörer och Intune-tjänstadministratörer för din klientorganisation har som standard åtkomst till API:et. Använd Intune-roller för att ge fler användare åtkomst genom att ge dem tillgång till **rapporteringsresursen**.
-
-Krav för åtkomst till API:et:
-
-  -  Användaren måste ha tilldelats en Intune-licens
-  -  Användaren måste vara något av följande:
-      -  Global Azure AD-administratör
-      -  Intune-tjänstadministratör
-      -  Användare med rollbaserad åtkomst till resursen **Rapporter**
+[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
 
 ## <a name="authorization"></a>Auktorisering
 
@@ -64,4 +54,4 @@ Den aktuella API-versionen är: `beta`.
 
 ## <a name="odata-query-options"></a>OData-frågealternativ
 
-Den aktuella versionen har stöd för följande OData-frågeparametrar: `$skip, $top, $filter, $orderby`.
+Den aktuella versionen har stöd för följande OData-frågeparametrar: `$filter, $orderby, $select, $skip,` och `$top`.

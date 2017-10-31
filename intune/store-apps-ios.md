@@ -1,12 +1,12 @@
 ---
-title: "Så här lägger du till iOS Store-appar i Intune"
+title: "Så här lägger du till iOS Store-appar i Intune | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Läs mer om att lägga till iOS-butiksappar i Intune.”"
-keywords: 
+keywords: Intune
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 07/11/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 53ff149b28a2f75a3b30c59fa5f30edcf4879fae
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 4c5d18f217659c9be59c116670fbf92a6d1b2ab4
+ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="how-to-add-ios-store-apps-to-microsoft-intune"></a>Så här lägger du till iOS Store-appar i Microsoft Intune
 
@@ -44,26 +44,29 @@ Du kan endast tilldela appar med den här metoden om de är gratis i App Store. 
 4. Välj **Hantera** > Appar i arbetsbelastningen **Mobilappar**.
 5. Välj **Lägg till** ovanför applistan.
 6. Välj **Sök i App Store** på bladet **Lägg till app**.
-7. På bladet **Apple App Store** anger du namnet (eller en del av namnet) i sökrutan. Intune söker i butiken och returnerar en lista över relevanta resultat.
-8. Välj önskad app i listan och klicka sedan på **OK**.
+7. På bladet **Apple App Store** väljer du nationella inställningar.
+8. Ange namn (eller en del av namnet) i sökrutan. Intune söker i butiken och returnerar en lista över relevanta resultat.
+9. Välj önskad app i listan och klicka sedan på **OK**.
 
 ## <a name="step-2---configure-app-information"></a>Steg 2 – Konfigurera information om appen
 
 1. Välj **Appinformation** på bladet **Lägg till app**.
-2. Konfigurera följande information på bladet **Redigera app**. När du är klar klickar du på **Lägg till**. Beroende på vilken app du har valt kan det hända att några av värdena i det här bladet har fyllts i automatiskt:
-- **Appnamn** – Ange namnet på appen så som det ska visas i företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
-    - **Appbeskrivning** – Ange en beskrivning för appen. Detta visas för användare i företagsportalen.
+2. Konfigurera följande appinformation på bladet **Redigera app**. När du är klar klickar du på **Lägg till**. Beroende på vilken app du har valt kan det hända att några av värdena i det här bladet har fyllts i automatiskt:
+- **Namn** – Ange namnet på appen som ska visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
+- **Beskrivning** – Ange en beskrivning av appen som ska visas för användare på företagsportalen.
 - **Utgivare** – Ange namnet på appens utgivare.
-- **App Store-URL** – Ange App Store-URL:en för den app som du vill skapa.
-- **Minsta operativsystem** – Välj den minsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
-- **Kategori** (valfritt). Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det enklare för användarna att hitta appen när de söker i företagsportalen.
+- **Webbadress till appbutik** – Ange App Store-URL:en för den app som du vill skapa.
+- **Land/region för butik** – Välj land.
+- **Lägsta operativsystemversion** – Välj den minsta operativsystemversion som appen kan installeras på. Appen installeras inte på en enhet med ett äldre operativsystem.
+- **Tillämplig enhetstyp** – Från listan väljer du de enheter som används av appen.
+- **Kategori** (valfritt). Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
 - **Visa den här som aktuell app på företagsportalen** – Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-- **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användare i företagsportalen.
-- **Sekretess-URL (valfritt)** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användare i företagsportalen.
-- **Utvecklare (valfritt)** – Ange apputvecklarens namn.
-- **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
-- **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-- **Ladda upp ikon** – Överför en ikon som ska kopplas till appen. Den här ikonen visas med appen när användare söker i företagsportalen.
-3. När du är klar väljer du **Spara** på bladet **Lägg till app**.
+- **Webbadress till information** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
+- **Sekretesswebbadress** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen (valfritt). Webbadressen visas för användarna på företagsportalen.
+- **Utvecklare (valfritt)** – Ange apputvecklarens namn. Det här fältet visas bara för en administratör och kommer inte att visas för slutanvändarna.
+- **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.  Det här fältet visas bara för en administratör och kommer inte att visas för slutanvändarna.
+- **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen. Det här fältet visas bara för en administratör och kommer inte att visas för slutanvändarna.
+- **Logotyp** – Ladda upp en ikon som är associerad med appen. Ikonen visas tillsammans med appen när användarna söker på företagsportalen.
+3. När du är klar väljer du **OK** på bladet **Lägg till app**.
 
-Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
