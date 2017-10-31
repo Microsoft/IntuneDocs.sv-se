@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 635f99a0fd4857e9c0c2266371713c102ce37912
-ms.sourcegitcommit: 4b776d1a87c0707244f4ae0122de882e0eef6fa3
+ms.openlocfilehash: df96d525efc49cb1916812a547daababbfeea051
+ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure-portalen.
@@ -86,3 +86,8 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 | **Offlineintervall innan appdata rensas (dagar)** | Efter så här många dagars (definieras av administratören) offlinekörning kräver appen att användaren ansluter till nätverket och autentiserar igen. Vid lyckad autentisering kan användaren fortsätta att få åtkomst till sina data och offlineintervallet återställs.  Om autentiseringen misslyckas utför appen en selektiv rensning av användarens konto och data.  Se [Hur du rensar endast företagsdata från Intune-hanterade appar](https://docs.microsoft.com/en-us/intune/apps-selective-wipe) om du vill ha mer information om vilka data som tas bort med en selektiv rensning.<br><br> | 90 dagar |
 | **Blockera skärmdump och Android Assistant (Android 6.0+)** | Välj **Ja** om du vill blockera funktionerna för skärmdumpar och **Android-assistenten** på enheten när appen används. Om du väljer **Ja** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto. | Nej |
 | **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. | Nej |
+| **Minimikrav på Android-operativsystem** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att blockeras från åtkomst om Android-versionen på enheten inte uppfyller kravet. | Nej |
+| **Minimikrav på Android-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att få ett meddelande ifall Android-versionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas. | Nej |
+| **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren kommer att blockeras från åtkomst om appversionen på enheten inte uppfyller kraven.<br><br>När du väljer vilka appar det ska gälla ska du lägga märke till att appar ofta har olika versionsscheman.<br><br> | Nej | 
+| **Minimikrav på appversion (endast varning)** | Välj **Ja** för att rekommendera ett minimikrav på den appversion som ska använda den här appen. Användaren kommer att få ett meddelande om appversionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas.<br><br>När du väljer vilka appar det ska gälla ska du lägga märke till att appar ofta har olika versionsscheman.<br><br> | Nej | 
+
