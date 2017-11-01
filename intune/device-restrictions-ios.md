@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 09/19/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff2c9943a04ec02a83e821a65e1307e311a9d1c0
-ms.sourcegitcommit: 4ce095c0c3fa2e42cf76207b6ff8edf1fe397165
+ms.openlocfilehash: 043bc1ecf652802dc569d2df8b287b2246585f15
+ms.sourcegitcommit: 1416daed6803546445b6f280a86c663e6e00465a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
 
@@ -82,7 +82,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 -   **Visa dokument som inte gäller företag i företagsappar** – Tillåt att alla dokument visas i företagshanterade appar.
 -   **Behandla AirDrop som ett ohanterat mål** – Stoppar hanterade appar från att kunna skicka data. Airdrop.
 -   **Lägga till Game Center-vänner (endast övervakat)** – Tillåt användaren att lägga till vänner i Game Center.
--   **Game Center (endast övervakat) ** – Blockera eller aktivera användning av appen Game Center.
+-   **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
 -   **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
 -   **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
 -   **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
@@ -108,10 +108,8 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 
 Du kan konfigurera en av följande listor i listan med begränsade appar:
 
-Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra.
-Listan **Godkända appar** – Ange de appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt.
-
-Användarna hindras inte från att installera en förbjuden app, men om de gör detta rapporteras det till dig.
+- Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra. Användarna hindras inte från att installera en förbjuden app, men om de gör detta rapporteras det till dig.
+- Listan **Godkända appar** – Ange de appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användare hindras inte från att installera en app som inte finns med på listan över godkända appar, men om de gör det rapporteras detta till dig.
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
 

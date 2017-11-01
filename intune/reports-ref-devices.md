@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 957f05e87f777f62b74c8849c5b494fa638e92f4
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 1e3352335a5804575a39bbbf050ccb41b2674f2c
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -122,18 +122,31 @@ Entiteten **EnrollmentTypes** visar om en enhet är företagsägd, privat ägd e
 
 | Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
-| ownerTypeID |Unikt id för ägartyp | |
-| ownerTypeKey |Unikt id för ägartypen i informationslagret – surrogatnyckel | |
-| ownerTypeName |Visar typ av ägare för enheterna: Företag – enheten är företagsägd. Privat – enheten är privatägd (BYOD).  Okänd – det finns ingen information om enheten. |Företag Privat Okänd |
+| ownerTypeID |Unikt id för ägartyp. | |
+| ownerTypeKey |Unikt id för ägartypen i informationslagret – surrogatnyckel. | |
+| ownerTypeName |Representerar enheternas ägartyp:  <br>Företag – enheten är företagsägd. <br>Privat – enheten är privatägd (BYOD).  <br>Okänd – det finns ingen information om enheten. |Företag Privat Okänd |
 
 ## <a name="mdmstatuses"></a>MdmStatuses
 
 Entiteten **MdmStatuses** visar enhetens regelefterlevnadsstatus.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Beskrivning |
+|---------|------------|
+| MdmStatusID |Unik identifierare för kompatibilitetstillstånd |
+| MdmStatusKey |Unikt id för regelefterlevnadsstatus i informationslagret – surrogatnyckel | 
+| ComplianceStatus |Kompatibilitetstillstånd för enheten, måste ha ett av värdena i tabellen nedan | 
+
+
+## <a name="example"></a>Exempel
+
+| MdmStatusID  | ComplianceStatus | Beskrivning |
 |---------|------------|--------|
-| MdmStatusName |MdmStatus-id |0 - Okänt 1 - Kompatibel 2 - Inte kompatibel |
-| MdmStatusKey |Unikt id för regelefterlevnadsstatus i informationslagret – surrogatnyckel | |
+| 0 |Okänt |Enhetens kompatibilitetstillstånd är okänt. |
+| 1 |Kompatibel |Enheten är kompatibel. |
+| 2 |Ej kompatibel |Enheten är inte kompatibel. |
+| 3 |Konflikt |Enhetens kompatibilitet resulterade i s-konflikt. |
+| 4 |Fel |Fel uppstod vid läsning av enhetens kompatibilitetstillstånd. |
+
 
 ## <a name="managementstates"></a>ManagementStates
 
@@ -141,26 +154,26 @@ Entiteten **ManagementStates** innehåller information om enhetens tillstånd. I
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| managementStateID |Unikt id för hanteringstillståndet |
-| managementStateKey |Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel |
-| managementStateName |Visar status för den fjärranslutna åtgärden som utförts på den här enheten. |
+| managementStateID | Unikt id för hanteringstillståndet. |
+| managementStateKey | Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel. |
+| managementStateName | Visar status för den fjärranslutna åtgärden som utförts på den här enheten. |
 
 ## <a name="example"></a>Exempel
 
 | managementStateID  | Namn | Beskrivning |
 |---------|------------|--------|
-| 0 |Hanterade |Hanterad utan väntande fjärråtgärder. |
-| 1 |RetirePending |Ett kommando för tillbakadragande väntar på enheten. |
-| 2 |RetireFailed |Det gick inte att utföra kommandot för tillbakadragande på enheten. |
-| 3 |WipePending |Ett rensningskommando väntar på enheten. |
-| 4 |WipeFailed |Det gick inte att utföra rensningskommandot på enheten. |
-| 5 |Ohälsosamt |Ej felfritt tillstånd |
-| 6 |DeletePending |Ett borttagningskommando väntar på enheten. |
-| 7 |RetireIssued |Ett kommando om tillbakadragande har utfärdats till enheten. |
-| 8 |WipeIssued |Ett rensningskommando har utfärdats. |
-| 9 |WipeCanceled |Rensningskommandot har avbrutits. |
-| 10 |RetireCanceled |Kommandot för tillbakadragande har avbrutits. |
-| 11 |Discovered |Enheten har nyligen identifierats av Intune. När den checkar in för första gången övergår den i tillståndet Managed (hanterad) |
+| 0 |Hanterade | Hanterad utan väntande fjärråtgärder. |
+| 1 |RetirePending | Ett kommando för tillbakadragande väntar på enheten. |
+| 2 |RetireFailed | Det gick inte att utföra kommandot för tillbakadragande på enheten. |
+| 3 |WipePending | Ett rensningskommando väntar på enheten. |
+| 4 |WipeFailed | Det gick inte att utföra rensningskommandot på enheten. |
+| 5 |Ohälsosamt | Ej felfritt tillstånd. |
+| 6 |DeletePending | Ett borttagningskommando väntar på enheten. |
+| 7 |RetireIssued | Ett kommando om tillbakadragande har utfärdats till enheten. |
+| 8 |WipeIssued | Ett rensningskommando har utfärdats. |
+| 9 |WipeCanceled | Rensningskommandot har avbrutits. |
+| 10 |RetireCanceled | Kommandot för tillbakadragande har avbrutits. |
+| 11 |Discovered | Enheten har nyligen identifierats av Intune. När den checkar in för första gången övergår den i tillståndet Managed (hanterad). |
 
 ## <a name="workplacejoinstatetypes"></a>WorkPlaceJoinStateTypes
 
@@ -168,9 +181,9 @@ Entiteten **WorkPlaceJoinStateTypes** visar enhetens Azure Active Directory Work
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| WorkPlaceJoinStateID |Unikt id för status för arbetsplatsanslutning |
-| WorkPlaceJoinStateKey |Unikt id för arbetsplatsanslutningsstatus i informationslagret – surrogatnyckel |
-| WorkPlaceJoinStateName |Arbetsplatsanslutningsstatus |
+| WorkPlaceJoinStateID | Unikt id för status för arbetsplatsanslutning |
+| WorkPlaceJoinStateKey | Unikt id för arbetsplatsanslutningsstatus i informationslagret – surrogatnyckel |
+| WorkPlaceJoinStateName | Arbetsplatsanslutningsstatus |
 
 ## <a name="example"></a>Exempel
 
@@ -192,21 +205,21 @@ Entiteten **ManagementAgentTypes** visar de agenter som används för att hanter
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| ManagementAgentTypeID |Unikt id för typ av hanteringsagent |
-| ManagementAgentTypeKey |Unikt id för typ av hanteringsagent i informationslagret – surrogatnyckel |
+| ManagementAgentTypeID | Unikt id för typ av hanteringsagent. |
+| ManagementAgentTypeKey | Unikt id för typ av hanteringsagent i informationslagret – surrogatnyckel. |
 | ManagementAgentTypeName |Visar vilken typ av agent som används för att hantera enheten. |
 
 ## <a name="example"></a>Exempel
 
 | ManagementAgentTypeID  | Namn | Beskrivning |
 |---------|------------|--------|
-| 1 |EAS |Enheten hanteras via Exchange Active Sync |
-| 2 |MDM |Enheten hanteras med hjälp av en agent för mobilenhetshantering |
-| 3 |EasMdm |Enheten hanteras både av Exchange Active Sync och en agent för mobilenhetshantering |
-| 4 |IntuneClient |Enheten hanteras av Intune PC-agenten |
-| 5 |EasIntuneClient |Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
-| 8 |ConfigManagerClient |enheten hanteras av System Center Configuration Manager-agenten |
-| 16 |Okänt |Okänd typ av hanteringsagent |
+| 1 |EAS | Enheten hanteras via Exchange Active Sync |
+| 2 |MDM | Enheten hanteras med hjälp av en agent för mobilenhetshantering |
+| 3 |EasMdm | Enheten hanteras både av Exchange Active Sync och en agent för mobilenhetshantering |
+| 4 |IntuneClient | Enheten hanteras av Intune PC-agenten |
+| 5 |EasIntuneClient | Enheten hanteras både av Exchange Active Sync och Intune PC-agenten |
+| 8 |ConfigManagerClient | enheten hanteras av System Center Configuration Manager-agenten |
+| 16 |Okänt | Okänd typ av hanteringsagent |
 
 ## <a name="devices"></a>Egenskaper
 
@@ -214,44 +227,44 @@ Entiteten **Enheter** innehåller en lista över registrerade enheter som hanter
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel |
-| DeviceId |Unikt id för enheten |
-| DeviceName |Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
-| DeviceTypeKey |Nyckel för enhetstypattributet för den här enheten |
-| ClientRegisterationStateKey |Nyckeln för attributet klientregistreringsstatus för den här enheten |
-| OwnerTypeKey |Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
-| objectSourceKey |Ignorera den här kolumnen. |
-| CreatedDate |Datum då enhetens registrerades |
-| LastContact |Senast kända incheckning på Intune |
-| LastContactNotification |Senaste gången Intune aviserade enheten om att checka in på Intune |
-| LastContactWorkplaceJoin |Tidsstämpel som visar senast kända Workplace Join-status för den här enheten. |
-| ManagementAgentKey |Nyckel för den hanteringsagent som är kopplad till den här enheten. |
-| ManagementStateKey |Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
-| ReferenceId |Enhetens id i Azure Active Directory |
-| WorkPlaceJoinStateKey |Nyckel för den arbetsplatsanslutningsstatus som är kopplad till den här enheten. |
-| CategoryId |Ignorera den här kolumnen. |
-| EnrollmentTypeKey |Nyckel för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod. |
-| CertExpirationDate |Utgångsdatum för certifikatet för mobilenhetshantering. |
-| MdmStatusKey |En nyckel till MdmStatus |
-| OSFamily |Operativsystemfamilj (Windows, iOS, Android o.s.v.) |
-| OSVersion |OS-version |
-| OSMajorVersion |Operativsystemets högre versionskomponent (major.minor.build.revision) |
-| OSMinorVersion |Operativsystemets lägre versionskomponent (major.minor.build.revision) |
-| OSBuildNumber |Operativsystemets build-versionskomponent (major.minor.build.revision) |
-| OSRevisionNumber |Operativsystemets revisionsversionskomponent (major.minor.build.revision) |
-| EasID |Enhetens EAS-id, om enheten hanteras av Exchange Active Sync. |
-| GraphDeviceIsManaged |Senaste hanteringsstatus som Intune angett i AAD |
-| GraphDeviceIsCompliant |Senaste efterlevnadsstatus som Intune angett i AAD |
-| Serienummer |Enhetens serienummer, om det är tillgängligt |
-| EnrolledByUser |Id för den användare som registrerade enheten, hänvisar till kolumnen userId i användartabellen. |
-| RowLastModifiedDateTimeUTC |Senaste ändring av den här posten. |
-| ProcessorArchitecture |Processorarkitektur |
-| DeviceAction |Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
-| Tillverkare |Enhetstillverkaren |
-| Modell |Enhetsmodell |
-| LastPolicyUpdateUtc |Senaste principuppdatering på enheten |
-| LastExchangeStatusUtc |Senaste enhetssynkronisering med Exchange. |
-| IsDeleted |Ange värdet True om enheten inte hanteras av Intune längre. Bevarar den senast kända statusen. |
+| DeviceKey | Unikt id för enheten i informationslagret – surrogatnyckel. |
+| DeviceId | Unikt id för enheten. |
+| DeviceName | Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
+| DeviceTypeKey | Nyckel för enhetstypattributet för den här enheten. |
+| ClientRegisterationStateKey | Nyckeln för attributet klientregistreringsstatus för den här enheten. |
+| OwnerTypeKey | Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
+| objectSourceKey | Ignorera den här kolumnen. |
+| CreatedDate | Datum då enhetens registrerades. |
+| LastContact | Senast kända incheckning på Intune. |
+| LastContactNotification | Senaste gången Intune aviserade enheten om att checka in på Intune. |
+| LastContactWorkplaceJoin | Tidsstämpel som visar senast kända Workplace Join-status för den här enheten. |
+| ManagementAgentKey | Nyckel för den hanteringsagent som är kopplad till den här enheten. |
+| ManagementStateKey | Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
+| ReferenceId | Enhetens id i Azure Active Directory. |
+| WorkPlaceJoinStateKey | Nyckel för den arbetsplatsanslutningsstatus som är kopplad till den här enheten. |
+| CategoryId | Ignorera den här kolumnen. |
+| EnrollmentTypeKey | Nyckel för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod. |
+| CertExpirationDate | Utgångsdatum för certifikatet för mobilenhetshantering. |
+| MdmStatusKey | En nyckel till MdmStatus. |
+| OSFamily | Operativsystemfamilj (Windows, iOS, Android o.s.v.) |
+| OSVersion | OS-version |
+| OSMajorVersion | Operativsystemets högre versionskomponent (major.minor.build.revision). |
+| OSMinorVersion | Operativsystemets lägre versionskomponent (major.minor.build.revision). |
+| OSBuildNumber | Operativsystemets build-versionskomponent (major.minor.build.revision). |
+| OSRevisionNumber | Operativsystemets revisionsversionskomponent (major.minor.build.revision). |
+| EasID | Enhetens EAS-id, om enheten hanteras av Exchange Active Sync. |
+| GraphDeviceIsManaged | Senaste hanteringsstatus som Intune angett i Azure AD. |
+| GraphDeviceIsCompliant | Senaste efterlevnadsstatus som Intune angett i Azure AD. |
+| Serienummer | Enhetens serienummer, om det är tillgängligt. |
+| EnrolledByUser | Id för den användare som registrerade enheten, hänvisar till kolumnen userId i användartabellen. |
+| RowLastModifiedDateTimeUTC | Senaste ändring av den här posten. |
+| ProcessorArchitecture | Processorarkitektur. |
+| DeviceAction | Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
+| Tillverkare | Enhetstillverkaren. |
+| Modell | Enhetsmodell. |
+| LastPolicyUpdateUtc | Senaste principuppdatering på enheten. |
+| LastExchangeStatusUtc | Senaste enhetssynkronisering med Exchange. |
+| IsDeleted | Ange värdet True om enheten inte hanteras av Intune längre. Bevarar den senast kända statusen. |
 
 ## <a name="devicepropertyhistory"></a>DevicePropertyHistory
 
@@ -259,100 +272,101 @@ Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabel
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| DateKey |Referens till datumtabellen som visar dag |
-| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id |
+| DateKey |Referens till datumtabellen som visar dag. |
+| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id. |
 | DeviceName |Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
-| DeviceTypeKey |Nyckel för enhetstypattributet för den här enheten |
-| ClientRegisterationStateKey |Nyckeln för attributet klientregistreringsstatus för den här enheten |
+| DeviceTypeKey |Nyckel för enhetstypattributet för den här enheten. |
+| ClientRegisterationStateKey |Nyckeln för attributet klientregistreringsstatus för den här enheten. |
 | OwnerTypeKey |Nyckeln för attributet ägartyp för den här enheten: företag, privat eller okänt. |
 | objectSourceKey |Ignorera den här kolumnen. |
-| CreatedDate |Datum då enhetens registrerades |
-| LastContact |Senast kända incheckning på Intune |
-| LastContactNotification |Senaste gången Intune aviserade enheten om att checka in på Intune |
+| CreatedDate |Datum då enhetens registrerades. |
+| LastContact |Senast kända incheckning på Intune. |
+| LastContactNotification |Senaste gången Intune aviserade enheten om att checka in på Intune. |
 | LastContactWorkplaceJoin |Tidsstämpel som visar senast kända Workplace Join-status för den här enheten. |
 | ManagementAgentKey |Nyckel för den hanteringsagent som är kopplad till den här enheten. |
 | ManagementStateKey |Nyckel för det hanteringstillstånd som är kopplat till enheten och som visar den senaste statusen för en fjärråtgärd eller om den har jailbrokats/rotats. |
-| ReferenceId |Enhetens id i Azure Active Directory |
+| ReferenceId |Enhetens id i Azure Active Directory. |
 | WorkPlaceJoinStateKey |Nyckel för den arbetsplatsanslutningsstatus som är kopplad till den här enheten. |
 | CategoryId |Ignorera den här kolumnen. |
 | EnrollmentTypeKey |Nyckel för den registreringstyp som är kopplad till den här enheten och som visar registreringsmetod. |
 | CertExpirationDate |Utgångsdatum för certifikatet för mobilenhetshantering. |
-| MdmStatusKey |En nyckel till MdmStatus |
+| MdmStatusKey |En nyckel till MdmStatus. |
 | OSFamily |Operativsystemfamilj (Windows, iOS, Android o.s.v.) |
-| OSVersion |OS-version |
-| OSMajorVersion |Operativsystemets högre versionskomponent (major.minor.build.revision) |
-| OSMinorVersion |Operativsystemets lägre versionskomponent (major.minor.build.revision) |
-| OSBuildNumber |Operativsystemets build-versionskomponent (major.minor.build.revision) |
-| OSRevisionNumber |Operativsystemets revisionsversionskomponent (major.minor.build.revision) |
+| OSVersion |OS-version. |
+| OSMajorVersion |Operativsystemets högre versionskomponent (major.minor.build.revision). |
+| OSMinorVersion |Operativsystemets lägre versionskomponent (major.minor.build.revision). |
+| OSBuildNumber |Operativsystemets build-versionskomponent (major.minor.build.revision). |
+| OSRevisionNumber |Operativsystemets revisionsversionskomponent (major.minor.build.revision). |
 | EasID |Enhetens EAS-id, om enheten hanteras av Exchange Active Sync. |
-| GraphDeviceIsManaged |Senaste hanteringsstatus som Intune angett i AAD |
-| GraphDeviceIsCompliant |Senaste efterlevnadsstatus som Intune angett i AAD |
-| Serienummer |Enhetens serienummer, om det är tillgängligt |
+| GraphDeviceIsManaged |Senaste hanteringsstatus som Intune angett i Azure AD. |
+| GraphDeviceIsCompliant |Senaste efterlevnadsstatus som Intune angett i Azure AD. |
+| Serienummer |Enhetens serienummer, om det är tillgängligt. |
 | EnrolledByUser |Id för den användare som registrerade enheten, hänvisar till kolumnen userId i användartabellen. |
 | RowLastModifiedDateTimeUTC |Senaste ändring av den här posten. |
-| ProcessorArchitecture |Processorarkitektur |
+| ProcessorArchitecture |Processorarkitektur. |
 | DeviceAction |Senast utfärdade enhetsåtgärd, ignorera för tillfället. |
-| Tillverkare |Enhetstillverkaren |
-| Modell |Enhetsmodell |
-| LastPolicyUpdateUtc |Senaste principuppdatering på enheten |
+| Tillverkare |Enhetstillverkaren. |
+| Modell |Enhetsmodell. |
+| LastPolicyUpdateUtc |Senaste principuppdatering på enheten. |
 | LastExchangeStatusUtc |Senaste enhetssynkronisering med Exchange. |
+
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
 Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder av inventeringsinformation för mobilenhetshanterade enheter (MDM) under de senaste 90 dagarna. I kolumnen DateKey visas radens dag. Vissa egenskaper kanske inte kan användas eller har inte fyllts i för alla enheter. Mer information finns på den här sidan. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| DateKey |Referens till datumtabellen som visar dag |
-| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id |
-| DeviceModel |Enhetsmodell |
-| Operativsystem |Enhetens operativsystem |
+| DateKey | Referens till datumtabellen som visar dag. |
+| DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id. |
+| DeviceModel |Enhetsmodell. |
+| Operativsystem |Enhetens operativsystem. |
 | DeviceName |Namn på enheten på plattformar som tillåter namngivning av enheter. På andra plattformar skapar Intune ett namn för andra egenskaper. Det här attributet är inte tillgängligt för alla enheter. |
 | SoftwareVersion |I de flesta fall är det här en operativsystemversion förutom på Apple-plattformar där det skiljer sig från operativsystemversionen. |
 | Imei |IMEI-numret |
 | HardwareInventoryTimeUtc |Tid för första rapporterade inventeringen för enheten. |
-| InventoryModifiedTimeUtc |Tid för senaste lagrade inventeringen när den här ögonblicksbilden togs |
+| InventoryModifiedTimeUtc |Tid för senaste lagrade inventeringen när den här ögonblicksbilden togs. |
 | InventoryReportingTimeUtc |Tid för senaste insamlade inventeringen för enheten. |
-| ExchangeActiveSyncId |Enhets-id för Exchange ActiveSync |
-| ComputerSystemDescription |Systembeskrivning |
-| ComputerSystemName |Systemnamn |
-| ComputerSystemManufacturer |Systemtillverkare |
-| ComputerSystemModel |Systemmodell |
-| UserName |Användarnamn |
-| OSType |Typ av operativsystem |
-| OSCaption |Operativsystemrubrik |
-| OSName |Namn på operativsystem |
-| OSManufacturer |Operativsystemets tillverkare |
-| OSProductSuite |Operativsystemets produktserie |
-| OSProductType |Operativsystemets produkttyp |
-| Språk |Operativsystemets språk |
-| PhysicalMemoryCapacity |Kapacitet för fysiskt minne (i byte) |
-| PhysicalMemoryRemovable |Flyttbart fysiskt minne (i byte) |
-| SystemEnclosureChassisTypesInnerText |Visar enhetens typ av systemchassi. Siffrorna står för följande värden:  0 eller tomt = Okänt   1 = Skrivbordsdator   2 = Bärbar dator  3 = Arbetsstation  4 = Företagsserver  100 = Telefon  101 = Surfplatta  102/103 = Annan okänd typ av mobilenhet |
-| SystemEnclosureModel |Systemhöljets modell |
-| SystemEnclosureSerialNumber |Systemhöljets serienummer |
-| NetworkAdapterConfigurationText |Konfigurationstext på nätverkskort |
-| MacAddress |MAC-adress |
-| SmsID |Id för Intune-enhet |
-| CertExpiry |Utgångsdatum för certifikatet för mobilenhetshantering |
-| DeviceClientAgentVersion |Klientens agentversion |
-| DeviceClientID |Enhets klient-id |
-| Serienummer |Serienummer |
-| DeviceManufacturer |Enhetstillverkare |
-| DMVersion |Enhetstillverkarversion |
-| Version av inbyggd programvara |Version av fast installerad programvara |
-| HardwareVersion |Maskinvaruversion |
-| PlatformType |Plattformstyp |
-| ProcessorLevel |Processornivå |
-| ProcessorRevision |Processorrevision |
-| Produkt |Produkt |
-| ProductVersion |Produktversion |
-| OEM |Komponenttillverkare |
-| DeviceBuildVersion |Enhetens build-version |
+| ExchangeActiveSyncId |Enhets-id för Exchange ActiveSync. |
+| ComputerSystemDescription |Systembeskrivning. |
+| ComputerSystemName |Systemnamn. |
+| ComputerSystemManufacturer |Systemtillverkare. |
+| ComputerSystemModel |Systemmodell. |
+| UserName |Användarnamn. |
+| OSType |Typ av operativsystem. |
+| OSCaption |Operativsystemrubrik. |
+| OSName |Namn på operativsystem. |
+| OSManufacturer |Operativsystemets tillverkare. |
+| OSProductSuite |Operativsystemets produktserie. |
+| OSProductType |Operativsystemets produkttyp. |
+| Språk |Operativsystemets språk. |
+| PhysicalMemoryCapacity |Kapacitet för fysiskt minne (i byte). |
+| PhysicalMemoryRemovable |Flyttbart fysiskt minne (i byte). |
+| SystemEnclosureChassisTypesInnerText |Visar enhetens typ av systemchassi. Talen anger följande värden:  <br>0 eller tom = Okänd   <br>1 = Det är en stationär dator   <br>2 = Det är en bärbar dator  <br>3 = Det är en arbetsstation  <br>4 = Det är en Enterprise Server  <br>100 = Det är en telefon  <br>101 = Det är en surfplatta  <br>102/103 = En annan okänd typ av mobil enhet |
+| SystemEnclosureModel |Systemhöljets modell. |
+| SystemEnclosureSerialNumber |Systemhöljets serienummer. |
+| NetworkAdapterConfigurationText |Konfigurationstext på nätverkskort. |
+| MacAddress |MAC-adress. |
+| SmsID |Id för Intune-enhet. |
+| CertExpiry |Utgångsdatum för certifikatet för mobilenhetshantering. |
+| DeviceClientAgentVersion |Klientens agentversion. |
+| DeviceClientID |Enhets klient-id. |
+| Serienummer |Serienummer. |
+| DeviceManufacturer |Enhetstillverkare. |
+| DMVersion |Enhetstillverkarversion. |
+| Version av inbyggd programvara |Version av fast installerad programvara. |
+| HardwareVersion |Maskinvaruversion. |
+| PlatformType |Plattformstyp. |
+| ProcessorLevel |Processornivå. |
+| ProcessorRevision |Processorrevision. |
+| Produkt |Produkt. |
+| ProductVersion |Produktversion. |
+| OEM |Komponenttillverkare. |
+| DeviceBuildVersion |Enhetens build-version. |
 | Meid |MEID (Mobile Equipment Identifier). |
-| PhoneNumber |Telefonnummer |
-| SubscriberCarrierNetwork |Namn på operatörsnätverk |
-| CellularTechnology |Typ av operatörsnätverk (CDMA/GSM) |
-| Imsi |IMSI-nummer |
+| PhoneNumber |Telefonnummer. |
+| SubscriberCarrierNetwork |Namn på operatörsnätverk. |
+| CellularTechnology |Typ av operatörsnätverk (CDMA/GSM). |
+| Imsi |IMSI-nummer. |
 | JailBroken |Sant om enheten är jailbrokad eller rotad. |
 | IsActivationLockEnabled |Sant om aktiveringslås är aktiverat |
 | DeviceType |Enhetstyp |
@@ -376,23 +390,23 @@ Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder 
 | PasswordMinLength |Kortast tillåtna längd på lösenord |
 | PasswordHistory |Lösenord: minsta antal tidigare lösenord godkänns ej |
 | PasswordEnabled |Lösenord - aktiverat? |
-| PasswordExpiration |Förfallotid för lösenord |
-| AllowRecoveryPassword |Tillåt lösenordsåterställning |
-| PasswordAutoLockTimeout |Lösenord: tidsgräns för autolås |
-| PasswordType |Typ av lösenord |
-| BacklightACTimeout |Tidsgräns för bakgrundsbelysning vid anslutning till strömkälla |
-| BacklightBatTimeout |Tidsgräns för bakgrundsbelysning på batteri |
-| PowerBackupPercent |Säkerhetskopieringsprocent |
+| PasswordExpiration |Förfallotid för lösenord. |
+| AllowRecoveryPassword |Tillåt lösenordsåterställning. |
+| PasswordAutoLockTimeout |Lösenord: tidsgräns för autolås. |
+| PasswordType |Typ av lösenord. |
+| BacklightACTimeout |Tidsgräns för bakgrundsbelysning vid anslutning till strömkälla. |
+| BacklightBatTimeout |Tidsgräns för bakgrundsbelysning på batteri. |
+| PowerBackupPercent |Säkerhetskopieringsprocent. |
 | BatteryPercent |Återstående batteriprocent. |
-| PlatformID |Plattforms-id |
-| ExchangeDeviceID |Id för Exchange-enhet |
-| SmsProcessorDescription |Beskrivning av processor |
-| OwnerEmailAddress |Ägarens e-postadress |
-| DeviceOSName |Namn på operativsystem |
-| WifiMac |Wifi MAC-adress |
-| EthernetMac |Ethernet MAC-adress |
+| PlatformID |Plattforms-id. |
+| ExchangeDeviceID |Id för Exchange-enhet. |
+| SmsProcessorDescription |Beskrivning av processor. |
+| OwnerEmailAddress |Ägarens e-postadress. |
+| DeviceOSName |Namn på operativsystem. |
+| WifiMac |Wifi MAC-adress. |
+| EthernetMac |Ethernet MAC-adress. |
 | RequireEncryption |Visar om enheten är krypterad eller inte. |
-| ActivationLockBypassCode |Kod för att kringgå aktiveringslås |
+| ActivationLockBypassCode |Kod för att kringgå aktiveringslås. |
 
 ## <a name="applicationinventory"></a>ApplicationInventory
 
@@ -400,8 +414,8 @@ Entiteten **ApplicationInventory** innehåller en lista över appar som hittats 
 
 | Egenskap  | Beskrivning |
 |---------|------------|
-| DeviceKey |En referens till enhetstabellen |
-| ApplicationKey |? (kopierat från ExchangeDeviceService\DeviceApplication) |
-| ApplicationName |? (kopierat från ExchangeDeviceService\DeviceApplication) |
-| ApplicationVersion |? (kopierat från ExchangeDeviceService\DeviceApplication) |
-| BundleSize |? (kopierat från ExchangeDeviceService\DeviceApplication) |
+| DeviceKey |En referens till enhetstabellen. |
+| ApplicationKey |? (kopierat från ExchangeDeviceService\DeviceApplication). |
+| ApplicationName |? (kopierat från ExchangeDeviceService\DeviceApplication). |
+| ApplicationVersion |? (kopierat från ExchangeDeviceService\DeviceApplication). |
+| BundleSize |? (kopierat från ExchangeDeviceService\DeviceApplication). |

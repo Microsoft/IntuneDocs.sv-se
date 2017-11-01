@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 59b978fa9c9084c5a70c912ca6a9b1e6c364722c
-ms.sourcegitcommit: 388c5f59bc992375ac63968fd7330af5d84a1348
+ms.openlocfilehash: 806e355acd84f5c70029f8612c444b077c0631e4
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="plan-communications"></a>Planera kommunikation
 
@@ -52,6 +52,8 @@ Intune har ytterligare mallar som du kan använda för att underlätta användar
 -   [Informera slutanvändare om Microsoft Intune](end-user-educate.md) beskriver registreringsstegen baserat på OS-mobilplattform.
 
 -   [Mallen för Intune-slutanvändarregistrering för IT-administratörer](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) är ett anpassningsbart Word-dokument som beskriver hur du registrerar Android-, iOS- och Mac-enheter i Intune.
+
+-   [FastTrack för EMS för guider och e-postmeddelanden](https://gallery.technet.microsoft.com/FastTrack-for-EMS-How-To-f170da4c) kan anpassas med företagets logotyp för att främja införandet av Intune och EMS inom din organisation.
 
 ## <a name="next-steps"></a>Nästa steg
 

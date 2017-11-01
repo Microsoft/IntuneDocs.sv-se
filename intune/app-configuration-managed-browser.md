@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9701bbe4f39d310786fb399b3152595744019a1
-ms.sourcegitcommit: 0ee9909fc041c2e49c0e0312ae05f40bbeb2ee51
+ms.openlocfilehash: 99b8b50dbbb2dc2e3d7e8cd5af2f95fa2bb3b861
+ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -37,7 +37,11 @@ Eftersom den här appen har integrering med Intune SDK kan du också använda ap
 
 Mer information finns i [Vad är appskyddsprinciper?](/intune/app-protection-policy)
 
-Du kan tillämpa de här inställningarna för enheter som registreras med Intune, registreras med en annan enhetshanteringsprodukt och för enheter som inte hanteras.
+Du kan tillämpa inställningarna för att:
+
+- Enheter som har registrerats med Intune
+- Registrerade med en annan MDM-produkt
+- Ohanterade enheter
 
 Om användarna installerar Managed Browser från appbutiken och Intune inte hanterar den, kan den användas som en vanlig webbläsare med stöd för enkel inloggning via webbplatsen Microsoft MyApps. Användarna dirigeras direkt till webbplatsen MyApps där de kan se alla sina etablerade SaaS-program.
 Eftersom Managed Browser inte hanteras av Intune har den inte åtkomst till några data från andra Intune-hanterade program. 
@@ -143,7 +147,7 @@ Använd proceduren att skapa en appkonfiguration för Managed Browser till att a
 |||
 |-|-|
 |Tangent|Värde|
-|Välj mellan:<br><br>– Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Ange blockerade URL: er (alla andra platser kan nås): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br>-**URL1&#124;URL2&#124;URL3**<br>-**http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com**|
+|Välj mellan:<br><br>– Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Ange blockerade URL: er (alla andra platser kan nås): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br>**URL1&#124;URL2&#124;URL3**<br>**http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com**|
 
 >[!IMPORTANT]
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.
