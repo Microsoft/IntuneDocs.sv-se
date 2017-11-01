@@ -5,7 +5,7 @@ keywords:
 author: oydang
 ms.author: oydang
 manager: angrobe
-ms.date: 01/20/2017
+ms.date: 10/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56d0d3e79e38b20cb00a528fc6b55ca9de6ba871
-ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
+ms.openlocfilehash: 6ba1d1d9d0b1c21c364ef97f8340157a94ae996b
+ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -73,16 +73,16 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 **Vilka är de ytterligare krav som ställs för användning av [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 
-  1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+  1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-  2. Slutanvändaren måste ha [OneDrive](https://onedrive.live.com/about/)-appen installerad på sin enhet och logga in med sitt AAD-konto.
+  2. Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddspolicy ”Förhindra Spara som”. Om den hanterade platsen är till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen konfigureras i slutanvändarens Word-, Excel- eller PowerPoint-app.
 
-  3. OneDrive-appen måste vara mål för appskyddsprincipen som distribueras till slutanvändaren.
+  3. Om den hanterade platsen är OneDrive, måste appen vara mål för appskyddsprincipen som distribueras till slutanvändaren.
 
   >[!NOTE]
   > Office mobilappar har för närvarande endast stöd för SharePoint Online och inte SharePoint på plats.
 
-**Varför behövs OneDrive för Office?** Intune markerar all data i appen som "företag" eller "personligt." Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag).
+**Varför behövs en hanterad plats (d.v.s. OneDrive) för Office?** Intune markerar all data i appen som "företag" eller "personligt." Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag).
 
 **Vilka är de ytterligare krav som ställs för användning av Skype för företag?** Se licenskraven för [Skype för företag](https://products.office.com/skype-for-business/it-pros).
   >[!NOTE]
@@ -106,6 +106,18 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
   2. **Är PIN-kod säkert?** PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste slutanvändarna logga in med sina arbets- eller skolkonton innan de kan ange eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via utbyte av säker token och är inte transparent för Intune App SDK. Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
 
   3. **Hur skyddar Intune PIN-koden mot nyckelsökningsattacker?** Som en del av appens PIN-princip kan IT-administratören ange det maximala antalet gånger som en användare kan försöka att autentisera sin PIN-kod innan appen blir låst. När antalet försök har uppfyllts kan Intune App SDK rensa företagets data i appen.
+  
+**Hur fungerar Intune app PIN-kod mellan numerisk typ och lösenordstyp?**
+MAM tillåter för närvarande PIN på programnivå (iOS) med alfanumeriska tecken och specialtecken (kallas ”lösenord”) som kräver medverkan av program (d.v.s. WXP, Outlook, Managed Browser, Yammer) för att integrera Intune APP SDK för iOS. Utan detta tillämpas inställningar för lösenord inte korrekt för de aktuella programmen. Eftersom appar följer den här integreringen på rullande bas, har beteendet mellan lösenord och numerisk PIN ändrats tillfälligt för slutanvändaren och kräver ett viktigt klargörande. I oktober 2017-versionen av Intune är beteendet följande ...
+
+Appar som har
+1. samma app-utgivare
+2. en PIN-kod med lösenord riktat via konsolen och 
+3. antagen SDK med den här funktionen (v 7.1.12+) kommer att kunna dela lösenordet mellan dessa appar. 
+
+Appar som har
+1. samma app-utgivare
+2. en numerisk PIN-kod riktad via konsolen kommer att kunna dela den numeriska PIN-koden mellan dessa appar. 
 
 **Vad gäller för kryptering?** IT-administratörer kan distribuera en appskyddsprincip som kräver att appdata krypteras. Som en del av principen kan IT-administratören även ange när innehållet krypteras.
 

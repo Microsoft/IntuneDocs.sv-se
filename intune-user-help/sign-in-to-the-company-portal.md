@@ -1,11 +1,11 @@
 ---
 title: "Så här loggar du in i företagsportalappen | Microsoft Docs"
-description: 
+description: "Lär dig hur du loggar in på företagsportalappen på flera plattformar."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ca6d811d884b5405bdb4e5f096366c123d8e00d1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: caea74745dc58a04c60e780727b318ebdb8ff235
+ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="how-do-i-sign-in-to-the-company-portal-app---user-story-1132123--"></a>Hur loggar jag in på företagsportalappen? <!--User Story 1132123-->
 
@@ -50,6 +50,16 @@ Du använder företagsportalappen för att komma åt företagets resurser, t.ex.
 4. När företagsportalen accepterat din inloggning det loggar den in dig och du kan börja komma åt företagets resurser.   
 
   ![Efter att genomgått autentiseringsprocessen loggas företagsportalappen in, vilket visas med en förloppsindikator.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_007.png)
+
+## <a name="signing-in-with-certificate-based-authentication"></a>Logga in med certifikatbaserad autentisering
+
+1.  Öppna företagsportalappen på din enhet.
+
+2.  Ange ditt **arbets- eller skolkonto**.
+
+3.  Tryck på länken **Logga in med ett certifikat**.
+
+4.  Tryck på **Fortsätt** för att använda certifikatet.
 
 ## <a name="signing-in-from-another-device"></a>Logga in från en annan enhet
 

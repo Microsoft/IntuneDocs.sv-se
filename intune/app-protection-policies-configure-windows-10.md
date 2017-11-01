@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,44 +15,44 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 52b273532935184918e65d25a37ca3d03e76680c
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 09f3edbe8b53371514ae4826246c99201c005762
+ms.sourcegitcommit: b5692ee05e8be1842cb1007facf80c9bce972dc4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Förbered konfigurationen av appskyddsprinciper för Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Innan du skapar en appskyddsprincip för Windows 10 måste du aktivera hantering av mobila program (MAM) för Windows 10 genom att ställa in MAM-providern i Azure AD. Med den här konfigurationen kan du definiera registreringstillståndet när du skapar en ny Windows Information Protection-princip (WIP) med Intune.
+Aktivera hantering av mobilprogram (MAM) för Windows 10 genom att ange MAM-providern i Microsoft Azure Active Directory. Genom att ställa in MAM-providern i Microsoft Azure Active Directory kan du definiera registreringstillståndet när du skapar en ny Windows Information Protection-princip (WIP) med Intune. Registreringstillståndet kan vara MAM eller hantering av mobila enheter (MDM).
 
 > [!NOTE]
-> Registreringstillståndet kan vara MAM eller hantering av mobila enheter (MDM).
+> Enheter med tillståndet MAM-registrering måste vara anslutna till Azure AD.
 
 ## <a name="to-configure-the-mam-provider"></a>Konfigurera MAM-providern
 
-1.  Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
+1. Logga in på Azure Portal och välj **Azure Active Directory.**
 
-2.  Välj **Azure Active Directory** på menyn till vänster.
+2. Välj **Mobility (MDM och MAM)** i gruppen **Hantera**.
 
-    ![Konfiguration av MAM-providern](./media/mam-provider-sc-1.png)
+3. Klicka på **Microsoft Intune**.
 
-3.  **Azure AD**-bladet öppnas. Välj **Mobilitet (MDM och MAM)** och klicka sedan på **Microsoft Intune**.
+4. Konfigurera inställningar i gruppen **Återställ standard MAM-URL:er** på bladet **Konfigurera**.
 
-    ![MDM- och MAM-mobilitet](./media/mam-provider-sc-1.png)
+    **MAM-användaromfattning**  
+      Använd MA- autoregistrering för att hantera företagsdata på Windows-enheter för dina anställda. MAM-autoregistrering kommer att konfigureras för Bring Your Own Device-scenarier.<ul><li>**Inga**<br>Välj om alla användare kan registreras på MAM.</li><li>**Vissa**<br>Välj Microsoft Azure Active Directory-grupper som innehåller användare som ska registreras på MAM.</li><li>**Alla**<br>Välj om alla användare kan registreras på MAM.</li></ul>
 
-4.  Konfigurationsbladet öppnas. Välj **Återställ standard MAM-URL:er** och konfigurera sedan följande:
+    **Webbadress till MAM-användarvillkor**  
+     URL för användarvillkor för MAM-tjänstens slutpunkt. Slutpunkten för användarvillkoren används för att visa användningsvillkoren för slutanvändarna innan de registrerar sina enheter för hantering. Texten för användarvillkor informerar användare om de principer som tillämpas på den mobila enheten.
 
-    a.  MAM-användaromfattning: Du kan använda MAM för att skydda företagets data för en specifik användargrupp som använder Windows 10-enheter eller alla användare.
+    **Webbadress till MAM-identifiering**  
+    URL till slutpunkten för registrering av MAM-tjänsten. Registrering av slutpunkten används för att registrera enheter för hantering med MAM-tjänsten.
 
-    b.  MAM användningsvillkors-URL: Slutpunkten för MAM-tjänstens användningsvillkors-URL. Denna används för att visa MAM-tjänstens villkor för slutanvändarna.
+    **MAM kompatibilitets-URL**  
+      URL till slutpunkten för efterlevnad av MAM-tjänsten. När en användare nekas åtkomst till en resurs från en icke-kompatibel enhet, visas en länk till URL:en för efterlevnad för användaren. För att förstå varför deras enhet betraktas som icke-kompatibel kan användare navigera till denna URL som MAM-tjänsten är värd för. Användare kan också initiera hjälpåtgärder i självbetjäningen så att enheten blir kompatibel och de kan fortsätta att komma åt resurser.
 
-    c.  MAM Identifierings-URL: Detta är den URL som enheterna söker efter när de behöver tillämpa appskyddsprinciper.
-
-    d.  MAM kompatibilitets-URL:
-
-5.  Välj **Spara** när du har konfigurerat inställningarna.
+5.  Klicka på **Spara**.
 
 ## <a name="next-steps"></a>Nästa steg
 
