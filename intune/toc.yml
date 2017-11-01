@@ -240,10 +240,15 @@
           href: apps-deploy.md
         - name: Övervakning av appar
           href: apps-monitor.md
-        - name: iOS-appkonfigurationsprofiler
-          href: app-configuration-policies-use-ios.md
-        - name: Android-appkonfigurationsprofiler
-          href: app-configuration-policies-use-android.md
+        - name: Konfigurationsprinciper för appar
+          href: app-configuration-policies-overview.md
+          items:
+            - name: iOS hanterade enheter
+              href: app-configuration-policies-use-ios.md
+            - name: Android hanterade enheter
+              href: app-configuration-policies-use-android.md
+            - name: Hanterade appar
+              href: app-configuration-policies-managed-app.md
         - name: Använd iOS-appetableringsprofiler
           href: app-provisioning-profile-ios.md
         - name: Rensa program selektivt
