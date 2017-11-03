@@ -545,6 +545,8 @@
     - name: Använda Intune-informationslagret
       href: reports-nav-create-intune-reports.md
       items:
+        - name: Ändringslogg för Informationslager
+          href: reports-changelog.md
         - name: Ansluta till informationslagret med Power BI
           href: reports-proc-get-a-link-powerbi.md
         - name: Skapa en rapport från OData-feeden med Power BI
@@ -602,18 +604,20 @@
         - name: Datamodellen informationslager
           href: reports-ref-data-model.md
           items:
-            - name: Referens för datumentitet
-              href: reports-ref-date.md
-            - name: Referens för användarentitet
-              href: reports-ref-user.md
-            - name: Referens för MAM-entiteter (hantering av mobilappshantering)
-              href: reports-ref-mobile-app-management.md
-            - name: Referens för enhetsentiteter
-              href: reports-ref-devices.md
             - name: Referens för programenheter
               href: reports-ref-application.md
-            - name: Referens för entitet för användarenhetsassociationer
-              href: reports-ref-userdeviceassociations.md
+            - name: Referens för datumentitet
+              href: reports-ref-date.md
+            - name: Referens för enhetsentiteter
+              href: reports-ref-devices.md
+            - name: Referens för MAM-entiteter (hantering av mobilappshantering)
+              href: reports-ref-mobile-app-management.md
+            - name: Referens för principentiteter
+              href: reports-ref-policy.md
+            - name: Referens för användarenhetsassociationer
+              href: reports-ref-user-device.md
+            - name: Referens för användarentitet
+              href: reports-ref-user.md
     - name: Läsa in Windows-program separat
       href: intune-graph-apis.md
       items:
