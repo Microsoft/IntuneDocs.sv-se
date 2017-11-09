@@ -8,7 +8,7 @@
 
 ## [Så här loggar du in på företagsportalen](sign-in-to-the-company-portal.md)
 
-## [Använda en Android-enhet med Intune](using-your-android-device-with-intune.md)
+## [Använda din Android-enhet](using-your-android-device-with-intune.md)
 ### [Vad händer när jag registrerar en Android-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 ### [Registrera din enhet](enroll-your-device-in-Intune-android.md)
 #### [Registrera din enhet med Android för arbetet](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
@@ -57,13 +57,10 @@
 ##### [Använd SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 ##### [Använd Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
-## [Använda en iOS- eller macOS-enhet med Intune](using-your-iOS-or-macOS-device-with-intune.md)
+## [Använda en iOS-enhet](using-your-iOS-device-with-intune.md)
 ### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
-### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos.md)
-### [Registrera din macOS-enhet på företagsportalen](enroll-your-device-in-intune-macos-cp.md)
-### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
 
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
@@ -96,6 +93,11 @@
 ##### [Använd SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 ##### [Använd Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
+## [Använda en macOS-enhet](using-your-macos-device-with-intune.md)
+### [Vad händer när du registrerar en macOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos-cp.md)
+### [Registrera en äldre macOS-enhet](enroll-your-device-in-intune-macos-legacy.md)
+### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
 
 ## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 ### [Vad händer när jag registrerar en Windows 10-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
@@ -123,6 +125,9 @@
 #### [Enheten behöver program mot skadlig kod](your-device-needs-antimalware-software.md)
 #### [Aktivera Säker Start](you-need-to-enable-secure-boot-windows.md)
 #### [Aktivera kodintegritet](you-need-to-enable-code-integrity.md)
-
+#### [Jag behöver aktivera brandväggen](you-need-to-enable-defender-firewall-windows.md)
+#### [Jag behöver aktivera UAC](you-need-to-enable-uac-windows.md)
+#### [Jag behöver uppdatera Windows](you-need-to-update-os-build-version-windows.md)
+#### [Jag behöver starta Windows Defender](turn-on-defender-windows.md) 
 
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
