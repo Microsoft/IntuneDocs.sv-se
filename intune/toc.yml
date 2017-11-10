@@ -164,6 +164,8 @@
               href: windows-bulk-enroll.md
             - name: Windows AutoPilot-distributionsprogram
               href: enrollment-autopilot.md
+            - name: Skärm för registreringsstatus
+              href: windows-enrollment-status.md
         - name: Konfigurera Android-registrering
           href: android-enroll.md
         - name: Ställ in iOS-registrering
@@ -365,6 +367,8 @@
               href: certficates-pfx-configure.md
         - name: Konfigurera inställningar för Windows informationsskydd
           href: windows-information-protection-configure.md
+        - name: Hantera PowerShell-skript
+          href: intune-management-extension.md
         - name: Övervaka telekomkostnader
           href: telecom-expenses-monitor.md
         - name: Tilldela profiler
