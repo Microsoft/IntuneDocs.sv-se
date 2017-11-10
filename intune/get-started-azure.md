@@ -1,12 +1,12 @@
 ---
 title: "Komma igång med Azure Portal"
 titlesuffix: Azure portal
-description: "Lär dig att skapa och dela instrumentpaneler i Intune på Azure-portalen."
+description: "Lär dig om att skapa och dela instrumentpaneler i Intune i Azure Portal."
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42c43ca5fa1eee28cb245c7a64e47f7f704183f4
-ms.sourcegitcommit: fa6aaf12611c3e03e38e467806fc30b1d0255e88
+ms.openlocfilehash: cce99fb69abd5f99a4a1eae0c6fbe0e5178af450
+ms.sourcegitcommit: fc24d7eb4838b9102088dd4dcf5d1aa6b2c2e590
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="getting-started-with-intune-in-the-azure-portal"></a>Komma igång med Intune på Azure Portal
 
@@ -27,7 +27,7 @@ På Azure Portal hittar du Intune-tjänsten. Det finns många tjänster i Azure 
 
 ## <a name="changing-the-sidebar"></a>Ändra sidopanelen
 
-På __sidopanelen__ till vänster på Azure Portal finns en lista över alla tillgängliga Azure-tjänster. Du kan ändra utseende på den här omfattande listan så att du får en fast vy av de tjänster som är viktigast för dig. Vi ska använda Intune som exempel på en tjänst som vi ska lägga till överst i listan.
+På __sidopanelen__ till vänster på Azure Portal finns en lista över alla tillgängliga Azure-tjänster. Du kan ändra utseende på den här omfattande listan från standardvyn så att du alltid kan se de tjänster som är viktigast för dig. Vi ska använda Intune som exempel på en tjänst som vi ska lägga till överst i listan.
 
 ![En användare söker efter Intune i listan Fler tjänster.](./media/azure-add-intune1.png)
 
@@ -52,7 +52,7 @@ Det här är mer relevant när du har lagt till mer innehåll och fler grupper o
 
 ## <a name="using-services"></a>Använda tjänster
 
-När du öppnar Intune eller någon annan tjänst i Azure, visas den på ett **blad**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas bladet på hela sidan. Övriga blad dras ut från bladets högra sida när de öppnas och komprimeras under det huvudblad som de kom ifrån.
+När du öppnar Intune eller någon annan tjänst i Azure visas tjänsten på ett **blad**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas bladet på hela sidan. Övriga blad dras ut från bladets högra sida när de öppnas och komprimeras under det huvudblad som de kom ifrån.
 
 ## <a name="next-steps"></a>Nästa steg
 

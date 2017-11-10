@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 05/05/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fbb1d3e11f8ba3e508a261981e461f35c99ca110
-ms.sourcegitcommit: f8672ff73066c2d8bcb78c30f84fda8aa3057a1c
+ms.openlocfilehash: 3736b6d43f5cd3b6c75097a2ceabebffd75f0caa
+ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Så här övervakar du appinformation och tilldelningar med Microsoft Intune
 
@@ -27,8 +27,22 @@ ms.lasthandoff: 10/11/2017
 
 Intune erbjuder ett antal olika sätt för att övervaka egenskaperna för appar som du hanterar, samt deras tilldelningsstatus.
 
-1. Välj **Hantera** > **Appar** i arbetsbelastningen **Mobilappar**.
-2. I bladet med applistan väljer du önskad app för att se dess information. Du ser därefter bladet <*appnamn*> **Installationsstatus för enhet**: ![bladet Status för appinstallation.](./media/monitor-apps.png)
+1. Logga in på Azure-portalen.
+2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
+3. Välj **Appar** i gruppen **Hantera** i arbetsbelastningen **Mobilappar**.
+     
+    ![Bladet installationsstatus för app.](./media/monitor-apps.png)
+5. I listan med appblad väljer du en app. Du ser därefter bladet <*appnamn*> **Installationsstatus för enhet**.
+
+Statusrapporten för enhetsinstallationen innehåller följande kolumner:
+
+1.  **Enhetsnamn** Namnet på enhetstypen.
+2.  **Användarnamn** Namnet på användaren.
+3.   **Plattform** Operativsystemet som är installerat på enheten.
+4.  **Version**: Programmets versionsnummer.
+5.   **Status** De möjliga tillstånden för apparna är: **Installerad**, **Inte installerad**, **Installation väntar** och **Fel**.
+6. **Statusinformation** En läsbar beskrivning av appens tillstånd på enheten.
+7. **Senaste incheckning** När enheten senast checkade in i Intune.
 
 Gör sedan något av följande för att lära dig mer om dina appar och deras tilldelningar.
 

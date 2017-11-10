@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 10/27/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 043bc1ecf652802dc569d2df8b287b2246585f15
-ms.sourcegitcommit: 1416daed6803546445b6f280a86c663e6e00465a
+ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
-    
+
 -   **Sändning av diagnostikdata** – Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.
 -   **Skärmdump** – Tillåt användare att fånga innehållet på skärmen som en bild.
     - **Fjärrskärmsvisning i appen Klassrum (endast övervakat)** – Tillåt eller blockera appen Klassrum från att visa skärmarna på iOS-enheter.
@@ -44,6 +44,54 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Ändra konfigurationsprofil** – Tillåt att användaren installerar konfigurationsprofiler.
 - **Aktiveringslås (endast övervakat)** – Aktivera aktiveringslåset på övervakade iOS-enheter.
 
+## <a name="configurations-requiring-supervision"></a>Konfigurationer som kräver övervakning
+
+Övervakat läge för iOS kan bara aktiveras under den inledande enhetsinställningen via Apples program för enhetsregistrering eller med hjälp av Apple Configurator. När du har aktiverat övervakat läge kan Intune konfigurera en enhet med följande funktioner:
+
+- Applås (enkelt appläge) 
+- Global HTTP-proxy 
+- Kringgå aktiveringslås 
+- Autonomt enkelt appläge 
+- Webbinnehållsfilter 
+- Ange bakgrund och låsskärm 
+- Tyst app-push 
+- VPN alltid på 
+- Tillåt exklusiv installation av hanterad app 
+- iBookstore 
+- iMessages 
+- Spelcenter 
+- Airdrop 
+- AirPlay 
+- Värdkoppling 
+- Molnsynkronisering 
+- Spotlight-sökning 
+- Handoff 
+- Radera enhet 
+- Begränsningar för gränssnitt 
+- Installation av konfigurationsprofiler genom gränssnittet 
+- Nyheter 
+- Kortkommandon 
+- Ändringar av lösenord 
+- Ändringar av enhetsnamn 
+- Ändringar av skrivbordsunderlägg 
+- Automatisk nedladdning av appar 
+- Ändringar till förtroende för företagsapp 
+- Apple Music 
+- Mail Drop 
+- Koppla med Apple Watch 
+
+> [!NOTE]
+> Apple har bekräftat att vissa inställningar flyttas till endast övervakat läge under 2018. Vi rekommenderar att du tänker på detta när du använder de här inställningarna i stället för att vänta på att Apple ska migrera dem till endast övervakat läge:
+> - Appinstallation av slutanvändare
+> - Borttagning av app
+> - FaceTime
+> - Safari
+> - iTunes
+> - Barnförbjudet innehåll
+> - Dokument och data i iCloud
+> - Spel för flera personer
+> - Lägg till spelcentervänner
+
 ## <a name="password"></a>Lösenord
 -   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
     -   **Enkla lösenord** – Tillåt enkla lösenord som 0000 och 1234.
@@ -56,7 +104,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
     -   **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan lösenordet för enheten måste ändras.
     -   **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som enheten kommer ihåg.
     -   **Upplåsning med fingeravtryck** – Tillåt att fingeravtryck används för att låsa upp kompatibla enheter.
-- **Ändring av lösenkod (endast övervakat)** – Hindrar att lösenkoden ändras, läggs till eller tas bort. 
+- **Ändring av lösenkod (endast övervakat)** – Hindrar att lösenkoden ändras, läggs till eller tas bort.
     - **Ändring av fingeravtryck (endast övervakat)** – Hindrar att användaren ändar, lägger till eller tar bort TouchID-inställningar.
 
 <sup>1</sup> När du konfigurerar inställningarna **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
@@ -89,7 +137,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
--   **Kamera** – Ange om kameran på enheten får användas. 
+-   **Kamera** – Ange om kameran på enheten får användas.
     -   **FaceTime** -Tillåt att appen FaceTime får användas på enheten.
 -   **Siri** – Tillåt användning av röstassistenten Siri på enheten.
     -   **Tillåt Siri när enheten är låst** – Tillåt användning av röstassistenten Siri på enheten när den är låst.
@@ -124,9 +172,7 @@ Enhetsprofiler som innehåller inställningar för begränsade appar måste till
 Exempel: Sök efter Microsoft Word för iPad. Webbadressen du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
-> Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
-
-
+> Du kan även använda iTunes för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
 
 ### <a name="additional-options"></a>Ytterligare alternativ
 
@@ -247,7 +293,7 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 ,com.apple.mobileslideshow,Photos,Apple
 ,com.apple.podcasts,Podcasts,Apple
 ,com.apple.reminders,Reminders,Apple
-,com.apple.mobilesafariSafari,Apple
+,com.apple.MobileSafari,Safari,Apple
 ,com.apple.Preferences,Settings,Apple
 ,com.apple.stocks,Stocks,Apple
 ,com.apple.tips,Tips,Apple
@@ -305,6 +351,6 @@ I fältet **Webbadress till e-postdomän** lägger du till en eller flera webbad
 I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här, anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
 
 
-### <a name="safari-password-auto-fill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner
+### <a name="safari-password-autofill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner
 
 I fältet **Domänwebbadress** lägger du till en eller flera webbadresser i listan. Användarna kan bara spara webblösenord från webbadresser i den här listan. Den här inställningen gäller enbart för Safari-webbläsaren, samt för iOS 9.3 och senare enheter i övervakat läge. Om du inte anger någon webbadress, kan lösenorden sparas från alla webbplatser.

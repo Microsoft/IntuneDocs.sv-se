@@ -15,11 +15,11 @@ ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2c2417c4739a85c30fa18c000ee06fac6fe83282
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: e3333a5addfd0c4ab757121e22e19ac66c0b3e1d
+ms.sourcegitcommit: ec8561b8c63515e0b5f21a858984108dc5dbd5d3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -60,7 +60,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **Windows 8.1 och senare (importera en profil)**
 6. I listrutan **Profil** väljer du **Trådlöst basnätverk** eller **Trådlöst företagsnätverk**.
     >[!TIP]
-    >Använd **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. Med **Wi-Fi-import** (för Windows 8.1 och Windows 10) kan du importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
+    >Använd **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. **Wi-Fi-import** (för Windows 8.1 och Windows 10) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android och Android for Work](wi-fi-settings-android.md)
     - [Inställningar för iOS](wi-fi-settings-ios.md)
