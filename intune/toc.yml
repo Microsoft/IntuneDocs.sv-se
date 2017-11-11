@@ -560,11 +560,11 @@
     - name: Konfigurera anpassade enhetsinställningar
       href: custom-settings-configure.md
       items:
+        - name: Profil för trådlöst nätverk med en i förväg delad nyckel
+          href: wi-fi-profile-shared-key.md
         - name: Android
           href: custom-settings-android.md
           items:
-            - name: Profil för trådlöst nätverk med en i förväg delad nyckel
-              href: wi-fi-profile-shared-key.md
             - name: VPN-profil per program
               href: android-pulse-secure-per-app-vpn.md
             - name: Tillåt/blockera program för Samsung KNOX Standard
