@@ -95,6 +95,7 @@
 #### [Hantera licensavtal](deploy-use/manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)
 ### [Lösa principkonflikter](deploy-use/resolve-gpo-and-microsoft-intune-policy-conflicts.md)
 ### [Hantera aviseringar](deploy-use/get-notified-by-alerts.md)
+### [Intune på Azure](deploy-use/intune-on-azure.md)
 ## Konfigurera enheter
 ### [Hantera inställningar och funktioner på dina enheter med principer](deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)
 #### [Inställningar för iOS](deploy-use/ios-policy-settings-in-microsoft-intune.md)
