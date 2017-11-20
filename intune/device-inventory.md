@@ -3,10 +3,10 @@ title: Visa Intunes enhetsinventering
 titlesuffix: Azure portal
 description: "Lär dig hur du visar de enheter som du hanterar med Intune, samt hur deras maskinvara och installerade appar fungerar.\""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
-ms.date: 09/05/2017
+author: arob98
+ms.author: angrobe
+nmanager: angrobe
+ms.date: 11/10/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3e74651acf11ff0ea88531460d030e03749520a
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 17916d513b338716a62f165545bdf44a3216bbe9
+ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="how-to-view-intune-device-inventory"></a>Så här visar du Intunes enhetsinventering
 
@@ -39,19 +39,11 @@ Välj nu något av följande alternativ:
 - **Hantera** – Välj **Alla enheter** för att visa en lista över alla enheter som du hanterar.
     Välj en av enheterna i listan för att öppna bladet <*enhetsnamn*> **Översikt** där du kan välja:
     - **Översikt** – Visa allmän information om enheten, inklusive dess namn, ägare, om det är en BYOD-enhet, om den är incheckad och mycket annat.
-    ![Enhetsöversikt](./media/device-overview.png)
     - **Maskinvara** – Visa mer detaljerad information om enheten, inklusive dess lediga lagringsutrymme, modell, tillverkare och mycket annat.
-    ![Maskinvaruinventering för hanterade enheter](./media/hardware-inventory.png)
     - **Identifierade appar** – Visar en lista över alla appar som Intune hittar installerade på enheten.
-    ![Noden Identifierade appar](./media/detected-applications.png)
-    
-
-
     - **Enhetsefterlevnad** – Visar kompatibilitetsstatus för alla efterlevnadsprinciper som tilldelats enheten.
     - **Enhetskonfiguration** – Visar kompatibilitetsstatus för alla enhetskonfigurationsprinciper som tilldelats enheten.
 - **Övervaka** Välj **Enhetsåtgärder** för att se en lista över enhetsåtgärder som har utförts på de enheter du hanterar och enheternas aktuella tillstånd.
 - **Konfigurera** > **TeamViewer Connector** – Konfigurera fjärradministration på enheter med hjälp av programmet TeamViewer. Mer information finns i [Ge fjärrhjälp för Intune-hanterade Android-enheter](/intune/device-profile-android-teamviewer).
 
->[!NOTE]
-> Intune samlar endast in appinformation från företagsägda enheter. Ingen appinformation samlas in från personliga enheter. För datorer med Windows 10 samlas endast modern appinformation in från företagsägda enheter. Intune samlar inte in information om Win32-appar på enheten.
-> Beroende på vilken operatör du använder med enheterna, är det inte säkert att alla lagerobjekt kan samlas in.
+Intune samlar endast in appinformation från företagsägda enheter. Ingen appinformation samlas in från personliga enheter. För datorer med Windows 10 samlas endast modern appinformation in från företagsägda enheter. Intune samlar inte in information om Win32-appar på enheten. Beroende på vilken operatör du använder med enheterna, är det inte säkert att alla lagerobjekt kan samlas in.

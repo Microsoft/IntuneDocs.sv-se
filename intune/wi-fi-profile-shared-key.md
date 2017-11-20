@@ -3,10 +3,10 @@ title: "Skapa en Wi-Fi-profil med en i förväg delad nyckel"
 titleSuffix: Azure portal
 description: "Använd en anpassad Intune-profil för att skapa en trådlös profil med en i förväg delad nyckel.”"
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/15/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c524acc403d6a1c041aa0dcea0948c2707202e03
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: bfcce8d38bc403a13aa28cc762370a7cfaa0bc2d
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/10/2017
 ---
-# <a name="use-a-microsoft-intune-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använd en anpassad enhetsprofil för Microsoft Intune för att skapa en Wi-Fi-profil med en i förväg delad nyckel
+# <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Så här använder du Intunes **anpassade enhetsprofiler** för att skapa en trådlös profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
@@ -205,3 +205,12 @@ Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
     Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
 3.     Sök igenom XML-filerna för att hitta den med rätt namn.
 4.     När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
+
+## <a name="best-practices"></a>Rekommenderade metoder
+Innan du distribuerar en Wi-Fi-profil med PSK måste du kontrollera att enheten kan ansluta till slutpunkten direkt.
+
+När du roterar nycklar (lösenord eller lösenfraser) ska du beräkna driftstopp och planera distributioner på lämpligt sätt. Överväg att skicka nya Wi-Fi-profiler under ledig tid. Varna även användarna om att anslutningsmöjligheterna kan påverkas.
+ 
+Säkerställ en smidig övergång och leverera principuppdateringar i rätt tid genom att se till att enheterna har minst en öppen kommunikationskanal mot Intune. Om du vill göra detta måste du använda mobil anslutning eller ange Wi-Fi-åtkomst för gäster, så att användarna endast ansluter till Intune-slutpunkter.
+
+

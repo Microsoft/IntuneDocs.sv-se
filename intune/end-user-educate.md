@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: robstack
 ms.suite: ems
-ms.openlocfilehash: 3f60ee6334ac8fa00dcaaa524485c5339b040381
-ms.sourcegitcommit: 34cfebfc1d8b81032f4d41869d74dda559e677e2
+ms.openlocfilehash: d940bc937caf966dd2d8c2ce01570bfa09a65bfb
+ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Informera slutanvändare om Microsoft Intune
 
@@ -59,7 +59,7 @@ Distributionen blir smidigare om du dämpar oron. Vi har en lista över saker so
   * [Så får dina Android-användare sina appar](end-user-apps-android.md)
 
 * **iOS**
-  * [Använda en iOS-enhet med Intune](/intune-user-help/using-your-ios-or-macos-device-with-intune)
+  * [Använda en iOS-enhet med Intune](/intune-user-help/using-your-ios-device-with-intune)
   * [Så får dina iOS-användare sina appar](end-user-apps-ios.md)
 
 * **Windows**

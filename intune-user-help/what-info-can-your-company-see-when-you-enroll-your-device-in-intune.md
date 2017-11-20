@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/17/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 04b6d24d5174e49dd6e3f86b534bc59b94344002
-ms.sourcegitcommit: 2707a5fb68749a51c2a3ff54a1bac631bdaa3b87
+ms.openlocfilehash: c03985bd7ca92fe4b4e8ea163b7db421bfae09c2
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Vilken information kan företaget se när jag registrerar min enhet?
 
@@ -38,7 +38,7 @@ När du registrerar en enhet för hantering ger du företaget tillstånd att se 
 
 - Enhetsmodell, som t.ex. iPhone 7
 - Tillverkare, som t.ex. Microsoft
-- Operativsystem, som t.ex. Android 7.1
+- Operativsystem, som t.ex. iOS
 - Programnamn, som t.ex. Microsoft Word
 - Enhetens ägare
 - Enhetsnamn

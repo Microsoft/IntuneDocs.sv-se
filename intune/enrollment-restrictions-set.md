@@ -3,10 +3,10 @@ title: "Ange registreringsbegränsningar i Intune"
 titlesuffix: Azure portal
 description: "Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. \""
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 10/31/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0117d3249f7fd2568201762b7dd16af9cc26392c
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 463278e4dc9ad677f654754d4710b110b376cc2d
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -33,7 +33,7 @@ Som Intune-administratör kan du bestämma vilka enheter som får registreras f�
   - iOS
   - macOS
   - Windows
-- Plattformens operativsystemversion (endast iOS och Android)
+- Plattformens operativsystemversion för iOS, Android och Windows (endast Windows 10-versioner kan användas, lämna tomt om Windows 8.1 tillåts)
   - Lägsta version
   - Högsta version
 - Begränsningar gentemot privatägda enheter (endast iOS, Android och macOS)
@@ -55,7 +55,7 @@ Standardregistreringsbegränsningarna gäller för alla användare och användar
 
   Klicka på **Spara**.
 6. Under **Alla användare** väljer du **Plattformskonfigurationer** och väljer sedan följande konfigurationer. Du kan konfigurera följande alternativ för varje plattform som tillåts:
-  - **Versioner** – Ange **Min** och **Max** för plattformens operativsystemsversioner för Android- och iOS-enheter. Operativsystemversionerna gäller inte för enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
+  - **Versioner** – Ange **Min** och **Max** för plattformens operativsystemsversioner för Android-, iOS- och Windows-enheter. Android stöder major.minor.rev.build. iOS stöder major.minor.rev. Windows stöder endast major.minor.rev.build för Windows 10. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen. 
   - **Personligt ägda** – Ange om du vill **tillåta** eller **blockera** för Android-, iOS- och macOS-enheter.
   ![Skärmbild av arbetsytan för enhetsbegränsningar med standardkonfigurationer för enhetsplattformar visar inställningar för personligt ägda enheter.](media/device-restrictions-platform-configurations.png)
   Klicka på **Spara**.

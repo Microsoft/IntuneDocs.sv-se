@@ -1,12 +1,12 @@
 ---
-title: "Återställa ett lösenord för enheten med Intune"
+title: "Återställa och ta bort enhetslösenord med Intune"
 titlesuffix: Azure portal
-description: "Lär dig hur du återställer lösenordet på enheter som du hanterar med Intune.\""
+description: "Lär dig hur du återställer och tar bort lösenordet på enheter som du hanterar med Intune."
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 11/06/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,20 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3defec3624944918d14b9c4527487c368c487dd6
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: dfa94d11f978bbe4d23b6672423c849e1f061986
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="reset-the-passcode-on-intune-managed-devices"></a>Återställa lösenordet på Intune-hanterade enheter
+# <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Återställa och ta bort lösenordet på Intune-hanterade enheter
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Åtgärden **Återställ lösenord** genererar ett nytt lösenord för enheten som visas på bladet <*enhetsnamn*> **Översikt**.
+Termerna *ta bort* och *återställa* används synonymt i den här artikeln.
+
+Åtgärden **Ta bort lösenord** genererar ett nytt lösenord för enheten som visas på bladet <*enhetsnamn*> **Översikt**.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -41,7 +43,7 @@ ms.lasthandoff: 09/15/2017
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enheter** på bladet **Intune**.
 4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Återställ lösenord**.
+5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Ta bort lösenord**.
 
 ## <a name="next-steps"></a>Nästa steg
 

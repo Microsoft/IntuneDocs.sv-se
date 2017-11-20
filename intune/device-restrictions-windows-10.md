@@ -15,11 +15,11 @@ ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 759207adf49308dcd4e6253627e4a1213be22904
-ms.sourcegitcommit: 2e77fe177a3df1dfe48e72f4c2bfaa1f0494c621
+ms.openlocfilehash: 903ba99a747689dd8882acedcb24fef2dd00a01d
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 10/19/2017
 -   **Manuell avregistrering** – Tillåter att användaren manuellt tar bort sitt arbetsplatskonto från enheten.
 -   **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
 -   **Sändning av diagnostikdata** – Möjliga värden är:
-    -       **Inga** Inga data skickas till Microsoft
-    -       **Grundläggande** Begränsad information skickas till Microsoft
-    -       **Utökade** Utökade diagnostikdata skickas till Microsoft
-    -       **Fullständiga** Skickar samma data som i Utökade, plus ytterligare information om enhetens tillstånd
+    - **Inga** – Inga data skickas till Microsoft
+    - **Grundläggande** – Begränsad information skickas till Microsoft
+    - **Utökade** – Utökade diagnostikdata skickas till Microsoft
+    - **Fullständiga** Skickar samma data som i Utökade, plus ytterligare information om enhetens tillstånd
 -   **Kamera** – Tillåt eller blockera användning av kameran på enheten.
 -   **OneDrive-filsynkronisering** – Blockerar enheten från att synkronisera filer till OneDrive.
 -   **Flyttbara lagringsmedier** – Anger om externa lagringsenheter, t.ex. SD-kort, kan användas med enheten.
@@ -105,6 +105,7 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 
 ## <a name="edge-browser"></a>Edge-webbläsare
+
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
 -   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
@@ -180,6 +181,44 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
     -   **Hjälpmedel** – Blockerar åtkomsten till området Hjälpmedel för inställningsappen.
     -   **Sekretess** – Blockerar åtkomsten till sekretessområdet för inställningsappen.
     -   **Uppdatering och säkerhet** – Blockerar åtkomst till uppdaterings- och säkerhetsområdet i inställningsappen.
+
+## <a name="kiosk"></a>Helskärmsläge
+
+-   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) som stöds av principen.  Alternativen är:
+
+      - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
+      - **Läget för enskilda appar för kiosk** – Profilen gör att enheten kan användas som en kiosk för enskilda appar.
+      - **Flerappsläge för kiosk** – Profilen gör att enheten kan användas som en kiosk för flera appar.
+
+    Kiosker för enskilda appar kräver följande inställningar:
+
+      - **Användarkonto** – Anger det lokala (för enheten) användarkontot eller Azure AD-kontoinloggning som är kopplat till kioskappen.  För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\\username@tenant.org`.
+
+         För enheter i offentliga miljöer ska man använda konton med minimal behörighet för att förhindra obehöriga aktiviteter.  
+
+      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen.  Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+
+    Kiosker för flera appar kräver en kioskkonfiguration.  Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
+
+    Kioskkonfigurationer för flera appar omfattar följande inställningar:
+
+    - **Namn på kioskkonfiguration** – Ett eget namn som används för att identifiera en viss konfiguration.
+
+    - En eller flera **kioskappar** som består av:
+
+        - **Apptyp** som anger typen av kioskapp.  Värden som stöds är:   
+
+            - **Win32-app** – En traditionell skrivbordsapp.  (Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.)
+
+            - **UWP-app** – En universell Windows-app.  Du behöver [AUMID för appen](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+        - **Appidentifierare** – Anger antingen den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
+
+    - **Verktygsfält** anger om verktygsfältet ska visas (**Aktiverat**) eller döljas (**Inte konfigurerat**) i kiosken.
+
+    - **Startmenylayout** – Anger en XML-fil som beskriver hur apparna [visas på Start-menyn](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+
+    - **Tilldelade användare** – Anger ett eller flera användarkonton som är kopplade till kioskkonfigurationen.  Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen.  Ange domänanslutna konton med formatet `domain\\username@tenant.org`.
 
 ## <a name="defender"></a>Defender
 

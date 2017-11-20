@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 12/15/2016
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65350c9a247c5820cb2080d8230d308a37e98d7c
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: a0134f19aea3956a6aff852d97e9d95e1882e056
+ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -113,8 +113,50 @@ Microsoft Intune samlar in data för användningsstatistik för din app.
 
     * Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från din app måste du inaktivera telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i IntuneMAMSettings-ordlistan.
 
-
 * **Intune App SDK för Android**: Telemetridata loggas inte via SDK.
+
+ Versionsnummer för verksamhetsspecifika iOS och Android-program är synliga <!-- 1380712 -->
+
+## <a name="line-of-business-app-version-numbers"></a>Versionsnummer för verksamhetsspecifika appar
+
+Verksamhetsspecifika appar i Intune visar nu versionsnummer för iOS och Android-appar. Numret visas på Azure Portal i listan över appar och på bladet med översikt över appar. Slutanvändarna kan se appnumret i företagsportalappen och i webbportalen.
+
+### <a name="full-version-number"></a>Fullständigt versionsnummer
+
+Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis, 2.2(2.2.17560800)
+
+Det fullständiga versionsnumret har två komponenter:
+
+ - **Version**  
+   Versionsnumret är det läsbara versionsnumret för appen. Det här numret används av slutanvändare för att identifiera olika versioner av appen.
+
+ - **Build-nummer**  
+    Build-numret är ett internt nummer som kan användas i appidentifiering och för att programmässigt hantera appen. Build-nummer refererar till en iteration av appen som refererar till ändringar i koden.
+
+### <a name="version-and-build-number-in-android-and-ios"></a>Version- och build-nummer i Android och iOS
+
+Både Android och iOS använder version- och build-nummer för appar. Men båda operativsystemen har betydelser som är OS-specifika. Följande tabell förklarar hur de här termerna är relaterade.
+
+Kom ihåg att använda både version- och build-nummer när du utvecklar ett verksamhetsspecifikt program för användning i Intune. Apphantering i Intune har funktioner som förlitar sig på en meningsfull **CFBundleVersion** (för iOS) och **PackageVersionCode** (för Android). De här numren ingår i appmanifestet. 
+
+Intune|iOS|Android|Beskrivning|
+|---|---|---|---|
+Versionsnummer|CFBundleShortVersionString|PackageVersionName |Det här numret anger en specifik version av appen för slutanvändare.|
+Versionsnummer|CFBundleVersion|PackageVersionCode |Numret används för att indikera en iteration i appkoden.|
+
+#### <a name="ios"></a>iOS
+
+- **CFBundleShortVersionString**  
+    Anger versionsnumret vid lansering för paketet. Numret identifierar en lanserad version av appen. Numret används av slutanvändare för att referera till appen.
+ - **CFBundleVersion**  
+    Build-versionen av paketet som identifierar en iteration av paketet. Numret kan identifiera en lanserad version eller ett outgivet paket. Numret används för appidentifiering.
+
+#### <a name="android"></a>Android
+
+ - **PackageVersionName**  
+    Versionsnumret som visas för användare. Det här attributet kan anges som en rå sträng eller som en referens till en strängresurs. Strängen har inget annat syfte än att visas för användarna.
+ - **PackageVersionCode**  
+    Ett internt versionsnummer. Numret används endast för att avgöra om en version är nyare än en annan. Högre nummer indikerar senare versioner. Det här är inte versionen 
 
 ## <a name="next-steps-after-integration"></a>Nästa steg efter integrering
 

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 02/23/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9317fd747e52524d97cea5d4c79fed49246b5866
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
+ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
@@ -28,7 +28,7 @@ Microsoft Intune är en del av programvaran som gör att organisationer kan hant
 När du registrerar en enhet för hantering med Intune kan IT-avdelningen hantera dessa arbets- eller skolresurser, skydda dem och du har samtidigt friheten att använda den enhet du önskar för att utföra ditt arbete. Ett vanligt sätt att göra detta på är genom att registrera enheten för hantering via företagsportalen.
 
 ## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Vilken information kan mitt företag se när jag registrerar enheten i Intune?
-Företagets IT-avdelning kan se information som är relevant för arbetet, men inte din personliga information. Detta är särskilt viktigt att känna till när du registrerar en personlig enhet för användning i arbetet. Vi visar mer i detalj vad de [kan se och inte kan se i nästa artikel i användarhjälpen](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+Företagets support kan se information som är relevant för arbetet, men inte din personliga information. Detta är särskilt viktigt att känna till när du registrerar en personlig enhet för användning i arbetet. Vi visar mer i detalj vad de [kan se och inte kan se i nästa artikel i användarhjälpen](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 ## <a name="how-do-i-get-the-company-portal"></a>Hur skaffar jag företagsportalen?
 Du kan skaffa företagsportalen på två olika sätt:
@@ -49,7 +49,8 @@ Det finns några mindre skillnader mellan företagsportalappen och företagsport
 Om du vill se vad du kan göra med företagsportalens webbplats jämfört med vad du kan göra med företagsportalappen på enheten kan du klicka på någon av följande länkar:
 
 - [Använda din Android-enhet](using-your-android-device-with-intune.md)
-- [Använda din iOS- eller macOS-enhet](using-your-ios-or-macOS-device-with-intune.md)
+- [Använda en iOS-enhet](using-your-ios-device-with-intune.md)
+- [Använda en macOS-enhet](using-your-macos-device-with-intune.md)
 - [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 - [Använda företagsportalswebbplatsen](using-the-intune-company-portal-website.md)
 

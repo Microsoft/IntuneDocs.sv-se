@@ -15,11 +15,11 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b0b0982018dcfa3c606ea55b9264e5cd6cd1a82
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: ff83c5926b04b11c67799e0486249dc339a167c1
+ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Gör om tilldelningen av principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -82,7 +82,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
     ![Jämförelse av användargruppsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Azure-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
+    > Det val du gör för Azure Portal bör motsvara det val du har gjort för den klassiska portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
 
 5. När du har valt gruppen klickar du på **Välj** och sedan på **Klar**.
 

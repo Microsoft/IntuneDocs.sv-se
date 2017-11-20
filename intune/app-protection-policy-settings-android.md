@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/20/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c07125901709d4d7baf3339e4dd09cb5620e8d1
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 2383d41c52618710a1d42f0b2236d41d117b42be
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
 Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure-portalen.
@@ -90,3 +90,5 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 | **Minimikrav på Android-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att få ett meddelande ifall Android-versionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas. | Nej |
 | **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren kommer att blockeras från åtkomst om appversionen på enheten inte uppfyller kraven.<br><br>När du väljer vilka appar det ska gälla ska du lägga märke till att appar ofta har olika versionsscheman.<br><br> | Nej | 
 | **Minimikrav på appversion (endast varning)** | Välj **Ja** för att rekommendera ett minimikrav på den appversion som ska använda den här appen. Användaren kommer att få ett meddelande om appversionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas.<br><br>När du väljer vilka appar det ska gälla ska du lägga märke till att appar ofta har olika versionsscheman.<br><br> | Nej | 
+| **Kräv lägsta Android-uppdateringsversion** | Välj **Ja** om du vill kräva en lägsta Android-säkerhetsuppdatering som har publicerats av Google. Användaren kommer att blockeras från åtkomst om Android-säkerhetsuppdateringen på enheten inte uppfyller kravet. | Nej |
+| **Kräv lägsta Android-uppdateringsversion (endast varning)** | Välj **Ja** om du vill kräva en lägsta Android-säkerhetsuppdatering som har publicerats av Google. Användaren kommer att få ett meddelande om Android-säkerhetsuppdateringen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas. | Nej |

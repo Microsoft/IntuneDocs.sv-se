@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 10/10/2017
+ms.date: 11/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99b8b50dbbb2dc2e3d7e8cd5af2f95fa2bb3b861
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: 395b48ab71b093c12c244fab1acd22c0ecca4c51
+ms.sourcegitcommit: 0a2897b5104dc33ca0661c27a373026d7f4cc956
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -68,7 +68,7 @@ Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intun
 3.  På bladet **Mobilappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
 4.  På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
 5.  På bladet **Lägg till appkonfiguration** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
-6.  Vid **Enhetsregistrering** väljer du **Hanterade enheter** eller **Hanterade appar**.
+6.  För **Registreringstyp för enhet** väljer du **Hanterade appar**.
 7.  Välj **Välj obligatoriska appar** och klicka sedan på bladet **Målappar**, samt välj **Managed Browser** för iOS, Android eller båda.
 8.  Välj **OK** för att återgå till bladet **Lägg till appkonfiguration**.
 9.  Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Managed Browser. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
@@ -202,6 +202,22 @@ Använd följande information för att lära dig om tillåtna format och jokerte
     -   http://www.contoso.com:&#42;
 
     -   http://www.contoso.com: /&#42;
+
+## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Komma åt loggar för hanterade appar med Managed Browser i iOS
+
+Slutanvändare med Managed Browser installerade på sina iOS-enheter kan se hanteringsstatus för alla appar som har publicerats av Microsoft. De kan skicka loggar för felsökning av deras hanterade iOS-appar.
+
+1. Öppna iOS **Inställningar**.
+2. Välj programinställningar för hanterad **Webbläsare**.
+3. Växla **Aktivera Intune-diagnostik** för att ställa in webbläsaren på felsökningsläge.
+4. Öppna den hanterade **webbläsaren**. Klicka på **Visa status för Intune-app** om du vill granska enskilda programprincipinställningar.
+5. Tryck på **Kom igång** och **Dela loggar** eller **Skicka loggar till Microsoft** om du vill skicka felsökningsloggarna till IT-administratören eller Microsoft.
+
+Du kan också öppna webbläsaren i felsökningsläge från appen.
+
+1. Öppna Managed Browser.
+2. Skriv in `about:intunehelp` i adressrutan.
+Webbläsaren startar felsökningsläget.
 
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Säkerhet och sekretess för Managed Browser
 

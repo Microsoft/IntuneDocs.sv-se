@@ -5,7 +5,7 @@ keywords:
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 09/01/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cc4ba554b498e3b41df5fb1051f1d7a0bd4fb89e
-ms.sourcegitcommit: f3b8fb8c47fd2c9941ebbe2c047b7d0a093e5a83
+ms.openlocfilehash: 56bc71124c5a2714746dffcce256f0e604e9f62c
+ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -159,7 +159,24 @@ Följ dessa steg för att aktivera Intune App SDK:
 
 11. Om appen har definierade appgrupper i sina behörigheter, lägger du till dessa grupper i ordlistan **IntuneMAMSettings** under nyckeln `AppGroupIdentifiers` som en matris med strängar.
 
+## <a name="using-the-intune-mam-configurator-tool"></a>Använda Intune MAM-konfigurationsverktyget
 
+Intune MAM-konfigurationsverktyget hanterar nu alla ändringar av info.plist som behövs för att integrera vår SDK manuellt. Du hittar den i lagringsplatsen för Intune App SDK för iOS. Eventuella ytterligare appspecifika inställningar, t.ex. multi-ID, AAD-inställningar osv., hanteras inte av detta verktyg. Verktyget har 3 parametrar:
+ 
+|Egenskap|Använd så här|
+|---------------|--------------------------------|
+|- i |  `<Path to the input plist>` |
+|- e | Rättighetsfiler |
+|- o |  (Valfritt) `<Path for the changed input plist>` |
+    
+Intune MAM-konfigurationsverktyget kan användas för att uppdatera:
+* Alla appens Main Storyboard- och /eller Main Nib-filer i IntuneMAMSettings.
+* Alla appens definierade URL-scheman i Info.plist-filen med suffixet -intunemam för varje URL-schema.
+* Alla appens definierade dokumenttyper i dess Info.plist-fil där den i varje objekts Document Content Type UTI-matris kan lägga till en dubblettpost för varje sträng med prefixet ”com.microsoft.intune.mam”. .
+* Alla appens definierade appgrupper i dess behörigheter, dessa grupper kan läggas till i ordlistan IntuneMAMSettings under nyckeln AppGroupIdentitifiers som en matris med strängar.
+
+    
+>[!NOTE] Om du vill använda det här verktyget i stället för att ändra info.plist manuellt rekommenderar vi att det körs om när ändringar i appens info.plist eller rättigheter har gjorts.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurera Azure Active Directory Authentication Library (ADAL)
 
