@@ -15,11 +15,11 @@ ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3333a5addfd0c4ab757121e22e19ac66c0b3e1d
-ms.sourcegitcommit: ec8561b8c63515e0b5f21a858984108dc5dbd5d3
+ms.openlocfilehash: ae5210cb3da5503c4cf1b85be8b8522fa1cfd6ce
+ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/10/2017
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -58,9 +58,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **iOS**
     - **macOS**
     - **Windows 8.1 och senare (importera en profil)**
-6. I listrutan **Profil** väljer du **Trådlöst basnätverk** eller **Trådlöst företagsnätverk**.
-    >[!TIP]
-    >Använd **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. **Wi-Fi-import** (för Windows 8.1 och Windows 10) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
+6. I listrutan **Profil** väljer du **Trådlöst basnätverk** eller **Trådlöst företagsnätverk**. Du kan använda **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. **Wi-Fi-import** (för Windows 8.1 och Windows 10) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android och Android for Work](wi-fi-settings-android.md)
     - [Inställningar för iOS](wi-fi-settings-ios.md)

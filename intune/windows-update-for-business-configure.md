@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 08/21/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,21 +14,21 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 4b4c2b008536881a56e768c480338b54a9e87b7e
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
+ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Windows som tjänst är ett sätt att uppdatera Windows 10-enheter. Med Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att så länge som du har installerat den senaste uppdateringen så vet du att dina Windows 10-enheter är helt uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
+Windows som tjänst är ett sätt att uppdatera Windows 10-enheter. Med Windows 10 innehåller nya funktions- och kvalitetsuppdateringar även innehållet från alla tidigare uppdateringar. Det innebär att så länge som du har installerat den senaste uppdateringen så vet du att dina Windows 10-enheter är uppdaterade. Till skillnad från vad som var fallet i tidigare versioner av Windows måste du nu installera hela uppdateringen i stället för en del av en uppdatering.
 
 Med hjälp av Windows Update för företag kan du förenkla hanteringen av uppdateringar så att du inte behöver godkänna varje enskild uppdatering för enhetsgrupperna. Du kan fortfarande hantera risker i dina miljöer genom att konfigurera en strategi för installation av uppdateringar och Windows Update ser till att uppdateringarna installeras vid rätt tidpunkt. Microsoft Intune ger dig möjlighet att konfigurera enheternas inställningar och att skjuta upp installationen av uppdateringar. Intune lagrar inte uppdateringar, utan enbart uppdateringarnas principtilldelning. Enheter får åtkomst till Windows Update direkt för uppdateringarna. Använd Intune för att konfigurera och hantera **Windows 10-uppdateringstestgrupper**. En uppdateringsring innehåller en grupp med inställningar som anger när och hur uppdateringar av Windows 10 updates installeras. Du kan t.ex. konfigurera följande:
 
-- **Windows 10 Servicing Branch**: Ange om du vill grupper av enheter ska ta emot uppdateringar från Current Branch eller Current Branch for Business.  
+- **Underhållskanal för Windows 10**: Välj om du vill att enhetsgrupper ska få uppdateringar från Halvårskanal (riktad) eller från Halvårskanal.  
 - **Inställningar för uppskjutning**: Konfigurera inställningar för uppskjutning av uppdateringar om du vill fördröja uppdateringsinstallationer för grupper av enheter. Använd inställningarna för att få en mellanlagrad uppdateringsdistribution så att du kan granska förloppet medan det pågår.
 - **Pausa**: Skjut upp installationen av uppdateringar om du upptäcker ett problem någon gång under uppdateringsförloppet.
 - **Underhållsperiod**: Konfigurera under vilka timmar som uppdateringar ska kunna installeras.
@@ -78,7 +78,7 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 5. Välj **Skapa** på det blad som visar listan över uppdateringsringar.
 6. Ange ett namn och en valfri beskrivning av uppdateringsringen på bladet **Skapa uppdateringsring** och välj sedan **Inställningar**.
 7. Konfigurera följande information på bladet **Inställningar**:
-    - **Installationsbransch**: Konfigurera den gren för vilken enheten kommer att ta emot Windows-uppdateringar (Current Branch eller Current Branch for Business).
+    - **Underhållskanal**: Välj den kanal som enheten får Windows-uppdateringar från (Halvårskanal (riktad) eller Halvårskanal).
     - **Microsoft-uppdateringar**: Ange om du vill söka efter appuppdateringar från Microsoft Update.
     - **Windows-drivrutiner**: Ange om du vill exkludera Windows Update-drivrutiner under uppdateringar.
     - **Beteende för automatiska uppdateringar**: Ange hur du vill hantera automatiska uppdateringsbeteenden när det gäller att söka efter, hämta och installera uppdateringar. Mer information finns i [Uppdatera/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
@@ -87,12 +87,12 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
     Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner, och publiceras vanligtvis den första tisdagen varje månad, men Microsoft kan publicera dem när som helst. Du kan ange om, och hur länge, du vill skjuta upp mottagandet av kvalitetsuppdateringar från det att de har gjorts tillgängliga.
     - **Uppskjutningsperiod för funktionsuppdatering (dagar)** – Ange det antal dagar under vilka funktionsuppdateringar ska fördröjas. Du kan fördröja mottagandet av dessa funktionsuppdateringar under en period på upp till 180 dagar från det att de har släppts.
 
-    Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Servicing Branch** (**CB** eller **CBB**), kan du definiera om, och hur länge, du vill fördröja mottagandet av funktionsuppdateringarna efter det att de gjorts tillgängliga av Microsoft på Windows Update.
+    Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Underhållskanal** (Halvårskanal (riktad) eller Halvårskanal) kan du definiera om, och hur länge, du vill fördröja mottagandet av funktionsuppdateringarna efter det att de gjorts tillgängliga av Microsoft på Windows Update.
 
     Exempel:  
-    **Om Servicing Branch har ställts in på CB och fördröjningsperioden är 30 dagar**: Anta att funktionsuppdatering X först görs allmänt tillgänglig i Windows Update som en CB i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
+    **Om Underhållskanal är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
 
-    **Om Servicing Branch har ställts in på CBB och fördröjningsperioden är 30 dagar**: Anta att funktionsuppdatering X först görs allmänt tillgänglig i Windows Update som en CB i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till CBB. Enheten får funktionsuppdateringen 30 dagar efter det att den här CBB-versionen släppts, och den uppdateras i maj.
+    **Om Underhållskanal är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att den här Halvårskanal-versionen släppts, och den uppdateras i maj.
 
     - **Leveransoptimering** – Välj den metod för vilken enheterna ska hämta Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
 8. När du är klar klickar du först på **OK**, sedan på bladet **Skapa uppdateringsring** och därefter på **Skapa**.

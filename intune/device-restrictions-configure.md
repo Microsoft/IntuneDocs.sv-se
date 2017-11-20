@@ -15,11 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8beabb21df8b122b7a1dd18a698a8075604046b5
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: b61ad1c0a114c8a66c174fa34c4520e2f6c6244a
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Så här konfigurerar du enhetsbegränsningar i Microsoft Intune
 
@@ -29,7 +29,7 @@ Med enhetsbegränsningar kan du kontrollera en mängd olika inställningar och f
 
 Använd informationen i det här avsnittet om du vill lära dig grunderna för hur du konfigurerar profiler för enhetsbegränsningar. Läs sedan de specifika avsnitten om respektive plattform om du vill ha mer detaljerad enhetsinformation.
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
+Skapa en enhetsprofil med inställningar för enhetsbegränsningar:
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
@@ -59,9 +59,12 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 Profilen skapas och visas på bladet med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
 
-## <a name="example-of-device-restriction-settings"></a>Exempel på inställningar för enhetsbegränsningar
+<!--  Removing image as part of design review; retaining source until we known the disposition.
 
-I det här utförliga exemplet skapar du en enhetsbegränsningsprincip som blockerar användning av den inbyggda kameranappen på Android-enheter.
+## Example of device restriction settings
 
-![Inaktivera kameran på Android-enheter](./media/disable-android-camera.png)
+In this high-level example, you'll create a device restriction policy that blocks the use of the built-in camera app on Android devices.
 
+![How to disable the camera on Android devices](./media/disable-android-camera.png)
+
+-->

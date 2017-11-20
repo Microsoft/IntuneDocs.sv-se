@@ -5,17 +5,17 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/04/2017
+ms.date: 11/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 83ab9e4a6fae4fda4c8e97c5fc091d4e5a03f3ea
-ms.sourcegitcommit: b8d3f8da6d8c2bd5d6140d538193a02d5875aefb
+ms.openlocfilehash: 736eda24e355024e2abadd57206c0f0423e6d4b4
+ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrera Windows-enheter med Windows AutoPilot-distributionsprogrammet
 Windows AutoPilot-distributionsprogrammet förenklar etableringen av enheter. Idag tar det lång tid att skapa och underhålla anpassade operativsystemavbildningar. Det kan också ta lite tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. När du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar, etc. på enheterna när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -57,6 +57,13 @@ AutoPilot-distributionsprofiler används för att konfigurera AutoPilot-enhetern
 > - Registreringssidor för Skip Cortana, OneDrive och OEM
 > - Konfigurera automatiskt för arbetet eller skolan
 > - Logga in med företagets eller skolans varumärken    
+
+## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Aviseringar för otilldelade Windows AutoPilot-enheter <!-- 163236 -->
+Du kan visa en avisering för otilldelade Windows AutoPilot-enheter om du vill se hur många enheter från AutoPilot-programmet som inte har tilldelade AutoPilot-distributionsprofiler. Använd informationen i aviseringen för att skapa profiler och tilldela dem till de otilldelade enheterna. När du klickar på aviseringen visas en fullständig lista över Windows AutoPilot-enheter och detaljerad information om dem. 
+1. Logga in på [Azure](https://portal.azure.com/). 
+2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+3. Välj **Enhetsregistrering** på bladet **Intune**.
+4. Välj **Översikt** för att se aviseringen. Klicka på aviseringen om du vill se en lista över AutoPilot-enheter.  
 
 ## <a name="assign-an-autopilot-deployment-profile"></a>Tilldela en AutoPilot-distributionsprofil
 När du har skapat AutoPilot-distributionsprofiler kan du tilldela dem till valda enheter.

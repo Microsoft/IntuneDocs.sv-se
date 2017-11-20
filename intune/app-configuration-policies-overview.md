@@ -1,7 +1,7 @@
 ---
 title: Appkonfigurationsprinciper i Intune | Microsoft Docs
 titlesuffix: Azure portal
-description: "Lär dig om appkonfigurationsprinciper för Intune."
+description: "Lär dig hur man använder appkonfigurationsprinciper för Intune."
 keywords: 
 author: mattbriggs
 ms.author: mabrigg
@@ -15,20 +15,20 @@ ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b690f691278d0cc708ed7e586e30aee4ed6e807a
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: 406d0faa1e03a41d20c1b584d2d37f9810ddbf32
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="app-configuration-policies-for-intune"></a>Appkonfigurationsprinciper för Intune
 
 Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en iOS- eller Android-app. En app kan till exempel kräva att användarna anger:
 
-- Ett anpassat portnummer
-- Språkinställningar
-- Säkerhetsinställningar
-- Anpassade inställningar, t.ex. en företagslogotyp
+- ett anpassat portnummer
+- språkinställningar
+- säkerhetsinställningar
+- anpassade inställningar, t.ex. en företagslogotyp.
 
 Om användarna inte anger dessa inställningar på korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
 
@@ -38,7 +38,7 @@ Du tilldelar inte principerna direkt till användare och enheter. I stället ass
 
 Du har två alternativ för hur du använder appkonfigurationer med Intune:
  - **Hanterade enheter**  
-   Enheten hanteras av Intune som MDM-leverantör.
+   Enheten hanteras av Intune som MDM-leverantör (hantering av mobila enheter).
  - **Hanterade appar**  
    En app hanteras utan enhetsregistrering.
 

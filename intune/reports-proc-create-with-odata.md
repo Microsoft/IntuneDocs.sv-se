@@ -14,11 +14,11 @@ ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37f36aca0d58f5d87b9d54a1a4bdf18eb011b40b
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 1e0ffcaa2ff8bd9e622c1d27f27564bd78df0276
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
@@ -60,16 +60,16 @@ Installera den senaste versionen av Power BI Desktop. Du kan ladda ned Power BI 
 
     ![OData-feed](media/reports-create-01-odatafeed.png)
 
-9. Klicka på **OK**.
+9. Välj **OK**.
 10. Välj **Organisationskonto** och logga in med dina autentiseringsuppgifter för Intune. 
 
     ![Autentisering av organisationskonto](media/reports-create-02-org-account.png)
 
-11. Klicka på **Anslut**. Navigatören öppnas och visar listan över tabeller i Intune-informationslagret. 
+11. Välj **Anslut**. Navigatören öppnas och visar listan över tabeller i Intune-informationslagret. 
 
     ![Navigatör](media/reports-create-02-loadentities.png)
 
-12. Markera tabellerna **enheter** och **ownerTypes**.  Klicka på **Läs in**. Power BI läser in data i modellen.
+12. Markera tabellerna **enheter** och **ownerTypes**.  Välj **Läs in**. Power BI läser in data i modellen.
 
 ## <a name="create-a-relationship"></a>Skapa en relation 
 
@@ -77,8 +77,8 @@ Du kan importera flera tabeller för att inte endast analysera data i en enda ta
 
 ![Hantera relationer](media/reports-create-03-managerelationships.png)
 
-1. Klicka på **Hantera relationer**.
-2. Klicka på **Identifiera automatiskt...** om inte PowerBI redan har identifierat relationerna.  
+1. Välj **Hantera relationer**.
+2. Välj **Identifiera automatiskt...** om inte PowerBI redan har identifierat relationerna.  
 Relationerna visas i en Från-kolumn till en Till-kolumn. I det här exemplen länkar datafältet **ownerTypeKey** i tabellen **enheter** till datafältet **ownerTypeKey** i tabellen **ownerTypes**. Du använder relationen för att leta upp vanliga namn för enhetstypkoden i tabellen **enheter**.
 
 ## <a name="create-a-treemap-visualization"></a>Skapa en trädkarta-visualisering
@@ -100,7 +100,7 @@ Nu har du ett visuellt objekt som visar din organisations distribution av enhete
 
 Du kan lägga till ett filter till din trädkarta så att du kan svara på fler frågor med programmet. 
 
-1. Klicka på rapportarbetsytan och klicka sedan på **utsnittsikonen** ( ![trädkarta med data](media/reports-create-slicer.png) ) under **Visualiseringar** för att lägga till ett filter.
+1. Välj rapportarbetsytan och sedan **utsnittsikonen** ( ![trädkarta med data](media/reports-create-slicer.png) ) under **Visualiseringar** för att lägga till ett filter.
 2. Leta reda på tabellen **ownerTypes** och dra datafältet **ownerTypeName** under avsnittet **Filter** i panelen **Visualiseringar**.  
    Under enhetstabellen finns det ett datafält som heter **OwnerTypeKey** som innehåller en kod som anger om enhet är företagsägd eller privatägd. Eftersom du vill visa egna namn i det här filtret håller du utkik efter tabellen **ownerTypes** och drar **ownerTypeName**. Detta är ett exempel på hur datamodellen stöder relationer mellan tabeller.
 
@@ -108,8 +108,8 @@ Du kan lägga till ett filter till din trädkarta så att du kan svara på fler 
 
 Nu har du ett interaktivt filter som du kan använda för att växla mellan företagsägda och privatägda enheter om du vill se hur distributionen ändras.
 
-1. Klicka på **Företag** för att se den företagsägda enhetens distribution.
-2. Klicka på **Personlig** för att se de privatägda enheterna.
+1. Välj **Företag** för att se den företagsägda enhetens distribution.
+2. Välj **Personlig** för att se de privatägda enheterna.
 
 ## <a name="next-steps"></a>Nästa steg
 

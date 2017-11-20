@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f1b9f6900a5dfded736bd0cc92283fdca2220a5
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c7947c9d047c6f206f9f93c389d418379fe8267a
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera Intune On-Premises Connector för lokal Exchange i Microsoft Intune Azure
 
@@ -134,13 +134,18 @@ När Exchange Connector har konfigurerat anslutningen synkroniseras automatiskt 
 > [!NOTE]
 > Om du har installerat den lokala Exchange Connector och du någon gång tar bort Exchange-anslutningen måste du avinstallera den lokala anslutningen från datorn där programmet installerades.
 
-## <a name="validate-the-exchange-connection"></a>Validera Exchange-anslutningen
+## <a name="monitor-the-exchange-connector-activity"></a>Övervaka Exchange Connector-aktiviteten
 
 När du har konfigurerat Exchange Connector kan du se status för anslutningen och det senaste lyckade synkroniseringsförsöket. Verifiera Exchange Connector-anslutningen:
 
-- Välj **Lokal åtkomst** på Intune-instrumentpanelen. Verifiera anslutningsstatusen genom att välja **Lokal Exchange-åtkomst** under **Hantera**.
+1. Välj **Lokal åtkomst** på Intune-instrumentpanelen.
+2. Verifiera anslutningsstatusen genom att välja **Lokal Exchange-åtkomst** under **Hantera**.
 
 Du kan också kontrollera datum och tid för det senaste lyckade synkroniseringsförsöket.
+
+### <a name="system-center-operations-manager-scom-management-pack"></a>Hanteringspaket för System Center Operations Manager (SCOM)
+
+Från och med versionen Intune 1710 kan du använda [SCOM-hanteringspaketet för Exchange Connector och Intune](https://www.microsoft.com/en-us/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Det ger dig flera olika sätt att övervaka Exchange Connector när du behöver felsöka problem.
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa en princip för villkorlig åtkomst för lokal Exchange](conditional-access-exchange-create.md)

@@ -15,11 +15,11 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d293ff6001ef937c7da0055e6642aa5a1226bd2e
-ms.sourcegitcommit: 67c037af31c1f167ec9b4f4baa754631c817e7d1
+ms.openlocfilehash: 2226477d40f2bb70dd047ed58e8789fd9bee4ecb
+ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -40,21 +40,21 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
 3. Välj arbetsbelastningen **mobilappar**.
-4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och klickar sedan på **Lägg till**.
+4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
-    - **Namn**  
+    - **Namn**<br>
       Namnet på den profil som visas i Azure Portal.
-    - **Beskrivning**  
+    - **Beskrivning**<br>
       Beskrivning av den profil som visas i Azure Portal.
-    - **Enhetsregistreringstyp**  
+    - **Enhetsregistreringstyp**<br>
       Välj **Hanterade enheter**.
-6. Välj **iOS** för **plattformen**.
-7.  Välj **Associerad app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
-8.  På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**
-9. Välj **Format för konfigurationsinställningar**. Välj en:
+6. Välj **iOS** för **Plattform**.
+7.  Välj **Tillhörande app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
+8.  På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**.
+9. Välj **Format för konfigurationsinställningar**. Välj något av följande:
     - **[Använd Configuration Designer](#Use-the-configuration-designer)**
     - **[Ange XML-data](#enter-xml-data)**
-10. Klicka på **OK** och sedan på **Lägg till**.
+10. Välj **OK** och sedan **Lägg till**.
 
 ## <a name="use-configuration-designer"></a>Använda Configuration Designer
 
@@ -62,12 +62,18 @@ Du kan både använda Configuration Designer för appar på enheter som har regi
 
 ### <a name="add-a-setting"></a>Lägg till en inställning
 
-1. För varje nyckel och värde i konfigurationen anger du: <ul><li>**Konfigurationsnyckel**<br>Det här används endast för att identifiera den specifika konfigurationsinställningen.</li><li>**Värdetyp**<br>Konfigurationsvärdets datatyp. Möjliga typer är heltals-, verklig, sträng- eller booleskt värde.</li><li>**Konfigurationsvärde**<br>Värdet för konfigurationen.</li></ul>
-2. Klicka på **OK** för att ange konfigurationsinställningar.
+1. För varje nyckel och värde i konfigurationen anger du:
+   - **Konfigurationsnyckel**<br>
+     Nyckeln som identifierar den specifika konfigurationsinställningen.
+   - **Värdetyp**<br>
+     Konfigurationsvärdets datatyp. Möjliga typer är heltals-, verklig, sträng- eller booleskt värde.
+   - **Konfigurationsvärde**<br>
+     Värdet för konfigurationen.
+2. Välj **OK** för att ange konfigurationsinställningar.
 
 ### <a name="delete-a-setting"></a>Ta bort en inställning
 
-1. Klicka på ellipsen (...) bredvid inställningen.
+1. Välj de tre punkterna (**...**) bredvid inställningen.
 2. Välj **Ta bort**.
 
 Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för andra ändamål.
@@ -76,13 +82,12 @@ Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för
 
 Du kan ange eller klistra in en XML-egenskapslista som innehåller appkonfigurationsinställningarna för enheter som registrerats i Intune. Formatet på XML-egenskapslistan varierar beroende på vilken app du konfigurerar. Kontakta appleverantören för information om vilket format du ska använda.
 
-Intune verifierar XML-formatet. Men Intune kontrollerar inte om XML-egenskapslistan fungerar med målappen.
-Mer information om XML-egenskapslistor finns i [Understanding XML Property Lists] (Förstå XML-egenskapslistan)
+Intune verifierar XML-formatet. Intune kontrollerar dock inte om XML-egenskapslistan (PList) fungerar med målappen.
 
 Läs mer om XML-egenskapslistor:
 
   -  Läs [Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune).
-  -  Referera till [Understand XML Plist](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Förstå XML-plist) i iOS Developer Library.
+  -  Hänvisa till [Understand XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) (Förstå XML-egenskapslistor) i iOS Developer Library.
 
 ### <a name="example-format-for-an-app-configuration-xml-file"></a>Exempelformat för en XML-fil för en appkonfiguration
 
@@ -126,15 +131,15 @@ Intune har stöd för följande datatyper i en egenskapslista:
 ### <a name="tokens-used-in-the-property-list"></a>Token som används i egenskapslistan
 
 Dessutom stöder Intune följande typer av token i egenskapslistan:
-- \{\{userprincipalname\}\} – (Exempel: **John@contoso.com**)
-- \{\{mail\}\} – (Exempel: **John@contoso.com**)
-- \{\{partialupn\}\} – (Exempel: **Johan**)
-- \{\{accountid\}\} – (Exempel: **fc0dc142-71d8-4b12-bbea-bae2a8514c81**)
-- \{\{deviceid\}\} – (Exempel: **b9841cd9-9843-405f-be28-b2265c59ef97**)
-- \{\{userid\}\} – (Exempel: **3ec2c00f-b125-4519-acf0-302ac3761822**)
-- \{\{username\}\} – (Exempel: **Johan Danielsson**)
-- \{\{serialnumber\}\} – (Exempel: **F4KN99ZUG5V2**) för iOS-enheter
-- \{\{serialnumberlast4digits\}\} – (Exempel: **G5V2**) för iOS-enheter
+- \{\{userprincipalname\}\} – till exempel **John@contoso.com**
+- \{\{mail\}\} – till exempel **John@contoso.com**
+- \{\{partialupn\}\} – till exempel **John**
+- \{\{accountid\}\} – till exempel **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{deviceid\}\} – till exempel **b9841cd9-9843-405f-be28-b2265c59ef97**
+- \{\{userid\}\} – till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{username\}\} – till exempel **Johan Danielsson**
+- \{\{serialnumber\}\} – till exempel **F4KN99ZUG5V2** (för iOS-enheter)
+- \{\{serialnumberlast4digits\}\} – till exempel **G5V2** (för iOS-enheter)
 
 ## <a name="next-steps"></a>Nästa steg
 

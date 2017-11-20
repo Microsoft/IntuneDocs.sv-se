@@ -608,19 +608,23 @@
         - name: Datamodellen informationslager
           href: reports-ref-data-model.md
           items:
+            - name: Representation av användarens livstid i Intunes informationslager
+              href: reports-ref-user-timeline.md
             - name: Referens för programenheter
               href: reports-ref-application.md
+            - name: Referens för aktuell användarentitet
+              href: reports-ref-current-user.md
             - name: Referens för datumentitet
               href: reports-ref-date.md
             - name: Referens för enhetsentiteter
               href: reports-ref-devices.md
-            - name: Referens för tillägg för Intune-hantering
+            - name: Referens för tilläggsentitet för Intune-hantering
               href: reports-ref-intunemanagementextension.md
             - name: Referens för MAM-entiteter (hantering av mobilappshantering)
               href: reports-ref-mobile-app-management.md
             - name: Referens för principentiteter
               href: reports-ref-policy.md
-            - name: Referens för användarenhetsassociationer
+            - name: Referens för entiteten för användarenhetsassociation
               href: reports-ref-user-device.md
             - name: Referens för användarentitet
               href: reports-ref-user.md

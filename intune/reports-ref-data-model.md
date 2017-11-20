@@ -14,11 +14,11 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37af15a36ff20b2c13b5fb1157d04a05c40d3216
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: f720d5f9dbf91d7f098a640d640f8f35136da4fc
+ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="data-warehouse-data-model"></a>Datamodellen informationslager
 
@@ -41,6 +41,7 @@ Entitetsuppsättningar är namngivna samlingar entiteter i datamodellen. Uppsät
   -  [Program](reports-ref-application.md)
   -  [Datum](reports-ref-date.md)
   -  [Enheter](reports-ref-devices.md)
+  -  [Tillägg för Intune-hantering](reports-ref-intunemanagementextension.md)
   -  [Princip](reports-ref-policy.md)
   -  [Mobilapphantering (MAM)](reports-ref-mobile-app-management.md)
   -  [Användare](reports-ref-user.md)
