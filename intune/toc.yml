@@ -365,6 +365,8 @@
               href: certificates-scep-configure.md
             - name: PKCS
               href: certficates-pfx-configure.md
+            - name: Symantec PKI Manager-webbtjänst
+              href: certificates-symantec-configure.md
         - name: Konfigurera inställningar för Windows informationsskydd
           href: windows-information-protection-configure.md
         - name: Hantera PowerShell-skript
@@ -425,6 +427,8 @@
                   href: app-protection-policy-settings-android.md
                 - name: Inställningar för iOS
                   href: app-protection-policy-settings-ios.md
+                - name: Granska appskyddsloggarna i Managed Browser
+                  href: app-protection-policy-settings-log.md
             - name: Verifiera programskyddsprinciper
               href: app-protection-policies-validate.md
             - name: Övervaka användarstatus för programskydd
