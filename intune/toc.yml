@@ -386,6 +386,8 @@
           href: compliance-policy-create-android.md
         - name: Skapa Android for Work-princip
           href: compliance-policy-create-android-for-work.md
+        - name: Skapa en princip för att aktivera Google Play Protect
+          href: compliance-policy-create-google-play-protect.md
         - name: Skapa iOS-princip
           href: compliance-policy-create-ios.md
         - name: Skapa macOS-princip
