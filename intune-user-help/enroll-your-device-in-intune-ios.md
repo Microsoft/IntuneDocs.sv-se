@@ -1,11 +1,11 @@
 ---
-title: Registrera din iOS-enhet i Intune | Microsoft Docs
-description: Beskriver hur du registrerar en iOS-enhet i Intune
+title: "Ställ in åtkomst till ditt företags resurser | Microsoft Docs"
+description: "Beskriver hur du hämtar en iOS-enhet som hanteras av Intune"
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 09/01/2017
+ms.date: 11/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,89 +16,63 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 41f39740b62074e06ccc64c6211d642d224efd6c
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 790b935b71b641aec3093a9cdd7f7a98ba90babb
+ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="enroll-your-ios-device-in-intune"></a>Registrera din iOS-enhet i Intune
+# <a name="set-up-access-to-your-company-resources"></a>Ställ in åtkomst till ditt företags resurser
 
-Om företaget eller skolan använder Microsoft Intune kan du registrera din iOS-enhet så att den får tillgång till företagets e-post, filer och andra resurser. När du registrerar dina enheter kan IT-avdelningen hantera deras arbets- eller skolresurser, skydda dem och samtidigt ge dig friheten att använda den enhet du önskar för att utföra ditt arbete. Mer information om registrering finns i [Vad händer om man installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+Ditt företag har mycket upphovsrättsskyddad information, från e-post till filer, nätverk och mer. Ditt företag använder Microsoft Intune för att skydda den informationen när du har åtkomst till den från din iOS-enhet. Det gör att de kan hantera de resurserna, göra dem säkrare och ge dig friheten att använda den enhet du vill för att få jobbet gjort.
 
 > [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment/player]
 
 > [!NOTE]
 > Om du försöker komma åt företagets e-post i e-postprogrammet är det troligt att du har uppmanats att hantera din enhet för att skydda den. Följ anvisningarna nedan för att få åtkomst till din e-post och andra företagsresurser på iOS-enheten.
 
-**Innan du börjar**
+## <a name="before-you-start"></a>Innan du börjar
 
-- Se till att du avslutar registreringen efter att du påbörjat stegen. Om du pausar under mer än ett par minuter stoppas vanligtvis processen och du måste starta om den.
-- Om din registrering av någon anledning misslyckas måste du gå tillbaka till företagsportalappen och försöka igen.
-- Kontrollera att din Wi-Fi fungerar. Annars misslyckas registreringen.
-- Om du har blockerat Safari på enheten, avblockera Safari. Safari används under enhetsregistreringsprocessen.
+- Var noga med att slutföra hela processen när du har startat. Om du pausar i mer än ett par minuter, stoppas vanligtvis processen och du måste starta om.
+- Om processen skulle misslyckas, måste du återgå till företagsportalappen och försöka igen.
+- Kontrollera att ditt Wi-Fi fungerar och att Safari fungerar på din enhet.
+- Ladda ner [installera och logga in i Intune-företagsportalappen](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
 
 
-**Så här registrerar du din iOS-enhet:**
+## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Använd företagsportalappen för att konfigurera åtkomst till företagsresurser
 
-1.  Följ stegen i [Installera och logga in på Intune-företagsportalappen](install-and-sign-in-to-the-intune-company-portal-app-ios.md).
-
-2. Tryck på **Börja** på sidan **Konfiguration av företagsåtkomst**.
-
-    ![ios-enroll-comp-access-setup-begin](./media/ios-enroll-1a-comp-access-setup.png)
-
-3. På skärmen **Varför ska jag registrera enheten?** kan du läsa vad du kan göra när du har registrerat enheten. Tryck sedan på **Fortsätt**.
-
-    ![ios-enroll-why-enroll](./media/ios-enroll-1b-why-enroll.png)
-
-  > [!NOTE]
-  > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
-
-4. Läs igenom listan över vad företagets support kan och inte kan se på den registrerade enheten och tryck sedan på **Fortsätt**.
-
-    ![ios-enroll-what-it-can-see](./media/ios-enroll-1c-we-care-privacy.png)
-
-5.  På skärmen **Vad kommer härnäst** kan du läsa om vad som händer under registreringen. Tryck sedan på **Registrera**.
-
-    ![ios-enroll-what-comes-next](./media/ios-enroll-1d-what-comes-next.png)
-
-6.  Tryck på **Installera** på skärmen **Installera profil** och ange ditt lösenord om du uppmanas att göra det.
-
-    ![ios-enroll-install-profile](./media/ios-enroll-2-mgt-profile-install.png)
-
-7.  Tryck på **Installera**.
-
-    ![ios-enroll-tap-install](./media/ios-enroll-3-mgt-profile-install-2.png)    
-
-8.  Tryck på **Installera** för att visa att du har läst varningen.
-
-    ![ios-enroll-tap-install-after-warning](./media/ios-enroll-4-warning.png)
-
-9.  Tryck på **Förtroende**.
-
-    ![ios-enroll-tap-trust](./media/ios-enroll-5-trust.png)
-
-10.  När skärmen ändras och visar att installationen av profilen är klar trycker du på **Klar**.
-
-    ![ios-enroll-tap-done](./media/ios-enroll-6-done.png)
-
-    Ett meddelande om att enheten registreras visas på skärmen.
-
-11.  När ett meddelande frågar om du vill öppna sidan i företagsportalen trycker du på **Öppna**.
-
-    ![ios-enroll-open-comp-portal](./media/ios-enroll-7-open-cp.png)
-
-12. Tryck på **Fortsätt** på skärmen **Konfiguration av företagsåtkomst**. På den här skärmen ser du vilka andra krav som du kan behöva uppfylla för att enheten ska vara kompatibel, t.ex. ange ett lösenord. Följ anvisningarna på skärmen tills du uppfyller alla efterlevnadskrav. När du är klar kommer du tillbaka till skärmen Konfiguration av företagsåtkomst. Tryck på **Fortsätt**.
-
-    ![ios-enroll-comp-access-tap-continue](./media/ios-enroll-8-comp-access-setup-compliance.png)
-
-13. Tap **Klar**.
-
-    ![ios-enroll-tap-done](./media/ios-enroll-9-comp-access-setup-complete.png)
-
-Enheten har nu registrerats i Intune och du kommer tillbaka till företagsportalappen.
+|Det här ser du|Förklaring|
+|---|---|
+|![Inloggningsskärmen för företagsportalen, med logga in-knappen längst ned.](./media/ios-0-cp-enroll-1711.png)|Öppna företagsportalappen och tryck på **logga in**.|
+|![Azure AD-inloggningsprompten.](./media/ios-0a-cp-enroll-1711.png)|Ange din företags-e-post och tryck på **nästa**.|
+|![Azure AD-lösenordsprompt.](./media/ios-0b-cp-enroll-1711.png)|Ange ditt lösenord och tryck på **logga in**.|
+|![Läser in välkomstskärmen för företagets resurser.](./media/ios-1-cp-enroll-1711.png)|Vänta tills det har laddats.|
+|![Villkor.](./media/ios-2-cp-enroll-1711.png)|Läs och **godkänn alla** villkor.|
+|![Skärmen för konfiguration av företagsåtkomst. Både hantering och inställningar behöver lösas.](./media/ios-3-cp-enroll-1711.png)|Tryck på **Börja** för att påbörja processen med att ge enheten åtkomst till företagsresurser. Om du inte kan göra det just nu, kan du **skjuta upp** processen, men det innebär att du inte längre kommer åt e-post, dokument och mer.|
+|![Skärmen vad kan mitt företag se.](./media/ios-4-cp-enroll-1711.png)|Du kan **läsa mer** om vad ditt företag kan se genom att trycka på länken längst ned. Annars trycker du på **fortsätt**.|
+|![Skärmen vad händer nu.](./media/ios-5-cp-enroll-1711.png)|På den här skärmen får du veta vad som händer i installationen. Du kommer att använda dig av Safari, inställningsappen och företagsportalappen för att slutföra den här processen. Tryck på **nästa**.|
+|![Laddningsskärmen efter att du trycker nästa på vad händer nu.](./media/ios-6-cp-enroll-1711.png)||
+|![Växlade till Safari för registrering.](./media/ios-7-cp-enroll-1711.png)|Du skickas till Safari att hämta hanteringsinformation för din enhet.|
+|![Systemprompt som ber att inställningsappen öppnas.](./media/ios-8-cp-enroll-1711.png)|Tryck på **tillåt** för att öppna inställningsappen och ladda ner konfigurationsprofilen. Du installerar den här för att låta ditt företag hantera företagsinformation på din enhet.|
+|![Profilen är öppen i inställningar.](./media/ios-9-cp-enroll-1711.png)|Tryck på **Installera**.|
+|![Den modala dialogrutan installerar profilen längst ned på skärmen.](./media/ios-10-cp-enroll-1711.png)|Tryck på **Installera**.|
+|![Laddningsskärmen profilen installeras.](./media/ios-11-cp-enroll-1711.png)|Vänta tills det har laddats.|
+|![Skärmen profilhanteringsvarning.](./media/ios-12-cp-enroll-1711.png)|Den här varningen, skriven av Apple, ger dig mer information om vilka typer av åtgärder som kan utföras på en hanterad enhet. Läs mer om [vilken information som ditt företag kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)|
+|![Systemprompt som frågar om förtroende för fjärrhantering.](./media/ios-13-cp-enroll-1711.png)|Tryck på **lita på** för att låta ditt företag hantera företagsinformation och inställningar på din enhet.|
+|![Laddningsskärmen profilen färdigställs.](./media/ios-14-cp-enroll-1711.png)|Vänta tills det har laddats.|
+|![Skärmen profilen installerad.](./media/ios-15-cp-enroll-1711.png)|Din profil är installerad och din enhets företagsinformation och inställningar är mycket närmare att vara hanterade.|
+|![Växlade till Safari för registrering.](./media/ios-16-cp-enroll-1711.png)|Du skickas tillbaka till Safari för att hämta hanteringsinformation för din enhet. |
+|![Systemprompt om att öppna företagsportalen.](./media/ios-17-cp-enroll-1711.png)|Tryck på **Öppna**.|
+|![Skärmen läser in företagsresurser.](./media/ios-18-cp-enroll-1711.png)|Vänta tills det har laddats.|
+|![Välj enhetskategori i företagsportalappen.](./media/ios-19-cp-enroll-1711.png)|Välj den bästa kategorin för din enhet. Vanligtvis handlar det om vem som äger enheten eller var den befinner sig.|
+|![Vald kategori.](./media/ios-20-cp-enroll-1711.png)||
+|![Enhetshanteringen lyckades. Nu måste inställningarna uppdateras.](./media/ios-21-cp-enroll-1711.png)|Du har lyckats få din enhet hanterad. Det finns troligen fortfarande inställningar, som lösenordslängden, som ditt företag kan vilja att du uppdaterar. Tryck på **Fortsätt** för att fortsätta.|
+|![Bekräftar enhetsinställningarna.](./media/ios-22-cp-enroll-1711.png)|Företagsportalen kontrollerar om någon av dina inställningar behöver uppdateras.|
+|![Inställningskontrollen slutförd med en felaktig OS-version](./media/ios-23-cp-enroll-1711.png)|Företagsportalen ger dig instruktioner för hur du kan lösa eventuella problem med dina inställningar. När du har löst problemen, trycker du på **kontrollera inställningar**.|
+|![Laddningsskärmen bekräftar enhetsinställningarna](./media/ios-24-cp-enroll-1711.png)|Din enhet kontrollerar om dina inställningar är säkra nog för åtkomst till företagets resurser.|
+|![Registrerade och uppdaterade inställningarna](./media/ios-25-cp-enroll-1711.png)|Gratulerar! Enheten har nu registrerats i Intune.|
 
 > [!Note]
-> Du måste utföra några få steg till innan enheten har registrerats helt. Lär dig mer om [hur du registrerar enheten med kostnadsuppföljning av telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation använder Apples enhetsregistreringsprogram (DEP) kan du läsa mer [här](enroll-your-device-dep-ios.md).
+> Du kan behöva utföra några steg till innan enheten är fullständigt hanterad. Lär dig mer om [hur du registrerar enheten med kostnadsuppföljning av telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation använder Apples enhetsregistreringsprogram (DEP) kan du läsa mer [här](enroll-your-device-dep-ios.md).
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
