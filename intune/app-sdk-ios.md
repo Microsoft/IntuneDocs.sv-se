@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56bc71124c5a2714746dffcce256f0e604e9f62c
-ms.sourcegitcommit: ca10ab40fe40e5c9f4b6f6f4950b551eecf4aa03
+ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
+ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -95,6 +95,10 @@ Följ dessa steg för att aktivera Intune App SDK:
         > [!NOTE]
         > Leta reda på `PATH_TO_LIB` genom att välja filen `libIntuneMAM.a` och välja **Get Info** (Hämta information) från menyn **Arkiv**. Kopiera och klistra in informationen om **Var** (sökvägen) från avsnittet **Allmänt** i fönstret **Information**.
 
+    Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
+
+    ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
+
 3. Lägg till dessa iOS-ramverk i projektet:
     * MessageUI.framework
     * Security.framework
@@ -106,12 +110,7 @@ Följ dessa steg för att aktivera Intune App SDK:
     * LocalAuthentication.framework
     * AudioToolbox.framework
 
-
-4. Lägg till `IntuneMAMResources.bundle`-resurspaketet i projektet genom att dra resurspaketet till **Copy Bundle Resources** (Kopiera paketresurser) i **Build Phases** (Versionsfaser).
-
-    ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-
-5. Om mobilappen definierar en main nib- eller storyboard-fil i Info.plist-filen tar du bort fältet eller fälten för **Main Storyboard** eller **Main Nib**. Gå till Info-plist och klistra in dessa fält samt deras motsvarande värden under en ny ordlista som heter **IntuneMAMSettings** med följande namn, i tillämpliga fall:
+4. Om mobilappen definierar en main nib- eller storyboard-fil i Info.plist-filen tar du bort fältet eller fälten för **Main Storyboard** eller **Main Nib**. Gå till Info-plist och klistra in dessa fält samt deras motsvarande värden under en ny ordlista som heter **IntuneMAMSettings** med följande namn, i tillämpliga fall:
     * MainStoryboardFile
     * MainStoryboardFile~ipad
     * MainNibFile
@@ -121,7 +120,7 @@ Följ dessa steg för att aktivera Intune App SDK:
 
     Du kan visa filen Info.plist i obearbetat format (för att visa nyckelnamnen) genom att högerklicka någonstans i dokumentets brödtext och ändra visningstypen till **Show Raw Keys/Values** (Visa obearbetade nycklar/värden).
 
-6. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
+5. Aktivera delning av nyckelringar (om det inte redan är aktiverat) genom att välja **Funktioner** i varje projektmål och aktivera reglaget för **delning av nyckelringar**. Delning av nyckelringar krävs för att du ska kunna fortsätta till nästa steg.
 
   > [!NOTE]
     > Etableringsprofilen måste ha stöd för nya värden för delning av nyckelringar. Åtkomstgrupper för nyckelringar ska ha stöd för jokertecken. Du kan bekräfta detta genom att öppna filen .mobileprovision i en textredigerare, söka efter **keychain-access-groups** och se till att du har ett jokertecken. Exempel:
@@ -132,7 +131,7 @@ Följ dessa steg för att aktivera Intune App SDK:
     </array>
     ```
 
-7. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du stegen nedan:
+6. När du har aktiverat delning av nyckelringar följer du dessa steg för att skapa en separat åtkomstgrupp där data i Intune App SDK kommer att sparas. Du kan skapa en åtkomstgrupp för nyckelringar med hjälp av användargränssnittet eller med behörighetsfilen. Om du använder användargränssnittet för att skapa gruppen med nyckelhanterare, följer du stegen nedan:
 
     1. Om mobilappen inte har definierat några åtkomstgrupper för nyckelringar lägger du till appens paket-ID som den första gruppen.
 
@@ -140,24 +139,23 @@ Följ dessa steg för att aktivera Intune App SDK:
 
     3. Lägg till `com.microsoft.adalcache` i dina befintliga åtkomstgrupper.
 
-        4. Lägg till `com.microsoft.workplacejoin` i dina befintliga åtkomstgrupper.
-            ![Intune App SDK iOS: delning av nyckelhanterare](./media/intune-app-sdk-ios-keychain-sharing.png)
+        ![Intune App SDK iOS: delning av nyckelringar](./media/intune-app-sdk-ios-keychain-sharing.png)
 
-    5. Lägg till åtkomstgruppen för nyckelhanterare med `$(AppIdentifierPrefix)` i behörighetsfilen om du använder behörighetsfilen för att skapa en åtkomstgrupp för nyckelhanterare. Exempel:
+    4. Om du redigerar behörighetsfilen direkt, i stället för att använda det Xcode-användargränssnitt som visas ovan för att skapa åtkomstgrupperna för nyckelringen, ska du lägga till åtkomstgrupperna för nyckelringen med `$(AppIdentifierPrefix)` (Xcode hanterar detta automatiskt). Exempel:
 
             * `$(AppIdentifierPrefix)com.microsoft.intune.mam`
             * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
     > [!NOTE]
-    > En behörighetsfil är en XML-fil som är unik för ditt mobila program. Den används för att ange särskilda behörigheter och funktioner i din iOS-app.
+    > En behörighetsfil är en XML-fil som är unik för ditt mobila program. Den används för att ange särskilda behörigheter och funktioner i din iOS-app. Om din app inte tidigare har en behörighetsfil bör aktiveringen av nyckelringsdelning (steg 6) ha fått Xcode att generera en för din app.
 
-8. Om appen definierar URL-scheman i filen Info.plist lägger du till ytterligare ett schema med suffixet `-intunemam` för varje URL-schema.
+7. Om appen definierar URL-scheman i filen Info.plist lägger du till ytterligare ett schema med suffixet `-intunemam` för varje URL-schema.
 
-9. Om appen har dokumenttyper definierade i sin Info.plist-fil kan du i varje objekts Document Content Type UTI-matris lägga till en dubblettpost för varje sträng med prefixet ”com.microsoft.intune.mam.” .
+8. Om appen har dokumenttyper definierade i sin Info.plist-fil kan du i varje objekts Document Content Type UTI-matris lägga till en dubblettpost för varje sträng med prefixet ”com.microsoft.intune.mam.” .
 
-10. Mobilappar som utvecklas för iOS 9 och senare måste inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Lägg dessutom till ett nytt protokoll med `-intunemam` för varje nytt protokoll som listas. Du måste även inkludera `http-intunemam`, `https-intunemam`och `ms-outlook-intunemam` i matrisen.
+9. Mobilappar som utvecklas för iOS 9 och senare måste inkludera varje protokoll som appen skickar till `UIApplication canOpenURL` i matrisen `LSApplicationQueriesSchemes` i appens Info.plist-fil. Lägg dessutom till ett nytt protokoll med `-intunemam` för varje nytt protokoll som listas. Du måste även inkludera `http-intunemam`, `https-intunemam`och `ms-outlook-intunemam` i matrisen.
 
-11. Om appen har definierade appgrupper i sina behörigheter, lägger du till dessa grupper i ordlistan **IntuneMAMSettings** under nyckeln `AppGroupIdentifiers` som en matris med strängar.
+10. Om appen har definierade appgrupper i sina behörigheter, lägger du till dessa grupper i ordlistan **IntuneMAMSettings** under nyckeln `AppGroupIdentifiers` som en matris med strängar.
 
 ## <a name="using-the-intune-mam-configurator-tool"></a>Använda Intune MAM-konfigurationsverktyget
 
