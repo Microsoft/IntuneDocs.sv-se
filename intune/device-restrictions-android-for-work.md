@@ -15,11 +15,11 @@ ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b2f91005394d1bb586dcc07f309c89a8a1f1da7a
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: a6f13e4c741a59eddc352a322d5da68a27a0ba45
+ms.sourcegitcommit: 71e6e80b7370024624ce2e5fad1ca5b372975748
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
 
@@ -78,6 +78,13 @@ ms.lasthandoff: 10/20/2017
 - **Förhindra återanvändning av tidigare lösenord** – Ange hur många nya lösenord som måste ha använts innan ett gammalt kan återanvändas (från **1**-**24**).
 - **Upplåsning med fingeravtryck** – Blockerar en användare från att använda enhetens fingeravtrycksläsare för att låsa upp den.
 - **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla enheter. Med den här telefonfunktionen, som ibland kallas förtroendeagent, kan du inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats (till exempel när den är ansluten till en specifik bluetoothenhet eller när den är nära en NFC-tagg). Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
+
+## <a name="system-security"></a>Systemsäkerhet
+
+ - **Hotgenomsökning för appar** – Se till att inställningen för **Verifiera appar** är aktiverad för arbetsprofiler och personliga profiler.
+
+   > [!Note]  
+   > Den här inställningen fungerar endast för Android O-enheter och senare. 
 
 ## <a name="next-steps"></a>Nästa steg
 
