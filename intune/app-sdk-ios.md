@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6ccc420b3bf334f15d1036eb83d01a2d228fad19
-ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
+ms.openlocfilehash: 6d7b22c871ed1e62bfdc148f30fb832786baf294
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -172,9 +172,9 @@ Intune MAM-konfigurationsverktyget kan användas för att uppdatera:
 * Alla appens definierade URL-scheman i Info.plist-filen med suffixet -intunemam för varje URL-schema.
 * Alla appens definierade dokumenttyper i dess Info.plist-fil där den i varje objekts Document Content Type UTI-matris kan lägga till en dubblettpost för varje sträng med prefixet ”com.microsoft.intune.mam”. .
 * Alla appens definierade appgrupper i dess behörigheter, dessa grupper kan läggas till i ordlistan IntuneMAMSettings under nyckeln AppGroupIdentitifiers som en matris med strängar.
-
     
->[!NOTE] Om du vill använda det här verktyget i stället för att ändra info.plist manuellt rekommenderar vi att det körs om när ändringar i appens info.plist eller rättigheter har gjorts.
+> [!Note]
+> Om du vill använda det här verktyget i stället för att ändra info.plist manuellt rekommenderar vi att det körs om när ändringar i appens info.plist eller rättigheter har gjorts.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurera Azure Active Directory Authentication Library (ADAL)
 

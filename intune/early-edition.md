@@ -2,10 +2,10 @@
 title: "Tidig utgåva"
 description: 
 keywords: 
-author: brenduns
-ms.author: brenduns
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/6/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f7cc595655950ef1bf2586e939b6f02e270e7afc
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 1ea734e83cfab3fff22c775764ac9814012d52b6
+ms.sourcegitcommit: 70dc0aaad51b447e173b663d1092d993dc81ffdd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="the-early-edition-for-microsoft-intune---november-2017"></a>The Early Edition för Microsoft Intune – November 2017
+# <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Den tidiga utgåvan för Microsoft Intune – December 2017
 
 Den **tidiga utgåvan** innehåller en lista med funktioner i kommande versioner av Microsoft Intune. Den här informationen tillhandahålls på ett begränsat sätt och kan komma att ändras. Dela inte denna information med någon utanför företaget. Vissa funktioner som beskrivs här kanske inte blir klara i tid och kanske därför inte blir aktuella förrän i framtida versioner. Andra funktioner pilottestas (förhandsversionstestning) för att säkerställa att de är kundklara. Kontakta Microsofts produktgrupp om du har frågor eller funderingar.
 
@@ -39,49 +39,116 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 ## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
 
+### <a name="app-protection-policies-----679615---"></a>Appskyddsprinciper  <!-- 679615 -->
+Intunes appskyddsprinciper ger dig möjligheten att skapa globala standardprinciper för att snabbt aktivera skydd för alla användare i hela klientorganisationen.
 
+### <a name="revoking-ios-volume-purchase-program-apps-----820863---"></a>Återkallande av iOS-appar från volyminköpsprogram  <!-- 820863 -->
+Du kommer att kunna återkalla associerade enhetsbaserade applicenser för enheten för en given enhet som har en eller flera iOS-appar för volyminköpsprogram (VPP). Om du återkallar en applicens så avinstalleras inte den relaterade VPP-appen från enheten. Om du vill avinstallera en VPP-app, måste du ändra tilldelningsåtgärden till **avinstallera**. Mer information finns i [så här hanterar du iOS-appar som köpts genom ett volyminköpsprogram med Microsoft Intune](vpp-apps-ios.md).
+
+### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Återkalla licenser för en token för iOS-volyminköpsprogram <!-- 820870 -->
+Du kommer att kunna återkalla licensen för alla iOS-appar för volyminköpsprogram (VPP) för en given VPP-Token.
+
+### <a name="delete-an-ios--volume-purchasing-program-token----820879---"></a>Ta bort en iOS-token för volyminköpsprogram <!-- 820879 -->
+Du kommer att kunna ta bort token för iOS-volyminköpsprogram (VPP) med hjälp av konsolen. Detta kan vara nödvändigt när du har dubblettinstanser av en VPP-token.
+
+### <a name="network-access-control-nac-device-check-in-reporting-----1232250---"></a>Network Access Control (NAC)-enheten incheckningsrapportering <!-- 1232250 -->
+Innan den här ändringen kunde inte IT-administratörer avgöra från Intune-sidan om en NAC-hanterad enhet kommunicerade med deras NAC-lösning eller inte. När en NAC-hanterad enhet inte kommunicerar med NAC-lösningen, anses enheten vara icke-kompatibel av NAC-lösningen och blockeras därför av själva NAC-lösningen och blockeras därmed av principerna för villkorlig åtkomst som förlitar sig på enhetens kompatibilitetstillstånd.
+
+Med den här ändringen kan IT-administratörer se vilka NAC-hanterade enheter som har kommunicerat med deras NAC-lösning. Den här nya funktionen består av två nya övervakningsfunktioner i enhetens arbetsbelastning för efterlevnad i Intune, statistiken visas enligt nedan:
+- **Genomsnittliga NAC-anrop under den senaste timmen**
+- **Senaste NAC-inkommande begäran (datum/tid)**
+
+### <a name="new-ios-device-action------1244701---"></a>Ny iOS-enhetsåtgärd   <!-- 1244701 -->
+Du kan stänga av iOS 10.3-övervakade enheter. Den här åtgärden stänger av enheten omedelbart utan varning till slutanvändaren. Åtgärden **stäng ner (endast övervakat)** finns i enhetsegenskaperna när du väljer en enhet i arbetsbelastningen **enhet**.
+
+### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Palo Alto VPN stöds nu <!-- 1333680 eeready -->
+Listan **anslutningstyp** innehåller Palo Alto VPN när du konfigurerar din grundläggande VPN.
+
+### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Stöd för flera anslutningsappar för hantering av SCEP- och PFX-certifikat <!-- 1361755 eeready -->
+Kunder som använder den lokala NDES-anslutningsappen för att leverera certifikat till enheter kommer att kunna konfigurera flera anslutningsappar i en enda klient.
+
+Den här nya funktionen stöder följande scenarion:
+
+- **Hög tillgänglighet**
+
+    Varje NDES-anslutningsapp tar emot certifikatbegäranden från Intune.  Om en NDES-anslutningsapp kopplas från, kan den andra anslutningsappen fortsätta att bearbeta begäranden.
+
+### <a name="new-automatic-redeployment-setting----1469168---"></a>Ny inställning för automatisk omdistribution <!-- 1469168 -->
+Den här inställningen låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten kommer automatiskt att omkonfigureras och omregistreras för hantering.
+
+Den här inställningen finns under Windows 10 -> enhetsbegränsningar -> allmänt -> automatisk omdistribution.
+
+### <a name="install-office-apps-on-macos-devices----1494311---"></a>Installera Office-appar på macOS-enheter<!-- 1494311 -->
+Du kommer att kunna installera Office-appar på macOS-enheter. Den här nya apptypen låter dig installera Word, Excel, PowerPoint, Outlook och OneNote. De här apparna inkluderar även Microsoft AutoUpdater (MAU), för att hålla dina appar säkra och uppdaterade.
+
+### <a name="surface-hub-resource-account-supported----1566442-eeready---"></a>Stöd för Surface Hub-resurskonto <!-- 1566442 eeready -->
+En ny enhetsåtgärd läggs till så att administratörer kan definiera och uppdatera resurskonton som är associerade med en Surface Hub.
+
+Resurskontot används av en Surface Hub för att autentisera med Skype/Exchange så att den kan ansluta till ett möte. Du kan skapa ett unikt resurskonto så att Surface Hub visas i mötet som konferensrummet. Resurskontot kan till exempel visas som *konferensrum B41/6233*. Resurskontot (kallas även enhetskontot) för Surface Hub måste vanligtvis konfigureras för konferensrumsplatsen och när andra parametrar för resurskontot måste ändras.
+
+När administratörer vill uppdatera resurskontot på en enhet, måste de ange de aktuella autentiseringsuppgifterna för Active Directory/Azure Active Directory som är kopplade till enheten. Om lösenordsrotation är aktiverat för enheten, måste administratörer gå till Azure Active Directory för att hitta lösenordet.
+
+> [!NOTE]
+> Alla fält skickas i ett paket och skriver över alla fält som tidigare var konfigurerade. Tomma fält skriver också över befintliga fält.
+
+Följande är de inställningar som administratörer kan konfigurera:
+
+- **Resurskonto**  
+
+   - **Active Directory-användare**   
+   Domännamn\användarnamn eller användarens huvudnamn (UPN):user@domainname.com
+   - **Lösenord**
+
+
+- **Valfria parametrar för resurskontot** (måste anges med det angivna resurskontot)
+   - **Intervall för lösenordsrotation**   
+     Garanterar att kontolösenordet uppdateras automatiskt av Surface Hub varje vecka av säkerhetsskäl. Om du vill konfigurera parametrar efter att det här har aktiverats, måste kontot i Azure Active Directory få lösenordet nollställt.
+
+   - **SIP-adress (Session Initiation Protocol)**    
+     Används endast när automatisk identifiering misslyckas.
+
+   - **E-post**    
+     E-postadress för enhets-/resurskontot.
+
+   - **Exchange-server**    
+     Krävs endast om automatisk identifiering misslyckas.
+
+   - **Kalendersynkronisering**    
+     Anger om kalendersynkronisering och andra Exchange-servertjänster är aktiverade. Till exempel: mötessynkronisering.
+
+### <a name="intune-now-provides-the-account-move-operation-----1573558-1579830---"></a>Intune erbjuder nu åtgärden flytta kontot <!-- 1573558, 1579830 -->
+**Flytta kontot** migrerar en klient från en Azure-skalenhet (ASU) till en annan. **Flytta kontot** kan användas för både kundinitierade scenarier, när du anropar Intunes supportteam som begär det och det kan vara ett Microsoft-drivet scenario där Microsoft behöver göra justeringar i tjänsten i serverdelen. Vid **flytta kontot**, går klienten in i skrivskyddat läge (ROM). Tjänståtgärder som registrering, byta namn på enheter, uppdatering av efterlevnadsstatus misslyckas under ROM-perioden.
+
+### <a name="new-windows-defender-security-center-wdsc-device-configuration-profile-settings----1335507---"></a>Profilinställningar för enhetskonfiguration för Nya Windows Defender Security Center (WDSC) <!-- 1335507 -->
+Intune lägger till ett nytt avsnitt med profilinställningar för enhetskonfiguration under Endpoint Protection som heter **Windows Defender Security Center**. IT-administratörer kan konfigurera vilka pelare Windows Defender Security Center-appen som slutanvändare kan komma åt. Om IT-administratör döljer en pelare i Windows Defender Security Center-appen, döljs alla meddelanden som rör den dolda pelare på användarens enhet.
+
+Dessa är de pelare som administratörer kan dölja från profilinställningarna för enhetskonfiguration för Windows Defender Security Center:
+- Skydd mot virus och hot
+- Enhetsprestanda och hälsa
+- Brandväggs- och nätverksskydd
+- App- och webbläsarkontroll
+- Familjealternativ
+
+IT-administratörer kan också anpassa de meddelanden som användare tar emot. Du kan till exempel konfigurera om användarna får alla meddelanden som skapas av synliga pelare i WDSC, eller enbart viktiga meddelanden. Meddelanden som är mindre viktiga inkluderar periodiska sammanfattningar av Windows Defender Antivirus-aktivitet och meddelanden när genomsökningar har slutförts. Alla andra meddelanden anses viktiga. Dessutom kan du kan också anpassa själva meddelandeinnehållet, du kan till exempel ange IT-kontaktinformation att bädda in i meddelanden som visas på användarnas enheter.
+
+
+
+
+<!-- the following are present prior to 1712 -->
 ### <a name="assign-office-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type----1332318---"></a>Tilldela Office 365-mobilappar till iOS och Android-enheter med den inbyggda apptypen <!-- 1332318 -->
 Den **inbyggda** apptypen gör det enklare att skapa och tilldela Office 365-appar till iOS- och Android-enheter som du hanterar. De här apparna inkluderar 365-appar som Word, Excel, PowerPoint och OneDrive. Du kan tilldela specifika appar till apptypen och redigera konfigurationen för appinformationen.
 
 ### <a name="single-sign-on-support-for-ios----1333645---"></a>Stöd för enkel inloggning (SSO) på iOS <!-- 1333645 -->  
 Du kommer att kunna använda enkel inloggning för iOS-användare. iOS-appar som är kodade för att leta efter användares autentiseringsuppgifter i nyttolasten för enkel inloggning fungerar med den här uppdateringen av nyttolastkonfigurationen. Du kan även använda UPN och Intune-enhets-ID för att konfigurera huvudnamn och sfär.
 
-### <a name="ios-11-app-inventory-api-for-mobile-threat-detection----1391759---"></a>API för appinventering för iOS 11 för mobil hotidentifiering <!-- 1391759 -->
-Intune samlar in information om appinventering från både personliga och företagsägda enheter och gör den tillgänglig för leverantörer av mobil hotidentifiering (MTD) att hämta, till exempel Lookout for Work. Du kommer att kunna samla in appinventering från användare av enheter med iOS 11+.
-
-**Appinventering**  
-Inventeringar från både företagsägda iOS 11+ och personligt ägda enheter skickas till MTD-leverantören. Data i appinventeringen omfattar:
-
- - App-ID
- - Appversion
- - Kort appversion
- - Appnamn
- - Storlek på appsamling
- - Dynamisk appstorlek
- - Om appen har verifierats eller inte
- - Om appen är hanterad eller inte
-
-### <a name="audit-updates----1412961---"></a>Granska uppdateringar <!-- 1412961 -->  
-Intune-granskning tillhandahåller en post med förändringsåtgärder relaterade till Intune.  Alla åtgärder för att skapa, uppdatera och ta bort, samt fjärruppgifter, sparas och lagras i ett år.  Azure Portal visar granskningsdata i varje arbetsbelastning för de senaste 30 dagarna. Det går även att filtrera bland dessa data.  En motsvarande Graph API gör det möjligt att hämta granskningsdata som lagrats under det senaste året. 
-
-Granskning hittas under gruppen **ÖVERVAKA**. Det finns ett menyalternativ för **Granskningsloggar** för varje arbetsbelastning.   
-
 ### <a name="text-protocol-allowed-from-managed-apps----1414050----"></a>Textprotokollet som tillåts från hanterade appar <!-- 1414050  -->
 Appar som hanteras av Intune App SDK kommer att kunna skicka SMS-meddelanden.
-
-### <a name="remotely-restart-ios-device-supervised-only----1424595---"></a>Starta om en iOS-enhet via en fjärranslutning (endast övervakade) <!-- 1424595 -->
-Du kommer att kunna få en övervakad iOS 10.3 +-enhet att starta om med en enhetsåtgärd. Mer information om hur du använder åtgärden för omstart av enhet finns i [Starta om enheter med Intune med en fjärråtgärd](device-restart.md).
-
-> [!Note]  
-> Det här kommandot kräver en övervakad enhet och behörighet till **Enhetslås**. Enheten startas om direkt. iOS-enheter låsta med lösenord kommer inte återansluta till ett Wi-Fi-nätverk efter omstarten. Efter omstart kanske de inte kan kommunicera med servern.
 
 ### <a name="remotely-lock-managed-macos-device-with-intune----1437691---"></a>Fjärrlåsa hanterade macOS-enheter med Intune <!-- 1437691 -->
 Du kommer att kunna låsa en förlorad macOS-enhet och ange en PIN-kod för återställning på 6 siffror. När enheten är låst visar bladet **Enhetsöversikt** PIN-koden tills en annan enhetsåtgärd skickas.
 
 Mer information finns i [Fjärrlåsa hanterade enheter med Intune](device-remote-lock.md).
 
-### <a name="windows-defender-advanced-threat-protection-reporting-frequency-settings------1455974-----"></a>Inställningar för rapporteringsfrekvens för Windows Defender Avancerat skydd <!--- 1455974  --->
-Tjänsten Windows Defender Avancerat skydd (WDATP) låter administratörer hantera rapporteringsfrekvensen för hanterade enheter. Med det nya alternativet **Skicka frekvensvärde för telemetrirapportering** samlar WDATP in data och utvärderar risker oftare. Standardvärdet för rapporteringsfrekvensen optimerar hastighet och prestanda. Att öka frekvensen för rapportering kan vara användbart för högriskenheter. Den här inställningen finns i profilen **Windows Defender ATP** i **Enhetskonfigurationer**.
 
 ### <a name="assignment-conflict-resolution-has-changed-for-ios-store-apps----1480316---"></a>Konfliktlösning för tilldelning har ändrats för iOS Store-appar<!-- 1480316 -->
 Slutanvändare kan uppleva att tillgängligheten för iOS Store-appar har ändrats. En app som har tilldelats till två grupper med en konflikt mellan **Nödvändig och Tillgänglig** och **Ej tillämpligt** ger för närvarande prioritet till **Nödvändig och Tillgänglig**. I och med ändringen ger en app med den här konflikten prioritet till **Ej tillämpligt** istället.
@@ -123,75 +190,17 @@ I samtliga fall bevaras din avsedda regler. Ingen åtgärd krävs från din sida
 
 De här ändringarna börjar publiceras med novemberuppdateringen, men det kan ta tid innan de appliceras på ditt konto. Du får ett bekräftelsemeddelande i Office 365-portalen när ändringarna är applicerade på ditt konto.
 
-### <a name="support-for-multiple-network-device-enrollment-service-ndes-connectors----1528104---"></a>Stöd för flera anslutningsprogram för registreringstjänster för nätverksenheter (NDES) <!-- 1528104 -->
-Registreringstjänsten för nätverksenheter (NDES) gör det möjligt för mobilenheter som körs utan domänautentiseringsuppgifter att hämta certifikat baserade på SCEP-tillägg (Simple Certificate Enrollment Protocol). Med den här uppdateringen stöds flera NDES-anslutningsprogram.
-
-### <a name="new-scep-profile-details-supported----1559808---"></a>Ny SCEP-profilinformation som stöds <!-- 1559808 -->
-Administratörer kommer att kunna ange fler inställningar när de skapar en SCEP-profil på Windows, iOS, macOS och Android-plattformar.  Administratörer kan ange IMEI, serienummer eller eget namn inklusive e-post i ämnesnamnets format.
 
 ### <a name="configure-an-ios-app-pin----1586774---"></a>Konfigurera PIN-kod för en iOS-app <!-- 1586774 -->
 Du kommer snart att kunna kräva en PIN-kod för iOS-appar. Du kan konfigurera kravet på PIN-kod och förfallodatum i dagar via Azure Portal. När kravet är gäller måste en användare konfigurera och använda en ny PIN-kod innan de får åtkomst till en iOS-app. Endast iOS-appar som har appskydd aktiverat med Intune App SDK har stöd för den här funktionen.
 
-### <a name="retain-data-during-a-factory-reset-----1588489---"></a>Behåll data under en fabriksåterställning <!-- 1588489 -->
-Vi lägger till stöd för en ny funktion för fabriksåterställning i Windows. Administratörer kan nu ange om enhetsregistrering och andra etablerade data ska finnas kvar på en enhet efter en fabriksåterställning utförts. 
- 
-Följande data behålls efter en fabriksåterställning:
-- Användarkonton kopplade till enheten
-- Enhetstillstånd (domänanslutning, AADJ)
-- MDM-registrering
-- Installerade OEM-appar (store och Win32-appar)
-- Användarprofil
-- Användardata utanför användarprofilen
-- Automatisk inloggning för användare
- 
-Följande data bevaras inte:
-- Användarfiler
-- Användarinstallerade appar (store och Win32-appar)
-- Enhetsinställningar som inte är standard 
-
-### <a name="app-install-status-report-now-a-bar-chart----1249446---"></a>Statusrapporten för appinstallation är nu ett stapeldiagram <!-- 1249446 -->  
-Rapporten **Status för appinstallation** är tillgänglig för varje app via listan **Appar** i arbetsbelastningen **Mobilappar** kommer snart att renderas som ett stapeldiagram.
-
 ### <a name="add-find-my-iphone-for-personal-devices---1427287--"></a>Lägg till ”Hitta min iPhone” för personliga enheter <!--1427287-->
 Du kommer att kunna se om iOS-enheter som har Aktiveringslås aktiverat. Den här funktionen kunde tidigare hittas i den klassiska Intune-portalen.
-
-### <a name="group-assigned-enrollment-restrictions----747598---"></a>Grupptilldelade registreringsbegränsningar <!-- 747598 -->
-Som Intune-administratör kommer du att kunna skapa anpassade registreringsbegränsningar för enhetstyp och enhetsgräns för användargrupper.
- 
-Du kan skapa upp till 25 instanser av varje begränsningstyp med Intune Azure Portal som du sedan kan tilldela till användargrupper. Grupptilldelade begränsningar åsidosätter standardbegränsningarna.
- 
-Alla instanser av en begränsningstyp lagras i ett strikt sorterad lista. Den här ordningen definierar prioritetsvärden för konfliktlösning. En användare som påverkas av mer än en begränsningsinstans begränsas endast av instansen med det högsta prioritetsvärdet. Du kan ändra prioriteten för en viss instans genom att dra den till en annan plats i listan. 
- 
-Den här funktionen kommer att lanseras med migreringen av Android for Work-inställningar från registreringsmenyn för Android for Work till menyn för registreringsbegränsningar. Den här migreringen kan ta flera dagar. Ditt konto kan uppgraderas för andra delar av novemberversionen innan grupptilldelning aktiveras för registreringsbegränsningar.
-
-### <a name="windows-10-update-ring-assignments-are-displayed----1621837---"></a>Tilldelningar för Windows 10:s uppdateringstestgrupper visas <!-- 1621837 -->
-Du kan se alla tilldelningar till Windows 10:s uppdateringstestgrupper för användaren som du visar när du **felsöker**.  
-
-
 
 <!-- the following are present prior to 1711 -->
 
 ### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview----710595---"></a>Azure Active Directory-webbplatser kan kräva appen Intune Managed Browser och ha stöd för enkel inloggning för Managed Browser (allmänt tillgänglig förhandsversion) <!-- 710595 -->   
 Med Azure Active Directory (Azure AD) kan du begränsa åtkomst till webbplatser på mobila enheter till appen Intune Managed Browser. I Managed Browser förblir webbplatsdata säkra och separata från slutanvändarens personliga data. Dessutom stöder Managed Browser funktioner för enkel inloggning för webbplatser som stöds av Azure AD. När du loggar in på Managed Browser eller använder Managed Browser på en enhet med en annan app som hanteras av Intune, tillåts Managed Browser att få åtkomst till företagswebbplatser som skyddas av Azure AD utan att användaren måste ange sina autentiseringsuppgifter. Den här funktionen gäller för webbplatser som Outlook Web Access (OWA) och SharePoint Online, samt andra företags webbplatser som resurser i intranätet som nås via Azure App Proxy.
-
-### <a name="troubleshoot-enrollment-issues------746324----"></a>Felsöka problem med registreringen  <!--- 746324 --->  
-Felsökningsarbetsytan visar problem med användarregistreringen. Information om problemet och förslagna lösningar kan hjälpa administratörer och medarbetare på supportavdelningen att felsöka problem. Vissa problem med registreringen inte fångas upp, och vissa fel kanske inte har några reparationsförslag.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- the following are present prior to 1710 -->
