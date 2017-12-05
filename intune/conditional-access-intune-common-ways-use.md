@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 05/23/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a75cf12fb1e03873d4ef3307e9c377ab6df6b75a
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: d3509dbf1bc0b415803bb003c342f5b5df69e235
+ms.sourcegitcommit: 82088d297eef629e3da6011681ead442ae7e25f7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="common-ways-to-use-conditional-access-with-intune"></a>Vanliga sätt att använda villkorlig åtkomst på med Intune
 
@@ -64,9 +64,9 @@ Om Intune EAS-posten är helt ny, och Intune inte känner till detta, så utfär
 
 1.  Användaren försöker få åtkomst till företagets e-post som finns på Exchange lokalt, version 2010 SP1 eller senare.
 
-2.  Om enheten inte hanteras av Intune blockeras åtkomsten till e-post. Intune skickar blockmeddelande till EAS-klienten.
+2.  Om enheten inte hanteras av Intune, blockeras åtkomsten till e-post. Intune skickar blockmeddelande till EAS-klienten.
 
-3.  EAS får ett blockmeddelande, sätter enheten i karantän och skickar e-postkarantänmeddelandet med åtgärdsförslag med länkar, så att användarna kan registrera sina enheter.
+3.  EAS får ett blockmeddelande, sätter enheten i karantän och skickar e-postkarantänmeddelandet med åtgärdsförslag med länkar så att användarna kan registrera sina enheter.
 
 4.  Den arbetsplatsanslutna processen är det första steget mot att låta enheten hanteras av Intune.
 
@@ -90,7 +90,7 @@ Intune utvärderar och hanterar enhetens tillstånd.
 
 Exchange-servern tillhandahåller det API och den infrastruktur som krävs för att flytta enheter till deras karantän.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Tänk på att en efterlevnadsprofil måste tilldelas enhetsanvändaren för att enhetens efterlevnad ska kunna utvärderas. Om ingen efterlevnadsprincip har distribuerats till användaren behandlas enheten som kompatibel och inga åtkomstbegränsningar tillämpas.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Villkorlig åtkomst baserad på åtkomstkontroll för nätverk
@@ -107,7 +107,7 @@ Intune har ingått partnerskap med Mobile Threat Defense-leverantörer för att 
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Så här fungerar Intune med Mobile Threat Defense-integrering
 
-När mobila enheter har integrerats med agenten för mobilhotsskydd, kan denna skicka meddelanden om efterlevnadstillstånd till Intune om ett hot har identifierats i själva den mobila enheten.
+När mobila enheter har Mobile Threat Defense-agenten installerad, kan denna skicka meddelanden om efterlevnadstillstånd till Intune om ett hot har identifierats i själva den mobila enheten.
 
 Intune och integrerat mobilhotsskydd spelar en viktig roll vid beslut om villkorlig åtkomst baserat på enhetsrisk.
 

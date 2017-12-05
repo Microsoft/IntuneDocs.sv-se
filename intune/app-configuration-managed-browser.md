@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 395b48ab71b093c12c244fab1acd22c0ecca4c51
-ms.sourcegitcommit: 0a2897b5104dc33ca0661c27a373026d7f4cc956
+ms.openlocfilehash: bc11ad516b3256d39d4e859eca6c8aa248fb180b
+ms.sourcegitcommit: 9ccdac76e0b0716723452a6675b091f15a4d31f2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -100,8 +100,9 @@ Intune Managed Browser och [Azure AD-programproxy]( https://docs.microsoft.com/a
 
 - Konfigurera dina interna program via Azure AD-programproxyn.
     - Se [installationsdokumentationen]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
-    - Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
-    - Användare av Managed Browser-appen har en [princip för Intune-appskydd]( app-protection-policy.md) tilldelad till appen.
+- Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
+- Användare av Managed Browser-appen har en [princip för Intune-appskydd]( app-protection-policy.md) tilldelad till appen.
+Obs: de uppdaterade programproxy omdirigeringsdata kan ta upp till 24 timmar att börja gälla i Managed Browser.
 
 #### <a name="step-1-enable-automatic-redirection-to-the-managed-browser-from-outlook"></a>Steg 1: Aktivera automatisk omdirigering till Managed Browser från Outlook
 Outlook måste konfigureras med en appskyddsprincip som aktiverar inställningen **Begränsa webbinnehåll till visning i Managed Browser**.
@@ -218,6 +219,8 @@ Du kan också öppna webbläsaren i felsökningsläge från appen.
 1. Öppna Managed Browser.
 2. Skriv in `about:intunehelp` i adressrutan.
 Webbläsaren startar felsökningsläget.
+
+En lista över de inställningar som finns lagrade i apploggarna finns i [granska appskyddsloggarna i Managed Browser](app-protection-policy-settings-log.md).
 
 ## <a name="security-and-privacy-for-the-managed-browser"></a>Säkerhet och sekretess för Managed Browser
 

@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/03/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: c03985bd7ca92fe4b4e8ea163b7db421bfae09c2
-ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
+ms.openlocfilehash: 6595382606b9c53083e7beec9ca02a314abb5899
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Vilken information kan företaget se när jag registrerar min enhet?
 
@@ -36,7 +36,7 @@ När du registrerar en enhet för hantering ger du företaget tillstånd att se 
 
 **Vad företaget alltid kan se**
 
-- Enhetsmodell, som t.ex. iPhone 7
+- Enhetsmodell som Google Pixel
 - Tillverkare, som t.ex. Microsoft
 - Operativsystem, som t.ex. iOS
 - Programnamn, som t.ex. Microsoft Word
@@ -48,4 +48,5 @@ När du registrerar en enhet för hantering ger du företaget tillstånd att se 
 
 -  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för ditt företag. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
 -  Plats: Företaget kan aldrig se var enheten finns, förutom om du har en iOS-enhet som övervakas och har försvunnit. [Hur vet jag?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Appinventering: om ditt företag använder Mobile Threat Defense kan de visa fler detaljer om apparna som finns på din enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Appinventering: om ditt företag använder skydd mot mobilhot, kommer de att kunna se mer information om apparna som är på din iOS-enhet. Läs mer om [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
+- Nätverksinformation: en del information om nätverksanslutningar för Android-enheter kan vara tillgänglig för din företagssupport. Om ditt företag till exempel kräver att enheter ska finnas kvar i en viss byggnad, kan din enhet identifiera nätverket som den är ansluten till. 

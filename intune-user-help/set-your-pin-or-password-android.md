@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 03/13/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0b6667bc25263cdc8d638027f4e846724e15b1d0
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 68f9f6333cbe3e450027e64399e2c0375459f1ca
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="set-your-pin-or-password"></a>Ange din PIN-kod eller ditt lösenord
 
@@ -28,9 +28,10 @@ Företagets support kan kräva att du anger en PIN-kod eller ett lösenord på e
 
 Följ stegen nedan för att ange en PIN-kod eller ett lösenord.
 
-1.  Tryck på **Inställningar** &gt; **Säkerhet** &gt; **Skärmlås** &gt; **Lösenord**.
+1.  Tryck på **Inställningar** > **Säkerhet** > **Skärmlås** > **Lösenord**.
 
 2.  Välj och bekräfta det nya lösenordet.
 
+För vissa enheter, kan du behöva ställa in en PIN-kod för start förutom skärmlösenordet. Du kan försöka att åtgärda problemet genom att hitta en plats i inställningsappen där det här alternativet kan aktiveras. Till exempel i Samsung Galaxy S7 aktiverar du säker start genom att gå till **Inställningar** > **Låsskärm och säkerhet** > **Säker start**. Läs mer [här](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise). 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
