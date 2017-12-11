@@ -284,6 +284,8 @@
               href: app-notification-settings-ios.md
             - name: Delade enheter för iOS
               href: shared-device-settings-ios.md
+            - name: Konfigurera enkel inloggning för Intune för iOS-enheter
+              href: sso-ios.md
             - name: Webbfilterinställningar för iOS
               href: web-content-filter-settings-ios.md
         - name: Konfigurera enhetsbegränsningar
