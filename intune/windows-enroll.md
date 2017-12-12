@@ -14,11 +14,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0c4c245829a7819c9427a8ebe8ad9e166b58da97
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: bf9ae5f05e21fa2ca7be4af08dace5b96315cec3
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-windows-devices"></a>Registrera Windows-enheter
 
@@ -89,4 +89,4 @@ Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvänd
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Tänk på detta när du hanterar Windows-enheter med Intune i Azure](/intune-classic/deploy-use/intune-on-azure.md).
+- [Tänk på detta när du hanterar Windows-enheter med Intune i Azure](/intune-classic/deploy-use/intune-on-azure).
