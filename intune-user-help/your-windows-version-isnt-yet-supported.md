@@ -16,14 +16,14 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: cdcad8e7265c72312663ce45056e1d42b7379699
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: a64a8c6f0f616b0e236cf063b396eae3106ca445
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-windows-devices-operating-system-version-isnt-yet-supported"></a>Enhetens version av Windows-operativsystemet stöds inte än
 
 Med den snabba teknikutvecklingstakten kan enheten faktiskt ligga före vad företagets support har haft möjlighet att testa. Det är möjligt att den senaste versionen av Windows inte fungerar med några av ditt företags andra verktyg. 
 
-Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

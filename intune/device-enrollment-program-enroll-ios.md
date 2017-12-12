@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 311bb42f2ef9fbf689e32eacca7420c8189251bf
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: a10d158816f17c7fbe07fd14172d1a9abb9ed9b9
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -157,11 +157,11 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronisera Intune med Apple och se dina hanterade enheter i Intune på Azure-portalen.
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** >  **Apple-registrering** > **Registreringsprogramenheter**.
-2. Under **Registreringsprogramenheter** väljer du **Synkronisera**.
+1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/enrollment-program-device-sync.png)
-3. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
+  
+2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Skärmbild av bladet Synkronisera där länken Begär synkronisering håller på att väljas.](./media/enrollment-program-device-request-sync.png)
 
@@ -170,7 +170,7 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
      -  Varje synkroniseringsbegäran har 15 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
      - Intune synkroniserar nya och borttagna enheter med Apple var 24:e timme.
 
-4. I arbetsytan Registreringsprogramenheter väljer du **Uppdatera** för att visa dina enheter.
+3. I arbetsytan Registreringsprogramenheter väljer du **Uppdatera** för att visa dina enheter.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Tilldela enheterna en registreringsprofil
 Du måste tilldela en registreringsprogramprofil till enheterna innan de kan registreras.

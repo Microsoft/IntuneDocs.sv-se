@@ -6,7 +6,7 @@ keywords:
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1f0d518edc26c382d6df71b95b84328eb375baf6
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: e9e511cef22fdfc8e2975bd14f7b969067317a44
+ms.sourcegitcommit: 2ad0d88d3ef5b81563c6a54eaf52f09e126abeaf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-configure-certificates-in-microsoft-intune"></a>Så här konfigurerar du certifikat i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. Certifikaten innebär att man inte längre behöver ange användarnamn och lösenord för att autentisera anslutningar.
+När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. Du behöver inte längre ange användarnamn och lösenord för att autentisera anslutningar när du använder certifikat.
 
 Du kan använda Intune för att tilldela dessa certifikat till enheter som du hanterar. Intune har stöd för tilldelning och hantering av följande certifikattyper:
 
@@ -45,27 +45,30 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
     - Windows 8.1 och senare
     - Windows Phone 8.1 och senare
     - Windows 10 och senare
-3. Skapa certifikatprofiler så att enheter begär ett certifikat som ska användas för autentisering av VPN, Wi-Fi och åtkomst av e-post. Du kan skapa och tilldela en **PKCS**- eller en **SCEP**-certifikatprofil för enheter som kör följande plattformar:
-    - iOS 8.0 och senare
-    - Android 4.0 och senare
-    - Android for Work
-    - Windows 10 (Desktop och Mobile) och senare
+3. Skapa certifikatprofiler så att enheter begär ett certifikat som ska användas för autentisering av VPN, Wi-Fi och åtkomst av e-post.
 
-    Du kan bara använda en SCEP-certifikatprofil med dessa plattformar:
+   Du kan skapa och tilldela en **PKCS**- eller **SCEP**-certifikatprofil för enheter som kör följande plattformar:
 
--   macOS 10.9 och senare
--   Windows Phone 8.1 och senare
+   - iOS 8.0 och senare
+   - Android 4.0 och senare
+   - Android for Work
+   - Windows 10 (Desktop och Mobile) och senare
+
+   Du kan endast använda en **SCEP-profil** för enheter som kör dessa plattformar:
+
+   - macOS 10.9 och senare
+   - Windows Phone 8.1 och senare
 
 Du måste skapa en separat profil för varje enhetsplattform. När du skapar profilen kopplar du den med den betrodda rotcertifikatprofilen som du redan skapat.
 
 ### <a name="further-considerations"></a>Ytterligare överväganden
 
 - Du måste skapa en utfärdare av företagscertifikat om du inte redan har en.
-- Om du, beroende på dina enhetsplattformar, väljer att använda SCEP-profilen (Simplified Certificate Enrollment Protocol) måste du också konfigurera en NDES-server (Network Device Enrollment Service).
+- Du måste också konfigurera en server för registreringstjänsten för nätverksenheter (NDES) om du använder SCEP-profiler.
 - Om du planerar att använda SCEP- eller PKCS-profiler måste du hämta och konfigurera Microsoft Intune Certificate Connector.
 
 
-## <a name="step-1--configure-your-certificate-infrastructure"></a>Steg 1 – Konfigurera certifikatinfrastrukturen
+## <a name="step-1-configure-your-certificate-infrastructure"></a>Steg 1: Konfigurera certifikatinfrastrukturen
 
 Se något av följande avsnitt för att få hjälp med att konfigurera infrastrukturen för varje typ av certifikatprofil:
 
@@ -73,7 +76,7 @@ Se något av följande avsnitt för att få hjälp med att konfigurera infrastru
 - [Konfigurera och hantera PKCS-certifikat med Intune](certficates-pfx-configure.md)
 
 
-## <a name="step-2---export-your-trusted-root-ca-certificate"></a>Steg 2 – Exportera ditt betrodda rotcertifikat för certifikatutfärdaren
+## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Steg 2: Exportera ditt betrodda rotcertifikat för certifikatutfärdaren
 
 Exportera certifikatet för betrodda rotcertifikatutfärdare som en **CER**-fil från den utfärdande certifikatutfärdaren eller från en enhet som litar på den utfärdande certifikatutfärdaren. Exportera inte den privata nyckeln.
 
@@ -97,7 +100,7 @@ Du måste skapa en betrodd certifikatprofil innan du kan skapa en SCEP- eller PK
     - **Windows Phone 8.1**
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
-6. I listrutan **Profiltyp** väljer du **Betrott certifikat**.
+6. Från listrutan **Profil** väljer du **Betrodda certifikat**.
 7. Bläddra till certifikatet du sparade i uppgift 1 och klicka sedan på **OK**.
 8. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
     - **Datorcertifikatarkiv – rot**

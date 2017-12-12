@@ -5,7 +5,7 @@ keywords: SDK
 author: mattbriggs
 manager: angrobe
 ms.author: mabriggs
-ms.date: 09/01/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 27725d28ac621bae9500d0e6639a82d6f033e4dc
-ms.sourcegitcommit: 42a0e4c83e33c1a25506ca75d673e861e9206945
+ms.openlocfilehash: f6a7df413cb8107e8dabc6e1de6ddabd441eaeca
+ms.sourcegitcommit: fa0f0402dfd25ec56a0df08c23708c7e2ad41120
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -35,6 +35,7 @@ Intune App SDK består av följande filer:
 * **Microsoft.Intune.MAM.SDK.aar**: SDK-komponenterna, med undantag för JAR-filerna Support.V4 och Support.V7. Den här filen kan användas i stället för de enskilda komponenterna om ditt system stöder AAR-filer.
 * **Microsoft.Intune.MAM.SDK.Support.v4.jar**: De gränssnitt som behövs för att aktivera MAM i appar som använder Androids v4-stödbibliotek. Appar som behöver den här typen av stöd måste referera till JAR-filen direkt.
 * **Microsoft.Intune.MAM.SDK.Support.v7.jar**: De gränssnitt som behövs för att aktivera MAM i appar som använder Androids v7-stödbibliotek. Appar som behöver den här typen av stöd måste referera till JAR-filen direkt.
+* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Den här JAR-filen innehåller stub-rutiner för Android-systemklasser som endast finns på nya enheter men som refereras till av metoder i MAMActivity. Nya enheter ignorerar de här stub-klasserna. Den här JAR-filen krävs endast om din app utför reflektion på klasser härledda från MAMActivity. För de flesta appar behövs den inte. Var noga med att utesluta klasser från ProGuard om du använder JAR-filen. De finns under rotpaketet ”android”
 * **proguard.txt**: Innehåller ProGuard-regler som måste tillämpas ifall du skapar med ProGuard.
 * **CHANGELOG.txt**: Innehåller en post med ändringar som gjorts i varje SDK-version.
 * **THIRDPARTYNOTICES.TXT**: Information om tredjeparts- och/eller OSS-kod som ingår i appen.
@@ -47,8 +48,7 @@ Om inte systemets version har stöd för AAR-filer, kan du använda följande fi
 
 ## <a name="requirements"></a>Krav
 
-Intune App SDK kompileras som ett Android-projekt. Det betyder att den inte är särskilt beroende av vilken version av Android som appen använder för sina minsta API-versioner eller mål-API-versioner. SDK stöder Android API 19 (Android 4.4+) till och med Android API 25 (Android 7.1).
-
+Intune App SDK kompileras som ett Android-projekt. Det betyder att den inte är särskilt beroende av vilken version av Android som appen använder för sina minsta API-versioner eller mål-API-versioner. SDK:n stöder Android API 19 (Android 4.4+) till och med Android API 26 (Android 8.0).
 
 
 ### <a name="company-portal-app"></a>Företagsportalappen
@@ -88,7 +88,7 @@ Vanliga Android-appar har ett enda läge och har åtkomst till systemet genom si
 
 ## <a name="replace-classes-methods-and-activities-with-their-mam-equivalent"></a>Ersätt klasser, metoder och aktiviteter med deras MAM-motsvarighet
 
-Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du gör detta genom att leta upp alla instanser av klasserna i följande tabell och ersätta dem med deras Intune App SDK-motsvarighet.
+Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du gör detta genom att leta upp alla instanser av klasserna i följande tabell och ersätta dem med deras Intune App SDK-motsvarighet. De flesta av dessa är klasser som appklasserna ärver från, men vissa (t.ex. MediaPlayer) är klasser som appen använder utan härledning.
 
 | Android-basklass | Intune App SDK-motsvarighet |
 |--|--|
@@ -103,7 +103,7 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 | android.app.LauncherActivity | MAMLauncherActivity |
 | android.app.ListActivity | MAMListActivity |
 | android.app.NativeActivity | MAMNativeActivity |
-| android.app.PendingIntent | MAMPendingIntent (se nedan) |
+| android.app.PendingIntent | MAMPendingIntent (se [Väntande avsikt](#pendingintent)) |
 | android.app.Service | MAMService |
 | android.app.TabActivity | MAMTabActivity |
 | android.app.TaskStackBuilder | MAMTaskStackBuilder |
@@ -114,9 +114,13 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 | android.content.BroadcastReceiver | MAMBroadcastReceiver |
 | android.content.ContentProvider | MAMContentProvider |
 | android.os.Binder | MAMBinder (krävs endast om Binder inte genereras från ett AIDL-gränssnitt (Android Interface Definition Language)) |
+| android.media.MediaPlayer | MAMMediaPlayer |
+| android.media.MediaMetadataRetriever | MAMMediaMetadataRetriever |
 | android.provider.DocumentsProvider | MAMDocumentsProvider |
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 
+> [!NOTE]
+> Även om programmet inte har behov av en egen härledd `Application` klass, [ se `MAMApplication` nedan](#mamapplication)
 
 ### <a name="microsoftintunemamsdksupportv4jar"></a>Microsoft.Intune.MAM.SDK.Support.v4.jar:
 
@@ -125,6 +129,7 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 | android.support.v4.app.DialogFragment | MAMDialogFragment
 | android.support.v4.app.FragmentActivity | MAMFragmentActivity
 | android.support.v4.app.Fragment | MAMFragment
+| android.support.v4.app.JobIntentService | MAMJobIntentService
 | android.support.v4.app.TaskStackBuilder | MAMTaskStackBuilder
 | android.support.v4.content.FileProvider | MAMFileProvider
 
@@ -132,14 +137,15 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 
 |Android-klass | Intune App SDK-motsvarighet |
 |--|--|
-|android.support.v7.app.ActionBarActivity | MAMActionBarActivity |
-
+|android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
 
 ### <a name="renamed-methods"></a>Nytt namn på metoder
 
 
 I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (vanligtvis med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `onCreate()` och anropa `super.onCreate()`, måste `Activity` åsidosätta `onMAMCreate()` och anropa `super.onMAMCreate()`. Java-kompilatorn ska framtvinga de slutliga begränsningarna för att förhindra oavsiktlig åsidosättning av den ursprungliga metoden i stället för motsvarande MAM.
 
+### <a name="mamapplication"></a>MAMApplication
+På grund av begränsningar i MAM SDK:n **måste** du skapa en underklass av `com.microsoft.intune.mam.client.app.MAMApplication` och ange den som namnet på klassen `Application` som används i manifestet. `MAMApplication` är abstrakt och kräver en åsidosättning för `byte[] getADALSecretKey`. Javadoc om funktionen innehåller mer information om hur du implementerar den.
 ### <a name="pendingintent"></a>PendingIntent
 I stället för `PendingIntent.get*` måste du använda `MAMPendingIntent.get*`-metoden. Därefter kan du använda resulterande `PendingIntent` som vanligt.
 
@@ -256,6 +262,15 @@ boolean getIsManagedBrowserRequired();
 boolean getIsContactSyncAllowed();
 
 /**
+ * This method is intended for diagnostic/telemetry purposes only. It can be used to discover whether
+ * file encryption is in use. File encryption is transparent to the app, and the app should not need
+ * to make any business logic decisions based on this.
+ * 
+ * @return True if file encryption is in use.
+ */
+boolean diagnosticIsFileEncryptionInUse();
+
+/**
  * Return the policy in string format to the app.
  *  
  * @return The string representing the policy.
@@ -274,7 +289,8 @@ String toString();
 Om appen har en egen PIN-kod för användaren kan du inaktivera detta, om IT-administratören har konfigurerat att SDK:n ska fråga efter appens PIN-kod. Anropa följande metod för att se om IT-administratören har distribuerat appens PIN-princip till den här appen för den aktuella användaren:
 
 ```java
-MAMComponents.get(AppPolicy.class).getIsPinRequired();
+
+MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 ```
 
 ### <a name="example-determine-the-primary-intune-user"></a>Exempel: Fastställa den primära Intune-användaren
@@ -312,9 +328,9 @@ Många appar implementerar funktioner som gör att slutanvändaren kan spara fil
 Gör följande anrop för att se om principen tillämpas:
 
 ```java
-MAMComponents.get(AppPolicy.class).getIsSaveToLocationAllowed(
+MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(
 SaveLocation service, String username);
-```
+``````
 
 ... där `service` är en av följande SaveLocations:
 
@@ -344,13 +360,13 @@ Appen måste först registreras för meddelanden från SDK:n genom att skapa en 
 ```java
 @Override
 public void onCreate() {
-    super.onCreate();
-    MAMComponents.get(MAMNotificationReceiverRegistry.class)
-        .registerReceiver(
-            new ToastNotificationReceiver(),
-            MAMNotificationType.WIPE_USER_DATA);
-    }
-```
+  super.onCreate();
+  MAMComponents.get(MAMNotificationReceiverRegistry.class)
+    .registerReceiver(
+      new ToastNotificationReceiver(),
+      MAMNotificationType.WIPE_USER_DATA);
+  }
+``````
 
 ### <a name="mamnotificationreceiver"></a>MAMNotificationReceiver
 
@@ -456,9 +472,8 @@ Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appk
     |--|--|
     | Authority | Önskad miljö där AAD-konton har konfigurerats |
     | ClientID | Appens ClientID (genereras av Azure AD när appen registreras) |
-    | NonBrokerRedirectURI | En giltig omdirigerings-URI för programmet eller `urn:ietf:wg:oauth:2.0:oob` 
-    . <br><br> Konfigurera värdet som en godkänd omdirigerings-URI för din apps ClientID.
-   | SkipBroker | False |
+    | NonBrokerRedirectURI | En giltig omdirigerings-URI för appen eller `urn:ietf:wg:oauth:2.0:oob` som standard. <br><br> Konfigurera värdet som en godkänd omdirigerings-URI för din apps ClientID.
+    | SkipBroker | Falskt |
 
 
 3. **Appen integrerar ADAL, men saknar stöd för asynkron autentisering/enhetsomfattande enkel inloggning:**
@@ -797,16 +812,15 @@ Följande metoder i `MAMPolicyManager` kan användas för att ange identiteten o
 
   public static String getCurrentThreadIdentity();
 
-  /**
-   * Get the currently applicable app policy. Same as
-   * MAMComponents.get(AppPolicy.class). This method does
-   * not take the context identity into account.
+/**
+   * Get the current app policy. This does NOT take the UI (Context) identity into account.
+   * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
    */
   public static AppPolicy getPolicy();
 
   /**
-  * Get the current app policy. This does NOT take the UI (Context) identity into account.
-   * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
+  * Get the current app policy. This DOES take the UI (Context) identity into account.
+   * If the current operation has any context (e.g. an Activity) associated with it, use this function.
    */
   public static AppPolicy getPolicy(final Context context);
 
@@ -929,7 +943,33 @@ Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsänd
 
   Om en begärd identitet hanteras (använd `MAMPolicyManager.getIsIdentityManaged` för att kontrollera), men appen inte kan använda det kontot (t.ex. eftersom bl.a. e-postkonton måste konfigureras i appen först), bör identitetsväxlingen avvisas.
 
+### <a name="preserving-identity-in-async-operations"></a>Bevara identitet i asynkrona åtgärder
+Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en annan tråd. En app för flera identiteter vill se till att de här bakgrundsaktiviteterna fungerar med rätt identitet, vilket ofta är samma identitet som används av aktiviteten som skickade ut dem. MAM SDK:n innehåller `MAMAsyncTask` och `MAMIdentityExecutors` för att göra det enklare att bevara identiteten.
+#### <a name="mamasynctask"></a>MAMAsyncTask
 
+Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för AsyncTask och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Exempel:
+
+```java
+  AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
+
+    @Override
+    protected Object doInBackgroundMAM(final Object[] params) {
+        // Do operations.
+    }
+    
+    @Override
+    protected void onPreExecuteMAM() {
+        // Do setup.
+    };
+```
+
+### <a name="mamidentityexecutors"></a>MAMIdentityExecutors
+Med `MAMIdentityExecutors` kan du omsluta en befintlig instans av `Executor` eller `ExecutorService` som en `Executor`/`ExecutorService` som bevarar identiteter med metoderna `wrapExecutor` och `wrapExecutorService`. Till exempel
+
+```java
+  Executor wrappedExecutor = MAMIdentityExecutors.wrapExecutor(originalExecutor, activity);
+  ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(originalExecutorService, activity);
+```
 
   ### <a name="file-protection"></a>Filskydd
 
@@ -1122,7 +1162,7 @@ public final class MAMDataProtectionManager {
 
 ### <a name="content-providers"></a>Innehållsproviders
 
-Om appen innehåller andra företagsdata än en **ParcelFileDescriptor** via en **ContentProvider**, måste appen anropa metoden `isProvideContentAllowed(String)` i `MAMContentProvider` och skicka ägaridentitetens UPN (användarens huvudnamn) för innehållet. Om den här funktionen returnerar false, returneras *kanske inte* innehållet till anroparen. Filbeskrivningar som returneras via en innehållsprovider hanteras automatiskt baserat på filidentiteten.
+Om appen innehåller andra företagsdata än en **ParcelFileDescriptor** via en **ContentProvider**, måste appen anropa metoden `isProvideContentAllowed(String)` i `MAMContentProvider` och skicka ägaridentitetens UPN (användarens huvudnamn) för innehållet. Om den här funktionen returnerar false *får inte* innehållet returneras till anroparen. Filbeskrivningar som returneras via en innehållsprovider hanteras automatiskt baserat på filidentiteten.
 
 ### <a name="selective-wipe"></a>Selektiv rensning
 
@@ -1342,6 +1382,8 @@ För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/),
 
  Filen AndroidManifest.xml i Intune App SDK innehåller **MAMNotificationReceiverService**, som måste vara en exporterad tjänst för att företagsportalen ska kunna skicka meddelanden till en kompatibel app. Tjänsten kontrollerar anroparen för att säkerställa att bara Företagsportal har tillåtelse att skicka meddelanden.
 
+### <a name="reflection-limitations"></a>Reflektionsbegränsningar
+Vissa MAM-grundklasser (t.ex. MAMActivity, MAMDocumentsProvider) innehåller metoder (baserade på de ursprungliga Android-grundklasserna) som använder typer av parametrar eller returer som endast finns ovanför vissa API-nivåer. Därför kanske det inte alltid är möjligt att använda reflektion för att räkna upp alla metoder för appkomponenter. Den här begränsningen är inte begränsad till MAM. Det är samma begränsning som skulle gälla om appen själv implementerat metoderna från Android-grundklasserna.
 ## <a name="expectations-of-the-sdk-consumer"></a>Förväntningar på SDK-konsumenten
 
 Intune SDK använder kontraktet som tillhandahålls av Android-API:et, även om feltillstånd kan utlösas oftare på grund av principtillämpning. Följande Android-rekommendationer minskar risken för fel:

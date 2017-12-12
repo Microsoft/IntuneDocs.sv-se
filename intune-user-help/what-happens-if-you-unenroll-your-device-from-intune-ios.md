@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: dfcb60d16a4412c66c81db53ed5bbc9dd2b46bba
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: b7568a658a655b5c061ced64449d17ee6f6053ae
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Vad händer om du avregistrerar din iOS- eller macOS-enhet från Intune?
 
@@ -42,4 +42,4 @@ När du avregistrerar din iOS- eller macOS-enhet från Intune:
 
 Anvisningar för hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune](unenroll-your-device-from-intune-ios.md).
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

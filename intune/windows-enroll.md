@@ -5,7 +5,7 @@ description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter."
 keywords: 
 author: nathbarn
 manager: nathbarn
-ms.date: 11/08/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02563b85a6bcac12c60537af4a998b09bca3b6ee
-ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
+ms.openlocfilehash: 0c4c245829a7819c9427a8ebe8ad9e166b58da97
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="enroll-windows-devices"></a>Registrera Windows-enheter
 
@@ -78,6 +78,15 @@ Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte ve
 På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. Välj **Registrera enheter** > **Windows-registrering** på Intune-bladet. Ange webbadressen till företagswebbplatsen i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Berätta för användare hur de ska registrera Windows-enheter
-Berätta för användarna hur de ska registrera sina Windows-enheter och vad de kan förvänta sig när de har registrerat sig för hantering. Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Du kan även be användarna granska [vad IT-administratören kan se på enheten](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+Berätta för användarna hur de ska registrera sina Windows-enheter och vad de kan förvänta sig när de har registrerat sig för hantering.
+
+> [!NOTE]
+> Slutanvändare måste ansluta till webbplatsen för företagsportalen via Microsoft Edge för att se Windows-appar som du tilldelat för specifika Windows-versioner. Andra webbläsare, inklusive Google Chrome, Mozilla Firefox och Internet Explorer har inte stöd för den här typen av filtrering.
+
+Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Du kan även be användarna granska [vad IT-administratören kan se på enheten](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
 
 Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](end-user-educate.md).
+
+## <a name="next-steps"></a>Nästa steg
+
+- [Tänk på detta när du hanterar Windows-enheter med Intune i Azure](/intune-classic/deploy-use/intune-on-azure.md).

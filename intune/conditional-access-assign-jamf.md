@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/21/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dd84812a7e7dcf83f01c8d4d2b613706f7700775
-ms.sourcegitcommit: b2a6678a0e9617f94ee8c65e7981211483b30ee7
+ms.openlocfilehash: 06cc4d70b30ec92946baefbc020aa4cda28b0c88
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
@@ -40,28 +40,38 @@ Du kan använda Azure Active Directory och Microsoft Intunes principer för vill
 1. Öppna Microsoft Azure och gå till **Intune** > **enhetsefterlevnad** > **principer**. Du kan skapa principer för macOS, inklusive att välja en serie åtgärder (t.ex. skicka varnings-e-post) till icke-kompatibla användare och grupper.
 2. Sök efter önskade grupper och tillämpa principer för dem.
 
-## <a name="require-the-company-portal-app-for-macos"></a>Kräv företagsportalappen för macOS
+## <a name="deploy-the-company-portal-app-for-macos-in-jamf-pro"></a>Distribuera företagsportalappen för macOS i Jamf Pro
 
-1. På en macOS-enhet går du till https://aka.ms/macoscompanyportal för att hämta den aktuella versionen av företagsportalappen för macOS.
+Det finns två sätt att distribuera företagsportalappen för macOS i Jamf Pro:
+
+- Gör distributionen av företagsportalappen tillgänglig i Jamf Self Service, eller,
+- Som en bakgrundsinstallation så att användarna följer anvisningarna nedan:
+
+1. På en macOS-enhet laddar du ned den aktuella versionen av [företagsportalappen för macOS](https://go.microsoft.com/fwlink/?linkid=862280).
 2. Öppna Jamf Pro och gå till **datorhantering** > **paket**.
 3. Skapa ett nytt paket med företagsportalappen för macOS och klicka sedan på **spara**.
 4. Öppna **datorer** > **principer** och välj **ny**.
-5. Använd nyttolasten **allmänt** för att konfigurera inställningar för principen, inklusive utlösare och körningsfrekvens.
+5. Använd nyttolasten **Allmänt** för att konfigurera inställningar för principen. Inställningarna bör vara: 
+   - Utlösare: välj **Registreringen är klar** och **Återkommande incheckning**
+   - Körningsfrekvens: välj **En gång per dator**
 6. Välj nyttolasten **paket** och klicka på **konfigurera**.
 7. Klicka på **lägg till** för att välja paketet med företagsportalappen.
 8. Välj **installera** från popup-menyn **åtgärd**.
 9. Konfigurera inställningarna för paketet.
 10. Klicka på fliken **omfång** för att ange vilka datorer företagsportalappen ska installeras på. Klicka på **Spara**. Principen kommer att köra begränsade enheter nästa gång den markerade utlösaren inträffar på datorn och uppfyller villkoren i nyttolasten **allmänt**.
 
-## <a name="direct-your-users-to-register-jamf-pro-managed-devices-with-azure-active-directory"></a>Instruera användarna att registrera Jamf Pro-hanterade enheter med Azure Active Directory
+## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Skapa en princip i Jamf Pro för att få användarna att registrera sina enheter med Azure Active Directory
 
 > [!NOTE]
 > Du behöver [distribuera företagsportalen](conditional-access-assign-jamf.md#require-the-company-portal-app-for-macos) för macOS innan du går igenom nästa steg.  
 
-Slutanvändare behöver starta företagsportalappen via Jamf Self Service att registrera enheten med Azure AD som en enhet som hanteras av Jamf Pro.
+Slutanvändare behöver starta företagsportalappen via Jamf Self Service att registrera enheten med Azure AD som en enhet som hanteras av Jamf Pro. Detta kräver att slutanvändarna vidtar åtgärder. Vi rekommenderar att du [kontaktar användaren](end-user-educate.md) via e-post, Jamf Pro-meddelanden eller på andra sätt för att be dem att klicka på knappen i Jamf Self Service.
+
+> [!WARNING]
+> Företagsportalappen måste startas från Jamf Self Service för att påbörja enhetsregistrering. <br><br>Om du startar företagsportalappen manuellt (t.ex. från Program eller mappen Nedladdningar) registreras inte enheten. Om en slutanvändare startar företagsportalen manuellt visas varningen "AccountNotOnboarded".
 
 1. I Jamf Pro, går du till **datorer** > **principer** och skapar en ny princip för enhetsregistrering.
-2. Konfigurera nyttolasten **villkorlig åtkomst**, inklusive utlösare och körningsfrekvens. Ställ in prioriteten till **efter**.
+2. Konfigurera nyttolasten **Microsoft Intune-integrering**, inklusive utlösare och körningsfrekvens. Ställ in prioriteten till **efter**.
 3. Klicka på fliken **omfång** och begränsa principen till alla målriktade enheter.
 4. Klicka på fliken **självbetjäning** för att göra principen tillgänglig i Jamf Self Service. Inkludera principen i kategorin **enhetsefterlevnad**. Klicka på **Spara**.
 

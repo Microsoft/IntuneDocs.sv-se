@@ -16,15 +16,15 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50b4b9c8399e854e2f5961f6711090778b41ba37
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 656c2891a0f3c1b54d419f9d5dc3138126f7dc96
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="fix-common-issues-with-your-ios-device"></a>Åtgärda vanliga problem med din iOS-enhet
 
-Ibland kan problem uppstå med en iOS-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Ibland kan problem uppstå med en iOS-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 - [Jag behöver återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
 - [Jag behöver skicka fel till företagets support](send-errors-to-your-it-admin-ios.md)

@@ -14,11 +14,11 @@ ms.assetid: 365f72a6-564d-4cbd-8f0a-70ec80b6e253
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 5feec496d0f7952b1ae35ed1d905cbfc526bc387
-ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
+ms.openlocfilehash: 80cd4b97aafd3307fee310ea742d82a5ff215680
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="set-or-change-your-passcode"></a>Ange eller ändra ditt lösenord
 
@@ -41,4 +41,4 @@ Om du har problem med att ange ett lösenord som uppfyller kraven för lösenord
 2. Tryck på **Ändra lösenord** och ange ditt gamla lösenord.
 3. Ange ett nytt lösenord som uppfyller kraven från företagets support och verifiera det sedan genom att ange det igen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
