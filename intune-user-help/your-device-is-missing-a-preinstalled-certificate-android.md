@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 52070573560b798044c929b0fa9476cf1f7bbf89
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: d6bd59800b13539558fbf56afab9fe5293f3e5bd
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Din Androidenhet saknar ett certifikat som normalt är installerat på telefonen
 
@@ -42,9 +42,9 @@ Du kan åtgärda det här problemet genom att hämta nödvändiga certifikat fr�
 
 5. Stäng din webbläsare och företagsportalappen.
 
-6. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Om du fortfarande inte kan använda företagsportalappen ska du kontakta företagets support med hjälp av informationen på [företagsportalens webbplats](https://portal.manage.microsoft.com) för ytterligare instruktioner.
+6. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Om du fortfarande inte kan använda företagsportalappen ska du kontakta företagets support med hjälp av informationen på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) för ytterligare instruktioner.
 
 >[!NOTE]
 > Om installationen av det här certifikatet inte löser problemet och du ser meddelandet "certifikat saknas" måste du vidta ytterligare åtgärder för att[installera det saknade certifikatet](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

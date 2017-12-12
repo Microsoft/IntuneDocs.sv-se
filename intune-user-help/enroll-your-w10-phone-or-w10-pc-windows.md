@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8873fcd3c6cf7f5490f1cd2f85e0182e21dcd30d
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: a7317a60a9640df0b95444a2b032c12b3ca9f20b
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Registrera dina Windows 10-enheter i Intune
 
@@ -49,4 +49,4 @@ Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i I
 3.  Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.        
 4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

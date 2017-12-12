@@ -14,11 +14,11 @@ ms.assetid: eaccd9c0-cd46-48e2-8675-4c022c74f672
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 6b435156b89bf0ba55e83158c2c5ac62c590cdf4
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 32bd0436c6d883bb351a4e00bda181ab820a94d4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-need-to-resolve-a-threat-found-by-zimperium-zips"></a>Du måste åtgärda ett hot som Zimperium zIPS har påträffat
 
@@ -30,7 +30,7 @@ Zimperium zIPS har hittat ett potentiellt hot på enheten och du måste åtgärd
 
 Om det finns ett virus eller andra säkerhetshot på den registrerade enheten och du försöker få åtkomst till ditt e-postkonto eller filer hos företaget, får du ett meddelande från Zimperium zIPS om att vidta åtgärder.
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com) där du får anvisningar om hur du kan lösa problemet.
+Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) där du får anvisningar om hur du kan lösa problemet.
 
 ## <a name="example-of-an-app-that-zimperium-zips-sees-as-a-threat"></a>Exempel på en app som Zimperium zIPS uppfattar som ett hot
 
@@ -38,4 +38,4 @@ Om du har installerat en app som Zimperium zIPS betraktar som ett hot får du en
 
 Avinstallera i så fall appen så får du omedelbart åtkomst till företagets e-post och information igen. Om du inte avinstallerar appen har du ingen åtkomst till e-post och information förrän du avinstallerar appen.
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
