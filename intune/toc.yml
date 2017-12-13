@@ -552,6 +552,8 @@
   items:
     - name: Hjälpa användare att felsöka problem
       href: help-desk-operators.md
+    - name: Granskningsloggar för Intune-aktiviteter
+      href: monitor-audit-logs.md
     - name: Använda Intune-informationslagret
       href: reports-nav-create-intune-reports.md
       items:
