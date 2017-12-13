@@ -15,15 +15,15 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 976b58fcc7835b0992c5d53934642bd4fedb5b50
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: dd211b9dd8b09f2e3eab570eab48664fab55e3df
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Åtgärda vanliga problem med din Android-enhet
 
-Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 - [Kontrollera efterlevnad på din Android-enhet](check-compliance-on-your-device-android.md)
 - [Hjälp företagets support att åtgärda enhetsproblem genom att använda utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)

@@ -1,11 +1,11 @@
 ---
-title: "Det verkar som om din Android-enhet är krypterad"
+title: "Det verkar som om din Android-enhet är krypterad | Microsoft Docs"
 description: 
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/12/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: be68e330c2bd2800ea68fd83845b71e3b257e785
-ms.sourcegitcommit: 751587b1c6ed15877152d770772748e042c1e3ff
+ms.openlocfilehash: f9c91c85b4a93fb211b5cd278dd82277a58cb08e
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -38,7 +38,7 @@ På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att 
 
 ### <a name="downgrade-your-version-of-android"></a>Nedgradera din version av Android
 
-Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 ### <a name="encrypt-the-entire-device"></a>Kryptera hela enheten
 
@@ -69,5 +69,7 @@ Om du har någon av följande enheter kan det här problemet uppstå om du inte 
 
 Det går inte att åtgärda det här problemet på enheterna nedan. Du kan behöva använda en annan enhet för att komma åt företagsresurser. 
 
-- [Huawei Mate 8](http://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
+- [OPPO-enheter](http://www.oppo.com/en/smartphones)
+- [Vivo-enheter](https://www.vivo.co.in)
 - [Xiaomi Mi-telefoner](https://xiaomi-mi.com/mi-smartphones/)

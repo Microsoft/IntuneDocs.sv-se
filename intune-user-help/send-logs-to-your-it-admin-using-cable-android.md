@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f6df910d60498b0ed272ebeb86d54273e8c6dd1a
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 6444c129869db467b582593677b20cd4de8f319d
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Skicka loggar till företagets support via en USB-kabel
 
 Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
-> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://portal.manage.microsoft.com) eller i företagsportalappen.
+> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) eller i företagsportalappen.
 
 1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
 
@@ -37,4 +37,4 @@ Om du får ett felmeddelande när du använder företagsportalappen på en Andro
 
 4.  Välj filerna och bifoga dem som bilaga till ett e-postmeddelande. Skicka detta e-postmeddelande till företagets support.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

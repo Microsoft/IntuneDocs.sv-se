@@ -6,7 +6,7 @@ keywords:
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.date: 06/28/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf0fc665ef70950b292241751d56122ebc9b0912
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: ecb5a310e8b869deb493bc5554029d641ba419c3
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du appar som du har köpt från Microsoft Store för företag med Microsoft Intune
 
@@ -31,6 +31,7 @@ I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan 
 * Appar som är synkroniserade visas i administrationskonsolen för Intune. Du kan tilldela de här apparna på samma sätt som andra appar.
 * Du kan spåra hur många licenser som är tillgängliga och hur många som används i administrationskonsolen för Intune.
 * Intune blockerar tilldelning och installation av appar om det inte finns tillräckligt många tillgängliga licenser.
+* Appar som hanteras av Windows Store för företag återkallar automatiskt licenser när en användare lämnar företaget eller när administratören tar bort användaren och användarenheterna.
 
 ## <a name="before-you-start"></a>Innan du börjar
 

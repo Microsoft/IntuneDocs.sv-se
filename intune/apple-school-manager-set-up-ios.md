@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: afb3aeff7a7c6cc481d24bac3a61de0816b4d34b
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: 5aaefd6bfbff3394b4c0f79948ac23e32536f1e3
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -136,9 +136,10 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har tilldelats behörighet att hantera Apple School Manager-enheterna kan du synkronisera Intune med Apple-tjänsten och se dina hanterade enheter i Intune.
 
-1. I Intune i Azure Portal väljer du **Enhetsregistrering** och därefter **Apple-registrering**.
-2. Under **Registreringsprogramenheter** väljer du **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
-3. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
+1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
+
+  ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/enrollment-program-device-sync.png)
+2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Skärmbild av bladet Synkronisera där länken Begär synkronisering håller på att väljas.](./media/enrollment-program-device-request-sync.png)
 

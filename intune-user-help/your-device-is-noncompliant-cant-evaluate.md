@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d61887174830c9892c854d7b067fafe6fc50da59
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 31e491384b4605f6a5e5ce9a04b258f3cef93671
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-device-is-noncompliant"></a>Enheten är ej kompatibel
 
@@ -28,4 +28,4 @@ Enheten är ej kompatibel med minst en av organisationens säkerhetsprinciper, m
 
 Tryck på **Kontrollera efterlevnad** i företagsportalappen. Företagsportalappen visar dig sedan vad som är orsaken till att enheten inte är kompatibel.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

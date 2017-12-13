@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2fe506fc871dd331240823deff5045d2ed5e4dd1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 19f121e8dc1f8604f4eee77f1a6da7d3b4d5496c
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-do-i-find-the-serial-number-on-my-device"></a>Hur hittar jag serienumret på enheten?
 
@@ -30,4 +30,4 @@ Serienumret för enheten är en unik identifierare som kan hjälpa företagets s
 2. Tryck på appen __Inställningar__ och sedan __Allmänt__.
 3. Tryck på __Om__ och bläddra till __Serienummer__.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

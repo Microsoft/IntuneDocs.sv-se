@@ -14,11 +14,11 @@ ms.assetid: 9e176e10-72fd-42fe-94ef-b41d57a4914f
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 288feedffe36794ab6e1727165cbac2c5e2a9fe8
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 1bff6a17a74de310833b9d19afd471afd0afc504
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Lös ett hot som har påträffas av en Mobile Threat Defense-app
 
@@ -37,5 +37,5 @@ Om du har installerat en app som Mobile Threat Defense uppfattar som ett hot, s�
 
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 

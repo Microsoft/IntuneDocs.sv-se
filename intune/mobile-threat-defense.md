@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/03/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f928b214642c5954561f2c56b30b71b36ecd57eb
-ms.sourcegitcommit: 012f262660fa9fb321ac3470f5dba165b8e5256a
+ms.openlocfilehash: 16402b30895e61d9a4ff8393fd4d4c6efa061e9e
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense-integrering med Intune
 
@@ -37,6 +37,22 @@ Tidigare har företag varit förutseende med att skydda datorer mot angrepp, med
 Anslutningsprogrammet skyddar företagsresurser genom att skapa en kanal för kommunikation mellan Intune och din valda leverantör av skydd mot mobila hot. Intune Mobile Threat Defense-partner erbjuder intuitiva program som är enkla att distribuera för mobila enheter och som aktivt skannar och analyserar hotbilden mot enheten för information som de sedan delar med Intune i syfte att rapportera eller orsaka åtgärder. 
 
 Om en ansluten app för skydd mot mobila hot rapporterar till leverantören av skydd mot mobila hot att en telefon i nätverket är ansluten till ett nätverk som är sårbart för man in the middle-angrepp så delas den här informationen och kategoriseras på en lämplig risknivå (låg/medium/hög). Den här risknivån kan sedan jämföras med din konfigurerade tillåtna risknivå i Intune för att avgöra om åtkomst till vissa resurser bör återkallas medan enheten är komprometterad.
+
+## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Vilka data samlar Intune in för skydd mot mobilhot?
+
+Intune samlar in information om appinventering från både personliga och företagsägda enheter och gör den tillgänglig för leverantörer av skydd mot mobilhot (MTD) att hämta, till exempel Lookout for Work. Du kan samla in en appinventering från användare av enheter med iOS 11+.
+
+**Appinventering**  
+Inventeringar från både företagsägda iOS 11+ och personligt ägda enheter skickas till MTD-leverantören. Data i appinventeringen omfattar:
+
+ - App-ID
+ - Appversion
+ - Kort appversion
+ - Appnamn
+ - Storlek på appsamling
+ - Dynamisk appstorlek
+ - Om appen har verifierats eller inte
+ - Om appen är hanterad eller inte
 
 ## <a name="sample-scenarios"></a>Exempelscenarier
 

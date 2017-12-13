@@ -6,7 +6,7 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.date: 10/3/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3cf11c53a5f1ce78dda9c703da32270b0b07874a
-ms.sourcegitcommit: 001577b700f634da2fec0b44af2a378150d1f7ac
+ms.openlocfilehash: ab0456b58704f17d3dc5885ab5ae6b902c9ef152
+ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -125,13 +125,13 @@ När du lägger till de appar som du vill skydda med RIA måste du använda ett 
 
 ### <a name="before-you-begin"></a>Innan du börjar
 
-WIP-utbildning är en rapport som gör det möjligt att övervaka okända WIP-appar. De okända apparna är de som inte distribueras av organisationens IT-avdelning. Du kan exportera dessa appar från rapporten och lägga till dem i dina WIP-principer och därigenom undvika avbrott i produktivitet innan de genomdriver WIP-läget för att dölja åsidosättning.
+WIP-utbildning är en rapport som gör det möjligt att övervaka okända WIP-appar. De okända apparna är de som inte distribueras av organisationens IT-avdelning. Du kan exportera de här apparna från rapporten och lägga till dem i dina WIP-principer för att undvika avbrott i produktivitet innan de framtvingar WIP i blockeringsläge.
 
-Vi rekommenderar att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över tillåtna appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **Dölj åsidosättningar**.
+Vi rekommenderar att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över tillåtna appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **blockera**.
 
 ### <a name="what-are-the-protection-modes"></a>Vad är skyddslägen?
 
-#### <a name="hide-overrides"></a>Dölj åsidosättningar
+#### <a name="block"></a>Blockera
 WIP söker efter olämpliga datadelningsmetoder och stoppar från att utföra åtgärden. Detta kan inkludera delning av information till appar som inte skyddas av företaget, och delning av företagsdata mellan andra personer och enheter utanför organisationen.
 
 #### <a name="allow-overrides"></a>Tillåt åsidosättningar

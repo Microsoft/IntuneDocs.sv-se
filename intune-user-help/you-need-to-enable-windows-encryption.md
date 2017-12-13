@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a91b01f21d6f42f2f216443b146dbf69c3974bd7
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 473ab6a506cffef719133f5d4a262c6ceb471878
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="you-need-to-enable-encryption"></a>Du måste aktivera kryptering
 
@@ -28,4 +28,4 @@ När du krypterar en enhet omsluter du informationen på den i ett lager med sky
 
 BitLocker är programvara som krypterar enheten och hjälper till att skydda data. Följ [dessa anvisningar](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d) för hur du aktiverar BitLocker på Windows 10-enheter.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

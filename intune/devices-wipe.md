@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41bfb62f90965288d73948650b6935434c986d92
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
+ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
@@ -39,7 +39,21 @@ Du kan ta bort enheter från Intune som inte längre behövs, som ska få ett ny
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. På bladet **Enheter och grupper** väljer du **Alla enheter**.
 4. Välj namnet på den enhet som du vill fabriksåterställa.
-5. På bladet som visar enhetens namn väljer du **Fabriksåterställning** och väljer sedan **Ja** för att bekräfta.
+5. På bladet som visar enhetens namn väljer du **Fabriksåterställning**
+6. Det finns ytterligare ett alternativ för att ”Behålla registreringstillståndet och användarkontot” för Windows 10 version 1709 eller senare. 
+    
+    |Behålls efter en fabriksåterställning|Behålls inte|
+    | -------------|------------|
+    |Användarkonton kopplade till enheten|Användarfiler|
+    |Datortillstånd \(domänansluten, ansluten till Azure Active Directory)| Användarinstallerade appar \(store och Win32-appar)|
+    |MDM-registrering|Enhetsinställningar som inte är standard|
+    |Installerade OEM-appar \(store och Win32-appar)||
+    |Användarprofil||
+    |Användardata utanför användarprofilen||
+    |Automatisk inloggning för användare|| 
+    
+         
+7. Bekräfta fabriksåterställningen genom att klicka på **Ja**.
 
 Om enheten är på och ansluten tar det mindre än 15 minuter att sprida fabriksåterställningen över alla enhetstyper.
 

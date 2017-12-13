@@ -1,5 +1,5 @@
 ---
-title: "Installera Office 365 ProPlus-appar för Windows 10-enheter med Intune"
+title: "Installera Office 365-appar på mobila enheter med Intune"
 titlesuffix: Azure portal
 description: "Så här använder du Intune för att underlätta installation av Office 365-appar på Windows 10-enheter."
 keywords: 
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4e3ad7b68be723e0cab7b541b0ae7e3cc858c99
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 7f1958e4a0fb5aeba3225ee7ea5fae1e7fb39db3
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
 
-Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda app i listan med appar i Intune-konsolen.
+Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -137,7 +137,3 @@ I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 ## <a name="next-steps"></a>Nästa steg
 
 Nu kan du tilldela apparna till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).
-
-             
-
-

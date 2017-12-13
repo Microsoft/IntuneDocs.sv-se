@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1ea734e83cfab3fff22c775764ac9814012d52b6
-ms.sourcegitcommit: 70dc0aaad51b447e173b663d1092d993dc81ffdd
+ms.openlocfilehash: 35bf193563deb34ac59df245c622bbc011d80b76
+ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2017"></a>Den tidiga utgåvan för Microsoft Intune – December 2017
 
@@ -60,9 +60,6 @@ Med den här ändringen kan IT-administratörer se vilka NAC-hanterade enheter s
 
 ### <a name="new-ios-device-action------1244701---"></a>Ny iOS-enhetsåtgärd   <!-- 1244701 -->
 Du kan stänga av iOS 10.3-övervakade enheter. Den här åtgärden stänger av enheten omedelbart utan varning till slutanvändaren. Åtgärden **stäng ner (endast övervakat)** finns i enhetsegenskaperna när du väljer en enhet i arbetsbelastningen **enhet**.
-
-### <a name="palo-alto-vpn-now-supported----1333680-eeready---"></a>Palo Alto VPN stöds nu <!-- 1333680 eeready -->
-Listan **anslutningstyp** innehåller Palo Alto VPN när du konfigurerar din grundläggande VPN.
 
 ### <a name="multiple-connector-support-for-scep-and-pfx-certificate-handling----1361755-eeready---"></a>Stöd för flera anslutningsappar för hantering av SCEP- och PFX-certifikat <!-- 1361755 eeready -->
 Kunder som använder den lokala NDES-anslutningsappen för att leverera certifikat till enheter kommer att kunna konfigurera flera anslutningsappar i en enda klient.

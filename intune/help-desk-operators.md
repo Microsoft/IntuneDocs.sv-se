@@ -14,17 +14,19 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: f5678752830e2c4c9afbe75c9c6891d525eec34a
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: dfe6e552917a006175e394b8c569b1000a002015
+ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users"></a>Använd felsökningsportalen för att hjälpa användare
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 I felsökningsportalen kan supportansvariga och Intune-administratörer se användarinformation för att tillgodose användarnas begäran om hjälp. Organisationer som har en supportavdelning kan tilldela rollen **supportavdelning** till en grupp användare. Rollen som supportansvarig kan nu använda **felsökningsbladet**.
+
+Bladet **Felsökning** visar nu även problem med användarregistreringen. Information om problemet och förslagna lösningar kan hjälpa administratörer och medarbetare på supportavdelningen att felsöka problem. Vissa problem med registreringen inte fångas upp, och vissa fel kanske inte har några reparationsförslag. 
 
 Anvisningar om att lägga till rollen supportansvarig finns i [Rollbaserad administrationskontroll (RBAC) med Intune](/intune/role-based-access-control)
 
@@ -33,7 +35,7 @@ När en användare kontaktar supporten om ett tekniskt problem i Intune kan supp
 - Användarstatus
 - Tilldelningar
 - Efterlevnadsproblem
-- Enheten svarar inte
+- Enheten kan inte
 - Enheten saknar VPN- eller Wi-Fi-inställningar
 - Appinstallationsfel
 

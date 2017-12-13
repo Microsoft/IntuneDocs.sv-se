@@ -14,11 +14,11 @@ ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: 1b5a49c4bb29f5511dc13b7d12928b11fd98b2de
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: 6cfc144b188b1701a2e5e599af43d12c98d48496
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work
 
@@ -34,7 +34,7 @@ Om det finns ett virus eller andra säkerhetshot på den registrerade enheten oc
 
 ![Lookout for Work-felmeddelande med länk till företagsportalens webbplats](./media/mtd-go-to-device-management-portal-android.png)
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com), där du får anvisningar om hur du kan lösa problemet.
+Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog), där du får anvisningar om hur du kan lösa problemet.
 
 ## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Exempel på en app som Lookout for Work uppfattar som ett hot
 
@@ -46,5 +46,5 @@ Om du ser något som liknar detta trycker du på appnamnet som visas längst upp
 
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 

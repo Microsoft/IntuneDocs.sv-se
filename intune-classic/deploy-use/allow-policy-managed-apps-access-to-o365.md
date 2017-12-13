@@ -15,17 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7ad33ba7020f418f4894a689d5d66a74e4b8c10e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 78b5d58df44252d1f3916c1d2a2ea02fcb1a10e2
+ms.sourcegitcommit: 82088d297eef629e3da6011681ead442ae7e25f7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="allow-only-mobile-apps-that-support-intune-app-protection-policies-to-access-office-365-services"></a>Tillåt bara åtkomst till Office 365-tjänster för mobilappar som stöder Intune-principer för appskydd
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
-[Intune-appskyddsprinciper](protect-apps-and-data-with-microsoft-intune.md) hjälper dig att skydda företagets data på enheter som är registrerade för hantering i Intune. Du kan även använda appskyddsprinciper på **medarbetares enheter som inte har registrerats för hantering i Intune**.  Även om du inte hanterar enheten i det här fallet behöver du fortfarande se till att företagets data och resurser är skyddade. Med hjälp av appbaserad villkorlig åtkomst med MAM kan du skapa en princip som endast tillåter att mobila appar som stöder Intunes appskyddsprinciper får åtkomst till O365-tjänster som Exchange Online.
+[Intune-appskyddsprinciper](protect-apps-and-data-with-microsoft-intune.md) hjälper dig att skydda företagets data på enheter som är registrerade för hantering i Intune. Du kan även använda appskyddsprinciper på **medarbetares enheter som inte har registrerats för hantering i Intune**.  Även om du inte hanterar enheten i det här fallet behöver du fortfarande se till att företagets data och resurser är skyddade. Med hjälp av appbaserad villkorlig åtkomst med MAM, kan du skapa en princip som endast tillåter att mobila appar som stöder Intunes appskyddsprinciper får åtkomst till O365-tjänster som Exchange Online.
 
 Till exempel kan du genom att bara tillåta **Microsoft Outlook-appen** att få åtkomst till Exchange Online **blockera inbyggda e-postappar på iOS och Android**, som inte har dataskydd från Intune MAM-principer, från att hämta e-post från **Exchange Online**. Du kan också blockera mobilappar som saknar stöd för Intune MAM från åtkomst till **SharePoint Online**.
 
@@ -38,7 +38,7 @@ Beskrivning av förkortningarna som används i diagrammen:
 * **EAS**: Exchange Active Sync
 
 ## <a name="prerequisites"></a>Förutsättningar
-**Innan** du kan skapa en appbaserad princip för villkorlig åtkomst måste du ha en **Enterprise Mobility + Security- eller Azure Active Directory Premium-prenumeration**, och användarna måste ha licens för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+**Innan** du kan skapa en appbaserad princip för villkorlig åtkomst måste du ha en **prenumeration på Enterprise Mobility + Security eller Azure Active Directory Premium** och användarna måste vara licensierade för EMS eller Azure AD. Mer information finns på [sidan med priser för Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) eller [sida med priser för Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 
 ## <a name="supported-apps"></a>Appar som stöds

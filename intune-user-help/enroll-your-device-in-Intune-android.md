@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 621468db51e7e6172d142501a4637794e4cb57b8
-ms.sourcegitcommit: 53a1f5226d1e1172f013a1b192321dde610b2d6c
+ms.openlocfilehash: 7a90ae7db1141b40934648c951276e3f4d43bc05
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrera en Android-enhet i Intune
 
@@ -92,7 +92,7 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
     Det är viktigt att komma ihåg att dessa åtgärder vidtas av säkerhetsskäl. Företagets support försöker inte inkräkta på din integritet eller radera din information utan anledning, utan vill se till att företagets data förblir säkra.
 
-    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta företagets support med hjälp av kontaktinformationen på [företagsportalwebbplatsen](https://portal.manage.microsoft.com) om du har frågor som är specifika för användningen i din organisation.
+    Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta företagets support med hjälp av kontaktinformationen på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog) om du har frågor som är specifika för användningen i din organisation.
 
 12.  Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.
 
@@ -129,4 +129,4 @@ Innan du försöker installera företagsappar besöker du **Inställningar** &gt
 
 Om du får ett felmeddelande när du försöker registrera enheten i Intune kan du [skicka registreringsfel till företagets support](send-enrollment-errors-to-your-it-admin-android.md).
 
-Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

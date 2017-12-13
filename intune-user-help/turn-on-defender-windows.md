@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 446b395aab311d13ebc7ac6b8c3ed7c740070729
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: d2a7cd5cc4c201a73570f73892563463cb0bdcc7
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Aktivera Windows Defender för att komma åt företagets resurser
 
@@ -48,4 +48,4 @@ Kontrollera att realtidsskydd är aktiverat genom att gå till **Start** och sö
 
 Kontrollera att antivirusdefinitionerna är uppdaterade genom att gå till **Start** och söka efter **Windows Defender Säkerhetscenter**. Välj **Skyddsuppdateringar** och **Sök efter uppdateringar** för att se till att enheten har ett aktuellt skydd mot virus. Om det här alternativet inte visas följer du stegen i [Starta realtidsskydd](turn-on-defender-windows.md#turn-on-real-time-protection)
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

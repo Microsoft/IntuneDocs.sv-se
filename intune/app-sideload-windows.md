@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 3567f26053a235c5a5af761829f043e0db2f79b5
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 904041ba4936917dc976fd0a6de869e931927c2d
+ms.sourcegitcommit: f9bfdaed6037bd76f8715fa7ca15a3457d26370a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -192,8 +192,9 @@ Så här registrerar och distribuerar du appen:
 
 |Parameter | Beskrivning|
 | ------------- | ------------- |
-|InputWin10AppxBundle |Sökvägen till platsen där appxbundle-källfilen finns |
-|OutputWin10AppxBundle |Sökvägen för utdata för den signerade appxbundle-filen.  Win81Appx – Sökvägen till den plats där företagsportalsappen för Windows 8.1 eller Windows Phone 8.1 (. APPX) finns.|
+|InputWin10AppxBundle |Sökvägen till platsen där appxbundle-källfilen finns. |
+|OutputWin10AppxBundle |Sökvägen för utdata för den signerade appxbundle-filen. |
+|Win81Appx | Sökvägen till den plats där företagsportalsappen för Windows 8.1 eller Windows Phone 8.1 (. APPX) finns.|
 |PfxFilePath |Sökvägen till filen för Symantec Enterprise Mobile Code Signing Certificate (.PFX). |
 |PfxPassword| Lösenordet för Symantec Enterprise Mobile Code Signing Certificate. |
 |PublisherId |Företagets publicerings-ID. Om det ej finns, används ämnes-fältet i Symantec-certifikatet med mobil kodsignering för företag.|
