@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 21d9e6678c9981b3c1d918f337322d50aa0fecb5
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: dc363dbf6f9153401c510594358b905643647869
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Ett befintligt e-postkonto för företag hittades
 
@@ -34,4 +34,4 @@ Du har redan ett e-postkonto med din organisation eller ditt företag och nu vil
 
 3.  Vänta en stund så att de nya e-postinställningarna kan börja gälla automatiskt på enheten.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

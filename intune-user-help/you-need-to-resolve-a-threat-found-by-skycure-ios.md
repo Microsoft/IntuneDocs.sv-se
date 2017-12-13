@@ -14,11 +14,11 @@ ms.assetid: b40595f0-a399-4aa1-aa6f-344c2a1cb883
 searchScope: User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: a80ab4b22aa7ace1b6df53722c5fdfaf44134e0d
-ms.sourcegitcommit: 668b408819c75ba5e827e36974935aafaf85871e
+ms.openlocfilehash: ef3b94251b324ed95d127cde5a58517747b3ea0b
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Lösa ett hot som hittas av Symantec Endpoint Protection Mobile
 
@@ -34,7 +34,7 @@ Om det finns ett virus eller andra säkerhetshot på den registrerade enheten oc
 
 ![Skycure-felmeddelande med länk till företagsportalens webbplats](./media/mtd-go-to-device-management-portal-android.png)
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com), där du får anvisningar om hur du kan lösa problemet.
+Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog), där du får anvisningar om hur du kan lösa problemet.
 
 ## <a name="example-of-an-app-that-symantec-endpoint-protection-mobile-sees-as-a-threat"></a>Exempel på en app som Symantec Endpoint Protection Mobile ser som ett hot
 
@@ -44,5 +44,5 @@ Tryck på appnamnet som visas längst upp på skärmen och ta bort hotet genom a
 
 När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 

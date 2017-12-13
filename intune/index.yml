@@ -4,8 +4,8 @@ title: Microsoft Intune-dokumentation
 metadata:
   document_id: 99e91b60-d6a5-44a8-908f-442161fbb077
   title: Microsoft Intune-dokumentation
-  description: Kom igång snabbt med Microsoft Intune. Använd den molnbaserade tjänsten för hantering av företagsmobilitet (EMM) så att dina anställda kan vara produktiva samtidigt som företagets data skyddas.
-  keywords: 'skydda, företag, data, Azure, Intune, EMM, enhet, program, hantering'
+  description: "Kom igång snabbt med Microsoft Intune. Använd den molnbaserade tjänsten för hantering av företagsmobilitet (EMM) så att dina anställda kan vara produktiva samtidigt som företagets data skyddas."
+  keywords: "skydda, företag, data, Azure, Intune, EMM, enhet, program, hantering"
   author: arob98
   ms.author: angrobe
   manager: angrobe
@@ -13,123 +13,128 @@ metadata:
   ms.topic: article
   ms.devlang: na
   ms.service: microsoft-intune
+  ms.openlocfilehash: 13f8d1515c19ceae14d8cc99212079bf241438af
+  ms.sourcegitcommit: fc24d7eb4838b9102088dd4dcf5d1aa6b2c2e590
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 11/03/2017
 sections:
-  - items:
-      - type: markdown
-        text: "Kom igång snabbt med Microsoft Intune. Använd den molnbaserade tjänsten för hantering av företagsmobilitet (EMM) så att dina anställda kan vara produktiva samtidigt som företagets data skyddas. Intune är integrerat med Azure Active Directory för identitets- och åtkomstkontroll, samt med\_Azure Information Protection för dataskydd."
-  - items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: introduction-intune.md
-            html: <p>Läs om vad Intune gör och hur det fungerar.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: Vad är Intune?
-          - href: get-started-evaluation.md
-            html: <p>Använd den här enkla självstudien för att se hur Intune fungerar.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: Kom igång
-          - href: get-support.md
-            html: <p>Lär dig hur du skapar ett supportärende och får hjälp när du behöver det.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_support.svg'
-            title: Få support
-          - href: whats-new.md
-            html: <p>Se den här veckans nyheter i Intune.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Nyheter
-  - title: Nya artiklar och blogginlägg
+- items:
+  - type: markdown
+    text: "Kom igång snabbt med Microsoft Intune. Använd den molnbaserade tjänsten för hantering av företagsmobilitet (EMM) så att dina anställda kan vara produktiva samtidigt som företagets data skyddas. Intune är integrerat med Azure Active Directory för identitets- och åtkomstkontroll, samt med Azure Information Protection för dataskydd."
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
     items:
-      - type: paragraph
-        text: Läs den senaste och bästa informationen.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: what-is-intune.md
-            title: Läs mer om Intune i Azure-portalen
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
-          - href: ui-changes.md
-            title: Se var Intune-funktionerna finns i Azure-portalen
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_guide.svg'
-          - href: high-level-architecture.md
-            title: Visa den övergripande arkitekturen för Intune
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-          - href: enrollment-autopilot.md
-            title: Stöd för Windows AutoPilot-distributionsprogram i Microsoft Intune
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2017/10/11/upcoming-security-enhancements-in-the-intune-service-your-action-is-required/'
-            title: '[Blogg] Säkerhetsförbättringar i Intune-tjänsten '
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-          - href: 'https://cloudblogs.microsoft.com/enterprisemobility/2017/10/26/intunes-new-troubleshooting-portal-makes-diagnosing-and-resolving-end-user-issues-easier/'
-            title: '[Blogg] Felsökningsportalen gör det enklare att diagnostisera och lösa problem för slutanvändare'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
-  - title: Videor
+    - href: introduction-intune.md
+      html: "<p>Läs om vad Intune gör och hur det fungerar.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_overview.svg
+      title: "Vad är Intune?"
+    - href: get-started-evaluation.md
+      html: "<p>Använd den här enkla självstudien för att se hur Intune fungerar.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: "Kom igång"
+    - href: get-support.md
+      html: "<p>Lär dig hur du skapar ett supportärende och får hjälp när du behöver det.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_support.svg
+      title: "Få support"
+    - href: whats-new.md
+      html: "<p>Se den här veckans nyheter i Intune.</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: Nyheter
+- title: "Nya artiklar och blogginlägg"
+  items:
+  - type: paragraph
+    text: "Läs den senaste och bästa informationen."
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
     items:
-      - type: markdown
-        text: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FpkCI6xmsE4" frameborder="0" allowfullscreen></iframe>'
-      - type: markdown
-        text: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Cn29dmgDcIw?list=PLXtHYVsvn_b-0X3R9QCJ4T-Y27DK376NR" frameborder="0" allowfullscreen></iframe>'
-  - title: Planera artiklar
+    - href: what-is-intune.md
+      title: "Läs mer om Intune i Azure-portalen"
+      image:
+        src: https://docs.microsoft.com/media/common/i_portal.svg
+    - href: ui-changes.md
+      title: Se var Intune-funktionerna finns i Azure-portalen
+      image:
+        src: https://docs.microsoft.com/media/common/i_guide.svg
+    - href: high-level-architecture.md
+      title: "Visa den övergripande arkitekturen för Intune"
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+    - href: enrollment-autopilot.md
+      title: "Stöd för Windows AutoPilot-distributionsprogram i Microsoft Intune"
+      image:
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+    - href: https://blogs.technet.microsoft.com/intunesupport/2017/10/11/upcoming-security-enhancements-in-the-intune-service-your-action-is-required/
+      title: "[Blogg] Säkerhetsförbättringar i Intune-tjänsten "
+      image:
+        src: https://docs.microsoft.com/media/common/i_blog.svg
+    - href: https://cloudblogs.microsoft.com/enterprisemobility/2017/10/26/intunes-new-troubleshooting-portal-makes-diagnosing-and-resolving-end-user-issues-easier/
+      title: "[Blogg] Felsökningsportalen gör det enklare att diagnostisera och lösa problem för slutanvändare"
+      image:
+        src: https://docs.microsoft.com/media/common/i_blog.svg
+- title: Videor
+  items:
+  - type: markdown
+    text: <iframe width="560" height="315" src="https://www.youtube.com/embed/FpkCI6xmsE4" frameborder="0" allowfullscreen></iframe>
+  - type: markdown
+    text: <iframe width="560" height="315" src="https://www.youtube.com/embed/Cn29dmgDcIw?list=PLXtHYVsvn_b-0X3R9QCJ4T-Y27DK376NR" frameborder="0" allowfullscreen></iframe>
+- title: Planera artiklar
+  items:
+  - type: list
+    style: unordered
     items:
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="/intune/planning-guide">Guide för planering, utformning och implementering vid distribution av Intune</a>'
-          - html: <a href="/intune/migration-guide">Migreringsguide för Intune</a>
-  - title: Instruktionsartiklar
+    - html: "<a href=\"/intune/planning-guide\">Guide för planering, utformning och implementering vid distribution av Intune</a>"
+    - html: "<a href=\"/intune/migration-guide\">Migreringsguide för Intune</a>"
+- title: Instruktionsartiklar
+  items:
+  - type: list
+    style: unordered
     items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/device-enrollment">Registrera enheter</a>
-          - html: <a href="/intune/device-management">Hantera enheter</a>
-          - html: <a href="/intune/app-management">Hantera appar</a>
-          - html: <a href="/intune/device-profiles">Konfigurera enheter</a>
-          - html: <a href="/intune/device-compliance-get-started">Ange enhetsefterlevnad</a>
-          - html: <a href="/intune/conditional-access">Ställ in villkorlig åtkomst</a>
-          - html: <a href="/intune/app-protection-policy">Skydda program</a>
-          - html: <a href="/intune/mobile-threat-defense">Konfigurera skydd mot mobila hot</a>
-          - html: <a href="/intune/network-access-control-integrate">Integrera åtkomstkontrollen för nätverk</a>
-          - html: <a href="/intune/role-based-access-control">Hantera roller</a>
-          - html: <a href="/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json">Hantera datorer med klienten för Intune-programvara</a>
-  - title: Felsökningsartiklar
+    - html: <a href="/intune/device-enrollment">Registrera enheter</a>
+    - html: <a href="/intune/device-management">Hantera enheter</a>
+    - html: <a href="/intune/app-management">Hantera appar</a>
+    - html: <a href="/intune/device-profiles">Konfigurera enheter</a>
+    - html: <a href="/intune/device-compliance-get-started">Ange enhetsefterlevnad</a>
+    - html: "<a href=\"/intune/conditional-access\">Ställ in villkorlig åtkomst</a>"
+    - html: <a href="/intune/app-protection-policy">Skydda program</a>
+    - html: <a href="/intune/mobile-threat-defense">Konfigurera skydd mot mobila hot</a>
+    - html: "<a href=\"/intune/network-access-control-integrate\">Integrera åtkomstkontrollen för nätverk</a>"
+    - html: <a href="/intune/role-based-access-control">Hantera roller</a>
+    - html: "<a href=\"/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json\">Hantera datorer med klienten för Intune-programvara</a>"
+- title: "Felsökningsartiklar"
+  items:
+  - type: list
+    style: unordered
     items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/help-desk-operators">Hjälp användarna med felsökningsportalen</a>
-          - html: <a href="/intune/known-issues">Kända problem med Intune</a>
-          - html: <a href="/intune/get-support">Support</a>
-  - title: Utveckla och anpassa artiklar
+    - html: "<a href=\"/intune/help-desk-operators\">Hjälp användarna med felsökningsportalen</a>"
+    - html: "<a href=\"/intune/known-issues\">Kända problem med Intune</a>"
+    - html: <a href="/intune/get-support">Support</a>
+- title: Utveckla och anpassa artiklar
+  items:
+  - type: list
+    style: unordered
     items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/custom-settings-configure">Konfigurera anpassade enhetsinställningar</a>
-          - html: <a href="/intune/apps-prepare-mobile-application-management">Förbereda verksamhetsspecifika program (LOB) med programomslutningsverktyget för Intune</a>
-          - html: <a href="/intune/app-sdk">Förbereda LOB-program med Intune App SDK</a>
-          - html: '<a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Arbeta med Intune i Microsoft Graph</a>'
-          - html: <a href="/intune/reports-nav-intune-date-warehouse">API för Intune-informationslager</a>
-  - title: Övriga resurser
+    - html: "<a href=\"/intune/custom-settings-configure\">Konfigurera anpassade enhetsinställningar</a>"
+    - html: "<a href=\"/intune/apps-prepare-mobile-application-management\">Förbereda verksamhetsspecifika program (LOB) med programomslutningsverktyget för Intune</a>"
+    - html: "<a href=\"/intune/app-sdk\">Förbereda LOB-program med Intune App SDK</a>"
+    - html: <a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Arbeta med Intune i Microsoft Graph</a>
+    - html: "<a href=\"/intune/reports-nav-intune-date-warehouse\">API för Intune-informationslager</a>"
+- title: "Övriga resurser"
+  items:
+  - type: list
+    style: unordered
     items:
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="https://fasttrack.microsoft.com/ems">Har du fler än 150 licenser? Utnyttja dina FastTrack-förmåner</a>'
-          - html: '<a href="https://blogs.technet.microsoft.com/enterprisemobility/">Läs bloggen om Enterprise Mobility and Security</a>'
-          - html: '<a href="https://blogs.technet.microsoft.com/intunesupport/">Få hjälp i Intunes supportblogg</a>'
-          - html: '<a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Ge feedback om Intune i UserVoice</a>'
-          - html: '<a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc">Ställ eller besvara frågor i Intunes diskussionsforum</a>'
+    - html: "<a href=\"https://fasttrack.microsoft.com/ems\">Har du fler än 150 licenser? Utnyttja dina FastTrack-förmåner</a>"
+    - html: "<a href=\"https://blogs.technet.microsoft.com/enterprisemobility/\">Läs bloggen om Enterprise Mobility and Security</a>"
+    - html: "<a href=\"https://blogs.technet.microsoft.com/intunesupport/\">Få hjälp i Intunes supportblogg</a>"
+    - html: <a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Ge feedback om Intune i UserVoice</a>
+    - html: "<a href=\"https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc\">Ställ eller besvara frågor i Intunes diskussionsforum</a>"

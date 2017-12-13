@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,24 +14,49 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dff1cb496b85f933d8f462b94f6e15fa7ff69a28
-ms.sourcegitcommit: 5279a0bb8c5aef79aa57aa247ad95888ffe5a12b
+ms.openlocfilehash: 7ec7f322f0d35d50a7c84d8e40d43a6a04ae1b7d
+ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
+## <a name="week-of-november-13-2017"></a>Veckan som börjar 13 november 2017
+
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Förbättringar av arbetsflödet för enhetskonfiguration i företagsportalen för iOS i version 2.9.0 <!---1417174--->
+
+Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för iOS. Språket är mer användarvänligt och vi har kombinerat skärmar där det är möjligt. Vi har också gjort språket mer specifikt för ditt företag genom att använda företagsnamnet genomgående i installationstexten.
+
+> [!NOTE]
+> Vi använder företagets namn som du har angett i Azure Portal i **Microsoft Intune** > **mobilappar** > **företagsportalanpassning** > **företagsnamn**. Om du inte har angett det här värdet, använder vi det klientnamn som ställts in i **Azure Active Directory** > **egenskaper** > **namn**. Om du inte har angett något företagsnamn i företagsportalsanpassningen och inte vill att ditt klientnamn ska visas, rekommenderar vi att du anger företagets namn i företagsportalens anpassningsflik. Om du inte vill att den här strängen ska visas i rubriken till företagsportalen, kan du avmarkera kryssrutan visa företagets namn bredvid logotypen.
+
+|Före|Efter|
+|---|---|
+|![01](./media/ios_cp_enroll_01_before_1711.png)|![01](./media/ios_cp_enroll_01_after_1711.png)|
+|![02](./media/ios_cp_enroll_02_before_1711.png)|*Kombineras med föregående steg*|
+|![03](./media/ios_cp_enroll_03_before_1711.png)|![03](./media/ios_cp_enroll_03_after_1711.png)|
+|![04](./media/ios_cp_enroll_04_before_1711.png)|![04](./media/ios_cp_enroll_04_after_1711.png)|
+|![05](./media/ios_cp_enroll_05_before_1711.png)|![05](./media/ios_cp_enroll_05_after_1711.png)|
+|![06](./media/ios_cp_enroll_06_before_1711.png)|![06](./media/ios_cp_enroll_06_after_1711.png)|
+|![07](./media/ios_cp_enroll_07_before_1711.png)|![07](./media/ios_cp_enroll_07_after_1711.png)|
+
 
 ## <a name="week-of-november-6-2017"></a>Veckan som börjar med 6 november 2017
+
+### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Uppdateringar i företagsportalappen för Windows 10 <!--1299474-->
+Inställningssidan i företagsportalappen för Windows 10 har uppdaterats för att inställningar och avsedda användaråtgärder ska vara mer konsekventa över alla inställningar. Den har också uppdaterats så att den matchar layouten för andra Windows-appar.
+
+|Före|Efter|
+|---|---|
+|![01](./media/w10-share-logs.png)|![02](./media/w10-share-logs-after-1711.png)|
+
 
 ### <a name="search-improvements-to-the-company-portal-apps-and-website---1418189--"></a>Sökförbättringar i företagsportalens appar och webbplats <!--1418189-->
 Företagsportalapparna använder nu sökningar i appkategorier, namn och beskrivningar. Resultaten sorteras i fallande relevansordning. De här uppdateringarna är även tillgängliga på [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
 
 Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur det fungerar via länken "Feedback" längst ned på företagsportalwebbplatsen.
-
-
 
 ## <a name="week-of-october-16-2017"></a>Veckan som börjar med 16 oktober 2017
 
@@ -45,10 +70,6 @@ Vi finjusterar fortfarande spårningen av relevans, så meddela oss gärna hur d
 
 ### <a name="ios-company-portal-displays-large-icons----1454593---"></a>iOS företagsportal visar stora ikoner <!-- 1454593 -->
 I den här versionen åtgärdas ett känt problem med hur iOS företagsportal visar ikoner i appanelen. Om du överför appikoner på 120 × 120 bildpunkter eller större, visas de nu på [Företagsportalens webbplats](https://portal.manage.microsoft.com) och på appsidorna i Företagsportalen för iOS i full storlek i appanelen.
-
-
-
-
 
 
 ## <a name="week-of-october-2-2017"></a>Veckan då den 2 oktober 2017 infaller

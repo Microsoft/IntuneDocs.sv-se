@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 53bb84c3f2f9e8ee0c0bda419015ff35d1a51488
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 256f643eedcf833ce77c29b389d5e500322802e8
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Enheten saknar ett certifikat som krävs
 
@@ -38,4 +38,4 @@ Det första steget du ska ta är att se om enheten [saknar ett certifikat som va
 
 Om detta inte fungerar kan företagets support [kräva att du installerar ett andra certifikat för ytterligare säkerhet](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

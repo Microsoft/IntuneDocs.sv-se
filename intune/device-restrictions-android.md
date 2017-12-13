@@ -3,8 +3,8 @@ title: "Inställningar för enhetsbegränsningar för Android i Intune"
 titlesuffix: Azure portal
 description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android-enheter.”"
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 09/07/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 094fc13705c1b746a4b753c02127478f10754f46
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: ffddf9e5fcdf8359c729eb048a6f8052a1b3286f
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung KNOX Standard-enheter i Microsoft Intune
 
@@ -42,7 +42,7 @@ Använd de här inställningarna med en princip för begränsning av Android-enh
 - **Skärmdump (endast Samsung KNOX)** – Låter användaren fånga skärminnehållet som en bild.
 - **Röstassistent (endast Samsung KNOX)** – Tillåter användning av röstassistentens programvara på enheten.
 - **YouTube (endast Samsung KNOX)** – Tillåter användning av YouTube-appen på enheten.
-- **Delade enheter** – Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När slutanvändare loggar in så får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
+- **Delade enheter (endast Samsung Knox)** – Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När detta används tillsammans med en SCEP-certifikatprofil gör den här funktionen det möjligt för användarna att dela en enhet med samma uppsättning appar till alla användare, men med deras egna SCEP-certifikat för användare.  Alla appdata rensas när användaren loggar ut.  Den här funktionen är begränsad till endast LOB-appar.
 
 ## <a name="password"></a>Lösenord
 

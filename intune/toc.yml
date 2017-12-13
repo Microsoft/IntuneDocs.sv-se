@@ -89,8 +89,8 @@
           href: data-outside-protect.md
         - name: Förhindra dataläckage på ej hanterade enheter
           href: data-leak-prevention.md
-        - name: BYOD
-          href: byod-enable.md
+        - name: Jämför MDM och MAM
+          href: byod-technology-decisions.md
     - name: Migreringsguide
       href: migration-guide.md
       items:
@@ -164,8 +164,6 @@
               href: windows-bulk-enroll.md
             - name: Windows AutoPilot-distributionsprogram
               href: enrollment-autopilot.md
-            - name: Skärm för registreringsstatus
-              href: windows-enrollment-status.md
         - name: Konfigurera Android-registrering
           href: android-enroll.md
         - name: Ställ in iOS-registrering
@@ -286,6 +284,8 @@
               href: app-notification-settings-ios.md
             - name: Delade enheter för iOS
               href: shared-device-settings-ios.md
+            - name: Konfigurera enkel inloggning för Intune för iOS-enheter
+              href: sso-ios.md
             - name: Webbfilterinställningar för iOS
               href: web-content-filter-settings-ios.md
         - name: Konfigurera enhetsbegränsningar

@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 8abc5e9a1e1d5ec5e0ea632b075209a0ba9456c2
-ms.sourcegitcommit: 474a24ba67f6bf4f00268bf9e4eba52331a6b82d
+ms.openlocfilehash: ca1f1c0572a2a3c1484b9c23bd14e029e506e536
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -94,8 +94,8 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
     **Om Underhållskanal är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att den här Halvårskanal-versionen släppts, och den uppdateras i maj.
 
-    - **Leveransoptimering** – Välj den metod för vilken enheterna ska hämta Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#deliveryoptimization-dodownloadmode).
-8. När du är klar klickar du först på **OK**, sedan på bladet **Skapa uppdateringsring** och därefter på **Skapa**.
+    - **Leveransoptimering** – Välj den metod för vilken enheterna ska hämta Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+1. När du är klar klickar du först på **OK**, sedan på bladet **Skapa uppdateringsring** och därefter på **Skapa**.
 
 Den nya uppdateringsringen visas i listan över uppdateringsringar.
 

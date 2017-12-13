@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 08/16/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3a2622c7c981e64b3e220424c6661a5ba9e30751
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: 8ad13a8534f142ec97fc15759bf863e04c36d266
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Skydda en Android-enhet med kryptering
 
 När du krypterar en enhet omsluter du informationen på den i ett lager med skyddande kod som förhindrar att obehöriga personer får åtkomst till den. Organisationen kräver att du krypterar din Android-enhet för att skydda innan du kommer åt företagsfiler, -e-post eller -data som ett steg mot att se till att informationen är skyddad.
 
 > [!Note]
-> Du kan bli ombedd att ange en PIN-kod eller ett lösenord innan du krypterar enheten om företagets support kräver det.
+> Vissa Android-enheter, inklusive vissa av Huawei och de som gjorts av Vivo och OPPO, kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 Om du avregistrerar telefonen förblir den krypterad.
 
@@ -37,9 +37,6 @@ Om du avregistrerar telefonen förblir den krypterad.
     (På vissa telefoner måste du välja **Lagring**  >  **Lagringskryptering** eller **Lagring**  > **Låsskärm och säkerhet** > **Andra säkerhetsinställningar** för att hitta krypteringsalternativet).
 
 3.  Följ anvisningarna på skärmen. Enheten kan starta om flera gånger under krypteringen.
-
-> [!Note]
-> Vissa Android-enheter kan inte krypteras. Läs mer [här](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
 
 ### <a name="what-to-do-if-you-have-issues"></a>Vad du gör om du har problem
 **Problem**: Du har redan krypterat enheten och du ser något av följande:
@@ -66,4 +63,4 @@ Om du avregistrerar telefonen förblir den krypterad.
 
     6. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
 
-Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

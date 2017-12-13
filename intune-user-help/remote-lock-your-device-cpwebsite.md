@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3976327decf6b1850baed8e781609e458d375aa1
-ms.sourcegitcommit: db7a7bbead3a3fa78c4d643607f709a2909eb608
+ms.openlocfilehash: f5c2536e4566baa2661b77f5574085410784a787
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Fjärrlås din enhet från företagsportalens webbplats
 
@@ -28,7 +28,7 @@ Olyckor händer och ibland kan enheter tappas bort. Om du har tappat bort din en
 
 [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
 
-För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](https://portal.manage.microsoft.com). Fjärrlåset fungerar på:
+För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Fjärrlåset fungerar på:
 
 * Android
 * iOS
@@ -38,7 +38,7 @@ För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet 
 
 ## <a name="to-use-remote-lock-to-lock-your-device"></a>Använda Fjärrlås för att låsa enheten
 
-1.  På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1.  På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
 
   ![En bild av webbplatsen för företagsportalen med en utökad sidomeny till vänster på skärmen med knapparna Start, Alla appar, Mina enheter, Support och Logga ut.](/media/iwp-expanded-sidebar.png)
 
@@ -65,4 +65,4 @@ För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet 
 
 Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
