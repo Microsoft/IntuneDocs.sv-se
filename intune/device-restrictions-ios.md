@@ -3,8 +3,8 @@ title: "Inställningar för enhetsbegränsningar för iOS i Intune"
 titleSuffix: Azure portal
 description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på iOS-enheter.”"
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
 ms.date: 11/03/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f35de553259921c76341fe5b4a824e60c71d4a5
-ms.sourcegitcommit: 0f877251e6adf4e45b918cc8dc9193626727f2d9
+ms.openlocfilehash: b871726c887916662986008010e0728811f2ba98
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
 
@@ -41,7 +41,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Ändring av aviseringsinställningar (endast övervakat)** – Tillåt användaren att ändra enhetens aviseringsinställningar.
 - **Ändring av bakgrundsbild (endast övervakat)** – Tillåt att användaren ändrar enhetens bakgrundsbild.
 - **Ändring av behörighetsinställningar för företagsappar (endast övervakat)** – Låter användaren välja att lita på appar som inte laddats ned från App Store.
-- **Ändra konfigurationsprofil** – Tillåt att användaren installerar konfigurationsprofiler.
+- **Ändra konfigurationsprofil (endast övervakat)** – Tillåt att användaren installerar konfigurationsprofiler.
 - **Aktiveringslås (endast övervakat)** – Aktivera aktiveringslåset på övervakade iOS-enheter.
 
 ## <a name="configurations-requiring-supervision"></a>Konfigurationer som kräver övervakning

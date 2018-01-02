@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d8a5989358da932e4e8ce59528602fefb2265528
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 599da7c664c139eac472c8d9ec2e418c01eeaeb4
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
@@ -34,7 +34,7 @@ Företagets support kan se information som är relevant för arbetet, men inte d
 Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer normalt till företagsportalappen genom att gå till appbutiken på enheten, men företagets support kan även installera företagsportalappen åt dig.
-- Genom att gå till [företagsportalwebbplatsen](https://portal.manage.microsoft.com) som företagets support har konfigurerat.
+- Genom att gå till [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog) som företagets support har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
 Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:
@@ -60,8 +60,9 @@ När du lägger till en dator eller enhet på företagsportalen kan det hända a
 Om du vill ta reda på mer om vad företagets support kan och inte kan se på din enhet använder du länken som motsvarar den typ av enhet som du använder:
 
 - [Installera företagsportalappen för Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-- [Installera företagsportalappen för iOS och macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
-- [Installera företagsportalappen för Windows](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Installera företagsportalappen för iOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Installera företagsportalappen för macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
+- [Installera företagsportalappen för Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Vilken typ av datorer och enheter kan du lägga till i företagsportalen?
 -   Apple-enheter som använder iOS (som iPhone och iPad) och macOS (som MacBook och iMac)
@@ -78,7 +79,8 @@ Du kan ta bort eller återställa en dator eller enhet på företagsportalen. De
 När du *tar bort* en dator eller enhet från företagsportalen avregistrerar du enheten från Intune. När du tar bort en dator eller enhet har du inte längre åtkomst till företagsportalen från den enheten och viss företagsinformation kan tas bort från enheten. Välj någon av följande länkar om du vill se hur du tar bort enheten från företagsportalen:
 
 - [Avregistrera din Android-enhet](unenroll-your-device-from-intune-android.md)
-- [Avregistrera din iOS- eller macOS-enhet](unenroll-your-device-from-intune-ios.md)
+- [Avregistrera din iOS-enhet](unenroll-your-device-from-intune-ios.md)
+- [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)
 - [Avregistrera din Windows-enhet](unenroll-your-device-from-intune-windows.md)
 
 När du *återställer* en dator eller enhet försöker företagsportalen återställa datorn eller enheten till tillverkarens standardinställningar. Om du återställer enheten tas alla företagsdata och personliga data bort från enheten! Om du har blivit av med enheten kan du även fjärråterställa den från företagsportalens webbplats.
@@ -95,6 +97,7 @@ Vi rekommenderar att du först försöker se om du kan lösa problemet själv. V
 
 - [Åtgärda vanliga problem med din Android-enhet](troubleshoot-your-device-android.md)
 - [Åtgärda vanliga problem med din iOS-enhet](troubleshoot-your-device-ios.md)
+- [Åtgärda vanliga problem med din macOS-enhet](troubleshoot-your-device-macos.md)
 - [Åtgärda vanliga problem med din Windows-enhet](troubleshoot-your-device-windows.md)
 
-Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till företagets support. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till företagets support. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
