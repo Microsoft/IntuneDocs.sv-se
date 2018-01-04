@@ -3,10 +3,10 @@ title: "Konfigurera funktionsinställningar för Intune-enheten"
 titleSuffix: Azure portal
 description: "Läs hur du använder Intune till att konfigurera funktioner på enheter som du hanterar.”"
 keywords: 
-author: lleonard-msft
-ms.author: alleonar
+author: vhorne
+ms.author: victorh
 manager: angrobe
-ms.date: 06/03/2017
+ms.date: 12/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a2723bfc0adecd9b6265b4af43e6fe185882b5e
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: ea280ac6858485aa4e3d64d11835f002c5bb35ca
+ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-configure-device-feature-settings-in-microsoft-intune"></a>Så här konfigurerar du enhetens funktionsinställningar i Microsoft Intune
 
@@ -47,9 +47,10 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - [Layoutinställningar för iOS-startskärm](home-screen-settings-ios.md)
     - [Appaviseringsinställningar för iOS](app-notification-settings-ios.md)
     - [Konfigurationsinställningar för delade enheter för iOS](shared-device-settings-ios.md)
+    - [Konfigurera enkel inloggning för Intune för iOS-enheter](sso-ios.md)
     - [Inställningar för webbinnehållsfilter för iOS](web-content-filter-settings-ios.md)
 
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. När du är klar, går du tillbaka till bladet **skapa profil** och trycker på **skapa**.
 
 Profilen skapas och visas på bladet med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
