@@ -3,10 +3,10 @@ title: "Komma igång med appar"
 titlesuffix: Azure portal
 description: "Hitta och lägg till appar på enheter så att dina anställda kan få arbete utfört."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 10/31/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: a1542fc3-672e-47c1-a21f-82826a2f8ac4
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c5c12c988f1181887c10f6ed14353365546e743b
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: bb02c362f056c454f4d141ce7ae20b9c3ca8035d
+ms.sourcegitcommit: a7c1e10e615e5c975bb5d52eca986c5cf5287687
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="get-started-with-adding-apps"></a>Kom igång med att lägga till appar
 
@@ -36,11 +36,12 @@ Du ska nu gå genom en av de snabbare distributionsmetoderna för appar genom at
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Sök efter **Intune** med hjälp av **Sök resurser**.
 3. Välj **Mobilappar** och välj sedan **appar**.
-4. Välj **Lägg till** och välj sedan **iOS Store-app** som **apptyp**.
-5. Sök efter en app att tilldela till enheten i textrutan. Välj appen och välj **OK**.
-6. Välj **Appinformation** på bladet **Lägg till app**. Kontrollera sedan att all information om appen är ifylld. Du kan lägga till ytterligare information som hjälp vid organisation av den här appen, t.ex. **Ägare**, **Anteckningar**, **Utvecklare** och en **sekretesswebbadress** till företagets sekretesspolicy.
-7. Kontrollera att du har markerat Ja för att visa appen som en aktuell app i företagsportalen och klicka sedan på OK.
-8. Välj **Lägg till** för att lägga till appen. Du kommer nu till appens **översikt**. Välj **Tilldelningar** och klicka sedan på **Välj grupper** för att tilldela appen till din testgrupp. Gör appen **tillgänglig** för nedladdning. Appen ska nu visas som en **aktuell App** på testenheten.
+4. Välj **Lägg till** och sedan **iOS** under **Store-app** som **Apptyp**.
+5. Välj **Välj app** för att visa bladet **Sök i App Store**.
+6. Sök efter en app att tilldela till enheten i textrutan. Välj appen och klicka sedan på **Välj**.
+7. Välj **Appinformation** på bladet **Lägg till app**. Kontrollera sedan att all information om appen är ifylld. Du kan lägga till ytterligare information som hjälp vid organisation av den här appen, t.ex. **Ägare**, **Anteckningar**, **Utvecklare** och en **sekretesswebbadress** till företagets sekretesspolicy.
+8. Kontrollera att du har markerat **Ja** för att **visa appen som en aktuell app i företagsportalen** och klicka sedan på **OK**.
+9. Välj **Lägg till** på bladet **Lägg till app** för att lägga till appen. Du kommer nu till appens **översikt**. Välj **Tilldelningar** och klicka sedan på **Välj grupper** för att tilldela appen till din testgrupp. Gör appen **tillgänglig** för nedladdning. Appen ska nu visas som en **aktuell App** på testenheten.
 
 ## <a name="learn-more"></a>Läs mer
 

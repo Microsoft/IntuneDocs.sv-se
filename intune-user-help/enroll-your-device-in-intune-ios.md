@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/21/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 206de56ee967f4cd142e5cd7c9d63971b9b727c6
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 7e1ff77fef9e084000938022fb36217b21279c28
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="set-up-access-to-your-company-resources"></a>Ställ in åtkomst till ditt företags resurser
 
@@ -57,7 +57,7 @@ Ditt företag har mycket upphovsrättsskyddad information, från e-post till fil
 |![Profilen är öppen i inställningar.](./media/ios-9-cp-enroll-1711.png)|Tryck på **Installera**.|
 |![Den modala dialogrutan installerar profilen längst ned på skärmen.](./media/ios-10-cp-enroll-1711.png)|Tryck på **Installera**.|
 |![Laddningsskärmen profilen installeras.](./media/ios-11-cp-enroll-1711.png)|Vänta tills det har laddats.|
-|![Skärmen profilhanteringsvarning.](./media/ios-12-cp-enroll-1711.png)|Den här varningen, skriven av Apple, ger dig mer information om vilka typer av åtgärder som kan utföras på en hanterad enhet. Läs mer om [vilken information som ditt företag kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)|
+|![Skärmen profilhanteringsvarning.](./media/ios-12-cp-enroll-1711.png)|Den här varningen, skriven av Apple, ger dig mer information om vilka typer av åtgärder som kan utföras på en hanterad enhet. Läs mer om [vilken information som ditt företag kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).|
 |![Systemprompt som frågar om förtroende för fjärrhantering.](./media/ios-13-cp-enroll-1711.png)|Tryck på **lita på** för att låta ditt företag hantera företagsinformation och inställningar på din enhet.|
 |![Laddningsskärmen profilen färdigställs.](./media/ios-14-cp-enroll-1711.png)|Vänta tills det har laddats.|
 |![Skärmen profilen installerad.](./media/ios-15-cp-enroll-1711.png)|Din profil är installerad och din enhets företagsinformation och inställningar är mycket närmare att vara hanterade.|
@@ -75,4 +75,4 @@ Ditt företag har mycket upphovsrättsskyddad information, från e-post till fil
 > [!Note]
 > Du kan behöva utföra några steg till innan enheten är fullständigt hanterad. Lär dig mer om [hur du registrerar enheten med kostnadsuppföljning av telekommunikation](enroll-your-device-with-telecom-expense-management-ios.md). Om din organisation använder Apples enhetsregistreringsprogram (DEP) kan du läsa mer [här](enroll-your-device-dep-ios.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -1,11 +1,11 @@
 ---
-title: "Den här enheten skiljer sig lite | Microsoft Docs"
+title: "Fel som kan uppstå om du använder Jamf Self Service | Microsoft Docs"
 description: "Läs mer om din Intune-aktiverade macOS-enhet som hanteras av Jamf."
 keywords: Mac OS X, macOS, OS X
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 10/13/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 14db11738b1ef34a9180515e5f909ff1960bfbb0
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 080bc7c287dcc068ac18a3aec60295e777840368
+ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Utföra åtgärder på en macOS-enhet som hanteras av Jamf
 
@@ -28,4 +28,8 @@ Företaget använder en kombination av verktyg för att säkerställa att din ma
 
 Om du använder en macOS-enhet som har efterlevnadsproblem som hanteras av Jamf klickar du på knappen **Lös** för att starta **Självbetjäning**.
 
-Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://portal.manage.microsoft.com).
+__Vad du kan göra om "AccountNotOnboarded" eller "Enheten har redan registrerats" visas__
+
+Om du har öppnat företagsportalappen och meddelandet "AccountNotOnboarded" visas måste du stänga företagsportalappen och gå till **Program** > **Self Service** (Självservice). Ditt företag har en enhetsregistreringsprincip som måste du installera. Klicka på principen för att installera den och öppna sedan företagsportalen igen.
+
+Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
