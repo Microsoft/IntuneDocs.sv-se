@@ -3,10 +3,10 @@ title: "Hantera volyminköpta iOS-appar | Microsoft Docs"
 titlesuffix: Azure portal
 description: "Läs mer om synkronisering av volyminköpta appar från iOS store i Intune och hantering och spårning av deras användning.”"
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 11/20/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 620957c04d4114d1f12e9b44101704c370663d3b
-ms.sourcegitcommit: 9ccdac76e0b0716723452a6675b091f15a4d31f2
+ms.openlocfilehash: f820be41c532384f9f2db57e0e0e497a05307d73
+ms.sourcegitcommit: 06abc5ccc8b868c9ff3ad3f8f62473a87b2da481
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -38,9 +38,9 @@ Det finns två metoder som du kan använda för att tilldela volyminköpta appar
 
 ### <a name="device-licensing"></a>Enhetslicensiering
 
-När du tilldelar en app till enheter används en applicens, och den förblir kopplad till den enhet som du tilldelade den till. 
+När du tilldelar en app till enheter används en applicens, och den förblir kopplad till den enhet som du tilldelade den till.
 
-När du tilldelar volyminköpta appar till en enhet måste inte enhetens användare ange ett Apple-ID för att få åtkomst till butiken. 
+När du tilldelar volyminköpta appar till en enhet måste inte enhetens användare ange ett Apple-ID för att få åtkomst till butiken.
 
 ### <a name="user-licensing"></a>Användarlicensiering
 
@@ -92,7 +92,8 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
         > När du byter land uppdateras apparnas metadata och butikens URL vid nästa synkronisering med Apple-tjänsten för appar som har skapats med denna token. Appen uppdateras inte om den inte finns i det nya landets butik.
 
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
-    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat uppdaterar Intune alla appar som har köpts för angiven token genom Intune-tjänsten när enheten checkar in. identifiera VPP-appuppdateringar i appbutiken och push-installera dem automatiskt på enheten när den checkar in.
+    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat uppdaterar Intune alla appar som har köpts för angiven token genom Intune-tjänsten när enheten checkar in.
+identifiera VPP-appuppdateringar i appbutiken och push-installera dem automatiskt på enheten när den checkar in.
 4. När du är klar, väljer du **ladda upp**.
 
 Token visas i listan över tokenblad.
@@ -134,6 +135,8 @@ Slutanvändaren får prompter för VPP-appinstallation i ett antal scenarier. Va
 ## <a name="further-information"></a>Ytterligare information
 
 Om du vill frisläppa en licens måste du ändra tilldelningsåtgärden till **Avinstallera**. Licensen frisläpps när appen avinstalleras. Om du tar bort en app som har tilldelats en användare försöker Intune återta alla applicenser som är kopplade till den användaren.
+
+<!-- 820879 -->You can delete a iOS Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses. Intune cannot revoke app licenses after a token has been deleted. 
 
 När en användare med en kvalificerande enhet försöker installera en volymköpsprogramapp på en enhet, ombeds användaren att gå med i Apples volymköpsprogram. Användaren måste gå med innan appinstallationen fortsätter. Inbjudan att gå med i Apples program för volyminköp kräver att användaren kan använda appen iTunes på iOS-enheten. Om du har angett en princip för inaktivering av iTunes Store-appen kommer den användarbaserade licensieringen för VPP-appar inte att fungera. Lösningen är att antingen tillåta iTunes-appen genom att ta bort principen eller använda enhetsbaserad licensiering.
 

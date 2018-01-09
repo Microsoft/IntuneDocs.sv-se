@@ -3,8 +3,8 @@ title: "Konfigurera registrering av Apple School Manager-programmet för iOS-enh
 titlesuffix: Azure portal
 description: "Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS-enheter med Intune\""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 09/13/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aaefd6bfbff3394b4c0f79948ac23e32536f1e3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: f93453bf88c9f70043fe9d0cf548e1dba99100ac
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -31,7 +31,7 @@ Om du vill aktivera Apple School Manager-registrering använder du både Intune-
 
 Apple School Manager-registrering kan inte användas med [Apples program för enhetsregistrering](device-enrollment-program-enroll-ios.md) eller [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
 
-**Krav**
+**Förutsättningar**
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 - [MDM-utfärdare](mdm-authority-set.md)
 - [Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
@@ -76,7 +76,7 @@ Gå till certifikatfilen (.p7m), välj **Öppna** och sedan **Ladda upp**. Intun
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
-1. I Intune i Azure Portal väljer du **Enhetsregistrering** och därefter **Apple-registrering**.
+1. I Intune på Azure-portalen väljer du **Enhetsregistrering** och därefter **Apple-registrering**.
 2. Under **Registreringsprogram** väljer du **Registreringsprogramprofiler**.
 3. På bladet **Registreringsprogramprofiler** väljer du **Skapa**.
 4. På bladet **Skapa registreringsprofil** anger du ett **Namn** och en **Beskrivning** för profilen som visas i Intune.

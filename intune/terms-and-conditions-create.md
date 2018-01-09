@@ -3,8 +3,8 @@ title: "Ange användarvillkor i Microsoft Intune"
 titlesuffix: Azure portal
 description: "Ange allmänna villkor som användarna ser i företagsportalen för Intune. "
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63434cbbc9edc668d59fb99968727551e0c4cc40
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: fa35cb7b08f0bbf677dd7d8b5122b8b286c49b72
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ensure-users-accept-company-terms-for-access"></a>Se till att användarna godkänner företagets åtkomstvillkor
 
@@ -73,13 +73,13 @@ Du kan tilldela villkor till grupper av användare som måste godkänna dem inna
 
 ## <a name="monitor-terms-and-conditions"></a>Övervaka användarvillkor
 
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På Intune-bladet väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På Intune-bladet väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
 2. I listan med allmänna villkor väljer du de villkor som du vill se godkännanden för. Välj sedan **Godkännandestatus**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Arbeta med flera versioner av användarvillkor
 Du kan redigera dina villkor och hantera deras versioner. Vi rekommenderar att du ökar versionsnumret och kräver godkännande varje gång du gör större ändringar i dina allmänna villkor. Behåll det nuvarande versionsnumret om du exempelvis bara korrigerar stavfel eller ändrar formateringen.
 
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. På Intune-bladet väljer du **Enhetsregistrering**, **Allmänna villkor**, de villkor som du vill ändra och sedan **Egenskaper**.
 
