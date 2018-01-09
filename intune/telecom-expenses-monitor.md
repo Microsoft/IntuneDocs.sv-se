@@ -3,8 +3,8 @@ title: "Konfigurera tjänsten för kostnadsuppföljning av telekommunikation"
 titleSuffix: Azure portal
 description: "Konfigurera Saaswedos tjänst för kostnadsuppföljning av telekommunikation för integrering med Intune.”"
 keywords: Saaswedo
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3f97cebe411b191f2bf0b13fb756c705613c46a
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 9712dd7847195976682f87df556b4552df34900f
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Innan du kan använda Datalert med Intune måste du konfigurera inställningar i
 - Samsung Knox
 - iOS 8.0 och senare
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 - En prenumeration på Microsoft Intune och åtkomst till Azure-portalen.
 - En prenumeration på Datalert-tjänsten för kostnadsuppföljning av telekommunikation

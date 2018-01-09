@@ -2,8 +2,8 @@
 title: Princip | Microsoft Docs
 description: "Referensavsnitt för kategorin Princip för entitetssamlingar i API:et för Intune-informationslager."
 keywords: Intune-informationslager
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: D5ADB9D8-D46A-43BD-AB0F-D6927508E3F4
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 079cfe097d6cf462f9ccd0a32d2e327b3b605e40
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: 06c489f8519bda2f3f0359589c3af845ade423fe
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="reference-for-policy-entities"></a>Referens för principentiteter
 
@@ -33,7 +33,7 @@ Kategorin **Princip** innehåller entiteter för mobilenheter som spårar inform
 
 Entiteten **Princip** innehåller en lista över enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper. Principerna med hantering av mobilenheter (MDM) kan tilldelas en grupp i företaget.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | PolicyKey |Unik nyckel för principen i informationslagret. |123 |
 | PolicyId |Unikt id för principen i informationslagret. |b66bc706-ffff-7437-0340-032819502773 |
@@ -48,7 +48,7 @@ Entiteten **Princip** innehåller en lista över enhetskonfigurationsprofiler, a
 
 Entiteten **PolicyType** innehåller en lista över typer av enhetskonfigurationsprofiler, appkonfigurationsprofiler och efterlevnadsprinciper. Principerna med hantering av mobilenheter (MDM) kan tilldelas en grupp i företaget.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | PolicyTypeId |Unikt id för principen i källsystemet. |123 |
 | PolicyTypeKey |Unikt id för principen i informationslagret. |1 |
@@ -58,7 +58,7 @@ Entiteten **PolicyType** innehåller en lista över typer av enhetskonfiguration
 
 Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista över antalet enheter med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer, ökar antalet lyckade med ett för den dagen. Om det finns två tilldelade principer för en enhet, en med tillståndet lyckades och en med tillståndet fel, ökar antalet lyckade och enheten försätts i feltillstånd. Entiteten visar hur många enheter som har en viss status vid en viss dag under de senaste 30 dagarna.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
 | Väntar |Antalet unika enheter i väntande läge. |123 |
@@ -70,7 +70,7 @@ Entiteten **DeviceConfigurationProfileDeviceActivity** innehåller en lista öve
 
 Entiteten **UserConfigurationProfileDeviceActivity** innehåller en lista över antalet användare med tillståndet lyckades, väntar, misslyckades eller fel per dag. Antalet visar de enhetskonfigurationsprofiler som har tilldelats entiteten. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren som med feltillstånd.  Entiteten **UserConfigurationProfileDeviceActivity** visar hur många användare i ett visst tillstånd en viss dag under de senaste 30 dagarna.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
 | Väntar |Antalet unika användare i väntande läge. |123 |
@@ -82,7 +82,7 @@ Entiteten **UserConfigurationProfileDeviceActivity** innehåller en lista över 
 
 Entiteten **PolicyTypeActivity** visat det sammanlagda antalet enheter med tillståndet lyckades, väntar misslyckades eller fel. Tillståndet visas avseende enhetskonfigurationsprofil, appkonfigurationsprofil eller efterlevnadsprincip per dag.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | DateKey |Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |20160703 |
 | PolicyKey |Principnyckel, kan kopplas till princip gör att få namn på princip. |Windows 10-baslinje |

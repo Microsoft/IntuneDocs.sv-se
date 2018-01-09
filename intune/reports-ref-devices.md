@@ -2,8 +2,8 @@
 title: "Enheter – Intune-informationslagret | Microsoft Docs"
 description: "Referensavsnitt för kategorin Program för entitetssamlingar i API:et för Intune-informationslager."
 keywords: Intune-informationslager
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b11994028a42b19aca3e78900886afbedc1ca1d5
-ms.sourcegitcommit: e9f9fccccef691333143b7523d1b325ee7d1915a
+ms.openlocfilehash: 24260c9e6a9929c74b47e5d83bf4d1be867b6b2e
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="reference-for-devices-entities"></a>Referens för enhetsentiteter
 
@@ -37,7 +37,7 @@ Kategorin **Enheter** innehåller entiteter för mobilenheter som spårar inform
 
 Entiteten **DeviceTypes** är den enhetstyp som andra informationslagerentiteter hänvisar till. Enhetstypen beskriver vanligtvis antingen enhetsmodell, tillverkare eller både och.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DeviceTypeID |Unikt id för enhetstyp |
 | DeviceTypeKey |Unikt id för enhetstypen i informationslagret – surrogatnyckel |
@@ -45,7 +45,7 @@ Entiteten **DeviceTypes** är den enhetstyp som andra informationslagerentiteter
 
 ## <a name="example"></a>Exempel
 
-| deviceTypeID  | Namn | Beskrivning |
+| deviceTypeID  | Namn | Description |
 |---------|------------|--------|
 | 0 |skrivbords- |Windows Desktop-enhet |
 | 1 |WindowsRT |WindowsRT-enhet |
@@ -72,7 +72,7 @@ Entiteten **DeviceTypes** är den enhetstyp som andra informationslagerentiteter
 
 Entiteten **ClientRegistrationStateTypes** är den registreringstyp som andra informationslagertabeller hänvisar till.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | clientRegisterationStateID |Unikt id för registreringstillstånd |
 | clientRegisterationStateKey |Unikt id för registreringstillståndet i informationslagret – surrogatnyckel |
@@ -80,7 +80,7 @@ Entiteten **ClientRegistrationStateTypes** är den registreringstyp som andra in
 
 ## <a name="example"></a>Exempel
 
-| ClientRegisterationStateID  | Namn | Beskrivning |
+| ClientRegisterationStateID  | Namn | Description |
 |---------|------------|--------|
 | 0 |NotRegistered |Inte registrerad |
 | 1 |SMSIDConflict |Sms-identitetskonflikt |
@@ -96,7 +96,7 @@ Entiteten **ClientRegistrationStateTypes** är den registreringstyp som andra in
 
 Entiteten **EnrollmentTypes** visar hur en enhet registrerades. Typ av registrering visar registreringsmetod. I exemplen visas olika typer av registrering och vad de innebär.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | managementStateID |Unikt id för hanteringstillståndet. |
 | managementStateKey |Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel. |
@@ -104,7 +104,7 @@ Entiteten **EnrollmentTypes** visar hur en enhet registrerades. Typ av registrer
 
 ## <a name="example"></a>Exempel
 
-| enrollmentTypeID  | Namn | Beskrivning |
+| enrollmentTypeID  | Namn | Description |
 |---------|------------|--------|
 | 0 |Okänt |Registreringstyp samlades inte in |
 | 1 |UserEnrollment |Användarinitierad registrering |
@@ -120,7 +120,7 @@ Entiteten **EnrollmentTypes** visar hur en enhet registrerades. Typ av registrer
 
 Entiteten **EnrollmentTypes** visar om en enhet är företagsägd, privat ägd eller okänd.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | ownerTypeID |Unikt id för ägartyp. | |
 | ownerTypeKey |Unikt id för ägartypen i informationslagret – surrogatnyckel. | |
@@ -130,7 +130,7 @@ Entiteten **EnrollmentTypes** visar om en enhet är företagsägd, privat ägd e
 
 Entiteten **MdmStatuses** visar enhetens regelefterlevnadsstatus.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | MdmStatusID |Unik identifierare för kompatibilitetstillstånd |
 | MdmStatusKey |Unikt id för regelefterlevnadsstatus i informationslagret – surrogatnyckel | 
@@ -139,7 +139,7 @@ Entiteten **MdmStatuses** visar enhetens regelefterlevnadsstatus.
 
 ## <a name="example"></a>Exempel
 
-| MdmStatusID  | ComplianceStatus | Beskrivning |
+| MdmStatusID  | ComplianceStatus | Description |
 |---------|------------|--------|
 | 0 |Okänt |Enhetens kompatibilitetstillstånd är okänt. |
 | 1 |Kompatibel |Enheten är kompatibel. |
@@ -152,7 +152,7 @@ Entiteten **MdmStatuses** visar enhetens regelefterlevnadsstatus.
 
 Entiteten **ManagementStates** innehåller information om enhetens tillstånd. Informationen kan vara användbar i fall där fjärråtgärder tillämpas, om enheten är jailbrokad eller rotad.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | managementStateID | Unikt id för hanteringstillståndet. |
 | managementStateKey | Unikt id för hanteringstillståndet i informationslagret – surrogatnyckel. |
@@ -160,7 +160,7 @@ Entiteten **ManagementStates** innehåller information om enhetens tillstånd. I
 
 ## <a name="example"></a>Exempel
 
-| managementStateID  | Namn | Beskrivning |
+| managementStateID  | Namn | Description |
 |---------|------------|--------|
 | 0 |Hanterade | Hanterad utan väntande fjärråtgärder. |
 | 1 |RetirePending | Ett kommando för tillbakadragande väntar på enheten. |
@@ -179,7 +179,7 @@ Entiteten **ManagementStates** innehåller information om enhetens tillstånd. I
 
 Entiteten **WorkPlaceJoinStateTypes** visar enhetens Azure Active Directory Workplace Join-status.  Under registreringsarbetsflödet kan ett eller flera certifikat användas för att verifiera eller autentisera. När en enhet registreras för WorkPlace används certifikaten för att verifiera enheten och användaren. Utfärdandet av certifikat sker via en SCEP-server (Simple Certificate Enrollment Point). Värdena i entiteten visar olika tillstånd som en enhet kan befinna sig i under den här processen. Ett av tillståndet är misslyckad WorkPlace-anslutning på grund av att det inte gick att utfärda ett nödvändigt certifikat (från en SCEP-server). Om en enhet inte passerat det här arbetsflödet är värdet Unknown (okänt).
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | WorkPlaceJoinStateID | Unikt id för status för arbetsplatsanslutning |
 | WorkPlaceJoinStateKey | Unikt id för arbetsplatsanslutningsstatus i informationslagret – surrogatnyckel |
@@ -187,7 +187,7 @@ Entiteten **WorkPlaceJoinStateTypes** visar enhetens Azure Active Directory Work
 
 ## <a name="example"></a>Exempel
 
-| workPlaceJoinStateID  | Namn | Beskrivning |
+| workPlaceJoinStateID  | Namn | Description |
 |---------|------------|--------|
 | 0 |Okänt |Om en enhet inte är arbetsplatsansluten har den status Unknown (okänt) |
 | 1 |Lyckades |Arbetsplatsanslutningen lyckades |
@@ -203,7 +203,7 @@ Entiteten **WorkPlaceJoinStateTypes** visar enhetens Azure Active Directory Work
 
 Entiteten **ManagementAgentTypes** visar de agenter som används för att hantera en enhet.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | ManagementAgentTypeID | Unikt id för typ av hanteringsagent. |
 | ManagementAgentTypeKey | Unikt id för typ av hanteringsagent i informationslagret – surrogatnyckel. |
@@ -211,7 +211,7 @@ Entiteten **ManagementAgentTypes** visar de agenter som används för att hanter
 
 ## <a name="example"></a>Exempel
 
-| ManagementAgentTypeID  | Namn | Beskrivning |
+| ManagementAgentTypeID  | Namn | Description |
 |---------|------------|--------|
 | 1 |EAS | Enheten hanteras via Exchange Active Sync |
 | 2 |MDM | Enheten hanteras med hjälp av en agent för mobilenhetshantering |
@@ -225,7 +225,7 @@ Entiteten **ManagementAgentTypes** visar de agenter som används för att hanter
 
 Entiteten **Enheter** innehåller en lista över registrerade enheter som hanteras och deras respektive egenskaper.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DeviceKey | Unikt id för enheten i informationslagret – surrogatnyckel. |
 | DeviceId | Unikt id för enheten. |
@@ -270,7 +270,7 @@ Entiteten **Enheter** innehåller en lista över registrerade enheter som hanter
 
 Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabellen och dagliga ögonblicksbilder av varje enhetspost per dag under de senaste 90 dagarna. I kolumnen DateKey visas dagen för varje rad.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DateKey |Referens till datumtabellen som visar dag. |
 | DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id. |
@@ -314,7 +314,7 @@ Entiteten **DevicePropertyHistory** innehåller samma egenskaper som enhetstabel
 
 Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder av inventeringsinformation för mobilenhetshanterade enheter (MDM) under de senaste 90 dagarna. I kolumnen DateKey visas radens dag. Vissa egenskaper kanske inte kan användas eller har inte fyllts i för alla enheter. Mer information finns på den här sidan. Mer information finns i [Förstå dina enheter med inventering i Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DateKey | Referens till datumtabellen som visar dag. |
 | DeviceKey |Unikt id för enheten i informationslagret – surrogatnyckel. Det här är en referens till enhetstabellen som innehåller Intune-enhetens id. |
@@ -412,7 +412,7 @@ Entiteten **MdmDeviceInventoryHistories** innehåller dagliga ögonblicksbilder 
 
 Entiteten **ApplicationInventory** innehåller en lista över appar som hittats på enheten under inventeringen.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DeviceKey |En referens till enhetstabellen. |
 | ApplicationKey |? (kopierat från ExchangeDeviceService\DeviceApplication). |
