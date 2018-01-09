@@ -8,18 +8,18 @@ manager: angrobe
 ms.date: 8/31/2017
 ms.topic: article
 ms.prod: 
-ms.service: microsoft intune
+ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 396ea714 0433 4bd5 a934 8d0b477f28e4
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: 287e8f3736082e427481d7a8a363947d4c42cdd6
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 1e7ad299b91fe8e258d6769eed6f199bdb7f0537
+ms.sourcegitcommit: 12b2111839e648f85374c1c0db4288f08e0ef85d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/09/2018
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Håll dig informerad med aviseringar från Microsoft Intune
 
@@ -54,7 +54,7 @@ Du kan dessutom konfigurera Intune att meddela dig via e-post när en avisering 
 
 I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Aviseringar och meddelanden** och sedan något av följande:
 
-|Aktivitet|Beskrivning|
+|Uppgift|Description|
 |---|------|
 |**Aviseringstyper**|Välj den aviseringstyp som du vill konfigurera och gör sedan något av följande:<br /><br />Välj **Konfigurera**. I dialogrutan **Konfigurera aviseringstyp** väljer du önskade inställningar och sedan **OK**.<br /><br />**Aktivera** eller **Inaktivera** aviseringen.<br /><br />Expandera noden **Aviseringstyper** och välj en kategori för att bara visa aviseringstyperna i den kategorin.|
 |**Mottagare**|Klicka på **Lägg till** om du vill lägga till en ny e-postadress som ska ta emot de e-postmeddelanden som du konfigurerar.<br /><br />Du kan också **Redigera** eller **Ta bort** befintliga mottagare.<br /><br />För att ta emot aviseringar måste du även lägga till e-postadressen som mottagare under **Aviseringsregler**.|
@@ -66,7 +66,7 @@ Om du vill visa aviseringar i [Microsoft Intune-administratörskonsolen](https:/
 
 Använd följande alternativ för att hjälpa dig arbeta med aviseringar från Intunes adminstratörskonsol.
 
-|Alternativ|Beskrivning|
+|Alternativ|Description|
 |-----|----|
 |**Visa aktiva aviseringar**|Välj något av:<br /><br />**Visa en aviseringssammanställning**   På arbetsytan **Instrumentpanel** visas de viktigaste felen i aviseringsfönstret. Klicka på fönstret om du vill se mer detaljerad information.<br /><br />Dessutom kan du visa en sammanställning av aviseringar på sidan **Översikt** i arbetsytan **Aviseringar** .<br /><br />**Visa alla aviseringar**   Gå till arbetsytan **Aviseringar** och klicka på **Alla aviseringar**.|
 |**Visa meddelanden**|Välj något av:<br /><br />Gå till arbetsytan **Instrumentpanel** och välj **Meddelanden**.<br /><br />På arbetsytan **Aviseringar** väljer du **Alla aviseringar** &gt; **Aviseringar**.|

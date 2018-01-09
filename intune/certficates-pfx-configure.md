@@ -6,7 +6,7 @@ keywords:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: angrobe
-ms.date: 11/16/2017
+ms.date: 12/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 105b5fc73bc537eaca67a0e6943701ba25a53972
-ms.sourcegitcommit: 2b35c99ca7d3dbafe2dfe1e0b9de29573db403b9
+ms.openlocfilehash: a51d260718e0d0c3984966fab69e202b854c1847
+ms.sourcegitcommit: b2467a653ffd36c2248a30b69cb88e3dc7cca2ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurera och hantera PKCS-certifikat med Intune
 
@@ -55,10 +55,11 @@ Du behöver en rot- eller mellanliggande CA på varje enhet för autentisering m
 
    Exempel:
 
+4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
+
    `certutil -ca.cert certnew.cer`
 
    Mer information finns i [Certutil-åtgärder för att hantera certifikat](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
-
 
 ## <a name="configure-certificate-templates-on-the-certification-authority"></a>Konfigurera certifikatmallar på certifikatutfärdaren
 
@@ -101,22 +102,20 @@ Du behöver en rot- eller mellanliggande CA på varje enhet för autentisering m
 
 ![ConnectorDownload][ConnectorDownload]
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Gå till **Intune**, **enhetskonfiguration**, **certifikatutfärdare** och klicka på **ladda ned Certificate Connector**.
-   * Spara den på en plats där du kan komma åt den på den server där du kommer att installera den.
-3. Logga in på servern där du ska installera Microsoft Intune Certificate Connector.
-4. Kör installationsprogrammet och acceptera standardplatsen. Den installerar anslutningsappen till C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+1. I Azure Portal väljer du **Fler tjänster** > **Övervakning och hantering**  > **Intune**.
+2. Välj **Enhetskonfiguration** på **Intune**-bladet. 
+3. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**. 
+4. Klicka på **Lägg till** och välj **Download Connector file** (Ladda ned anslutningsfil). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den. 
+5.  Logga in på servern där du ska installera Microsoft Intune Certificate Connector.
+6.  Kör installationsprogrammet och acceptera standardplatsen. Den installerar anslutningsappen till C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
+    1. På sida med installationsalternativ väljer du **PFX-distribution** och klickar på **nästa**.
+    2. Klicka på **installera** och vänta tills det är klart.
+    3. På sidan för slutförande, markerar du kryssrutan **Starta Intune Connector** och klickar på **Slutför**.
+7.  Fönstret NDES Connector borde nu öppnas till fliken **registrering**. Om du vill aktivera anslutningen till Intune klickar du på **Logga in** och anger ett konto med administratörsbehörighet.
+8.  På fliken **avancerat**, kan du lämna alternativknappen **använd den här datorns systemkonto (standard)** markerad.
+9.  Klicka på **tillämpa** och sedan **stäng**.
+10. Gå tillbaks till Azure-portalen. Efter ett par minuter visas en grön bock och ordet **Aktiv** under **Anslutningsstatus** i **Intune** > **Enhetskonfiguration** > **Certifikatutfärdare**. Det innebär att du vet att din anslutningsserver kan kommunicera med Intune.
 
-      a. På sida med installationsalternativ väljer du **PFX-distribution** och klickar på **nästa**.
-
-   b. Klicka på **installera** och vänta tills det är klart.
-
-   c. På sidan för slutförande, markerar du kryssrutan som heter **starta Intune Connector** och klickar på **slutför**.
-
-5. Fönstret NDES Connector borde nu öppnas till fliken **registrering**. Om du vill aktivera anslutningen till Intune, måste du klicka på **logga In** och ange ett konto med administratörsbehörighet.
-6. På fliken **avancerat**, kan du lämna alternativknappen **använd den här datorns systemkonto (standard)** markerad.
-7. Klicka på **tillämpa** och sedan **stäng**.
-8. Gå tillbaks till Azure-portalen. Under **Intune**, **enhetskonfiguration**, **certifikatutfärdare**, borde du se en grön bock och ordet **aktivt** under **anslutningsstatus** efter några minuter. Det innebär att du vet att din anslutningsserver kan kommunicera med Intune.
 
 ## <a name="create-a-device-configuration-profile"></a>Skapa en enhetskonfigurationsprofil
 
@@ -169,4 +168,4 @@ Du behöver en rot- eller mellanliggande CA på varje enhet för autentisering m
 
 [NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Navigera till Intune i Azure-portalen och skapa en ny profil för ett betrott certifikat"
 [ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Skapa en profil och ladda upp ett betrott certifikat"
-[ConnectorDownload]: ./media/certificates-pfx-configure-connector-download.png "Ladda ner certifikatanslutningsappen från Azure-portalen"
+[ConnectorDownload]: ./media/certificates-download-connector.png "Ladda ner certifikatanslutningsappen från Azure-portalen"  

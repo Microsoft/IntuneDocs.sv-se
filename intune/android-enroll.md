@@ -3,10 +3,10 @@ title: Registrera Android-enheter i Intune | Microsoft Docs
 titlesuffix: Azure portal
 description: "Läs hur du registrerar Android-enheter i Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 12/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 68d93fe98b89f27c947e07d79eca9a0e02dea582
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: ad018bdfa55b030f5d714017ae09f616ae2bf164
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -69,6 +69,17 @@ Om du inte redan gjort det, förbereder du för hantering av mobila enheter geno
    - **Hantera alla enheter som Android**. Alla Android-enheter, inklusive enheter som stöder Android for Work, registreras som konventionella Android-enheter.
    - **Hantera enheter som stöds som Android for Work**. Alla enheter som stöder Android for Work registreras som Android for Work-enheter. Alla Android-enheter som inte stöder Android for Work registreras som konventionella Android-enheter.
    - **Hantera enheter som stöds för användare endast i de här grupperna som Android for Work**. Du kan rikta Android for Work-program mot en begränsad uppsättning användare. Endast medlemmar i de valda grupperna som registrerar en enhet som har stöd för Android for Work registreras som Android for Work-enheter. Alla andra registreras som Android-enheter. Detta är användbart vid pilottester av Android for Work.
+
+## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Godkänn företagsportalappen i den hanterade Google Play-butiken
+Du måste godkänna företagsportalappen för Android i den hanterade Google Play-butiken för att den ska kunna ta emot automatiska appuppdateringar. Om du inte godkänner den kommer företagsportalappen till slut att bli inaktuell och kan därmed inte ta emot viktiga felkorrigeringar eller nya funktioner när Microsoft släpper dem.
+
+Så här godkänner du Intune-företagsportalen:
+
+1.  Ladda ned företagsportalappen från den [hanterade Google Play-butiken](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
+2.  Logga in på den hanterade Google Play-butiken med samma Google-konto som du använde när du konfigurerade bindningen för Android for Work.
+3.  Klicka på **Godkänn.**  En ny dialogruta öppnas.
+4.  Granska behörigheterna i den här dialogrutan och klicka sedan på **Godkänn**. Du måste tillåta dessa behörigheter för att företagsportalappen ska kunna hantera arbetsprofilen på enheten.
+5.  Välj **Keep approved when app requests new permissions** (Behåll godkända när appen begär nya behörigheter) och klicka sedan på **Spara.**
 
 <!--  ## Next steps for Android for Work
 After configuring the Android for Work binding and settings, you can do the following:

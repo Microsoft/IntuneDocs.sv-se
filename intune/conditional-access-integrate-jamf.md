@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 87ddb1a5f6ca5cc9be2815aacc9c1570a51e792f
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 8207c77688bcc6e14064322ab2447435c2377b09
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -28,18 +28,12 @@ ms.lasthandoff: 12/01/2017
 |Letar du efter dokumentation om Intune på den klassiska portalen? [Gå hit](/intune/introduction-intune?toc=/intune-classic/toc.json).|
 | |
 
-|För tillfället i privat förhandsvisning|
-|--|
-|De funktioner som beskrivs i det här avsnittet är bara tillgängliga för kunder som är med på den privata förhandsvisningen. Det här meddelandet tas bort när det har släppts för alla kunder.|
-| |
-
 Om din organisation använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer, kan du använda Microsoft Intunes efterlevnadsprinciper med villkorlig åtkomst i Azure Active Directory för att se till att enheter inom din organisation är kompatibla.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Du behöver följande för att konfigurera villkorlig åtkomst med Jamf Pro:
 
-- Åtkomst till Intune privat förhandsgranskning för macOS villkorlig åtkomst
 - Jamf Pro 10.1.0 eller senare
 - [Företagsportalappen för macOS](https://aka.ms/macoscompanyportal)
 - macOS-enheter med OS X 10.11 Yosemite eller senare
@@ -60,7 +54,7 @@ Du kan ansluta Intune till Jamf Pro genom att:
 4. Välj **webbapp / API**.
 5. Ange **inloggnings-URL** med URL:en för din Jamf Pro-instans.
 6. Klicka på **skapa program**.
-7. Spara det nyligen skapade **Program-ID:t**, öppna sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar** för att skapa en ny programnyckel. Ange en **beskrivning** och hur lång tid som ska passera innan den **Förfaller**. Spara sedan programnyckeln. 
+7. Spara det nyligen skapade **Program-ID:t**, öppna sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar** för att skapa en ny programnyckel. Ange en **beskrivning** och hur lång tid som ska passera innan den **Förfaller**. Spara sedan programnyckeln.
 
   > [!IMPORTANT]
   > Programnyckeln visas bara en gång under den här processen. Glöm inte att spara den någonstans där du enkelt kan hämta den.
@@ -105,7 +99,7 @@ Jamf Pro samlar in programvaruinventering om hanterade macOS-enheter. Jamf Pro r
 * Krypterade (FileVault 2)
 * Gatekeeper-status
 * Lösenord: lägst antal teckenuppsättningar
-* Förfallotid för lösenord (dagar)
+* Lösenordets giltighetstid (i dagar)
 * Lösenordstyp – enkel, alfanumerisk eller okänd
 * Förhindra automatisk inloggning
 * Nödvändig längd på lösenord

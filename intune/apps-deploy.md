@@ -3,8 +3,8 @@ title: Tilldela appar till grupper
 titlesuffix: Azure portal
 description: "När du har lagt till en app till Intune, behöver du tilldela den till grupper med användare eller enheter.”"
 keywords: 
-author: mattbriggs
-ms.author: mabrigg
+author: erikre
+ms.author: erikre
 manager: angrobe
 ms.date: 07/24/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 51abb6daad11b9d6036396dcc5a5ce8f2a2c4ac4
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 7121cffaf1deb206aa88373a3aa77ce23bdf030e
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -73,7 +73,7 @@ Ibland har samma app tilldelats flera grupper, men med olika avsikter. I dessa f
 |Avsikt för grupp 1|Avsikt för grupp 2|Resulterande avsikt|
 |Nödvändig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig för användare|Inte tillgänglig för användare|Obligatoriskt|
-|Nödvändig för användare|Avinstallation av användare|Obligatoriskt|
+|Nödvändig för användare|Avinstalleras för användare|Obligatoriskt|
 |Tillgänglig för användare|Inte tillgänglig för användare|Inte tillgängligt|
 |Tillgänglig för användare|Avinstallation av användare|Avinstallera|
 |Inte tillgänglig för användare|Avinstalleras för användare|Avinstallera

@@ -3,8 +3,8 @@ title: RBAC med Intune
 titleSuffix: Azure portal
 description: "Förhandsversion av Intune Azure: Lär dig hur RBAC kan kontrollera vem som ska kunna utföra åtgärder och göra ändringar."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9dc65389485d2a77e351b5e781824eed0612054
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: e33ee50ea7973a2ea2cf71c06255d99e1bc48f45
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Rollbaserad administrationskontroll (RBAC) med Intune
 
@@ -36,7 +36,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
 - **Global administratör:** användare med den här rollen har åtkomst till alla administrativa funktioner i Azure AD, samt tjänster som är underordnade Azure AD som Exchange Online, SharePoint Online och Skype för företag – Online. Personen som registrerar sig för Azure AD-klient blir global administratör. Endast globala administratörer kan tilldela andra administratörsroller i Azure AD. Det kan finnas mer än en global administratör i din organisation. Globala administratörer kan återställa lösenordet för alla användare och alla andra administratörer.
 
-- **Intune Service-administratör:** användarna med den här rollen har globala behörigheter i Intune när tjänsten finns. Dessutom kan ger den här rollen möjlighet att hantera användare och enheter, samt skapa och hantera grupper.
+- **Intune Service-administratör:** användarna med den här rollen har globala behörigheter i Intune när tjänsten finns. Förutom eventuella ersättande Azure-begränsningar ger den här rollen möjlighet att hantera användare och enheter samt skapa och hantera Intune-grupper.
 
 - **Conditional Access Administrator (Administratör för villkorlig åtkomst):** Användare med den här rollen har endast behörighet att visa, skapa, ändra och ta bort principer för villkorlig åtkomst.
 
