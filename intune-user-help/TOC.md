@@ -4,9 +4,9 @@
 
 ## [Vilken information kan mitt företag se med Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Vad händer när jag återställer min enhet?](what-happens-if-you-reset-your-device-cpwebsite.md)
+## [Återställa enheten](what-happens-if-you-reset-your-device-cpwebsite.md)
 
-## [Så här loggar du in på företagsportalen](sign-in-to-the-company-portal.md)
+## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
 
 ## [Använda din Android-enhet](using-your-android-device-with-intune.md)
 ### [Vad händer när jag registrerar en Android-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
@@ -27,12 +27,14 @@
 ### [Åtgärda vanliga problem med Android](troubleshoot-your-device-android.md)
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
 #### [E-postsynkronisering i Outlook med batterisparfunktionsläge](power-saving-mode-android.md)
+#### [Åtgärda vanliga problem med Samsung Knox](samsung-knox-errors-android.md)
 
 #### Använda loggar för att lösa problem
 ##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Skicka loggar via e-post](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Skicka loggar via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
 ##### [Skicka registreringsfel](send-enrollment-errors-to-your-it-admin-android.md)
+##### [Skicka fel till Microsoft](send-logs-to-microsoft-android.md)
 
 ### Frågor om operativsystem
 #### [Uppdatera enheten](you-need-to-update-your-android-device.md)
@@ -66,15 +68,16 @@
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
 ### [Vad händer om du återställer en enhet med hjälp av företagsportalen?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)
 ### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
-### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 ### [Avregistrera din enhet](unenroll-your-device-from-intune-ios.md)
 #### [Vad händer om du avregistrerar din enhet?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Synkronisera enheten manuellt](sync-your-device-manually-ios.md)
 
-### [Åtgärda vanliga problem med iOS](troubleshoot-your-device-iOS.md)
+#### [Åtgärda vanliga problem med iOS](troubleshoot-your-device-iOS.md)
 #### [Återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
 #### [Skicka fel till företaget](send-errors-to-your-it-admin-ios.md)
 #### [Skicka fel till Microsoft](send-logs-to-microsoft-ios.md)
+#### [Ett befintligt e-postkonto för företag hittades](existing-company-email-account-found.md)
+#### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Ett fel uppstod](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 #### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-ios.md)
@@ -97,16 +100,25 @@
 ### [Vad händer när du registrerar en macOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos-cp.md)
 ### [Registrera en äldre macOS-enhet](enroll-your-device-in-intune-macos-legacy.md)
-### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
+### [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)
+
+### [Åtgärda vanliga problem med macOS](troubleshoot-your-device-macos.md)
+#### [Min macOS-version stöds inte ännu](your-macos-version-isnt-yet-supported.md)
+#### [Uppdatera din macOS-enhet](you-need-to-update-your-macos-device.md)
+#### [Rapportera företagsportalfel](send-errors-macos.md)
+#### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-macos.md)
+#### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
+#### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-macos.md)
+#### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 
 ## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 ### [Vad händer när jag registrerar en Windows 10-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
-### [Vad händer när du registrerar en Windows-enhet med en annan version av Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-
+#### [Vad händer om du registrerar andra versioner av Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Registrera en Windows-enhet](enroll-your-device-in-intune-windows.md)
-### [Vad händer om du installerar företagsportalappen och registrerar din enhet i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+#### [Registrera din Windows 10-enhet](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Registrera din Windows 8.1- eller Windows RT 8.1-enhet](enroll-your-w81-or-rt81-windows.md)
+#### [Avregistrera din Windows Phone 8.1-enhet](enroll-your-wp81-windows.md)
 ### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
-
 ### [Kryptera din enhet](encrypt-your-device-windows.md)
 ### [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)
 ### [Avregistrera enheten från Intune](unenroll-your-device-from-intune-windows.md)
@@ -128,6 +140,6 @@
 #### [Jag behöver aktivera brandväggen](you-need-to-enable-defender-firewall-windows.md)
 #### [Jag behöver aktivera UAC](you-need-to-enable-uac-windows.md)
 #### [Jag behöver uppdatera Windows](you-need-to-update-os-build-version-windows.md)
-#### [Jag behöver starta Windows Defender](turn-on-defender-windows.md) 
+#### [Jag behöver starta Windows Defender](turn-on-defender-windows.md)
 
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)

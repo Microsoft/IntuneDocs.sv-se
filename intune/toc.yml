@@ -198,7 +198,7 @@
           href: device-logout-user.md
         - name: Ta bort användare
           href: device-remove-user.md
-        - name: Fjärrstyrning för Android
+        - name: Fjärrstyr mobila enheter
           href: device-profile-android-teamviewer.md
         - name: PIN-återställning i Windows 10
           href: device-windows-pin-reset.md
@@ -236,6 +236,8 @@
               href: apps-add-android-for-work.md
             - name: Office 365-appar för Windows 10
               href: apps-add-office365.md
+            - name: Office 365-appar för macOS
+              href: apps-add-office365-macos.md
         - name: Tilldela appar
           href: apps-deploy.md
         - name: Övervakning av appar
@@ -417,6 +419,10 @@
           href: app-modern-authentication-block.md
         - name: Övervaka kompatibilitet för villkorlig åtkomst
           href: conditional-access-exchange-monitor.md
+        - name: Integrera Jamf Pro med Intune för kompatibilitet
+          href: conditional-access-integrate-jamf.md
+        - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
+          href: conditional-access-assign-jamf.md
     - name: Skydda app- och enhetsdata
       items:
         - name: Använd programskyddsprinciper
@@ -575,7 +581,7 @@
           items:
             - name: VPN-profil per program
               href: android-pulse-secure-per-app-vpn.md
-            - name: Tillåt/blockera program för Samsung KNOX Standard
+            - name: Tillåt/blockera appar för Samsung Knox Standard
               href: samsung-knox-apps-allow-block.md
         - name: iOS
           href: custom-settings-ios.md
