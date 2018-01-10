@@ -2,8 +2,8 @@
 title: "Appbaserad villkorlig åtkomst med Intune"
 description: "Förstå hur appbaserad villkorlig åtkomst fungerar med Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
 ms.date: 05/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a813dbaff7db5bf07e3573fb9bf539f6a4676f0
-ms.sourcegitcommit: 82088d297eef629e3da6011681ead442ae7e25f7
+ms.openlocfilehash: 3d89bec626e5e53a15bf46ecb96b244566d96dcb
+ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
@@ -33,7 +33,7 @@ Appbaserad villkorlig åtkomst och mobilappshantering ger ett extra säkerhetsla
 
 Du kan blockera inbyggda e-postappar i iOS och Android genom att bara tillåta att Microsoft Outlook-appen får åtkomst till Exchange Online. Dessutom kan du blockera appar där Intunes appskyddsprinciper inte har tillämpats för åtkomst till SharePoint Online.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 Innan du skapar en appbaserad princip för villkorlig åtkomst måste du ha:
 
 - **Enterprise Mobility + Security (EMS)** eller en **Azure Active Directory (AD) Premium-prenumeration**
