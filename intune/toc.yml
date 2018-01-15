@@ -642,7 +642,7 @@
               href: reports-ref-user-device.md
             - name: Referens för användarentitet
               href: reports-ref-user.md
-    - name: Läsa in Windows-program separat
+    - name: Intune Graph-API
       href: intune-graph-apis.md
       items:
         - name: 'Graph API:er för Intune-referens'

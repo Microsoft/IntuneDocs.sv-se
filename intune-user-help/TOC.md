@@ -6,6 +6,8 @@
 
 ## [Återställa enheten](what-happens-if-you-reset-your-device-cpwebsite.md)
 
+## [Uppdatera lösenordet](password-does-not-meet-it-administrator-requirements.md)
+
 ## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
 
 ## [Använda din Android-enhet](using-your-android-device-with-intune.md)
@@ -72,7 +74,7 @@
 #### [Vad händer om du avregistrerar din enhet?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 ### [Synkronisera enheten manuellt](sync-your-device-manually-ios.md)
 
-#### [Åtgärda vanliga problem med iOS](troubleshoot-your-device-iOS.md)
+### [Åtgärda vanliga problem med iOS](troubleshoot-your-device-iOS.md)
 #### [Återansluta en komprometterad iOS-enhet](how-to-reconnect-a-compromised-ios-device.md)
 #### [Skicka fel till företaget](send-errors-to-your-it-admin-ios.md)
 #### [Skicka fel till Microsoft](send-logs-to-microsoft-ios.md)
@@ -116,6 +118,7 @@
 #### [Vad händer om du registrerar andra versioner av Windows?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 ### [Registrera en Windows-enhet](enroll-your-device-in-intune-windows.md)
 #### [Registrera din Windows 10-enhet](enroll-your-w10-phone-or-w10-pc-windows.md)
+#### [Registrera din Windows 10-enhet via ”Åtkomst till arbete eller skola”](enroll-your-w10-device-access-work-or-school.md)
 #### [Registrera din Windows 8.1- eller Windows RT 8.1-enhet](enroll-your-w81-or-rt81-windows.md)
 #### [Avregistrera din Windows Phone 8.1-enhet](enroll-your-wp81-windows.md)
 ### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
