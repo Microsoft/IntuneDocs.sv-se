@@ -15,11 +15,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bfcce8d38bc403a13aa28cc762370a7cfaa0bc2d
-ms.sourcegitcommit: 1df625330f4e8f7f661b5f2b9f16b5590971838d
+ms.openlocfilehash: 7d78ec07a31a54ff16cb6ca7deb2a883da632139
+ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/10/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -28,9 +28,9 @@ Så här använder du Intunes **anpassade enhetsprofiler** för att skapa en tr�
 
 > [!NOTE]
 -   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
-- För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
+- För Android kan du även använda den här [PSK-generatorn för Android](http://intunepskgenerator.johnathonb.com/) som tillhandahålls av Johnathon Biersack.
 -   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
--  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
+-  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://intunepskgenerator.johnathonb.com/) som tillhandahålls av Johnathon Biersack.
 
 
 1.  Om du vill skapa en trådlös profil med en i förväg delad nyckel för Android eller Windows eller en EAP-baserad trådlös profil, väljer du **Anpassad** för den enhetsplattformen när du skapar en enhetsprincip, i stället för en trådlös profil.

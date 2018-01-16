@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 05/19/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7317a60a9640df0b95444a2b032c12b3ca9f20b
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 337b5407026c5415f8fbac1a0626181f9b042a06
+ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Registrera dina Windows 10-enheter i Intune
 
@@ -47,6 +47,6 @@ Vill du veta mer? Ta reda på vad som händer när du [registrerar din enhet i I
 1.  På __Start__-menyn sveper du över till listan __Alla appar__ och väljer sedan appen __Inställningar__.        
 2.  Tryck på __System__ och sedan på __Om__.       
 3.  Under __Enhetsinformation__ trycker du på __Mer information__. En lista med information om din enhet visas. Leta upp __versionen__ i den här listan.        
-4.  Om du har version __1607__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
+4.  Om du har version __1607 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-access-work-or-school.md). Om du har version __1511 eller senare__ fortsätter du med [dessa steg](enroll-your-w10-device-your-account.md).
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
