@@ -7,18 +7,18 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.date: 08/09/2017
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: faf3e9b81f76755135f73f8753305d96d227ec14
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 144313b63c1a6349a59220c901072dbf9d4c6f43
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="reset-the-passcode-on-windows-devices-integrated-with-the-microsoft-pin-reset-service-using-intune"></a>Återställa lösenordet på Windows-enheter som är kopplade till Microsofts tjänst för PIN-återställning med hjälp av Intune
 
@@ -41,9 +41,9 @@ Innan du kan fjärråterställa lösenord på Windows-enheter som du hanterar m�
 
 1. Besök [webbplatsen för integrering av Microsofts tjänst för PIN-återställning](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=b8456c59-1230-44c7-a4a2-99b085333e84&resource=https%3A%2F%2Fgraph.windows.net&redirect_uri=https%3A%2F%2Fcred.microsoft.com&state=e9191523-6c2f-4f1d-a4f9-c36f26f89df0&prompt=admin_consent) och logga in med det klientadministratörskonto som du använder för att hantera Intune-klienten.
 2. När du loggar in ska du klicka på **Acceptera** och ge tjänsten för PIN-återställning tillgång till ditt konto.<br>
-![Behörighetssida för tjänsten för PIN-återställning](./media/pin-reset-service-application.png)
+![Sidan för att återställa PIN-koden för tjänstbehörigheter](./media/pin-reset-service-application.png)
 3. I Azure-portalen kan du kontrollera att Intune och tjänsten för PIN-återställning har integrerats från Enterprise-programmen. Bladet med alla program visas i nedanstående skärmbild:<br>
-![Tjänsten för PIN-återställning i Azure](./media/pin-reset-service-home-screen.png)
+![Återställning av PIN-kod för tjänstprogram i Azure](./media/pin-reset-service-home-screen.png)
 4. Logga in på [webbplatsen](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=9115dd05-fad5-4f9c-acc7-305d08b1b04e&resource=https%3A%2F%2Fcred.microsoft.com%2F&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2F9115dd05-fad5-4f9c-acc7-305d08b1b04e&state=6765f8c5-f4a7-4029-b667-46a6776ad611&prompt=admin_consent) med autentiseringsuppgifterna för ditt Intune-klientadministratörskonto. Välj **Acceptera** igen för att ge tjänsten tillgång till ditt konto.
 
 ### <a name="configure-windows-devices-to-use-pin-reset"></a>Konfigurera vilka Windows-enheter som ska få använda PIN-återställning

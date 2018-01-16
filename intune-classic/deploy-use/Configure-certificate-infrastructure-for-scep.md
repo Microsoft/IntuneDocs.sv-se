@@ -5,7 +5,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 11/15/2016
+ms.date: 1/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 54b8a14c01e0a08e76843b02f00124117617540d
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ddf7b2e90b0008e23d550cc347d2c904cc9bc9be
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurera certifikatinfrastruktur för SCEP
 
@@ -338,6 +338,9 @@ Hämta, installera och konfigurera en Certificate Connector på NDES-servern.
 5.  I användargränssnittet för **certifikat connectorn** :
 
     Klicka på **Logga in** och ange autentiseringsuppgifter för en tjänstadministratör i Intune eller för en klientadministratör med behörighet för global administration.
+
+    > [!NOTE]
+    > Om du får ett felmeddelande om att **användarnamnet inte känns igen** när du loggar in i NDESConnectorUI.exe innebär det oftast att du har använt ett konto som saknar giltig Intune-licens. Tilldela kontot en Intune- eller EMS-licens och försök igen.
 
     Om organisationen använder en proxyserver och proxyn krävs för att NDES-servern ska få tillgång till Internet klickar du på **Använd proxyserver** och anger proxyservernamn, port och autentiseringsuppgifter för att ansluta.
 
