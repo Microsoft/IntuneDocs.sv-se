@@ -79,6 +79,7 @@
 #### [Skicka fel till företaget](send-errors-to-your-it-admin-ios.md)
 #### [Skicka fel till Microsoft](send-logs-to-microsoft-ios.md)
 #### [Ett befintligt e-postkonto för företag hittades](existing-company-email-account-found.md)
+#### [Enhetsgränsen har nåtts](device-limit-wpj-ios.md)
 #### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-ios.md)
 #### [Ett fel uppstod](you-get-an-error-while-using-the-company-portal-app-ios.md)
 #### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
@@ -112,6 +113,7 @@
 #### [Den här enheten skiljer sig lite](device-little-different-jamf.md)
 #### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+#### [Enhetsgränsen har nåtts](device-limit-wpj-macos.md)
 
 ## [Använda din Windows-enhet](using-your-windows-device-with-intune.md)
 ### [Vad händer när jag registrerar en Windows 10-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
