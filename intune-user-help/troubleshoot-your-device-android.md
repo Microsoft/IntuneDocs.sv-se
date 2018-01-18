@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 04/10/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ searchScope: User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: dd211b9dd8b09f2e3eab570eab48664fab55e3df
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: a83d938abbaefe35d028e50ed13c422b97bc3987
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fix-common-issues-with-your-android-device"></a>Åtgärda vanliga problem med din Android-enhet
 
@@ -30,6 +30,7 @@ Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtg�
 - [Skicka loggar till företagets support via e-post](send-logs-to-your-it-admin-by-email-android.md)
 - [Skicka loggar till företagets support via en USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
 - [Skicka registreringsfel till företagets support](send-enrollment-errors-to-your-it-admin-android.md)
+- [Skicka fel till Microsoft](send-logs-to-microsoft-android.md)
 - [Du måste uppdatera Android-enheten](you-need-to-update-your-android-device.md)
 - [Enheten är inte kompatibel med den senaste versionen av operativsystemet](your-android-version-isnt-yet-supported.md)
 - [Enheten finns men det går inte att ansluta till den](your-device-is-rooted-and-you-cant-connect-android.md)
@@ -41,3 +42,4 @@ Ibland kan det uppstå problem med din Android-enhet. Dessa kan eventuellt åtg�
 - [Enheten visas krypterad, men företagsportalens app säger något annat](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 - [Du uppmanas att installera en Device Threat Protection-app på din Android-enhet](you-are-prompted-to-install-mtd-android.md)
 - [Du måste åtgärda ett hot som en Device Threat Protection-app hittade på din Android-enhet](you-need-to-resolve-a-threat-found-by-mtd-android.md)
+- [Åtgärda fel för Samsung Knox-enheter](samsung-knox-errors-android.md)

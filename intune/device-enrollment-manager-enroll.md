@@ -3,10 +3,10 @@ title: "Registrera enheter – enhetsregistreringshanteraren"
 titlesuffix: Azure portal
 description: "Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune. \""
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/08/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0faca372a8bc9a632cf99133b9843b4b219f285c
-ms.sourcegitcommit: e692be57ec7044dfc224b70941affbfd7efba421
+ms.openlocfilehash: 03facdde2ff5652799cc3d2113a48ea5ae772ea9
+ms.sourcegitcommit: 5fd17a57989c6da3d325ed2e0018ce16fe20bb79
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="enroll-devices-using-device-enrollment-manager"></a>Registrera enheter med enhetsregistreringshanteraren
 
@@ -30,7 +30,7 @@ Organisationer kan använda Intune för att hantera ett stort antal mobila enhet
 Användarna måste finnas i Azure Portal för att kunna läggas till som enhetsregistreringshanterare. För optimal säkerhet bör DEM-användare inte även vara Intune-administratörer.
 
 >[!NOTE]
->DEM-registreringsmetoden går inte att använda med de här andra registreringsmetoderna: [Apple Configurator med installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator med direktregistrering](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md), eller [programmet för enhetsregistrering (DEP)](device-enrollment-program-enroll-ios.md).
+>DEM-registreringsmetoden går inte att använda med de här andra registreringsmetoderna: [Apple Configurator med installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator med direktregistrering](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md), eller [programmet för enhetsregistrering (DEP)](device-enrollment-program-enroll-ios.md). Den kan också användas för att registrera macOS-enheter. 
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Exempelscenario för enhetsregistreringshanterare
 
@@ -65,7 +65,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare
 
-1.  På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2.  Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
 
@@ -90,7 +90,7 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 **Ta bort en enhetsregistreringshanterare**
 
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
 3. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **ta bort**.
 

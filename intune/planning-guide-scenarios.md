@@ -14,11 +14,11 @@ ms.assetid: 4b3c9af9-78da-44d2-8bd2-3f0f8885952d
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 864f99f52e0c8b46307f1ec24d11da51d8f52662
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: c77e2f9f46e61442261f65ddaa90877fc0063906
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifiera hantering av mobila enheter för användningsscenarier
 
@@ -74,7 +74,7 @@ Du måste nu identifiera de organisationsgrupper som är kopplade till varje anv
 
 Nästa steg är att identifiera de mobila enhetsplattformar som är kopplade till respektive användningsfall. Det kan finnas mer än en.
 
-Ditt företagsanvändningsfallsscenario stöder kanske iOS- och Android Samsung KNOX-enhetsplattformar. Din BYOD-princip kan innehålla stöd för ytterligare plattformar för mobila enheter, t.ex. Android (inte Samsung KNOX) och Windows 10 Mobile. Utifrån föregående exempel har vi kopplat plattformar för mobila enheter till respektive användningsfallsscenario.
+Ditt fallscenario för företagsanvändning stöder kanske iOS- och Android Samsung Knox-enhetsplattformar. Din BYOD-princip kan innehålla stöd för ytterligare plattformar för mobila enheter, t.ex. Android (inte Samsung Knox) och Windows 10 Mobile. Utifrån föregående exempel har vi kopplat plattformar för mobila enheter till respektive användningsfallsscenario.
 
 | **Användningsfall** | **Underanvändningsfall** | **Grupper** | **Enhetsplattformar** |   
 |:---:|:---:|:---:|:---:|

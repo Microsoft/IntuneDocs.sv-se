@@ -18,6 +18,6 @@
 
 Kunder med Enterprise Management + Security (EMS) kan också [registrera Windows 10-enheter med Azure Active Directory (Azure AD)](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
 
-* En fullständig lista över verifierade Samsung KNOX Standard-enheter finns i [Inställningar för Android- och Samsung KNOX Standard-principer](/intune-classic/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
+* En fullständig lista över verifierade Samsung Knox Standard-enheter finns i [Inställningar för Android- och Samsung Knox Standard-principer](/intune-classic/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
 
 En fullständig lista över enheter och hanteringsmetoder finns i [Enheter som stöds av Intune](/intune/supported-devices-browsers#intune-supported-devices).

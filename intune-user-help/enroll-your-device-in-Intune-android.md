@@ -16,11 +16,11 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7a90ae7db1141b40934648c951276e3f4d43bc05
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 52364f7c5586f6021ac3bf83e73701d9781c4468
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrera en Android-enhet i Intune
 
@@ -28,7 +28,7 @@ Om företaget eller skolan använder Microsoft Intune kan du registrera din Andr
 
 > [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment/player]
 
-De här registreringsanvisningarna är avsedda för ursprungliga Android-enheter och Samsung KNOX Android-enheter. Samsung KNOX tillhandahåller en typ av säkerhet som vissa Samsung-enheter använder för att ge ytterligare skydd utöver vad den interna säkerheten i Android ger. Du kan kontrollera om du har en Samsung KNOX-enhet genom att välja **Inställningar** > **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
+De här registreringsanvisningarna är avsedda för ursprungliga Android-enheter och Samsung Knox Android-enheter. Samsung Knox tillhandahåller en typ av säkerhet som vissa Samsung-enheter använder för att ge ytterligare skydd utöver vad den interna säkerheten i Android ger. Du kan kontrollera om du har en Samsung Knox-enhet genom att välja **Inställningar** > **Om enheten**. Om du inte ser orden "Knox version" i listan har du en ursprunglig Android-enhet.
 
 Före eller efter registreringen kan du bli ombedd att välja en kategori som bäst beskriver hur du använder enheten. Företagets support använder den här kategorin för att se vilka appar du har åtkomst till.
 
@@ -98,9 +98,9 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
     ![Ange PIN-kod eller lösenord](./media/and-enroll-6-PIN-native.png)
 
-13.  Om du använder en Samsung KNOX-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Se följande skärm som visar att enheten registreras om du använder en Android-enhet.
+13.  Om du använder en Samsung Knox-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Se följande skärm som visar att enheten registreras om du använder en Android-enhet.
 
-    ![Sekretesspolicy för Samsung KNOX](./media/and-enroll-7-knox-privacy-policy.png)
+    ![Sekretesspolicy för Samsung Knox](./media/and-enroll-7-knox-privacy-policy.png)
 
     Den här skärmen visar att enheten registreras.
 

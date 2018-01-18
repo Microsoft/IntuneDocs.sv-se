@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2ec41724eacc4abca994b1dadff6e6d9df63c74d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
+ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
@@ -37,6 +37,12 @@ Kontrollerar att du har konfigurerat Intune korrekt så att registrering är akt
 -   [Konfigurera Windows-enhetshantering](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune)
 -   [Konfigurera hantering av Android-enhet](/intune-classic/deploy-use/set-up-android-management-with-microsoft-intune) – Inga ytterligare åtgärder krävs
 -   [Konfigurera hantering av Android for Work-enhet](/intune-classic/deploy-use/set-up-android-for-work)
+
+Du kan också kontrollera att tid och datum på användarens enhet är inställt på rätt sätt:
+
+1. Starta om enheten.
+2. Kontrollera att tid och datum är inställt nära GMT-standarder (+ eller - 12 timmar) i förhållande till slutanvändarens tidszon.
+3. Avinstallera och installera Intune-företagsportalen igen (om tillämpligt).
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
 
@@ -229,27 +235,29 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 **Lösning 1**:
 
-Be användaren att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Försök med Lösning 2 om felet fortfarande visas när användaren följt instruktionerna.
+Användaren kanske kan hämta certifikatet som saknas genom att följa instruktionerna i [Enheten saknar ett obligatoriskt certifikat](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Om problemet kvarstår kan du försöka med lösning 2.
 
 **Lösning 2**:
 
 Om användaren fortfarande ser ett fel om saknat certifikat efter att ha angett sin företagsinloggning och omdirigerats för federerad inloggning, kan ett mellanliggande certifikat saknas på AD FS-servern (Active Directory Federation Services).
 
-Certifikatfelet uppstår eftersom Android-enheter kräver att mellanliggande certifikat ingår i [SSL-serverns hälsning](https://technet.microsoft.com/library/cc783349.aspx), men för närvarande är standardinställningen att AD FS-serverns eller AD FS-proxyserverns installation endast skickar AD FS-tjänstens SSL-certifikat i SSL-serverns svar på en hälsning från SSL-klienten.
+Certifikatfel uppstår eftersom Android-enheter kräver att mellanliggande certifikat ingår i en [SSL-servers hälsning](https://technet.microsoft.com/library/cc783349.aspx). För närvarande skickar en AD FS-standardserver eller WAP - AD FS Proxy-serverinstallation bara AD FS-tjänstens SSL-certifikat i SSL-serverns hälsningssvar till en SSL-klients hälsning.
 
 Om du vill åtgärda problemet importerar du certifikaten till datorns personliga certifikat på AD FS-servern eller proxyservrar enligt följande:
 
-1.  Starta certifikathanteringskonsolen för den lokala datorn i ADFS och proxyservrar, genom att högerklicka på knappen **Start**, välja **Kör** och skriva **certlm.msc**.
+1.  På ADFS- och proxy-servrarna, högerklickar du på **Start** > **Kör** > **certlm.msc**. Detta startar den lokala datorns certifikathanteringskonsol.
 2.  Expandera **Personligt** och välj **Certifikat**.
 3.  Hitta certifikatet för din AD FS-tjänstkommunikation (ett offentligt signerat certifikat) och dubbelklicka för att se dess egenskaper.
 4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5.  På varje överordnat certifikat väljer du **Visa certifikat**.
-6.  Välj fliken **Information** och välj **Kopiera till fil...** .
-7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för certifikatet på önskad plats.
-8.  Importera de överordnade certifikat som exporterades i steg 3 till Lokal dator\Personligt\Certifikat genom att högerklicka på **Certifikat**, välja **Alla uppgifter** > **Importera** och sedan följa guidens uppmaningar för att importera certifikaten.
-9.  Starta om AD FS-servrarna.
-10. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
-Nu ska användaren kunna logga in på företagsportalen från Android-enheten.
+6.  Välj fliken **Information** > **kopiera till fil ...** .
+7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för överordnat certifikatet på önskad plats.
+8.  Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
+9.  Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
+10. Starta om AD FS-servrarna.
+11. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
+
+För att verifiera en korrekt certifikatinstallation kan du använda diagnostikverktyget som finns på [https://www.digicert.com/help/](https://www.digicert.com/help/). I rutan **Serveradress**, ange din ADFS-servers FQDN (IE: sts.contso.com) och klicka på **Kontrollera server**.
 
 **Så här kontrollerar du att certifikatet har installerats**:
 

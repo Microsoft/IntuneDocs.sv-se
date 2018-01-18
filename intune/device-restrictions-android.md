@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 09/07/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,35 @@ ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ffddf9e5fcdf8359c729eb048a6f8052a1b3286f
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: c89d253f28a26a560251b159a3705016b4c7fad3
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung KNOX Standard-enheter i Microsoft Intune
+# <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd de här inställningarna med en princip för begränsning av Android-enhet för att konfigurera enheter i din organisation.
 
 >[!TIP]
->Om de önskade inställningarna inte är tillgängliga så kan du konfigurera dina enheter med hjälp av en [anpassad profil](custom-settings-android.md). 
+>Om de önskade inställningarna inte är tillgängliga så kan du konfigurera dina enheter med hjälp av en [anpassad profil](custom-settings-android.md).
 
 ## <a name="general"></a>Allmänt
 
 - **Kamera** – Enhetens kamera kan användas.
-- **Kopiera och klistra in (endast Samsung KNOX)** – Tillåter funktioner för att kopiera och klistra in på enheten.
-- **Urklippsdelning mellan appar (endast Samsung KNOX)** – Tillåter användning av Urklipp vid funktionen Kopiera och klistra in mellan appar.
-- **Sändning av diagnostikdata (endast Samsung KNOX)** – Hindrar användaren från att skicka diagnostikdata från enheten.
-- **Fabriksåterställning (endast Samsung KNOX)** – Tillåter att användaren utför en fabriksåterställning på enheten.
-- **Geoplats (endast Samsung KNOX)** – Tillåter att enheten använder platsinformation.
-- **Avstängning (endast Samsung KNOX)** – Tillåter att användaren stänger av enheten.<br>Om det är inaktiverat så går det inte att ställa in **antal felaktiga inloggningar innan enheten rensas**.
-- **Skärmdump (endast Samsung KNOX)** – Låter användaren fånga skärminnehållet som en bild.
-- **Röstassistent (endast Samsung KNOX)** – Tillåter användning av röstassistentens programvara på enheten.
-- **YouTube (endast Samsung KNOX)** – Tillåter användning av YouTube-appen på enheten.
-- **Delade enheter (endast Samsung Knox)** – Konfigurera en hanterad Samsung KNOX Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När detta används tillsammans med en SCEP-certifikatprofil gör den här funktionen det möjligt för användarna att dela en enhet med samma uppsättning appar till alla användare, men med deras egna SCEP-certifikat för användare.  Alla appdata rensas när användaren loggar ut.  Den här funktionen är begränsad till endast LOB-appar.
+- **Kopiera och klistra in (endast Samsung Knox)** – Tillåter funktioner för att kopiera och klistra in på enheten.
+- **Urklippsdelning mellan appar (endast Samsung Knox)** – Tillåter användning av Urklipp vid funktionen Kopiera och klistra in mellan appar.
+- **Sändning av diagnostikdata (endast Samsung Knox)** – Hindrar användaren från att skicka diagnostikdata från enheten.
+- **Fabriksåterställning (endast Samsung Knox)** – Tillåter att användaren utför en fabriksåterställning på enheten.
+- **Geoplats (endast Samsung Knox)** – Tillåter att enheten använder platsinformation.
+- **Avstängning (endast Samsung Knox)** – Tillåter att användaren stänger av enheten.<br>Om det är inaktiverat så går det inte att ställa in **antal felaktiga inloggningar innan enheten rensas**.
+- **Skärmdump (endast Samsung Knox)** – Låter användaren fånga skärminnehållet som en bild.
+- **Röstassistent (endast Samsung Knox)** – Tillåter användning av röstassistentens programvara på enheten.
+- **YouTube (endast Samsung Knox)** – Tillåter användning av YouTube-appen på enheten.
+- **Delade enheter (endast Samsung Knox)** – Konfigurera en hanterad Samsung Knox Standard-enhet som delad. I det här läget så kan slutanvändare logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten fortsätter att vara hanterad oavsett om den används eller inte.<br>När detta används tillsammans med en SCEP-certifikatprofil gör den här funktionen det möjligt för användarna att dela en enhet med samma uppsättning appar till alla användare, men med deras egna SCEP-certifikat för användare.  Alla appdata rensas när användaren loggar ut.  Den här funktionen är begränsad till endast LOB-appar.
+- **Blockera datum- och tidsändringar (Samsung Knox)** – Hindra användaren från att ändra datum- och tidsinställningar på enheten. 
 
 ## <a name="password"></a>Lösenord
 
@@ -60,8 +61,8 @@ Använd de här inställningarna med en princip för begränsning av Android-enh
     - **Minst alfanumeriskt**
     - **Minst alfanumeriskt med symboler**
 - **Förhindra återanvändning av tidigare lösenord** – Hindrar slutanvändaren från att skapa ett lösenord som har använts tidigare.
-- **Upplåsning med fingeravtryck (endast Samsung KNOX)** – Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.
-- **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung KNOX Standard 5.0 och senare). Den här telefonfunktionen, som ibland kallas förtroendeagent, låter dig inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats. Det kan till exempel användas när enheten är ansluten till en specifik bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
+- **Upplåsning med fingeravtryck (endast Samsung Knox)** – Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.
+- **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung Knox Standard 5.0 och senare). Den här telefonfunktionen, som ibland kallas förtroendeagent, låter dig inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats. Det kan till exempel användas när enheten är ansluten till en specifik bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
 - **Kryptering** – Kräver att filer på enheten krypteras.
 
 <sup>1</sup> Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
@@ -73,11 +74,11 @@ Om du konfigurerar inställningen **Numeriskt avancerad** och sedan tilldelar de
 
 ## <a name="google-play-store"></a>Google Play Store
 
-- **Google Play Store (endast Samsung KNOX)** – Ger användaren åtkomst till Google Play Store på enheten.
+- **Google Play Store (endast Samsung Knox)** – Ger användaren åtkomst till Google Play Store på enheten.
 
 ## <a name="restricted-apps"></a>Begränsade appar
 
-I listan över begränsade appar, kan du konfigurera någon av följande listor för både Android och Samsung KNOX Standard-enheter:
+I listan över begränsade appar, kan du konfigurera någon av följande listor för både Android och Samsung Knox Standard-enheter:
 
 Listan **Otillåtna program** – Visar de program (som inte hanteras av Intune) som rapporteras om användarna installerar och kör dem.
 Listan **Godkända appar** – Ange de appar som användare tillåts att installera. För att fortsätta vara kompatibla, får användare inte installera andra appar. Appar som hanteras av Intune tillåts automatiskt.
@@ -101,48 +102,48 @@ Du kan också klicka på **importera** för att hämta listan från en csv-fil. 
 
 ## <a name="browser"></a>Webbläsare
 
-- **Webbläsare (endast Samsung KNOX)** – Anger om enhetens standardwebbläsare får användas.
-- **Autofyll (endast Samsung KNOX)** – Tillåter att webbläsarens autofyllfunktion används.
-- **Cookies (endast Samsung KNOX)** – Tillåter att enhetens webbläsare använder cookies.
-- **Javascript (endast Samsung KNOX)** – Tillåter att enhetens webbläsare använder Javascript.
-- **Popup-fönster (endast Samsung KNOX)** – Tillåter att blockering av popup-fönster används i webbläsaren.
+- **Webbläsare (endast Samsung Knox)** – Anger om enhetens standardwebbläsare får användas.
+- **Autofyll (endast Samsung Knox)** – Tillåter att webbläsarens autofyllfunktion används.
+- **Cookies (endast Samsung Knox)** – Tillåter att enhetens webbläsare använder cookies.
+- **Javascript (endast Samsung Knox)** – Tillåter att enhetens webbläsare använder Javascript.
+- **Popup-fönster (endast Samsung Knox)** – Tillåter att blockering av popup-fönster används i webbläsaren.
 
 ## <a name="allow-or-block-apps"></a>Tillåt eller blockera program
 
-De här inställningarna kan användas för att ange program som kan installeras eller startas på enheter som endast kör Samsung KNOX Standard.
+De här inställningarna kan användas för att ange program som kan installeras eller startas på enheter som endast kör Samsung Knox Standard.
 Dessutom kan du ange installerade program som ska vara dolda för enhetens användare. Användarna kan inte köra dessa program.
 
-- **Appar som kan installeras (endast Samsung KNOX Standard)**
-- **Appar som blockeras från att starta (endast Samsung KNOX Standard)**
-- **Appar som döljs för användaren (endast Samsung KNOX Standard)**
+- **Appar som kan installeras (endast Samsung Knox Standard)**
+- **Appar som blockeras från att starta (endast Samsung Knox Standard)**
+- **Appar som döljs för användaren (endast Samsung Knox Standard)**
 
 För varje inställning konfigurerar du en lista med program med hjälp av något av följande:
 
-- **Lägg till appar efter paketnamn** – Används främst för verksamhetsspecifika program. Ange namnet på programmet och namnet på appaketet. 
+- **Lägg till appar efter paketnamn** – Används främst för verksamhetsspecifika program. Ange namnet på programmet och namnet på appaketet.
 - **Lägg till appar efter URL** – Ange namnet på programmet och dess URL i Google Play Butik.
 - **Lägg till hanterade appar** – I listan med program som du hanterar med Intune väljer du det program som du behöver.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 
-- **Google-säkerhetskopiering (endast Samsung KNOX)** – Tillåter användning av Google-säkerhetskopiering.
-- **Automatisk synkronisering av Google-konto (endast Samsung KNOX)** – Tillåter att Google-kontoinställningarna får synkroniseras automatiskt.
-- **Flyttbara lagringsmedier (endast Samsung KNOX)** – Tillåter att enheten använder flyttbara lagringsmedier, som t.ex. SD-kort.
-- **Kryptering på minneskort (endast Samsung KNOX)** – Anger om enhetens minneskort måste vara krypterat.
+- **Google-säkerhetskopiering (endast Samsung Knox)** – Tillåter användning av Google-säkerhetskopiering.
+- **Automatisk synkronisering av Google-konto (endast Samsung Knox)** – Tillåter att Google-kontoinställningarna får synkroniseras automatiskt.
+- **Flyttbara lagringsmedier (endast Samsung Knox)** – Tillåter att enheten använder flyttbara lagringsmedier, som t.ex. SD-kort.
+- **Kryptering på minneskort (endast Samsung Knox)** – Anger om enhetens minneskort måste vara krypterat.
 
 ## <a name="cellular-and-connectivity"></a>Mobilnät och anslutning
 
-- **Datanätverksväxling (endast Samsung KNOX)** – Tillåter datanätverksväxling när enheten är i ett mobilnät.
-- **SMS och MMS (endast Samsung KNOX)** – Tillåter användning av SMS och MMS på enheten.
-- **Röstsamtal (endast Samsung KNOX)** – Aktiverar eller inaktiverar röstsamtal på enheten.
-- **Röstnätverksväxling (endast Samsung KNOX)** – Tillåter röstnätverksväxling när enheten är i ett mobilnät.
-- **Bluetooth (endast Samsung KNOX)** – Tillåter att Bluetooth används på enheten.
-- **NFC (endast Samsung KNOX)** – Tillåter åtgärder som använder närfältskommunikation, om enheten har stöd för det.
-- **Trådlöst (endast Samsung KNOX)** – Tillåter trådlösa funktioner på enheten.
-- **Trådlös Internetdelning (endast Samsung KNOX)** – Tillåter användning av trådlös Internetdelning på enheten.
+- **Datanätverksväxling (endast Samsung Knox)** – Tillåter datanätverksväxling när enheten är i ett mobilnät.
+- **SMS och MMS (endast Samsung Knox)** – Tillåter användning av SMS och MMS på enheten.
+- **Röstsamtal (endast Samsung Knox)** – Aktiverar eller inaktiverar röstsamtal på enheten.
+- **Röstnätverksväxling (endast Samsung Knox)** – Tillåter röstnätverksväxling när enheten är i ett mobilnät.
+- **Bluetooth (endast Samsung Knox)** – Tillåter att Bluetooth används på enheten.
+- **NFC (endast Samsung Knox)** – Tillåter åtgärder som använder närfältskommunikation, om enheten har stöd för det.
+- **Trådlöst (endast Samsung Knox)** – Tillåter trådlösa funktioner på enheten.
+- **Trådlös Internetdelning (endast Samsung Knox)** – Tillåter användning av trådlös Internetdelning på enheten.
 
 ## <a name="kiosk"></a>Helskärmsläge
 
-Inställningarna för helskärmsläget gäller endast för Samsung KNOX Standard-enheter och enbart för program som du hanterar med Intune.
+Inställningarna för helskärmsläget gäller endast för Samsung Knox Standard-enheter och enbart för program som du hanterar med Intune.
 
 - **Välj en hanterad app** – Välj något av följande alternativ för att lägga till en eller flera hanterade program som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten.
     - **Lägg till appar efter paketnamn**

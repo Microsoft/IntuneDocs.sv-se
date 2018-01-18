@@ -2,10 +2,10 @@
 title: "Enheter som stöds – Microsoft Intune"
 description: "Visar en lista över enhetsplattformar och webbläsare som stöds för Intunes enhetshantering"
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 11/06/2017
+ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b168cbf5282b4e016133d071c56c8abd54c2e23b
-ms.sourcegitcommit: dc2595bec05206a826cd10cb834bf6043145c917
+ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="supported-devices-and-browsers"></a>Enheter och webbläsare som stöds
 
@@ -39,11 +39,14 @@ Du kan hantera följande enheter med mobil enhetshantering för Intune:
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
-### <a name="supported-samsung-knox-standard-devices"></a>Samsung KNOX Standard-enheter som stöds
+### <a name="supported-samsung-knox-standard-devices"></a>Samsung Knox Standard-enheter som stöds
 
-Företagsportalappen försöker endast aktivera Samsung KNOX under MDM-registrering om enheten visas i [listan över KNOX-enheter som stöds](https://www.samsungknox.com/knox-supported-devices/knox-workspace). På så sätt kan man undvika KNOX-aktiveringsfel som förhindrar MDM-registrering. Enheter som inte har stöd för Samsung KNOX-aktivering registreras som Android-standardenheter. En Samsung-enhet kan ha vissa modellnummer som har stöd för KNOX medan andra inte stöds. Kontrollera att KNOX är kompatibelt med enhetsåterförsäljaren innan du köper och distribuerar Samsung-enheter.
+Företagsportalappen försöker endast aktivera Samsung Knox under MDM-registrering om enheten visas i [listan över Knox-enheter som stöds](https://www.samsungknox.com/knox-supported-devices/knox-workspace). På så sätt kan man undvika Knox-aktiveringsfel som förhindrar MDM-registrering. Enheter som inte har stöd för Samsung Knox-aktivering registreras som Android-standardenheter. En Samsung-enhet kan ha vissa modellnummer som har stöd för Knox medan andra inte stöds. Kontrollera att Knox är kompatibelt med enhetsåterförsäljaren innan du köper och distribuerar Samsung-enheter.
 
-Följande lista över Samsung-enhetsmodeller har inte stöd för KNOX och registreras som ursprungliga Android-enheter av företagsportalappen för Android:
+> [!NOTE]
+> Registrering av Samsung Knox-enheter kan kräva att du [ger åtkomst till Samsung-servrar](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+
+Följande lista över Samsung-enhetsmodeller har inte stöd för Knox och registreras som ursprungliga Android-enheter av företagsportalappen för Android:
 
 | **Enhetsnamn** | **Enhetsmodellnummer** |
 | --- | --- |

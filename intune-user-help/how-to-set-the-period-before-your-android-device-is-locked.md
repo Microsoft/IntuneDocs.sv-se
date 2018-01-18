@@ -16,17 +16,17 @@ ROBOTS:
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1c4813649092dd12b6be2c07b900d6c1af957bcb
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: 13ad914f076f00d1a505510b726f84645ba22cc1
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Så här ställer du in hur lång tid det tar innan Android-enhetens skärmlås aktiveras
 
 För att återansluta till ditt arbete måste du ange tidsgränsen för lösenord på enheten genom att följa anvisningarna nedan för din typ av enhet.
 
-## <a name="native-non-samsung-knox-device"></a>Ursprunglig enhet (inte Samsung KNOX)
+## <a name="native-non-samsung-knox-device"></a>Ursprunglig enhet (inte Samsung Knox)
 
 1.  I **Inställningar** på enheten trycker du på **Säkerhet** &gt; **Lås automatiskt** (på vissa enheter står det i stället **Lås telefon efter**).
 
@@ -34,7 +34,7 @@ För att återansluta till ditt arbete måste du ange tidsgränsen för lösenor
 
 2.  Ange tidsgränsen för lösenord.
 
-## <a name="samsung-knox-device"></a>Samsung KNOX-enhet
+## <a name="samsung-knox-device"></a>Samsung Knox-enhet
 
 1.  I **Inställningar** på enheten trycker du på **Låsskärm och säkerhet** &gt; **Lås automatiskt**.
 
