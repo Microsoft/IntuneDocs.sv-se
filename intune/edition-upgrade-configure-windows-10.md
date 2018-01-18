@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 07/26/2017
+ms.date: 12/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,30 +15,16 @@ ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 40c3ca0207ed81af3212ad2ea04598654cab7198
-ms.sourcegitcommit: cf7f7e7c9e9cde5b030cf5fae26a5e8f4d269b0d
+ms.openlocfilehash: b4e1fc203633a9624ce748ab1f36374c5322e3f7
+ms.sourcegitcommit: 061dab899e3fbc59b0128e2b4fbdf8ebf80afddd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="how-to-configure-windows-10-edition-upgrades-in-microsoft-intune"></a>Så här konfigurerar du uppgraderingar av Windows 10 i Microsoft Intune
-
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Använd informationen i det här avsnittet för att lära dig hur du konfigurerar en Windows 10-uppgraderingsprofil. Med den här profilen kan du automatiskt uppgradera enheter som kör någon av följande Windows 10-versioner till en annan utgåva:
-
-- Windows 10 Home
-- Windows 10 Holographic
-- Windows 10 Mobil
-
-
-Följande uppgraderingsvägar stöds:
-
-- Från Windows 10 Pro till Windows 10 Enterprise
-- Från Windows 10 Home till Windows 10 Education
-- Från Windows 10 Mobile till Windows 10 Mobile Enterprise
-- Från Windows 10 Holographic Pro till Windows 10 Holographic Enterprise
-
+Använd informationen i den här artikeln för att lära dig hur du konfigurerar en Windows 10-uppgraderingsprofil. Med den här profilen kan du automatiskt uppgradera enheter som kör Windows 10-versioner till en annan utgåva. 
 
 ## <a name="before-you-start"></a>Innan du börjar
 Innan du börjar uppgradera enheter till den senaste versionen behöver du något av dessa:
@@ -46,8 +32,76 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 - En produktnyckel som är giltig för att installera den nya versionen av Windows på alla enheter som du riktar principen mot (för Windows 10 Desktop-versioner). Du kan använda antingen multipla aktiveringsnycklar (MAK) eller nyckelhanteringsservernycklar (KMS), eller en licensfil från Microsoft som innehåller licensinformationen för att installera den nya Windows-versionen på alla enheter som du riktar principen mot (för Windows 10 Mobile- och Windows 10 Holographic-versioner).
 - De Windows 10-enheter som du riktar principen mot måste vara registrerade i Microsoft Intune. Du kan inte använda versionsuppgraderingsprincipen för datorer som kör Intune-klientprogrammet.
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
+## <a name="supported-upgrade-paths-for-the-windows-10-edition-upgrade-profile"></a>Uppgraderingsvägar som stöds för Windows 10-utgåvans uppgraderingsprofil
+Följande listor innehåller uppgraderingsvägar som stöds för Windows 10-utgåvans uppgraderingsprofil. Windows 10-utgåvan som du ska uppgradera till visas i fetstil följt av listan över versioner som stöds som du kan uppgradera från:
 
+**Windows 10 Education**
+- Windows 10 Pro
+- Windows 10 Pro Education
+- Windows 10 Cloud
+- Windows 10 Enterprise
+- Windows 10 Core
+    
+**Windows 10 Education N edition**    
+- Windows 10 Pro N edition
+- Windows 10 Pro Education N edition
+- Windows 10 Cloud N edition
+- Windows 10 Enterprise N edition
+- Windows 10 Core N edition
+    
+**Windows 10 Enterprise**
+- Windows 10 Pro
+- Windows 10 Cloud
+- Windows 10 Core
+    
+**Windows 10 Enterprise N edition**
+- Windows 10 Pro N edition
+- Windows 10 Cloud N edition
+- Windows 10 Core N edition
+    
+**Windows 10 Pro**
+- Windows 10 Cloud
+    
+**Windows 10 Pro N edition**
+- Windows 10 Cloud N edition
+    
+**Windows 10 Pro Education**
+- Windows 10 Pro
+- Windows 10 Cloud
+- Windows 10 Core
+    
+**Windows 10 Pro Education N edition**
+- Windows 10 Pro N edition
+- Windows 10 Cloud N edition
+- Windows 10 Core N edition
+
+**Windows 10 Holographic for Business**
+- Windows 10 Holographic
+
+**Windows 10 Mobile Enterprise**
+- Windows 10 Mobil
+
+<!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
+
+![supported](./media/check_grn.png)  (X) = not supported    
+![unsupported](./media/x_blk.png)    (green checkmark) = supported    
+
+|Upgrade from edition\Upgrade to edition|Education|Education N|Pro Education|Pro Education N|Enterprise|Enterprise N|Professional|Professional N|Mobile Enterprise|Holographic for Business|
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+|Pro|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Pro N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Pro Education|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Pro Education N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Cloud|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Cloud N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Enterprise|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Enterprise N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Core|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)   |![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Core N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Mobile|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|
+|Holographic|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png) -->
+
+## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
@@ -57,7 +111,6 @@ Innan du börjar uppgradera enheter till den senaste versionen behöver du någo
 5. I listrutan **Plattform** väljer du **Windows 10 och senare**.
 6. I listrutan **Profiltyp** väljer du **Uppgradering av utgåva**.
 7. På bladet **Uppgradering av utgåva** konfigurerar du följande inställningar:
-    - **Utgåva att uppgradera från** – I listrutan väljer du den Windows 10-version som du vill uppgradera på enheterna.
     - **Utgåva att uppgradera till** – I listrutan väljer du den version av Windows 10 Desktop, Windows 10 Holographic eller Windows 10 Mobile som du vill uppgradera målenheterna till.
     - **Produktnyckel** – Ange produktnyckeln som du har fått från Microsoft. Den kan användas för att uppgradera alla Windows 10 Desktop-enheter.<br>När du har skapat en princip som innehåller en produktnyckel går det inte att redigera produktnyckeln senare. Det beror på att nyckeln döljs av säkerhetsskäl. Om du vill ändra produktnyckeln måste du ange hela nyckeln igen.
     - **Licensfil** – Klicka på **Bläddra** och välj den licensfil som du har fått från Microsoft. Filen innehåller licensinformation för den Windows Holographic- eller Windows 10 Mobile-version som du vill uppgradera målenheterna till.

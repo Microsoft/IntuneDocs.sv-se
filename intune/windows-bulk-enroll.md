@@ -3,8 +3,8 @@ title: "Massregistrering för Windows 10"
 titlesuffix: Azure portal
 description: "Skapa ett massregistreringspaket för Microsoft Intune"
 keywords: 
-author: NathBarn
-ms.author: NathBarn
+author: Erikje
+ms.author: erikje
 manager: angrobe
 ms.date: 10/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 7738935675595bbdd3ba1f6411a78a2646894073
-ms.sourcegitcommit: ce35790090ebe768d5f75c108e8d5934fd19c8c7
+ms.openlocfilehash: f24bf5f8767763c3ca56d51127ab1d3f484e51d8
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -29,8 +29,6 @@ Som administratör kan du ansluta ett stort antal nya Windows-enheter till Azure
 Azure AD-användare är standardanvändare på enheterna och kan ta emot de tilldelade Intune-principer och appar som krävs. Självbetjäning och företagsportalscenarier stöds inte för närvarande.
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Krav för massregistrering av Windows-enheter
-
-Massregistrering av Windows-enheter kräver följande:
 
 - Enheter som kör Windows 10 Creator-uppdateringen eller senare
 - [Automatisk registrering i Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
@@ -43,15 +41,15 @@ Massregistrering av Windows-enheter kräver följande:
 2. Öppna appen **Windows Configuration Designer** och välj **Konfigurera skrivbordsenheter**.
 ![Skärmbild över att välja Konfigurera skrivbordsenheter i Windows Configuration Designer-appen](media/bulk-enroll-select.png)
 
-3. Fönstret **Nytt projekt** öppnas, där du anger följande:
+3. Fönstret **Nytt projekt** öppnas, där du anger följande information:
   - **Namn** – Namnet på ditt projekt
-  - **Projektmapp** – Där projektet ska sparas
+  - **Projektmapp** – Lagringsplatsen för projektet
   - **Beskrivning** – En valfri beskrivning av projektet ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-name.png)
 
 4.  Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.
 ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-device.png)
 
-5.  Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om detta inte är konfigurerat krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
+5.  Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om nätverksenheterna inte är konfigurerade, krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
 ![Skärmbild över att aktivera Wi-Fi, inklusive nätverks-SSID och nätverkstyper i Windows Configuration Designer-appen](media/bulk-enroll-network.png)
 
 6.  Välj **Registrera i Azure AD**, ange ett datum i **Förfallodatum för masstoken** och välj sedan **Hämta masstoken**.
@@ -77,7 +75,7 @@ Massregistrering av Windows-enheter kräver följande:
 
  Stegvisa anvisningar för att använda ett konfigurationspaket finns i [Tillämpa ett konfigurationspaket](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
 
-3. När du har tillämpat paketet startas enheten automatiskt om efter 1 minut.
+3. När du har tillämpat paketet startas enheten automatiskt om efter en minut.
  ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-add.png)
 
 4. När enheten startas om, ansluter den till Azure Active Directory och registreras i Microsoft Intune.
@@ -88,7 +86,7 @@ Massregistrering av Windows-enheter kräver följande:
 Konfigurationen är avsedd att användas på nya Windows-enheter. Konfigurationsfel kan kräva en fabriksåterställning av enheten eller en enhetsåterställning från en startavbildning. I nedanstående exempel beskrivs några orsaker till konfigurationsfel:
 
 - Ett konfigurationspaket som försöker ansluta till en Active Directory-domän eller Azure Active Directory-klient som inte skapar ett lokalt konto, kan innebära att enheten inte kan nås om domänanslutningen misslyckas på grund av bristande nätverksanslutning.
-- Skript som körs av konfigurationspaketet körs i systemkontexten, och kan komma att ändra enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en fabriksåterställning av enheten.
+- Skript som körs av etableringspaketet körs i systemets kontext. Skripten kan göra godtyckliga ändringar till enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en fabriksåterställning av enheten.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problem med massregistrering och företagsportalen
 Om en användare försöker registrera en tidigare massregistrerad enhet med hjälp av företagsportalen, visas en varning om att deras enheter behöver ytterligare åtgärder, antingen installation eller registrering. Enheten är registrerad, men registreringen kan inte identifieras av företagsportalappen eller webbplatsen.

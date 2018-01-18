@@ -15,11 +15,11 @@ ms.assetid: 484bd9b0-fbf1-4f4f-940c-6b12fa07e228
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8dc9c67db2a93b6cd0f1db1894b079183ee9c945
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: f697b575a5cdc1fa4009d08a14452508eacb8de1
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Så här konfigurerar du e-postinställningar i Microsoft Intune
 
@@ -31,7 +31,7 @@ Den inbyggda e-postklienten stöds för de flesta plattformar. Merparten av e-po
 
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
 
-- Android Samsung KNOX Standard 4.0 och senare
+- Android Samsung Knox Standard 4.0 och senare
 - Android for Work
 - iOS 8.0 och senare
 - Windows Phone 8.1 och senare
@@ -48,14 +48,14 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 3. Välj **Skapa profil** på profilbladet.
 4. Ange **Namn** och **Beskrivning** för e-postprofilen på bladet **Skapa profil**.
 5. Välj den enhetsplattform på vilken du vill tillämpa e-postinställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsinställningar för e-post:
-    - **Android** (endast Samsung Android KNOX Standard)
+    - **Android** (endast Samsung Android Knox Standard)
     - **Android for Work**
     - **iOS**
     - **Windows Phone 8.1**
     - **Windows 10 och senare**
 6. Välj **E-post** i listrutan **Profil**.
 7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-    - [Android for Work- och Samsung KNOX Standard-inställningar](email-settings-android.md)
+    - [Android for Work- och Samsung Knox Standard-inställningar](email-settings-android.md)
     - [Inställningar för iOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
@@ -86,7 +86,7 @@ Om användaren redan har konfigurerat ett e-postkonto beror resultatet av tillde
 
 - **iOS**: En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. E-postprofilsdubbletten blockerar tilldelningen av en Intune-profil. I det här fallet informerar företagsportalen användaren om att denne inte uppfyller kraven och uppmanar användaren att ta bort den manuellt konfigurerade profilen. Om du vill förhindra det här problemet bör du uppmana användarna registrera sig innan de installerar någon e-postprofil, så att Intune kan konfigurera profilen.
 - **Windows** En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
-- **Android Samsung KNOX Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen.
+- **Android Samsung Knox Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen.
 Eftersom Android inte använder värdnamn för att identifiera profilen, rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom dessa kommer att skriva över varandra.
 - **Android for Work** Intune har två olika e-postprofiler för Android for Work, en vardera för e-postapparna Gmail och Nine Work. Dessa appar är tillgängliga i Google Play Store och installeras i enhetens arbetsprofil. Så de kan inte resultera i dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postprofil. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
 

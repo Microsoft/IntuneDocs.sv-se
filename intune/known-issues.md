@@ -7,7 +7,7 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.date: 10/31/2017
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 372e25968005258fd1e00cbab7db542ad0211206
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: c4210d77e52abba07454d8606ba7715c03078ca6
+ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -43,31 +43,6 @@ Möjligheten att hantera Windows 10 i Intune på Azure Portal är tillgänglig v
 
 När du migrerar från Intune till Azure-portalen kan det visas en ny grupp med namnet **All Users - b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Den gruppen innehåller alla användare i Azure Active Directory, inte bara Intune-licensierade användare. Det kan orsaka problem med andra Microsoft-produkter om du förväntar dig att vissa befintliga eller nya användare inte ska vara medlemmar i några grupper.
 
-### <a name="secondary-migration-required-for-select-capabilities"></a>Sekundär migrering som krävs för utvalda funktioner
-
-Intune-konton som skapats före januari 2017 måste migreras innan följande funktioner kan användas i Azure Portal:
-
-- Registreringsprofiler för företagsenheter
-- Apples DEP (Device Enrollment Program)
-- Förhandsdeklarera företagsenheter via iOS-serienumret
-- Konton för enhetsregistreringshanterare
-- Apples volymköpsprogram
-
-Eftersom de här funktionerna inte kan hanteras både från Intune-konsolen (Silverlight) och Azure-portalen innebär migreringen att:
-- De inaktiveras i den klassiska portalen
-- De aktiveras i Azure Portal  
-
-Efter 22 september 2017 sker migreringen av de här funktionerna tillsammans den första migreringen till Azure. Om ditt konto redan har migrerats för användning av Azure Portal kan den andra migreringen redan har slutförts. Om inte migreras dessa funktioner till Azure i november. Migreringen av ditt konto slutförs samma dag det påbörjas. Migreringen kan ta upp till 6 timmar från det att funktionerna har inaktiverats i den klassiska Intune-portalen.
-
-Om du hanterar de här Intune-funktioner i Azure-portalen nu så måste du vara medveten om följande punkter:
-
-#### <a name="removes-default-corporate-device-enrollment-profiles-in-apple-dep"></a>Tar bort standardprofiler för registrering av företagsenheter i Apple DEP
-Azure-portalen stöder inte en standardprofil för registrering av företagsenheter för Apples enhetsregistreringsprogram DEP. Den här funktionen, som är tillgänglig i Intune-konsolen (Silverlight), kommer att upphöra för att förhindra oavsiktlig profiltilldelning. När DEP-serienummer synkroniseras i Azure-portalen, tilldelas ingen profil för registrering av företagsenheter. En registreringsprofil måste tilldelas innan du använder enheten.
-
-#### <a name="apple-dep-token-restored-with-migration"></a>Apple DEP-token återställs vid migrering
-
-Om du tog bort Apples token för enhetsregistreringsprogram i Intune-portalen (Silverlight) och inte laddade upp någon ny token till Azure-portalen, återställs din ursprungliga token i Azure-portalen när du migrerar. Om du vill ta bort denna token och förhindra DEP-registrering, tar du bort token från Azure-portalen.
-
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
 
 Du kan inte visa statusinformation för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
@@ -79,6 +54,7 @@ Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som I
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Flera kopior av samma volyminköpta iOS-program laddas upp
 Klicka inte på knappen **Ladda upp** flera gånger för samma VPP-token. Det leder till att dubbla VPP-token laddas upp och att appar synkroniseras flera gånger för samma VPP-token.
+
 
 <!-- ## Groups -->
 

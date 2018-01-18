@@ -14,11 +14,11 @@ ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6cf2d958e5775281cca7878c54b2c9d9f593f509
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: 485517f589649bdb805f94503df716b82de17b06
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="common-ways-to-use-intune"></a>Vanliga sätt att använda Intune
 
@@ -82,7 +82,7 @@ Som administratör kan du kräva att användarna kommer åt Office 365 från Off
 ## <a name="issue-corporate-owned-phones-to-your-employees"></a>Dela ut företagsägda telefoner till anställda
 I dag är många anställda mobila, vilket i konkurrensavseende gör det viktigt att kunna upprätthålla produktiviteten även på mobila enheter. Dessa medarbetare behöver smidig åtkomst till alla företagets appar och data, när som helst, var som helst. Du måste se till att företagets data är säkra och att de administrativa kostnaderna är låga.  
 
-Intune erbjuder [massetablering och hanteringslösningar](device-enrollment.md) ([den klassiska portalen](/intune-classic/deploy-use/manage-corporate-owned-devices)) som är integrerade med de flesta stora enhetshanteringsplattformar som finns på marknaden idag, inklusive Apple Device Enrollment Program och mobilsäkerhetsplattformen Samsung KNOX. Centraliserad redigering av enhetskonfigurationer med Intune gör att det i hög grad går att automatisera etableringen av företagsenheter.  
+Intune erbjuder [massetablering och hanteringslösningar](device-enrollment.md) ([den klassiska portalen](/intune-classic/deploy-use/manage-corporate-owned-devices)) som är integrerade med de flesta stora enhetshanteringsplattformar som finns på marknaden idag, inklusive Apple Device Enrollment Program och mobilsäkerhetsplattformen Samsung Knox. Centraliserad redigering av enhetskonfigurationer med Intune gör att det i hög grad går att automatisera etableringen av företagsenheter.  
 
 Tänk dig detta: ge en medarbetare en oöppnad låda med en iPhone. Medarbetaren aktiverar den och går igenom ett företagsanpassat konfigurationsflöde där användaren måste autentisera sig. iPhone konfigureras smidigt med [säkerhetsprinciper](device-profiles.md) ([den klassiska portalen](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)).
 

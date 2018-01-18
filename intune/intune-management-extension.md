@@ -14,11 +14,11 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 237d6d090d0aae7f9a0853839b72d55618f4607e
-ms.sourcegitcommit: af958afce3070a3044aafea490c8afc55301d9df
+ms.openlocfilehash: 1bdd9002c70ea8d9e8b16b73d4d8416eeec3341b
+ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i Intune för att köra Windows 10-enheter. Hanteringstillägget kompletterar funktioner för hantering av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att flytta till modern hantering.
@@ -30,7 +30,7 @@ MDM-tjänster som Microsoft Intune kan hantera Windows 10-enheter med hjälp av 
 
 Tillägget för Intune -hantering kompletterar de inbyggda funktionerna i Windows 10 MDM. Du kan skapa PowerShell-skript som tillhandahåller de funktioner som du behöver och sedan köra dessa på Windows 10-enheter. Du kan till exempel skapa ett PowerShell-skript som installerar en äldre Win32-app på Windows 10-enheter, ladda upp skriptet till Intune, tilldela det till en grupp i Azure Active Directory (AD) och sedan köra skriptet på Windows 10-enheter. Du kan sedan övervaka körstatusen för skriptet på Windows 10-enheter från början till slut.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 Intune-hanteringstillägget har följande krav:
 - Enheter måste vara domänanslutna till Azure AD
 - Enheter måste köra Windows 10 version 1607 eller senare
@@ -57,7 +57,7 @@ Intune-hanteringstillägget har följande krav:
   ![Bladet lägg till PowerShell-skript](./media/mgmt-extension-assignments.png)
  
 6. Välj **Välj grupper** för en lista över tillgängliga Azure AD-grupper. 
-7. Välj grupperna och klicka sedan på **Välj** för att tilldela principen till de valda grupperna.
+7. Välj en eller flera grupper som innehåller de användare vars enheter ska ta emot skriptet och klicka sedan på **Välj** för att tilldela principen till de valda grupperna.
 
 Intune-hanteringstillägget synkroniserar till Intune en gång i timmen. När du tilldelar principen till Azure AD-grupper körs PowerShell-skriptet och körningsresultaten rapporteras. 
  

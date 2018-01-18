@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 840ef2ce59551a45cd753190b784e8ca0bba617a
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 6b598441d39d90a4ae81df7fffff99f9a5ccc451
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-create-and-assign-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated-in-microsoft-intune"></a>Så här skapar och tilldelar du en princip för villkorlig åtkomst för Exchange On-premises och den äldre Exchange Online Dedicated i Microsoft Intune
 
@@ -105,7 +105,7 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 
 13. För en enhet som inte påverkas av villkorlig åtkomst eller andra regler kan du välja att få åtkomst till Exchange eller blockera den.
   - När du ställer in det här alternativet för att tillåta åtkomst kommer alla enheter att kunna komma åt Exchange On-Premises omedelbart.  Enheter som tillhör användare i **Inkluderade grupper**, blockeras om de senare utvärderas till att inte vara kompatibla med efterlevnadsprinciperna eller inte har registrerats i Intune.
-  - När du ställer in det här alternativet för att blockera åtkomst kommer alla enheter omedelbart att blockeras från att komma åt Exchange On-Premises från början.  Enheter som tillhör användare i **Inkluderade grupper** får åtkomst först när enheten har registrerats i Intune och utvärderats som kompatibel. Android-enheter som inte kör Samsung KNOX blockeras alltid eftersom de inte stöder den här inställningen.
+  - När du ställer in det här alternativet för att blockera åtkomst kommer alla enheter omedelbart att blockeras från att komma åt Exchange On-Premises från början.  Enheter som tillhör användare i **Inkluderade grupper** får åtkomst först när enheten har registrerats i Intune och utvärderats som kompatibel. Android-enheter som inte kör Samsung Knox blockeras alltid eftersom de inte stöder den här inställningen.
 <br></br>
 14. Under **Undantag för plattformsenhet**, väljer du **Lägg till** för att ange plattformarna. Om inställningen **Ohanterad enhetsåtkomst** är angiven till **blockerad**, kommer enheter som är registrerade och godkända tillåtas även om det finns ett plattformsundantag som ska blockeras. Välj **OK** för att spara inställningarna.
 

@@ -3,10 +3,10 @@ title: "Så här använder du enhetskategorier i Intune"
 titleSuffix: Azure portal
 description: "Läs hur man använder enhetskategorier som användare kan välja när de registrerar sina enheter i Intune.”"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: angrobe
-ms.date: 08/09/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,23 +14,22 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e34b9cd030244db4bdde78eedbb0f874f49fa1e1
-ms.sourcegitcommit: 769db6599d5eb0e2cca537d0f60a5df9c9f05079
+ms.openlocfilehash: c100193c7db2be1a5655a1b77e1eec452a189d64
+ms.sourcegitcommit: 5004b9564915712b41860df20324f39fac3dc27d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="map-device-groups"></a>Mappa enhetsgrupper
-
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd Microsoft Intune-enhetskategorier för att automatiskt lägga till enheter i grupper baserat på kategorier som du definierar för att göra det enklare att hantera dessa enheter.
 
 Enhetskategorier använder följande arbetsflöde:
-1. Skapa kategorier som användare väljer från när de registrerar sina enheter
-3. När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. Om de vill tilldela en kategori till en Windows-enhet, måste slutanvändare använda företagsportalen (se **När du har konfigurerat enhetsgrupper** i det här ämnet för mer information).
-4. Du kan sedan distribuera principer och appar för dessa grupper.
+1. Skapa kategorier som användare kan välja från när de registrerar sina enheter
+2. När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. Om de vill tilldela en kategori till en Windows-enhet, måste slutanvändare använda företagsportalen (du hittar mer information i **När du har konfigurerat enhetsgrupper** i den här artikeln).
+3. Du kan sedan distribuera principer och appar för dessa grupper.
 
 Du kan skapa vilken typ av enhetskategori som du vill, till exempel:
 - Butiksenhet
@@ -42,19 +41,19 @@ Du kan skapa vilken typ av enhetskategori som du vill, till exempel:
 ## <a name="how-to-configure-device-categories"></a>Så här konfigurerar du enhetsinställningar
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Steg ett – Skapa enhetskategorier i Intune-bladet på Azure-portalen
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetsregistrering** på bladet **Intune**.
 3. På bladet **Enhetsregistrering** väljer du **Enhetskategorier**.
 4. På sidan **Enhetskategorier** väljer du **Skapa** för att lägga till en ny kategori.
 5. På nästa blad anger du ett **Namn** för den nya kategorin och en valfri **Beskrivning**.
-6. Klicka på **Skapa** när du är klar. Du kommer att se den kategori som du just har skapat i listan över kategorier.
+6. Klicka på **Skapa** när du är klar. Du kan se den nya kategorin i listan över kategorier.
 
 Du kommer att använda enhetskategorinamnet när du skapar Azure Active Directory-säkerhetsgrupper i steg två.
 
 ### <a name="step-2---create-azure-active-directory-security-groups"></a>Steg två – Skapa Azure Active Directory-säkerhetsgrupper
 I det här steget kommer du att skapa dynamiska grupper i Azure Portal baserat på enhetskategori och enhetskategorinamn.
 
-Se avsnittet [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) (Använda attribut för att skapa avancerade regler) i Azure Active Directory-dokumentationen för att fortsätta. 
+Se artikeln [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) (Använda attribut för att skapa avancerade regler) i Azure Active Directory-dokumentationen för att fortsätta.
 
 Använd informationen i det här avsnittet för att skapa en enhetsgrupp med en avancerad regel med hjälp av **deviceCategory**-attributet. Till exempel (**device.deviceCategory -eq** "*<the device category name you got from the Azure portal>*")
 
@@ -62,7 +61,7 @@ När du har konfigurerat enhetsgrupper och användarna då registrerar sina enhe
 
 ### <a name="how-to-view-the-categories-of-devices-you-manage"></a>Så här visar du kategorier av enheter som du hanterar
 
-1.  På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
 2. Välj **Enheter och grupper** i Intune-bladet på Azure-portalen.
 
@@ -74,7 +73,7 @@ Om **Kategori**-kolumnen inte visas klickar du på **Kolumner**, väljer **Kateg
 
 ### <a name="to-change-the-category-of-a-device"></a>Ändra kategori för en enhet
 
-1. På Azure Portal väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. På **Intune**-bladet väljer du **Enheter och grupper**.
 4. På bladet **Enheter och grupper** väljer du **Hantera** > **Alla enheter**.
 5. I listan över enheter väljer du den enhet som du önskar och väljer sedan, på enhetens egenskapsblad, **Hantera** > **Egenskaper**.
@@ -84,13 +83,11 @@ Om **Kategori**-kolumnen inte visas klickar du på **Kolumner**, väljer **Kateg
 
 När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
 
-Om de vill tilldela en kategori till en Windows-enhet, måste slutanvändare använda företagsportalen (portal.manage.microsoft.com) efter att de registrerat enheten. Gå in på webbplatsen på en Windows-enhet och gå till **Meny** > **Mina enheter**. Välj en registrerad enhet som listas på sidan och välj en kategori. 
+Oavsett vilken plattform slutanvändarna har kan de alltid gå till portal.manage.microsoft.com efter att enheten registrerats. Få användaren att gå till **Mina enheter** på företagsportalens webbplats. De kan välja en registrerad enhet som visas på sidan och sedan välja en kategori.
 
 Efter att du har valt en kategori, läggs enheten automatiskt till i motsvarande grupp som du har skapat. Om en enhet redan är registrerad innan du konfigurerar kategorier, får slutanvändaren ett meddelande om enheten på företagsportalen och uppmanas att välja en kategori nästa gång de går in på företagsportalappen på iOS eller Android.
 
 ## <a name="further-information"></a>Ytterligare information
-- Du kan redigera en enhetskategori i Azure-Portal, men om du gör detta måste du manuellt uppdatera alla Azure Active Directory-säkerhetsgrupper som refererar till den här kategorin.
+- Du kan redigera en enhetskategori i Azure-Portal, men du måste manuellt uppdatera alla Azure Active Directory-säkerhetsgrupper som refererar till den här kategorin.
 
-- Om du tar bort en kategori kommer alla enheter som var tilldelade den att visa kategorinamnet **Otilldelad**.
-
-
+- Om du tar bort en kategori kommer enheter tilldelade till den att visa kategorinamnet **Otilldelad**.

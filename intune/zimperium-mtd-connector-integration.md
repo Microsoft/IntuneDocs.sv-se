@@ -3,10 +3,10 @@ title: Integrera Zimperium med Intune
 titleSuffix: Intune on Azure
 description: Integrera Intune med Zimperium
 keywords: 
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 09/06/2017
+ms.date: 12/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,20 +15,20 @@ ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b4adb2db14c2e1c83be8e7b3644944c1910cb97
-ms.sourcegitcommit: d434dfab7ef7a6c4082d675717fa22d5581b4f51
+ms.openlocfilehash: 515f99f694a9125d60bb9210becc6722bfb9e24f
+ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 12/30/2017
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrera Zimperium med Intune
 
-Du måste följa stegen nedan för att integrera Zimperium Mobile Threat Defense-lösningen med Intune.
+Slutför följande steg för att integrera Zimperium Mobile Threat Defense-lösningen med Intune.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
 > [!NOTE]
-> Stegen nedan måste vidtas i [Zimperium MTD-konsolen](https://staging2-console.zimperium.com).
+> Följande steg ska utföras i [Zimperium MTD-konsolen](https://staging2-console.zimperium.com).
 
 Kontrollera att du har följande innan du börjar integrera Zimperium med Intune:
 
@@ -48,7 +48,7 @@ Kontrollera att du har följande innan du börjar integrera Zimperium med Intune
 
 ### <a name="zimperium-app-authorization"></a>Zimperium-appauktorisering
 
-Processen för Zimperium-appauktorisering består av följande steg:
+Processen för Zimperium-appauktorisering består av följande:
 
 -   Tillåt att Zimperium-tjänsten förmedlar information om enhetens hälsostatus till Intune.
 
@@ -75,7 +75,7 @@ Processen för Zimperium-appauktorisering består av följande steg:
 
 6.  Välj **Acceptera** för att ge Zimperium-appen tillstånd att kommunicera med Intune och Azure Active Directory.
 
-7.  När du har lagt till **Zimperium zConsole** och **zIPS iOS och Android**-appar i Azure AD måste du lägga till Azure AD-säkerhetsgrupper så att Zimperium kan synkronisera Azure AD-säkerhetsgruppen med sin tjänst.
+7.  När du har lagt till **Zimperium zConsole** och **zIPS iOS och Android**-appar i Azure AD lägger du till Azure AD-säkerhetsgrupper så att Zimperium kan synkronisera Azure AD-säkerhetsgruppen med sin tjänst.
 
 8.  Välj **Slutför** för att spara konfigurationen och starta den första synkroniseringen för Azure AD-säkerhetsgruppen.
 

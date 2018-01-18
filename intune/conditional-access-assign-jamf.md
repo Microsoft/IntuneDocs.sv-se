@@ -1,12 +1,12 @@
 ---
-title: "Tillämpa efterlevnadsprinciper för Jamf-hanterade enheter"
+title: "Tvinga efterlevnadsprinciper för Jamf-hanterade enheter"
 titlesuffix: Azure portal
 description: "Använd efterlevnad för att säkra Jamf-hanterade enheter."
 keywords: 
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/30/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,22 +15,17 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 06cc4d70b30ec92946baefbc020aa4cda28b0c88
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: c72de87b87775155672994163140e342b7ba99b4
+ms.sourcegitcommit: 000684953cbb3ceae0e2bcaa51186c9221f7aa86
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
 |Gäller för: Intune på Azure Portal |
 |--|
 |Letar du efter dokumentation om Intune på den klassiska portalen? [Gå hit](/intune/introduction-intune?toc=/intune-classic/toc.json).|
-| |
-
-|För tillfället i privat förhandsvisning|
-|--|
-|De funktioner som beskrivs i det här avsnittet är bara tillgängliga för kunder som är med på den privata förhandsvisningen. Det här meddelandet tas bort när det har släppts för alla kunder.|
 | |
 
 Du kan använda Azure Active Directory och Microsoft Intunes principer för villkorlig åtkomst för att tillse att dina slutanvändare efterlever organisationens krav. Du kan tillämpa de här principerna på Mac-datorer som är [hanterade med Jamf Pro](conditional-access-integrate-jamf.md). Detta kräver tillgång till både Intune- och Jamf Pro-konsolerna.
@@ -42,16 +37,13 @@ Du kan använda Azure Active Directory och Microsoft Intunes principer för vill
 
 ## <a name="deploy-the-company-portal-app-for-macos-in-jamf-pro"></a>Distribuera företagsportalappen för macOS i Jamf Pro
 
-Det finns två sätt att distribuera företagsportalappen för macOS i Jamf Pro:
+Du bör distribuera företagsportalappen för macOS i Jamf Pro som en bakgrundsinstallation genom att följa anvisningarna nedan:
 
-- Gör distributionen av företagsportalappen tillgänglig i Jamf Self Service, eller,
-- Som en bakgrundsinstallation så att användarna följer anvisningarna nedan:
-
-1. På en macOS-enhet laddar du ned den aktuella versionen av [företagsportalappen för macOS](https://go.microsoft.com/fwlink/?linkid=862280).
+1. På en macOS-enhet laddar du ned den aktuella versionen av [företagsportalappen för macOS](https://go.microsoft.com/fwlink/?linkid=862280). Installera den inte. Du behöver en kopia av att appen som du kan ladda upp till Jamf Pro.
 2. Öppna Jamf Pro och gå till **datorhantering** > **paket**.
 3. Skapa ett nytt paket med företagsportalappen för macOS och klicka sedan på **spara**.
 4. Öppna **datorer** > **principer** och välj **ny**.
-5. Använd nyttolasten **Allmänt** för att konfigurera inställningar för principen. Inställningarna bör vara: 
+5. Använd nyttolasten **Allmänt** för att konfigurera inställningar för principen. Inställningarna bör vara:
    - Utlösare: välj **Registreringen är klar** och **Återkommande incheckning**
    - Körningsfrekvens: välj **En gång per dator**
 6. Välj nyttolasten **paket** och klicka på **konfigurera**.
@@ -71,7 +63,7 @@ Slutanvändare behöver starta företagsportalappen via Jamf Self Service att re
 > Företagsportalappen måste startas från Jamf Self Service för att påbörja enhetsregistrering. <br><br>Om du startar företagsportalappen manuellt (t.ex. från Program eller mappen Nedladdningar) registreras inte enheten. Om en slutanvändare startar företagsportalen manuellt visas varningen "AccountNotOnboarded".
 
 1. I Jamf Pro, går du till **datorer** > **principer** och skapar en ny princip för enhetsregistrering.
-2. Konfigurera nyttolasten **Microsoft Intune-integrering**, inklusive utlösare och körningsfrekvens. Ställ in prioriteten till **efter**.
+2. Konfigurera nyttolasten **Microsoft Intune-integrering**, inklusive utlösare och körningsfrekvens.
 3. Klicka på fliken **omfång** och begränsa principen till alla målriktade enheter.
 4. Klicka på fliken **självbetjäning** för att göra principen tillgänglig i Jamf Self Service. Inkludera principen i kategorin **enhetsefterlevnad**. Klicka på **Spara**.
 
