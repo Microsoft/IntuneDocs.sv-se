@@ -6,51 +6,51 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 08/23/2017
+ms.date: 1/8/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 89f2d806-2e97-430c-a9a1-70688269627f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cf39d06bb033f15a667a88f7628bcfc1401a275e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 2774b59001cb4ce277048e60a81243cde15cb53d
+ms.sourcegitcommit: 5ecb0d6625e6972cc5ccdca7538f41f4aa8da46a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
--   **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
--   **Kopiera och klistra in (endast mobil)** – Tillåter funktionen att kopiera och klistra in mellan appar på enheten.
--   **Manuell avregistrering** – Tillåter att användaren manuellt tar bort sitt arbetsplatskonto från enheten.
--   **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
--   **Sändning av diagnostikdata** – Möjliga värden är:
+- **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
+- **Kopiera och klistra in (endast mobil)** – Tillåter funktionen att kopiera och klistra in mellan appar på enheten.
+- **Manuell avregistrering** – Tillåter att användaren manuellt tar bort sitt arbetsplatskonto från enheten.
+- **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
+- **Sändning av diagnostikdata** – Möjliga värden är:
     - **Inga** – Inga data skickas till Microsoft
     - **Grundläggande** – Begränsad information skickas till Microsoft
     - **Utökade** – Utökade diagnostikdata skickas till Microsoft
     - **Fullständiga** Skickar samma data som i Utökade, plus ytterligare information om enhetens tillstånd
--   **Kamera** – Tillåt eller blockera användning av kameran på enheten.
--   **OneDrive-filsynkronisering** – Blockerar enheten från att synkronisera filer till OneDrive.
--   **Flyttbara lagringsmedier** – Anger om externa lagringsenheter, t.ex. SD-kort, kan användas med enheten.
--   **Geoplats** – Anger om enheten kan använda information om platstjänster.
--   **Internetdelning** – Tillåter användning av Internetanslutningsdelning på enheten.
--   **Telefonåterställning** – Styr om användaren kan göra en fabriksåterställning på enheten eller inte.
--   **USB-anslutning (endast mobil)** – Styr om enheter har åtkomst till externa lagringsenheter via en USB-anslutning.
--   **Stöldskyddsläge (endast mobil)** – Konfigurera om stöldskyddsläget i Windows ska vara aktiverat.
--   **Cortana** – Aktivera eller inaktivera röstassistenten Cortana.
--   **Röstinspelning (endast mobil)** – Tillåt eller blockera användning av enhetens röstinspelare.
--   **Ändra enhetsnamn** – Förhindrar att slutanvändaren ändrar enhetens namn (endast Windows 10 Mobile)
--   **Lägg till konfigurationspaket** – Blockerar runtime-konfigurationsagenten som installerar konfigurationspaket.
--   **Ta bort konfigurationspaket** – Blockerar runtime-konfigurationsagenten som tar bort konfigurationspaket.
--   **Enhetsidentifiering** – Blockerar en enhet från att identifieras av andra enheter.
--   **Växla mellan aktiviteter (endast mobil)** – Blockerar funktionen Växla mellan aktiviteter på enheten.
--   **Dialogruta om SIM-kortsfel (endast mobil)** – Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
+- **Kamera** – Tillåt eller blockera användning av kameran på enheten.
+- **OneDrive-filsynkronisering** – Blockerar enheten från att synkronisera filer till OneDrive.
+- **Flyttbara lagringsmedier** – Anger om externa lagringsenheter, t.ex. SD-kort, kan användas med enheten.
+- **Geoplats** – Anger om enheten kan använda information om platstjänster.
+- **Internetdelning** – Tillåter användning av Internetanslutningsdelning på enheten.
+- **Telefonåterställning** – Styr om användaren kan göra en fabriksåterställning på enheten eller inte.
+- **USB-anslutning (endast mobil)** – Styr om enheter har åtkomst till externa lagringsenheter via en USB-anslutning.
+- **Stöldskyddsläge (endast mobil)** – Konfigurera om stöldskyddsläget i Windows ska vara aktiverat.
+- **Cortana** – Aktivera eller inaktivera röstassistenten Cortana.
+- **Röstinspelning (endast mobil)** – Tillåt eller blockera användning av enhetens röstinspelare.
+- **Ändra enhetsnamn** – Förhindrar att slutanvändaren ändrar enhetens namn (endast Windows 10 Mobile)
+- **Lägg till konfigurationspaket** – Blockerar runtime-konfigurationsagenten som installerar konfigurationspaket.
+- **Ta bort konfigurationspaket** – Blockerar runtime-konfigurationsagenten som tar bort konfigurationspaket.
+- **Enhetsidentifiering** – Blockerar en enhet från att identifieras av andra enheter.
+- **Växla mellan aktiviteter (endast mobil)** – Blockerar funktionen Växla mellan aktiviteter på enheten.
+- **Dialogruta om SIM-kortsfel (endast mobil)** – Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
+- **Automatisk omdistribution** – Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
 
 
 ## <a name="password"></a>Lösenord
@@ -68,19 +68,68 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 ## <a name="personalization"></a>Anpassning
 
--   **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Anger URL:en till en bild i PNG-, JPG- eller JPEG-format du vill använda som skrivbordsbakgrund i Windows. Användarna kommer inte att kunna ändra detta.
+- **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Anger URL:en till en bild i PNG-, JPG- eller JPEG-format du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra det här.
 
 ## <a name="privacy"></a>Sekretess
 
 -   **Anpassning av inmatning** – Tillåt inte användning av molnbaserade taltjänster för Cortana, diktering eller Microsoft Store-appar. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
 -   **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess** – Tillåt Windows att automatiskt godkänna meddelanden om medgivande till parkoppling och sekretess när appar körs.
 
+Du kan ange information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
+
+### <a name="exceptions"></a>Undantag
+
+- **Kontoinformation** – Definiera om den här appen kan komma åt användarnamnet, bilden och annan kontaktinformation.
+- **Bakgrundsappar** – Definiera om den här appen kan köras i bakgrunden.
+- **Kalender** – Definiera om den här appen kan komma åt kalendern.
+- **Samtalshistorik** – Definiera om den här appen kan komma åt samtalshistorik.
+- **Kamera** – Definiera om den här appen kan komma åt kameran.
+- **Kontakter** – Definiera om den här appen kan komma åt kontakter.
+- **E-post** – Definiera om den här appen kan skicka e-post.
+- **Plats** – Definiera om den här appen kan komma åt platsinformation.
+- **Meddelandefunktioner** – Ange om den här appen kan läsa eller skicka SMS- och MMS-meddelanden.
+- **Mikrofon** – Definiera om den här appen kan använda mikrofonen.
+- **Rörelse** – Definiera om den här appen kan komma åt rörelseinformation.
+- **Meddelanden** – Definiera om den här appen kan komma åt meddelanden.
+- **Telefon** – Definiera om den här appen kan komma åt telefonen.
+- **Radio** – Vissa appar kan använda radiofunktioner (t.ex. Bluetooth) i din enhet för att skicka och ta emot data och behöver sätta igång eller stänga av de här radiofunktionerna. Definiera om den här appen kan styra dessa radiofunktioner.
+- **Uppgifter** – Definiera om den här appen kan komma åt dina uppgifter.
+- **Betrodda enheter** – Definiera om den här appen kan använda betrodda enheter (maskinvara du redan har anslutit eller som medföljer den här datorn, surfplattan eller telefonen). Till exempel: TV-apparater, projektorer och så vidare.
+- **Feedback och diagnostik** – Definiera om den här appen kan komma åt diagnostisk information.
+- **Synkronisering med enheter** – Definiera om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med den här datorn, surfplattan eller telefonen.
+
+## <a name="per-app-privacy-exceptions"></a>Sekretessundantag per app
+
+Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har definierat i din ”standardsekretess”.
+
+- **Paketnamn** – Appaketets familjenamn.
+- **Appnamn** – Namnet på appen.
+
+### <a name="exceptions"></a>Undantag
+
+- **Kontoinformation** – Definiera om den här appen kan komma åt användarnamnet, bilden och annan kontaktinformation.
+- **Bakgrundsappar** – Definiera om den här appen kan köras i bakgrunden.
+- **Kalender** – Definiera om den här appen kan komma åt kalendern.
+- **Samtalshistorik** – Definiera om den här appen kan komma åt samtalshistorik.
+- **Kamera** – Definiera om den här appen kan komma åt kameran.
+- **Kontakter** – Definiera om den här appen kan komma åt kontakter.
+- **E-post** – Definiera om den här appen kan skicka e-post.
+- **Plats** – Definiera om den här appen kan komma åt platsinformation.
+- **Meddelandefunktioner** – Ange om den här appen kan läsa eller skicka SMS- och MMS-meddelanden.
+- **Mikrofon** – Definiera om den här appen kan använda mikrofonen.
+- **Rörelse** – Definiera om den här appen kan komma åt rörelseinformation.
+- **Meddelanden** – Definiera om den här appen kan komma åt meddelanden.
+- **Telefon** – Definiera om den här appen kan komma åt telefonen.
+- **Radio** – Vissa appar kan använda radiofunktioner (t.ex. Bluetooth) i din enhet för att skicka och ta emot data och behöver sätta igång eller stänga av de här radiofunktionerna. Definiera om den här appen kan styra dessa radiofunktioner.
+- **Uppgifter** – Definiera om den här appen kan komma åt dina uppgifter.
+- **Betrodda enheter** – Definiera om den här appen kan använda betrodda enheter (maskinvara du redan har anslutit eller som medföljer den här datorn, surfplattan eller telefonen). Till exempel: TV-apparater, projektorer och så vidare.
+- **Feedback och diagnostik** – Definiera om den här appen kan komma åt diagnostisk information.
+- **Synkronisering med enheter** – Definiera om den här appen automatiskt kan dela och synkronisera information med trådlösa enheter som inte uttryckligen kopplats ihop med den här datorn, surfplattan eller telefonen.
 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
-
--   **Aviseringar från Åtgärdscenter (endast mobil)** – Aviseringar från Åtgärdscenter visas på enhetens låsskärm (endast Windows 10 Mobile).
--   **URL till bild av låst skärm (endast skrivbord)** – Anger webbadressen till en bild i PNG-, JPG- eller JPEG-format som ska användas som låsskärmsbild i Windows. Användarna kommer inte att kunna ändra detta.
+- **Aviseringar från Åtgärdscenter (endast mobil)** – Aviseringar från Åtgärdscenter visas på enhetens låsskärm (endast Windows 10 Mobile).
+- **URL till bild av låst skärm (endast skrivbord)** – Anger webbadressen till en bild i PNG-, JPG- eller JPEG-format som ska användas som låsskärmsbild i Windows. Användare kan inte ändra det här.
 -   **Skärmtidsgräns kan ställas in av användaren (endast Mobile)** – Användarna kan konfigurera tiden 
 -   **Cortana på låst skärm (endast stationär dator)** – Tillåt inte användare att interagera med Cortana när enheten har låst skärm (endast stationära datorer med Windows 10).
 -   **Popup-meddelanden på låst skärm** – Hindra varningsmeddelanden från att visas på enhetens låsskärm.
@@ -125,17 +174,17 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Edge (endast Windows 10 Mobile).
 -   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Edge-webbläsaren (endast skrivbord).
 -   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Edge startar.
--   **Blockera åtkomst till about:flags** – Förhindra att användaren kommer åt sidan about:flags i Edge som innehåller inställningar för utvecklare och experiment.
+-   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
 -   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Edge.
 
-## <a name="edge-browser-smartscreen"></a>Edge-webbläsaren SmartScreen
+## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
--   **SmartScreen** – Aktiverar eller inaktiverar SmartScreen som blockerar bedrägliga webbplatser.
--   **Åsidosätt SmartScreen-meddelande** – Tillåt att användaren kringgår SmartScreen-filtrets varningar om potentiellt skadliga webbplatser.
--   **Åsidosätt SmartScreen-meddelande om filer** – Tillåt att användaren kringgår SmartScreen-filtrets varningar vid hämtning av potentiellt skadliga filer.
+- **SmartScreen för Microsoft Edge** – Aktivera Edge SmartScreen för att komma åt plats och filhämtningar.
+- **Obehörig åtkomst** – Blockera användare från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockera dem från att gå till webbplatsen.
+- **Overifierad filhämtning** – Blockera användare från att ignorera varningarna från Windows Defender SmartScreen-filtret och blockera dem från att hämta overifierade filer.
 
 ## <a name="search"></a>Sök
 - **Säker sökning (endast mobil)** – Styr hur Cortana filtrerar innehåll för vuxna i sökresultaten. Du kan välja **Strikt**, **Måttlig** eller tillåta att användaren väljer sina egna inställningar.
@@ -182,9 +231,30 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
     -   **Sekretess** – Blockerar åtkomsten till sekretessområdet för inställningsappen.
     -   **Uppdatering och säkerhet** – Blockerar åtkomst till uppdaterings- och säkerhetsområdet i inställningsappen.
 
-## <a name="kiosk"></a>Helskärmsläge
+## <a name="start"></a>Start
 
--   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) som stöds av principen.  Alternativen är:
+- **Ta bort appar från aktivitetsfältet** – Hindra användaren från att ta bort appar i Start-menyn.
+- **Dokument på Start** – Dölj eller visa mappen Dokument i Start-menyn i Windows.
+- **Nedladdningar på Start** – Dölj eller visa mappen Nedladdningar i Start-menyn i Windows.
+- **Utforskaren på Start** – Dölj eller visa Utforskaren i Start-menyn i Windows.
+- **Hemgrupp på Start** – Dölj eller visa mappen Hemgrupp i Start-menyn i Windows.
+- **Musik på Start** – Dölj eller visa mappen Musik i Start-menyn i Windows.
+- **Nätverk på Start** – Dölj eller visa mappen Nätverk i Start-menyn i Windows.
+- **Personlig mapp på Start** – Dölj eller visa den personliga mappen i Start-menyn i Windows.
+- **Bilder på Start** – Dölj eller visa mappen för bilder i Start-menyn i Windows.
+- **Inställningar på Start** – Dölj eller visa appen Inställningar i Start-menyn i Windows.
+- **Videor på Start** – Dölj eller visa mappen för videor i Start-menyn i Windows.
+
+## <a name="display"></a>Visning
+
+- **Aktivera GDI-skalning för appar**
+- **Stäng av GDI-skalning för appar**
+
+  Med GDI DPI-skalning kan appar som inte är DPI-medvetna bli DPI-medvetna per övervakare. Ange äldre appar som har DPI-GDI-skalning aktiverat. Med GDI DPI-skalning konfigurerat till att både aktivera och inaktivera en app, är skalning inaktiverat för appen.
+
+## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
+
+-   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) som stöds av principen. Alternativen är:
 
       - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
       - **Läget för enskilda appar för kiosk** – Profilen gör att enheten kan användas som en kiosk för enskilda appar.
@@ -192,13 +262,13 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
     Kiosker för enskilda appar kräver följande inställningar:
 
-      - **Användarkonto** – Anger det lokala (för enheten) användarkontot eller Azure AD-kontoinloggning som är kopplat till kioskappen.  För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\\username@tenant.org`.
+      - **Användarkonto** – Anger det lokala (för enheten) användarkontot eller Azure AD-kontoinloggning som är kopplat till kioskappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\\username@tenant.org`.
 
          För enheter i offentliga miljöer ska man använda konton med minimal behörighet för att förhindra obehöriga aktiviteter.  
 
-      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen.  Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
-    Kiosker för flera appar kräver en kioskkonfiguration.  Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
+    Helskärmsläge för flera appar kräver en kioskkonfiguration. Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
 
     Kioskkonfigurationer för flera appar omfattar följande inställningar:
 
@@ -208,9 +278,9 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
         - **Apptyp** som anger typen av kioskapp.  Värden som stöds är:   
 
-            - **Win32-app** – En traditionell skrivbordsapp.  (Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.)
+            - **Win32-app** – En traditionell skrivbordsapp. (Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.)
 
-            - **UWP-app** – En universell Windows-app.  Du behöver [AUMID för appen](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+            - **UWP-app** – En universell Windows-app. Du behöver [AUMID för appen](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
         - **Appidentifierare** – Anger antingen den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
 
@@ -218,9 +288,9 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
     - **Startmenylayout** – Anger en XML-fil som beskriver hur apparna [visas på Start-menyn](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
-    - **Tilldelade användare** – Anger ett eller flera användarkonton som är kopplade till kioskkonfigurationen.  Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen.  Ange domänanslutna konton med formatet `domain\\username@tenant.org`.
+    - **Tilldelade användare** – Anger ett eller flera användarkonton som är kopplade till kioskkonfigurationen. Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen. Ange domänanslutna konton med formatet `domain\\username@tenant.org`.
 
-## <a name="defender"></a>Defender
+## <a name="windows-defender-antivirus"></a>Windows Defender Antivirus
 
 -   **Övervakning i realtid** – Tillåter genomsökning i realtid efter skadlig programvara, spionprogram och annan oönskad programvara.
 -   **Övervaka funktionssätt** – Tillåter att Defender söker efter kända mönster för misstänkt aktivitet på enheterna.
@@ -256,7 +326,7 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 
 
 
-## <a name="defender-exclusions"></a>Defender-undantag
+### <a name="windows-defender-antivirus-exclusions"></a>Windows Defender antivirusundantag
 
 -   **Filer och mappar som ska undantas från genomsökningar och realtidsskydd** – Lägger till en eller flera filer och mappar, som t.ex. **C:\Path** eller **%ProgramFiles%\Path\filename.exe**, i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 -   **Filnamnstillägg som ska undantas från genomsökningar och realtidsskydd** – Lägg till ett eller flera filnamnstillägg, som t.ex. **jpg** eller **txt**, i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
@@ -294,16 +364,41 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 - **Projektion till den här datorn** – Stoppar andra enheter från att upptäcka datorn för projektion.
 - **Kräv en PIN-kod för parkoppling** – Kräver en PIN-kod när du ansluter till en projektionsenhet.
 
-## <a name="start"></a>Start
+## <a name="cloud-printer"></a>Molnskrivare
 
-- **Ta bort appar från aktivitetsfältet** – Hindra användaren från att ta bort appar i Start-menyn.
-- **Dokument på Start** – Dölj eller visa mappen Dokument i Start-menyn i Windows.
-- **Nedladdningar på Start** – Dölj eller visa mappen Nedladdningar i Start-menyn i Windows.
-- **Utforskaren på Start** – Dölj eller visa Utforskaren i Start-menyn i Windows.
-- **Hemgrupp på Start** – Dölj eller visa mappen Hemgrupp i Start-menyn i Windows.
-- **Musik på Start** – Dölj eller visa mappen Musik i Start-menyn i Windows.
-- **Nätverk på Start** – Dölj eller visa mappen Nätverk i Start-menyn i Windows.
-- **Personlig mapp på Start** – Dölj eller visa den personliga mappen i Start-menyn i Windows.
-- **Bilder på Start** – Dölj eller visa mappen för bilder i Start-menyn i Windows.
-- **Inställningar på Start** – Dölj eller visa appen Inställningar i Start-menyn i Windows.
-- **Videor på Start** – Dölj eller visa mappen för videor i Start-menyn i Windows.
+- **URL för skrivaridentifiering** – Slutpunkt för identifiering av molnskrivare.
+- **URL för utfärdare av skrivaråtkomst** – Autentiseringsslutpunkt för att hämta OAuth-token.
+- **GUID för inbyggd Azure-klientapp** – GUID för ett klientprogram som har behörighet att hämta OAuth-token från OAuthAuthority.
+- **Resurs-URI för utskriftstjänst** – OAuth resurs-URI för utskriftstjänster som konfigurerats i Azure-portalen.
+- **Maxantal skrivare att fråga efter (endast mobil)** – maximalt antal skrivare som ska efterfrågas från en slutpunkt för identifiering.
+- **Resurs-URI för identifiering av utskriftstjänst** – OAuth resurs-URI för identifiering av utskriftstjänster som konfigurerats i Azure-portalen.
+
+## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
+
+- **Dela användningsdata** – Välj nivå av diagnostikdata.
+- **Proxyserver för telemetri**
+
+  Ange det fullständigt kvalificerade domännamnet (FQDN) eller IP-adressen för en proxyserver för att vidarebefordra anslutna användarupplevelser och telemetribegäranden som använder en SSL-anslutning (Secure Sockets Layer). Formatet för den här inställningen är *server*:*port*. Om den namngivna proxyn misslyckas, eller om det inte finns någon proxyserver angiven när den här principen aktiveras, överförs inte anslutna användarupplevelser och telemetridata, utan de finns kvar på den lokala enheten.
+
+   Exempelformat:
+
+   IPv4: 192.246.246.106:100<br>
+ IPv6: [2001:4898:4010:4013:95c1:a8b2:953c:c633]:100<br> FQDN: www.contoso.com:345
+
+## <a name="messaging"></a>Meddelandefunktion
+
+- **Meddelandesynkronisering (endast mobil)** – Inaktivera meddelandefunktioner överallt och säkerhetskopiering och återställning av textmeddelanden.
+- **MMS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot MMS på enheten.
+- **RCS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot Rich Communication Services på enheten.
+
+
+
+
+
+
+
+
+
+
+
+

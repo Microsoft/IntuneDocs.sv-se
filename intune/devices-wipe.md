@@ -6,7 +6,7 @@ keywords:
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.date: 08/31/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4ee4e9b4abb99e280bf2529f9f60d295096426c0
-ms.sourcegitcommit: 4e0ed4087a1e596831fa215135824ca5d38e33f7
+ms.openlocfilehash: 343078bf802aa45ec0cd0a3f2e554ab74e1f0b8a
+ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
@@ -77,7 +77,7 @@ Kommandot **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt)
 
 ### <a name="android"></a>Android
 
-|Datatyp|Android|Android Samsung KNOX Standard|
+|Datatyp|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webblänkar|Tas bort.|Tas bort.|
 |Google Play-appar som inte hanteras|Appar och data förblir installerade.|Appar och data förblir installerade.|
@@ -89,13 +89,25 @@ Kommandot **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt)
 |Certifikatprofilinställningar|Certifikat återkallas, men tas inte bort.|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Behörigheten som enhetsadministratör återkallas.|Behörigheten som enhetsadministratör återkallas.|
 |E-post|Ej tillämpligt (e-post profiler stöds inte av Android-enheter)|E-postprofiler som etablerats via Intune tas bort och cachelagrad e-post på enheten tas bort.|
-|Outlook|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort.|
+|Outlook|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort, men bara om Outlook skyddas av MAM-principer. I annat fall rensas inte Outlook vid avregistrering.|E-post som tagits emot av Microsoft Outlook-appen för Android tas bort, men bara om Outlook skyddas av MAM-principer. I annat fall rensas inte Outlook vid avregistrering.|
 |Frånkoppling från Azure Active Directory (AD)|Azure AD-posten tas bort.|Azure AD-posten tas bort.|
 |Kontakter | Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort.  Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
 ### <a name="android-for-work"></a>Android for Work
 
 Borttagning av företagsdata på en Android for Work-enhet tar bort alla data, appar och inställningar i arbetsprofilen på den enheten. Detta drar tillbaka enheten från hantering med Intune. Fabriksåterställning stöds inte för Android for Work.
+
+
+### <a name="macos"></a>macOS
+
+|Datatyp|macOS|
+|-------------|-------|
+|Inställningar|Konfigurationer som ställts in av Intune-principer tillämpas inte längre och användarna kan ändra inställningarna.|
+|Profilinställningar för Wi-Fi och VPN|Tas bort.|
+|Certifikatprofilinställningar|Certifikat som har distribuerats via MDM tas bort och återkallas.|
+|Hanteringsagenten|Hanteringsprofilen tas bort.|
+|Outlook|Om villkorlig åtkomst är aktiverad tas ingen e-post emot av enheten.|
+|Frånkoppling från Azure Active Directory (AD)|Azure AD-posten tas bort.|
 
 ### <a name="windows"></a>Windows
 
