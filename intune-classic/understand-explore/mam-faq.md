@@ -5,7 +5,7 @@ keywords:
 author: oydang
 ms.author: oydang
 manager: angrobe
-ms.date: 10/27/2017
+ms.date: 01/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6ba1d1d9d0b1c21c364ef97f8340157a94ae996b
-ms.sourcegitcommit: 623c52116bc3fdd12680b9686dcd0e1eeb6ea5ed
+ms.openlocfilehash: 4c345673eceea4da4efc3b90f43c6f9313ee15f1
+ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -95,29 +95,30 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 **Vad är syftet med stöd för flera identiteter?** Stöd för flera identiteter gör att appar med både "företags-" och konsumentanvändare (t.ex. Office-appar) kan släppas offentligt med Intunes appskyddsfunktioner för "företagets" konton.
 
-**När visas PIN-kodsskärmen?** Intunes PIN-kodsskärm visas bara när användaren försöker få åtkomst till företagsdata i appen. I till exempel Word/Excel/PowerPoint-appar visas den när slutanvändaren försöker öppna ett dokument från OneDrive för företag (förutsatt att du har distribuerat en appskyddsprincip med tvingande PIN-kod).
-
 **Vad gäller för Outlook och flera identiteter?** Eftersom Outlook har en kombinerad e-postvy över både personliga och "företagets" e-postmeddelanden frågar Outlook-appen efter Intune-PIN vid start.
 
 **Vad är Intune-appens PIN-kod?** PIN-kod (Personal Identification Number) är ett lösenord som används för att verifiera att rätt användare har åtkomst till organisationens data i en app.
 
   1. **När uppmanas användaren att ange sin PIN-kod?** Intune frågar endast efter användarens PIN-kod för appen när användaren ska få åtkomst till "företagsdata". I appar för flera identiteter som till exempel Word/Excel/PowerPoint uppmanas användarna att ange sina PIN-koder när de försöker öppna ett "företags"-dokument eller -fil. I appar för en identitet, till exempel branschspecifika appar upplysta med Intune apphanteringsverktyg, efterfrågas PIN-koden redan vid start eftersom Intune App SDK vet att användarupplevelsen i appen alltid är "företag."
 
-  2. **Är PIN-kod säkert?** PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste slutanvändarna logga in med sina arbets- eller skolkonton innan de kan ange eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via utbyte av säker token och är inte transparent för Intune App SDK. Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
+2. **Hur ofta kommer användaren uppmanas att ange PIN-koden för Intune?**
+IT-administratören kan definiera Intune-appskyddsprincipen ”Kontrollera åtkomskraven igen efter (minuter)” i Intune-administratörskonsolen. Den här inställningen anger hur lång tid som ska passera innan åtkomstkraven kontrolleras på enheten och appens PIN-skärm visas igen. Detta är dock viktig information om PIN-koden som påverkar hur ofta användaren uppmanas: 
 
-  3. **Hur skyddar Intune PIN-koden mot nyckelsökningsattacker?** Som en del av appens PIN-princip kan IT-administratören ange det maximala antalet gånger som en användare kan försöka att autentisera sin PIN-kod innan appen blir låst. När antalet försök har uppfyllts kan Intune App SDK rensa företagets data i appen.
+* **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en app-PIN mellan alla appar **från samma utgivare**. På Android delas en app-PIN mellan alla appar.
+* **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen. 
+
+>[!NOTE] 
+> Om du vill verifiera användarens åtkomstkrav oftare (dvs. PIN-fråga), särskilt för en app som används ofta, rekommenderar vi att du minskar värdet för inställningen ”Kontrollera åtkomstkraven igen efter (minuter)”. 
+
+  3. **Är PIN-kod säkert?** PIN-koden fungerar så att endast rätt användare får åtkomst till organisationens data i appen. Därför måste slutanvändarna logga in med sina arbets- eller skolkonton innan de kan ange eller återställa Intune-appens PIN-kod. Den här autentiseringen hanteras av Azure Active Directory via utbyte av säker token och är inte transparent för Intune App SDK. Ur ett säkerhetsperspektiv är bästa sättet att skydda data från arbete eller skola att kryptera den. Kryptering är inte relaterad till appens PIN-kod, utan en egen appskyddsprincip.
+
+  4. **Hur skyddar Intune PIN-koden mot nyckelsökningsattacker?** Som en del av appens PIN-princip kan IT-administratören ange det maximala antalet gånger som en användare kan försöka att autentisera sin PIN-kod innan appen blir låst. När antalet försök har uppfyllts kan Intune App SDK rensa företagets data i appen.
   
-**Hur fungerar Intune app PIN-kod mellan numerisk typ och lösenordstyp?**
-MAM tillåter för närvarande PIN på programnivå (iOS) med alfanumeriska tecken och specialtecken (kallas ”lösenord”) som kräver medverkan av program (d.v.s. WXP, Outlook, Managed Browser, Yammer) för att integrera Intune APP SDK för iOS. Utan detta tillämpas inställningar för lösenord inte korrekt för de aktuella programmen. Eftersom appar följer den här integreringen på rullande bas, har beteendet mellan lösenord och numerisk PIN ändrats tillfälligt för slutanvändaren och kräver ett viktigt klargörande. I oktober 2017-versionen av Intune är beteendet följande ...
+  5. **Varför måste jag ange en PIN-kod två gånger på appar från samma utgivare?**
+MAM (på iOS) tillåter för närvarande PIN på programnivå med alfanumeriska tecken och specialtecken (kallas ”lösenord”) som kräver medverkan av program (d.v.s. WXP, Outlook, Managed Browser, Yammer) för att integrera Intune APP SDK för iOS. Utan detta tillämpas inställningar för lösenord inte korrekt för de aktuella programmen. Detta var en funktion som introducerades i Intune SDK för iOS v. 7.1.12. <br> För att stödja den här funktionen och säkerställa bakåtkompatibilitet med tidigare versioner av Intune SDK för iOS, hanteras alla PIN-koder (numeriska eller lösenord) i 7.1.12+ separat från den numeriska PIN-koden i tidigare versioner av SDK. Därför måste en enhet som har program med Intune SDK för iOS-versioner före 7.1.12 och efter 7.1.12 från samma utgivare, ställa in två PIN-koder. <br><br> Med detta sagt är de två PIN-koderna (för varje app) inte relaterade på något sätt, d.v.s. de måste följa den appskyddsprincip som tillämpas på appen. Därför kan användare konfigurera samma PIN-kod två gånger *endast* om apparna A och B har samma principer tillämpade (med avseende på PIN-kod). <br><br> Det här beteendet är specifikt för PIN-kod på iOS-program som har aktiverats med Intune Mobile App Management. Med tiden när program inför senare versioner av Intune SDK för iOS, blir det inte ett så stort problem att behöva ange PIN-kod två gånger på appar från samma utgivare. Se avsnittet nedan för ett exempel.
 
-Appar som har
-1. samma app-utgivare
-2. en PIN-kod med lösenord riktat via konsolen och 
-3. antagen SDK med den här funktionen (v 7.1.12+) kommer att kunna dela lösenordet mellan dessa appar. 
-
-Appar som har
-1. samma app-utgivare
-2. en numerisk PIN-kod riktad via konsolen kommer att kunna dela den numeriska PIN-koden mellan dessa appar. 
+>[!NOTE]
+> Om t.ex. app A har skapats med en tidigare version än 7.1.12 och app B har byggts med en version som är högre än eller lika med 7.1.12 från samma utgivare, måste slutanvändaren ställa in PIN-koder separat för A och B om båda är installerade på en iOS-enhet. <br> Om en app C har SDK-version 7.1.9 installerad på enheten, delar den samma PIN-kod som app A. <br> En app D som skapats med 7.1.14 delar samma PIN-kod som app B. <br> Om bara apparna A och C är installerade på en enhet, behöver en PIN-kod anges. Detsamma gäller om bara apparna B och D är installerade på en enhet.
 
 **Vad gäller för kryptering?** IT-administratörer kan distribuera en appskyddsprincip som kräver att appdata krypteras. Som en del av principen kan IT-administratören även ange när innehållet krypteras.
 
