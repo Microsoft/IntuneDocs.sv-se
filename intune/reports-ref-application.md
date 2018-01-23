@@ -2,23 +2,23 @@
 title: Program | Microsoft Docs
 description: "Referensavsnitt för kategorin Program för entitetssamlingar i API:et för Intune-informationslager."
 keywords: Intune-informationslager
-author: mattbriggs
-ms.author: mabrigg
+author: Erikre
+ms.author: erikre
 manager: angrobe
-ms.date: 07/31/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
-ms.reviewer: jeffgilb
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fd14c985b4cedcd0575b2b6ea29e7aa4d8bb2d4
-ms.sourcegitcommit: bb2c181fd6de929cf1e5d3856e048d617eb72063
+ms.openlocfilehash: a4008aa1c5e8c8219b45fffd1b021965bb83be17
+ms.sourcegitcommit: d44c32aad3e84f6c0b296bdb010981d3a818befb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="reference-for-application-entities"></a>Referens för programenheter
 
@@ -34,7 +34,7 @@ Kategorin **Program** innehåller entiteter för mobilenheter som spårar inform
 
 I entiteten **AppRevision** visas en lista över alla versioner av appen.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | AppKey |Appens unika id. |123 |
 | ApplicationId |Unikt id för appen, liknar AppKey men den här nyckeln är naturlig. |b66bc706-ffff-7437-0340-032819502773 |
@@ -56,15 +56,15 @@ I entiteten **AppRevision** visas en lista över alla versioner av appen.
 
 Entiteten **AppTypes** visar en lista över installationskällan för en app.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | AppTypeID |Id för typen |
 | AppTypeKey |Surrogatnyckel för nyckeln |
 | AppTypeName |Typ av app |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
-| AppTypeID  | Namn | Beskrivning |
+| AppTypeID  | Namn | Description |
 |---------|------------|--------|
 | 0 |Android Store-app | En Android Store-app. |
 | 1 |Verksamhetsspecifik Android-app | En verksamhetsspecifik app för Android. |
@@ -85,15 +85,15 @@ Entiteten **AppTypes** visar en lista över installationskällan för en app.
 
 Entiteten **VppProgramTypes** innehåller en lista över möjliga typer av volymköpsprogram för en app.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | VppProgramTypeID | Id för typen. |
 | VppProgramTypeKey | Surrogatnyckel för nyckeln. |
 | VppProgramTypeName | Typ av volymköpsprogram. |
 
-## <a name="example"></a>Exempel
+### <a name="example"></a>Exempel
 
-| VppProgramID  | Namn | Beskrivning |
+| VppProgramID  | Namn | Description |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsofts volymköpsprogram. |
 | 00000000-0000-0000-0000-000000000000 | Inte tillgängligt än | Standardvärde, inget volymköpsprogram. |
@@ -105,10 +105,33 @@ Entiteten **VppProgramTypes** innehåller en lista över möjliga typer av volym
 
 Entiteten **ApplicationInventory** innehåller en lista över program som hittats på enheten under inventeringen.
 
-| Egenskap  | Beskrivning |
+| Egenskap  | Description |
 |---------|------------|
 | DeviceKey | Det här är en referens till enhetstabellen som innehåller Intune-enhetens ID. |
 | DateKey | Referens till datumtabellen som visar dagen för inventeringen. |
 | ApplicationName | Programnamnet. |
 | ApplicationVersion | Programmets version. |
 | BundleSize | Appens storlek i byte. |
+
+## <a name="mobileappinstallstate"></a>MobileAppInstallState
+
+Entiteten **MobileAppInstallState** representerar installationstillståndet för mobila program när den har tilldelats till en grupp som innehåller enheter, användare eller båda.
+
+| Egenskap | Description |
+|---|---|
+| AppInstallStateKey | Unikt ID för appens installationstillstånd för ditt konto. |
+| AppInstallState | Uppräkningsvärde för appens installationstillstånd. |
+| AppInstallStateName | Namn på appens installationstillstånd. |
+
+## <a name="mobileappdeviceuserinstallstatus"></a>MobileAppDeviceUserInstallStatus
+
+**MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
+
+| Egenskap | Description |
+|---|---|
+| DateKey | Nyckeln för det datum då appens installationstillstånd registrerades. |
+| AppKey | Nyckeln för mobilappen som används för att identifiera en instans av AppRevision. |
+| DeviceKey | Nyckeln för en målenhet som används för att identifiera en instans av enheten. |
+| UserKey | Nyckeln för en målanvändare som används för att identifiera en instans av användaren. |
+|AppInstallStateKey | Nyckeln för appens installationstillstånd som används för att identifiera en instans av MobileAppInstallState. |
+| Felkod | Felkoden som returnerades av appens installationsprogram, mobila plattformar eller tjänsten som hör till appens installation. |
