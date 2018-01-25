@@ -124,7 +124,7 @@
         - name: Konfigurationer som stöds
           href: supported-devices-browsers.md
           items:
-            - name: Användning av nätverksbandbredd
+            - name: Nätverkskonfiguration
               href: network-bandwidth-use.md
         - name: Logga in i Intune
           href: account-sign-up.md
@@ -166,6 +166,8 @@
               href: windows-bulk-enroll.md
             - name: Windows AutoPilot-distributionsprogram
               href: enrollment-autopilot.md
+            - name: Skärm för registreringsstatus
+              href: windows-enrollment-status.md
         - name: Konfigurera Android-registrering
           href: android-enroll.md
         - name: Ställ in iOS-registrering
