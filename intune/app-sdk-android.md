@@ -5,7 +5,7 @@ keywords: SDK
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/28/2017
+ms.date: 01/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +14,18 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7bb78d05f9225c681c5b8a3bb6f1fcee4581a0de
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: c3c6c82dcec8d85d0748d5966f6898f219b620d7
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
 > [!NOTE]
 > Börja gärna med att läsa [Översikt över Intune App SDK](app-sdk.md). Den beskriver funktionerna i SDK, samt visar hur du förbereder integreringen på de plattformar som stöds.
 
-Med Microsoft Intune App SDK för Android kan du lägga till Intune-appskyddsprinciper (även kallade **APP**- eller MAM-principer) i din Android-app. Ett Intune-kompatibelt program är ett program som är integrerat med Intune App SDK. Intune-administratörer kan enkelt distribuera appskyddsprinciper till din Intune-kompatibla app när Intune aktivt hanterar appen.
+Med Microsoft Intune App SDK för Android kan du lägga till Intune-appskyddsprinciper (även kallade **APP**- eller MAM-principer) i din Android-app. Ett Intune-hanterat program är ett program som är integrerat med Intune App SDK. Intune-administratörer kan enkelt distribuera appskyddsprinciper till din Intune-hanterade app när Intune aktivt hanterar appen.
 
 
 ## <a name="whats-in-the-sdk"></a>Vad innehåller SDK?
@@ -55,7 +55,7 @@ Intune App SDK kompileras som ett Android-projekt. Det betyder att den inte är 
 Intune App SDK för Android förutsätter att [företagsportalappen](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) finns på enheten för att appskyddsprinciperna ska kunna aktiveras. Företagsportalen hämtar appskyddsprinciper från Intune-tjänsten. När appen initieras läser den in principen och koden för att kunna aktivera principen från företagsportalen.
 
 > [!NOTE]
-> Om företagsportalappen inte finns på enheten, fungerar en Intune-kompatibel app som en normal app som saknar stöd för Intunes appskyddsprinciper.
+> Om appen Företagsportal inte finns på enheten fungerar en Intune-hanterad app som en normal app som saknar stöd för Intunes appskyddsprinciper.
 
 Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera enheten med företagsportalappen.
 
@@ -875,7 +875,7 @@ Du kan även åsidosätta en metod i `MAMActivity` om du vill att appen ska avis
 
 ### <a name="implicit-identity-changes"></a>Implicita identitetsändringar
 
-Förutom appens möjlighet att ange identiteten, kan en tråd eller en kontexts identitet ändras baserat på inkommande data från en annan Intune-kompatibel app med en appskyddsprincip.
+Förutom appens möjlighet att ange identiteten kan en tråd eller en kontexts identitet ändras baserat på inkommande data från en annan Intune-hanterad app med en appskyddsprincip.
 
 #### <a name="examples"></a>Exempel
 
@@ -1353,6 +1353,32 @@ Nedan visas den fullständiga listan med tillåtna attribut, UI-element som de s
 | Accentfärg | PIN-kodrutans kantlinje när den är markerad <br> Hyperlänkar |accent_color | Färg |
 | Applogotyp | Stor ikon som visas på Intune-appens PIN-kodskärm | logo_image | Ritbar |
 
+## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-sdk-integrated-android-lob-app-and-enabling-adal-sso-optional"></a>Kräva uppmaning om användarinloggning för en automatisk APP-WE-tjänstregistrering, kräva Intune-appskyddsprinciper för att kunna använda en SDK-integrerad Android LOB-app och aktivera ADAL SSO (valfritt)
+
+Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den SDK-integrerade Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den SDK-integrerade Android LOB-appen. Detta stöds **inte** för Store-appar som kan användas av användare som inte använder Intune.
+
+> [!NOTE] 
+> Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
+
+### <a name="general-requirements"></a>Allmänna krav
+* Intune SDK-teamet kommer att kräva appens program-ID. Det går att hitta via [Azure Portal](https://portal.azure.com/), under **Alla program**, i kolumnen för **Program-ID**. Ett bra sätt att kontakta Intune SDK-teamet är att skicka e-post till msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
+De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
+
+1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal. 
+* Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
+
+2. Aktivera standardregistrering genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
+
+3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
+
 ## <a name="limitations"></a>Begränsningar
 
 ### <a name="file-size-limitations"></a>Filstorleksbegränsningar
@@ -1380,7 +1406,7 @@ För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/),
     
 ### <a name="exported-services"></a>Exporterade tjänster
 
- Filen AndroidManifest.xml i Intune App SDK innehåller **MAMNotificationReceiverService**, som måste vara en exporterad tjänst för att företagsportalen ska kunna skicka meddelanden till en kompatibel app. Tjänsten kontrollerar anroparen för att säkerställa att bara Företagsportal har tillåtelse att skicka meddelanden.
+ Filen AndroidManifest.xml i Intune App SDK innehåller **MAMNotificationReceiverService**, som måste vara en exporterad tjänst för att företagsportalen ska kunna skicka meddelanden till en hanterad app. Tjänsten kontrollerar anroparen för att säkerställa att bara Företagsportal har tillåtelse att skicka meddelanden.
 
 ### <a name="reflection-limitations"></a>Reflektionsbegränsningar
 Vissa MAM-grundklasser (t.ex. MAMActivity, MAMDocumentsProvider) innehåller metoder (baserade på de ursprungliga Android-grundklasserna) som använder typer av parametrar eller returer som endast finns ovanför vissa API-nivåer. Därför kanske det inte alltid är möjligt att använda reflektion för att räkna upp alla metoder för appkomponenter. Den här begränsningen är inte begränsad till MAM. Det är samma begränsning som skulle gälla om appen själv implementerat metoderna från Android-grundklasserna.

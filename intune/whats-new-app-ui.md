@@ -5,7 +5,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: angrobe
-ms.date: 11/14/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,14 +14,30 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ec7f322f0d35d50a7c84d8e40d43a6a04ae1b7d
-ms.sourcegitcommit: 0b96ae18524eb976df01a5340631ef331357e666
+ms.openlocfilehash: 1662245fdf9ba557fbc62fbb2e9c0e1aa29888b2
+ms.sourcegitcommit: 5877b650d93fc9a5e8f058f845acbdbfdff828b7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
 Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+
+## <a name="week-of-december-11-2017"></a>Veckan som börjar med 11 December 2017
+
+### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Meddelandefunktion för slutanvändare för konton <!--1573558, 1712; changes to be made for other platforms for 1801-->
+
+Användare av företagsportalens webbsida kommer att blockeras från att vidta åtgärder som kräver skrivbehörighet till din klient. De kommer att se lämpligt felmeddelande som förklarar att deras konto är under underhåll. Liknande ändringar finns snart för appar i företagsportalen för Android, iOS, macOS och Windows.
+
+![Felmeddelande som uppstår under kontoflytt](./media/account-move-rom-iwp-user-1712.png)
+
+## <a name="week-of-november-27-2017"></a>Veckan som börjar med 27 november 2017
+
+### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nytt steg för "Enhetskategorier" i den guidade konfigurationen för företagsportalappen för Windows 10 <!---1335292--->
+
+Om du har aktiverat [Mappning av enhetsgrupp](device-group-mapping.md) får användarna nu vägledning i företagsportalappen för Windows 10 i hur de väljer en enhetskategori efter att de har registrerat sin enhet.
+
+![Kategori för mappning av enhetsgrupp](./media/w10_cp_category_device_setup_after_1711.png)
 
 ## <a name="week-of-november-13-2017"></a>Veckan som börjar 13 november 2017
 
@@ -285,10 +301,10 @@ Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-v
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_manbro_before_042017.png" alt="The previous version of the Managed Browser app icon." width=200 height=366 align=center>
+            <img src="/intune/media/cp_manbro_before_042017.png" alt="The previous version of the Managed Browser app icon." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_manbro_after_042017.png" alt="The updated version of the Managed Browser app icon." width=200 height=366 align=center>
+             <img src="/intune/media/cp_manbro_after_042017.png" alt="The updated version of the Managed Browser app icon." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -299,20 +315,20 @@ Företagsportalen har också fått uppdaterade ikoner för Android-, iOS- och Wi
 
 ### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
 
-En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn visar nya statusmeddelanden, med början på ”Ansluter...”, sedan ”Loggar in...”, följt av ”Kontrollerar säkerhetskrav...” innan användaren får åtkomst till appen.
+En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen.
 
 <html>
 <body>
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width=200 height=366 align=center>
+            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width=200 height=366 align=center>
+             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
            </td>
            <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width=200 height=366 align=center>
+              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -346,7 +362,7 @@ Från och med mars följer företagsportalsappen för Android [riktlinjer för m
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width=200 height=366 align=center>
+            <img src="/intune/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width="200" height="366" align="center">
           </td>
       </tr>
    </table>
@@ -366,11 +382,21 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 > [!Note]
 > Observera att bilderna nedan kan vara förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
 
+### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Uppdatering av användarupplevelsen för appen Företagsportal för iOS <!--1412866-->
+
+Vi kommer att släppa en större uppdatering av användarupplevelsen i appen Företagsportal för iOS. Uppdateringen har en komplett visuell uppfräschning, vilket omfattar ett modernare utseende med bättre användbarhet och tillgänglighet. Alla befintliga funktioner i företagsportalen för iOS kommer att finnas kvar.
+
+Vi har en förhandsversion av den uppdaterade appen Företagsportal för iOS som är tillgänglig via Apple TestFlight-programmet, som du kan använda och lämna feedback på. Registrera dig på https://aka.ms/intune_ios_cp_testflight för att få åtkomst till TestFlight.
+
+![marknadsföringsbilder för den nya ios-appen Företagsportal](./media/ios-cp-app-redesign-1801-teaser.png)
+
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 2-->
 
 __Uppdateringar av aktuella appar__ Vi har lagt till en särskild sida på webbplatsen där användarna kan bläddra bland appar som du har valt att presentera, och vi har gjort några gränssnittsförändringar på avsnittet Aktuella på startsidan.
 
 ![De färggranna ikonerna visar apparna. Det finns stora rutor med färg under varje app, där färgen hämtas från den huvudsakliga färgen i appens logotyp. Avsnittet ”Aktuella appar” visas längst upp i företagsportalappen.](./media/cp_win10_colorful_tiles_after_1708.png)
+
+
 
 ### <a name="see-also"></a>Se även
 * [Microsoft Intune-blogg](http://go.microsoft.com/fwlink/?LinkID=273882)

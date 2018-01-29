@@ -5,7 +5,7 @@ keywords:
 author: erikre
 manager: angrobe
 ms.author: erikre
-ms.date: 11/03/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bd7d48a6511b1ae8ecf5a6f413ae2f682434244c
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 546c5d3f373b863e75afa05b7e9bd842f8a8eb46
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Du *behöver inte* att registrera din app. För interna affärsappar distribuera
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Om din app kommer att publiceras på en offentlig appbutik som Apple App Store eller Google Play:
 
-_**Måste**_ du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Därefter kan IT-administratörer tillämpa appskyddsprinciper för den upplysta appen, som listas som en Intune-appartner.
+_**Måste**_ du först registrera din app med Microsoft Intune och samtycka med villkoren för registrering. Därefter kan IT-administratörer tillämpa appskyddsprinciper för den hanterade appen, som listas som en Intune-appartner.
 
 Intune administratörer kommer inte att ha möjlighet att tillämpa appskyddsprincipen på din apps djuplänk förrän registreringen har slutförts och bekräftats av Microsoft Intune-teamet. Microsoft kommer även att lägga till din app till sin [Microsoft Intune-partnersida](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Där kommer appikonen att visas för att visa att den stöder Intunes appskyddsprinciper.
 
@@ -60,8 +60,6 @@ Om din apps djuplänk ändras i framtiden, måste du omregistrera din app.
 > [!NOTE]
 > Vänligen meddela oss om du uppdaterar appen med en ny version av Intune App SDK.
 
-
-
 ## <a name="download-the-sdk-files"></a>Hämta SDK-filerna
 
 Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft GitHub-konto. De här offentliga lagringsplatserna innehåller SDK-filer för intern iOS och Android:
@@ -75,10 +73,6 @@ Om din app är en Xamarin- eller Cordova-app använder du de här SDK-variantern
 * [Intune App SDK Cordova-insticksprogrammet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda för att förgrena och använda pull i våra lagringsplatser. GitHub låter utvecklare kommunicera med vårt produktteam, öppna frågor och få snabba svar, se versionsanmärkningar och ge feedback till Microsoft. Kontakta msintuneappsdk@microsoft.com för frågor om Intune App SDK på GitHub.
-
-
-
-
 
 ## <a name="enable-your-ios-or-android-app-for-app-protection-policy"></a>Aktivera din iOS- eller Android-app för appskyddsprinciper
 
@@ -102,9 +96,6 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
  
  * [Klient-ID för AAD](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) för din app måste vara unikt i iOS- och Android-plattformar.
  
- 
- 
-
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurera telemetri för din app
 
 Microsoft Intune samlar in data för användningsstatistik för din app.
@@ -113,7 +104,10 @@ Microsoft Intune samlar in data för användningsstatistik för din app.
 
     * Om du väljer att inte skicka SDK-telemetridata till Microsoft Intune från din app måste du inaktivera telemetriöverföring genom att tilldela egenskapen `MAMTelemetryDisabled` värdet ”YES” i IntuneMAMSettings-ordlistan.
 
-* **Intune App SDK för Android**: Telemetridata loggas inte via SDK.
+* **Intune App SDK för Android**: Intune App SDK för Android styr inte insamling av data från din app. Företagsportalprogrammet loggar telemetridata som standard. Dessa data skickas till Microsoft Intune. Enligt Microsofts policy samlar vi inte in någon personligt identifierbar information (PII). 
+
+    * Om användare väljer att inte skicka dessa data så måste de inaktivera telemetri under inställningarna i företagsportalappen. Du kan läsa mer i [Inaktivera Microsofts insamling av användningsdata](https://docs.microsoft.com/en-us/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
+
 
  Versionsnummer för verksamhetsspecifika iOS och Android-program är synliga <!-- 1380712 -->
 
@@ -123,7 +117,7 @@ Verksamhetsspecifika appar i Intune visar nu versionsnummer för iOS och Android
 
 ### <a name="full-version-number"></a>Fullständigt versionsnummer
 
-Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis, 2.2(2.2.17560800)
+Det fullständiga versionsnumret identifierar en specifik version av appen. Numret visas som _Version_(_Build_). Exempelvis, 2.2(2.2.17560800). 
 
 Det fullständiga versionsnumret har två komponenter:
 
@@ -163,7 +157,7 @@ Versionsnummer|CFBundleVersion|PackageVersionCode |Numret används för att indi
 ### <a name="test-your-app"></a>Testa appen
 När du har slutfört de nödvändiga stegen för att integrera din iOS- eller Android-app med Intune App SDK så måste du se till att alla appskyddsprinciper är aktiverade och fungerar för användaren och IT-administratören. Du behöver följande för att testa din integrerade app:
 
-* **Microsoft Intune-testkonto**: Du behöver ett Microsoft Intune-konto för att kunna testa dina Intune-upplysta appar mot Intunes appskyddsfunktioner.
+* **Microsoft Intune-testkonto**: Du behöver ett Microsoft Intune-konto för att kunna testa dina Intune-hanterade appar mot Intunes appskyddsfunktioner.
 
     * Om du är en ISV som aktiverar dina iOS eller Android store-appar för Intunes appskyddsprincip så får du en kampanjkod när du har slutfört registreringen med Microsoft Intune, enligt beskrivningen i registreringssteget. Kampanjkoden låter dig registrera dig för en utvärderingsversion av Microsoft Intune med ett års utökad användning.
 
@@ -171,7 +165,7 @@ När du har slutfört de nödvändiga stegen för att integrera din iOS- eller A
 
 * **Intunes appskyddsprinciper**: För att testa din app mot alla Intunes appskyddsprinciper bör du veta vad det förväntade beteendet för varje principinställning är. Se beskrivningarna för [iOS-appskyddsprinciper](/intune-classic/deploy-use/ios-mam-policy-settings) och [Android-appskyddsprinciper](/intune-classic/deploy-use/android-mam-policy-settings).
 
-* **Felsök**: Om du stöter på problem vid manuell testning av hur användare interagerar med din app kan du även läsa informationen om att [felsöka MAM](/intune-classic/troubleshoot/troubleshoot-mam). Den här artikeln hjälper dig med vanliga problem, dialogrutor och felmeddelanden som kan uppstå i Intune-upplysta appar. 
+* **Felsök**: Om du stöter på problem vid manuell testning av hur användare interagerar med din app kan du även läsa informationen om att [felsöka MAM](/intune-classic/troubleshoot/troubleshoot-mam). Den här artikeln hjälper dig med vanliga problem, dialogrutor och felmeddelanden som kan uppstå i Intune-hanterade appar. 
 
 ### <a name="badge-your-app-optional"></a>Ge din app en skylt (valfritt)
 

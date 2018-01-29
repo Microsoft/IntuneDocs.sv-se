@@ -6,20 +6,19 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.date: 12/09/2017
+ms.date: 1/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: d567d85f-e4ee-458e-bef7-6e275467efce
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36c495767d41c83c1393d837a808961ed9868bed
-ms.sourcegitcommit: 6d5c919286b0e285f709d9b918624b927f99f979
+ms.openlocfilehash: 3082bd52460bc9bd852edb3b560e96fb718a71c3
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -329,6 +328,9 @@ I den här uppgiften kommer du att:
 5.  I användargränssnittet för **certifikat connectorn** :
 
     Klicka på **Logga in** och ange autentiseringsuppgifter för en tjänstadministratör i Intune eller för en klientadministratör med behörighet för global administration.
+
+    > [!IMPORTANT]
+    > Användarkontot måste tilldelas en giltig Intune-licens. NDESConnectorUI.exe misslyckas om användarkontot inte har en giltig Intune-licens.
 
     Om organisationen använder en proxyserver och proxyn krävs för att NDES-servern ska få tillgång till Internet klickar du på **Använd proxyserver** och anger proxyservernamn, port och autentiseringsuppgifter för att ansluta.
 

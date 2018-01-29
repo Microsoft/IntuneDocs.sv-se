@@ -5,20 +5,20 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: angrobe
-ms.date: 06/12/2017
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-ms.reviewer: oldang
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4ef7c8bb8daa76c5555b5d55d06fc30a9bb6c317
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: dc031b12ed49766c70a6a4ff373a7c5843ca21ad
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -53,7 +53,6 @@ Innan du kör programhanteringsverktyget måste du uppfylla vissa allmänna krav
   * Indataappen måste ha angivna rättigheter innan den bearbetas av Intunes programhanteringsverktyg. [Rättigheterna](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) ger appen ytterligare funktioner och behörigheter utöver de som vanligtvis beviljas. Anvisningar finns i [Ställa in apprättigheter](#setting-app-entitlements).
 
 ## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Apple Developer-krav för programhanteringsverktyget
-
 
 För att exklusivt distribuera omslutna appar till användare i organisationen behöver du ett konto med [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/) och flera entiteter för signering av appar som är länkade till ditt Apple Developer-konto.
 
@@ -204,8 +203,8 @@ Du kan använda följande kommandoradsparametrar med programhanteringsverktyget:
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**|Visar detaljerad användningsinformation om tillgängliga kommandoradsegenskaper för programhanteringsverktyget.|
 |**-v**|(Valfri) Returnerar utförliga meddelanden till konsolen. Vi rekommenderar att du använder den här flaggan för att felsöka eventuella fel.|
-|**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i Ställa in apprättigheter.|
-|**-xe**| (Valfri) Skriver ut information om iOS-tilläggen i appen och vilka rättigheter som krävs för att använda dem. Mer information finns i Ställa in apprättigheter. |
+|**-e**| (Valfri) Använd den här flaggan om du vill att programhanteringsverktyget ska ta bort rättigheter som saknas när appen bearbetas. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements).|
+|**-xe**| (Valfri) Skriver ut information om iOS-tilläggen i appen och vilka rättigheter som krävs för att använda dem. Mer information finns i [Ställa in apprättigheter](#setting-app-entitlements). |
 |**-x**| (Valfritt) `<An array of paths to extension provisioning profiles>`. Använd det här alternativet om appen behöver tilläggsetableringsprofiler.|
 |**-f**|(Valfri) `<Path to a plist file specifying arguments.>` Använd den här flaggan framför [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html)-filen om du väljer att använda plist-mallen för att ange resten av IntuneMAMPackager-egenskaperna, t.ex. -i, -o och -p. Mer information finns i Använda en plist för att ange argument. |
 |**-b**|(Valfritt) Använd -b utan argument om du vill att den omslutna utdataappen ska ha samma paketversion som indataappen (rekommenderas inte). <br/><br/> Använd `-b <custom bundle version>` om du vill att den omslutna appen ska ha en anpassad CFBundleVersion. Om du väljer att ange en anpassad CFBundleVersion rekommenderar vi att du ökar den inbyggda appens CFBundleVersion med den minst viktiga komponenten, t.ex. 1.0.0 -> 1.0.1. |
@@ -244,6 +243,16 @@ Den omslutna appen sparas i den utdatamapp du har angett tidigare. Du kan ladda 
 > När du överför en omsluten app kan du försöka att uppdatera en äldre version av appen om en äldre version (omsluten eller intern) redan har distribuerats till Intune. Om det uppstår ett fel kan du ladda upp appen som en ny app och ta bort den äldre versionen.
 
 Du kan nu distribuera appen till användargrupper och ange programskyddsprinciper till appen. Appen körs på enheten med de programskyddsprinciper som du har angett.
+
+## <a name="how-often-should-i-rewrap-my-ios-application-with-the-intune-app-wrapping-tool"></a>Hur ofta ska jag omsluta mitt iOS-program på nytt med Intunes programhanteringsverktyg?
+Huvudscenarierna när du måste omsluta dina program på nytt är följande:
+* Programmet har publicerat en ny version. Den tidigare versionen av appen har omslutits och överförts till Intune-konsolen.
+* Intunes programhanteringsverktyg för iOS har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker efter 6–8 veckor via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
+
+Även om det är möjligt för iOS att omsluta med en annan certifierings-/etableringsprofil än den som ursprungligen användes för att signera appen kommer omslutningen att misslyckas om de berättiganden som specificeras i appen inte inkluderas i den nya etableringsprofilen. Om du använder kommandoradsalternativet ”-e”, som tar bort eventuella berättiganden som saknas från appen för att tvinga omslutningen att inte misslyckas i detta scenario kan det leda till att appen inte fungerar som den ska.
+
+Här är några metodtips för omslutning på nytt:
+* Se till att en annan etableringsprofil har alla berättiganden som krävs som fanns i eventuell tidigare etableringsprofil. 
 
 ## <a name="error-messages-and-log-files"></a>Felmeddelanden och loggfiler
 Använd följande information för att felsöka problem med programhanteringsverktyget.
@@ -307,7 +316,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Funktioner som stöds för programhanteringsverktyg för iOS
 
-|Funktion|Beskrivning|Råd|
+|Funktion|Description|Råd|
 |--------------|---------------|------------------------|
 |Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade behållare och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
 |Bakgrundslägen|Om du aktiverar bakgrundslägen kan din iOS-app fortsätta att köras i bakgrunden.||
@@ -392,6 +401,18 @@ Använd följande riktlinjer för säkerhet och sekretess när du använder prog
 -   Med iOS-appar som innehåller en dialogruta för filöverföring kan användarna kringgå de begränsningar för klipp ut, kopiera och klistra in som gäller för appen. En användare kan till exempel använda dialogrutan Överför för att överföra en skärmbild av appdata.
 
 -   När du övervakar dokumentmappen på enheten från en omsluten app kan du se en mapp med namnet .msftintuneapplauncher. Om du ändrar eller tar bort den här filen kan det resulterade i att begränsade appar inte fungerar som de ska.
+
+## <a name="getting-logs-for-your-wrapped-applications"></a>Hämta loggar för dina omslutna program
+Använd följande steg för att hämta loggar för dina omslutna program under felsökningen.
+
+1. Gå till inställningar för iOS-appen på enheten och välj LOB-appen.
+2. Växla **Diagnostikkonsolen** till **På**.
+3. Starta LOB-programmet.
+4. Klicka på länken ”Kom igång”.
+5. Du kan nu dela loggar via e-post eller kopiera dem till en plats i OneDrive.
+
+>[!NOTE]
+Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
 
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)</br>
