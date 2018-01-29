@@ -1,6 +1,6 @@
 ---
-title: "Så här använder du Azure AD för att få åtkomst till Intune Graph API"
-description: "Beskriver de steg som krävs för att appar ska kunna använda Azure AD till att få åtkomst till Intune Graph API"
+title: "Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph"
+description: "Beskriver de steg som krävs för att appar ska kunna använda Azure AD till att få åtkomst till Intune API:er i Microsoft Graph."
 keywords: intune graphapi c# powershell permission roles
 author: vhorne
 manager: angrobe
@@ -13,20 +13,20 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 351a066c8852125b6fbf26c039dd3718b63f8980
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 6637d7269f7620dc348b80533661afac8f12e0ba
+ms.sourcegitcommit: d6dc1211e9128c2e0608542b72d1caa4d6ba691d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-use-azure-ad-to-access-the-intune-graph-api"></a>Så här använder du Azure AD för att få åtkomst till Intune Graph API
+# <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
-[Microsoft Graph API](https://developer.microsoft.com/graph/) har nu stöd för Microsoft Intune med specifika API:er och behörighetsroller.  Graph API använder Azure Active Directory (Azure AD) för autentisering och åtkomstkontroll.  
-Åtkomst till Intune Graph API kräver:
+[Microsoft Graph API](https://developer.microsoft.com/graph/) har nu stöd för Microsoft Intune med specifika API:er och behörighetsroller.  Microsoft Graph API använder Azure Active Directory (Azure AD) för autentisering och åtkomstkontroll.  
+För åtkomst till Intune API:er i Microsoft Graph krävs:
 
 - Ett program-ID med:
 
-    - Behörighet att anropa Azure AD och Graph API:er.
+    - Behörighet att anropa Azure AD och Microsoft Graph API:er.
     - Behörighetsomfattning som avser aktiviteter för specifika program.
 
 - Användarautentiseringsuppgifter med:
@@ -38,11 +38,11 @@ ms.lasthandoff: 12/12/2017
 
 Den här artikeln:
 
-- Visar hur du registrerar ett program med åtkomst till Graph API och relevanta behörighetsroller.
+- Visar hur du registrerar ett program med åtkomst till Microsoft Graph API och relevanta behörighetsroller.
 
-- Beskriver Intune Graph API:s behörighetsroller.
+- Beskriver Intune API:ns behörighetsroller.
 
-- Visar exempel på autentisering av Intune Graph API för C# och PowerShell.
+- Visar exempel på autentisering av Intune API för C# och PowerShell.
 
 - Beskriver hur du ger stöd för flera klienter
 
@@ -53,9 +53,9 @@ Mer information finns i:
 - [Integrera program med Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Förstå OAuth 2.0](https://oauth.net/2/)
 
-## <a name="register-apps-to-use-graph-api"></a>Registrera appar som ska använda Graph API
+## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrera appar för att använda Microsoft Graph API
 
-Så här registrerar du en app som ska använda Graph API:
+Registrera en app för att använda Microsoft Graph API:
 
 1.  Logga in på [Azure-portalen](https://portal.azure.com) med administratörsautentisering.
 
@@ -127,15 +127,15 @@ Du kan nu också:
 
 ## <a name="intune-permission-scopes"></a>Behörighetsomfattningar för Intune
 
-Azure AD och Graph API använder behörighetsomfattningar för att styra åtkomsten till företagets resurser.  
+Azure AD och Microsoft Graph använder behörighetsomfattningar för att styra åtkomsten till företagets resurser.  
 
-Behörighetsomfattningen (kallas även _OAuth-omfattningar_) styr åtkomsten till specifika Intune-entiteter och deras egenskaper. Det här avsnittet sammanfattar behörighetsomfattningarna för Intune Graph API-funktionerna.
+Behörighetsomfattningen (kallas även _OAuth-omfattningar_) styr åtkomsten till specifika Intune-entiteter och deras egenskaper. Det här avsnittet sammanfattar behörighetsomfattningarna för Intune API-funktionerna.
 
 Mer information:
 - [Azure AD-autentisering](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Behörighetsomfattningar för program](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-När du beviljar behörighet för Graph API kan du ange följande omfattningar för att styra åtkomsten till Intune-funktioner: I följande tabell sammanfattas behörighetsomfattningarna för Intune Graph API.  Den första kolumnen visar namnet på den funktion som visas i Azure-portalen och den andra kolumnen innehåller namnet på behörighetsomfattningen.
+När du beviljar behörighet för Microsoft Graph kan du ange följande omfattningar för att styra åtkomsten till Intune-funktioner: I följande tabell sammanfattas behörighetsomfattningarna för Intune API.  Den första kolumnen visar namnet på den funktion som visas i Azure-portalen och den andra kolumnen innehåller namnet på behörighetsomfattningen.
 
 Inställningen _Aktivera åtkomst_ | Namn på sökomfång
 :--|:--
@@ -153,7 +153,7 @@ __Läsa Microsoft Intune-konfiguration__ | [DeviceManagementServiceConfig.Read.A
 
 Tabellen innehåller inställningarna i den ordning de visas i Azure-portalen. I följande avsnitt beskrivs omfattningarna i alfabetisk ordning.
 
-Behörighetsomfattningar för Intune kräver för närvarande administratörsåtkomst.  Detta innebär att du måste ha motsvarande autentiseringsuppgifter när du kör appar eller skript som har åtkomst till Intune Graph API-resurser.
+Behörighetsomfattningar för Intune kräver för närvarande administratörsåtkomst.  Detta innebär att du måste ha motsvarande autentiseringsuppgifter när du kör appar eller skript som har åtkomst till Intune API-resurser.
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
@@ -319,7 +319,7 @@ När du testar något av exemplen kan du få HTTP-statusfel 403 (Förbjuden) som
 
 Om det händer kontrollerar du att:
 
-- Du har uppdaterat program-ID:t till en behörighet att använda Graph-API och behörighetsomfattningen `DeviceManagementManagedDevices.Read.All`.
+- Du har uppdaterat program-ID:t till en behörighet att använda Microsoft Graph-API och behörighetsomfattningen `DeviceManagementManagedDevices.Read.All`.
 
 - Dina autentiseringsuppgifter för klienten har stöd för administrativa funktioner.
 

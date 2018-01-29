@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7877d0bb6ba7a9c9d51cd261a7f1fbf555f88961
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: 632a5b2a5f6f5188ef034bdcff927af6a7fe1a59
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -58,7 +58,7 @@ Om du inte redan gjort det, förbereder du för hantering av mobila enheter geno
    ![Skärmbild som visar länk till att konfigurera Android for Work-bindning](./media/android-work-bind.png)
 
    b. **Logga in på Google**<br>
-   Logga in på Googles inloggningssida med det Google-konto som ska associeras med alla hanteringsuppgifter för Android for Work för den här klienten. Det här är det Google-konto som företagets IT-administratörer delar för att hantera och publicera appar i Play for Work-konsolen.
+   Logga in på Googles inloggningssida med det Google-konto som ska associeras med alla hanteringsuppgifter för Android for Work för den här klienten. Det här är det Google-konto som företagets IT-administratörer delar för att hantera och publicera appar i Play for Work-konsolen. Du kan använda ett befintligt Google-konto eller skapa ett nytt.  Det konto du väljer får inte vara kopplat till en G Suite-domän.
 
    c. **Ange organisationsinformation**<br>
    Ange företagets namn för **Organisationsnamn**. **Microsoft Intune** ska visas som **Enterprise mobility management (EMM)-provider**. Godkänn Android for Work-avtalet och välj sedan **Bekräfta**. Din begäran kommer att behandlas.

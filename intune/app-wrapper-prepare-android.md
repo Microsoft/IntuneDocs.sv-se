@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a691786ce2ee975086899844b285a91f676aa71f
-ms.sourcegitcommit: e76dbd0882526a86b6933ace2504f442e04de387
+ms.openlocfilehash: 1673fa1e9c580c1554537530341f87b1580e79eb
+ms.sourcegitcommit: 53d272defd2ec061dfdfdae3668d1b676c8aa7c6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -81,7 +81,7 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 |Egenskap|Information|Exempel|
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|Sökvägen till käll-Android-appen (.apk).| |
-|**-OutputPath**&lt;String&gt;|Sökväg till Android-utdataappen. Om det här är samma mapp-sökväg som för InputPath, så kommer paketeringen misslyckas.| |
+ |**-OutputPath**&lt;String&gt;|Sökväg till Android-utdataappen. Om det här är samma mapp-sökväg som för InputPath, så kommer paketeringen misslyckas.| |
 |**-KeyStorePath**&lt;String&gt;|Sökväg till keystore-filen som innehåller det offentliga/privata nyckelparet för signering.|Keystore-filer lagras som standard i ”C:\Program (x86)\Java\jreX.X.X_XX\bin”. |
 |**-KeyStorePassword**&lt;SecureString&gt;|Lösenordet som används för att dekryptera keystore. Android kräver att alla appaket (.apk) signeras. Använd Java Keytool för att generera KeyStorePassword. Läs mer om Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) här.| |
 |**-KeyAlias**&lt;String&gt;|Namnet på nyckeln som ska användas för signering.| |
@@ -115,7 +115,7 @@ Den omslutna appen och en loggfil genereras och sparas på den utdatasökväg so
 
 ## <a name="how-often-should-i-rewrap-my-android-application-with-the-intune-app-wrapping-tool"></a>Hur ofta ska jag omsluta mitt Android-program på nytt med Intunes programhanteringsverktyg?
 Huvudscenarierna när du måste omsluta dina program på nytt är följande:
-* Programmet har publicerat en ny version.
+* Programmet har publicerat en ny version. Den tidigare versionen av appen har omslutits och överförts till Intune-konsolen.
 * Intunes programhanteringsverktyg för Android har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker var sjätte till var åttonde vecka via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 
 Här är några metodtips för omslutning på nytt: 
@@ -144,6 +144,32 @@ För att förhindra eventuell förfalskning, avslöjande av information och priv
 -   Kontrollera att programmet kommer från en betrodd källa.
 
 -   Skydda utdatakatalogen som innehåller den omslutna appen. Fundera på att i stället använda en katalog på användarnivå för utdatan.
+
+## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-wrapped-android-lob-app-and-enabling-adal-sso-optional"></a>Kräva uppmaning om användarinloggning för en automatisk APP-WE-tjänstregistrering, kräva Intune-appskyddsprinciper för att kunna använda en omsluten Android LOB-app och aktivera ADAL SSO (valfritt)
+
+Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den omslutna Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den omslutna Android LOB-appen. 
+
+> [!NOTE] 
+> Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
+
+### <a name="general-requirements"></a>Allmänna krav
+* Intune SDK-teamet kommer att kräva appens program-ID. Det går att hitta via [Azure Portal](https://portal.azure.com/), under **Alla program**, i kolumnen för **Program-ID**. Ett bra sätt att kontakta Intune SDK-teamet är att skicka e-post till msintuneappsdk@microsoft.com.
+     
+### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
+De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
+
+1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+> [!NOTE] 
+> Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
+* Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
+
+2. Aktivera standardregistrering genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+> [!NOTE] 
+> Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
+
+3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+> [!NOTE] 
+> Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
 
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)

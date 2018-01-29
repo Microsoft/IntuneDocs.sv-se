@@ -6,20 +6,19 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 12/03/2017
+ms.date: 1/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 16aa0f3c-8977-4495-9fbe-ca30ad278c9e
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d0d8a6e198a58fc513645db68ae3a3ef84a3653
-ms.sourcegitcommit: a3a744ea55f38a360ca9f788c77a5b3018d1add5
+ms.openlocfilehash: 54202baa7871f38581f4828bb80213be0f88ef61
+ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Inställningar för webbinnehållsfilter för iOS-enheter
 
@@ -47,8 +46,11 @@ Om du inte anger några webbadresser får användarna inte åtkomst till några 
 ## <a name="configure-urls"></a>Konfigurera webbadresser
 
 1. På bladet **Webbinnehållsfilter** väljer du någon av följande inställningar om det behövs:
-    - **Tillåtna webbadresser** – På bladet **Tillåtna webbadresser** anger du de webbadresser som du vill tillåta (och kringgår Apple-webbfiltret). Tryck på returtangenten efter varje.
-    - **Blockerade webbadresser** – På bladet **Blockerade webbadresser** anger du de webbadresser som du vill blockera (oavsett inställningarna i Apple-webbfiltret). Tryck på returtangenten efter varje.
+   - **Tillåtna webbadresser** – På bladet **Tillåtna webbadresser** anger du de webbadresser som du vill tillåta (och kringgår Apple-webbfiltret). Tryck på returtangenten efter varje.
+     > [!NOTE]
+     > De webbadresser du anger här är de du inte vill ska omfattas av Apple-webbfiltret. Dessa webbadresser utgör inte en lista över de enda webbplatser som tillåts. Om du vill ha detta använder du **Endast vissa webbplatser**.
+
+   - **Blockerade webbadresser** – På bladet **Blockerade webbadresser** anger du de webbadresser som du vill blockera (oavsett inställningarna i Apple-webbfiltret). Tryck på returtangenten efter varje.
 2. Klicka på **OK**när du är klar.
 
 
