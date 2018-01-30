@@ -4,23 +4,24 @@ description:
 keywords: 
 author: barlanmsft
 ms.author: barlan
-manager: angrobe
+manager: dougeby
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: ba593c08-1a78-4013-8525-b45a948772ec
-searchScope: User help
+searchScope:
+- User help
 ROBOTS: 
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f9c91c85b4a93fb211b5cd278dd82277a58cb08e
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: ab67a6f2fd1f861ba197464a9e369ca0b54e6b5d
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -36,10 +37,6 @@ Nyare versioner av Android-, särskilt från och med v7.0, kräver ett startlös
 
 På vissa Android-enheter måste du skapa en start-PIN-kod för att se till att enheten är skyddad. Det finns flera versioner av Android från många olika tillverkare. Du kan försöka att åtgärda problemet genom att hitta en plats i inställningsappen där det här alternativet kan aktiveras. Till exempel i Samsung Galaxy S7 aktiverar du säker start genom att gå till **Inställningar** > **Låsskärm och säkerhet** > **Säker start**.  
 
-### <a name="downgrade-your-version-of-android"></a>Nedgradera din version av Android
-
-Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
-
 ### <a name="encrypt-the-entire-device"></a>Kryptera hela enheten
 
 Med vissa enheter kan du välja mellan att kryptera hela enheten eller bara det använda utrymmet. Välj helst att kryptera hela enheten och inte ”bara det använda utrymmet.” Om du redan har krypterat endast det använda utrymmet:
@@ -48,6 +45,10 @@ Med vissa enheter kan du välja mellan att kryptera hela enheten eller bara det 
 2. Dekryptera använt utrymme
 3. Kryptera hela enheten
 4. Omregistrera enheten
+
+### <a name="downgrade-your-version-of-android"></a>Nedgradera din version av Android
+
+Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
 
 ## <a name="specific-manufacturer-issues"></a>Problem med vissa tillverkare
 

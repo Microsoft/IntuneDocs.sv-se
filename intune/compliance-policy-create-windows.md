@@ -5,7 +5,7 @@ description: "Läs om hur du kan skapa en efterlevnadsprincip för Windows-enhet
 keywords: 
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 13fc7783-d4de-47d0-b1b8-4c8710a9e6ab
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76d1bb091553fbe5a1220c818289f59f4ef4100b
-ms.sourcegitcommit: e10dfc9c123401fabaaf5b487d459826c1510eae
+ms.openlocfilehash: 59a68bbe3c7030e44e4b1eacb5601dd7a3121673
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lär dig hur du skapar en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
@@ -124,7 +124,7 @@ Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om
 
 <!---## Compliance policy settings for Windows PCs--->
 
-## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 ### <a name="password"></a>Lösenord
 

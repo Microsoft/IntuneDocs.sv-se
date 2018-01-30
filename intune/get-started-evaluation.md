@@ -5,7 +5,7 @@ description: "Gör ett antal korta praktiska övningar för att lära dig mer om
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 6bfab644-c1e2-4154-a254-e95b9a1d75f2
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 04852dfd9a509413dd9e532c8a464f3d02e60fd4
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 0792bc51b956f2aad634d6777b2222a9439e9538
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Vad kan Intune göra för mitt företag?
 
@@ -40,7 +40,7 @@ Du kan följa de praktiska __komma igång__-aktiviteterna i avsedd ordning med h
 * [Kom igång med att registrera enheter](get-started-enroll.md) – Lär dig hur hela registreringsprocessen genom att registrera en iOS-enhet.
 * [Kom igång med att lägga till appar](get-started-apps.md) – Hitta och lägg till appar på enheter så att dina anställda kan få arbete utfört.
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Du måste ha en Intune-administratör och ett klientkonto aktiverat innan du börjar. Du kan registrera dig för dessa konton [här](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Alla befintliga prenumeranter kan också utföra aktiviteter i liveklienten. Dessa artiklar för att komma igång förutsätter att du arbetar på testenheter.
 

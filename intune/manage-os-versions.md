@@ -3,18 +3,18 @@ title: Hantera versioner av operativsystem med Intune
 description: "Lär dig mer om att hantera versioner av operativsystemet på plattformar med Microsoft Intune."
 keywords: 
 author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 10/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-ms.openlocfilehash: c1b49619e07c4381f7bc5314ff9e25c063ad3e1d
-ms.sourcegitcommit: 6daa83bdaf9186cb2e5f59ba81add4cf297ee1cd
+ms.openlocfilehash: ede4be83b995bbb415184275c34f0e1b4feb4091
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Hantera versioner av operativsystem med Intune
 På moderna bärbara och stationära plattformar, viktiga uppdateringar, korrigeringar och nya versioner snabbt. Du har kontroller för att fullständigt hantera uppdateringar och korrigeringar i Windows, men för andra plattformar som iOS och Android krävs att slutanvändarna deltar i processen.  Microsoft Intune har funktioner som hjälper dig att strukturera versionshanteringen av operativsystem på olika plattformar.
