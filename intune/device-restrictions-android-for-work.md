@@ -5,21 +5,20 @@ description: "Läs vilka Intune-inställningar du kan använda för att kontroll
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
-ms.date: 08/01/2017
+manager: dougeby
+ms.date: 1/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1830720b-16cb-4f2f-a71a-62967f882563
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: beb8368aa2db33df84bb64985177b47beebc80ac
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: c7c69bb3984ae4ffa81aa81ae24cfe17663bc191
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 12/12/2017
 ### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 - **Kräv lösenord för arbetsprofilen** –(Android 7.0 och senare med arbetsprofil aktiverad) definiera en lösenordsprincip som bara gäller för appar i arbetsprofilen. Som standard kan slutanvändaren använda de två separat definierade PIN-koderna, eller så kan användaren välja att kombinera dem till den starkare av de två.
 - **Minsta lösenordslängd** – Ange det minsta antal tecken som användarens lösenord måste innehålla (från **4**-**16**)
-- **Maximalt antal minuter av inaktivitet innan skärmen låses** – Välj efter hur lång tid arbetsprofilen ska låsas. Därefter måste användaren ange sina autentiseringsuppgifter för att få åtkomst igen.
+- **Maximalt antal minuter av inaktivitet innan arbetsprofilen låses** – Välj efter hur lång tid arbetsprofilen ska låsas. Därefter måste användaren ange sina autentiseringsuppgifter för att få åtkomst igen.
 - **Antal felaktiga inloggningar innan enheten rensas** – Ange hur många gånger ett felaktigt lösenord kan anges innan arbetsprofilen rensas från enheten.
 - **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan användarens lösenord måste ändras (från **1**-**255**).
 - **Krav på lösenordstyp** – Välj den typ av lösenord som måste anges på enheten. Välj mellan:

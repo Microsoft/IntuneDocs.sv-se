@@ -4,7 +4,7 @@ description: "Visar en lista över enhetsplattformar och webbläsare som stöds 
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-manager: angrobe
+manager: dougeby
 ms.date: 01/03/2018
 ms.topic: get-started-article
 ms.prod: 
@@ -14,28 +14,28 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 56516562b9a7510020475d226c74bf719bdd33a3
-ms.sourcegitcommit: 833b1921ced35be140f0107d0b4205ecacd2753b
+ms.openlocfilehash: 1e6b14d5152df8420c5d358ccd9057d7ba427800
+ms.sourcegitcommit: d9de1e92c3913f731d5da3c51a5e1e9b2686894b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="supported-devices-and-browsers"></a>Enheter och webbläsare som stöds
+# <a name="supported-operating-systems-and-browsers"></a>Operativsystem och webbläsare som stöds
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Den här artikeln är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. Hjälp om hur du installerar Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/company-portal-frequently-asked-questions).
+Den här artikeln är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. Hjälp om hur du installerar Intune på din enhet finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/company-portal-frequently-asked-questions).
 
 Innan du börjar konfigurera Microsoft Intune, bör du granska följande krav:
 
-- [Enheter och datorer som stöds](#intune-supported-devices)
+- [Operativsystem som stöds](#intune-supported-operating-systems)
 - [En lista över vilka webbläsare som använder Intune](#intune-supported-web-browsers)
 
 Du bör också känna till [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md) ([klassisk portal](/intune-classic/get-started/network-bandwidth-use)).
 
-## <a name="intune-supported-devices"></a>Enheter som har stöd för Intune
+## <a name="intune-supported-operating-systems"></a>Operativsystem som stöds i Intune
 
-Du kan hantera följande enheter med mobil enhetshantering för Intune:
+Du kan hantera enheter som kör följande operativsystem:
 
 [!INCLUDE[mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
@@ -85,7 +85,6 @@ Följande lista över Samsung-enhetsmodeller har inte stöd för Knox och regist
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-Intune kan inte användas för att hantera operativsystem med Windows Server.
 
 ### <a name="windows-pc-software-client"></a>Windows PC-programvaruklient
 

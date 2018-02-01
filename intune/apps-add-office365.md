@@ -5,7 +5,7 @@ description: "Så här använder du Intune för att underlätta installation av 
 keywords: 
 author: dougeby
 ms.author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7f1958e4a0fb5aeba3225ee7ea5fae1e7fb39db3
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 7ee1657351551ea83c6089c5ac52655b9cd64fc2
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
 
@@ -35,7 +35,7 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till 
 - Intune har endast stöd för att lägga till Office-appar från Office 365 ProPlus 2016.
 - Om alla Office-program är öppna när Intune installerar appen kan slutanvändare förlora data från filer som inte sparats.
 - Den här installationsmetoden stöds inte på Windows 10S-enheter.
-- Intune stöder inte installation av Office 365-skrivbordsappar från Windows Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
+- Intune stöder inte installation av Office 365-skrivbordsappar från Microsoft Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
 
 
 ## <a name="get-started"></a>Kom igång
@@ -63,7 +63,7 @@ Välj de Office-appar som du vill tilldela till enheter i det här steget.
 I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera det i Intune och hjälper även användarna att hitta det i företagsportalappen.
 
 1.  Välj **Appinformation** på bladet **Lägg till app**.
-2.  Konfigurera följande information på bladet **Appinformation**: 
+2.  Konfigurera följande information på bladet **Appinformation**:
     - **Paketnamn** – Ange namnet på appaketet så som det visas på företagsportalen. Kontrollera att alla paketnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Paketbeskrivning** – Ange en beskrivning för appaketet. Exempelvis kan du visa de appar som ingår.
     - **Utgivare** – Ange namnet på appens utgivare.
@@ -82,9 +82,9 @@ I det här steget anger du information om appaketet. Den här informationen hjä
 Konfigurera installationsalternativ för app-paket i det här steget. Inställningarna tillämpas på alla appar som du har lagt till i serien.
 
 1.  Välj **Appaketinformation** på bladet **Lägg till app**.
-2.  Konfigurera följande information på bladet **Appaketinformation**: 
+2.  Konfigurera följande information på bladet **Appaketinformation**:
     - **Office-version** -Välj om du vill tilldela 32-bitars eller 64-bitars version av Office. Du kan installera 32-bitarsversionen på enheter med 32-bitar och 64-bitar, men du kan bara installera 64-bitarsversionen på 64-bitarsenheter.
-    - **Uppdatera kanal** – Välj hur office uppdateras på enheter. Information om andra uppdateringskanaler finns i översikten över uppdateringskanaler för Office 365 ProPlus. Välj mellan: 
+    - **Uppdatera kanal** – Välj hur office uppdateras på enheter. Information om andra uppdateringskanaler finns i översikten över uppdateringskanaler för Office 365 ProPlus. Välj mellan:
         - **Nuvarande**
         - **Uppskjutna**
         - **Den första aktuella versionen**
@@ -104,19 +104,19 @@ När du är klar väljer du **Spara** på bladet **Lägg till app**. Appen som d
 
 I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 
-### <a name="status-for-office-csp"></a>Status för Office CSP: 
+### <a name="status-for-office-csp"></a>Status för Office CSP:
 
 ||||
 |-|-|-|
-|Status|Fas|Beskrivning|
+|Status|Fas|Description|
 |1460 (ERROR_TIMEOUT)|Hämta|Det gick inte att hämta distributionsverktyget för Office|    
-|13 (ERROR_INVALID_DATA)|-|Det går inte att verifiera signaturen för det hämtade distributionsverktyget för Office| 
+|13 (ERROR_INVALID_DATA)|-|Det går inte att verifiera signaturen för det hämtade distributionsverktyget för Office|
 |Felkod från CertVerifyCertificateChainPolicy|-|Kontroll av certifikatutfärdare för det hämtade distributionsverktyget för Office|    
-|997|PÅGÅENDE ARBETE|Installerar| 
+|997|PÅGÅENDE ARBETE|Installerar|
 |0|Efter installation|Installationen lyckades|    
 |1603 (ERROR_INSTALL_FAILURE)|-|Kravkontrollen misslyckades, till exempel:<br>-SxS (försökte installera när 2016 MSI är installerat)<br>- versionsmatchningsfel<br>-osv.|     
 |0x8000ffff (E_UNEXPECTED)|-|Försökte avinstallera när det inte finns någon Klicka och kör Office på datorn.|    
-|17002|-|Det gick inte att slutföra scenariot (installation). Möjlig orsak:<br>- Installationen avbröts av användaren<br>- Installationen avbröts av en annan installation<br>- Slut på diskutrymme under installationen<br>- Okänt språk-ID| 
+|17002|-|Det gick inte att slutföra scenariot (installation). Möjlig orsak:<br>- Installationen avbröts av användaren<br>- Installationen avbröts av en annan installation<br>- Slut på diskutrymme under installationen<br>- Okänt språk-ID|
 |17004|-|Okända SKU:er|   
 
 
@@ -124,15 +124,15 @@ I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 
 |||||
 |-|-|-|-|
-|Scenario|Returkod|UI|Obs!| 
-|Avinstallera när det inte finns några aktiva Klicka och kör-installationer|-2147418113, 0x8000ffff eller 2147549183|Felkod: 30088-1008<br>Felkod: 30125-1011 (404)|Office-distributionsverktyg| 
-|Installera om det finns en installerad MSI-version|1603|-|Office-distributionsverktyg| 
-|Installationen avbröts av användaren eller av en annan installation|17002|-|Klicka och kör| 
-|Om du försökte installera 64-bitars på en enhet som har installerat 32-bitars.|1603|-|Returkod för distributionsverktyget för Office| 
-|Försök att installera en okänd SKU (inte ett giltig användningsfall för Office CSP eftersom vi bara ska skicka giltiga SKU: er)|17004|-|Klicka och kör| 
-|Brist på utrymme|17002|-|Klicka och kör| 
-|Klicka och kör-klienten kunde inte starta (oväntat)|17000|-|Klicka och kör| 
-|Klicka och kör-klienten kunde inte ställa scenariot i kö (oväntat)|17001|-|Klicka och kör| 
+|Scenario|Returkod|UI|Obs!|
+|Avinstallera när det inte finns några aktiva Klicka och kör-installationer|-2147418113, 0x8000ffff eller 2147549183|Felkod: 30088-1008<br>Felkod: 30125-1011 (404)|Office-distributionsverktyg|
+|Installera om det finns en installerad MSI-version|1603|-|Office-distributionsverktyg|
+|Installationen avbröts av användaren eller av en annan installation|17002|-|Klicka och kör|
+|Om du försökte installera 64-bitars på en enhet som har installerat 32-bitars.|1603|-|Returkod för distributionsverktyget för Office|
+|Försök att installera en okänd SKU (inte ett giltig användningsfall för Office CSP eftersom vi bara ska skicka giltiga SKU: er)|17004|-|Klicka och kör|
+|Brist på utrymme|17002|-|Klicka och kör|
+|Klicka och kör-klienten kunde inte starta (oväntat)|17000|-|Klicka och kör|
+|Klicka och kör-klienten kunde inte ställa scenariot i kö (oväntat)|17001|-|Klicka och kör|
 
 ## <a name="next-steps"></a>Nästa steg
 

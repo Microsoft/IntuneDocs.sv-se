@@ -30,8 +30,9 @@
 #### [Kontrollera efterlevnad för enhet](check-compliance-on-your-device-android.md)
 #### [E-postsynkronisering i Outlook med batterisparfunktionsläge](power-saving-mode-android.md)
 #### [Åtgärda vanliga problem med Samsung Knox](samsung-knox-errors-android.md)
+#### [Uppdatera din enhet för att installera Outlook](update-device-outlook-android.md)
 
-#### Använda loggar för att lösa problem
+#### Använda loggar som hjälp för problemlösning
 ##### [Aktivera utförlig loggning](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [Skicka loggar via e-post](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Skicka loggar via USB-kabel](send-logs-to-your-it-admin-using-cable-android.md)
@@ -85,6 +86,7 @@
 #### [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md)
 #### [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-ios.md)
 #### [Uppdatera din iOS-enhet](you-need-to-update-your-ios-device.md)
+#### [Uppdatera din enhet för att installera Outlook](update-device-outlook-ios.md)
 #### [Min iOS-version stöds inte ännu](your-ios-version-isnt-yet-supported.md)
 
 ### Mobile Threat Defense

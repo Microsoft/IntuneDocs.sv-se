@@ -5,27 +5,25 @@ description: "Lär dig mer om de Intune-inställningar som du kan använda för 
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
-ms.date: 10/20/2017
+manager: dougeby
+ms.date: 1/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 495e4ed6-b2ef-47cc-a110-13fa9b5f85a6
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54ff681c96dc01587cd9a2770dacc5bb9a54d134
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: e7bd1d15276f93b50a22c7b47de6bd1eb619264a
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="vpn-settings-for-windows-10-devices-in-microsoft-intune"></a>VPN-inställningar för Windows 10-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Beroende på vilka inställningar du väljer, är inte alla värden i listan nedan konfigurerbara.
+Beroende på vilka inställningar du väljer kan bara vissa värden i följande lista konfigureras.
 
 
 ## <a name="base-vpn-settings"></a>Grundläggande VPN-inställningar
@@ -81,6 +79,8 @@ Beroende på vilka inställningar du väljer, är inte alla värden i listan ned
 ```
 
 Läs VPN-dokumentationen för varje tillverkare för mer information om hur du skriver anpassade XML-kommandon.
+
+Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfiguration](https://docs.microsoft.com/en-us/windows/client-management/mdm/eap-configuration).
 
 **Delade tunnlar** - **Aktivera** eller **Inaktivera** detta alternativ för att låta enheterna bestämma vilken anslutning som ska användas beroende på trafiken. En användare på ett hotell kan till exempel använda VPN-anslutningen för att komma åt arbetsfiler, men använda hotellets standardnätverk för vanlig webbsurfning.
 - **Routning för delade tunnlar för den här VPN-anslutningen** – Lägg till valfria vägar för tredje parts VPN-leverantörer. Ange ett målprefix och en prefixstorlek för varje väg.
