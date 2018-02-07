@@ -5,7 +5,7 @@ description: "Läs om de inställningar du kan använda för att styra avisering
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: bda26d1d-2a3b-4669-adf8-a5aa7f994916
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b87ffad8ee005fd8a164ec2891d81e19fb005a8b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 91e4b6197c7606a70862ad5fb12b10b5e0f3ed81
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="intune-app-notifications-settings-for-ios-devices"></a>Appaviseringsinställningar i Intune för iOS-enheter
 
@@ -76,7 +76,7 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 |Meddelanden|com.apple.MobileSMS|
 |Musik|com.apple.Music|
 |Nyheter|com.apple.news|
-|Anteckningar|com.apple.mobilenotes|
+|Obs!|com.apple.mobilenotes|
 |Siffror|com.apple.Numbers|
 |Sidor|com.apple.Pages|
 |Photo Booth|com.apple.Photo-Booth|

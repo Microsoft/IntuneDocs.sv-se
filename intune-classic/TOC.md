@@ -7,7 +7,7 @@
 
 # [Komma igång](get-started/get-started.md)
 ## [Konfigurera Intune](/intune/setup-steps?toc=/intune-classic/toc.json)
-### Förutsättningar
+### Krav
 #### [Enheter som stöds](/intune/supported-devices-browsers?toc=/intune-classic/toc.json)
 #### [Nätverksanvändning](/intune/network-bandwidth-use?toc=/intune-classic/toc.json)
 ### [Logga in i Intune](/intune/account-sign-up?toc=/intune-classic/toc.json)
@@ -142,7 +142,7 @@
 ## [Distribuera appar](deploy-use/deploy-apps.md)
 ### [Distribuera appar till enheter och datorer](deploy-use/deploy-apps-in-microsoft-intune.md)
 ### [Distribuera appar till Android for Work-enheter](deploy-use/android-for-work-apps.md)
-### [Övervakning av appar](deploy-use/monitor-apps-in-microsoft-intune.md)
+### [Övervaka appar](deploy-use/monitor-apps-in-microsoft-intune.md)
 ### [Hantera volyminköpta appar](deploy-use/manage-volume-purchased-apps-in-microsoft-intune.md)
 #### [Hantera volyminköpta iOS-appar](deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
 #### [Hantera volyminköpta Windows-appar](deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)
@@ -207,7 +207,7 @@
 
 #### [Administrationskonsolen för Intune för MAM-principer](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
-### [Förbereda affärsappar för MAM](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
+### [Förbereda verksamhetsspecifika appar för MAM](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
 #### [Omsluta iOS-appar](/intune/app-wrapper-prepare-ios?toc=/intune-classic/toc.json)
 #### [Omsluta Android-appar](/intune/app-wrapper-prepare-android?toc=/intune-classic/toc.json)
 #### [LOB-appar på enheter som inte hanteras av Intune](deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md)

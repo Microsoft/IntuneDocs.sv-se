@@ -4,7 +4,7 @@ description: "Den här artikeln hjälper dig fastställa scenariokrav för Intun
 keywords: 
 author: arob98
 ms.author: angrobe
-manager: angrobe
+manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: fd8cb5f7-19f0-4d80-8825-2bafa49624af
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65a1fb8fb41fa8d9f3e707c73bf752a997a8a1a1
-ms.sourcegitcommit: 94d3d86f8ae9f82a9872384bbaae53580036a4ff
+ms.openlocfilehash: 7f4f080201d1a089a8ae10a6acf81c0c28fa33c9
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Fastställa scenariokrav för användningsfall
 
@@ -30,7 +30,7 @@ Du kan också ha organisationsgrupper för företagets användningsfall som har 
 
 Följande är några exempel på krav för användningsfall i en organisation, som visar olika kravuppsättningar för varje användningsfall/underanvändningsfall, organisationsgrupp och mobil enhetsplattform. Du kan också använda följande tabell för att ange organisationens krav för användningsfall:
 
-| **Användningsfall** | **Underanvändningsfall** | **Grupper** | **Enhetsplattformar** | **Requirements** |
+| **Användningsfall** | **Underanvändningsfall** | **Grupper** | **Enhetsplattformar** | **Krav** |
 |:---:|:---:|:---:|:---:|:---:|
 | Företag | Informationsarbetare | Personalavdelning, ekonomi | iOS | Säker e-post, enhetsinställningar, profiler, appar |                                                          
 | Företag | Chefer | Personalavdelning, ekonomi | iOS | Säker e-post, enhetsinställningar, profiler, appar |                                                         

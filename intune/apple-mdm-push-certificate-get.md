@@ -5,8 +5,8 @@ description: "Läs om stegen för att hämta ett Apple MDM-pushcertifikat för a
 keywords: 
 author: ErikjeMS
 ms.author: erikje
-manager: angrobe
-ms.date: 10/04/2017
+manager: dougeby
+ms.date: 1/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b67c2cb238d354ccd9801ec0b5c9f8ccb49c6715
-ms.sourcegitcommit: 9fabf1a8db53842f7b00762374de5b137158ee25
+ms.openlocfilehash: 8fca2a1f32cd15752758802ee6ae44b8ae33b696
+ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Hämta ett Apple MDM-pushcertifikat
 
@@ -56,7 +56,10 @@ Certifikatet associeras med det Apple-ID som användes för att skapa det. Förn
 2. Välj **Ladda ned CSR** för att hämta och spara begärandefilen lokalt. Filen används för att begära ett förtroendecertifikat från Apple Push-certifikatportalen.
 3. Leta upp det certifikat som du vill förnya och välj **Förnya**.
 4. På skärmen **Förnya pushcertifikat** lägger du till kommentarer som hjälper dig att identifiera certifikatet i framtiden, väljer **Välj fil** för att bläddra till den nya begärandefilen som du laddade ned och väljer sedan **Ladda upp**.
-5. På skärmen **Bekräftelse** väljer du **Ladda ned** och sparar PEM-filen lokalt.
-6. I Azure-portalen väljer du först bläddringsikonen för **Apple MDM-pushcertifikatet** och sedan den PEM-fil som du laddade ned från Apple. Välj sedan **Överför**.
+   > [!TIP]
+   > Ett certifikat kan identifieras av sitt UID. Granska **Ämnes-ID:t** i certifikatinformationen för att hitta UID:ts GUID-del. På en registrerad iOS-enhet går du till **Inställningar** > **Allmänt** > **Enhet** **Hantering** > **Hanteringsprofil** > **Mer information** > **Hanteringsprofil**. Objektet på den andra raden, **Ämne**, innehåller det unika GUID du kan matcha certifikatet i portalen för Apple Push-certifikat.
+ 
+6. På skärmen **Bekräftelse** väljer du **Ladda ned** och sparar PEM-filen lokalt.
+7. I Azure-portalen väljer du först bläddringsikonen för **Apple MDM-pushcertifikatet** och sedan den PEM-fil som du laddade ned från Apple. Välj sedan **Överför**.
 
 Ditt Apple MDM-pushcertifikat visas som **Aktivt** och har en giltighetstid på 365 dagar.

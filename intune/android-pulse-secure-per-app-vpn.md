@@ -5,7 +5,7 @@ description: "Du kan skapa en VPN-profil per app för Android-enheter som hanter
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 06/03/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c5b8e85ded2ea515f361c91c61744956b8112757
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 46555f776ff93207f4672dc5d97abbaa2323b234
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använd en anpassad Microsoft Intune-profil för att skapa en VPN-profil per app för Android-enheter
 
@@ -63,7 +63,7 @@ Notera **anslutningens namn** , det vill säga det värde som du anger när du s
 3. På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till**.
     - Ange ett namn på inställningen.
     - Ange **Sträng** som **Datatyp**.
-    - För **OMA-URI** anger du strängen: **./Vendor/MSFT/VPN/Profile/*Namn*/PackageList**, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I detta exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
+    - För **OMA-URI** anger du strängen: ***./Vendor/MSFT/VPN/Profile/*Namn**/PackageList, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I detta exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
     - För **Värde** skapar du en semikolonavgränsad lista över paket som ska associeras med profilen. Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du **com.microsoft.office.excel;com.android.chrome**.
 
 ![Exempel på VPN-anpassad princip per app för Android](./media/android_per_app_vpn_oma_uri.png)
@@ -74,7 +74,7 @@ Du kan också använda värdet **VITLISTAT** för att ange en lista över appar 
   1.    På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till**.
   2.    Ange ett namn på inställningen.
   3.    Ange **Sträng** som **Datatyp**.
-  4.    För **OMA-URI** använder du följande sträng: **./Vendor/MSFT/VPN/Profile/*Namn*/Läge**, där *Namn* är den VPN-profil som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode**.
+  4.    För **OMA-URI** använder du följande sträng: ***./Vendor/MSFT/VPN/Profile/*Namn**/Läge, där *Namn* är den VPN-profil som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode**.
   5.    Ange **SVARTLISTAT** eller **VITLISTAT** som **Värde**.
 
 

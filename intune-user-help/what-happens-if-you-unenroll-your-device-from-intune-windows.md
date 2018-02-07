@@ -4,23 +4,24 @@ description:
 keywords: 
 author: barlanmsft
 ms.author: barlan
-manager: angrobe
+manager: dougeby
 ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 47e03edb-0c57-4e25-8e89-4a1069267b8c
-searchScope: User help
+searchScope:
+- User help
 ROBOTS: 
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 710f91f72d9cf97acd0ac117b003eeb542449515
-ms.sourcegitcommit: f2f147a1177d1cf5bbc8001701eb8f44dd833b7d
+ms.openlocfilehash: ef3cd1a30a154ddaa4188e8422ca85392140d09f
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Vad händer om du avregistrerar din Windows-enhet från Intune?
 
@@ -58,7 +59,7 @@ För Windows 8.1 gäller även följande:
 
 -   Det går inte att använda företagsappar eller företagsdata på enheten längre.
 
--   Inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
+-   Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
 
     > [!IMPORTANT]
     > Det enda undantaget är krypteringsprinciper, som fortfarande gäller. Om företagets policy krävde att du krypterade din Windows Phone är det enda sättet att dekryptera telefonen att återställa den med hjälp **Inställningar**-menyn.
@@ -69,7 +70,7 @@ För Windows 8.1 gäller även följande:
 
 -   Det går inte att använda företagsappar eller företagsdata på enheten längre.
 
--   Inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
+-   Eventuella inställningar som ändrades på enheten när du lade till den (t.ex. inaktivering av kameran eller krav på en viss lösenordslängd) gäller inte längre.
 
 -   Du kanske inte längre kan ansluta till företagets nätverk via Wi-Fi eller VPN.
 
