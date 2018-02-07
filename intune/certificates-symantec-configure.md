@@ -5,7 +5,7 @@ description: "Installera och konfigurera Intune Certificate Connector för att u
 keywords: 
 author: MicrosoftGuyJFlo
 ms.author: joflore
-manager: angrobe
+manager: dougeby
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 31e48d84ec7044102575a6c49837330c139e993c
-ms.sourcegitcommit: 520eb7712625e129b781e2f2b9fe16f9b9f3d08a
+ms.openlocfilehash: 449eaf2a22ca3a700eda2385af05a56e406f0c15
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Konfigurera Intune Certificate Connector för webbtjänsten Symantec PKI Manager
 
@@ -277,7 +277,7 @@ Certifikatprofil-OID:n är associerad med en certifikatprofilsmall i Symantec CA
    > [!IMPORTANT]
    > Följande parametrar för PKCS-certifikatprofilen måste konfigureras med angivna värden i följande tabellen som det visas i skärmbilden för att utfärda PKCS-certifikat via Intune Certificate Connector från Symantec CA:n. 
 
-    |PKCS-certifikatparameter | Värde | Beskrivning |
+    |PKCS-certifikatparameter | Värde | Description |
     | --- | --- | --- |
     | Certifikatutfärdare | pki-ws.symauth.com | Det här värdet måste vara bastjänst-FQDN för Symantec-certifikatutfärdaren utan avslutande snedstreck.  Om du inte är säker på om det här är rätt bastjänst-FQDN för din Symantec CA-prenumeration så kan du kontakta Symantecs kundsupport. <br><br> Om detta FQDN är felaktigt så utfärdar inte Intune Certificate Connector PKCS-certifikat från Symantec-certifikatutfärdaren.| 
     | Namn på certifikatutfärdare | Symantec | Det här värdet måste vara strängen **Symantec**. <br><br> Om det här värdet ändras, kommer Intune Certificate Connector inte att utfärda PKCS-certifikat från Symantec CA:n.|

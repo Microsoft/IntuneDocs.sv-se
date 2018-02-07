@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4c345673eceea4da4efc3b90f43c6f9313ee15f1
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: abb0267f46d2933b0037ed661281198a5981f659
+ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -34,7 +34,7 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 **Vad är MAM?** Med [Intune mobile application management](/intune/app-lifecycle) avses den svit av Intune-hanteringsfunktioner som låter dig publicera, pusha, konfigurera, skydda, övervaka och uppdatera mobilappar för dina användare.
 
 **Vilka är fördelarna med appskyddet i MAM?** MAM skyddar företagets data inom ett program. Med hjälp av MAM-WE kan en arbets- eller skolrelaterad app som innehåller känsliga data hanteras på nästan alla enheter, inklusive personliga enheter i BYOD-scenarier (BringYour Own Device).
- Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+ Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-hanterade appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka enhetskonfigurationer har MAM stöd för?** Intune MAM stöder två konfigurationer:
   1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). Om kunderna vill hantera appar med hjälp av MDM + MAM bör de använda den fristående Intune-konsolen på https://manage.microsoft.com.
@@ -50,9 +50,9 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Appar som du kan hantera med appskyddsprinciper
 
-**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](/intune/app-sdk) eller hanteras av [Intunes apphanteringsverktyg](/intune/apps-prepare-mobile-application-management) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-upplysta appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
+**Vilka appar kan hanteras med appskyddsprinciper?** Alla appar som har blivit upplysta av [Intune App-SDK](/intune/app-sdk) eller hanteras av [Intunes apphanteringsverktyg](/intune/apps-prepare-mobile-application-management) kan hanteras med Intunes appskyddsprinciper. Se listan över officiella [Intune-hanterade appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
-**Vilka är de grundläggande kraven för att använda appskyddsprinciper på en Intune-upplyst app?**
+**Vilka är de grundläggande kraven för att använda appskyddsprinciper på en Intune-hanterad app?**
   1. Slutanvändaren måste ha ett Azure Active Directory (AAD)-konto. Se [Lägg till användare och ge administrativ behörighet till Intune](/intune/users-permissions-add) för information om hur du skapar Intune-användare i Azure Active Directory.
 
   2. Slutanvändaren måste ha en licens för Microsoft Intune som tilldelats deras Azure Active Directory-konto. Se [Hantera Intune-licenser](/intune/licenses-assign) för information om hur du tilldelar Intune-licenser till slutanvändarna.
@@ -140,7 +140,7 @@ MAM (på iOS) tillåter för närvarande PIN på programnivå med alfanumeriska 
 
 **Varför fungerar inte tjänster på plats med Intunes appskydd?** Intunes appskydd är beroende av att användarens identiteten är konsekvent mellan appen och Intune App SDK. Det enda sättet att garantera detta är via modern autentisering. Det finns scenarier där appar kan fungera med en lokal konfiguration, men de är varken konsekventa eller garanterade.
 
-**Finns det ett säkert sätt att öppna webblänkar från hanterade appar?** Ja! IT-administratören kan distribuera och ange appskyddsprincip för [Intune Managed Browser-appen](../deploy-use/manage-internet-access-using-managed-browser-policies.md), en webbläsare som har utvecklats av Microsoft Intune som enkelt kan hanteras med Intune. IT-administratören kan kräva att alla webblänkar i Intune-upplysta appar ska öppnas med Managed Browser-appen.
+**Finns det ett säkert sätt att öppna webblänkar från hanterade appar?** Ja! IT-administratören kan distribuera och ange appskyddsprincip för [Intune Managed Browser-appen](../deploy-use/manage-internet-access-using-managed-browser-policies.md), en webbläsare som har utvecklats av Microsoft Intune som enkelt kan hanteras med Intune. IT-administratören kan kräva att alla webblänkar i Intune-hanterade appar ska öppnas med Managed Browser-appen.
 
 
 ## <a name="app-experience-on-android"></a>App-upplevelse på Android

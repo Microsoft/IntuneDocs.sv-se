@@ -4,7 +4,7 @@ description: "Använd informationen i det här avsnittet om du vill lära dig hu
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
@@ -14,11 +14,11 @@ ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: dc031b12ed49766c70a6a4ff373a7c5843ca21ad
-ms.sourcegitcommit: 1a390b47b91e743fb0fe82e88be93a8d837e8b6a
+ms.openlocfilehash: 4925fc86596437d0560bd7fa2598eaf95126df16
+ms.sourcegitcommit: cede2e15bd62f1073131fbc9af7623cdfc3730cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -172,6 +172,9 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 3. Välj **Godkänn** för att godkänna licensavtalet och montera paketet på datorn.
 
 4.  Öppna mappen **IntuneMAMPackager** och spara innehållet på macOS-datorn. Nu kan du börja köra programhanteringsverktyget.
+
+> [!NOTE]
+> Intune MAM Packager kan monteras separat på din macOS-dator vilket kan leda till felet ”filen hittades inte” när du kör hanteringskommandon. Vid flytt av innehåll i mappen IntuneMAMPackager tillåts därför att sökvägen till paketeraren hittas under hantering.
 
 ## <a name="run-the-app-wrapping-tool"></a>Kör App-Wrapping-verktyget
 

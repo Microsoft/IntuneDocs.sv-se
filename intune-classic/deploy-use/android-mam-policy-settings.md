@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9707858ba2b0462edade4847dba09404a895fb34
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b289e69d834d43d29725a32c48b3ca0a19ee07ec
+ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 
@@ -30,7 +30,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
 ##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
 
-| Inställningar | Använd så här | Standardvärde(n) |
+| Inställningen | Använd så här | Standardvärde(n) |
 |------|------|------|
 | **Förhindra Android-säkerhetskopieringar** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata i [Android Backup Service](https://developer.android.com/google/backup/index.html) Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata.| Ja |
 | **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> <p>Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. En fullständig lista över appar och tjänster finns i avsnittet [Undantag vid dataöverföring](#Data-transfer-exemptions).| Alla appar |
@@ -48,13 +48,13 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
   ## <a name="data-transfer-exemptions"></a>Undantag vid dataöverföring
 
-  Det finns vissa undantag för appar och plattformstjänster som Intune-appskyddsprinciper kan tillåta dataöverföring till och från. Till exempel måste alla Intune-medvetna appar för Android kunna överföra data till och från Googles ”text till tal”-funktion, så att text från mobilenhetens skärm kan läsa upp. Den här listan kan ändras och innehåller de tjänster och program som anses vara användbara för säker produktivitet.
+  Det finns vissa undantag för appar och plattformstjänster som Intune-appskyddsprinciper kan tillåta dataöverföring till och från. Till exempel måste alla Intune-hanterade appar för Android kunna överföra data till och från Googles ”text till tal”-funktion, så att text från mobilenhetens skärm kan läsa upp. Den här listan kan ändras och innehåller de tjänster och program som anses vara användbara för säker produktivitet.
 
   ### <a name="full-exemptions"></a>Fullständiga undantag
 
   Dessa appar och tjänster har full tillåtelse att överföra data till och från Intune-hanterade appar.
 
-  |App-/tjänstnamn | Beskrivning |
+  |App-/tjänstnamn | Description |
   | ------ | ---- |
   | com.android.phone | Intern telefonapp
   | com.android.vending | Google Play Store |
@@ -69,7 +69,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
   ### <a name="conditional-exemptions"></a>Villkorliga undantag
   Dessa appar och tjänster kan överföra data till och från Intune-appar under vissa omständigheter.
 
-  |App-/tjänstnamn | Beskrivning | Villkor för undantag|
+  |App-/tjänstnamn | Description | Villkor för undantag|
   | ------ | ---- | --- |
   | com.android.chrome | Webbläsaren Google Chrome | Chrome används för vissa WebView-komponenter i Android 7.0+ och är aldrig dolt. Dataflödet till och från appen är dock alltid begränsat.
   | com.skype.raider | Skype | Skype-appen tillåts endast för vissa åtgärder som resulterar i ett telefonsamtal. |
@@ -80,7 +80,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
 ##  <a name="access-settings"></a>Åtkomstinställningar
 
-| Inställningar | Använd så här | Standardvärde(n) |
+| Inställningen | Använd så här | Standardvärde(n) |
 |------|------|------|
 | **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. Standardvärde = **Ja**. </li><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**. </li><li> **Kräv fingeravtryck istället för PIN (Android 6.0+)**: Välj **Ja** om du vill kräva att [autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**.</li></ul> På Android-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Android-autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
 | **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |

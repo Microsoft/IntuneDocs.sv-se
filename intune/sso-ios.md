@@ -5,7 +5,7 @@ description: "Läs mer om hur du konfigurerar enkel inloggning för Intune för 
 keywords: 
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 12/7/2017
 ms.topic: article
 ms.prod: 
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff71239a360b09ca831a6e99f5f7a759b08f5d56
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
+ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning för Intune för iOS-enheter
 
@@ -46,7 +46,7 @@ För att kunna använda enkel inloggning för iOS-enheter måste du uppfylla fö
 
 2. Ta hjälp av följande sammanfattningstabell när du fyller i fältet på bladet **Enkel inloggning**. Mer information finns i avsnitten efter tabellen.
    
-   |Fält  |Anteckningar|
+   |Fält  |Obs!|
    |---------|---------|
    |**Användarnamnattribut från AAD**|Det attribut som Intune granskar för varje användare i AAD och som fylls i respektive fält (till exempel UPN) innan XML-nyttolasten som installeras på enheten genereras.|
    |**Område**|Domändelen i webbadressen.|
@@ -89,7 +89,7 @@ Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-a
 
 Ange vilka appar på slutanvändarens enhet som använder nyttolasten för enkel inloggning.
 
-Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. Dessa strängar kan vara exakta matchningar (till exempel `com.contoso.myapp`) eller ange en specifik prefixmatchning för samlings-ID:t med hjälp av jokertecknet (*). Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen (till exempel `com.contoso.*`). När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
+Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. Dessa strängar kan vara exakta matchningar (till exempel `com.contoso.myapp`) eller ange en specifik prefixmatchning för samlings-ID:t med hjälp av jokertecknet *\. Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen (till exempel `com.contoso.*`). När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
 
 Fältet **Appnamn** används för att lägga till ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t.
 

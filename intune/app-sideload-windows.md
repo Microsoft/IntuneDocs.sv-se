@@ -4,7 +4,7 @@ description: "Lär dig hur du signerar branschspecifika appar, så att du kan an
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 06/07/2017
 ms.topic: article
 ms.prod: 
@@ -12,11 +12,11 @@ ms.service:
 ms.technology: 
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: d6b66c44b1c6b5b5977d7a26d279c32eb39ff7ff
-ms.sourcegitcommit: 67ec0606c5440cffa7734f4eefeb7121e9d4f94f
+ms.openlocfilehash: f94e95ec93ba98c55ca69ee5ef59cd20d16eff37
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Signera verksamhetsspecifika appar så att de kan distribueras till Windows-enheter med Intune
 
@@ -46,7 +46,7 @@ Stegen nedan hjälper dig att få nödvändiga certifikat och signera appen. Du 
     ![Hitta Symantec-certifikatet](./media/wit.gif)
 
 5. **Exportera ett signeringscertifikat**<br>
-    När du har kontrollerat att certifikaten finns kan du exportera .pfx-filen så att du kan signera företagsportalen. Välj Symantec-certifikatet med kodsigneringen **avsett syfte**. Högerklicka på det kodsignerade certifikatet och välj **Exportera**.
+    När du har kontrollerat att certifikaten finns kan du exportera .pfx-filen så att du kan signera företagsportalen. Välj Symantec-certifikatet med **avsett syfte** ”kodsignering.” Högerklicka på det kodsignerade certifikatet och välj **Exportera**.
 
     ![Exportera signeringscertifikatet](./media/wit-walk-cert2.gif)
 
@@ -190,7 +190,7 @@ Så här registrerar och distribuerar du appen:
 2. Hämta Windows 10-företagsportalappen från Microsoft Store för företag så som beskrivs ovan.  
 3. Kör skriptet med de indataparametrar som beskrivs i skripthuvudet, så att Windows 10-företagsportalsappen signeras (se utdrag nedan). Beroenden behöver inte överföras till skriptet. Detta krävs enbart om appen överförs till Intune-aministratörskonsolen.
 
-|Parameter | Beskrivning|
+|Parameter | Description|
 | ------------- | ------------- |
 |InputWin10AppxBundle |Sökvägen till platsen där appxbundle-källfilen finns. |
 |OutputWin10AppxBundle |Sökvägen för utdata för den signerade appxbundle-filen. |

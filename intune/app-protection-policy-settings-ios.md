@@ -5,7 +5,7 @@ description: "Det här ämnet beskriver inställningarna för appskyddsprinciper
 keywords: 
 author: erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/05/2018
 ms.topic: article
 ms.prod: 
@@ -15,11 +15,11 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f4b5ee3d8dc5c01d2c4021bfee51aedba8c49aa
-ms.sourcegitcommit: 0795870bfe941612259ebec0fe313a783a44d9b9
+ms.openlocfilehash: 494eda1c9f953a78e13ae7cf0caee84f29c4d7d8
+ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/25/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -71,8 +71,8 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 | **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (definieras tidigare i principen) kontrolleras. En administratör kan till exempel aktivera PIN-kod i principen, så om en användare öppnar en Intune-hanterad app måste denne ange en PIN-kod. När du använder den här inställningen behöver användaren inte ange en PIN-kod i någon MAM-app under ytterligare **30 minuter** (standardvärde). <br><br>**Obs!** I iOS delas PIN-koden mellan alla Intune-hanterade appar från **samma utgivare**. PIN-timern för en viss PIN-kod återställs när appen lämnar enhetens förgrund. Användaren behöver inte ange en PIN-kod på någon Intune-hanterad app som delar sin PIN under perioden för den tidsgräns som anges i denna inställning. <br><br> Det här principinställningsformatet stöder ett positivt heltal.</li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna tid har gått ut kräver appen användarautentisering till AAD, så att appen kan fortsätta att köras.<br><br> Det här principinställningsformatet stöder ett positivt heltal.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
 | **Offlineintervall innan appdata rensas (dagar)** | Efter detta antal dagar (definieras av administratören) med offlinekörning kräver appen att användaren ansluter till nätverket och autentiserar igen. Vid lyckad autentisering kan användaren fortsätta att få åtkomst till sina data och offlineintervallet återställs.  Om autentiseringen misslyckas utför appen en selektiv rensning av användarens konto och data.  Se [Hur du rensar endast företagsdata från Intune-hanterade appar](https://docs.microsoft.com/en-us/intune/apps-selective-wipe) om du vill ha mer information om vilka data som tas bort med en selektiv rensning. <br><br> Det här principinställningsformatet stöder ett positivt heltal. | 90 dagar |
 | **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
-| **Minimikrav på iOS-operativsystem** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att blockeras från åtkomst om iOS-versionen på enheten inte uppfyller kraven. <br><br> Det här principinställningsformatet stöder ett enda decimaltecken, som iOS 10.3. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
-| **Minimikrav på iOS-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att få ett meddelande om iOS-versionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas. <br><br> Det här principinställningsformatet stöder ett enda decimaltecken, som iOS 10.3. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
+| **Minimikrav på iOS-operativsystem** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att blockeras från åtkomst om iOS-versionen på enheten inte uppfyller kraven. <br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
+| **Minimikrav på iOS-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det iOS-operativsystem som ska använda den här appen. Användaren kommer att få ett meddelande om iOS-versionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas. <br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
 | **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren blockeras för åtkomst om appversionen på enheten inte uppfyller kravet.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej | 
 | **Minimikrav på appversion (endast varning)** | Välj **Ja** för att rekommendera ett minimikrav på den appversion som ska använda den här appen. Användaren får ett meddelande om appversionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej | 
 | **Minimikrav på SDK-version för Intune-skyddsprincip** | Välj **Ja** för att ange ett minimkrav på SDK-version för Intune-skyddsprincip för den app som ska användas. Användaren kommer att blockeras från åtkomst om appens SDK-version för Intune-appskyddsprincipen inte uppfyller kravet. <br> <br> Läs mer om SDK-versionen för Intune-skyddsprincip i [Översikt över Intune App SDK](app-sdk.md). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
