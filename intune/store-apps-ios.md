@@ -36,7 +36,7 @@ Informationen i det här avsnittet beskriver hur du lägger till iOS-appar från
 Du kan endast tilldela appar med den här metoden om de är gratis i App Store. Om du vill tilldela betalappar med hjälp av Intune bör du använda [volyminköpsprogrammet för iOS](vpp-apps-ios.md).
 
 >[!NOTE]
->Webbläsarna Chrome och Edge rekommenderas när du arbetar med Microsoft Intune.
+>Webbläsarna Chrome och Microsoft Edge rekommenderas när du arbetar med Microsoft Intune.
 
 ## <a name="step-1---search-for-the-app-in-the-store"></a>Steg 1 – Sök efter appen i butiken
 

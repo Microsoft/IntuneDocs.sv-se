@@ -121,7 +121,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt att intranättrafik skickas till Internet Explorer**|Tillåter att användarna öppnar intranätsplatser i Internet Explorer<br>(endast Windows 10 Desktop)|
 |**Tillåt Spåra inte**|Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker|
 |**Aktivera SmartScreen**||
-|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Edge|
+|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Microsoft Edge|
 |**Tillåt popup-fönster**|Gäller endast för Windows 10 Desktop|
 |**Tillåt cookies**||
 |**Tillåt autofyll**|Tillåter att användarna kan ändra inställningarna för att automatiskt komplettera i webbläsaren<br>(endast Windows 10 Desktop)|
