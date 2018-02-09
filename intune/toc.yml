@@ -68,6 +68,8 @@
           href: app-lifecycle.md
     - name: Vanliga scenarier
       href: common-scenarios.md
+    - name: MAM VANLIGA FRÅGOR OCH SVAR
+      href: mam-faq.md
 - name: Planera distribution
   items:
     - name: Planeringsguide
