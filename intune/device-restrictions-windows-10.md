@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4cd446310256a71e7306364b4142bfacce482fe4
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fc50d6f5c4b0350d0117b5d68a0b9ac3e9ec3ab3
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
@@ -153,14 +153,14 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 
 
-## <a name="edge-browser"></a>Edge-webbläsare
+## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
--   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
--   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Microsoft Edge.
+-   **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
--   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
+-   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Microsoft Edge-webbläsaren.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
@@ -172,12 +172,12 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **InPrivate-surfning** – Förhindrar att användaren öppnar InPrivate-surfningssessioner.
 -   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Edge (endast Windows 10 Mobile).
--   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Edge-webbläsaren (endast skrivbord).
+-   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
 -   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Edge startar.
 -   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
--   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
+-   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Edge.
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
@@ -254,7 +254,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 ## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
 
--   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/en-us/windows/configuration/kiosk-shared-pc) som stöds av principen. Alternativen är:
+-   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) som stöds av principen. Alternativen är:
 
       - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
       - **Läget för enskilda appar för kiosk** – Profilen gör att enheten kan användas som en kiosk för enskilda appar.
@@ -266,7 +266,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
          För enheter i offentliga miljöer ska man använda konton med minimal behörighet för att förhindra obehöriga aktiviteter.  
 
-      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
     Helskärmsläge för flera appar kräver en kioskkonfiguration. Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
 
@@ -280,13 +280,13 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
             - **Win32-app** – En traditionell skrivbordsapp. (Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.)
 
-            - **UWP-app** – En universell Windows-app. Du behöver [AUMID för appen](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+            - **UWP-app** – En universell Windows-app. Du behöver [AUMID för appen](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-        - **Appidentifierare** – Anger antingen den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/en-us/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
+        - **Appidentifierare** – Anger antingen den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
 
     - **Verktygsfält** anger om verktygsfältet ska visas (**Aktiverat**) eller döljas (**Inte konfigurerat**) i kiosken.
 
-    - **Startmenylayout** – Anger en XML-fil som beskriver hur apparna [visas på Start-menyn](https://docs.microsoft.com/en-us/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
+    - **Startmenylayout** – Anger en XML-fil som beskriver hur apparna [visas på Start-menyn](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
     - **Tilldelade användare** – Anger ett eller flera användarkonton som är kopplade till kioskkonfigurationen. Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen. Ange domänanslutna konton med formatet `domain\\username@tenant.org`.
 

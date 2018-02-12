@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d4bcabc4d1af4554a3e3bea875be45f9376b4ef7
-ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
+ms.openlocfilehash: ed427382b94f591559a2264f40455ab5254daadb
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2018"></a>Den tidiga utgåvan för Microsoft Intune – Februari 2018
 
@@ -28,7 +28,7 @@ Den **tidiga utgåvan** innehåller en lista med funktioner i kommande versioner
 Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppdateringar.
 
 > [!Note]
->Följande ändringar är under utveckling för Intune. Mer information om nya hybridfunktioner finns på [sidan med nyheter om hybridfunktioner](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
+>Följande ändringar är under utveckling för Intune. Mer information om nya hybridfunktioner finns på sidan med [nyheter om hybridfunktioner](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 <!--
 ## What's coming to Intune in the Azure portal  
@@ -41,6 +41,8 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 <!-- 1802 start -->
 
+### <a name="prevent-end-users-from-adding-or-removing-accounts-in-the-work-profile----1728700---"></a>Förhindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen <!-- 1728700 -->    
+När du distribuerar Gmail-appen till en Android for Work-profil så kan du förhindra användare från att lägga till eller ta bort konton i arbetsprofilen genom att använda inställningen **Lägg till och ta bort konton** i profilen för enhetsbegränsningar i Android for Work.
 
 ### <a name="app-protection-policies-----679615---"></a>Appskyddsprinciper  <!-- 679615 -->
 Intunes appskyddsprinciper ger dig möjligheten att skapa globala standardprinciper för att snabbt aktivera skydd för alla användare i hela klientorganisationen.
@@ -76,7 +78,7 @@ Du kan exempelvis lägga till Webex-paketet som ett undantag till MAM-dataöverf
 Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du anger en hexkod kan Intune bestämma vilken textkod som ger den högsta kontrastnivån mellan textfärgen och bakgrundsfärgen per [WCAG 2.0-standarder](http://www.w3.org/TR/WCAG20). Du kan förhandsgranska både textfärgen och företagets logotyp mot färgen i **Mobilappar** > **Företagsportal**. 
 
 ### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963---"></a>Välj enhetskategorier med hjälp av inställningarna för åtkomst till arbete eller skola <!-- 1058963 --> 
-Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/en-us/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
+Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
 
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 --> 
 
@@ -118,9 +120,9 @@ Två nya sekretessinställningar blir tillgängliga för enheter:
 
 Användarna kan använda Enhetsregistreringshanteraren när de registrerar sig med macOS-företagsportalen.
 
-#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Edge-webbläsaren <!--1469166 -->
+#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Microsoft Edge-webbläsaren-webbläsaren <!--1469166 -->
 
-Två nya inställningar blir tillgängliga för enheter med Edge-webbläsaren: **Sökväg till favoritfiler** och **Ändringar i Favoriter**. 
+Två nya inställningar blir tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfiler** och **Ändringar i Favoriter**. 
 
 ### <a name="windows-information-protection-wip-encrypted-data-in-windows-search-results----1469193---"></a>Windows Information Protection (PIA)-krypterad data i Windows-sökresultat <!-- 1469193 -->
 
@@ -214,79 +216,34 @@ Intune stöder registrering av enheter från upp till 100 olika Apple-program f�
 Efter migreringen fungerar inte beta-Graph API:er och publicerade skript för att hantera Apple DEP eller ASM över Graph längre. Nya beta-Graph API:er är under utveckling och kommer att släppas efter migreringen.
 
 ### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963---"></a>Välj enhetskategorier med hjälp av inställningarna för åtkomst till arbete eller skola <!-- 1058963 -->
-Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/en-us/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
+Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
 
 ### <a name="targeting-compliance-policies-to-devices-in-device-groups---1307012---"></a>Ange mål för efterlevnadsprinciper för enheter i enhetsgrupperna <!--1307012 -->
 
 Du kommer att kunna ange mål för efterlevnadsprinciper för användare i användargrupperna. Du kommer att kunna ange mål för efterlevnadsprinciper för enheter i användargrupperna.
 
-### <a name="including-and-excluding-app-assignment-based-on-groups----1406920---"></a>Inklusive och exklusive apptilldelning baserat på grupperna <!-- 1406920 -->
-
-Under apptilldelning och när du har valt en tilldelningstyp kommer du att kunna välja de grupper som ska inkluderas, samt de grupper som ska undantas.
-
-### <a name="remote-erase-command-support----1438084---"></a>Fjärråtkomst till kommandostöd ”Radera” <!-- 1438084 -->
-
-Administratörer kommer att kunna utfärda ett Radera-kommando via fjärranslutning.
-
-> [!IMPORTANT]
-> Raderingskommandot kan inte ångras och bör användas med försiktighet.
-
-Raderingskommandot tar bort alla data, inklusive operativsystemet från en enhet. Det tar också bort enheten från Intune-hantering. Ingen varning utfärdas till användaren och raderingen sker omedelbart efter kommandot.
-
-Du kommer att kunna konfigurera en 6-siffrig PIN-kod. Den här PIN-kod kan användas för att låsa upp enheten som raderats, då ominstallation av operativsystemet börjar. När raderingen har startats visas PIN-koden i ett statusfält på enhetens översiktsblad i Intune. PIN-koden kommer att finnas kvar så länge raderingen pågår. När raderingen är klar försvinner enheten helt från Intune-hanteringen. Tänk på att notera PIN-koden så att den som återställer enheten kan använda den.
-
 ### <a name="windows-information-protection-wip-encrypted-data-in-windows-search-results----1469193---"></a>Windows Information Protection (PIA)-krypterad data i Windows-sökresultat <!-- 1469193 -->
 
 En ny inställning i principen för Windows Information Protection (PIA) gör att du kan kontrollera om PIA-krypterade data ingår i Windows-sökresultaten.
 
-### <a name="website-learning-mode----1631908---"></a>Inlärningsläge för webbplats <!-- 1631908 -->
-
-Intune ger dig ett tillägg för Windows Information Protection (PIA)-inlärningsläget. Förutom att visa information om PIA-aktiverade appar, kommer du att kunna visa en sammanfattning av de enheter som har delat arbetsdata med webbplatser. Med den här informationen kan du bestämma vilka webbplatser som ska läggas till i gruppernas och användarnas PIA-principer.
-
-### <a name="updates-to-compliance-emails---1637547---"></a>Uppdateringar till efterlevnads-e-post <!--1637547 -->
-
-När ett e-postmeddelande skickas för att rapportera om en inkompatibel enhet, tas information om den inkompatibla enheten med. Följande artikel kommer att uppdateras för att ange detta faktum: [Automatisera åtgärder för inkompatibilitet](#actions-for-noncompliance).
-
-###  <a name="alerts-for-expired-tokens-and-tokens-that-will-soon-expire----1639263---"></a>Aviseringar om att token har upphört att gälla och om att token snart upphör att gälla <!-- 1639263 -->
-På översiktssidan visas aviseringar om att token har upphört att gälla och om att token snart upphör att gälla. När du klickar på en avisering för en enskild token fortsätter du till denna tokens informationssida.  Om du klickar på avisering för flera token kommer du till en lista över alla token med deras status. Administratörer bör förnya sina tokens innan förfallodatumet.
-
 ### <a name="remote-printing-over-a-secure-network----1709994----"></a>Fjärrutskrift via ett säkert nätverk <!-- 1709994  -->
 PrinterOn:s trådlösa mobila lösningar gör att användare via fjärranslutning kan skriva ut var och när som helst via ett säkert nätverk. PrinterOn kan integreras med Intune APP SDK för både iOS och Android. Du kommer att kunna ange mål för appskyddsprinciper för den här appen via bladet Intune **Appskyddsprinciper** i administrationskonsolen. Användarna kommer att kunna ladda ner appen PrinterOn for Microsoft via Play Store eller iTunes för att använda i sina Intune-ekosystem.
 
-### <a name="approve-the-company-portal-app-for-android-for-work---1797090---"></a>Godkänn företagsportalappen för Android for Work <!--1797090 -->
-Om din organisation använder Android for Work, måste du manuellt godkänna företagsportalappen för Android så att den fortsätter att ta emot automatiska uppdateringar från den hanterade Google Play-butiken.
 
-### <a name="faceid-on-ios-devices----1807377---"></a>FaceID på iOS-enheter <!-- 1807377 -->
-Intune-appskyddsprinciper har nu stöd för en inställning som styr FaceID på iOS-enheter. Den här inställningen är avsedd för enheter som har stöd för FaceID-funktionen (för närvarande endast iPhone X). Den här inställningen är separat från de TouchID-kontroller som stöds för närvarande. Organisationer kan välja om de vill lita på FaceID som en giltig PIN-uppmaning som ett alternativ till TouchID-kontrollerna.
 
 ### <a name="microsoft-graph-api-for-intune---general-availability-----1833289---"></a>Microsoft Graph API för Intune – allmän tillgänglighet <!-- 1833289 -->
-Intune API:er i Microsoft Graph ger programmatisk åtkomst till data och metoder för att automatisera administrativa åtgärder för Intune-tjänsten.  Med **Allmän tillgänglighet** kommer dessa API:er, kunder, partners och utvecklare att kunna utnyttja API:erna för att integrera med interna eller externa lösningar som gäller för eller som kräver stöd för Intune eller andra Microsoft-tjänster som är tillgängliga via Microsoft Graph.
+Intune API:er i Microsoft Graph ger programmatisk åtkomst till data och metoder för att automatisera administrativa åtgärder för Intune-tjänsten.  Med **Allmän tillgänglighet** kommer dessa API:er, kunder, partner och utvecklare att kunna utnyttja API:erna för att integrera med interna eller externa lösningar som gäller för eller som kräver stöd för Intune eller andra Microsoft-tjänster som är tillgängliga via Microsoft Graph.
 
 <!-- the following are present prior to 1801 -->
 
 ### <a name="app-protection-policies-----679615---"></a>Appskyddsprinciper  <!-- 679615 -->
 Intunes appskyddsprinciper ger dig möjligheten att skapa globala standardprinciper för att snabbt aktivera skydd för alla användare i hela klientorganisationen.
 
-### <a name="revoking-ios-volume-purchase-program-apps-----820863---"></a>Återkallande av iOS-appar från volyminköpsprogram  <!-- 820863 -->
-Du kommer att kunna återkalla associerade enhetsbaserade applicenser för enheten för en given enhet som har en eller flera iOS-appar för volyminköpsprogram (VPP). Om du återkallar en applicens så avinstalleras inte den relaterade VPP-appen från enheten. Om du vill avinstallera en VPP-app, måste du ändra tilldelningsåtgärden till **avinstallera**. Mer information finns i [så här hanterar du iOS-appar som köpts genom ett volyminköpsprogram med Microsoft Intune](vpp-apps-ios.md).
-
-### <a name="revoke-licenses-for-an-ios-volume-purchasing-program-token----820870---"></a>Återkalla licenser för en token för iOS-volyminköpsprogram <!-- 820870 -->
-Du kommer att kunna återkalla licensen för alla iOS-appar för volyminköpsprogram (VPP) för en given VPP-Token.
-
 ### <a name="new-ios-device-action------1244701---"></a>Ny iOS-enhetsåtgärd   <!-- 1244701 -->
 Du kan stänga av iOS 10.3-övervakade enheter. Den här åtgärden stänger av enheten omedelbart utan varning till slutanvändaren. Åtgärden **stäng ner (endast övervakat)** finns i enhetsegenskaperna när du väljer en enhet i arbetsbelastningen **enhet**.
 
 ### <a name="intune-provides-the-account-move-operation-----1573558-1579830---"></a>Intune erbjuder åtgärden flytta kontot <!-- 1573558, 1579830 -->
 **Flytta kontot** migrerar en klient från en Azure-skalenhet (ASU) till en annan. **Flytta kontot** kan användas för både kundinitierade scenarier, när du anropar Intunes supportteam som begär det och det kan vara ett Microsoft-drivet scenario där Microsoft behöver göra justeringar i tjänsten i serverdelen. Vid **flytta kontot**, går klienten in i skrivskyddat läge (ROM). Tjänståtgärder som registrering, byta namn på enheter, uppdatering av efterlevnadsstatus misslyckas under ROM-perioden.
-
-
-
-<!-- the following are present prior to 1712 -->
-### <a name="assign-office-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type----1332318---"></a>Tilldela Office 365-mobilappar till iOS och Android-enheter med den inbyggda apptypen <!-- 1332318 -->
-Den **inbyggda** apptypen gör det enklare att skapa och tilldela Office 365-appar till iOS- och Android-enheter som du hanterar. De här apparna inkluderar 365-appar som Word, Excel, PowerPoint och OneDrive. Du kan tilldela specifika appar till apptypen och redigera konfigurationen för appinformationen.
-
-### <a name="assignment-conflict-resolution-has-changed-for-ios-store-apps----1480316---"></a>Konfliktlösning för tilldelning har ändrats för iOS Store-appar<!-- 1480316 -->
-Slutanvändare kan uppleva att tillgängligheten för iOS Store-appar har ändrats. En app som har tilldelats till två grupper med en konflikt mellan **Nödvändig och Tillgänglig** och **Ej tillämpligt** ger för närvarande prioritet till **Nödvändig och Tillgänglig**. I och med ändringen ger en app med den här konflikten prioritet till **Ej tillämpligt** istället.
 
 Ändringen löser problemet som uppstår när en app har tilldelats till flera grupper med olika avsikter.
 
@@ -316,11 +273,16 @@ Vi har en förhandsversion av den uppdaterade appen Företagsportal för iOS som
 ### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview----710595---"></a>Azure Active Directory-webbplatser kan kräva appen Intune Managed Browser och ha stöd för enkel inloggning för Managed Browser (allmänt tillgänglig förhandsversion) <!-- 710595 -->   
 Med Azure Active Directory (Azure AD) kan du begränsa åtkomst till webbplatser på mobila enheter till appen Intune Managed Browser. I Managed Browser förblir webbplatsdata säkra och separata från slutanvändarens personliga data. Dessutom stöder Managed Browser funktioner för enkel inloggning för webbplatser som stöds av Azure AD. När du loggar in på Managed Browser eller använder Managed Browser på en enhet med en annan app som hanteras av Intune, tillåts Managed Browser att få åtkomst till företagswebbplatser som skyddas av Azure AD utan att användaren måste ange sina autentiseringsuppgifter. Den här funktionen gäller för webbplatser som Outlook Web Access (OWA) och SharePoint Online, samt andra företags webbplatser som resurser i intranätet som nås via Azure App Proxy.
 
+<!-- the following are present prior to 1709 -->
+### <a name="intune-app-protection-and-citrix-mdx-development-tools----709185---"></a>Appskydd i Intune och Citrix MDX-utvecklingsverktyg <!-- 709185 -->
+Du kan hantera enheter och appar med en kombination av Citrix XenMobile MDX och Microsoft Intune. Det gör det möjligt att hantera appar med Intunes appskyddsprincip samtidigt som du använder Citrix mVPN-teknik.
+
+Du kan hitta ett kodcentrallager som innehåller Intune Apphanteringsverktyg och Intune App SDK för iOS och Android, som integreras med Citrix MDX mVPN-teknik.
+
 <!-- the following are present prior to 1711 -->
 
-### <a name="redirecting-macos-users-to-our-new-company-portal-app---1380728--"></a>Omdirigera macOS-användare till vår nya företagsportalapp <!--1380728-->   
+### <a name="redirecting-macos-users-to-the-new-company-portal-app---1380728--"></a>Omdirigera macOS-användare till den nya företagsportalappen <!--1380728-->   
 När en slutanvändare loggar in på företagsportalens webbplats för att registrera sin macOS-enhet dirigeras de för att ladda ned den nya företagsportalappen för macOS och på så sätt slutföra processen. Det inträffar för macOS-enheter som använder OS X El Capitan 10.11 eller senare. 
-
 
 <!-- the following are present prior to 1709 -->
 
