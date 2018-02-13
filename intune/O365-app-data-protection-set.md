@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36dc2924602ffa060d01d3ba932c657fd52552c7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6d1a4513b8ef6e1f42ad84558de8a57399bb8c1b
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Hur användarna upplever det grundläggande skyddet på hanterade Office 365-appar
 
@@ -128,4 +128,4 @@ Om du vill visa eller uppdatera dessa principer eller alla de principer som du s
 ![Bild av användargränssnittets sökväg för att visa principer](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Nästa steg
-Läs mer om [appskyddsprinciper](https://docs.microsoft.comapp-protection-policy.md).
+Läs mer om [appskyddsprinciper](app-protection-policy.md).
