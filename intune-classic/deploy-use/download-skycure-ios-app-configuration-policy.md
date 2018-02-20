@@ -30,7 +30,7 @@ ms.lasthandoff: 10/10/2017
 Du måste logga in på Skycure Management Console för att kunna utföra nästa steg.
 
 > [!TIP] 
-> Om du använder Microsoft Internet Explorer 11 eller Edge kan du behöva öppna Skycure Management Console i privat läge.
+> Om du använder Microsoft Internet Explorer 11 eller Microsoft Edge kan du behöva öppna Skycure Management Console i privat läge.
 
 ## <a name="to-download-the-ios-app-configuration-policy"></a>Så här hämtar du konfigurationsprincipen för iOS-appen
 
