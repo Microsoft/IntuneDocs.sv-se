@@ -104,7 +104,6 @@
 ## [Använda en macOS-enhet](using-your-macos-device-with-intune.md)
 ### [Vad händer när du registrerar en macOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos-cp.md)
-### [Registrera en äldre macOS-enhet](enroll-your-device-in-intune-macos-legacy.md)
 ### [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)
 
 ### [Åtgärda vanliga problem med macOS](troubleshoot-your-device-macos.md)
@@ -140,6 +139,7 @@
 #### [Skicka loggar från företagsportalappen](send-logs-to-your-it-admin-cp-windows.md)
 #### [Skicka loggar från appen Inställningar](send-logs-to-your-it-admin-settings-windows.md)
 #### [Min Windows-version stöds inte ännu](your-windows-version-isnt-yet-supported.md)
+#### [Installera Office 365 på din Windows 10-enhet](install-office-windows.md)
 #### [Aktivera Windows-kryptering](you-need-to-enable-windows-encryption.md)
 #### [Enheten behöver program mot skadlig kod](your-device-needs-antimalware-software.md)
 #### [Aktivera Säker Start](you-need-to-enable-secure-boot-windows.md)

@@ -138,6 +138,8 @@
           href: groups-add.md
         - name: Tilldela licenser
           href: licenses-assign.md
+        - name: Intune-licenser
+          href: licenses.md
         - name: Ange MDM-utfärdare
           href: mdm-authority-set.md
     - name: Registrera enheter
@@ -194,6 +196,8 @@
           href: device-locate.md
         - name: Aktivera förlorat läge i iOS
           href: device-lost-mode.md
+        - name: Aktivera övervakat läge på iOS
+          href: device-supervised-mode.md
         - name: Låsa enheten
           href: device-remote-lock.md
         - name: Återställ lösenord
@@ -251,7 +255,7 @@
             - name: Webbappar
               href: web-app.md
             - name: Inbyggda appar
-              href: apps-add-bulit-in.md
+              href: apps-add-built-in.md
         - name: Distribuera appar
           href: apps-deploy.md
           items:
