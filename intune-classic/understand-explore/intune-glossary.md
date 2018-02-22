@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: cb186004395a4ccf84de6f0bc335cbd44a79583b
-ms.sourcegitcommit: 22ab1c6a6bfeb4fef9850d12b29829c3fecbbeed
+ms.openlocfilehash: 843d11abb3e8b759b7e35db3ce59e7f611e26bc4
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/12/2018
 |Apprapportering|Låter dig [granska historiska data](/intune-classic/deploy-use/understand-microsoft-intune-operations-by-using-reports) om appens distributionsstatus och aktivitet.|
 |App SDK|[Microsoft Intune App-SDK](/intune/app-sdk) låter dig lägga till funktioner till dina egenprogrammerade appar som gör det möjligt för dem att hanteras av Intunes principer för hantering av mobila program.|
 |Appens avinstallationsåtgärd|Låter dig [avinstallera appar](/intune-classic/deploy-use/deploy-apps) från användarnas enheter.|
-|Apphanteringsverktyg|Ett [kommandoradsprogram](/intune/apps-prepare-mobile-application-management) som skapar en omslutning runt en branschspecifik app, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram.|
+|Apphanteringsverktyg|Ett [kommandoradsprogram](/intune/apps-prepare-mobile-application-management) som skapar en omslutning runt en verksamhetsspecifik app, som gör att appen kan hanteras av en princip för hanteringar av mobilprogram.|
 |Tillgänglig installation|När du distribuerar en app med den här åtgärden visas den i företagsportalen och användare kan [installera den på begäran](/intune-classic/deploy-use/deploy-apps).|
 |Azure Portal|Den nya konsolen för Intune som snart kommer att introduceras. [Läs mer om den nya portalen](/intune/what-is-intune).|
 

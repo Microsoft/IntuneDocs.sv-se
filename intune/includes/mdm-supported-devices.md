@@ -7,7 +7,7 @@
 ### <a name="google"></a>Google
 - Android 4.4 och senare (inklusive Samsung KNOX Standard 4.4 och senare)
 
-  En fullständig lista över verifierade Samsung Knox Standard-enheter finns i [Inställningar för Android- och Samsung Knox Standard-principer](/intune-classic/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
+  En fullständig lista över verifierade Samsung Knox Standard-enheter finns i [Inställningar för Android- och Samsung Knox Standard-principer](/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune.md#supported-samsung-knox-standard-devices).
 
 
 - Android for Work [(krav)](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window")
@@ -18,9 +18,9 @@
 - Windows 10 Mobil
 - Windows 10 Pro Enterprise (x86, x64)
 - Windows 10 IoT Mobile Enterprise
-- Windows Holographic & Windows Holographic Enterprise
+- Windows 10 Holographic for Business
 
-  Läs mer om att hantera Microsoft HoloLens-enheter i informationen om att [registrera HoloLens i MDM](https://docs.microsoft.com/hololens/hololens-enroll-mdm).
+  Mer information om att hantera enheter som kör Windows Holographic for Business finns i [Window Holographic for Business support](../windows-holographic-for-business.md) (Stöd för Windows Holographic for Business).
 
 - Windows Phone 8.1, Windows 8.1 RT och datorer som kör Windows 8.1 (hanteringsläge)
 

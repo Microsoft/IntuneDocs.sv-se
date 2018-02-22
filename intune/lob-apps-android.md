@@ -15,11 +15,11 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b2aa6893e1d01fe83e92c711c7a487f49b92706
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b63ab13dcedaa4787e9bae12ce713899b9c3e334
+ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-add-android-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Android-appar i Microsoft Intune
 
@@ -69,7 +69,10 @@ Den app som du har skapat visas i listan över appar där du kan välja att till
 
 ## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
 
-[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)] Obs: För att Intune-tjänsten ska kunna distribuera en ny APK-fil till enheten, måste du öka android:versionCode-strängen i AndroidManifest.xml-filen i ditt APK-paket
+[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+
+> [!Note] 
+> För att Intune-tjänsten ska kunna distribuera en ny APK-fil till enheten, måste du öka android:versionCode-strängen i AndroidManifest.xml-filen i ditt APK-paket.
 
 ## <a name="next-steps"></a>Nästa steg
 

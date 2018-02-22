@@ -6,20 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 11/28/2017
+ms.date: 1/25/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 541be8b8-8668-41be-afce-3f3e08c12191
-ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9ce18162391318374729b55aaeb302d850c17939
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3fb7de9fb320b74895b702167750e149eba34e1e
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-windows-hello-for-business"></a>Använda Windows Hello för företag
 
@@ -71,7 +69,7 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
      - **Obligatoriskt** (standard). Endast enheter med en tillgänglig TPM kan etablera Windows Hello för företag.
      - **Önskad**. Enheterna försöker först använda TPM. Om det inte är tillgängligt kan de använda programvarukryptering.
 
- - **Kräv minsta PIN-kodslängd**/**Kräv största PIN-kodslängd**. Konfigurerar enheterna så att de använder de minsta och största PIN-kodslängder du anger för att hjälpa till att säkerställa säker inloggning. Standardlängden för PIN-kod är 6 tecken, men du kan ange en minsta längd på 4 tecken. Den maximala längden för PIN-kod är 127 tecken.
+ - **Kräv minsta PIN-kodslängd**/**Kräv största PIN-kodslängd**. Konfigurerar enheterna så att de använder de minsta och största PIN-kodslängder du anger för att hjälpa till att säkerställa säker inloggning. Standardlängden för PIN-kod är sex tecken, men du kan ange en minsta längd på fyra tecken. Den maximala längden för PIN-kod är 127 tecken.
 
  - **Kräv gemener i PIN-koden**/**Kräv versaler i PIN-koden**/**Kräv specialtecken i PIN-koden**. Du kan tillämpa en starkare PIN-kod genom att kräva att versaler, gemener och specialtecken används i PIN-koden. Välj mellan:
 
@@ -94,6 +92,18 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
  - **Använd telefoninloggning**. Om det här alternativet är inställt på **Ja** kan användarna använda ett fjärranslutet Passport som fungerar som en bärbar tillhörande enhet för autentisering på stationär dator. Den stationära datorn måste vara ansluten med Azure Active Directory och den tillhörande enheten måste vara konfigurerad med en PIN-kod för Windows Hello för företag.
 
+## <a name="windows-holographic-for-business-support"></a>Stöd för Windows Holographic for Business
+
+Windows Holographic for Business har stöd för följande inställningar för Windows Hello för företag:
+
+- Använd en Trusted Platform Module (TPM)
+- Minsta PIN-kodslängd
+- Maximala PIN-kodslängd
+- Gemener i PIN-koden
+- Versaler i PIN-koden
+- Specialtecken i PIN-koden
+- Förfallodagar för PIN-kod (dagar)
+- Kom ihåg PIN-historik
 
 ## <a name="further-information"></a>Ytterligare information
 Mer information om Microsoft Passport finns i [guiden](https://technet.microsoft.com/library/mt589441.aspx) i Windows 10-dokumentationen.

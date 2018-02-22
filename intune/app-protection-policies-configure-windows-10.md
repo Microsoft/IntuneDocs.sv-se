@@ -15,11 +15,11 @@ ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3254adc66c5fd5dc991364c3a33aabef8ac2030b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f4b6a442f83491160f72955d02b8023ee4d949f2
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Förbered konfigurationen av appskyddsprinciper för Windows 10
 
@@ -50,7 +50,7 @@ Aktivera hantering av mobilprogram (MAM) för Windows 10 genom att ange MAM-prov
     URL till slutpunkten för registrering av MAM-tjänsten. Registrering av slutpunkten används för att registrera enheter för hantering med MAM-tjänsten.
 
     **MAM kompatibilitets-URL**  
-      URL till slutpunkten för efterlevnad av MAM-tjänsten. När en användare nekas åtkomst till en resurs från en icke-kompatibel enhet, visas en länk till URL:en för efterlevnad för användaren. För att förstå varför deras enhet betraktas som icke-kompatibel kan användare navigera till denna URL som MAM-tjänsten är värd för. Användare kan också initiera hjälpåtgärder i självbetjäningen så att enheten blir kompatibel och de kan fortsätta att komma åt resurser.
+      URL till slutpunkten för efterlevnad av MAM-tjänsten. När en användare nekas åtkomst till en resurs från en icke-kompatibel enhet visas en länk till URL:en för efterlevnad för användaren. För att förstå varför deras enhet betraktas som icke-kompatibel kan användare navigera till den URL som MAM-tjänsten är värd för. Användare kan också initiera hjälpåtgärder i självbetjäningen så att enheten blir kompatibel och de kan fortsätta att komma åt resurser.
 
 5.  Klicka på **Spara**.
 

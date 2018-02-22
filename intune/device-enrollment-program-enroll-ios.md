@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/03/2017
+ms.date: 02/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,28 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2f472c144e9bcda965486f8e88d38aa9d27df165
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b56907217b45ddb2bfe869f23abc34c0508bdbd7
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+> [!NOTE]
+> ### <a name="temporary-user-interface-differences"></a>Tillfälliga skillnader i användargränssnittet
+>
+>Användargränssnitt för de funktioner som beskrivs i den här sidan håller på att uppdateras. De här uppdateringarna lanseras över alla användarkonton fram till slutet av April.
+>
+>Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har ditt konto ännu inte uppdaterats till det nya användargränssnittet och du kan använda den här hjälpsidan.
+>
+>![Gammalt användargränssnitt](./media/appleenroll-oldui.png)
+>
+>Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har du de uppdaterade användargränssnitten.  Gå till [den här hjälpsidan](device-enrollment-program-enroll-ios-newui.md).
+>
+>![Nytt användargränssnitt](./media/appleenroll-newui.png)
 
 Det här avsnittet hjälper dig att aktivera registrering av iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan aktivera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera enheter som iPhone och iPad direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
 
@@ -79,7 +92,10 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
    ![Skärmbild av hur någon lägger till ett MDM-servernamn för DEP och sedan klickar på Nästa.](./media/enrollment-program-token-add-server.png)
 
 5. Dialogrutan **Lägg till &lt;ServerName&gt;**  öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.  
+<<<<<<< HEAD
 
+=======
+>>>>>>> e19b417f8bc134dc5a5a9f60354f017ccc42fd88
 
 7. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
 8. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
@@ -93,7 +109,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
    Gå till Apple-portalen och **Driftsättningsprogram** &gt; **Enhetsregistreringsprogram** &gt; **View Assignment History (Visa historik för tilldelning)** för att se en lista över enheter och deras MDM-servertilldelning.
 
-**Steg 3. Ange det Apple-ID som användes för att skapa din registreringsprogramtoken.**<br>I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk. Du kan använda detta ID för att förnya din registreringsprogramtoken i framtiden och slippa behöva registrera alla enheter på nytt.
+**Steg 3. Ange det Apple-ID som användes för att skapa din registreringsprogramtoken.**<br>I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk.
 
 ![Skärmbild av någon som anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrat till denna token.](./media/enrollment-program-token-apple-id.png)
 
@@ -117,27 +133,27 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 4. Välj **Enhetshanteringsinställningar** för att konfigurera följande profilinställningar:
 
   ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Övervakad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
-    - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
+  - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
 
  > [!NOTE]
  > Det går inte att konfigurera en enhet för övervakat läge med Intune efter att enheten har registrerats. Efter registreringen går det bara att aktivera övervakat läge genom att ansluta en iOS-enhet till en Mac-dator med en USB-kabel och använda Apple Configurator. Då återställs enheten och den kan konfigureras i övervakat läge. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3). En övervakad enhet visar meddelandet "This iPhone is managed by Contoso." (Denna iPhone hanteras av Contoso.) på låsskärmen och "This iPhone is supervised. Contoso can monitor your Internet traffic and locate this device." (Denna iPhone är övervakad. Contoso kan övervaka din Internettrafik och hitta denna enhet.) under **Inställningar** > **Allmänt** > **Om**.
 
-    - **Låst registrering** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
+  - **Låst registrering** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
 
   - **Aktivera delad iPad** – Apples enhetsregistreringsprogram stöder inte delad iPad.
 
-    - **Tillåt parkoppling** – Anger huruvida iOS-enheter ska kunna synkroniseras med datorer eller inte. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
+  - **Tillåt parkoppling** – Anger huruvida iOS-enheter ska kunna synkroniseras med datorer eller inte. Om du väljer **Tillåt Apple Configurator efter certifikat** måste du välja ett certifikat under **Apple Configurator-certifikat**.
 
-    - **Apple Configurator-certifikat** – Om du väljer **Tillåt Apple Configurator efter certifikat** under **Tillåt parkoppling** måste du ange vilket Apple Configurator-certifikat som ska importeras.
+  - **Apple Configurator-certifikat** – Om du väljer **Tillåt Apple Configurator efter certifikat** under **Tillåt parkoppling** måste du ange vilket Apple Configurator-certifikat som ska importeras.
 
   Välj **Spara**.
 
 5. Välj **Inställningar för inställningsassistenten** och konfigurera följande profilinställningar:
 
   ![Skärmbild av någon som väljer konfigurationsinställningar för en ny registreringsprogramprofil.](./media/enrollment-program-profile-settings.png)
-    - **Avdelningsnamn** – Visas om användaren knackar på **Om konfiguration** under aktiveringen.
+  - **Avdelningsnamn** – Visas om användaren knackar på **Om konfiguration** under aktiveringen.
 
-    - **Avdelningens telefonnummer** – Visas om användaren klickar på knappen **Behöver du hjälp?** under aktiveringen.
+  - **Avdelningens telefonnummer** – Visas om användaren klickar på knappen **Behöver du hjälp?** under aktiveringen.
     - **Alternativ för Installationsassistenten** – Dessa valfria inställningar kan konfigureras senare på menyn **Inställningar** i iOS.
         - **Lösenord**
         - **Platstjänster**
@@ -163,9 +179,9 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
   
 2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
-  ![Skärmbild av bladet Synkronisera där länken Begär synkronisering håller på att väljas.](./media/enrollment-program-device-request-sync.png)
+   ![Skärmbild av bladet Synkronisera där länken Begär synkronisering håller på att väljas.](./media/enrollment-program-device-request-sync.png)
 
-  För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
+   För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
      -  En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Vid en fullständig synkronisering uppdateras Intune med alla Apple-serienummer som tilldelats till Intune. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
      -  Varje synkroniseringsbegäran har 15 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
      - Intune synkroniserar nya och borttagna enheter med Apple var 24:e timme.
@@ -195,3 +211,5 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har återställts till fabriksinställningarna.
 
 Se [Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet](/intune-user-help/enroll-your-device-dep-ios). 
+
+

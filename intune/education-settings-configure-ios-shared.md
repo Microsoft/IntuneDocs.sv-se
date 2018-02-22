@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c183af24e953f87e12e87654f767dd9a30f8509f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 044f3aaa81a2bb02662bec3d20ea51a2339b91a6
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Så här konfigurerar du Intune-utbildningsinställningar för delade iPad-enheter
 
@@ -34,7 +34,7 @@ Information om hur du konfigurerar personliga (1:1) iPad-enheter för användnin
 Följande är de förutsättningar som uppfyllas innan du kan använda funktionerna för delade iPad-enheter:
 
 - Konfigurera [Apple School Manager](apple-school-manager-set-up-ios.md) och [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
-- Som en del av konfigureringen av Apple School Manager konfigurerar du [hanterade Apple-ID:n](http://help.apple.com/schoolmanager/#/tes78b477c81) för eleverna. [Läs mer om hanterade Apple-ID:n](https://support.apple.com/en-us/HT205918).
+- Som en del av konfigureringen av Apple School Manager konfigurerar du [hanterade Apple-ID:n](http://help.apple.com/schoolmanager/#/tes78b477c81) för eleverna. [Läs mer om hanterade Apple-ID:n](https://support.apple.com/HT205918).
 - Skapa en registreringsprofil för enhetsserienumren som synkroniseras från Apple School Manager.
 
 ## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>Steg 1 – Importera din skolinformation till Azure Active Directory

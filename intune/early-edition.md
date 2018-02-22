@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ed427382b94f591559a2264f40455ab5254daadb
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: e46fc218f45ca82beacfd3061193c8a637be7cbd
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2018"></a>Den tidiga utgåvan för Microsoft Intune – Februari 2018
 
@@ -40,6 +40,10 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 
 <!-- 1802 start -->
+
+### <a name="new-enrollment-failure-trend-chart-and-failure-reasons-table----1471783---"></a>Nytt trenddiagram för registreringsfel och tabell över felorsaker <!-- 1471783 -->
+
+På Registreringsöversiktssidan, kommer du att kunna se trenden för registreringsfel och de fem viktigaste felorsakerna. Genom att klicka på diagrammet eller tabellen, kan du gå in på detaljnivå för att hitta felsökningstips och åtgärdsförslag.
 
 ### <a name="prevent-end-users-from-adding-or-removing-accounts-in-the-work-profile----1728700---"></a>Förhindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen <!-- 1728700 -->    
 När du distribuerar Gmail-appen till en Android for Work-profil så kan du förhindra användare från att lägga till eller ta bort konton i arbetsprofilen genom att använda inställningen **Lägg till och ta bort konton** i profilen för enhetsbegränsningar i Android for Work.
@@ -120,7 +124,7 @@ Två nya sekretessinställningar blir tillgängliga för enheter:
 
 Användarna kan använda Enhetsregistreringshanteraren när de registrerar sig med macOS-företagsportalen.
 
-#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Microsoft Edge-webbläsaren-webbläsaren <!--1469166 -->
+#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Edge-webbläsaren <!--1469166 -->
 
 Två nya inställningar blir tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfiler** och **Ändringar i Favoriter**. 
 

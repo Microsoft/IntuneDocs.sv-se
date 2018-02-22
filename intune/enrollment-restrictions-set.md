@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/29/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3e3f35648784de860eb7e3f2e203488bc77a96d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -31,7 +31,7 @@ Som Intune-administratör kan du skapa och hantera registreringsbegränsningar s
 >Begränsningar vid registrering ska inte betraktas som säkerhetsfunktioner. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
 
 >[!NOTE]
->Den grupptilldelade begränsningen för registrering och prioritetsfunktionen som nämns nedanför håller på att distribueras bland Intune-kunderna. Du kanske inte har åtkomst till grupp- och prioritetsfunktionerna förrän den här distributionen är slutförd. 
+>Den grupptilldelade begränsningen för registrering och prioritetsfunktionen som nämns nedanför håller på att distribueras bland Intune-kunderna. Du kanske inte har åtkomst till grupp- och prioritetsfunktionerna förrän den här distributionen är slutförd.
 
 Bland de specifika registreringsbegränsningarna som du kan skapa finns:
 
@@ -80,7 +80,7 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
   - Stöd för major.minor.rev.build för Android och Android for Work.
   - iOS stöder major.minor.rev.
   - Windows stöder endast major.minor.rev.build för Windows 10.
-  Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen. 
+  Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
 8. Ange om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
 
     ![Skärmbild av arbetsytan för enhetsbegränsningar med standardkonfigurationer för enhetsplattformar visar inställningar för personligt ägda enheter.](media/device-restrictions-platform-configurations.png)
@@ -103,15 +103,19 @@ Du kan ändra inställningarna för en begränsning för enhetsgräns genom att 
     ![Skärmbild av bladet med begränsningar för enhetsgränsen.](./media/device-restrictions-limit.png)
 6. Klicka på **Spara**.
 
+Ett meddelande visas för användaren med information om att de har uppnått gränsen för registrerade enheter. På iOS kan det till exempel se ut så här:
+
+![Skärmbild av aviseringen om enhetsbegränsningen på iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
 ## <a name="change-enrollment-restriction-priority"></a>Ändra prioritet för registreringsbegränsning
 
-Prioritet används när en användare befinner sig i flera grupper som tilldelas begränsningar. Användarna berörs endast av begränsningen med högst prioritet som är tilldelad till en grupp där de finns. Till exempel är Jens i grupp A som är tilldelad begränsningar med prioritet 5 och i grupp B som är tilldelad begränsningar med prioritet 2. Jens berörs då endast av begränsningar med prioritet 2. 
+Prioritet används när en användare befinner sig i flera grupper som tilldelas begränsningar. Användarna berörs endast av begränsningen med högst prioritet som är tilldelad till en grupp där de finns. Till exempel är Jens i grupp A som är tilldelad begränsningar med prioritet 5 och i grupp B som är tilldelad begränsningar med prioritet 2. Jens berörs då endast av begränsningar med prioritet 2.
 
 När du skapar en begränsning läggs den till i listan precis ovanför den som är standard.
 
-Enhetsregistrering inkluderar standardbegränsningar för både enhetstyp och för enhetsgränsbegränsningar. De här två begränsningarna gäller för alla användare om de inte åsidosätts av begränsningar med högre prioritet. 
+Enhetsregistrering inkluderar standardbegränsningar för både enhetstyp och för enhetsgränsbegränsningar. De här två begränsningarna gäller för alla användare om de inte åsidosätts av begränsningar med högre prioritet.
 
-Du kan ändra prioriteten för begränsningar som inte är standard. 
+Du kan ändra prioriteten för begränsningar som inte är standard.
 
 **Ändra prioritet för begränsningar**
 
@@ -120,8 +124,3 @@ Du kan ändra prioriteten för begränsningar som inte är standard.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Hovra över begränsningen i prioritetslistan.
 5. Använd de tre lodräta punkterna och dra prioriteten till önskad plats i listan.
-
-
-
-
-

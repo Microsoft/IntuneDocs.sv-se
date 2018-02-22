@@ -150,3 +150,4 @@
 #### [Jag behöver starta Windows Defender](turn-on-defender-windows.md)
 
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
+### [Fjärrlåsa enheter](remote-lock-your-device-cpwebsite.md)

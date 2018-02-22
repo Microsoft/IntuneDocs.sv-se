@@ -14,11 +14,11 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 45e1b3747b4c1b74401fc1ce73716abe5e06110d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8ce84f51dcfb61ec16c78a6216135c2a7639657f
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-users-and-give-administrative-permission-to-intune"></a>Lägg till användare och ge administrativ behörighet till Intune
 
@@ -102,7 +102,7 @@ Tilldela användare en eller flera administratörsbehörigheter. Dessa behörigh
 - **Användaradministratör** – (Office 365 och Intune) Återställer lösenord, övervakar tjänstens hälsostatus, lägger till och tar bort användarkonton och hanterar tjänstförfrågningar. Administratören för användarhantering kan inte ta bort en global administratör, skapa andra administratörsroller eller återställa lösenord för andra administratörer.
 - **Intune-tjänstadministratör** – Alla globala administratörsbehörigheter för Intune förutom behörighet att skapa administratörer med alternativ för **Katalogroll**.
 
-Det konto som du använder för att skapa Microsoft Intune-prenumerationen är en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. En administratör behöver inte ha någon licens till Intune för att få åtkomst till Azure-portalen. 
+Det konto som du använder för att skapa Microsoft Intune-prenumerationen är en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. Även om en administratör inte behöver en Intune-licens för att få åtkomst till Intune i Azure Portal så krävs en Intune-licens för att kunna utföra vissa hanteringsuppgifter, som till exempel att konfigurera anslutningsprogrammet för Exchange-tjänsten. 
 
 För att få åtkomst till Office 365-portalen måste ditt konto ha statusen **Sign-in allowed** (Inloggning tillåts). Under **Profil** i Azure-portalen anger du **Blockera inloggning** till **Nej** för att tillåta åtkomst. Denna status skiljer sig från att ha en licens för prenumerationen. Som standard har alla användarkonton statusen **Tillåten**. Användare utan administratörsbehörighet kan använda Office 365-portalen för att återställa lösenord för Intune.
 

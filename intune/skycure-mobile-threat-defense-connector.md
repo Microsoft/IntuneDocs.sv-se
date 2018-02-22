@@ -15,11 +15,11 @@ ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: df60b45ede53190660733d3879ab6c020e5448b1
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c8be5d271bfff84ec440b25724ca2101ec7f224d
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Skycure Mobile Threat Defense-anslutningsprogram
 
@@ -33,7 +33,7 @@ Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorl
 
 -   Skydd mot säkerhetsrisker
 
-Du kan konfigurera principer för villkorlig åtkomst baserat på Skycures riskbedömning. Den aktiveras via Intunes efterlevnadsprinciper för enheter, som du kan använda för att tillåta eller blockera icke-kompatibla enheter för företagets resurser baserat på de hot som har identifierats.
+Du kan konfigurera principer för villkorlig åtkomst baserat på Skycures riskbedömning. Den aktiveras via Intunes efterlevnadsprinciper för enheter, som du kan använda för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats.
 
 ## <a name="how-do-intune-and-skycure-help-protect-your-company-resources"></a>Hur skyddar Intune och Skycure företagets resurser?
 
@@ -41,7 +41,7 @@ Skycures mobilapp för Android eller iOS avbildar filsystem, nätverksstackar sa
 
 Intune-enhetens efterlevnadsprincip innehåller en regel för Skycure Mobile Threat Defense, som är baserad på Skycures riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
 
-Om enheten utvärderats som inkompatibel kommer åtkomst till resurser som Exchange Online och SharePoint Online blockeras. Användarna av blockerade enheter får anvisningar i Skycures mobilapp för att lösa problemet och återfå åtkomsten till företagets resurser.
+Om enheten utvärderats som inkompatibel blockeras åtkomst till resurser som Exchange Online och SharePoint Online. Användarna av blockerade enheter får anvisningar i Skycures mobilapp för att lösa problemet och återfå åtkomsten till företagets resurser.
 
 Intune stöder två lägen för integrering med Skycure:
 

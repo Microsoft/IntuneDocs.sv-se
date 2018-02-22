@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2017
+ms.date: 01/31/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a37497dcf015a611e8b770b5a28e519c0e397c87
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e137da3ad4121f4b9cdfbb765ee00f71beca610a
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -49,6 +49,9 @@ Om du registrerar Android for Work-enheter med hjälp av ett konto för [Enhetsr
 
 ## <a name="add-android-for-work-binding-for-intune"></a>Lägga till Android for Work-bindning för Intune
 
+> [!NOTE]
+> På grund av interaktion mellan Google- och Microsoft-domäner kan det i det här steget krävas att du justerar inställningarna för webbläsaren för att allt ska slutföras.  Se till att ”portal.azure.com” och ”play.google.com” finns i samma säkerhetszon i webbläsaren.
+
 1. **Konfigurera Intune MDM**<br>
 Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 2. **Konfigurera Android for Work-bindning**<br>
@@ -64,11 +67,10 @@ Om du inte redan gjort det, förbereder du för hantering av mobila enheter geno
    Ange företagets namn för **Organisationsnamn**. **Microsoft Intune** ska visas som **Enterprise mobility management (EMM)-provider**. Godkänn Android for Work-avtalet och välj sedan **Bekräfta**. Din begäran kommer att behandlas.
 
 ## <a name="specify-android-for-work-enrollment-settings"></a>Ange inställningar för registrering av Android for Work
-   Android for Work stöds endast på vissa Android-enheter. Se Googles [Android for Work requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window") (Krav för Android for Work). Alla enheter som har stöd för Android for Work stöder även konventionell Android-hantering. Intune gör det möjligt att ange hur enheter med stöd för Android for Work ska hanteras:
+Android for Work stöds endast på vissa Android-enheter. Se Googles [Android for Work requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22) (Krav för Android for Work). Alla enheter som har stöd för Android for Work stöder även konventionell Android-hantering. Intune gör det möjligt att ange hur enheter med stöd för Android for Work ska hanteras inifrån [Registreringsbegränsningar](enrollment-restrictions-set.md).
 
-   - **Hantera alla enheter som Android**. Alla Android-enheter, inklusive enheter som stöder Android for Work, registreras som konventionella Android-enheter.
-   - **Hantera enheter som stöds som Android for Work**. Alla enheter som stöder Android for Work registreras som Android for Work-enheter. Alla Android-enheter som inte stöder Android for Work registreras som konventionella Android-enheter.
-   - **Hantera enheter som stöds för användare endast i de här grupperna som Android for Work**. Du kan rikta Android for Work-program mot en begränsad uppsättning användare. Endast medlemmar i de valda grupperna som registrerar en enhet som har stöd för Android for Work registreras som Android for Work-enheter. Alla andra registreras som Android-enheter. Detta är användbart vid pilottester av Android for Work.
+- **Blockera (ange som standard)**: Alla Android-enheter, inklusive enheter som stöder Android for Work, registreras som konventionella Android-enheter.
+- **Tillåt**: Alla enheter som stöder Android for Work registreras som Android for Work-enheter. Alla Android-enheter som inte stöder Android for Work registreras som konventionella Android-enheter.
 
 ## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Godkänn företagsportalappen i den hanterade Google Play-butiken
 Du måste godkänna företagsportalappen för Android i den hanterade Google Play-butiken för att den ska kunna ta emot automatiska appuppdateringar. Om du inte godkänner den kommer företagsportalappen till slut att bli inaktuell och kan därmed inte ta emot viktiga felkorrigeringar eller nya funktioner när Microsoft släpper dem.

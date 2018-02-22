@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 14117098235decb55350dc6d1f1ba9c7475f40b8
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b89b087c13847af06187cf3b6a046b9730a07826
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="update-apps-using-microsoft-intune"></a>Uppdatera appar med Microsoft Intune
 
@@ -57,6 +57,6 @@ En appidentifierare är en egenskap som unikt identifierar en app. Du kan inte i
 4.  Välj **Uppdatera** när du är klar.
 
 När enheter kontroller efter tillgängliga appar nästa gång uppdateras appen automatiskt till den senaste versionen.
-För appar som har installerats från ett appaket (affärsspecifika appar) uppgraderas appen automatiskt för både nödvändiga och tillgängliga distributioner, så länge appen har samma identifierare.
+För appar som har installerats från ett appaket (verksamhetsspecifika appar) uppgraderas appen automatiskt för både nödvändiga och tillgängliga distributioner, så länge appen har samma identifierare.
 
 För appar som distribueras med en länk till en butik hanteras uppdateringen av den butik som appen hämtats från.

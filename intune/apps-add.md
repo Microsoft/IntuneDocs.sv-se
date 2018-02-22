@@ -3,7 +3,7 @@ title: "Så här lägger du till appar i Microsoft Intune"
 titlesuffix: Azure portal
 description: "De här procedurerna hjälper dig att få in dina appar i Intune så att de är redo att tilldelas till användare och enheter. \""
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/17/2018
@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f84adced59d2057cd4d18f05ff6953293f7c44cc
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4c753ebfc48365d0d586773585552026ad17b6f6
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-add-an-app-to-microsoft-intune"></a>Så här lägger du till appar i Microsoft Intune
 
@@ -33,6 +33,7 @@ I Intune kan du lägga till och tilldela följande apptyper:
 | Appar på webben                           | Intune skapar en genväg till webbappen på enhetens startskärm          | Uppdateringar av appar sker automatiskt     |
 | Appar om skrivits internt (verksamhetsspecifika)  | Intune installerar appen på enheten (du tillhandahåller installationsfilen)    | Du måste uppdatera appen       |
 | Appar från butiken                       | Intune installerar apparna på enheten                                       | Uppdateringar av appar sker automatiskt     |
+| Appar som är inbyggda                        | Intune installerar apparna på enheten                                       | Uppdateringar av appar sker automatiskt     |
 
 
 Intune stöder följande specifika plattformar för Store-appar och LOB-appar:
@@ -49,6 +50,7 @@ Intune stöder följande specifika plattformar för Store-appar och LOB-appar:
     - Verksamhetsspecifika appar för iOS
     - Verksamhetsspecifika appar (LOB) för Windows Phone (.xap-filer)
     - Verksamhetsspecifika appar (LOB) för Windows (endast .xap-filer)
+- Inbyggda appar    
 
 >[!TIP]
 > En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** från bladet **Lägg till app**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
@@ -147,4 +149,5 @@ Välj något av följande avsnitt för att ta reda på hur du lägger till appar
 - [Windows Store-appar](store-apps-windows.md)
 - [Windows LOB-appar](lob-apps-windows.md)
 - [Office 365-appar för Windows 10](apps-add-office365.md)
+- [Inbyggda appar](apps-add-bulit-in.md)
 
