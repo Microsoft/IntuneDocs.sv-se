@@ -1,25 +1,24 @@
 ---
 title: "Så här fjärradministrerar du enheter med TeamViewer"
 titlesuffix: Azure portal
-description: "Lär dig hur du fjärradministrerar enheter med TeamViewer.\""
+description: "Lär dig hur du fjärradministrerar enheter med TeamViewer."
 keywords: 
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 12/14/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
-ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 476480ce3957ef2d411b37a0a078707c721fd2e6
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 0219993e0322be06dbf9b26707789332039001f1
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="provide-remote-assistance-for-intune-managed-devices"></a>Ge fjärrhjälp för Intune-hanterade enheter
 
@@ -32,7 +31,7 @@ Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps s
 Intune-hanterade Android- och Windows-enheter stöder fjärradministration.
 
 >[!NOTE]
->Windows Holographic (HoloLens), Windows Team (Surface Hub) och Windows 10 S stöds inte av programmet TeamViewer. Du behöver fortfarande hantera enheter med [PC-klienten](/intune-classic/deploy-use/pc-management-comparison?toc=/intune/toc.json) i den klassiska portalen för Intune.
+>Windows Holographic (HoloLens), Windows Team (Surface Hub) och Windows 10 S stöds inte av programmet TeamViewer.
 
 
 

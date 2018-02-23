@@ -15,11 +15,11 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f33598abe08ffb958ddac9eb7725ab500f9db981
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Endpoint Protection-inställningar för Windows 10 och senare i Microsoft Intune
 
@@ -225,7 +225,9 @@ Aktivera skydd av sårbarheter genom att skapa en XML-fil som representerar syst
 
 Använd **Kodintegritetsprinciper för programkontroll** för att välja ytterligare appar som antingen behöver granskas av eller som kan vara betrodda att köras av Windows Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.
 
-Program blockeras inte i läget för ”endast granskning”. Läget för ”endast granskning” loggar alla händelser i lokala klientloggar.
+Program blockeras inte i läget **Endast granskning**. I läget **Endast granskning** loggas alla händelser i lokala klientloggar.
+
+När det är aktiverat kan programkontrollen endast inaktiveras genom att ändra läget från **Framtvinga** till **Endast granskning**. Om du ändrar läget från **Framtvinga** till **Inte konfigurerad** fortsätter programkontrollen att tillämpas på tilldelade enheter.
 
 ## <a name="windows-defender-security-center"></a>Windows Defender Säkerhetscenter
 
