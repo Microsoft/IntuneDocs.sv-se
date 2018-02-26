@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e46fc218f45ca82beacfd3061193c8a637be7cbd
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 7d54cb060dc44d29c95203138396f771abbb2325
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2018"></a>Den tidiga utgåvan för Microsoft Intune – Februari 2018
 
@@ -81,9 +81,6 @@ Du kan exempelvis lägga till Webex-paketet som ett undantag till MAM-dataöverf
 
 Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du anger en hexkod kan Intune bestämma vilken textkod som ger den högsta kontrastnivån mellan textfärgen och bakgrundsfärgen per [WCAG 2.0-standarder](http://www.w3.org/TR/WCAG20). Du kan förhandsgranska både textfärgen och företagets logotyp mot färgen i **Mobilappar** > **Företagsportal**. 
 
-### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963---"></a>Välj enhetskategorier med hjälp av inställningarna för åtkomst till arbete eller skola <!-- 1058963 --> 
-Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
-
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 --> 
 
 Nya inställningar för [Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard] läggs till i **Enhetskonfiguration** > **Profiler** > **Endpoint protection**. Följande inställningar läggs till: 
@@ -124,7 +121,7 @@ Två nya sekretessinställningar blir tillgängliga för enheter:
 
 Användarna kan använda Enhetsregistreringshanteraren när de registrerar sig med macOS-företagsportalen.
 
-#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Edge-webbläsaren <!--1469166 -->
+#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Microsoft Edge-webbläsaren <!--1469166 -->
 
 Två nya inställningar blir tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfiler** och **Ändringar i Favoriter**. 
 
