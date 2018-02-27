@@ -15,11 +15,11 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac997e9543df5d964b6a8fba83677baa49af38e8
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 0ee95990afa08aa55e0f9101329b31bd8b3041f4
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -61,8 +61,7 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 
 
 ### <a name="supported-platforms-for-app-protection-polices"></a>Plattformar som stöds för appskyddsprinciper
--   iOS 9 eller senare
--   Android 4.4 eller senare
+Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-program. Mer information finns i [Systemkrav för Office](https://products.office.com/en-US/office-system-requirements).
 
 Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 ##  <a name="how-app-protection-policies-protect-app-data"></a>Hur appskyddsprinciper skyddar appdata

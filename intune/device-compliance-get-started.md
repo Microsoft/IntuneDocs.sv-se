@@ -3,23 +3,21 @@ title: "Efterlevnadsprinciper för Intune-enheter"
 titleSuffix: Azure portal
 description: "Använd det här ämnet för att läsa mer om enhetsefterlevnad i Microsoft Intune”"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: vhorne
+ms.author: victorh
 manager: dougeby
-ms.date: 07/18/2017
+ms.date: 2/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: a916fa0d-890d-4efb-941c-7c3c05f8fe7c
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f4a9f70762c3d30a49a686bcf1cfa9de4851b6c
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 98a9a93efb93697b454cb9bc06d1ac268ebaf9d8
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="get-started-with-intune-device-compliance-policies"></a>Komma igång med principer för Intune-enhetsefterlevnad
 
@@ -99,9 +97,63 @@ Du måste ha följande prenumerationer för att använda efterlevnadsprinciper f
 
 ## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Så här fungerar efterlevnadsprinciper för Intune med Azure AD
 
-När en enhet registreras i Intune sker även registreringen i Azure AD, vilket uppdaterar enhetens egenskaper med mer information i Azure AD. En viktig del av informationen är enhetens efterlevnadsstatus, vilket används av villkorlig åtkomstprinciper för att blockera eller tillåta åtkomst till e-post eller andra företagsresurser.
+När en enhet registreras i Intune sker även registreringen i Azure AD, vilket uppdaterar enhetens egenskaper med mer information i Azure AD. En viktig del av informationen är enhetens efterlevnadsstatus, vilket används av villkorliga åtkomstprinciper för att blockera eller tillåta åtkomst till e-post eller andra företagsresurser.
 
-- Läs mer om [registreringsprocessen i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-overview).
+- Läs mer om [registreringsprocessen i Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/device-management-introduction).
+
+### <a name="assigning-a-resulting-device-configuration-profile-status"></a>Tilldela en resulterande profilstatus för enhetskonfiguration
+
+Om en enhet har flera tilldelade konfigurationsprofiler och enheten har olika efterlevnadsstatus för två eller fler av de tilldelade konfigurationsprofilerna, måste en enda resulterande efterlevnadsstatus tilldelas. Den här tilldelningen baseras på en konceptuell allvarlighetsgrad som tilldelas till varje efterlevnadsstatus. Varje efterlevnadsstatus har följande allvarlighetsgrad:
+
+
+|Status  |Allvarlighetsgrad  |
+|---------|---------|
+|Väntar     |1|
+|Lyckades     |2|
+|Misslyckades     |3|
+|Fel     |4|
+
+En resulterande status med två eller flera konfigurationsprofiler tilldelas sedan genom att välja den högsta allvarlighetsgraden för alla profiler som är tilldelade till en enhet.
+
+Anta exempelvis att en enhet har tre tilldelade profiler: en med statusen Väntar (allvarlighetsgrad = 1), en med statusen Lyckades (allvarlighetsgrad = 2) och en med statusen Fel (allvarlighetsgrad = 4). Statusen Fel har högst allvarlighetsgrad, så den tilldelas som resulterande efterlevnadsstatus för alla tre profilerna.
+
+### <a name="assigning-an-ingraceperiod-status-for-an-assigned-compliance-policy"></a>Tilldela statusen InGracePeriod för en tilldelad efterlevnadsprincip
+
+Statusen InGracePeriod för en efterlevnadsprincip är ett värde som fastställs genom att överväga kombinationen av en enhets respitperiod och en enhets faktiska status för den tilldelade efterlevnadsprincipen. 
+
+Specifikt innebär det att om en enhet har statusen NonCompliant för en tilldelad efterlevnadsprincip och:
+
+- enheten inte har någon tilldelad respitperiod, så är det tilldelade värdet för efterlevnadsprincipen NonCompliant.
+- enheten har en respitperiod som har löpt ut, så är det tilldelade värdet för efterlevnadsprincipen NonCompliant.
+- enheten har en respitperiod som ligger i framtiden, så är det tilldelade värdet för efterlevnadsprincipen InGracePeriod.
+
+Följande tabell innehåller en sammanfattning av föregående punkter:
+
+
+|Faktisk efterlevnadsstatus|Värde för tilldelad respitperiod|Effektiv efterlevnadsstatus|
+|---------|---------|---------|
+|NonCompliant |Ingen tilldelad respitperiod |NonCompliant |
+|NonCompliant |Gårdagens datum|NonCompliant|
+|NonCompliant |Morgondagens datum|InGracePeriod|
+
+Mer information om hur du övervakar enhetsefterlevnadsprinciper finns i [Övervaka efterlevnadsprinciper för Intune-enhet](compliance-policy-monitor.md).
+
+### <a name="assigning-a-resulting-compliance-policy-status"></a>Tilldela en resulterande status för efterlevnadsprincip
+
+Om en enhet har flera tilldelade efterlevnadsprinciper och enheten har olika efterlevnadsstatus för två eller fler av de tilldelade efterlevnadsprinciperna, måste en enda resulterande efterlevnadsstatus tilldelas. Den här tilldelningen baseras på en konceptuell allvarlighetsgrad som tilldelas till varje efterlevnadsstatus. Varje efterlevnadsstatus har följande allvarlighetsgrad: 
+
+|Status  |Allvarlighetsgrad  |
+|---------|---------|
+|Okänt     |1|
+|NotApplicable     |2|
+|Kompatibel|3|
+|InGracePeriod|4|
+|NonCompliant|5|
+|Fel|6|
+
+En resulterande status med två eller flera efterlevnadsprinciper fastställs sedan genom att välja den högsta allvarlighetsgraden för alla principer som är tilldelade till en enhet.
+ 
+Anta exempelvis att en enhet har tre tilldelade efterlevnadsprinciper: en med statusen Okänt (allvarlighetsgrad = 1), en med statusen Kompatibel (allvarlighetsgrad = 3) och en med statusen InGracePeriod (allvarlighetsgrad = 4). Statusen InGracePeriod har högst allvarlighetsgrad, så den tilldelas som resulterande efterlevnadsstatus för alla tre profilerna.  
 
 ##  <a name="ways-to-use-device-compliance-policies"></a>Hantera efterlevnadsprinciper för enheter
 
@@ -112,6 +164,10 @@ Du kan använda efterlevnadsprinciper med villkorlig åtkomst om du endast vill 
 Du kan också använda principer för enhetsefterlevnad oberoende av villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. Men när du använder efterlevnadsprinciper separat tillämpas inga åtkomstbegränsningar på företagsresurser.
 
 Du distribuerar efterlevnadsprinciper till användarna. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven. Information om hur lång tid det tar för mobila enheter att hämta en princip efter att den har distribuerats finns i [Troubleshooting device profiles in Microsoft Intune](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned) (Felsöka enhetsprofiler i Microsoft Intune).
+
+#### <a name="actions-for-non-compliance"></a>Åtgärder vid inkompatibilitet
+
+Med åtgärder för inkompatibilitet kan du konfigurera en tidsordnad sekvens med åtgärder som tillämpas på enheter som inte uppfyller villkoren för efterlevnadsprinciperna. Mer information finns i [Automatisera åtgärder för inkompatibilitet](actions-for-noncompliance.md).
 
 ##  <a name="using-device-compliance-policies-in-the-intune-classic-portal-vs-azure-portal"></a>Använda efterlevnadsprinciper för enheter i Intune kontra Azure-portalen
 
@@ -126,16 +182,18 @@ Observera de viktigaste skillnaderna som hjälper dig att övergå till det nya 
 
 ##  <a name="migrate-device-compliance-policies-from-the-intune-classic-portal-to-the-azure-portal"></a>Migrera enhetsefterlevnadsprinciper från den klassiska portalen för Intune till Azure Portal
 
-Principer för enhetsefterlevnad som skapats i den [klassiska Intune-portalen](https://manage.microsoft.com) visas inte i nya [Intune Azure Portal](https://portal.azure.com). De kommer dock fortfarande att vara riktade till användarna och kunna hanteras via den klassiska Intune-portalen.
+Principer för enhetsefterlevnad som har skapats i den [klassiska Intune-portalen](https://manage.microsoft.com) visas inte i nya [Intune Azure Portal](https://portal.azure.com). De kommer dock fortfarande att vara riktade till användarna och kunna hanteras via den klassiska Intune-portalen.
 
-Om du vill dra nytta av de funktioner i Azure Portal som relaterar till den nya enhetsefterlevnaden, så måste du skapa nya principer för enhetsefterlevnad i Azure Portal. Om du tilldelar en användare en ny princip för enhetsefterlevnad i Azure Portal-portalen, och denna användare även har tilldelats en princip för enhetsefterlevnad från den klassiska Intune-portalen, så har principerna för enhetsefterlevnad från Azure Portal företräde framför dem från den klassiska Intune-konsolen.
+Om du vill dra nytta av de funktioner i Azure Portal som relaterar till den nya enhetsefterlevnaden måste du skapa nya principer för enhetsefterlevnad i Azure Portal. Om du tilldelar en användare en ny princip för enhetsefterlevnad i Azure Portal-portalen, och denna användare även har tilldelats en princip för enhetsefterlevnad från den klassiska Intune-portalen, så har principerna för enhetsefterlevnad från Azure Portal företräde framför dem från den klassiska Intune-konsolen.
 
 ##  <a name="next-steps"></a>Nästa steg
 
-Skapa en princip för enhetsefterlevnad för följande plattformar:
+- Skapa en princip för enhetsefterlevnad för följande plattformar:
 
-- [Android](compliance-policy-create-android.md)
-- [Android for Work](compliance-policy-create-android-for-work.md)
-- [iOS](compliance-policy-create-ios.md)
-- [macOS](compliance-policy-create-mac-os.md)
-- [Windows](compliance-policy-create-windows.md)
+   - [Android](compliance-policy-create-android.md)
+   - [Android for Work](compliance-policy-create-android-for-work.md)
+   - [iOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows](compliance-policy-create-windows.md)
+
+- Information om principentiteter för Intune-informationslagret finns i [Referens för principentiteter](reports-ref-policy.md).

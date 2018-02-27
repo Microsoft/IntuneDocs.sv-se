@@ -470,6 +470,30 @@
           href: conditional-access-assign-jamf.md
     - name: Skydda data på enheter
       items:
+        - name: Använd programskyddsprinciper
+          href: app-protection-policy.md
+          items:
+            - name: Skapa programskyddsprinciper
+              href: app-protection-policies.md
+              items:
+                - name: Inställningar för Android
+                  href: app-protection-policy-settings-android.md
+                - name: Inställningar för iOS
+                  href: app-protection-policy-settings-ios.md
+                - name: Undantag för dataöverföringsprinciper
+                  href: app-protection-policies-exception.md
+                - name: Granska appskyddsloggarna i Managed Browser
+                  href: app-protection-policy-settings-log.md
+            - name: Verifiera programskyddsprinciper
+              href: app-protection-policies-validate.md
+            - name: Övervaka användarstatus för programskydd
+              href: app-protection-policies-monitor.md
+            - name: Bli redo för WIP-programskyddsprinciper
+              href: app-protection-policies-configure-windows-10.md
+            - name: Skapa och tilldela WIP-programskyddsprinciper
+              href: windows-information-protection-policy-create.md
+            - name: Hantera dataöverföring mellan iOS-appar
+              href: data-transfer-between-apps-manage-ios.md
         - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:

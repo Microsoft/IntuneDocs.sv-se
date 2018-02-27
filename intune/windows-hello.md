@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/25/2018
+ms.date: 02/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3fb7de9fb320b74895b702167750e149eba34e1e
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 465de83c5bd15cfab67a4307000c0aa9cbfb1730
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-windows-hello-for-business"></a>Använda Windows Hello för företag
 
@@ -50,7 +50,7 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2.  Välj **Endpoint Protection** på Intune-bladet och välj sedan **Hantera** > **Windows Hello för företag**.
+2.  På bladet Intune väljer du **Enhetsregistrering** och väljer sedan **Windows-registrering** > **Windows Hello för företag**.
 
 3.  På bladet som öppnas väljer du inställningen **Standard**.
 
