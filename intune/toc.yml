@@ -606,6 +606,10 @@
           href: end-user-apps-ios.md
         - name: Så här hämtar du Windows-appar
           href: end-user-apps-windows.md
+        - name: Data som Intune skickar till Apple
+          href: data-intune-sends-to-apple.md
+        - name: Data som Intune skickar till Google
+          href: data-intune-sends-to-google.md
     - name: Övervaka och felsöka
       items:
         - name: Hjälpa användare att felsöka problem
