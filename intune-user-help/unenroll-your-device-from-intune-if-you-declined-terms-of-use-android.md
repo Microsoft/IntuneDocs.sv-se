@@ -1,4 +1,4 @@
----
+﻿---
 title: "Avregistrera din enhet om du har avvisat användningsvillkoren | Microsoft Docs"
 description: 
 keywords: 
