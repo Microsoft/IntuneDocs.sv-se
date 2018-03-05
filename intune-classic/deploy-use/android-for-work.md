@@ -12,11 +12,11 @@ ms.technology:
 ms.assetid: aa0002d9-f5a0-466e-98ac-3970cb77e3a2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: 17c066ee7208790a591272ae5e1edc99cf2141a4
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: d7939a20e9729487ce5824ba3f67cd84ec970032
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="manage-android-for-work-devices-with-intune"></a>Hantera Android for Work-enheter med Intune
 
@@ -40,7 +40,7 @@ I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konf
 
 ## <a name="app-publishing-and-distribution"></a>Publicering och distribution av appar
 
-Google Play for Work-tjänsten är en viktig del av distributionen och hanteringen av Android for Work-appar. Alla appar som har distribuerats till Android for Work-enheter i arbetsprofilen kommer från Play for Work-tjänsten. För att hantera och distribuera appar i Play Store måste du logga in på Google Plays webbplats med ditt företags administratörsautentiseringsuppgifter för Google-hantering. Du kan godkänna appar för Android for Work-distribution så att de visas i enheternas arbetsprofiler. De här apparna synkroniseras sedan med Intune-konsolen där de sedan kan distribueras och hanteras med hjälp av Intune. Affärsappar (LOB) som utvecklats av din organisation måste publiceras till Play for Work med hjälp av Googles publiceringskonsol för Android-appar. Affärsappar måste konfigureras i publiceringskonsolen för Android-appar för att begränsa åtkomsten till din organisation.
+Google Play for Work-tjänsten är en viktig del av distributionen och hanteringen av Android for Work-appar. Alla appar som har distribuerats till Android for Work-enheter i arbetsprofilen kommer från Play for Work-tjänsten. För att hantera och distribuera appar i Play Store måste du logga in på Google Plays webbplats med ditt företags administratörsautentiseringsuppgifter för Google-hantering. Du kan godkänna appar för Android for Work-distribution så att de visas i enheternas arbetsprofiler. De här apparna synkroniseras sedan med Intune-konsolen där de sedan kan distribueras och hanteras med hjälp av Intune. Affärsappar (LOB) som utvecklats av din organisation måste publiceras till Play for Work med hjälp av Googles publiceringskonsol för Android-appar. Verksamhetsspecifika appar måste konfigureras i publiceringskonsolen för Android-appar för att begränsa åtkomsten till din organisation.
 
 Appar kan installeras utan användarinteraktion och utan att användaren måste tillåta **installation från okända källor**. Användarna kan söka och installera valfria eller tillgängliga appar i Play for Work-butiken på sin enhet. Lär dig mer om hur du [distribuerar appar för Android for Work](/intune-classic/deploy-use/android-for-work-apps).
 

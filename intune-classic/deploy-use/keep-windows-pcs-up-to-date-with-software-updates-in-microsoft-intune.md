@@ -14,11 +14,11 @@ ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 85299c97c2b0c605adbb83a7c6e8017360511609
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: c31d1e44b4b96995223f4294655d8e0730170f47
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune
 
@@ -198,7 +198,7 @@ Du kan använda listan **Filter** om du vill göra det lättare att söka efter 
 
 När du väljer en uppdatering från listan blir ytterligare kommandon tillgängliga som gör att du kan hantera uppdateringar på det sätt som visas i följande tabell:
 
-|Aktivitet|Information|
+|Uppgift|Information|
 |--------|--------------------|
 |**Visa egenskaper**|Visar detaljerad information om uppdateringen inklusive hur många datorer som den är tillämpbar för.|
 |**Redigera**|Endast för uppdateringar för program som inte kommer från Microsoft. Gör att du kan redigera egenskaperna för uppdateringen.|

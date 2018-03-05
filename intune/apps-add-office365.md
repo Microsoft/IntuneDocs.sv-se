@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/14/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ee1657351551ea83c6089c5ac52655b9cd64fc2
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f6ef1d1dab39a6939b80bd13ba090424a67c6f53
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="how-to-assign-office-365-proplus-2016-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus 2016-appar till Windows 10-enheter med Microsoft Intune
+# <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus-appar till Windows 10-enheter med Microsoft Intune
 
-Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
+Med den här apptypen kan du enkelt tilldela Office 365 ProPlus-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -32,10 +32,11 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus 2016-appar till 
 >Den här metoden för att installera Office stöds endast om inga andra versioner av Microsoft Office är installerade på enheten.
 
 - Enheterna måste köra Windows 10 Creators Update eller senare.
-- Intune har endast stöd för att lägga till Office-appar från Office 365 ProPlus 2016.
-- Om alla Office-program är öppna när Intune installerar appen kan slutanvändare förlora data från filer som inte sparats.
-- Den här installationsmetoden stöds inte på Windows 10S-enheter.
+- Intune har endast stöd för att lägga till Office-appar från Office 365 ProPlus.
+- Om alla Office-program är öppna när Intune installerar appen kan installationen misslyckas och slutanvändare kan förlora data från filer som inte sparats.
+- Den här installationsmetoden stöds inte på Windows 10S-, Windows Home-, Windows Team-, Windows Holographic- eller Windows Holographic for Business-enheter.
 - Intune stöder inte installation av Office 365-skrivbordsappar från Microsoft Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
+- Många obligatoriska eller tillgängliga apptilldelningar är inte additiva. En senare tilldelning av en app överskriver de befintliga installerade apptilldelningarna. Om den första uppsättningen Office-program innehåller Word och den senare inte gör det så kommer exempelvis Word att avinstalleras. Detta gäller inte för Visio- eller Project-program.
 
 
 ## <a name="get-started"></a>Kom igång

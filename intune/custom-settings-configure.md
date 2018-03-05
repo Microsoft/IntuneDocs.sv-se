@@ -11,15 +11,13 @@ ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6e3821f40cdf1c36f020bf807eed5c6fbd83a9aa
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: cafcf95cc9025872ce0fbb9605c9d820aa7a19c0
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-configure-custom-device-settings-in-microsoft-intune"></a>Så här konfigurerar du anpassade enhetsinställningar i Microsoft Intune
 
@@ -47,12 +45,13 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **Windows Phone 8.1**
     - **Windows 10 och senare**
 6. I listrutan **Profil**typ väljer du **Anpassad**.
-7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
+7. Beroende på vilken plattform du väljer så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android](custom-settings-android.md)
     - [Inställningar för iOS](custom-settings-ios.md)
     - [Inställningar för macOS](custom-settings-macos.md)
     - [Inställningar för Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](custom-settings-windows-10.md)
+    - [Inställningar för Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Inställningar för Android for Work](custom-settings-android-for-work.md)
 8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
 

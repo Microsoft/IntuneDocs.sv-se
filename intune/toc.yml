@@ -138,6 +138,8 @@
           href: groups-add.md
         - name: Tilldela licenser
           href: licenses-assign.md
+        - name: Intune-licenser
+          href: licenses.md
         - name: Ange MDM-utfärdare
           href: mdm-authority-set.md
     - name: Registrera enheter
@@ -194,6 +196,8 @@
           href: device-locate.md
         - name: Aktivera förlorat läge i iOS
           href: device-lost-mode.md
+        - name: Aktivera övervakat läge på iOS
+          href: device-supervised-mode.md
         - name: Låsa enheten
           href: device-remote-lock.md
         - name: Återställ lösenord
@@ -251,7 +255,7 @@
             - name: Webbappar
               href: web-app.md
             - name: Inbyggda appar
-              href: apps-add-bulit-in.md
+              href: apps-add-built-in.md
         - name: Distribuera appar
           href: apps-deploy.md
           items:
@@ -287,6 +291,26 @@
           items:
             - name: Rensa program selektivt
               href: apps-selective-wipe.md
+            - name: Använd programskyddsprinciper
+              href: app-protection-policy.md
+              items:
+                - name: Skapa programskyddsprinciper
+                  href: app-protection-policies.md
+                  items:
+                    - name: Inställningar för Android
+                      href: app-protection-policy-settings-android.md
+                    - name: Inställningar för iOS
+                      href: app-protection-policy-settings-ios.md
+                - name: Verifiera programskyddsprinciper
+                  href: app-protection-policies-validate.md
+                - name: Övervaka användarstatus för programskydd
+                  href: app-protection-policies-monitor.md
+                - name: Bli redo för WIP-programskyddsprinciper
+                  href: app-protection-policies-configure-windows-10.md
+                - name: Skapa och tilldela WIP-programskyddsprinciper
+                  href: windows-information-protection-policy-create.md
+                - name: Hantera dataöverföring mellan iOS-appar
+                  href: data-transfer-between-apps-manage-ios.md
     - name: Konfigurera enheter
       href: device-profiles.md
       items:
@@ -444,7 +468,7 @@
           href: conditional-access-integrate-jamf.md
         - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
           href: conditional-access-assign-jamf.md
-    - name: Skydda app- och enhetsdata
+    - name: Skydda data på enheter
       items:
         - name: Använd programskyddsprinciper
           href: app-protection-policy.md
@@ -456,6 +480,10 @@
                   href: app-protection-policy-settings-android.md
                 - name: Inställningar för iOS
                   href: app-protection-policy-settings-ios.md
+                - name: Undantag för dataöverföringsprinciper
+                  href: app-protection-policies-exception.md
+                - name: Granska appskyddsloggarna i Managed Browser
+                  href: app-protection-policy-settings-log.md
             - name: Verifiera programskyddsprinciper
               href: app-protection-policies-validate.md
             - name: Övervaka användarstatus för programskydd
@@ -578,6 +606,10 @@
           href: end-user-apps-ios.md
         - name: Så här hämtar du Windows-appar
           href: end-user-apps-windows.md
+        - name: Data som Intune skickar till Apple
+          href: data-intune-sends-to-apple.md
+        - name: Data som Intune skickar till Google
+          href: data-intune-sends-to-google.md
     - name: Övervaka och felsöka
       items:
         - name: Hjälpa användare att felsöka problem
@@ -651,6 +683,8 @@
           href: reports-proc-data-rest.md
         - name: API-slutpunkt för informationslager
           href: reports-api-url.md
+        - name: Autentisering endast med program för informationslager
+          href: data-warehouse-app-only-auth.md
         - name: Datamodellen informationslager
           href: reports-ref-data-model.md
           items:

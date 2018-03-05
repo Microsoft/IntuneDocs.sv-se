@@ -12,11 +12,11 @@ ms.technology:
 ms.assetid: e018e31d-e524-4b41-8f47-399ab0ead6ca
 ms.reviewer: pchacon
 ms.suite: ems
-ms.openlocfilehash: 7d204f97f1d6e6aad55e5b7f1b53c8c751190b0f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ead246477ed4fe50798df7023c32041cb30a39f4
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Minska kostnaderna för supportavdelningen med självbetjäning för återställning av lösenord
 
@@ -35,7 +35,7 @@ Du kan låta anställda återställa lösenord för arbets- och skolkonton utan 
 ## <a name="next-steps"></a>Nästa steg
 
 Läs mer om följande avsnitt:
-* [Metodtips för lösenord](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwordsd) 
+* [Metodtips för lösenord](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Licensiera självbetjäning för återställning av lösenord](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 
 Behöver du hjälp med att aktivera det här eller andra scenarier för EMS eller Office 365? Om du har minst 150 licenser för Microsoft 365, Enterprise Mobility + Security eller Azure Active Directory Premium kan du använda dina [FastTrack-förmåner](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

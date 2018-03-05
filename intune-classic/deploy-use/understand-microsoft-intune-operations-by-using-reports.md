@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: pbala
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f812a740f5a703479e001fa2c5b6d1fd3336a2e2
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9f8c1df81e8d5b4f41fa5df26aadf8e8dd0f18bd
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="understand-microsoft-intune-operations-by-using-reports"></a>Förstå Microsoft Intune-aktiviteter med hjälp av rapporter
 
@@ -32,9 +32,9 @@ Intune-rapporter tillhandahåller information om programvara, maskinvara och lic
 
 ## <a name="report-types"></a>Rapporttyper
 
-|Rapporttyp|Beskrivning|
+|Rapporttyp|Description|
 |---------------|---------------|
-|**Uppdateringsrapporter**|Visa programvaruuppdateringar som har slutförts på datorer i din organisation. Du kan också se misslyckade, väntande och nödvändiga uppdateringar. Mer information om programuppdateringar finns i [Hålla datorerna uppdaterade med programvaruuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).|
+|**Uppdateringsrapporter**|Visa programvaruuppdateringar som har slutförts på datorer i din organisation. Du kan också se misslyckade, väntande och nödvändiga uppdateringar. Mer information om programuppdateringar finns i [Hålla Windows-datorer uppdaterade med programvaruppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md).|
 |**Rapporter om identifierad programvara**|Visa programvara som har installerats på datorer i din organisation. Du kan även se programvaruversionerna. Du kan filtrera den information som visas utifrån utgivare och programkategori. Du kan expandera uppdateringarna i listan om du vill visa mer information (t.ex. vilka datorer som uppdateringen har installerats på) genom att klicka på riktningspilen bredvid listposten.<br /><br />När du återställer datorer eller ändrar deras gruppmedlemskap i Intune kan det ta flera minuter innan ändringarna återspeglas i rapporten om identifierad programvara. Om du vill ha så korrekt programinformation som möjligt bör du vänta några minuter från det att du har tagit bort datorer eller ändrat deras gruppmedlemskap och till dess att du kör en rapport för identifierad programvara som inkluderar dessa datorer.|
 |**Datorinventeringsrapporter**|Visar information om hanterade datorer i din organisation. Använd den här rapporten du planerar maskinvaruinköp och vill veta mer om vilka behov av maskinvara som användarna i din organisation har. Mer information om hur du arbetar med hanterade datorer finns i [Hantera Windows-datorer med Microsoft Intune](manage-windows-pcs-with-microsoft-intune.md).|
 |**Rapporter om inventering av mobila enheter**|Visar information om mobila enheter i din organisation. Du kan filtrera den information som visas efter grupptillhörighet, huruvida enheten är jailbroken eller rotad eller efter operativsystem.|

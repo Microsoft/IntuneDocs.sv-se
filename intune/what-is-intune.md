@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 nmanager: dougeby
-ms.date: 10/30/2017
+ms.date: 02/14/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +14,25 @@ ms.technology:
 ms.assetid: 4a085264-232a-4af0-97f1-747496c44517
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 19b5d98165be67b32afa86ba942c42fc4a3048b3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6e2528c243938e81a6f730a950ee3949ca44047c
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="introduction-to-microsoft-intune-in-the-azure-portal"></a>Introduktion till Microsoft Intune i Azure-portalen
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune finns nu i Azure-portalen och detta innebär att de arbetsflöden och de funktioner som du har vant dig vid har ändrats.
-Den nya portalen erbjuder nya och uppdaterade funktioner i Azure Portal där du kan hantera din organisations mobila enheter, datorer och appar.
+Microsoft Intune är tillgängligt i Azure Portal, precis som många andra Azure-tjänster. Genom att välja **Intune** i Azure Portal kan du hantera din organisations mobila enheter, datorer och appar.
 
-* [Var tog mina saker vägen i Azure? ](ui-changes.md) är en referens till specifika arbetsflöden och användargränssnitt som har ändrats med övergången till Azure.
-* [Klassiska Intune-grupper i Azure portal](groups-get-started.md) beskriver konsekvenserna av en övergång till Azure Active Directory-säkerhetsgrupper för grupphantering.
+>[!NOTE] 
+> Om du har använt en tidigare version av Microsoft Intune så kan följande information vara till hjälp:
+    * [Var tog mina saker vägen i Azure? ](ui-changes.md) är en referens till specifika arbetsflöden och användargränssnitt som har ändrats med övergången till Azure.
+    * [Klassiska Intune-grupper i Azure portal](groups-get-started.md) beskriver konsekvenserna av en övergång till Azure Active Directory-säkerhetsgrupper för grupphantering.
 
-
-
-
-Du kan hitta information om den nya portalen i det här biblioteket som uppdateras kontinuerligt. Om du har några förslag är du välkommen att lämna feedback i kommentarsavsnittet. Vi vill gärna att du hör av dig.
-
-Viktiga nya funktioner:
+Exempel på viktiga funktioner i Microsoft Intune-miljön i Azure Portal:
 
 - En integrerad konsol för alla dina EMS-komponenter (Enterprise Mobility + Security)
 - En HTML-baserad konsol byggd på webbstandarder
@@ -61,41 +57,37 @@ För närvarande stöds följande webbläsare:
 
 Kolla på [Azure Portal](https://docs.microsoft.com/azure/azure-preview-portal-supported-browsers-devices) för den senaste informationen om vilka webbläsare som stöds.
 
-## <a name="whats-in-this-library"></a>Vad finns i det här biblioteket?
+## <a name="microsoft-intune-in-the-azure-portal"></a>Microsoft Intune i Azure-portalen
 
-Dokumentationen visar layouten för Azure-portalen för att göra det lättare att hitta den information du behöver.
+Du hittar Microsoft Intune-tjänsten på [Azure Portal](https://portal.azure.com). Det finns många tjänster i Azure och några av dem kommer du nog inte använda regelbundet. [Komma igång med Intune på Azure Portal](get-started-azure.md) innehåller en snabbguide som hjälper dig att anpassa din portal.
+
+## <a name="the-microsoft-intune-documentation"></a>Microsoft Intune-dokumentationen
+
+Det här avsnittet och hela dokumentationsuppsättningen för Microsoft Intune uppdateras kontinuerligt. Om du har några förslag är du välkommen att lämna feedback i kommentarsavsnittet. Vi vill gärna att du hör av dig.
+
+Dokumentationen visar layouten för Microsoft Intune i Azure Portal (visas nedan) så att du lättare hittar den information du behöver.
 
 ![Arbetsbelastningar i Azure-portalen](./media/azure-portal-workloads.png)
 
-### <a name="introduction-and-get-started"></a>Introduktion och att komma igång
-Det här avsnittet innehåller [en introduktion](introduction-intune.md) som hjälper dig att komma igång med Intune.
-### <a name="plan-and-design"></a>Planera och utforma
-Information som hjälper dig att [planera och utforma](/intune-classic/plan-design/introduction) din Intune-miljö.
-### <a name="device-enrollment"></a>Enhetsregistrering
-[Hur du får dina enheter att hanteras av Intune](device-enrollment.md).
-### <a name="device-compliance"></a>Efterlevnad för enhet
-[Definiera en efterlevnadsnivå för dina enheter och rapportera sedan om alla enheter som inte är kompatibla](device-compliance.md).
-### <a name="device-configuration"></a>Enhetskonfiguration
-[Lär dig om profilerna som du kan använda för att konfigurera inställningar och funktioner på enheter som du hanterar](device-profiles.md).
-### <a name="devices"></a>Egenskaper
-[Bekanta dig med de enheter du hanterar med hjälp av inventering och rapporter](device-management.md).
-### <a name="mobile-apps"></a>Mobilappar
-[Så publicerar, hanterar, konfigurerar och skyddar du appar](app-management.md).
-### <a name="conditional-access"></a>Villkorlig åtkomst
-[Begränsa åtkomsten till Exchange-tjänster utifrån de villkor som du anger](conditional-access.md).
-### <a name="on-premises-access"></a>Lokal åtkomst
-[Konfigurera åtkomst till Exchange ActiveSync och Exchange On-premises](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune)
-### <a name="users"></a>Användare
-[Lär dig mer om användarna av de enheter du hanterar och sortera resurser i grupper](users-add.md).
-### <a name="groups"></a>Grupper
-[Läs om hur du kan använda Azure Active Directory-grupper med Intune](groups-get-started.md)
-### <a name="intune-roles"></a>Intune-roller
-[Kontrollera vem som kan utföra olika Intune-åtgärder och vem dessa åtgärder gäller för](role-based-access-control.md). Du kan antingen använda de inbyggda roller täcker vissa vanliga scenarier för Intune eller du kan skapa egna roller.
-### <a name="software-updates"></a>Programuppdateringar
-[Läs om hur du konfigurerar programuppdateringar för Windows 10-enheter](windows-update-for-business-configure.md).
+### <a name="documentation-guide"></a>Dokumentationsguide
 
+Använd följande tabell för att snabbt hitta och förstå huvudområdena i Microsoft Intune.
 
+| Avsnitt                                                      | Description                                                                                                                                                                                                                                                                                      |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Introduktion och att komma igång](introduction-intune.md)       | Förstå grunderna i Intune, inklusive:<br /> – Vanliga lösningar<br /> – Hur Microsoft Intune fungerar<br /> – Enhetshantering i Intune<br /> – Apphantering i Intune<br /> – Enterprise Mobility Management (EMM) med och utan enhetsregistrering                                                         |
+| [Planera och utforma](planning-guide.md)                         | Vägledning som hjälper dig att planera och utforma din Microsoft Intune-miljö.                                                                                                                                                                                                             |
+| [Enhetsregistrering](device-enrollment.md)                    | Förstå hur Microsoft Intune hjälper dig att hantera personalens enheter genom att registrera enheter i Intune-tjänsten. Det finns flera metoder för att registrera personalens enheter.                                                                                                         |
+| [Efterlevnad för enhet](device-compliance.md)                    | Efterlevnadsprinciper definierar de regler och inställningar som en Intune-enhet måste följa för att anses vara kompatibla med Microsoft Intune. Några exempel på efterlevnad är till exempel att kräva ett lösenord för enhetsåtkomst, kryptera enheter eller kräva en lägsta version av operativsystemet. |
+| [Enhetskonfiguration](device-profiles.md)                   | Konfigurera inställningar och funktioner på alla enheter som hanteras med Microsoft Intune genom att skapa enhetsprofiler. Du kan till exempel konfigurera funktioner som meddelanden, delning av data, e-postsupport, Wi-Fi-anslutning, certifikat och slutpunktsskydd.              |
+| [Enheter](device-management.md)                              | Se till att enheter som du hanterar tillhandahåller de resurser som slutanvändarna behöver för att utföra sitt arbete, samtidigt som du skyddar företagets data så att de inte utsätts för risk. Hantera enheter genom att granska personalens enhetsinventering och utföra åtgärder på enheterna via en fjärranslutning.                                                      |
+| [Mobilappar](app-management.md)                             | Förstå hur du lägger till, distribuerar, övervakar, konfigurerar och skyddar appar.                                                                                                                                                                                                                             |
+| [Villkorlig åtkomst](conditional-access.md)                  | Definiera enhetsbaserade och appbaserade villkor som förhindrar åtkomst till företagets data.                                                                                                                                                                                                            |
+| [Användare](users-add.md)                                        | Lär dig hur du lägger till användare av enheter och appar som du hanterar.                                                                                                                                                                                                                                           |
+| [Grupper](groups-get-started.md)                              | Läs mer om hur du kan skapa och hantera grupper med Intune. Med hjälp av grupper kan du snabbt tilldela principer för att konfigurera och skydda enheter och appar.                                                                                                                                             |
+| [Intune-roller](role-based-access-control.md)                 | Lär dig hur du kontrollerar vem som kan utföra olika Intune-åtgärder och hur de här åtgärderna tillämpas. Du kan antingen använda de inbyggda roller täcker vissa vanliga scenarier för Intune eller du kan skapa egna roller.                                                                                 |
+| [Programuppdateringar](windows-update-for-business-configure.md) | Lär dig hur du konfigurerar programuppdateringar för Windows 10-enheter.                                                                                                                                                                                                                                  |
 
 ## <a name="whats-new"></a>Nyheter
 
-[Nyheter i Intune](whats-new.md).
+Läs informationen i [Nyheter](whats-new.md) och lär dig mer om de senaste funktionerna i Microsoft Intune.

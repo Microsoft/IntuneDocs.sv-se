@@ -14,11 +14,11 @@ ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9d67bf344be7a20853e21cf580939f1156d1a723
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: dc32063a952b198e830f061e0d8d3c0598a631d8
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Använd principer för att förenkla hanteringen av Windows-datorer
 
@@ -52,7 +52,7 @@ Microsoft Intune Center är installerat på alla hanterade datorer. Du kan konfi
 
 Information om principer och inställningar som du kan konfigurera för Windows-datorer finns i följande resurser:
 
-- [Hålla Windows-datorer uppdaterade med programuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md) – Dessa principer kör kontroller av hanterade datorer för, och laddar ned programvaruuppdateringar från, Microsoft och tredje parter. Dessa uppdateringar innehåller inte OS-uppgraderingar (t.ex. uppgradering från Windows 7 till Windows 10, eller uppgradering från en version av Windows 10 till en senare version).
+- [Hålla Windows-datorer uppdaterade med programuppdateringar i Microsoft Intune](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md) – Dessa principer kör kontroller av hanterade datorer för, och laddar ned programvaruuppdateringar från, Microsoft och tredje part. Dessa uppdateringar innehåller inte OS-uppgraderingar (t.ex. uppgradering från Windows 7 till Windows 10, eller uppgradering från en version av Windows 10 till en senare version).
 
 - [Skydda Windows-datorer med Endpoint Protection för Microsoft Intune](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md) – Dessa inställningar omfattar genomsökningsscheman och åtgärder som ska vidtas om skadlig kod upptäcks.
 

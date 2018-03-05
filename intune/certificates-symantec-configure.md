@@ -15,11 +15,11 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 449eaf2a22ca3a700eda2385af05a56e406f0c15
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5c02ea2df53b1524933cea72a8bcc3de89772e62
+ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Konfigurera Intune Certificate Connector för webbtjänsten Symantec PKI Manager
 
@@ -33,7 +33,7 @@ Webbtjänsten Symantec PKI Manager kallas Symantec CA i den här artikeln. Om du
 * SCEP-certifikat från en Microsoft CA
 * PKCS-certifikat från en Symantec CA
 
-Om du vill använda Intune Certificate Connector för Microsoft CA och Symantec CA så måste du först slutföra konfigurationen för Intune Certificate Connector för Microsoft CA och sedan följa de här stegen för att konfigurera för Symantec CA:n.  Mer information om hur du konfigurerar Intune Certificate Connector för en Microsoft-certifikatutfärdare finns i [Så här konfigurerar du certifikat i Microsoft Intune](certificates-configure.md).
+Om du vill använda Intune Certificate Connector för Microsoft CA och Symantec CA så måste du först slutföra konfigurationen för Intune Certificate Connector för Microsoft CA och sedan följa de här stegen för att konfigurera den för Symantec CA:n.  Mer information om hur du konfigurerar Intune Certificate Connector för en Microsoft-certifikatutfärdare finns i [Så här konfigurerar du certifikat i Microsoft Intune](certificates-configure.md).
 
 ## <a name="prepare-to-install-intune-certificate-connector"></a>Förbered installation av Intune Certificate Connector
 

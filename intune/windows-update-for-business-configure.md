@@ -6,19 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/01/2017
+ms.date: 1/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 08f659cf-715e-4e10-9ab2-1bac3c6f2366
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: fa9b09f97568b54a68f34a609c91426eb12b71e0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1a7d047de1faa019eb137516ef75d64657e22e5a
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -45,8 +44,9 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 - Windows Update stöder följande Windows 10-versioner:
     - Windows 10
     - Windows 10 Team (för Surface Hub-enheter)
+    - [Windows Holographic for Business](#windows-holographic-for-business-support)
 
- Enheter som kör Windows 10 Mobile och Windows 10 Holographic stöds inte.
+ Enheter som kör Windows 10 Mobile stöds inte.
 
 - På Windows-enheter måste du ställa in **Feedback och diagnostik** > **Diagnostik och användningsdata** på minst **Basic**.
 
@@ -89,8 +89,7 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
     Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Underhållskanal** (Halvårskanal (riktad) eller Halvårskanal) kan du definiera om, och hur länge, du vill fördröja mottagandet av funktionsuppdateringarna efter det att de gjorts tillgängliga av Microsoft på Windows Update.
 
-    Exempel:  
-    **Om Underhållskanal är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
+    Till exempel: **Om Underhållskanal är inställd på Halvårskanal (riktad) och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Enheten får inte uppdateringen förrän i februari – 30 dagar senare.
 
     **Om Underhållskanal är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att den här Halvårskanal-versionen släppts, och den uppdateras i maj.
 
@@ -154,3 +153,11 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando tar enheterna emot detta kommando nästa gång som de kontaktar tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.
 > Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
+
+## <a name="windows-holographic-for-business-support"></a>Stöd för Windows Holographic for Business
+
+Windows Holographic for Business har stöd för följande inställningar:
+
+- **Beteende för automatisk uppdatering**
+- **Uppdateringar för Microsoft-produkter**
+- **Underhållskanal**

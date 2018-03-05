@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ff936e49c6612d6a938b48497648a91ea0898f99
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: fb5663e291af9de1e8ff83f4ec0c584a15614d55
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="compliance-policy-settings-for-android-for-work-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android for Work-enheter i Microsoft Intune
 
@@ -30,10 +30,10 @@ Principinställningarna som beskrivs i det här avsnittet gäller för Android f
 Om du letar efter information om andra plattformar väljer du något av följande:
 > [!div class="op_single_selector"]
 - [Inställningar för efterlevnadsprinciper för Android](android-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för efterlevnadsprinciper för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
-## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 ### <a name="password"></a>Lösenord
 - **Kräv lösenord för att låsa upp mobila enheter:** Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 

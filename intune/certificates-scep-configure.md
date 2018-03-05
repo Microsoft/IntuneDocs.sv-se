@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aea88aa8898380c54867090650bd16d8bf60f3c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 61193cc96f0ea22e9a80d24fe8ee0499e80d4202
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -35,7 +35,7 @@ I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan
 -  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter.
 NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune Certificate Connector**: Använd Azure-portalen för att hämta installationsprogrammet för **certifikatanslutningsappen** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector. 
+-  **Microsoft Intune Certificate Connector**: Använd Azure-portalen för att hämta installationsprogrammet för **certifikatanslutningsappen** (**ndesconnectorssetup.exe**). Sedan kör du **ndesconnectorssetup.exe** på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) där du vill installera Certifikat Connector. 
 -  **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som en Web Application Proxy-server (WAP). Den här konfigurationen:
     -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
     -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
@@ -299,7 +299,7 @@ I den här uppgiften kommer du att:
 I den här uppgiften kommer du att:
 
 - Aktivera stöd för NDES i Intune.
-- Ladda ned, installera och konfigurera en Certificate Connector på en server i din miljö. Du kan installera flera instanser av Certificate Connector på olika servrar för att få stöd för hög tillgänglighet.
+- Ladda ned, installera och konfigurera en Certificate Connector på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) på en server i din miljö. Du kan installera flera NDES-servrar med en Microsoft Intune Certificate Connector-komponent på varje NDES-server för att öka skalbarheten för NDES-implementering i din organisation.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här hämtar, installerar och konfigurerar du certifikatanslutningsappen
 ![ConnectorDownload](./media/certificates-download-connector.png)   
@@ -309,7 +309,7 @@ I den här uppgiften kommer du att:
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 4. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
 5. Klicka på **Lägg till** och välj **Download Connector file** (Ladda ned anslutningsfil). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den. 
-6.  När hämtningen är klar kör du det hämtade installationsprogrammet (**ndesconnectorssetup.exe**) på en Windows Server 2012 R2-server. Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. (CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS).
+6.  När nedladdningen är klar kör du installationsprogrammet (**ndesconnectorssetup.exe**) på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. (CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS).
 
     > [!NOTE]
     > När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen. När du använder Intune med Configuration Manager installerar du certifikatregistreringsplatsen som en separat platssystemroll.

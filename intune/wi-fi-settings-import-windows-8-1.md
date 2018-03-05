@@ -6,26 +6,24 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/03/2017
+ms.date: 1/25/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 2c4e9b19-b268-4f6d-9663-7cdbe4e4a8dd
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a587ef87afd9a8629ac6a274fe87406fb24f79f7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 5b4b77f9c9c1c957e3332c20e010a5e8e8ec2b56
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Så här importerar du trådlösa inställningar för enheter med Windows 8.1 och senare i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-För enheter som kör Windows 8.1 och Windows 10 (Desktop eller Mobile) kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil.
+För enheter som kör operativsystemen Windows 8.1, Windows 10 Desktop eller Mobile, eller Windows Holographic for Business, kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil.
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Exportera trådlösa inställningar från en Windows-enhet
 
@@ -43,9 +41,13 @@ I Windows kan du använda verktyget **netsh wlan** för att exportera en befintl
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
 3. Välj **Skapa profil** på profilbladet.
 4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+
+   > [!WARNING]
+   > Namnet **måste** vara samma namn som namnattributet i Wi-Fi-profilens xml-fil, annars misslyckas det.
+
 5. I listrutan **Plattform** väljer du **Windows 8.1 och senare**.
 6. I listrutan **Profiltyp** väljer du **Trådlöst (import)**.
-7. På bladet **Trådlöst basnätverk** konfigurerar du följande:
+7. På bladet **Trådlöst basnätverk** konfigurerar du följande inställningar:
     - **Anslutningsnamn** Ange namnet på den trådlösa anslutningen. Det här namnet visas för slutanvändarna när de bläddrar bland tillgängliga trådlösa nätverk.
     - **XML-profil** Klicka på bläddringsknappen för att välja XML-filen som innehåller de trådlösa profilinställningar som du vill importera till Intune.
     - **Filinnehåll** Visar XML-koden för den konfigurationsprofil du har valt.

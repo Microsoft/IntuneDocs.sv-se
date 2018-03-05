@@ -15,11 +15,11 @@ ms.assetid: 359448d9-2384-42ac-a21c-a25148c20a7b
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0db27bb8f83c7183b411705b16bbb9ad4d357e39
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: beaf027334ce4929e4ca824b2b7e199cea22a832
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="set-up-the-skycure-integration-with-intune"></a>Konfigurera Skycure-integrering med Intune
 
@@ -37,7 +37,7 @@ Skycure har stöd för två integreringslägen med Intune:
 
 -   **Skrivskyddad integrering (grundinställning):** Inventerar endast enheter från Azure Active Directory och fyller i dem i Skycure-konsolen.
 <br>
-    -   Om rutorna **Rapportera hälsotillstånd och enhetsrisker till Intune** och **Rapportera även säkerhetsincidenter till Intune** inte är markerade i Skycure Management Console, är integreringen skrivskyddad och ändrar därför aldrig enhetstillståndet (kompatibla eller icke-kompatibla) i Intune.
+    -   Om rutorna **Rapportera hälsotillstånd och enhetsrisker till Intune** och **Rapportera även säkerhetsincidenter till Intune** inte är markerade i Skycure Management Console, är integreringen skrivskyddad och ändrar därför aldrig tillståndet för en enhet (kompatibel eller icke-kompatibel) i Intune.
 <br></br>
 -   **Fullständig integrering:** Tillåter att Skycure rapporterar information om enheternas risker och säkerhetsincidenter till Intune, vilket skapar en dubbelriktad kommunikation mellan båda molntjänsterna.
 

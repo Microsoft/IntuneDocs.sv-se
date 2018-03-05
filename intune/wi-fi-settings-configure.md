@@ -6,20 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/03/2017
+ms.date: 1/25/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1fadb488-9c6c-43c1-ba23-8c69db633b96
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 161b0de7d697a4ed2d8f80dffdef71296eb6ced2
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e03df2525b413ca33f81836292a05dac11bb8349
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -33,6 +31,8 @@ Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet Contoso 
 2. Tilldela profilen till en grupp som innehåller alla användare av iOS-enheter.
 3. Det nya nätverket Contoso Wi-Fi visas i listan över trådlösa nätverk på användarnas enheter och de kan enkelt ansluta till det.
 
+## <a name="supported-device-platforms"></a>Enhetsplattformar som stöds
+
 Wi-Fi-profiler stöder följande enhetsplattformar:
 
 - Android 4 och senare
@@ -40,7 +40,7 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 - iOS 8.0 och senare
 - macOS (Mac OS X 10.9 och senare)
 
-För enheter som kör Windows 8.1, Windows 10 och Windows 10 Mobile, kan du importera en Wi-Fi-konfiguration som tidigare har exporterats från en annan enhet.
+För enheter som kör Windows 8.1, Windows 10, Windows 10 Mobile och Windows Holographic for Business kan du importera en Wi-Fi-konfiguration som tidigare har exporterats från en annan enhet.
 
 Använd informationen i det här avsnittet om du vill lära dig grunderna för hur du konfigurerar en Wi-Fi-profil. Läs sedan de specifika avsnitten om respektive plattform om du vill ha mer detaljerad information.
 
@@ -58,13 +58,22 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **iOS**
     - **macOS**
     - **Windows 8.1 och senare (importera en profil)**
-6. I listrutan **Profil** väljer du **Trådlöst basnätverk** eller **Trådlöst företagsnätverk**. Du kan använda **Trådlöst basnätverk** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Trådlöst företagsnätverk** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. **Wi-Fi-import** (för Windows 8.1 och Windows 10) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
-7. Beroende på vilken plattform du har valt så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
+
+   > [!IMPORTANT]
+   > Om du skapar en profil för enheter som kör Windows 10, inklusive Windows Holographic for Business, så måste du välja plattformen **Windows 8.1 och senare**. Plattformen **Windows 10 och senare** omfattar inte en Wi-Fi-profiltyp. 
+
+6. I listrutan **WiFi-typ** väljer du **Grundläggande** eller **Företag** på Apple- eller Android-enheter. Du kan använda **Grundläggande** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Företag** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. 
+
+   Profilen **Wi-Fi-import** (för Windows 8.1 och senare) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
+1. Beroende på vilken plattform du väljer så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android och Android for Work](wi-fi-settings-android.md)
     - [Inställningar för iOS](wi-fi-settings-ios.md)
     - [Inställningar för macOS](wi-fi-settings-macos.md)
-    - [Inställningar för Windows Phone 8.1](wi-fi-settings-import-windows-8-1.md)
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+    - [Inställningar för Windows 8.1 och senare](wi-fi-settings-import-windows-8-1.md) (inklusive Windows Holographic for Business)
+1. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
 
 Profilen skapas och visas på bladet med profillistan.
+
+## <a name="next-steps"></a>Nästa steg
+
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).

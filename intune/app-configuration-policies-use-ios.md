@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,17 +15,24 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97084d0155788fc6aa0604454b46e783a3eb271b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b64d8b60a4c577acc2f6ef161f6de37ac529e7ac
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en iOS-app. Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem, oftast första gången den körs.
+
+Du kan tilldela en programkonfigurationsprincip till en grupp användare och enheter genom att använda en kombination av tilldelningar som inkluderar och exkluderar. När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare och alla enheter**. 
+
+>[!NOTE]
+>Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du själv har skapat.
+
+När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen kan du även välja de specifika grupper som du vill exkludera.
 
 > [!TIP]
 > Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
@@ -52,9 +59,24 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 7.  Välj **Tillhörande app**. På bladet **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på.
 8.  På bladet **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**.
 9. Välj **Format för konfigurationsinställningar**. Välj något av följande:
-    - **[Använd Configuration Designer](#Use-the-configuration-designer)**
+    - **[Använd Configuration Designer](#use-configuration-designer)**
     - **[Ange XML-data](#enter-xml-data)**
-10. Välj **OK** och sedan **Lägg till**.
+10. När du har lagt till XML-informationen väljer du **OK** och sedan väljer du **Lägg till** för att lägga till konfigurationsprincipen. Översiktsbladet för konfigurationsprincipen visas.
+11. Välj **Tilldelningar** för att visa alternativen för att inkludera och exkludera. 
+
+    ![Principtilldelningar](./media/app-config-policy01.png)
+12. Välj **Alla användare** på fliken **Inkludera**.
+
+    ![Principtilldelningar – Alla användare](./media/app-config-policy02.png)
+13. Välj fliken **Exkludera**. 
+14. Klicka på **Välj grupper att utesluta** för att visa det relaterade bladet.
+
+    ![Principtilldelningar – välj grupper att exkludera](./media/app-config-policy03.png)
+15. Välj de grupper som du vill exkludera och klicka sedan på **Välj**.
+
+    >[!NOTE]
+    >Om någon annan grupp redan har inkluderats för en viss tilldelning när du lägger till en grupp så blir den förvald och kan inte ändras för andra tilldelningstyper för inkludering. Gruppen som har använts kan därför inte användas som en undantagen grupp.
+16. Klicka på **Spara**.
 
 ## <a name="use-configuration-designer"></a>Använda Configuration Designer
 

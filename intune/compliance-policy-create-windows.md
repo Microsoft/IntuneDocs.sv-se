@@ -6,29 +6,27 @@ keywords:
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 2/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 13fc7783-d4de-47d0-b1b8-4c8710a9e6ab
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59a68bbe3c7030e44e4b1eacb5601dd7a3121673
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fe5a66ca91181d0cebdaea846f0ee08f9252d76b
+ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lär dig hur du skapar en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Efterlevnadsprinciper skapas för varje plattform.  Du kan skapa en efterlevnadsprincip i Azure-portalen. Mer information om vad en efterlevnadsprincip är finns i artikeln [Vad är enhetsefterlevnad](device-compliance.md). Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i artikeln [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+Efterlevnadsprinciper skapas för varje plattform. Du kan skapa en efterlevnadsprincip i Azure-portalen. Mer information om vad en efterlevnadsprincip är finns i artikeln [Vad är enhetsefterlevnad](device-compliance.md). Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i artikeln [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
-I tabellen nedan visas hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
+Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 
 ---------------------------
 
@@ -46,7 +44,7 @@ I tabellen nedan visas hur inkompatibla inställningar hanteras när en efterlev
 
 **Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)+
 
-**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheterna inte uppfyller efterlevnadskraven utförs följande åtgärder:+
+**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
 
 - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
 - Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
@@ -71,7 +69,7 @@ Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princi
 1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
 2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**.  När du väljer **Välj** distribueras principen till användarna.
 
-Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
+Du har tillämpat principen på användarna. Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
 
 <!---## Compliance policy settings--->
 
@@ -160,7 +158,7 @@ Använd den här inställningen i kombination med **Förhindra återanvändning 
 
 - **Förhindra återanvändning av tidigare lösenord:** – Stöds på Windows RT, Windows RT 8.1 och Windows 8.1
 
-Om **Spara lösenordshistorik** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
+Om **Spara lösenordshistorik:** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
 
 
 ## <a name="device-health-settings"></a>Inställningar för enhetens hälsotillstånd
@@ -190,6 +188,18 @@ Du kan ta reda på vilken operativsystemversion som krävs för inställningarna
 - Datorer med Windows 8.1 returnerar en **3**-version. Om regeln för operativsystemsversion är inställd på Windows 8.1 för Windows rapporteras enheten som inkompatibel även om den har Windows 8.1.
 - För datorer som kör Windows 10 anger du versionen som &quot;10.0&quot; + numret för operativsystemversionen som returneras av kommandot winver.
 
-<!--- ## Next steps
+## <a name="windows-holographic-for-business-support"></a>Stöd för Windows Holographic for Business
 
-[How to monitor device compliance](device-compliance-monitor.md)--->
+Windows Holographic for Business har stöd för följande inställningar:
+
+- Systemsäkerhet/kryptering
+
+  **Kryptering av datalagring på enheten**.
+
+Om du vill verifiera enhetskryptering på Microsoft HoloLens kan du läsa avsnittet [Verifiera enhetskryptering](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
+
+## <a name="next-steps"></a>Nästa steg
+
+Se följande avsnitt om du vill lära dig hur du kan övervaka enhetsefterlevnad:
+
+- [Hur du övervakar enhetsefterlevnad](device-compliance-monitor.md)

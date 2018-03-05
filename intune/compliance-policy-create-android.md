@@ -15,11 +15,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b67314ec37198553adc226424bc226293350453b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6da4e6ffb473cee73f3946e5af3d97ddd5bb6b7b
+ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i Intune
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 01/25/2018
 
 Principer för enhetsefterlevnad skapas för varje plattform i Intune Azure Portal. 
 
-- Mer information om vad en efterlevnadsprincip är finns i artikeln [Vad är enhetsefterlevnad](device-compliance.md).
-- Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i artikeln [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+- Mer information om efterlevnadsprinciper finns i [Vad är enhetsefterlevnad?](device-compliance.md).
+- Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 ## <a name="to-create-a-device-compliance-policy"></a>Skapa en princip för enhetsefterlevnad
 
 1. Välj **Ange enhetsefterlevnad** på bladet **Intune**. Välj **Alla enhetsefterlevnadsprinciper** under **Hantera** och välj sedan **Skapa**.
-2. Skriv ett namn, ge en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
+2. Skriv ett namn, ange en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
 3. Välj **Efterlevnadskrav** och ange inställningar för **Säkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskap**. När du är klar väljer du **OK**.
 
 <!-- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
@@ -48,7 +48,7 @@ Principer för enhetsefterlevnad skapas för varje plattform i Intune Azure Port
 
 Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnad – principer**.
 
-1. Välj principen och **Tilldelningar**. Då öppnas det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+1. Välj principen och **Tilldelningar**. Du kan sedan välja **Azure Active Directory-säkerhetsgrupper** och tilldela grupperna till principen.
 2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**. Här hittar du en lista över alla säkerhetsgrupper i Azure Active Directory.  Du kan välja de användargrupper som du vill att den här principen ska tillämpas på och välja **Välj**. När du väljer **Välj** distribueras principen till användarna.
 
 Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
@@ -57,7 +57,7 @@ Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som a
 
 ## <a name="device-health-and-security-settings"></a>Inställningar för enhetens för hälsotillstånd och säkerhet
 
-- **Enheten får inte vara upplåst (jailbroken/rooted):** Om du aktiverar den här inställningen kommer upplåsta enheter att utvärderas som inkompatibla.
+- **Enheten får inte vara jailbrokad eller rotad**: Om du aktiverar den här inställningen kommer jailbrokade enheter att utvärderas som inkompatibla.
 - **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)**: Om du vill blockera enheter som har aktiverat **Säkerhet** > **Okända källor** på enheten aktiverar du inställningen och väljer **Ja**.
 
 ### <a name="important"></a>Viktigt
@@ -67,19 +67,17 @@ Inställningen **Okända källor** måste vara aktiverad för program med separa
 - **Kräv att USB-felsökning är inaktiverat (Android 4.2 eller senare)**: Den här inställningen anger om du vill kontrollera om USB-felsökning är aktiverad på enheten.
 - **Kräv att ”Genomsök enhet efter säkerhetshot” (Android 4.2-4.4) är aktiverat på enheter**: Den här inställningen anger att funktionen **Verifiera appar** är aktiverad på enheten.
 - **Lägsta Android-säkerhetskorrigeringsnivå (Android 6.0 eller senare)**: Använd den här inställningen för att ange den lägsta Android-korrigeringsnivå. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste ha formatet ÅÅÅÅ-MM-DD.
-- **Kräv att enhetsskydd är aktiverat**: Använd den här inställningen för att använda riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Välj den högsta tillåtna hotnivån, som är en av följande:
-  - **Ingen (skyddad)**: Det här är det säkraste alternativet. Detta innebär att enheten inte kan ha några hot. Om hot identifieras på enheten kommer den utvärderas som icke-kompatibel.
+- **Kräv att enhetsskydd är aktiverat**: Använd den här inställningen för att ta riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Välj den högsta tillåtna hotnivån, som är en av följande:
+  - **Ingen (skyddad)**: Det här är den säkraste hotnivån. Detta innebär att enheten inte kan ha några hot. Om hot identifieras på enheten kommer den utvärderas som icke-kompatibel.
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  - **Hög**: Det här alternativet är minst säkert. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
-
-Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https://docs.microsoft.com/intune-classic/deploy-use/enable-device-threat-protection-rule-in-compliance-policy) för mer information.
+  - **Hög**: Det här är den minst säkra hotnivån. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Kräv lösenord för att låsa upp mobila enheter:** Välj **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 - **Minsta längd på lösenord**: Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
 - **Lösenordskvalitet**: Den här inställningen identifierar om lösenordskraven som du anger är konfigurerade på enheten. Aktivera den här inställningen för att kräva att användare uppfyller vissa lösenordskrav för Android-enheter. Välj mellan:
   - **Låg säkerhetsbiometri**
@@ -96,14 +94,14 @@ Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https:/
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kräv kryptering på den mobila enheten**: Välj **Ja** för den här inställningen om du vill kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
+- **Kräv kryptering på den mobila enheten**: Välj **Ja** för att kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
 
 ## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
 - **Lägsta operativsystemversion som krävs**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
-- **Högsta tillåtna operativsystemversion**: När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+- **Högsta tillåtna version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
-## <a name="how-non-compliant-settings-work-with-conditional-access-policies"></a>Hur fungerar inkompatibla inställningar med principer för villkorlig åtkomst?
+## <a name="how-noncompliant-settings-work-with-conditional-access-policies"></a>Hur fungerar inkompatibla inställningar med principer för villkorlig åtkomst?
 
 I tabellen nedan visas hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 

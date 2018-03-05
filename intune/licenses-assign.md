@@ -2,8 +2,8 @@
 title: Tilldela Intune-licenser
 description: "Tilldela licenser till användare för din Intune-prenumeration"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: get-started-article
@@ -14,17 +14,17 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b0fe556eaf548d51b35c843ee313264244144f9c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 2ad754ce3d81469bb172081b6b7f43937f45ffd9
+ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assign-intune-licenses-to-your-user-accounts"></a>Tilldela Intune-licenser till dina användarkonton
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Oavsett om du lägger till användare manuellt eller synkroniserar från din lokala Active Directory, så måste du först tilldela varje användare en Intune-licens innan de kan registrera sina enheter i Intune.
+Oavsett om du lägger till användare manuellt eller synkroniserar från din lokala Active Directory, så måste du först tilldela varje användare en Intune-licens innan de kan registrera sina enheter i Intune. En lista över licenser finns i [Licenser som inkluderar Intune](licenses.md).
 
 ## <a name="assign-an-intune-license-in-the-office-365-admin-center"></a>Tilldela en Intune-licens i administrationscentret för Office 365
 
@@ -52,7 +52,7 @@ Kontrollera att Intune A Direct-licensen också tilldelas när du tilldelar en I
 
 ![Bild av konfiguration av produktlicens](./media/i4e-set-licenses.png)
 
-Se den här [översikten över synkronisering av skolinformation](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91?ui=en-US&rs=en-US&ad=US) om du vill veta mer om SDS.
+Se den här [översikten över synkronisering av skolinformation](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) om du vill veta mer om SDS.
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Hur användar- och enhetslicenser påverkar åtkomsten till tjänster
 * Varje **användare** som du tilldelar en programanvändarlicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och hantera program och upp till 15 enheter.

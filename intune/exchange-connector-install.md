@@ -15,11 +15,11 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 39fb4b4b91eb6769eb1d5d95736cbbde141c6812
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: cb82b1a9af0cc8dd2f394747ce7ed8b695260bb9
+ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera Intune On-Premises Connector för lokal Exchange i Microsoft Intune Azure
 
@@ -39,7 +39,7 @@ Följande tabell innehåller kraven för datorn där du installerar den lokala E
 
 |Krav|Mer information|
 |---------------|--------------------|
-|Operativsystem|Intune stöder lokal Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012 eller Windows Server 2012 R2.<br /><br />Connector stöds inte i Server Core-installationer.|
+|Operativsystem|Intune stöder lokal Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Connector stöds inte i Server Core-installationer.|
 |Microsoft Exchange|Lokala anslutningar kräver Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den **nya** eller **äldre** konfigurationen kontaktar du din kontoansvariga.|
 |Utfärdare för hantering av mobila enheter| [Ange utfärdare för hantering av mobila enheter till Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
 |Maskinvara|Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.|users-add.md
@@ -152,7 +152,7 @@ Du kan också kontrollera datum och tid för det senaste lyckade synkroniserings
 
 ### <a name="system-center-operations-manager-scom-management-pack"></a>Hanteringspaket för System Center Operations Manager (SCOM)
 
-Från och med versionen Intune 1710 kan du använda [SCOM-hanteringspaketet för Exchange Connector och Intune](https://www.microsoft.com/en-us/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Det ger dig flera olika sätt att övervaka Exchange Connector när du behöver felsöka problem.
+Från och med versionen Intune 1710 kan du använda [SCOM-hanteringspaketet för Exchange Connector och Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Det ger dig flera olika sätt att övervaka Exchange Connector när du behöver felsöka problem.
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa en princip för villkorlig åtkomst för lokal Exchange](conditional-access-exchange-create.md)

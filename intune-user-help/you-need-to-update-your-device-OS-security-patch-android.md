@@ -15,15 +15,15 @@ searchScope:
 - User help
 ROBOTS: 
 ms.custom: intune-enduser
-ms.openlocfilehash: ef8d10a1bc06234930ae32a2ce0dc8b1503e89d0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3851095689f194a2133aaa1b0ac8712098662226
+ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Du måste uppdatera Android-enhetens operativsystem
 
-Om du ser ett meddelande som säger att "lägsta säkerhetskorrigeringsnivå för Android inte har konfigurerats" måste du installera en uppdatering för att se till att enheten förblir säker. En _korrigering_ lanseras för att underhålla programvaran så att den körs smidigt och är uppdaterad. Företagets support kräver att du installerar korrigeringen för att säkerställa att företagets data sparas så skyddat som möjligt på enheten. Platsen där den säkerhetskorrigeringsfil du behöver finns varierar beroende på typ av Samsung-enhet.
+Om du ser ett meddelande som säger att "lägsta säkerhetskorrigeringsnivå för Android inte har konfigurerats" måste du installera en uppdatering för att se till att enheten förblir säker. En _korrigering_ lanseras för att underhålla programvaran så att den körs smidigt och är uppdaterad. Företagets support kräver att du installerar korrigeringen för att säkerställa att företagets data sparas så skyddat som möjligt på enheten. Platsen där den säkerhetskorrigeringsfil du behöver finns varierar beroende på vilken typ av Android-enhet du har.
 
 Om du har en Samsung-enhet går du till **Inställningar** > **Om telefonen** och kontrollerar om ordet "Knox" finns någonstans på skärmen. Om så är fallet, följ Samsung Knox-anvisningarna här nedanför.
 

@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 51f26d630537901ad39a215062f820a2c243e077
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 096cd7f2f7895531b00d77c5d26413471fb9bbcf
+ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="skycure-mobile-threat-defense-connector"></a>Skycure Mobile Threat Defense-anslutningsprogram
 
@@ -43,7 +43,7 @@ Skycures mobilapp för Android eller iOS avbildar filsystem, nätverksstackar sa
 
 Intune-enhetens efterlevnadsprincip innehåller en regel för Skycure Mobile Threat Defense, som är baserad på Skycures riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
 
-Om enheten utvärderats som inkompatibel kommer åtkomst till resurser som Exchange Online och SharePoint Online blockeras. Användarna av blockerade enheter får anvisningar i Skycures mobilapp för att lösa problemet och återfå åtkomsten till företagets resurser.
+Om enheten utvärderats som inkompatibel blockeras åtkomst till resurser som Exchange Online och SharePoint Online. Användarna av blockerade enheter får anvisningar i Skycures mobilapp för att lösa problemet och återfå åtkomsten till företagets resurser.
 
 Intune stöder två lägen för integrering med Skycure:
 

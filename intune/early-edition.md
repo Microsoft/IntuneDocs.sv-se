@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ed427382b94f591559a2264f40455ab5254daadb
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 7d54cb060dc44d29c95203138396f771abbb2325
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2018"></a>Den tidiga utgåvan för Microsoft Intune – Februari 2018
 
@@ -40,6 +40,10 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 
 <!-- 1802 start -->
+
+### <a name="new-enrollment-failure-trend-chart-and-failure-reasons-table----1471783---"></a>Nytt trenddiagram för registreringsfel och tabell över felorsaker <!-- 1471783 -->
+
+På Registreringsöversiktssidan, kommer du att kunna se trenden för registreringsfel och de fem viktigaste felorsakerna. Genom att klicka på diagrammet eller tabellen, kan du gå in på detaljnivå för att hitta felsökningstips och åtgärdsförslag.
 
 ### <a name="prevent-end-users-from-adding-or-removing-accounts-in-the-work-profile----1728700---"></a>Förhindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen <!-- 1728700 -->    
 När du distribuerar Gmail-appen till en Android for Work-profil så kan du förhindra användare från att lägga till eller ta bort konton i arbetsprofilen genom att använda inställningen **Lägg till och ta bort konton** i profilen för enhetsbegränsningar i Android for Work.
@@ -76,9 +80,6 @@ Du kan exempelvis lägga till Webex-paketet som ett undantag till MAM-dataöverf
 ### <a name="customize-your-company-portal-themes-with-hex-codes---1049561-eeready--"></a>Anpassa teman för företagsportalen med hexkoder <!--1049561 eeready-->
 
 Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du anger en hexkod kan Intune bestämma vilken textkod som ger den högsta kontrastnivån mellan textfärgen och bakgrundsfärgen per [WCAG 2.0-standarder](http://www.w3.org/TR/WCAG20). Du kan förhandsgranska både textfärgen och företagets logotyp mot färgen i **Mobilappar** > **Företagsportal**. 
-
-### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963---"></a>Välj enhetskategorier med hjälp av inställningarna för åtkomst till arbete eller skola <!-- 1058963 --> 
-Om du har aktiverat [mappning av enhetsgrupp](https://docs.microsoft.com/intune/device-group-mapping), uppmanas Windows 10-användare att välja en enhetskategori efter registreringen via knappen **Anslut** i **Inställningar** > **Konton** > **Åtkomst till arbete eller skola** eller under välkomstprogrammet.
 
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 --> 
 
@@ -120,7 +121,7 @@ Två nya sekretessinställningar blir tillgängliga för enheter:
 
 Användarna kan använda Enhetsregistreringshanteraren när de registrerar sig med macOS-företagsportalen.
 
-#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Microsoft Edge-webbläsaren-webbläsaren <!--1469166 -->
+#### <a name="new-settings-for-the-edge-browser---1469166---"></a>Nya inställningar för Microsoft Edge-webbläsaren <!--1469166 -->
 
 Två nya inställningar blir tillgängliga för enheter med Microsoft Edge-webbläsaren: **Sökväg till favoritfiler** och **Ändringar i Favoriter**. 
 

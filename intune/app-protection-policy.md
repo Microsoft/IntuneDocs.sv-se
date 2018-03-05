@@ -15,11 +15,11 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6645261e2a90ea3890dc22b42fe65d6af4af6e5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 0ee95990afa08aa55e0f9101329b31bd8b3041f4
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -61,8 +61,7 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 
 
 ### <a name="supported-platforms-for-app-protection-polices"></a>Plattformar som stöds för appskyddsprinciper
--   iOS 9 eller senare
--   Android 4.4 eller senare
+Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-program. Mer information finns i [Systemkrav för Office](https://products.office.com/en-US/office-system-requirements).
 
 Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 ##  <a name="how-app-protection-policies-protect-app-data"></a>Hur appskyddsprinciper skyddar appdata
@@ -72,6 +71,7 @@ Windows-enheter stöds inte för tillfället. När du registrerar Windows 10-enh
 ![Bild som visar hur data kan flyttas fritt mellan appar när inga appskyddsprinciper tillämpas](./media/apps-without-protection-policies.png)
 
 När appar används utan begränsningar kan företagsrelaterade och personliga data blandas.  Företagsdata kan hamna på platser som personlig lagring eller överföras till appar som du inte har kontroll över, vilket leder till dataförlust. Pilarna i diagrammet visar hur data flyttas utan begränsningar mellan appar (företagsdata och personliga data) och till lagringsplatser.
+
 
 ### <a name="data-protection-with-app-protection-policies"></a>Dataskydd med appskyddsprinciper
 
@@ -134,3 +134,6 @@ Om en användare t.ex. startar appen OneDrive med sitt arbetskonto kan hen inte 
 ##  <a name="next-steps"></a>Nästa steg
 
 [Skapa och distribuera appskyddsprinciper med Microsoft Intune](app-protection-policies.md)
+
+## <a name="see-also"></a>Se även
+Appar från tredje part, till exempel Salesforce-mobilappen fungerar med Intune på specifika sätt för att skydda företagsdata. Läs mer om hur Salesforce-appen i synnerhet fungerar med Intune (inklusive MDM-appkonfigurationsinställningar) i [Salesforce-appen och Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

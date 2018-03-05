@@ -1,24 +1,23 @@
 ---
 title: "Inställningar av begränsningar i Intune-enheter för Windows Phone 10"
 titlesuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på Windows 10-enheter.”"
+description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på Windows 10-enheter."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/8/2018
+ms.date: 2/15/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc50d6f5c4b0350d0117b5d68a0b9ac3e9ec3ab3
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 128e16ad989293e168d2bb53d5974e479e09a000
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
 
@@ -28,6 +27,8 @@ ms.lasthandoff: 02/01/2018
 - **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
 - **Kopiera och klistra in (endast mobil)** – Tillåter funktionen att kopiera och klistra in mellan appar på enheten.
 - **Manuell avregistrering** – Tillåter att användaren manuellt tar bort sitt arbetsplatskonto från enheten.
+   - Den här inställningen används inte om datorn är ansluten till Azure Active Directory och automatisk registrering har aktiverats. 
+   - Den här principinställningen gäller inte för datorer som kör Windows 10 Home.
 - **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
 - **Sändning av diagnostikdata** – Möjliga värden är:
     - **Inga** – Inga data skickas till Microsoft
@@ -68,7 +69,7 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 ## <a name="personalization"></a>Anpassning
 
-- **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Anger URL:en till en bild i PNG-, JPG- eller JPEG-format du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra det här.
+- **URL för skrivbordsbakgrundsbild (endast skrivbord)** – Ange URL:en till en bild i JPEG-format som du vill använda som skrivbordsbakgrund i Windows. Användare kan inte ändra det här.
 
 ## <a name="privacy"></a>Sekretess
 
@@ -165,7 +166,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
 -   **Autofyll** – Tillåter att användarna ändrar inställningarna för att komplettera automatiskt i webbläsaren (endast Windows 10 Desktop).
--   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Edge.
+-   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 -   **Plats för webbplatslista för företagsläge** – Anger var du hittar listan med webbplatser som kan öppnas i företagsläge. Användare kan inte redigera den här listan.<br>(Endast Windows 10 Desktop.)
 -   **Utvecklarverktyg** – Förhindrar att användaren kan öppna Edge-utvecklingsverktygen.
 -   **Tillägg** – Tillåter att användaren installerar Edge-tillägg på enheten.
@@ -173,12 +174,12 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Edge (endast Windows 10 Mobile).
 -   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
--   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Edge startar.
--   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Edge som innehåller inställningar för utvecklare och experiment.
+-   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
+-   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Microsoft Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
 -   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
--   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Edge.
+-   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 
@@ -268,7 +269,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
       - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
-    Helskärmsläge för flera appar kräver en kioskkonfiguration. Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
+    [Flerappsläge för kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) kräver en kioskkonfiguration. Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
 
     Kioskkonfigurationer för flera appar omfattar följande inställningar:
 

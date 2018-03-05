@@ -16,10 +16,10 @@ ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
 ms.openlocfilehash: 821234397df511e054e98bc11cd6da21ce8370d7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="contact-assisted-phone-support-for-microsoft-intune"></a>Kontakta telefonsupporten för Microsoft Intune
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 10/10/2017
 |Liechtenstein|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Franska&#42;, tyska&#42;, italienska&#42;, engelska|0800000300|0227614114|
 |Litauen|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 EET (UTC + 2)|Litauiska&#42;, engelska|880030960||
 |Luxemburg|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Franska&#42;, tyska&#42;, engelska|80021094|24871510|
-|Republiken Makedonien|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Engelska|0800-94288<br /><br />Steg 1: Ring telefonnummer<br /><br />Steg 2: Ange: 001<br /><br />Steg 3: Ange 877 663 5075||
+|Makedonien|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Engelska|0800-94288<br /><br />Steg 1: Ring telefonnummer<br /><br />Steg 2: Ange: 001<br /><br />Steg 3: Ange 877 663 5075||
 |Malaysia|24 × 7|Måndag-fredag<br /><br />09:00 – 18:00 MYT (UTC +8)|Bahasa&#42;, malajiska&#42;, engelska|1800 220030|362074606|
 |Malta|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CET (UTC + 1)|Engelska|0 80062231||
 |Mexiko|24 × 7|Måndag-fredag<br /><br />09:00 – 17:00 CST (UTC -6)|Spanska&#42;, engelska|01-8005630605|55473856567|

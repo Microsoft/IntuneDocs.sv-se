@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 23dca24c69cca3c7a2851cb3fa7d9959f31df8e7
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e5f9eb33ca877fba0d59cfd9ddbc23f5eb2cd05c
+ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="protect-app-data-using-app-protection-policies-with-microsoft-intune"></a>Skydda appdata med appskyddsprinciper med Microsoft Intune
 
@@ -57,9 +57,7 @@ Det finns ytterligare fördelar med att använda MDM med appskyddsprinciper. Fö
 - **Appskyddsprinciper säkerställer att det finns skydd på appnivå.** Du kan t.ex. ha en princip som kräver en PIN-kod för att öppna en app i arbetssammanhang, som förhindrar data från att delas mellan appar och som förhindrar att företagets appdata sparas på en personlig lagringsplats.
 
 ## <a name="devices-that-support-mam"></a>Enheter som stöder MAM
-Appskyddsprinciper stöds för närvarande i:
--   iOS 8.1 eller senare
--   Android 4 eller senare
+Plattformsstödet för Intune-appskyddsprinciper är synkroniserat med plattformsstödet för Office-program. Mer information finns i [Systemkrav för Office](https://products.office.com/en-US/office-system-requirements).
 
 >[!NOTE]
 >Windows-enheter stöds inte i MAM utan registreringsscenario. När du registrerar Windows 10-enheter med Intune kan du använda Windows Information Protection, som innehåller liknande funktioner. Mer information finns i avsnittet om hur du [skyddar dina företagsdata med hjälp av Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).

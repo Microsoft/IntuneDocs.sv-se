@@ -14,11 +14,11 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ac18336efe36a5bed952ab3d89c7ae80e1fbbfc5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dee688b2f6768f55a0a814679bde7b23a0b26a57
+ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -50,7 +50,7 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
     > [!NOTE]
     > I vissa fall kan 32-bitarsversionen av Java orsaka minnesproblem. Det är en bra idé att installera 64-bitarsversionen.
 
-- Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
+- Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
@@ -119,7 +119,7 @@ Huvudscenarierna när du måste omsluta dina program på nytt är följande:
 * Intunes programhanteringsverktyg för Android har publicerat en ny version som möjliggör viktiga felkorrigeringar, eller nya, specifika principfunktioner för skydd av Intune-program. Detta sker var sjätte till var åttonde vecka via GitHub-lagringsplatsen för [Microsoft Intunes programhanteringsverktyg för Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 
 Här är några metodtips för omslutning på nytt: 
-* Information om hur du hanterar signeringscertifikat som använts under skapandeprocessen finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps)
+* Information om hur du hanterar signeringscertifikat som använts under skapandeprocessen finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps)
 
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Återanvända signeringscertifikat och omslutande appar
 Android kräver att alla appar måste ha signerats av ett giltigt certifikat för att kunna installeras på Android-enheter.
@@ -158,7 +158,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
 De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
 
-1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/en-us/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
 > [!NOTE] 
 > Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
 * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
@@ -174,4 +174,4 @@ De här anvisningarna är specifika för alla Android- och Xamarin-appar som vil
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)
 
-- [Aktivera hantering av mobilprogram i appar med SDK](/intune/classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+- [Utvecklarhandbok för Microsoft Intune App SDK för Android](app-sdk-android.md)
