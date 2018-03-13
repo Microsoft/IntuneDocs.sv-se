@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 1a7d047de1faa019eb137516ef75d64657e22e5a
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 63d8628c183b3efb924cae6635e2c8038fd42598
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -130,14 +130,14 @@ Du kan övervaka uppdateringsdistributioner av Windows 10 genom att använda en 
 
 I Intune-konsolen kan du konfigurera det kommersiella ID:t med hjälp av OMA-URI-inställningarna för en anpassad princip. Mer information finns i [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
 
-Den OMA-URI-sökväg (skiftlägeskänslig) du använder när du ska konfigurera det kommersiella ID:t är: ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
+Den OMA-URI-sökväg (skiftlägeskänslig) du använder när du ska konfigurera det kommersiella ID:t är: ./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID
 
 Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-inställningen**:
 
 - **Inställningsnamn**: Windows Analytics Commercial ID
 - **Inställningsbeskrivning**: Konfigurera kommersiellt ID för Windows Analytics-lösning
 - **Datatyp:** Sträng
-- **OMA-URI** (skiftlägeskänsligt): ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
+- **OMA-URI** (skiftlägeskänsligt): ./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID
 - **Värde**: *Använder det GUID som visas på fliken Windows-telemetri på din OMS-arbetsyta*>
 
 ![Windows-inställning för diagnostik och användningsdata](./media/commID.png)

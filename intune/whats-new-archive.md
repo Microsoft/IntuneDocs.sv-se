@@ -1,6 +1,6 @@
 ---
 title: "Nyheter under föregående månader i Microsoft Intune"
-titlesuffix: Azure portal
+titlesuffix: 
 description: "Granska äldre meddelanden från Intunes sida med nyheter"
 keywords: 
 author: brenduns
@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f9022f1e9f30d4a64608d2d8588c794a07c41f24
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 7ba6262c1126a421f2e2ca0e5085796c11df8d9a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
 
@@ -455,7 +455,7 @@ I den här versionen har vi lagt till nya inställningar för begränsningsprofi
 -  Sekretess
 -  Sök
 -  Windows Spotlight
--  Microsoft Edge-webbläsare
+-  Edge-webbläsare
 
 Mer information om inställningar för Windows 10 finns i [Begränsningsinställningar för enheter med Windows 10 och senare](device-restrictions-windows-10.md).
 
@@ -651,7 +651,7 @@ Du kan nu [synkronisera böcker](vpp-apps-ios.md) som du har köpt från Apples 
 Enheter som kör Samsung Knox Standard har nu stöd för [hantering av flera användare](android-enroll.md) i Intune. Det innebär att slutanvändarna kan logga in och ut från enheten med sina autentiseringsuppgifter för Azure Active Directory, och enheten hanteras centralt oavsett om den används eller inte.  När slutanvändare loggar in så får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
 
 ### <a name="additional-windows-device-restriction-settings----818566---"></a>Ytterligare begränsningsinställningar för Windows-enheter <!-- 818566 -->
-Vi har lagt till stöd för fler [begränsningsinställningar för Windows-enheter](device-restrictions-windows-10.md), t.ex. ytterligare Microsoft Edge-webbläsarstöd, anpassning av enhetens låsskärm, anpassning av startmenyn, bakgrund för Windows Spotlight-sökning och proxyinställningar.
+Vi har lagt till stöd för fler [begränsningsinställningar för Windows-enheter](device-restrictions-windows-10.md), t.ex. ytterligare Edge-webbläsarstöd, anpassning av enhetens låsskärm, anpassning av startmenyn, bakgrund för Windows Spotlight-sökning och proxyinställningar.
 
 ### <a name="multi-user-support-for-windows-10-creators-update----822547---"></a>Stöd för flera användare för Windows 10 Creators Update <!-- 822547 -->
 Vi har lagt till stöd för [hantering av flera användare](windows-enroll.md) för enheter som kör Windows 10 Creators-uppdateringen och som är domänanslutna med Azure Active Directory. Det innebär att när olika standardanvändare loggar in på enheten med sina autentiseringsuppgifter för Azure AD, får de alla appar och principer som har tilldelats till deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
