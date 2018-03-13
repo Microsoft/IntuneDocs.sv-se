@@ -236,6 +236,9 @@
                   href: store-apps-windows-phone-8-1.md
                 - name: Microsoft Store-appar
                   href: store-apps-windows.md
+                  items:
+                    - name: Lägg till företagsportalappen manuellt
+                      href: store-apps-company-portal-app.md
                 - name: Android for Work-appar
                   href: apps-add-android-for-work.md
                 - name: Office 365-appar för Windows 10
@@ -441,6 +444,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Skapa Windows-princip
           href: compliance-policy-create-windows.md
+        - name: Utvärdera princip
+          href: policy-evaluate.md
         - name: Åtgärder för inkompatibilitet
           href: actions-for-noncompliance.md
         - name: Övervaka enhetsefterlevnad
