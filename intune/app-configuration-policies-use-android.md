@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 206e229e95633ce553637bcedef708ee5630864c
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: a448c33e8324492c68d509a12d5901f41ed4873a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -31,7 +31,7 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj arbetsbelastningen **mobilappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
@@ -78,7 +78,7 @@ När den tilldelade appen körs på en enhet, körs den med de inställningar so
 Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till funktioner i Android-enheten. Som standard kommer Android-appar som kräver enhetsbehörigheter, t.ex. åtkomst till en plats eller enhetens kamera, att uppmana användarna att godkänna eller neka behörigheter. Om till exempel en app ska använda enhetens mikrofon, ombeds användaren att bevilja appen behörighet att använda mikrofonen.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar**.
 3. Under **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 4. Ange följande information:

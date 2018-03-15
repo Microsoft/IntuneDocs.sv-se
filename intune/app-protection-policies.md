@@ -15,11 +15,11 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cd92e787fd3c1abaa8b20ce1d75141b46ab17934
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c7ad60a27e32aaab49e77789364aecdc5ea7fc60
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -37,14 +37,14 @@ Appskyddsprinciper kan tillämpas på appar som körs på enheter som kan, men s
 Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
-1.  Välj **Principer för appskydd** i **Hantera** i arbetsbelastningen **Mobilappar**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga. 
-2. Välj **Lägg till en princip**. 
+1.  Välj **Principer för appskydd** i **Hantera** i arbetsbelastningen **Mobilappar**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga.
+2. Välj **Lägg till en princip**.
 
   ![Skärmbild av bladet Lägg till en princip](./media/app-protection-add-policy.png)
 
 3.  Skriv ett namn för principen, lägg till en kort beskrivning och välj plattformstypen för principen. Du kan skapa mer än en princip för varje plattform, om det behövs.
 
-4.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Välj en eller flera appar i listan som du vill associera med principen som du skapar. 
+4.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Välj en eller flera appar i listan som du vill associera med principen som du skapar.
 5. När du har valt apparna väljer du **Välj** för att spara ditt val.
 
     > [!IMPORTANT]
@@ -59,7 +59,7 @@ Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar
     > Följande principinställningar används endast när du använder appar i arbetskontexten. När slutanvändarna använder appen för att utföra personliga uppgifter påverkas de inte av dessa principer.
 
 7.  Spara konfigurationen genom att välja **OK**. Nu är du tillbaka i fönstret **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
-8. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka på bladet **Lägg till en princip**. 
+8. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka på bladet **Lägg till en princip**.
 9. Skapa principen och spara inställningarna genom att välja **Skapa**.
 
 När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i [Distribuera en princip till användare](app-protection-policies.md#deploy-a-policy-to-users).
@@ -74,7 +74,7 @@ När du har skapat en princip genom att följa stegen i föregående procedur di
    ![Skärmbild av fönstret Tilldelningar med menyalternativet Välj grupper att ta med markerat](./media/app-protection-policy-add-users.png)
 
 2.  En lista med användargrupper visas i fönstret **Lägg till användargrupp** . Den här listan visar alla säkerhetsgrupper i **Azure Active Directory**. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
-  
+
     ![Skärmbild av fönstret Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
 
 Nu har du skapat en princip och distribuerat den till användare.

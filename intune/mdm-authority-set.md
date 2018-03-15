@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c4d91d00995d821b14b3b2a04681b4c57258a7c0
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 5d48a2cea096c1639cd3661521cd636454f3e0ba
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -40,7 +40,8 @@ I Configuration Manager version 1610 och senare och i Microsoft Intune version 1
 
 ## <a name="set-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
-1. På [Azure Portal](https://portal.azure.com) väljer du **Fler tjänster** > **Övdervakning och hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter**.
 3. Under **Utfärdare av Hantering av mobila enheter** väljer du en utfärdare bland följande alternativ:
   - **Intune-utfärdare av mobilenhetshantering**
