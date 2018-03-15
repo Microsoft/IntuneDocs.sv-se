@@ -14,11 +14,11 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c40fd13a46a61ec0ee05efba7ece7653f5de90ca
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e4e1febb5f12de038d2ddd543be883f71ef79005
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/05/2018
 
 2. I **Microsoft Intune** väljer du **Enhetskonfiguration**, **Profiler** och sedan **Skapa profil**.
 
-3. Ange följande egenskaper: 
+3. Ange följande egenskaper:
 
     - **Namn**: Ange ett beskrivande namn på den nya profilen
     - **Beskrivning**: Valfritt men rekommenderat. Ange en beskrivning av profilen.
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/05/2018
 
     ![Ange inställningar för att skapa en enhetsprofil](./media/create-device-profile.png)
 
-4. Välj **Skapa** när du är klar. 
+4. Välj **Skapa** när du är klar.
 
 Profilen skapas och visas i listan. Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).
 
