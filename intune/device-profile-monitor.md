@@ -15,11 +15,11 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5b5a6ab74555eefc8c001ec444f803be24e34f3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 864ea278cc30a0f0a5aa26b08f7b13908b46ed03
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-monitor-device-profiles-in-microsoft-intune"></a>Så här övervakar du enhetsprofiler i Microsoft Intune
 
@@ -28,10 +28,10 @@ ms.lasthandoff: 01/25/2018
 Du kan övervaka tilldelningsförloppet för enhetsprofiler i Intune på två sätt:
 
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
+2. På bladet **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
 2. Från bladet med lista över profiler väljer du den profil som du vill hantera och gör sedan något av följande:
-    - På bladet <*profilnamn*> **Rapporter** väljer du **Översikt** för att se grundläggande information om profilen och dess tilldelningar.
-    - På bladet <*profilnamn*> **Rapporter** väljer du **Rapporter** för att visa mer detaljerad information om profilen och dess tilldelningar.
+    - På bladet <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Översikt** för att se grundläggande information om profilen och dess tilldelningar.
+    - På bladet <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Tilldelningar** för att se mer detaljerad information om profilen och dess tilldelningar.

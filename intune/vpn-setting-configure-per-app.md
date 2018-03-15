@@ -1,7 +1,7 @@
 ---
-title: "Konfigurera virtuellt privat nätverk per app i Microsoft Intune för iOS-enheter"
-titleSuffix: Intune on Azure
-description: "Ange vilka hanterade appar som kan använda ditt virtuella privata nätverk på Intune-hanterade iOS-enheter."
+title: "Konfigurera ett virtuellt privat nätverk per app i Microsoft Intune för iOS-enheter"
+titleSuffix: 
+description: "Ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter."
 keywords: 
 author: Erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f7e53f9a440d945d834c17b9db85ed5f6e42229
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4e01ca43cc42ee7228e42cd3b0176475905ef566
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="set-up-per-app-vpn-in-microsoft-intune-for-ios-devices"></a>Konfigurera virtuellt privat nätverk per app i Microsoft Intune för iOS-enheter
+# <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
-Du kan ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter. När du anger ett virtuellt privat nätverk per app i Intune ansluter en slutanvändare automatiskt via ditt virtuella privata nätverk vid åtkomst till företagets dokument.
+Du kan ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter. När du skapar ett virtuellt privat nätverk per app i Intune ansluter en slutanvändare automatiskt via ditt virtuella privata nätverk vid åtkomst till företagets dokument.
 
 ## <a name="prerequisites-for-the-per-app-vpn"></a>Krav för virtuellt privat nätverk per app
 

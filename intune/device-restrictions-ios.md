@@ -1,27 +1,26 @@
 ---
-title: "Inställningar för enhetsbegränsningar för iOS i Intune"
-titleSuffix: Azure portal
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på iOS-enheter.”"
+title: "Inställningar för enhetsbegränsningar i Microsoft Intune för iOS"
+titleSuffix: 
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 11/03/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 73590192-54ca-4833-9f1d-83e1b654399f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b450becb45aea7ba5aa6ac2b6798e2062c08b4f2
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: bc53a7a6a4c961a649d01f23f30c59ff4dc90fe2
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="ios-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune
+# <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
+I den här artikeln visas alla inställningar för enhetsbegränsningar i Microsoft Intune som du kan konfigurera för enheter som kör iOS.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -99,7 +98,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
     -   **Antal icke-alfanumeriska tecken i lösenord** – Ange det antal symboltecken i lösenordet (som **#** eller **@**) som måste ingå i lösenordet.
     -   **Minsta längd på lösenord** – Ange det minsta antalet tecken som lösenordet måste innehålla.
     -   **Antal felaktiga inloggningar innan enheten rensas** – Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.
-    -   **Maximalt antal minuter efter skärmlås innan ett lösenord krävs**<sup>1</sup> – Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.
+    -   **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** <sup>1</sup> – Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.
     -   **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup> – Ange hur många minuter som ska förflyta innan skärmen stängs av.
     -   **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan lösenordet för enheten måste ändras.
     -   **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som enheten kommer ihåg.
@@ -107,7 +106,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Ändring av lösenkod (endast övervakat)** – Hindrar att lösenkoden ändras, läggs till eller tas bort.
     - **Ändring av fingeravtryck (endast övervakat)** – Hindrar att användaren ändar, lägger till eller tar bort TouchID-inställningar.
 
-<sup>1</sup> När du konfigurerar inställningarna **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
+<sup>1</sup> När du konfigurerar inställningarna **Maximalt antal minuter av inaktivitet innan skärmen låses** och **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter fem minuter. Enheten låses efter ytterligare fem minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. När användaren i det här exemplet har stängt av skärmen låses enheten fem minuter senare.
 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
@@ -133,7 +132,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 -   **Game Center (endast övervakat)**  – Blockera eller aktivera användning av appen Game Center.
 -   **Spel för flera personer (endast övervakat)** – Tillåt användaren att spela spel för flera personer på enheten.
 -   **Klassificeringsregion** – Välj den klassificeringsregion som du vill konfigurera tillåtna hämtningsbara filer för, och välj tillåtna klassificeringar för **filmer** och **TV-program**.
--   **Appar** – Välj åldersklassificering för de appar som användarna kommer att kunna ladda ned, eller så kan du välja **Tillåt alla appar**.
+-   **Appar** – Välj åldersklassificering för de appar som användarna kan ladda ned eller välj **Tillåt alla appar**.
 
 ## <a name="built-in-apps"></a>Inbyggda appar
 
@@ -156,7 +155,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 
 Du kan konfigurera en av följande listor i listan med begränsade appar:
 
-- Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra. Användarna hindras inte från att installera en förbjuden app, men om de gör detta rapporteras det till dig.
+- Listan **Otillåtna appar** – Ange de appar (som inte hanteras av Intune) som användarna inte får installera och köra. Användarna hindras inte från att installera en förbjuden app, men om de gör det rapporteras det till dig.
 - Listan **Godkända appar** – Ange de appar som användare tillåts att installera. Användarna får inte installera appar som inte finns med i listan. Appar som hanteras av Intune tillåts automatiskt. Användare hindras inte från att installera en app som inte finns med på listan över godkända appar, men om de gör det rapporteras detta till dig.
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
@@ -169,7 +168,7 @@ Använd en sökmotor för att hitta den app du vill använda i iTunes App Store 
 Kopiera sidans URL och använd den som URL för att konfigurera listan över tillåtna eller förbjudna appar som du vill köra i helskärmsläge.
 Enhetsprofiler som innehåller inställningar för begränsade appar måste tilldelas grupper av användare.
 
-Exempel: Sök efter Microsoft Word för iPad. Webbadressen du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Exempel: Sök efter Microsoft Word för iPad. Den webbadress som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Du kan även använda iTunes för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
@@ -182,8 +181,8 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 
 I listan för att visa eller dölja appar kan du konfigurera en av följande listor (kräver övervakade enheter som kör iOS 9.3 eller senare).
 
-En lista över **dolda appar** – Ange en lista över appar som ska vara dolda för användarna. Användare kan inte visa eller starta dessa appar.
-En lista över **synliga appar** – Ange en lista över appar som användarna ska kunna visa och starta. Inga andra appar kan visas eller startas.
+En lista med **dolda appar** – Ange en lista med appar som är dolda för användarna. Användare kan inte visa eller starta dessa appar.
+En lista med **synliga appar** – Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
 
@@ -194,7 +193,7 @@ Om du vill ange en app-URL i applistan använder du följande format:
 Använd en sökmotor för att hitta den app du vill använda i iTunes App Store och öppna appens sida.
 Kopiera sidans URL och använd den som URL för att konfigurera listan över tillåtna eller förbjudna appar som du vill köra i helskärmsläge.
 
-Exempel: Sök efter Microsoft Word för iPad. Webbadressen du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Exempel: Sök efter Microsoft Word för iPad. Den webbadress som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
@@ -228,7 +227,7 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 
 ## <a name="keyboard-and-dictionary"></a>Tangentbord och ordlista
 
--   **Namn på sökdefinition (endast övervakat)** – Tillåt iOS-funktionen som gör att du kan markera ett ord och leta upp dess definition.
+-   **Namn på sökdefinition (endast övervakat)** – Tillåt den iOS-funktion som gör att du kan markera ett ord och leta upp dess definition.
 -   **Förutseende tangentbord (endast övervakat)** – Tillåt användning av förutseende tangentbord som föreslår ord som användaren kanske vill använda.
 -   **Autokorrigering (endast övervakat)** – Låter enheten automatiskt korrigera felstavade ord.
 -   **Tangentbord med stavningskontroll (endast övervakat)** – Tillåter att stavningskontroll används.
@@ -238,9 +237,9 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 -   **Säkerhetskopiera till iCloud** – Tillåt användare att säkerhetskopiera enheten till iCloud.
 -   **Dokumentsynkronisering till iCloud (endast övervakat)** – Tillåt synkronisering av dokument och nyckelvärden till ditt lagringsutrymme i iCloud.
--   **Synkronisering av Bildström till iCloud** – Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkronisera till iCloud och vara tillgängliga på alla användarnas enheter.
+-   **Synkronisering av Bildström till iCloud** – Låter användare aktivera **My Photo Stream** (Min bildström) på sina enheter vilket gör att foton kan synkroniseras till iCloud och vara tillgängliga på alla användarnas enheter.
 -   **Krypterad säkerhetskopiering** – Kräv att säkerhetskopior av enheter måste vara krypterade.
--   **iCloud-bildbiblioteket** – Om det är inställt på **Nej**, inaktiveras användningen av iCloud-bildbiblioteket som låter användare att lagra foton och videoklipp i molnet.    Alla bilder som inte har laddats ned till enheten helt från iCloud-bildbiblioteket tas bort från enheten om detta är inställt på **Nej**.
+-   **iCloud-bildbiblioteket** – Om det är inställt på **Nej** inaktiveras användningen av iCloud-bildbiblioteket som låter användare lagra foton och videoklipp i molnet.   Alla bilder som inte har laddats ned till fullo från iCloud-bildbiblioteket till enheten tas bort från enheten om detta är inställt på **Nej**.
 -   **Synkronisering av hanterade appar till molnet** – Tillåt att appar som du hanterar med Intune synkroniserar data till användarnas iCloud-konton.
 -   **Delad bildström** – Ställ in på **Nej** om du vill inaktivera **iCloud-bilddelning** på enheten.
 -   **Aktivitetsfortsättning** – Tillåt användare att återuppta det arbete som de påbörjat på en iOS-enhet på en annan iOS- eller macOS-enhet (överlämning).
@@ -251,7 +250,7 @@ Använd inställningarna för att konfigurera iOS-enheter så att de kör angivn
 
 ### <a name="settings"></a>Inställningar
 
-- **Appnamn** – Ange det namn på appen som kommer att visas i applistan på det här bladet.
+- **Appnamn** – Ange det namn på appen som visas i applistan på det här bladet.
 - **Appsamlings-id** – Ange samlings-ID för appen. Hjälp finns i **Referens till samlings-ID för inbyggda iOS-appar** i det här avsnittet.
 
 När du har angett varje appnamn och appsamlings-ID väljer du **Lägg till** för att lägga till dem i listan.
@@ -308,7 +307,7 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 
 
 ## <a name="kiosk-supervised-only"></a>Helskärm (endast övervakat)
--   **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
+-   **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar tillåts köra på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
     -   **AssistiveTouch** – Aktivera eller inaktivera hjälpmedelsinställningen **AssistiveTouch** som hjälper användare att utföra gester på skärmen som annars kan vara svåra att utföra.
     -   **Invertera färger** – Aktivera eller inaktivera hjälpmedelsinställningen Invertera färger som anpassar skärmen för att hjälpa användare med synfel.
     -   **Monoljud** – Aktivera eller inaktivera hjälpmedelsinställningen Monoljud.
@@ -343,12 +342,12 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 
 ### <a name="unmarked-email-domains"></a>Avmarkerade e-postdomäner
 
-I fältet **Webbadress till e-postdomän** lägger du till en eller flera webbadresser i listan. När användarna får ett e-postmeddelande från en annan domän än de som du har konfigurerat, kommer e-postmeddelandet att markeras som ej betrott i iOS e-postapp.
+I fältet **Webbadress till e-postdomän** lägger du till en eller flera webbadresser i listan. När slutanvändarna får ett e-postmeddelande från en annan domän än de du har konfigurerat, markeras e-postmeddelandet som ej betrott i iOS e-postapp.
 
 
 ### <a name="managed-web-domains"></a>Hanterade webbdomäner
 
-I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här, anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
+I fältet **Webbadress till webbdomän** lägger du till en eller flera webbadresser i listan. Dokument som laddas ned från de domäner du anger här anses vara hanterade. Den här inställningen gäller enbart för dokument som hämtas i Safari-webbläsaren.
 
 
 ### <a name="safari-password-autofill-domains"></a>Fyll i lösenord automatiskt på Safari-domäner

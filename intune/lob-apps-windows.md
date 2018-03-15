@@ -1,12 +1,12 @@
 ---
-title: "Så här lägger du till branschspecifika Windows-appar i Intune"
-titlesuffix: Azure portal
-description: "Läs om att lägga till verksamhetsspecifika Windows-appar till Intune.”"
+title: "Lägga till verksamhetsspecifika Windows-appar i Microsoft Intune"
+titlesuffix: 
+description: "Läs om hur du lägger till verksamhetsspecifika Windows-appar (LOB) i Microsoft Intune."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/3/2017
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,17 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 72e0a9011ba6dda324ace96fb2dbefb42c608641
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: b687b71f9d264364ff758fdd46b0739465c16865
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-add-windows-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Windows-appar i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinstallationsfil. Dessa typer av appar är vanligen skrivna internt. I följande steg finns riktlinjer som hjälper dig att lägga till en Windows LOB-app i Microsoft Intune.
 
 ## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
 
@@ -68,6 +69,10 @@ ms.lasthandoff: 01/30/2018
 ## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
 
 [!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+
+## <a name="configuring-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurera att en MSI-mobilapp med automatisk uppdatering ignorerar versionskontrollen
+
+Du kan konfigurera att en känd MSI-mobilapp med automatisk uppdatering ignorerar versionskontrollen. Vissa MSI-appar som baseras på installationsprogram uppdateras automatiskt av apputvecklaren. För dessa automatiskt uppdaterade MSI-appar kan du konfigurera inställningen **Ignorera appversion** på bladet **Appinformation**. När den här inställningen växlas till **Ja** kommer Microsoft Intune inte använda appversionen som är installerad på Windows-klienten. Den här funktionen är användbar för att undvika konkurrenstillstånd. Den här typen av konkurrenstillstånd kan exempelvis uppstå när appen uppdateras automatiskt av apputvecklaren och även uppdateras av Intune. Båda två kan försöka framtvinga en version av appen på Windows-klienten, vilket kan skapa en konflikt.
 
 ## <a name="next-steps"></a>Nästa steg
 

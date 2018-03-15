@@ -1,25 +1,23 @@
 ---
-title: "Konfigurera inställningar för enhetsbegränsningar i Intune"
-titleSuffix: Azure portal
-description: "Läs hur du använder Intune för att konfigurera inställningar och funktioner på enheter som du hanterar.”"
+title: "Konfigurera inställningar för enhetsbegränsning i Microsoft Intune"
+titleSuffix: 
+description: "Läs hur du använder Microsoft Intune för att konfigurera inställningar och funktioner på enheter som du hanterar."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 04/12/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 42f9b104-c1f6-4dfc-8aa4-1d33e1eaf61f
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 93b6a642f26ec6273853f75d063fd368698f3864
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 62c12cde5ca128a26b10e0e4516e0bbf7e0f0bbb
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Så här konfigurerar du enhetsbegränsningar i Microsoft Intune
 
@@ -33,16 +31,16 @@ Med enhetsbegränsningar kan du kontrollera en mängd olika inställningar och f
 
 Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS-enheter från att komma åt kameran på enheten.
 
-Använd informationen i det här avsnittet om du vill lära dig grunderna för hur du konfigurerar profiler för enhetsbegränsningar. Läs sedan de specifika avsnitten om respektive plattform om du vill ha mer detaljerad enhetsinformation.
+Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare artiklar för varje plattform för att få veta mer om enhetsegenskaperna.
 
-Skapa en enhetsprofil med inställningar för enhetsbegränsningar:
+## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilbladet.
-4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. På sidan **Intune** väljer du **Enhetskonfiguration**.
+2. På sidan **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+3. På sidan **Profiler** väljer du **Skapa profil**.
+4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
 5. Välj den enhetsplattform på vilken du vill tillämpa anpassade inställningar från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
     - **Android**
     - **iOS**
@@ -51,7 +49,7 @@ Skapa en enhetsprofil med inställningar för enhetsbegränsningar:
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
 6. I listrutan **Profil** väljer du **Enhetsbegränsningar**. Om du vill skapa en enhetsbegränsningsprofil för Windows 10 Team-enheter, som en Surface Hub, väljer du **Enhetsbegränsningar (Windows 10 Team)**.
-7. Beroende på vilken plattform du väljer så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
+7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
     - [Inställningar för Android](device-restrictions-android.md)
     - [Inställningar för iOS](device-restrictions-ios.md)
     - [Inställningar för macOS](device-restrictions-macos.md)
@@ -61,9 +59,9 @@ Skapa en enhetsprofil med inställningar för enhetsbegränsningar:
     - [Inställningar för Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Inställningar för Windows Holographic for Business](device-restrictions-windows-holographic.md)
     - [Inställningar för Android for Work](device-restrictions-android-for-work.md)
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. När du är klar går du tillbaka till sidan **Skapa profil** och klickar på **Skapa**.
 
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas på sidan med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.

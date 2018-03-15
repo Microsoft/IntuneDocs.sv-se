@@ -1,12 +1,11 @@
 ---
-title: "Så här fjärradministrerar du enheter med TeamViewer"
-titlesuffix: Azure portal
-description: "Lär dig hur du fjärradministrerar enheter med TeamViewer."
+title: "Fjärradministrera enheter i Microsoft Intune – Azure | Microsoft Docs"
+description: "Se vilka roller krävs för att använda TeamViewer, hur du installerar TeamViewer-anslutningsprogrammet och stegvisa anvisningar för hur du fjärradministrerar enheter med Microsoft Intune i Azure Portal"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 2/14/2018
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,65 +13,52 @@ ms.technology:
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0219993e0322be06dbf9b26707789332039001f1
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 64f6dd6bf787a6f590655f03ac8f04312836e0b5
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="provide-remote-assistance-for-intune-managed-devices"></a>Ge fjärrhjälp för Intune-hanterade enheter
+# <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Fjärradministrera Intune-enheter med TeamViewer
 
-Intune kan använda [TeamViewer](https://www.teamviewer.com)-programmet (köps separat) för att ge fjärrhjälp till användare med enheter som du hanterar. Använd informationen i det här ämnet för att komma igång.
+Enheter som hanteras av Intune kan fjärradministreras med hjälp av [TeamViewer](https://www.teamviewer.com). TeamViewer är ett tredjepartsprogram som du köper separat. Det här avsnittet visar hur du konfigurerar TeamViewer i Intune och fjärradministrerar en enhet. 
 
-## <a name="before-you-start"></a>Innan du börjar
+## <a name="prerequisites"></a>Krav
 
-### <a name="supported-devices"></a>Enheter som stöds
+- Använd en enhet som stöds. Intune-hanterade Android- och Windows-enheter stöder fjärradministration. TeamViewer kanske inte stöder Windows Holographic (HoloLens), Windows Team (Surface Hub) eller Windows 10 S. Information om support finns i [TeamViewer](https://www.teamviewer.com).
 
-Intune-hanterade Android- och Windows-enheter stöder fjärradministration.
+- Intune-administratören i Azure Portal måste ha följande [Intune-roller](role-based-access-control.md):  
 
->[!NOTE]
->Windows Holographic (HoloLens), Windows Team (Surface Hub) och Windows 10 S stöds inte av programmet TeamViewer.
+    - **Uppdatera fjärrhjälp**: Gör att administratörer kan ändra inställningarna för TeamViewer-anslutningsprogrammet
+    - **Begär fjärrhjälp**: Gör att administratörer kan starta en ny fjärrhjälpsession för alla användare. Användare med den här rollen begränsas inte av någon Intune-roll inom ett omfång. Dessutom kan användare eller enhetsgrupper som tilldelats en Intune-roll i ett omfång också begära fjärrhjälp. 
 
+- Ett [TeamViewer](https://www.teamviewer.com)-konto med autentiseringsuppgifter för inloggning
 
+Genom att använda TeamViewer tillåter du att TeamViewer för Intune-anslutningsprogrammet kan skapa TeamViewer-sessioner, läsa Active Directory-data och spara TeamViewer-kontots åtkomsttoken.
 
-### <a name="required-permissions"></a>Behörigheter som krävs
+## <a name="configure-the-teamviewer-connector"></a>Konfigurera TeamViewer-anslutningen
 
-Kontrollera att användaren i Azure-portalen har följande behörigheter som [Intune-roll](https://docs.microsoft.com/intune-azure/access-control/role-based-access-control):
-- Om du vill att administratören ska kunna ändra inställningarna för TeamViewer-anslutningsprogrammet beviljar du behörigheten **Uppdatera fjärrhjälp**.
-- Om du vill att administratören ska kunna initiera en ny begäran om fjärrhjälp beviljar du behörigheten **Begär fjärrhjälp**. Användare med behörigheten **Begär fjärrhjälp** kan begära att initiera en session för valfri användare. De begränsas inte av någon omfattning för Intune-rolltilldelning. Intunes rolltilldelningsomfattningar begränsar inte vilka enheter eller användare som kan begära fjärrhjälp.
+För att kunna ge fjärrhjälp till enheter måste du först konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
 
->[!NOTE]
->Genom att aktivera TeamViewer tillåter du att TeamViewer för Intune-anslutningsprogrammet kan skapa TeamViewer-sessioner, läsa Active Directory-data och spara TeamViewer-kontots åtkomsttoken.
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
+2. I **Microsoft Intune** väljer du **Enheter** och sedan **TeamViewer Connector**.
+3. Välj **Anslut** och acceptera sedan licensavtalet.
+4. Välj **Logga in på TeamViewer och auktorisera**.
+5. En webbsida öppnas med TeamViewer-webbplatsen. Ange dina autentiseringsuppgifter för TeamViewer-licensen och välj sedan **Logga in**.
 
-### <a name="configure-the-intune-teamviewer-connector"></a>Konfigurera Intune TeamViewer-anslutningsprogrammet
+## <a name="remotely-administer-a-device"></a>Fjärradministrera en enhet
 
-Innan du kan ge fjärrhjälp till enheter måste du konfigurera Intune TeamViewer-anslutningsprogrammet med följande steg:
+När anslutningen har konfigurerats är du redo att fjärradministrera en enhet. Gör så här: 
 
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
+2. I **Microsoft Intune** väljer du **Enheter** och sedan **Alla enheter**.
+3. Välj den enhet som du vill fjärradministrera i listan. I egenskaperna för enheten väljer du **Ny fjärrhjälpssession**.
+4. När Intune ansluter till TeamViewer-tjänsten visas information enheten. Välj **Anslut** för att starta fjärrsessionen.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Konfiguration** > **TeamViewer-anslutningsprogram**.
-5. På bladet **TeamViewer-anslutningsprogram** klickar du på **Aktivera** för att visa och godkänna licensavtalet för TeamViewer-tjänsten.
-6. Välj **Logga in på TeamViewer och auktorisera**.
-7. En webbsida öppnas med TeamViewer-webbplatsen. Ange dina autentiseringsuppgifter för TeamViewer-licensen och klicka sedan på **Logga in**.
+![Exempel på hur du fjärradministrerar en Android-enhet](./media/android-teamviewer.png)
 
+När du startar en fjärrsession visas en meddelandeflagga på ikonen för företagsportalappen på slutanvändarens enhet. Ett meddelande visas också när appen öppnas. Användaren kan sedan acceptera begäran om fjärrhjälp.
 
-## <a name="how-to-remotely-administer-a-device"></a>Så här fjärradministrerar du en enhet
-
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter** väljer du **Hantera** > **Alla enheter**.
-5. Välj den enhet som du vill fjärradministrera och välj på egenskapsbladet för enheten **Mer** > **Ny fjärrhjälpssession**.
-6. När Intune ansluter till TeamViewer-tjänsten visas information enheten. Välj **Anslut** för att starta fjärrsessionen.
-
-![TeamViewer-exempel i Android](./media/android-teamviewer.png)
-
-I TeamViewer-fönstret kan du utföra olika fjärråtgärder på enheten, inklusive fjärrstyrning av enheten. Fullständig information om de åtgärder du kan utföra finns i [TeamViewer-dokumentationen](https://www.teamviewer.com/support/documents/).
+I TeamViewer kan du utföra ett antal åtgärder på enheten, till exempel ta kontroll över enheten. Fullständig information om vad du kan göra finns i [vägledningen för TeamViewer](https://www.teamviewer.com/support/documents/).
 
 Stäng TeamViewer-fönstret när du är klar.
-
-## <a name="next-steps"></a>Nästa steg
-
-Slutanvändarna ser en meddelandeflagga på ikonen för företagsportalappen på sin enhet och får även ett meddelande när appen öppnas. De kan då godkänna begäran om fjärrhjälp.

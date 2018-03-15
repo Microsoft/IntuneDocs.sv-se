@@ -1,10 +1,10 @@
 ---
-title: "Ange registreringsbegränsningar i Intune"
-titlesuffix: Azure portal
-description: "Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. \""
+title: "Lägga till grupper för att organisera användare och enheter"
+titlesuffix: Microsoft Intune
+description: "Lägg till grupper för att organisera användare och enheter efter geografi, avdelning eller maskinvaruegenskaper."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,13 +15,13 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5e55a96ee1bee5b1f25a4ddf3366f3e7dc94122a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 42e7e2c8d239b8150f67a699ba6fef156b3e1a7d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="add-groups-in-intune"></a>Lägg till grupper i Intune
+# <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
 
 Det här avsnittet beskriver hur du lägger till grupper för användning i Intune.
@@ -34,7 +34,7 @@ Du kan lägga till följande typer av grupper:
 
 Använd följande anvisningar för att skapa en ny grupp.
 1. Gå till **Grupper** i Azure-portalen och välj sedan **Ny grupp** på bladet **Alla grupper**.
-  ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
+  ![Skärmbild av skärmen Användare och grupper med Ny grupp vald](./media/groups-add-new.png)
 2. Redigera den nya gruppens **namn** och **beskrivning**. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
 
 3. Välj **Medlemskapstyp**:
@@ -42,7 +42,7 @@ Använd följande anvisningar för att skapa en ny grupp.
   - **Dynamisk användare** för att skapa en användargrupp som definierats med en **dynamisk fråga**.
   - **Dynamisk enhet** för att skapa en enhetsgrupp som definierats med en **dynamisk fråga**.
 
-  ![Skärmbild av Intune-gruppegenskaper med namn, beskrivning, medlemskapstyp, aktivering av Office-funktioner och medlemmar](./media/groups-add-properties.png)
+  ![Skärmbild av Intune-gruppegenskaper](./media/groups-add-properties.png)
 
   Med Azure AD kan du skapa dynamiska grupper baserat på regler som definierar medlemskap. Läs mer om hur du [skapar attributbaserade dynamiska grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
 

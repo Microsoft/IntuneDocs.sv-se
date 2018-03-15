@@ -1,31 +1,30 @@
 ---
-title: "Efterlevnadsprinciper för Intune-enheter"
-titleSuffix: Azure portal
-description: "Använd det här ämnet för att läsa mer om enhetsefterlevnad i Microsoft Intune”"
+title: Microsoft Intunes enhetsefterlevnadsprinciper
+titleSuffix: 
+description: "Läs mer om enhetsefterlevnad i Microsoft Intune"
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 2/6/2018
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98a9a93efb93697b454cb9bc06d1ac268ebaf9d8
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 9e3a7bdf3ddf6ad77a82ac6dc7075d696fbe6497
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="get-started-with-intune-device-compliance-policies"></a>Komma igång med principer för Intune-enhetsefterlevnad
+# <a name="get-started-with-microsoft-intune-device-compliance-policies"></a>Komma igång med enhetsefterlevnadsprinciper för Microsoft Intune
+
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-## <a name="what-is-device-compliance-in-intune"></a>Vad är enhetsefterlevnad i Intune?
-
-Efterlevnadsprinciper definierar de regler och inställningar som en Intune-enhet måste följa för att anses vara kompatibla med Intune.
+Intunes efterlevnadsprinciper definierar de regler och inställningar som en enhet måste följa för att anses vara kompatibel med Intune.
 
 Reglerna omfattar följande:
 
@@ -43,7 +42,7 @@ Reglerna omfattar följande:
 
 Du kan också använda principer för enhetsefterlevnad för att övervaka enheters efterlevnadsstatus.
 
-### <a name="device-compliance-requirements"></a>Krav på efterlevnad för enhet
+## <a name="device-compliance-requirements"></a>Krav på efterlevnad för enhet
 
 Efterlevnadskrav är i stort sett regler som kräver en enhets PIN-kod eller kryptering, vilket du kan ange att det krävs eller inte krävs för en efterlevnadsprincip.
 

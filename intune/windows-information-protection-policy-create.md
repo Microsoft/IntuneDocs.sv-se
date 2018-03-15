@@ -3,10 +3,10 @@ title: Skapa och distribuera en WIP-appskyddsprincip med Intune
 titlesuffix: Azure portal
 description: Skapa och distribuera WIP-appskyddsprinciper med Intune
 keywords: 
-author: arob98
-ms.author: angrobe
-manager: dougeby
-ms.date: 12/29/2017
+author: Erikre
+ms.author: erikre
+manager: doubeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 940c4bc17face7ecef2b6888e199ba47073659ba
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 647e6fd129593156f2ba24299a19e96686206165
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -33,7 +33,7 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Lista över tillåtna och undantagna appar
 
--   **Tillåtna appar**: Dessa appar är de som måste följa den här principen.
+-   **Tillåtna appar**: Dessa appar måste följa den här principen.
 
 -   **Undantagna appar**: De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
 
@@ -47,9 +47,9 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 
 ## <a name="pre-requisites"></a>Förutsättningar
 
-Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](https://docs.microsoft.com/app-protection-policies-configure-windows-10.md).
+Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](app-protection-policies-configure-windows-10.md).
 
-Du måste dessutom ha följande:
+Du måste dessutom ha följande licens och uppdatering:
 
 -   [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-licens.
 -   [Windows Creators-uppdatering](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
@@ -60,7 +60,7 @@ Du måste dessutom ha följande:
 
 ## <a name="to-add-a-wip-policy"></a>Lägga till en RIA-princip
 
-När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik princip via [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure docset?--->
+När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik princip via [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure doc set?--->
 
 1.  Gå till **Intune-instrumentpanelen för hantering av mobila program**, välj **Alla inställningar** > **App-princip**.
 
@@ -80,7 +80,7 @@ När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik prin
 
 1.  Välj din princips namn på bladet **App-princip**, och välj sedan **Tillåtna appar** på bladet **Lägg till en princip**. Bladet **Tillåtna appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
 
-2.  Välj **Lägg till appar** på bladet **Tillåtna appar**. Bladet **Lägg till appar** öppnas och visar alla appar som ingår i den här listan.
+2.  Välj **Lägg till appar** på bladet **Tillåtna appar**. I informationen **Lägg till appar** visas alla appar som finns med i listan.
 
 3.  Markera varje app för vilken du vill komma åt företagets data och välj sedan **OK**. Bladet **Tillåtna appar** uppdateras och visar alla markerade appar.
 
@@ -92,7 +92,7 @@ När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik prin
 
 2.  Välj **Lägg till appar** på bladet **Tillåtna appar**.
 
-3.  Välj **Store-appar** i listrutan på bladet **Lägg till appar**. På bladet visas nu två kryssrutor där du kan lägga till en **utgivare** och **namn** för appen.
+3.  Välj **Store-appar** i listrutan på bladet **Lägg till appar**. Informationen ändras till att visa rutor där du kan lägga till en **utgivare** och ett **namn** för appen.
 
 4.  Skriv appens och utgivarens namn och välj sedan **OK**.
 
@@ -137,7 +137,7 @@ När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi 
 WIP söker efter olämpliga datadelningsmetoder och stoppar från att utföra åtgärden. Detta kan inkludera delning av information till appar som inte skyddas av företaget, och delning av företagsdata mellan andra personer och enheter utanför organisationen.
 
 #### <a name="allow-overrides"></a>Tillåt åsidosättningar
-WIP söker efter olämplig delning av data och varnar användarna om de gör något som kan vara potentiellt osäkert. I det här läget kan dock användaren åsidosätta principen och dela data genom att logga åtgärden i din granskningslogg.
+Windows informationsskydd söker efter olämplig delning av data och varnar användarna om de gör något som kan vara potentiellt osäkert. I det här läget kan dock användaren åsidosätta principen och dela data genom att logga åtgärden i din granskningslogg.
 
 #### <a name="silent"></a>Tyst
 WIP körs i bakgrunden och loggar olämplig datadelning utan att blockera något som skulle kräva interaktion av medarbetarna i läget Tillåt åsidosättning. Ej tillåtna åtgärder, t.ex. appar som på felaktigt sätt försöker få åtkomst till en nätverksresurs eller WIP-skyddade data, stoppas dock.
@@ -145,15 +145,15 @@ WIP körs i bakgrunden och loggar olämplig datadelning utan att blockera något
 #### <a name="off-not-recommended"></a>Av (rekommenderas inte)
 WIP har stängts av och bidrar inte till att skydda eller granska dina data.
 
-När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade filer på de lokalt anslutna enheterna. Tänk på att tidigare dekrypterings- och principinformation inte automatiskt tillämpas på nytt om du aktiverar WIP-skyddet igen.
+När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade filer på de lokalt anslutna enheterna. Observera att tidigare dekrypterings- och principinformation inte automatiskt tillämpas på nytt om du aktiverar Windows informationsskydd igen.
 
 ### <a name="add-a-protection-mode"></a>Lägga till ett skyddsläge
 
-1.  Välj principens namn på bladet **App-princip** och välj sedan **Nödvändiga inställningar**.
+1.  Välj principens namn på bladet **Apprincip** och välj sedan **Nödvändiga inställningar**.
 
     ![Skärmdump av utbildningsläge](./media/learning-mode-sc1.png)
 
-1.  Välj **Spara**.
+2.  Välj **Spara**.
 
 ### <a name="use-wip-learning"></a>Använda WIP-utbildning
 
@@ -165,10 +165,23 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
  
     När apparna väl visas i loggningsrapporten för WIP-utbildning kan du lägga till dem i appskyddsprinciperna.
 
+## <a name="allow-windows-search-indexer-to-search-encrypted-items"></a>Tillåt att Windows Search-indexeraren söker efter krypterade objekt
+Tillåter eller nekar indexering av objekt. Den här växeln används för Windows Search-indexeraren och styr om objekt som är krypterade indexeras, till exempel Windows informationsskyddade filer.
+
+Alternativ för den här appens skyddsprincip finns i **Avancerade inställningar** i Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**. 
+
+När principen är aktiverad indexeras Windows informationsskyddade objekt och deras metadata lagras på en okrypterad plats. Dessa metadata innehåller exempelvis ändrade sökvägar och datum.
+
+När principen är inaktiverad indexeras inte Windows informationsskyddade objekt och resultaten visas inte i Cortana eller Utforskaren. Det kan också förekomma en prestandapåverkan på foton och Groove-appar om det finns många Windows informationsskyddade mediefiler på enheten.
+
+## <a name="add-encrypted-file-extensions"></a>Lägga till filnamnstillägg för krypterade filer
+
+Förutom att ställa in alternativet **Tillåt att Windows Search-indexeraren söker efter krypterade objekt** kan du ange en lista med filnamnstillägg. Filer med dessa filnamnstillägg krypteras när du kopierar från en SMB-resurs (Server Message Block) inom den företagsgräns som definierats i listan med nätverksplatser. Om den här principen inte anges används den befintliga funktionen för automatisk kryptering. När principen är konfigurerad krypteras endast filer med dessa filnamnstillägg i listan.
+
 ## <a name="deploy-your-wip-app-protection-policy"></a>Distribuera WIP-appskyddsprincipen
 
 > [!IMPORTANT]
-> Detta gäller för WIP utan enhetsregistrering.
+> Denna information gäller för Windows informationsskydd utan enhetsregistrering.
 
 <!---not sure why you need the Important note. Isn't this what the topic is about? app protection w/o enrollment?--->
 
@@ -178,4 +191,8 @@ När du har skapat din WIP-appskyddsprincip måste du distribuera den till din o
 
     En lista med användargrupper, som består av alla säkerhetsgrupper i Azure Active Directory, öppnas på bladet **Lägg till användargrupp**.
 
-1.  Välj den grupp du vill att principen ska tillämpas på och distribuera sedan principen genom att välja **Välj**.
+2.  Välj den grupp du vill att principen ska tillämpas på och distribuera sedan principen genom att välja **Välj**.
+
+## <a name="next-steps"></a>Nästa steg
+
+- Mer information om Windows informationsskydd finns i [Skydda företagsdata med Windows informationsskydd](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip). 

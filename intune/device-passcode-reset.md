@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ff5fb2634e2bc6019404d55d1c322146b32eb7f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4e1496d24fd9d3bb636a4eab00c254b753210f63
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Återställa och ta bort lösenordet på Intune-hanterade enheter
 
@@ -39,12 +39,12 @@ Termerna *ta bort* och *återställa* används synonymt i den här artikeln.
 
 ## <a name="how-to-reset-a-passcode"></a>Återställa ett lösenord
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Ta bort lösenord**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan fjärråtgärden **Ta bort lösenord**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter och grupper** och väljer **Enhetsåtgärder**.
+Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.

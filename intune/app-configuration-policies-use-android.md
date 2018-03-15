@@ -1,7 +1,7 @@
 ---
-title: "Lägg till konfigurationsprinciper för hanterade Android-enheter | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Lär dig hur du använder appkonfigurationsprinciper för att ange konfigurationsdata i en Android for Work-app när den körs."
+title: "Lägg till konfigurationsprinciper för hanterade Android-enheter"
+titlesuffix: Microsoft Intune
+description: "Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fbf1466b02da66e5c7d115d60aa43912322ebeb
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 206e229e95633ce553637bcedef708ee5630864c
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -30,8 +30,8 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 > [!Note]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj arbetsbelastningen **mobilappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
@@ -41,7 +41,7 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
       Beskrivning av den profil som visas i Azure Portal.
     - **Enhetsregistreringstyp**  
       Välj **Hanterade enheter**.
-6. Välj **Android** för **Plattform**.
+6. Välj **Android for Work** för **Plattform**.
 7. Välj **Tillhörande app** för att välja den app som du vill definiera en appkonfigurationsprincip för. Välj i listan med Android for Work-appar som du har godkänt och synkroniserat med Intune.
 8. Välj **Konfigurationsinställningar**. Du kan ange konfigurationer med:
     - [Configuration Designer](#Use-the-configuration-designer)
@@ -77,14 +77,15 @@ När den tilldelade appen körs på en enhet, körs den med de inställningar so
 
 Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till funktioner i Android-enheten. Som standard kommer Android-appar som kräver enhetsbehörigheter, t.ex. åtkomst till en plats eller enhetens kamera, att uppmana användarna att godkänna eller neka behörigheter. Om till exempel en app ska använda enhetens mikrofon, ombeds användaren att bevilja appen behörighet att använda mikrofonen.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
-3. Välj **Mobilappar**. Under **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+3. Välj **Mobilappar**.
+3. Under **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 4. Ange följande information:
     - **Namn**. Namnet på den profil som visas i Azure Portal.
     - **Beskrivning**. Beskrivning av den profil som visas i Azure Portal.
-    - **Plattform**. Välj **Android**.
-    - **Enhetsregistreringstyp**. **Hanterade enheter** är förvalt.
+    - **Enhetsregistreringstyp**. Välj **Hanterade enheter**.
+    - **Plattform**. Välj **Android for Work**.
 5. Välj **Tillhörande app** för att välja den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android for Work-appar som du har godkänt och synkroniserat med Intune.
 6. Välj **Behörigheter** och sedan **Lägg till**.
 7. Välj i listan med tillgängliga appbehörigheter och välj sedan **OK**.

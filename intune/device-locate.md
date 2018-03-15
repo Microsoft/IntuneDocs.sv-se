@@ -14,18 +14,18 @@ ms.technology:
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90b1321c0df49f446bfdeccbacdfd5642396dacd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 864d528091de7a6113485347304b0dc254af2c7d
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Hitta borttappade eller stulna iOS-enheter med Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Åtgärden **Hitta enhet** visar platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten ha placerats i [Borttappat läge](/intune-azure/manage-devices/lost-mode.md).
+Åtgärden **Hitta enhet** visar platsen för en förlorad eller stulen iOS-enhet på en karta. Enheten måste vara en företagsägd iOS-enhet, registrerad med DEP, som är i övervakat läge. Innan du använder den här åtgärden måste enheten ha placerats i [Borttappat läge](device-lost-mode.md).
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="how-to-locate-a-lost-or-stolen-device"></a>Hitta en förlorad eller stulen enhet
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en iOS-enhet och sedan fjärråtgärden **Hitta enhet**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en iOS-enhet, **...Mer** och sedan fjärråtgärden **Hitta enhet**.
 6. När enheten har hittats visas dess plats visas på bladet **Hitta enhet**.
     ![Hitta enhetsblad](./media/locate-device.png)
 
@@ -58,4 +58,4 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter och grupper** och väljer **Enhetsåtgärder**.
+Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.

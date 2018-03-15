@@ -1,7 +1,7 @@
 ---
-title: "Ange registreringsbegränsningar i Intune"
-titlesuffix: Azure portal
-description: "Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune. \""
+title: "Ange registreringsbegränsningar i Microsoft Intune"
+titlesuffix: 
+description: "Begränsa registrering per plattform och ange en gräns för enhetsregistrering i Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,17 +15,17 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fab385762efa3ab095553fe21fb045f4f11ff197
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Som Intune-administratör kan du skapa och hantera registreringsbegränsningar som definierar antalet och typerna av enheter som kan registreras för hantering med Intune. Du kan skapa flera begränsningar och applicera dem på olika användargrupper. Du kan ange [prioriteringsordningen](#change-enrollment-restriction-priority) för dina olika begränsningar.
+Som Intune-administratör kan du skapa och hantera registreringsbegränsningar. Dessa begränsningar definierar antalet och typerna av enheter som kan registreras för hantering med Intune. Du kan skapa flera begränsningar och applicera dem på olika användargrupper. Du kan ange [prioriteringsordningen](#change-enrollment-restriction-priority) för dina olika begränsningar.
 
 >[!NOTE]
 >Begränsningar vid registrering ska inte betraktas som säkerhetsfunktioner. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
@@ -83,7 +83,7 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
   Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
 8. Ange om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
 
-    ![Skärmbild av arbetsytan för enhetsbegränsningar med standardkonfigurationer för enhetsplattformar visar inställningar för personligt ägda enheter.](media/device-restrictions-platform-configurations.png)
+    ![Skärmbild av arbetsytan för enhetsbegränsningar med standardenhetsplattformen konfigurerad för personligt ägda enheter](media/device-restrictions-platform-configurations.png)
 9. Klicka på **Spara**.
 
 >[!NOTE]
@@ -100,7 +100,7 @@ Du kan ändra inställningarna för en begränsning för enhetsgräns genom att 
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Under **Begränsningar för enhetsgräns** väljer du den begränsning som du vill ange.
 5. Välj **enhetsgräns** och sedan väljer du det maximala antalet enheter som en användare kan registrera i den nedrullningsbara listan.
-    ![Skärmbild av bladet med begränsningar för enhetsgränsen.](./media/device-restrictions-limit.png)
+    ![Skärmbild av bladet för begränsningar för enhetsgräns](./media/device-restrictions-limit.png)
 6. Klicka på **Spara**.
 
 Ett meddelande visas för användaren med information om att de har uppnått gränsen för registrerade enheter. På iOS kan det till exempel se ut så här:

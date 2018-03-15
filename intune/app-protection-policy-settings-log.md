@@ -1,7 +1,7 @@
 ---
-title: "Loggar för appskyddsprinciper"
-titlesuffix: Azure portal
-description: "Det här avsnittet beskriver posterna med appskyddsprincipinställningarna som finns i apploggarna."
+title: "Granska loggar för appskyddsprinciper"
+titlesuffix: Microsoft Intune
+description: "Läs om vilka inställningar du kan granska i appskyddsloggarna."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,15 +15,15 @@ ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76b7771f974fb1c9a5de8afe52ef79eaa0ed0c2a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: f91328561f0dd4dc669844c0398a89f1abf15bf8
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="review-client-app-protection-logs"></a>Granska loggarna för klientappskydd
 
-Du kommer åt loggarna genom att aktivera Intunes diagnostikläge för ett program på en mobil klient. Följande tabell visar namn och en förklaring av de inställningar som har registrerats i loggen.
+Läs om vilka inställningar du kan granska i appskyddsloggarna. Kom åt loggarna genom att aktivera Intunes diagnostikläge för ett program på en mobil klient. Följande tabell visar namn och en förklaring av de inställningar som har registrerats i loggen.
 
 ## <a name="app-protection-policy-settings"></a>Principinställningar för appskydd
 

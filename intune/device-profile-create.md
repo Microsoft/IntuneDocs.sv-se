@@ -1,12 +1,11 @@
 ---
-title: Skapa Intune-enhetens konfigurationsprofiler
-titlesuffix: Azure portal
-description: "Så här skapar du enhetskonfigurationsprofiler i Intune.”"
+title: "Skapa enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs"
+description: "Lägga till eller konfigurera en enhetsprofil i Microsoft Intune, till exempel välja plattformstyp och konfigurera inställningar i Azure Portal"
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2017
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,28 +14,38 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5afc6896883e6be67780c2314107c15633fd237a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c40fd13a46a61ec0ee05efba7ece7653f5de90ca
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="how-to-create-device-configuration-profiles-in-microsoft-intune"></a>Så här skapar du enhetens konfigurationsprofiler i Microsoft Intune
+# <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+## <a name="create-the-profile"></a>Skapa profilen
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Konfigurera enheter** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-2. På bladet visas en lista med profiler. Välj **Skapa profil**.
-3. På bladet **Skapa profil** anger du följande objekt:
-    - **Namn** – Ange ett beskrivande namn på den nya profilen.
-    - **Beskrivning** – Ange en valfri beskrivning av profilen.
-    - **Plattform** – Välj plattformstyp för profilen som du vill skapa.
-    - **Profiltyp** – Välj typ för den profil som du vill skapa. Listan över tillgängliga typer varierar beroende på vilken plattform du väljer.
-    - **Inställningar** – Se följande avsnitt för information om inställningarna för varje profiltyp:
+2. I **Microsoft Intune** väljer du **Enhetskonfiguration**, **Profiler** och sedan **Skapa profil**.
+
+3. Ange följande egenskaper: 
+
+    - **Namn**: Ange ett beskrivande namn på den nya profilen
+    - **Beskrivning**: Valfritt men rekommenderat. Ange en beskrivning av profilen.
+    - **Plattform**: Välj plattformstyp:  
+
+        - **Android**
+        - **Android for Work**
+        - **iOS**
+        - **macOS**
+        - **Windows Phone 8.1**
+        - **Windows 8.1 och senare**
+        - **Windows 10 och senare**
+
+    - **Profiltyp**: Välj vilken typ du vill skapa. Listans innehåll beror på vilken plattform du väljer.
+    - **Inställningar**: Läs en beskrivning av inställningarna för varje profiltyp i följande avsnitt:
+
         -  [Inställningar av enhetsfunktion](device-features-configure.md)
         -  [Inställningar för enhetsbegränsning](device-restrictions-configure.md)
         -  [E-postinställningar](email-settings-configure.md)
@@ -48,12 +57,12 @@ ms.lasthandoff: 01/25/2018
         -  [Utbildningsinställningar](education-settings-configure.md)
         -  [Anpassade inställningar](custom-settings-configure.md)
 
-    ![Skapa enhetsprofil](./media/create-device-profile.png)
-4. När du är klar med att konfigurera inställningar går du till bladet **Skapa profil** och väljer **Skapa**.
+    ![Ange inställningar för att skapa en enhetsprofil](./media/create-device-profile.png)
 
-Profilen skapas och visas på bladet med profillistan.
-Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
+4. Välj **Skapa** när du är klar. 
+
+Profilen skapas och visas i listan. Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).
 
 
-### <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg
 Information om hur du tilldelar enhetsprofiler finns i [Så här tilldelar du enhetsprofiler med Microsoft Intune](device-profile-assign.md).

@@ -1,10 +1,10 @@
 ---
-title: "Kom igång med grupper"
-titleSuffix: Azure portal
+title: Skapa en grupp i Microsoft Intune
+titleSuffix: 
 description: "Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63a35c04a14ebd79ac55f1dab2680d70008ee0ed
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: e052f7c8d5742859d009816473fe97a98c499b17
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="get-started-with-groups"></a>Kom igång med grupper
+# <a name="create-a-group-to-manage-your-users-and-data-access"></a>Skapa en grupp för att hantera användare och dataåtkomst
 
-Grupper används för att hantera användare och styra anställdas åtkomst till företagsresurserna. Resurserna kan tillhöra din katalog eller kan vara externa resurser, till exempel SaaS-appar eller SharePoint-webbplatser.
+Grupper används för att hantera användare och styra de anställdas åtkomst till företagets resurser. Resurserna kan tillhöra din katalog eller kan vara externa resurser, till exempel SaaS-appar eller SharePoint-webbplatser.
 
 Microsoft Intune använder Azure Active Directory (Azure AD) för att hantera åtkomst till företagsresurser. Den här åtkomsten kontrolleras med hjälp av roller i katalogen. Intune hanterar sedan den åtkomsten för mobila enheter, vilket ger medlemmar i gruppen åtkomst till resurserna.
 

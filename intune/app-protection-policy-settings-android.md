@@ -1,12 +1,12 @@
 ---
 title: "Principinställningar för Android-appskydd"
-titlesuffix: Azure portal
-description: "Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter.”"
+titlesuffix: Microsoft Intune
+description: "Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 10c09b4669371fbb61ad4d30f44fcaf5e2db3482
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
-Principinställningarna som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure-portalen.
+Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
 Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen *principhanterade appar* för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
 
 ##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
@@ -30,7 +30,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 | Inställningen | Använd så här | Standardvärde(n) |
 |------|------|------|
 | **Förhindra Android-säkerhetskopieringar** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata i [Android Backup Service](https://developer.android.com/google/backup/index.html) Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata.| Ja |
-| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> <p>Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. En fullständig lista över appar och tjänster finns i avsnittet [Undantag vid dataöverföring](#Data-transfer-exemptions).<p>**Obs!** Intune har för närvarande inte stöd för funktionen Android Instant Apps. Intune blockerar alla dataanslutningar till och från appen.  I dokumentationen för Android Developer finns mer information om [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Alla appar |
+| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> <p>Som standard finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. Du kan också skapa egna undantag om du vill tillåta att data överförs till en app som inte stöder Intune APP. Mer information finns i [Undantag vid dataöverföring](#Data-transfer-exemptions).<p>**Obs!** Intune har för närvarande inte stöd för funktionen Android Instant Apps. Intune blockerar alla dataanslutningar till och från appen.  I dokumentationen för Android Developer finns mer information om [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html).</p>| Alla appar |
 | **Tillåt att appen hämtar data från andra appar** | Ange vilka appar som kan överföra data till den här appen: <ul><li>**Principhanterade appar**: Tillåt endast överföring från andra principhanterade appar.</li><li>**Alla appar**: Tillåt dataöverföring från alla appar.</li><li>**Ingen**: Tillåt inte dataöverföring från någon app, inklusive andra principhanterade appar. </li></ul> <p>Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring från. En fullständig lista över appar och tjänster finns i avsnittet [Undantag vid dataöverföring](#Data-transfer-exemptions). | Alla appar |
 | **Förhindra "Spara som"** | Välj **Ja** om du vill inaktivera alternativet Spara som i den här appen. Välj **Nej** om du vill tillåta att Spara som används. <p><br>**Välj med vilka lagringstjänster företagsdata ska sparas** <br>Användare kan spara de valda tjänsterna (OneDrive för företag, SharePoint och lokal lagring). Alla andra tjänster kommer att blockeras.</p> | Nej <br><br> 0 valda |
 | **Begränsa klipp ut, kopiera och klistra in med andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | Alla appar |
@@ -73,7 +73,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
   | com.android.providers.media | Androids medieinnehållsprovider | Medieinnehållsprovidern tillåts endast för val av ringsignal. |
   | com.google.android.gms; com.google.android.gsf | Google Play Services-paket | Dessa paket tillåts för Google Cloud Messaging-åtgärder, till exempel push-meddelanden. |
 
-
+Mer information finns i [Appundantag för dataöverföringsprinciper](app-protection-policies-exception.md). 
 
 ##  <a name="access-settings"></a>Åtkomstinställningar
 

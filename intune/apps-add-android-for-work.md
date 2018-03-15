@@ -1,12 +1,12 @@
 ---
 title: Distribuera appar till Android for Work-enheter
-titlesuffix: Azure portal
-description: "Använd det här ämnet för att synkronisera och distribuera appar till Android for Work-enheter från Google Play for Work Store.”"
+titlesuffix: Microsoft Intune
+description: "Förstå hur man synkroniserar och tilldelar appar till Android for Work-enheter från Google Play for Work Store.”"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/13/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,17 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 248dcc978b5324733d5d640230aba2b6db1a2c62
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6a0b488120ed62031f8af5b8b65d9e90ea6d252b
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Så här tilldelar du appar till Android for Work-enheter med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du tilldelar appar till Android for Work-enheter på ett annat sätt än när du tilldelar dem till vanliga Android-enheter. Alla appar som du installerar för Android for Work kommer från Google Play for Work-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem.
-Programmet visas sedan i noden **Licensierade appar** i Azure-portalen. Härifrån kan du hantera tilldelningen av appen på samma sätt som du tilldelar andra appar.
+Android for Work är ett program för Android-enheter. Alla appar som du installerar på Android for Work-enheter kommer från Google Play for Work-butiken. Du tilldelar appar till Android for Work-enheter på ett annat sätt än när du tilldelar dem till vanliga Android-enheter. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Programmet visas sedan i noden **Licensierade appar** i Azure-portalen. Härifrån kan du hantera tilldelningen av appen på samma sätt som du tilldelar andra appar.
 
 Om du har skapat dina egna verksamhetsspecifika appar, kan du även tilldela dem på följande sätt:
 - Registrera dig för ett Google-utvecklarkonto som låter dig publicera appar på ett privat område i Google Play-butiken.

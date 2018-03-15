@@ -1,6 +1,7 @@
 ---
-title: "Företagsportal, meddelanden som användare kan se på Android"
-description: "Beskriver meddelanden i företagsportalen som kan visas för slutanvändare av Intune."
+title: "Meddelanden i företagsportalen som användare kan se på enheterna"
+titlesuffix: Microsoft Intune
+description: "Förstå de olika meddelanden som slutanvändarna kan se i företagsportalen."
 keywords: 
 author: barlanmsft
 ms.author: barlan
@@ -13,11 +14,11 @@ ms.technology:
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
-ms.openlocfilehash: 58468a81d0ec3e7bfc051a6edc6a09ef1c5e62a2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: e78d43cf1cb96575ebc8d8143b7b4fc1103a9bd1
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Hjälpa slutanvändarna att förstå meddelanden i företagsportalappen
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > Följande information gäller endast på enheter med Android 6.0+.
 
-Vid olika tidpunkter i registreringsprocessen ser slutanvändare två olika meddelanden som kan orsaka problem.
+Förstå de olika appmeddelanden som slutanvändarna kan se i företagsportalen. Dessa appmeddelanden visas vanligtvis vid olika tillfällen i registreringen. Läs om var meddelanden visas, vad de innebär och vad som händer om användarna nekar åtkomst. Läs dessutom hur du förklarar meddelandena för användarna på bästa sätt.
 
 - __Tillåt att företagsportalen kan ringa och hantera telefonsamtal?__
 - __Tillåt att företagsportalen kommer åt foton, media och filer på enheten?__
@@ -42,12 +43,12 @@ Genom att acceptera varningen kan användarna låta telefonnummer och IMEI-numme
 > [!NOTE]
 > **Företagsportalappen ringer eller hanterar aldrig telefonsamtal!** Meddelandetexten styrs av Google och kan inte ändras.
 
-Öppna sidan **Maskinvara** genom att gå till **Grupper** > **Alla mobila enheter** > **Enheter**. Välj användarens enhet och gå till **Visa egenskaper** > **Maskinvara**.
+För att öppna sidan **Maskinvara** måste du gå till **Grupper** > **Alla mobila enheter** > **Enheter**. Välj användarens enhet och gå till **Visa egenskaper** > **Maskinvara**.
 
 ### <a name="what-happens-if-users-deny-access"></a>Vad händer om användarna nekar åtkomst
-Om användarna nekar åtkomst kan de fortsätta att använda programmet för företagsportalen och registrera sina enheter. Enhetens telefonnummer och IMEI saknar data på sidan __Maskinvara__ i administrationskonsolen. Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera så att meddelandet inte visas igen.
+Om användarna nekar åtkomst kan de fortsätta att använda programmet för företagsportalen och registrera sina enheter. Enhetens telefonnummer och IMEI saknar data på sidan __Maskinvara__ i administrationskonsolen. Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera för att inte se meddelandet fler gånger.
 
-Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren loggar in på företagsportalappen efter registreringen.
+Om användare först tillåter men senare nekar åtkomst, visas meddelandet nästa gång användaren loggar in på företagsportalappen efter registreringen.
 
 Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Telefon** och aktivera den.
 
@@ -81,7 +82,7 @@ Hänvisa dina användare till [Registrera Android-enhet i Intune](/intune-user-h
 Meddelandet **Tillåt att företagsportalen kommer åt foton, media och filer på enheten?** visas när användarna trycker på **Skicka Data** för att skicka dataloggar till sin IT-administratör.
 
 ### <a name="what-it-means"></a>Betydelse
-När användarna accepterar meddelandet kan deras enheter skriva dataloggar till enhetens SD-kort och tillåta att loggarna flyttas med hjälp av en USB-kabel.   
+När användarna accepterar meddelandet kan deras enheter skriva dataloggar till enhetens SD-kort. Det innebär också att loggarna kan flyttas med hjälp av en USB-kabel.   
 
 > [!NOTE]
 > **Företagsportalappen bereder sig aldrig åtkomst till användarnas foton, media och filer!** Meddelandetexten styrs av Google och kan inte ändras.
@@ -89,7 +90,7 @@ När användarna accepterar meddelandet kan deras enheter skriva dataloggar till
 ### <a name="what-happens-if-users-deny-access"></a>Vad händer om användarna nekar åtkomst
 Om användarna nekar åtkomst kan de fortfarande skicka loggar via e-post, men loggarna kopieras inte till enhetens SD-kort.
 
-Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera så att meddelandet inte visas igen. Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren försöker skicka loggar. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Lagring** och aktivera behörigheten.
+Den andra gången användarna loggar in på företagsportalappen efter att de nekat åtkomst visas kryssrutan **Fråga inte igen** som de kan markera så att meddelandet inte visas igen. Om användare tillåter men senare nekar åtkomst visas meddelandet nästa gång användaren försöker skicka loggar. Om användarna senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** > **Appar** > **Företagsportal** > **Behörigheter** > **Lagring** och aktivera behörigheten.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Så här förklarar du detta till dina användare
@@ -101,7 +102,7 @@ Hänvisa dina användare till [Skicka loggar till IT-administratören via e-post
 Om du inte har lagt till företagsportalappen i listan **Tillåtna appar** eller **Undanta appar** och en användare försöker logga in, så misslyckas inloggningen. Följande meddelande visas:
 
 > **Your company support needs to give you access to company resources (Din företagssupport måste ge dig åtkomst till företagsresurser)**  
-> Ditt företag skyddar din enhet med Windows Information Protection-principer. Din företagssupport måste se till att företagsportalen kan komma åt dem.
+> Ditt företag skyddar din enhet med Windows Information Protection-principer. Din företagssupport måste se till att företagsportalen kan komma åt resurserna.
 
 ### <a name="what-it-means"></a>Betydelse
 

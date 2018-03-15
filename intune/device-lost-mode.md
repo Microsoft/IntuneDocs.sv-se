@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7884682b765fe0df0ecb8b55b18f7a85ac4b2ec9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fcdd5e6fa844d4c475462cd0b2a4883f8ff9ba90
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="activate-lost-mode-on-ios-devices"></a>Aktivera borttappat läge på iOS-enheter
 
@@ -37,11 +37,11 @@ Med enhetsåtgärden **Borttappat läge** kan du aktivera borttappat läge på f
 
 ## <a name="how-to-activate-lost-mode"></a>Aktivera borttappat läge
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en iOS-enhet och sedan fjärråtgärden **Borttappat läge**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en iOS-enhet, **...Mer** och sedan fjärråtgärden **Borttappat läge**.
 6. Aktivera borttappat läge på bladet **Borttappat läge**. Ange sedan det meddelande som ska visas och eventuellt ett telefonnummer för kontakt.
 7. Klicka på **OK**.
 
@@ -57,5 +57,5 @@ Enheten måste vara en företagsägd iOS-enhet som är i övervakat läge för a
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter och grupper** och väljer **Enhetsåtgärder**.
+Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.
 

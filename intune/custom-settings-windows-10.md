@@ -1,37 +1,37 @@
 ---
-title: "Anpassade inställningar för Windows 10-enheter i Intune"
-titlesuffix: Azure portal
-description: "Läs om inställningarna du kan använda i en anpassad Windows 10-profil.”"
+title: "Anpassade inställningar i Microsoft Intune för enheter som kör Windows 10"
+titlesuffix: 
+description: "Läs om anpassade inställningar som du kan konfigurera i en anpassad Windows 10-profil."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/09/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 7bcea136-7260-4042-b21b-c7dab86b380d
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7101c489c0418b98be3224888a8473a77192ce0f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 156d37874529b4ae5a8176d7e9a8873cf440c32c
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="custom-device-settings-for-windows-10-devices-in-microsoft-intune"></a>Anpassade enhetsinställningar för Windows 10-enheter i Microsoft Intune
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Anpassade inställningar i Microsoft Intune för enheter som kör Windows 10 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
- Använd Microsoft Intunes **anpassade** profil för Windows 10 och Windows 10 Mobile för att distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) som kan användas för att styra funktioner på enheter. I Windows 10 är många CSP-inställningar tillgängliga, t.ex. [Princip-CSP (Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+ Använd Microsoft Intunes **anpassade** profil för Windows 10 och Windows 10 Mobile för att distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) som kan användas för att styra funktioner på enheter. I Windows 10 finns flera CSP-inställningar (Configuration Service Provider), t.ex. [Princip-CSP (Policy Configuration Service Provider)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 Kom ihåg att om du letar efter en viss inställning, innehåller [enhetsbegränsningsprofilen i Windows 10](device-restrictions-windows-10.md) många inställningar som är inbyggda i Intune och som innebär att du inte behöver ange några anpassade värden.
 
+## <a name="configure-custom-settings"></a>Konfigurera anpassade inställningar
+
 1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-2. På bladet **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
-3. På bladet **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
-4. Ange följande information för varje OMA-URI-inställning som du vill lägga till. Använd listan i det här avsnittet om du vill veta mer om vilka inställningar du kan använda:
+2. På sidan **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
+3. På sidan **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
+4. Ange följande information för varje OMA-URI-inställning som du vill lägga till. Använd listan i den här artikeln om du vill veta mer om vilka inställningar du kan använda:
     - **Inställningsnamn** – Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
     - **Inställningsbeskrivning** – Ange en beskrivning för inställningen.
     - **Datatyp** – Välj bland:
@@ -43,8 +43,8 @@ Kom ihåg att om du letar efter en viss inställning, innehåller [enhetsbegrän
         - **Boolesk**
     - **OMA-URI (skiftlägeskänslig)** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
     - **Värde** – Ange det värde som ska associeras med den OMA-URI som du har angett.
-5. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
-Profilen skapas och visas på bladet med profillistan.
+5. När du är klar går du tillbaka till sidan **Skapa profil** och trycker på **Skapa**.
+Profilen skapas och visas på sidan med profillistan.
 
 ## <a name="example"></a>Exempel
 I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** aktiverats. Detta innebär att en Windows 10-enhet öppnar en VPN-anslutning när enheten använder ett mobilnät.
@@ -56,8 +56,8 @@ I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** ak
 
 Du hittar en lista med alla CSP:er som har stöd för Windows 10 i [Referens till CSP (Configuration Service Provider)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) i dokumentationsbiblioteket för Windows.
 
-Alla inställningar är inte kompatibla med alla versioner av Windows 10. I tabellen i avsnittet om Windows kan du se vilka versioner som stöds för varje CSP.
+Alla inställningar är inte kompatibla med alla versioner av Windows 10. I tabellen i artikeln om Windows kan du se vilka versioner som stöds för varje CSP.
 
-Dessutom stöder Intune inte alla inställningar som anges i avsnittet. Om du vill veta om Intune har stöd för den inställning som du vill använda, öppnar du avsnittet för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
+Dessutom stöder Intune inte alla inställningar som anges i artikeln. Om du vill veta om Intune har stöd för den inställning som du vill använda, öppnar du artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
 
 

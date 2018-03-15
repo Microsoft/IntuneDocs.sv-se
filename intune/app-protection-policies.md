@@ -1,12 +1,12 @@
 ---
 title: Skapa och distribuera appskyddsprinciper
-titleSuffix: Azure portal
-description: "Läs hur Intunes appskyddsprinciper kan hjälpa dig att skydda företagets data som används av appar som du hanterar.”"
+titleSuffix: Microsoft Intune
+description: "Lär dig hur du skapar och tilldelar skyddsprinciper för appar i Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,18 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fbb9a1f6697a8339a2854e4352749ca04bb612e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: cd92e787fd3c1abaa8b20ce1d75141b46ab17934
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+
+Lär dig hur du skapar och tilldelar skyddsprinciper för appar till dina användare i Microsoft Intune. Det här avsnittet beskriver också hur du ändrar befintliga principer.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -34,49 +37,52 @@ Appskyddsprinciper kan tillämpas på appar som körs på enheter som kan, men s
 Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ##  <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
-1.  Välj **Hantera** > **Appskyddsprinciper** i arbetsbelastningen **Mobile Apps**.
-
-2.  När du gör det öppnas bladet **Appskyddsprinciper** där du kan skapa nya principer och redigera befintliga. Välj **Lägg till en princip**.
+1.  Välj **Principer för appskydd** i **Hantera** i arbetsbelastningen **Mobilappar**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga. 
+2. Välj **Lägg till en princip**. 
 
   ![Skärmbild av bladet Lägg till en princip](./media/app-protection-add-policy.png)
 
-3.  Skriv ett namn för principen, lägg till en kort beskrivning och välj plattformstypen för att skapa en princip för iOS eller Android. Du kan skapa mer än en princip för varje plattform.
+3.  Skriv ett namn för principen, lägg till en kort beskrivning och välj plattformstypen för principen. Du kan skapa mer än en princip för varje plattform, om det behövs.
 
-4.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Välj en eller flera appar i listan som du vill associera med principen som du skapar. När du har valt apparna väljer du **Välj** längst ned på bladet **Appar** för att spara ditt val.
+4.  Välj **Appar** för att öppna bladet **Appar** där en lista över tillgängliga appar visas. Välj en eller flera appar i listan som du vill associera med principen som du skapar. 
+5. När du har valt apparna väljer du **Välj** för att spara ditt val.
 
     > [!IMPORTANT]
     > Du måste välja minst en app för att skapa en princip.
 
-5.  Öppna principinställningsbladet genom att välja **Konfigurera nödvändiga inställningar** på bladet **Lägg till en princip**.
+6.  Välj **Konfigurera obligatoriska inställningar** på bladet **Lägg till en princip** för att öppna **Inställningar**.
 
-    Det finns två typer av principinställningar, **Dataflytt** och **Åtkomst**.  Principer för dataflytt tillämpas när data flyttas till och från appar, medan åtkomstprinciper avgör hur slutanvändare får åtkomst till apparna i en arbetskontext.
+    Det finns två typer av principinställningar, **Dataflytt** och **Åtkomst**.  Principer för dataflytt tillämpas för data som flyttas in och ut ur appar. Åtkomstprinciper avgör hur slutanvändare får åtkomst till apparna i en arbetskontext.
     Du kan snabbt komma igång genom att använda principinställningarnas standardvärden. Du behöver inte göra några ändringar om standardvärdena uppfyller dina krav.
 
     > [!TIP]
-    > Följande principinställningar används endast när du använder appar i arbetskontexten.  När slutanvändarna använder appen för att utföra personliga uppgifter påverkas de inte av dessa principer.
+    > Följande principinställningar används endast när du använder appar i arbetskontexten. När slutanvändarna använder appen för att utföra personliga uppgifter påverkas de inte av dessa principer.
 
+7.  Spara konfigurationen genom att välja **OK**. Nu är du tillbaka i fönstret **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
+8. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka på bladet **Lägg till en princip**. 
+9. Skapa principen och spara inställningarna genom att välja **Skapa**.
 
-
-6.  Spara konfigurationen genom att välja **OK**. Nu är du tillbaka i bladet **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
-
-
-När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i avsnittet ”Distribuera en princip till användare” nedan.
+När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i [Distribuera en princip till användare](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Distribuera en princip för användare
 
-1.  På bladet **Princip** väljer du **Användargrupper**, vilket öppnar bladet **Användargrupper**. Öppna bladet **Lägg till användargrupp** genom att välja **Lägg till användargrupp** på bladet **Användargrupper**.
 
-  ![Skärmbild av bladet Användargrupper med menyalternativet Lägg till användargrupp markerat](./media/app-protection-policy-add-users.png)
+1. Välj en princip i fönstret **Principer för appskydd**.
 
-2.  En lista med användargrupper visas i bladet **Lägg till användargrupp** . Det här är en lista över alla säkerhetsgrupper i **Azure Active Directory**. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
-  ![Skärmbild av bladet Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
+1. I fönstret **Princip** väljer du **Tilldelningar** så att fönstret **Intune-appskydd – Tilldelningar** öppnas. Välj **Välj grupper att ta med** i fönstret **Tilldelningar** så att fönstret **Välj grupper att ta med** öppnas.
+
+   ![Skärmbild av fönstret Tilldelningar med menyalternativet Välj grupper att ta med markerat](./media/app-protection-policy-add-users.png)
+
+2.  En lista med användargrupper visas i fönstret **Lägg till användargrupp** . Den här listan visar alla säkerhetsgrupper i **Azure Active Directory**. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
+  
+    ![Skärmbild av fönstret Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
 
 Nu har du skapat en princip och distribuerat den till användare.
 
-Endast användare med tilldelade Microsoft Intune-licenser påverkas av principen. Användare som ingår i säkerhetsgruppen som du valde och som inte har tilldelats någon Microsoft Intune-licens påverkas inte.
+Endast användare med tilldelade Microsoft Intune-licenser påverkas av principen. De användare i den valda säkerhetsgruppen som inte har en tilldelad Intune-licens påverkas inte.
 
 >[!IMPORTANT]
-> Om du använder Intune med Configuration Manager för att hantera iOS- och Android-enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.
+> Om du använder Intune med Configuration Manager för att hantera enheter tillämpas principen endast på användarna direkt i den grupp du valt. Medlemmar i underordnade grupper som är kapslade i den grupp som du har valt påverkas inte.
 
 Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer information finns i:
 * [Vad som händer när din Android-app hanteras av appskyddsprinciper](app-protection-enabled-apps-android.md)
@@ -85,38 +91,37 @@ Slutanvändarna kan hämta apparna från App Store eller Google Play. Mer inform
 ##  <a name="change-existing-policies"></a>Ändra befintliga principer
 Du kan redigera en befintlig princip och tillämpa den på inriktade användare. När du ändrar befintliga principer ser dock inte användare som redan är inloggade i apparna ändringarna förrän efter åtta timmar.
 
-Om användaren ska kunna se effekten av ändringarna direkt måste användaren logga ut ur appen och sedan logga in igen.
+För att kunna se effekten av ändringarna direkt måste slutanvändaren logga ut ur appen och sedan logga in igen.
 
 ### <a name="to-change-the-list-of-apps-associated-with-the-policy"></a>Ändra listan över appar som är associerade med principen
 
-1.  Välj den princip som du vill ändra på bladet **Apprincip**. När du gör det öppnas ett blad som är specifikt för den princip du valt.
+1.  I fönstret **Principer för appskydd** väljer du den princip som du vill ändra. Därmed öppnas ett fönster som är specifikt för den princip som du precis valde.
 
-2.  Öppna listan med appar genom att välja **Målappar** på principbladet.
+2.  I principfönstret väljer du **Målappar** för att öppna listan med appar.
 
 3.  Ta bort eller lägg till appar i listan och spara ändringarna genom att välja ikonen **Spara**.
 
 ### <a name="to-change-the-list-of-user-groups"></a>Ändra listan över användargrupper
 
-1.  Välj den princip som du vill ändra på bladet **Apprincip**. När du gör det öppnas bladet som är specifikt för den princip du valt.
 
-2.  Välj **Användargrupper** för att öppna bladet **Användargrupp** som innehåller en lista över aktuella användargrupper som omfattas av den här principen.
+1.  I fönstret **Principer för appskydd** väljer du den princip som du vill ändra. Därmed öppnas ett fönster som är specifikt för den princip som du valde.
 
-3.  Om du vill lägga till en ny användargrupp till principen väljer du **Lägg till användargrupp** och väljer användargruppen. Välj **Välj** om du vill distribuera principen till den grupp du valt.
+2.  I principfönstret väljer du **Tilldelningar** för att öppna fönstret **Intune-appskydd – Tilldelningar** som visar en lista med aktuella användargrupper som har den här principen.
 
-4.  Om du vill ta bort en användargrupp markerar du den användargrupp som du vill ta bort. Sedan väljer du punkterna (...) och **Ta bort** för att ta bort användargruppen.
-  ![Skärmbild som visar alternativet Ta bort](./media/app-protection-policy-delete-user.png)
+3.  Om du vill lägga till en ny användargrupp för principen väljer du **Välj grupper att ta med** på fliken **Inkludera** och sedan användargruppen. Välj **Välj** om du vill distribuera principen till den grupp du valt.
+
+4.  Om du vill ta bort en användargrupp väljer du **Välj grupper att utesluta** på fliken **Undanta** och sedan användargruppen. Välj **Välj** för att ta bort användargruppen.
 
 ### <a name="to-change-policy-settings"></a>Ändra principinställningar
 
-1.  Välj den princip som du vill ändra på bladet **Apprincip**. När du gör det öppnas ett blad som är specifikt för den princip du valt.
+1.  I fönstret **Principer för appskydd** väljer du den princip som du vill ändra. Därmed öppnas ett fönster som är specifikt för den princip som du precis valde.
 
-
-2.  Öppna bladet **Principinställningar** genom att välja **Principinställningar**.
+2.  Välj **Principinställningar** så att fönstret **Principinställningar** öppnas.
 
 3.  Ändra inställningarna och spara ändringarna genom att klicka på ikonen **Spara**.
 
 ## <a name="policy-settings"></a>Principinställningar
-Välj något av följande om du vill se en fullständig lista med principinställningar för iOS och Android:
+Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS och Android:
 
 - [iOS-principer](app-protection-policy-settings-ios.md)
 - [Android-principer](app-protection-policy-settings-android.md)

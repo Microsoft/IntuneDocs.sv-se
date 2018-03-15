@@ -1,6 +1,6 @@
 ---
-title: "Registrera iOS-enheter – Enhetsregistreringsprogrammet"
-titlesuffix: Azure portal
+title: "Registrera iOS-enheter med programmet för enhetsregistrering"
+titlesuffix: Microsoft Intune
 description: "Läs hur du registrerar företagsägda iOS-enheter med programmet för enhetsregistrering.”"
 keywords: 
 author: ErikjeMS
@@ -15,13 +15,13 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b56907217b45ddb2bfe869f23abc34c0508bdbd7
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 8e770c39a22b620bb642b7b15a456369bb4acec2
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
+# <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples program för enhetsregistrering (DEP)
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 02/09/2018
 >
 >Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har ditt konto ännu inte uppdaterats till det nya användargränssnittet och du kan använda den här hjälpsidan.
 >
->![Gammalt användargränssnitt](./media/appleenroll-oldui.png)
+>![Gammalt användargränssnitt för Intune](./media/appleenroll-oldui.png)
 >
 >Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har du de uppdaterade användargränssnitten.  Gå till [den här hjälpsidan](device-enrollment-program-enroll-ios-newui.md).
 >
->![Nytt användargränssnitt](./media/appleenroll-newui.png)
+>![Nytt användargränssnitt för Intune](./media/appleenroll-newui.png)
 
 Det här avsnittet hjälper dig att aktivera registrering av iOS-enheter som köpts via Apples [program för enhetsregistrering (DEP)](https://deploy.apple.com). Du kan aktivera DEP-registrering för ett stort antal enheter utan att behöva röra dem. Du kan leverera enheter som iPhone och iPad direkt till användare. När användaren sätter på enheten körs installationsassistenten med de konfigurerade inställningarna och enheten registreras i hanteringen.
 
@@ -76,11 +76,11 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 
-  ![Skärmbild av rutan Registreringsprogramtoken i arbetsytan för Apple-certifikat.](./media/enrollment-program-token-add.png)
+  ![Fönstret Registreringsprogramtoken i arbetsytan Apple-certifikat](./media/enrollment-program-token-add.png)
 
 2. Välj **Hämta den offentliga nyckeln** om du vill hämta och spara krypteringsnyckelfilen (.pem) lokalt. Filen .pem används för att begära ett förtroendecertifikat från portalen Apples DEP.
 
-  ![Skärmbild av rutan Registreringsprogramtoken i arbetsytan för Apple-certifikat. Nedladdning av offentlig nyckel.](./media/enrollment-program-token-download.png)
+  ![Fönstret Registreringsprogramtoken i arbetsytan Apple-certifikat där den offentliga nyckeln laddas ned](./media/enrollment-program-token-download.png)
 
 **Steg 2. Skapa och ladda ned en Apple DEP-token.**<br>
 1. Välj **Skapa en token via Apples enhetsregistreringsprogram (DEP)** så öppnas Apples portal för driftsättningsprogram. Logga in med ditt företags Apple-ID. Du måste använda detta Apple-ID för att kunna förnya DEP-token.
@@ -89,29 +89,25 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 3. På sidan **Hantera servrar** väljer du **Lägg till MDM-server**.
 4. Ange **MDM-servernamnet** och välj **Nästa**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
 
-   ![Skärmbild av hur någon lägger till ett MDM-servernamn för DEP och sedan klickar på Nästa.](./media/enrollment-program-token-add-server.png)
+   ![Lägger till ett MDM-servernamn för DEP och klickar sedan på Nästa](./media/enrollment-program-token-add-server.png)
 
 5. Dialogrutan **Lägg till &lt;ServerName&gt;**  öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.  
-<<<<<<< HEAD
 
-=======
->>>>>>> e19b417f8bc134dc5a5a9f60354f017ccc42fd88
-
-7. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
-8. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
+6. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
+7. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
     - **Serienummer**
     - **Ordernummer**
     - **Ladda upp CSV-fil**.
 
-   ![Skärmbild av någon som anger enheterna ska visas efter serienummer, väljer åtgärden Assign to Server (Tilldela till server) och sedan servernamnet.](./media/enrollment-program-token-specify-serial.png)
+   ![Anger enheterna som ska visas efter serienummer, väljer åtgärden Assign to Server (Tilldela till server) och sedan servernamnet](./media/enrollment-program-token-specify-serial.png)
 
-9. Välj **Assign to Server** (Tilldela till server) för **Välj åtgärd** och välj **servernamnet** som angetts för Microsoft Intune och sedan &lt;OK&gt;. Apples portal tilldelar de angivna enheterna till Intune-servern för hantering och visar sedan meddelandet **Assignment Complete** (Tilldelningen är klar).
+8. Välj **Assign to Server** (Tilldela till server) för **Välj åtgärd** och välj **servernamnet** som angetts för Microsoft Intune och sedan &lt;OK&gt;. Apples portal tilldelar de angivna enheterna till Intune-servern för hantering och visar sedan meddelandet **Assignment Complete** (Tilldelningen är klar).
 
    Gå till Apple-portalen och **Driftsättningsprogram** &gt; **Enhetsregistreringsprogram** &gt; **View Assignment History (Visa historik för tilldelning)** för att se en lista över enheter och deras MDM-servertilldelning.
 
 **Steg 3. Ange det Apple-ID som användes för att skapa din registreringsprogramtoken.**<br>I Intune på Azure-portalen anger du ditt Apple-ID för framtida bruk.
 
-![Skärmbild av någon som anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrat till denna token.](./media/enrollment-program-token-apple-id.png)
+![Anger det Apple-ID som användes för att skapa registreringsprogramtoken och bläddrar till denna token](./media/enrollment-program-token-apple-id.png)
 
 **Steg 4. Bläddra till den registreringsprogramtoken som du vill ladda upp.**<br>
 Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med pushcertifikatet kan Intune registrera och hantera iOS-enheter genom push-överföring av principer till registrerade mobila enheter. Intune synkroniseras automatiskt med Apple och visar ditt registreringsprogramkonto.
@@ -132,7 +128,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 4. Välj **Enhetshanteringsinställningar** för att konfigurera följande profilinställningar:
 
-  ![Skärmbild av val av hanteringsläge. Enheten har följande inställningar: Övervakad, Låst registrering samt Tillåt parkoppling inställd på Neka alla. Apple Configurator-certifikat är nedtonat för en ny registreringsprogramprofil.](./media/enrollment-program-profile-mode.png)
+  ![Väljer hanteringsläge](./media/enrollment-program-profile-mode.png)
   - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
 
  > [!NOTE]
@@ -150,7 +146,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 5. Välj **Inställningar för inställningsassistenten** och konfigurera följande profilinställningar:
 
-  ![Skärmbild av någon som väljer konfigurationsinställningar för en ny registreringsprogramprofil.](./media/enrollment-program-profile-settings.png)
+  ![Väljer konfigurationsinställningar med tillgängliga inställningar för en ny registreringsprogramprofil](./media/enrollment-program-profile-settings.png)
   - **Avdelningsnamn** – Visas om användaren knackar på **Om konfiguration** under aktiveringen.
 
   - **Avdelningens telefonnummer** – Visas om användaren klickar på knappen **Behöver du hjälp?** under aktiveringen.
@@ -175,11 +171,11 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
 
 1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
-  ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/enrollment-program-device-sync.png)
+  ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
   
 2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
-   ![Skärmbild av bladet Synkronisera där länken Begär synkronisering håller på att väljas.](./media/enrollment-program-device-request-sync.png)
+   ![Bladet Synkronisera där länken Begär synkronisering väljs](./media/enrollment-program-device-request-sync.png)
 
    För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
      -  En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Vid en fullständig synkronisering uppdateras Intune med alla Apple-serienummer som tilldelats till Intune. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
@@ -197,7 +193,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** och väljer sedan **Registreringsprogramprofiler**.
 2. Från listan över **Registreringsprogramprofiler** väljer du den profil du vill tilldela till enheter och väljer därefter **Tilldela enheter**.
 
- ![Skärmbild av enhetstilldelningar med Tilldela markerat.](./media/enrollment-program-device-assign.png)
+ ![Enhetstilldelningar med Tilldela valt](./media/enrollment-program-device-assign.png)
 
 3. Välj **Tilldela** och markera sedan de enheter som du vill tilldela den här profilen. Du kan använda filter för att enbart visa tillgängliga enheter:
   - **ej tilldelad**
@@ -205,7 +201,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
   - **&lt;profilnamn&gt;**
 4. Markera de enheter som du vill tilldela. Du kan använda kryssrutan ovanför kolumnen för välja upp till 1 000 listade enheter och sedan klicka på **Tilldela**. Om du vill registrera mer än 1 000 enheter måste du upprepa tilldelningen tills alla enheter har tilldelats en registreringsprofil.
 
-  ![Skärmbild av knappen Tilldela som används för att tilldela registreringsprogramprofiler i Intune](media/dep-profile-assignment.png)
+  ![Knappen Tilldela används för att tilldela registreringsprogramprofil i Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices"></a>Distribuera enheter
 Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har återställts till fabriksinställningarna.

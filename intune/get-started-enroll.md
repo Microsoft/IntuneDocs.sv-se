@@ -1,10 +1,10 @@
 ---
-title: "Komma igång med registrering av enheter"
-titlesuffix: Azure portal
+title: "Om registreringsprocessen för iOS-enheter"
+titlesuffix: Microsoft Intune
 description: "Lär dig hur hela registreringsprocessen går till med registrering av en iOS-enhet som exempel."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -15,13 +15,13 @@ ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3818556f300821fb9acaa260300ae683f43b13e3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 18a3225ef81d7f13b8656326540e30cf5ee07f1e
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="get-started-enrolling-devices"></a>Kom igång med registrering av enheter
+# <a name="understand-the-users-experience-enrolling-an-ios-device"></a>Beskrivning av hur en iOS-enhet registreras
 
 Med Microsoft Intune kan du ge personalen tillgång till mobila enheter samtidigt som företagets information skyddas. Eftersom användarna kommer att interagera med Intune på sina enheter i stället för på administrationskonsolen, måste du se till att sätta dig in i registreringsprocessen. På så sätt kan du införliva vettiga efterlevnadsprinciper i processen och hjälpa dina användare på traven. Detta är särskilt viktigt eftersom användarna då kan se exakt vilken information som du som administratör kan se:
 

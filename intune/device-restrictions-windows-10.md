@@ -1,25 +1,26 @@
 ---
-title: "Inställningar av begränsningar i Intune-enheter för Windows Phone 10"
-titlesuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på Windows 10-enheter."
+title: "Inställningar av enhetsbegränsningar för Windows 10 i Microsoft Intune"
+titlesuffix: 
+description: "Läs vilka Microsoft Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows 10."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 2/15/2018
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 128e16ad989293e168d2bb53d5974e479e09a000
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 861c971c98493f6adab78e6bc93d560bbc1d5243
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="windows-10-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 10 och senare i Microsoft Intune
+#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Microsoft Intune i Windows 10 och senare
+I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -30,11 +31,7 @@ ms.lasthandoff: 02/19/2018
    - Den här inställningen används inte om datorn är ansluten till Azure Active Directory och automatisk registrering har aktiverats. 
    - Den här principinställningen gäller inte för datorer som kör Windows 10 Home.
 - **Manuell installation av rotcertifikat (endast mobil)** – Hindrar användaren att manuellt installera rotcertifikat och mellanliggande CAP-certifikat.
-- **Sändning av diagnostikdata** – Möjliga värden är:
-    - **Inga** – Inga data skickas till Microsoft
-    - **Grundläggande** – Begränsad information skickas till Microsoft
-    - **Utökade** – Utökade diagnostikdata skickas till Microsoft
-    - **Fullständiga** Skickar samma data som i Utökade, plus ytterligare information om enhetens tillstånd
+
 - **Kamera** – Tillåt eller blockera användning av kameran på enheten.
 - **OneDrive-filsynkronisering** – Blockerar enheten från att synkronisera filer till OneDrive.
 - **Flyttbara lagringsmedier** – Anger om externa lagringsenheter, t.ex. SD-kort, kan användas med enheten.
@@ -51,6 +48,7 @@ ms.lasthandoff: 02/19/2018
 - **Enhetsidentifiering** – Blockerar en enhet från att identifieras av andra enheter.
 - **Växla mellan aktiviteter (endast mobil)** – Blockerar funktionen Växla mellan aktiviteter på enheten.
 - **Dialogruta om SIM-kortsfel (endast mobil)** – Blockerar ett felmeddelande från att visas på enheten om inget SIM-kort har upptäckts.
+- **Ink-arbetsytan** – Blockerar användare från att komma åt Ink-arbetsytan. När den här inställningen inte är konfigurerad är Ink-arbetsytan aktiverad (funktionen är på) och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution** – Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
 
 
@@ -75,6 +73,9 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 
 -   **Anpassning av inmatning** – Tillåt inte användning av molnbaserade taltjänster för Cortana, diktering eller Microsoft Store-appar. Om du tillåter dessa tjänster kan det hända att Microsoft samlar in röstdata för att förbättra tjänsten.
 -   **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess** – Tillåt Windows att automatiskt godkänna meddelanden om medgivande till parkoppling och sekretess när appar körs.
+- **Publicera användaraktiviteter**: Ställ in den här på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen.
+- **Endast lokala aktiviteter**: Ställ in det här alternativet på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen baserat på lokala aktiviteter.
+
 
 Du kan ange information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
 
@@ -130,7 +131,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 ## <a name="locked-screen-experience"></a>Låsskärm
 
 - **Aviseringar från Åtgärdscenter (endast mobil)** – Aviseringar från Åtgärdscenter visas på enhetens låsskärm (endast Windows 10 Mobile).
-- **URL till bild av låst skärm (endast skrivbord)** – Anger webbadressen till en bild i PNG-, JPG- eller JPEG-format som ska användas som låsskärmsbild i Windows. Användare kan inte ändra det här.
+- **URL till bild av låst skärm (endast skrivbord)** – Anger webbadressen till en bild i JPEG-format som ska användas som låsskärmsbild i Windows. Användare kan inte ändra det här.
 -   **Skärmtidsgräns kan ställas in av användaren (endast Mobile)** – Användarna kan konfigurera tiden 
 -   **Cortana på låst skärm (endast stationär dator)** – Tillåt inte användare att interagera med Cortana när enheten har låst skärm (endast stationära datorer med Windows 10).
 -   **Popup-meddelanden på låst skärm** – Hindra varningsmeddelanden från att visas på enhetens låsskärm.
@@ -158,10 +159,10 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
--   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Microsoft Edge.
--   **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
+-   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
--   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Microsoft Edge-webbläsaren.
+-   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
@@ -173,13 +174,15 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **InPrivate-surfning** – Förhindrar att användaren öppnar InPrivate-surfningssessioner.
 -   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Edge (endast Windows 10 Mobile).
--   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
+-   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Edge-webbläsaren (endast skrivbord).
 -   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
 -   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Microsoft Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
--   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
+-   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
+-  **Listan Favoriter** – Definierar sökvägen till filen med favoriter. Till exempel http://contoso.com/favorites.html.
+-  **Begränsa ändringar i Favoriter** – Ställ in detta på **Blockera** för att hindra användarna från att lägga till, importera, sortera och redigera i listan Favoriter. 
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 

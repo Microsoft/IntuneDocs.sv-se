@@ -1,12 +1,12 @@
 ---
-title: "Supportavdelningens felsökningsportal | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Supportavdelningen använder felsökningsportalen till att lösa användarnas tekniska problem"
+title: "Supportavdelningens felsökningsportal"
+titlesuffix: Microsoft Intune
+description: "Supportavdelningen använder felsökningsportalen till att lösa användarnas tekniska problem."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/26/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 2da1a37af1ab0b0b1566738bf1ecdfe990dd760d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7997bf0494ff52ad25b09301173b65f2478dca37
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-the-troubleshooting-portal-to-help-users"></a>Använd felsökningsportalen för att hjälpa användare
+# <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -63,7 +63,7 @@ Du kan använda bladet **Felsökning** för att granska användarinformation.
 | 1.   | Kontostatus  | Visar status för aktuell Intune-klient som **Aktiv** eller **Inaktiv**.       |
 | 2.   | Val av användare  | Namnet på den valda användaren. Välj en ny användare genom att klicka på **Ändra användare**.       |
 | 3.   | Användarstatus  | Visar status för användarens Intune-licens, antal enheter, varje enhetskompatibilitet, antalet appar och appkompatibilitet.       |
-| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa på bladet. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper</ul>      |
+| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa på bladet. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper<li> Registreringsbegränsningar</ul>      |
 | 5.   | Gruppmedlemskap  | Yadda       |
 
 ## <a name="mobile-apps-reference"></a>Referens för mobila appar

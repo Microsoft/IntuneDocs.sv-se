@@ -1,25 +1,25 @@
 ---
-title: "Konfigurera enkel inloggning för Intune för iOS-enheter"
-titlesuffix: Azure portal
-description: "Läs mer om hur du konfigurerar enkel inloggning för Intune för iOS-enheter."
+title: "Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter"
+titlesuffix: 
+description: "Läs mer om att konfigurera enkel inloggning till Microsoft Intune för iOS-enheter."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/7/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 07ac355232c1e4ac290c87191d3764e3df45327e
-ms.sourcegitcommit: 4509039cbfd4d450324a3475fb5841906720baa1
+ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="configure-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning för Intune för iOS-enheter
+# <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -35,16 +35,16 @@ För att kunna använda enkel inloggning för iOS-enheter måste du uppfylla fö
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Profiler** på bladet **Enhetskonfiguration**.
-3. På profilbladet väljer du **Skapa profil**, anger ett namn och en beskrivning och konfigurerar följande inställningar:
+3. På sidan **Intune** väljer du **Enhetskonfiguration**.
+2. På sidan **Enhetskonfiguration** väljer du **Profiler**.
+3. På profilsidan väljer du **Skapa profil**, anger ett namn och en beskrivning och konfigurerar följande inställningar:
    - **Plattform**: Välj **iOS**. 
    - **Profiltyp**: Välj **Enhetsfunktioner**.
-4. På bladet **Enhetsfunktioner** väljer du **Enkel inloggning**.
+4. På sidan **Enhetsfunktioner** väljer du **Enkel inloggning**.
 
-   ![Bladet Enkel inloggning](./media/sso-blade.png)
+   ![Sidan Enkel inloggning](./media/sso-blade.png)
 
-2. Ta hjälp av följande sammanfattningstabell när du fyller i fältet på bladet **Enkel inloggning**. Mer information finns i avsnitten efter tabellen.
+2. Ta hjälp av följande sammanfattningstabell när du fyller i fälten på sidan **Enkel inloggning**. Mer information finns i avsnitten efter tabellen.
    
    |Fält  |Obs!|
    |---------|---------|
@@ -82,7 +82,7 @@ När en användare till exempel ansluter till någon av dessa platser använder 
 > [!NOTE]
 > Dessa URL:er måste vara ett fullständigt domännamn i korrekt format. Apple kräver att dessa ska vara i formatet `http://<yourURL.domain>`
 
-Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning utförs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Med iOS 9.0 eller senare kan ett enskilt jokertecken * användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
+Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning utförs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Om du har iOS 9.0 eller senare kan ett enskilt jokertecken \* användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
 Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-adresser.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Appar som ska använda enkel inloggning

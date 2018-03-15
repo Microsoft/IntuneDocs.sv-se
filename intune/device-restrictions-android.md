@@ -1,31 +1,30 @@
 ---
-title: "Inställningar för enhetsbegränsningar för Android i Intune"
-titlesuffix: Azure portal
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android-enheter.”"
+title: "Inställningar av enhetsbegränsningar för Android-enheter i Microsoft Intune"
+titlesuffix: 
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Android."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/11/2017
+ms.date: 3/1/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6bdf714a-5d93-485c-8b52-513635c60cb6
-ms.reviewer: heenamac
+ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 559550860d0882b20a005a5d0957be761978cbe6
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: d939d86f6ccd7f9851cfc52f1080fddaeee6a947
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="android-and-samsung-knox-standard-device-restriction-settings-in-microsoft-intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune
+# <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Använd de här inställningarna med en princip för begränsning av Android-enhet för att konfigurera enheter i din organisation.
+I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Android.
 
 >[!TIP]
 >Om de önskade inställningarna inte är tillgängliga så kan du konfigurera dina enheter med hjälp av en [anpassad profil](custom-settings-android.md).

@@ -1,7 +1,7 @@
 ---
-title: "Add app configuration policies for managed apps without device enrollment (Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering) | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Lär dig hur du använder appkonfigurationsprinciper för hanterade appar utan enhetsregistrering."
+title: "Konfigurationsprinciper för hanterade appar utan enhetsregistrering"
+titlesuffix: Microsoft Intune
+description: "Läs om hur du konfigurerar principer för hanterade appar utan enhetsregistrering."
 keywords: 
 author: Erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 136032be6a05ad56dd78fe40e66d3d049a4b5a03
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 384804029ecbf403f526144136dc187212e6cf4a
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -27,8 +27,8 @@ ms.lasthandoff: 02/09/2018
 
 Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd för Intune App SDK på enheter som inte har registrerats. 
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj arbetsbelastningen **mobilappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:

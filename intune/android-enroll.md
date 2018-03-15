@@ -1,6 +1,6 @@
 ---
-title: Registrera Android-enheter i Intune | Microsoft Docs
-titlesuffix: Azure portal
+title: Registrera Android-enheter i Intune
+titlesuffix: Microsoft Intune
 description: "Läs hur du registrerar Android-enheter i Intune."
 keywords: 
 author: ErikjeMS
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e137da3ad4121f4b9cdfbb765ee00f71beca610a
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -43,7 +43,7 @@ Användarna måste registrera sina enheter genom att hämta appen Intune-företa
 
 ## <a name="enable-enrollment-of-android-for-work-devices"></a>Aktivera registrering av Android for Work-enheter
 
-Om du vill aktivera hantering av arbetsprofilen på enheter som har [stöd för Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), måste du lägga till en Android for Work-bindning i Intune. Om du vill registrera enheter som har stöd för Android for Work men som tidigare registrerades som vanliga Android-enheter, måste enheterna avregistreras och sedan registreras igen.
+Om du vill aktivera hantering av arbetsprofilen på enheter som har [stöd för Android for Work](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012), måste du lägga till en Android for Work-bindning i Intune. Om du vill registrera enheter i Android for Work, men enheterna redan har registrerats som vanliga Android-enheter, måste enheterna avregistreras och sedan registreras igen.
 
 Om du registrerar Android for Work-enheter med hjälp av ett konto för [Enhetsregistreringshanterare](device-enrollment-manager-enroll.md) går det att registrera högst 10 enheter per konto.
 
@@ -58,7 +58,7 @@ Om du inte redan gjort det, förbereder du för hantering av mobila enheter geno
     Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.
 
    a. På bladet **Intune** väljer du **Enhetsregistrering** > **Android for Work-registrering**. Välj sedan **Konfigurera** för att öppna Google Play-webbplatsen Android for Work. Webbplatsen öppnas på en ny flik i webbläsaren.
-   ![Skärmbild som visar länk till att konfigurera Android for Work-bindning](./media/android-work-bind.png)
+   ![Registreringsskärm i Android for Work](./media/android-work-bind.png)
 
    b. **Logga in på Google**<br>
    Logga in på Googles inloggningssida med det Google-konto som ska associeras med alla hanteringsuppgifter för Android for Work för den här klienten. Det här är det Google-konto som företagets IT-administratörer delar för att hantera och publicera appar i Play for Work-konsolen. Du kan använda ett befintligt Google-konto eller skapa ett nytt.  Det konto du väljer får inte vara kopplat till en G Suite-domän.
@@ -79,7 +79,7 @@ Så här godkänner du Intune-företagsportalen:
 
 1.  Bläddra till appen Företagsportal i [hanterade Google Play Butik](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
 2.  Logga in på den hanterade Google Play-butiken med samma Google-konto som du använde när du konfigurerade bindningen för Android for Work.
-3.  Klicka på **Godkänn.**  En ny dialogruta öppnas.
+3.  Klicka på **Godkänn** för att öppna en ny dialogruta.
 4.  Granska behörigheterna i den här dialogrutan och klicka sedan på **Godkänn**. Du måste tillåta dessa behörigheter för att företagsportalappen ska kunna hantera arbetsprofilen på enheten.
 5.  Välj **Keep approved when app requests new permissions** (Behåll godkända när appen begär nya behörigheter) och klicka sedan på **Spara.**
 

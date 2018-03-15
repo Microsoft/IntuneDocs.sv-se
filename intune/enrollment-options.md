@@ -1,6 +1,7 @@
 ---
-title: "Registreringsalternativ för Intune"
-description: 
+title: "Registreringsalternativ för enheter som hanteras av Microsoft Intune"
+titleSuffix: 
+description: "En lista med registreringsalternativ som administratörer kan ange för enheter som hanteras av Microsoft Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -11,13 +12,13 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
-ms.openlocfilehash: 2672ebec94387ad876443c975f083472c2613a11
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67805253f432098736e0fb96776e8f7f0ff44cc3
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="enrollment-options-for-intune"></a>Registreringsalternativ för Intune
+# <a name="enrollment-options-for-devices-managed-by-intune"></a>Registreringsalternativ för enheter som hanteras av Intune
 
 Som Intune-administratör kan du konfigurera enhetsregistreringen för att hjälpa användarna och aktivera Intune-funktioner.  Intune innehåller följande registreringsalternativ:
 

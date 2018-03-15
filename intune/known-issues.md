@@ -1,12 +1,12 @@
 ---
-title: "Kända problem med Microsoft Intune i Azure-portalen"
-titlesuffix: Azure portal
-description: "Läs om kända problem i Intune”"
+title: "Kända problem i Microsoft Intune"
+titlesuffix: Microsoft Intune
+description: "Läs om kända problem i Microsoft Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 255bd839bda8e8d85794a88fc76899bbd5870bc0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9933e6ed7f8ee636cb0a9416ff2409e2054e3aa0
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
