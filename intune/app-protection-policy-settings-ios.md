@@ -1,12 +1,12 @@
 ---
 title: "Principinställningar för iOS-appskydd"
-titlesuffix: Azure portal
-description: "Det här ämnet beskriver inställningarna för appskyddsprinciper för iOS-enheter.”"
+titlesuffix: Microsoft Intune
+description: "Det här ämnet beskriver inställningarna för appskyddsprinciper för iOS-enheter."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5366062588d518a7072fb4d56e4eade0f492bebf
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 6225afab71d1f47793ea295553dfcaf169374a06
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-De principinställningar som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure-portalen.
+De principinställningar som beskrivs i det här avsnittet kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Lägg till en princip** > **Inställningar** i Azure Portal.
 
 Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen ***principhanterade appar*** för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
 
@@ -32,8 +32,8 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
 | Inställningen | Använd så här | Standardvärde |
 |------|------|------|
-| **Förhindra säkerhetskopiering av iTunes och iCloud** | Välj **Ja** om du vill inaktivera säkerhetskopiering för alla hanterade filer till iTunes och iCloud. Välj **Nej** om du vill tillåta att den här appen säkerhetskopierar hanterade filer till iTunes och iCloud.| Ja |
-| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar. <br><br> Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. En fullständig lista över appar och tjänster finns i avsnittet [undantag vid dataöverföring](#data-transfer-exemptions). | Alla appar |
+| **Förhindra säkerhetskopiering av iTunes och iCloud** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud. Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud.| Ja |
+| **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar. <br><br> Som standard finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. Du kan också skapa egna undantag om du vill tillåta att data överförs till en app som inte stöder Intune APP. Mer information finns i [Undantag vid dataöverföring](#data-transfer-exemptions). | Alla appar |
 | **Tillåt att appen hämtar data från andra appar** | Ange vilka appar som kan överföra data till den här appen: <ul><li>**Principhanterade appar**: Tillåt endast överföring från andra principhanterade appar.</li><li>**Alla appar**: Tillåt dataöverföring från alla appar.</li><li>**Ingen**: Tillåt inte dataöverföring från någon app, inklusive andra principhanterade appar.</li></ul> Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring från. En fullständig lista över appar och tjänster finns i avsnittet [undantag vid dataöverföring](#data-transfer-exemptions). MAM-aktiverade program med flera identiteter på icke-registrerade iOS-enheter ignorerar den här principen och tillåter alla inkommande data. | Alla appar |
 | **Förhindra "Spara som"** | Välj **Ja** om du vill inaktivera alternativet Spara som i den här appen. Välj **Nej** om du vill tillåta att Spara som används. | Nej |
 | **Begränsa klipp ut, kopiera och klistra in med andra appar** | Ange när åtgärderna klippa ut, kopiera och klistra in kan användas med den här appen. Välj mellan: <ul><li>**Blockerad**: Tillåt inte åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra appar.</li><li>**Principhanterade appar**: Tillåt endast åtgärderna klipp ut, kopiera och klistra in mellan den här appen och andra principhanterade appar.</li><li>**Principhanterade appar med inklistring**: Tillåt klipp ut och kopiera mellan den här appen och andra principhanterade appar. Tillåt att data från en annan app klistras in i den här appen.</li><li>**Alla appar**: Inga begränsningar för klipp ut, kopiera och klistra in till och från den här appen. | Alla appar |
@@ -53,13 +53,12 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 | App-/tjänstnamn | Description |
 | ---- | --- |
 |<code>tel; telprompt</code> | Intern telefonapp |
-| <code>skype</code> | Skype |
-| <code>app-settings</code> | Enhetsinställningar |
-| <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | Appbutik |
-| <code>calshow</code> | Intern kalender |
+|<code>skype</code> | Skype |
+|<code>app-settings</code> | Enhetsinställningar |
+|<code>itms; itmss; itms-apps; itms-appss; itms-services</code> | Appbutik |
+|<code>calshow</code> | Intern kalender |
 
-
-
+Mer information finns i [Appundantag för dataöverföringsprinciper](app-protection-policies-exception.md). 
 
 ## <a name="access-settings"></a>Åtkomstinställningar
 

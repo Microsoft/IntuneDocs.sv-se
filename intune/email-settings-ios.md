@@ -1,34 +1,34 @@
 ---
-title: "E-postinställningar för iOS-enheter i Intune"
-titleSuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att konfigurera e-postanslutningar på iOS-enheter.”"
+title: "E-postinställningar för iOS-enheter i Microsoft Intune"
+titleSuffix: 
+description: "Läs om Microsoft Intune-inställningar som du kan använda för att konfigurera e-postinställningar på enheter som kör iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/24/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 9f0fa6af-3669-439a-bd0d-75d8b1a0b135
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7baec2990b9020e8125395b589fba7a965ba86ee
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1634512c85c156046d0324953463d745be06d649
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="email-profile-settings-for-ios-devices-in-microsoft-intune"></a>E-postprofilinställningar för iOS-enheter i Microsoft Intune
+# <a name="email-profile-settings-in-microsoft-intune-for-devices-running-ios"></a>E-postprofilinställningar i Microsoft Intune för enheter som kör iOS 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Den här artikeln visar de e-postprofilinställningar som du kan konfigurera för enheter som kör iOS.
 
+## <a name="email-settings"></a>E-postinställningar
 
 - **E-postserver** – Värdnamnet för din Exchange-server.
-- **Kontonamn** – Visningsnamnet för e-postkontot som kommer att visas på användarnas enheter.
+- **Kontonamn** – Visningsnamnet för e-postkontot som det visas för användare på deras enheter.
 - **Användarnamnattribut för AAD** – Det här är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamn för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. **user1@contoso.com** eller **Användarens huvudnamn (UPN)** som **user1** eller **user1@contoso.com**.
 - **E-postadressattribut från AAD** – Hur e-postadressen för användaren på varje enhet ska skapas. Välj **Primär SMTP-adress** om du vill använda den primära SMTP-adressen för att logga in på Exchange eller använd **UPN (User Principal Name)** om du vill använda det fullständiga huvudnamnet som e-postadress.
 - **Autentiseringsmetod** – Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen.

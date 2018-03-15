@@ -1,40 +1,38 @@
 ---
-title: "VPN-inställningar i Intune för Android-enheter"
-titlesuffix: Azure portal
-description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på Android-enheter"
+title: "VPN-inställningar i Microsoft Intune för enheter som kör Windows 10"
+titlesuffix: 
+description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Android"
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 16c056ca-320e-4107-ad03-a0cf96c28885
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6ec20a5c808df1fa30a4357f973c9544dc6664b5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3fe05b5fdd87e92f5acc35c0a750287f8fd01b92
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="vpn-settings-for-android-devices-in-microsoft-intune"></a>VPN-inställningar för Android-enheter i Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Android 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Som Intune-administratör kan du konfigurera VPN-inställningar för följande plattformar:
+Du kan konfigurera VPN-inställningar för följande plattformar:
 
 - [Android](#android-vpn-settings)
 - [Android for Work](#android-for-work-vpn-settings)
 
-Beroende på vilka inställningar du väljer, så är inte alla värden i listan nedan konfigurerbara.
+Beroende på vilka inställningar du väljer kan bara vissa av följande värden konfigureras.
 
 ## <a name="android-vpn-settings"></a>VPN-inställningar för Android
 **Anslutningsnamn** – Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
-- **IP-adress eller FQDN** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
+- **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
 - **Autentiseringsmetod** – Välj hur enheter ska autentiseras mot VPN-servern från:
     - **Certifikat** – Välj den SCEP- eller PKCS-certifikatprofil som du skapade tidigare för att autentisera anslutningen. Mer information om certifikatprofiler finns i [Så här konfigurerar du certifikat](certificates-configure.md).
     - **Användarnamn och lösenord** – Slutanvändare måste ange ett användarnamn och lösenord för att logga in på VPN-servern.
@@ -52,7 +50,7 @@ Beroende på vilka inställningar du väljer, så är inte alla värden i listan
 ## <a name="android-for-work-vpn-settings"></a>VPN-inställningar för Android for Work
 
 **Anslutningsnamn** – Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
-- **IP-adress eller FQDN** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
+- **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
 - **Autentiseringsmetod** – Välj hur enheter ska autentiseras mot VPN-servern från:
     - **Certifikat** – Välj den SCEP- eller PKCS-certifikatprofil som du skapade tidigare för att autentisera anslutningen. Mer information om certifikatprofiler finns i [Så här konfigurerar du certifikat](certificates-configure.md).
     - **Användarnamn och lösenord** – Slutanvändare måste ange ett användarnamn och lösenord för att logga in på VPN-servern.

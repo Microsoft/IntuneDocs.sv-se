@@ -1,6 +1,6 @@
 ---
 title: "Vad är enhetsregistrering i Microsoft Intune"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Läs om registrering av iOS-, Android- och Windows-enheter."
 keywords: 
 author: ErikjeMS
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a94703ecc1d7fd464f565855bb9b8dd9ee3c3bfb
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f49178a2d8e8a73a693ed2f374b86b8e702680f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -37,6 +37,14 @@ Det finns flera metoder för att registrera personalens enheter, vilket visas i 
 |**[DEP](#apple-device-enrollment-program)**|   Ja |   Valfri |  Valfri|[Mer information](./device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Ja |   Valfri |  Nej| [Mer information](./apple-configurator-setup-assistant-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Nej |    Nej  | Nej|[Mer information](./apple-configurator-direct-enroll-ios.md)|
+
+## <a name="macos-enrollment-methods"></a>Registreringsmetoder för macOS
+
+| **Metod** |  **Återställning krävs** |  **Användartillhörighet** | **Låst** | **Information**|
+|:---:|:---:|:---:|:---:|:---:|
+|**[BYOD](#bring-your-own-device)** | Nej| Ja | Nej | [Mer information](./macos-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  | [Mer information](./device-enrollment-manager-enroll.md)|
+
 
 ## <a name="windows-enrollment-methods"></a>Metoder för Windows-registrering
 

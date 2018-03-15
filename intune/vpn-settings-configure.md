@@ -1,7 +1,7 @@
 ---
-title: "Hur du konfigurerar VPN-inställningar i Intune"
-titleSuffix: Azure portal
-description: "Läs om hur använder Intune för att konfigurera VPN-anslutningar på enheter som du hanterar.”"
+title: "Så här konfigurerar du VPN-inställningar i Microsoft Intune"
+titleSuffix: 
+description: "Läs om hur du använder Microsoft Intune för att konfigurera anslutningar till virtuella privata nätverk (VPN) på enheter som du hanterar."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 772b7f025adc7ae80d0f14c5c630209c4c7529b2
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: feba7e7dc3e88d7d9beefc548c20bf19fbba662d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Så här konfigurerar du VPN-inställningar i Microsoft Intune
 
@@ -48,7 +48,7 @@ Du kan skapa VPN-profiler med följande anslutningstyper:
 
 
 > [!IMPORTANT]
-> Innan du kan använda de VPN-profiler som har tilldelats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i avsnittet [Vad är apphantering i Microsoft Intune?](app-management.md) när du ska tilldela appar med hjälp av Intune.  
+> Innan du kan använda de VPN-profiler som har tilldelats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i artikeln [Vad är apphantering i Microsoft Intune?](app-management.md) när du ska tilldela appar med hjälp av Intune.  
 
 Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna i [Skapa anpassade VPN-profiler](custom-vpn-profiles-create.md).     
 
@@ -88,7 +88,7 @@ VPN-profiler kan använda ett antal olika anslutningstyper och protokoll från o
 
 ### <a name="certificates"></a>Certifikat
 
-När du skapar VPN-profilen väljer du en SCEP- eller PKCS-certifikatprofil som du tidigare har skapat i Intune. Detta kallas identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet tilldelas datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
+När du skapar VPN-profilen väljer du en SCEP- eller PKCS-certifikatprofil som du tidigare har skapat i Intune. Profilen kallas för identitetscertifikat. Det används för att autentisera mot en betrodd certifikatprofil (eller *rotcertifikat*) som du har skapat för att fastställa att användarens enhet får ansluta. Det betrodda certifikatet tilldelas datorn som autentiserar VPN-anslutningen, vanligtvis VPN-servern.
 
 Mer information om hur du skapar och använder certifikatprofiler i Intune finns i [Konfigurera certifikat i Microsoft Intune](certificates-configure.md).
 

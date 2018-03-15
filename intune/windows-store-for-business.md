@@ -3,10 +3,10 @@ title: "Hantera appar från Microsoft Store för företag"
 titlesuffix: Azure portal
 description: "Lär dig hur du kan synkronisera appar i Intune från Microsoft Store för företag och sedan tilldela och spåra dem.”"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85141fc6f4d71994f575233c255a97e336c92108
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 4460924b3e53a9540ff21aa009a0c028de92f26f
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du appar som du har köpt från Microsoft Store för företag med Microsoft Intune
 
@@ -39,12 +39,15 @@ Granska följande information innan du börjar synkronisera och tilldela appar f
 
 - Konfigurera Intune som utfärdare för hantering av mobila enheter för din organisation.
 - Du måste ha registrerat dig för ett konto i Microsoft Store för företag.
-- När du har associerat ett konto i Windows Store för företag med Intune kan du inte ändra till ett annat konto i framtiden.
+- När du har associerat ett konto i Microsoft Store för företag med Intune kan du inte ändra till något annat konto i framtiden.
 - Appar som köpts från butiken kan inte manuellt läggas till i eller tas bort från Intune. De kan endast synkroniseras med Microsoft Store för företag.
-- Intune synkroniserar både offline- och online-licensierade appar som du har köpt från Microsoft Store för företag.
-- Endast kostnadsfria offlineappar kan synkroniseras till Intune.
+- Både online- och offlinelicensierade appar som du har köpt från Microsoft Store för företag synkroniseras i Intune-portalen. Du kommer sedan att kunna distribuera apparna till enhetsgrupper eller användargrupper. 
+- Online-appinstallationer hanteras i butiken.
+- Kostnadsfria offlineappar kan också synkroniseras till Intune. Dessa appar installeras av Intune och inte av butiken.
 - För användning av den här funktionen måste enheterna vara anslutna till Active Directory Domain Services eller arbetsplatsanslutna.
 - Registrerade enheter måste använda 1511-versionen av Windows 10 eller senare.
+
+Relaterade uppsättningar och offlinelicensierade appar som synkroniseras från Microsoft Store för företag kommer dessutom nu konsolideras till en enda appost i användargränssnittet. All distributionsinformation från enskilda paket migreras till den enda posten. Om du vill se relaterade uppsättningar i Azure-portalen väljer du **Applicenser** på bladet **Mobilappar**.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Koppla ditt konto för Microsoft Store för företag till Intune
 Innan du aktiverar synkronisering i Intune-konsolen måste du konfigurera ditt Windows Store-konto för att använda Intune som ett hanteringsverktyg:
@@ -62,11 +65,12 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Mobilappar** på **Intune**-bladet.
-1. På bladet **Mobilappar**, väljer du **Installation** > **Microsoft Store för företag**.
-2. Klicka på **Aktivera**.
-3. Om du inte redan gjort det klickar du på länken för att registrera Microsoft Store för företag och kopplar kontot på det sätt som beskrivs tidigare.
-5. I listrutan **Språk** väljer du det språk som ska användas vid visning av program från Microsoft Store för företag i Azure-portalen. Apparna installeras i slutanvändarens språk om det är tillgängligt oavsett vilket språk de visas i.
-6. Klicka på **Synkronisera** för att hämta appar som du har köpt från Microsoft Store i Intune.
+4. På bladet **Mobilappar**, väljer du **Installation** > **Microsoft Store för företag**.
+5. Klicka på **Aktivera**.
+6. Om du inte redan gjort det klickar du på länken för att registrera Microsoft Store för företag och kopplar kontot på det sätt som beskrivs tidigare.
+7. I listrutan **Språk** väljer du det språk som ska användas vid visning av program från Microsoft Store för företag i Azure-portalen. Apparna installeras i slutanvändarens språk om det är tillgängligt oavsett vilket språk de visas i.
+8. Klicka på **Synkronisera** för att hämta appar som du har köpt från Microsoft Store i Intune.
+9. Klicka på **Spara**.
 
 ## <a name="synchronize-apps"></a>Synkronisera appar
 

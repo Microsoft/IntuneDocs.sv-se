@@ -1,12 +1,12 @@
 ---
-title: Hantera enheter med Intune
-titleSuffix: Intune on Azure
-description: "Läs hur du visar de enheter som du hanterar med Intune och utför olika åtgärder på dem.”"
+title: Hantera enheter med Microsoft Intune
+titleSuffix: 
+description: "Granska de enheter som du hanterar med Intune och utför olika åtgärder för dem."
 keywords: 
-author: nathbarn
-ms.author: nathbarn
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2017
+ms.date: 02/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1b034e144aa43d239874b484acb2a40be12aff7c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 2e69f47e841cb44ab646431d5bd81b9c1d874c64
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
@@ -29,8 +29,8 @@ Som IT-administratör måste du se till att hanterade enheter tillhandahåller d
 
 Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och låter dig utföra fjärråtgärder på dessa enheter. För att få åtkomst till arbetsbelastningen:
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enheter** i **Intune**.
 4. Du kan visa information om enheter och utföra fjärrenhetsåtgärder på följande sätt:
     - **Översikt** – En ögonblicksbild av de registrerade enheter som du kan hantera.
@@ -38,10 +38,12 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
     - **Azure AD-enheter** – En lista över de enheter som registrerats för eller anslutits till Azure Active Directory (AD). Läs mer om [Azure AD-enhetshantering](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
     - **Enhetsåtgärder** – En historik över de fjärråtgärder som utförts på enheter, inklusive åtgärden, dess status, vem som initierade åtgärden och när den utfördes.
 
-    ![Övervaka enhetsåtgärder](./media/monitor-device-actions.png)
+        ![Skärmbild som visar när enhetsåtgärder övervakas](./media/monitor-device-actions.png)
 
-    - **TeamViewer** – Med tjänsten TeamViewer kan användare av Intune-hanterade Android-enheter få fjärrhjälp från IT-administratören. Läs mer om [TeamViewer](device-profile-android-teamviewer.md).
-
+    - **Granskningsloggar** – Med granskningsloggar får du en post med de aktiviteter som genererar en ändring i Microsoft Intune. Läs mer om [Granskningsloggar](monitor-audit-logs.md).
+    - **TeamViewer-anslutningsprogram** – Med TeamViewer-tjänsten kan användare av Intune-hanterade Android-enheter få fjärrhjälp från sin IT-administratör. Läs mer om [TeamViewer](device-profile-android-teamviewer.md).
+    - **Hjälp och support** – Felsök, begär support eller visa Intune-status.  
+    
 ## <a name="available-device-actions"></a>Tillgängliga enhetsåtgärder
 Vilka åtgärder som är tillgängliga beror på enhetsplattformen och enhetens konfiguration.
 
@@ -63,4 +65,4 @@ Vilka åtgärder som är tillgängliga beror på enhetsplattformen och enhetens 
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Välj **Enhetsåtgärder** om du vill visa status för åtgärder som vidtas på enheter som du hanterar.
+- Välj **Enhetsåtgärder** för att se status för de åtgärder som vidtas på enheter som du hanterar.

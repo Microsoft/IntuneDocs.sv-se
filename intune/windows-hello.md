@@ -1,32 +1,32 @@
 ---
-title: "Så här använder du Windows Hello för företag"
-titleSuffix: Azure portal
+title: "Integrera Windows Hello för företag med Microsoft Intune"
+titleSuffix: 
 description: "Läs mer om att skapa en princip för att kontrollera användningen av Windows Hello för företag på hanterade enheter.”"
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/12/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 465de83c5bd15cfab67a4307000c0aa9cbfb1730
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 46bb82fd49fa58e87c22c8bf0abb57e1587b8b40
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-windows-hello-for-business"></a>Använda Windows Hello för företag
+# <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune integreras med Windows Hello för företag (tidigare Microsoft Passport for Work), en alternativ inloggningsmetod som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort.
+Du kan integrera Windows Hello för företag (tidigare Microsoft Passport for Work) med Microsoft Intune.
 
-Med Hello för företag kan du logga in med en *användargest* istället för ett lösenord. En användargest kan vara en enkel PIN-kod, biometrisk autentisering, t.ex. Windows Hello, eller en extern enhet, t.ex. en fingeravtrycksläsare.
+ Hello för företag är en alternativ inloggningsmetod som använder Active Directory eller ett Azure Active Directory-konto för att ersätta ett lösenord, smartkort eller virtuellt smartkort. Du kan använda en *användargest* för att logga in i stället för ett lösenord. En användargest kan vara en enkel PIN-kod, biometrisk autentisering, t.ex. Windows Hello, eller en extern enhet, t.ex. en fingeravtrycksläsare.
 
 Intune kan integreras med Hello för företag på två sätt:
 
@@ -50,17 +50,17 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 
-2.  På bladet Intune väljer du **Enhetsregistrering** och väljer sedan **Windows-registrering** > **Windows Hello för företag**.
+2.  På Intune-sidan väljer du **Enhetsregistrering** och sedan **Windows-registrering** > **Windows Hello för företag**.
 
-3.  På bladet som öppnas väljer du inställningen **Standard**.
+3.  På sidan som öppnas väljer du inställningen **Standard**.
 
-4.  På bladet **Alla användare** klickar du på **Egenskaper** och anger sedan ett **Namn** och valfri **Beskrivning** för Windows Hello för företag-inställningarna.
+4.  På sidan **Alla användare** klickar du på **Egenskaper** och anger sedan ett **Namn** och valfri **Beskrivning** för Windows Hello för företag-inställningarna.
 
-5. På bladet **Alla användare** klickar du på **Inställningar** och väljer bland följande för att **Konfigurera Windows Hello för företag**:
+5. På sidan **Alla användare** klickar du på **Inställningar** och väljer bland följande för att **Konfigurera Windows Hello för företag**:
 
     - **Inaktiverad**. Välj den här inställningen om du inte vill använda Windows Hello för företag. Alla andra inställningar på skärmen inaktiveras.
     - **Aktiverad**. Välj den här inställningen om du vill konfigurera inställningarna för Windows Hello för företag.
-    - **Inte konfigurerat**. Välj den här inställningen om du inte vill konfigurera inställningarna för Windows Hello för företag. Eventuella befintliga inställningar för Windows Hello för företag på Windows 10-enheter ändras inte. Alla andra inställningar på bladet inaktiveras.
+    - **Inte konfigurerat**. Välj den här inställningen om du inte vill konfigurera inställningarna för Windows Hello för företag. Eventuella befintliga inställningar för Windows Hello för företag på Windows 10-enheter ändras inte. Alla andra inställningar på sidan inaktiveras.
 
 6.  Om du har valt **Aktiverad** i föregående steg, konfigurerar du de obligatoriska inställningar som kommer att gälla på alla registrerade Windows 10- och Windows 10 Mobile-enheter.
 

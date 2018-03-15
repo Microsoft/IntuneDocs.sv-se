@@ -1,12 +1,12 @@
 ---
-title: "Installera Office 365-appar på mobila enheter med Intune"
-titlesuffix: Azure portal
-description: "Så här använder du Intune för att underlätta installation av Office 365-appar på Windows 10-enheter."
+title: "Installera Office 365-appar på enheter med Microsoft Intune"
+titlesuffix: 
+description: "Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter.”"
 keywords: 
-author: dougeby
-ms.author: dougeby
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f6ef1d1dab39a6939b80bd13ba090424a67c6f53
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus-appar till Windows 10-enheter med Microsoft Intune
 
@@ -85,11 +85,11 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
 1.  Välj **Appaketinformation** på bladet **Lägg till app**.
 2.  Konfigurera följande information på bladet **Appaketinformation**:
     - **Office-version** -Välj om du vill tilldela 32-bitars eller 64-bitars version av Office. Du kan installera 32-bitarsversionen på enheter med 32-bitar och 64-bitar, men du kan bara installera 64-bitarsversionen på 64-bitarsenheter.
-    - **Uppdatera kanal** – Välj hur office uppdateras på enheter. Information om andra uppdateringskanaler finns i översikten över uppdateringskanaler för Office 365 ProPlus. Välj mellan:
-        - **Nuvarande**
-        - **Uppskjutna**
-        - **Den första aktuella versionen**
-        - **Den första uppskjutna versionen**
+    - **Uppdatera kanal** – Välj hur office uppdateras på enheter. Information om de olika uppdateringskanalerna finns i [Översikt över uppdateringskanaler för Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Välj mellan:
+        - **Varje månad**
+        - **Månadskanal (riktad)**
+        - **Semi-Annual** (Varje halvår)
+        - **Varje halvår (riktad)**
     - **Godkänn applicensavtalet för slutanvändare** – Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
     - **Använd aktivering på delad dator** – Aktivering på delad dator används när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365 ProPlus.
     - **Språk** - Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.

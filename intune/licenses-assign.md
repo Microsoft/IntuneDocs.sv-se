@@ -1,6 +1,6 @@
 ---
-title: Tilldela Intune-licenser
-description: "Tilldela licenser till användare för din Intune-prenumeration"
+title: "Tilldela licenser för Microsoft Intune"
+description: "Tilldela licenser till användare så att de kan registrera sig i Intune"
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -14,13 +14,13 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2ad754ce3d81469bb172081b6b7f43937f45ffd9
-ms.sourcegitcommit: cccbb6730a8c84dc3a62093b8910305081ac9d24
+ms.openlocfilehash: 45baadb24ac646a6456e04c85a701842774c7930
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="assign-intune-licenses-to-your-user-accounts"></a>Tilldela Intune-licenser till dina användarkonton
+# <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Tilldela licenser till användare så att de kan registrera enheter i Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
@@ -36,7 +36,7 @@ Du kan använda [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 3.  Växla **Intune** eller **Enterprise Mobility + säkerhet** till **På** och Välj **Spara**.
 
-  ![Bild av tilldelning av produktlicenser i Office 365-portalen.](./media/office-assign-license.png)
+  ![Skärmbild av avsnittet Produktlicenser på Office 365-portalen.](./media/office-assign-license.png)
 
 4. Användarkontot har nu de behörigheter som krävs för att använda tjänsten och registrera enheter för hantering.
 
@@ -46,11 +46,11 @@ Du kan använda [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=6
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Använd synkronisering av skolinformation för att tilldela användare licenser till Intune for Education
 Om du representerar en utbildningsorganisation kan du använda synkronisering av skolinformation (SDS) för att tilldela Intune for Education-licenser till synkroniserade användare. Markera bara kryssrutan Intune for Education när du konfigurerar din SDS-profil.  
 
-![Bild av SDS-profilinställningen](./media/i4e-sds-profile-setup-setting.png)
+![Skärmbild av SDS-profilinställningen](./media/i4e-sds-profile-setup-setting.png)
 
 Kontrollera att Intune A Direct-licensen också tilldelas när du tilldelar en Intune for Education-licens.
 
-![Bild av konfiguration av produktlicens](./media/i4e-set-licenses.png)
+![Skärmbild av konfiguration av produktlicens](./media/i4e-set-licenses.png)
 
 Se den här [översikten över synkronisering av skolinformation](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) om du vill veta mer om SDS.
 

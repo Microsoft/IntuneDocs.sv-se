@@ -1,6 +1,6 @@
 ---
-title: "Använd fabriksåterställning eller ta bort företagsdata på enheter som använder Intune"
-titlesuffix: Azure portal
+title: "Använda fabriksåterställning eller ta bort företagsdata på enheter som använder Microsoft Intune"
+titlesuffix: 
 description: "Läs om hur du kan ta bort företagsdata på en enhet eller fabriksåterställa enheten."
 keywords: 
 author: nathbarn
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46cb8510e80db7092de472a769fb5dc78eb5e167
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 62404f6ffede7a7f3f7150da1fde289f2ba9e64f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
@@ -35,11 +35,11 @@ Du kan ta bort enheter från Intune som inte längre behövs, som ska få ett ny
 
 ### <a name="to-factory-reset-a-device"></a>Fabriksåterställa en enhet
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. På bladet **Enheter och grupper** väljer du **Alla enheter**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Alla enheter** på bladet **Enheter**.
 4. Välj namnet på den enhet som du vill fabriksåterställa.
-5. På bladet som visar enhetens namn väljer du **Fabriksåterställning**
+5. På bladet som visar enhetens namn väljer du **Fabriksåterställning**.
 6. Det finns ytterligare ett alternativ för att ”Behålla registreringstillståndet och användarkontot” för Windows 10 version 1709 eller senare. 
     
     |Behålls efter en fabriksåterställning|Behålls inte|
@@ -122,9 +122,9 @@ Borttagning av företagsdata på en Android for Work-enhet tar bort alla data, a
 
 ### <a name="to-remove-company-data"></a>Ta bort företagsdata
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. På bladet **Enheter och grupper** väljer du **Alla enheter**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Alla enheter** på bladet **Enheter**.
 4. Välj namnet på den enhet där du vill ta bort företagets data.
 5. På bladet som visar enhetens namn väljer du **Ta bort företagsdata** och väljer sedan **Ja** för att bekräfta.
 
@@ -134,9 +134,9 @@ Om enheten är på och ansluten tar det mindre än 15 minuter att sprida kommand
 
 Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta bort enheter från Azure Active Directory (AD). Borttagningskommandot tar inte bort någon enhet från hanteringen, men du kan använda **Ta bort** för att ta bort enhetsposter från Azure-portalen som du vet inte går att nå och som sannolikt inte kommer att kommunicera med Azure igen.
 
-1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Office 365-portalen](https://portal.office.com) och sedan välja **Admin** &gt; **Azure AD** genom att använda länken till vänster på sidan.
+1.  Logga in på [Azure Active Directory i Azure-portalen](http://aka.ms/accessaad) med dina autentiseringsuppgifter som administratör. Du kan också logga in på [Office 365-portalen](https://portal.office.com) och sedan välja **Administrationscenter** &gt; **Azure AD** genom att använda länken till vänster på sidan.
 3.  Skapa en Azure-prenumeration om du inte redan har en. Detta bör inte kräva ett kreditkort eller en betalning om du har ett konto som kostar pengar (välj prenumerationslänken **Registrera en kostnadsfri Azure Active Directory** ).
-4.  Välj **Active Directory** och välj sedan din organisation.
+4.  Välj **Azure Active Directory** och välj sedan din organisation.
 5.  Välj fliken **Användare** .
 6.  Välj den användare vars enheter du vill ta bort.
 7.  Välj **Enheter**.

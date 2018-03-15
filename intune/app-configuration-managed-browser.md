@@ -1,7 +1,7 @@
 ---
 title: "Hantera webbåtkomst med Managed Browser-appen"
-titlesuffix: Azure portal
-description: "Distribuera Managed Browser för att begränsa webbsurfning och överföring av webbdata till andra appar.\""
+titlesuffix: Microsoft Intune
+description: "Distribuera Managed Browser för att begränsa webbsurfning och överföring av webbdata till andra appar."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 613099d1d30a8be3787bd0004a376302da3dc231
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 3d902ada21c2cf864c3e21ef02b886d16162853c
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -63,17 +63,17 @@ Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intun
 
 ## <a name="create-a-managed-browser-app-configuration"></a>Skapa en konfiguration för Managed Browser-programmet
 
-1.  Logga in på Azure-portalen.
-2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3.  På bladet **Mobilappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
 4.  På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
-5.  På bladet **Lägg till appkonfiguration** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
+5.  På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
 6.  För **Registreringstyp för enhet** väljer du **Hanterade appar**.
-7.  Välj **Välj obligatoriska appar** och klicka sedan på bladet **Målappar**, samt välj **Managed Browser** för iOS, Android eller båda.
-8.  Välj **OK** för att återgå till bladet **Lägg till appkonfiguration**.
+7.  Välj alternativet för att **välja den obligatoriska appen** och klicka sedan på bladet **Riktade appar**. Välj därefter **Managed Browser** för iOS och/eller Android.
+8.  Välj **OK** för att återgå till bladet **Lägg till konfigurationsprincip**.
 9.  Välj **Konfigurationsinställningar**. På bladet **Konfiguration** definierar du nyckel- och värdepar för konfigurationerna för Managed Browser. Använd avsnitten senare i den här artikeln för mer information om andra nyckel- och värdepar som du kan definiera.
 10. När du är klar väljer du **OK**.
-11. På bladet **Lägg till appkonfiguration** väljer du **Skapa**.
+11. På bladet **Lägg till konfigurationsprincip** väljer du **Lägg till**.
 12. Den nya konfigurationen skapas och visas på bladet **Appkonfiguration**.
 
 >[!IMPORTANT]
@@ -83,10 +83,10 @@ Intune Managed Browser stöder öppnande av webbinnehåll från [Microsoft Intun
 
 Du kan tilldela inställningarna till Azure AD-grupper med användare. Om användaren har installerat Managed Browser kommer appen hanteras med de inställningar som du har angett.
 
-1. På bladet **Inställningar** på instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfiguration**.
+1. På bladet **Mobilappar** i instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfigurationsprinciper**.
 2. Välj den du vill tilldela i listan med appkonfigurationer.
-3. Välj **Användargrupper** på nästa blad.
-4. På bladet **Användargrupper** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.
+3. Välj **Tilldelningar** på nästa blad.
+4. På bladet **Tilldelningar** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.
 
 
 ## <a name="how-to-configure-application-proxy-settings-for-the-managed-browser"></a>Så här konfigurerar du programproxyinställningar för Managed Browser

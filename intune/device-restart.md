@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9afe804d2f9e48e27ced4bd92959cd065f6ec89a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a49f95ce81f750c539959674a15df41118f20aaa
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Starta om enheter med Intune med en fjärråtgärd
 
@@ -40,12 +40,12 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="how-to-restart-a-device"></a>Starta om en enhet
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. på bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Starta om**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan fjärråtgärden **Starta om**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter och grupper** och väljer **Enhetsåtgärder**.
+Om du vill se status för den åtgärd som du vidtog, går du till bladet **Enheter** och väljer **Enhetsåtgärder**.

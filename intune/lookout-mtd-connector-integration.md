@@ -3,8 +3,8 @@ title: Konfigurera Lookout-integreringen med Intune
 titlesuffix: Azure portal
 description: Konfigurera prenumerationen av Lookout med Intune
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 891fbda72d38b829397158a75bdceeb452bc8d3b
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: fa13ee9239dcb1f62f4fb06e876ecc272a8f620c
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurera Lookout Mobile Threat Defense-integreringen med Intune
 
@@ -54,8 +54,8 @@ Använd följande steg för att samla in den information du måste förse Lookou
 2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) och få hjälp.
 
 3. Hitta ditt grupp-ID för Azure AD. Lookout-konsolen stöder två åtkomstnivåer:  
-  * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som kommer att ha fullständig åtkomst och de kan även skapa en grupp med användare som har begränsad tillgång.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
-  * **Begränsad åtkomst:** Användarna i den här gruppen kommer inte ha åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen, och ha skrivskyddad åtkomst till **Säkerhetsprincip**-modulen i Lookout-konsolen.  
+  * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som har fullständig åtkomst och även skapa en grupp med användare som har begränsad åtkomst.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
+  * **Begränsad åtkomst:** Användarna i den här gruppen har inte åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen. De har skrivskyddad åtkomst till modulen **Säkerhetsprincip** i Lookout-konsolen.  
 
     > [!TIP] 
     > Mer information om behörigheterna finner du i [den här artikeln](https://personal.support.lookout.com/hc/articles/114094105653) på webbplatsen Lookout.
@@ -94,7 +94,7 @@ Använd följande steg för att samla in den information du måste förse Lookou
     ![skärmbild som visar sidan registrering av Intune-anslutning](./media/lookout-mtp-enrollment.png)
 
     >[!IMPORTANT]
-    > Detta **Visningsnamn** är skiftlägeskänsligt så som visas i **Egenskaper** i säkerhetsgruppen i Azure-portalen. Som bilden nedan visar är säkerhetsgruppens **Visningsnamn** en kamelnotation medan titeln endast använder gemener. I Lookout-konsolen är skiftläget för **Visningsnamn** samma som för säkerhetsgruppen.
+    > **Visningsnamn** är skiftlägeskänsligt i säkerhetsgruppens **Egenskaper** i Azure-portalen. Som bilden nedan visar är säkerhetsgruppens **Visningsnamn** en kamelnotation medan titeln endast använder gemener. I Lookout-konsolen är skiftläget för **Visningsnamn** samma som för säkerhetsgruppen.
     >![skärmbild av egenskaper-sidan för Azure Active Directory-tjänsten i Azure-portalen](./media/aad-group-display-name.png)
 
     >[!NOTE] 
@@ -131,7 +131,7 @@ Lookout Mobile Threat Defense klassificerar olika typer av mobila hot. [Lookout-
 > Risknivåerna är en viktig del av Mobile Threat Defense eftersom Intune-integreringen beräknar enhetens efterlevnad enligt dessa risknivåer vid körning. Intune-administratören anger en regel i principen för att identifiera att en enhet är icke-kompatibel om den har ett aktivt hot med miniminivån **Hög**, **Medel** eller **Låg**. Principen för hotklassificering i Lookout Mobile Threat Defense styr direkt efterlevnadsberäkningen för enheten i Intune.
 
 ## <a name="watching-enrollment"></a>Bevakar registreringen
-När installationen är klar börjar Lookout Mobile Threat Defense avsöka Azure AD efter enheter som motsvarar de angivna registreringsgrupperna.  Du hittar information om de enheter som registrerats i modulen Enheter.  Den första statusen för enheterna är ”väntar”.  Enhetens status ändras när Lookout for Work-appen har installerats, öppnats och aktiverats på enheten.  Mer information om hur du skickar Lookout for work-appen till enheten finns i avsnittet [Add Lookout for work apps with Intune](mtd-apps-ios-app-configuration-policy-add-assign.md) (lägga till Lookout for work-appar med Intune).
+När installationen är klar börjar Lookout Mobile Threat Defense avsöka Azure AD efter enheter som motsvarar de angivna registreringsgrupperna.  Du hittar information om de enheter som registrerats i modulen Enheter.  Den första statusen för enheterna är ”väntar”.  Enhetens status ändras när Lookout for Work-appen har installerats, öppnats och aktiverats på enheten.  Mer information om hur du skickar Lookout for Work-appen till enheten med push-överföring finns i [Lägg till Lookout for work-appar med Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
 
 ## <a name="next-steps"></a>Nästa steg
 

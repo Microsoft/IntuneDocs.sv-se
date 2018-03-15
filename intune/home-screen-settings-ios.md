@@ -1,45 +1,43 @@
 ---
-title: "Layoutinställningar i Intune för startskärmen för iOS-enheter"
+title: "Layoutinställningar för startskärmen i Microsoft Intune för enheter som kör iOS"
 titlesuffix: Azure portal
-description: "Lär dig vilka inställningar du kan anpassa på startskärmen och dockan på iOS-enheter.”"
+description: "Lär dig vilka inställningar du kan anpassa på startskärmen och dockan på enheter som kör iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6aba4491-afb9-43cd-9ccc-14e6a2a5a3b1
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e4de4f4b1235136d7391c8d9efdc1405043e4da
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ad8553506752cce99f22283e50cc5f490d72ed0b
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="intune-home-screen-layout-settings-for-ios-devices"></a>Layoutinställningar i Intune för startskärmen för iOS-enheter
+# <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Layoutinställningar för startskärmen i Microsoft Intune för enheter som kör iOS 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Använd dessa inställningar för att konfigurera layouten för appar och mappar på dockan och startskärmen på iOS-enheter.
+Använd dessa inställningar för att konfigurera applayouten och mappar på dockan och startskärmen på enheter som kör iOS.
 
-iOS-enheter som du tilldelar profilen till måste vara i övervakat läge och köra iOS 9.3 eller senare.
+Enheter som kör iOS med en tilldelad profil måste vara i övervakat läge och köra iOS 9.3 eller senare.
 
-1. På bladen **Enhetsfunktioner** väljer du **Hemskärmslayout (endast övervakat)**.
-2. På bladet **Hemskärmslayout (endast övervakat)** väljer du om du vill konfigurera layouterna **Docka** eller **Sidor**.
+1. På sidan **Enhetskonfiguration**, **Skapa profil**, **Enhetsfunktioner** väljer du **Hemskärmslayout (endast övervakat)**.
+2. På sidan **Hemskärmslayout (endast övervakat)** väljer du om du vill konfigurera layouterna **Docka** eller **Sidor**.
 
 ## <a name="add-items-to-the-dock"></a>Lägga till objekt i dockan
 
-På bladet **Docka** kan du lägga till upp till sex objekt eller mappar till dockan på iOS-skärmen. Emellertid stöder många enheter färre objekt än detta, t.ex. kan iPhone-enheter bara visa fyra objekt. I det här fallet visas endast de första fyra objekt som du har konfigurerat på enheten.
+På sidan**Docka** kan du lägga till upp till sex objekt eller mappar till dockan på iOS-skärmen. Emellertid stöder många enheter färre objekt än detta, t.ex. kan iPhone-enheter bara visa fyra objekt. I det här fallet visas endast de första fyra objekt som du har konfigurerat på enheten.
 
 1. Välj **Lägg till** för att lägga till ett objekt i dockan.
-2. På bladet **Lägg till rad** väljer du om du vill lägga till en **App** eller en **Mapp**.
+2. På sidan **Lägg till rad** väljer du om du vill lägga till en **App** eller en **Mapp**.
 3. Med hjälp av informationen i det här avsnittet kan du ange vilka appar och mappar som ska visas i dockan.
-4. Fortsätt att lägga till objekt. När du är klar väljer du **OK** tills du kommer tillbaka till bladet **Skapa profil**. Välj **Skapa**.
+4. Fortsätt att lägga till objekt. När du är klar väljer du **OK** tills du kommer tillbaka till sidan **Skapa profil**. Välj **Skapa**.
 
 >[!TIP]
 > Du kan dra och släppa objekt på startskärmen och sidlistor för att sortera om dem. 
@@ -48,19 +46,19 @@ På bladet **Docka** kan du lägga till upp till sex objekt eller mappar till do
 
 I det här exemplet har du konfigurerat dockningsskärmen till att enbart visa Safari, E-post och Aktier. E-postappen är markerad i följande bild, för att visa dess egenskaper:
 
-![Exempel på iOS-dockningsinställningar](http://i.imgur.com/FfFiUcP.png)
+![Exempel på iOS-dockningsinställningar](./media/FfFiUcP.png)
 
 När du tilldelar principen till en iPhone blir resultatet en docka som ser ut ungefär så här:
 
-![Exempel på iOS-dockningslayout i iPhone](http://i.imgur.com/bAgCe8F.png)
+![Exempel på iOS-dockningslayout i iPhone](./media/bAgCe8F.png)
 
 ## <a name="add-home-screen-pages"></a>Lägga till sidor på startskärmen
 
 Lägg till de sidor som du vill ska visas på startskärmen samt de appar som ska visas på varje sida. Apparna som du lägger till på en sida ordnas från vänster till höger, i samma ordning som de anges i listan. Om du lägger till flera appar än vad som får plats på en sida, kommer apparna att flyttas till en efterföljande sida.
 
 
-1. På bladet **Sidor** väljer du **Lägg till**.
-2. På bladet **Lägg till rad** anger du ett **Sidnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
+1. På sidan **Sidor** väljer du **Lägg till**.
+2. På sidan **Lägg till rad** anger du ett **Sidnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 3. Välj **Lägg till** och välj sedan om du vill lägga till en **App** eller en **Mapp** på sidan.
 4. Med hjälp av informationen i det här avsnittet kan du ange vilka appar och mappar som ska visas på sidan.
 
@@ -68,11 +66,11 @@ Lägg till de sidor som du vill ska visas på startskärmen samt de appar som sk
 
 I det här exemplet har du konfigurerat en ny sida med namnet **Contoso**. Sidan visar endast apparna Hitta vänner och Inställningar. Appen Inställningar är markerad i följande bild, för att visa dess egenskaper:
 
-![Exempel på inställningar på iOS-startskärmen](http://i.imgur.com/Jc2OxyX.png)
+![Exempel på inställningar på iOS-startskärmen](./media/Jc2OxyX.png)
 
 När du tilldelar principen till en iPhone blir resultatet en sida som ser ut ungefär så här:
 
-![iOS-enhet med ändrad startskärm](http://i.imgur.com/Bd37PHa.png)
+![iOS-enhet med ändrad startskärm](./media/Bd37PHa.png)
 
 ## <a name="how-to-add-an-app-to-the-list"></a>Så här lägger du till en app i listan
 
@@ -87,7 +85,7 @@ Apparna som du lägger till på en sida i en mapp ordnas från vänster till hö
 
 1. Ange **Mappnamn**. Det här namnet visas för användarna på deras enhet.
 2. Välj **Lägg till** för att skapa en sida i mappen. Du kan lägga till upp till 20 sidor.
-3. På bladet **Lägg till rad** anger du ett namn för sidan. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
+3. På sidan **Lägg till rad** anger du ett namn för sidan. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 3. Ange **Appnamn**. Det här namnet används som din referens i Azure-portalen och *visas inte* på iOS-enheten.
 2. Ange **Appsamlings-ID** för den app som du vill visa. Se **Så här lägger du till en app i listan** om du behöver hjälp.
 3. Välj **Lägg till**. Du kan lägga till upp till 60 objekt.

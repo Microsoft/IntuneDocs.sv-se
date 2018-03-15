@@ -2,10 +2,10 @@
 title: "Ändringslogg för Intune-informationslagret | Microsoft Docs"
 description: "En lista över ändringar i Intunes informationslager-API."
 keywords: Intune-informationslager
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,40 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 306cceb704c1153b5691181d576561d9c93a36d3
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67eedf528763ae302e3850710b3fab026e15f813
+ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Håll dig uppdaterad om uppdateringar för Intune-informationslagret.
+
+## <a name="1801"></a>1801
+_Publicerad i januari 2018_
+
+### <a name="intune-data-warehouse-application-only-authentication----1867540---"></a>Autentisering endast med program för Intune-informationslager <!-- 1867540 -->
+
+Du kan konfigurera ett program med Azure Active Directory (Azure AD) och autentisera till Intune-informationslagret. Mer information finns i [Autentisering endast med program för Intune-informationslager](data-warehouse-app-only-auth.md).
+
+### <a name="azure-ad-and-intune-credential-requirements----2077525---"></a>Krav på Azure AD- och Intune-autentiseringsuppgifter <!-- 2077525 -->
+
+- Det krävs inte längre att någon Intune-licens tilldelas till användaren vid åtkomst till Intune-informationslagret (inklusive API).
+- Intune-rollnamnet har ändrats från **Rapporter** till **Intune-informationslager**. 
+
+    Mer information finns i [Krav på Azure AD- och Intune-autentiseringsuppgifter](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+
+### <a name="odata-query-options----2077711---"></a>OData-frågealternativ <!-- 2077711 -->
+
+Du kan använda <code>$select</code> som en OData-frågeparameter. Den aktuella versionen har stöd för följande OData-frågeparametrar: <code>$filter</code>, <code>$orderby</code>, <code>$select</code>, <code>$skip</code> och <code>$top</code>. Mer information finns i [OData-frågealternativ](reports-api-url.md#odata-query-options).
+
+### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nya entiteter i datamodellen för informationslager <!-- 2077804 -->
+
+ - Entiteten [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus) har lagts till. **MobileAppDeviceUserInstallStatus** representerar en mobilapps installationstillstånd för en viss enhet och en användare.
+ - Entiteten [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate) har lagts till. Entiteten **MobileAppInstallState** visar installationsstatus för ett mobilt program när det har tilldelats till en grupp som innehåller enheter och/eller användare. 
 
 ## <a name="1710"></a>1710
 _Publicerat november 2017_

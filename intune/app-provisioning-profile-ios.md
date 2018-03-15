@@ -1,12 +1,12 @@
 ---
-title: Appetableringsprofiler
-titlesuffix: Azure portal
+title: "Etableringsprofiler för iOS-appar i Microsoft Intune"
+titlesuffix: 
 description: "Intune ger dig verktyg för att proaktivt tilldela en ny etableringsprofil till enheter som har appar som snart går ut.”"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/03/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6aa1fe56726f320d971f35cc971253707f968442
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 7637dcb3aba4f46a3e97c8de47d974b46af27b47
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="use-ios-mobile-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilen för iOS för att förhindra att dina appar upphör att gälla
+# <a name="use-ios-mobile-provisioning-profiles-in-intune-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofiler för iOS-appar i Intune för att förhindra att dina appar upphör att gälla
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/30/2018
 
 Verksamhetsspecifika Apple iOS-appar som tilldelas till iPhone och iPad skapas med en inbyggd etableringsprofil och kod som signeras med ett certifikat. När appen körs bekräftar iOS appens integritet och tillämpar de principer som definieras av etableringsprofilen. Följande verifieringar görs:
 
-- **Installationsfilens integritet** – iOS jämför appinformationen med företagets offentliga nyckel för signeringscertifikatet. Om de skiljer sig åt kan appinnehållet ha ändrats, och därmed tillåts inte appen att köras.
+- **Installationsfilens integritet** – iOS jämför appinformationen med företagets offentliga nyckel för signeringscertifikatet. Om de skiljer sig åt kan appinnehållet ha ändrats, och i så fall tillåts inte appen att köras.
 - **Funktionstillämpning** – iOS försöker tillämpa appfunktioner från företagsetableringsprofilen (inte enskilda utvecklaretableringsprofiler) i appinstallationsfilen (.ipa).
 
 
@@ -39,12 +39,12 @@ När certifikatet upphör att gälla måste du signera appen igen med ett nytt c
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Så här skapar du en etableringsprofil för iOS-mobilappar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning +hantering** > **Intune**.
-3. Välj **Mobilappar** på **Intune**-bladet.
-1.  Välj **Hantera** > **Etableringsprofiler för iOS** i arbetsbelastningen **Mobilappar**.
-2.  Välj **Skapa profil** på bladet med listan över profiler.
-3. Ange följande värden på bladet **Skapa profil**:
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+3. Välj **Mobilappar** i **Intune**-fönstret.
+1.  Välj **Hantera** > **Etableringsprofiler för iOS-app** i arbetsbelastningen **Mobilappar**.
+2.  Välj **Skapa profil** i fönstret med profillistan.
+3. Ange följande värden i fönstret **Skapa profil**:
     - **Namn** – Ange ett namn för den här etableringsprofilen.
     - **Beskrivning** – Om du vill kan du ange en beskrivning av principen.
     - **Ladda upp profilfil** – Välj **Importera** och välj sedan en Apple Mobile-konfigurationsprofilfil (med tillägget **.mobileprovision**) som du laddat ned från webbplatsen Apple Developer.

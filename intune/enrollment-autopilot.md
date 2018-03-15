@@ -1,6 +1,7 @@
 ---
-title: Registrera Windows-enheter med Windows AutoPilot-distributionsprogrammet
-description: "Läs om hur du registrerar nya Windows 10-enheter med Windows AutoPilot-distributionsprogrammet."
+title: Registrera enheter med Windows AutoPilot-distributionsprogrammet
+titleSuffix: Microsoft Intune
+description: "Läs om hur du registrerar Windows 10-enheter med Windows AutoPilot-distributionsprogrammet."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -11,14 +12,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 56d585c52d3704e64c658cedb48cad7270ceeccf
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: dfdc712f3cf1b9ce928574ee9e9078c80bd696bb
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="enroll-windows-devices-using-windows-autopilot-deployment-program"></a>Registrera Windows-enheter med Windows AutoPilot-distributionsprogrammet
-Windows AutoPilot-distributionsprogrammet förenklar etableringen av enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. När du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar, etc. på enheterna när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot) finns en översikt över fördelar, scenarier och förutsättningar.
+# <a name="enroll-windows-devices-by-using-the-windows-autopilot-deployment-program"></a>Registrera Windows-enheter med hjälp av Windows AutoPilot-distributionsprogrammet
+Windows AutoPilot-distributionsprogrammet förenklar etableringen av enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. När du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar, etc. på enheterna när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
 
 ## <a name="prerequisites"></a>Krav
 - [Enheter måste vara registrerade för din organisation](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot#device-registration-and-oobe-customization)

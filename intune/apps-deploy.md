@@ -1,12 +1,12 @@
 ---
-title: Tilldela appar till grupper
-titlesuffix: Azure portal
-description: "När du har lagt till en app till Intune, behöver du tilldela den till grupper med användare eller enheter.”"
+title: Tilldela appar till grupper i Microsoft Intune
+titlesuffix: 
+description: "När du har lagt till en app i Microsoft Intune måste du tilldela den till grupper med användare eller enheter.”"
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc4732043153662ac83beac950d53246caff1b94
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 78a9e9f4af41cdb97efd017eec56e676eda82856
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -38,29 +38,30 @@ Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. An
 |Tilldela appar som är tillgängliga|Ja|Ja|
 |Tilldela appar vid behov|Ja|Nej|
 |Avinstallera appar|Ja|Nej|
+|Ta emot appuppdateringar från Intune|Ja|Nej|
 |Slutanvändarna installerar tillgängliga appar från företagsportalappen|Ja|Nej|
 |Slutanvändarna installerar tillgängliga appar från den webbaserade företagsportalen|Ja|Ja|
 
 > [!NOTE]
-> För närvarande kan du tilldela iOS- och Android-appar (både branschspecifika och butiksköpta appar) till enheter som inte har registrerats med Intune.
+> För närvarande kan du tilldela iOS- och Android-appar (både branschspecifika och butiksköpta appar) till enheter som inte har registrerats med Intune.<br></br><br></br>
+> Om användarna ska kunna ta emot appuppdateringar på enheter som inte är registrerade i Intune, måste de gå till sin företagsportal och installera appuppdateringarna manuellt.
 
 ## <a name="how-to-assign-an-app"></a>Så här tilldelar du en app
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** på **Intune**-bladet.
 1. Välj **Hantera** > **Appar** i arbetsbelastningen **Mobilappar**.
 2. I listan på appbladet klickar du på den app som du vill tilldela.
-3. På bladet <*appnamn*>- **Översikt** väljer du **Hantera** > **Tilldelningar**.
-4. Välj **Välj grupper**, klicka sedan på bladet **Välj grupper** och välj de Azure AD-grupper som du vill tilldela appen.
+3. På bladet **Översikt** väljer du **Hantera** > **Tilldelningar**.
+4. Välj **Lägg till grupp** och på bladet **Lägg till grupp** väljer du sedan de Azure AD-grupper som ska inkluderas eller undantas från apptilldelningen.
 5. För varje app som du väljer ska du också välja en av följande **tilldelningstyper** för appen:
-    - **Tillgänglig** – Användarna installerar appen från företagsportalappen eller webbplatsen.
-    - **Inte tillämpligt** – Appen varken installeras eller visas i företagsportalen.
+    - **Tillgänglig för registrerade enheter** – Användarna installerar appen från företagsportalappen eller webbplatsen.
+    - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune.
     - **Obligatoriskt** – Appen installeras på enheter i valda grupper.
     - **Avinstallera** – Appen avinstalleras från enheter i valda grupper.
-    - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune.
 6. **Endast för iOS-appar** – Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja det under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
-6. När du är klar väljer du **Spara**.
+6. När du är klar väljer du **OK** och sedan **Spara**.
 
 Appen har nu tilldelats till de grupper du valde.
 

@@ -1,10 +1,11 @@
 ---
-title: "Förbereda appar för hantering av mobilprogram med Microsoft Intune"
-description: "Informationen i det här avsnittet hjälper dig att avgöra när du ska använda apphanteringsverktyget och App SDK för att förbereda dina verksamhetsspecifika appar för användning av hanteringsprinciper för mobilappar."
+title: "Förbered branschspecifika appar för appskyddsprinciper"
+titlesuffix: Microsoft Intune
+description: "Använd programhanteringsverktyget och App SDK för att göra så att dina verksamhetsspecifika appar kan använda appskyddsprinciper i Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
-manager: angrobe
+manager: dougeby
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
@@ -14,11 +15,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b2ab30f9bf061e7ea4a34372e7c99e059c6e30f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 76330c926ecac9ae8b071837465d800f48f925fb
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -102,6 +103,7 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 |Konfiguration av målprogram |X||
 |Stöd för flera identiteter|X||
 |Anpassningsbar stil |X|||
+
 ## <a name="next-steps"></a>Nästa steg
 
 Mer information om appskyddsprinciper i Intune finns i följande avsnitt:

@@ -1,7 +1,7 @@
 ---
-title: "Välj hur du vill registrera Windows-enheter i Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du konfigurerar registrering av Windows-enheter i Microsoft Intune.\""
+title: "Välj hur du vill registrera iOS-enheter i Intune"
+titlesuffix: Microsoft Intune
+description: Konfigurera registrering av iOS-enheter i Microsoft Intune.
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,11 +15,11 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f36e579282f7aeaec74c3e80d866e52dfa508d3d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 602c4c1da553215ad222a7e593531fdd879c996c
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
@@ -34,7 +34,7 @@ Innan du kan aktivera iOS-enheter måste du göra följande:
 
 ## <a name="user-owned-ios-devices-byod"></a>Användarägda iOS-enheter (BYOD)
 
-Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller förhandskraven och har tilldelat licenser till användarna så kan de ladda ned företagsportalappen för iOS från App Store och följa instruktionerna för registrering i appen.
+Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller kraven och har tilldelat licenser till användarna, kan de ladda ned företagsportalappen för Intune från App Store och följa instruktionerna för registrering i appen.
 
 ## <a name="company-owned-ios-devices"></a>Företagsägda iOS-enheter
 Intune stöder följande registreringsmetoder för iOS-enheter som ägs av företaget för organisationer som köper enheter för sina användare:

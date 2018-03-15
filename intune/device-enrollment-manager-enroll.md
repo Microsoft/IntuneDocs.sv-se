@@ -1,6 +1,6 @@
 ---
-title: "Registrera enheter – enhetsregistreringshanteraren"
-titlesuffix: Azure portal
+title: "Registrera enheter med ett konto för enhetsregistreringshanteraren"
+titlesuffix: Microsoft Intune
 description: "Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune. \""
 keywords: 
 author: ErikjeMS
@@ -15,28 +15,28 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4ae5060ca2ea884ddbcf0e21d7a6e95c56f973bc
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 01f5791869876ecfb7096c987cbc2828a39a2844
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="enroll-devices-using-device-enrollment-manager"></a>Registrera enheter med enhetsregistreringshanteraren
+# <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt användarkonto som kan registrera upp till 1 000 enheter. Du kan lägga till befintliga användare till DEM-kontot för att ge dem speciella DEM-funktioner. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD).  
 
-Användarna måste finnas i Azure Portal för att kunna läggas till som enhetsregistreringshanterare. För optimal säkerhet bör DEM-användare inte även vara Intune-administratörer.
+Användarna måste finnas i [Azure-portalen](https://portal.azure.com) för att kunna läggas till som enhetsregistreringshanterare. För optimal säkerhet bör DEM-användare inte även vara Intune-administratörer.
 
 >[!NOTE]
->DEM-registreringsmetoden går inte att använda med de här andra registreringsmetoderna: [Apple Configurator med installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator med direktregistrering](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md), eller [programmet för enhetsregistrering (DEP)](device-enrollment-program-enroll-ios.md). Den kan också användas för att registrera macOS-enheter.
+>DEM-registreringsmetoden går inte att använda med de här andra registreringsmetoderna: [Apple Configurator med installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md), [Apple Configurator med direktregistrering](apple-configurator-direct-enroll-ios.md), [Apple School Manager (ASM)](apple-school-manager-set-up-ios.md), eller [programmet för enhetsregistrering (DEP)](device-enrollment-program-enroll-ios.md).
 
 ## <a name="example-of-a-device-enrollment-manager-scenario"></a>Exempelscenario för enhetsregistreringshanterare
 
 En restaurang vill tillhandahålla 50 surfplattor vid kassan för servitörerna. Kökspersonalen behöver också surfplattor för att se beställningarna. De anställda behöver aldrig ha tillgång till företagets data eller logga in som användare. Intune-administratören skapar ett konto för enhetsregistreringshantering (DEM) och lägger till en restaurangchef till DEM-kontot, vilket i praktiken ger chefen DEM-funktioner. Chefen kan nu registrera de 50 surfplattorna med hjälp av DEM-autentiseringsuppgifter.
 
-Endast användare i Azure-portalen kan vara enhetsregistreringshanterare. Den användare som är enhetsregistreringshanterare får inte vara Intune-administratör.
+Det är bara användare i [Azure-portalen](https://portal.azure.com) som kan vara enhetsregistreringshanterare. Den användare som är enhetsregistreringshanterare får inte vara Intune-administratör.
 
 DEM-användaren kan:
 
@@ -88,11 +88,11 @@ Redan registrerade enheter påverkas inte av att en enhetsregistreringshanterare
 
 **Ta bort en enhetsregistreringshanterare**
 
-1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-2. Välj **Registrera enheter** på Intune-bladet och välj sedan **Enhetsregistreringshanterare**.
-3. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **ta bort**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+2. På Intune-bladet väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
+3. På bladet **Enhetsregistreringshanterare** väljer du enhetsregistreringshanteraren och **Ta bort**.
 
 ## <a name="view-the-properties-of-a-device-enrollment-manager"></a>Visa egenskaper för en enhetsregistreringshanterare
 
-1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
-2. På bladet **Enhetsregistreringshanterare** högerklickar du på DEM-användaren och väljer **Egenskaper**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** och sedan **Enhetsregistreringshanterare**.
+2. På bladet **Enhetsregistreringshanterare** högerklickar du på enhetsregistreringshanteraren och väljer **Egenskaper**.

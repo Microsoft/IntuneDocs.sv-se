@@ -1,7 +1,7 @@
 ---
 title: "Lägg till företagsidentifierare i Intune"
-titlesuffix: Azure portal
-description: "Läs mer om hur du kan lägga till företagsidentifierare (registreringsmetod, IMEI- och serienummer) i Microsoft Intune. \""
+titlesuffix: Microsoft Intune
+description: "Läs mer om hur du kan lägga till företagsidentifierare (registreringsmetod, IMEI- och serienummer) i Microsoft Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,11 +15,11 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b2be1f71887b7812ff17b69b679d54a920d3261
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 29c3d331cae06b0474fc3a2b31790719d99c678e
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -72,7 +72,7 @@ CSV-filen när den visas i en textredigerare:
 
 1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Id:n för företagsenheter** och klickar sedan på **Lägg till**.
 
- ![Skärmbild av företagets arbetsyta med ID:n för enheter och knappen Lägg till markerad.](./media/add-corp-id.png)
+ ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
 
 2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**. Du kan ange om tidigare importerade siffror ska **skriva över information för befintliga identifierare**.
 
@@ -100,4 +100,4 @@ Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som admi
 3. Välj **Egenskaper**.
 4. Ange **Äganderätt till enhet** som **Personlig** eller **Företagsägd**.
 
-  ![Skärmbild av enhetsegenskaperna som visar alternativ för enhetskategori och äganderätt för enheter.](./media/device-properties.png)
+  ![Enhetsegenskaperna visar alternativ för Enhetskategori och Ägarskap för enhet](./media/device-properties.png)

@@ -1,9 +1,10 @@
 ---
 title: Testning och validering av Intune
-description: "Den information som du bör ha i åtanke när du testar och validerar en Intune-molnlösning i din miljö."
+titlesuffix: Microsoft Intune
+description: "Så här testar och verifierar du den molnbaserade Intune-lösningen i din miljö."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: article
@@ -13,15 +14,15 @@ ms.technology:
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 8521ae12062ad73dfddb0f03aeac8c07ce65de58
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 1346c0f5b0e1665e49e09fc566b9ff3da17fc17a
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="intune-testing-and-validation"></a>Testning och validering av Intune
 
-Testningsfasen sker både under och efter implementeringsfasen. Du behöver testkonton, grupper och enheter för att testa alla nödvändiga IT-scenarier (administratör) och slutanvändarscenarier (användningsfall) som du tidigare har identifierat.
+När du testar implementeringen av Microsoft Intune, bör du fundera över funktionell verifiering och användningsbaserad verifiering. Funktionell validering består av testa varje komponent och konfiguration för att se om de fungerar korrekt. Den användningsbaserade verifieringen inbegriper tester för att verifiera att de scenarier som omfattar en serie aktiviteter fungerar som förväntat. 
 
 Vi rekommenderar att du involverar IT-supporten och annan supportpersonal i testningsfasen så att supportdokumentation kan tas fram, och så att de känner sig trygga med att ge support för produkten. Om en komponent eller ett scenario inte fungerar baserat på användningsfallen, dokumenterar du de ändringar som krävs och beskriver orsaken till ändringen.
 

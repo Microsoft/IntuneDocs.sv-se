@@ -1,12 +1,12 @@
 ---
 title: "Så här övervakar du appinformation och tilldelningar"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "När du har tilldelat en app till användare eller enheter kan du använda den här informationen för att övervaka dess status."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/21/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85ecc9729d7c03cb760c14bda0ca4d6321af548e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6bd915093ae45ff0fc3d51a2d7279493bc783d43
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-monitor-app-information-and-assignments-with-microsoft-intune"></a>Så här övervakar du appinformation och tilldelningar med Microsoft Intune
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 
 Intune erbjuder ett antal olika sätt för att övervaka egenskaperna för appar som du hanterar, samt deras tilldelningsstatus.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
-3. Välj **Appar** i gruppen **Hantera** i arbetsbelastningen **Mobilappar**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+3. Välj **Mobilappar** och sedan **Appar** i gruppen **Hantera**.
 5. I listan med appblad väljer du en app. Du ser därefter bladet <*appnamn*> **Installationsstatus för enhet**.
 
 ## <a name="app-overview-blade"></a>Bladet för översikt över appar

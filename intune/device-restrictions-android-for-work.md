@@ -1,30 +1,34 @@
 ---
-title: "Inställningar av begränsningar i Intune-enheter för Android for Work"
-titlesuffix: Azure portal
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på Android for Work-enheter.”"
+title: "Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune"
+titlesuffix: 
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Android for Work."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/23/2018
+ms.date: 3/2/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c7c69bb3984ae4ffa81aa81ae24cfe17663bc191
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d4d8089d7ae57c4bf95038e5f9dc88f4949f069e
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="android-for-work-device-restriction-settings-in-microsoft-intune"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
+# <a name="microsoft-intune-android-for-work-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Android for Work-enheter i Microsoft Intune
+
+I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Android for Work.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Inställningar för arbetsprofil
+
+### <a name="general-settings"></a>Allmänna inställningar
+
 -   **Kopiera och klistra in mellan arbetsprofiler och personliga profiler** – kontrollerar kopiera och klistra in mellan arbetsappar och personliga appar. Aktivera blockering genom att välja **Blockera**. Välj **Inte konfigurerad** för att inaktivera blockering.
 - **Datadelning mellan arbetsprofiler och personliga profiler** – Använd den här inställningen för att styra om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Den här inställningen styr delningsåtgärder inom program (till exempel alternativet **Dela...** i Chrome-webbläsarappen) och gäller inte för kopiera och klistra in beteendet för Urklipp. Till skillnad från [principinställningarna för appskydd](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune), hanteras inställningarna för enhetsbegränsning från Intune-portalen och använder partitionen för Android for Work-arbetsprofilen för att isolera hanterade appar. Välj mellan:
     - **Standardbegränsningar för delning** – Detta är standardinställningen för delning av enheten, vilket varierar beroende på den version av Android den använder. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. Google tillhandahåller inget sätt att blockera delning från den personliga profilen till arbetsprofilen för enheter som version 6.0 eller senare.   
@@ -39,6 +43,12 @@ ms.lasthandoff: 01/25/2018
     -   **Neka automatiskt**
 
     Bevilja-tillstånd för behörigheter kan definieras ytterligare för specifika appar, genom att definiera en princip för appkonfiguration för en enskild app (under **mobilappar** > **appkonfigurationsprinciper**).
+
+- **Lägga till och ta bort konton**
+
+   Hindrar slutanvändare från att lägga till eller ta bort konton manuellt i arbetsprofilen.
+
+   När du till exempel distribuerar Gmail-appen till en Android for Work-profil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen.
 
 ### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 - **Kräv lösenord för arbetsprofilen** –(Android 7.0 och senare med arbetsprofil aktiverad) definiera en lösenordsprincip som bara gäller för appar i arbetsprofilen. Som standard kan slutanvändaren använda de två separat definierade PIN-koderna, eller så kan användaren välja att kombinera dem till den starkare av de två.
@@ -87,4 +97,4 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="next-steps"></a>Nästa steg
 
-Använd informationen i avsnittet [Konfigurera inställningar för enhetsbegränsningar](device-restrictions-configure.md) för att spara och tilldela profilen till användare och enheter.
+Använd informationen i [Konfigurera inställningar för enhetsbegränsningar](device-restrictions-configure.md) för att spara och tilldela profilen till användare och enheter.

@@ -1,10 +1,10 @@
 ---
 title: "Kringgå iOS-aktiveringslås med Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du använder Intune för att kringgå iOS-aktiveringslås och få åtkomst till låsta enheter.\""
+titlesuffix: Microsoft Intune
+description: "Läs om hur du använder Intune för att kringgå iOS-aktiveringslåset och få åtkomst till låsta enheter."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 08/22/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15c288b31ab3fb31080aff72d2461dc1d24ec5ae
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6141b325c5087544a1b78e03209322023f2374e3
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Kringgå aktiveringslåset på övervakade iOS-enheter med Intune
 
@@ -69,11 +69,11 @@ Innan du kan kringgå aktiveringslåset på enheter måste du aktivera det genom
 
 Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset från en iOS-enhet utan användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startar. Kringgå bara aktiveringslåset om du har fysisk åtkomst till enheten.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en övervakad iOS-enhet och sedan fjärråtgärden **Kringgå aktiveringslås**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en övervakad iOS-enhet, **...Mer** och sedan fjärråtgärden **Kringgå aktiveringslås**.
 
 ## <a name="next-steps"></a>Nästa steg
 

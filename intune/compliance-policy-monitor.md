@@ -1,29 +1,27 @@
 ---
 title: "Övervaka efterlevnadsprinciper för Intune-enheter"
 titlesuffix: Azure portal
-description: "Lär dig hur du övervakar principer för enhetsefterlevnad.\""
+description: "Lär dig hur du övervakar principer för enhetsefterlevnad"
 keywords: 
 author: andredm7
 ms.author: andredm
 manager: dougeby
-ms.date: 03/10/2017
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 503d1dd2-a647-4aea-bf48-55319a3dd8a7
-ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f82293ee3803f189cbb67549b1a6cd653572eaaf
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 2f80d46e3e7c25c2b2e7a7c1af9604de1257a21e
+ms.sourcegitcommit: a55c009a2ab223f79dc7439539937b284aee0626
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
-Efterlevnadsrapporter hjälper administratörerna att analysera enheternas efterlevnadsstatus i organisationen och snabbt felsöka efterlevnadsrelaterade problem som användarna kan stöta på i organisationen. Du kan visa information om den övergripande efterlevnadsstatusen för enheter, efterlevnadsstatusen för enskilda inställningar, efterlevnadsstatusen för enskilda principer och gå vidare till enskilda enheter och visa de specifika inställningar och principer som påverkar dem.
+Med efterlevnadsrapporter kan administratörer analysera enheternas efterlevnadsstatus i organisationen och snabbt felsöka efterlevnadsrelaterade problem som användarna upplever i organisationen. Du kan visa information om den övergripande efterlevnadsstatusen för enheter, efterlevnadsstatusen för enskilda inställningar, efterlevnadsstatusen för enskilda principer och gå vidare till enskilda enheter och visa de specifika inställningar och principer som påverkar dem.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -64,24 +62,24 @@ Det är ett ringdiagram som visar den samlade enhetsstatusen för alla Intune-re
 
     -   Läs mer om åtgärder för inkompatibla enheter.
 
--   **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus pga någon av följande orsaker:
+-   **Enheten är inte synkroniserad:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus pga. någon av följande orsaker:
 
     -   **Okänd**: Enheten är offline eller kunde inte kommunicera med Intune eller Azure AD av andra orsaker.
 
     -   **Fel**: Enheten kunde inte kommunicera med Intune eller Azure AD och tog emot ett felmeddelande som angav orsaken.
 
 > [!IMPORTANT] 
-> Enheter som har registrerats i Intune, men inte utgör mål för någon princip för enhetsefterlevnad, inkluderas i den här rapporten under bucketen **Kompatibel**.
+> Enheter som har registrerats i Intune men inte utgör mål för någon enhetsefterlevnadsprincip, inkluderas i den här rapporten under bucketen **Kompatibel**.
 
 #### <a name="drill-down-option"></a>Alternativet Öka detaljnivån
 
-Om du klickar på ikonen för enhetsefterlevnad på instrumentpanelen **Enhetsefterlevnad** kan du öka detaljnivån för enskilda **efterlevnadsstatusar**, **e-postalias**, **enhetsmodeller** och **platser** för de enheter som varit mål för principerna för enhetsefterlevnad.
+Om du klickar på ikonen Enhetsefterlevnad i **instrumentpanelen för enhetsefterlevnad** kan du öka detaljnivån för en enskild **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadsprinciperna.
 
 ![Ökad detaljnivå på instrumentpanelen för enhetsefterlevnad](./media/idc-2.png)
 
 Om du behöver mer information om en viss användare kan du filtrera diagramrappoten för enhetsefterlevnad genom att skriva användarens e-postalias.
 
-![Viss användare på instrumentpanelen för enhetsefterlevnad](./media/idc-3.png)
+![Specifik användare på instrumentpanelen för enhetsefterlevnad](./media/idc-3.png)
 
 Du kan också klicka på de olika efterlevnadsstatusarna i diagrammet över enhetsefterlevnad om du vill se mer detaljerad information om användarens enhetsefterlevnadsstatusar.
 
@@ -131,22 +129,33 @@ När du klickar på enhetens principinställning visas namnet på enhetsefterlev
 
 ![Namn på inställning för enhetsefterlevnad](./media/idc-7.png)
 
-### <a name="per-policy-device-compliance-report"></a>Rapport om enhetsefterlevnad per princip
+## <a name="policy-compliance-report"></a>Principefterlevnadsrapport
 
 Den här rapporten visar enhetsefterlevnad per princip och det totala antalet enheter med respektive efterlevnadsstatus. Rubriken för **principefterlevnad** är tillgänglig på instrumentpanelen **Enhetsefterlevnad** och visar alla principer som tidigare har skapats av administratören, de plattformar där principen har tillämpats, antalet kompatibla enheter och antalet inkompatibla enheter.
 
 ![Rapport om enhetsefterlevnad per princip](./media/idc-8.png)
 
-Om du klickar på ikonen för principefterlevnad, så klicka sedan vidare på någon av principerna för enhetsefterlevnad. Då visas **efterlevnadsstatus**, **e-postalias**, **enhetsmodell** och **plats** för de enheter som varit mål för principerna för enhetsefterlevnad.
+När du klickar på ikonen Principefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadsprinciperna. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadsprinciperna.
 
 ![Ikonen för principefterlevnad](./media/idc-9.png)
 
-### <a name="per-setting-device-compliance-report"></a>Rapport om enhetsefterlevnad per inställning
+## <a name="setting-compliance-report"></a>Inställning av efterlevnadsrapport
 
-Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet enheter med respektive efterlevnadsstatus. Rubriken för **principefterlevnad** är tillgänglig på instrumentpanelen **Enhetsefterlevnad** och visar alla principer som tidigare har skapats av administratören, de plattformar där principen har tillämpats, antalet kompatibla enheter och antalet inkompatibla enheter.
+Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet enheter med respektive efterlevnadsstatus. Rubriken **Principefterlevnad** är tillgänglig på **instrumentpanelen för enhetsefterlevnad** och visar alla principinställningar för enhetsefterlevnad som har skapats av administratören, de plattformar där principinställningarna har tillämpats samt antalet inkompatibla enheter.
 
 ![Rapport om enhetsefterlevnad per inställning](./media/idc-10.png)
 
-Om du klickar på ikonen för inställningsefterlevnad, så klicka sedan vidare på någon av enhetsefterlevnadsinställningarna. Då visas **efterlevnadsstatus**, **e-postalias**, **enhetsmodell** och **plats** för de enheter som varit mål för inställningarna för enhetsefterlevnad.
+När du klickar på ikonen Inställningsefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadens principinställningar. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadens principinställning.
 
 ![Ikonen för inställningsefterlevnad](./media/idc-11.png)
+
+## <a name="threat-agent-status-report"></a>Rapport om agentstatus för hot
+
+Med den här rapporten kan du se status och hälsa för Windows Defender-agenten. Med hjälp av en rapport om statussammanställningen i **Enhetsefterlevnad** kan du se de enheter som behöver någon av följande åtgärder:
+- Signaturuppdatering
+- Starta om
+- Manuell åtgärd
+- Fullständig genomsökning
+- Övriga agenttillstånd som kräver åtgärder
+
+En detaljerad rapport för varje statuskategori visar de enskilda datorer som behöver åtgärdas, eller datorer som rapporteras som **Rengör**.

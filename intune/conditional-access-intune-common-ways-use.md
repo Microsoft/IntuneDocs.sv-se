@@ -3,10 +3,10 @@ title: "Villkorlig åtkomst med Intune"
 titlesuffix: Azure portal
 description: "Vanliga sätt att använda villkorlig åtkomst på med Intune"
 keywords: 
-author: andredm7
-ms.author: andredm
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 02/22/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,19 @@ ms.technology:
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8987f8e6eb7a770a90d187c0787589acfbacdb09
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: d5ec945cdbc4efa791edc51e659a1546876446c5
+ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="common-ways-to-use-conditional-access-with-intune"></a>Vanliga sätt att använda villkorlig åtkomst på med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du måste konfigurera efterlevnadsprinciper för mobila Intune-enheter och Intune hanteringsfunktioner för mobila program (MAM) för att kunna främja villkorlig åtkomstefterlevnad i din organisation. Låt oss ta en titt på några vanliga sätt att använda villkorlig åtkomst på med Intune.
+Det finns två huvudtyper för villkorlig åtkomst med Intune. Den första typen är enhetsbaserad villkorlig åtkomst. Den andra typen är appbaserad villkorlig åtkomst. Du måste konfigurera de relaterade efterlevnadsprinciperna för att få en villkorlig åtkomst som följer standard i din organisation.
+
+Nedanstående information visar hur du ska använda Intunes funktioner för mobil *enhets*efterlevnad och hantering av mobil*program* (MAM). 
 
 ## <a name="device-based-conditional-access"></a>Enhetsbaserad villkorlig åtkomst
 
@@ -32,11 +34,11 @@ Intune och Azure Active Directory ser tillsammans till att endast hanterade och 
 
 Intune innehåller funktioner för enhetskompatibilitetprinciper som utvärderar enheternas efterlevnadsstatus. Kompatibilitetsstatusen rapporteras till Azure Active Directory som använder den för att verkställa den princip för villkorlig efterlevnad som skapas i Azure Active Directory när användaren försöker få åtkomst till företagets resurser.
 
-Med början i [nya Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune), konfigureras principer för enhetsbaserad villkorlig åtkomst för Exchange Online och andra Office 365-produkter genom Azure Portal.
+Enhetsbaserad villkorlig åtkomst för Exchange Online och andra Office 365-produkter konfigureras via [Azure-portalen](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
 
 -   Läs mer om [villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
--   Läs mer om [vad Intune-enhetsefterlevnad är](device-compliance.md).
+-   Läs mer om [Intunes enhetsefterlevnad](device-compliance.md).
 
 -   Lär dig mer om [skydd av e-post, Office 365 och andra tjänster med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
 

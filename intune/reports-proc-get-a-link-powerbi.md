@@ -1,11 +1,12 @@
 ---
-title: Ansluta till informationslagret med Power BI | Microsoft Docs
-description: "Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen."
+title: Ansluta till informationslagret med Power BI
+titlesuffix: Microsoft Intune
+description: "Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva och dynamiskt skapade rapporter för Microsoft Intune-klientorganisationen."
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/13/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,17 @@ ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fa7c578cd8dba84910bae9b9f204c8057c76bf6b
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 1266fa4cc5ef958e369e58b0a6619e2bab3dd3eb
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen. Informationslagrets Power BI-fil (pbix) innehåller inställningar för att ansluta till klientorganisationen, samt följande exempelrapporter och diagram:  
+Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen. Informationslagrets Power BI-fil (pbix) innehåller anslutningsinställningar för klientorganisationen, samt följande exempelrapporter och diagram:  
 
   -  Egenskaper
   -  Registrering

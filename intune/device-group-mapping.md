@@ -1,7 +1,7 @@
 ---
-title: "Så här använder du enhetskategorier i Intune"
-titleSuffix: Azure portal
-description: "Läs hur man använder enhetskategorier som användare kan välja när de registrerar sina enheter i Intune.”"
+title: Kategorisera enheter i grupper i Intune
+titleSuffix: Microsoft Intune
+description: "Läs mer om att kategorisera enheter i grupper för enklare hantering."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -14,13 +14,13 @@ ms.technology:
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1200ce4ab5d24f8c9212c064961a167e0ec6c42
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 416ce4fb671494efabf805595426f25d027d256e
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="map-device-groups"></a>Mappa enhetsgrupper
+# <a name="categorize-devices-into-groups-for-easier-management"></a>Kategorisera enheter i grupper för enklare hantering
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -41,11 +41,11 @@ Du kan skapa vilken typ av enhetskategori som du vill, till exempel:
 ## <a name="how-to-configure-device-categories"></a>Så här konfigurerar du enhetsinställningar
 
 ### <a name="step-1---create-device-categories-in-the-intune-blade-of-the-azure-portal"></a>Steg ett – Skapa enhetskategorier i Intune-bladet på Azure-portalen
-1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** på bladet **Intune**.
 3. På bladet **Enhetsregistrering** väljer du **Enhetskategorier**.
 4. På sidan **Enhetskategorier** väljer du **Skapa** för att lägga till en ny kategori.
-5. På nästa blad anger du ett **Namn** för den nya kategorin och en valfri **Beskrivning**.
+5. På bladet **Skapa enhetskategori** anger du ett **Namn** på den nya kategorin och en valfri **Beskrivning**.
 6. Klicka på **Skapa** när du är klar. Du kan se den nya kategorin i listan över kategorier.
 
 Du kommer att använda enhetskategorinamnet när du skapar Azure Active Directory-säkerhetsgrupper i steg två.
@@ -61,27 +61,29 @@ När du har konfigurerat enhetsgrupper och användarna då registrerar sina enhe
 
 ### <a name="how-to-view-the-categories-of-devices-you-manage"></a>Så här visar du kategorier av enheter som du hanterar
 
-1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1.  I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 
-2. Välj **Enheter och grupper** i Intune-bladet på Azure-portalen.
+2. Välj **Enheter** på Intune-bladet i Azure-portalen.
 
 3.  Under **Hantera** klickar du på **Alla enheter**.
 
-4.  I listan över enheter utforskar du kolumnen **Kategori**.
+4.  I listan med enheter granskar du kolumnen **Enhetskategori**.
 
-Om **Kategori**-kolumnen inte visas klickar du på **Kolumner**, väljer **Kategori** från listan och klickar sedan på **Tillämpa**.
+Om kolumnen **Enhetskategori** inte visas klickar du på **Kolumner**, väljer **Enhetskategori** i listan och klickar sedan på **Tillämpa**.
 
 ### <a name="to-change-the-category-of-a-device"></a>Ändra kategori för en enhet
 
-1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. På **Intune**-bladet väljer du **Enheter och grupper**.
-4. På bladet **Enheter och grupper** väljer du **Hantera** > **Alla enheter**.
-5. I listan över enheter väljer du den enhet som du önskar och väljer sedan, på enhetens egenskapsblad, **Hantera** > **Egenskaper**.
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Enheter** på bladet **Intune**.
+4. På bladet **Enheter** under avsnittet **Hantera** väljer du **Alla enheter**.
+5. I listan med enheter väljer du önskad enhet och på enhetens egenskapsblad, under avsnittet **Hantera**, väljer du **Egenskaper**.
 6. På nästa blad kan du ändra **Enhetskategori** för den valda enheten till ett kategorinamn som du tidigare har konfigurerat.
 
 ## <a name="after-you-configure-device-groups"></a>När du har konfigurerat enhetsgrupper
 
 När slutanvändare av iOS- och Android-enheter registrerar sin enhet, måste de välja en kategori från listan över kategorier som du har konfigurerat. När användaren har valt en kategori och slutfört registreringen läggs enheten till i den Intune-enhetsgruppen eller Active Directory-säkerhetsgruppen som motsvarar den kategori som har valts.
+
+Slutanvändare i Windows bör använda den nya webbplatsen för företagsportalen och välja en kategori där.
 
 Oavsett vilken plattform slutanvändarna har kan de alltid gå till portal.manage.microsoft.com efter att enheten registrerats. Få användaren att gå till **Mina enheter** på företagsportalens webbplats. De kan välja en registrerad enhet som visas på sidan och sedan välja en kategori.
 

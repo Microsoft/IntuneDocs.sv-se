@@ -1,12 +1,12 @@
 ---
-title: "Vad är apphantering"
-titlesuffix: Azure portal
-description: "Använd informationen i det här avsnittet för att lära dig grunderna om apphantering med Microsoft Intune”"
+title: "Vad är apphantering i Microsoft Intune?"
+titlesuffix: 
+description: "Lär dig grunderna om apphantering med Microsoft Intune."
 keywords: 
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2018
+ms.date: 03/01/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00e6b9f05f967da9066639dbf1b25bc76a49541b
-ms.sourcegitcommit: 0a5f424a8f683daa919b13b5c363173040d561c8
+ms.openlocfilehash: 9372a77a63f48c8215a02ccd784fb0a812f5a12f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -27,14 +27,14 @@ ms.lasthandoff: 02/13/2018
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 
-Som IT-administratör är du ansvarig för att se till att slutanvändarna har åtkomst till de appar som de behöver för att utföra sitt arbete. Detta kan vara en utmaning eftersom:
+Med Microsoft Intune kan du som är IT-administratör hantera de mobilappar som företagets personal använder. Den här funktionen är ett tillägg till hanteringen av enheter och att skydda data. Som en del av funktionen är en av dina prioriteringar att se till att dina slutanvändare har åtkomst till de appar som de behöver för att utföra sitt arbete. Detta kan vara en utmaning eftersom:
 - Det finns en mängd olika enhetsplattformar och apptyper.
 - Du kan behöva hantera appar på både företagets enheter samt på användarnas egna enheter.
 - Du måste se till att ditt nätverk och dina data förblir säkra.
 
 Dessutom kanske du vill tilldela och hantera appar på enheter som inte har registrerats med Intune.
 
-Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du behöver, på de enheter som du önskar.
+Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du behöver, på de enheter som du önskar. Följande tabell innehåller en sammanfattning av apphanteringsfunktionerna. Nedanför tabellen är en startpunkt till din ökade förståelse för Microsoft Intune i Azure-portalen. 
 
 ## <a name="app-management-capabilities-by-platform"></a>Apphanteringsfunktioner efter plattform
 
@@ -64,8 +64,8 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 
 Du hittar de flesta apprelaterade sakerna i arbetsbelastningen **Mobilappar** som du kommer åt enligt följande:
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** på **Intune**-bladet.
 
     ![Arbetsbelastningen mobilappar](./media/apps-workload.png)
@@ -115,3 +115,7 @@ Mer information finns i [Övervaka appar](apps-monitor.md).
 ### <a name="help-and-support"></a>Hjälp och support
 - **Hjälp och support** – Felsök, begär support eller visa Intune-status.
     - [Felsökning av problem](help-desk-operators.md)
+    
+## <a name="next-steps"></a>Nästa steg
+
+- [Lägga till en app i Microsoft Intune](apps-add.md)

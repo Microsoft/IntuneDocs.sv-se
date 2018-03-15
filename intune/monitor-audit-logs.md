@@ -10,14 +10,14 @@ ms.prod:
 ms.service: microsoft-intune
 ms.technology: 
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
-ms.openlocfilehash: b2f6f6f4829e53d60cc259be220de89cf3f8d97d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9f514e6d2dec268efe99f682bc3ef4e63ec53c02
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="audit-logs-for-intune-activities"></a>Granskningsloggar för Intune-aktiviteter
-Granskningsloggar ger dig en post med aktiviteter som genererar en ändring i Microsoft Intune. Skapa, uppdatera (redigera), ta bort, och tilldela åtgärder eller uppgifter för fjärrhantering, generera granskningshändelser som du kan granska. Du kan gå igenom granskningsloggar för de flesta arbetsbelastningar i Intune. 
+Granskningsloggar ger dig en post med aktiviteter som genererar en ändring i Microsoft Intune. Skapa, uppdatera (redigera), ta bort, och tilldela åtgärder eller uppgifter för fjärrhantering, generera granskningshändelser som du kan granska. Du kan gå igenom granskningsloggar för de flesta arbetsbelastningar i Intune. Granskning är aktiverat som standard för alla kunder och kan inte inaktiveras. Granskningshändelserna började registreras i funktionen i december 2017 och tidigare händelser är inte tillgängliga.
 
 ## <a name="who-can-access-the-data"></a>Vem som kan komma åt data?
 Användare med följande behörigheter kan gå igenom granskningsloggar:

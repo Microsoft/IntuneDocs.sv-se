@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f784143535188c6bee2082c5717b752f08c5490
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7d48b81e6df912815d9ef843b4588f8c1076a8a7
+ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synkronisera enheter med Intune för att få de senaste principerna och åtgärderna
 
@@ -37,11 +37,11 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 
 ## <a name="how-to-sync-a-device"></a>Synkronisera en enhet
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
 3. Välj **Enheter** på bladet **Intune**.
-4. På bladet **Enheter och grupper** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Synkronisera**.
+4. Välj **Alla enheter** på bladet **Enheter**.
+5. I listan med enheter som du hanterar väljer du en iOS-enhet, **...Mer** och sedan fjärråtgärden **Hitta enhet**.
 7. Bekräfta genom att klicka på **Ja** .
 
 
@@ -66,4 +66,4 @@ När en administratör kör enhetsåtgärden för **synkronisering** blir iOS- o
 
 ## <a name="next-steps"></a>Nästa steg
 
-Välj **Enhetsåtgärder** att se status för synkroniseringsåtgärden. 
+Välj **Enhetsåtgärder** för att se status för synkroniseringsåtgärden. 

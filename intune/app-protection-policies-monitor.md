@@ -1,7 +1,7 @@
 ---
 title: "Så här övervakar du appskyddsprinciper"
-titleSuffix: Azure portal
-description: "Se hur många användare som principen tillämpas på och öka detaljnivån om du vill ha mer information.”"
+titleSuffix: Microsoft Intune
+description: "Övervaka kompatibilitetsstatusen för hanteringsprinciper för mobilappar i Intune."
 keywords: 
 author: erikre
 ms.author: erikre
@@ -15,11 +15,11 @@ ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4dae7edb99dae26c7498e55d5eead3cee2e9a8f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fb777bb8f04adb708f8c01c6f0bfcd08f7c663f5
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Så här övervakar du appskyddsprinciper
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -27,7 +27,7 @@ ms.lasthandoff: 01/25/2018
 **Om du inte är i Azure-portalen** beskriver det här ämnet [hur du skapar programskyddsprinciper](https://docs.microsoft.com/intune-classic/deploy-use/create-and-deploy-mobile-app-management-policies-with-microsoft-intune) i den klassiska Intune-portalen.
 
 
-Du kan övervaka efterlevnadsstatusen för principer för hantering av mobila appar (MAM) som du tillämpat på användare på bladet för Intunes appskydd på [Azure-portalen](https://portal.azure.com). Du kan hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
+Övervaka efterlevnadsstatusen för principer för hantering av mobila appar (MAM) som du tillämpat på användare i fönstret för Intune-appskydd i [Azure Portal](https://portal.azure.com). Hitta information om de användare som påverkas av MAM-principerna, efterlevnadsstatus och eventuella problem som användarna kan råka ut för.
 
 Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
@@ -39,12 +39,12 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 
 ## <a name="summary-view"></a>Sammanfattningsvy
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Mobilappar** på **Intune**-bladet.
-4. Visa sammanfattningsvyn genom att välja **Övervaka** > **Användarstatus för appskydd** i arbetsbelastningen **Mobile Apps**:
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+3. Välj **Mobilappar** i **Intune**-fönstret.
+4. Visa sammanfattningsvyn genom att välja **Övervaka** > **Status för appskydd** i arbetsbelastningen **Mobile Apps**:
 
-![Panelen Sammanfattning på bladet Hantering av mobilprogram i Intune](./media/app-protection-user-status-summary.png)
+![Panelen Sammanfattning i fönstret Hantering av mobilprogram i Intune](./media/app-protection-user-status-summary.png)
 
 -   **Användare:** Totalt antal användare på företaget som använder en app som är associerad med principen i ett arbetssammanhang.
 
@@ -61,7 +61,7 @@ Det finns tre olika platser för att övervaka efterlevnadsstatus:
 Du kommer till den detaljerade vyn av sammanfattningen genom att välja panelen **Användarstatus** (beroende på enhetens operativsystem) och panelen **Flaggade användare**.
 
 ### <a name="user-status"></a>Användarstatus
-Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen för användaren. På bladet **Apprapportering** visas följande information för en vald användare:
+Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen för användaren. I fönstret **Apprapportering** visas följande information för en vald användare:
 - Enheter som är associerade med användarkontot
 
 - Appar med en MAM-princip på enheten
@@ -73,19 +73,19 @@ Du kan söka efter en enskild användare och kontrollera efterlevnadsstatusen f�
   - **Inte incheckad:** Principen har distribuerats till användaren, men appen har inte använts i arbetskontexten sedan dess.
 
 >[!NOTE]
-> Om MAM-principen inte har distribuerats till de användare som du sökte efter visas ett meddelande om att inga MAM-principer tillämpas på användaren.
+> Om MAM-principen inte har distribuerats till de användare som du sökte efter, visas ett meddelande om att inga MAM-principer tillämpas på användaren.
 
 Visa rapporter för en användare genom att följa anvisningarna:
 
 1.  Välj panelen **Sammanfattning** för att välja en användare.
 
-    ![Skärmbild 3](./media/MAM-reporting-6.png)
+    ![Skärmbild som visar panelen Sammanfattning på bladet Inställningar i Hantering av mobilprogram i Intune](./media/MAM-reporting-6.png)
 
-2. På bladet **Apprapportering** som öppnas väljer du **Välj användare** för att söka efter en Azure Active Directory-användare.
+2. I fönstret **Apprapportering** som öppnas väljer du **Välj användare** för att söka efter en Azure Active Directory-användare.
 
-    ![Alternativet Välj användare på bladet Apprapportering](./media/MAM-reporting-2.png)
+    ![Skärmbild som visar alternativet Välj användare i fönstret Apprapportering](./media/MAM-reporting-2.png)
 
-3. Välj användaren i listan. Du kan se informationen om användarens kompatibilitetsstatus.
+3. Välj användaren i listan. Du kan se information om användarens kompatibilitetsstatus.
 
 ### <a name="flagged-users"></a>Flaggade användare
 I den detaljerade vyn visas felmeddelandet, appen som användes när felet inträffade, enhetens operativsystem och en tidsstämpel.
@@ -94,7 +94,7 @@ I den detaljerade vyn visas felmeddelandet, appen som användes när felet intr�
 
 Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter som hjälper dig med efterlevnadsstatusen för MAM-principer:
 
-![Skärmbild-4](./media/MAM-reporting-7.png)
+![Skärmbild som visar två rapporter som är tillgängliga i fönstret Inställningar](./media/MAM-reporting-7.png)
 
 -   **Rapport om appskyddsanvändare:** Visar en översikt över samma information som du hittar i rapporten **Användarstatus** under avsnittet Detaljerad vy ovan.
 
@@ -110,7 +110,7 @@ Du kan hitta samma rapporter från den detaljerade vyn och ytterligare rapporter
 
         -   Alla appar är incheckade men kommer inte åt MAM-principer.
 
-![Skärmbild-2](./media/MAM-reporting-4.png)
+![Skärmbild som visar bladet Apprapportering för en användare med en tabell med information för tre registrerade appar](./media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Tabellgruppering
 
@@ -125,13 +125,13 @@ Du kan exportera alla dina appskyddsprincipsaktiviteter till en enda CSV-fil. De
 
 Generera appskyddsrapporten genom att följa dessa anvisningar:
 
-1. Välj Appskyddsrapport på bladet Hantering av mobilappar i Intune.
+1. Välj **Appskyddsrapport** i fönstret Hantering av mobilprogram i Intune.
 
-    ![Skärmbild 6](./media/app-protection-report-csv-2.png)
+    ![Skärmbild som visar nedladdningslänken Appskydd i fönstret Hantering av mobilprogram i Intune](./media/app-protection-report-csv-2.png)
 
 2. Välj först Ja om du vill spara rapporten, välj sedan Spara som och ange den mapp som du vill spara rapporten i.
 
-    ![Skärmbild 7](./media/app-protection-report-csv-1.png)
+    ![Skärmbild av bekräftelserutan Spara rapport](./media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Se även
 [Hantera dataöverföring mellan iOS-appar](data-transfer-between-apps-manage-ios.md)

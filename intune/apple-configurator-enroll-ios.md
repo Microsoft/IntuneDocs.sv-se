@@ -1,7 +1,7 @@
 ---
-title: "Registrera iOS-enheter – Apple Configurator – installationsassistent"
-titlesuffix: Azure portal
-description: "Läs hur du använder Apple Configurator för att registrera företagsägda iOS-enheter med installationsassistenten.”"
+title: "Registrera iOS-enheter som använder Apple Configurator"
+titlesuffix: Microsoft Intune
+description: "Läs hur du använder Apple Configurator för att registrera företagsägda iOS-enheter med installationsassistenten."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
@@ -15,11 +15,11 @@ ms.assetid: 6d384cd0-b662-41e7-94f5-0c96790ab20a
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c076bc52495d1b74a18e1d655376b6183dc5fe16
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 5f74c39fd1d335f644542d99c534b5aea21833df
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrera iOS-enheter med Apple Configurator
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 02/09/2018
 >
 >Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har ditt konto ännu inte uppdaterats till det nya användargränssnittet och du kan använda den här hjälpsidan.
 >
->![Gammalt användargränssnitt](./media/appleenroll-oldui.png)
+>![Gammalt användargränssnitt för Intune](./media/appleenroll-oldui.png)
 >
 >Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har du de uppdaterade användargränssnitten.  Gå till [den här hjälpsidan](apple-configurator-enroll-ios-newui.md).
 >
->![Nytt användargränssnitt](./media/appleenroll-newui.png)
+>![Nytt användargränssnitt för Intune](./media/appleenroll-newui.png)
 
 Intune stöder registrering av iOS-enheter med hjälp av [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) på en Mac-dator. Registrering med Apple Configurator kräver att du USB-ansluter varje iOS-enhet till en Mac-dator för att konfigurera företagsregistrering. Du kan registrera enheter i Intune med Apple Configurator på två sätt:
 - **Registrering av installationsassistenten** – Fabriksåterställer enheten och förbereder den för registrering med installationsassistenten.
@@ -64,7 +64,7 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas under re
 5. Välj **Skapa** under **Registreringsprofiler i Apple Configurator**.
 6. Ange ett **namn** och en **beskrivning** för profilen. Detta behövs för administrativa syften. Användarna kan inte se den här informationen. Du kan använda fältet Namn för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om dynamiska Azure Active Directory-grupper.
 
-  ![Skärmbild av skärmen skapa profil med Registrera med användartillhörighet valt](./media/apple-configurator-profile-create.png)
+  ![Skärmen för att skapa profil där Registrera med användartillhörighet är valt](./media/apple-configurator-profile-create.png)
 
 7. Ange **Användartillhörighet**:
    - **Registrera med användartillhörighet** – Enheten måste vara kopplad till en användare med installationsassistenten och kan sedan komma åt företagets data och e-post. Användartillhörighet krävs för hanterade enheter som tillhör användare och som måste använda företagsportalen för tjänster som installation av appar. Stöds endast för registrering med installationsassistenten. Mappning mellan användare kräver [WS-Trust 1.3 användarnamn/kombinerad slutpunkt](https://technet.microsoft.com/library/adfs2-help-endpoints). [Läs mer](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
@@ -117,7 +117,7 @@ När du har skapat profilen och tilldelat serienummer måste du exportera profil
 1. Välj **Enhetsregistrering** > **Apple-registrering** > **AC-profiler** på Azure-portalen i Intune och välj sedan den profil som ska exporteras.
 2. Välj **Exportera profil** i profilen.
 
-  ![Skärmbild av Exportera profil för alternativet Registrering av installationsassistent där profilens webbadress är markerad](./media/ios-apple-configurator-expor-sat.png)
+  ![Exportera profil för installationsassistentsläge där profilens webbadress är markerad](./media/ios-apple-configurator-expor-sat.png)
 3. Kopiera profil-URL. Du kan sedan lägga till den i Apple Configurator senare för att definiera den Intune-profil som används av iOS-enheter.
 
   Därefter importerar du den här profilen till Apple Configurator, genom följande procedur som definierar den Intune-profil som används av iOS-enheter.
@@ -155,7 +155,7 @@ Appar som kräver användartillhörighet, inklusive företagsportalappen som anv
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Ladda ned profil** under **Exportera profil** för att ladda ned registreringsprofilen.
 
-  ![Skärmbild av Exportera profil för alternativet Registrering av installationsassistent där profilens webbadress är markerad](./media/ios-apple-configurator-expor-de.png)
+  ![Exportera profil för installationsassistentsläge där profilens webbadress är markerad](./media/ios-apple-configurator-expor-de.png)
 
 4. Överför filen till en Mac-dator som kör [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) för att skicka den direkt som en hanteringsprofil till iOS-enheter.
 5. Förbered enheten med Apple Configurator med hjälp av följande steg.
@@ -163,7 +163,7 @@ Appar som kräver användartillhörighet, inklusive företagsportalappen som anv
   2. Anslut iOS-enheten till Mac-datorn med en USB-kabel. Stäng Foton, iTunes och andra appar som öppnas för enheten när enheten identifieras.
   3. I Apple Configurator väljer du den anslutna iOS-enheten och väljer sedan knappen **Lägg till**. Alternativ som kan läggas till för enheten visas i den nedrullningsbara listan. Välj **Profiler**.
 
-    ![Skärmbild av Exportera profil för alternativet Registrering av installationsassistent där profilens webbadress är markerad](./media/ios-apple-configurator-add-profile.png)
+    ![Exportera profil för installationsassistentsläge där profilens webbadress är markerad](./media/ios-apple-configurator-add-profile.png)
 
   4. Använd filväljaren och välj den .mobileconfig-fil som du exporterade från Intune och välj sedan **Lägg till**. Profilen läggs till för enheten. Om enheten är obevakad kräver installationen godkännande på enheten.
 6. Installera profilen på iOS-enheten på följande sätt. Installationsassistenten måste ha slutförts på enheten och enheten måste vara redo att användas. Om registreringen kräver appdistributioner måste enheten ha ett konfigurerat Apple-ID eftersom appdistributionen kräver att du har ett Apple-ID för App Store.

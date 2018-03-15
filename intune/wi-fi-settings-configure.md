@@ -1,7 +1,7 @@
 ---
 title: "Hur du konfigurerar Wi-Fi-inställningar i Intune"
-titleSuffix: Azure portal
-description: "Läs om hur använder Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar.”"
+titleSuffix: Microsoft Intune
+description: "Läs om hur du använder Microsoft Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar."
 keywords: 
 author: vhorne
 ms.author: victorh
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e03df2525b413ca33f81836292a05dac11bb8349
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 21bc79d3440e57ec91f7e4482112d77cf233575f
+ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -46,7 +46,7 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Skapa en enhetsprofil som innehåller Wi-Fi-inställningar
 
-1. Logga in på Azure-portalen.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
 2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
@@ -60,9 +60,9 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - **Windows 8.1 och senare (importera en profil)**
 
    > [!IMPORTANT]
-   > Om du skapar en profil för enheter som kör Windows 10, inklusive Windows Holographic for Business, så måste du välja plattformen **Windows 8.1 och senare**. Plattformen **Windows 10 och senare** omfattar inte en Wi-Fi-profiltyp. 
+   > Om du skapar en profil för enheter som kör Windows 10, inklusive Windows Holographic for Business, så måste du välja plattformen **Windows 8.1 och senare**. Plattformen **Windows 10 och senare** innehåller inte någon WiFi-profiltyp. 
 
-6. I listrutan **WiFi-typ** väljer du **Grundläggande** eller **Företag** på Apple- eller Android-enheter. Du kan använda **Grundläggande** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Företag** kan du ange mer avancerad information som det utökningsbara autentiseringsprotokollet EAP om ditt Wi-Fi-nätverk använder detta. 
+6. I listrutan **WiFi-typ** väljer du **Grundläggande** eller **Företag** på Apple- eller Android-enheter. Du kan använda **Grundläggande** för att tillhandahålla basfunktioner som nätverksnamn och SSID. Med **Enterprise** kan du ange mer avancerad information, som t.ex. det utökningsbara autentiseringsprotokollet (EAP), om ditt WiFi-nätverk använder detta protokoll. 
 
    Profilen **Wi-Fi-import** (för Windows 8.1 och senare) gör det möjligt att importera Wi-Fi-inställningar som en XML-fil som du tidigare har exporterat från en annan enhet.
 1. Beroende på vilken plattform du väljer så varierar de inställningar som du kan konfigurera. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:

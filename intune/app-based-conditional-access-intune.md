@@ -1,9 +1,9 @@
 ---
 title: "Appbaserad villkorlig åtkomst med Intune"
-description: "Förstå hur appbaserad villkorlig åtkomst fungerar med Intune."
+description: "Läs om hur appbaserad villkorlig åtkomst fungerar med Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 05/31/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 43421ac02fc3791e2827d980adcb708619cde9b8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 604eb86e6ae712bac360ecf45dd8f20e611bc52a
+ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
@@ -54,7 +54,7 @@ I det här exemplet har administratören tillämpat appskyddsprinciper på Outlo
 > [!NOTE]
 > Flödesschemat för strukturen nedan kan användas för andra hanterade appar.
 
-![flödesschema för appbaserad villkorlig åtkomst med Intune](./media/ca-intune-common-ways-3.png)
+![Flödesdiagram över processen för appbaserad villkorlig åtkomst](./media/ca-intune-common-ways-3.png)
 
 1.  Användaren försöker autentisera till Azure AD från Outlook-appen.
 
