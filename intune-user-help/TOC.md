@@ -66,6 +66,7 @@
 ### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
+### [Registrera din iOS-enhet med programmet för enhetsregistrering](enroll-your-device-dep-ios.md)
 
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
