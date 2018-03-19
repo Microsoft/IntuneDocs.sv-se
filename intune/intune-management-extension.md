@@ -5,7 +5,7 @@ description: "Lär dig hur du laddar upp PowerShell-skript i Intune för att kö
 keywords: 
 author: dougeby
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8c959ca3df62cbda17e5a659d0703cbc37f3249
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a52f2affa235a37b6d99a8452bc83a794cb04ce5
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i Intune för att köra Windows 10-enheter. Hanteringstillägget kompletterar funktioner för hantering av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att flytta till modern hantering.
@@ -37,24 +37,24 @@ Intune-hanteringstillägget har följande krav:
 
 ## <a name="create-a-powershell-script-policy"></a>Skapa en princip för PowerShell-skript 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-4. Välj **Hantera** > **PowerShell-skript** på bladet **Enhetskonfiguration**.
-5. På bladet **PowerShell-skript** väljer du **Lägg till skript**.
-6. Ange ett **Namn** och en **Beskrivning** för PowerShell-skriptet på bladet **Lägg till PowerShell-skript**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+4. Välj **Hantera** > **PowerShell-skript** i fönstret **Enhetskonfiguration**.
+5. I fönstret **PowerShell-skript** väljer du **Lägg till**.
+6. Ange ett **Namn** och en **Beskrivning** för PowerShell-skriptet i fönstret **Lägg till PowerShell-skript**.
 7. Bläddra efter PowerShell-skriptet för att ange en **Skriptplats**. Skriptet måste vara mindre än 10 KB (ASCII) eller 5 KB (Unicode).
 8. Välj **Konfigurera** och välj sedan om du vill köra skriptet med användarens autentiseringsuppgifter på enheten (**Ja**) eller i systemkontexten (**Nej**). Som standard körs skriptet i systemkontexten. Välj **Ja** om inte skriptet kräver att det körs i systemkontexten. 
-  ![Bladet Lägg till PowerShell-skript](./media/mgmt-extension-add-script.png)
+  ![Fönstret Lägg till PowerShell-skript](./media/mgmt-extension-add-script.png)
 9. Välj om skriptet måste signeras av en betrodd utgivare (**Ja**). Som standard finns inga krav på att skriptet ska signeras. 
 10. Klicka på **OK** och sedan på **Skapa** för att spara skriptet.
 
 ## <a name="assign-a-powershell-script-policy"></a>Tilldela en princip för PowerShell-skript
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-4. Välj **Hantera** > **PowerShell-skript** på bladet **Enhetskonfiguration**.
-5. På bladet **PowerShell-skript** väljer du skriptet du vill tilldela och sedan **Hantera** > **Tilldelningar**.
-  ![Bladet lägg till PowerShell-skript](./media/mgmt-extension-assignments.png)
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+4. Välj **Hantera** > **PowerShell-skript** i fönstret **Enhetskonfiguration**.
+5. I fönstret **PowerShell-skript** väljer du skriptet du vill tilldela och sedan **Hantera** > **Tilldelningar**.
+  ![Fönstret Lägg till PowerShell-skript](./media/mgmt-extension-assignments.png)
  
 6. Välj **Välj grupper** för en lista över tillgängliga Azure AD-grupper. 
 7. Välj en eller flera grupper som innehåller de användare vars enheter ska ta emot skriptet och klicka sedan på **Välj** för att tilldela principen till de valda grupperna.
@@ -64,9 +64,9 @@ Intune-hanteringstillägget synkroniserar till Intune en gång i timmen. När du
 ## <a name="monitor-run-status-for-powershell-scripts"></a>Övervaka körningsstatus för PowerShell-skript
 Du kan övervaka körningsstatusen för PowerShell-skript för användare och enheter i Azure Portal.
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-4. Välj **Hantera** > **PowerShell-skript** på bladet **Enhetskonfiguration**.
-5. På bladet **PowerShell-skript** väljer du skriptet som du vill övervaka och väljer sedan **Övervaka** och en av följande rapporter:
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+4. Välj **Hantera** > **PowerShell-skript** i fönstret **Enhetskonfiguration**.
+5. I fönstret **PowerShell-skript** väljer du skriptet som du vill övervaka och väljer sedan **Övervaka** och en av följande rapporter:
    - **Enhetstillstånd**
    - **Användarstatus**

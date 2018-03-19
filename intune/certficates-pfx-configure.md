@@ -1,12 +1,11 @@
 ---
-title: Konfigurera och hantera PKCS-certifikat med Intune
-titleSuffix: Intune on Azure
-description: Skapa och tilldela PKCS-certifikat med Intune.
+title: "Använda PKCS-certifikat med Microsoft Intune – Azure | Micrososft Docs"
+description: "Lägg till eller skapa ett Public Key Cryptography Standards-certifikat med Microsoft Intune, inklusive stegen för att exportera ett rotcertifikat, konfigurera certifikatmallen, ladda ned och installera Microsoft Intune Certificate Connector, skapa en profil för enhetskonfiguration, skapa en PKCS-certifikatprofil i Azure och din certifikatutfärdare"
 keywords: 
-author: MicrosoftGuyJFlo
-ms.author: joflore
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 12/09/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +14,17 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d877a1de8e66372d36641dd863a517fecf176d69
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c0668921f03b24b319c2c37837dbd2cc053370ca
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="configure-and-manage-pkcs-certificates-with-intune"></a>Konfigurera och hantera PKCS-certifikat med Intune
+# <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+Certifikat används för att autentisera och skydda åtkomst till dina företagsresurser, som VPN eller WiFi-nätverk. Den här artikeln visar hur du exporterar ett PKCS-certifikat, och lägger sedan till certifikatet till en Intuneprofil. 
 
 ## <a name="requirements"></a>Krav
 
@@ -31,7 +32,7 @@ Om du vill använda PKCS-certifikat med Intune, måste du ha följande infrastru
 
 * En befintlig Active Directory Domain Services (AD DS)-domän konfigurerad.
  
-  Mer information om hur du installerar och konfigurerar AD DS finns i artikeln [AD DS-design och planering](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  Mer information om att installera och konfigurera AD DS finns i [Design och planering för AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 * En befintlig Enterprise-certifikatutfärdare (CA) har konfigurerats.
 
@@ -51,7 +52,7 @@ Du behöver en rot- eller mellanliggande CA på varje enhet för autentisering m
 
 1. Logga in på din Enterprise CA med ett konto som har administratörsbehörighet.
 2. Öppna en kommandotolk som administratör.
-3. Exportera rot-CA-certifikatet till en plats där du senare kan komma åt det.
+3. Exportera rot-CA-certifikatet (.cer) till en plats där du senare kan komma åt det.
 
    Exempel:
 
@@ -64,105 +65,104 @@ Du behöver en rot- eller mellanliggande CA på varje enhet för autentisering m
 ## <a name="configure-certificate-templates-on-the-certification-authority"></a>Konfigurera certifikatmallar på certifikatutfärdaren
 
 1. Logga in på din Enterprise CA med ett konto som har administratörsbehörighet.
-2. Öppna konsolen **certifikatutfärdare**.
-3. Högerklicka på **certifikatmallar** och välj **hantera**.
-4. Leta upp certifikatmallen **användare**, högerklicka på den och välj **duplicera mallen**. Ett fönster öppnas, **egenskaper för ny mall**.
-5. På fliken **kompatibilitet**
+2. Öppna konsolen **Certifikatutfärdare**, högerklicka på **Certifikatmallar** och välj **Hantera**.
+3. Leta upp certifikatmallen **användare**, högerklicka på den och välj **duplicera mallen**. **Egenskaper för ny mall** öppnas.
+4. På fliken **Kompatibilitet**: 
    * Ställ in **certifikatutfärdare** till **Windows Server 2008 R2**
    * Ställ in **certifikatmottagare** till **Windows 7 / Server 2008 R2**
-6. På fliken **Allmänt**:
+5. På fliken **Allmänt**:
    * Ange **mallens visningsnamn** till något som betyder något för dig.
 
    > [!WARNING]
-   > **Mallnamnet** är som standard samma som **mallens visningsnamn** med *inga blanksteg*. Anteckna mallnamnet för senare användning.
+   > **Mallnamnet** är som standard samma som **mallens visningsnamn** med *inga blanksteg*. Anteckna mallens namn. Du behöver det senare.
 
-7. På fliken **begärandehantering** markerar du rutan **tillåt att den privata nyckeln exporteras**.
-8. På fliken **kryptografi**, bekräftar du att den **minsta nyckelstorleken** är inställd på 2 048.
-9. På fliken **ämnesnamn**, väljer du alternativknappen **anges i begäran**.
-10. På fliken **tillägg**, bekräftar du att du ser krypterar filsystem, säker e-post och klientautentisering under **användningsprinciper**.
+6. I **Hantering av begäranden** väljer du **Tillåt att den privata nyckeln exporteras**.
+7. I **kryptografi** bekräftar du att den **minsta nyckelstorleken** är inställd på 2048.
+8. I **Ämnesnamn** väljer du **Anges i begäran**.
+9. I **Tillägg**, bekräftar du att du ser krypterar filsystem, säker e-post och klientautentisering under **användningsprinciper**.
     
       > [!IMPORTANT]
-      > För iOS- och macOS-certifikatmallar: Redigera **Nyckelanvändning** på fliken **Tillägg** och kontrollera att **Signaturen är bevis för ursprung** inte har markerats.
+      > För iOS- och macOS-certifikatmallar: uppdatera **Nyckelanvändning** på fliken **Tillägg** och kontrollera att **Signaturen är bevis för ursprung** inte har markerats.
 
-11. På fliken **säkerhet**, lägger du till datorkontot för den server där du installerar Microsoft Intune Certificate Connector.
+10. I **säkerhet** lägger du till datorkontot för den server där du installerar Microsoft Intune Certificate Connector.
     * Ge det här kontot **läs-** och **registrera**-behörigheter.
-12. Klicka på **tillämpa** och klicka sedan på **OK** för att spara certifikatmallen.
-13. Stäng **konsolen för certfikatmallar**.
-14. I konsolen **certifikatutfärdare**, högerklickar du på **certifikatmallar**, **Ny**, **certifikatmall att utfärda**.
-    * Välj den mall som du skapade i föregående steg och klicka på **OK**.
-15. Följ dessa steg för att servern ska hantera certifikat åt Intune-registrerade enheter och användare:
+11. Välj **Tillämpa** och sedan **OK** för att spara certifikatmallen.
+12. Stäng **konsolen för certfikatmallar**.
+13. I konsolen **certifikatutfärdare**, högerklickar du på **certifikatmallar**, **Ny**, **certifikatmall att utfärda**.
+    * Välj den mall som du skapade i föregående steg och välj **OK**.
+14. Följ dessa steg för att servern ska hantera certifikat åt Intune-registrerade enheter och användare:
 
     a. Högerklicka på certifikatutfärdaren och välj **egenskaper**.
 
     b. På fliken säkerhet, lägger du till datorkontot för den server där du kör Microsoft Intune Certificate Connector.
       * Bevilja behörigheterna **utfärda och hantera certifikat** och **begära certifikat** till datorkontot.
-16. Logga ut från Enterprise-CA:n.
+15. Logga ut från Enterprise-CA:n.
 
 ## <a name="download-install-and-configure-the-microsoft-intune-certificate-connector"></a>Hämta, installera och konfigurera Microsoft Intune Certificate Connector
 
 ![ConnectorDownload][ConnectorDownload]
 
-1. I Azure Portal väljer du **Fler tjänster** > **Övervakning och hantering**  > **Intune**.
-2. Välj **Enhetskonfiguration** på **Intune**-bladet. 
-3. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**. 
-4. Klicka på **Lägg till** och välj **Download Connector file** (Ladda ned anslutningsfil). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den. 
-5.  Logga in på servern där du ska installera Microsoft Intune Certificate Connector.
-6.  Kör installationsprogrammet och acceptera standardplatsen. Den installerar anslutningsappen till C:\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
-    1. På sida med installationsalternativ väljer du **PFX-distribution** och klickar på **nästa**.
-    2. Klicka på **installera** och vänta tills det är klart.
-    3. På sidan för slutförande, markerar du kryssrutan **Starta Intune Connector** och klickar på **Slutför**.
-7.  Fönstret NDES Connector borde nu öppnas till fliken **registrering**. Om du vill aktivera anslutningen till Intune klickar du på **Logga in** och anger ett konto med administratörsbehörighet.
-8.  På fliken **avancerat**, kan du lämna alternativknappen **använd den här datorns systemkonto (standard)** markerad.
-9.  Klicka på **tillämpa** och sedan **stäng**.
-10. Gå tillbaks till Azure-portalen. Efter ett par minuter visas en grön bock och ordet **Aktiv** under **Anslutningsstatus** i **Intune** > **Enhetskonfiguration** > **Certifikatutfärdare**. Det innebär att du vet att din anslutningsserver kan kommunicera med Intune.
+1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och filtrerar på **Intune**. Välj **Microsoft Intune** och sedan **Enhetskonfiguration**. 
+2. Välj **Certifikatutfärdare**, välj **Lägg till** och sedan alternativet för att **ladda ned anslutningsfilen**. Spara den på en plats där du kan komma åt den från den server där den kommer att installeras. 
+3. Logga in på den här servern och kör installationsprogrammet: 
 
+    1. Acceptera standardplatsen. Anslutningsprogrammet installeras då till `\Program Files\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe`.
+    2. Bland installationsalternativen väljer du **PFX-distributionsalternativet**och väljer **Nästa**.
+    3. **Installera** och vänta tills det är klart.
+    4. När det är klart markerar du **Starta Intune Connector** och sedan **Slutför**.
+
+4. Fönstret NDES Connector borde öppnas till fliken **Registrering**. Om du vill aktivera anslutningen till Intune väljer du **Logga in** och anger ett konto med globala administratörsbehörigheter.
+5. På fliken **avancerat** låter du **Använd den här datorns systemkonto (standard)** vara markerad.
+6. **Tillämpa** och sedan **Stäng**.
+7. Gå tillbaka till Azure-portalen (**Intune** > **Enhetskonfiguration** > **Certifikatutfärdare**). Efter några minuter visas en grön bockmarkering och **Anslutningsstatus** är **Aktiv**. Anslutningsservern kan nu kommunicera med Intune.
 
 ## <a name="create-a-device-configuration-profile"></a>Skapa en enhetskonfigurationsprofil
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Gå till **Intune**, **enhetskonfiguration**, **profiler** och klicka på **skapa profil**.
+2. Gå till **Intune**, **Enhetskonfiguration**, **Profiler** och välj **Skapa profil**.
 
    ![NavigateIntune][NavigateIntune]
 
-3. Ange följande information:
+3. Ange följande egenskaper:
    * **Namnet** på profilen
    * Om du vill kan du ange en beskrivning
    * **Plattform** att distribuera profilen till
    * Ange **profiltypen** som **betrott certifikat**
-4. Gå till **inställningar** och ange .cer-filen med rot CA-certifikatet som du exporterade tidigare.
+
+4. Gå till **Inställningar** och ange .cer-filen med rot CA-certifikatet som du exporterade tidigare.
 
    > [!NOTE]
    > Beroende på vilken plattform du valde i **steg 3** kan du få alternativet att välja **målarkiv** för certifikatet.
 
    ![ProfileSettings][ProfileSettings]
 
-5. Klicka på **OK** och sedan **skapa** för att spara din profil.
+5. Välj **OK** och sedan **Skapa** för att spara din profil.
 6. Om du vill tilldela den nya profilen till en eller flera enheter, finns [så här tilldelar du Microsoft Intune-enhetsprofiler](device-profile-assign.md).
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Skapa en PKCS-certifikatprofil
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Gå till **Intune**, **enhetskonfiguration**, **profiler** och klicka på **skapa profil**.
-3. Ange följande information:
+2. Gå till **Intune**, **Enhetskonfiguration**, **Profiler** och välj **Skapa profil**.
+3. Ange följande egenskaper:
    * **Namnet** på profilen
    * Om du vill kan du ange en beskrivning
    * **Plattform** att distribuera profilen till
    * Ange **profiltypen** som **PKCS-certifikat**
-4. Gå till **inställningar** och ange följande information:
+4. Gå till **Inställningar** och ange följande egenskaper:
    * **Tröskelvärde för förnyelse (%)** – 20% rekommenderas.
    * **Certifikatets giltighetstid** – om du inte har ändrat certifikatmallen ska det här alternativet anges till ett år.
-   * **Certifikatutfärdare** – det här alternativet är det interna fullständigt kvalificerade domännamnet (FQDN) för din Enterprise CA.
-   * **Namn på certifikatutfärdare** – det här alternativet är namnet på din Enterprise CA och kan skilja sig från föregående objekt.
-   * **Certifikatmallens namn** – det här alternativet är namnet på den mall du skapade tidigare. Kom ihåg att **mallnamnet** som standard är samma som **mallens visningsnamn** *utan blanksteg*.
+   * **Certifikatutfärdare** – Visar det interna fullständigt kvalificerade domännamnet (FQDN) för din Enterprise CA.
+   * **Namn på certifikatutfärdare** – Anger namnet på din Enterprise CA och kan skilja sig från föregående objekt.
+   * **Certifikatmallens namn** – Namnet på den mall du skapade tidigare. Kom ihåg att **mallnamnet** som standard är samma som **mallens visningsnamn** *utan blanksteg*.
    * **Ämnesnamnets format** – ange det här alternativet som **nätverksnamn** om inget annat krävs.
    * **Alternativt ämnesnamn** – ange det här alternativet som **användarens huvudnamn (UPN)** om inget annat krävs.
-   * **Utökad nyckelanvändning** – så länge du använde standardinställningarna i steg 10 i föregående avsnitt **konfigurera certifikatmallar på certifikatutfärdaren**, lägger du till följande **fördefinierade värden** från markeringsrutan:
+   * **Utökad nyckelanvändning** – Så länge du använde standardinställningarna i steg 10 i avsnittet [Konfigurera certifikatmallar på certifikatutfärdaren](#configure-certificate-templates-on-the-certification-authority) (i den här artikeln) lägger du till följande **fördefinierade värden** från markeringen:
       * **Valfritt ändamål**
       * **Klientautentisering**
       * **Säker e-post**
-   * **Rotcertifikat** – (för Android-profiler) det här alternativet är .cer-filen som exporterades i steg 3 i föregående avsnitt [exportera rotcertifikatet från Enterprise CA:n](#export-the-root-certificate-from-the-enterprise-ca).
+   * **Rotcertifikat** – (för Android-profiler) Listar .cer-filen som exporterades i steg 3 i avsnittet [Exportera rotcertifikatet från Enterprise CA:n](#export-the-root-certificate-from-the-enterprise-ca) (i den här artikeln).
 
-5. Klicka på **OK** och klicka sedan på **skapa** för att spara din profil.
+5. Klicka på **OK** och sedan **Skapa** för att spara din profil.
 6. Om du vill tilldela den nya profilen till en eller flera enheter, finns [så här tilldelar du Microsoft Intune-enhetsprofiler](device-profile-assign.md).
 
 

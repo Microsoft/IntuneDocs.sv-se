@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 01/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e89ba73869d7453b74edb1e7f87f6c8edb210bf
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="role-based-administration-control-rbac-with-intune"></a>Rollbaserad administrationskontroll (RBAC) med Intune
 
@@ -63,7 +63,7 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 - **Programhanterare**: hanterar mobila och hanterade program och kan läsa enhetsinformation.
 - **Skoladministratör**: Hanterar Windows 10-enheter i [Intune for Education](introduction-intune-education.md) och kan vidta följande åtgärder: 
 
-|Behörigheter|Aktivitet|
+|Behörigheter|Åtgärd|
 |---|---|
 |Granska data|Läs|
 |DeviceConfigurations|Tilldela, skapa, ta bort, läsa, uppdatera|
@@ -76,16 +76,19 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 
 ### <a name="to-assign-a-built-in-role"></a>Tilldela en inbyggd roll
 
-1. På **Intune-roller** väljer du den inbyggda rollen som du vill tilldela.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Intune-roller** och sedan **Alla roller**.
+1. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
 
-2. På bladet <*rollnamn*> – **Egenskaper** väljer du **Hantera** och därefter **Tilldelningar**.
+2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**.
 
     > [!NOTE]
     > Du kan inte ta bort eller redigera inbyggda roller
 
-3. På bladet anpassad roll väljer du **Tilldela**.
+3. I fönstret för anpassad roll väljer du **Tilldela**.
 
-4. På bladet **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
+4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
     - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
 <br></br>
@@ -108,29 +111,29 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 
 1. Logga in i [Azure-portalen](https://portal.azure.com) med dina inloggningsuppgifter för Intune.
 
-2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
 3. Välj **Intune** Kontrollpanelen för Intune öppnas. Välj **Intune-roller**.
 
-4. Välj **Intune-roller** på **Intune-bladet** och välj **Lägg till anpassad**.
+4. Välj **Alla roller** i **Intune-fönstret** och välj **Lägg till anpassad**.
 
-5. På bladet **Lägg till anpassad roll** anger du namn och beskrivning för den nya rollen och klickar sedan på **Behörigheter**.
+5. I fönstret **Lägg till anpassad roll** anger du namn och beskrivning för den nya rollen och klickar sedan på **Behörigheter**.
 
-3. På bladet **Behörigheter** väljer du de behörigheter som du vill använda med den här rollen. Använd [Intune RBAC-tabellen](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) för att avgöra vilka behörigheter som du vill använda.
+3. I fönstret **Behörigheter** väljer du de behörigheter som du vill använda med den här rollen. Använd [Intune RBAC-tabellen](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) för att avgöra vilka behörigheter som du vill använda.
 
 4. När du är klar väljer du **OK**.
 
-5. På bladet **Lägg till anpassad roll** klickar du på **Skapa**. Den nya rollen visas i listan på bladet **Intune-roller**.
+5. I fönstret **Lägg till anpassad roll** klickar du på **Skapa**. Den nya rollen visas i listan i fönstret **Intune-roller – Alla roller**.
 
 ### <a name="to-assign-a-custom-role"></a>Tilldela en anpassad roll
 
-1. På **Intune-roller** väljer du den anpassade rollen som du vill tilldela.
+1. I fönstret **Intune-roller – Alla roller** väljer du den anpassade rollen som du vill tilldela.
 
-2. På bladet <*rollnamn*> – **Egenskaper** väljer du **Hantera** och därefter **Tilldelningar**. På det här bladet kan du även redigera eller ta bort befintliga roller.
+2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**. I det här fönstret kan du även redigera eller ta bort befintliga roller.
 
-3. På bladet anpassad roll väljer du **Tilldela**.
+3. I fönstret för anpassad roll väljer du **Tilldela**.
 
-4. På bladet **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
+4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
     - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
 <br></br>

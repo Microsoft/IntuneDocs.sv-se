@@ -1,12 +1,12 @@
 ---
-title: "Skapa en efterlevnadsprincip för Android"
-titleSuffix: Azure portal
-description: "Lär dig hur du skapar en efterlevnadsprincip för Android-enheter.\""
+title: Skapa en Android-enhetsefterlevnadsprincip i Microsoft Intune
+titleSuffix: 
+description: "Skapa en enhetsefterlevnadsprincip i Microsoft Intune för Android-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,41 +15,39 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6da4e6ffb473cee73f3946e5af3d97ddd5bb6b7b
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 283685629ac1e268a66d82250273a17f9baa5d17
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Principer för enhetsefterlevnad skapas för varje plattform i Intune Azure Portal. 
-
-- Mer information om efterlevnadsprinciper finns i [Vad är enhetsefterlevnad?](device-compliance.md).
-- Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+En Intune-enhetsefterlevnadsprincip för Android anger de regler och inställningar som Android-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar principer för enhetsefterlevnad för varje plattform i Intune Azure-portalen. Mer information om efterlevnadsprinciper och de förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 ## <a name="to-create-a-device-compliance-policy"></a>Skapa en princip för enhetsefterlevnad
 
-1. Välj **Ange enhetsefterlevnad** på bladet **Intune**. Välj **Alla enhetsefterlevnadsprinciper** under **Hantera** och välj sedan **Skapa**.
-2. Skriv ett namn, ange en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
-3. Välj **Efterlevnadskrav** och ange inställningar för **Säkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskap**. När du är klar väljer du **OK**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. I fönstret **Intune** väljer du **Enhetsefterlevnad**. Under **Hantera** väljer du **Principer** och **Skapa princip**.
+3. Välj **Konfigurera inställningar** för att ange **Systemsäkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskaper** här. När du är klar väljer du **OK**.
 
-<!-- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
-5. In the **Actions for noncompliance** blade, choose **Add** to create a new action.  The action parameters blade allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
+<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant based on the configured settings in this policy.
+5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
 6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
 7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
 8. Choose **Add** to finish creating the action.
-9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.-->
+9. You can create multiple actions and the sequence in which they should occur. Choose **OK** when you are finished creating all the actions.--->
 
 ## <a name="to-assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnad – principer**.
+Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad - Principer**.
 
-1. Välj principen och **Tilldelningar**. Du kan sedan välja **Azure Active Directory-säkerhetsgrupper** och tilldela grupperna till principen.
-2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**. Här hittar du en lista över alla säkerhetsgrupper i Azure Active Directory.  Du kan välja de användargrupper som du vill att den här principen ska tillämpas på och välja **Välj**. När du väljer **Välj** distribueras principen till användarna.
+1. Välj principen och **Tilldelningar**. Då öppnas det fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+2. Öppna fönstret som visar säkerhetsgrupper för Azure AD genom att välja **Valda grupper**. Här hittar du en lista över alla säkerhetsgrupper i Azure Active Directory.  Du kan välja de användargrupper som du vill att den här principen ska tillämpas på och välja **Spara** för att distribuera principen till användare.
 
 Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
 
@@ -58,7 +56,7 @@ Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som a
 ## <a name="device-health-and-security-settings"></a>Inställningar för enhetens för hälsotillstånd och säkerhet
 
 - **Enheten får inte vara jailbrokad eller rotad**: Om du aktiverar den här inställningen kommer jailbrokade enheter att utvärderas som inkompatibla.
-- **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)**: Om du vill blockera enheter som har aktiverat **Säkerhet** > **Okända källor** på enheten aktiverar du inställningen och väljer **Ja**.
+- **Kräv att enheter förhindrar installation av appar från okända källor (Android 4.0 eller senare)**: Om du vill blockera enheter som har aktiverat **Säkerhet** > **Okända källor** på enheten aktiverar du och väljer **Ja** för inställningen.
 
 ### <a name="important"></a>Viktigt
 
@@ -68,16 +66,18 @@ Inställningen **Okända källor** måste vara aktiverad för program med separa
 - **Kräv att ”Genomsök enhet efter säkerhetshot” (Android 4.2-4.4) är aktiverat på enheter**: Den här inställningen anger att funktionen **Verifiera appar** är aktiverad på enheten.
 - **Lägsta Android-säkerhetskorrigeringsnivå (Android 6.0 eller senare)**: Använd den här inställningen för att ange den lägsta Android-korrigeringsnivå. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste ha formatet ÅÅÅÅ-MM-DD.
 - **Kräv att enhetsskydd är aktiverat**: Använd den här inställningen för att ta riskbedömningen från Lookout MTP-lösningen som ett villkor för efterlevnad. Välj den högsta tillåtna hotnivån, som är en av följande:
-  - **Ingen (skyddad)**: Det här är den säkraste hotnivån. Detta innebär att enheten inte kan ha några hot. Om hot identifieras på enheten kommer den utvärderas som icke-kompatibel.
+  - **Ingen (skyddad)**: Det här är det säkraste alternativet. Detta innebär att enheten inte kan ha några hot. Om hot identifieras på enheten kommer den utvärderas som icke-kompatibel.
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  - **Hög**: Det här är den minst säkra hotnivån. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+  - **Hög**: Det här alternativet är minst säkert. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
+
+Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https://docs.microsoft.com/intune-classic/deploy-use/enable-device-threat-protection-rule-in-compliance-policy) för mer information.
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
 ### <a name="password"></a>Lösenord
 
-- **Kräv lösenord för att låsa upp mobila enheter:** Välj **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Kräv lösenord för att låsa upp mobila enheter**: Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 - **Minsta längd på lösenord**: Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
 - **Lösenordskvalitet**: Den här inställningen identifierar om lösenordskraven som du anger är konfigurerade på enheten. Aktivera den här inställningen för att kräva att användare uppfyller vissa lösenordskrav för Android-enheter. Välj mellan:
   - **Låg säkerhetsbiometri**
@@ -94,7 +94,7 @@ Inställningen **Okända källor** måste vara aktiverad för program med separa
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kräv kryptering på den mobila enheten**: Välj **Ja** för att kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
+- **Kräv kryptering på den mobila enheten**: Välj **Ja** för den här inställningen om du vill kräva att enheter ska krypteras för att ansluta till resurser. Enheter krypteras när du väljer inställningen **Kräv lösenord för att låsa upp mobila enheter**.
 
 ## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
@@ -119,9 +119,9 @@ I tabellen nedan visas hur inkompatibla inställningar hanteras när en efterlev
 
 --------------------------
 
-**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)+
+**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)
 
-**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheterna inte uppfyller efterlevnadskraven utförs följande åtgärder:+
+**I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
 
 - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
 - Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.

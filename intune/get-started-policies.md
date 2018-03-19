@@ -1,12 +1,12 @@
 ---
-title: "Komma igång med principer"
-titlesuffix: Azure portal
-description: "Skapa principer som hindrar användare från att använda enheten på ett otillåtet sätt."
+title: "Kom igång med principer i Microsoft Intune"
+titlesuffix: 
+description: "Skapa principer för att skydda företagsdata och hantera slutanvändarnas enhetsanvändning för att få åtkomst till företagsresurser."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,19 +15,19 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ea5fe13f7361b968f3158a617275cd08daedac1c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8af61eb207a8f9b2dc74650627fcab0e4d858904
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="get-started-with-policies"></a>Kom igång med principer
+# <a name="get-started-with-creating-policies"></a>Kom igång med att skapa principer
 
 Ett av de huvudsakliga målen med att komma igång med Intune är att registrera enheter och säkerställa att de är kompatibla med företagets principer för efterlevnad. Principer för efterlevnad hjälper dig inte bara att hantera särskilda enhetstyper, t.ex. företagsägda terminaler, men även personliga enheter (BYOD-enheter), surfplattor och användarlösa enheter.
 
-![Instrumentpanel för efterlevnad med liten mängd data](/intune/media/generic-compliance-dashboard.png)
+![Instrumentpanel för efterlevnad med mycket liten mängd data](/intune/media/generic-compliance-dashboard.png)
 
-Principer för efterlevnad tillhandahåller följande hanteringsmöjligheter för mobila enheter:
+Hantera mobila enheter i följande områden med efterlevnadsprinciper:
 
 * Reglera det antal enheter som varje användare kan registrera
 * Hantera enhetsinställningar (t.ex. kryptering på enhetsnivå, lösenordslängd, kameraanvändning)
@@ -45,13 +45,14 @@ Principer för efterlevnad skapas separat för varje plattform. I den här övni
 
 __Hur skapar jag en princip?__
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Sök efter **Intune** med **Sök resurser**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsefterlevnad**.
-4. Välj **Principer** på bladet **Enhetsefterlevnad**.
-5. Välj **Skapa princip** och fyll i information som **namn** och **beskrivning**. Välj **iOS** som **plattform**.
+4. Välj **Principer** i fönstret **Enhetsefterlevnad**.
+5. Välj **Skapa princip** och fyll i information som **namn** och **beskrivning**. 
+6. Välj **iOS** som **plattform**.
 6. Välj **Systemsäkerhet** i **Inställningar** och ändra sedan **Kräv lösenord för att låsa upp mobila enheter** till **Kräv**. Du kan också ange andra regler som **Minsta längd på lösenord**, **Krav på lösenordstyp** och **Antal inte alfanumeriska tecken i lösenordet**. Välj **OK** när du har konfigurerat klart principen.
-7. Gå tillbaka till bladet **Skapa princip** och välj **Skapa**.
+7. Gå tillbaka till fönstret **Skapa princip** och välj **Skapa**.
 8. När principen har skapats väljer du **Tilldelningar** för att tilldela den till testgruppen. Välj testgruppen, som nu bör ha testanvändaren, och tilldela sedan principen till den gruppen genom att klicka på **Spara**.
 9. Vänta några minuter. Den registrerade enheten ska nu meddela dig om att den behöver ett uppdaterat lösenord för att kunna fortsätta vara kompatibel med företagets princip för efterlevnad. Du kan också manuellt kontrollera det här i **företagsportalappen för iOS** genom att trycka på enhetsnamnet och sedan på knappen **Synkronisera**.
 

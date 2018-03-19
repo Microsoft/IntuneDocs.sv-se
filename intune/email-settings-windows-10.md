@@ -1,34 +1,33 @@
 ---
-title: "E-postinställningar för Windows 10-enheter i Intune"
-titleSuffix: Azure portal
-description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera e-postanslutningar på Windows 10-enheter.\""
+title: "E-postinställningar i Microsoft Intune för enheter som kör Windows 10"
+titleSuffix: 
+description: "Läs om Microsoft Intune-inställningar som du kan använda för att konfigurera e-postinställningar på enheter som kör Windows 10."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 02/15/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 2ffafbd0-4b5d-4c86-a46b-611f9b7a58e5
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3ea7974600daccb8308cd558ccb365c2f5e8bff
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: b02579895123995f9b4205d64e9bf67ce04de746
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="email-profile-settings-for-windows-10-devices-in-microsoft-intune"></a>E-postprofilinställningar för Windows 10-enheter i Microsoft Intune
+# <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-10"></a>E-postprofilinställningar i Microsoft Intune för enheter som kör Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+Den här artikeln visar de e-postprofilinställningar som du kan konfigurera för enheter som kör Windows 10.
 
 
 - **E-postserver** – Värdnamnet för din Exchange-server.
-- **Kontonamn** – Visningsnamnet för e-postkontot som kommer att visas på användarnas enheter.
+- **Kontonamn** – Visningsnamnet för e-postkontot som det visas för användare på deras enheter.
 - **Användarnamnattribut för AAD** – Det här är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamn för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. **user1@contoso.com** eller **Användarens huvudnamn (UPN)** som **user1** eller **user1@contoso.com**.
 - **E-postadressattribut från AAD** – Hur e-postadressen för användaren på varje enhet ska skapas. Välj **Primär SMTP-adress** om du vill använda den primära SMTP-adressen för att logga in på Exchange eller använd **UPN (User Principal Name)** om du vill använda det fullständiga huvudnamnet som e-postadress.
 

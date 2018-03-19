@@ -1,12 +1,12 @@
 ---
 title: "Ange användarvillkor i Microsoft Intune"
-titlesuffix: Azure portal
-description: "Ange allmänna villkor som användarna ser i företagsportalen för Intune. "
+titlesuffix: 
+description: "Ange allmänna villkor som användarna ser i företagsportalen för Intune."
 keywords: 
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: df7f91cbdcbafb785d0c4cfb1612d6c2f9e5581e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8fb386948d14fcbd26cffcd1b531b6ae61e9d669
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="ensure-users-accept-company-terms-for-access"></a>Se till att användarna godkänner företagets åtkomstvillkor
+# <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Hantera företagets villkor för användaråtkomst
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -32,16 +32,18 @@ Du kan skapa flera uppsättningar med villkor och tilldela dem till olika använ
 ## <a name="create-terms-and-conditions"></a>Skapa allmänna villkor
 Slutför stegen nedan för att skapa allmänna villkor. Namn och beskrivning som visas är för administrativa syften, medan villkorsegenskaperna visas för användarna i företagsportalen.
 
-1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Villkor**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I **Intune-fönstret** väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
 2. Välj **Skapa**.
 ![Skärmbild av Azure-portalen med knappen Skapa för villkor](media/terms-create-terms.png)
-3. På det expanderade bladet anger du följande information:
+3. I det expanderade fönstret anger du följande information:
 
    - **Visningsnamn**: Namnet på villkoren i Azure-portalen. Användarna ser inte det här namnet.
 
    - **Beskrivning**: Valfri information som hjälper dig att identifiera den här uppsättningen med villkor i Azure-portalen.
 
-4. Välj pilen bredvid Definiera villkor för användning för att öppna bladet Villkor och ange därefter följande information:
+4. Välj pilen bredvid **Definiera villkor för användning** för att öppna fönstret Villkor och ange därefter följande information:
 
    ![Skärmbild för att godkänna slutanvändarvillkor med en sammanfattning av villkoren](./media/terms-summary-create.png)
 
@@ -65,25 +67,26 @@ I följande exempel visas användarvillkoren i administratörskonsolen och före
 Du kan tilldela villkor till grupper av användare som måste godkänna dem innan de kan använda företagsportalen.
 
 1. I Azure-portalen väljer du **Enhetsregistrering** och sedan **Villkor**.
-2. Välj de allmänna villkor som du vill tilldela i listan med villkor. Välj sedan **Tilldelade grupper**.
-![Skärmbild av Azure-portalens blad Tilldela grupp, som visar knappen Välj grupp och knappen Välj för tilldelning av villkoren](media/terms-assign-groups.png)
-3. Klicka på knappen **Välj grupp**. På bladet **Välj grupper** väljer du de grupper som du vill tilldela villkoren till. Klicka sedan på **Välj**. Dynamiska grupper kan inte tilldelas användarvillkor.
-4. På bladet **Tilldelade grupper** klickar du på **Spara**.  Villkoren har nu tilldelats till användarna i de valda grupperna. Användarna kommer att uppmanas att godkänna villkoren nästa gång de öppnar företagsportalen. De användarvillkoren behöver bara godkännas en gång. Användare med flera enheter behöver inte godkänna på varje enhet.
+2. Välj de allmänna villkor som du vill tilldela i listan med villkor. Välj sedan **Hantera** > **Tilldelningar**.
+![Skärmbild av Azure-portalens fönster Tilldela grupp, som visar knappen Välj grupp och knappen Välj för tilldelning av villkoren](media/terms-assign-groups.png)
+3. Klicka på **Välj grupper att ta med** och välj de grupper du vill tilldela villkoren till och klicka på **Välj**. Dynamiska grupper kan inte tilldelas användarvillkor.
+4. I fönstret **Tilldelade grupper** klickar du på **Spara**.  Villkoren har nu tilldelats till användarna i de valda grupperna. Användarna kommer att uppmanas att godkänna villkoren nästa gång de öppnar företagsportalen. De användarvillkoren behöver bara godkännas en gång. Användare med flera enheter behöver inte godkänna på varje enhet.
 
 
 ## <a name="monitor-terms-and-conditions"></a>Övervaka användarvillkor
 
-1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. På Intune-bladet väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
-2. I listan med allmänna villkor väljer du de villkor som du vill se godkännanden för. Välj sedan **Godkännandestatus**.
+1. På Azure-portalen väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune**. 
+1. I Intune-fönstret väljer du **Enhetsregistrering** och sedan **Allmänna villkor**.
+2. I listan med allmänna villkor väljer du de villkor som du vill se godkännanden för. Välj sedan **Rapportering av godkännande**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Arbeta med flera versioner av användarvillkor
 Du kan redigera dina villkor och hantera deras versioner. Vi rekommenderar att du ökar versionsnumret och kräver godkännande varje gång du gör större ändringar i dina allmänna villkor. Behåll det nuvarande versionsnumret om du exempelvis bara korrigerar stavfel eller ändrar formateringen.
 
-1. På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. På Azure-portalen väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune**.
 
-2. På Intune-bladet väljer du **Enhetsregistrering**, **Allmänna villkor**, de villkor som du vill ändra och sedan **Egenskaper**.
+2. I Intune-fönstret väljer du **Enhetsregistrering**, **Allmänna villkor**, de villkor som du vill ändra och sedan **Egenskaper**.
 
-4. På bladet **Egenskaper** väljer du **Allmänna villkor**. Ändra sedan **Rubrik**, **Sammanfattning av villkoren** och **Allmänna villkor** efter behov. Om ändringarna gör det nödvändigt att användarna måste godkänna de nya villkoren igen, klickar du på **Kräv att användarna godkänner på nytt och öka versionsnumret till**
+4. I fönstret **Egenskaper** väljer du **Allmänna villkor**. Ändra sedan **Rubrik**, **Sammanfattning av villkoren** och **Allmänna villkor** efter behov. Om ändringarna gör det nödvändigt att användarna måste godkänna de nya villkoren igen, klickar du på **Kräv att användarna godkänner på nytt och öka versionsnumret till**
 
 4.  Välj **OK** och välj sedan **Spara**.
 

@@ -1,12 +1,12 @@
 ---
-title: "Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online"
-titlesuffix: Azure portal
-description: "Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online via Intune Azure Portal"
+title: "Övervaka villkorlig åtkomst i Exchange i Microsoft Intune"
+titlesuffix: 
+description: "Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online via Intune Azure Portal."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 04/24/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2025bbb008be090420ebb3778fc37a0b1790608b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 932dfe32c6df5741615d9db9f303aaee7785d3a3
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
@@ -36,23 +36,23 @@ Från och med version 1704 av Intune kan administratörer se den rapportinformat
 
 2.  När du har loggat in visas **Azure-instrumentpanelen**.
 
-3.  Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+3.  Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
 4.  Välj **Intune**. **Intune-instrumentpanelen** visas.
 
 5.  Välj först **Villkorlig åtkomst** och sedan **Översikt**.
 
-6.  Visa efterlevnadsrapportering för villkorlig åtkomst genom att välja något av de tre områdena (**Blockerad**, **Karantän** eller **Tillåten**) i diagrammet.
+6.  Visa efterlevnadsrapportering för villkorlig åtkomst genom att välja något av de tre områdena (**Tillåten**, **Karantän** eller **Blockerad**) i diagrammet.
 
-    ![Instrumentpanel för villkorlig åtkomst](./media/CA-reporting-intune-1.png)
+    ![Bild av instrumentpanelen för villkorlig åtkomst](./media/CA-reporting-intune-1.png)
 
 När du har valt ett av tre områden kan du se mer information om vilka enheter som tillåts, blockeras eller har satts i karantän.
 
-Du kan även öka detaljnivån för enskilda enheter om du vill se mer information om dem. Den enhet som valts på bilden nedan är t.ex. blockerad. I Intune kan du välja att ta bort företagsdata från bladet för efterlevnadsrapportering för villkorlig åtkomst.
+Du kan även öka detaljnivån för enskilda enheter om du vill se mer information om dem. Den enhet som valts på följande bild är t.ex. blockerad. I Intune kan du välja att ta bort företagsdata från fönstret för efterlevnadsrapportering för villkorlig åtkomst.
 
-![Detaljerad rapportering om villkorlig åtkomst för enhet](./media/CA-reporting-intune-3.png)
+![Bild på detaljerad rapportering om villkorlig åtkomst för enhet](./media/CA-reporting-intune-3.png)
 
-På bladet med enhetsinformation visas mer information:
+I fönstret med enhetsinformation visas mer information:
 
 -   **Översikt:** Här ser du följande enhetsegenskaper: OS-version, enhetsmodell, ägarskap, serienummer, tillverkare, telefonnummer och senaste tillfället då enheten checkades in.
 

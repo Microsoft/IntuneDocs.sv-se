@@ -1,12 +1,12 @@
 ---
-title: "Skapa en efterlevnadsprincip för macOS"
-titleSuffix: Azure portal
-description: "Lär dig hur du skapar en efterlevnadsprincip för macOS-enheter."
+title: Skapa en macOS-enhetsefterlevnadsprincip i Microsoft Intune
+titleSuffix: 
+description: "Skapa en enhetsefterlevnadsprincip i Microsoft Intune för macOS-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 2/13/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,16 +14,18 @@ ms.technology:
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a5f1caeddbd3d171092ef59cfb092404b31154f2
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Skapa en enhetsefterlevnadsprincip för macOS-enheter med Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+En Intune-enhetsefterlevnadsprincip för macOS anger de regler och inställningar som macOS-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar principer för enhetsefterlevnad för varje plattform i Intune Azure-portalen.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -108,7 +110,7 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 2. När du har loggat in visas **Azure-instrumentpanelen**.
 
-3. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+3. Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
 
 4. Välj **Intune**. **Intune-instrumentpanelen** visas.
 
@@ -118,7 +120,7 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 7. Skriv ett namn, ge en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
 
-8. Bladet **macOS efterlevnadsprincip** öppnas. Välj följande kategorier för enhetsefterlevnadsinställningar: **Säkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskap**.
+8. Fönstret **Kompatibilitetsprincip för Mac** öppnas. Välj följande kategorier för enhetsefterlevnadsinställningar: **Systemsäkerhet**, **Enhetens hälsotillstånd** och **Egenskaper för enhet**.
 
 10. När du har valt dina inställningar, väljer du **OK** under varje inställningskategori.
 
@@ -126,15 +128,15 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnadsprinciper**.
+Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad - Principer**.
 
-1. Välj den efterlevnadsprincip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+1. Välj den efterlevnadsprincip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
 
-2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**.
+2. Öppna fönstret som visar säkerhetsgrupper för Azure AD genom att välja **Valda grupper**.
 
-3. Välj **Välj** och sedan **spara** för att tilldela efterlevnadsprinciperna för enheter till Azure AD-säkerhetsgrupper.
+3. Välj **Spara** för att tilldela efterlevnadsprinciperna för enheter till Azure AD-säkerhetsgrupper.
 
-4. När du har tilldelat efterlevnadsprinciperna för enheter till dina grupper kan du stänga bladet **Tilldelningar**.
+4. När du har tilldelat efterlevnadsprinciperna för enheter till dina grupper kan du stänga fönstret **Tilldelningar**.
 
     > [!TIP]
     > Enheternas efterlevnad kontrolleras som standard var åttonde timme men användare kan forcera processen med Intune-företagsportalappen.

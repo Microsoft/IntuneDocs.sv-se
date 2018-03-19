@@ -1,12 +1,12 @@
 ---
-title: "Intune Endpoint Protection-inställningar för Windows 10"
-titlesuffix: Azure portal
-description: "Läs om Intune-inställningarna du kan använda för att konfigurera Endpoint Protection-inställningar, för exempelvis BitLocker, på Windows 10-enheter.\""
+title: "Microsoft Intune Endpoint Protection-inställningar för Windows 10"
+titlesuffix: 
+description: "Läs om Intune-inställningarna du kan använda för att konfigurera Endpoint Protection-inställningar, för exempelvis BitLocker, på Windows 10-enheter."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 01/16/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,34 +15,34 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 35c33fb189187a678efa04d10706fe752d683e17
-ms.sourcegitcommit: 6d69403266dbcb31c879432719798935c94917fa
+ms.openlocfilehash: 02a32f678b40b2b40535984e17b41e0a864d8fdf
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Endpoint Protection-inställningar för Windows 10 och senare i Microsoft Intune
+# <a name="create-endpoint-protection-settings-for-windows-10-and-later-in-microsoft-intune"></a>Skapa Endpoint Protection-inställningar för Windows 10 och senare i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 Med en Endpoint Protection-profil kan du konfigurera säkerhetsfunktioner, t.ex. BitLocker och Windows Defender för Windows 10-enheter.
 
-Använd informationen i det här avsnittet för att lära dig skapa Endpoint Protection-profiler.
+Använd informationen i den här artikeln för att lära dig skapa Endpoint Protection-profiler.
 
 > [!Note]
 > De här inställningarna stöds inte av versionerna Home och Professional av Windows 10.
 
 ## <a name="create-an-endpoint-protection-profile"></a>Skapa en Endpoint Protection-profil
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
+2. På bladet **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
 3. Välj **Skapa profil** på profilbladet.
 4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetens funktionsprofil.
 5. I listrutan **Plattform** väljer du **Windows 10 och senare**.
 6. Välj **Endpoint Protection** i listrutan **Profiltyp**.
-7. Konfigurera de inställningar du vill använda. Informationen i det här avsnittet hjälper dig förstå vad varje inställning gör. Välj **OK** när du är klar.
+7. Konfigurera de inställningar du vill använda. Informationen i den här artikeln hjälper dig förstå vad varje inställning gör. Välj **OK** när du är klar.
 8. Gå tillbaka till bladet **Skapa profil** och välj **Skapa**.
 
 Profilen skapas och visas på bladet med profillistan.
@@ -57,6 +57,7 @@ Application Guard är endast tillgängligt för Windows 10-enheter (64-bitars). 
 - **Skriv ut från virtuell webbläsare** – Tillåt att PDF- och XPS-skrivare, samt lokala skrivare och/eller nätverksskrivare skriver ut innehåll från den virtuella webbläsaren.
 - **Samla in loggar** – Samla in loggar för händelser som inträffar i en Application Guard-webbläsarsession.
 - **Behåll användargenererade webbläsardata** – Tillåt att användardata (t.ex. lösenord, favoriter och cookies) som skapas under en virtuell Application Guard-webbläsarsession sparas.
+- **Grafikacceleration** – Läs in grafikintensiva webbplatser snabbare när du arbetar i en virtuell Application Guard-webbläsarsession genom att aktivera åtkomst till en virtuell grafikprocessor.
 
 
 ## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg

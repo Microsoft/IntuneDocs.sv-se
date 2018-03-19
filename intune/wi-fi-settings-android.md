@@ -1,36 +1,36 @@
 ---
-title: "Wi-Fi-inställningar i Intune för Android-enheter"
-titleSuffix: Azure portal
-description: "Lär dig om hur du konfigurerar Wi-Fi-inställningarna för Intune på enheter med Android och Android for Work.”"
+title: "Konfigurera Microsoft Intunes WiFi-inställningar för Android-enheter"
+titleSuffix: 
+description: "Lär dig mer om Wi-Fi-konfigurationsinställningarna för enheter med Android och Android for Work."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 103e17a4-2993-4359-b340-73e2acf4cf7d
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a20ebf026850f28888cd63eb43396a12430bb3cd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d327c2d3cadf441f74e35af86b19438159225771
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="wi-fi-settings-for-android-and-android-for-work-devices-in-microsoft-intune"></a>Wi-Fi-inställningar för Android och Android for Work-enheter i Microsoft Intune
+# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurera Wi-Fi-inställningar i Microsoft Intune för enheter som kör Android och Android for Work  
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+I den här artikeln beskrivs de WiFi-inställningar som du kan konfigurera i Microsoft Intune för enheter som kör Android och Android for Work.
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Wi-Fi-inställningar för bas- och företagsprofiler
 
 Följande Wi-Fi-inställningar är tillgängliga för enheter med Android och Android for Work:
 
 - **Nätverksnamn** – Ange ett namn för den här Wi-Fi-anslutningen. Detta är det namn som användarna ser när de söker i listan över tillgängliga anslutningar på sina enheter.
-- **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ska ansluta till. Användare ser dock bara det nätverksnamn som du skapade ovan när de väljer anslutningen.
+- **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ska ansluta till. Användare ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
 - **Anslut automatiskt** – Gör att enheten ansluter när den är inom intervallet för det här nätverket.
 - **Dolt nätverk** – Förhindrar att det här nätverket visas i listan över tillgängliga nätverk på enheten.
 
@@ -50,7 +50,7 @@ Följande Wi-Fi-inställningar är tillgängliga för enheter med Android och An
 
 |Inställningsnamn|Mer information|Använd när|
 |-------------|---------------|-----------|
-|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på slutanvändares enheter när de ansluter till det här Wi-Fi-nätverket.|EAP-typen är **EAP-TLS** eller **EAP-TTLS**|
+|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användares enheter när de ansluter till det här Wi-Fi-nätverket.|EAP-typen är **EAP-TLS** eller **EAP-TTLS**|
 |**Rotcertifikat för serververifiering**|Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. |EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**|
 |**Identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|EAP-typen är **PEAP**|
 

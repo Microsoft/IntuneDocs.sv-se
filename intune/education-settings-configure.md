@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b50c35dc805d033bd905105c22c4ec287dfaa1b7
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 18987c65c7ad0443c8bf3dc268284306cf64080d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-windows-10-education-settings-in-microsoft-intune"></a>Så här konfigurerar du utbildningsinställningar för Windows 10 i Microsoft Intune
 
@@ -31,22 +31,23 @@ Mer information om appen Gör ett prov finns i avsnittet om hur du [gör prov i 
 
 ## <a name="create-a-device-profile-containing-education-profile-settings"></a>Skapa en enhetsprofil som innehåller inställningarna för utbildningsprofilen
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilbladet.
-4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+3. I fönstret Profiler väljer du **Skapa profil**.
+4. I fönstret **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
 5. I listrutan **Plattform** väljer du **Windows 10 och senare**.
 6. Välj **Utbildningsprofil** i listrutan **Profiltyp**. 
-7. Välj Inställningar > Konfigurera, klicka på bladet **Gör ett prov** och konfigurera följande:
+7. Välj **Inställningar > Konfigurera**, klicka på fönstret **Gör ett prov** och konfigurera följande:
+    - **Kontotyp** – Välj en kontotyp från listrutan.
     - **Kontoanvändarnamn** – Ange användarnamnet för det konto som används till Gör ett prov. Detta kan vara ett domänkonto, ett konto i Azure Active Directory (AAD) eller ett lokalt datorkonto.
     - **URL för begränsad provmiljö** – Ange URL:en till det prov som du vill att användarna ska göra. Mer information finns i dokumentationen för Gör ett prov.
     - **Skärmbild** – Ange om du vill kunna övervaka skärmaktiviteten medan användarna gör provet.
     - **Textförslag** – Tillåt eller blockera textförslag medan användarna gör ett prov.
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. När du är klar går du tillbaka till fönstret **Skapa profil** och trycker på **Skapa**.
 
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="next-steps"></a>Nästa steg
 

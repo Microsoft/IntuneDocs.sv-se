@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: E9810BEB-000A-4DFB-B5C7-A22A92082B22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 13aa627515b74d3c9fe6d091c44dd5147bd786bd
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 01b26a6165db6e3016d2b3d7063a4bca60ce0266
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Så här skapar du en princip för enhetsefterlevnad om du vill aktivera Google Play-skydd
 
@@ -29,14 +29,15 @@ Efterlevnadsprincipen som kräver de här inställningarna kan sedan riktas mot 
 
 ## <a name="create-a-compliance-policy"></a>Skapa en efterlevnadsprincip
 
-1. Logga in på Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj **Enhetsefterlevnad** i gruppen **Hantera**. 
 3. Välj **Principer** och välj **Skapa princip**.
 4. Ange **Namn** och **Beskrivning** för principen.
 5. Välj **Android** som plattform.
 6. Välj **Inställningar** > **Enhetens hälsotillstånd**.
 7. Konfigurera inställningarna för **Google Play-skydd**.
-8. När du har angett inställningarna för Google Play-skydd ska du ange inställningarna för **Säkerhet** och **Enhetsegenskaper**. När du är klar väljer du **OK**.
+8. När du har angett inställningarna för Google Play-skydd ska du ange inställningarna för **Systemsäkerhet** och **Enhetsegenskaper**. När du är klar väljer du **OK**.
 
 ## <a name="configure-the-google-play-protect-settings"></a>Konfigurera inställningarna för Google Play-skydd
 

@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fc1a30a86ae924777b435c67e67f926819753d67
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 9de6f0e2f7c74e7aec45c27f0fa20189b26c5e22
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="intune-airplay-settings-for-ios-devices"></a>AirPlay-inställningar för iOS-enheter i Intune
 
@@ -33,19 +33,20 @@ Med den här funktionen kan du:
 
 ## <a name="get-started"></a>Kom igång
 
-1. På bladet **Enhetsfunktioner** väljer du **AirPlay**.
-2. På bladet **AirPlay** väljer du någon eller båda av följande åtgärder:
+1. Från [Intune i Azure Portal](https://portal.azure.com) går du till [**Enhetsfunktioner** i enhetens konfigurationsområde](device-features-configure.md). 
+1. I fönstret **Enhetsfunktioner** väljer du **AirPlay**.
+2. I fönstret **AirPlay** väljer du någon eller båda av följande åtgärder:
 
 ## <a name="configure-a-device-and-password-list"></a>Konfigurera en lista med enheter och lösenord
 
-1. På bladet **Lösenord** anger du **Enhetsnamn** och **Lösenord** för en Airplay-enhet, till exempel **Contoso Apple TV**.
+1. I fönstret **Lösenord** anger du **Enhetsnamn** och **Lösenord** för en Airplay-enhet, till exempel **Contoso Apple TV**.
 2. När du har angett information om enheten, klickar du på **Lägg till**. Enheten kommer att visas i listan **Enhetsnamn**.
 3. Fortsätt lägga till enheter. Välj **OK** när du är klar.
 
 
 ## <a name="configure-allowed-destinations"></a>Konfigurera tillåtna mål
 
-1. På bladet **Tillåtna mål (endast övervakade)** anger du **Enhets-ID** för en Airplay-enhet, till exempel 52:46:CD:51:83:4C.
+1. I fönstret **Tillåtna mål (endast övervakade)** anger du **Enhets-ID** för en Airplay-enhet, till exempel 52:46:CD:51:83:4C.
 2. När du har angett enhets-ID klickar du på **Lägg till**. Enhetens ID kommer att visas i listan **Enhets-ID**.
 3. Fortsätt lägga till enheter. Välj **OK** när du är klar.
 
