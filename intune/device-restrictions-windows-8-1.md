@@ -1,29 +1,30 @@
 ---
-title: "Inställningar av begränsningar i Intune-enheter för Windows Phone 8.1"
-titleSuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på Windows 8.1-enheter.”"
+title: "Inställningar av enhetsbegränsningar för enheter som kör Windows 8.1 i Microsoft Intune"
+titleSuffix: 
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: fe5785e9-8d35-4ad7-95e8-d50f8d87154a
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c96340255e9b71694278b5a396d907a6212541d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8cfaad3c35a0035546e5ebb7a55b9978da8025d8
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-81-and-later-device-restriction-settings-in-microsoft-intune"></a>Inställningar för enhetsbegränsningar för Windows 8.1 och senare i Microsoft Intune
+# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Microsoft Intune i Windows 8.1 och senare
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+I den här artikeln visas inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 8.1 och senare.
+
 
 ## <a name="general"></a>Allmänt
 

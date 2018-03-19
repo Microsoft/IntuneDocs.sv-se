@@ -1,12 +1,12 @@
 ---
-title: "Villkorlig åtkomst med Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du anger de villkor som användare och enheter måste uppfylla för att få åtkomst till företagets resurser i Microsoft Intune.\""
+title: "Villkorlig åtkomst med Microsoft Intune"
+titlesuffix: 
+description: "Lär dig hur du anger de villkor som användare, enheter och appar måste uppfylla för att få åtkomst till företagets resurser i Microsoft Intune."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 05/23/2017
+ms.date: 03/06/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +14,17 @@ ms.technology:
 ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4d3d84f8010b72b9595f3ff54924d6c3fe245702
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 08589f3d9186699ce5241579cc1879be2d442e3d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="whats-conditional-access"></a>Vad är villkorlig åtkomst?
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-I det här avsnittet beskrivs villkorlig åtkomst så som den fungerar i Enterprise Mobility + Security (EMS). Därefter följer några vanliga scenarion för villkorlig åtkomst i Intune.
+Villkorlig åtkomst syftar på olika sätt du kan styra enheterna och apparna som tillåts ansluta till dina e-post- och företagsresurser. I det här avsnittet får du veta mer som enhetsbaserad och appbaserad villkorlig åtkomst och hittar vanliga scenarier för att använda villkorlig åtkomst med Intune.
 
 Villkorlig åtkomst i Enterprise Mobility + Security (EMS) är inte någon fristående produkt, utan en lösning som förekommer i alla tjänster och produkter som ingår i EMS. Den ger detaljerad åtkomstkontroll så att företagets data skyddas, samtidigt den gör det möjligt för användarna att utföra sitt arbete på bästa sätt från vilken enhet som helst och oavsett var de befinner sig.
 

@@ -1,25 +1,19 @@
----
-title: "Vanliga frågor och svar om MAM och appskydd"
-description: "Den här artikeln ger svar på några vanliga frågor om Intune mobile application management (MAM) och Intune appskydd."
-keywords: 
-author: Erikre
-ms.author: erikre
-manager: angrobe
-ms.date: 02/06/2018
-ms.topic: article
-ms.prod: 
-ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
-ms.reviewer: erikre
-ms.suite: ems
+--
+# <a name="required-metadata"></a>nödvändiga metadata
+
+titel: Vanliga frågor om MAM och beskrivning av appskydd: Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Application Management) och appskyddet i Intune.
+keywords: author: Erikre ms.author: erikre manager: angrobe ms.date: 02/28/2018 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
+
+# <a name="optional-metadata"></a>valfria metadata
+
+#<a name="audience"></a>målgrupp:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: erikre ms.suite: ems
+#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.openlocfilehash: 23ab21e21ff2ffd471523f8132acffd7545358f0
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
-ms.translationtype: HT
-ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+
 ---
+
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
 Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Application Management) och appskyddet i Intune.
@@ -139,15 +133,22 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 **Finns det ett säkert sätt att öppna webblänkar från hanterade appar?** Ja! IT-administratören kan distribuera och ange appskyddsprincip för [Intune Managed Browser-appen](app-configuration-managed-browser.md), en webbläsare som har utvecklats av Microsoft Intune som enkelt kan hanteras med Intune. IT-administratören kan kräva att alla webblänkar i Intune-hanterade appar ska öppnas med Managed Browser-appen.
 
-
 ## <a name="app-experience-on-android"></a>App-upplevelse på Android
 
 **Varför behövs företagsportalappen för att Intunes appskydd ska fungera på Android-enheter?** Många av appskyddets funktioner är inbyggda i företagsportalappen.
  Enhetsregistrering _krävs inte_, även om företagsportalappen alltid krävs. För MAM-WE behöver slutanvändaren bara ha företagsportalappen installerad på enheten.
 
+**Hur fungerar åtkomstinställningar till flera Intune-appar som är konfigurerade för samma uppsättning appar och användare med Android?** Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får en blockering företräde, och därefter en varning som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta inställning för Android-korrigeringsprogramversionen. Den varnar en användare för att göra en uppdatering efter den lägsta inställningen för Android-korrigeringsprogramversionen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar den äldsta Android-korrigeringsprogramversionen till 2018-03-01 och den äldsta Android-korrigeringsprogramversionen (endast varning) till 2018-02-01, medan enheten som försöker få åtkomst till appen hade korrigeringsprogramversionen 2018-01-01, blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta Android-korrigeringsprogramversionen. Det leder till blockerad åtkomst. 
+
+När du hanterar olika typer av inställningar får ett krav på appversion företräde, följt av kravet på Android-operativsystemets version och kravet på Android-korrigeringsprogrammets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning.
+
 ## <a name="app-experience-on-ios"></a>App-upplevelse på iOS
 
 **Jag kan använda delningtillägg i iOS för att öppna arbets- eller skoldata i ohanterade appar, även om dataöverföringsprincipen är inställd på "endast hanterade appar" eller "inga appar." Kan inte detta läcka data?** Intunes appskyddsprincip kan inte styra iOS resurstillägg utan att hantera enheten. Därför krypterar Intune  _**"företagets" data innan den delas utanför appen**_. Du kan verifiera detta genom att försöka öppna en "företags"-fil utanför den hanterade appen. Filen ska vara krypterad och inte kunna öppnas utanför den hanterade appen.
+
+**Hur fungerar åtkomstinställningar till flera Intune-appar som är konfigurerade för samma uppsättning appar och användare med iOS?** Appskyddsprinciper i Intune för åtkomst tillämpas i en viss ordning på slutanvändarenheter när de försöker få åtkomst till en riktad app från ett företagskonto. Vanligtvis får rensningar företräde, följt av blockeringar och därefter varningar som kan avfärdas. Exempel: Om det är tillämpligt för den specifika användaren/appen används en lägsta iOS-operativsysteminställning som varnar en användare för att göra en uppdatering av sin iOS-version efter den lägsta iOS-operativsysteminställningen som blockerar användarens åtkomst. I scenariot där en IT-administratör konfigurerar det äldsta iOS-operativsystemet till 11.0.0.0 och det äldsta iOS-operativsystemet (endast varning) till 11.1.0.0, medan enheten som försöker få åtkomst till appen hade iOS-version 10 blockeras slutanvändaren baserat på den mer restriktiva inställningen för den lägsta iOS-operativsystemversionen. Det leder till blockerad åtkomst.
+
+När du hanterar olika typer av inställningar får ett krav på Intune App SDK-version företräde, följt av kravet på appversion, och därefter kravet på iOS-operativsystemets version. Sedan kontrolleras alla varningar för alla typer av inställningar i samma ordning. Vi rekommenderar att du endast konfigurerar Intune App SDK-versionskraven vid vägledning från Intune-produktteamet för väsentliga blockeringsscenarier.
 
 ## <a name="see-also"></a>Se även
 - [Implementera din Intune plan](planning-guide-onboarding.md)

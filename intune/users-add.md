@@ -1,11 +1,12 @@
 ---
 title: "Lägg till användare och tilldela behörigheter"
-description: "Synkronisera lokala användare med Azure AD och bevilja administratörsbehörighet för din Intune-prenumeration"
+titlesuffix: Microsoft Intune
+description: "Synkronisera lokala användare med Azure AD och bevilja administratörsbehörighet för din Intune-prenumeration."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/28/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,15 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8ce84f51dcfb61ec16c78a6216135c2a7639657f
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: f8fe6d668885345f4bd710e4b96b8d7855f12632
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="add-users-and-give-administrative-permission-to-intune"></a>Lägg till användare och ge administrativ behörighet till Intune
+# <a name="add-users-and-grant-administrative-permission-to-intune"></a>Lägga till användare och ge administrativ behörighet till Intune
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
-
-Det här avsnittet beskriver hur administratörer kan lägga till användare i Intune och vilka administrativa behörigheter som är tillgängliga i Intune-tjänsten.
 
 Som administratör kan du lägga till användare direkt eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan också ge användarna ytterligare behörigheter, inklusive behörigheter som *global administratör* och *tjänstadministratör*.
 
@@ -36,7 +35,7 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
 2. Välj **Admin** på Office 365-menyn.
 3. Välj **Lägg till en användare** i administrationscentret.
 
-  ![Skärmbild av administrationscenter för Office 365](media/office-add-user.png)
+  ![Skärmbild av avsnittet Lägg till användare](media/office-add-user.png)
 
 4. Ange följande användarinformation:
   - **Förnamn**
@@ -47,19 +46,19 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
   - **Kontaktinformation** (valfritt)
   - **Lösenord** –Generera automatiskt eller ange manuellt
 
-     ![Skärmbild av administrationscenter för Office 365](media/office-add-user-details.png)
+     ![Skärmbild av avsnittet Ny användare](media/office-add-user-details.png)
 
 5. Tilldela en Intune-licens. Välj **Produktlicenser** och välj produktlicensen. En licens som omfattar Intune krävs.
 6. Välj **Lägg till** för att skapa den nya användaren.
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Lägg till Intune-användare i Azure-portalen
-1. Logga in på [Azure-portalen](https://portal.azure.com) och gå till **Fler tjänster** > **Övervakning + hantering** > **Intune**. Du kan också *söka efter resurser* för **Intune**.
-2. Välj **Användare**.
+1. Logga in på [Azure-portalen](https://portal.azure.com) och gå till **Alla tjänster** > **Övervakning + hantering** > **Intune**. Du kan också *söka efter resurser* för **Intune**.
+2. Välj **Användare** > **Alla användare**.
 3. Välj **Ny användare** i administrationscentret.
-  ![Skärmbild av administrationscenter för Office 365](media/intune-add-user.png)
+  ![Skärmbild av Lägg till ny användare](media/intune-add-user.png)
 4. Ange följande användarinformation:
   - **Namn**
-  - **Användarnamn** –Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter för Office 365](media/intune-add-user-info.png) Fortsätt genom att välja **OK**.
+  - **Användarnamn** – Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter](media/intune-add-user-info.png) Fortsätt genom att välja **OK**.
 5. Om du vill kan du ange följande användaregenskaper:
   - **Profil** – Arbetsrelaterad information inklusive **befattning** och **avdelning**
   -  **Grupper** – Välj de grupper du vill lägga till för användaren
@@ -67,7 +66,7 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
 
   Välj **Skapa** för att lägga till den nya användaren i Intune.
 6. Välj **Profil** och sedan en **Användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
-    ![Skärmbild av administrationscenter för Office 365](media/intune-add-user-loc.png)
+    ![Skärmbild av Användningsplats](media/intune-add-user-loc.png)
 7. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens till den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
 
 ## <a name="grant-admin-permissions"></a>Bevilja administratörsbehörigheter
@@ -78,17 +77,20 @@ När du har lagt till användare i Intune-prenumerationen rekommenderar vi att d
 1. Logga in på [Office 365-portalen](https://www.office.com/signin) med ett konto som global administratör.
 2. Välj **Admin** på Office 365-menyn.
 3. I administrationscentret väljer du **Aktiva användare** och väljer sedan den användare som ska få administratörsbehörighet.
+
 4. I kolumnen **Roller** väljer du **Redigera**.
-  ![Skärmbild av skärmen för att tilldela roller i Office 365](./media/office-assign-roles-open.png)
+
+    ![Skärmbild av Adminstratörsanvändare](./media/office-assign-roles-open.png)
+
 5. Välj den administratörsbehörighet som ska beviljas från listan över tillgängliga roller.
-![Bild av rolltilldelning i Office 365-portalen.](./media/office-assign-roles.png)
+![Skärmbild av tilldelning av roller](./media/office-assign-roles.png)
 6. Välj **Spara**.
 
 ### <a name="give-admin-permissions-in-the-azure-portal"></a>Ge administratörsbehörigheter i Azure-portalen
 1. Logga in på [Azure-portalen](https://www.office.com/signin) med ett globalt administratörskonto.
 2. I Azure-portalen väljer du **Användare** och sedan den användare som du vill ge administratörsbehörigheter.
 3. Välj **Katalogroll** och välj sedan behörigheten.
-  ![Skärmbild](./media/add-intune-directory-role.png)
+  ![Skärmbild av Katalogroll](./media/add-intune-directory-role.png)
 4. Välj **Spara**.
 
 ### <a name="types-of-administrators"></a>Administratörstyper
@@ -102,7 +104,7 @@ Tilldela användare en eller flera administratörsbehörigheter. Dessa behörigh
 - **Användaradministratör** – (Office 365 och Intune) Återställer lösenord, övervakar tjänstens hälsostatus, lägger till och tar bort användarkonton och hanterar tjänstförfrågningar. Administratören för användarhantering kan inte ta bort en global administratör, skapa andra administratörsroller eller återställa lösenord för andra administratörer.
 - **Intune-tjänstadministratör** – Alla globala administratörsbehörigheter för Intune förutom behörighet att skapa administratörer med alternativ för **Katalogroll**.
 
-Det konto som du använder för att skapa Microsoft Intune-prenumerationen är en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. Även om en administratör inte behöver en Intune-licens för att få åtkomst till Intune i Azure Portal så krävs en Intune-licens för att kunna utföra vissa hanteringsuppgifter, som till exempel att konfigurera anslutningsprogrammet för Exchange-tjänsten. 
+Det konto som du använder för att skapa Microsoft Intune-prenumerationen är en global administratör. Du bör inte använda en global administratör för dagliga uppgifter. Även om en administratör inte behöver en Intune-licens för att få åtkomst till Intune i Azure Portal så krävs en Intune-licens för att kunna utföra vissa hanteringsuppgifter, som till exempel att konfigurera anslutningsprogrammet för Exchange-tjänsten.
 
 För att få åtkomst till Office 365-portalen måste ditt konto ha statusen **Sign-in allowed** (Inloggning tillåts). Under **Profil** i Azure-portalen anger du **Blockera inloggning** till **Nej** för att tillåta åtkomst. Denna status skiljer sig från att ha en licens för prenumerationen. Som standard har alla användarkonton statusen **Tillåten**. Användare utan administratörsbehörighet kan använda Office 365-portalen för att återställa lösenord för Intune.
 

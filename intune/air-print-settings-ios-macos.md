@@ -6,7 +6,7 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 07/03/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 712a79fb-14ef-4f6b-aba5-1dfca900afd2
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5f55d05dd39fca02e72535cbbff9afb8d575ed9f
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7a8ef24a9e6946145bf69d279566f3b736e6efa1
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="airprint-settings-for-ios-and-macos-devices"></a>AirPrint-inställningar för iOS- och macOS-enheter
 
@@ -40,8 +40,9 @@ Använd den här metoden för att lägga till AirPrint-information till AirPrint
 
 ## <a name="configure-an-airprint-profile"></a>Konfigurera en AirPrint-profil
 
-1. På bladet **Enhetsfunktioner** väljer du **AirPrint**.
-2. Lägg till ett AirPrint-mål genom att på bladet **AirPrint** ange dess **IP-adress** och **resurssökväg**. Klicka sedan på **Lägg till**.
+1. Från [Intune i Azure Portal](https://portal.azure.com) går du till [**Enhetsfunktioner** i enhetens konfigurationsområde](device-features-configure.md). 
+1. I fönstret **Enhetsfunktioner** väljer du **AirPrint**.
+2. Lägg till ett AirPrint-mål genom att i fönstret **AirPrint** ange dess **IP-adress** och **resurssökväg**. Klicka sedan på **Lägg till**.
 3. Fortsätt lägga till så många mål som du behöver. Välj **OK** när du är klar.
 
 Du kan också importera en lista med skrivare från en fil med kommaavgränsade värden (.csv) eller exportera listan.

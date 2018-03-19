@@ -1,25 +1,25 @@
 ---
-title: "Begränsningsinställningar för Intune-enheter i Windows Holographic for Business"
+title: "Begränsningsinställningar för Microsoft Intune-enheter i Windows Holographic for Business"
 titlesuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på Windows Holographic for Business-enheter.”"
+description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på enheter som kör Windows Holographic for Business-enheter."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: angrobe
-ms.date: 1/19/2018
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 300ddb15f2d7b8f2fc6ab4a0e9e32852e0604e0a
-ms.sourcegitcommit: 93622d740cbd12043eedc25a9699cc4256e23e7e
+ms.openlocfilehash: 10bb5a2eac9e72ba5b09a9a6f02932e872328c75
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-holographic-for-business-device-restriction-settings-in-microsoft-intune"></a>Inställningar för begränsningar för Windows Holographic for Business-enheter i Microsoft Intune
+# <a name="microsoft-intune-windows-holographic-for-business-device-restriction-settings"></a>Inställningar för begränsningar för Windows Holographic for Business-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -41,19 +41,18 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 
 ## <a name="app-store"></a>Appbutik
 
--   **Appbutik** – Aktivera eller blockera användning av appbutiken på enheter.
 -   **Uppdatera appar automatiskt från Store** – Appar som installeras från Microsoft Store uppdateras automatiskt.
 -   **Installation av betrodd app** – Appar som signeras med ett betrott certifikat läses in separat.
 -   **Lås upp via utvecklare** – Tillåter Windows utvecklarinställningar, till exempel att separat inlästa appar ska kunna ändras av användaren.
 
-## <a name="edge-browser"></a>Edge-webbläsare
+## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
 -   **Microsoft Edge-webbläsare** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
--   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Edge.
-- **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
+- **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 
 ## <a name="windows-defender-smart-screen"></a>Windows Defender Smart Screen
 

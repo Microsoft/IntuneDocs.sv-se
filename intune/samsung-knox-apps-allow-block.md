@@ -1,31 +1,29 @@
 ---
-title: "Intune-principer för att tillåta/blockera appar för Samsung Knox"
-titlesuffix: Azure portal
-description: "Skapa en anpassad profil för att tillåta och blockera appar för Samsung Knox Standard-enheter.”"
+title: "Microsoft Intune-principer för att tillåta/blockera appar för Samsung Knox"
+titlesuffix: 
+description: "Skapa en anpassad profil för att tillåta och blockera appar för Samsung Knox Standard-enheter."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 06/03/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 606f3dbb4d68592f6920ee900d36be1befe56568
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 95f35cfd869975a43fd54a1e6a9ff6ae35ffa6af
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices-in-microsoft-intune"></a>Använd anpassade principer för att tillåta och blockera appar för Samsung Knox Standard-enheter i Microsoft Intune
+# <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Använd anpassade principer för att tillåta och blockera appar för Samsung Knox Standard-enheter i Microsoft Intune 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
+I den här artikeln anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
 
 - En lista över appar som blockeras från att köras på enheten. Appar i den här listan blockeras från att köras även om de redan är installerade när principen tillämpas.
 - En lista över appar som enhetens användare tillåts att installera från Google Play Store. Endast de appar som du tar med i listan kan installeras. Inga andra appar kan installeras från butiken.
@@ -34,33 +32,33 @@ De här inställningarna kan endast användas av enheter som kör Samsung Knox S
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Skapa en lista med tillåtna eller blockerade appar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-2. Välj **Skapa profil** från bladet med lista över profiler.
-3. Ange **Namn** och en valfri **Beskrivning** för denna enhetsprofil på bladet **Skapa profil**.
-2. Välj en **Plattformstyp** för **Android** och profiltypen **Anpassad**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
+2. Välj **Skapa profil** i fönstret med profillistan.
+3. Ange **Namn** och en valfri **Beskrivning** för denna enhetsprofil i fönstret **Skapa profil**.
+2. Välj en **Plattform** för **Android** och **profiltypen** **Anpassad**.
 3. Klicka på **Inställningar**.
-3. På bladet **Anpassade OMA-URI-inställningar** väljer du **Lägg till**.
-4. I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följande:
+3. I fönstret **Anpassade OMA-URI-inställningar** väljer du **Lägg till**.
+4. I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följande inställningar:
 
-### <a name="for-a-list-of-apps-that-are-blocked-from-running-on-the-device"></a>För en lista över appar som blockeras från att köras på enheten:
+   För en lista över appar som blockeras från att köras på enheten:
 
-- **Namn** – Ange **PreventStartPackages**.
-- **Beskrivning** – Ange en valfri beskrivning, till exempel ”lista över appar som har blockerats från att köras.”
--   **Datatyp** – Välj **Sträng** i listrutan.
--   **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
--   **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+   - **Namn** – Ange **PreventStartPackages**.
+   - **Beskrivning** – Ange en valfri beskrivning, till exempel ”lista över appar som har blockerats från att köras.”
+   -    **Datatyp** – Välj **Sträng** i listrutan.
+   -    **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+   -    **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
-### <a name="for-a-list-of-apps-that-users-are-allowed-to-install-from-the-google-play-store-while-excluding-all-other-apps"></a>För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
-- **Namn** – Ange **AllowInstallPackages**.
-- **Beskrivning** – Ange en beskrivning (valfritt), till exempel ”lista över appar som användare kan installera från Google Play.”
-- **Datatyp** – Välj **Sträng** i listrutan.
-- **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
-- **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+   För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
+   - **Namn** – Ange **AllowInstallPackages**.
+   - **Beskrivning** – Ange en beskrivning (valfritt), till exempel ”lista över appar som användare kan installera från Google Play.”
+   - **Datatyp** – Välj **Sträng** i listrutan.
+   - **OMA-URI** – Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
+   - **Värde** – Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
-4. Klicka på **OK** och klicka sedan på bladet **Skapa profil** och välj **Skapa**.
+4. Klicka på **OK** och klicka sedan på fönstret **Skapa profil** och välj **Skapa**.
 
 >[!TIP]
 > Du kan hitta paket-ID:et för en app genom att gå till appen i Google Play. Paket-ID finns i webbadressen på appens sida. Paket-ID för Microsoft Word-appen är till exempel **com.microsoft.office.word**.

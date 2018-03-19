@@ -1,27 +1,25 @@
 ---
-title: "Anpassade inställningar för iOS-enheter i Intune"
+title: "Anpassade inställningar i Microsoft Intune för enheter som kör iOS"
 titleSuffix: Azure portal
-description: "Läs om vilka inställningar du kan använda i en anpassad iOS-profil.”"
+description: "Läs om vilka inställningar du kan använda i en anpassad iOS-profil."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 05/04/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 6da8caa8-65c2-4f47-842f-9570dcb1ac22
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 761b19de8442e88717a5dcd52f7f0375bace91da
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 40e34a2e22c9349cad63d813b892863e0e8a2933
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-settings-for-ios-devices"></a>Anpassade inställningar för iOS-enheter i Microsoft Intune
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-ios"></a>Anpassade enhetsinställningar i Microsoft Intune för enheter som kör iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -31,10 +29,10 @@ Med den här funktionen kan du tilldela iOS-inställningar som inte kan konfigur
 
 
 1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-2. Ange följande på bladet **Skapa profil**:
+2. I fönstret **Anpassad konfigurationsprofil** konfigurerar du var och en av följande inställningar:
 
 - **Namn på anpassad konfigurationsfil** – Ge principen ett namn eftersom det ska visas på enheten och i Intune-statusen.
 - **Fil för konfigurationsprofil** – Bläddra till den konfigurationsprofil som du skapat med hjälp av Apple Configurator.
 Se till att inställningarna du exporterar från verktyget Apple Configurator är kompatibla med versionen av iOS på enheter som du tilldelar till en anpassad princip för iOS. Om du vill ha information om hur du löser inkompatibla inställningar kan du söka efter **Referens för konfigurationsprofil** och **Protokollreferens för hantering av mobila enheter** på webbplatsen [Apple Developer](https://developer.apple.com/).
 
-Filen som du har importerat visas i bladområdet **Filinnehåll**.
+Filen som du har importerat visas i fönsterområdet **Filinnehåll**.

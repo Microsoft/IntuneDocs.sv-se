@@ -1,29 +1,30 @@
 ---
-title: "Inställningar av begränsningar i Intune-enheter för Windows Phone 8.1"
-titleSuffix: Azure portal
-description: "Läs om de Intune-inställningar du kan använda för att styra inställningar och funktioner på Windows Phone 8.1-enheter.”"
+title: "Inställningar av begränsningar i Microsoft Intune-enheter för Windows Phone 8.1"
+titleSuffix: 
+description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows Phone 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: c2d42714-49ca-43b3-b080-2e67a4268198
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98734b51cf72a097c6b4a9e425e80457b0b39afa
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 808c8e9ac1ef944b69ae8e548c62d4c6366820d0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="windows-phone-81-device-restriction-settings-in-microsoft-intune"></a>Inställningar fö enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
+# <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Inställningar för enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+I den här artikeln visas inställningarna av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows Phone 8.1.
+
 
 ## <a name="general"></a>Allmänt
 
@@ -75,7 +76,7 @@ Exempel: Sök i butiken efter Skype-appen. Webbadressen som du använder är **h
 
 ### <a name="additional-options"></a>Ytterligare alternativ
 
-Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*>, <*appens utgivare*>, eller klicka på **Exportera** för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.
+Du kan också klicka på **Importera** för att fylla i listan från en csv-fil i formatet <*app-url*>, <*appnamn*> <app publisher> eller klicka på**Exportera**Exportera för att skapa en csv-fil med innehållet i listan över begränsade appar i samma format.
 
 
 ## <a name="browser"></a>Webbläsare

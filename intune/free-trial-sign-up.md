@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 03/04/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.suite: ems
 ms.custom: 
-ms.openlocfilehash: 3b4d6528acd42a84c7d87968874d36199b661a90
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 08fa759515d437e40a751ce39b3ef617dd92e83f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrera dig för en kostnadsfri utvärderingsversion av Microsoft Intune
 
@@ -32,44 +32,20 @@ Den här artikeln vägleder dig genom registreringen av en utvärderingsversion 
 
 2. I slutet av registreringsprocessen får du ett meddelande med din nya kontoinformation. <br/> ![Bild av kontoinformation](./media/2-end-of-sign-up-process.png) <br/>Om du klickar på **Du är redo att sätta igång**, kommer du till Administrationscenter för Office 365 där du kan lägga till användare i din testmiljö. <br/><br/>Om du i stället vill gå direkt till Intune Azure Portal, öppnar du ett nytt webbläsarfönster och anger **https://portal.azure.com** i adressfältet. Du kommer till Azure-inloggningssidan där du kan använda autentiseringsuppgifterna som du fick för att kunna logga in. Använd den här adressen när du vill logga in på din utvärderingsversion av Intune. <br/> ![Bild av inloggningssidan för Azure-portalen](./media/azure-portal-signin.png)
 
-Första gången du loggar in på Intune Azure Portal, så syns kanske inte Intune på instrumentpanelen i Azure. Lägga till Intune-tjänsten på instrumentpanelen i Azure:
-1. Välj **Fler tjänster >** i listan över Azure-tjänster till vänster på instrumentpanelen och skriv **Intune** i sökrutan.
+Första gången du loggar in på Intune [Azure Portal](https://portal.azure.com) syns kanske inte Intune på instrumentpanelen i Azure. Lägga till Intune-tjänsten på instrumentpanelen i Azure:
+1. Välj **Alla tjänster >** i listan över Azure-tjänster till vänster på instrumentpanelen och skriv **Intune** i sökrutan.
 2. Välj **Intune** i listan och markera stjärnan för att lägga till tjänsten i listan över tjänster.<br/> ![Bild som visar val av Intune i en lista över tjänster](./media/azure-add-intune1.png)
 3. Välj **Intune** i listan med tjänster som ska öppnas i Intune-instrumentpanelen.
 
 När du registrerar dig för en utvärderingsversion skickas dessutom ett e-postmeddelande med din kontoinformation till den e-postadress som du angav när du registrerade dig. E-postmeddelandet bekräftar att din utvärderingsversion är aktiv.
 
-
-
 ## <a name="keeping-the-admin-experiences-straight"></a>Hålla ordning på administratörens erfarenheter
 
-
-Det finns tre portaler som du använder för Intune Azure-portalen:
-- Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna i Azure-portalen](what-is-intune.md).
+Det finns två portaler som du kan använda:
+- Intune-instrumentpanel i Azure ([portal.azure.com](https://portal.azure.com)) där du kan utforska [Intune-funktionerna](what-is-intune.md). Vanligtvis utför du ditt arbete i Intune-instrumentpanelen.
 - Administrationscenter för Office 365 ([portal.office.com](https://portal.office.com)) där du kan lägga till och hantera användare om du inte använder Azure Active Directory för detta. Du kan också hantera andra delar av ditt konto, inklusive fakturering och support.
-- Intune-administratörskonsolen ([manage.microsoft.com](https://manage.microsoft.com)), där du kan utforska funktioner som ännu inte har lagts till i Azure.
-
-Vanligtvis utför du ditt arbete i Intune-instrumentpanelen, som visas nedan. Detta är den plats där du kan konfigurera och hantera grupper, principer, enheter och appar.
-
-Du kan gå till Intune-administratörskonsolen från instrumentpanelen genom att välja **Klassisk portal** överst på instrumentpanelen.
-
-Om du vill återgå till Intune Azure Portal skriver du https://portal.azure.com i webbläsarens adressfält och väljer **Intune** igen från listan över tjänster.
-
- ![Bild av Intune-instrumentpanel](./media/intune-azure-dashboard.png)
-
-
-Du använder Office 365-administrationscenter (visas nedan) när du ska lägga till och hantera användare och olika kontofunktioner, t.ex. fakturering och support.
-
-![Bild av Office 365-administratörscenter](./media/office-admin-center.png)
-
-Om du vill gå från Office 365-administratörscentret till Intune-instrumentpanelen skriver du in https://portal.azure.com i webbläsarens adressfält. Välj **Intune** i listan över tjänster.
-
-Om du vill gå från Intune tillbaka till Office 365-administratörscentret skriver du in https://portal.office.com i webbläsarens adressfält. Om du är redan inloggad i Intune kommer du direkt till Office 365-administratörscentret.
 
 ## <a name="next-steps"></a>Nästa steg
-
-### <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
-Läs mer om [Intune i Azure Portal](what-is-intune.md)
 
 ### <a name="integration-with-other-products"></a>Integrering med andra produkter
 Lär dig mer om hur du kan använda dina Azure Active Directory-användarkonton med Intune:
