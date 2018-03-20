@@ -6,7 +6,7 @@ keywords:
 author: arob98
 ms.author: angrobe
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.technology:
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61193cc96f0ea22e9a80d24fe8ee0499e80d4202
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: d723bc4d5032a7a5c330367fe83eabd4763917a2
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -304,11 +304,11 @@ I den här uppgiften kommer du att:
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här hämtar, installerar och konfigurerar du certifikatanslutningsappen
 ![ConnectorDownload](./media/certificates-download-connector.png)   
  
-1. Logga in på Azure-portalen. 
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-4. Välj **Certifikatutfärdare** på bladet **Enhetskonfiguration**.
-5. Klicka på **Lägg till** och välj **Download Connector file** (Ladda ned anslutningsfil). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den. 
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Enhetskonfiguration** i **Intune**-fönstret.
+4. Välj **Certifikatutfärdare** i fönstret **Enhetskonfiguration**.
+5. Klicka på **Lägg till** och välj **Download the connector file** (Ladda ned anslutningsfil). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den. 
 6.  När nedladdningen är klar kör du installationsprogrammet (**ndesconnectorssetup.exe**) på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. (CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS).
 
     > [!NOTE]
@@ -346,10 +346,10 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 ## <a name="how-to-create-a-scep-certificate-profile"></a>Så här skapar du en SCEP-certifikatprofil
 
-1. I Azure Portal väljer du arbetsbelastningen **Konfigurera enheter**.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilbladet.
-4. På bladet **Skapa profil** anger du ett **Namn** och en **Beskrivning** för SCEP-certifikatprofilen.
+1. I Azure-portalen väljer du arbetsbelastningen **Enhetskonfiguration**.
+2. Välj **Hantera** > **Profiler** i fönstret **Enhetskonfiguration**.
+3. Välj **Skapa profil** i profilfönstret.
+4. I fönstret **Skapa profil** anger du ett **Namn** och en **Beskrivning** för SCEP-certifikatprofilen.
 5. Från listrutan **Plattform** väljer du enhetsplattformen för detta SCEP-certifikat. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
     - **Android**
     - **iOS**
@@ -358,7 +358,7 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
 6. Från listrutan **Profil** väljer du **SCEP-certifikat**.
-7. På bladet **SCEP-certifikat**, konfigurerar du följande inställningar:
+7. I fönstret **SCEP-certifikat** konfigurerar du följande inställningar:
     - **Certifikatets giltighetsperiod** – Om du har kört kommandot **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE** på certifikatutfärdaren, vilket gör att en anpassad giltighetsperiod kan användas, kan du ange hur lång tid som återstår innan certifikatet går ut.<br>Du kan ange ett värde som är lägre men inte högre än giltighetsperioden i den angivna certifikatmallen. Om giltighetsperioden i certifikatmallen är två år kan du ange ett värde på ett år, men inte fem år. Värdet måste också vara lägre än den återstående giltighetsperioden för certifikatutfärdaren. 
     - **Nyckellagringsprovider (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10) – Ange var nyckeln till certifikatet lagras. Välj något av följande värden:
         - **Registrera till nyckellagringsprovider för TPM (Trusted Platform Module) om TPM finns, annars till programvaruprovider för nyckellagring**
@@ -385,9 +385,9 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
     - **Registreringsinställningar**
         - **Tröskelvärde för förnyelse (%)** – Ange i procent hur mycket av certifikatets giltighetstid som får återstå innan förfrågningar om förnyat certifikat görs.
         - **Webbadresser för SCEP-server** – Ange en eller flera webbadresser för NDES-servrar som utfärdar certifikat via SCEP. 
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. Välj **OK** och gå sedan tillbaka till fönstret **Skapa profil** och välj **Skapa**.
 
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="how-to-assign-the-certificate-profile"></a>Så här tilldelar du certifikatprofilen
 

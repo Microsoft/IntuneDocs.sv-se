@@ -1,10 +1,10 @@
 ---
-title: "Migrera principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen"
-titlesuffix: Azure portal
-description: "Migrera principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen."
+title: "Migrera villkorlig åtkomst till Azure-portalen"
+titlesuffix: Microsoft Intune
+description: "Gör en ny tilldelning av de villkorliga åtkomstprinciper som du skapade tidigare i den klassiska Intune-portalen till Azure-portalen."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
 ms.date: 06/28/2017
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bdb64d4cc668bf382c39a235111547c2f4e21c9c
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 80c8c994486dd340c9037817854eb35b32ab3a9e
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Gör om tilldelningen av principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
-Med början i den nya Azure-portalen kan villkorlig åtkomst tillhandahålla stöd för fler principer per app och fler anpassningsmöjligheter.
+Med början i den nya Azure-portalen kan villkorlig åtkomst tillhandahålla stöd för fler principer per app och fler anpassningsmöjligheter. Om du tidigare skapade villkorliga åtkomstprinciper i den klassiska Intune-portalen, kan du migrera dem till Azure-portalen. 
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -79,7 +79,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
 
 4. Välj **Användare och grupper** under avsnittet **Tilldelningar** och ange den nya principen för villkorlig åtkomst.
     
-    ![Jämförelse av användargruppsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-1.png)
+    ![Bild som visar en jämförelse av en användargrupps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
     > Det val du gör för Azure Portal bör motsvara det val du har gjort för den klassiska portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
@@ -94,7 +94,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
 
 9. Klicka på **Klar**.
 
-    ![Jämförelse av molnappsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-3.png)
+    ![Bild som visar en jämförelse av en molnapps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-3.png)
 
     > [!TIP] 
     > Om du har flera appar med samma princip kan du överväga att konsolidera dem till en enda princip i Azure-portalen.
@@ -105,7 +105,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
 
 12. När du har valt enhetsplattformar klickar du på **Klar** två gånger.
 
-    ![Jämförelse av enhetsplattformens gränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-4.png)
+    ![Bild som visar en jämförelse av en enhetsplattforms användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-4.png)
 
     > [!TIP] 
     > Om du har valt individuella plattformar i den klassiska Intune-portalen måste du även välja individuella plattformar i Azure-portalen.
@@ -119,7 +119,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
 
 15. När du har valt klientapp klickar du på **Klar** två gånger.
 
-    ![Jämförelse av klientappsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-6.png)
+    ![Bild som visar en jämförelse av en klientapps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-6.png)
 
 16. Om du har valt webbläsarinställningar i den klassiska Intune-portalen måste du välja både **webbläsare** och **mobilappar och skrivbordsklienter** i Azure-portalen. Om du inte har valt webbläsarinställningar i den klassiska Intune-portalen kan du endast välja **mobilappar och skrivbordsklienter**. 
 
@@ -133,7 +133,7 @@ På bladet **Intune-appskydd** i Azure-portalen kan administratörer ange appbas
 
 21. Aktivera **Aktivera principen** på bladet för den **nya** principen för villkorlig åtkomst. Klicka på **Skapa**.
 
-    ![Aktivera gränssnittsjämförelse för villkorlig åtkomstprincip mellan Intune- och Azure-portalerna](./media/reassign-ca-11.png)
+    ![Bild som visar en jämförelse av en villkorlig åtkomstprincips användargränssnitt mellan Intune- och Azure-portalerna](./media/reassign-ca-11.png)
 
 ## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Gör om tilldelningen av enhetsbaserade principer för villkorlig åtkomst i Intune för EAS-klienter
 
@@ -147,7 +147,7 @@ Om du har konfigurerat inställningar för Exchange Active Sync som en del av en
 
 4. Välj **Användare och grupper** under avsnittet **Tilldelningar** och ange den nya principen för villkorlig åtkomst.
 
-    ![Jämförelse av användargruppsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-12.png)
+    ![Bild som visar en jämförelse av en användargrupps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
     > Det val du gör för Azure-portalen bör motsvara det val du har gjort för Azure-portalen. Om du till exempel har valt alla användare i den klassiska Intune-portalen väljer du **Alla användare** i Azure-portalen. Om du dessutom har valt alternativet **Undanta grupper** i den klassiska Intune-portalen ska du även exkludera dessa grupper i Azure-portalen.
@@ -158,14 +158,14 @@ Om du har konfigurerat inställningar för Exchange Active Sync som en del av en
 
 7. På bladet **Molnappar** klickar du på **Välj appar** och väljer **Exchange Online**. Klicka sedan på **Välj** och **Klar**.
 
-    ![Jämförelse av molnappsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-14.png)
+    ![Bild som visar en jämförelse av en molnapps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-14.png)
 
     > [!IMPORTANT] 
     > Principer för villkorlig åtkomst för EAS-klienter får inte inkludera några andra molnappar.
 
 8. På bladet **Villkor** väljer du **Klientappar** och sedan en klientapp. Om du har valt att blockera klienter som inte stöds av Intune väljer du alternativet **Tillämpa bara principen på plattformar som stöds**.
 
-    ![Jämförelse av klientappsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-15.png)
+    ![Bild som visar en jämförelse av en klientapps användargränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-15.png)
 
 9. När du har valt klientapp klickar du på **Klar** två gånger.
 
@@ -173,11 +173,11 @@ Om du har konfigurerat inställningar för Exchange Active Sync som en del av en
 
 11. Välj **Kräv att enheten är markerad som kompatibel** under **Grant Access Controls** (Bevilja åtkomstkontroller) och klicka sedan på **Välj**.
 
-    ![Jämförelse av gränssnitt för att bevilja åtkomst i Intune- och Azure-portalerna](./media/reassign-ca-16.png)
+    ![Bild som visar en jämförelse av ett beviljat åtkomstsgränssnitt i Intune- och Azure-portalerna](./media/reassign-ca-16.png)
 
 12. Aktivera **Aktivera principen** på bladet för den **nya** principen för villkorlig åtkomst. Klicka på **Skapa**.
 
-    ![Aktivera gränssnittsjämförelse för villkorlig åtkomstprincip mellan Intune- och Azure-portalerna](./media/reassign-ca-17.png)
+    ![Bild som visar en jämförelse av användargränssnittet i Aktivera princip för villkorlig åtkomst i Intune- och Azure-portalerna](./media/reassign-ca-17.png)
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Inaktivera principer för villkorlig åtkomst i den klassiska Intune-portalen
 
@@ -196,7 +196,7 @@ När du har gjort om tilldelningen av principer för villkorlig åtkomst i Azure
 
 4.  Avmarkera alternativet **Aktivera princip för villkorlig åtkomst** och klicka på **Spara**.
 
-    ![Inaktivera principer för villkorlig åtkomst i den klassiska Intune-portalen](./media/reassign-ca-18.png)
+    ![Bild som visar Inaktivera villkorliga åtkomstprinciper i den klassiska Intune-portalen](./media/reassign-ca-18.png)
 
 ## <a name="see-also"></a>Se även
 

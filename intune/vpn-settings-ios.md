@@ -1,29 +1,29 @@
 ---
-title: "VPN-inställningar i Intune för iOS-enheter"
-titlesuffix: Azure portal
-description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på iOS-enheter.”"
+title: "VPN-inställningar i Microsoft Intune för enheter som kör iOS"
+titlesuffix: 
+description: "Läs mer om de Intune-inställningar du kan använda för att konfigurera VPN-anslutningar på enheter som kör iOS."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 1447c123-ea33-4ea0-aab4-69577cdb8d00
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3db57b851c405758c9cccdc3e70c96ca9e76000
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 70721d1d2f360527af0e269a93d6243b6a42431b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-ios-devices-in-microsoft-intune"></a>VPN-inställningar för iOS-enheter i Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör iOS
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
+
+I den här artikeln beskrivs de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör iOS.
 
 Beroende på vilka inställningar du väljer kan bara vissa värden i följande lista konfigureras.
 
@@ -38,7 +38,7 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 - **Anslutningstyp** – Välj VPN-anslutningstyp från leverantörslistan nedan:
     - **Check Point Capsule VPN**
     - **Cisco AnyConnect**
-    - **Dell SonicWALL Mobile Connect**
+    - **SonicWall Mobile Connect**
     - **F5 Edge Client**
     - **Pulse Secure**
     - **Cisco (IPSec)**
@@ -62,7 +62,7 @@ Om du har valt **Anpassat VPN** som anslutningstyp, kan du konfigurera inställn
 - **Regler på begäran** – Här kan du konfigurera villkorliga regler som styr när VPN-anslutningen ska initieras. Du kan till exempel skapa ett villkor där VPN-anslutningen endast används när en enhet inte är ansluten till något av dina trådlösa företagsnätverk. Du kan också skapa ett villkor där VPN-anslutningen inte initieras om enheten inte får åtkomst till en DNS-sökdomän som du har angett.
 
     - **SSID:n eller DNS-sökdomäner** – Välj om det här villkoret ska använda det trådlösa nätverkets **SSID:n** eller **DNS-sökdomäner**. Välj Lägg till för att konfigurera en eller flera SSID:er eller sökdomäner.
-    - **URL-strängavsökning** – Om du vill kan du ange en URL som regeln använder som ett test. Om den enhet där profilen har installerats får tillgång till den här webbadressen utan omdirigering, startas VPN-anslutningen och enheten ansluter till målwebbadressen. Användaren ser inte URL-strängavsökningsplatsen. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att webbadressen testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till målwebbadressen via VPN.
+    - **URL-strängavsökning** – Om du vill kan du ange en URL som regeln använder som ett test. Om den enhet där profilen har installerats får tillgång till den här webbadressen utan omdirigering, startas VPN-anslutningen och enheten ansluter till målwebbadressen. Användaren ser inte URL-strängens avsökningsplats. Ett exempel på en URL-strängavsökning är adressen till en granskningswebbserver som kontrollerar enhetens efterlevnad innan VPN-anslutningen görs. En annan möjlighet är att webbadressen testar VPN-nätverkets förmåga att ansluta till en webbplats innan enheten ansluts till målwebbadressen via VPN.
     - **Domänåtgärd** – Välj något av följande:
         - Anslut vid behov – 
         - Anslut aldrig – 

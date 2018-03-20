@@ -1,12 +1,12 @@
 ---
-title: "Konfigurera Exchange Connector för lokal EAS med Intune"
-titleSuffix: Azure portal
-description: "Använd anslutningsverktyget för att upprätta kommunikation mellan Intune och din lokala Exchange Server"
+title: Konfigurera Microsoft Intune lokalt med Exchange Connector
+titleSuffix: 
+description: "Använd din lokala Exchange Connector till att hantera enhetsåtkomst till Exchange-postlådor baserat på Intune-registrering och Exchange Active Sync (EAS)."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb82b1a9af0cc8dd2f394747ce7ed8b695260bb9
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 0caea2e8b7704fe2dfcbec937b59000ac2a12ae5
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera Intune On-Premises Connector för lokal Exchange i Microsoft Intune Azure
 
-Lokala Exchange Server-miljöer kan använda Intunes lokala Exchange Connector för att hantera enhetsåtkomst till lokala Exchange-postlådor baserat på huruvida enheterna har registrerats i Intune och är kompatibla med Intunes principer för enhetsefterlevnad eller inte. Lokala Exchange Connector har även i uppgift att identifiera mobila enheter som ansluter till lokala Exchange-servrar genom att synkronisera den befintliga EAS-posten (Exchange Active Sync) med Intune.
+En lokal Exchange Server-miljö kan använda Intunes lokala Exchange Connector till att hantera enhetsåtkomst till lokala Exchange-postlådor, baserat på om enheterna har registrerats i Intune och om de är kompatibla med Intunes principer för enhetsefterlevnad. Lokala Exchange Connector har även i uppgift att identifiera mobila enheter som ansluter till lokala Exchange-servrar genom att synkronisera den befintliga EAS-posten (Exchange Active Sync) med Intune.
 
 > [!IMPORTANT]
 > Intune har endast stöd för en lokal Exchange Connector-anslutning av valfri typ per prenumeration.
@@ -70,11 +70,11 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 
 1. I ett Windows Server-operativsystem som stöder den lokala Exchange Connector öppnar du [Azure Portal](http://portal.azure.com) och loggar in med ett användarkonto som är administratör på den lokala Exchange-servern och som har licens för att använda Exchange Server.
 
-2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
 3. Välj **Intune**. Intune- instrumentpanelen öppnas. Välj **Lokal åtkomst**.
 
-4. Välj **Hämta On-Premises Connector** i avsnittet **Installation** på bladet **Lokal åtkomst – Exchange ActiveSync Connector**.
+4. Välj **Exchange ActiveSync Connector** och sedan alternativet för att **ladda ned det lokala anslutningsprogrammet**.
 
 5.  Den lokala Exchange Connector finns i en komprimerad mapp (.zip) som kan öppnas eller sparas. I dialogrutan **Filhämtning** klickar du på **Spara** för att spara den komprimerade mappen på en säker plats.
 
@@ -93,7 +93,7 @@ Utför följande steg för att installera den lokala Intune Exchange Connector. 
 
 3.  I dialogrutan **Microsoft Intune Exchange Connector** väljer du antingen **On-premises Microsoft Exchange Server** eller **Hosted Microsoft Exchange Server**.
 
-  ![Välj din Exchange Server-typ](./media/intune-sa-exchange-connector-config.png)
+  ![Bild som visar var du väljer Exchange Server-typ](./media/intune-sa-exchange-connector-config.png)
 
   För en lokal Exchange-server anger du antingen servernamnet eller det fullständigt kvalificerade domännamnet för Exchange-servern som är värd för **klientåtkomstserverrollen**.
 
@@ -116,7 +116,7 @@ Utför följande steg för att installera den lokala Intune Exchange Connector. 
 
     5. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern.
 
-    6.  Ange nödvändiga administrativa autentiseringsuppgifter för att skicka meddelanden till en användares Exchange Server-postlåda. Du kan konfigurera dessa meddelanden med principer för villkorlig åtkomst i Intune.
+    6.  Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att kunna skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
 
         Kontrollera att tjänsten för automatisk upptäckt och Exchange Web Services har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i avsnittet om [klientåtkomstservern](https://technet.microsoft.com/library/dd298114.aspx).
 

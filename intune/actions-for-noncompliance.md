@@ -1,105 +1,87 @@
 ---
-title: "Åtgärder för inkompatibilitet för Intune"
-titleSuffix: Intune on Azure
-description: "Lär dig hur du skapar åtgärder för ej kompatibla enheter med Intune"
+title: "Inkompatibilitetsmeddelande och åtgärder med Microsoft Intune – Azure | Microsoft Docs"
+description: "Skapa ett e-postmeddelande som ska skickas till inkompatibla enheter. Lägg till åtgärder när en enhet har markerats som inkompatibel, t.ex. en respitperiod för att bli kompatibel, eller skapa ett schema som blockerar åtkomst tills enheten är kompatibel. Gör detta med Microsoft Intune i Azure."
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/05/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 573a8b000e63576f3dd3bae1b6e8e8c47733f6bf
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 37a8deca147bbad1e706b814f366a2c3f1247869
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="automate-actions-for-noncompliance"></a>Automatisera åtgärder för inkompatibilitet
+# <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter – Intune
 
-Med **åtgärder för inkompatibilitet** kan du konfigurera en tidsordnad sekvens med åtgärder som tillämpas på enheter som inte uppfyller villkoren för efterlevnadsprinciperna. Som standard när en enhet identifieras som inte uppfyller villkoren för efterlevnadsprinciper markeras Intune omedelbart som icke-kompatibelt och den villkorliga Azure AD-åtkomsten blockerar enheten. Med **åtgärder för inkompatibilitet** har du större flexibilitet när du ska bestämma dig för vad du vill göra när en enhet är inkompatibel. Du kan t.ex. bestämma dig för att inte blockera enheten omedelbart, för att sedan ge användaren en respitperiod att åtgärda problemet.
+Funktionen för **åtgärder vid inkompatibilitet** konfigurerar en tidssorterad sekvens med åtgärder. Dessa åtgärder gäller enheter som inte uppfyller din efterlevnadsprincip. 
+
+## <a name="overview"></a>Översikt
+När Intune identifierar en enhet som inte är kompatibel, markerar Intune omedelbart enheten som inkompatibel som standard. Den [villkorliga åtkomsten](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory (AD) blockerar sedan enheten. När en enhet inte är kompatibel kan du med **åtgärder vid inkompatibilitet** få mer flexibilitet när du ska bestämma dig för vad du bör göra. Du kan t.ex. låta bli att blockera enheten omedelbart och ge användaren en respitperiod för att bli kompatibel.
 
 Det finns två typer av åtgärder:
 
--   **Meddela slutanvändare via e-post**: Du kan anpassa dina e-postmeddelanden innan du skickar dem till slutanvändaren. Med Intune kan du anpassa mottagare, ämne, brödtext, företagslogotyp och ytterligare kontaktinformation.
+- **Meddela slutanvändarna via e-post**: Anpassa ett e-postmeddelande innan du skickar det till slutanvändaren. Du kan anpassa mottagare, ämne, brödtext, företagslogotyp och kontaktinformation.
 
-    Dessutom visar Intune information om den inkompatibla enheten i e-postaviseringen.
+    Dessutom inkluderar Intune information om den inkompatibla enheten i e-postmeddelandet.
 
--   **Markera enhet som icke-kompatibel**: Du kan fastställa ett schema som anger efter hur många dagar enheten markeras som icke-kompatibel. Du kan konfigurera åtgärden till att börja gälla omedelbart eller ge användare en respitperiod som är kompatibel med efterlevnadsprinciperna för enheten.
+- **Markera enheten som inkompatibel**: Skapa ett schema (med antal dagar) efter att enheten markerats som inkompatibel. Du kan konfigurera åtgärden till att börja gälla omedelbart, eller ge användaren en respitperiod för att bli kompatibel.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-Du måste ha skapat minst en princip för enhetsefterlevnad för att kunna vidta åtgärder mot inkompatibilitet. 
+- Du måste ha minst en efterlevnadsprincip för enheter för att kunna konfigurera åtgärder vid inkompatibilitet. Se följande plattformar när du ska skapa en efterlevnadsprincip för enheter:
 
-- Ta reda på hur du skapar en princip för enhetsefterlevnad för följande plattformar:
+  - [Android](compliance-policy-create-android.md)
+  - [Android for Work](compliance-policy-create-android-for-work.md)
+  - [iOS](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows](compliance-policy-create-windows.md)
 
-    -   [Android](compliance-policy-create-android.md)
-    -   [Android for Work](compliance-policy-create-android-for-work.md)
-    -   [iOS](compliance-policy-create-ios.md)
-    -   [macOS](compliance-policy-create-mac-os.md)
-    -   [Windows](compliance-policy-create-windows.md)
+- Du måste ha konfigurerat villkorlig Azure AD-åtkomst när du använder principer för enhetsefterlevnad till att blockera enheter från företagets resurser. Läs mer i [Villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
-Du måste ha konfigurerat villkorlig Azure AD-åtkomst om du planerar att använda principer för enhetsefterlevnad för att blockera enheter från att använda företagets resurser. 
+- Du måste skapa en mall för aviseringsmeddelanden. När du skickar e-postmeddelanden till användarna, används den här mallen för att skapa åtgärder vid inkompatibilitet.
 
-- Läs om [hur du konfigurerar villkorlig EMS-åtkomst](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access).
+## <a name="create-a-notification-message-template"></a>Skapa en mall för aviseringsmeddelanden
 
-Du måste dessutom ha skapat en mall för aviseringsmeddelanden. Mallen för aviseringsmeddelanden används senare under processen när du skapar åtgärder för inkompatibilitet som ska skickas med e-post till dina användare.
+1. Logga in i [Azure-portalen](https://portal.azure.com) med dina autentiseringsuppgifter för Intune. 
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enhetsefterlevnad** och sedan **Meddelanden**. 
+4. Välj **Skapa meddelande** och ange sedan följande information:
 
-### <a name="to-create-a-notification-message-template"></a>Skapa en mall för aviseringsmeddelanden
+  - Namn
+  - Ärende
+  - Meddelande
+  - E-postsidhuvud – Infoga företagets logotyp
+  - E-postsidfot – Infoga företagets namn
+  - E-postsidfot – Infoga kontaktinformation
 
-1. Gå till [Intune på Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter.
-2. Välj **Fler tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
-3. Välj **Intune**
-4. Välj **Enhetsefterlevnad** och sedan **Meddelanden** i avsnittet **Hantera**.
-5. Välj **Skapa meddelande** och ange följande information:
-    - Namn
-    - Ärende
-    - Meddelande
-    - E-postrubrik – Infoga företagslogotyp
-    - E-postrubrik – Infoga företagsnamn
-    - E-postsidfot – Inkludera kontaktinformation
+  ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actionsfornoncompliance-1.PNG)
 
-5. Välj **Skapa meddelande** och ange följande information:
-
-    a. Namn
-
-    b. Ärende
-
-    c.  Meddelande
-
-    d. e-postsidhuvud – Infoga företagslogotyp
-
-    e. e-postsidfot – Infoga företagsnamn
-
-    f. e-postsidfot – Inkludera kontaktinformation
-
-![exempelmall för aviseringsmeddelanden](./media/actionsfornoncompliance-1.PNG)
-
-När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är tillgänglig att användas.
+När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas.
 
 > [!NOTE]
 > Du kan också redigera en meddelandemall som du skapat tidigare.
 
-## <a name="to-create-actions-for-noncompliance"></a>Skapa åtgärder för inkompatibilitet
+## <a name="add-actions-for-noncompliance"></a>Lägga till åtgärder vid inkompatibilitet
 
-> [!TIP]
-> Som standard erbjuder Intune en fördefinierad åtgärd bland åtgärderna för avsnittet för inkompatibilitet. Åtgärden markerar att enheten inte följer standard när det har upptäckts att den inte uppfyller dina villkor för enhetens efterlevnadsprincip. Du kan anpassa hur lång tid enheten ska markeras som icke-kompatibel efter identifieringen. Det går inte att ta bort åtgärden.
+Intune skapar automatiskt en åtgärd vid inkompatibilitet som standard. När en enhet inte uppfyller din efterlevnadsprincip, markerar den här åtgärden enheten som inkompatibel. Du kan anpassa hur länge enheten ska markeras som inkompatibel. Det går inte att ta bort åtgärden.
 
-Du kan lägga till en åtgärd när du skapar en ny efterlevnadsprincip för enheten eller när du redigerar en befintlig efterlevnadsprincip för enheten.
+Du kan lägga till en åtgärd när du skapar en ny efterlevnadsprincip, eller när du uppdaterar en befintlig efterlevnadsprincip. 
 
-1.  I Intune-arbetsbelastningen går du till **Principer för enhetsefterlevnad** och väljer **Principer** i avsnittet **Hantera**.
+1. I [Azure-portalen](https://portal.azure.com) öppnar du **Microsoft Intune** och väljer **Enhetsefterlevnad**.
+2. Välj **Principer**, välj en av dina principer och sedan **Egenskaper**. 
 
-2.  Välj en policy för efterlevnad genom att klicka på den och välj sedan **Egenskaper** under avsnittet **Hantera**.
+  Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
 
-3.  Bladet **Principegenskaper för enhetsefterlevnad** öppnas. Välj **Åtgärder för inkompatibilitet**.
+3. Välj alternativet för **åtgärder vid inkompatibilitet** och sedan **Lägg till** för att ange åtgärdsparametrar. Du kan välja den meddelandemall som skapades tidigare, lägga till ytterligare mottagare och uppdatera schemat för respitperioden. I schemat kan du ange antalet dagar (0 till 365) och sedan kan du tillämpa villkorliga åtkomstprinciper. Om du anger **0** antal dagar kommer den villkorliga åtkomsten **omedelbart** blockera åtkomsten till företagets resurser.
 
-4.  Bladet **Åtgärder för inkompatibilitet** öppnas. Ange åtgärdsparametrar genom att välja **Lägg till**. Du kan välja meddelandemallen som skapades tidigare, ytterligare mottagare och schema för respitperiod. På schemat kan du ange antalet dagar (0 till 365), och sedan kan du tillämpa principen för villkorlig åtkomst. Om du anger **0** dagar innebär det att villkorlig åtkomst **genast** måste blockera åtkomsten till företagets resurser när enheterna inte uppfyller principerna för enhetsefterlevnad.
-
-5.  När du har lagt till informationen väljer du **Lägg till** och sedan **OK**.
+4. När du är klar väljer du **Lägg till** > **OK** för att spara ändringarna.
 
 ## <a name="next-steps"></a>Nästa steg
-Du kan övervaka aktiviteten enhetsefterlevnad genom att köra de tillgängliga rapporterna på bladet med enhetsefterlevnad. Du hittar mer information i [hur du övervakar principer för enhetsefterlevnad med Intune](device-compliance-monitor.md).
+Övervaka aktiviteten för enhetsefterlevnad genom att köra rapporterna. Du hittar mer information i [Övervaka enhetsefterlevnad med Intune](device-compliance-monitor.md).

@@ -1,12 +1,12 @@
 ---
-title: Aktivera Mobile Threat Defense-anslutningen med Intune
+title: Aktivera Mobile Threat Defense-anslutningsprogrammet i Microsoft Intune
 titlesuffix: Azure portal
-description: Aktivera Mobile Threat Defense-anslutningen i Intune.
+description: Aktivera anslutningsprogrammet mellan MTD-partnern (Mobile Threat Defense) och Microsoft Intune.
 keywords: 
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,30 +15,30 @@ ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 99b73cb0885c4d93cf91ea219ca98a8a81d67b39
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 28233965fb68ef1b83b07d14d39568b5bd997c89
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="enable-mobile-threat-defense-in-intune"></a>Aktivera Mobile Threat Defense i Intune
+# <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
 > [!NOTE] 
 > Detta avsnitt gäller alla Mobile Threat Defense-partner.
 
-Om du vill aktivera Mobile Threat Defense-anslutningen (MTD) i Intune bör du redan ha konfigurerat Intune-anslutningen i MTD-partnerkonsolen.
+Vid installationen av Mobile Threat Defense (MTD) konfigurerade du en princip för att klassificera hot i MTD-partnerkonsolen och du skapade efterlevnadsprincipen för enheter i Intune. Om du redan har konfigurerat Intune-anslutningen i MTD-partnerkonsolen, kan du nu aktivera MTD-anslutningen i Intune.
 
 ## <a name="to-enable-the-mtd-connector"></a>Så här aktiverar du MTD-anslutningen
 
 1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter. När du har loggat in visas **Azure-instrumentpanelen**.
 
-2. Välj **Fler tjänster** på den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
 
 3. Välj **Intune**. **Intune-instrumentpanelen** öppnas.
 
 4. Välj **Enhetskompatibilitet** på **Intune-instrumentpanelen** och välj sedan **Mobile Threat Defense** i avsnittet **Konfiguration**.
 
-5. Välj **Lägg till** på bladet **Mobile Threat Defense**.
+5. Välj **Lägg till** i fönstret **Mobile Threat Defense**.
 
 6. Välj den MTD-lösning du använder som **Mobile Threat Defense-anslutning för konfigurationen** i listrutan.
 
@@ -48,7 +48,7 @@ Om du vill aktivera Mobile Threat Defense-anslutningen (MTD) i Intune bör du re
 
 ## <a name="mtd-toggle-options"></a>MTD-växlingsalternativ
 
-Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din organisations krav. Här följer mer information:
+Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din organisations krav. Här finns mer information:
 
 - **Ansluta Android 4.1 + enheter till [MTD-partnernamn] för Work MTD**: När du aktiverar det här alternativet kan du låta Android 4.1 + enheter rapportera säkerhetsrisker till Intune.
     - **Markera som icke-kompatibel om inga data tas emot**: Om Intune inte har tagit emot data om en enhet på den här plattformen från MTD-partnern, så kan du betrakta enheten som inkompatibel.
@@ -64,4 +64,4 @@ Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din
 > Du måste lägga till och tilldela MTD-apparna innan du skapar principregler för enhetsefterlevnad och villkorlig åtkomst. Det säkerställer att MTD-appen är redo och tillgänglig för slutanvändarna att installera innan de kan få åtkomst till e-post och andra företagsresurser.
 
 > [!TIP]
-> Du kan se **anslutningsstatusen** och tiden för **senaste synkronisering** mellan Intune och MTD-partnern på bladet Mobile Threat Defense.
+> Du kan se **Anslutningsstatus** och tiden för **Senaste synkronisering** mellan Intune och MTD-partnern i fönstret Mobile Threat Defense.

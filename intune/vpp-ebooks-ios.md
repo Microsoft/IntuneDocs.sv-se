@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/17/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01c90818cf789bdb79b3b4efe5a1db8a2cf1cdfe
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 6053eba7bcda74eaf3b2d7de8eecd81487ea3a8d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
@@ -52,28 +52,29 @@ Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till dit
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Så här skaffar du och laddar upp en Apple VPP-token
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Mobilappar** på **Intune**-bladet.
-1.  I arbetsbelastningen **Mobilappar** väljer du **Installationsprogrammet** > **iOS VPP-token**.
-2.  På listan över VPP-tokenblad, väljer du **Lägg till**.
-3.  På bladet **Ny VPP-token** anger du följande information:
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Mobilappar** i **Intune**-fönstret.
+1.  I arbetsbelastningen **Mobilappar** väljer du **Installation** > **iOS VPP-token**.
+2.  I listan med VPP-tokens klickar du på **Skapa**.
+3.  I fönstret **Ny VPP-token** anger du följande information:
     - **VPP-tokenfil** – Kontrollera att du har registrerat dig för volyminköpsprogrammet för företag eller volymköpsprogrammet för utbildning. Därefter laddar du ned Apples VPP-token för ditt konto och markerar den.
     - **Apple-ID** – Ange Apple-ID för det konto som är associerat med inköpsprogrammet för volymen.
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
-4. När du är klar klickar du på **Ladda upp**.
+4. Klicka på **Skapa** när du är klar.
 
-Token visas i listan över tokenblad.
+Den token du önskar visas i listan med tokens.
 
 
 Du kan synkronisera data från Apple med Intune när som helst genom att välja **Synkronisera nu**.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
+3. I fönstret **Intune** väljer du **E-böcker**.
 1. I arbetsbelastningen **E-böcker** väljer du **Hantera** > **Alla e-böcker**.
 2. I listan med böcker väljer du den bok du vill tilldela och sedan ”**...**” > **Tilldela grupper**.
-3. På bladet <*boknamn*> – **Tilldelade grupper** väljer du **Hantera** > **Tilldelade grupper**.
-4. Välj **Tilldela grupper** och på bladet **Välj grupper** väljer du sedan de Azure AD-användargrupper som du vill tilldela boken till. Enhetsgrupper stöds inte för närvarande.
+3. I fönstret <*boknamn*> – **Tilldelade grupper** väljer du **Hantera** > **Tilldelade grupper**.
+4. Välj **Tilldela grupper** och i fönstret **Välj grupper** väljer du sedan de Azure AD-användargrupper som du vill tilldela boken till. Enhetsgrupper stöds inte för närvarande.
 Du måste välja tilldelningsåtgärden **Tillgänglig** eller **Obligatorisk**. 
 5. När du är klar väljer du **Spara**.
 

@@ -1,41 +1,39 @@
 ---
-title: "Wi-Fi-inställningar i Intune för iOS-enheter"
-titleSuffix: Azure portal
-description: "Lär dig mer om Intune-inställningar som du kan använda för att konfigurera Wi-Fi-anslutningar på iOS-enheter.”"
+title: "Konfigurera Microsoft Intunes WiFi-inställningar för enheter som kör iOS"
+titleSuffix: 
+description: "Läs om Intunes WiFi-konfigurationsinställningar för enheter som kör iOS"
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/5/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 89229a5e-3421-4221-a62f-fa800620cc0d
-ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a4a5b9b76995be6a82cc3dcaa9f782c158ba174
-ms.sourcegitcommit: b982f9d50da4f958fb0c48c56ba46c8ef71500c4
+ms.openlocfilehash: fcb21657d8abe1c966aa924993f733b039302268
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Wi-Fi-inställningar för iOS-enheter i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-
+I den här artikeln beskrivs de WiFi-inställningar som du kan konfigurera i Microsoft Intune för enheter som kör iOS.
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Wi-Fi-inställningar för bas- och företagsprofiler
 
-- **Nätverksnamn** – Ange ett namn för den här Wi-Fi-anslutningen. Detta är det namn som användarna ser när de söker i listan över tillgängliga anslutningar på sina enheter.
-- **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ska ansluta till. Användare ser dock bara det nätverksnamn som du skapade ovan när de väljer anslutningen.
+- **Nätverksnamn** – Ange ett namn för den här Wi-Fi-anslutningen. Detta är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
+- **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
 - **Anslut automatiskt** – Gör att enheten ansluter när den är inom intervallet för det här nätverket.
 - **Dolt nätverk** – Förhindrar att det här nätverket visas i listan över tillgängliga nätverk på enheten.
 - **I förväg delad nyckel** - 
 - **Proxyinställningar** – Välj från:
-    - **Ingen** – Inga proxyinställningar kommer att konfigureras.
+    - **Ingen** – Inga proxyinställningar konfigureras.
     - **Manuell** – Ange **proxyserveradressen** (som en IP-adress) och dess tillhörande **portnummer**.
     - **Automatisk** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 
@@ -68,7 +66,7 @@ ms.lasthandoff: 01/29/2018
 
 |Inställningsnamn|Mer information|Använd när|
 |--------------|-------------|----------|
-|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på slutanvändares enheter när de ansluter till det här Wi-Fi-nätverket.|EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**.|
+|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarnas enheter när de ansluter till WiFi-nätverket.|EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**.|
 |**Rotcertifikat för serververifiering**|Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. |EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**|
 |**Identitetssekretess (yttre identitet)**|Ange vilken text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|EAP-typen är **PEAP**|
 

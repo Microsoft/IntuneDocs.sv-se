@@ -1,11 +1,12 @@
 ---
-title: Datamodellen informationslager | Microsoft Docs
-description: "Intune-informationslagret samplar data dagligen och visar historik över den ständigt föränderliga mobilmiljön."
+title: Datamodellen informationslager
+titlesuffix: Microsoft Intune
+description: "Microsoft Intune-informationslagret samlar in data dagligen för att kunna ge en historisk bild över den ständigt föränderliga mobilmiljön."
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,17 +15,17 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f52531f854c57551613b1e94f0cfd0925c6d3d12
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7bf893acd5a3d162b767744001fe2257824d86a4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="data-warehouse-data-model"></a>Datamodellen informationslager
 
-Intune-informationslagret samplar dagligen data för att ge en historik över den ständigt föränderliga miljön med mobila enheter. Vyn består av relaterade objekt i tid.
+Intune-informationslagret samplar dagligen data för att ge en historik över den ständigt föränderliga miljön med mobila enheter. Vyn består av relaterade entiteter i tid.
 
-## <a name="things-entity-sets"></a>Saker: entitetsuppsättningar
+## <a name="entities-entity-sets"></a>Entiteter: Entitetsuppsättningar
 
 Informationslagret visas data i följande övergripande områden:
 
@@ -33,7 +34,7 @@ Informationslagret visas data i följande övergripande områden:
   -  Inventering av appar och programvara
   -  Efterlevnadsprinciper och enhetskonfigurering
 
-Dessa områden innehåller entiteterna eller saker som är viktiga för din Intune-miljö. Du hittar information entitetsuppsättningarna i följande avsnitt:
+Dessa områden innehåller entiteterna som är viktiga för din Intune-miljö. Du hittar information entitetsuppsättningarna i följande avsnitt:
 
   -  [Program](reports-ref-application.md)
   -  [Datum](reports-ref-date.md)

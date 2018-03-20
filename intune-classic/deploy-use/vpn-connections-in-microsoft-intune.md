@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 08e1126e05d101669c5796e4bd7fcaf08339fa43
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 7c63c817ccddd0abc6c5c6b0ae2f2a7d1cb2d9bf
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vpn-connections-in-microsoft-intune"></a>VPN-anslutningar i Microsoft Intune
 
@@ -46,14 +46,14 @@ Konfigurationsalternativen för VPN-profiler varierar beroende på vilken enhets
 Intune har stöd för att skapa VPN-profiler som använder följande anslutningstyper:
 
 
-Anslutningstyp |iOS och Mac OS X  |Android och Android for Work|Windows 8,1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop och Mobile |
+Anslutningstyp |iOS och Mac OS X  |Android och Android for Work|Windows 8.1|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop och Mobile |
 ----------------|------------------|-------|-----------|----------|--------------|-----------------|----------------------|
 Cisco AnyConnect|Ja |Ja   |Nej    |Nej  |Nej    | Ja, (OMA-URI, endast mobil)|     
 Cisco (IPsec)|Ja |Ja   |Nej  |Nej  |Nej | Nej|
 Citrix|Ja |Ja (endast Android)   |Nej  |Nej  |Nej | Nej|
 Pulse Secure|Ja  |Ja |Ja   |Ja  |Ja| Ja|        
 F5 Edge Client|Ja |Ja |Ja |Ja  |   Ja |  Ja|   
-Dell SonicWALL Mobile Connect|Ja |Ja |Ja |Ja |Ja |Ja|         
+SonicWall Mobile Connect|Ja |Ja |Ja |Ja |Ja |Ja|         
 Kontrollpunkt för mobilt VPN:|Ja |Ja |Ja |Ja|Ja|Ja|
 Microsoft SSL (SSTP)|Nej |Nej |Nej |Nej|Nej|VPNv1 OMA-URI*|
 Microsoft Automatic|Nej |Nej |Nej |Nej|Ja (OMA-URI)|Ja|
@@ -108,7 +108,7 @@ Inställningsnamn  |Mer information
 **Namn**     |Ange ett unikt namn för VPN-profilen som hjälper dig att identifiera den i Intune-konsolen.         
 **Beskrivning**     |Ange en lämplig beskrivning av VPN-profilen och annan information som gör det enkelt att hitta profilen.         
 **VPN-anslutningens namn (visas för användare)**     |Ange ett namn på VPN-profilen. Detta är det namn som användarna ser i listan över tillgängliga VPN-anslutningar på sina enheter.         
-**Anslutningstyp**     |  Välj någon av följande anslutningstyper som ska användas i VPN-profilen: **Cisco AnyConnect** (inte tillgänglig för Windows 8.1 eller Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **Dell SonicWALL Mobile Connect**, **CheckPoint Mobile VPN**.
+**Anslutningstyp**     |  Välj någon av följande anslutningstyper för VPN-profilen: **Cisco AnyConnect** (inte tillgänglig för Windows 8.1 eller Windows Phone 8.1), **Pulse Secure**, **Citrix**, **F5 Edge Client**, **SonicWall Mobile Connect**, **CheckPoint Mobile VPN**.
 **VPN-serverbeskrivning**     | Ange en beskrivning för den VPN-server som enheterna ska ansluta till. Exempel: **Contoso VPN Server**. Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.
 **Serverns IP-adress eller fullständiga domännamn**    |Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.  Om anslutningstypen är **F5 Edge Client** använder du fältet **Serverlista** för att ange en lista med serverbeskrivningar och IP-adresser.         |         
 **Serverlista**     |Välj **Lägg till** om du vill lägga till en ny VPN-server som ska användas för VPN-anslutningen. Du kan även ange vilken server som ska vara standardserver för anslutningen. Det här alternativet visas endast när anslutningstypen är **F5 Edge Client**.         
@@ -118,7 +118,7 @@ Inställningsnamn  |Mer information
 **Välj ett certifikat för klientautentisering (identitetscertifikat)**|Välj det SCEP-klientcertifikat du skapade tidigare och som ska användas för att autentisera VPN-anslutningen. Mer information om hur du använder certifikatprofiler i Intune finns i [Skydda resursåtkomst med certifikatprofiler](secure-resource-access-with-certificate-profiles.md). Det här alternativet visas endast när autentiseringsmetoden är **Certifikat**.
 **Roll**| Ange namnet för den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner. Det här alternativet visas endast när anslutningstypen är **Pulse Secure** eller **Citrix**.
 **Område**|Ange namnet för den autentiseringssfär som ska användas. En autentiseringssfär är en grupp autentiseringsresurser som används av Pulse Secure- eller Citrix-anslutningstypen. Det här alternativet visas endast när anslutningstypen är **Pulse Secure** eller **Citrix**.
-**Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas endast när anslutningstypen är **Dell SonicWALL Mobile Connect**.
+**Inloggningsgrupp eller -domän**|Ange namnet för den inloggningsgrupp eller domän som du vill ansluta till. Det här alternativet visas endast när anslutningstypen är **SonicWall Mobile Connect**.
 **Fingeravtryck**|Ange en sträng, till exempel ”Contoso fingeravtryckskod” som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på VPN-servern medan fingeravtrycket visas. (Användaren verifierar fingeravtrycket manuellt och väljer **betrodd** för att ansluta.) Det här alternativet visas endast när anslutningstypen är **CheckPoint Mobile VPN**.
 **Per app-VPN**|Välj det här alternativet om du vill koppla VPN-anslutningen till en iOS- eller Mac OS X-app så att anslutningen öppnas när appen körs. Du kan associera VPN-profilen med en app när du distribuerar programvaran. Mer information finns i [Distribuera appar i Microsoft Intune](deploy-apps-in-microsoft-intune.md).
 **VPN på begäran**|Du kan konfigurera VPN på begäran för enheter med iOS 8.0 eller senare. Anvisningar för hur du konfigurerar detta finns i [VPN på begäran för iOS-enheter](#on-demand-vpn-for-ios-devices).
@@ -126,7 +126,7 @@ Inställningsnamn  |Mer information
 **Använd automatiskt konfigurationsskript** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Om VPN-servern kräver en proxyserver för anslutningen kan du ange om du vill använda ett automatiskt konfigurationsskript för att ange inställningarna och sedan ange en URL till den fil som innehåller inställningarna. Mer information finns i dokumentationen till Windows Server.
 **Använd proxyserver** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Välj det här alternativet om VPN-servern kräver en proxyserver för anslutningen och ange proxyserverns adress och portnummer. Mer information finns i dokumentationen till Windows Server.
 **Kringgå proxyinställningar för lokala adresser** (endast iOS, Mac OS X, Windows 8.1 och Windows Phone 8.1)|Välj det här alternativet om VPN-servern kräver en proxyserver för anslutningen och du inte vill använda proxyservern för de lokala adresser som du anger. Mer information finns i dokumentationen till Windows Server.
-**Anpassad XML** (endast Windows 8.1 och senare och Windows Phone 8.1 och senare)|Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen. Exempel för **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Exempel för **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Exempel för **Dell SonicWALL Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Exempel för **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Läs VPN-dokumentationen för varje tillverkare för mer information om hur du skriver anpassade XML-kommandon.
+**Anpassad XML** (endast Windows 8.1 och senare och Windows Phone 8.1 och senare)|Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen. Exempel för **Pulse Secure**: &lt;pulse-schema&gt;&lt;isSingleSignOnCredential&gt;true&lt;/isSingleSignOnCredential&gt;&lt;/pulse-schema&gt;. Exempel för **CheckPoint Mobile VPN**: &lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true"  debug="3" /&gt;. Exempel för **SonicWall Mobile Connect**: &lt;MobileConnect&gt;&lt;Compression&gt;false&lt;/Compression&gt;&lt;debugLogging&gt;True&lt;/debugLogging&gt;&lt;packetCapture&gt;False&lt;/packetCapture&gt;&lt;/MobileConnect&gt;. Exempel för **F5 Edge Client**: &lt;f5-vpn-conf&gt;&lt;single-sign-on-credential /&gt;&lt;/f5-vpn-conf&gt;. Läs VPN-dokumentationen för varje tillverkare för mer information om hur du skriver anpassade XML-kommandon.
 **Söklista för DNS-suffix** (endast Windows Phone 8.1)|Ange ett DNS-suffix på varje rad. Varje DNS-suffix som du anger genomsöks vid anslutning till en webbplats med ett kort namn. Ange till exempel DNS-suffixen **domain1.contoso.com** och **domain2.contoso.com**. Besök webbadressen **http://mywebsite** så genomsöks webbadresserna **http://mywebsite.domain1.contoso.com** och **http://mywebsite.domain2.contoso.com**.
 **Kringgå VPN vid anslutning till företagets Wi-Fi-nätverk** (endast Windows Phone 8.1)|Välj det här alternativet om du vill ange att VPN-anslutningen inte ska användas när enheten är ansluten till företagets Wi-Fi-nätverk.
 **Kringgå VPN vid anslutning till ett hemma-Wi-Fi-nätverk** (endast Windows Phone 8.1)|Välj det här alternativet om du vill ange att VPN-anslutningen inte ska användas när enheten är ansluten till Wi-Fi hemma.

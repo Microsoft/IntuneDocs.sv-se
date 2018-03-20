@@ -1,11 +1,12 @@
 ---
 title: "Hämta data från API för informationslager med en REST-klient"
+titlesuffix: Microsoft Intune
 description: "Hämta data från Intune-informationslagret med ett RESTful-API."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/31/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,11 +15,11 @@ ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e96e1a728fbb054f412dc6c2a3610179aec18b75
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 22bfcc4e2947cba54509409132da3687d51a472d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -34,9 +35,9 @@ Följande anvisningar visar hur du auktoriserar och kommer åt API med en REST-k
 
 ## <a name="create-a-client-app-as-a-native-app-in-azure"></a>Skapa en klientapp som inbyggd app i Azure
 
-Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten som körs på din lokala dator hänvisar till Intune-informationslagrets API när den lokala klienten begär autentiseringsuppgifter. 
+Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten som körs på din lokala dator hänvisar till Intune-informationslagrets API när den lokala klienten begär autentiseringsuppgifter.
 
-1. Logga in på Azure Portal för din klientorganisation. Välj **Azure Active Directory** > **Appregistreringar** så att bladet **Appregistreringar** öppnas.
+1. Logga in på Azure Portal för din klientorganisation. Välj **Azure Active Directory** > **Appregistreringar** så att fönstret **Appregistreringar** öppnas.
 2. Välj **Ny appregistrering**.
 3. Ange information om appen.
     1.  Skriv ett eget namn, till exempel Intune Data Warehouse Client som **namn**.
@@ -53,19 +54,19 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
 Nu har du definierat en app i Azure. Bevilja åtkomst från inbyggda klientappen till Microsoft Intune-API.
 
 1.  Välj den inbyggda appen. Du gav appen ett namn i stil med **Intune Data Warehouse Client**.
-2.  Välj **Nödvändiga behörigheter** på bladet **Inställningar**
-3.  Välj **Lägg till** på bladet **Nödvändiga behörigheter**.
+2.  Välj **Nödvändiga behörigheter** i fönstret **Inställningar**
+3.  Välj **Lägg till** i fönstret **Nödvändiga behörigheter**.
 4.  Välj **Välj en API**.
 5.  Sök efter namnet på webbappen. Namnet är **Microsoft Intune API**.
 6.  Välj appen i listan.
 7.  Välj **Välj**.
 8.  Markera rutan **Delegerade behörigheter** för att lägga till **Hämta informationslagerdata från Microsoft Intune**.
 
-    ![Aktivera åtkomst](media\reports-get_rest_data_client_access.png)
+    ![Aktivera åtkomst – Microsoft Intune API](media\reports-get_rest_data_client_access.png)
 
 9.  Välj **Välj**.
 10.  Välj **Klar**.
-11.  Du kan också välja **Bevilja behörigheter** på bladet Nödvändiga behörigheter. Då får alla konton i den aktuella katalogen åtkomst. Dialogrutan för medgivande visas inte för användarna i klientorganisationen. Mer information finns i [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Integrera program med Azure Active Directory).
+11.  Du kan också välja **Bevilja behörigheter** i fönstret Nödvändiga behörigheter. Då får alla konton i den aktuella katalogen åtkomst. Dialogrutan för medgivande visas inte för användarna i klientorganisationen. Mer information finns i [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Integrera program med Azure Active Directory).
 12.  Välj **Ja**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Hämta data från Microsoft Intune-API med Postman
@@ -76,7 +77,7 @@ Du kan arbeta med API för Intune-informationslager med en vanlig REST-klient, t
 
 Du behöver följande information för att skicka ett REST-anrop via Postman:
 
-| Attribut        | Description                                                                                                                                                                          | Exempel                                                                                       |
+| Attribut        | Beskrivning                                                                                                                                                                          | Exempel                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Callback URL (Webbadress för återanrop)     | Ställ in det här som webbadress för återanrop på appinställningssidan.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Token Name (Tokennamn)       | En sträng som används för att skicka autentiseringsuppgifter till Azure-appen. Med den här processen skapas din token så att du kan anropa API för informationslagret.                          | Bearer                                                                                        |
@@ -88,14 +89,14 @@ Du behöver följande information för att skicka ett REST-anrop via Postman:
 
 ### <a name="odata-endpoint"></a>OData-slutpunkt
 
-Du behöver även slutpunkten. Du behöver URL för det anpassade flödet för att kunna hämta slutpunkten för informationslagret. Du kan hämta OData-slutpunkten från bladet Informationslager.
+Du behöver även slutpunkten. Du behöver URL för det anpassade flödet för att kunna hämta slutpunkten för informationslagret. Du kan hämta OData-slutpunkten från fönstret Informationslager.
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** + **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Konfigurera Intune Data Warehouse** under **Andra uppgifter**.
 4. Kopiera URL för det anpassade flödet under **Använd rapporteringstjänster från tredje part**. Det bör se ut ungefär så här: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 
-Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`. 
+Slutpunkten följer följande format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
 
 Entiteten **datum** ser till exempel ut som: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 
@@ -151,10 +152,10 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 > Du kan öppna följande kodexempel [i GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). De senaste ändringarna och uppdateringarna av exemplet hittar du i GitHub-databasen.
 
 1.  Öppna **Microsoft Visual Studio**.
-2.  Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)). 
+2.  Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)).
 3.  Ge projektet namnet ` IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och välj sedan **OK**.
 4.  Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Välj **Bläddra** och skriv sedan `Microsoft.IdentityModel.Clients.ActiveDirectory` i sökrutan.
-5. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och välj sedan **Install** (Installera). 
+5. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och välj sedan **Install** (Installera).
 6. Välj **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
 7. Öppna `Program.cs` från Solution Explorer.
 
@@ -178,15 +179,15 @@ namespace IntuneDataWarehouseSamples
     * emailAddress - The email address of the user that you will authenticate as.
     *
     * password  - The password for the above email address.
-    *    This is inline only for simplicity in this sample. We do not 
+    *    This is inline only for simplicity in this sample. We do not
     *    recommend storing passwords in plaintext.
     *
     * applicationId - The application ID of the native app that was created in AAD.
     *
-    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in 
+    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
     *      the Azure portal.
-    * 
-    * collectionName - The name of the warehouse entity collection you would like to 
+    *
+    * collectionName - The name of the warehouse entity collection you would like to
     *      access.
     */
    var emailAddress = "intuneadmin@yourcompany.com";
@@ -224,6 +225,6 @@ namespace IntuneDataWarehouseSamples
 
 ## <a name="next-steps"></a>Nästa steg
 
-Du hittar information om auktorisering, API:ets webbadresstruktur och OData-slutpunkter i [API-slutpunkt för Intune-informationslager](reports-api-url.md). 
+Du hittar information om auktorisering, API:ets webbadresstruktur och OData-slutpunkter i [API-slutpunkt för Intune-informationslager](reports-api-url.md).
 
 I datamodellen Intune-informationslager hittar du också dataentiteterna i API:et. Mer information finns i [Datamodellen API för Intune-informationslager](reports-ref-data-model.md)

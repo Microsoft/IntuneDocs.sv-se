@@ -1,6 +1,6 @@
 ---
 title: "Massregistrering för Windows 10"
-titlesuffix: Azure portal
+titlesuffix: Microsoft Intune
 description: "Skapa ett massregistreringspaket för Microsoft Intune"
 keywords: 
 author: Erikje
@@ -14,11 +14,11 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: 8b4c9f5685c12bb6c15d15d85c73d573dfcd66e8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 851be6ad98383937a3457a33e47115933f309cea
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -36,7 +36,7 @@ Azure AD-användare är standardanvändare på enheterna och kan ta emot de till
 ## <a name="create-a-provisioning-package"></a>Skapa ett konfigurationspaket
 
 1. Hämta [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) från Microsoft Store.
-![Skärmbild av appen Windows Configuration Designer, Store-skärmbilder och beskrivning](media/bulk-enroll-store.png)
+![Skärmbild av Store med Windows Configuration Designer-appen](media/bulk-enroll-store.png)
 
 2. Öppna appen **Windows Configuration Designer** och välj **Konfigurera skrivbordsenheter**.
 ![Skärmbild över att välja Konfigurera skrivbordsenheter i Windows Configuration Designer-appen](media/bulk-enroll-select.png)
@@ -47,23 +47,24 @@ Azure AD-användare är standardanvändare på enheterna och kan ta emot de till
   - **Beskrivning** – En valfri beskrivning av projektet ![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-name.png)
 
 4.  Ange ett unikt namn för dina enheter. Namnen kan innehålla ett serienummer (%%SERIAL%%) eller en slumpmässig uppsättning tecken. Du kan också ange en produktnyckel om du uppgraderar Windows, konfigurerar enheten för delad användning och tar bort det tidigare installerade programmet.
-![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-device.png)
+
+    ![Skärmbild över att ange namn och produktnyckel i Windows Configuration Designer-appen](media/bulk-enroll-device.png)
 
 5.  Du kan också konfigurera de Wi-Fi-nätverksenheter som ska anslutas när de startar första gången.  Om nätverksenheterna inte är konfigurerade, krävs en anslutning till ett kabelanslutet nätverk när enheten startas första gången.
 ![Skärmbild över att aktivera Wi-Fi, inklusive nätverks-SSID och nätverkstyper i Windows Configuration Designer-appen](media/bulk-enroll-network.png)
 
 6.  Välj **Registrera i Azure AD**, ange ett datum i **Förfallodatum för masstoken** och välj sedan **Hämta masstoken**.
-![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-account.png)
+![Skärmbild över kontohantering i Windows Configuration Designer-appen](media/bulk-enroll-account.png)
 
 7. Ange dina Azure AD-autentiseringsuppgifter för att kunna hämta en masstoken.
-![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-cred.png)
+![Skärmbild över att logga in i Windows Configuration Designer-appen](media/bulk-enroll-cred.png)
 
 8.  Klicka på **Nästa** när **Masstoken** har hämtats.
 
 9. Du kan också **Lägga till program** och **Lägga till certifikat**. Dessa appar och certifikat är konfigurerade på enheten.
 
 10. Du kan också lösenordsskydda ditt konfigurationspaket.  Klicka på **Skapa**.
-![Skärmbild över att ange namn, projektmapp och beskrivning i Windows Configuration Designer-appen](media/bulk-enroll-create.png)
+![Skärmbild över paketskydd i Windows Configuration Designer-appen](media/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Konfigurera enheter
 

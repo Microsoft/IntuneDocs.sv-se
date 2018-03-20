@@ -1,12 +1,12 @@
 ---
 title: "Skapa en efterlevnadsprincip för Android for Work"
-titleSuffix: Azure portal
-description: "Lär dig hur du skapar en efterlevnadsprincip för Android for Work-enheter.\""
+titleSuffix: Microsoft Intune
+description: "Skapa en efterlevnadsprincip i Intune för Android for Work-enheter, för att kunna ange krav som en enhet måste uppfylla för att vara kompatibel."
 keywords: 
-author: andredm7
-ms.author: andredm
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b5ff76137da7b42fddc5c1238ef9e102adfa1307
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 8ca31d4c83ccc6b786933080b96f66953cf1a108
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android for Work-enheter i Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Efterlevnadsprinciper skapas för varje plattform.  Du kan skapa en efterlevnadsprincip i Azure-portalen. Mer information om efterlevnadsprinciper finns i [Vad är enhetsefterlevnad?](device-compliance.md). Mer information om vilka förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+En efterlevnadsprincip i Intune för Android for Work-enheter anger de regler och inställningar som Android for Work-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser. Du kan även få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du skapar efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Mer information om efterlevnadsprinciper och de förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 
@@ -51,12 +51,14 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 ## <a name="create-a-compliance-policy-in-the-azure-portal"></a>Skapa en efterlevnadsprincip i Azure-portalen
 
-1. Välj **Ange enhetsefterlevnad** på bladet **Intune**. Välj **Alla enhetsefterlevnadsprinciper** under **Hantera** och välj sedan **Skapa**.
-2. Skriv ett namn, ange en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
-3. Välj **Efterlevnadskrav** och ange inställningar för **Säkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskap**. När du är klar klickar du på **OK**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1. I fönstret **Intune** väljer du **Enhetsefterlevnad**. Under **Hantera** väljer du **Principer** och **Skapa princip**.
+2. Skriv ett namn, ge en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
+3. Välj **Konfigurera inställningar** för att ange **Systemsäkerhet**, **Enhetens hälsotillstånd** och **Enhetsegenskaper** här. När du är klar väljer du **OK**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
-5. In the **Actions for noncompliance** blade, choose **Add** to create a new action.  The action parameters blade allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
+5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
 6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
 7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
 8. Choose **Add** to finish creating the action.
@@ -64,10 +66,10 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer på bladet **Efterlevnad – princip**.
+Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad – Principer**.
 
-1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
-2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**.  När du väljer **Välj** distribueras principen till användarna.
+1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+2. Öppna fönstret som visar Azure AD-säkerhetsgrupperna genom att välja **Valda grupper**.  När du väljer **Spara** distribueras principen till användarna.
 
 Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
 
