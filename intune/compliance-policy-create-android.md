@@ -15,11 +15,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 283685629ac1e268a66d82250273a17f9baa5d17
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 2539ff1703809f5f89183a9d0cfd448f2e57fd64
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i Intune
 
@@ -44,10 +44,10 @@ En Intune-enhetsefterlevnadsprincip för Android anger de regler och inställnin
 
 ## <a name="to-assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad - Principer**.
+Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad – Principer**.
 
 1. Välj principen och **Tilldelningar**. Då öppnas det fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
-2. Öppna fönstret som visar säkerhetsgrupper för Azure AD genom att välja **Valda grupper**. Här hittar du en lista över alla säkerhetsgrupper i Azure Active Directory.  Du kan välja de användargrupper som du vill att den här principen ska tillämpas på och välja **Spara** för att distribuera principen till användare.
+2. Öppna fönstret som visar Azure AD-säkerhetsgrupperna genom att välja **Valda grupper**. Här hittar du en lista över alla säkerhetsgrupper i Azure Active Directory.  Du kan välja de användargrupper som du vill att den här principen ska tillämpas på och välja **Spara** för att distribuera principen till användare.
 
 Du har tillämpat principen på användarna.  Efterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas.
 
@@ -70,8 +70,6 @@ Inställningen **Okända källor** måste vara aktiverad för program med separa
   - **Låg**: Enheten utvärderas som kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
   - **Medel**: Enheten utvärderas som kompatibel om hoten som finns på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
   - **Hög**: Det här alternativet är minst säkert. Detta tillåter i princip alla hotnivåer. Det skulle kunna vara användbart om lösningen endast används i rapporteringssyfte.
-
-Se [Aktivera regeln för skydd mot enhetshot i policyn för efterlevnad](https://docs.microsoft.com/intune-classic/deploy-use/enable-device-threat-protection-rule-in-compliance-policy) för mer information.
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
