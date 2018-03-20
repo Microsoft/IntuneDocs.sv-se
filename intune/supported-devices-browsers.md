@@ -1,5 +1,6 @@
 ---
-title: "Enheter som stöds – Microsoft Intune"
+title: "Operativsystem och webbläsare som stöds av Microsoft Intune"
+titleSuffix: 
 description: "Visar en lista över enhetsplattformar och webbläsare som stöds för Intunes enhetshantering"
 keywords: 
 author: ErikjeMS
@@ -14,24 +15,19 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: angrobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 11c4336979ee9089b218ea79ac826176d99492d9
-ms.sourcegitcommit: 754fcc31155b28d6910bba45419c6be745f8793e
+ms.openlocfilehash: 1e58201620612118f0984a1c477b3fa3bc7e923a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Operativsystem och webbläsare som stöds
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Den här artikeln är avsedd för systemadministratörer som ansvarar för hanteringen av enheter i företaget. Hjälp om hur du installerar Intune på din enhet finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/company-portal-frequently-asked-questions).
+Granska de operativsystem och webbläsare som stöds innan du installerar Microsoft Intune.
 
-Innan du börjar konfigurera Microsoft Intune, bör du granska följande krav:
-
-- [Operativsystem som stöds](#intune-supported-operating-systems)
-- [En lista över vilka webbläsare som använder Intune](#intune-supported-web-browsers)
-
-Du bör också känna till [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md) ([klassisk portal](/intune-classic/get-started/network-bandwidth-use)).
+Hjälp om hur du installerar Intune på din enhet finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/company-portal-frequently-asked-questions). Du bör också känna till [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md) ([klassisk portal](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Operativsystem som stöds i Intune
 

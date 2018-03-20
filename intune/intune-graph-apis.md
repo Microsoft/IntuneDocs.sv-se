@@ -5,7 +5,7 @@ keywords: intune graphapi c# powershell permission roles
 author: vhorne
 manager: dougeby
 ms.author: victorh
-ms.date: 06/20/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1c97c32f5f6c81f1112c99b486898c271cc5ff2
-ms.sourcegitcommit: 9bd6278d129fa29f184b2d850138f8f65f3674ea
+ms.openlocfilehash: 7b59d4bc689daf462ac01a106457c3835a78b98b
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 
@@ -44,7 +44,7 @@ Den här artikeln:
 
 - Visar exempel på autentisering av Intune API för C# och PowerShell.
 
-- Beskriver hur du ger stöd för flera klienter
+- Beskriver hur du ger stöd för flera klientorganisationer.
 
 Mer information finns i:
 
@@ -97,7 +97,7 @@ Registrera en app för att använda Microsoft Graph API:
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Välj de roller som krävs för din app genom att göra en bockmarkering till vänster om namnen.  Mer information om specifika behörighetsomfattningar för Intune finns i [Intunes behörighetsomfattningar](#user-content-intune-permission-scopes).  Mer information om andra behörighetsomfattningar för Graph API finns i [Behörighetsreferens för Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Välj de roller som krävs för din app genom att göra en bockmarkering till vänster om namnen.  Mer information om specifika behörighetsomfattningar för Intune finns i [Intunes behörighetsomfattningar](#intune-permission-scopes).  Mer information om andra behörighetsomfattningar för Graph API finns i [Behörighetsreferens för Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
 
     För att få bäst resultat väljer du det minsta antal roller som krävs för att implementera ditt program.
 
@@ -139,7 +139,7 @@ När du beviljar behörighet för Microsoft Graph kan du ange följande omfattni
 
 Inställningen _Aktivera åtkomst_ | Namn på sökomfång
 :--|:--
-__Utföra användarpåverkande fjärråtgärder på Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#user-content-mgd-po)
+__Utföra användarpåverkande fjärråtgärder på Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Läsa och skriva Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Läsa Microsoft Intune-enheter__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Läsa och skriva RBAC-inställningar för Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
@@ -585,7 +585,7 @@ Kom ihåg att lägga till användaren i andra roller om det behövs. Om du till 
 
 Du kan också:
 
-- Använda http://portal.office.com om du vill tilldela en Intune-licens till ditt användarkonto.
+- Använd https://portal.office.com om du vill tilldela en Intune-licens till ditt användarkonto.
 
 - Uppdatera programkod för att autentisera till klientens Azure AD-klientdomän i stället för din egen.
 

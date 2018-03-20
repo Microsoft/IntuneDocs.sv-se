@@ -1,54 +1,54 @@
 ---
-title: "Intune VPN-inställningar för Windows 8.1-enheter"
-titleSuffix: Azure portal
-description: "Lär dig mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på Windows 8.1-enheter.”"
+title: "VPN-inställningar i Microsoft Intune för Windows 8.1-enheter"
+titleSuffix: 
+description: "Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows 8.1."
 keywords: 
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 12/15/2017
+ms.date: 3/6/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
-ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0126c483ec905d4c073e19b35498c27069ecd285
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 8ced3e03fa337034076af75c7984a30cd75105bb
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="vpn-settings-for-windows-81-devices-in-microsoft-intune"></a>VPN-inställningar för Windows 8.1-enheter i Microsoft Intune
+# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows 8.1
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Beroende på vilka inställningar du väljer, är inte alla värden i listan nedan konfigurerbara.
+I den här artikeln beskrivs de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows 8.1.
+
+Beroende på vilka inställningar du väljer kan bara vissa värden i följande lista konfigureras.
 
 ## <a name="base-vpn-settings"></a>Grundläggande VPN-inställningar
 
 
-- **Använd alla inställningar endast för Windows 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om detta anges till **Konfigurerad**, tillämpas inställningarna endast på Windows 8.1-enheter. Om värdet anges till **Inte konfigurerad**, gäller de här inställningarna även för Windows 10-enheter.
-- **Anslutningsnamn** – Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
-- **Servrar** – Lägg till en eller flera VPN-servrar som enheterna ska ansluta till.
-    - **Lägg till** – Öppnar bladet **Lägg till rad** där du kan ange följande information:
+- **Använd alla inställningar endast för Windows 8.1** – Detta är en inställning som du kan konfigurera i den klassiska Intune-portalen. Den här inställningen kan inte ändras i Azure-portalen. Om detta är inställt på **Konfigurerad**, tillämpas inställningarna endast på Windows 8.1-enheter. Om det är inställt på **Inte konfigurerad**, gäller inställningarna även för Windows 10-enheter.
+- **Anslutningsnamn** – Ange ett namn på anslutningen. Användarna ser det här namnet när de bläddrar på enheten i listan med tillgängliga VPN-anslutningar.
+- **Servrar** – Lägg till en eller flera VPN-servrar som enheterna ansluter till.
+    - **Lägg till** – Öppnar sidan **Lägg till rad** där du kan ange följande information:
         - **Beskrivning** – Ange ett beskrivande namn för servern, som t.ex. **Contoso VPN-server**.
-        - **IP-adress eller FQDN** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
+        - **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.
         - **Standardserver** – Gör den här servern till den standardserver som enheterna använder för att upprätta anslutningen. Du ska endast ange en server som standard.
     - **Importera** – Bläddra till en fil som innehåller en kommateckenavgränsad lista med servrar i formatbeskrivning, IP-adress eller FQDN, samt standardserver. Välj **OK** för att importera dessa till listan **Servrar**.
     - **Exportera** – Exporterar listan med servrar till en kommateckenavgränsad fil (csv).
 
 - **Anslutningstyp** – Välj VPN-anslutningstyp från leverantörslistan nedan:
 - **Check Point Capsule VPN**
-- **Dell SonicWALL Mobile Connect**
+- **SonicWall Mobile Connect**
 - **F5 Edge Client**
 - **Pulse Secure**
 
 <!--- **Fingerprint** (Check Point Capsule VPN only) - Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
-- **Inloggningsgrupp eller domän** (endast Dell SonicWALL Mobile Connect) – Ange namnet på den inloggningsgrupp eller domän som du vill ansluta till.
+- **Inloggningsgrupp eller domän** (endast SonicWall Mobile Connect) – Ange namnet på den inloggningsgrupp eller domän som du vill ansluta till.
 
 - **Roll** (endast Pulse Secure) – Ange namnet på den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner.
 
@@ -70,7 +70,7 @@ Beroende på vilka inställningar du väljer, är inte alla värden i listan ned
 
 ```
 
-**Exempel för Dell SonicWALL Mobile Connect:**
+**Exempel för SonicWall Mobile Connect:**
 ```
     <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 
@@ -83,7 +83,7 @@ Beroende på vilka inställningar du väljer, är inte alla värden i listan ned
 
 ```
 
-Läs VPN-dokumentationen för varje tillverkare för mer information om hur du skriver anpassade XML-kommandon.
+Mer information om hur du skriver anpassade XML-kommandon finns i varje tillverkares VPN-dokumentation.
 
 
 ## <a name="proxy-settings"></a>Proxyinställningar

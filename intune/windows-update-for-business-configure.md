@@ -6,18 +6,18 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 1/30/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 63d8628c183b3efb924cae6635e2c8038fd42598
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: d6ccda2aba0b1383de6c38b7a2fdcfdc742d0e15
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -71,20 +71,21 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
 ## <a name="how-to-create-and-assign-update-rings"></a>Skapa och tilldela uppdateringsringar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Programuppdateringar** på **Intune**-bladet.
-4. Välj **Hantera** > **Windows 10-uppdateringsringar** på bladet **Programuppdateringar**.
-5. Välj **Skapa** på det blad som visar listan över uppdateringsringar.
-6. Ange ett namn och en valfri beskrivning av uppdateringsringen på bladet **Skapa uppdateringsring** och välj sedan **Inställningar**.
-7. Konfigurera följande information på bladet **Inställningar**:
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Programuppdateringar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Windows 10-uppdateringsringar** i fönstret **Programuppdateringar**.
+5. Välj **Skapa** i det fönster som visar listan med uppdateringsringar.
+6. Ange ett namn och en valfri beskrivning av uppdateringsringen i fönstret **Skapa uppdateringsring** och välj sedan **Inställningar – Konfigurera**.
+7. Konfigurera följande information i fönstret **Inställningar**:
     - **Underhållskanal**: Välj den kanal som enheten får Windows-uppdateringar från (Halvårskanal (riktad) eller Halvårskanal).
-    - **Microsoft-uppdateringar**: Ange om du vill söka efter appuppdateringar från Microsoft Update.
+    - **Microsoft-produktuppdateringar**: Ange om du vill söka efter appuppdateringar från Microsoft Update.
     - **Windows-drivrutiner**: Ange om du vill exkludera Windows Update-drivrutiner under uppdateringar.
     - **Beteende för automatiska uppdateringar**: Ange hur du vill hantera automatiska uppdateringsbeteenden när det gäller att söka efter, hämta och installera uppdateringar. Mer information finns i [Uppdatera/AllowAutoUpdate](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#update-allowautoupdate).
     - **Uppskjutningsperiod för kvalitetsuppdatering (dagar)** – Ange det antal dagar under vilka kvalitetsuppdateringar ska fördröjas. Du kan fördröja mottagandet av dessa kvalitetsuppdateringar under en period på upp till 30 dagar från det att de har släppts.  
 
     Kvalitetsuppdateringar utgörs vanligtvis av korrigeringar och förbättringar av befintliga Windows-funktioner, och publiceras vanligtvis den första tisdagen varje månad, men Microsoft kan publicera dem när som helst. Du kan ange om, och hur länge, du vill skjuta upp mottagandet av kvalitetsuppdateringar från det att de har gjorts tillgängliga.
+
     - **Uppskjutningsperiod för funktionsuppdatering (dagar)** – Ange det antal dagar under vilka funktionsuppdateringar ska fördröjas. Du kan fördröja mottagandet av dessa funktionsuppdateringar under en period på upp till 180 dagar från det att de har släppts.
 
     Funktionsuppdateringarna är för det mesta nya funktioner i Windows. När du har konfigurerat inställningen **Underhållskanal** (Halvårskanal (riktad) eller Halvårskanal) kan du definiera om, och hur länge, du vill fördröja mottagandet av funktionsuppdateringarna efter det att de gjorts tillgängliga av Microsoft på Windows Update.
@@ -93,13 +94,13 @@ När du har skapat uppdateringsringar tilldelar du dem till enhetsgrupper. Genom
 
     **Om Underhållskanal är inställd på Halvårskanal och uppskjutningsperioden är 30 dagar**: Vi tänker oss att funktionsuppdateringen X först blir allmänt tillgänglig i Windows Update som en Halvårskanal (riktad) i januari. Fyra månader senare, i april, släpps funktionsuppdatering X till Halvårskanal. Enheten får funktionsuppdateringen 30 dagar efter det att den här Halvårskanal-versionen släppts, och den uppdateras i maj.
 
-    - **Leveransoptimering** – Välj den metod för vilken enheterna ska hämta Windows-uppdateringar. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
-1. När du är klar klickar du först på **OK**, sedan på bladet **Skapa uppdateringsring** och därefter på **Skapa**.
+    - **Leveransoptimeringens nedladdningsläge** – Välj den metod som enheterna ska ladda ner Windows-uppdateringar med. Mer information finns i [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+1. När du är klar klickar du först på **OK**. Sedan går du till fönstret **Skapa uppdateringsring** och klickar på **Skapa**.
 
 Den nya uppdateringsringen visas i listan över uppdateringsringar.
 
 1. Om du vill tilldela ringen så markera den och välj **Tilldelningar** på fliken <*ringens namn*>.
-2. På nästa flik markerar du **Välj grupper** och markerar sedan de grupper för vilka du vill tilldela den här ringen.
+2. På nästa flik markerar du först **Välj grupper att ta med** och sedan de grupper som du vill tilldela ringen till.
 3. När du är klar slutför du tilldelningen genom att markera **Välj**.
 
 ## <a name="update-compliance-reporting"></a>Uppdatera efterlevnadsrapportering
@@ -108,22 +109,21 @@ Du kan visa uppdateringsefterlevnad i Intune eller genom att använda en kostnad
 ### <a name="review-update-compliance-in-intune"></a>Granska uppdateringsefterlevnad i Intune 
 <!-- 1352223 -->
 Läs en principrapport för att se distributionsstatus för de Windows 10-uppdateringstestgrupper som du har konfigurerat. 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Programuppdateringar** på **Intune**-bladet.
-4. På bladet **Programuppdateringar** väljer du **Översikt**. Här kan du se allmän information om status för alla uppdateringsringar som du tilldelade.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Programuppdateringar** i **Intune**-fönstret.
+4. I fönstret **Programuppdateringar** väljer du **Översikt**. Här kan du se allmän information om status för alla uppdateringsringar som du tilldelade.
 5. Öppna någon av följande rapporter: 
      
    **För alla distributionstestgrupper:**
-   1. På bladet **Programuppdateringar** > **Windows 10-uppdateringsringar**. 
+   1. I fönstret **Programuppdateringar** > **Windows 10-uppdateringsringar**. 
    2. I avsnittet om **övervakning** ska du välja **Distributionsstatus per uppdateringstestgrupp**.
                    
    **För specifika distributionstestgrupper:** 
-   1. På bladet **Programuppdateringar** > **Windows 10-uppdateringsringar** väljer du vilken testgrupp du vill granska.
+   1. I fönstret **Programuppdateringar** > **Windows 10-uppdateringsringar** väljer du den distributionsring som du vill granska.
    2. I avsnittet om **övervakning** väljer du bland följande rapporter för att visa mer detaljerad information om uppdateringsringen:
-      - **Distribution av uppdateringstestgrupp för enheter**
-      - **Distribution av uppdateringstestgrupp för användare**
-      - **Distributionsstatus per inställning**
+      - **Enhetstillstånd**
+      - **Användarstatus**
 
 ### <a name="review-update-compliance-using-oms"></a>Granska uppdateringsefterlevnad med OMS
 Du kan övervaka uppdateringsdistributioner av Windows 10 genom att använda en kostnadsfria lösningen Update Compliance i Operations Management Suite (OMS). Mer information finns i [Övervaka Windows-uppdateringar med Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). När du använder den här lösningen kan du distribuera ett kommersiellt ID till någon av dina Intune-hanterade Windows 10 enheter för vilken du vill rapportera uppdateringsefterlevnad.
@@ -136,19 +136,19 @@ Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-i
 
 - **Inställningsnamn**: Windows Analytics Commercial ID
 - **Inställningsbeskrivning**: Konfigurera kommersiellt ID för Windows Analytics-lösning
-- **Datatyp:** Sträng
 - **OMA-URI** (skiftlägeskänsligt): ./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID
+- **Datatyp:** Sträng
 - **Värde**: *Använder det GUID som visas på fliken Windows-telemetri på din OMS-arbetsyta*>
 
 ![Windows-inställning för diagnostik och användningsdata](./media/commID.png)
 
 ## <a name="how-to-pause-updates"></a>Pausa uppdateringar
 Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från det att du pausar uppdateringarna. Efter det att det maximala antalet pausdagar har passerat upphör funktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen.
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Programuppdateringar** på **Intune**-bladet.
-4. Välj **Hantera** > **Windows 10-uppdateringsringar** på bladet **Programuppdateringar**.
-5. På det blad där listan över uppdateringsringar visas markerar du den ring som du vill pausa och väljer sedan **...**   >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Programuppdateringar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Windows 10-uppdateringsringar** i fönstret **Programuppdateringar**.
+5. I det fönster där listan med uppdateringsringar visas, markerar du den ring som du vill pausa. Välj sedan **...**   >  **Pausa kvalitet** > eller **Pausa funktion**, beroende på vilken typ av uppdateringar som du vill pausa.
 
 > [!IMPORTANT]
 > När du utfärdar ett pauskommando tar enheterna emot detta kommando nästa gång som de kontaktar tjänsten. Det är möjligt att de, innan de checkar in, installerar en schemalagd uppdatering.

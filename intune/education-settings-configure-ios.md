@@ -6,7 +6,7 @@ keywords:
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7bbf0ab4196f5e86d7f25aa23f12d89f1bb5ee5
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: d9b2e6df6c40ec142554db22a64d362e02884c1d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
@@ -72,12 +72,12 @@ Du kan importera information till SDS på något av följande sätt:
 
 ### <a name="configure-general-settings"></a>Konfigurera allmänna inställningar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3.  Välj **Konfigurera enheter** på **Intune**-bladet.
-4.  Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-5.  Välj **Skapa profil** på profilbladet.
-6.  Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen på bladet **Skapa profil**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+5.  I profilfönstret väljer du **Skapa profil**.
+6.  Ange **Namn** och **Beskrivning** för iOS-utbildningsprofilen i fönstret **Skapa profil**.
 7.  Välj **iOS** i listrutan **Plattform**.
 8.  Välj **Utbildning** i listrutan **Profiltyp**.
 9.  Välj **Inställningar** > **Konfigurera**.
@@ -94,7 +94,7 @@ Certifikat som du skapar måste ha stöd för serverautentisering förutom anvä
 
 ### <a name="configure-teacher-certificates"></a>Konfigurera lärarcertifikat
 
-Välj **Lärarcertifikat** på bladet **Utbildning**.
+Välj **Lärarcertifikat** i fönstret **Utbildning**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurera rotcertifikat för lärare
 
@@ -116,8 +116,8 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurera elevcertifikat
 
-1.  Välj **Elevcertifikat** på bladet **Utbildning**.
-2.  Välj **1:1** på bladet **Elevcertifikat** i typlistan **Elevcertifikat**.
+1.  Välj **Elevcertifikat** i fönstret **Utbildning**.
+2.  Välj **1:1** i fönstret **Elevcertifikat** i typlistan för **Elevcertifikat**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurera rotcertifikat för elev
 
@@ -139,10 +139,10 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 ## <a name="finish-up"></a>Slutför
 
-1.  Klicka på OK på bladet **Utbildning**.
-2.  Välj **Skapa** på bladet **Skapa profil**.
+1.  Välj OK i fönstret **Utbildning**.
+2.  Välj **Skapa** i fönstret **Skapa profil**.
     
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 
 Tilldela profilen till elevenheter i de klassrumsgrupper som skapades när du synkroniserade skolinformationen med Azure AD (se [Så här tilldelar du enhetsprofiler](device-profile-assign.md)).
 
