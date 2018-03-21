@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 42e7e2c8d239b8150f67a699ba6fef156b3e1a7d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: b7d2b551832d8d0e467d079df673954318623e4c
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
@@ -33,9 +33,11 @@ Du kan lägga till följande typer av grupper:
 ## <a name="add-a-new-group"></a>Lägg till en ny grupp
 
 Använd följande anvisningar för att skapa en ny grupp.
-1. Gå till **Grupper** i Azure-portalen och välj sedan **Ny grupp** på bladet **Alla grupper**.
-  ![Skärmbild av skärmen Användare och grupper med Ny grupp vald](./media/groups-add-new.png)
-2. Redigera den nya gruppens **namn** och **beskrivning**. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Gå till **Intune**-fönstret, välj **Grupper** och sedan **Ny grupp** i fönstret **Alla grupper**.
+  ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
+2. Ange ett **gruppnamn**, **namn** och en **beskrivning** för den nya gruppen. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
 
 3. Välj **Medlemskapstyp**:
   - **Tilldelad** för att skapa gruppen med manuellt tilldelade medlemmar. Läs mer om [grupper som tilldelats i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).

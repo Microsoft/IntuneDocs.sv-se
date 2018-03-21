@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/30/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 396c8881ba0dfae5cfad4eab9bf787b6a9f33d44
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: a6466d62cf8af4e6b8a14980db5e9a244deb45c4
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -53,8 +53,8 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
 
 ## <a name="create-a-restriction"></a>Skapa en begränsning
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Klicka på **Skapa begränsning**.
 5. Ange ett namn och en beskrivning för begränsningen.
@@ -70,8 +70,8 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
 
 Du kan ändra inställningarna för en begränsning för enhetstyp genom att följa dessa steg:
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Under **Begränsningar för enhetstyp** väljer du den begränsning som du vill ange.
 5. Under begränsningsnamnet (**Alla användare** för begränsningen som är standard) väljer du **Plattformar**. Välj **Tillåt** eller **Blockera** för varje plattform som är med i listan.
@@ -81,10 +81,10 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
   - iOS stöder major.minor.rev.
   - Windows stöder endast major.minor.rev.build för Windows 10.
   Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
-8. Ange om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
+6. Ange om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
 
     ![Skärmbild av arbetsytan för enhetsbegränsningar med standardenhetsplattformen konfigurerad för personligt ägda enheter](media/device-restrictions-platform-configurations.png)
-9. Klicka på **Spara**.
+7. Klicka på **Spara**.
 
 >[!NOTE]
 >- Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android for Work-enheter.
@@ -95,13 +95,13 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
 
 Du kan ändra inställningarna för en begränsning för enhetsgräns genom att följa dessa steg:
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Under **Begränsningar för enhetsgräns** väljer du den begränsning som du vill ange.
 5. Välj **enhetsgräns** och sedan väljer du det maximala antalet enheter som en användare kan registrera i den nedrullningsbara listan.
     ![Skärmbild av bladet för begränsningar för enhetsgräns](./media/device-restrictions-limit.png)
-6. Klicka på **Spara**.
+4. Klicka på **Spara**.
 
 Ett meddelande visas för användaren med information om att de har uppnått gränsen för registrerade enheter. På iOS kan det till exempel se ut så här:
 
@@ -119,8 +119,8 @@ Du kan ändra prioriteten för begränsningar som inte är standard.
 
 **Ändra prioritet för begränsningar**
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
 4. Hovra över begränsningen i prioritetslistan.
-5. Använd de tre lodräta punkterna och dra prioriteten till önskad plats i listan.
+5. Använd de tre lodräta punkterna till vänster och dra prioriteten till önskad plats i listan.

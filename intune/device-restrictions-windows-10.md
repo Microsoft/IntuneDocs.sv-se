@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 861c971c98493f6adab78e6bc93d560bbc1d5243
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: eee23afb4e2398358dc2c6b19b7d85be6b4f9edb
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 #<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Microsoft Intune i Windows 10 och senare
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.

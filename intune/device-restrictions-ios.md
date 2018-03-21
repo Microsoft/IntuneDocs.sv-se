@@ -13,19 +13,21 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bc53a7a6a4c961a649d01f23f30c59ff4dc90fe2
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: b0523a514eb9d6a5c0429f1a2e2fa84d1ca00de4
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
-I den här artikeln visas alla inställningar för enhetsbegränsningar i Microsoft Intune som du kan konfigurera för enheter som kör iOS.
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
+I den här artikeln visas inställningarna för enhetsbegränsningar i Microsoft Intune som du kan konfigurera för enheter som kör iOS.
+
 ## <a name="general"></a>Allmänt
 
+-   **Dela användningsdata** – Tillåt eller blockera enheten från att skicka diagnostik- och telemetridata om användning till Apple.
 -   **Sändning av diagnostikdata** – Tillåt eller blockera enheter från att skicka diagnostikdata till Apple.
 -   **Skärmdump** – Tillåt användare att fånga innehållet på skärmen som en bild.
     - **Fjärrskärmsvisning i appen Klassrum (endast övervakat)** – Tillåt eller blockera appen Klassrum från att visa skärmarna på iOS-enheter.
@@ -213,8 +215,8 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 -   **Anslut till trådlösa nätverk med endast konfigurationsprofiler (endast övervakat)** – Tillåter endast att enheten ansluter till trådlösa nätverk som har konfigurerats med en Wi-Fi-profil i Intune.
 
 - **Regler för mobilanvändning (endast hanterade appar)** – Gör det möjligt att definiera de datatyper som hanterade appar kan använda i mobilnät. Välj mellan:
-    - **Blockera användning av mobildata**
-    - **Blockera användning av mobildata vid nätverksväxling**
+    - **Blockera användning av mobildata** – Du kan blockera användningen av mobildata för ** Alla hanterade appar** eller **Välj särskilda appar**.
+    - **Blockera användning av mobildata vid nätverksväxling** – Du kan blockera användningen av mobildata för ** Alla hanterade appar** eller **Välj särskilda appar**.
 
 ## <a name="connected-devices"></a>Anslutna enheter
 

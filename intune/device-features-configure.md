@@ -1,12 +1,11 @@
 ---
-title: "Konfigurera funktionsinställningar på enheter i Microsoft Intune"
-titleSuffix: 
-description: "Läs hur du använder Microsoft Intune till att konfigurera funktioner på enheter som du hanterar."
+title: "Skapa iOS- eller macOS-enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs"
+description: "Lägg till eller skapa en iOS- eller macOS-enhetsprofil och konfigurera inställningarna för AirPrint, AirPlay, layout för startsidan, appmeddelanden, delad enhet, enkel inloggning och webbinnehållsfilter i Microsoft Intune"
 keywords: 
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,33 +13,42 @@ ms.technology:
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6cd646976deb1599c4cbc9154b6f2a487029dd79
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e3de7d1bccd57da1290987a714416373cbdd2b0d
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/09/2018
 ---
-#<a name="configure-device-feature-settings-in-microsoft-intune"></a>Konfigurera enhetens funktionsinställningar i Microsoft Intune
+# <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Lägga till funktionsinställningar för iOS- eller macOS-enheter i Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Med enhetsfunktioner kan du styra funktioner på iOS- och macOS-enheter, som t.ex. AirPrint, meddelanden och delade enhetskonfigurationer.
+Med enhetsfunktioner kan du kontrollera en rad inställningar och funktioner på iOS- och macOS-enheter, som:
 
-I den här artikeln får du lära dig grunderna för hur du konfigurerar profiler för enhetsfunktioner. Läs sedan andra artiklar om respektive plattform om du vill veta mer.
+- Inställningar för AirPrint och AirPlay
+- Startsideslayout
+- Meddelanden från appar
+- Konfiguration av delad enhet
+- Konfigurera enkel inloggning
+- Filtrera webbinnehåll
 
-## <a name="create-a-device-profile-containing-device-feature-settings"></a>Skapa en enhetsprofil med inställningar för enhetsfunktioner
+I den här artikeln finns det information om grunderna i hur du konfigurerar profiler för iOS-enhetsfunktioner. Efter det kan du läsa flera artiklar för att konfigurera plattformsspecifika inställningar för dina enheter.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
-3. Välj **Enhetskonfiguration** på **Intune**-sidan.
-2. Välj **Profiler** under**Hantera** på sidan **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilsidan.
-4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetens funktionsprofil.
-5. Välj den enhetsplattform som du vill tillämpa inställningarna på i listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsfunktioner:
+## <a name="create-a-device-profile"></a>Skapa en enhetsprofil
+
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**.
+3. Välj **Enhetskonfiguration**, **Profiler** och sedan **Skapa profil**.
+4. Ange följande egenskaper:
+
+  - **Namn**: Ange ett beskrivande namn på den nya profilen
+  - **Beskrivning**: (Valfritt men rekommenderas) Ange en beskrivning för profilen
+  - **Plattform**: Välj din plattformstyp:
     - **iOS**
     - **macOS**
-6. I listrutan **Profiltyp** väljer du **Enhetsfunktioner**. 
-7. Beroende på vilken plattform du väljer så varierar de inställningar som du kan konfigurera. Gå till någon av följande artiklar om du vill se detaljerade inställningar för respektive plattform:
+  - **Profiltyp**: Välj **Enhetsfunktioner**
+  - **Inställningar**: Inställningarna beror på vilken plattform du väljer. Läs en beskrivning av inställningarna för varje profiltyp i följande artiklar:
+
     - [AirPrint-inställningar för iOS och MacOS](air-print-settings-ios-macos.md)
     - [AirPlay-inställningar för iOS](airplay-settings-ios.md)
     - [Layoutinställningar för iOS-startskärm](home-screen-settings-ios.md)
@@ -49,12 +57,10 @@ I den här artikeln får du lära dig grunderna för hur du konfigurerar profile
     - [Konfigurera enkel inloggning för Intune för iOS-enheter](sso-ios.md)
     - [Inställningar för webbinnehållsfilter för iOS](web-content-filter-settings-ios.md)
 
-8. När du är klar väljer du **OK**, går tillbaka till sidan **Skapa profil** och väljer **Skapa**.
+5. När du är klar väljer du **OK** och sedan **Skapa** för att spara dina ändringar.
 
-Profilen skapas och visas på sidan med profillistan.
-## <a name="next-steps"></a>Nästa steg
+Profilen skapas och visas i listan.
 
-Om du vill tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
+## <a name="next-step"></a>Nästa steg
 
-
-
+Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).

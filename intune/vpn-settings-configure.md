@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/25/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: feba7e7dc3e88d7d9beefc548c20bf19fbba662d
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 9480f19a8cd71e001d196674d3e285c8f2a8bb09
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-configure-vpn-settings-in-microsoft-intune"></a>Så här konfigurerar du VPN-inställningar i Microsoft Intune
 
@@ -37,7 +37,7 @@ Du kan skapa VPN-profiler med följande anslutningstyper:
 |Cisco (IPSec)|Nej|Ja|Nej|Nej|Nej|Nej|
 |Citrix|Ja|Ja|Nej|Nej|Nej|Ja|
 |F5 Edge Client|Ja|Ja|Ja|Ja|Ja|Ja|
-|Dell SonicWALL Mobile Connect|Ja|Ja|Ja|Ja|Ja|Ja|
+|SonicWall Mobile Connect|Ja|Ja|Ja|Ja|Ja|Ja|
 |Check Point Capsule VPN|Ja|Ja|Ja|Ja|Ja|Ja|
 |Cisco AnyConnect|Ja|Ja|Ja|Nej|Nej|Nej|
 |Automatiskt|Nej|Nej|Nej|Nej|Nej|Ja|
@@ -54,12 +54,12 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
 
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Skapa en enhetsprofil som innehåller VPN-inställningar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilbladet.
-4. Ange **Namn** och **Beskrivning** för VPN-profilen på bladet **Skapa profil**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
+3. I fönstret Profiler väljer du **Skapa profil**.
+4. Ange **Namn** och **Beskrivning** för VPN-profilen i fönstret **Skapa profil**.
 5. Välj den enhetsplattform på vilken du vill tillämpa VPN-inställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för VPN-enhetsinställningar:
     - **Android**
     - **Android for Work**
@@ -76,9 +76,9 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
     - [Inställningar för Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows 10 settings](vpn-settings-windows-10.md) (Inställningar för Windows 10) (inklusive Windows Holographic for Business)
-8. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+8. När du är klar går du tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
 
 

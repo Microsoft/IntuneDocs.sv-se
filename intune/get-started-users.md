@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e06b335c03caee0bd997748f9c48ed78d7d379b
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 53b5be6e5cdf8f60304126e133a727123bfef58d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-managing-users"></a>Komma igång med att hantera användare
 
@@ -27,13 +27,13 @@ Tänk på alla olika personer i din organisation. Alla som använder företagsin
 
 ## <a name="how-do-i-create-a-user"></a>Hur skapar jag en användare?
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Sök efter **Intune** med hjälp av **Sök resurser**.
-3. När du har öppnat bladet **Microsoft Intune** väljer du **Användare**. På sidan **Alla användare** väljer du **+ Ny användare**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. När du har öppnat fönstret **Microsoft Intune** väljer du **Användare**. På sidan **Alla användare** väljer du **+ Ny användare**.
 4. Ange information om användaren, t.ex. **namn** och **användarnamn**. Domännamndelen av användarnamnet måste antingen vara det inledande standarddomännamnet, t.ex. contoso.onmicrosoft.com, eller ett verifierat, ofedererat domännamn, t.ex. contoso.com.
 5. Välj den testgrupp du vill lägga till användaren i under **Grupper**.
 6. Spara det automatiskt genererade användarlösenordet så att du kan använda det till att logga in på en testenhet. Du måste ge det här lösenordet till användare så att de kan ändra det till ett normalt lösenord som de kan komma ihåg.
-7. Välj **Skapa** på bladet **Användare**.
+7. Välj **Skapa** i fönstret **Användare**.
 
 ## <a name="assigning-licenses-to-users"></a>Tilldela licenser till användare
 

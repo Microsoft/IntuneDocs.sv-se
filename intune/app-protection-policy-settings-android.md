@@ -15,11 +15,11 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 330826307e4f3db24532908d42da77a1a857a681
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 34334186fbf74507b54d1bf4df347de2c16c39c0
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
 Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -73,7 +73,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
   | com.android.providers.media | Androids medieinnehållsprovider | Medieinnehållsprovidern tillåts endast för val av ringsignal. |
   | com.google.android.gms; com.google.android.gsf | Google Play Services-paket | Dessa paket tillåts för Google Cloud Messaging-åtgärder, till exempel push-meddelanden. |
 
-Mer information finns i [Appundantag för dataöverföringsprinciper](app-protection-policies-exception.md). 
+Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-protection-policies-exception.md).
 
 ##  <a name="access-settings"></a>Åtkomstinställningar
 
@@ -88,7 +88,10 @@ Mer information finns i [Appundantag för dataöverföringsprinciper](app-protec
 | **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. | Nej |
 | **Minimikrav på Android-operativsystem** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att blockeras från åtkomst om Android-versionen på enheten inte uppfyller kravet.<br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej |
 | **Minimikrav på Android-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att få ett meddelande ifall Android-versionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.<br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. | Nej |
-| **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren kommer att blockeras från åtkomst om appversionen på enheten inte uppfyller kraven.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej | 
-| **Minimikrav på appversion (endast varning)** | Välj **Ja** för att rekommendera ett minimikrav på den appversion som ska använda den här appen. Användaren kommer att få ett meddelande om appversionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej | 
+| **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren kommer att blockeras från åtkomst om appversionen på enheten inte uppfyller kraven.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej |
+| **Minimikrav på appversion (endast varning)** | Välj **Ja** för att rekommendera ett minimikrav på den appversion som ska använda den här appen. Användaren kommer att få ett meddelande om appversionen på enheten inte uppfyller kraven. Det här meddelandet kan avvisas.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej |
 | **Kräv lägsta Android-uppdateringsversion** | Välj **Ja** om du vill kräva en lägsta Android-säkerhetsuppdatering som har publicerats av Google. Användaren kommer att blockeras från åtkomst om Android-säkerhetsuppdateringen på enheten inte uppfyller kravet.<br><br> Det här principinställningsformatet stöder datumformatet ÅÅÅÅ-MM-DD. | Nej |
 | **Kräv lägsta Android-uppdateringsversion (endast varning)** | Välj **Ja** om du vill kräva en lägsta Android-säkerhetsuppdatering som har publicerats av Google. Användaren kommer att få ett meddelande om Android-säkerhetsuppdateringen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.<br><br> Det här principinställningsformatet stöder datumformatet ÅÅÅÅ-MM-DD. | Nej |
+
+> [!NOTE]
+> Om du vill veta mer om hur flera Intune-appskyddsinställningar som konfigureras i avsnittet om åtkomst till samma uppsättning appar och användare fungerar på Android kan du läsa [vanliga frågor om Intune MAM](mam-faq.md).

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 29c3d331cae06b0474fc3a2b31790719d99c678e
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 7d014ae02f3db2ea9175e74f2a867bd12f1d4f22
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -70,7 +70,7 @@ CSV-filen när den visas i en textredigerare:
 
 ### <a name="add-a-csv-list-of-corporate-identifiers"></a>Lägg till en CSV-lista över företagsidentifierare
 
-1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Id:n för företagsenheter** och klickar sedan på **Lägg till**.
+1. I [Intune på Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** > **Id:n för företagsenheter** och klickar på **Lägg till**.
 
  ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
 
@@ -82,11 +82,11 @@ Importerade enheter registreras inte nödvändigtvis. Enheterna kan antingen ha 
 
 ### <a name="delete-corporate-identifiers"></a>Ta bort företagsidentifierare
 
-1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Id:n för företagsenheter**.
+1. I [Intune på Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** > **Id:n för företagsenheter**.
 2. Markera de enhetsid:n du vill ta bort och välj **Ta bort**.
 3. Bekräfta borttagningen.
 
-Om du tar bort en företags-id för en registrerad enhet ändras inte ägarskapet för enheten. Om du vill ändra ägarskapet för en enhet går du till **Enheter** > **Alla enheter**, markerar enheten, väljer **Egenskaper** och ändrar **Ägarskap för enhet**.
+Om du tar bort en företags-id för en registrerad enhet ändras inte ägarskapet för enheten. Om du vill ändra ägarskapet för en enhet går du till **Enheter**, väljer enheten, väljer **Egenskaper** och ändrar **Ägarskap för enhet**.
 
 ### <a name="imei-specifications"></a>IMEI-specifikationer
 Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers) finns i [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
@@ -96,7 +96,7 @@ Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers)
 Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som administratör kan du ange enheter som **Personliga** eller **Företagsägda**.
 
 **Ändra enhetsägande:**
-1. I Intune i Azure Portal går du till **Enheter** > **Alla enheter** och väljer enheten.
+1. I [Intune i Azure-portalen](https://portal.azure.com) går du till **Enheter** och väljer enheten.
 3. Välj **Egenskaper**.
 4. Ange **Äganderätt till enhet** som **Personlig** eller **Företagsägd**.
 

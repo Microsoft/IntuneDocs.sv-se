@@ -1,12 +1,11 @@
 ---
-title: "Fjärrlåsa hanterade enheter med Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du använder Intune för att fjärrlåsa enheter som du hanterar.\""
+title: "Låsa enheter med Microsoft Intune – Azure | Microsoft Docs"
+description: "Använd åtgärden för fjärrlåsning i Microsoft Intune för att låsa en enhet som skyddas av en PIN-kod eller ett lösenord."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,43 +13,41 @@ ms.technology:
 ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a8f3c93507cde4363570a9a39f8b3b1f69c07df
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 59a55de54a5a18f5fd1080fefa15c0e4801a1456
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="remotely-lock-managed-devices-with-intune"></a>Fjärrlåsa hanterade enheter med Intune
-
+# <a name="remotely-lock-devices-with-intune"></a>Fjärrlåsa enheter med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Med **Fjärrlås** låses den valda enheten. Enhetens ägare måste använda sitt lösenord för att låsa upp den. Du kan endast fjärrlåsa en enhet som har en PIN-kod eller angett lösenord.
+Med **Fjärrlås** låses enheten. Enhetens ägare måste ange sitt lösenord för att låsa upp den. Du kan fjärrlåsa enheter som har en PIN-kod eller ett lösenord. Enheter som saknar PIN-kod eller lösenord går inte att fjärrlåsa.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
 Fjärrlåsning stöds på följande plattformar:
 
-|Plattform|Supportstatus|
-|---|---|
-|Android|Ja|
-|iOS|Ja|
-|macOS|Ja|
-|Windows 10 desktop|Nej|
-|Windows 10 Mobil|Ja|
-|Windows Phone|Ja, för Windows Phone 8.1 och senare|
+- Android
+- iOS
+- macOS
+- Windows 10 Mobil
+- Windows Phone 8.1 och senare
 
-> [!NOTE]  
-> För macOS-enheter anger du en 6-siffrig PIN-kod för återställning. När enheten är låst visar bladet **Enhetsöversikt** PIN-koden tills en annan enhetsåtgärd skickas.
+Det stöds **inte** för:
+- Windows 10 desktop
 
-## <a name="how-to-remote-lock-a-device"></a>Fjärrlåsa en enhet
+> [!NOTE]
+> För macOS-enheter anger du en 6-siffrig PIN-kod för återställning. När enheten är låst visar **Enhetsöversikt** PIN-koden tills en annan enhetsåtgärd skickas.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
-3. Välj **Enheter** på bladet **Intune**.
-4. Välj **Alla enheter** på bladet **Enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet och sedan fjärråtgärden **Fjärrlås**.
+## <a name="remote-lock-a-device"></a>Fjärrlås på en enhet
+
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enheter** och sedan **Alla enheter**.
+4. Välj en enhet i listan över enheter och välj sedan åtgärden **Fjärrlås**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.
+Om du vill se status för den här åtgärden öppnar du **Enhetsåtgärder** (Microsoft Intune >Enheter). Se [Tillgängliga åtgärder](device-management.md) för fler åtgärder för enhetshantering.

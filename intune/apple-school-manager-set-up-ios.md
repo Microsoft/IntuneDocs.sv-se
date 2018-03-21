@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f639a61c4d481a891156383c3a23e0e1511a5fbe
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: d3a599ff1dff3e27214dfcca694f6b97333f370a
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurera registrering av iOS-enheter med Apple School Manager
 
@@ -89,7 +89,7 @@ Gå till certifikatfilen (.p7m), välj **Öppna** och sedan **Ladda upp**. Intun
 ## <a name="create-an-apple-enrollment-profile"></a>Skapa en Apple-registreringsprofil
 En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** och därefter **Apple-registrering**.
+1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** och därefter **Apple-registrering**.
 2. Under **Registreringsprogram** väljer du **Registreringsprogramprofiler**.
 3. På bladet **Registreringsprogramprofiler** väljer du **Skapa**.
 4. På bladet **Skapa registreringsprofil** anger du ett **Namn** och en **Beskrivning** för profilen som visas i Intune.
@@ -103,7 +103,7 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 
 6. Välj **Enhetshanteringsinställningar**. Dessa objekt anges under aktiveringen och kräver en fabriksåterställning om du vill ändra dem. konfigurera följande profilinställningar och välj sedan **Spara**:
 
-  ![Välja hanteringsläge](./media/enrollment-program-profile-mode.png)
+  ![Väljer hanteringsläge](./media/enrollment-program-profile-mode.png)
 
     - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
@@ -149,7 +149,7 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har tilldelats behörighet att hantera Apple School Manager-enheterna kan du synkronisera Intune med Apple-tjänsten och se dina hanterade enheter i Intune.
 
-1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
+1. I [Intune på Azure portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
 2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
@@ -166,7 +166,7 @@ Nu när Intune har tilldelats behörighet att hantera Apple School Manager-enhet
 ## <a name="assign-a-profile-to-devices"></a>Tilldela en profil till enheter
 Apple School Manager-enheter som hanteras av Intune måste tilldelas en registreringsprogramprofil innan de registreras.
 
-1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Apple-registrering** och väljer sedan **Registreringsprogramprofiler**.
+1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** och väljer sedan **Registreringsprogramprofiler**.
 2. Från listan över **Registreringsprogramprofiler** väljer du den profil som du vill tilldela till enheter och därefter **Enhetstilldelningar**
 
  ![Enhetstilldelningar med Tilldela valt.](./media/enrollment-program-device-assign.png)

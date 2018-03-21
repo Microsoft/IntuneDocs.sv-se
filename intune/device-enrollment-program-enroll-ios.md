@@ -15,11 +15,11 @@ ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8e770c39a22b620bb642b7b15a456369bb4acec2
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 24b1ffb1d89f52a51f21dc6c4a588324f3cd87d3
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples program för enhetsregistrering (DEP)
 
@@ -74,7 +74,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 **Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple DEP-token.**<br>
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
+1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 
   ![Fönstret Registreringsprogramtoken i arbetsytan Apple-certifikat](./media/enrollment-program-token-add.png)
 
@@ -116,7 +116,7 @@ Gå till certifikatfilen (.pem), välj **Öppna** och välj **Ladda upp**. Med p
 
 Nu när du har installerat din token kan skapa du en registreringsprofil för DEP-enheter. En enhetsregistreringsprofil definierar inställningarna som tillämpas på en grupp av enheter vid registreringen.
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering**.
+1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering**.
 2. Under **Registreringsprogram för Apple** väljer du **Profiler för registreringsprogram** > **Skapa**.
 3. Ange ett **namn** och en **beskrivning** för profilen på bladet **Skapa registreringsprofil**. Detta behövs för administrativa syften. Användarna kan inte se den här informationen. Du kan använda fältet **Namn** för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om [dynamiska Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
@@ -169,7 +169,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 ## <a name="sync-managed-devices"></a>Synkronisera hanterade enheter
 Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronisera Intune med Apple och se dina hanterade enheter i Intune på Azure-portalen.
 
-1. I Intune på Azure Portal väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
+1. I [Intune på Azure portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
   
@@ -190,7 +190,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 >[!NOTE]
 >Du kan även tilldela profiler serienummer från bladet **Apple-serienummer**.
 
-1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** och väljer sedan **Registreringsprogramprofiler**.
+1. I [Intune på Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** och sedan **Registreringsprogramprofiler**.
 2. Från listan över **Registreringsprogramprofiler** väljer du den profil du vill tilldela till enheter och väljer därefter **Tilldela enheter**.
 
  ![Enhetstilldelningar med Tilldela valt](./media/enrollment-program-device-assign.png)
