@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 1/25/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21bc79d3440e57ec91f7e4482112d77cf233575f
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 90d2df028d5a61bb134b6a2b76efa570eed80f20
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -47,17 +47,19 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
 ## <a name="create-a-device-profile-containing-wi-fi-settings"></a>Skapa en enhetsprofil som innehåller Wi-Fi-inställningar
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. Välj **Hantera** > **Profiler** på bladet **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilbladet.
-4. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen på bladet **Skapa profil**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+3. I fönstret Profiler väljer du **Skapa profil**.
+4. Ange **Namn** och **Beskrivning** för Wi-Fi-profilen i fönstret **Skapa profil**.
 5. Välj den enhetsplattform på vilken du vill tillämpa Wi-Fi-inställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för Wi-Fi-inställningar:
     - **Android**
     - **Android for Work**
     - **iOS**
     - **macOS**
-    - **Windows 8.1 och senare (importera en profil)**
+    - **Windows Phone 8.1**
+    - **Windows 8.1 och senare**
+    - **Windows 10 och senare**
 
    > [!IMPORTANT]
    > Om du skapar en profil för enheter som kör Windows 10, inklusive Windows Holographic for Business, så måste du välja plattformen **Windows 8.1 och senare**. Plattformen **Windows 10 och senare** innehåller inte någon WiFi-profiltyp. 
@@ -70,9 +72,9 @@ Använd informationen i det här avsnittet om du vill lära dig grunderna för h
     - [Inställningar för iOS](wi-fi-settings-ios.md)
     - [Inställningar för macOS](wi-fi-settings-macos.md)
     - [Inställningar för Windows 8.1 och senare](wi-fi-settings-import-windows-8-1.md) (inklusive Windows Holographic for Business)
-1. När du är klar går du tillbaka till bladet **Skapa profil** och trycker på **Skapa**.
+1. När du är klar går du tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
-Profilen skapas och visas på bladet med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="next-steps"></a>Nästa steg
 

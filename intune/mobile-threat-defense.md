@@ -1,7 +1,7 @@
 ---
-title: Mobile Threat Defense med Intune
-titleSuffix: Azure portal
-description: "Skydda åtkomsten till företagets resurser baserat på enhetsrisk"
+title: Mobile Threat Defense med Microsoft Intune
+titleSuffix: 
+description: "Använd Intune Mobile Threat Defense (MTD) med din Mobile Threat Defense-partner för att skydda åtkomsten till företagsresurser baserat på enhetsrisken."
 keywords: 
 author: msmimart
 ms.author: mimart
@@ -15,13 +15,13 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da0f21a822608052846200e13ef37ca4606e6079
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 2eaba4f04d6a1daedf40b7b37d2b44ed5aff4533
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense-integrering med Intune
+# <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Vad är Mobile Threat Defense-integrering med Intune?
 
 
 Intune Mobile Threat Defense-anslutningsprogram låter dig använda din leverantör av skydd mot mobila hot som informationskälla för efterlevnadsprinciper och regler för villkorlig åtkomst. Det här gör det möjligt för IT-administratörer att lägga till ytterligare en skyddsnivå i sina företagsresurser, till exempel Exchange och Sharepoint, särskilt från komprometterade mobila enheter.
@@ -32,7 +32,7 @@ Företag behöver skydda känsliga data från nya hot som inkluderar fysiska, ap
 
 Tidigare har företag varit förutseende med att skydda datorer mot angrepp, medan mobila enheter har fått vara oövervakade och oskyddade. Mobila plattformar har ett inbyggt skydd med appisolering och kontrollerade appbutiker för kunder, men dessa plattformar är fortfarande sårbara för sofistikerade attacker. Idag använder många anställda den här typen av enheter för arbete och behöver ha åtkomst till känslig information. Enheter måste skyddas från allt mer sofistikerade attacker.
 
-## <a name="how-the-intune-mobile-threat-defense-connectors-work"></a>Hur fungerar Intune Mobile Threat Defense-anslutningsprogram?
+## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Hur fungerar Intune Mobile Threat Defense-anslutningsprogram?
 
 Anslutningsprogrammet skyddar företagsresurser genom att skapa en kanal för kommunikation mellan Intune och din valda leverantör av skydd mot mobila hot. Intune Mobile Threat Defense-partner erbjuder intuitiva program som är enkla att distribuera för mobila enheter och som aktivt skannar och analyserar hotbilden mot enheten för information som de sedan delar med Intune i syfte att rapportera eller orsaka åtgärder. 
 
@@ -58,11 +58,11 @@ Inventeringar från både företagsägda iOS 11+ och personligt ägda enheter sk
 
 När en enhet betraktas som infekterad av Mobile Threat Defense-lösningen:
 
-![Mobile Threat Defense-infekterad enhet](./media/MTD-image-1.png)
+![Bild på en infekterad enhet enligt Mobile Threat Defense](./media/MTD-image-1.png)
 
 Åtkomst beviljas när enheten åtgärdats:
 
-![Mobile Threat Defense-åtkomst har beviljats](./media/MTD-image-2.png)
+![Bild på åtkomst beviljad av Mobile Threat Defense](./media/MTD-image-2.png)
 
 > [!NOTE] 
 > Användning av flera leverantörer för Mobile Threat Defense med Intune stöds inte. Om flera MTD-verktyg är aktiverade måste alla MTD-appar installeras och genomsöka enheterna beträffande hot.

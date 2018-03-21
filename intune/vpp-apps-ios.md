@@ -6,7 +6,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3694cbde1aeba8b185c67e65269b7afbd530b048
-ms.sourcegitcommit: 3cc3a6554691c6edeff985e7d8fa402e7e49e8d3
+ms.openlocfilehash: 04a94e4baee23ac9a4a742a2ff11591087381fde
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -80,11 +80,11 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Så här skaffar du och laddar upp en Apple VPP-token
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-1.  På bladet **Intune** väljer du **Mobilappar** > **iOS VPP-token** under **Konfiguration**.
-2.  På listan över VPP-tokenblad, klickar du på **skapa**.
-4. På bladet **Skapa VPP-token** anger du följande information:
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+1.  I fönstret **Intune** väljer du **Mobilappar** > **iOS VPP-token** under **Konfiguration**.
+2.  I fönstret med VPP-tokenlistan väljer du **Skapa**.
+4. I fönstret **Skapa VPP-token** anger du följande information:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företag eller programmet för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
     - **Apple-ID** – Ange Apple-ID för det konto som är associerat med inköpsprogrammet för volymen.
     - **Land/region** – Välj VPP-landskod.  Intune synkroniserar VPP-appar för alla språk från det angivna VPP-landets App Store.
@@ -94,17 +94,17 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
     - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat uppdaterar Intune alla appar som har köpts för angiven token genom Intune-tjänsten när enheten checkar in.
 identifiera VPP-appuppdateringar i appbutiken och push-installera dem automatiskt på enheten när den checkar in.
-4. När du är klar, väljer du **ladda upp**.
+4. När du är klar väljer du **Skapa**.
 
-Token visas i listan över tokenblad.
+Den token du önskar visas i fönstret med tokenlistan.
 
 Du kan synkronisera data från Apple med Intune när som helst genom att välja **Synkronisera nu**.
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
-1.  På bladet **Intune** väljer du **Mobilappar** > **Appar** under **Hantera**.
-2.  I bladet med applistan väljer du den app du vill tilldela och väljer sedan **Tilldelningar**.
-3.  På bladet ***Appnamn*** - **Tilldelningar** väljer du **Välj grupper**. På bladet **Välj grupper** väljer du sedan den Azure AD-användare eller de enhetsgrupper som du vill tilldela appen till.
+1.  I fönstret **Intune** väljer du **Mobilappar** > **Appar** under **Hantera**.
+2.  I fönstret med applistan väljer du den app som du vill tilldela och väljer sedan **Tilldelningar**.
+3.  I fönstret ***Appnamn*** - **Tilldelningar** väljer du **Lägg till grupp** och i fönstret **Lägg till grupp** väljer du sedan en **Tilldelningstyp** och den Azure AD-användare eller de enhetsgrupper som du vill tilldela till appen.
 5.  Välj följande inställningar för varje grupp som du har valt:
     - **Typ** – Välj om appen ska vara **Tillgänglig** (slutanvändare kan installera appen från företagsportalen) eller **Obligatorisk** (slutanvändare får appen installerad automatiskt).
     - **Licenstyp** – Välj mellan **Användarlicensiering** eller **Enhetslicensiering**.

@@ -1,12 +1,11 @@
 ---
-title: "Återställa Windows 10-enheter med Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du använder Börja om på nytt för att återställa Windows 10-datorer med Intune.\""
+title: "Återställa 10 Windows-enheter med Microsoft Intune – Azure | Microsoft Docs"
+description: "Använd Börja om på nytt för att ta bort eller avinstallera appar på Windows 10-datorer med Microsoft Intune, inklusive förinstallerade appar från OEM-tillverkare. Du kan också behålla innehållet i arbetsmappen med inställningen för att behålla användardata."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 08/09/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,29 +13,31 @@ ms.technology:
 ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c45d3e47c90ca7739b3aa6eee1bf31d787a82264
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: d17c9dc11791f32f0c2c1e7faa88966c112fc6a5
+ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Använda Börja om på nytt för att återställa Windows 10-enheter med Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Åtgärden **Börja om på nytt** tar bort alla appar som har installerats på en Windows 10-dator som kör Creators Update och uppdaterar sedan automatiskt datorn till den senaste versionen av Windows.
-Denna åtgärd kan användas för att ta bort förinstallerade OEM-appar som ofta levereras med en ny dator. Du kan konfigurera om användardata ska behållas när den här enhetsåtgärden utförs. I det här fallet tas appar och inställningar bort, men innehållet i användarens startmapp bevaras.
+Enhetsåtgärden **Börja om på nytt** tar bort alla appar som är installerade på en Windows 10-dator som kör Creators Update. Sedan uppdateras datorn automatiskt till den senaste versionen av Windows.
 
-## <a name="how-to-use-fresh-start"></a>Använda Börja om på nytt
+Den här åtgärden tar bort förinstallerade appar (från OEM-tillverkare) som vanligtvis installeras med en ny dator. Om du vill behålla innehållet i användarens arbetsmapp och bara ta bort appar och inställningar använder du inställningen `if user data is retained`.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I fönstret **Intune** väljer du **Enheter**.
-4. I fönstret **Enheter** väljer du **Alla enheter**.
-5. I listan med enheter som du hanterar väljer du en Windows 10-skrivbordsenhet och sedan fjärråtgärden **Börja om på nytt** för enheten.
+> [!IMPORTANT]
+> Åtgärden Börja om på nytt avregistrerar enheten från Intune, men enheten är fortfarande ansluten i Azure Active Directory.
+
+## <a name="use-fresh-start"></a>Använda Börja om på nytt
+
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enheter** och sedan **Alla enheter**.
+4. I listan med enheter som du hanterar väljer du en Windows 10-skrivbordsenhet och sedan **Börja om på nytt**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd som du nyss vidtog, går du till fönstret **Enheter** och väljer **Enhetsåtgärder**.
-
+Om du vill se status för den här åtgärden väljer du **Enhetsåtgärder** (**Microsoft Intune** > **Enheter**).

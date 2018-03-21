@@ -1,12 +1,12 @@
 ---
-title: Skapa och distribuera en WIP-appskyddsprincip med Intune
-titlesuffix: Azure portal
-description: Skapa och distribuera WIP-appskyddsprinciper med Intune
+title: Skapa och distribuera en WIP-appskyddsprincip
+titlesuffix: Microsoft Intune
+description: Skapa och distribuera en WIP-appskyddsprincip med Microsoft Intune
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: doubeby
-ms.date: 02/16/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,21 +15,21 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 647e6fd129593156f2ba24299a19e96686206165
-ms.sourcegitcommit: 1978a30ab1af0f43aa5f447690d0bbcdcb9b563b
+ms.openlocfilehash: 4325d77982bcca748a38696fbbbb413a1c304ffb
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Från och med version 1704 av Intune kan du använda appskyddsprinciper med Windows 10 för att skydda appar utan enhetsregistrering.
+Du kan använda appskyddsprinciper med Windows 10-appar för att skydda appar utan enhetsregistrering.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princip.
+Du måste känna till några grundläggande begrepp när du lägger till en WIP-princip:
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Lista över tillåtna och undantagna appar
 
@@ -39,95 +39,84 @@ Låt oss ta upp några grundläggande begrepp när du lägger till en WIP-princi
 
 ### <a name="types-of-apps"></a>Apptyper
 
--   **Rekommenderade appar:** En i förväg ifylld lista med appar (huvudsakligen för Microsoft Office) som du enkelt kan importera till principen. <!---I really don't know what you mean by "easily import into policy"--->
-
+-   **Rekommenderade appar:** En i förväg ifylld lista med appar (huvudsakligen för Microsoft Office) som du enkelt kan importera till principen.
 -   **Store-appar:** Du kan lägga till valfri app från Windows Store i principen.
-
 -   **Windows-skrivbordsappar:** Du kan lägga till valfria traditionella Windows-skrivbordsappar i principen (t.ex. exe, dll osv.)
 
-## <a name="pre-requisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 Du måste konfigurera MAM-providern innan du kan skapa en WIP-appskyddsprincip. Läs mer i [Konfigurera din MAM-provider med Intune](app-protection-policies-configure-windows-10.md).
 
 Du måste dessutom ha följande licens och uppdatering:
 
--   [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-licens.
+-   [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)-licens
 -   [Windows Creators-uppdatering](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 > [!IMPORTANT]
 > RIA stöder inte multi-identitet. Det kan bara finnas en hanterad identitet åt gången.
-<!---Should you be linking to a topic that explains what multi-identity is?--->
 
-## <a name="to-add-a-wip-policy"></a>Lägga till en RIA-princip
+## <a name="to-add-a-wip-app-protection-policy"></a>Lägga till en WIP-appskyddsprincip
 
-När du konfigurerar Intune i din organisation kan du skapa en RIA-specifik princip via [Azure Portal](https://docs.microsoft.com/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies). <!---Is there an azure topic you can use instead of a classic? if not, should this topic be moved into the azure doc set?--->
+När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik princip.
 
-1.  Gå till **Intune-instrumentpanelen för hantering av mobila program**, välj **Alla inställningar** > **App-princip**.
-
-2.  Välj **Lägg till en princip** på bladet **App-princip**, och ange sedan följande värden:
-
-    a.  **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
-
-    b.  **Beskrivning:** Ge en valfri beskrivning.
-
-    c.  **Plattform:** Välj **Windows 10** som den plattform som stöds för din appskyddsprincip.
-
-    d.  **Registreringstillstånd:** Välj **Utan registrering** som din princips registreringstillstånd.
-
-3.  Välj **Skapa**. Principen skapas och visas i tabellen på bladet **App-princip**.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**.
+3. Välj **Mobilappar** på **Microsoft Intune**-bladet.
+4. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+5. Klicka på **Lägg till en princip** så att bladet **Lägg till en princip** visas.
+6. Lägg till följande värden:
+    - **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
+    - **Beskrivning:** (Valfritt) Ge en beskrivning.
+    - **Plattform:** Välj **Windows 10** som den plattform som stöds för din appskyddsprincip.
+    - **Registreringstillstånd:** Välj **Utan registrering** som din princips registreringstillstånd.
+7.  Välj **Skapa**. Principen skapas och visas i tabellen på bladet **Appskyddsprinciper**.
 
 ## <a name="to-add-recommended-apps-to-your-allowed-apps-list"></a>Lägga till rekommenderade appar i listan över tillåtna appar
 
-1.  Välj din princips namn på bladet **App-princip**, och välj sedan **Tillåtna appar** på bladet **Lägg till en princip**. Bladet **Tillåtna appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
-
-2.  Välj **Lägg till appar** på bladet **Tillåtna appar**. I informationen **Lägg till appar** visas alla appar som finns med i listan.
-
-3.  Markera varje app för vilken du vill komma åt företagets data och välj sedan **OK**. Bladet **Tillåtna appar** uppdateras och visar alla markerade appar.
+1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
+4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+6. Markera varje app som ska få åtkomst till företagets data.
+7. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+8. Klicka på **Spara**.
 
 ## <a name="add-a-store-app-to-your-allowed-apps-list"></a>Lägg till en Store-app i listan över tillåtna appar
 
 **Lägga till en Store-app**
-
-1.  Välj namnet på din princip på bladet **App-princip** och välj sedan **Tillåtna appar** på menyn som visas med alla de appar som redan ingår i appskyddsprincipens lista.
-
-2.  Välj **Lägg till appar** på bladet **Tillåtna appar**.
-
-3.  Välj **Store-appar** i listrutan på bladet **Lägg till appar**. Informationen ändras till att visa rutor där du kan lägga till en **utgivare** och ett **namn** för appen.
-
-4.  Skriv appens och utgivarens namn och välj sedan **OK**.
-
-    > [!TIP]
-    > Här är ett app-exempel där **utgivaren** är *CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S Washington, C = = US* och produktens **namn** är *Microsoft.MicrosoftAppForWindows*.
-
-5.  När du har fyllt i informationen i fälten, lägger du till appen i listan **Tillåtna appar** genom att välja **OK**.
-
-> [!NOTE]
-> Om du vill lägga till flera Store-appar samtidigt kan du klicka på menyn **(...)**  i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
+1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
+4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+6. Välj **Store-appar** i listan.
+7. Ange värden för **Namn**, **Utgivare**, **Produktnamn** och **Åtgärd**. Se till att ange värdet för **Åtgärd** till **Tillåt** så att appen får åtkomst till företagets data.
+9. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+10. Klicka på **Spara**.
 
 ## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Lägg till en skrivbordsapp i listan över tillåtna appar
 
 **Lägga till en skrivbordsapp**
-
-1.  Välj din princips namn på bladet **App-princip** och välj sedan **Tillåtna appar.** Bladet **Tillåtna appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
-
-2.  Välj **Lägg till appar** på bladet **Tillåtna appar**.
-
-3.  Välj **Skrivbordsappar** i listrutan på bladet **Lägg till appar**.
-
-4.  När du har fyllt i informationen i fälten, lägger du till appen i listan **Tillåtna appar** genom att välja **OK**.
-
-> [!NOTE]
-> Om du vill lägga till flera **skrivbordsappar** samtidigt kan du klicka på menyn **(…)** i slutet av appraden och sedan fortsätta att lägga till flera appar. Klicka på **OK** när du är klar.
+1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
+4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
+5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
+6. Välj **Skrivbordsappar** i listan.
+7. Ange värden för **Namn**, **Utgivare**, **Produktnamn**, **Fil**, **Lägsta version**, **Högsta version** och **Åtgärd**. Se till att ange värdet för **Åtgärd** till **Tillåt** så att appen får åtkomst till företagets data.
+9. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
+10. Klicka på **Spara**.
 
 ## <a name="wip-learning"></a>WIP-utbildning
-<!---You've already defined WIP earlier in the topic. You don't need to keep doing so. --->
 När du lägger till de appar som du vill skydda med RIA måste du använda ett skyddsläge med hjälp av **WIP-utbildning**.
 
 ### <a name="before-you-begin"></a>Innan du börjar
 
 WIP-utbildning är en rapport som gör det möjligt att övervaka WIP-aktiverade appar och okända WIP-appar. De okända apparna är de som inte distribueras av organisationens IT-avdelning. Du kan exportera de här apparna från rapporten och lägga till dem i dina WIP-principer för att undvika avbrott i produktivitet innan de framtvingar WIP i blockeringsläge.
 
-<!-- 1631908 --> In addition to viewing information about WIP-enabled apps, you can view a summary of the devices that have shared work data with websites. With this information, you can determine which websites should be added to group and user WIP policies. The summary shows which website URLs are accessed by WIP-enabled apps.
+<!-- 1631908 -->
+Förutom att visa information om WIP-aktiverade appar kan du visa en sammanfattning av de enheter som har delat arbetsdata med webbplatser. Med den här informationen kan du bestämma vilka webbplatser som ska läggas till i gruppernas och användarnas PIA-principer. I sammanfattningen visas vilka webbplatsadresser som används av WIP-aktiverade appar.
 
 När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över tillåtna appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **blockera**.
 
@@ -153,22 +142,22 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
     ![Skärmdump av utbildningsläge](./media/learning-mode-sc1.png)
 
-2.  Välj **Spara**.
+1.  Välj en inställning och välj sedan **Spara**.
 
 ### <a name="use-wip-learning"></a>Använda WIP-utbildning
 
-1. Öppna Azure-portalen. Välj **Fler tjänster**. Skriv **Intune** i textrutefiltret.
+1. Öppna [Azure Portal](https://portal.azure.com). Välj **Alla tjänster**. Skriv **Intune** i textrutefiltret.
 
 3. Välj **Intune** > **Mobilappar**.
 
 4. Välj **Appskyddsstatus** > **Rapporter** > **Windows informationsskydd-inlärning**.  
- 
+
     När apparna väl visas i loggningsrapporten för WIP-utbildning kan du lägga till dem i appskyddsprinciperna.
 
 ## <a name="allow-windows-search-indexer-to-search-encrypted-items"></a>Tillåt att Windows Search-indexeraren söker efter krypterade objekt
 Tillåter eller nekar indexering av objekt. Den här växeln används för Windows Search-indexeraren och styr om objekt som är krypterade indexeras, till exempel Windows informationsskyddade filer.
 
-Alternativ för den här appens skyddsprincip finns i **Avancerade inställningar** i Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**. 
+Alternativ för den här appens skyddsprincip finns i **Avancerade inställningar** i Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**.
 
 När principen är aktiverad indexeras Windows informationsskyddade objekt och deras metadata lagras på en okrypterad plats. Dessa metadata innehåller exempelvis ändrade sökvägar och datum.
 
@@ -195,4 +184,4 @@ När du har skapat din WIP-appskyddsprincip måste du distribuera den till din o
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Mer information om Windows informationsskydd finns i [Skydda företagsdata med Windows informationsskydd](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip). 
+Mer information om Windows informationsskydd finns i [Skydda företagsdata med Windows informationsskydd](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

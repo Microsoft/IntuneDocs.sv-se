@@ -1,12 +1,11 @@
 ---
-title: "Återställa och ta bort enhetslösenord med Intune"
-titlesuffix: Azure portal
-description: "Lär dig hur du återställer och tar bort lösenordet på enheter som du hanterar med Intune."
+title: "Återställa enhetslösenord med Microsoft Intune – Azure | Microsoft Docs"
+description: "Ta bort eller återställ lösenordet med åtgärden Ta bort lösenkod på enheter som du hanterar eller övervakar med Intune."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 03/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,37 +13,37 @@ ms.technology:
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e1496d24fd9d3bb636a4eab00c254b753210f63
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: 8f23a79bbe72d12750ef642226aefd1e11dcac24
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="reset-and-remove-the-passcode-on-intune-managed-devices"></a>Återställa och ta bort lösenordet på Intune-hanterade enheter
-
+# <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Termerna *ta bort* och *återställa* används synonymt i den här artikeln.
-
-Åtgärden **Ta bort lösenord** genererar ett nytt lösenord för enheten som visas på bladet <*enhetsnamn*> **Översikt**.
+Om du vill skapa ett nytt lösenord för en enhet använder du åtgärden **Ta bort lösenkod**.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
-- Windows – stöds inte
-- Windows Phone – stöds på Windows Phone 8.1 till Windows 10 Creators Update som ej är ansluten till Azure AD, Windows 10 Creators Update och senare
-- iOS – stöds
-- macOS – stöds inte
-- Android – stöds på versioner tidigare än Android 7. Android for Work stöds inte.
+- Windows Phone 8.1 till Windows 10 Creators Update som inte är ansluten till Azure AD och Windows 10 Creators Update och senare
+- iOS
+- Tidigare Android-versioner än Android 7
 
-## <a name="how-to-reset-a-passcode"></a>Återställa ett lösenord
+Den här funktionen stöds **inte** för följande system:
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
-3. Välj **Enheter** på bladet **Intune**.
-4. Välj **Alla enheter** på bladet **Enheter**.
-5. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan fjärråtgärden **Ta bort lösenord**.
+- Windows
+- macOS
+- Android for Work
+
+## <a name="reset-a-passcode"></a>Återställa ett lösenord
+
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**.
+3. Välj **Enheter** och sedan **Alla enheter**.
+4. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan fjärråtgärden **Ta bort lösenord**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.
+Om du vill se status för den åtgärd som du nyss vidtog väljer du **Enhetsåtgärder** i **Enheter**.
