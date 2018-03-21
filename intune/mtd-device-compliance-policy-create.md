@@ -1,12 +1,12 @@
 ---
-title: "Skapa en princip för Mobile Threat Defense-enhetsefterlevnad med Intune"
-titlesuffix: Azure portal
-description: "Skapa en princip för Mobile Threat Defense-enhetsefterlevnad i Intune"
+title: "Skapa en princip för MTD-enhetsefterlevnad med Microsoft Intune"
+titlesuffix: 
+description: "Skapa en Intune-princip för enhetsefterlevnad som använder din MTD-partners hotnivåer för att bestämma om en mobil enhet ska få åtkomst till företagets resurser."
 keywords: 
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 5d12254f-ffab-4792-b19c-ab37f5e02f35
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a02f08c347f40821a10f6d9b6df3a6b26178180b
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: b719bb1841cfc1aa98808b9c09db43d9c654d63f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Skapa en princip för Mobile Threat Defense-enhetsefterlevnad med Intune
 
@@ -40,7 +40,7 @@ Förutsättningar för principen för enhetsefterlevnad med MTD:
 
 1.  Gå till [Azure Portal](https://portal.azure.com/) och logga in med dina Intune-autentiseringsuppgifter.
 
-2.  Välj **Fler tjänster** på den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
+2.  Välj **Alla tjänster** i den vänstra menyn på **Azure-instrumentpanelen** och skriv sedan **Intune** i textrutefiltret.
 
 3.  Välj **Intune**. **Intune-instrumentpanelen** öppnas.
 
@@ -48,9 +48,9 @@ Förutsättningar för principen för enhetsefterlevnad med MTD:
 
 5.  Välj **Skapa princip**, ange ett **namn** på och en **beskrivning** av principen för enhetsefterlevnad, välj **plattform** och välj sedan **Konfigurera** under avsnittet **Inställningar**.
 
-6.  Välj **Enhetens hälsotillstånd** på bladet för **efterlevnadsprincip**.
+6.  Välj **Enhetens hälsotillstånd** i fönstret för **efterlevnadsprincip**.
 
-7.  På bladet **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas på eller under mobilhotnivån**.
+7.  I fönstret **Enhetens hälsotillstånd** väljer du mobilhotnivå i listrutan under **Kräv att enheten ska hållas vid eller under hotnivån för enheten**.
 
     a.  **Skyddad**: Det här är den säkraste nivån. Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
 
@@ -67,11 +67,11 @@ Förutsättningar för principen för enhetsefterlevnad med MTD:
 
 ## <a name="to-assign-a-mtd-device-compliance-policy"></a>Så här tilldelar du en policy för MTD-enhetsefterlevnad
 
-Om du vill tilldela en princip för enhetsefterlevnad till användare, väljer du en princip som du tidigare har konfigurerat. Du hittar befintliga principer på bladet **Principer för enhetsefterlevnad**.
+Om du vill tilldela en princip för enhetsefterlevnad till användare, väljer du en princip som du tidigare har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad – Principer**.
 
-1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Åtgärden öppnar det blad där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Åtgärden öppnar ett fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
 
-2. Öppna bladet som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper**.  När du väljer **Välj** distribueras principen till användarna.
+2. Öppna sidan som visar säkerhetsgrupper för Azure AD genom att välja **Välj grupper att ta med**.  När du väljer **Välj** distribueras principen till användarna.
 
     > [!NOTE] 
     > Du har tillämpat principen på användarna. Enheterna som används av de användare som principen är inriktad på kommer att utvärderas för att se om de följer standard.

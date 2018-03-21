@@ -1,12 +1,11 @@
 ---
-title: Synkronisera enheter med Intune
-titlesuffix: Azure portal
-description: "Läs om hur man synkroniserar enheter med Intune för att få de senaste principerna och åtgärderna.\""
+title: "Synkronisera enheter med Microsoft Intune – Azure | Microsoft Docs"
+description: "Synkronisera enheter som har registrerats, eller som hanteras, med Intune så att du får de senaste principerna och åtgärderna. Detta innefattar steg för att synkronisera med Azure Portal och en lista över felkoder som kan försökas på nytt."
 keywords: 
-author: arob98
-ms.author: angrobe
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 08/09/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -14,18 +13,18 @@ ms.technology:
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d48b81e6df912815d9ef843b4588f8c1076a8a7
-ms.sourcegitcommit: eac89306d1391a6d3ae1179612b0820b19c2baa6
+ms.openlocfilehash: d2d13ce2ed06549a6cd09fd766a0072b15fcd067
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="sync-devices-with-intune-to-get-the-latest-policies-and-actions"></a>Synkronisera enheter med Intune för att få de senaste principerna och åtgärderna
+# <a name="sync-devices-to-get-the-latest-policies-and-actions---intune"></a>Synkronisera enheter med Intune för att få de senaste principerna och åtgärderna
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den.  Den här åtgärden kan hjälpa dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
+Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart checka in med Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen kan hjälpa dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -35,35 +34,34 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 - macOS
 - Android
 
-## <a name="how-to-sync-a-device"></a>Synkronisera en enhet
+## <a name="sync-a-device"></a>Synkronisera en enhet
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
-3. Välj **Enheter** på bladet **Intune**.
-4. Välj **Alla enheter** på bladet **Enheter**.
-5. I listan med enheter som du hanterar väljer du en iOS-enhet, **...Mer** och sedan fjärråtgärden **Hitta enhet**.
-7. Bekräfta genom att klicka på **Ja** .
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**. 
+3. I **Intune** väljer du **Enheter** och sedan **Alla enheter**.
+4. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan åtgärden **Synkronisera**.
+5. Välj **Ja** för att bekräfta.
 
 
-## <a name="retriable-error-codes"></a>Återförsöksbara felkoder
+## <a name="retryable-error-codes"></a>Återförsöksbara felkoder
 
-När en administratör kör enhetsåtgärden för **synkronisering** blir iOS- och Android-appar som misslyckades men genererade en återförsöksbar felkod tillgängliga för enheten. Appar som genererade en icke-återförsöksbar felkod måste däremot vänta i sju dagar innan de blir tillgängliga för enheten igen.
+När en administratör kör enhetsåtgärden för **synkronisering** är iOS- och Android-appar som misslyckades och genererade en återförsöksbar felkod fortfarande tillgängliga för enheten. Appar som genererade en icke-återförsöksbar felkod måste däremot vänta i sju dagar innan de är tillgängliga för enheten igen.
 
 
-| Felkod  | Föreslagen beskrivning                                                                                                                  | Återförsöksbar |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| 2016330898 | Ett okänt fel uppstod.                                                                                                             | Nej        |
-| 2016330897 | Anslutningen till Intune har nått tidsgränsen. Återställ anslutningen                                                                             | Ja       |
-| 2016330896 | Du har förlorat anslutningen till Internet. Återställ anslutningen.                                                                            | Ja       |
-| 2016330895 | Du har förlorat anslutningen till Internet. Återställ anslutningen.                                                                            | Ja       |
-| 2016330894 | Du har förlorat anslutningen till Internet. Återställ anslutningen.                                                                            | Ja       |
-| 2016330893 | Du har förlorat anslutningen till Internet. Återställ anslutningen.                                                                            | Ja       |
-| 2016330892 | Internationell nätverksväxling är inaktiverad.                                                                                                     | Nej        |
-| 2016330891 | Mobildataanslutningen för den här enheten kan inte nås när ett mobiltelefonsamtal rings. Vänta tills telefonsamtalet har avslutats. | Ja       |
-| 2016330890 | Det mobila nätverket för den här enheten. Dessa enheter kan inte användas just nu.                                                   | Nej        |
-| 2016330889 | Det gick inte att skapa en säker anslutning. Återställ anslutningen.                                                                                   | Ja       |
-| 2016330888 | Utvärderingen av serverförtroendet misslyckades.                                                                                                | Nej        |
+| Felkod  | Föreslagen beskrivning | Återförsökbar |
+|---|---|---|
+| 2016330898 | Ett okänt fel uppstod. | Nej |
+| 2016330897 | Anslutningen till Intune har nått tidsgränsen. Återställ anslutningen. | Ja |
+| 2016330896 | Du har förlorat anslutningen till Internet. Återställ anslutningen. | Ja |
+| 2016330895 | Du har förlorat anslutningen till Internet. Återställ anslutningen. | Ja |
+| 2016330894 | Du har förlorat anslutningen till Internet. Återställ anslutningen. | Ja |
+| 2016330893 | Du har förlorat anslutningen till Internet. Återställ anslutningen. | Ja|
+| 2016330892 | Internationell nätverksväxling är inaktiverad. | Nej|
+| 2016330891 | Mobildataanslutningen för den här enheten kan inte nås när ett mobiltelefonsamtal rings. Vänta tills telefonsamtalet har avslutats. | Ja|
+| 2016330890 | Det mobila nätverket för den här enheten. Dessa enheter kan inte användas just nu. | Nej|
+| 2016330889 | Det gick inte att skapa en säker anslutning. Återställ anslutningen. | Ja|
+| 2016330888 | Utvärderingen av serverförtroendet misslyckades. | Nej|
 
-## <a name="next-steps"></a>Nästa steg
+## <a name="next-step"></a>Nästa steg
 
 Välj **Enhetsåtgärder** för att se status för synkroniseringsåtgärden. 
