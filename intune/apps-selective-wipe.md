@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dfd1b37c1b944a545234b93b44d651ead8f0f486
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 913ff1c0ae7ab968ae1195425c7cbe4044591c6b
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -39,23 +39,21 @@ Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran 
 
 1.  Logga in på [Azure Portal](https://portal.azure.com).
 
-2.  Välj **Fler tjänster**, skriv **Intune** i filtrets textruta och välj **Intune**. Intune-bladet öppnas. Välj **Mobilappar**.
+2.  Välj **Alla tjänster**, skriv **Intune** i filtrets textruta och välj **Intune**. Intune-fönstret öppnas. Välj **Mobilappar**.
 
-    ![Skärmbild på bladet Microsoft Intune](./media/apps-selective-wipe01.png)
+    ![Skärmbild på fönstret Microsoft Intune](./media/apps-selective-wipe01.png)
 
-3.  Välj **Selektiv radering av app** på bladet **Mobilappar**.
+3.  Välj **Selektiv radering av app** i fönstret **Mobilappar**.
 
 4.  Välj  **Ny rensningsförfrågan**. Då öppnas fönstret **Ny rensningsförfrågan**.
 
     ![Skärmbild av fönstret Ny rensningsförfrågan](./media/AzurePortal_MAM_NewWipeRequest.png)
 
-5.  Välj **Användare** för att öppna bladet **Användare** och välj den användare vars appdata du vill rensa.
+5.  Välj en användare och sedan **Välj** för att välja användaren vars appdata du vill rensa.
 
-6.  Välj sedan **Enhet** på bladet **Ny rensningsförfrågan**. Den här åtgärden öppnar bladet **Välj enhet**. Alla enheter som är associerade med den valda användaren visas. Det här fönstret visar även enhetsnamnet (som är ett användardefinierat namn) samt enhetstypen, som anger enhetens plattform. 
+6.  Välj sedan **Enhet** i fönstret **Ny rensningsförfrågan**. Detta öppnar fönstret **Välj enhet** med en lista över alla enheter som är associerade med den valda användaren. Den innehåller även två kolumner: namnet på enheten, som är ett eget namn som definierats av användaren, och typ av enhet, vilket är dess enhetsplattform. Välj den enhet som du vill rensa.
 
-7. Välj den enhet som du vill rensa i listan.
-
-8.  Nu är du tillbaka på bladet **Ny rensningsförfrågan**. Välj **OK** för att skicka en rensningsförfrågan.
+7.  Nu är du tillbaka i fönstret **Ny rensningsförfrågan**. Välj **OK** för att skicka en rensningsförfrågan.
 
 Tjänsten skapar och spårar en separat rensningsförfrågan för varje skyddad app på enheten, samt för användaren som är associerad med rensningsförfrågningar.
 
@@ -63,7 +61,7 @@ Tjänsten skapar och spårar en separat rensningsförfrågan för varje skyddad 
 
 Du kan få en sammanfattande rapport som visar övergripande status för rensningsförfrågan och som innehåller antalet väntande förfrågningar och fel. Följ dessa steg för mer information:
 
-1.  På bladet **Mobilappar – Selektiv radering av app** kan du se en lista över dina önskemål grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
+1.  I fönstret **Mobilappar – Selektiv radering av app** kan du se en lista över dina önskemål grupperade efter användare. Eftersom systemet skapar en rensningsbegäran för varje skyddad app som körs på enheten kan flera begäranden visas för en användare. Statusen anger om en rensningsbegäran är **väntande**, **misslyckad**eller **lyckad**.
 
     ![Skärmbild på status för rensningsförfrågan i fönstret Selektiv radering av app](./media/wipe-request-status-1.png)
 
@@ -76,7 +74,7 @@ Dessutom kan du se namnet på enheten och dess enhetstyp, vilket kan vara använ
 
 Rensningar med väntande status visas tills du tar bort dem manuellt. Så här tar du bort en rensningsförfrågan manuellt:
 
-1.  Öppna bladet **Mobilappar – Selektiv radering av app**.
+1.  I fönstret **Mobilappar – Selektiv radering av app**.
 
 2.  Högerklicka på den rensningsförfrågan som du vill ta bort och välj sedan **Ta bort rensningsförfrågan**.
 

@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e052f7c8d5742859d009816473fe97a98c499b17
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4fc4ee80b1cf5a8422d135d13a9fb498980500b5
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Skapa en grupp för att hantera användare och dataåtkomst
 
@@ -30,11 +30,13 @@ Microsoft Intune använder Azure Active Directory (Azure AD) för att hantera å
 ## <a name="how-do-i-create-a-group"></a>Hur gör jag för att skapa en grupp?
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Sök efter **Intune** med hjälp av **Sök resurser**.
-3. När du har öppnat bladet **Microsoft Intune** väljer du **Grupper**.
-4. Välj kommandot **Ny grupp** på bladet **Användare och grupper – Alla grupper**.
-5. Lägg till ett **namn** på och en **beskrivning** av gruppen på bladet **Grupp**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. När du har öppnat fönstret **Microsoft Intune** väljer du **Grupper**.
+4. Välj kommandot **Ny grupp** i fönstret **Användare och grupper – Alla grupper**.
+5. Välj **Grupptyp** i fönstret **Grupp**.
+5. Ange ett **namn** och en **beskrivning** för vyn.
 6. Ange **Tilldelad** som **medlemskapstyp**. Välj inte **Aktivera Office-funktioner** för testgruppen.
+7. Välj **medlemmar** för gruppen.
 7. Klicka på **Skapa**.
 
 Om du har skapat en grupp ska den visas i listan **Alla grupper**. Om den inte visas där försöker du skapa en annan grupp.

@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46bb82fd49fa58e87c22c8bf0abb57e1587b8b40
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d415628419bec26c24494b38a13bd3801051c603
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune
 
@@ -48,19 +48,19 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Skapa en princip för Windows Hello för företag
 
-1.  På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1.  I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune**.
 
-2.  På Intune-sidan väljer du **Enhetsregistrering** och sedan **Windows-registrering** > **Windows Hello för företag**.
+2.  I Intune-fönstret väljer du **Enhetsregistrering** och sedan **Windows-registrering** > **Windows Hello för företag**.
 
-3.  På sidan som öppnas väljer du inställningen **Standard**.
+3.  I fönstret som öppnas väljer du inställningen **Standard**.
 
-4.  På sidan **Alla användare** klickar du på **Egenskaper** och anger sedan ett **Namn** och valfri **Beskrivning** för Windows Hello för företag-inställningarna.
+4.  I fönstret **Alla användare** klickar du på **Egenskaper** och anger sedan ett **Namn** och valfri **Beskrivning** för Windows Hello för företag-inställningarna.
 
-5. På sidan **Alla användare** klickar du på **Inställningar** och väljer bland följande för att **Konfigurera Windows Hello för företag**:
+5. I fönstret **Alla användare** klickar du på **Inställningar** och väljer bland följande för att **Konfigurera Windows Hello för företag**:
 
     - **Inaktiverad**. Välj den här inställningen om du inte vill använda Windows Hello för företag. Alla andra inställningar på skärmen inaktiveras.
     - **Aktiverad**. Välj den här inställningen om du vill konfigurera inställningarna för Windows Hello för företag.
-    - **Inte konfigurerat**. Välj den här inställningen om du inte vill konfigurera inställningarna för Windows Hello för företag. Eventuella befintliga inställningar för Windows Hello för företag på Windows 10-enheter ändras inte. Alla andra inställningar på sidan inaktiveras.
+    - **Inte konfigurerat**. Välj den här inställningen om du inte vill konfigurera inställningarna för Windows Hello för företag. Eventuella befintliga inställningar för Windows Hello för företag på Windows 10-enheter ändras inte. Alla andra inställningar i fönstret inaktiveras.
 
 6.  Om du har valt **Aktiverad** i föregående steg, konfigurerar du de obligatoriska inställningar som kommer att gälla på alla registrerade Windows 10- och Windows 10 Mobile-enheter.
 
@@ -69,9 +69,9 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
      - **Obligatoriskt** (standard). Endast enheter med en tillgänglig TPM kan etablera Windows Hello för företag.
      - **Önskad**. Enheterna försöker först använda TPM. Om det inte är tillgängligt kan de använda programvarukryptering.
 
- - **Kräv minsta PIN-kodslängd**/**Kräv största PIN-kodslängd**. Konfigurerar enheterna så att de använder de minsta och största PIN-kodslängder du anger för att hjälpa till att säkerställa säker inloggning. Standardlängden för PIN-kod är sex tecken, men du kan ange en minsta längd på fyra tecken. Den maximala längden för PIN-kod är 127 tecken.
+ - **Minsta PIN-kodslängd**/**Maximala PIN-kodslängd**. Konfigurerar enheterna så att de använder de minsta och största PIN-kodslängder du anger för att hjälpa till att säkerställa säker inloggning. Standardlängden för PIN-kod är sex tecken, men du kan ange en minsta längd på fyra tecken. Den maximala längden för PIN-kod är 127 tecken.
 
- - **Kräv gemener i PIN-koden**/**Kräv versaler i PIN-koden**/**Kräv specialtecken i PIN-koden**. Du kan tillämpa en starkare PIN-kod genom att kräva att versaler, gemener och specialtecken används i PIN-koden. Välj mellan:
+ - **Gemener i PIN-koden**/**Versaler i PIN-koden**/**Specialtecken i PIN-koden**. Du kan tillämpa en starkare PIN-kod genom att kräva att versaler, gemener och specialtecken används i PIN-koden. Välj mellan:
 
      - **Tillåts**. Användarna kan använda teckentypen i sina PIN-koder, men det är inte obligatoriskt.
 
@@ -90,7 +90,7 @@ Uppdatera din princip för Windows Hello för företag så att den matchar inst�
 
  - **Använd utökat skydd mot förfalskning när det är tillgängligt**. Konfigurerar om funktionerna för skydd mot förfalskning i Windows Hello används på enheter som har stöd för detta (t.ex. identifiering av ett foto av ett ansikte i stället för ett riktigt ansikte).<br>Om detta är inställt på **Ja** kräver Windows att alla användare använder skydd mot förfalskning för ansiktsdrag när detta stöds.
 
- - **Använd telefoninloggning**. Om det här alternativet är inställt på **Ja** kan användarna använda ett fjärranslutet Passport som fungerar som en bärbar tillhörande enhet för autentisering på stationär dator. Den stationära datorn måste vara ansluten med Azure Active Directory och den tillhörande enheten måste vara konfigurerad med en PIN-kod för Windows Hello för företag.
+ - **Tillåt telefoninloggning**. Om det här alternativet är inställt på **Ja** kan användarna använda ett fjärranslutet Passport som fungerar som en bärbar tillhörande enhet för autentisering på stationär dator. Den stationära datorn måste vara ansluten med Azure Active Directory och den tillhörande enheten måste vara konfigurerad med en PIN-kod för Windows Hello för företag.
 
 ## <a name="windows-holographic-for-business-support"></a>Stöd för Windows Holographic for Business
 

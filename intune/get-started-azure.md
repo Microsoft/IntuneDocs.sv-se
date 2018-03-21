@@ -6,8 +6,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: get-started-article
+ms.date: 02/26/2018
+ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
@@ -15,11 +15,11 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bd2a5af8c5535fc45083b1386f378604b0b67353
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: f2d0a77c9e9e36db53c23031fd9f06f508fef15d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Komma igång med Microsoft Intune i Azure-portalen
 
@@ -31,7 +31,7 @@ På __sidopanelen__ till vänster på Azure Portal finns en lista över alla til
 
 ![En användare söker efter Microsoft Intune i listan ”Fler tjänster”.](./media/azure-add-intune1.png)
 
-1. Välj **Fler tjänster** längst ned på sidopanelen till vänster på sidan.
+1. Välj **Alla tjänster** på sidopanelen till vänster på sidan.
 2. Sök efter **Intune** i filterrutan.
 3. Markera **stjärnan** för att lägga till Intune längst ned i listan över dina favorittjänster.
 4. Håll markören över Intune-tjänsten. Markera och dra Intune med hjälp av de **tre lodräta punkterna** till höger om namnet på tjänsten.
@@ -52,7 +52,7 @@ Den här funktionen är mer relevant när du har lagt till mer innehåll, exempe
 
 ## <a name="using-services"></a>Använda tjänster
 
-Varje gång du öppnar Microsoft Intune eller någon annan tjänst i Azure visas tjänsten på ett **blad**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas bladet på hela sidan. Övriga blad dras ut från bladets högra sida när de öppnas och komprimeras under det huvudblad som de kom ifrån.
+När du öppnar Intune eller någon annan tjänst i Azure visas tjänsten i ett **fönster**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas fönstret på hela sidan. Övriga fönster dras ut från fönstrets högra sida när de öppnas och komprimeras under det huvudfönster som de kom ifrån.
 
 ## <a name="next-steps"></a>Nästa steg
 

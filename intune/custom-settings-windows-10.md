@@ -13,13 +13,13 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 156d37874529b4ae5a8176d7e9a8873cf440c32c
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4bb86d0f80a4d337e0ab63ae7f90d6c3541462d9
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Anpassade inställningar i Microsoft Intune för enheter som kör Windows 10 
+# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Anpassade inställningar i Microsoft Intune för enheter som kör Windows 10
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
@@ -29,11 +29,11 @@ Kom ihåg att om du letar efter en viss inställning, innehåller [enhetsbegrän
 ## <a name="configure-custom-settings"></a>Konfigurera anpassade inställningar
 
 1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
-2. På sidan **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
-3. På sidan **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
-4. Ange följande information för varje OMA-URI-inställning som du vill lägga till. Använd listan i den här artikeln om du vill veta mer om vilka inställningar du kan använda:
-    - **Inställningsnamn** – Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
-    - **Inställningsbeskrivning** – Ange en beskrivning för inställningen.
+1. I fönstret **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
+1. Ange följande information för varje OMA-URI-inställning som du vill lägga till. Använd listan i den här artikeln om du vill veta mer om vilka inställningar du kan använda:
+    - **Namn** – Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
+    - **Inställning** – Ange en beskrivning för inställningen (valfritt).
+    - **OMA-URI (skiftlägeskänslig)** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
     - **Datatyp** – Välj bland:
         - **Sträng**
         - **Sträng (XML)**
@@ -41,13 +41,13 @@ Kom ihåg att om du letar efter en viss inställning, innehåller [enhetsbegrän
         - **Heltal**
         - **Flyttal**
         - **Boolesk**
-    - **OMA-URI (skiftlägeskänslig)** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
-    - **Värde** – Ange det värde som ska associeras med den OMA-URI som du har angett.
-5. När du är klar går du tillbaka till sidan **Skapa profil** och trycker på **Skapa**.
-Profilen skapas och visas på sidan med profillistan.
+        - **Base64**
+    - **Värde** – Ange det värde eller den fil som ska associeras med den OMA-URI som du har angett.
+1. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
+Profilen skapas och visas i fönstret med profillistan.
 
 ## <a name="example"></a>Exempel
-I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** aktiverats. Detta innebär att en Windows 10-enhet öppnar en VPN-anslutning när enheten använder ett mobilnät.
+I följande skärmbild har inställningen **Connectivity/AllowVPNOverCellular** aktiverats. Detta innebär att en Windows 10-enhet öppnar en VPN-anslutning när enheten använder ett mobilnät.
 
 > ![Exempel på en anpassad princip som innehåller VPN-inställningar](./media/custom-policy-example.png)
 
@@ -56,8 +56,6 @@ I skärmbilden nedan har inställningen **Connectivity/AllowVPNOverCellular** ak
 
 Du hittar en lista med alla CSP:er som har stöd för Windows 10 i [Referens till CSP (Configuration Service Provider)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) i dokumentationsbiblioteket för Windows.
 
-Alla inställningar är inte kompatibla med alla versioner av Windows 10. I tabellen i artikeln om Windows kan du se vilka versioner som stöds för varje CSP.
+Alla inställningar är inte kompatibla med alla versioner av Windows 10. I tabellen i Windows-artikeln visas vilka versioner som stöds för varje CSP.
 
-Dessutom stöder Intune inte alla inställningar som anges i artikeln. Om du vill veta om Intune har stöd för den inställning som du vill använda, öppnar du artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.
-
-
+Dessutom stöder Intune inte alla inställningar som anges i artikeln. Om du vill veta om Intune har stöd för den inställning som du vill använda, kan du öppna artikeln för den inställningen. Varje inställningssida visar den åtgärd som stöds. Om du vill arbeta med Intune måste inställningen ha stöd för åtgärderna **Lägg till** eller **Ersätt**.

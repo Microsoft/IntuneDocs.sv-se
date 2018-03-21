@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b11f2b3a560d33503e381f96804bfe5489fe367d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
 
@@ -34,18 +34,19 @@ För att kunna använda enkel inloggning för iOS-enheter måste du uppfylla fö
 
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. På sidan **Intune** väljer du **Enhetskonfiguration**.
-2. På sidan **Enhetskonfiguration** väljer du **Profiler**.
-3. På profilsidan väljer du **Skapa profil**, anger ett namn och en beskrivning och konfigurerar följande inställningar:
-   - **Plattform**: Välj **iOS**. 
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+4. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+5. I fönstret Profiler väljer du **Skapa profil**.
+6. Ange ett namn och en beskrivning och konfigurera följande inställningar:
+   - **Plattform**: Välj **iOS**.
    - **Profiltyp**: Välj **Enhetsfunktioner**.
-4. På sidan **Enhetsfunktioner** väljer du **Enkel inloggning**.
+7. I fönstret **Enhetsfunktioner** väljer du **Enkel inloggning**.
 
-   ![Sidan Enkel inloggning](./media/sso-blade.png)
+   ![Fönstret Enkel inloggning](./media/sso-blade.png)
 
-2. Ta hjälp av följande sammanfattningstabell när du fyller i fälten på sidan **Enkel inloggning**. Mer information finns i avsnitten efter tabellen.
-   
+8. Ta hjälp av följande sammanfattningstabell när du fyller i fälten i fönstret **Enkel inloggning**. Mer information finns i avsnitten efter tabellen.
+
    |Fält  |Obs!|
    |---------|---------|
    |**Användarnamnattribut från AAD**|Det attribut som Intune granskar för varje användare i AAD och som fylls i respektive fält (till exempel UPN) innan XML-nyttolasten som installeras på enheten genereras.|

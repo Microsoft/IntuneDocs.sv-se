@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d805d10efccb92ca3fe65b771bf7689e22f42088
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 83d508f0ce33becb9abcef7434845836d8dd2bca
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Så här konfigurerar du e-postinställningar i Microsoft Intune
 
@@ -39,17 +39,19 @@ Använd informationen i den här artikeln om du vill lära dig grunderna för hu
 
 ## <a name="create-a-device-profile-containing-email-settings"></a>Skapa en enhetsprofil som innehåller e-postinställningar
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. På sidan **Intune** väljer du **Enhetskonfiguration**.
-2. På sidan **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
-3. På profilsidan väljer du **Skapa profil**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+3. I fönstret Profiler väljer du **Skapa profil**.
 4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för e-postprofilen.
 5. Välj den enhetsplattform på vilken du vill tillämpa e-postinställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsinställningar för e-post:
     - **Android** (endast Samsung Android Knox Standard)
     - **Android for Work**
     - **iOS**
+    - **macOS**
     - **Windows Phone 8.1**
+    - **Windows 8.1 och senare**
     - **Windows 10 och senare**
 6. Välj **E-post** i listrutan **Profil**.
 7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
@@ -57,9 +59,9 @@ Använd informationen i den här artikeln om du vill lära dig grunderna för hu
     - [Inställningar för iOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
-8. När du är klar går du tillbaka till sidan **Skapa profil** och trycker på **Skapa**.
+8. När du är klar går du tillbaka till fönstret **Skapa profil** och trycker på **Skapa**.
 
-Profilen skapas och visas på sidan med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
 Om du vill gå vidare och tilldela den här profilen till grupper, kan du läsa mer i [Tilldela enhetsprofiler](device-profile-assign.md).
 
 ## <a name="further-information"></a>Ytterligare information

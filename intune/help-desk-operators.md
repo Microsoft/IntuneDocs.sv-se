@@ -14,19 +14,19 @@ ms.technology:
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 7997bf0494ff52ad25b09301173b65f2478dca37
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 9582b53c4f992b5f788f10a262bb802e80580144
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-I felsökningsportalen kan supportansvariga och Intune-administratörer se användarinformation för att tillgodose användarnas begäran om hjälp. Organisationer som har en supportavdelning kan tilldela rollen **supportavdelning** till en grupp användare. Rollen som supportansvarig kan nu använda **felsökningsbladet**.
+I felsökningsportalen kan supportansvariga och Intune-administratörer se användarinformation för att tillgodose användarnas begäran om hjälp. Organisationer som har en supportavdelning kan tilldela rollen **supportavdelning** till en grupp användare. Rollen som supportansvarig kan nu använda **felsökningsfönstret**.
 
-Bladet **Felsökning** visar nu även problem med användarregistreringen. Information om problemet och förslagna lösningar kan hjälpa administratörer och medarbetare på supportavdelningen att felsöka problem. Vissa problem med registreringen inte fångas upp, och vissa fel kanske inte har några reparationsförslag. 
+Fönstret **Felsökning** visar nu även problem med användarregistreringen. Information om problemet och förslagna lösningar kan hjälpa administratörer och medarbetare på supportavdelningen att felsöka problem. Vissa problem med registreringen inte fångas upp, och vissa fel kanske inte har några reparationsförslag.
 
 Anvisningar om att lägga till rollen supportansvarig finns i [Rollbaserad administrationskontroll (RBAC) med Intune](/intune/role-based-access-control)
 
@@ -41,20 +41,20 @@ När en användare kontaktar supporten om ett tekniskt problem i Intune kan supp
 
 ## <a name="to-review-troubleshooting-details"></a>Granska information om felsökning
 
-På felsökningsbladet kan du välja **Välj användare** för att visa information om en användare. Med hjälp av användarinformation kan du få en bättre förståelse för det aktuella tillståndet för användarna och deras enheter.  
+I felsökningsfönstret kan du välja **Välj användare** för att visa information om en användare. Med hjälp av användarinformation kan du få en bättre förståelse för det aktuella tillståndet för användarna och deras enheter.  
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Felsök** på bladet **Intune**.
-4. Klicka på **Välj användare**.
-5. Välj en användare genom att skriva namnet eller e-postadressen. Klicka på **Välj**. Felsökningsinformationen för användaren visas på bladet Felsökning. I följande tabeller förklaras informationen.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Felsök** i fönstret **Intune**.
+4. Klicka på **Välj** för att välja en användare att felsöka.
+5. Välj en användare genom att skriva namnet eller e-postadressen. Klicka på **Välj**. Felsökningsinformationen för användaren visas i fönstret Felsökning. I följande tabeller förklaras informationen.
 
 > [!Note]  
-> Du kan också få åtkomst till **felsökningsbladet** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+> Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
 ## <a name="areas-of-troubleshooting-dashboard"></a>Områden för felsökning av instrumentpanelen
 
-Du kan använda bladet **Felsökning** för att granska användarinformation. 
+Du kan använda fönstret **Felsökning** för att granska användarinformation.
 
 ![](/intune/media/troubleshooting-dash.png)
 
@@ -63,7 +63,7 @@ Du kan använda bladet **Felsökning** för att granska användarinformation.
 | 1.   | Kontostatus  | Visar status för aktuell Intune-klient som **Aktiv** eller **Inaktiv**.       |
 | 2.   | Val av användare  | Namnet på den valda användaren. Välj en ny användare genom att klicka på **Ändra användare**.       |
 | 3.   | Användarstatus  | Visar status för användarens Intune-licens, antal enheter, varje enhetskompatibilitet, antalet appar och appkompatibilitet.       |
-| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa på bladet. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper<li> Registreringsbegränsningar</ul>      |
+| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa i fönstret. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper</ul>      |
 | 5.   | Gruppmedlemskap  | Yadda       |
 
 ## <a name="mobile-apps-reference"></a>Referens för mobila appar

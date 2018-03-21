@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0a72199c9e38f4f4d9d7317469eea2e6254efee7
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
@@ -55,9 +55,9 @@ Om du registrerar Android for Work-enheter med hjälp av ett konto för [Enhetsr
 1. **Konfigurera Intune MDM**<br>
 Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 2. **Konfigurera Android for Work-bindning**<br>
-    Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.
+    Som Intune-administratör väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune** i [Azure-portalen](https://portal.azure.com).
 
-   a. På bladet **Intune** väljer du **Enhetsregistrering** > **Android for Work-registrering**. Välj sedan **Konfigurera** för att öppna Google Play-webbplatsen Android for Work. Webbplatsen öppnas på en ny flik i webbläsaren.
+   a. I fönstret **Intune** väljer du **Enhetsregistrering** > **Android for Work-registrering**. Välj sedan **Hanterat Google Play-konto – Konfigurera** för att öppna Google Play-webbplatsen Android for Work. Webbplatsen öppnas på en ny flik i webbläsaren.
    ![Registreringsskärm i Android for Work](./media/android-work-bind.png)
 
    b. **Logga in på Google**<br>
@@ -106,7 +106,7 @@ Du kan inaktivera Android for Work-registrering och hantering. Om du väljer **T
 ### <a name="to-unbind-an-android-for-work-account"></a>Ta bort bindningen för ett Android for Work-konto
 
 1. **Ta bort en Android for Work-bindning**<br>
-    Som Intune-administratör väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune** i Azure-portalen.  På bladet **Intune** väljer du **Enhetsregistrering**, > **Android for Work-registrering** och väljer sedan **Ta bort bindning**.
+    Som Intune-administratör väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune** i [Azure-portalen](https://portal.azure.com).  I fönstret **Intune** väljer du **Enhetsregistrering**, > **Android for Work-registrering** och väljer sedan **Ta bort bindning**.
 
 2. **Godkänn borttagningen av Android for Work-bindningen**<br>
   Välj **Ja** för att ta bort bindningen och avregistrera alla Android for Work-enheter från Intune.

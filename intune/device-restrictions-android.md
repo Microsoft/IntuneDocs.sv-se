@@ -6,19 +6,19 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
-ms.reviewer: ayesham
+ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d939d86f6ccd7f9851cfc52f1080fddaeee6a947
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: f938967951045d24ae65315b3b4d40749c1bc20f
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune 
 
@@ -144,7 +144,7 @@ För varje inställning konfigurerar du en lista med program med hjälp av någo
 
 Inställningarna för helskärmsläget gäller endast för Samsung Knox Standard-enheter och enbart för program som du hanterar med Intune.
 
-- **Välj en hanterad app** – Välj något av följande alternativ för att lägga till en eller flera hanterade program som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten.
+- **Välj en hanterad app** – Välj något av följande alternativ för att lägga till en eller flera hanterade program som kan köras när enheten är i helskärmsläge. Inga andra appar tillåts köra på enheten. Förinstallerade webbläsare kan inte definieras som en app som får köras medan enheten är i helskärmsläge. Om en webbläsare krävs ska du fundera på att använda den [hanterade webbläsaren](app-configuration-managed-browser.md).
     - **Lägg till appar efter paketnamn**
     - **Lägg till appar efter URL**
     - **Lägg till hanterade appar**.

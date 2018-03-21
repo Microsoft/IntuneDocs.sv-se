@@ -1,12 +1,11 @@
 ---
-title: "Skapa en Wi-Fi-profil med en i förväg delad nyckel"
-titleSuffix: Microsoft Intune
-description: "Använd en anpassad Intune-profil till att skapa en WiFi-profil med en i förväg delad nyckel."
+title: "Skapa WiFi-profile med i förväg delad nyckel – Microsoft Intune – Azure | Micrososft Docs"
+description: "Använd en anpassad profil för att skapa en Wi-Fi-profil med en i förväg delad nyckel och hämta exempel på XML-kod för Android-, Windows- och EAP-baserade Wi-Fi-profiler i Microsoft Intune"
 keywords: 
-author: vhorne
-ms.author: victorh
+author: mandia
+ms.author: MandiOhlinger
 manager: dougeby
-ms.date: 11/09/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,63 +14,64 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8229ac82e6854d75f569b7bbf04dd2f5e14856c7
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 85543d87ca79fa301ee1e9c242c053c1c34e18c3
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="use-a-custom-device-profile-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel
+# <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Så här använder du Intunes **anpassade enhetsprofiler** för att skapa en trådlös profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
+I förväg delade nycklar (PSK) används vanligtvis för att autentisera användare i WiFi-nätverk eller trådlösa nätverk. Med Intune kan du skapa en WiFi-profil med en i förväg delad nyckel. Skapa profilen med funktionen för **anpassade enhetsprofiler** i Intune. I den här artikeln finns även några exempel på hur du skapar en EAP-baserade Wi-Fi-profil.
 
-> [!NOTE]
--   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
-- För Android kan du även använda den här [PSK-generatorn för Android](http://intunepskgenerator.johnathonb.com/) som tillhandahålls av Johnathon Biersack.
--   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
--  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://intunepskgenerator.johnathonb.com/) som tillhandahålls av Johnathon Biersack.
+## <a name="before-you-begin"></a>Innan du börjar
 
+- Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen längre ned i den här artikeln.
+- För Android kan du också använda [Androids PSK-generator](http://intunepskgenerator.johnathonb.com/).
+- Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
+- För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda [PSK-generatorn för mobil konfiguration för iOS](http://intunepskgenerator.johnathonb.com/).
 
-1.  Om du vill skapa en trådlös profil med en i förväg delad nyckel för Android eller Windows eller en EAP-baserad trådlös profil, väljer du **Anpassad** för den enhetsplattformen när du skapar en enhetsprincip, i stället för en trådlös profil.
+## <a name="create-a-custom-profile"></a>Skapa en anpassad profil
+Du kan skapa en anpassad profil med en i förväg delad nyckel för en Android-, Windows- eller EAP-baserad Wi-Fi-profil. Om du vill skapa profilen med Azure-portalen kan du läsa om att [skapa anpassade enhetsinställningar](custom-settings-configure.md). När du skapar en enhetsprofil väljer du **Anpassad** för din enhetsplattform. Markera inte Wi-Fi-profilen. När du väljer anpassad ska du se till att: 
 
-2.  Ange ett namn och en beskrivning.
-3.  Lägg till en ny OMA-URI-inställning:
+1. Ange ett namn och en beskrivning av profilen.
+2. Lägga till en ny OMA-URI-inställning med följande egenskaper: 
 
-   a.   Ange ett namn på den här inställningen för Wi-Fi-nätverk.
+   a. Ange ett namn på den här inställningen för Wi-Fi-nätverk
 
-   b.   Ange en beskrivning av OMA-URI-inställningen eller lämna tomt.
+   b. (Valfritt) Ange en beskrivning av OMA-URI-inställningen eller lämna det tomt
 
-   c.   **Datatyp**: Ange som **Sträng**.
+   c. Ställ in **Datatyp** på **Sträng**
 
-   d.   **OMA-URI**:
+   d. **OMA-URI**:
 
     - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
     - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
     > [!NOTE]
-Se till att ta med punkttecknet i början.
+    > Se till att ta med punkttecknet i början.
 
-    SSID är det SSID som du skapar principen för. Till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+    SSID är det SSID som du skapar principen för. Ange till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-  e. **Värdefält** är där du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
-4. Välj **OK**, spara och tilldela sedan principen.
+  e. **Värdefält** är där du klistrar in XML-koden. Se exemplen i den här artikeln. Uppdatera varje värde så att det matchar dina nätverksinställningar. I avsnittet med kommentarer om koden finns tips.
+3. Välj **OK**, spara och tilldela sedan principen.
 
     > [!NOTE]
     > Den här principen kan bara tilldelas till användargrupper.
 
-Nästa gång varje enhet checkar in tillämpas principen och en Wi-Fi-profil skapas på enheten. Enheten kan ansluta till nätverket automatiskt.
+Nästa gång varje enhet checkar in tillämpas principen och en Wi-Fi-profil skapas på enheten. Enheten kan därefter ansluta till nätverket automatiskt.
 
-## <a name="android-or-windows-wi-fi-profile"></a>Wi-Fi-profil för Android eller Windows
+## <a name="android-or-windows-wi-fi-profile-example"></a>Exempel på Wi-Fi-profil för Android eller Windows
 
-Här är ett exempel på XML-koden för en Wi-Fi-profil för Android eller Windows:
+Följande exempel på XML-koden för en Wi-Fi-profil för Android eller Windows. 
 
 > [!IMPORTANT]
 >
-> `<protected>false</protected>` måste vara inställt på **falskt** eftersom **sant** kan göra att enheten förväntar sig ett krypterat lösenord och därför försöker dekryptera det, vilket kan resultera i en misslyckad anslutning.
+> `<protected>false</protected>` måste vara inställt på **falskt**. När det är inställt på **sant** kan det orsaka att enheten förväntar sig ett krypterat lösenord och försöka att dekryptera det, vilket kan resultera i en misslyckad anslutning.
 >
 >  `<hex>53534944</hex>` bör vara inställt på det hexadecimala värdet `<name><SSID of wifi profile></name>`.
->  Windows 10-enheter kan returnera ett falskt *0x87D1FDE8 Reparationen misslyckades*-felmeddelande, men kommer ändå att ha etablerats med profilen.
+>  Windows 10-enheter kan returnera ett falskt *0x87D1FDE8 Reparationen misslyckades*-felmeddelande, men enheten innehåller ändå profilen.
 
 ```
 <!--
@@ -115,8 +115,8 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 </WLANProfile>
 ```
 
-## <a name="eap-based-wi-fi-profile"></a>EAP-baserad Wi-Fi-profil
-Här är ett exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
+## <a name="eap-based-wi-fi-profile-example"></a>Exempel på EAP-baserad Wi-Fi-profil
+Följande exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
 
 ```
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -199,16 +199,18 @@ Här är ett exempel på XML-koden för en EAP-baserad Wi-Fi-profil:
 ```
 
 ## <a name="create-the-xml-file-from-an-existing-wi-fi-connection"></a>Skapa XML-filen utifrån en befintlig Wi-Fi-anslutning
-Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
-1. På en dator som är ansluten till eller nyligen har anslutit till det trådlösa nätverket öppnar du följande mapp: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
+Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning genom att följa dessa steg: 
 
-    Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
-3.     Sök igenom XML-filerna för att hitta den med rätt namn.
-4.     När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
+1. På en dator som är ansluten till, eller som nyligen har anslutits till det trådlösa nätverket, öppnar du mappen `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`.
+
+  Det är bäst att använda en dator som inte har för många anslutna trådlösa nätverk. Då kan du behöva leta igenom varje profil för att hitta den som är rätt.
+
+2. Sök igenom XML-filerna för att hitta filen med rätt namn.
+3. När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet **Data** på sidan OMA-URI-inställningar.
 
 ## <a name="best-practices"></a>Rekommenderade metoder
-Innan du distribuerar en Wi-Fi-profil med PSK måste du kontrollera att enheten kan ansluta till slutpunkten direkt.
+- Innan du distribuerar en Wi-Fi-profil med PSK måste du kontrollera att enheten kan ansluta till slutpunkten direkt.
 
-När du roterar nycklar (lösenord eller lösenfraser) ska du beräkna driftstopp och planera distributioner på lämpligt sätt. Överväg att skicka nya Wi-Fi-profiler under ledig tid. Varna även användarna om att anslutningsmöjligheterna kan påverkas.
+- När du roterar nycklar (lösenord eller lösenfraser) ska du beräkna driftstopp och planera distributioner på lämpligt sätt. Överväg att skicka nya Wi-Fi-profiler under ledig tid. Varna även användarna om att anslutningsmöjligheterna kan påverkas.
 
-Om du vill garantera en smidig övergång ska du se till att slutanvändarens enhet har en alternativ anslutning till Internet. Slutanvändaren måste till exempel kunna växla tillbaka till gäst-WiFi (eller något annat WiFi-nätverk) eller ha mobilanslutning för att kommunicera med Intune. Det gör att användaren kan fortsätta att få principuppdateringar när företags-WiFi-profilen uppdateras på enheten.
+- Om du vill garantera en smidig övergång ska du se till att slutanvändarens enhet har en alternativ anslutning till Internet. Slutanvändaren måste till exempel kunna växla tillbaka till gäst-WiFi (eller något annat WiFi-nätverk) eller ha mobilanslutning för att kommunicera med Intune. Den extra anslutningen gör att användaren kan fortsätta att få principuppdateringar när företags-WiFi-profilen uppdateras på enheten.

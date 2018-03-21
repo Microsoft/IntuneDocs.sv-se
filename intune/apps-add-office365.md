@@ -1,12 +1,12 @@
 ---
 title: "Installera Office 365-appar på enheter med Microsoft Intune"
 titlesuffix: 
-description: "Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter.”"
+description: "Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter."
 keywords: 
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,15 +15,15 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a8045261f93c6ac0282a03f13ac7bb7a7caac0d
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 076d228f3b18416e4ecb8fd1b3543a58d037e386
+ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="how-to-assign-office-365-proplus-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365 ProPlus-appar till Windows 10-enheter med Microsoft Intune
+# <a name="how-to-assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365-appar till Windows 10-enheter med Microsoft Intune
 
-Med den här apptypen kan du enkelt tilldela Office 365 ProPlus-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
+Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -32,7 +32,7 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus-appar till enhet
 >Den här metoden för att installera Office stöds endast om inga andra versioner av Microsoft Office är installerade på enheten.
 
 - Enheterna måste köra Windows 10 Creators Update eller senare.
-- Intune har endast stöd för att lägga till Office-appar från Office 365 ProPlus.
+- Intune har endast stöd för att lägga till Office-appar från Office 365.
 - Om alla Office-program är öppna när Intune installerar appen kan installationen misslyckas och slutanvändare kan förlora data från filer som inte sparats.
 - Den här installationsmetoden stöds inte på Windows 10S-, Windows Home-, Windows Team-, Windows Holographic- eller Windows Holographic for Business-enheter.
 - Intune stöder inte installation av Office 365-skrivbordsappar från Microsoft Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
@@ -41,12 +41,13 @@ Med den här apptypen kan du enkelt tilldela Office 365 ProPlus-appar till enhet
 
 ## <a name="get-started"></a>Kom igång
 
-1.  Logga in på Azure-portalen.
-2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1.  Logga in på [Azure-portalen](https://portal.azure.com).
+2.  Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3.  Välj **Mobilappar** på **Intune**-bladet.
-4.  Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
+4.  Välj **Appar** i avsnittet **Hantera** i arbetsbelastningen **Mobilappar**.
 5.  Välj **Lägg till** ovanför applistan.
-6.  På bladet **Lägg till App** väljer du **Office 365 ProPlus-paket (Windows 10)**.
+6.  I listan **Apptyp** på bladet **Lägg till appar** väljer du **Windows 10** under **Office 365-paket**.
+    Nu kan du konfigurera app-paketet.
 
 ## <a name="configure-the-app-suite"></a>Konfigurera app-paketet
 
@@ -61,7 +62,7 @@ Välj de Office-appar som du vill tilldela till enheter i det här steget.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
-I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera det i Intune och hjälper även användarna att hitta det i företagsportalappen.
+I det här steget måste du ange information om appaketet. Den här informationen hjälper dig att identifiera appaketet i Intune och hjälper även användarna att hitta det i företagsportalappen.
 
 1.  Välj **Appinformation** på bladet **Lägg till app**.
 2.  Konfigurera följande information på bladet **Appinformation**:
@@ -75,7 +76,7 @@ I det här steget anger du information om appaketet. Den här informationen hjä
     - **Utvecklare (valfritt)** – Ange apputvecklarens namn.
     - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
     - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-    - **Ladda upp ikon** - Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
+    - **Logo** – Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
 3.  När du är klar klickar du på **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurera appinställningar
@@ -91,7 +92,7 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
         - **Semi-Annual** (Varje halvår)
         - **Varje halvår (riktad)**
     - **Godkänn applicensavtalet för slutanvändare** – Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
-    - **Använd aktivering på delad dator** – Aktivering på delad dator används när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365 ProPlus.
+    - **Använd aktivering på delad dator** – Aktivering på delad dator används när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365.
     - **Språk** - Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.
 
 >[!IMPORTANT]
@@ -99,7 +100,7 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
 
 ## <a name="finish-up"></a>Slutför
 
-När du är klar väljer du **Spara** på bladet **Lägg till app**. Appen som du har skapat visas i applistan.
+När du är klar väljer du **OK** på bladet **Lägg till**. Appen som du har skapat visas i applistan.
 
 ## <a name="error-codes-when-installing-the-app-suite"></a>Felkoder vid installation av app-paket
 
@@ -137,4 +138,4 @@ I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Nu kan du tilldela apparna till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).
+- Nu kan du tilldela apparna de grupper du väljer. Läs [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/5/2017
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e01ca43cc42ee7228e42cd3b0176475905ef566
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: d2839a11f95614add0691813a9fdf89dba0a2d5d
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
@@ -41,13 +41,14 @@ Exportera certifikatet och lägg till certifikatutfärdaren (CA).
 
 Skapa eller välj en befintlig grupp i Azure Active Directory (AD Azure) som innehåller de medlemmar som har åtkomst till det virtuella privata nätverket per app.
 
-1. Öppna Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj **Grupper** och klicka på **Ny grupp**.
-3. Ange **namnet** för gruppen. 
-4. Ange en kort **beskrivning** av gruppen. 
+3. Välj en **grupptyp** för gruppen. 
+3. Ange gruppens **gruppnamn**. 
+4. Ange en kort **gruppbeskrivning** av gruppen. 
 5. Välj **Tilldelad** som **Medlemskapstyp**.
-6. Välj **Nej** för **Aktivera Office funktioner**.
-7. Sök efter VPN-användare efter namn eller e-postadress på bladet **Medlemmar**.
+7. Sök efter VPN-användare efter namn eller e-postadress i fönstret **Medlemmar**.
 8. Markera varje användare och klicka på **Välj**.
 9. Klicka på **Skapa**
 
@@ -55,14 +56,15 @@ Skapa eller välj en befintlig grupp i Azure Active Directory (AD Azure) som inn
 
 Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren till en profil som skapats i Intune. Den betrodda certifikatprofilen instruerar iOS-enheten att automatiskt ha förtroende för den certifikatutfärdare som VPN-servern anger.
 
-1. Öppna Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj **Enhetskonfiguration** och klicka sedan på **Profiler**.
-3. Klicka på **+ Skapa profil**. I **Skapa profil**:
+3. Klicka på **Skapa profil**. I **Skapa profil**:
     1. Ange **namnet**.
     2. Ange **beskrivningen**.
     3. Välj **iOS** för **plattformen**.
     4. Välj **Betrott certifikat** för **profiltypen**.
-4. Klicka på mappikonen och bläddra till VPN-certifikatet (CER-filen) som du exporterade från VPN-administrationskonsolen. Klicka på OK
+4. Klicka på mappikonen och bläddra till VPN-certifikatet (CER-filen) som du exporterade från VPN-administrationskonsolen. Klicka på **OK**.
 5. Klicka på **Skapa**.
 
     ![Skapa en betrodd certifikatprofil](media\vpn-per-app-create-trusted-cert.png)
@@ -71,9 +73,10 @@ Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren til
 
 Den betrodda rotcertifikatprofilen gör det möjligt för iOS att automatiskt ha förtroende för VPN-servern. SCEP-certifikatet tillhandahåller autentiseringsuppgifter från iOS VPN-klienten till VPN-servern. Certifikatet tillåter att enheten autentiserar tyst utan att användaren av iOS-enheten tillfrågas om användarnamn och lösenord. 
 
-1. Öppna Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**. 
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj **Enhetskonfiguration** och klicka sedan på **Profiler**.
-3. Klicka på **+ Skapa profil**. I **Skapa profil**:
+3. Klicka på **Skapa profil**. I **Skapa profil**:
     1. Ange **namnet**.
     2. Ange **beskrivningen**.
     3. Välj **iOS** för **plattformen**.
@@ -97,9 +100,10 @@ Den betrodda rotcertifikatprofilen gör det möjligt för iOS att automatiskt ha
 
 VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter, anslutningsinformationen för det virtuella privata nätverket och flaggan för det virtuella privata nätverket per app för att aktivera funktionen för det virtuella privata nätverket per app för användning av iOS-programmet.
 
-1. Öppna Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 2. Välj **Enhetskonfiguration** och klicka sedan på **Profiler**.
-3. Klicka på **+ Skapa profil**. I **Skapa profil**:
+3. Klicka på **Skapa profil**. I **Skapa profil**:
     1. Ange **namnet**.
     2. Ange **beskrivningen**.
     3. Välj **iOS** för **plattformen**.
@@ -111,7 +115,7 @@ VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter
     4. Välj SCEP-certifikatet under **Autentiseringscertifikat** och klicka på **OK**.
     5. Välj ditt virtuella privata nätverk för **anslutningstypen**.
     6. Konfigurera attributen för det virtuella privata nätverket om det behövs.
-    7. Välj **Inaktivera delade** tunnlar.
+    7. Välj **Inaktivera delade tunnlar**.
 5. Klicka på **Automatiskt virtuellt privat nätverk**. I **Automatiskt virtuellt privat nätverk**:
     1. Välj **Virtuellt privat nätverk per app** för **Typ av automatiskt virtuellt privat nätverk**.
     2. Ange URL:en för det virtuella privata nätverket och klicka på **Lägg till**.
@@ -126,19 +130,21 @@ VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter
 
 När du har lagt till VPN-profilen associerar du appen och Azure AD-gruppen med profilen.
 
-1. Öppna Azure-portalen. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-2. Välj **Mobile Apps**.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+2. Välj **Mobilappar**.
 3. Klicka på **Appar**.
 4. Välj appen från listan över appar.
 5. Klicka på **Tilldelningar**.
-6. Klicka på **Välj grupper** och välj den grupp som du angav tidigare. Klicka på **Välj**.
-7. Välj **Krävs** för **Typ** på bladet **Tilldelningar**.
-8. Välj din VPN-definition för de **virtuella privata nätverken**.
+6. Klicka på **Lägg till grupp**.
+7. Välj **Krävs** för **Tilldelningstyp** i fönstret **Lägg till grupp**.
+6. Välj gruppen du definierade tidigare och välj att **göra appen obligatorisk**.
+8. Välj din VPN-definition för det **virtuella privata nätverket**.
  
     > [!NOTE]  
     > Ibland tar det upp till en minut för VPN-definitionen att hämta värdet. Vänta 3–5 minuter innan du klickar på **Spara**.
 
-9. Klicka på **Spara**.
+9. Klicka på **OK** och sedan på **Spara**.
 
     ![Associera en app med det virtuella privata nätverket](media\vpn-per-app-app-to-vpn.png)
 

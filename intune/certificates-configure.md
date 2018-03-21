@@ -14,17 +14,17 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b9d181c4a6e490018c88214a2ed91c90327f2526
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 5b1691e3474b021754e0ee6a1a1977efecc82eac
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. När du använder certifikat behöver du inte ange användarnamn och lösenord för att autentisera anslutningar 
+När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. När du använder certifikat behöver du inte ange användarnamn och lösenord för att autentisera anslutningar
 
 Du kan använda Intune för att tilldela dessa certifikat till enheter som du hanterar. Intune har stöd för tilldelning och hantering av följande certifikattyper:
 
@@ -85,10 +85,13 @@ Det här certifikatet importeras när du konfigurerar en certifikatprofil för e
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Steg 3: Skapa betrodda certifikatprofiler
 Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikatprofil. En betrodd certifikatprofil och en SCEP- eller PKCS-profil krävs för varje enhetsplattform. Stegen för att skapa betrodda certifikat fungerar ungefär på samma sätt för varje enhetsplattform.
 
-1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
-2. I **Microsoft Intune** väljer du **Enhetskonfiguration** och sedan **Profiler**. Välj sedan **Skapa profil**.
-3. Ange ett **namn** och en **beskrivning** för den betrodda certifikatprofilen.
-4. För **Plattform** väljer du enhetsplattformen för detta betrodda certifikat: 
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+2. I fönstret **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
+3. I fönstret Profiler väljer du **Skapa profil**.
+4. I fönstret **Skapa profil** anger du ett **Namn** och en **Beskrivning** för den betrodda certifikatprofilen.
+5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. I dagsläget kan du välja någon av följande plattformar för certifikatsinställningar:
 
     - **Android**
     - **Android for Work**
@@ -98,15 +101,13 @@ Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikat
     - **Windows 8.1 och senare**
     - **Windows 10 och senare**
 
-5. Välj **Betrott certifikat** för **Profiltyp**. Bläddra till det certifikat (*CertificateName*.cer) som du sparade tidigare (steg 2).
-
-    För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:  
-
+6. Från listrutan **Profil** väljer du **Betrodda certifikat**.
+7. Bläddra till certifikatet du sparade i uppgift 1 och klicka sedan på **OK**.
+8. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
     - **Datorcertifikatarkiv – rot**
     - **Datorcertifikatarkiv – mellannivå**
     - **Användarcertifikatarkiv – mellannivå**
-
-6. Välj **OK** för att spara dina ändringar och välj **Skapa** för att spara den nya profilen.
+8. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
 Profilen skapas och visas i listan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
 

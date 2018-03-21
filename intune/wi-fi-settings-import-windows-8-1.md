@@ -6,18 +6,18 @@ keywords:
 author: vhorne
 ms.author: victorh
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: microsoft-intune
 ms.technology: 
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0113703cbdc58172edc9552146c7634aa1058e3b
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 890a10ecf4212656c189adaf46bb2839898758c1
+ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Importera trådlösa inställningar för enheter med Windows 8.1 och senare i Microsoft Intune
 
@@ -35,22 +35,23 @@ I Windows kan du använda verktyget **netsh wlan** för att exportera en befintl
 
 ## <a name="import-the-wi-fi-settings-into-intune"></a>Importera trådlösa inställningar till Intune
 
-1. Logga in på Azure-portalen.
-2. Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enhetskonfiguration** på **Intune**-sidan.
-2. Välj **Hantera** > **Profiler** på sidan **Enhetskonfiguration**.
-3. Välj **Skapa profil** på profilsidan.
-4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+1. Logga in på [Azure-portalen](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
+4. I fönstret **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
+5. Välj **Skapa profil** i profilfönstret.
+6. I fönstret **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+
 
    > [!WARNING]
    > Namnet **måste** vara samma namn som namnattributet i Wi-Fi-profilens xml-fil, annars misslyckas det.
 
-5. I listrutan **Plattform** väljer du **Windows 8.1 och senare**.
-6. I listrutan **Profiltyp** väljer du **Trådlöst (import)**.
-7. På sidan **Trådlöst basnätverk** konfigurerar du följande inställningar:
+7. I listrutan **Plattform** väljer du **Windows 8.1 och senare**.
+8. I listrutan **Profiltyp** väljer du **Trådlöst (import)**.
+9. I fönstret **Trådlöst** konfigurerar du följande inställningar:
     - **Anslutningsnamn** Ange namnet på den trådlösa anslutningen. Det här namnet visas för slutanvändarna när de bläddrar bland tillgängliga trådlösa nätverk.
     - **XML-profil** Klicka på bläddringsknappen för att välja XML-filen som innehåller de trådlösa profilinställningar som du vill importera till Intune.
     - **Filinnehåll** Visar XML-koden för den konfigurationsprofil du har valt.
-8. När du är klar går du tillbaka till sidan **Skapa profil** och trycker på **Skapa**.
+10. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
-Profilen skapas och visas på sidan med profillistan.
+Profilen skapas och visas i fönstret med profillistan.
