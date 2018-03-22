@@ -1,25 +1,25 @@
 ---
-title: "Hantera volyminköpta iOS-appar | Microsoft Docs"
-titlesuffix: Azure portal
-description: "Läs mer om synkronisering av volyminköpta appar från iOS store i Intune och hantering och spårning av deras användning.”"
-keywords: 
-author: erikre
+title: Hantera volyminköpta iOS-appar i Microsoft Intune
+titlesuffix: ''
+description: Läs mer om synkronisering av volyminköpta appar från iOS store i Microsoft Intune och hantering och spårning av deras användning.
+keywords: ''
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 04a94e4baee23ac9a4a742a2ff11591087381fde
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: bd9915f3120e2fee2b487fbfff0d775a9d50ef8a
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
