@@ -1,25 +1,25 @@
 ---
 title: Konfigurera Lookout-integreringen med Microsoft Intune
-titlesuffix: 
-description: "Läs mer om hur du integrerar Intune med Lookout Mobile Threat Defense för att styra mobila enheters åtkomst till företagsresurser."
-keywords: 
+titlesuffix: ''
+description: Läs mer om hur du integrerar Intune med Lookout Mobile Threat Defense för att styra mobila enheters åtkomst till företagsresurser.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 06/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ffd55a82af4f7fdc8d8df7cab818c59def74109
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8b1b7d9ef1a7dce0b5a139f3b8acb85ab7d11d4c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurera Lookout Mobile Threat Defense-integreringen med Intune
 
@@ -67,13 +67,11 @@ Använd följande steg för att samla in den information du måste förse Lookou
 
 ## <a name="configure-your-subscription"></a>Konfigurera din prenumeration
 
-1. När Lookout har skapat ditt Lookout Enterprise-konto skickas ett e-postmeddelande från Lookout till den primära kontakten för ditt företag med en länk till inloggnings-url-adressen: https://aad.lookout.com/les?action=consent.
+1. Efter att Lookout-supporten skapat ditt Lookout Enterprise-konto, skickas ett e-postmeddelande från Lookout till den primära kontakten för ditt företag med en länk till inloggnings-URL:https://aad.lookout.com/les?action=consent.
 
 2.  Den första inloggningen på Lookout-konsolen måste ske med ett användarkonto som har Azure AD-rollen global administratör för att kunna registrera Azure AD-klienten. Inloggningen kräver inte denna nivå på Azure AD-behörighet senare. En samtyckessida visas. Välj **Acceptera** för att slutföra registreringen. När du har accepterat och samtyckt till villkoren omdirigeras du till Lookout-konsolen.
 
     ![skärmbild av sidan för den första inloggningen i Lookout-konsolen](./media/lookout_mtp_initial_login.png)
-    > [!NOTE] 
-    > Se [felsöka Lookout-integrering](https://docs.microsoft.com/intune/troubleshoot/troubleshooting-lookout-integration) om du vill ha hjälp med inloggningsproblem.
 
 3.  I [Lookout-konsolen](https://aad.lookout.com) går du till **System**-modulen och väljer fliken **Kopplingar** och sedan **Intune**.
 
