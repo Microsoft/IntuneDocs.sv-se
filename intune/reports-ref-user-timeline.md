@@ -1,34 +1,35 @@
 ---
-title: "Användarens entitetstidslinje i informationslagret | Microsoft Docs"
-description: "Intunes informationslager representerar användare över en tidslinje."
+title: Användarentitetens tidslinje i informationslagret
+titlesuffix: Microsoft Intune
+description: Läs om hur Intune-informationslagret visar användare i en tidslinje.
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 363D148E-688F-4830-B6DE-AB4FE3648817
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e72f60b9ad604f756f74b1ba7cbbde7e5c2ab9f8
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7448954fce2b81c5783845c9fbdaaebf43fdf326
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="user-lifetime-representation-in-the-intune-data-warehouse"></a>Representation av användarens livstid i Intunes informationslager
+# <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Visning av användarlivstiden i Microsoft Intunes informationslager
 
 Du kan använda månaden för ögonblicksbilder som lagras i Intunes informationslager för att besvara frågor om tidsbaserade trender. Exempelvis kan du titta på hur många användare som lagts till under en månad. Du kan också fråga om antalet användare som har tagits bort från systemet.
 
-Informationslagret lagrar historisk information för att kunna tillhandahålla den här insikten. Det innebär att den kan spåra livslängden för en entitet. Lagret för in när en entitet skapades, när entitetens tillstånd ändras och när en entitet tas bort. Med historiken som fångats i de dagliga ögonblicksbilderna av kvantitativa mått, kan du jämföra en dag mot föregående dag och så vidare.
+Informationslagret lagrar historisk information för att kunna tillhandahålla den här insiktstypen. Informationslagret kan spåra livslängden för en entitet. Lagret registrerar när en entitet skapades, när entitetens status ändras och när en entitet tas bort. Med historiken som fångats i de dagliga ögonblicksbilderna av kvantitativa mått, kan du jämföra en dag mot föregående dag och så vidare.
 
 Det kan vara förvirrande att arbeta med entitetslivslängder eftersom entiteterna ändrar tillstånd. Det innebär att om du tittar på en ögonblicksbild av dag 30, kanske en användarpost inte finns i aktivt tillstånd i data. På dag 29-28 finns dock entitetsposten som aktiv. Och innan dag 28, fanns inte användaren alls.
 
-Det kan bli tydligare om vi går igenom livslängden för en entitet.
+Scenariot blir tydligare om du går igenom livslängden för en entitet.
 
 Anta att en användare **John Smith**, blir tilldelad en licens 2017-06-01, då skulle tabellen **användare** innehålla följande post: 
  
@@ -75,5 +76,5 @@ En person som enbart vill se de dimensionsentiteter som finns för tillfället, 
 
 ## <a name="next-steps"></a>Nästa steg
 
- - Mer information om entiteten **aktuell användare** finns i [referens för den aktuella användarentiteten](reports-ref-current-user.md).
- - Mer information om entiteten **användare** finns i [referens för användarentiteten](reports-ref-user.md).
+ - Mer information om entiteten **Aktuell användare** finns i [Referens för den aktuella användarentiteten](reports-ref-current-user.md).
+ - Information om entiteten **Användare** finns i [Referens för användarentiteten](reports-ref-user.md).

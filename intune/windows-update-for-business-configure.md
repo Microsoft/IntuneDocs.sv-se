@@ -1,23 +1,23 @@
 ---
-title: "Konfigurera inställningar av Windows Update för företag i Intune"
-titleSuffix: Azure portal
-description: "Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Intune, så att du kan kontrollera uppdateringarna för Windows 10-enheter.”"
-keywords: 
+title: Konfigurera inställningar av Windows Update för företag i Microsoft Intune
+titleSuffix: ''
+description: Läs om hur du kan konfigurera inställningarna för Windows Update för företag i Microsoft Intune, så att du kan styra uppdateringarna för Windows 10-enheter.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: d6ccda2aba0b1383de6c38b7a2fdcfdc742d0e15
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ac26d0ac1855aa32ef0f00de6a4056bd57c07528
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="manage-software-updates"></a>Hantera programuppdateringar
 
@@ -140,7 +140,7 @@ Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-i
 - **Datatyp:** Sträng
 - **Värde**: *Använder det GUID som visas på fliken Windows-telemetri på din OMS-arbetsyta*>
 
-![Windows-inställning för diagnostik och användningsdata](./media/commID.png)
+![OMA-URI-inställning – Lägg till rad](./media/commID.png)
 
 ## <a name="how-to-pause-updates"></a>Pausa uppdateringar
 Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från det att du pausar uppdateringarna. Efter det att det maximala antalet pausdagar har passerat upphör funktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen.

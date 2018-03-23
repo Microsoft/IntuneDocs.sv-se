@@ -1,27 +1,26 @@
 ---
-title: RBAC med Intune
-titleSuffix: Azure portal
-description: "Förhandsversion av Intune Azure: Lär dig hur RBAC kan kontrollera vem som ska kunna utföra åtgärder och göra ändringar."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: RBAC med Microsoft Intune
+description: Läs hur du med rollbaserad åtkomstkontroll (RBAC) kan styra vem som får utföra åtgärder och göra ändringar i Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c19a3b8a6df82780d54f277d5477b947f050b1cc
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: edf17d98bb733f7567a615eec856fb7122ba251b
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="role-based-administration-control-rbac-with-intune"></a>Rollbaserad administrationskontroll (RBAC) med Intune
+# <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
 RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i din organisation och vem aktiviteterna gäller för. Du kan antingen använda de inbyggda roller täcker vissa vanliga scenarier för Intune eller du kan skapa egna roller. En roll definieras av:
 
@@ -63,7 +62,7 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 - **Programhanterare**: hanterar mobila och hanterade program och kan läsa enhetsinformation.
 - **Skoladministratör**: Hanterar Windows 10-enheter i [Intune for Education](introduction-intune-education.md) och kan vidta följande åtgärder: 
 
-|Behörigheter|Åtgärd|
+|Behörigheter|Aktivitet|
 |---|---|
 |Granska data|Läs|
 |DeviceConfigurations|Tilldela, skapa, ta bort, läsa, uppdatera|
@@ -111,7 +110,7 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 
 1. Logga in i [Azure-portalen](https://portal.azure.com) med dina inloggningsuppgifter för Intune.
 
-2. Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+2. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
 3. Välj **Intune** Kontrollpanelen för Intune öppnas. Välj **Intune-roller**.
 

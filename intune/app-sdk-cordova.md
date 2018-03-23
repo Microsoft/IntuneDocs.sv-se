@@ -1,24 +1,24 @@
 ---
 title: Microsoft Intune App SDK Cordova-plugin-programmet
-description: 
+description: Med plugin-programmet Intune App SDK Cordova kan utvecklare integrera Intunes app- och dataskyddsfunktioner i sin Cordova-baserade app.
 keywords: sdk, Cordova, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2018
+ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb940cb9-d43f-45ca-b065-ac0adc61dc6f
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d42f8418e2f277dca0fbb2f01248f5a815606cb6
-ms.sourcegitcommit: a6fd6b3df8e96673bc2ea48a2b9bda0cf0a875ae
+ms.openlocfilehash: 84ff217361108ac3518567f31af8943d0b3032fe
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="microsoft-intune-app-sdk-cordova-plugin"></a>Microsoft Intune App SDK Cordova-plugin-programmet
 
@@ -32,11 +32,11 @@ ms.lasthandoff: 02/03/2018
 > [!NOTE]
 > Börja gärna med att läsa artikeln [Komma igång med Intune App SDK](app-sdk-get-started.md). Den här guiden beskriver hur du förbereder dig för integreringen på de plattformar som stöds.
 
-Du kommer märka att du kan aktivera SDK-funktioner utan att ändra appens beteende. När du har skapat plugin-programmet i iOS- eller Android-appen, kommer Microsoft Intune-administratören att kunna distribuera Intunes appskyddsprincip, som består av olika dataskyddsfunktioner. Plugin-programmet är uppbyggt så att de flesta stegen utförs automatiskt i Cordova-skapandeprocessen. Därför är det enkelt att snabbt aktivera appen för Intunes appskydd. Börja genom att följa stegen nedan beroende på din målplattform.
+Du kommer märka att du kan aktivera SDK-funktioner utan att ändra appens beteende. När du har skapat plugin-programmet i iOS- eller Android-appen, kommer Microsoft Intune-administratören att kunna distribuera Intunes appskyddsprincip, som består av olika dataskyddsfunktioner. Plugin-programmet är uppbyggt så att de flesta stegen utförs automatiskt i Cordova-skapandeprocessen. Därför är det enkelt att snabbt aktivera appen för Intunes appskydd. Börja genom att följa tillämpliga steg nedan, beroende på din målplattform.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
-* Plugin-programmet fungerar i Windows, Mac- och Linux-operativsystem
+* Plugin-programmet fungerar i Windows, Mac- och Linux-operativsystemen
 * Plugin-programmet fungerar i Android-appar med `minSdkVersion` >= 14 och `targetSdkVersion` <= 24
 * Plugin-programmet fungerar i iOS-appar som är riktade mot iOS 9.0 och senare.
 
@@ -118,7 +118,7 @@ Plugin-programmet identifierar automatiskt signeringsinformationen som du har an
 
 Se [signeringsinformationen för Cordova-gradle](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#using-gradle) för mer information om det förväntade formatet.
 
-Vi har för tillfället inte stöd för möjligheten att tillhandahålla signeringsinformation i `build.json` eller andra platser som tillhandahålls via parametrar till Cordova-versionen.
+Intune har för tillfället inte stöd för möjligheten att tillhandahålla signeringsinformation i `build.json` eller andra platser som tillhandahålls via parametrar till Cordova-versionen.
 
 ## <a name="debugging-from-visual-studio"></a>Felsöka från Visual Studio
 
@@ -129,8 +129,8 @@ Första gången du startar appen bör du se en dialogruta som meddelar dig att a
 ### <a name="android"></a>Android
 
 * Stödet för MultiDex är ofullständigt.
-* Appen måste ha `minSdkVersion` av 14 och `targetSdkVersion` av 24 eller mindre. Vi har för tillfället inte stöd för appar som är riktade mot API 25
-* Vi kan inte signera appar på nytt som har signerats med V2-signaturschemat. När V2-signerade appar är omslutna av plugin-programmet, kommer omslutna .apk-utdata vara osignerade.
+* Appen måste ha `minSdkVersion` av 14 och `targetSdkVersion` av 24 eller mindre. Intune har för tillfället inte stöd för appar som är riktade mot API 25
+* Intune kan inte signera appar på nytt som har signerats med V2-signaturschemat. När V2-signerade appar är omslutna av plugin-programmet, kommer omslutna .apk-utdata vara osignerade.
 *
   * Du kan inaktivera Cordovas standardmässiga V2-signering genom att lägga till följande i filen `build-extras.gradle`:
 

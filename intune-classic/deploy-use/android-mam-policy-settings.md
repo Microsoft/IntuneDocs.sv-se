@@ -1,27 +1,30 @@
 ---
-title: "Inställningar för MAM-principer för Android"
-description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för Android-enheter."
-keywords: 
+title: Inställningar för MAM-principer för Android
+description: I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för Android-enheter.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.date: 04/18/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5dbb702a-1df5-4637-95c9-77a5f0b1a0e3
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b289e69d834d43d29725a32c48b3ca0a19ee07ec
-ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
+ms.openlocfilehash: dc65dd5ef170bff4cb1d1c126fa1549b7a357276
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
+
+> [!IMPORTANT]
+Innehållet på den här sidan är nu i stort sett inaktuell, eftersom Intunes appskyddsprinciper har migrerat helt till Azure Portal. Läs mer om [Intunes appskyddsprinciper för Android i Azure-portalen](https://docs.microsoft.com/intune/app-protection-policy-settings-android).
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 

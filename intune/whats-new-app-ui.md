@@ -1,35 +1,30 @@
 ---
-title: "UI-uppdateringar för Intune-appar för slutanvändare"
-description: "Ta reda på vad som har ändrats i gränssnittet för appar som fungerar på slutanvändarenheter med Intune."
-keywords: 
+title: Uppdateringar i användargränssnittet för Intunes slutanvändarappar
+titlesuffix: Microsoft Intune
+description: Ta reda på vad som har ändrats i användargränssnittet för appar som används på slutanvändarenheter med Microsoft Intune.
+keywords: ''
 author: barlanmsft
 ms.author: barlan
 manager: dougeby
-ms.date: 01/18/2018
+ms.date: 03/16/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9f39c908e6de55c0668f507c3d7eed9545deba82
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 753b3a345dc84bee80921fd0c7994dfac79a3df6
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
-# <a name="ui-updates-for-intune-end-user-apps"></a>UI-uppdateringar för Intune-appar för slutanvändare
-Lär dig mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Detta kan hjälpa dig med användarkommunikation och att uppdatera anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
+# <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
+Läs mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Att förstå dessa uppdateringar underlättar din användarkommunikation och eventuell uppdaterad anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
-## <a name="week-of-december-11-2017"></a>Veckan som börjar med 11 December 2017
-
-### <a name="end-user-messaging-for-accounts---1573558-1712-changes-to-be-made-for-other-platforms-for-1801--"></a>Meddelandefunktion för slutanvändare för konton <!--1573558, 1712; changes to be made for other platforms for 1801-->
-
-Användare av företagsportalens webbsida kommer att blockeras från att vidta åtgärder som kräver skrivbehörighet till din klient. De kommer att se lämpligt felmeddelande som förklarar att deras konto är under underhåll. Liknande ändringar finns snart för appar i företagsportalen för Android, iOS, macOS och Windows.
-
-![Felmeddelande som uppstår under kontoflytt](./media/account-move-rom-iwp-user-1712.png)
+<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
 ## <a name="week-of-november-27-2017"></a>Veckan som börjar med 27 november 2017
 
@@ -121,7 +116,7 @@ Vi har även uppdaterat e-postaktiveringsskärmen för villkorlig åtkomst.
 
 ### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Enklare formuleringar i företagsportalappen för Android <!---1396349--->  
 
-Registreringen av företagsportalappen för Android har förenklats med ny text för att göra det enklare för slutanvändarna att registrera. Om du har anpassad registreringsdokumentation bör du uppdatera den så att den återspeglar de nya skärmarna. Du hittar exempelbilder nedan:
+Registreringen av företagsportalappen för Android har förenklats med ny text som gör det enklare för slutanvändarna att registrera sig. Om du har anpassad registreringsdokumentation bör du uppdatera den så att den återspeglar de nya skärmarna. Du hittar exempelbilder nedan:
 
 |Före|Efter|
 |---|---|
@@ -183,13 +178,13 @@ Sidan med appinformation i företagsportalappen för Android visar nu de appkate
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
 
-Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
+Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.  
 
-Nedan kan du se föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
+Nedan kan du se den tidigare inloggningen, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet.
 
 __Föregående inloggning__
 
-![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_before_1704_001.png)
+![Företagsportalens inloggningssida med en ikon som föreställer en person framför en grafisk bild av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_before_1704_001.png)
 
 ![Användarna anger sina autentiseringsuppgifter på den här sidan när de har tryckt på Logga in, vilken begär användarens e-post och lösenord, tillsammans med förslag på att lösa lösenordsfel.](./media/cp_ios_aad_signin_before_1704_002.png)
 
@@ -207,7 +202,7 @@ __Ny inloggning__
 
 __Ny inloggning vid inloggning från en annan enhet__
 
-![Företagsportalens inloggningssida med en ikon för en person framför en grafisk representation av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
+![Företagsportalens inloggningssida med en ikon som föreställer en person framför en grafisk bild av en webbplats. Nedanför finns knappen ”Logga in”. En länk längst ner leder till Microsofts information om sekretess och cookies.](./media/cp_ios_aad_signin_from_another_device_after_1704_001.png)
 
 Tryck på länken __Logga in från en annan enhet__.
 
@@ -229,7 +224,7 @@ Företagsportalappen börjar logga in.
 
 ## <a name="june-2017"></a>Juni 2017
 
-### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies---1305217--"></a>Företagsportalappen för Android har nu ett nytt användargränssnitt för appskyddsprinciper <!--1305217-->
+### <a name="company-portal-app-for-android-now-has-a-new-end-user-experience-for-app-protection-policies"></a>Företagsportalappen för Android har nu ett nytt användargränssnitt för appskyddsprinciper
 Baserat på feedback från våra kunder har vi ändrat företagsportalappen för Android så att den visar knappen **Åtkomst till företagsinnehåll**. Avsikten är att förhindra användare från att i onödan gå genom registreringsprocessen när de bara behöver åtkomst till appar som stöder appskyddsprinciper, en funktion i Intune för hantering av mobilappar.
 
 Användaren kan då trycka på knappen **Åtkomst till företagsinnehåll** i stället för att börja registrera enheten.
@@ -238,7 +233,7 @@ Användaren kan då trycka på knappen **Åtkomst till företagsinnehåll** i st
 
 Användaren tas sedan till webbplatsen för företagsportalen för att auktorisera appen för användning på sin enhet. Användarens autentiseringsuppgifter verifieras på webbplatsen för företagsportalen.
 
-![En bild på när webbplatsen för företagsportalen bekräftar inloggningen.](./media/and_iwp_sign_in_auth_page_after_1706.png)
+![En bild på företagsportalens webbplats som bekräftar inloggningen.](./media/and_iwp_sign_in_auth_page_after_1706.png)
 
 Enheten kan fortfarande registreras för fullständig hantering genom att användaren trycker på menyn **Åtgärd**.
 
@@ -259,9 +254,9 @@ Den här uppdateringen visas bara på enheter som kör Windows 10 Anniversary Up
 
 ![En bild av startsidan i företagsportalappen i Windows 10 med ett statusmeddelande i mitten av enhetslistan som talar om för användaren att enheten han eller hon använder inte har konfigurerats för företagsanvändning ännu och att användaren ska välja meddelandet för att påbörja installationen.](./media/win10_guided_enroll_select_setup_after_1706.png)
 
-![En bild av konfigureringssidan i företagsportalappen i Windows 10 med en varning för användaren om att han eller hon behöver lägga till ett företagskonto till den här enheten och sedan registrera enheten för hantering.](./media/win10_guided_enroll_we_help_setup_after_1706.png)
+![En bild av konfigurationssidan i företagsportalappen i Windows 10 med en varning till användaren om att han eller hon behöver lägga till ett företagskonto till den här enheten och sedan registrera enheten för hantering.](./media/win10_guided_enroll_we_help_setup_after_1706.png)
 
-![En bild av sidan add corporate account to this device page (lägg till ett företagskonto till den här enheten) i företagsportalappen i Windows 10, där användaren uppmanas att gå till appen Inställningar och välja Anslut för att slutföra registreringen. När användaren har gjort det visas ett meddelande om att användaren måste gå tillbaka till företagsportalappen och slutföra registreringen.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
+![En bild av sidan Lägg till ett företagskonto på den här enheten i företagsportalappen i Windows 10, där användaren uppmanas att gå till appen Inställningar och välja ”Anslut” för att slutföra registreringen. När användaren har gjort det visas ett meddelande om att användaren måste gå tillbaka till företagsportalappen och slutföra registreringen.](./media/win10_guided_enroll_leaving_for_iwp_after_1706.png)
 
 ![En bild av skärmen enroll into management (registrera för hantering) i företagsportalappen i Windows 10 som visar ett statusmeddelande om slutförd åtgärd som informerar om att användarens enhet nu har registrerats och att användaren ska trycka på Nästa för att fortsätta.](./media/win10_guided_enroll_youre_now_enrolled_after_1706.png)
 
@@ -313,7 +308,7 @@ Den hanterade webbläsaren får uppdaterade ikoner för både Android- och iOS-v
 
 Företagsportalen har också fått uppdaterade ikoner för Android-, iOS- och Windows-versionerna av appen, för att förbättra enhetligheten med andra appar i EM+S. Dessa ikoner släpps gradvis till plattformarna från april till slutet av maj.
 
-### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggning i Android-företagsportalen <!--953374-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Förloppsindikator för inloggningen i Android-företagsportalen <!--953374-->
 
 En uppdatering av Android-företagsportalappen visar en förloppsindikator för inloggning när användaren startar eller återupptar appen. Indikatorn går igenom nya statusmeddelanden, med början på "Ansluter...", sedan "Loggar in...", följt av "Kontrollerar säkerhetskrav..." innan användaren kommer åt appen.
 
@@ -322,13 +317,13 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
    <table id="wrapper">
       <tr>
          <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
+            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
           </td>
           <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
+             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
            </td>
            <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
+              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
            </td>
       </tr>
    </table>
@@ -382,11 +377,28 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 > [!Note]
 > Observera att bilderna nedan kan vara förhandsgranskningar och att den presenterade produkten kan skilja sig från presenterade versioner.
 
+### <a name="ui-iwp"></a>Ny uppdatering av användarupplevelsen för företagsportalens webbplats <!--2000968-->
+
+Vi presenterar en ny webbplats för företagsportalen i april, med uppdateringar av användargränssnittet, effektivare arbetsflöden och hjälpmedelsförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
+
+Vi har lagt till några nya funktioner, baserat på feedback från kunder som du, som förbättrar befintliga funktioner och användbarhet:
+
+-   Förbättringar i användargränssnittet på hela webbplatsen
+-   Möjlighet att dela direktlänkar till appar
+- Förbättrad prestanda för stora appkataloger
+
+Du behöver inte göra några förberedelser inför den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan dock behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen för iOS, eftersom webbplatsen startar avsnittet **Appar** i iOS-appen.
+
+|Uppdaterad|Föregånde|
+|---|---|
+|![Den uppdaterade enhetssidan visar enheten korrekt placerad ovanför enhetsinformationen, den dyker inte längre upp ovanför hela listan.](./media/iwp-device-after-1803.png)|![Den tidigare versionen av enhetssidan.](./media/iwp-device-before-1803.png)|
+|![Den uppdaterade appinstallationssidan visar appen korrekt placerad ovanför en beskrivning och olika typer av installationsinformation, inklusive publiceringsdatum, version och typ av app.](./media/iwp-app-install-after-1803.png)|![Den tidigare versionen av appinstallationssidan.](./media/iwp-app-install-before-1803.png)|
+
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Uppdatering av användarupplevelsen för appen Företagsportal för iOS <!--1412866-->
 
 Vi kommer att släppa en större uppdatering av användarupplevelsen i appen Företagsportal för iOS. Uppdateringen medför en komplett visuell uppfräschning, vilket omfattar ett modernare utseende med bättre användbarhet och tillgänglighet. Alla befintliga funktioner i företagsportalen för iOS kommer att finnas kvar.
 
-Vi har en förhandsversion av den uppdaterade appen Företagsportal för iOS som är tillgänglig via Apple TestFlight-programmet, som du kan använda och lämna feedback på. Registrera dig på https://aka.ms/intune_ios_cp_testflight för att få åtkomst till TestFlight.
+Vi har en förhandsversion av den uppdaterade appen Företagsportal för iOS som är tillgänglig via Apple TestFlight-programmet, som du kan använda och lämna feedback på. Registrera dig på https://aka.ms/intune_ios_cp_testflight för TestFlight-åtkomst. Den senaste informationen om den här uppdateringen finns i https://aka.ms/iOS_companyportal_update.
 
 ![marknadsföringsbilder för den nya ios-appen Företagsportal](./media/ios-cp-app-redesign-1801-teaser.png)
 
@@ -400,5 +412,5 @@ __Uppdateringar av aktuella appar__ Vi har lagt till en särskild sida på webbp
 
 ### <a name="see-also"></a>Se även
 * [Microsoft Intune-blogg](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Översikt över molnplattformen](https://www.microsoft.com/server-cloud/roadmap/Indevelopment.aspx?TabIndex=0&dropValue=Intune)
+* [Översikt över molnplattformen](https://www.microsoft.com/cloud-platform/roadmap)
 * [Nyheter i Intune](https://docs.microsoft.com/intune/whats-new)

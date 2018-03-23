@@ -1,30 +1,31 @@
 ---
-title: "Så här konfigurerar du ett eget domännamn"
-description: "Lägga till ett anpassat domännamn för din Intune-prenumeration"
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Så här konfigurerar du ett eget domännamn
+titlesuffix: Microsoft Intune
+description: Lägga till ett anpassat domännamn för din Microsoft Intune-prenumeration
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6046b574c495035977dcd635786409e52be85bb8
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 913334a9fee8ab584cb11f8124ef2a491e01661f
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="configure-a-custom-domain-name"></a>Så här konfigurerar du ett eget domännamn
 
 [!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
-Det här avsnittet beskriver hur administratörer kan skapa ett DNS CNAME för att förenkla och anpassa inloggningen.
+Det här avsnittet beskriver hur administratörer kan skapa ett DNS CNAME för att förenkla och anpassa inloggningen med Microsoft Intune.
 
 När organisationen registrerar sig för en molnbaserad tjänst från Microsoft, till exempel Intune, får du ett första domännamn i Azure Active Directory (AD) som ser ut så här: **din-domän.onmicrosoft.com**. I det här exemplet är **din-domän** det domännamn som du valde när du registrerade dig. **onmicrosoft.com** är det suffix som tilldelas de konton som du lägger till i din prenumeration. Du kan konfigurera och använda din organisations anpassade domän för att ansluta till Intune i stället för domännamnet som du fick med din prenumeration.
 

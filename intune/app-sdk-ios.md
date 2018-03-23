@@ -1,24 +1,24 @@
 ---
-title: "Utvecklarhandbok för Microsoft Intune App SDK för iOS"
-description: "Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade APP- eller MAM-principer) i din ursprungliga iOS-app."
-keywords: 
+title: Utvecklarhandbok för Microsoft Intune App SDK för iOS
+description: Med Microsoft Intune App SDK för iOS kan du lägga till Intune-appskyddsprinciper (även kallade APP- eller MAM-principer) i din ursprungliga iOS-app.
+keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 49ffac609ec24917b8490c535ebd74c6d2729ccd
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: 498b9ec1ab98358f73c0ca2139f156164a253a75
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -470,7 +470,7 @@ Med hjälp av en MAM-riktad konfiguration kan en app att ta emot konfigurationsd
 * Anropa ```[[IntuneMAMAppConfigManager instance] appConfigForIdentity:]``` för åtkomst till App Config-objektet.
 * Anropa lämplig väljare för ```IntuneMAMAppConfig```-objektet. Om appnyckeln är en sträng t.ex. ska du använda ```stringValueForKey``` eller ```allStringsForKey```. Filen ```IntuneMAMAppConfig.h header``` innehåller information om returvärden/felvillkor.
 
-Mer information om funktionerna i Graph API med avseende på MAM-riktade konfigurationsvärden, finns i [Graph API-referens för MAM-riktad konfiguration](https://developer.microsoft.com/graph/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+Mer information om funktionerna i Graph API finns i [Graph API-referens](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
 Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i iOS finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for iOS](https://docs.microsoft.com/intune/app-configuration-policies-use-ios) (använda Microsoft Intune-appkonfigurationsprinciper för iOS).
 

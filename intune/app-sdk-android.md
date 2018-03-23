@@ -1,24 +1,24 @@
 ---
-title: "Utvecklarhandbok för Microsoft Intune App SDK för Android"
-description: "Med Microsoft Intune App SDK för Android kan du implementera hantering av mobila appar (MAM, Mobile App Management) med Intune i din Android-app."
+title: Utvecklarhandbok för Microsoft Intune App SDK för Android
+description: Med Microsoft Intune App SDK för Android kan du implementera hantering av mobila appar (MAM, Mobile App Management) med Intune i din Android-app.
 keywords: SDK
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 53f0d46fa1a9452b7a0cc1e243373f21556f5fb6
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 0eafbe9c57051b62f6ed53a3930705eabf5aebd0
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -1311,7 +1311,7 @@ public interface MAMAppConfig {
 Programkonfiguration lägger till en ny meddelandetyp:
 * **REFRESH_APP_CONFIG**: det här meddelandet skickas en `MAMUserNotification` och informerar appen att nya app config-data är tillgängliga.
 
-Mer information om funktionerna i Graph API som rör MAM-riktade konfigurationsvärden finns i [Graph API-referens för MAM-riktad konfiguration]((https://developer.microsoft.com/graph/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create). <br>
+Mer information om funktionerna i Graph API finns i [Graph API-referens](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
 Mer information om hur du skapar en MAM-riktad appkonfigurationsprincip i Android finns i avsnittet om MAM-riktad appkonfiguration i [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android) (använda Microsoft Intune-appkonfigurationsprinciper för Android).
 

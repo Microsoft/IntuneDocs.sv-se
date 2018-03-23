@@ -1,26 +1,25 @@
 ---
-title: Konfigurera och hantera SCEP-certifikat med Intune
-titlesuffix: Azure portal
-description: "Läs hur du konfigurerar din infrastruktur och därefter skapar och tilldelar Intune SCEP-certifikatprofiler.”"
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Konfigurera och hantera SCEP-certifikat med Microsoft Intune
+description: Läs om hur du kan konfigurera din infrastruktur och sedan skapa och tilldela Intune SCEP-certifikatprofiler (Simple Certificate Enrollment Protocol) i Microsoft Intune.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d723bc4d5032a7a5c330367fe83eabd4763917a2
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 88109f1dc4543a5c71f36378fddb110c03afa08f
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="configure-and-manage-scep-certificates-with-intune"></a>Konfigurera och hantera SCEP-certifikat med Intune
+# <a name="configure-and-manage-scep-certificates-with-microsoft-intune"></a>Konfigurera och hantera SCEP-certifikat med Microsoft Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
 I det här avsnittet beskrivs hur du kan konfigurera din infrastruktur och sedan skapa och tilldela SCEP-certifikatprofiler (Simple Certificate Enrollment Protocol) med Intune.

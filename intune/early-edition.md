@@ -1,25 +1,25 @@
 ---
-title: "Tidig utgåva"
-description: 
-keywords: 
+title: Tidig utgåva
+description: ''
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9a2c104200518af31fd05e6b8abe853377767aa9
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: e91745abb7c3409b31724101b3071157407acec9
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---march-2018"></a>Den tidiga utgåvan för Microsoft Intune – mars 2018
 
@@ -147,6 +147,33 @@ Du kommer att kunna skapa anpassade e-bokkategorier och sedan tilldela e-böcker
 
 Vi kommer att uppdatera företagsportalappen för Android till att följa Androids riktlinjer för [Materialdesign](https://material.io/). Vi kommer att publicera bilder av de nya ikonerna i artikeln [Nyheter i appens användargränssnitt](whats-new-app-ui.md) när appversionen släpps. 
 
+### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Edge-mobilstöd för Intune-appskyddsprinciper <!-- 1817882 -->
+
+Microsoft Edge-webbläsaren för mobila enheter stöder appskyddsprinciper som definierats i Intune.
+
+### <a name="use-fully-distinguished-name-as-subject-for-scep-certificate---2221763-eeready--"></a>Använd ett fullständigt unikt namn som ämne för SCEP-certifikatet <!--2221763 eeready-->
+När du skapar en profil för SCEP-certifikat, anger du certifikatets ämnesnamn. Du kommer att kunna använda det fullständiga unika namnet som ämne. För **Ämnesnamn** väljer du **Anpassad** och sedan `CN={{OnPrem_Distinguished_Name}}`. Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure Active Directory (AD) Anslut](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD. 
+
+### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837-eeready--"></a>iOS-enheter uppmanas att ange en PIN-kod var 15:e minut <!--1550837 eeready-->
+När en efterlevnads- eller konfigurationsprincip används på en iOS-enhet, uppmanas användarna att ange en PIN-kod var 15:e minut. Användarna uppmanas kontinuerligt tills en PIN-kod anges.
+
+### <a name="enable-bluetooth-contact-sharing---android-for-work---1098983-eeready--"></a>Aktivera kontaktdelning med Bluetooth – Android for Work <!--1098983 eeready-->
+Som standard förhindrar Android att kontakter i arbetsprofilen synkroniseras med Bluetooth-enheter. Därför visas inte arbetsprofilkontakter i uppringarens ID för Bluetooth-enheter.
+
+Det kommer att finnas en ny inställning i **Android for Work** > **Enhetsbegränsningar** > **Arbetsprofilinställningar**:
+- Dela kontakter via Bluetooth
+
+Intune-administratören kan konfigurera dessa inställningar för att aktivera delning. Detta är användbart när du parar ihop en enhet med en bilbaserad Bluetooth-enhet som visar uppringarens ID vid handsfree-användning. När den är aktiverad visas arbetsprofilens kontakter. När den är inaktiverad visas inte arbetsprofilens kontakter.
+
+Gäller för: Androids arbetsprofilenheter på Android OS v6.0 och nyare.
+
+### <a name="schedule-your-automatic-updates---1805514---"></a>Schemalägga automatiska uppdateringar <!--1805514 -->
+
+Intune ger dig kontroll vid installation av automatiska uppdateringar med hjälp av [Inställningar för Windows 10-uppdateringsring](windows-update-for-business-configure.md). Du kommer att kunna schemalägga återkommande uppdateringar, inklusive vecka, dag och tid. 
+
+### <a name="disable-checks-on-device-restart---1805490---"></a>Inaktivera kontroller vid omstart av enheten <!--1805490 -->
+
+Med Intune kan du styra [hanteringen av programuppdateringar](windows-update-for-business-configure.md). Egenskapen **Omstartskontroller** kommer att läggas till och aktiveras som standard. Om du vill hoppa över de vanliga kontroller som utförs när du startar om en enhet (till exempel aktiva användare, batterinivå och så vidare) väljer du **Hoppa över**. 
 
 <!-- 1802 start -->
 
@@ -160,7 +187,7 @@ Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du ange
 
 ### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 --> 
 
-Nya inställningar för [Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard] läggs till i **Enhetskonfiguration** > **Profiler** > **Endpoint protection**. Följande inställningar läggs till: 
+Nya [Windows Defender Credential Guard] (https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard] inställningar kommer att läggas till i **Enhetskonfiguration** > **Profiler** > **Slutpunktsskydd**. Följande inställningar läggs till: 
 
 - Säkerhetsnivå för plattform: ange om säkerhetsnivå för plattform är aktiverat vid nästa omstart. Virtualiseringsbaserad säkerhet kräver Säker start. Virtualiseringsbaserad säkerhet kan också aktiveras med DMA-skydd (direkt minnesåtkomst). DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade.
 - Virtualiseringsbaserad säkerhet: ange om virtualiseringsbaserad säkerhet är aktiverat vid nästa omstart. 
@@ -185,29 +212,6 @@ Fr utbildningsprofiler finns nya inställningar under kategorin **Skrivare**: **
 
 ### <a name="ios-app-provisioning-configuration----1581650---"></a>Etableringskonfiguration för iOS-app <!-- 1581650 -->
 Du kan tilldela iOS-apparetableringsprofiler för att förhindra att dina appar upphör genom att inkludera eller exkludera säkerhetsgrupper.
-
-### <a name="new-windows-defender-exploit-guard-settings----631893---"></a>Nya inställningar för Windows Defender Exploit Guard-princip <!-- 631893 -->
-
-Sex nya inställningar för **minskning av attackytan** och utökade funktioner för **Reglerad mappåtkomst: Mappskydd** blir tillgängliga. Inställningarna finns här: Device configuration\Profiles\
-Create profile\Endpoint protection\Windows Defender Exploit Guard.
-
-#### <a name="attack-surface-reduction"></a>Minska attackytan
-
-|Inställningsnamn  |Inställningsalternativ  |Description  |
-|---------|---------|---------|
-|Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
-|Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem|Aktiverad, granskad, inte konfigurerad|Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem (lsass.exe).|
-|Skapa process från PSExec- och WMI-kommandon|Blockera, Granska, Inte konfigurerat|Blockera skapande av processer från PSExec- och WMI-kommandon.|
-|Obetrodda och osignerade processer som körs via USB|Blockera, Granska, Inte konfigurerat|Blockera obetrodda och osignerade processer som körs via USB.|
-|Körbara filer som inte uppfyller ett villkor för användningsmönster, ålder eller betrodd lista|Blockera, Granska, Inte konfigurerat|Blockera körbara filer från att köras om de inte uppfyller ett villkor för användningsmönster, ålder eller betrodd lista.|
-
-#### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
-
-|Inställningsnamn  |Inställningsalternativ  |Description  |
-|---------|---------|---------|
-|Mappskydd (redan implementerat)|Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> **Nytt**<br>Blockera diskändring, Granska diskändring|
-Skydda filer och mappar från obehöriga ändringar av oönskade appar.<br><br>**Aktivera**: Förhindra att obetrodda appar ändrar eller tar bort filer i skyddade mappar och skriver till disksektorer.<br><br>
-**Blockera endast diskändring**:<br>Blockera obetrodda appar från att skriva till disksektorer. Obetrodda appar kan fortfarande ändra eller ta bort filer i skyddade mappar.|
 
 ### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nya Windows Defender Application Guard-inställningar <!-- 1631890 -->
 

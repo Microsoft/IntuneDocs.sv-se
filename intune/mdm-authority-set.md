@@ -1,25 +1,25 @@
 ---
-title: "Ange utfärdare för hantering av mobila enheter"
+title: Ange utfärdare för hantering av mobila enheter
 titlesuffix: Microsoft Intune
-description: "Ange utfärdare för hantering av mobila enheter i Intune."
-keywords: 
+description: Ange utfärdare för hantering av mobila enheter i Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5d48a2cea096c1639cd3661521cd636454f3e0ba
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: ce6464cc6aa67636743479e69ad2b55c9b102ed9
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -60,7 +60,7 @@ Flera plattformar har följande krav för att aktivera eller förenkla registrer
 - **iOS** – (obligatoriskt) [Skaffa ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md) och därefter [aktivera registrering för företagsägda iOS-enheter](ios-enroll.md) (valfritt).
 - **Android** - (obligatoriskt) [Aktivera Android-arbetsprofiler](android-enroll.md)
 - **Windows** – (obligatoriskt) Aktivera [Automatisk registrering](windows-enroll.md) eller [massregistrering](windows-bulk-enroll.md)
-- **macOS** – Inga krav
+- **macOS** – (obligatoriskt) [Hämta ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md).
 
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla

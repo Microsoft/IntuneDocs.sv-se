@@ -1,25 +1,25 @@
 ---
-title: "Var är Intune-funktionen i Azure?"
-titlesuffix: Azure portal
-description: "Hjälper dig att hitta Intune-funktioner i Azure-portalen.\""
-keywords: 
-author: dagerrit
-ms.author: dagerrit
+title: Var är Intune-funktionen i Azure?
+titleSuffix: Microsoft Intune
+description: Hjälper dig att hitta Microsoft Intune-funktioner i Azure-portalen.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
 ms.date: 1/4/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
+ms.technology: ''
+ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d15659e78c3b47753e9ef87a99d16ef1687ecf22
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 00f45d9a126e76c45712c6483b458f935e6d0021
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här referensguiden för de som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.

@@ -1,25 +1,25 @@
 ---
-title: "Felsöka enhetsregistrering"
-description: "Förslag på hur du kan felsöka problem med enhetsregistrering."
-keywords: 
+title: Felsöka enhetsregistrering
+description: Förslag på hur du kan felsöka problem med enhetsregistrering.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 09/15/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50adfb13c619f81a8429c46e798b7f78acf3217e
-ms.sourcegitcommit: 229f9bf89efeac3eb3d28dff01e9a77ddbf618eb
+ms.openlocfilehash: 0293614e2654c16b6fd5fd43d40331453b332e3c
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
@@ -70,7 +70,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
 
-1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
+1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Administratör**&gt;**Azure AD** från [https://portal.office.com](https://portal.office.com).
 
 2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
 
@@ -99,7 +99,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 
 1.  Ta bort företagsportalappen för Intune från enheten.
 
-2.  Öppna enheten, öppna webbläsaren och bläddra till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)och prova att logga in.
+2.  Öppna webbläsaren i enheten, bläddra till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och prova med en användarinloggning.
 
 3.  Be användaren att prova ett annat nätverk om de inte kan logga in.
 
@@ -165,8 +165,8 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 
 |Felmeddelande|Problem|Lösning|
 |---|---|---|
-|**Administratören behöver tilldela en licens för åtkomst**<br>IT-administratören har inte gett dig behörighet till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br><br>Se information om att [Tilldela Intune-licenser till dina användarkonton](/intune/licenses-assign.md).
-|**IT-administratören måste ange MDM-utfärdare**<br>Det verkar som om din IT-administratör inte har angett en MDM-utfärdare. Kontakta IT-administratören eller försök igen senare.|Utfärdaren för hantering av mobila enheter har inte definierats.|Utfärdaren för hantering av mobila enheter har inte angetts i Intune. Se information om att [ange hantering av mobila enheter](/intune/mdm-authority-set.md).|
+|**Administratören behöver tilldela en licens för åtkomst**<br>IT-administratören har inte gett dig behörighet till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br><br>Se information om att [Tilldela Intune-licenser till dina användarkonton](/intune/licenses-assign).
+|**IT-administratören måste ange MDM-utfärdare**<br>Det verkar som om din IT-administratör inte har angett en MDM-utfärdare. Kontakta IT-administratören eller försök igen senare.|Utfärdaren för hantering av mobila enheter har inte definierats.|Utfärdaren för hantering av mobila enheter har inte angetts i Intune. Se information om att [ange hantering av mobila enheter](/intune/mdm-authority-set).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Enheter kan inte checka in med Intune-tjänsten och visas som "Ohälsosamma" i Intune-administrationskonsolen
@@ -257,7 +257,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 10. Starta om AD FS-servrarna.
 11. Upprepa stegen ovan på alla dina AD FS- och proxyservrar.
 
-För att verifiera en korrekt certifikatinstallation kan du använda diagnostikverktyget som finns på [https://www.digicert.com/help/](https://www.digicert.com/help/). I rutan **Serveradress**, ange din ADFS-servers FQDN (IE: sts.contso.com) och klicka på **Kontrollera server**.
+För att kontrollera om certifikatet har installerats på rätt sätt kan du använda diagnostikverktyget som finns på [https://www.digicert.com/help/](https://www.digicert.com/help/). I rutan **Serveradress**, ange din ADFS-servers FQDN (IE: sts.contso.com) och klicka på **Kontrollera server**.
 
 **Så här kontrollerar du att certifikatet har installerats**:
 
@@ -377,7 +377,7 @@ Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
 
 ### <a name="other-ios-enrollment-errors"></a>Övriga iOS-registreringsfel
-En lista med fel som kan uppstå i samband med iOS-registreringen finns i dokumentationen för enheten/användaren i [Du får felmeddelanden när du försöker registrera enheten i Intune](/intune-user-help/using-your-iOS-or-macOS-device-with-intune).
+En lista med iOS-registreringsfel finns i vår dokumentation i [Felsökning av iOS-enhet med registreringsproblem i Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Datorproblem
 
