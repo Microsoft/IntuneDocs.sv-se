@@ -1,27 +1,30 @@
 ---
-title: "iOS MAM-principinställningar"
-description: "I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för iOS-enheter."
-keywords: 
+title: iOS MAM-principinställningar
+description: I det här avsnittet beskrivs principinställningarna för hantering av mobilappar för iOS-enheter.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.date: 04/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 673ff872-943c-4076-931c-0be90363aea9
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ae861de505964e830aadc1cd913561462762f282
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: c4a87223a25ba26492e8db1731594f844136e003
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/20/2018
 ---
 #  <a name="ios-mobile-app-protection-policy-settings"></a>Principinställningar för iOS-mobilappskydd
+
+> [!IMPORTANT]
+> Innehållet på den här sidan är nu i stort sett inaktuell, eftersom Intunes appskyddsprinciper har migrerat helt till Azure Portal. Läs mer om [Intunes appskyddsprinciper för iOS i Azure-portalen](https://docs.microsoft.com/intune/app-protection-policy-settings-ios).
 
 [!INCLUDE[classic-portal](../includes/classic-portal.md)]
 
@@ -31,7 +34,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
 ##  <a name="data-relocation-settings"></a>Inställningar för dataflytt
 
-| Inställningar | Använd så här | Standardvärde |
+| Inställningen | Använd så här | Standardvärde |
 |------|------|------|
 | **Förhindra säkerhetskopiering av iTunes och iCloud** | Välj **Ja** för att förhindra att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud. Välj **Nej** för att tillåta att den här appen säkerhetskopierar arbets- eller skoldata till iTunes och iCloud.| Ja |
 | **Tillåt att appen överför information till andra appar** | Ange vilka appar som kan ta emot data från den här appen: <ul><li> **Principhanterade appar**: Tillåt endast överföring till andra principhanterade appar.</li> <li>**Alla appar**: Tillåt överföring till alla appar. </li> <li>**Inga**: Tillåt inte dataöverföring till någon app, inklusive andra principhanterade appar.</li></ul> Om du anger det här alternativet till **Principhanterade appar** eller **Ingen** blockeras dessutom iOS 9-funktionen som gör att Spotlight-sökning kan söka efter data i appar. <br><br> Det finns vissa undantag för appar och tjänster som Intune kan tillåta dataöverföring till. En fullständig lista över appar och tjänster finns i avsnittet [Undantag vid dataöverföring](#Data-transfer-exemptions). | Alla appar |
@@ -51,7 +54,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
 Det finns vissa undantag för appar och plattformstjänster som Intune-appskyddsprinciper kan tillåta dataöverföring till och från i vissa scenarion. Den här listan kan ändras och innehåller de tjänster och program som anses vara användbara för säker produktivitet.
 
-| App-/tjänstnamn | Beskrivning |
+| App-/tjänstnamn | Description |
 | ---- | --- |
 |tel; telprompt | Intern telefonapp |
 | skype | Skype |
@@ -64,7 +67,7 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 
 ## <a name="access-settings"></a>Åtkomstinställningar
 
-| Inställningar | Använd så här | Standardvärde |
+| Inställningen | Använd så här | Standardvärde |
 |------|------|------|
 | **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. Standardvärde = **Ja**. </li><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**. </li><li> **Kräv fingeravtryck istället för PIN (iOS 8.0+)**: Välj **Ja** om du vill kräva att [Touch-ID](https://support.apple.com/HT201371) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**</li></ul> På iOS-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Touch-ID](https://support.apple.com/HT201371) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. När den här inställningen är aktiverad kommer förhandsgranskningsbilden i appväxlaren att vara suddig när ett arbets- eller skolkonto används. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
 | **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |

@@ -1,25 +1,27 @@
 ---
-title: "Förhindra obehörig åtkomst till företagsdata"
-description: "Förhindra obehörig åtkomst till företagsdata när dessa delas utanför företagets nätverk."
+title: Förhindra obehörig åtkomst till företagsdata
+titlesuffix: Microsoft Intune
+description: Förhindra obehörig åtkomst till företagsdata när dessa delas utanför företagets nätverk med Microsoft Intune.
 keywords: Office 365 O365 Azure Information Protection data protect outside network company data
-author: arob98
+ms.author: dougeby
+author: dougeby
 manager: dougeby
-ms.date: 09/22/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 ms.reviewer: pchacon
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e3a52b2be557139cb2d31dd4919d239daeb81853
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 25f0572d65e6d651c636c8b1961903f7c2c78906
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="prevent-unauthorized-access-to-company-data"></a>Förhindra obehörig åtkomst till företagsdata 
+# <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Förhindra obehörig åtkomst till företagsdata med Microsoft Intune
 
 Du kan klassificera, sätta etikett på och skydda dokument och e-post i Office 365 så att endast behöriga användare har åtkomst till data. Inställningarna hanteras automatiskt efter att IT-administratörer eller användare har konfigurerat regler och villkor. IT-teamet kan även ange rekommenderade inställningar för användarna att följa. Administratörer och användare kan även återkalla åtkomst till data som redan har delats med andra utan hjälp från någon annan utfärdare. Resultatet av detta arbete är att styra vem som öppnar eller uppdaterar skyddade data, även när data lämnar företagets nätverk. 
 
@@ -44,5 +46,5 @@ Du kan dela information om [hur och när man ska skydda dokument och e-postmedde
 
 Som en del av nästa steg kan du lära dig mer om andra sätt att öka skyddet av företagets data, inklusive: 
 
-* Lär dig att använda [Azure Information Protection på iOS- och Android-enheter](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
+* Läs om hur du använder [Azure Information Protection på iOS- och Android-enheter] (https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq.
 * För Windows Phone och Mac-datorer kan du lära dig om [delningsapplikationen för Microsoft Rights Management](https://technet.microsoft.com/dn451248).

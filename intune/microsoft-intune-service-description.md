@@ -1,24 +1,24 @@
 ---
-title: "Beskrivning av Microsoft Intune-tjänsten"
-description: "Intune är en molnbaserad tjänst som hjälper dig att hantera Windows-, iOS-, Mac OS X-, Android- och Windows Mobile-enheter."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Beskrivning av Microsoft Intune-tjänsten
+description: Microsoft Intune är en molnbaserad tjänst som hjälper dig att hantera Windows-, iOS-, Mac OS X-, Android- och Windows Mobile-enheter.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f4671f643f9806945043adcb9279c7bc95d8efe2
-ms.sourcegitcommit: 2c7794848777e73d6a9502b4e1000f0b07ac96bc
+ms.openlocfilehash: 7b9c3965d99e0058ae0236e1efc3daa840aebc6c
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 
@@ -33,7 +33,7 @@ Intune är nära integrerat med Azure Active Directory (Azure AD) för identitet
 Mer information om hur du kan hantera enheter och appar samt skydda företagsdata med Intune finns i [Intune-dokumentationen](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>Kostnadsfri 30-dagars utvärderingsversion
-Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://www.microsoft.com/server-cloud/products/microsoft-intune/). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
+Du kan börja använda Intune med en kostnadsfri 30-dagars utvärderingsversion som innehåller 100 användarlicenser. Starta din kostnadsfria utvärderingsversion genom att [gå till sidan för Intune-registrering](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Om din organisation har ett företagsavtal eller motsvarande volymlicensavtal kontaktar du din Microsoft-representant för att konfigurera den kostnadsfria utvärderingsversionen.
 
 > [!NOTE]
 > Om din organisation redan har ett arbets- eller skolkonto för Microsoft Online Services och kanske kommer att fortsätta med den här Intune-prenumerationen i produktion efter det att utvärderingsperioden har löpt ut, väljer du alternativet **Logga in** på sidan Logga in och autentiserar med hjälp av din organisations globala administratörskonto. Den här åtgärden säkerställer att din Intune-utvärderingsversion länkar till det befintliga arbets- eller skolkontot.

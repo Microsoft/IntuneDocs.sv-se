@@ -1,28 +1,28 @@
 ---
-title: "Ange grundläggande datahantering för Office 365-appar i Intune"
-titlesuffix: Azure portal
-description: "Supportdokumentation för guiden Hantera Office 365-appar.\""
-keywords: 
+title: Datahantering för Office 365-appar i Microsoft Intune
+titlesuffix: ''
+description: Läs om datahantering för Office 365-appar i Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/01/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 852612ac-f146-4372-a900-3f6fdebd05ad
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e12f5becc1f3c03af0ee6d1fab9cd7ee16f2a547
-ms.sourcegitcommit: 80a2eefc1896a42cc2bc16be23093d1abf58b088
+ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps"></a>Hur användarna upplever det grundläggande skyddet på hanterade Office 365-appar
+# <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Beskriver hur användarna upplever det grundläggande skyddet för hanterade Office 365-appar i Microsoft Intune
 
 Guiden **Hantera Office 365-appar** skapar en appskyddsprincip för varje enhetsplattform.
 
@@ -46,30 +46,30 @@ Det här artikeln använder OneDrive för företag som ett illustrerande exempel
 
 ## <a name="user-experience-on-an-ios-device"></a>Användarupplevelsen på en iOS-enhet
 
-1. Öppna inloggningssidan genom att starta appen OneDrive för företag.  <br/> ![Bild av OneDrive-inloggningsskärmen för iOS](./media/onedrive-ios-sign-in.png)
-2. Skriv användarnamnet för ditt arbetskonto. Du omdirigeras till O365-autentiseringssidan där du kan ange dina autentiseringsuppgifter för arbetet. <br/> ![Bild av inloggningssidan för Office 365](./media/o365-sign-in-ios.png)
-3. När dina autentiseringsuppgifter har autentiserats av Azure Active Directory tillämpas appskyddsprinciperna och du uppmanas att starta om appen OneDrive för företag.  <br/>![Bild av omstartsprompten för iOS](./media/ios-restart-prompt.png)    
+1. Öppna inloggningssidan genom att starta appen OneDrive för företag.  
+2. Skriv användarnamnet för ditt arbetskonto. Du omdirigeras till O365-autentiseringssidan där du kan ange dina autentiseringsuppgifter för arbetet. 
+3. När dina autentiseringsuppgifter har autentiserats av Azure Active Directory tillämpas appskyddsprinciperna och du uppmanas att starta om appen OneDrive för företag. 
+
   > [!NOTE]
   > Meddelandet om nödvändig omstart visas bara på enheter som inte har registrerats i Intune.
 
+4. Starta om appen OneDrive för företag. Appen startas med appskyddsprinciperna aktiverade och du uppmanas att ange en PIN-kod för enheten (om du ännu inte har konfigurerat någon PIN-kod för enheten).  
 
-4. Starta om appen OneDrive för företag. Appen startas med appskyddsprinciperna aktiverade och du uppmanas att ange en PIN-kod för enheten (om du ännu inte har konfigurerat någon PIN-kod för enheten). <br/> ![Bild av uppmaningen om att skapa en PIN-kod](./media/pin-prompt-ios.png)    
   > [!NOTE]
   > De flesta av dina användare ser aldrig den här uppmaningen. Det är bara de användare som inte har aktiverat någon PIN-kod på sina iOS-enheter som ser uppmaningen.
 
-
-5. När du väl har angett PIN-koden och bekräftat den, så gå tillbaka till appen OneDrive för företag. Ett engångsmeddelande visas om att din IT-administratör nu skyddar arbetsdata i OneDrive. <br/> ![Bild av engångsmeddelande från din IT-administratör](./media/one-time-notice.png)
-6. Klicka dig förbi meddelandet för att få åtkomst till dina filer på OneDrive för företag. <br/> ![Bild av OneDrive-filer på iOS-enhet](./media/onedrive-files-ios.png) <br/>
+5. När du väl har angett PIN-koden och bekräftat den, så gå tillbaka till appen OneDrive för företag. Ett engångsmeddelande visas om att din IT-administratör nu skyddar arbetsdata i OneDrive. 
+6. Klicka dig förbi meddelandet för att få åtkomst till dina filer på OneDrive för företag. 
 
 >[!NOTE]
 >När du ändrar en distribuerad princip tillämpas ändringarna nästa gång du öppnar appen.
-
 
 ## <a name="user-experience-on-an-android-device"></a>Användarupplevelsen på en Android-enhet
 
 1. Öppna inloggningssidan genom att starta appen OneDrive för företag.  <br/> ![Bild av välkomstsida i OneDrive-appen](./media/onedrive-android-welcome.png)
 2. Skriv användarnamnet för ditt arbetskonto. Du omdirigeras till O365-autentiseringssidan där du kan ange dina autentiseringsuppgifter för arbetet. <br/> ![Bild av O365-inloggning på Android](./media/o365-sign-in-android.png)
-3. Efter det att dina autentiseringsuppgifter har autentiserats av Azure Active Directory visas ett meddelande med anvisningar om hur du installerar företagsportalappen, såvida den inte redan har installerats på enheten. Fortsätt genom att knacka på **Gå till butik**. <br/> ![Bild av meddelande om att hämta företagsportalappen](./media/get-company-portal-android.png) <br/>Om du redan har installerat företagsportalappen på din telefon startas OneDrive för företag appen automatiskt och du kan gå direkt till slutanteckningen.    
+3. Efter det att dina autentiseringsuppgifter har autentiserats av Azure Active Directory visas ett meddelande med anvisningar om hur du installerar företagsportalappen, såvida den inte redan har installerats på enheten. Fortsätt genom att knacka på **Gå till butik**. <br/> ![Bild av meddelande om att hämta företagsportalappen](./media/get-company-portal-android.png) <br/>Om du redan har installerat företagsportalappen på din telefon startas OneDrive för företag appen automatiskt och du kan gå direkt till slutanteckningen.   
+
   > [!IMPORTANT]
   > När du har konfigurerat de Office-appar på Android som ska hanteras av en appskyddsprincip **måste** enhetens användare installera företagsportalappen för att få åtkomst till e-post och dokument, även om slutanvändaren inte behöver öppna eller logga in på appen för att faktiskt läsa e-postmeddelandena eller dokumenten.
 
@@ -128,4 +128,4 @@ Om du vill visa eller uppdatera dessa principer eller alla de principer som du s
 ![Bild av användargränssnittets sökväg för att visa principer](./media/image-for-faq.png)
 
 ## <a name="next-steps"></a>Nästa steg
-Läs mer om [appskyddsprinciper](app-protection-policy.md).
+- Läs mer om [appskyddsprinciper](app-protection-policy.md).

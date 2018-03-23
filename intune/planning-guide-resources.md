@@ -1,23 +1,24 @@
 ---
-title: "Mallar och resurser för att planera och utforma distribution av Intune"
-description: "Länkar till planeringsmallar och mer information om Intune som kan vara till hjälp under processen med att planera och implementera Intune-distributionen."
-keywords: 
-author: arob98
-ms.author: angrobe
+title: Mallar och resurser för att planera och utforma distribution av Intune
+titlesuffix: Microsoft Intune
+description: Länkar till planeringsmallar och mer information om Intune som kan vara till hjälp under processen med att planera och implementera Microsoft Intune-distributionen.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 63060896-e00e-4ef0-b2ad-276e55164895
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 8a5a819fc8d081330be60e8b83944e326baaba2b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 67476afbd00cf54162b316e6c38967bccbed34ad
+ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Fler resurser för planeringen av din Intune-distribution
 
@@ -50,7 +51,7 @@ Ta en titt på dessa resurser om du vill ha ytterligare information som kan vara
 
 -   [Intune-blogg](https://blogs.technet.microsoft.com/enterprisemobility/) – Inlägg som hjälper dig att förstå hur Intune passar in i en större Enterprise Mobility-bild.
 
--   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter/default.aspx) – Lär dig mer om Microsofts strategi för säkerhet, sekretess, efterlevnad och insyn i Microsofts alla produkter och tjänster i molnet.
+-   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – Lär dig mer om Microsofts strategi för säkerhet, sekretess, efterlevnad och insyn i Microsofts alla produkter och tjänster i molnet.
 
 -   [Intune User Voice](http://microsoftintune.uservoice.com/) – Önskar du ha en viss funktion eller vill du rösta om funktioner med andra kunder? Ge feedback om Intune via User Voice. Vi lyssnar.
 

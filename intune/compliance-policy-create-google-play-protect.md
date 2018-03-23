@@ -1,25 +1,25 @@
 ---
-title: Aktivera Google Play-skyddsefterlevnad med Intune
-titleSuffix: Azure portal
-description: "Lär dig hur du skapar en efterlevnadsprincip för Android-enheter för att aktivera Google Play-skydd."
-keywords: 
+title: Aktivera Google Play-skyddets efterlevnad med Microsoft Intune
+titleSuffix: ''
+description: Lär dig hur du skapar en efterlevnadsprincip för Android-enheter för att aktivera Google Play-skydd.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: E9810BEB-000A-4DFB-B5C7-A22A92082B22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01b26a6165db6e3016d2b3d7063a4bca60ce0266
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 89f5d85b89a1d7da74769fe92268a054bb762961
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Så här skapar du en princip för enhetsefterlevnad om du vill aktivera Google Play-skydd
 

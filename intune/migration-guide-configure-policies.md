@@ -1,25 +1,26 @@
 ---
-title: "Konfigurera principer för enhetsefterlevnad och apphantering under en Intune-migrering"
-description: "Den här artikeln anger de steg som krävs för att konfigurera enhetsefterlevnad och apphantering under en Intune-migrering."
-keywords: 
-author: andredm7
-ms.author: andredm
+title: Konfigurera principer för enhetsefterlevnad och apphantering under en Intune-migrering
+titlesuffix: Microsoft Intune
+description: Den här artikeln visar de steg som krävs för att konfigurera principer för enhetsefterlevnad och apphantering under en Microsoft Intune-migrering.
+keywords: ''
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 07/11/2017
+ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0062d08e-e5b3-4f73-8b64-5ad95adbe945
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 96541c503a387e1a2ad3a4158f441266f1202be0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 13a9c0a036eb6ce6ea7e984419c9598194b35b68
+ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="configure-device-compliance-and-app-management-policies"></a>Konfigurera principer för enhetsefterlevnad och apphantering
+# <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurera principer för enhetsefterlevnad och apphantering vid migrering till Microsoft Intune
 
 Det huvudsakliga målet vid migrering till Intune är att alla enheter ska registreras i Intune och uppfylla dess principer. Enhetsprinciperna hjälper dig inte enbart att hantera företagsägda enanvändarenheter utan även personliga BYOD-enheter och delade enheter, t.ex. informationsdatorer, kassadatorer, surfplattor som delas av flera elever i ett klassrum, eller användarlösa enheter (endast iOS).
 

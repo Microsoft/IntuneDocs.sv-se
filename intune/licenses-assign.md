@@ -1,24 +1,24 @@
 ---
-title: "Tilldela licenser för Microsoft Intune"
-description: "Tilldela licenser till användare så att de kan registrera sig i Intune"
-keywords: 
+title: Tilldela licenser för Microsoft Intune
+description: Tilldela licenser till användare så att de kan registrera sig i Intune
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 45baadb24ac646a6456e04c85a701842774c7930
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 67d12c748c5f4daabcb64eff7a154455b39a57d0
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Tilldela licenser till användare så att de kan registrera enheter i Intune
 
@@ -58,6 +58,17 @@ Se den här [översikten över synkronisering av skolinformation](https://suppor
 * Varje **användare** som du tilldelar en programanvändarlicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och hantera program och upp till 15 enheter.
 * Varje **enhet** som du tilldelar en programenhetslicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och användas av hur många användare som helst.
 * Om en enhet används av mer än en användare så krävs det en programvarulicens för var och en, eller så krävs det en programlicens för varje användare.
+
+## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Förstå vilken typ av licenser som du har köpt
+
+Hur du har köpt Intune avgör vilken prenumerationsinformation som visas:
+
+- Om du har köpt Intune med ett Enterprise-avtal, hittar du din prenumerationsinformation i volymlicensportalen under **Prenumerationer**.
+- Kontakta din återförsäljare om du har köpt Intune från en leverantör av molnlösningar.
+- Om du har köpt Intune med en CC# eller faktura är dina licenser användarbaserade.
+
+
+
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Använda PowerShell för att hantera EMS-användarlicenser selektivt
 Organisationer som använder Microsoft Enterprise Mobility + Security (tidigare Enterprise Mobility Suite) kanske har användare som bara behöver Azure Active Directory Premium eller Intune-tjänster i EMS-paketet. Du kan tilldela en tjänst eller en delmängd tjänster med hjälp av [Azure Active Directory PowerShell-cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).

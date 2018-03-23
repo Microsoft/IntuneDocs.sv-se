@@ -1,25 +1,25 @@
 ---
 title: Konfigurera registrering av Windows-enheter med Microsoft Intune
-titlesuffix: 
+titlesuffix: ''
 description: Konfigurera registrering av Windows-enheter.
-keywords: 
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 03/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 21849cd4bb1c77334fdc3e9e347365a25ab4df2d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 896c984cb5831dc84a041d4ad39e4cdf6819f0f8
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
@@ -85,6 +85,9 @@ Berätta för användarna hur de ska registrera sina Windows-enheter och vad de 
 > Slutanvändare måste ansluta till webbplatsen för företagsportalen via Microsoft Edge för att se Windows-appar som du tilldelat för specifika Windows-versioner. Andra webbläsare, inklusive Google Chrome, Mozilla Firefox och Internet Explorer har inte stöd för den här typen av filtrering.
 
 Registreringsinstruktioner för slutanvändare finns i [Registrera din Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows). Du kan även be användarna granska [vad IT-administratören kan se på enheten](https://docs.microsoft.com/intune-user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+
+>[!IMPORTANT]
+> Om du inte har aktiverat automatisk MDM-registrering, men du har Windows 10-enheter som har anslutits till Azure AD, visas två poster i Intune-konsolen efter registreringen. Du kan stoppa detta genom att se till att användare med Azure AD-anslutna enheter går till **Konton** > **Åtkomst för arbete eller skola** och **Anslut** med samma konto. 
 
 Mer information om slutanvändarnas aktiviteter finns i [Resurser om slutanvändarens upplevelse med Microsoft Intune](end-user-educate.md).
 

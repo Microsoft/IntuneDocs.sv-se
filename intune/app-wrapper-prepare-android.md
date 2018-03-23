@@ -1,24 +1,24 @@
 ---
 title: Omsluta Android-appar med Intunes programhanteringsverktyg
-description: "Läs om hur du omsluter Android-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
-keywords: 
+description: Läs om hur du omsluter Android-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/05/2018
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 33774f1326f961e6072197d46e9eb64f121739c9
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: de63fe9476e4fa0f3f85343659538856f2f841d8
+ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -30,8 +30,6 @@ Verktyget är ett kommandoradsprogram för Windows som körs i PowerShell och so
 
 
 Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-considerations-for-running-the-app-wrapping-tool) innan du kör verktyget. Om du vill ladda ned verktyget går du till [Microsoft Intunes programhanteringsverktyg för Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) på GitHub.
-
-
 
 ## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Kontrollera att du uppfyller kraven för att använda programhanteringsverktyget
 
@@ -51,6 +49,8 @@ Se [Säkerhetsaspekter vid körning av programhanteringsverktyget](#security-con
     > I vissa fall kan 32-bitarsversionen av Java orsaka minnesproblem. Det är en bra idé att installera 64-bitarsversionen.
 
 - Android kräver att alla appaket (.apk) signeras. Information om att **återanvända** befintliga certifikat och allmänna riktlinjer för signeringscertifikat finns i [Återanvända signeringscertifikat och omslutande appar](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Den körbara Java keytool.exe används för att generera **nya** autentiseringsuppgifter som krävs för att signera den omslutna utdataappen. Alla angivna lösenord måste vara säkra, men skriv ned dem eftersom de behövs för att köra programhanteringsverktyget.
+
+- (Valfritt) Aktivera Multidex i indataappen. Ibland kan en app uppnå storleksgränsen i Dalvik för körbara filer (DEX) på grund av de MAM SDK-klasser i Intune som läggs till vid omslutning. DEX-filer ingår i kompileringen av en Android-app. I det här scenariot är det bäst att aktivera Multidex i själva appen. I vissa organisationer kan du behöva kontakta den som kompilerar appen (t.ex. apputvecklaren). 
 
 ## <a name="install-the-app-wrapping-tool"></a>Installera App-Wrapping-verktyget
 
@@ -159,6 +159,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
 
 1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
+
 > [!NOTE] 
 > Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
 * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.

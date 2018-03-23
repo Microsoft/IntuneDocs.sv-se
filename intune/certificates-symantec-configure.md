@@ -1,25 +1,25 @@
 ---
-title: "Utfärda Symantec PKCS-certifikat med Intune"
-titlesuffix: Azure portal
-description: "Installera och konfigurera Intune Certificate Connector för att utfärda PKCS-certifikat från webbtjänsten Symantec PKI Manager till Intune-hanterade enheter"
-keywords: 
-author: MicrosoftGuyJFlo
-ms.author: joflore
+title: Utfärda Symantec PKCS-certifikat med Microsoft Intune
+titlesuffix: ''
+description: Installera och konfigurera Intune Certificate Connector för att utfärda PKCS-certifikat från webbtjänsten Symantec PKI Manager till Intune-hanterade enheter.
+keywords: ''
+author: vhorne
+ms.author: victorh
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
-ms.assetid: 
-ms.reviewer: 
+ms.technology: ''
+ms.assetid: ''
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f2d37a9033464381de5c23a558d0205f85fe56a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1fbb0ccd21ff15cf86656d7badf08002f1e42bb3
+ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Konfigurera Intune Certificate Connector för webbtjänsten Symantec PKI Manager
 
@@ -280,7 +280,7 @@ Certifikatprofil-OID:n är associerad med en certifikatprofilsmall i Symantec CA
    > [!IMPORTANT]
    > Följande parametrar för PKCS-certifikatprofilen måste konfigureras med angivna värden i följande tabellen som det visas i skärmbilden för att utfärda PKCS-certifikat via Intune Certificate Connector från Symantec CA:n. 
 
-    |PKCS-certifikatparameter | Värde | Beskrivning |
+    |PKCS-certifikatparameter | Värde | Description |
     | --- | --- | --- |
     | Certifikatutfärdare | pki-ws.symauth.com | Det här värdet måste vara bastjänst-FQDN för Symantec-certifikatutfärdaren utan avslutande snedstreck.  Om du inte är säker på om det här är rätt bastjänst-FQDN för din Symantec CA-prenumeration så kan du kontakta Symantecs kundsupport. <br><br> Om detta FQDN är felaktigt så utfärdar inte Intune Certificate Connector PKCS-certifikat från Symantec-certifikatutfärdaren.| 
     | Namn på certifikatutfärdare | Symantec | Det här värdet måste vara strängen **Symantec**. <br><br> Om det här värdet ändras, kommer Intune Certificate Connector inte att utfärda PKCS-certifikat från Symantec CA:n.|
@@ -295,7 +295,7 @@ När du har slutfört föregående steg, utfärdar Intune Certificate Connector 
 
 ### <a name="pkcs-certificate-profile-supported-attributes"></a>Attribut som stöds av PKCS-certifikatprofilen
 
-|Attribut | Format som stöds av Intune | Format som stöds av Symantec Cloud CA | Resultat |
+|Attribut | Format som stöds av Intune | Format som stöds av Symantec Cloud CA | Result |
 | --- | --- | --- | --- |
 | Ämnesnamn |Intune stöder enbart ämnesnamnet i följande tre format: <br><br> 1. Tilltalsnamn <br> 2. Eget namn inkluderar e-post <br> 3. Eget namn som e-post <br><br> Följande är ett exempel: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | Symantec-CA stöder ytterligare attribut.  Om du vill välja ytterligare attribut, måste de ha definierats med fasta värden i Symantec-certifikatprofilmallen.| Vi använder egna namn eller e-post från PKCS-certifikatbegäran. <br><br> Alla matchningsfel i attributval mellan Intune-certifikatprofilen och Symantec-certifikatprofilmallen resulterar i att inga certifikat utfärdas av Symantec CA:n.|
 | SAN | Intune stöder endast följande SAN fältvärden: <br><br> AltNameTypeEmail <br><br> AltNameTypeUpn <br><br> AltNameTypeOtherName (kodad värde) | Symantec Cloud CA:n har också stöd för dessa parametrar. Om du vill välja ytterligare attribut, måste de ha definierats med fasta värden i Symantec-certifikatprofilmallen. <br><br> AltNameTypeEmail: Om den här typen inte finns i SAN, används värdet från AltNameTypeUpn.  Om AltNameTypeUpn inte heller hittades i SAN, används värdet från ämnesnamnet om det är i e-postformat.  Om det fortfarande inte hittas, kan inte Intune Certificate Connector utfärda certifikaten. <br><br> Ex: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> AltNameTypeUpn: Om den här typen inte finns i SAN, används värdet från AltNameTypeEmail. Om AltNameTypeEmail inte heller hittas i SAN, används värdet från ämnesnamnet om det är i e-postformat.  Om det fortfarande inte hittas, kan inte Intune Certificate Connector utfärda certifikaten.  <br><br> Ex: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> AltNameTypeOtherName: Om den här typen inte finns i SAN, kan inte Intune Certificate Manager utfärda certifikaten. <br><br> Ex: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  **Obs!** Värdet för det här fältet stöds bara i kodat format (hexadecimalt värde) av Symantec CA:n. Så för alla värden i det här fältet, konverterar Intune Certificate Connector det till base 64-kodat innan den skickar certifikatbegäran. **Intune Certificate Connector verifierar inte om det här värdet redan är kodat eller inte.** | Inga |
