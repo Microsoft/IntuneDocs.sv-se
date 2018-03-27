@@ -1,25 +1,25 @@
 ---
-title: "Inställningar för efterlevnadsprinciper för iOS-enheter"
-description: "Det här avsnittet beskriver de regler och inställningar som du kan ange i en efterlevnadsprincip för iOS-enheter."
-keywords: 
+title: Inställningar för efterlevnadsprinciper för iOS-enheter
+description: Det här avsnittet beskriver de regler och inställningar som du kan ange i en efterlevnadsprincip för iOS-enheter.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 12/15/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a59d24f-ed58-49b1-b874-b2d4aea3ec76
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6cd64a833aa9dbddd2e85dbc427f5c5d5d2bca64
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 7973dd757c69bc0a63f1ff5d24973acb6086d8a4
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="compliance-policy-settings-for-ios-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för iOS-enheter i Microsoft Intune
 
@@ -29,11 +29,11 @@ Principinställningarna som beskrivs i det här avsnittet gäller enheter som k�
 
 Om du letar efter information om andra plattformar väljer du något av följande:
 > [!div class="op_single_selector"]
-- [Inställningar för efterlevnadsprinciper för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för policy för efterlevnad för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
 - [Kompatibilitetsprincipinställningar för Android for Work](afw-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
-## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 ### <a name="password"></a>Lösenord
 - **Kräv lösenord för att låsa upp mobila enheter:** Välj **Ja** om du vill kräva att användarna anger ett lösenord för att få åtkomst till sina enheter. iOS-enheter som använder lösenord krypteras.
 

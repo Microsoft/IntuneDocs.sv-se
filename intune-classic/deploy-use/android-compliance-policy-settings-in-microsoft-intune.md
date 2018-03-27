@@ -1,25 +1,25 @@
 ---
-title: "Inställningar för policy för efterlevnad för Android"
-description: "I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter."
-keywords: 
+title: Inställningar för policy för efterlevnad för Android
+description: I det här avsnittet beskrivs inställningarna för efterlevnadsprinciper för Android-enheter.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e721c5c7-9678-4f3b-81d4-564da5efd337
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f781c5498a569a067f0f2aa6f780a6cc37c9985c
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 63618f9af5f2bdb863a19c229c862e446dd4ea7a
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
 
@@ -33,7 +33,7 @@ Om du letar efter information om andra plattformar väljer du något av följand
 - [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för efterlevnadsprinciper för Android for Work-enheter](afw-compliance-policy-settings-in-microsoft-intune.md)
 
-## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 ### <a name="password"></a>Lösenord
 - **Kräv lösenord för att låsa upp mobila enheter**: Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 

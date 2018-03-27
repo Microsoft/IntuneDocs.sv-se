@@ -1,25 +1,25 @@
 ---
-title: "Krav för MAM-principer"
-description: "I det här avsnittet beskrivs förutsättningar för hur du konfigurerar användare innan du skapar hanteringsprinciper för mobilappar."
-keywords: 
+title: Krav för MAM-principer
+description: I det här avsnittet beskrivs förutsättningar för hur du konfigurerar användare innan du skapar hanteringsprinciper för mobilappar.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 11/29/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7e6a85e7-e007-41b6-9034-64d77f547b87
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9dbaaf5b540d79a51cef3b7f98a16a5a1f200648
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b5d2ec278d182f3d9dbe03fbdf86791b59debf79
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Förbereda konfigurationen av appskyddsprinciper på Azure-portalen
 
@@ -72,7 +72,7 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 
   * Mer information om enheter som inte hanteras (t.ex. personalägda enheter) eller om enheter som hanteras av en annan lösning för hantering av mobila enheter finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Intune](protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune.md).
 
-## <a name="prerequisites"></a>Förutsättningar
+## <a name="prerequisites"></a>Krav
 
 -   **En Microsoft Intune-prenumeration**. Användarna behöver Intune-licenser för att kunna hämta appar med appskyddsprinciper.
 Du har redan en Intune-prenumeration om du för närvarande använder Intune för att hantera enheter. Du har också en Intune-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar Intune för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).

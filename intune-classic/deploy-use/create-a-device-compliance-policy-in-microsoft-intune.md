@@ -1,25 +1,25 @@
 ---
 title: Skapa en enhetsefterlevnadsprincip
-description: "Skapa en efterlevnadsprincip för att skydda mobila enheter och datorer som används för att komma åt företagets data."
-keywords: 
+description: Skapa en efterlevnadsprincip för att skydda mobila enheter och datorer som används för att komma åt företagets data.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 10/12/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5336dac0-a2cc-4cd4-8511-67e4f95bd700
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e37e5f490254efedf56a383e612f934925be75e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 03719051179a30b0cc543098861f1b480c66082a
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-device-compliance-policy-in-microsoft-intune"></a>Skapa en enhetsefterlevnadsprincip i Microsoft Intune
 
@@ -56,7 +56,7 @@ Om du vill ange hur lång tid enheten har på sig att checka in innan den betrak
 I följande tabell visas inställningarna för efterlevnadsprincip och de plattformar där de stöds.
 
 -------------
-|Inställningar|iOS|Android|Windows|
+|Inställningen|iOS|Android|Windows|
 |-----|----|-----|-----|
 |Kräv ett lösenord för att låsa upp mobila enheter|iOS 6 och senare|Android 4.0 och senare <br>Samsung KNOX Standard 4.0 och senare|Windows Phone 8.1 och senare|
 |Tillåt enkla lösenord|iOS 6 och senare|Stöds inte|Windows Phone 8.1 och senare|
@@ -80,7 +80,7 @@ I följande tabell visas inställningarna för efterlevnadsprincip och de plattf
 Välj något av följande om du vill veta mer om efterlevnadsinställningar som stöds på varje plattform:
 > [!div class="op_single_selector"]
 - [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för efterlevnadsprinciper för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
+- [Inställningar för policy för efterlevnad för Android-enheter](android-compliance-policy-settings-in-microsoft-intune.md)
 - [Inställningar för efterlevnadsprinciper för Windows- och Windows Phone-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
 
 

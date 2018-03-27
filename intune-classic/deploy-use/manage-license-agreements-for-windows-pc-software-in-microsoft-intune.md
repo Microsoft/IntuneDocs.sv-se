@@ -1,24 +1,24 @@
 ---
-title: "Hantera licensavtal för datorer som kör Intune-klientprogrammet"
-description: "Med Intune kan du hantera licensavtal för programvara som köpts via Microsofts volymlicensieringsavtal och för programvara som köpts på annat sätt."
-keywords: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
+title: Hantera licensavtal för datorer som kör Intune-klientprogrammet
+description: Med Intune kan du hantera licensavtal för programvara som köpts via Microsofts volymlicensieringsavtal och för programvara som köpts på annat sätt.
+keywords: ''
+author: dougeby
+ms.author: dougeby
+manager: dougeby
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cb60588f793ae430d5e40de6a42db3610e3a1cb6
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 73fa5866efe10006a8a3d7de38ec4c552d0df06e
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
@@ -176,7 +176,7 @@ Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licen
 
 |||
 |-|-|
-|Aktivitet|Information|
+|Uppgift|Information|
 |Skapa en licensgrupp|På sidan **Översikt** i arbetsytan **Licenser** väljer du **Skapa licensgrupp** på menyn **Aktiviteter** . **Obs!** Du kan skapa max 500 licensgrupper totalt.|
 |Byta namn på en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Redigera licensgrupp** på menyn **Aktiviteter** .|
 |Ta bort en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Ta bort licensgrupp** på menyn **Aktiviteter** . **Tips!** Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen **Otilldelade avtal**.|
