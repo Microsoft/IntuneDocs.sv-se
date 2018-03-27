@@ -1,25 +1,25 @@
 ---
-title: "Lägga till verksamhetsspecifika appar för iOS i Microsoft Intune"
-titlesuffix: 
-description: "Läs mer om att lägga till verksamhetsspecifika appar för iOS i Microsoft Intune."
-keywords: 
+title: Lägga till verksamhetsspecifika appar för iOS i Microsoft Intune
+titlesuffix: ''
+description: Läs mer om att lägga till verksamhetsspecifika appar för iOS i Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 225d598cfeb1c358131365efd1664dbdd9a76a5c
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 7de6c995108bff3b1571b281df2745629c7f9741
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika iOS-appar i Microsoft Intune
 

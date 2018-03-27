@@ -1,23 +1,23 @@
 ---
-title: "Begränsningsinställningar för Microsoft Intune-enheter i Windows Holographic for Business"
-titleSuffix: 
-description: "Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på enheter som kör Windows Holographic for Business-enheter."
-keywords: 
+title: Begränsningsinställningar för Microsoft Intune-enheter i Windows Holographic for Business
+titleSuffix: ''
+description: Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på enheter som kör Windows Holographic for Business-enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9acce571330a754de85b65caf8ec71912fd36a69
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 694b81434a95f48abc98f5012460523420df58cc
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="microsoft-intune-windows-holographic-for-business-device-restriction-settings"></a>Inställningar för begränsningar för Windows Holographic for Business-enheter i Microsoft Intune
 

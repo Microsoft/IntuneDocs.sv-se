@@ -1,25 +1,25 @@
 ---
-title: "Exchange-åtkomstregler för mobila enheter"
-description: "Exchange ActiveSync-åtkomstregler för att tillåta eller blockera enhetsanslutningar med EAS"
-keywords: 
+title: Exchange-åtkomstregler för mobila enheter
+description: Exchange ActiveSync-åtkomstregler för att tillåta eller blockera enhetsanslutningar med EAS
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 07/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 208b9f45-02d9-413a-b86a-8bad9b5008fa
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 097d6ee8a7ad6752d48f554ee0bc9b3729311fe2
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9c3da7d517bd26bf694ea7bfa658ec1a4688d8f8
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="exchange-access-rules-for-mobile-devices"></a>Exchange-åtkomstregler för mobila enheter
 
@@ -29,7 +29,7 @@ Exchange-åtkomstregler för mobila enheter avgör vilken åtkomstnivå som dess
 
 Följande tabell innehåller åtkomstnivåerna som hanteras av Exchange ActiveSync:
 
-|Åtkomstnivå|Beskrivning|
+|Åtkomstnivå|Description|
 |----------------|---------------|
 |**Bevilja enheterna åtkomst till Exchange**|I läget *tillåt åtkomst* kan en mobil enhet synkronisera via Exchange ActiveSync och ansluta till Exchange-servern för att hämta e-post och hantera kalender, kontakter, uppgifter och anteckningar. Detta fortsätter så länge enheten överensstämmer med någon Exchange ActiveSync-postlådeprincip som du har konfigurerat i Exchange, om inte användaren eller den mobila enheten har blockerats av Exchange-administratören.|
 |**Blockera enheterna från åtkomst till Exchange**|I läget *blockera åtkomst* är mobila enheter blockerade och tillåts inte att ansluta till Exchange-servern. Enheterna får felmeddelandet HTTP 403 Åtkomst nekas. Användaren får ett e-postmeddelande från Exchange-servern som anger att den mobila enheten har blockerats från att komma åt sin postlåda. Det här meddelandet får inte finnas på den blockerade mobila enheten. Genom att använda **Ange användarmeddelande** kan du lägga till anpassad text i det här meddelandet som innehåller anvisningar för de användare vars enheter har blockerats. |
@@ -37,7 +37,7 @@ Följande tabell innehåller åtkomstnivåerna som hanteras av Exchange ActiveSy
 
 En åtkomststrategi är en kombination av en **standardregel** och **plattformsundantag** som gäller för alla mobila enheter som är anslutna till Exchange. I följande tabell visas några exempel på åtkomststrategier.
 
-|Åtkomststrategi|Beskrivning|
+|Åtkomststrategi|Description|
 |-------------------|---------------|
 |Lista över tillåtna|Du kan använda en *lista över tillåtna* för att bevilja åtkomst till en lista med kända enheter och begränsa åtkomsten för alla andra enheter. Om du vill göra detta måste du skapa anpassade regler för enhetsplattformar med tillgång till användarnas postlådor. När du skapar en sådan regel måste du ange standardregeln för åtkomst till att blockera eller sätta alla andra enheter i karantän. Om du vill lägga till en ny enhet i listan över tillåtna enheter kan du skapa en ny anpassad regel.|
 |Blockeringslista|Du kan använda en *blockeringslista* för att bevilja åtkomst till alla enheter som standard, men blockera åtkomsten för ett antal enheter som inte ska få åtkomst till organisationen. Skapa en blockeringslista genom att skapa anpassade regler som blockerar enhetsplattformar som du inte vill synkronisera med organisationens postlådor. Vi rekommenderar att du anger en standardregel som tillåter åtkomst till alla enheter som inte uttryckligen blockeras av befintliga regler. Om du vill lägga till en ny enhet eller uppsättning enheter i blockeringslistan skapar du en ny anpassad regel.|
