@@ -1,23 +1,23 @@
 ---
-title: "Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter"
-titlesuffix: 
-description: "Läs mer om att konfigurera enkel inloggning till Microsoft Intune för iOS-enheter."
-keywords: 
+title: Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
+titlesuffix: ''
+description: Läs mer om att konfigurera enkel inloggning till Microsoft Intune för iOS-enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/2/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb7c3bdffb19e26f2f2178c1750d1ef31a02556
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 8f19320df9a9728cdd77e608fc0ad219272a731f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
 
@@ -90,7 +90,7 @@ Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-a
 
 Ange vilka appar på slutanvändarens enhet som använder nyttolasten för enkel inloggning.
 
-Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. Dessa strängar kan vara exakta matchningar (till exempel `com.contoso.myapp`) eller ange en specifik prefixmatchning för samlings-ID:t med hjälp av jokertecknet *\. Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen (till exempel `com.contoso.*`). När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
+Matrisen `AppIdentifierMatches` måste innehålla strängar som matchar appsamlings-ID:n. De här strängarna kan vara exakta träffar (till exempel: `com.contoso.myapp`) eller ange en prefixmatchning för samlings-ID:t med hjälp av jokertecknet \*. Jokertecknet måste komma efter en punkt (.), och får bara förekomma en gång, i slutet av strängen (till exempel `com.contoso.*`). När ett jokertecken används beviljas alla appar vars samlings-ID börjar med prefixet åtkomst till kontot.
 
 Fältet **Appnamn** används för att lägga till ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t.
 

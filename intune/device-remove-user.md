@@ -1,31 +1,31 @@
 ---
-title: "Ta bort en användare från en iOS-enhet med Microsoft Intune"
-titlesuffix: 
-description: "Läs om hur du tar bort en användare från en delad iOS-enhet med Intune."
-keywords: 
+title: Ta bort en användare från en iOS-enhet med Microsoft Intune
+titlesuffix: ''
+description: Läs om hur du tar bort en användare från en delad iOS-enhet med Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2ea5941c-a69b-4e1c-b42c-a1fc0c3a7de7
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce1b6b439c287b67a7c9e776edf136e78e5ecf5b
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 01928439f3a4d9280036b2e1a9576175ef425050
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remove-a-user-from-a-shared-ios-device"></a>Ta bort en användare från en delad iOS-enhet
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Åtgärden **Ta bort användare** tar bort den aktuella användaren på en delad iPad-enhet som har konfigurerats för hantering av Classroom-appen för iOS med hjälp av en [utbildningsprofil för iOS](education-settings-configure-ios.md). 
+Med åtgärden **Ta bort användare** tar du bort en vald användare från den lokala cachen på en delad iPad-enhet. iPad-enheten måste konfigureras för att hantera iOS-klassrumsappen med hjälp av en [iOS-utbildningsprofil](education-settings-configure-ios.md). 
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -35,16 +35,16 @@ ms.lasthandoff: 03/08/2018
 - macOS – stöds inte
 - Android – stöds inte
 
-## <a name="how-to-remove-a-user"></a>Ta bort en användare
+## <a name="remove-a-user"></a>Ta bort en användare
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
+1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** på bladet **Intune**.
-4. Välj **Alla enheter** på bladet **Enheter**.
+3. Välj **Enheter** i **Intune**-fönstret.
+4. Välj **Alla enheter** i fönstret **Enheter**.
 5. Välj en iOS-enhet i listan över de enheter du hanterar.
-6. Välj **Användare** på bladet för den enheten.
+6. Välj **Användare** i fönstret för enheten.
 7. Högerklicka på den användare du vill ta bort i listan och välj sedan **Ta bort användare**.
 
 ## <a name="next-steps"></a>Nästa steg
 
-Om du vill se status för den åtgärd du precis vidtagit väljer du **Enhetsåtgärder** på bladet **Enheter**.
+- Om du vill se status för åtgärden **Ta bort användare** väljer du **Enheter** > **Enhetsåtgärder**.

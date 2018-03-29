@@ -1,25 +1,25 @@
 ---
-title: "Registrera iOS-enheter med programmet för enhetsregistrering"
+title: Registrera iOS-enheter med programmet för enhetsregistrering
 titlesuffix: Microsoft Intune
-description: "Läs hur du registrerar företagsägda iOS-enheter med programmet för enhetsregistrering.”"
-keywords: 
+description: Läs hur du registrerar företagsägda iOS-enheter med programmet för enhetsregistrering.”
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 24b1ffb1d89f52a51f21dc6c4a588324f3cd87d3
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 05b03502a27c244dd665363741f70a695f8e945b
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="automatically-enroll-ios-devices-by-using-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples program för enhetsregistrering (DEP)
 
@@ -42,10 +42,10 @@ Det här avsnittet hjälper dig att aktivera registrering av iOS-enheter som kö
 
 Om du vill aktivera DEP-registrering kan du använda både Intune och Apples DEP-portal. En lista med serienummer eller inköpsordernummer krävs så att du kan tilldela enheter till Intune för hantering. Du kan skapa DEP-registreringsprofiler som innehåller inställningar som verkställs på enheterna under registreringen.
 
-DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
+DEP-registreringen fungerar inte med [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md). Dessutom har macOS för närvarande inte stöd för DEP.
 
 ## <a name="what-is-supervised-mode"></a>Vad är övervakat läge?
-Apple införde övervakat läge i iOS 5. En iOS-enhet i övervakat läge kan hanteras med fler kontroller. Det är därför användbart för företagsägda enheter. Intune har stöd för konfigurering av enheter för övervakat läge som en del av Apples program för enhetsregistrering (DEP). 
+Apple införde övervakat läge i iOS 5. En iOS-enhet i övervakat läge kan hanteras med fler kontroller. Det är därför användbart för företagsägda enheter. Intune har stöd för konfigurering av enheter för övervakat läge som en del av Apples program för enhetsregistrering (DEP).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -172,7 +172,7 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
 1. I [Intune på Azure portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
   ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
-  
+
 2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
    ![Bladet Synkronisera där länken Begär synkronisering väljs](./media/enrollment-program-device-request-sync.png)
@@ -206,6 +206,4 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 ## <a name="distribute-devices"></a>Distribuera enheter
 Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har återställts till fabriksinställningarna.
 
-Se [Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet](/intune-user-help/enroll-your-device-dep-ios). 
-
-
+Se [Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet](/intune-user-help/enroll-your-device-dep-ios).

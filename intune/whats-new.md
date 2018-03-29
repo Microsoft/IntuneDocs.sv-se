@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/16/2018
+ms.date: 03/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f171779a2606790dd1e59caf5e261e6d22faaf7f
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: be4d02419879a765c3d84a99b65a1184f7e8353e
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 
@@ -47,6 +47,10 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
 
 
 ## <a name="week-of-march-12-2018"></a>Vecka 12 i mars 2018
+
+#### <a name="company-portal-app-for-android-visual-updates---976944---"></a>Visuella uppdateringar i företagsportalappen för Android <!--976944 -->
+
+Vi har uppdaterat företagsportalappen för Android så att den följer Androids riktlinjer för [Materialdesign](https://material.io/). Du kan se bilder av de nya ikonerna i artikeln [Nyheter i appens gränssnitt](whats-new-app-ui.md).
 
 ### <a name="new-windows-defender-exploit-guard-settings----1631893---"></a>Nya inställningar för Windows Defender Exploit Guard-princip <!-- 1631893 -->
 
@@ -826,14 +830,14 @@ För Intune-konton som skapades efter januari 2017 har Intune aktiverat direktå
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968--"></a>Ny uppdatering av användarupplevelse för företagsportalens webbsida <!--2000968-->
 
-Vi presenterar en ny webbplats för företagsportalen i april, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kunddrivna förbättringar som programdelning och förbättrad prestanda för att få en mer användarvänlig upplevelse.
+Vi presenterar en ny webbplats för företagsportalen i april, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
 Vi har lagt till några nya funktioner, baserat på feedback från kunder som du, som förbättrar befintliga funktioner och användbarhet:
 
--   Förbättringar av användargränssnittet över hela webbplatsen
+-   Förbättringar i användargränssnittet på hela webbplatsen
 -   Möjlighet att dela direktlänkar till appar
 - Förbättrad prestanda för stora app-kataloger
 
-Du behöver inte göra något för att förbereda för den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen på iOS då webbplatsen startar avsnittet **Appar** i iOS-app. Du kan se en exempelbild för detta på sidan [vad är nytt i appens användargränssnitt](whats-new-app-ui.md).
+Du behöver inte göra några förberedelser inför den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen på iOS då webbplatsen startar avsnittet **Appar** i iOS-app. Du kan se en exempelbild för detta på sidan [vad är nytt i appens användargränssnitt](whats-new-app-ui.md).
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866--"></a>Uppdatering av användarupplevelsen för appen Företagsportal för iOS <!--1412866-->
 

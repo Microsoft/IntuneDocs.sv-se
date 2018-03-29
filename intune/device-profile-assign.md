@@ -1,40 +1,40 @@
 ---
-title: "Tilldela enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs"
-description: "Hur du använder Azure Portal för att tilldela enhetsprofiler och principer till användare och enheter, och hur du exkluderar grupper från en profiltilldelning i Microsoft InTune"
-keywords: 
+title: Tilldela enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs
+description: Använd Azure-portalen för att tilldela enhetsprofiler och principer till användare och enheter. Lär dig hur du undantar grupper från en profiltilldelning i Microsoft Intune.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b09650bc99b1bdf892b60828f0b524467d7b60ac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9840298df981bee6c33d3cb36ec5e4ada46d11bd
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Tilldela användar- och enhetsprofiler i Microsoft Intune
 
-När du har skapat en profil kan du tilldela profilen till Azure Active Directory-grupper.
+När du har skapat en profil kan du tilldela profilen till Azure Active Directory-grupper (Azure AD).
 
 ## <a name="assign-a-device-profile"></a>Tilldela en enhetsprofil
 
 1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
 2. I **Microsoft Intune** väljer du **Enhetskonfiguration** och sedan **Profiler**.
 3. Välj den profil som du vill tilldela i listan med profiler och välj sedan **Tilldelningar**.
-4. Välj om du vill **inkludera** eller **exkludera** grupper och välj sedan **Välj grupper**:  
+4. Välj om du vill **inkludera** eller **exkludera** grupper och välj sedan grupper.  
 
-    ![Inkludera eller exkludera grupper från en profiltilldelning](./media/group-include-exclude.png)
+    ![Skärmbild med alternativ för att inkludera eller exkludera grupper från en profiltilldelning](./media/group-include-exclude.png)
 
-5. När du väljer dina grupper väljer du en Azure Activity Directory-grupp. Håll ned **CTRL**-tangenten om du vill markera flera grupper.
-6. **Spara** ändringarna när du är klar.
+5. När du väljer dina grupper väljer du en Azure AD-grupp. Håll ned **Ctrl**-tangenten om du vill markera flera grupper.
+6. När du är klar väljer du **Spara**.
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Exkludera grupper från en profiltilldelning
 
@@ -42,9 +42,7 @@ Med hjälp av Intunes profiler för enhetskonfiguration kan du exkludera grupper
 
 När du exkluderar grupper från en tilldelning exkluderar du endast användare eller endast enhetsgrupper (inte en blandning av grupper). Intune tar inte hänsyn till relationer mellan användare och enheter. Om du väljer att inkludera användargrupper och samtidigt exkludera enhetsgrupper får du kanske inte önskat resultat. Om du blandar grupper, eller om någon annan konflikt skulle uppstå, äger inkludering företräde.
 
-Säg att du t.ex. vill tilldela en profil till alla enheter i din organisation, med undantag för allmänt tillgängliga informationsdatorer (kiosker). Du inkluderar gruppen **Alla användare**, men exkluderar gruppen **Alla enheter**.
-
-Då tilldelas alla användare och deras enheter samma princip, även om användarens enhet ingår i gruppen **Alla enheter**.
+Säg att du t.ex. vill tilldela en profil till alla enheter i din organisation, med undantag för allmänt tillgängliga informationsdatorer (kiosker). Du inkluderar gruppen **Alla användare**, men exkluderar gruppen **Alla enheter**. Då tilldelas alla användare och deras enheter samma princip, även om användarens enhet ingår i gruppen **Alla enheter**.
 
 Exkluderingsfunktionen tittar bara på direkta medlemmar av gruppen, ingen hänsyn tas till de enheter som eventuellt finns kopplade till användaren. Principen tilldelas inte till enheter som inte har någon användare. Det beror på att dessa enheter inte har någon relation till gruppen **Alla användare**.
 

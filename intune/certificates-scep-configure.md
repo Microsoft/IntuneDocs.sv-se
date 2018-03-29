@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88109f1dc4543a5c71f36378fddb110c03afa08f
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: df77b63cbf953df030e5d0e597c0940f083ffb79
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-and-manage-scep-certificates-with-microsoft-intune"></a>Konfigurera och hantera SCEP-certifikat med Microsoft Intune
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -153,7 +153,13 @@ Så här konfigurerar du att certifikatutfärdaren tillåter att beställaren an
 #### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Steg 3 – Konfigurera krav på NDES-servern
 I den här uppgiften kommer du att:
 
+<<<<<<< HEAD
+
+- Lägga till NDES till en Windows Server och konfigurera IIS för att stöda NDES
+- Lägga till NDES-tjänstkontot i gruppen IIS_IUSR
+- Ange SPN för NDES-tjänstkontot =======
 -   Lägga till NDES till en Windows Server och konfigurera IIS för att stöda NDES
+>>>>>>> överordnad till 3365d47d4... Sammanfoga grenen ”release-intune-1803” till master
 
 -   Lägga till NDES-tjänstkontot i gruppen IIS_IUSR
 

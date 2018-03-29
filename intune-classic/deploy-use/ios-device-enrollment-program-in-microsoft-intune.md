@@ -1,25 +1,25 @@
 ---
-title: "Apple DEP-hantering för iOS-enheter"
-description: "Distribuera en registreringsprofil som registrerar iOS-enheter som har köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst) för att hantera Apple-enheter."
-keywords: 
+title: Apple DEP-hantering för iOS-enheter
+description: Distribuera en registreringsprofil som registrerar iOS-enheter som har köpts via enhetsregistreringsprogrammet (DEP) ”over the air” (trådlöst) för att hantera Apple-enheter.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8ff9d9e7-eed8-416c-8508-efc20fca8578
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 885e3f0608cd367cb23658c342451a4a56e5474d
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: bf47c802291d802ac890aa4ba00cf79d9d2d10f0
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enroll-corporate-owned-device-enrollment-program-ios-devices"></a>Registrera företagsägda iOS-enheter i Enhetsregistreringsprogrammet
 
@@ -30,12 +30,13 @@ Microsoft Intune kan distribuera en registreringsprofil som registrerar iOS-enhe
 >[!NOTE]
 >DEP-registreringen kan inte användas med [enhetsregistreringshanterarens](enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune.md) metod.
 >Om användare dessutom registrerar iOS-enheter (dvs. med hjälp av företagsportalappen) och dessa enheters serienummer sedan importeras och tilldelas en DEP-profil, så måste enheten avregistreras från Intune.
+> Dessutom har macOS för närvarande inte stöd för DEP.
 
 ## <a name="prerequisites-for-enrolling-ios-devices-by-using-apple-dep-management"></a>Förutsättningar för att registrera iOS-enheter med Apple DEP-hantering
 
 - [Installera ett APNs-certifikat](set-up-ios-and-mac-management-with-microsoft-intune.md)
 
-- Din organisation måste ansluta sig till Apple DEP och få enheter via programmet. Information om den här processen finns på:  [https://deploy.apple.com](https://deploy.apple.com). Exempel på fördelar med programmet är obevakade enhetsinstallationer utan användning av en USB-kabel för att ansluta varje enhet till en dator.
+- Din organisation måste ansluta sig till Apple DEP och få enheter via programmet. Information om den här processen finns på: [https://deploy.apple.com](https://deploy.apple.com). Exempel på fördelar med programmet är obevakade enhetsinstallationer utan användning av en USB-kabel för att ansluta varje enhet till en dator.
 
 - Innan du kan registrera företagsägda iOS-enheter med DEP behöver du en DEP-token från Apple. Med denna token kan Intune synkronisera information om enheter som är anslutna till DEP och som ditt företag äger. Intune kan även utföra överföringar av registreringsprofilen till Apple och tilldela enheter till dessa profiler.
 
@@ -53,7 +54,7 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 ### <a name="get-a-device-enrollment-program-token"></a>Skaffa en token för enhetsregistreringsprogrammet
 
-1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID. Detta Apple-ID måste användas senare för att förnya din DEP-token.
+1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com)) och logga in med företagets Apple-ID. Detta Apple-ID måste användas senare för att förnya din DEP-token.
 
 2.  På DEP-portalen (Device Enrollment Program) går du till **Enhetsregistreringsprogram** &gt; **Hantera servrar** och väljer **Lägg till MDM-server**.
 
@@ -130,7 +131,7 @@ Följande steg beskriver hur du registrera iOS-enheter på den första agen med 
 
 ### <a name="assign-dep-devices-for-management"></a>Tilldela DEP-enheter för hantering
 
-1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com) och logga in med företagets Apple-ID.
+1. Gå till [DEP-portalen (Device Enrollment Program)](https://deploy.apple.com) (https://deploy.apple.com)) och logga in med företagets Apple-ID.
 
 2. Gå till **Distributionsprogram** &gt; **Enhetsregistreringsprogram (DEP)** &gt; **Hantera enheter**.
 

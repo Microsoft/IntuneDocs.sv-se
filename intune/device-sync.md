@@ -1,25 +1,25 @@
 ---
-title: "Synkronisera enheter med Microsoft Intune – Azure | Microsoft Docs"
-description: "Synkronisera enheter som har registrerats, eller som hanteras, med Intune så att du får de senaste principerna och åtgärderna. Detta innefattar steg för att synkronisera med Azure Portal och en lista över felkoder som kan försökas på nytt."
-keywords: 
+title: Synkronisera enheter med Microsoft Intune – Azure | Microsoft Docs
+description: Synkronisera enheter som har registrerats eller som hanteras med Intune så att du får de senaste principerna och åtgärderna. Detta omfattar steg för att synkronisera med Azure-portalen och en lista över felkoder som kan försökas på nytt.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d2d13ce2ed06549a6cd09fd766a0072b15fcd067
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 7af71a2d5c3ad871e69424cf6afbf7c364bb888d
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="sync-devices-to-get-the-latest-policies-and-actions---intune"></a>Synkronisera enheter med Intune för att få de senaste principerna och åtgärderna
+# <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synkronisera enheter för att få de senaste principerna och åtgärderna med Intune
 
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -36,16 +36,16 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 
 ## <a name="sync-a-device"></a>Synkronisera en enhet
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**. 
-3. I **Intune** väljer du **Enheter** och sedan **Alla enheter**.
-4. I listan med enheter som du hanterar väljer du en enhet, **...Mer** och sedan åtgärden **Synkronisera**.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**. 
+3. I **Intune** väljer du **Enheter** > **Alla enheter**.
+4. I listan över enheter som du hanterar väljer du en enhet, väljer **Mer** och väljer sedan **Synkronisera**.
 5. Välj **Ja** för att bekräfta.
 
 
 ## <a name="retryable-error-codes"></a>Återförsöksbara felkoder
 
-När en administratör kör enhetsåtgärden för **synkronisering** är iOS- och Android-appar som misslyckades och genererade en återförsöksbar felkod fortfarande tillgängliga för enheten. Appar som genererade en icke-återförsöksbar felkod måste däremot vänta i sju dagar innan de är tillgängliga för enheten igen.
+När en administratör kör enhetsåtgärden **Synkronisera** är iOS- och Android-appar som misslyckades och genererade en återförsöksbar felkod fortfarande tillgängliga för enheten. Appar som genererade en icke-återförsöksbar felkod måste däremot vänta i sju dagar innan de är tillgängliga för enheten igen.
 
 
 | Felkod  | Föreslagen beskrivning | Återförsökbar |
@@ -62,6 +62,6 @@ När en administratör kör enhetsåtgärden för **synkronisering** är iOS- oc
 | 2016330889 | Det gick inte att skapa en säker anslutning. Återställ anslutningen. | Ja|
 | 2016330888 | Utvärderingen av serverförtroendet misslyckades. | Nej|
 
-## <a name="next-step"></a>Nästa steg
+## <a name="next-steps"></a>Nästa steg
 
-Välj **Enhetsåtgärder** för att se status för synkroniseringsåtgärden. 
+- Välj **Enhetsåtgärder** för att se status för synkroniseringsåtgärden. 

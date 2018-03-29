@@ -1,25 +1,25 @@
 ---
-title: "Vanliga frågor och svar om MAM och appskydd"
-description: "Den här artikeln ger svar på några vanliga frågor om Intune mobile application management (MAM) och Intune appskydd."
-keywords: 
+title: Vanliga frågor och svar om MAM och appskydd
+description: Den här artikeln ger svar på några vanliga frågor om Intune mobile application management (MAM) och Intune appskydd.
+keywords: ''
 author: oydang
 ms.author: oydang
-manager: angrobe
+manager: dougeby
 ms.date: 01/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: abb0267f46d2933b0037ed661281198a5981f659
-ms.sourcegitcommit: 638c9cd14c813670c1bd678826ca4308dfc9876e
+ms.openlocfilehash: 7654e5235fc30f46f67d35544a92c4bd25ac5c86
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -37,9 +37,9 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
  Många produktivitetsappar, som till exempel Microsoft Office-apparna, kan hanteras av Intune MAM. Se listan över officiella [Intune-hanterade appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) tillgängliga för allmänt bruk.
 
 **Vilka enhetskonfigurationer har MAM stöd för?** Intune MAM stöder två konfigurationer:
-  1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). Om kunderna vill hantera appar med hjälp av MDM + MAM bör de använda den fristående Intune-konsolen på https://manage.microsoft.com.
+  1. **Intune MDM + MAM**: Detta är den första konfiguration som hade stöd av MAM när den först lanserades. IT-administratörer kan bara hantera appar med hjälp av MAM och appskyddsprinciper på enheter som registreras med Intune mobile device management (MDM). För att hantera appar med hjälp av MDM + MAM, ska kunder använda den fristående Intune-konsolen på https://manage.microsoft.com.
 
-  2. **MAM utan enhetsregistrering**: Med MAM utan enhetsregistrering, eller MAM-WE, kan IT-administratörer hantera appar med hjälp av MAM och appskyddsprinciper på enheter som inte har registrerats med Intune MDM. Detta innebär att appar kan hanteras av Intune på enheter som registrerats med tredje parts EMM-leverantörer. För att hantera appar med hjälp av MAM-WE ska kunder använda Intune-konsolen i Azure-portalen på http://portal.azure.com.
+  2. **MAM utan enhetsregistrering**: Med MAM utan enhetsregistrering, eller MAM-WE, kan IT-administratörer hantera appar med hjälp av MAM och appskyddsprinciper på enheter som inte har registrerats med Intune MDM. Detta innebär att appar kan hanteras av Intune på enheter som registrerats med tredje parts EMM-leverantörer. För att hantera appar med hjälp av MAM-WE, ska kunder använda Intune-konsolen i Azure-portalen på http://portal.azure.com.
 
 
 ## <a name="app-protection-policies"></a>Appskyddsprinciper

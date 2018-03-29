@@ -1,24 +1,24 @@
 ---
 title: Distribuera Lookout for Work-app
-description: "Konfigurera och distribuera Lookout for Work-appar för Android."
+description: Konfigurera och distribuera Lookout for Work-appar för Android.
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 03/21/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 524c4209-ad57-4d35-955e-a00d796bf858
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fd0ad36f40463ab56f1a5ab0a11fa9eeb0c35db4
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 5d56dcf54c4f087dbea0dfcd95a2eebbdf384c00
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-and-deploy-lookout-for-work-app"></a>Konfigurera och distribuera Lookout for Work-appen
 
@@ -29,7 +29,7 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
 ## <a name="android-google-play-store-app"></a>Android (Google Play Store-app)
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Appar** och väljer **Lägg till appar**.
-2.  På sidan **Programvaruinstallation** för utgivaren väljer du **Extern länk** och anger följande URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
+2.  På utgivarens sida **Programinstallation** väljer du **Extern länk** och anger följande URL: https://play.google.com/store/apps/details?id=com.lookout.enterprise
   >[!NOTE]
   >Klicka inte på rutan för att kräva en hanterad webbläsare.
 
@@ -86,7 +86,7 @@ Den här artikeln förklarar hur du konfigurerar och distribuerar Lookout for Wo
   Välj alternativet **Nödvändig installation** för att kräva att Lookout-appen installeras på användarens enhet.
 
 ## <a name="what-happens-when-the-deployed-app-is-opened-on-the-device"></a>Vad händer när den distribuerade appen öppnas på enheten
-https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md När användaren öppnar Lookout for Work på enheten uppmanas hen att aktivera appen och att välja alternativet att logga in med Azure Active Directory. En detaljerad genomgång som visar vad slutanvändaren ska göra finns i följande avsnitt:
+https://github.com/Microsoft/Docs/blob/master/ContributorGuide/index.md När användaren öppnar Lookout for Work på enheten uppmanas de att aktivera appen och att välja alternativet att logga in med Azure Active Directory. En detaljerad genomgång som visar vad slutanvändaren ska göra finns i följande avsnitt:
 
 * [Du uppmanas att installera Lookout for Work på din Android-enhet](https://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
 
