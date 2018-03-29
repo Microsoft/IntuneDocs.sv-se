@@ -1,25 +1,25 @@
 ---
-title: "Felsöka Lookout-integrering"
-description: "I det här avsnittet beskrivs felsökning av problem som ofta uppstår vid Lookout-integrering"
-keywords: 
+title: Felsöka Lookout-integrering
+description: I det här avsnittet beskrivs felsökning av problem som ofta uppstår vid Lookout-integrering
+keywords: ''
 author: NathBarn
 ms.author: nathbarn
-manager: angrobe
+manager: dougeby
 ms.date: 12/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: bbe0b5f4-b8bc-49f3-85a9-51fb2f226fca
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6adb0bc2562a16c0111242cc7dd923afa073d84e
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: ec20d87da48fb52207d839da0753eb05524569af
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Felsöka Lookout-integrering med Intune
 
@@ -36,14 +36,14 @@ Lookout MTP tillåter endast att användare från en konfigurerad Azure AD-grupp
 
 * E-post: enterprisesupport@lookout.com
 * Logga in på [MTP Console](http://aad.lookout.com) (MTP-konsolen), och gå till **support**-modulen.
-* Gå till: https://enterprise.support.lookout.com/hc/requests och skapa en supportförfrågan.
+* Gå till: https://enterprise.support.lookout.com/hc/requests och gör en supportbegäran.
 
 ## <a name="unable-to-sign-in"></a>Det går inte att logga in
 Du får följande fel när den globala Azure AD-administratöranvändaren inte har godkänt den inledande Lookout-installationen.
 
 ![skärmbild av inloggningsskärmen för Lookout som visar inloggningsfelet](../media/mtp/lookout-mtp-consent-not-accepted-error.png)
 
-För att lösa problemet måste en global administratör logga in på https://aad.lookout.com/les?action=consent och acceptera uppmaningen att starta installationen. Mer information finns i avsnittet [Set up your subscription with Lookout MTP](../deploy-use/setup-your-lookout-mtd-subscription.md) (Konfigurera din prenumeration med Lookout MTP)
+För att lösa problemet måste en global administratör logga in på https://aad.lookout.com/les?action=consent och godkänna uppmaningen att starta installationen. Mer information finns i avsnittet [Set up your subscription with Lookout MTP](../deploy-use/setup-your-lookout-mtd-subscription.md) (Konfigurera din prenumeration med Lookout MTP)
 
 **Problem med enhetsstatus**
 

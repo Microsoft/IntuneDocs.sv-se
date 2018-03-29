@@ -1,25 +1,25 @@
 ---
-title: "Operativsystem och webbläsare som stöds av Microsoft Intune"
-titleSuffix: 
-description: "Visar en lista över enhetsplattformar och webbläsare som stöds för Intunes enhetshantering"
-keywords: 
+title: Operativsystem och webbläsare som stöds av Microsoft Intune
+titleSuffix: ''
+description: Visar en lista över enhetsplattformar och webbläsare som stöds för Intunes enhetshantering
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/03/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
-ms.reviewer: angrobe
+ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1e58201620612118f0984a1c477b3fa3bc7e923a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 5a8962223bac0ed27b6a52404973f2c30abfc28b
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Operativsystem och webbläsare som stöds
 
@@ -109,7 +109,7 @@ Följande webbläsare stöds för dessa portaler:
 
 ### <a name="intune-classic-portal"></a>Intunes klassiska portal
 
-Intunes klassiska funktioner, som t.ex. Intunes programvaruklient och integration med Mobile Threat Defense-partners, är tillgängliga i den klassiska Intune-portalen (https://manage.microsoft.com). Den klassiska Intune-portalen kräver stöd för Silverlight-webbläsaren.
+Intunes klassiska funktioner, som t.ex. Intunes programvaruklient och integration med Mobile Threat Defense-partners, är tillgängliga i den klassiska Intune-portalen (https://manage.microsoft.com)). Den klassiska Intune-portalen kräver stöd för Silverlight-webbläsaren.
 
 Följande Silverlight-webbläsare har stöd för Intune-konsolen:
 - Internet Explorer 10 eller senare

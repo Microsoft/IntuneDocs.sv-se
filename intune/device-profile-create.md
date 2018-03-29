@@ -1,24 +1,24 @@
 ---
-title: "Skapa enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs"
-description: "Lägga till eller konfigurera en enhetsprofil i Microsoft Intune, till exempel välja plattformstyp och konfigurera inställningar i Azure Portal"
-keywords: 
+title: Skapa enhetsprofiler i Microsoft Intune – Azure | Microsoft Docs
+description: Lägga till eller konfigurera en enhetsprofil i Microsoft Intune, till exempel välja plattformstyp och konfigurera inställningar i Azure-portalen.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4e1febb5f12de038d2ddd543be883f71ef79005
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: e5070052c0d4cce3cfd81a7bae259bc7dfb22e7f
+ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
@@ -27,12 +27,12 @@ ms.lasthandoff: 03/08/2018
 ## <a name="create-the-profile"></a>Skapa profilen
 1. I [Azure Portal](https://portal.azure.com) väljer du **Alla tjänster** och söker efter **Microsoft Intune**.
 
-2. I **Microsoft Intune** väljer du **Enhetskonfiguration**, **Profiler** och sedan **Skapa profil**.
+2. I **Microsoft Intune** väljer du **Enhetskonfiguration** och sedan **Profiler**. Välj sedan **Skapa profil**.
 
 3. Ange följande egenskaper:
 
-    - **Namn**: Ange ett beskrivande namn på den nya profilen
-    - **Beskrivning**: Valfritt men rekommenderat. Ange en beskrivning av profilen.
+    - **Namn**: Ange ett beskrivande namn på den nya profilen.
+    - **Beskrivning:** Ange en beskrivning för profilen. (Detta är valfritt, men rekommenderas.)
     - **Plattform**: Välj plattformstyp:  
 
         - **Android**
@@ -57,11 +57,11 @@ ms.lasthandoff: 03/08/2018
         -  [Utbildningsinställningar](education-settings-configure.md)
         -  [Anpassade inställningar](custom-settings-configure.md)
 
-    ![Ange inställningar för att skapa en enhetsprofil](./media/create-device-profile.png)
+    ![Skärmbild av Skapa profil](./media/create-device-profile.png)
 
 4. Välj **Skapa** när du är klar.
 
-Profilen skapas och visas i listan. Information om hur du tilldelar den här profilen till grupper finns i [Tilldela enhetsprofiler](device-profile-assign.md).
+Profilen skapas och visas i listan.
 
 
 ## <a name="next-steps"></a>Nästa steg

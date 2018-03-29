@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e91745abb7c3409b31724101b3071157407acec9
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 99b1436fdf718b54f54f7e90835668d4a632b7ce
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---march-2018"></a>Den tidiga utgåvan för Microsoft Intune – mars 2018
 
@@ -51,11 +51,11 @@ Med en lokal Exchange Connector för Intune kan du hantera enhetsåtkomst till d
 Nya VPN-profiler som skapas för Cisco AnyConnect för iOS kommer att kunna användas med Cisco AnyConnect 4.0.7x och högre. Befintliga iOS Cisco AnyConnect VPN-profiler är märkta **Cisco Legacy AnyConnect** och kommer fortsatt att fungera med Cisco AnyConnect 4.0.5x som de gör i dag.
 
 > [!NOTE]
-> Den här ändringen gäller bara för iOS. Det finns fortfarande ett enda Cisco AnyConnect-alternativ för Android, Android for Work och macOS. 
+> Den här ändringen gäller bara för iOS. Det finns fortfarande ett enda Cisco AnyConnect-alternativ för Android, Android for Work och macOS.
 
 #### <a name="more-information"></a>Mer information
 
-Du måste skapa en ny Cisco AnyConnect VPN-profil för iOS som stöd för den nya appen, eftersom de nya Cisco AnyConnect- och Cisco Legacy AnyConnect-apparna är olika appar. Om du hanterar AnyConnect-klienten i din miljö måste du även distribuera den nya Cisco AnyConnect-appen. När du slutför en uppgradering måste du också ta bort VPN-profilen Cisco Legacy AnyConnect och appen Cisco Legacy AnyConnect. 
+Du måste skapa en ny Cisco AnyConnect VPN-profil för iOS som stöd för den nya appen, eftersom de nya Cisco AnyConnect- och Cisco Legacy AnyConnect-apparna är olika appar. Om du hanterar AnyConnect-klienten i din miljö måste du även distribuera den nya Cisco AnyConnect-appen. När du slutför en uppgradering måste du också ta bort VPN-profilen Cisco Legacy AnyConnect och appen Cisco Legacy AnyConnect.
 
 NAC-integration fungerar inte i den nya AnyConnect-klienten i den första utgåvan. Vi samarbetar med Cisco för att kunna erbjuda NAC-integration i en framtida version av Intune.
 
@@ -64,7 +64,7 @@ NAC-integration fungerar inte i den nya AnyConnect-klienten i den första utgåv
 Förbättrad upplåsningsidentifiering är en ny efterlevnadsinställning som förbättrar hur Intune utvärderar jailbreakade enheter. Inställningen medför att enheten checkar in till Intune oftare, vilket använder enhetens platstjänster och kan påverka batterianvändningen.
 
 ### <a name="ability-to-deploy-required-line-of-business-lob-apps-to-all-users-on-windows-10-desktop-devices----1627835-rs4---"></a>Möjlighet att distribuera nödvändiga verksamhetsspecifika appar till alla användare på Windows 10 Desktop-enheter <!-- 1627835 RS4 -->
-Kunderna kommer att kunna distribuera nödvändiga verksamhetsspecifika appar för Windows 10 som kan installeras i enhetens sammanhang. Detta innebär att apparna blir tillgängliga för alla användare på enheten. Detta gäller endast för Windows 10 Desktop-enheter. 
+Kunderna kommer att kunna distribuera nödvändiga verksamhetsspecifika appar för Windows 10 som kan installeras i enhetens sammanhang. Detta innebär att apparna blir tillgängliga för alla användare på enheten. Detta gäller endast för Windows 10 Desktop-enheter.
 
 ### <a name="expiring-line-of-business-lob-apps-for-microsoft-intune----748789---"></a>Utöka verksamhetsspecifika appar för Microsoft Intune <!-- 748789 -->
 Intune meddelar dig i Azure-portalen när dina verksamhetsspecifika appar är på väg att upphöra att gälla. När du laddar upp en ny version av en verksamhetsspecifik app, tar Intune bort förfalloaviseringen från applistan.
@@ -73,10 +73,10 @@ Intune meddelar dig i Azure-portalen när dina verksamhetsspecifika appar är p�
 Användare som registrerar en enhet med hjälp av företagsportalen i Windows 10 version 1703 och senare, kommer att kunna slutföra det första steget i registreringen utan att lämna appen.
 
 ### <a name="new-management-name-column----1333586---"></a>Ny kolumn för hanteringsnamn <!-- 1333586 -->
-En ny kolumn med namnet **Hanteringsnamn** kommer att läggas till på enhetsbladet. Detta är ett automatiskt genererat, icke-redigerbart namn som tilldelas per enhet, baserat på följande formel: 
+En ny kolumn med namnet **Hanteringsnamn** kommer att läggas till på enhetsbladet. Detta är ett automatiskt genererat, icke-redigerbart namn som tilldelas per enhet, baserat på följande formel:
 - Standardnamn för alla enheter: <username>_<devicetype>_<enrollmenttimestamp>
-- För masstillagda enheter: <PackageId/ProfileId>_<DeviceType>_<EnrollmentTime> 
- 
+- För masstillagda enheter: <PackageId/ProfileId>_<DeviceType>_<EnrollmentTime>
+
 Det här är en valfri kolumn på enhetsbladet. Det är inte tillgängligt som standard och du har bara åtkomst till det via kolumnväljaren. Namnet på enheten påverkas inte av den här nya kolumnen.
 
 ### <a name="new-settings-for-windows-defender-security-center-notifications-device-configuration-profile----1631906---"></a>Nya inställningar i enhetskonfigurationsprofilen för Windows Defender Security Center (WDSC) <!-- 1631906 -->
@@ -107,19 +107,19 @@ Inställningarna finns i **Enhetskonfiguration** -> **Skapa profil** -> **macOS*
 ### <a name="configure-the-mac-application-firewall----1690461---"></a>Konfigurera brandväggen för Mac-program <!-- 1690461 -->
 
 Du kommer att kunna konfigurera brandväggen för Mac-program. Du kan använda den för att styra anslutningar per program i stället för per port. Det gör det lättare att utnyttja brandväggsskyddet och förhindrar att oönskade appar tar kontroll över nätverksportar som är öppna för legitima appar.
- 
+
 Den här funktionen finns i **Enhetskonfiguration** -> **Skapa profil** -> **macOS** -> **Slutpunktsskydd**.
 
 När du har aktiverat brandväggsinställningen kan du konfigurera brandväggen med hjälp av två olika metoder:
 
 - Blockera alla inkommande anslutningar
 
-   Du kan blockera alla inkommande anslutningar för de aktuella enheterna. Om du väljer att göra detta kommer inkommande anslutningar att blockeras för alla appar. 
+   Du kan blockera alla inkommande anslutningar för de aktuella enheterna. Om du väljer att göra detta kommer inkommande anslutningar att blockeras för alla appar.
 
 - Tillåta eller blockera specifika appar
 
    Du kan tillåta eller blockera specifika appar från att ta emot inkommande anslutningar. Du kan också aktivera hemligt läge för att förhindra svar på avsökningsbegäranden.
- 
+
 #### <a name="more-information"></a>Mer information
 
 - Blockera alla inkommande anslutningar
@@ -134,7 +134,7 @@ När du har aktiverat brandväggsinställningen kan du konfigurera brandväggen 
 - Hemligt läge
 
    Aktivera detta om du vill förhindra att datorn svarar på avsökningsbegäranden. Datorn svarar fortfarande på inkommande begäranden för behöriga appar. Oväntade begäranden, till exempel ICMP (ping) ignoreras.
- 
+
 
 ### <a name="updating-the-help-and-feedback-experience-on-company-portal-app-for-android---1631531---"></a>Uppdatera Hjälp och Feedback i företagsportalappen för Android <!--1631531 -->
 
@@ -143,16 +143,16 @@ Vi kommer att uppdatera Hjälp och Feedback i företagsportalappen för Android 
 ### <a name="custom-book-categories-for-volume-purchase-program-vpp-ebooks----1488911---"></a>Anpassade bokkategorier för volyminköpsprogram för e-böcker. <!-- 1488911 -->
 Du kommer att kunna skapa anpassade e-bokkategorier och sedan tilldela e-böcker i volyminköpsprogram till dessa anpassade e-bokkategorier. Slutanvändarna kan sedan se de nyligen skapade e-bokkategorierna och böcker som tilldelats i kategorierna.
 
-#### <a name="company-portal-for-android-visual-updates---976944---"></a>Visuella uppdateringar i företagsportalen för Android <!--976944 -->
+### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868--"></a>HoloLens och Surface Hub visas nu i enhetslistor <!--1725868-->
 
-Vi kommer att uppdatera företagsportalappen för Android till att följa Androids riktlinjer för [Materialdesign](https://material.io/). Vi kommer att publicera bilder av de nya ikonerna i artikeln [Nyheter i appens användargränssnitt](whats-new-app-ui.md) när appversionen släpps. 
+Vi lägger till stöd för att visa Intune-registrerade HoloLens- och Surface Hub-enheter i företagsportalappen för Android.
 
 ### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Edge-mobilstöd för Intune-appskyddsprinciper <!-- 1817882 -->
 
 Microsoft Edge-webbläsaren för mobila enheter stöder appskyddsprinciper som definierats i Intune.
 
 ### <a name="use-fully-distinguished-name-as-subject-for-scep-certificate---2221763-eeready--"></a>Använd ett fullständigt unikt namn som ämne för SCEP-certifikatet <!--2221763 eeready-->
-När du skapar en profil för SCEP-certifikat, anger du certifikatets ämnesnamn. Du kommer att kunna använda det fullständiga unika namnet som ämne. För **Ämnesnamn** väljer du **Anpassad** och sedan `CN={{OnPrem_Distinguished_Name}}`. Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure Active Directory (AD) Anslut](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD. 
+När du skapar en profil för SCEP-certifikat, anger du certifikatets ämnesnamn. Du kommer att kunna använda det fullständiga unika namnet som ämne. För **Ämnesnamn** väljer du **Anpassad** och sedan `CN={{OnPrem_Distinguished_Name}}`. Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure Active Directory (AD) Anslut](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
 ### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837-eeready--"></a>iOS-enheter uppmanas att ange en PIN-kod var 15:e minut <!--1550837 eeready-->
 När en efterlevnads- eller konfigurationsprincip används på en iOS-enhet, uppmanas användarna att ange en PIN-kod var 15:e minut. Användarna uppmanas kontinuerligt tills en PIN-kod anges.
@@ -169,11 +169,11 @@ Gäller för: Androids arbetsprofilenheter på Android OS v6.0 och nyare.
 
 ### <a name="schedule-your-automatic-updates---1805514---"></a>Schemalägga automatiska uppdateringar <!--1805514 -->
 
-Intune ger dig kontroll vid installation av automatiska uppdateringar med hjälp av [Inställningar för Windows 10-uppdateringsring](windows-update-for-business-configure.md). Du kommer att kunna schemalägga återkommande uppdateringar, inklusive vecka, dag och tid. 
+Intune ger dig kontroll vid installation av automatiska uppdateringar med hjälp av [Inställningar för Windows 10-uppdateringsring](windows-update-for-business-configure.md). Du kommer att kunna schemalägga återkommande uppdateringar, inklusive vecka, dag och tid.
 
 ### <a name="disable-checks-on-device-restart---1805490---"></a>Inaktivera kontroller vid omstart av enheten <!--1805490 -->
 
-Med Intune kan du styra [hanteringen av programuppdateringar](windows-update-for-business-configure.md). Egenskapen **Omstartskontroller** kommer att läggas till och aktiveras som standard. Om du vill hoppa över de vanliga kontroller som utförs när du startar om en enhet (till exempel aktiva användare, batterinivå och så vidare) väljer du **Hoppa över**. 
+Med Intune kan du styra [hanteringen av programuppdateringar](windows-update-for-business-configure.md). Egenskapen **Omstartskontroller** kommer att läggas till och aktiveras som standard. Om du vill hoppa över de vanliga kontroller som utförs när du startar om en enhet (till exempel aktiva användare, batterinivå och så vidare) väljer du **Hoppa över**.
 
 <!-- 1802 start -->
 
@@ -183,15 +183,15 @@ På Registreringsöversiktssidan, kommer du att kunna se trenden för registreri
 
 ### <a name="customize-your-company-portal-themes-with-hex-codes---1049561---"></a>Anpassa teman för företagsportalen med hexkoder <!--1049561 -->
 
-Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du anger en hexkod kan Intune bestämma vilken textkod som ger den högsta kontrastnivån mellan textfärgen och bakgrundsfärgen per [WCAG 2.0-standarder](http://www.w3.org/TR/WCAG20). Du kan förhandsgranska både textfärgen och företagets logotyp mot färgen i **Mobilappar** > **Företagsportal**. 
+Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du anger en hexkod kan Intune bestämma vilken textkod som ger den högsta kontrastnivån mellan textfärgen och bakgrundsfärgen per [WCAG 2.0-standarder](http://www.w3.org/TR/WCAG20). Du kan förhandsgranska både textfärgen och företagets logotyp mot färgen i **Mobilappar** > **Företagsportal**.
 
-### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 --> 
+### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252---"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för skydd av slutpunkter<!--1102252 -->
 
-Nya [Windows Defender Credential Guard] (https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard] inställningar kommer att läggas till i **Enhetskonfiguration** > **Profiler** > **Slutpunktsskydd**. Följande inställningar läggs till: 
+Nya [Windows Defender Credential Guard] (https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard] inställningar kommer att läggas till i **Enhetskonfiguration** > **Profiler** > **Slutpunktsskydd**. Följande inställningar läggs till:
 
 - Säkerhetsnivå för plattform: ange om säkerhetsnivå för plattform är aktiverat vid nästa omstart. Virtualiseringsbaserad säkerhet kräver Säker start. Virtualiseringsbaserad säkerhet kan också aktiveras med DMA-skydd (direkt minnesåtkomst). DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade.
-- Virtualiseringsbaserad säkerhet: ange om virtualiseringsbaserad säkerhet är aktiverat vid nästa omstart. 
-- Windows Defender Credential Guard: slå på Credential Guard med virtualiseringsbaserad säkerhet för att skydda autentiseringsuppgifter vid nästa omstart när både säkerhetsnivå för plattform med säker start och virtualiseringsbaserad säkerhet är aktiverat. Bland de tillgängliga alternativen finns **Inaktiverad**, **Aktiverat med UEFI-lås**, **Aktiverat utan lås** och **Inte konfigurerad**. 
+- Virtualiseringsbaserad säkerhet: ange om virtualiseringsbaserad säkerhet är aktiverat vid nästa omstart.
+- Windows Defender Credential Guard: slå på Credential Guard med virtualiseringsbaserad säkerhet för att skydda autentiseringsuppgifter vid nästa omstart när både säkerhetsnivå för plattform med säker start och virtualiseringsbaserad säkerhet är aktiverat. Bland de tillgängliga alternativen finns **Inaktiverad**, **Aktiverat med UEFI-lås**, **Aktiverat utan lås** och **Inte konfigurerad**.
   - Alternativet ”Inaktiverad” stänger av Credential Guard via fjärranslutning om det tidigare har slagits på med alternativet ”Aktiverat utan lås”.
 
   - Alternativet ”Aktiverat med UEFI-lås” ser till att Credential Guard inte kan inaktiveras med registernyckel eller via en grupprincip. Om du vill inaktivera Credential Guard när du har använt den här inställningen måste du ställa in gruppolicy på ”Inaktiverad” och ta bort säkerhetsfunktionerna från varje dator med en fysiskt närvarande användare för att rensa konfigurationen som finns kvar i UEFI. Så länge UEFI-konfigurationen finns kvar är Credential Guard aktiverat.
@@ -208,7 +208,7 @@ Du kan aktivera säkerhetsinställningarna på Windows 10-enheter med de nya ins
 
 ### <a name="new-printer-settings-for-education-profiles----1308900---"></a>Nya skrivarinställningar för utbildningsprofiler <!-- 1308900 -->
 
-Fr utbildningsprofiler finns nya inställningar under kategorin **Skrivare**: **Skrivare**, **Standardskrivare**, **Lägg till nya skrivare**. 
+Fr utbildningsprofiler finns nya inställningar under kategorin **Skrivare**: **Skrivare**, **Standardskrivare**, **Lägg till nya skrivare**.
 
 ### <a name="ios-app-provisioning-configuration----1581650---"></a>Etableringskonfiguration för iOS-app <!-- 1581650 -->
 Du kan tilldela iOS-apparetableringsprofiler för att förhindra att dina appar upphör genom att inkludera eller exkludera säkerhetsgrupper.
@@ -265,5 +265,3 @@ Det finns inga aktiva meddelanden just nu.
 
 ### <a name="see-also"></a>Se även
 Mer information om den senaste utvecklingen finns i [Nyheter i Microsoft Intune](whats-new.md).
-
-

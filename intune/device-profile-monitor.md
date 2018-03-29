@@ -1,12 +1,11 @@
 ---
-title: Så här övervakar du enhetsprofiler med Intune
-titlesuffix: Microsoft Intune
-description: Läs hur man övervakar tilldelade Microsoft Intune-enhetsprofiler.
+title: Visa enhetsprofiler med Microsoft Intune – Azure | Microsoft Docs
+description: Visa profilinformation om enheter och se vilka enheter som har tilldelade eller distribuerade Microsoft Intune-enhetsprofiler.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,23 +14,21 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7483d2568ef3a43b7774916ef0a5f8f9b4540e4e
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: ddf8c7366cf97e251d85b995cb620e61f9d5f4ef
+ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="how-to-monitor-device-profiles-in-microsoft-intune"></a>Så här övervakar du enhetsprofiler i Microsoft Intune
+# <a name="monitor-device-profiles-in-microsoft-intune"></a>Övervaka enhetsprofiler i Microsoft Intune
 
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Du kan övervaka tilldelningsförloppet för enhetsprofiler i Intune på två sätt:
+Du kan övervaka tilldelningsförloppet för enhetsprofiler i Intune på två sätt.
 
-
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enhetskonfiguration** på **Intune**-bladet.
-2. På bladet **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-2. Från bladet med lista över profiler väljer du den profil som du vill hantera och gör sedan något av följande:
-    - På bladet <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Översikt** för att se grundläggande information om profilen och dess tilldelningar.
-    - På bladet <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Tilldelningar** för att se mer detaljerad information om profilen och dess tilldelningar.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enhetskonfiguration** > **Profiler**.
+4. I listan över profiler väljer du den profil som du vill hantera. Gör sedan något av följande:
+    - I fönstret <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Översikt** för att se grundläggande information om profilen och dess tilldelningar.
+    - I fönstret <*profilnamn*> **Profil för enhetskonfiguration** väljer du **Tilldelningar** för att se mer detaljerad information om profilen och dess tilldelningar.

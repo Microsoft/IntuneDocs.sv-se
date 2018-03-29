@@ -1,24 +1,24 @@
 ---
-title: "Ändra MDM-utfärdare till Configuration Manager (hybrid-MDM)"
-description: "Lär dig hur du ändrar MDM-utfärdaren från fristående Intune till Configuration Manager (hybrid-MDM)."
-keywords: 
+title: Ändra MDM-utfärdare till Configuration Manager (hybrid-MDM)
+description: Lär dig hur du ändrar MDM-utfärdaren från fristående Intune till Configuration Manager (hybrid-MDM).
+keywords: ''
 author: dougeby
-manager: angrobe
+manager: dougeby
 ms.date: 10/04/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1b4bce3-7932-4a0d-aa92-6dacc7060f42
 ROBOTS: NOINDEX,NOFOLLOW
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 64e79da53aec646fc65285e41f86541ecdf6d804
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="change-the-mdm-authority"></a>Ändra MDM-utfärdare
 Från och med Configuration Manager version 1610 kan du ändra din MDM-utfärdare utan att behöva kontakta Microsoft Support, och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. Det här avsnittet beskriver hur du ändrar en befintlig Microsoft Intune-klient som konfigurerats i Intune med fristående **Microsoft Intune** som MDM-utfärdare till **Configuration Manager** (hybrid-MDM) utan att du behöver avregistrera och omregistrera befintliga hanterade enheter.
@@ -51,7 +51,7 @@ Läs följande information som beskriver hur du förbereder övergången till MD
 - Om du använder fristående Intune för att hantera iOS-enheter före ändringen av MDM-utfärdare måste du se till att samma APNs-certifikat (Apple Push Notification service) som användes tidigare i Intune förnyas och används för att konfigurera klienten igen i Configuration Manager (hybrid).    
 
     > [!IMPORTANT]  
-    > Om ett annat APNs-certifikat används för hybridversionen avregistreras ALLA tidigare registrerade iOS-enheter och du måste registrera dem på nytt. Kontrollera exakt vilket APNs-certifikat som användes för att hantera iOS-enheter i Intune innan du ändrar MDM-utfärdaren. Leta upp samma certifikat på Apple Push Certificates-portalen (https://identity.apple.com) och kontrollera att den användare vars Apple-ID användes för att skapa det ursprungliga APNs-certifikatet identifieras och är tillgänglig, så att samma APNs-certifikat kan förnyas i samband med att den nya MDM-utfärdaren ändras.  
+    > Om ett annat APNs-certifikat används för hybridversionen avregistreras ALLA tidigare registrerade iOS-enheter och du måste registrera dem på nytt. Kontrollera exakt vilket APNs-certifikat som användes för att hantera iOS-enheter i Intune innan du ändrar MDM-utfärdaren. Leta upp samma certifikat på Apple Push Certificates-portalen (https://identity.apple.com)) och kontrollera att den användare vars Apple-ID användes för att skapa det ursprungliga APNs-certifikatet identifieras och är tillgänglig, så att samma APNs-certifikat kan förnyas i samband med att den nya MDM-utfärdaren ändras.  
 
 ## <a name="change-the-mdm-authority-to-configuration-manager"></a>Ändra MDM-utfärdaren till Configuration Manager
 När du ändrar MDM-utfärdaren till Configuration Manager (hybrid) följer du dessa generella steg:  

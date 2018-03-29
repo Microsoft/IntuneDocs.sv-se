@@ -1,25 +1,25 @@
 ---
-title: "Exchange Connector för lokal EAS"
-description: "Använd anslutningsverktyget för att möjliggöra kommunikation mellan Intune-administratörskonsolen och Lokal Exchange Server för Exchange ActiveSync MDM."
-keywords: 
+title: Exchange Connector för lokal EAS
+description: Använd anslutningsverktyget för att möjliggöra kommunikation mellan Intune-administratörskonsolen och Lokal Exchange Server för Exchange ActiveSync MDM.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 41ff4212-a6f5-4374-8731-631f7560cff1
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: cb627843879a784eb4f597839058f54f9744542f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 96d61ccae4e70a3e99da70a0ef19218ddbd218f3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="install-the-intune-on-premises-exchange-connector"></a>Installera Intune On-premises Exchange Connector
 
@@ -62,7 +62,7 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Ladda ner programinstallationspaketet för den lokala Exchange Connector
 
-1. Öppna [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) (https://manage.microsoft.com) i ett Windows Server-operativsystem som stöder Exchange Connector lokalt. Använd ett användarkonto som är administratör i Exchange-klienten och som har en licens för att använda Exchange Server.
+1. I ett Windows Server-operativsystem som stöder den lokala Exchange Connector öppnar du [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) (https://manage.microsoft.com)) med ett användarkonto som är en administratör i Exchange-klientorganisationen och som har en licens för att använda Exchange Server.
 ![Öppna Konfigurera Exchange Connection](../media/ExchangeConnector.gif)
 
 2.  I rutan med genvägar till arbetsytor väljer du **Admin**>**Hantering av mobila enheter** > **Microsoft Exchange**>**Installera Exchange Connection**.

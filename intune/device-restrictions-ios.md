@@ -1,23 +1,23 @@
 ---
-title: "Inställningar för enhetsbegränsningar i Microsoft Intune för iOS"
-titleSuffix: 
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör iOS."
-keywords: 
+title: Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
+titleSuffix: ''
+description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/1/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b0523a514eb9d6a5c0429f1a2e2fa84d1ca00de4
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 436be436991ea4f2f295291fb95122cddf4e7ac5
+ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
 
@@ -40,7 +40,6 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - **Användning av alternativet Radera allt innehåll och inställningar på enheten (endast övervakat)** -Tillåt användaren att använda alternativet att radera allt innehåll och alla inställningar på enheten.
 - **Ändring av enhetens namn (endast övervakat)** – Tillåt användaren att ändra namnet på enheten.
 - **Ändring av aviseringsinställningar (endast övervakat)** – Tillåt användaren att ändra enhetens aviseringsinställningar.
-- **Ändring av bakgrundsbild (endast övervakat)** – Tillåt att användaren ändrar enhetens bakgrundsbild.
 - **Ändring av behörighetsinställningar för företagsappar (endast övervakat)** – Låter användaren välja att lita på appar som inte laddats ned från App Store.
 - **Ändra konfigurationsprofil (endast övervakat)** – Tillåt att användaren installerar konfigurationsprofiler.
 - **Aktiveringslås (endast övervakat)** – Aktivera aktiveringslåset på övervakade iOS-enheter.
@@ -74,7 +73,6 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - Kortkommandon 
 - Ändringar av lösenord 
 - Ändringar av enhetsnamn 
-- Ändringar av skrivbordsunderlägg 
 - Automatisk nedladdning av appar 
 - Ändringar till förtroende för företagsapp 
 - Apple Music 
@@ -170,7 +168,7 @@ Använd en sökmotor för att hitta den app du vill använda i iTunes App Store 
 Kopiera sidans URL och använd den som URL för att konfigurera listan över tillåtna eller förbjudna appar som du vill köra i helskärmsläge.
 Enhetsprofiler som innehåller inställningar för begränsade appar måste tilldelas grupper av användare.
 
-Exempel: Sök efter Microsoft Word för iPad. Den webbadress som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Exempel: Sök efter Microsoft Word för iPad. Den URL som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Du kan även använda iTunes för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
@@ -195,7 +193,7 @@ Om du vill ange en app-URL i applistan använder du följande format:
 Använd en sökmotor för att hitta den app du vill använda i iTunes App Store och öppna appens sida.
 Kopiera sidans URL och använd den som URL för att konfigurera listan över tillåtna eller förbjudna appar som du vill köra i helskärmsläge.
 
-Exempel: Sök efter Microsoft Word för iPad. Den webbadress som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
+Exempel: Sök efter Microsoft Word för iPad. Den URL som du använder är https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8.
 
 > [!Note]
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.

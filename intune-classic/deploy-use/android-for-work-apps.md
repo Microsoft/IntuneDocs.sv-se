@@ -1,25 +1,25 @@
 ---
 title: Distribuera appar till Android for Work-enheter
-description: "Använd det här avsnittet för att synkronisera och sedan distribuera appar till Android for Work-enheter från Google Play for Work Store."
-keywords: 
+description: Använd det här avsnittet för att synkronisera och sedan distribuera appar till Android for Work-enheter från Google Play for Work Store.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
-manager: angrobe
+manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: cd0bbd90-d3fe-4efc-83fd-d1f3f86800d4
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 22b842f2745073f0476162278c8b209a3e251f9f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 20d43882895e299b26a4130b1551b17f054c52d6
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-deploy-apps-to-android-for-work-devices-with-intune"></a>Så distribuerar du appar till Android for Work-enheter med Intune
 
@@ -52,7 +52,7 @@ Kontrollera att du har konfigurerat Intune och Android for Work tillsammans i fl
 1. Gå till Google Play-utvecklarkonsolen [play.google.com/apps/publish](https://play.google.com/apps/publish).
 2. Logga in med samma konto som du använde för att konfigurera anslutningen mellan Intune och Android for Work. Om du loggar in för första gången måste du registrera dig och betala en avgift för att bli medlem i Google-utvecklarprogrammet.
 3. I konsolen väljer du **Lägg till nytt program**.
-4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Du måste dock välja inställningen **Only make this application available to my organization (Gör det här programmet tillgängligt endast för min organisation) (<*organisationsnamn*>)**:<br>
+4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Du måste dock välja inställningen ***Only make this application available to my organization (Gör det här programmet tillgängligt endast för min organisation) (<*organisationsnamn**>):<br>
   ![Alternativ för att endast göra appen tillgänglig för din organisation](media/restrict.png)<br>
 Detta säkerställer att appen endast är tillgänglig för din organisation och inte är tillgänglig i den offentliga Google Play-butiken.
 Mer information om hur du överför och publicerar Android-appar finns i [Google Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469) (Hjälp med Google-utvecklarkonsolen).

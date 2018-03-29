@@ -1,25 +1,25 @@
 ---
-title: "Felsöka villkorlig åtkomst"
-description: "Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune."
-keywords: 
+title: Felsöka villkorlig åtkomst
+description: Vad du kan göra om användarna inte lyckas komma åt resurser via villkorlig åtkomst i Intune.
+keywords: ''
 author: andredm7
 ms.author: andredm
-manager: angrobe
+manager: dougeby
 ms.date: 10/24/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 433fc32c-ca9c-4bad-9616-852c72faf996
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5f16e14b32508adf1fc4f3f448f53a7dcad8e137
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
@@ -118,7 +118,7 @@ Om du inte kan lösa problemet med dessa felsökningsanvisningar kanske du ombed
 ### <a name="exchange-connector-logs"></a>Exchange Connector-loggar
 
 #### <a name="general-log-information"></a>Allmän logginformation
-Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool]\(visningsverktyg för serverspårning) (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Det här verktyget kräver att du hämtar Windows Server SDK.
+Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool](visningsverktyg för serverspårning) (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Det här verktyget kräver att du hämtar Windows Server SDK.
 
 >[!NOTE]
 >Loggarna finns i C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Loggarna finns i en serie med 30 loggfiler som börjar med *Connector0.log* och slutar med *Connector29.log*. När 10 MB data har samlats i en logg går loggningen vidare till nästa logg. När loggningen når Connector29 börjar den om med Connector0 igen och de tidigare loggfilerna skrivs över.

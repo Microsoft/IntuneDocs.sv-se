@@ -1,25 +1,25 @@
 ---
-title: "iOS-principinställningar"
-description: "Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune."
-keywords: 
+title: iOS-principinställningar
+description: Skapa principer som styr inställningar och funktioner på iOS-enheter som du hanterar med Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
-manager: angrobe
+manager: dougeby
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ab46be6c-ab73-4c99-8492-66d1dd418293
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e9d014eb504098ff4361add7a0f3715f33be9083
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
+ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Principinställningar för iOS i Microsoft Intune
 
@@ -52,7 +52,7 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |**Antal avancerade tecken som krävs i lösenord**|Ange antalet symboltecken (till exempel **#** eller **@**) som måste tas med i lösenordet.|
 |**Minsta längd på lösenord**|Ange det minsta antalet tecken som lösenordet måste innehålla.|
 |**Tillåt enkla lösenord**|Tillåt enkla lösenord som **0000** och **1234**.|
-|**Antal tillåtna, upprepade felinloggningar innan enheten rensas**|Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.|
+|**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.|
 |**Antal minuters inaktivitet innan lösenord krävs**<sup>1</sup>|Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.|
 |**Lösenordets giltighetstid (i dagar)**|Ange antalet dagar innan lösenordet måste ändras.|
 |**Kom ihåg tidigare lösenord**|Ange om användaren kan använda lösenord som de har använt tidigare.|
@@ -147,7 +147,7 @@ Alla inställningar gäller för iOS 8.0 och senare.
 |Inställningsnamn|Information|
 |----------------|-------|
 |**Tillåt röstnätverksväxling**|Tillåt röstnätverksväxling när enheten är på ett mobilnät.|
-|**Tillåt datanätverksväxling**|Tillåt datanätverksväxling när enheten använder ett mobilnät.|
+|**Tillåt dataroaming**|Tillåt datanätverksväxling när enheten använder ett mobilnät.|
 |**Tillåt hämtning av global bakgrund under nätverksväxling**|Tillåt att enheten att hämtar data, till exempel e-post när den nätverksväxlar på ett mobilnät.|
 
 ### <a name="device-capabilities-settings-for-features"></a>Enhetskapacitetsinställningar för funktioner
@@ -222,7 +222,7 @@ Om du vill ange en webbadress till en app i listan kompatibla och inkompatibla a
 
 2. Kopiera webbadressen till sidan och använd den som webbadress för att konfigurera listan med kompatibla eller inkompatibla appar eller den app du vill köra i helskärmsläge.
 
-**Exempel:** Sök efter **Microsoft Word för iPad**. Webbadressen du använder är **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
+**Exempel:** Sök efter **Microsoft Word för iPad**. Den URL som du använder är **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.
 
 > [!NOTE]
 > Du kan också använda iTunes-programmet för att hitta appen och sedan använda kommandot **Kopiera länk** för att hämta appens webbadress.
@@ -362,7 +362,7 @@ Använd Microsoft Intunes **anpassade princip för iOS** för att distribuera in
 
 Med den här funktionen kan du distribuera iOS-inställningar som inte kan konfigureras med allmänna konfigurationsprinciper för Intune.
 
-### <a name="prerequisites"></a>Förutsättningar
+### <a name="prerequisites"></a>Krav
 Innan du börjar måste du ha installerat Apple Configurator och skapat en konfigurationsfil som innehåller de inställningar som du vill distribuera till användare eller enheter. Du kan ladda ned och lära dig om Apple Configurator från [Mac App Store](https://itunes.apple.com/us/app/apple-configurator/id434433123?mt=12).
 
 > [!NOTE]
