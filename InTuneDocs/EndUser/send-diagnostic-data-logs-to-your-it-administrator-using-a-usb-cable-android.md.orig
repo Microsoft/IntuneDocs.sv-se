@@ -1,0 +1,97 @@
+---
+title: "Skicka loggar med diagnostikdata till IT-administratören via en USB-kabel | Microsoft Intune"
+description: Skicka dataloggar med en USB-kabel
+keywords: 
+author: barlanmsft
+ms.author: barlan
+manager: angrobe
+ms.date: 10/24/2016
+ms.topic: article
+ms.prod: 
+ms.service: microsoft-intune
+ms.technology: 
+ms.assetid: c46775c2-9d2a-4a88-89f0-4104a462b898
+ROBOTS: NOINDEX,NOFOLLOW
+ms.reviewer: arnab
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 42720b0e0613be10e83cb0e8aae7170a85f473e5
+ms.openlocfilehash: e26a97d52cc753f83eb49e3f733668eb83ef4932
+
+<<<<<<< HEAD
+
+---
+
+
+# Skicka loggar med diagnostikdata till din IT-administratör via USB-kabel
+
+Om du vill skicka dataloggar till IT-administratören kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet.
+
+ Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
+
+1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
+
+2.  Anslut din Android-enhet till en dator via en USB-kabel.
+
+3.  Leta efter en mapp med namnet på din enhet på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\ i katalogen.
+
+4.  Bifoga filerna i ett e-postmeddelande och skicka dem till din IT-administratör.
+
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+
+
+<!--HONumber=Oct16_HO2-->
+
+||||||| merged common ancestors
+
+---
+
+
+# Skicka loggar med diagnostikdata till din IT-administratör via USB-kabel
+
+Om du vill skicka dataloggar till IT-administratören kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet.
+
+ Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
+
+1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
+
+2.  Anslut din Android-enhet till en dator via en USB-kabel.
+
+3.  Leta efter en mapp med namnet på din enhet på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\ i katalogen.
+
+4.  Bifoga filerna i ett e-postmeddelande och skicka dem till din IT-administratör.
+
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+
+
+<!--HONumber=Oct16_HO2-->
+
+=======
+
+---
+
+
+# <a name="send-diagnostic-data-logs-to-your-it-admin-using-a-usb-cable"></a>Skicka loggar med diagnostikdata till din IT-administratör via USB-kabel
+
+Om du vill skicka dataloggar till IT-administratören kan du skicka dem via en dator och en USB-kabel i stället för att skicka dem från din mobila enhet.
+
+ Se till att du har IT-administratörens e-postadress (visas vanligtvis på [företagsportalens webbplats](http://portal.manage.microsoft.com) eller i företagsportalappen) innan du börjar.
+
+1.  Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
+
+2.  Anslut din Android-enhet till en dator via en USB-kabel.
+
+3.  Leta efter en mapp med namnet på din enhet på datorn. Hitta &lt;Android-enhet&gt;\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\ i katalogen.
+
+4.  Bifoga filerna i ett e-postmeddelande och skicka dem till din IT-administratör.
+
+Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+
+
+
+<!--HONumber=Oct16_HO2-->
+
+>>>>>>> 850e3fac25145b2682c30d3bd010202ad0456fef
+

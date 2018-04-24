@@ -1,4 +1,4 @@
----
+﻿---
 title: Ta bort enheten från hanteringen om du inte godkände användningsvillkoren | Microsoft Docs
 description: ''
 keywords: ''

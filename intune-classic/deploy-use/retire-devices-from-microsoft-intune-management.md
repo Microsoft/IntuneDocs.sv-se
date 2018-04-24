@@ -1,4 +1,4 @@
----
+﻿---
 title: Dra tillbaka enheter
 description: Du kan använda en selektiv eller fullständig rensning för att ta bort enheten från Intune-hanteringen genom att ta bort enhetens princip och företagsportalen.
 keywords: ''

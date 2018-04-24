@@ -1,4 +1,4 @@
----
+﻿---
 title: Ange din PIN-kod eller ditt lösenord | Microsoft Docs
 description: ''
 keywords: ''

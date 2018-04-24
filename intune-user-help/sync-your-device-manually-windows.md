@@ -1,4 +1,4 @@
----
+﻿---
 title: Synkronisera Windows-enheten manuellt | Microsoft Docs
 description: ''
 keywords: ''
