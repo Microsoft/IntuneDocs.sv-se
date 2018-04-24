@@ -1,27 +1,27 @@
 ---
-title: "Inställningar av enhetsbegränsningar för macOS i Microsoft Intune"
-titlesuffix: 
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör macOS."
-keywords: 
+title: Inställningar av enhetsbegränsningar för macOS i Microsoft Intune
+titlesuffix: ''
+description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör macOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 72c9036bd6062e719d55876d77f44123fe2af392
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: f4cf5a5eb716760034b25b52098b9e65e6540c63
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-macos-device-restriction-settings"></a>Inställningar för enhetsbegränsningar för macOS-enheter i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln visas inställningarna för enhetsbegränsningar i Microsoft Intune som du kan konfigurera för enheter som kör macOS.
 

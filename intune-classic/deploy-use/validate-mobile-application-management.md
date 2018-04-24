@@ -1,28 +1,28 @@
 ---
 title: Verifiera din MAM-konfiguration
-description: "Detta avsnitt beskriver hur du kan testa och verifiera om din MAM-princip är korrekt konfigurerad och fungerar som förväntat."
-keywords: 
+description: Detta avsnitt beskriver hur du kan testa och verifiera om din MAM-princip är korrekt konfigurerad och fungerar som förväntat.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angerobe
 ms.date: 12/19/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 41d82597-e13e-4c3e-9151-e71392236ca0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.custom: intune-classic
-ms.openlocfilehash: e0cb44177f830236865dce0ab68bb1084fcebc2d
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 6f11c2f2af53813040417a8f40e983b5c88d5189
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validating-your-mobile-application-management-setup"></a>Verifiera din konfiguration för hantering av mobilprogram
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller information om hur du felsöker problem när du har konfigurerat hantering av mobila program (MAM). Dessa anvisningar gäller MAM-principer i Azure Portal.
 
@@ -43,7 +43,7 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 
 2. Välj en användare i listan (eller sök efter och välj en användare) och välj sedan **Välj användare**. Längst upp i kolumnen **Apprapportering** kan du se om användaren är licensierad för MAM. Nedanför det kan du se om användaren är licensierad för O365 och appstatus för alla användarens enheter.
 
-![Appstatus för MAM](..\media\ts-mam-user-apps.png)
+![Appstatus för MAM](../media/ts-mam-user-apps.png)
 
 ### <a name="what-to-do"></a>Vad bör jag göra
 Åtgärder som kan vidtas baserat på användarens status:
@@ -54,6 +54,6 @@ Om testningen visar att MAM-principen inte fungerar som förväntat rekommendera
 - Se till att dessa villkor används för alla användare som du vill att MAM-principerna ska gälla för.
 
 ### <a name="see-also"></a>Se även
-[Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](..\deploy-use\get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
+[Förbered dig på att konfigurera hanteringsprinciper för mobila appar med Microsoft Intune](../deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune.md)
 
-[Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](..\deploy-use\protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)
+[Skydda appdata med hanteringsprinciper för mobila appar med Microsoft Intune](../deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md)

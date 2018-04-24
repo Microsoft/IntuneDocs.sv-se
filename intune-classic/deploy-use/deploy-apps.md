@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9762c20abb9e4eedded50c92fb10ffb6119be63e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc2a8cb8fc07f87dd0a4e9d8f3935c04a73fe8fd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-apps-with-microsoft-intune"></a>Distribuera appar med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet förklarar några av de begrepp som du behöver förstå innan du börjar distribuera appar med Microsoft Intune.
 
@@ -46,18 +46,19 @@ När du distribuerar appar kan du välja någon av följande distributionsåtgä
 
 #### <a name="understand-which-deployment-actions-are-available-for-each-installer-type"></a>Distributionsåtgärder som är tillgängliga för olika typer av installationsprogram
 
-|Installationstyp|Nödvändig installation|Tillgänglig installation|Avinstallera|Inte tillämpligt|
-|------------------|--------------------|---------------------|-------------|------------------|
-|Windows-app-paket (distribuerad till en användargrupp)|Ja|Ja|Ja|Ja|
-|Windows-appaket (distribuerad till en enhetsgrupp)|Ja|Nej|Ja|Ja|
-|App-paket för mobila enheter (distribuerad till en användargrupp)|Ja|Ja|Ja|Ja|
-|App-paket för mobila enheter (distribuerad till en enhetsgrupp)|Ja|Nej|Ja|Ja|
-|Windows Installer (distribuerad till en användargrupp)|Nej|Ja|Nej|Ja|
-|Windows Installer (distribuerad till en enhetsgrupp)|Ja|Nej|Ja|Ja|
-|Extern länk (distribuerad till en användargrupp)|Nej|Ja|Nej|Ja|
-|Extern länk (distribuerad till en enhetsgrupp)|Nej|Nej|Nej|Nej|
-|Hanterad iOS-app från App Store (distribuerad till en användargrupp)|Ja|Ja|Ja|Ja|
-|Hanterad iOS-app från App Store (distribuerad till en enhetsgrupp)|Ja|Nej|Ja|Ja|
+|                         Installationstyp                          | Nödvändig installation | Tillgänglig installation | Avinstallera | Ej tillämpligt |
+|-----------------------------------------------------------------|------------------|-------------------|-----------|----------------|
+|         Windows-app-paket (distribuerad till en användargrupp)          |       Ja        |        Ja        |    Ja    |      Ja       |
+|        Windows-appaket (distribuerad till en enhetsgrupp)         |       Ja        |        Nej         |    Ja    |      Ja       |
+|    App-paket för mobila enheter (distribuerad till en användargrupp)    |       Ja        |        Ja        |    Ja    |      Ja       |
+|   App-paket för mobila enheter (distribuerad till en enhetsgrupp)   |       Ja        |        Nej         |    Ja    |      Ja       |
+|          Windows Installer (distribuerad till en användargrupp)           |        Nej        |        Ja        |    Nej     |      Ja       |
+|         Windows Installer (distribuerad till en enhetsgrupp)          |       Ja        |        Nej         |    Ja    |      Ja       |
+|            Extern länk (distribuerad till en användargrupp)             |        Nej        |        Ja        |    Nej     |      Ja       |
+|           Extern länk (distribuerad till en enhetsgrupp)            |        Nej        |        Nej         |    Nej     |       Nej       |
+|  Hanterad iOS-app från App Store (distribuerad till en användargrupp)  |       Ja        |        Ja        |    Ja    |      Ja       |
+| Hanterad iOS-app från App Store (distribuerad till en enhetsgrupp) |       Ja        |        Nej         |    Ja    |      Ja       |
+
 > [!TIP]
 > Om du väljer både användar- och enhetsgrupper när du distribuerar appar, kan du bara distribuera appen som en **Tillgänglig installation**.
 

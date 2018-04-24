@@ -1,25 +1,25 @@
 ---
-title: "Komma igång med att hantera användare"
+title: Komma igång med att hantera användare
 titlesuffix: Microsoft Intune
-description: "Lägg till en användare i Intune och tilldela dem en licens så att de kan få åtkomst till företagsresurser på mobila enheter."
-keywords: 
+description: Lägg till en användare i Intune och tilldela dem en licens så att de kan få åtkomst till företagsresurser på mobila enheter.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 53b5be6e5cdf8f60304126e133a727123bfef58d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6ed6b95a11eddfeb748b21d6df55f3a5668d9e1d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-managing-users"></a>Komma igång med att hantera användare
 
@@ -44,8 +44,8 @@ När du har skapat en användare måste du använda [Office 365-portalen](http:/
 3. Du kan behöva vänta en stund tills all information om användaren har lästs in. När informationen har lästs in väljer du **Redigera** för användarens **produktlicenser**.
 4. Tilldela användaren en **plats** och växla sedan Intune till **På**.
 
- > [!NOTE]
- > En av de tillgängliga licenserna används nu för den här användaren. Om du använder livemiljön kan du inaktivera användningen av den här licens om du senare vill tilldela den till riktig användare.
+   > [!NOTE]
+   > En av de tillgängliga licenserna används nu för den här användaren. Om du använder livemiljön kan du inaktivera användningen av den här licens om du senare vill tilldela den till riktig användare.
 
 5. Välj **Spara**.
 

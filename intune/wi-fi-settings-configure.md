@@ -1,27 +1,27 @@
 ---
-title: "Hur du konfigurerar Wi-Fi-inställningar i Intune"
+title: Hur du konfigurerar Wi-Fi-inställningar i Intune
 titleSuffix: Microsoft Intune
-description: "Läs om hur du använder Microsoft Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar."
-keywords: 
+description: Läs om hur du använder Microsoft Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90d2df028d5a61bb134b6a2b76efa570eed80f20
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 9a550e2963fa60a91db3ef63f7771bc4ca352d98
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Använd Wi-Fi-profiler i Microsoft Intune om du vill tilldela trådlösa nätverksinställningar till användare och enheter i din organisation. När du tilldelar en Wi-Fi-profil får användarna åtkomst till ditt företags Wi-Fi-nätverk utan att de behöver göra några inställningar själva.
 

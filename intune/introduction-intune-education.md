@@ -1,24 +1,24 @@
 ---
-title: "Vad är Intune for Education?"
-description: "Lär dig hur Intune for Education skiljer sig från den fullständiga hanteringsupplevelsen av Intune."
+title: Vad är Intune for Education?
+description: Lär dig hur Intune for Education skiljer sig från den fullständiga hanteringsupplevelsen av Intune.
 keywords: what is Intune
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 12/21/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 ms.reviewer: travisj
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f98e9cd82508f4b41d62a61baf06c9add2c3626e
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 30195ee56e99754f5ed385291823adef08d6ce01
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Hur skiljer sig Intune for Education åt från den fullständiga hanteringsupplevelsen i Intune?
 
@@ -39,6 +39,6 @@ Med både Intune och Intune for Education kan du:
 * Säkerställa att enheter och program är kompatibla med säkerhetskraven.
 
 ### <a name="next-steps"></a>Nästa steg
-* Bekanta dig med produkten [med en 90-dagars konstnadsfri utvärderingsversion av Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). Om du redan har åtkomst, gå till (https://intuneeducation.portal.azure.com) för att komma igång.
+* Bekanta dig med produkten [med en 90-dagars konstnadsfri utvärderingsversion av Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). Om du redan har åtkomst går du till (https://intuneeducation.portal.azure.com) för att komma igång.
 * Mer information om det snabbaste sättet att [börja använda Intune for Education](/intune-education/what-is-express-configuration).
 * Fördjupa dig i de [tekniska kraven och möjligheterna](/intune/supported-devices-browsers) med Intune.

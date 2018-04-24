@@ -15,23 +15,23 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 63618f9af5f2bdb863a19c229c862e446dd4ea7a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4bf478225c22597b1645fc7d18e4329560bb1f03
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compliance-policy-settings-for-android-devices-in-microsoft-intune"></a>Inställningar för efterlevnadsprinciper för Android-enheter i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Principinställningarna som beskrivs i det här avsnittet gäller enheter som kör Android 4.0 och senare eller Samsung KNOX 4.0 och senare.
 
 Om du letar efter information om andra plattformar väljer du något av följande:
 > [!div class="op_single_selector"]
-- [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
-- [Inställningar för efterlevnadsprinciper för Android for Work-enheter](afw-compliance-policy-settings-in-microsoft-intune.md)
+> - [Inställningar för policy för efterlevnad för iOS-enheter](ios-compliance-policy-settings-in-microsoft-intune.md)
+> - [Inställningar för efterlevnadsprinciper för Windows-enheter](windows-compliance-policy-settings-in-microsoft-intune.md)
+> - [Inställningar för efterlevnadsprinciper för Android for Work-enheter](afw-compliance-policy-settings-in-microsoft-intune.md)
 
 ## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 ### <a name="password"></a>Lösenord

@@ -1,29 +1,29 @@
 ---
-title: "Skydda data med hjälp av fjärrensning"
-description: "I Intune finns funktioner för selektiv och fullständig rensning så att du kan ta bort känsliga företagsdata och ta bort åtkomsten till många företagsresurser."
-keywords: 
+title: Skydda data med hjälp av fjärrensning
+description: I Intune finns funktioner för selektiv och fullständig rensning så att du kan ta bort känsliga företagsdata och ta bort åtkomsten till många företagsresurser.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 07/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8519e411-3d48-44eb-9b41-3e4fd6a93112
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: lancecra
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 85907167305e822ddf6a29475f032b2eb5f97a74
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 82c50be9a8def23fadd8d24fc7654312d5c7ca5c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-protect-your-data-with-full-or-selective-wipe-using-microsoft-intune"></a>Skydda data med fullständig eller selektiv rensning med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan rensa appar och data från Intune-hanterade enheter som inte längre behövs, som ska få ett nytt syfte eller som har försvunnit. Du kan göra detta med funktionerna för fullständig och selektiv rensning i Intune. Användare kan dessutom utfärda ett fjärrensningskommando från Intune-företagsportalappen på privatägda enheter som registrerats i Intune.
 
@@ -40,37 +40,37 @@ Du kan rensa appar och data från Intune-hanterade enheter som inte längre beh�
 
 ### <a name="remotely-wipe-a-device-from-the-intune-administrator-console"></a>Fjärrensa en enhet från Intune-administrationskonsolen
 
-1.  Välj vilka enheter som ska rensas. Du hittar dem antingen efter användare eller enhet.
+1. Välj vilka enheter som ska rensas. Du hittar dem antingen efter användare eller enhet.
 
-    -   **Efter användare:**
+   - **Efter användare:**
 
-        1.  Gå till [Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla användare**.
+     1.  Gå till [Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla användare**.
 
-        2.  Välj namnet på den användare vars mobila enhet du vill rensa. Välj **Visa egenskaper**.
+     2.  Välj namnet på den användare vars mobila enhet du vill rensa. Välj **Visa egenskaper**.
 
-        3.  Öppna sidan **Egenskaper** för användaren, välj **Enheter** och välj sedan namnet på den mobila enhet som du vill rensa. Använd Ctrl + klicka om du vill markera flera enheter.
+     3.  Öppna sidan **Egenskaper** för användaren, välj **Enheter** och välj sedan namnet på den mobila enhet som du vill rensa. Använd Ctrl + klicka om du vill markera flera enheter.
 
-    -   **Efter enhet:**
+   - **Efter enhet:**
 
-        1.  Gå till [Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla mobila enheter**.
+     1. Gå till [Intune-administratörskonsolen](https://manage.microsoft.com/) och välj **Grupper** &gt; **Alla mobila enheter**.
 
-         ![Starta en tillbakadragnings- eller rensningsåtgärd](../media/dev-sa-wipe.png)
+        ![Starta en tillbakadragnings- eller rensningsåtgärd](../media/dev-sa-wipe.png)
 
-        2.  Välj **Enheter** och välj sedan namnet på den mobila enhet som du vill rensa. Använd Ctrl + klicka om du vill markera flera enheter.
+     2. Välj **Enheter** och välj sedan namnet på den mobila enhet som du vill rensa. Använd Ctrl + klicka om du vill markera flera enheter.
 
-2.  Välj **Ta ur bruk/rensa**.
+2. Välj **Ta ur bruk/rensa**.
 
-3.  Ett bekräftelsemeddelande visas där du tillfrågas om du vill dra tillbaka enheten.
+3. Ett bekräftelsemeddelande visas där du tillfrågas om du vill dra tillbaka enheten.
 
-    -   Om du vill utföra en **selektiv rensning** som bara tar bort företagsappar och företagsdata väljer du **Ja**.
+   -   Om du vill utföra en **selektiv rensning** som bara tar bort företagsappar och företagsdata väljer du **Ja**.
 
-    -   Om du vill utföra en **fullständig rensning** som rensar alla appar och data och återställer enheten till fabriksinställningarna väljer du **Rensa enheten innan den tas ur bruk**. Den här åtgärden gäller för alla plattformar förutom Windows 8.1. **Du inte kan återställa data som tagits bort vid en fullständig rensning**.
+   -   Om du vill utföra en **fullständig rensning** som rensar alla appar och data och återställer enheten till fabriksinställningarna väljer du **Rensa enheten innan den tas ur bruk**. Den här åtgärden gäller för alla plattformar förutom Windows 8.1. **Du inte kan återställa data som tagits bort vid en fullständig rensning**.
 
 Om enheten är på och ansluten tar det mindre än 15 minuter att sprida rensningen över alla enhetstyper.
 
 #### <a name="to-delete-devices-in-the-azure-active-directory-portal"></a>Ta bort enheter i Azure Active Directory-portalen
 
-1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Admin** &gt; **Azure AD** från [https://portal.office.com](https://portal.office.com).
+1.  Bläddra till [http://aka.ms/accessaad](http://aka.ms/accessaad) eller välj **Administratör**&gt;**Azure AD** från [https://portal.office.com](https://portal.office.com).
 
 2.  Logga in med ditt organisations-ID med hjälp av länken till vänster på sidan.
 

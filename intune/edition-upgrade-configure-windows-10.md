@@ -1,27 +1,27 @@
 ---
-title: "Uppgradera 10 Windows-enheter med Microsoft Intune – Azure | Microsoft Docs"
-description: "Skapa en enhetsprofil i Microsoft Intune för att uppgradera Windows 10-enheter till nyare versioner. Se även de uppgraderingssökvägar som stöds för Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic och Mobile."
-keywords: 
+title: Uppgradera 10 Windows-enheter med Microsoft Intune – Azure | Microsoft Docs
+description: Skapa en enhetsprofil i Microsoft Intune för att uppgradera Windows 10-enheter till nyare versioner. Se även de uppgraderingssökvägar som stöds för Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic och Mobile.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8084f1b2fbd513de596bd97f4ffec995b6f7aac4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 994ab8e7d955d18b293e4d9e9661e0c44baaaa1f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-10-edition-upgrade-profile-in-intune"></a>Konfigurera Windows 10-versionsuppgraderingsprofil i Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Konfigurera en uppgraderingsprofil i Intune för att automatiskt uppgradera enheter som kör Windows 10-versioner till en annan utgåva. Se även uppgraderingssökvägar som stöds.
 
@@ -128,10 +128,10 @@ The following lists provide the supported upgrade paths for the Windows 10 editi
 5. I listrutan **Plattform** väljer du **Windows 10 och senare**.
 6. I listrutan **Profiltyp** väljer du **Uppgradering av utgåva**.
 7. I egenskaperna **Uppgradering av utgåva** anger du följande inställningar:
-  - **Utgåva att uppgradera till** – I listrutan väljer du den version av Windows 10 Desktop, Windows 10 Holographic eller Windows 10 Mobile som du vill uppgradera målenheterna till.
-  - **Produktnyckel** – Ange produktnyckeln som du har fått från Microsoft. Den kan användas för att uppgradera alla Windows 10 Desktop-enheter. 
+   - **Utgåva att uppgradera till** – I listrutan väljer du den version av Windows 10 Desktop, Windows 10 Holographic eller Windows 10 Mobile som du vill uppgradera målenheterna till.
+   - **Produktnyckel** – Ange produktnyckeln som du har fått från Microsoft. Den kan användas för att uppgradera alla Windows 10 Desktop-enheter. 
     När du har skapat en princip som innehåller en produktnyckel går den inte att uppdatera, och den är dold av säkerhetsskäl. Om du vill ändra produktnyckeln måste du ange hela nyckeln igen.
-  - **Licensfil** – Välj **Bläddra** för att välja den licensfil du fick av Microsoft. Licensfilen innehåller licensinformation för den Windows Holographic- eller Windows 10 Mobile-version du uppgraderar målenheterna till.
+   - **Licensfil** – Välj **Bläddra** för att välja den licensfil du fick av Microsoft. Licensfilen innehåller licensinformation för den Windows Holographic- eller Windows 10 Mobile-version du uppgraderar målenheterna till.
 8. När du är klar väljer du **Skapa** för att spara dina ändringar.
 
 Profilen skapas och visas i profilerna.

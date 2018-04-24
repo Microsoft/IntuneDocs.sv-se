@@ -3,8 +3,8 @@ title: Intune-inställningar för iOS Klassrum-appen
 titleSuffix: Microsoft Intune
 description: Läs om vilka Intune-inställningar du kan använda för att styra inställningarna för Classroom-appen på iOS-enheter.
 keywords: ''
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/23/2018
 ms.topic: article
@@ -15,15 +15,15 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 063287ac1bf3441092ff7c9daea5102314384b7d
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 63284a1dd5c1d5a6c588775f1c282bfcfef5de67
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Introduktion
 [Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Med hjälp av appen kan läraren till exempel:

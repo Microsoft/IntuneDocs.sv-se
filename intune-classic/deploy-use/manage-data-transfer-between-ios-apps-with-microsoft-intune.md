@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b83e5fa37f9a9844e3011cded3c3cd58f268521
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c27b191f8a0f9fbd298b820114f27acb4c31f966
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-data-transfer-between-ios-apps-with-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="manage-ios-apps"></a>Hantera iOS-appar
 För att skydda företagets data måste du se till att filöverföringar begränsas till appar som hanteras av dig.  Du kan hantera iOS-appar på följande sätt:
@@ -51,17 +51,17 @@ För att säkerställa att appar som du distribuerar med en tredje parts MDM-lö
 Inställningen för användar-UPN **måste** konfigureras för enheter som hanteras av en EMM-lösning från tredje part. Proceduren nedan beskriver de allmänna steg du följer för att konfigurera UPN-inställningen samt den resulterande användarupplevelsen:
 
 
-1.  [Konfigurera en appskyddsprincip](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för iOS-plattformen på Azure-portalen. Konfigurera principinställningar enligt företagets krav och välj de appar som ska ha principen.
+1. [Konfigurera en appskyddsprincip](create-and-deploy-mobile-app-management-policies-with-microsoft-intune.md) för iOS-plattformen på Azure-portalen. Konfigurera principinställningar enligt företagets krav och välj de appar som ska ha principen.
 
-2.  Distribuera apparna och den e-postprofil som ska hanteras **via MDM-lösningen från tredje part** genom att följa de allmänna stegen nedan. Se även Exempel 1.
+2. Distribuera apparna och den e-postprofil som ska hanteras **via MDM-lösningen från tredje part** genom att följa de allmänna stegen nedan. Se även Exempel 1.
 
-  1.  Distribuera appen med följande appkonfigurationsinställningar:
+   1. Distribuera appen med följande appkonfigurationsinställningar:
 
       **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
 
       Exempel: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
-  2.  Distribuera principen Öppna i hantering med hjälp av din MDM-lösning från tredje part till registrerade enheter.
+   2. Distribuera principen Öppna i hantering med hjälp av din MDM-lösning från tredje part till registrerade enheter.
 
 
 ### <a name="example-1-admin-experience-in-third-party-mdm-console"></a>Exempel 1: Administratörsmiljön i MDM-konsol från tredje part
@@ -70,9 +70,9 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 2. Ange följande inställning i avsnittet för programkonfiguration:
 
-  **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
+   **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
 
-  Den exakta syntaxen för nyckel/värde-paret kan variera beroende på MDM-lösning. Tabellen nedan innehåller exempel på tredjepartsleverantörer av MDM-lösningar och de exakta värden som du anger för nyckel/värde-paret.
+   Den exakta syntaxen för nyckel/värde-paret kan variera beroende på MDM-lösning. Tabellen nedan innehåller exempel på tredjepartsleverantörer av MDM-lösningar och de exakta värden som du anger för nyckel/värde-paret.
 
 |MDM-tredjepartsleverantör| Konfigurationsnyckel | Värdetyp | Konfigurationsvärde|
 | ------- | ---- | ---- | ---- |

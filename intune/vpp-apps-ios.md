@@ -15,16 +15,16 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bd9915f3120e2fee2b487fbfff0d775a9d50ef8a
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 848f76f61ebf85201af18ab019d0546e48fcaa41
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag.
 
@@ -152,6 +152,17 @@ Om du vill återkalla en licens för alla VPP-appar för en specifik VPP-token, 
 ## <a name="further-information"></a>Ytterligare information
 
 När en användare med en kvalificerande enhet försöker installera en volymköpsprogramapp på en enhet, ombeds användaren att gå med i Apples volymköpsprogram. Användaren måste gå med innan appinstallationen fortsätter. Inbjudan att gå med i Apples program för volyminköp kräver att användaren kan använda appen iTunes på iOS-enheten. Om du har angett en princip för inaktivering av iTunes Store-appen kommer den användarbaserade licensieringen för VPP-appar inte att fungera. Lösningen är att antingen tillåta iTunes-appen genom att ta bort principen eller använda enhetsbaserad licensiering.
+
+## <a name="frequently-asked-questions"></a>Vanliga frågor och svar
+
+#### <a name="how-long-does-the-portal-take-to-update-the-license-count-once-an-app-is-installed-or-removed-from-the-device"></a>Hur lång tid tar det för portalen att uppdatera licensantalet när en app installeras eller tas bort från enheten?
+Licensen bör vara uppdaterad inom några timmar efter installation eller avinstallation av en app. Observera att om slutanvändaren tar bort appen från enheten, är licensen fortfarande tilldelad till användaren eller enheten.
+
+#### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Går det att överprenumerera på en app och i så fall när?
+Ja. Intune-administratören kan överprenumerera på en app. Exempelvis om administratören köper 100 licenser för appen XYZ och sedan riktar appen till en grupp med 500 medlemmar. De första 100 medlemmarna (användare eller enheter) får den licens som tilldelats till dem, men resten av medlemmarna misslyckas vid licenstilldelningen.
+
+#### <a name="i-understand-intune-automatically-syncs-app-licenses-each-day-with-apple-is-that-correct"></a>Som jag har förstått det synkroniserar Intune applicenser automatiskt varje dag med Apple, stämmer det?
+Intune synkroniserar applicenser var 15:e timme med Apple.
 
 ## <a name="next-steps"></a>Nästa steg
 

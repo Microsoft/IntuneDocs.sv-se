@@ -1,27 +1,27 @@
 ---
-title: "Använda en Windows-enhet med Intune | Microsoft Docs"
-description: "Lista med länkar till uppgifter som användarna kan utföra på sina Windows-enheter när de har registrerats i Intune"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Använda en Windows-enhet med Intune | Microsoft Docs
+description: Lista med länkar till uppgifter som användarna kan utföra på sina Windows-enheter när de har registrerats i Intune
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1d7a5ab2fc2b4be7e385e533016f9d07f4e16505
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 645e87ef731cf911824ab16673c01e962c91fb70
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-your-windows-device-with-intune"></a>Att använda din Windowsenhet med Intune
 
@@ -34,7 +34,7 @@ Intune har för närvarande stöd för följande Windows-versioner.
 * Windows 10 (Home, Pro, Education, S och Enterprise)
 * Windows Phone 8.1 och senare
 * Windows 8.1 RT
-* Windows 8,1
+* Windows 8.1
 
 Det finns några andra versioner av Windows, till exempel [Windows 10 Holographic](https://www.microsoft.com/hololens), som också stöds av Intune. De visas inte här eftersom de är avsedda för mycket specifik användning.
 

@@ -15,15 +15,15 @@ ms.assetid: 6e9ec662-465b-4ed4-94c1-cff0fe18f126
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6bbfa42b8ec03cfbe97efdae21f493b68c53d769
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0d38d7671218bfcecd3d2aa4671a565e0cabe37f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Lägga till användare och ge administrativ behörighet till Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Som administratör kan du lägga till användare direkt eller synkronisera användare från din lokala Active Directory. När de har lagts till, kan användare registrera enheter och få åtkomst till företagsresurser. Du kan också ge användarna ytterligare behörigheter, inklusive behörigheter som *global administratör* och *tjänstadministratör*.
 
@@ -35,16 +35,16 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
 2. Välj **Admin** på Office 365-menyn.
 3. Välj **Lägg till en användare** i administrationscentret.
 
-  ![Skärmbild av avsnittet Lägg till användare](media/office-add-user.png)
+   ![Skärmbild av avsnittet Lägg till användare](media/office-add-user.png)
 
 4. Ange följande användarinformation:
-  - **Förnamn**
-  - **Efternamn**
-  - **Visningsnamn**
-  - **Användarnamn** – Användarens huvudnamn (UPN) som är lagrat i Azure Active Directory och används för att få åtkomst till tjänsten
-  - **Position**
-  - **Kontaktinformation** (valfritt)
-  - **Lösenord** –Generera automatiskt eller ange manuellt
+   - **Förnamn**
+   - **Efternamn**
+   - **Visningsnamn**
+   - **Användarnamn** – Användarens huvudnamn (UPN) som är lagrat i Azure Active Directory och används för att få åtkomst till tjänsten
+   - **Position**
+   - **Kontaktinformation** (valfritt)
+   - **Lösenord** –Generera automatiskt eller ange manuellt
 
      ![Skärmbild av avsnittet Ny användare](media/office-add-user-details.png)
 
@@ -55,16 +55,16 @@ Du kan lägga till användare i Intune-prenumerationen manuellt via [Office 365-
 1. Logga in på [Azure-portalen](https://portal.azure.com) och gå till **Alla tjänster** > **Övervakning + hantering** > **Intune**. Du kan också *söka efter resurser* för **Intune**.
 2. Välj **Användare** > **Alla användare**.
 3. Välj **Ny användare** i administrationscentret.
-  ![Skärmbild av Lägg till ny användare](media/intune-add-user.png)
+   ![Skärmbild av Lägg till ny användare](media/intune-add-user.png)
 4. Ange följande användarinformation:
-  - **Namn**
-  - **Användarnamn** – Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter](media/intune-add-user-info.png) Fortsätt genom att välja **OK**.
+   - **Namn**
+   - **Användarnamn** – Det nya namnet på Azure Active Directory-portalen ![Skärmbild av administrationscenter](media/intune-add-user-info.png) Fortsätt genom att välja **OK**.
 5. Om du vill kan du ange följande användaregenskaper:
-  - **Profil** – Arbetsrelaterad information inklusive **befattning** och **avdelning**
-  -  **Grupper** – Välj de grupper du vill lägga till för användaren
-  - **Katalogroll** – Ge användaren administratörsbehörighet, inklusive en administratörsroll för Intune-tjänsten.
+   - **Profil** – Arbetsrelaterad information inklusive **befattning** och **avdelning**
+   -  **Grupper** – Välj de grupper du vill lägga till för användaren
+   - **Katalogroll** – Ge användaren administratörsbehörighet, inklusive en administratörsroll för Intune-tjänsten.
 
-  Välj **Skapa** för att lägga till den nya användaren i Intune.
+   Välj **Skapa** för att lägga till den nya användaren i Intune.
 6. Välj **Profil** och sedan en **Användningsplats** för den nya användaren. Användningsplatsen krävs innan du kan tilldela den nya användaren en Intune-licens. Fortsätt genom att välja **Spara**.
     ![Skärmbild av Användningsplats](media/intune-add-user-loc.png)
 7. Välj **Licenser** och välj sedan **Tilldela** för att tilldela en Intune-licens till den här användaren. En Intune-licens krävs för att registrera enheter eller komma åt företagsresurser. Välj **Produkter**, välj licenstypen, välj **Välj** och välj sedan **Tilldela**.
@@ -112,7 +112,7 @@ För att få åtkomst till Office 365-portalen måste ditt konto ha statusen **S
 Du kan konfigurera katalogsynkronisering om du vill importera användarkonton från organisationens lokala Active Directory till Microsoft Azure Active Directory (Azure AD) som inkluderar Intune-användare. När din lokala Active Directory-tjänst är ansluten till alla dina Azure Active Directory-baserade tjänster blir hanteringen av användaridentiteter mycket enklare. Du kan också konfigurera funktioner för enkel inloggning som gör autentiseringen av dina användare välbekant och enkel. Genom att länka samma [Azure AD-klient](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) med flera tjänster, är de användarkonton som du tidigare har synkroniserat tillgängliga för alla molnbaserade tjänster.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Så här synkroniserar du lokala användare med Azure AD
-Det enda verktyg som du behöver för att synkronisera dina användarkonton med Azure AD är [Azure AD Connect-guiden](https://www.microsoft.com/download/details.aspx?id=47594). Azure AD Connect-guiden är verktyget som steg för steg hjälper dig att ansluta den lokala identitetsinfrastrukturen till molnet.  Välj topologi och preferenser (en eller flera kataloger, lösenordssynkronisering eller federation). Guiden distribuerar och konfigurerar alla komponenter som krävs för att upprätta anslutningen. Exempel: Sync Services, Active Directory Federation Services (AD FS) och Azure AD PowerShell-modulen.
+Det enda verktyg som du behöver för att synkronisera dina användarkonton med Azure AD är [Azure AD Connect-guiden](https://www.microsoft.com/download/details.aspx?id=47594). Azure AD Connect-guiden är verktyget som steg för steg hjälper dig att ansluta den lokala identitetsinfrastrukturen till molnet. Välj topologi och preferenser (en eller flera kataloger, hash-synkronisering av lösenord, direktautentisering eller federation). Guiden distribuerar och konfigurerar alla komponenter som krävs för att upprätta anslutningen. Exempel: Sync Services, Active Directory Federation Services (AD FS) och Azure AD PowerShell-modulen.
 
 > [!TIP]
 > Azure AD Connect innehåller funktioner som tidigare lanserats som Dirsync och Azure AD Sync. Lär dig mer om [katalogintegrering](http://technet.microsoft.com/library/jj573653.aspx). Mer information om hur du synkroniserar användarkonton från en lokal katalog till Azure AD finns i [Likheter mellan Active Directory och Azure AD](http://technet.microsoft.com/library/dn518177.aspx).

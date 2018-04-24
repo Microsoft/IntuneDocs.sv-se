@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 67a2891e4c7a6adcd7bd132c5663c9a78426ea07
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: eb27605108feb3a2db3072d4a8b7a296f0f74cfc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-conditional-access"></a>Felsöka villkorlig åtkomst
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Vanligtvis försöker en användare få åtkomst till e-post eller SharePoint och får då ett meddelande med en uppmaning om att registrera enheten. Meddelandet dirigerar användaren till företagsportalen.
 
@@ -49,20 +49,20 @@ Du kan se dessa villkor för varje enhet i Azure-hanteringsportalen och i invent
 
 ## <a name="compliance-issues"></a>Efterlevnadsproblem
 
- -  Enheten uppfyller inte kraven för Intune-principen. Vanliga problem är krav på kryptering och lösenord. Användaren omdirigeras till företagsportalen där de kan konfigurera enheten så att den uppfyller kraven.
- -  Det kan ta en stund innan efterlevnadsinformationen har registrerats för enheten. Vänta några minuter och försök igen.
- -  För iOS-enheter:
-     -   En befintlig e-postprofil som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen informerar användaren om att de inte uppfyller kraven på grund av den manuellt konfigurerade e-postprofilen, och användaren uppmanas att ta bort profilen. Användaren bör ta bort e-postprofilen så att Intune-profilen kan distribueras. För att förhindra det här problemet ber du användarna att göra registreringen utan att installera en e-postprofil så att Intune kan distribuera profilen.
-     -   En iOS-enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Detta kan åtgärdas genom att starta om företagsportalen så att kompatibilitetstillståndet motsvarar enhetstillståndet i Intune. När alla data har samlats in från en enhetssynkronisering går efterlevnadskontrollen snabbt (mindre än en halv sekund i genomsnitt).
+- Enheten uppfyller inte kraven för Intune-principen. Vanliga problem är krav på kryptering och lösenord. Användaren omdirigeras till företagsportalen där de kan konfigurera enheten så att den uppfyller kraven.
+- Det kan ta en stund innan efterlevnadsinformationen har registrerats för enheten. Vänta några minuter och försök igen.
+- För iOS-enheter:
+  - En befintlig e-postprofil som skapats av användaren blockerar distributionen av en profil som skapats av Intune-administratören. Det här är ett vanligt problem eftersom iOS-användare vanligtvis skapar en e-postprofil och sedan gör registreringen. Företagsportalen informerar användaren om att de inte uppfyller kraven på grund av den manuellt konfigurerade e-postprofilen, och användaren uppmanas att ta bort profilen. Användaren bör ta bort e-postprofilen så att Intune-profilen kan distribueras. För att förhindra det här problemet ber du användarna att göra registreringen utan att installera en e-postprofil så att Intune kan distribuera profilen.
+  - En iOS-enhet kan fastna i ett tillstånd där efterlevnaden kontrolleras, vilket hindrar användaren från att påbörja en ny incheckning. Detta kan åtgärdas genom att starta om företagsportalen så att kompatibilitetstillståndet motsvarar enhetstillståndet i Intune. När alla data har samlats in från en enhetssynkronisering går efterlevnadskontrollen snabbt (mindre än en halv sekund i genomsnitt).
 
-        Orsaken till att enheter fastnar i det här tillståndet är vanligtvis att de har problem med att ansluta till tjänsten eller att synkroniseringen tar lång tid.  Om problemet kvarstår i olika nätverkskonfigurationer (mobilnät, Wi-Fi, VPN) efter att du har startat om enheterna och har verifierat att SSP är uppdaterad på enheten, kontaktar du Microsoft Support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+    Orsaken till att enheter fastnar i det här tillståndet är vanligtvis att de har problem med att ansluta till tjänsten eller att synkroniseringen tar lång tid.  Om problemet kvarstår i olika nätverkskonfigurationer (mobilnät, Wi-Fi, VPN) efter att du har startat om enheterna och har verifierat att SSP är uppdaterad på enheten, kontaktar du Microsoft Support enligt beskrivningen i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
- - För Android-enheter:
-    - Vissa Android-enheter kan verka vara krypterade, men företagsportalappen identifierar dessa enheter som inte krypterade. 
+- För Android-enheter:
+   - Vissa Android-enheter kan verka vara krypterade, men företagsportalappen identifierar dessa enheter som inte krypterade. 
     
-        -   Enheter i det här tillståndet kräver att användaren anger ett lösenord för säker start. Användaren ser ett meddelande om enheten från företagsportalappen som ber användaren att ange ett lösenord för att starta enheten. När du tryckt på enhetsmeddelandet och bekräftat den befintliga PIN-koden eller lösenordet väljer du alternativet att **kräva PIN-kod för att starta enheten** på skärmen för **säker start**. Tryck sedan på knappen **Kontrollera efterlevnad** för enheten från företagsportalappen. Enheten bör nu identifieras som krypterad.
+       -   Enheter i det här tillståndet kräver att användaren anger ett lösenord för säker start. Användaren ser ett meddelande om enheten från företagsportalappen som ber användaren att ange ett lösenord för att starta enheten. När du tryckt på enhetsmeddelandet och bekräftat den befintliga PIN-koden eller lösenordet väljer du alternativet att **kräva PIN-kod för att starta enheten** på skärmen för **säker start**. Tryck sedan på knappen **Kontrollera efterlevnad** för enheten från företagsportalappen. Enheten bör nu identifieras som krypterad.
     
-        -   Vissa enhetstillverkare krypterar sina enheter med en standard-PIN-kod i stället för den hemliga PIN-koden som användaren anger. Intune identifierar kryptering med standard-PIN-koden som osäker eftersom den här metoden för kryptering kan utsätta data på enheten för risker i form av användare med tillgång till enheten som vill vålla skada. Om det här är ett problem kan du överväga att använda [appskyddsprinciper](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
+       -   Vissa enhetstillverkare krypterar sina enheter med en standard-PIN-kod i stället för den hemliga PIN-koden som användaren anger. Intune identifierar kryptering med standard-PIN-koden som osäker eftersom den här metoden för kryptering kan utsätta data på enheten för risker i form av användare med tillgång till enheten som vill vålla skada. Om det här är ett problem kan du överväga att använda [appskyddsprinciper](/intune-classic/deploy-use/azure-portal-for-microsoft-intune-mam-policies).
 
 ## <a name="policy-issues"></a>Principfrågor
 
@@ -118,22 +118,22 @@ Om du inte kan lösa problemet med dessa felsökningsanvisningar kanske du ombed
 ### <a name="exchange-connector-logs"></a>Exchange Connector-loggar
 
 #### <a name="general-log-information"></a>Allmän logginformation
-Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool](visningsverktyg för serverspårning) (https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx'). Det här verktyget kräver att du hämtar Windows Server SDK.
+Du kan se Exchange Connector-loggar med [Server Trace Viewer Tool](visningsverktyg för serverspårning) (<https://msdn.microsoft.com/library/ms732023(v=vs.110).aspx>'). Det här verktyget kräver att du hämtar Windows Server SDK.
 
 >[!NOTE]
 >Loggarna finns i C:\ProgramData\Microsoft\Windows Intune Exchange Connector\Logs. Loggarna finns i en serie med 30 loggfiler som börjar med *Connector0.log* och slutar med *Connector29.log*. När 10 MB data har samlats i en logg går loggningen vidare till nästa logg. När loggningen når Connector29 börjar den om med Connector0 igen och de tidigare loggfilerna skrivs över.
 
 #### <a name="locating-sync-logs"></a>Hitta synkroniseringsloggar
 
--    Leta upp en fullständig synkronisering i loggarna genom att söka efter **full sync**. Början av en fullständig synkronisering markeras med följande text:
+- Leta upp en fullständig synkronisering i loggarna genom att söka efter **full sync**. Början av en fullständig synkronisering markeras med följande text:
 
-    'Handling command: Getting the mobile device list without a time filter (full sync) for <number> users` (Hanteringskommando: Hämtar listan med mobila enheter utan tidsfilter (fullständig synkronisering) för <number> användare)
+  'Handling command: Getting the mobile device list without a time filter (full sync) for <number> users` (Hanteringskommando: Hämtar listan med mobila enheter utan tidsfilter (fullständig synkronisering) för <number> användare)
 
-    Slutet på loggen för en fullständig synkronisering ser ut så här:
+  Slutet på loggen för en fullständig synkronisering ser ut så här:
 
-    Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. (Hämtningen av listan med mobila enheter utan tidsfilter (fullständig synkronisering) för 4 användare har slutförts.) Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected',' (Information: Resultat för inventeringskommando - Enheter som synkroniserats: 0 Kommando-ID: commandIDGUID' Exchange-hälsa: 'Serverhälsa 'Namn: 'PowerShellExchangeServer: <Namn=mitte-postservername>' Status: Ansluten',')
+  Getting the mobile device list without a time filter (full sync) for 4 users completed successfully. (Hämtningen av listan med mobila enheter utan tidsfilter (fullständig synkronisering) för 4 användare har slutförts.) Details: Inventory command result - Devices synced: 0 Commmand ID: commandIDGUID' Exchange health: 'Server health 'Name: 'PowerShellExchangeServer: <Name=mymailservername>' Status: Connected',' (Information: Resultat för inventeringskommando - Enheter som synkroniserats: 0 Kommando-ID: commandIDGUID' Exchange-hälsa: 'Serverhälsa 'Namn: 'PowerShellExchangeServer: <Namn=mitte-postservername>' Status: Ansluten',')
 
--   Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync**.
+- Leta reda på en snabbsynkronisering (deltasynkronisering) i loggarna genom att söka efter **quick sync**.
 
 ##### <a name="exceptions-in-get-next-command"></a>Undantag i Get next command (Hämta nästa kommando)
 Kontrollera om det finns undantag i **Get next command** (Hämta nästa kommando) i Exchange Connector-loggarna och skicka dessa till Microsoft Support.

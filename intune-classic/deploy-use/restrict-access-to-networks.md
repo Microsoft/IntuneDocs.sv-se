@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e455f291d9bfdb655f6c66cad7bf859a864e756d
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 1893410f4993d6feaa218d251dd7e2561286f5a3
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-cisco-ise-with-microsoft-intune"></a>Använda Cisco ISE med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Med Intune-integration i Cisco Identity Services Engine (ISE) kan du skapa nätverksprinciper i ISE-miljön med hjälp av enhetsregistrering och kompatibilitetstillstånd i Intune. Med dessa principer kan du säkerställa att åtkomsten till företagets nätverk är begränsad till enheter som hanteras av Intune och är kompatibla med Intune-principer.
 
@@ -70,13 +70,13 @@ b. Välj låsikonen &gt;  **Mer information**.
 
 ### <a name="obtain-a-self-signed-cert-from-ise"></a>Skaffa ett självsignerat certifikat från ISE 
 
-1.  I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
-2.       Exportera det självsignerade certifikatet.
+1. I ISE-konsolen väljer du **Administration** > **Certifikat** > **Systemcertifikat** > **Generera självsignerat certifikat**.  
+2. Exportera det självsignerade certifikatet.
 3. Redigera det exporterade certifikatet i en textredigerare:
 
- - Ta bort **-----BEGIN CERTIFICATE-----**
- - Ta bort **-----END CERTIFICATE-----**
- 
+   - Ta bort **-----BEGIN CERTIFICATE-----**
+   - Ta bort **-----END CERTIFICATE-----**
+
 Se till att all text är på en enda rad
 
 
@@ -88,13 +88,13 @@ Se till att all text är på en enda rad
 5. Spara filen utan att ändra dess namn.
 6. Ge appen behörighet till Microsoft Graph och Microsoft Intune API.
 
- a. Välj följande för Microsoft Graph:
+   a. Välj följande för Microsoft Graph:
     - **Behörigheter för program**: Läsa katalogdata
     - **Delegerad behörighet**:
         - Få åtkomst till användarens data när som helst
         - Logga in användare
 
- b. För Microsoft Intune API väljer du **Hämta enhetsstatus och efterlevnad från Intune** under **Behörigheter för program**.
+   b. För Microsoft Intune API väljer du **Hämta enhetsstatus och efterlevnad från Intune** under **Behörigheter för program**.
 
 7. Välj **Visa slutpunkter** och kopiera följande värden som ska användas vid konfigurering av ISE-inställningar:
 
@@ -105,23 +105,40 @@ Se till att all text är på en enda rad
 |Uppdatera koden med klient-ID|Klient-ID|
 
 ### <a name="step-4-upload-the-self-signed-certificate-from-ise-into-the-ise-app-you-created-in-azure-ad"></a>Steg fyra: Överför det självsignerade certifikatet från ISE till ISE-appen som du skapade i Azure AD
-1.     Hämta det base64-kodade certifikatvärdet och tumavtrycket från en offentlig .cer-X509-cert-fil. Det här exemplet använder PowerShell:
-   
-      
-      $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2    $cer.Import(“mycer.cer”)    $bin = $cer.GetRawCertData()    $base64Value = [System.Convert]::ToBase64String($bin)    $bin = $cer.GetCertHash()    $base64Thumbprint = [System.Convert]::ToBase64String($bin)    $keyid = [System.Guid]::NewGuid().ToString()
- 
-    Lagra värdena för $base64Thumbprint, $base64Value och $keyid, som ska användas i nästa steg.
-2.       Överför certifikatet via manifestfilen. Logga in på [Windows Azure-hanteringsportal](https://manage.windowsazure.com)
-2.      Hitta det program som du vill konfigurera med ett X.509-certifikat i Azure AD-snapin-modulen.
-3.      Hämta program-manifestfilen. 
-5.      Ersätt den tomma egenskapen "KeyCredentials": [], med följande JSON.  Den komplexa typen av KeyCredentials dokumenteras i [Entity and complex type reference](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType) (Entitet och komplex typreferens).
+1. Hämta det base64-kodade certifikatvärdet och tumavtrycket från en offentlig .cer-X509-cert-fil. Det här exemplet använder PowerShell:
 
- 
-    “keyCredentials“: [ { “customKeyIdentifier“: “$base64Thumbprint_from_above”, “keyId“: “$keyid_from_above“, “type”: “AsymmetricX509Cert”, “usage”: “Verify”, “value”:  “$base64Value_from_above” }2. 
-     ], 
- 
+
+~~~
+  $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+  $cer.Import(“mycer.cer”)
+  $bin = $cer.GetRawCertData()
+  $base64Value = [System.Convert]::ToBase64String($bin)
+  $bin = $cer.GetCertHash()
+  $base64Thumbprint = [System.Convert]::ToBase64String($bin)
+  $keyid = [System.Guid]::NewGuid().ToString()
+
+Store the values for $base64Thumbprint, $base64Value and $keyid, to be used in the next step.
+~~~
+2. Överför certifikatet via manifestfilen. Logga in på [Windows Azure-hanteringsportal](https://manage.windowsazure.com)
+3. Hitta det program som du vill konfigurera med ett X.509-certifikat i Azure AD-snapin-modulen.
+4. Hämta program-manifestfilen. 
+5. Ersätt den tomma egenskapen "KeyCredentials": [], med följande JSON.  Den komplexa typen av KeyCredentials dokumenteras i [Entity and complex type reference](https://msdn.microsoft.com/library/azure/ad/graph/api/entity-and-complex-type-reference#KeyCredentialType) (Entitet och komplex typreferens).
+
+
+~~~
+“keyCredentials“: [
+{
+ “customKeyIdentifier“: “$base64Thumbprint_from_above”,
+ “keyId“: “$keyid_from_above“,
+ “type”: “AsymmetricX509Cert”,
+ “usage”: “Verify”,
+ “value”:  “$base64Value_from_above”
+ }2. 
+ ], 
+~~~
+
 Exempel:
- 
+
     “keyCredentials“: [
     {
     “customKeyIdentifier“: “ieF43L8nkyw/PEHjWvj+PkWebXk=”,
@@ -131,10 +148,10 @@ Exempel:
     “value”: “MIICWjCCAgSgAwIBA***omitted for brevity***qoD4dmgJqZmXDfFyQ”
     }
     ],
- 
-6.      Spara ändringen till program-manifestfilen.
-7.      Överför den redigerade programmanifestfilen genom Azure-hanteringsportalen.
-8.      Valfritt: Hämta manifestet igen för att kontrollera att ditt X.509-certifikat finns på programmet.
+
+6. Spara ändringen till program-manifestfilen.
+7. Överför den redigerade programmanifestfilen genom Azure-hanteringsportalen.
+8. Valfritt: Hämta manifestet igen för att kontrollera att ditt X.509-certifikat finns på programmet.
 
 >[!NOTE]
 >

@@ -12,16 +12,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 211b3c94dd7172d1755e3c12bb4d90dbcf28750d
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 21ff7b173bb466ee25dd82c82d3668de110b823d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lär dig hur du skapar en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 En efterlevnadsprincip i Intune för Windows-enheter anger de regler och inställningar som Windows-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser. Du kan även få enhetsrapporter och vidta åtgärder vid inkompatibilitet. Du skapar efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Mer information om efterlevnadsprinciper och de förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
@@ -74,24 +74,27 @@ Du har tillämpat principen på användarna. Efterlevnaden hos de enheter som an
 
 <!---## Compliance policy settings--->
 
-## <a name="system-security-settings"></a>Systemsäkerhetsinställningar
+## <a name="compliance-policy-settings-for-windows-phone-devices"></a>Inställningar för efterlevnadsprinciper för Windows Phone-enheter
 
-### <a name="password"></a>Lösenord
+Inställningarna i det här avsnittet stöds på Windows Phone 8.1 och senare.
+### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
+
+#### <a name="password"></a>Lösenord
 
 - **Kräv lösenord för att låsa upp mobila enheter:** Ställ in på **Ja** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 - **Tillåt enkla lösenord:** Ställ in på **Ja** för att låta användarna skapa enkla lösenord som ”**1234**” eller ”**1111**”.
 - **Minsta längd på lösenord:** Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
+
+  För enheter som kör Windows och som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om Minsta längd på lösenord är större än åtta tecken eller om Minsta antal teckenuppsättningar är större än två.
 - **Lösenordstyp som krävs**: Ange om användarna måste skapa ett **alfanumeriskt** eller **numeriskt lösenord**.
-
-För enheter som kör Windows och som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om Minsta längd på lösenord är större än åtta tecken eller om Minsta antal teckenuppsättningar är större än två.
-
+  
 - **Minsta antal teckenuppsättningar:** Om alternativet för **Krav på lösenordstyp** är **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
   - Gemener
   - Versaler
   - Symboler
   - Siffror
 
-Om du anger en hög siffra för den här inställningen kräver det att användarna skapar lösenord som är mer komplexa. För enheter som kör Windows och som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om Minsta längd på lösenord är större än åtta tecken eller om Minsta antal teckenuppsättningar är större än två.
+  Om du anger en hög siffra för den här inställningen kräver det att användarna skapar lösenord som är mer komplexa. För enheter som kör Windows och som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om Minsta längd på lösenord är större än åtta tecken eller om Minsta antal teckenuppsättningar är större än två.
 
 - **Minuter av inaktivitet innan lösenord måste anges:** Anger efter hur lång tids inaktivitet som användaren måste ange lösenordet igen.
 - **Lösenordets giltighetstid (dagar)**: Ange antalet dagar tills användarens lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
@@ -99,15 +102,16 @@ Om du anger en hög siffra för den här inställningen kräver det att använda
 - **Förhindra återanvändning av tidigare lösenord**: Om **Spara lösenordshistorik** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
 - **Kräv lösenord när enheten lämnar inaktivt läge:** Den här inställningen bör användas tillsammans med inställningen **Minuter av inaktivitet innan lösenord måste anges**. Användarna uppmanas att ange ett lösenord för att få åtkomst till en enhet som har varit inaktiv under den tid som anges i inställningen **Minuter av inaktivitet innan lösenord måste anges**.
 
-**Den här inställningen gäller endast Windows 10 Mobile-enheter.**
+> [!NOTE]
+> Den här inställningen gäller endast Windows 10 Mobile-enheter.
 
-### <a name="encryption"></a>Kryptering
+#### <a name="encryption"></a>Kryptering
 
 - **Kräv kryptering på den mobila enheten:** Välj **Ja** för den här inställningen om du vill kräva att enheten ska krypteras för att ansluta till resurser.
 
 
 
-## <a name="device-health-settings"></a>Inställningar för enhetens hälsotillstånd
+### <a name="device-health-settings"></a>Inställningar för enhetens hälsotillstånd
 
 - **Kräv att enheter ska rapporteras som felfria:** Du kan ange en regel för att kräva att **Windows 10 Mobile**-enheter rapporteras som felfria i nya eller befintliga efterlevnadsprinciper. Om den här inställningen är aktiverad utvärderas Windows 10-enheter via hälsoattesteringstjänsten (HAS) för följande datapunkter:
   - **BitLocker är aktiverat:** Om BitLocker är aktiverat kan enheten skydda data mot obehörig åtkomst när datorn är avstängd eller försätts i viloläge. Med Windows BitLocker-diskkryptering krypteras alla data på volymen för Windows-operativsystemet. BitLocker använder TPM-modulen för att skydda Windows-operativsystemet och användardata och ser till att datorn inte manipuleras, även om du lämnar den obevakad, tappar bort den eller om den blir stulen. Om datorn är utrustad med en kompatibel TPM använder BitLocker TPM för att låsa krypteringsnycklarna som skyddar data. Därför kan inte nycklarna användas förrän TPM har verifierat datorns tillstånd
@@ -116,53 +120,56 @@ Om du anger en hög siffra för den här inställningen kräver det att använda
 
 Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om [kryptografiprovidern för hälsoattesteringstjänsten](https://msdn.microsoft.com/library/dn934876.aspx).
 
-## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
+### <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
 - **Lägsta operativsystemversion som krävs:** När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 - **Högsta tillåtna version av operativsystemet:** När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
 <!---## Compliance policy settings for Windows PCs--->
 
-## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
+## <a name="compliance-policy-settings-for-windows-pcs"></a>Inställningar för efterlevnadsprinciper för Windows-datorer
 
-### <a name="password"></a>Lösenord
+Inställningarna i det här avsnittet stöds på Windows-datorer.
+### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
+
+#### <a name="password"></a>Lösenord
 
 - **Minsta längd på lösenord:** – Stöds i Windows 8.1.
 
-Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
+  Ange det minsta antal siffror eller tecken som användarens lösenord måste innehålla.
 
-För enheter som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om **Minsta längd på lösenord** är längre än åtta tecken eller om **Minsta antal teckenuppsättningar** är större än två.
+  För enheter som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om **Minsta längd på lösenord** är längre än åtta tecken eller om **Minsta antal teckenuppsättningar** är större än två.
 
 - **Krav på lösenordstyp**: Stöds på Windows RT, Windows RT 8.1 och Windows 8.1
 
-Ange om användarna måste skapa ett **alfanumeriskt** eller **numeriskt** lösenord.
+  Ange om användarna måste skapa ett **alfanumeriskt** eller **numeriskt** lösenord.
 
 - **Minsta antal teckenuppsättningar**: Stöds på Windows RT, Windows RT 8.1 och Windows 8.1. Om alternativet för **Krav på lösenordstyp** är **Alfanumeriskt** anger den här inställningen det minsta antal teckenuppsättningar som lösenordet måste innehålla. De fyra teckenuppsättningarna är:
   - Gemener
   - Versaler
   - Symboler
-  - Siffror: Om du anger en hög siffra för den här inställningen kräver det att användarna skapar lösenord som är mer komplexa.
+  - Siffror 
 
-För enheter som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om **Minsta längd på lösenord** är längre än åtta tecken eller om **Minsta antal teckenuppsättningar** är större än två.
+    Om du anger en hög siffra för den här inställningen måste användarna skapa lösenord som är mer komplexa. För enheter som nås med ett Microsoft-konto utvärderas efterlevnadsprincipen inte korrekt om **Minsta längd på lösenord** är längre än åtta tecken eller om **Minsta antal teckenuppsättningar** är större än två.
 
 - **Minuter av inaktivitet innan lösenord måste anges:** – Stöds på Windows RT, Windows RT 8.1 och Windows 8.1
 
-Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
+  Ange efter hur lång tids inaktivitet som användaren måste ange sitt lösenord igen.
 
 - **Lösenordets giltighetstid (dagar)**: Stöds på Windows RT, Windows RT 8.1 och Windows 8.1.
 
-Ange antalet dagar tills användarens lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
+  Ange antalet dagar tills användarens lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
 
 - **Spara lösenordshistorik:** – Stöds på Windows RT, Windows RT och Windows 8.1.
 
-Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** om du inte vill att användaren ska kunna återanvända tidigare använda lösenord.
+  Använd den här inställningen i kombination med **Förhindra återanvändning av tidigare lösenord** om du inte vill att användaren ska kunna återanvända tidigare använda lösenord.
 
 - **Förhindra återanvändning av tidigare lösenord:** – Stöds på Windows RT, Windows RT 8.1 och Windows 8.1
 
-Om **Spara lösenordshistorik:** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
+  Om **Spara lösenordshistorik:** har valts anger du hur många tidigare använda lösenord som inte får återanvändas.
 
 
-## <a name="device-health-settings"></a>Inställningar för enhetens hälsotillstånd
+### <a name="device-health-settings"></a>Inställningar för enhetens hälsotillstånd
 
 - **Kräv att enheter ska rapporteras som felfria:** – Stöds på Windows 10-enheter. Du kan ange en regel för att begära att Windows 10-enheter rapporteras som felfria i nya eller befintliga efterlevnadsprinciper. Om den här inställningen är aktiverad utvärderas Windows 10-enheter via hälsoattesteringstjänsten (HAS) för följande datapunkter:
   - **BitLocker är aktiverat:** Om BitLocker är aktiverat kan enheten skydda data mot obehörig åtkomst när datorn är avstängd eller försätts i viloläge. Med Windows BitLocker-diskkryptering krypteras alla data på volymen för Windows-operativsystemet. BitLocker använder TPM-modulen för att skydda Windows-operativsystemet och användardata och ser till att datorn inte manipuleras, även om du lämnar den obevakad, tappar bort den eller om den blir stulen. Om datorn är utrustad med en kompatibel TPM använder BitLocker TPM för att låsa krypteringsnycklarna som skyddar data. Därför kan inte nycklarna användas förrän TPM har verifierat datorns tillstånd
@@ -172,17 +179,17 @@ Om **Spara lösenordshistorik:** har valts anger du hur många tidigare använda
 
 Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om [kryptografiprovidern för hälsoattesteringstjänsten](https://msdn.microsoft.com/library/dn934876.aspx).
 
-## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
+### <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
 - **Lägsta version av operativsystemet som krävs:** – Stöds på Windows 8.1 och Windows 10.
 
-Ange numret för major.minor.build.CU här. Versionsnumret måste motsvara den version som returneras av kommandot ```winver```.
+  Ange numret för major.minor.build.CU här. Numret för build.CU måste motsvara den version som returneras av kommandot ```winver```.
 
-Om en enhet har en tidigare version än den angivna operativsystemversionen rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
+  Om en enhet har en tidigare version än den angivna operativsystemversionen rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 
 - **Högsta tillåtna version av operativsystemet:** – Stöds på Windows 8.1 och Windows 10.
 
-När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+  När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
 Du kan ta reda på vilken operativsystemversion som krävs för inställningarna **Lägsta version av operativsystemet som krävs** och **Högsta tillåtna version av operativsystemet** genom att köra kommandot **winver** från Kommandotolken. Kommandot winver returnerar den rapporterade versionen av operativsystemet.
 

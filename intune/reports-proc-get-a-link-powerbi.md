@@ -1,33 +1,33 @@
 ---
 title: Ansluta till informationslagret med Power BI
 titlesuffix: Microsoft Intune
-description: "Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva och dynamiskt skapade rapporter för Microsoft Intune-klientorganisationen."
+description: Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva och dynamiskt skapade rapporter för Microsoft Intune-klientorganisationen.
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1266fa4cc5ef958e369e58b0a6619e2bab3dd3eb
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: ef039f5182a379c319dd29f3ebfa3f7436261a0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Ansluta till informationslagret med Power BI
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Du kan ladda ned en fil och använda den med Microsoft Power BI för att läsa in interaktiva, dynamiskt skapade rapporter för Intune-klientorganisationen. Informationslagrets Power BI-fil (pbix) innehåller anslutningsinställningar för klientorganisationen, samt följande exempelrapporter och diagram:  
 
-  -  Egenskaper
+  -  Enheter
   -  Registrering
   -  Appskyddsprincip
   -  Policy för efterlevnad
@@ -39,7 +39,7 @@ Här markeras också trenderna för registrering, regelefterlevnad, enhetens kon
 
 I följande anvisningar visas hur du laddar ned Power BI-filen och använder OData-länken med Power BI.
 
-[!INCLUDE[reports-credential-reqs](./includes/reports-credential-reqs.md)]
+[!INCLUDE [reports-credential-reqs](./includes/reports-credential-reqs.md)]
 
 ## <a name="install-power-bi"></a>Installera Power BI
 

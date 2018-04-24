@@ -1,31 +1,29 @@
 ---
-title: "Lös hot som upptäckts av Lookout for Work i iOS | Microsoft Docs"
-description: "Lär dig att åtgärda ett hot som hittades av Lookout for Work på iOS."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Lös hot som upptäckts av Lookout for Work i iOS | Microsoft Docs
+description: Lär dig att åtgärda ett hot som hittades av Lookout for Work på iOS.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 04/03/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dd6aec3a-4063-4054-8d0f-d2f2034f0d3d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: f317c8ddf89510e695b727548d5abafdf9319c25
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: be7d54cdde7e82cd0e0d4820ecfddff171e5984a
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work
 
-Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas kan se ut ungefär så här:
-
-![Meddelande om bristande kompatibilitet från Lookout from Work](./media/ios-lfw-noncompliant-in-ssp.png)
+Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan.
 
 Åtgärda problemet genom att öppna appen Lookout for Work och följa anvisningarna som visas i appen.
 

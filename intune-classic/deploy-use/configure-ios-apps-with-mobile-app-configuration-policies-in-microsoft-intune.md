@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e0fa9f66ee0338b21e12a27ef60fb0df22d23030
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 02e821f24c378c15a474adda901699664a9af68a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurera iOS-appar med konfigurationsprinciper för mobilappar i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd konfigurationsprinciper för mobilappar i Microsoft Intune om du vill definiera inställningar som kan krävas när användaren kör en app. En app kan till exempel kräva att användarna anger:
 
@@ -77,14 +77,14 @@ Den nya principen visas i noden **Konfigurationsprinciper** .
 ## <a name="information-about-the-xml-file-format"></a>Information om XML-filformatet
 
 Intune har stöd för följande datatyper i en egenskapslista:
-    
+
 - &lt;heltal&gt;
 - &lt;verklig&gt;
 - &lt;sträng&gt;
 - &lt;matris&gt;
 - &lt;dict&gt;
 - &lt;sant/&gt; eller &lt;falskt/&gt;
-     
+
 Mer information om datatyper finns i [About Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) i iOS Developer Library.
 
 Dessutom stöder Intune följande typer av token i egenskapslistan:
@@ -97,7 +97,7 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 - \{\{username\}\} – (Exempel: **Johan Danielsson**)
 - \{\{serialnumber\}\} – (Exempel: **F4KN99ZUG5V2**) för iOS-enheter
 - \{\{serialnumberlast4digits\}\} – (Exempel: **G5V2**) för iOS-enheter
-    
+
 Tecknen \{\{ och \}\} används endast av tokentyper och får inte användas för andra ändamål.
 
 ## <a name="associate-a-mobile-app-configuration-policy-with-an-app"></a>Associera en konfigurationsprincip för mobilappar med en app
@@ -139,5 +139,4 @@ När du skapar en konfigurationsfil för mobilappar kan du ange en eller flera a
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
 </dict>
-
 ```

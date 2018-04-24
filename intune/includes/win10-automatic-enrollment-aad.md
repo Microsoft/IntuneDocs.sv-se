@@ -2,7 +2,7 @@
 
 Med automatisk registrering kan användarna registrera sina Windows 10-enheter i Intune. Användarna registrerar genom att lägga till sina arbetskonton till sina personligt ägda enheter eller genom att ansluta sina företagsägda enheter till Azure Active Directory. Enheten registreras och ansluts till Azure Active Directory i bakgrunden. När enheten har registrerats hanteras den med Intune.
 
-**Krav**
+**Förutsättningar**
 - Azure Active Directory Premium-prenumeration ([provprenumeration](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune-prenumeration
 
@@ -11,21 +11,21 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
 
 1. Logga in på [Azure Portal](https://portal.azure.com) och välj **Azure Active Directory**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-azure-main.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-azure-main.png)
 
 2. Välj **Mobility (MDM och MAM)**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-mdm.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-mdm.png)
 
 3. Välj **Microsoft Intune**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-intune.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-intune.png)
 
 4. Konfigurera **MDM-användaromfattning**. Ange vilka användares enheter som ska hanteras av Microsoft Intune. Dessa Windows 10-enheter kan registreras automatiskt för hantering med Microsoft Intune.
 
-  - **Ingen** – Automatisk registrering av MDM är inaktiverad
-  - **Vissa** – Välj de **grupper** som automatiskt kan registrera sina Windows 10-enheter
-  - **Alla** – Alla användare kan automatiskt registrera sina Windows 10-enheter
+   - **Ingen** – Automatisk registrering av MDM är inaktiverad
+   - **Vissa** – Välj de **grupper** som automatiskt kan registrera sina Windows 10-enheter
+   - **Alla** – Alla användare kan automatiskt registrera sina Windows 10-enheter
 
       > [!IMPORTANT]
       > Om både **MAM-användaromfattning** och automatisk MDM-registrering (**MDM-användaromfattning**) är aktiverat för en grupp så är endast MAM aktiverat. Endast MAM läggs till för användare i gruppen när de arbetsplatsansluter personliga enheter. Enheter MDM-registreras inte automatiskt.

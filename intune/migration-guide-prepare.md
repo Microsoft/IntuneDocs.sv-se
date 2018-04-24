@@ -14,11 +14,11 @@ ms.technology: ''
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 52af99e79b9c97fc38dc911fb55070180667b7a1
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: f7bf390bd581e3edee1c94f446e89b16163cadee
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fas 1: Förbered Microsoft Intune för hantering av mobilenheter (MDM)
 
@@ -55,23 +55,23 @@ Innan du går in i detalj om hur Intune ska konfigureras, så låt oss titta på
 
 ### <a name="what-is-your-device-security-policy"></a>Vilken är din säkerhetsprincip för enheter?
 
--   Behöver du använda kryptering på enhetsnivå?
+- Behöver du använda kryptering på enhetsnivå?
 
--   Hur långa enhetslösenord/PIN-koder använder du nu?
+- Hur långa enhetslösenord/PIN-koder använder du nu?
 
--   Måste du inaktivera enhetsfunktioner eller begränsa vissa enhetsbeteenden? Du kan styra olika plattformsspecifika inställningar med enhetskonfigurationsprofiler, till exempel:
-      - Inaktivera kamera
-      - Lås till enkelt appläge<br/>
+- Måste du inaktivera enhetsfunktioner eller begränsa vissa enhetsbeteenden? Du kan styra olika plattformsspecifika inställningar med enhetskonfigurationsprofiler, till exempel:
+    - Inaktivera kamera
+    - Lås till enkelt appläge<br/>
 
--   Vilka typer av autentisering måste du stödja? Om du behöver certifikatbaserad autentisering, vilka typer av certifikat krävs i så fall?
+- Vilka typer av autentisering måste du stödja? Om du behöver certifikatbaserad autentisering, vilka typer av certifikat krävs i så fall?
   - Intune kan tillhandahålla certifikat med resursåtkomstprofiler för registrerade enheter.
-    -   Vilken typ av Public Key Infrastructure (PKI) behöver du stöd för?
-<br></br>
--   Behöver du stöd för virtuella privata nätverk på enhets- eller appnivå?
+  -   Vilken typ av Public Key Infrastructure (PKI) behöver du stöd för?
+  <br></br>
+- Behöver du stöd för virtuella privata nätverk på enhets- eller appnivå?
 
-    -   Intune kan tillhandahålla VPN-konfigurationer för VPN-tredjepartsleverantörer.
-<br/><br/>
--   Går det att göra tillfälliga undantag för vissa krav om det skulle bidra till att undvika driftavbrott? Eller måste enheter med åtkomst alltid uppfylla alla säkerhetskrav?
+  -   Intune kan tillhandahålla VPN-konfigurationer för VPN-tredjepartsleverantörer.
+  <br/><br/>
+- Går det att göra tillfälliga undantag för vissa krav om det skulle bidra till att undvika driftavbrott? Eller måste enheter med åtkomst alltid uppfylla alla säkerhetskrav?
 
 ## <a name="next-steps"></a>Nästa steg
 Läs dessa [fallstudier](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) från olika branschsektorer och se hur organisationer har utvärderat sina krav för hantering av mobila enheter.

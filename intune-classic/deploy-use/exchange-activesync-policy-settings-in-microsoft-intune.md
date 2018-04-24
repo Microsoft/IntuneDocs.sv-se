@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ce43f43e2d5522d947f0db244023b93635f1d19f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 25bdc7da543cdc38ccbe70651c145750ba96c082
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-policy-settings-in-microsoft-intune"></a>Exchange ActiveSync-principinställningar i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurera inställningar som styr en mängd funktioner på enheter som hanteras av Exchange ActiveSync.
 
@@ -44,10 +44,11 @@ Använd **Exchange ActiveSync**-principen i Microsoft Intune för att konfigurer
 
 ## <a name="encryption-settings"></a>Krypteringsinställningar
 
-|Inställningsnamn|Information|
-|----------------|---|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att data på en enhet krypteras när detta stöds.<br><br>För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|
-|**Kräv kryptering på minneskort**|Kräver att data som lagras på externa lagringsenheter, t.ex. ett SD-kort, ska krypteras (på enheter som stöds).
+|                           Inställningsnamn                           |                                                                                                                                    Information                                                                                                                                    |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Kräv kryptering på den mobila enheten</strong><sup>1</sup> | Kräver att data på en enhet krypteras när detta stöds.<br><br>För Windows Phone 8-enheter måst du ställa in denna på <strong>Ja</strong>.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen <strong>Kräv lösenord för att låsa upp mobila enheter</strong>. |
+|       <strong>Kräv kryptering på minneskort</strong>       |                                                                                  Kräver att data som lagras på externa lagringsenheter, t.ex. ett SD-kort, ska krypteras (på enheter som stöds).                                                                                  |
+
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
 
 -   Om du vill tillämpa kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](https://support.microsoft.com/kb/3013816) på varje enhet.

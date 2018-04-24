@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0f9ecb8cf16d8c344ea595c53ab91c9b1f00c90e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4973e896109589a91891545bbf6db6ca6df45aad
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune"></a>Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt användarkonto som kan registrera upp till 1 000 enheter. Du kan lägga till befintliga användare till DEM-kontot för att ge dem speciella DEM-funktioner. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter (d.v.s. utan användartillhörighet) snarare än personliga enheter (BYOD).  
 
@@ -67,22 +67,22 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="add-a-device-enrollment-manager"></a>Lägg till en enhetsregistreringshanterare
 
-1.  Kontrollera att användaren som du vill lägga till i DEM-kontot redan finns. Om du behöver lägga till användaren loggar du in på [Office 365-portalen](https://go.microsoft.com/fwlink/p/?LinkId=698854) och följer stegen i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+1. Kontrollera att användaren som du vill lägga till i DEM-kontot redan finns. Om du behöver lägga till användaren loggar du in på [Office 365-portalen](https://go.microsoft.com/fwlink/p/?LinkId=698854) och följer stegen i [Lägga till användare individuellt eller i grupp till Office 365-portalen](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-2.  Logga in på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
+2. Logga in på [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) med dina administratörsautentiseringsuppgifter.
 
-3.  Gå till navigeringsfönstret och välj **Admin**, så sedan till **Administratörshantering** och välj **Enhetsregistreringshanteraren**. Sidan **Enhetsregistreringshanterare** visas.
+3. Gå till navigeringsfönstret och välj **Admin**, så sedan till **Administratörshantering** och välj **Enhetsregistreringshanteraren**. Sidan **Enhetsregistreringshanterare** visas.
 
-4.  Välj **Lägg till...**. Dialogrutan **Lägg till enhetsregistreringshanterare** öppnas.
+4. Välj **Lägg till...**. Dialogrutan **Lägg till enhetsregistreringshanterare** öppnas.
 
-5.  Ange Intune-kontots **användar-ID** och välj sedan **OK**.
+5. Ange Intune-kontots **användar-ID** och välj sedan **OK**.
 
-    DEM-användaren kan nu registrera mobila enheter på samma sätt som när en slutanvändare registrerar en BYOD i företagsportalen. Användaren av hanteraren kan installera företagsportalappen och registrera enheten med sina autentiseringsuppgifter för DEM på upp till 1000 enheter. Stegen för att registrera slutanvändare för varje plattform finns i:
+   DEM-användaren kan nu registrera mobila enheter på samma sätt som när en slutanvändare registrerar en BYOD i företagsportalen. Användaren av hanteraren kan installera företagsportalappen och registrera enheten med sina autentiseringsuppgifter för DEM på upp till 1000 enheter. Stegen för att registrera slutanvändare för varje plattform finns i:
 
-  - [Registrera en iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
-  - [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
-  - [Registrera en Android-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
-  - [Registrera en Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
+   - [Registrera en iOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios)
+   - [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos)
+   - [Registrera en Android-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-android)
+   - [Registrera en Windows-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows)
 
 ## <a name="delete-a-device-enrollment-manager-from-intune"></a>Ta bort en enhetsregistreringshanterare från Intune
 

@@ -1,29 +1,29 @@
 ---
-title: "Skydd för Skype för företag – Online"
-description: "Skydda och styr åtkomsten till Skype för företag – Online med villkorlig åtkomst."
-keywords: 
+title: Skydd för Skype för företag – Online
+description: Skydda och styr åtkomsten till Skype för företag – Online med villkorlig åtkomst.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1b2d7125-f63f-43cf-ac1e-94fbedf2a7e8
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 30d1abb3e7411cae73a98be51489cffdfc738e7f
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: d9d912cc0a2d8f815e046d888fc8878a8703c514
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-skype-for-business-online-with-microsoft-intune"></a>Skydda åtkomsten till Skype för företag – Online med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan använda principen för villkorlig åtkomst för **Skype för företag – Online** om du vill kontrollera åtkomsten till Skype för företag – Online.
 Villkorlig åtkomst består av två komponenter:
@@ -87,23 +87,23 @@ När du är klar, fortsätt till **Steg 3**.
 ### <a name="step-3-configure-the-skype-for-business-online-policy"></a>Steg 3: Konfigurera principen för Skype för företag – Online
 Nu ska du konfigurera principen så att endast hanterade och kompatibla enheter kan komma åt Skype för företag – Online. Denna policy kommer att lagras i Azure Active Directory.
 
-1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Princip för Skype för företag – Online**.
+1. I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Princip för Skype för företag – Online**.
 
-  ![Skärmbild av sidan för principen för villkorlig åtkomst för Skype för företag – Online](./media/conditional_access_SFBPolicy.png)
+   ![Skärmbild av sidan för principen för villkorlig åtkomst för Skype för företag – Online](./media/conditional_access_SFBPolicy.png)
 
-2.  Välj **Aktivera princip för villkorlig åtkomst**.
+2. Välj **Aktivera princip för villkorlig åtkomst**.
 
-3.  Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
+3. Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
 
-    -   **iOS**
+   -   **iOS**
 
-    -   **Android**
+   -   **Android**
 
-4.  Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen ska gälla för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
+4. Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen ska gälla för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
 
-5.  Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
+5. Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
 
-6.  När du är klar väljer du **Spara**.
+6. När du är klar väljer du **Spara**.
 
 Nu har du konfigurerat villkorlig åtkomst för Skype för företag – Online. Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 

@@ -1,28 +1,28 @@
 ---
-title: "Åtgärda konflikter mellan grupprincipobjekt och Intune-principer"
-description: "Läs om hur du löser konflikter mellan Grupprincip och Intune-konfigurationsprinciper."
-keywords: 
+title: Åtgärda konflikter mellan grupprincipobjekt och Intune-principer
+description: Läs om hur du löser konflikter mellan Grupprincip och Intune-konfigurationsprinciper.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9764a1fec44ff5aae7ebcf63b3ebde252bb687f9
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: f6d12dd886fe475161e767e63177313a729e170d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Lösa konflikter mellan grupprincipobjekt och Microsoft Intune-principer
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune använder principer som hjälper dig att hantera inställningarna på Windows PC-datorer. Du använder t.ex. en princip för att kontrollera PC-datorernas inställningar för Windows-brandväggen. Många Intune-inställningar påminner om de inställningar som du kan konfigurera med Grupprincip i Windows. Emellanåt kan det dock hända att de två metoderna hamnar i konflikt med varandra.
 

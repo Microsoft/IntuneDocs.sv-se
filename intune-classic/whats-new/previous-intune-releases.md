@@ -2,8 +2,8 @@
 title: Tidigare versioner
 description: ''
 keywords: ''
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/13/2017
 ms.topic: article
@@ -14,17 +14,17 @@ ms.assetid: 45dad14a-d412-488d-bb1e-ad990ea503df
 ROBOTS: NOINDEX,NOFOLLOW
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76e53cabba9b684170d659ae5b8ef884bfe9abaa
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 57b2ab83f356eac27f668908a9a14b4f9310da19
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="previous-intune-releases"></a>Tidigare versioner av Intune
 
 Den här sidan är en lista över de senaste meddelandena i [Nyheter i Microsoft Intune](whats-new-in-microsoft-intune.md).
 
-[!INCLUDE[wit_nextref](../includes/whats-new-last-six-months.md)]
+[!INCLUDE [wit_nextref](../includes/whats-new-last-six-months.md)]
 
 ## <a name="july-2016"></a>Juli 2016
 
@@ -94,12 +94,12 @@ Information om Intune-tjänstens hälsotillstånd har nu flyttats till en centra
     * Måste hanteras av Intune
     * Måste vara kompatibla med alla distribuerade efterlevnadsprinciper för Intune
 
- Användare med icke kompatibla enheter uppmanas att registrera sig och åtgärda eventuella efterlevnadsproblem för att få åtkomst.
+  Användare med icke kompatibla enheter uppmanas att registrera sig och åtgärda eventuella efterlevnadsproblem för att få åtkomst.
 - **Villkorlig åtkomst för webbläsare.** Du kan skapa en princip för villkorlig åtkomst för [Exchange Online](/intune-classic/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune) så att programmen bara kan användas från webbläsare som stöds i hanterade och godkända iOS- och Android-enheter. Användare som försöker logga in till Outlook Web Access (OWA) och SharePoint-webbplatser med iOS- och Android-enheter uppmanas att registrera sina enheter med Intune samt att åtgärda eventuella efterlevnadsproblem innan de kan logga in.
-<!---TFS 1175844--->
+  <!---TFS 1175844--->
 
 - **Dynamics CRM Online stöder villkorlig åtkomst.** Du kan skapa en princip för villkorlig åtkomst för [Dynamics CRM Online](/intune-classic/deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune) så att det bara kan användas av hanterade och kompatibla iOS- och Android-enheter. Slutanvändare som försöker logga in i mobilappen för Dynamics CRM på iOS och Android uppmanas att registrera sig i Intune samt åtgärda eventuella efterlevnadsproblem innan de kan logga in.
-<!---TFS1295358--->
+  <!---TFS1295358--->
 
 ### <a name="intune-company-portal-updates"></a>Uppdateringar av Intune-företagsportalen
 
@@ -180,19 +180,19 @@ Alla dessa funktioner stöds även för kunder med hybriddistributioner (Configu
 
 ### <a name="app-management"></a>Apphantering
 - **MAM-efterlevnad.**
-Nu kan du visa [statusen](/intune-classic/deploy-use/monitor-mobile-app-management-policies-with-Microsoft-Intune) för dina programhanteringsprinciper för alla användare i din Azure Active Directory-klientorganisation (AAD). Du måste bland annat:
-   - Egenskaper
-   - Appar på enheten
+  Nu kan du visa [statusen](/intune-classic/deploy-use/monitor-mobile-app-management-policies-with-Microsoft-Intune) för dina programhanteringsprinciper för alla användare i din Azure Active Directory-klientorganisation (AAD). Du måste bland annat:
+  - Egenskaper
+  - Appar på enheten
 
-   Statusvärden:
+    Statusvärden:
 
-   **Incheckad**: Anger att principen distribuerades till användaren, att appen har använts i arbetskontexten och att principen har tillämpats.
+    **Incheckad**: Anger att principen distribuerades till användaren, att appen har använts i arbetskontexten och att principen har tillämpats.
 
     **Inte incheckad**: Anger att principen distribuerades till användaren, men att appen inte har använts i arbetskontexten sedan dess.
 
 
 - **MAM-kontroller för att förhindra att Outlook-kontakter synkroniseras (Android).**
-Det finns en ny inställning för [Hantering av mobilprogram](/intune-classic/deploy-use/wipe-managed-company-app-data-with-Microsoft-Intune). Kontakter som redan har sparats i den interna adressboken tas bort. Den här nya inställningen stöds av Outlook på Android-enheter.
+  Det finns en ny inställning för [Hantering av mobilprogram](/intune-classic/deploy-use/wipe-managed-company-app-data-with-Microsoft-Intune). Kontakter som redan har sparats i den interna adressboken tas bort. Den här nya inställningen stöds av Outlook på Android-enheter.
 
 ### <a name="device-management"></a>Enhetshantering
 - **Identifiering av telefonnummer för företagsägda enheter.** Telefoner kategoriserade som ”företagsägda” identifieras nu med sina fullständiga telefonnummer, t.ex. när du kör en inventeringsrapport för mobila enheter. BYOD-telefonnummer döljs fortfarande med ***, och bara de fyra sista siffrorna visas.
@@ -212,6 +212,6 @@ Stöd för **iOS-företagsportalappen** har lagts till för dra-för-att-uppdate
 
 Innan dessa statusar lades till var det förvirrande för användarna när en appinstallation tog lång tid eftersom de bara såg statusen ”Installerar”, som kan visas på skärmen i flera timmar. Med de nya statusarna kan användarna, i stället för att kontakta supportavdelningen, trycka på länken ”Väntar på att enheten ska synkroniseras” och följa anvisningarna för att tvinga synkroniseringen att fortsätta.
 
->[!div class="step-by-step"]
-
->[&larr; **Nyheter i Intune**](whats-new-in-microsoft-intune.md)    
+> [!div class="step-by-step"]
+> 
+> [&larr; **Nyheter i Intune**](whats-new-in-microsoft-intune.md)    

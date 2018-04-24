@@ -14,11 +14,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5494e4b2b6a7983d05ac83d9bc495677ee1a1ab
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: dc73befb46f1f159d9a8c023bb5604517b9f73f4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-mdm-authority"></a>Ändra MDM-utfärdare
 Från och med Configuration Manager version 1610 kan du ändra din MDM-utfärdare utan att behöva kontakta Microsoft Support, och utan att behöva avregistrera och omregistrera dina befintliga hanterade enheter. Det här avsnittet beskriver hur du ändrar en befintlig Microsoft Intune-klient som konfigurerats i Intune med fristående **Microsoft Intune** som MDM-utfärdare till **Configuration Manager** (hybrid-MDM) utan att du behöver avregistrera och omregistrera befintliga hanterade enheter.
@@ -76,16 +76,16 @@ Om du har iOS-enheter måste du konfigurera APNs-certifikatet i Configuration Ma
 
 1. **Ladda ned en certifikatsigneringsförfrågan**
 
-    1. Gå till **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune-prenumerationer** i Configuration Manager-konsolen och välj **Skapa APNs-certifikatförfrågan** för att öppna dialogrutan **Certifikatsigneringsförfrågan för Apple Push-aviseringstjänst**.  
-    2. **Bläddra** till sökvägen för att spara den nya filen för certifikatsigneringsförfrågan (.csr). Spara begäran om certifikatsignering (.csr) lokalt.  
-    3. Klicka på **Ladda ned**. Den nya CSR-filen för Microsoft Intune hämtas och sparas av Configuration Manager.   
+   1. Gå till **Administration** &gt; **Cloud Services** &gt; **Microsoft Intune-prenumerationer** i Configuration Manager-konsolen och välj **Skapa APNs-certifikatförfrågan** för att öppna dialogrutan **Certifikatsigneringsförfrågan för Apple Push-aviseringstjänst**.  
+   2. **Bläddra** till sökvägen för att spara den nya filen för certifikatsigneringsförfrågan (.csr). Spara begäran om certifikatsignering (.csr) lokalt.  
+   3. Klicka på **Ladda ned**. Den nya CSR-filen för Microsoft Intune hämtas och sparas av Configuration Manager.   
 
-    > [!IMPORTANT]
-    > Du måste ladda ned en ny certifikatsigneringsförfrågan. Du kan inte använda en befintlig fil.  
+      > [!IMPORTANT]
+      > Du måste ladda ned en ny certifikatsigneringsförfrågan. Du kan inte använda en befintlig fil.  
 
-2.  Gå till [Apple Push Certificates-portalen](http://go.microsoft.com/fwlink/?LinkId=269844) och logga in med **samma** Apple-ID som användes tidigare för att skapa och förnya det APNs-certifikat som du använde i fristående Intune.
+2. Gå till [Apple Push Certificates-portalen](http://go.microsoft.com/fwlink/?LinkId=269844) och logga in med **samma** Apple-ID som användes tidigare för att skapa och förnya det APNs-certifikat som du använde i fristående Intune.
 
-    ![Inloggningssida för Apple Push Certificates-portalen](../media/mdm-change-apns-portal.png)
+   ![Inloggningssida för Apple Push Certificates-portalen](../media/mdm-change-apns-portal.png)
 
 3. Välj det APNs-certifikat som du använde i fristående Intune och klicka sedan på **Förnya**.
 

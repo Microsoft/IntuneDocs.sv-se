@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e9572181fb15ec97e7ae4c11a8ab2e4fe4cc9b30
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 1b09545e99f18815e690ad224e11e772e8911c8a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-enrollment-for-mobile-devices"></a>Aktivera registrering av mobila enheter
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet beskriver hur en Intune-administratör kan aktivera registreringen av mobila enheter. Hjälp med att använda Intune på din telefon finns i [Använda hanterade enheter för att få arbetet gjort](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions).
 
@@ -66,4 +66,4 @@ Du kan också aktivera olika scenarier för [registrering av företagsägda enhe
 Gratulerar! Du har slutfört det sista steget i *snabbstartsguiden för Intune*. Nu när den första konfigurationen är klar kan du välja att aktivera ytterligare MDM-funktioner.
 
 >[!div class="step-by-step"]
->[&larr; **Registrera enheter**](.\start-with-a-paid-subscription-to-microsoft-intune-step-8.md) [**Åtgärder efter konfigurering** &rarr;](.\post-configuration-tasks.md)  
+>[&larr; **Registrera enheter**](./start-with-a-paid-subscription-to-microsoft-intune-step-8.md) [**Åtgärder efter konfigurering** &rarr;](./post-configuration-tasks.md)  

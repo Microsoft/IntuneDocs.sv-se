@@ -15,15 +15,15 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a5b09f855b6da65edf3c560725b339528f2bcfaa
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0297cb0b399d487f548bf6fdd9fb74946bbcb7b1
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-android-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika Android-appar i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 En verksamhetsspecifik app är en app som du lägger till i Intune från en appinstallationsfil. Dessa typer av appar är vanligen skrivna internt. Intune installerar den verksamhetsspecifika appen på användarens enhet. 
 
@@ -74,7 +74,7 @@ Den app som du har skapat visas i listan över appar där du kan välja att till
 
 ## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
 
-[!INCLUDE[shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
+[!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 
 > [!Note]
 > För att Intune-tjänsten ska kunna distribuera en ny APK-fil till enheten, måste du öka android:versionCode-strängen i AndroidManifest.xml-filen i ditt APK-paket.

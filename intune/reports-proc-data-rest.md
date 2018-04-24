@@ -1,25 +1,25 @@
 ---
-title: "Hämta data från API för informationslager med en REST-klient"
+title: Hämta data från API för informationslager med en REST-klient
 titlesuffix: Microsoft Intune
-description: "Hämta data från Intune-informationslagret med ett RESTful-API."
-keywords: 
+description: Hämta data från Intune-informationslagret med ett RESTful-API.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: D6D15039-4036-446C-A58F-A5E18175720A
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 22bfcc4e2947cba54509409132da3687d51a472d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 5ba065b53560a4e1d3f1fffbe6cea56e85da0f06
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Hämta data från API för Intune-informationslagret med en REST-klient
 
@@ -45,7 +45,7 @@ Skapa en inbyggd app i Azure. Den här inbyggda appen är klientappen. Klienten 
     3.  Skriv en webbadress för **Inloggningswebbadress**. Inloggningswebbadressen beror på den särskilda situationen men om du tänkt använda Postman skriver du `https://www.getpostman.com/oauth2/callback`. Du kommer sedan använda callback (återanrop) för klientautentiseringen när du autentiserar till Azure AD.
 4.  Välj **Skapa**.
 
-     ![API för Intune-informationslager](media\reports-get_rest_data_client_overview.png)
+     ![API för Intune-informationslager](./media/reports-get_rest_data_client_overview.png)
 
 5. Observera appens värde för **Program-ID**. Det här värdet ska användas i nästa avsnitt.
 
@@ -62,7 +62,7 @@ Nu har du definierat en app i Azure. Bevilja åtkomst från inbyggda klientappen
 7.  Välj **Välj**.
 8.  Markera rutan **Delegerade behörigheter** för att lägga till **Hämta informationslagerdata från Microsoft Intune**.
 
-    ![Aktivera åtkomst – Microsoft Intune API](media\reports-get_rest_data_client_access.png)
+    ![Aktivera åtkomst – Microsoft Intune API](./media/reports-get_rest_data_client_access.png)
 
 9.  Välj **Välj**.
 10.  Välj **Klar**.
@@ -77,7 +77,7 @@ Du kan arbeta med API för Intune-informationslager med en vanlig REST-klient, t
 
 Du behöver följande information för att skicka ett REST-anrop via Postman:
 
-| Attribut        | Beskrivning                                                                                                                                                                          | Exempel                                                                                       |
+| Attribut        | Description                                                                                                                                                                          | Exempel                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Callback URL (Webbadress för återanrop)     | Ställ in det här som webbadress för återanrop på appinställningssidan.                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | Token Name (Tokennamn)       | En sträng som används för att skicka autentiseringsuppgifter till Azure-appen. Med den här processen skapas din token så att du kan anropa API för informationslagret.                          | Bearer                                                                                        |
@@ -132,7 +132,7 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 
 12. Välj **Request Token** (Begär token).
 
-    ![Information för token](media\reports-postman_getnewtoken.png)
+    ![Information för token](./media/reports-postman_getnewtoken.png)
 
 13. Ange dina autentiseringsuppgifter på auktoriseringssidan i Active AD. I listan över token i Postman finns nu token med namnet `Bearer`.
 14. Välj **Använd token**. Listan över sidhuvuden innehåller det nya nyckelvärdet för auktorisering och värdet `Bearer <your-authorization-token>`.
@@ -142,7 +142,7 @@ Om du vill hämta en ny åtkomsttoken för Postman måste du lägga till Azure A
 1.  Välj **Skicka**.
 2.  Returnerade data visas i svarstexten i Postman.
 
-    ![Postman 200OK](media\reports-postman_200OK.png)
+    ![Postman 200OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Skapa en REST-klient (C#) för att hämta data från Intune-informationslagret
 
@@ -151,45 +151,45 @@ Följande exempel innehåller en enkel REST-klient. Koden använder klassen **ht
 > [!Note]  
 > Du kan öppna följande kodexempel [i GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). De senaste ändringarna och uppdateringarna av exemplet hittar du i GitHub-databasen.
 
-1.  Öppna **Microsoft Visual Studio**.
-2.  Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)).
-3.  Ge projektet namnet ` IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och välj sedan **OK**.
-4.  Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Välj **Bläddra** och skriv sedan `Microsoft.IdentityModel.Clients.ActiveDirectory` i sökrutan.
+1. Öppna **Microsoft Visual Studio**.
+2. Välj **File**(Arkiv) > **New project** (Nytt projekt). Expandera **Visual C#** och välj **Console App (.Net Framework)** (Konsolapp (.Net Framework)).
+3. Ge projektet namnet ` IntuneDataWarehouseSamples`, bläddra dit där du vill spara projektet och välj sedan **OK**.
+4. Högerklicka på namnet på lösningen i Solution Explorer och välj sedan **Manage NuGet Packages for Solution** (Hantera NuGet-paket för lösning). Välj **Bläddra** och skriv sedan `Microsoft.IdentityModel.Clients.ActiveDirectory` i sökrutan.
 5. Välj paketet och markera projektet **IntuneDataWarehouseSamples** under Manage Packages for Your Solution (Hantera paket för lösningen) och välj sedan **Install** (Installera).
 6. Välj **I Accept** (Jag accepterar) för att godkänna NuGet-paketlicensen.
 7. Öppna `Program.cs` från Solution Explorer.
 
-    ![Projekt i Visual Studio](media\reports-get_rest_data_in.png)
+    ![Projekt i Visual Studio](./media/reports-get_rest_data_in.png)
 
-8.  Ersätt koden i Program.cs med följande kod:  
-    ```csharp
-namespace IntuneDataWarehouseSamples
-{
-    using System;
-    using System.Net.Http;
-    using System.Net.Http.Headers;
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
+8. Ersätt koden i Program.cs med följande kod:  
+   ```csharp
+   namespace IntuneDataWarehouseSamples
+   {
+   using System;
+   using System.Net.Http;
+   using System.Net.Http.Headers;
+   using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
-    class Program
-    {
-     static void Main(string[] args)
-  {
+   class Program
+   {
+    static void Main(string[] args)
+   {
    /**
-    * TODO: Replace the below values with your own.
-    * emailAddress - The email address of the user that you will authenticate as.
-    *
-    * password  - The password for the above email address.
-    *    This is inline only for simplicity in this sample. We do not
-    *    recommend storing passwords in plaintext.
-    *
-    * applicationId - The application ID of the native app that was created in AAD.
-    *
-    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
-    *      the Azure portal.
-    *
-    * collectionName - The name of the warehouse entity collection you would like to
-    *      access.
-    */
+   * TODO: Replace the below values with your own.
+   * emailAddress - The email address of the user that you will authenticate as.
+   *
+   * password  - The password for the above email address.
+   *    This is inline only for simplicity in this sample. We do not
+   *    recommend storing passwords in plaintext.
+   *
+   * applicationId - The application ID of the native app that was created in AAD.
+   *
+   * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
+   *      the Azure portal.
+   *
+   * collectionName - The name of the warehouse entity collection you would like to
+   *      access.
+   */
    var emailAddress = "intuneadmin@yourcompany.com";
    var password = "password_of(intuneadmin@yourcompany.com)";
    var applicationId = "<Application ID>";
@@ -198,9 +198,9 @@ namespace IntuneDataWarehouseSamples
 
    var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
    AuthenticationResult authResult = adalContext.AcquireTokenAsync(
-    resource: "https://api.manage.microsoft.com/",
-    clientId: applicationId,
-    userCredential: new UserPasswordCredential(emailAddress, password)).Result;
+   resource: "https://api.manage.microsoft.com/",
+   clientId: applicationId,
+   userCredential: new UserPasswordCredential(emailAddress, password)).Result;
 
    var httpClient = new HttpClient();
    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
@@ -212,16 +212,16 @@ namespace IntuneDataWarehouseSamples
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
-  }
-    }
-    ```
+   }
+   }
+   ```
 
-9.  Uppdatera `TODO`-texten i kodexemplet.
-10.  Tryck på **Ctrl + F5** för att skapa och köra Intune.DataWarehouseAPIClient-klienten i felsökningsläge.
+9. Uppdatera `TODO`-texten i kodexemplet.
+10. Tryck på **Ctrl + F5** för att skapa och köra Intune.DataWarehouseAPIClient-klienten i felsökningsläge.
 
-    ![Datumentitet som hämtats i JSON-format.](media\reports-get_rest_data_output.png)
+    ![Datumentitet som hämtats i JSON-format.](./media/reports-get_rest_data_output.png)
 
-11.  Granska konsolutdata. Utdata består av data i ett JSON-format som hämtats från **dates**-entiteten i din Intune-klientorganisation.
+11. Granska konsolutdata. Utdata består av data i ett JSON-format som hämtats från **dates**-entiteten i din Intune-klientorganisation.
 
 ## <a name="next-steps"></a>Nästa steg
 

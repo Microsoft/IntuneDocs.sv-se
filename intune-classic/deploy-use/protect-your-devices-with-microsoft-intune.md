@@ -15,22 +15,22 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 699d07daa1f16dd7746b531a1687ba97b06973a2
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: ea1cc3bc2d662a0d74c87fb5616f3626d580a7e9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Skydda enheter med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 I Microsoft Intune finns en fullständig uppsättning funktioner som hjälper dig att skydda de enheter som du hanterar och de data som lagras på dessa enheter. I det här avsnittet får du lära dig grunderna om funktionerna och veta hur du lär dig mer.
 
 ## <a name="general-ways-to-protect-all-devices"></a>Generella metoder för att skydda alla enheter
 
 ### <a name="device-configuration"></a>Enhetskonfiguration
-Med Intune [konfigurationsprinciper](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) kan du skydda och konfigurera enheter med hjälp av flera inställningar och funktioner. Exempel:
+Med Intune [konfigurationsprinciper](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md) kan du skydda och konfigurera enheter med hjälp av flera inställningar och funktioner. Till exempel:
 - Du kan begränsa användningen av maskinvarufunktioner på enheten, till exempel kameran eller Bluetooth.
 - Du kan konfigurera kompatibla och icke-kompatibla appar. Du får en varning om en icke-kompatibel app installeras (och på vissa plattformar kan installationen blockeras).
 

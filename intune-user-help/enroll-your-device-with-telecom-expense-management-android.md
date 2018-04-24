@@ -1,27 +1,27 @@
 ---
-title: "Registrera Android-enheten i kostnadshanteringsprogrammet för telekomtjänster med Intune"
-description: "Läs om hur du registrerar en Android-enhet i kostnadsuppföljning av telekommunikation."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Registrera Android-enheten i kostnadshanteringsprogrammet för telekomtjänster med Intune
+description: Läs om hur du registrerar en Android-enhet i kostnadsuppföljning av telekommunikation.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 26aa3698-7e4d-453a-8852-ab75e72b6485
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 68f760c84b1394245494809de094e603e388e59b
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: dced939de37ca9fe7172ac0a8bec3fa391a24ed1
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrera Android-enheten i kostnadshanteringsprogrammet
 
@@ -39,11 +39,11 @@ Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsä
 
 1. Välj __Registrera med Microsoft-konto__.
 
-  ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
+   ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
 
 2. Välj ditt arbets- eller skolkonto bland tillgängliga konton. Om ditt konto inte finns med i listan kan du logga in med hjälp av knappen **Lägg till konto**.
 
-  ![En skärmbild av fönstret ”Välj konto” som visar ett exempelkonto och knappen Lägg till konto.](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
+   ![En skärmbild av fönstret ”Välj konto” som visar ett exempelkonto och knappen Lägg till konto.](./media/and-enroll-12b-tem-datalert-enroll-select-msft-account.png)
 
 3. Datalert-installationen körs en liten stund och bör sedan ha slutförts. Tryck på __Slutför__ när den är klar.
 
@@ -51,15 +51,15 @@ Tryck på pilen __nästa__ längst upp till höger på skärmen för att fortsä
 
 1. Ange enhetens telefonnummer.
 
-  ![En skärmbild på när programmet Datalert begär ett telefonnummer.](./media/and-enroll-13-tem-datalert-phone-number.png)
+   ![En skärmbild på när programmet Datalert begär ett telefonnummer.](./media/and-enroll-13-tem-datalert-phone-number.png)
 
 2. Du får sedan en verifieringskod via SMS. Ange koden och tryck på __OK__.
 
-  ![En skärmbild på när programmet verifieringskoden via SMS.](./media/and-enroll-14-tem-datalert-sms.png)
+   ![En skärmbild på när programmet verifieringskoden via SMS.](./media/and-enroll-14-tem-datalert-sms.png)
 
 3. När du har angett verifieringskoden är installationen av Datalert färdig. När du har tryckt på __Slutför__ kan du övervaka dina data från Datalert.
 
-  ![En skärmbild av Datalerts övervakning av dagens dataförbrukning.](./media/and-enroll-15-tem-datalert-monitoring-active.png)
+   ![En skärmbild av Datalerts övervakning av dagens dataförbrukning.](./media/and-enroll-15-tem-datalert-monitoring-active.png)
 
 När du har registrerat enheten, börjar du se din dataanvändning av i appen Datalert.
 

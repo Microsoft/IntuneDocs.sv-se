@@ -1,5 +1,5 @@
 ---
-title: Nyheter under föregående månader i Microsoft Intune
+title: Nyheter de senaste månaderna i Microsoft Intune – Azure | Microsoft Docs
 titlesuffix: ''
 description: Granska äldre meddelanden från Intunes sida med nyheter
 keywords: ''
@@ -16,15 +16,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2326078f57abf3101869b463aca8eba55aad2905
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: d87cf0a56a6b114a210242691d0441882c186964
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nyheter i Microsoft Intune – föregående månader
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="october-2017"></a>Oktober 2017
 
@@ -570,7 +570,7 @@ Mer information finns i [Enhetsbegränsningar i Microsoft Intune med Android for
 Vi lägger till nya [inställningar i begränsningsprofilen för Windows-enheter](device-restrictions-windows-10.md) som styr funktioner som trådlösa skärmar, enhetsidentifiering, programväxling och felmeddelanden för SIM-kort.
 
 #### <a name="updates-to-certificate-configuration----918991-and-823198---"></a>APN-certifikatet har konfigurerats <!-- 918991 and 823198 -->
-När skapar en SCEP certifikatet profil för **Ämnesnamnets format**, **Anpassad** alternativet är tillgängligt för iOS, Android och Windows-enheter. Innan den här uppdateringen var fältet **Anpassad** endast tillgängligt för iOS-enheter. Mer information finns i [så här skapar du en SCEP-certifikatprofil] (certificates-scep-configure.md#how-to-create-a-scep-certificate-profile).
+När skapar en SCEP certifikatet profil för <strong>Ämnesnamnets format</strong>, <strong>Anpassad</strong> alternativet är tillgängligt för iOS, Android och Windows-enheter. Innan den här uppdateringen var fältet <strong>Anpassad</strong> endast tillgängligt för iOS-enheter. Mer information finns i [Skapa en SCEP-certifikatprofil](certificates-scep-configure.md#create-a-scep-certificate-profile).
 
 När du skapar en PKCS-certifikatprofil för **Alternativt ämnesnamn** är **attributet anpassad Azure AD** tillgängligt. Alternativet **Avdelning** är tillgängligt när du väljer **attributet anpassad Azure AD**. Mer information finns i [så här skapar du en PKCS-certifikatprofil](certficates-pfx-configure.md#create-a-device-configuration-profile).
 

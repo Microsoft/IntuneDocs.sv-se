@@ -1,25 +1,25 @@
 ---
-title: "Hantera dataöverföring mellan iOS-appar"
+title: Hantera dataöverföring mellan iOS-appar
 titlesuffix: Microsoft Intune
-description: "Läs om hur du använder principer för hantering av mobilappar i Microsoft Intune för att hantera dataöverföringar mellan appar."
-keywords: 
+description: Läs om hur du använder principer för hantering av mobilappar i Microsoft Intune för att hantera dataöverföringar mellan appar.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 441f78a8b3b9c41610b78a27dbe51fb144dd82da
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 4c2872e70697b15326f89abd5721048643c5421a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Hantera dataöverföring mellan iOS-appar med Microsoft Intune
 ## <a name="manage-ios-apps"></a>Hantera iOS-appar
@@ -63,9 +63,9 @@ Inställningen för användar-UPN **måste** konfigureras för enheter som hante
 
 2. Ange följande inställning i avsnittet för programkonfiguration:
 
-  **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
+   **nyckel** = IntuneMAMUPN,  **värde** = <username@company.com>
 
-  Den exakta syntaxen för nyckel/värde-paret kan variera beroende på MDM-lösning. Tabellen nedan innehåller exempel på tredjepartsleverantörer av MDM-lösningar och de exakta värden som du anger för nyckel/värde-paret.
+   Den exakta syntaxen för nyckel/värde-paret kan variera beroende på MDM-lösning. Tabellen nedan innehåller exempel på tredjepartsleverantörer av MDM-lösningar och de exakta värden som du anger för nyckel/värde-paret.
 
 |MDM-tredjepartsleverantör| Konfigurationsnyckel | Värdetyp | Konfigurationsvärde|
 | ------- | ---- | ---- | ---- |

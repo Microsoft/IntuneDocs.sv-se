@@ -1,29 +1,29 @@
 ---
-title: "Principinställningar för Windows"
-description: "Använd Intunes allmänna konfigurationsprincip för Windows (Windows 8.1 och senare) om du vill konfigurera inställningar för registrerade Windows 8.1- och Windows 8-enheter."
-keywords: 
+title: Principinställningar för Windows
+description: Använd Intunes allmänna konfigurationsprincip för Windows (Windows 8.1 och senare) om du vill konfigurera inställningar för registrerade Windows 8.1- och Windows 8-enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6982a2bc-aafa-475a-9236-4840b709e5a1
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9fa8d8454e9d22b2d3c36cd6449805d709c34ffa
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ccd5bd201de59537dbf99ea9e19d84dbf80c1a20
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-policy-settings-in-microsoft-intune"></a>Principinställningar för Windows i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Windows 8.1 och senare)** om du vill konfigurera följande inställningar för registrerade Windows 8-, Windows 8.1-och Windows RT 8.1-enheter:
 
@@ -40,7 +40,7 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 |**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|
 |**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemener, versaler, siffror och symboler. För iOS-enheter specificerar den här inställningen i stället det antal symboler som måste inkluderas i lösenordet.|
 |**Minsta längd på lösenord**|Konfigurerar den minsta tillåtna längden (i antal tecken) för lösenordet.|
-|**Antal tillåtna, upprepade felinloggningar innan enheten rensas**|Rensar enheten efter så här många misslyckade inloggningsförsök.|
+|**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Rensar enheten efter så här många misslyckade inloggningsförsök.|
 |**Antal minuter av inaktivitet innan skärmen stängs av**|Anger antalet minuter en enhet måste vara inaktiv innan det krävs ett lösenord för att låsa upp den.|
 |**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|
 |**Kom ihåg tidigare lösenord**|Anger om användaren kan konfigurera tidigare använda lösenord.|
@@ -49,9 +49,10 @@ Använd Microsoft Intunes **allmänna konfigurationsprincip för Windows (Window
 
 ## <a name="encryption-settings"></a>Krypteringsinställningar
 
-|Inställningsnamn|Information|
-|----------------|-----|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup>|Kräver att filer på enheten krypteras.|
+|                           Inställningsnamn                           |                     Information                      |
+|------------------------------------------------------------------|--------------------------------------------------|
+| <strong>Kräv kryptering på den mobila enheten</strong><sup>1</sup> | Kräver att filer på enheten krypteras. |
+
 <sup>1</sup> Ytterligare information för enheter som kör Windows 8.1
 
 -   Om du vill framtvinga kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](http://support.microsoft.com/kb/3013816) på varje enhet.

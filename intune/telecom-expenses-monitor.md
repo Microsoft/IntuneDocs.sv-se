@@ -1,28 +1,28 @@
 ---
-title: "Konfigurera tjänsten för kostnadsuppföljning av telekommunikation"
+title: Konfigurera tjänsten för kostnadsuppföljning av telekommunikation
 titleSuffix: Microsoft Intune
-description: "Integrera Intune med Saaswedos tjänst för kostnadsuppföljning av telekommunikation."
+description: Integrera Intune med Saaswedos tjänst för kostnadsuppföljning av telekommunikation.
 keywords: Saaswedo
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ef755a1fd5f94342f551ac168136217dbc82b244
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: af81b4cca369cae69cff6ea52bb5df9ce369cd7f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Konfigurera tjänsten för kostnadsuppföljning av telekommunikation i Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Med Intune kan du hantera telekomkostnader för dataanvändning på företagsägda mobila enheter. Intune implementerar den här funktionen genom integrering med tredjepartsprogramutvecklaren Saaswedos lösning för kostnadsuppföljning av telekommunikation, Datalert. Datalert är en programvara för kostnadsuppföljning av telekommunikation som låter dig hantera telekommunikationens dataanvändning. Den hjälper dig att undvika kostsam och oväntad överförbrukning av data och nätverksväxling för dina Intune-hanterade enheter.
 
@@ -39,7 +39,7 @@ Innan du kan använda Datalert med Intune måste du konfigurera inställningar i
 - Samsung Knox
 - iOS 8.0 och senare
 
-## <a name="prerequisites"></a>Nödvändiga komponenter
+## <a name="prerequisites"></a>Krav
 
 - En prenumeration på Microsoft Intune och åtkomst till Azure-portalen.
 - En prenumeration på Datalert-tjänsten för kostnadsuppföljning av telekommunikation
@@ -72,7 +72,7 @@ Innan du börjar kontrollerar du att du har en Intune-prenumeration och en prenu
 
     I följande skärmbild ser du de gröna bockmarkeringar som visas när anslutningen har upprättats.
 
-  ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-mdm-configuration-mdm-server-page.png)
+   ![Datalert-sidan visar att anslutningen har lyckats](./media/tem-mdm-configuration-mdm-server-page.png)
 
 ### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Steg 2: Kontrollera att funktionen för kostnadsuppföljning av telekommunikation är aktiv i Intune
 
@@ -88,7 +88,7 @@ När du har slutfört steg 1 ovan bör anslutningen aktiveras automatiskt, och a
 
    Anslutningsstatusen **Aktiv** bör visas längst upp på sidan.
 
-  ![Intune-sidan visar att Datalerts anslutningsstatus är Aktiv](./media/tem-azure-portal-enable-service.png)
+   ![Intune-sidan visar att Datalerts anslutningsstatus är Aktiv](./media/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-corporate-enrolled-devices"></a>Steg 3: Distribuera Datalert-appen till företagets registrerade enheter
 
@@ -136,7 +136,7 @@ Följ dessa steg för att skapa Datalert-appen i Intune för varje plattform. iO
 
 4. Välj om du vill att appinstallationen ska vara obligatorisk eller valfri för gruppen. I följande exempelskärmbilder visas installationen som obligatorisk, vilket innebär att användarna måste installera Datalert-appen när de har registrerat sina enheter.
 
-  ![Skärmbild av fönstret Lägg till en princip](./media/tem-assign-datalert-app-to-device-group.png)
+   ![Skärmbild av fönstret Lägg till en princip](./media/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Steg 4: Lägga till företagsägda telefonlinjer i Datalert-konsolen
 

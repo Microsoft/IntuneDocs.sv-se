@@ -1,27 +1,30 @@
 ---
-title: "Övervaka Microsoft Intunes enhetsefterlevnadsprinciper"
-titlesuffix: 
-description: "Använd instrumentpanelen för enhetsefterlevnad för att övervaka övergripande enhetsefterlevnad, visa rapporter och visa enhetsefterlevnad per princip och per inställning."
-keywords: 
+title: Övervaka Microsoft Intunes enhetsefterlevnadsprinciper
+titlesuffix: ''
+description: Använd instrumentpanelen för enhetsefterlevnad för att övervaka övergripande enhetsefterlevnad, visa rapporter och visa enhetsefterlevnad per princip och per inställning.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 146b8034022ed5f5a50de9910d28baf27f7482ac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 557018264da5c21459e47e3e139ddd327a4a5ea6
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
 Med efterlevnadsrapporter kan administratörer analysera enheternas efterlevnadsstatus i organisationen och snabbt felsöka efterlevnadsrelaterade problem som användarna upplever i organisationen. Du kan visa information om den övergripande efterlevnadsstatusen för enheter, efterlevnadsstatusen för enskilda inställningar, efterlevnadsstatusen för enskilda principer och gå vidare till enskilda enheter och visa de specifika inställningar och principer som påverkar dem.
+
+> [!NOTE]
+> Vi inför vissa säkerhetsförbättringar som baserats på dina synpunkter i Intune-tjänsten i mars. Beroende på hur dina efterlevnadsprinciper har konfigurerats, kan du behöva vidta åtgärder för att undvika att förlora e-poståtkomsten för dina slutanvändare. Mer information finns i [Kommande säkerhetsförbättringar](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -124,6 +127,19 @@ Om du klickar på knappen **Uppdatera** stängs fältet och resultatet uppdatera
 Om du klickar på en enhet öppnas **fönstret Enheter** med enheten vald, och mer information om enhetens efterlevnadsprincipinställning visas.
 
 När du klickar på enhetens principinställning visas namnet på enhetsefterlevnadsprincip som gav upphov till den enhetsefterlevnadsinställning som administratören har satt upp som mål.
+
+### <a name="devices-without-compliance-policy"></a>Enheter utan policy för efterlevnad
+Den här rapporten identifierar enheter som inte har några tilldelade efterlevnadsprinciper. Med införandet av säkerhetsinställningen som markerar alla enheter utan efterlevnadsprinciper som ”icke-kompatibla” är det viktigt att kunna identifiera dessa enheter. Du kan sedan tilldela minst en policy för efterlevnad till dem.
+
+> [!NOTE]
+> Den nya säkerhetsinställningen kan konfigureras i Intune-portalen. Välj **Enhetsefterlevnad** och under **Konfiguration** väljer du **Inställningar för policyer för efterlevnad**. Använd växlingsknappen för att ange **Markera enheter som saknar en policy för efterlevnad som** till antingen **Kompatibel** eller **Inte kompatibel**. Läs mer om denna [förbättrade säkerhet i Intune-tjänsten](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+
+![Bild som visar rapport för Enheter utan policy för efterlevnad](./media/idc-12.png)
+
+Ikonen **Enheter utan policy för efterlevnad** finns i instrumentpanelen Enhetsefterlevnad och visar alla enheter utan en policy för efterlevnad, enhetens användare, efterlevnadsstatus och enhetsmodell.
+
+> [!NOTE]
+> Användare som är tilldelade en policy för efterlevnad av valfri typ visas inte i rapporten, oavsett enhetsplattform. Om du exempelvis oavsiktligt har tilldelat en Windows-policy för efterlevnad till en användare med en Android-enhet, visas enheten inte i rapporten. Intune kommer emellertid anse att Android-enheten inte är kompatibel. För att undvika problem rekommenderar vi att du skapar principer för varje enhetsplattform och distribuerar dem till alla användare.
 
 ### <a name="per-policy-device-compliance-report"></a>Rapport om enhetsefterlevnad per princip
 

@@ -1,29 +1,29 @@
 ---
-title: "Principinställningar för Windows 10"
-description: "Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter."
-keywords: 
+title: Principinställningar för Windows 10
+description: Använd principinställningarna som anges i det här avsnittet om du vill konfigurera inbyggda och anpassade inställningar för registrerade Windows 10 Desktop- och Windows 10 Mobile-enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 09/05/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00a602d9-b339-4fd8-ab70-defbf6686855
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fff34b145660e1d0e78e05de467629f9421fcf7a
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 202f15766aa740755669ab246739a5331ea328a4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Intune-principinställningar för Windows 10-enheter i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller information om de Intune-principinställningar som du kan använda för att hantera Windows 10-enheter. Läs det här avsnittet samt anvisningarna i [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](/intune-classic/get-started/windows-pc-management-capabilities-in-microsoft-intune).
 
@@ -121,7 +121,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt att intranättrafik skickas till Internet Explorer**|Tillåter att användarna öppnar intranätsplatser i Internet Explorer<br>(endast Windows 10 Desktop)|
 |**Tillåt Spåra inte**|Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker|
 |**Aktivera SmartScreen**||
-|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Microsoft Edge|
+|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Edge|
 |**Tillåt popup-fönster**|Gäller endast för Windows 10 Desktop|
 |**Tillåt cookies**||
 |**Tillåt autofyll**|Tillåter att användarna kan ändra inställningarna för att automatiskt komplettera i webbläsaren<br>(endast Windows 10 Desktop)|
@@ -149,7 +149,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |Inställningsnamn|Ytterligare information (om det behövs)|
 |----------------|----------------------|
 |**Tillåt kamera**|-|
-|**Tillåt flyttbara lagringsmedier**|Anger om externa lagringsenheter, till exempel ett SD-kort, kan användas med enheten.|
+|**Tillåt flyttbara lagringsenheter**|Anger om externa lagringsenheter, till exempel ett SD-kort, kan användas med enheten.|
 |**Tillåt Wi-Fi**|Gäller endast för Windows 10 Mobile|
 |**Tillåt internetdelning**|Tillåter användningen av internetanslutningsdelning på enheten|
 |**Tillåt manuell Wi-Fi konfiguration**|Styr huruvida användarna kan konfigurera egna trådlösa anslutningar eller om de endast kan använda anslutningar som konfigurerats med en Wi-Fi-profil.<br>(endast Windows 10 Mobile)|
@@ -203,7 +203,7 @@ Alla inställningar gäller endast Windows 10 Desktop.
 |**Processer att undanta när en sökning körs eller när realtidsskyddet används**|Lägger till en eller flera processer av typen **.exe**, **.com** eller **.scr** i undantagslistan. Dessa processer tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.|
 
 
-### <a name="updates"></a>Updates
+### <a name="updates"></a>Uppdateringar
 
 |Inställningsnamn|Ytterligare information (om det behövs)|
 |----------------|---------------|

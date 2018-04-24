@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a70b2707b38534826577bfe47bcd8e575c09a71f
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 0eef4e2ae3792c601bd4a32cd041d7d041091cca
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-the-exchange-connector"></a>Felsöka Exchange Connector
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 I det här avsnittet beskrivs hur du felsöker problem som kan vara relaterade till Intune Exchange Connector.
 
@@ -36,8 +36,8 @@ Kontrollera Exchange Connector-konfigurationen och se sedan om problemet är lö
 - Ange en klientåtkomstserver som är så nära som möjligt den server som är värd för Exchange Connector när du konfigurerar Exchange Connector. Svarstiden för kommunikationen mellan klientåtkomstservern och Exchange Connector kan orsaka fördröjningar i enhetsidentifieringen, särskilt om O365-dedikerad används.
 - Tänk på att det finns en tidsfördröjning mellan Exchange Connector-synkroniseringarna med Exchange-klientåtkomstservern. En fullständig synkronisering görs en gång per dag, och en deltasynkronisering (snabbsynkronisering) görs varannan timme. Det är sannolikt att användare med en nyregistrerad enhet upplever en fördröjd åtkomst.
 - 
-## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Exchange ActiveSync-enheten identifieras inte från Exchange
-Kontrollera att Exchange Connector synkroniserar med Exchange-servern. Det gör du genom att leta reda på loggarna som visar om en fullständig synkronisering eller en deltasynkronisering har utförts. Se Exchange Connector-loggarna. Om en fullständig synkronisering eller en deltasynkronisering har utförts efter att enheten anslutits kan du utesluta att detta är orsaken till problemet. Om ingen synkronisering har gjorts samlar du in synkroniseringsloggarna och bifogar dem i ditt supportärende.
+  ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Exchange ActiveSync-enheten identifieras inte från Exchange
+  Kontrollera att Exchange Connector synkroniserar med Exchange-servern. Det gör du genom att leta reda på loggarna som visar om en fullständig synkronisering eller en deltasynkronisering har utförts. Se Exchange Connector-loggarna. Om en fullständig synkronisering eller en deltasynkronisering har utförts efter att enheten anslutits kan du utesluta att detta är orsaken till problemet. Om ingen synkronisering har gjorts samlar du in synkroniseringsloggarna och bifogar dem i ditt supportärende.
 
 - Om användarna saknar Intune-licens kan Exchange Connector inte identifiera deras enheter.
 - Om en användares primära SMTP-adress skiljer sig från användarens UPN i AAD, kan Exchange Connector inte identifiera någon enhet för den Intune/AAD-användaren. Åtgärda den primära SMTP-adressen.

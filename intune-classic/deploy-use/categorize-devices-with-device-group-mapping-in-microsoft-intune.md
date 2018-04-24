@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5fd86b380a80529ba7f6c431452ae89e22c0de25
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5a346c321147656d748d3abde78575268b20e9ab
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="categorize-devices-with-device-group-mapping-in-microsoft-intune"></a>Kategorisera enheter med gruppmappning av enheter i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd **mappning av enhetsgrupp** i Microsoft Intune för att automatiskt lägga till enheter i grupper baserat på kategorier som du definierar för att göra det enklare att hantera dessa enheter. 
 
@@ -67,10 +67,10 @@ På grund av den stegvisa implementeringen av Azure Active Directory-baserade s�
 
 ### <a name="step-1---create-device-categories-in-the-intune-administration-console"></a>Steg ett – Skapa enhetskategorier i Intune-administrationskonsolen
 1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin**.
-3. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och väljer sedan **Enhetskategorier**.
-4. På sidan **Enhetskategorier** visas en lista där du kan konfigurera enhetskategorier: 
-- Du kan ange ett namn och sedan klicka på **Lägg till** för att lägga till det som en ny enhetskategori.
-- Dessutom kan du välja en kategori och sedan **Ta bort** den.
+2. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** och väljer sedan **Enhetskategorier**.
+3. På sidan **Enhetskategorier** visas en lista där du kan konfigurera enhetskategorier: 
+4. Du kan ange ett namn och sedan klicka på **Lägg till** för att lägga till det som en ny enhetskategori.
+5. Dessutom kan du välja en kategori och sedan **Ta bort** den.
 
 Du kommer att använda enhetskategorinamnet när du skapar Azure Active Directory-säkerhetsgrupper i steg två.
 

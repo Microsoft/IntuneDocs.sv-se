@@ -1,29 +1,29 @@
 ---
-title: "Information om nätverkskrav och bandbredd för Microsoft Intune"
-titlesuffix: 
-description: "Granska kraven för nätverkskonfiguration och bandbredd för Intune."
-keywords: 
+title: Information om nätverkskrav och bandbredd för Microsoft Intune
+titlesuffix: ''
+description: Granska kraven för nätverkskonfiguration och bandbredd för Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b21c4421914294e84bae637e489065c5e4410839
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: c161d1ca120d5a0210cffca01e781f1ae9206fe4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Krav för Intune-nätverkskonfiguration och bandbredd
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Den här vägledningen hjälper Intune-administratörerna att förstå Intune-tjänstens nätverkskrav. Du kan använda den här informationen för att förstå de krav på bandbredd, IP-adress och portinställningar som proxyinställningarna kräver.
 
@@ -58,11 +58,13 @@ En cachelagrande proxyserver som tar emot innehållsbegäranden från klienter k
 
 Nedan visas vanliga inställningar för en proxyserver som cachelagrar innehåll för Intune-klienter.
 
-|Inställningen|Rekommenderat värde|Information|
-|-----------|---------------------|-----------|
-|Cachestorlek|5 GB till 30 GB|Värdet varierar beroende på hur många klientdatorer som finns i nätverket och vilka konfigurationer som du använder. Om du vill förhindra att filer tas bort för tidigt, ändrar du storleken på cacheminnet för din miljö.|
-|Storlek för enskilda cachefiler|950 MB|Den här inställningen kanske inte är tillgänglig i alla proxyservrar med cachelagring.|
-|Objekttyper som kan cachelagras|HTTP<br /><br />HTTPS<br /><br />BITS|Intune-paket är CAB-filer som hämtas av BITS (Background Intelligent Transfer Service) via HTTP.|
+
+|          Inställningen           |           Rekommenderat värde           |                                                                                                  Information                                                                                                  |
+|----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Cachestorlek         |             5 GB till 30 GB             | Värdet varierar beroende på hur många klientdatorer som finns i nätverket och vilka konfigurationer som du använder. Om du vill förhindra att filer tas bort för tidigt, ändrar du storleken på cacheminnet för din miljö. |
+| Storlek för enskilda cachefiler |                950 MB                 |                                                                     Den här inställningen kanske inte är tillgänglig i alla proxyservrar med cachelagring.                                                                     |
+|   Objekttyper som kan cachelagras    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Intune-paket är CAB-filer som hämtas av BITS (Background Intelligent Transfer Service) via HTTP.                                               |
+
 Information om hur du använder en proxyserver till att cachelagra innehåll finns i dokumentationen för din proxyserverlösning.
 
 ### <a name="use-background-intelligent-transfer-service-on-computers"></a>Använda BITS (Background Intelligent Transfer Service) på datorer
@@ -159,14 +161,16 @@ I följande tabeller visas de portar och tjänster som Intune-klienten har åtko
 |fef.msuc05.manage.microsoft.com|52.230.16.180|
 
 ### <a name="apple-device-network-information"></a>Nätverksinformation för Apple-enhet
-| Värddatornamn  | URL (IP-adress/undernät) | Protokoll | Port | Enhet |
-| --- | --- | --- | --- | --- |
-|  Administrationskonsol  | gateway.push.apple.com (17.0.0.0/8) | TCP | 2195 | Apple iOS och macOS |
-| Administrationskonsol  | feedback.push.apple.com(17.0.0.0/8) | TCP | 2196 | Apple iOS och macOS |
-| Administrationskonsol  | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple iOS och macOS  |
-| PI-server  | gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8) | TCP | 2195, 2196 | För molnmeddelanden med Apple iOS och macOS. |
-| Enhetstjänster  | gateway.push.apple.com | TCP | 2195 | Apple  |
-| Enhetstjänster  | feedback.push.apple.com | TCP | 2196 | Apple  |
-| Enhetstjänster  | Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net | HTTP | 80 | Apple  |
-| Enheter (Internet/Wi-Fi) | #-courier.push.apple.com(17.0.0.0/8) | TCP | 5223 och 443 | Endast Apple. &#39;#&#39; är ett slumptal från 0 till 200. |
-| Enheter (Internet/Wi-Fi) | phobos.apple.comocsp.apple.comax.itunes.apple.com | HTTP/HTTPS | 80 eller 443 | Endast Apple |
+
+|         Värddatornamn         |                                        URL (IP-adress/undernät)                                        |  Protokoll  |     Port     |                          Enhet                           |
+|--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
+|      Administrationskonsol       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS och macOS                    |
+|      Administrationskonsol       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS och macOS                    |
+|      Administrationskonsol       | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net |    HTTP    |      80      |                    Apple iOS och macOS                    |
+|        PI-server         |                gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8)                 |    TCP     |  2195, 2196  |         För molnmeddelanden med Apple iOS och macOS.          |
+|     Enhetstjänster      |                                        gateway.push.apple.com                                         |    TCP     |     2195     |                           Apple                           |
+|     Enhetstjänster      |                                        feedback.push.apple.com                                        |    TCP     |     2196     |                           Apple                           |
+|     Enhetstjänster      |   Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net   |    HTTP    |      80      |                           Apple                           |
+| Enheter (Internet/Wi-Fi) |                                 #-courier.push.apple.com(17.0.0.0/8)                                  |    TCP     | 5223 och 443 | Endast Apple. &#39;#&#39; är ett slumptal från 0 till 200. |
+| Enheter (Internet/Wi-Fi) |                           phobos.apple.comocsp.apple.comax.itunes.apple.com                           | HTTP/HTTPS |  80 eller 443   |                        Endast Apple                         |
+

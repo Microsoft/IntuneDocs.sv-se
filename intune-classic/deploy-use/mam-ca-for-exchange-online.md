@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d582421ed842f1e5b87419e25c5d03ad7a138e99
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: a64a5ac7f10bb7988c75dd473e1e87dae03959d4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-an-exchange-online-conditional-access-to-only-allow-apps-supported-by-mam"></a>Konfigurera villkorlig åtkomst för Exchange Online så att endast appar som stöds av MAM får åtkomst
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller stegvisa anvisningar som beskriver hur du konfigurerar villkorlig åtkomst för Exchange Online så att endast mobila appar som stöder Intunes appskyddsprinciper tillåts åtkomst.
 

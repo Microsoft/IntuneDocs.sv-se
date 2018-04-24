@@ -2,8 +2,8 @@
 title: Enhetsbegränsningar för Android for Work i Microsoft Intune – Azure | Microsoft Docs
 description: Du kan begränsa vissa inställningar på enheter som kör Android for Work, inklusive kopiera och klistra in, visa aviseringar, appbehörigheter, datadelning, lösenordslängd, inloggningsfel, användning av fingeravtryck för att låsa upp, återanvändning av lösenord och aktivering av bluetooth-delning för arbetskontakter.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 3/19/2018
 ms.topic: article
@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c155817e0bc9df00087908a86fcfcb675fa0ad97
-ms.sourcegitcommit: a22309174e617e59ab0cdd0a55abde38711a5f35
+ms.openlocfilehash: 11ce7fa7fa4d48d9cc292b7b6565b6b4f2be2dc4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Inställning av enhetsbegränsningar för arbetsenheter i Intune
 
 I den här artikeln visas alla inställningar av begränsningar för Microsoft Intune-enheter som du kan konfigurera för enheter som kör Android for Work.
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="work-profile-settings"></a>Inställningar för arbetsprofil
 
@@ -48,6 +48,8 @@ I den här artikeln visas alla inställningar av begränsningar för Microsoft I
    Hindrar slutanvändare från att lägga till eller ta bort konton manuellt i arbetsprofilen.
 
    När du till exempel distribuerar Gmail-appen till en Android for Work-profil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen.
+
+- **Kontaktdelning via Bluetooth**: Ger åtkomst till arbetskontakter från en annan enhet, till exempel en bil som har anslutits med Bluetooth. Den här inställningen konfigureras inte som standard och arbetsprofilens kontakter visas därför inte. Välj **Aktivera** för att tillåta denna delning och visa arbetsprofilens kontakter. Inställningen gäller för Androids arbetsprofilenheter i Android OS v6.0 och senare.
 
 ### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 

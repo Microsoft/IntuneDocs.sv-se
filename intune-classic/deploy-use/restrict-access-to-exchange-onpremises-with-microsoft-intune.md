@@ -1,29 +1,29 @@
 ---
 title: Skydda e-post till Exchange On-premises
-description: "Skydda och styr åtkomsten till företagets e-post på Exchange On-premises med villkorlig åtkomst."
-keywords: 
+description: Skydda och styr åtkomsten till företagets e-post på Exchange On-premises med villkorlig åtkomst.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a55071f5-101e-4829-908d-07d3414011fc
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6bdb5fbf7bb382c9ad503f584b499f5275885ef1
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 73535e35605bbc9ca7123935e1816e90b5e60e1d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-email-access-to-exchange-on-premises-and-legacy-exchange-online-dedicated-with-intune"></a>Skydda e-poståtkomsten till Exchange On-premises och äldre Exchange Online Dedicated med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan konfigurera villkorlig åtkomstkontroll för e-post i Exchange On-premises eller till äldre Exchange Online Dedicated med hjälp av Microsoft Intune.
 Mer information om hur villkorlig åtkomst fungerar finns i artikeln [Skydda åtkomsten till e-post och O365-tjänster](restrict-access-to-email-and-o365-services-with-microsoft-intune.md).
@@ -53,13 +53,13 @@ Se till att kontrollera följande:
 
 När du konfigurerar och tillämpar principer för villkorlig åtkomst för en användare, och innan användaren kan ansluta till sin e-post, måste användarens **enhet**:
 
--  Antingen vara en domänansluten dator eller **registrerad** i Intune.
+- Antingen vara en domänansluten dator eller **registrerad** i Intune.
 
--  **Registreras i Azure Active Directory**. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
+- **Registreras i Azure Active Directory**. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
 
   Registreringstjänsten för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger. **Detta gäller inte för Windows-datorer och Windows Phone-enheter**.
 
--   Vara **kompatibel** med eventuella Intune-efterlevnadsprinciper som har distribuerats till den enheten.
+- Vara **kompatibel** med eventuella Intune-efterlevnadsprinciper som har distribuerats till den enheten.
 
 ### <a name="how-conditional-access-works-with-exchange-on-premises"></a>Så här fungerar villkorlig lokal åtkomst till Exchange on-premises
 
@@ -91,35 +91,35 @@ Följande stöds:
 
 ##  <a name="configure-a-conditional-access-policy"></a>Konfigurera en princip för villkorlig åtkomst
 
-1.  I [Microsoft Intune-administrationskonsolrn](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Exchange On-premises-princip**.
-![IntuneSA5aSelectExchOnPremPolicy](../media/IntuneSA5aSelectExchOnPremPolicy.png)
+1. I [Microsoft Intune-administrationskonsolrn](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **Exchange On-premises-princip**.
+   ![IntuneSA5aSelectExchOnPremPolicy](../media/IntuneSA5aSelectExchOnPremPolicy.png)
 
-2.  Konfigurera principen med de inställningar som du behöver: ![Skärmbild av sidan för Exchange On-premises-princip](../media/IntuneSA5bExchangeOnPremPolicy.png)
+2. Konfigurera principen med de inställningar som du behöver: ![Skärmbild av sidan för Exchange On-premises-princip](../media/IntuneSA5bExchangeOnPremPolicy.png)
 
-  - **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad i Microsoft Intune:** Om du väljer det här alternativet kan inte enheter som inte hanteras av Intune eller som inte är kompatibla med en efterlevnadsprincip komma åt Exchange-tjänster.
+   - **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad i Microsoft Intune:** Om du väljer det här alternativet kan inte enheter som inte hanteras av Intune eller som inte är kompatibla med en efterlevnadsprincip komma åt Exchange-tjänster.
 
-  - **Åsidosätt standardregel – Tillåt att registrerade och kompatibla enheter alltid får åtkomst till Exchange:** Om du väljer det här alternativet kan enheter som är registrerade i Intune och kompatibla med efterlevnadsprinciper komma åt Exchange.
-  Den här regeln åsidosätter **standardregeln**, vilket innebär att även om du ställer in **standardregeln** för att blockera åtkomstförsök eller sätta dem i karantän så kommer registrerade och kompatibla enheter fortfarande att kunna få åtkomst till Exchange.
+   - **Åsidosätt standardregel – Tillåt att registrerade och kompatibla enheter alltid får åtkomst till Exchange:** Om du väljer det här alternativet kan enheter som är registrerade i Intune och kompatibla med efterlevnadsprinciper komma åt Exchange.
+     Den här regeln åsidosätter **standardregeln**, vilket innebär att även om du ställer in **standardregeln** för att blockera åtkomstförsök eller sätta dem i karantän så kommer registrerade och kompatibla enheter fortfarande att kunna få åtkomst till Exchange.
 
-  - **Målgrupper:** Välj de Intune-användargrupper som måste registrera sina enheter i Intune innan de kan komma åt Exchange.
+   - **Målgrupper:** Välj de Intune-användargrupper som måste registrera sina enheter i Intune innan de kan komma åt Exchange.
 
-  - **Undantagna grupper:** Välj de Intune-användargrupper som är undantagna från principen för villkorlig åtkomst. Användare i den här listan undantas även om de också finns med i listan **Målgrupper**.
+   - **Undantagna grupper:** Välj de Intune-användargrupper som är undantagna från principen för villkorlig åtkomst. Användare i den här listan undantas även om de också finns med i listan **Målgrupper**.
 
-  - **Plattformsundantag:** Välj **Lägg till regel** om du vill konfigurera en regel som definierar åtkomstnivåer för angivna familjer och modeller av mobila enheter. Eftersom dessa enheter kan tillhöra vilken typ som helst kan du även konfigurera enhetstyper som inte stöds av Intune.
+   - **Plattformsundantag:** Välj **Lägg till regel** om du vill konfigurera en regel som definierar åtkomstnivåer för angivna familjer och modeller av mobila enheter. Eftersom dessa enheter kan tillhöra vilken typ som helst kan du även konfigurera enhetstyper som inte stöds av Intune.
 
-  - **Standardregel:** För en enhet som inte omfattas av någon av de andra reglerna kan du välja att ge enheten åtkomst till Exchange, blockera den eller placera den i karantän. När du ställer in regeln för att tillåta åtkomst för enheter som är registrerade och kompatibla beviljas e-poståtkomst automatiskt för iOS-, Windows- och Samsung KNOX-enheter. Användaren behöver inte gå igenom någon särskild process för att få sin e-post.
-      - Användare av Android-enheter som inte kör Samsung KNOX får ett karantänmeddelande med stegvisa anvisningar för att verifiera registreringen och efterlevnaden innan de kan komma åt e-posten. Om du ställer in regeln för att blockera åtkomst eller sätta enheten i karantän blir alla enheter blockerade från att få åtkomst till Exchange oavsett om de redan har registrerats i Intune eller inte. Om du vill förhindra att registrerade och kompatibla enheter påverkas av den här regeln markerar du rutan **Åsidosätt standardregel**.
->[!TIP]
->Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av Intune påverkas.
+   - **Standardregel:** För en enhet som inte omfattas av någon av de andra reglerna kan du välja att ge enheten åtkomst till Exchange, blockera den eller placera den i karantän. När du ställer in regeln för att tillåta åtkomst för enheter som är registrerade och kompatibla beviljas e-poståtkomst automatiskt för iOS-, Windows- och Samsung KNOX-enheter. Användaren behöver inte gå igenom någon särskild process för att få sin e-post.
+     - Användare av Android-enheter som inte kör Samsung KNOX får ett karantänmeddelande med stegvisa anvisningar för att verifiera registreringen och efterlevnaden innan de kan komma åt e-posten. Om du ställer in regeln för att blockera åtkomst eller sätta enheten i karantän blir alla enheter blockerade från att få åtkomst till Exchange oavsett om de redan har registrerats i Intune eller inte. Om du vill förhindra att registrerade och kompatibla enheter påverkas av den här regeln markerar du rutan **Åsidosätt standardregel**.
+       >[!TIP]
+       >Om din avsikt är att först blockera alla enheter innan du beviljar åtkomst till e-posten väljer du regeln Blockera åtkomst eller Karantän. Standardregeln gäller för alla enhetstyper. Det betyder att även enhetstyper som du konfigurerar som plattformsundantag och som inte stöds av Intune påverkas.
 
-  - **Meddelande till användare:** Förutom e-postmeddelandet som skickas från Exchange skickar Intune ett e-postmeddelande med stegvisa anvisningar för att låsa upp enheten. Du kan redigera standardmeddelandet och anpassa det efter dina behov. Om användarens enhet blockeras innan Intunes e-postmeddelande med instruktionerna har kommit fram (det här meddelandet skickas till användarens Exchange-postlåda) kan användaren använda en enhet som inte är blockerad eller en annan metod för att komma åt Exchange och läsa meddelandet.
-      - Detta är särskilt viktigt om **standardregeln** har konfigurerats att blockera eller placera enheter i karantän. I så fall måste användaren besöka sin appbutik, ladda ned Microsofts företagsportalsapp och registrera sin enhet. Detta gäller iOS-, Windows- och Samsung KNOX-enheter. Du måste skicka e-postmeddelandet om karantän till ett alternativt e-postkonto för enheter som inte kör Samsung KNOX. Användaren måste kopiera e-postmeddelandet till sin blockerade enhet för att kunna slutföra registreringen och efterlevnadsprocessen.
-  > [!NOTE]
-  > För att Exchange ska kunna skicka e-postmeddelandet måste du ange det konto som används för att skicka meddelandet.
-  >
-  > Mer information finns i [Konfigurera lokal Exchange-anslutning för lokal eller värdbaserad Exchange](intune-on-premises-exchange-connector.md).
+   - **Meddelande till användare:** Förutom e-postmeddelandet som skickas från Exchange skickar Intune ett e-postmeddelande med stegvisa anvisningar för att låsa upp enheten. Du kan redigera standardmeddelandet och anpassa det efter dina behov. Om användarens enhet blockeras innan Intunes e-postmeddelande med instruktionerna har kommit fram (det här meddelandet skickas till användarens Exchange-postlåda) kan användaren använda en enhet som inte är blockerad eller en annan metod för att komma åt Exchange och läsa meddelandet.
+     - Detta är särskilt viktigt om **standardregeln** har konfigurerats att blockera eller placera enheter i karantän. I så fall måste användaren besöka sin appbutik, ladda ned Microsofts företagsportalsapp och registrera sin enhet. Detta gäller iOS-, Windows- och Samsung KNOX-enheter. Du måste skicka e-postmeddelandet om karantän till ett alternativt e-postkonto för enheter som inte kör Samsung KNOX. Användaren måste kopiera e-postmeddelandet till sin blockerade enhet för att kunna slutföra registreringen och efterlevnadsprocessen.
+       > [!NOTE]
+       > För att Exchange ska kunna skicka e-postmeddelandet måste du ange det konto som används för att skicka meddelandet.
+       >
+       > Mer information finns i [Konfigurera lokal Exchange-anslutning för lokal eller värdbaserad Exchange](intune-on-premises-exchange-connector.md).
 
-3.  När du är klar väljer du **Spara**.
+3. När du är klar väljer du **Spara**.
 
 -   Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 

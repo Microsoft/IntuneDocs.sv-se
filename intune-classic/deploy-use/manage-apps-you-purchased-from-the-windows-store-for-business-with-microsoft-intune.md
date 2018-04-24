@@ -15,17 +15,17 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: coryfe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 50fc27efc34ab6c13fad714e41be0d87c5ab0df9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b32f9c6be910156c26b446b7bf70a7975b4afaff
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Hantera appar som du har köpt från Microsoft Store för företag med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
-I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta appar från Intune-konsolen. Exempel:
+I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta appar från Intune-konsolen. Till exempel:
 * Du kan synkronisera listan över appar som du har köpt från Windows Store med Intune.
 * Appar som är synkroniserade visas i administrationskonsolen för Intune och du kan distribuera dem precis som andra appar.
 * Du kan spåra hur många licenser som är tillgängliga och hur många som används i administrationskonsolen för Intune.
@@ -57,8 +57,8 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 1. Gå till [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) och välj **Admin**.
 2. På arbetsytan **Administration** expanderar du **Hantering av mobila enheter** > **Windows** och väljer sedan **Store för företag**.
 3. Gör följande på sidan **Microsoft Store för företag**:
- * Klicka på länken till registreringen för Microsoft Store för företag om du inte redan har gjort det.
- * När du har registrerat dig väljer du **Konfigurera synkronisering**.
+   * Klicka på länken till registreringen för Microsoft Store för företag om du inte redan har gjort det.
+   * När du har registrerat dig väljer du **Konfigurera synkronisering**.
 4. Välj **Aktivera synkronisering för Microsoft Store för företag** i dialogrutan **Konfigurera appsynkronisering för Microsoft Store för företag**.
 5. Välj det språk du vill att appar från Microsoft Store för företag ska visas med i Intune-konsolen från listrutan **Språk**. De kommer att installeras i slutanvändarens språk när det är tillgängligt oavsett vilket språk de visas i.
 6. Klicka på **OK**.

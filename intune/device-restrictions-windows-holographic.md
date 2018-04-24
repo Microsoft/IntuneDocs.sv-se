@@ -1,27 +1,26 @@
 ---
-title: Begränsningsinställningar för Microsoft Intune-enheter i Windows Holographic for Business
-titleSuffix: ''
-description: Läs om de Intune-inställningar du kan använda för att styra enhetsinställningar och funktioner på enheter som kör Windows Holographic for Business-enheter.
+title: Enhetsbegränsningar för Windows Holographic for Business i Microsoft Intune – Azure | Microsoft Docs
+description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Edge, Windows Defender, sökning, moln och lagring , bluetooth-anslutning, systemtid och användningsdata i Azure.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 4/9/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 694b81434a95f48abc98f5012460523420df58cc
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5b0784aeb1dc1022b4be824c2f858f9525d03918
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="microsoft-intune-windows-holographic-for-business-device-restriction-settings"></a>Inställningar för begränsningar för Windows Holographic for Business-enheter i Microsoft Intune
+# <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Inställningar för enhetsbegränsningar för Windows Holographic for Business i Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Följande begränsningsinställningar för enheter har stöd för enheter som kör Windows Holographic for Business, som till exempel Microsoft Hololens.
 
@@ -31,13 +30,9 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 - **Cortana** – Aktivera eller inaktivera röstassistenten Cortana.
 - **Geoplats** – Anger om enheten kan använda information om platstjänster.
 
-
-
 ## <a name="password"></a>Lösenord
 -   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
     -   **Kräv lösenord när enheten lämnar inaktivt läge** – Anger att användaren måste ange ett lösenord för att kunna låsa upp enheten.
-
-
 
 ## <a name="app-store"></a>Appbutik
 
@@ -47,7 +42,6 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 
 ## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
--   **Microsoft Edge-webbläsare** – Tillåt användning av Edge-webbläsaren på enheten.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
@@ -61,7 +55,6 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 ## <a name="search"></a>Sök
 - **Sök plats** – Ange om platsinformation får användas i sökning. information
 
-
 ## <a name="cloud-and-storage"></a>Moln och lagring
 -   **Microsoft-konto** – Låter användaren associera ett Microsoft-konto med enheten.
 
@@ -74,6 +67,24 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 ## <a name="control-panel-and-settings"></a>Kontrollpanel och inställningar
 
 - **Ändra systemtid** – Förhindrar att användaren ändrar enhetens datum och tid.
+
+## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
+
+En helskärmslägesenhet kör vanligtvis en viss app. Användarna kommer inte åt funktioner på enheten utanför helskärmslägesappen.
+
+- **Helskärmsläge** – Identifierar vilken typ av helskärmsläge som stöds av principen. Alternativen är:
+
+  - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
+  - **Läget för enskilda appar för kiosk** – Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
+
+#### <a name="single-app-kiosks"></a>Läget för enskilda appar för kiosk
+Ange följande inställningar:
+
+- **Användarkonto** – Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med kioskappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
+
+    Om kiosken finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
+
+- **Appens programanvändarmodell-ID (AUMID)** – Ange AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
 ## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
 

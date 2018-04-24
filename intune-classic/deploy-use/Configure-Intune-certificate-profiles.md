@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d6230fbc50ae79702cfd938f158d2961b5d720c9
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 51da197b9b805fbac22b6a46453617b7703a37e8
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-intune-certificate-profiles"></a>Konfigurera certifikatprofiler för Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 När du har konfigurerat infrastrukturen och certifikaten enligt beskrivningen i [Konfigurera certifikatinfrastruktur för SCEP](configure-certificate-infrastructure-for-scep.md) eller [Konfigurera certifikatinfrastrukturen för PFX](configure-certificate-infrastructure-for-pfx.md) kan du skapa certifikatprofiler. Så här ser processen ut:
 
@@ -92,39 +92,39 @@ När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar 
 
 -  Windows Phone 8.1 och senare
 
-2.  Lägg till en princip för **SCEP-certifikatprofiler**
+2. Lägg till en princip för **SCEP-certifikatprofiler**
 
-    Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+   Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
 
-3.  Följ anvisningarna på profilsidan för att konfigurera inställningarna för SCEP-certifikatet.
-    > [!NOTE]
-    >
-    > Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare (endast i iOS-profiler).
-    >
-    > De två variabler som stöds för närvarande för det anpassade formatet är `Common Name (CN)` och `Email (E)`. Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:
+3. Följ anvisningarna på profilsidan för att konfigurera inställningarna för SCEP-certifikatet.
+   > [!NOTE]
+   > 
+   > Välj **Anpassad** under **Format för namn på certifikatmottagare** om du vill ange ett eget format för namn på certifikatmottagare (endast i iOS-profiler).
+   > 
+   > De två variabler som stöds för närvarande för det anpassade formatet är `Common Name (CN)` och `Email (E)`. Genom att kombinera dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel:
+   > 
+   >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
+   > 
+   > I det här exemplet har administratören skapat ett format som utöver variablerna `CN` och `E` använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [Funktionen CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visar en lista över strängar som stöds.
 
-    >     CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US
-
-    > I det här exemplet har administratören skapat ett format som utöver variablerna `CN` och `E` använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [Funktionen CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visar en lista över strängar som stöds.
-
-4.  Välj **Spara princip**.
+4. Välj **Spara princip**.
 
 Den nya principen visas på arbetsytan **Princip**. Nu kan du distribuera den.
 
 ### <a name="to-create-a-pfx-certificate-profile"></a>Så här skapar du en .PFX-certifikatprofil
 
-1.  I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip** och sedan en enhetsplattform. .PFX-certifikat har stöd för:
-  - Android 4 och senare
-  - Android for Work
-  - Windows 10 och senare
-  - Windows Phone 10 och senare
-  - iOS 8.0 och senare)    
+1. I [Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Lägg till princip** och sedan en enhetsplattform. .PFX-certifikat har stöd för:
+   - Android 4 och senare
+   - Android for Work
+   - Windows 10 och senare
+   - Windows Phone 10 och senare
+   - iOS 8.0 och senare)    
 
 
-2.  Lägg till en princip för **.PFX-certifikatprofiler**.
-      Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
-3.  Ange den information som efterfrågas i principformuläret.
-4.  Välj **Spara princip**.
+2. Lägg till en princip för **.PFX-certifikatprofiler**.
+     Läs mer: [Hantera inställningar och funktioner på dina enheter med Microsoft Intune-principer](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md).
+3. Ange den information som efterfrågas i principformuläret.
+4. Välj **Spara princip**.
 
 Den nya principen visas på arbetsytan **Princip**. Nu kan du distribuera den.
 

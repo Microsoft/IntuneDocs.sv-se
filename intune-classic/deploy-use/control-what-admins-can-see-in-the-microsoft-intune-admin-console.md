@@ -15,58 +15,58 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9baa0325a90e152ffd6cf6a31cdd0a458588758a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: bdc248689f586a44f4c84568b9d9f9c1fa3e059a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-intune-console-views-according-to-admin-roles"></a>Anpassa Intune-konsolvyer i enlighet med administratörsroller
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan filtrera visningen i Microsoft Intune-administratörskonsolen så att administratörerna endast ser de poster de behöver för sin roll. Du kan till exempel tillåta att operatörer för administratörskonsolen kan uppdatera definitioner för skadlig kod eller återställa lösenordet på enheter. Det gör du med hjälp av förinställda **beteckningar** som du tilldelar specifika användare. När dessa användare kommer åt administratörskonsolen, ser de bara poster specifika för deras beteckning.
 
 ## <a name="to-create-a-custom-view"></a>Skapa en anpassad vy
 
-1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Tjänstadministratörer**.
+1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Tjänstadministratörer**.
 
-2.  I listan över tjänstadministratörer väljer du den användare vars benämning du vill ändra och klickar sedan på **Hantera åtkomst**.
+2. I listan över tjänstadministratörer väljer du den användare vars benämning du vill ändra och klickar sedan på **Hantera åtkomst**.
 
-3.  I dialogrutan **Hantera åtkomst** , välj den åtkomstnivå som du vill ge den valda användaren. Du kan välja mellan:
+3. I dialogrutan **Hantera åtkomst** , välj den åtkomstnivå som du vill ge den valda användaren. Du kan välja mellan:
 
-    -   **Fullständig åtkomst**
-    -   **Skrivskyddad åtkomst**
-    -   **Supportavdelning – Gruppnod**
+   -   **Fullständig åtkomst**
+   -   **Skrivskyddad åtkomst**
+   -   **Supportavdelning – Gruppnod**
 
-    Fullständig åtkomst och skrivskyddad åtkomst är självförklarande. <!--- **Helpdesk - Groups Node** allows users to choose from one of the following designations that provide custom levels of access to the Intune admin console:--->
+   Fullständig åtkomst och skrivskyddad åtkomst är självförklarande. <!--- **Helpdesk - Groups Node** allows users to choose from one of the following designations that provide custom levels of access to the Intune admin console:--->
 
-    **Supportavdelning – Gruppnod** begränsar vad administratören kan se och göra till följande:
+   **Supportavdelning – Gruppnod** begränsar vad administratören kan se och göra till följande:
 
-    -   Se listan över användare och enheter. Administratören kan inte använda filter för att ändra vyn. Du kan dock använda gruppfiltrering för att ändra vad administratören kan se. Mer information finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
+   -   Se listan över användare och enheter. Administratören kan inte använda filter för att ändra vyn. Du kan dock använda gruppfiltrering för att ändra vad administratören kan se. Mer information finns i [Använda grupper för att hantera användare och enheter med Microsoft Intune](use-groups-to-manage-users-and-devices-with-microsoft-intune.md).
 
-    -   Skriv ut listan över användare och enheter
+   -   Skriv ut listan över användare och enheter
 
-    -   Exportera listan över användare och enheter
+   -   Exportera listan över användare och enheter
 
-    -   Visa egenskaperna för en användare eller enhet
+   -   Visa egenskaperna för en användare eller enhet
 
-    -   Utföra följande fjärruppgifter:
+   -   Utföra följande fjärruppgifter:
 
-        -   Kör en full skanning för skadlig kod
+       -   Kör en full skanning för skadlig kod
 
-        -   Köra en snabbskanning av skadlig kod
+       -   Köra en snabbskanning av skadlig kod
 
-        -   Starta om en dator
+       -   Starta om en dator
 
-        -   Uppdatera definitioner för skadlig kod
+       -   Uppdatera definitioner för skadlig kod
 
-        -   Uppdatera principer
+       -   Uppdatera principer
 
-        -   Uppdatera inventering
+       -   Uppdatera inventering
 
-        -   Fjärrlåsa en enhet
+       -   Fjärrlåsa en enhet
 
-        -   Återställa ett lösenord
+       -   Återställa ett lösenord
 
 När administratören som du har konfigurerat öppnar Intune-administratörskonsolen nästa gång får personen den åtkomstnivå som du tilldelat.

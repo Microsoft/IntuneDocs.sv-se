@@ -1,27 +1,27 @@
 ---
-title: "VPN-inställningar i Microsoft Intune för Windows Phone 8.1-enheter"
-titleSuffix: 
-description: "Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows Phone 8.1."
-keywords: 
+title: VPN-inställningar i Microsoft Intune för Windows Phone 8.1-enheter
+titleSuffix: ''
+description: Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows Phone 8.1.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 786a817fbbd821d74f4f1a03fdec5a6893ed890b
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 458586a2d507e913eb702c0ee2e3c0531350f1b4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows Phone 8.1
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln beskrivs de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows Phone 8.1.
 
@@ -56,7 +56,7 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 - **Roll** (endast Pulse Secure) – Ange namnet på den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner.
 - **Sfär** (endast Pulse Secure) – Ange namnet på den autentiseringssfär som du vill använda. En autentiseringssfär är en grupp av autentiseringsresurser som används av Pulse Secure-anslutningstypen.
 
-- **Söklista för DNS-suffix** - **Lägg till** ett eller flera DNS-suffix. Varje DNS-suffix som du anger genomsöks vid anslutning till en webbplats med ett kort namn. Ange till exempel DNS-suffixen **domain1.contoso.com** och **domain2.contoso.com**. Besök webbadressen **http://mywebsite** så genomsöks webbadresserna **http://mywebsite.domain1.contoso.com** och **http://mywebsite.domain2.contoso.com**.
+- **Söklista för DNS-suffix** - **Lägg till** ett eller flera DNS-suffix. Varje DNS-suffix som du anger genomsöks vid anslutning till en webbplats med ett kort namn. Ange exempelvis DNS-suffixen **domain1.contoso.com** och **domain2.contoso.com**, gå till URL:en **http://mywebsite**. URL:erna **http://mywebsite.domain1.contoso.com** och **http://mywebsite.domain2.contoso.com söks igenom** .
 
 - **Anpassad XML** – Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen.
 
@@ -64,7 +64,6 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 
 ```
     <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
-
 ```
 
 **Exempel för CheckPoint Mobile VPN:**
@@ -76,13 +75,11 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 **Exempel för SonicWall Mobile Connect:**
 ```
 <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
-
 ```
 
 **Exempel för F5 Edge Client:**
 ```
     <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
-
 ```
 
 Läs VPN-dokumentationen för varje tillverkare för mer information om hur du skriver anpassade XML-kommandon.
@@ -95,7 +92,7 @@ Läs VPN-dokumentationen för varje tillverkare för mer information om hur du s
 ## <a name="proxy-settings"></a>Proxyinställningar
 
 - **Identifiera proxyinställningar automatiskt** – Om VPN-servern kräver en proxyserver för anslutningen, kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Använd proxyserver** – Aktivera det här alternativet om du vill ange inställningarna för proxyservern manuellt.
     - **Adress** – Ange proxyns serveradress (som en IP-adress).
     - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.

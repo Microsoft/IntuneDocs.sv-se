@@ -1,34 +1,34 @@
 ---
-title: "Så här lägger du till Windows Store-appar i Microsoft Intune"
-titleSuffix: 
-description: "Läs mer om att lägga till Windows Store-appar i Microsoft Intune."
-keywords: 
+title: Så här lägger du till Microsoft Store-appar i Microsoft Intune
+titleSuffix: ''
+description: Läs mer om att lägga till appar från Microsoft Store (Windows Store) i Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e2280ad72bbd353d80af316cde436e8ffc79d1f
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 511cf2e01a2f5db93f0e0db9dbe2a32326c17723
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-add-windows-store-apps-to-microsoft-intune"></a>Så här lägger du till Windows Store-appar i Microsoft Intune
+# <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Lägga till Microsoft Store-appar i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägga till dem till Intune. Använd följande steg om du vill lägga till en Windows Store-app i Microsoft Intune.
+Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägga till dem till Intune. Använd följande steg om du vill lägga till en Microsoft Store-app i Microsoft Intune.
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** i **Intune**-fönstret.
 4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
 5. Välj **Lägg till** ovanför applistan.
@@ -51,5 +51,4 @@ Innan du kan tilldela, övervaka, konfigurera eller skydda appar måste du lägg
 Den app som du har skapat visas i listan över appar där du kan välja att tilldela den till olika grupper. 
 
 ## <a name="next-steps"></a>Nästa steg
-
 - [Så här tilldelar du appar till grupper](apps-deploy.md)

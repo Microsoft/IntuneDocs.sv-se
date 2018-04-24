@@ -1,31 +1,31 @@
 ---
 title: Skapa en macOS-enhetsefterlevnadsprincip i Microsoft Intune
-titleSuffix: 
-description: "Skapa en enhetsefterlevnadsprincip i Microsoft Intune för macOS-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel."
-keywords: 
+titleSuffix: ''
+description: Skapa en enhetsefterlevnadsprincip i Microsoft Intune för macOS-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7703b8ea26d6ce53b82e806a78c788d14ae05b4
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d6252680e64067e6d12530e0226632a1c5db7d28
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Skapa en enhetsefterlevnadsprincip för macOS-enheter med Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-En Intune-enhetsefterlevnadsprincip för macOS anger de regler och inställningar som macOS-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar principer för enhetsefterlevnad för varje plattform i Intune Azure-portalen.
+En Intune-enhetsefterlevnadsprincip för macOS anger de regler och inställningar som macOS-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -110,7 +110,7 @@ Du har olika kategorier med olika inställningar att välja mellan när du skapa
 
 2. När du har loggat in visas **Azure-instrumentpanelen**.
 
-3. Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+3. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
 4. Välj **Intune**. **Intune-instrumentpanelen** visas.
 

@@ -1,27 +1,27 @@
 ---
-title: "VPN-inställningar i Microsoft Intune för macOS-enheter"
-titlesuffix: 
-description: "Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på macOS-enheter."
-keywords: 
+title: VPN-inställningar i Microsoft Intune för macOS-enheter
+titlesuffix: ''
+description: Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på macOS-enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7df56b0f15b9fd346dc786ab265d772135795a8
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: a59d17c9497d5f7d0fbc3bcdf5f1e232115f643a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-macos"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör macOS
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln beskrivs de Intune-inställningar som du kan använda till att konfigurera VPN-anslutningar på enheter som kör macOS.
 
@@ -55,6 +55,6 @@ Om du har valt **Anpassat VPN** kan du konfigurera inställningarna ytterligare:
 
 ## <a name="proxy-settings"></a>Proxyinställningar
 
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Adress** – Ange proxyns serveradress (som en IP-adress).
 - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.

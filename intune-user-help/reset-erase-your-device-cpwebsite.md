@@ -1,27 +1,27 @@
 ---
-title: "Återställa en enhet från företagsportalens webbplats | Microsoft Docs"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Återställa en enhet från företagsportalens webbplats | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 181c3df521e9cf213367becf00e4a53469ad69a9
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Återställa en enhet från företagsportalens webbplats
 
@@ -34,17 +34,17 @@ Om du återställer en enhet kommer den inte längre att visas på företagsport
 
 Så här återställer du en enhet:
 
-1.  På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ och väljer sedan __Mina enheter__.
+1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ och väljer sedan __Mina enheter__.
 
 2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill byta namn på.
 
-  ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
 
-3.  Enheten öppnas i ett popup-fönster. Tryck på knappen **Återställ**.
+3. Enheten öppnas i ett popup-fönster. Tryck på knappen **Återställ**.
 
-    ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
+   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
 
-4.  Ett varningsmeddelande visas för att informera dig om att allt innehåll på enheten kommer att raderas när du återställer den till standardinställningarna. Tryck på **Återställ** för att bekräfta att du vill utföra åtgärden.
+4. Ett varningsmeddelande visas för att informera dig om att allt innehåll på enheten kommer att raderas när du återställer den till standardinställningarna. Tryck på **Återställ** för att bekräfta att du vill utföra åtgärden.
 
 Nu har enheten återställts.
 

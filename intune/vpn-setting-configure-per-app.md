@@ -1,25 +1,25 @@
 ---
-title: "Konfigurera ett virtuellt privat nätverk per app i Microsoft Intune för iOS-enheter"
-titleSuffix: 
-description: "Ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter."
-keywords: 
+title: Konfigurera ett virtuellt privat nätverk per app i Microsoft Intune för iOS-enheter
+titleSuffix: ''
+description: Ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d2839a11f95614add0691813a9fdf89dba0a2d5d
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1b28f809c924ec2699647a3cc377b3bdde86afe5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
@@ -67,7 +67,7 @@ Importera VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren til
 4. Klicka på mappikonen och bläddra till VPN-certifikatet (CER-filen) som du exporterade från VPN-administrationskonsolen. Klicka på **OK**.
 5. Klicka på **Skapa**.
 
-    ![Skapa en betrodd certifikatprofil](media\vpn-per-app-create-trusted-cert.png)
+    ![Skapa en betrodd certifikatprofil](./media/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-certificate-profile"></a>Skapa en SCEP-certifikatprofil
 
@@ -94,7 +94,7 @@ Den betrodda rotcertifikatprofilen gör det möjligt för iOS att automatiskt ha
 14. Klicka på **OK**.
 15. Klicka på **Skapa**.
 
-    ![Skapa en SCEP-certifikatprofil](media\vpn-per-app-create-scep-cert.png)
+    ![Skapa en SCEP-certifikatprofil](./media/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Skapa profil för virtuellt privat nätverk per app
 
@@ -123,7 +123,7 @@ VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter
 6. Klicka på **OK**.
 7. Klicka på **Skapa**.
 
-    ![Skapa en profil för virtuellt privat nätverk per app](media\vpn-per-app-create-vpn-profile.png)
+    ![Skapa en profil för virtuellt privat nätverk per app](./media/vpn-per-app-create-vpn-profile.png)
 
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Associera en app med VPN-profilen
@@ -146,7 +146,7 @@ När du har lagt till VPN-profilen associerar du appen och Azure AD-gruppen med 
 
 9. Klicka på **OK** och sedan på **Spara**.
 
-    ![Associera en app med det virtuella privata nätverket](media\vpn-per-app-app-to-vpn.png)
+    ![Associera en app med det virtuella privata nätverket](./media/vpn-per-app-app-to-vpn.png)
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Kontrollera anslutningen till iOS-enheten
 

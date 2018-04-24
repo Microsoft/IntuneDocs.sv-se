@@ -1,29 +1,29 @@
 ---
-title: "Per app-VPN för Android med Pulse Secure"
-description: "Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune."
-keywords: 
+title: Per app-VPN för Android med Pulse Secure
+description: Du kan skapa en VPN-profil per app för Android-enheter som hanteras av Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 06/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: ac65e906-3922-429f-8d9c-d313d3126645
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 65bd7e15a49d5b563b6a095593ca5d8d5316a1fa
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: fb4b6ad21b83d6ed2844238091f2e24e0d15cea5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-policy-to-create-a-per-app-vpn-profile-for-android-devices"></a>Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan skapa en VPN-profil per app för enheter som kör Android 5.0 och senare som hanteras av Intune. Börja med att skapa en VPN-profil som använder Pulse Secure- eller Citrix-anslutningstypen. Skapa sedan en princip för anpassad konfiguration som associerar VPN-profilen med specifika appar. 
 
@@ -52,7 +52,7 @@ När du har distribuerat principen till din Android-enhet eller till användargr
    3. Välj **Lägg till** under **OMA-URI-inställningar**.
    4. Ange ett namn på inställningen.
    5. Ange **Sträng** som **Datatyp**.
-   6. För **OMA-URI** anger du strängen: **./Vendor/MSFT/VPN/Profile/*Namn*/PackageList**, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
+   6. För **OMA-URI** anger du strängen: ***./Vendor/MSFT/VPN/Profile/* Namn**/PackageList, där *Namn* är det VPN-profilnamn som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList**.
    7.   För **Värde** skapar du en semikolonavgränsad lista över paket som ska associeras med profilen. Om du exempelvis vill att Excel och webbläsaren Google Chrome ska använda VPN-anslutningen anger du **com.microsoft.office.excel;com.android.chrome**.
 
 ![Exempel på VPN-anpassad princip per app för Android](./media/android_per_app_vpn_oma_uri.png)
@@ -63,7 +63,7 @@ Du kan också använda värdet **VITLISTAT** för att ange en lista över appar 
   1.    Välj **Lägg till** under **OMA-URI-inställningar**.
   2.    Ange ett namn på inställningen.
   3.    Ange **Sträng** som **Datatyp**.
-  4.    För **OMA-URI** använder du följande sträng: **./Vendor/MSFT/VPN/Profile/*Namn*/Läge**, där *Namn* är den VPN-profil som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode**.
+  4.    För **OMA-URI** använder du följande sträng: ***./Vendor/MSFT/VPN/Profile/* Namn**/Läge, där *Namn* är den VPN-profil som du antecknade i steg 1. I vårt exempel skulle strängen vara **./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode**.
   5.    Ange **SVARTLISTAT** eller **VITLISTAT** som **Värde**.
 
 

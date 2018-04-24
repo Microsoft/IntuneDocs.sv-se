@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e751934549490885c1ebf2445ec8f112f640f5bd
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: cc133071f4d6c0d1a3bbb3acc7c0bd5cb45b6cef
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-app-protection-policies-with-microsoft-intune"></a>Skapa och distribuera appskyddsprinciper med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet beskriver hur du skapar en appskyddsprincip på **Azure-portalen**. Azure-portalen är den nya administratörskonsolen för att skapa appskyddsprinciper och vi rekommenderar att du använder den här portalen när du skapar appskyddsprinciper. Azure Portal har stöd för följande MAM-scenarier:
 
@@ -31,23 +31,23 @@ Det här avsnittet beskriver hur du skapar en appskyddsprincip på **Azure-porta
 - Enheter som hanteras av en MDM-lösning från tredje part.
 - Enheter som inte hanteras av någon MDM-lösning (BYOD).
 
->[!IMPORTANT]
-Tänk på följande om du hanterar dina enheter med **Intune-administratörskonsolen**:
-
+> [!IMPORTANT]
+> Tänk på följande om du hanterar dina enheter med **Intune-administratörskonsolen**:
+> 
 > * Du kan skapa en appskyddsprincip som stöder appar för enheter som registrerats i Intune med hjälp av [Intune-administratörskonsolen](configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md).
 > * Appskyddsprinciper som skapats i Intune-administratörskonsolen kan inte importeras till Azure-portalen.  Appskyddsprinciperna måste återskapas på Azure-portalen.
-
+> 
 > * Du kanske inte ser alla inställningar för appskyddsprinciper i Intune-administratörskonsolen. Azure-portalen är den nya administratörskonsolen för att skapa appskyddsprinciper.
-
+> 
 > * För att distribuera hanterade appar måste du skapa en appskyddsprincip i Intune-administratörskonsolen. I detta fall kanske du vill skapa appskyddsprinciper i både Intune-administratörskonsolen och på Azure-portalen: I Intune-administratörskonsolen så att du kan distribuera hanterade appar och på Azure-portalen eftersom det är den nya administratörskonsolen där alla inställningar för appskyddsprinciper finns.
-
+> 
 > * Om du skapar appskyddsprinciper i både Intune-administratörskonsolen och på Azure-portalen används de principer som du skapar på Azure-portalen för apparna.
 
 Om du vill se en lista över principinställningar som stöds för Android- och iOS-plattformar kan du välja något av följande:
 
 > [!div class="op_single_selector"]
-- [iOS-principer](ios-mam-policy-settings.md)
-- [Android-principer](android-mam-policy-settings.md)
+> - [iOS-principer](ios-mam-policy-settings.md)
+> - [Android-principer](android-mam-policy-settings.md)
 
 - En mer detaljerad beskrivning av hur appskyddsprinciper fungerar och scenarier som stöds av appskyddsprinciper i Intune finns i avsnittet om [hur du skyddar appdata med hjälp av appskyddsprinciper](protect-app-data-using-mobile-app-management-policies-with-microsoft-intune.md).
 
@@ -129,13 +129,13 @@ Från och med Intune version 1703 kan du välja att allmänt lägga till bransch
 > [!IMPORTANT]
 > Du måste välja Windows 10 i listrutan för plattform när du skapar en ny appskyddsprincip.
 
-1.  På bladet Lägg till en princip väljer du **Tillåtna appar** eller **Undanta appar** för att öppna något av bladen för tillåtna eller undantagna appar.
+1. På bladet Lägg till en princip väljer du **Tillåtna appar** eller **Undanta appar** för att öppna något av bladen för tillåtna eller undantagna appar.
 
-    > [!NOTE]
-    >
-    - **Tillåtna appar**: detta är de appar som måste följa den här principen.
-    - **Undanta appar**: de här apparna är undantagna från denna princip och kan komma åt företagets data utan begränsningar.
-<br></br>
+   > [!NOTE]
+   > 
+   > - **Tillåtna appar**: detta är de appar som måste följa den här principen.
+   > - **Undanta appar**: de här apparna är undantagna från denna princip och kan komma åt företagets data utan begränsningar.
+   > <br></br>
 2. Klicka på **Lägg till appar** på bladet för tillåtna eller undantagna appar. Du kan lägga till rekommenderade Microsoft-appar, butiks- eller skrivbordsappar.
 
     a.  **Rekommenderade appar:** en förifylld lista med appar (huvudsakligen för Office) som administratörer enkelt kan importera till principen.
@@ -210,8 +210,8 @@ Om användaren ska kunna se effekten av ändringarna direkt måste användaren l
 Välj något av följande om du vill se en fullständig lista med principinställningar för iOS och Android:
 
 > [!div class="op_single_selector"]
-- [iOS-principer](ios-mam-policy-settings.md)
-- [Android-principer](android-mam-policy-settings.md)
+> - [iOS-principer](ios-mam-policy-settings.md)
+> - [Android-principer](android-mam-policy-settings.md)
 
 ## <a name="next-steps"></a>Nästa steg
 [Övervaka efterlevnad och användarstatus](monitor-mobile-app-management-policies-with-microsoft-intune.md)

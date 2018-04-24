@@ -1,29 +1,29 @@
 ---
-title: "Konfigurationsprinciper för hanterade appar utan enhetsregistrering"
+title: Konfigurationsprinciper för hanterade appar utan enhetsregistrering
 titlesuffix: Microsoft Intune
-description: "Läs om hur du konfigurerar principer för hanterade appar utan enhetsregistrering."
-keywords: 
+description: Läs om hur du konfigurerar principer för hanterade appar utan enhetsregistrering.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b61f98669651dd63dc27379c6eba0c6cd5f8a531
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 398cd85b6f1dd238aa591ab0d5bb1b0d065a21ae
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Du kan använda appkonfigurationsprinciper med hanterade appar som har stöd för Intune App SDK på enheter som inte har registrerats. 
 

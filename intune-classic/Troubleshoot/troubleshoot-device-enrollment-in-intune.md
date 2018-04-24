@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1f53796e08ee962a23ab02929c4451478480e281
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4c69dec5903f25b9e7f09f6a20fc35068f3329d4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet innehåller förslag på hur du kan felsöka problem med enhetsregistrering. Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md), som beskriver hur du kan få hjälp på fler sätt.
 
@@ -87,9 +87,9 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 8.  Ta bort enheter efter behov, till exempel de som inte längre används eller som har felaktiga definitioner.
 
 > [!NOTE]
-
+> 
 > Du kan undvika taket för enhetsregistrering genom att använda ett enhetsregistreringshanterarkonto. Mer information finns i [Registrera företagsägda enheter med Enhetsregistreringshanteraren i Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
->
+> 
 > Ett användarkonto som läggs till i enhetsregistreringshanterarkontot kommer inte att kunna slutföra en registrering när en princip för villkorlig åtkomst för villkorlig åtkomst tillämpas för den specifika användarinloggning.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Företagsportalen är för tillfället otillgänglig
@@ -154,7 +154,7 @@ Administratörer kan ta bort enheter på Azure Active Directory-portalen.
 **Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
 
 
-**Lösning:** Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln **SupportMultipleDomain** och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+<strong>Lösning:</strong> Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln <strong>SupportMultipleDomain</strong> och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
@@ -195,27 +195,27 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 1. Starta Smart Manager-appen på enheten.
 
-  ![Välj Smart Manager-ikonen på enheten](./media/smart-manager-app-icon.png)
+   ![Välj Smart Manager-ikonen på enheten](./media/smart-manager-app-icon.png)
 
 2. Välj panelen **Batteri**.
 
-  ![Välj panelen Batteri](./media/smart-manager-battery-tile.png)
+   ![Välj panelen Batteri](./media/smart-manager-battery-tile.png)
 
 3. Under **App-energibesparing** eller **App-optimering**, väljer du **Detaljer**.
 
-  ![Välj Detaljer under App-energibesparing eller App-optimering](./media/smart-manager-app-power-saving-detail.png)
+   ![Välj Detaljer under App-energibesparing eller App-optimering](./media/smart-manager-app-power-saving-detail.png)
 
 4. Välj **Företagsportalen** från listan över appar.
 
-  ![Välj Företagsportalen från listan över appar](./media/smart-manager-company-portal.png)
+   ![Välj Företagsportalen från listan över appar](./media/smart-manager-company-portal.png)
 
 5. Välj **Avstängd**.
 
-  ![Välj Avstängd från dialogrutan App-optimering](./media/smart-manager-app-optimization-turned-off.png)
+   ![Välj Avstängd från dialogrutan App-optimering](./media/smart-manager-app-optimization-turned-off.png)
 
 6. Under **App-energibesparing** eller **App-optimering**, bekräftar du att Företagsportalen är avstängd.
 
-  ![Kontrollera att Företagsportalen är avstängd](./media/smart-manager-verify-comp-portal-turned-off.png)
+   ![Kontrollera att Företagsportalen är avstängd](./media/smart-manager-verify-comp-portal-turned-off.png)
 
 
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen

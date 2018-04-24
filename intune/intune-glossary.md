@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: bd7b5613-ee9f-4dc3-990c-ab4c1d40720d
 ms.custom: intune-azure
-ms.openlocfilehash: f5f413ed050bd5f5620d0e15d5584a7db06eaaff
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 2b59ed38329462ad8d8db604979c8eb725f7973a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
 Läs om definitionerna av vanliga termer som används i Microsoft Intune.
@@ -39,11 +39,13 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Azure Portal|Den nya konsolen för Intune [Läs mer](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
+
 |||
 |-|-|
 |BYOD|[Bring your own device](/intune/device-enrollment). Användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.|
 
 ## <a name="c"></a>C
+
 |||
 |-|-|
 |Certifikatprofil|Du använder den här principtypen för [secure access to corporate resources](/intune/certificates-configure) (säker åtkomst till företagets resurser) med certifikat när du använder Wi-Fi, e-post eller VPN-profiler.|
@@ -55,6 +57,7 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Anpassad princip|Du [använder dessa principer](/intune/custom-settings-configure) när en princip för allmän konfiguration inte innehåller en inbyggd inställning som uppfyller dina behov. Du kan använda en anpassad princip för att skapa en inställning på ett annat sätt, som till exempel med Apple Configurator eller OMA-URI.|
 
 ## <a name="d"></a>D
+
 |||
 |-|-|
 |distribution|Att skicka en app eller en princip till en enhet eller användare som du hanterar. Åtgärden kallas nu att *tilldela*.|
@@ -62,6 +65,7 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Enhetsprofiler|Med [dessa profiler](/intune/device-profile-create) kan du konfigurera olika säkerhets-, funktions- och åtkomstinställningar på enheter som du hanterar.|
 
 ## <a name="e"></a>E
+
 |||
 |-|-|
 |E-postprofil|Principen kan användas för att konfigurera [åtkomstinställningar för e-post](/intune/email-settings-configure) för mobila enheter, vilket minimerar mängden konfiguration som slutanvändaren behöver utföra.|
@@ -70,21 +74,25 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Registrera|Microsoft Intune använder [registrering](/intune/device-enrollment) för att hantera enheter och tillåta åtkomst till resurser.|
 
 ## <a name="f"></a>F
+
 |||
 |-|-|
 |FastTrack|En [Microsoft-tjänst](https://technet.microsoft.com/library/mt228265.aspx) för Intune-användare med 150 licenser i en berättigad plan. Med den här tjänsten kan Microsoft-specialister hjälpa dig att komma igång med Intune.|
 
 ## <a name="g"></a>G
+
 |||
 |-|-|
 |Grupper|Grupper låter dig [logiskt samla ihop användare eller enheter](/intune/groups-get-started). Du kan till exempel skapa en grupp med alla Windows-datorer. Du kan sedan tilldela appar och profiler till dessa grupper.|
 
 ## <a name="h"></a>H
+
 |||
 |-|-|
 |Hybrid|En konfiguration där du kan hantera enheter som är registrerade med Intune i System Center Configuration Manager-konsolen.|
 
 ## <a name="i"></a>I
+
 |||
 |-|-|
 |Azure-portalen|Den Azure-portal som du använder för de flesta hanteringsåtgärderna i Intune.|
@@ -93,11 +101,13 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Inventering|Använd för att visa [maskinvara och program som finns installerade](/intune/device-inventory) på enheter som du hanterar.|
 
 ## <a name="k"></a>K
+
 |||
 |-|-|
 |Helskärmsläge|Med det här läget, som är konfigurerat som en del av en [enhetsbegränsningsprofil](/intune/device-restrictions-configure), kan du låsa enheter. Du kan t.ex. konfigurera att en butiksenhet endast tillåter att vissa appar körs.|
 
 ## <a name="m"></a>M
+
 |||
 |-|-|
 |Hanterad webbläsare|Ett [webbläsningsprogram](/intune/app-configuration-managed-browser) som du kan tilldela i din organisation med Intune. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.|
@@ -110,17 +120,20 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 
 
 ## <a name="o"></a>O
+
 |||
 |-|-|
 |OMA-DM|Open Mobile Alliance Device Management. Ett enhetshanteringsprotokoll som uppfyller industristandard som används av många maskinvarutillverkare för att aktivera kontroll av funktioner i mobila enheter och datorer.|
 |OMA-URI|Open Mobile Alliance Uniform Resource Identifier. Dessa objekt identifierar enskilda enhetsinställningar som överensstämmer med OMA-DM-standard. Inställningarna kan användas i [Intunes anpassade profiler](/intune/custom-settings-configure) när det inte finns någon inbyggd inställning som uppfyller behoven.|
 
 ## <a name="p"></a>P
+
 |||
 |-|-|
 |Återställning av lösenord|En Intune-funktion som gör att du kan tvinga användaren att [återställa lösenordet](/intune/device-passcode-reset) på enheter som stöds.|
 
 ## <a name="r"></a>R
+
 |||
 |-|-|
 |Fjärrlåsning|En Intune-funktion som låter dig [låsa enheter som stöds](/intune/device-remote-lock), även om du inte äger enheten.|
@@ -128,6 +141,7 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 
 
 ## <a name="s"></a>S
+
 |||
 |-|-|
 |Selektiv rensning|En [selektiv rensning](/intune/device-company-data-remove) tar endast bort företagsdata som skyddas av en appskyddsprincip, inklusive inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten.|
@@ -135,6 +149,7 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Prenumeration|Det avtal som du ingår och som ger dig tillgång till en Intune-klient.|
 
 ## <a name="t"></a>T
+
 |||
 |-|-|
 |TeamViewer|Ett program från en tredje part som används med Intune för att ge [fjärrhjälpsfunktioner](/intune/device-profile-android-teamviewer) för Android-enheter som du hanterar med Intune.|
@@ -142,12 +157,15 @@ Läs om definitionerna av vanliga termer som används i Microsoft Intune.
 |Villkor|En principtyp som du tilldelar till användare med information som användarna måste [läsa och godkänna](/intune/terms-and-conditions-create) innan de kan använda företagsportalen för att registrera sig och få åtkomst till sitt arbete.|
 
 ## <a name="v"></a>V
+
 |||
 |-|-|
 |Volyminköpta appar och böcker|I vissa appbutiker kan du köpa flera licenser av en app eller bok som du vill använda i företaget. Intune hjälper dig att hantera appar och böcker som du har [köpt via ett sådant program](/intune/vpp-apps). Du kan importera licensinformationen från appbutiken, spåra hur många licenser du har använt och förhindra att du installerar fler kopior av appen än du äger.|
 |VPN-profil|En princip som tilldelar [VPN-inställningar](/intune/vpn-settings-configure) till enheter som du hanterar och minimerar den konfiguration som krävs av slutanvändarna.|
 
 ## <a name="w"></a>W
-|||
-|-|-|
-|Wi-Fi-profil|En princip som tilldelar [inställningar för trådlöst nätverk](/intune/wi-fi-settings-configure) till enheter för att användarna ska kunna ansluta till företagsnätverket utan att behöva känna till eller konfigurera några inställningar.
+
+|               |                                                                                                                                                                                                 |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wi-Fi-profil | En princip som tilldelar [inställningar för trådlöst nätverk](/intune/wi-fi-settings-configure) till enheter för att användarna ska kunna ansluta till företagsnätverket utan att behöva känna till eller konfigurera några inställningar. |
+

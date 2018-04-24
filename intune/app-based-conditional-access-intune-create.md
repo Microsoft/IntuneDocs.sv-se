@@ -1,28 +1,28 @@
 ---
-title: "Konfigurera en appbaserad villkorlig åtkomstprincip med Intune"
-description: "Läs mer om att skapa en appbaserad villkorlig åtkomstprincip med Intune."
-keywords: 
+title: Konfigurera en appbaserad villkorlig åtkomstprincip med Intune
+description: Läs mer om att skapa en appbaserad villkorlig åtkomstprincip med Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5ab442f49e0eabc4162bd2f56865ed42d96ae5db
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: b7e3654021935495189b62da5257793383586137
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Konfigurera appbaserade villkorliga åtkomstprinciper med Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln beskrivs hur du konfigurerar appbaserade villkorliga åtkomstprinciper för appar som ingår i listan med godkända appar. Listan över godkända appar består av appar som har testats av Microsoft.
 

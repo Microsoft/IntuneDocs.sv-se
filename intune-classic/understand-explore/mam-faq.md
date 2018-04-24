@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: oydang
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 7654e5235fc30f46f67d35544a92c4bd25ac5c86
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 816a235136d91f2691e6be442036515544c004b2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Application Management) och appskyddet i Intune.
 
@@ -64,23 +64,23 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 
 **Vilka är de ytterligare krav som ställs för användning av [Outlook-mobilappen](https://www.microsoft.com/outlook-com/mobile/)?**
 
-  1. Slutanvändaren måste ha Outlook-mobilappen installerad på sin enhet.
+1. Slutanvändaren måste ha Outlook-mobilappen installerad på sin enhet.
 
-  2. Slutanvändaren måste ha en [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postlåda och licens kopplad till deras Azure Active Directory-konto.
+2. Slutanvändaren måste ha en [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postlåda och licens kopplad till deras Azure Active Directory-konto.
 
-  >[!NOTE]
-  > Outlook-mobilappen har för närvarande endast stöd för Microsoft Exchange Online och har inte stöd för Exchange på plats eller Exchange i Office 365 Dedicated.
+   >[!NOTE]
+   > Outlook-mobilappen har för närvarande endast stöd för Microsoft Exchange Online och har inte stöd för Exchange på plats eller Exchange i Office 365 Dedicated.
 
 **Vilka är de ytterligare krav som ställs för användning av [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 
-  1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+1. Slutanvändaren måste ha en licens för [Office 365 Business eller Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) som länkats till deras Azure Active Directory-konto. Prenumerationen måste inkludera Office-apparna på mobila enheter och kan inkludera ett molnlagringskonto med [OneDrive för företag](https://onedrive.live.com/about/business/). Office 365-licenser kan tilldelas i [Office-portalen](http://portal.office.com) med hjälp av följande [instruktioner](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-  2. Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddspolicy ”Förhindra Spara som”. Om den hanterade platsen är till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen konfigureras i slutanvändarens Word-, Excel- eller PowerPoint-app.
+2. Slutanvändaren måste ha en hanterad plats som konfigurerats med detaljerade spara som-funktioner under inställningen för programskyddspolicy ”Förhindra Spara som”. Om den hanterade platsen är till exempel är OneDrive, ska [OneDrive](https://onedrive.live.com/about/)-appen konfigureras i slutanvändarens Word-, Excel- eller PowerPoint-app.
 
-  3. Om den hanterade platsen är OneDrive, måste appen vara mål för appskyddsprincipen som distribueras till slutanvändaren.
+3. Om den hanterade platsen är OneDrive, måste appen vara mål för appskyddsprincipen som distribueras till slutanvändaren.
 
-  >[!NOTE]
-  > Office mobilappar har för närvarande endast stöd för SharePoint Online och inte SharePoint på plats.
+   >[!NOTE]
+   > Office mobilappar har för närvarande endast stöd för SharePoint Online och inte SharePoint på plats.
 
 **Varför behövs en hanterad plats (d.v.s. OneDrive) för Office?** Intune markerar all data i appen som "företag" eller "personligt." Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag).
 
@@ -128,15 +128,15 @@ MAM (på iOS) tillåter för närvarande PIN på programnivå med alfanumeriska 
 
 **Hur fjärrensar Intune data?** Intune kan rensa AppData på tre olika sätt: fullständig rensning av enheten, selektiv rensning för MDM och MAM-selektiv rensning. Mer information om fjärrensning för MDM finns i [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md). Mer information om selektiv rensning med MAM finns i [Rensa hanterade företagsdata från appar med Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md)
 
-  1. **Vad är fullständig rensning?** [Fullständig rensning](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) tar bort all användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
-  >[!NOTE]
-  > Fullständig rensning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
+1. **Vad är fullständig rensning?** [Fullständig rensning](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#full-wipe) tar bort all användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
+   >[!NOTE]
+   > Fullständig rensning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
 
-  2. **Vad är selektiv rensning för MDM?** Se [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) för att läsa om selektiv rensning.
+2. **Vad är selektiv rensning för MDM?** Se [Skydda data med fullständig eller selektiv rensning med Microsoft Intune](../deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md#selective-wipe) för att läsa om selektiv rensning.
 
-  3. **Vad är selektiv rensning för MAM?** Selektiv rensning för MAM tar helt enkelt bort företagsdata från en app. Begäran initieras med hjälp av Intune Azure-portalen. Information om hur du startar en rensningsbegäran finns i [Rensa hanterade företagsdata från appar med Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md)
+3. **Vad är selektiv rensning för MAM?** Selektiv rensning för MAM tar helt enkelt bort företagsdata från en app. Begäran initieras med hjälp av Intune Azure-portalen. Information om hur du startar en rensningsbegäran finns i [Rensa hanterade företagsdata från appar med Microsoft Intune](../deploy-use/wipe-managed-company-app-data-with-microsoft-intune.md)
 
-  4. **Hur snabbt sker selektiv rensning för MAM?** Om användaren använder appen när selektiv rensning initieras söker Intune App SDK var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
+4. **Hur snabbt sker selektiv rensning för MAM?** Om användaren använder appen när selektiv rensning initieras söker Intune App SDK var 30:e minut efter en begäran om selektiv rensning från Intune MAM-tjänsten. Den söker även efter selektiv rensning när användaren startar appen för första gången och loggar in med sitt arbets- eller skolkonto.
 
 **Varför fungerar inte tjänster på plats med Intunes appskydd?** Intunes appskydd är beroende av att användarens identiteten är konsekvent mellan appen och Intune App SDK. Det enda sättet att garantera detta är via modern autentisering. Det finns scenarier där appar kan fungera med en lokal konfiguration, men de är varken konsekventa eller garanterade.
 

@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4581b59de68c2877b122887fa1ffe86eaa2b92c
-ms.sourcegitcommit: 390a4be5aa36007c36fb6a5abcfe8d20bc862a4b
+ms.openlocfilehash: bb191f33133b85613f491220c970947b9e55b79f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Du kan ta bort enheter från Intune som inte längre behövs, som ska få ett nytt syfte eller som saknas. Det kan du göra med hjälp av åtgärderna **Ta bort företagsdata** eller **Fabriksåterställning**. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
 
@@ -72,7 +72,7 @@ Följande tabell beskriver vilka data som tas bort och hur åtgärden **Ta bort 
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|
 |Hanteringsagenten|Hanteringsprofilen tas bort.|
 |E-post|E-postprofiler som tillhandahålls via Intune tas bort. Cachelagrad e-post på enheten tas bort.|
-|Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort.|
+|Outlook|E-postmeddelanden som tagits emot av Microsoft Outlook-appen för iOS tas bort. För detta krävs att Outlook-mobilappen först distribueras som en obligatorisk app till iOS-användare.|
 |Frånkoppling från Azure AD|Azure AD-posten tas bort.|
 |Kontakter |Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 

@@ -1,27 +1,27 @@
 ---
-title: "Använda en Android-enhet med Intune | Microsoft Docs"
-description: "Lista med länkar till uppgifter som slutanvändare kan utföra på sina Android-mobilenheter när enheten har registrerats i Intune"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Använda en Android-enhet med Intune | Microsoft Docs
+description: Lista med länkar till uppgifter som slutanvändare kan utföra på sina Android-mobilenheter när enheten har registrerats i Intune
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 465763db-b68d-4392-a5a4-732b5b875c2b
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 09992912c439e639f7410ea93a95f0c52ed9a22d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 347757a333bcfd8e649cb621f0a95c83f24cdc88
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-your-android-device-with-intune"></a>Med hjälp av en Android-enhet med Intune
 
@@ -44,11 +44,11 @@ Intune stöder för närvarande Android 4.4 och senare. Detta inkluderar enheter
 - [Ange din PIN-kod eller ditt lösenord](set-your-pin-or-password-android.md)
 - [Installera företagets VPN (Virtual Private Network)](install-your-companys-virtual-private-network-VPN-android.md)
 - [Ställa in hur lång tid det tar innan enheten låser sig](set-the-amount-of-time-before-your-device-is-locked-android.md)
-<!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
+  <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-android.md)-->
 - [Återställa (radera) en enhet som har tappats bort eller blivit stulen](reset-erase-your-device-cpwebsite.md)
 - [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-android.md)
 - [Avregistrera enheten från Intune](unenroll-your-device-from-intune-android.md)
 - [Avregistrera din enhet om du har avvisat användningsvillkoren](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 - [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 - [Vad händer om du återställer en Android-enhet med hjälp av företagsportalappen?](what-happens-if-you-reset-your-device-using-the-company-portal-android.md)
-<!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->
+  <!--- - [What is the Rights Management sharing app?](what-is-the-rms-sharing-app-android.md) --->

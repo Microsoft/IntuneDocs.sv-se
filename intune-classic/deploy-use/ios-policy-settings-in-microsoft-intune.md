@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ff426feff58de8b06fed7be9a0e6a52e9cc40ae3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9785078341c8e3469067042a3f3e8588f29c3a3b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ios-policy-settings-in-microsoft-intune"></a>Principinställningar för iOS i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i iOS-enheter. Du kan också använda verktyget Apple Configurator för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
@@ -45,20 +45,22 @@ Om den inställning som du söker efter inte visas i det här avsnittet kan du e
 ### <a name="security-settings"></a>Säkerhetsinställningar
 Alla inställningar gäller för iOS 8.0 och senare.
 
-|Inställningsnamn|Information|
-|----------------|-------|
-|**Kräv ett lösenord för att låsa upp mobila enheter**|Ange om användaren måste ange ett lösenord för att komma åt sin enhet.|
-|**Lösenordstyp krävs**|Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.|
-|**Antal avancerade tecken som krävs i lösenord**|Ange antalet symboltecken (till exempel **#** eller **@**) som måste tas med i lösenordet.|
-|**Minsta längd på lösenord**|Ange det minsta antalet tecken som lösenordet måste innehålla.|
-|**Tillåt enkla lösenord**|Tillåt enkla lösenord som **0000** och **1234**.|
-|**Antal tillåtna, upprepad felinloggningar innan enheten rensas**|Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.|
-|**Antal minuters inaktivitet innan lösenord krävs**<sup>1</sup>|Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.|
-|**Lösenordets giltighetstid (i dagar)**|Ange antalet dagar innan lösenordet måste ändras.|
-|**Kom ihåg tidigare lösenord**|Ange om användaren kan använda lösenord som de har använt tidigare.|
-|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Ange antalet tidigare använda lösenord som enheten sparar.|
-|**Minuter av inaktivitet innan skärmen stängs av**<sup>1</sup>|Ange antalet minuter innan enhetens skärm är inaktiverad.|
-|**Tillåt fingeravtrycksupplåsning**|Tillåt att enheten kan låsas upp med ett fingeravtryck.|
+
+|                                           Inställningsnamn                                            |                                                            Information                                                             |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Kräv ett lösenord för att låsa upp mobila enheter</strong>                    |                        Ange om användaren måste ange ett lösenord för att komma åt sin enhet.                        |
+|                              <strong>Lösenordstyp krävs</strong>                              |                   Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.                    |
+|                <strong>Antal avancerade tecken som krävs i lösenord</strong>                 | Ange antalet symboltecken (till exempel <strong>#</strong> eller <strong>@</strong>) som måste tas med i lösenordet. |
+|                             <strong>Minsta längd på lösenord</strong>                              |                                   Ange det minsta antalet tecken som lösenordet måste innehålla.                                    |
+|                              <strong>Tillåt enkla lösenord</strong>                              |                          Tillåt enkla lösenord som <strong>0000</strong> och <strong>1234</strong>.                          |
+|     <strong>Antal tillåtna, upprepad felinloggningar innan enheten rensas</strong>      |                       Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.                        |
+|          <strong>Antal minuters inaktivitet innan lösenord krävs</strong><sup>1</sup>           |                   Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.                    |
+|                            <strong>Lösenordets giltighetstid (i dagar)</strong>                            |                             Ange antalet dagar innan lösenordet måste ändras.                             |
+|                            <strong>Kom ihåg tidigare lösenord</strong>                             |                           Ange om användaren kan använda lösenord som de har använt tidigare.                           |
+| <strong>Spara lösenordshistorik</strong> – <strong>Förhindra återanvändning av tidigare lösenord</strong> |                           Ange antalet tidigare använda lösenord som enheten sparar.                           |
+|            <strong>Minuter av inaktivitet innan skärmen stängs av</strong><sup>1</sup>             |                             Ange antalet minuter innan enhetens skärm är inaktiverad.                             |
+|                             <strong>Tillåt fingeravtrycksupplåsning</strong>                             |                                        Tillåt att enheten kan låsas upp med ett fingeravtryck.                                         |
+
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
 ### <a name="system-settings"></a>Systeminställningar
@@ -180,25 +182,26 @@ Principer som innehåller inställningar för kompatibla och ej kompatibla progr
 
 ### <a name="kiosk-mode-settings"></a>Helskärmsinställningar
 
-|Inställningsnamn|Information|
-|----------------|--------------------|
-|**Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge**|Välj **Bläddra** och ange den hanterade appen eller en app från en butik som ska kunna köras när enheten är i helskärmsläge. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.|
-|**Tillåt pekskärm**|Aktivera eller inaktivera pekskärmen på enheten.|
-|**Tillåt rotering av skärmbild**|Aktivera eller inaktivera ändring av skärmens orientering när användaren roterar enheten.|
-|**Tillåt volymknappar**|Aktivera eller inaktivera användningen av volymknapparna på enheten.|
-|**Tillåt ringsignalsomkopplare**|Aktivera eller inaktivera tyst läge på enheten.|
-|**Tillåt aktiveringsknapp på skärmen**|Aktivera eller inaktivera aktiveringsknappen på enhetens skärm.|
-|**Tillåt automatiskt lås**|Aktivera eller inaktivera automatisk låsning av enheten.|
-|**Aktivera monoljud**|Aktivera eller inaktivera hjälpmedelsinställningen **Monoljud**.|
-|**Aktivera text-till-tal**|Aktivera eller inaktivera hjälpmedelsinställningen **Text-till-tal** som läser upp text på enhetsskärmen.|
-|**Aktivera justering av text-till-tal**|Aktivera eller inaktivera justeringar av text-till-talfunktionen så att användare kan justera funktionen text-till-tal (till exempel hur snabbt texten ska läsas upp).|
-|**Aktivera zoom**|Aktivera eller inaktivera hjälpmedelsinställningen **Zoom** som gör att användare kan använda pekskärmen för att zooma in det som visas på enheten.|
-|**Aktivera zoomjusteringar**|Aktivera eller inaktivera justeringar i zoomfunktionen.|
-|**Aktivera inverterade färger**|Aktivera eller inaktivera hjälpmedelsinställningen **Invertera färger** som anpassar skärmen för att hjälpa användare med synfel.|
-|**Aktivera anpassning av inverterade färger**|Aktivera eller inaktivera justeringar i funktionen inverterade färger.|
-|**Aktivera Assistive Touch**|Aktivera eller inaktivera hjälpmedelsinställningen **Assistive Touch** som hjälper användare med gester på skärmen som kan vara svåra att utföra.|
-|**Aktivera anpassning av Assistive Touch**|Aktivera eller inaktivera anpassning av funktionen Assistive Touch.|
-|**Aktivera Läs upp markering**|Aktivera eller inaktivera hjälpmedelsinställningen **Läs upp markering** som kan läsa upp texten som användaren väljer.|
+|                                            Inställningsnamn                                            |                                                                                                                                      Information                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Välj en hanterad app som ska kunna köras när enheten är i helskärmsläge</strong> | Välj <strong>Bläddra</strong> och ange den hanterade appen eller en app från en butik som ska kunna köras när enheten är i helskärmsläge. Inga andra appar kommer att kunna köras på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet. |
+|                                    <strong>Tillåt pekskärm</strong>                                    |                                                                                                                  Aktivera eller inaktivera pekskärmen på enheten.                                                                                                                  |
+|                               <strong>Tillåt rotering av skärmbild</strong>                               |                                                                                                Aktivera eller inaktivera ändring av skärmens orientering när användaren roterar enheten.                                                                                                 |
+|                               <strong>Tillåt volymknappar</strong>                                |                                                                                                           Aktivera eller inaktivera användningen av volymknapparna på enheten.                                                                                                           |
+|                                <strong>Tillåt ringsignalsomkopplare</strong>                                |                                                                                                             Aktivera eller inaktivera tyst läge på enheten.                                                                                                              |
+|                          <strong>Tillåt aktiveringsknapp på skärmen</strong>                           |                                                                                                           Aktivera eller inaktivera aktiveringsknappen på enhetens skärm.                                                                                                            |
+|                                  <strong>Tillåt automatiskt lås</strong>                                  |                                                                                                                 Aktivera eller inaktivera automatisk låsning av enheten.                                                                                                                 |
+|                                 <strong>Aktivera monoljud</strong>                                 |                                                                                                      Aktivera eller inaktivera hjälpmedelsinställningen <strong>Monoljud</strong>.                                                                                                      |
+|                                 <strong>Aktivera text-till-tal</strong>                                 |                                                                               Aktivera eller inaktivera hjälpmedelsinställningen <strong>Text-till-tal</strong> som läser upp text på enhetsskärmen.                                                                                |
+|                           <strong>Aktivera justering av text-till-tal</strong>                           |                                                                  Aktivera eller inaktivera justeringar av text-till-talfunktionen så att användare kan justera funktionen text-till-tal (till exempel hur snabbt texten ska läsas upp).                                                                   |
+|                                    <strong>Aktivera zoom</strong>                                    |                                                                         Aktivera eller inaktivera hjälpmedelsinställningen <strong>Zoom</strong> som gör att användare kan använda pekskärmen för att zooma in det som visas på enheten.                                                                         |
+|                              <strong>Aktivera zoomjusteringar</strong>                              |                                                                                                  Aktivera eller inaktivera justeringar i zoomfunktionen.                                                                                                  |
+|                               <strong>Aktivera inverterade färger</strong>                                |                                                                    Aktivera eller inaktivera hjälpmedelsinställningen <strong>Invertera färger</strong> som anpassar skärmen för att hjälpa användare med synfel.                                                                    |
+|                         <strong>Aktivera anpassning av inverterade färger</strong>                          |                                                                                         Aktivera eller inaktivera justeringar i funktionen inverterade färger.                                                                                         |
+|                              <strong>Aktivera Assistive Touch</strong>                               |                                                     Aktivera eller inaktivera hjälpmedelsinställningen <strong>Assistive Touch</strong> som hjälper användare med gester på skärmen som kan vara svåra att utföra.                                                     |
+|                        <strong>Aktivera anpassning av Assistive Touch</strong>                         |                                                                                       Aktivera eller inaktivera anpassning av funktionen Assistive Touch.                                                                                       |
+|                              <strong>Aktivera Läs upp markering</strong>                              |                                                                        Aktivera eller inaktivera hjälpmedelsinställningen <strong>Läs upp markering</strong> som kan läsa upp texten som användaren väljer.                                                                         |
+
 > [!NOTE]
 > Följande information gäller inställningar för helskärmsläge på iOS-enheter:
 >
@@ -349,8 +352,6 @@ Med informationen i den här listan kan du identifiera namn, utgivare och paket-
 ,com.apple.Passbook,Wallet,Apple
 ,com.apple.Bridge,Watch,Apple
 ,com.apple.weather,Weather,Apple
-
-
 ```
 
 

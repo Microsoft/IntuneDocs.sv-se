@@ -1,27 +1,27 @@
 ---
-title: "Inställningar av begränsningar i Microsoft Intune-enheter för Windows Phone 8.1"
-titleSuffix: 
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows Phone 8.1."
-keywords: 
+title: Inställningar av begränsningar i Microsoft Intune-enheter för Windows Phone 8.1
+titleSuffix: ''
+description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows Phone 8.1.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 808c8e9ac1ef944b69ae8e548c62d4c6366820d0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 1bebb5915a7adeb13fd95b73587bca0171bebd83
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Inställningar för enhetsbegränsningar för Windows Phone 8.1-enheter i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln visas inställningarna av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows Phone 8.1.
 
@@ -70,7 +70,7 @@ Gå till sidan [Windows Phone Store](https://www.microsoft.com/store/apps/window
 
 Öppna appens sida och kopiera webbadressen till Urklipp. Nu kan du använda den som webbadress i listan över tillåtna eller blockerade appar.
 
-Exempel: Sök i butiken efter Skype-appen. Webbadressen som du använder är **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
+Exempel: Sök i butiken efter Skype-appen. Den URL som du använder är **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 
 

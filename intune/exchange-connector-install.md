@@ -1,25 +1,25 @@
 ---
 title: Konfigurera Microsoft Intune lokalt med Exchange Connector
-titleSuffix: 
-description: "Använd din lokala Exchange Connector till att hantera enhetsåtkomst till Exchange-postlådor baserat på Intune-registrering och Exchange Active Sync (EAS)."
-keywords: 
+titleSuffix: ''
+description: Använd din lokala Exchange Connector till att hantera enhetsåtkomst till Exchange-postlådor baserat på Intune-registrering och Exchange Active Sync (EAS).
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0caea2e8b7704fe2dfcbec937b59000ac2a12ae5
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 6319f6d805746e152c1f1b08231600099542ed4f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurera Intune On-Premises Connector för lokal Exchange i Microsoft Intune Azure
 
@@ -37,16 +37,16 @@ Om du vill konfigurera en anslutning som gör det möjligt för Microsoft Intune
 ## <a name="on-premises-exchange-connector-requirements"></a>Krav för den lokala Exchange Connector
 Följande tabell innehåller kraven för datorn där du installerar den lokala Exchange Connector.
 
-|Krav|Mer information|
-|---------------|--------------------|
-|Operativsystem|Intune stöder lokal Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Connector stöds inte i Server Core-installationer.|
-|Microsoft Exchange|Lokala anslutningar kräver Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den **nya** eller **äldre** konfigurationen kontaktar du din kontoansvariga.|
-|Utfärdare för hantering av mobila enheter| [Ange utfärdare för hantering av mobila enheter till Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).|
-|Maskinvara|Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.|users-add.md
-|Active Directory-synkronisering|Innan du kan använda Connector-anslutningen för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](users-add.md) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
-|Tilläggsprogramvara|En fullständig installation av Microsoft .NET Framework 4.5 och Windows PowerShell 2.0 måste installeras på den dator som är värd för anslutningen.|
-|Nätverk|Datorn där du installerar anslutningen måste finnas i en domän som har en förtroenderelation till domänen som är värd för Exchange Server.<br /><br />Datorn kräver konfigurationer för att kunna komma åt Intune-tjänsten genom brandväggar och proxyservrar via portarna 80 och 443. Exempel på domäner som används av Intune är manage.microsoft.com, &#42;manage.microsoft.com och &#42;.manage.microsoft.com.|
 
+|            Krav             |                                                                                                                                                                                                        Mer information                                                                                                                                                                                                        |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Operativsystem          |                                                               Intune stöder lokal Exchange Connector på datorer som kör någon utgåva av Windows Server 2008 SP2 64-bitars, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 eller Windows Server 2016.<br /><br />Connector stöds inte i Server Core-installationer.                                                                |
+|         Microsoft Exchange         |                                                                           Lokala anslutningar kräver Microsoft Exchange 2010 SP1 eller senare, eller äldre Exchange Online Dedicated. Om du vill ta reda på om Exchange Online Dedicated-miljön har den <strong>nya</strong> eller <strong>äldre</strong> konfigurationen kontaktar du din kontoansvariga.                                                                           |
+| Utfärdare för hantering av mobila enheter |                                                                                                                              [Ange utfärdare för hantering av mobila enheter till Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).                                                                                                                               |
+|              Maskinvara              |                                                                                                                                                     Datorn där du installerar anslutningen måste ha en 1,6 GHz-processor med 2 GB RAM-minne och 10 GB ledigt diskutrymme.                                                                                                                                                      |
+|  Active Directory-synkronisering  |                                                                                      Innan du kan använda Connector-anslutningen för att ansluta Intune till Exchange Server måste du [konfigurera Active Directory-synkronisering](users-add.md) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.                                                                                      |
+|        Tilläggsprogramvara         |                                                                                                                                           En fullständig installation av Microsoft .NET Framework 4.5 och Windows PowerShell 2.0 måste installeras på den dator som är värd för anslutningen.                                                                                                                                           |
+|              Nätverk               | Datorn där du installerar anslutningen måste finnas i en domän som har en förtroenderelation till domänen som är värd för Exchange Server.<br /><br />Datorn kräver konfigurationer för att kunna komma åt Intune-tjänsten genom brandväggar och proxyservrar via portarna 80 och 443. Exempel på domäner som används av Intune är manage.microsoft.com, &#42;manage.microsoft.com och &#42;.manage.microsoft.com. |
 
 ### <a name="exchange-cmdlet-requirements"></a>Krav för Exchange-cmdlet
 
@@ -84,48 +84,48 @@ Du måste skapa ett Active Directory-användarkonto som används av Intune Excha
 ## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Installera och konfigurera den lokala Intune Exchange Connector
 Utför följande steg för att installera den lokala Intune Exchange Connector. Den lokala Exchange Connector kan bara installeras en gång per Intune-prenumeration och bara på en dator. Om du försöker konfigurera ytterligare en lokal Exchange Connector ersätts den ursprungliga anslutningen med den nya.
 
-1.  På ett operativsystem med stöd för den lokala Exchange Connector extraherar du filerna i **Exchange_Connector_Setup.zip** till en säker plats.
+1. På ett operativsystem med stöd för den lokala Exchange Connector extraherar du filerna i **Exchange_Connector_Setup.zip** till en säker plats.
 
-2.  När filerna har extraherats öppnar du den extraherade mappen och dubbelklickar på **Exchange_Connector_Setup.exe** för att installera den lokala Exchange Connector.
+2. När filerna har extraherats öppnar du den extraherade mappen och dubbelklickar på **Exchange_Connector_Setup.exe** för att installera den lokala Exchange Connector.
 
-    > [!IMPORTANT]
-    > Om målmappen inte är en säker plats bör du ta bort certifikatfilen **WindowsIntune.accountcert** när du har installerat den lokala anslutningen.
+   > [!IMPORTANT]
+   > Om målmappen inte är en säker plats bör du ta bort certifikatfilen **WindowsIntune.accountcert** när du har installerat den lokala anslutningen.
 
-3.  I dialogrutan **Microsoft Intune Exchange Connector** väljer du antingen **On-premises Microsoft Exchange Server** eller **Hosted Microsoft Exchange Server**.
+3. I dialogrutan **Microsoft Intune Exchange Connector** väljer du antingen **On-premises Microsoft Exchange Server** eller **Hosted Microsoft Exchange Server**.
 
-  ![Bild som visar var du väljer Exchange Server-typ](./media/intune-sa-exchange-connector-config.png)
+   ![Bild som visar var du väljer Exchange Server-typ](./media/intune-sa-exchange-connector-config.png)
 
-  För en lokal Exchange-server anger du antingen servernamnet eller det fullständigt kvalificerade domännamnet för Exchange-servern som är värd för **klientåtkomstserverrollen**.
+   För en lokal Exchange-server anger du antingen servernamnet eller det fullständigt kvalificerade domännamnet för Exchange-servern som är värd för **klientåtkomstserverrollen**.
 
-  För en värdbaserad Exchange-server anger du adressen till Exchange-servern. Så här hittar du URL-adressen till den värdbaserade Exchange-servern:
+   För en värdbaserad Exchange-server anger du adressen till Exchange-servern. Så här hittar du URL-adressen till den värdbaserade Exchange-servern:
 
-    1. Öppna Outlook Web App för Office 365.
+   1. Öppna Outlook Web App för Office 365.
 
-    2. Välj ikonen **?** längst upp till vänster och välj sedan **Om**.
+   2. Välj ikonen **?** längst upp till vänster och välj sedan **Om**.
 
-    3. Leta upp värdet för **POP extern server** .
+   3. Leta upp värdet för **POP extern server** .
 
-    4. Välj **Proxyserver** om du vill ange proxyserverinställningar för den värdbaserade Exchange-servern.
-        1. Välj **Använd en proxyserver vid synkronisering av information om mobila enheter**.
+   4. Välj **Proxyserver** om du vill ange proxyserverinställningar för den värdbaserade Exchange-servern.
+       1. Välj **Använd en proxyserver vid synkronisering av information om mobila enheter**.
 
-        2. Ange **proxyserverns namn** och **portnummer** som används för att logga in på servern.
+       2. Ange **proxyserverns namn** och **portnummer** som används för att logga in på servern.
 
-        3. Om det är nödvändigt att ange autentiseringsuppgifter för att ansluta till proxyservern väljer du **Använd autentiseringsuppgifter för att ansluta till proxyservern**. Ange **domän\användare** och **lösenordet**.
+       3. Om det är nödvändigt att ange autentiseringsuppgifter för att ansluta till proxyservern väljer du **Använd autentiseringsuppgifter för att ansluta till proxyservern**. Ange **domän\användare** och **lösenordet**.
 
-        4. Välj **OK**.
+       4. Välj **OK**.
 
-    5. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern.
+   5. I fälten **Användare (domän\användare)** och **Lösenord** anger du autentiseringsuppgifterna som krävs för att ansluta till Exchange-servern.
 
-    6.  Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att kunna skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
+   6.  Ange de autentiseringsuppgifter som krävs för att skicka meddelanden till en användares Exchange Server-postlåda. Den här användaren kan vara dedikerad till enbart meddelanden. Meddelandeanvändaren behöver en Exchange-postlåda för att kunna skicka meddelanden via e-post. Du kan konfigurera dessa meddelanden med villkorliga åtkomstprinciper i Intune.  
 
-        Kontrollera att tjänsten för automatisk upptäckt och Exchange Web Services har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i avsnittet om [klientåtkomstservern](https://technet.microsoft.com/library/dd298114.aspx).
+       Kontrollera att tjänsten för automatisk upptäckt och Exchange Web Services har konfigurerats på Exchange-klientåtkomstservern. Mer information finns i avsnittet om [klientåtkomstservern](https://technet.microsoft.com/library/dd298114.aspx).
 
-    7.  I fältet **Lösenord** anger du lösenordet för detta konto för att möjliggöra för Intune att ansluta till Exchange-servern.
+   7.  I fältet **Lösenord** anger du lösenordet för detta konto för att möjliggöra för Intune att ansluta till Exchange-servern.
 
-    8. Välj **Anslut**.
+   8. Välj **Anslut**.
 
-    > [!NOTE]
-    > Det kan ta några minuter innan anslutningen har konfigurerats.
+   > [!NOTE]
+   > Det kan ta några minuter innan anslutningen har konfigurerats.
 
 Under konfigurationen lagrar Exchange Connector dina proxyinställningar för att möjliggöra åtkomst till Internet. Om proxyinställningarna ändras måste du konfigurera om Exchange Connector för att kunna tillämpa de uppdaterade proxyinställningarna på Exchange Connector.
 

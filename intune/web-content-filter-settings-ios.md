@@ -1,28 +1,28 @@
 ---
-title: "Inställningar för Microsoft Intunes webbinnehållsfilter för iOS-enheter"
-titlesuffix: 
-description: "Läs mer om de Microsoft Intune-inställningar som du kan använda för att tillåta och blockera åtkomst till webbplatser från enheter som kör iOS."
-keywords: 
+title: Inställningar för Microsoft Intunes webbinnehållsfilter för iOS-enheter
+titlesuffix: ''
+description: Läs mer om de Microsoft Intune-inställningar som du kan använda för att tillåta och blockera åtkomst till webbplatser från enheter som kör iOS.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a401a3a04d10587606b8ec4862a62e551e7aadf0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c5e3dbdc339fd25289e1aed526bc03e4691c3812
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-content-filter-settings-for-ios-devices"></a>Inställningar för webbinnehållsfilter för iOS-enheter
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Den här artikeln beskriver de Microsoft Intune-inställningar som du kan använda för att styra webbläsarens URL-åtkomst från enheter som kör iOS.
 
@@ -63,7 +63,7 @@ Om du inte anger några webbadresser får användarna inte åtkomst till några 
 2. Klicka på **Lägg till** när du har angett informationen för varje webbplats.
 3. Klicka på **OK**när du är klar.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Följande webbadresser tillåts automatiskt av Intune.
 > - www.microsoft.com
 > - www.microsoft.net

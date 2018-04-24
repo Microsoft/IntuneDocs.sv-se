@@ -16,11 +16,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa784d0b446e3de180ce47ec51d3440522966fad
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 242ee454ec42c54bb9437fbdf0a7efeca926d193
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Beskriver hur användarna upplever det grundläggande skyddet för hanterade Office 365-appar i Microsoft Intune
 
@@ -50,13 +50,13 @@ Det här artikeln använder OneDrive för företag som ett illustrerande exempel
 2. Skriv användarnamnet för ditt arbetskonto. Du omdirigeras till O365-autentiseringssidan där du kan ange dina autentiseringsuppgifter för arbetet. 
 3. När dina autentiseringsuppgifter har autentiserats av Azure Active Directory tillämpas appskyddsprinciperna och du uppmanas att starta om appen OneDrive för företag. 
 
-  > [!NOTE]
-  > Meddelandet om nödvändig omstart visas bara på enheter som inte har registrerats i Intune.
+   > [!NOTE]
+   > Meddelandet om nödvändig omstart visas bara på enheter som inte har registrerats i Intune.
 
 4. Starta om appen OneDrive för företag. Appen startas med appskyddsprinciperna aktiverade och du uppmanas att ange en PIN-kod för enheten (om du ännu inte har konfigurerat någon PIN-kod för enheten).  
 
-  > [!NOTE]
-  > De flesta av dina användare ser aldrig den här uppmaningen. Det är bara de användare som inte har aktiverat någon PIN-kod på sina iOS-enheter som ser uppmaningen.
+   > [!NOTE]
+   > De flesta av dina användare ser aldrig den här uppmaningen. Det är bara de användare som inte har aktiverat någon PIN-kod på sina iOS-enheter som ser uppmaningen.
 
 5. När du väl har angett PIN-koden och bekräftat den, så gå tillbaka till appen OneDrive för företag. Ett engångsmeddelande visas om att din IT-administratör nu skyddar arbetsdata i OneDrive. 
 6. Klicka dig förbi meddelandet för att få åtkomst till dina filer på OneDrive för företag. 
@@ -70,8 +70,8 @@ Det här artikeln använder OneDrive för företag som ett illustrerande exempel
 2. Skriv användarnamnet för ditt arbetskonto. Du omdirigeras till O365-autentiseringssidan där du kan ange dina autentiseringsuppgifter för arbetet. <br/> ![Bild av O365-inloggning på Android](./media/o365-sign-in-android.png)
 3. Efter det att dina autentiseringsuppgifter har autentiserats av Azure Active Directory visas ett meddelande med anvisningar om hur du installerar företagsportalappen, såvida den inte redan har installerats på enheten. Fortsätt genom att knacka på **Gå till butik**. <br/> ![Bild av meddelande om att hämta företagsportalappen](./media/get-company-portal-android.png) <br/>Om du redan har installerat företagsportalappen på din telefon startas OneDrive för företag appen automatiskt och du kan gå direkt till slutanteckningen.   
 
-  > [!IMPORTANT]
-  > När du har konfigurerat de Office-appar på Android som ska hanteras av en appskyddsprincip **måste** enhetens användare installera företagsportalappen för att få åtkomst till e-post och dokument, även om slutanvändaren inte behöver öppna eller logga in på appen för att faktiskt läsa e-postmeddelandena eller dokumenten.
+   > [!IMPORTANT]
+   > När du har konfigurerat de Office-appar på Android som ska hanteras av en appskyddsprincip **måste** enhetens användare installera företagsportalappen för att få åtkomst till e-post och dokument, även om slutanvändaren inte behöver öppna eller logga in på appen för att faktiskt läsa e-postmeddelandena eller dokumenten.
 
 4. Nu är du i Google Play Store, där du kan hämta och installera företagsportalappen. Appen hjälper till att skydda dina data. <br/> ![Bild av appen i Google Play Store](./media/google-play-get-app-android.png)
 5. När du har slutfört appinstallationen godkänner du villkoren genom att välja **Acceptera**. Appen OneDrive för företag startas automatiskt.
@@ -86,6 +86,7 @@ Det här artikeln använder OneDrive för företag som ett illustrerande exempel
 <!--- Original steps: 6. The next time you open OneDrive for Business, you may be asked to set a PIN, if your IT requires one to use the OneDrive for Business app. ART 7. After you set and confirm the PIN, you can continue on to OneDrive for Business. -->
 
 ## <a name="what-policies-does-this-wizard-set"></a>Vilka principer konfigurerar den här guiden?
+
 |     |       | |
 |----|--------|-|
 |**Namn**|Hantera Office 365-appar| |

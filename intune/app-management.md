@@ -1,31 +1,30 @@
 ---
-title: "Vad är apphantering i Microsoft Intune?"
-titlesuffix: 
-description: "Lär dig grunderna om apphantering med Microsoft Intune."
-keywords: 
+title: Vad är apphantering i Microsoft Intune?
+titlesuffix: ''
+description: Lär dig grunderna om apphantering med Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/09/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 737c2900b2cdd57cb4dfc8373d06111a52e772b2
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 86cb0dfb67e81a7abbdc8f38dcbf5539b9855adb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Med Microsoft Intune kan du som är IT-administratör hantera de mobilappar som företagets personal använder. Den här funktionen är ett tillägg till hanteringen av enheter och att skydda data. Som en del av funktionen är en av dina prioriteringar att se till att dina slutanvändare har åtkomst till de appar som de behöver för att utföra sitt arbete. Detta kan vara en utmaning eftersom:
 - Det finns en mängd olika enhetsplattformar och apptyper.
@@ -90,10 +89,10 @@ Informationen nedan motsvarar alternativen på bladet **Mobilappar**.
 
 Mer information finns i [Hantera appar](app-management.md).
 
-### <a name="monitor"></a>Övervakare
+### <a name="monitor"></a>Övervaka
 - **Applicenser** – Visa, tilldela och övervaka volyminköpta appar från appbutiker. Mer information finns i följande artiklar:
     - [Volyminköpsprogram för iOS-appar (VPP)](vpp-apps-ios.md)
-    - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md)
+    - [Volymköpta appar från Windows Store för företag](windows-store-for-business.md)
 - **Identifierade appar** – Visar alla appar som har tilldelats av Intune och installerats på en enhet.
 - **Appinstallationsstatus** – Visar status för en apptilldelning som du skapat.
 - **Användarstatus för appskydd** – Visar status för en skyddsprincip hos en användare som du väljer.
@@ -101,13 +100,13 @@ Mer information finns i [Hantera appar](app-management.md).
 
 Mer information finns i [Övervaka appar](apps-monitor.md).
 
-### <a name="setup"></a>Setup
+### <a name="setup"></a>Installation
 - **iOS VPP-token** – Tillämpa och visa dina licenser för iOS Volume Purchase Program (VPP).
     - [Volyminköpta iOS-appar](vpp-apps-ios.md)
 - **Windows företagscertifikat** – Använd eller visa status för ett kodsigneringscertifikat som används för att distribuera branschspecifika appar till dina hanterade Windows-enheter.
 - **Windows Symantec-certifikat** – Använd eller visa status för ett Symantec-kodsigneringscertifikat som behövs för att distribuera XAP- och WP8.x appx-filer till Windows 10 Mobile-enheter.
 - **Microsoft Store för företag** – Installationsintegrering till Microsoft Store för företag. När du gjort detta kan du synkronisera inköpta program till Intune, tilldela dem och spåra användningen av licenser. Mer information finns i följande artikel:
-    - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md)
+    - [Volymköpta appar från Windows Store för företag](windows-store-for-business.md)
 - **Windows-nycklar för separat inläsning** – Du kan lägga till en Windows-nyckel för separat inläsning som kan användas för att installera en app direkt till enheter i stället för att publicera och hämta appen från Windows store. Mer information finns i följande artikel:
     - [Separat inläsning av en Windows-app](app-sideload-windows.md)
 - **Anpassa företagsportalen.** – Anpassa företagsportalen enligt ert varumärke. Mer information finns i följande artikel:

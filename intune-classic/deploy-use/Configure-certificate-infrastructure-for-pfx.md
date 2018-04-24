@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: vinaybha
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a19dbd6ad2b65e7d2d090b543f3e2200180c660a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 819c314b2fe69077fb545afa670587c85d4fa7ef
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurera infrastrukturen för certifikat
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet beskriver vad du behöver för att skapa och distribuera .PFX-certifikatprofiler.
 
@@ -38,21 +38,21 @@ Om du vill använda .PFX-certifikatprofiler behöver du, förutom utfärdaren av
 ## <a name="on-premises-infrastructure-description"></a>Beskrivning av lokal infrastruktur
 
 
--    **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
+- **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
 
--  **Certifikatutfärdare**: En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
-    Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
+- **Certifikatutfärdare**: En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
+   Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
 
--  **En dator som kan kommunicera med certifikatutfärdaren**: Du kan också använda den dator som fungerar som certifikatutfärdare.
--  **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector. För. PFX-certifikatprofiler, installera certifikat connector på datorn som kommunicerar med certifikatutfärdaren.
--  **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
-    -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
-    -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
+- **En dator som kan kommunicera med certifikatutfärdaren**: Du kan också använda den dator som fungerar som certifikatutfärdare.
+- **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector. För. PFX-certifikatprofiler, installera certifikat connector på datorn som kommunicerar med certifikatutfärdaren.
+- **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
+   -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
+   -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
 
- > [!NOTE]           
-> -    Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter (NDES). Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
->-  Dessutom måste den server som är värd för WAP ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter, samt lita på SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
-    Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
+  > [!NOTE]           
+  > -    Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter (NDES). Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
+  >-  Dessutom måste den server som är värd för WAP ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter, samt lita på SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
+   Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
 
 
 ### <a name="certificates-and-templates"></a>Certifikat och mallar
@@ -123,36 +123,36 @@ Hämta, installera och konfigurera certifikatanslutningsappen.
 
 ##### <a name="to-download-install-and-configure-the-certificate-connector"></a>Så här laddar du ned, installerar och konfigurerar certifikatanslutningsappen
 
-1.  Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och välj sedan **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
+1. Öppna [administratörskonsolen i Intune](https://manage.microsoft.com) och välj sedan **Admin** &gt; **Hantering av mobila enheter** &gt; **Certifikatanslutningsapp** &gt; **Ladda ned certifikatanslutningsappen**.
 
-2.  När nedladdningen är klar så kör du det nedladdade installationsprogrammet (**ndesconnectorssetup.exe**).
+2. När nedladdningen är klar så kör du det nedladdade installationsprogrammet (**ndesconnectorssetup.exe**).
 
-  Kör installationsprogrammet på den dator som kan ansluta med certifikatutfärdaren. Välj PFX-distributionsalternativet och klicka sedan på **Installera**. När installationen har slutförts fortsätter du genom att skapa en certifikatprofil enligt beskrivningen i [Konfigurera certifikatprofiler](configure-intune-certificate-profiles.md).
+   Kör installationsprogrammet på den dator som kan ansluta med certifikatutfärdaren. Välj PFX-distributionsalternativet och klicka sedan på **Installera**. När installationen har slutförts fortsätter du genom att skapa en certifikatprofil enligt beskrivningen i [Konfigurera certifikatprofiler](configure-intune-certificate-profiles.md).
 
    <!-- Not sure about step 3 below -->
 
-3.  När du tillfrågas om klientcertifikatet för certifikatanslutningsappen väljer du **Välj** och väljer det certifikat för **klientautentisering** som du installerade i uppgift 3.
+3. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen väljer du **Välj** och väljer det certifikat för **klientautentisering** som du installerade i uppgift 3.
 
-    När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector** . Även om certifikatet du valt inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
+   När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector** . Även om certifikatet du valt inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
 
-4.  När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
+4. När guiden slutförts klickar du på **Starta användargränssnittet för Certifikat Connectorn**innan du stänger guiden.
 
-    > [!TIP]
-    > Om du stängt guiden innan du startade användargränssnittet kan du öppna det genom att skriva följande kommando:
-    >
-    > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
+   > [!TIP]
+   > Om du stängt guiden innan du startade användargränssnittet kan du öppna det genom att skriva följande kommando:
+   >
+   > **&lt;install_Path&gt;\NDESConnectorUI\NDESConnectorUI.exe**
 
-5.  I användargränssnittet för **certifikat connectorn** :
+5. I användargränssnittet för **certifikat connectorn** :
 
-    a. Välj **Logga in** och ange dina autentiseringsuppgifter som tjänstadministratör i Intune eller för en klientadministratör med behörighet för global administration.
+   a. Välj **Logga in** och ange dina autentiseringsuppgifter som tjänstadministratör i Intune eller för en klientadministratör med behörighet för global administration.
 
-    b. Välj fliken **Avancerat** och ange autentiseringsuppgifter för ett konto som har behörigheten **Utfärda och hantera certifikat** på den utfärdande certifikatutfärdaren.
+   b. Välj fliken **Avancerat** och ange autentiseringsuppgifter för ett konto som har behörigheten **Utfärda och hantera certifikat** på den utfärdande certifikatutfärdaren.
 
-    c. Välj **Använd**.
+   c. Välj **Använd**.
 
-    Nu kan du stänga användargränssnittet för Certifikat Connectorn.
+   Nu kan du stänga användargränssnittet för Certifikat Connectorn.
 
-6.  Öppna en kommandotolk och skriv **services.msc**. Tryck på **Retur**, högerklicka på **Intune-anslutningstjänsten** och välj **Starta om**.
+6. Öppna en kommandotolk och skriv **services.msc**. Tryck på **Retur**, högerklicka på **Intune-anslutningstjänsten** och välj **Starta om**.
 
 
 ### <a name="next-steps"></a>Nästa steg

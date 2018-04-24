@@ -14,15 +14,15 @@ ms.assetid: d158503c-1276-422b-ab81-5f66c1cd7e7a
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: be8a04b28494e5806a1e5127d4d0bbdf4cd98f36
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: f818c35a008c24a529967b09a37917343433ff7d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-intune"></a>Konfigurera Intune
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 De här anvisningarna visar hur du aktiverar mobilenhetshantering (MDM) med hjälp av Intune. Enheterna måste vara hanterade innan du kan ge användarna åtkomst till företagsresurser eller hantera inställningar på enheterna.
 
@@ -35,16 +35,17 @@ Om du använder Microsoft System Center Configuration Manager för att hantera d
 
 
 
-| Steg | Status  |
-| ------------- |-------------|
-| 1  | [Konfigurationer som stöds](supported-devices-browsers.md) – Viktig information innan du sätter igång. Här visas konfigurationer som stöds och krav på nätverk.|
-| 2 |  [Logga in på Intune](account-sign-up.md) – Logga in på din utvärderingsprenumeration eller skapa en ny Intune-prenumeration. |  
-| 3 | [Konfigurera domännamn](custom-domain-name-configure.md) – Ange DNS-registrering för att ansluta ditt företags domännamn till Intune. Användarna får en välbekant domän när de ansluter till Intune och använder resurserna.  |
-| 4 | [Lägg till användare](users-add.md) – Lägg till användare manuellt eller anslut Active Directory om du vill synkronisera användare med Intune. Obligatoriskt såvida dina enheter inte är exempelvis användarlösa informationsdatorenheter. |
-| 5 | [Tilldela licenser](licenses-assign.md) – Ge användarna behörighet att använda Intune. För varje användare eller användarlös enhet krävs en Intune-licens för att få åtkomst till tjänsten.|
-| 6 |  [Lägg till grupper](groups-add.md) – Använd användar- och enhetsgrupper för att förenkla hanteringsuppgifter. Grupper används för att tilldela appar, inställningar och andra resurser. |
-| 7 | [Lägg till appar](apps-add.md) – Appar kan tilldelas grupper och installeras automatiskt eller valfritt. |
-| 8 | [Konfigurera enheter](device-profiles.md) – Ställ in profiler för hantering av enhetsinställningar. Inställningar för e-post, VPN, trådlösa anslutningar och enhetsfunktioner kan ställas in i förväg i enhetsprofiler. Profilerna kan även innehålla begränsningar för enheter för att skydda både enheter och data.  |
-| 9 | [Anpassa företagsportalen](company-portal-app.md) – Anpassa den Intune-företagsportal där användarna registrerar enheter och installerar appar. Inställningarna visas både i företagsportalappen och på webbplatsen för Intune-företagsportal. |
-| 10 | [Aktivera enhetsregistrering](mdm-authority-set.md) – Aktivera Intune-hantering av iOS-, Windows-, Android- och Mac-enheter genom att ange utfärdare för mobilenhetshantering och aktivera specifika plattformar. |
-| 11 | [Konfigurera apprinciper](app-protection-policy.md) – Ange specifika inställningar baserat på principer för appskydd i Microsoft Intune. |
+| Steg |                                                                                                                       Status                                                                                                                       |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   1   |                                        [Konfigurationer som stöds](supported-devices-browsers.md) – Viktig information innan du sätter igång. Här visas konfigurationer som stöds och krav på nätverk.                                         |
+|   2   |                                                                 [Logga in på Intune](account-sign-up.md) – Logga in på din utvärderingsprenumeration eller skapa en ny Intune-prenumeration.                                                                  |
+|   3   |                [Konfigurera domännamn](custom-domain-name-configure.md) – Ange DNS-registrering för att ansluta ditt företags domännamn till Intune. Användarna får en välbekant domän när de ansluter till Intune och använder resurserna.                |
+|   4   |                                   [Lägg till användare](users-add.md) – Lägg till användare manuellt eller anslut Active Directory om du vill synkronisera användare med Intune. Obligatoriskt såvida dina enheter inte är exempelvis användarlösa informationsdatorenheter.                                    |
+|   5   |                                            [Tilldela licenser](licenses-assign.md) – Ge användarna behörighet att använda Intune. För varje användare eller användarlös enhet krävs en Intune-licens för att få åtkomst till tjänsten.                                             |
+|   6   |                                               [Lägg till grupper](groups-add.md) – Använd användar- och enhetsgrupper för att förenkla hanteringsuppgifter. Grupper används för att tilldela appar, inställningar och andra resurser.                                                |
+|   7   |                                                                        [Lägg till appar](apps-add.md) – Appar kan tilldelas grupper och installeras automatiskt eller valfritt.                                                                         |
+|   8   | [Konfigurera enheter](device-profiles.md) – Ställ in profiler för hantering av enhetsinställningar. Inställningar för e-post, VPN, trådlösa anslutningar och enhetsfunktioner kan ställas in i förväg i enhetsprofiler. Profilerna kan även innehålla begränsningar för enheter för att skydda både enheter och data. |
+|   9   |       [Anpassa företagsportalen](company-portal-app.md) – Anpassa den Intune-företagsportal där användarna registrerar enheter och installerar appar. Inställningarna visas både i företagsportalappen och på webbplatsen för Intune-företagsportal.       |
+|  10   |                                [Aktivera enhetsregistrering](mdm-authority-set.md) – Aktivera Intune-hantering av iOS-, Windows-, Android- och Mac-enheter genom att ange utfärdare för mobilenhetshantering och aktivera specifika plattformar.                                 |
+|  11   |                                                        [Konfigurera apprinciper](app-protection-policy.md) – Ange specifika inställningar baserat på principer för appskydd i Microsoft Intune.                                                         |
+

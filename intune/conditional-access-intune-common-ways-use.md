@@ -1,28 +1,28 @@
 ---
-title: "Villkorlig åtkomst med Microsoft Intune"
-titlesuffix: 
-description: "Läs om hur villkorlig åtkomst med Intune ofta används för enhetsbaserad och appbaserad villkorlig åtkomst."
-keywords: 
+title: Villkorlig åtkomst med Microsoft Intune
+titlesuffix: ''
+description: Läs om hur villkorlig åtkomst med Intune ofta används för enhetsbaserad och appbaserad villkorlig åtkomst.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9c34e6e2891769d64885d364f05dbedaa1fb7d57
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 2d147bc5ee22718ecce102cc549b29faa17a617e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Det finns två typer av villkorlig åtkomst som används med Intune: enhetsbaserad villkorlig åtkomst och appbaserad villkorlig åtkomst. Du måste konfigurera de relaterade efterlevnadsprinciperna för att få en villkorlig åtkomst som följer standard i din organisation. Villkorlig åtkomst används vanligtvis för att tillåta eller blockera åtkomst till Exchange On-premises, styra åtkomsten till nätverket eller integrering med en Mobile Thread Defense-lösning.
 

@@ -1,29 +1,29 @@
 ---
-title: "Scenarier för att skydda e-post"
-description: "Några exempelscenarier och hur de kan genomföras med villkorlig åtkomst."
-keywords: 
+title: Scenarier för att skydda e-post
+description: Några exempelscenarier och hur de kan genomföras med villkorlig åtkomst.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 454eab79-b620-42c9-b8e6-fada6e719fcd
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 1ca486ca9eab1ebb8a446b560ff5e265eb4d2712
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 3116cfdb6b1ea153d914630a23e0db82a8c31d85
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-email-with-microsoft-intune-example-scenarios"></a>Skydda åtkomsten till e-post med Microsoft Intune: Exempelscenarier
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="scenario-1-block-users-from-using-noncompliant-devices-to-access-exchange-online"></a>Scenario 1: Förhindra att användare kommer åt Exchange Online från icke-kompatibla enheter
 ### <a name="scenario-requirements"></a>Krav för scenario
@@ -53,9 +53,9 @@ Följande flöde används i scenariot för att bestämma vilka enheter som kan k
 
 Du åstadkommer detta genom att konfigurera följande princip för villkorlig åtkomst för Exchange On-premises med följande inställningar:
 
--   Välj alternativet **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad på Microsoft Intune**. När du väljer det här alternativet aktiveras principen för villkorlig åtkomst, vilket innebär att alla enheter måste vara registrerade i Microsoft Intune och uppfylla reglerna för efterlevnadsprinciper för att kunna komma åt Exchange.
+- Välj alternativet **Blockera e-postappar från att få åtkomst till Exchange On-premises om enheten inte är kompatibel med eller inte är registrerad på Microsoft Intune**. När du väljer det här alternativet aktiveras principen för villkorlig åtkomst, vilket innebär att alla enheter måste vara registrerade i Microsoft Intune och uppfylla reglerna för efterlevnadsprinciper för att kunna komma åt Exchange.
 
--   För avancerade Exchange Active Sync-inställningar skapar du:
+- För avancerade Exchange Active Sync-inställningar skapar du:
 
   -   Ett plattformsundantag som gör att enheter som kör iOS får tillgång till Exchange.   
 

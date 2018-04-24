@@ -1,25 +1,25 @@
 ---
-title: "Lägga till grupper för att organisera användare och enheter"
+title: Lägga till grupper för att organisera användare och enheter
 titlesuffix: Microsoft Intune
-description: "Lägg till grupper för att organisera användare och enheter efter geografi, avdelning eller maskinvaruegenskaper."
-keywords: 
+description: Lägg till grupper för att organisera användare och enheter efter geografi, avdelning eller maskinvaruegenskaper.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 ms.reviewer: amyros
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b7d2b551832d8d0e467d079df673954318623e4c
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 613d64e396e969b8b6bde76ee6c4474a60be8ba9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Lägga till grupper för att organisera användare och enheter
 Intune använder Azure Active Directory-grupper (AD) för att hantera enheter och användare. I egenskap av Intune-administratör kan du skapa grupper som passar organisationens behov. Skapa grupper för att ordna användare eller enheter efter geografisk plats, avdelning eller maskinvaruegenskaper. Använd grupper för att hantera skalanpassade aktiviteter. Du kan t.ex. ange principer för många användare eller distribuera appar till en uppsättning enheter.
@@ -36,20 +36,20 @@ Använd följande anvisningar för att skapa en ny grupp.
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Gå till **Intune**-fönstret, välj **Grupper** och sedan **Ny grupp** i fönstret **Alla grupper**.
-  ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
-2. Ange ett **gruppnamn**, **namn** och en **beskrivning** för den nya gruppen. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
+   ![Skärmbild av Azure-portalen med Ny grupp vald](./media/groups-add-new.png)
+4. Ange ett **gruppnamn**, **namn** och en **beskrivning** för den nya gruppen. Egenskaperna visas endast i hanteringsportalen och inte för användarna.
 
-3. Välj **Medlemskapstyp**:
-  - **Tilldelad** för att skapa gruppen med manuellt tilldelade medlemmar. Läs mer om [grupper som tilldelats i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
-  - **Dynamisk användare** för att skapa en användargrupp som definierats med en **dynamisk fråga**.
-  - **Dynamisk enhet** för att skapa en enhetsgrupp som definierats med en **dynamisk fråga**.
+5. Välj **Medlemskapstyp**:
+   - **Tilldelad** för att skapa gruppen med manuellt tilldelade medlemmar. Läs mer om [grupper som tilldelats i Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
+   - **Dynamisk användare** för att skapa en användargrupp som definierats med en **dynamisk fråga**.
+   - **Dynamisk enhet** för att skapa en enhetsgrupp som definierats med en **dynamisk fråga**.
 
-  ![Skärmbild av Intune-gruppegenskaper](./media/groups-add-properties.png)
+   ![Skärmbild av Intune-gruppegenskaper](./media/groups-add-properties.png)
 
-  Med Azure AD kan du skapa dynamiska grupper baserat på regler som definierar medlemskap. Läs mer om hur du [skapar attributbaserade dynamiska grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
+   Med Azure AD kan du skapa dynamiska grupper baserat på regler som definierar medlemskap. Läs mer om hur du [skapar attributbaserade dynamiska grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal).
 
-4. Du kan välja **Aktivera Office-funktioner** och ge medlemmarna i användargruppen tillgång till delade Office 365-appar. Läs mer om [Office 365-grupper](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
-5. Välj **Skapa** om du vill lägga till en ny grupp.
+6. Du kan välja **Aktivera Office-funktioner** och ge medlemmarna i användargruppen tillgång till delade Office 365-appar. Läs mer om [Office 365-grupper](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+7. Välj **Skapa** om du vill lägga till en ny grupp.
 
 ## <a name="see-also"></a>Se även
 - [Hantera åtkomst till resurser med Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

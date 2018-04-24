@@ -1,10 +1,9 @@
 ---
-title: Anpassade inställningar i Microsoft Intune för Windows Holographic for Business-enheter
-titlesuffix: ''
-description: Läs om inställningarna som du kan använda i en anpassad Windows Holographic for Business-profil.
+title: Anpassade inställningar för Windows Holographic for Business-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa en anpassad profil för att använda OMA-URI-inställningarna för enheter som kör Windows Holographic for Business i Microsoft Intune. Du kan ange CSP-principinställningarna AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates och ApplicationLaunchRestrictions.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.article: article
@@ -13,21 +12,22 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5cdba24c10b90756d9a2b9f08fd7d4dcd727303
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b349a61d61288f700294e04d029d825afba13445
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-holographic-for-business"></a>Anpassade enhetsinställningar i Microsoft Intune för enheter som kör Windows Holographic for Business
+# <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Anpassade enhetsinställningar för enheter som kör Windows Holographic for Business i Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
  Använd Microsoft Intunes **anpassade** profil för Windows Holographic for Business för att distribuera inställningar för OMA-URI (Open Mobile Alliance Uniform Resource Identifier) som kan användas för att styra funktioner på enheter. Windows Holographic for Business gör många inställningar för konfigurationstjänstleverantörer tillgängliga. En översikt över CSP finns i [Introduction to configuration service providers (CSPs) for IT pros](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) (Introduktion till konfigurationstjänstleverantörer (CSP:er) för IT-proffs). Specifika CSP:er som stöds av Windows Holographic visas i [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (CSP:er som stöds i Windows Holographic).
 
 Kom ihåg att om du letar efter en viss inställning så innehåller [enhetsbegränsningsprofilen i Windows Holographic for Business](device-restrictions-windows-holographic.md) många inställningar som är inbyggda och som innebär att du inte behöver ange några anpassade värden.
 
-1. Kom igång med hjälp av anvisningarna i [Hur man konfigurerar anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
+## <a name="create-the-custom-oma-uri-profile"></a>Skapa en anpassad OMA-URI-profil
+1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
 2. I **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
 3. På sidan **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
 4. Ange följande information för varje OMA-URI-inställning som du vill lägga till:
@@ -49,18 +49,56 @@ Profilen skapas och visas i profillistan.
 
 Följande inställningar är användbara för enheter som kör Windows Holographic for Business:
 
+### <a name="allowfastreconnecthttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-authenticationauthentication-allowfastreconnect"></a>[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
-|Inställningsnamn|OMA-URI|Datatyp  |
-|---------|---------|---------|
-|[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
-|[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
-|[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br>0 – Uppdateringstjänsten är inte tillåten <br>1 – Uppdateringstjänsten är tillåten (standard).|
-|[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
-|[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
-|[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)|./Vendor/MSFT/Update/ApprovedUpdates<br><br>**Viktigt!**<br>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.|
-[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Viktigt!**<br>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br>Mer information finns i artikeln om [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
 
-## <a name="how-to-find-the-policies-you-can-configure"></a>Så här hittar du de principer som du kan konfigurera
+### <a name="allowvpnhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-settingssettings-allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
+
+### <a name="allowupdateservicehttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br>0 – Uppdateringstjänsten är inte tillåten <br>1 – Uppdateringstjänsten är tillåten (standard).|
+
+### <a name="updateserviceurlhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
+
+### <a name="requireupdatesapprovalhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-requireupdateapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
+
+### <a name="approvedupdateshttpsdocsmicrosoftcomwindowsclient-managementmdmupdate-csp"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/Update/ApprovedUpdates<br><br>**Viktigt!**<br>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.|
+
+### <a name="applicationlaunchrestrictionshttpsdocsmicrosoftcomwindowsclient-managementmdmapplocker-csp"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
+---
+|OMA-URI|Datatyp  |
+|---------|---------|
+|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Viktigt!**<br>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br>Mer information finns i [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+
+## <a name="find-the-policies-you-can-configure"></a>Hitta principer som du kan konfigurera
 
 Du hittar en fullständig lista över alla konfigurationstjänstleverantörer (CSP:er) som Windows Holographic har stöd för i [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (CSP:er som stöds i Windows Holographic). Alla inställningar är inte kompatibla med alla versioner av Windows Holographic. I tabellen i Windows-artikeln visas vilka versioner som stöds för varje CSP.
 

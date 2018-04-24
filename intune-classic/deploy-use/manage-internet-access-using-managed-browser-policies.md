@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 559866fff63b0ad77a43ce337adede5cd8b27302
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Den hanterade webbläsaren är ett webbläsningsprogram som med hjälp av Microsoft Intune kan distribueras i organisationen. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.
 
@@ -59,7 +59,7 @@ Intune Managed Browser stöder öppning av webbinnehåll från [Microsoft Intune
 
     - **Namn**. Ange ett unikt namn för principen för den hanterade webbläsaren som hjälper dig att identifiera den i Intune-konsolen.
     - **Beskrivning**. Ange en lämplig beskrivning av principen och annan information som gör det enkelt att hitta den.
-    - **Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**. Välj något av följande alternativ:
+    - **Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**. Välj ett av följande alternativ:
         - **Låt den hanterade webbläsaren endast öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren kan öppna.
         - **Blockera den hanterade webbläsaren från att öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren blockeras från att öppna.
 **Obs!** Både tillåtna och blockerade URL:er kan inte ingå i samma princip för den hanterade webbläsaren.
@@ -99,52 +99,52 @@ Microsoft samlar automatiskt in anonymiserade data om prestanda och användning 
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>URL-format för tillåtna och blockerade URL:er
 Använd följande information för att lära dig om tillåtna format och jokertecken som du kan använda när du anger URL:er i listorna för tillåtna och blockerade webbplatser:
 
--   Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster.
+- Du kan använda jokertecknet (**&#42;**) enligt reglerna i följande lista med tillåtna mönster.
 
--   Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
+- Kontrollera att du lägger till prefixet **http** eller **https** till alla URL:er när du lägger till dem i listan.
 
--   Du kan ange portnummer i adressen. Om du inte anger ett portnummer, används följande värden:
+- Du kan ange portnummer i adressen. Om du inte anger ett portnummer, används följande värden:
 
-    -   Port 80 för http
+  -   Port 80 för http
 
-    -   Port 443 för http
+  -   Port 443 för http
 
-    Jokertecken i portnummer stöds inte. Till exempel stöds inte **http&colon;//www&period;contoso&period;com:*;** och **http&colon;//www&period;contoso&period;com: /*;**.
+  Jokertecken i portnummer stöds inte. Till exempel stöds inte <strong>http&colon;//www&period;contoso&period;com:*;</strong> och <strong>http&colon;//www&period;contoso&period;com: /*;</strong>.
 
--   Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
+- Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
 
-|URL|Information|Matchar|Matchar inte|
-    |-------|---------------|-----------|------------------|
-    |http://www.contoso.com|Matchar en enstaka sida|www.contoso.com|host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/|
-    |http://contoso.com|Matchar en enstaka sida|contoso.com/|host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com|
-    |http://www.contoso.com/&#42;|Matchar alla URL:er som börjar med www.contoso.com|www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows|host.contoso.com<br /><br />host.contoso.com/images|
-    |http://&#42;.contoso.com/&#42;|Matchar alla underordnade domäner under contoso.com|developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos|contoso.host.com|
-    |http://www.contoso.com/images|Matchar en enstaka mapp|www.contoso.com/images|www.contoso.com/images/dogs|
-    |http://www.contoso.com:80|Matchar en enstaka sida, med ett portnummer|http://www.contoso.com:80||
-    |https://www.contoso.com|Matchar en enstaka, säker sida|https://www.contoso.com|http://www.contoso.com|
-    |http://www.contoso.com/images/&#42;|Matchar en enstaka mapp och alla undermappar|www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats|www.contoso.com/videos|
+|                  URL                  |                     Information                      |                                                Matchar                                                |                                Matchar inte                                 |
+|---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|        http://www.contoso.com         |              Matchar en enstaka sida               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
+|          http://contoso.com           |              Matchar en enstaka sida               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
+|    <http://www.contoso.com/&#42>;     | Matchar alla URL:er som börjar med www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|    http://&#42;.contoso.com/&#42;     |     Matchar alla underordnade domäner under contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
+|     http://www.contoso.com/images     |             Matchar en enstaka mapp              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|       http://www.contoso.com:80       |  Matchar en enstaka sida, med ett portnummer   |                                       http://www.contoso.com:80                                       |                                                                               |
+|        https://www.contoso.com        |          Matchar en enstaka, säker sida           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
+| <http://www.contoso.com/images/&#42>; |    Matchar en enstaka mapp och alla undermappar    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
 
--   Följande är några exempel på indata som du inte kan ange:
+- Följande är några exempel på indata som du inte kan ange:
 
-    -   &#42;.com
+  - &#42;.com
 
-    -   &#42;.contoso/&#42;
+  - &#42;.contoso/&#42;
 
-    -   www.contoso.com/&#42;images
+  - www.contoso.com/&#42;images
 
-    -   www.contoso.com/&#42;images&#42;pigs
+  - www.contoso.com/&#42;images&#42;pigs
 
-    -   www.contoso.com/page&#42;
+  - www.contoso.com/page&#42;
 
-    -   IP-adresser
+  - IP-adresser
 
-    -   https://&#42;
+  - https://&#42;
 
-    -   http://&#42;
+  - http://&#42;
 
-    -   http://www.contoso.com:&#42;
+  - http://www.contoso.com:&#42;
 
-    -   http://www.contoso.com: /&#42;
+  - http://www.contoso.com: /&#42;
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>Hur konflikter löses mellan en lista över tillåtna och en lista över blockerade webbplatser
 Om flera principer för hanterade webbläsare har distribuerats till en enhet och det finns en konflikt mellan inställningarna, utvärderas både läget (tillåt eller blockera) och URL-listorna för konflikter. Om en konflikt uppstår, gäller följande:

@@ -1,29 +1,29 @@
 ---
-title: "Undantag för dataöverföringsprinciper i appar"
+title: Undantag för dataöverföringsprinciper i appar
 titleSuffix: Microsoft Intune
-description: "Skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring."
-keywords: 
+description: Skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1e37e78f7272b0f53f974eccb20c7e02574a9a9
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 1910334093a416933912c9cdeedac85e36d66e92
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Så här skapar du undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring. Med ett undantag kan du uttryckligen välja vilka ohanterade appar som får överföra data till och från hanterade appar. De ohanterade appar som du lägger i undantagslistan måste vara betrodda av IT-avdelningen. 
 
@@ -39,6 +39,10 @@ Du kan konfigurera dataöverföringsundantag för en princip med iOS som mål me
 
 ## <a name="android-data-transfer-exceptions"></a>Undantag vid Android-dataöverföring
 Du kan konfigurera dataöverföringsundantag för en princip med Android som mål med hjälp av appaketets namn. Paketnamnet för den app du vill lägga till ett undantag för finns på appsidan i **Google Play** Butik. Mer information om undantag vid Android-dataöverföring finns i [Principinställningar för Android-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-android.md#data-transfer-exemptions).
+
+
+>[!TIP]
+> Du kan hitta paket-ID:et för en app genom att gå till appen i Google Play. Paket-ID finns i webbadressen på appens sida. Paket-ID för Microsoft Word-appen är till exempel **com.microsoft.office.word**.
 
 ### <a name="example"></a>Exempel
 Genom att lägga till **Webex**-paketet som ett undantag till MAM-dataöverföringsprincipen, tillåts att Webex-länkar i ett hanterat e-postmeddelande i Outlook öppnas direkt i Webex-programmet. Dataöverföringen är fortfarande begränsad i andra ohanterade appar.
