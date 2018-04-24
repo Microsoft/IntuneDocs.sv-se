@@ -1,28 +1,28 @@
 ---
-title: "Så får dina Android-användare sina appar"
-description: "Metoder för att göra Android-appar tillgängliga för slutanvändare"
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Så får dina Android-användare sina appar
+description: Metoder för att göra Android-appar tillgängliga för slutanvändare
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/21/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f33d1684-b1b5-44f7-9aac-c6d5186a5d7c
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c37fedd23606b51182ada561ae467ebe52c829d6
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 878e4d0854722d82eab0545cf3a1ba743f2c52db
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Så får dina Android-användare sina appar
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Läs om hur och var dina Android-slutanvändare får de appar som du distribuerar via Microsoft Intune. Informationen kan variera för olika enhetstyper (Android-enheter eller Samsung Knox Standard-enheter).
 

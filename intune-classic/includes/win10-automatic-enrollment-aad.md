@@ -2,7 +2,7 @@
 
 Med automatisk registrering kan användarna registrera sina Windows 10-enheter i Intune genom att lägga till sina arbetskonton till sina egna enheter, eller ansluta sina företagsägda enheter till din Azure Active Directory. Användarens enhet registreras och ansluts till Azure Active Directory i bakgrunden. När enheten har registrerats hanteras den med Intune.
 
-**Krav**
+**Förutsättningar**
 - Azure Active Directory Premium-prenumeration ([provprenumeration](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune-prenumeration
 
@@ -11,28 +11,28 @@ Med automatisk registrering kan användarna registrera sina Windows 10-enheter i
 
 1. Logga in på [Azure-hanteringsportalen](https://portal.azure.com) (https://manage.windowsazure.com) och välj **Azure Active Directory**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-azure-main.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-azure-main.png)
 
 2. Välj **Mobility (MDM och MAM)**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-mdm.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-mdm.png)
 
 3. Välj **Microsoft Intune**.
 
-  ![Skärmbild av Azure-portalen](../media/auto-enroll-intune.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-intune.png)
 
 4. Konfigurera **MDM-användaromfattning**. Ange vilka användares enheter som ska hanteras av Microsoft Intune. Dessa användares Windows 10-enheter registreras automatiskt för hantering med Microsoft Intune.
 
-  - **Inga**
-  - **Vissa**
-  - **Alla**
+   - **Inga**
+   - **Vissa**
+   - **Alla**
 
- ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
+   ![Skärmbild av Azure-portalen](../media/auto-enroll-scope.png)
 
 5. Använd standardvärdena för följande URL:er:
-  - **Webbadress till MDM-användarvillkor**
-  - **Webbadress till MDM-identifiering**
-  - **Webbadress till MDM-kompatibilitet**
+   - **Webbadress till MDM-användarvillkor**
+   - **Webbadress till MDM-identifiering**
+   - **Webbadress till MDM-kompatibilitet**
 
 6. Välj **Spara**.
 

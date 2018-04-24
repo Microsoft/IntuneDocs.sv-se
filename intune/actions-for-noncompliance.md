@@ -1,22 +1,22 @@
 ---
-title: "Inkompatibilitetsmeddelande och åtgärder med Microsoft Intune – Azure | Microsoft Docs"
-description: "Skapa ett e-postmeddelande som ska skickas till inkompatibla enheter. Lägg till åtgärder när en enhet har markerats som inkompatibel, t.ex. en respitperiod för att bli kompatibel, eller skapa ett schema som blockerar åtkomst tills enheten är kompatibel. Gör detta med Microsoft Intune i Azure."
-keywords: 
+title: Inkompatibilitetsmeddelande och åtgärder med Microsoft Intune – Azure | Microsoft Docs
+description: Skapa ett e-postmeddelande som ska skickas till inkompatibla enheter. Lägg till åtgärder när en enhet har markerats som inkompatibel, t.ex. en respitperiod för att bli kompatibel, eller skapa ett schema som blockerar åtkomst tills enheten är kompatibel. Gör detta med Microsoft Intune i Azure.
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37a8deca147bbad1e706b814f366a2c3f1247869
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: a4b5e55b404da907d8f17a658483b4802af8226d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter – Intune
 
@@ -54,14 +54,14 @@ Det finns två typer av åtgärder:
 3. Välj **Enhetsefterlevnad** och sedan **Meddelanden**. 
 4. Välj **Skapa meddelande** och ange sedan följande information:
 
-  - Namn
-  - Ärende
-  - Meddelande
-  - E-postsidhuvud – Infoga företagets logotyp
-  - E-postsidfot – Infoga företagets namn
-  - E-postsidfot – Infoga kontaktinformation
+   - Namn
+   - Ämne
+   - Meddelande
+   - E-postsidhuvud – Infoga företagets logotyp
+   - E-postsidfot – Infoga företagets namn
+   - E-postsidfot – Infoga kontaktinformation
 
-  ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actionsfornoncompliance-1.PNG)
+   ![Exempel på ett kompatibelt aviseringsmeddelande i Intune](./media/actionsfornoncompliance-1.PNG)
 
 När du har lagt till informationen väljer du **Skapa**. Mallen för aviseringsmeddelanden är klar att användas.
 
@@ -77,7 +77,7 @@ Du kan lägga till en åtgärd när du skapar en ny efterlevnadsprincip, eller n
 1. I [Azure-portalen](https://portal.azure.com) öppnar du **Microsoft Intune** och väljer **Enhetsefterlevnad**.
 2. Välj **Principer**, välj en av dina principer och sedan **Egenskaper**. 
 
-  Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
+   Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
 
 3. Välj alternativet för **åtgärder vid inkompatibilitet** och sedan **Lägg till** för att ange åtgärdsparametrar. Du kan välja den meddelandemall som skapades tidigare, lägga till ytterligare mottagare och uppdatera schemat för respitperioden. I schemat kan du ange antalet dagar (0 till 365) och sedan kan du tillämpa villkorliga åtkomstprinciper. Om du anger **0** antal dagar kommer den villkorliga åtkomsten **omedelbart** blockera åtkomsten till företagets resurser.
 

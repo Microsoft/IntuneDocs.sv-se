@@ -15,27 +15,28 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 78b4e91fd61bb79c2a3a6d86d5a79c39b320cc5e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 8af8d79d6f8ea9037c6bef532ad45185830c358d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-intune-service-to-service-connector-for-exchange-online"></a>Konfigurera Intune Service to Service Connector för Exchange Online
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd den här informationen för att ansluta Microsoft Intune och Exchange Online eller den nya Exchange Online Dedicated-tjänsten. Om du vill ta reda på om Exchange Online Dedicated-miljön är den **nya** eller **äldre** versionen kontaktar du din kontoansvariga. Intune har endast stöd för en Exchange Connector-anslutning av valfri typ per prenumeration.
 
 ## <a name="service-to-service-connector-requirements"></a>Krav för Service to Service Connector
 **Service to Service Connector** har endast stöd för Exchange Online eller Exchange Online Dedicated och har inga krav för lokal infrastruktur.
 
-|Krav|Mer information|
-|---------------|--------------------|
-|Exchange Online konfigurerad och körs|[Exchange Online](https://technet.microsoft.com/library/jj200580.aspx) |
-|Utfärdare för hantering av mobila enheter| [Ange Microsoft Intune som utfärdare för hantering av mobila enheter](prerequisites-for-enrollment.md#step-2-set-mdm-authority)|
-|Microsoft Exchange-version|Exchange Online eller den nya Exchange Online Dedicated-tjänsten|/intune/users-permissions-add
-|Active Directory-synkronisering|Innan du kan använda Intune Connector måste du [konfigurera Active Directory-synkronisering](/intune/users-permissions-add) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans.|
+
+|              Krav               |                                                                                                            Mer information                                                                                                            |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Exchange Online konfigurerad och körs |                                                                                 [Exchange Online](https://technet.microsoft.com/library/jj200580.aspx)                                                                                 |
+|   Utfärdare för hantering av mobila enheter   |                                                       [Ange Microsoft Intune som utfärdare för hantering av mobila enheter](prerequisites-for-enrollment.md#step-2-set-mdm-authority)                                                       |
+|       Microsoft Exchange-version       |                                                                                      Exchange Online eller den nya Exchange Online Dedicated-tjänsten                                                                                      |
+|    Active Directory-synkronisering    | Innan du kan använda Intune Connector måste du [konfigurera Active Directory-synkronisering](/intune/users-permissions-add) så att dina lokala användare och säkerhetsgrupper synkroniseras med din Azure Active Directory-instans. |
 
 ### <a name="exchange-cmdlet-requirements"></a>Krav för Exchange-cmdlet
 

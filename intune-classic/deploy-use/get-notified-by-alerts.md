@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune classic
-ms.openlocfilehash: daa936b43c53d14d57f2c48f80dff7e908354054
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 35b47dbc789e7f2ea2b200b8c22ff3bae6152f40
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="use-alerts-to-get-notified-by-microsoft-intune"></a>Håll dig informerad med aviseringar från Microsoft Intune
 
-[!INCLUDE[classic portal](../includes/classic-portal.md)]
+[!INCLUDE [classic portal](../includes/classic-portal.md)]
 
 Aviseringar låter dig ha koll på vad som händer i Microsoft Intune. Aviseringar kan exempelvis låta dig få reda på följande händelser:
 - Ett problem med Exchange-anslutaren som påverkar mobil enhetshantering
@@ -54,7 +54,7 @@ Du kan dessutom konfigurera Intune att meddela dig via e-post när en avisering 
 
 I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Admin** &gt; **Aviseringar och meddelanden** och sedan något av följande:
 
-|Uppgift|Description|
+|Uppgift|Beskrivning|
 |---|------|
 |**Aviseringstyper**|Välj den aviseringstyp som du vill konfigurera och gör sedan något av följande:<br /><br />Välj **Konfigurera**. I dialogrutan **Konfigurera aviseringstyp** väljer du önskade inställningar och sedan **OK**.<br /><br />**Aktivera** eller **Inaktivera** aviseringen.<br /><br />Expandera noden **Aviseringstyper** och välj en kategori för att bara visa aviseringstyperna i den kategorin.|
 |**Mottagare**|Klicka på **Lägg till** om du vill lägga till en ny e-postadress som ska ta emot de e-postmeddelanden som du konfigurerar.<br /><br />Du kan också **Redigera** eller **Ta bort** befintliga mottagare.<br /><br />För att ta emot aviseringar måste du även lägga till e-postadressen som mottagare under **Aviseringsregler**.|
@@ -66,7 +66,7 @@ Om du vill visa aviseringar i [Microsoft Intune-administratörskonsolen](https:/
 
 Använd följande alternativ för att hjälpa dig arbeta med aviseringar från Intunes adminstratörskonsol.
 
-|Alternativ|Description|
+|Alternativ|Beskrivning|
 |-----|----|
 |**Visa aktiva aviseringar**|Välj något av:<br /><br />**Visa en aviseringssammanställning**   På arbetsytan **Instrumentpanel** visas de viktigaste felen i aviseringsfönstret. Klicka på fönstret om du vill se mer detaljerad information.<br /><br />Dessutom kan du visa en sammanställning av aviseringar på sidan **Översikt** i arbetsytan **Aviseringar** .<br /><br />**Visa alla aviseringar**   Gå till arbetsytan **Aviseringar** och klicka på **Alla aviseringar**.|
 |**Visa meddelanden**|Välj något av:<br /><br />Gå till arbetsytan **Instrumentpanel** och välj **Meddelanden**.<br /><br />På arbetsytan **Aviseringar** väljer du **Alla aviseringar** &gt; **Aviseringar**.|

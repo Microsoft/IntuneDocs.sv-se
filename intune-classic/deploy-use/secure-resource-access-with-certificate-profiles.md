@@ -1,50 +1,50 @@
 ---
-title: "Certifikatprofiler för åtkomst till resurser"
-description: "Skydda åtkomsten via VPN, Wi-Fi och e-post med ett certifikat som installeras på varje användarenhet."
-keywords: 
+title: Certifikatprofiler för åtkomst till resurser
+description: Skydda åtkomsten via VPN, Wi-Fi och e-post med ett certifikat som installeras på varje användarenhet.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8cbb8499-611d-4217-a7b4-e9b864785dd0
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76083268d3c7ed43cea0bc0d9751ae9c37c7227b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: ccfd69579832c553dc1416c21ca93b85cd93cd78
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="secure-resource-access-with-certificate-profiles-in-microsoft-intune"></a>Skydda resursåtkomst med certifikatprofiler i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 När du ger användare åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler kan du skydda åtkomsten genom att använda ett certifikat som installeras på varje användarenhet. Så här fungerar det:
 
 1. Kontrollera att du har rätt certifikatinfrastruktur på plats. Mer information finns i [Konfigurera certifikatinfrastruktur för SCEP](configure-certificate-infrastructure-for-scep.md) och [Konfigurera certifikatinfrastruktur för PFX](configure-certificate-infrastructure-for-pfx.md).
 
 2. Installera ett rotcertifikat eller en mellanliggande certifikatutfärdare på alla enheter så att enheterna kan identifiera certifikatutfärdarens giltighet. Om du vill göra detta måste du skapa och distribuera en **betrodd certifikatprofil**. När du distribuerar den här profilen kommer enheter som du hanterar med Intune att begära och ta emot rotcertifikatet. Du måste skapa en separat profil för varje plattform. **Profilen för betrodda certifikat** är tillgänglig för följande plattformar:
- -  iOS 8.0 och senare
- -  Mac OS X 10.9 och senare
- -  Android 4.0 och senare
- -  Android for Work
- -  Windows 8.1 och senare
- -  Windows Phone 8.1 och senare
+   -  iOS 8.0 och senare
+   -  Mac OS X 10.9 och senare
+   -  Android 4.0 och senare
+   -  Android for Work
+   -  Windows 8.1 och senare
+   -  Windows Phone 8.1 och senare
 
 3. Skapa certifikatprofiler så att enheterna begär att ett certifikat ska användas för autentisering av VPN-, Wi-Fi- och e-poståtkomst. Mer information finns i [Konfigurera Intune-certifikatprofiler](configure-intune-certificate-profiles.md). Du kan skapa och distribuera en **PKCS #12-certifikatprofil (.PFX)** *eller* en **SCEP-certifikatprofil** för enheter som kör följande plattformar:
 
-  -  iOS 8.0 och senare
-  -  Android 4.0 och senare
-  -  Android for Work
-  -  Windows 10 (Desktop och Mobile) och senare
+   -  iOS 8.0 och senare
+   -  Android 4.0 och senare
+   -  Android for Work
+   -  Windows 10 (Desktop och Mobile) och senare
 
-  Använd en **SCEP profil** för enheter som kör dessa plattformar:
+   Använd en **SCEP profil** för enheter som kör dessa plattformar:
     -   Mac OS X 10.9 och senare
     -   Windows Phone 8.1
 

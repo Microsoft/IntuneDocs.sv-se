@@ -1,28 +1,28 @@
 ---
 title: Omsluta iOS-appar med Intunes programhanteringsverktyg
-description: "Läs om hur du omsluter iOS-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram."
-keywords: 
+description: Läs om hur du omsluter iOS-appar utan att ändra koden i själva appen. Förbered apparna så att du kan använda hanteringsprinciper för mobilprogram.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c9329c25d6211149102c06b44fdb6d6222b13550
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
+ms.openlocfilehash: e8e2783be3c515aa742a3adc149304e0a2ae3b99
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Använd Microsoft Intunes programhanteringsverktyg för iOS för att aktivera appskyddsprinciper från Intune för interna iOS-appar utan att ändra koden i själva appen.
 
@@ -98,48 +98,48 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 4. Klicka på **Certifikat, ID och profiler**.
 
-  ![Apple Developer-portalen](./media/iOS-signing-cert-1.png)
+   ![Apple Developer-portalen](./media/iOS-signing-cert-1.png)
 
 5. Klicka på ![plustecknet i övre högra hörnet av](./media/iOS-signing-cert-2.png) Apple Developer-portalen för att lägga till ett iOS-certifikat.
 
 6. Välj att skapa ett **In-House and Ad Hoc** (internt och ad hoc)-certifikat under **Produktion**.
 
-  ![Välj internt och ad hoc-certifikat](./media/iOS-signing-cert-3.png)
+   ![Välj internt och ad hoc-certifikat](./media/iOS-signing-cert-3.png)
 
-  >[!NOTE]
-  >Om du inte planerar att distribuera appen och endast vill testa den internt kan du använda ett iOS-apputvecklingscertifikat i stället för ett certifikat för produktion. Om du använder ett utvecklingscertifikat kontrollerar du att den mobila etableringsprofilen hänvisar till de enheter där appen ska installeras.
+   >[!NOTE]
+   >Om du inte planerar att distribuera appen och endast vill testa den internt kan du använda ett iOS-apputvecklingscertifikat i stället för ett certifikat för produktion. Om du använder ett utvecklingscertifikat kontrollerar du att den mobila etableringsprofilen hänvisar till de enheter där appen ska installeras.
 
 7. Klicka på **Nästa** längst ner på sidan.
 
 8. Läs anvisningarna om hur du skapar en **certifikatsigneringsförfrågan** med hjälp av nyckelhanterarprogrammet på din Mac OS-dator.
 
-  ![Läs anvisningarna för att skapa en CSR](./media/iOS-signing-cert-4.png)
+   ![Läs anvisningarna för att skapa en CSR](./media/iOS-signing-cert-4.png)
 
 9. Följ anvisningarna ovan för att skapa en signeringsbegäran för certifikat. Starta **Nyckelhanterar**-programmet på din Mac OS-dator.
 
 10. Gå till **Nyckelhanterare > Certificate Assistant (Certifikatassistent) > Request a Certificate From a Certificate Authority (Begär ett certifikat från en certifikatutfärdare)** i Mac OS-menyn överst på skärmen.  
 
-  ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](./media/iOS-signing-cert-5.png)
+    ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](./media/iOS-signing-cert-5.png)
 
 11. Följ instruktionerna från Apple-utvecklarwebbplatsen ovanför om hur du skapar en CSR-fil. Spara CSR-filen på din Mac OS-dator.
 
-  ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](./media/iOS-signing-cert-6.png)
+    ![Begär ett certifikat från en certifikatutfärdare i Nyckelhanteraren](./media/iOS-signing-cert-6.png)
 
 12. Gå tillbaka till Apple-utvecklarwebbplatsen. Klicka på **Fortsätt**. Ladda sedan upp CSR-filen.
 
 13. Apple skapar ett signeringscertifikat åt dig. Hämta och spara den till en plats som är lätt att komma ihåg på din Mac OS-dator.
 
-  ![Hämta ditt signeringscertifikat](./media/iOS-signing-cert-7.png)
+    ![Hämta ditt signeringscertifikat](./media/iOS-signing-cert-7.png)
 
 14. Dubbelklicka på certifikatfilen som du precis laddade ned för att lägga till certifikatet i en nyckelring.
 
 15. Öppna **Nyckelhanteraren** igen. Leta upp certifikatet genom att söka efter dess namn i det övre högra sökfältet. Högerklicka på objektet för att visa menyn och klicka på **Hämta information**. På exempelbilderna använder vi ett utvecklingscertifikat i stället för ett produktionscertifikat.
 
-  ![Lägg till certifikatet i en nyckelring](./media/iOS-signing-cert-8.png)
+    ![Lägg till certifikatet i en nyckelring](./media/iOS-signing-cert-8.png)
 
 16. Ett informationsfönster visas. Bläddra till slutet och titta under etiketten **Fingeravtryck**. Kopiera strängen **SHA1** (har gjorts suddig) för att använda den som argument för "-c" för programhanteringsverktyget.
 
-  ![Lägg till certifikatet i en nyckelring](./media/iOS-signing-cert-9.png)
+    ![Lägg till certifikatet i en nyckelring](./media/iOS-signing-cert-9.png)
 
 
 
@@ -153,7 +153,7 @@ Du behöver följande för att distribuera appar som är omslutna av Intune:
 
 4. Välj att skapa en **intern** etableringsprofil under **Distribution**.
 
-  ![Välj intern etableringsprofil](./media/iOS-provisioning-profile-1.png)
+   ![Välj intern etableringsprofil](./media/iOS-provisioning-profile-1.png)
 
 5. Klicka på **Fortsätt**. Se till att länka det tidigare skapade signeringscertifikatet till etableringsprofilen.
 
@@ -414,8 +414,8 @@ Använd följande steg för att hämta loggar för dina omslutna program under f
 4. Klicka på länken ”Kom igång”.
 5. Du kan nu dela loggar via e-post eller kopiera dem till en plats i OneDrive.
 
->[!NOTE]
-Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
+> [!NOTE]
+> Loggningsfunktionen är aktiverad för appar som har omslutits med Intunes programhanteringsverktyg version 7.1.13 eller senare.
 
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)</br>

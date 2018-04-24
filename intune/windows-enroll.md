@@ -15,15 +15,15 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 896c984cb5831dc84a041d4ad39e4cdf6819f0f8
-ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
+ms.openlocfilehash: e2759146634f16e5d92ca8c497aa2856f071a679
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Det här avsnittet hjälper IT-administratörer att förenkla Windows-registrering för sina användare. När du har [konfigurerat Intune](setup-steps.md) kan användarna registrera Windows-enheter genom att [logga in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) med sina arbets- eller skolkonton.  
 
@@ -48,7 +48,7 @@ Organisationer som använder automatisk registrering kan också konfigurera [mas
 **Stöd för flera användare**<br>
 Enheter som kör Windows 10 Creator-uppdateringen och är domänanslutna till Azure Active Directory, har nu stöd för fleranvändarhantering med Intune. När vanliga användare loggar in med sina autentiseringsuppgifter för Azure AD får de tillgång till de appar och principer som har tilldelats deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
 
-[!INCLUDE[AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
+[!INCLUDE [AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Förenkla Windows-registreringen utan Azure AD Premium
 Du kan förenkla registreringen för dina användare genom att skapa ett DNS-alias (CNAME-posttyp) som automatiskt omdirigerar registreringsbegäranden till Intune-servrarna. Om du inte skapar en DNS CNAME-resurspost måste alla användare som försöker ansluta till Intune ange Intune-servernamnet under registreringen.

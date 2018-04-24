@@ -1,29 +1,29 @@
 ---
 title: Ta bort appar
-description: "Läs om hur du återställer eller avinstallerar appar med Intune."
-keywords: 
+description: Läs om hur du återställer eller avinstallerar appar med Intune.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6fbf0805-1144-4e08-bafd-4f181d932bf2
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: jeffgilb
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 15e90a2fea2ec3b4f020a0e14c40da2cb65aecab
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: a3fadf497e5db147d12ecf1e32343e94222c65e9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retire-apps-using-microsoft-intune"></a>Ta bort appar med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Om du vill dra tillbaka en app avinstallerar du den bara. När du distribuerar och hanterar appar med Intune ser processen för att avinstallera appen likadan ut för både mobila enheter och Windows-datorer. Appen måste ha stöd för avinstallationsprocessen för att den här proceduren ska lyckas.
 

@@ -1,25 +1,24 @@
 ---
-title: "Integrering av nätverksåtkomstkontroll i Microsoft Intune"
-titlesuffix: 
-description: "Integrering av nätverksåtkomstkontroll (NAC) i Intune"
-keywords: 
+title: Integrering av nätverksåtkomstkontroll i Microsoft Intune – Azure | Microsoft Docs
+description: Nätverksåtkomstkontroll (NAC, Network Access Control) kontrollerar registrering och kompatibilitet för enheter med Intune. NAC omfattar vissa beteenden och fungerar med villkorlig åtkomst. Se instruktioner om hur du kommer igång och få en lista över partnerlösningar.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 ms.reviewer: davidra
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f54f04bc5a63c8a431eddaf4210fcb290942cc3
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: bdf6b5b71c71dd8b1a9a5c9154953d1ebc07d0dc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrering av nätverksåtkomstkontroll (NAC) i Intune
 
@@ -27,7 +26,7 @@ Intune kan integreras med en NAC-partner (Network Access Control) som hjälper d
 
 ## <a name="how-do-intune-and-nac-solutions-help-protect-your-organization-resources"></a>Hur skyddar man företagets resurser med Intune och NAC-lösningar?
 
-NAC-lösningarna kontrollerar enhetens registrering och kompatibilitetstillstånd mot uppgifterna i Intune och fattar sedan ett beslut om att bevilja eller neka åtkomst. Om enheten inte finns registrerad, eller finns registrerad men saknar kompatibilitet med vissa principer, omdirigeras enheten till Intune för registrering och/eller för en kompatibilitetskontroll.
+NAC-lösningarna kontrollerar enhetens registrering och kompatibilitetstillstånd mot uppgifterna i Intune och fattar sedan ett beslut om att bevilja eller neka åtkomst. Om enheten inte finns registrerad, eller finns registrerad men saknar kompatibilitet med vissa principer, omdirigeras i så fall enheten till Intune för registrering och/eller för en kompatibilitetskontroll.
 
 ### <a name="example"></a>Exempel
 
@@ -35,7 +34,7 @@ Om enheten är registrerad och kompatibel med Intune bör NAC-lösningen ge enhe
 
 ## <a name="feature-behaviors"></a>Funktionsbeteenden
 
-Enheter som aktivt synkroniseras med Intune kan inte flytta från **Kompatibel** / **Inte kompatibel** till **Inte synkroniserad** (eller **Okänd**). Tillståndet **Okänd** är reserverat för nyregistrerade enheter som ännu inte har utvärderats för kompatibilitet.
+Enheter som aktivt synkroniseras med Intune kan inte flyttas från **Kompatibel** / **Inte kompatibel** till **Inte synkroniserad** (eller **Okänd**). Tillståndet **Okänd** är reserverat för nyregistrerade enheter som ännu inte har utvärderats för kompatibilitet.
 
 För enheter som har blockerats från åtkomst till resurser, ska blockeringstjänsten omdirigera alla användare till [hanteringsportalen](https://portal.manage.microsoft.com) för att avgöra varför enheten blockerats.  Om användarna besöker den här sidan kommer deras enheter synkront att omvärderas för kompatibilitet.
 
@@ -45,7 +44,7 @@ NAC kan användas med villkorlig åtkomst om du vill få mer kontroll över besl
 
 ## <a name="how-the-nac-integration-works"></a>Så här fungerar NAC-integrering
 
-Här är en översikt på hur NAC-integrationen fungerar när du har integrerat med Intune. De första tre stegen, 1–3, beskriver registreringsprocessen. När du har integrerat NAC-lösningen med Intune kan du läsa mer om den fortlöpande användningen i steg 4–9.
+Följande lista är en översikt över hur NAC-integrationen fungerar när du har integrerat med Intune. De första tre stegen, 1–3, beskriver registreringsprocessen. När du har integrerat NAC-lösningen med Intune kan du läsa mer om den fortlöpande användningen i steg 4–9.
 
 ![Så här fungerar NAC med Intune](./media/ca-intune-common-ways-2.png)
 
@@ -64,3 +63,4 @@ Här är en översikt på hur NAC-integrationen fungerar när du har integrerat 
 - [Integrera Cisco ISE med Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrera Citrix NetScaler med Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrera HP Aruba Clear Pass med Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=23757)
+- [Integrera Squadra security Removable Media Manager (secRMM) med Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

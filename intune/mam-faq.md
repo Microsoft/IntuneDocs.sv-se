@@ -14,11 +14,11 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ab616c373482109ccd402199f7b0de69fe27348
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 74f5a7b2e4aab1758922902c1af9c385a7bff69f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -66,7 +66,7 @@ Den här artikeln ger svar på några vanliga frågor om Intune MAM (Mobile Appl
 - Slutanvändaren måste ha en [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online)-postlåda och licens kopplad till sitt Azure Active Directory-konto.
 
   >[!NOTE]
-  > Outlook-mobilappen har för närvarande endast stöd för Microsoft Exchange Online och har inte stöd för Exchange på plats eller Exchange i Office 365 Dedicated.
+  > Outlooks mobilapp har för närvarande endast stöd för Intune-appskydd för Microsoft Exchange Online och [Exchange Server med modern hybridautentisering](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx) och saknar stöd för Exchange i Office 365 Dedicated.
 
 **Vilka är de ytterligare kraven för att använda [Word-, Excel- och PowerPoint](https://products.office.com/business/office)-apparna?**
 

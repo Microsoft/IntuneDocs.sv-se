@@ -1,29 +1,29 @@
 ---
-title: "Registrera enheter med ett konto för enhetsregistreringshanteraren"
+title: Registrera enheter med ett konto för enhetsregistreringshanteraren
 titlesuffix: Microsoft Intune
-description: "Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune. \""
-keywords: 
+description: Använda kontot för enhetsregistreringshanteraren för att registrera flera enheter i Intune. "
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f5d723c86c120bb8dee1f4e109b70d9ea4e6091
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 870d61cce47132b19b4c3d8b7357f84a21a443e4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Organisationer kan använda Intune för att hantera ett stort antal mobila enheter med ett enda användarkonto. Kontot för *enhetsregistreringshanterare* (DEM) är ett särskilt användarkonto som kan registrera upp till 1 000 enheter. Du kan lägga till befintliga användare till DEM-kontot för att ge dem speciella DEM-funktioner. Varje registrerad enhet använder en enda licens. Vi rekommenderar att du använder enheter som registrerats via det här kontot som delade enheter snarare än personliga enheter (BYOD).  
 
@@ -49,12 +49,12 @@ DEM-användaren kan:
 Enheter som har registrerats med ett konto för enhetsregistreringshantering har följande begränsningar:
 
   - Ingen åtkomst per användare. Eftersom enheter inte har en tilldelad användare har enheten ingen åtkomst till e-post eller företagsdata. VPN-konfigurationer, till exempel, skulle fortfarande kunna användas för att ge enhetens appar åtkomst till data.
-  - Ingen villkorad åtkomst eftersom de är scenarier per användare
   - DEM-användaren kan inte avregistrera DEM-registrerade enheter på själva enheten genom företagsportalen. Intune-administratören kan avregistrera enheter.
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
-  - Användare kan inte använda apparna för Apples volymköpsprogram (VPP) på grund av Apple-ID-kraven per användare för apphantering.
+  - Användare kan inte använda apparna för Apples volymköpsprogram (VPP) med användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
   - (Endast iOS) Om du använder DEM för att registrera iOS-enheter, kan du inte använda Apple Configurator, Apples program för enhetsregistrering (DEP) eller Apple School Manager (ASM) för att registrera enheter.
   - (Endast Android) Det finns en gräns för hur många Android for Work-enheter som kan registreras med ett enda DEM-konto. Högst tio enheter med Android-arbetsprofiler kan registreras per DEM-konto. Den här begränsningen gäller inte för äldre Android-registrering.
+  - Enheter kan installera VPP-appar om de har enhetslicenser.
   - Varje enhet måste ha en enhetslicens. Läs mer om [användar- och enhetslicenser](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 

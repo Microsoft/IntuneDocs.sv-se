@@ -1,24 +1,24 @@
 ---
 title: Princip
 titlesuffix: Microsoft Intune
-description: "Referensavsnitt för kategorin Princip för entitetssamlingar i API:et för Intune-informationslager."
+description: Referensavsnitt för kategorin Princip för entitetssamlingar i API:et för Intune-informationslager.
 keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/12/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: c5546c686a51170c8c854252cddb048685c6b2d2
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 0cfeffd4cb466d8bcfc2da072e7e6c028a4e0c8a
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-policy-entities"></a>Referens för principentiteter
 
@@ -157,10 +157,12 @@ PolicyKey|Principnyckel, kan kopplas till princip gör att få namn på princip.
 
 Följande tabell visar antalet användare med tillståndet lyckades, väntar, misslyckades eller fel per dag. Siffran återger data per principtypprofil. Om en enhet exempelvis har tillståndet lyckades för alla tilldelade principer ökar antalet lyckade med ett för den dagen. Om en användare har tilldelats två profiler, en med tillståndet lyckades och den andra med tillståndet fel, räknas användaren i feltillståndet. Entiteten PolicyUserActivity visar hur många användare som har en viss status vid en viss dag under de senaste 30 dagarna.
 
-|Egenskap  |Description  |Exempel  |
-|---------|---------|---------|
-|DateKey|Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret.|20160703|
-|Väntar|Antalet unika enheter i väntande läge.|123|
-|Lyckades|Antalet unika enheter med tillståndet lyckades.|12|
-PolicyKey|Principnyckel, kan kopplas till princip gör att få namn på princip.|Windows 10-baslinje|
-|Fel|Antalet unika enheter med feltillstånd.|10|
+
+| Egenskap  |                                         Description                                         |       Exempel       |
+|-----------|---------------------------------------------------------------------------------------------|---------------------|
+|  DateKey  | Datumnyckel när incheckningen av enhetskonfigurationsprofilen registrerades i informationslagret. |      20160703       |
+|  Väntar  |                         Antalet unika enheter i väntande läge.                          |         123         |
+| Lyckades |                         Antalet unika enheter med tillståndet lyckades.                          |         12          |
+| PolicyKey |                Principnyckel, kan kopplas till princip gör att få namn på princip.                 | Windows 10-baslinje |
+|   Fel   |                          Antalet unika enheter med feltillstånd.                           |         10          |
+

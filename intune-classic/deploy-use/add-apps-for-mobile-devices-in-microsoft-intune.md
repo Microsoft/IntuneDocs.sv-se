@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9f5fec22a17eef39819b38567793a2f579815e59
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 4e53acad9fb2cf1e6c18b71900c6b671dd031e98
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-apps-for-enrolled-devices-to-intune"></a>Lägga till appar för registrerade enheter i Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Innan du kan distribuera och hantera en app måste du lägga till den i Microsoft Intune. Det här avsnittet visar hur du lägger till appar för registrerade enheter.
 
@@ -34,32 +34,32 @@ Innan du kan distribuera och hantera en app måste du lägga till den i Microsof
 ## <a name="add-the-app"></a>Lägg till appen
 Du använder Intune programvaruutgivare för att konfigurera egenskaper för appen och, om tillämpligt, överföra den till molnlagringsutrymmet. Gör så här:
 
-1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Lägg till appar** så startas Intune programvaruutgivare.
+1. Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Lägg till appar** så startas Intune programvaruutgivare.
 
-    > [!TIP]
-    > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
+   > [!TIP]
+   > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
 
-2.  På sidan **Programvaruinstallation** för utgivaren väljer du något av följande alternativ för **Hur ska enheterna få tillgång till den här programvaran**:
-    - **Installationsprogram** för appar med filnamnstillägget **.msi**:
-        - **Välj typ av programinstallationsfil**. Detta anger vilken typ av programvara som du vill distribuera. Om du till exempel vill installera en iOS-app väljer du **Appaket för iOS (&#42;.ipa-fil)**.
-        - **Ange platsen för programvarans installationsfiler**. Ange platsen för installationsfilerna, eller välj **Bläddra** för att välja platsen i en lista.
-        - **Inkludera ytterligare filer och undermappar från samma mapp**. Det här alternativet gäller endast för **Windows Installer**-filtypen.<br>Vissa program som använder Windows Installer kräver stödfiler som vanligtvis finns i samma mapp som installationsfilerna. Välj det här alternativet om du även vill distribuera dessa filer.<br>Den här installationstypen använder en del av ditt molnlagringsutrymme.
+2. På sidan **Programvaruinstallation** för utgivaren väljer du något av följande alternativ för **Hur ska enheterna få tillgång till den här programvaran**:
+   - **Installationsprogram** för appar med filnamnstillägget **.msi**:
+       - **Välj typ av programinstallationsfil**. Detta anger vilken typ av programvara som du vill distribuera. Om du till exempel vill installera en iOS-app väljer du **Appaket för iOS (&#42;.ipa-fil)**.
+       - **Ange platsen för programvarans installationsfiler**. Ange platsen för installationsfilerna, eller välj **Bläddra** för att välja platsen i en lista.
+       - **Inkludera ytterligare filer och undermappar från samma mapp**. Det här alternativet gäller endast för **Windows Installer**-filtypen.<br>Vissa program som använder Windows Installer kräver stödfiler som vanligtvis finns i samma mapp som installationsfilerna. Välj det här alternativet om du även vill distribuera dessa filer.<br>Den här installationstypen använder en del av ditt molnlagringsutrymme.
 
-  -   **Extern länk**, för appar som du vill skapa genom att ange en länk till en appbutik:
+   -   **Extern länk**, för appar som du vill skapa genom att ange en länk till en appbutik:
 
-        - **Ange webbadress (URL)**. Ange webbadressen i följande format:
-            - Webbadressen till App Store för den app som du vill distribuera. Om du till exempel vill distribuera Microsoft Remote Desktop-appen för Android anger du **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Du hittar webbadressen till appen genom att använda en sökmotor för att hitta Store-sidan där appen finns. Om du till exempel vill hitta Remote Desktop-appen kan du söka efter **Microsoft Remote Desktop Android**.
-            - En webbplats. Intune distribuerar en genvägsikon till platsen till enheten (kallas även för web clip).
-            - En app på webben. Intune distribuerar en genvägsikon till appen på enheten.
-        - **Kräv en hanterad webbläsare för att öppna den här länken (endast Android och iOS)**. När du distribuerar en länk till en webbplats eller en webbapp till användare kan de bara öppna den i Intune Managed Browser. Den här webbläsaren måste installeras på enheterna.<br>Mer information om den hanterade webbläsaren finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
+       - **Ange webbadress (URL)**. Ange webbadressen i följande format:
+           - Webbadressen till App Store för den app som du vill distribuera. Om du till exempel vill distribuera Microsoft Remote Desktop-appen för Android anger du **https://play.google.com/store/apps/details?id=com.microsoft.rdc.android**.<br>Du hittar webbadressen till appen genom att använda en sökmotor för att hitta Store-sidan där appen finns. Om du till exempel vill hitta Remote Desktop-appen kan du söka efter **Microsoft Remote Desktop Android**.
+           - En webbplats. Intune distribuerar en genvägsikon till platsen till enheten (kallas även för web clip).
+           - En app på webben. Intune distribuerar en genvägsikon till appen på enheten.
+       - **Kräv en hanterad webbläsare för att öppna den här länken (endast Android och iOS)**. När du distribuerar en länk till en webbplats eller en webbapp till användare kan de bara öppna den i Intune Managed Browser. Den här webbläsaren måste installeras på enheterna.<br>Mer information om den hanterade webbläsaren finns i [Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune](manage-internet-access-using-managed-browser-policies.md).<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
 
-  -   **Hanterad iOS-app från App Store**, för kostnadsfria appar från iTunes-butiken som du vill hantera med hanteringsprinciper för mobila program (MAM):
+   -   **Hanterad iOS-app från App Store**, för kostnadsfria appar från iTunes-butiken som du vill hantera med hanteringsprinciper för mobila program (MAM):
 
-        - **Ange webbadress (URL)**. Ange webbadressen till App Store för den app som du vill distribuera. Om du till exempel vill distribuera Microsoft Work Folders-appen för iOS anger du **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
+       - **Ange webbadress (URL)**. Ange webbadressen till App Store för den app som du vill distribuera. Om du till exempel vill distribuera Microsoft Work Folders-appen för iOS anger du **https://itunes.apple.com/us/app/work-folders/id950878067?mt=8**.<br>Den här installationstypen använder inte något av ditt molnlagringsutrymme.
 
-        Om du till exempel vill distribuera appen Microsoft Word från iTunes-butiken till enheterna skulle sidan se ut så här:
+       Om du till exempel vill distribuera appen Microsoft Word från iTunes-butiken till enheterna skulle sidan se ut så här:
 
-        ![Intune Software Publisher](./media/publisher-for-mobile.png)
+       ![Intune Software Publisher](./media/publisher-for-mobile.png)
 
 > [!NOTE]
 > När du lägger till och distribuerar en app från en butik måste slutanvändare ha ett konto med den butiken för att kunna installera appen.

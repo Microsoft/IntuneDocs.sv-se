@@ -14,16 +14,16 @@ ms.technology: ''
 ms.assetid: 8190814-07f0-42d8-9b3a-87c67dd2b7ed
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5304830c1706ff11bccdaedc9e9efa715e71904a
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 09b94ad2109c41ad02e8da7267690c31ba296bae
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="turn-on-ios-supervised-mode"></a>Aktivera övervakat läge på iOS
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Övervakat läge på Apple iOS ger administratörer fler alternativ vid hantering av Apple-enheter, vilket gör att det blir användbart för företagsägda enheter som distribueras i större skala. Du kan till exempel begränsa AirDrop eller hindra användare från att ändra namnet på enheten. [Inställningar för enhetsbegränsningar för iOS-enheter i Microsoft Intune](device-restrictions-ios.md) innehåller en lista med inställningar som kräver övervakat läge.
 

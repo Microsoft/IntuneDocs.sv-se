@@ -1,24 +1,24 @@
 ---
-title: "Kom igång med Microsoft Intune App SDK"
-description: "Aktivera snabbt din mobilapp för mobil programhantering (MAM) med Microsoft Intune."
-keywords: 
+title: Kom igång med Microsoft Intune App SDK
+description: Aktivera snabbt din mobilapp för mobil programhantering (MAM) med Microsoft Intune.
+keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
 ms.date: 01/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5827c82d84be45020aa2bdec16c92e0296431cf8
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -69,7 +69,7 @@ Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft Gi
 
 Om din app är en Xamarin- eller Cordova-app använder du de här SDK-varianterna:
 
-* [Intune App SDK Xamarin-komponenten](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* [Xamarin-bindningar för Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * [Intune App SDK Cordova-insticksprogrammet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda för att förgrena och använda pull i våra lagringsplatser. GitHub låter utvecklare kommunicera med vårt produktteam, öppna frågor och få snabba svar, se versionsanmärkningar och ge feedback till Microsoft. Kontakta msintuneappsdk@microsoft.com för frågor om Intune App SDK på GitHub.
@@ -84,7 +84,7 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
 
 * **[Guide för plugin-programmet Intune App SDK Cordova](app-sdk-cordova.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Cordova för Intunes appskyddsprinciper.
 
-* **[Guide för Intune App SDK Xamarin-komponenten](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Cordova för Intunes appskyddsprinciper.
+* **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 
 
 
@@ -142,7 +142,7 @@ Versionsnummer|CFBundleVersion|PackageVersionCode |Numret används för att indi
 
 - **CFBundleShortVersionString**  
     Anger versionsnumret vid lansering för paketet. Numret identifierar en lanserad version av appen. Numret används av slutanvändare för att referera till appen.
- - **CFBundleVersion**  
+  - **CFBundleVersion**  
     Build-versionen av paketet som identifierar en iteration av paketet. Numret kan identifiera en lanserad version eller ett outgivet paket. Numret används för appidentifiering.
 
 #### <a name="android"></a>Android

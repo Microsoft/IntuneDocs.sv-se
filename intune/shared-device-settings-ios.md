@@ -1,27 +1,27 @@
 ---
-title: "Konfigurationsinställningar för delad Microsoft Intune-enhet för iOS"
-titlesuffix: 
-description: "Läs om de Microsoft Intune-inställningar du kan använda för att visa information på iOS-enhetens låsskärm."
-keywords: 
+title: Konfigurationsinställningar för delad Microsoft Intune-enhet för iOS
+titlesuffix: ''
+description: Läs om de Microsoft Intune-inställningar du kan använda för att visa information på iOS-enhetens låsskärm.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/5/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9147eaff2bd366dbfd86c6422e0f7a29f685db62
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 73c4f96e3057227bc601175c4e8f42802eb322bc
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shared-device-configuration-settings-to-display-messages-on-the-ios-device-lock-screen"></a>Den delade enhetens konfigurationsinställningar för att visa meddelanden på iOS-enhetens låsskärm
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Den här artikeln beskriver de Microsoft Intune-inställningar du kan använda för att visa information på iOS-enhetens låsskärm.
 

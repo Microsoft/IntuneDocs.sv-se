@@ -15,11 +15,11 @@ ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8b1b7d9ef1a7dce0b5a139f3b8acb85ab7d11d4c
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: b34bde9ef7817310c25b9a699fa4e18d3151d944
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurera Lookout Mobile Threat Defense-integreringen med Intune
 
@@ -54,32 +54,32 @@ Använd följande steg för att samla in den information du måste förse Lookou
 2. När du väljer namnet på din prenumeration måste den URL som bildas omfatta prenumerations-ID.  Om du har problem med att hitta ditt prenumerations-ID kan du läsa den här [Microsoft support-artikeln](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b) och få hjälp.
 
 3. Hitta ditt grupp-ID för Azure AD. Lookout-konsolen stöder två åtkomstnivåer:  
-  * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som har fullständig åtkomst och även skapa en grupp med användare som har begränsad åtkomst.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
-  * **Begränsad åtkomst:** Användarna i den här gruppen har inte åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen. De har skrivskyddad åtkomst till modulen **Säkerhetsprincip** i Lookout-konsolen.  
+   * **Fullständig åtkomst:** Azure AD-administratören kan skapa en grupp för användare som har fullständig åtkomst och även skapa en grupp med användare som har begränsad åtkomst.  Endast användare i dessa grupper kommer att kunna logga in till **Lookout-konsolen**.
+   * **Begränsad åtkomst:** Användarna i den här gruppen har inte åtkomst till ett flertal konfigurations- och registreringsrelaterade moduler i Lookout-konsolen. De har skrivskyddad åtkomst till modulen **Säkerhetsprincip** i Lookout-konsolen.  
 
-    > [!TIP] 
-    > Mer information om behörigheterna finner du i [den här artikeln](https://personal.support.lookout.com/hc/articles/114094105653) på webbplatsen Lookout.
+     > [!TIP] 
+     > Mer information om behörigheterna finner du i [den här artikeln](https://personal.support.lookout.com/hc/articles/114094105653) på webbplatsen Lookout.
 
-    > [!NOTE] 
-    > **Grupp-objekt-ID:t** finns på **egenskapssidan** för gruppen i **Azure AD-hanteringsportalen**.
+     > [!NOTE] 
+     > **Grupp-objekt-ID:t** finns på **egenskapssidan** för gruppen i **Azure AD-hanteringsportalen**.
 
 4. Kontakta Lookout-supporten (e-post: enterprisesupport@lookout.com) när du har samlat in den här informationen. Lookout-supporten kommer att samarbeta med din primära kontakt för att publicera din prenumeration och skapa ditt företagskonto för Lookout med hjälp av informationen som du samlat in.
 
 ## <a name="configure-your-subscription"></a>Konfigurera din prenumeration
 
-1. Efter att Lookout-supporten skapat ditt Lookout Enterprise-konto, skickas ett e-postmeddelande från Lookout till den primära kontakten för ditt företag med en länk till inloggnings-URL:https://aad.lookout.com/les?action=consent.
+1. Efter att Lookout-supporten skapat ditt Lookout Enterprise-konto, skickas ett e-postmeddelande från Lookout till den primära kontakten för ditt företag med en länk till inloggnings-URL:<https://aad.lookout.com/les?action=consent>.
 
-2.  Den första inloggningen på Lookout-konsolen måste ske med ett användarkonto som har Azure AD-rollen global administratör för att kunna registrera Azure AD-klienten. Inloggningen kräver inte denna nivå på Azure AD-behörighet senare. En samtyckessida visas. Välj **Acceptera** för att slutföra registreringen. När du har accepterat och samtyckt till villkoren omdirigeras du till Lookout-konsolen.
+2. Den första inloggningen på Lookout-konsolen måste ske med ett användarkonto som har Azure AD-rollen global administratör för att kunna registrera Azure AD-klienten. Inloggningen kräver inte denna nivå på Azure AD-behörighet senare. En samtyckessida visas. Välj **Acceptera** för att slutföra registreringen. När du har accepterat och samtyckt till villkoren omdirigeras du till Lookout-konsolen.
 
-    ![skärmbild av sidan för den första inloggningen i Lookout-konsolen](./media/lookout_mtp_initial_login.png)
+   ![skärmbild av sidan för den första inloggningen i Lookout-konsolen](./media/lookout_mtp_initial_login.png)
 
-3.  I [Lookout-konsolen](https://aad.lookout.com) går du till **System**-modulen och väljer fliken **Kopplingar** och sedan **Intune**.
+3. I [Lookout-konsolen](https://aad.lookout.com) går du till **System**-modulen och väljer fliken **Kopplingar** och sedan **Intune**.
 
-    ![skärmbild som visar Lookout-konsolen med fliken för anslutningar öppen och alternativet Intune markerat](./media/lookout_mtp_setup-intune-connector.png)
+   ![skärmbild som visar Lookout-konsolen med fliken för anslutningar öppen och alternativet Intune markerat](./media/lookout_mtp_setup-intune-connector.png)
 
-4.  Välj **Kopplingar** > **Anslutningsinställningar** och ange **Pulsslagsfrekvens** i minuter.
+4. Välj **Kopplingar** > **Anslutningsinställningar** och ange **Pulsslagsfrekvens** i minuter.
 
-    ![skärmbild av fliken för anslutningsinställningar som visar hur pulsslagsfrekvensen konfigurerats](./media/lookout-mtp-connection-settings.png)
+   ![skärmbild av fliken för anslutningsinställningar som visar hur pulsslagsfrekvensen konfigurerats](./media/lookout-mtp-connection-settings.png)
 
 ## <a name="configure-enrollment-groups"></a>Konfigurera registreringsgrupper
 1. Du bör skapa en Azure AD-säkerhetsgrupp i [Azure AD-hanteringsportalen](https://manage.windowsazure.com) som innehåller ett litet antal användare för att testa Lookout-integreringen.

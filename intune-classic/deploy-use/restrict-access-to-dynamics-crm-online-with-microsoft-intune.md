@@ -1,29 +1,29 @@
 ---
 title: Protect Dynamics CRM Online
-description: "Skydda och styr åtkomsten till Dynamics CRM Online med villkorlig åtkomst."
-keywords: 
+description: Skydda och styr åtkomsten till Dynamics CRM Online med villkorlig åtkomst.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f1c4522b-5a34-4f5a-89d2-7809c4352af7
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bae29ed7eba164ce19ea5db7d003ab38b4683454
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: e2f720c8a6613884397111c2a421fa1cfdc0eb53
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-dynamics-crm-online-with-intune"></a>Skydda åtkomsten till Dynamics CRM Online med Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan kontrollera åtkomsten till Microsoft Dynamics CRM Online från iOS- och Android-enheter med villkorlig åtkomst i Microsoft Intune.  Villkorlig åtkomst i Intune består av två komponenter:
 * En [princip för enhetsefterlevnad](introduction-to-device-compliance-policies-in-microsoft-intune.md) som enheten måste uppfylla för att anses vara kompatibel.
@@ -73,17 +73,17 @@ När du är klar, fortsätt till Steg 3.
 ### <a name="step-3-configure-the-dynamics-crm-policy"></a>Steg 3: Konfigurera Dynamics CRM-principen
 Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter kan komma åt Dynamics CRM. Denna policy kommer att lagras i Azure Active Directory.
 
-1.  Välj **Princip > Villkorlig åtkomst > Dynamics CRM Online-princip** i Microsoft Intune-administratörskonsolen.
+1. Välj **Princip > Villkorlig åtkomst > Dynamics CRM Online-princip** i Microsoft Intune-administratörskonsolen.
 
-  ![Skärmbild av sidan för principer för villkorlig åtkomst för Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
+   ![Skärmbild av sidan för principer för villkorlig åtkomst för Dynamics CRM Online](../media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  Välj principen **Aktivera villkorlig åtkomst**.
-3.  Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
-  * **iOS**
-  * **Android**
-4.  Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen ska gälla för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
-5.  Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
-6.  När du är klar väljer du **Spara**.
+2. Välj principen **Aktivera villkorlig åtkomst**.
+3. Under **Programåtkomst**kan du välja att tillämpa en princip för villkorlig åtkomst på:
+   * **iOS**
+   * **Android**
+4. Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen ska gälla för. Du kan välja att rikta detta till alla användare eller bara en viss grupp med användare.
+5. Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
+6. När du är klar väljer du **Spara**.
 
 Nu har du konfigurerat villkorlig åtkomst för Dynamics CRM. Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>Övervaka efterlevnaden och villkorlig åtkomstpolicy

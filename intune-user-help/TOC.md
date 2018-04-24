@@ -128,7 +128,7 @@
 ### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
 ### [Kryptera din enhet](encrypt-your-device-windows.md)
 ### [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)
-### [Avregistrera enheten från Intune](unenroll-your-device-from-intune-windows.md)
+### [Ta bort enheten från Intune](unenroll-your-device-from-intune-windows.md)
 ### [Vad händer om du avregistrerar din enhet?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
 ### [Vad händer om du återställer din enhet?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-windows.md)

@@ -1,29 +1,29 @@
 ---
-title: "Konfigurera registrering av Apple School Manager-programmet för iOS-enheter"
+title: Konfigurera registrering av Apple School Manager-programmet för iOS-enheter
 titlesuffix: Microsoft Intune
-description: "Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS-enheter med Intune."
-keywords: 
+description: Lär dig hur du konfigurerar Apple School Manager-programmets registrering av företagsägda iOS-enheter med Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7981a9c0-168e-4c54-9afd-ac51e895042c
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d3a599ff1dff3e27214dfcca694f6b97333f370a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: afcca0cc1f7786f468856f2aacefc0b8168b4934
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurera registrering av iOS-enheter med Apple School Manager
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tillfälliga skillnader i användargränssnittet
@@ -61,7 +61,7 @@ Innan du kan registrera företagsägda iOS-enheter med Apple School Manager beh�
 **Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckel som krävs för att skapa en Apple-token.**<br>
 1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** och sedan väljer du **Token för registreringsprogram**.
 
-  ![Fönstret Registreringsprogramtoken i arbetsytan Apple-certifikat där den offentliga nyckeln laddas ned](./media/enrollment-program-token-download.png)
+   ![Fönstret Registreringsprogramtoken i arbetsytan Apple-certifikat där den offentliga nyckeln laddas ned](./media/enrollment-program-token-download.png)
 
 2. På bladet **Token för registreringsprogram** väljer du **Ladda ned din offentliga nyckel** för att ladda ned och spara krypteringsnyckelfilen (.pem) lokalt. .pem-filen används för att begära ett förtroendecertifikat från Apple School Manager-portalen.
 
@@ -95,20 +95,20 @@ En enhetsregistreringsprofil definierar inställningarna som tillämpas på en g
 4. På bladet **Skapa registreringsprofil** anger du ett **Namn** och en **Beskrivning** för profilen som visas i Intune.
 5. Ange om enheter med den här profilen ska registreras med eller utan användartillhörighet under **Användartillhörighet**.
 
- - **Registrera med användartillhörighet** – Kopplar enheten till en användare under installationen.
+   - **Registrera med användartillhörighet** – Kopplar enheten till en användare under installationen.
 
-  Det delade iPad-läget i Apple School Manager innebär att användarna måste registrera sig utan användartillhörighet.
+   Det delade iPad-läget i Apple School Manager innebär att användarna måste registrera sig utan användartillhörighet.
 
- - **Registrera utan användartillhörighet** – Välj detta för enheter som inte är kopplade till en enda användare, som delade enheter. Använd detta för enheter som utför uppgifter utan att öppna lokala användardata. Appar som företagsportalappen fungerar inte.
+   - **Registrera utan användartillhörighet** – Välj detta för enheter som inte är kopplade till en enda användare, som delade enheter. Använd detta för enheter som utför uppgifter utan att öppna lokala användardata. Appar som företagsportalappen fungerar inte.
 
 6. Välj **Enhetshanteringsinställningar**. Dessa objekt anges under aktiveringen och kräver en fabriksåterställning om du vill ändra dem. konfigurera följande profilinställningar och välj sedan **Spara**:
 
-  ![Väljer hanteringsläge](./media/enrollment-program-profile-mode.png)
+   ![Väljer hanteringsläge](./media/enrollment-program-profile-mode.png)
 
-    - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
+   - **Övervakad** – Ett hanteringsläge som aktiverar fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Om du inte markerar kryssrutan begränsas dina hanteringsfunktioner.
 
      - **Låst registrering** – (Kräver Hanteringsläge = Övervakad) Inaktiverar iOS-inställningar som kan möjliggöra borttagning av hanteringsprofilen. Om du lämnar den här kryssrutan omarkerad tillåter du att hanteringsprofilen tas bort från menyn Inställningar.
-   - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och Övervakat läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md). Du bör också granska [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+     - **Delad iPad** – (kräver **Registrera utan användartillhörighet** och Övervakat läge.) Flera användare kan logga in på iPad-enheter som har registrerats med hjälp av ett hanterat Apple-ID. Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Mer information om [delad iPad](education-settings-configure-ios-shared.md). Du bör också granska [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
    >[!NOTE]
    >Om **Användartillhörighet** är inställt på **Med användartillhörighet** eller **Övervakat** läge är inställt på **Av**, är det delade iPad-läget inaktiverat för registreringsprofilen.
@@ -151,12 +151,12 @@ Nu när Intune har tilldelats behörighet att hantera Apple School Manager-enhet
 
 1. I [Intune på Azure portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramenheter** > **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
-  ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
+   ![Noden Registreringsprogramenheter och synkroniseringslänk väljs](./media/enrollment-program-device-sync.png)
 2. Välj **Begär synkronisering** på bladet **Synkronisera**. Förloppsindikatorn visar hur lång tid som du måste vänta innan du begär synkronisering igen.
 
-  ![Bladet Synkronisera med länken Begär synkronisering väljs](./media/enrollment-program-device-request-sync.png)
+   ![Bladet Synkronisera med länken Begär synkronisering väljs](./media/enrollment-program-device-request-sync.png)
 
-  Om du vill följa Apples villkor för godkänd trafik tillämpar Intune följande begränsningar:
+   Om du vill följa Apples villkor för godkänd trafik tillämpar Intune följande begränsningar:
    -    En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering uppdaterar Intune varje serienummer som Apple har tilldelat Intune vare sig serien tidigare har synkroniserats eller inte. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
    -    Varje synkroniseringsbegäran har 15 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
 
@@ -169,15 +169,15 @@ Apple School Manager-enheter som hanteras av Intune måste tilldelas en registre
 1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** och väljer sedan **Registreringsprogramprofiler**.
 2. Från listan över **Registreringsprogramprofiler** väljer du den profil som du vill tilldela till enheter och därefter **Enhetstilldelningar**
 
- ![Enhetstilldelningar med Tilldela valt.](./media/enrollment-program-device-assign.png)
+   ![Enhetstilldelningar med Tilldela valt.](./media/enrollment-program-device-assign.png)
 
 3. Välj **Tilldela** och markera sedan de Apple School Manager-enheter som du vill tilldela den här profilen. Du kan använda filter för att enbart visa tillgängliga enheter:
-  - **ej tilldelad**
-  - **alla**
-  - **&lt;profilnamn&gt;**
+   - **ej tilldelad**
+   - **alla**
+   - **&lt;profilnamn&gt;**
 4. Markera de enheter som du vill tilldela. Kryssrutan ovanför kolumnen markerar upp till 1 000 enheter från listan. Klicka på **Tilldela**. Om du vill registrera mer än 1 000 enheter måste du upprepa tilldelningen tills alla enheter har tilldelats en registreringsprofil.
 
-  ![Knappen Tilldela används för att tilldela registreringsprogramprofil i Intune](media/dep-profile-assignment.png)
+   ![Knappen Tilldela används för att tilldela registreringsprogramprofil i Intune](media/dep-profile-assignment.png)
 
 ## <a name="distribute-devices-to-users"></a>Distribuera enheter till användare
 

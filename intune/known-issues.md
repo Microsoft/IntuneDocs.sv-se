@@ -1,37 +1,35 @@
 ---
-title: "Kända problem i Microsoft Intune"
-titlesuffix: Microsoft Intune
-description: "Läs om kända problem i Microsoft Intune."
-keywords: 
+title: Kända problem i Microsoft Intune – Azure | Microsoft Docs
+description: Läs om kända problem i Microsoft Intune.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 03/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02efc7e2369c590e2d21ac8c27db54ffbaae38c1
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: d0a8a189e708ed140c3cda987a20cebb562fdb34
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-
-Läs det här ämnet för att lära dig om kända problem i Microsoft Intune.
+Läs den här artikeln för att lära dig om kända problem i Microsoft Intune.
 
 Om du vill rapportera en bugg som inte visas här, [öppnar du en supportförfrågan](get-support.md).
 
-Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport på vår [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console)-webbplats.
+Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport på [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console)-webbplatsen.
 
 ## <a name="migration"></a>Migrering
 
@@ -45,12 +43,12 @@ När du migrerar från Intune till Azure-portalen kan det visas en ny grupp med 
 
 ### <a name="status-blades-for-migrated-policies-do-not-work"></a>Statusbladen för migrerade principer fungerar inte
 
-Du kan inte visa statusinformation för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
+Du kan inte visa statusinformation i Azure Portal för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
 
 ## <a name="apps"></a>Appar
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Volyminköpta iOS-appar är endast tillgängliga i standardspråket för Intune-klienten
-Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i den amerikanska butiken, men ditt Intune-konto är tyskt, visas inte appen i Intune.
+Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i en amerikansk butik, men ditt Intune-konto är tyskt, visas inte appen i Intune.
 
 ### <a name="multiple-copies-of-the-same-ios-volume-purchase-program-are-uploaded"></a>Flera kopior av samma volyminköpta iOS-program laddas upp
 Klicka inte på knappen **Ladda upp** flera gånger för samma VPP-token. Det leder till att dubbla VPP-token laddas upp och att appar synkroniseras flera gånger för samma VPP-token.
@@ -66,9 +64,8 @@ För enheter som inte har registrerats med Intune, kan du bara ange en primär d
 Om du lägger till ytterligare domäner (med hjälp av **avancerade inställningar** > **nätverksperimeter** > **lägg till en skyddad domän**) så går det inte att spara principen. Felmeddelandet du får upp kommer snart att ändras för att bli mer rättvisande.
 
 ### <a name="cisco-anyconnect-vpn-client-support"></a>Stöd för Cisco AnyConnect VPN-klienter
+Den senaste versionen av Cisco AnyConnect VPN-klienten (4.0.07072) är inte kompatibel med Intune. En framtida uppdatering av Intune inkluderar kompatibilitet med den här VPN-klientversionen. Fram till dess rekommenderar vi att du inte uppdaterar Cisco AnyConnect VPN-klienten och fortsätter att använda den befintliga versionen.
 
-Den senaste versionen av Cisco AnyConnect VPN-klienten (4.0.07072) är inte kompatibel med Intune.
-En framtida uppdatering av Intune inkluderar kompatibilitet med den här VPN-klientversionen. Fram till dess rekommenderar vi att du inte uppdaterar Cisco AnyConnect VPN-klienten och fortsätter att använda den befintliga versionen.
 
 ### <a name="using-the-numeric-password-type-with-macos-sierra-devices"></a>Använd den numeriska lösenordstypen med macOS Sierra-enheter
 

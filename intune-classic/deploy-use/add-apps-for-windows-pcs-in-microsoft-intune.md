@@ -14,15 +14,15 @@ ms.assetid: bc8c8be9-7f4f-4891-9224-55fc40703f0b
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 6b44ed650019c7e189b1f8f3bfe29e161558258e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 307bc9b0018f87f28bfb5f74bccd1872458d0e83
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Lägg till program för Windows-datorer som kör Intune-klientprogramvaran
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd informationen i det här avsnittet för att lära dig hur du lägger till appar i Intune innan du distribuerar dem.
 
@@ -35,59 +35,59 @@ För att du ska kunna installera appar på datorer måste apparna kunna installe
 ## <a name="add-the-app"></a>Lägg till appen
 Använd Intune-programvaruutgivaren för att konfigurera egenskaper för appen och överföra den till molnlagringsutrymmet på följande sätt.
 
-1.  Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Lägg till appar** så startas Intune programvaruutgivare.
+1. Gå till [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) och välj **Appar** &gt; **Lägg till appar** så startas Intune programvaruutgivare.
 
-    > [!TIP]
-    > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
+   > [!TIP]
+   > Du kan behöva ange ditt användarnamn och lösenord för Intune innan utgivaren startas.
 
-2.  Välj **Programinstallation** under **Hur ska enheterna få tillgång till den här programvaran** på sidan **Programvaruinstallation** och gör sedan följande:
+2. Välj **Programinstallation** under **Hur ska enheterna få tillgång till den här programvaran** på sidan **Programvaruinstallation** och gör sedan följande:
 
-    - **Välj typ av programinstallationsfil**. Detta anger vilken typ av programvara som du vill distribuera. För en Windows-dator väljer du **Windows Installer**.
-    - **Ange platsen för programvarans installationsfiler**. Ange platsen för installationsfilerna, eller välj **Bläddra** för att välja platsen i en lista.
-    - **Inkludera ytterligare filer och undermappar från samma mapp**. Vissa program som använder Windows Installer kräver stödfiler. Dessa måste finnas i samma mapp som installationsfilen. Välj det här alternativet om du vill distribuera dessa stödfiler.
+   - **Välj typ av programinstallationsfil**. Detta anger vilken typ av programvara som du vill distribuera. För en Windows-dator väljer du **Windows Installer**.
+   - **Ange platsen för programvarans installationsfiler**. Ange platsen för installationsfilerna, eller välj **Bläddra** för att välja platsen i en lista.
+   - **Inkludera ytterligare filer och undermappar från samma mapp**. Vissa program som använder Windows Installer kräver stödfiler. Dessa måste finnas i samma mapp som installationsfilen. Välj det här alternativet om du vill distribuera dessa stödfiler.
 
-    Om du till exempel vill publicera en app med namnet Application.msi i Intune skulle sidan se ut så här: ![Sidan Programvaruinstallation i programvaruutgivaren](./media/publisher-for-pc.png)
+   Om du till exempel vill publicera en app med namnet Application.msi i Intune skulle sidan se ut så här: ![Sidan Programvaruinstallation i programvaruutgivaren](./media/publisher-for-pc.png)
 
    Den här installationstypen använder en del av ditt molnlagringsutrymme.
 
-3.  På sidan **Programvarubeskrivning** konfigurerar du följande.
+3. På sidan **Programvarubeskrivning** konfigurerar du följande.
 
-    > [!NOTE]
-    > En del av dessa värden kan anges automatiskt eller visas inte, beroende på den installationsfil som används.
+   > [!NOTE]
+   > En del av dessa värden kan anges automatiskt eller visas inte, beroende på den installationsfil som används.
 
-    - **Utgivare**. Ange namnet på appens utgivare.
-    - **Namn**. Ange namnet på appen så som det ska visas i företagsportalen.<br />Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
-    - **Beskrivning**. Ange en beskrivning för appen. Detta visas för användare i företagsportalen.
-    - **Webbadress (URL) för programinformation** (valfritt). Ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användare i företagsportalen.
-    - **Sekretesswebbadress** (valfritt). Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användare i företagsportalen.
-    - **Kategori** (valfritt). Välj någon av de inbyggda appkategorierna. Det gör det enklare för användarna att hitta appen när de söker i företagsportalen.
-    - **Ikon** (valfritt). Överför en ikon som ska kopplas till appen. Den här ikonen visas med appen när användare söker i företagsportalen.
+   - **Utgivare**. Ange namnet på appens utgivare.
+   - **Namn**. Ange namnet på appen så som det ska visas i företagsportalen.<br />Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
+   - **Beskrivning**. Ange en beskrivning för appen. Detta visas för användare i företagsportalen.
+   - **Webbadress (URL) för programinformation** (valfritt). Ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användare i företagsportalen.
+   - **Sekretesswebbadress** (valfritt). Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användare i företagsportalen.
+   - **Kategori** (valfritt). Välj någon av de inbyggda appkategorierna. Det gör det enklare för användarna att hitta appen när de söker i företagsportalen.
+   - **Ikon** (valfritt). Överför en ikon som ska kopplas till appen. Den här ikonen visas med appen när användare söker i företagsportalen.
 
-4.  På sidan **Krav** väljer du de krav som måste uppfyllas innan appen kan installeras. Välj mellan:
+4. På sidan **Krav** väljer du de krav som måste uppfyllas innan appen kan installeras. Välj mellan:
 
-    - **Arkitektur**. Välj om den här appen kan installeras på 32-bitars eller 64-bitars operativsystem, eller båda.
-    - **Operativsystem**. Välj det lägsta operativsystem där den här appen kan installeras.
+   - **Arkitektur**. Välj om den här appen kan installeras på 32-bitars eller 64-bitars operativsystem, eller båda.
+   - **Operativsystem**. Välj det lägsta operativsystem där den här appen kan installeras.
 
-5.  På sidan **Identifieringsregler** kan du konfigurera regler för att identifiera om den app som du konfigurerar redan är installerad på en dator. Eller så kan du använda standardidentifieringsreglerna för att automatiskt skriva över eventuella tidigare installerade versioner av appen. Det här alternativet är för Windows Installer (endast .exe-filer).
+5. På sidan **Identifieringsregler** kan du konfigurera regler för att identifiera om den app som du konfigurerar redan är installerad på en dator. Eller så kan du använda standardidentifieringsreglerna för att automatiskt skriva över eventuella tidigare installerade versioner av appen. Det här alternativet är för Windows Installer (endast .exe-filer).
 
-    Reglerna du kan konfigurera är:
-    - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)**\&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
-    - **MSI produktkod finns**. Välj **Bläddra** för att välja den Windows Installer-fil (.msi) som du vill identifiera.
-    - **Registernyckeln finns**. Ange en registernyckel som börjar med **HKEY_LOCAL_MACHINE\**. Både 32-bitars och 64-bitars registersökvägar genomsöks. Om den nyckel som du angav finns på någon av platserna uppfylls identifieringsregeln.
+   Reglerna du kan konfigurera är:
+   - **Filen finns**. Ange sökvägen till filen som du vill identifiera. Du kan söka under **%ProgramFiles%** (som söker i **Program Files**\&lt;sökväg&gt; och **Program Files (x86)**\&lt;sökväg&gt;) på datorn eller **%SystemDrive%** (som söker från datorns rotenhet, normalt enhet C).
+   - **MSI produktkod finns**. Välj **Bläddra** för att välja den Windows Installer-fil (.msi) som du vill identifiera.
+   - <strong>Registernyckeln finns</strong>. Ange en registernyckel som börjar med <strong>HKEY_LOCAL_MACHINE\</strong>. Både 32-bitars och 64-bitars registersökvägar genomsöks. Om den nyckel som du angav finns på någon av platserna uppfylls identifieringsregeln.
 
-    Om appen uppfyller någon av de regler som du har konfigurerat kommer den inte att installeras.
+   Om appen uppfyller någon av de regler som du har konfigurerat kommer den inte att installeras.
 
-6.  Endast för **Windows Installer**-filtypen (.msi och .exe): På sidan **Kommandoradsargument** väljer du om du vill ange valfria kommandoradsargument för installationsprogrammet.
-    Följande parametrar läggs till automatiskt av Intune:
-    - För EXE-filer läggs **/install** till.
-    - För MSI-filer läggs **/quiet** till.
-    Observera att dessa alternativ bara fungerar om den som skapat appaketet har aktiverat funktioner för detta.
+6. Endast för **Windows Installer**-filtypen (.msi och .exe): På sidan **Kommandoradsargument** väljer du om du vill ange valfria kommandoradsargument för installationsprogrammet.
+   Följande parametrar läggs till automatiskt av Intune:
+   - För EXE-filer läggs **/install** till.
+   - För MSI-filer läggs **/quiet** till.
+   Observera att dessa alternativ bara fungerar om den som skapat appaketet har aktiverat funktioner för detta.
 
-7.  Endast för **Windows Installer**-filtypen (endast .exe): På sidan **Returkoder** kan du lägga till nya felkoder som tolkas av Intune när appen installeras på en hanterad Windows-dator.
+7. Endast för **Windows Installer**-filtypen (endast .exe): På sidan **Returkoder** kan du lägga till nya felkoder som tolkas av Intune när appen installeras på en hanterad Windows-dator.
 
-    Som standard använder Intune returkoder som är branschstandard för att rapportera fel eller framgång för installation av ett appaket: **0** (Klart) eller **3010** (Lyckas med omstart). Du kan också lägga till egna returkoder i listan. Om du anger en lista över returkoder och appinstallationen returnerar en kod som inte finns i listan tolkas det som ett fel.
+   Som standard använder Intune returkoder som är branschstandard för att rapportera fel eller framgång för installation av ett appaket: **0** (Klart) eller **3010** (Lyckas med omstart). Du kan också lägga till egna returkoder i listan. Om du anger en lista över returkoder och appinstallationen returnerar en kod som inte finns i listan tolkas det som ett fel.
 
-8.  På sidan **Sammanfattning** läser du igenom den information som du har angivit. När du är klar väljer du **Överför**.
+8. På sidan **Sammanfattning** läser du igenom den information som du har angivit. När du är klar väljer du **Överför**.
 
 9. Välj **Stäng** för att slutföra.
 

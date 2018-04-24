@@ -1,28 +1,28 @@
 ---
 title: Konfigurera Windows-enhetshantering med Microsoft Intune
-description: "Aktivera hantering av mobila enheter (MDM) för Windows-enheter med Microsoft Intune."
-keywords: 
+description: Aktivera hantering av mobila enheter (MDM) för Windows-enheter med Microsoft Intune.
+keywords: ''
 author: NathBarn
 manager: angrobe
 ms.date: 03/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9a18c0fe-9f03-4e84-a4d0-b63821bf5d25
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 44559572a048a0ad8e79d6fdac837f0c71a42646
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: fb2d724cc87ffdc506eda8d5ea2330ab9aacd3e9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-windows-device-management"></a>Konfigurera Windows-enhetshantering
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet hjälper IT-administratörer att förenkla Windows-registrering för sina användare.  Windows-enheter kan registreras utan några ytterligare steg, men du kan göra registreringen enklare för användare.
 
@@ -35,7 +35,7 @@ Två saker som innebär att du kan förenkla Windows-enhetsregistreringen:
 |**Windows 10**|[Automatisk registrering](#enable-windows-10-automatic-enrollment) |[Användarregistrering](#enable-windows-enrollment-without-automatic-enrollment)|
 |**Tidigare Windows-versioner**|[Användarregistrering](#enable-windows-enrollment-without-automatic-enrollment)|[Användarregistrering](#enable-windows-enrollment-without-automatic-enrollment)|
 
-[!INCLUDE[AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
+[!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="enable-windows-enrollment-without-automatic-enrollment"></a>Aktivera Windows-registrering utan automatisk registrering
 Du kan låta användarna registrera sina enheter utan automatisk registrering i Azure AD Premium. När du tilldelar licenser kan användarna registrera sig när de har lagt till sina arbetskonton till sina egna enheter, eller anslutit sina företagsägda enheter till din Azure AD. Om du skapar ett DNS-alias (CNAME-posttyp) blir det enklare för användarna att registrera sina enheter. Om du skapar DNS CNAME-resursposter kan användarna ansluta till och registrera enheter i Intune utan att ange Intune-servernamnet.

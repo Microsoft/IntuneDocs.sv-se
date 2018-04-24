@@ -1,29 +1,29 @@
 ---
-title: "Så här lägger du till Windows Phone 8.1 Store-appar i Microsoft Intune"
-titleSuffix: 
-description: "Läs mer om att lägga till Windows Phone 8.1 Store-appar i Microsoft Intune."
-keywords: 
+title: Så här lägger du till Windows Phone 8.1 Store-appar i Microsoft Intune
+titleSuffix: ''
+description: Läs mer om att lägga till Windows Phone 8.1 Store-appar i Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e4c3935c8dc263ceef9981a9fc9c47ace6f77d86
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 772257369368783a02a826cddc323960fea436b9
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-windows-phone-81-store-apps-to-microsoft-intune"></a>Så här lägger du till Windows Phone 8.1 Store-appar i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Innan du tilldelar en app till en enhet eller en grupp av användare måste du först lägga till appen i Microsoft Intune. Med följande anvisningar kan du lägga till en Windows Phone 8.1 Store-app i Intune från Azure-portalen.
 

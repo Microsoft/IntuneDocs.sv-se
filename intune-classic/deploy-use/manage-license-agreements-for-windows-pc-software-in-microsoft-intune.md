@@ -14,15 +14,15 @@ ms.assetid: c59d8635-3f66-40f5-824a-a71c738e0341
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 73fa5866efe10006a8a3d7de38ec4c552d0df06e
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: f1d4eb8ea128ba453e555836289fb7d1ce8b34c4
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Hantera licensavtal för Windows-datorprogram i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Med Microsoft Intune kan du lägga till och hantera licensinformation för programvara som köpts via Microsofts volymlicensavtal. Du kan också göra detta för programvara från Microsoft eller andra företag som köpts på annat sätt. Du kan ordna informationen i logiska grupper.
 
@@ -174,10 +174,12 @@ Du kan också lägga till andra typer av licensavtal i Intune utöver Microsofts
 ## <a name="manage-license-agreements"></a>Hantera licensavtal
 Avtal för mjukvaruprogram kan läggas till licensgrupper. Du kan använda licensgrupper för att organisera licensavtal i enheter som är logiska för din organisation. Dessutom kan du ta bort licensavtal som du har skapat tidigare.
 
-|||
-|-|-|
-|Uppgift|Information|
-|Skapa en licensgrupp|På sidan **Översikt** i arbetsytan **Licenser** väljer du **Skapa licensgrupp** på menyn **Aktiviteter** . **Obs!** Du kan skapa max 500 licensgrupper totalt.|
-|Byta namn på en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Redigera licensgrupp** på menyn **Aktiviteter** .|
-|Ta bort en licensgrupp|Välj en licensgrupp i arbetsytan **Licenser** och välj sedan **Ta bort licensgrupp** på menyn **Aktiviteter** . **Tips!** Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen **Otilldelade avtal**.|
-|Ta bort ett licensavtal|I arbetsytan **Licenser** väljer du ett avtal och sedan **Ta bort**. **Tips!** När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att välja **Uppdatera nu** på sidan **Licensöversikt** eller på fliken **Allmänt** för en viss licensgrupp.|
+
+|                            |                                                                                                                                                                                                                                                                                                                                                                          |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            Uppgift            |                                                                                                                                                                                 Information                                                                                                                                                                                  |
+|   Skapa en licensgrupp   |                                                            På sidan <strong>Översikt</strong> i arbetsytan <strong>Licenser</strong> väljer du <strong>Skapa licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Obs!</strong> Du kan skapa max 500 licensgrupper totalt.                                                             |
+|   Byta namn på en licensgrupp   |                                                                                                      Välj en licensgrupp i arbetsytan <strong>Licenser</strong> och välj sedan <strong>Redigera licensgrupp</strong> på menyn <strong>Aktiviteter</strong> .                                                                                                       |
+|   Ta bort en licensgrupp   |                                 Välj en licensgrupp i arbetsytan <strong>Licenser</strong> och välj sedan <strong>Ta bort licensgrupp</strong> på menyn <strong>Aktiviteter</strong> . <strong>Tips!</strong> Eventuella licenser som fanns i den borttagna gruppen flyttas till licensgruppen <strong>Otilldelade avtal</strong>.                                 |
+| Ta bort ett licensavtal | I arbetsytan <strong>Licenser</strong> väljer du ett avtal och sedan <strong>Ta bort</strong>. <strong>Tips!</strong> När du har tagit bort volymlicensavtalen uppdaterar du licensinformationen genom att välja <strong>Uppdatera nu</strong> på sidan <strong>Licensöversikt</strong> eller på fliken <strong>Allmänt</strong> för en viss licensgrupp. |
+

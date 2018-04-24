@@ -1,28 +1,28 @@
 ---
-title: "Inställningar av enhetsbegränsningar för Android-enheter i Microsoft Intune"
-titlesuffix: 
-description: "Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Android."
-keywords: 
+title: Inställningar av enhetsbegränsningar för Android-enheter i Microsoft Intune
+titlesuffix: ''
+description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Android.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f938967951045d24ae65315b3b4d40749c1bc20f
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 77942ef6a5f25708ce43910cde94133e174b4731
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Android.
 
@@ -93,7 +93,7 @@ I [App-delen i Google Play](https://play.google.com/store/apps) söker du efter 
 
 Öppna installationssidan för appen och kopiera webbadressen till Urklipp. Nu kan du använda den URL:en i antingen listan över kompatibla eller inkompatibla appar.
 
-Exempel: Sök i [App-delen i Google Play](https://play.google.com/store/apps) efter **Microsoft Planner**. URL:en du ska använda är: **https://play.google.com/store/apps/details?id=com.microsoft.planner**.
+Exempel: Sök i [App-delen i Google Play](https://play.google.com/store/apps) efter **Microsoft Planner**. Använd URL:en: **https://play.google.com/store/apps/details?id=com.microsoft.planner**.
 
 ### <a name="additional-options"></a>Ytterligare alternativ
 

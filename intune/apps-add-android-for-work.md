@@ -1,29 +1,29 @@
 ---
 title: Distribuera appar till Android for Work-enheter
 titlesuffix: Microsoft Intune
-description: "Förstå hur man synkroniserar och tilldelar appar till Android for Work-enheter från Google Play for Work Store."
-keywords: 
+description: Förstå hur man synkroniserar och tilldelar appar till Android for Work-enheter från Google Play for Work Store.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e3b5a742fb480cf9c4c77106b849eebb95ad2439
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 4168f78bff8937ca403cdb75b1028954cbbebd6f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-android-for-work-devices-with-intune"></a>Så här tilldelar du appar till Android for Work-enheter med Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Android for Work är ett program för Android-enheter. Alla appar som du installerar på Android for Work-enheter kommer från Google Play for Work-butiken. Du tilldelar appar till Android for Work-enheter på ett annat sätt än när du tilldelar dem till vanliga Android-enheter. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Programmet visas sedan i noden **Licensierade appar** i Azure-portalen. Härifrån kan du hantera tilldelningen av appen på samma sätt som du tilldelar andra appar.
 
@@ -43,7 +43,7 @@ Kontrollera att du har konfigurerat Intune och Android for Work så att de funge
 
     ![Exempel – Godkänna app i Google Play for Work-butiken](media/approve.png)</br>
     
-  Ett fönster för appen öppnas där du uppmanas att tilldela behörigheter till appen för att utföra olika åtgärder. 
+   Ett fönster för appen öppnas där du uppmanas att tilldela behörigheter till appen för att utföra olika åtgärder. 
 
 4. Välj **Godkänn** för att godkänna appbehörigheterna och fortsätta.</br>
 
@@ -60,7 +60,7 @@ Kontrollera att du har konfigurerat Intune och Android for Work så att de funge
 Om du har godkänt en app från butiken men inte ser den i noden **licensierade appar** i arbetsbelastningen **mobilappar**, kan du framtvinga en omedelbar synkronisering genom att göra följande:
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** i **Intune**-fönstret.
 4. I arbetsbelastningen **Mobilappar** väljer du **Android for Work** i avsnittet **Installation**.
 5. I fönstret Android for Work väljer du **Synkronisera**. Sidan uppdaterar tid och status för den senaste synkroniseringen.
@@ -90,7 +90,7 @@ Du kan också konfigurera Google Play att automatiskt godkänna appbehörigheter
 1. Gå till Google Play-utvecklarkonsolen [play.google.com/apps/publish](https://play.google.com/apps/publish).
 2. Logga in med samma konto som du använde för att konfigurera anslutningen mellan Intune och Android for Work. Om du loggar in för första gången måste du registrera dig och betala en avgift för att bli medlem i Google-utvecklarprogrammet.
 3. I konsolen väljer du **Lägg till nytt program**.
-4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Du måste dock välja inställningen ***Only make this application available to my organization (Gör det här programmet tillgängligt endast för min organisation) (<*organisationsnamn**>):</br>
+4. Du kan överföra och tillhandahålla information om din app på samma sätt som du publicerar en app i Google Play-butiken. Du måste dock välja inställningen ***Only make this application available to my organization (Gör det här programmet tillgängligt endast för min organisation) (<* organisationsnamn**>):</br>
 
     ![Alternativet för att endast göra appen tillgänglig för din organisation](media/restrict.png)</br>
 

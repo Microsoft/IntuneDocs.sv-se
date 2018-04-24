@@ -331,6 +331,6 @@ __Intune App SDK Xamarin-komponenten har nu stöd för MAM utan registrering__ N
 
 __Symantec signeringscertifikat kräver inte längre signerad Windows Phone 8-företagsportal för överföring__ Överföring av Symantec signeringscertifikat kommer inte längre att behöva en signerad företagsportalapp för Windows Phone 8. Certifikatet kan överföras fristående.
 
-###<a name="deprecations"></a>Föråldringar
+### <a name="deprecations"></a>Föråldringar
 
 __Stöd för Windows Phone 8-företagsportalen__ Stöd för Windows Phone 8-företagsportalen kommer att upphöra. Stöd för Windows Phone 8- och WinRT-plattformarna upphörde oktober 2016. Stöd för Windows Phone 8-företagsportalen upphörde också det oktober 2016.

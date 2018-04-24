@@ -1,25 +1,25 @@
 ---
-title: "Lägga till och tilldela MTD-appar i Microsoft Intune"
-titleSuffix: 
-description: "Använda Intune för att lägga till MTD-program, Microsoft Authenticator-app och iOS-konfigurationsprincip i Azure-portalen."
-keywords: 
+title: Lägga till och tilldela MTD-appar i Microsoft Intune
+titleSuffix: ''
+description: Använda Intune för att lägga till MTD-program, Microsoft Authenticator-app och iOS-konfigurationsprincip i Azure-portalen.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 07/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3fc71620fee1b1df907a4027c1c57cd91b53032e
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 08cebf84443e65ded5f7884218fbe17d722bddf2
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Lägg till och tilldela MTD-appar med Intune
 
@@ -75,7 +75,7 @@ Detaljerade anvisningar om hur du omsignerar iOS-apparna Lookout for Work finns 
 Aktivera Azure Active Directory-autentisering för iOS-användare genom att göra följande:
 
 1. Gå till [Azure-portalen](https://portal.azure.com), logga in med dina autentiseringsuppgifter och gå sedan till appsidan.
-  
+
 2. Lägg till **Lookout for Work iOS app** (iOS-appen Lookout for Work) som ett **internt klientprogram**.
 
 3. Ersätt **com.lookout.enterprise.yourcompanyname** med ID:t för kundprogrampaketet som du valde när du registrerade IPA.
@@ -133,13 +133,13 @@ Aktivera Azure Active Directory-autentisering för iOS-användare genom att gör
 
 -   Så här **laddar du ned** konfigurationsprincipen för iOS-appen: 
     -   Gå till [Skycures hanteringskonsol](https://aad.skycure.com) och logga in med dina administratörsautentiseringsuppgifter.
-    
+
     -   Gå till **Inställningar** &gt; **Integrering med enhetshantering** &gt; **Val av EMM-integrering**, välj **Microsoft Intune** och spara sedan ditt val.
-    
+
     -   Klicka på länken **Integrering av installationsfiler** och spara den genererade \*ZIP-filen. ZIP-filen innehåller filen **skycure\_configuration.plist**, som används för att skapa iOS-appens konfigurationsprincip i Intune.
-    
+
     -   Se anvisningarna för [användning av Microsoft Intune-appkonfigurationsprinciper för iOS](app-configuration-policies-use-ios.md) för att lägga till Skycure-konfigurationsprincipen för iOS-appar.
-    
+
     - I **steg 8** använder du alternativet **Ange XML-data**, kopierar innehållet från filen **skycure_configuration.plist** och klistrar in det i konfigurationsprincipen.
 
 Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
@@ -151,7 +151,6 @@ Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
     <key>UserEmail</key>
     <string>{{userprincipalname}}</string>
 </dict>
-
 ```
 ### <a name="for-check-point-sandblast-mobile"></a>För Check Point SandBlast Mobile
 
@@ -160,7 +159,6 @@ Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
 
 ```
 <dict><key>MDM</key><string>INTUNE</string></dict>
-
 ```
 
 ### <a name="for-zimperium"></a>För Zimperium
@@ -179,7 +177,6 @@ Du kan också kopiera innehållet i **skycure_configuration.plist** härifrån:
 <key>udidlast4digits</key>
 <string>{{udidlast4digits}}</string>
 </dict>
-
 ```
 
 ## <a name="to-assign-apps-all-mtd-partners"></a>Så här tilldelar du appar (alla MTD partner)

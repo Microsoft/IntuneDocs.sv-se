@@ -1,28 +1,28 @@
 ---
-title: "Fjärrlåsning och lösenordsåterställning"
-description: "Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning."
-keywords: 
+title: Fjärrlåsning och lösenordsåterställning
+description: Intune tillhandahåller funktioner för både fjärrlåsning och lösenordsåterställning.
+keywords: ''
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
 ms.date: 03/06/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 970f8c81-7c7f-4789-9ed4-2133d50b9db6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.custom: intune-classic
-ms.openlocfilehash: 0fb7014392655eef44f94cf095717616732ebfd0
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: fc1cad418904de335b434a3726e2772d0558b303
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-protect-your-devices-with-remote-lock-and-passcode-reset"></a>Skydda dina enheter med fjärrlåsning och lösenordsåterställning
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Microsoft Intune tillhandahåller både funktioner för fjärrlåsning och lösenordsåterställning.
 
@@ -41,7 +41,7 @@ Följande tabell visar hur fjärrlåsning fungerar på olika mobilplattformar.
 |Windows 10 Desktop|Stöds inte|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1 och Windows RT|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
-|Windows 8,1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
+|Windows 8.1|Stöds om enhetens aktuella användare är samma användare som registrerat enheten.|
 
 Fjärrlås stöds inte för Windows-datorer som registrerats i Intune-programklienten.
 
@@ -68,7 +68,7 @@ Om användare glömmer ett lösenord kan du hjälpa dem genom att ta bort lösen
 |Windows 10 Mobil|Stöd för Windows 10 Creator-versionen och senare mobila enheter som är Azure AD-anslutna.|
 |Windows Phone 8 och Windows Phone 8.1|Stöds|
 |Windows RT 8.1|Stöds inte|
-|Windows 8,1|Stöds inte|
+|Windows 8.1|Stöds inte|
 |Windows 10 desktop|Stöds inte|
 
 Lösenordsåterställning stöds inte för Windows-datorer som registrerats i Intune-programklienten.

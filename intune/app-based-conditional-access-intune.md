@@ -1,28 +1,28 @@
 ---
-title: "Appbaserad villkorlig åtkomst med Intune"
-description: "Läs om hur appbaserad villkorlig åtkomst fungerar med Intune."
-keywords: 
+title: Appbaserad villkorlig åtkomst med Intune
+description: Läs om hur appbaserad villkorlig åtkomst fungerar med Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 604eb86e6ae712bac360ecf45dd8f20e611bc52a
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 35d7be91201f8cf4fc3016363770b65bcea9ed72
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 [Intunes appskyddsprinciper](app-protection-policy.md) hjälper dig att skydda företagets data på enheter som är registrerade i Intune. Du kan även använda appskyddsprinciper på medarbetarnas enheter som inte har registrerats för hantering i Intune. Även om ditt företag inte hanterar enheten i det här fallet, måste du fortfarande se till att företagets data och resurser är skyddade.
 
@@ -56,29 +56,29 @@ I det här exemplet har administratören tillämpat appskyddsprinciper på Outlo
 
 ![Flödesdiagram över processen för appbaserad villkorlig åtkomst](./media/ca-intune-common-ways-3.png)
 
-1.  Användaren försöker autentisera till Azure AD från Outlook-appen.
+1. Användaren försöker autentisera till Azure AD från Outlook-appen.
 
-2.  Användaren omdirigeras till appbutiken för att installera en koordinatorapp vid försök att autentisera för första gången. Koordinatorappen kan antingen vara Microsoft Authenticator för iOS eller Microsofts företagsportal för Android-enheter.
+2. Användaren omdirigeras till appbutiken för att installera en koordinatorapp vid försök att autentisera för första gången. Koordinatorappen kan antingen vara Microsoft Authenticator för iOS eller Microsofts företagsportal för Android-enheter.
 
- Om användaren försöker använda den ursprungliga e-postappen kommer en omdirigering ske till appbutiken där Outlook-appen kan installeras.
+   Om användaren försöker använda den ursprungliga e-postappen kommer en omdirigering ske till appbutiken där Outlook-appen kan installeras.
 
-3.  Koordinatorappen installeras på enheten.
+3. Koordinatorappen installeras på enheten.
 
-4.  Koordinatorappen startar Azure AD-registreringen som skapar en enhetspost i Azure AD. Detta är inte samma som registreringen vid hantering av mobilenheter (MDM), men den här posten är nödvändig för att principerna för villkorlig åtkomst ska kunna tillämpas på enheten.
+4. Koordinatorappen startar Azure AD-registreringen som skapar en enhetspost i Azure AD. Detta är inte samma som registreringen vid hantering av mobilenheter (MDM), men den här posten är nödvändig för att principerna för villkorlig åtkomst ska kunna tillämpas på enheten.
 
-5.  Koordinatorappen verifierar appens identitet. Det finns ett säkerhetslager för att koordinatorappen ska kunna verifiera om appen är godkänd att användas av användaren.
+5. Koordinatorappen verifierar appens identitet. Det finns ett säkerhetslager för att koordinatorappen ska kunna verifiera om appen är godkänd att användas av användaren.
 
-6.  Koordinatorappen skickar appens klient-ID till Azure AD som en del av användarens autentiseringsprocess, för att kontrollera om den finns i listan med godkända principer.
+6. Koordinatorappen skickar appens klient-ID till Azure AD som en del av användarens autentiseringsprocess, för att kontrollera om den finns i listan med godkända principer.
 
-7.  Azure AD tillåter att användaren autentiserar och använder appen baserat på listan med godkända principer. Om appen inte finns med i listan nekar Azure AD åtkomst till appen.
+7. Azure AD tillåter att användaren autentiserar och använder appen baserat på listan med godkända principer. Om appen inte finns med i listan nekar Azure AD åtkomst till appen.
 
-8.  Outlook-appen kommunicerar med Outlooks molntjänst för att initiera kommunikation med Exchange Online.
+8. Outlook-appen kommunicerar med Outlooks molntjänst för att initiera kommunikation med Exchange Online.
 
-9.  Outlooks molntjänst kommunicerar med Azure AD för att hämta en åtkomsttoken för Exchange Online-tjänsten åt användaren.
+9. Outlooks molntjänst kommunicerar med Azure AD för att hämta en åtkomsttoken för Exchange Online-tjänsten åt användaren.
 
-10.  Outlook-appen kommunicerar med Exchange Online för att hämta användarens e-post i företaget.
+10. Outlook-appen kommunicerar med Exchange Online för att hämta användarens e-post i företaget.
 
-11.  Företagets e-post skickas till användarens postlåda.
+11. Företagets e-post skickas till användarens postlåda.
 
 ## <a name="next-steps"></a>Nästa steg
 [Skapa en appbaserad princip för villkorlig åtkomst](app-based-conditional-access-intune-create.md)

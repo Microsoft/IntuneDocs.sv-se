@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8f19318256dc4480207097d2f4ab393b799e207a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: b39f7cac8c09813eb9db94e761ec6fa6ab53c7a0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-lookout-device-compliance-policy-in-intune"></a>Skapa en efterlevnadsprincip för Lookout-enheten i Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Med Intune med Lookout Mobile Threat Defense kan du identifiera hot på mobila enheter och utvärdera risken på dessa enheter. Du kan skapa en regel för efterlevnadsprincip som bedömer risken för att avgöra om enheten är kompatibel. Du kan sedan använda den villkorliga åtkomstprincipen för att blockera åtkomst till tjänster utifrån enhetens efterlevnad.
 
@@ -36,13 +36,13 @@ Krav för efterlevnadsprincip med Lookout Mobile Threat Defense:
 Som en del av installationen för Lookout Mobile Threat Defense har du skapat en princip i [Lookout-konsolen](https://aad.lookout.com) som klassificerar olika hot som hög, medel och låg. I efterlevnadsprincipen för Intune ställer du in den maximalt tillåtna hotnivån.
 
 1. I [Intune-administratörskonsolen](https://manage.microsoft.com) går du till sidan **Efterlevnadsprinciper**. Du kan antingen använda en befintlig efterlevnadsprincip eller skapa en ny. Gå till **Enhetens hälsotillstånd** och aktivera **Enhetsskydd**.
-  ![skärmbild som visar regeln för skydd mot enhetshot i ](../media/mtp/mtp-compliance-policy-rule.png)
+   ![skärmbild som visar regeln för skydd mot enhetshot i ](../media/mtp/mtp-compliance-policy-rule.png)
 
 2. Välj **Högsta tillåtna hotnivå**:
-  * **Ingen (skyddad)**: Det här är det säkraste alternativet.  Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser.  Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.  
-  * **Låg**: Enheten är kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
-  * **Medel**: Enheten är kompatibel om hoten som hittas på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
-  * **Hög**: Det här alternativet är minst säkert. Detta tillåter alla hotnivåer och använder Lookout mobilt skydd endast för rapportering.
+   * **Ingen (skyddad)**: Det här är det säkraste alternativet.  Enheten får inte ha några förekommande hot och ska ha tillgång till företagsresurser.  Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.  
+   * **Låg**: Enheten är kompatibel om det bara finns hot på den låga nivån på enheten. Om hot på en högre nivå identifieras får enheten statusen icke-kompatibel.
+   * **Medel**: Enheten är kompatibel om hoten som hittas på enheten är på en låg eller medelhög nivå. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
+   * **Hög**: Det här alternativet är minst säkert. Detta tillåter alla hotnivåer och använder Lookout mobilt skydd endast för rapportering.
 
 ![skärmbild som visar alternativet för hotnivåer för regeln för skydd mot enhetshot](../media/mtp/mtp-compliance-policy-setting.png)
 

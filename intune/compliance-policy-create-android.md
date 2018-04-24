@@ -1,30 +1,30 @@
 ---
 title: Skapa en Android-enhetsefterlevnadsprincip i Microsoft Intune
-titleSuffix: 
-description: "Skapa en enhetsefterlevnadsprincip i Microsoft Intune för Android-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel."
-keywords: 
+titleSuffix: ''
+description: Skapa en enhetsefterlevnadsprincip i Microsoft Intune för Android-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2539ff1703809f5f89183a9d0cfd448f2e57fd64
-ms.sourcegitcommit: 54fc806036f84a8667cf8f74086358bccd30aa7d
+ms.openlocfilehash: 586672bf84be6e7bcd8d3b8618aab09088620eb1
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-device-compliance-policy-for-android-devices-in-intune"></a>Så här skapar du en efterlevnadsprincip för Android-enheter i Intune
 
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 En Intune-enhetsefterlevnadsprincip för Android anger de regler och inställningar som Android-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar principer för enhetsefterlevnad för varje plattform i Intune Azure-portalen. Mer information om efterlevnadsprinciper och de förhandskrav du måste uppfylla innan du skapar en efterlevnadsprincip finns i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 

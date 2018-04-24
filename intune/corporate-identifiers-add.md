@@ -1,29 +1,29 @@
 ---
-title: "Lägg till företagsidentifierare i Intune"
+title: Lägg till företagsidentifierare i Intune
 titlesuffix: Microsoft Intune
-description: "Läs mer om hur du kan lägga till företagsidentifierare (registreringsmetod, IMEI- och serienummer) i Microsoft Intune."
-keywords: 
+description: Läs mer om hur du kan lägga till företagsidentifierare (registreringsmetod, IMEI- och serienummer) i Microsoft Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d014ae02f3db2ea9175e74f2a867bd12f1d4f22
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d9557c5f962390a9893109bc6f5175b1e709f7cd
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Som Intune-administratör kan du förfina hanteringen och identifieringen genom att identifiera enheter som företagsägda. Intune kan utföra ytterligare hanteringsuppgifter och samla in ytterligare information, t.ex. telefonnummer och en inventering av appar från företagsägda enheter. Du kan också konfigurera enhetsbegränsningar för att förhindra registrering av enheter som inte är företagsägda.
 
@@ -72,7 +72,7 @@ CSV-filen när den visas i en textredigerare:
 
 1. I [Intune på Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** > **Id:n för företagsenheter** och klickar på **Lägg till**.
 
- ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
+   ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
 
 2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**. Du kan ange om tidigare importerade siffror ska **skriva över information för befintliga identifierare**.
 
@@ -97,7 +97,7 @@ Enheters egenskaper visar **Ägarskap** för varje enhetspost i Intune. Som admi
 
 **Ändra enhetsägande:**
 1. I [Intune i Azure-portalen](https://portal.azure.com) går du till **Enheter** och väljer enheten.
-3. Välj **Egenskaper**.
-4. Ange **Äganderätt till enhet** som **Personlig** eller **Företagsägd**.
+2. Välj **Egenskaper**.
+3. Ange **Äganderätt till enhet** som **Personlig** eller **Företagsägd**.
 
-  ![Enhetsegenskaperna visar alternativ för Enhetskategori och Ägarskap för enhet](./media/device-properties.png)
+   ![Enhetsegenskaperna visar alternativ för Enhetskategori och Ägarskap för enhet](./media/device-properties.png)

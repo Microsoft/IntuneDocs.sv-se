@@ -1,43 +1,43 @@
 ---
 title: Wi-Fi med PSK
-description: "Använd Anpassad konfiguration för att skapa en Wi-Fi-profil med en i förväg delad nyckel."
-keywords: 
+description: Använd Anpassad konfiguration för att skapa en Wi-Fi-profil med en i förväg delad nyckel.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/25/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e977c7c7-e204-47a6-b851-7ad7673ceaab
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0e2dff26e6dcbe1db6a9cef58af10901178e432b
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: a023b6829b33c3b3bff94021ecd3c90d8b41f30f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-policy-to-create-a-wi-fi-profile-with-a-pre-shared-key"></a>Använda en anpassad princip för att skapa en Wi-Fi-profil med en i förväg delad nyckel
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Så här använder du Intunes **Anpassad konfiguration** för att skapa en Wi-Fi-profil med en i förväg delad nyckel. Det här avsnittet innehåller även ett exempel på hur du skapar en EAP-baserad Wi-Fi-profil.
 
 > [!NOTE]
--   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
-- För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
--   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
--  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
+> -   Det kan vara lättare att kopiera koden från en dator som ansluter till det nätverket, enligt beskrivningen nedan.
+> - För Android kan du även använda den här [PSK-generatorn för Android](http://johnathonb.com/2015/05/intune-android-pre-shared-key-generator/) som tillhandahålls av Johnathon Biersack.
+> -   Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
+> -  För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda den här [PSK-generatorn för mobil konfiguration för iOS](http://johnathonb.com/2015/05/intune-ios-psk-mobile-config-generator/) som tillhandahålls av Johnathon Biersack.
 
 
-1.  Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
+1. Om du vill skapa en Wi-Fi-profil med en i förväg delad nyckel för Android eller Windows, eller en EAP-baserad Wi-Fi-profil, väljer du **Anpassad konfiguration** för den enhetsplattformen när du skapar en princip, i stället för en Wi-Fi-profil.
 
-2.  Ange ett namn och en beskrivning.
-3.  Lägg till en ny OMA-URI-inställning:
+2. Ange ett namn och en beskrivning.
+3. Lägg till en ny OMA-URI-inställning:
 
    a.   Ange ett namn på den här inställningen för Wi-Fi-nätverk.
 
@@ -47,15 +47,15 @@ Så här använder du Intunes **Anpassad konfiguration** för att skapa en Wi-Fi
 
    d.   **OMA-URI**:
 
-    - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-Se till att ta med punkttecknet i början.
+   > [!NOTE]
+   > Se till att ta med punkttecknet i början.
 
-    SSID är det SSID som du skapar principen för. Till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
+   SSID är det SSID som du skapar principen för. Till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`
 
-  e. **Värdefält** är där du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
+   e. **Värdefält** är där du klistrar in XML-koden. Här är ett exempel. Varje värde ska anpassas till nätverksinställningarna. Se avsnittet med kommentarer om koden för tips.
 4. Välj **OK**, spara och distribuera sedan principen.
 
     > [!NOTE]
@@ -202,8 +202,8 @@ Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning:
 1. På en dator som är ansluten till eller nyligen har anslutit till det trådlösa nätverket öppnar du följande mapp: C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}.
 
     Det är bäst att använda en dator som inte har anslutit till många trådlösa nätverk, eftersom du måste söka igenom alla profiler för att hitta rätt.
-3.     Sök igenom XML-filerna för att hitta den med rätt namn.
-4.     När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
+2. Sök igenom XML-filerna för att hitta den med rätt namn.
+3. När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet Data på sidan OMA-URI-inställningar.
 
 ## <a name="deploy-the-policy"></a>Distribuera principen
 

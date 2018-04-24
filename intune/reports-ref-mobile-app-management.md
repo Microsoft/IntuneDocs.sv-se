@@ -15,11 +15,11 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: eb9f63199063db34361c7d463b8cef37bb8bfa1f
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
+ms.openlocfilehash: 317e884cd54b57f4892c4e101e206089ef335f0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referens för MAM-entiteter (hantering av mobilappshantering)
 
@@ -51,23 +51,24 @@ Entiteten **MamApplication** innehåller en lista över verksamhetsspecifika app
 
 Entiteten **MamApplicationInstance** innehåller en lista över appar som hanteras via mobilappshantering (MAM) som enskilda instanser per användare och enhet. Alla användare och enheter i listan är skyddade, vilket betyder att det finns minst en princip för mobilappshantering kopplad till dem.
 
-| Egenskap | Description | Exempel |
-|---------|------------|--------|
-| ApplicationInstanceKey |Unikt id för MAM-appinstansen i informationslagret – surrogatnyckel. |123 |
-| UserId |Användar-id för den användare som har installerat den här MAM-appen. |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationInstanceId |Unikt id för MAM-appinstansen, liknar ApplicationInstanceKey,men id:t är en naturlig nyckel. |b66bc706-ffff-7437-0340-032819502773 |
-| ApplicationId |Program-id för MAM-appen |com.microsoft.groupies-daily.<IOS> |
-| ApplicationVersion |Programversion för MAM-appen. |2 |
-| CreatedDate |Datum då MAM-appinstansposten skapades. Värdet kan vara null. |2016-11-23 12:00:00 |
-| Plattform |Plattform för den enhet där MAM-appen är installerad. |2 |
-| PlatformVersion |Plattformsversion för enheten där MAM-appen är installerad. |2.2 |
-| SdkVersion |SDK-version där MAM-appen är paketerad. |3.2 |
-| DeviceId |Enhets-id för enheten där MAM-appen är installerad. |b66bc706-ffff-7437-0340-032819502773 |
-| DeviceName |Enhetsnamn för enheten där MAM-appen är installerad. |”MyDevice” |
-| IsDeleted |Visar huruvida posten för MAM-appinstansen har uppdaterats. <br>Sant: MAM-appinstansen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appinstansen. |Sant/falskt |
-| StartDateInclusiveUtc |Datum och tid i UTC när MAM-appinstansen skapades i informationslagret. |2016-11-23 12:00:00 |
-| DeletedDateUtc |Datum och tid i UTC när IsDeleted ändrades till True. |2016-11-23 12:00:00 |
-| RowLastModifiedDateTimeUtc |Datum och tid i UTC för senaste ändring av MAM-appinstansen i informationslagret. |2016-11-23 12:00:00 |
+
+|          Egenskap          |                                                                                                  Description                                                                                                  |               Exempel                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Unikt id för MAM-appinstansen i informationslagret – surrogatnyckel.                                                                |                 123                  |
+|           UserId           |                                                                              Användar-id för den användare som har installerat den här MAM-appen.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Unikt id för MAM-appinstansen, liknar ApplicationInstanceKey,men id:t är en naturlig nyckel.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|       ApplicationId        |                                                                                        Program-id för MAM-appen                                                                                         |  com.microsoft.groupies-daily.<IOS>  |
+|     ApplicationVersion     |                                                                                     Programversion för MAM-appen.                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Datum då MAM-appinstansposten skapades. Värdet kan vara null.                                                                 |        2016-11-23 12:00:00        |
+|          Plattform          |                                                                          Plattform för den enhet där MAM-appen är installerad.                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Plattformsversion för enheten där MAM-appen är installerad.                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            SDK-version där MAM-appen är paketerad.                                                                            |                 3.2                  |
+|          DeviceId          |                                                                          Enhets-id för enheten där MAM-appen är installerad.                                                                          | b66bc706-ffff-7437-0340-032819502773 |
+|         DeviceName         |                                                                         Enhetsnamn för enheten där MAM-appen är installerad.                                                                         |              ”MyDevice”              |
+|         IsDeleted          | Visar huruvida posten för MAM-appinstansen har uppdaterats. <br>Sant: MAM-appinstansen innehåller en ny post med uppdaterade fält i den här tabellen. <br>Falskt: den senaste posten för den här MAM-appinstansen. |              Sant/falskt              |
+|   StartDateInclusiveUtc    |                                                              Datum och tid i UTC när MAM-appinstansen skapades i informationslagret.                                                               |        2016-11-23 12:00:00        |
+|       DeletedDateUtc       |                                                                             Datum och tid i UTC när IsDeleted ändrades till True.                                                                              |        2016-11-23 12:00:00        |
+| RowLastModifiedDateTimeUtc |                                                           Datum och tid i UTC för senaste ändring av MAM-appinstansen i informationslagret.                                                            |        2016-11-23 12:00:00        |
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -112,20 +113,23 @@ Entiteten **MamEffectivePolicy** innehåller en lista över gällande principer 
 
 Entiteten **MamGlobalApplication** innehåller en lista över Store-appar som hanteras via mobilappshantering (MAM) utan registrering i företaget.
 
-| Egenskap | Description | Exempel |
-|---------|------------|--------|
-| ApplicationKey |Unikt id för Store-appen i informationslagret, kallas även surrogatnyckeln. |123 |
-| ApplicationId |Store-appens unika id. Id:t liknar ApplicationKey men är en naturlig nyckel. |com.microsoft.skydrive.<ios> |
-| ApplicationName |Namn på globalt mobilappshanteringsprogram. |Skydrive |
-| RowLastModifiedDateTimeUtc |Datum och tid i UTC för senaste ändring av globalt mobilappshanteringsprogram i informationslagret. |2016-11-23 12:00:00 |
+
+|          Egenskap          |                                               Description                                               |           Exempel            |
+|----------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
+|       ApplicationKey       |          Unikt id för Store-appen i informationslagret, kallas även surrogatnyckeln.          |             123              |
+|       ApplicationId        | Store-appens unika id. Id:t liknar ApplicationKey men är en naturlig nyckel.  | com.microsoft.skydrive.<ios> |
+|      ApplicationName       |                                      Namn på globalt mobilappshanteringsprogram.                                       |           Skydrive           |
+| RowLastModifiedDateTimeUtc | Datum och tid i UTC för senaste ändring av globalt mobilappshanteringsprogram i informationslagret. |    2016-11-23 12:00:00    |
 
 ## <a name="mamplatform"></a>MamPlatform
 
 Entiteten **MamPlatform** innehåller en lista över namn på plattformar och typer där en mobilappshanterad app (MAM) har installerats.
 
-| Egenskap | Description | Exempel |
-|---------|------------|--------|
-| PlatformKey |Unikt id för plattformen i informationslagret – surrogatnyckel. |123 |
-| Plattform |Unikt id för plattformen, liknar PlatformKey men är en naturlig nyckel. |123 |
-| PlatformName |Namn på plattform |Inte tillgängligt <br>Inga <br>Windows <br>iOS <br>Android. |
-| RowLastModifiedDateTimeUtc |Datum och tid i UTC för senaste ändring av plattformen i informationslagret. |2016-11-23 12:00:00 |
+
+|          Egenskap          |                                    Description                                    |                         Exempel                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Unikt id för plattformen i informationslagret – surrogatnyckel.      |                           123                           |
+|          Plattform          | Unikt id för plattformen, liknar PlatformKey men är en naturlig nyckel. |                           123                           |
+|        PlatformName        |                                   Namn på plattform                                   | Inte tillgängligt <br>Inga <br>Windows <br>iOS <br>Android. |
+| RowLastModifiedDateTimeUtc | Datum och tid i UTC för senaste ändring av plattformen i informationslagret.  |                 2016-11-23 12:00:00                  |
+

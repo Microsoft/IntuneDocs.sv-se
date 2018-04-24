@@ -1,25 +1,25 @@
 ---
-title: "Integrera Jamf Pro med Microsoft Intune för kompatibilitet"
-titlesuffix: 
-description: "Använd Microsoft Intunes efterlevnadsprinciper med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter."
-keywords: 
+title: Integrera Jamf Pro med Microsoft Intune för kompatibilitet
+titlesuffix: ''
+description: Använd Microsoft Intunes efterlevnadsprinciper med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 01/04/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4b040c6aa7001e8ebdd7c05571276428c7ef9bd
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: cdeb3a21af2b4cf020d3e5029eeb5b0bc31db062
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrera Jamf Pro med Intune för kompatibilitet
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/08/2018
 
 Om din organisation använder [Jamf Pro](https://www.jamf.com) för att hantera dina slutanvändares Mac-datorer, kan du använda Microsoft Intunes efterlevnadsprinciper med villkorlig åtkomst i Azure Active Directory för att se till att enheter inom din organisation är kompatibla.
 
-## <a name="prerequisites"></a>Nödvändiga komponenter
+## <a name="prerequisites"></a>Krav
 
 Du behöver följande för att konfigurera villkorlig åtkomst med Jamf Pro:
 
@@ -56,20 +56,20 @@ Du kan ansluta Intune till Jamf Pro genom att:
 6. Klicka på **skapa program**.
 7. Spara det nyligen skapade **Program-ID:t**, öppna sedan **Inställningar** och gå till **API-åtkomst** > **Nycklar** för att skapa en ny programnyckel. Ange en **beskrivning** och hur lång tid som ska passera innan den **Förfaller**. Spara sedan programnyckeln.
 
-  > [!IMPORTANT]
-  > Programnyckeln visas bara en gång under den här processen. Glöm inte att spara den någonstans där du enkelt kan hämta den.
+   > [!IMPORTANT]
+   > Programnyckeln visas bara en gång under den här processen. Glöm inte att spara den någonstans där du enkelt kan hämta den.
 
 8. Öppna **Inställningar** och gå till **API-åtkomst** > **Nödvändiga behörigheter** och ta bort alla behörigheter.
 
-  > [!NOTE]
-  > Lägg till en ny nödvändig behörighet. Programmet kan endast fungera korrekt om det har den enda nödvändiga behörigheten.
+   > [!NOTE]
+   > Lägg till en ny nödvändig behörighet. Programmet kan endast fungera korrekt om det har den enda nödvändiga behörigheten.
 
-9.  Välj **Microsoft Intune API** och klicka på **välj**.
+9. Välj **Microsoft Intune API** och klicka på **välj**.
 10. Välj **skicka enhetsattribut till Microsoft Intune** och klicka på **välj**.
 11. Klicka på knappen **bevilja behörighet** när du har sparat de nödvändiga behörigheterna för programmet.
 
-  > [!NOTE]
-  > Om programnyckeln upphör att gälla, måste du skapa en ny programnyckel i Microsoft Azure och uppdatera data för villkorlig åtkomst i Jamf Pro. Azure låter dig ha både den gamla och nya nyckeln aktiv för att förhindra tjänsteavbrott.
+    > [!NOTE]
+    > Om programnyckeln upphör att gälla, måste du skapa en ny programnyckel i Microsoft Azure och uppdatera data för villkorlig åtkomst i Jamf Pro. Azure låter dig ha både den gamla och nya nyckeln aktiv för att förhindra tjänsteavbrott.
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Låt Intune integreras med Jamf Pro
 

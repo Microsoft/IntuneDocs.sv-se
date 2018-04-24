@@ -14,15 +14,15 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: de63fe9476e4fa0f3f85343659538856f2f841d8
-ms.sourcegitcommit: 820f950d1fc80b1eb5db1b0cf77f44d92a969951
+ms.openlocfilehash: 593907c4e57abce1a05d22d9ad8a07a044579285
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Använd Microsoft Intunes programhanteringsverktyg för Android om du vill ändra funktionssättet för interna Android-appar genom att begränsa funktionerna i appen utan att ändra koden i själva appen.
 
@@ -62,21 +62,21 @@ Kom ihåg vilken mapp du installerade verktyget i. Standardplatsen är: C:\Progr
 
 ## <a name="run-the-app-wrapping-tool"></a>Kör App-Wrapping-verktyget
 
-1.  Öppna ett PowerShell-fönster på den Windows-dator där du installerade programhanteringsverktyget.
+1. Öppna ett PowerShell-fönster på den Windows-dator där du installerade programhanteringsverktyget.
 
-2.  Från mappen där du installerade verktyget importerar du PowerShell-modulen för programhanteringsverktyget:
+2. Från mappen där du installerade verktyget importerar du PowerShell-modulen för programhanteringsverktyget:
 
-    ```
-    Import-Module .\IntuneAppWrappingTool.psm1
-    ```
+   ```
+   Import-Module .\IntuneAppWrappingTool.psm1
+   ```
 
-3.  Kör verktyget genom att använda kommandot **invoke-AppWrappingTool**, med följande användningssyntax:
-    ```
-    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
-    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
-    ```
+3. Kör verktyget genom att använda kommandot **invoke-AppWrappingTool**, med följande användningssyntax:
+   ```
+   Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
+   -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
+   ```
 
- I följande tabell beskrivs egenskaperna för kommandot **invoke-AppWrappingTool**:
+   I följande tabell beskrivs egenskaperna för kommandot **invoke-AppWrappingTool**:
 
 |Egenskap|Information|Exempel|
 |-------------|--------------------|---------|
@@ -160,17 +160,17 @@ De här anvisningarna är specifika för alla Android- och Xamarin-appar som vil
 
 1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
 
-> [!NOTE] 
+> [!NOTE]
 > Termen "klient-id" som är kopplad till din app är samma som termen "program-id" från Azure Portal som är kopplat till din app. 
-* Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
+> * Du behöver "Vanlig ADAL-konfiguration" nummer 2 för att aktivera SSO.
 
 2. Aktivera standardregistrering genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
-> [!NOTE] 
-> Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
+   > [!NOTE] 
+   > Det får inte finnas några fler MAM-WE-integreringar i appen. Det kan uppstå konflikter om det finns några andra försök att anropa MAMEnrollmentManager API:er.
 
 3. Aktivera MAM-principen som krävs genom att ange följande värde i manifestet: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
-> [!NOTE] 
-> Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
+   > [!NOTE] 
+   > Det gör att användaren måste ladda ned företagsportalen till enheten och slutföra flödet för standardregistrering före användning.
 
 ### <a name="see-also"></a>Se även
 - [Förbereda appar för hantering av mobilprogram med Microsoft Intune](apps-prepare-mobile-application-management.md)

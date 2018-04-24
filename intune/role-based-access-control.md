@@ -14,11 +14,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: edf17d98bb733f7567a615eec856fb7122ba251b
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 11b0e1d80740366a638059162d10e3ebcfe9e8a8
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
@@ -26,7 +26,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
 - **Rolldefinition**: namnet på rollen, de resurser som den hanterar och behörigheterna för varje resurs.
 - **Medlemmar**: de användargrupper som har behörigheten.
-- **Omfång**: användar- eller enhetsgrupper som medlemmarna kan hantera.
+- **Omfång**: De användar- eller enhetsgrupper som medlemmar kan rikta app- eller principdistribution till, eller utföra fjärråtgärder för.
 - **Tilldelning** – När definitionen, medlemmar och omfång har konfigurerats är rollen tilldelad.
 
 ![Intune RBAC-exempel](./media/intune-rbac-1.PNG)

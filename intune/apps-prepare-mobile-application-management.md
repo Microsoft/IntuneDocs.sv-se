@@ -1,29 +1,29 @@
 ---
-title: "Förbered branschspecifika appar för appskyddsprinciper"
+title: Förbered branschspecifika appar för appskyddsprinciper
 titlesuffix: Microsoft Intune
-description: "Använd programhanteringsverktyget och App SDK för att göra så att dina verksamhetsspecifika appar kan använda appskyddsprinciper i Microsoft Intune."
-keywords: 
+description: Använd programhanteringsverktyget och App SDK för att göra så att dina verksamhetsspecifika appar kan använda appskyddsprinciper i Microsoft Intune.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 76330c926ecac9ae8b071837465d800f48f925fb
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: d61ba21ba465037fbf2ef4e1c7423f6649fc810f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
-[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 Du kan använda appskyddsprinciper i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
@@ -70,8 +70,8 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ja – Använd [Xamarin-komponenten för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
-|**Android**| Ja – Använd [Xamarin-komponenten för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
+|**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
+|**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
 
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.
@@ -79,30 +79,30 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 > [!NOTE]
 > Apphanteringsverktyget kan användas med den fristående versionen av Intune eller Intune med Configuration Manager.
 
-|Funktion|App SDK|Apphanteringsverktyg|
-|-----------|---------------------|-----------|
-|Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare|X|X|
-|Förhindra Android-, iTunes- och iCloud-säkerhetskopieringar|X|X|
-|Tillåt att appen överför information till andra appar|X|X|
-|Tillåt att appen hämtar data från andra appar|X|X|
-|Begränsa klipp ut, kopiera och klistra in med andra appar|X|X|
-|Kräv enkel PIN-kod för åtkomst|X|X|
-|Ersätt appens inbyggda PIN-kod med PIN-koden för Intune|X||
-|Ange antal försök innan PIN-koden återställs|X|X|
-|Tillåt fingeravtryck istället för PIN |X|X|
-|Kräv företagets autentiseringsuppgifter för åtkomst|X|X|
-|Hindra hanterade appar från att köras på jailbrokade eller rotade enheter|X|X|
-|Kryptera appdata|X|X|
-|Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter|X|X|
-|Ange offlinerespitperiod|X|X|
-|Blockera skärmdump (endast Android)|X|X|
-|Stöd för MAM utan enhetsregistrering|X|X|
-|Fullständig rensning av enheten|X|X|
-|Selektiv rensning <br></br>**Obs!** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
-|Förhindra ”Spara som” |X||
-|Konfiguration av målprogram |X||
-|Stöd för flera identiteter|X||
-|Anpassningsbar stil |X|||
+|                                                         Funktion                                                          | App SDK | Apphanteringsverktyg |
+|--------------------------------------------------------------------------------------------------------------------------|---------|-------------------|
+|                              Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare                              |    X    |         X         |
+|                                        Förhindra Android-, iTunes- och iCloud-säkerhetskopieringar                                        |    X    |         X         |
+|                                         Tillåt att appen överför information till andra appar                                         |    X    |         X         |
+|                                        Tillåt att appen hämtar data från andra appar                                         |    X    |         X         |
+|                                      Begränsa klipp ut, kopiera och klistra in med andra appar                                       |    X    |         X         |
+|                                              Kräv enkel PIN-kod för åtkomst                                               |    X    |         X         |
+|                                         Ersätt appens inbyggda PIN-kod med PIN-koden för Intune                                         |    X    |                   |
+|                                     Ange antal försök innan PIN-koden återställs                                      |    X    |         X         |
+|                                             Tillåt fingeravtryck istället för PIN                                             |    X    |         X         |
+|                                         Kräv företagets autentiseringsuppgifter för åtkomst                                         |    X    |         X         |
+|                             Hindra hanterade appar från att köras på jailbrokade eller rotade enheter                              |    X    |         X         |
+|                                                     Kryptera appdata                                                     |    X    |         X         |
+|                           Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter                            |    X    |         X         |
+|                                             Ange offlinerespitperiod                                             |    X    |         X         |
+|                                           Blockera skärmdump (endast Android)                                            |    X    |         X         |
+|                                        Stöd för MAM utan enhetsregistrering                                         |    X    |         X         |
+|                                                        Fullständig rensning av enheten                                                         |    X    |         X         |
+| Selektiv rensning <br></br><strong>Obs!</strong> När hanteringsprofilen tas bort i iOS tas även appen bort. |    X    |                   |
+|                                                    Förhindra ”Spara som”                                                     |    X    |                   |
+|                                            Konfiguration av målprogram                                            |    X    |                   |
+|                                                Stöd för flera identiteter                                                |    X    |                   |
+|                                                    Anpassningsbar stil                                                    |    X    |                   |
 
 ## <a name="next-steps"></a>Nästa steg
 

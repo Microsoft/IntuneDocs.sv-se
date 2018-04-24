@@ -1,42 +1,43 @@
 ---
 title: Synkronisera iOS-enheten manuellt | Microsoft Docs
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/11/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9c9144fbb20842a9ac8148827b85ac49d23a3d6d
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: a896e4a86cbeaacc07bdb4a32606a67b0049e3e1
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sync-your-ios-device-manually"></a>Synkronisera iOS-enheten manuellt
 
-I vissa fall kan en app ta mycket lång tid på sig att hämta något från Företagsportalen. Om det händer kan du prova att manuellt synkronisera din enhet. Det innebär att du ber din enhet att försöka att hämta information som den kanske kämpar för att ladda ned igen.
+I vissa fall kan en app ta mycket lång tid på sig att hämta något från Företagsportalen. När detta inträffar kan du försöka synkronisera enheten manuellt. Ett försök görs att hämta den information som enheten inte kunde ladda ned.
 
 1. Öppna företagsportalappen.
 
-2. I avsnittet **Mina enheter** väljer du den enhet som du använder för närvarande. Det här är enhetspanelen längst till vänster som även har en kryssmarkering.
+2. Tryck på **Enheter**. Om du har flera enheter visas en lista med enheterna. Välj den enhet som du använder för närvarande. Om du bara har en enhet kommer du direkt till enhetens informationsskärm.
 
-    ![Enhetens skärm med avsnittet Mina enheter](./media/ios-sync-1-comp-portal-apps.png)
+    ![Skärmbild av skärmen Enheter med två enheter. Den övre enheten har en text där det står ”Detta är den iPhone 6 Plus som du använder för närvarande”.](/intune-user-help/media/ios_sync_1_CP_after_1804.png)
 
-3. Tryck på knappen **Synkronisera** längst ned till höger på skärmen.
+3. Tryck på **Kontrollera inställningar** för att synkronisera enheten. En förloppsindikator visas på skärmen tills synkroniseringen är klar.
 
-    ![Enhetsinformation och knappen för att synkronisera](./media/ios-sync-2-sync-button.png)
+    ![Skärmbild av Enhetsinformation som visar enhetens senaste incheckningstid och länken Kontrollera inställningar.](/intune-user-help/media/ios_sync_2_CP_after_1804.png)  
 
-En förloppsindikator visas på skärmen och laddar tills synkroniseringen är färdig.
+   ![Skärmbild av Enhetsinformation som visar förloppsfältet när användaren har klickat på Kontrollera inställningar.](/intune-user-help/media/ios_sync_3_CP-after_1804.png)
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+

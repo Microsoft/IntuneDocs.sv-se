@@ -1,37 +1,37 @@
 ---
-title: "Installera och logga in i företagsportalappen | Microsoft Docs"
-description: 
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Installera och logga in i företagsportalappen | Microsoft Docs
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8dfe66b4-f585-4862-87fa-7dbb4487549c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d42c694bf4e7e960ba713760e8d8a5409dd0c0c0
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 071ed6ca2889788c607625478f4f9d3d20e19662
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installera och logga in i företagsportalappen
 
-Företagsportalen är en app som du installerar på din iOS-enhet för att få åtkomst till företags- eller skolappar, -e-post och -nätverk.  Innan du får åtkomst måste du installera företagsportalappen och sedan använda appen för att registrera enheten i Microsoft Intune. Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Företagsportalen är en app som du installerar på din iOS-enhet för att få åtkomst till företags- eller skolappar, -e-post och -nätverk. Innan du får åtkomst måste du installera företagsportalappen och sedan använda appen för att registrera enheten i Microsoft Intune. Mer information finns i [Vad händer när jag installerar företagsportalappen och registrerar enheten i Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 1.  Öppna **App Store** och sök efter **Intune-företagsportalen**.
 
-2.  Ladda ner appen **Microsoft Intune-företagsportal**.
+2.  Ladda ner appen för **Intune-företagsportalen**.
 
-    ![Ladda ner Intune-företagsportalappen](./media/ios-cpinstall-1-cpinstore.png)
+    ![Skärmbild som visar hur appen för Intune-företagsportalen ser ut i App Store.](./media/cp_iosredesign_after_1803_04.png)
 
 3.  Öppna företagsportalappen, ange din e-postadress och ditt lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 

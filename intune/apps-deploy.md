@@ -1,29 +1,29 @@
 ---
 title: Tilldela appar till grupper i Microsoft Intune
-titlesuffix: 
-description: "När du har lagt till en app i Microsoft Intune måste du tilldela den till grupper med användare eller enheter.”"
-keywords: 
+titlesuffix: ''
+description: När du har lagt till en app i Microsoft Intune måste du tilldela den till grupper med användare eller enheter.”
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eba329be463fbf0593638bd4cf41c404a17f9cc0
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: de95f5516298e8ade9e394fab8b05fc056651b0c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 När du har lagt till en app i Microsoft Intune kan du tilldela den till användare och enheter.
 
@@ -51,26 +51,26 @@ Appar kan tilldelas till enheter oavsett om de hanteras av Intune eller inte. An
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** på **Intune**-bladet.
-1. Välj **Appar** i avsnittet **Hantera** i arbetsbelastningen **Mobilappar**.
-2. I listan på appbladet klickar du på den app som du vill tilldela.
-3. På det appspecifika bladet **Översikt** väljer du **Tilldelningar** i avsnittet **Hantera**.
-4. Välj **Lägg till grupp** för att visa bladet **Lägg till grupp** som är relaterat till appen.
-5. För den specifika appen ska du också välja en av följande **tilldelningstyper** för appen:
-    - **Tillgänglig för registrerade enheter** – Användarna installerar appen från företagsportalappen eller webbplatsen.
-    - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Observera att typen **Android for Work-app** inte stöder det här alternativet. 
-    - **Obligatoriskt** – Appen installeras på enheter i valda grupper.
-    - **Avinstallera** – Appen avinstalleras från enheter i valda grupper.
+4. Välj **Appar** i avsnittet **Hantera** i arbetsbelastningen **Mobilappar**.
+5. I listan på appbladet klickar du på den app som du vill tilldela.
+6. På det appspecifika bladet **Översikt** väljer du **Tilldelningar** i avsnittet **Hantera**.
+7. Välj **Lägg till grupp** för att visa bladet **Lägg till grupp** som är relaterat till appen.
+8. För den specifika appen ska du också välja en av följande **tilldelningstyper** för appen:
+   - **Tillgänglig för registrerade enheter** – Användarna installerar appen från företagsportalappen eller webbplatsen.
+   - **Tillgänglig med eller utan registrering** – Tilldela den här appen till grupper av användare vars enheter inte har registrerats med Intune. Observera att typen **Android for Work-app** inte stöder det här alternativet. 
+   - **Obligatoriskt** – Appen installeras på enheter i valda grupper.
+   - **Avinstallera** – Appen avinstalleras från enheter i valda grupper.
 
-    > [!NOTE]
-    > **Endast för iOS-appar** – Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja det under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
+     > [!NOTE]
+     > **Endast för iOS-appar** – Om du har skapat en iOS VPN-profil som innehåller VPN-inställningar per app kan du välja det under **VPN**. VPN-anslutningen öppnas när appen körs. Mer information finns i [VPN-inställningar för iOS-enheter](vpn-settings-ios.md).
 
-6. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
-7. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.
-8. Klicka på **OK** på bladet **Tilldela** för att slutföra valet av inkluderade grupper.
-9. Klicka på **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
-10. Om du har valt att undanta grupper klickar du på **Välj** på bladet **Välj grupper**.
-11. Klicka på **OK** på bladet **Lägg till grupp**.
-12. Klicka på **Spara** på bladet **Tilldelningar** för att spara dina tilldelningar.
+9. Välj **Inkluderade grupper** för att välja vilka grupper av användare som ska påverkas av den här apptilldelningen.
+10. Klicka på **Välj** när du har valt en eller flera grupper som ska inkluderas.
+11. Klicka på **OK** på bladet **Tilldela** för att slutföra valet av inkluderade grupper.
+12. Klicka på **Exkludera grupper** om du vill undanta grupper av användare så att de inte påverkas av den här apptilldelningen.
+13. Om du har valt att undanta grupper klickar du på **Välj** på bladet **Välj grupper**.
+14. Klicka på **OK** på bladet **Lägg till grupp**.
+15. Klicka på **Spara** på bladet **Tilldelningar** för att spara dina tilldelningar.
 
 Appen har nu tilldelats till de grupper du valde. Mer information om hur du inkluderar och exkluderar apptilldelningar finns i [Inkludera och exkludera apptilldelningar](apps-inc-exl-assignments.md).
 

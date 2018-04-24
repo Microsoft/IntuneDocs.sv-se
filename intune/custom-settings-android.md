@@ -1,28 +1,28 @@
 ---
-title: "Lägga till anpassade inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs"
-description: "Lägg till eller skapa en anpassad profil för Android-enheter om du vill skapa en WiFi-profil med en i förväg delad nyckel, skapa en VPN-profil per app eller tillåta/blockera appar för Samsung Knox Standard-enheter i Microsoft Intune"
-keywords: 
+title: Lägga till anpassade inställningar för Android-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Lägg till eller skapa en anpassad profil för Android-enheter om du vill skapa en WiFi-profil med en i förväg delad nyckel, skapa en VPN-profil per app eller tillåta/blockera appar för Samsung Knox Standard-enheter i Microsoft Intune
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 494b3892-916e-4b40-9b67-61adec889bdf
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa105cc96cd0fa7d8c6beb32cdb80b7782d9828c
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: 0195e138b59fae019fa2bc02aadf211257a65cac
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-settings-for-android-devices---intune"></a>Anpassade inställningar för Android-enheter – Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Anpassade profiler använder OMA-URI-inställningar (Open Mobile Alliance Uniform Resource Identifier) till att konfigurera olika funktioner på Android-enheter. De här inställningarna används vanligtvis av tillverkare av mobila enheter till att styra funktioner på enheten.
 
@@ -43,11 +43,11 @@ Med hjälp av en anpassad profil kan du konfigurera och tilldela följande Andro
 4. I **Anpassade OMA-URI-inställningar** väljer du **Lägg till** och sedan **Lägg till rad**.
 5. Ange följande egenskaper:
 
-  - **Namn** – Ange ett unikt namn för OMA-URI-inställningen så att du lätt kan hitta den.
-  - **Beskrivning** – Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
-  - **Datatyp** – Ange den datatyp som du använder för OMA-URI-inställningen. Välj mellan **Sträng**, **Sträng (XML)**, **Datum och tid**, **Heltal**, **Flyttal** och **Boolesk**.
-  - **OMA-URI** – Ange önskad OMA-URI.
-  - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
+   - **Namn** – Ange ett unikt namn för OMA-URI-inställningen så att du lätt kan hitta den.
+   - **Beskrivning** – Ange en beskrivning som ger en översikt över inställningen, samt annan viktig information.
+   - **Datatyp** – Ange den datatyp som du använder för OMA-URI-inställningen. Välj mellan **Sträng**, **Sträng (XML)**, **Datum och tid**, **Heltal**, **Flyttal** och **Boolesk**.
+   - **OMA-URI** – Ange önskad OMA-URI.
+   - **Värde** – Ange det värde som du vill associera med den OMA-URI som du har angett.
 
 6. Klicka på **OK** för att spara ändringarna. Fortsätt att lägga till fler inställningar efter behov.
 

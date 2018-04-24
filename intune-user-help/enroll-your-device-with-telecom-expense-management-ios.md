@@ -1,27 +1,27 @@
 ---
-title: "Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster med Intune"
-description: "Lär dig hur du registrerar en iOS-enhet i kostnadsuppföljningen av telekommunikation."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster med Intune
+description: Lär dig hur du registrerar en iOS-enhet i kostnadsuppföljningen av telekommunikation.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 90b07e1f18ab3cb9c74337e2a3538f186f4ea52a
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: ff51405ee48851b5a48c4d6142c33bc16ed6218e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster
 
@@ -40,11 +40,11 @@ Välj ett lämpligt alternativ och du får en avisering om att installera progra
 
 1. Välj __Registrera med Microsoft-konto__.
 
-  ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
+   ![En bild av skärmen Inställningar i Datalert-appen, med ett fält för telefonnummer för att registrera en enhet på den övre delen av skärmen och ”Registrera med Microsoft-konto” längst ned, där du måste ha ett Microsoft Office 365-konto och en Intune-prenumeration.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
 2. Du får ett meddelande om att __”Datalert” vill öppna ”Authenticator”__. Välj __Öppna__.
 
-  ![En bild av popup-frågan till användaren om att öppna autentiseringsappen på begäran av Datalert-appen.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
+   ![En bild av popup-frågan till användaren om att öppna autentiseringsappen på begäran av Datalert-appen.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 
 3. Logga in med ditt __skol- eller arbetskonto i Microsoft__. Datalert-installationen körs en liten stund och bör sedan ha slutförts. Tryck på __Slutför__ när den är klar.
 
@@ -52,15 +52,15 @@ Välj ett lämpligt alternativ och du får en avisering om att installera progra
 
 1. Ange enhetens telefonnummer.
 
-  ![En skärmbild på när programmet Datalert begär ett telefonnummer.](./media/ios-enroll-12-tem-datalert-phone-number.png)
+   ![En skärmbild på när programmet Datalert begär ett telefonnummer.](./media/ios-enroll-12-tem-datalert-phone-number.png)
 
 2. Du får sedan en verifieringskod via SMS. Ange koden och tryck på __OK__.
 
-  ![En skärmbild på när programmet verifieringskoden via SMS.](./media/ios-enroll-13-tem-datalert-sms.png)
+   ![En skärmbild på när programmet verifieringskoden via SMS.](./media/ios-enroll-13-tem-datalert-sms.png)
 
 3. När du har angett verifieringskoden är installationen av Datalert färdig. När du har tryckt på __Slutför__ kan du övervaka dina data från Datalert.
 
-  ![En skärmbild av Datalerts övervakning av dagens dataförbrukning.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
+   ![En skärmbild av Datalerts övervakning av dagens dataförbrukning.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
 
 När du har registrerat enheten, börjar du se din dataanvändning av i appen Datalert.
 

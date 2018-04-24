@@ -1,28 +1,28 @@
 ---
-title: "Skapa certifikatprofiler i Microsoft Intune – Azure | Microsoft Docs"
-description: "Lägg till eller skapa en certifikatprofil för enheterna genom att konfigurera SCEP- eller PKCS-miljön, exportera det offentliga certifikatet, skapa profilen i Azure Portal och sedan tilldela SCEP eller PKCS till certifikatprofilerna i Microsoft Intune i Azure Portal"
-keywords: 
+title: Skapa certifikatprofiler i Microsoft Intune – Azure | Microsoft Docs
+description: Lägg till eller skapa en certifikatprofil för enheterna genom att konfigurera SCEP- eller PKCS-miljön, exportera det offentliga certifikatet, skapa profilen i Azure Portal och sedan tilldela SCEP eller PKCS till certifikatprofilerna i Microsoft Intune i Azure Portal
+keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b1691e3474b021754e0ee6a1a1977efecc82eac
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 867a846b43edb3392db2be11e7ea544fa9317b6c
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. När du använder certifikat behöver du inte ange användarnamn och lösenord för att autentisera anslutningar
 

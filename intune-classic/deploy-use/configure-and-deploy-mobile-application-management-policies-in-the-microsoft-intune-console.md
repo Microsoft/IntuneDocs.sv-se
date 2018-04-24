@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 94c6a46d2213ba3d1389b52f7684ec531e40228a
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: e1b4903eedaec53015a01a7711f87401dc02d24e
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console"></a>Configure and deploy mobile application management policies in the Microsoft Intune console
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Med hjälp av hanteringsprinciper för mobilprogram (MAM) i Microsoft Intune kan du ändra funktionen i appar som du distribuerar för att anpassa dem till företagets kompatibilitets- och säkerhetsprinciper. Du kan till exempel begränsa åtgärder för att klippa ut, kopiera och klistra in inom en hanterad app eller konfigurera en app så att den öppnar alla länkar i en hanterad webbläsare.
 
@@ -180,7 +180,7 @@ När du har skapat och distribuerat en app som är associerad med en princip fö
 
 4.  Välj den princip för hantering av mobila program vars status du vill visa. Du kan se information om principen längst ned i fönstret och expandera dess nod om du vill visa dess inställningar.
 
-5.  Under kolumnen **Status** för var och en av principerna för hantering av mobila program visas **Överensstämmer**, **Överensstämmer (väntar)**eller **Fel**. Om den markerade principen har en eller flera inställningar i konflikt, visas **Fel** i det här fältet.
+5.  Under kolumnen **Status** för var och en av principerna för hantering av mobila program visas **Överensstämmer**, **Överensstämmer (väntar)** eller **Fel**. Om den markerade principen har en eller flera inställningar i konflikt, visas **Fel** i det här fältet.
 
 6.  När du har identifierat en konflikt kan du ändra motstridiga principinställningar till att använda samma inställning, eller så kan du distribuera endast en princip till appen och användaren.
 

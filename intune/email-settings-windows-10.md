@@ -1,27 +1,27 @@
 ---
-title: "E-postinställningar i Microsoft Intune för enheter som kör Windows 10"
-titleSuffix: 
-description: "Läs om Microsoft Intune-inställningar som du kan använda för att konfigurera e-postinställningar på enheter som kör Windows 10."
-keywords: 
+title: E-postinställningar i Microsoft Intune för enheter som kör Windows 10
+titleSuffix: ''
+description: Läs om Microsoft Intune-inställningar som du kan använda för att konfigurera e-postinställningar på enheter som kör Windows 10.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b02579895123995f9b4205d64e9bf67ce04de746
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 4a0c3eaf0643ede02b8c084d172b7a51d251b3a3
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-10"></a>E-postprofilinställningar i Microsoft Intune för enheter som kör Windows 10
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Den här artikeln visar de e-postprofilinställningar som du kan konfigurera för enheter som kör Windows 10.
 

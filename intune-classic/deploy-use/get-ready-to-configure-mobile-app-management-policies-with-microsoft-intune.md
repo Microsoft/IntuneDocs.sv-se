@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b5d2ec278d182f3d9dbe03fbdf86791b59debf79
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 52cba4de7d19744e1a011071ac6c9bbb168ffb30
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-ready-to-configure-app-protection-policies-in-the-azure-portal"></a>Förbereda konfigurationen av appskyddsprinciper på Azure-portalen
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet beskriver kraven och de steg du måste utföra **innan** du kan skapa appskyddsprinciper på Azure-portalen.
 
@@ -74,18 +74,18 @@ Om du vill se en fullständig lista över Microsoft-appar som stöds går du til
 
 ## <a name="prerequisites"></a>Krav
 
--   **En Microsoft Intune-prenumeration**. Användarna behöver Intune-licenser för att kunna hämta appar med appskyddsprinciper.
-Du har redan en Intune-prenumeration om du för närvarande använder Intune för att hantera enheter. Du har också en Intune-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar Intune för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
+- **En Microsoft Intune-prenumeration**. Användarna behöver Intune-licenser för att kunna hämta appar med appskyddsprinciper.
+  Du har redan en Intune-prenumeration om du för närvarande använder Intune för att hantera enheter. Du har också en Intune-prenumeration om du har köpt en EMS-licens (Enterprise Mobility Suite). Om du provar Intune för att få en överblick över MAM-funktionerna kan du skapa ett utvärderingskonto på [sidan för Microsoft Intune](https://www.microsoft.com/server-cloud/products/microsoft-intune/).
 
-    Du kan kontrollera om du har en Intune-prenumeration på sidan **Fakturering** på Office-portalen.  Om du har en prenumeration bör du se Intune som **Aktiv** i prenumerationerna.
+  Du kan kontrollera om du har en Intune-prenumeration på sidan **Fakturering** på Office-portalen.  Om du har en prenumeration bör du se Intune som **Aktiv** i prenumerationerna.
 
--   **En prenumeration på Office 365**, vilket krävs för följande:
+- **En prenumeration på Office 365**, vilket krävs för följande:
 
   - Använda appskyddsprinciper för appar med stöd för flera identiteter.
 
   - Skapa konton för SharePoint Online och Exchange Online-arbete. Lokalt Exchange och lokalt SharePoint stöds inte.
 
--   **Installation av Skype för företag – Online för modern autentisering**. Mer information finns i [Aktivera modern autentisering](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
+- **Installation av Skype för företag – Online för modern autentisering**. Mer information finns i [Aktivera modern autentisering](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx).
 
 
 - Azure Active Directory (Azure AD) för att skapa användare. Azure AD autentiserar användare när de öppnar appen och anger sina autentiseringsuppgifter för arbetet.

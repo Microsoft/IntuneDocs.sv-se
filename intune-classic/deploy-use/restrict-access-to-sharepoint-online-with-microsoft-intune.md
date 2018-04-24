@@ -1,29 +1,29 @@
 ---
 title: Skydda SharePoint Online
-description: "Skydda och styr åtkomsten till företagets data på SharePoint Online med villkorlig åtkomst."
-keywords: 
+description: Skydda och styr åtkomsten till företagets data på SharePoint Online med villkorlig åtkomst.
+keywords: ''
 author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b088e5a0-fd4a-4fe7-aa49-cb9c8cfb1585
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f86508d9b187e0026a74c4e82e94cdd5a4d29c3a
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 2b7285c272efac8eab406393b0b896795fa5d8ed
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protect-access-to-sharepoint-online-with-microsoft-intune"></a>Skydda åtkomsten till SharePoint Online med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd villkorlig åtkomst i Microsoft Intune om du vill kontrollera åtkomsten till filer som finns i SharePoint Online.
 Villkorlig åtkomst består av två komponenter:
@@ -81,16 +81,16 @@ Du kan skydda åtkomst till SharePoint Online när **iOS**- och **Android**-enhe
 Följande stöds:
 - Windows 8.1 och senare (efter att datorer har registrerats i Intune)
 - Windows 7.0, Windows 8.1 eller Windows 10 (om datorn är domänansluten),
-> [!NOTE]
->Om du vill använda villkorlig åtkomst med Windows 10-datorer måste du uppdatera dessa datorer med Windows 10 Anniversary Update.
+  > [!NOTE]
+  >Om du vill använda villkorlig åtkomst med Windows 10-datorer måste du uppdatera dessa datorer med Windows 10 Anniversary Update.
 
   - Domänanslutna datorer måste vara konfigurerade att [registreras automatiskt](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) med Azure Active Directory. Registreringstjänst för Azure AD-enhet aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har använt ADFS Device Registration Service ser inte registrerade enheter i lokala Active Directory-kataloger.
 
   - Om principen är konfigurerad att kräva en domänanslutning och datorn inte är domänansluten visas ett meddelande som uppmanar användaren att kontakta IT-administratören.
 
   - Om principen är konfigurerad att kräva en domänsanslutning eller efterlevnad och datorn inte uppfyller något av kraven visas ett meddelande med instruktioner som hjälper användaren att installera företagsportalappen och registrera sig.
-  >[!NOTE]
-  >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
+    >[!NOTE]
+    >Villkorlig åtkomst stöds inte på datorer som kör Intune-datorklienten.
 
 [Modern Office 365-autentisering måste vara aktiverat](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) och alla de senaste Office-uppdateringarna måste vara installerade.
 
@@ -132,24 +132,24 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 > Du kan också skapa en princip för villkorlig åtkomst för Intune-enheter i Azure AD-hanteringskonsolen (principen kallas **enhetsbaserad villkorlig åtkomstpolicy** i Azure AD). Dessutom kan du skapa andra principer för villkorlig åtkomst som multifaktorautentisering. Du kan även ange principer för villkorlig åtkomst för tredje parters företagsappar som Azure AD stöder, som Salesforce och Box. Mer information finns i [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/) (Så ställer du in principer för Azure Active Directory-enhetsbaserad villkorlig åtkomst för åtkomstkontroll till program anslutna med Azure Active Directory).
 
 
-1.  I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **SharePoint Online-princip**.
-![Skärmbild av sidan SharePoint Online-princip](../media/mdm-ca-spo-policy-configuration.png)
+1. I [Microsoft Intune Administrationskonsol](https://manage.microsoft.com) väljer du **Princip** > **Villkorlig åtkomst** > **SharePoint Online-princip**.
+   ![Skärmbild av sidan SharePoint Online-princip](../media/mdm-ca-spo-policy-configuration.png)
 
-2.  Välj **Aktivera princip för villkorlig åtkomst för SharePoint Online**.
+2. Välj **Aktivera princip för villkorlig åtkomst för SharePoint Online**.
 
-3.  Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
+3. Under **Programåtkomst** kan du välja att använda principen för villkorlig åtkomst för:
 
-    -   **Alla plattformar**
+   - **Alla plattformar**
 
-        Detta kräver att alla enheter som används för att komma åt **SharePoint Online** registreras i Intune och att de uppfyller principkraven. Klientprogram som använder **modern autentisering** omfattas av principen för villkorlig åtkomst. Om plattformen inte stöds av Intune för närvarande blockeras åtkomsten till **SharePoint Online**.
+     Detta kräver att alla enheter som används för att komma åt **SharePoint Online** registreras i Intune och att de uppfyller principkraven. Klientprogram som använder **modern autentisering** omfattas av principen för villkorlig åtkomst. Om plattformen inte stöds av Intune för närvarande blockeras åtkomsten till **SharePoint Online**.
 
-        Om alternativet **Alla plattformar** väljs innebär det att Azure Active Directory använder denna princip på alla autentiseringsbegäranden, oavsett vilken plattform som rapporteras av klientprogrammet. Alla plattformar måste registreras och vara kompatibla, med undantag för:
-        *   Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
-        * Plattformar som inte stöds, t.ex. Mac. Appar med modern autentisering som kommer från dessa plattformar blockeras dock fortfarande.
+     Om alternativet **Alla plattformar** väljs innebär det att Azure Active Directory använder denna princip på alla autentiseringsbegäranden, oavsett vilken plattform som rapporteras av klientprogrammet. Alla plattformar måste registreras och vara kompatibla, med undantag för:
+     *   Windows-enheter, som måste registreras för att vara kompatibla, domänanslutna med lokal Active Directory, eller båda.
+     * Plattformar som inte stöds, t.ex. Mac. Appar med modern autentisering som kommer från dessa plattformar blockeras dock fortfarande.
 
-    -   **Vissa plattformar**
+   - **Vissa plattformar**
 
-         Principen för villkorlig åtkomst gäller alla klientappar som använder modern autentisering på de plattformar som du anger.
+      Principen för villkorlig åtkomst gäller alla klientappar som använder modern autentisering på de plattformar som du anger.
 
      För Windows-datorer måste en dator antingen vara domänansluten eller registrerad i Intune och kompatibel. Du kan ange följande krav:
 
@@ -157,28 +157,28 @@ Konfigurera sedan policyn som kräver att enbart hanterade och godkända enheter
 
      -   **Enheter måste vara godkända.** Välj det här alternativet om du vill kräva att datorerna ska vara registrerade i Intune och kompatibla. Om en dator inte är registrerad visas ett meddelande med anvisningar om hur du registrerar.
 
-4.   Under **Webbläsaråtkomst** till SharePoint Online och OneDrive för företag kan du välja att tillåta åtkomst till Exchange Online endast genom de webbläsare som stöds: Safari (iOS) och Chrome (Android). Åtkomst från andra webbläsare blockeras. De plattformsbegränsningar som du valde för programåtkomst för OneDrive gäller även här.
+4. Under **Webbläsaråtkomst** till SharePoint Online och OneDrive för företag kan du välja att tillåta åtkomst till Exchange Online endast genom de webbläsare som stöds: Safari (iOS) och Chrome (Android). Åtkomst från andra webbläsare blockeras. De plattformsbegränsningar som du valde för programåtkomst för OneDrive gäller även här.
 
-  På **Android**-enheter måste användare aktivera webbläsaråtkomst. Om du vill göra detta måste en slutanvändare välja alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
-  1.    Öppna appen **Företagsportal**.
-  2.    Gå till sidan **Inställningar** från ellips (...) eller menyknapp för maskinvara.
-  3.    Tryck på knappen **Aktivera webbläsaråtkomst**.
-  4.    I webbläsaren Chrome loggar du ut från Office 365 och startar om Chrome.
+   På **Android**-enheter måste användare aktivera webbläsaråtkomst. Om du vill göra detta måste en slutanvändare välja alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
+   1.    Öppna appen **Företagsportal**.
+   2.    Gå till sidan **Inställningar** från ellips (...) eller menyknapp för maskinvara.
+   3.    Tryck på knappen **Aktivera webbläsaråtkomst**.
+   4.    I webbläsaren Chrome loggar du ut från Office 365 och startar om Chrome.
 
-  På **iOS**- och **Android**-plattformar utfärdar Azure Active Directory ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten. Enheten visar certifikatet med en uppmaning till användaren om att markera certifikatet på det sätt som visas i följande skärmbilder. Användarna måste välja det här certifikatet innan de kan använda webbläsaren.
+   På **iOS**- och **Android**-plattformar utfärdar Azure Active Directory ett TLS-certifikat (Transport layer security) för enheten för att identifiera den enhet som används för att få åtkomst till tjänsten. Enheten visar certifikatet med en uppmaning till användaren om att markera certifikatet på det sätt som visas i följande skärmbilder. Användarna måste välja det här certifikatet innan de kan använda webbläsaren.
 
-  **iOS**
+   **iOS**
 
-  ![Skärmbild av certifikatfråga på en iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
+   ![Skärmbild av certifikatfråga på en iPad](../media/mdm-browser-ca-ios-cert-prompt.png)
 
-  **Android**
+   **Android**
 
-  ![Skärmbild av certifikatuppmaning på en Android-enhet](../media/mdm-browser-ca-android-cert-prompt.png)
-5.  Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen gäller för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
+   ![Skärmbild av certifikatuppmaning på en Android-enhet](../media/mdm-browser-ca-android-cert-prompt.png)
+5. Välj **Ändra** under **Målgrupper** och välj de Azure Active Directory-säkerhetsgrupper som principen gäller för. Du kan välja att omfatta alla användare eller bara en viss grupp med användare.
 
-6.  Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
+6. Under **Undantagna Grupper** kan du alternativt välja **Modifiera** om det finns säkerhetsgrupper i Azure Active Directory som ska vara undantagna principen.
 
-7.  När du är klar väljer du **Spara**.
+7. När du är klar väljer du **Spara**.
 
 Du behöver inte använda principen för villkorlig åtkomst. Den träder i kraft omedelbart.
 

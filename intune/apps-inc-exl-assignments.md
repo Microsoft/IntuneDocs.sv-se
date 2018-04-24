@@ -1,25 +1,25 @@
 ---
 title: Inkludera och exkludera apptilldelningar i Microsoft Intune
-titlesuffix: 
-description: "Läs om hur du kan använda Microsoft Intune till att inkludera och exkludera apptilldelningar."
-keywords: 
+titlesuffix: ''
+description: Läs om hur du kan använda Microsoft Intune till att inkludera och exkludera apptilldelningar.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dbe8669dc2bf448e0738147758d90ba6d2d69b06
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 93fd626d580917a3dd5bb20e7696c09c109dcc0b
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -33,6 +33,8 @@ När du exkluderar grupper från en apptilldelning kan du endast exkludera anvä
 >När du ställer in en grupptilldelning för en app blir typen **Ej tillämpligt** inaktuell och ersätts med gruppfunktioner för att exkludera. 
 >
 >Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du själv har skapat.  
+>
+>Android Enterprise (tidigare Android for Work) stöder inkludering och exkludering av grupper, men stöder inte de inbyggda grupperna **Alla användare** och **Alla enheter**.
 
 ## <a name="including-and-excluding-groups-when-assigning-apps"></a>Inkludera och exkludera grupper när du tilldelar appar 
 Tilldela en app till grupper med hjälp av en tilldelning för att inkludera eller exkludera:

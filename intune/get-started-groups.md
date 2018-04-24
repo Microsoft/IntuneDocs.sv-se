@@ -1,25 +1,25 @@
 ---
 title: Skapa en grupp i Microsoft Intune
-titleSuffix: 
-description: "Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till."
-keywords: 
+titleSuffix: ''
+description: Dela upp användare i grupper för att göra det lättare att hantera principer och appar som de har åtkomst till.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4fc4ee80b1cf5a8422d135d13a9fb498980500b5
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d039cfe5509990ff15fe8a1cb476ad44037d60df
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Skapa en grupp för att hantera användare och dataåtkomst
 

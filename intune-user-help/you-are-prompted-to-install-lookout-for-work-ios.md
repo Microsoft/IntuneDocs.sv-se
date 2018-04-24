@@ -1,25 +1,25 @@
 ---
-title: "Du måste installera Lookout for Work på din iOS-enhet | Microsoft Docs"
-description: "Lär dig hur du installerar Lookout for Work för iOS."
-keywords: 
-author: barlanmsft
-ms.author: barlan
+title: Du måste installera Lookout for Work på din iOS-enhet | Microsoft Docs
+description: Lär dig hur du installerar Lookout for Work för iOS.
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 04/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7adab655-8317-4512-ba7d-beeaa25bbf6c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ae05df1478baa8b965cdcd11a47ffc0d694734ab
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: fda95e461fe8412b26289bc601d8282588cd211c
+ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Installera Lookout for Work på iOS-enheten
 
@@ -31,15 +31,15 @@ Innan du kan komma åt ditt arbete måste företagets support be dig att install
 
 1.  Om följande meddelande visas trycker du på **Installera** för att tillåta att Lookout for Work installeras på enheten.
 
-  ![Tryck på Installera för att installera Lookout for Work](./media/ios-mtd-install-app-request.png)
+      ![Skärmbild av Appinstallation med knapparna Avbryt och Installera.](/intune-user-help/media/ios-mts-install-app-request-after-1804.png)
 
 2. När följande meddelande visas trycker du på **Inställningar**, sätter på **Platstjänster** och trycker sedan på **Fortsätt**.
 
-  ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-location-services.png)
+      ![Tryck på Inställningar och sedan Platstjänster](./media/ios-lfw-allow-location-services.png)
 
 3. Granska de behörigheter som Lookout for Work behöver och tryck på **Fortsätt**.
 
-  ![du är nu ansluten till Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
+      ![du är nu ansluten till Lookout for Work](./media/ios-lfw-permissions-lookout-needs.png)
 
 4. Vid meddelandet som ber dig att tillåta att Lookout for Work skickar aviseringar till dig trycker du på **Tillåt**.
 

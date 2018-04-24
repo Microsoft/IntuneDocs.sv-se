@@ -1,29 +1,29 @@
 ---
-title: "Referens för konfigurationsprincip"
-description: "Använd informationen i det här avsnittet för att avgöra vilken Microsoft Intune-princip som du behöver använda för att hantera dina enheter."
-keywords: 
+title: Referens för konfigurationsprincip
+description: Använd informationen i det här avsnittet för att avgöra vilken Microsoft Intune-princip som du behöver använda för att hantera dina enheter.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d27f2739-9791-4aae-a9db-01a4e59ccfe5
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bf92e34c5bb94fe0cb3c0cc9dabd687a0f2710b9
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: 46bc3408f861bcd249ca5071abf1ee80733af10d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-configuration-policy-reference"></a>Referens för konfigurationsprinciper för Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Informationen i det här avsnittet hjälper dig att avgöra vilken Microsoft Intune-konfigurationsprincip som du behöver för att hantera dina enheter.
 
@@ -102,12 +102,13 @@ Gäller enbart för Windows Phone och registrerade Windows-enheter.
 
 ## <a name="common-mobile-device-settings"></a>Standardinställningarna för mobil enhet
 
-|Principnamn|Använd när du vill|
-|---------------|------------------------|
-|**Exchange ActiveSync-princip**|Konfigurera säkerhets- och funktionsinställningar för mobila enheter för enheter som hanteras av Exchange ActiveSync.<br /><br />Mer information finns i [Exchange ActiveSync-principinställningar i Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md).|
-|**Säkerhetsprincip för mobil enhet**|<ul><li>Konfigurerar inställningar för mobila enheter (alla plattformar), däribland:<br /><br /><ul><li>Säkerhet</li><li>Kryptering</li><li>System</li><li>E-post</li><li>Program</li></ul></li></ul>
+|                  Principnamn                   |                                                                                                                       Använd när du vill                                                                                                                       |
+|------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Exchange ActiveSync-princip</strong>   | Konfigurera säkerhets- och funktionsinställningar för mobila enheter för enheter som hanteras av Exchange ActiveSync.<br /><br />Mer information finns i [Exchange ActiveSync-principinställningar i Microsoft Intune](exchange-activesync-policy-settings-in-microsoft-intune.md). |
+| <strong>Säkerhetsprincip för mobil enhet</strong> |                                  <ul><li>Konfigurerar inställningar för mobila enheter (alla plattformar), däribland:<br /><br /><ul><li>Säkerhet</li><li>Kryptering</li><li>System</li><li>E-post</li><li>Program</li></ul></li></ul>                                  |
+
 > [!IMPORTANT]
-Microsoft Intune har nu separata **konfigurationsprinciper** för respektive enhetsplattform, och dessa principer innehåller de senaste uppdaterade inställningar som du kan använda. Du kan fortsätta att använda den befintliga säkerhetsprincipen för mobila enheter, och alla befintliga distributioner fungerar fortfarande, men du bör planera för att migrera till de nya konfigurationsprinciperna så snart som möjligt.<br />Mer information finns i [Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
+> Microsoft Intune har nu separata **konfigurationsprinciper** för respektive enhetsplattform, och dessa principer innehåller de senaste uppdaterade inställningar som du kan använda. Du kan fortsätta att använda den befintliga säkerhetsprincipen för mobila enheter, och alla befintliga distributioner fungerar fortfarande, men du bör planera för att migrera till de nya konfigurationsprinciperna så snart som möjligt.<br />Mer information finns i [Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune](mobile-device-security-policy-settings-in-microsoft-intune.md).
 
 ## <a name="policies-for-windows-pcs-managed-by-the-intune-software-client"></a>Principer för Windows-datorer som hanteras av Intune-klientprogrammet
 

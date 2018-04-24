@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/06/2018
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4cca5922f036711093469e71489e267af53f05a9
-ms.sourcegitcommit: e6319ff186d969da34bd19c9730ba003d6cce353
+ms.openlocfilehash: 19b30315fa26dd53b5e383bc9e4bef5c65b89962
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Om du vill skapa ett nytt lösenord för en enhet använder du åtgärden **Ta bort lösenkod**.
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
-- Windows Phone 8.1 (inte ansluten till Azure Active Directory), inklusive versioner upp till Windows 10 Creators Update
-- Windows 10 Creators Update och senare
-- iOS
-- Tidigare Android-versioner än Android 7
+- Android-enheter som registrerats med en arbetsprofil, version 7.0 och senare
+- Android-enheter på version 6.0 eller tidigare
+- iOS 
+     
+## <a name="unsupported-platforms"></a>Plattformar som inte stöds
 
-Den här funktionen stöds inte för följande system:
-
-- Windows
+- Android-enheter som registrerats med en arbetsprofil, version 6.0 och tidigare
+- Android-enheter på version 7.0 eller senare
 - macOS
-- Android for Work
+- Windows
 
 ## <a name="reset-a-passcode"></a>Återställa ett lösenord
 
@@ -44,6 +44,14 @@ Den här funktionen stöds inte för följande system:
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj sedan **Microsoft Intune**.
 3. Välj **Enheter** och sedan **Alla enheter**.
 4. Välj en enhet från listan över enheter du hanterar och välj **...Mer**. Välj sedan fjärråtgärden **Ta bort lösenkod** för enheten.
+
+## <a name="resetting-android-for-work-passcodes"></a>Återställa Android for Work-lösenord
+
+Android for Work-enheter som stöds får ett nytt lösenord för att låsa upp enheter, eller en kontrollfråga för hanterade profiler för slutanvändaren. För enheter på Android 7.0 eller senare med arbetsprofiler får slutanvändarna ett meddelande om att aktivera sin token för återställning av lösenord direkt när registreringen är klar. Meddelandet visas om ett lösenord för arbetsprofilen krävs och har ställts in. När de har angett lösenordet tas meddelandet bort.
+
+## <a name="resetting-ios-passcodes"></a>Återställa iOS-lösenord
+
+Lösenord tas bort från iOS-enheter. Om en policy för efterlevnad för lösenord har angetts kommer enheten uppmana användaren att ange ett nytt lösenord i inställningarna. 
 
 ## <a name="next-steps"></a>Nästa steg
 

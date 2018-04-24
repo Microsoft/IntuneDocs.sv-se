@@ -1,35 +1,35 @@
 ---
 title: Registrera Android-enheter i Intune
 titlesuffix: Microsoft Intune
-description: "Läs hur du registrerar Android-enheter i Intune."
-keywords: 
+description: Läs hur du registrerar Android-enheter i Intune.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7e65a32843cec48268c7e205ab4a064038c28415
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: d74f59f1df0a4a4e1285b58d7ac5b3677d3c5e48
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-android-devices"></a>Registrera Android-enheter
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Som Intune-administratör kan du hantera Android-enheter, inklusive Samsung Knox Standard-enheter. Du kan också hantera arbetsprofilen [Android for Work-enheter](#enable-enrollment-of-android-for-work-devices).
 
 Enheter som kör Samsung Knox Standard har stöd för hantering av flera användare med Intune. Det innebär att användarna kan logga in och ut ur enheten med sina autentiseringsuppgifter för Azure AD. Enheten är centralt hanterad oavsett om den används eller inte. När användare loggar in får de tillgång till appar och eventuella principer tillämpas på dem. Alla appdata rensas när användaren loggar ut.
 
-## <a name="prerequisite"></a>Krav
+## <a name="prerequisite"></a>Förutsättning
 
 Förbered hantering av mobila enheter genom att ange MDM-utfärdare som **Microsoft Intune**. Fler anvisningar finns i [Ange MDM-utfärdare](mdm-authority-set.md). Du anger det här objektet bara när du konfigurerar Intune för hantering av mobila enheter.
 
@@ -47,6 +47,8 @@ Om du vill aktivera hantering av arbetsprofilen på enheter som har [stöd för 
 
 Om du registrerar Android for Work-enheter med hjälp av ett konto för [Enhetsregistreringshanterare](device-enrollment-manager-enroll.md) går det att registrera högst 10 enheter per konto.
 
+Mer information finns i [Data som Intune skickar till Google](data-intune-sends-to-google.md).
+
 ## <a name="add-android-for-work-binding-for-intune"></a>Lägga till Android for Work-bindning för Intune
 
 > [!NOTE]
@@ -55,15 +57,18 @@ Om du registrerar Android for Work-enheter med hjälp av ett konto för [Enhetsr
 1. **Konfigurera Intune MDM**<br>
 Om du inte redan gjort det, förbereder du för hantering av mobila enheter genom att ange **Microsoft Intune** som [utfärdare för hantering av mobila enheter](mdm-authority-set.md).
 2. **Konfigurera Android for Work-bindning**<br>
-    Som Intune-administratör väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune** i [Azure-portalen](https://portal.azure.com).
-
-   a. I fönstret **Intune** väljer du **Enhetsregistrering** > **Android for Work-registrering**. Välj sedan **Hanterat Google Play-konto – Konfigurera** för att öppna Google Play-webbplatsen Android for Work. Webbplatsen öppnas på en ny flik i webbläsaren.
+    
+   a. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto**.
    ![Registreringsskärm i Android for Work](./media/android-work-bind.png)
 
-   b. **Logga in på Google**<br>
+   b. Välj **Jag accepterar** för att ge Microsoft behörighet att [skicka information om användare och enhet till Google](data-intune-sends-to-google.md). 
+   
+   c. Välj **Launch Google to connect now** (Starta Google för att ansluta nu) för att öppna Android for Work i Google Play Butik. Webbplatsen öppnas på en ny flik i webbläsaren.
+  
+   d. **Logga in på Google**<br>
    Logga in på Googles inloggningssida med det Google-konto som ska associeras med alla hanteringsuppgifter för Android for Work för den här klienten. Det här är det Google-konto som företagets IT-administratörer delar för att hantera och publicera appar i Play for Work-konsolen. Du kan använda ett befintligt Google-konto eller skapa ett nytt.  Det konto du väljer får inte vara kopplat till en G Suite-domän.
 
-   c. **Ange organisationsinformation**<br>
+   e. **Ange organisationsinformation**<br>
    Ange företagets namn för **Organisationsnamn**. **Microsoft Intune** ska visas som **Enterprise mobility management (EMM)-provider**. Godkänn Android for Work-avtalet och välj sedan **Bekräfta**. Din begäran kommer att behandlas.
 
 ## <a name="specify-android-for-work-enrollment-settings"></a>Ange inställningar för registrering av Android for Work
@@ -110,3 +115,14 @@ Du kan inaktivera Android for Work-registrering och hantering. Om du väljer **T
 
 2. **Godkänn borttagningen av Android for Work-bindningen**<br>
   Välj **Ja** för att ta bort bindningen och avregistrera alla Android for Work-enheter från Intune.
+
+## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Slutanvändarens upplevelse när en Samsung Knox-enhet registreras
+Det finns flera saker att tänka på vid registrering av Samsung Knox-enheter:
+-   Även om inga principer kräver en PIN-kod, måste enheten ha en PIN-kod på minst fyra siffror för att kunna registreras. Om enheten inte har någon PIN-kod, uppmanas användaren att skapa en.
+-   Det finns inga användaråtgärder för Workplace Join-certifikat (WPJ).
+-   Användaren får information om tjänstregistreringen och om vad appen kan göra.
+-   Användaren får information om Knox-registreringen och om vad Knox kan göra.
+-   Om en krypteringsprincip tillämpas måste användarna ange ett avancerat lösenord på sex tecken som enhetens lösenord.
+-   Det finns inga ytterligare användaruppmaningar att installera certifikat från en tjänst för åtkomst till företagsresurser.
+- Vissa äldre Knox-enheter uppmanar användaren om ytterligare certifikat som används för åtkomst till företagsresurser.
+- Om en Samsung Mini-enhet inte kan installera WPJ och får felet **Det gick inte att hitta certifikatet** eller **Det gick inte att registrera enheten**, installerar du de senaste uppdateringarna för inbyggd Samsung-programvara.

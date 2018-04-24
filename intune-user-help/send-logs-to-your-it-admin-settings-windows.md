@@ -1,37 +1,37 @@
 ---
-title: "Skicka loggar till företagets support för Windows 10-enheter | Microsoft Docs"
+title: Skicka loggar till företagets support för Windows 10-enheter | Microsoft Docs
 description: Registrera en Windows 10 1511-enhet i Intune
-keywords: 
-author: barlanmsft
-ms.author: barlan
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 05/25/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 038747fb-5b52-47c4-a2b6-f9218da4cfe1
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6a0f0b566b33d09ba09aee0d479b21f58dedf489
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 57c1dcfb591ceea1b85292a416d037c0b4073645
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Skicka loggar till företagets support från inställningsappen för Windows 10
 
 Om du får ett felmeddelande när du använder en Windows 10-enhet som hanteras av företaget kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
-1.  Öppna appen **Inställningar** i Windows genom att välja **Inställningar** på **Start-menyn**. Du kan också söka efter "inställningar" i sökfältet.
-2.  Gå till **Konton** > **Åtkomst till arbete eller skola**.
-3.  Välj ”Exportera dina hanteringsloggfiler”.
+1. Öppna appen **Inställningar** i Windows genom att välja **Inställningar** på **Start-menyn**. Du kan också söka efter "inställningar" i sökfältet.
+2. Gå till **Konton** > **Åtkomst till arbete eller skola**.
+3. Välj ”Exportera dina hanteringsloggfiler”.
 
-  ![Skärmen ”Åtkomst till arbete eller skola” visar alternativet Exportera under rubriken ”Relaterade inställningar”.](./media/w10-export-logs.png)
+   ![Skärmen ”Åtkomst till arbete eller skola” visar alternativet Exportera under rubriken ”Relaterade inställningar”.](./media/w10-export-logs.png)
 
 4. Loggarna sparas i **C:\Users\Public\Public Documents\MDMDiagnostics**. Två filer skapas: en är själva loggen och den andra är ett särskilt dokument där administratören kan granska loggarna i olika program, till exempel Microsoft Excel. Bifoga båda dessa filer i ett e-postmeddelande och skicka det till administratören. Om du gör detta mer än en gång behöver du bara välja filerna från den dag då du skapade loggarna. 
 

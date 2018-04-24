@@ -1,29 +1,33 @@
 ---
-title: "Skapa WiFi-profile med i förväg delad nyckel – Microsoft Intune – Azure | Micrososft Docs"
-description: "Använd en anpassad profil för att skapa en Wi-Fi-profil med en i förväg delad nyckel och hämta exempel på XML-kod för Android-, Windows- och EAP-baserade Wi-Fi-profiler i Microsoft Intune"
-keywords: 
+title: Skapa WiFi-profile med i förväg delad nyckel – Microsoft Intune – Azure | Micrososft Docs
+description: Använd en anpassad profil för att skapa en Wi-Fi-profil med en i förväg delad nyckel och hämta exempel på XML-kod för Android-, Windows- och EAP-baserade Wi-Fi-profiler i Microsoft Intune
+keywords: ''
 author: mandia
 ms.author: MandiOhlinger
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 85543d87ca79fa301ee1e9c242c053c1c34e18c3
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 27ced5debc7eb063be03f4e6a1932425717318af
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I förväg delade nycklar (PSK) används vanligtvis för att autentisera användare i WiFi-nätverk eller trådlösa nätverk. Med Intune kan du skapa en WiFi-profil med en i förväg delad nyckel. Skapa profilen med funktionen för **anpassade enhetsprofiler** i Intune. I den här artikeln finns även några exempel på hur du skapar en EAP-baserade Wi-Fi-profil.
+
+> [!IMPORTANT]
+>- En i förväg delad nyckel med Windows 10 visar ett reparationsfel i Intune. När detta sker tilldelas den trådlösa nätverksprofilen till enheten och profilen fungerar som förväntat.
+>- Om du exporterar en trådlös nätverksprofil som innehåller en i förväg delad nyckel, måste filen vara skyddad. Nyckeln är i oformaterad text, så det är ditt ansvar att skydda den.
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
@@ -46,15 +50,15 @@ Du kan skapa en anpassad profil med en i förväg delad nyckel för en Android-,
 
    d. **OMA-URI**:
 
-    - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-    - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
+   - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
 
-    > [!NOTE]
-    > Se till att ta med punkttecknet i början.
+     > [!NOTE]
+     > Se till att ta med punkttecknet i början.
 
-    SSID är det SSID som du skapar principen för. Ange till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+     SSID är det SSID som du skapar principen för. Ange till exempel `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-  e. **Värdefält** är där du klistrar in XML-koden. Se exemplen i den här artikeln. Uppdatera varje värde så att det matchar dina nätverksinställningar. I avsnittet med kommentarer om koden finns tips.
+   e. **Värdefält** är där du klistrar in XML-koden. Se exemplen i den här artikeln. Uppdatera varje värde så att det matchar dina nätverksinställningar. I avsnittet med kommentarer om koden finns tips.
 3. Välj **OK**, spara och tilldela sedan principen.
 
     > [!NOTE]
@@ -203,7 +207,7 @@ Du kan också skapa en XML-fil utifrån en befintlig Wi-Fi-anslutning genom att 
 
 1. På en dator som är ansluten till, eller som nyligen har anslutits till det trådlösa nätverket, öppnar du mappen `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`.
 
-  Det är bäst att använda en dator som inte har för många anslutna trådlösa nätverk. Då kan du behöva leta igenom varje profil för att hitta den som är rätt.
+   Det är bäst att använda en dator som inte har för många anslutna trådlösa nätverk. Då kan du behöva leta igenom varje profil för att hitta den som är rätt.
 
 2. Sök igenom XML-filerna för att hitta filen med rätt namn.
 3. När du har hittat rätt XML-fil kopierar du och klistrar in XML-koden i fältet **Data** på sidan OMA-URI-inställningar.

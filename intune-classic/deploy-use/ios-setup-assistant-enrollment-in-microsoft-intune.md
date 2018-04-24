@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a33c383cb65d0edfa94117278e3f473699588aa3
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: c68f196ea268e61a175f643244efb855f46eaece
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-ios-devices-with-apple-configurator-by-using-setup-assistant"></a>Registrera iOS-enheter med Apple Configurator med hjälp av Installationsassistenten
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Intune stöder registrering av företagsägda iOS-enheter med hjälp av [Apple Configurator](http://go.microsoft.com/fwlink/?LinkId=518017) på en Mac-dator. Den här processen återställer enheten till fabriksinställningarna och förbereder den för Installationsassistenten genom att installera företagets principer för enhetens nya användare.
 
@@ -59,7 +59,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
 1. I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com) går du till **Princip** &gt; **Företagsägda enheter** och väljer sedan **Lägg till**.
 
-  ![Skapa profil för mobilenhetsregistrering](../media/pol-sa-corp-enroll.png)
+   ![Skapa profil för mobilenhetsregistrering](../media/pol-sa-corp-enroll.png)
 
 2. Ange information om enhetsprofilerna:
 
@@ -80,7 +80,7 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
    -  **Enhetsregistreringsprogram**: Apples enhetsregistreringsprogram (Device Enrollment Program) kan inte användas med registrering via Installationsassistenten. Se till att växlingsknappen har inställningen **Av**.
 
-3.  Välj **Spara profil** för att lägga till profilen.
+3. Välj **Spara profil** för att lägga till profilen.
 
 ### <a name="add-ios-devices-to-enroll-with-setup-assistant"></a>Lägg till iOS-enheter som ska registreras med installationsassistenten
 
@@ -90,29 +90,29 @@ En enhets registreringsprofil definierar inställningarna som tillämpas på en 
 
    ![Dialogrutan Lägg till enheter](../media/pol-SA-enroll-iOS-SetupAssistant.png)
 
-   -  **Överför en CSV-fil som innehåller serienummer**: Skapa en kommaavgränsad lista med två kolumner utan rubrik som är begränsad till 5 000 enheter eller 5 MB per CSV-fil.
+   - **Överför en CSV-fil som innehåller serienummer**: Skapa en kommaavgränsad lista med två kolumner utan rubrik som är begränsad till 5 000 enheter eller 5 MB per CSV-fil.
 
-    |||
-    |-|-|
-    |&lt;Serienr 1&gt;|&lt;Information om enhet nr 1&gt;|
-    |&lt;Serienr 2&gt;|&lt;Information om enhet nr 2&gt;|
+     |||
+     |-|-|
+     |&lt;Serienr 1&gt;|&lt;Information om enhet nr 1&gt;|
+     |&lt;Serienr 2&gt;|&lt;Information om enhet nr 2&gt;|
 
-  När den öppnas i en textredigerare visas den här CSV-filen som:
+   När den öppnas i en textredigerare visas den här CSV-filen som:
 
     ```
     0000000,PO 1234
     111111111,PO 1234
     ```
 
-  -  **Lägg till enhetsinformation manuellt**&mdash;Ange serienummer och anteckningar eller information för upp till 15 enheter.
+   -  **Lägg till enhetsinformation manuellt**&mdash;Ange serienummer och anteckningar eller information för upp till 15 enheter.
 
-  I rutan **Granska enheter** kan du bekräfta serienumren. Du kan också bestämma om du vill skriva över **informationen** för serienummer som importeras igen, eller så kan du avmarkera rutan **Skriv över** och behålla den nuvarande informationen.
+   I rutan **Granska enheter** kan du bekräfta serienumren. Du kan också bestämma om du vill skriva över **informationen** för serienummer som importeras igen, eller så kan du avmarkera rutan **Skriv över** och behålla den nuvarande informationen.
 
-  > [!NOTE]
-  > I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda serienummer. I den nya Azure-portalen kan du endast skriva över information för alla serienummer eller ignorera ny information för alla serienummer.
+   > [!NOTE]
+   > I den befintliga Intune-administratörskonsolen kan administratörer godkänna tillhörande information från en överförd CSV och skriva över befintlig information för enskilda serienummer. I den nya Azure-portalen kan du endast skriva över information för alla serienummer eller ignorera ny information för alla serienummer.
 
-  > [!NOTE]
-  > Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
+   > [!NOTE]
+   > Om du vill ta bort företagsägda enheter från Intune-hanteringen senare kanske du behöver gå till enhetsgruppen **Efter iOS-serienummer** under **Företagets förregistrerade enheter** och ta bort enhetens serienummer från Intune för att kunna inaktivera enhetsregistreringen. Om Intune utför en katastrofåterställning vid eller runt den tidpunkt då du tar bort serienummer måste du kontrollera att endast aktiva enheters serienummer finns i gruppen.
 
 2. Välj **Nästa**.
 
@@ -137,7 +137,7 @@ Ange profilen som ska tilldelas till enheter som lagts till i listan över tillg
 
 iOS-enheter är anslutna till Mac-datorn och registreras för hantering av mobila enheter.
 
-1.  På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
+1. På en Mac-dator öppnar du **Apple Configurator 2**. Välj **Apple Configurator 2** i menyfältet och välj sedan **Inställningar**.
 
    > [!WARNING]
    > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du ansluter den.
@@ -148,12 +148,12 @@ iOS-enheter är anslutna till Mac-datorn och registreras för hantering av mobil
 
    Du kan ignorera en varning som anger att server-URL:en inte har verifierats. Fortsätt genom att välja **Nästa** tills guiden har slutförts.
 
-4.  Anslut iOS-mobilenheterna till Mac-datorn med en USB-adapter.
+4. Anslut iOS-mobilenheterna till Mac-datorn med en USB-adapter.
 
-    > [!WARNING]
-    > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du startar Installationsassistenten.
+   > [!WARNING]
+   > Enheterna kommer att återställas till fabrikskonfigurationerna vid registreringen. Vi rekommenderar att du återställer enheten och sätter på den. Enheten bör visa **Hello**-skärmen när du startar Installationsassistenten.
 
-5.  Välj **Förbereda**. I fönstret Förbered iOS-enhet väljer du först **Manuellt** och sedan **Nästa**.
+5. Välj **Förbereda**. I fönstret Förbered iOS-enhet väljer du först **Manuellt** och sedan **Nästa**.
 
 6. I fönstret Registrera i MDM-server väljer du först servernamnet som du skapat och sedan **Nästa**.
 

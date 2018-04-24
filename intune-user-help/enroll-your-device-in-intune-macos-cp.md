@@ -1,27 +1,27 @@
 ---
-title: "Registrera din macOS-enhet i Intune med företagsportalen| Microsoft Docs"
-description: "Beskriver hur du registrerar en macOS-enhet i Intune med företagsportalappen"
+title: Registrera din macOS-enhet i Intune med företagsportalen| Microsoft Docs
+description: Beskriver hur du registrerar en macOS-enhet i Intune med företagsportalappen
 keywords: Mac OS X, macOS, OS X
-author: barlanmsft
-ms.author: barlan
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 04/11/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4f01a5aa9567ea914da2c36756e8c3f12f55c58d
-ms.sourcegitcommit: 468480b61110ca81f737582ebbefd4efda6fd667
+ms.openlocfilehash: e3990c0670516de907ac048b844152014db5be57
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
@@ -30,11 +30,12 @@ Med åtkomst till din organisations appar, data och resurser är det enklare fö
 > [!NOTE]
 > Du hittar anvisningar för att registrera macOS-enheter på tidigare versioner av macOS [här](enroll-your-device-in-intune-macos-legacy.md).
 
-1. På din __Docka__, går du till __Safari__ och öppnar ett nytt fönster och öppnar sedan [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+1. På din __Docka__, går du till __Safari__ och öppnar ett nytt fönster och öppnar sedan [företagsportalens webbplats](https://portal.manage.microsoft.com).
 
 2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto.
 
-  [!INCLUDE[wit_nextref](includes/end-user-password-guidance.md)]
+   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+
 
 3. När du har loggat in klickar du på **menyn** i det övre vänstra hörnet på sidan och väljer **Mina enheter**.
 
@@ -54,8 +55,8 @@ Med åtkomst till din organisations appar, data och resurser är det enklare fö
 
 8. Mac-enheten visar ett felmeddelande om att **”CompanyPortal” är ett program som laddats ned från Internet. Vill du öppna det ändå?** Klicka på **Öppna**.
 
-  > [!NOTE]
-  > Intune behöver åtkomst till datorn för att se till att enheten är säker nog för att få åtkomst till organisationens resurser. Om datorn vägrar att öppna företagsportalappen kan du försöka att [inaktivera Gatekeeper](https://support.apple.com/HT202491) och sedan öppna appen.
+   > [!NOTE]
+   > Intune behöver åtkomst till datorn för att se till att enheten är säker nog för att få åtkomst till organisationens resurser. Om datorn vägrar att öppna företagsportalappen kan du försöka att [inaktivera Gatekeeper](https://support.apple.com/HT202491) och sedan öppna appen.
 
 9. På den första skärmen som visas i företagsportalappen uppmanas du att **Logga in** med samma arbets- eller skolkonto som du använde för att logga in på företagsportalens webbplats.
 

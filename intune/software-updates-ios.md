@@ -11,11 +11,11 @@ ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 39432d09bea822c25ca9e11181a11a1e2298dfef
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 58727a501d6a8ec14e964094eac9fcd6eb3868da
+ms.sourcegitcommit: c3ae3c3dc46b62d9191813d25a196874ba4927be
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurera uppdateringsprinciper för iOS i Microsoft Intune
 
@@ -54,4 +54,5 @@ Du har tillämpat principen på användare eller enheter. Uppdateringsefterlevna
 
 ## <a name="monitor-ios-device-installation-failures"></a>Övervaka installationsfel för iOS-enhet
 <!-- 1352223 -->
-Rapporten med **installationsfel för iOS-enheter** är tillgänglig i arbetsytan **Programuppdateringar**. I rapporten kan du visa en lista över alla övervakade iOS-enheter som har varit mål för en iOS-uppdateringsprincip, som har försökt genomföra en uppdatering och som inte kunde uppdateras. Du kan se en status för varje enhet och se varför enheten inte har uppdaterats automatiskt. Felfria, uppdaterade enheter visas inte i listan. Vi definierar uppdaterad som den senaste uppdateringen som enheten har stöd för.
+Rapporten **Installationsfel för iOS-enheter** är tillgänglig i fönstret **Programuppdateringar**. I rapporten kan du visa en lista över alla övervakade iOS-enheter som har varit mål för en iOS-uppdateringsprincip, som har försökt genomföra en uppdatering och som inte kunde uppdateras. Du kan se en status för varje enhet och se varför enheten inte har uppdaterats automatiskt. Felfria, uppdaterade enheter visas inte i listan. Vi definierar uppdaterad som den senaste uppdateringen som enheten har stöd för.
+

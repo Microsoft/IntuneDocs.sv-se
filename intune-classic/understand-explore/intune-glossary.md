@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 86d00901-fac7-4471-aac2-f1d13a4879b6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.custom: intune-classic
-ms.openlocfilehash: b4415b7b4b1cd48accae3f0d0d39caedd9cf6b3c
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 9ddf972795d9ced6aff6dd01da4469d49f11c951
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-intune-glossary"></a>Microsoft Intune-ordlista
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 ## <a name="a"></a>A
 
@@ -40,11 +40,13 @@ ms.lasthandoff: 03/22/2018
 |Azure Portal|Den nya konsolen för Intune som snart kommer att introduceras. [Läs mer om den nya portalen](/intune/what-is-intune).|
 
 ## <a name="b"></a>B
+
 |||
 |-|-|
 |BYOD|[Bring your own device](/intune-classic/get-started/choose-how-to-enroll-devices1). Användare kan installera appen för Intunes företagsportal på sin enhet och sedan registrera sig, få åtkomst till företagsresurser som e-post, företagsappar, företagets data och support.|
 
 ## <a name="c"></a>C
+
 |||
 |-|-|
 |Certifikatprofil|Du använder den här principtypen för [secure access to corporate resources](/intune-classic/deploy-use/secure-resource-access-with-certificate-profiles) (säker åtkomst till företagets resurser) med certifikat när du använder Wi-Fi, e-post eller VPN-profiler.|
@@ -57,6 +59,7 @@ ms.lasthandoff: 03/22/2018
 |Anpassad princip|Du [använder dessa principer](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) när en princip för allmän konfiguration inte innehåller en inbyggd inställning som uppfyller dina behov. Du kan använda en anpassad princip för att skapa en inställning på ett annat sätt, som till exempel med Apple Configurator eller OMA-URI.|
 
 ## <a name="d"></a>D
+
 |||
 |-|-|
 |distribution|Att skicka en app eller en princip till en enhet eller användare som du hanterar.|
@@ -65,6 +68,7 @@ ms.lasthandoff: 03/22/2018
 |Mappning av enhetsgrupp|Hjälper dig att [automatically add devices to groups](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune) (automatiskt lägga till enheter till grupper) baserat på en kategori för enheten (till exempel "Personlig" eller "Försäljning") som du eller slutanvändaren kan tilldela enheten.|
 
 ## <a name="e"></a>E
+
 |||
 |-|-|
 |E-postprofil|Den här principen kan användas för att konfigurera [email access settings](/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune) (åtkomstinställningar för e-post) för specifika e-postklienter på mobila enheter och minimera hur mycket slutanvändarna själva måste konfigurera.|
@@ -73,21 +77,25 @@ ms.lasthandoff: 03/22/2018
 |Registrera|Microsoft Intune använder [registrering](/intune-classic/deploy-use/enroll-devices-in-microsoft-intune) för att hantera enheter och tillåta åtkomst till resurser.|
 
 ## <a name="f"></a>F
+
 |||
 |-|-|
 |FastTrack|En [Microsoft-tjänst](https://technet.microsoft.com/library/mt228265.aspx) för Intune-användare med 150 licenser i en berättigad plan. Med den här tjänsten arbetar Microsoft-specialister med dig för att hjälpa dig att komma igång med Intune.|
 
 ## <a name="g"></a>G
+
 |||
 |-|-|
 |Grupper|Grupper låter dig [logiskt samla ihop användare eller enheter](/intune-classic/deploy-use/use-groups-to-manage-users-and-devices-with-microsoft-intune). Du kan till exempel skapa en grupp med alla Windows-datorer. Du kan sedan distribuera appar och principer för dessa grupper.|
 
 ## <a name="h"></a>H
+
 |||
 |-|-|
 |Hybrid|En konfiguration där du kan hantera enheter som är registrerade i Intune [med hjälp av System Center Configuration Manager-konsolen](/intune-classic/get-started/integration-with-cloud-services).|
 
 ## <a name="i"></a>I
+
 |||
 |-|-|
 |Intunes administratörskonsol|Konsolen som du för nuvarande använder för de flesta hanteringsåtgärderna i Intune.|
@@ -96,11 +104,13 @@ ms.lasthandoff: 03/22/2018
 |Inventering|Använd för att visa [maskinvara och program som finns installerade](/intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-intune) på enheter som du hanterar.|
 
 ## <a name="k"></a>K
+
 |||
 |-|-|
 |Helskärmsläge|Det här läget låter dig låsa enheter och är konfigurerat som en del av en [allmän konfigurationsprincip](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies). Du kan till exempel konfigurera en butiksenhet så att den endast tillåter att en app körs.|
 
 ## <a name="m"></a>M
+
 |||
 |-|-|
 |Hanterad webbläsare|Ett [webbläsningsprogram](/intune-classic/deploy-use/manage-internet-access-using-managed-browser-policies) som du kan distribuera i din organisation med Microsoft Intune. En princip för hanterad webbläsare konfigurerar en lista över tillåtna eller blockerade webbplatser som begränsar vilka webbplatser användare av den hanterade webbläsaren kan besöka.|
@@ -111,18 +121,21 @@ ms.lasthandoff: 03/22/2018
 |Konfigurationsprincip för mobilappar|En iOS-princip som används för att [tillhandahålla inställningar för kompatibla iOS-appar](/intune-classic/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune) när de körs, till exempel, ett företagsnamn eller en serveradress.|
 
 ## <a name="o"></a>O
+
 |||
 |-|-|
 |OMA-DM|Open Mobile Alliance Device Management. Ett enhetshanteringsprotokoll som uppfyller industristandard som används av många maskinvarutillverkare för att aktivera kontroll av funktioner i mobila enheter och datorer.|
 |OMA-URI|Open Mobile Alliance Uniform Resource Identifier. Dessa identifierar enskilda enhetsinställningar som överensstämmer med OMA-DM-standarden. Ett antal av dem kan användas i [Intune custom policies](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies) (anpassade principer för Intune) när det inte finns någon inbyggd inställning som uppfyller dina behov.|
 
 ## <a name="p"></a>P
+
 |||
 |-|-|
 |Princip|Ett [package of information](/intune-classic/deploy-use/microsoft-intune-policy-reference) (informationspaket) som har skickats från Intune till en enhet. Du kan till exempel distribuera säkerhetsinställningar eller kompatibilitetsinformation om enheten till enheten.|
 |Återställning av lösenord|En Intune-funktion som gör att du kan tvinga användaren att [återställa lösenordet](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune) på enheter som stöds.|
 
 ## <a name="r"></a>R
+
 |||
 |-|-|
 |Fjärrlåsning|En Intune-funktion som låter dig att [låsa enheter som stöds](/intune-classic/deploy-use/use-remote-lock-and-passcode-reset-in-microsoft-intune), även om du inte äger enheten.|
@@ -131,12 +144,14 @@ ms.lasthandoff: 03/22/2018
 |Krav|En [appdistributionsåtgärd](/intune-classic/deploy-use/add-apps) som låter dig att välja de krav som måste uppfyllas på en enhet innan appen installeras. Exempelvis kan du ange OS-versionen av iOS som måste vara installerat innan programmet installeras.|
 
 ## <a name="s"></a>S
+
 |||
 |-|-|
 |Selektiv rensning|En [selektiv radering](/intune-classic/deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune) tar endast bort företagets data inklusive eventuella MAM-data (Mobile App Management), inställningar och e-postprofiler från en enhet. Med en selektiv rensning lämnas användarens personliga data på enheten.|
 |Prenumeration|Det avtal som du ingår och som ger dig tillgång till en Intune-klient.|
 
 ## <a name="t"></a>T
+
 |||
 |-|-|
 |TeamViewer|Ett program från en tredje part som fungerar med Intune för att tillhandahålla [fjärrhjälpsfunktioner](/intune-classic/deploy-use/common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client#request-and-provide-remote-assistance-for-windows-pcs) för Windows-datorer som hanteras med Intune-klientprogramvaran.|
@@ -144,12 +159,15 @@ ms.lasthandoff: 03/22/2018
 |Villkor|En principtyp som du distribuerar till användare som innehåller information som användarna måste [läsa och godkänna](/intune-classic/deploy-use/terms-and-condition-policy-settings-in-microsoft-intune) innan de kan använda företagsportalen för att registrera och få åtkomst till sitt arbete.|
 
 ## <a name="v"></a>V
+
 |||
 |-|-|
 |Volyminköpta appar|En del appbutiker erbjuder möjligheten att köpa flera licenser till en app som du vill köra i företaget. Intune hjälper dig att hantera appar som du har [köpt via ett sådant program](/intune-classic/deploy-use/manage-volume-purchased-apps-in-microsoft-intune) genom att importera licensinformationen från App Store, spåra hur många licenser som du har använt och hindra dig från att installera fler kopior av appen än du äger.|
 |VPN-profil|En princip som distribuerar [VPN-inställningar](/intune-classic/deploy-use/vpn-connections-in-microsoft-intune) till enheter som du hanterar, vilket minimerar antalet inställningar som slutanvändare måste konfigurera.|
 
 ## <a name="w"></a>W
-|||
-|-|-|
-|Wi-Fi-profil|En princip som distribuerar [inställningar för trådlösa nätverk](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) till enheter för att låta användare att ansluta till företagets nätverk utan att behöva känna till eller konfigurera några inställningar.
+
+|               |                                                                                                                                                                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wi-Fi-profil | En princip som distribuerar [inställningar för trådlösa nätverk](/intune-classic/deploy-use/wi-fi-connections-in-microsoft-intune) till enheter för att låta användare att ansluta till företagets nätverk utan att behöva känna till eller konfigurera några inställningar. |
+

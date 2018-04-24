@@ -1,28 +1,27 @@
 ---
-title: "Inställningar av enhetsbegränsningar för Windows 10 i Microsoft Intune"
-titlesuffix: 
-description: "Läs vilka Microsoft Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows 10."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Enhetsbegränsningsinställningar för Windows 10 i Microsoft Intune – Azure | Microsoft Docs
+description: Läs vilka Microsoft Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Windows 10.
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 4/9/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eee23afb4e2398358dc2c6b19b7d85be6b4f9edb
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
-#<a name="microsoft-intune-windows-10-and-later-device-restriction-settings"></a>Inställningar av enhetsbegränsningar för Microsoft Intune i Windows 10 och senare
+# <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="general"></a>Allmänt
 - **Skärmbild (endast mobil)** – Gör det möjligt för användaren att hämta enhetens skärm som en bild.
@@ -51,7 +50,6 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Ink-arbetsytan** – Blockerar användare från att komma åt Ink-arbetsytan. När den här inställningen inte är konfigurerad är Ink-arbetsytan aktiverad (funktionen är på) och användaren kan använda den ovanför låsskärmen.
 - **Automatisk omdistribution** – Låter användare med administrativ behörighet ta bort alla användardata och inställningar med hjälp av **Ctrl + Win + R** på enhetens låsskärm. Enheten omkonfigureras automatiskt och omregistreras för hantering.
 
-
 ## <a name="password"></a>Lösenord
 -   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.
     -   **Krav på lösenordstyp** – Anger om lösenordet måste vara enbart numeriskt, eller om det kan vara alfanumeriskt.
@@ -75,7 +73,6 @@ För enheter som kör Windows 10 Mobile: Om inloggningen misslyckas ett visst an
 -   **Automatiskt godkännande av frågor om användarens medgivande till parkoppling och sekretess** – Tillåt Windows att automatiskt godkänna meddelanden om medgivande till parkoppling och sekretess när appar körs.
 - **Publicera användaraktiviteter**: Ställ in den här på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen.
 - **Endast lokala aktiviteter**: Ställ in det här alternativet på **Blockera** för att förhindra delad användning och upptäckt av nyligen använda resurser i aktivitetsväxlingen baserat på lokala aktiviteter.
-
 
 Du kan ange information som alla appar på enheten kan komma åt. Du kan också definiera undantag per app med hjälp av **Sekretessundantag per app**.
 
@@ -137,8 +134,6 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Popup-meddelanden på låst skärm** – Hindra varningsmeddelanden från att visas på enhetens låsskärm.
 -   **Skärmtidsgräns (endast Mobile)** – Anger tiden i sekunder mellan att skärmen låses och stängs av.
 
-
-
 ## <a name="app-store"></a>Appbutik
 
 -   **Appbutik (endast mobil)** – Aktivera eller blockera användning av appbutiken på Windows 10 Mobile-enheter.
@@ -152,8 +147,6 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Installera appar på systemenhet** – Hindrar appar från att lagra data på enhetens systemenhet.
 -   **Game DVR (endast skrivbord)** – Konfigurerar om registrering och sändning av spel tillåts.
 -   **Endast appar från butik** – Konfigurerar om användare kan installera appar från andra platser än appbutiken.
-
-
 
 ## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
@@ -192,6 +185,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 ## <a name="search"></a>Sök
 - **Säker sökning (endast mobil)** – Styr hur Cortana filtrerar innehåll för vuxna i sökresultaten. Du kan välja **Strikt**, **Måttlig** eller tillåta att användaren väljer sina egna inställningar.
+- **Visa webbresultat i sökning** – Blockera eller tillåt att webbresultat visas i sökningar på enheten.
 
 ## <a name="cloud-and-storage"></a>Moln och lagring
 -   **Microsoft-konto** – Låter användaren associera ett Microsoft-konto med enheten.
@@ -215,7 +209,6 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Manuell trådlös konfiguration** – Styr om användarna kan konfigurera egna trådlösa anslutningar, eller om de endast kan använda anslutningar som konfigurerats med en trådlös profil (endast Windows 10 Mobile).
 -   **Sökintervall för trådlöst nätverk** – Ange hur ofta enheterna ska söka efter trådlösa nätverk. Ange ett värde mellan 1 (mest frekvent) till 500 (minst frekvent).
 -   **Bluetooth-tillåtna tjänster** – Ange, i form av hexadecimala strängar, en lista över tillåtna Bluetooth-tjänster och Bluetooth-profiler.
-
 
 ## <a name="control-panel-and-settings"></a>Kontrollpanel och inställningar
 
@@ -258,41 +251,48 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 ## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
 
--   **Helskärmsläge** – Identifierar den typ av [helskärmsläge](https://docs.microsoft.com/windows/configuration/kiosk-shared-pc) som stöds av principen. Alternativen är:
+En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Användarna kommer inte åt funktioner på enheten utanför helskärmsapparna.
 
-      - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
-      - **Läget för enskilda appar för kiosk** – Profilen gör att enheten kan användas som en kiosk för enskilda appar.
-      - **Flerappsläge för kiosk** – Profilen gör att enheten kan användas som en kiosk för flera appar.
+- **Helskärmsläge** – Identifierar den typ av helskärmsläge som stöds av principen. Alternativen är:
 
-    Kiosker för enskilda appar kräver följande inställningar:
+  - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
+  - **Helskärmsläge för enskilda appar** – Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
+  - **Helskärmsläge för flera appar** – Profilen gör att enheten kan köra flera appar. Endast de appar som du lägger till är tillgängliga för användaren. Med helskärmsläge för flera appar skapas en mer användarvänlig upplevelse för användarna eftersom de endast ser de appar de behöver.
 
-      - **Användarkonto** – Anger det lokala (för enheten) användarkontot eller Azure AD-kontoinloggning som är kopplat till kioskappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\\username@tenant.org`.
+#### <a name="single-app-kiosks"></a>Helskärmsläge för enskilda appar
+Ange följande inställningar:
 
-         För enheter i offentliga miljöer ska man använda konton med minimal behörighet för att förhindra obehöriga aktiviteter.  
+- **Användarkonto** – Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med helskärmsappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
 
-      - **Appens programanvändarmodell-ID (AUMID)** – Anger AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+    Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
 
-    [Flerappsläge för kiosk](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) kräver en kioskkonfiguration. Använd knappen **Lägg till** för att skapa en kioskkonfiguration eller välja en befintlig.
+- **Appens programanvändarmodell-ID (AUMID)** – Ange AUMID för helskärmsappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
-    Kioskkonfigurationer för flera appar omfattar följande inställningar:
+#### <a name="multi-app-kiosks"></a>Helskärmsläge för flera appar
+I [helskärmsläget för flera appar](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) används en helskärmskonfiguration som visar tillåtna appar och andra inställningar. 
 
-    - **Namn på kioskkonfiguration** – Ett eget namn som används för att identifiera en viss konfiguration.
+Använd knappen **Lägg till** för att skapa en helskärmskonfiguration (eller välja en befintlig konfiguration). Ange sedan följande inställningar:
 
-    - En eller flera **kioskappar** som består av:
+- **Namn på helskärmskonfiguration** – Ange ett eget namn som används för att identifiera konfigurationen.
 
-        - **Apptyp** som anger typen av kioskapp.  Värden som stöds är:   
+- **Helskärmsappar** – Ange vilka appar som ska vara tillgängliga på Start-menyn. De appar som du lägger till är de enda appar som användaren kan öppna.
 
-            - **Win32-app** – En traditionell skrivbordsapp. (Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.)
+  - **Apptyp** – Välj helskärmsappens typ:
+    - **Win32-app** – En traditionell skrivbordsapp. Du behöver den fullständigt kvalificerade sökvägen till den körbara filen, med hänsyn till enheten.
+    - **UWP-app** – En universell Windows-app. Du behöver [AUMID för appen](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-            - **UWP-app** – En universell Windows-app. Du behöver [AUMID för appen](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+  - **Identifierare** – Ange den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
 
-        - **Appidentifierare** – Anger antingen den fullständigt kvalificerade sökvägen för den körbara filen (Win32-appar) eller [appens AUMID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
+- **Aktivitetsfältet** – Välj **Aktivera** (visa) Aktivitetsfältet eller **Inte konfigurerad** (dölj) i helskärmsläget.
 
-    - **Verktygsfält** anger om verktygsfältet ska visas (**Aktiverat**) eller döljas (**Inte konfigurerat**) i kiosken.
+- **Startmenylayout** – Ange en XML-fil som beskriver hur apparna visas på Start-menyn. [Anpassa och exportera Start-layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) innehåller viss vägledning och XML-exempel.
 
-    - **Startmenylayout** – Anger en XML-fil som beskriver hur apparna [visas på Start-menyn](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file).
 
-    - **Tilldelade användare** – Anger ett eller flera användarkonton som är kopplade till kioskkonfigurationen. Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen. Ange domänanslutna konton med formatet `domain\\username@tenant.org`.
+  I [Create a Windows 10 kiosk that runs multiple apps](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) (Skapa ett Windows 10-helskärmsläge som kör flera appar) finns mer information om hur du använder och skapar XML-filer.
+
+- **Tilldelad användare** – Lägg till ett eller flera användarkonton som kan använda de appar som du lägger till. När användaren med kontot loggar in är bara de appar som definierats i konfigurationen tillgängliga. Kontot kan vara lokalt på enheten eller en Azure AD-kontoinloggning som är kopplad till kioskappen.
+
+    Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Windows Defender Antivirus
 
@@ -328,14 +328,11 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
     -   **Användardefinierad**
     -   **Blockera**
 
-
-
 ### <a name="windows-defender-antivirus-exclusions"></a>Windows Defender antivirusundantag
 
 -   **Filer och mappar som ska undantas från genomsökningar och realtidsskydd** – Lägger till en eller flera filer och mappar, som t.ex. **C:\Path** eller **%ProgramFiles%\Path\filename.exe**, i undantagslistan. Dessa filer och mappar tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 -   **Filnamnstillägg som ska undantas från genomsökningar och realtidsskydd** – Lägg till ett eller flera filnamnstillägg, som t.ex. **jpg** eller **txt**, i undantagslistan. Filer med dessa filnamnstillägg tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
 -   **Processer som ska undantas från genomsökningar och realtidsskydd** – Lägg till en eller flera processer av typen **.exe**, **.com** eller **.scr** i undantagslistan. Dessa processer tas inte med i realtidsgenomsökningar eller schemalagda genomsökningar.
-
 
 ## <a name="network-proxy"></a>Nätverksproxy
 
@@ -348,9 +345,7 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
     -   **Proxy-undantag** – Ange de webbadresser som inte får använda proxyservern. Använd semikolon för att avgränsa varje objekt.
     -   **Använd ingen proxyserver för lokal adress** – Aktivera det här alternativet om du inte vill använda proxyservern för lokala adresser på intranätet.
 
-
 ## <a name="windows-spotlight"></a>Windows Spotlight
-
 
 - **Windows Spotlight** – Använd den här inställningen för att blockera alla Windows Spotlight-funktioner på Windows 10-enheter. Följande inställningar är inte tillgängliga om du blockerar den här inställningen.
     - **Windows Spotlight på låsskärm** – Hindra Windows Spotlight från att visa information på enhetens låsskärm.
@@ -360,7 +355,6 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
     - **Windows Spotlight i Åtgärdscenter** – Blockera Windows Spotlight-förslag, på t.ex. nya appar eller säkerhetsinnehåll, från att visas i Windows Åtgärdscenter.
     - **Windows Spotlight-anpassning** – Hindra Windows Spotlight från att anpassa resultat baserat på användningen av en enhet.
     - **Välkommen till Windows-skärm** – Blockera Välkommen till Windows-skärmen där användarinformation om nya eller uppdaterade funktioner visas.
-
 
 ## <a name="projection"></a>Projektion
 
@@ -394,15 +388,3 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 - **Meddelandesynkronisering (endast mobil)** – Inaktivera meddelandefunktioner överallt och säkerhetskopiering och återställning av textmeddelanden.
 - **MMS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot MMS på enheten.
 - **RCS (endast mobil)** – Inaktivera funktionen för att skicka och ta emot Rich Communication Services på enheten.
-
-
-
-
-
-
-
-
-
-
-
-

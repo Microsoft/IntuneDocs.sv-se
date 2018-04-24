@@ -1,29 +1,29 @@
 ---
-title: "Förutsättningar för registrering av mobila enheter"
-description: "Ange krav för hantering av mobila enheter (MDM) och kom igång med att registrera olika operativsystem."
-keywords: 
+title: Förutsättningar för registrering av mobila enheter
+description: Ange krav för hantering av mobila enheter (MDM) och kom igång med att registrera olika operativsystem.
+keywords: ''
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 44fd4af0-f9b0-493a-b590-7825139d9d40
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9d02a822dc9a403806657f36ae0ac4bfad8246d0
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 57dfc1bf2765de6c2e02352caca58f3859742fd6
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-mobile-device-management-in-intune"></a>Krav för hantering av mobila enheter i Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Du kan göra det möjligt för anställda att registrera sina mobila enheter i Intune med följande steg. Samma steg krävs för att hantera företagsägda enheter.
 
@@ -39,7 +39,7 @@ Du kan göra det möjligt för anställda att registrera sina mobila enheter i I
 
 Letar du efter Intune med Configuration Manager?
 > [!div class="button"]
-[Se SCCM-dokument >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
+> [Se SCCM-dokument >](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm)
 
 ## <a name="step-1-enable-connections"></a>Steg 1: Aktivera anslutningar
 
@@ -80,21 +80,22 @@ Genom att anpassa företagsportalen kan du skapa en välbekant miljö för dina 
 
 Företagsnamnet visas som företagsportalens rubrik. Kontaktuppgifterna och informationen visas för användarna på skärmen Kontakta IT på företagsportalen. Sekretesspolicyn visas när användaren klickar på sekretesslänken.
 
-|Fältnamn|Högsta längd|Mer information|
-    |----------|------------------------|----------------|
-    |Företag|40|Det här namnet visas som företagsportalens rubrik. **Obs**! Använd endast alfanumeriska tecken. Specialtecken kan inte användas i fältet.|
-    |IT-avdelningens kontaktperson|40|Det här namnet visas på sidan **Kontakta IT-avdelningen**.|
-    |IT-avdelningens telefonnummer|20|Det här numret visas på sidan **Kontakta IT-avdelningen**.|
-    |IT-avdelningens e-postadress|40|Den här adressen visas på sidan **Kontakta IT-avdelningen**. Du måste ange en giltig e-postadress i formatet **alias@domainname.com**.|
-    |Ytterligare information|120|Den här informationen visas på sidan **Kontakta IT-avdelningen**.|
-    |URL till företagets sekretesspolicy|79|Du kan ange en egen sekretesspolicy för ditt företag som visas när användaren klickar på en länk på företagsportalen. Du måste ange en giltig URL i formatet https://www.contoso.com.|
+
+|          Fältnamn           | Högsta längd |                                                                                       Mer information                                                                                        |
+|-------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         Företag          |     40     |                Det här namnet visas som företagsportalens rubrik. <strong>Obs</strong>! Använd endast alfanumeriska tecken. Specialtecken kan inte användas i fältet.                |
+|  IT-avdelningens kontaktperson   |     40     |                                                                Det här namnet visas på sidan <strong>Kontakta IT-avdelningen</strong>.                                                                |
+|  IT-avdelningens telefonnummer   |     20     |                                                           Det här numret visas på sidan <strong>Kontakta IT-avdelningen</strong>.                                                           |
+|  IT-avdelningens e-postadress  |     40     |             Den här adressen visas på sidan <strong>Kontakta IT-avdelningen</strong>. Du måste ange en giltig e-postadress i formatet <strong>alias@domainname.com</strong>.              |
+|    Ytterligare information     |    120     |                                                            Den här informationen visas på sidan <strong>Kontakta IT-avdelningen</strong>.                                                             |
+| URL till företagets sekretesspolicy |     79     | Du kan ange en egen sekretesspolicy för ditt företag som visas när användaren klickar på en länk på företagsportalen. Du måste ange en giltig URL i formatet https://www.contoso.com. |
 
 ### <a name="support-contacts"></a>Supportkontakter
 Supportwebbplatsen visas för användarna på företagsportalen så att de kan få tillgång till onlinesupport.
 
 |Fältnamn|Högsta längd|Mer information|
     |----------|------------------------|----------------|
-    |URL till supportwebbplatsen|150|Om du har en supportwebbplats som du vill att slutanvändarna ska använda, anger du webbadressen här. URL:en måste ha formatet https://www.contoso.com. Om du inte anger någon webbadress kommer inget att visas på sidan **Kontakta IT** på företagsportalen.|
+    |URL till supportwebbplatsen|150|Om du har en supportwebbplats som du vill att slutanvändarna ska använda, anger du webbadressen här. Webbadressen måste anges i formatet https://www.contoso.com. Om du inte anger någon webbadress kommer inget att visas på sidan **Kontakta IT** på företagsportalen.|
     |Namn på webbplats|40|Det här är det egna namnet som visas för supportwebbplatsens URL. Om du bara anger URL:en till en supportwebbplats utan något eget namn visas **Gå till IT-webbplatsen** på sidan **Kontakta IT** på företagsportalen.|
 
 

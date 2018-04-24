@@ -1,29 +1,29 @@
 ---
-title: "Säkerhetsprincipinställningar för mobila enheter"
-description: "Använd Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen."
-keywords: 
+title: Säkerhetsprincipinställningar för mobila enheter
+description: Använd Intune om du vill konfigurera ett flertal inställningar som du kan distribuera till hanterade enheter i organisationen.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 11/02/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: e5ab3b76-08af-4893-b294-fb6627fdc4c6
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: fa86e50ebf7e65be0ce8ace65e2cb0bc7e38658e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 83536a4d9858454505a84a2e394ace1119255049
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mobile-device-security-policy-settings-in-microsoft-intune"></a>Säkerhetsprincipinställningar för mobila enheter i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!IMPORTANT]
 > I Microsoft Intune finns nu separata konfigurationsprinciper för varje enhetsplattform. Dessa principer innehåller de mest aktuella inställningarna som du kan använda. Du kan fortsätta att använda den mobila enhetens säkerhetsprincip. Alla befintliga distributioner kommer att fungera. Du bör planera att migrera till de nya konfigurationsprinciperna så snart som möjligt eftersom den mobila enhetens säkerhetsprincip kommer att tas bort i framtiden.
@@ -34,7 +34,7 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 
 -   Windows RT 8.1 och registrerade Windows 8.1-enheter
 
--   Windows RT
+-   Windows RT
 
 -   Windows Phone 8 och Windows Phone 8.1
 
@@ -48,32 +48,34 @@ Du kan skapa och distribuera säkerhetsprinciper för mobila enheter för följa
 
 ## <a name="security-settings"></a>Säkerhetsinställningar
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Kräv ett lösenord för att låsa upp mobila enheter**|Nej|Nej|Ja|Ja|Ja|
-|**Lösenordstyp krävs**<br /><br />Den här inställningen anger vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.|Ja|Ja|Ja|Ja|Nej|
-|**Krävd lösenordstyp – minsta antal teckenuppsättningar**<br /><br />Det finns fyra teckenuppsättningar: gemener, versaler, siffror och symboler. Den här inställningen anger hur många olika teckenuppsättningar som lösenordet måste innehålla. För iOS-enheter specificerar detta dock det antal symboltecken som måste inkluderas i lösenordet.|Ja|Ja|Ja|Ja|Nej|
-|**Minsta längd på lösenord**|Ja|Ja|Ja|Ja|Ja|
-|**Tillåt enkla lösenord**<br /><br />Exempel på enkla lösenord är "0000" och "1234".|Nej|Nej|Ja|Ja|Nej|
-|**Antal tillåtna, upprepade felinloggningar innan enheten rensas**|Ja|Ja|Ja|Ja|Ja|
-|**Minuter av inaktivitet innan skärmen stängs av**<sup>1</sup>|Ja|Ja|Ja|Ja|Ja|
-|**Lösenordets giltighetstid (i dagar)**|Ja|Ja|Ja|Ja|Ja|
-|**Kom ihåg tidigare lösenord**|Ja|Ja|Ja|Ja|Ja|
-|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Ja|Ja|Ja|Ja|Ja|
-|**Lösenordskvalitet**|Nej|Nej|Nej|Nej|Ja|
-|**Tillåt bildlösenord och PIN**|Ja|Ja|Nej|Nej|Nej|
-|**Antal minuters inaktivitet innan lösenord krävs**|Nej|Nej|Nej|Ja|Nej|
-|**Tillåt fingeravtrycksupplåsning**|Nej|Nej|Nej|iOS 7 och senare|Nej|
+|                                                                                                                                                                                        Inställningsnamn                                                                                                                                                                                         | Windows 8.1 och Windows RT 8.1 | Windows RT | Windows Phone 8 och Windows Phone 8.1 |       iOS       | Android och Samsung KNOX Standard |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|---------------------------------------|-----------------|-----------------------------------|
+|                                                                                                                                                                <strong>Kräv ett lösenord för att låsa upp mobila enheter</strong>                                                                                                                                                                 |               Nej               |     Nej     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                 <strong>Lösenordstyp krävs</strong><br /><br />Den här inställningen anger vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.                                                                                                                 |              Ja               |    Ja     |                  Ja                  |       Ja       |                Nej                 |
+| <strong>Krävd lösenordstyp – minsta antal teckenuppsättningar</strong><br /><br />Det finns fyra teckenuppsättningar: gemener, versaler, siffror och symboler. Den här inställningen anger hur många olika teckenuppsättningar som lösenordet måste innehålla. För iOS-enheter specificerar detta dock det antal symboltecken som måste inkluderas i lösenordet. |              Ja               |    Ja     |                  Ja                  |       Ja       |                Nej                 |
+|                                                                                                                                                                          <strong>Minsta längd på lösenord</strong>                                                                                                                                                                           |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                               <strong>Tillåt enkla lösenord</strong><br /><br />Exempel på enkla lösenord är "0000" och "1234".                                                                                                                                                |               Nej               |     Nej     |                  Ja                  |       Ja       |                Nej                 |
+|                                                                                                                                                  <strong>Antal tillåtna, upprepad felinloggningar innan enheten rensas</strong>                                                                                                                                                   |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                                         <strong>Minuter av inaktivitet innan skärmen stängs av</strong><sup>1</sup>                                                                                                                                                          |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                                                         <strong>Lösenordets giltighetstid (i dagar)</strong>                                                                                                                                                                         |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                                                         <strong>Kom ihåg tidigare lösenord</strong>                                                                                                                                                                          |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                              <strong>Spara lösenordshistorik</strong> – <strong>Förhindra återanvändning av tidigare lösenord</strong>                                                                                                                                              |              Ja               |    Ja     |                  Ja                  |       Ja       |                Ja                |
+|                                                                                                                                                                              <strong>Lösenordskvalitet</strong>                                                                                                                                                                              |               Nej               |     Nej     |                  Nej                   |       Nej        |                Ja                |
+|                                                                                                                                                                       <strong>Tillåt bildlösenord och PIN</strong>                                                                                                                                                                       |              Ja               |    Ja     |                  Nej                   |       Nej        |                Nej                 |
+|                                                                                                                                                             <strong>Antal minuters inaktivitet innan lösenord krävs</strong>                                                                                                                                                              |               Nej               |     Nej     |                  Nej                   |       Ja       |                Nej                 |
+|                                                                                                                                                                          <strong>Tillåt fingeravtrycksupplåsning</strong>                                                                                                                                                                          |               Nej               |     Nej     |                  Nej                   | iOS 7 och senare |                Nej                 |
+
 <sup>1</sup> När du konfigurerar inställningarna **Minuter av inaktivitet innan skärmen stängs av** och **Minuter av inaktivitet innan lösenord måste anges** för iOS-enheter tillämpas de i följd. Om du t.ex. ställer in värdet för båda inställningarna till **5** minuter så stängs skärmen av automatiskt efter 5 minuter, och enheten låses efter ytterligare 5 minuter. Om användaren däremot stänger av skärmen manuellt så tillämpas den andra inställningen omedelbart. Efter det att användaren i det här exemplet har stängt av skärmen låses enheten 5 minuter senare.
 
 Om du distribuerar en princip för lösenordslängd för enheter som kör Windows RT tvingas användarna att återställa sina lösenord, även om deras aktuella lösenord uppfyller principkraven.
 
 ## <a name="encryption-settings"></a>Krypteringsinställningar
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
-|----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
-|**Kräv kryptering på den mobila enheten**<sup>1</sup><br /><br />För Windows Phone 8-enheter måst du ställa in denna på **Ja**.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen **Kräv lösenord för att låsa upp mobila enheter**.|Ja|Nej|Ja|Nej|Ja|
-|**Kräv kryptering på minneskort**<br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas <br />Appar och associerade data krypteras automatiskt.|saknas|Ja|
+|                                                                                                                                     Inställningsnamn                                                                                                                                     | Windows 8.1 och Windows RT 8.1 | Windows RT |              Windows Phone 8 och Windows Phone 8.1              | iOS | Android och Samsung KNOX Standard |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------|-----------------------------------------------------------------|-----|-----------------------------------|
+| <strong>Kräv kryptering på den mobila enheten</strong><sup>1</sup><br /><br />För Windows Phone 8-enheter måst du ställa in denna på <strong>Ja</strong>.<br /><br />Om du vill möjliggöra kryptering på iOS-enheter måste du aktivera inställningen <strong>Kräv lösenord för att låsa upp mobila enheter</strong>. |              Ja               |     Nej     |                               Ja                               | Nej  |                Ja                |
+|                                                                    <strong>Kräv kryptering på minneskort</strong><br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.                                                                     |              saknas               |    saknas     | saknas <br />Appar och associerade data krypteras automatiskt. | saknas |                Ja                |
+
 <sup>1</sup> Här finns ytterligare information för enheter som kör Windows 8.1:
 
 -   Om du vill framtvinga kryptering på enheter som kör Windows 8.1 måste du installera [December 2014 MDM-klientuppdateringen för Windows](http://support.microsoft.com/kb/3013816) på varje enhet.
@@ -86,14 +88,14 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="malware-settings"></a>Inställningar för skadlig programvara
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Kräv nätverksbrandvägg**|Ja|Nej|Nej|Nej|Nej|
 |**Aktivera SmartScreen**|Ja|Nej|Nej|Nej|Nej|
 
 ## <a name="system-settings"></a>Systeminställningar
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Kräv automatiska uppdateringar**|Ja|Nej|Nej|Nej|Nej|
 |**Kräv automatiska uppdateringar – Minsta nödvändiga klassificering för uppdateringar som ska installeras automatiskt**<br /><br />Välj den klassificering av uppdateringar som ska installeras automatiskt:<br /><br />- **Viktigt!** Installerar alla uppdateringar som klassificeras som viktiga.<br /><br />- **Rekommenderade**. Installerar alla uppdateringar som klassificeras som viktiga eller rekommenderade.|Ja|Nej|Nej|Nej|Nej|
@@ -110,7 +112,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="cloud-settings--documents-and-data"></a>Molninställningar – dokument och data
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt säkerhetskopiering till iCloud**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt dokumentsynkronisering till iCloud**|Nej|Nej|Nej|Ja|Nej|
@@ -121,14 +123,14 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="cloud-settings--accounts-and-synchronization"></a>Molninställningar – konton och synkronisering
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt Microsoft-konto**|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
 |**Tillåt autosynkronisering av Google-konto**|Nej|Nej|Nej|Nej|Ja (endast Samsung KNOX Standard)|
 
 ## <a name="email-settings"></a>E-postinställningar
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt att användare hämtar bifogade filer i e-post**<sup>1</sup>|saknas|saknas|saknas|saknas|saknas|
 |**E-postsynkroniseringsperiod** <br /><br />Den här inställningen gäller enheter som även hanteras av Exchange ActiveSync.|saknas|saknas|saknas|saknas|saknas|
@@ -138,7 +140,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="application-settings---browser"></a>Programinställningar - webbläsare
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt webbläsare**|Nej|Nej|Endast Windows Phone 8.1|Ja|Ja (endast Samsung KNOX Standard)|
 |**Tillåt autofyll**|Ja|Nej|Nej|Ja|Ja (endast Samsung KNOX Standard)|
@@ -159,7 +161,7 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="application-settings---apps"></a>Programinställningar - appar
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt appbutik**|Nej|Nej|Endast Windows Phone 8.1|Ja|Ja (endast Samsung KNOX Standard)|
 |**Kräv lösenord för åtkomst till appbutik**|Nej|Nej|Nej|Ja|Nej|
@@ -172,17 +174,17 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="application-settings---gaming"></a>Programinställningar - spel
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt Game Center-vänner**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt spel för flera personer**|Nej|Nej|Nej|Ja|Nej|
 
 ## <a name="device-capabilities-settings---hardware"></a>Enhetskapacitetsinställningar - maskinvara
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt kamera**|Nej|Nej|Endast Windows Phone 8.1|Ja|Ja|
-|**Tillåt flyttbara lagringsmedier**|Nej|Nej|Ja|Nej|Ja (endast Samsung KNOX Standard)|
+|**Tillåt flyttbara lagringsenheter**|Nej|Nej|Ja|Nej|Ja (endast Samsung KNOX Standard)|
 |**Tillåt Wi-Fi**|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (endast Samsung KNOX Standard)|
 |**Tillåt trådlös Internetdelning**|Nej|Nej|Endast Windows Phone 8.1|Nej|Ja (endast Samsung KNOX Standard)|
 |**Tillåt automatisk anslutning till kostnadsfria trådlösa surfzoner**|Nej|Nej|Endast Windows Phone 8.1|Nej|Nej|
@@ -194,16 +196,16 @@ Om du distribuerar en princip för lösenordslängd för enheter som kör Window
 
 ## <a name="device-capabilities-settings---cellular"></a>Enhetskapacitetsinställningar - mobil
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt röstnätverksväxling**|Nej|Nej|Nej|Ja|Ja (endast Samsung KNOX Standard)|
-|**Tillåt datanätverksväxling**|Ja|Nej|Nej|Ja|Ja (endast Samsung KNOX Standard)|
+|**Tillåt dataroaming**|Ja|Nej|Nej|Ja|Ja (endast Samsung KNOX Standard)|
 |**Tillåt automatisk synkronisering under nätverksväxling**|Nej|Nej|Nej|Ja|Nej|
 |**Tillåt SMS-/MMS-meddelanden**|Nej|Nej|Nej|Nej|Ja (endast Samsung KNOX Standard)|
 
 ## <a name="device-capabilities-settings---features"></a>Enhetskapacitetsinställningar - funktioner
 
-|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
+|Inställningsnamn|Windows 8.1 och Windows RT 8.1|Windows RT|Windows Phone 8 och Windows Phone 8.1|iOS|Android och Samsung KNOX Standard|
 |----------------|----------------------------------|--------------|-----------------------------------------|-------|----------------------------|
 |**Tillåt röstassistent**|Nej|Nej|Nej|Ja|Ja (endast Samsung KNOX Standard)|
 |**Tillåt röstassistent när enheten är låst**|Nej|Nej|Nej|Ja|Nej|

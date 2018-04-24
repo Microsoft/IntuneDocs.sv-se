@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a47e1388f640f96c2650e284ae0a5311fd816ba7
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 22018a241664a02aa99b9a3b1a53aa559ab42db5
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-custom-policies-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Använda anpassade principer för att tillåta och blockera appar för Samsung KNOX Standard-enheter
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 I det här avsnittet anges hur du skapar en anpassad princip för Microsoft Intune som skapar något av följande:
 
@@ -39,21 +39,21 @@ De här inställningarna kan endast användas av enheter som kör Samsung KNOX S
 3. Ange ett namn och en beskrivning (valfritt) för principen och välj sedan **Lägg till** i avsnittet **OMA-URI-inställningar**.
 4. I dialogrutan **Lägg till eller redigera OMA-URI-inställning** anger du följande: För en lista över appar som blockeras från att köras på enheten:
     
-    - **Inställningsnamn.** Ange **PreventStartPackages**.
-    - **Beskrivning av inställning.** Ange en valfri beskrivning (valfritt), till exempel ”lista över appar som har blockerats från att köras”.
-    -   **Datatyp.** Välj **Sträng** i listrutan.
-    -   **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-    -   **Värde.** Ange en lista över de appaketnamn som du vill blockera. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+   - **Inställningsnamn.** Ange **PreventStartPackages**.
+   - **Beskrivning av inställning.** Ange en valfri beskrivning (valfritt), till exempel ”lista över appar som har blockerats från att köras”.
+   - **Datatyp.** Välj **Sträng** i listrutan.
+   - **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
+   - **Värde.** Ange en lista över de appaketnamn som du vill blockera. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
-    För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
+     För en lista över appar som användare tillåts att installera från Google Play (alla andra appar exkluderas):
 
-    - **Inställningsnamn.** Ange **AllowInstallPackages**.
-    - **Beskrivning av inställning.** Ange en beskrivning (valfritt), till exempel ”lista över appar som användare kan installera från Google Play”.
-    - **Datatyp.** Välj **Sträng** i listrutan.
-    - **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
-    - **Värde.** Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
+   - **Inställningsnamn.** Ange **AllowInstallPackages**.
+   - **Beskrivning av inställning.** Ange en beskrivning (valfritt), till exempel ”lista över appar som användare kan installera från Google Play”.
+   - **Datatyp.** Välj **Sträng** i listrutan.
+   - **OMA-URI.** Ange **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
+   - **Värde.** Ange en lista över de appaketnamn som du vill tillåta. Du kan använda **; : ,** eller **|** som avgränsare. (Exempel: paket1;paket2;)
 
-4. Klicka på **OK** och sedan på **Spara princip**. 
+5. Klicka på **OK** och sedan på **Spara princip**. 
 
 >[!TIP]
 > Du kan hitta paket-ID:et för en app genom att gå till appen i Google Play. Paket-ID finns i webbadressen på appens sida. Paket-ID för Microsoft Word-appen är till exempel **com.microsoft.office.word**.

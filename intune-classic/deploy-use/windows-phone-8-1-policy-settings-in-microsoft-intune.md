@@ -1,29 +1,29 @@
 ---
-title: "Principinställningar för Windows Phone 8.1"
-description: "I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Windows Phone 8.1-enheter. Du kan också ange OMA-URI-värden för att skapa anpassade inställningar som inte är tillgängliga från Intune."
-keywords: 
+title: Principinställningar för Windows Phone 8.1
+description: I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Windows Phone 8.1-enheter. Du kan också ange OMA-URI-värden för att skapa anpassade inställningar som inte är tillgängliga från Intune.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 10/11/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 83f7469c-272e-43f2-8139-b0d7bc34f43f
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 083ac6c4bbab6cdad9fd07ac68cdd7447f14fe5e
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: b44215e301bb712cc4d27722515d2e51b124101b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-phone-81-policy-settings-in-microsoft-intune"></a>Principinställningar för Windows Phone 8.1 i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 I Intune finns en uppsättning inbyggda allmänna inställningar som du kan konfigurera i Windows Phone 8.1-enheter. Du kan också ange OMA-URI-värden (Open Mobile Alliance Uniform Resource Identifier) för att skapa anpassade inställningar som inte är tillgängliga från Intune.
 
@@ -43,18 +43,18 @@ Använd Microsoft Intunes **Allmänna konfigurationsprincip för Windows Phone (
 
 ### <a name="password-settings"></a>Inställningar för lösenord
 
-|Inställningsnamn|Information|
-|----------------|------|
-|**Kräv ett lösenord för att låsa upp mobila enheter**|Anger om användarna måste ange ett lösenord för att få åtkomst till sina enheter.|
-|**Lösenordstyp krävs**|Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.|
-|**Krävd lösenordstyp – minsta antal teckenuppsättningar**|Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. För iOS-enheter specificerar detta dock det antal symboler som måste inkluderas i lösenordet.|
-|**Minsta längd på lösenord**|Anger det minsta antalet tecken som lösenordet måste innehålla.|
-|**Tillåt enkla lösenord**|Anger att enkla lösenord kan användas, till exempel "0000" och "1234".|
-|**Antal tillåtna, upprepade felinloggningar innan enheten rensas**|Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.|
-|**Antal minuter av inaktivitet innan skärmen stängs av**|Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses automatiskt.|
-|**Lösenordets giltighetstid (i dagar)**|Anger antalet dagar innan lösenordet måste ändras.|Ja|Ja|
-|**Kom ihåg tidigare lösenord**|Anger om tidigare använda lösenord ska sparas så att användaren inte kan använda dem igen.|
-|**Spara lösenordshistorik** – **Förhindra återanvändning av tidigare lösenord**|Anger hur många tidigare använda lösenord som ska lagras.|
+|                                           Inställningsnamn                                            |                                                                                                                                    Information                                                                                                                                     |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                   <strong>Kräv ett lösenord för att låsa upp mobila enheter</strong>                    |                                                                                                     Anger om användarna måste ange ett lösenord för att få åtkomst till sina enheter.                                                                                                     |
+|                              <strong>Lösenordstyp krävs</strong>                              |                                                                                          Anger vilken typ av lösenord som krävs, t.ex. enbart alfanumeriskt eller numeriskt.                                                                                           |
+|            <strong>Krävd lösenordstyp – minsta antal teckenuppsättningar</strong>             | Anger hur många olika teckenuppsättningar som lösenordet måste innehålla. Det finns fyra teckenuppsättningar: gemena bokstäver, versala bokstäver, siffror och symboler. För iOS-enheter specificerar detta dock det antal symboler som måste inkluderas i lösenordet. |
+|                             <strong>Minsta längd på lösenord</strong>                              |                                                                                                 Anger det minsta antalet tecken som lösenordet måste innehålla.                                                                                                  |
+|                              <strong>Tillåt enkla lösenord</strong>                              |                                                                                                     Anger att enkla lösenord kan användas, till exempel "0000" och "1234".                                                                                                     |
+|     <strong>Antal tillåtna, upprepade felinloggningar innan enheten rensas</strong>      |                                                                                         Anger hur många gånger ett felaktigt lösenord kan anges innan enheten rensas.                                                                                         |
+|                <strong>Antal minuter av inaktivitet innan skärmen stängs av</strong>                 |                                                                                       Anger hur lång tid en enhet måste vara inaktiv innan skärmen låses automatiskt.                                                                                        |
+|                            <strong>Lösenordets giltighetstid (i dagar)</strong>                            |                                                                                                    Anger antalet dagar innan lösenordet måste ändras.                                                                                                    |
+|                            <strong>Kom ihåg tidigare lösenord</strong>                             |                                                                                     Anger om tidigare använda lösenord ska sparas så att användaren inte kan använda dem igen.                                                                                      |
+| <strong>Spara lösenordshistorik</strong> – <strong>Förhindra återanvändning av tidigare lösenord</strong> |                                                                                                          Anger hur många tidigare använda lösenord som ska lagras.                                                                                                          |
 
 ### <a name="encryption-settings"></a>Krypteringsinställningar
 
@@ -119,14 +119,15 @@ I **Lista över tillåtna och blockerade appar** anger du en lista över appar s
 > [!NOTE]
 > En enskild princip kan bara innehålla en lista över tillåtna eller blockerade appar. Du kan inte ange båda i samma princip.
 
-|Inställningsnamn|Information|
-|----------------|--------------------|
-|**Blockera enheter från att öppna apparna i listan**|Visar en lista med de appar som inte hanteras av Intune och som användarna inte får installera och köra.|
-|**Tillåt endast att enheter får installera apparna i listan**|Visar listan med de appar som användare tillåts att installera. Användarna kan inte installera några andra appar. Appar som hanteras av Intune tillåts automatiskt.|
-|**Lägg till**|Lägger till en app i den markerade listan. Ange ett namn, webbadressen till appen i appbutiken och appens utgivare (valfritt). Mer hjälp finns i Så här anger du webbadresser till appbutiker senare i det här avsnittet.
-|**Importera appar**|Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och app-URL i filen.|
-|**Redigera**|Du kan redigera namn, utgivare och webbadress för den valda appen.|
-|**Ta bort**|Tar bort den markerade appen från listan.|
+|                          Inställningsnamn                          |                                                                                                      Information                                                                                                      |
+|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <strong>Blockera enheter från att öppna apparna i listan</strong>   |                                                        Visar en lista med de appar som inte hanteras av Intune och som användarna inte får installera och köra.                                                         |
+| <strong>Tillåt endast att enheter får installera apparna i listan</strong> |                                 Visar listan med de appar som användare tillåts att installera. Användarna kan inte installera några andra appar. Appar som hanteras av Intune tillåts automatiskt.                                 |
+|                      <strong>Lägg till</strong>                      | Lägger till en app i den markerade listan. Ange ett namn, webbadressen till appen i appbutiken och appens utgivare (valfritt). Mer hjälp finns i Så här anger du webbadresser till appbutiker senare i det här avsnittet. |
+|                  <strong>Importera appar</strong>                  |                              Importerar en lista med appar som du har angett i en fil med kommaseparerade värden. Använd format, appnamn, utgivare och app-URL i filen.                               |
+|                     <strong>Redigera</strong>                      |                                                                          Du kan redigera namn, utgivare och webbadress för den valda appen.                                                                          |
+|                    <strong>Ta bort</strong>                     |                                                                                      Tar bort den markerade appen från listan.                                                                                      |
+
 > [!IMPORTANT]
 > Om du skapar en lista över tillåtna appar för Windows Phone 8.1-enheter måste du lägga till företagsportalappen i listan, annars blockeras den.
 
@@ -140,7 +141,7 @@ Gå till sidan [Appar+spel i Windows Phone appar och spel](http://www.windowspho
 
 Öppna appens sida och kopiera webbadressen till Urklipp. Nu kan du använda den som webbadress i listan över tillåtna eller blockerade appar.
 
-**Exempel:** Sök i butiken efter Skype-appen. Webbadressen som du använder är **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
+**Exempel:** Sök i butiken efter Skype-appen. Den URL som du använder är **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.
 
 ## <a name="custom-policy-settings"></a>Anpassade principinställningar
 Använd **Anpassad konfigurationsprincip för Windows Phone** i Microsoft Intune för att distribuera OMA-URI-inställningar som kan användas till att styra funktioner på **Windows Phone 8.1-enheter**. Detta är standardinställningar som många tillverkare av mobila enheter använder för att styra enhetsfunktioner.

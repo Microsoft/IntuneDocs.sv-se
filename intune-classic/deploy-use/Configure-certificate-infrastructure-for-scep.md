@@ -15,36 +15,36 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 37dcc2e7a11e33ff0543a3f2020331d52f5052ad
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 5e7b266bcc47ae229a200f0b690429f505a59603
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-certificate-infrastructure-for-scep"></a>Konfigurera certifikatinfrastruktur för SCEP
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Det här avsnittet beskriver vilken infrastruktur du behöver för att kunna skapa och distribuera SCEP-certifikatprofiler.
 
 ### <a name="on-premises-infrastructure"></a>Lokal infrastruktur
 
--    **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
+- **Active Directory-domän**: Alla servrar i det här avsnittet (förutom webbprogramsproxyservern) måste vara anslutna till Active Directory-domänen.
 
--  **Certifikatutfärdare** (CA): En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
-    Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
-I
--  **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter. NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
+- **Certifikatutfärdare** (CA): En utfärdare av företagscertifikat som körs på en Enterprise-version av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. Instruktioner om hur du ställer in en certifikatutfärdare finns i [Install the Certification Authority](http://technet.microsoft.com/library/jj125375.aspx).
+   Om certifikatutfärdaren kör Windows Server 2008 R2, måste du [installera snabbkorrigeringen från KB2483564](http://support.microsoft.com/kb/2483564/).
+  I
+- **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter. NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän återfinns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
--  **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
--  **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramsproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
-    -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
-    -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
+- **Microsoft Intune-certifikatanslutningsapp**: Använd Intune-administratörskonsolen för att hämta installationsprogrammet för **Certifikatanslutningsapp** (**ndesconnectorssetup.exe**). Sen kör du **ndesconnectorssetup.exe** på datorn där du vill installera Certifikat Connector.
+- **Webbprogramsproxyserver** (valfritt): Du kan använda en server som kör Windows Server 2012 R2 eller senare som en webbprogramsproxyserver (WAP, Web Application Proxy). Den här konfigurationen:
+   -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
+   -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
 
- > [!NOTE]           
-> -    Servern som är värd för WAP [måste installera en uppdatering](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](https://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](https://support.microsoft.com/kb/3011135).
->-  Dessutom måste den server som är värd för WAP ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter, samt lita på SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
-    Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
+  > [!NOTE]           
+  > -    Servern som är värd för WAP [måste installera en uppdatering](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](https://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](https://support.microsoft.com/kb/3011135).
+  >-  Dessutom måste den server som är värd för WAP ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter, samt lita på SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
+   Information om certifikat för WAP finns i sektionen **Planera certifikat** av [Installera och konfigurera webbprogramproxy för publicering av interna program](https://technet.microsoft.com/library/dn383650.aspx). Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](http://technet.microsoft.com/library/dn584113.aspx).|
 
 ### <a name="network-requirements"></a>Nätverkskrav
 
@@ -126,18 +126,18 @@ I det här steget kommer du att:
 
 Här följer skärmdumpar av en exempelkonfiguration av mallen.
 
-![Mall, fliken för hantering av begäran](..\media\scep_ndes_request_handling.png)
+![Mall, fliken för hantering av begäran](../media/scep_ndes_request_handling.png)
 
-![Mall, fliken för ämnesrad](..\media\scep_ndes_subject_name.jpg)
+![Mall, fliken för ämnesrad](../media/scep_ndes_subject_name.jpg)
 
-![Mall, fliken för säkerhet](..\media\scep_ndes_security.jpg)
+![Mall, fliken för säkerhet](../media/scep_ndes_security.jpg)
 
-![Mall, fliken för tillägg](..\media\scep_ndes_extensions.jpg)
+![Mall, fliken för tillägg](../media/scep_ndes_extensions.jpg)
 
-![Mall, fliken för utfärdandekrav](..\media\scep_ndes_issuance_reqs.jpg)
+![Mall, fliken för utfärdandekrav](../media/scep_ndes_issuance_reqs.jpg)
 
->   [!IMPORTANT]
-    > För Användningsprinciper (på den fjärde skärmbilden) lägger du endast till de användningsprinciper som krävs. Bekräfta dina val med säkerhetsadministratörerna.
+> [!IMPORTANT]
+> För Användningsprinciper (på den fjärde skärmbilden) lägger du endast till de användningsprinciper som krävs. Bekräfta dina val med säkerhetsadministratörerna.
 
 
 
@@ -167,28 +167,28 @@ I det här steget kommer du att:
 
 
 
-   1.  DU måste logga in som en **Företagsadministratör**på servern som står värd för NDES och sedan använda [guiden Lägg till roller och funktioner](https://technet.microsoft.com/library/hh831809.aspx) för att installera NDES:
+1. DU måste logga in som en **Företagsadministratör**på servern som står värd för NDES och sedan använda [guiden Lägg till roller och funktioner](https://technet.microsoft.com/library/hh831809.aspx) för att installera NDES:
 
-    1.  I guiden väljer du **Active Directory-certifikattjänster** för att få tillgång till AD CS-rolltjänsterna. Välj **Registreringstjänsten för nätverksenheten**, avmarkera **Certifikatutfärdare**och slutför guiden.
+   1. I guiden väljer du **Active Directory-certifikattjänster** för att få tillgång till AD CS-rolltjänsterna. Välj **Registreringstjänsten för nätverksenheten**, avmarkera **Certifikatutfärdare**och slutför guiden.
 
-        > [!TIP]
-        > Klicka inte på **Stäng** på sidan **Installationsförlopp**i guiden. Klicka istället på länken **Konfigurera Active Directory-certifikattjänster på målservern**. Då öppnas guiden **AD CS-konfiguration** som du använder för nästa åtgärd. När AD CS-konfiguration öppnats stänger du guiden Lägg till roller och funktioner.
+      > [!TIP]
+      > Klicka inte på **Stäng** på sidan **Installationsförlopp**i guiden. Klicka istället på länken **Konfigurera Active Directory-certifikattjänster på målservern**. Då öppnas guiden **AD CS-konfiguration** som du använder för nästa åtgärd. När AD CS-konfiguration öppnats stänger du guiden Lägg till roller och funktioner.
 
-    2.  När NDES läggs till på servern installerar guiden även IIS. Kontrollera att IIS har följande konfigurationer:
+   2. När NDES läggs till på servern installerar guiden även IIS. Kontrollera att IIS har följande konfigurationer:
 
-        -   **Webbserver** &gt; **Säkerhet** &gt; **Begärandefiltrering**
+      -   **Webbserver** &gt; **Säkerhet** &gt; **Begärandefiltrering**
 
-        -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 3.5**. Om du installerar ASP.NET 3.5 installeras även .NET Framework 3.5. När du installerar .NET Framework 3.5, installera både kärnfunktionen **.NET Framework 3.5** och **HTTP-aktivering**.
+      -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 3.5**. Om du installerar ASP.NET 3.5 installeras även .NET Framework 3.5. När du installerar .NET Framework 3.5, installera både kärnfunktionen **.NET Framework 3.5** och **HTTP-aktivering**.
 
-        -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 4.5**. Om du installerar ASP.NET 4,5 installeras även .NET Framework 4,5. När du installerar .NET Framework 4.5 installerar du kärnfunktionen **.NET Framework 4.5**, **ASP.NET 4.5** och **WCF Services** &gt; **HTTP-aktivering**.
+      -   **Webbserver** &gt; **Programutveckling** &gt; **ASP.NET 4.5**. Om du installerar ASP.NET 4,5 installeras även .NET Framework 4,5. När du installerar .NET Framework 4.5 installerar du kärnfunktionen **.NET Framework 4.5**, **ASP.NET 4.5** och **WCF Services** &gt; **HTTP-aktivering**.
 
-        -   **Hanteringsverktyg** &gt; **IIS 6-hanteringskompatibilitet** &gt; **IIS 6-metabaskompatibilitet**
+      -   **Hanteringsverktyg** &gt; **IIS 6-hanteringskompatibilitet** &gt; **IIS 6-metabaskompatibilitet**
 
-        -   **Hanteringsverktyg** &gt; **IIS 6-hanteringskompatibilitet** &gt; **IIS 6 WMI-kompatibilitet**
+      -   **Hanteringsverktyg** &gt; **IIS 6-hanteringskompatibilitet** &gt; **IIS 6 WMI-kompatibilitet**
 
-  2.  Lägg till NDES-tjänstkontot som en medlem i gruppen **IIS_IUSR** på servern.
+   3. Lägg till NDES-tjänstkontot som en medlem i gruppen **IIS_IUSR** på servern.
 
-   3.  Kör följande kommando i en upphöjd kommandotolk och ange SPN för NDES-tjänstkontot:
+2. Kör följande kommando i en upphöjd kommandotolk och ange SPN för NDES-tjänstkontot:
 
 `**setspn -s http/&lt;DNS name of NDES Server&gt; &lt;Domain name&gt;\&lt;NDES Service account name&gt;**`
 
@@ -207,33 +207,35 @@ I det här steget kommer du att:
 
 ##### <a name="to-configure-ndes-for-use-with-intune"></a>Konfigurera NDES för användning med Intune
 
-1.  Öppna guiden AD CS-konfiguration och gör följande konfigurationer på NDES-servern.
+1. Öppna guiden AD CS-konfiguration och gör följande konfigurationer på NDES-servern.
 
-    > [!TIP]
-    > Om du klickade på länken i föregående åtgärd är guiden redan öppen. Annars öppnar du Serverhanteraren för att komma åt konfigurationen efter distribution för Active Directory-certifikattjänster.
+   > [!TIP]
+   > Om du klickade på länken i föregående åtgärd är guiden redan öppen. Annars öppnar du Serverhanteraren för att komma åt konfigurationen efter distribution för Active Directory-certifikattjänster.
 
-    -   På sidan **Rolltjänster** väljer du **registreringstjänsten för nätverksenheter**.
+   -   På sidan **Rolltjänster** väljer du **registreringstjänsten för nätverksenheter**.
 
-    -   På sidan **Tjänstkonto för NDES** anger du NDES-tjänstkontot.
+   -   På sidan **Tjänstkonto för NDES** anger du NDES-tjänstkontot.
 
-    -   På sidan **Certifikatutfärdare för NDES** klickar du på **Välj**och väljer sedan den utfärdande certifikatutfärdaren där du konfigurerade certifikatmallen.
+   -   På sidan **Certifikatutfärdare för NDES** klickar du på **Välj**och väljer sedan den utfärdande certifikatutfärdaren där du konfigurerade certifikatmallen.
 
-    -   På sidan **Kryptografi för NDES** ställer du in nyckellängden enligt företagets krav.
+   -   På sidan **Kryptografi för NDES** ställer du in nyckellängden enligt företagets krav.
 
-    Klicka på **Konfigurera** på sidan **Bekräftelse** för att slutföra guiden.
+   Klicka på **Konfigurera** på sidan **Bekräftelse** för att slutföra guiden.
 
-2.  När guiden är slutförd redigerar du följande registernyckel på NDES-servern:
+2. När guiden är slutförd redigerar du följande registernyckel på NDES-servern:
 
-    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\**
+   - <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\</strong>
 
-    När du ska redigera den här nyckeln identifierar du certifikatmallarnas **Syfte**, som finns under fliken **Hantering av begäranden** och redigerar sedan motsvarande post i registret genom att ersätta den befintliga informationen med namnet på den certifikatmall (inte mallens visningsnamn) som du angav i Uppgift 1. I följande tabell visas certifikatmallens syfte för värdena i registret:
+   När du ska redigera den här nyckeln identifierar du certifikatmallarnas **Syfte**, som finns under fliken **Hantering av begäranden** och redigerar sedan motsvarande post i registret genom att ersätta den befintliga informationen med namnet på den certifikatmall (inte mallens visningsnamn) som du angav i Uppgift 1. I följande tabell visas certifikatmallens syfte för värdena i registret:
 
-    |Certifikatmallens syfte (på fliken Hantering av begäranden)|Registervärde som redigeras|Värde som visas i Intune-administratörskonsolen för SCEP-profilen|
-    |--------------------------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------|
-    |Signatur|SignatureTemplate|Digital signatur|
-    |Kryptering|EncryptionTemplate|Nyckelchiffrering|
-    |Signatur och kryptering|GeneralPurposeTemplate|Nyckelchiffrering<br /><br />Digital signatur|
-    Exempel: Om syftet för certifikatmallen är **Kryptering**, ersätter du värdet **EncryptionTemplate** värdet med namnet på certifikatmallen.
+
+   | Certifikatmallens syfte (på fliken Hantering av begäranden) | Registervärde som redigeras | Värde som visas i Intune-administratörskonsolen för SCEP-profilen |
+   |------------------------------------------------------------|------------------------|-------------------------------------------------------------|
+   |                         Signatur                          |   SignatureTemplate    |                      Digital signatur                      |
+   |                         Kryptering                         |   EncryptionTemplate   |                      Nyckelchiffrering                       |
+   |                  Signatur och kryptering                  | GeneralPurposeTemplate |        Nyckelchiffrering<br /><br />Digital signatur        |
+
+   Exempel: Om syftet för certifikatmallen är **Kryptering**, ersätter du värdet **EncryptionTemplate** värdet med namnet på certifikatmallen.
 
 3. NDES-servern kommer att få mycket långa URL: er (frågor), som kräver att du lägger till två registerposter:
 
@@ -245,12 +247,12 @@ I det här steget kommer du att:
 
 4. I IIS-hanteraren väljer du **Standardwebbplats** -> **Förfrågningsfiltrering** -> **Redigera inställningen** och ändrar **Högsta URL-längd** och **Maximal frågesträng** till *65534*, som exemplet visar.
 
-    ![Maxlängd för URL och fråga i IIS](..\media\SCEP_IIS_max_URL.png)
+    ![Maxlängd för URL och fråga i IIS](../media/SCEP_IIS_max_URL.png)
 
-5.  Starta om servern. Det räcker inte att köra **iisreset** på servern för att genomföra de här ändringarna.
-6. Bläddra till http://*FQDN*/certsrv/mscep/mscep.dll. Du bör se en NDES-sida som ser ur ungefär så här:
+5. Starta om servern. Det räcker inte att köra **iisreset** på servern för att genomföra de här ändringarna.
+6. Bläddra till http://<em>FQDN</em>/certsrv/mscep/mscep.dll. Du bör se en NDES-sida som ser ur ungefär så här:
 
-    ![Testa NDES](..\media\SCEP_NDES_URL.png)
+    ![Testa NDES](../media/SCEP_NDES_URL.png)
 
     Om meddelandet **503 Tjänsten ej tillgänglig** visas kontrollerar du händelsespåraren. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i uppgift 1.
 

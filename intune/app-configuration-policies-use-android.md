@@ -1,31 +1,31 @@
 ---
-title: "Lägg till konfigurationsprinciper för hanterade Android-enheter"
+title: Lägg till konfigurationsprinciper för hanterade Android-enheter
 titlesuffix: Microsoft Intune
-description: "Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app."
-keywords: 
+description: Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app.
+keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a448c33e8324492c68d509a12d5901f41ed4873a
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 6fbf70630124614aa1ed302a41d6e3f33c10c63d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app. Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem, oftast första gången den körs.
+Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar till Android for Work-appar. Apputvecklaren måste exponera Android-hanterade konfigurationsinställningarna för att ange konfigurationsinställningar för appen. Tilldela appkonfigurationsprincipen till den grupp där du vill tillämpa inställningarna.  Principinställningarna används när appen söker efter dem, oftast första gången den körs.
 
 > [!Note]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
@@ -50,16 +50,27 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 
 ## <a name="use-the-configuration-designer"></a>Använd Configuration Designer
 
-Du kan både använda Configuration Designer för appar på enheter som har registrerats eller enheter som inte har registrerats i Intune. Designern gör det möjligt att konfigurera specifika konfigurationsnycklar och värden. Du måste även ange datatyp för varje värde.
+Du kan använda Configuration Designer för Android-appar som stöder konfiguration. Konfigurationen tillämpas på enheter som är registrerade i Intune. Med designern kan du konfigurera specifika konfigurationsvärden för de inställningar som en app har tillgängliga.
 
+Välj **Lägg till** för att välja listan med konfigurationsinställningar som du vill ange för appen.  
 För varje nyckel och värde i konfigurationen anger du:
 
-  - **Konfigurationsnyckel**  
-     Nyckeln som identifierar den specifika konfigurationsinställningen.
   - **Värdetyp**  
-    Konfigurationsvärdets datatyp. Möjliga typer är heltals-, verklig, sträng- eller booleskt värde.
+    Konfigurationsvärdets datatyp. För värdetyperna Sträng kan du alternativt välja en variabel eller certifikatprofil som värdetyp.
   - **Konfigurationsvärde**  
-    Värdet för konfigurationen. 
+    Värdet för konfigurationen. Om du väljer variabel eller certifikat som värdetyp måste du välja från en lista med variabler eller certifikatprofiler i listrutan med konfigurationsvärden.  Om du väljer ett certifikat fylls certifikatalias för det certifikat som har distribuerats till enheten vid körning.
+    
+### <a name="supported-variables-for-configuration-values"></a>Variabler för konfigurationsvärden
+
+Du kan välja följande alternativ om du väljer variabel som värdetyp:
+- User Principal Name – till exempel **John@contoso.com**
+- Mail – till exempel **John@contoso.com**
+- Partian UPN – till exempel **John**
+- Account ID – till exempel **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- Device ID – till exempel **b9841cd9-9843-405f-be28-b2265c59ef97**
+- User ID — till exempel **3ec2c00f-b125-4519-acf0-302ac3761822**
+- User Name – till exempel **Johan Danielsson**
+
 
 ## <a name="enter-the-json-editor"></a>Gå in i JSON-redigeraren
 

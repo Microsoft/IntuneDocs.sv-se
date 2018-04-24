@@ -1,35 +1,35 @@
 ---
 title: Wi-Fi-anslutningar
-description: "Använd Wi-Fi-profiler för att hjälpa användarna att ansluta till trådlösa nätverk."
-keywords: 
+description: Använd Wi-Fi-profiler för att hjälpa användarna att ansluta till trådlösa nätverk.
+keywords: ''
 author: vhorne
 ms.author: victorh
 manager: angrobe
 ms.date: 02/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0b1b86ed-2e80-474d-8437-17dd4bc07b55
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 99ac426d2210aa22a7c0151aea59e14b848bbe1f
-ms.sourcegitcommit: 3b397b1dcb780e2f82a3d8fba693773f1a9fcde1
+ms.openlocfilehash: 5eebe251371d466421bfe936a1f991c988e490b0
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-devices-to-connect-to-your-corporate-wi-fi-networks"></a>Konfigurera enheter för att ansluta till företagets trådlösa nätverk
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd Wi-Fi-profiler i Microsoft Intune om du vill distribuera trådlösa nätverksinställningar till användare och enheter i din organisation. När du distribuerar en Wi-Fi-profil får användarna åtkomst till ditt företags trådlösa nätverk utan att de behöver göra några inställningar själva.
 
 Anta till exempel att du installerar ett nytt Wi-Fi-nätverk med namnet **Contoso Wi-Fi** och att du vill konfigurera alla iOS-enheter så att de ansluter till det här nätverket. Så här ser processen ut:
 
-![Processammanfattning av Wi-Fi-profil](..\media\wi-fi-process-diagram.png)
+![Processammanfattning av Wi-Fi-profil](../media/wi-fi-process-diagram.png)
 
 1.   Skapa en Wi-Fi-profil som innehåller alla inställningar som behövs för att ansluta till det trådlösa nätverket **Contoso Wi-Fi**.
 
@@ -67,23 +67,25 @@ För enheter som kör operativsystemen Windows 8.1 och Windows 10 Desktop eller 
 
 Det finns inga rekommenderade inställningar för den här principtypen. Du måste skapa en anpassad princip.
 
-3.  Ange ett namn och en beskrivning för profilen.
+3. Ange ett namn och en beskrivning för profilen.
 
 4. Ange värden för **nätverksanslutningar**.
- - **SSID (Service Set Identifier)**: Välj det här alternativet om du vill att användarna ska se nätverksnamn och inte SSID.
- - **Anslut när nätverket inte sänder sitt namn (SSID)**: Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan med nätverk (eftersom det är dolt och inte sänder sitt namn).
+   - **SSID (Service Set Identifier)**: Välj det här alternativet om du vill att användarna ska se nätverksnamn och inte SSID.
+   - **Anslut när nätverket inte sänder sitt namn (SSID)**: Välj det här alternativet om du vill tillåta att enheterna ansluter till nätverket när det inte visas i listan med nätverk (eftersom det är dolt och inte sänder sitt namn).
 
 5. Konfigurera **säkerhetsinställningarna** för den valda plattformen. De tillgängliga inställningarna beror på vilken säkerhetstyp du väljer. De beskrivs i [säkerhetsinställningar](#security-settings).
 
 6. Konfigurera **proxyinställningar** (endast iOS och MAC OS X).
 
-    |Inställningsnamn|Mer information|När ska det användas|
-    |----------------|-------------------|-------------|
-    |**Proxy-inställningar för den här Wi-Fi-anslutningen**|Välj inställningstyp för proxy:<br /><br />-   **Ingen** (standard)<br />-   **Manuell** – Ange URL:en och portnumret för proxyservern manuellt.<br />-   **Automatisk** – Använd en konfigurationsfil för att konfigurera proxyservern.|Alltid|
-    |**Proxyserveradress** och **-portnummer**|Ange proxyserverns URL och portnummer.|Om **Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Manuell**|
-    |**URL för proxyserver**|Ange URL till den fil som innehåller inställningarna för proxyservern.|Om **Proxyinställningar för den här Wi-Fi-anslutningen** har angetts till **Automatisk**|
 
-7.  Spara Wi-Fi-profilen
+   |                              Inställningsnamn                              |                                                                                                                                Mer information                                                                                                                                 |                                            När ska det användas                                            |
+   |------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+   |       <strong>Proxy-inställningar för den här Wi-Fi-anslutningen</strong>        | Välj inställningstyp för proxy:<br /><br />-   <strong>Ingen</strong> (standard)<br />-   <strong>Manuell</strong> – Ange URL:en och portnumret för proxyservern manuellt.<br />-   <strong>Automatisk</strong> – Använd en konfigurationsfil för att konfigurera proxyservern. |                                              Alltid                                               |
+   | <strong>Proxyserveradress</strong> och <strong>-portnummer</strong> |                                                                                                              Ange proxyserverns URL och portnummer.                                                                                                               |  Om <strong>Proxyinställningar för den här Wi-Fi-anslutningen</strong> har angetts till <strong>Manuell</strong>   |
+   |                   <strong>URL för proxyserver</strong>                    |                                                                                                      Ange URL till den fil som innehåller inställningarna för proxyservern.                                                                                                       | Om <strong>Proxyinställningar för den här Wi-Fi-anslutningen</strong> har angetts till <strong>Automatisk</strong> |
+
+
+7. Spara Wi-Fi-profilen
 
 Ny princip som visas i noden **Konfigurationsprinciper** på arbetsytan **Princip** . Information om hur du distribuerar profilen finns under **Nästa steg**.
 

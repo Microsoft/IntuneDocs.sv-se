@@ -15,15 +15,15 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 02934e40346be88cb823bcfa80ff9618e86e757b
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 7bebf6137b7378c52741195a1dce048caaa03e3d
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-android-for-work-apps-with-mobile-app-configuration-policies-in-microsoft-intune"></a>Konfigurera Android for Work-appar med konfigurationsprinciper för mobilappar i Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 Använd konfigurationsprinciper för mobilappar i Microsoft Intune om du vill definiera inställningar som kan krävas när användaren kör en app. En app kan till exempel kräva att användarna anger:
 
@@ -43,7 +43,7 @@ Du kan distribuera appkonfigurationsprincipen till samma användare som du har d
 
 1.  I [Microsoft Intune-administratörskonsolen](https://manage.microsoft.com) väljer du **Princip** &gt; **Översikt** &gt; **Lägg till princip**.
 
-2.  Expandera **Android for Work**i listan med principer, välj **Konfigurationprincip för mobilapp (Android for Work)**och välj sedan **Skapa princip**.
+2.  Expandera **Android for Work**i listan med principer, välj **Konfigurationprincip för mobilapp (Android for Work)** och välj sedan **Skapa princip**.
 
     > [!TIP]
     > Du kan bara konfigurera anpassade inställningar för den här principtypen. Rekommenderade inställningar är inte tillgängliga.

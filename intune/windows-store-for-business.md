@@ -1,30 +1,29 @@
 ---
-title: "Hantera appar från Microsoft Store för företag"
+title: Hantera appar från Microsoft Store för företag
 titlesuffix: Microsoft Intune
-description: "Lär dig hur du kan synkronisera appar i Intune från Microsoft Store för företag och sedan tilldela och spåra dessa appar."
-keywords: 
+description: Lär dig hur du kan synkronisera appar i Intune från Microsoft Store för företag och sedan tilldela och spåra dessa appar.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa5e3b5559c5c17ea726b26f1c1f56ef37cfe0ae
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 512fab5a8ed70af989d6057308b48185cd697d8f
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Så här hanterar du appar som du har köpt från Microsoft Store för företag med Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
-
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 I [Microsoft Store för företag](https://www.microsoft.com/business-store) kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program från Azure-portalen. Exempel:
 * Du kan synkronisera listan över appar som du har köpt från Windows Store med Intune.
@@ -63,7 +62,7 @@ Du kan nu fortsätta och konfigurera synkronisering i Intune-konsolen.
 ## <a name="configure-synchronization"></a>Konfigurera synkronisering
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning + hantering**.
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Mobilappar** i **Intune**-fönstret.
 1. I fönstret **Mobilappar** väljer du **Installation** > **Microsoft Store för företag**.
 2. Klicka på **Aktivera**.

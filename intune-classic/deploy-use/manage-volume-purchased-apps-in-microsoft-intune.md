@@ -1,29 +1,29 @@
 ---
-title: "Hantera volyminköpta appar"
-description: "Läs om hur du använder Intune för att hantera appar som du köpt i volym från en appbutik."
-keywords: 
+title: Hantera volyminköpta appar
+description: Läs om hur du använder Intune för att hantera appar som du köpt i volym från en appbutik.
+keywords: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.date: 12/27/2016
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 674c8f4c-00be-4c69-85b7-cf7bdaa71c94
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f82ba373d45c0238f7de62953b4527680daa79f8
-ms.sourcegitcommit: 1a54bdf22786aea1cf1b497d54024470e1024aeb
+ms.openlocfilehash: 9b23100e1b609574733cbba3d9c8b25d61ad15ec
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-volume-purchased-apps-using-microsoft-intune"></a>Hantera volyminköpta appar med Microsoft Intune
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 En del appbutiker erbjuder möjligheten att köpa flera licenser till en app som du vill köra i företaget. Det hjälper dig att minska det administrativa arbetet med att spåra flera köpta kopior av appar.
 

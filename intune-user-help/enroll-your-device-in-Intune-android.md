@@ -1,27 +1,27 @@
 ---
 title: Registrera din Android-enhet i Intune | Microsoft Docs
 description: Beskriver hur du registrerar en Android-enhet i Intune
-keywords: 
-author: barlanmsft
-ms.author: barlan
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0ed3a002-7533-4001-ae24-e10b64b66620
 searchScope:
 - User help
-ROBOTS: 
+ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 89262f4fecba6aa8d76efd7fd5bbe415d9048204
-ms.sourcegitcommit: a41ad9988a8c14e6b15123a9ea9bc29ac437a4ce
+ms.openlocfilehash: 7230f14ae9481555f457a8a8700d588c4170b39b
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrera en Android-enhet i Intune
 
@@ -35,57 +35,57 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
 **Registrera en Android-enhet:**
 
-1.  Installera den kostnadsfria Intune-företagsportalsappen från [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1. Installera den kostnadsfria Intune-företagsportalsappen från [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
-2.  Öppna företagsportalappen.
+2. Öppna företagsportalappen.
 
-3.  På företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto.
+3. På företagsportalens skärm **Välkommen** trycker du på **Logga in** och loggar sedan in med ditt arbets- eller skolkonto.
 
-    ![Välkomstskärmen i företagsportalsappen för Android, som uppmanar användarna att logga in med sina obligatoriska arbets- eller skolkonton. Här informeras även om att Microsoft-konton och andra personliga konton inte godkänns.](./media/and-enroll-0-welcome-screen.png)   
+   ![Välkomstskärmen i företagsportalsappen för Android, som uppmanar användarna att logga in med sina obligatoriska arbets- eller skolkonton. Här informeras även om att Microsoft-konton och andra personliga konton inte godkänns.](./media/and-enroll-0-welcome-screen.png)   
 
-4.  Om företagets support konfigurerar allmänna villkor trycker du på **ACCEPTERA** för att godkänna villkoren. Den här skärmen kan skilja sig från bilden nedan beroende på vilken version av Android som du använder.
+4. Om företagets support konfigurerar allmänna villkor trycker du på **ACCEPTERA** för att godkänna villkoren. Den här skärmen kan skilja sig från bilden nedan beroende på vilken version av Android som du använder.
 
-    ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
+   ![android-company-portal-sign-in](./media/and-enroll-3-accept-terms.png)
 
-5.  Logga in på företagsportalappen med ditt konto och lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
+5. Logga in på företagsportalappen med ditt konto och lösenord för arbetet eller skolan och tryck sedan på **Logga in**.
 
-    ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
+   ![android-company-portal-sign-in](./media/and-enroll-2-cp-sign-in.png)
 
-6.  Tryck på **FORTSÄTT** på skärmen **Konfiguration av företagsåtkomst**.
+6. Tryck på **FORTSÄTT** på skärmen **Konfiguration av företagsåtkomst**.
 
-    ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
+   ![Skärmen Konfiguration av företagsåtkomst](/intune/media/android_cp_enroll_01_1709_new.png)
 
-    > [!NOTE]
-    > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
+   > [!NOTE]
+   > De gula trianglarna innebär inte att du redan har råkat ut för ett fel. Ikonerna anger att det fortfarande finns oavslutade steg i registreringsprocessen.
 
-7.  Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
+7. Läs informationen om vad företagets support kan se och inte kan se på enheten och tryck sedan på **FORTSÄTT**.
 
-    ![Sekretessinställningar](/intune/media/android_cp_enroll_02_after_1710.png)
+   ![Sekretessinställningar](/intune/media/android_cp_enroll_02_after_1710.png)
 
-9.  På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
+8. På skärmen **Vad händer nu?** kan du läsa om vad som händer under registreringen. Tryck sedan på **REGISTRERA**.
 
-    ![Skärmen Vad kommer härnäst](/intune/media/android_cp_enroll_03_after_1710.png)
+   ![Skärmen Vad kommer härnäst](/intune/media/android_cp_enroll_03_after_1710.png)
 
-10.  Gör så här om du använder Android 6.0 eller senare. Annars går du till nästa steg.
+9. Gör så här om du använder Android 6.0 eller senare. Annars går du till nästa steg.
 
-    Följande meddelanden kan visas om företagets support har konfigurerat vissa principer:
-    -   **Tillåt att företagsportalen kan ringa och hantera telefonsamtal?**
+   Följande meddelanden kan visas om företagets support har konfigurerat vissa principer:
+   - **Tillåt att företagsportalen kan ringa och hantera telefonsamtal?**
 
-        ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
+     ![android-company-portal-sign-in](./media/and-enroll-3a-allow-phone-access.png)
 
-    Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig ringer eller hanterar dina telefonsamtal**! Google styr meddelandetexten och Microsoft kan inte ändra den. Allt du gör när du ger åtkomst är att du låter din enhet skicka enhetens IMEI-nummer (International Mobile Station Equipment Identity) till Intune. IMEI är ett slags serienummer som är en unik identifierare för en mobil enhet.
+   Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig ringer eller hanterar dina telefonsamtal**! Google styr meddelandetexten och Microsoft kan inte ändra den. Allt du gör när du ger åtkomst är att du låter din enhet skicka enhetens IMEI-nummer (International Mobile Station Equipment Identity) till Intune. IMEI är ett slags serienummer som är en unik identifierare för en mobil enhet.
 
-    Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
+   Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
 
-    -   **Tillåt att företagsportalappen får åtkomst till dina kontakter?**
+   - **Tillåt att företagsportalappen får åtkomst till dina kontakter?**
 
-        ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
+     ![android-company-portal-sign-in](./media/and-enroll-3b-allow-contacts-access.png)
 
-        Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du beviljar åtkomst låter det endast företagsportalappen att skapa, använda och hantera ditt arbetskonto.
+     Om det här meddelandet visas trycker du på **TILLÅT**. Det är säkert att trycka på TILLÅT eftersom **Microsoft aldrig bereder sig åtkomst till dina kontakter!** Google styr meddelandetexten och Microsoft kan inte ändra den. När du beviljar åtkomst låter det endast företagsportalappen att skapa, använda och hantera ditt arbetskonto.
 
-        Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
+     Om du nekar åtkomst visas meddelandet igen nästa gång du loggar in på företagsportalen, men du kan inaktivera framtida meddelanden genom att trycka på rutan **Fråga inte igen**. Om användare senare bestämmer sig för att tillåta åtkomst kan de gå till **Inställningar** &gt; **Appar** &gt; **Företagsportal** &gt; **Behörigheter** &gt; **Telefon** och sedan aktivera behörigheten.
 
-11.  På skärmen **Aktivera enhetsadministratör** trycker du på **Aktivera**.
+10. På skärmen **Aktivera enhetsadministratör** trycker du på **Aktivera**.
 
     ![Skärmen Aktivera enhetsadministratör](./media/and-enroll-5-activate.png)
 
@@ -95,11 +95,11 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
     Microsoft styr inte över det här meddelandet och vi förstår att dess formulering kan verka lite drastisk. Företagsportalen kan inte visa just de begränsningar och den åtkomst som gäller för din organisation. Alla beviljas samtidigt på den här skärmen. Kontakta företagets support med hjälp av kontaktinformationen på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog) om du har frågor som är specifika för användningen i din organisation.
 
-12.  Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.
+11. Följ anvisningarna för att ange en PIN-kod eller ett lösenord. Om du redan har ställt in en PIN-kod eller ett lösenord på enheten, visas inte den här skärmen och du behöver inte ange en ny PIN-kod eller ett nytt lösenord.
 
     ![Ange PIN-kod eller lösenord](./media/and-enroll-6-PIN-native.png)
 
-13.  Om du använder en Samsung Knox-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Se följande skärm som visar att enheten registreras om du använder en Android-enhet.
+12. Om du använder en Samsung Knox-enhet trycker du på **Bekräfta**, så visas ett meddelande om att enheten registreras. Se följande skärm som visar att enheten registreras om du använder en Android-enhet.
 
     ![Sekretesspolicy för Samsung Knox](./media/and-enroll-7-knox-privacy-policy.png)
 
@@ -107,7 +107,7 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
     ![Skärmen Registrerar enheten](./media/and-enroll-8-device-enrolling.png)
 
-14. När skärmen **Konfigurera företagsåtkomst** visas trycker du på **FORTSÄTT**. Om ett meddelande indikerar att enheten är inkompatibel följer du anvisningarna för att åtgärda problemet. Tryck sedan på **FORTSÄTT**.
+13. När skärmen **Konfigurera företagsåtkomst** visas trycker du på **FORTSÄTT**. Om ett meddelande indikerar att enheten är inkompatibel följer du anvisningarna för att åtgärda problemet. Tryck sedan på **FORTSÄTT**.
 
     ![Enheten är inte kompatibel, men har registrerats](/intune/media/android_cp_enroll_05_post_1709.png)
 
@@ -119,7 +119,7 @@ Före eller efter registreringen kan du bli ombedd att välja en kategori som b�
 
     ![Skärmen Konfiguration av företagsåtkomst](./media/and-enroll-9d-comp-access-setup.png)  
 
-15. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Enheten har nu registrerats.
+14. På skärmen **Konfigurering av företagsåtkomst har slutförts** trycker du på **KLAR**. Enheten har nu registrerats.
 
     ![Skärmen Konfiguration av företagsåtkomst slutförd](./media/and-enroll-10-comp-access-setup-complete.png)
 

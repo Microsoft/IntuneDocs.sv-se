@@ -1,27 +1,26 @@
 ---
-title: "Konfigurera inställningar för enhetsbegränsning i Microsoft Intune"
-titleSuffix: 
-description: "Läs hur du använder Microsoft Intune för att konfigurera inställningar och funktioner på enheter som du hanterar."
-keywords: 
-author: vhorne
-ms.author: victorh
+title: Konfigurera inställningar för enhetsbegränsningar i Microsoft Intune – Azure | Microsoft Docs
+description: Lägga till en enhetsprofil för att begränsa funktioner i Android-, macOS-, iOS-, Windows Phone- och Windows 10-enheter i Microsoft Intune
+keywords: ''
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c5ccb928b8ff3f9cebbd6f51d99cddd1f36fb074
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 13f93f9fcf813c2e86809d2cc20991d2fd635187
+ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-configure-device-restriction-settings-in-microsoft-intune"></a>Så här konfigurerar du enhetsbegränsningar i Microsoft Intune
+# <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurera inställningar för enhetsbegränsningar i Microsoft Intune
 
-[!INCLUDE[azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Med enhetsbegränsningar kan du kontrollera en mängd olika inställningar och funktioner som du hanterar i flera kategorier, bland annat:
 - Säkerhet
@@ -35,12 +34,10 @@ Lär dig grunderna för enhetsbegränsningsprofiler och läs sedan ytterligare a
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Skapa en enhetsprofil med inställningar för enhetsbegränsningar
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. På sidan **Intune** väljer du **Enhetskonfiguration**.
-2. På sidan **Enhetskonfiguration** under avsnittet **Hantera** väljer du **Profiler**.
-3. På sidan **Profiler** väljer du **Skapa profil**.
-4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+4. Ange ett **Namn** och en **Beskrivning** för enhetsbegränsningsprofilen.
 5. Välj den enhetsplattform på vilken du vill tillämpa anpassade inställningar från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
     - **Android**
     - **iOS**
