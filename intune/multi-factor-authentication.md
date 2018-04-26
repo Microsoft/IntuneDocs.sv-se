@@ -14,11 +14,11 @@ ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 ms.custom: intune-azure
-ms.openlocfilehash: 0941db852674d1ee775fc05edb92ff479d856d0c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 5b2c2bb6e76bd6b2da7ee7c12282c0ff22d7d3e3
+ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Kräv multifaktorautentisering för enhetsregistreringar i Intune
 
@@ -40,7 +40,7 @@ När du aktiverar MFA måste slutanvändarna ange två typer av autentiseringsup
 
 Om du vill kräva MFA när en enhet registreras följer du dessa steg:
 
-[!Important]
+>[!Important]
 >Du måste ha tilldelat Azure Active Directory Premium P1 eller senare till dina användare för att implementera den här principen.
 
 >[!Important]
