@@ -17,18 +17,16 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e3990c0670516de907ac048b844152014db5be57
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3dac9446d7a1097f5be4d0851cd78e8cbb86cc4e
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
 Med åtkomst till din organisations appar, data och resurser är det enklare för dig att göra ditt jobb. Din organisation använder Intune för att [hantera åtkomst till resurserna](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md), vilket kräver att du kan ladda ned företagsportalappen för macOS. De här instruktionerna fungerar för macOS-enheter på OS X El Capitan 10.11+.
 
-> [!NOTE]
-> Du hittar anvisningar för att registrera macOS-enheter på tidigare versioner av macOS [här](enroll-your-device-in-intune-macos-legacy.md).
 
 1. På din __Docka__, går du till __Safari__ och öppnar ett nytt fönster och öppnar sedan [företagsportalens webbplats](https://portal.manage.microsoft.com).
 

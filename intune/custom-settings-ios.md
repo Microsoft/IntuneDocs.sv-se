@@ -3,8 +3,8 @@ title: Anpassade inställningar i Microsoft Intune för enheter som kör iOS
 titleSuffix: ''
 description: Läs om vilka inställningar du kan använda i en anpassad iOS-profil i Microsoft Intune.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ada36b11489adbbcaf67db9192c7dd66caadb525
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e0ae4e757264465043ee6992033710c5a81d7157
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-intune-custom-device-settings-for-devices-running-ios"></a>Anpassade enhetsinställningar i Microsoft Intune för enheter som kör iOS
 

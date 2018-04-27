@@ -3,7 +3,7 @@ title: Teknikval för BYOD med EMS
 description: Viktiga teknikval för att kunna tillämpa BYOD och skydda företagsdata med Microsoft Enterprise Mobility + Security.
 keywords: ''
 author: dougeby
-ms.author: pfetty
+ms.author: dougeby
 manager: dougeby
 ms.date: 12/8/2017
 ms.topic: article
@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 7d04abfe7886e4ef42cf168dbb495e987fdba425
-ms.sourcegitcommit: df60d03a0ed54964e91879f56c4ef0a7507c17d4
+ms.openlocfilehash: 7fb86ae8d3163e14581ee495004b74f684d30cec
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Teknikval för att kunna tillämpa BYOD med Microsoft Enterprise Mobility + Security (EMS)
 
@@ -78,6 +78,6 @@ Som redan nämnts kan du med hjälp av villkorlig åtkomst få en användare att
 |Dela data eller spara data till osäkra platser av misstag | Inaktivera utskrift | saknas|
 
 ## <a name="next-steps"></a>Nästa steg
-Nu är det dags att bestämma om du vill använda BYOD i din organisation med fokus på enhetshantering, apphantering eller en kombination av dessa. Valet är ditt, men du kan känna dig trygg med att funktionerna för identitet och säkerhet i Azure AD är tillgängliga oavsett vad du väljer.
+Nu är det dags att bestämma om du vill använda BYOD i din organisation med fokus på enhetshantering, apphantering eller en kombination av dessa. Valet är ditt, men du kan känna dig trygg med att funktionerna för identitet och säkerhet i Azure AD är tillgängliga oavsett vad du väljer.  
 
 Använd Intunes [planeringsguide](planning-guide.md) för att planera nästa steg.

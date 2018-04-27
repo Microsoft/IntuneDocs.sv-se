@@ -15,11 +15,11 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 10278dd48552e280ebe7399a61033dfb04fbbd74
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4d0c63c5e926c3f8893762a9be3b6bed2d6844c4
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -155,10 +155,9 @@ Outlook måste konfigureras med en appskyddsprincip som aktiverar inställningen
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-managed-browser"></a>Steg 2: Tilldela en appkonfigurationsprincip som har tilldelats Managed Browser.
 Den här proceduren konfigurerar Managed Browser-appen för att använda omdirigering av programproxy. Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
-|||
-|-|-|
-|Tangent|Värde|
-|**com.microsoft.intune.mam.managedbrowser.AppProxyRedirection**|**true**|
+| Tangent                                                             | Värde    |
+|-----------------------------------------------------------------|----------|
+| **com.microsoft.intune.mam.managedbrowser.AppProxyRedirection** | **true** |
 
 Mer information om hur Managed Browser och Azure AD-programproxy kan användas tillsammans för sömlös (och skyddad) åtkomst till lokala webbappar finns på Enterprise Mobility + Security-blogginlägget [Bättre tillsammans: Intune och Azure Active Directory samarbetar för att förbättra användaråtkomsten](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access).
 
@@ -166,10 +165,8 @@ Mer information om hur Managed Browser och Azure AD-programproxy kan användas t
 
 Den här inställningen låter dig konfigurera den webbsida som användarna ser när de startar Managed Browser eller skapar en ny flik. Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
-
-|                                                                   |                                                                                                                            |
-|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 |                                Tangent                                |                                                           Värde                                                            |
+|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Ange en giltig URL. Felaktiga URL:er är blockerade som en säkerhetsåtgärd.<br>Exempel: <strong><https://www.bing.com></strong> |
 
 ## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Så här konfigurerar du bokmärken för Managed Browser
@@ -182,21 +179,17 @@ Den här inställningen låter dig konfigurera en uppsättning bokmärken som ä
 
 Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
-
-|                                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                Tangent                                 |                                                                                                                                                                                                                                                         Värde                                                                                                                                                                                                                                                          |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet <strong>&#124;</strong>.<br><br>Exempel: <strong>Microsoft Bing&#124;<https://www.bing.com></strong><br><br>Om du vill konfigurera fler bokmärken avgränsar du varje par med två tecken: <strong>&#124;&#124;</strong><br><br>Exempel: <strong>Bing&#124;https://www.bing.com&#124;&#124; Contoso&#124;<https://www.contoso.com></strong> |
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Så här anger du tillåtna och blockerade URL:er för Managed Browser
 
 Använd proceduren att skapa en appkonfiguration för Managed Browser till att ange följande nyckel- och värdepar:
 
-
-|                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                             |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                                                                                                               Tangent                                                                                                                                                                |                                                                                                                                                                                    Värde                                                                                                                                                                                    |
-| Välj mellan:<br><br>– Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås): <strong>com.microsoft.intune.mam.managedbrowser.AllowListURLs</strong><br><br>– Ange blockerade URL: er (alla andra platser kan nås): <br><br><strong>com.microsoft.intune.mam.managedbrowser.BlockListURLs</strong> | Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck <strong>&#124;</strong>.<br><br>Exempel:<br><br><strong>URL1&#124;URL2&#124;URL3</strong><br><strong>http://<em>.contoso.com/</em>&#124;https://<em>.bing.com/</em>&#124;<https://expenses.contoso.com></strong> |
+|Tangent|Värde|
+|-|-|
+|Välj mellan:<br><br>– Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Ange blockerade URL: er (alla andra platser kan nås): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br>`URL1\|URL2\|URL3`</code><br>`http://*.contoso.com/*\|https://*.bing.com/*\|https://expenses.contoso.com`|
 
 >[!IMPORTANT]
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.

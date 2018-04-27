@@ -3,8 +3,8 @@ title: VPN-inställningar i Microsoft Intune för Windows 8.1-enheter
 titleSuffix: ''
 description: Läs mer om de Intune-inställningar som du kan använda för att konfigurera VPN-anslutningar på enheter som kör Windows 8.1.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: article
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cbcc3be31a6d9de7ce87ea5b25b8c1a2c42b47cd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 30aa56913cc3bda2d1c8b8b67e982c565c44a2a8
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows 8.1
 
@@ -85,7 +85,7 @@ Mer information om hur du skriver anpassade XML-kommandon finns i varje tillverk
 ## <a name="proxy-settings"></a>Proxyinställningar
 
 - **Identifiera proxyinställningar automatiskt** – Om VPN-servern kräver en proxyserver för anslutningen, kan du ange om du vill att enheterna automatiskt ska identifiera anslutningsinställningarna. Mer information finns i dokumentationen till Windows Server.
-- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
+- **Skript för automatisk konfigurering** – Använd en fil för att konfigurera proxyservern. Ange den **Proxyserver-URL** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Använd proxyserver** – Aktivera det här alternativet om du vill ange inställningarna för proxyservern manuellt.
     - **Adress** – Ange proxyns serveradress (som en IP-adress).
     - **Portnummer** – Ange det portnummer som är kopplat till proxyservern.

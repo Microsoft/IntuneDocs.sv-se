@@ -1,23 +1,23 @@
 ---
-title: "Återställa lösenord på Windows-enheter med Microsoft Intune – Azure | Microsoft Docs"
-description: "Om du ska återställa lösenordet på Windows-enheter, installerar du Microsofts tjänst för PIN-återställning och Microsofts klient för PIN-återställning, skapar en enhetsprincip med ditt katalog-ID för Azure Active Directory och återställer sedan lösenordet i Azure-portalen med Microsoft Intune."
-keywords: 
-author: MandiOhlinger
-ms.author: mandia
+title: Återställa lösenord på Windows-enheter med Microsoft Intune – Azure | Microsoft Docs
+description: Om du ska återställa lösenordet på Windows-enheter, installerar du Microsofts tjänst för PIN-återställning och Microsofts klient för PIN-återställning, skapar en enhetsprincip med ditt katalog-ID för Azure Active Directory och återställer sedan lösenordet i Azure-portalen med Microsoft Intune.
+keywords: ''
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 14a5654e72352b9dc8ebd51e6c926ea963e7432d
-ms.sourcegitcommit: 9cf05d3cb8099e4a238dae9b561920801ad5cdc6
+ms.openlocfilehash: d3ceaaa1cce79483c446342b12d9918bb6beac42
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Återställa lösenord på Windows-enheter med Intune
 

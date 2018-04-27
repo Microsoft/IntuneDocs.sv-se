@@ -2,8 +2,8 @@
 title: Skapa WiFi-profile med i förväg delad nyckel – Microsoft Intune – Azure | Micrososft Docs
 description: Använd en anpassad profil för att skapa en Wi-Fi-profil med en i förväg delad nyckel och hämta exempel på XML-kod för Android-, Windows- och EAP-baserade Wi-Fi-profiler i Microsoft Intune
 keywords: ''
-author: mandia
-ms.author: MandiOhlinger
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 03/05/2018
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 27ced5debc7eb063be03f4e6a1932425717318af
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a3b98dad86b7abe5ce330ae99fdf008137cc2b11
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
