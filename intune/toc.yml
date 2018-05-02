@@ -13,7 +13,7 @@
           href: groups-get-started.md
     - name: Registrera dig för en kostnadsfri utvärderingsversion
       href: free-trial-sign-up.md
-    - name: Nyheter
+    - name: Vad är nytt?
       href: whats-new.md
       items:
         - name: Nyheter i användargränssnittet för programmet
@@ -126,7 +126,7 @@
         - name: Konfigurationer som stöds
           href: supported-devices-browsers.md
           items:
-            - name: Nätverkskonfiguration
+            - name: Konfiguration av nätverk
               href: network-bandwidth-use.md
         - name: Logga in i Intune
           href: account-sign-up.md
@@ -255,6 +255,8 @@
                   href: lob-apps-windows-phone.md
                 - name: Verksamhetsspecifika Windows-appar
                   href: lob-apps-windows.md
+                - name: macOS LOB-appar
+                  href: lob-apps-macos.md
             - name: Webbappar
               href: web-app.md
             - name: Inbyggda appar
@@ -345,7 +347,7 @@
               href: device-restrictions-ios.md
             - name: macOS
               href: device-restrictions-macos.md
-            - name: "Windows\_8,1"
+            - name: Windows 8.1
               href: device-restrictions-windows-8-1.md
             - name: Windows Phone 8.1
               href: device-restrictions-windows-phone-8-1.md
@@ -386,7 +388,7 @@
               href: vpn-setting-configure-per-app.md
             - name: macOS
               href: vpn-settings-macos.md
-            - name: "Windows\_8,1"
+            - name: Windows 8.1
               href: vpn-settings-windows-8-1.md
             - name: Windows Phone 8.1
               href: vpn-settings-windows-phone-8-1.md
@@ -486,10 +488,10 @@
               items:
                 - name: Lookout- och Intune-integrering
                   href: lookout-mtd-connector-integration.md
-            - name: Konfigurera Skycure
+            - name: Konfigurera Symantec
               href: skycure-mobile-threat-defense-connector.md
               items:
-                - name: Skycure- och Intune-integrering
+                - name: Symantec- och Intune-integrering
                   href: skycure-mtd-connector-integration.md
             - name: Konfigurera Check Point
               href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
