@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - Apple iOS 9.0 och senare
-- Mac OS X 10.9 och senare
+- Mac OS X 10.11 och senare
 
 ### <a name="google"></a>Google
 - Android 4.4 och senare (inklusive Samsung KNOX Standard 4.4 och senare)
@@ -14,6 +14,7 @@
 
 ### <a name="microsoft"></a>Microsoft
 
+- Surface Hub
 - Windows 10 (Home, S, Pro, Education och Enterprise)
 - Windows 10 Mobil
 - Windows 10 Pro Enterprise (x86, x64)

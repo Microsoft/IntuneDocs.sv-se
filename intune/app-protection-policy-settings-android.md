@@ -1,27 +1,27 @@
 ---
-title: "Principinställningar för Android-appskydd"
+title: Principinställningar för Android-appskydd
 titlesuffix: Microsoft Intune
-description: "Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter."
-keywords: 
-author: Erikre
-ms.author: erikre
+description: Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter.
+keywords: ''
+author: msmimart
+ms.author: mimart
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 04/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 34334186fbf74507b54d1bf4df347de2c16c39c0
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: c9c14363d9d00a9beecb5eac41966734687f8a93
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="android-app-protection-policy-settings"></a>Principinställningar för Android-appskydd
+# <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 Det här ämnet beskriver inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
 Det finns två kategorier för principinställningar: inställningar för dataflytt och åtkomst. I det här avsnittet används termen *principhanterade appar* för att hänvisa till appar som har konfigurerats med appskyddsprinciper.
 
@@ -79,7 +79,7 @@ Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-p
 
 | Inställningen | Använd så här | Standardvärde(n) |
 |------|------|------|
-| **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234 eller 1111. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. Standardvärde = **Ja**. </li><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**. <br><br> Det här principinställningsformatet stöder ett positivt heltal.</li><li> **Kräv fingeravtryck istället för PIN (Android 6.0+)**: Välj **Ja** om du vill kräva att [autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**.</li></ul> På Android-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Android-autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
+| **Kräv PIN-kod för åtkomst** | Välj **Ja** för att kräva en PIN-kod för att använda den här appen. Användarna uppmanas att konfigurera denna PIN-kod första gången de kör appen i en arbets- eller skolkontext. Standardvärde = **Ja**.<br><br> Konfigurera följande inställningar för PIN-styrka: <ul><li>**Välj typ**: Ange ett krav för PIN-koder av numerisk typ eller lösenordstyp innan du använder en app som appskyddsprinciper tillämpas för. Numeriska krav har endast siffror, medan ett lösenord kan definieras med minst en alfabetisk bokstav **eller** minst ett specialtecken. <br><br> **Observera**: Specialtecken tillåts, däribland specialtecken och symboler på Android-tangentbordet på engelska. Standardvärde = **Numerisk**.</li><br><li>**Antal försök före återställning av PIN**: Ange antalet försök som användaren har att ange rätt PIN-kod innan den måste återställas. Standardvärde = **5**.</li><li> **Tillåt enkel PIN-kod:** Välj **Ja** du om du vill tillåta att användarna använder enkla PIN-kodssekvenser, till exempel 1234, 1111, absd eller aaaa. Välj **Nej** om du vill förhindra att de använder enkla sekvenser. <br><br>**Obs**: Om lösenordstypen PIN-kod har konfigurerats och Tillåt enkel PIN är inställt på Ja behöver användare använda minst en bokstav **eller** minst ett specialtecken i sin PIN-kod. Om PIN-kod för lösenordstyp har konfigurerats och Tillåt enkel PIN är inställt på Nej behöver användare minst en siffra **och** en bokstav **och** ett specialtecken i sin PIN-kod. Standardvärde = **Ja**. </li><br><li> **PIN-kodslängd**: Ange det minsta antalet siffror i en PIN-kodssekvens. Standardvärde = **4**.</li><li> **Kräv fingeravtryck istället för PIN (Android 6.0+)**: Välj **Ja** om du vill kräva att [autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) används i stället för en PIN-kod för åtkomst till appen. Standardvärde = **Ja**. <br><br>**Observera**: Android for Work kräver att ett separat fingeravtryck registreras för att principen **Tillåt fingeravtryck istället för PIN-kod** ska tillämpas. Den här principen verkställs endast för principhanterade appar som installerats i Android for Work-profilen. Det separata fingeravtrycket måste ha registrerats med enheten efter att den hanterade Android for Work-profilen har skapats genom registrering i företagsportalen. Läs mer om fingeravtryck för arbetsprofiler med Android for Work finns i [Lås din arbetsprofil](https://support.google.com/work/android/answer/7029958).</li></ul> På Android-enheter kan du låta användaren bekräfta sin identitet med hjälp av [Android-autentisering med fingeravtryck](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) i stället för en PIN-kod. När användarna försöker använda appen med ett arbets- eller skolkonto uppmanas de att lämna sitt fingeravtryck i stället för att ange en PIN-kod. </li></ul>| Kräv PIN-kod: Ja <br><br> PIN-återställningsförsök: 5 <br><br> Tillåt enkel PIN-kod: Ja <br><br> PIN-kodslängd: 4 <br><br> Tillåt fingeravtryck: Ja |
 | **Kräv företagets autentiseringsuppgifter för åtkomst** | Välj **Ja** om du vill kräva att användaren loggar in med sitt arbets- eller skolkonto i stället för att ange en PIN-kod för åtkomst till appen. Om du väljer **Ja** åsidosätts kraven på PIN-kod eller Touch ID.  | Nej |
 | **Hindra hanterade appar från att köras på jailbrokade eller rotade enheter** |Välj **Ja** om du vill förhindra att den här appen körs på jailbrokade eller rotade enheter. Användaren kan fortfarande använda apparna för personliga uppgifter, men måste använda en annan enhet för att komma åt arbets- eller skoldata i denna app. | Ja |
 | **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (vilket definieras tidigare i principen) kontrolleras igen. En administratör aktiverar exempelvis PIN-kod och blockerar rotade enheter i principer, så att en användare som öppnar en Intune-hanterad app måste ange en PIN och måste använda appen på en enhet som inte är rotad. När du använder den här inställningen behöver användaren inte ange någon PIN-kod eller gå igenom en till kontroll för rotidentifiering i Intune-hanterade appar under ytterligare **30 minuter** (standardvärde). <br><br> **Obs!** På Android delas PIN-koden mellan alla Intune-hanterade appar. PIN-timern återställs när appen lämnar enhetens förgrund. Användaren behöver inte ange en PIN-kod på någon Intune-hanterad app som delar sin PIN under perioden för den tidsgräns som anges i denna inställning. <br><br> Det här principinställningsformatet stöder ett positivt heltal.<br></li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna tid har gått ut kräver appen användarautentisering till AAD, så att appen kan fortsätta att köras.<br><br> Det här principinställningsformatet stöder ett positivt heltal.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |

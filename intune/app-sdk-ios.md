@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 01/10/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 74c709790295a971ff9efe7c2cc348d13d471d5a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 486ff2d22cb201abc926efc96a83455be98e7536
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -458,6 +458,73 @@ WebViewHandledURLSchemes | Strängmatris | Anger de URL-scheman som appens WebVi
 
 > [!NOTE]
 > Om din app ska lanseras på App Store måste `MAMPolicyRequired` anges till "NO" enligt App Stores standarder.
+
+## <a name="sharing-data-via-uiactivityviewcontroller"></a>Dela data via UIActivityViewController 
+Startar v. 8.0.2+, Intune APP SDK kommer att kunna filtrera UIActivityViewController-åtgärder så att inga delningsplatser som inte är Intune kan väljas. Detta beteende kommer att kontrolleras av överföringsprincipen för programdata och en kommande APP-funktion. Kommande funktionen aktiveras efter att de flesta förstapartsprogram från Microsoft (d.v.s. Word, Excel, Powerpoint) har gjort önskade ändringar till stöd för delning av data via UIActivityViewController. 
+ 
+### <a name="copy-to-actions"></a>Kopiera till-åtgärder 
+När du delar dokument via UIActivityViewController och UIDocumentInteractionController visar iOS ”Kopiera till”-åtgärderna för varje program som stöder att det dokument som delas öppnas. Programmen anger de dokumenttyper som de stöder via inställningen CFBundleDocumentTypes i sin Info.plist. Den här typen av delning kommer inte längre att vara tillgängligt om principen inte tillåter delning till ohanterade program. Som en ersättning kommer program att behöva lägga till ett icke-UI-åtgärdstillägg för sina program och länka det till Intune APP SDK för iOS. Åtgärdstillägget fungerar som en stub. SDK implementerar alla fildelningsbeteenden. Följ SDK-integrationsstegen ovan plus följande: 
+ 
+1. Programmet måste ha minst en schemeURL som definierats under dess Info.plist CFBundleURLTypes. 
+2. Dina program och åtgärdstillägget måste dela minst en app-grupp och app-gruppen måste anges under AppGroupIdentifiers-matrisen under appen och tilläggsordlistan IntuneMAMSettings. 
+3. Döp åtgärdstillägget ”Öppnat i” följt av programnamnet. Lokalisera Info.plist efter behov. 
+4. Utforma en mallikon för tillägget enligt beskrivningen i [Apples utvecklardokumentation](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Alternativt kan du använda IntuneMAMConfigurator-verktyget för att generera dessa avbildningar från programmets .app-katalog. Rör ”IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory” 
+5. Under IntuneMAMSettings i tillägget Info.plist, lägger du till en boolesk inställning med namnet OpenInActionExtension med värdet YES. 
+6. Konfigurera NSExtensionActivationRule till att stödja en enda fil och alla typer av programmets CFBundleDocumentTypes med prefixet ”com.microsoft.intune.mam”. Till exempel om programmet stöder public.text och public.image, skulle aktiveringsregeln vara: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.text” || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image”).@count == 1 
+).@count == 1 
+```
+
+### <a name="update-existing-share-and-action-extensions"></a>Uppdatera befintliga resurs- och åtgärdstillägg 
+Om programmet redan innehåller resurs- eller åtgärdstillägg måste deras NSExtensionActivationRule ändras till att tillåta Intune-typerna. För varje typ som stöds av tillägget behövs ytterligare en typ med prefixet ”com.microsoft.intune.mam”. Till exempel om den befintliga aktiveringsregeln är:  
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+Den bör ändras till: 
+
+```
+SUBQUERY ( 
+    extensionItems, 
+    $extensionItem, 
+    SUBQUERY ( 
+        $extensionItem.attachments, 
+        $attachment, 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.data" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.url" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.plain-text" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.image" || 
+        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.microsoft.intune.mam.public.data 
+    ).@count > 0 
+).@count > 0 
+ ```
+
+>[!Note] Verktyget IntuneMAMConfigurator kan användas för att lägga till Intune-typer i aktiveringsregeln. Om din befintliga aktiveringsregel använder fördefinierade strängkonstanter (t.ex. NSExtensionActivationSupportsFileWithMaxCount, NSExtensionActivationSupportsText osv.), kan predikatsyntaxet bli ganska komplext. Verktyget IntuneMAMConfigurator kan också användas för att konvertera aktiveringsregeln från strängkonstanter till en predikatsträng när du lägger till Intune-typerna. IntuneMAMConfigurator finns i vår GitHub-lagringsplats. 
+
 
 ## <a name="enabling-mam-targeted-configuration-for-your-ios-applications"></a>Aktivera MAM-riktad konfiguration för iOS-appar
 Med hjälp av en MAM-riktad konfiguration kan en app att ta emot konfigurationsdata via Intune App SDK. Dataformat och eventuella varianter av dessa data måste definieras och kommuniceras till Intune-kunderna av ägaren/programutvecklaren. Intune-administratörerna kan rikta in och distribuera konfigurationsdata via Intune Azure-portalen. Appar som deltar i MAM-riktad konfiguration kan tillhandahållas MAM-riktade konfigurationsdata via MAM-tjänsten fr.o.m. version 7.0.1 av Intune App SDK för iOS. Programmets konfigurationsdata push-överförs med vår MAM-tjänst direkt till appen i stället för via MDM-kanalen. Intune App SDK tillhandahåller en klass för att komma åt data som hämtats från dessa konsoler. Överväg att ha följande som förutsättningar: <br>

@@ -1,7 +1,7 @@
 ---
-title: Lägga till verksamhetsspecifika appar för iOS i Microsoft Intune
+title: Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 titlesuffix: ''
-description: Läs mer om att lägga till verksamhetsspecifika appar för iOS i Microsoft Intune.
+description: Läs mer om att lägga till en verksamhetsspecifik app för iOS i Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,74 +15,74 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b46981aa097de96764bd0c88ad3385debbcce85d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: fcbdf0a61b7b001dc7d3b1d620df7a88bb44e2ca
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-add-ios-line-of-business-lob-apps-to-microsoft-intune"></a>Så här lägger du till branschspecifika iOS-appar i Microsoft Intune
+# <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Informationen i den här artikeln visar hur du lägger till verksamhetsspecifika appar för iOS i Microsoft Intune.
+Informationen i den här artikeln visar hur du lägger till en verksamhetsspecifik app för iOS i Microsoft Intune.
 
 >[!NOTE]
->Användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna som Aktier och Kartor, men du kan inte använda Intune för att distribuera dessa appar igen. Om slutanvändarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
+>Användare av iOS-enheter kan ta bort några av de inbyggda iOS-apparna såsom Stocks och Maps. Du kan inte använda Intune för att distribuera om dessa appar. Om användarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
 
-## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
+## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange platsen för programinstallationsfilen
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
+1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Mobilappar** i **Intune**-fönstret.
+3. Välj **Enheter** i **Mobilappar**-fönstret.
 4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
-5. Välj **Lägg till** ovanför applistan.
-6. I fönstret **Lägg till app** väljer du **Verksamhetsspecifik app**.
+5. Välj **Lägg till** ovanför listan över appar.
+6. I fönstret **Lägg till app** väljer du **Branschspecifik app**.
 
-## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
+## <a name="step-2-configure-the-app-package-file"></a>Steg 2: Konfigurera appaketfilen
 
-1. I fönstret **Lägg till app** väljer du **Appaketfil**.
-2. I fönstret **Appaketfil** klickar du på knappen Bläddra och väljer en iOS-installationsfil med filnamnstillägget **.ipa**.
+1. I fönstret **Lägg till app** väljer du **Appaketfilen**.
+2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en installationsfil för iOS med tillägget **.ipa**.
 3. Välj **OK** när du är klar.
 
 
-## <a name="step-3---configure-app-information"></a>Steg 3 – Konfigurera appinformation
+## <a name="step-3-configure-app-information"></a>Steg 3: Konfigurera appinformation
 
 1. Välj **Appinformation** i fönstret **Lägg till app**.
-2. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
-    - **Namn** – Ange namnet på appen som ska visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna för användare i företagsportalen.
-    - **Beskrivning** – Ange en beskrivning av appen som ska visas för användare på företagsportalen.
-    - **Utgivare** – Ange namnet på appens utgivare.
-    - **Minsta operativsystem** – Välj den minsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
-    - **Ignorera appversion** – Ange **Ja** om appen uppdateras automatiskt av apputvecklaren.
-    - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det gör det lättare för användarna att hitta appen när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen** – Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretess-URL (valfritt)** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Utvecklare (valfritt)** – Ange apputvecklarens namn.
-    - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
-    - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-    - **Logotyp** – Ladda upp en ikon som är associerad med appen. Den här ikonen visas med appen när användare söker på företagsportalen.
+2. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app väljer kan det hända att några av värdena i det här fönstret fylls i automatiskt.
+    - **Namn**: Ange namnet på appen så som det visas på företagsportalen. Kontrollera att alla appnamn du använder är unika. Om samma appnamn förekommer två gånger visas endast en av apparna på företagsportalen.
+    - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas i företagsportalen.
+    - **Utgivare**: Ange namnet på appens utgivare.
+    - **Lägsta operativsystemversion**: Välj den lägsta operativsystemversion som appen kan installeras på. Om appen tilldelas till en enhet med ett äldre operativsystem installeras den inte.
+    - **Ignorera appversion**: Ange **Ja** om apputvecklaren uppdaterar appen automatiskt.
+    - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller välj en kategori som du har skapat. Kategorier gör det enklare för användarna att hitta appen när de söker i företagsportalen.
+    - **Visa den här som aktuell app på företagsportalen**: Visa appen på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
+    - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas i företagsportalen.
+    - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas i företagsportalen.
+    - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
+    - **Ägare**: Alternativt kan du ange ett namn på appägaren. Ett exempel är **Personalavdelningen**.
+    - **Anteckningar**: Ange eventuella kommentarer som du vill koppla till den här appen.
+    - **Logotyp**: Ladda upp en ikon som är associerad med appen. Den här ikonen visas tillsammans med appen när användarna söker på företagsportalen.
 3. Välj **OK** när du är klar.
 
-## <a name="step-4---finish-up"></a>Steg 4 – Slutför
+## <a name="step-4-finish-up"></a>Steg 4: Slutför
 
 1. I fönstret **Lägg till app** kontrollerar du att informationen för appen är korrekt.
-2. Välj **Lägg till** för att överföra appen till Intune.
+2. Välj **Lägg till** för att ladda upp appen till Intune.
 
-Appen som du har skapat visas i applistan där du kan tilldela den till de grupper du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+Den app som du har skapat visas nu i listan över appar. Du kan tilldela appar till grupper som du väljer i listan. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
 
-## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
+## <a name="step-5-update-a-line-of-business-app"></a>Steg 5: Uppdatera en verksamhetsspecifik app
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 
 > [!NOTE]
-> För att Intune-tjänsten ska kunna distribuera en ny IPA-fil till enheten, måste du öka *CFBundleVersion*-strängen i *Info.plist*-filen i ditt IPA-paket.
+> För att Intune-tjänsten ska kunna distribuera en ny IPA-fil till enheten, måste du öka `CFBundleVersion`-strängen i Info.plist-filen i ditt IPA-paket.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Appen som du har skapat visas i applistan. Nu kan du tilldela den till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
+- Den app som du har skapat visas i listan över appar. Nu kan du tilldela den till de grupper som du väljer. Mer information finns i [Tilldela appar till grupper](apps-deploy.md).
 
-- Lär dig mer om hur du kan övervaka appens egenskaper och tilldelning. Mer information finns i [Så här övervakar du appinformation och tilldelningar](apps-monitor.md).
+- Lär dig mer om hur du kan övervaka appens egenskaper och tilldelning. Se [Övervaka appinformation och tilldelningar](apps-monitor.md).
 
-- Lär dig mer om kontexten för din app i Intune. Mer information finns i [Översikt över enhets- och applivscykler](introduction-device-app-lifecycles.md)
+- Lär dig mer om kontexten för din app i Intune. Se [Översikt över enhets- och applivscykler](introduction-device-app-lifecycles.md).

@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83027a95edca04f4461cecab341deb3ec10680fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 611ec516b87f42b41a80de605d0d511ed2c58309
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
@@ -253,7 +253,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Användarna kommer inte åt funktioner på enheten utanför helskärmsapparna.
 
-- **Helskärmsläge** – Identifierar den typ av helskärmsläge som stöds av principen. Alternativen är:
+- **Helskärmsläge** – Identifierar vilken typ av helskärmsläge som stöds av principen. Alternativen är:
 
   - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
   - **Helskärmsläge för enskilda appar** – Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
@@ -370,6 +370,11 @@ Om filerna på enheten är skrivskyddade kan Defender inte ta bort eventuell ska
 - **Resurs-URI för utskriftstjänst** – OAuth resurs-URI för utskriftstjänster som konfigurerats i Azure-portalen.
 - **Maxantal skrivare att fråga efter (endast mobil)** – maximalt antal skrivare som ska efterfrågas från en slutpunkt för identifiering.
 - **Resurs-URI för identifiering av utskriftstjänst** – OAuth resurs-URI för identifiering av utskriftstjänster som konfigurerats i Azure-portalen.
+
+## <a name="local-printer"></a>Lokal skrivare
+- **Skrivare** – Lista över lokala skrivare som har lagts till.
+- **Standardskrivare** – Ange standardskrivaren.
+- **Användarbehörighet att lägga till nya skrivare** – Tillåt eller blockera användning av lokal skrivare.
 
 ## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
 

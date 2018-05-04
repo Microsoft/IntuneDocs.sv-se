@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 4/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce970f942d8ea20eb9ea593c23160757122926e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 374c3937d04fd546c17d6f147609f448875dddba
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör iOS
 
@@ -36,12 +36,17 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 - **Anslutningstyp**: Välj VPN-anslutningstypen från leverantörslistan nedan:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+  - **Cisco Legacy AnyConnect**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
   - **Pulse Secure**
   - **Cisco (IPSec)**
   - **Citrix**
   - **Anpassat VPN**
+
+    > [!NOTE]
+    > - **Cisco Legacy AnyConnect VPN**-profiler är för [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924)-appversion 4.0.5x och äldre versioner
+    > - **Cisco AnyConnect VPN**-profiler är för [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690)-appversion 4.0.7x och nyare versioner
 
 - **Delade tunnlar**: **Aktivera** eller **Inaktivera** för att låta enheterna bestämma vilken anslutning som ska användas beroende på trafiken. En användare på ett hotell kan till exempel använda VPN-anslutningen för att komma åt arbetsfiler, men använda hotellets standardnätverk för vanlig webbsurfning.
 
@@ -75,3 +80,6 @@ Om du har valt **Anpassat VPN** som anslutningstyp kan du även konfigurera föl
 - **Skript för automatisk konfiguration**: Använd en fil för att konfigurera proxyservern. Ange **webbadress till proxyserver** (till exempel **http://proxy.contoso.com**) som innehåller konfigurationsfilen.
 - **Adress**: Ange IP-adressen för det fullt kvalificerade värdnamnet för proxyservern.
 - **Portnummer**: Ange det portnummer som är associerat med proxyservern.
+
+## <a name="next-step"></a>Nästa steg
+[Skapa VPN-profiler i Intune](vpn-settings-configure.md)

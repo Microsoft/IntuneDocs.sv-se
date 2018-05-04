@@ -15,18 +15,18 @@ ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 63284a1dd5c1d5a6c588775f1c282bfcfef5de67
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c5820d058479bbf37c5dffdb930792f4f84afa69
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Så här konfigurerar du inställningar för iOS-appen Klassrum för Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="introduction"></a>Introduktion
-[Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Med hjälp av appen kan läraren till exempel:
+[Klassrum](https://itunes.apple.com/app/id1085319084) är en app som hjälper lärare att styra undervisningen och kontrollera elevenheterna i klassrummet. Appen möjliggör t.ex. för lärare att:
 
 - Öppna appar på elevenheter
 - Låsa och låsa upp iPad-skärmen
@@ -34,18 +34,18 @@ ms.lasthandoff: 04/16/2018
 - Navigera elevers iPad-enheter till ett bokmärke eller ett kapitel i en bok
 - Visa skärmen från en elevs iPad på en Apple TV
 
-Använda Intunes enhetsprofil för iOS **Utbildning** och informationen i det här avsnittet för att konfigurera appen Klassrum och de enheter som du använder den på.
+Om du vill konfigurera klassrum på din enhet behöver du skapa och konfigurera en Intune iOS-enhetsprofil för utbildning.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
 Tänk på följande innan du börjar konfigurera inställningarna:
 
-- Både lärarens och elevernas iPad-enheter måste registreras i Intune
+- Både lärarens och elevernas iPad-enheter måste registreras i Intune.
 - Kontrollera att du har installerat appen [Apple Klassrum](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) på lärarens enhet. Du kan antingen installera appen manuellt eller använda [Intune-apphantering](app-management.md).
-- Du måste konfigurera certifikat för att autentisera anslutningar mellan lärarens och elevernas enheter (se steg 2)
-- Lärarens och elevernas iPad-enheter måste finnas i samma Wi-Fi-nätverk och även ha Bluetooth aktiverat
-- Appen Klassrum appen körs på övervakade iPad-enheter som kör iOS 9.3 eller senare
-- I den här versionen stöder Intune hantering av ett 1:1-scenario, där varje elev har sin egen iPad
+- Du måste konfigurera certifikat till att autentisera anslutningar mellan enheter för lärare och studenter (se steg 2, skapa och tilldela en iOS Education-profil i Intune).
+- Lärarens och elevernas iPad-enheter måste finnas i samma Wi-Fi-nätverk och även ha Bluetooth aktiverat.
+- Appen Klassrum körs på övervakade iPad-enheter som kör iOS 9.3 eller senare.
+- I den här versionen stöder Intune hantering av ett 1:1-scenario, där varje elev har sin egen iPad.
 
 
 ## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>Steg 1 – Importera din skolinformation till Azure Active Directory
@@ -82,14 +82,14 @@ Du kan importera information till SDS på något av följande sätt:
 9.  Välj **Inställningar** > **Konfigurera**.
 
 
-Du behöver sedan certifikat för att upprätta en förtroenderelation mellan lärarens och elevernas iPad-enheter. Certifikat används för att smidigt och tyst autentisera anslutningar mellan enheter utan att behöva ange användarnamn och lösenord.
+I nästa avsnitt kommer du att skapa certifikat för att upprätta en förtroenderelation mellan lärarens och elevernas iPad-enheter. Certifikat används för att smidigt och tyst autentisera anslutningar mellan enheter utan att behöva ange användarnamn och lösenord.
 
 >[!IMPORTANT]
 >De lärar- och elevcertifikat som du använder måste utfärdas av olika certifikatutfärdare (CA). Du måste skapa två nya underordnade certifikatutfärdare som är anslutna till din befintliga infrastruktur för certifikat; en för lärare och en för elever.
 
 Profiler för iOS-utbildning stöder endast PFX-certifikat. SCEP-certifikat stöds inte.
 
-Certifikat som du skapar måste ha stöd för serverautentisering förutom användarautentisering.
+Skapade certifikat måste ha stöd för serverautentisering och användarautentisering.
 
 ### <a name="configure-teacher-certificates"></a>Konfigurera lärarcertifikat
 
@@ -97,13 +97,15 @@ Välj **Lärarcertifikat** i fönstret **Utbildning**.
 
 #### <a name="configure-teacher-root-certificate"></a>Konfigurera rotcertifikat för lärare
 
-Klicka på bläddringsknappen under **Rotcertifikat för lärare** för att välja lärarens rotcertifikat med tillägget .cer (DER eller Base64-kodad), eller. P7b (med eller utan fullständig kedja).
+Under **Rotcertifikat för lärare**, klickar du på bläddringsknappen. Välj rotcertifikat med antingen:
+- Tillägget .cer (DER eller Base64-kodad) 
+- Tillägget .P7B (med eller utan fullständig kedja)
 
 #### <a name="configure-teacher-pkcs12-certificate"></a>Konfigurera PKCS#12-certifikat för lärare
 
 Konfigurera följande värden under **PKCS #12-certifikat för lärare**:
 
-- **Format för namn på certifikatmottagare** –Intune lägger automatiskt till prefixet **ledare** till certifikatets unika namn för lärarcertifikat och **medlem** för elevcertifikat.
+- **Format på ämnesnamn** – Intune ger automatiskt vanliga namn för lärarcertifikat prefixet **ledare**. Vanliga namn för studentcertifikat får prefixet **medlem**.
 - **Certifikatutfärdare** – En utfärdare av företagscertifikat som körs på en Enterprise Edition av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. 
 - **Namn på certifikatutfärdare** – Ange namnet på certifikatutfärdaren.
 - **Certifikatmallens namn** – Ange namnet på en certifikatmall som har lagts till i en certifikatutfärdare. 
@@ -120,13 +122,15 @@ När du har konfigurerat certifikaten klickar du på **OK**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurera rotcertifikat för elev
 
-Klicka på bläddringsknappen under **Rotcertifikat för elev** för att välja elevens rotcertifikat med tillägget .cer (DER eller Base64-kodad), eller. P7b (med eller utan fullständig kedja).
+Under **Rotcertifikat för student**, klickar du på bläddringsknappen. Välj rotcertifikat med antingen:
+- Tillägget .cer (DER eller Base64-kodad) 
+- Tillägget .P7B (med eller utan fullständig kedja)
 
 #### <a name="configure-student-pkcs12-certificate"></a>Konfigurera PKCS#12-certifikat för elev
 
 Konfigurera följande värden under **PKCS #12-certifikat för elev**:
 
-- **Format för namn på certifikatmottagare** –Intune lägger automatiskt till prefixet **ledare** till certifikatets unika namn för lärarcertifikat och **medlem** för elevcertifikat.
+- **Format på ämnesnamn** – Intune ger automatiskt vanliga namn för lärarcertifikat prefixet **ledare**. Vanliga namn för studentcertifikat får prefixet **medlem**.
 - **Certifikatutfärdare** – En utfärdare av företagscertifikat som körs på en Enterprise Edition av Windows Server 2008 R2 eller senare. En fristående certifikatutfärdare stöds inte. 
 - **Namn på certifikatutfärdare** – Ange namnet på certifikatutfärdaren.
 - **Certifikatmallens namn** – Ange namnet på en certifikatmall som har lagts till i en certifikatutfärdare. 
@@ -147,7 +151,7 @@ Tilldela profilen till elevenheter i de klassrumsgrupper som skapades när du sy
 
 ## <a name="next-steps"></a>Nästa steg
 
-När en lärare nu använder Klassrum-appen kommer hen att ha full kontroll över elevenheterna.
+Nu när lärare nu använder Klassrum-appen kommer de att ha full kontroll över elevenheterna.
 
 Mer information om Klassrum-appen finns i [Hjälp om Klassrum](https://help.apple.com/classroom/ipad/2.0/) på Apples webbplats.
 

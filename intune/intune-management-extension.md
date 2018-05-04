@@ -3,8 +3,8 @@ title: Hantera PowerShell-skript i Microsoft Intune för Windows 10-enheter
 titlesuffix: ''
 description: Läs hur du laddar upp PowerShell-skript i Microsoft Intune för att köra Windows 10-enheter.
 keywords: ''
-ms.author: dougeby
-author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
@@ -15,11 +15,11 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c501292126200baa88e06e30b6226e5c5021b8ec
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 3de7af01ffa64293e420913258919eff118b4abc
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Hantera PowerShell-skript i Intune för Windows 10-enheter
 Intunes hanteringstillägg gör det möjligt att ladda upp PowerShell-skript i Intune för att köra Windows 10-enheter. Hanteringstillägget kompletterar funktioner för hantering av mobilenheter (MDM) i Windows 10 och gör det enklare för dig att flytta till modern hantering.
@@ -33,8 +33,8 @@ Tillägget för Intune -hantering kompletterar de inbyggda funktionerna i Window
 
 ## <a name="prerequisites"></a>Krav
 Intune-hanteringstillägget har följande krav:
-- Enheter måste vara domänanslutna till Azure AD
-- Enheter måste köra Windows 10 version 1607 eller senare
+- Enheter måste vara domänanslutna till Azure AD. Detta inkluderar inte Hybrid AD-anslutna enheter.
+- Enheter måste köra Windows 10 version 1607 eller senare.
 
 ## <a name="create-a-powershell-script-policy"></a>Skapa en princip för PowerShell-skript 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
@@ -43,7 +43,7 @@ Intune-hanteringstillägget har följande krav:
 4. Välj **Hantera** > **PowerShell-skript** i fönstret **Enhetskonfiguration**.
 5. I fönstret **PowerShell-skript** väljer du **Lägg till**.
 6. Ange ett **Namn** och en **Beskrivning** för PowerShell-skriptet i fönstret **Lägg till PowerShell-skript**.
-7. Bläddra efter PowerShell-skriptet för att ange en **Skriptplats**. Skriptet måste vara mindre än 10 KB (ASCII) eller 5 KB (Unicode).
+7. Bläddra efter PowerShell-skriptet för att ange en **Skriptplats**. Skriptet måste vara mindre än 200 KB.
 8. Välj **Konfigurera** och välj sedan om du vill köra skriptet med användarens autentiseringsuppgifter på enheten (**Ja**) eller i systemkontexten (**Nej**). Som standard körs skriptet i systemkontexten. Välj **Ja** om inte skriptet kräver att det körs i systemkontexten. 
   ![Fönstret Lägg till PowerShell-skript](./media/mgmt-extension-add-script.png)
 9. Välj om skriptet måste signeras av en betrodd utgivare (**Ja**). Som standard finns inga krav på att skriptet ska signeras. 

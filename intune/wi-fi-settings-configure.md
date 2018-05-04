@@ -3,8 +3,8 @@ title: Hur du konfigurerar Wi-Fi-inställningar i Intune
 titleSuffix: Microsoft Intune
 description: Läs om hur du använder Microsoft Intune för att konfigurera WiFi-anslutningar på enheter som du hanterar.
 keywords: ''
-author: vhorne
-ms.author: victorh
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9a550e2963fa60a91db3ef63f7771bc4ca352d98
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: fb4d9fc6f0f0609062c408fd85921c1f86bd7303
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-wi-fi-settings-in-microsoft-intune"></a>Så här konfigurerar du Wi-Fi-inställningar i Microsoft Intune
 
@@ -38,7 +38,7 @@ Wi-Fi-profiler stöder följande enhetsplattformar:
 - Android 4 och senare
 - Android for Work
 - iOS 8.0 och senare
-- macOS (Mac OS X 10.9 och senare)
+- macOS (Mac OS X 10.11 och senare)
 
 För enheter som kör Windows 8.1, Windows 10, Windows 10 Mobile och Windows Holographic for Business kan du importera en Wi-Fi-konfiguration som tidigare har exporterats från en annan enhet.
 

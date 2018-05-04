@@ -1,12 +1,12 @@
 ---
-title: Nyheter i Microsoft Intune
+title: Nyheter i Microsoft Intune – Azure | Microsoft Docs
 titlesuffix: ''
 description: Ta reda på vad som är nytt i Intune Azure-portalen
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 04/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: a2692163977a352e7a26dfc656d601d70ef401b4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9be6e0a3364f6ee0a077c1435d66498aba898430
+ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,30 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-april-23-2018"></a>Veckan 23 april 2018
+
+#### <a name="advanced-threat-protection-atp-and-intune-are-fully-integrated----eeready-1629303---"></a>Advanced Threat Protection (ATP) och Intune är helt integrerade <!-- EEready 1629303 -->
+
+I Windows Defender Security Center (ATP-portal), kan du skapa en anslutning till Microsoft Intune. När du skapat anslutningen används en efterlevnadsprincip av Intune för att fastställa en godtagbar hotnivå. Om hotnivån överskrids kan sedan en villkorlig åtkomstprincip för Azure Active Directory (AD) blockera åtkomst till olika appar i din organisation.
+
+Den här funktionen tillåter ATP att söka igenom filer, identifiera hot och rapportera eventuella risker på Windows 10-enheter.
+
+Se [Aktivera ATP med villkorlig åtkomst i Intune](advanced-threat-protection.md).
+
+## <a name="week-of-april-16-2018"></a>Veckan 16 april 2018
+
+#### <a name="use-cisco-anyconnect-client-for-ios----eeready-1333708---"></a>Använda Cisco AnyConnect klienten för iOS <!-- EEready 1333708 -->
+
+När du skapar en ny VPN-profil för iOS finns nu två alternativ: **Cisco AnyConnect** och **Cisco Legacy AnyConnect**. Cisco AnyConnect-profiler stöder 4.0.7x och nyare versioner. Befintliga iOS Cisco AnyConnect VPN-profiler är märkta **Cisco Legacy AnyConnect** och kommer fortsatt att fungera med Cisco AnyConnect 4.0.5x och äldre versioner som de gör i dag.
+
+> [!NOTE]
+> Den här ändringen gäller bara för iOS. Det finns fortfarande ett enda Cisco AnyConnect-alternativ för Android-, Android for Work- och macOS-plattformar.
+
+#### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>MacOS Jamf-registrerade enheter kan nu registreras med Intune <!-- 2370684 -->
+
+Version 1.3 och 1.4 av macOS-företagsportal registrerades inte Jamf-enheter med Intune korrekt. Version 1.4.2 av macOS-portalen åtgärdar det här problemet.
+
 
 ## <a name="week-of-april-9-2018"></a>Veckan som börjar med 9 april 2018
 
@@ -67,17 +91,17 @@ Den här förändringen påverkar både kunder som har fristående Intune och hy
 Lägg till **Intune** som favorit i stället för bladet för tjänsten **Intune-appskydd**, och se till att du känner till arbetsflödet för appskyddsprinciper på bladet **Mobilapp** i Intune. Vi omdirigerar under en kort tidsperiod och tar sedan bort **appskyddsbladet**. Tänk på att alla appskyddsprinciper redan finns i Intune och att du kan ändra dina villkorliga åtkomstprinciper. Mer information om hur du ändrar principer för villkorlig åtkomst finns [Villkorlig åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Ytterligare information finns i [Vad är appskyddsprinciper?](app-protection-policy.md) 
 
 
-## <a name="week-of-april-2-2018"></a>Veckan som börjar med 2 april 2018
+## <a name="week-of-april-2-2018"></a>Veckan 2 april 2018
 
 ### <a name="intune-apps"></a>Intune-appar
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios---1412866---"></a>Uppdatering av användarupplevelsen för appen Företagsportal för iOS <!--1412866 -->
-Vi har släppt en större uppdatering av användarupplevelsen i appen Företagsportal för iOS. Vi har gjort en fullständig visuell omarbetning för att ge appen en modernare design. Vi har bevarat appens funktionalitet, men förbättrat användarvänligheten.  
+Vi har släppt en större uppdatering av användarupplevelsen i företagsportalappen för iOS. Uppdateringen är en fullständig visuell omarbetning som ger appen en modernare design. Vi har bevarat appens funktionalitet men förbättrat användarvänligheten och tillgängligheten.  
 
 Andra nyheter:
 - Stöd för iPhone X.
-- Snabbare appstart och inläsningar som sparar tid för användarna.
-- Vi har lagt till ytterligare förloppsindikatorer för att förse användare med den senaste statusinformationen.
+- Snabbare appstart och inläsning som sparar tid för användarna.
+- Fler förloppsindikatorer som ger användarna den senaste statusinformationen.
 - Sättet att skicka loggar har förbättrats och det har blivit enklare att rapportera om något går fel.  
 
 Gå till avsnittet om [nyheter i appgränssnittet](whats-new-app-ui.md).
@@ -99,7 +123,7 @@ Du kan anpassa temafärgen i företagsportalens appar med hexkoder. När du ange
 
 ### <a name="including-and-excluding-app-assignment-based-on-groups-for-android-enterprise----1813081---"></a>Inklusive och exklusive apptilldelning baserat på grupperna för Android Enterprise <!-- 1813081 -->
 
-Android Enterprise (tidigare Android for Work) stöder inkludering och exkludering av grupper, men stöder inte de fördefinierade inbyggda grupperna **Alla användare** och **Alla enheter**. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
+Android Enterprise (tidigare Android for Work) stöder inkludering och exkludering av grupper, men stöder inte de inbyggda grupperna **Alla användare** och **Alla enheter**. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
 
 
 ### <a name="device-management"></a>Enhetshantering
@@ -140,8 +164,6 @@ Det här är en valfri kolumn på enhetsbladet. Den är inte tillgänglig som st
 #### <a name="ios-devices-are-prompted-for-a-pin-every-15-minutes---1550837---"></a>iOS-enheter uppmanas att ange en PIN-kod var 15:e minut <!--1550837 -->
 När en policy för efterlevnad eller konfiguration används på en iOS-enhet, uppmanas användarna att ange en PIN-kod var 15:e minut. Användarna uppmanas kontinuerligt tills en PIN-kod anges.
 
-
-
 #### <a name="schedule-your-automatic-updates---1805514---"></a>Schemalägga automatiska uppdateringar <!--1805514 -->
 Intune ger dig kontroll vid installation av automatiska uppdateringar med hjälp av [Inställningar för Windows 10-uppdateringsring](windows-update-for-business-configure.md). Med den här uppdateringen kan du schemalägga återkommande uppdateringar, inklusive vecka, dag och tid.
 
@@ -179,6 +201,10 @@ När du har aktiverat brandväggsinställningen kan du konfigurera brandväggen 
 - Tillåta eller blockera specifika appar
 
    Du kan tillåta eller blockera specifika appar från att ta emot inkommande anslutningar. Du kan också aktivera hemligt läge för att förhindra svar på avsökningsbegäranden.
+
+####  <a name="detailed-error-codes-and-messages----1376342---"></a>Detaljerade felkoder och meddelanden <!-- 1376342 -->
+
+I din enhetskonfiguration finns mer detaljerade felkoder och felmeddelanden. Den här förbättrade rapporteringen visar inställningarna, status för dessa inställningar och information om felsökning.
 
 ##### <a name="more-information"></a>Mer information
 
@@ -935,12 +961,6 @@ Den första versionen av datamodellen för Intune-informationslagret innehöll e
 
 
 ## <a name="notices"></a>Meddelanden
-
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-
-Du behöver inte göra något för att förbereda för den här ändringen, eftersom detta är mindre uppdateringar av arbetsflödets användargränssnitt.
-Mer information om Microsofts GDPR-efterlevnad finns i Säkerhetscenter, som är tillgängligt från länken Ytterligare information.
 
 ### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Planera för förändring: Ny Windows 10-inställning för helskärmskonfiguration i Intune <!-- 1560072 -->
 Vi ändrar hur och var du konfigurerar datorer med Windows 10 1709 och senare (RS3 och senare) i Intune Azure Portal.

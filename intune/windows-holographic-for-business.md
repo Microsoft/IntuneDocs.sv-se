@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41c1ea3bf12b83a0f09c8535275ffb58e5f46931
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: 45d8f5051d9663273c6515717b7930145ff8a964
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Anpassa enheter som kör Windows Holographic med Intune
 
@@ -38,7 +38,7 @@ Efterlevnadsprinciper är regler och inställningar som enheter måste uppfylla 
 
 Se också **[Komma igång med efterlevnadsprinciper](device-compliance-get-started.md)**.
 
-## <a name="deploy-apps"></a>Distribuera appar
+## <a name="deploy-and-manage-apps"></a>Distribuera och hantera appar
 **[Lägga till appar i Intune](apps-add.md)**
 
 Du kan lägga till appar på enheter som kör Windows Holographic for Business med hjälp av Intune. Det finns många sätt att distribuera appar på, bland annat:
@@ -46,6 +46,16 @@ Du kan lägga till appar på enheter som kör Windows Holographic for Business m
 - [Lägga till Microsoft Store-appar](store-apps-windows.md)
 - [Lägga till appar som du skapar](lob-apps-windows.md)
 - [Tilldela appar till grupper](apps-deploy.md)
+
+Microsoft Intune kan distribuera universella Windows-appar till Microsoft HoloLens-enheter som kör Windows Holographic för företag. Du kan ladda upp app-paketen direkt i Intune Azure Portal eller distribuera dem från Microsoft-Store för företag. Se följande för mer information om relaterade områden:
+- För att distribuera branschspecifika appar med Intune Azure Portal, se [Lägga till branschspecifika appar för Windows till Microsoft Intune](lob-apps-windows.md).
+- För att distribuera appar med Microsoft Store för företag, se [Hantera appar som du har köpt från Microsoft Store för företag med Microsoft Intune](windows-store-for-business.md). 
+- Mer information om app-hantering med Microsoft Intune finns i [Vad är app-hantering i Microsoft Intune](app-management.md).
+- Mer information om hur du utvecklar appar Microsoft HoloLens finns i [Mixed reality-appar för Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
+
+> [!NOTE]
+> HoloLens-enheter som kör Windows 10 Holographic för företag 1607 stöder inte online-licensierade appar från Microsoft Store för företag. Läs mer i [Installera appar på HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
+
 
 ## <a name="device-categories-and-groups"></a>Enhetskategorier och grupper
 **[Kategorisera enheter i grupper](device-group-mapping.md)**

@@ -1,12 +1,11 @@
 ---
-title: Skapa en macOS-enhetsefterlevnadsprincip i Microsoft Intune
-titleSuffix: ''
-description: Skapa en enhetsefterlevnadsprincip i Microsoft Intune för macOS-enheter så att du kan ange krav som en enhet måste uppfylla för att vara kompatibel.
+title: Skapa en efterlevnadsprincip för macOS-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa eller konfigurera en Microsoft Intune-enhetsefterlevnadsprincip för macOS-enheter för att använda systemintegritetsskydd, ange lägsta och högsta operativsystemversion, välja dina lösenordskrav och kryptera datalagring.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,30 +13,21 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6252680e64067e6d12530e0226632a1c5db7d28
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a797c68ca43a6173a4bac70e914d3f763ce5e6d0
+ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="create-a-device-compliance-policy-for-macos-devices-with-intune"></a>Skapa en enhetsefterlevnadsprincip för macOS-enheter med Intune
-
+# <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Lägg till en enhetsefterlevnadsprincip för macOS-enheter med Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-En Intune-enhetsefterlevnadsprincip för macOS anger de regler och inställningar som macOS-enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser och du kan få enhetsrapporter och vidta åtgärder för icke-kompatibilitet. Du skapar efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen.
-
-## <a name="before-you-begin"></a>Innan du börjar
-
-Granska Intune-enhetens efterlevnadsprincip innan du skapar och tilldelar en enhetsefterlevnadsprincip.
-
-- Läs mer om enhetsefterlevnadsprinciper i [Kom igång med enhetsefterlevnadsprinciper](device-compliance.md).
-
-> [!IMPORTANT]
-> Du måste skapa principer för efterlevnad för varje plattform. Intune-inställningarna för efterlevnadsprinciper är beroende av plattformsfunktioner, det vill säga inställningar som exponeras via MDM-protokollet.
+En Intune macOS-enhetsefterlevnadsprincip anger de regler och inställningar som macOS-enheter måste uppfylla för att vara kompatibla. När du använder principer för enhetsefterlevnad med villkorlig åtkomst kan du tillåta eller blockera åtkomst till företagsresurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du kan skapa efterlevnadsprinciper för enheter för varje plattform i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst:
 
+---------------------------
 
 | Principinställningar | macOS 10.11 och senare |
 | --- | --- |
@@ -45,102 +35,65 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 | **Enhetskryptering** | Åtgärdad (genom angiven PIN-kod) |
 | **E-postprofil** | I karantän |
 |**Lägsta version av operativsystemet** | I karantän |
-| **Högsta version av operativsystemet** | I karantän |  
+| **Högsta version av operativsystemet** | I karantän |
 
+---------------------------
 
-**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. (Till exempel om användaren tvingas att ange en PIN-kod.)
+**Åtgärdad** = Enhetens operativsystem tillämpar efterlevnad. Till exempel om användaren tvingas att ange en PIN-kod.
 
 **I karantän** = Enhetens operativsystem tillämpar inte efterlevnad. (Till exempel om Android-enheter inte tvingar användaren att kryptera enheten.) När enheten inte uppfyller efterlevnadskraven utförs följande åtgärder:
 
 - Enheten blockeras om en princip för villkorlig åtkomst tillämpas för användaren.
 - Företagsportalen meddelar användaren om eventuella efterlevnadsproblem.
 
-## <a name="macos-compliance-policy-settings"></a>Inställningar för efterlevnadsprinciper för MacOS
+## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
 
-Du har olika kategorier med olika inställningar att välja mellan när du skapar en ny enhetsefterlevnad med Intune:
+[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
+5. Som **Plattform**, välj **macOS**. Välj **Inställningar** för att konfigurera och ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet**. När du är klar väljer du **OK**, och **Skapa**.
 
-- Enhetens hälsotillstånd
+## <a name="device-health"></a>Enhetens hälsotillstånd
 
-- Egenskaper för enhet
+- **Kräv ett systemintegritetsskydd**: **Kräv** att dina macOS-enheter har [systemintegritetsskydd](https://support.apple.com/HT204899) aktiverat.
 
-- Systemsäkerhet
+## <a name="device-properties"></a>Egenskaper för enheten
 
-### <a name="device-health"></a>Enhetens hälsotillstånd
+- **Lägsta operativsystemversion**: När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
+- **Högsta version av operativsystemet**: När en enhet använder en senare version av operativsystemet än den som anges i regeln blockeras åtkomsten till företagsresurser. Användaren uppmanas sedan att kontakta IT-administratören. Enheten kan inte komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
-- **Kräver systemintegritetsskydd** – Ställ in på **Krav** för att kontrollera om dina macOS enheter använder systemintegritetsskydd.
+## <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 
-### <a name="device-properties"></a>Egenskaper för enheten
+### <a name="password"></a>Lösenord
 
-- **Lägsta operativsystemversion** – När en enhet inte uppfyller minimikraven för versionen av operativsystemet rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Användarna kan välja att uppgradera sina enheter. Därefter har de åtkomst till företagsresurser.
+- **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
+- **Enkla lösenord**: Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord såsom **1234** eller **1111**. Ange till **Inte konfigurerad** så att användarna kan skapa lösenord som **1234** eller **1111**.
+- **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
+- **Lösenordstyp**: Ange om ett lösenord endast ska ha **numeriska** tecken, eller om det ska vara en blandning av siffror och andra tecken (**alfanumeriska**).
+- **Antal icke-alfanumeriska tecken i lösenord**: Ange det lägsta antalet specialtecken lösenordet (&, #, %, ! och så vidare) som måste ingå i lösenordet.
 
-- **Högsta version av operativsystemet** – När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
+    Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
 
-### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
-
-#### <a name="password"></a>Lösenord
-
-- **Kräv lösenord för att låsa upp mobila enheter** – Ställ in på **Krav** för att ställa in så att användare måste ange ett lösenord för att få åtkomst till sina enheter.
-
-- **Enkla lösenord** – Ställ in på **Blockera** om du vill att användaren inte ska kunna skapa enkla lösenord som **1234** eller **1111**.
-
-- **Minsta längd på lösenord** – Ange det minsta antalet siffror eller tecken som lösenordet måste innehålla.
-
-- **Lösenordstyp** – Ange om användaren måste skapa ett **alfanumeriskt** lösenord eller ett **numeriskt** lösenord.
-
-- **Antal bokstäver och siffror i lösenord** – Om du konfigurerar alternativet för **Krav på lösenordstyp** som **Alfanumeriskt** använder du den här inställningen för att specificera det minsta antal teckenuppsättningar som lösenordet måste innehålla. 
-
-    > [!NOTE]
-    > Om du anger en högre siffra måste användaren skapa ett lösenord som är mer komplext.
+- **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
+- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
+- **Förhindra återanvändning av tidigare lösenord**: Ange antalet tidigare lösenord som inte får återanvändas.
 
     > [!IMPORTANT]
-    > För macOS-enheter refererar den här inställningen för antalet specialtecken (t.ex, **!** , **#**, **&amp;**) som måste inkluderas i lösenordet.
+    > När lösenordskravet ändras på en macOS-enhet börjar det inte gälla förrän nästa gång användaren ändrar sitt lösenord. Om du till exempel ställer in begränsning av lösenordslängd till åtta siffror och macOS-enheten för närvarande har lösenord med sex siffror så fortsätter enheten att vara kompatibel till nästa gång användaren uppdaterar sitt lösenord på enheten.
 
-- **Max antal minuter av inaktivitet innan lösenord krävs** – Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
+### <a name="encryption"></a>Kryptering
 
-- **Lösenordets giltighetstid (dagar)** – Ange antalet dagar (mellan 1 och 250) tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
-
-- **Förhindra återanvändning av tidigare lösenord** – Ange antalet tidigare lösenord som inte får återanvändas.
-
-    > [!IMPORTANT]
-    > När lösenordskravet ändras på en macOS-enhet börjar det inte gälla förrän nästa gång användaren ändrar sitt lösenord. Om du till exempel ställer in begränsning av lösenordslängd på åtta siffror och macOS-enheten för närvarande har lösenord med sex siffror fortsätter enheten att vara kompatibel till nästa gång användaren uppdaterar sitt lösenord på enheten.
-
-## <a name="to-create-a-device-compliance-policy"></a>Skapa en princip för enhetsefterlevnad
-
-1. Gå till [Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter.
-
-2. När du har loggat in visas **Azure-instrumentpanelen**.
-
-3. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
-
-4. Välj **Intune**. **Intune-instrumentpanelen** visas.
-
-5. Välj **Enhetsefterlevnad** och välj **Principer** under **Hantera**.
-
-6. Klicka på **Skapa princip**.
-
-7. Skriv ett namn, ge en beskrivning och välj den plattform som du vill att den här principen ska tillämpas på.
-
-8. Fönstret **Kompatibilitetsprincip för Mac** öppnas. Välj följande kategorier för enhetsefterlevnadsinställningar: **Systemsäkerhet**, **Enhetens hälsotillstånd** och **Egenskaper för enhet**.
-
-10. När du har valt dina inställningar, väljer du **OK** under varje inställningskategori.
-
-11. Välj **OK** och sedan **Skapa**.
+- **Kryptering för lagring av data på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter.
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 
-Om du vill tilldela en efterlevnadsprincip till användare, väljer du en princip som du har konfigurerat. Du hittar befintliga principer i fönstret **Enhetsefterlevnad - Principer**.
+1. Välj en princip som du har konfigurerat. Befintliga principer finns i **Enhetsefterlevnad** > **Principer**.
+2. Välj principen och välj **Tilldelningar**. Du kan inkludera eller exkludera säkerhetsgrupper i Azure Active Directory (AD).
+3. Välj **Valda grupper** för att se dina Azure AD-säkerhetsgrupper. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj **Spara** för att distribuera principen till användare.
 
-1. Välj den efterlevnadsprincip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas det fönster där du kan välja **Azure Active Directory-säkerhetsgrupper** och tilldela dem till principen.
+> [!TIP]
+> Som standard kontrollerat enheter efterlevnad var åttonde timme. Men användarna kan framtvinga den här processen via företagsportalappen.
 
-2. Öppna fönstret som visar säkerhetsgrupper för Azure AD genom att välja **Valda grupper**.
-
-3. Välj **Spara** för att tilldela efterlevnadsprinciperna för enheter till Azure AD-säkerhetsgrupper.
-
-4. När du har tilldelat efterlevnadsprinciperna för enheter till dina grupper kan du stänga fönstret **Tilldelningar**.
-
-    > [!TIP]
-    > Enheternas efterlevnad kontrolleras som standard var åttonde timme men användare kan forcera processen med Intune-företagsportalappen.
+Du har tillämpat principen på användarna. Enheterna som används av de användare som principen är inriktad på kommer att utvärderas för att se om de följer standard.
 
 ## <a name="next-steps"></a>Nästa steg
-
-[Så här övervakar du principer för enhetsefterlevnad](compliance-policy-monitor.md)
+[Automatisera e-post och lägga till åtgärder för inkompatibla enheter](actions-for-noncompliance.md)  
+[Övervaka efterlevnadsprinciper för Intune-enheter](compliance-policy-monitor.md)
