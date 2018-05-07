@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b003fde011fd3a727c7c7a163fedb1dae6779425
-ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
+ms.openlocfilehash: d6a06326fbb60d910aef0411fc666b82a5f22078
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-early-edition-for-microsoft-intune---april-2018"></a>Den tidiga utgåvan för Microsoft Intune – april 2018
 
@@ -40,47 +40,8 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 
 <!-- 1804 start -->
 
-### <a name="show-caller-id-in-personal-profile---android-for-work---1098984---"></a>Visa nummerpresentation i personlig profil – Android for Work <!--1098984 -->
-När du använder en personlig profil på en enhet, kan slutanvändare inte se nummerpresentation för en arbetskontakt. 
 
-I och med uppdateringen finns en ny inställning i **Android for Work** > **Enhetsbegränsningar** > **Arbetsprofilinställningar**:
-- Visa arbetskontaktens nummerpresentation i personlig profil
 
-När aktiverat (inte konfigurerat), visas arbetskontaktens nummerpresentation i den personliga profilen. När blockerad, visas inte arbetskontaktens nummerpresentation i den personliga profilen. 
-
-Gäller för: Androids arbetsprofilenheter på Android OS v6.0 och senare
-
-### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252-----from-1802--"></a>Nya Windows Defender Credential Guard-inställningar har lagts till i inställningarna för slutpunktsskydd<!--1102252 --><!--from 1802-->
-
-Nya [Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard)-inställningar kommer att läggas till i **Enhetskonfiguration** > **Profiler** > **Slutpunktsskydd**. Följande inställningar läggs till:
-
-- Säkerhetsnivå för plattform: ange om säkerhetsnivå för plattform är aktiverat vid nästa omstart. Virtualiseringsbaserad säkerhet kräver Säker start. Virtualiseringsbaserad säkerhet kan också aktiveras med DMA-skydd (direkt minnesåtkomst). DMA-skydd kräver maskinvarustöd och aktiveras endast på enheter som är korrekt konfigurerade.
-- Virtualiseringsbaserad säkerhet: ange om virtualiseringsbaserad säkerhet är aktiverat vid nästa omstart.
-- Windows Defender Credential Guard: slå på Credential Guard med virtualiseringsbaserad säkerhet för att skydda autentiseringsuppgifter vid nästa omstart när både säkerhetsnivå för plattform med säker start och virtualiseringsbaserad säkerhet är aktiverat. Bland de tillgängliga alternativen finns **Inaktiverad**, **Aktiverat med UEFI-lås**, **Aktiverat utan lås** och **Inte konfigurerad**.
-  - Alternativet ”Inaktiverad” stänger av Credential Guard via fjärranslutning om det tidigare har slagits på med alternativet ”Aktiverat utan lås”.
-
-  - Alternativet ”Aktiverat med UEFI-lås” ser till att Credential Guard inte kan inaktiveras med registernyckel eller via en grupprincip. Om du vill inaktivera Credential Guard när du har använt den här inställningen måste du ställa in gruppolicy på ”Inaktiverad” och ta bort säkerhetsfunktionerna från varje dator med en fysiskt närvarande användare för att rensa konfigurationen som finns kvar i UEFI. Så länge UEFI-konfigurationen finns kvar är Credential Guard aktiverat.
-
-  - Med alternativet ”Aktiverat utan lås” kan Credential Guard inaktiveras via fjärranslutning med grupprincipen. Enheterna som använder den här inställningen måste köra Windows 10 eller senare (version 1511).
-
-  - Alternativet ”Inte konfigurerad” låter principinställningen vara odefinierad. Grupprincip skriver inte inställningar för principen till registret, så den har ingen påverkan på datorer eller användare. Om det finns en aktuell inställning i registret ändras den inte.
-
-### <a name="passcode-support-for-mam-pin-on-android---1438086---"></a>Lösenordsstöd för MAM PIN-kod på Android<!-- 1438086 -->
-
-Intune-administratörer kommer att kunna ange ett programstartskrav för att framtvinga ett lösenord i stället för en numerisk MAM PIN-kod. Om det har konfigurerats behöver användaren ställa in och använda ett lösenord när han/hon uppmanas att göra det innan han/hon får åtkomst till MAM-integrerade program. Ett lösenord definieras som en numerisk PIN-kod med minst ett specialtecken eller en gemen/versal. Intune stöder lösenord på liknande sätt som numeriska PIN-koder. En minsta längd kan anges, vilket tillåter upprepning av tecken och sekvenser via administratörskonsolen. Den här funktionen kräver den senaste versionen av företagsportalen för Android. Funktionen finns redan tillgänglig för iOS.
-
-###  <a name="block-camera-and-screen-captures-on-android-for-work----1098977-eeready--"></a>Blockera kamera och skärmbilder i Android for Work <!-- 1098977 eeready-->
-Två nya egenskaper kommer att kunna blockeras när du konfigurerar enhetsbegränsningar för Android-enheter: 
-- Kamera: Blockerar åtkomsten till alla kameror på enheten
-- Skärmbild: Blockerar skärmbildtagning och förhindrar också att innehållet visas på enheter som inte har en säker videoutgång
-
-Gäller Android for Work.
-
-### <a name="line-of-business-lob-app-support-for-macos----1473977---"></a>Stöd för verksamhetsspecifika appar (LOB) för macOS <!-- 1473977 -->
-I Microsoft Intune går det att installera branschspecifika macOS-appar från Azure Portal. Du kommer att kunna lägga till en branschspecifik macOS-app i Intune som redan har förbehandlats av verktyget i GitHub. I Azure Portal väljer du **Mobilappar** på bladet **Intune**. På bladet **Mobilappar** väljer du **Appar** > **Lägg till**. På bladet **Lägg till app** väljer du **Branschspecifik app**. 
-
-### <a name="support-for-user-less-devices----1637553---"></a>Stöd för användarlösa enheter <!-- 1637553 -->
-Intune stöder möjligheten att utvärdera efterlevnaden på en användarlös enhet som exempelvis Microsoft Surface Hub. Policyer för efterlevnad kan riktas mot specifika enheter. Det innebär att efterlevnad (och inkompatibilitet) kan fastställas för enheter som inte har någon associerad användare.
 
 ### <a name="additions-to-local-device-security-options-settings----1403702---"></a>Tillägg till inställningar av säkerhetsalternativ för lokal enhet <!-- 1403702 -->
 Du kommer att kunna konfigurera ytterligare inställningar av säkerhetsalternativ för lokala Windows 10-enheter. Det kommer att finnas fler inställningar i Microsoft-nätverksklienten, Microsoft-nätverksservern, nätverksåtkomst och säkerhet, samt interaktiv inloggning. Inställningarna finns i kategorin Endpoint Protection när du skapar en princip för Windows 10-enhetskonfiguration.
@@ -93,67 +54,6 @@ Det kommer att finnas nya regler som gör att du automatiskt kan ta bort enheter
 
 ### <a name="prevent-consumer-apps-and-experiences-on-windows-10-enterprise-rs4-autopilot-devices---1621980---"></a>Förhindra konsumentappar och funktioner för anpassad upplevelse i Windows 10 Enterprise RS4 AutoPilot-enheter<!-- 1621980 -->
 Du kommer att kunna förhindra installationen av konsumentappar och funktioner för anpassad upplevelse på dina Windows 10 Enterprise RS4 AutoPilot-enheter. Om du vill se den här funktionen går du till **Intune** > **Enhetsregistrering** > **Windows-registrering** > **Windows AutoPilot-profiler** > **Skapa nytt** > **Registreringsinställningar**. 
-
-### <a name="advanced-threat-protection-integrated-with-intune----1629303---"></a>Avancerat skydd har integrerats med Intune <!-- 1629303 -->
-[Avancerat skydd (ATP)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection) visar risknivån för Windows 10-enheter. När Intune utvärderar kompatibiliteten i Windows 10-enheter, ingår ATP-riskpoäng i utvärderingen. Du kan använda ATP med villkorlig åtkomst för att skydda ditt nätverk.
-
-### <a name="new-enrollment-steps-for-users-on-devices-with-macos-high-sierra-10132---1734567---"></a>Nya registreringssteg för användarna på enheter med macOS High Sierra 10.13.2+ <!--1734567 -->
-I macOS High Sierra 10.13.2 finns nu begreppet ”Användargodkänd” MDM-registrering. I framtiden kan godkända registreringar tillåta att Intune hanterar vissa säkerhetskänsliga inställningar. Mer information finns i Apples supportdokumentation här: https://support.apple.com/HT208019.
-
-Enheter som registreras med macOS-företagsportalen betraktas som ”Inte användargodkända” tills användaren öppnar systeminställningarna och ger sitt manuella godkännande. Därför dirigerar macOS-företagsportalen nu användare av macOS 10.13.2 och senare till att manuellt godkänna registreringen i slutet av registreringsprocessen. Intune-administratörskonsolen rapporterar om en registrerad enhet är användargodkänd.
-
-### <a name="delete-autopilot-devices----1713650---"></a>Ta bort AutoPilot-enheter <!-- 1713650 -->
-Intune-administratörer kommer att kunna ta bort AutoPilot-enheter.
-
-### <a name="built-in-all-users-and-all-devices-group-for-android-for-work-afw-app-assignment----1813073---"></a>Inbyggd apptilldelning av gruppen Alla användare och Alla enheter för Android for Work (AFW) <!-- 1813073 -->
-Du kommer att kunna använda de inbyggda grupperna **Alla användare** och **Alla enheter** vid AFW-apptilldelning. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
-
-### <a name="improved-device-deletion-experience---1832333---"></a>Förbättrad enhetsborttagning <!--1832333 -->
-Du kommer inte längre behöva ta bort företagets data eller fabriksåterställa en enhet innan du tar bort enheten från Intune.
-
-Om du vill se den nya funktionen loggar du in på Intune och väljer **Enheter** > **Alla enheter** > namnet på enheten > **Ta bort**.
-
- Om du fortfarande vill att rensningen ska utföras kan du använda standardenhetens livscykel med hjälp av **Ta bort företagsinformation** och **Fabriksåterställning** innan du väljer **Ta bort**. 
-
-### <a name="autopilot-profiles-moving-to-group-targeting----1877935---"></a>AutoPilot-profiler flyttas till en grupp som är riktad mot <!-- 1877935 -->
-För närvarande kan AutoPilot-distributionsprofiler tilldelas till valda enheter. Fram till slutet av april gör du så här för att tilldela dessa profiler:
-- Skapa grupper (Azure AD) som innehåller AutoPilot-enheter
-- Tilldela önskade profiler till en Azure AD-grupp. AutoPilot-profilen kommer nu att tilldelas till AutoPilot-enheter i gruppen.
-
-### <a name="play-sounds-on-ios-when-in-lost-mode----1629303---"></a>Spela upp ljud på iOS när den befinner sig i Borttappat läge <!-- 1629303 -->
-När övervakade iOS-enheter är i hanteringen av mobilenheters (MDM) [Borttappat läge](device-lost-mode.md), kan du spela upp ett ljud (**Enheter** > **Alla enheter** > välj en iOS-enhet > **Översikt** > **Mer**). Ljudet fortsätter att spelas upp tills enheten tas bort från Borttappat läge, eller en användare stänger av ljudet. Gäller för iOS-enheter 9.3 och nyare.
-
-### <a name="intune-will-reinstall-required-apps-that-are-uninstalled-by-users----1947010---"></a>Intune kommer att installera om obligatoriska appar som avinstalleras av användare <!-- 1947010 -->
-Om en användare avinstallerar en obligatorisk app, installerar Intune automatiskt om appen igen inom 24 timmar i stället för att vänta på omvärderingscykeln på 7 dagar.
-
-### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Använda ett anpassat certifikatmottagarnamn på SCEP-certifikat <!-- 2064190 -->
-Du kommer att kunna använda det egna namnet **OnPremisesSamAccountName** i en anpassad certifikatmottagare för en SCEP-certifikatprofil. Du kan till exempel använda `CN={OnPremisesSamAccountName})`.
-
-### <a name="send-diagnostic-reports-in-company-portal-app-for-macos----2216677---"></a>Skicka diagnostikrapporter i företagsportalappen för macOS <!-- 2216677 -->
-Företagsportalappen för macOS-enheter kommer att uppdateras, vilket ger en förbättring av hur användarna rapporterar Intune-relaterade fel. Från företagsportalappen kommer dina anställda kunna:
-- Ladda upp diagnostikrapporter direkt till Microsofts utvecklingsteam.
-- E-posta ett incident-ID till ditt företags IT-supportteam.
-
-### <a name="always-on-vpn-for-windows-10---1333666---"></a>AlwaysOn-VPN för Windows 10 <!--1333666 -->
-
-För närvarande kan [AlwaysOn](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-auto-trigger-profile#always-on) användas på Windows 10-enheter med hjälp av en anpassad VPN-profil (virtuellt privat nätverk) som skapats med OMA-URI.
-
-Med den här uppdateringen kan administratörer aktivera AlwaysOn för VPN-profiler i Windows 10 direkt i Intune i Azure-portalen. VPN-profiler med AlwaysOn ansluts automatiskt när:
-
-- Användarna loggar in på sina enheter
-- Nätverket på enheten ändras
-- Skärmen på enheten sätts på efter att ha varit avstängd
-
-### <a name="improved-error-messaging-for-apple-mdm-push-certificate-upload-failure----2172331---"></a>Förbättrade felmeddelanden när Apple MDM-pushcertifikat inte kan överföras <!-- 2172331 -->
-
-Felmeddelandet säger att samma Apple-ID måste användas när du förnyar ett befintligt MDM-certifikat.
-
-###  <a name="device-profile-chart-and-status-list-show-all-devices-in-a-group----1449153-eeready---"></a>Enhetens profildiagram och statuslista visar alla enheter i en grupp <!-- 1449153 eeready -->
-När du konfigurerar en enhetsprofil (**Enhetskonfiguration** > **Profiler**) väljer du enhetsprofil, till exempel iOS. Du tilldelar profilen till en grupp med både iOS-enheter och enheter som inte är iOS. Antalet i det grafiska diagrammet visar att profilen tillämpas på både iOS-enheter *och* enheter som inte är iOS (**Enhetskonfiguration** > **Profiler** > välj en befintlig profil > **Översikt**). När du väljer det grafiska diagrammet på fliken **Översikt** visar **Enhetsstatus** alla enheterna i gruppen, i stället för enbart iOS-enheterna. 
-
-Med den här uppdateringen visar det grafiska diagrammet (**Enhetskonfiguration** > **Profiler** > välj en befintlig profil > **Översikt**) endast antalet för den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för iOS-enheter, visar diagrammet endast antal iOS-enheter. Om du väljer det grafiska diagrammet och öppnar **Enhetsstatus**, visas endast iOS-enheterna.
-
-När uppdateringen gjorts har det grafiska diagrammet tillfälligt tagits bort. 
 
 
 <!-- 1803 start -->
@@ -187,11 +87,6 @@ Användare som registrerar en enhet med hjälp av företagsportalen i Windows 10
 
 Vi kommer att uppdatera Hjälp och Feedback i företagsportalappen för Android för att följa standarden för Android-appar. Vi kommer att uppdatera företagsportalappen för Android under de kommande månaderna för att dela upp **Hjälp och Feedback** och skilja på menykommandona **Hjälp** och **Skicka feedback**. På sidan **Hjälp** kommer det finnas ett avsnitt med **Vanliga frågor och svar** och **E-postsupport** som visar slutanvändarna hur de laddar upp loggar till Microsoft samt skickar e-post till företagssupporten och beskriver problemet. **Skicka feedback** vägleder användaren via Microsofts standardfeedback, som uppmanar användaren att välja ”Jag gillar det”, ”Jag tycker inte om det” eller ”Jag har en idé”.
 
-<!-- 1802 start -->
-
-### <a name="new-printer-settings-for-education-profiles----1308900---"></a>Nya skrivarinställningar för utbildningsprofiler <!-- 1308900 -->
-
-Fr utbildningsprofiler finns nya inställningar under kategorin **Skrivare**: **Skrivare**, **Standardskrivare**, **Lägg till nya skrivare**.
 
 <!-- the following are present prior to 1801 -->
 
