@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 4/26/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b349a61d61288f700294e04d029d825afba13445
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d15e464ed77499c28bbcaf94289607ced48c140f
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Anpassade enhetsinställningar för enheter som kör Windows Holographic for Business i Intune
 
@@ -31,19 +31,18 @@ Kom ihåg att om du letar efter en viss inställning så innehåller [enhetsbegr
 2. I **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
 3. På sidan **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
 4. Ange följande information för varje OMA-URI-inställning som du vill lägga till:
-    - **Inställningsnamn** – Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
-    - **Inställningsbeskrivning** – Ange en beskrivning för inställningen.
-    - **Datatyp** – Välj bland:
-        - **Sträng**
-        - **Sträng (XML)**
-        - **Datum och tid**
-        - **Heltal**
-        - **Flyttal**
-        - **Boolesk**
-    - **OMA-URI (skiftlägeskänslig)** – Ange den OMA-URI som du vill tillhandahålla en inställning för.
-    - **Värde** – Ange det värde som ska associeras med den OMA-URI som du har angett.
-1. När du är klar går du tillbaka till **Skapa profil** och trycker på **Skapa**.
-Profilen skapas och visas i profillistan.
+  - **Inställningsnamn**: Ange ett unikt namn för OMA-URI-inställningen som hjälper dig att identifiera den i listan över inställningar.
+  - **Inställningsbeskrivning**: Ange en beskrivning för inställningen.
+  - **Datatyp**: Välj bland:
+    - **Sträng**
+    - **Sträng (XML)**
+    - **Datum och tid**
+    - **Heltal**
+    - **Flyttal**
+    - **Boolesk**
+  - **OMA-URI (skiftlägeskänslig)**: Ange den OMA-URI som du vill tillhandahålla en inställning för.
+  - **Värde**: Ange det värde som du vill associera med den OMA-URI som du har angett.
+5. När du är klar går du tillbaka till **Skapa profil** och trycker på **Skapa**. Profilen skapas och visas i profillistan.
 
 ## <a name="recommended-custom-settings"></a>Rekommenderade anpassade inställningar
 
@@ -52,51 +51,51 @@ Följande inställningar är användbara för enheter som kör Windows Holograph
 ### <a name="allowfastreconnecthttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-authenticationauthentication-allowfastreconnect"></a>[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
 
 ### <a name="allowvpnhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-settingssettings-allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br>0 – inte tillåten<br>1 – tillåten (standard)|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
 
 ### <a name="allowupdateservicehttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br>0 – Uppdateringstjänsten är inte tillåten <br>1 – Uppdateringstjänsten är tillåten (standard).|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br/>0 – Uppdateringstjänsten är inte tillåten <br/>1 – Uppdateringstjänsten är tillåten (standard).|
 
 ### <a name="updateserviceurlhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br/>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br/>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
 
 ### <a name="requireupdatesapprovalhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-requireupdateapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br/>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br/>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
 
 ### <a name="approvedupdateshttpsdocsmicrosoftcomwindowsclient-managementmdmupdate-csp"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/Update/ApprovedUpdates<br><br>**Viktigt!**<br>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.|
+|OMA-URI|Datatyp|
+|---|---|
+|./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Viktigt!**<br/>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.<br/><br/>Mer information finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
 
 ### <a name="applicationlaunchrestrictionshttpsdocsmicrosoftcomwindowsclient-managementmdmapplocker-csp"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 ---
-|OMA-URI|Datatyp  |
-|---------|---------|
-|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br><br>**Viktigt!**<br>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br>Mer information finns i [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+|OMA-URI|Datatyp|
+|----|---|
+|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Viktigt!**<br/>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br/>Mer information finns i [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ## <a name="find-the-policies-you-can-configure"></a>Hitta principer som du kan konfigurera
 

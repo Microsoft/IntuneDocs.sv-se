@@ -15,11 +15,11 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5532e00f90702b820ec5bed6bf2fdb3d5e9d37df
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9d0f27af68cf3a4b8b9d0687649e7b52eb976803
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -70,7 +70,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckeln som krävs för att skapa token.
 
-1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > **Lägg till**.
+1. Gå till [Intune i Azure-portalen](https://aka.ms/intuneportal) och välj **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > **Lägg till**.
 
     ![Hämta en registreringsprogramtoken.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -132,7 +132,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     ![Autentisera med Företagsportalen.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
     > [!NOTE]
-    > Multifaktorautentisering (MFA) fungerar inte vid DEP-registrering om du har profilegenskaperna inställda på **Registrera med användartillhörighet** och du inte använder en Företagsportal. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
+    > Multifaktorautentisering (MFA) fungerar inte vid DEP-registrering om du har profilegenskaperna inställda på **Registrera med användartillhörighet**. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
 
 6. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
     **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
