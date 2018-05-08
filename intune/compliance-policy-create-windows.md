@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bb79a6c18ff8b6eec20f4ce8813d8dea188215e7
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
@@ -121,23 +121,23 @@ Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om
 
 ### <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta operativsystemversion som krävs**: Ange major.minor.build.CU-nummer. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
+- **Lägsta operativsystemsversion**: Ange den lägsta tillåtna versionen i formatet major.minor.build.CU. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
 
   Om en enhet har en tidigare version än den angivna operativsystemversionen rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 
-- **Högsta tillåtna operativsystemversion**: Ange major.minor.build.CU-nummer. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
+- **Maximal operativsystemversion**: Ange den högsta tillåtna versionen i formatet major.minor.build.CU. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
 
   När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
-- **Lägsta operativsystemversion som krävs för mobila enheter**: Ange major.minor.build-nummer.
+- **Lägsta operativsystemversion som krävs för mobila enheter**: Ange den lägsta tillåtna versionen i formatet major.minor.build number.
 
   Om en enhet har en tidigare version än den angivna operativsystemversionen rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 
-- **Högsta operativsystemversion som krävs för mobila enheter**: Ange major.minor.build-nummer.
+- **Högsta operativsystemversion som krävs för mobila enheter**: Ange den högsta tillåtna versionen i formatet major.minor.build number.
 
   När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
-- **Giltiga operativsystemversioner**: Ange ett intervall för godkända operativsystemversioner, inklusive ett minimum och maximum.
+- **Giltiga operativsystemversioner**: Ange ett intervall för godkända operativsystemversioner, inklusive ett minimum och maximum. Du kan också **exportera** en lista med kommaavgränsade värden över dessa godkända OS-versionsnummer i en CSV-fil.
 
 ### <a name="system-security-settings"></a>Inställningar för systemsäkerhet
 

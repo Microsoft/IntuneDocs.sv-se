@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/24/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d61ba21ba465037fbf2ef4e1c7423f6649fc810f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 5ae3b19cfe57c48ac262a376c778d7d593456991
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -70,8 +70,8 @@ Mer information om SDK:n finns i [Översikt](app-sdk.md). Om du vill börja anv�
 
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
-|**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja – Använd [Cordova-plugin-programmet för Intune App SDK](app-sdk-cordova.md).|
+|**iOS**|Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
+|**Android**| Ja – Använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Nej|
 
 ## <a name="feature-comparison"></a>Jämförelse av funktioner
 Den här tabellen visar de inställningar som du kan använda för App SDK och apphanteringsverktyget.

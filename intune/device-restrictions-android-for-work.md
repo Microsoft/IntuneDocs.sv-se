@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/19/2018
+ms.date: 4/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5715cca4a2f3deff925c5ba2575771c548261e53
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e1db0e98318c05c7a1a854ed1af77d9d9654cc38
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Inställning av enhetsbegränsningar för arbetsenheter i Intune
 
@@ -50,6 +50,12 @@ I den här artikeln visas alla inställningar av begränsningar för Microsoft I
    När du till exempel distribuerar Gmail-appen till en Android for Work-profil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen.
 
 - **Kontaktdelning via Bluetooth**: Ger åtkomst till arbetskontakter från en annan enhet, till exempel en bil som har anslutits med Bluetooth. Den här inställningen konfigureras inte som standard och arbetsprofilens kontakter visas därför inte. Välj **Aktivera** för att tillåta denna delning och visa arbetsprofilens kontakter. Inställningen gäller för Androids arbetsprofilenheter i Android OS v6.0 och senare. Genom att aktivera det här kan vissa Bluetooth-enheter tillåtas cache-lagra arbetskontakter vid första anslutningen. Att inaktiverar den här principen efter en inledande länkning/synkronisering kanske inte kan ta bort arbetskontakter från en bluetooth-enhet.
+
+- **Skärmdump**: Blockerar skärmdumpen på enheten i arbetsprofilen. Förhindrar också att innehållet visas på visningsenheter som inte har en säker videoutgång.
+
+- **Visa arbetskontaktens nummerpresentation i personlig profil**: När alternativet aktiverats (inte konfigurerats) visas arbetskontaktens nummerpresentation i den personliga profilen. När blockerad, visas inte arbetskontaktens nummerpresentation i den personliga profilen. Gäller Android OS v6.0 och nyare versioner.
+
+- **Kamera**: Blockerar kameran på enheten i arbetsprofilen. Kameran på den personliga sidan påverkas inte av inställningen.
 
 ### <a name="work-profile-password"></a>Lösenord för arbetsprofilen
 
