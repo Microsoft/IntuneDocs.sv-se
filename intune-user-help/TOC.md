@@ -149,6 +149,6 @@
 #### [Jag behöver aktivera UAC](you-need-to-enable-uac-windows.md)
 #### [Jag behöver uppdatera Windows](you-need-to-update-os-build-version-windows.md)
 #### [Jag behöver starta Windows Defender](turn-on-defender-windows.md)
-
+## [Fjärrlåsa enheten från företagsportalappen för Windows](remote-lock-your-device-cp-app.md) 
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 ### [Fjärrlåsa enheter](remote-lock-your-device-cpwebsite.md)
