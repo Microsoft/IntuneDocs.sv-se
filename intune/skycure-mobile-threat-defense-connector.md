@@ -1,29 +1,29 @@
 ---
-title: Skycure-anslutningsprogram med Microsoft Intune
-titlesuffix: 
-description: "Läs mer om hur du integrerar Intune med Skycure Mobile Threat Defense för att styra mobil enhetsåtkomst till företagets resurser."
-keywords: 
+title: Symantec-anslutningsprogram med Microsoft Intune
+titlesuffix: ''
+description: Läs mer om hur du integrerar Intune med Symantec Endpoint Protection Mobile för att styra mobil enhetsåtkomst till företagets resurser.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 12/09/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b3148a24b077dfd491ce06fcf708a81de7d12dc1
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 577eff3a5f3965065a4066973ea8c61160ab4563
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="skycure-mobile-threat-defense-connector"></a>Skycure Mobile Threat Defense-anslutningsprogram
+# <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-anslutningsprogram
 
-Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst. Den baseras på riskbedömning som utförs av Skycure, en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör Skycure och inkluderar:
+Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorlig åtkomst baserat på riskbedömning som utförs av Symantec Endpoint Protection Mobile (SEP Mobile), en lösning för skydd mot mobila hot som är integrerad med Microsoft Intune. Risken bedöms utifrån telemetri som samlas in från enheter som kör SEP Mobile och inkluderar:
 
 -   Fysiskt skydd
 
@@ -33,21 +33,21 @@ Du kan styra åtkomsten från mobila enheter till företagsresurser med villkorl
 
 -   Skydd mot säkerhetsrisker
 
-Du kan konfigurera principer för villkorlig åtkomst baserat på Skycures riskbedömning. Den aktiveras via Intunes efterlevnadsprinciper för enheter, som du kan använda för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats.
+Du kan aktivera SEP Mobile-riskbedömning via Intunes efterlevnadsprinciper för enheter och använda principer för villkorlig åtkomst för att tillåta eller blockera åtkomst för icke-kompatibla enheter till företagets resurser baserat på de hot som har identifierats.
 
-## <a name="how-do-intune-and-skycure-help-protect-your-company-resources"></a>Hur skyddar Intune och Skycure företagets resurser?
+## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Hur skyddar Intune och SEP Mobile företagets resurser?
 
-Skycures mobilapp för Android eller iOS avbildar filsystem, nätverksstackar samt telemetri för enheter och program där det är tillgängligt. Detta skickas sedan till Skycures molntjänst som utvärderar enhetens risk för mobila hot.
+SEP Mobile-appen för Android eller iOS avbildar filsystem, nätverksstackar samt telemetri för enheter och program där det är tillgängligt. Detta skickas sedan till Symantecs molntjänst som utvärderar enhetens risk för mobila hot.
 
-Intune-enhetens efterlevnadsprincip innehåller en regel för Skycure Mobile Threat Defense, som är baserad på Skycures riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
+Intune-enhetens efterlevnadsprincip innehåller en regel för SEP Mobile, som är baserad på SEP Mobiles riskbedömning. När den här regeln är aktiverad utvärderar Intune enhetens efterlevnad med principen som du har aktiverat.
 
-Om enheten utvärderats som inkompatibel blockeras åtkomst till resurser som Exchange Online och SharePoint Online. Användarna av blockerade enheter får anvisningar i Skycures mobilapp för att lösa problemet och återfå åtkomsten till företagets resurser.
+Om enheten utvärderats som inkompatibel blockeras åtkomst till resurser som Exchange Online och SharePoint Online. Användarna av blockerade enheter får anvisningar i SEP Mobile-app för att lösa problemet och återfå åtkomsten till företagets resurser.
 
-Intune stöder två lägen för integrering med Skycure:
+Intune stöder två lägen för integrering med SEP Mobile:
 
--   **Grundinställning** är ett skrivskyddat läge som gör Skycure synligt för enheter i Intune.
+-   **Grundinställning** är ett skrivskyddat läge som gör SEP Mobile synligt för enheter i Intune.
 
--   **Fullständig integrering** tillåter att Skycure rapporterar information om enhetsrisker och säkerhetsincidenter till Intune.
+-   **Fullständig integrering** tillåter att SEP Mobile rapporterar information om enhetsrisker och säkerhetsincidenter till Intune.
 
 ## <a name="sample-scenarios"></a>Exempelscenarier
 
@@ -65,11 +65,11 @@ När skadliga program som till exempel skadlig kod upptäckts på enheter kan du
 
 **Blockera när skadliga appar identifieras:**
 
-![Skadliga appar har identifierats](./media/skycure-arch-1.png)
+![Skadliga appar har identifierats](./media/symantec-arch-1.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Åtkomst beviljad när problemet är löst efter att skadliga appar har identifierats](./media/skycure-arch-2.png)
+![Åtkomst beviljad när problemet är löst efter att skadliga appar har identifierats](./media/symantec-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrollera åtkomst baserat på hot mot nätverket
 
@@ -77,11 +77,11 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket, samt s
 
 **Blockera nätverksåtkomst via Wi-Fi:**
 
-![Blockera nätverksåtkomst via Wi-Fi](./media/skycure-arch-3.png)
+![Blockera nätverksåtkomst via Wi-Fi](./media/symantec-arch-3.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Åtkomst beviljad när problemet är löst](./media/skycure-arch-4.png)
+![Åtkomst beviljad när problemet är löst](./media/symantec-arch-4.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrollera åtkomst till SharePoint Online baserat på hot mot nätverket
 
@@ -89,11 +89,11 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 
 **Blockera SharePoint Online när hot identifieras på nätverket:**
 
-![Blockera SharePoint Online när hot identifieras på nätverket](./media/skycure-arch-5.png)
+![Blockera SharePoint Online när hot identifieras på nätverket](./media/symantec-arch-5.png)
 
 **Åtkomst beviljad när problemet är löst:**
 
-![Åtkomst beviljad när problemet är löst för Sharepoint-exempel](./media/skycure-arch-6.png)
+![Åtkomst beviljad när problemet är löst för Sharepoint-exempel](./media/symantec-arch-6.png)
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -107,18 +107,18 @@ Identifiera hot, till exempel **Man-in-the-middle**-angrepp i nätverket och fö
 
 -   Microsoft Intune-prenumeration
 
--   Prenumeration på Skycure Mobile Threat Defense
+-   Symantec Endpoint Protection Mobile-prenumeration
 
-Mer information hittar du på [Skycures webbplats](https://www.skycure.com/skycure-microsoft-integration/).
+Mer information hittar du på [Symantecs webbplats](https://www.skycure.com/skycure-microsoft-integration/).
 
 ## <a name="next-steps"></a>Nästa steg
 
-Här är de steg som du måste utföra om du vill integrera Intune med Skycure:
+Här är de steg som du måste utföra om du vill integrera Intune med SEP Mobile:
 
-- [Konfigurera Skycure-integrering med Intune](skycure-mtd-connector-integration.md)
+- [Konfigurera SEP Mobile-integrering med Intune](skycure-mtd-connector-integration.md)
 
-- [Lägg till och tilldela Skycure-appar, Microsoft Authenticator och konfigurationsprincip för iOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Lägg till och tilldela SEP Mobile-appar, Microsoft Authenticator och konfigurationsprincip för iOS-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
-- [Skapa Skycure-enhetens efterlevnadsprincip med Intune](mtd-device-compliance-policy-create.md)
+- [Skapa SEP Mobile-enhetens efterlevnadsprincip med Intune](mtd-device-compliance-policy-create.md)
 
-- [Aktivera Skycures MTD-anslutning i Intune](mtd-connector-enable.md)
+- [Aktivera SEP Mobiles MTD-anslutning i Intune](mtd-connector-enable.md)

@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 228198276643f1eb8dfcb0392e4902a7f56875c9
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
@@ -58,7 +58,9 @@ Om enheten är på och ansluten sprids åtgärden **Fabriksåterställning** öv
 
 ## <a name="remove-company-data"></a>Ta bort företagsdata
 
-Åtgärden **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt), inställningar och e-postprofiler som har tilldelats med hjälp av Intune. Åtgärden **Ta bort företagsdata** behåller användarens personliga data på enheten. Enheten tas bort från Intune-hantering. 
+Åtgärden **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt), inställningar och e-postprofiler som har tilldelats med hjälp av Intune. Enheten tas bort från Intune-hantering. Detta sker nästa gång enheten checkar in och tar emot fjärråtgärden **Ta bort företagets data**.
+
+Åtgärden **Ta bort företagsdata** behåller användarens personliga data på enheten.  
 
 Följande tabell beskriver vilka data som tas bort och hur åtgärden **Ta bort företagsdata** påverkar data som lämnas kvar på enheten när företagsdata tas bort.
 
@@ -123,13 +125,19 @@ Borttagning av företagsdata på en Android for Work-enhet tar bort alla data, a
 
 ### <a name="remove-company-data"></a>Ta bort företagsdata
 
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Alla enheter** i fönstret **Enheter**.
-4. Välj namnet på den enhet där du vill ta bort företagsdata.
-5. I fönstret som visar enhetsnamnet väljer du **Ta bort företagsdata**. Välj **Ja** för att bekräfta.
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+2. Välj **Alla enheter** i fönstret **Enheter**.
+3. Välj namnet på den enhet där du vill ta bort företagsdata.
+4. I fönstret som visar enhetsnamnet väljer du **Ta bort företagsdata**. Välj **Ja** för att bekräfta.
 
 Om enheten är på och ansluten sprids åtgärden **Ta bort företagsdata** över alla enhetstyper på mindre än 15 minuter.
+
+## <a name="delete-devices-from-the-intune-portal"></a>Ta bort enheter från Intune-portalen
+
+Om du vill ta bort enheter från Intune-portalen kan du ta bort dem från det specifika enhetsfönstret. Nästa gång enheten checkar in tas alla företagets data bort.
+
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+2. Välj **Enheter** > **Alla enheter** > Välj de enheter som du vill ta bort > **Ta bort**.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Ta bort enheter från Azure Active Directory-portalen
 

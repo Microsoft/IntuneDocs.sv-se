@@ -1,25 +1,25 @@
 ---
 title: Aktivera Mobile Threat Defense-anslutningsprogrammet i Microsoft Intune
-titleSuffix: 
+titleSuffix: ''
 description: Aktivera anslutningsprogrammet mellan MTD-partnern (Mobile Threat Defense) och Microsoft Intune.
-keywords: 
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: dbb6a37e-ba47-4b69-922c-d25e66c279f6
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3ca0b8082e0fccc5ee4c97e281d546ba4a75d813
-ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
+ms.openlocfilehash: 8fec1477cf5f5f7fd6db113c8b87b6eb4068101d
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Aktivera Mobile Threat Defense-anslutningsprogrammet i Intune
 
@@ -58,7 +58,7 @@ Du kan bestämma vilka MTD-växlingsalternativ som behöver aktiveras enligt din
 <br></br>
 - **Blockera operativsystemversioner som inte stöds**: Blockera om enheten kör ett operativsystem är äldre än den äldsta version som stöds.
 
-- **Antalet dagar tills partnern inte svarar**: Maximalt antal dagar av inaktivitet innan Intune betraktar partnern som icke-kommunikativ eftersom anslutningen har gått förlorad. Intune ignorerar efterlevnadsstatusen för MTD-partners som inte svarar.
+- **Antalet dagar tills partnern är icke-kommunikativ**: Maximalt antal dagar av inaktivitet innan Intune betraktar partnern som icke-kommunikativ eftersom anslutningen har gått förlorad. Intune ignorerar efterlevnadsstatusen för MTD-partners som inte svarar.
 
 > [!IMPORTANT] 
 > Du måste lägga till och tilldela MTD-apparna innan du skapar principregler för enhetsefterlevnad och villkorlig åtkomst. Det säkerställer att MTD-appen är redo och tillgänglig för slutanvändarna att installera innan de kan få åtkomst till e-post och andra företagsresurser.

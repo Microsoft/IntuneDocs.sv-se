@@ -1,30 +1,43 @@
 ---
 title: Registrera enheter med Windows AutoPilot-distributionsprogrammet
 titleSuffix: Microsoft Intune
-description: "Läs om hur du registrerar Windows 10-enheter med Windows AutoPilot-distributionsprogrammet."
-keywords: 
+description: Läs om hur du registrerar Windows 10-enheter med Windows AutoPilot-distributionsprogrammet.
+keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 04/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 4522be0b636a72844fa6177fbb35d3350cfbd00e
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: 934b80d1c174c25d37e30695f46afc88c8d8bfc3
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot-deployment-program"></a>Registrera Windows-enheter med hjälp av Windows AutoPilot-distributionsprogrammet
 Windows AutoPilot-distributionsprogrammet förenklar etableringen av enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. När du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar, etc. på enheterna när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
 
 ## <a name="prerequisites"></a>Krav
-- [Enheter måste vara registrerade för din organisation](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot#device-registration-and-oobe-customization)
 - [Automatisk registrering i Windows aktiverad](https://docs.microsoft.com/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium-prenumeration](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+## <a name="add-devices"></a>Lägg till enheter
+
+Du kan lägga till Windows AutoPilot-enheter genom att importera en CSV-fil med deras information.
+
+1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > **Importera**.
+
+    ![Skärmbild av Windows AutoPilot-enheter](media/enrollment-autopilot/autopilot-import-device.png)
+
+2. Under **Lägg till Windows Autopilot-enheter**, bläddrar du till en CSV-fil som innehåller serienummer, produkt-ID för Windows och maskinvaruhashvärden för de enheter som du vill lägga till.
+
+    ![Skärmbild av Lägga till Windows AutoPilot-enheter](media/enrollment-autopilot/autopilot-import-device2.png)
+
+3. Välj **Importera** för att börja importera enhetsinformationen. Det kan ta flera minuter.
 
 ## <a name="synchronize-devices"></a>Synkronisera enheter
 Synkronisera dina registrerade enheter i Intune så du kan konfigurera dem.
@@ -108,6 +121,16 @@ Du kan visa en avisering för otilldelade Windows AutoPilot-enheter om du vill s
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Enhetsregistrering** under **Intune**.
 4. Välj **Översikt** för att se aviseringen. Klicka på aviseringen om du vill se en lista över AutoPilot-enheter.  
+
+## <a name="delete-autopilot-devices"></a>Ta bort AutoPilot-enheter
+
+Du kan ta bort Windows AutoPilot-enheter som inte har registrerats. Du kan avregistrera enheter och ta bort dem.
+
+1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter**.
+
+2. Under **Windows AutoPilot-enheter**, välj de enheter som du vill ta bort och välj sedan **Ta bort**.
+
+3. Bekräfta borttagningen genom att välja **Ja**. Det kan ta några minuter att ta bort.
 
 
 ## <a name="next-steps"></a>Nästa steg

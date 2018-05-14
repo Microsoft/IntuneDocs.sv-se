@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dabf8d67b4d0bd7252f306d6b21949cf501eca8d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 834eb66e21820880f644c33d7e5d6aedad6bd502
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -40,13 +40,11 @@ NDES-servern måste vara ansluten till den domän där certifikatutfärdaren fin
   -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
   -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
 
-> [!NOTE]
-> - Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
-> - WAP-servern måste ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter och ha förtroende för de SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
-> 
->   Information om certifikat för WAP finns i [Planera certifikat](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates).
-> 
->   Allmän information om WAP-servrar finns i [Arbeta med webbprogramsproxy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+#### <a name="additional"></a>Mer information
+- Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
+- WAP-servern måste ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter och ha förtroende för de SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
+
+Mer information finns i [Planera certifikat för WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) och [allmän information om WAP-servrar](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="network-requirements"></a>Nätverkskrav
 
@@ -369,13 +367,13 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
        - **CN={{IMEINumber}}**: Det unika IMEI (International Mobile Equipment Identity)-numret som används för att identifiera en mobiltelefon
        - **CN={{OnPrem_Distinguished_Name}}**: En serie relativa unika namn som är avgränsade med kommatecken, till exempel `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
-       > [!TIP]
-       > Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure Active Directory (AD) Anslut](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+          Om du vill använda variabeln `{{OnPrem_Distinguished_Name}}` måste du synkronisera användarattributet `onpremisesdistingishedname` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
+
+       - **CN = {{onPremisesSamAccountName}}**: Administratörer kan synkronisera samAccountName attribut från Active Directory till Azure AD med Azure AD connect till ett attribut som kallas `onPremisesSamAccountName`. Intune kan ersätta denna variabel som en del av en begäran om certifikatutfärdande i ämnet på ett SCEP-certifikat.  Attributet samAccountName är användarens inloggningsnamn som används för att stödja klienter och servrar från en tidigare version av Windows (före Windows 2000). Formatet på användarens inloggningsnamn är: `DomainName\testUser`, eller endast `testUser`.
+
+          Om du vill använda variabeln `{{onPremisesSamAccountName}}` måste du synkronisera användarattributet `onPremisesSamAccountName` med hjälp av [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) till din Azure AD.
 
        Genom att kombinera en eller fler av dessa variabler och statiska strängar kan du skapa ett eget format för namn på certifikatmottagare. Exempel: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. <br/> I det här exemplet skapade du ett format som utöver variablerna CN och E använder strängar för värdena organisationsenhet, organisation, plats, delstat och land. [CertStrToName-funktionen](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) beskriver den här funktionen och dess strängar som stöds.
-
-
-
 
 - **Alternativt namn för certifikatmottagare**: Ange hur värden för det alternativa certifikatmottagarnamnet i certifikatförfrågan ska skapas automatiskt i Intune. Om du exempelvis valde en användarcertifikattyp kan du ange användarens huvudnamn (UPN) i det alternativa certifikatmottagarnamnet. Om klientcertifikatet används för att autentisera mot en nätverksprincipserver måste du ange användarens huvudnamn som alternativt mottagarnamn.
 - **Nyckelanvändning**: Ange alternativen för nyckelanvändning för certifikatet. Alternativen är:

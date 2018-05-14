@@ -125,6 +125,7 @@
 #### [Registrera din Windows 10-enhet via ”Åtkomst till arbete eller skola”](enroll-your-w10-device-access-work-or-school.md)
 #### [Registrera din Windows 8.1- eller Windows RT 8.1-enhet](enroll-your-w81-or-rt81-windows.md)
 #### [Avregistrera din Windows Phone 8.1-enhet](enroll-your-wp81-windows.md)
+### [Installera appar från företagsportalappen för Windows](install-apps-cpapp-windows.md)
 ### [Återställa sin enhet](reset-erase-your-device-cpwebsite.md)
 ### [Kryptera din enhet](encrypt-your-device-windows.md)
 ### [Ange eller ändra ett lösenord](set-or-change-your-password-windows.md)

@@ -1,27 +1,27 @@
 ---
-title: "Installera Office 365-appar på enheter med Microsoft Intune"
-titlesuffix: 
-description: "Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter."
-keywords: 
+title: Installera Office 365-appar på enheter med Microsoft Intune
+titlesuffix: ''
+description: Läs mer om att använda Microsoft Intune för att underlätta installationen av Office 365-appar på Windows 10-enheter.
+keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 076d228f3b18416e4ecb8fd1b3543a58d037e386
-ms.sourcegitcommit: 8a235b7af6ec3932c29a76d0b1aa481d983054bc
+ms.openlocfilehash: da02a71d3801d0e00362617dd5d0cc76ffdd4722
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="how-to-assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Så här tilldelar du Office 365-appar till Windows 10-enheter med Microsoft Intune
+# <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
 Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
 
@@ -33,80 +33,82 @@ Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som d
 
 - Enheterna måste köra Windows 10 Creators Update eller senare.
 - Intune har endast stöd för att lägga till Office-appar från Office 365.
-- Om alla Office-program är öppna när Intune installerar appen kan installationen misslyckas och slutanvändare kan förlora data från filer som inte sparats.
+- Om alla Office-program är öppna när Intune installerar appen kan installationen misslyckas och användare kan förlora data från filer som inte sparats.
 - Den här installationsmetoden stöds inte på Windows 10S-, Windows Home-, Windows Team-, Windows Holographic- eller Windows Holographic for Business-enheter.
 - Intune stöder inte installation av Office 365-skrivbordsappar från Microsoft Store (kallas även Office Centennial-appar) på en enhet som du redan har distribuerat Office 365-appar till med Intune. Om du installerar den här konfigurationen kan det orsaka dataförlust eller skadade data.
-- Många obligatoriska eller tillgängliga apptilldelningar är inte additiva. En senare tilldelning av en app överskriver de befintliga installerade apptilldelningarna. Om den första uppsättningen Office-program innehåller Word och den senare inte gör det så kommer exempelvis Word att avinstalleras. Detta gäller inte för Visio- eller Project-program.
+- Många obligatoriska eller tillgängliga apptilldelningar är inte additiva. En senare tilldelning av en app överskriver de befintliga installerade apptilldelningarna. Om den första uppsättningen Office-program innehåller Word och den senare inte gör det så kommer exempelvis Word att avinstalleras. Detta tillstånd gäller inte för Visio- eller Project-program.
 
 
 ## <a name="get-started"></a>Kom igång
 
-1.  Logga in på [Azure-portalen](https://portal.azure.com).
-2.  Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3.  Välj **Mobilappar** på **Intune**-bladet.
-4.  Välj **Appar** i avsnittet **Hantera** i arbetsbelastningen **Mobilappar**.
-5.  Välj **Lägg till** ovanför applistan.
-6.  I listan **Apptyp** på bladet **Lägg till appar** väljer du **Windows 10** under **Office 365-paket**.
-    Nu kan du konfigurera app-paketet.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
+3. Välj **Enheter** i **Mobilappar**-fönstret.
+4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+5. Välj **Lägg till**.
+6. I fönstret **Lägg till appar** i listan **Apptyp** under **Office 365 Office** väljer du **Windows 10**.
+
+Nu kan du konfigurera app-paketet.
 
 ## <a name="configure-the-app-suite"></a>Konfigurera app-paketet
 
-Välj de Office-appar som du vill tilldela till enheter i det här steget.
+Välj de Office-appar som du vill tilldela till enheter.
 
-1.  På bladet **Lägg till app** väljer du **Konfigurera appaket**.
-2.  På bladet **Konfigurera appaket** väljer du de standard-Office-appar som du vill tilldela till enheter. Dessutom kan du också installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa.
-3.  När du är klar klickar du på **OK**.
+1. I fönstret **Lägg till app** väljer du **Konfigurera appsvit**.
+2. I fönstret **Konfigurera appsvit** väljer du de standard-Office-appar som du vill tilldela till enheter.  
+    Dessutom kan du också installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa.
+3. Välj **OK**.
 
 >[!IMPORTANT]
 > När du har skapat app-paketet kan du inte redigera dess egenskaper. För att konfigurera olika egenskaper måste du ta bort appaketet och skapa en ny.
 
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
-I det här steget måste du ange information om appaketet. Den här informationen hjälper dig att identifiera appaketet i Intune och hjälper även användarna att hitta det i företagsportalappen.
+I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
 
-1.  Välj **Appinformation** på bladet **Lägg till app**.
-2.  Konfigurera följande information på bladet **Appinformation**:
-    - **Paketnamn** – Ange namnet på appaketet så som det visas på företagsportalen. Kontrollera att alla paketnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
-    - **Paketbeskrivning** – Ange en beskrivning för appaketet. Exempelvis kan du visa de appar som ingår.
-    - **Utgivare** – Ange namnet på appens utgivare.
-    - **Kategori** – Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Det blir det enklare för användarna att hitta appaketet när de söker på företagsportalen.
-    - **Visa den här som aktuell app på företagsportalen** – Visa appaketet på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
-    - **Informations-URL** – Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Sekretess-URL (valfritt)** – Ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Utvecklare (valfritt)** – Ange apputvecklarens namn.
-    - **Ägare (valfritt)** – Ange ett namn på appägaren, t.ex. **Personalavdelningen**.
-    - **Anteckningar** – Ge eventuella kommentarer som du vill koppla till den här appen.
-    - **Logo** – Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
-3.  När du är klar klickar du på **OK**.
+1. Välj **Information om appsvit** i fönstret **Lägg till app**.
+2. I fönstret **Information om appsvit** gör du följande:
+    - **Svitnamn**: Ange namnet på appsviten så som det visas i företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
+    - **Svitbeskrivning**: Ange en beskrivning för appsviten. Exempelvis kan du visa de appar som ingår.
+    - **Utgivare**: Ange namnet på appens utgivare.
+    - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Inställningen gör det enklare för användarna att hitta appaketet när de söker på företagsportalen.
+    - **Visa den här som aktuell app på företagsportalen**: Välj det här alternativet för att visa appsviten på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
+    - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
+    - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
+    - **Ägare**: Alternativt kan du ange ett namn på appägaren, t.ex. *Personalavdelningen*.
+    - **Anteckningar**: Ange eventuella kommentarer som du vill koppla till den här appen.
+    - **Logotyp**: Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
+3. Välj **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurera appinställningar
 
 Konfigurera installationsalternativ för app-paket i det här steget. Inställningarna tillämpas på alla appar som du har lagt till i serien.
 
-1.  Välj **Appaketinformation** på bladet **Lägg till app**.
-2.  Konfigurera följande information på bladet **Appaketinformation**:
-    - **Office-version** -Välj om du vill tilldela 32-bitars eller 64-bitars version av Office. Du kan installera 32-bitarsversionen på enheter med 32-bitar och 64-bitar, men du kan bara installera 64-bitarsversionen på 64-bitarsenheter.
-    - **Uppdatera kanal** – Välj hur office uppdateras på enheter. Information om de olika uppdateringskanalerna finns i [Översikt över uppdateringskanaler för Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Välj mellan:
+1. Välj **Inställningar för appsvit** i fönstret **Lägg till app**.
+2. I fönstret **Inställningar för appsvit** gör du följande:
+    - **Office-version**: Välj om du vill tilldela 32-bitars eller 64-bitars version av Office. Du kan installera 32-bitarsversionen på enheter med 32-bitar och 64-bitar, men du kan bara installera 64-bitarsversionen på 64-bitarsenheter.
+    - **Uppdatera kanal**: Välj hur Office uppdateras på enheter. Information om de olika uppdateringskanalerna finns i [Översikt över uppdateringskanaler för Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Välj mellan:
         - **Varje månad**
         - **Månadskanal (riktad)**
         - **Semi-Annual** (Varje halvår)
         - **Varje halvår (riktad)**
-    - **Godkänn applicensavtalet för slutanvändare** – Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
-    - **Använd aktivering på delad dator** – Aktivering på delad dator används när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365.
-    - **Språk** - Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.
+    - **Godkänn applicensavtalet för slutanvändare**: Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
+    - **Använd aktivering på delad dator**: Välj det här alternativet när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365.
+    - **Språk**: Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.
 
 >[!IMPORTANT]
 > När du har skapat app-paketet kan du inte redigera dess egenskaper. För att konfigurera olika egenskaper måste du ta bort appaketet och skapa en ny.
 
 ## <a name="finish-up"></a>Slutför
 
-När du är klar väljer du **OK** på bladet **Lägg till**. Appen som du har skapat visas i applistan.
+I fönstret **Lägg till app** väljer du **Lägg till** när du är klar. Appen som du har skapat visas i applistan.
 
-## <a name="error-codes-when-installing-the-app-suite"></a>Felkoder vid installation av app-paket
+## <a name="errors-during-installation-of-the-app-suite"></a>Fel under installationen av appsviten
 
-I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
+I följande tabeller visas vanliga felkoder som kan uppstå och deras innebörd.
 
-### <a name="status-for-office-csp"></a>Status för Office CSP:
+### <a name="status-for-office-csp"></a>Status för Office CSP
 
 ||||
 |-|-|-|
@@ -116,9 +118,9 @@ I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 |Felkod från CertVerifyCertificateChainPolicy|-|Kontroll av certifikatutfärdare för det hämtade distributionsverktyget för Office|    
 |997|PÅGÅENDE ARBETE|Installerar|
 |0|Efter installation|Installationen lyckades|    
-|1603 (ERROR_INSTALL_FAILURE)|-|Kravkontrollen misslyckades, till exempel:<br>-SxS (försökte installera när 2016 MSI är installerat)<br>- versionsmatchningsfel<br>-osv.|     
-|0x8000ffff (E_UNEXPECTED)|-|Försökte avinstallera när det inte finns någon Klicka och kör Office på datorn.|    
-|17002|-|Det gick inte att slutföra scenariot (installation). Möjlig orsak:<br>- Installationen avbröts av användaren<br>- Installationen avbröts av en annan installation<br>- Slut på diskutrymme under installationen<br>- Okänt språk-ID|
+|1603 (ERROR_INSTALL_FAILURE)|-|Kravkontrollen misslyckades, till exempel:<ul><li>SxS (försökte installera när 2016 MSI är installerat)</li><li>Versionsmatchningsfel</li><li>Andra</li></ul>|  
+|0x8000ffff (E_UNEXPECTED)|-|Försökte avinstallera när det inte finns någon Klicka och kör Office på datorn|     
+|17002|-|Det gick inte att slutföra scenariot (installation). Möjlig orsak:<ul><li>Installationen avbröts av användaren</li><li>Installationen avbröts av en annan installation</li><li>Slut på diskutrymme under installationen</li><li>Okänt språk-ID</li></ul>|
 |17004|-|Okända SKU:er|   
 
 
@@ -138,4 +140,4 @@ I följande tabell visas vanliga felkoder som kan uppstå och deras innebörd.
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Nu kan du tilldela apparna de grupper du väljer. Läs [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).
+- Information om hur du tilldelar apparna till de grupper du väljer finns i [Tilldela appar till grupper](/intune-azure/manage-apps/deploy-apps).

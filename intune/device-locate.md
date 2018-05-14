@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: da8bb19db8c2da2d5854c3f991ccce4d124d594c
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 735b3323527487e231d190ffd45e9083c4f524a2
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Hitta borttappade eller stulna iOS-enheter med Intune
 
@@ -46,6 +46,15 @@ Den här funktionen stöds inte för följande system:
 
 >[!NOTE]
 >Av sekretesskäl är avståndet du kan zooma in på kartan begränsat.
+
+## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivera ljudavisering för borttappat läge på en iOS-enhet
+
+Om någon har tappat bort sin iOS 9.3-enhet eller senare enhet kan du via fjärranslutning utlösa en ljudavisering på enheten så att användaren kan hitta den. Enheten måste vara i [Borttappat läge](device-lost-mode.md).
+
+I [Intune i Azure Portal](https://aka.ms/intuneportal), välj **Enheter** > **Alla enheter** > välj en iOS-enhet > **Översikt**  >  **Mer** > **Spela upp ljud för Borttappat läge (övervaka endast)**.
+
+Ljudet fortsätter att spelas upp tills användaren inaktiverar ljudet på enheten eller enheten tas bort från Borttappat läge.
+
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Information om säkerhet och sekretess för åtgärderna för borttappat läge och hitta enhet
 - Ingen platsinformation för enheten skickas till Intune förrän du har aktiverat den här åtgärden.

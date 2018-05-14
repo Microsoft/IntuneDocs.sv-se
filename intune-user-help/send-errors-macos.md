@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/07/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,30 +17,34 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa294e5df63106f949da94aec766c04839e0171f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 52431d900ee9abe71458b8b22d8a0946f22ce583
+ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Skicka fel till rätt personer för din hanterade macOS-enhet
 
-Om det uppstår fel på din macOS-enhet när du använder företagsportalappen kan du skicka information för att hjälpa företagets support att felsöka problemet.
+Ibland uppstår oförklarade fel i företagsportal-appen. När ett fel inträffar kan du skicka information om det till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.
 
 ## <a name="send-errors-to-your-company-support"></a>Skicka fel till företagets support
 
- Du kan skicka information om fel till företagets support på olika sätt:
+Skicka information om ett felmeddelande i företagsportalappen:
 
--   Klicka på **Rapportera** i felmeddelanden.
+-   I felmeddelandet du får, klicka på **Rapportera**.
 
--   Klicka på **Spara diagnostikrapport** på **Hjälp**-menyn i företagsportalappen. Välj en plats där du vill spara filen. Du kan skicka filen via e-post eller överföra den till företagets support.
+-   Klicka på menyn **Hjälp** > **Spara diagnostikrapport**. Välj en plats där du vill spara filen. Skicka sedan filen via e-post eller ladda upp den till supporten för ditt företag.
 
-- Om e-postappen redan har konfigurerats kan du också skicka diagnostikrapporten genom att välja **Hjälp** > **Skicka diagnostikrapport**.
+-   Om e-postappen har konfigurerats kan du skicka diagnostikrapporten genom att välja **Hjälp** > **Skicka diagnostikrapport**. När loggarna har laddats upp klickar du på **E-postinformation**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Skicka fel till företagsportalens utvecklare för macOS-enheter
 
-Företagsportalappen kan ibland ha ett oväntat beteende. Sådana problem vill apputvecklarna ha mer information om, eftersom det hjälper oss att förbättra funktionaliteten och förhindra att liknande beteenden förekommer igen i framtiden. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostikrapport_.
+Företagsportalappen kan ibland avslutas oväntat. Apptillverkare vill gärna att du hör av dig när det uppstår oväntade resultat. De kan använda felinformationen för att hitta den bakomliggande orsaken och förhindra framtida förekomster. Dessa fel sparas på din enhet i ett speciellt dokument som kallas _diagnostiklogg_. Företagsportalteamet behöver specifika företagsportalloggar för att kunna diagnosticera problemet.
 
-Om du behöver skicka diagnostikrapporter till Microsoft-teamet som utvecklar företagsportalappen måste du uppge viss information för att försöka diagnostisera orsaken till problemet. I stället för att skicka den till ditt företags supportteam använder du <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">den här e-postmallen</a> för att skicka den till Microsoft.
+Så här skickar du loggar till Microsoft:
+
+1.  Öppna företagsportalappen.
+2.  Klicka på menyn **Hjälp** > **Skicka diagnostikrapport**.  När loggarna har laddats upp, får du ett incident-ID. Kopiera och spara detta ID.
+3.  Skicka e-post till Microsoft via <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">den här mallen</a>.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
