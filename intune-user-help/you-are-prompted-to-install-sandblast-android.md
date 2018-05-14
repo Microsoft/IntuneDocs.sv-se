@@ -15,11 +15,11 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 889fb53fc215763b061f5165425df7b0b9960702
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: e453cf1af0d065a367d636c3e6cc8e8ddd79cfda
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Du måste installera SandBlast Mobile Protect på Android-enheten
 
@@ -29,7 +29,7 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 **Vad du behöver göra:**
 
-1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install Lookout for Work from Play Store (Nödvändigt program – Installera Skycure från Play Store)**. Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
+1. Dra nedåt från överst på skärmen för att öppna meddelandefältet och tryck sedan på **Required application – Install SandBlast Mobile Protect from Play Store (Nödvändigt program – Installera SandBlast Mobile Protect från Play Store)**. Du kan också hitta detta i företagsportalsappen under __Efterlevnadsinformation__.
 
 2. Installationssidan för SandBlast Mobile Protect i Play Store visas. Installera SandBlast Mobile Protect och tryck sedan på **ACCEPTERA** för att tillåta att SandBlast Mobile Protect får åtkomst till enheten.
 

@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/9/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b0784aeb1dc1022b4be824c2f858f9525d03918
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e8a1abb4229b3e6b4c91cfd49b4f66dbe739ea7d
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Inställningar för enhetsbegränsningar för Windows Holographic for Business i Intune
 
@@ -68,23 +68,26 @@ Följande begränsningsinställningar för enheter har stöd för enheter som k�
 
 - **Ändra systemtid** – Förhindrar att användaren ändrar enhetens datum och tid.
 
-## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
+## <a name="kiosk"></a>Helskärmsläge
 
 En helskärmslägesenhet kör vanligtvis en viss app. Användarna kommer inte åt funktioner på enheten utanför helskärmslägesappen.
 
 - **Helskärmsläge** – Identifierar vilken typ av helskärmsläge som stöds av principen. Alternativen är:
 
   - **Inte konfigurerad** (standard) – Principen aktiverar inte ett helskärmsläge. 
-  - **Läget för enskilda appar för kiosk** – Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
+  - **Helskärmsläge för enskilda appar** – Profilen gör att enheten endast kan köra en app. Appen startas när användaren loggar in. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.
+  - **Helskärmsläge för flera appar** – Profilen gör att enheten kan köra flera appar. Endast de appar som du lägger till är tillgängliga för användaren. Med helskärmsläge för flera appar skapas en mer användarvänlig upplevelse för användarna eftersom de endast ser de appar de behöver. Och de appar användarna inte behöver tas bort från deras vy. 
+  
+    När du lägger till appar för helskärmsläge för flera appar måste du också lägga till en layoutfil för startmenyn. [Layoutfilen för startmenyn](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) innehåller exempel-XML som kan användas i Intune. 
 
-#### <a name="single-app-kiosks"></a>Läget för enskilda appar för kiosk
+#### <a name="single-app-kiosks"></a>Helskärmsläge för enskilda appar
 Ange följande inställningar:
 
-- **Användarkonto** – Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med kioskappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
+- **Användarkonto** – Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med helskärmsappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
 
-    Om kiosken finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
+    Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
 
-- **Appens programanvändarmodell-ID (AUMID)** – Ange AUMID för kioskappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
+- **Appens programanvändarmodell-ID (AUMID)** – Ange AUMID för helskärmsappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 
 ## <a name="reporting-and-telemetry"></a>Rapportering och telemetri
 

@@ -15,11 +15,11 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d0f27af68cf3a4b8b9d0687649e7b52eb976803
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: a2b70bdd4e1d861feaed71e28e93c293a6367e26
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/28/2018
 
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tillfälliga skillnader i användargränssnittet
-> Användargränssnitt för de funktioner som beskrivs i den här sidan håller på att uppdateras. De här uppdateringarna lanseras över alla användarkonton fram till slutet av April.
+> Användargränssnitt för de funktioner som beskrivs i den här sidan håller på att uppdateras. De här uppdateringarna lanseras över alla användarkonton fram till och med den första veckan i maj.
 >
 > Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har du det uppdaterade användargränssnittet och kan använda den här hjälpsidan.
 >

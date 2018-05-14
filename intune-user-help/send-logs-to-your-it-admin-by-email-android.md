@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5e37ab05889a1141464b75a36b4f156f897799ae
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="email-logs-to-your-company-support"></a>Skicka loggar till företagets support via e-post
 
 Ibland kan det uppstå ett fel när du använder företagsportalappen på din Android-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.  
 
-Felinformationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_. När du överför loggarna till företagsportalappen, skickas de först till Microsoft-utvecklare som arbetar med appen. De använder loggarna till att förbättra appens funktioner och förhindra framtida fel. Ett incident-ID för ditt specifika fel skickas till dig och du kan skicka det vidare till företagets support.  
+Felinformationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_. När du överför loggarna till företagsportalappen, skickas de först till Microsoft-utvecklare som arbetar med appen. De använder loggarna till att förbättra appens funktioner och förhindra framtida fel. Ett incident-ID för ditt specifika fel skickas till dig och du kan skicka det vidare till företagets support, för användning vid kontakt med Microsoft Support.
 
 > [!Note]
 > Underlätta för företagets support att lösa problemet genom att aktivera _utförlig loggning_. Utförlig loggning registrerar all information om ett fel och inkluderar detaljerna i rapporten. Läs hur du kan [aktivera utförlig loggning här](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  

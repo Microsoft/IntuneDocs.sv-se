@@ -5,18 +5,18 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/5/2018
+ms.date: 5/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d8f5051d9663273c6515717b7930145ff8a964
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 18f86580fc4c80fade7aeaa9678e9d8edac9a53e
+ms.sourcegitcommit: b57be56524ddb5026fab94f7638dc516ed118325
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-devices-running-windows-holographic-with-intune"></a>Anpassa enheter som kör Windows Holographic med Intune
 
@@ -25,6 +25,16 @@ Microsoft Intune har stöd för enheter som kör Windows Holographic for Busines
 För att kunna hantera enheter som kör Windows Holographic med Microsoft Intune, måste du skapa en profil för uppgradering av utgåvan. Uppgraderingsprofilen uppgraderar enheter från Windows Holographic till Windows Holographic for Business. Du kan köpa Commercial Suite för att få licensen som krävs för uppgraderingen för Microsoft-HoloLens. Mer information finns i [Uppgradera enheter som kör Windows Holographic till Windows Holographic for Business](holographic-upgrade.md).
 
 Du kan använda uppgifterna i den här artikeln till att hantera och anpassa dina enheter som kör Windows Holographic for Business. Du kan till exempel hantera programuppdateringar, konfigurera VPN-inställningar och mycket mer.
+
+## <a name="azure-active-directory"></a>Azure Active Directory
+
+Azure Active Directory (AD) är en utmärkt resurs för att hantera och kontrollera dina enheter som kör Windows Holographic for Business. Med Intune och Azure AD kan du göra följande: 
+
+- **[Konfigurera enheter som är anslutna till Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: I Azure Active Directory (AD) kan du lägga till organisationens Windows 10 -enheter, inklusive enheter som kör Windows Holographic for Business. Den här funktionen gör att Azure AD kan styra enheten. Det säkerställer att dina användare kommer åt företagets resurser från enheter som uppfyller dina krav för säkerhet och efterlevnad.
+
+  I artikeln med [introduktion till enhetshantering i Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction) finns mer information.
+
+- **[Massregistrering för Windows-enheter](windows-bulk-enroll.md)**: Som administratör kan du ansluta ett stort antal nya Windows-enheter till Azure Active Directory (AD) och Intune. Den här funktionen kallas massregistrering och använder konfigurationspaket. Med dessa paket ansluts enheter som kör Windows Holographic for Business till Azure AD-klienten och registrerar dem i Intune.
 
 ## <a name="company-portal"></a>Företagsportal
 **[Konfigurera företagsportalappen](company-portal-app.md)**
@@ -56,6 +66,18 @@ Microsoft Intune kan distribuera universella Windows-appar till Microsoft HoloLe
 > [!NOTE]
 > HoloLens-enheter som kör Windows 10 Holographic för företag 1607 stöder inte online-licensierade appar från Microsoft Store för företag. Läs mer i [Installera appar på HoloLens](https://docs.microsoft.com/en-us/hololens/hololens-install-apps).
 
+## <a name="device-actions"></a>Enhetsåtgärder
+Intune har vissa inbyggda åtgärder som gör att IT-administratörer kan utföra olika uppgifter, lokalt på enheten eller via fjärranslutning med Intune i Azure-portalen. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
+
+Följande inställningar kan användas för enheter som kör Windows Holographic for Business: 
+
+- **[Fabriksåterställning](devices-wipe.md#factory-reset)**: Åtgärden **Fabriksåterställning** tar bort enheten från Intune och återställer enheten till fabriksinställningarna. Använd den här åtgärden innan du ger enheten till en ny användare eller om enheten tappas bort eller blir stulen.
+
+- **[Ta bort företagsdata](devices-wipe.md#remove-company-data)**: Åtgärden **Ta bort företagsdata** tar bort enheten från Intune och tar bort data för hanterade appar, inställningar och e-postprofiler som tilldelats via Intune. Användarens personliga data finns kvar på enheten.
+
+- **[Synkronisera enheter för att hämta de senaste principerna och åtgärderna](device-sync.md)**: **Synkroniseringsåtgärden** tvingar enheten att checka in i Intune. När en enhet checkar in tar den omedelbart emot eventuella väntande åtgärder eller principer som har tilldelats till den. Den här funktionen hjälper dig att validera och felsöka principer som du har tilldelat utan att du behöver vänta på nästa schemalagda incheckning.
+
+**[Vad är enhetshantering i Microsoft Intune?](device-management.md)** är en bra resurs för att lära dig hantera enheter med hjälp av Azure-portalen. 
 
 ## <a name="device-categories-and-groups"></a>Enhetskategorier och grupper
 **[Kategorisera enheter i grupper](device-group-mapping.md)**

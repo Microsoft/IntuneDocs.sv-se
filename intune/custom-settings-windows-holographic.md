@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d15e464ed77499c28bbcaf94289607ced48c140f
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 7272e8e088ae2c2ecad1756233281c42a80a279b
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Anpassade enhetsinställningar för enheter som kör Windows Holographic for Business i Intune
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 04/28/2018
 Kom ihåg att om du letar efter en viss inställning så innehåller [enhetsbegränsningsprofilen i Windows Holographic for Business](device-restrictions-windows-holographic.md) många inställningar som är inbyggda och som innebär att du inte behöver ange några anpassade värden.
 
 ## <a name="create-the-custom-oma-uri-profile"></a>Skapa en anpassad OMA-URI-profil
+
 1. Kom igång med hjälp av anvisningarna i [Konfigurera anpassade enhetsinställningar i Microsoft Intune](custom-settings-configure.md).
 2. I **Skapa profil** väljer du **Inställningar** för att lägga till en eller flera OMA-URI-inställningar.
 3. På sidan **Anpassade OMA-URI-inställningar** klickar du på **Lägg till** för att lägga till ett nytt värde. Du kan också klicka på **Exportera** för att skapa en lista över alla värden som du har konfigurerat i en fil med kommaseparerade värden (CSV).
@@ -50,52 +51,95 @@ Följande inställningar är användbara för enheter som kör Windows Holograph
 
 ### <a name="allowfastreconnecthttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-authenticationauthentication-allowfastreconnect"></a>[AllowFastReconnect](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowfastreconnect)
 
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
-
-### <a name="allowvpnhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-settingssettings-allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
-
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
 
 ### <a name="allowupdateservicehttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br/>0 – Uppdateringstjänsten är inte tillåten <br/>1 – Uppdateringstjänsten är tillåten (standard).|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Heltal<br/>0 – Uppdateringstjänsten är inte tillåten <br/>1 – Uppdateringstjänsten är tillåten (standard).|
 
-### <a name="updateserviceurlhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+### <a name="allowvpnhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-settingssettings-allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br/>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br/>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Heltal<br/>0 – inte tillåten<br/>1 – tillåten (standard)|
 
 ### <a name="requireupdatesapprovalhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-requireupdateapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br/>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br/>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Heltal<br/>0 – Inte konfigurerat. Enheten installerar alla tillämpliga uppdateringar.<br/>1 – Enheten installerar endast uppdateringar som både är tillämpliga och finns i listan med godkända uppdateringar. Ställ in principen på 1 om IT-avdelningen vill styra distributionen av uppdateringar till enheter, till exempel när testning krävs före distributionen.|
+
+### <a name="scheduledinstalltimehttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Update/ScheduledInstallTime|Heltal 0–23, där 0 = 12AM och 23 = 11PM<br/>Standardvärdet är 3.|
+
+### <a name="updateserviceurlhttpsdocsmicrosoftcomwindowsclient-managementmdmpolicy-csp-updateupdate-updateserviceurl"></a>[UpdateServiceURL](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Sträng<br/>URL – Enheten söker efter uppdateringar från WSUS-servern med angiven URL.<br/>Inte konfigurerad – Enheten söker efter uppdateringar från Microsoft Update.|
 
 ### <a name="approvedupdateshttpsdocsmicrosoftcomwindowsclient-managementmdmupdate-csp"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
----
-|OMA-URI|Datatyp|
-|---|---|
-|./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Viktigt!**<br/>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.<br/><br/>Mer information finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |---|---|
+> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Viktigt!**<br/>Du måste läsa och godkänna uppdateringens användaravtal åt dina slutanvändare. Om detta inte utförs uppstår en juridisk säkerhetsöverträdelse eller ett avtalsbrott.|Nod för godkännanden av uppdateringar och licensavtal åt slutanvändaren.<br/><br/>Mer information finns i [Uppdatera CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
 
 ### <a name="applicationlaunchrestrictionshttpsdocsmicrosoftcomwindowsclient-managementmdmapplocker-csp"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
----
-|OMA-URI|Datatyp|
-|----|---|
-|./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Viktigt!**<br/>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br/>Mer information finns i [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Viktigt!**<br/>I AppLocker CSP-artikeln används undantagna XML-exempel. Om du vill konfigurera inställningarna med anpassade Intune-profiler, måste du använda vanlig XML.|Sträng<br/>Mer information finns i [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+
+### <a name="deletionpolicyhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/DeletionPolicy|Heltal<br/>0 – ta bort omedelbart när enheten återgår till ett tillstånd utan aktiva användare<br/>1 – ta bort vid tröskelvärde för lagringskapacitet (standard)<br/>2 – ta bort både vid tröskelvärde för lagringskapacitet och vid tröskelvärde för profilinaktivitet|
+
+### <a name="enableprofilemanagerhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[EnableProfileManager](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/EnableProfileManager|Boolesk<br/>True – aktivera<br/>False – inaktivera (standard)|
+
+### <a name="profileinactivitythresholdhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[ProfileInactivityThreshold](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Heltal<br/>Standardvärdet är 30.|
+
+
+### <a name="storagecapacitystartdeletionhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStartDeletion|Heltal<br/>Standardvärdet är 25.|
+
+### <a name="storagecapacitystopdeletionhttpsdocsmicrosoftcomwindowsclient-managementmdmaccountmanagement-csp"></a>[StorageCapacityStopDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
+
+> [!div class="mx-tableFixed"]
+> |OMA-URI|Datatyp|
+> |----|---|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStopDeletion|Heltal<br/>Standardvärdet är 50.|
 
 ## <a name="find-the-policies-you-can-configure"></a>Hitta principer som du kan konfigurera
 

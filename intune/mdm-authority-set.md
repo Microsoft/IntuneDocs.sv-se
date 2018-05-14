@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e15e1678fa93269eb650f8a5684091b430ebf1cd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8f903e9dfe5fb30f45806aac5694171814492f2e
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -62,6 +62,19 @@ Flera plattformar har följande krav för att aktivera eller förenkla registrer
 - **Windows** – (obligatoriskt) Aktivera [Automatisk registrering](windows-enroll.md) eller [massregistrering](windows-bulk-enroll.md)
 - **macOS** – (obligatoriskt) [Hämta ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md).
 
+### <a name="workflow-of-intune-administration-ui"></a>Arbetsflöde i användargränssnitt för Intune-administration
+När Android- eller Apple-enhetshantering är aktiverat skickar Intune enhets- och användarinformation för att kunna integrera med dessa tredjepartstjänster och hantera sina enheter.
+
+Scenarier som kräver ett medgivande om att dela data ingår vid följande tillfällen:
+- Du aktiverar Android for Work.
+- Du aktiverar och laddar upp Apple MDM-pushcertifikat.
+- Du aktiverar någon av Apples tjänster som t.ex. programmet för enhetsregistrering, School Manager och volyminköpsprogrammet.
+
+Medgivandet är strikt relaterat till att köra en tjänst för hantering av mobilenheter, till exempel att bekräfta att en IT-administratör har godkänt att Google- eller Apple-enheter registreras. Dokumentation som visar vilken information som delas när de nya arbetsflödena publiceras finns på följande platser:
+- [Data som Intune skickar till Google](https://aka.ms/Data-intune-sends-to-google)
+- [Data som Intune skickar till Apple](https://aka.ms/data-intune-sends-to-apple)
+
+Mer information om Microsofts GDPR-efterlevnad finns i [Säkerhetscenter –Utvärdera din GDPR-efterlevnad](https://aka.ms/trust_center_info).
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Rensa mobila enheter efter att MDM-certifikatet upphört att gälla
 

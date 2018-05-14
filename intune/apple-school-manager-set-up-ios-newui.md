@@ -15,11 +15,11 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d9a51cb4e76f5aa0f89f9160af6f5fe62f0bbbd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 58a1db63c3fef3b288c42d43ce7ffc5164d81845
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]
 > ### <a name="temporary-user-interface-differences"></a>Tillfälliga skillnader i användargränssnittet
 >
->Användargränssnitt för de funktioner som beskrivs i den här sidan håller på att uppdateras. De här uppdateringarna lanseras över alla användarkonton fram till slutet av April.
+>Användargränssnitt för de funktioner som beskrivs i den här sidan håller på att uppdateras. De här uppdateringarna lanseras över alla användarkonton fram till och med den första veckan i maj.
 >
 >Om din sida för **Enhetsregistrering** ser ut som på bilden nedan, har du det uppdaterade användargränssnittet och kan använda den här hjälpsidan.
 >

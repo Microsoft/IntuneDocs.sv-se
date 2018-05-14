@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9f9051fb393c82031d581f7fec731a3b148cbf2e
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 89a69f7d5cda31658cc9faf068a2a37698fdd93c
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-your-windows-device-from-intune"></a>Ta bort din Windows-enhet från Intune
 
@@ -61,7 +61,7 @@ Om enheten är registrerad i Intune, men du inte längre vill använda din Windo
 
 Det finns två typer av data som företagsportalen lagrar på din Windows-enhet:
 
--   **Diagnostikloggar**: Standardappens aktivitetsdata som Microsoft samlar in, t.ex. hur länge appen var öppen eller om den kraschade, raderas automatiskt när du tar bort enheten från företagsportalen.
+-   **Diagnostikloggar**: Standardappens aktivitetsdata som Microsoft samlar in, t.ex. hur länge appen var öppen eller om den kraschade, raderas automatiskt när företagsportalappen avinstalleras.
 -   **Programcache**: Lagring av vissa stödfiler som krävs för appen ska fungera, t.ex. ikoner och inställningar.
 
 Det finns vissa saker som du behöver göra för att den här informationen ska tas bort helt.

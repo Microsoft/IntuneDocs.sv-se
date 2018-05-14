@@ -15,11 +15,11 @@ ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b34963761e9700d6cb742cb90979be30d5ae6b3e
-ms.sourcegitcommit: b727b6bd6f138c5def7ac7bf1658068db30a0ec3
+ms.openlocfilehash: bb54772010ef71e7d4bd2252f3886e9a3dd37ef1
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="intune-app-sdk-overview"></a>Översikt över Intune App SDK
 Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Som du märker kan du aktivera de flesta SDK-funktioner utan att ändra appens beteende. För att få en ännu bättre upplevelse för slutanvändare och IT-administratörer kan du använda API:er för att anpassa din apps beteende till funktioner som kräver medverkan av din app.
@@ -64,7 +64,7 @@ Funktionen för flera identiteter löser problemet med dataskydd som många orga
 ### <a name="app-protection-without-device-enrollment"></a>Appskydd utan enhetsregistrering
 
 >[!IMPORTANT]
->Intunes appskydd utan enhetsregistrering är tillgängligt för Intunes programhanteringsverktyg, Intune App SDK för Android, Intune App SDK för iOS, Intune App SDK Xamarin-bindningar och SDK Cordova-pluginprogram.
+>Intunes appskydd utan enhetsregistrering är tillgängligt för Intunes programhanteringsverktyg, Intune App SDK för Android, Intune App SDK för iOS och Intune App SDK Xamarin-bindningar.
 
 Många användare med personliga enheter vill kunna komma åt företagsdata utan att registrera sina personliga enheter med en MDM-leverantör för hantering av mobila enheter. MDM-registreringen kräver global kontroll över enheten men många användare är ovilliga att ge kontroll över deras personliga enheter till företagen.
 

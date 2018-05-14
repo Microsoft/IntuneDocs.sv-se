@@ -17,19 +17,22 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b9bbd44fcace579803fc4e5c24324d70b8831645
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 449413a87c79645240bc18be41fb6e88d4c071f8
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
+Ibland kan det uppstå ett fel när du använder företagsportalappen på din iOS-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.
+
+När du laddar upp loggarna till företagsportalappen, skickas de först till de Microsoft-utvecklare som arbetar med appen. De använder loggarna till att förbättra appens funktioner och förhindra framtida fel. Ett incident-ID för ditt specifika fel skickas till dig och du kan skicka det vidare till företagets support, för användning vid kontakt med Microsoft Support.
 
 Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan du skicka information som hjälper företagets support att felsöka problemet. Du kan skicka information om fel på olika sätt:
 
 -   Tryck på **Rapportera** i felmeddelanden.
 
--   Tryck på **Skicka diagnostikrapport** på skärmen **Om** i företagsportalappen.
+-   Tryck på **Få hjälp** på fliken **Mer** i företagsportalappen.
 
 -   Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 

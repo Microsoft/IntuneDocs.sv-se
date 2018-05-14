@@ -5,7 +5,7 @@ description: Skapa och distribuera en WIP-appskyddsprincip med Microsoft Intune
 keywords: ''
 author: msmimart
 ms.author: mimart
-manager: doubeby
+manager: dougeby
 ms.date: 03/02/2018
 ms.topic: article
 ms.prod: ''
@@ -15,11 +15,11 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7273a29eea9cd9b55e998302de2bc57d26d34e04
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f08dde25de5962eaaa11487a367b2895c6c047d4
+ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -33,7 +33,7 @@ Du måste känna till några grundläggande begrepp när du lägger till en WIP-
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Lista över tillåtna och undantagna appar
 
--   **Tillåtna appar**: Dessa appar måste följa den här principen.
+-   **Skyddade appar**: Dessa appar måste följa den här principen.
 
 -   **Undantagna appar**: De här apparna har undantagits från den här principen och har åtkomst till företagets data utan begränsningar.
 
@@ -63,7 +63,7 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 2. Välj **Alla tjänster** > **Intune**.
 3. Välj **Mobilappar** på **Microsoft Intune**-bladet.
 4. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
-5. Klicka på **Lägg till en princip** så att bladet **Lägg till en princip** visas.
+5. Välj **Lägg till en princip** så att bladet **Lägg till en princip** visas.
 6. Lägg till följande värden:
     - **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
     - **Beskrivning:** (Valfritt) Ge en beskrivning.
@@ -71,7 +71,7 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
     - **Registreringstillstånd:** Välj **Utan registrering** som din princips registreringstillstånd.
 7.  Välj **Skapa**. Principen skapas och visas i tabellen på bladet **Appskyddsprinciper**.
 
-## <a name="to-add-recommended-apps-to-your-allowed-apps-list"></a>Lägga till rekommenderade appar i listan över tillåtna appar
+## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Lägga till rekommenderade appar i listan över skyddade appar
 
 1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
 2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
@@ -82,7 +82,7 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 7. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
 8. Klicka på **Spara**.
 
-## <a name="add-a-store-app-to-your-allowed-apps-list"></a>Lägg till en Store-app i listan över tillåtna appar
+## <a name="add-a-store-app-to-your-protected-apps-list"></a>Lägga till en Store-app i listan över skyddade appar
 
 **Lägga till en Store-app**
 1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
@@ -95,7 +95,7 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 9. Klicka på **OK**. Bladet **Skyddade appar** uppdateras och visar alla markerade appar.
 10. Klicka på **Spara**.
 
-## <a name="add-a-desktop-app-to-your-allowed-apps-list"></a>Lägg till en skrivbordsapp i listan över tillåtna appar
+## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Lägga till en skrivbordsapp i listan över skyddade appar
 
 **Lägga till en skrivbordsapp**
 1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
@@ -118,7 +118,7 @@ WIP-utbildning är en rapport som gör det möjligt att övervaka WIP-aktiverade
 <!-- 1631908 -->
 Förutom att visa information om WIP-aktiverade appar kan du visa en sammanfattning av de enheter som har delat arbetsdata med webbplatser. Med den här informationen kan du bestämma vilka webbplatser som ska läggas till i gruppernas och användarnas PIA-principer. I sammanfattningen visas vilka webbplatsadresser som används av WIP-aktiverade appar.
 
-När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över tillåtna appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **blockera**.
+När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över skyddade appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **blockera**.
 
 ### <a name="what-are-the-protection-modes"></a>Vad är skyddslägen?
 

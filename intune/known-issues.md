@@ -14,11 +14,11 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 388c9f69b6cbee1353b0e21121a47576b58b3ba6
-ms.sourcegitcommit: 407191a92ef356a3d196b6f9959b9b033190ca2c
+ms.openlocfilehash: b8ef4688a5d1a98a27a2fcb6fc5b6ce456b5fd25
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -46,6 +46,14 @@ När du migrerar från Intune till Azure-portalen kan det visas en ny grupp med 
 Du kan inte visa statusinformation i Azure Portal för principer som har migrerats från den klassiska portalen i Azure Portal. Du kan dock fortsätta att visa rapporter för dessa principer i den klassiska portalen. Om du vill visa statusinformation för migrerade konfigurationsprinciper, måste du återskapa dem i Azure Portal.
 
 ## <a name="apps"></a>Appar
+
+
+### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Upprepade uppmaningar om appinstallation för vissa VPP-appar
+Du kan se flera uppmaningar om appinstallation för vissa VPP-appar som redan är installerade på slutanvändarnas enheter. Det här problemet uppstår om alternativet **Automatiska appuppdateringar** har angetts till **På** för den VPP-token som du har laddat upp till Intune i Azure Portal.    
+
+Du kan lösa det här problemet genom att inaktivera alternativet **Automatiska appuppdateringar** för VPP-token. Gör det genom att öppna Microsoft Intune i Azure Portal. Från Intune väljer du **Mobilappar** > **iOS VPP-token**. Välj den VPP-token som har distribuerat den berörda appen och välj sedan **Redigera** > **Automatiska appuppdateringar** > **Av** > **Spara**. Alternativt kan du stoppa distributionen av den berörda appen som en VPP-app. Då visas inga fler uppmaningar.    
+
+Det här är ett känt problem i den aktuella versionen. Vi har en kommande korrigering som löser problemet. När korrigeringen har implementerats visas inga upprepade uppmaningar om appinstallation för användarna.
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Volyminköpta iOS-appar är endast tillgängliga i standardspråket för Intune-klienten
 Volyminköpta iOS-appar kan endast visas och tilldelas för samma landskod som Intune-kontot. Intune synkroniserar endast appar från iTunes med det språk som motsvarar landskoden för Intune-klientkontot. Om du t.ex. köper en app som bara är tillgänglig i en amerikansk butik, men ditt Intune-konto är tyskt, visas inte appen i Intune.

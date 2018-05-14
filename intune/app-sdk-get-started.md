@@ -14,11 +14,11 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e4437e3dbf7e942f084a0c441af7946b53c6d54d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f0fcd4b04541593f41abb35be6558be2375a0131
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Kom igång med Microsoft Intune App SDK
 
@@ -67,10 +67,9 @@ Intune App SDK:er för interna iOS- och Android-appar finns på ett Microsoft Gi
 * [Intune App SDK för iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Intune App SDK för Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-Om din app är en Xamarin- eller Cordova-app använder du de här SDK-varianterna:
+Om din app är en Xamarin-app använder du den här SDK-varianten:
 
 * [Xamarin-bindningar för Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-* [Intune App SDK Cordova-insticksprogrammet](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)
 
 Det är en bra idé att registrera dig för ett GitHub-konto som du kan använda för att förgrena och använda pull i våra lagringsplatser. GitHub låter utvecklare kommunicera med vårt produktteam, öppna frågor och få snabba svar, se versionsanmärkningar och ge feedback till Microsoft. Kontakta msintuneappsdk@microsoft.com för frågor om Intune App SDK på GitHub.
 
@@ -81,8 +80,6 @@ Du behöver en av följande utvecklarguider för att hjälpa dig att integrera I
 * **[Utvecklarguide för Intune App SDK för iOS](app-sdk-ios.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna iOS-app med Intune App SDK.
 
 * **[Utvecklarhandbok för Intune App SDK för Android](app-sdk-android.md)**: Det här dokumentet beskriver steg för steg hur du aktiverar din interna Android-app med Intune App SDK.
-
-* **[Guide för plugin-programmet Intune App SDK Cordova](app-sdk-cordova.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Cordova för Intunes appskyddsprinciper.
 
 * **[Guide för Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md)**: Det här dokumentet hjälper dig att skapa iOS- och Android-appar med Xamarin för Intunes appskyddsprinciper.
 

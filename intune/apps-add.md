@@ -15,11 +15,11 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88b8d9aa8e65e0238ab634b23836ee9c02234dd3
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8c54dd0180788a83ee01607e0e6d895fdb9a85ab
+ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -155,6 +155,16 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Appar som läggs till automatiskt av Intune
 
 Tidigare innehöll Intune ett antal inbyggda appar för snabb tilldelning. Vi har tagit bort den här listan utifrån feedback för Intune, och de inbyggda apparna visas inte längre. Om du har redan har tilldelat några inbyggda appar kommer apparna även i fortsättningen att finnas kvar i listan över appar. Du kan fortsätta att tilldela dessa appar vid behov.
+
+## <a name="installing-updating-or-removing-required-apps"></a>Installera, uppdatera eller ta bort obligatoriska appar
+
+Intune installerar automatiskt om, uppdaterar eller tar bort appen inom 24 timmar i stället för att vänta på omvärderingscykeln på 7 dagar.
+
+Intune kommer automatiskt att installera om, uppdatera eller ta bort en obligatorisk app baserat på följande villkor:
+- Om en användare avinstallerar en app som du har angett som obligatorisk på slutanvändarens enhet installerar Intune automatiskt om appen enligt det här schemat.
+- Om en obligatorisk app inte kan installeras eller på något sätt inte finns på enheten utvärderar Intune kompatibilitet och installerar om appen enligt det här schemat.  
+- En administratör anger en app som är tillgänglig för en användargrupp och en slutanvändare installerar appen från företagsportalen på enheten. Senare uppdaterar administratören appen från v1 till v2. Intune uppdaterar appen enligt det här schemat, förutsatt att eventuell tidigare version av appen finns kvar på enheten.
+- Om administratören distribuerar avinstallationsavsikt och appen finns på enheten men gick inte att avinstallera, utvärderar Intune kompatibilitet och avinstallerar appen enligt det här schemat.   
 
 ## <a name="next-steps"></a>Nästa steg
 

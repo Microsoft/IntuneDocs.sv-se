@@ -12,11 +12,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a4bd083027905d00dc317a0103754748bf0236e
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 64df804bf2f882991cccd3f77014369cd86b69a8
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Lägg till en enhetsefterlevnadsprincip för Windows-enheter i Intune
 
@@ -121,11 +121,11 @@ Mer information om hur hälsoattesteringstjänsten fungerar finns i avsnittet om
 
 ### <a name="device-properties"></a>Egenskaper för enheten
 
-- **Lägsta operativsystemsversion**: Ange den lägsta tillåtna versionen i formatet major.minor.build.CU. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
+- **Lägsta operativsystemsversion**: Ange den lägsta tillåtna versionen i nummerformatet major.minor.build.revision. Numret för build.revision måste motsvara den version som returneras av kommandot `ver` eller `winver`.
 
   Om en enhet har en tidigare version än den angivna operativsystemversionen rapporteras den som inkompatibel. En länk med information om hur du uppgraderar visas. Slutanvändaren kan välja att uppgradera enheten och kan sedan komma åt företagets resurser.
 
-- **Maximal operativsystemversion**: Ange den högsta tillåtna versionen i formatet major.minor.build.CU. Numret för build.CU måste motsvara den version som returneras av kommandot `ver` eller `winver`.
+- **Maximal operativsystemversion**: Ange den högsta tillåtna versionen i nummerformatet major.minor.build.revision. Numret för build.revision måste motsvara den version som returneras av kommandot `ver` eller `winver`.
 
   När en enhet använder en senare version av operativsystemet än den som angetts i regeln blockeras åtkomsten till företagsresurser och användaren ombeds kontakta sin IT-administratör. Enheten kan inte användas för att komma åt företagsresurser förrän regeln för att tillåta versionen av operativsystemet har ändrats.
 
