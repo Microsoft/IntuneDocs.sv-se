@@ -13,11 +13,11 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: b6371da954aa913e1378c065b203fa197f3fc767
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: d41ec494672340a9f5751e6fc40edf1a7b06bb40
+ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Windows 10 VPN-inställningar i Intune
 
@@ -99,17 +99,10 @@ Läs mer om att skapa anpassade EAP XML-filer i informationen om [EAP-konfigurat
 
 ## <a name="apps-and-traffic-rules"></a>Regler för appar och trafik
 
-<<<<<<< HEAD
 - **Associera PIA eller appar med denna VPN**: Aktivera den här inställningen om du endast vill att vissa appar ska använda VPN-anslutningen. Alternativen är:
 
   - **Associera en PIA med den här anslutningen**: Ange en **PIA-domän för den här anslutningen**
   - **Associera appar med den här anslutningen**: Du kan **Begränsa VPN-anslutning för dessa appar** och sedan lägga till **Associerade appar**. De appar som du anger använder automatiskt VPN-anslutningen. Appidentifieraren beror på typen av app. För en universell app anger du paketfamiljenamnet. För en skrivbordsapp anger du appens filsökväg.
-=======
-**Begränsa VPN-anslutning till de här apparna**: Aktivera den här inställningen om du endast vill att vissa appar ska använda VPN-anslutningen.
-
-**Tillhörande appar**: Ange en lista med appar som använder VPN-anslutningen automatiskt. Appidentifieraren beror på typen av app. För en universell app anger du paketfamiljenamnet. För en skrivbordsapp anger du appens filsökväg.
->>>>>>> b2f641d045b7649f641fb98e07accc745e697d84
-
   >[!IMPORTANT]
   >Vi rekommenderar att du skyddar alla applistor som skapas för VPN:er per app. Om en obehörig användare ändrar listan och du importerar den till applistan med VPN:er per app, finns risken att du tillåter VPN-åtkomst till appar som inte ska ha åtkomst. Ett sätt att skydda applistor på är att använda en åtkomstkontrollista (ACL).
 
