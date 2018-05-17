@@ -308,6 +308,8 @@
                       href: app-protection-policy-settings-android.md
                     - name: Inställningar för iOS
                       href: app-protection-policy-settings-ios.md
+                    - name: Undantag vid dataöverföring
+                      href: app-protection-policies-exception.md
                 - name: Verifiera programskyddsprinciper
                   href: app-protection-policies-validate.md
                 - name: Övervaka användarstatus för programskydd
