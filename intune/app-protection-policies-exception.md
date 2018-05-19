@@ -15,11 +15,11 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d33768206c53550ec1cb34d5c1ad5e2f33e4f8c8
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 812f73cb0857298f01967cebbb36f0b8220fb9c6
+ms.sourcegitcommit: 179bea63fe52a8cce236b6ca8d82a6bd51bf17a5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Så här skapar du undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring
 
@@ -30,9 +30,7 @@ Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Applic
 >[!WARNING] 
 > Du ansvarar för att göra ändringar i undantagsprincipen för dataöverföring. Tillägg till den här principen tillåter att ohanterade appar (som inte hanteras av Intune) får åtkomst till data som skyddas av hanterade appar. Den här åtkomsten till skyddade data kan resultera i datasäkerhetsläckor. Lägg endast till dataöverföringsundantag för appar som din organisation måste använda, men som saknar stöd för Intunes principer för programskydd. Dessutom bör du bara lägga till undantag för appar som du inte anser utgöra någon risk för dataläckor.
 
-Den här funktionen tillämpas när du skapar en Intune-princip för programskydd med dataöverföringen inställd på **Endast hanterade appar**. Utöver de undantag du skapar är dataöverföringen ändå begränsad till appar som hanteras av Intune när dataöverföringsprincipen är inställd på **Endast hanterade appar**. Du kan skapa begränsningarna med protokoll (iOS) eller paket (Android).
-
-Du kan konfigurera att den här funktionen möjliggör undantag till Intunes MAM-princip för programskydd för att **begränsa dataöverföringen**. Den här principen är bara nödvändig om du vill tillåta att data överförs till en app som inte stöds av Intune-principen för programskydd. Med den här principen kan program som hanteras av Intune, med dataöverföringsinställningen **Endast hanterade appar**, anropa ohanterade program baserat på URL-protokoll (iOS) eller paketnamn (Android). Intune lägger till viktiga ursprungliga program till standardlistan med undantag. 
+I en Intune-princip för programskydd betyder inställningen **Tillåt att appen överför data till andra appar** till **Principhanterade appar** att appen överför data enbart för appar som hanteras av Intune. Om du vill tillåta dataöverföring till specifika appar som inte har stöd för Intune APP kan du skapa undantag för den här principen med hjälp av **Välj appar att undanta**. Undantag tillåter program som hanteras av Intune att anropa ohanterade program baserat på URL-protokoll (iOS) eller paketnamn (Android). Intune lägger som standard till viktiga ursprungliga program till listan med undantag. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Undantag vid iOS-dataöverföring
 Du kan konfigurera dataöverföringsundantag för en princip med iOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS-dataöverföring finns i [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).

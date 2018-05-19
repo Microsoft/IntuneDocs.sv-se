@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 05/08/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,11 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 9004441a41c5e7458447b5c5f7e1d91e630bd412
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: e677e15d1e4ee688a826683ecd1d8d68620d2796
+ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,6 +40,18 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
   ### Role-based access control
 
 -->   
+
+## <a name="week-of-may-7-2018"></a>Vecka 7 maj 2018
+
+### <a name="app-management"></a>Apphantering
+
+#### <a name="samsung-knox-mobile-enrollment-support---1112863--"></a>Stöd för Samsung Knox Mobile-registrering <!--1112863-->
+
+När du använder Intune med Samsung Knox Mobile-registrering (KME), kan du registrera ett stort antal företagsägda Android-enheter. Användarna på Wi-Fi eller mobila nätverk kan registrera sig med bara några få tryck när de aktiverar på sina enheter för första gången. När du använder Knox-distributionsprogrammet kan enheter registreras med hjälp av Bluetooth eller NFC. Mer information finns i [Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering](android-samsung-knox-mobile-enroll.md).
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10----1874137---"></a>Be om hjälp i företagsportalen för Windows 10 <!-- 1874137 -->
+
+Företagsportalen för Windows 10 kommer nu att skicka apploggar direkt till Microsoft när användaren startar arbetsflödet för att få hjälp med problemet. Detta gör det enklare att felsöka och lösa problem som tas upp till Microsoft.
 
 ## <a name="week-of-april-23-2018"></a>Veckan 23 april 2018
 
@@ -369,12 +381,21 @@ Mer information om hur du skapar distributionskanaler i Intune finns i [Hantera 
 
 #### <a name="company-portal-enrollment-improved----1874230-eeready--"></a>Registreringen av företagsportalen har förbättrats <!-- 1874230 eeready-->
 Användare som registrerar en enhet med hjälp av företagsportalen i Windows 10 version 1703 och senare, kan slutföra det första steget i registreringen utan att lämna appen.
-
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists---1725868---"></a>HoloLens och Surface Hub visas nu i enhetslistor <!--1725868 -->
 Vi har lagt till stöd för att visa Intune-registrerade HoloLens- och Surface Hub-enheter i företagsportalappen för Android.
 
 #### <a name="custom-book-categories-for-volume-purchase-progream-vpp-ebooks----1488911---"></a>Anpassade bokkategorier för volyminköpsprogram för e-böcker <!-- 1488911 -->
-Du kan skapa anpassade e-bokkategorier och sedan tilldela e-böcker i volyminköpsprogram till dessa anpassade e-bokkategorier. Slutanvändarna kan sedan se de nyligen skapade e-bokkategorierna och böcker som tilldelats i kategorierna. Mer information finns i [Hantera volyminköpta appar och böcker med Microsoft Intune](vpp-apps.md).
+Du kan skapa anpassade e-bokkategorier och sedan tilldela e-böcker i volyminköpsprogram till dessa anpassade e-bokkategorier. Slutanvändarna kan sedan se de nyligen skapade e-bokkategorierna och böcker som tilldelats i kategorierna. Mer information finns i [Hantera volyminköpta appar och böcker med Microsoft Intune](vpp-apps.md).  
+
+#### <a name="support-changes-for-company-portal-app-for-windows-send-feedback-option----2070166---"></a>Alternativet skicka feedback som stöd för ändringar i företagsportalappen för Windows <!-- 2070166 -->
+Med start den 30 april 2018, kommer alternativet **Skicka feedback** i företagsportalappen för Windows bara att fungera på enheter som kör Windows 10 Anniversary-uppdateringen (1607) och senare. Alternativet att skicka feedback stöds inte längre när du använder företagsportalappen för Windows med:  
+- Windows 10, version 1507  
+- Windows 10, version 1511  
+- Windows Phone 8.1 
+
+Om enheten körs på Windows 10 RS1 eller senare, kan du hämta den senaste versionen av Windows-företagsportalappen från Store. Om du kör en version som inte stöds, fortsätt att skicka feedback via följande kanaler: 
+- Feedbackhubben i Windows 10
+- E-post WinCPfeedback@microsoft.com  
 
 #### <a name="new-windows-defender-application-guard-settings----1631890---"></a>Nya Windows Defender Application Guard-inställningar <!-- 1631890 -->
 
@@ -1110,23 +1131,6 @@ Den här förändringen påverkar både kunder som har fristående Intune och hy
 Lägg till Intune som favorit i stället för bladet för tjänsten Intune-appskydd, och se till att du känner till arbetsflödet för appskyddsprinciper på bladet Mobilapp i Intune. Vi omdirigerar under en kort tidsperiod och tar sedan bort appskyddsbladet. Kom ihåg att alla appskyddsprinciper redan finns i Intune och du kan ändra dina villkorliga åtkomstprinciper genom att följa dokumentationen här: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
 
 **Ytterligare information**:[https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
-
-### <a name="plan-for-change-windows-company-portal-send-feedback-option-may-no-longer-work"></a>Planera för förändring: Alternativet för att skicka feedback via företagsportalappen i Windows kanske inte fungerar längre  
-I företagsportalappen i Windows finns ett alternativ för att **skicka feedback** som låter användarna dela med sig av sina synpunkter om appen till Microsoft. Från och med 30 april 2018 stöds det här alternativet endast i företagsportalappen i Windows 10 1607 (Anniversary Update) och senare.  
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?  
-Du kan bortse från det här meddelandet om du inte har Windows-företagsportalappen installerad för slutanvändare. Om någon av dina slutanvändare har företagsportalappen ska du observera att knappen för att **skicka feedback** inte längre kommer att fungera i appen från och med 30 april i följande:  
-- Företagsportalappen i Windows 10 version 1507 och 1511  
-- Företagsportalappen i Windows Phone 8.1  
-
-För berörda enheter fungerar inte alternativet att **skicka feedback** (inte heller om du gör ett nytt försök). Om du vill skicka feedback till Microsoft för dessa plattformar kan du använda de alternativa feedbackkanaler som anges nedan.  
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?  
-Informera användarna om den här ändringen och uppdatera eventuella användarriktlinjer om det behövs. Informera de som använder företagsportalappen i Windows Phone 8.1, Windows 10 1507 och Windows 10 1511 om att det finns två alternativa feedbackkanaler. De kan:  
-- Använda Feedbackhubben i Windows 10
-- Skicka ett e-postmeddelande till WinCPfeedback@microsoft.com  
-
-Be slutanvändare som använder Windows 10 RS1 att uppdatera till den senaste versionen av företagsportalappen i Store.
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Planera för förändring: Ändra i stödet för Microsoft Intune App SDK för Cordova-pluginprogrammet
 Microsoft avslutar stödet för [Microsoft Intune App SDK Cordova-pluginprogrammet](app-sdk-cordova.md) 1 maj 2018. Vi rekommenderar att du använder Intunes programhanteringsverktyg i stället, för att förbereda dina Cordova-baserade appar för hantering och tillgänglighet i Intune. När den här ändringen träder i kraft kommer Microsoft Intune APP SDK för Cordova-pluginprogrammet inte längre att hanteras eller bli uppdaterat. Utvecklare av program kommer inte att kunna använda det här pluginprogrammet. Intune planerar att fortsätta att tillhandahålla stöd för appar som utvecklats med Cordova. Alla appar som utvecklats med Microsoft Intune APP SDK för Cordova-pluginprogrammet får dock nedsatt funktionalitet i Intune. Efter att du omslutit en app med Intunes programhanteringsverktyg kan den distribueras till slutanvändare som normalt. För Cordova-baserade Android-appar som publiceras till Google Play-butiken:

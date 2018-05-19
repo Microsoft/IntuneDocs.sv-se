@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,35 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f7d3e768e740866d69d675a962dfca6d98c85568
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 84fc162eda25970c14ed1014b9f67ef3e782c663
+ms.sourcegitcommit: 7e80388b6223c9a632c5729bf9b157f848fe52cc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remove-devices-by-using-factory-reset-or-remove-company-data"></a>Ta bort enheter med hjälp av fabriksåterställning eller ta bort företagsdata
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Du kan ta bort enheter från Intune som inte längre behövs, som ska få ett nytt syfte eller som saknas. Det kan du göra med hjälp av åtgärderna **Ta bort företagsdata** eller **Fabriksåterställning**. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
+Med hjälp av åtgärden **Ta bort företagsdata** eller **Fabriksåterställning** kan du ta bort enheter från Intune som inte längre behövs, har omkonfigurerats eller saknas. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
 
 > [!NOTE]
 > Innan du tar bort en användare från Azure Active Directory (Azure AD) kan du använda åtgärderna **Fabriksåterställning** eller **Ta bort företagsdata** för alla enheter som är kopplade till den användaren. Om du tar bort användare som har hanterade enheter från Azure AD kan inte Intune längre utfärda fabriksåterställning eller borttagning av företagsdata för dessa enheter.
 
 ## <a name="factory-reset"></a>Fabriksåterställning
 
-Åtgärden **Fabriksåterställning** återställer en enhet till standardinställningarna från fabriken. En fabriksåterställning återställer alla företags- och användardata samt inställningar. Enheten tas bort från Intune-hantering. En fabriksåterställning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja **Fabriksåterställning**. Det går inte att återställa data på enheten.
+Åtgärden **Fabriksåterställning** återställer en enhet till standardinställningarna från fabriken. Informationen sparas eller rensas beroende på om du väljer kryssrutan **Behåll registreringstillstånd och användarkonto** eller inte.
+
+|Åtgärden Fabriksåterställning|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Description|
+|:-------------:|:------------:|:------------:|------------|
+|**Fabriksåterställning**| Inte markerad | Ja | Rensar alla användarkonton, data, MDM-principer och inställningar. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
+|**Fabriksåterställning**| Markerad | Nej | Rensar alla MDM-principer. Behåller användarkonton och data. Återställer användarinställningar till standard. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
+
+Alternativet **Behåll registreringstillstånd och användarkonto** är endast tillgängligt för Windows 10 version 1709 eller senare.
+
+MDM-principer kommer att tillämpas igen nästa gång enheten ansluter till Intune.
+
+En fabriksåterställning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja **Fabriksåterställning**. Det går inte att återställa data på enheten.
 
 ### <a name="factory-reset-a-device"></a>Fabriksåterställa en enhet
 

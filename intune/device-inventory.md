@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a40b855d1dbaeece1dc91648866285c0a01fb338
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
+ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -46,6 +46,16 @@ Den här artikeln beskriver hur du visar alla dina enheter och deras egenskaper 
    - **Enhetskonfiguration** visar alla enhetskonfigurationsprinciper som är tilldelade till enheten, samt om principen har lyckats eller misslyckats.
 
 Intune samlar endast in en applista från företagsägda enheter. Appar på personliga enheter kontrolleras inte. För datorer med Windows 10 visas bara moderna appar för företagsägda enheter. Intune samlar inte in information om Win32-appar på enheten. Alla appar kan inte samlas in, beroende på vilken operatör som används för enheterna.
+
+|Plattform|För privatägda enheter|För företagsägda enheter|  
+|--------------|---------------------------------|--------------------------------|  
+|Windows 10 (utan Configuration Manager-klienten)|Endast hanterade appar|Endast hanterade appar|
+|Windows 8.1 (utan Configuration Manager-klienten)|Endast hanterade appar|Endast hanterade appar|  
+|Windows Phone 8|Endast hanterade appar|Endast hanterade appar|  
+|Windows RT|Endast hanterade appar|Endast hanterade appar|  
+|iOS|Endast hanterade appar|Alla appar som är installerade på enheten|
+|macOS|Alla appar som är installerade på enheten|Alla appar som är installerade på enheten|  
+|Android|Endast hanterade appar|Alla appar som är installerade på enheten|  
 
 ## <a name="next-steps"></a>Nästa steg
 Se vad mer du kan göra för att [hantera dina enheter](device-management.md) med Intune.

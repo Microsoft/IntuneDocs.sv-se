@@ -1,11 +1,11 @@
 ---
-title: Ta bort Windows-enheten från Intune | Microsoft Docs
+title: Ta bort din Windows-enhet från Intune
 description: Beskriver hur du tar bort en Windows-enhet från Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,61 +17,68 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 89a69f7d5cda31658cc9faf068a2a37698fdd93c
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 1dd64250c1996c6b13c62f80572282d639112ba6
+ms.sourcegitcommit: 8ee543c864097dc195b6f440471dca713fc21ed2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
-# <a name="remove-your-windows-device-from-intune"></a>Ta bort din Windows-enhet från Intune
+# <a name="remove-your-windows-device-from-intune-management"></a>Ta bort en Windows-enhet från Intune-hanteringen
 
-Om enheten är registrerad i Intune, men du inte längre vill använda din Windows-enhet för att komma åt e-postmeddelanden, appar eller andra resurser på arbetet eller i skolan, måste du ta bort enheten från hanteringen. När du har tagit bort enheten från Intune kommer du inte längre ha åtkomst till dessa resurser. Mer information om vad som händer när du tar bort enheten finns i [Vad händer om du avregistrerar din enhet från Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
+Ta bort en registrerad Windows-enhet från Intune när du inte längre vill eller behöver:  
+* Använd din enhet på arbetet eller i skolan. 
+* Komma åt arbetets eller skolans e-post, appar eller andra resurser.
+
+När den har tagits bort, kommer du inte att kunna komma åt skolans eller arbetets resurser från enheten. Windows-enheter som kan tas bort från Intune är:  
+* Windows 10-enheter 
+* Windows 8.1-dator
+* Mobila enheter för Windows 8.1
+ 
+Mer information om vad som händer när du tar bort enheten från Intune-hanteringen finns i [Vad händer om du tar bort enheten från Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
 ## <a name="remove-your-windows-10-device"></a>Ta bort din Windows 10-enhet
+Utför följande steg om du vill ta bort en Windows 10-enhet från Intune.
 
-1.  Från din applista trycker du på appen **Företagsportal** .
+### <a name="via-the-company-portal-app"></a>Via företagsportalappen
 
-2.  Logga in med dina kontouppgifter för arbets- eller skolkontot.
+1. Öppna företagsportalappen.
+2. Logga in med dina kontouppgifter för arbets- eller skolkontot.
+3. I **Mina Enheter** väljer du den enhet du vill ta bort.
+4. I det övre högra hörnet på appen, väljer du ikonen **Se mer**.
+5. Välj **Ta bort**. 
+6. För att bekräfta borttagning av en enhet, välj **Ta bort enheten**.
 
-3.  I **Mina Enheter**väljer du den enhet du vill avregistrera.
-
-4.  Tryck på **Ta bort** &gt; **Ta bort**.
+### <a name="via-device-settings-app"></a>Via appen för enhetsinställning
+1. Öppna inställningsappen. 
+2. Gå till **Konton** > **Åtkomst till arbete eller skola**.
+3. Välj det anslutna konto som du vill ta bort > **Koppla från**.
+4. För att bekräfta borttagning av en enhet, välj **Ja**.
 
 ## <a name="remove-your-windows-81-computer"></a>Ta bort din Windows 8.1-dator
+Utför följande steg om du vill ta bort en Windows 8.1-dator från Intune.
 
-1.  Gå till **Datorinställningar** &gt; **Nätverk** &gt; **Arbetsplats**.
-
+1.  Gå till **Datorinställningar** > **Nätverk** > **Arbetsplats**.
 2.  Under **Anslut till arbetsplats** väljer du **Lämna**.
-
 3.  Under **Turn on device management** (Aktivera enhetshantering) väljer du **Inaktivera**.
-
 4.  I popup-fönstret som öppnas väljer du **Inaktivera**.
 
-## <a name="remove-your-windows-phone-81-mobile-device"></a>Ta bort din mobila Windows Phone 8.1-enhet
+## <a name="remove-your-windows-81-mobile-device"></a>Ta bort din mobila enhet för Windows 8.1
+Utför följande steg om du vill ta bort en mobil enhet för Windows 8.1 från Intune.
 
-1.  Gå till **Inställningar** &gt; **Arbetsplats**.
-
+1.  Gå till **Inställningar** > **Arbetsplats**.
 2.  Tryck på arbetsplatskontot som du vill avregistrera.
-
 3.  Tryck på **Ta bort** längst ned på skärmen.
-
-4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.
-
+4.  Tryck på **Ta bort** i dialogrutan **Ta bort konto**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Ta bort din personliga information när du tagit bort företagsportalen
-
 Det finns två typer av data som företagsportalen lagrar på din Windows-enhet:
 
--   **Diagnostikloggar**: Standardappens aktivitetsdata som Microsoft samlar in, t.ex. hur länge appen var öppen eller om den kraschade, raderas automatiskt när företagsportalappen avinstalleras.
--   **Programcache**: Lagring av vissa stödfiler som krävs för appen ska fungera, t.ex. ikoner och inställningar.
+-   **Diagnostikloggar**: Standardappens aktivitetsdata som Microsoft samlar in raderas automatiskt när du tar bort enheten från företagsportalen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
+-   **Cacheminne**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
 
 Det finns vissa saker som du behöver göra för att den här informationen ska tas bort helt.
 
-### <a name="uninstall-the-company-portal"></a>Avinstallera företagsportalen  
+1. Avinstallera företagsportalen. När du [avinstallerar företagsportalappen](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) tas vissa appdata som lagras på enheten bort.  
 
-När du [avinstallerar företagsportalappen](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) tas vissa appdata som lagras på enheten bort.  
-
-### <a name="reset-the-company-portal"></a>Återställa företagsportalen
-
-Du kan återställa resten av företagsportalens appdata genom att återställa appen i Inställningar. Öppna **Inställningar** > **Appar och funktioner** > **Företagsportal** > **Avancerade alternativ** > **Återställ**.
+2. Återställ företagsportalen för att återställa lagrade appdata. Öppna appen **Inställningar** och markera > **Appar** > **Företagsportalen** > **Avancerade alternativ**  >  **Återställ**. 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

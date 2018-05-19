@@ -14,11 +14,11 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: afc8edb38b667d744bb586d1ed5c82df8ab10f49
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 559fd83d83c7312e0efe0d2c3f6bb7e5ec596a1b
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Lägg till en efterlevnadsprincip för Android-enheter i Intune
 
@@ -96,16 +96,16 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 - **Kräv lösenord för att låsa upp mobila enheter:** **Begär** att användare måste ange ett lösenord för att få åtkomst till sina enheter.
 - **Minsta längd på lösenord**: Ange det minsta antalet siffror eller tecken som användarens lösenordet måste innehålla.
-- **Krav på lösenordstyp**: Ange om ett lösenord endast ska ha numeriska tecken, eller om det ska vara en blandning av siffror och andra tecken. Välj mellan:
+- **Krav på lösenordstyp**: Välj om ett lösenord endast ska ha numeriska tecken, eller om det ska vara en blandning av siffror och andra tecken. Välj mellan:
   - **Standard för enheten**
   - **Låg säkerhetsbiometri**
   - **Minst numeriskt**
-  - **Numeriskt avancerat**
+  - **Numeriskt avancerat**: Upprepade eller efterföljande siffror (till exempel ”1 111” eller ”1234”) är inte tillåtna.
   - **Minst alfabetiskt**
   - **Minst alfanumeriskt**
   - **Minst alfanumeriskt med symboler**
 - **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
-- **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
+- **Lösenordets giltighetstid (dagar)**: Ange antalet dagar tills lösenord upphör att gälla och användaren måste skapa ett nytt lösenord.
 - **Förhindra återanvändning av tidigare lösenord**: Ange antalet senast använda lösenord som inte får återanvändas. Använd den här inställningen för att förhindra att användaren återanvänder tidigare använda lösenord.
 
 ### <a name="encryption"></a>Kryptering

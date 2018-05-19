@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 834eb66e21820880f644c33d7e5d6aedad6bd502
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: f67ccf1c2fb3b708916ef4ed4209bd3be07d9a5e
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -304,6 +304,9 @@ I den här uppgiften kommer du att:
 6. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen, väljer du **Välj**och väljer det certifikat för **klientautentisering** som du installerat på NDES-servern i Uppgift 3.
 
     När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector** . Även om certifikatet du valt inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
+    
+    > [!IMPORTANT]
+    > Intune Certificate Connector kan inte registreras på en enhet med Förbättrad säkerhetskonfiguration i Internet Explorer aktiverat. För att använda Intune Certificate Connector, [inaktivera Förbättrad säkerhetskonfiguration i IE](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).
 
 7. När guiden slutförts väljer du **Starta användargränssnittet för Certificate Connector** innan du stänger guiden.
 

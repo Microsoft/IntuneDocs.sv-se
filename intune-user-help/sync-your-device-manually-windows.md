@@ -1,120 +1,131 @@
-﻿---
+---
 title: Synkronisera Windows-enheten manuellt | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/19/2017
+ms.date: 05/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.assetid: 443c6de7-5187-4dc4-b844-6085a0c659bd
+ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e8b8b1e4ffd4e58b5f3cc1b9acfc004f4b97b40b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: aa556b2939986759aa92e63750fd161c05afbc38
+ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 
-Att försöka installera en app på en Windows-enhet kan ibland ta längre tid än du förväntar dig. Om det händer kan du prova att manuellt synkronisera din Windows-enhet. Synkronisering kan påskynda installationen.
+När appinstallationens hastighet är lägre än idealet påbörjar du en manuell enhetssynkronisering. Manuella synkroniseringar tvingar din enhet att ansluta med Intune för de senaste uppdateringarna och kommunikationerna. Installationshastigheten kan öka när enhetssynkroniseringen är klar.
 
-> [!Note]
-> Det kan ta en stund att installera appar om du är på ett nätverk med lägre hastigheter eller många enheter som laddar ner data på samma gång.
+Intune stöder manuell synkronisering från företagsportalappen och från enhetens inställningsapp. 
 
-Följande versioner av Windows kan synkroniseras manuellt. Om din enhet använder en annan version av Windows kan du tyvärr inte starta en manuell synkronisering.
+Företagsportalappens funktioner har stöd på Windows 10-enheter som kör Creators uppdatering (1703) eller senare. 
+* [Synkronisera från företagsportalappen](#Sync-from-Company-Portal-app-for-Windows)  
 
-* [Synkronisera Windows 10 Desktop](#windows-10-desktop)
-* [Synkronisera Windows 10 Mobil](#windows-10-mobile)
-* [Synkronisera Windows Phone 8.1](#windows-phone-81)
+Alla Windows-enheter kan synkroniseras från enhetens inställningsapp, inklusive:
 
-## <a name="windows-10-desktop"></a>Windows 10 desktop
-Det finns mer än en version av Windows 10, vilket innebär att det finns två uppsättningar steg. Om du är osäker på vilka steg du ska följa tittar du på skärmbilderna och följer de steg som liknar vad du ser på din enhet.
+* [Windows 10 Desktop](#windows-10-desktop)  
+* [Microsoft HoloLens](#microsoft-hololens)   
+* [Windows 10 Mobile](#windows-10-mobile)  
+* [Windows Phone 8.1](#windows-phone-81)    
 
-1. Välj **Start**-knappen och sedan **Inställningar**.
+## <a name="sync-from-company-portal-app-for-windows"></a>Synkronisera från företagsportalappen för Windows
+Följ stegen för att manuellt synkronisera alla Windows 10-enheter som kör Creators uppdatering (version 1703) eller senare.
 
-    ![Startknappen](./media/win10pc-sync-1-start-button.png)
+1.  Öppna företagsportalappen på din enhet.
 
-2. Välj **Konton** på sidan **Inställningar**.
+2.  Välj **Inställningar** > **Synkronisering**.
 
-    ![Välj konton på sidan Inställningar](./media/win10pc-sync-2-settings-accounts.png)
+    ![Skärmbild av startsidan i företagsportalappen, Inställningar markerat](./media/RS1_homePage_settings_04.png)  
+    
+    ![Skärmbild av inställningssidan för företagsportalappen, Synkroniseringsknappen markerad](./media/RS1_settingspage_sync05.png)    
 
-3. Ta en titt på följande två skärmar och se om någon av dem liknar den som visas på din enhet. Följ anvisningarna för den skärm som motsvarar den som visas på din enhet.
+## <a name="sync-from-settings-app"></a>Synkronisera från Inställningsappen 
+Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-, Windows 10 Mobile- och Windows Phone 8.1-enheter från inställningsappen manuellt.
 
-    Om du ser den här skärmen, som visar ”Åtkomst till arbete eller skola”, följer du anvisningarna i [Steg som du följer om du ser Åtkomst till arbete eller skola](#steps-to-follow-if-you-see-access-work-or-school).
+### <a name="windows-10-desktop"></a>Windows 10 desktop
+1. På enheten, välj **Start** > **Inställningar**.
 
-    ![Steg som du följer om du ser Åtkomst till arbete eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+2. Välj **Konton**.
 
-    Om du ser den här skärmen, som visar ”Åtkomst till arbete”, följer du stegen i [Steg som du följer om du ser Åtkomst till arbete](#steps-to-follow-if-you-see-work-access).
+    ![Välj konton på sidan Inställningar](./media/win10pc-sync-2-settings-accounts.png)  
+
+3. Det finns flera versioner av Windows 10 för stationära datorer. Jämför din skärm med skärmbilderna nedan för att avgöra vilken uppsättning steg du ska följa. 
+
+    * Om skärmen visar **Åtkomst till arbetsplats eller skola**, går du vidare till stegen i [Åtkomst till arbetsplats eller skola](#access-work-or-school).
+
+    ![Alternativet Åtkomst till arbetsplats eller skola i inställningsappen](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+
+    * Om skärmen visar **Åtkomst till arbetsplats**, går du vidare till stegen under [Åtkomst till arbetsplats](#work-access).  
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 
-### <a name="steps-to-follow-if-you-see-access-work-or-school"></a>Steg för att följa om du ser Åtkomst för arbete eller skola
+#### <a name="access-work-or-school-steps"></a>Stegen för Åtkomst till arbetsplats eller skola
 
-1. Välj **Åtkomst till arbete eller skola** på sidan **Konton**.
+1. Klicka på **Åtkomst till arbetsplats eller skola**.
 
-    ![Välj Åtkomst till arbete eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+    ![Skärmbild som visar alternativet Åtkomst till arbetsplats eller skola](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Välj ditt arbets- eller skolkonto. Beroende på hur företagets support har konfigurerat inställningarna kanske du ser två konton som liknar de i exemplet nedan. Ett konto visas med en portfölj och det andra med Microsoft-logotypen.
-
-   - Om du ser kontot med portföljen väljer du det och letar efter knappen **Information** under kontot.
-   - Om du bara ser kontot med Microsoft-logotypen väljer du kontot och letar efter knappen **Information** under kontot.
+2. Välj det konto som har en portfölj-ikon bredvid sig. Om du inte ser det här kontot alls, kan ditt företag ha konfigurerat inställningarna på ett annat sätt. Klicka då istället på det konto som har en Microsoft-logotyp bredvid sig.
 
      ![Välj namnet på ditt konto bredvid portföljikonen eller Microsoft-logotypen](./media/win10pc-rs1-sync-info-button.png)
 
-3. Välj knappen **Information**. En dialogruta öppnas som liknar den i exemplet nedan.
+3. Klicka på **Info**. 
 
-    ![Välj namnet på ditt konto bredvid portföljikonen eller Microsoft-logotypen](./media/win10pc-rs1-sync-button.png)
+4. Klicka på **Synkronisering**. 
 
-4. Välj knappen **Synkronisera**. Enheten kommer att synkroniseras med Intune.
+#### <a name="work-access-steps"></a>Steg för Åtkomst till arbetsplats
 
-### <a name="steps-to-follow-if-you-see-work-access"></a>Steg som du följer om du ser Åtkomst till arbete
-
-1. Välj **Åtkomst till arbetsplats** på sidan **Konton**.
+1.  Klicka på **Åtkomst till arbetsplats**.
 
     ![Välj arbetsåtkomst som kontotyp](./media/win10pc-sync-3-work-access.png)
 
-2. Under avsnittet **Registrera dig för hantering av mobilenheter (MDM)** väljer du namnet på ditt företag.
+2. Under **Registrera dig för enhetshantering**, välj namnet på ditt företag.
 
     ![Välj företagsnamnet för enhetshantering](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Välj knappen **Synkronisera**.
+3. Klicka på **Synkronisering**. Knappen är inaktiverad tills synkroniseringen är klar.
 
-    ![Välj knappen Synkronisera](./media/win10pc-sync-5-tap-sync.png)
+    ![Välj knappen Synkronisera](./media/win10pc-sync-5-tap-sync.png)  
 
-   Knappen är nedtonad tills synkroniseringen är färdig.
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobil
-Så här synkroniserar du en Windows 10 Mobile-enhet manuellt för att påskynda en långsam appinstallation:
 
-   1. Gå till **Alla appar** > **Inställningar** > **Konton**.
+   1. På enheten, gå till **Alla appar** > **Inställningar** > **Konton**.
 
        ![Välj konton på skärmen Inställningar](./media/win10m-sync-1-settings-accounts.png)
 
-   2. Tryck på **Åtkomst till arbetsplats**.
+   2. Väj **Åtkomst till arbetsplats**.
 
        ![Välj arbetsåtkomst som kontotyp](./media/win10m-sync-2-work-access.png)
 
-   3. Välj företagets namn under **Registrera dig för hantering av mobilenheter**.
+   3. Välj företagets namn under **Registrera dig för enhetshantering**.
 
        ![Välj företagsnamnet för enhetshantering](./media/win10m-sync-3-tap-comp-name.png)
 
-   4. Tryck på ikonen **Synkronisera**.
+   4. Välj ikonen **Synkronisera**. Knappen är inaktiverad tills synkroniseringen är klar.
 
-       ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)
+       ![Tryck på ikonen Synkronisera](./media/win10m-sync-4-tap-sync.png)  
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+Dessa anvisningar gäller HoloLens-enheter som kör Windows 10 Anniversary-uppdateringen (även kallad RS1). 
+1.  Öppna inställningsappen på enheten.  
 
-       Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen. Knappen **Synkronisera** är nedtonad tills synkroniseringen är klar.
+2.  Välj **Konton** > **Åtkomst till arbetsplats**.  
+    ![Skärmbild på HoloLens-inställningsappen, kontolänken markerad](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-## <a name="windows-phone-81"></a>Windows Phone 8.1
-Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda en långsam appinstallation:
+3.  Välj ditt anslutna konto > **Synkronisera**. ![Skärmbild på HoloLens-inställningsapp, synkroniseringsknappen markerad](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+
+### <a name="windows-phone-81"></a>Windows Phone 8.1
 
 1. Gå till **Alla appar** > **Inställningar** > **arbetsplats**.
 
@@ -124,10 +135,8 @@ Så här synkroniserar du en Windows Phone 8.1-enhet manuellt för att påskynda
 
     ![Välj företagsnamnet för arbetsplatskontot](./media/wp81-2-sync-tap-compname.png)
 
-3. Tryck på ikonen **Synkronisera**.
+3. Välj ikonen **Synkronisera**.
 
     ![Tryck på ikonen Synkronisera](./media/wp81-3-sync-tap-sync-button.png)
-
-   Ett meddelande som anger att ditt konto synkroniseras visas längst upp på skärmen tills synkroniseringen är klar.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
