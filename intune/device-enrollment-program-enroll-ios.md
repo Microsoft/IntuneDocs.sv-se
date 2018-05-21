@@ -15,11 +15,11 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b03de8b2c5fca0f41a792e5004d74fe82e4a861d
-ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
+ms.openlocfilehash: 0f6f16bfd148e3c386aaf0ced78381e1eed8ae47
+ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -106,8 +106,11 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
+
     ![Skapa en profilskärmbild.](./media/device-enrollment-program-enroll-ios/image04.png)
+
 3. Under **Skapa profil**, anger du ett **Namn** och **Beskrivning** för profilen för administrationssyfte. Användarna kan inte se den här informationen. Du kan använda fältet **Namn** för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om [dynamiska Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
+
     ![Profilnamn och beskrivning.](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. Ange om enheter med den här profilen måste registreras med eller utan en tilldelad användare under **Användartillhörighet**.
@@ -123,6 +126,9 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     > Multifaktorautentisering (MFA) fungerar inte vid DEP-registrering om du har profilegenskaperna inställda på **Registrera med användartillhörighet**. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
 
 6. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
+
+    ![Skärmbild för Enhetshanteringsinställningar.](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
+
     **Övervakade** enheter ger dig fler hanteringsalternativ och inaktiverar aktiveringslåset som standard. Microsoft rekommenderar att du använder DEP som mekanism för att aktivera övervakat läge, särskilt för organisationer som distribuerar större antal iOS-enheter.
 
     Användare meddelas att deras enheter är övervakade på två sätt:
@@ -171,9 +177,9 @@ Nu när Intune har fått behörighet att hantera dina enheter, kan du synkronise
 1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan > **Enheter** > **Synkronisera**. ![Skärmbild där noden Registreringsprogramenheter har valts och länkvärde håller på att väljas.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    För att följa Apples villkor för godkänd registreringsprogramtrafik tillämpar Intune följande begränsningar:
-   - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Vid en fullständig synkronisering uppdateras Intune med alla Apple-serienummer som tilldelats till Intune. Om du försöker köra en fullständig synkronisering inom sju dagar efter den föregående fullständiga synkroniseringen uppdaterar Intune endast serienummer som inte redan visas i Intune.
-   - Varje synkroniseringsbegäran har 15 minuter på sig att slutföras. Under den här tiden, eller tills begäran slutförts, är knappen **Synkronisera** inaktiverad.
-   - Intune synkroniserar nya och borttagna enheter med Apple var 24:e timme.
+   - En fullständig synkronisering kan inte köras oftare än en gång var sjunde dag. Under en fullständig synkronisering, hämtar Intune den fullständigt uppdaterade listan med serienummer som tilldelats den Apple MDM-server som är ansluten till Intune. När en registreringsprogram-enhet har tagits bort från Intune-portalen, kan den inte importeras igen förrän den fullständiga synkroniseringen körs.   
+   - En synkronisering körs automatiskt var 24:e timme. Du kan också synkronisera genom att klicka på **Synkronisera**-knappen (högst en gång var 15:e minut). Alla synkroniseringsbegäranden ges 15 minuter att slutföras. **Synkronisera**-knappen är inaktiverad tills att en synkronisering har slutförts. Synkroniseringen kommer att uppdatera status för befintliga enheter och importera nya enheter som tilldelats Apple MDM-servern.   
+
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Tilldela enheterna en registreringsprofil
 Du måste tilldela en registreringsprogramprofil till enheterna innan de kan registreras.
@@ -196,5 +202,17 @@ Du kan välja en standardprofil som ska tillämpas för alla enheter som registr
 Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har återställts till fabriksinställningarna.
 
 Se [Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet](/intune-user-help/enroll-your-device-dep-ios).
+
+## <a name="renew-a-dep-token"></a>Ladda upp en DEP-token  
+1. Gå till deploy.apple.com.  
+2. Under **Hantera servrar**, väljer du din MDM-server som är associerad med den tokenfil som du vill förnya.
+3. Välj **Skapa ny Token**.  
+4. Välj **Din servertoken**.  
+5. I [Intune i Azure Portal](https://aka.ms/intuneportal), väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens**.  
+6. Välj token och välj sedan **Förnya token**.  
+7. Ange det Apple-ID som användes för att skapa den ursprungliga token.  
+8. Överför den nyligen hämtade token.  
+9. Välj **Förnya token**. Du får se en bekräftelse att token har förnyats.   
+
 
 

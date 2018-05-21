@@ -168,6 +168,8 @@
               href: windows-enroll.md
             - name: Massregistrering
               href: windows-bulk-enroll.md
+            - name: Registreringsstatussida
+              href: windows-enrollment-status.md
             - name: Windows AutoPilot-distributionsprogram
               href: enrollment-autopilot.md
         - name: Konfigurera Android-registrering
