@@ -15,11 +15,11 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d973ca86a9adcbe3c7c18b2018c29006ba54ae9e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 9132000f5fcf43251bcc1e9b903ea03551e0b85e
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -127,7 +127,7 @@ Eftersom Intune-appskyddsprinciper är riktade till en användares identitet gä
 För att skapa de här principerna bläddrar du till **Mobilappar** > **Appskyddsprinciper** i Intune-konsolen och klickar på **Lägg till en princip**. Du kan även redigera eller en befintlig princip. Om du vill att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in inställningen **Target to all app types** (Gäller för alla apptyper) på **Nej**. 
 
 > [!NOTE]
-> Läs [MAM protection policies targeted based on management state](whats-new.md#mam-protection-policies-targeted-based-on-management-state----1665993---) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
+> Läs [MAM protection policies targeted based on management state](whats-new.md#mam-protection-policies-targeted-based-on-management-state-) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
 
 ## <a name="policy-settings"></a>Principinställningar
 Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS och Android:

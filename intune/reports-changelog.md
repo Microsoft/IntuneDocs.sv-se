@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/23/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,25 @@ ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 8e11585adf570ba9155861f89688c33ac6cecbeb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: dd9fb36bb1b8c5e66d104f530690c5d236ea25e4
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Ändringslogg för Intunes informationslager-API
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Håll dig uppdaterad om uppdateringar för Intune-informationslagret.
+
+## <a name="1805"></a>1805
+_Utgiven: maj 2018_
+
+### <a name="correction-to-device-count-in-devices-collection"></a>Korrigering av antal enheter i samlingen **Enheter** 
+
+En korrigering har gjorts till samlingen **Enheter** som kan minska det totala antalet enheter som filtreras med attributet `isDeleted`. Den här sänkningen är ett resultat av korrigeringen och är inte ett fel. Mer information om samlingen **enheter** finns i [Referens för enhetsentiteter](reports-ref-devices.md). 
+
 
 ## <a name="1801"></a>1801
 _Publicerad i januari 2018_
