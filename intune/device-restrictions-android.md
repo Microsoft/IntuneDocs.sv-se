@@ -14,11 +14,11 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 619d9e86bd130a617155d262f3e09882ce26ec1e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune 
 
@@ -47,6 +47,10 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 ## <a name="password"></a>Lösenord
 
 - **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.|Ja|Ja|
+
+    > [!NOTE]
+    > Samsung Knox-enheter kräver automatiskt en fyrsiffrig PIN-kod under MDM-registreringen. Android-enheter kan automatiskt kräva att en PIN-kod är kompatibel med villkorlig åtkomst.
+
 - **Minsta längd på lösenord** – Ange den minsta längd på lösenord som en användare måste konfigurera (mellan 4 och 16 tecken).
 - **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger antalet minuter av inaktivitet innan enheten låses automatiskt.
 - **Antal felaktiga inloggningar innan enheten rensas** – Anger antalet tillåtna felinloggningar innan enheten rensas.
@@ -55,7 +59,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
     - **Standard för enheten**
     - **Låg säkerhetsbiometri**
     - **Minst numeriskt**
-    - **Numeriskt avancerat** – Upprepande eller efterföljande siffror som ”1111” eller ”1234” tillåts inte<sup>1</sup>
+    - **Numeriskt avancerat** – Upprepade eller efterföljande siffror (till exempel ”1111” eller ”1234”) tillåts inte.<sup>1</sup>
     - **Minst alfabetiskt**
     - **Minst alfanumeriskt**
     - **Minst alfanumeriskt med symboler**
@@ -63,6 +67,9 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Upplåsning med fingeravtryck (endast Samsung Knox)** – Tillåter användning av fingeravtryck för att låsa upp enheter som stöds.
 - **Smart Lock och andra betrodda agenter** – Innebär att du kan styra Smart Lock-funktionen på kompatibla Android-enheter (Samsung Knox Standard 5.0 och senare). Den här telefonfunktionen, som ibland kallas förtroendeagent, låter dig inaktivera eller kringgå lösenordet för enhetens låsskärm om enheten är på en betrodd plats. Det kan till exempel användas när enheten är ansluten till en specifik bluetooth-enhet eller när den är nära en NFC-tagg. Du kan använda den här inställningen för att förhindra att användare konfigurerar Smart Lock.
 - **Kryptering** – Kräver att filer på enheten krypteras.
+
+    > [!NOTE]
+    > Om en krypteringsprincip tillämpas kräver Samsung Knox-enheter att användarna anger ett komplext sex tecken långt lösenord för enheten.
 
 <sup>1</sup> Innan du tilldelar den här inställningen till enheter, kontrollerar du att företagsportalappen har uppdaterats till den senaste versionen på målenheterna.
 

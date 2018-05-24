@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c7cd6380cbb596779a3094b18eef4e91b6161871
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f22509d780ec4d877e7e780109b34776b269c8b3
+ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Ta bort enheten från företagsportalen
 
-Om du inte längre vill att enheten ska hanteras av ditt företag eller din organisation kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning. Om du tar bort din enhet kommer den inte längre att visas på företagsportalen och du kanske inte längre kan komma åt företags- eller skoldata, appar och e-post.
+Om du inte längre vill att enheten ska hanteras av ditt företag eller din organisation kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Om du tar bort din enhet kommer den inte längre att visas på företagsportalen. Du kan också förlora åtkomsten till din organisations data, appar och e-post.
 
 Så här tar du bort din enhet:
 

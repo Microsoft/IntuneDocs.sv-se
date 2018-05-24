@@ -1,12 +1,11 @@
 ---
-title: Förbered branschspecifika appar för appskyddsprinciper
-titlesuffix: Microsoft Intune
-description: Använd programhanteringsverktyget och App SDK för att göra så att dina verksamhetsspecifika appar kan använda appskyddsprinciper i Microsoft Intune.
+title: Förbereda appar för hantering av mobilprogram med Microsoft Intune
+description: Informationen i det här avsnittet hjälper dig att avgöra när du ska använda apphanteringsverktyget och App SDK för att förbereda dina verksamhetsspecifika appar för användning av hanteringsprinciper för mobilappar.
 keywords: ''
-author: Erikre
+author: erikre
 ms.author: erikre
-manager: dougeby
-ms.date: 05/07/2018
+manager: angrobe
+ms.date: 05/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,15 +14,15 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 5ae3b19cfe57c48ac262a376c778d7d593456991
-ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
+ms.openlocfilehash: 89a8f29e2e31cf59ed237cbfae5c557f60bd8dfa
+ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
-[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
+[!INCLUDE[both-portals](./includes/note-for-both-portals.md)]
 
 Du kan använda appskyddsprinciper i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
@@ -34,7 +33,6 @@ Du behöver inte källkoden för att använda verktyget, men du behöver autenti
 
 Apphanteringsverktyget stöder **inte** appar i Apple App Store eller Google Play Store. Det stöder inte heller vissa funktioner som kräver utvecklarintegration (se följande tabell med funktionsjämförelser).
 
-
 Mer information om programhanteringsverktyget för appskyddsprinciper på enheter som inte har registrerats i Intune finns i [Skydda branschspecifika appar och data på enheter som inte har registrerats i Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Skäl för att använda programhanteringsverktyget
@@ -44,7 +42,6 @@ Mer information om programhanteringsverktyget för appskyddsprinciper på enhete
 * Du har inte tillgång till appens källkod
 * Du har inte utvecklat appen
 * Din app har minimala användarautentiseringsfunktioner
-
 
 ### <a name="supported-app-development-platforms"></a>Utvecklingsplattformar för program som stöds
 
@@ -79,35 +76,43 @@ Den här tabellen visar de inställningar som du kan använda för App SDK och a
 > [!NOTE]
 > Apphanteringsverktyget kan användas med den fristående versionen av Intune eller Intune med Configuration Manager.
 
-|                                                         Funktion                                                          | App SDK | Apphanteringsverktyg |
-|--------------------------------------------------------------------------------------------------------------------------|---------|-------------------|
-|                              Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare                              |    X    |         X         |
-|                                        Förhindra Android-, iTunes- och iCloud-säkerhetskopieringar                                        |    X    |         X         |
-|                                         Tillåt att appen överför information till andra appar                                         |    X    |         X         |
-|                                        Tillåt att appen hämtar data från andra appar                                         |    X    |         X         |
-|                                      Begränsa klipp ut, kopiera och klistra in med andra appar                                       |    X    |         X         |
-|                                              Kräv enkel PIN-kod för åtkomst                                               |    X    |         X         |
-|                                         Ersätt appens inbyggda PIN-kod med PIN-koden för Intune                                         |    X    |                   |
-|                                     Ange antal försök innan PIN-koden återställs                                      |    X    |         X         |
-|                                             Tillåt fingeravtryck istället för PIN                                             |    X    |         X         |
-|                                         Kräv företagets autentiseringsuppgifter för åtkomst                                         |    X    |         X         |
-|                             Hindra hanterade appar från att köras på jailbrokade eller rotade enheter                              |    X    |         X         |
-|                                                     Kryptera appdata                                                     |    X    |         X         |
-|                           Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter                            |    X    |         X         |
-|                                             Ange offlinerespitperiod                                             |    X    |         X         |
-|                                           Blockera skärmdump (endast Android)                                            |    X    |         X         |
-|                                        Stöd för MAM utan enhetsregistrering                                         |    X    |         X         |
-|                                                        Fullständig rensning av enheten                                                         |    X    |         X         |
-| Selektiv rensning <br></br><strong>Obs!</strong> När hanteringsprofilen tas bort i iOS tas även appen bort. |    X    |                   |
-|                                                    Förhindra ”Spara som”                                                     |    X    |                   |
-|                                            Konfiguration av målprogram                                            |    X    |                   |
-|                                                Stöd för flera identiteter                                                |    X    |                   |
-|                                                    Anpassningsbar stil                                                    |    X    |                   |
+|Funktion|App SDK|Apphanteringsverktyg|
+|-----------|---------------------|-----------|
+|Begränsa webbinnehåll till att bara visas i en företagshanterad webbläsare|X|X|
+|Förhindra Android-, iTunes- och iCloud-säkerhetskopieringar|X|X|
+|Tillåt att appen överför information till andra appar|X|X|
+|Tillåt att appen hämtar data från andra appar|X|X|
+|Begränsa klipp ut, kopiera och klistra in med andra appar|X|X|
+|Kräv enkel PIN-kod för åtkomst|X|X|
+|Ersätt appens inbyggda PIN-kod med PIN-koden för Intune|X||
+|Ange antal försök innan PIN-koden återställs|X|X|
+|Tillåt fingeravtryck istället för PIN|X|X|
+|Tillåt ansiktsigenkänning istället för PIN-kod (endast iOS)|X|X|
+|Kräv företagets autentiseringsuppgifter för åtkomst|X|X|
+|Hindra hanterade appar från att köras på jailbrokade eller rotade enheter|X|X|
+|Kryptera appdata|X|X|
+|Kontrollera åtkomstbehörigheterna på nytt efter angivet antal minuter|X|X|
+|Ange offlinerespitperiod|X|X|
+|Blockera skärmdump (endast Android)|X|X|
+|Stöd för MAM utan enhetsregistrering|X|X|
+|Fullständig rensning av enheten|X|X|
+|Selektiv rensning <br></br>**Obs!** När hanteringsprofilen tas bort i iOS tas även appen bort.|X||
+|Förhindra ”Spara som”|X||
+|Konfiguration av målprogram|X||
+|Stöd för flera identiteter|X||
+|Anpassningsbar stil |X|||
+|VPN-anslutningar för program på begäran med Citrix mVPN|X|X| 
+|Inaktivera synkronisering av kontakter|X|X|
+|Inaktivera utskrift|X|X|
+|Minimikrav på appversion|X|X|
+|Minimikrav på operativsystem (iOS och Android)|X|X|
+|Minimikrav på Android-säkerhetskorrigeringsversion (endast Android)|X|X|
+|Minimikrav på Intune SDK för iOS (endast iOS)|X|X|
 
 ## <a name="next-steps"></a>Nästa steg
 
 Mer information om appskyddsprinciper i Intune finns i följande avsnitt:
 
-  -  [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
+  - [Apphanteringsverktyg för Android](app-wrapper-prepare-android.md)</br>
   - [Apphanteringsverktyg för iOS](app-wrapper-prepare-ios.md)</br>
   - [Aktivera hantering av mobilprogram i appar med SDK](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)

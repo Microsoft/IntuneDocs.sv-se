@@ -13,11 +13,11 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3326ecccd0d20602d6a9445b62c39f582354f238
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 777cfa7d387c2bd19d529dbfc6d1aeab5dbad67e
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -80,6 +80,8 @@ Följande krävs för att använda policyer för efterlevnad för enheter:
   - Windows 10
 
 - Enheter måste registreras i Intune för att kunna rapportera efterlevnadsstatus
+
+- Enheter som registrerats till en användare eller enheter utan primär användare stöds. Flera användarkontexter stöds inte.
 
 ## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Så här fungerar efterlevnadsprinciper för Intune med Azure AD
 
@@ -148,16 +150,16 @@ Du kan ge enheter som följer principreglerna åtkomst till e-post och andra fö
 Du kan även använda policyer för enhetsefterlevnad utan villkorlig åtkomst. När du använder efterlevnadsprinciper separat utvärderas målenheterna varefter deras efterlevnadsstatus rapporteras. Du kan t.ex. få en rapport om hur många enheter som inte är krypterade eller vilka enheter som är upplåsta (jailbreakade) eller rotade. När du använder policyer för efterlevnad utan villkorlig åtkomst tillämpas inga åtkomstbegränsningar på företagsresurser.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sätt att distribuera policyer för efterlevnad för enheter
-Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om användarens enheter uppfyller efterlevnadskraven.
+Du kan distribuera policyer för efterlevnad till användare i användargrupper eller till enheter i enhetsgrupper. När en efterlevnadsprincip distribueras till en användare så kontrolleras om alla användarens enheter uppfyller efterlevnadskraven.
 
-För enheter i enhetsgrupper innehåller **Inställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad)
+**Inställningar för policyer för efterlevnad** (Azure Portal > Enhetsefterlevnad) innefattar:
 
 - **Markera enheter som saknar en policy för efterlevnad som**: Den här egenskapen har två värden:
 
   - **Följer standard**: säkerhetsfunktion av
   - **Följer inte standard** (standard): säkerhetsfunktion på
 
-  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **följer ej standard**. Om du använder villkorlig åtkomst rekommenderar vi att du använder standardinställningen **Följer inte standard**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
+  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **Kompatibla**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
 
 - **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad gör den så att iOS-enheter checkar in med Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarnas platsdata lagras inte av Intune.
 

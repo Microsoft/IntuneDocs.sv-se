@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 05/17/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,11 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98355ec1cf54597f488bd2426ac77f35809070fd
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8cce5da762c119ec04553d80d717fb586c962566
+ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
@@ -78,20 +78,18 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. I fönstret **Intune** väljer du **Intune-roller** och sedan **Alla roller**.
-1. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
+4. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
 
-2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**.
+5. I rutan <*rollnamn*> – **Översikt** väljer du **Tilldelningar** > **Tilldela**.
 
     > [!NOTE]
     > Du kan inte ta bort eller redigera inbyggda roller
 
-3. I fönstret för anpassad roll väljer du **Tilldela**.
-
-4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
+6. I rutan **Rolltilldelningar** anger du ett **tilldelningsnamn** och en valfri **tilldelningsbeskrivning** och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
+    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera. Du kan också välja att ange omfånget till **Alla användare**, **Alla enheter** eller **Alla användare och enheter**.
 <br></br>
-5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
+7. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
 ### <a name="intune-rbac-table"></a>Intune RBAC-tabell
 
@@ -128,13 +126,13 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 
 1. I fönstret **Intune-roller – Alla roller** väljer du den anpassade rollen som du vill tilldela.
 
-2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**. I det här fönstret kan du även redigera eller ta bort befintliga roller.
+2. I rutan <*rollnamn*> - **Översikt** väljer du **Tilldelningar**. I det här fönstret kan du även redigera eller ta bort befintliga roller.
 
 3. I fönstret för anpassad roll väljer du **Tilldela**.
 
 4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
+    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera. Du kan också välja att ange omfånget till **Alla användare**, **Alla enheter** eller **Alla användare och enheter**.
 <br></br>
 5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
@@ -145,3 +143,5 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 ## <a name="see-also"></a>Se även
 
 [Tilldela roller med hjälp av Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
+
+

@@ -14,11 +14,11 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a3b98dad86b7abe5ce330ae99fdf008137cc2b11
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: eb88bf64db8eaa82a68f56f8c3235030539f1959
+ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Använd en anpassad enhetsprofil för att skapa en Wi-Fi-profil med en i förväg delad nyckel – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -35,6 +35,7 @@ I förväg delade nycklar (PSK) används vanligtvis för att autentisera använd
 - För Android kan du också använda [Androids PSK-generator](http://intunepskgenerator.johnathonb.com/).
 - Du kan lägga till flera nätverk och nycklar genom att lägga till fler OMA-URI-inställningar.
 - För iOS konfigurerar du profilen med Apple Configurator på en Mac-dator. Du kan också använda [PSK-generatorn för mobil konfiguration för iOS](http://intunepskgenerator.johnathonb.com/).
+- PSK kräver en sträng med 64 hexadecimala siffror eller en lösenfras med 8 till 63 utskrivbara ASCII-tecken. Vissa tecken, till exempel asterisk (*), stöds inte.
 
 ## <a name="create-a-custom-profile"></a>Skapa en anpassad profil
 Du kan skapa en anpassad profil med en i förväg delad nyckel för en Android-, Windows- eller EAP-baserad Wi-Fi-profil. Om du vill skapa profilen med Azure-portalen kan du läsa om att [skapa anpassade enhetsinställningar](custom-settings-configure.md). När du skapar en enhetsprofil väljer du **Anpassad** för din enhetsplattform. Markera inte Wi-Fi-profilen. När du väljer anpassad ska du se till att: 
@@ -42,16 +43,16 @@ Du kan skapa en anpassad profil med en i förväg delad nyckel för en Android-,
 1. Ange ett namn och en beskrivning av profilen.
 2. Lägga till en ny OMA-URI-inställning med följande egenskaper: 
 
-   a. Ange ett namn på den här inställningen för Wi-Fi-nätverk
+   a. Ange ett namn på den här inställningen för Wi-Fi-nätverk.
 
-   b. (Valfritt) Ange en beskrivning av OMA-URI-inställningen eller lämna det tomt
+   b. (Valfritt) Ange en beskrivning av OMA-URI-inställningen eller lämna den tom.
 
-   c. Ställ in **Datatyp** på **Sträng**
+   c. Ange **Datatyp** till **Sträng**.
 
    d. **OMA-URI**:
 
-   - **För Android**: ./Vendor/MSFT/WiFi/Profile/<SSID>/Settings
-   - **För Windows**: ./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml
+   - **För Android**: ./Vendor/MSFT/WiFi/Profile/SSID/Settings
+   - **För Windows**: ./Vendor/MSFT/WiFi/Profile/SSID/WlanXml
 
      > [!NOTE]
      > Se till att ta med punkttecknet i början.

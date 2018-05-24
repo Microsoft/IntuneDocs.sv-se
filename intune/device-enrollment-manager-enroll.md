@@ -15,11 +15,11 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 870d61cce47132b19b4c3d8b7357f84a21a443e4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0a32eb1d65710bf09d61c0846a8d949d5cd99ed2
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
@@ -73,9 +73,9 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
 
 ## <a name="permissions-for-dem"></a>Behörigheter för DEM
 
-Azure AD-rollerna global eller Intune-tjänstadministratör krävs för att utföra uppgifter för DEM-registrering. De här rollerna krävs också för att se alla DEM-användare trots RBAC behörigheter som listas och är tillgängliga under den anpassade användarrollen. En användare utan rollen global administratör eller Intune-tjänstadministratör tilldelad, men som har läsbehörigheter för rollen enhetsregistreringshanterare, kan bara se de DEM-användare som de skapat. RBAC-rollstöd för dessa funktioner kommer att finnas i framtiden.
+Azure Active Directory-rollen Global administratör eller Intune-tjänstadministratör krävs för att utföra uppgifter relaterade till DEM-registrering på administratörsportalen. De här rollerna krävs också för att se alla DEM-användare trots RBAC behörigheter som listas och är tillgängliga under den anpassade användarrollen. En användare som inte har tilldelats rollen Global administratör eller Intune-tjänstadministratör, men som har läsbehörigheter för rollen Enhetsregistreringshanterare, kan bara se de DEM-användare som de har skapat. RBAC-rollstöd för dessa funktioner kommer att finnas i framtiden.
 
-Om en användare inte har rollen Global administratör eller Intune-tjänstadministratör tilldelad till sig, men har läsbehörigheter aktiverade för rollen enhetsregistreringshanterare, kan de bara se DEM-användare som de har skapat.
+En användare som inte har tilldelats rollen Global administratör eller Intune-tjänstadministratör, men som har läsbehörigheter för rollen Enhetsregistreringshanterare, kan bara se de DEM-användare som de har skapat.
 
 ## <a name="remove-a-device-enrollment-manager"></a>Ta bort en enhetsregistreringshanterare
 

@@ -17,11 +17,11 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1dd64250c1996c6b13c62f80572282d639112ba6
-ms.sourcegitcommit: 8ee543c864097dc195b6f440471dca713fc21ed2
+ms.openlocfilehash: a3cad6a73b3455790441c594933d599b2c6e89f9
+ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="remove-your-windows-device-from-intune-management"></a>Ta bort en Windows-enhet från Intune-hanteringen
 
@@ -72,13 +72,13 @@ Utför följande steg om du vill ta bort en mobil enhet för Windows 8.1 från I
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Ta bort din personliga information när du tagit bort företagsportalen
 Det finns två typer av data som företagsportalen lagrar på din Windows-enhet:
 
--   **Diagnostikloggar**: Standardappens aktivitetsdata som Microsoft samlar in raderas automatiskt när du tar bort enheten från företagsportalen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
+-   **Diagnostikloggar**: Standarddata om appaktivitet som Microsoft samlar in. Dessa data raderas automatiskt när du avinstallerar företagsportalappen. Aktivitetsdata för appen är till exempel data om hur länge appen var öppen eller om appen har kraschat.
 -   **Cacheminne**: Stödfiler som krävs för att appen ska fungerar, till exempel ikoner och inställningar.
 
-Det finns vissa saker som du behöver göra för att den här informationen ska tas bort helt.
+Om du vill ta bort lagrade loggar och cacheminnet utför du något av följande steg:
 
-1. Avinstallera företagsportalen. När du [avinstallerar företagsportalappen](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) tas vissa appdata som lagras på enheten bort.  
+* [Avinstallera företagsportalappen](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-2. Återställ företagsportalen för att återställa lagrade appdata. Öppna appen **Inställningar** och markera > **Appar** > **Företagsportalen** > **Avancerade alternativ**  >  **Återställ**. 
+* Återställ företagsportalappen. Öppna appen **Inställningar** och välj > **Appar** > **Företagsportal** > **Avancerade alternativ**  >  **Återställ**. 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

@@ -13,11 +13,11 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c1aaffb2da1f4ec081b59ff6ca1922d983008f77
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 010ed8511b042d6f764ba947f616d76521588f42
+ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
 
@@ -65,7 +65,7 @@ I avsnitten nedan finns mer detaljerad information om varje fält för enkel inl
 
    Du kan också skriva över området med egen text i textrutan **Område**.
 
-   Contoso kan exempelvis ha flera delområden, till exempel Europa, Asien och Nordamerika. De kanske vill att användarna i Asien ska använda SSO-nyttolasten och att UPN måste ha formatet *username@asia.contoso.com*. Om du väljer **Användarens unika namn** hämtas i det här fallet området för varje användare från AAD som bara kan vara *contoso.com*. Du kan alltså skapa den här nyttolasten särskilt för användare i Asien och skriva över området med värdet *asia.contoso.com*. Nu blir slutanvändarens UPN *username@asia.contoso.com* och inte *username@contoso.com*.
+   Contoso kan exempelvis ha flera delområden, till exempel Europa, Asien och Nordamerika. De kanske vill att användarna i Asien ska använda SSO-nyttolasten och att UPN måste ha formatet *username@asia.contoso.com*. Om du väljer **Användarens unika namn** hämtas i detta fall som standard sfären för varje användare från AAD som kanske bara är *contoso.com*. Du kan alltså skapa den här nyttolasten särskilt för användare i Asien och skriva över området med värdet *asia.contoso.com*. Nu blir slutanvändarens UPN *username@asia.contoso.com* och inte *username@contoso.com*.
 
 - Om du väljer **Enhets-ID** väljer Intune automatiskt ID för Intune-enhet.
 
