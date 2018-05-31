@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31836935"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
@@ -36,7 +37,7 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
    - **Översikt** visar en visuell ögonblicksbild av de registrerade enheterna och visar även hur många enheter som använder olika plattformar, inklusive Android, iOS och mycket mer.
    - **Alla enheter** visar en lista över de registrerade enheter du hanterar.
 
-     Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Edge, Chrome).
+     Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Microsoft Edge, Chrome).
 
      Välj valfri enhet för att [visa ytterligare information om enheten](device-inventory.md), inklusive information om maskinvara, installerade appar, status för policy för efterlevnad och mycket mer.
 

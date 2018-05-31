@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31834429"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
@@ -151,11 +152,11 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 ## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
--   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
--   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
--   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Microsoft Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
+-   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Microsoft Edge.
+-   **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
--   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
+-   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Microsoft Edge-webbläsaren.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
@@ -163,16 +164,16 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 -   **Plats för webbplatslista för företagsläge** – Anger var du hittar listan med webbplatser som kan öppnas i företagsläge. Användare kan inte redigera den här listan.<br>(Endast Windows 10 Desktop.)
 -   **Utvecklarverktyg** – Förhindrar att användaren kan öppna Edge-utvecklingsverktygen.
--   **Tillägg** – Tillåter att användaren installerar Edge-tillägg på enheten.
+-   **Tillägg** – Tillåter att användaren installerar Microsoft Edge-tillägg på enheten.
 -   **InPrivate-surfning** – Förhindrar att användaren öppnar InPrivate-surfningssessioner.
--   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
-    -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Edge (endast Windows 10 Mobile).
--   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Edge-webbläsaren (endast skrivbord).
--   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
+-   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Microsoft Edge.
+    -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Microsoft Edge (endast Windows 10 Mobile).
+-   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
+-   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Microsoft Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
 -   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Microsoft Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
--   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
+-   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
 -  **Listan Favoriter** – Definierar sökvägen till filen med favoriter. Till exempel http://contoso.com/favorites.html.
 -  **Begränsa ändringar i Favoriter** – Ställ in detta på **Blockera** för att hindra användarna från att lägga till, importera, sortera och redigera i listan Favoriter. 

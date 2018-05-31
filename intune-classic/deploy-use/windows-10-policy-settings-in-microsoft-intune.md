@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31027654"
 ---
 # <a name="intune-policy-settings-for-windows-10-devices-in-microsoft-intune"></a>Intune-principinställningar för Windows 10-enheter i Microsoft Intune
 
@@ -121,7 +122,7 @@ Använd den **allmänna konfigurationsprincipen** för Windows Intune för Windo
 |**Tillåt att intranättrafik skickas till Internet Explorer**|Tillåter att användarna öppnar intranätsplatser i Internet Explorer<br>(endast Windows 10 Desktop)|
 |**Tillåt Spåra inte**|Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker|
 |**Aktivera SmartScreen**||
-|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Edge|
+|**Tillåt Active scripting**|Tillåter att skript (exempelvis JavaScript) körs i webbläsaren Microsoft Edge|
 |**Tillåt popup-fönster**|Gäller endast för Windows 10 Desktop|
 |**Tillåt cookies**||
 |**Tillåt autofyll**|Tillåter att användarna kan ändra inställningarna för att automatiskt komplettera i webbläsaren<br>(endast Windows 10 Desktop)|
