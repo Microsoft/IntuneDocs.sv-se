@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: sandera
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 643ac4c96297ffc24d9460546fe183d2a1316654
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6262fee0051827794c49ebe10361b1a3b280b140
+ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34470805"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Felsöka Lookout-integrering med Intune
 
@@ -36,7 +37,7 @@ Lookout MTP tillåter endast att användare från en konfigurerad Azure AD-grupp
 
 * E-post: enterprisesupport@lookout.com
 * Logga in på [MTP Console](http://aad.lookout.com) (MTP-konsolen), och gå till **support**-modulen.
-* Gå till: https://enterprise.support.lookout.com/hc/requests och gör en supportbegäran.
+* Gå till: <https://enterprise.support.lookout.com/hc/requests> och gör en supportbegäran.
 
 ## <a name="unable-to-sign-in"></a>Det går inte att logga in
 Du får följande fel när den globala Azure AD-administratöranvändaren inte har godkänt den inledande Lookout-installationen.
@@ -81,7 +82,7 @@ Du kan även gå till **Enheter**-modulen i [Lookout-konsolen](http://aad.lookou
 Om den nya användaren finns i en av Lookout MTP-registreringsgrupperna kommer enheten att visas när Azure AD kopplar enheten till den nya användaren.
 
 ## <a name="compliance-remediation-workflows"></a>Arbetsflöden för reparation av efterlevnadsproblem
-- [Du uppmanas att installera Lookout for Work på din Android-enhet]( http://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
+- [Du uppmanas att installera Lookout for Work på din Android-enhet](http://docs.microsoft.com/intune-user-help/you-are-prompted-to-install-lookout-for-work-android)
 - [Du måste åtgärda ett hot som Lookout for Work har hittat på din Android-enhet](http://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 - [Du måste åtgärda ett hot som Lookout for Work har hittat på din iOS-enhet](https://docs.microsoft.com/intune-user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios)
 

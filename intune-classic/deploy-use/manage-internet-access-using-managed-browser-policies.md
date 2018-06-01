@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 9781af943dbfb782cf367257127021473e35c168
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1722defcb29c9cd5a15c68e01114f4ffb80e3859
+ms.sourcegitcommit: f21287c66dd5559688f08bd98b6c976a0dea055d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34456375"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med hanterade webbläsarprinciper med Microsoft Intune
 
@@ -59,7 +60,7 @@ Intune Managed Browser stöder öppning av webbinnehåll från [Microsoft Intune
 
     - **Namn**. Ange ett unikt namn för principen för den hanterade webbläsaren som hjälper dig att identifiera den i Intune-konsolen.
     - **Beskrivning**. Ange en lämplig beskrivning av principen och annan information som gör det enkelt att hitta den.
-    - **Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**. Välj ett av följande alternativ:
+    - **Aktivera en lista över tillåtna eller blockerade webbplatser för att begränsa URL:er som den hanterade webbläsaren kan öppna**. Välj något av följande alternativ:
         - **Låt den hanterade webbläsaren endast öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren kan öppna.
         - **Blockera den hanterade webbläsaren från att öppna webbadresserna nedan**. Ange en lista över webbadresser som den hanterade webbläsaren blockeras från att öppna.
 **Obs!** Både tillåtna och blockerade URL:er kan inte ingå i samma princip för den hanterade webbläsaren.
@@ -67,7 +68,7 @@ Mer information om de URL-format som du kan ange finns i **URL-format för till�
 
 4.  När du är klar väljer du **Spara princip**.
 
-Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer** .
+Den nya principen visas i noden **Konfigurationsprinciper** på arbetsytan **Principer**.
 
 ## <a name="create-a-deployment-for-the-managed-browser-app"></a>Skapa en distribution för den hanterade webbläsarappen
 När du har skapat principen för den hanterade webbläsaren kan du skapa en programdistribution för den hanterade webbläsarappen och associera den med principen som du skapade.
@@ -115,14 +116,14 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
 |                  URL                  |                     Information                      |                                                Matchar                                                |                                Matchar inte                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|        http://www.contoso.com         |              Matchar en enstaka sida               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
-|          http://contoso.com           |              Matchar en enstaka sida               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
-|    <http://www.contoso.com/&#42>;     | Matchar alla URL:er som börjar med www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
+|        http://www.contoso.com         |              Matchar en enstaka sida               |                                            <www.contoso.com>                                           |  host.contoso.com<br /><br /><www.contoso.com/images><br /><br />contoso.com/   |
+|          http://contoso.com           |              Matchar en enstaka sida               |                                             contoso.com/                                              | host.contoso.com<br /><br /><www.contoso.com/images><br /><br /><www.contoso.com>  |
+|    <http://www.contoso.com/&#42>;     | Matchar alla URL:er som börjar med www.contoso.com  |      <www.contoso.com> <br /><br /><www.contoso.com/images><br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
 |    http://&#42;.contoso.com/&#42;     |     Matchar alla underordnade domäner under contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
-|     http://www.contoso.com/images     |             Matchar en enstaka mapp              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
+|     http://www.contoso.com/images     |             Matchar en enstaka mapp              |                                        <www.contoso.com/images>                                         |                          <www.contoso.com/images/dogs>                          |
 |       http://www.contoso.com:80       |  Matchar en enstaka sida, med ett portnummer   |                                       http://www.contoso.com:80                                       |                                                                               |
 |        https://www.contoso.com        |          Matchar en enstaka, säker sida           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
-| <http://www.contoso.com/images/&#42>; |    Matchar en enstaka mapp och alla undermappar    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
+| <http://www.contoso.com/images/&#42>; |    Matchar en enstaka mapp och alla undermappar    |                 <www.contoso.com/images/dogs><br /><br /><www.contoso.com/images/cats>                   |                            <www.contoso.com/videos>                             |
 
 - Följande är några exempel på indata som du inte kan ange:
 
@@ -130,11 +131,11 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
   - &#42;.contoso/&#42;
 
-  - www.contoso.com/&#42;images
+  - <www.contoso.com/>&#42;images
 
-  - www.contoso.com/&#42;images&#42;pigs
+  - <www.contoso.com/>&#42;images&#42;pigs
 
-  - www.contoso.com/page&#42;
+  - <www.contoso.com/page>&#42;
 
   - IP-adresser
 
