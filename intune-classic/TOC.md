@@ -17,7 +17,6 @@
 ### [Ordna användare och enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5.md)
 ### [Distribuera principer och appar](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-6.md)
 ### [Anpassa företagsportalen](/intune/company-portal-customize?toc=/intune-classic/toc.json)
-### [Registrera enheter](get-started/start-with-a-paid-subscription-to-microsoft-intune-step-8.md)
 ### [Publicera konfigurationsuppgifter](get-started/post-configuration-tasks.md)
 ## Nästa steg
 ### [Förhindra företagsdataläckor från Office 365-mobilappar](get-started/prevent-company-data-leaks-from-Office-365-mobile-apps.md)
@@ -102,7 +101,6 @@
 #### [Återställa hanterade iOS-enheter](deploy-use/restore-managed-ios-devices-from-backup.md)
 #### [Android- och Samsung KNOX-inställningar](deploy-use/android-policy-settings-in-microsoft-intune.md)
 ##### [Använda en anpassad princip för att skapa en Wi-Fi-profil med en i förväg delad nyckel](deploy-use/pre-shared-key-wi-fi-profile.md)
-##### [Använda en anpassad princip för att skapa en VPN-profil per app för Android-enheter](deploy-use/per-app-vpn-for-android-pulse-secure.md)
 ##### [Använda anpassade principer för att tillåta och blockera appar för Samsung KNOX-enheter](deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps.md)
 #### [Inställningar för Android for Work](deploy-use/android-for-work-policy-settings-in-microsoft-intune.md)
 #### [Inställningar för Windows 8 och Windows 8.1](deploy-use/windows-configuration-policy-settings-in-microsoft-intune.md)
@@ -137,15 +135,8 @@
 ## [Dra tillbaka enheter](deploy-use/retire-devices-from-microsoft-intune-management.md)
 
 ## [Lägga till appar](deploy-use/add-apps.md)
-### [Lägga till appar för registrerade enheter](deploy-use/add-apps-for-mobile-devices-in-microsoft-intune.md)
 ### [Läs in Windows-appar separat](/intune/app-sideload-windows?toc=/intune-classic/toc.json)
 ## [Distribuera appar](deploy-use/deploy-apps.md)
-### [Distribuera appar till enheter och datorer](deploy-use/deploy-apps-in-microsoft-intune.md)
-### [Distribuera appar till Android for Work-enheter](deploy-use/android-for-work-apps.md)
-### [Övervaka appar](deploy-use/monitor-apps-in-microsoft-intune.md)
-### [Hantera volyminköpta appar](deploy-use/manage-volume-purchased-apps-in-microsoft-intune.md)
-#### [Hantera volyminköpta iOS-appar](deploy-use/manage-ios-apps-you-purchased-through-a-volume-purchase-program-with-microsoft-intune.md)
-#### [Hantera volyminköpta Windows-appar](deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune.md)
 
 ## Konfigurera appar
 ### [Uppdatera appar](deploy-use/update-apps-using-microsoft-intune.md)
@@ -175,7 +166,6 @@
 #### [Använd appar med appbaserad certifikatutfärdare](deploy-use/use-apps-with-mam-ca.md)
 #### [Exchange Online](deploy-use/mam-ca-for-exchange-online.md)
 #### [SharePoint Online](deploy-use/mam-ca-for-sharepoint-online.md)
-#### [Blockera appar utan ADAL](deploy-use/block-apps-with-no-modern-authentication.md)
 ### [Skydda åtkomsten till nätverk (Cisco ISE)](deploy-use/restrict-access-to-networks.md)
 ### [Skydda åtkomsten baserat på enhet, nätverk och programrisk](deploy-use/mobile-threat-defense.md)
 #### [Lookout Mobile Threat Defense-anslutningsprogram](deploy-use/lookout-mobile-threat-defense-connector.md)
@@ -203,8 +193,6 @@
 #### [Verifiera appskyddsprinciper](deploy-use/validate-mobile-application-management.md)
 #### [Övervaka efterlevnad av appskyddsprinciper](deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune.md)
 
-#### [Hantera dataöverföring mellan iOS-appar](deploy-use/manage-data-transfer-between-ios-apps-with-microsoft-intune.md)
-
 #### [Administrationskonsolen för Intune för MAM-principer](deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console.md)
 
 ### [Förbereda verksamhetsspecifika appar för MAM](/intune/apps-prepare-mobile-application-management?toc=/intune-classic/toc.json)
@@ -216,7 +204,6 @@
 
 ## Dra tillbaka appar och data
 ### [Använda fullständig eller selektiv rensning](deploy-use/use-remote-wipe-to-help-protect-data-using-microsoft-intune.md)
-### [Ta bort appar](deploy-use/retire-apps-using-microsoft-intune.md)
 ### [Rensa hanterade företagsdata från appar](deploy-use/Wipe-managed-company-app-data-with-microsoft-intune.md)
 
 ## [Ändra MDM-auktoritet](deploy-use/change-mdm-authority.md)
