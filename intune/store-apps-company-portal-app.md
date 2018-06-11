@@ -15,11 +15,12 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 169d0a32fdc86b5cd3f36421e6057cdeae1a078f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: edd0ec0d717d4303ad2a452c5d60009ac09aa05f
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703323"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune
 
@@ -73,7 +74,7 @@ Vår rekommenderade migreringssökväg är att ta bort tilldelningen för appen 
 
 Om du behöver läsa in appen separat och om du tilldelade appen Företagsportal för Windows 8.1 utan att signera den med Symantec-certifikatet, slutför du uppgraderingen genom att följa stegen i de tidigare avsnitten i den här artikeln.
 
-Om du behöver läsa in appen separat och du har signerat och tilldelat Företagsportal för Windows 8.1 med Symantec-kodsigneringscertifikat ska du följa stegen i nästa avsnitt.  
+Om du behöver läsa in appen separat och du har signerat och tilldelat företagsportalappen för Windows 8.1 med Symantec-kodsigneringscertifikat följer du stegen i nästa avsnitt.
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Hur uppgraderar jag min signerade och separat inlästa företagsportalsapp för Windows Phone 8.1 eller Windows 8.1 till företagsportalsappen för Windows 10?
 Vår rekommenderade migreringssökväg är att ta bort den befintliga tilldelningen av appen Företagsportal för Windows Phone 8.1 eller Windows 8.1 genom att ange tilldelningsåtgärden till **Avinstallera**. När du har valt den här inställningen kan du tilldela appen Företagsportal för Windows 10 som vanligt.  

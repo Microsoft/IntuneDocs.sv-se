@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/30/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,26 +14,31 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a467983b0d6ce94c32080f4d5cd78683471fb58
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
+ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753900"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
 Du kan ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter. När du skapar ett virtuellt privat nätverk per app i Intune ansluter en slutanvändare automatiskt via ditt virtuella privata nätverk vid åtkomst till företagets dokument.
 
-Per app-VPN är för närvarande tillgänglig för följande providers: 
+Per app-VPN är för närvarande tillgänglig för följande providers:
 
- - Checkpoint Remote Access VPN
+ - Check Point Remote Access VPN
  - Cisco AnyConnect
+ - Citrix
  - F5
  - Pulse Connect Secure
  - SonicWall
-
+ - Palo Alto Networks GlobalProtect
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Krav för virtuellt privat nätverk per app
+
+> [!IMPORTANT]
+> Din VPN-leverantör kan ha andra specifika krav för VPN per app, till exempel specifik maskinvara eller licensiering. Läs leverantörens dokumentation och kontrollera att du uppfyller kraven innan du konfigurerar VPN per app i Intune.
 
 För att bevisa sin identitet visar VPN-servern det certifikat som måste godkännas av enheten utan att tillfråga att användaren. Skapa en profil för betrott certifikat som innehåller VPN-serverns rotcertifikat som utfärdats av certifikatutfärdaren (CA) för att säkerställa automatiskt godkännande av certifikatet. 
 
@@ -162,14 +167,15 @@ När det virtuella privata nätverket per app har konfigurerats och associerats 
 
 ### <a name="before-you-attempt-to-connect"></a>Innan du försöker ansluta
 
- - Kontrollera att du kör iOS 7 eller senare.
+ - Kontrollera att du kör iOS 9 eller senare.
  - Se till att du distribuerar *alla* ovan nämnda principer till samma grupp av användare. Det virtuella privata nätverket per app kommer inte att fungera som det ska om du inte utför dessa åtgärder.  
  - Kontrollera att VPN-appen från tredje part är installerad. Följande VPN-appar stöds:
-    - Pulse Secure
-    - Checkpoint
+    - Check Point Capsule Connect
     - Cisco AnyConnect
-    - F5
-    - SonicWall
+    - Citrix VPN
+    - F5 Access
+    - Pulse Secure
+    - SonicWall Mobile Connect
 
 ### <a name="connect-using-the-per-app-vpn"></a>Anslut med hjälp av det virtuella privata nätverket per app
 

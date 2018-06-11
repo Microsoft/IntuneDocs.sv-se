@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/24/2018
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2e99ed0bd1eb5bae90913aedba5973e5e1282f70
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 99d848fb1efea2ea2d557ab8d4f19881705ec991
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/02/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744677"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Aktivera Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -51,19 +52,19 @@ Om du vill använda ATP med Intune måste du ha följande konfigurerat och klart
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enhetsefterlevnad** > **Windows Defender ATP** > **Öppna administratörskonsolen för Windows Defender Advanced Threat Protection**.
+3. Välj **Enhetsefterlevnad** > **Windows Defender ATP** > **Öppna Windows Defender Säkerhetscenter**.
 
-    ![Alternativ text](./media/atp-device-compliance-open-windows-defender.png)
+    ![Välj att öppna Windows Defender Säkerhetscenter](./media/atp-device-compliance-open-windows-defender.png)
 
 4. I **Windows Defender Säkerhetscenter**:
     1. Välj **Inställningar** > **Avancerade funktioner**.
     2. För **Microsoft Intune-anslutningen**, välj **På**:
 
-        ![Alternativ text](./media/atp-security-center-intune-toggle.png)
+        ![Aktivera anslutningen till Intune](./media/atp-security-center-intune-toggle.png)
 
     3. Välj **Spara inställningar**.
 
-5. Gå tillbaka till Intune, **Enhetsefterlevnad** > **Windows Defender ATP**. Ange **Ansluta Windows 10.0.15063+-enheter till Windows Defender Advanced Threat Protection** till **På**.
+5. Gå tillbaka till Intune, **Enhetsefterlevnad** > **Windows Defender ATP**. Ändra **Anslut Windows-enheter version 10.0.15063 och senare till Windows Defender ATP9** till **På**.
 6. Välj **Spara**.
 
 Du gör normalt den här aktiviteten en gång. Så om ATP redan är aktiverat i din Intune-resurs, behöver du inte göra det igen.
@@ -115,9 +116,9 @@ Efterlevnadsprincipen anger en godtagbar risknivå på en enhet.
 2. Välj **Enhetsefterlevnad** > **Principer** > **Skapa princip**.
 3. Ange ett **Namn** och en **Beskrivning**.
 4. I **Plattform** väljer du **Windows 10 och senare**.
-5. I inställningen **Enhetens hälsotillstånd** ställ in **Kräv att enheten ligger vid eller under hotnivån för enheten** till din önskade nivå:
+5. Ställ in **Kräv att enheten ska hållas vid eller under riskpoängen** på önskad nivå i inställningarna för **Windows Defender ATP**:
 
-  - **Skyddad**: Det här är den säkraste nivån. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
+  - **Rensa**: Den här nivån är säkrast. Enheten får inte ha några existerande hot och ska ha tillgång till företagsresurser. Om något hot identifieras på enheten kommer den att utvärderas som icke-kompatibel.
   - **Låg**: Enheten följer standard om det enbart finns hot på låg nivå på enheten. Enheter med medel- eller hög risk är inte kompatibla.
   - **Medel**: Enheten är kompatibel om hoten som hittas på enheten är låga eller medelhöga. Om hot på en högre nivå identifieras på enheten får den statusen icke-kompatibel.
   - **Hög**: Den här nivån är det minst säkra och den tillåter alla hotnivåer. Så enheter med höga, medel eller låga risknivåer anses uppfylla kraven.
