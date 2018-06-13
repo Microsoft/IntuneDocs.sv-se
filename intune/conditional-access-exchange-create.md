@@ -14,11 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 183eb3f121e1b5c53673d10a04d0710baeb5a703
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: a1476ad4237b6355d0cb87fcc643bf0234e7f457
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744779"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -37,9 +38,9 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera följande:
 - Du måste använda [Exchange Active Syncs lokala Exchange Connector](exchange-connector-install.md) som ansluter Intune till Exchange lokalt.
 
     >[!IMPORTANT]
-    >Den lokala Exchange-anslutningen är specifik för din Intune-klient och kan inte användas med någon annan klient. Kontrollera också att Exchange Connector för din klientorganisation enbart är installerad **på en dator**.
+    >Den lokala Exchange-anslutningen är specifik för din Intune-klient och kan inte användas med någon annan klient. Intune har nu stöd för flera lokala Exchange-anslutningar per prenumeration. Om du har fler än en lokal Exchange-organisation kan du ställa in en separat anslutningsapp för varje Exchange-organisation.
 
-- Anslutningen kan installeras på valfri dator, förutsatt att datorn kan kommunicera med Exchange-servern.
+- Anslutningsappen för en lokal Exchange-organisation kan installeras på valfri dator, förutsatt att datorn kan kommunicera med Exchange-servern.
 
 - Anslutningen stöder **Exchange CAS-miljön**. Tekniskt sett kan du installera anslutningsprogrammet på Exchange CAS-servern direkt om du vill, men det rekommenderas inte eftersom det ökar belastningen på servern. När du konfigurerar anslutningen måste du ställa in den så att den kommunicerar med en av Exchange CAS-servrarna.
 
@@ -49,7 +50,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera följande:
     - Vara antingen **registrerad** med Intune eller en domänansluten dator.
     - **Registreras i Azure Active Directory**. Dessutom måste klientens Exchange ActiveSync-ID registreras med Azure Active Directory.
 <br></br>
-- AAD DRS aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har distribuerat ADFS Device Registration Service ser inte registrerade enheter i sin lokala Active Directory. **Detta gäller inte för Windows-datorer och Windows Phone-enheter**.
+- Azure AD DRS (Device Registration Service) aktiveras automatiskt för Intune- och Office 365-kunder. Kunder som redan har distribuerat ADFS Device Registration Service ser inte registrerade enheter i sin lokala Active Directory. **Detta gäller inte för Windows-datorer och Windows Phone-enheter**.
 
 - **Kompatibel** med de efterlevnadsprinciper som distribueras till enheten.
 
@@ -89,7 +90,7 @@ Det interna **e-postprogrammet** i Windows 8.1 och senare (om det har registrera
 1. I fönstret **Exchange on-premises access** (Åtkomst till Exchange lokalt) väljer du **Ja** för att aktivera åtkomstkontroll för Exchange lokalt.
 
     > [!NOTE]
-    > Det här alternativet inaktiveras om du inte har konfigurerat något lokalt anslutningsprogram för Exchange Active Sync.  Du måste först installera och konfigurera den här anslutningen innan du aktiverar villkorlig åtkomst för Exchange On-Premises. Du hittar mer information i [Installera Intune On-premises Exchange Connector](exchange-connector-install.md)
+    > Det här alternativet inaktiveras om du inte har konfigurerat någon lokal anslutningsapp för Exchange Active Sync.  Du måste först installera och konfigurera minst en sådan här anslutning innan du aktiverar villkorlig åtkomst för Exchange On-Premises. Du hittar mer information i [Installera Intune On-premises Exchange Connector](exchange-connector-install.md)
 
 1. Under **Tilldelning**, väljer du **Inkluderade grupper**.  Använd den säkerhetsgrupp för användare där villkorlig åtkomst ska tillämpas. Den här åtgärden innebär att användarna måste registrera sina enheter i Intune och följa kompatibilitetsprofilerna.
 

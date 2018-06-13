@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1c2eb08db58940ed575b3dea011395edd6711fc
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: bffb6832200379fca0221d8718afdebe06163980
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744796"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Övervaka enhetsprofiler i Microsoft Intune
 
@@ -41,19 +42,27 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
 1. Välj en befintlig profil. Välj till exempel en macOS-profil.
 2. Välj fliken **Översikt**.
 
-    Det grafiska diagrammet visar antalet enheter som är tilldelade till den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-enheter, visar diagrammet antal macOS-enheter.
+    Det övre diagrammet visar antalet enheter som är tilldelade till den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-enheter, visar diagrammet antal macOS-enheter.
 
     Det visar även antalet enheter för andra plattformar som tilldelats samma enhetsprofil. Till exempel visar det antalet enheter som inte är macOS-enheter.
 
     ![Visa antalet enheter som tilldelats enhetsprofilen](./media/device-configuration-profile-graphical-chart.png)
 
-3. Välj cirkeln i det grafiska diagrammet. **Enhetstillstånd** öppnas.
+    Det under diagrammet visar antalet användare som är tilldelade till den specifika enhetsprofilen. Om till exempel den konfigurerade enhetsprofilen gäller för macOS-användare visar diagrammet antalet macOS-användare.
+
+3. Välj cirkeln i det övre grafiska diagrammet. **Enhetstillstånd** öppnas.
 
     Enheter som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Tänk också på att bara enheterna med den specifika plattformen visas (till exempel macOS).
 
-    Stäng statusinformation för enheten.
+    Stäng **statusinformationen** för enheten.
 
-4. I egenskaperna för profilen (**Profiler** > Välj en specifik profil), du kan också ändra befintliga egenskaper:
+4. Välj cirkeln i det undre grafiska diagrammet. **Användarstatus** öppnas. 
+
+    Användare som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Tänk också på att bara användarna med den specifika plattformen visas (till exempel macOS).
+
+    Stäng **statusinformationen** för användarna.
+
+5. Välj en profil i listan **Profiler**. Du kan också ändra befintliga egenskaper:
   - **Egenskaper**: Ändra namnet eller uppdatera befintliga inställningar.
   - **Tilldelningar**: Inkludera eller exkludera enheter som principen ska gälla. Välj **Valda grupper** för att välja särskilda enhetsgrupper.
   - **Enhetsstatus**: Enheter som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Du kan välja en specifik enhet för att få ytterligare information, inklusive installerade appar.

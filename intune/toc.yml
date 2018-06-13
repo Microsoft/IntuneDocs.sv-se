@@ -372,6 +372,8 @@
               href: endpoint-protection-macos.md
             - name: Windows 10
               href: endpoint-protection-windows-10.md
+        - name: Konfigurera inställningar för helskärmsläge
+          href: kiosk-settings.md
         - name: Konfigurera e-postinställningar
           href: email-settings-configure.md
           items:
@@ -411,12 +413,14 @@
               href: wi-fi-settings-macos.md
             - name: Windows 8.1 och Windows 10
               href: wi-fi-settings-import-windows-8-1.md
+        - name: Utbildning
+          items:
+            - name: Delade iOS-enheter
+              href: education-settings-configure-ios-shared.md
+            - name: Windows 10
+              href: education-settings-configure.md
         - name: Konfigurera inställningar för Windows 10-versionsuppgradering
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurera utbildningsinställningar för Windows 10
-          href: education-settings-configure.md
-        - name: Konfigurera delade iOS-enheter för utbildning
-          href: education-settings-configure-ios-shared.md
         - name: Konfigurera iOS-uppdateringsprinciper
           href: software-updates-ios.md
         - name: Konfigurera certifikat
@@ -455,6 +459,8 @@
           href: compliance-policy-create-mac-os.md
         - name: Skapa Windows-princip
           href: compliance-policy-create-windows.md
+        - name: Platsbaserad princip
+          href: use-network-locations.md
         - name: Utvärdera princip
           href: policy-evaluate.md
         - name: Åtgärder för inkompatibilitet

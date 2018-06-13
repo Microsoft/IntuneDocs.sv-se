@@ -15,11 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: tscott
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: d5d55f6c3efabdde51b5627d5ddd409c2b282f6c
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: bbcfa2de4b2d6ef7bff481817a289f56e746ee7f
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34718037"
 ---
 # <a name="general-troubleshooting-tips-for-microsoft-intune"></a>Allmänna felsökningstips för Microsoft Intune
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 Det kan hända att du upptäcker problem med konfigurationen eller med klientenheter efter att du har distribuerat Microsoft Intune. Använd följande resurser för att identifiera vad som orsakar problemet så att du kan lösa det.
 
 > [!NOTE]
-> Om du vill skapa en supportbegäran eller visa en befintlig begäran [går du till Office 365-administrationscentret](https://portal.office.com/admin/default.aspx). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
+> Om du vill skapa en supportförfrågan eller visa en befintlig förfrågan [går du till hjälp- och supportsidan för Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). Mer information om supportalternativen finns i [Ta reda på hur du kan få support för Microsoft Intune](how-to-get-support-for-microsoft-intune.md).
 
 ## <a name="define-the-problem"></a>Definiera problemet
 

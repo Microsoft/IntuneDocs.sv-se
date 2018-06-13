@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3d46960e6ea7e2ae9bed6c0016ddc309bd15f572
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f62e306574606ffa1eb1e6f242c3cb30b1a9c1b
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744660"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Skapa en enhetsprofil i Microsoft Intune
 
@@ -46,16 +47,19 @@ ms.lasthandoff: 04/16/2018
    - **Profiltyp**: Välj vilken typ du vill skapa. Listans innehåll beror på vilken plattform du väljer.
    - **Inställningar**: Läs en beskrivning av inställningarna för varje profiltyp i följande avsnitt:
 
-       -  [Inställningar av enhetsfunktion](device-features-configure.md)
-       -  [Inställningar för enhetsbegränsning](device-restrictions-configure.md)
-       -  [E-postinställningar](email-settings-configure.md)
-       -  [VPN-inställningar](vpn-settings-configure.md)
-       -  [Trådlösa inställningar](wi-fi-settings-configure.md)
-       -  [Inställningar för uppgradering av Windows 10](edition-upgrade-configure-windows-10.md)
-       -  [Certifikatinställningar](certificates-configure.md)
-       -  [Inställningar för Windows informationsskydd](windows-information-protection-configure.md)
-       -  [Utbildningsinställningar](education-settings-configure.md)
-       -  [Anpassade inställningar](custom-settings-configure.md)
+       -  [Enhetsfunktioner](device-features-configure.md)
+       -  [Enhetsbegränsningar](device-restrictions-configure.md)
+       -  [Slutpunktsskydd](endpoint-protection-configure.md)
+       -  [Helskärmsläge](kiosk-settings.md)
+       -  [E-post](email-settings-configure.md)
+       -  [VPN](vpn-settings-configure.md)
+       -  [Wi-Fi](wi-fi-settings-configure.md)
+       -  Utbildning för [Windows 10](education-settings-configure.md) och [iOS](wi-fi-settings-ios.md)
+       -  [Windows 10-utgåveuppgradering](edition-upgrade-configure-windows-10.md)
+       -  [iOS-uppdateringsprinciper](software-updates-ios.md)
+       -  [Certifikat](certificates-configure.md)
+       -  [Windows informationsskydd](windows-information-protection-configure.md)
+       -  [Anpassad](custom-settings-configure.md)
 
      ![Skärmbild av Skapa profil](./media/create-device-profile.png)
 
@@ -63,6 +67,5 @@ ms.lasthandoff: 04/16/2018
 
 Profilen skapas och visas i listan.
 
-
 ## <a name="next-steps"></a>Nästa steg
-Information om hur du tilldelar enhetsprofiler finns i [Så här tilldelar du enhetsprofiler med Microsoft Intune](device-profile-assign.md).
+[Tilldela profilen](device-profile-assign.md) och [övervaka dess status](device-profile-monitor.md).

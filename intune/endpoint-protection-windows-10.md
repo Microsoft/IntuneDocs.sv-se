@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 069f71d75c0a9c7cec083a929f89a2b39bb4aac5
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: 0831f374b9c6da417d8159dce1b58e40f0d3643c
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744949"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Endpoint Protection-inställningar för Windows 10 och senare i Intune
 
@@ -300,15 +301,21 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
 
 - **Minuter av låsskärmsinaktivitet innan skärmsläckaren aktiveras**: Definiera högsta antal minuter av inaktivitet på det interaktiva skrivbordets inloggningsskärm tills skärmsläckaren aktiveras.
 - **Kräv CTRL+ALT+DEL för att logga in**: Kräv att CTRL+ALT+DEL trycks ned innan en användare kan logga in.
-- **Beteende vid borttagning av smartkort**: Avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren.
-[Alternativ för LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior) innehåller mer information.
+- **Beteende vid borttagning av smartkort**: Avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
+
+  - **Låsa arbetsstationen**: arbetsstationen låses när smartkortet tas bort. Med det här alternativet kan användare lämna området, ta med sig smartkortet och fortfarande skydda sessionen.
+  - **Framtvinga utloggning**: användaren loggas ut automatiskt när smartkortet tas bort.
+  - **Koppla från om Remote Desktop Services-session**: om smartkortet tas bort så kopplas sessionen från utan att användaren loggas ut. Med det här alternativet kan användaren sätta i smartkortet och fortsätta sessionen senare, eller vid en annan dator med smartkortsläsare, utan att behöva logga in igen. Om sessionen är lokal fungerar den här principen precis som Lås arbetsstationen.
+
+    [Alternativ för LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior) innehåller mer information.
 
 #### <a name="display"></a>Visning
 
 - **Användarinformation på låsskärmen**: Konfigurera användarinformation som visas när sessionen är låst. Om inställningen inte konfigureras visas användarens visningsnamn, domän och användarnamn.
+  - **Inte konfigurerad**: Användarens visningsnamn, domän och användarnamn
+  - **Användarens visningsnamn, domän och användarnamn**
   - **Endast användarens visningsnamn**
   - **Visa inte användarinformation**
-  - **Inte konfigurerad**: Användarens visningsnamn, domän och användarnamn
 - **Dölj senast inloggade användare**: Visa inte användarnamnet för den senaste personen som loggat in på den här enheten.
 - **Dölj användarnamn vid inloggning**: Visa inte användarnamnet för personen som loggar in på den här enheten när autentiseringsuppgifter har angetts och innan enhetens skrivbord visas.
 - **Meddelanderubrik vid inloggning**: Ställ in meddelanderubrik för användare som försöker logga in.
@@ -316,13 +323,13 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
 
 ### <a name="network-access-and-security"></a>Åtkomst till nätverket och säkerhet
 
-- **Anonym åtkomst till namngivna pipes och resurser**: Begränsas anonym åtkomst till resurs- och namngivna pipe-inställningar. Gäller för de inställningar som kan användas anonymt.
-- **Anonym uppräkning av SAM-konton**: Tillåter att anonyma användare kan räkna upp SAM-konton. Windows låter anonyma användare räkna upp namn på domänkonton och nätverksresurser.
-- **Anonym uppräkning av SAM-konton och resurser**: Blockera anonym uppräkning av SAM-konton och resurser. Windows låter anonyma användare räkna upp namn på domänkonton och nätverksresurser.
-- **LAN Manager-hashvärdet lagras vid ändring av lösenord**: Välj om hashvärdet för LAN Manager (LM) för det nya lösenordet ska lagras vid nästa lösenordsändring. Det lagras inte som standard.
-- **PKU2U-autentiseringsbegäranden**: Blockera PKU2U-autentiseringsbegäranden till den här enheten för att använda online-identiteter.
-- **Begränsa RPC-fjärranslutningar till SAM**: Redigera standardsträngen för Security Descriptor Definition Language om du vill tillåta eller neka användare och grupper att göra fjärranrop till SAM.
-- **Säkerhetsbeskrivning**
+- **Anonym åtkomst till namngivna pipes och resurser**: Med **Inte konfigurerat** (standardinställning) begränsas anonym åtkomst till resurs- och namngivna pipe-inställningar. Gäller för de inställningar som kan användas anonymt.
+- **Anonym uppräkning av SAM-konton**: **Tillåter** att anonyma användare kan räkna upp SAM-konton. Windows låter anonyma användare räkna upp namn på domänkonton och nätverksresurser.
+- **Anonym uppräkning av SAM-konton och resurser**: **Inte konfigurerat** (standardinställning) innebär att anonyma användare kan räkna upp namn på domänkonton och nätverksresurser. Använd **Blockera** för att inte tillåta anonym uppräkning av SAM-konton och resurser.
+- **LAN Manager-hashvärdet lagras vid ändring av lösenord**: Välj det här om du vill **tillåta** att hashvärdet för LAN Manager (LM) för det nya lösenordet ska lagras vid nästa lösenordsändring. Om värdet är **Inte konfigurerat** (standardinställning) lagras inte hash-värdet.
+- **PKU2U-autentiseringsförfrågningar**: **Blockera** PKU2U-autentiseringsbegäranden till den här enheten för att använda online-identiteter. **Inte konfigurerat** (standardinställning) tillåter dessa förfrågningar.
+- **Begränsa RPC-fjärranslutningar till SAM**: **Tillåt** Redigera standardsträngen för Security Descriptor Definition Language om du vill neka användare och grupper att göra fjärranrop till SAM. Använd **Inte konfigurerat** (standardinställning) för standardsträngen för Security Descriptor Definition Language om du vill tillåta användare och grupper att göra fjärranrop till SAM.
+  - **Säkerhetsbeskrivning**
 
 ### <a name="recovery-console-and-shutdown"></a>Återställningskonsol och avstängning
 
@@ -359,13 +366,13 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
 
 ### <a name="microsoft-network-client"></a>Microsoft-nätverksklient
 
-- **Signera kommunikationer digitalt (om servern tillåter)**: Avgör om SMB-klienten försöker att förhandla signering av SMB-paket. När aktiverad (standard), ber Microsoft-nätverksklienten servern att utföra SMB-paketsignering under installationen av sessionen. Om paketsignering har aktiverats på servern, förhandlas paketsignering. Om principen är inaktiverad förhandlar SMB-klienten aldrig SMB-paketsignering.
+- **Signera kommunikationer digitalt (om servern tillåter)**: Avgör om SMB-klienten försöker att förhandla signering av SMB-paket. När alternativet är aktiverat (Inte konfigurerat) ber Microsoft-nätverksklienten servern att utföra SMB-paketsignering när sessionen konfigureras. Om paketsignering är aktiverad på servern så förhandlas paketsignering. Om principen är inaktiverad förhandlar SMB-klienten aldrig SMB-paketsignering.
 - **Skicka okrypterade lösenord till SMB-servrar från tredje part**: När aktiverat, tillåts SMB-omdirigeraren (Server Message Block) att skicka lösenord till SMB-servrar som inte har stöd för kryptering av lösenord under autentiseringen.
 
 ### <a name="microsoft-network-server"></a>Microsoft-nätverksserver
 
-- **Signera kommunikation digitalt (om klienten tillåter)**: Anger om SMB-servern förhandlar SNB-paketsignering med klienter som begär det. När aktiverad förhandlar Microsoft-nätverksservern SMB-paketsignering såsom begärs av klienten. D.v.s. om paketsignering är aktiverat på servern, förhandlas paketsignering. När inaktiverad (standar) förhandlar SMB-klienten aldrig SMB-paketsignering.
-- **Signera kommunikation digitalt (alltid)**: Anger om paketsignering krävs av SMB-serverkomponenten. När aktiverat, kommunicerar Microsoft-nätverksservern inte med en Microsoft-nätverksklient såvida inte klienten godkänner att signera SMB-paket. När inaktiverad (standard), förhandlas SMB-paketsignering mellan klienten och servern.
+- **Signera kommunikation digitalt (om klienten tillåter)**: Anger om SMB-servern förhandlar SNB-paketsignering med klienter som begär det. När aktiverad förhandlar Microsoft-nätverksservern SMB-paketsignering såsom begärs av klienten. D.v.s. om paketsignering är aktiverat på servern, förhandlas paketsignering. När du anger **Inte konfigurerat** eller inaktiverat (standard) förhandlar SMB-klienten aldrig om SMB-paketsignering.
+- **Signera kommunikation digitalt (alltid)**: Anger om paketsignering krävs av SMB-serverkomponenten. När aktiverat, kommunicerar Microsoft-nätverksservern inte med en Microsoft-nätverksklient såvida inte klienten godkänner att signera SMB-paket. När du anger **Inte konfigurerat** eller inaktiverat (standard) förhandlas SMB-paketsignering mellan klienten och servern.
 
 ## <a name="next-steps"></a>Nästa steg
 

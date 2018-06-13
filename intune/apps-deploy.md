@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 06/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,18 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b31c9d2028bcde6926f1bf1169de85d2f09efd82
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bc7f827f121ad93498d22f6b9b246abf15dc76e3
+ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34717986"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-När du har lagt till en app till Microsoft Intune kan du tilldela appen till användare och enheter.
-
-Du kan tilldela en app till en enhet om enheten hanteras av Intune. 
+När du har [lagt till en app](apps-add.md) till Microsoft Intune kan du tilldela appen till användare och enheter. Lägg märke till att du kan tilldela en app till en enhet oavsett om enheten hanteras av Intune eller inte. 
 
 I följande tabell visas de olika alternativen för att tilldela appar till användare och enheter:
 
@@ -117,7 +116,8 @@ Ibland har samma app tilldelats flera grupper, men med olika avsikter. Informati
 |Tillgänglig för användare utan registrering|Avinstalleras för enhet|Avinstalleras och tillgänglig utan registrering.<br><br>Avinstallationsavsikten åsidosätts inte om användaren inte har installerat appen från företagsportalen.<br><br>Om användaren installerar appen från företagsportalen prioriteras installation framför avinstallation.|
 
 > [!NOTE]
-> Endast för hanterade iOS Store-appar. När du lägger till dem i Microsoft Intune och tilldelar dem som **Nödvändiga** skapas apparna automatiskt med både avsikten **Nödvändig** och **Tillgänglig**.
+> Endast för hanterade iOS Store-appar. När du lägger till dem i Microsoft Intune och tilldelar dem som **Nödvändiga** skapas apparna automatiskt med både avsikten **Nödvändig** och **Tillgänglig**.<br><br>
+> iOS Store-appar (inte iOS VPP-appar) som är riktade med nödvändigt syfte tillämpas på enheten vid tidpunkten för incheckning och visas även i företagsportalappen.
 
 ## <a name="next-steps"></a>Nästa steg
 

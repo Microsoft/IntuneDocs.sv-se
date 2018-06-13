@@ -5,18 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/5/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 792e2ae45e6331b91b1727af113604186c9bb72a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
+ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744609"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Skapa VPN-profiler i Intune
 
@@ -41,18 +42,19 @@ Du kan skapa VPN-profiler med följande anslutningstyper:
 
 |Anslutningstyp|Android<br>Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8,1|Windows 10|
 |-|-|-|-|-|-|-|
-|Pulse Secure|Ja|Ja|Ja|Ja|Ja|Ja|
-|Cisco (IPSec)|Nej|Ja|Nej|Nej|Nej|Nej|
-|Citrix|Ja|Ja|Nej|Nej|Nej|Ja|
-|F5 Edge Client|Ja|Ja|Ja|Ja|Ja|Ja|
-|SonicWall Mobile Connect|Ja|Ja|Ja|Ja|Ja|Ja|
+|Automatiskt|Nej|Nej|Nej|Nej|Nej|Ja|
 |Check Point Capsule VPN|Ja|Ja|Ja|Ja|Ja|Ja|
 |Cisco AnyConnect|Ja|Ja|Ja|Nej|Nej|Nej|
-|Automatiskt|Nej|Nej|Nej|Nej|Nej|Ja|
+|SonicWall Mobile Connect|Ja|Ja|Ja|Ja|Ja|Ja|
+|F5 Edge Client|Ja|Ja|Ja|Ja|Ja|Ja|
+|Palo Alto Networks GlobalProtect|Nej|Ja|Nej|Nej|Nej|Ja|
+|Pulse Secure|Ja|Ja|Ja|Ja|Ja|Ja|
+|Cisco (IPSec)|Nej|Ja|Nej|Nej|Nej|Nej|
+|Citrix|Ja (endast Android)|Ja|Nej|Nej|Nej|Ja|
 |IKEv2|Nej|Nej|Nej|Nej|Nej|Ja|
 |L2TP|Nej|Nej|Nej|Nej|Nej|Ja|
 |PPTP|Nej|Nej|Nej|Nej|Nej|Ja|
-|Anpassad|Nej|Ja|Ja|Nej|Nej|Nej|
+|Anpassat VPN|Nej|Ja|Ja|Nej|Nej|Nej|
 
 > [!IMPORTANT]
 > Innan du kan använda de VPN-profiler som har tilldelats till en enhet måste du installera lämplig VPN-app för profilen. Använd informationen i artikeln [Vad är apphantering i Microsoft Intune?](app-management.md) när du ska tilldela appar med hjälp av Intune.  
