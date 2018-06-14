@@ -270,6 +270,8 @@
           items:
             - name: Inkludera och exkludera appar
               href: apps-inc-exl-assignments.md
+            - name: Distribuera följande gäller för Windows 10-appar
+              href: apps-windows-10-app-deploy.md
         - name: Övervakning av appar
           href: apps-monitor.md
         - name: Konfigurera appar
@@ -644,6 +646,8 @@
       items:
         - name: Hjälpa användare att felsöka problem
           href: help-desk-operators.md
+        - name: Felsökning av problem med åtkomst till företagsresurser
+          href: troubleshoot-company-resource-access-problems.md
         - name: Granskningsloggar för Intune-aktiviteter
           href: monitor-audit-logs.md
         - name: Granska appskyddsloggar
@@ -693,7 +697,9 @@
           href: app-wrapper-prepare-android.md
         - name: Intune App SDK för Android
           href: app-sdk-android.md
-        - name: Intune App SDK Xamarin-komponent
+        - name: Intune App SDK Cordova-insticksprogram
+          href: app-sdk-cordova.md
+        - name: Xamarin-bindningar för Intune App SDK
           href: app-sdk-xamarin.md
     - name: Använda Intune-informationslagret
       href: reports-nav-create-intune-reports.md

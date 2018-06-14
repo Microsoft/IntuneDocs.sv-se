@@ -137,6 +137,7 @@
 ### [Synkronisera enheten manuellt](sync-your-device-manually-windows.md)
 
 ### [Åtgärda vanliga problem med Windows](troubleshoot-your-device-windows.md)
+### [Åtgärda problem med åtkomstpunktsbegränsningar](resolve-access-point-restrictions.md)
 #### [Det går inte att registrera min Windows 10-enhet](troubleshoot-your-windows-10-device-windows.md)
 #### [Uppdatera din Windows-enhet](you-need-to-update-your-windows-device.md)
 #### [Skicka loggar från företagsportalappen](send-logs-to-your-it-admin-cp-windows.md)
@@ -158,4 +159,3 @@
 ### [Ta bort sin enhet](remove-your-device-cpwebsite.md)
 ### [Återställa enhetens lösenord](reset-your-passcode-cpwebsite.md)
 ### [Återställa och radera enheten](reset-erase-your-device-cpwebsite.md)
-### [Synkronisera enheten manuellt](sync-your-device-manually-cpwebsite.md)
