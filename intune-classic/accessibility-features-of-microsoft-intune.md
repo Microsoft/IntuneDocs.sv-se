@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31013066"
 ---
 # <a name="accessibility-features-of-microsoft-intune"></a>Hjälpmedelsfunktioner i Microsoft Intune
 Utöver hjälpmedelsfunktionerna i Microsoft Windows, kan följande funktioner användas för att göra Microsoft Intune mer tillgängligt för personer med funktionsnedsättningar: Användning av kortkommandon

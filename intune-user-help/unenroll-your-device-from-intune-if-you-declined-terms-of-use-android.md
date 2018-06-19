@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ta bort enheten från hanteringen om du inte godkände användningsvillkoren | Microsoft Docs
 description: ''
 keywords: ''
@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31017622"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Ta bort enheten från hanteringen om du inte godkände ”Användningsvillkor”
 

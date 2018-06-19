@@ -20,6 +20,7 @@ ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34223415"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 

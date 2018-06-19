@@ -16,6 +16,7 @@ ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/17/2018
+ms.locfileid: "29962454"
 ---
 # <a name="audit-logs-for-intune-activities"></a>Granskningsloggar för Intune-aktiviteter
 Granskningsloggar ger dig en post med aktiviteter som genererar en ändring i Microsoft Intune. Skapa, uppdatera (redigera), ta bort, och tilldela åtgärder eller uppgifter för fjärrhantering, generera granskningshändelser som du kan granska. Du kan gå igenom granskningsloggar för de flesta arbetsbelastningar i Intune. Granskning är aktiverat som standard för alla kunder och kan inte inaktiveras. Granskningshändelserna började registreras i funktionen i december 2017 och tidigare händelser är inte tillgängliga.

@@ -11,6 +11,8 @@
       items:
         - name: Ändringar av grupper
           href: groups-get-started.md
+        - name: Äldre Intune PC-klient
+          href: intune-legacy-pc-client.md
     - name: Registrera dig för en kostnadsfri utvärderingsversion
       href: free-trial-sign-up.md
     - name: Nyheter
@@ -70,6 +72,8 @@
       href: common-scenarios.md
     - name: MAM VANLIGA FRÅGOR OCH SVAR
       href: mam-faq.md
+    - name: Frågor och svar om princip och profil
+      href: manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md
 - name: Planera distribution
   items:
     - name: Planeringsguide
@@ -176,6 +180,8 @@
           items:
             - name: Konfigurera Android-registrering
               href: android-enroll.md
+            - name: Hantera Android for Work-enheter
+              href: android-enterprise-overview.md
             - name: Samsung Knox Mobile Enrollment
               href: android-samsung-knox-mobile-enroll.md
         - name: Ställ in iOS-registrering
@@ -196,6 +202,8 @@
     - name: Hantera enheter
       href: device-management.md
       items:
+        - name: Funktioner för enhetshantering
+          href: device-management-capabilities.md
         - name: Kringgå aktiveringslås
           href: device-activation-lock-bypass.md
         - name: Hantera Windows-nystart
@@ -658,6 +666,14 @@
           href: monitor-audit-logs.md
         - name: Granska appskyddsloggar
           href: app-protection-policy-settings-log.md
+        - name: Felsöka e-postprofiler
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
+        - name: Felsöka programuppdateringar
+          href: troubleshoot-software-updates-in-microsoft-intune.md
+        - name: Felsöka Endpoint Protection
+          href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+        - name: Felsöka principer
+          href: troubleshoot-policies-in-microsoft-intune.md
     - name: Automatisera och anpassa
       items:
         - name: Konfigurera anpassade enhetsinställningar

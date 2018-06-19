@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31023690"
 ---
 # <a name="understand-microsoft-intune-operations-by-using-reports"></a>Förstå Microsoft Intune-aktiviteter med hjälp av rapporter
 

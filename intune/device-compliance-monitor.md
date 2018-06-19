@@ -20,6 +20,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31830424"
 ---
 # <a name="monitor-device-compliance-in-intune"></a>Övervaka enhetsefterlevnad i Intune
 

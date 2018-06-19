@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31028415"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 

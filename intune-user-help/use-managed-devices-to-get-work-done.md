@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30755240"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.

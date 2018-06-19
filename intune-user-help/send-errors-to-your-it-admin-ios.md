@@ -22,6 +22,7 @@ ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32327712"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
 Ibland kan det uppstå ett fel när du använder företagsportalappen på din iOS-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.

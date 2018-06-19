@@ -19,6 +19,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31836195"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurera och använda PKCS-certifikat med Intune
 

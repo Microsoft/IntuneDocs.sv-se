@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ange din PIN-kod eller ditt lösenord | Microsoft Docs
 description: ''
 keywords: ''
@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31015106"
 ---
 # <a name="set-your-pin-or-password"></a>Ange din PIN-kod eller ditt lösenord
 

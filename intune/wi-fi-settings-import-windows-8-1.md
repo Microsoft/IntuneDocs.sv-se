@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31834024"
 ---
 # <a name="import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Importera trådlösa inställningar för enheter med Windows 8.1 och senare i Microsoft Intune
 

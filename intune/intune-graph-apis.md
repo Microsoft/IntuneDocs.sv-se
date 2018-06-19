@@ -19,6 +19,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31835558"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Använda Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
 

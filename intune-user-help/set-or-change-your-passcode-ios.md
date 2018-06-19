@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ange eller ändra ditt lösenord | Microsoft Docs
 description: Ange eller ändra ditt lösenord
 keywords: ''
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31019202"
 ---
 # <a name="set-or-change-your-passcode"></a>Ange eller ändra ditt lösenord
 

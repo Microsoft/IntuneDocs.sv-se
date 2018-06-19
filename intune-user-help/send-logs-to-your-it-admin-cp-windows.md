@@ -22,6 +22,7 @@ ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915502"
 ---
 # <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Skicka loggar till företagets support från företagsportalappen för Windows 10
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915836"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Byt namn på enheten från företagsportalappen för Windows
 Byt namn på en enhet så att den blir lättare att känna igen från andra enheter. Med företagsportalappen för Windows kan du byta namn på anslutna Windows-, iOS- och Android-enheter. 

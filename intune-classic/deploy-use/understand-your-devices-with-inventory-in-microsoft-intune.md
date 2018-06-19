@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31023401"
 ---
 # <a name="understand-your-devices-with-inventory-in-microsoft-intune"></a>Förstå dina enheter inventering i Microsoft Intune
 

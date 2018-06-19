@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31026989"
 ---
 # <a name="enroll-devices-for-management-in-intune"></a>Registrera enheter för hantering i Intune
 

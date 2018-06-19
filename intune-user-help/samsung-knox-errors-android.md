@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30751449"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Åtgärda vanliga problem med din Samsung Knox-enhet
 

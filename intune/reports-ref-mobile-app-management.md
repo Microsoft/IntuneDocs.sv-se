@@ -20,6 +20,7 @@ ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34224688"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referens för MAM-entiteter (hantering av mobilappshantering)
 

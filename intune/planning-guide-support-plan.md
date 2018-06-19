@@ -1,16 +1,16 @@
 ---
 title: Utveckla en supportplan
 titlesuffix: Microsoft Intune
-description: "Den här artikeln hjälper dig att utveckla en Intune-supportplan för distribution av Microsoft Intune."
-keywords: 
+description: Den här artikeln hjälper dig att utveckla en Intune-supportplan för distribution av Microsoft Intune.
+keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: b9428769-4333-4778-b677-f23dea1f74da
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
@@ -20,6 +20,7 @@ ms.sourcegitcommit: e30fb2375fb79f67e5c1e4ed7b2c21fb9ca80c59
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 03/17/2018
+ms.locfileid: "29961434"
 ---
 # <a name="develop-a-support-plan"></a>Utveckla en supportplan
 

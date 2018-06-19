@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31837021"
 ---
 # <a name="microsoft-intune-custom-device-settings-for-devices-running-windows-10"></a>Anpassade inställningar i Microsoft Intune för enheter som kör Windows 10
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31022398"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Skydda Office 365 Exchange Online utan krav på enhetshantering
 

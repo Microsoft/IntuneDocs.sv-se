@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30753098"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Lösa ett hot som hittas av Symantec Endpoint Protection Mobile
 

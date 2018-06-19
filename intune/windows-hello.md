@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31834778"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune
 

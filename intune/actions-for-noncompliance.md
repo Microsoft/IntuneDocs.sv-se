@@ -12,11 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a4b5e55b404da907d8f17a658483b4802af8226d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8e8603ca59b46937b1529e710a8bc83aec5dd4d6
+ms.sourcegitcommit: 4c18352d5b3b30080f7c7257fa63d852b1894850
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32017965"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatisera e-post och lägga till åtgärder för inkompatibla enheter – Intune
 
@@ -55,7 +56,7 @@ Det finns två typer av åtgärder:
 4. Välj **Skapa meddelande** och ange sedan följande information:
 
    - Namn
-   - Ämne
+   - Ärende
    - Meddelande
    - E-postsidhuvud – Infoga företagets logotyp
    - E-postsidfot – Infoga företagets namn
@@ -77,7 +78,10 @@ Du kan lägga till en åtgärd när du skapar en ny efterlevnadsprincip, eller n
 1. I [Azure-portalen](https://portal.azure.com) öppnar du **Microsoft Intune** och väljer **Enhetsefterlevnad**.
 2. Välj **Principer**, välj en av dina principer och sedan **Egenskaper**. 
 
-   Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
+  Har du inte någon princip än? Skapa en princip för [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) eller någon annan plattform.
+  
+  > [!NOTE]
+  > JAMF-enheter och enheter som är mål för enhetsgrupper kan inte ta emot efterlevnadsåtgärder just nu.
 
 3. Välj alternativet för **åtgärder vid inkompatibilitet** och sedan **Lägg till** för att ange åtgärdsparametrar. Du kan välja den meddelandemall som skapades tidigare, lägga till ytterligare mottagare och uppdatera schemat för respitperioden. I schemat kan du ange antalet dagar (0 till 365) och sedan kan du tillämpa villkorliga åtkomstprinciper. Om du anger **0** antal dagar kommer den villkorliga åtkomsten **omedelbart** blockera åtkomsten till företagets resurser.
 

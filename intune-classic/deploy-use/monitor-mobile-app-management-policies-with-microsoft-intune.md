@@ -20,6 +20,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31021532"
 ---
 # <a name="monitor-app-protection-policies-with-microsoft-intune"></a>Övervaka appskyddsprinciper med Microsoft Intune
 Du kan övervaka efterlevnadsstatusen för de appskyddsprinciper som du har tillämpat på användare. Du kan hitta information om de användare som påverkas av appskyddsprinciperna, dess efterlevnadsstatus och eventuella problem som användarna kan råka ut för.

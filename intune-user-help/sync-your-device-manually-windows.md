@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34048027"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31030517"
 ---
 # <a name="your-ios-device-doesnt-have-the-required-minimum-operating-system-version"></a>Din iOS-enhet uppfyller inte kraven för äldsta tillåtna version av operativsystemet
 
