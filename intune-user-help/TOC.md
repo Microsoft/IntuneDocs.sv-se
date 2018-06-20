@@ -135,6 +135,7 @@
 ### [Vad händer om du återställer din enhet?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Inaktivera Microsofts insamling av användningsdata](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Synkronisera enheten manuellt](sync-your-device-manually-windows.md)
+### [Fjärrlåsa enheter från din Windows 10-enhet](remote-lock-your-device-cp-app.md) 
 
 ### [Åtgärda vanliga problem med Windows](troubleshoot-your-device-windows.md)
 ### [Åtgärda problem med åtkomstpunktsbegränsningar](resolve-access-point-restrictions.md)
@@ -152,7 +153,7 @@
 #### [Jag behöver aktivera UAC](you-need-to-enable-uac-windows.md)
 #### [Jag behöver uppdatera Windows](you-need-to-update-os-build-version-windows.md)
 #### [Jag behöver starta Windows Defender](turn-on-defender-windows.md)
-## [Fjärrlåsa enheten från företagsportalappen för Windows](remote-lock-your-device-cp-app.md) 
+
 ## [Använda Intune-företagsportalens webbplats](using-the-intune-company-portal-website.md)
 ### [Fjärrlåsa enheter](remote-lock-your-device-cpwebsite.md)
 ### [Byta namn på enheten](rename-your-device-cpwebsite.md)

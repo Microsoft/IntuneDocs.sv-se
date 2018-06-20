@@ -674,6 +674,10 @@
           href: troubleshoot-endpoint-protection-in-microsoft-intune.md
         - name: Felsöka principer
           href: troubleshoot-policies-in-microsoft-intune.md
+        - name: Felsöka villkorlig åtkomst
+          href: troubleshoot-conditional-access.md
+        - name: Felsöka Exchange Connector
+          href: troubleshoot-exchange-connector.md
     - name: Automatisera och anpassa
       items:
         - name: Konfigurera anpassade enhetsinställningar
