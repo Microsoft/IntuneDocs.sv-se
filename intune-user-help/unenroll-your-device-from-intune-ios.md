@@ -17,11 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2df474e8b0a5af2ac294715135804ef0713a3015
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34547496"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Ta bort din iOS-enhet från Intune
 
@@ -59,6 +60,8 @@ Gör enligt följande om du vill ta bort enheten från Intune, eller titta på d
   -   Företagets e-profiler tas bort från enheten.
 
   -   Enheter som bara är konfigurerade för e-post visas inte längre i företagsportalappen eller på webbplatsen.
+  
+  -   Apparna avinstalleras. Data som hör till företagsappar tas bort.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Ta bort data som samlas in av företagsportalappen
 

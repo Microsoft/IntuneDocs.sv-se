@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 05/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,12 @@ ms.assetid: 73DF3B90-6D52-4EF6-AFFD-1873A18C7421
 ms.reviewer: dariusz
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: bd4ddf9712746cb97886e94e728b5a31a26f8786
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 5c9b8c97e1c5d963ff2ba03ede389e8a706b965b
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34561964"
 ---
 # <a name="reference-for-intune-management-extension"></a>Referens för tillägg för Intune-hantering
 
@@ -32,7 +33,7 @@ Kategorin **IntuneManagementExtension** innehåller entiteter för mobila enhete
 
 Entiteten **IntuneManagementExtensionVersion** visar alla versioner som används av IntuneManagementExtension.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | ExtensionVersionKey |Unik identifierare för IntuneManagementExtension-versionen. | 1 |
 | ExtensionVersion |Det fyrsiffriga versionsnumret. |1.0.2.0 |
@@ -41,7 +42,7 @@ Entiteten **IntuneManagementExtensionVersion** visar alla versioner som används
 
 **IntuneManagementExtensionHealthState** visar en lista över alla möjliga hälsotillstånd för IntuneManagementExtension.
 
-| Egenskap  | Beskrivning | Exempel |
+| Egenskap  | Description | Exempel |
 |---------|------------|--------|
 | ExtensionStateKey |Unikt id för hälsotillstånd. | 2 |
 | ExtensionState |Hälsotillståndet för en IntuneManagementExtension. | Felfri |
@@ -52,7 +53,7 @@ Entiteten **IntuneManagementExtensionVersion** visar alla versioner som används
 Data bevaras under de senaste 60 dagarna. 
 
 
-|      Egenskap       |                         Beskrivning                         | Exempel |
+|      Egenskap       |                         Description                         | Exempel |
 |---------------------|-------------------------------------------------------------|---------|
 |       DateKey       |               Datumets unika id.                |   123   |
 |      TenantKey      |              Klientens unika id.               |   456   |

@@ -14,11 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0d27648d4d5033f2c2e849b31d19403600692b4f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bb94c5a0941dc4f4d626c6316f79d5e4b1f4b551
+ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "35679452"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered Android-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -124,9 +125,7 @@ Här är några metodtips för omslutning på nytt:
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Återanvända signeringscertifikat och omslutande appar
 Android kräver att alla appar måste ha signerats av ett giltigt certifikat för att kunna installeras på Android-enheter.
 
-Omslutna appar kan antingen signeras som en del av omslutningsprocessen eller *efter* omslutning med ditt befintliga signeringsverktyg (signering informationen i appen innan radbrytning tas bort).
- 
-Om möjligt ska signeringsinformationen som redan användes när för byggprocessen användas vid omslutning. I vissa organisationer kan du behöva arbeta med den som äger keystore-informationen (t.ex. apputvecklare). 
+Omslutna appar kan antingen signeras som en del av omslutningsprocessen eller *efter* omslutning med ditt befintliga signeringsverktyg (signering informationen i appen innan radbrytning tas bort). Om möjligt ska signeringsinformationen som redan användes när för byggprocessen användas vid omslutning. I vissa organisationer kan du behöva arbeta med den som äger keystore-informationen (t.ex. apputvecklare). 
 
 Om tidigare signeringscertifikatet kan inte användas eller om appen har inte distribuerats innan kan du skapa ett nytt signeringscertifikat genom att följa anvisningarna i [Android Utvecklarhandboken](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 

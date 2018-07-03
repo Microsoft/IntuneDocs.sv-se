@@ -14,11 +14,12 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a84e94c16e7c61d1fca83b7774a486f430c9407c
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 5c467d20a3bf4f2cfb94db5cecfae78b1717993d
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34561981"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
@@ -45,7 +46,7 @@ Mer information finns i [Priser för Enterprise Mobility](https://www.microsoft.
 
 En lista över appar som har stöd för app-baserad villkorlig åtkomst finns i [Teknisk referensdokumentation om villkorlig åtkomst för Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
 
-Appbaserad villkorlig åtkomst [stöder också verksamhetsspecifika appar (LOB)](https://docs.microsoft.com/intune-classic/deploy-use/block-apps-with-no-modern-authentication), men de apparna måste använda [modern autentisering för Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a).
+Appbaserad villkorlig åtkomst [stöder också verksamhetsspecifika appar (LOB)](app-modern-authentication-block.md), men de apparna måste använda [modern autentisering för Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
 ## <a name="how-app-based-conditional-access-works"></a>Så här fungerar appbaserad villkorlig åtkomst
 

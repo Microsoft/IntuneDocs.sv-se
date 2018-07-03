@@ -14,12 +14,12 @@ ms.assetid: 53c8e2ad-f627-425b-9adc-39ca69dbb460
 ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 88fa0d58bc982148b44233e7486a4ce0a2e8598a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3e479ae9e3cd2caf6b893cb75f9af8fde2340f0c
+ms.sourcegitcommit: d786eb18147a12fbc8cb97a157467f88591f1bc5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31023044"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37133994"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Vad som händer när din Android-app hanteras av appskyddsprinciper
 
@@ -72,9 +72,9 @@ Följande filtyper stöds:
 * **Dokument:** PDF, PPDF
 
 
-|**pfile**|**text**|
-|----|----|
-|Pfile är ett allmänt “wrapper”-format för skyddade filer som kapslar in det krypterade innehållet och Azure Information Protection-licenserna. Det kan användas för att skydda alla filtyper.|Textfiler, till exempel XML och CSV och så vare, kan visas i appen även när de skyddas. Filtyper: .txt, .ptxt, .csv, .pcsv, .log, .plog, .xml, .pxml.|
+|**pfile**|
+|----|
+|Pfile är ett allmänt “wrapper”-format för skyddade filer som kapslar in det krypterade innehållet och Azure Information Protection-licenserna. Det kan användas för att skydda alla filtyper.|
 
 ## <a name="next-steps"></a>Nästa steg
 [Vad som händer när din iOS-app hanteras av appskyddsprinciper](end-user-mam-apps-ios.md)

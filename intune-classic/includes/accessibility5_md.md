@@ -1,1 +1,1 @@
-Om du vill ha mer information
+Mer information
