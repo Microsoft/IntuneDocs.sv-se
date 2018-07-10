@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5783558a768e1d58087168f81ad27e5acf9aae09
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: 81330083830eb2e3e1fe3e36217d403a77094a65
+ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216317"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964733"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
@@ -28,13 +28,13 @@ Om du vill skapa ett nytt lösenord för en enhet använder du åtgärden **Ta b
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
-- Android-enheter som registrerats med en arbetsprofil, version 7.0 och senare
+- Android-enheter som registrerats med en arbetsprofil, version 8.0 och senare
 - Android-enheter på version 6.0 eller tidigare
 - iOS 
      
 ## <a name="unsupported-platforms"></a>Plattformar som inte stöds
 
-- Android-enheter som registrerats med en arbetsprofil, version 6.0 och tidigare
+- Android-enheter som registrerats med en arbetsprofil, version 7.0 och tidigare
 - Android-enheter på version 7.0 eller senare
 - macOS
 - Windows
@@ -48,7 +48,7 @@ Om du vill skapa ett nytt lösenord för en enhet använder du åtgärden **Ta b
 
 ## <a name="resetting-android-for-work-passcodes"></a>Återställa Android for Work-lösenord
 
-Android for Work-enheter som stöds får ett nytt lösenord för att låsa upp hanterade profiler, eller en kontrollfråga för hanterade profiler för slutanvändaren. För enheter på Android 7.0 eller senare med arbetsprofiler får slutanvändarna ett meddelande om att aktivera sin token för återställning av lösenord direkt när registreringen är klar. Meddelandet visas om ett lösenord för arbetsprofilen krävs och har ställts in. När de har angett lösenordet tas meddelandet bort.
+Android for Work-enheter som stöds får ett nytt lösenord för att låsa upp hanterade profiler, eller en kontrollfråga för hanterade profiler för slutanvändaren. För enheter på Android 8.0 eller senare med arbetsprofiler får slutanvändarna ett meddelande om att aktivera sin token för återställning av lösenord direkt när registreringen är klar. Meddelandet visas om ett lösenord för arbetsprofilen krävs och har ställts in. När de har angett lösenordet tas meddelandet bort.
 
 ## <a name="resetting-ios-passcodes"></a>Återställa iOS-lösenord
 

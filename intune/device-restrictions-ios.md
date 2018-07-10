@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b810a9dd783f59e778f3ffcb40da8fa52acf70ff
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 2987ca7ce3a9b99249fc62fc7de5c9cca22b0b26
+ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34803830"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
 
@@ -97,7 +98,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
     -   **Krav på lösenordstyp** – Ange vilken typ av lösenord som krävs, t.ex. enbart numeriskt eller alfanumeriskt.
     -   **Antal icke-alfanumeriska tecken i lösenord** – Ange det antal symboltecken i lösenordet (som **#** eller **@**) som måste ingå i lösenordet.
     -   **Minsta längd på lösenord** – Ange det minsta antalet tecken som lösenordet måste innehålla.
-    -   **Antal felaktiga inloggningar innan enheten rensas** – Ange antalet misslyckade inloggningsförsök innan den här inställningen rensar enheten.
+    -   **Antal felaktiga inloggningar innan enheten rensas** – Ange antalet unika felaktiga lösenordsförsök innan den här inställningen rensar enheten.
     -   **Maximalt antal minuter efter skärmlås innan ett lösenord krävs** <sup>1</sup> – Ange hur länge enheten kan vara inaktiv innan användaren måste ange sitt lösenord på nytt.
     -   **Maximalt antal minuter av inaktivitet innan skärmen låses**<sup>1</sup> – Ange hur många minuter som ska förflyta innan skärmen stängs av.
     -   **Lösenordets giltighetstid (dagar)** – Ange antal dagar innan lösenordet för enheten måste ändras.

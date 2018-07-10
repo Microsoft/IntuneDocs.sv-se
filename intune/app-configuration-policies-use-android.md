@@ -3,10 +3,10 @@ title: Lägg till konfigurationsprinciper för hanterade Android-enheter
 titlesuffix: Microsoft Intune
 description: Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app.
 keywords: ''
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 05/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6fbf70630124614aa1ed302a41d6e3f33c10c63d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3011d98b73ef95d1c5a527798ab004f788c9eee9
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34470873"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
@@ -35,15 +36,12 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
 3. Välj arbetsbelastningen **mobilappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
-    - **Namn**  
-      Namnet på den profil som visas i Azure Portal.
-    - **Beskrivning**  
-      Beskrivning av den profil som visas i Azure Portal.
-    - **Enhetsregistreringstyp**  
-      Välj **Hanterade enheter**.
+    - **Namn** – namnet på den profil som visas i Azure-portalen.
+    - **Beskrivning** – beskrivning av den profil som visas i Azure-portalen.
+    - **Registreringstyp för enhet** – välj **Hanterade enheter**.
 6. Välj **Android for Work** för **Plattform**.
 7. Välj **Tillhörande app** för att välja den app som du vill definiera en appkonfigurationsprincip för. Välj i listan med Android for Work-appar som du har godkänt och synkroniserat med Intune.
-8. Välj **Konfigurationsinställningar**. Du kan ange konfigurationer med:
+8. Välj **Behörigheter**. Du kan ange konfigurationer med:
     - [Configuration Designer](#Use-the-configuration-designer)
     - [JSON-redigerare](#Enter-the-JSON-editor)
 9. Välj **OK** och sedan **Lägg till**.

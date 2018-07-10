@@ -1,52 +1,55 @@
 ---
-title: "Appkonfigurationsprinciper för Intune"
-titlesuffix: Microsoft Intune
-description: "Läs om hur du använder appkonfigurationsprinciper på en iOS- eller Android-enhet i Intune."
-keywords: 
-author: erikre
+title: Appkonfigurationsprinciper för Microsoft Intune
+titlesuffix: ''
+description: Läs om hur du använder appkonfigurationsprinciper på en iOS- eller Android-enhet i Microsoft Intune.
+keywords: ''
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 06/11/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 52e0906b58680fa0b5628b2b5fc7445f8135658a
-ms.sourcegitcommit: 7e5c4d43cbd757342cb731bf691ef3891b0792b5
+ms.openlocfilehash: 6c04d2d8fa2e302c4d11760d3660a0a67e8b3695
+ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291554"
 ---
-# <a name="app-configuration-policies-for-intune"></a>Appkonfigurationsprinciper för Intune
+# <a name="app-configuration-policies-for-microsoft-intune"></a>Appkonfigurationsprinciper för Microsoft Intune
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en iOS- eller Android-app. En app kan till exempel kräva att användarna anger:
+Använd appkonfigurationsprinciper i Microsoft Intune för att ge konfigurationsinställningar för en iOS- eller Android-app. Med de här konfigurationsinställningarna kan en app anpassas. Du tilldelar inte de konfigurationsprinciperna direkt till användare och enheter. I stället associerar du konfigurationsprincipen med en app och tilldelar sedan appen. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
 
-- ett anpassat portnummer
-- språkinställningar
-- säkerhetsinställningar
-- anpassade inställningar, t.ex. en företagslogotyp.
+Du kan tilldela en appkonfigurationsprincip till en grupp användare och enheter genom att använda en kombination av tilldelningar som inkluderar och exkluderar. När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare + alla enheter**.
+
+Till exempel kan en app kräva att du anger några av de följande uppgifterna:
+
+- Ett anpassat portnummer
+- Språkinställningar
+- Säkerhetsinställningar
+- Anpassade inställningar, t.ex. en företagslogotyp
 
 Om användarna inte anger dessa inställningar på korrekt sätt kan det öka supportens arbetsbörda och ta längre tid att börja använda nya appar.
 
 Med appkonfigurationsprinciper slipper du den här typen av problem eftersom du kan tilldela dessa inställningar till användarna i en princip innan de kör appen. Inställningarna distribueras sedan automatiskt utan att användarna behöver göra något.
 
-Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem (oftast första gången den körs).
+Konfigurationsinställningarna används när appen söker efter dem. Normalt söker en app efter konfigurationsinställningar första gången appen körs av användaren.
 
 Du har två alternativ för hur du använder appkonfigurationer med Intune:
- - **Hanterade enheter**  
-   Enheten hanteras av Intune som MDM-leverantör (hantering av mobila enheter).
- - **Hanterade appar**  
-   En app hanteras utan enhetsregistrering.
+ - **Hanterade enheter** – enheten hanteras av Intune som MDM-leverantör (hantering av mobila enheter).
+ - **Hanterade appar** – en app hanteras utan enhetsregistrering.
 
 ## <a name="apps-that-support-app-configuration"></a>Appar som stöder appkonfiguration
 
 Du kan använda principer för appkonfiguration för appar som stöder det. Appar måste ha skrivits för att stödja användning av appkonfigurationer för att ha stöd för appkonfiguration i Intune. Kontakta appleverantören om du vill ha mer information.
 
-Du kan förbereda dina verksamhetsspecifika appar genom att antingen integrera Intune App SDK i appen eller genom att omsluta appen när den har utvecklats. Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appskyddsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Mer information finns i [Översikt över Intune App SDK](app-sdk.md).
+Du kan förbereda dina verksamhetsspecifika appar genom att antingen integrera Intune App SDK i appen eller genom att omsluta appen när den har utvecklats. Intune App SDK, som finns för både iOS och Android, gör det möjligt för din app att använda Intunes appkonfigurationsprinciper. Den arbetar för att minimera mängden kodändringar i programmet som utvecklare behöver göra. Mer information finns i [Översikt över Intune App SDK](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API har stöd för appkonfiguration
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/04/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f5441bb15d6906257432afbfe51fffc6c11a6324
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
+ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745034"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36297913"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -36,12 +36,16 @@ I den här artikeln beskrivs hur du kan konfigurera din infrastruktur och sedan 
 - **NDES-server**: På en server som kör Windows Server 2012 R2 eller senare måste du konfigurera registreringstjänsten för nätverksenheter (NDES, Network Device Enrollment Service). Intune stöder inte användning av registreringstjänsten för nätverksenheter när den körs på en server som också kör företagscertifikatutfärdaren. Se [Vägledning för registreringstjänsten för nätverksenheter](http://technet.microsoft.com/library/hh831498.aspx) för anvisningar om hur du konfigurerar Windows Server 2012 R2 som värd för registreringstjänsten för nätverksenheter.
 NDES-servern måste vara ansluten till den domän där certifikatutfärdaren finns och får inte finnas på samma server som certifikatutfärdaren. Mer information om hur du distribuerar NDES-servern i en separat skog, ett isolerat nätverk eller en intern domän finns i [Använda en principmodul med registreringstjänsten för nätverksenheter](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector**: Använd Azure-portalen för att hämta installationsprogrammet för **certifikatanslutningsappen** (**ndesconnectorssetup.exe**). Sedan kör du **ndesconnectorssetup.exe** på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) där du vill installera Certifikat Connector. 
+- **Microsoft Intune Certificate Connector**: Använd Azure-portalen för att hämta installationsprogrammet för **certifikatanslutningsappen** (**NDESConnectorSetup.exe**). Sedan kör du **NDESConnectorSetup.exe** på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) där du vill installera certifikatanslutningsappen.
+
+  - NDES-certifikatanslutningsappen har även stöd för FIPS-läge (Federal Information Processing Standard). FIPS krävs inte, men du kan utfärda och återkalla certifikat när det är aktiverat.
+
 - **Web Application Proxy-server** (valfritt): Använd en server som kör Windows Server 2012 R2 eller senare som en Web Application Proxy-server (WAP). Den här konfigurationen:
-  -  Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
-  -  Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
+  - Tillåter enheter att ta emot certifikat med hjälp av en internetanslutning.
+  - Är en säkerhetsrekommendation när enheter ansluter via internet för att ta emot och förnya certifikat.
 
 #### <a name="additional"></a>Mer information
+
 - Servern som är värd för WAP [måste installera en uppdatering](http://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) som aktiverar stöd för de långa URL:er som används av registreringstjänsten för nätverksenheter. Uppdateringen finns med i [samlad uppdatering för december 2014](http://support.microsoft.com/kb/3013769), eller individuellt från [KB3011135](http://support.microsoft.com/kb/3011135).
 - WAP-servern måste ha ett SSL-certifikat som överensstämmer med det namn som publiceras på externa klienter och ha förtroende för de SSL-certifikatet som används på NDES-servern. Certifikaten gör det möjligt för WAP servern att avbryta SSL-anslutningen från klienter och skapa en ny SSL-anslutning till NDES-servern.
 
@@ -71,17 +75,7 @@ Vi rekommenderar att du publicerar NDES-servern via en proxyserver, till exempel
 |**NDES-tjänstkonto**|Ange ett domänanvändarkonto som används som NDES-tjänstkontot.|
 
 ## <a name="configure-your-infrastructure"></a>Konfigurera infrastrukturen
-Du måste slutföra följande uppgifter innan du kan konfigurera certifikatprofiler. Dessa uppgifter kräver kunskaper om Windows Server 2012 R2 och Active Directory Certificate Services (ADCS):
-
-**Steg 1** – Skapa ett NDES-tjänstkonto
-
-**Steg 2** – Konfigurera certifikatmallar hos certifikatutfärdaren
-
-**Steg 3** – Konfigurera krav på NDES-servern
-
-**Steg 4** – Konfigurera NDES för användning med Intune
-
-**Steg 5** – Aktivera, installera och konfigurera Intune Certificate Connector
+Du måste slutföra följande steg innan du kan konfigurera certifikatprofiler. Dessa steg kräver kunskaper om Windows Server 2012 R2 och senare om Active Directory Certificate Services (ADCS):
 
 #### <a name="step-1---create-an-ndes-service-account"></a>Steg 1 – Skapa ett NDES-tjänstkonto
 
@@ -226,7 +220,6 @@ I den här uppgiften kommer du att:
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (decimal) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (decimal) |
 
-
 4. I IIS-hanteraren väljer du **Standardwebbplats** > **Förfrågningsfiltrering** > **Redigera inställningen**. Ändra **Högsta URL-längd** och **Maximal frågesträng** till *65534* enligt exemplet:
 
     ![Maxlängd för URL och fråga i IIS](./media/SCEP_IIS_max_URL.png)
@@ -291,13 +284,17 @@ I den här uppgiften kommer du att:
 - Ladda ned, installera och konfigurera en Certificate Connector på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) på en server i din miljö. Du kan installera flera NDES-servrar med en Microsoft Intune Certificate Connector-komponent på varje NDES-server för att öka skalan för NDES-implementering i din organisation.
 
 ##### <a name="download-install-and-configure-the-certificate-connector"></a>Ladda ned, installera och konfigurera certifikatanslutningsappen
+
 ![ConnectorDownload](./media/certificates-download-connector.png)
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enhetskonfiguration** och sedan **Certifikatutfärdare**.
 4. Välj **Lägg till** och **Download the connector file** (Ladda ned anslutningsappen). Spara den på en plats där du kan komma åt den från den server där du kommer att installera den.
-5. När nedladdningen är klar kör du installationsprogrammet (**ndesconnectorssetup.exe**) på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. (CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS).
+5. När nedladdningen är klar går du till den server som är värd för rollen Network Device Enrollment Service (NDES) (Registreringstjänst för nätverksenheter). Efter det:
+
+    1. Se till att .NET 4.5 Framework är installerat, eftersom det krävs av NDES-certifikatanslutningsappen. .NET 4.5 framework ingår automatiskt i Windows Server 2012 R2 och senare versioner.
+    2. Kör installationsprogrammet (**NDESConnectorSetup.exe**). Principmodulen för NDES och CRP-webbtjänsten installeras också samtidigt. CRP-webbtjänsten, CertificateRegistrationSvc, körs som ett program i IIS.
 
     > [!NOTE]
     > När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen. När du använder Intune med Configuration Manager installerar du certifikatregistreringsplatsen som en separat platssystemroll.
@@ -305,7 +302,7 @@ I den här uppgiften kommer du att:
 6. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen, väljer du **Välj**och väljer det certifikat för **klientautentisering** som du installerat på NDES-servern i Uppgift 3.
 
     När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector** . Även om certifikatet du valt inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
-    
+
     > [!IMPORTANT]
     > Intune Certificate Connector kan inte registreras på en enhet med Förbättrad säkerhetskonfiguration i Internet Explorer aktiverat. För att använda Intune Certificate Connector, [inaktivera Förbättrad säkerhetskonfiguration i IE](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx).
 
@@ -335,10 +332,13 @@ Kontrollera att tjänsten körs genom att öppna en webbläsare och ange följan
 
 `http://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
+> [!NOTE]
+> Stöd för TSL 1.2 ingår i NDES-certifikatanslutningsappen. Om servern med NDES-certifikatanslutningsappen installerat stödjer TLS 1.2 används därmed TLS 1.2. Om servern inte stödjer TLS 1.2 används TLS 1.1. För närvarande används TLS 1.1 för autentisering mellan enheter och servern.
+
 ## <a name="create-a-scep-certificate-profile"></a>Skapa en SCEP-certifikatprofil
 
 1. Öppna Microsoft Intune i Azure Portal.
-2. Välj **Enhetskonfiguration**, **Profiler** och **Skapa profil**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 3. Ange ett **namn** och en **beskrivning** för SCEP-certifikatprofilen.
 4. Från listrutan **Plattform** väljer du enhetsplattformen för detta SCEP-certifikat. För närvarande kan du välja någon av följande plattformar för inställning av enhetsbegränsningar:
    - **Android**
@@ -406,12 +406,16 @@ Tänk på följande innan du tilldelar certifikatprofiler till grupper:
 
     > [!NOTE]
     > Du bör förvänta dig att se flera kopior av certifikaten i hanteringsprofilen för iOS om du distribuerar flera resursprofiler som använder samma certifikatprofil.
-    
-Du hittar allmän information om hur du tilldelar profiler i [Så här tilldelar du enhetsprofiler](device-profile-assign.md).
+
+Du hittar allmän information om hur du tilldelar profiler i [tilldela enhetsprofiler](device-profile-assign.md).
+
+## <a name="intune-connector-setup-verification-and-troubleshooting"></a>Konfigurationsverifiering och felsökning för Intune-anslutningsappen
+
+För att felsöka och verifiera konfigurationen av Intune-anslutningsappen läser du [Exempelskript för certifikatutfärdare](https://aka.ms/intuneconnectorverificationscript)
 
 ## <a name="intune-connector-events-and-diagnostic-codes"></a>Händelser och diagnostikkoder för Intune-anslutningsappen
 
-Från och med version 6.1803.x.x loggar Intune Connector Service händelser i **Loggboken** (**Program- och tjänstloggar** > **Microsoft Intune Connector**). Använd dessa händelser till att felsöka eventuella problem med konfigurationen av Intune-anslutningsappen. Händelserna loggar lyckade och misslyckade åtgärder, samt diagnostikkoder som hjälper IT-avdelningen med felsökningen.
+Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **Loggboken** (**Program- och tjänstloggar** > **Microsoft Intune Connector**). Använd dessa händelser till att felsöka eventuella problem med konfigurationen av Intune-anslutningsappen. Händelserna loggar lyckade och misslyckade åtgärder, samt diagnostikkoder som hjälper IT-avdelningen med felsökningen.
 
 ### <a name="event-ids-and-descriptions"></a>Händelse-id:n och beskrivningar
 
@@ -430,10 +434,10 @@ Från och med version 6.1803.x.x loggar Intune Connector Service händelser i **
 | 20102 | PkcsCertIssue_Failure  | Det gick inte att utfärda ett PKCS-certifikat. Du hittar enhets-id, användar-id, certifikatutfärdarnamn, namnet på certifikatmallen samt certifikatavtrycket för händelsen i händelsedetaljerna. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Certifikatet återkallades. Du hittar enhets-id, användar-id, certifikatutfärdarnamn och serienumret för certifikatet som gäller händelsen i händelsedetaljerna. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Det gick inte att återkalla certifikatet. Du hittar enhets-id, användar-id, certifikatutfärdarnamn och serienumret för certifikatet som gäller händelsen i händelsedetaljerna. Mer information finns i NDES SVC-loggarna.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Download_Success | Laddade ned en förfrågan om att signera ett certifikat, hämta ett klientcertifikat eller återkalla ett certifikat. Nedladdningsinformationen står i händelsedetaljerna.  | 0x00000000, 0x0FFFFFFF |
-| 20302 | Download_Failure | Det gick inte att ladda ned en förfrågan om att signera ett certifikat, hämta ett klientcertifikat eller återkalla ett certifikat. Nedladdningsinformationen står i händelsedetaljerna. | 0x00000000, 0x0FFFFFFF |
-| 20400 | Upload_Success | Laddade upp certifikatets förfrågans- eller återkallandeinformation. Uppladdningsinformationen står i händelsedetaljerna. | 0x00000000, 0x0FFFFFFF |
-| 20402 | Upload_Failure | Det gick inte att ladda upp certifikatets förfrågans- eller återkallandeinformation. Granska händelsedetaljerna > Uppladdningstillstånd för att fastställa tidpunkten för felet.| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | Laddade upp certifikatets förfrågans- eller återkallandeinformation. Uppladdningsinformationen står i händelsedetaljerna. | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Det gick inte att ladda upp certifikatets förfrågans- eller återkallandeinformation. Granska händelsedetaljerna > Uppladdningstillstånd för att fastställa tidpunkten för felet.| 0x00000000, 0x0FFFFFFF |
+| 20400 | Download_Success | Laddade ned en förfrågan om att signera ett certifikat, hämta ett klientcertifikat eller återkalla ett certifikat. Nedladdningsinformationen står i händelsedetaljerna.  | 0x00000000, 0x0FFFFFFF |
+| 20402 | Download_Failure | Det gick inte att ladda ned en förfrågan om att signera ett certifikat, hämta ett klientcertifikat eller återkalla ett certifikat. Nedladdningsinformationen står i händelsedetaljerna. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Certifikatregistreringsplatsen verifierade en utmaning för klienten | 0x00000000, 0x0FFFFFFF |
 | 20501 | CRPVerifyMetric_Warning  | Certifikatregistreringsplatsen slutfördes men avvisade begäran. Mer information finns i diagnostikkoden och i meddelandet. | 0x00000000, 0x00000411, 0x0FFFFFFF |
 | 20502 | CRPVerifyMetric_Failure  | Certifikatregistreringsplatsen kunde inte verifiera en utmaning för klienten. Mer information finns i diagnostikkoden och i meddelandet. Visa händelseinformation för det enhets-id som motsvarar utmaningen. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |

@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d9557c5f962390a9893109bc6f5175b1e709f7cd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f8517e9a9dd698e875214fe363d8e1246129b96a
+ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31030893"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042719"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -68,6 +68,7 @@ CSV-filen när den visas i en textredigerare:
 > Vissa Android-enheter har flera IMEI-nummer. Intune läser bara ett IMEI-nummer per registrerad enhet. Om du importerar ett IMEI-nummer som inte är det IMEI-nummer som är inventerat i Intune så kommer enheten att klassificeras som en personlig enhet i stället för en enhet som ägs av företaget. Om du importerar flera IMEI-nummer för en enhet så visas registreringsstatus för icke-inventerade nummer som **Okänt**.<br>
 >Observera även att serienummer för Android inte är garanterat unika – de kanske inte ens finns. Hör efter med enhetens leverantören huruvida serienumret är ett tillförlitligt enhets-ID eller inte.
 >Serienummer som rapporteras av enheten till Intune kanske inte matchar det ID som visas i menyerna Android-inställningar/Om på enheten. Kontrollera vilken typ av serienummer som rapporterats av tillverkaren av enheten.
+>Vid försök att ladda upp en fil med serienummer som innehåller punkter (.) misslyckas överföringen. Serienummer med punkter stöds inte.
 
 ### <a name="add-a-csv-list-of-corporate-identifiers"></a>Lägg till en CSV-lista över företagsidentifierare
 

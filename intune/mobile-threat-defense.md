@@ -15,12 +15,12 @@ ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d840bf62682621e4ec3848538a96066c0fd228fe
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 8c8fa146f01caae08f35ae824563ceb328c9d7f4
+ms.sourcegitcommit: 7daa778b3a5adb41acfe23495cb63754afda1c58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046272"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123409"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Vad är Mobile Threat Defense-integrering med Intune?
 
@@ -41,10 +41,12 @@ Om en ansluten app för skydd mot mobila hot rapporterar till leverantören av s
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Vilka data samlar Intune in för skydd mot mobilhot?
 
-Intune samlar in information om appinventering från både personliga och företagsägda enheter och gör den tillgänglig för leverantörer av skydd mot mobilhot (MTD) att hämta, till exempel Lookout for Work. Du kan samla in en appinventering från användare av enheter med iOS 11+.
+Om Intune är aktiverat samlar det in information om appinventering från både personliga och företagsägda enheter och gör den tillgänglig för leverantörer av skydd mot mobilhot (MTD) att hämta, till exempel Lookout for Work. Du kan samla in en appinventering från användare av iOS-enheter.
+
+Den här tjänsten kräver anmälan; som standard delas ingen information om appinventering. En Intune-administratör måste aktivera appsynkronisering för iOS-enheter i tjänstinställningarna innan någon information om appinventering delas.
 
 **Appinventering**  
-Inventeringar från både företagsägda iOS 11+ och personligt ägda enheter skickas till MTD-leverantören. Data i appinventeringen omfattar:
+Om du aktiverar appsynkronisering för iOS-enheter skickas inventeringar från både företagsägda och personligt ägda iOS-enheter till din MTD-tjänstleverantör. Data i appinventeringen omfattar:
 
  - App-ID
  - Appversion
@@ -52,8 +54,8 @@ Inventeringar från både företagsägda iOS 11+ och personligt ägda enheter sk
  - Appnamn
  - Storlek på appsamling
  - Dynamisk appstorlek
- - Om appen har verifierats eller inte
- - Om appen är hanterad eller inte
+ - Oavsett om appen har verifierats eller inte
+ - Oavsett om appen hanteras eller inte
 
 ## <a name="sample-scenarios"></a>Exempelscenarier
 
@@ -76,3 +78,4 @@ Lär dig hur du skyddar åtkomsten till företagets resurser baserat på enhet, 
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
+- [Pradeo](pradeo-mobile-threat-defense-connector.md)

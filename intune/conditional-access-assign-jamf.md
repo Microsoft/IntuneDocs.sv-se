@@ -1,25 +1,26 @@
 ---
-title: "Efterlevnadsprincip för Jamf-enheter"
+title: Efterlevnadsprincip för Jamf-enheter
 titlesuffix: Microsoft Intune
-description: "Använd Microsoft Intunes principer för efterlevnad med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter."
-keywords: 
+description: Använd Microsoft Intunes efterlevnadsprinciper med Azure Active Directorys villkorliga åtkomst för att skydda Jamf-hanterade enheter.
+keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
 ms.date: 02/16/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: microsoft-intune
-ms.technology: 
+ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5320f160efde054586b1e37722a67db375511049
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 990c17dcb7a25e5ea6676326f785d49ac6ca3320
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34482343"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
 
@@ -34,6 +35,9 @@ Du kan använda Azure Active Directory och Microsoft Intunes principer för vill
 
 1. Öppna Microsoft Azure och gå till **Intune** > **enhetsefterlevnad** > **principer**. Du kan skapa principer för macOS, inklusive att välja en serie åtgärder (t.ex. skicka varnings-e-post) till icke-kompatibla användare och grupper.
 2. Sök efter önskade grupper och tillämpa principer för dem.
+
+> [!Note]
+> Intune kräver fullständig diskkryptering för att vara kompatibelt.
 
 ## <a name="deploy-the-company-portal-app-for-macos-in-jamf-pro"></a>Distribuera företagsportalappen för macOS i Jamf Pro
 

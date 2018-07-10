@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/9/2018
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 611ec516b87f42b41a80de605d0d511ed2c58309
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: a4bbc89f66b49fe6a5c4ff8595c5913583288e0f
+ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834429"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34803847"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
@@ -152,11 +152,11 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 ## <a name="edge-browser"></a>Microsoft Edge-webbläsare
 
 -   **Microsoft Edge-webbläsare (endast mobil)** – Tillåt användning av Edge-webbläsaren på enheten.
--   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Microsoft Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
--   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Microsoft Edge.
--   **Skicka Do Not Track-huvuden** – Konfigurerar Microsoft Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
+-   **Listruta i adressfältet (endast skrivbord)** – Använd den här inställningen till att hindra Edge från att visa en lista med förslag när du skriver. Det här hjälper till att minimera användningen av nätverksbandbredd mellan Edge och Microsoft-tjänster.
+-   **Synkronisera favoriter mellan Microsoft-webbläsare (endast skrivbord)** – Tillåter att Windows synkroniserar favoriter mellan Internet Explorer och Edge.
+-   **Skicka Do Not Track-huvuden** – Konfigurerar Edge-webbläsaren så att Do Not Track-huvuden skickas till webbplatser som användarna besöker.
 -   **Cookies** – Gör att webbläsaren sparar Internetcookies på enheten.
--   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Microsoft Edge-webbläsaren.
+-   **JavaScript** – Tillåter att skript (exempelvis JavaScript) körs i Edge-webbläsaren.
 -   **Popup-fönster** – Blockerar popup-fönster i webbläsaren (gäller endast Windows 10 Desktop).
 -   **Sökförslag** – Tillåter att din sökmotor föreslår webbplatser när du skriver sökfraser.
 -   **Skicka intranätstrafik till Internet Explorer** – Låter användarna öppna intranätswebbplatser i Internet Explorer (endast Windows 10 Desktop).
@@ -164,16 +164,16 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 -   **Lösenordshanteraren** – Aktivera eller inaktivera lösenordshanteraren för Microsoft Edge.
 -   **Plats för webbplatslista för företagsläge** – Anger var du hittar listan med webbplatser som kan öppnas i företagsläge. Användare kan inte redigera den här listan.<br>(Endast Windows 10 Desktop.)
 -   **Utvecklarverktyg** – Förhindrar att användaren kan öppna Edge-utvecklingsverktygen.
--   **Tillägg** – Tillåter att användaren installerar Microsoft Edge-tillägg på enheten.
+-   **Tillägg** – Tillåter att användaren installerar Edge-tillägg på enheten.
 -   **InPrivate-surfning** – Förhindrar att användaren öppnar InPrivate-surfningssessioner.
--   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Microsoft Edge.
+-   **Visa sidan Första körningen** – Hindrar startsidan från att visas första gången du kör Edge.
     -   **Första körningswebbadress** – Anger webbadressen till en sida som visas första gången en användare kör Microsoft Edge (endast Windows 10 Mobile).
 -   **Startsidor** – Lägg till en lista över webbplatser du vill använda som startsidor i Microsoft Edge-webbläsaren (endast skrivbord).
--   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Microsoft Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
+-   **Ändringar av startsidan** – Tillåter användare att ändra de startsidor som visas när Edge öppnas. Använd inställningen Startsidor för att skapa sidan eller använd en lista över sidor som öppnas när Microsoft Edge startar.
 -   **Blockera åtkomst till Om flaggor** – Förhindra att användaren kommer åt sidan about:flags i Microsoft Edge som innehåller inställningar för utvecklare och experiment.
 -   **localhost-ip-adress via WebRtc** – Blockera användarens ip-adress till localhost vid telefonsamtal via WebRTC-protokollet.
 -   **Standardsökmotor** – Ange den standardsökmotor som ska användas. Användarna kan ändra det här värdet när som helst.
--   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Microsoft Edge.
+-   **Rensa webbläsardata vid avslut** – Rensar historik och webbdata när användaren avslutar Edge.
 -   **Datainsamling för levande panel** – Stoppar Windows från att samla in information från den levande panelen när användaren fäster en plats på Start-menyn från Microsoft Edge.
 -  **Listan Favoriter** – Definierar sökvägen till filen med favoriter. Till exempel http://contoso.com/favorites.html.
 -  **Begränsa ändringar i Favoriter** – Ställ in detta på **Blockera** för att hindra användarna från att lägga till, importera, sortera och redigera i listan Favoriter. 
@@ -250,7 +250,9 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
   Med GDI DPI-skalning kan appar som inte är DPI-medvetna bli DPI-medvetna per övervakare. Ange äldre appar som har DPI-GDI-skalning aktiverat. Med GDI DPI-skalning konfigurerat till att både aktivera och inaktivera en app, är skalning inaktiverat för appen.
 
-## <a name="kiosk-preview"></a>Helskärmsläge (förhandsgranskning)
+## <a name="kiosk-preview---obsolete"></a>Helskärmsläge (förhandsgranskning) – föråldrad
+
+Dessa inställningar flyttas och tas bort i en kommande version. Om du vill använda de nya inställningarna läser du sidan om [inställningar för helskärmsläge i Windows 10 och senare](kiosk-settings.md).
 
 En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Användarna kommer inte åt funktioner på enheten utanför helskärmsapparna.
 
@@ -263,9 +265,12 @@ En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Anv
 #### <a name="single-app-kiosks"></a>Helskärmsläge för enskilda appar
 Ange följande inställningar:
 
-- **Användarkonto** – Ange det lokala (för enheten) användarkontot eller den Azure AD-kontoinloggning som är associerad med helskärmsappen. För konton som är kopplade till Azure AD-domäner ska kontot anges i formatet `domain\username@tenant.org`. 
+- **Användarkonto** – Ange det lokala (för enheten) användarkontot, ett AD-domänkonto eller en Azure AD-kontoinloggning som är associerad med helskärmsappen.
+  - Lokalt konto: Ange som `devicename\accountname`, `.\accountname`, eller `accountname`
+  - Domänkonto: Ange som `domain\accountname`
+  - Azure AD-konto: Ange som `AzureAD\emailaddress`. Se till att ange ”AzureAD”, eftersom det är ett fast domännamn. Ange sedan Azure AD-e-postadressen. Ange till exempel `AzureAD\user@contoso.onmicrosoft.com`.
 
-    Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du konfigurerar ett Azure Active Directory-konto (AD) för helskärmsläge använder du formatet `AzureAD\user@contoso.com`.
+    Om helskärmsapparna finns i en miljö som riktar sig till allmänheten ska automatisk inloggning vara aktiverat och en användartyp med minsta privilegier (till exempel ett lokalt standardanvändarkonto) användas. Om du använder en Azure AD-konto för helskärmsläge ska du ange `AzureAD\user@yourorganization.com`.
 
 - **Appens programanvändarmodell-ID (AUMID)** – Ange AUMID för helskärmsappen. Läs mer i [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Hitta programanvändarmodell-ID för en installerad app).
 

@@ -3,10 +3,10 @@ title: Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 titlesuffix: Microsoft Intune
 description: Lär dig hur du använder appkonfigurationsprinciper för att skicka konfigurationsdata till en iOS-app när den körs.
 keywords: ''
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 06/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,24 +15,25 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0b71b52ffa58f847fc0efcd2924fd04a7a16a099
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e3e81b52f10bb94d90d5f66ca5aee13daaf4941e
+ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232241"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en iOS-app. Du tilldelar inte principerna direkt till användare och enheter. I stället associerar du principen med en app och tilldelar sedan appen. Principinställningarna används när appen söker efter dem, oftast första gången den körs.
+Använd appkonfigurationsprinciper i Microsoft Intune för att ge anpassade konfigurationsinställningar för en iOS-app. Med de här konfigurationsinställningarna kan en app anpassas efter leverantörens önskemål. Du behöver få de här konfigurationsinställningarna (nycklar och värden) från appleverantören. För att konfigurera appen anger du inställningarna som nycklar och värden eller som XML som innehåller nycklarna och värdena. Du tilldelar inte de konfigurationsprinciperna direkt till användare och enheter. I stället associerar du konfigurationsprincipen med en app och tilldelar sedan appen. Inställningarna för konfigurationsprincipen används när appen söker efter dem, oftast första gången den körs.
 
-Du kan tilldela en programkonfigurationsprincip till en grupp användare och enheter genom att använda en kombination av tilldelningar som inkluderar och exkluderar. När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare och alla enheter**. 
+När du lägger till en appkonfigurationsprincip kan du ange tilldelningar för den. När du anger tilldelningar för principen kan du välja att inkludera och exkludera grupper av användare som principen ska gälla för. När du väljer att inkludera en eller flera grupper kan du välja att utse specifika grupper att inkludera eller välja inbyggda grupper. Inbyggda grupper innefattar **Alla användare**, **Alla enheter** samt **Alla användare och alla enheter**. 
 
 >[!NOTE]
 >Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen med inbyggda optimeringar för att förenkla för dig. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du själv har skapat.
 
-När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen kan du även välja de specifika grupper som du vill exkludera.
+När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen kan du även välja de specifika grupper som du vill exkludera. Mer information finns i [Inkludera och exkludera apptilldelningar i Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
 > Den här principen är för närvarande endast tillgänglig för enheter som kör iOS 8.0 och senare. Den stöder följande appinstallationstyper:
@@ -49,18 +50,16 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 3. Välj arbetsbelastningen **mobilappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
-    - **Namn**<br>
-      Namnet på den profil som visas i Azure Portal.
-    - **Beskrivning**<br>
-      Beskrivning av den profil som visas i Azure Portal.
-    - **Enhetsregistreringstyp**<br>
-      Välj **Hanterade enheter**.
+    - **Namn** – namnet på den profil som visas i Azure Portal.
+    - **Beskrivning** – beskrivning av den profil som visas i Azure Portal.
+    - **Registreringstyp för enhet** – välj **Hanterade enheter**.
 6. Välj **iOS** för **Plattform**.
 7.  Välj **Tillhörande app**. I fönstret **Tillhörande app** väljer du den hanterade app som du vill tillämpa konfigurationen på och sedan **OK**.
 8.  I fönstret **Lägg till konfigurationsprincip** väljer du **Konfigurationsinställningar**.
-9. Välj **Format för konfigurationsinställningar**. Välj något av följande:
-    - **[Använd Configuration Designer](#use-configuration-designer)**
-    - **[Ange XML-data](#enter-xml-data)**
+9. Välj **Format för konfigurationsinställningar**. Välj något av följande för att lägga till XML-information:
+    - **Använd Configuration Designer**
+    - **Ange XML-data**<br></br>
+    Information om hur du använder Configuration Designer finns i [Använda Configuration Designer](#use-configuration-designer). Information om hur du anger XML-data finns i [Ange XML-data](#enter-xml-data). 
 10. När du har lagt till XML-informationen väljer du **OK** och sedan väljer du **Lägg till** för att lägga till konfigurationsprincipen. Översiktsfönstret för konfigurationsprincipen visas.
 11. Välj **Tilldelningar** för att visa alternativen för att inkludera och exkludera. 
 
@@ -80,17 +79,14 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 
 ## <a name="use-configuration-designer"></a>Använda Configuration Designer
 
-Du kan både använda Configuration Designer för appar på enheter som har registrerats eller enheter som inte har registrerats i Intune. Designern gör det möjligt att konfigurera specifika konfigurationsnycklar och värden. Du måste även ange datatyp för varje värde. Inställningarna skickas automatiskt till appar när de installeras.
+Microsoft Intune ger konfigurationsinställningar som är unika för en app. Du kan använda Configuration Designer för appar både på enheter som har registrerats och enheter som inte har registrerats i Microsoft Intune. Med Designer kan du konfigurera specifika konfigurationsnycklar och värden som hjälper dig att skapa underliggande XML. Du måste även ange datatyp för varje värde. De här inställningarna skickas automatiskt till appar när apparna installeras.
 
 ### <a name="add-a-setting"></a>Lägg till en inställning
 
 1. För varje nyckel och värde i konfigurationen anger du:
-   - **Konfigurationsnyckel**<br>
-     Nyckeln som identifierar den specifika konfigurationsinställningen.
-   - **Värdetyp**<br>
-     Konfigurationsvärdets datatyp. Möjliga typer är heltals-, verklig, sträng- eller booleskt värde.
-   - **Konfigurationsvärde**<br>
-     Värdet för konfigurationen.
+   - **Konfigurationsnyckel** – den nyckel som unikt identifierar den specifika konfigurationsinställningen.
+   - **Värdetyp** – konfigurationsvärdets datatyp. Möjliga typer är heltals-, verklig, sträng- eller booleskt värde.
+   - **Konfigurationsvärde** – värdet för konfigurationen.
 2. Välj **OK** för att ange konfigurationsinställningar.
 
 ### <a name="delete-a-setting"></a>Ta bort en inställning
@@ -165,4 +161,4 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 
 ## <a name="next-steps"></a>Nästa steg
 
-Fortsätt sedan med att [tilldela](apps-deploy.md) och [övervaka](apps-monitor.md) appen som vanligt.
+Fortsätt sedan med att [tilldela](apps-deploy.md) och [övervaka](apps-monitor.md) appen.

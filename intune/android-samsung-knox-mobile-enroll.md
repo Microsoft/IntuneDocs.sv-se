@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 88cb733c688019b2fc5455a0184e968d91e77806
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: d5ac976e07c98fae0941168cc94b5afc5ca09616
+ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33915819"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964716"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -120,6 +120,8 @@ Behöver du fortfarande hjälp? Kolla in hela [Användarhandboken för Knox Mobi
 - **Läget Google-enhetens ägare:** Registrering i läget Google-enhetens ägare med hjälp av KME stöds inte i den här förhandsversionen. Det här scenariot undersöks för närvarande.
 
 - **Fältet ”lösenord” ignoreras:** Om fältet **lösenord** fylls i vid **Enhetsinformation** i Knox-portalen ignoreras det av Intune-företagsportalappen. Användaren måste ange ett lösenord på enheten för att slutföra enhetsregistreringen.
+
+- **”Android-företagsregistrering”** KME stödjer inte Android-företagsregistrering.
 
 ## <a name="getting-support"></a>Få support
 Lär dig mer om att [få support för Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).

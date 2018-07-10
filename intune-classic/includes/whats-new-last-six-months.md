@@ -20,7 +20,7 @@ En uppdatering av Android-företagsportalappen visar en förloppsindikator för 
 
 Nu kan du skapa en appbaserad princip för villkorlig åtkomst för att blockera appar som inte har fått appprinciperna tillämpade från åtkomst till [SharePoint Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). Du kan ange de appar som du vill ska ha åtkomst till SharePoint Online med Azure-portalen i det appbaserade scenariot för villkorlig åtkomst.
 
-#### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
+#### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Stöd för enkel inloggning från företagsportalen för iOS till Outlook för iOS <!--834012-->
 Användarna behöver inte längre logga in i Outlook-appen om de är inloggade på företagsportalappen för iOS på samma enhet med samma konto. När användarna startar Outlook-appen kan de välja sitt konto och logga in automatiskt. Vi arbetar också med att lägga till den här funktionen för andra Microsoft-appar.
 
 #### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Förbättrade statusmeddelanden i Företagsportalappen för iOS <!--744866-->
@@ -79,7 +79,7 @@ De befintliga MAM-administratörsrollerna (deltagare, ägare och skrivskyddat) s
 
 #### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Förbättrad inloggning i företagsportalens appar för alla plattformar <!--User Story 1132123-->
 
-Vi presenterar en ändring under de kommande månaderna som förbättrar inloggningen för Intune-företagsportalens appar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.
+Vi informerar om en förändring som kommer under de kommande månaderna som kommer att förbättra inloggningen för Intune-företagsappar för Android, iOS och Windows. Det nya användargränssnittet visas automatiskt på alla plattformar för företagsportalappen när Azure AD genomför ändringen. Dessutom kan användarna nu logga in på företagsportalen från en annan enhet med en engångskod som genereras. Detta är särskilt användbart när användarna måste logga in utan autentiseringsuppgifter.
 
 Du hittar skärmdumpar av föregående inloggning, den nya inloggningen med autentiseringsuppgifter och den nya inloggningen från en annan enhet på sidan [Nyheter i appens användargränssnitt](/intune/whats-new-app-ui).
 
@@ -285,7 +285,7 @@ Intune markerar alla nya enheter som personliga såvida inte IT-administratören
 
 ### <a name="notices"></a>Meddelanden
 
-__Multifaktorautentisering vid registrering flyttar till Azure-portalen__  <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen kommer du nu att logga in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurera MFA-inställningar via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
+__Multifaktorautentisering vid registrering flyttar till Azure-portalen__  <!--VSO 750545--> Administratörer gick tidigare till Intune-konsolen eller konsolen Konfigurationshanteraren (tidigare än versionen oktober 2016) för att ange MFA för Intune-registreringar. Med den här uppdaterade funktionen loggar du nu in på [Microsoft Azure-portalen](https://manage.windowsazure.com) med dina Intune-autentiseringsuppgifter och konfigurerar MFA-inställningarna via Azure AD. Mer information om detta finns [här](https://aka.ms/mfa_ad).
 
 __Företagsportalappen för Android är nu tillgänglig i Kina__ <!--VSO 658093--> Vi publicerar företagsportalappen för Android för hämtning i Kina. På grund av avsaknad av Google Play-butik i Kina, måste Android-enheter hämta appar från kinesiska appmarknadsplatser. Företagsportalappen för Android blir tillgänglig för hämtning på följande platser:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
@@ -306,7 +306,7 @@ Företagsportalappen för Android använder Google Play-tjänster för att kommu
 
 ### <a name="deprecations"></a>Föråldringar
 
-__Firefox ska inte längre ha stöd för Silverlight__ <!--VSO TBA--> Mozilla tar bort sitt stöd för Silverlight i version 52 av [webbläsaren Firefox](https://www.mozilla.org/firefox), sker i mars 2017. Därför kommer du inte längre att kunna logga in på den befintliga Intune-konsolen med Firefox-versioner som är större än 51. Vi rekommenderar att du använder Internet Explorer 10 eller 11 för att komma åt administrationskonsolen, eller en [version av Firefox före version 52](https://ftp.mozilla.org/pub/firefox/releases/). Intunes övergång till Azure-portalen gör att den stöder ett antal [moderna webbläsare](/azure/azure-preview-portal-supported-browsers-devices) utan att vara beroende av Silverlight.
+__Firefox ska inte längre ha stöd för Silverlight__ <!--VSO TBA--> Mozilla tar bort sitt stöd för Silverlight i version 52 av [webbläsaren Firefox](https://www.mozilla.org/firefox), sker i mars 2017. Därför kommer du inte längre att kunna logga in på den befintliga Intune-konsolen med Firefox-versioner som är senare än 51. Vi rekommenderar att du använder Internet Explorer 10 eller 11 för att komma åt administrationskonsolen, eller en [version av Firefox före version 52](https://ftp.mozilla.org/pub/firefox/releases/). Intunes övergång till Azure-portalen gör att den stöder ett antal [moderna webbläsare](/azure/azure-preview-portal-supported-browsers-devices) utan att vara beroende av Silverlight.
 
 __Borttagning av principer för Exchange Online mobila inkorgar__ <!--770687--> Från och med december kommer administratörer inte längre att kunna visa eller konfigurera principer för mobila postlådor för Exchange Online (EAS) i Intune-konsolen. Den här ändringen kommer att lanseras till alla klienter i Intune under december och januari. Alla befintliga principer kommer att förbli såsom konfigurerade. Använd Exchange Management Shell för att konfigurera nya principer. Ta reda på mer [här](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
 

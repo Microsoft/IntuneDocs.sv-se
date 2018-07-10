@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 735b3323527487e231d190ffd45e9083c4f524a2
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 259cc7653f97cbb9e07ba681e142c62e42c5a124
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34444922"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Hitta borttappade eller stulna iOS-enheter med Intune
 
@@ -45,7 +46,7 @@ Den här funktionen stöds inte för följande system:
     ![Skärmbild för Hitta enhet med Intune i Azure](./media/locate-device.png)
 
 >[!NOTE]
->Av sekretesskäl är avståndet du kan zooma in på kartan begränsat.
+>Av sekretesskäl är avståndet du kan zooma in på kartan begränsat till en radie på 300 meter.
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivera ljudavisering för borttappat läge på en iOS-enhet
 
@@ -58,7 +59,7 @@ Ljudet fortsätter att spelas upp tills användaren inaktiverar ljudet på enhet
 
 ## <a name="security-and-privacy-information-for-lost-mode-and-locate-device-actions"></a>Information om säkerhet och sekretess för åtgärderna för borttappat läge och hitta enhet
 - Ingen platsinformation för enheten skickas till Intune förrän du har aktiverat den här åtgärden.
-- När du använder åtgärden Hitta enhet skickas enhetens latitud- och longitudkoordinater till Intune och visas i Azure-portalen.
+- När du använder åtgärden Hitta enhet kan enhetens latitud- och longitudkoordinater hämtas med hjälp av Graph API.
 - Data lagras i 24 timmar och tas sedan bort. Du kan inte ta bort platsdata manuellt.
 - Platsinformationen krypteras både under lagring och vid överföring.
 - När du konfigurerar borttappat läge kan du anpassa ett meddelande som visas på låsskärmen. Ta med information i meddelandet som hjälper den som hittar enheten att återlämna den.

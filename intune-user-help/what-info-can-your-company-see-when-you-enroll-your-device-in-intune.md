@@ -1,6 +1,6 @@
 ---
 title: Vilken information kan företaget se när enheten registreras?
-description: Förklarar vad IT-avdelningen kan se och inte på den hanterade enheten.
+description: Förklarar vad IT-avdelningen kan och inte kan se på den hanterade enheten.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -16,18 +16,18 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: 7e722195ce1b1b34a65cd8e936ad8a702f145691
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: ad949cc9d20e0e46ab986b4646059af733018255
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34308882"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232814"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Vilken information kan företaget se när jag registrerar min enhet?
 
-När du registrerar en enhet för hantering ger du företaget tillstånd att se viss information i syfte att skydda företagets information på enheten.
+Ditt företag inte kan se din personliga information när du registrerar en enhet med Microsoft Intune. När du registrerar en enhet ger du företaget behörighet att visa vissa typer av information på din enhet, till exempel enhetsmodell och serienummer. Företaget använder den här informationen för att skydda företagsdata på enheten.
 
-**Vad företaget aldrig kan se**
+**Det här kan företaget aldrig se:**
 
 - Historik för samtal och surfning
 - E-post och textmeddelanden
@@ -36,7 +36,7 @@ När du registrerar en enhet för hantering ger du företaget tillstånd att se 
 -   Lösenord
 - Bilder (inte heller de som ingår i appen Foton eller i Kamerabilder)
 
-**Vad företaget alltid kan se**
+**Det här kan företaget alltid se:**
 
 - Enhetsmodell som Google Pixel
 - Tillverkare, som t.ex. Microsoft
@@ -46,7 +46,7 @@ När du registrerar en enhet för hantering ger du företaget tillstånd att se 
 - Enhetsnamn
 - Serienummer
 
-**Vad företaget kanske kan se**
+**Det här kan företaget kanske se:**
 
 -  Telefonnummer: Vid **företags**ägda enheter kan det fullständiga telefonnumret visas. För **personligt** ägda enheter är endast de sista fyra siffrorna i telefonnumret synliga för ditt företag. Du kan se **Typ av ägarskap** för varje enskild enhet genom att öppna sidan **Enhetsinformation** på enheten.
 -  Plats: Företaget kan aldrig se var enheten finns, förutom om du har en iOS-enhet som övervakas och har försvunnit. [Hur vet jag?](https://go.microsoft.com/fwlink/?linkid=853816)

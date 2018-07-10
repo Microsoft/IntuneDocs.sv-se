@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0831f374b9c6da417d8159dce1b58e40f0d3643c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: cc378a4f484852d84943b4d1094b71df5b7a530d
+ms.sourcegitcommit: 006fa8dd4d605e2873fba6e3a965ef794d6f3764
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744949"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36945500"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Endpoint Protection-inställningar för Windows 10 och senare i Intune
 
@@ -29,36 +29,51 @@ Med en Endpoint Protection-profil kan du konfigurera säkerhetsfunktioner, t.ex.
 
 Använd informationen i den här artikeln för att skapa Endpoint Protection-profiler. Information om att konfigurera Windows Defender Antivirus finns i [Enhetsbegränsningar för Windows 10](device-restrictions-windows-10.md#windows-defender-antivirus). 
 
-> [!NOTE]
-> De här inställningarna stöds inte av versionerna Home och Professional av Windows 10.
-
 ## <a name="windows-defender-application-guard"></a>Windows Defender Application Guard
 
-När du använder Microsoft Edge Windows Defender Application Guard skyddas din miljö från webbplatser som inte har definierats som betrodda av din organisation. När användare besöker webbplatser som inte listas i din isolerade nätverksgräns, öppnas webbplatserna i en virtuell session i Hyper-V. Betrodda webbplatser definieras av en nätverksgräns som kan konfigureras i enhetskonfigurationen. 
+Stöds i följande Windows 10-versioner:
+
+- Företag 
+- Professionell
+
+När du använder Microsoft Edge Windows Defender Application Guard skyddas din miljö från webbplatser som inte är betrodda av din organisation. När användare besöker webbplatser som inte listas i din isolerade nätverksgräns, öppnas webbplatserna i en virtuell webbläsarsession i Hyper-V. Betrodda webbplatser definieras av en nätverksgräns som kan konfigureras i enhetskonfigurationen.
 
 Application Guard är endast tillgängligt för Windows 10-enheter (64-bitars). Med den här profilen installeras en Win32-komponent för att aktivera Application Guard.
 
-- **Application Guard**: Öppna ej godkända webbplatser i en virtualiserad Hyper-V-webbläsarbehållare.
+- **Application Guard**: **Aktivera** för att aktivera den här funktionen, som öppnar ej godkända webbplatser i en virtualiserad Hyper-V-webbläsarcontainer. **Inte konfigurerad** (standard) innebär att alla webbplatser (godkända och ej godkända) öppnas på enheten.
 - **Funktionssätt för Urklipp**: Välj vilka åtgärder för kopiera/klistra in som tillåts mellan den lokala datorn och den virtuella Application Guard-webbläsaren.
-- **Externt innehåll på företagswebbplatser**: Blockera inläsning av innehåll från webbplatser som inte är godkända.
-- **Skriv ut från virtuell webbläsare**: Tillåt att PDF- och XPS-skrivare, samt lokala skrivare och/eller nätverksskrivare skriver ut innehåll från den virtuella webbläsaren.
-- **Samla in loggar**: Samla in loggar för händelser som inträffar i en Application Guard-webbläsarsession.
-- **Behåll användargenererade webbläsardata**: Spara användardata (t.ex. lösenord, favoriter och cookies) som skapas under en virtuell Application Guard-webbläsarsession.
-- **Grafikacceleration**: Läs in grafikintensiva webbplatser snabbare när du arbetar i en virtuell Application Guard-webbläsarsession. Webbplatser läses in snabbare genom åtkomst till en virtuell grafikprocessor.
-- **Ladda ned filer till värdfilsystemet**: Låt användare ladda ned filer från den virtuella webbläsaren till värdoperativsystemet.
+- **Externt innehåll på företagswebbplatser**: **Blockera** inläsning av innehåll från webbplatser som inte är godkända. **Inte konfigurerad** (standard) innebär att icke-företagswebbplatser kan öppnas på enheten.
+- **Skriv ut från virtuell webbläsare**: **Tillåt** för att tillåta att PDF- och XPS-skrivare, samt lokala skrivare och/eller nätverksskrivare skriver ut innehåll från den virtuella webbläsaren. **Inte konfigurerad** (standard) inaktiverar alla utskriftsfunktioner.
+- **Samla in loggar**: **Tillåt** för att samla in loggar för händelser som inträffar i en Application Guard-webbläsarsession. **Inte konfigurerad** (standard) samlar inte in några loggar inom webbläsarsessionen.
+- **Behåll användargenererade webbläsardata**: **Tillåt** sparar användardata (t.ex. lösenord, favoriter och cookies) som skapas under en virtuell Application Guard-webbläsarsession. **Inte konfigurerad** (standard) tar bort filer och data som laddats ned av en användare när enheten startas om eller när användaren loggar ut.
+- **Grafikacceleration**: **Aktivera** för att läsa in grafikintensiva webbplatser och video snabbare genom att få åtkomst till en virtuell grafikprocessor. **Inte konfigurerad** (standard) använder enhetens CPU för grafik och använder alltså inte den virtuella grafikprocessorn.
+- **Ladda ned filer till värdfilsystemet**: **Aktivera** så att användare laddar ned filer från den virtuella webbläsaren till värdoperativsystemet. **Inte konfigurerad** (standard) håller filerna lokala på enheten och laddar inte ned filer till värdfilsystemet.
 
 ## <a name="windows-defender-firewall"></a>Windows Defender-brandvägg
+
+Stöds i följande Windows 10-versioner:
+- Hem
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
 
 ### <a name="global-settings"></a>Globala inställningar
 
 De här inställningarna avser alla nätverkstyper.
 
-- **File Transfer Protocol**: Blockera tillståndskänslig FTP.
-- **Inaktiv tid för säkerhetsassociation före borttagning**: Säkerhetsassociationer tas bort om ingen nätverkstrafik har identifierats under *n* sekunder.
-- **I förväg delad nyckelkodning**: Koda i förväg delade nycklar med UTF-8.
-- **IPsec-undantag**: Konfigurera specifik trafik som ska undantas från IPsec, t.ex. **Granne upptäcker koder av IPv6 ICMP-typ**, **ICMP**, **Router upptäcker koder av IPv6 ICMP-typ** och **Både IPv4- och IPv6 DHCP-nätverkstrafik**.
-- **Verifiering av listan över återkallade certifikat**: Ange ett värde för hur listan över återkallade certifikat genomförs, inklusive **Inaktivera CRL-verifiering**, **CRL-verifiering misslyckas enbart för återkallade certifikat** och **CRL-verifiering misslyckas för alla påträffade fel**.
-- **Matcha autentiseringsuppsättningarna per nyckelmodul**: Ange nyckelmoduler för att ignorera hela autentiseringsuppsättningen om de inte har stöd för alla autentiseringspaket i den uppsättningen.
+- **File Transfer Protocol**: **Blockera** för att inaktivera tillståndskänslig FTP. När det här är **Inte konfigurerad** (standard) utför brandväggen tillståndskänslig FTP-filtrering för att tillåta sekundära anslutningar.
+- **Inaktiv tid för säkerhetsassociation före borttagning**: Säkerhetsassociationer tas bort om ingen nätverkstrafik har identifierats under *n* sekunder. Ange en inaktivitetstid i sekunder.
+- **Kodning av i förväg delad nyckel**: **Aktivera** för att använda kodning av i förväg delad nyckel med UTF-8. **Inte konfigurerad** (standard) använder det lokala arkivvärdet.
+- **IPsec-undantag**: Konfigurera att specifik trafik ska undantas från IPsec, inklusive:
+  - **Granne upptäcker koder av IPv6 ICMP-typ**
+  - **ICMP**
+  - **Router upptäcker koder av IPv6 ICMP-typ**
+  - **Både IPv4 och IPv6 DHCP-nätverkstrafik**
+- **Verifiering av listan över återkallade certifikat**: Bestäm hur listan över återkallade certifikat genomförs, inklusive **Inaktivera CRL-verifiering**, **CRL-verifiering misslyckas enbart för återkallade certifikat** och **CRL-verifiering misslyckas för alla påträffade fel**.
+- **Matcha autentiseringsuppsättningarna per nyckelmodul**: **Aktivera** så att nyckelmoduler MÅSTE ignorera endast de autentiseringspaket som de inte stödjer. När det här är **Inte konfigurerad** MÅSTE nyckelmoduler ignorera hela autentiseringsuppsättningen om de inte har stöd för alla autentiseringspaket som anges i uppsättningen.
 - **Paketkö**: Ange hur programvaruskalning på mottagarsidan aktiveras för den krypterade mottagningen och rensa flyttning av text framåt för scenariot med IPsec-tunnelgatewayen. Denna inställning säkerställer att paketordningen bevaras.
 
 ### <a name="network-settings"></a>Nätverksinställningar
@@ -67,68 +82,104 @@ De här inställningarna gäller för specifika nätverkstyper, inklusive **Dom�
 
 #### <a name="general-settings"></a>Allmänna inställningar
 
-- **Windows Defender-brandvägg**: Aktivera den här inställningen för att blockera nätverkstrafik.
-- **Dolt läge**: Hindra brandväggen från att arbeta i dolt läge. Om du blockerar dolt läge blockeras även **IPsec-skyddat paketundantag**.
-- **Avskärmad**: Om du aktiverar den här inställningen blockerar brandväggsinställningen all inkommande trafik.
-- **Unicast-svar på multicast-sändningar**: Blockera unicast-svar på multicast-sändningar. Normalt vill du inte ta emot unicast-svar på multicast- eller broadcast-meddelanden. Svaren kan indikera en DOS-attack (denial of service), eller en angripare som försöker avsöka en känd live-dator.
-- **Inkommande meddelanden**: Blockera visning av meddelanden för användare när ett program har blockerats från att lyssna på en port.
-- **Standardåtgärd för inkommande anslutningar**: Blockera standardåtgärden som brandväggen utför på inkommande anslutningar.
+- **Windows Defender-brandväggen**: **Aktivera** för att aktivera brandväggen och avancerad säkerhet. **Inte konfigurerad** (standard) tillåter all nätverkstrafik oavsett eventuella andra principinställningar.
+- **Dolt läge**: **Blockera** brandväggen från att arbeta i dolt läge. Om du blockerar dolt läge blockeras även **IPsec-skyddat paketundantag**. **Inte konfigurerad** (standard) gör så att brandväggen arbetar i dolt läge, vilket hjälper till att förhindra svar på avsökningsbegäranden.
+- **Avskärmad**: **Blockera** inaktiverar den här funktionen. **Inte konfigurerad** (standard) aktiverar den här inställningen. När den här inställningen och Windows Defender-brandväggen är aktiverade blockeras all inkommande trafik, oavsett eventuella andra principinställningar.
+- **Unicast-svar på multicast-sändningar**: När det här är inställt på **Blockera** inaktiverar det unicast-svar på multicast-sändningar. Normalt vill du inte ta emot unicast-svar på multicast- eller broadcast-meddelanden. Svaren kan indikera en DOS-attack (denial of service), eller en angripare som försöker avsöka en känd live-dator. **Inte konfigurerad** (standard) aktiverar den här inställningen.
+- **Inkommande meddelanden**: När det här är inställt på **Blockera** döljer det meddelanden för användare när en app har blockerats från att lyssna på en port. **Inte konfigurerad** (standard) aktiverar den inställningen och kan visa ett meddelande till användare när en app blockeras från att lyssna på en port.
+- **Standardåtgärd för inkommande anslutningar**: När det här är inställt på **Blockera** körs inte brandväggens standardåtgärd på inkommande anslutningar. När det här är inställt på **Inte konfigurerad** (standard) körs brandväggens standardåtgärd på inkommande anslutningar.
 
 #### <a name="rule-merging"></a>Sammanslagning av regler
 
-- **Auktoriserade Windows Defender-brandväggsregler från det lokala arkivet**: Tillåt att auktoriserade brandväggsregler i det lokala arkivet erkänns och framtvingas.
-- **Globala Windows Defender-portbrandväggsregler från det lokala arkivet**: Tillåt att globala portbrandväggsregler i det lokala arkivet erkänns och framtvingas.
-- **Windows Defender-brandväggsregler från det lokala arkivet**: Tillåt att globala brandväggsregler i det lokala arkivet erkänns och framtvingas.
-- **IPSec-regler från det lokala arkivet**: Använd regler för anslutningssäkerhet från det lokala lagret, oavsett schema eller version av regler för anslutningssäkerhet.
+- **Auktoriserade Windows Defender-brandväggsregler från det lokala arkivet**: **Aktivera** för att tillämpa brandväggsregler i det lokala arkivet för att erkännas och framtvingas. När det här är **Inte konfigurerad** (standard) ignoreras reglerna för den auktoriserade programbrandväggen i det lokala arkivet och framtvingas inte.
+- **Globala Windows Defender-portbrandväggsregler från det lokala arkivet**: **Aktivera** för att tillämpa globala portbrandväggsregler i det lokala arkivet för att erkännas och framtvingas. När det här är **Inte konfigurerad** (standard) ignoreras reglerna för de globala portbrandväggsreglerna i det lokala arkivet och framtvingas inte.
+- **Windows Defender-brandväggsregler från det lokala arkivet**: **Aktivera** för att tillämpa brandväggsregler i det lokala arkivet för att erkännas och framtvingas. När det här är **Inte konfigurerad** (standard) ignoreras brandväggsreglerna från det lokala arkivet och framtvingas inte.
+- **IPSec-regler från det lokala arkivet**: **Aktivera** för att tillämpa regler för anslutningssäkerhet från det lokala arkivet, oavsett schema eller version av regler för anslutningssäkerhet. När det här är **Inte konfigurerad** (standard) ignoreras reglerna för anslutningssäkerhet från det lokala arkivet och framtvingas inte, oavsett schemaversion eller version av regler för anslutningssäkerhet.
 
 ## <a name="windows-defender-smartscreen-settings"></a>Inställningar för Windows Defender SmartScreen
 
-- **SmartScreen för appar och filer**: Aktivera Windows SmartScreen för körning av filer och program som körs.
-- **Körning av overifierade filer**: Blockera användaren från att köra filer som inte har verifierats av Windows SmartScreen.
+Stöds i följande Windows 10-versioner med Edge installerat:
+- Hem
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+**Inställningar**:
+
+- **SmartScreen för appar och filer**: **Aktivera** Windows SmartScreen för körning av filer och program som körs. SmartScreen är en molnbaserad komponent mot nätfiske och skadlig kod. **Inte konfigurerad** (standard) inaktiverar SmartScreen.
+- **Körning av overifierade filer**: **Blockera** slutanvändare från att köra filer som inte har verifierats av Windows SmartScreen. **Inte konfigurerad** (standard) inaktiverar den här funktionen och tillåter att slutanvändare kör filer som inte har verifierats.
 
 ## <a name="windows-encryption"></a>Windows-kryptering
 
 ### <a name="windows-settings"></a>Windows-inställningar
 
-Följande två inställningarna gäller för alla versioner av Windows 10:
+Stöds i följande Windows 10-versioner:
 
-- **Kryptera enheter**: Om den här inställningen är aktiverad uppmanas användarna att aktivera enhetskryptering. Dessutom uppmanas de att bekräfta att kryptering från en annan provider inte har aktiverats. Om Windows-kryptering aktiveras samtidigt som en annan krypteringsmetod är aktiv, kan enheten bli instabil.
-- **Kryptera minneskortet**: Aktivera den här inställningen för att kryptera flyttbara minneskort som används av enheten.
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
 
+**Inställningar**:
+
+- **Kryptera enheter**: **Kräv** för att uppmana användare att aktivera enhetskryptering. Beroende på Windows-version och systemkonfiguration kan användare uppmanas att:  
+  - Bekräfta att kryptering från en annan provider inte är aktiverat
+  - Inaktivera Bitlocker-diskkryptering och sedan aktivera Bitlocker igen
+    
+    Om Windows-kryptering aktiveras samtidigt som en annan krypteringsmetod är aktiv, kan enheten bli instabil. 
+- **Kryptera minneskort (endast mobil)**: **Kräv** för att kryptera flyttbara minneskort som används av enheten. **Inte konfigurerad** (standard) kräver inte kryptering av minneskort och uppmanar inte användaren att aktivera det. Den här inställningen gäller endast mobila enheter med Windows 10.
 
 ### <a name="bitlocker-base-settings"></a>Grundläggande BitLocker-inställningar
 
-Grundläggande inställningar är universella BitLocker-inställningar för alla typer av dataenheter. Inställningarna för BitLocker-grupprincipen styr vilka enhetskrypteringsåtgärder eller konfigurationsalternativ som användaren kan ändra för alla typer av dataenheter.
+Stöds i följande Windows 10-versioner:
 
-- **Varning för annan hårddiskkryptering**: Inaktivera varningsmeddelandet för annan hårddiskkryptering på slutanvändarnas datorer.
-- **Konfigurera krypteringsmetoder**: Aktivera den här inställningen för att konfigurera krypteringsalgoritmer för operativsystem, data och flyttbara enheter.
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+Grundläggande inställningar är universella BitLocker-inställningar för alla typer av dataenheter. De här inställningarna styr vilka enhetskrypteringsåtgärder eller konfigurationsalternativ som användaren kan ändra för alla typer av dataenheter.
+
+- **Varning för annan hårddiskkryptering**: Välj **Blockera** för att inaktivera varningsmeddelandet om en annan tjänst för hårddiskkryptering finns på enheten. **Inte konfigurerad** (standard) tillåter att varningarna visas.
+- **Konfigurera krypteringsmetoder**: **Aktivera** den här inställningen för att konfigurera krypteringsalgoritmer för operativsystem, data och flyttbara enheter. När det här är **Inte konfigurerad** (standard) använder BitLocker 128-bitars XTS-AES som standardkrypteringsmetod eller använder den krypteringsmetod som anges av något installationsskript.
   - **Kryptering för operativsystemenheter**: Välj krypteringsmetod för operativsystemenheter. Vi rekommenderar att du använder XTS AES-algoritmen.
   - **Kryptering för fasta dataenheter**: Välj krypteringsmetod för fasta (inbyggda) dataenheter. Vi rekommenderar att du använder XTS AES-algoritmen.
-  - **Kryptering för flyttbara dataenheter**: Välj krypteringsmetod för flyttbara dataenheter. Om den flyttbara enheten används med enheter som inte kör Windows 10, rekommenderar vi att du använder AES-CBC-algoritmen.
+  - **Kryptering för flyttbara dataenheter**: Välj krypteringsmetod för flyttbara dataenheter. Om den flyttbara enheten används med enheter som inte kör Windows 10 rekommenderar vi att du använder AES-CBC-algoritmen.
 
 ### <a name="bitlocker-os-drive-settings"></a>BitLocker-inställningar för operativsystemenheten
+Stöds i följande Windows 10-versioner:
+
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
 
 Dessa inställningar gäller specifikt för operativsystemets dataenheter.
 
-- **Ytterligare autentisering vid start**: Konfigurera autentiseringskrav för datorstart, inklusive användning av Trusted Platform Module (TPM).
-  - **BitLocker med icke-kompatibelt TPM-chip**
+- **Ytterligare autentisering vid start**: Välj **Kräv** för att konfigurera autentiseringskraven för datorstart, inklusive användning av Trusted Platform Module (TPM). Välj **Inte konfigurerad** (standard) för att konfigurera endast grundläggande alternativ på enheter med en TPM.
+  - **BitLocker med icke-kompatibelt TPM-chip**: **Blockera** (inaktivera) användning av BitLocker när en enhet inte har ett kompatibelt TPM-chip. När det här är **Inte konfigurerad** kan användare använda BitLocker utan ett kompatibelt TPM-chip. BitLocker kan kräva ett lösenord eller en startnyckel.
   - **Kompatibel TPM-start**: Välj att tillåta, inte tillåta eller kräva TPM-chip.
-  - **Kompatibel PIN-kod för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en PIN-kod för start med TPM-chippet.
-  - **Kompatibel nyckel för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en nyckel för start med TPM-chippet.
-  - **Kompatibel nyckel och PIN-kod för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en nyckel och PIN-kod för start med TPM-chippet.
-- **Minsta PIN-kodslängd**: Aktivera den här inställningen för att konfigurera en minsta längd för start-PIN-koden för TPM.
+  - **Kompatibel PIN-kod för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en PIN-kod för start med TPM-chippet. För att aktivera en PIN-kod för start krävs interaktion från slutanvändaren. 
+  - **Kompatibel nyckel för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en nyckel för start med TPM-chippet. För att aktivera en startnyckel krävs interaktion från slutanvändaren. 
+  - **Kompatibel nyckel och PIN-kod för TPM-start**: Välj att tillåta, inte tillåta eller kräva användning av en nyckel och PIN-kod för start med TPM-chippet. För att aktivera en startnyckel och en PIN-kod krävs interaktion från slutanvändaren.
+- **Minsta PIN-kodslängd**: **Aktivera** den här inställningen för att konfigurera en minsta längd för start-PIN-koden för TPM. När det här är **Inte konfigurerad** (standard) kan användare konfigurera en PIN-kod för start med valfri längd mellan 6 och 20 siffror.
   - **Minsta tecken**: Ange antalet tecken som krävs för PIN-koden från, **4**-**20**.
-- **Återställning av operativsystemenhet**: Aktivera den här inställningen för att ange hur BitLocker-skyddade operativsystemenheter återställs när nödvändig startinformation saknas.
-  - **Certifikatbaserad dataåterställningsagent**: Aktivera den här inställningen om du vill att dataåterställningsagenter ska kunna användas med BitLocker-skyddade operativsystemenheter.
+- **Återställning av operativsystemenhet**: **Aktivera** den här inställningen för att ange hur BitLocker-skyddade operativsystemenheter återställs när nödvändig startinformation saknas. När det här är **Inte konfigurerad** (standard) stöds standardåterställningsalternativen för BitLocker-återställning. Som standard tillåts en DRA, återställningsalternativen anges av användaren, inklusive återställningslösenordet och återställningsnyckeln och återställningsinformation säkerhetskopieras inte till AD DS.
+  - **Certifikatbaserad dataåterställningsagent**: När det här är inställt på **Blockera** kan du inte använda dataåterställningsagent med BitLocker-skyddade operativsystemenheter. Ställ in på **Inte konfigurerad** (standard) för att aktivera den här inställningen, som tillåter att dataåterställningsagenter används med BitLocker-skyddade operativsystemenheter.
   - **Återställningslösenord skapat av användare**: Välj om får, måste eller inte får generera ett 48-siffrigt återställningslösenord.
   - **Återställningsnyckel skapad av användare**: Välj om får, måste eller inte får generera en 256-bitars återställningsnyckel.
-  - **Återställningsalternativ i BitLocker-installationsguiden**: Aktivera den här inställningen om du vill hindra användare från att se och ändra återställningsalternativ när de aktiverar BitLocker.
-  - **Spara BitLocker-återställningsinformation i AD DS**: Aktivera lagring av BitLocker-återställningsinformation i Active Directory.
-  - **BitLocker-återställningsinformation lagrad i AD DS**: Konfigurera vilka delar av BitLocker-återställningsinformation som lagras i Active Directory. Välj mellan:
+  - **Återställningsalternativ i BitLocker-installationsguiden**: Ställ in på **Blockera** så att användarna inte kan se och ändra återställningsalternativen. När värdet är inställt på **Inte konfigurerad** (standard) kan användarna se och ändra återställningsalternativ när de aktiverar BitLocker.
+  - **Spara BitLocker-återställningsinformation i AD DS**: **Aktivera** för att lagra BitLocker-återställningsinformationen i Azure Active Directory (AAD). När det här är **Inte konfigurerad** (standard) lagras inte återställningsinformationen i AAD.
+  - **BitLocker-återställningsinformation lagrad i AD DS**: Konfigurera vilka delar av BitLocker-återställningsinformation som lagras i Azure AD. Välj mellan:
     - **Säkerhetskopiera återställningslösenord och nyckelpaket**
     - **Säkerhetskopiera endast återställningslösenord**
-  - **Lagra återställningsinformation i AD DS innan BitLocker aktiveras**: Aktivera den här inställningen för att hindra användare från att aktivera BitLocker om enheten är ansluten till domänen och BitLocker-återställningsinformation har lagrats i Active Directory.
-- **Återställningsmeddelande och webbadress i förstartsmiljö**: Aktivera den här inställningen för att konfigurera meddelandet och webbadressen som visas på förstartsskärmen för nyckelåterställning.
+  - **Lagra återställningsinformation i AD DS innan BitLocker aktiveras**: **Kräv** den här inställningen för att hindra användare från att aktivera BitLocker såvida inte BitLocker-återställningsinformation har lagrats i Azure Active Directory. **Inte konfigurerad** (standard) tillåter att användare aktiverar BitLocker även om återställningsinformation inte har lagrats i Azure Active Directory.
+- **Återställningsmeddelande och webbadress i förstartsmiljö**: **Aktivera** den här inställningen för att konfigurera meddelandet och webbadressen som visas på förstartsskärmen för nyckelåterställning. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
   - **Återställningsmeddelande i förstartsmiljö**: Konfigurera hur återställningsmeddelande i förstartsmiljö visas för användarna. Välj mellan:
     - **Använd standardvärde för återställningsmeddelande och webbadress**
     - **Använd tomt återställningsmeddelande och webbadress**
@@ -137,24 +188,52 @@ Dessa inställningar gäller specifikt för operativsystemets dataenheter.
 
 ### <a name="bitlocker-fixed-data-drive-settings"></a>BitLocker-inställningar för fasta dataenheter
 
-- **Neka skrivåtkomst till fast dataenhet som inte skyddas av BitLocker**: Om den här inställningen aktiveras måste BitLocker-skyddet aktiveras på alla fasta eller inbyggda dataenheter för att det ska gå att skriva till dem.
-- **Återställning av fast enhet**: Aktivera den här inställningen för att ange hur BitLocker-skyddade fasta enheter återställs när nödvändig startinformation saknas.
-  - **Dataåterställningsagent**: Aktivera den här inställningen om du vill att dataåterställningsagenter som ska användas med BitLocker-skyddade fasta enheter.
+Stöds i följande Windows 10-versioner:
+
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+**Inställningar**:
+
+- **Skrivåtkomst till fast dataenhet som inte skyddas av BitLocker**: Ställ in på **Blockera** för att ge skrivskyddad åtkomst till dataenheter som inte är BitLocker-skyddade. När det här är **Inte konfigurerad** (standard) finns det läs- och skrivåtkomst till dataenheter som inte är BitLocker-skyddade.
+- **Återställning av fast enhet**: **Aktivera** den här inställningen för att ange hur BitLocker-skyddade fasta enheter återställs när nödvändig startinformation saknas. **Inte konfigurerad** (standard) inaktiverar den här funktionen.
+  - **Dataåterställningsagent**: **Blockera** användning av dataåterställningsagent med principredigeraren för BitLocker-skyddade fasta enheter. **Inte konfigurerad** (standard) gör det möjligt att använda dataåterställningsagenter med BitLocker-skyddade fasta enheter.
   - **Återställningslösenord skapat av användare**: Konfigurera huruvida användare får, måste eller inte får generera ett 48-siffrigt återställningslösenord.  
   - **Återställningsnyckel skapad av användare**: Konfigurera huruvida användare får, måste eller inte får skapa en 256-bitars återställningsnyckel.
-  - **Återställningsalternativ i BitLocker-installationsguiden**: Aktivera den här inställningen om du vill hindra användare från att se och ändra återställningsalternativ när de aktiverar BitLocker.
-  - **Spara BitLocker-återställningsinformation i AD DS**: Aktivera lagring av BitLocker-återställningsinformation i Active Directory.
-  - **BitLocker-återställningsinformation i AD DS**: Konfigurera vilka delar av BitLocker-återställningsinformation som lagras i Active Directory. Välj mellan:
+  - **Återställningsalternativ i BitLocker-installationsguiden**: Ställ in på **Blockera** så att användarna inte kan se och ändra återställningsalternativen. När värdet är inställt på **Inte konfigurerad** (standard) kan användarna se och ändra återställningsalternativ när de aktiverar BitLocker.
+  - **Spara BitLocker-återställningsinformation i AD DS**: **Aktivera** för att lagra BitLocker-återställningsinformationen i Azure Active Directory (AAD). När det här är **Inte konfigurerad** (standard) lagras inte återställningsinformationen i AAD.
+  - **BitLocker-återställningsinformation i AD DS**: Konfigurera vilka delar av BitLocker-återställningsinformation som lagras i Azure Active Directory. Välj mellan:
     - **Säkerhetskopiera återställningslösenord och nyckelpaket**
     - **Säkerhetskopiera endast återställningslösenord**
-  - **Lagra återställningsinformation i AD DS innan BitLocker aktiveras**: Aktivera den här inställningen för att hindra användare från att aktivera BitLocker om enheten är ansluten till domänen och BitLocker-återställningsinformation har lagrats i Active Directory.
+  - **Lagra återställningsinformation i AD DS innan BitLocker aktiveras**: **Kräv** den här inställningen för att hindra användare från att aktivera BitLocker såvida inte BitLocker-återställningsinformation har lagrats i Azure Active Directory. **Inte konfigurerad** (standard) tillåter att användare aktiverar BitLocker även om återställningsinformation inte har lagrats i Azure Active Directory.
 
 ### <a name="bitlocker-removable-data-drive-settings"></a>BitLocker-inställningar för flyttbara dataenheter
 
-- **Skrivåtkomst till flyttbar dataenhet som inte skyddas av BitLocker**: Ange om BitLocker-kryptering krävs för flyttbara lagringsenheter.
-  - **Skrivåtkomst till enheter som har ställts in i en annan organisation**: Ange om det går att skriva till flyttbara enheter som tillhör en annan organisation.
+Stöds i följande Windows 10-versioner:
+
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+**Inställningar**:
+
+- **Skrivåtkomst till flyttbar dataenhet som inte skyddas av BitLocker**: Ställ in på **Blockera** för att ge skrivskyddad åtkomst till dataenheter som inte är BitLocker-skyddade. När det här är **Inte konfigurerad** (standard) finns det läs- och skrivåtkomst till dataenheter som inte är BitLocker-skyddade.
+  - **Skrivåtkomst till enheter som har ställts in i en annan organisation**: **Blockera** tillåter skrivbehörighet för enheter som har konfigurerats i en annan organisation. **Inte konfigurerad** (standard) nekar skrivåtkomst.
 
 ## <a name="windows-defender-exploit-guard"></a>Windows Defender Exploit Guard
+
+Stöds i följande Windows 10-versioner:
+
+- Hem
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
 
 Använd [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) för att hantera och minska attackytan för appar som medarbetarna använder.
 
@@ -162,7 +241,7 @@ Använd [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/thre
 
 - **Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem**
 
-Hjälp till att [förhindra åtgärder och appar](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) som normalt används av skadlig kod som söker sårbarheter för att angripa datorer.
+  Hjälp till att [förhindra åtgärder och appar](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) som normalt används av skadlig kod som söker sårbarheter för att angripa datorer.
 
 #### <a name="rules-to-prevent-office-macro-threats"></a>Regler för att förhindra Office-makrohot
 
@@ -211,34 +290,53 @@ Blockera utgående anslutningar från alla appar till IP-adresser/domäner med d
 
 ### <a name="exploit-protection"></a>Sårbarhetsskydd
 
-Blockera **användarredigering av gränssnittet för sårbarhetsskydd** genom att överföra en XML-fil som tillåter att du konfigurerar minne, kontrollflöde och principbegränsningar. Inställningarna i XML-filen kan användas för att blockera ett program från kryphål.
-
-Aktivera skydd av sårbarheter genom att skapa en XML-fil som representerar systemet och de inställningar för programminskning som du önskar. Du kan använda någon av dessa två metoder för att göra detta:
+För att aktivera skydd mot sårbarheter skapar du en XML-fil som innehåller de inställningar för system- och programminskning som du önskar. Det finns två metoder:
 
  1. PowerShell: Använd en eller flera av Get-ProcessMitigation-, Set-ProcessMitigation- och ConvertTo-ProcessMitigationPolicy PowerShell-cmdlets. Cmdlets konfigurerar åtgärdsinställningar och exporterar en XML-representation av dem.
 
  2. Gränssnittet för Windows Defender Säkerhetscenter: I Windows Defender Säkerhetscenter klickar du på App- & webbläsarkontroll och bläddrar sedan längst ned på skärmen för att hitta Sårbarhetsskydd. Använd först flikarna Systeminställningar och Programinställningar för att konfigurera minskningsinställningar. Leta sedan reda på länken Exportera inställningar längst ned på skärmen för att exportera en XML-återgivning av dem.
 
+Blockera **användarredigering av gränssnittet för sårbarhetsskydd** genom att överföra en XML-fil som tillåter att du konfigurerar minne, kontrollflöde och principbegränsningar. Inställningarna i XML-filen kan användas för att blockera ett program från kryphål. **Inte konfigurerad** (standard) skickar inte ut en anpassad konfiguration. 
+
 ## <a name="windows-defender-application-control"></a>Windows Defender Application Control
 
-Använd **Kodintegritetsprinciper för programkontroll** för att välja ytterligare appar som måste granskas av eller som kan vara betrodda att köras av Windows Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.
+Stöds i följande Windows 10-versioner:
 
-Program blockeras inte i läget **Endast granskning**. I läget **Endast granskning** loggas alla händelser i lokala klientloggar.
+**Hantering av mobilenheter (MDM)**: 
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+**Grupprinciphantering**: 
+- Företag
+
+Använd **Kodintegritetsprinciper för programkontroll** för att välja ytterligare appar som granskas av eller som är betrodda att köras av Windows Defender Application Control. Windows-komponenter och alla appar från Windows Store är automatiskt betrodda att köras.
+
+Program blockeras inte när de körs i läget **Endast granskning**. I läget **Endast granskning** loggas alla händelser i lokala klientloggar.
 
 När det är aktiverat kan programkontrollen endast inaktiveras genom att ändra läget från **Framtvinga** till **Endast granskning**. Om du ändrar läget från **Framtvinga** till **Inte konfigurerad** fortsätter programkontrollen att tillämpas på tilldelade enheter.
 
 ## <a name="windows-defender-credential-guard"></a>Windows Defender Credential Guard
+
+Stöds i följande Windows 10-versioner:
+
+- Företag
+
 Windows Defender Credential Guard skyddar mot attacker för stöld av autentiseringsuppgifter. Den isolerar hemligheter så att endast privilegierad programvara kan komma åt dem.
 
 Inställningarna för **Credential Guard** inkluderar:
 
 - **Inaktivera**: Stänger av Credential Guard via fjärranslutning om det tidigare har slagits på med alternativet **Aktivera utan UEFI-lås**.
-- **Aktiverat med UEFI-lås**: Ser till att Credential Guard inte kan inaktiveras fjärrstyrt med en registernyckel eller grupprincip.
+
+- **Aktivera med UEFI-lås**: Credential Guard kan inte inaktiveras fjärrstyrt med en registernyckel eller grupprincip.
 
     > [!NOTE]
     > Om du använder den här inställningen och sedan vill inaktivera Credential Guard, måste du ange grupprincipen till **Inaktiverad**. Och avmarkera UEFI-konfigurationsinformationen fysiskt från varje dator. Så länge UEFI-konfigurationen finns kvar är Credential Guard aktiverat.
 
-- **Aktiverat utan UEFI-lås**: Medför att Credential Guard kan inaktiveras via fjärranslutning med grupprincipen. Enheterna som använder den här inställningen måste köra Windows 10 version 1511 eller senare.
+- **Aktivera utan UEFI-lås**: Tillåter att Credential Guard inaktiveras fjärrstyrt med hjälp av grupprincipen. Enheterna som använder den här inställningen måste köra Windows 10 version 1511 eller senare.
 
 När du aktiverar Credential Guard aktiveras även följande nödvändiga funktioner:
 
@@ -247,7 +345,17 @@ När du aktiverar Credential Guard aktiveras även följande nödvändiga funkti
 
 ## <a name="windows-defender-security-center"></a>Windows Defender Säkerhetscenter
 
-Appen Windows Defender Security Center fungerar som en separat app eller process från var och en av de enskilda funktionerna. Den visar aviseringar via Action Center. Den fungerar som en insamlare eller enskild plats för att visa status och utföra konfiguration för var och en av funktionerna. Läs mer i dokumentationen till [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).
+Stöds i följande Windows 10-versioner:
+
+- Hem
+- Professionell
+- Företag
+- Företag
+- Utbildning
+- Mobiltelefon
+- Mobile Enterprise
+
+Windows Defender Security Center fungerar som en separat app eller process från var och en av de enskilda funktionerna. Den visar aviseringar via Action Center. Den fungerar som en insamlare eller enskild plats för att visa status och utföra konfiguration för var och en av funktionerna. Läs mer i dokumentationen till [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).
 
 #### <a name="windows-defender-security-center-app-and-notifications"></a>Appen Windows Defender Säkerhetscenter och meddelanden
 
@@ -262,7 +370,7 @@ Blockera slutanvändarens åtkomst till olika delar av appen Windows Defender S�
 
 #### <a name="it-contact-information"></a>IT-kontaktuppgifter
 
-Ange IT-kontaktuppgifter som ska visas i appen Windows Defender Säkerhetscenter och i appmeddelanden. Du kan välja **Visa i app och i aviseringar**, **Visa endast i app**, **Visa endast i aviseringar** eller **Visa inte**. Du måste ange **IT-organisationens namn** och minst ett av följande kontaktalternativ:
+Ange IT-kontaktuppgifter som ska visas i appen Windows Defender Säkerhetscenter och i appmeddelanden. Du kan välja **Visa i app och i aviseringar**, **Visa endast i app**, **Visa endast i aviseringar** eller **Visa inte**. Ange **IT-organisationens namn** och minst ett av följande kontaktalternativ:
 
 - **IT-avdelningens telefonnummer eller Skype-ID**
 - **IT-avdelningens e-postadress**
@@ -270,37 +378,46 @@ Ange IT-kontaktuppgifter som ska visas i appen Windows Defender Säkerhetscenter
 
 ## <a name="local-device-security-options"></a>Säkerhetsalternativ för lokal enhet
 
+Stöds i följande Windows 10-versioner:
+ 
+- Hem
+- Professionell
+- Företag
+- Företag
+- Utbildning
+
 Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningarna på Windows 10-enheter.
 
 ### <a name="accounts"></a>Konton
 
-- **Lägg till nya Microsoft-konton**: Förhindrar att användare lägger till nya Microsoft-konton på den här datorn.
-- **Fjärrinloggning utan lösenord**: Aktivera att lokala konton som inte är lösenordsskyddade kan att logga in från andra platser än den fysiska enheten.
+- **Lägg till nya Microsoft-konton**: Ställ in på **Blockera** för att förhindra att användare lägger till nya Microsoft-konton på enheten. När det här är inställt på **Inte konfigurerad** (standard) kan användare använda Microsoft-konton på enheten.
+- **Fjärrinloggning utan lösenord**: **Aktivera** tillåter att lokala konton med tomma lösenord loggar in med enhetens tangentbord. **Inte konfigurerad** (standard) tillåter att lokala konton med tomma lösenord loggar in från andra platser än den fysiska enheten.
 
 #### <a name="admin"></a>Administratör
 
-- **Lokalt administratörskonto**: Avgör om det lokala administratörskontot är aktiverat eller inaktiverat.
+- **Lokalt administratörskonto**: Ställ in på **Aktiverat** för att tillåta det lokala administratörskontot. Ställ in på **Inte konfigurerad** (standard) för att inaktivera det lokala administratörskontot.
 - **Byt namn på administratörskonto**: Definiera att ett annat kontonamn ska associeras med säkerhetsidentifieraren (SID) för administratörskontot.
 
 #### <a name="guest"></a>Gäst
 
-- **Gästkontot**: Avgör om gästkontot är aktiverat eller inaktiverat.
+- **Gästkonto**: Ställ in på **Aktiverat** för att tillåta det lokala gästkontot. Ställ in på **Inte konfigurerad** (standard) för att inaktivera det lokala gästkontot.
 - **Byt namn på gästkonto**: Definiera att ett annat kontonamn ska associeras med säkerhetsidentifieraren (SID) för gästkontot.
 
 ### <a name="devices"></a>Egenskaper
 
-- **Koppla bort enhet från dockningsstation utan inloggning**: Förhindra att en bärbar dator kopplas bort från dockningsstationen utan att behöva logga in.
-- **Installera skrivardrivrutiner för delade skrivare**: Begränsa installation av skrivardrivrutiner som en del av anslutningen till en delad skrivare till administratörer.
-- **Begränsa CD-ROM-åtkomsten till lokala aktiva användare**: Om du aktiverar den här inställningen kan endast interaktivt inloggade användare komma åt CD-ROM-media
+- **Koppla bort enhet från dockningsstation utan inloggning**: Ställ in på **Blockera** så att användarna kan trycka på den fysiska utmatningsknappen på en dockad bärbar enhet för att på ett säkert sätt koppla bort enheten. **Inte konfigurerad** (standard) kräver att användaren loggar in på enheten och får behörighet att koppla från enheten från dockningsstation.
+- **Installera skrivardrivrutiner för delade skrivare**: När det här är **Aktiverat** kan alla användare installera en skrivardrivrutin som en del av anslutningen till en delad skrivare. När det här är **Inte konfigurerad** (standard) kan endast administratörer installera en skrivardrivrutin som en del av anslutningen till en delad skrivare.
+- **Begränsa CD-ROM-åtkomsten till lokala aktiva användare**: När det här är **Aktiverat** kan endast den interaktivt inloggade användaren använda CD-ROM-media. Om den här principen är aktiverad och ingen är interaktivt inloggad används CD-ROM via nätverket. När det här är **Inte konfigurerad** (standard) kan vem som helst komma åt CD-ROM.
 - **Formatera och mata ut flyttbar media**: Definiera vem som får formatera och mata ut flyttbar NTFS-media:
   - **Inte konfigurerat**
+  - **Administratörer**
   - **Administratörer och privilegierade användare**
   - **Administratörer och interaktiva användare**
 
 ### <a name="interactive-logon"></a>Interaktiv inloggning
 
-- **Minuter av låsskärmsinaktivitet innan skärmsläckaren aktiveras**: Definiera högsta antal minuter av inaktivitet på det interaktiva skrivbordets inloggningsskärm tills skärmsläckaren aktiveras.
-- **Kräv CTRL+ALT+DEL för att logga in**: Kräv att CTRL+ALT+DEL trycks ned innan en användare kan logga in.
+- **Minuter av låsskärmsinaktivitet innan skärmsläckaren aktiveras**: Ange högsta antal minuter av inaktivitet på det interaktiva skrivbordets inloggningsskärm tills skärmsläckaren aktiveras.
+- **Kräv CTRL+ALT+DEL för att logga in**: Ställ in på **Aktivera** så att användare inte måste trycka på CTRL+ALT+DEL för att logga in. Ställ in på **Inte konfigurerad** (standard) för att kräva att användarna trycker på CTRL+ALT+DEL innan de loggar in på Windows.
 - **Beteende vid borttagning av smartkort**: Avgör vad som händer när smartkortet för en inloggad användare tas bort från smartkortsläsaren. Alternativen är:
 
   - **Låsa arbetsstationen**: arbetsstationen låses när smartkortet tas bort. Med det här alternativet kan användare lämna området, ta med sig smartkortet och fortfarande skydda sessionen.
@@ -312,35 +429,35 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
 #### <a name="display"></a>Visning
 
 - **Användarinformation på låsskärmen**: Konfigurera användarinformation som visas när sessionen är låst. Om inställningen inte konfigureras visas användarens visningsnamn, domän och användarnamn.
-  - **Inte konfigurerad**: Användarens visningsnamn, domän och användarnamn
+  - **Inte konfigurerat**
   - **Användarens visningsnamn, domän och användarnamn**
   - **Endast användarens visningsnamn**
   - **Visa inte användarinformation**
-- **Dölj senast inloggade användare**: Visa inte användarnamnet för den senaste personen som loggat in på den här enheten.
-- **Dölj användarnamn vid inloggning**: Visa inte användarnamnet för personen som loggar in på den här enheten när autentiseringsuppgifter har angetts och innan enhetens skrivbord visas.
-- **Meddelanderubrik vid inloggning**: Ställ in meddelanderubrik för användare som försöker logga in.
-- **Meddelandetext vid inloggning**: Ställ in meddelandetext för användare som försöker logga in.
+- **Dölj senast inloggade användare**: **Aktivera** döljer användarnamnet. **Inte konfigurerad** (standard) visar användarnamnet.
+- **Dölj användarnamn vid inloggning**: **Aktivera** döljer användarnamnet. **Inte konfigurerad** (standard) visar användarnamnet.
+- **Meddelanderubrik vid inloggning**: Ställ in meddelanderubrik för användare som loggar in.
+- **Meddelandetext vid inloggning**: Ställ in meddelandetext för användare som loggar in.
 
 ### <a name="network-access-and-security"></a>Åtkomst till nätverket och säkerhet
 
 - **Anonym åtkomst till namngivna pipes och resurser**: Med **Inte konfigurerat** (standardinställning) begränsas anonym åtkomst till resurs- och namngivna pipe-inställningar. Gäller för de inställningar som kan användas anonymt.
 - **Anonym uppräkning av SAM-konton**: **Tillåter** att anonyma användare kan räkna upp SAM-konton. Windows låter anonyma användare räkna upp namn på domänkonton och nätverksresurser.
 - **Anonym uppräkning av SAM-konton och resurser**: **Inte konfigurerat** (standardinställning) innebär att anonyma användare kan räkna upp namn på domänkonton och nätverksresurser. Använd **Blockera** för att inte tillåta anonym uppräkning av SAM-konton och resurser.
-- **LAN Manager-hashvärdet lagras vid ändring av lösenord**: Välj det här om du vill **tillåta** att hashvärdet för LAN Manager (LM) för det nya lösenordet ska lagras vid nästa lösenordsändring. Om värdet är **Inte konfigurerat** (standardinställning) lagras inte hash-värdet.
+- **LAN Manager-hashvärdet lagras vid ändring av lösenord**: Välj det här om du vill **tillåta** att hashvärdet för LAN Manager (LM) för det nya lösenordet ska lagras vid nästa lösenordsändring. Om det här är inställt på **Inte konfigurerad** (standardinställning) lagras inte hash-värdet.
 - **PKU2U-autentiseringsförfrågningar**: **Blockera** PKU2U-autentiseringsbegäranden till den här enheten för att använda online-identiteter. **Inte konfigurerat** (standardinställning) tillåter dessa förfrågningar.
 - **Begränsa RPC-fjärranslutningar till SAM**: **Tillåt** Redigera standardsträngen för Security Descriptor Definition Language om du vill neka användare och grupper att göra fjärranrop till SAM. Använd **Inte konfigurerat** (standardinställning) för standardsträngen för Security Descriptor Definition Language om du vill tillåta användare och grupper att göra fjärranrop till SAM.
   - **Säkerhetsbeskrivning**
 
 ### <a name="recovery-console-and-shutdown"></a>Återställningskonsol och avstängning
 
-- **Rensa virtuell växlingsfil när du stänger**: Rensa den virtuella växlingsfilen när enheten stängs av.
-- **Avstängning utan inloggning**: Blockera alternativet för att stänga av datorn från Windows-inloggningsskärmen. I det här fallet måste användare kunna logga in på datorn korrekt innan de kan utföra en systemavstängning.
+- **Rensa virtuell växlingsfil när du stänger**: Ställ in på **Aktivera** för att rensa den virtuella växlingsfilen när enheten stängs av. **Inte konfigurerad** rensar inte det virtuella minnet.
+- **Stäng av utan inloggning**: **Blockera** döljer avstängningsalternativet på Windows-inloggningsskärmen. Användarna måste logga in på enheten och sedan stänga av den. **Inte konfigurerad** (standard) tillåter att användare stänger av enheten från Windows-inloggningsskärmen.
 
 ### <a name="user-account-control"></a>User account control
 
-- **UIA-integritet utan säker plats**: Aktivera appar från oskyddade platser i filsystemet för att köra med UIAccess-integritetsnivå.
-- **Virtualisera fil- och registerskrivfel till platser per användare**: Avgör om appens skrivfel omdirigeras till definierade register- och filsystemplatser. Eller orsaka att appen misslyckas.
-- **Utöka endast behörighet för körbara filer som har signerats och verifierat**: Tvinga PKI-certifikatverifiering av en körbar fil innan den kan köras.
+- **UIA-integritet utan säker plats**: När det här är inställt på **Aktivera** körs appar som finns på en skyddad plats i filsystemet endast med UIAccess-integritet. **Inte konfigurerad** (standard) gör att appar kan köras med UIAccess-integritet även om apparna inte finns på en säker plats i filsystemet.
+- **Virtualisera skrivfel för filer och register till platser per användare**: När det här är inställt på **Blockera** omdirigeras programskrivfel under körning till definierade användarplatser för filsystemet och registret. När det här är inställt på **Inte konfigurerad** (standard) nekas program som skriver data till skyddade platser.
+- **Utöka endast behörighet för körbara filer som har signerats och verifierat**: Ställ in på **Aktiverat** för att framtvinga verifiering av PKI-certifikatsökväg för en körbar fil innan den kan köras. Ställ in på **Inte konfigurerad** (standard) för att inte framtvinga verifiering av PKI-certifikatsökväg innan en körbar fil kan köras.
 
 #### <a name="uia-elevation-prompt-behavior-settings"></a>Beteende vid UIA:s fråga om utökad behörighet
 
@@ -355,24 +472,24 @@ Använd dessa alternativ för att konfigurera de lokala säkerhetsinställningar
   - **Neka förfrågningar om höjd behörighet automatiskt**
   - **Fråga efter autentiseringsuppgifter på det skyddade skrivbordet**
   - **Inte konfigurerad**: Fråga efter autentiseringsuppgifter
-- **Vidarebefordra frågor om utökade privilegier till användarens interaktiva skrivbord**: Aktivera alla frågor om utökade privilegier att gå till den interaktiva användarens skrivbord i stället för det skyddade skrivbordet. Principinställningar för beteende vid fråga om utökad behörighet för administratörer och standardanvändare används.
-- **Fråga om utökad behörighet för appinstallationer**: Installationer av appar som kräver utökade privilegier frågar efter autentiseringsuppgifter för administratör.
-- **Fråga från UIA om utökad behörighet utan skyddat skrivbord**: Tillåt UIAccess-program att fråga om utökade privilegier utan att använda skyddat skrivbord.
+- **Vidarebefordra frågor om utökade privilegier till användarens interaktiva skrivbord**: **Aktivera** så att alla frågor om utökade privilegier går till den interaktiva användarens skrivbord i stället för det skyddade skrivbordet. Eventuella principinställningar för beteende vid fråga om utökad behörighet för administratörer och standardanvändare används. **Inte konfigurerad** (standard) framtvingar att alla förfrågningar om höjd behörighet går till det skyddade skrivbordet oavsett eventuella principinställningar för beteende vid fråga om utökad behörighet för administratörer och standardanvändare.
+- **Fråga om utökad behörighet för appinstallationer**: När det här är inställt på **Blockera** identifieras inte paket för programinstallation och uppmanas inte om utökade behörigheter. När det här är inställt på **Inte konfigurerad** (standard) uppmanas användaren att ange ett administrativt användarnamn och lösenord när ett paket för programinstallation kräver utökade behörigheter.
+- **Fråga från UIA om utökad behörighet utan skyddat skrivbord**: **Aktivera** för att tillåta att UIAccess-appar frågar om utökade privilegier utan att använda skyddat skrivbord. När det här är **Inte konfigurerad** (standard) använder frågor om utökade privilegier ett skyddat skrivbord.
 
 #### <a name="admin-approval-mode-settings"></a>Inställningar för Läge för administratörstillåtelse
 
-- **Läge för administratörstillåtelse för inbyggd administratör**: Definierar om det inbyggda administratörskontot använder läge för administratörstillåtelse eller kör alla appar med fullständiga administratörsprivilegier.
-- **Kör alla administratörer i läge för administratörstillåtelse**: Definiera om läge för administratörstillåtelse och alla UAC-principinställningar är aktiverade.
+- **Läge för administratörstillåtelse för inbyggd administratör**: **Aktiverad** tillåter att det inbyggda administratörskontot använder läget för administratörstillåtelse. Alla åtgärder som kräver rättighetsökning uppmanar användaren att godkänna åtgärden. **Inte konfigurerad** (standard) kör alla appar med fullständiga administratörsrättigheter.
+- **Kör alla administratörer i läge för administratörstillåtelse**: Ställ in på **Blockera** för att inaktivera läget för administratörstillåtelse och alla relaterade UAC-principinställningar. **Inte konfigurerad** (standard) aktiverar läget för administratörstillåtelse.
 
 ### <a name="microsoft-network-client"></a>Microsoft-nätverksklient
 
-- **Signera kommunikationer digitalt (om servern tillåter)**: Avgör om SMB-klienten försöker att förhandla signering av SMB-paket. När alternativet är aktiverat (Inte konfigurerat) ber Microsoft-nätverksklienten servern att utföra SMB-paketsignering när sessionen konfigureras. Om paketsignering är aktiverad på servern så förhandlas paketsignering. Om principen är inaktiverad förhandlar SMB-klienten aldrig SMB-paketsignering.
-- **Skicka okrypterade lösenord till SMB-servrar från tredje part**: När aktiverat, tillåts SMB-omdirigeraren (Server Message Block) att skicka lösenord till SMB-servrar som inte har stöd för kryptering av lösenord under autentiseringen.
+- **Signera kommunikationer digitalt (om servern tillåter)**: Avgör om SMB-klienten förhandlar signering av SMB-paket. När det här är **Inte konfigurerad** eller aktiverat (standard) ber Microsoft-nätverksklienten servern att köra SMB-paketsignering under installationen av sessionen. Om paketsignering är aktiverad på servern så förhandlas paketsignering. Om det här är inställt på **Inaktivera** förhandlar SMB-klienten aldrig SMB-paketsignering.
+- **Skicka okrypterade lösenord till SMB-servrar från tredje part**: När det här är inställt på **Aktivera** kan SMB-omdirigeraren (Server Message Block) skicka lösenord i klartext till Microsoft SMB-servrar som inte har stöd för kryptering av lösenord under autentiseringen. När det här är **Inte konfigurerad** (standard) krypteras lösenorden.
 
 ### <a name="microsoft-network-server"></a>Microsoft-nätverksserver
 
-- **Signera kommunikation digitalt (om klienten tillåter)**: Anger om SMB-servern förhandlar SNB-paketsignering med klienter som begär det. När aktiverad förhandlar Microsoft-nätverksservern SMB-paketsignering såsom begärs av klienten. D.v.s. om paketsignering är aktiverat på servern, förhandlas paketsignering. När du anger **Inte konfigurerat** eller inaktiverat (standard) förhandlar SMB-klienten aldrig om SMB-paketsignering.
-- **Signera kommunikation digitalt (alltid)**: Anger om paketsignering krävs av SMB-serverkomponenten. När aktiverat, kommunicerar Microsoft-nätverksservern inte med en Microsoft-nätverksklient såvida inte klienten godkänner att signera SMB-paket. När du anger **Inte konfigurerat** eller inaktiverat (standard) förhandlas SMB-paketsignering mellan klienten och servern.
+- **Signera kommunikation digitalt (om klienten tillåter)**: Anger om SMB-servern förhandlar SNB-paketsignering med klienter som begär det. När det här är inställt på **Aktivera** förhandlar Microsoft-nätverksservern SMB-paketsignering såsom begärs av klienten. D.v.s. om paketsignering är aktiverat på servern, förhandlas paketsignering. När du anger **Inte konfigurerat** eller inaktiverat (standard) förhandlar SMB-klienten aldrig om SMB-paketsignering.
+- **Signera kommunikation digitalt (alltid)**: Anger om paketsignering krävs av SMB-serverkomponenten. När det här är inställt på **Aktivera** kommunicerar Microsoft-nätverksservern inte med en Microsoft-nätverksklient såvida inte klienten godkänner signering av SMB-paket. När det här är **Inte konfigurerad** eller inaktiverat (standard) förhandlas signering av SMB-paket mellan klienten och servern.
 
 ## <a name="next-steps"></a>Nästa steg
 

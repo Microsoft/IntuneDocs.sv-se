@@ -14,11 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 93ecf7b66be25f0f93456d5419ef1f57b8ca7efe
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: ac85478abed049487c028c58637e7937876d2198
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34449878"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -56,15 +57,15 @@ Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera 
 
 ### <a name="build-integration"></a>Versionsintegrering
 
-Intune App SDK är ett Android-standardbibliotek utan externa beroenden. **Microsoft.Intune.MAM.SDK.aar** innehåller både gränssnitten som krävs för att aktivera en appskyddsprincip och den kod som behövs för att interagera med Microsoft Intunes företagsportalapp.
+Intune App SDK är ett Android-standardbibliotek utan externa beroenden. **Microsoft.Intune.MAM.SDK.aar** innehåller både de gränssnitt som krävs för att aktivera en appskyddsprincip och den kod som behövs för att interagera med Microsoft Intunes företagsportalappen.
 
-**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Gör detta genom att öppna approjektet i Android Studio och gå till **Arkiv > Ny > Ny modul**. Välj **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet Microsoft.Intune.MAM.SDK.aar för att skapa en modul för vår .AAR. Högerklicka på modulen eller modulerna som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** > **+-ikonen**  >  **Modulberoende** > Välj MAM SDK AAR-modulen som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
+**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Gör detta genom att öppna approjektet i Android Studio och gå till **Arkiv > Ny > Ny modul**. Välj **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet Microsoft.Intune.MAM.SDK.aar för att skapa en modul för vår .AAR. Högerklicka på den modul eller de moduler som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** > **+-ikonen** > **Modulberoende** > Välj den MAM SDK AAR-modul som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
 
 Dessutom innehåller **Microsoft.Intune.MAM.SDK.Support.v4** och **Microsoft.Intune.MAM.SDK.Support.v7** Intune-varianter av `android.support.v4` respektive `android.support.v7`. De ingår inte i Microsoft.Intune.MAM.SDK.aar, eftersom det inte är alla appar som ska innehålla supportbiblioteken. De är JAR-standardfiler i stället för Android-biblioteksprojekt.
 
 #### <a name="proguard"></a>ProGuard
 
-Om [ProGuard](http://proguard.sourceforge.net/) (eller annan metod för krympande/döljande) används som ett byggsteg, måste Intunes SDK-klasser undantas. När du integrerar .aar i ditt bygge läggs våra regler automatiskt till i ProGuard-steget och de nödvändiga klassfilerna bevaras. 
+Om [ProGuard](http://proguard.sourceforge.net/) (eller annan metod för krympande/döljande) används som ett byggsteg, måste Intunes SDK-klasser undantas. När du integrerar .aar i ditt bygge läggs våra regler automatiskt till i ProGuard-steget, och de nödvändiga klassfilerna bevaras. 
 
 Azure ADAL (Active Directory Authentication Libraries) kan ha egna ProGuard-begränsningar. Om din app integrerar ADAL måste du följa ADAL-dokumentationen om dessa begränsningar.
 
@@ -137,7 +138,7 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (vanligtvis med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `onCreate()` och anropa `super.onCreate()`, måste `Activity` åsidosätta `onMAMCreate()` och anropa `super.onMAMCreate()`. Java-kompilatorn ska framtvinga de slutliga begränsningarna för att förhindra oavsiktlig åsidosättning av den ursprungliga metoden i stället för motsvarande MAM.
 
 ### <a name="mamapplication"></a>MAMApplication
-Om din app skapar underklassen `android.app.Application` **måste** du skapa underklassen `com.microsoft.intune.mam.client.app.MAMApplication` i stället. Om din app inte skapar `android.app.Application` som en underklass **måste** du ange `"com.microsoft.intune.mam.client.app.MAMApplication"` som `"android:name"`-attribut i taggen `<application>` i AndroidManifest.xml.
+Om din app skapar en underklass av `android.app.Application` så **måste** du skapa en underklass av `com.microsoft.intune.mam.client.app.MAMApplication` i stället. Om din app inte skapar `android.app.Application` som en underklass **måste** du ange `"com.microsoft.intune.mam.client.app.MAMApplication"` som `"android:name"`-attribut i taggen `<application>` i AndroidManifest.xml.
 ### <a name="pendingintent"></a>PendingIntent
 I stället för `PendingIntent.get*` måste du använda `MAMPendingIntent.get*`-metoden. Därefter kan du använda resulterande `PendingIntent` som vanligt.
 
@@ -462,7 +463,7 @@ Inga ytterligare manifestvärden behöver konfigureras.
 
 Authority och NonBrokerRedirectURI kan anges om det behövs.
 
-Intune SDK-teamet kommer att begära appens program-ID (klient-ID). Du hittar det i kolumnen för **program-ID** under **Alla program**  på [Azure Portal](https://portal.azure.com/). Information om hur du registrerar ett program med AAD finns [här](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Intune SDK-teamet kan nås på msintuneappsdk@microsoft.com.
+Intune SDK-teamet kommer att begära appens program-ID (klient-ID). Du hittar det i [Azure-portalen](https://portal.azure.com/), under **Alla program**, i kolumnen för **program-ID**. Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Intune SDK-teamet kan nås på msintuneappsdk@microsoft.com.
 
 Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
@@ -472,22 +473,30 @@ Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
     |--|--|
     | ClientID | Appens ClientID (genereras av Azure AD när appen registreras) |
     | SkipBroker | **True** |
+    
+    Authority och NonBrokerRedirectURI kan anges om det behövs.
 
-Authority och NonBrokerRedirectURI kan anges om det behövs.
 
 ### <a name="conditional-access"></a>Villkorlig åtkomst
-Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-conditional-access-developer) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser.  [Intune-administratörer kan definiera regler för villkorlig åtkomst](https://docs.microsoft.com/en-us/intune/conditional-access) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttoken, eller om den endast kommer åt resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
+
+Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser. [Intune-administratörer kan definiera regler för villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttokens, eller om den endast kommer åt resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
 
 1. Följ [riktlinjerna för ADAL-integration](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
-   Se särskilt steg 11 för Broker-användning
-2. [Registrera ditt program med Azure Active Directory] (https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration). 
-   Du hittar omdirigerings-URI:n i riktlinjerna för ADAL-integration ovan.
-3. Ange manifestets metadataparametrar enligt informationen under punkt 2 i avsnittet [Vanliga ADAL-konfigurationer](#common-adal-configurations).
-4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](https://docs.microsoft.com/en-us/intune/conditional-access-intune-common-ways-use) på [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
-    - att inloggningen i din app kräver installation och registrering av Intunes företagsportal
-    - att inloggningen till appen fungerar korrekt efter registreringen.
-5. När din app har skickat Intune APP SDK-integration till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad villkorlig åtkomst](https://docs.microsoft.com/en-us/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
-6. När din app har lagts till i listan med godkända appar bekräftar du detta genom att [konfigurera appbaserad villkorlig åtkomst](https://docs.microsoft.com/en-us/intune/app-based-conditional-access-intune-create) och kontrollera att inloggningen till din app fungerar korrekt.
+   Se särskilt steg 11 för Broker-användning.
+
+2. [Registrera ditt program med Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). Omdirigerings-URI finns i riktlinjerna för ADAL-integrering ovan.
+
+3. Ange manifestets metadataparametrar enligt informationen under punkt 2 i avsnittet [Vanliga ADAL-konfigurationer](#common-adal-configurations) ovan.
+
+4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) på [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
+* att inloggningen i din app begär installation och registrering av Intune-företagsportalen
+* att inloggningen till appen fungerar korrekt efter registreringen.
+
+5. När appen har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
+
+6. När din app har lagts till i listan med godkända appar bekräftar du detta genom att [konfigurera appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) och kontrollera att inloggningen till din app fungerar korrekt.
+
+
 ## <a name="app-protection-policy-without-device-enrollment"></a>Appskyddsprincip utan enhetsregistrering
 
 ### <a name="overview"></a>Översikt
@@ -601,7 +610,7 @@ void unregisterAccountForMAM(String upn);
 Result getRegisteredAccountStatus(String upn);
 ```
 
-1. Om du vill registrera ett hanteringskonto ska appen anropa `registerAccountForMAM()`. Ett användarkonto identifieras av både sitt UPN och sitt användar-ID för AAD. Klient-ID krävs dessutom för att associera registreringsdata med användarens AAD-klient. Användarens behörighet kan också anges för att tillåta registrering mot specifika nationella moln. Mer information finns i avsnittet om [registrering av nationella moln](#sovereign-cloud-registration).  SDK kan försöka registrera appen för angiven användare i MAM-tjänsten. Om registreringen misslyckas görs nya försök regelbundet tills kontot är avregistrerat. Återförsöksperioden är vanligtvis 12–24 timmar. SDK:n innehåller statusen för registreringsförsöken via meddelanden asynkront.
+1. Om du vill registrera ett hanteringskonto ska appen anropa `registerAccountForMAM()`. Ett användarkonto identifieras av både sitt UPN och sitt användar-ID för AAD. Klient-ID krävs dessutom för att associera registreringsdata med användarens AAD-klient. Användarens behörighet kan även anges för att tillåta registrering mot specifika nationella moln. Mer information finns i avsnittet [Registrering av nationella moln](#sovereign-cloud-registration).  SDK kan försöka registrera appen för angiven användare i MAM-tjänsten. Om registreringen misslyckas görs nya försök regelbundet tills kontot är avregistrerat. Återförsöksperioden är vanligtvis 12–24 timmar. SDK:n innehåller statusen för registreringsförsöken via meddelanden asynkront.
 
 2. Eftersom AAD-autentisering krävs, är den bästa tiden att registrera användarkontot när användaren har loggat in i appen och har autentiserats med hjälp av ADAL.
     * Användarens AAD-ID och klient-ID returneras från ADAL-autentiseringens anrop som en del av [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android)-objektet. Klientens ID kommer från `AuthenticationResult.getTenantID()`-metoden.
@@ -611,7 +620,7 @@ Result getRegisteredAccountStatus(String upn);
 
 ### <a name="sovereign-cloud-registration"></a>Registrering av nationella moln
 
-Program som är kopplade till [nationella moln](https://www.microsoft.com/en-us/trustcenter/cloudservices/nationalcloud) **måste** ange `authority` till `registerAccountForMAM()`.  Det gör du genom att ange `instance_aware=true` i ADAL:s [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters följt av ett anrop till `getAuthority()` på AuthenticationCallback AuthenticationResult.
+Program som är [kopplade till nationella moln](https://www.microsoft.com/en-us/trustcenter/cloudservices/nationalcloud) **måste** ange `authority` till `registerAccountForMAM()`.  Det gör du genom att ange `instance_aware=true` i ADAL:s [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters följt av ett anrop till `getAuthority()` på AuthenticationCallback AuthenticationResult.
 
 ```
 mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBehavior.FORCE_PROMPT, "instance_aware=true",
@@ -1371,7 +1380,6 @@ Vyer som genererats av MAM SDK kan anpassas visuellt för att bättre matcha app
 
 ### <a name="how-to-customize"></a>Så här anpassar du
 För att kunna tillämpa formatändringarna på Intunes MAM-vyer måste du först skapa en XML-fil som åsidosätter formatet. Den här filen placeras i katalogen ”/res/xml” i din app och du kan döpa den till vad du vill. Nedan visas ett exempel på det format som den här filen måste följa.
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <styleOverrides>
@@ -1401,7 +1409,7 @@ Nedan visas den fullständiga listan med tillåtna attribut, UI-element som de s
 | Accentfärg | PIN-kodrutans kantlinje när den är markerad <br> Hyperlänkar |accent_color | Färg |
 | Applogotyp | Stor ikon som visas på Intune-appens PIN-kodskärm | logo_image | Ritbar |
 
-## <a name="working-with-app-we-service-enrollment-sdk-integrated-android-lob-app-and-adal-sso-optional"></a>Arbeta med APP-WE-tjänstregistrering, SDK-integrerad Android LOB-app och ADAL SSO (valfritt)
+## <a name="default-enrollment-optional"></a>Standardregistrering (valfritt)
 <!-- Requiring user login prompt for an automatic APP-WE service enrollment, requiring Intune app protection policies in order to use your SDK-integrated Android LOB app, and enabling ADAL SSO (optional) -->
 
 Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den SDK-integrerade Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den SDK-integrerade Android LOB-appen. Detta stöds **inte** för Store-appar som kan användas av användare som inte använder Intune.
@@ -1413,7 +1421,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 * Intune SDK-teamet kommer att kräva appens program-ID. Det går att hitta via [Azure Portal](https://portal.azure.com/), under **Alla program**, i kolumnen för **Program-ID**. Ett bra sätt att kontakta Intune SDK-teamet är att skicka e-post till msintuneappsdk@microsoft.com.
 
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
-De här anvisningarna är specifika för alla Android- och Xamarin-appar som vill kräva Intune-appskyddsprinciper som ska användas på en slutanvändarenhet.
+De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare som vill kräva Intune-appskyddsprinciper för appanvändning på en slutanvändarenhet.
 
 1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
    > [!NOTE] 

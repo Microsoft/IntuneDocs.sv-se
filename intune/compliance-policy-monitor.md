@@ -1,54 +1,54 @@
 ---
-title: Övervaka Microsoft Intunes enhetsefterlevnadsprinciper
-titlesuffix: ''
+title: Övervaka efterlevnadsprinciper för enheter i Microsoft Intune – Azure | Microsoft Docs
 description: Använd instrumentpanelen för enhetsefterlevnad för att övervaka övergripande enhetsefterlevnad, visa rapporter och visa enhetsefterlevnad per princip och per inställning.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 2/27/2018
+ms.date: 6/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c4c3c3a2d73c6390ef5761f1bd0b12fe55855c6e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 33e42c821881a5cc7eb9e4be65f6f7e56263480e
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831879"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232978"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
 Med efterlevnadsrapporter kan administratörer analysera enheternas efterlevnadsstatus i organisationen och snabbt felsöka efterlevnadsrelaterade problem som användarna upplever i organisationen. Du kan visa information om den övergripande efterlevnadsstatusen för enheter, efterlevnadsstatusen för enskilda inställningar, efterlevnadsstatusen för enskilda principer och gå vidare till enskilda enheter och visa de specifika inställningar och principer som påverkar dem.
 
-> [!NOTE]
-> Vi inför vissa säkerhetsförbättringar som baserats på dina synpunkter i Intune-tjänsten i mars. Beroende på hur dina efterlevnadsprinciper har konfigurerats, kan du behöva vidta åtgärder för att undvika att förlora e-poståtkomsten för dina slutanvändare. Mer information finns i [Kommande säkerhetsförbättringar](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
-
 ## <a name="before-you-begin"></a>Innan du börjar
 
 Så här hittar du **instrumentpanelen för Intune-enhetsefterlevnad** i Azure Portal:
 
-1.  Gå till [Azure Portal](https://portal.azure.com) och logga in med dina Intune-autentiseringsuppgifter.
+1. I [Azure-portalen](https://portal.azure.com) loggar du in med dina Intune-autentiseringsuppgifter.
 
-2.  Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 
-3.  Välj **Intune** &gt; **Enhetsefterlevnad** &gt; **Översikt**. **Instrumentpanelen för enhetsefterlevnad** öppnas.
+3. Välj **Enhetsefterlevnad** > **Översikt**. **Instrumentpanelen för enhetsefterlevnad** öppnas.
 
 > [!IMPORTANT]
 > Enheter måste registreras i Intune för att kunna ta emot principer för enhetsefterlevnad.
 
 ## <a name="device-compliance-dashboard"></a>Instrumentpanelen för enhetsefterlevnad
 
-På **instrumentpanelen för enhetsefterlevnad** kan du övervaka enhetens olika efterlevnadsstatusar genom rapporter från olika paneler som tillhandahåller efterlevnadsstatusarna för olika enheter i din organisation. Du kan visa följande rapporter:
+I **instrumentpanelen för enhetsefterlevnad** kan du övervaka efterlevnad för olika enheter, deras skyddsstatus och mer. Du kan visa följande rapporter:
 
--   Övergripande samlad enhetsefterlevnad
+- Övergripande samlad enhetsefterlevnad
 
--   Enhetsefterlevnad per princip
+- Enhetsefterlevnad per princip
 
--   Enhetsefterlevnad per inställning
+- Enhetsefterlevnad per inställning
+
+- Enhetsskyddsstatus
+
+- Status för hotagent
 
 ![Bild på instrumentpanelen för enhetsefterlevnad](./media/idc-1.png)
 
@@ -58,26 +58,26 @@ Du kan också visa specifika efterlevnadsprinciper och inställningar som gälle
 
 Det är ett ringdiagram som visar den samlade enhetsstatusen för alla Intune-registrerade enheter. Enhetens efterlevnadsstatusar sparas i två olika databaser – Intune och Azure Active Directory. Här finns mer information om statusen för enhetens efterlevnadsprinciper:
 
--   **Kompatibel**: Enheten har tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål.
+- **Kompatibel**: Enheten har tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål.
 
--   **Inte kompatibel:** Enheten har inte tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål, eller så har användaren inte uppfyllt de principer administratören har satt upp som mål.
+- **Inte kompatibel:** Enheten har inte tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål, eller så har användaren inte uppfyllt de principer administratören har satt upp som mål.
 
--   **Respitperiod:** Administratören har satt upp en eller flera principer för enhetsefterlevnad som mål för enheten, men användaren har inte tillämpats principerna ännu, vilket innebär att enheten är inkompatibel, men att den fortfarande befinner sig i en respitperiod som administratören har definierat.
+- **Respitperiod:** Administratören har satt upp en eller flera principer för enhetsefterlevnad som mål för enheten, men användaren har inte tillämpats principerna ännu, vilket innebär att enheten är inkompatibel, men att den fortfarande befinner sig i en respitperiod som administratören har definierat.
 
-    -   Läs mer om åtgärder för inkompatibla enheter.
+  - Läs mer om åtgärder för inkompatibla enheter.
 
--   **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus på grund av någon av följande orsaker:
+- **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus på grund av någon av följande orsaker:
 
-    -   **Okänd**: Enheten är offline eller kunde inte kommunicera med Intune eller Azure AD av andra orsaker.
+  - **Okänd**: Enheten är offline eller kunde inte kommunicera med Intune eller Azure AD av andra orsaker.
 
-    -   **Fel**: Enheten kunde inte kommunicera med Intune eller Azure AD och tog emot ett felmeddelande som angav orsaken.
+  - **Fel**: Enheten kunde inte kommunicera med Intune eller Azure AD och tog emot ett felmeddelande som angav orsaken.
 
 > [!IMPORTANT]
 > Enheter som har registrerats i Intune men inte utgör mål för någon enhetsefterlevnadsprincip, inkluderas i den här rapporten under bucketen **Kompatibel**.
 
 #### <a name="drill-down-option"></a>Alternativet Öka detaljnivån
 
-Om du klickar på ikonen Enhetsefterlevnad i **instrumentpanelen för enhetsefterlevnad** kan du öka detaljnivån för en enskild **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadsprinciperna.
+I **instrumentpanelen för enhetsefterlevnad** väljer du en enhetsefterlevnadsruta för att öka detaljnivån till en specifik **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet är mål för enhetsefterlevnadsprinciperna.
 
 ![Bild på ökad detaljnivå på instrumentpanelen för enhetsefterlevnad](./media/idc-2.png)
 
@@ -91,43 +91,43 @@ Du kan också klicka på de olika efterlevnadsstatusarna i diagrammet över enhe
 
 #### <a name="filter"></a>Filter
 
-Om du klickar på **filterknappen** visas följande alternativ:
+När du väljer **filterknappen** visas följande alternativ:
 
--   Modell
+- Modell
 
-    -   Textruta för fritextsökning
-<br></br>
--   Plattform
+  - Textruta för fritextsökning
 
-    -   Android
+- Plattform
 
-    -   iOS
+  - Android
 
-    -   macOS
+  - iOS
 
-    -   Windows
+  - macOS
 
-    -   Windows Phone
+  - Windows
 
--   Status
+  - Windows Phone
 
-    -   Kompatibel
+- Status
 
-    -   Ej kompatibel
+  - Kompatibel
 
-    -   Respitperiod
+  - Ej kompatibel
 
-    -   Okänt
+  - Respitperiod
 
-    -   Fel
+  - Okänt
 
-Om du klickar på knappen **Uppdatera** stängs fältet och resultatet uppdateras enligt de valda filtervillkoren.
+  - Fel
+
+När du väljer **uppdateringsknappen** stängs fältet och resultatet uppdateras enligt de valda filtervillkoren.
 
 ##### <a name="device-details"></a>Information om enhet
 
-Om du klickar på en enhet öppnas **fönstret Enheter** med enheten vald, och mer information om enhetens efterlevnadsprincipinställning visas.
+Om du markerar en enhet öppnas **Enheter** med enheten markerad. Där finns mer information om inställningarna för enhetens efterlevnadsprincip.
 
-När du klickar på enhetens principinställning visas namnet på enhetsefterlevnadsprincip som gav upphov till den enhetsefterlevnadsinställning som administratören har satt upp som mål.
+När du markerar enhetens principinställning visas namnet på enhetsefterlevnadsprincip som gav upphov till den enhetsefterlevnadsinställning som administratören har satt upp som mål.
 
 ### <a name="devices-without-compliance-policy"></a>Enheter utan policy för efterlevnad
 Den här rapporten identifierar enheter som inte har några tilldelade efterlevnadsprinciper. Med införandet av säkerhetsinställningen som markerar alla enheter utan efterlevnadsprinciper som ”icke-kompatibla” är det viktigt att kunna identifiera dessa enheter. Du kan sedan tilldela minst en policy för efterlevnad till dem.
@@ -157,3 +157,10 @@ Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet
 ![Bild som visar rapport om enhetsefterlevnad per inställning](./media/idc-10.png)
 
 När du klickar på ikonen Inställningsefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadens principinställningar. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadens principinställning.
+
+## <a name="how-intune-resolves-policy-conflicts"></a>Så här löser Intune principkonflikter
+Principkonflikter kan uppstå när flera Intune-principer används på en enhet. Om principinställningarna överlappar varandra löser Intune eventuella konflikter med hjälp av följande regler:
+
+- Om de motstridiga inställningarna gäller en Intune-konfigurationsprincip och en efterlevnadsprincip, prioriteras inställningarna i efterlevnadsprincipen framför inställningarna i konfigurationsprincipen. Detta gäller även om inställningarna i konfigurationsprincipen är säkrare.
+
+- Om du har distribuerat flera efterlevnadsprinciper använder Intune den säkraste av dessa principer.

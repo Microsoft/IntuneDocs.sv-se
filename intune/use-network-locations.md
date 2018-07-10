@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ayesham
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b6ab5e4de2d3a888d6b3372b75b9a95af54a591a
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 988407d6d736b669854ef8420b71a092765162b7
+ms.sourcegitcommit: 445fcf9e2a185e5c987334cad398bce71383be03
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745170"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843131"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Använda platser (nätverksstängsel) i Intune
 
@@ -35,7 +35,7 @@ På din tillverkningsanläggning använder vissa anställda Android-enheter. En 
 2. Skapa en efterlevnadsprincip som kräver att enheterna är anslutna till företagsnätverket och tilldela den här principen.
 3. Om enheten lämnar tillverkningsanläggningen betraktas den som inkompatibel och har inte längre åtkomst till företagsresurser.
 
-Med hjälp av Intune-principer kan du skicka en inkompatibilitetsavisering, samt även låsa enheten. När enheten är tillbaka på tillverkningsanläggningen, och på nätverksplatsen, kan enheten låsas upp och återigen få åtkomst till företagsresurser.
+Dessutom kan du lägga till [åtgärder vid inkompatibilitet](#configure-the-actions-for-noncompliance). När enheten är tillbaka lokalt på anläggningen och på nätverksplatsen får den återigen åtkomst till företagsresurser.
 
 ## <a name="prerequisites"></a>Krav
 

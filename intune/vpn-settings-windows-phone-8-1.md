@@ -13,11 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3572022b491439d2cf624b2ed3f1d53ffaf54d7d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 3397c10ae572a248507f15e5145fef68898d30c4
+ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291452"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Windows Phone 8.1
 
@@ -56,7 +57,7 @@ Beroende på vilka inställningar du väljer kan bara vissa värden i följande 
 - **Roll** (endast Pulse Secure) – Ange namnet på den användarroll som har åtkomst till anslutningen. En användarroll definierar personliga inställningar och alternativ, och aktiverar eller inaktiverar vissa åtkomstfunktioner.
 - **Sfär** (endast Pulse Secure) – Ange namnet på den autentiseringssfär som du vill använda. En autentiseringssfär är en grupp av autentiseringsresurser som används av Pulse Secure-anslutningstypen.
 
-- **Söklista för DNS-suffix** - **Lägg till** ett eller flera DNS-suffix. Varje DNS-suffix som du anger genomsöks vid anslutning till en webbplats med ett kort namn. Ange exempelvis DNS-suffixen **domain1.contoso.com** och **domain2.contoso.com**, gå till URL:en **http://mywebsite**. URL:erna **http://mywebsite.domain1.contoso.com** och **http://mywebsite.domain2.contoso.com söks igenom** .
+- **Söklista för DNS-suffix** - **Lägg till** ett eller flera DNS-suffix. Varje DNS-suffix som du anger genomsöks vid anslutning till en webbplats med ett kort namn. Ange exempelvis DNS-suffixen **domain1.contoso.com** och **domain2.contoso.com** och gå till URL:en `http://mywebsite`, så söks URL:erna `http://mywebsite.domain1.contoso.com` och `http://mywebsite.domain2.contoso.com` igenom.
 
 - **Anpassad XML** – Ange anpassade XML-kommandon som konfigurerar VPN-anslutningen.
 

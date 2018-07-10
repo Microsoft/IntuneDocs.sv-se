@@ -5,19 +5,19 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 5/20/2018
+ms.date: 6/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: fd63fb2023b4712a3ad49838f87f5b7cc8320954
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
+ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744898"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822729"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -157,7 +157,7 @@ Du kan t.ex. använda följande värden i **Lägga till eller redigera OMA-URI-i
 > Mer information om MS DM-server finns i [DMClient-konfigurationsprovider](https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
 
 ## <a name="pause-updates"></a>Pausa uppdateringar
-Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från det att du pausar uppdateringarna. Efter det att det maximala antalet pausdagar har passerat upphör funktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen.
+Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar i upp till 35 dagar från det att du pausar uppdateringarna. Efter det att det maximala antalet dagar har passerat upphör pausfunktionen automatiskt och enheten söker efter tillämpliga uppdateringar på Windows Update. Efter den här sökningen kan du pausa uppdateringarna igen.
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
@@ -169,10 +169,13 @@ Du kan pausa en enhet från att ta emot funktions- eller kvalitetsuppdateringar 
 > Om en målenhet har inaktiverats när du utfärdar pauskommandot kan det hända att den hämtar och installerar schemalagda uppdateringar innan den checkar in på Intune.
 
 ### <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Avinstallera den senaste versionen från programuppdateringar för Windows 10 
-Om du upptäcker ett allvarligt problem på dina Windows 10-datorer kan du avinstallera den senaste funktionsuppdateringen eller den senaste kvalitetsuppdateringen. Du kan bara avinstallera en funktions- eller kvalitetsuppdatering via enhetens underhållskanal. Vid avinstallationen utlöses en princip för att återställa den tidigare uppdateringen på Windows 10-datorerna. För funktionsuppdateringar specifikt kan du begränsa tiden från 2–60 dagar som en avinstallation av den senaste versionen kan tillämpas. Om du vill ange alternativ för avinstallation av programuppdateringar väljer du **Programuppdateringar** från bladet **Microsoft Intune** i Azure Portal. Välj sedan **Windows 10-uppdateringsringar** på bladet **Programuppdateringar**. Du kan sedan välja alternativet **Avinstallera** i avsnittet **Översikt**.
+Om du upptäcker ett allvarligt problem på dina Windows 10-datorer kan du avinstallera den senaste funktionsuppdateringen eller den senaste kvalitetsuppdateringen. Du kan bara avinstallera en funktions- eller kvalitetsuppdatering via enhetens underhållskanal. Vid avinstallation utlöses en princip för att återställa den tidigare uppdateringen på Windows 10-datorerna. För funktionsuppdateringar specifikt kan du begränsa tiden från 2–60 dagar som en avinstallation av den senaste versionen kan tillämpas. Så här ställer du in alternativ för avinstallation av programvaruuppdatering:
+
+1. I Intune väljer du **Programuppdateringar**.
+2. Välj **Windows 10-uppdateringsringar** > välj en befintlig uppdateringsring > **Avinstallera**.
 
 > [!NOTE]
-> När kvalitetsuppdateringen har återställts på Windows 10-datorer kan användarna fortfarande se den återställda uppdateringen genom att välja **Windows-inställningar** > **Uppdateringar** > **Uppdateringshistorik**.
+> När kvalitetsuppdateringen har ångrats på Windows 10-datorer fortsätter slutanvändare att se uppdateringen listad i **Windows-inställningar** > **Uppdateringar** > **Uppdateringshistorik**.
 
 ## <a name="windows-holographic-for-business-support"></a>Stöd för Windows Holographic for Business
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 75e36456c03cd0a769e9741606a2b70fa7e49c35
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: caed42642a87d38076f755cd356cc7ab7c6a3d8a
+ms.sourcegitcommit: 95ffcd5ddd3e5df7d68ae75218c5ff2ea076133e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745000"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36263412"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -56,8 +56,8 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Office 365-appar för macOS | Store-app (Office 365) | Välj **macOS** under **Office 365-paket** som **apptyp**, och välj sedan Office 365-appaketet. |
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |
 | iOS LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.ipa**.  |
-| Windows Phone LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.xap**.  |
-| Verksamhetsspecifika Windows-appar | Verksamhetsspecifik app | Välj **Branschspecifik** app som apptyp, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.msi**, **.appx** eller **.appxbundle**. |
+| Windows Phone LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Windows Phone-installationsfil med tillägget **.xap**.  |
+| Verksamhetsspecifika Windows-appar | Verksamhetsspecifik app | Välj **Branschspecifik** app som apptyp, välj **Appaketfil** och ange sedan en Windows-installationsfil med tillägget **.msi**, **.appx** eller **.appxbundle**. |
 | Inbyggd iOS-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Inbyggd Android-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Webbappar  | Webbapp  | Välj **Webblänk** som **apptyp** och ange sedan en giltig URL som pekar till webbappen.  |

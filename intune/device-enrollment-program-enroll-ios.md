@@ -15,11 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f6f16bfd148e3c386aaf0ced78381e1eed8ae47
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: 8c0eda06c0c781f0a789034abbf5ef8799a9b45c
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34474454"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -206,13 +207,17 @@ Se [Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet](/intune
 ## <a name="renew-a-dep-token"></a>Ladda upp en DEP-token  
 1. Gå till deploy.apple.com.  
 2. Under **Hantera servrar**, väljer du din MDM-server som är associerad med den tokenfil som du vill förnya.
-3. Välj **Skapa ny Token**.  
+3. Välj **Skapa ny Token**.
+
+    ![Skärmbild av Skapa ny token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
+
 4. Välj **Din servertoken**.  
-5. I [Intune i Azure Portal](https://aka.ms/intuneportal), väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens**.  
-6. Välj token och välj sedan **Förnya token**.  
-7. Ange det Apple-ID som användes för att skapa den ursprungliga token.  
+5. I [Intune i Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj token.
+    ![Skärmbild avregistreringsprogramtokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
+
+6. Välj **Förnya token** och ange det Apple-ID som användes för att skapa den ursprungliga token.  
+    ![Skärmbild av Skapa ny token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
+
 8. Överför den nyligen hämtade token.  
 9. Välj **Förnya token**. Du får se en bekräftelse att token har förnyats.   
-
-
-
+    ![Skärmbild av bekräftelse.](./media/device-enrollment-program-enroll-ios/confirmation.png)

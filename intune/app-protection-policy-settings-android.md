@@ -15,12 +15,12 @@ ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 97ddb881e497c5b9e5bb5b36d19c13ab2722b538
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 75d3f9312a6f3a88706070ab29e674cb6d53bf4f
+ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744830"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305424"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Inställningar för Android-appskyddsprinciper i Microsoft Intune
 I den här artikeln beskrivs inställningarna för appskyddsprinciper för Android-enheter. Principinställningarna som beskrivs kan [konfigureras](app-protection-policies.md) för en appskyddsprincip på bladet **Inställningar** i Azure Portal.
@@ -69,8 +69,7 @@ Det finns två kategorier för principinställningar: inställningar för datafl
 
   |App-/tjänstnamn | Description | Villkor för undantag|
   | ------ | ---- | --- |
-  | com.android.chrome | Webbläsaren Google Chrome | Chrome används för vissa WebView-komponenter i Android 7.0+ och är aldrig dolt. Dataflödet till och från appen är dock alltid begränsat.
-  | com.skype.raider | Skype | Skype-appen tillåts endast för vissa åtgärder som resulterar i ett telefonsamtal. |
+  | com.android.chrome | Webbläsaren Google Chrome | Chrome används för vissa WebView-komponenter i Android 7.0+ och är aldrig dolt. Dataflödet till och från appen är dock alltid begränsat.  | com.skype.raider | Skype | Skype-appen tillåts endast för vissa åtgärder som resulterar i ett telefonsamtal. |
   | com.android.providers.media | Androids medieinnehållsprovider | Medieinnehållsprovidern tillåts endast för val av ringsignal. |
   | com.google.android.gms; com.google.android.gsf | Google Play Services-paket | Dessa paket tillåts för Google Cloud Messaging-åtgärder, till exempel push-meddelanden. |
 
@@ -86,7 +85,7 @@ Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-p
 | **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** | Konfigurera följande inställningar: <ul><li>**Tidsgräns**: Det här är antalet minuter innan åtkomstkraven (vilket definieras tidigare i principen) kontrolleras igen. En administratör aktiverar exempelvis PIN-kod och blockerar rotade enheter i principer, så att en användare som öppnar en Intune-hanterad app måste ange en PIN och måste använda appen på en enhet som inte är rotad. När du använder den här inställningen behöver användaren inte ange någon PIN-kod eller gå igenom en till kontroll för rotidentifiering i Intune-hanterade appar under ytterligare **30 minuter** (standardvärde). <br><br> **Obs!** På Android delas PIN-koden mellan alla Intune-hanterade appar. PIN-timern återställs när appen lämnar enhetens förgrund. Användaren behöver inte ange en PIN-kod på någon Intune-hanterad app som delar sin PIN under perioden för den tidsgräns som anges i denna inställning. <br><br> Det här principinställningsformatet stöder ett positivt heltal.<br></li><li>**Offlinerespittid**: Det här är antalet minuter som MAM-appar kan köras offline, specificera tiden (i minuter) innan åtkomstkraven för appen kontrolleras igen. Standardvärde = **720** minuter (12 timmar). När denna period har löpt ut kräver appen autentisering av användare till Azure Active Directory (Azure AD) för att appen ska kunna fortsätta köras.<br><br> Det här principinställningsformatet stöder ett positivt heltal.</li></ul>| Tidsgräns: 30 <br><br> Offline: 720 |
 | **Offlineintervall innan appdata rensas (dagar)** | Efter så här många dagars (definieras av administratören) offlinekörning kräver appen att användaren ansluter till nätverket och autentiserar igen. Vid lyckad autentisering kan användaren fortsätta att få åtkomst till sina data och offlineintervallet återställs.  Om autentiseringen misslyckas utför appen en selektiv rensning av användarens konto och data.  Se [Hur du rensar endast företagsdata från Intune-hanterade appar](https://docs.microsoft.com/intune/apps-selective-wipe) om du vill ha mer information om vilka data som tas bort med en selektiv rensning.<br><br> Det här principinställningsformatet stöder ett positivt heltal. | 90 dagar |
 | **Blockera skärmdump och Android Assistant (Android 6.0+)** | Välj **Ja** om du vill blockera funktionerna för skärmdumpar och **Android-assistenten** på enheten när appen används. Om du väljer **Ja** blir även förhandsgranskningsbilden i appväxlaren suddig när den här appen används med ett arbets- eller skolkonto. | Nej |
-| **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet. | Nej |
+| **Inaktivera appens PIN-kod när enheten PIN-kod hanteras** | Välj **Ja** om du vill inaktivera appens PIN-kod när ett enhetslås har identifierats på en registrerad enhet.<br><br>**Obs!** Intune kan inte identifiera enhetsregistrering med en tredje parts EMM-lösning på iOS.  | Nej |
 | **Minimikrav på Android-operativsystem** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att blockeras från åtkomst om Android-versionen på enheten inte uppfyller kravet.<br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej |
 | **Minimikrav på Android-operativsystem (endast varning)** | Välj **Ja** för att ange ett minimikrav på det Android-operativsystem som ska använda appen. Användaren kommer att få ett meddelande ifall Android-versionen på enheten inte uppfyller kravet. Det här meddelandet kan avvisas.<br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. | Nej |
 | **Minimikrav på appversion** | Välj **Ja** för att ange ett minimikrav på appversionen för att använda appen. Användaren kommer att blockeras från åtkomst om appversionen på enheten inte uppfyller kraven.<br><br>Eftersom appar ofta har egna versionsscheman kan du skapa en princip med ett minimikrav på appversion riktat mot en specifik app (till exempel, ”Outlook versionsprincip”). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision.| Nej |

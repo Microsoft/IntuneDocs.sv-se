@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9132000f5fcf43251bcc1e9b903ea03551e0b85e
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 606c173c1723d526436b9ae75d9a4085883f071b
+ms.sourcegitcommit: 29eaf27323763a5a200ec64b8679397c4b988f33
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34178170"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305441"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -126,6 +126,8 @@ I många organisationer är det vanligt att tillåta användare att använda bå
 Eftersom Intune-appskyddsprinciper är riktade till en användares identitet gäller skyddsinställningarna för en användare vanligtvis både för registrerade (MDM-hanterade) och icke-registrerade enheter (utan MDM). Därför kan du rikta en Intune-appskyddsprincip till antingen Intune-registrerade eller icke registrerade iOS- och Android-enheter. Du kan ha en skyddsprincip för ohanterade enheter där ett strikt dataförlustskydd (DLP) används och en separat skyddsprincip för MDM-hanterade enheter, där du kan använda lite mindre strikta DLP-kontroller. 
 
 För att skapa de här principerna bläddrar du till **Mobilappar** > **Appskyddsprinciper** i Intune-konsolen och klickar på **Lägg till en princip**. Du kan även redigera eller en befintlig princip. Om du vill att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in inställningen **Target to all app types** (Gäller för alla apptyper) på **Nej**. 
+
+För att iOS-appar ska anses vara ”hanterade” måste konfigurationsinställningen **IntuneMAMUPN** för princip distribueras för varje app. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
 > Läs [MAM protection policies targeted based on management state](whats-new.md#mam-protection-policies-targeted-based-on-management-state-) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.

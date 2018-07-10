@@ -2,10 +2,10 @@
 title: RBAC med Microsoft Intune
 description: Läs hur du med rollbaserad åtkomstkontroll (RBAC) kan styra vem som får utföra åtgärder och göra ändringar i Microsoft Intune.
 keywords: ''
-author: ErikjeMS
-ms.author: erikje
+author: dougeby
+ms.author: dougeby
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 02/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8cce5da762c119ec04553d80d717fb586c962566
-ms.sourcegitcommit: 698bd1488be3a269bb88c077eb8d99df6e552a9a
+ms.openlocfilehash: 287e644e50b1f6b41f404cfd2102a8efc0fbaad9
+ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34474572"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
@@ -26,7 +27,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
 - **Rolldefinition**: namnet på rollen, de resurser som den hanterar och behörigheterna för varje resurs.
 - **Medlemmar**: de användargrupper som har behörigheten.
-- **Omfång**: De användar- eller enhetsgrupper som medlemmar kan rikta app- eller principdistribution till, eller utföra fjärråtgärder för.
+- **Omfång**: användar- eller enhetsgrupper som medlemmarna kan hantera.
 - **Tilldelning** – När definitionen, medlemmar och omfång har konfigurerats är rollen tilldelad.
 
 ![Intune RBAC-exempel](./media/intune-rbac-1.PNG)
@@ -59,7 +60,8 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 - **Supportavdelning**: Utför fjärråtgärder på användare och enheter och kan tilldela program eller principer till användare eller enheter.
 - **Princip- och profilhanterare**: Hanterar principer för efterlevnad, konfigurationsprofiler, Apple-registrering och företagets enhetsidentifierare.
 - **Användare med skrivskydd**: Visar information om användare, enhet, registrering, konfiguration och programmet. Kan inte göra ändringar i Intune.
-- **Programhanterare**: hanterar mobila och hanterade program och kan läsa enhetsinformation.
+- **Programhanterare**: hanterar mobila och hanterade program, kan läsa enhetsinformation och kan visa enhetsinformationsprofiler.
+- **Intune-rolladministratör**: hanterar anpassade Intune-roller och lägger till tilldelningar för inbyggda Intune-roller. Det är den enda Intune-rollen som kan tilldela behörigheter till administratörer.
 - **Skoladministratör**: Hanterar Windows 10-enheter i [Intune for Education](introduction-intune-education.md) och kan vidta följande åtgärder: 
 
 |Behörigheter|Aktivitet|
@@ -78,18 +80,20 @@ Följande roller är inbyggda i Intune och du kan tilldela dem till grupper utan
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. I fönstret **Intune** väljer du **Intune-roller** och sedan **Alla roller**.
-4. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
+1. I fönstret **Intune-roller – Alla roller** väljer du den inbyggda rollen som du vill tilldela.
 
-5. I rutan <*rollnamn*> – **Översikt** väljer du **Tilldelningar** > **Tilldela**.
+2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**.
 
     > [!NOTE]
     > Du kan inte ta bort eller redigera inbyggda roller
 
-6. I rutan **Rolltilldelningar** anger du ett **tilldelningsnamn** och en valfri **tilldelningsbeskrivning** och väljer sedan följande:
+3. I fönstret för anpassad roll väljer du **Tilldela**.
+
+4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera. Du kan också välja att ange omfånget till **Alla användare**, **Alla enheter** eller **Alla användare och enheter**.
+    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
 <br></br>
-7. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
+5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
 ### <a name="intune-rbac-table"></a>Intune RBAC-tabell
 
@@ -126,13 +130,13 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 
 1. I fönstret **Intune-roller – Alla roller** väljer du den anpassade rollen som du vill tilldela.
 
-2. I rutan <*rollnamn*> - **Översikt** väljer du **Tilldelningar**. I det här fönstret kan du även redigera eller ta bort befintliga roller.
+2. I fönstret <*rollnamn*> – fönstret **Översikt** väljer du **Hantera** och sedan **Tilldelningar**. I det här fönstret kan du även redigera eller ta bort befintliga roller.
 
 3. I fönstret för anpassad roll väljer du **Tilldela**.
 
 4. I fönstret **Rolltilldelningar** anger du ett **Namn** och en valfri **Beskrivning** för tilldelningen och väljer sedan följande:
     - **Medlemmar** – Välj en grupp som innehåller den användare som du vill ge behörighet.
-    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera. Du kan också välja att ange omfånget till **Alla användare**, **Alla enheter** eller **Alla användare och enheter**.
+    - **Omfång** – Välj en grupp som innehåller de användare som ovanstående medlem ska kunna hantera.
 <br></br>
 5. När du är klar klickar du på **OK**. Den nya tilldelningen visas i listan över tilldelningar.
 
@@ -143,5 +147,3 @@ Du kan skapa en anpassad roll som innehåller alla behörigheter som krävs för
 ## <a name="see-also"></a>Se även
 
 [Tilldela roller med hjälp av Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
-
-

@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e9c89098b9cb775e287cbe4c4ae4c56b9566b9fd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 861be39feab15c453fd102593b0501202faa3684
+ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31032599"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232944"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
-Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Därför har vi skapat den här referensguiden för de som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
+Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Den här referensguiden är till för dem som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
 ## <a name="quick-reference-guide"></a>Snabbguide
 
 |Funktion |Sökväg i den klassiska portalen|Sökväg i Intune i Azure-portalen|
@@ -45,27 +45,37 @@ Inställningar för företagsportalen|Administratör > Företagsportalen|**Hante
 Intune i Azure-portalen använder [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) till att hantera grupper.
 
 ## <a name="where-did-enrollment-rules-go"></a>Var finns registreringsreglerna?
-I den klassiska portalen gick det att ange regler för att styra MDM-registreringen av mobila och moderna Windows- och macOS-enheter:
+I den klassiska portalen gick det att ange regler för att styra MDM-registreringen av mobila och moderna Windows- och macOS-enheter.
 
 ![Bild av klassiska regler för registrering av mobil enhet](./media/01-classic-rules.png)
 
-Dessa regler tillämpades på alla användare i Intune-kontot utan undantag. I Azure-portalen visas dessa regler nu i två olika principtyper: Begränsningar av enhetstyp och Begränsningar för enhetsgräns:
+Dessa regler tillämpades på alla användare i Intune-kontot utan undantag. I Azure-portalen visas dessa regler nu i två olika principtyper: Begränsningar av enhetstyp och Begränsningar för enhetsgräns.
 
 ![Bild av registreringsbegränsningar för mobil enhet](./media/02-azure-enroll-restrictions.png)
 
-Standarden i begränsningen för enhetsgränser motsvarar enhetsregistreringsgränsen i den klassiska portalen:
+Standarden i begränsningen för enhetsgränser motsvarar enhetsregistreringsgränsen i den klassiska portalen.
 
 ![Bild av begränsningar för enhetsgräns i Azure](./media/03-azure-device-limit.png)
 
-Standarden i begränsningen för enhetstyper motsvarar plattformsbegränsningarna i den klassiska portalen:
+Standarden i begränsningen för enhetstyper motsvarar plattformsbegränsningarna i den klassiska portalen.
 
 ![Bild av begränsningar av enhetstyp i Azure](./media/04-azure-platform-restrictions.png)
 
-Möjligheten att tillåta eller blockera personligt ägda enheter hanteras nu under plattformskonfigurationerna för Begränsningar av enhetstyp:
+Möjligheten att tillåta eller blockera personligt ägda enheter hanteras nu under plattformskonfigurationerna för Begränsningar av enhetstyp.
 
 ![Bild av blockeringsinställningar för personlig enhet i Azure](./media/05-azure-personal-block.png)
 
 De nya begränsningsfunktionerna läggs endast till i Azure-portalen.
+
+## <a name="where-did-my-conditional-access-policies-go"></a>Vart tog mina principer för villkorlig åtkomst vägen?
+När din klientorganisation har migrerats till Azure-portalen fortsätter klientorganisationens principer för villkorlig åtkomst att tillämpas. Dock kan du inte visa eller ändra dem från Intune i Azure-portalen.
+
+Om du vill visa och göra ändringar i principer för villkorlig åtkomst från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om hur du migrerar principer för villkorlig åtkomst finns i [Migrera klassiska principer i Azure-portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+
+## <a name="where-did-my-compliance-policies-go"></a>Vart tog mina efterlevnadsprinciper vägen?
+När din klientorganisation har migrerats till Azure-portalen fortsätter klientorganisationens efterlevnadsprinciper att tillämpas. Dock kan du inte visa eller ändra dem från Intune i Azure-portalen.
+
+Om du vill visa och göra ändringar i efterlevnadsprinciper från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Var finns Apple DEP?
 I den klassiska portalen kunde du konfigurera Intune till att integrera med Apples program för enhetsregistrering och manuellt begära synkronisering med Apple-tjänsten:

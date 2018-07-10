@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/18/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: f8f81b4ff3bf5d17832d2f943fffb905eba52b6e
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: 2effa1d63be57c938a4e5763090bce8f20f48192
+ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042819"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för iOS
 
@@ -84,7 +85,7 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
    > [!NOTE]
    > Om du använder ramverket måste du ta bort simuleringsarkitekturen manuellt från det universella ramverket innan du skickar in appen till App Store. Se [Skicka in din app till App Store](#Submit-your-app-to-the-App-Store) för mer information.
 
-2. **Alternativ 2**: Länk till biblioteket `libIntuneMAM.a`. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
+   **Alternativ 2**: Länk till biblioteket `libIntuneMAM.a`. Dra `libIntuneMAM.a`-biblioteket till listan med **länkade ramverk och bibliotek** i projektets målkatalog.
 
     ![Intune App SDK iOS: länkade ramverk och bibliotek](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -99,7 +100,7 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
 
      ![Intune App SDK iOS: kopiera paketresurser](./media/intune-app-sdk-ios-copy-bundle-resources.png)
 
-     Lägg till dessa iOS-ramverk i projektet:  
+2. Lägg till dessa iOS-ramverk i projektet:  
     * MessageUI.framework  
     * Security.framework  
     * MobileCoreServices.framework  
@@ -152,6 +153,9 @@ Följ anvisningarna nedan om du vill aktivera Intune App SDK:
    |- o |  (Valfritt) `<Path to the output plist>` |
 
 Om parametern -o inte anges, kommer indatafilen att ändras på plats. Verktyget är idempotent och ska köras igen när det har gjorts ändringar i appens Info.plist eller rättigheter. Du bör också hämta och köra den senaste versionen av verktyget när du uppdaterar Intune SDK, om konfigurationskraven för Info.plist har ändrats i den senaste versionen.
+
+> [!NOTE]
+> Om din app inte redan använder FaceID redan bör du se till att info.plist-nyckeln `NSFaceIDUsageDescription` har konfigurerats med ett standardmeddelande. Detta krävs så att iOS meddelar användaren om hur appen har för avsikt att använda FaceID. En inställning för Intune-appskyddsprincip gör att FaceID kan användas som en åtkomstmetod till appen när den konfigurerats av IT-administratören.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurera Azure Active Directory Authentication Library (ADAL)
 
