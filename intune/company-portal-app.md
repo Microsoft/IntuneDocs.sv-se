@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c63e632036d38fb1fde2e4b26313b4447b9db25e
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 4535bdfa9b801c605c70c0a9dad900d76044eab4
+ms.sourcegitcommit: c78923b0d5b320322c828b1bbea2deb9062e30d2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744592"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37844988"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Så här konfigurerar du Microsoft Intune-företagsportalappen
 
@@ -56,7 +56,7 @@ Ange ditt företags supportinformation så att de anställda har kontaktuppgifte
 |**Telefonnummer** | 20 | Det här numret visas på sidan **Kontakta IT** så att medarbetarna kan kontakta dig för support. |
 |**E-postadress**| 40 | Den här adressen visas på sidan **Kontakta IT-avdelningen**. Du måste ange en giltig e-postadress i formatet `alias@domainname.com`. |
 |**Namn på webbplats**| 40 | Det här är det egna namnet som visas för supportwebbplatsens URL. Om du bara anger URL:en till en supportwebbplats utan något eget namn, visas Gå till IT-webbplatsen på sidan **Kontakta IT** på företagsportalen. |
-|**Webbplatsens URL**| 150 | Om du har en supportwebbplats som du vill att slutanvändarna ska använda, anger du webbadressen här. Webbadressen måste anges i formatet **https://www.contoso.com**. Om du inte anger någon webbadress kommer inget att visas på sidan **Kontakta IT** på företagsportalen. |
+|**Webbplatsens URL**| 150 | Om du har en supportwebbplats som du vill att slutanvändarna ska använda, anger du webbadressen här. Webbadressen måste anges i formatet `https://www.contoso.com`. Om du inte anger någon webbadress kommer inget att visas på sidan **Kontakta IT** på företagsportalen. |
 | **Ytterligare information**| 120 | Visas på sidan **Kontakta IT-avdelningen**. |
 
 
