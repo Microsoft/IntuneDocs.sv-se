@@ -15,12 +15,12 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f8517e9a9dd698e875214fe363d8e1246129b96a
-ms.sourcegitcommit: 81721ad672096298bf281dcbf21e8ce9c44cafaa
+ms.openlocfilehash: 6bf9eaef010879835abb7cec57c2fbdce6aa1e0a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042719"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905877"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
 
@@ -47,7 +47,7 @@ Som Intune-administratör kan du skapa och importera en fil med kommateckenavgr�
 [Lär dig hitta serienumret för en Apple-enhet](https://support.apple.com/HT204308).<br>
 [Lär dig hitta serienumret för en Android-enhet](https://support.google.com/store/answer/3333000).
 
-## <a name="add-corporate-identifiers"></a>Lägg till företagsidentifierare
+## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Lägga till företagsidentifierare med hjälp av en CSV-fil
 För att skapa listan, skapar du en lista med kommateckenavgränsade fält (.csv) i två kolumner men utan rubrik. Lägg till IMEI-numren eller serienumren i den vänstra kolumnen och informationen i den högra kolumnen. Endast en typ av ID kan importeras till en CSV-fil, antingen IMEI-nummer eller serienummer. Informationen är begränsad till 128 tecken och används endast i administrationssyfte. Informationen visas inte på enheten. Den aktuella gränsen är 5 000 rader per CSV-fil.
 
 **Överför en CSV-fil med serienummer** – Skapa en lista med två kolumner och kommaavgränsade värden (CSV-fil) utan sidhuvud och begränsa listan till 5 000 enheter eller 5 MB per CSV-fil.
@@ -70,19 +70,33 @@ CSV-filen när den visas i en textredigerare:
 >Serienummer som rapporteras av enheten till Intune kanske inte matchar det ID som visas i menyerna Android-inställningar/Om på enheten. Kontrollera vilken typ av serienummer som rapporterats av tillverkaren av enheten.
 >Vid försök att ladda upp en fil med serienummer som innehåller punkter (.) misslyckas överföringen. Serienummer med punkter stöds inte.
 
-### <a name="add-a-csv-list-of-corporate-identifiers"></a>Lägg till en CSV-lista över företagsidentifierare
+### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Ladda upp en CSV-lista med företagsidentifierare
 
-1. I [Intune på Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** > **Id:n för företagsenheter** och klickar på **Lägg till**.
+1. I [Intune på Azure Portal](https://portal.azure.com) väljer du **Enhetsregistrering** > **ID:n för företagsenheter** > **Lägg till** > **Ladda upp CSV-fil**.
 
    ![Företagets arbetsyta med enhetsidentifierare och knappen Lägg till markerad](./media/add-corp-id.png)
 
-2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**. Du kan ange om tidigare importerade siffror ska **skriva över information för befintliga identifierare**.
+2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**.
 
-3. Klicka på mappikonen och ange sökvägen till listan du vill importera. Navigera till CSV-filen och välj **Lägg till**. Du kan klicka på **Uppdatera** om du vill visa de nya ID:na.
+3. Klicka på mappikonen och ange sökvägen till listan du vill importera. Gå till CSV-filen och välj **Lägg till**. 
+
+4. Om CSV-filen innehåller företagsidentifierare som redan finns i Intune, men som har olika detaljer, visas popup-fönstret **Granska dubbla identifierare**. Välj de identifierare som du vill skriva över i Intune och välj **OK** för att lägga till identifierarna. För varje identifierare jämförs endast den första dubbletten.
+
+## <a name="manually-enter-corporate-identifiers"></a>Ange företagsidentifierare manuellt
+
+1. I [Intune på Azure Portal](https://portal.azure.com) väljer du **Enhetsregistrering** > **ID:n för företagsenheter** > **Lägg till** > **Ange manuellt**.
+
+2. På bladet **Lägg till identifierare** anger du ID-typ, **IMEI** eller **Serienummer**.
+
+3. Ange **Identifierare** och **Information** för varje identifierare som du vill lägga till. När du har angett identifierarna väljer du **Lägg till**.
+
+5. Om du anger företagsidentifierare som redan finns i Intune, men som har olika detaljer, visas popup-fönstret **Granska dubbla identifierare**. Välj de identifierare som du vill skriva över i Intune och välj **OK** för att lägga till identifierarna. För varje identifierare jämförs endast den första dubbletten.
+
+Du kan klicka på **Uppdatera** om du vill visa de nya ID:na.
 
 Importerade enheter registreras inte nödvändigtvis. Enheterna kan antingen ha tillståndet **Registrerad** eller **Ej kontaktad**. **Ej kontaktad** innebär att enheten aldrig har kommunicerat med Intune-tjänsten.
 
-### <a name="delete-corporate-identifiers"></a>Ta bort företagsidentifierare
+## <a name="delete-corporate-identifiers"></a>Ta bort företagsidentifierare
 
 1. I [Intune på Azure-portalen](https://portal.azure.com) väljer du **Enhetsregistrering** > **Id:n för företagsenheter**.
 2. Markera de enhetsid:n du vill ta bort och välj **Ta bort**.
@@ -90,7 +104,7 @@ Importerade enheter registreras inte nödvändigtvis. Enheterna kan antingen ha 
 
 Om du tar bort en företags-id för en registrerad enhet ändras inte ägarskapet för enheten. Om du vill ändra ägarskapet för en enhet går du till **Enheter**, väljer enheten, väljer **Egenskaper** och ändrar **Ägarskap för enhet**.
 
-### <a name="imei-specifications"></a>IMEI-specifikationer
+## <a name="imei-specifications"></a>IMEI-specifikationer
 Detaljerade specifikationer om IMEI (International Mobile Equipment Identifiers) finns i [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 
 ## <a name="change-device-ownership"></a>Ändra enhetsägande

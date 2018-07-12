@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: caed42642a87d38076f755cd356cc7ab7c6a3d8a
-ms.sourcegitcommit: 95ffcd5ddd3e5df7d68ae75218c5ff2ea076133e
+ms.openlocfilehash: 6a5abf774b6cb46b37d42ea1b73f653a02057528
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36263412"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905996"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -51,7 +51,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | iOS Store-appar  | Store-app  | Välj **iOS** som **apptyp**, sök efter appen och välj appen i Intune. |
 | Windows Phone 8.1 Store-appar  | Store-app  | Välj **Windows Phone 8.1** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Microsoft Store-appar  | Store-app  | Välj **Windows** som **apptyp** och ange appens webbadress på Microsoft Store. |
-| Android for Work-appar | Store-app  | Hitta och godkänn Android for Work-appen från Google Play for Work Store.  |
+| Android-arbetsappar | Store-app  | Leta upp och godkänn Android-arbetsprofilappen från den hanterade Google Play-butiken.  |
 | Office 365-appar för Windows 10  | Store-app (Office 365) | Välj **Windows 10** under **Office 365-paket** som **apptyp**, och välj sedan den Office 365-app som du vill installera.  |
 | Office 365-appar för macOS | Store-app (Office 365) | Välj **macOS** under **Office 365-paket** som **apptyp**, och välj sedan Office 365-appaketet. |
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |
@@ -117,7 +117,7 @@ Intune-hanterade appar kan även aktivera appskydd utan att kräva registrering.
 ### <a name="understanding-licensed-apps"></a>Förstå licensierade appar
 Utöver att förstå webbappar, Store-appar och verksamhetsspecifika appar bör du också vara medveten om destinationen för appar för volymköpsprogram och licensierade appar som: 
 - **Apples program för volyminköp för företag (iOS och MacOS)**: I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS-appar](vpp-apps-ios.md).
-- **Android for Work (Android)**: Hur du tilldelar appar till Android for Work-enheter skiljer sig från hur du tilldelar dem till vanliga Android-enheter. Alla appar som du installerar för Android for Work kommer från Google Play for Work-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
+- **Android-arbetsprofil**: Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till Android-standardenheter. Alla appar som du installerar för Android-arbetsprofiler kommer från den hanterade Google Play-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
 - **Microsoft Store för företag (Windows 10)**: I Microsoft Store för företag kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program i Azure-portalen. Mer information finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
 
 ## <a name="before-you-add-apps"></a>Innan du lägger till appar

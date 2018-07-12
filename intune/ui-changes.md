@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 861be39feab15c453fd102593b0501202faa3684
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232944"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905384"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Den här referensguiden är till för dem som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
@@ -36,7 +36,7 @@ Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyt
 |Grupper efter IMEI (alla plattformar)| Grupper > Alla enheter > Företagets förregistrerade enheter > Efter IMEI (alla plattformar) | [Enhetsregistrering > ID:n för företagsenheter](#by-imei-all-platforms)|
 | Registreringsprofil för företagsenheter| Princip > Företagsenhetsregistrering | [Enhetsregistrering > Apple-registrering > Registreringsprogramprofiler](#where-did-corporate-pre-enrolled-devices-go) |
 | Registreringsprofil för företagsenheter | Princip > Företagsenhetsregistrering | [Enhetsregistrering > Apple-registrering > AC-profiler](#where-did-corporate-pre-enrolled-devices-go) |
-| Android for Work | Admin > Hantering av mobila enheter > Android for Work | Enhetsregistrering > Android for Work-registrering |
+| Android for Work | Admin > Hantering av mobila enheter > Android for Work | Enhetsregistrering > Android-registrering |
 | Villkor | Princip > Villkor | Enhetsregistrering > Villkor |
 Inställningar för företagsportalen|Administratör > Företagsportalen|**Hantera** > Mobila enheter<br> **Installera** > Företagsportalanpassning
 

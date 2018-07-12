@@ -15,12 +15,12 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4c1902e319a862c9ffcda5068753f917bf8f4c3f
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 0f4687b3a2b1064fbfe3a9c8aa9da6cc7d336d78
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232926"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906047"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ange utfärdare för hantering av mobila enheter
 
@@ -41,9 +41,11 @@ Möjliga konfigurationerna är:
 
 ## <a name="set-mdm-authority-to-intune"></a>Ange Intune som utfärdare för hantering av mobila enheter
 
+Följ stegen nedan om du inte har angett MDM-utfärdaren än. Om du vill ändra från en MDM-utfärdaren till en annan går du till avsnittet [Ändra MDM-utfärdare](#prepare-to-change-the-mdm-authority-to-configuration-manager) nedan.
+
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter**.
+3. Välj den orangefärgade banderollen för att öppna inställningen **Utfärdare av Hantering av mobila enheter**. Den orangefärgade banderollen visas bara om du inte har angett MDM-utfärdaren än.
 4. Under **Utfärdare av Hantering av mobila enheter** väljer du en utfärdare bland följande alternativ:
    - **Intune-utfärdare av mobilenhetshantering**
    - **Configuration Manager-utfärdare av mobilenhetshantering**
@@ -54,10 +56,10 @@ Möjliga konfigurationerna är:
    Ett meddelande indikerar att du har angett MDM-utfärdare till Intune.
 
 ### <a name="workflow-of-intune-administration-ui"></a>Arbetsflöde i användargränssnitt för Intune-administration
-När Android- eller Apple-enhetshantering är aktiverat skickar Intune enhets- och användarinformation för att kunna integrera med dessa tredjepartstjänster och hantera sina enheter.
+När Android- eller Apple-enhetshantering är aktiverat skickar Intune enhets- och användarinformation för att kunna integrera med dessa tredjepartstjänster och hantera deras respektive enheter.
 
 Scenarier som kräver ett medgivande om att dela data ingår vid följande tillfällen:
-- Du aktiverar Android for Work.
+- Du aktiverar Android-arbetsprofiler.
 - Du aktiverar och laddar upp Apple MDM-pushcertifikat.
 - Du aktiverar någon av Apples tjänster som t.ex. programmet för enhetsregistrering, School Manager och volyminköpsprogrammet.
 

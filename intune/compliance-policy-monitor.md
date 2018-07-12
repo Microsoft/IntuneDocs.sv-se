@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/18/2018
+ms.date: 6/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 33e42c821881a5cc7eb9e4be65f6f7e56263480e
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: 5e9de6f1ac8bca1d65a94294d3b049dfccbe44c7
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232978"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905367"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -158,9 +158,27 @@ Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet
 
 När du klickar på ikonen Inställningsefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadens principinställningar. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadens principinställning.
 
+## <a name="view-status-of-device-policies"></a>Visa status för enhetsprinciper
+
+Du kan kontrollera principernas olika statusar per plattform. Du kan till exempel ha en efterlevnadsprincip för macOS. Du vill se de enheter som påverkas av den här principen och se om det uppstår konflikter eller fel.
+
+Den här funktionen ingår i statusrapporteringen för enheter:
+
+1. Välj **Enhetsefterlevnad** > **Principer**. En lista över principer visas, inklusive plattformen, om principen har tilldelats, samt ytterligare information.
+2. Välj en princip > **Översikt**. I den här vyn innehåller principtilldelningen följande statusar:
+
+  - Lyckades
+  - Fel
+  - Konflikt
+  - Väntar
+  - Inte tillämpligt
+
+3. Om du vill visa information om de enheter som använder den här principen väljer du en av statusarna. Välj till exempel **Lyckades**. I nästa fönster visas specifik enhetsinformation, inklusive enhetsnamn och distributionsstatus.
+
 ## <a name="how-intune-resolves-policy-conflicts"></a>Så här löser Intune principkonflikter
 Principkonflikter kan uppstå när flera Intune-principer används på en enhet. Om principinställningarna överlappar varandra löser Intune eventuella konflikter med hjälp av följande regler:
 
 - Om de motstridiga inställningarna gäller en Intune-konfigurationsprincip och en efterlevnadsprincip, prioriteras inställningarna i efterlevnadsprincipen framför inställningarna i konfigurationsprincipen. Detta gäller även om inställningarna i konfigurationsprincipen är säkrare.
 
 - Om du har distribuerat flera efterlevnadsprinciper använder Intune den säkraste av dessa principer.
+

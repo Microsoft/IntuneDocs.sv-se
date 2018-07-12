@@ -1,6 +1,6 @@
 ---
 title: Ta bort företagsdata på enheter med hjälp av Microsoft Intune – Azure | Microsoft Docs
-description: Ta bort företagsdata på en enhet eller utföra en fabriksåterställning på en Android-, Android for work-, iOS-, macOS- eller Windows-enhet med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
+description: Ta bort företagsdata på en enhet eller utför en fabriksåterställning på en Android-, Android-arbetsprofil-, iOS-, macOS- eller Windows-enhet med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b5eadc4ee23a89624cde9f1246f64aafce0b06c
-ms.sourcegitcommit: 3284586d9260a66ce99029b7808e4807f8780d20
+ms.openlocfilehash: 326622c324f75e216db69bd850b707e0fc1c0679
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37091735"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906064"
 ---
 # <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att använda fabriksåterställning, ta bort företagsdata eller manuellt avregistrera enheter
 
@@ -31,7 +31,7 @@ Med hjälp av åtgärden **Ta bort företagsdata** eller **Fabriksåterställnin
 
 ## <a name="factory-reset"></a>Fabriksåterställning
 
-Åtgärden **Fabriksåterställning** återställer en enhet till standardinställningarna från fabriken. Informationen sparas eller rensas beroende på om du väljer kryssrutan **Behåll registreringstillstånd och användarkonto** eller inte.
+Åtgärden **Fabriksåterställning** återställer en enhet till standardinställningarna från fabriken. Användardata sparas om du markerar kryssrutan **Behåll registreringstillstånd och användarkonto**. I annat fall raderas enheten på ett säkert sätt.
 
 |Åtgärden Fabriksåterställning|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Description|
 |:-------------:|:------------:|:------------:|------------|
@@ -108,9 +108,13 @@ Följande tabell beskriver vilka data som tas bort och hur åtgärden **Ta bort 
 |Frånkoppling från Azure AD|Azure AD-posten tas bort.|Azure AD-posten tas bort.|
 |Kontakter |Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.|Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte tas bort. <br /> <br />För närvarande stöds endast Outlook-appen.
 
-### <a name="android-for-work"></a>Android for Work
+### <a name="android-work-profile"></a>Android-arbetsprofil
 
-Borttagning av företagsdata på en Android for Work-enhet tar bort alla data, appar och inställningar i arbetsprofilen på den enheten. Enheten dras tillbaka från hantering med Intune. Fabriksåterställning stöds inte för Android for Work.
+Om du tar bort företagsdata från en Android-arbetsprofilenhet raderas alla data, appar och inställningar i arbetsprofilen på den enheten. Enheten dras tillbaka från hantering med Intune. Fabriksåterställning stöds inte för Android-arbetsprofiler.
+
+### <a name="android-enterprise-kiosk-devices"></a>Android-kioskenheter för företag
+
+Du kan bara återställa Android-kioskenheter till fabriksinställningarna. Du kan inte ta bort företagsdata från Android-kioskenheter.
 
 
 ### <a name="macos"></a>macOS
@@ -150,6 +154,15 @@ Om du vill ta bort enheter från Intune-portalen kan du ta bort dem från det sp
 
 1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Enheter** > **Alla enheter** > Välj de enheter som du vill ta bort > **Ta bort**.
+
+### <a name="automatically-delete-devices-with-cleanup-rules"></a>Ta bort enheter med rensningsregler automatiskt
+Du kan konfigurera Intune så att enheter som är inaktiva, inaktuella eller som inte svarar tas bort automatiskt. Dessa rensningsregler övervakar kontinuerligt dina enheter så att enhetsposterna är uppdaterade. Enheter som tas bort på det här sättet tas bort från Intune-hanteringen.
+1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
+2. Välj **Enheter** > **Regler för rensning av enhet** > **Ja**.
+3. Ange ett nummer mellan 90 och 270 i rutan **Ta bort enheter som inte har checkats in på många dagar**.
+4. Välj **Spara**.
+
+
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Ta bort enheter från Azure Active Directory-portalen
 

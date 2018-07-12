@@ -1,7 +1,7 @@
 ---
 title: Lägg till konfigurationsprinciper för hanterade Android-enheter
 titlesuffix: Microsoft Intune
-description: Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android for Work-app.
+description: Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar när användarna kör en Android-arbetsprofilapp.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -15,18 +15,18 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3011d98b73ef95d1c5a527798ab004f788c9eee9
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: c837f9a5a2cb1a6f267f85f888453725da6acb66
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34470873"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905758"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Lägg till konfigurationsprinciper för hanterade Android-enheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar till Android for Work-appar. Apputvecklaren måste exponera Android-hanterade konfigurationsinställningarna för att ange konfigurationsinställningar för appen. Tilldela appkonfigurationsprincipen till den grupp där du vill tillämpa inställningarna.  Principinställningarna används när appen söker efter dem, oftast första gången den körs.
+Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställningar till Android-arbetsprofilappar. Apputvecklaren måste exponera Android-hanterade konfigurationsinställningarna för att ange konfigurationsinställningar för appen. Tilldela appkonfigurationsprincipen till den grupp där du vill tillämpa inställningarna.  Principinställningarna används när appen söker efter dem, oftast första gången den körs.
 
 > [!Note]  
 > Det är inte alla appar som stöder appkonfiguration. Kontrollera med apputvecklaren om appen har stöd för appkonfigurationsprinciper.
@@ -39,8 +39,8 @@ Använd appkonfigurationsprinciper i Microsoft Intune för att skicka inställni
     - **Namn** – namnet på den profil som visas i Azure-portalen.
     - **Beskrivning** – beskrivning av den profil som visas i Azure-portalen.
     - **Registreringstyp för enhet** – välj **Hanterade enheter**.
-6. Välj **Android for Work** för **Plattform**.
-7. Välj **Tillhörande app** för att välja den app som du vill definiera en appkonfigurationsprincip för. Välj i listan med Android for Work-appar som du har godkänt och synkroniserat med Intune.
+6. Välj **Android** för **Plattform**.
+7. Välj **Tillhörande app** för att välja den app som du vill definiera en appkonfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.
 8. Välj **Behörigheter**. Du kan ange konfigurationer med:
     - [Configuration Designer](#Use-the-configuration-designer)
     - [JSON-redigerare](#Enter-the-JSON-editor)
@@ -94,8 +94,8 @@ Du kan också förkonfigurera behörigheter för att appar ska få åtkomst till
     - **Namn**. Namnet på den profil som visas i Azure Portal.
     - **Beskrivning**. Beskrivning av den profil som visas i Azure Portal.
     - **Enhetsregistreringstyp**. Välj **Hanterade enheter**.
-    - **Plattform**. Välj **Android for Work**.
-5. Välj **Tillhörande app** för att välja den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android for Work-appar som du har godkänt och synkroniserat med Intune.
+    - **Plattform**. Välj **Android**.
+5. Välj **Tillhörande app** för att välja den app som du vill definiera en konfigurationsprincip för. Välj i listan med Android-arbetsprofilappar som du har godkänt och synkroniserat med Intune.
 6. Välj **Behörigheter** och sedan **Lägg till**.
 7. Välj i listan med tillgängliga appbehörigheter och välj sedan **OK**.
 8. Välj ett alternativ för varje behörighet som kan beviljas med principen:

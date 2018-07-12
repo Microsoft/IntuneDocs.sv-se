@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3afe1ed48a21c26927b3686ae9a455ed8484e282
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 574880ae1ff7f734edcb02ebc89d7a0270064d4e
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34547411"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905979"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -135,8 +135,7 @@ Slutanvändaren får prompter för VPP-appinstallation i ett antal scenarier. Va
 
 ## <a name="revoking-app-licenses-and-deleting-tokens"></a>Återkalla licenser för appar och ta bort token 
 
-<!-- 820863 -->  
-Du kan återkalla alla associerade enhetsbaserade applicenser för enheten för en specifik enhet med en eller flera iOS-appar för volyminköpsprogram (VPP). Om du återkallar en applicens så avinstalleras inte den relaterade VPP-appen från enheten. Om du vill avinstallera en VPP-app och frigöra en licens måste du ändra tilldelningstyp för VPP-appen till **Avinstallera**. Om du tar bort en app som har tilldelats till en användare, frigör Intune användarens eller enhetens licens och avinstallerar appen från enheten.
+Du kan återkalla alla associerade iOS VPP-applicenser (volyminköpsprogram) baserat på en viss enhet, användare eller app. Du kan meddela användare när en app inte längre är tilldelad till dem. Om du återkallar en applicens så avinstalleras inte den relaterade VPP-appen från enheten. Om du vill avinstallera en VPP-app och frigöra en applicens som är tilldelad till en användare eller enhet måste du ändra tilldelningsåtgärden till **Avinstallera**. När du tar bort en app som har tilldelats till en användare, frigör Intune användarens eller enhetens licens och avinstallerar appen från enheten. Du kan se antalet återkallade licenser vid noden **Licensierade appar** i arbetsbelastningen **App** i Intune. När en VPP-app har avinstallerats och applicensen har frigjorts kan du välja att tilldela applicensen till en annan användare eller enhet. 
 
 >[!NOTE]
 >Intune drar tillbaka alla användarlicensierade licenser för iOS VPP-appar när en anställd lämnar företaget och inte längre ingår i AAD-grupperna.
