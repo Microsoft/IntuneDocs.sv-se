@@ -15,12 +15,12 @@ ms.assetid: E9810BEB-000A-4DFB-B5C7-A22A92082B22
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e99671c6c82a7652ba3489d5cc217dfedac72788
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 346e69b56d9ee690e2bc3f3970e47d6d25ddcff7
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31835375"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905180"
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Så här skapar du en princip för enhetsefterlevnad om du vill aktivera Google Play-skydd
 
@@ -49,9 +49,9 @@ Efterlevnadsprincipen som kräver de här inställningarna kan sedan riktas mot 
  - **Hotgenomsökning för appar**  
    Kräv att funktionen Android **Verifiera appar** har aktiverats.
     > [!Note]  
-    > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå. På enheter med arbetsprofiler, tidigare Android for Work, finns den här inställningen som en konfigurationsinställning för principen. På så sätt kan administratörer aktivera inställningen för en enhet.
+    > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå. På enheter med Android-arbetsprofiler finns den här inställningen som en konfigurationsinställning för principen. På så sätt kan administratörer aktivera inställningen för en enhet.
 
-    Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Enhetsbegränsningar i Microsoft Intune med Android for Work](device-restrictions-android-for-work.md).
+    Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Begränsningsinställningar för Android-arbetsprofilenheter i Microsoft Intune](device-restrictions-android-for-work.md).
 
  - **SafetyNet-enhetsattestering**  
    Ställ in den integritetsnivå för SafetyNet-enhetsattestering som måste uppnås. Nivåerna omfattar **Inte konfigurerad**, **Kontrollera grundläggande integritet** och **Kontrollera grundläggande integritet och certifierade enheter**.

@@ -1,6 +1,6 @@
 ---
-title: Skapa en efterlevnadsprincip för Android for Work i Microsoft Intune – Azure | Microsoft Docs
-description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Android for Work-enheter. Välj att tillåta jailbrokade enheter, ställ in godkänd hotnivå, kontrollera efter Google Play, ange lägsta och högsta operativsystemversion, välj dina lösenordskrav och tillåt program med separat inläsning.
+title: Skapa en efterlevnadsprincip för Android-arbetsprofil i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa eller konfigurera en enhetsefterlevnadsprincip i Microsoft Intune för Android-arbetsprofilenheter. Välj att tillåta jailbrokade enheter, ställ in godkänd hotnivå, kontrollera efter Google Play, ange lägsta och högsta operativsystemversion, välj dina lösenordskrav och tillåt program med separat inläsning.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,24 +14,24 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c1d438aa7416b1629af7ab2b899afa06720e2b49
-ms.sourcegitcommit: 6a9830de768dd97a0e95b366fd5d2f93980cee05
+ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047993"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905095"
 ---
-# <a name="add-a-device-compliance-policy-for-android-for-work-devices-in-intune"></a>Lägg till en efterlevnadsprincip för Android for Work-enheter i Intune
+# <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Lägga till en efterlevnadsprincip för Android-arbetsprofilenheter i Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-En efterlevnadsprincip i Intune för Android for Work-enheter anger de regler och inställningar som dessa enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du skapar efterlevnadsprinciper för enheter för olika plattformar i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
+En efterlevnadsprincip i Intune för Android-arbetsprofilenheter anger de regler och inställningar som dessa enheter måste uppfylla för att anses vara kompatibla. Du kan använda dessa principer med villkorlig åtkomst för att tillåta eller blockera åtkomst till företagets resurser. Du kan också få enhetsrapporter och vidta åtgärder för inkompatibilitet. Du skapar efterlevnadsprinciper för enheter för olika plattformar i Intune Azure-portalen. Läs mer om efterlevnadsprinciper och eventuella förutsättningar i [Kom igång med enhetsefterlevnad](device-compliance-get-started.md).
 
 Följande tabell beskriver också hur inkompatibla inställningar hanteras när en efterlevnadsprincip används med en princip för villkorlig åtkomst.
 
 --------------------------
 
-|**principinställning**| **Android for Work** |
+|**principinställning**| **Android-arbetsprofil** |
 | --- | --- |
 | **Konfiguration av PIN-kod eller lösenord** |  I karantän |
 | **Enhetskryptering** |  I karantän |
@@ -51,7 +51,7 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 ## <a name="create-a-device-compliance-policy"></a>Skapa en enhetsefterlevnadsprincip
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. Som **Plattform**, välj **Android for Work**. Välj **Inställningar** för att konfigurera och ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet**. När du är klar väljer **OK** och **Skapa**.
+5. I **Plattform** väljer du **Android enterprise**. Välj **Inställningar** för att konfigurera och ange inställningar för **Enhetens hälsotillstånd**, **Enhetsegenskaper** och **Systemsäkerhet**. När du är klar väljer **OK** och **Skapa**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -77,9 +77,9 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 
 #### <a name="threat-scan-on-apps"></a>Hotgenomsökning för appar
 
-På enheter med arbetsprofiler (Android for Work), hittar du inställningen **Hotgenomsökning för appar** som en konfigurationsinställning för principen. Administratörer kan aktivera inställningen för en enhet.
+På enheter med Android-arbetsprofiler hittar du inställningen **Hotgenomsökning för appar** som en konfigurationsinställning för principen. Administratörer kan aktivera inställningen för en enhet.
 
-Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Enhetsbegränsningar i Intune med Android for Work](device-restrictions-android-for-work.md).
+Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Arbetsenhetsbegränsningar i Intune](device-restrictions-android-for-work.md).
 
 ## <a name="device-property-settings"></a>Inställningar för enhetsegenskaper
 
@@ -106,13 +106,13 @@ Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökni
 
 ### <a name="encryption"></a>Kryptering
 
-- **Kräv kryptering på den mobila enheten:** Du behöver inte konfigurera den här inställningen eftersom Android for Work-enheter tvingar fram kryptering.
+- **Kräv kryptering på den mobila enheten:** Du behöver inte konfigurera den här inställningen eftersom Android-arbetsprofilenheter tvingar fram kryptering.
 
 ### <a name="device-security"></a>Enhetssäkerhet
 
-- **Blockera appar från okända källor:** Du behöver inte konfigurera den här inställningen eftersom Android for Work-enheter alltid begränsar installationer från okända källor.
+- **Blockera appar från okända källor:** Du behöver inte konfigurera den här inställningen eftersom Android-arbetsprofilenheter alltid begränsar installationer från okända källor.
 - **Körningsintegritet för företagsportalappen**: Kontrollerar om företagsportalappen har körningsmiljön standard installerad, är korrekt signerad, inte är i felsökningsläge och har installerats från en känd källa.
-- **Blockera USB-felsökning på enheten**: Du behöver inte konfigurera de här inställningarna eftersom USB-felsökning redan är inaktiverat på Android for Work-enheter.
+- **Blockera USB-felsökning på enheten**: Du behöver inte konfigurera de här inställningarna eftersom USB-felsökning redan är inaktiverat på Android-arbetsprofilenheter.
 - **Lägsta säkerhetskorrigeringsnivå**: Välj den äldsta säkerhetskorrigeringsnivå som en enhet kan ha. Enheter som inte har minst den här korrigeringsnivån räknas som inkompatibla. Datumet måste anges i formatet `YYYY-MM-DD`.
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper

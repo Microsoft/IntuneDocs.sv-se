@@ -1,6 +1,6 @@
 ---
-title: Enhetsbegränsningar för Android for Work i Microsoft Intune – Azure | Microsoft Docs
-description: Du kan begränsa vissa inställningar på enheter som kör Android for Work, inklusive kopiera och klistra in, visa aviseringar, appbehörigheter, datadelning, lösenordslängd, inloggningsfel, användning av fingeravtryck för att låsa upp, återanvändning av lösenord och aktivering av bluetooth-delning för arbetskontakter.
+title: Enhetsbegränsningar för Android-arbetsprofiler i Microsoft Intune – Azure | Microsoft Docs
+description: Du kan begränsa vissa inställningar på Android-arbetsprofilenheter, inklusive kopiera och klistra in, visa aviseringar, appbehörigheter, datadelning, lösenordslängd, inloggningsfel, användning av fingeravtryck för att låsa upp, återanvändning av lösenord och aktivering av bluetooth-delning för arbetskontakter.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,16 +12,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e1db0e98318c05c7a1a854ed1af77d9d9654cc38
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 34c66aabe8c094b67805bcf0eeae38dbbbbff627
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046323"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905945"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Inställning av enhetsbegränsningar för arbetsenheter i Intune
 
-I den här artikeln visas alla inställningar av begränsningar för Microsoft Intune-enheter som du kan konfigurera för enheter som kör Android for Work.
+I den här artikeln visas alla inställningar av begränsningar för Microsoft Intune-enheter som du kan konfigurera Android-arbetsprofilenheter.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -30,7 +30,7 @@ I den här artikeln visas alla inställningar av begränsningar för Microsoft I
 ### <a name="general-settings"></a>Allmänna inställningar
 
 - **Kopiera och klistra in mellan arbetsprofiler och personliga profiler**: Styr kopiera och klistra in mellan arbetsappar och personliga appar. Aktivera blockering genom att välja **Blockera**. Välj **Inte konfigurerad** för att inaktivera blockering.
-- **Datadelning mellan arbetsprofiler och personliga profiler**: Styr om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Den här inställningen styr delningsåtgärder inom program (till exempel alternativet **Dela...** i Chrome-webbläsarappen) och gäller inte för kopiera och klistra in för Urklipp. Till skillnad från [principinställningarna för appskydd](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) hanteras inställningarna för enhetsbegränsning från Intune-portalen och använder partitionen för Android for Work-arbetsprofilen för att isolera hanterade appar. Välj mellan:
+- **Datadelning mellan arbetsprofiler och personliga profiler**: Styr om appar i arbetsprofilen ska kunna dela med appar i den personliga profilen. Den här inställningen styr delningsåtgärder inom program (till exempel alternativet **Dela...** i Chrome-webbläsarappen) och gäller inte för kopiera och klistra in för Urklipp. Till skillnad från [principinställningarna för appskydd](https://docs.microsoft.com/intune-classic/deploy-use/protect-app-data-using-mobile-app-management-policies-with-microsoft-intune) hanteras inställningarna för enhetsbegränsning från Intune-portalen och använder partitionen för Android-arbetsprofilen för att isolera hanterade appar. Välj mellan:
   - **Standardbegränsningar för delning**: Detta är standardinställningen för delning av enheten, vilket varierar beroende på Android-version. Som standard tillåts delning från den personliga profilen till arbetsprofilen. Som standard är dessutom delning mellan arbetsprofilen och den personliga profilen blockerad. Den här inställningen förhindrar att arbetsdata delas till den personliga profilen. Google tillhandahåller inget sätt att blockera delning från den personliga profilen till arbetsprofilen för enheter som version 6.0 eller senare.
   - **Appar i arbetsprofilen kan hantera delningsförfrågningar från personlig profil**: Aktiverar den inbyggda Android-funktionen som tillåter delning från den personliga profilen till arbetsprofilen. När detta är aktiverat, kan en delningsbegäran från en app i den personliga profilen dela med appar i arbetsprofilen. Det här är standardinställningen för Android-enheter som kör tidigare versioner än 6.0.
   - **Tillåt delning över gränser**: Aktiverar delning över arbetsprofilgränsen i bägge riktningarna. När du väljer den här inställningen så kommer appar i arbetsprofilen att kunna dela data med omärkta appar i den personliga profilen. Använd den här inställningen med försiktighet, eftersom den gör att hanterade appar i arbetsprofilen kan dela med appar på den ohanterade delen av enheten.
@@ -48,7 +48,7 @@ I den här artikeln visas alla inställningar av begränsningar för Microsoft I
 
    Hindrar slutanvändare från att lägga till eller ta bort konton manuellt i arbetsprofilen.
 
-   När du till exempel distribuerar Gmail-appen till en Android for Work-profil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen.
+   När du till exempel distribuerar Gmail-appen till en Android-arbetsprofil kan du hindra slutanvändare från att lägga till eller ta bort konton i arbetsprofilen.
 
 - **Kontaktdelning via Bluetooth**: Ger åtkomst till arbetskontakter från en annan enhet, till exempel en bil som har anslutits med Bluetooth. Den här inställningen konfigureras inte som standard och arbetsprofilens kontakter visas därför inte. Välj **Aktivera** för att tillåta denna delning och visa arbetsprofilens kontakter. Inställningen gäller för Androids arbetsprofilenheter i Android OS v6.0 och senare. Genom att aktivera det här kan vissa Bluetooth-enheter tillåtas cache-lagra arbetskontakter vid första anslutningen. Att inaktiverar den här principen efter en inledande länkning/synkronisering kanske inte kan ta bort arbetskontakter från en bluetooth-enhet.
 

@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d11de1e20f46fb6e13d6d3ef5c9f4a9ee0f98c1
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223789"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906115"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -114,8 +114,8 @@ Mer information om det här avsnittet finns [Övervaka appar](apps-monitor.md).
 - **Anpassa företagsportalen.**: Anpassa företagsportalen enligt ert varumärke. Mer information finns i:
     - [Företagsportalkonfiguration](company-portal-app.md).
 - **Appkategorier**: Lägg till, fäst och ta bort appkategorinamn.
-- **Android for Work**: Godkänn och synkronisera de appar som du har godkänt för ditt företag. Mer information finns i:
-    - [Android for Work-appar](apps-add-android-for-work.md).
+- **Android-arbetsprofil**: Godkänn och synkronisera de appar som du har godkänt för ditt företag. Mer information finns i:
+    - [Android Work-profilappar](apps-add-android-for-work.md).
 
 ### <a name="help-and-support"></a>Hjälp och support
 - **Hjälp och support**: Felsök, begär support eller visa Intune-status. Mer information finns i:

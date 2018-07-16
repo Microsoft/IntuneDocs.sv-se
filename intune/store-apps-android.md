@@ -15,12 +15,12 @@ ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f62cb3a99a9cfd328cc041f095b0980eacc99852
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 4fc64f672a5c488848303f8d5ea5ea1467b0b195
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224705"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869516"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Lägga till Android Store-appar i Microsoft Intune
 
@@ -31,12 +31,11 @@ Innan du tilldelar en app till en enhet eller en grupp av användare måste du f
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.  
     Intune finns i avsnittet **Övervakning och hantering**.
-1. Välj **Enheter** i **Mobilappar**-fönstret.
-2. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
-3. Välj **Lägg till**.
-4. I fönstret **Lägg till App** väljer du **Android** under de tillgängliga **Store-app**-typerna.
-5. Om du vill konfigurera information om appen väljer **Konfigurera** och ange följande information.  
-    Beroende på vilken app du har valt kan det hända att några av värdena har fyllts i automatiskt.
+3. Välj **Enheter** i **Mobilappar**-fönstret.
+4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+5. Välj **Lägg till**.
+6. I fönstret **Lägg till App** väljer du **Android** under de tillgängliga **Store-app**-typerna.
+7. Om du vill konfigurera information om appen väljer **Konfigurera** och ange följande information. För Android-appar går du till [Google Play Butik](https://play.google.com/store) och söker efter den app du vill distribuera. Välj appen och notera appinformationen. Beroende på vilken app du har valt kan det hända att några av värdena har fyllts i automatiskt.
     - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. Se till att alla appnamn du använder är unika. Om ett appnamn dupliceras visas endast ett namn för användare i företagsportalen.
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.

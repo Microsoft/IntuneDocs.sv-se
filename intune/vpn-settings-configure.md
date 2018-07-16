@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 233b61018ad521f44ffea96f991f24649e174e3e
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 78f50bc49f9d7a1261759ec5fb9a1cd7628c998c
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744609"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905112"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Skapa VPN-profiler i Intune
 
@@ -40,7 +40,7 @@ Du kan använda anpassade konfigurationsprinciper i Intune för att skapa VPN-pr
 
 Du kan skapa VPN-profiler med följande anslutningstyper:
 
-|Anslutningstyp|Android<br>Android for Work|iOS|macOS|Windows Phone 8.1|Windows 8,1|Windows 10|
+|Anslutningstyp|Android<br>Android-arbetsprofiler|iOS|macOS|Windows Phone 8.1|Windows 8,1|Windows 10|
 |-|-|-|-|-|-|-|
 |Automatiskt|Nej|Nej|Nej|Nej|Nej|Ja|
 |Check Point Capsule VPN|Ja|Ja|Ja|Ja|Ja|Ja|
@@ -68,21 +68,21 @@ Läs om hur du skapar anpassade VPN-profiler med hjälp av URI-inställningarna 
 3. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
 4. Ange ett **Namn** och en **Beskrivning** för VPN-profilen.
 5. Välj den enhetsplattform på vilken du vill tillämpa VPN-inställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för VPN-enhetsinställningar:
-  - **Android**
-  - **Android for Work**
-  - **iOS**
-  - **macOS**
-  - **Windows Phone 8.1**
-  - **Windows 8.1 och senare**
-  - **Windows 10 och senare**
+   - **Android**
+   - **Android enterprise**
+   - **iOS**
+   - **macOS**
+   - **Windows Phone 8.1**
+   - **Windows 8.1 och senare**
+   - **Windows 10 och senare**
 6. Välj **VPN** i listrutan **Profiltyp**.
 7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-  - [Inställningar för Android och Android for Work](vpn-settings-android.md)
-  - [Inställningar för iOS](vpn-settings-ios.md)
-  - [Inställningar för macOS](vpn-settings-macos.md)
-  - [Inställningar för Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-  - [Inställningar för Windows 8.1](vpn-settings-windows-8-1.md)
-  - [Windows 10 settings](vpn-settings-windows-10.md) (Inställningar för Windows 10) (inklusive Windows Holographic for Business)
+   - [Inställningar för Android och Android-arbetsprofiler](vpn-settings-android.md)
+   - [Inställningar för iOS](vpn-settings-ios.md)
+   - [Inställningar för macOS](vpn-settings-macos.md)
+   - [Inställningar för Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
+   - [Inställningar för Windows 8.1](vpn-settings-windows-8-1.md)
+   - [Windows 10 settings](vpn-settings-windows-10.md) (Inställningar för Windows 10) (inklusive Windows Holographic for Business)
 8. När du är klar väljer du att **Skapa** din profil
 
 Profilen skapas och visas i profillistan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).

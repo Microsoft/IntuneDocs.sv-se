@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 06/13/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,11 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c4be5c1897c4358d2eee83fa97e710136dd0379d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7aabb010baa4a5e53ad5e4264edc43e3ca111c70
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909209"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -26,6 +27,8 @@ ms.lasthandoff: 04/16/2018
 Med Intune kan du hantera personalens enheter och appar, samt hur de kommer åt företagsdata. Enheterna måste först registreras i Intune-tjänsten innan du kan använda MDM-hanteringen. När en enhet registreras utfärdas ett MDM-certifikat till den. Certifikatet används för att kommunicera med Intune-tjänsten.
 
 Det finns flera metoder för att registrera personalens enheter, vilket visas i följande tabeller. Varje metod påverkas av ägarskapet för enheten (personlig eller företagsägd), enhetstypen (iOS, Windows, Android) och hanteringskraven (återställning, tillhörighet, låsning).
+
+Som standard tillåts enheter för alla plattformar registreras i Intune. Men du kan [begränsa enheter efter plattform](enrollment-restrictions-set.md#set-device-type-restrictions).
 
 ## <a name="ios-enrollment-methods"></a>Metoder för iOS-registrering
 
@@ -61,17 +64,17 @@ Det finns flera metoder för att registrera personalens enheter, vilket visas i 
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Nej|   Ja |   Nej | [Mer information](./android-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  |[Mer information](./device-enrollment-manager-enroll.md)|
-|**Android for Work**| Nej | Ja | Nej| [Mer information](./android-enroll.md#enable-enrollment-of-android-for-work-devices) |
+|**Android-arbetsprofiler**| Nej | Ja | Nej| [Mer information](./android-work-profile-enroll.md) |
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
 Bring Your Own Device (BYOD) omfattar personliga telefoner, surfplattor och datorer. Användarna installerar och kör appen Företagsportal för att registrera sina BYOD-enheter. Det här programmet låter användare komma åt företagsresurser som e-post.
 
 ## <a name="corporate-owned-device"></a>Företagsägd enhet
-Företagsägda enheter (COD) omfattar telefoner, surfplattor och datorer som ägs av organisationen och distribueras till personalen. COD-registrering har stöd för hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav. Ett vanligt sätt att registrera COD-enheter är att en administratör eller chef använder enhetsregistreringshanteraren (DEM). iOS-enheter kan registreras direkt via verktygen för programmet för enhetsregistrering (DEP) som tillhandahålls av Apple. Enheter med ett IMEI-nummer kan också identifieras och taggas som företagsägda.
+[Företagsägda enheter (COD)](corporate-identifiers-add.md) omfattar telefoner, surfplattor och datorer som ägs av organisationen och distribueras till personalen. COD-registrering har stöd för hanteringsscenarier som automatisk registrering, delade enheter och förauktoriserade registreringskrav. Ett vanligt sätt att registrera COD-enheter är att en administratör eller chef använder enhetsregistreringshanteraren (DEM). iOS-enheter kan registreras direkt via verktygen för programmet för enhetsregistrering (DEP) som tillhandahålls av Apple. Enheter med ett IMEI-nummer kan också identifieras och taggas som företagsägda.
 
 ### <a name="device-enrollment-manager"></a>Hanterare av enhetsregistrering
-Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Läs mer om [DEM](./device-enrollment-manager-enroll.md).
+Enhetsregistreringshanteraren (DEM) är ett särskilt användarkonto som används för att registrera och hantera flera företagsägda enheter. Cheferna kan installera företagsportalen och registrera flera användarlösa enheter. Dessa typer av enheter är till exempel bra för verktygs- eller kassaappar (Point-of-Sale), men inte för användare som behöver åtkomst till e-post eller företagsresurser. Läs mer om [DEM](./device-enrollment-manager-enroll.md). 
 
 ### <a name="apple-device-enrollment-program"></a>Apples DEP (Device Enrollment Program)
 Med Apples program för enhetsregistrering kan du skapa och distribuera principen “trådlöst” till iOS-enheter som har köpts och hanteras med DEP. Enheten registreras första gången användaren sätter på enheten och kör iOS-installationsassistenten. Den här metoden har stöd för övervakat läge för iOS som gör det möjligt att konfigurera en enhet med specifika funktioner.

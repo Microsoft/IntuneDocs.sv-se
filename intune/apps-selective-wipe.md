@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a063d43ff242a00ff89fd16cc05fd0eaa1af3484
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 76c394be6130a874e7ce2fb1b6e3c244cad98f80
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225012"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905282"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Hur du rensar endast företagsdata från Intune-hanterade appar
 
@@ -31,7 +31,7 @@ Om en enhet tappas bort eller blir stulen eller om medarbetaren som använder en
 >[!NOTE]
 > iOS och Android är de plattformar som för närvarande stöder rensning av företagsdata på Intune-hanterade appar.
 
-Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran genom att följa stegen i det här avsnittet. När begäran har slutförts tas företagsdata bort från appen nästa gång den körs på enheten.
+Om du vill ta bort företagets appdata selektivt skapar du en rensningsbegäran genom att följa stegen i det här avsnittet. När begäran har slutförts tas företagsdata bort från appen nästa gång den körs på enheten. Utöver att skapa en rensningsbegäran kan du konfigurera en selektiv rensning av organisationens data som en ny åtgärd när villkoren för åtkomstinställningar för appskyddsprinciper inte uppfylls. Den här funktionen gör att du kan skydda och ta bort känsliga organisationsdata från appar baserat på förkonfigurerade kriterier.
 
 >[!IMPORTANT]
 > Kontakter som synkroniseras direkt från appen till den interna adressboken tas bort. Kontakter som synkroniseras från den interna adressboken till en annan extern källa kan inte rensas. Detta gäller för närvarande endast för Microsoft Outlook-appen.

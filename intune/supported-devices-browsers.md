@@ -15,12 +15,12 @@ ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: f468ff8115fde79bf92825f06c37ff8affabf125
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 938bcd352294a9875aaa3eef717ef3857211961a
+ms.sourcegitcommit: abc3d51923e55e8779a5d84f2fcab60d0a0d8645
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31033387"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37434274"
 ---
 # <a name="supported-operating-systems-and-browsers"></a>Operativsystem och webbläsare som stöds
 
@@ -28,7 +28,7 @@ ms.locfileid: "31033387"
 
 Granska de operativsystem och webbläsare som stöds innan du installerar Microsoft Intune.
 
-Hjälp om hur du installerar Intune på din enhet finns i [Använda hanterade enheter för att få arbetet gjort](/intune-user-help/company-portal-frequently-asked-questions). Du bör också känna till [Användning av nätverksbandbredd i Intune](network-bandwidth-use.md) ([klassisk portal](/intune-classic/get-started/network-bandwidth-use)).
+Hjälp med att installera Intune på din enhet finns i informationen om [användning av hanterade enheter för att få jobbet gjort](/intune-user-help/company-portal-frequently-asked-questions) och [bandbreddsanvändning på Intune-nätverk](network-bandwidth-use.md) ([klassisk portal](/intune-classic/get-started/network-bandwidth-use)).
 
 ## <a name="intune-supported-operating-systems"></a>Operativsystem som stöds i Intune
 
@@ -38,12 +38,12 @@ Du kan hantera enheter som kör följande operativsystem:
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Samsung Knox Standard-enheter som stöds
 
-Företagsportalappen försöker endast aktivera Samsung Knox under MDM-registrering om enheten visas i [listan över Knox-enheter som stöds](https://www.samsungknox.com/knox-supported-devices/knox-workspace). På så sätt kan man undvika Knox-aktiveringsfel som förhindrar MDM-registrering. Enheter som inte har stöd för Samsung Knox-aktivering registreras som Android-standardenheter. En Samsung-enhet kan ha vissa modellnummer som har stöd för Knox medan andra inte stöds. Kontrollera att Knox är kompatibelt med enhetsåterförsäljaren innan du köper och distribuerar Samsung-enheter.
+För att undvika fel med Knox-aktivering förhindrar MDM-registrering försöker appen Företagsportal bara att utföra Samsung Knox-aktivering vid MDM-registrering om enheten visas i [listan över Knox-enheter som stöds](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Enheter som inte har stöd för Samsung Knox-aktivering registreras som Android-standardenheter. En Samsung-enhet kan ha vissa modellnummer som har stöd för Knox medan andra inte stöds. Kontrollera att Knox är kompatibelt med enhetsåterförsäljaren innan du köper och distribuerar Samsung-enheter.
 
 > [!NOTE]
 > Registrering av Samsung Knox-enheter kan kräva att du [ger åtkomst till Samsung-servrar](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
 
-Följande lista över Samsung-enhetsmodeller har inte stöd för Knox och registreras som ursprungliga Android-enheter av företagsportalappen för Android:
+Följande är en lista över Samsung-enhetsmodeller som inte har stöd för Knox. De registreras som inbyggda Android-enheter av appen Företagsportal för Android:
 
 | **Enhetsnamn** | **Enhetsmodellnummer** |
 | --- | --- |
@@ -103,7 +103,7 @@ Följande webbläsare stöds för dessa portaler:
 - Microsoft Internet Explorer 11
 - Safari (senaste versionen, endast Mac)
 - Chrome (senaste versionen)
-- Mozilla Firefox med Silverlight aktiverat [Läs mer (tidigare versioner än version 52)](https://go.microsoft.com/fwlink/?linkid=836872)
+- Firefox (senaste versionen)
 
 
 

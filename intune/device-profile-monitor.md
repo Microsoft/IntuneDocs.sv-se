@@ -1,11 +1,11 @@
 ---
 title: Visa enhetsprofiler med Microsoft Intune – Azure | Microsoft Docs
-description: Visa och hantera konfigurationsprofilen för enheter i Microsoft Intune och visa en grafisk karta över antalet enheter som är tilldelade till en profil och se vilka enheter som har profiler tilldelade eller distribuerade.
+description: Visa och hantera konfigurationsprofilen för enheter i Microsoft Intune, visa en grafisk karta över antalet enheter som är tilldelade till en profil och se vilka enheter som har profiler tilldelade eller distribuerade. Kan även felsöka profiler som har inställningar i konflikt.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2018
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bffb6832200379fca0221d8718afdebe06163980
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: dda53c7b21a743136bf1b16cc7bcf864c7b900fd
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744796"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905928"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Övervaka enhetsprofiler i Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune innehåller några funktioner i Azure Portal för att övervaka och hante
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enhetskonfiguration** > **Profiler**.
 
-Alla dina befintliga profiler visas och innehåller information såsom plattform samt om profilen har tilldelats till några enheter.
+Alla dina befintliga profiler visas, innehåller information såsom plattform och visar om profilen har tilldelats till några enheter.
 
 ## <a name="view-details-on-a-profile"></a>Visa information om en profil
 
@@ -68,6 +68,16 @@ När du har skapat din enhetsprofil tillhandahåller Intune grafiska diagram. De
   - **Enhetsstatus**: Enheter som är tilldelade till profilen visas samt om profilen har distribuerats korrekt. Du kan välja en specifik enhet för att få ytterligare information, inklusive installerade appar.
   - **Användarstatus**: Visar en lista över användarnamn som påverkas av den här profilen och om profilen distribuerats korrekt. Du kan välja en specifik användare för att få ytterligare information.
   - **Status per inställning**: Filtrerar resultatet genom att visa de enskilda inställningarna i profilen och visar om inställningen har tillämpats korrekt.
+
+## <a name="view-conflicts"></a>Visa konflikter
+
+I **Enheter** > **Alla enheter** kan du se alla inställningar som orsakar en konflikt. När det finns en konflikt visas även alla konfigurationsprofiler som innehåller inställningen. Administratörer kan använda funktionen till att felsöka och åtgärda avvikelser med profilerna.
+
+1. Välj i Intune **Enheter** > **Alla enheter** > välj en befintlig enhet i listan. Slutanvändare kan få enhetsnamnet från appen Företagsportal.
+2. Välj **Enhetskonfiguration**. Alla konfigurationsprinciper som gäller för enheten listas.
+3. Välj principen. Här visas alla inställningar i den principen som gäller för enheten. Om en enhet är i **konflikt** väljer du den raden. I det nya fönstret visas alla profiler och namnen på de profiler som har inställningen som orsakar konflikten.
+
+Nu när du känner till inställningen som orsakar konflikten och vilka principer som innehåller den inställningen bör det vara lättare att lösa konflikten. 
 
 ## <a name="next-steps"></a>Nästa steg
 [Tilldela användar- och enhetsprofiler](device-profile-assign.md)  

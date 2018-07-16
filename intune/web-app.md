@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d62341e35bf851bb429b15a582183bec62a9d4a
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: ff55b013d863d1676b9b83ec93e38defe222e2d7
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223398"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905248"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -31,7 +31,7 @@ Intune stöder en mängd olika apptyper som bland annat webbappar. En webbapp ä
 Innan du kan hantera och tilldela appar för dina användare, lägger du till appen i Intune. Intune skapar en genväg till webbappen på användarenhetens startskärm.
 
 > [!Note]
-> Webbappar stöds inte på Android for Work-enheter eller i macOS.
+> Webbappar stöds inte på Android-arbetsprofilenheter eller i macOS.
 
 ## <a name="add-a-web-app-to-intune"></a>Lägg till en webbapp i Intune
 Om du vill lägga till en app i Intune som en genväg till en app på webben gör du så här:

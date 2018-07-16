@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4a2afba3eafb32a06ff19e2cbbf3b87d27edccf0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224671"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905418"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -37,7 +37,7 @@ Intune tar inte hänsyn till några kopplingar mellan användare och specifika e
 >
 > Intune tillhandahåller de i förväg skapade grupperna **Alla användare** och **Alla enheter** i konsolen. Grupperna har inbyggda optimeringar för din bekvämlighet. Vi rekommenderar starkt att du använder de här grupperna för att ange alla användare och alla enheter som mål i stället för grupperna för ”Alla användare” eller ”Alla enheter” som du kanske själv har skapat.  
 >
-> Android Enterprise (kallades tidigare Android for Work) stöder inkluderings- och exkluderingsgrupper. Du kan använda de inbyggda grupperna **Alla användare** och **Alla enheter** vid Android Enterprise-apptilldelning. 
+> Android enterprise stöder att inkludera och exkludera grupper. Du kan använda de inbyggda grupperna **Alla användare** och **Alla enheter** vid Android enterprise-apptilldelning. 
 
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Inkludera och exkludera grupper när du tilldelar appar 

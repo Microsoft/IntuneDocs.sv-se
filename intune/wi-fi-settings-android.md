@@ -1,42 +1,47 @@
 ---
 title: Konfigurera Microsoft Intunes WiFi-inställningar för Android-enheter
 titleSuffix: ''
-description: Lär dig mer om Wi-Fi-konfigurationsinställningarna för enheter med Android och Android for Work.
+description: Läs om Intunes Wi-Fi-konfigurationsinställningar för enheter som kör Android.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 7/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ee82da997a794bb2f65929a6fd9e0de0cc776a6e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 0157815322488525a4ce7a3d6d2c90cbb8d3ff2a
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831069"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905674"
 ---
-# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-and-android-for-work"></a>Konfigurera Wi-Fi-inställningar i Microsoft Intune för enheter som kör Android och Android for Work  
+# <a name="configure-wi-fi-settings-in-microsoft-intune-for-devices-running-android-android-work-profiles-and-android-kiosk-devices"></a>Konfigurera Wi-Fi-inställningar i Microsoft Intune för enheter som kör Android, Android-arbetsprofiler och Android-kioskenheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-I den här artikeln beskrivs de WiFi-inställningar som du kan konfigurera i Microsoft Intune för enheter som kör Android och Android for Work.
+I den här artikeln beskrivs de Wi-Fi-inställningar som du kan konfigurera i Microsoft Intune för enheter som kör Android och Android-arbetsprofiler.
 
 ## <a name="wi-fi-settings-for-basic-and-enterprise-profiles"></a>Wi-Fi-inställningar för bas- och företagsprofiler
 
-Följande Wi-Fi-inställningar är tillgängliga för enheter med Android och Android for Work:
+Följande Wi-Fi-inställningar är tillgängliga för enheter med Android- och Android-arbetsprofilenheter:
 
 - **Nätverksnamn** – Ange ett namn för den här Wi-Fi-anslutningen. Detta är det namn som användarna ser när de bläddrar i listan med tillgängliga anslutningar på sin enhet.
 - **SSID** – Förkortning för nätverksnamn. Detta är det verkliga namnet på det trådlösa nätverk som enheterna ansluter till. Användarna ser dock bara det nätverksnamn som du konfigurerade när de väljer anslutningen.
 - **Anslut automatiskt** – Gör att enheten ansluter när den är inom intervallet för det här nätverket.
 - **Dolt nätverk** – Förhindrar att det här nätverket visas i listan över tillgängliga nätverk på enheten.
 
+## <a name="wi-fi-settings-available-for-enterprise-kiosk-profiles"></a>Wi-Fi-inställningar för enterprise-kioskprofiler
+- **Wi-Fi-typ**: Dessa WiFi-typinställningar är bara tillgängliga när du väljer **Profiltyp** > **Endast enhetsägare** > **Wi-Fi**.
+    - **Öppet (ingen autentisering)**
+    - **I förväg delad WEP-nyckel**: Du måste ange lösenordet i rutan **I förväg delad nyckel**.
+    - **I förväg delad WPA-nyckel**: Du måste ange lösenordet i rutan **I förväg delad nyckel**
 
-## <a name="wi-fi-settings-for-enterprise-profiles-only"></a>Wi-Fi-inställningar endast för företagsprofiler
+## <a name="wi-fi-settings-for-android-legacy-and-android-work-profiles-only"></a>Wi-Fi-inställningar endast för äldre Android och Android-arbetsprofiler
 
 - **EAP-typ** – Välj den EAP-typ (Extensible Authentication Protocol) som ska användas för att autentisera skyddade trådlösa anslutningar:
     - **EAP-TLS**

@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6753e0232548d862b46a273f1be0105ad7f16d63
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 7f52c43f8918589c1b66034ad68908f4d5ddba6d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831953"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905129"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-android"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör Android 
 
@@ -30,7 +30,7 @@ I den här artikeln beskrivs de Intune-inställningar som du kan använda till a
 Du kan konfigurera VPN-inställningar för följande plattformar:
 
 - [Android](#android-vpn-settings)
-- [Android for Work](#android-for-work-vpn-settings)
+- [Android-arbetsprofilenheter](#android-for-work-vpn-settings)
 
 Beroende på vilka inställningar du väljer kan bara vissa av följande värden konfigureras.
 
@@ -51,7 +51,7 @@ Beroende på vilka inställningar du väljer kan bara vissa av följande värden
 - **Fingeravtryck** (endast Check Point Capsule VPN) – Ange en sträng, till exempel ”Contoso fingeravtryckskod”, som ska användas för att verifiera att VPN-servern är betrodd. Ett fingeravtryck kan skickas till klienten så att den vet att den ska lita på alla servrar som visar upp samma fingeravtryck vid anslutningen. Om enheten inte redan har fingeravtrycket uppmanas användaren att lita på den VPN-server som anslutningsförsöket görs till medan fingeravtrycket visas (användaren verifierar fingeravtrycket manuellt och väljer att lita på för att ansluta).
 - **Ange nyckel-värdepar för Citrix VPN-attributen** (endast Citrix) – Ange nyckel- och värdepar som tillhandahålls av Citrix för att konfigurera egenskaperna för VPN-anslutningen.
 
-## <a name="android-for-work-vpn-settings"></a>VPN-inställningar för Android for Work
+## <a name="android-work-profile-device-vpn-settings"></a>VPN-inställningar för Android-arbetsprofilenheter
 
 **Anslutningsnamn** – Ange ett namn på anslutningen. Slutanvändarna ser det här namnet när de bläddrar på enheten i listan över tillgängliga VPN-anslutningar.
 - **IP-adress eller fullständigt domännamn** – Ange IP-adress eller fullständigt domännamn för den VPN-server som enheterna ska ansluta till. Exempel: **192.168.1.1**, **vpn.contoso.com**.

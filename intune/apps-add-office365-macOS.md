@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 78158afeb9c12e8056f42066be78c37f962b4462
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: bffd53030c23f38f0548cb5bccf82f6dd5e85779
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223619"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869514"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Tilldela Office 365 till macOS-enheter med Microsoft Intune
 
-Den här *Store-appen* gör det enkelt för dig att tilldela macOS-enheter till Office 365-appar. Genom att använda den här apptypen kan du installera Word, Excel, PowerPoint, Outlook och OneNote. För att hålla apparna säkrare och uppdaterade innehåller de här apparna även Microsoft AutoUpdater (MAU). Appar som du vill använda visas som en enda app i listan med appar i Intune-konsolen.
+Den här apptypen gör det enkelt för dig att tilldela macOS-enheter till Office 365 2016-appar. Genom att använda den här apptypen kan du installera Word, Excel, PowerPoint, Outlook och OneNote. För att hålla apparna säkrare och uppdaterade innehåller de här apparna även Microsoft AutoUpdater (MAU). Appar som du vill använda visas som en enda app i listan med appar i Intune-konsolen.
 
 
 ## <a name="before-you-start"></a>Innan du börjar
@@ -70,7 +70,7 @@ Konfigurera tilldelningarna för appaket i det här steget.
 2. I fönstret **Office 365** väljer du **Tilldelningar**.
 3. Om du vill lägga till en grupp som ska använda appsviten välj **Lägg till grupp**.  
     Fönstret **Lägg till grupp** visas.
-4. Ställ in **Tilldelningstyp** på **Obligatorisk**.
+4. Ställ in **Tilldelningstyp** på **Obligatorisk** eller **Tillgänglig**.
 5. Tilldela programsviten till de grupper som du har valt. Mer information finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
 
     >[!Note]

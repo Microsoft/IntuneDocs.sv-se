@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11f1a48b5b2dcff421603dd4538ff054d174fe66
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223415"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869380"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -47,7 +47,7 @@ Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som d
 3. Välj **Enheter** i **Mobilappar**-fönstret.
 4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
 5. Välj **Lägg till**.
-6. I fönstret **Lägg till appar** i listan **Apptyp** under **Office 365 Office** väljer du **Windows 10**.
+6. I fönstret **Lägg till appar** i listan **Apptyp** under **Office 365-paket** väljer du **Windows 10**.
 
 Nu kan du konfigurera app-paketet.
 
@@ -71,15 +71,15 @@ I det här steget anger du information om appaketet. Den här informationen hjä
 2. I fönstret **Information om appsvit** gör du följande:
     - **Svitnamn**: Ange namnet på appsviten så som det visas i företagsportalen. Kontrollera att alla svitnamn du använder är unika. Om samma paketnamn förekommer två gånger visas endast en av apparna för användarna på företagsportalen.
     - **Svitbeskrivning**: Ange en beskrivning för appsviten. Exempelvis kan du visa de appar som ingår.
-    - **Utgivare**: Ange namnet på appens utgivare.
+    - **Utgivare**: Microsoft visas som utgivare.
     - **Kategori**: Välj en eller flera av de inbyggda appkategorierna, eller en kategori som du har skapat. Inställningen gör det enklare för användarna att hitta appaketet när de söker på företagsportalen.
     - **Visa den här som aktuell app på företagsportalen**: Välj det här alternativet för att visa appsviten på en framträdande plats på företagsportalens startsida när användarna söker efter appar.
     - **Informations-URL**: Du kan välja att ange webbadressen till en webbplats som innehåller information om den här appen. Webbadressen visas för användarna på företagsportalen.
     - **Sekretess-URL**: Alternativt kan du ange webbadressen till en webbplats som innehåller sekretessinformation för den här appen. Webbadressen visas för användarna på företagsportalen.
-    - **Utvecklare**: Alternativt kan du ange apputvecklarens namn.
-    - **Ägare**: Alternativt kan du ange ett namn på appägaren, t.ex. *Personalavdelningen*.
+    - **Utvecklare**: Microsoft visas som utvecklare.
+    - **Ägare**: Microsoft visas som ägare.
     - **Anteckningar**: Ange eventuella kommentarer som du vill koppla till den här appen.
-    - **Logotyp**: Ladda upp en ikon som visas med appen när användare söker i företagsportalen.
+    - **Logo**: Office 365-logotypen visas med appen när användare söker på företagsportalen.
 3. Välj **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurera appinställningar

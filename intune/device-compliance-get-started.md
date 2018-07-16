@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 777cfa7d387c2bd19d529dbfc6d1aeab5dbad67e
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: fb81e070542248f585717564f0a609a512389ae2
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190766"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905078"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -160,7 +160,7 @@ Du kan distribuera policyer för efterlevnad till användare i användargrupper 
   - **Följer standard**: säkerhetsfunktion av
   - **Följer inte standard** (standard): säkerhetsfunktion på
 
-  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **Kompatibla**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
+  Om en enhet inte har en policy för efterlevnad är den inte kompatibel. Som standard markeras enheter som **Kompatibel**. Om du använder villkorlig åtkomst rekommenderar vi att du ändrar inställningen till **Inte kompatibel**. Om en användare inte följer standard eftersom en princip inte är tilldelad visar företagsportalen `No compliance policies have been assigned`.
 
 - **Förbättrad identifiering av uppbrytning**: När den här inställningen är aktiverad gör den så att iOS-enheter checkar in med Intune oftare. När du aktiverar den här egenskapen används enhetens platstjänster, vilket påverkar batterianvändningen. Användarnas platsdata lagras inte av Intune.
 
@@ -202,7 +202,7 @@ Om du vill använda de funktioner i Azure Portal som är relaterade till policye
 - Skapa en princip för enhetsefterlevnad för följande plattformar:
 
   - [Android](compliance-policy-create-android.md)
-  - [Android for Work](compliance-policy-create-android-for-work.md)
+  - [Android-arbetsprofil](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows](compliance-policy-create-windows.md)

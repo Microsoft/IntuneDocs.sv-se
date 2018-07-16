@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce7c263435f92a041b93dc5d34ffa912c6fa87fb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d917d2449e75b89db00d453b72940a93efb03321
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021888"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905010"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Skapa en profil med anpassade inställningar i Intune
 
@@ -39,7 +39,7 @@ Anpassade inställningar konfigureras på olika sätt för respektive plattform.
 5. Välj enhetsplattform för att tillämpa anpassade inställningar från listrutan **Plattform**. Du kan välja någon av följande plattformar:
 
     - **Android**
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -55,7 +55,7 @@ Anpassade inställningar konfigureras på olika sätt för respektive plattform.
     - [Inställningar för Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](custom-settings-windows-10.md)
     - [Inställningar för Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Inställningar för Android for Work](custom-settings-android-for-work.md)
+    - [Inställningar för Android-arbetsprofil](custom-settings-android-for-work.md)
 
 8. När du är klar väljer du **Skapa**.
 

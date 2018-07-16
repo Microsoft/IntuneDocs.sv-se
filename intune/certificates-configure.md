@@ -14,12 +14,12 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 89f8ddc105787bc7ff4f7cfc1e226d28589ecbbf
-ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
+ms.openlocfilehash: 9329a57ee7d47cb99a7c87326bb043c0a04c6313
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2018
-ms.locfileid: "31771813"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905214"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
@@ -43,7 +43,7 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
     - iOS 8.0 och senare
     - macOS 10.11 och senare
     - Android 4.0 och senare
-    - Android for Work
+    - Android-arbetsprofil
     - Windows 8.1 och senare
     - Windows Phone 8.1 och senare
     - Windows 10 och senare
@@ -52,7 +52,7 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
 
    - iOS 8.0 och senare
    - Android 4.0 och senare
-   - Android for Work
+   - Android-arbetsprofil
    - Windows 10 (Desktop och Mobile) och senare
 
    Du kan endast använda en **SCEP-profil** för enheter som kör följande plattformar:
@@ -95,7 +95,7 @@ Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikat
 5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. I dagsläget kan du välja någon av följande plattformar för certifikatsinställningar:
 
     - **Android**
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

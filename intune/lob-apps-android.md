@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 22470356c921eea17e4d2b3d57f796fe51568ee1
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: baf7ee4f1178b555a0fe311f0e3977941e1491fe
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224491"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905044"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Android i Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "34224491"
 En verksamhetsspecifik app är en app som du lägger till i Intune från en appinstallationsfil. Den här typen av app skrivs vanligtvis inom företaget. Intune installerar den verksamhetsspecifika appen på användarens enhet. 
 
 > [!Note]
-> Läs mer om verksamhetsspecifika appar från Google Play for Work-butiken i [Arbeta med en verksamhetsspecifik app från Google Play for Work-butiken](apps-add-android-for-work.md?#working-with-a-line-of-business-app-from-the-google-play-for-work-store). 
+> Läs mer om verksamhetsspecifika appar från Managed Google Play Butik i [Arbeta med en verksamhetsspecifik app från Managed Google Play Butik](apps-add-android-for-work.md?#working-with-a-line-of-business-app-from-the-managed-google-play-store). 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Steg 1: Ange platsen för programinstallationsfilen
 

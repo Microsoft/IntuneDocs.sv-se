@@ -14,12 +14,12 @@ ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2277da45ad1404269571f36dec0c16443409b39f
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 85f11e3a9bfd43affde35806d9aeaf40dcbfe03d
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744711"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37906200"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Lägg till en efterlevnadsprincip för Android-enheter i Intune
 
@@ -77,7 +77,7 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 - **Hotgenomsökning för appar**: Kräv att Android-funktionen **Verifiera appar** har aktiverats.
 
   > [!NOTE]
-  > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå. På enheter med arbetsprofiler (Android for Work), finns den här inställningen som en konfigurationsinställning för principen. På så sätt kan administratörer aktivera inställningen för en enhet.
+  > Den här funktionen är en kompatibilitetsinställning på den äldre Android-plattformen. Intune kan bara kontrollera om den här inställningen är aktiverad på enhetsnivå. På enheter med Android-arbetsprofiler finns den här inställningen som en konfigurationsinställning för principen. På så sätt kan administratörer aktivera inställningen för en enhet.
 
   Om företaget använder Androids arbetsprofiler kan du aktivera **Hotgenomsökning för appar** för registrerade enheter. Upprätta en enhetsprofil och kräv systemsäkerhetsinställningen. Mer information finns i [Enhetsbegränsningar i Intune med Android for Work](device-restrictions-android-for-work.md).
 

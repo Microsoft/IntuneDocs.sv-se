@@ -1,52 +1,61 @@
 ---
-title: E-postinställningar i Microsoft Intune för enheter som kör Windows 10
-titleSuffix: ''
-description: Läs om Microsoft Intune-inställningar som du kan använda för att konfigurera e-postinställningar på enheter som kör Windows 10.
+title: E-postinställningar för Windows 10-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Skapa en e-postprofil för enhetskonfiguration som använder Exchange-servrar och hämtar attribut från Azure Active Directory. Du kan även aktivera SSL och synkronisera e-post och scheman på Windows 10-enheter med Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 6/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a04f2267bd4a232fb687f7f77f66e439e6804099
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 04834f21e5fd2f6ed0f7454988936397d3249987
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831166"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37904976"
 ---
-# <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-10"></a>E-postprofilinställningar i Microsoft Intune för enheter som kör Windows 10
+# <a name="email-profile-settings-for-devices-running-windows-10---intune"></a>E-postprofilinställningar för enheter som kör Windows 10 – Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Använd e-postprofilinställningarna till att konfigurera dina enheter som kör Windows 10.
 
-Den här artikeln visar de e-postprofilinställningar som du kan konfigurera för enheter som kör Windows 10.
+- **E-postserver**: Ange värdnamnet för din Exchange-server.
+- **Kontonamn**: Ange visningsnamnet för e-postkontot. Namnet visas för användare på deras enheter.
+- **Användarnamnattribut från AAD**: Namnet är attributet som Intune hämtar från Azure Active Directory (AAD). Intune genererar användarnamnet som används av den här profilen. Alternativen är:
+  - **UPN (User Principal Name)**: Hämtar namnet, till exempel `user1` eller `user1@contoso.com`
+  - **Primär SMTP-adress**: Hämtar namnet i e-postadressformat, till exempel `user1@contoso.com`
+  - **sAM-kontonamn**: Kräver domänen, till exempel `domain\user1`.
 
+    Ange även:  
+    - **Källa för användardomännamn**: Välj **AAD** (Azure Active Directory) eller **Anpassat**.
 
-- **E-postserver** – Värdnamnet för din Exchange-server.
-- **Kontonamn** – Visningsnamnet för e-postkontot som det visas för användare på deras enheter.
-- **Användarnamnattribut för AAD** – Det här är attributet i Active Directory (AD) eller Azure AD som används för att generera användarnamn för den här e-postprofilen. Välj **Primär SMTP-adress**, t.ex. **user1@contoso.com** eller **Användarens huvudnamn (UPN)** som **user1** eller **user1@contoso.com**.
-- **E-postadressattribut från AAD** – Hur e-postadressen för användaren på varje enhet ska skapas. Välj **Primär SMTP-adress** om du vill använda den primära SMTP-adressen för att logga in på Exchange eller använd **UPN (User Principal Name)** om du vill använda det fullständiga huvudnamnet som e-postadress.
+      När du väljer att hämta attributen från **AAD** anger du:
+      - **Attribut för användardomännamn från AAD**: Välj att hämta attributet för **Fullständigt domännamn** eller **NetBIOS-namn** för användaren
 
+      När du väljer att använda **anpassade** attribut anger du:
+      - **Anpassat domännamn att använda**: Ange ett värde som Intune använder för domännamnet, till exempel `contoso.com` eller `contoso`
+
+- **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Välj **UPN (User Principal Name)** (`user1@contoso.com` eller `user1`) om du vill använda det fullständiga huvudnamnet som e-postadress eller **Primär SMTP-adress** (`user1@contoso.com`) om du vill använda den primära SMTP-adressen för att logga in på Exchange.
 
 ## <a name="security-settings"></a>Säkerhetsinställningar
 
-- **SSL** – Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
-
-
+- **SSL**: Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
 
 ## <a name="synchronization-settings"></a>Synkroniseringsinställningar
 
-- **Mängd e-post som ska synkroniseras** – Välj antalet dagar med e-post som du vill synkronisera eller välj **Obegränsad** för att synkronisera alla tillgängliga e-postmeddelanden.
-- **Synkroniseringsschema** – Välj det schema som ska användas av enheterna som ska synkronisera data från Exchange-servern. Du kan även välja **Efter hand som meddelanden kommer** varvid data synkroniseras när de anländer eller **Manuell** där enhetens användare måste starta synkroniseringen.
+- **Mängd e-post att synkroniseras**: Välj antalet dagars e-post som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
+- **Synkroniseringsschema**: Välj schema för enheter för att synkronisera data från Exchange-servern. Du kan även välja **När meddelanden anländer**, som synkroniserar data så snart de anländer eller **Manuellt**, där användaren måste initiera synkroniseringen.
 
 ## <a name="content-sync-settings"></a>Synkroniseringsinställningar för innehåll
 
-- **Innehållstyp som ska synkroniseras** – Välj vilka innehållstyper som du vill synkronisera till enheterna från:
-    - **Kontakter**
-    - **Kalender**
-    - **aktiviteter**
+- **Innehållstyp som ska synkroniseras**: Välj vilka innehållstyper som du vill synkronisera till enheterna från:
+  - **Kontakter**
+  - **Kalender**
+  - **aktiviteter**
+
+## <a name="next-steps"></a>Nästa steg
+[Konfigurera e-postinställningar i Intune](email-settings-configure.md)

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b09a4d528a95d682bf12e6610480b1aa1bcbdb83
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6b68d7eda57d50c3a1cb55979590e8b07d9daf50
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31829333"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37904956"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Starta om enheter med Intune med en fjärråtgärd
 
@@ -31,12 +31,13 @@ ms.locfileid: "31829333"
 
 - Windows – stöds på Windows 8.1 och senare
 - Windows Phone – stöds på Windows Phone 8.1 och senare
+- Android-kioskenheter – stöds
 - iOS – stöds
 
     > [!Note]  
     > Det här kommandot kräver en övervakad enhet och behörighet till **Enhetslås**. Enheten startas om direkt. iOS-enheter som är låsta med lösenord ansluter inte till ett Wi-Fi-nätverk igen efter omstart. Det kan hända att enheten inte kan kommunicera med servern efter omstart.
 - macOS – stöds inte
-- Android – stöds inte
+- Android- och Android-arbetsprofilenheter – stöds inte
 
 ## <a name="restart-a-device"></a>Starta om en enhet
 

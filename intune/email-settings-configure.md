@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b71c004a165bd6d38cd1907eadc05ac20f27bd1a
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834218"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905317"
 ---
 # <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Så här konfigurerar du e-postinställningar i Microsoft Intune
 
@@ -31,7 +31,7 @@ Den inbyggda e-postklienten stöds för de flesta plattformar. Merparten av e-po
 Du kan använda e-postprofiler för att konfigurera den interna e-postklienten på följande enhetstyper:
 
 - Android Samsung Knox Standard 4.0 och senare
-- Android for Work
+- Android-arbetsprofilenheter
 - iOS 8.0 och senare
 - Windows Phone 8.1 och senare
 - Windows 10 Desktop och Windows 10 Mobile
@@ -48,7 +48,7 @@ Använd informationen i den här artikeln om du vill lära dig grunderna för hu
 4. På sidan **Skapa profil** anger du ett **Namn** och en **Beskrivning** för e-postprofilen.
 5. Välj den enhetsplattform på vilken du vill tillämpa e-postinställningarna från listrutan **Plattform**. För närvarande kan du välja någon av följande plattformar för enhetsinställningar för e-post:
     - **Android** (endast Samsung Android Knox Standard)
-    - **Android for Work**
+    - **Android enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -56,7 +56,7 @@ Använd informationen i den här artikeln om du vill lära dig grunderna för hu
     - **Windows 10 och senare**
 6. Välj **E-post** i listrutan **Profil**.
 7. Vilka inställningar du kan konfigurera varierar beroende på vilken plattform du väljer. Gå till något av följande avsnitt om du vill ha detaljerad information om respektive plattform:
-    - [Android for Work- och Samsung Knox Standard-inställningar](email-settings-android.md)
+    - [Inställningar för Android-arbetsprofil och Samsung Knox Standard](email-settings-android.md)
     - [Inställningar för iOS](email-settings-ios.md)
     - [Inställningar för Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Inställningar för Windows 10](email-settings-windows-10.md)
@@ -89,7 +89,7 @@ Om användaren redan har konfigurerat ett e-postkonto beror resultatet av tillde
 - **Windows** En befintlig duplicerad e-postprofil identifieras utifrån värdnamn och e-postadress. Intune skriver över den befintliga e-postprofilen som skapats av användaren.
 - **Android Samsung Knox Standard**: En befintlig, duplicerad e-postprofil identifieras baserat på e-postadressen, och skrivs över med Intune-profilen.
 Eftersom Android inte använder värdnamn för att identifiera profilen, rekommenderar vi att du inte skapar flera e-postprofiler för samma e-postadress på olika värdar, eftersom dessa kommer att skriva över varandra.
-- **Android for Work** Intune har två olika e-postprofiler för Android for Work, en vardera för e-postapparna Gmail och Nine Work. Dessa appar är tillgängliga i Google Play Store och installeras i enhetens arbetsprofil. Så de kan inte resultera i dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postprofil. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
+- **Android-arbetsprofiler** Intune har två e-postprofiler för Android-arbetsprofiler, en för vardera Gmail- och Nine Work-e-postappen. Dessa appar är tillgängliga i Google Play Store och installeras i enhetens arbetsprofil. Så de kan inte resultera i dubblettprofiler. Båda apparna stöder anslutningar till Exchange. Distribuera en av dessa e-postappar till användarnas enheter och skapa och distribuera en lämplig profil för att aktivera e-postprofil. E-postappar som Nine Work kanske inte är kostnadsfria. Granska appens licensieringsinformation eller kontakta företaget som skapat appen om du har frågor.
 
 ### <a name="update-an-email-profile"></a>Uppdatera en e-postprofil
 

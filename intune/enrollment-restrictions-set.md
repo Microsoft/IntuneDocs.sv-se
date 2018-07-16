@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9b17cb50ead094962196bb030c3a18e4119c6904
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7eee5baebb8373488999a5e75db5288e483379e5
+ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31026337"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37905826"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -39,14 +39,14 @@ Bland de specifika registreringsbegränsningarna som du kan skapa finns:
 - Högsta tillåtna antal registrerade enheter.
 - Enhetsplattformar som får registreras:
   - Android.
-  - Android for Work.
+  - Android-arbetsprofil.
   - iOS.
   - macOS.
   - Windows.
-- Version av plattformsoperativsystem för iOS, Android, Android for Work och Windows. (Endast Windows 10-versioner kan användas. Lämna tomt om Windows 8.1 tillåts.)
+- Version av plattformsoperativsystem för iOS, Android, Android-arbetsprofil och Windows. (Endast Windows 10-versioner kan användas. Lämna tomt om Windows 8.1 tillåts.)
   - Lägsta version.
   - Högsta version.
-- Begränsningar gentemot privatägda enheter (endast iOS, Android, Android for Work och macOS).
+- Begränsningar gentemot privatägda enheter (endast iOS, Android, Android-arbetsprofil och macOS).
 
 ## <a name="default-restrictions"></a>Standardbegränsningar
 
@@ -78,7 +78,7 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
 5. Under begränsningsnamnet (**Alla användare** för begränsningen som är standard) väljer du **Plattformar**. Välj **Tillåt** eller **Blockera** för varje plattform som är med i listan.
 6. Välj **Spara**.
 7. Under begränsningsnamnet (**Alla användare** för standardbegränsning) väljer du **Plattformskonfigurationer**. Välj sedan lägsta och högsta **Versioner** för de plattformar som anges. Versioner som stöds inkluderar:
-    - Stöd för major.minor.rev.build för Android och Android for Work.
+    - Android-arbetsprofil har stöd för major.minor.rev.build.
     - iOS stöder major.minor.rev.
     - Windows stöder endast major.minor.rev.build för Windows 10.
   Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
@@ -88,9 +88,9 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
 
 
 >[!NOTE]
->- Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android for Work-enheter.
->- Som standard är dina Android for Work-enhetsinställningar samma som inställningarna för dina Android-enheter. När du har ändrat dina Android for Work-inställningar kommer det här inte längre att vara fallet.
->- Om du blockerar registrering av personligt ägda Android for Work-enheter så kan endast företagsägda Android-enheter att registrera Android for Work.
+>- Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android-arbetsprofilenheter.
+>- Som standard är dina inställningar för Android-arbetsprofilenheter samma som inställningarna för dina Android-enheter. När du har ändrat dina inställningar för Android-arbetsprofilenheter kommer det här inte längre att vara fallet.
+>- Om du blockerar registrering av personligt ägda Android-arbetsprofilenheter så kan endast företagsägda Android-enheter att registreras som Android-arbetsprofil.
 
 ## <a name="set-device-limit-restrictions"></a>Ange begränsningar för enhetsgräns
 

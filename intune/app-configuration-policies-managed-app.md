@@ -15,12 +15,12 @@ ms.assetid: E61C1618-79D0-41A1-B61F-4123FB6672FC
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8ce8791eaf72f5fda969401c19e72c6cc8b538d6
-ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
+ms.openlocfilehash: b514efa27a2a037f2fa0492ae519e6b8c774e369
+ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291469"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37869550"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Lägg till appkonfigurationsprinciper för hanterade appar utan enhetsregistrering
 
@@ -49,7 +49,7 @@ Intune App SDK-aktiverade appar har stöd för konfigurationer i nyckel/värde-p
 
 Intune kan generera vissa token och skicka dem till det hanterade programmet. Om din appkonfiguration kan använda en e-postinställning så kan du lägga till en dynamisk e-postadress med hjälp av en token. Ange det namn som förväntas av appen i fältet **Namn** och ange sedan `\{\{mail\}\}` i fältet **Värde**.
 
-Intune stöder följande typer av token i konfigurationsinställningarna:
+Intune stöder följande typer av token i konfigurationsinställningarna. Andra anpassade nyckel/värde-par stöds inte.
 
 - \{\{userprincipalname\}\} – till exempel **John@contoso.com**
 - \{\{mail\}\} – till exempel **John@contoso.com**
