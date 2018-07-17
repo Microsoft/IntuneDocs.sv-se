@@ -15,11 +15,11 @@ ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
 ms.openlocfilehash: edbd802b5f0482fc5dbaa801308447e2f8061189
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38224943"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Förbered iOS-appar för appskyddsprinciper med Intunes programhanteringsverktyg
 
@@ -322,7 +322,7 @@ Innan du omsluter appen kan du bevilja *rättigheter* som ger appen ytterligare 
 
 |Funktion|Description|Råd|
 |--------------|---------------|------------------------|
-|Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade behållare och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
+|Appgrupper|Använd appgrupper om du vill ge flera appar åtkomst till delade container och tillåta ytterligare kommunikation mellan processer för olika appar.<br /><br />Om du vill aktivera appgrupper öppnar du rutan **Funktioner** och klickar på **PÅ** i **Appgrupper**. Du kan lägga till app-grupper eller välja befintliga.|Använd omvänd DNS-notering när du använder app-grupper:<br /><br />*group.com.companyName.AppGroup*|
 |Bakgrundslägen|Om du aktiverar bakgrundslägen kan din iOS-app fortsätta att köras i bakgrunden.||
 |Dataskydd|Dataskydd lägger till en säkerhetsnivå för filer som lagras på disk av din iOS-app. Dataskydd utnyttjar den inbyggda krypteringsmaskinvarann som finns på vissa enheter för att lagra filer i krypterat format på disken. Din app behöver etableras om du vill använda dataskydd.||
 |Köp via app|Köp via app bäddar in en butik direkt i din app på ett sätt som gör att du kan ansluta till butiken och behandla betalningar från användaren med hög säkerhet. Du kan använda funktionen Köp via app för att ta betalt för utökade funktioner eller för ytterligare innehåll som kan användas med din app.||

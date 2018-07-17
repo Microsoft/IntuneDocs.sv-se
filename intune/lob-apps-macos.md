@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/02/2018
+ms.date: 05/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 89f2d06c879343a0f9701a8531c5543b961d792f
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: c871d32fbcdfa089de88ae649c2926d2c839cce2
+ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906013"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993725"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
@@ -32,8 +32,6 @@ Informationen i den här artikeln visar hur du lägger till verksamhetsspecifika
 >Användare av macOS-enheter kan ta bort några av de inbyggda macOS-apparna som Aktier och Kartor, men du kan inte använda Intune för att distribuera dessa appar igen. Om slutanvändarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
 >
 >Endast *.pkg*-filer kan användas för att överföra verksamhetsspecifika macOS-appar till Microsoft Intune. Konvertering av andra format, till exempel *.dmg* till *.pkg* stöds inte.
-
-I Microsoft Intune kan verksamhetsspecifika macOS-appar distribueras med inställningen **Obligatorisk** eller **Tillgänglig med registrering**. Slutanvändarna kan hämta appar som har distribuerats som **tillgängliga** via företagsportalen för macOS eller [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
 
 ## <a name="step-1---pre-process-your-software-setup-file"></a>Steg 1 – Förbearbeta programvarans installationsfil
 

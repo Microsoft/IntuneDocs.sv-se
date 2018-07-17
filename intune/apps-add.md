@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6a5abf774b6cb46b37d42ea1b73f653a02057528
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2db9d991c476d89399058137adb972c06029befc
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905996"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028736"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -51,7 +51,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | iOS Store-appar  | Store-app  | Välj **iOS** som **apptyp**, sök efter appen och välj appen i Intune. |
 | Windows Phone 8.1 Store-appar  | Store-app  | Välj **Windows Phone 8.1** som **apptyp** och ange appens webbadress på Microsoft Store. |
 | Microsoft Store-appar  | Store-app  | Välj **Windows** som **apptyp** och ange appens webbadress på Microsoft Store. |
-| Android-arbetsappar | Store-app  | Leta upp och godkänn Android-arbetsprofilappen från den hanterade Google Play-butiken.  |
+| Android Work-profilappar | Store-app  | Leta upp och godkänn Android-arbetsprofilappen från den hanterade Google Play-butiken.  |
 | Office 365-appar för Windows 10  | Store-app (Office 365) | Välj **Windows 10** under **Office 365-paket** som **apptyp**, och välj sedan den Office 365-app som du vill installera.  |
 | Office 365-appar för macOS | Store-app (Office 365) | Välj **macOS** under **Office 365-paket** som **apptyp**, och välj sedan Office 365-appaketet. |
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |

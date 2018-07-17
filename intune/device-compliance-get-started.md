@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fb81e070542248f585717564f0a609a512389ae2
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 30f2bea4589e31f3012df1bd06e6327b923ec5d1
+ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38225450"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -88,7 +88,7 @@ Följande krävs för att använda policyer för efterlevnad för enheter:
 
 När en enhet registreras i Intune startas även registreringen i Azure AD, vilket uppdaterar enhetens egenskaper i Azure AD. Enhetens efterlevnadsstatus är viktig information. Enhetens efterlevnadsstatus används av villkorliga åtkomstprinciper för att blockera eller tillåta åtkomst till e-post eller andra företagsresurser.
 
-Läs mer i [registreringsprocessen i Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/device-management-introduction).
+Läs mer i [registreringsprocessen i Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
 
 ### <a name="assign-a-resulting-device-configuration-profile-status"></a>Tilldela en resulterande profilstatus för enhetskonfiguration
 
