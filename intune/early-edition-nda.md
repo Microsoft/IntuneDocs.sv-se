@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 609e142551344a1ce39761280031463c8e34f1f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906030"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949500"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Den tidiga utgåvan för Microsoft Intune – juli 2018
 
@@ -40,6 +40,9 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 ## <a name="intune-in-the-azure-portal"></a>Intune i Azure Portal
 
 <!-- 1807 start -->
+
+### <a name="more-sync-opportunities-in-the-company-portal-app-for-windows----2683177---"></a>Fler synkroniseringsalternativ i företagsportalappen för Windows <!-- 2683177 -->
+Företagsportalappen för Windows lägger till en åtgärd för enhetssynkronisering till Windows-aktivitetsfältet och snabblistor i startmenyn. Klicka från någon av dessa platser för att snabbt synkronisera dina enheter och få åtkomst till företagets resurser.  
 
 ### <a name="reset-device-passcodes-from-company-portal-app-for-windows-10----2101282---"></a>Återställa lösenord för enheter från företagsportalappen för Windows 10 <!-- 2101282 --> 
 Dina anställda kommer snart att kunna återställa sina enheters PIN-koder eller lösenord direkt från företagsportalappen för Windows 10. Den här funktionen blir tillgänglig både via fjärranslutningar till Intune-hanterade enheter och i lokala Intune-hanterade enheter som har stöd för lösenordsåterställning. Beroende på typen av enhet tar en begäran för en fjärransluten enhet bort enhetens aktuella lösenord eller skapar ett tillfälligt lösenord. Användare som begär en återställning för en lokal enhet dirigeras om till enhetens appinställningar.  

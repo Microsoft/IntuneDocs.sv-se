@@ -15,12 +15,12 @@ ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6ed6b95a11eddfeb748b21d6df55f3a5668d9e1d
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 292df171b613ada7a5f8e2cf666ba358ef26df9b
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021576"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37949483"
 ---
 # <a name="get-started-managing-users"></a>Komma igång med att hantera användare
 
@@ -31,8 +31,10 @@ Tänk på alla olika personer i din organisation. Alla som använder företagsin
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. När du har öppnat fönstret **Microsoft Intune** väljer du **Användare**. På sidan **Alla användare** väljer du **+ Ny användare**.
-4. Ange information om användaren, t.ex. **namn** och **användarnamn**. Domännamndelen av användarnamnet måste antingen vara det inledande standarddomännamnet, t.ex. contoso.onmicrosoft.com, eller ett verifierat, ofedererat domännamn, t.ex. contoso.com.
-5. Välj den testgrupp du vill lägga till användaren i under **Grupper**.
+4. Ange information om användaren, t.ex. **namn** och **användarnamn**. Delen av användarnamnet som är domännamnet måste vara något av följande domän:
+    - Det initiala standarddomännamnet ”contoso.onmicrosoft.com” eller
+    - en verifierad, ofedererad domän som till exempel ”contoso.com”
+5. Välj [en grupp](get-started-groups.md) du vill lägga till användaren i under **Grupper**.
 6. Spara det automatiskt genererade användarlösenordet så att du kan använda det till att logga in på en testenhet. Du måste ge det här lösenordet till användare så att de kan ändra det till ett normalt lösenord som de kan komma ihåg.
 7. Välj **Skapa** i fönstret **Användare**.
 

@@ -15,12 +15,12 @@ ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
 ms.reviewer: andcerat
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7d0afd1f1944101b2162d9115e84ea5aaac0abf2
-ms.sourcegitcommit: 3dbd73631dd0042dd013a380f4c15dfe284576c0
+ms.openlocfilehash: 65827fe280535aa48d1d44eda9fd8482002c2c3b
+ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36882536"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028770"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Principinställningar för iOS-appskydd
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -75,7 +75,7 @@ Det finns vissa undantag för appar och plattformstjänster som Intune-appskydds
 | **Minimikrav på SDK-version för Intune-skyddsprincip** | Välj **Ja** för att ange ett minimkrav på SDK-version för Intune-skyddsprincip för den app som ska användas. Användaren kommer att blockeras från åtkomst om appens SDK-version för Intune-appskyddsprincipen inte uppfyller kravet. <br> <br> Läs mer om SDK-versionen för Intune-skyddsprincip i [Översikt över Intune App SDK](app-sdk.md). <br><br> Det här principinställningsformatet stöder major.minor, major.minor.build, major.minor.build.revision. <br><br> **Obs!** Appen måste ha Intune SDK-version 7.0.1 eller senare. | Nej |
 
 > [!NOTE]
-> Om du vill veta mer om hur flera Intune-appskyddsinställningar som konfigureras i avsnittet om åtkomst till samma uppsättning appar och användare fungerar på iOS kan du läsa [vanliga frågor om Intune MAM](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios).
+> Om du vill veta mer om hur flera Intune-appskyddsinställningar som konfigureras i avsnittet om åtkomst till samma uppsättning appar och användare fungerar på iOS kan du läsa [vanliga frågor om Intune MAM](https://docs.microsoft.com/en-us/intune/mam-faq#app-experience-on-ios) och [Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune](app-protection-policies-access-actions.md).
 
 ##  <a name="add-ins-for-outlook-app"></a>Tillägg för Outlook-appen
 

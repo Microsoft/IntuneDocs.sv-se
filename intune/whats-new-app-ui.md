@@ -15,12 +15,12 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7c961be9789309fdea57d1a97073c4292b20149
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 998df5181b553b33b570cd78d7f0e490336d7e95
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906081"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039394"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Att förstå dessa uppdateringar underlättar din användarkommunikation och eventuell uppdaterad anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
@@ -29,7 +29,7 @@ Läs mer om de senaste uppdateringarna i användargränssnittet för appar som d
 
 ## <a name="week-of-april-23-2018"></a>Veckan 23 april 2018
 #### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Uppdaterad navigeringsvy i företagsportal-appen för Windows 10 <!-- 1195010 -->
-Intunes företagsportalapp för Windows 10 har uppdaterats med [Fluent Design-systemets navigeringsvy](https://docs.microsoft.com/en-us/windows/uwp/design/basics/navigation-basics). Längs appen ser du en statisk, lodrät lista över alla sidor på översta nivån. Klicka på en länk för att snabbt visa och växla mellan sidor. Det här är den första av flera uppdateringar som visas som en del av vårt pågående arbete för att skapa en mer anpassningsbar, empatisk och bekant upplevelse i Intune. 
+Intunes företagsportalapp för Windows 10 har uppdaterats med [Fluent Design-systemets navigeringsvy](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Längs appen ser du en statisk, lodrät lista över alla sidor på översta nivån. Klicka på en länk för att snabbt visa och växla mellan sidor. Det här är den första av flera uppdateringar som visas som en del av vårt pågående arbete för att skapa en mer anpassningsbar, empatisk och bekant upplevelse i Intune. 
 
 ![Skärmbild av företagsportal-appens instrumentpanel som visar Fluent Designs navigeringsvy](./media/1804_WindowsCP_Fluent_01.png)
 
@@ -429,7 +429,7 @@ Det här är våra planer för hur vi kan förbättra användarupplevelsen genom
 
 ### <a name="ui-iwp"></a>Ny uppdatering av användarupplevelsen för företagsportalens webbplats <!--2000968-->
 
-Vi presenterar en ny webbplats för företagsportalen i april, med uppdateringar av användargränssnittet, effektivare arbetsflöden och hjälpmedelsförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
+Vi presenterar en ny webbplats för företagsportalen i augusti, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
 
 Vi har lagt till några nya funktioner, baserat på feedback från kunder som du, som förbättrar befintliga funktioner och användbarhet:
 

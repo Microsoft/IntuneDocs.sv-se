@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2018
+ms.date: 07/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,11 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4d0c63c5e926c3f8893762a9be3b6bed2d6844c4
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 8b647e7b2a4d252041e60792b6fc49df8b961066
+ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37967254"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-microsoft-intune"></a>Hantera Internetåtkomst med Managed Browser-principer med Microsoft Intune
 
@@ -35,7 +36,7 @@ Eftersom den här appen har integrering med Intune SDK kan du också använda ap
 - Förhindra skärmdumpar
 - Se till att länkar till innehåll som användare väljer endast öppnas i andra hanterade appar.
 
-Mer information finns i [Vad är appskyddsprinciper?](/intune/app-protection-policy.md)
+Mer information finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
 
 Du kan tillämpa inställningarna för att:
 
@@ -86,7 +87,7 @@ Om du vill begränsa Azure AD-anslutna webbappars användning av Intune Managed 
 8. I avsnittet **Tilldelningar** väljer du **Användare och grupper** och sedan de användare eller grupper som du vill tilldela den här principen till. 
 
     > [!NOTE]
-    > Användarna måste också vara mål för Intunes appskyddsprincip. Mer information om att skapa Intune-appskyddsprinciper finns i [Vad är appskyddsprinciper?](app-protection-policy.md).
+    > Användarna måste också vara mål för Intunes appskyddsprincip. Mer information om att skapa Intune-appskyddsprinciper finns i [Vad är appskyddsprinciper?](app-protection-policy.md)
 
 9. I avsnittet **Tilldelningar** går du till **Molnappar** och väljer vilka appar som ska skyddas med den här principen.
 
@@ -141,7 +142,7 @@ Intune Managed Browser och [Azure AD-programproxy]( https://docs.microsoft.com/a
 ### <a name="before-you-start"></a>Innan du börjar
 
 - Konfigurera dina interna program via Azure AD-programproxyn.
-    - Se [installationsdokumentationen]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
+    - Se [installationsdokumentationen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started) för att konfigurera programproxy och publicera program. 
 - Du måste använda version 1.2.0 eller senare av Managed Browser-appen.
 - Användare av Managed Browser-appen har en [princip för Intune-appskydd]( app-protection-policy.md) tilldelad till appen.
 
@@ -167,7 +168,7 @@ Den här inställningen låter dig konfigurera den webbsida som användarna ser 
 
 |                                Tangent                                |                                                           Värde                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Ange en giltig URL. Felaktiga URL:er är blockerade som en säkerhetsåtgärd.<br>Exempel: <strong><https://www.bing.com></strong> |
+| <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Ange en giltig URL. Felaktiga URL:er är blockerade som en säkerhetsåtgärd.<br>Exempel: `<https://www.bing.com>` |
 
 ## <a name="how-to-configure-bookmarks-for-the-managed-browser"></a>Så här konfigurerar du bokmärken för Managed Browser
 
@@ -181,7 +182,7 @@ Använd proceduren att skapa en appkonfiguration för Managed Browser till att a
 
 |                                Tangent                                 |                                                                                                                                                                                                                                                         Värde                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet <strong>&#124;</strong>.<br><br>Exempel: <strong>Microsoft Bing&#124;<https://www.bing.com></strong><br><br>Om du vill konfigurera fler bokmärken avgränsar du varje par med två tecken: <strong>&#124;&#124;</strong><br><br>Exempel: <strong>Bing&#124;https://www.bing.com&#124;&#124; Contoso&#124;<https://www.contoso.com></strong> |
+| <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Värdet för den här konfigurationen är en lista över bokmärken. Varje bokmärke består av bokmärkets rubrik och bokmärkets URL. Avgränsa rubriken och URL:en med tecknet <strong>&#124;</strong>.<br><br>Exempel:<br> `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character, <strong>&#124;&#124;</strong><br><br>Example:<br> `Bing|https://www.bing.com||Contoso|https://www.contoso.com` |
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-the-managed-browser"></a>Så här anger du tillåtna och blockerade URL:er för Managed Browser
 
@@ -189,7 +190,7 @@ Använd proceduren att skapa en appkonfiguration för Managed Browser till att a
 
 |Tangent|Värde|
 |-|-|
-|Välj mellan:<br><br>– Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås): **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br>– Ange blockerade URL: er (alla andra platser kan nås): <br><br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br>`URL1\|URL2\|URL3`</code><br>`http://*.contoso.com/*\|https://*.bing.com/*\|https://expenses.contoso.com`|
+|Välj mellan:<br><ul><li>Ange tillåtna URL:er (endast dessa URL:er tillåts, inga andra webbplatser kan nås):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Ange blockerade URL: er (alla andra platser kan nås):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Motsvarande värde för nyckeln är en lista med URL:er. Du anger alla URL:er som du vill tillåta eller blockera som ett enda värde, avgränsade med ett vertikalstreck **&#124;**.<br><br>Exempel:<br><br>`URL1|URL2|URL3`<br>`http://*.contoso.com/*|https://*.bing.com/*|https://expenses.contoso.com`|
 
 >[!IMPORTANT]
 >Ange inte båda nycklarna. Om båda nycklarna används för samma användare tillämpas den tillåtna nyckeln eftersom det är det mest restriktiva alternativet.
@@ -208,42 +209,42 @@ Använd följande information för att lära dig om tillåtna format och jokerte
 
   -   Port 443 för http
 
-  Jokertecken i portnummer stöds inte. Till exempel stöds inte <strong>http&colon;//www&period;contoso&period;com:*;</strong> och <strong>http&colon;//www&period;contoso&period;com: /*;</strong>.
+  Jokertecken i portnummer stöds inte. `http://www.contoso.com:;` och `http://www.contoso.com: /;` stöds inte.
 
 - Lär dig mer om de tillåtna mönster du kan använda när du anger URL:er med hjälp av följande tabell:
 
 |                  URL                  |                     Information                      |                                                Matchar                                                |                                Matchar inte                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|        http://www.contoso.com         |              Matchar en enstaka sida               |                                            www.contoso.com                                            |  host.contoso.com<br /><br />www.contoso.com/images<br /><br />contoso.com/   |
-|          http://contoso.com           |              Matchar en enstaka sida               |                                             contoso.com/                                              | host.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com |
-|    <http://www.contoso.com/&#42>;     | Matchar alla URL:er som börjar med www.contoso.com |      www.contoso.com<br /><br />www.contoso.com/images<br /><br />www.contoso.com/videos/tvshows      |              host.contoso.com<br /><br />host.contoso.com/images              |
-|    http://&#42;.contoso.com/&#42;     |     Matchar alla underordnade domäner under contoso.com     | developer.contoso.com/resources<br /><br />news.contoso.com/images<br /><br />news.contoso.com/videos |                               contoso.host.com                                |
-|     http://www.contoso.com/images     |             Matchar en enstaka mapp              |                                        www.contoso.com/images                                         |                          www.contoso.com/images/dogs                          |
-|       http://www.contoso.com:80       |  Matchar en enstaka sida, med ett portnummer   |                                       http://www.contoso.com:80                                       |                                                                               |
-|        https://www.contoso.com        |          Matchar en enstaka, säker sida           |                                        https://www.contoso.com                                        |                            http://www.contoso.com                             |
-| <http://www.contoso.com/images/&#42>; |    Matchar en enstaka mapp och alla undermappar    |                  www.contoso.com/images/dogs<br /><br />www.contoso.com/images/cats                   |                            www.contoso.com/videos                             |
+|        `http://www.contoso.com`         |              Matchar en enstaka sida               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
+|          `http://contoso.com`           |              Matchar en enstaka sida               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
+|    `http://www.contoso.com/&#42;`     | Matchar alla URL:er som börjar med `www.contoso.com` |      `www.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com/videos/tvshows`      |              `host.contoso.com`<br /><br />`host.contoso.com/images`              |
+|    `http://*.contoso.com/*`     |     Matchar alla underordnade domäner under contoso.com     | `developer.contoso.com/resources`<br /><br />`news.contoso.com/images`<br /><br />`news.contoso.com/videos` |                               `contoso.host.com`                                |
+|     `http://www.contoso.com/images`     |             Matchar en enstaka mapp              |                                        `www.contoso.com/images`                                         |                          `www.contoso.com/images/dogs`                          |
+|       `http://www.contoso.com:80`       |  Matchar en enstaka sida, med ett portnummer   |                                       `http://www.contoso.com:80`                                       |                                                                               |
+|        `https://www.contoso.com`        |          Matchar en enstaka, säker sida           |                                        `https://www.contoso.com`                                        |                            `http://www.contoso.com`                             |
+| `http://www.contoso.com/images/&#42;` |    Matchar en enstaka mapp och alla undermappar    |                  `www.contoso.com/images/dogs`<br /><br />`www.contoso.com/images/cats`                   |                            `www.contoso.com/videos`                             |
 
 - Följande är några exempel på indata som du inte kan ange:
 
-  - &#42;.com
+  - `*.com`
 
-  - &#42;.contoso/&#42;
+  - `*.contoso/*`
 
-  - www.contoso.com/&#42;images
+  - `www.contoso.com/*images`
 
-  - www.contoso.com/&#42;images&#42;pigs
+  - `www.contoso.com/*images*pigs`
 
-  - www.contoso.com/page&#42;
+  - `www.contoso.com/page*`
 
   - IP-adresser
 
-  - https://&#42;
+  - `https://*`
 
-  - http://&#42;
+  - `http://*`
 
-  - http://www.contoso.com:&#42;
+  - `http://www.contoso.com:*`
 
-  - http://www.contoso.com: /&#42;
+  - `http://www.contoso.com: /*`
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Komma åt loggar för hanterade appar med Managed Browser i iOS
 
@@ -291,4 +292,4 @@ Microsoft samlar automatiskt in anonyma data om prestanda och användning av Man
 
 ## <a name="next-steps"></a>Nästa steg
 
-- [Vad är appskyddsprinciper?](app-protection-policy.md)
+- [Vad är appskyddsprinciper?](app-protection-policy.md) 

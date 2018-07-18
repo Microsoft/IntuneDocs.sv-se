@@ -15,12 +15,12 @@ ms.assetid: f9015e3a-c22c-42eb-90e6-ba48dee3a41d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b860b68bbf8940a89533159885f471f5337ca0e8
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: 34174568570700e0b15d5bce1bb0bf239251b577
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216147"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039162"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Så här skapar du undantag för Intunes MAM-princip (Mobile Application Management) vid dataöverföring
 
@@ -34,10 +34,13 @@ Som administratör kan du skapa undantag för Intunes MAM-princip (Mobile Applic
 I en Intune-princip för programskydd betyder inställningen **Tillåt att appen överför data till andra appar** till **Principhanterade appar** att appen överför data enbart för appar som hanteras av Intune. Om du vill tillåta dataöverföring till specifika appar som inte har stöd för Intune APP kan du skapa undantag för den här principen med hjälp av **Välj appar att undanta**. Undantag tillåter program som hanteras av Intune att anropa ohanterade program baserat på URL-protokoll (iOS) eller paketnamn (Android). Intune lägger som standard till viktiga ursprungliga program till listan med undantag. 
 
 > [!NOTE]
-> Ändringar eller tillägg i undantag till dataöverföringsprincipen påverkar inte andra appskyddsprinciper, t.ex. begränsningar för Klipp ut, Kopiera och Klistra in. 
+> Att ändra eller lägga till undantag för dataöverföringsprinciper påverkar inte andra appskyddsprinciper, som till exempel begränsningar för att klippa ut, kopiera och klistra in. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Undantag vid iOS-dataöverföring
 Du kan konfigurera dataöverföringsundantag för en princip med iOS som mål med hjälp av URL-protokoll. Om du vill lägga till ett undantag kan du läsa mer i dokumentationen från apputvecklaren om vilka URL-protokoll som stöds. Mer information om undantag vid iOS-dataöverföring finns i [Principinställningar för iOS-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+
+> [!NOTE]
+> Microsoft har inte en metod för att hitta URL-protokollet för att skapa appundantag för program från tredje part manuellt. 
 
 ## <a name="android-data-transfer-exceptions"></a>Undantag vid Android-dataöverföring
 Du kan konfigurera dataöverföringsundantag för en princip med Android som mål med hjälp av appaketets namn. Paketnamnet för den app du vill lägga till ett undantag för finns på appsidan i **Google Play** Butik. Mer information om undantag vid Android-dataöverföring finns i [Principinställningar för Android-appskydd – Undantag vid dataöverföring](app-protection-policy-settings-android.md#data-transfer-exemptions).

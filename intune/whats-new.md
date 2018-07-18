@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2018
+ms.date: 07/13/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: e6d3640d63f16b80588860c3c36aba1a81ffbe09
-ms.sourcegitcommit: 8ea2ff0941219e72477d7ceaab40a0068e53d508
+ms.openlocfilehash: f2018b5a1ca2a6981b04951bcf8ecd8819eb47e2
+ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37927037"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039428"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,22 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
 ### Role-based access control
 
 -->   
+## <a name="week-of-july-9-2018"></a>Veckan som inleds med den 9 juli 2018
+
+### <a name="app-management"></a>Apphantering
+
+### <a name="block-app-access-based-on-unapproved-device-vendors-and-models-----1425689----"></a>Blockera åtkomst till appen baserat på icke-godkända enhetsleverantörer och modeller  <!-- 1425689 ! -->
+Intune IT-administratören kan tillämpa en angiven lista över Android-tillverkare och/eller iOS-modeller via Intune App Protection-principer. IT-administratören kan ange en semikolonavgränsad lista över tillverkare för Android-principer och enhetsmodeller för iOS-principer. Intune App Protection-principer gäller endast för Android och iOS. Det finns två separata åtgärder som kan utföras på den angivna listan:
+- En blockering från åtkomst till appen på enheter som inte har angetts.
+- Eller en selektiv rensning av företagets data på enheter som inte har angetts. 
+
+Användaren kommer inte att få åtkomst till det aktuella programmet om principkraven inte uppfylls. Baserat på inställningarna kan användaren bli blockerad eller rensas selektivt på sina företagsdata i appen. På iOS-enheter kräver den här funktionen att program deltar (t.ex. WXP, Outlook, Managed Browser, Yammer) för att integrera Intune APP SDK:n för att funktionen ska framtvingas i berörda program. Den här integreringen händer på löpande bas, och är beroende av specifika programteam. På Android kräver funktionen den senaste företagsportalen. 
+
+På slutanvändarens enheter utför Intune-klienten åtgärder baserat på en enkel matchning av strängar som angetts i Intune-bladet för programskyddsprinciper. Detta beror helt på värdet som enheten rapporterar. IT-administratören rekommenderas därför att säkerställa att det avsedda funktionssättet är korrekt. Detta kan åstadkommas genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. I Microsoft Intune, välj **Mobilappar** > **Appskyddsprinciper** för att visa och lägga till appskyddsprinciper. Mer information om att appskyddsprinciper finns i [Vad är appskyddsprinciper](app-protection-policy.md) och [Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune](app-protection-policies-access-actions.md).
+
+### <a name="access-to-macos-company-portal-pre-release-build----1734766---"></a>Åtkomst till förhandsversionen av företagsportalen på macOS <!-- 1734766 -->
+Du kan registrera dig för att ta emot versioner tidigt genom att gå med i Insider-programmet med hjälp av Microsoft AutoUpdate. När du registrerat dig kan du använda den uppdaterade företagsportalen innan den är tillgänglig för dina slutanvändare. Mer information finns i [Microsoft Intune-bloggen](https://blogs.technet.microsoft.com/intunesupport/2018/07/13/use-microsoft-autoupdate-for-early-access-to-the-macos-company-portal-app/).
+
 ## <a name="week-of-july-2-2018"></a>Veckan som inleds med den 2 juli 2018
 
 ### <a name="app-management"></a>Apphantering
@@ -68,9 +84,6 @@ Följande text är ett exempel på de förbättrade meddelandena som du kommer a
 
 #### <a name="revoke-ios-vpp-app-license----1863797---"></a>Återkalla VPP-applicenser i iOS <!-- 1863797 -->
 Som administratör kan du frigöra en iOS VPP-applicens som har tilldelats en användare eller enhet. När du avinstallerar en VPP-app i iOS kan du också återkalla applicensen. Innan du avinstallerar appen måste användaren eller enheten tas bort från gruppen som är appens mål. Om användaren eller enheten tas bort från gruppen behöver inte appen installeras om. När dessa steg har slutförts kan du välja att tilldela applicensen till en annan användare eller enhet. Mer information om licenser för VPP-appar i iOS finns i [Hantera volyminköpta iOS-appar i Microsoft Intune](vpp-apps-ios.md).
-
-#### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Stöd för verksamhetsspecifika appar (LOB) för macOS <!-- 1895847 -->
-I Microsoft Intune kan verksamhetsspecifika macOS-appar distribueras med inställningen **Obligatorisk** eller **Tillgänglig med registrering**. Slutanvändarna kan hämta appar som har distribuerats som **tillgängliga** via företagsportalen för macOS eller [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
 
 ### <a name="device-configuration"></a>Enhetskonfiguration
 
@@ -1087,7 +1100,7 @@ Du kan aktivera säkerhetsinställningarna på Windows 10-enheter med de nya ins
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968--"></a>Ny uppdatering av användarupplevelse för företagsportalens webbsida <!--2000968-->
 
-Vi presenterar en ny webbplats för företagsportalen i april, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
+Vi presenterar en ny webbplats för företagsportalen i augusti, med uppdateringar av användargränssnittet, effektiva arbetsflöden och åtkomstförbättringar. Detta inkluderar kundefterfrågade förbättringar som appdelning och förbättrad övergripande prestanda för att få en mer användarvänlig upplevelse.
 Vi har lagt till några nya funktioner, baserat på feedback från kunder som du, som förbättrar befintliga funktioner och användbarhet:
 
 * Förbättringar i användargränssnittet på hela webbplatsen
