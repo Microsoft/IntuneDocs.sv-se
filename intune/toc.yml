@@ -521,6 +521,7 @@
         - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
           href: conditional-access-assign-jamf.md
     - name: Skydda data på enheter
+      href: device-protect.md
       items:
         - name: Sekretess och personliga data
           href: privacy-personal-data.md
