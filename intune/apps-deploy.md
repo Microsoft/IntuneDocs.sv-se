@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2018
+ms.date: 07/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1e6ffd31e35637cf722fc2af486be4bd9101c1db
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: 46ef614af39a1dd1b44f4f5ff32f53687ccb060a
+ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993759"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39164577"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -89,21 +89,21 @@ Ibland har samma app tilldelats flera grupper, men med olika avsikter. Informati
 |Tillgänglig för användare|Inte tillgänglig för användare|Inte tillgängligt|
 |Tillgänglig för användare|Avinstallation av användare|Avinstallera|
 |Inte tillgänglig för användare|Avinstalleras för användare|Avinstallera
-|Nödvändig för användare|Nödvändig för enhet|Båda finns, hanteras som nödvändig av gateway
-|Nödvändig för användare|Avinstalleras för enhet|Båda finns, löses som nödvändig av gateway
-|Tillgänglig för användare|Nödvändig för enhet|Båda finns, matchas som nödvändig av gateway (nödvändig och tillgänglig)
-|Tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som tillgänglig av gateway.<br><br>Appen visas i företagsportalen.<br><br>Appen avinstalleras om den redan har installerats (som nödvändig app med föregående avsikt).<br><br>Om användaren väljer **Installera i företagsportalen** installeras appen och avinstallationen åsidosätts.|
+|Nödvändig för användare|Nödvändig för enhet|Båda finns, hanteras som nödvändig av Intune
+|Nödvändig för användare|Avinstalleras för enhet|Båda finns, löses som nödvändig av Intune
+|Tillgänglig för användare|Nödvändig för enhet|Båda finns, matchas som nödvändig av Intune (nödvändig och tillgänglig)
+|Tillgänglig för användare|Avinstalleras för enhet|Båda finns, löses som tillgänglig av Intune.<br><br>Appen visas i företagsportalen.<br><br>Appen avinstalleras om den redan har installerats (som nödvändig app med föregående avsikt).<br><br>Om användaren väljer **Installera i företagsportalen** installeras appen och avinstallationen åsidosätts.|
 |Inte tillgänglig för användare|Nödvändig för enhet|Obligatoriskt|
 |Inte tillgänglig för användare|Avinstalleras för enhet|Avinstallera|
-|Avinstalleras för användare|Nödvändig för enhet|Båda finns, löses som nödvändig av gateway|
-|Avinstalleras för användare|Avinstalleras för enhet|Både finns, matchas som avinstallation av gateway|
+|Avinstalleras för användare|Nödvändig för enhet|Båda finns, löses som nödvändig av Intune|
+|Avinstalleras för användare|Avinstalleras för enhet|Båda finns, löses som tillgänglig av Intune|
 |Nödvändig för enhet|Avinstalleras för enhet|Obligatoriskt|
 |Nödvändig och tillgänglig för användare|Tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Avinstalleras för användare|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Inte tillgänglig för användare|Nödvändig och Tillgänglig|
 |Nödvändig och tillgänglig för användare|Nödvändig för enhet|Båda finns, nödvändig och tillgänglig
 |Nödvändig och tillgänglig för användare|Inte tillgänglig för enhet|Nödvändig och Tillgänglig|
-|Nödvändig och tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som nödvändig av gateway (nödvändig och tillgänglig)
+|Nödvändig och tillgänglig för användare|Avinstalleras för enhet|Båda finns, matchas som nödvändig av Intune (nödvändig och tillgänglig)
 |Inte tillgänglig för användare|Inte tillgänglig för enhet|Inte tillgängligt|
 |Tillgänglig för användare|Inte tillgänglig för enhet|Tillgänglig|
 |Nödvändig för användare|Inte tillgänglig för enhet|Obligatoriskt|
