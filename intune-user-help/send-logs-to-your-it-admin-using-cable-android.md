@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a12e0103f9eae08003d8cca6a5eb4699ced27a27
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2a2c5c60f22aca6a9c989281ef2c5cc9e0c66911
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015616"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117862"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Skicka loggar till företagets support via en USB-kabel
 
@@ -35,7 +35,7 @@ Om du får ett felmeddelande när du använder företagsportalappen på en Andro
 
 2. Anslut din enhet till din dator med hjälp av en USB-kabel. Det är vanligtvis samma kabel som används för att ladda din enhet i vägguttaget.
 
-3. Leta efter en mapp med namnet på din enhet på datorn. I katalogen letar du reda på <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\</strong>.
+3. Leta efter en mapp med namnet på din enhet på datorn. Hitta <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong> i mappen.
 
 4. Välj filerna och bifoga dem som bilaga till ett e-postmeddelande. Skicka detta e-postmeddelande till företagets support.
 

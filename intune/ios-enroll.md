@@ -15,18 +15,18 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01523dc4c887214794d4600219ce0b77549b4734
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 545c5b26b6c908f4a9e7066d3f76cbf774c8fbea
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027126"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146704"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
 Intune stöder hantering av mobila enheter (MDM) för iPad och iPhone och ger användarna åtkomst till företagets e-post och appar.
 
-Som en Intune-administratör kan du aktivera registrering för iOS-enheter. Du kan tillåta användare att registrera personligt ägda enheter, vilket även kallas ”bring your own device” (BYOD)-registrering. Du kan också aktivera registrering av företagsägda enheter.
+Som en Intune-administratör kan du aktivera registrering för iOS-enheter. Du kan låta användare registrera personligt ägda enheter, vilket även kallas ”bring your own device” (BYOD)-registrering. Du kan också aktivera registrering av företagsägda enheter.
 
 ## <a name="prerequisites-for-ios-enrollment"></a>Krav för iOS-registrering
 Innan du kan aktivera iOS-enheter måste du göra följande:
@@ -38,7 +38,7 @@ Innan du kan aktivera iOS-enheter måste du göra följande:
 Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller kraven och har tilldelat licenser till användarna, kan de ladda ned företagsportalappen för Intune från App Store och följa instruktionerna för registrering i appen.
 
 ## <a name="company-owned-ios-devices"></a>Företagsägda iOS-enheter
-Intune stöder följande registreringsmetoder för iOS-enheter som ägs av företaget för organisationer som köper enheter för sina användare:
+Intune stöder följande registreringsmetoder för iOS-enheter som ägs av företaget för organisationer som köper enheter till sina användare:
 
 - Apples program för enhetsregistrering (DEP)
 - Apple School Manager
@@ -62,7 +62,7 @@ Läs mer om [registrering med Apple Configurator](apple-configurator-setup-assis
 
 ## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Använda företagsportalen på enheter som registrerats med enhetsregistreringsprogrammet eller Apple Configurator
 
-Enheter som har konfigurerats med mappning mellan användare kan installera och köra företagsportalsappen och ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ett antal ytterligare steg för att slutföra installationen och installera företagsportalsappen.
+Enheter som har konfigurerats med användartillhörighet kan installera och köra företagsportalappen för att ladda ned appar och hantera enheter. Efter det att användarna fått sina enheter måste de utföra ett antal ytterligare steg för att slutföra installationen och installera företagsportalsappen.
 
 Användartillhörighet krävs för att ge stöd åt följande:
   - Hantering av mobilprogramsappar (MAM, Mobile Application Management)
@@ -70,25 +70,11 @@ Användartillhörighet krävs för att ge stöd åt följande:
   - Företagsportalappen
 
 **Hur en användare registrerar företagsägda iOS-enheter med användartillhörighet**
-1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. Under installationen uppmanas användarna att ange sina autentiseringsuppgifter. Användaren måste använda de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune.
-
-2. Under installationen uppmanas användarna att ange ett Apple-ID. Användaren måste ange ett Apple-ID för att företagsportalen ska få installeras på enheten. Användaren kan även ange ID från iOS-inställningsmenyn när installationen har slutförts.
-
-3. När installationen har slutförts måste företagsportalappen installeras på iOS-enheten från App Store.
-
-4. Användaren kan nu logga in på företagsportalen med det UPN som angavs när enheten konfigurerades.
-
-5. Efter inloggningen uppmanas användaren att registrera enheten. Det första steget är att identifiera enheten. I appen visas en lista över iOS-enheter som redan är företagsregistrerade och har tilldelats till användarens Intune-konto. Användaren ska välja motsvarande enhet.
-
-   Om enheten inte är företagsregistrerad ska användaren välja **ny enhet** och fortsätta med standardregistreringsflödet.
-
-6. På nästa skärm måste användaren bekräfta den nya enhetens serienummer. Användaren kan trycka på länken **Bekräfta serienumret** vilket kommer att starta instruktioner för användning av inställningsappen för att verifiera serienumret. Sedan måste användaren ange de fyra sista tecknen i serienumret i företagsportalappen.
-
-   I det här steget verifieras att enheten är den företagsenhet som har registrerats i Intune. Om serienumret på enheten inte matchar har fel enhet valts. Användaren bör gå tillbaka till föregående sida och välja en annan enhet.
-
-7. När serienumret har verifierats omdirigeras användaren från företagsportalappen till företagsportalens webbplats för att slutföra registreringen. På webbplatsen uppmanas sedan användaren att återgå till appen.
-
-8. Registreringen är slutförd. Användaren kan nu använda den här enheten med fullständiga funktioner.
+1. När användaren startar enheten uppmanas han eller hon att slutföra arbetet med installationsassistenten. 
+2. Efter installationen uppmanas användarna att ange ett Apple-ID. Användarna måste ange ett Apple-ID för att företagsportalen ska kunna installeras på enheten. 
+3. Företagsportalappen installeras automatiskt på iOS-enheten från App Store.
+4. Användarna bör starta företagsportalappen och logga in med de autentiseringsuppgifter (unikt namn eller UPN) som är associerade med prenumerationen i Intune. 
+5. Registreringen är färdig när du har loggat in. Användarna kan nu använda den här enheten med fullständiga funktioner.
 
 ### <a name="about-corporate-owned-managed-devices-with-no-user-affinity"></a>Om företagsägda hanterade enheter som saknar användartillhörighet
 

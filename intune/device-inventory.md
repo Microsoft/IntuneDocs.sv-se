@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f66c0695c7e3d1f4bb7a5ca3abceeb13f6af41f2
-ms.sourcegitcommit: 3c4ea8d6809a63042705b5ed4f25ba80f522070e
+ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34051614"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117930"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -34,7 +34,7 @@ Den här artikeln beskriver hur du visar alla dina enheter och deras egenskaper 
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enheter** > **Alla enheter** > välj en av enheterna i listan för att öppna informationen:
 
-   - I **Översikt** visas namnet på enheten och några viktiga egenskaper, bland annat om det är en BYOD-enhet (Bring Your Own Device), när den checkades in och mycket mer. Välj **Mer** för att också:
+   - I **Översikt** visas namnet på enheten och några viktiga egenskaper, bland annat om det är en BYOD-enhet (Bring Your Own Device), när den checkades in och mycket mer. Välj **Mer** för att:
      - Ta bort företagsdata
      - Ta bort enheten
      - Fjärrlåsa enheten
@@ -57,6 +57,49 @@ Intune samlar endast in en applista från företagsägda enheter. Appar på pers
 |iOS|Endast hanterade appar|Alla appar som är installerade på enheten|
 |macOS|Alla appar som är installerade på enheten|Alla appar som är installerade på enheten|  
 |Android|Endast hanterade appar|Alla appar som är installerade på enheten|  
+
+## <a name="hardware-device-details"></a>Information om maskinvaruenheten
+
+### <a name="windows-and-ios-device-details"></a>Windows- och iOS-enhetsinformation:
+|Detalj|Description|  
+|--------------|----------------------|  
+|Namn|Namnet på enheten.|
+|Hanteringsnamn|Enhetsnamnet används endast i konsolen. Även om du ändrar det här namnet ändras inte namnet på enheten.|
+|UDID|Enhetens unika enhets-ID.|
+|ID för Intune-enhet|Ett GUID som unikt identifierar den här enheten.|
+|Serienummer|Enhetens serienummer från tillverkaren.|
+|Delad enhet|Enheten delas av flera användare om inställningen är **Ja**.|
+|Användargodkänd registrering|Enheten har användargodkänd registrering som gör att administratörer kan hantera vissa säkerhetsinställningar på enheten om inställningen är **Ja**.|
+|Operativsystem|Vilken typ av operativsystem som används på enheten.|
+|Operativsystemversion|Enhetens operativsystemversion.|
+|Operativsystemets språk|Språket som är inställt på enhetens operativsystem.|
+|Totalt lagringsutrymme|Det totala lagringsutrymmet på enheten (i gigabyte).|
+|Ledigt lagringsutrymme|Det oanvända lagringsutrymmet på enheten (i gigabyte).|
+
+
+### <a name="windows-ios-and-macos-device-details"></a>Windows, iOS och macOS-enhetsinformation
+|Detalj|Description|  
+|--------------|----------------------|  
+|IMEI|Enhetens IMEI (International Mobile Equipment Identity).|
+|MEID|Enhetens mobilutrustningsnummer.|
+|Tillverkare|Enhetstillverkaren.|
+|Modell|Enhetsmodellen.|
+|Telefonnummer|Telefonnumret som har tilldelats enheten.|
+|Abonnentens operatör|Enhetens mobiloperatör.|
+|Mobilteknik|Radiosystem som används av enheten.|
+|Wi-Fi MAC|Enhetens MAC-adress.|
+|ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|
+|Registreringsdatum|Datum och tid då enheten registrerades i Intune.|
+|Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|
+|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|
+|Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|
+|Efterlevnad|Enhetens kompatibilitetstillstånd.|
+|EAS-aktiverad|Om inställningen är **Ja** så är enheten synkroniserad med en Exchange-postlåda.|
+|Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|
+|Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|
+|Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|
+
+
 
 ## <a name="next-steps"></a>Nästa steg
 Se vad mer du kan göra för att [hantera dina enheter](device-management.md) med Intune.

@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e97d7639a73fb2d5fd13d4b893ace8eebf597e05
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: 3aed8fcefd640e5b7df46fe1ef8cd1c973a68044
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949500"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212145"
 ---
 # <a name="the-early-edition-for-microsoft-intune---july-2018"></a>Den tidiga utgåvan för Microsoft Intune – juli 2018
 
@@ -79,8 +79,8 @@ Om du vill skapa profilen öppnar du **Enhetskonfiguration** > **Profiler** > **
 
 Gäller för Windows 10 och senare.
 
-###  <a name="windows-line-of-business-lob-apps-file-extension-rename----1884873---"></a>Namnbyte på filnamnstillägg för verksamhetsspecifika appar (LOB) för Windows <!-- 1884873 -->
-Filnamnstillägg för LOB-appar på Windows kommer att byta namn från *.appx* och *.appxbundle* till *.msix* och *.msixbundle*. Du kan lägga till en app i Microsoft Intune genom att välja **Mobilappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas och där du kan välja **Apptyp**. För LOB-appar på Windows väljer du **Verksamhetsspecifik app** som apptyp, väljer **Appaketfil** och anger sedan en installationsfil med rätt filnamnstillägg.
+###  <a name="windows-line-of-business-lob-apps-file-extensions----1884873---"></a>Filnamnstillägg för verksamhetsspecifika appar (LOB) för Windows <!-- 1884873 -->
+Filnamnstillägg för LOB-appar på Windows omfattar nu *.msi*, *.appx*, *.appxbundle*, *.msix* och *.msixbundle*. Du kan lägga till en app i Microsoft Intune genom att välja **Mobilappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas och där du kan välja **Apptyp**. För LOB-appar på Windows väljer du **Verksamhetsspecifik app** som apptyp, väljer **Appaketfil** och anger sedan en installationsfil med rätt filnamnstillägg.
 
 ### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Konfigurationspaketet för Windows Defender ATP läggs automatiskt till i konfigurationsprofilen <!-- 2144658 -->
 När du använder enheter med [Advanced Threat Protection och registrering](advanced-threat-protection.md#onboard-devices-using-a-configuration-profile) i Intune kan du för närvarande ladda ned ett konfigurationspaket och lägga till det i din konfigurationsprofil. I en kommande uppdatering hämtar Intune paketet automatiskt från Windows Defender Säkerhetscenter och lägger till det i din profil.

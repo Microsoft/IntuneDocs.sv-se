@@ -15,12 +15,12 @@ ms.assetid: 671e4d76-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 180988f296894c285b078f6906c4e77b832006f9
-ms.sourcegitcommit: 0f1a5d6e577915d2d748d681840ca04a0a2604dd
+ms.openlocfilehash: 2b3965c651bb6fcc38d61a55208fc8b199223891
+ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840282"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39212128"
 ---
 # <a name="enroll-ios-devices-with-apple-configurator"></a>Registrera iOS-enheter med Apple Configurator
 
@@ -135,7 +135,7 @@ Appar som kräver användartillhörighet, inklusive företagsportalappen som anv
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Exportera profilen som .mobileconfig för iOS-enheter
 
 1. I [Intune](https://aka.ms/intuneportal), väljer du **Enhetsregistrering** > **Apple-registrering** > **Apple Configurator** > **Profiler** >  välj profilen att exportera > **Exportera profil**.
-2. Under **Direktregistrering**, väljer du **Hämta profil** och sparar filen.
+2. Under **Direktregistrering**, väljer du **Hämta profil** och sparar filen. En fil för registreringsprofiler är endast giltig i två veckor, efter det måste du återskapa den.
 3. Överför filen till en Mac-dator som kör [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) för att skicka den direkt som en hanteringsprofil till iOS-enheter.
 4. Förbered enheten med Apple Configurator med följande steg:
     1. Öppna Apple Configurator 2.0 på en Mac-dator.

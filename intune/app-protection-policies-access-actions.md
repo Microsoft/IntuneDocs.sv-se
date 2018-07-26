@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 084200f5773e5f92288d64e0fea23f022d93f3a0
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: 00f422b5619115b44b8d39c2d735f2163c22167f
+ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993742"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39138704"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune
 
@@ -91,7 +91,7 @@ Ange en av följande åtgärder:
 - Tillåt angivna (Rensa på icke-angivna)
 
 **Vad händer om IT-administratören matar in en annan lista över Android-tillverkare mellan principer för samma appar för samma användare i Intune?**<br>
-När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför vara en del av de listade Android-tillverkarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar till exempel ”Google, Samsung” medan *Princip B* specificerar”Google”. Den resulterande principen som Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”Google”. 
+När konflikter uppstår mellan två appskyddsprinciper för konfigurerade värden använder Intune normalt den mest restriktiva metoden. Den resulterande principen som skickas till målappen och som öppnas av den aktuella Intune-användaren är därför vara en del av de listade Android-tillverkarna i *Princip A* och *Princip B* som riktas till samma kombination av app/användare. *Princip A* specificerar t.ex ”Google, Samsung” medan *Princip B* specificerar”Google”. Den resulterande principen för Intune-användaren som påverkas av både *Princip A* och *Princip B* blir då ”Google”. 
 
 ### <a name="additional-settings-and-actions"></a>Ytterligare inställningar och åtgärder 
 

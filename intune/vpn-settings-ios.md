@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 7/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 05d93f1518427201d9d96dbc22c772967fe4fa0f
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: d35c9e32b7a0720d5d84a93a7edde6f2bd51911f
+ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744575"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146636"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-ios"></a>Konfigurera VPN-inställningar i Microsoft Intune för enheter som kör iOS
 
@@ -63,10 +63,10 @@ Om du har valt **Anpassat VPN** som anslutningstyp kan du även konfigurera föl
 - **VPN-ID** En identifierare för VPN-appen som du använder och som tillhandahålls av VPN-leverantören.
 - **Ange nyckel/värdepar för de anpassade VPN-attributen** Lägg till eller importera **Nycklar** och **Värden** som anpassar VPN-anslutningen. Även dessa värden tillhandahålls vanligtvis av VPN-leverantören.
 
-## <a name="apps-per-app-vpn-settings"></a>Inställningar för appar (per app-VPN)
+## <a name="automatic-vpn-settings"></a>Inställningar för automatiskt VPN
 
-- **Per app-VPN**: Aktivera det här alternativet om du vill använda webbadresser som aktiverar VPN-anslutningen när de besöks i Safari-webbläsaren. Om du vill konfigurera en per app-VPN måste du välja **Certifikat** som autentiseringsmetod i de grundläggande VPN-inställningarna.
-  - **Safari-webbadresser som utlöser denna VPN**: Välj det här alternativet för att lägga till en eller flera webbadresser. VPN-anslutningen aktiveras när de här webbadresserna besöks.
+- **Per app-VPN**: Om du väljer det här alternativet aktiveras per app-VPN, vilket gör att VPN-anslutningen utlöses automatiskt när vissa program öppnas. Utöver att välja det här alternativet måste du även associera programmen med den här VPN-profilen. Läs mer i [instruktionerna för att konfigurera per app-VPN för iOS](vpn-setting-configure-per-app.md). 
+  - **Safari-webbadresser som utlöser denna VPN**: Välj det här alternativet för att lägga till en eller flera webbadresser. VPN-anslutningen upprättas automatiskt när de här webbadresserna besöks i Safari-webbläsaren på enheten.
 
 - **VPN på begäran**: Konfigurera villkorliga regler som styr när VPN-anslutningen ska initieras. Du kan till exempel skapa ett villkor där VPN-anslutningen endast används när en enhet inte är ansluten till ett trådlöst företagsnätverk. Du kan även skapa ett villkor där VPN-anslutningen inte initieras om enheten inte får åtkomst till en DNS-sökdomän som du har angett.
 

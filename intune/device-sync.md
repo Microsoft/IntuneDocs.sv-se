@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fb609f0d99378e2e30b3c3a4f769781448aea1b5
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 30b4cf585edd7153ee01710ce8c572593056454f
+ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833373"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39117879"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synkronisera enheter för att få de senaste principerna och åtgärderna med Intune
 
@@ -43,6 +43,7 @@ Enhetsåtgärden **Synkronisera** tvingar den valda enheten att omedelbart check
 4. I listan över enheter som du hanterar väljer du en enhet, väljer **Mer** och väljer sedan **Synkronisera**.
 5. Välj **Ja** för att bekräfta.
 
+Välj **Enheter** > **Enhetsåtgärder** om du vill se statusen för synkroniseringsåtgärden.
 
 ## <a name="retryable-error-codes"></a>Återförsöksbara felkoder
 
@@ -65,4 +66,5 @@ När en administratör kör enhetsåtgärden **Synkronisera** är iOS- och Andro
 
 ## <a name="next-steps"></a>Nästa steg
 
-- Välj **Enhetsåtgärder** för att se status för synkroniseringsåtgärden. 
+Du kan [kontrollera informationen](device-inventory.md) om enheten.
+ 

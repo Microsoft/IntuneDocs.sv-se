@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/25/2018
+ms.date: 7/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5e9de6f1ac8bca1d65a94294d3b049dfccbe44c7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 557bdbace1752b8680cd15d7ba190577bec23e24
+ms.sourcegitcommit: 2e849eea920dcd6ef1b78e5aee26434bb7b01bff
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905367"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39132467"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
@@ -167,11 +167,11 @@ Den här funktionen ingår i statusrapporteringen för enheter:
 1. Välj **Enhetsefterlevnad** > **Principer**. En lista över principer visas, inklusive plattformen, om principen har tilldelats, samt ytterligare information.
 2. Välj en princip > **Översikt**. I den här vyn innehåller principtilldelningen följande statusar:
 
-  - Lyckades
-  - Fel
-  - Konflikt
-  - Väntar
-  - Inte tillämpligt
+  - Lyckades: Principen tillämpas
+  - Fel: Det gick inte att tillämpa principen. Detta visas vanligtvis med en felkod som länkar till en förklaring. 
+  - Konflikt: Två inställningar tillämpas på samma enhet och Intune kan inte lösa konflikten. En administratör bör granska.
+  - Väntar: Enheten har inte kontaktar Intune ännu för att ta emot principen. 
+  - Inte tillämpligt: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10. 
 
 3. Om du vill visa information om de enheter som använder den här principen väljer du en av statusarna. Välj till exempel **Lyckades**. I nästa fönster visas specifik enhetsinformation, inklusive enhetsnamn och distributionsstatus.
 
@@ -181,4 +181,3 @@ Principkonflikter kan uppstå när flera Intune-principer används på en enhet.
 - Om de motstridiga inställningarna gäller en Intune-konfigurationsprincip och en efterlevnadsprincip, prioriteras inställningarna i efterlevnadsprincipen framför inställningarna i konfigurationsprincipen. Detta gäller även om inställningarna i konfigurationsprincipen är säkrare.
 
 - Om du har distribuerat flera efterlevnadsprinciper använder Intune den säkraste av dessa principer.
-

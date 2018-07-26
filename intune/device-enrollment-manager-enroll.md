@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b18a55d7bd37ab32f6b2f64eee00489389ea323d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 76166fda33414c8ae3096ca12604a5edf07ad974
+ms.sourcegitcommit: a5bd08f2b6a0693fa62683aa2d3699041030269e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905231"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203228"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
@@ -56,7 +56,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
   - (Endast iOS) Om du använder DEM för att registrera iOS-enheter, kan du inte använda Apple Configurator, Apples program för enhetsregistrering (DEP) eller Apple School Manager (ASM) för att registrera enheter.
   - (Endast Android) Det finns en gräns för hur många Android-arbetsprofilenheter som kan registreras med ett enda DEM-konto. Högst tio enheter med Android-arbetsprofiler kan registreras per DEM-konto. Den här begränsningen gäller inte för äldre Android-registrering.
   - Enheter kan installera VPP-appar om de har enhetslicenser.
-  - Varje enhet måste ha en enhetslicens. Läs mer om [användar- och enhetslicenser](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
+  - En Intune-enhetslicens krävs inte för att använda DEM. Läs mer om [användar- och enhetslicenser](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
 
 
 > [!NOTE]
