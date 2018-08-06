@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,18 +14,16 @@ ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9329a57ee7d47cb99a7c87326bb043c0a04c6313
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 4a047ceb6baa15ad59a5792430b60f2adf18c98a
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905214"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321279"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurera en certifikatprofil för enheterna i Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-När du ger användarna åtkomst till företagets resurser via VPN, Wi-Fi eller e-postprofiler, kan du autentisera dessa anslutningar med hjälp av certifikat. När du använder certifikat behöver du inte ange användarnamn och lösenord för att autentisera anslutningar
+Du ger användare åtkomst till företagsresurser via VPN, Wi-Fi eller e-postprofiler. Du kan använda certifikat för att autentisera dessa anslutningar. När du använder certifikat behöver dina slutanvändare inte ange användarnamn och lösenord för att autentisera.
 
 Du kan använda Intune för att tilldela dessa certifikat till enheter som du hanterar. Intune har stöd för tilldelning och hantering av följande certifikattyper:
 
@@ -36,9 +34,9 @@ Alla dessa certifikattyper har sina egna förutsättningar och krav på infrastr
 
 ## <a name="overview"></a>Översikt
 
-1. Se till att du har rätt certifikatinfrastruktur på plats. Du kan använda [SCEP-certifikat](certificates-scep-configure.md) och [PKCS-certifikat](certficates-pfx-configure.md).
+1. Se till att rätt certifikatinfrastruktur har konfigurerats. Du kan använda [SCEP-certifikat](certificates-scep-configure.md) och [PKCS-certifikat](certficates-pfx-configure.md).
 
-2. Installera ett rotcertifikat eller en mellanliggande certifikatutfärdare på alla enheter så att enheterna kan identifiera certifikatutfärdarens giltighet. Om du vill göra detta måste du skapa och tilldela en **betrodd certifikatprofil**. När du tilldelar den här profilen kommer enheter som du hanterar med Intune att begära och ta emot rotcertifikatet. Du måste skapa en separat profil för varje plattform. Profilerna för betrodda certifikat är tillgängliga för följande plattformar:
+2. Installera ett rotcertifikat eller en mellanliggande certifikatutfärdare på alla enheter så att enheterna kan identifiera certifikatutfärdarens giltighet. Om du vill göra detta måste du skapa och tilldela en **betrodd certifikatprofil**. När du tilldelar den här profilen begär och tar Intune-hanterade enheter emot rotcertifikatet. Du måste skapa en separat profil för varje plattform. Profilerna för betrodda certifikat är tillgängliga för följande plattformar:
 
     - iOS 8.0 och senare
     - macOS 10.11 och senare
@@ -86,13 +84,11 @@ Det här certifikatet importeras när du konfigurerar en certifikatprofil för e
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Steg 3: Skapa betrodda certifikatprofiler
 Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikatprofil. En betrodd certifikatprofil och en SCEP- eller PKCS-profil krävs för varje enhetsplattform. Stegen för att skapa betrodda certifikat fungerar ungefär på samma sätt för varje enhetsplattform.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I fönstret **Intune** väljer du **Enhetskonfiguration**.
-2. I fönstret **Enhetskonfiguration** väljer du **Hantera** > **Profiler**.
-3. I fönstret Profiler väljer du **Skapa profil**.
-4. I fönstret **Skapa profil** anger du ett **Namn** och en **Beskrivning** för den betrodda certifikatprofilen.
-5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. I dagsläget kan du välja någon av följande plattformar för certifikatsinställningar:
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Enhetskonfiguration** > **Hantera** > **Profiler** > **Skapa profil**.
+4. Ange ett **namn** och en **beskrivning** för den betrodda certifikatprofilen.
+5. Från listrutan **Plattform** väljer du enhetsplattformen för detta betrodda certifikat. Alternativen är:
 
     - **Android**
     - **Android enterprise**
@@ -103,12 +99,14 @@ Skapa en betrodd certifikatprofil innan du skapar en SCEP- eller PKCS-certifikat
     - **Windows 10 och senare**
 
 6. Från listrutan **Profil** väljer du **Betrodda certifikat**.
-7. Bläddra till certifikatet du sparade i uppgift 1 och klicka sedan på **OK**.
+7. Bläddra till det certifikat som du sparade i uppgift 1 och välj sedan **OK**.
 8. För Windows 8.1- och Windows 10-enheter, väjer du **Målarkiv** för det betrodda certifikatet från:
+
     - **Datorcertifikatarkiv – rot**
     - **Datorcertifikatarkiv – mellannivå**
     - **Användarcertifikatarkiv – mellannivå**
-8. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
+
+9. När du är klar väljer du **OK**, går tillbaka till fönstret **Skapa profil** och väljer **Skapa**.
 
 Profilen skapas och visas i listan. Om du vill tilldela profilen till grupper kan du läsa [Tilldela enhetsprofiler](device-profile-assign.md).
 
@@ -124,4 +122,6 @@ Se något av följande avsnitt för att få hjälp med att konfigurera och tilld
 När du har skapat en certifikatprofil för betrodd certifikatutfärdare skapar du SCEP- eller PKCS-certifikatprofiler för varje plattform som du vill använda. När du skapar en SCEP-certifikatprofil anger du en betrodd certifikatprofil för samma plattform. Detta steg länkar de två certifikatprofilerna, men du måste fortfarande tilldela varje profil separat.
 
 ## <a name="next-steps"></a>Nästa steg
-Du hittar allmän information om hur du tilldelar enhetsprofilerna i [Tilldela enhetsprofilerna](device-profile-assign.md).
+[Tilldela enhetsprofiler](device-profile-assign.md)  
+[Använd S/MIME att signera och kryptera e-postmeddelanden](certificates-s-mime-encryption-sign.md)  
+[Använd tredje parts certifikatutfärdare](certificate-authority-add-scep-overview.md)

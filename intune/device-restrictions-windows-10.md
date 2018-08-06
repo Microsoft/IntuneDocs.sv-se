@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/23/2018
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a4bbc89f66b49fe6a5c4ff8595c5913583288e0f
-ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
+ms.openlocfilehash: 42e0798b0c2941d9ea45e75b367b69bc7dab548f
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34803847"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321228"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Inställningar för enhetsbegränsning för Windows 10 (och senare) i Intune
 I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan konfigurera för enheter som kör Windows 10.
@@ -252,7 +252,7 @@ Du kan lägga till appar som ska ha en annan sekretess jämfört med vad du har 
 
 ## <a name="kiosk-preview---obsolete"></a>Helskärmsläge (förhandsgranskning) – föråldrad
 
-Dessa inställningar flyttas och tas bort i en kommande version. Om du vill använda de nya inställningarna läser du sidan om [inställningar för helskärmsläge i Windows 10 och senare](kiosk-settings.md).
+De här inställningarna är skrivskyddade och kan inte ändras. Om du vill konfigurera helskärmsläge kan du läsa mer i [Inställningar för helskärmsläge i Windows 10 och senare](kiosk-settings.md).
 
 En helskärmsenhet kör normalt en app eller en specifik uppsättning appar. Användarna kommer inte åt funktioner på enheten utanför helskärmsapparna.
 

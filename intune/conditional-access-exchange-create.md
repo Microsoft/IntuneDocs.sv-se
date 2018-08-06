@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fbe55be15df9755c109ec7e8e8e23db3c27931b0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 4fd82cf211360e77b17f8ea915c13719b8ab3408
+ms.sourcegitcommit: cd97505d6f5dc54db7f35a691376bcbf6f36ac9d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905537"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323250"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Skapa en villkorlig åtkomstprincip för Exchange lokalt och äldre Exchange Online Dedicated
 
@@ -63,7 +63,7 @@ Innan du kan konfigurera villkorlig åtkomst måste du kontrollera följande:
 - Windows Phone 8.1 och senare
 - Intern e-postapp för iOS.
 - EAS-e-postklienter som Gmail på Android 4 eller senare.
-- EAS-e-postklienter och **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work**-appar i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work-appen och distribuera de apparna som en nödvändig installation.
+- EAS-e-postklienter och **Android-arbetsprofilenheter:** Endast **Gmail** och **Nine Work for Android Enterprise** i **arbetsprofilen** stöds på Android-arbetsprofilenheter. För villkorlig åtkomst till arbete med Android-arbetsprofiler måste du distribuera en e-postprofil för Gmail eller Nine Work for Android Enterprise-appen och distribuera de apparna som en nödvändig installation.
 
 > [!NOTE]
 > Microsoft Outlook-appen for Android and iOS stöds inte. 

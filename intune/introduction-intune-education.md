@@ -14,12 +14,12 @@ ms.assetid: ca36589b-804d-40b8-b112-9195d8897800
 ms.reviewer: travisj
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6d8335f1bac26b1a70c4e9aeaf7c8c6d1b34fc12
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.openlocfilehash: 776cb1e03730bbac1d6e7ed36f411eba0ab94cff
+ms.sourcegitcommit: 47b55d211534f2e52e50d6b936c9a349e99fd222
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34718020"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39236046"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Hur skiljer sig Intune for Education åt från den fullständiga hanteringsupplevelsen i Intune?
 
@@ -27,9 +27,9 @@ Med Intune for Education kan dina lärare och elever vara produktiva samtidigt s
 
 ![Intune for Education-konsolen jämförd med Intune-konsolen.](./media/intune-azure-vs-intuneEDU.png)
 
-Med Intune for Education kan du hantera Windows 10-enheter med hjälp av de fullständiga MDM-funktionerna i Intune. Intune kan även hantera ytterligare plattformar som iOS och Android, och är utformad för att ge dig åtkomst till en fullständig uppsättning principer i samma konsol.
+Med Intune for Education kan du hantera Windows 10- och iOS-enheter med hjälp av de fullständiga MDM-funktionerna i Intune. Med den fullständiga enhetshanteringen kan du hantera Windows-, iOS- och Android-enheter.  
 
-Intune for Education kan användas separat eller tillsammans med den [fullständiga enhetshanteringen i Intune](introduction-intune.md). Det kan också användas tillsammans med resten av verktygen i [Microsoft Education](https://microsoft.com/education), vilket gör det enkelt att använda Intune for Education med andra bra utbildningsverktyg från Microsoft.
+Intune for Education kan användas separat eller tillsammans med den [fullständiga enhetshanteringen i Intune](introduction-intune.md). Det kan också användas tillsammans med resten av verktygen i [Microsoft Education](https://microsoft.com/education), vilket gör det enkelt att använda Intune for Education med andra bra utbildningsverktyg från Microsoft.  
 
 > [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
 

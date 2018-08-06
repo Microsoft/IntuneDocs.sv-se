@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 09c4fdc6de0368e7ba7d4bebbc3ebfbf2c5ec378
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869380"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321483"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -60,9 +60,6 @@ Välj de Office-appar som du vill tilldela till enheter.
     Dessutom kan du också installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa.
 3. Välj **OK**.
 
->[!IMPORTANT]
-> När du har skapat app-paketet kan du inte redigera dess egenskaper. För att konfigurera olika egenskaper måste du ta bort appaketet och skapa en ny.
-
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
 I det här steget anger du information om appaketet. Den här informationen hjälper dig att identifiera appsviten i Intune och hjälper användarna att hitta appsviten det i företagsportalappen.
@@ -95,11 +92,8 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
         - **Semi-Annual** (Varje halvår)
         - **Varje halvår (riktad)**
     - **Godkänn applicensavtalet för slutanvändare**: Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
-    - **Använd aktivering på delad dator**: Välj det här alternativet när flera användare delar en dator. Mer information finns i översikt över delad aktivering för Office 365.
+    - **Använd aktivering på delad dator**: Välj det här alternativet när flera användare delar en dator. Mer information finns i [översikt över delad aktivering för Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Språk**: Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.
-
->[!IMPORTANT]
-> När du har skapat app-paketet kan du inte redigera dess egenskaper. För att konfigurera olika egenskaper måste du ta bort appaketet och skapa en ny.
 
 ## <a name="finish-up"></a>Slutför
 

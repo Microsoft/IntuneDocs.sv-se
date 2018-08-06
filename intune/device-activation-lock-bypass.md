@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2a8c14e523d33c9e0994134ff1ef468b290b3992
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
+ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31022517"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39356581"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Kringgå aktiveringslåset på övervakade iOS-enheter med Intune
 
@@ -34,7 +34,7 @@ Microsoft Intune kan hjälpa dig att hantera iOS-aktiveringslåset, en funktion 
 
 ## <a name="how-activation-lock-affects-you"></a>Hur du påverkas av aktiveringslås
 
-Även om aktiveringslås hjälper till att skydda iOS-enheter och förbättra chansen att få tillbaka en borttappad eller stulen enhet, så gör den här funktionen att du som IT-administratör står inför ett antal utmaningar. Till exempel:
+Även om aktiveringslås hjälper till att skydda iOS-enheter och förbättra chansen att få tillbaka en borttappad eller stulen enhet, så gör den här funktionen att du som IT-administratör står inför ett antal utmaningar. Exempel:
 
 - En användare ställer in aktiveringslås på en enhet. Användaren lämnar sen företaget och lämnar tillbaks enheten. Utan användarens Apple-ID och lösenord går det inte att återaktivera enheten.
 - Du behöver en rapport med alla enheter som har aktiveringslås aktiverat.
@@ -66,15 +66,23 @@ Innan du kan kringgå aktiveringslåset på enheter måste du aktivera det genom
 ## <a name="how-to-use-activation-lock-bypass"></a>Så här kringgår du aktiveringslås
 
 >[!IMPORTANT]
->När du har kringgått aktiveringslåset på en enhet aktiveras ett nytt aktiveringslås automatiskt om appen Hitta min iPhone öppnas. Därför **bör du ha fysisk tillgång till enheten innan du följer den här proceduren**.
+>När du har kringgått aktiveringslåset på en enhet aktiveras ett nytt aktiveringslås automatiskt om appen Hitta min iPhone startas. Därför **bör du ha fysisk tillgång till enheten innan du följer den här proceduren**.
 
-Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset från en iOS-enhet utan användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startar. Kringgå bara aktiveringslåset om du har fysisk åtkomst till enheten.
+Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset från en iOS-enhet utan att kräva användarens Apple-ID och lösenord. När du har kringgått aktiveringslåset aktiverar enheten aktiveringslåset igen när appen Hitta Min iPhone startas. Kringgå endast aktiveringslåset om du har fysisk åtkomst till enheten.
 
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** på bladet **Intune**.
-4. Välj **Alla enheter** på bladet **Enheter**.
-5. I listan med enheter som du hanterar väljer du en övervakad iOS-enhet, **...Mer** och sedan fjärråtgärden **Kringgå aktiveringslås**.
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster** > **Intune**.
+3. På bladet **Intune** väljer du **Enheter**.
+4. På bladet **Enheter** väljer du **Alla enheter**.
+5. I listan över enheter som du hanterar väljer du fjärråtgärden **Kringgå aktiveringslås** för enheten.
+6. Gå till enhetens maskinvaruavsnitt och kopiera sedan värdet **Kod för att kringgå aktiveringslås** under **Villkorlig åtkomst**.
+
+    >[!NOTE]
+    >Kopiera koden för att kringgå innan du utför en fabriksåterställning av enheten. Om du återställer enhetsinställningarna innan du har kopierat koden tas koden bort från Azure.
+
+7.  Gå till bladet **Översikt** för enheten och välj sedan **Fabriksåterställning**.
+8.  När enheten har återställts uppmanas du att ange *Apple-ID* och *lösenord*. Lämna fältet *ID* tomt och ange sedan den **koden för att kringgå** för *lösenordet*. Detta tar bort kontot från enheten. 
+
 
 ## <a name="next-steps"></a>Nästa steg
 

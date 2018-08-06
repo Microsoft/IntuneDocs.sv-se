@@ -1,11 +1,11 @@
 ---
-title: Byta namn på enheten från företagsportalens webbplats | Microsoft Docs
-description: ''
+title: Byta namn på enheten från företagsportalens webbplats
+description: Lär dig hur du byter namn på enheten från företagsportalens webbplats.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/23/2017
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,29 +17,28 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: bf111b6c95a61e0c244b8d3254abc08c1d85c598
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: e31451abd79c17618377598d29c455c4c0637348
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017146"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321381"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Byta namn på enheten från företagsportalens webbplats
 
-Du kanske vill byta namn på din enhet för att göra den enklare att identifiera. Du kan göra det från [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som du har registrerat för hantering med din IT-avdelning.
+Lär dig hur du byter namn den registrerade, hanterade enheten från företagsportalens webbplats. Byt namn på en enhet från dess generiska modellnamn eller standardmodellnamn till ett namn som hjälper dig att snabbt identifiera den.  
 
-Så här byter du namn på din enhet:
+1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com/HelpDeskDialog) väljer du __menyknappen__ > __Mina enheter__.
 
-1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+2. Välj den enhet som du vill byta namn på.
 
-2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill byta namn på.
+![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)  
 
-   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Välj **Byt namn**.  
 
-3. Enheten öppnas i ett popup-fönster. Tryck på knappen **Byt namn**.
+   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)  
+    
 
-   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
+4. I rutan där enhetens namn visas skriver du in ett nytt namn för enheten. Tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
 
-4. Skriv ett nytt namn för din enhet i rutan där enhetsnamnet visas och tryck sedan på knappen **Byt namn**. Nu visas enheten med det nya namnet.
-
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com/HelpDeskDialog).

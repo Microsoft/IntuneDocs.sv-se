@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 manager: dougeby
 ms.author: erikre
-ms.date: 05/16/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ac85478abed049487c028c58637e7937876d2198
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 87333610380ef34e1d832694a30bfe97388bcb62
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34449878"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254407"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -463,7 +463,20 @@ Inga ytterligare manifestvärden behöver konfigureras.
 
 Authority och NonBrokerRedirectURI kan anges om det behövs.
 
-Intune SDK-teamet kommer att begära appens program-ID (klient-ID). Du hittar det i [Azure-portalen](https://portal.azure.com/), under **Alla program**, i kolumnen för **program-ID**. Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). Intune SDK-teamet kan nås på msintuneappsdk@microsoft.com.
+Registrera din app med Azure AD med hjälp av följande steg.
+
+På Azure-portalen:
+1.  Gå till bladet **Azure Active Directory**.
+2.  Välj konfigurationen **Appregistrering** för programmet.
+3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
+4.  Klicka på **+ Lägg till**.
+5.  Klicka på **Välj ett API**. 
+6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobila program).
+7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
+8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
+9.  Klicka på **Klar**.
+
+Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). 
 
 Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
@@ -1418,7 +1431,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 > Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
 
 ### <a name="general-requirements"></a>Allmänna krav
-* Intune SDK-teamet kommer att kräva appens program-ID. Det går att hitta via [Azure Portal](https://portal.azure.com/), under **Alla program**, i kolumnen för **Program-ID**. Ett bra sätt att kontakta Intune SDK-teamet är att skicka e-post till msintuneappsdk@microsoft.com.
+* Se till att din app registreras med Intune Mobile Application Management-tjänsten genom att följa stegen i [Vanliga ADAL-konfigurationer #2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations).
 
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
 De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare som vill kräva Intune-appskyddsprinciper för appanvändning på en slutanvändarenhet.

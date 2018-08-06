@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2987ca7ce3a9b99249fc62fc7de5c9cca22b0b26
-ms.sourcegitcommit: d1420a5d2d2c1da40cc4dac165ca9173c22323d3
+ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34803830"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321500"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
 
@@ -182,8 +182,8 @@ Du kan också klicka på **Importera** för att fylla i listan från en csv-fil 
 
 I listan för att visa eller dölja appar kan du konfigurera en av följande listor (kräver övervakade enheter som kör iOS 9.3 eller senare).
 
-En lista med **dolda appar** – Ange en lista med appar som är dolda för användarna. Användare kan inte visa eller starta dessa appar.
-En lista med **synliga appar** – Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
+- En lista med **dolda appar** – Ange en lista med appar som är dolda för användarna. Användare kan inte visa eller starta dessa appar.
+- En lista med **synliga appar** – Ange en lista med appar som användarna ska kunna se och starta. Inga andra appar kan visas eller startas.
 
 Konfigurera listan genom att klicka på **Lägg till**, ange ett namn, t.ex. appens utgivare samt webbadressen till appen i appbutiken.
 
@@ -259,54 +259,8 @@ När du har angett varje appnamn och appsamlings-ID väljer du **Lägg till** f�
 - **Importera** – Importera en fil med kommaavgränsade värden (.csv), som innehåller en lista med appnamn och deras associerade appsamlings-ID:n.
 - **Exportera** – Exportera appnamnen och associerade appsamlings-ID:n som du har konfigurerat, till en fil med kommaavgränsade värden (.csv).
 
-### <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referens till samlings-ID för inbyggda iOS-appar
-
-I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
-
-```
-,com.apple.AppStore,App Store,Apple
-,com.apple.calculator,Calculator,Apple
-,com.apple.mobilecal,Calendar,Apple
-,com.apple.camera,Camera,Apple
-,com.apple.mobiletimer,Clock,Apple
-,com.apple.compass,Compass,Apple
-,com.apple.MobileAddressBook,Contacts,Apple
-,com.apple.facetime,FaceTime,Apple
-,com.apple.mobileme.fmf1,Find Friends,Apple
-,com.apple.mobileme.fmip1,Find iPhone,Apple
-,com.apple.gamecenter,Game Center,Apple
-,com.apple.mobilegarageband,GarageBand,Apple
-,com.apple.Health,Health,Apple
-,com.apple.iBooks,iBooks,Apple
-,com.apple.MobileStore,iTunes Store,Apple
-,com.apple.itunesu,iTunes U,Apple
-,com.apple.Keynote,Keynote,Apple
-,com.apple.mobilemail,Mail,Apple
-,com.apple.MapsMaps,Apple
-,com.apple.MobileSMS,Messages,Apple
-,com.apple.Music,Music,Apple
-,com.apple.news,News,Apple
-,com.apple.mobilenotes,Notes,Apple
-,com.apple.Numbers,Numbers,Apple
-,com.apple.Pages,Pages,Apple
-,com.apple.Photo-Booth,Photo Booth,Apple
-,com.apple.mobileslideshow,Photos,Apple
-,com.apple.podcasts,Podcasts,Apple
-,com.apple.reminders,Reminders,Apple
-,com.apple.MobileSafari,Safari,Apple
-,com.apple.Preferences,Settings,Apple
-,com.apple.stocks,Stocks,Apple
-,com.apple.tips,Tips,Apple
-,com.apple.videos,Videos,Apple
-,com.apple.VoiceMemos,VoiceMemos,Apple
-,com.apple.Passbook,Wallet,Apple
-,com.apple.Bridge,Watch,Apple
-,com.apple.weather,Weather,Apple
-```
-
-
 ## <a name="kiosk-supervised-only"></a>Helskärm (endast övervakat)
--   **App som körs i helskärmsläge** – Välj **Hanterade appar** om du vill välja en app som du har lagt till Intune, eller **Store-app** om du vill ange URL:en till appen i Store. Inga andra appar tillåts köra på enheten. Mer hjälp finns i "Så här anger du webbadresser till appbutiker" senare i det här avsnittet.
+-   **App som körs i helskärmsläge** – Välj **Hanterad app** om du vill välja en app som du har lagt till Intune, **Store-app** om du vill ange URL:en till appen i Store eller **Inbyggd app** om du vill ange samlings-ID för den inbyggda appen. Mer information finns i [Referens till samlings-ID för inbyggda iOS-appar](device-restrictions-ios.md#bundle-id-reference-for-built-in-ios-apps) och [Så här anger du webbadressen till appen i butiken](device-restrictions-ios.md#how-to-specify-the-url-to-an-app-in-the-store-1).
     -   **AssistiveTouch** – Aktivera eller inaktivera hjälpmedelsinställningen **AssistiveTouch** som hjälper användare att utföra gester på skärmen som annars kan vara svåra att utföra.
     -   **Invertera färger** – Aktivera eller inaktivera hjälpmedelsinställningen Invertera färger som anpassar skärmen för att hjälpa användare med synfel.
     -   **Monoljud** – Aktivera eller inaktivera hjälpmedelsinställningen Monoljud.
@@ -327,6 +281,51 @@ I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta
 >[!NOTE]
 > Innan du kan konfigurera en iOS-enhet för helskärmsläge måste du använda Apple Configurator-verktyget eller Apples enhetsregistreringsprogram för att placera enheten i övervakat läge. Mer information om Apple Configurator-verktyget finns i Apples dokumentation.
 >Om iOS-appen som du anger har installerats efter det att du har tilldelat profilen kommer enheten inte att gå över i helskärmsläge förrän den startas om.
+
+## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referens till samlings-ID för inbyggda iOS-appar
+
+I listan visas appsamlings-ID:n för några vanliga inbyggda iOS-appar. Kontakta programvaruleverantören för att hitta appsamlings-ID:n för andra appar.
+
+| Samlings-ID                   | Appnamn     | Utgivare |
+|-----------------------------|--------------|-----------|
+| com.apple.AppStore          | Appbutik    | Apple     |
+| com.apple.calculator        | Kalkylator   | Apple     |
+| com.apple.mobilecal         | Kalender     | Apple     |
+| com.apple.camera            | Kamera       | Apple     |
+| com.apple.mobiletimer       | Klocka        | Apple     |
+| com.apple.compass           | Kompass      | Apple     |
+| com.apple.MobileAddressBook | Kontakter     | Apple     |
+| com.apple.facetime          | FaceTime     | Apple     |
+| com.apple.mobileme.fmf1     | Hitta vänner | Apple     |
+| com.apple.mobileme.fmip1    | Hitta iPhone  | Apple     |
+| com.apple.gamecenter        | Spelcenter  | Apple     |
+| com.apple.mobilegarageband  | GarageBand   | Apple     |
+| com.apple.Health            | Hälsa       | Apple     |
+| com.apple.iBooks            | iBooks       | Apple     |
+| com.apple.MobileStore       | iTunes Store | Apple     |
+| com.apple.itunesu           | iTunes U     | Apple     |
+| com.apple.Keynote           | Keynote      | Apple     |
+| com.apple.mobilemail        | E-post         | Apple     |
+| com.apple.MapsMaps          |              | Apple     |
+| com.apple.MobileSMS         | Meddelanden     | Apple     |
+| com.apple.Music             | Musik        | Apple     |
+| com.apple.news              | Nyheter         | Apple     |
+| com.apple.mobilenotes       | Obs!        | Apple     |
+| com.apple.Numbers           | Siffror      | Apple     |
+| com.apple.Pages             | Sidor        | Apple     |
+| com.apple.Photo-Booth       | Photo Booth  | Apple     |
+| com.apple.mobileslideshow   | Foton       | Apple     |
+| com.apple.podcasts          | Poddsändningar     | Apple     |
+| com.apple.reminders         | Påminnelser    | Apple     |
+| com.apple.MobileSafari      | Safari       | Apple     |
+| com.apple.Preferences       | Inställningar     | Apple     |
+| com.apple.stocks            | Aktier       | Apple     |
+| com.apple.tips              | Tips         | Apple     |
+| com.apple.videos            | Videor       | Apple     |
+| com.apple.VoiceMemos        | VoiceMemos   | Apple     |
+| com.apple.Passbook          | Plånbok       | Apple     |
+| com.apple.Bridge            | Titta på        | Apple     |
+| com.apple.weather           | Väder      | Apple     |
 
 ## <a name="safari"></a>Safari
 -   **Safari (endast övervakat)** – Ange om webbläsaren Safari kan användas på enheten.

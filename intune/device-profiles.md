@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 07/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f241c5bece72b44a6bd3c9047b5997bcd8879ec5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
+ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905197"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335834"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Vad är enhetsprofiler i Microsoft Intune?
 
@@ -113,6 +113,13 @@ Den här funktionen stöder:
 - iOS
 - macOS
 - Windows 8.1 (endast import)
+
+## <a name="esim-cellular---public-preview"></a>eSIM-mobilnät – offentlig förhandsversion
+
+[Profiler för eSIM-mobilnät](esim-device-configuration.md) ger möjligheten att konfigurera mobildataabonnemang på dina hanterade enheter för åtkomst till Internet och data.  När du har fått aktiveringskoder från mobiloperatören kan du använda Intune för att importera dessa aktiveringskoder och sedan tilldela till dina eSIM-kompatibla enheter.
+
+Den här funktionen stöder:
+- Windows 10 Fall Creators Update och senare
 
 ## <a name="education"></a>Utbildning
 Konfigurationsalternativen [Utbildningsinställningar – Windows 10](education-settings-configure.md) för [appen Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). När du konfigurerar dessa alternativ kan inga andra appar köras på enheten förrän provet har slutförts.

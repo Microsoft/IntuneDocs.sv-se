@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 00f422b5619115b44b8d39c2d735f2163c22167f
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
+ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138704"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39254492"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune
 
@@ -44,7 +44,7 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 8. Välj den **åtgärd** du vill vidta att om användarna inte uppfyller dina krav. I vissa fall kan flera åtgärder konfigureras för en och samma inställning. Mer information finns i [Hur du skapar och tilldelar skyddsprinciper för appar](app-protection-policies.md).
 
 >[!NOTE]
-> Om du vill använda inställningen **Enhetsmodell(er)** anger du en semikolonavgränsad lista över modell-ID:n. 
+> Om du vill använda inställningen **Enhetsmodeller eller enhetstillverkare** anger du en semikolonavgränsad lista över modell-ID:n. Undvik blanksteg i listor med flera värden. De här värdena är inte skiftlägeskänsliga. 
 
 ## <a name="policy-settings"></a>Principinställningar 
 
@@ -83,7 +83,10 @@ För Android kan du konfigurera åtgärder för följande inställningar med hj�
 -  Enhetstillverkare
 
 Om du vill använda inställningen **Enhetstillverkare** anger du en semikolonavgränsad lista över Android-tillverkare. Du hittar Android-tillverkaren av en enhet under Enhetsinställningar.<br>
-Exempel på indata: *Tillverkare A; Tillverkare B; Google* 
+Exempel på indata: *Tillverkare A; Tillverkare B* 
+
+>[!NOTE]
+> Det här är några vanliga tillverkare som rapporteras från enheter som använder Intune, och de kan användas som indata: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
 
 På slutanvändarens enheter kan Intune-klienten utföra åtgärder baserat på en enkel matchning av enhetsmodellsträngar som angetts i Intune för programskyddsprinciper. Matchningen beror helt på vad enheten rapporterar. Du (IT-administratören) uppmuntras att säkerställa att det avsedda beteendet fungerar genom att testa den här inställningen baserat på en rad olika enhetstillverkare och modeller som är riktade till en liten användargrupp. Standardvärdet är **Inte konfigurerat**.<br>
 Ange en av följande åtgärder: 

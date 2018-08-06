@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/19/2018
+ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2db9d991c476d89399058137adb972c06029befc
-ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
+ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028736"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321296"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -57,7 +57,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Verksamhetsspecifika appar för Android | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Android-installationsfil med tillägget **.apk**.  |
 | iOS LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en iOS-installationsfil med tillägget **.ipa**.  |
 | Windows Phone LOB-appar | Verksamhetsspecifik app | Välj **Branschspecifik app** som **apptyp**, välj **Appaketfil** och ange sedan en Windows Phone-installationsfil med tillägget **.xap**.  |
-| Verksamhetsspecifika Windows-appar | Verksamhetsspecifik app | Välj **Branschspecifik** app som apptyp, välj **Appaketfil** och ange sedan en Windows-installationsfil med tillägget **.msi**, **.appx** eller **.appxbundle**. |
+| Verksamhetsspecifika Windows-appar | Verksamhetsspecifik app | Välj **Branschspecifik** app som apptyp, välj **Appaketfil** och ange sedan en Windows-installationsfil med tillägget **.msi**, **.appx**, **.appxbundle**, **.msix** eller **.msixbundle**. |
 | Inbyggd iOS-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Inbyggd Android-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Webbappar  | Webbapp  | Välj **Webblänk** som **apptyp** och ange sedan en giltig URL som pekar till webbappen.  |
@@ -119,6 +119,9 @@ Utöver att förstå webbappar, Store-appar och verksamhetsspecifika appar bör 
 - **Apples program för volyminköp för företag (iOS och MacOS)**: I iOS App Store kan du köpa flera licenser för en app som du vill använda i företaget. Om du köper flera exemplar så blir det lättare att effektivt hantera appar i ditt företag. Mer information finns i [Hantera volyminköpta iOS-appar](vpp-apps-ios.md).
 - **Android-arbetsprofil**: Hur du tilldelar appar till Android-arbetsprofilenheter skiljer sig från hur du tilldelar dem till Android-standardenheter. Alla appar som du installerar för Android-arbetsprofiler kommer från den hanterade Google Play-butiken. Du kan logga in i butiken, bläddra efter de appar som du vill ha och godkänna dem. Appen visas sedan i noden **Licensierade appar** i Azure Portal och du kan hantera tilldelning av appen precis som för alla andra appar.
 - **Microsoft Store för företag (Windows 10)**: I Microsoft Store för företag kan du söka efter och köpa appar för din organisation, separat eller i volym. Genom att ansluta butiken till Microsoft Intune kan du hantera volyminköpta program i Azure-portalen. Mer information finns i [Hantera appar från Microsoft Store för företag](windows-store-for-business.md).
+
+    > [!NOTE]
+    > Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  
 
 ## <a name="before-you-add-apps"></a>Innan du lägger till appar
 Tänk på följande innan du börjar lägga till och tilldela appar:

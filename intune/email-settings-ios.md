@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a231adf4e1f5687bc88c8c9b15241d3f89e711d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2d2fc7f697d03c1ffcb952cd30e29f4959f2b7e9
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905350"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321177"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>E-postprofilinställningar för iOS-enheter – Intune
 
@@ -44,13 +44,13 @@ Använd e-postprofilinställningarna till att konfigurera dina enheter som kör 
 - **E-postadressattribut från AAD**: Välj hur e-postadressen för användaren ska skapas. Välj **UPN (User Principal Name)** (`user1@contoso.com` eller `user1`) om du vill använda det fullständiga huvudnamnet som e-postadress eller **Primär SMTP-adress** (`user1@contoso.com`) om du vill använda den primära SMTP-adressen för att logga in på Exchange.
 - **Autentiseringsmetod**: Välj antingen **Användarnamn och lösenord** eller **Certifikat** som den autentiseringsmetod som ska användas av e-postprofilen. Azure Multi-Factor Authentication stöds inte.
   - Om du valde **Certifikat**, väljer du en SCEP- eller PKCS-certifikatprofil som du har skapat tidigare och som ska användas för att autentisera Exchange-anslutningen.
-- **SSL**: Använd Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
-- **S/MIME**: Skicka utgående e-post med S/MIME-signering.
-  - Om du valde **Certifikat** väljer du en PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen.
+- **SSL**: **Aktivera** för att använda Secure Sockets Layer-kommunikation (SSL) för att skicka e-post, ta emot e-post och kommunicera med Exchange-servern.
+- **S/MIME**: **Aktivera S/MIME** för att skicka utgående e-post med hjälp av S/MIME-signering. När det här är aktiverat kan du även kryptera e-postmeddelande till mottagare som kan ta emot krypterad e-post samt dekryptera e-postmeddelanden från avsändare.
+  - Om du valde **Certifikat** väljer du en PKCS-certifikatprofil som du har skapat tidigare för att autentisera Exchange-anslutningen och/eller kryptera e-postväxlingar.
 - **Mängd e-post att synkroniseras**: Välj antalet dagars e-post som du vill synkronisera. Eller välj **Obegränsat** om du vill synkronisera all tillgänglig e-post.
-- **Tillåt att meddelanden flyttas till andra e-postkonton**: Ger användarna möjlighet att flytta e-postmeddelanden mellan olika konton som de har konfigurerat på sin enhet.
-- **Tillåt att e-post skickas från tredjepartsprogram**: Tillåt att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.
-- **Synkronisera senast använda e-postadresser**: Låter användarna synkronisera listan över e-postadresser som nyligen har använts på enheten med servern.
+- **Tillåt att meddelanden flyttas till andra e-postkonton**: **Aktivera** ger användarna möjlighet att flytta e-postmeddelanden mellan olika konton som de har konfigurerat på sin enhet.
+- **Tillåt att e-post skickas från tredjepartsprogram**: **Aktivera** tillåter att användaren väljer den här profilen som standardkonto för att skicka e-post och att appar från andra leverantörer öppnar e-post i den interna e-postappen, till exempel för att bifoga filer i e-postmeddelanden.
+- **Synkronisera senast använda e-postadresser**: **Aktivera** låter användarna synkronisera listan över e-postadresser som nyligen har använts på enheten med servern.
 
 ## <a name="next-steps"></a>Nästa steg
 [Konfigurera e-postinställningar i Intune](email-settings-configure.md)

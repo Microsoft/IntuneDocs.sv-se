@@ -1,41 +1,46 @@
 ---
-title: Importera Wi-Fi-inställningar för Windows 8.1- och senare
-titleSuffix: Microsoft Intune
-description: Så här importerar du trådlösa inställningar från Windows till en trådlös Intune-profil.
+title: Importera Wi-Fi-inställningar för Windows-enheter i Microsoft Intune – Azure | Microsoft Docs
+description: Exportera Wi-Fi-inställningar från en Windows-enhet som en XML-fil med hjälp av netsh wlan. Sedan importerar du den här filen i Intune för att skapa en Wi-Fi-profil för enheter som kör Windows 8.1, Windows 10 och Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 157416738e4607d5022f1c3c7ed8251a8e32fe3e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 6ce5cdd9509ed3407491714ccfa853613eb43973
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834024"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321143"
 ---
-# <a name="import-wi-fi-settings-for-windows-81-and-later-devices-in-microsoft-intune"></a>Importera trådlösa inställningar för enheter med Windows 8.1 och senare i Microsoft Intune
+# <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importera Wi-Fi-inställningar för Windows-enheter i Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-För enheter som kör operativsystemen Windows 8.1, Windows 10 Desktop eller Mobile, eller Windows Holographic for Business, kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterades till en fil.
+För enheter som kör Windows kan du importera en Wi-Fi-konfigurationsprofil som tidigare exporterats till en fil. **För Windows 10 och senare enheter kan du [skapa en Wi-Fi-profil](wi-fi-settings-windows.md) direkt i Intune**.
+
+Gäller för:  
+- Windows 8.1 och senare
+- Windows 10 och senare
+- Windows 10 Desktop eller Mobile
+- Windows 10 Holographic for Business
 
 ## <a name="export-wi-fi-settings-from-a-windows-device"></a>Exportera trådlösa inställningar från en Windows-enhet
 
-I Windows kan du använda verktyget **netsh wlan** för att exportera en befintlig trådlös profil till en XML-fil som kan läsas av Intune. Nyckeln måste exporteras i oformaterad text för att profilen ska kunna användas.
+I Windows kan du använda **netsh wlan** för att exportera en befintlig trådlös profil till en XML-fil som kan läsas av Intune. Nyckeln måste exporteras i oformaterad text för att profilen ska kunna användas.
 
 På en Windows-dator som redan har rätt WiFi-profil installerad, gör du följande:
 
 1. Skapa en lokal mapp för de exporterade trådlösa profilerna, till exempel **c:\WiFi**.
 2. Öppna en kommandotolk som administratör.
 3. Kör kommandot `netsh wlan show profiles` och anteckna namnet på den profil som du vill exportera. I det här exemplet är profilnamnet **WiFiName**.
-4. Kör kommandot `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. En fil för den trådlösa nätverksprofilen med namnet **Wi-Fi-WiFiName.xml** skapas i målmappen.
+4. Kör kommandot `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Detta skapar en Wi-Fi-profil med namnet **Wi-Fi-WiFiName.xml** i målmappen.
 
 ## <a name="import-the-wi-fi-settings-into-intune"></a>Importera trådlösa inställningar till Intune
 

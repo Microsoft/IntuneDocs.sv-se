@@ -1,59 +1,68 @@
 ---
-title: Konfigurera uppdateringsprinciper för programvara för iOS i Microsoft Intune
-titlesuffix: ''
-description: Konfigurera uppdateringsprinciper för iOS för att tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen.
+title: Konfigurera uppdateringsprinciper för iOS-programvara i Microsoft Intune – Azure | Microsoft Docs
+description: I Microsoft Intune skapar du eller lägger till en konfigurationsprincip för att begränsa när programvaruuppdateringar installeras automatiskt på iOS-enheter som hanteras eller övervakas av Intune. Du kan välja datum och tid när uppdateringar inte installeras. Du kan även tilldela den här principen till grupper, användare eller enheter samt söka efter eventuella installationsfel.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2018
+ms.date: 07/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: 1d4223ae4feb417f77909b320cd0295347b44461
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
+ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836596"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268846"
 ---
-# <a name="configure-ios-update-policies-in-microsoft-intune"></a>Konfigurera uppdateringsprinciper för iOS i Microsoft Intune
+# <a name="configure-ios-update-policies-in-intune"></a>Konfigurera iOS-uppdateringsprinciper i Intune
 
-Uppdateringsprinciper för programvara gör det möjligt att tvinga övervakade iOS-enheter som kör iOS 10.3 att automatiskt installera den senaste tillgängliga OS-uppdateringen. Den här funktionen är endast tillgänglig för övervakade enheter. Du kan konfigurera de dagar och tider då du inte vill att enheter ska installera uppdateringen. 
+Med programvaruuppdateringsprinciper kan du tvinga övervakade iOS-enheter att automatiskt installera den senaste tillgängliga uppdateringen för operativsystemet. Den här funktionen är endast tillgänglig för övervakade enheter. När du konfigurerar en princip kan du lägga till de dagar och tider då du inte vill att enheter installerar en uppdatering. 
 
-När enheten checkar in, ungefär var 8:e timme, försöker enheten att hämta och installera den senaste OS-uppdateringen om det finns en tillgänglig uppdatering och det inte är under en begränsad tidsperiod. Det krävs inga användaråtgärder för att uppdatera enheten. Principen skulle inte förhindra att en användare uppdaterar operativsystemet.
+Enheten checkar in med Intune ungefär var 8:e timme. Om en uppdatering är tillgänglig och den aktuella tiden inte är en begränsad tid laddar enheten ned och installerar den senaste uppdateringen för operativsystemet. Det krävs inga användaråtgärder för att uppdatera enheten. Principen förhindrar inte att en användare uppdaterar operativsystemet manuellt.
 
-## <a name="configure-the-ios-update-policy"></a>Konfigurera iOS-uppdateringsprincipen
-1. Logga in på [Azure-portalen](https://portal.azure.com).
-2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Programuppdateringar** > **iOS-uppdateringsprinciper** i **Intune**-fönstret.
-4. I principfönstret väljer du **Skapa** och anger sedan ett namn och en beskrivning för principen.
-5. Välj **Inställningar** > **Konfigurera** och ange information om när iOS-enheter inte ska tvingas att installera den senaste uppdateringen. Du kan konfigurera veckodagar, tidszon, starttid och sluttid.
-6. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka i fönstret **Skapa uppdateringsprincip**. Skapa principen och spara inställningarna genom att välja **Skapa**.
+Den här funktionen stöder enheter som kör iOS 10.3 och senare.
 
-Profilen skapas och visas i fönstret med listan över iOS-uppdateringsprinciper. Apple MDM ger inte möjlighet att genomdriva att enheten ska installera uppdateringen vid en viss tid eller ett visst datum. 
+## <a name="configure-the-policy"></a>Konfigurera principen
+1. Logga in på [Azure Portal](https://portal.azure.com).
+2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+3. Välj **Programuppdateringar** > **Uppdateringsprinciper för iOS** > **Skapa**.
+4. Ange ett namn och en beskrivning för principen.
+5. Välj **Inställningar**. 
+
+    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera veckodagar, tidszon, starttid och sluttid.
+
+6. Klicka på **OK** för att spara ändringarna. Välj **Skapa** för att skapa principen.
+
+Profilen skapas och visas i principlistan. Apple MDM tillåter inte att du tvingar en enhet att installera uppdateringar en viss tid eller ett visst datum. 
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Ändra begränsade tider för principen
 
-1.  På bladet **Programuppdateringar** väljer du **iOS-uppdateringsprinciper**.
-2.  Välj den iOS-uppdateringsprincip som du vill uppdatera.
-3.  Välj **Egenskaper** och uppdatera informationen om begränsade tider.
-4.  Välj veckodagar
-5.  Tidszon som den här principen ska tillämpas i
-6.  Start- och sluttid för svartlistade timmar
+1. I **Programuppdateringar** väljer du **Uppdateringsprinciper för iOS**.
+2. Välj en befintlig princip > **Egenskaper**.
+3. Uppdatera den begränsade tiden:
 
-## <a name="assign-an-ios-update-policy-to-users"></a>Tilldela en iOS-uppdateringsprincip till användare
+    1. Välj veckodagar
+    2. Välj den tidszon som den här principen tillämpas i
+    3. Ange start- och sluttid för svartlistade timmar
 
-Om du vill tilldela en iOS-uppdateringsprincip till användare väljer du en princip som du har konfigurerat. Befintliga principer finns i fönstret **Programuppdateringar** > **iOS-uppdateringsprinciper**.
+    > [!NOTE]
+    > Om **starttiden** och **sluttiden** båda anges till 12:00 stängs tidskontrollen för underhåll av.
 
-1. Välj den princip som du vill tilldela till användarna och välj **Tilldelningar**. Då öppnas ett fönster där du kan välja Azure Active Directory-säkerhetsgrupper och tilldela dem till principen.
-2. Öppna fönstret som visar Azure AD-säkerhetsgrupperna genom att välja **Valda grupper**. Fastställ vem som har åtkomst till principen genom att tilldela grupper för att inkludera och exkludera.
-3. Välj **Spara** om du vill distribuera principen till användarna.
+## <a name="assign-the-policy-to-users"></a>Tilldela principen till användare
 
-Du har tillämpat principen på användare eller enheter. Uppdateringsefterlevnaden hos de enheter som används av de användare som principen är inriktad på kommer att utvärderas. Den här principen har även stöd för användarlösa enheter.
+Befintliga principer tilldelas till grupper, användare eller enheter. När de tilldelas tillämpas principen.
 
-## <a name="monitor-ios-device-installation-failures"></a>Övervaka installationsfel för iOS-enhet
+1. I **Programuppdateringar** väljer du **Uppdateringsprinciper för iOS**.
+2. Välj en befintlig princip > **Tilldelningar**. 
+3. Välj de Azure Active Directory-grupper, -användare eller -enheter som ska inkluderas eller exkluderas från den här principen.
+4. Välj **Spara** om du vill distribuera principen till grupperna.
+
+De enheter som används av de användare som den här principen inriktar sig på utvärderas för uppdateringsefterlevnad. Den här principen har även stöd för användarlösa enheter.
+
+## <a name="monitor-device-installation-failures"></a>Övervaka enhetsinstallationsfel
 <!-- 1352223 -->
-Rapporten **Installationsfel för iOS-enheter** är tillgänglig i fönstret **Programuppdateringar**. I rapporten kan du visa en lista över alla övervakade iOS-enheter som har varit mål för en iOS-uppdateringsprincip, som har försökt genomföra en uppdatering och som inte kunde uppdateras. Du kan se en status för varje enhet och se varför enheten inte har uppdaterats automatiskt. Felfria, uppdaterade enheter visas inte i listan. Vi definierar uppdaterad som den senaste uppdateringen som enheten har stöd för.
+**Programuppdateringar** > **Installationsfel för iOS-enheter** visar en lista över övervakade iOS-enheter som är mål för en uppdateringsprincip, försökte genomföra en uppdatering och inte kunde uppdateras. För varje enhet kan du se status om varför enheten inte har uppdaterats automatiskt. Felfria, uppdaterade enheter visas inte i listan. ”Uppdaterade” enheter innefattar den senaste uppdateringen som enheten själv har stöd för.
 

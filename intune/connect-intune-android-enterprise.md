@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0152d0cb7af418b500c1ac5991f2356bd2e19965
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1b1f54486ab2c3d98e663cfddded346eb61662ae
+ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909090"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279431"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Ansluta ditt Intune-konto till ditt Android enterprise-konto
 
@@ -51,7 +51,7 @@ För att kunna stödja Android-arbetsprofilenheter och Android-kioskenheter mås
 
 ## <a name="disconnect-your-android-enterprise-administrative-account"></a>Koppla från ditt administrativa Android enterprise-konto
 
-Du kan inaktivera Android enterprise-registrering och -hantering. Om du väljer **Koppla från** i Intune-administrationskonsolen tar bort alla registrerade Android-arbetsprofilenheter och kioskenheter från registrering. Relationen mellan Android enterprise-kontot och Intune tas också bort.
+Du kan inaktivera Android enterprise-registrering och -hantering. Om du vill göra detta måste du först dra tillbaka alla registrerade Android-arbetsprofilenheter. Sedan väljer du **Koppla från** i Intune-administrationskonsolen för att ta bort alla registrerade Android-arbetsprofilenheter och kioskenheter från registrering. Det här tar även bort relationen mellan Android enterprise-kontot och Intune.
 
 1. Som Intune-administratör väljer du **Alla tjänster** > **Övervakning + hantering** > **Intune** i [Azure-portalen](https://portal.azure.com).
 2. Välj **Enhetsregistrering** > **Android-registrering** > **Hanterat Google Play-konto** > **Koppla från**.

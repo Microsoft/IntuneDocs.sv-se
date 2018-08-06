@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d42500b9476e0b6c7bc9aaaba1ea4333fd136c6
-ms.sourcegitcommit: 29914cc467e69711483b9e2ccef887196e1314ef
+ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36297913"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321245"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -462,4 +462,6 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 | 0x0FFFFFFFF | Unknown_Error  | Vi kan inte utföra din förfrågan eftersom det uppstod ett fel på serversidan. Försök igen. |
 
 ## <a name="next-steps"></a>Nästa steg
-[Använda PKCS-certifikat](certficates-pfx-configure.md) eller [utfärda PKCS-certifikat från en Symantec PKI-hanterad webbtjänst](certificates-symantec-configure.md).
+
+- [Använda PKCS-certifikat](certficates-pfx-configure.md) eller [utfärda PKCS-certifikat från en Symantec PKI-hanterad webbtjänst](certificates-symantec-configure.md)
+- [Lägg till en tredjeparts-CA för att använda SCEP med Intune](certificate-authority-add-scep-overview.md)

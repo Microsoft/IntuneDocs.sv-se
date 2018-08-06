@@ -15,12 +15,12 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f907272f74886612eba9b5b28118f298caa2f36d
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 644d5966f653e4b98e6a5e8c507dd5e7399ff9cd
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223913"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321126"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows i Microsoft Intune
 
@@ -40,7 +40,11 @@ En verksamhetsspecifik app (LOB) är en app som du lägger till från en appinst
 ## <a name="step-2-configure-the-app-package-file"></a>Steg 2: Konfigurera appaketfilen
 
 1. I fönstret **Lägg till app** väljer du **Appaketfilen**.
-2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj en fil för Windows-installationen med tillägget **.msi**, **.appx** eller **.appxbundle**.
+2. I fönstret **Appaketsfil** klickar du på bläddringsknappen. Välj sedan en Windows-installationsfil med tillägget **.msi**, **.appx**, **.appxbundle**, **.msix** eller **.msixbundle**.
+
+    > [!NOTE]
+    > Filnamnstillägg för Windows-appar omfattar **.msi**, **.appx**, **.appxbundle**, **.msix** och **.msixbundle**.  
+
 3. Välj **OK** när du är klar.
 
 

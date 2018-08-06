@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 30f2bea4589e31f3012df1bd06e6327b923ec5d1
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 3da8a3f13e592483513daf81bc5ff1ad8af0f7e6
+ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225450"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268914"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Komma igång med policyer för efterlevnad för enheter i Intune
 
@@ -167,7 +167,7 @@ Du kan distribuera policyer för efterlevnad till användare i användargrupper 
   När du aktiverar den här inställningen kräver den följande av enheter:
   - Aktivera platstjänster på operativsystemsnivån
   - Tillåter att företagsportalen använder platstjänsterna
-  - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel.
+  - Utvärdera och rapportera status för upplåsning till Intune minst en gång var 72:a timme. Annars markeras enheten som ej kompatibel. Utvärderingen utlöses antingen genom att företagsportalappen öppnas eller att enheten fysiskt flyttas 500 meter eller längre.
 
 - **Giltighetstid för efterlevnadsstatus (dagar)**: Ange inom vilken tidsperiod enheterna rapporterar status för alla mottagna policyer för efterlevnad. Enheter som inte returnerar status inom den här tidsperioden behandlas som inkompatibla. Standardvärdet är 30 dagar.
 

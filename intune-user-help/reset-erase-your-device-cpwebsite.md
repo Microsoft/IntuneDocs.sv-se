@@ -1,11 +1,11 @@
 ---
 title: Återställa en enhet från företagsportalens webbplats | Microsoft Docs
-description: ''
+description: Lär dig hur du återställer enheten till fabriksinställningarna från företagsportalens webbplats.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/02/2017
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,36 +17,32 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: edb5f8306d728abb62b806f287a31b6a75d25cbd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 3f9c59b1bfccabd8489cd466c645dc4a0051e97c
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016993"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321585"
 ---
 # <a name="reset-your-device-from-the-company-portal-website"></a>Återställa en enhet från företagsportalens webbplats
 
-Om du tappar bort din enhet eller om den blir stulen kanske du vill återställa den till fabriksinställningarna för att förhindra obehörig åtkomst till dina data. Du kan återställa enheten via en fjärranslutning med hjälp av [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Företagsportalens webbplats är en webbsida som du kan använda för att hantera datorer och enheter som registrerats i Intune. Du kan använda den här webbplatsen för att utföra de flesta av uppgifterna som du kan utföra när du använder företagsportalappen.
+Lär dig hur du återställer en begagnad, försvunnen eller stulen enhet till fabriksinställningarna från företagsportalens webbplats.  
 
-Om du återställer en enhet kommer den inte längre att visas på företagsportalen och enheten återställs till fabriksinställningarna.
+När du har återställt en enhet visas den inte längre i företagsportalen. Tidigare befintliga appar och filer tas bort, och enheten återställs till fabriksinställningarna.
 
 > [!Note]
-> Du kan också utföra följande steg från en annan enhet som du har registrerat genom att öppna företagsportalappen på den enheten och gå igenom liknande steg för att slutföra återställningen. 
+> Du kan även utföra följande steg från en annan enhet som du har registrerat. Öppna företagsportalappen på den enheten och gå igenom liknande steg för att slutföra återställningen.  
 
-Så här återställer du en enhet:
+1. Öppna [webbplatsen för företagsportalen](https://portal.manage.microsoft.com/#helpdeskDeskDialog) och välj knappen __Meny__ > __Mina enheter__.
 
-1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ och väljer sedan __Mina enheter__.
+2. Välj den enhet som du vill återställa.
 
-2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill byta namn på.
+    ![En skärmbild av sidan Mina enheter med 2 paneler som visar oidentifierade, generiskt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Enheten öppnas i ett popup-fönster. Välj **Återställ**.  
 
-3. Enheten öppnas i ett popup-fönster. Tryck på knappen **Återställ**.
+ ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
 
-   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
+4. Det visas ett meddelande som varnar om att du kommer radera allt innehåll på din enhet. Tryck på **Återställ** för att bekräfta.  
 
-4. Ett varningsmeddelande visas för att informera dig om att allt innehåll på enheten kommer att raderas när du återställer den till standardinställningarna. Tryck på **Återställ** för att bekräfta att du vill utföra åtgärden.
-
-Nu har enheten återställts.
-
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com/#helpdeskDeskDialog).

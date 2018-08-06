@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a797c68ca43a6173a4bac70e914d3f763ce5e6d0
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 6bbb09944db602b4b5a70c89e8089b1692c45223
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442584"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321449"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Lägg till en enhetsefterlevnadsprincip för macOS-enheter med Intune
 
@@ -83,6 +83,13 @@ Följande tabell beskriver också hur inkompatibla inställningar hanteras när 
 ### <a name="encryption"></a>Kryptering
 
 - **Kryptering för lagring av data på en enhet**: Välj **Kräv** för att kryptera lagring av data på dina enheter.
+
+### <a name="device-security"></a>Enhetssäkerhet
+Brandväggen skyddar enheter mot obehörig nätverksåtkomst. Du kan använda brandväggen för att styra anslutningar per program. 
+
+- **Brandvägg**: **Aktivera** för att skydda enheter mot obehörig åtkomst. Genom att aktivera den här funktionen kan du hantera inkommande Internetanslutningar och använda dolt läge. **Inte konfigurerad** (standard) lämnar brandväggen avstängd, och nätverkstrafik tillåts (inte blockerad).
+- **Inkommande anslutningar**: **Blockera** alla inkommande nätverksanslutningar förutom de som behövs för grundläggande internettjänster, som DHCP, Bonjour och IPSec. Den här inställningen blockerar även alla delningstjänster, inklusive skärmdelning, fjärråtkomst, iTunes-musikdelning med mera. **Inte konfigurerad** (standard) tillåter inkommande anslutningar och delningstjänster. 
+- **Dolt läge**: **Aktivera** dolt läge om du vill förhindra att enheten svarar på avsökningsförfrågningar, vilka kan utföras av användare som vill vålla skada. När det här är aktiverat fortsätter enheten att besvara inkommande begäranden för godkända appar. **Inte konfigurerad** (standard) lämnar dolt läge avstängt.
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 

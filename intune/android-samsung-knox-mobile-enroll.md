@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5ac976e07c98fae0941168cc94b5afc5ca09616
-ms.sourcegitcommit: 8be5f29107d882c3ecf3dc0ce718a2423f91ce9a
+ms.openlocfilehash: 0ada3be91c3b2c15e33e51449678212286362dbf
+ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964716"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321194"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -32,9 +32,8 @@ Om du vill aktivera registrering av Intune med hjälp av Samsung KME använder d
     1. [Skapa en MDM-profil](#create-mdm-profile)
     2. [Lägg till enheter](#add-devices)
     3. [Tilldela en MDM-profil till enheterna](#assign-an-mdm-profile-to-devices)
-2. I Azure Portal [identifiera enheter som företagsägda](#identify-devices-as-corporate-owned).
-3. I Knox-portalen [konfigurera slutanvändarinloggning](#configure-how-end-users-sign-in).
-4. [Distribuera enheterna](#distribute-devices).
+2. I Knox-portalen [konfigurera slutanvändarinloggning](#configure-how-end-users-sign-in).
+3. [Distribuera enheterna](#distribute-devices).
 
 
 En lista över enhetsidentifierare (serienummer och IMEI:er) läggs automatiskt till i Knox-portalen när du köper enheter från auktoriserade återförsäljare som deltar i Knox Deployment Program.
@@ -79,22 +78,6 @@ Om du vill tilldela MDM-profiler till enheter måste stödda Samsung Knox-enhete
 ## <a name="assign-an-mdm-profile-to-devices"></a>Tilldela en MDM-profil till enheter
 Du måste tilldela en MDM-profil till enheter som lagts till i Knox-portalen innan de kan registreras. [Besök användarhandboken för Samsung Knox-registrering för att lära dig hur du konfigurerar enheter](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
 
-## <a name="identify-devices-as-corporate-owned"></a>Identifiera enheter som företagsägda
-Du kan identifiera registrerade enheter som använder KME som företagsägda. Detta måste göras innan du registrerar enheterna. Det här gör att du kan utföra ytterligare hanteringsuppgifter och samla in ytterligare information, t.ex. telefonnummer och en inventering av appar.
-
-Följ dessa steg för att identifiera enheter som företagsägda:
-
-1. Exportera listan över enheter från Knox-portalen som en CSV-fil.
-
-2. Formatera CSV-filen med IMEI eller serienummer såsom anges [här](https://docs.microsoft.com/en-us/intune/corporate-identifiers-add#identify-corporate-owned-devices-with-imei-or-serial-number).
-
-3. Ladda upp CSV-filen till i Azure Portal till **Enhetsregistrering** > **Företagets enhetsidentifierare** > **Lägg till**.
-
-Nu markeras identifierade enheter som registrerats som företagsägda.
-
-> [!NOTE]
->Intune tilldelar automatiskt statusen företagsägda för enheter som registrerats med kontot [Enhetsregistreringshanteraren](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll).
-
 ## <a name="configure-how-end-users-sign-in"></a>Konfigurera hur användarna loggar in
 
 För enheter som registrerats i Intune med KME kan du konfigurera hur en användare loggar in på följande sätt:
@@ -121,7 +104,7 @@ Behöver du fortfarande hjälp? Kolla in hela [Användarhandboken för Knox Mobi
 
 - **Fältet ”lösenord” ignoreras:** Om fältet **lösenord** fylls i vid **Enhetsinformation** i Knox-portalen ignoreras det av Intune-företagsportalappen. Användaren måste ange ett lösenord på enheten för att slutföra enhetsregistreringen.
 
-- **”Android-företagsregistrering”** KME stödjer inte Android-företagsregistrering.
+- **Android-företagsregistrering**: KME stödjer inte Android-företagsregistrering.
 
 ## <a name="getting-support"></a>Få support
 Lär dig mer om att [få support för Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).
