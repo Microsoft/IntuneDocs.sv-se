@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a3cad6a73b3455790441c594933d599b2c6e89f9
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 980b7d9f221fd1a1ae12f27743757d5b3bd53492
+ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224440"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39481197"
 ---
 # <a name="remove-your-windows-device-from-intune-management"></a>Ta bort en Windows-enhet från Intune-hanteringen
 
@@ -33,7 +33,7 @@ Ta bort en registrerad Windows-enhet från Intune när du inte längre vill elle
 När den har tagits bort, kommer du inte att kunna komma åt skolans eller arbetets resurser från enheten. Windows-enheter som kan tas bort från Intune är:  
 * Windows 10-enheter 
 * Windows 8.1-dator
-* Mobila enheter för Windows 8.1
+* Mobil Windows 8.1-enhet
  
 Mer information om vad som händer när du tar bort enheten från Intune-hanteringen finns i [Vad händer om du tar bort enheten från Intune](what-happens-if-you-unenroll-your-device-from-intune-windows.md).
 
@@ -80,6 +80,6 @@ Om du vill ta bort lagrade loggar och cacheminnet utför du något av följande 
 
 * [Avinstallera företagsportalappen](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-* Återställ företagsportalappen. Öppna appen **Inställningar** och välj > **Appar** > **Företagsportal** > **Avancerade alternativ**  >  **Återställ**. 
+* Återställ företagsportalappen. Öppna appen **Inställningar** och välj > **Appar** > **Företagsportal** > **Avancerade alternativ** > **Återställ**. 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).

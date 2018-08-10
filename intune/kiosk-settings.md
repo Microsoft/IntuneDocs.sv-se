@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/23/2018
+ms.date: 8/2/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f10e7bb7a2e7c5e1d0e8b27517a62454e8bd630
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
+ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321865"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39481129"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Kioskinställningar för Windows 10 (och senare) i Intune
 
@@ -25,9 +25,18 @@ Kioskprofiler används för att konfigurera Windows 10-enheter att köra en enda
 
 ## <a name="kiosk-settings"></a>Kioskinställningar
 
-1. Välj **Lägg till** för att skapa en kioskmiljö.
-2. Ange **Namn på kioskkonfiguration** för kiosken. Det här namnet specificerar en grupp med program, apparnas layout på startmenyn och de användare som associeras med kioskkonfigurationen.
-3. Välj **Kioskläge**. **Kioskläge**: Identifierar den typ av kioskläge som stöds av principen. Alternativen är:
+1. I [Azure-portalen](https://portal.azure.com) väljer du **Alla tjänster**, filtrerar på **Intune** och väljer **Microsoft Intune**.
+2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
+3. Ange följande egenskaper:
+
+   - **Namn**: Ange ett beskrivande namn på den nya profilen.
+   - **Beskrivning:** Ange en beskrivning för profilen. Detta är valfritt, men rekommenderas.
+   - **Plattform**: Välj **Windows 10 och senare**
+   - **Profiltyp**: Välj **Helskärmsläge (förhandsgranskning)**
+   
+4. Välj **Helskärmsläge** > **Lägg till**.
+5. Ange **Namn på kioskkonfiguration** för kiosken. Det här namnet specificerar en grupp med program, apparnas layout på startmenyn och de användare som associeras med kioskkonfigurationen.
+6. Välj **Kioskläge**. **Helskärmsläge**: Identifierar den typ av kioskläge som stöds av principen. Alternativen är:
 
     - **Inte konfigurerad** (standard): Den här principen aktiverar inte helskärmsläge.
     - **Enstaka helskärmsapp för kioskenhet**: Den här profilen gör att enheten kan köras som ett enda användarkonto och begränsar den till en enda UWP-app (Universal Windows-plattform). När användaren loggar in startar alltså en specifik app. Det här läget gör också att användaren inte kan öppna nya appar eller ändra appen som körs.

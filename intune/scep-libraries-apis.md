@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5278b631d581c892f68e8ba08c2bc7893cd3782a
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 423bfc02edb9260adadf0a6dc67e6299639c7fbb
+ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321849"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575057"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Använda API:er för att lägga till tredjeparts certifikatutfärdare för SCEP i Intune
 
@@ -41,11 +41,18 @@ Med Intune kan administratörer skapa SCEP-profiler och sedan tilldela dessa pro
 - Det betrodda rotcertifikatet för certifikatutfärdaren
 - Certifikatattribut och mer
 
-Enheter som checkar in med Intune tilldelas SCEP-profilen och konfigureras med dessa parametrar. Ett dynamiskt genererat SCEP-lösenord skapas av Intune och tilldelas sedan till enheten.
+Enheter som checkar in med Intune tilldelas SCEP-profilen och konfigureras med dessa parametrar. Ett dynamiskt genererat SCEP-utmaningslösenord skapas av Intune och tilldelas sedan till enheten.
 
-Det här lösenordet innehåller information om de parametrar som förväntas i den certifikatsigneringsbegäran (CSR) som enheten utfärdar till SCEP-servern. Lösenordet innehåller även förfallotid för utmaningen. Intune krypterar informationen, loggar in den krypterade bloben och paketerar denna information i SCEP-lösenordet.
+Den här utmaningen innehåller:
 
-Enheter som kontaktar SCEP-servern för att begära ett certifikat anger sedan det här SCEP-lösenordet. Det här lösenordet måste klara verifiering för att SCEP-servern ska utfärda ett certifikat till enheten. När ett SCEP-lösenord verifieras sker följande kontroller:
+- Det dynamiskt genererade utmaningslösenordet
+- Information om de parametrar som förväntas i den certifikatsigneringsbegäran (CSR) som enheten utfärdar till SCEP-servern
+- Utmaningens förfallotid
+
+Intune krypterar informationen, loggar in den krypterade bloben och paketerar denna information i SCEP-utmaningslösenordet.
+
+Enheter som kontaktar SCEP-servern för att begära ett certifikat anger sedan det här SCEP-utmaningslösenordet. SCEP-servern skickar CSR och det krypterade SCEP-utmaningslösenordet till Intune för verifiering.  Det här utmaningslösenordet samt CSR måste klara verifiering för att SCEP-servern ska utfärda ett certifikat till enheten. När en SCEP-utmaning verifieras sker följande kontroller:
+
 
 - Verifiering av signaturen för den krypterade bloben
 - Verifiering att utmaningen inte har gått ut

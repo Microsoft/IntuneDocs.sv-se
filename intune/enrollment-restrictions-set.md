@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7eee5baebb8373488999a5e75db5288e483379e5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2900f7c211a675a20300a2e212b0d57bad3a597a
+ms.sourcegitcommit: 32a4b1eb6bf20da7262f27276f8e94e435803386
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905826"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501157"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -77,7 +77,7 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
 4. Under **Begränsningar för enhetstyp** väljer du den begränsning som du vill ange.
 5. Under begränsningsnamnet (**Alla användare** för begränsningen som är standard) väljer du **Plattformar**. Välj **Tillåt** eller **Blockera** för varje plattform som är med i listan.
 6. Välj **Spara**.
-7. Under begränsningsnamnet (**Alla användare** för standardbegränsning) väljer du **Plattformskonfigurationer**. Välj sedan lägsta och högsta **Versioner** för de plattformar som anges. Versioner som stöds inkluderar:
+7. Under begränsningsnamnet (**Alla användare** för standardbegränsning) väljer du **Plattformskonfigurationer**. Välj sedan lägsta och högsta **Versioner** för de plattformar som anges. Versionsformat som stöds är:
     - Android-arbetsprofil har stöd för major.minor.rev.build.
     - iOS stöder major.minor.rev.
     - Windows stöder endast major.minor.rev.build för Windows 10.

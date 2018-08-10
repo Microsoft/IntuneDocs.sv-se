@@ -17,18 +17,18 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7c61ae0d60b2baf8bf9760297a5e35cbb5188de
-ms.sourcegitcommit: 47b55d211534f2e52e50d6b936c9a349e99fd222
+ms.openlocfilehash: 04737d1e800094f21a8bdaf42047f8bce7f48e6a
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39236063"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362032"
 ---
 # <a name="sync-your-windows-device-manually"></a>Synkronisera Windows-enheten manuellt
 
 När appinstallationens hastighet är lägre än idealet påbörjar du en manuell enhetssynkronisering. Manuella synkroniseringar tvingar din enhet att ansluta med Intune för de senaste uppdateringarna och kommunikationerna. Installationshastigheten kan öka när enhetssynkroniseringen är klar.
 
-Intune stöder manuell synkronisering från företagsportalappen och från enhetens inställningsapp. 
+Intune stöder manuell synkronisering från företagsportalappen, aktivitetsfältet på skrivbordet eller Start-menyn samt från enhetens inställningsapp. 
 
 Företagsportalappens funktioner har stöd på Windows 10-enheter som kör Creators uppdatering (1703) eller senare. 
 * [Synkronisera från företagsportalappen](#Sync-from-Company-Portal-app-for-Windows)  
@@ -51,8 +51,19 @@ Följ stegen för att manuellt synkronisera alla Windows 10-enheter som kör Cre
     
     ![Skärmbild av inställningssidan för företagsportalappen, Synkroniseringsknappen markerad](./media/RS1_settingspage_sync05.png)  
 
+## <a name="sync-from-device-taskbar-or-start-menu"></a>Synkronisera från enhetens aktivitetsfält eller Start-meny   
+
+Du kan även använda synkroniseringskontrollen utanför appen, från enhetens skrivbord. Det här sättet är användbart om du har fäst appen direkt på aktivitetsfältet eller Start-menyn och vill synkronisera snabbt.  
+
+1. Leta upp ikonen för företagsportalappen i aktivitetsfältet eller på Start-menyn.  
+2. Högerklicka på appikonen så visas menyn (kallas även en snabblista).  
+
+    ![Skärmbild av Windows-aktivitetsfältet på en enhets skrivbord. Ikonen för företagsportalappen har klickats och visar en meny med alternativen ”Pin to taskbar” (Fäst i verktygsfältet), ”Close window” (Stäng fönster) och ”Sync this device” (Synkronisera den här enheten).](./media/sync-device-from-start-menu-1807.png)  
+
+3. Välj **Synkronisera den här enheten**. Företagsportalappen öppnas till sidan **Inställningar** och initierar synkroniseringen.  
+
 ## <a name="sync-from-settings-app"></a>Synkronisera från Inställningsappen 
-Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-, Windows 10 Mobile- och Windows Phone 8.1-enheter från inställningsappen manuellt.
+Följ stegen för att synkronisera dina Microsoft HoloLens-, Windows 10 desktop-, Windows 10 Mobile- och Windows Phone 8.1-enheter från inställningsappen manuellt.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 desktop
 1. På enheten, välj **Start** > **Inställningar**.

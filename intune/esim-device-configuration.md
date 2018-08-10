@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 7/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac3bbb4a32e86d756835d136cd3923676f022a7b
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
+ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336085"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400291"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -26,7 +26,7 @@ ms.locfileid: "39336085"
 
 ## <a name="introduction"></a>Introduktion
 
-eSIM är ett inbäddat SIM-kort som du kan använda för att ansluta till Internet via en mobildataanslutning på en eSIM-kompatibel enhet, till exempel [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Med ett eSIM behöver du inte skaffa ett SIM-kort från mobiloperatören, och du kan snabbt växla mellan mobiloperatörer och dataabonnemang.
+eSIM är ett inbäddat SIM-kort som du kan använda för att ansluta till Internet via en mobildataanslutning på en eSIM-kompatibel enhet, till exempel [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Med ett eSIM behöver du inte skaffa ett SIM-kort från din mobiloperatör. Som global resenär kan du även växla mellan mobiloperatörer och dataabonnemang så att du alltid håller dig uppkopplad.
 
 Låt säga att du till exempel har ett mobildataabonnemang för arbete och ett annat dataabonnemang hos en annan mobiloperatör för personligt bruk. När du reser får du Internetåtkomst genom att hitta mobiloperatörer med dataabonnemang i det området.
 
