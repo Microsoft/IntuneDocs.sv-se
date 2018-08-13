@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9271ec1297298f70ce84a9f16a146302bc10070f
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: 5de27c745b1fb58a04b22361c3594b6ef430f4b2
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254526"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362100"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -78,7 +78,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 3. På sidan **Hantera servrar** väljer du **Lägg till MDM-server**.
 4. Ange **MDM-servernamnet** och välj **Nästa**. Servernamnet är för din egen referens och hjälper dig att identifiera MDM-servern (hantering av mobilenheter). Det är inte namnet eller URL-adressen för Microsoft Intune-servern.
 
-5. Dialogrutan **Lägg till &lt;ServerName&gt;**  öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
+5. Dialogrutan **Lägg till &lt;ServerName&gt;** öppnas med meddelandet **Upload Your Public Key** (Överför din offentliga nyckel). Välj **Välj fil** för att överföra PEM-filen och välj sedan **Nästa**.
 
 6. Gå till **Distributionsprogram** &gt; **Program för enhetsregistrering** &gt; **Hantera enheter**.
 7. Under **Choose Devices By** (Välj enheter efter) anger du hur enheterna ska identifieras:
@@ -124,7 +124,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     ![Autentisera med Företagsportalen.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
     > [!NOTE]
-    > Multifaktorautentisering (MFA) fungerar inte vid DEP-registrering om du har profilegenskaperna inställda på **Registrera med användartillhörighet**. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
+    > Multifaktorautentisering fungerar inte vid DEP-registrering om du har profilegenskaperna inställda på **Registrera med användartillhörighet** och **Authenticate with Company Portal instead of Apple Setup Assistant** (Autentisera med företagsportalen i stället för med Apple-installationsassistenten) inställt på **Nej**. Efter registreringen fungerar MFA som förväntat på enheterna. Enheterna kan inte uppmana användare som behöver ändra sina lösenord när de loggar in första gången. Användare vars lösenord har upphört att gälla ombeds inte att återställa sina lösenord under registreringen. Användarna måste återställa lösenordet från en annan enhet.
 
 6. Välj **Inställningar för enhetshantering** och välj om du vill att enheter som använder den här profilen ska övervakas.
 

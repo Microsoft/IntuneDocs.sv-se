@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 07/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: 53be8456b09c7775a4de827eb09680f47e8d62d7
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 2a3c4484eb80fd753d00c851d3e5dc6b5f48347a
+ms.sourcegitcommit: d3375505a5869c0392d2bc0f48b975c10366f586
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321568"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39362066"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -291,7 +291,7 @@ På Windows 10-enheter kan du skapa en konfigurationsfil och aktivera helskärms
 Gäller för Windows 10 och senare.
 
 #### <a name="device-profile-graphical-user-chart-is-back----2160133---"></a>Enhetsprofilens grafiska användardiagram är tillbaka <!-- 2160133 -->
-För att förbättra det numeriska antal som visas på enhetsprofilens grafiska diagram (**Enhetskonfiguration** > **Profiler** > välj en befintlig profil > **Översikt** ), togs det grafiska diagrammet tillfälligt bort.
+För att förbättra det numeriska antal som visas på enhetsprofilens grafiska diagram (**Enhetskonfiguration** > **Profiler** > välj en befintlig profil > **Översikt**), togs det grafiska diagrammet tillfälligt bort.
 
 Med den här uppdateringen är det grafiska användardiagrammet tillbaka och visas i Azure Portal.
 
@@ -835,7 +835,7 @@ Du kan nu skapa undantag till principen för MAM-dataöverföring (Mobile Applic
 Du kan exempelvis lägga till Webex-paketet som ett undantag till MAM-dataöverföringsprincipen. Det innebär att Webex-länkar i ett hanterat e-postmeddelande i Outlook kan öppnas direkt i Webex-programmet. Dataöverföringen är fortfarande begränsad i andra ohanterade program. Mer information finns i [Undantag för dataöverföringsprinciper i appar](app-protection-policies-exception.md).
 
 #### <a name="windows-information-protection-wip-encrypted-data-in-windows-search-results----1469193---"></a>Windows Information Protection (PIA)-krypterad data i Windows-sökresultat <!-- 1469193 -->
-En inställning i principen för Windows informationsskydd innebär att du nu kan kontrollera om krypterade data i Windows informationsskydd ingår i Windows-sökresultaten. Ange den här appens skyddsprincipalternativ genom att välja **Tillåt att Windows Search-indexeraren söker efter krypterade objekt**  i **Avancerade inställningar** för Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**. Mer information finns i [Tillåt att Windows Search-indexeraren söker efter krypterade objekt](windows-information-protection-policy-create.md#allow-windows-search-indexer-to-search-encrypted-items).
+En inställning i principen för Windows informationsskydd innebär att du nu kan kontrollera om krypterade data i Windows informationsskydd ingår i Windows-sökresultaten. Ange den här appens skyddsprincipalternativ genom att välja **Tillåt att Windows Search-indexeraren söker efter krypterade objekt** i **Avancerade inställningar** för Windows informationsskyddsprincip. Appens skyddsprincip måste anges för *Windows 10*-plattformen och apprincipen **Registreringsstatus** måste anges som **Med registrering**. Mer information finns i [Tillåt att Windows Search-indexeraren söker efter krypterade objekt](windows-information-protection-policy-create.md#allow-windows-search-indexer-to-search-encrypted-items).
 
 #### <a name="configuring-a-self-updating-mobile-msi-app----1740840---"></a>Konfigurera en MSI-mobilapp med automatisk uppdatering<!-- 1740840 -->
 Du kan konfigurera att en känd MSI-mobilapp med automatisk uppdatering ignorerar versionskontrollen. Den här funktionen är användbar för att undvika konkurrenstillstånd. Den här typen av konkurrenstillstånd kan exempelvis uppstå när appen uppdateras automatiskt av apputvecklaren och även uppdateras av Intune. Båda två kan försöka framtvinga en version av appen på Windows-klienten, vilket kan skapa en konflikt. För dessa automatiskt uppdaterade MSI-appar kan du konfigurera inställningen **Ignore app version** (Ignorera appversion) på bladet **Appinformation**. När den här inställningen växlas till **Ja** kommer Microsoft Intune ignorera den appversion som är installerad på Windows-klienten.
@@ -1124,6 +1124,16 @@ Du kan ange nekade appar i Intune. Om en app nekas blockeras den från att komma
 
 
 ## <a name="notices"></a>Meddelanden
+
+### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Planera för förändring: Change Password at Next Auth (Ändra lösenord vid nästa autentisering) har lagts till i Intune<!-- 1873216 -->
+I och med lanseringen av tjänsten i september planerar Intune att integrera Apples nyligen utgivna inställning **Change Password at Next Auth** (Ändra lösenord vid nästa autentisering) för enheter som kör macOS versioner 10.13 och senare. Före den här inställningen kan MDM-leverantörer inte verifiera att enhetens lösenord har ändrats för att vara kompatibelt. Intunes principer för konfiguration och efterlevnad verifierar endast att ett enhetslösenord markeras som verifierat nästa gång det ändras. När den här nya Apple-funktionen läggs till får dina macOS-användare en begäran om att uppdatera sina lösenord även om lösenorden är kompatibla.
+
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+Detta påverkar miljöer med en macOS-princip som använder Intune eller hybrid-MDM. Nu när Apple har inställningen **Change Password at New Auth** (Ändra lösenord vid ny autentisering) kan Intune tvinga användare att uppdatera sina lösenord när en lösenordsprincip skickas. Om du blockerar företagsresurser tills enheten har markerats som kompatibel kan slutanvändarna blockeras från att komma åt företagsresurser som e-post och SharePoint-webbplatser tills de återställer sina lösenord. I framtiden kommer alla uppdateringar av principer för konfiguration och lösenordskompatibilitet tvinga användarna att uppdatera sina lösenord.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
+Kontakta supportavdelningen. Om du inte vill framtvinga den här macOS-enhetsprincipen rekommenderar vi att du tar bort tilldelningen av din befintliga macOS-princip eller tar bort den helt. Kundreferensinformation indikerar att de flesta kunder inte påverkas av den här ändringen. De flesta slutanvändare uppdaterar sina lösenord när de får en begäran om att registrera med ett lösenord eller återställa sitt lösenord för att fortsätta vara kompatibla.
+
 
 ### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september----2454656---"></a>Planera för förändring: Intune går över till iOS 10 och senare i september <!-- 2454656 -->
 Apple förväntas släppa iOS 12 i september. Strax därefter går Intune, inklusive Intune-registreringen, företagsportalen och den hanterade webbläsaren, över till iOS 10 och senare.  
