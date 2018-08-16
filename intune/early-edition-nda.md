@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: ab6c808fc860491ddece5751983071d40864c8dd
-ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
+ms.openlocfilehash: 2f9849b2c327397c0b8945ee42d9fca7f9f46250
+ms.sourcegitcommit: 58cddb08b64bd60f041eff46ff215e83e13db4e6
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575091"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40001918"
 ---
 # <a name="the-early-edition-for-microsoft-intune---august-2018"></a>Den tidiga utgåvan för Microsoft Intune – augusti 2018
 
@@ -75,7 +75,7 @@ Om du vill skapa en omfångstagg väljer du **Intune-roller** > **Scope (Tags) (
 För att lägga till en omfångstagg till en rolltilldelning väljer du **Intune-roller** > **Alla roller** > **Princip- och profilhanterare** > **Tilldelningar** > **Scope (Tags)** (Omfång (taggar)).
 För att lägga till en omfångstagg till en konfigurationsprofil väljer du **Enhetskonfiguration** > **Profiler** > välj en profil > **Egenskaper** > **Scope (Tags)** (Omfång (taggar)).
 
-### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Tilldela en användare och ett eget namn till en AutoPilot-enhet <!--1346521 -->
+### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Tilldela en användare och ett eget namn till en Autopilot-enhet <!--1346521 -->
 I en kommande offentlig förhandsversion kommer administratörer att kunna tilldela en användare till en enskild Autopilot-enhet.  Administratörer kommer även att kunna ge egna namn som möter användaren vid konfiguration av enheten med Autopilot.
 
 Gäller för: Windows Insider 1809 eller senare versioner (medan den är i förhandsversion).
@@ -99,30 +99,29 @@ Om du vill se den här funktionen väljer du **Enhetsregistrering** > **Enhetsbe
 Aktivering av den här begränsningen har ingen effekt på enheter som redan har registrerats.
 När en begränsning aktiveras kontrollerar Intune för att se till att varje ny Windows-registreringsbegäran har auktoriserats som en företagsregistrering. Följande metoder räknas som auktoriserade som företagsregistrering:
 - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
-
-- Enheten registreras via [Windows AutoPilot](enrollment-autopilot.md).
+- Enheten registreras via [Windows Autopilot](enrollment-autopilot.md).
 - Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter]( corporate-identifiers-add.md)**).
 - Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
 - Enheten registreras via [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management).
-Obehöriga registreringar kommer att blockeras.
-Följande registreringar markeras som företagsregistreringar av Intune, men eftersom de inte innehåller per enhet-kontroll för Intune-administratören kommer de att blockeras:
+
+Obehöriga registreringar kommer att blockeras. Följande registreringar markeras som företagsregistreringar av Intune, men eftersom de inte innehåller per enhet-kontroll för Intune-administratören kommer de att blockeras:
 - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installation](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
 - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning från Windows-installation](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
+
 Följande personliga registreringsmetoder blockeras också:
 - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Add Work Account from Windows Settings](https://docs.microsoft.com/azure/active-directory/user-help/device-management-azuread-registered-devices-windows10-setup) (Lägg till arbetskonto från Windows-inställningarna).
-
 - Alternativet [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Endast MDM-registrering) från Windows-inställningarna.
 
-### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Ange mönster för datornamn i en AutoPilot-profil <!--1849855-->
-Du kommer att kunna ange en mall för datornamn för att generera och ange [datornamnet](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) under AutoPilot-registreringen. Du måste ange detta i den AutoPilot-profil som finns i **Enhetsregistrering** > **Windows-registrering** > **Windows Autopilot-distributionstjänsten** > **Profiler**. Endast alfanumeriska tecken och bindestreck kan användas.
+### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Ange mönster för datornamn i en Autopilot-profil <!--1849855-->
+Du kommer att kunna ange en mall för datornamn för att generera och ange [datornamnet](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) under Autopilot-registreringen. Du måste ange detta i den Autopilot-profil som finns i **Enhetsregistrering** > **Windows-registrering** > **Windows Autopilot-distributionstjänsten** > **Profiler**. Endast alfanumeriska tecken och bindestreck kan användas.
 Gäller för: Windows Insider 1809 eller senare versioner (medan den är i förhandsversion).
 
 ### <a name="ios-version-number-and-build-number-are-shown----1892471---"></a>iOS-versionsnumret och byggenumret visas <!-- 1892471 -->
 I **Enhetsefterlevnad** > **Enhetsefterlevnad** visas iOS-operativsystemets version. I kommande uppdateringar visas även byggenumret.
 När säkerhetsuppdateringar lanseras låter Apple vanligtvis versionsnumret vara som det är men uppdaterar byggenumret. Genom att visa byggenumret kan du enkelt kontrollera om en säkerhetsriskuppdatering har installerats.
 
-### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>För Windows AutoPilot-profiler döljer du alternativen för att ändra konto på företagets inloggningssida och sidan för domänfel <!--1901669 -->
-En offentlig förhandsversion kommer att innehålla nya Windows AutoPilot-profilalternativ som administratörer kan använda till att dölja ändra alternativ för att ändra konto på företagets inloggningssida och sidorna för domänfel. För att dölja de här alternativen krävs att företagsanpassning konfigureras i Azure Active Directory. Gäller för: Windows Insider 1809 eller senare versioner (medan den är i förhandsversion).
+### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>För Windows Autopilot-profiler döljer du alternativen för att ändra konto på företagets inloggningssida och sidan för domänfel <!--1901669 -->
+En offentlig förhandsversion kommer att innehålla nya Windows Autopilot-profilalternativ som administratörer kan använda till att dölja ändra alternativ för att ändra konto på företagets inloggningssida och sidorna för domänfel. För att dölja de här alternativen krävs att företagsanpassning konfigureras i Azure Active Directory. Gäller för: Windows Insider 1809 eller senare versioner (medan den är i förhandsversion).
 
 ### <a name="delay-when-ios-software-updates-are-shown-on-the-device----1949583---"></a>Fördröjning när iOS-programuppdateringar visas på enheten <!-- 1949583 -->
 I Intune > **Programuppdateringar** > **Uppdateringsprinciper för iOS** kan du konfigurera dagar och tider då du inte vill att enheter installerar uppdateringar. I en kommande uppdatering kommer du kunna fördröja tidpunkten då en programuppdatering visas på enheten från 1–90 dagar. 
@@ -167,6 +166,13 @@ Gäller för:
 Principer för enhetsefterlevnad som skapats i den klassiska Azure-portalen upphör att gälla.  När det sker kan du granska och ta bort alla befintliga principer. Du kan dock inte uppdatera dem. Du kan exportera principerna som en kommaavgränsad fil (CSV). Använd sedan informationen i filen för att återskapa dessa principer i Intune Azure-portalen.
 > [!IMPORTANT]
 > När den klassiska Azure-portalen upphör kan du inte komma åt dina principer, vilket bland annat betyder att du inte kan se dem. Därför bör du exportera dem och återskapa dem i Azure-portalen innan den klassiska Azure-portalen upphör.
+
+### <a name="change-terminology-to-retire-and-wipe----2175759---"></a>Ändra terminologin till ”dra tillbaka” och ”rensa” <!-- 2175759 -->
+För att överensstämma med Graph API, kommer följande termer för Intune-användargränssnittet och dokumentationen att ändras:
+- **Ta bort företagsinformation** ändras till **Dra tillbaka**
+- **Fabriksåterställning** ändras till **Rensa**
+
+
 
 <!-- 1807 start -->
 

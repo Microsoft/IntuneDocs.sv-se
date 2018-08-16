@@ -1,12 +1,11 @@
 ---
-title: Inställningar av enhetsbegränsningar för Android-enheter i Microsoft Intune
-titlesuffix: ''
-description: Läs vilka Intune-inställningar du kan använda för att kontrollera enhetsinställningar och funktioner på enheter som kör Android.
+title: Enhetsbegränsningsinställningar för Android i Microsoft Intune – Azure | Microsoft Docs
+description: Se en lista över alla Android-enhetsinställningar du kan kontrollera och begränsa i Microsoft Intune. Använd dessa inställningar för att styra lösenordet, komma åt Google Play-butiken, tillåta eller förbjuda appar, styra webbläsarinställningarna, blockera appar, säkerhetskopiera till Google Cloud och styra alternativen för meddelanden, röst, datanätverksväxling, Wi-Fi och Bluetooth-anslutning.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,14 +13,14 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 100742b378b30eab84b28c01728b2b382dd5155c
-ms.sourcegitcommit: af0cc27b05bf0743f7d0970f5f3822f0aab346af
+ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
+ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190664"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587031"
 ---
-# <a name="microsoft-intune-android-and-samsung-knox-standard-device-restriction-settings"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter i Microsoft Intune 
+# <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter – Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -53,7 +52,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
     > Samsung Knox-enheter kräver automatiskt en fyrsiffrig PIN-kod under MDM-registreringen. Android-enheter kan automatiskt kräva att en PIN-kod är kompatibel med villkorlig åtkomst.
 
 - **Minsta längd på lösenord** – Ange den minsta längd på lösenord som en användare måste konfigurera (mellan 4 och 16 tecken).
-- **Maximalt antal minuter av inaktivitet innan skärmen låses** – Anger antalet minuter av inaktivitet innan enheten låses automatiskt.
+- **Maximalt antal minuter av inaktivitet innan skärmen låses** – Ange det maximala antal minuter av inaktivitet som ska tillåtas på enheten innan skärmen låses. En slutanvändare kan inte ange ett tidsvärde på en enhet som är större än den konfigurerade tiden i profilen. En slutanvändare kan dock ange ett lägre värde. Om profilen t.ex. är inställd på 15 minuter, kan en slutanvändare ange värdet till 5 minuter. En slutanvändare kan inte ange värdet till 30 minuter. 
 - **Antal felaktiga inloggningar innan enheten rensas** – Anger antalet tillåtna felinloggningar innan enheten rensas.
 - **Lösenordets giltighetstid (dagar)** – Anger antal dagar innan lösenordet för enheten måste ändras.
 -  **Krav på lösenordstyp** – Anger den komplexitetsnivå som krävs för lösenordet och om biometriska enheter kan användas. Välj mellan:
