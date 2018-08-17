@@ -98,7 +98,7 @@ De här inställningarna gäller för specifika nätverkstyper, inklusive **Dom�
 
 ## <a name="windows-defender-smartscreen-settings"></a>Inställningar för Windows Defender SmartScreen
 
-Stöds i följande Windows 10-versioner med Edge installerat:
+Stöds i följande Windows 10-versioner med Microsoft Edge installerat:
 - Hem
 - Professionell
 - Företag

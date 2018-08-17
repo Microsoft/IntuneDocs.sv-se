@@ -1,6 +1,6 @@
 ---
 title: Enhetsbegränsningar för Windows Holographic for Business i Microsoft Intune – Azure | Microsoft Docs
-description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Edge, Windows Defender, sökning, moln och lagring , bluetooth-anslutning, systemtid och användningsdata i Azure.
+description: Läs om och konfigurera inställningar för enhetsbegränsning i Microsoft Intune för Windows Holographic for Business, inklusive avregistrering, geoplats, lösenord, installation av appar från app store, cookies och popup-fönster i Microsoft Edge, Windows Defender, sökning, moln och lagring, bluetooth-anslutning, systemtid och användningsdata i Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
