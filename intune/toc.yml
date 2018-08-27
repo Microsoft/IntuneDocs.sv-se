@@ -1,791 +1,806 @@
+items:
 - name: Översikt
   href: introduction-intune.md
-  expanded: true
   items:
-    - name: Vad är Azure-portalen?
-      href: what-is-intune.md
-    - name: Vad är Intune for Education?
-      href: introduction-intune-education.md
-    - name: Intune-funktioner i Azure
-      href: ui-changes.md
-      items:
-        - name: Ändringar av grupper
-          href: groups-get-started.md
-        - name: Äldre Intune PC-klient
-          href: intune-legacy-pc-client.md
-    - name: Registrera dig för en kostnadsfri utvärderingsversion
-      href: free-trial-sign-up.md
-    - name: Nyheter
-      href: whats-new.md
-      items:
-        - name: Nyheter i användargränssnittet för programmet
-          href: whats-new-app-ui.md
-        - name: Nyhetsarkiv (Azure-portalen)
-          href: whats-new-archive.md
-        - name: Nyhetsarkiv (klassiska portalen)
-          href: whats-new-archive-classic.md
-    - name: Beskrivning av tjänst
-      href: microsoft-intune-service-description.md
-    - name: Kända problem
-      href: known-issues.md
-    - name: Få support
-      href: get-support.md
+  - name: Vad är Azure-portalen?
+    href: what-is-intune.md
+  - name: Vad är Intune for Education?
+    href: introduction-intune-education.md
+  - name: Intune-funktioner i Azure
+    href: ui-changes.md
+    items:
+    - name: Ändringar av grupper
+      href: groups-get-started.md
+    - name: Äldre Intune PC-klient
+      href: intune-legacy-pc-client.md
+  - name: Registrera dig för en kostnadsfri utvärderingsversion
+    href: free-trial-sign-up.md
+  - name: Nyheter
+    href: whats-new.md
+    items:
+    - name: Nyheter i användargränssnittet för programmet
+      href: whats-new-app-ui.md
+    - name: Nyhetsarkiv (Azure-portalen)
+      href: whats-new-archive.md
+    - name: Nyhetsarkiv (klassiska portalen)
+      href: whats-new-archive-classic.md
+  - name: Beskrivning av tjänst
+    href: microsoft-intune-service-description.md
+  - name: Kända problem
+    href: known-issues.md
+  - name: Få support
+    href: get-support.md
+  expanded: true
 - name: Snabbstarter
   href: get-started-evaluation.md
   items:
-    - name: Navigering i Azure-portalen
-      href: get-started-azure.md
-    - name: Skapar en användare
-      href: get-started-users.md
-    - name: Skapa en grupp
-      href: get-started-groups.md
-    - name: Tilldela principer
-      href: get-started-policies.md
-    - name: Registrera enheter
-      href: get-started-enroll.md
-    - name: Tilldela appar
-      href: get-started-apps.md
+  - name: Navigering i Azure-portalen
+    href: get-started-azure.md
+  - name: Skapar en användare
+    href: get-started-users.md
+  - name: Skapa en grupp
+    href: get-started-groups.md
+  - name: Tilldela principer
+    href: get-started-policies.md
+  - name: Registrera enheter
+    href: get-started-enroll.md
+  - name: Tilldela appar
+    href: get-started-apps.md
 - name: Guider för implementeringsscenarier
   items:
-    - name: Skydda Exchange Online
-      href: exchange-online-protect.md
-    - name: Minska kostnaderna för supportavdelningen
-      href: password-reset.md
-    - name: Förhindra obehörig åtkomst
-      href: data-outside-protect.md
-    - name: Förhindra dataläckage på ej hanterade enheter
-      href: data-leak-prevention.md
-    - name: Jämför MDM och MAM
-      href: byod-technology-decisions.md
+  - name: Skydda Exchange Online
+    href: exchange-online-protect.md
+  - name: Minska kostnaderna för supportavdelningen
+    href: password-reset.md
+  - name: Förhindra obehörig åtkomst
+    href: data-outside-protect.md
+  - name: Förhindra dataläckage på ej hanterade enheter
+    href: data-leak-prevention.md
+  - name: Jämför MDM och MAM
+    href: byod-technology-decisions.md
 - name: Begrepp
   items:
-    - name: Övergripande arkitektur
-      href: high-level-architecture.md
-    - name: Enhets- och programlivscykler
-      href: introduction-device-app-lifecycles.md
-      items:
-        - name: Enhetslivscykel
-          href: device-lifecycle.md
-        - name: Applivscykel
-          href: app-lifecycle.md
-    - name: Vanliga scenarier
-      href: common-scenarios.md
-    - name: MAM VANLIGA FRÅGOR OCH SVAR
-      href: mam-faq.md
-    - name: Frågor och svar om princip och profil
-      href: manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md
+  - name: Övergripande arkitektur
+    href: high-level-architecture.md
+  - name: Enhets- och programlivscykler
+    href: introduction-device-app-lifecycles.md
+    items:
+    - name: Enhetslivscykel
+      href: device-lifecycle.md
+    - name: Applivscykel
+      href: app-lifecycle.md
+  - name: Vanliga scenarier
+    href: common-scenarios.md
+  - name: MAM VANLIGA FRÅGOR OCH SVAR
+    href: mam-faq.md
+  - name: Frågor och svar om princip och profil
+    href: manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md
 - name: Planera distribution
   items:
-    - name: Planeringsguide
-      href: planning-guide.md
+  - name: Planeringsguide
+    href: planning-guide.md
+    items:
+    - name: Bestämma mål
+      href: planning-guide-deployment-goals.md
+    - name: Identifiera scenarier
+      href: planning-guide-scenarios.md
+    - name: Fastställa krav
+      href: planning-guide-requirements.md
+    - name: Utveckla en distributionsplan
+      href: planning-guide-rollout-plan.md
+    - name: Utveckla en kommunikationsplan
+      href: planning-guide-communication-plan.md
+    - name: Utveckla en supportplan
+      href: planning-guide-support-plan.md
+    - name: Design
+      href: planning-guide-design.md
+    - name: Implementera
+      href: planning-guide-onboarding.md
+    - name: Testning och validering
+      href: planning-guide-test-validation.md
+    - name: Ytterligare resurser
+      href: planning-guide-resources.md
+  - name: Migreringsguide
+    href: migration-guide.md
+    items:
+    - name: Förbereda Intune
+      href: migration-guide-prepare.md
       items:
-        - name: Bestämma mål
-          href: planning-guide-deployment-goals.md
-        - name: Identifiera scenarier
-          href: planning-guide-scenarios.md
-        - name: Fastställa krav
-          href: planning-guide-requirements.md
-        - name: Utveckla en distributionsplan
-          href: planning-guide-rollout-plan.md
-        - name: Utveckla en kommunikationsplan
-          href: planning-guide-communication-plan.md
-        - name: Utveckla en supportplan
-          href: planning-guide-support-plan.md
-        - name: Design
-          href: planning-guide-design.md
-        - name: Implementera
-          href: planning-guide-onboarding.md
-        - name: Testning och validering
-          href: planning-guide-test-validation.md
-        - name: Ytterligare resurser
-          href: planning-guide-resources.md
-    - name: Migreringsguide
-      href: migration-guide.md
+      - name: Grundläggande konfiguration
+        href: migration-guide-setup.md
+      - name: Konfigurera principer för enhets- och programhantering
+        href: migration-guide-configure-policies.md
+      - name: Konfigurera programskyddsprinciper
+        href: migration-guide-app-protection-policies.md
+      - name: Hänsyn vid migrering
+        href: migration-guide-considerations.md
+    - name: Migreringskampanj
+      href: migration-guide-campaign.md
       items:
-        - name: Förbereda Intune
-          href: migration-guide-prepare.md
-          items:
-            - name: Grundläggande konfiguration
-              href: migration-guide-setup.md
-            - name: Konfigurera principer för enhets- och programhantering
-              href: migration-guide-configure-policies.md
-            - name: Konfigurera programskyddsprinciper
-              href: migration-guide-app-protection-policies.md
-            - name: Hänsyn vid migrering
-              href: migration-guide-considerations.md
-        - name: Migreringskampanj
-          href: migration-guide-campaign.md
-          items:
-            - name: Planera kommunikation
-              href: migration-guide-communication-plan.md
-            - name: Införande av enheten
-              href: migration-guide-drive-adoption.md
-            - name: Typisk migreringscykel
-              href: migration-guide-cycle.md
+      - name: Planera kommunikation
+        href: migration-guide-communication-plan.md
+      - name: Införande av enheten
+        href: migration-guide-drive-adoption.md
+      - name: Typisk migreringscykel
+        href: migration-guide-cycle.md
 - name: Instruktionsguider
   items:
-    - name: Konfigurera Intune
-      href: setup-steps.md
+  - name: Konfigurera Intune
+    href: setup-steps.md
+    items:
+    - name: Konfigurationer som stöds
+      href: supported-devices-browsers.md
       items:
-        - name: Konfigurationer som stöds
-          href: supported-devices-browsers.md
-          items:
-            - name: Nätverkskonfiguration
-              href: network-bandwidth-use.md
-        - name: Logga in i Intune
-          href: account-sign-up.md
-        - name: Konfigurera domäner
-          href: custom-domain-name-configure.md
-        - name: Lägg till användare
-          href: users-add.md
-        - name: Lägg till grupper
-          href: groups-add.md
-        - name: Tilldela licenser
-          href: licenses-assign.md
-        - name: Intune-licenser
-          href: licenses.md
-        - name: Ange MDM-utfärdare
-          href: mdm-authority-set.md
-    - name: Registrera enheter
-      href: device-enrollment.md
+      - name: Nätverkskonfiguration
+        href: network-bandwidth-use.md
+    - name: Logga in i Intune
+      href: account-sign-up.md
+    - name: Konfigurera domäner
+      href: custom-domain-name-configure.md
+    - name: Lägg till användare
+      href: users-add.md
+    - name: Lägg till grupper
+      href: groups-add.md
+    - name: Tilldela licenser
+      href: licenses-assign.md
+    - name: Intune-licenser
+      href: licenses.md
+    - name: Ange MDM-utfärdare
+      href: mdm-authority-set.md
+  - name: Registrera enheter
+    href: device-enrollment.md
+    items:
+    - name: Registreringsalternativ
+      href: enrollment-options.md
       items:
-        - name: Registreringsalternativ
-          href: enrollment-options.md
-          items:
-            - name: Villkor
-              href: terms-and-conditions-create.md
-            - name: Begränsningar
-              href: enrollment-restrictions-set.md
-            - name: Apple MDM-pushcertifikat
-              href: apple-mdm-push-certificate-get.md
-            - name: Företagsidentifierare
-              href: corporate-identifiers-add.md
-            - name: Multi-Factor Authentication
-              href: multi-factor-authentication.md
-            - name: Hanterare av enhetsregistrering
-              href: device-enrollment-manager-enroll.md
-            - name: Mappa enheter till grupper
-              href: device-group-mapping.md
-        - name: Konfigurera Windows-registrering
-          items:
-            - name: Windows-registrering
-              href: windows-enroll.md
-            - name: Massregistrering
-              href: windows-bulk-enroll.md
-            - name: Registreringsstatussida
-              href: windows-enrollment-status.md
-            - name: Windows AutoPilot-distributionsprogram
-              href: enrollment-autopilot.md
-        - name: Konfigurera Android-registrering
-          items:
-            - name: Konfigurera Android-registrering
-              href: android-enroll.md
-            - name: Anslut Intune till Android för företag
-              href: connect-intune-android-enterprise.md
-            - name: Registrera en arbetsprofil för Android
-              href: android-work-profile-enroll.md
-            - name: Konfigurera Android-kioskregistrering
-              href: android-kiosk-enroll.md
-            - name: Hantera Android-arbetsprofilenheter
-              href: android-enterprise-overview.md
-            - name: Samsung Knox Mobile Enrollment
-              href: android-samsung-knox-mobile-enroll.md
-        - name: Ställ in iOS-registrering
-          href: ios-enroll.md
-          items:
-            - name: Program för enhetsregistrering
-              href: device-enrollment-program-enroll-ios.md
-            - name: Apple School Manager
-              href: apple-school-manager-set-up-ios.md
-            - name: Apple Configurator
-              href: apple-configurator-enroll-ios.md
-        - name: Konfigurera registrering av macOS
-          href: macos-enroll.md
-        - name: Installera Intune-klientprogrammet på Windows-datorer
-          href: install-the-windows-pc-client-with-microsoft-intune.md
-        - name: Felsöka enhetsregistrering
-          href: troubleshoot-device-enrollment-in-intune.md
-    - name: Hantera enheter
-      href: device-management.md
+      - name: Villkor
+        href: terms-and-conditions-create.md
+      - name: Begränsningar
+        href: enrollment-restrictions-set.md
+      - name: Apple MDM-pushcertifikat
+        href: apple-mdm-push-certificate-get.md
+      - name: Företagsidentifierare
+        href: corporate-identifiers-add.md
+      - name: Multi-Factor Authentication
+        href: multi-factor-authentication.md
+      - name: Hanterare av enhetsregistrering
+        href: device-enrollment-manager-enroll.md
+      - name: Mappa enheter till grupper
+        href: device-group-mapping.md
+    - name: Konfigurera Windows-registrering
       items:
-        - name: Funktioner för enhetshantering
-          href: device-management-capabilities.md
-        - name: Kringgå aktiveringslås
-          href: device-activation-lock-bypass.md
-        - name: Hantera Windows-nystart
-          href: device-fresh-start.md
-        - name: Hitta förlorade iOS-enheter
-          href: device-locate.md
-        - name: Aktivera förlorat läge i iOS
-          href: device-lost-mode.md
-        - name: Aktivera övervakat läge på iOS
-          href: device-supervised-mode.md
-        - name: Låsa enheten
-          href: device-remote-lock.md
-        - name: Återställ lösenord
-          href: device-passcode-reset.md
-        - name: Starta om enheten
-          href: device-restart.md
-        - name: Logga ut aktuell användare
-          href: device-logout-user.md
-        - name: Ta bort användare
-          href: device-remove-user.md
-        - name: Radera enhet
-          href: device-erase.md
-        - name: Fjärrstyr mobila enheter
-          href: device-profile-android-teamviewer.md
-        - name: PIN-återställning i Windows 10
-          href: device-windows-pin-reset.md
-        - name: Synkronisera enhet
-          href: device-sync.md
-        - name: Granska enhetsinventering
-          href: device-inventory.md
-        - name: Ta bort enheter
-          href: devices-wipe.md
-    - name: Hantera appar
-      href: app-management.md
+      - name: Windows-registrering
+        href: windows-enroll.md
+      - name: Massregistrering
+        href: windows-bulk-enroll.md
+      - name: Registreringsstatussida
+        href: windows-enrollment-status.md
+      - name: Windows AutoPilot-distributionsprogram
+        href: enrollment-autopilot.md
+    - name: Konfigurera Android-registrering
       items:
-        - name: Lägga till appar
-          href: apps-add.md
-          items:
-            - name: Store-appar
-              items:
-                - name: Android Store-appar
-                  href: store-apps-android.md
-                - name: iOS Store-appar
-                  href: store-apps-ios.md
-                - name: Windows Phone 8.1 Store-appar
-                  href: store-apps-windows-phone-8-1.md
-                - name: Microsoft Store-appar
-                  href: store-apps-windows.md
-                  items:
-                    - name: Lägg till företagsportalappen manuellt
-                      href: store-apps-company-portal-app.md
-                - name: Android Work-profilappar
-                  href: apps-add-android-for-work.md
-                - name: Office 365-appar för Windows 10
-                  href: apps-add-office365.md
-                - name: Office 365-appar för macOS
-                  href: apps-add-office365-macos.md
-            - name: Skapa din app (LOB)
-              items:
-                - name: Android LOB-appar
-                  href: lob-apps-android.md
-                - name: iOS LOB-appar
-                  href: lob-apps-ios.md
-                - name: Windows Phone LOB-appar
-                  href: lob-apps-windows-phone.md
-                - name: Verksamhetsspecifika Windows-appar
-                  href: lob-apps-windows.md
-                - name: Läsa in Windows LOB-program separat
-                  href: app-sideload-windows.md
-                - name: macOS LOB-appar
-                  href: lob-apps-macos.md
-            - name: Webbappar
-              href: web-app.md
-            - name: Inbyggda appar
-              href: apps-add-built-in.md
-        - name: Distribuera appar
-          href: apps-deploy.md
-          items:
-            - name: Inkludera och exkludera appar
-              href: apps-inc-exl-assignments.md
-            - name: Distribuera följande gäller för Windows 10-appar
-              href: apps-windows-10-app-deploy.md
-        - name: Övervakning av appar
-          href: apps-monitor.md
-        - name: Konfigurera appar
-          href: app-configuration-policies-overview.md
-          items:
-            - name: iOS hanterade enheter
-              href: app-configuration-policies-use-ios.md
-            - name: Android hanterade enheter
-              href: app-configuration-policies-use-android.md
-            - name: Hanterade appar
-              href: app-configuration-policies-managed-app.md
-            - name: Använd iOS-appetableringsprofiler
-              href: app-provisioning-profile-ios.md
-            - name: Arbeta med volyminköpta program och böcker
-              href: vpp-apps.md
-              items:
-                - name: iOS VPP-appar
-                  href: vpp-apps-ios.md
-                - name: Microsoft Store för företag-appar
-                  href: windows-store-for-business.md
-                - name: iOS e-böcker
-                  href: vpp-ebooks-ios.md
-            - name: Konfigurera företagsportalappen
-              href: company-portal-app.md
-            - name: Konfigurera Managed Browser
-              href: app-configuration-managed-browser.md
-        - name: Skydda appar
-          items:
-            - name: Rensa program selektivt
-              href: apps-selective-wipe.md
-            - name: Använd programskyddsprinciper
-              href: app-protection-policy.md
-              items:
-                - name: Skapa programskyddsprinciper
-                  href: app-protection-policies.md
-                  items:
-                    - name: Inställningar för Android
-                      href: app-protection-policy-settings-android.md
-                    - name: Inställningar för iOS
-                      href: app-protection-policy-settings-ios.md
-                    - name: Åtkomståtgärder
-                      href: app-protection-policies-access-actions.md
-                    - name: Undantag vid dataöverföring
-                      href: app-protection-policies-exception.md
-                - name: Verifiera programskyddsprinciper
-                  href: app-protection-policies-validate.md
-                - name: Övervaka användarstatus för programskydd
-                  href: app-protection-policies-monitor.md
-                - name: Bli redo för WIP-programskyddsprinciper
-                  href: app-protection-policies-configure-windows-10.md
-                - name: Skapa och tilldela WIP-programskyddsprinciper
-                  href: windows-information-protection-policy-create.md
-                - name: Hantera dataöverföring mellan iOS-appar
-                  href: data-transfer-between-apps-manage-ios.md
-    - name: Konfigurera enheter
-      href: device-profiles.md
+      - name: Konfigurera Android-registrering
+        href: android-enroll.md
+      - name: Anslut Intune till Android för företag
+        href: connect-intune-android-enterprise.md
+      - name: Registrera en arbetsprofil för Android
+        href: android-work-profile-enroll.md
+      - name: Konfigurera Android-kioskregistrering
+        href: android-kiosk-enroll.md
+      - name: Hantera Android-arbetsprofilenheter
+        href: android-enterprise-overview.md
+      - name: Samsung Knox Mobile Enrollment
+        href: android-samsung-knox-mobile-enroll.md
+    - name: Ställ in iOS-registrering
+      href: ios-enroll.md
       items:
-        - name: Konfigurera enhetsprofiler
-          href: device-profile-create.md
-        - name: Konfigurera enhetsfunktioner
-          href: device-features-configure.md
-          items:
-            - name: AirPrint för iOS och MacOS
-              href: air-print-settings-ios-macos.md
-            - name: AirPlay för iOS
-              href: airplay-settings-ios.md
-            - name: Startsideslayout för iOS
-              href: home-screen-settings-ios.md
-            - name: Appmeddelanden för iOS
-              href: app-notification-settings-ios.md
-            - name: Delade enheter för iOS
-              href: shared-device-settings-ios.md
-            - name: Konfigurera enkel inloggning för Intune för iOS-enheter
-              href: sso-ios.md
-            - name: Webbfilterinställningar för iOS
-              href: web-content-filter-settings-ios.md
-        - name: Konfigurera enhetsbegränsningar
-          href: device-restrictions-configure.md
-          items:
-            - name: Android
-              href: device-restrictions-android.md
-            - name: iOS
-              href: device-restrictions-ios.md
-            - name: macOS
-              href: device-restrictions-macos.md
-            - name: "Windows\_8,1"
-              href: device-restrictions-windows-8-1.md
-            - name: Windows Phone 8.1
-              href: device-restrictions-windows-phone-8-1.md
-            - name: Windows 10
-              href: device-restrictions-windows-10.md
-            - name: Windows 10-teamet
-              href: device-restrictions-windows-10-teams.md
-            - name: Windows 10 Holographic for Business
-              href: device-restrictions-windows-holographic.md
-            - name: Android-arbetsprofil
-              href: device-restrictions-android-for-work.md
-        - name: Konfigurera Endpoint Protection
-          href: endpoint-protection-configure.md
-          items:
-            - name: macOS
-              href: endpoint-protection-macos.md
-            - name: Windows 10
-              href: endpoint-protection-windows-10.md
-        - name: Android kiosk-inställningar
-          href: android-kiosk-settings.md
-        - name: Inställningar för Android enterprise kiosk
-          href: android-enterprise-settings.md
-        - name: Windows 10 kiosk-inställningar
-          href: kiosk-settings.md
-        - name: Konfigurera e-postinställningar
-          href: email-settings-configure.md
-          items:
-            - name: Android
-              href: email-settings-android.md
-            - name: iOS
-              href: email-settings-ios.md
-            - name: Windows Phone 8.1
-              href: email-settings-windows-phone-8-1.md
-            - name: Windows 10
-              href: email-settings-windows-10.md
-        - name: Konfigurera VPN-inställningar
-          href: vpn-settings-configure.md
-          items:
-            - name: Android
-              href: vpn-settings-android.md
-            - name: iOS
-              href: vpn-settings-ios.md
-            - name: Konfigurera virtuellt privat nätverk per app för iOS-enheter
-              href: vpn-setting-configure-per-app.md
-            - name: macOS
-              href: vpn-settings-macos.md
-            - name: "Windows\_8,1"
-              href: vpn-settings-windows-8-1.md
-            - name: Windows Phone 8.1
-              href: vpn-settings-windows-phone-8-1.md
-            - name: Windows 10
-              href: vpn-settings-windows-10.md
-        - name: Konfigurera inställningar för trådlöst nätverk
-          href: wi-fi-settings-configure.md
-          items:
-            - name: Android
-              href: wi-fi-settings-android.md
-            - name: iOS
-              href: wi-fi-settings-ios.md
-            - name: macOS
-              href: wi-fi-settings-macos.md
-            - name: Windows 10
-              href: wi-fi-settings-windows.md
-            - name: "Windows\_8,1"
-              href: wi-fi-settings-import-windows-8-1.md
-        - name: Konfigurera eSIM-mobilprofiler
-          href: esim-device-configuration.md
-        - name: Utbildning
-          items:
-            - name: Delade iOS-enheter
-              href: education-settings-configure-ios-shared.md
-            - name: Windows 10
-              href: education-settings-configure.md
-        - name: Konfigurera inställningar för Windows 10-versionsuppgradering
-          href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurera iOS-uppdateringsprinciper
-          href: software-updates-ios.md
-        - name: Konfigurera certifikat
-          href: certificates-configure.md
-          items:
-            - name: SCEP
-              href: certificates-scep-configure.md
-            - name: PKCS
-              href: certficates-pfx-configure.md
-            - name: Använd S/MIME för att kryptera e-post
-              href: certificates-s-mime-encryption-sign.md
-            - name: Använd tredje parts certifikatutfärdare med SCEP
-              href: certificate-authority-add-scep-overview.md
-            - name: Symantec PKI Manager-webbtjänst
-              href: certificates-symantec-configure.md
-        - name: Konfigurera inställningar för Windows informationsskydd
-          href: windows-information-protection-configure.md
-        - name: Hantera PowerShell-skript
-          href: intune-management-extension.md
-        - name: Övervaka telekomkostnader
-          href: telecom-expenses-monitor.md
-        - name: Tilldela profiler
-          href: device-profile-assign.md
-        - name: Övervaka profiler
-          href: device-profile-monitor.md
-        - name: Felsökning av profiler
-          href: device-profile-troubleshoot.md
-    - name: Ange enhetsefterlevnad
-      href: device-compliance-get-started.md
+      - name: Program för enhetsregistrering
+        href: device-enrollment-program-enroll-ios.md
+      - name: Apple School Manager
+        href: apple-school-manager-set-up-ios.md
+      - name: Apple Configurator
+        href: apple-configurator-enroll-ios.md
+    - name: Konfigurera registrering av macOS
+      href: macos-enroll.md
       items:
-        - name: Skapa Android-princip
-          href: compliance-policy-create-android.md
-        - name: Skapa en profilprincip för Android Work
-          href: compliance-policy-create-android-for-work.md
-        - name: Skapa en princip för att aktivera Google Play Protect
-          href: compliance-policy-create-google-play-protect.md
-        - name: Skapa iOS-princip
-          href: compliance-policy-create-ios.md
-        - name: Skapa macOS-princip
-          href: compliance-policy-create-mac-os.md
-        - name: Skapa Windows-princip
-          href: compliance-policy-create-windows.md
-        - name: Platsbaserad princip
-          href: use-network-locations.md
-        - name: Utvärdera princip
-          href: policy-evaluate.md
-        - name: Åtgärder för inkompatibilitet
-          href: actions-for-noncompliance.md
-        - name: Övervaka enhetsefterlevnad
-          href: compliance-policy-monitor.md
-    - name: Konfigurera villkorlig åtkomst
-      href: conditional-access.md
+      - name: Program för enhetsregistrering
+        href: device-enrollment-program-enroll-macos.md
+    - name: Installera Intune-klientprogrammet på Windows-datorer
+      href: install-the-windows-pc-client-with-microsoft-intune.md
+    - name: Felsöka enhetsregistrering
+      href: troubleshoot-device-enrollment-in-intune.md
+  - name: Hantera enheter
+    href: device-management.md
+    items:
+    - name: Funktioner för enhetshantering
+      href: device-management-capabilities.md
+    - name: Kringgå aktiveringslås
+      href: device-activation-lock-bypass.md
+    - name: Hantera Windows-nystart
+      href: device-fresh-start.md
+    - name: Hitta förlorade iOS-enheter
+      href: device-locate.md
+    - name: Aktivera förlorat läge i iOS
+      href: device-lost-mode.md
+    - name: Aktivera övervakat läge på iOS
+      href: device-supervised-mode.md
+    - name: Låsa enheten
+      href: device-remote-lock.md
+    - name: Återställ lösenord
+      href: device-passcode-reset.md
+    - name: Starta om enheten
+      href: device-restart.md
+    - name: Logga ut aktuell användare
+      href: device-logout-user.md
+    - name: Ta bort användare
+      href: device-remove-user.md
+    - name: Radera enhet
+      href: device-erase.md
+    - name: Fjärrstyr mobila enheter
+      href: device-profile-android-teamviewer.md
+    - name: PIN-återställning i Windows 10
+      href: device-windows-pin-reset.md
+    - name: Synkronisera enhet
+      href: device-sync.md
+    - name: Granska enhetsinventering
+      href: device-inventory.md
+    - name: Ta bort enheter
+      href: devices-wipe.md
+  - name: Hantera appar
+    href: app-management.md
+    items:
+    - name: Lägga till appar
+      href: apps-add.md
       items:
-        - name: Vanliga sätt att använda villkorlig åtkomst
-          href: conditional-access-intune-common-ways-use.md
-        - name: Installera Exchange On-Premises Connector
-          href: exchange-connector-install.md
-        - name: Installera Exchange-tjänstanslutning
-          href: exchange-service-connector-configure.md
-        - name: Skapa och tilldela princip för villkorlig åtkomst
-          href: conditional-access-exchange-create.md
-        - name: Tilldela principer för villkorlig åtkomst på nytt med den klassiska Intune-portalen
-          href: conditional-access-intune-reassign.md
-        - name: Appbaserad villkorlig åtkomst
-          href: app-based-conditional-access-intune.md
-        - name: Konfigurera programbaserad villkorlig åtkomst
-          href: app-based-conditional-access-intune-create.md
-        - name: ADAL och Intune
-          href: app-modern-authentication-block.md
-        - name: Övervaka kompatibilitet för villkorlig åtkomst
-          href: conditional-access-exchange-monitor.md
-        - name: Integrera Jamf Pro med Intune för kompatibilitet
-          href: conditional-access-integrate-jamf.md
-        - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
-          href: conditional-access-assign-jamf.md
-    - name: Skydda data på enheter
-      href: device-protect.md
-      items:
-        - name: Sekretess och personliga data
-          href: privacy-personal-data.md
+      - name: Store-appar
+        items:
+        - name: Android Store-appar
+          href: store-apps-android.md
+        - name: iOS Store-appar
+          href: store-apps-ios.md
+        - name: Windows Phone 8.1 Store-appar
+          href: store-apps-windows-phone-8-1.md
+        - name: Microsoft Store-appar
+          href: store-apps-windows.md
           items:
-            - name: Datainsamling
-              href: privacy-data-collect.md
-            - name: Bearbetning och lagring av data
-              href: privacy-data-store-process.md
-            - name: Datasäkerhet och delning
-              href: privacy-data-secure-share.md
-              items:
-                - name: Data Apple skickar till Intune
-                  href: data-apple-sends-to-intune.md
-                - name: Data Google skickar till Intune
-                  href: data-google-sends-to-intune.md
-                - name: Data som Intune skickar till Apple
-                  href: data-intune-sends-to-apple.md
-                - name: Data som Intune skickar till Google
-                  href: data-intune-sends-to-google.md
-                - name: Information som delas från Jamf Pro till Intune
-                  href: conditional-access-integrate-jamf.md
-            - name: Visa och åtgärda personliga data
-              href: privacy-data-view-correct.md
-            - name: 'Granska, exportera, ta bort'
-              href: privacy-data-audit-export-delete.md
-        - name: Mobile Threat Defense
-          href: mobile-threat-defense.md
-          items:
-            - name: Konfigurera Lookout
-              href: lookout-mobile-threat-defense-connector.md
-              items:
-                - name: Lookout- och Intune-integrering
-                  href: lookout-mtd-connector-integration.md
-            - name: Konfigurera Symantec
-              href: skycure-mobile-threat-defense-connector.md
-              items:
-                - name: Symantec- och Intune-integrering
-                  href: skycure-mtd-connector-integration.md
-            - name: Konfigurera Check Point
-              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-              items:
-                - name: Check Point- och Intune-integrering
-                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-            - name: Konfigurera Zimperium
-              href: zimperium-mobile-threat-defense-connector.md
-              items:
-                - name: Zimperium- och Intune-integrering
-                  href: zimperium-mtd-connector-integration.md
-            - name: Konfigurera Pradeo
-              href: pradeo-mobile-threat-defense-connector.md
-              items:
-                - name: Pradeo- och Intune-integrering
-                  href: pradeo-mtd-connector-integration.md
-            - name: Konfigurera Intune för MTD
-              items:
-                - name: Lägg till MTD-program
-                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
-                - name: Skapa en MTD-enhetsefterlevnadsprincip
-                  href: mtd-device-compliance-policy-create.md
-                - name: Aktivera MTD i Intune
-                  href: mtd-connector-enable.md
-        - name: Windows Defender ATP
-          href: advanced-threat-protection.md
-        - name: Åtkomstkontroll för nätverk
-          href: network-access-control-integrate.md
-        - name: Konfigurera Windows Hello
-          href: windows-hello.md
-    - name: Hantera roller
-      href: role-based-access-control.md
-    - name: Hantera versioner av operativsystem
-      href: manage-os-versions.md
-    - name: Hantera programuppdateringar
-      href: windows-update-for-business-configure.md
-    - name: Hantera datorer med programvaruagent
-      href: manage-windows-pcs-with-microsoft-intune.md
+          - name: Lägg till företagsportalappen manuellt
+            href: store-apps-company-portal-app.md
+        - name: Android Work-profilappar
+          href: apps-add-android-for-work.md
+        - name: Office 365-appar för Windows 10
+          href: apps-add-office365.md
+        - name: Office 365-appar för macOS
+          href: apps-add-office365-macos.md
+      - name: Skapa din app (LOB)
+        items:
+        - name: Android LOB-appar
+          href: lob-apps-android.md
+        - name: iOS LOB-appar
+          href: lob-apps-ios.md
+        - name: Windows Phone LOB-appar
+          href: lob-apps-windows-phone.md
+        - name: Verksamhetsspecifika Windows-appar
+          href: lob-apps-windows.md
+        - name: Läsa in Windows LOB-program separat
+          href: app-sideload-windows.md
+        - name: macOS LOB-appar
+          href: lob-apps-macos.md
+      - name: Webbappar
+        href: web-app.md
+      - name: Inbyggda appar
+        href: apps-add-built-in.md
+    - name: Distribuera appar
+      href: apps-deploy.md
       items:
-        - name: Jämför datorhantering
-          href: pc-management-comparison.md
-        - name: Installera PC-klienten
-          href: install-the-windows-pc-client-with-microsoft-intune.md
-        - name: Vanliga datorhanteringsuppgifter
-          href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
-          items:
-            - name: Datorprinciper
-              href: use-policies-to-simplify-windows-pc-management.md
-            - name: Visa inventering
-              href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
-            - name: Dra tillbaka datorer
-              href: retire-a-windows-pc-with-microsoft-intune.md
-            - name: Länka datorer till användare
-              href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
-            - name: Fjärrhjälp
-              href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
-        - name: Principer för att skydda Windows-datorer
-          href: policies-to-protect-windows-pcs-in-microsoft-intune.md
-          items:
-            - name: Programuppdateringar
-              href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
-            - name: Windows-brandvägg
-              href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
-            - name: Slutpunktsskydd
-              href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
-        - name: Lägga till appar för datorer med Intune-klienten
-          href: add-apps-for-windows-pcs-in-microsoft-intune.md
-        - name: Hantera licensavtal
-          href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
-        - name: Lösa principkonflikter
-          href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
-    - name: Hantera Windows Holographic
-      href: windows-holographic-for-business.md
+      - name: Inkludera och exkludera appar
+        href: apps-inc-exl-assignments.md
+      - name: Distribuera följande gäller för Windows 10-appar
+        href: apps-windows-10-app-deploy.md
+    - name: Övervakning av appar
+      href: apps-monitor.md
+    - name: Konfigurera appar
+      href: app-configuration-policies-overview.md
       items:
-        - name: Uppgradera Windows Holographic
-          href: holographic-upgrade.md
-    - name: Utbilda användare
-      href: end-user-educate.md
+      - name: iOS hanterade enheter
+        href: app-configuration-policies-use-ios.md
+      - name: Android hanterade enheter
+        href: app-configuration-policies-use-android.md
+      - name: Hanterade appar
+        href: app-configuration-policies-managed-app.md
+      - name: Använd iOS-appetableringsprofiler
+        href: app-provisioning-profile-ios.md
+      - name: Arbeta med volyminköpta program och böcker
+        href: vpp-apps.md
+        items:
+        - name: iOS VPP-appar
+          href: vpp-apps-ios.md
+        - name: Microsoft Store för företag-appar
+          href: windows-store-for-business.md
+        - name: iOS e-böcker
+          href: vpp-ebooks-ios.md
+      - name: Konfigurera företagsportalappen
+        href: company-portal-app.md
+      - name: Konfigurera Managed Browser
+        href: app-configuration-managed-browser.md
+    - name: Skydda appar
       items:
-        - name: Meddelanden i företagsportalen
-          href: end-user-company-portal-messages.md
-        - name: Appskydd på Android
-          href: end-user-mam-apps-android.md
-        - name: Appskydd på iOS
-          href: end-user-mam-apps-ios.md
-        - name: Så här hämtar du Android-appar
-          href: end-user-apps-android.md
-        - name: Så här hämtar du iOS-appar
-          href: end-user-apps-ios.md
-        - name: Så här hämtar du Windows-appar
-          href: end-user-apps-windows.md
-        - name: Data som Intune skickar till Apple
-          href: data-intune-sends-to-apple.md
-        - name: Data som Intune skickar till Google
-          href: data-intune-sends-to-google.md
+      - name: Rensa program selektivt
+        href: apps-selective-wipe.md
+      - name: Använd programskyddsprinciper
+        href: app-protection-policy.md
+        items:
+        - name: Skapa programskyddsprinciper
+          href: app-protection-policies.md
+          items:
+          - name: Inställningar för Android
+            href: app-protection-policy-settings-android.md
+          - name: Inställningar för iOS
+            href: app-protection-policy-settings-ios.md
+          - name: Åtkomståtgärder
+            href: app-protection-policies-access-actions.md
+          - name: Undantag vid dataöverföring
+            href: app-protection-policies-exception.md
+        - name: Verifiera programskyddsprinciper
+          href: app-protection-policies-validate.md
+        - name: Övervaka användarstatus för programskydd
+          href: app-protection-policies-monitor.md
+        - name: Bli redo för WIP-programskyddsprinciper
+          href: app-protection-policies-configure-windows-10.md
+        - name: Skapa och tilldela WIP-programskyddsprinciper
+          href: windows-information-protection-policy-create.md
+        - name: Hantera dataöverföring mellan iOS-appar
+          href: data-transfer-between-apps-manage-ios.md
+  - name: Konfigurera enheter
+    href: device-profiles.md
+    items:
+    - name: Konfigurera enhetsprofiler
+      href: device-profile-create.md
+    - name: Konfigurera enhetsfunktioner
+      href: device-features-configure.md
+      items:
+      - name: AirPrint för iOS och MacOS
+        href: air-print-settings-ios-macos.md
+      - name: AirPlay för iOS
+        href: airplay-settings-ios.md
+      - name: Startsideslayout för iOS
+        href: home-screen-settings-ios.md
+      - name: Appmeddelanden för iOS
+        href: app-notification-settings-ios.md
+      - name: Delade enheter för iOS
+        href: shared-device-settings-ios.md
+      - name: Konfigurera enkel inloggning för Intune för iOS-enheter
+        href: sso-ios.md
+      - name: Webbfilterinställningar för iOS
+        href: web-content-filter-settings-ios.md
+    - name: Konfigurera enhetsbegränsningar
+      href: device-restrictions-configure.md
+      items:
+      - name: Android
+        href: device-restrictions-android.md
+      - name: iOS
+        href: device-restrictions-ios.md
+      - name: macOS
+        href: device-restrictions-macos.md
+      - name: Windows 8,1
+        href: device-restrictions-windows-8-1.md
+      - name: Windows Phone 8.1
+        href: device-restrictions-windows-phone-8-1.md
+      - name: Windows 10
+        href: device-restrictions-windows-10.md
+      - name: Windows 10-teamet
+        href: device-restrictions-windows-10-teams.md
+      - name: Windows 10 Holographic for Business
+        href: device-restrictions-windows-holographic.md
+      - name: Android-arbetsprofil
+        href: device-restrictions-android-for-work.md
+    - name: Konfigurera Endpoint Protection
+      href: endpoint-protection-configure.md
+      items:
+      - name: macOS
+        href: endpoint-protection-macos.md
+      - name: Windows 10
+        href: endpoint-protection-windows-10.md
+    - name: Android kiosk-inställningar
+      href: android-kiosk-settings.md
+    - name: Inställningar för Android enterprise kiosk
+      href: android-enterprise-settings.md
+    - name: Windows 10 kiosk-inställningar
+      href: kiosk-settings.md
+    - name: Konfigurera e-postinställningar
+      href: email-settings-configure.md
+      items:
+      - name: Android
+        href: email-settings-android.md
+      - name: iOS
+        href: email-settings-ios.md
+      - name: Windows Phone 8.1
+        href: email-settings-windows-phone-8-1.md
+      - name: Windows 10
+        href: email-settings-windows-10.md
+    - name: Konfigurera VPN-inställningar
+      href: vpn-settings-configure.md
+      items:
+      - name: Android
+        href: vpn-settings-android.md
+      - name: iOS
+        href: vpn-settings-ios.md
+      - name: Konfigurera virtuellt privat nätverk per app för iOS-enheter
+        href: vpn-setting-configure-per-app.md
+      - name: macOS
+        href: vpn-settings-macos.md
+      - name: Windows 8,1
+        href: vpn-settings-windows-8-1.md
+      - name: Windows Phone 8.1
+        href: vpn-settings-windows-phone-8-1.md
+      - name: Windows 10
+        href: vpn-settings-windows-10.md
+    - name: Konfigurera inställningar för trådlöst nätverk
+      href: wi-fi-settings-configure.md
+      items:
+      - name: Android
+        href: wi-fi-settings-android.md
+      - name: iOS
+        href: wi-fi-settings-ios.md
+      - name: macOS
+        href: wi-fi-settings-macos.md
+      - name: Windows 10
+        href: wi-fi-settings-windows.md
+      - name: Windows 8,1
+        href: wi-fi-settings-import-windows-8-1.md
+    - name: Konfigurera eSIM-mobilprofiler
+      href: esim-device-configuration.md
+    - name: Utbildning
+      items:
+      - name: Delade iOS-enheter
+        href: education-settings-configure-ios-shared.md
+      - name: Windows 10
+        href: education-settings-configure.md
+    - name: Konfigurera inställningar för Windows 10-versionsuppgradering
+      href: edition-upgrade-configure-windows-10.md
+    - name: Konfigurera iOS-uppdateringsprinciper
+      href: software-updates-ios.md
+    - name: Konfigurera certifikat
+      href: certificates-configure.md
+      items:
+      - name: SCEP
+        href: certificates-scep-configure.md
+      - name: PKCS
+        href: certficates-pfx-configure.md
+      - name: Använd S/MIME för att kryptera e-post
+        href: certificates-s-mime-encryption-sign.md
+      - name: Använd tredje parts certifikatutfärdare med SCEP
+        href: certificate-authority-add-scep-overview.md
+      - name: Symantec PKI Manager-webbtjänst
+        href: certificates-symantec-configure.md
+    - name: Konfigurera inställningar för Windows informationsskydd
+      href: windows-information-protection-configure.md
+    - name: Hantera PowerShell-skript
+      href: intune-management-extension.md
+    - name: Övervaka telekomkostnader
+      href: telecom-expenses-monitor.md
+    - name: Tilldela profiler
+      href: device-profile-assign.md
+    - name: Övervaka profiler
+      href: device-profile-monitor.md
+    - name: Felsökning av profiler
+      href: device-profile-troubleshoot.md
+  - name: Ange enhetsefterlevnad
+    href: device-compliance-get-started.md
+    items:
+    - name: Skapa Android-princip
+      href: compliance-policy-create-android.md
+    - name: Skapa en profilprincip för Android Work
+      href: compliance-policy-create-android-for-work.md
+    - name: Skapa en princip för att aktivera Google Play Protect
+      href: compliance-policy-create-google-play-protect.md
+    - name: Skapa iOS-princip
+      href: compliance-policy-create-ios.md
+    - name: Skapa macOS-princip
+      href: compliance-policy-create-mac-os.md
+    - name: Skapa Windows-princip
+      href: compliance-policy-create-windows.md
+    - name: Platsbaserad princip
+      href: use-network-locations.md
+    - name: Utvärdera princip
+      href: policy-evaluate.md
+    - name: Åtgärder för inkompatibilitet
+      href: actions-for-noncompliance.md
+    - name: Övervaka enhetsefterlevnad
+      href: compliance-policy-monitor.md
+  - name: Konfigurera villkorlig åtkomst
+    href: conditional-access.md
+    items:
+    - name: Vanliga sätt att använda villkorlig åtkomst
+      href: conditional-access-intune-common-ways-use.md
+    - name: Installera Exchange On-Premises Connector
+      href: exchange-connector-install.md
+    - name: Installera Exchange-tjänstanslutning
+      href: exchange-service-connector-configure.md
+    - name: Skapa och tilldela princip för villkorlig åtkomst
+      href: conditional-access-exchange-create.md
+    - name: Tilldela principer för villkorlig åtkomst på nytt med den klassiska Intune-portalen
+      href: conditional-access-intune-reassign.md
+    - name: Appbaserad villkorlig åtkomst
+      href: app-based-conditional-access-intune.md
+    - name: Konfigurera programbaserad villkorlig åtkomst
+      href: app-based-conditional-access-intune-create.md
+    - name: ADAL och Intune
+      href: app-modern-authentication-block.md
+    - name: Övervaka kompatibilitet för villkorlig åtkomst
+      href: conditional-access-exchange-monitor.md
+    - name: Integrera Jamf Pro med Intune för kompatibilitet
+      href: conditional-access-integrate-jamf.md
+    - name: Tvinga fram efterlevnad på Mac-datorer som hanteras med Jamf Pro
+      href: conditional-access-assign-jamf.md
+  - name: Skydda data på enheter
+    href: device-protect.md
+    items:
+    - name: Sekretess och personliga data
+      href: privacy-personal-data.md
+      items:
+      - name: Datainsamling
+        href: privacy-data-collect.md
+      - name: Bearbetning och lagring av data
+        href: privacy-data-store-process.md
+      - name: Datasäkerhet och delning
+        href: privacy-data-secure-share.md
+        items:
         - name: Data Apple skickar till Intune
           href: data-apple-sends-to-intune.md
         - name: Data Google skickar till Intune
           href: data-google-sends-to-intune.md
-    - name: Övervaka och felsöka
+        - name: Data som Intune skickar till Apple
+          href: data-intune-sends-to-apple.md
+        - name: Data som Intune skickar till Google
+          href: data-intune-sends-to-google.md
+        - name: Information som delas från Jamf Pro till Intune
+          href: conditional-access-integrate-jamf.md
+      - name: Visa och åtgärda personliga data
+        href: privacy-data-view-correct.md
+      - name: Granska, exportera, ta bort
+        href: privacy-data-audit-export-delete.md
+    - name: Mobile Threat Defense
+      href: mobile-threat-defense.md
       items:
-        - name: Hjälpa användare att felsöka problem
-          href: help-desk-operators.md
-        - name: Felsökning av problem med åtkomst till företagsresurser
-          href: troubleshoot-company-resource-access-problems.md
-        - name: Felsöka problem med att installera appen
-          href: troubleshoot-app-install.md
-        - name: Granskningsloggar för Intune-aktiviteter
-          href: monitor-audit-logs.md
-        - name: Granska appskyddsloggar
-          href: app-protection-policy-settings-log.md
-        - name: Felsöka e-postprofiler
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: Felsöka programuppdateringar
-          href: troubleshoot-software-updates-in-microsoft-intune.md
-        - name: Felsöka Endpoint Protection
-          href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Felsöka principer
-          href: troubleshoot-policies-in-microsoft-intune.md
-        - name: Felsöka villkorlig åtkomst
-          href: troubleshoot-conditional-access.md
-        - name: Felsöka Exchange Connector
-          href: troubleshoot-exchange-connector.md
-    - name: Automatisera och anpassa
+      - name: Konfigurera Lookout
+        href: lookout-mobile-threat-defense-connector.md
+        items:
+        - name: Lookout- och Intune-integrering
+          href: lookout-mtd-connector-integration.md
+      - name: Konfigurera Symantec
+        href: skycure-mobile-threat-defense-connector.md
+        items:
+        - name: Symantec- och Intune-integrering
+          href: skycure-mtd-connector-integration.md
+      - name: Konfigurera Check Point
+        href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+        items:
+        - name: Check Point- och Intune-integrering
+          href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+      - name: Konfigurera Zimperium
+        href: zimperium-mobile-threat-defense-connector.md
+        items:
+        - name: Zimperium- och Intune-integrering
+          href: zimperium-mtd-connector-integration.md
+      - name: Konfigurera Pradeo
+        href: pradeo-mobile-threat-defense-connector.md
+        items:
+        - name: Pradeo- och Intune-integrering
+          href: pradeo-mtd-connector-integration.md
+      - name: Konfigurera Better Mobile
+        href: better-mobile-threat-defense-connector.md
+        items:
+        - name: Integrering av Better Mobile och Intune
+          href: better-mobile-mtd-connector-integration.md
+      - name: Konfigurera Intune för MTD
+        items:
+        - name: Lägg till MTD-program
+          href: mtd-apps-ios-app-configuration-policy-add-assign.md
+        - name: Skapa en MTD-enhetsefterlevnadsprincip
+          href: mtd-device-compliance-policy-create.md
+        - name: Aktivera MTD i Intune
+          href: mtd-connector-enable.md
+    - name: Windows Defender ATP
+      href: advanced-threat-protection.md
+    - name: Åtkomstkontroll för nätverk
+      href: network-access-control-integrate.md
+    - name: Konfigurera Windows Hello
+      href: windows-hello.md
+  - name: Hantera roller
+    href: role-based-access-control.md
+  - name: Hantera versioner av operativsystem
+    href: manage-os-versions.md
+  - name: Hantera programuppdateringar
+    href: windows-update-for-business-configure.md
+  - name: Hantera datorer med programvaruagent
+    href: manage-windows-pcs-with-microsoft-intune.md
+    items:
+    - name: Jämför datorhantering
+      href: pc-management-comparison.md
+    - name: Installera PC-klienten
+      href: install-the-windows-pc-client-with-microsoft-intune.md
+    - name: Vanliga datorhanteringsuppgifter
+      href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
       items:
-        - name: Konfigurera anpassade enhetsinställningar
-          href: custom-settings-configure.md
-          items:
-            - name: Profil för trådlöst nätverk med en i förväg delad nyckel
-              href: wi-fi-profile-shared-key.md
-            - name: Android
-              href: custom-settings-android.md
-              items:
-                - name: VPN-profil per program
-                  href: android-pulse-secure-per-app-vpn.md
-                - name: Tillåt/blockera appar för Samsung Knox Standard
-                  href: samsung-knox-apps-allow-block.md
-            - name: iOS
-              href: custom-settings-ios.md
-            - name: macOS
-              href: custom-settings-macos.md
-            - name: Windows Phone 8.1
-              href: custom-settings-windows-phone-8-1.md
-            - name: Windows 10
-              href: custom-settings-windows-10.md
-            - name: Windows 10 Holographic for Business
-              href: custom-settings-windows-holographic.md
-            - name: Android-arbetsprofil
-              href: custom-settings-android-for-work.md
+      - name: Datorprinciper
+        href: use-policies-to-simplify-windows-pc-management.md
+      - name: Visa inventering
+        href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
+      - name: Dra tillbaka datorer
+        href: retire-a-windows-pc-with-microsoft-intune.md
+      - name: Länka datorer till användare
+        href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
+      - name: Fjärrhjälp
+        href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
+    - name: Principer för att skydda Windows-datorer
+      href: policies-to-protect-windows-pcs-in-microsoft-intune.md
+      items:
+      - name: Programuppdateringar
+        href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
+      - name: Windows-brandvägg
+        href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
+      - name: Slutpunktsskydd
+        href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
+    - name: Lägga till appar för datorer med Intune-klienten
+      href: add-apps-for-windows-pcs-in-microsoft-intune.md
+    - name: Hantera licensavtal
+      href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
+    - name: Lösa principkonflikter
+      href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
+  - name: Hantera Windows Holographic
+    href: windows-holographic-for-business.md
+    items:
+    - name: Uppgradera Windows Holographic
+      href: holographic-upgrade.md
+  - name: Utbilda användare
+    href: end-user-educate.md
+    items:
+    - name: Meddelanden i företagsportalen
+      href: end-user-company-portal-messages.md
+    - name: Appskydd på Android
+      href: end-user-mam-apps-android.md
+    - name: Appskydd på iOS
+      href: end-user-mam-apps-ios.md
+    - name: Så här hämtar du Android-appar
+      href: end-user-apps-android.md
+    - name: Så här hämtar du iOS-appar
+      href: end-user-apps-ios.md
+    - name: Så här hämtar du Windows-appar
+      href: end-user-apps-windows.md
+    - name: Data som Intune skickar till Apple
+      href: data-intune-sends-to-apple.md
+    - name: Data som Intune skickar till Google
+      href: data-intune-sends-to-google.md
+    - name: Data Apple skickar till Intune
+      href: data-apple-sends-to-intune.md
+    - name: Data Google skickar till Intune
+      href: data-google-sends-to-intune.md
+  - name: Övervaka och felsöka
+    items:
+    - name: Hjälpa användare att felsöka problem
+      href: help-desk-operators.md
+    - name: Felsökning av problem med åtkomst till företagsresurser
+      href: troubleshoot-company-resource-access-problems.md
+    - name: Felsöka problem med att installera appen
+      href: troubleshoot-app-install.md
+    - name: Granskningsloggar för Intune-aktiviteter
+      href: monitor-audit-logs.md
+    - name: Granska appskyddsloggar
+      href: app-protection-policy-settings-log.md
+    - name: Felsöka e-postprofiler
+      href: troubleshoot-email-profiles-in-microsoft-intune.md
+    - name: Felsöka programuppdateringar
+      href: troubleshoot-software-updates-in-microsoft-intune.md
+    - name: Felsöka Endpoint Protection
+      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+    - name: Felsöka principer
+      href: troubleshoot-policies-in-microsoft-intune.md
+    - name: Felsöka villkorlig åtkomst
+      href: troubleshoot-conditional-access.md
+    - name: Felsöka Exchange Connector
+      href: troubleshoot-exchange-connector.md
+  - name: Automatisera och anpassa
+    items:
+    - name: Konfigurera anpassade enhetsinställningar
+      href: custom-settings-configure.md
+      items:
+      - name: Profil för trådlöst nätverk med en i förväg delad nyckel
+        href: wi-fi-profile-shared-key.md
+      - name: Android
+        href: custom-settings-android.md
+        items:
+        - name: VPN-profil per program
+          href: android-pulse-secure-per-app-vpn.md
+        - name: Tillåt/blockera appar för Samsung Knox Standard
+          href: samsung-knox-apps-allow-block.md
+      - name: iOS
+        href: custom-settings-ios.md
+      - name: macOS
+        href: custom-settings-macos.md
+      - name: Windows Phone 8.1
+        href: custom-settings-windows-phone-8-1.md
+      - name: Windows 10
+        href: custom-settings-windows-10.md
+      - name: Windows 10 Holographic for Business
+        href: custom-settings-windows-holographic.md
+      - name: Android-arbetsprofil
+        href: custom-settings-android-for-work.md
 - name: Vägledning för utvecklare
   items:
-    - name: API för att lägga till tredje parts certifikatutfärdare
-      href: scep-libraries-apis.md
-    - name: Skydda program med Intune App SDK
-      href: app-sdk.md
+  - name: API för att lägga till tredje parts certifikatutfärdare
+    href: scep-libraries-apis.md
+  - name: Skydda program med Intune App SDK
+    href: app-sdk.md
+    items:
+    - name: Kom igång med Intune App SDK
+      href: app-sdk-get-started.md
+    - name: Förbereda LOB-program för programskydd
+      href: apps-prepare-mobile-application-management.md
+    - name: Appomslutningsverktyg för iOS
+      href: app-wrapper-prepare-ios.md
+    - name: Intune App SDK för iOS
+      href: app-sdk-ios.md
+    - name: Appomslutningsverktyg för Android
+      href: app-wrapper-prepare-android.md
+    - name: Intune App SDK för Android
+      href: app-sdk-android.md
+    - name: Xamarin-bindningar för Intune App SDK
+      href: app-sdk-xamarin.md
+  - name: Använda Intune-informationslagret
+    href: reports-nav-create-intune-reports.md
+    items:
+    - name: Ändringslogg för Informationslager
+      href: reports-changelog.md
+    - name: Ansluta till informationslagret med Power BI
+      href: reports-proc-get-a-link-powerbi.md
+    - name: Skapa en rapport från OData-feeden med Power BI
+      href: reports-proc-create-with-odata.md
+  - name: Rapportera med Intunes informationslager-API
+    href: reports-nav-intune-data-warehouse.md
+    items:
+    - name: Hämta data från API för informationslager med en REST-klient
+      href: reports-proc-data-rest.md
+    - name: API-slutpunkt för informationslager
+      href: reports-api-url.md
+    - name: Autentisering endast med program för informationslager
+      href: data-warehouse-app-only-auth.md
+    - name: Datamodellen informationslager
+      href: reports-ref-data-model.md
       items:
-        - name: Kom igång med Intune App SDK
-          href: app-sdk-get-started.md
-        - name: Förbereda LOB-program för programskydd
-          href: apps-prepare-mobile-application-management.md
-        - name: Appomslutningsverktyg för iOS
-          href: app-wrapper-prepare-ios.md
-        - name: Intune App SDK för iOS
-          href: app-sdk-ios.md
-        - name: Appomslutningsverktyg för Android
-          href: app-wrapper-prepare-android.md
-        - name: Intune App SDK för Android
-          href: app-sdk-android.md
-        - name: Xamarin-bindningar för Intune App SDK
-          href: app-sdk-xamarin.md
-    - name: Använda Intune-informationslagret
-      href: reports-nav-create-intune-reports.md
-      items:
-        - name: Ändringslogg för Informationslager
-          href: reports-changelog.md
-        - name: Ansluta till informationslagret med Power BI
-          href: reports-proc-get-a-link-powerbi.md
-        - name: Skapa en rapport från OData-feeden med Power BI
-          href: reports-proc-create-with-odata.md
-    - name: Rapportera med Intunes informationslager-API
-      href: reports-nav-intune-data-warehouse.md
-      items:
-        - name: Hämta data från API för informationslager med en REST-klient
-          href: reports-proc-data-rest.md
-        - name: API-slutpunkt för informationslager
-          href: reports-api-url.md
-        - name: Autentisering endast med program för informationslager
-          href: data-warehouse-app-only-auth.md
-        - name: Datamodellen informationslager
-          href: reports-ref-data-model.md
-          items:
-            - name: Representation av användarens livstid i Intunes informationslager
-              href: reports-ref-user-timeline.md
-            - name: Referens för programenheter
-              href: reports-ref-application.md
-            - name: Referens för aktuell användarentitet
-              href: reports-ref-current-user.md
-            - name: Referens för datumentitet
-              href: reports-ref-date.md
-            - name: Referens för enhetsentiteter
-              href: reports-ref-devices.md
-            - name: Referens för tilläggsentitet för Intune-hantering
-              href: reports-ref-intunemanagementextension.md
-            - name: Referens för MAM-entiteter (hantering av mobilappshantering)
-              href: reports-ref-mobile-app-management.md
-            - name: Referens för principentiteter
-              href: reports-ref-policy.md
-            - name: Referens för entiteten för användarenhetsassociation
-              href: reports-ref-user-device.md
-            - name: Referens för användarentitet
-              href: reports-ref-user.md
-        - name: Flytta Intune-kontodata för informationslager
-          href: data-warehouse-account-move.md
-    - name: 'Använd Azure AD för att få åtkomst till Intune API:er i Microsoft Graph'
-      href: intune-graph-apis.md
-      items:
-        - name: Intune API-referens
-          href: 'https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview'
+      - name: Representation av användarens livstid i Intunes informationslager
+        href: reports-ref-user-timeline.md
+      - name: Referens för programenheter
+        href: reports-ref-application.md
+      - name: Referens för aktuell användarentitet
+        href: reports-ref-current-user.md
+      - name: Referens för datumentitet
+        href: reports-ref-date.md
+      - name: Referens för enhetsentiteter
+        href: reports-ref-devices.md
+      - name: Referens för tilläggsentitet för Intune-hantering
+        href: reports-ref-intunemanagementextension.md
+      - name: Referens för MAM-entiteter (hantering av mobilappshantering)
+        href: reports-ref-mobile-app-management.md
+      - name: Referens för principentiteter
+        href: reports-ref-policy.md
+      - name: Referens för entiteten för användarenhetsassociation
+        href: reports-ref-user-device.md
+      - name: Referens för användarentitet
+        href: reports-ref-user.md
+    - name: Flytta Intune-kontodata för informationslager
+      href: data-warehouse-account-move.md
+  - name: Använd Azure AD för att få åtkomst till Intune API:er i Microsoft Graph
+    href: intune-graph-apis.md
+    items:
+    - name: Intune API-referens
+      href: https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview
 - name: Resurser
   items:
-    - name: Ordlista
-      href: intune-glossary.md
+  - name: Ordlista
+    href: intune-glossary.md
+ms.openlocfilehash: ab5b79b56ff430575cf3c9021ce33b573b4d0f22
+ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.translationtype: HT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42822958"
