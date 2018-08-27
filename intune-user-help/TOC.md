@@ -4,8 +4,6 @@
 
 ## [Vilken information kan mitt företag se med Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Återställa enheten](what-happens-if-you-reset-your-device-cpwebsite.md)
-
 ## [Uppdatera lösenordet](password-does-not-meet-it-administrator-requirements.md)
 
 ## [Logga in på företagsportalen](sign-in-to-the-company-portal.md)
@@ -105,8 +103,8 @@
 ## [Använda en macOS-enhet](using-your-macos-device-with-intune.md)
 ### [Vad händer när du registrerar en macOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos-cp.md)
-### [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)
-
+### [Registrera en macOS-enhet som tillhandahålls av företaget](enroll-company-device-macos.md)  
+### [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)  
 ### [Åtgärda vanliga problem med macOS](troubleshoot-your-device-macos.md)
 #### [Min macOS-version stöds inte ännu](your-macos-version-isnt-yet-supported.md)
 #### [Uppdatera din macOS-enhet](you-need-to-update-your-macos-device.md)
