@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2900f7c211a675a20300a2e212b0d57bad3a597a
-ms.sourcegitcommit: 32a4b1eb6bf20da7262f27276f8e94e435803386
+ms.openlocfilehash: aa91e0c0adcd1182f82c4a09746f154302fae326
+ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39501157"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40251534"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -30,9 +30,6 @@ Som Intune-administratör kan du skapa och hantera registreringsbegränsningar s
 
 >[!NOTE]
 >Begränsningar vid registrering ska inte betraktas som säkerhetsfunktioner. Komprometterade enheter kan ju utge sig för att vara en helt annan enhet. Det här är dock en bra barriär för att stänga ute användare utan skadliga avsikter.
-
->[!NOTE]
->Den grupptilldelade begränsningen för registrering och prioritetsfunktionen som nämns i den här artikeln håller på att distribueras bland Intune-kunderna. Du kanske inte har åtkomst till grupp- och prioritetsfunktionerna förrän den här distributionen är slutförd.
 
 Bland de specifika registreringsbegränsningarna som du kan skapa finns:
 
