@@ -64,7 +64,7 @@
 ### [Vad händer när jag registrerar en iOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 ### [Installera och logga in i företagsportalen](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrera din iOS-enhet](enroll-your-device-in-intune-ios.md)
-### [Registrera din iOS-enhet med programmet för enhetsregistrering](enroll-your-device-dep-ios.md)
+### [Registrera din iOS-enhet som tillhandahålls av organisationen](enroll-your-device-dep-ios.md)
 
 ### [Använda hanterade appar på enheten](use-managed-apps-on-your-device-ios.md)
 ### [Ange eller ändra ditt lösenord](set-or-change-your-passcode-ios.md)
@@ -103,7 +103,7 @@
 ## [Använda en macOS-enhet](using-your-macos-device-with-intune.md)
 ### [Vad händer när du registrerar en macOS-enhet?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
 ### [Registrera din macOS-enhet](enroll-your-device-in-intune-macos-cp.md)
-### [Registrera en macOS-enhet som tillhandahålls av företaget](enroll-company-device-macos.md)  
+### [Registrera din macOS-enhet som tillhandahålls av organisationen](enroll-company-device-macos.md)  
 ### [Avregistrera din macOS-enhet](unenroll-your-device-from-intune-macos.md)  
 ### [Åtgärda vanliga problem med macOS](troubleshoot-your-device-macos.md)
 #### [Min macOS-version stöds inte ännu](your-macos-version-isnt-yet-supported.md)
