@@ -14,18 +14,18 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ed58a6af9b2b4742582c92729e7324841014f31c
-ms.sourcegitcommit: 2bc3b9655517ae874c524c3a270f4fc40c448faa
+ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
+ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753900"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "40251779"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
 Du kan ange vilka hanterade appar som ska kunna använda ditt virtuella privata nätverk (VPN) på Intune-hanterade iOS-enheter. När du skapar ett virtuellt privat nätverk per app i Intune ansluter en slutanvändare automatiskt via ditt virtuella privata nätverk vid åtkomst till företagets dokument.
 
-Per app-VPN är för närvarande tillgänglig för följande providers:
+VPN per app är för närvarande tillgängligt för följande providers:
 
  - Check Point Remote Access VPN
  - Cisco AnyConnect
@@ -35,7 +35,7 @@ Per app-VPN är för närvarande tillgänglig för följande providers:
  - SonicWall
  - Palo Alto Networks GlobalProtect
 
-## <a name="prerequisites-for-per-app-vpn"></a>Krav för virtuellt privat nätverk per app
+## <a name="prerequisites-for-per-app-vpn"></a>Krav för VPN per app
 
 > [!IMPORTANT]
 > Din VPN-leverantör kan ha andra specifika krav för VPN per app, till exempel specifik maskinvara eller licensiering. Läs leverantörens dokumentation och kontrollera att du uppfyller kraven innan du konfigurerar VPN per app i Intune.
@@ -109,9 +109,9 @@ Den betrodda rotcertifikatprofilen gör det möjligt för iOS att automatiskt ha
 
     ![Skapa en SCEP-certifikatprofil](./media/vpn-per-app-create-scep-cert.png)
 
-## <a name="create-a-per-app-vpn-profile"></a>Skapa profil för virtuellt privat nätverk per app
+## <a name="create-a-per-app-vpn-profile"></a>Skapa profil för VPN per app
 
-VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter, anslutningsinformationen för det virtuella privata nätverket och flaggan för det virtuella privata nätverket per app för att aktivera funktionen för det virtuella privata nätverket per app för användning av iOS-programmet.
+VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter, anslutningsinformation för det virtuella privata nätverket och VPN per app-flaggan för aktivering av funktionen i iOS-programmet.
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
@@ -136,7 +136,7 @@ VPN-profilen innehåller SCEP-certifikatet med klientens autentiseringsuppgifter
 6. Klicka på **OK**.
 7. Klicka på **Skapa**.
 
-    ![Skapa en profil för virtuellt privat nätverk per app](./media/vpn-per-app-create-vpn-profile.png)
+    ![Skapa profil för VPN per app](./media/vpn-per-app-create-vpn-profile.png)
 
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Associera en app med VPN-profilen
@@ -145,30 +145,41 @@ När du har lagt till VPN-profilen associerar du appen och Azure AD-gruppen med 
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-2. Välj **Mobilappar**.
-3. Klicka på **Appar**.
-4. Välj appen från listan över appar.
-5. Klicka på **Tilldelningar**.
-6. Klicka på **Lägg till grupp**.
-7. Välj **Krävs** för **Tilldelningstyp** i fönstret **Lägg till grupp**.
-6. Välj gruppen du definierade tidigare och välj att **göra appen obligatorisk**.
-8. Välj din VPN-definition för det **virtuella privata nätverket**.
+3. Välj **Mobilappar**.
+4. Klicka på **Appar**.
+5. Välj appen från listan över appar.
+6. Klicka på **Tilldelningar**.
+7. Klicka på **Lägg till grupp**.
+8. Välj **Krävs** för **Tilldelningstyp** i fönstret **Lägg till grupp**.
+9. Välj gruppen du definierade tidigare och välj att **göra appen obligatorisk**.
+10. Välj din VPN-definition för det **virtuella privata nätverket**.
  
     > [!NOTE]  
     > Ibland tar det upp till en minut för VPN-definitionen att hämta värdet. Vänta 3–5 minuter innan du klickar på **Spara**.
 
-9. Klicka på **OK** och sedan på **Spara**.
+11. Klicka på **OK** och sedan på **Spara**.
 
     ![Associera en app med det virtuella privata nätverket](./media/vpn-per-app-app-to-vpn.png)
 
+En association mellan en app och en profil tas bort nästa gång enheten checkar in om följande villkor är uppfyllda:
+- appen har ett mål med obligatorisk installation som avsikt
+- både profilen och appen har samma grupp som mål.
+- Du tar bort VPN per app-konfigurationen från apptilldelningen.
+
+En association mellan en app och en profil finns kvar tills slutanvändaren begär en ominstallation från företagsportalen om följande villkor är uppfyllda:
+- appen har ett mål med tillgänglig installation som avsikt
+- både profilen och appen har samma grupp som mål.
+- Slutanvändaren begärde appinstallationen från företagsportalen, så appen och profilen installeras på enheten.
+- Du tar bort VPN per app-konfigurationen från apptilldelningen.
+
 ## <a name="verify-the-connection-on-the-ios-device"></a>Kontrollera anslutningen till iOS-enheten
 
-När det virtuella privata nätverket per app har konfigurerats och associerats med appen kan du kontrollera att anslutningen fungerar från en enhet.
+När VPN per app har konfigurerats och associerats med appen kontrollerar du att anslutningen fungerar från en enhet.
 
 ### <a name="before-you-attempt-to-connect"></a>Innan du försöker ansluta
 
  - Kontrollera att du kör iOS 9 eller senare.
- - Se till att du distribuerar *alla* ovan nämnda principer till samma grupp av användare. Det virtuella privata nätverket per app kommer inte att fungera som det ska om du inte utför dessa åtgärder.  
+ - Se till att du distribuerar *alla* ovan nämnda principer till samma grupp av användare. VPN per app kommer inte att fungera som det ska om du inte utför dessa åtgärder.  
  - Kontrollera att VPN-appen från tredje part är installerad. Följande VPN-appar stöds:
     - Check Point Capsule Connect
     - Cisco AnyConnect
@@ -177,7 +188,7 @@ När det virtuella privata nätverket per app har konfigurerats och associerats 
     - Pulse Secure
     - SonicWall Mobile Connect
 
-### <a name="connect-using-the-per-app-vpn"></a>Anslut med hjälp av det virtuella privata nätverket per app
+### <a name="connect-using-the-per-app-vpn"></a>Ansluta via VPN per app
 
 Kontrollera att zero touch-upplevelsen fungerar genom att ansluta utan att behöva välja det virtuella privata nätverket eller ange dina autentiseringsuppgifter. Zero touch-upplevelse innebär:
 
@@ -191,7 +202,7 @@ Kontrollera anslutningen på en iOS-enhet.
 2. Tryck på **Anslut**.  
 Det virtuella privata nätverket ansluter utan några fler uppmaningar.
 
-<!-- ## Troubleshooting the Per-App VPN
+<!-- ## Troubleshooting the per-app VPN
 
 The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
 

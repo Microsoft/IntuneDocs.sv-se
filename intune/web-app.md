@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ff55b013d863d1676b9b83ec93e38defe222e2d7
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905248"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251582"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -45,7 +45,11 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
 6. Välj typen **Webblänk** i listrutan **Typ av app** i fönsterrutan **Lägg till app**.
 7. Välj **Konfigurera**.
 8. Lägg till följande information i fönstret **Appinformation**:
-    - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen.
+    - **Namn**: Ange namnet på appen så som det ska visas i företagsportalen. 
+    
+        > [!NOTE]
+        > Om du ändrar namnet på appen via Intune i Azure Portal när du har distribuerat och installerat den kan du inte längre använda appen som mål i dina kommandon.
+    
     - **Beskrivning**: Ange en beskrivning för appen. Beskrivningen visas för användarna på företagsportalen.
     - **Utgivare**: Ange namnet på appens utgivare.
     - **App-URL**: Ange webbadressen till den webbplats där den app som du vill tilldela finns.

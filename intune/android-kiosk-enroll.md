@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d5a223834eed1b0174c56b5e33ad2140203073d0
-ms.sourcegitcommit: 5251a630fb2c7a2e6f86abd84ab887f8eabc1481
+ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212043"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903151"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera registrering av Android enterprise-kioskenheter
 
@@ -56,7 +56,7 @@ Du måste skapa en registreringsprofil så att du kan registrera dina kioskenhet
 1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Enhetsregistrering** > **Android-registrering** > **Registreringar av kiosk- och uppgiftsenheter**.
 2. Välj **Skapa** och fyll i de obligatoriska fälten.
     - **Namn**: Ange ett namn som du vill använda när du tilldelar profilen till den dynamiska enhetsgruppen.
-    - **Tokenförfallodatum**: Datumet då token går ut. Google tillämpar max. 30 dagar.
+    - **Tokenförfallodatum**: Datumet då token går ut. Google använder ett maxvärde på 90 dagar.
 3. Spara profilen genom att välja **Skapa**.
 
 ### <a name="create-a-device-group"></a>Skapa en enhetsgrupp
@@ -110,7 +110,7 @@ För enheter med Android 5.1 och senare som stöder NFC kan du etablera enheter 
 
 ### <a name="enroll-by-using-a-token"></a>Registrera med en token
 
-För enheter med Android 6 och senare kan du använda token för att registrera enheten.
+För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **aft#setup**.
 
 1. Aktivera din fabriksåterställningsenhet.
 2. Välj språk på **välkomstskärmen**.
@@ -125,6 +125,9 @@ För enheter med Android 6 och senare kan du använda token för att registrera 
 ### <a name="enroll-by-using-a-qr-code"></a>Registrera med QR-kod
 
 På enheter med Android 7 och senare kan du skanna QR-koden från registreringsprofilen för att registrera enheten.
+
+> [!Note]
+> Webbläsarens zoom kan göra att enheter inte kan skanna QR-koder. Du löser problemet genom att öka webbläsarens zoom.
 
 1. Starta en QR-läsning på Android-enheten trycker du flera gånger på den första skärmen du ser efter en fabriksåterställning.
 2. För enheter med Android 7 och 8 devices uppmanas du att installera en QR-läsare. Enheter med Android 9 och senare har redan en installerad QR-läsare.

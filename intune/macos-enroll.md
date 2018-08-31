@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/15/2018
+ms.date: 08/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,20 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4f8cddb69ac85e45acde8a846df3b5413c3b75bf
-ms.sourcegitcommit: 401cedcd7acc6cb3a6f18d4679bdadb0e0cdf443
+ms.openlocfilehash: 0d58cb3199405a8a32d169e74e4f0009841f5d09
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32046255"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251583"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurera registrering för macOS-enheter i Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Med Intune kan du hantera macOS-enheter. För att aktivera hantering av enheter måste användarna registrera sina enheter genom att gå till [Företagsportalens webbplats](http://portal.manage.microsoft.com) och följa anvisningarna. När macOS-enheter hanteras kan du [skapa anpassade inställningar för macOS-enheter](custom-settings-macos.md). Fler funktioner kommer snart att bli tillgängliga.
+I Intune kan du hantera macOS-enheter för att ge användarna åtkomst till företagets e-post och appar.
+
+Som Intune-administratör kan du ställa in registrering av företagsägda och egna macOS-enheter (”bring your own device” eller BYOD). 
 
 ## <a name="prerequisites"></a>Krav
 
@@ -39,27 +41,25 @@ Uppfyll följande krav innan du konfigurerar registreringen av macOS-enheter:
 - Tilldela användarlicenser i [Office 365-portalen](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Hämta ett Apple MDM-pushcertifikat](apple-mdm-push-certificate-get.md)
 
-## <a name="user-owned-ios-devices-byod"></a>Användarägda iOS-enheter (BYOD)
+## <a name="user-owned-macos-devices-byod"></a>Användarägda macOS-enheter (BYOD)
 
-Du kan låta användare registrera sina personliga enheter för Intune-hantering, vilket kallas "bring your own device" eller BYOD. När du uppfyller kraven och har tilldelat licenser till användarna, kan de ladda ned företagsportalappen för macOS från App Store och följa instruktionerna för registrering i appen.
-
-## <a name="company-owned-ios-devices"></a>Företagsägda iOS-enheter
-För organisationer som köper enheter till sina användare, stöder Intune registrering av företagsägda macOS-enheter med ett konto för [enhetsregistreringshanteraren](device-enrollment-manager-enroll.md).
-
-## <a name="set-up-macos-enrollment"></a>Konfigurera registrering av macOS
-
-Som standard tillåter Intune redan registrering av macOS-enheter.
-
-Se [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md) för att blockera macOS-enheter från registrering.
-
-## <a name="tell-your-users-how-to-enroll-their-devices-to-access-company-resources"></a>Berätta för dina användare hur de registrerar sina enheter för att få åtkomst till företagsresurserna
-
-Be slutanvändarna att gå till [företagsportalens webbplats](https://portal.manage.microsoft.com) och följa anvisningarna för att registrera sina enheter. Du kan även skicka dem en länk till stegen för registrering online: [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Du kan låta användarna registrera sina egna enheter för Intune-hantering, vilket kallas ”bring your own device” eller BYOD. När du har slutfört förutsättningarna och tilldelat användarlicenser kan användarna registrera sina enheter genom att:
+- gå till [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) eller
+- ladda ned appen Företagsportal.
+Du kan även skicka dem en länk till stegen för registrering online: [Registrera en macOS-enhet i Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Information om andra slutanvändaraktiviteter finns i de här artiklarna:
 
 - [Resurser om slutanvändarupplevelsen med Microsoft Intune](end-user-educate.md)
 - [Använd din macOS-enhet med Intune](/intune-user-help/using-your-macos-device-with-intune)
+
+## <a name="company-owned-macos-devices"></a>Företagsägda macOS-enheter
+Intune har stöd för följande registreringsmetoder för macOS-enheter som ägs av företaget, i organisationer som köper enheter till sina användare:
+- [Apples program för enhetsregistrering (DEP)](device-enrollment-program-enroll-macos.md): Organisationer kan nu köpa macOS-enheter via Apples program för enhetsregistrering (DEP). Med DEP kan du distribuera en registreringsprofil ”over-the-air” för att hantera enheter.
+- [Enhetsregistreringshanteraren (DEM)](device-enrollment-manager-enroll.md) Du kan använda ett DEM-konto till att registrera upp till 1 000 enheter.
+
+## <a name="block-macos-enrollment"></a>Blockera macOS-registrering
+Som standard kan macOS-enheter registreras i Intune. Se [Ange begränsningar för enhetstyp](enrollment-restrictions-set.md) för att blockera macOS-enheter från registrering.
 
 ## <a name="enroll-virtual-macos-machines-for-testing"></a>Registrera virtuella macOS-datorer för testning
 
@@ -79,3 +79,7 @@ MDM-registrering av användargodkänd är en typ av macOS-registrering som du ka
 För att vara användargodkänd måste, slutanvändaren efter registrering med hjälp av macOS-företagsportalen, manuellt ange godkännande med hjälp av systeminställningarna. Instruktioner för att göra detta tillhandahålls av macOS-företagsportal för användare av macOS 10.13.2 och senare.
 
 Om du vill ta reda på om en enhet är användargodkänd, gå till Intune-portalen och välj sedan **Enheter** > **Alla enheter**> Välj enhet > **Maskinvara**. Markera fältet **Användargodkänd**.
+
+## <a name="next-steps"></a>Nästa steg
+
+När macOS-enheter registreras kan du [skapa anpassade inställningar för enheterna](custom-settings-macos.md).

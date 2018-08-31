@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/23/2018
+ms.date: 08/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4455a3c26296faba8bf01cf43d8555aebc13afc6
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 9db79e9d0dc82cd823663274aa02dbe097db74d4
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321483"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40251537"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
@@ -29,8 +29,8 @@ Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som d
 
 ## <a name="before-you-start"></a>Innan du börjar
 
->[!IMPORTANT]
->Den här metoden för att installera Office stöds endast om inga andra versioner av Microsoft Office är installerade på enheten.
+> [!IMPORTANT]
+> Om det finns .msi Office-appar på slutanvändarens enhet måste du använda funktionen **Ta bort MSI** för att avinstallera de här apparna på ett säkert sätt. Annars kommer det inte gå att installera de Office 365-appar som levereras via Intune.
 
 - Enheterna måste köra Windows 10 Creators Update eller senare.
 - Intune har endast stöd för att lägga till Office-appar från Office 365.
@@ -91,6 +91,7 @@ Konfigurera installationsalternativ för app-paket i det här steget. Inställni
         - **Månadskanal (riktad)**
         - **Semi-Annual** (Varje halvår)
         - **Varje halvår (riktad)**
+    - **Ta bort andra versioner av Office (MSI) från slutanvändares enheter**: Med den här funktionen kan du ta bort befintliga Office-versioner (MSI) från slutanvändarnas datorer. Det här gäller inte bara de appar som valts för installation i **Konfigurera appsviten**, utan alla Office-appar (MSI) tas bort från slutanvändarens enhet.
     - **Godkänn applicensavtalet för slutanvändare**: Välj det här alternativet om användare inte behöver godkänna licensavtalet. Intune accepterar sedan avtalet automatiskt.
     - **Använd aktivering på delad dator**: Välj det här alternativet när flera användare delar en dator. Mer information finns i [översikt över delad aktivering för Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Språk**: Office installeras automatiskt på alla språk som stöds som är installerade med Windows på slutanvändarens enhet. Välj det här alternativet om du vill installera ytterligare språk med app-paketet.

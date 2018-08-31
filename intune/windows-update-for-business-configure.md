@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: 216c83d4158fe65b7aeb52f5477362eb57ec4242
-ms.sourcegitcommit: a52e81ab4fe24ae6410d1a1e63b4b073abc416a4
+ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822729"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255233"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -114,12 +114,11 @@ Den nya uppdateringsringen visas i listan över uppdateringsringar.
 2. På nästa flik markerar du först **Välj grupper att ta med** och sedan de grupper som du vill tilldela ringen till.
 3. När du är klar slutför du tilldelningen genom att markera **Välj**.
 
-## <a name="update-compliance-reporting"></a>Uppdatera efterlevnadsrapportering
-Du kan visa uppdateringsefterlevnad i Intune eller genom att använda en kostnadsfri lösning i Uppdateringsefterlevnad i Operations Management Suite (OMS).
+## <a name="update-compliance-reporting"></a>Rapporter om uppdateringsefterlevnad
+Du kan visa uppdateringsefterlevnad i Intune, eller genom att använda en kostnadsfri lösning med namnet Uppdateringsefterlevnad.
 
 ### <a name="review-update-compliance-in-intune"></a>Granska uppdateringsefterlevnad i Intune 
-<!-- 1352223 -->
-Läs en principrapport för att se distributionsstatus för de Windows 10-uppdateringstestgrupper som du har konfigurerat.
+<!-- 1352223 --> Granska en principrapport för att se distributionsstatus för de Windows 10-uppdateringstestgrupper du har konfigurerat.
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
@@ -137,7 +136,7 @@ Läs en principrapport för att se distributionsstatus för de Windows 10-uppdat
       - **Användarstatus**
 
 ### <a name="review-update-compliance-using-oms"></a>Granska uppdateringsefterlevnad med OMS
-Du kan övervaka uppdateringsdistributioner av Windows 10 genom att använda en kostnadsfria lösningen Update Compliance i Operations Management Suite (OMS). Mer information finns i [Övervaka Windows-uppdateringar med Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). När du använder den här lösningen kan du distribuera ett kommersiellt ID till någon av dina Intune-hanterade Windows 10 enheter för vilken du vill rapportera uppdateringsefterlevnad.
+Du kan övervaka uppdateringsdistributioner av Windows 10 genom att använda den kostnadsfria lösningen Uppdateringsefterlevnad. Mer information finns i [Övervaka Windows-uppdateringar med Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). När du använder den här lösningen kan du distribuera ett kommersiellt ID till någon av dina Intune-hanterade Windows 10 enheter för vilken du vill rapportera uppdateringsefterlevnad.
 
 I Intune-konsolen kan du konfigurera det kommersiella ID:t med hjälp av OMA-URI-inställningarna för en anpassad princip. Mer information finns i [Intune-principinställningar för Windows 10-enheter i Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
 

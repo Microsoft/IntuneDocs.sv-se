@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 69887fb0a9b2e447d6c6101b26ce50f733053337
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321296"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251979"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -129,6 +129,9 @@ Tänk på följande innan du börjar lägga till och tilldela appar:
 - När du lägger till och tilldelar en app från en butik måste din användare ha ett konto med den butiken för att kunna installera appen.
 - Vissa appar eller objekt som du tilldelar kan vara beroende av inbyggda iOS-appar. Om du till exempel tilldelar en bok från iOS Store måste appen iBooks finnas på enheten. Om du har tagit bort den inbyggda iBooks-appen, kan du inte använda Intune för att återinföra den.
 
+> [!IMPORTANT]
+> Om du ändrar namnet på appen via Intune i Azure Portal när du har distribuerat och installerat den kan du inte längre använda appen som mål i dina kommandon.
+
 ## <a name="cloud-storage-space"></a>Molnlagringsutrymme
 Alla appar som du skapar med installationstypen Programinstallation (till exempel en verksamhetsspecifik app) måste paketeras och överföras till Microsoft Intunes molnlagring. En utvärderingsprenumeration på Intune inkluderar 2 GB molnbaserad lagring som används för att lagra hanterade appar och uppdateringar. Den totala mängden lagringsutrymme är inte begränsad med en fullständig prenumeration.
 
@@ -170,6 +173,10 @@ Intune kommer automatiskt att installera om, uppdatera eller ta bort en obligato
 - Om en obligatorisk app inte kan installeras eller på något sätt inte finns på enheten utvärderar Intune kompatibilitet och installerar om appen enligt det här schemat.  
 - En administratör anger en app som är tillgänglig för en användargrupp och en slutanvändare installerar appen från företagsportalen på enheten. Senare uppdaterar administratören appen från v1 till v2. Intune uppdaterar appen enligt det här schemat, förutsatt att eventuell tidigare version av appen finns kvar på enheten.
 - Om administratören distribuerar avinstallationsavsikt och appen finns på enheten men gick inte att avinstallera, utvärderar Intune kompatibilitet och avinstallerar appen enligt det här schemat.   
+
+## <a name="app-installation-errors"></a>Appinstallationsfel
+
+Mer information om installationsfel för Intune-appar finns i [Appinstallationsfel](troubleshoot-app-install.md#app-installation-errors).
 
 ## <a name="next-steps"></a>Nästa steg
 

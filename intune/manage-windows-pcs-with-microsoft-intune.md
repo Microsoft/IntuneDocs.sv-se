@@ -15,12 +15,12 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: a22aafdca8c049367d4c88d27a07a7c1825a01e3
-ms.sourcegitcommit: e6e93419f46e8647d4661eeca09eb1e2e460ad2b
+ms.openlocfilehash: 5a248345a40cd7cfcff3883643562923f9535d3b
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966926"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41910632"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
@@ -53,10 +53,10 @@ Intune stöder hantering av Windows-datorer som datorer med hjälp av programvar
 
 |Krav|Mer information|
 |---------------|--------------------|
-|Operativsystem | Windows-enheten måste köra Windows 7 SP1 eller senare. </br></br>**Home edition-versioner stöds inte.**|
+|Operativsystem | Windows-enhet som kör Windows 7 SP1, Windows 8.1 eller senare. </br></br>**Home edition-versioner stöds inte.**|
 |Administrativ behörighet|Det konto som installerar klientprogramvaran måste ha lokal administratörsbehörighet på enheten.|
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.<br /><br />Så visar du versionen för Windows Installer på en dator:<br /><br />  Högerklicka på **%windir%\System32\msiexec.exe**, och sedan på **Egenskaper**.<br /><br />Du kan hämta den senaste versionen av Windows Installer från [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) på webbplatsen Microsoft Developer Network.|
-|Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogrammet avinstallerar du all Configuration Manager-, Operations Manager-, Operations Management Suite- och Service Manager-klientprogramvara från datorn.|
+|Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogrammet ska du avinstallera all klientprogramvara för Configuration Manager, Operations Manager och Service Manager från datorn.|
 
 ## <a name="deploying-the-intune-software-client"></a>Distribuera Intune-programklienten
 Som Intune-administratör kan du göra Intune programklienten tillgänglig för användarna på en mängd olika sätt. Vägledning finns i [Installera Intune-klientprogrammet på Windows-datorer](install-the-windows-pc-client-with-microsoft-intune.md).

@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 640d1a5cbd785248cb309bc250c95631295955b3
-ms.sourcegitcommit: 71497f0215fc8bed454ac318b0548b1281a8fe0f
+ms.openlocfilehash: 141fcc4550b69d01d67e8d4aa9f0e6e05717353a
+ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33914163"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40253148"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Konfigurera Exchange-tjänstens anslutningsprogram för Intune och Exchange Online
 
@@ -50,7 +50,7 @@ Du måste även skapa ett Exchange Online-användarkonto som används av Intune 
 
 ## <a name="set-up-the-service-to-service-connector"></a>Konfigurera tjänst till tjänstanslutning
 
-1. Logga in på [Azure Portal](http://portal.azure.com) med ett konto som har administratörsrättigheter för Exchange och behörigheter för cmdlets såsom [beskrivs ovan](#exchange-cmdlet-requirements). Microsoft Intune använder den inloggade användarens e-postadress för att upprätta anslutningen.
+1. Logga in på [Azure Portal](http://portal.azure.com) med ett konto som har administratörsrättigheter för Exchange och behörigheter för cmdletarna som [beskrivs ovan](#exchange-cmdlet-requirements), en giltig Intune-licens och rollen Global administratör. Microsoft Intune använder den inloggade användarens e-postadress för att upprätta anslutningen.
 
 2. Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 

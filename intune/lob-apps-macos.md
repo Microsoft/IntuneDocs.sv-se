@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c871d32fbcdfa089de88ae649c2926d2c839cce2
-ms.sourcegitcommit: 413d271b42a6d4396adc2f749e31eed782aaa9da
+ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993725"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255488"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
@@ -28,14 +28,15 @@ ms.locfileid: "38993725"
 
 Informationen i den här artikeln visar hur du lägger till verksamhetsspecifika appar för macOS i Microsoft Intune. Du måste hämta ett externt verktyg för att förbearbeta dina *.pkg*-filer innan du kan ladda upp din verksamhetsspecifika fil till Microsoft Intune. Förbearbetningen av dina *.pkg*-filer måste ske på en macOS-enhet.
 
->[!NOTE]
->Användare av macOS-enheter kan ta bort några av de inbyggda macOS-apparna som Aktier och Kartor, men du kan inte använda Intune för att distribuera dessa appar igen. Om slutanvändarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
->
->Endast *.pkg*-filer kan användas för att överföra verksamhetsspecifika macOS-appar till Microsoft Intune. Konvertering av andra format, till exempel *.dmg* till *.pkg* stöds inte.
+> [!NOTE]
+> Användare av macOS-enheter kan ta bort några av de inbyggda macOS-apparna som Aktier och Kartor, men du kan inte använda Intune för att distribuera dessa appar igen. Om slutanvändarna tar bort dessa appar måste de gå till App Store och installera om dem manuellt.
 
-## <a name="step-1---pre-process-your-software-setup-file"></a>Steg 1 – Förbearbeta programvarans installationsfil
+## <a name="before-your-start"></a>Innan du börjar
 
-Använd Intune App Wrapping-verktyget för Mac för att aktivera Mac-appar som ska hanteras av Microsoft Intune.
+Du måste hämta ett externt verktyg för att förbearbeta dina *.pkg*-filer innan du kan ladda upp din verksamhetsspecifika fil till Microsoft Intune. Förbearbetningen av dina *.pkg*-filer måste ske på en macOS-enhet. Använd Intune App Wrapping-verktyget för Mac för att aktivera Mac-appar som ska hanteras av Microsoft Intune.
+
+> [!IMPORTANT]
+> Endast *.pkg*-filer kan användas för att överföra verksamhetsspecifika macOS-appar till Microsoft Intune. Konvertering av andra format, till exempel *.dmg* till *.pkg* stöds inte.
 
 1. Hämta och kör [Intunes programhanteringsverktyg för Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -55,7 +56,7 @@ Använd Intune App Wrapping-verktyget för Mac för att aktivera Mac-appar som s
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Det här kommandot extraherar identifierade parametrar och version för den skapade *.intunemac*-filen.
 
-## <a name="step-2---specify-the-software-setup-file"></a>Steg 2 – Ange platsen för programinstallationsfilen
+## <a name="step-1---specify-the-software-setup-file"></a>Steg 1 – Ange platsen för programinstallationsfilen
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
@@ -64,14 +65,14 @@ Använd Intune App Wrapping-verktyget för Mac för att aktivera Mac-appar som s
 5. Välj **Lägg till** ovanför applistan.
 6. I fönstret **Lägg till app** väljer du **Verksamhetsspecifik app**.
 
-## <a name="step-3---configure-the-app-package-file"></a>Steg 3 – Konfigurera appaketfilen
+## <a name="step-2---configure-the-app-package-file"></a>Steg 2 – Konfigurera appaketfilen
 
 1. I fönstret **Lägg till app** väljer du **Appaketfil**.
 2. I fönstret **Appaketfil** klickar du på knappen Bläddra och väljer en macOS-installationsfil med filnamnstillägget *.intunemac*.
 3. Välj **OK** när du är klar.
 
 
-## <a name="step-4---configure-app-information"></a>Steg 4 – Konfigurera appinformation
+## <a name="step-3---configure-app-information"></a>Steg 3 – Konfigurera appinformation
 
 1. Välj **Appinformation** i fönstret **Lägg till app**.
 2. I fönstret **Appinformation** lägger du till information om appen. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:
@@ -89,7 +90,7 @@ Använd Intune App Wrapping-verktyget för Mac för att aktivera Mac-appar som s
     - **Logotyp** – Ladda upp en ikon som är associerad med appen. Den här ikonen visas med appen när användare söker på företagsportalen.
 3. Välj **OK** när du är klar.
 
-## <a name="step-5---finish-up"></a>Steg 5 – Slutför
+## <a name="step-4---finish-up"></a>Steg 4 – Slutför
 
 1. I fönstret **Lägg till app** kontrollerar du att informationen för appen är korrekt.
 2. Välj **Lägg till** för att överföra appen till Intune.
@@ -99,7 +100,7 @@ Appen som du har skapat visas i applistan där du kan tilldela den till de grupp
 > [!NOTE]
 > Om *.pkg*-filen innehåller flera appar eller appinstallationsprogram kommer Microsoft Intune endast rapportera att *appen* har installerats korrekt när alla installerade appar har upptäckts på enheten.
 
-## <a name="step-6---update-a-line-of-business-app"></a>Steg 6 – Uppdatera en verksamhetsspecifik app
+## <a name="step-5---update-a-line-of-business-app"></a>Steg 5 – Uppdatera en verksamhetsspecifik app
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

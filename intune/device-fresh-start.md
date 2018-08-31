@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,32 +13,29 @@ ms.technology: ''
 ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5658bf2e1ee250ef9fd405b3f7ec1772b166f338
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6b66cd00f734cab3ca85f6d87f056f8c482a377d
+ms.sourcegitcommit: 2811df0f851ca6b08f6ae8c926fb2e6971c41690
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021004"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251739"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Använda Börja om på nytt för att återställa Windows 10-enheter med Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Enhetsåtgärden **Börja om på nytt** tar bort alla appar som är installerade på en Windows 10-dator som kör Creators Update. Sedan uppdateras datorn automatiskt till den senaste versionen av Windows.
+Enhetsåtgärden **Börja om på nytt** tar bort alla installerade appar från en dator som kör Windows 10 version 1703 eller senare. Med Börja om på nytt kan du ta bort förinstallerade appar (från OEM-tillverkare) som ofta installeras på nya datorer.  
 
-Den här åtgärden tar bort förinstallerade appar (från OEM-tillverkare) som vanligtvis installeras med en ny dator. Om du vill behålla innehållet i användarens arbetsmapp och bara ta bort appar och inställningar använder du inställningen `if user data is retained`.
-
-> [!IMPORTANT]
-> Åtgärden Börja om på nytt avregistrerar enheten från Intune, men enheten är fortfarande ansluten i Azure Active Directory.
-
-## <a name="use-fresh-start"></a>Använda Börja om på nytt
-
-1. Logga in på [Azure Portal](https://portal.azure.com).
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Enheter** och sedan **Alla enheter**.
-4. I listan med enheter som du hanterar väljer du en Windows 10-skrivbordsenhet och sedan **Börja om på nytt**.
-
-## <a name="next-steps"></a>Nästa steg
-
-Om du vill se status för den här åtgärden väljer du **Enhetsåtgärder** (**Microsoft Intune** > **Enheter**).
+1. Logga in på den [Azure Portal](https://portal.azure.com) och gå till **Microsoft Intune** > **Enheter** > **Alla enheter**.
+2. Välj en Windows 10-enhet i listan med de enheter du hanterar.
+3. Klicka på **Börja om på nytt**. 
+4. Välj **Behåll användardata på den här enheten** om du vill:
+   * behålla enhetens Azure AD-koppling
+    * behålla enhetens registrering i hanteringen av mobila enheter 
+    * behålla innehållet i användarens arbetsmapp och bara ta bort appar och inställningar.  
+  > [!IMPORTANT]
+ > Om du inte behåller användardata återställs enheten till fabrikstillståndet. Den avregistreras från Azure AD och hanteringen av mobila enheter. 
+ 
+5. Klicka på **OK**.   
+6. Om du vill se status för den här åtgärden går du tillbaka till **Enheter** och klickar på **Enhetsåtgärder**.  

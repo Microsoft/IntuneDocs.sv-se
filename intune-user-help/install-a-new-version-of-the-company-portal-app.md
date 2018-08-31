@@ -15,30 +15,32 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 3176f09a7565a17230aeb7a9f44b14490264b2bd
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b939cd175f7a548b37ebec985a189d7e3119aac7
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016449"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903131"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Så här uppdaterar du företagsportalappen
 
-Om din version av företagsportalappen inte längre stöds, eller om det finns en nyare version av företagsportalappen tillgänglig, måste du uppdatera den till en senare version. Följ stegen för den typ av enhet som du har för att registrera dig.
+I den här artikeln beskrivs hur du uppdaterar din version av företagsportalappen när:  
+* det finns en nyare version av företagsportalappen
+* din version av företagsportalappen inte stöds längre.
+
+De här stegen beskriver hur du uppdaterar appen på enheter som kör Android, iOS och Windows.    
 
 ## <a name="update-the-intune-company-portal-app-on-your-android-device"></a>Uppdatera Intune-företagsportalappen på en Android-enhet
 
-Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Du kommer inte att bli uppmanad att uppdatera i själva företagsportalappen. Uppdatera enheten genom att följa anvisningarna i aviseringen.
+Play Store meddelar dig när en ny version av företagsportalen blir tillgänglig. Du kommer inte att bli uppmanad att uppdatera i själva företagsportalappen. Välj aviseringen och följ anvisningarna om att uppdatera din enhet.  
 
 ## <a name="update-the-intune-company-portal-app-on-your-ios-device"></a>Uppdatera Intune-företagsportalappen på en iOS-enhet
 
 När en ny version är tillgänglig visas alternativet Uppdatera vid appen i listan över installerade appar.  
 
-Så här uppdaterar du företagsportalappen:
-
 1. Öppna App Store och sök efter **intune**.
 
-2. När du har hittat appen trycker du på **Uppdatera** till höger om appnamnet.
+2. När du har hittat appen trycker du på **Uppdatera**.
 
 ## <a name="update-the-intune-company-portal-app-on-your-windows-device"></a>Uppdatera Intune-företagsportalappen på en Windows-enhet
 

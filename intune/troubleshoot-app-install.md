@@ -6,7 +6,7 @@ keywords: ''
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 07/18/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 ms.custom: intune-azure
-ms.openlocfilehash: c1c2a37103f8fedc09a70b4387aae3f472dfb636
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: 396766d33126cebf4a583ec4324badc96e627602
+ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138687"
+ms.lasthandoff: 08/18/2018
+ms.locfileid: "40251653"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Felsöka appinstallationsproblem
 
@@ -49,6 +49,38 @@ Problemet indikeras i informationen om appinstallationsfel. Du kan använda den 
 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+
+## <a name="app-installation-errors"></a>Appinstallationsfel
+
+### <a name="android-errors"></a>Android-fel
+
+|    Felmeddelande/kod    |    Beskrivning    |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    Det gick inte att installera appen. (0xC7D14FB5)    |    Det här felmeddelandet visas när Intune inte kan fastställa orsaken till Android-appens installationsfel. Ingen information angavs av Android om felet.       Det här felet returneras när APK-nedladdningen utfördes men det inte gick att installera appen. Det här felet beror normalt på att APK-filen är skadad och inte går att installera på enheten. En möjlig orsak kan vara att Google Play Protect blockerar installationen av appen av säkerhetsskäl. En annan möjlig orsak till felet är att enheten saknar stöd för appen. Appen kanske kräver API-version 21 eller senare medan enheten för närvarande har API-version 19.         Intune returnerar det här felet för både DA- och KNOX-enheter, och om det är problem med APK:t kommer installationen inte att lyckas även om användaren ser ett meddelande om att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.        |
+|    Appinstallationen avbröts eftersom installationsfilen (APK) togs bort efter nedladdningen, men innan installationen. (0xC7D14FBA)    |    APK-filen laddades ned, men innan användaren installerade appen så togs filen bort från enheten. Det här kan inträffa om det förflöt lång tid mellan nedladdningen och installationen. Användaren kanske avbröt den ursprungliga installationen, väntade en stund och sedan klickade på meddelandet om att försöka igen.         Det här felmeddelandet returneras bara för DA-scenarier. KNOX-scenarier kan utföras tyst. Vi visar ett meddelande om att försöka igen som användaren kan godkänna i stället för att avbryta. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.    |
+|    Appinstallationen avbröts eftersom processen startades om under installationen. (0xC7D14FBB)    |    Enheten startades om under APK-installationen, vilket gjorde att installationen avbröts.        Det här felmeddelandet returneras för både DA och KNOX-enheter. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.    |
+|    Programmet hittades inte efter att installationen slutförts. (0x87D1041C)    |    Användaren har uttryckligen avinstallerat appen. Det här felet returneras inte från klienten. Det är ett fel som genererades när appen installerades tidigare, men sedan har användaren avinstallerat den. Det här felet ska bara inträffa för obligatoriska appar. Användare kan avinstallera appar som inte är obligatoriska. Det här felet kan endast inträffa i DA. KNOX blockerar avinstallation av hanterade appar.       Vid nästa synkronisering visas meddelandet om avinstallation för användaren igen.   Användaren kan ignorera meddelandet. Felet fortsätter att rapporteras tills användaren installerar appen.    |
+|    Nedladdningen misslyckades på grund av ett okänt fel. (0xC7D14FB2)    |    Det här felet inträffar när nedladdningen misslyckas. Felet beror ofta på problem med Wi-Fi eller att anslutningen är långsam.       Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.    |
+|    Nedladdningen misslyckades på grund av ett okänt fel. Principen utförs igen nästa gång enheten synkroniseras. (0xC7D15078)    |    Det här felet inträffar när nedladdningen misslyckas. Felet beror ofta på problem med Wi-Fi eller att anslutningen är långsam.       Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst.    |
+|    Slutanvändaren avbröt appinstallationen. (0xC7D14FB1)    |    Användaren har uttryckligen avinstallerat appen. Det här felet returneras när användaren avbröt installationen i Android-operativsystemet. Användaren tryckte på knappen Avbryt vid installationsprompten i operativsystemet eller stängde kommandotolken.        Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.    |
+|    Filnedladdningen stoppades oväntat. (0xC7D15015)    |    Operativsystemet stoppade nedladdningen innan den slutfördes. Det här felet kan inträffa när enheten har låg batterinivå eller om nedladdningen tar för lång tid.       Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst. Intune visar ett meddelande som användaren kan klicka på för att försöka igen. Om appen är en tillgänglig app kan användaren bortse från meddelandet. Om appen är obligatorisk går det dock inte att bortse från meddelandet.    |
+|    Filnedladdningstjänsten stoppades oväntat. Principen utförs igen nästa gång enheten synkroniseras. (0xC7D1507C)    |    Operativsystemet stoppade nedladdningen innan den slutfördes. Det här felet kan inträffa när enheten har låg batterinivå eller om nedladdningen tar för lång tid.       Det här felet returneras bara i DA-scenarier. I KNOX-scenarier uppmanas inte användaren att installera appar, det kan göras tyst.    |
+
+### <a name="ios-errors"></a>iOS-fel
+
+|    Felmeddelande/kod    |    Description    |
+|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|    (0x87D12906)    |    Apple MDM-agenten returnerade att installationskommandot misslyckades.        |
+|    (0x87D1313C)    |    Nätverksanslutningen bröts medan den uppdaterade webbadressen för nedladdningstjänsten skickades till enheten. Mer specifikt gick det inte att hitta någon server med det angivna värdnamnet.    |
+|    iOS-enheten är upptagen för närvarande. (0x87D11388)    |    IOS-enheten var upptagen och detta ledde till ett fel.    |
+|    Appinstallationen misslyckades. (0x87D13B64)    |    Ett appinstallationsfel inträffade. Du behöver XCODE-loggar för att felsöka problemet.    |
+|    Appen är hanterad men har upphört att gälla eller tagits bort av användaren. (0x87D13B66)    |    Användaren har uttryckligen avinstallerat appen. Appen kan ha upphört att gälla och inte gått att ladda ned, eller så matchar inte appidentifieringen svaret från enheten.   Det här felet kan också inträffa på grund av en bugg i plattformen iOS 9.2.2.    |
+|    Appen är schemalagd för installation, men det krävs en inlösningskod för att slutföra transaktionen.   (0x87D13B60)    |    Det här felet inträffar vanligen med betalda iOS Store-appar.     |
+|    Programmet hittades inte efter att installationen slutförts. (0x87D1041C)    |    Appidentifieringen matchar inte svaret från enheten.    |
+|    Användaren avvisade erbjudandet att installera appen. (0x87D13B62)    |    Användaren klickade på Avbryt under den inledande appinstallationen.    |
+|    Användaren avvisade erbjudandet att uppdatera appen. (0x87D13B63)    |    Slutanvändaren klickade på Avbryt under uppdateringen.     |
+|    Okänt fel (0x87D103E8)    |    Ett okänt fel inträffade under appinstallationen. Det här felet visas om inget annat fel kan identifieras.    |
+
 
 ## <a name="next-steps"></a>Nästa steg
 

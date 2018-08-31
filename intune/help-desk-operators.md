@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 4150a513e909ccfd44db23eee9b5990d97d8d670
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
+ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329883"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251530"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -59,13 +59,13 @@ Du kan använda fönstret **Felsökning** för att granska användarinformation.
 
 ![](/intune/media/troubleshooting-dash.png)
 
-| Område | Namn | Description |
+| Område | Namn | Beskrivning |
 | ---  | ---  | ---         |
 | 1.   | Kontostatus  | Visar status för aktuell Intune-klient som **Aktiv** eller **Inaktiv**.       |
 | 2.   | Val av användare  | Namnet på den valda användaren. Välj en ny användare genom att klicka på **Ändra användare**.       |
 | 3.   | Användarstatus  | Visar status för användarens Intune-licens, antal enheter, varje enhetskompatibilitet, antalet appar och appkompatibilitet.       |
 | 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa i fönstret. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper</ul>      |
-| 5.   | Gruppmedlemskap  | Yadda       |
+| 5.   | Gruppmedlemskap  | Visar de grupper som den valda användaren är medlem i.       |
 
 ## <a name="mobile-apps-reference"></a>Referens för mobila appar
 
@@ -75,7 +75,7 @@ Appar som körs på enheter eller enheter som ägs av användare som hanteras av
 
 Egenskaper för mobilappar.
 
-| Egenskap      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Egenskap      | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Namn          | Namnet på programmet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -86,7 +86,7 @@ Egenskaper för mobilappar.
 
 Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
 
-| Egenskap           | Description                                                                                                                         |
+| Egenskap           | Beskrivning                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
 | Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
@@ -102,7 +102,7 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Detta ger en baslinje för skydd för företagets data när de laddas ned till mobila appar, inklusive Office-mobilappar. 
 
-| Egenskap    | Description                                                                           |
+| Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
 | Status      | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
 | Appnamn    | Namnet på programmet                                                           |
@@ -152,7 +152,7 @@ Ser till att de enheter som används för åtkomst till företagets appar och da
 
 Egenskaperna för efterlevnadsprinciperna.
 
-| Egenskap      | Description                                                                                                                         |
+| Egenskap      | Beskrivning                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Tilldelning    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Namn          | Namnet på programmet.                                                                                                        |

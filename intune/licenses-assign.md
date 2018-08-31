@@ -14,12 +14,12 @@ ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
 ms.reviewer: amyro
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: a6a5bbdd5c8cd155dad99b3a8fcceabb2ff1f6f8
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 8b132c0853bf9d591f16610f1e7a714b6288491b
+ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225416"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751658"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Tilldela licenser till användare så att de kan registrera enheter i Intune
 
@@ -61,7 +61,7 @@ Se den här [översikten över synkronisering av skolinformation](https://suppor
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Hur användar- och enhetslicenser påverkar åtkomsten till tjänster
 * Varje **användare** som du tilldelar en programanvändarlicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och hantera program och upp till 15 enheter.
-* Varje **enhet** som du tilldelar en programenhetslicens kan få åtkomst till och använda onlinetjänster och relaterade program (t.ex. System Center-program) och användas av hur många användare som helst.
+* Du kan köpa licenser för enheter separat från användarlicenser. Enhetslicenser behöver inte tilldelas till enheterna. Varje enhet som har åtkomst till och använder onlinetjänster och relaterad programvara (som System Center-program) måste ha en enhetslicens.
 * Om en enhet används av mer än en användare så krävs det en programvarulicens för var och en, eller så krävs det en programlicens för varje användare.
 
 ## <a name="understanding-the-type-of-licenses-you-have-purchased"></a>Förstå vilken typ av licenser som du har köpt

@@ -5,21 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/19/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e0eac3c1d6739ca70e485b0327e3257ba8d32d2b
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 3a31a43cfe45060891c30a7f159123a30b43173d
+ms.sourcegitcommit: 488be75cbee88455b33c68a3ec2acb864d461bf8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321844"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41910674"
 ---
 # <a name="smime-email-signing-and-encryption-in-intune"></a>S/MIME-signering och kryptering för e-post i Intune
+
+> [!IMPORTANT]
+> Vi har gjort några förbättringar av S/MIME-funktionen som beskrivs i den här artikeln. S/MIME-funktionen är därför tillfälligt borttagen i Intune. När funktionen lanseras tar vi bort det här meddelandet.
 
 S/MIME ger en extra nivå av säkerhet till dina e-postmeddelanden med hjälp av kryptering och dekryptering. Microsoft Intune kan använda S/MIME för att signera och kryptera e-postmeddelande till mobila enheter som kör iOS, Windows, Windows Phone, Android och macOS.
 

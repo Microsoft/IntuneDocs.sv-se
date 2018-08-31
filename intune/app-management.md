@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 08/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5aa03cad0785e0d9b3d64df97a3ba6d344f0c7b5
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 2c5203256a17065331f9d75c9315471e41508454
+ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906115"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40255390"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
@@ -38,23 +38,22 @@ Intune erbjuder en mängd funktioner som hjälper dig att få de appar som du be
 
 ## <a name="app-management-capabilities-by-platform"></a>Apphanteringsfunktioner efter plattform
 
-||||||
-|-|-|-|-|-|
-| |Android|iOS|Windows Phone 8.1|Windows 10|
-|Lägga till och tilldela appar till enheter och användare|Ja|Ja|Ja|Ja|
-|Tilldela appar till enheter som inte registrerats med Intune|Ja|Ja|Nej|Nej|
-|Använda principer för appkonfigurering för att styra appars startfunktion|Nej|Ja|Nej|Nej|
-|Använda principer för etablering av mobilappar för att förnya utgångna appar|Nej|Ja|Nej|Nej|
-|Skydda företagets data i appar med appskyddsprinciper|Ja|Ja|Nej|Nej<sup>1</sup>|
-|Ta bort endast företagsdata från en installerad app (selektiv rensning)|Ja|Ja|Ja|Ja|
-|Övervaka apptilldelningar|Ja|Ja|Ja|Ja|
-|Tilldela och spåra volyminköpta appar från en appbutik|Nej|Nej|Nej|Ja|
-|Obligatorisk installation av appar på enheter (obligatoriskt)<sup>2</sup>|Ja|Ja|Ja|Ja|
-|Valfri installation på enheter från Företagsportalen (tillgänglig installation)|Ja|Ja|Ja|Ja|
-|Installera genväg till en app på webben (webblänk)|Ja|Ja|Ja|Ja|
-|Verksamhetsspecifika appar|Ja|Ja|Nej|Ja|
-|Appar från en butik|Ja|Ja|Ja|Ja|
-|Uppdatera appar|Ja|Ja|Ja|Ja|
+|  | Android | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| Lägga till och tilldela appar till enheter och användare | Ja | Ja | Ja | Ja | Ja |
+| Tilldela appar till enheter som inte registrerats i Intune | Ja | Ja | Nej | Nej | Nej |
+| Använda principer för appkonfigurering som styr apparnas startfunktion | Nej | Ja | Nej | Nej | Nej |
+| Använda principer för etablering av mobilappar för att förnya utgångna appar | Nej | Ja | Nej | Nej | Nej |
+| Skydda företagets data i appar med appskyddsprinciper | Ja | Ja | Nej | Nej1 | Nej |
+| Ta bort endast företagsdata från installerade appar (selektiv rensning) | Ja | Ja | Nej | Ja | Ja |
+| Övervaka apptilldelningar | Ja | Ja | Ja | Ja | Ja |
+| Tilldela och spåra volyminköpta appar från en appbutik | Nej | Nej | Nej | Ja | Nej |
+| Obligatorisk installation av appar på enheter (obligatoriskt)2 | Ja | Ja | Ja | Ja | Ja |
+| Valfri installation på enheter från Företagsportalen (tillgänglig installation) | Ja | Ja | Ja | Ja | Ja |
+| Installera genvägar till appar på webben (webblänk) | Ja | Ja | Ja | Ja | Ja |
+| Verksamhetsspecifika appar | Ja | Ja | Ja | Ja | Nej |
+| Appar från en butik | Ja | Ja | Nej | Ja | Ja |
+| Uppdatera appar | Ja | Ja | Nej | Ja | Ja |
 
 <sup>1</sup> Överväg att använda [Windows informationsskydd](windows-information-protection-configure.md) för att skydda appar på enheter som kör Windows 10.
 
@@ -95,8 +94,8 @@ Mer information om det här avsnittet finns [Hantera appar](app-management.md).
 - **Applicenser**: Visa, tilldela och övervaka volyminköpta appar från appbutiker. Mer information finns i:
     - [Volyminköpsprogram för iOS-appar (VPP)](vpp-apps-ios.md).
     - [Volyminköpta appar från Microsoft Store för företag](windows-store-for-business.md).
-- **Identifierade appar**: Visa alla appar som har tilldelats av Intune och installerats på en enhet.
-- **Appinstallationsstatus**: Visa status för en apptilldelning som du skapat.
+- **Identifierade appar**: Visa alla appar som har tilldelats av Intune och installerats på en enhet. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Appinstallationsstatus**: Visa status för en apptilldelning som du skapat. Mer information finns i [Övervaka appinformation och tilldelningar med Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Användarstatus för appskydd** : Visa status för en skyddsprincip hos en användare som du väljer.
 - **Granskningsloggar**: Visa den Intune app-relaterade aktiviteten för alla IT-administratörer.
 

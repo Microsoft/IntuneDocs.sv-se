@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d147bc5ee22718ecce102cc549b29faa17a617e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 49fd06d4f0f75f1aeff434ce3b271284ec1a0340
+ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31025920"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40252752"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -28,6 +28,9 @@ ms.locfileid: "31025920"
 Det finns två typer av villkorlig åtkomst som används med Intune: enhetsbaserad villkorlig åtkomst och appbaserad villkorlig åtkomst. Du måste konfigurera de relaterade efterlevnadsprinciperna för att få en villkorlig åtkomst som följer standard i din organisation. Villkorlig åtkomst används vanligtvis för att tillåta eller blockera åtkomst till Exchange On-premises, styra åtkomsten till nätverket eller integrering med en Mobile Thread Defense-lösning.
 
 Nedanstående information visar hur du ska använda Intunes funktioner för mobil *enhets*efterlevnad och hantering av mobil*program* (MAM). 
+
+> [!NOTE]
+> Villkorlig åtkomst är en funktion i Azure Active Directory som ingår i Azure Active Directory Premium-licenser. Intune utökar den här funktionen genom att lägga till efterlevnad för mobila enheter och hantering av mobilappar i lösningen.
 
 ## <a name="device-based-conditional-access"></a>Enhetsbaserad villkorlig åtkomst
 
@@ -106,7 +109,7 @@ Användare kan tillåtas eller nekas åtkomst när de försöker att få åtkoms
 
 ### <a name="conditional-access-based-on-device-risk"></a>Villkorlig åtkomst baserad på enhetsrisk
 
-Intune har ingått partnerskap med Mobile Threat Defense-leverantörer för att tillhandahålla en säkerhetslösning som identifierar skadlig kod, trojaner och andra hot på mobila enheter.
+Intune samarbetar med Mobile Threat Defense-leverantörer om att tillhandahålla en säkerhetslösning som identifierar skadlig kod, trojaner och andra hot på mobila enheter.
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Så här fungerar Intune med Mobile Threat Defense-integrering
 
@@ -118,13 +121,13 @@ Intune och integrerat mobilhotsskydd spelar en viktig roll vid beslut om villkor
 
 ### <a name="conditional-access-for-windows-pcs"></a>Villkorlig åtkomst för Windows-datorer
 
-Villkorlig åtkomst för datorer tillhandahåller liknande funktioner för mobila enheter. Låt oss tala om hur du kan använda villkorlig åtkomst när du hanterar datorer med Intune.
+Villkorlig åtkomst för datorer har ungefär samma funktioner som för mobila enheter. Låt oss tala om hur du kan använda villkorlig åtkomst när du hanterar datorer med Intune.
 
 #### <a name="corporate-owned"></a>Företagsägd
 
--   **Lokalt domänanslutet AD:** Detta har varit det vanligaste distributionsalternativet för villkorlig åtkomst för organisationer, som är hyfsat nöjda med det faktum att de redan hanterar sina datorer via AD-grupprinciper och/eller med System Center Configuration Manager.
+-   **Lokalt domänanslutet AD:** Det här alternativet används ofta av organisationer som är relativt nöjda med sitt sätt att hantera datorer via AD-grupprinciper och/eller System Center Configuration Manager.
 
--   **Domänanslutet Azure AD och Intune-hantering:** Det här scenariot vanligtvis är avsett för CYOD (Choose Your Own Device) och roaming-scenarier för bärbara datorer där dessa enheter sällan är anslutna till företagets nätverk. Enheten ansluter till Azure AD och registreras i Intune, vilket tar bort alla beroenden på AD lokalt och på domänkontrollanter. Detta kan användas som villkor för villkorlig åtkomst vid anslutning till företagets resurser.
+-   **Domänanslutet Azure AD och Intune-hantering:** Det här scenariot är vanligtvis avsett för CYOD (Choose Your Own Device) och roaming-scenarier för bärbara datorer där dessa enheter sällan är anslutna till företagets nätverk. Enheten ansluter till Azure AD och registreras i Intune, vilket tar bort alla beroenden på AD lokalt och på domänkontrollanter. Detta kan användas som villkor för villkorlig åtkomst vid anslutning till företagets resurser.
 
 -   **Domänanslutet AD och System Center Configuration Manager:** Från och med den aktuella grenen tillhandahåller System Center Configuration Manager funktioner för villkorlig åtkomst som kan utvärdera specifika efterlevnadsvillkor, förutom att vara en domänansluten dator:
 

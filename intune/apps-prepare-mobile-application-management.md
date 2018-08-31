@@ -14,12 +14,12 @@ ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 351282634d6c6e087456e61e9fd967b70f9cf515
-ms.sourcegitcommit: c109ea6e9b7104630cd767aa27c5f7789286a906
+ms.openlocfilehash: 9d4dbdb3aa07020aa027dc1a4a1b2edcefefb4ca
+ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39450798"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40252749"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Förbered branschspecifika appar för appskyddsprinciper
 
@@ -28,7 +28,7 @@ ms.locfileid: "39450798"
 Du kan använda appskyddsprinciper i dina appar med hjälp av Intunes apphanteringsverktyg eller Intune App SDK. Det här avsnittet innehåller information om dessa metoder och när du ska använda dem.
 
 ## <a name="intune-app-wrapping-tool"></a>Intunes apphanteringsverktyg
-Apphanteringsverktyget används främst för interna affärsappar. Verktyget är ett kommandoradsprogram som skapar en omslutning runt en app, som sedan gör att appen kan hanteras av en Intune-appskyddsprincip.
+Apphanteringsverktyget används främst för **interna** affärsappar. Verktyget är ett kommandoradsprogram som skapar en omslutning runt en app, som sedan gör att appen kan hanteras av en Intune-appskyddsprincip. När du skyddar en app som tillhandahålls av en oberoende programvaruleverantör (ISV) är det viktigt att klargöra om ISV:n fortfarande kommer att stödja den omslutna appen.
 
 Du behöver inte källkoden för att använda verktyget, men du behöver autentiseringsuppgifter för signering. Mer information om autentiseringsuppgifter för signering finns i [Intune-bloggen](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentation om appomslutningsverktyget finns i [Appomslutningsverktyget för Android](app-wrapper-prepare-android.md) respektive [Appomslutningsverktyget för iOS](app-wrapper-prepare-ios.md).
 
@@ -48,7 +48,7 @@ Mer information om programhanteringsverktyget för appskyddsprinciper på enhete
 
 |**Apphanteringsverktyg** | **Xamarin** |**Cordova** |
 |------|----|----|
-|**iOS** |Nej – använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja|
+|**iOS** |Ja|Ja|
 |**Android**|Nej – använd [Xamarin-bindningar för Intune App SDK](app-sdk-xamarin.md).|Ja|
 
 ## <a name="intune-app-sdk"></a>Intune App SDK
