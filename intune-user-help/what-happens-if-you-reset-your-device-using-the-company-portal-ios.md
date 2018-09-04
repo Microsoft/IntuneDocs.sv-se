@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fc3396dee18968e9e91ca1a648d18ccc75d01b52
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 11c82861a7367b1552e9f505fc622e439bb86ad0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149550"
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Vad händer om du återställer en iOS-enhet med hjälp av företagsportalen?
 
@@ -40,4 +40,4 @@ När du använder företagsportalen för att återställa din iPhone eller iPad,
 
 -   Ditt företags-e-postkonto tas bort och alla meddelanden som inte har sparats raderas.
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

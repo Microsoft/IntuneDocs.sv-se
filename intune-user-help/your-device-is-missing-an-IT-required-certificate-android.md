@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: b12dcafa4ff7d45dd1d41c0311a2658b08acf12e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 19128e9de06239fb82266654fe038b4be9ce7d41
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149789"
 ---
 # <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Android-enheten saknar ett certifikat som företagets support kräver
 
@@ -37,9 +37,9 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
 ## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identifiera det saknade certifikatet i företags- eller skoldatorn
 
-1. Öppna Internet Explorer på en dator. Kontakta företagets support om du inte har en dator som kan användas för detta ändamål. Kontaktuppgifter till företagets support finns på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog).
+1. Öppna Internet Explorer på en dator. Kontakta företagets support om du inte har en dator som kan användas för detta ändamål. Kontaktuppgifter till företagets support finns på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).
 
-2. Öppna [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) och logga in med autentiseringsuppgifterna för ditt arbets- eller skolkonto.
+2. Öppna [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980) och logga in med autentiseringsuppgifterna för ditt arbets- eller skolkonto.
 
 3. Längst till höger i adressfältet i webbläsaren väljer du den symbol som ser ut som ett hänglås, se följande skärmbild.
 
@@ -71,4 +71,4 @@ Det finns två steg som du behöver utföra för att lösa problemet och hämta 
 
 7. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Kontakta företagets support om du behöver hjälp.
 
-Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som företagets support måste hjälpa dig att installera. Kontakta företagets support för att få hjälp med den kontaktinformation som finns på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog).
+Om du ser samma meddelande om att ett certifikat saknas som visades tidigare, och du har följt metoden, finns det troligtvis fortfarande ett annat certifikat som företagets support måste hjälpa dig att installera. Kontakta företagets support för att få hjälp med den kontaktinformation som finns på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980).

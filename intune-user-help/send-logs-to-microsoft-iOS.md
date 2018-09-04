@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a861a491d100fa7f7766d6f638c86f866b336369
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 334f2d14a2cf4fb79310b1a2b4e1026d42754e35
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754628"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148615"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Skicka loggar till företagsportalens utvecklare för iOS-enheter
 
@@ -35,4 +35,4 @@ Om du råkar ut för detta, så behöver företagsportalsteamet viss information
 3.  Tryck och håll ned, och dra sedan de små blå punkterna uppåt och nedåt tills all text i rapporten har markerats. Tryck på __Kopiera__ på snabbmenyn.
 4.  Öppna din e-postapp och klistra in innehållet i brödtexten i e-postmeddelandets brödtext. Skicka e-postmeddelandet till <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

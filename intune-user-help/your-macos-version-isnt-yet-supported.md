@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ed5acd3e5af2c26a8b13872d4663352886f4bc1f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 202a7cc118a4eb8a2e15c1b0de32c27450d064db
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149437"
 ---
 # <a name="your-macos-devices-operating-system-version-isnt-yet-supported"></a>Enhetens version av macOS-operativsystemet stöds inte än
 
 Med den snabba teknikutvecklingstakten kan enheten faktiskt ligga före vad företagets support har haft möjlighet att testa. Det är möjligt att den senaste versionen av macOS inte fungerar med några av ditt företags andra verktyg.
 
-Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

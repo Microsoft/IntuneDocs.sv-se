@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7e5653d436dd8306ba828fd5c4244e88b4c58272
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 95c13bc48ef0b524de43b5e0944e10bd20c36bd9
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31030830"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149148"
 ---
 # <a name="you-need-to-update-your-android-device"></a>Du måste uppdatera Android-enheten
 
@@ -30,4 +30,4 @@ ms.locfileid: "31030830"
 
 Uppdatera Android-enheten genom att trycka på **Inställningar** > **Om telefonen**. I avsnittet __Inställningar__ trycker du på __Sök efter uppdateringar__ och installera den tillgängliga uppdateringen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

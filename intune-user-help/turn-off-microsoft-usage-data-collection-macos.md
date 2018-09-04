@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 64a3a4710b8841dcc80c159d0622735fdd862e7a
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 604c08e771548b9cd071ae87ba9cdcb3f9bb2d3a
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147476"
 ---
 # <a name="how-to-turn-off-microsoft-data-collection"></a>Så här stänger du av Microsofts datainsamling
 
@@ -30,4 +30,4 @@ Microsoft samlar automatiskt in vissa data om våra produkter och tjänster. Det
 
 Om du vill så kan du inaktivera insamlingen av dessa data på din macOS-enhet genom att välja **Företagsportal**-menyn i företagsportalappen. Öppna **Inställningar** och avmarkera rutan **Tillåt att Microsoft samlar in information** under **Skicka användningsdata till Microsoft**.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

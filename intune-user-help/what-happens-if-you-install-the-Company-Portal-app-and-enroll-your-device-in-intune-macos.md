@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5494d945c31ea0d99e5f6ef74258c73dae8bdf9f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 543cdc84356c0019653c042bc63f5017b9d4c0f0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031710"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148015"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-macos-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din macOS-enhet i Intune?
 
@@ -64,4 +64,4 @@ När enheten har registrerats kan företagets support:
 
 -   Aktivera eller inaktivera automatisk filsynkronisering när enheten är i roamingläge. Om automatisk filsynkronisering tillåts kan roamingavgifter tillkomma.
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: cea43f2bf3b13bf0463e1dedd6c20a1587336d5b
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: dfb70327737bcfe9e6bd2ded964a07a00f9d7610
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755002"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148957"
 ---
 # <a name="how-to-protect-your-android-device-using-encryption"></a>Skydda en Android-enhet med kryptering
 
@@ -65,4 +65,4 @@ Om du avregistrerar telefonen förblir den krypterad.
 
     6. Öppna företagsportalappen, välj din enhet och tryck på **Kontrollera efterlevnad**.
 
-Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du fortfarande hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

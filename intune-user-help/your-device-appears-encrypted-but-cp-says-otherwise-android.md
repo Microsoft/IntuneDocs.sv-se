@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c26a3bbb168904fe39c6c0ff7dd0698eece56596
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: de8fb99a201590c9ea68e5a2ec6714de9ae0d0f4
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146885"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Din Android-enhet verkar vara krypterad, men inte enligt företagsportalen
 
@@ -49,7 +49,7 @@ Med vissa enheter kan du välja mellan att kryptera hela enheten eller bara det 
 
 ### <a name="downgrade-your-version-of-android"></a>Nedgradera din version av Android
 
-Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Om enheten erbjuder möjligheten att nedgradera till Android 6.0+ ska du göra det. Det finns en risk för dataförlust om du nedgraderar din enhet. I annat fall rekommenderar vi att du kontaktar företagets support för att lösa problemet. Kontaktinformation till företagets support finns på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 ## <a name="specific-manufacturer-issues"></a>Problem med vissa tillverkare
 

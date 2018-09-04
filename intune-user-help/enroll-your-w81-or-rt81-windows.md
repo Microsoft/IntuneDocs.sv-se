@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1f2c81803af12d99bae44c21118c4d94221f78fa
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 425c3a829975e8a4a42b7f9e0302701666124aee
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017996"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146564"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Så här registrerar din Windows 8.1- eller Windows RT 8.1-enhet i Intune
 
@@ -65,4 +65,4 @@ Vi rekommenderar också att du installerar appen Företagsportalen som gör att 
 
 4.  Tryck på antingen **Installera** eller på **Ledigt**. Vilket alternativ som visas beror på hur ditt företag har konfigurerat appen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

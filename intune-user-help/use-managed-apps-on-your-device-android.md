@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ebb79bc3405e9ea0dd38c24b86a4c9020760c895
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1c57c8bfa9f2727ec201acb506f5a41327fddc75
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146661"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Använda hanterade appar på Android-enheten
 
@@ -70,4 +70,4 @@ Några vanliga appar som IT-avdelningen kan hantera:
 
 -   Microsoft Word, Excel och PowerPoint
 
-Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

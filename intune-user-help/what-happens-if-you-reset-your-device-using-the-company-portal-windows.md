@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7f10e178e88f871c297ed8bbac7ccbe9a802d0b
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: e569b69f319cb3cf2868d86db2032b93d9bd8ab8
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149131"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Vad händer om du återställer en Windows-enhet med hjälp av företagsportalen?
 
@@ -34,4 +34,4 @@ När du använder företagsportalappen eller [företagsportalens webbplats](rese
 |Enheten har enbart åtkomst till företagets e-post|**Windows Phone 8.1**<br />Enheten visas inte längre på företagsportalen och ditt företags-e-postkonto och osparad e-post tas bort.<br /><br />**Windows 7 eller Windows Vista**<br />Det går inte att återställa en dator med Windows 7 eller tidigare som bara används för e-post.<br /><br />**Windows 8.1 och Windows 8**<br />Enheten visas inte längre på företagsportalen och ditt företags-e-postkonto och osparad e-post tas bort.|
 |Stationära och bärbara datorer|**Windows 8.1 och Windows 8**<br />Det går inte att återställa en dator med Windows 8 eller Windows 8.1 såvida den inte enbart används för e-post.<br /><br />**Windows 7 eller Windows Vista**<br />Det går inte att återställa en dator med Windows 7 eller tidigare.|
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

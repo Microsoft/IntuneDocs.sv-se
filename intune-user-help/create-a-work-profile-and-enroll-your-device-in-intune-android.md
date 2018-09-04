@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a7ab6efccf9fa00119bc2052d16b4ad8fd5b55d8
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: accbab7acd4638958e6c05a5d5e969eea12cf355
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30753931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148170"
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Skapa en arbetsprofil och registrera din enhet i Intune
 
@@ -82,4 +82,4 @@ För att skapa en arbetsprofil:
 
     ![Appsida på Play Store for Work](./media/andr-afw-tap-work-play-store-icon.png)
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

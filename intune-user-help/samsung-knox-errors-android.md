@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.openlocfilehash: 1ce260b010658ade6c78361b980ca928a992d113
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 235356e88dc2ba25b789ebe262c1ae9b32840793
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150893"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Åtgärda vanliga problem med din Samsung Knox-enhet
 
@@ -51,4 +51,4 @@ Meddelandet du ser kan se ut så här:
 |---|---|
 |**Samsung Knox-aktiveringsfel** – Det gick inte att aktivera Samsung KNOX-licensen. Det kan bero på att energisparläget är aktiverat. Inaktivera energisparläget i enhetsinställningarna och försök igen. |Enheten har inte rätt energiinställningar för att arbeta med dina företagsresurser. Lär dig mer om att [konfigurera energisparläget](power-saving-mode-android.md).|
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

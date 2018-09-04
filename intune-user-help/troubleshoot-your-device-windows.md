@@ -16,16 +16,16 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
-ms.openlocfilehash: 727889a2e3946372414151593e8433315e82e76b
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 269ee4f0d3a82fffb75b507240950af73e149847
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751687"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149654"
 ---
 # <a name="fix-common-issues-with-your-windows-device"></a>Åtgärda vanliga problem med en Windows-enhet
 
-Ibland kan problem uppstå med en Windows-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Ibland kan problem uppstå med en Windows-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 - [Det går inte att registrera min Windows 10-enhet](troubleshoot-your-windows-10-device-windows.md)
 - [Jag måste uppdatera min Windows-enhet](you-need-to-update-your-windows-device.md)

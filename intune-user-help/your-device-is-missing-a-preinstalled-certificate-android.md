@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50864d3af4383a95c037868a9f9b9a61e1eb8172
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d51b141b09090119f7c9711ffd56d6b382f6e3dc
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019321"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147959"
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Din Androidenhet saknar ett certifikat som normalt är installerat på telefonen
 
@@ -44,9 +44,9 @@ Du kan åtgärda det här problemet genom att hämta nödvändiga certifikat fr�
 
 5. Stäng din webbläsare och företagsportalappen.
 
-6. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Om du fortfarande inte kan använda företagsportalappen ska du kontakta företagets support med hjälp av informationen på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) för ytterligare instruktioner.
+6. Öppna företagsportalappen igen. Du bör nu kunna logga in på företagsportalappen. Om du fortfarande inte kan använda företagsportalappen ska du kontakta företagets support med hjälp av informationen på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980) för ytterligare instruktioner.
 
 >[!NOTE]
 > Om installationen av det här certifikatet inte löser problemet och du ser meddelandet "certifikat saknas" måste du vidta ytterligare åtgärder för att[installera det saknade certifikatet](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

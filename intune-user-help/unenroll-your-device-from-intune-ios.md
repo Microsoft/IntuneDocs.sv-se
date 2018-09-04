@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0a90cace32edb33293ba0b0b89d272465ea32418
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: ba0f2675bfd65f60f6f16d6be738cdc1baa3e7e5
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34547496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148805"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Ta bort din iOS-enhet från Intune
 
@@ -74,4 +74,4 @@ Det finns tre platser där företagsportalen lagrar lokala data på enheten.
 -   **Nyckelring**: Enheten lagrar dina lösenord och annan information som används för inloggning i nyckelringen. Microsoft-appar delar din inloggningsinformation i Microsoft-utvecklade appar som du har på enheten, till exempel Microsoft Outlook och Microsoft Authenticator. Precis som i Apple-analysen kan den här informationen bara tas bort genom att återställa enheten till fabriksinställningarna. All personlig information raderas på enheten. Gör detta genom att öppna **Inställningar** > **Allmänt** > **Återställ** > **Radera allt innehåll och alla inställningar**.
 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

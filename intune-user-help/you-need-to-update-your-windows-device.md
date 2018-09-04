@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ab5e424469f0fd83e063db5361fa843b2c6f1e76
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1f9bb0fc434b1cba2d9b48f6f8cef4cf6b06e932
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147326"
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Du måste uppdatera Windows-enheten
 
@@ -37,4 +37,4 @@ För datorer som kör Windows söker du efter **operativsystem** och följer upp
 
 För Windows 10 och Windows 8.1 skriver du __Windows-version__ i __sökfältet__. Under __Kan jag hjälpa till?__ väljer du __windows-version__. Versionsnumret visas. Det här numret ser ut ungefär som __10.0.14393.447__.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

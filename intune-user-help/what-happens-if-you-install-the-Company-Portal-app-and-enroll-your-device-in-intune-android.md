@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50e78b3e7986526bc9da4e965133d62cfc73273f
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 6167dbfd497ad2cfddecae2a25516b3d1bdd2c74
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146904"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-android-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Android-enhet i Intune?
 
@@ -58,4 +58,4 @@ När din enhet har lagts till på företagsportalen kommer den ungefär var ått
 
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar. (Dessa uppdateringar har ingen personlig information.)
 
-Behöver du hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

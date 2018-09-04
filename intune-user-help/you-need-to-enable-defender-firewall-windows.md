@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 57342767b83c965c2d22ec68cd74132362b5b40e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c918b192d49c12735701382418e594b3ee4386f6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150607"
 ---
 # <a name="turn-on-your-windows-defender-firewall"></a>Aktivera Windows Defender-brandväggen
 
@@ -32,4 +32,4 @@ Ditt arbete eller din skola vill se till att enheter som kommer åt deras resurs
 2. Öppna **System och säkerhet** > **Windows Defender-brandväggen**.
 3. Välj **Anpassa inställningar** > **Aktivera eller inaktivera Windows-brandväggen** för domännätverk, privata och offentliga nätverk.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

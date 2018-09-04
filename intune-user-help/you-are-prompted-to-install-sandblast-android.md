@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: e453cf1af0d065a367d636c3e6cc8e8ddd79cfda
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: f667564443115ba350cf244009d3509fe8d760d0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327814"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148366"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Du måste installera SandBlast Mobile Protect på Android-enheten
 
@@ -58,4 +58,4 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan du försöka installera SandBlast Mobile Protect [manuellt från Play Store](https://play.google.com/store/apps/details?id=com.lacoon.security.fox).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

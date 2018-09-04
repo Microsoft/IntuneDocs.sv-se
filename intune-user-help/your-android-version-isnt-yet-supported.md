@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4be9a33041e1717fec0b8a4e764798d719ff4499
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 7172d165b8ee425a807a0926a193a7427862a526
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149104"
 ---
 # <a name="your-android-devices-operating-system-version-isnt-yet-supported"></a>Android-enhetens operativsystemversion stöds inte än
 
 Med den snabba teknikutvecklingstakten kan enheten faktiskt ligga före vad företagets support har haft möjlighet att testa. Det är möjligt att den senaste versionen av Android inte fungerar med några av ditt företags andra verktyg.
 
-Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Du måste kontakta företagets support för att lösa det här problemet. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 94440987583651925e2aa3c1cceb7ba1206ed8bc
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: a52c72c82e54643f5a348a17d3f7b1e0cc8b9d71
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754000"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146332"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-ios-device"></a>Du måste installera SandBlast Mobile Protect på iOS-enheten
 
@@ -46,4 +46,4 @@ Om SandBlast Mobile Protect hittar ett säkerhetshot på enheten visas instrukti
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan du försöka installera SandBlast Mobile Protect [manuellt från App Store](https://itunes.apple.com/app/sandblast-mobile-protect/id1006390797).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

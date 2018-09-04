@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4c8d6ba4f6f8a9885b0000e0d7c60ba0594504b5
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: ffdf1d524dafa280a698ff25b5118394116cd72a
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30750871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148839"
 ---
 # <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Gränsen för antalet enheter du kan registrera har nåtts
 
@@ -33,4 +33,4 @@ Alla företag anger en gräns för antalet enheter som varje användare kan anv�
 2. Ta bort en av dina enheter från [MyApps-portalen](https://myapps.microsoft.com) och välj **Profil** i det övre högra hörnet på sidan. 
 3. Kontakta företagets supportavdelning för att se om det går att öka antalet enheter som du har rätt att registrera. 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

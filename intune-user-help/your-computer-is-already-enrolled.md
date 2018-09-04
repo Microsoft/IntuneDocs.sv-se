@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fac158e7c0df5753574b092be24d9f8ee74eedea
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c23d035b37cec47d187c65b518c5a7ff18d16caa
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146352"
 ---
 # <a name="your-computer-is-already-enrolled"></a>Din dator är redan registrerad.
 
@@ -38,4 +38,4 @@ Så här länkar du datorn:
 
 Om du vill avregistrera enheten följer du instruktionerna för den typ av enhet som du har: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) eller [Windows](unenroll-your-device-from-intune-windows.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

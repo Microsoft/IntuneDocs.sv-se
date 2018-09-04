@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f7a599ad67d645bb5b84785d42deb40d0fda8cd5
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 50f2304ba5fc174707a007b4c4d791cf2db1c656
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31017588"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147926"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Vad händer om Android-enheten avregistreras från Intune?
 
@@ -42,4 +42,4 @@ Om enheten har konfigurerats enbart för att hämta företagsrelaterad e-post oc
 
 Mer information om hur du avregistrerar en enhet finns i [Avregistrera enheten från Intune via företagsportalappen](unenroll-your-device-from-intune-android.md).
 
-Behöver du hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.
+Behöver du hjälp? Kontakta företagets support (du hittar kontaktinformation på [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980)) eller skriv till <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android-teamet</a>.

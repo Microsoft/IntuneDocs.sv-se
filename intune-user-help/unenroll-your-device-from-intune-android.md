@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ec3c0a1c8ce4e04f4d23fb01e7c2525d8f2eed5b
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 683b5ec7b07d7c270ea30ac438e7fc839b13d5fc
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018370"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150352"
 ---
 # <a name="how-to-remove-your-android-device-from-intune"></a>Så här tar du bort en Android-enhet från Intune
 
@@ -49,4 +49,4 @@ Så här tar du bort alla data som företagsportalappen för Android lagrar på 
 -   Rensa appdata i Program -> Klicka på appen -> knappen ”Rensa data”
 -   Ta bort mappen \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

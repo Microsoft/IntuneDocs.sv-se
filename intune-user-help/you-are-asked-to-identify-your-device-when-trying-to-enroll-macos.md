@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ec853bce004c70b1a833218f2ef9f4c14d6bb2b7
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1cf4b5eb051775a289e727ec6bc03c5af8734b6f
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31032088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147256"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Du måste identifiera din enhet när du försöker registrera dig
 
@@ -32,4 +32,4 @@ Om du försöker registrera en macOS-enhet i Intune och en skärm visas där du 
 2. Klicka på **Fortsätt.**
 3. Ange de sista fyra tecknen i enhetens serienummer så att Intune kan verifiera att din enhet är registrerad. Information om hur du hittar serienumret finns i [Hur hittar jag serienumret på enheten?](how-do-i-find-the-serial-number-on-my-device-macos.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

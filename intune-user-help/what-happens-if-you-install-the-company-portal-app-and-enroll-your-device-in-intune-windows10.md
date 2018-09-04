@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a268602833d9164d33a8d86c1b4c6d4485e2abe8
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d649a05527f8c273c71b9e2b791d5959a937e43b
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021361"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148903"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-10-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows 10-enhet i Intune?
 
@@ -54,4 +54,4 @@ När du lägger till en dator:
 
 -   Företagets support kan genomdriva principer på datorn. Du kan till exempel uppmanas att ange ett lösenord eller en PIN-kod på datorn. Företagets support kan också begränsa hur många gånger du kan ange ett felaktigt lösenord och kan låsa dig ute från datorn eller ta bort alla data från datorns hårddisk om du gör för många försök.
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

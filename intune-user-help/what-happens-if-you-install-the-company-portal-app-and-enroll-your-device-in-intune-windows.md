@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 152519d9aa58688538d25f0fb43c0411d4aa6e38
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: bfd2b742d9f954f2e644ca03e398687d9f731b78
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146983"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Vad händer om du installerar företagsportalappen och registrerar din Windows-enhet i Intune?
 
@@ -75,4 +75,4 @@ Ungefär var åttonde timme kommer registrerade enheter att:
 
 -   Skicka eventuella uppdateringar av förteckningar över företagsappar.
 
-Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du har frågor. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

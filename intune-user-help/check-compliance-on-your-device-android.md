@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 51ef4e1e89c54587535f3ede7e8f406f54763bc9
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 88caf56a2483690f9130818191b04f412a7ed641
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015072"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146845"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Kontrollera efterlevnad på din Android-enhet
 
@@ -32,4 +32,4 @@ Du kanske inte kan komma åt resurser i ditt företag eller din skola om din enh
 
 2. Tryck på **Kontrollera efterlevnad**.
 
-Om du inte kan återställa den förlorade eller stulna enheten ber du företagets support att återställa den åt dig. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Om du inte kan återställa den förlorade eller stulna enheten ber du företagets support att återställa den åt dig. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

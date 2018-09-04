@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 99431a9720ab0f97f869ea12496912391cce2179
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 32a6ff69bc848bbd0a2174ab4b60de905498d6fa
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31019729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150094"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Du måste aktivera Säker Start
 
@@ -32,4 +32,4 @@ Att aktivera Säker start är en avancerad uppgift. Om du använder en mobil enh
 
 Om du använder en dator kan du kontakta företagets support eller läsa avsnittet “Återaktivera Säker start” på sidan [Inaktivera Säker start](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) om du vill aktivera Säker start på egen hand.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

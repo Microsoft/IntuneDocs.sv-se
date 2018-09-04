@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 57c1dcfb591ceea1b85292a416d037c0b4073645
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 1e9b9908fcc48e9137c07f9a5397661d66e5be95
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146747"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Skicka loggar till företagets support från inställningsappen för Windows 10
 
@@ -38,4 +38,4 @@ Om du får ett felmeddelande när du använder en Windows 10-enhet som hanteras 
 
 Du kan också behöva skicka [loggar från företagsportalappen](send-logs-to-your-it-admin-cp-windows.md) för att företagets support ska få mer hjälp med att felsöka eventuella problem. 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

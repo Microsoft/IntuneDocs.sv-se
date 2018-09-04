@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: dd529c793ca1c97a77eef973c146eeea9c2e8594
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: fdafb646f7b6c3d8910bf018071a72af49a70249
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015837"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147148"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Skydda en Windows-enhet med kryptering
 
@@ -40,4 +40,4 @@ Om du har en stationär enhet beskriver de följande anvisningarna nedan hur du 
 
 2.  Välj **Aktivera BitLocker** och följ anvisningarna för att kryptera var och en av dina enheter.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Du hittar kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Du hittar kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

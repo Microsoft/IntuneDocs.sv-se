@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 47cb816f0a032d8e01fcdd7ff025d36ba1354f3d
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: cab09c0a127c8d3bab2a135e1bf46f6beb478d22
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30754985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150777"
 ---
 # <a name="install-zimperium-zips-on-your-ios-device"></a>Installera Zimperium zIPS på iOS-enheten
 
@@ -46,4 +46,4 @@ Om Zimperium zIPS hittar ett säkerhetshot på enheten visas instruktioner om hu
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan du försöka installera Zimperium zIPS [manuellt från App Store](https://itunes.apple.com/app/zimperium-zips/id1030924459).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ecb0729a2c6911fa15dd99ad4abe990859c912ad
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150674"
 ---
 # <a name="use-managed-devices-to-get-work-done"></a>Använda hanterade enheter för att få arbetet gjort
 Microsoft Intune är en del av programvaran som gör att organisationer kan hantera enheter (t.ex. smarttelefoner, surfplattor och datorer), appar och andra företagsresurser som t.ex. e-post. De anställda får åtkomst till arbetsinformation från valfri plats på nästan alla enheter, samtidigt som man skyddar företagets information.
@@ -36,7 +36,7 @@ Företagets support kan se information som är relevant för arbetet, men inte d
 Du kan skaffa företagsportalen på två olika sätt:
 
 - Genom att installera företagsportalappen på din enhet. Du kommer normalt till företagsportalappen genom att gå till appbutiken på enheten, men företagets support kan även installera företagsportalappen åt dig.
-- Genom att gå till [företagsportalwebbplatsen](https://portal.manage.microsoft.com#HelpDeskDialog) som företagets support har konfigurerat.
+- Genom att gå till [företagsportalwebbplatsen](https://go.microsoft.com/fwlink/?linkid=2010980) som företagets support har konfigurerat.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Vad är skillnaden mellan appen och webbplatsen?
 Det finns några mindre skillnader mellan företagsportalappen och företagsportalens webbplats, men du kan utföra likartade uppgifter på båda två. Några uppgifter som du kan utföra är:
@@ -73,7 +73,7 @@ Om du vill ta reda på mer om vad företagets support kan och inte kan se på di
     -   Windows 10 Mobil
     -   Windows 10 Desktop
     -   Windows Phone 8.1
-    -   Windows 8.1
+    -   Windows 8,1
 
 ## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Kan du ta bort en dator eller enhet från företagsportalen?
 Du kan ta bort eller återställa en dator eller enhet på företagsportalen. Det är skillnad mellan att **ta bort** och att **återställa**.
@@ -102,4 +102,4 @@ Vi rekommenderar att du först försöker se om du kan lösa problemet själv. V
 - [Åtgärda vanliga problem med din macOS-enhet](troubleshoot-your-device-macos.md)
 - [Åtgärda vanliga problem med din Windows-enhet](troubleshoot-your-device-windows.md)
 
-Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till företagets support. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Du kan skicka en kommentar nedan för att be om hjälp. Men eftersom varje organisation har olika krav kanske vi inte alltid har möjlighet att svara på dina frågor. Det snabbaste, och troligtvis mest relevanta, svaret får du om du vänder dig till företagets support. Kontaktinformationen ska finnas på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

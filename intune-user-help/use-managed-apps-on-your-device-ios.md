@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 506b2e50333be9f284b7709fc2a57693330ff7a4
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0f8139d5a17d1a6594354994fda6c0eef64a22f3
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147510"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Använda hanterade appar på iOS-enheten
 
@@ -64,4 +64,4 @@ Följande är några exempel på vad företagets support kan hantera i en app oc
 
 -   Krav på datakryptering
 
-Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Kontakta företagets support om du vill ha mer information om hanterade appar på enheten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

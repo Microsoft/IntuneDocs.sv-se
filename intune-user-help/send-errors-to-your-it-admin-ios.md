@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 449413a87c79645240bc18be41fb6e88d4c071f8
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: ddf075828ca9b9a7d8030a88a2d7f58efbc0e980
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327712"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150130"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Skicka fel till företagets support vid problem med din iOS-enhet
 Ibland kan det uppstå ett fel när du använder företagsportalappen på din iOS-enhet. När detta inträffar kan du skicka information om felet till supporten för ditt företag via e-post. Dessa uppgifter ger den information som krävs för att felsöka problemet åt dig.
@@ -37,4 +37,4 @@ Om det uppstår fel på din iOS-enhet när du använder företagsportalappen kan
 
 -   Skaka enheten när du använder företagsportalappen och tryck på **Skicka diagnostikrapport** när diagnostikmeddelandet visas. Om meddelandet inte visas när du skakar enheten öppnar du **Inställningar** > **Företagsportal** och kontrollerar att alternativet **Skakning** är valt.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

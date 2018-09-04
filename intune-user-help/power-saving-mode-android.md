@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 663da92e11befeae1f65467e887870a52640cbeb
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 33b6199c25e9e36b65dfe2ca819640fa614e68b6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148231"
 ---
 # <a name="outlook-wont-sync-managed-email-when-battery-optimization-for-android-is-turned-on"></a>Outlook synkroniserar inte hanterad e-post när batterioptimering för Android är aktiverat
 
 > [!IMPORTANT]
-> Det här problemet dokumenteras här eftersom vi har fått in fler och fler kundrapporter om det. Om problemet kvarstår efter att du har utfört de här stegen kontaktar du [företagets support](https://portal.manage.microsoft.com#HelpDeskDialog) för ytterligare hjälp.
+> Det här problemet dokumenteras här eftersom vi har fått in fler och fler kundrapporter om det. Om problemet kvarstår efter att du har utfört de här stegen kontaktar du [företagets support](https://go.microsoft.com/fwlink/?linkid=2010980) för ytterligare hjälp.
 
 Genom att registrera din enhet i Intune får du åtkomst till företagsresurser. En av de vanligaste resurserna är åtkomst till e-post. Ett problem som vi har observerat med åtkomsten till e-post via Outlook för Android-enheter är när batterioptimering är aktiverat. Batterioptimering kan aktiveras automatiskt så att din enhet är strömförsörjd så länge som möjligt. Batterioptimering kan i viss mån hjälpa dig på detta sätt eftersom funktionen försöker stoppa automatiska e-posthämtningar.
 
@@ -75,4 +75,4 @@ Ett annat sätt att hitta dessa inställningar är genom att söka i systeminst�
 2. Tap **Battery** > **Battery optimization**.
 3. Select the Company Portal and Outlook apps, then select **Don’t optimize**. Tap **Done**.-->
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

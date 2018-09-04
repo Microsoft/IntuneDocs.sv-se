@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2bc3b8231379b56d257c9c4994a554da3533fb07
-ms.sourcegitcommit: b0ad42fe5b5627e5555b2f9e5bb81bb44dbff078
+ms.openlocfilehash: 9060c2e573003e480319dba6715cb14a2a13e906
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33915836"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150014"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Byt namn på enheten från företagsportalappen för Windows
 Byt namn på en enhet så att den blir lättare att känna igen från andra enheter. Med företagsportalappen för Windows kan du byta namn på anslutna Windows-, iOS- och Android-enheter. 
@@ -33,4 +33,4 @@ För att byta namn på en enhet:
 3. I övre högra hörnet på sidan väljer du ikonen **Byt namn**. 
 4. Skriv det nya namnet och klicka på **Byt namn**. Du kommer att se det uppdaterade enhetsnamnet direkt i appen. 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

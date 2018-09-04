@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 980b7d9f221fd1a1ae12f27743757d5b3bd53492
-ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
+ms.openlocfilehash: 6090ea3509c1f355c21e02ae155bdb9035f6c508
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39481197"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148786"
 ---
 # <a name="remove-your-windows-device-from-intune-management"></a>Ta bort en Windows-enhet från Intune-hanteringen
 
@@ -82,4 +82,4 @@ Om du vill ta bort lagrade loggar och cacheminnet utför du något av följande 
 
 * Återställ företagsportalappen. Öppna appen **Inställningar** och välj > **Appar** > **Företagsportal** > **Avancerade alternativ** > **Återställ**. 
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

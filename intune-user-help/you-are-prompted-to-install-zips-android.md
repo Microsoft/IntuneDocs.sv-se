@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: bf6b674750eeaf857fdb7595963d399662893c4d
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: be4b91eaaa2187678fb4325a93dc561df08225b7
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30753965"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150403"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Installera Zimperium zIPS på Android-enheten
 
@@ -58,4 +58,4 @@ Prova felsökningsstegen i slutet av det här avsnittet om du har problem med in
 
 Installationer kan ibland misslyckas på grund av tekniska problem bortom din kontroll. Om detta inträffar kan du försöka installera Zimperium zIPS [manuellt från Play Store](https://play.google.com/store/apps/details?id=com.zimperium.zips).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

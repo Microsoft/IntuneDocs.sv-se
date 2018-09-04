@@ -17,19 +17,19 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a2c5c60f22aca6a9c989281ef2c5cc9e0c66911
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: 89be04405f76c290c252c382fbee207176e7180d
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150315"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Skicka loggar till företagets support via en USB-kabel
 
 Om du får ett felmeddelande när du använder företagsportalappen på en Android-enhet kan du hjälpa företagets support att felsöka problemet genom att skicka information via e-post. Den här informationen sparas på din enhet i ett specialdokument som kallas _diagnostiklogg_.
 
 > [!Note]
-> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog) eller i företagsportalappen.
+> Innan du börjar ska du kontrollera att du har e-postadressen till företagets support redo. Du hittar den på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980) eller i företagsportalappen.
 
 1. Tryck på **Skicka information** på felskärmen. När ett meddelande visas som frågar vilken metod du vill använda för att skicka loggarna väljer du det alternativ som sparar filerna på din enhet.
 
@@ -39,4 +39,4 @@ Om du får ett felmeddelande när du använder företagsportalappen på en Andro
 
 4. Välj filerna och bifoga dem som bilaga till ett e-postmeddelande. Skicka detta e-postmeddelande till företagets support.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

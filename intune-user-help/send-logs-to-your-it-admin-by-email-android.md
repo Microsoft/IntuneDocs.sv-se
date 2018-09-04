@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f924ece24fe38346c1abab8964270e4abe5abf76
-ms.sourcegitcommit: 4c06fa8e9932575e546ef2e880d96e96a0618673
+ms.openlocfilehash: efe251a9a347a179e56d496d761b0ea7f28ab66f
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327695"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149608"
 ---
 # <a name="email-logs-to-your-company-support"></a>Skicka loggar till företagets support via e-post
 
@@ -45,4 +45,4 @@ Skicka loggar till företagets support via e-post:
 3.  Tryck på alternativet för att **skicka e-post och överföra loggar**.
 4.  När uppladdningen är klar går du till din e-postapp. Ett e-postmeddelande öppnas med incidentens ID förifylld i ämnesfältet. Beskriv problemet som du upplevde i e-postmeddelandets brödtext.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

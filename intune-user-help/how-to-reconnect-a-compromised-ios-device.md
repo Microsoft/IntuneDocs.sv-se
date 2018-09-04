@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 434ed86a92956944a2c432f9f9d9c8822f043559
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4d33cadab2c9ae7b44c72eff66f761c842105fc6
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31014647"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148547"
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Återansluta en komprometterad iOS-enhet
 
 Företagets support har upptäckt att du använder en jailbrokad enhet. "Jailbrokad" innebär att enheten har ändrats för att ge obegränsad åtkomst till vissa nödvändiga filer, vilket kan påverka säkerheten och utgöra ett hot mot företagets resurser. 
 
-När det här händer, kan enheten inte längre komma åt företagets resurser och du behöver förmodligen återställa enheten till fabriksinställningarna. Vi rekommenderar att du kontaktar din företagssupport för hjälp. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+När det här händer, kan enheten inte längre komma åt företagets resurser och du behöver förmodligen återställa enheten till fabriksinställningarna. Vi rekommenderar att du kontaktar din företagssupport för hjälp. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

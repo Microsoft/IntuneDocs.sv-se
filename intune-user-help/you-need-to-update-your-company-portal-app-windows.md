@@ -17,15 +17,15 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7190049dbc204d3cdcc4b9dcfbe23e866980ce37
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 31d5a0879f3e3c3933e6b0a8f4e9ebf7e6056419
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147864"
 ---
 # <a name="your-company-portal-app-for-windows-is-out-of-date"></a>Företagsportalappen för Windows är inaktuell
 
 Du måste uppdatera företagsportalappen för att kunna fortsätta använda företagets e-post, kontakter och dokument m.m. Lös problemet genom att öppna **Microsoft Store** och installera den nya versionen av **företagsportalappen**.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

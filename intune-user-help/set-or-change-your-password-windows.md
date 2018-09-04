@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: fb2f225d47d1589e7bccbafc4a23f3cecec12897
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 2bd36a0327472f24a3a99b7975e736c9fa5385eb
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31018778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149071"
 ---
 # <a name="make-your-device-safer-with-the-right-password"></a>Gör din enhet säkrare med rätt lösenord
 
@@ -46,4 +46,4 @@ Om Windows-enheten inte följer den lösenordsprincip som har konfigurerats av f
 3. Ange ditt nya lösenord i rutan **Nytt lösenord** och ange det sedan igen i rutan **Bekräfta lösenord**.
 4. Välj **Klar**.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

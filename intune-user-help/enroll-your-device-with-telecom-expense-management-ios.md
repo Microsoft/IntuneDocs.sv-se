@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ff51405ee48851b5a48c4d6142c33bc16ed6218e
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0a17196ce30b014f0fd5e615918398c4436dba4f
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31031812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149376"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrera iOS-enheten i kostnadshanteringsprogrammet för telekomtjänster
 
@@ -65,4 +65,4 @@ Välj ett lämpligt alternativ och du får en avisering om att installera progra
 
 När du har registrerat enheten, börjar du se din dataanvändning av i appen Datalert.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

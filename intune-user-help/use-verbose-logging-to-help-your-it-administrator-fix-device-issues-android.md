@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 390a236cf8eebae209c81b53d629cbd3f83899f8
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 8c1806d8d35dd2a6e16f1041e2c9f844f637a046
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149879"
 ---
 # <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Hjälp företagets support att åtgärda enhetsproblem med hjälp av utförlig loggning
 
@@ -30,4 +30,4 @@ När din Android-enhet har registrerats i Intune kan du använda *Utförlig logg
 
 För att aktivera eller inaktiva Utförlig loggning loggar du in i företagsportalappen med dina inloggningsuppgifter för arbetet eller skolan och trycker på **Inställningar** och sedan på på/av-knappen bredvid **Utförlig loggning**.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

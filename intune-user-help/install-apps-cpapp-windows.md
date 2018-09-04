@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 085d6c9e21cff3ef79097ac0cc2e3a2151c5b391
-ms.sourcegitcommit: d40bfb6af66f2ce7026c0151ace98ec23f1cf76e
+ms.openlocfilehash: 5d77a4c2b5d55a3cd6086af61de0804afc3e5245
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33927329"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43149626"
 ---
 # <a name="install-apps-on-your-device"></a>Installera appar på enheten
 Installera appar på enheten från företagsportalappen för Windows.
@@ -41,4 +41,4 @@ Installera appar på enheten från företagsportalappen för Windows.
 
  Beroende på hur stort ditt företag är finns det flera versioner av Office tillgängliga för nedladdning från företagsportalen. Mer information om Office-paketet för Windows-enheter finns i [Installera Office 365 på Windows-enheten](./install-office-windows.md).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

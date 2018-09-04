@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 071ed6ca2889788c607625478f4f9d3d20e19662
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 984c9212a4aa3221a4de5e02d96f912d800e9490
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015157"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43146383"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Installera och logga in i företagsportalappen
 
@@ -38,4 +38,4 @@ Företagsportalen är en app som du installerar på din iOS-enhet för att få �
 
     När du loggar in i företagsportalappen för första gången, och ditt företag eller skola använder Intune, uppmanas du att registrera din enhet i Intune. För att registrera följer du stegen i [registrera din iOS-enhet i Intune](enroll-your-device-in-intune-ios.md). Du kan även [sign in using another device](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device) (logga in med en annan enhet).
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

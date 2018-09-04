@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ff8a2650b0264662084a4bf3a8186808f5980faf
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 40cc6ec2daab92a226051e2d9bc11d7ac0fb105b
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31013984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150471"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Du måste uppdatera Android-enheten för att installera Outlook-appen
 
@@ -36,4 +36,4 @@ Ibland kan en installation av en app misslyckas, särskilt om enheten inte är u
 
 Välj **Inställningar** och välj sedan alternativet **uppdatera** eller **systemuppdatering**.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

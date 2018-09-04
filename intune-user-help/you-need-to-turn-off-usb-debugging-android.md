@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 2f1b71513ad5e22f62c783ac8d305acb9eac4cca
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: c377c2a4e9640443eb38a85b2e1806c9d9e64a82
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147201"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Du måste stänga av USB-felsökning
 
@@ -30,4 +30,4 @@ Du kan stänga av USB-felsökning genom att gå till **Inställningar** > **Utve
 
 När du har inaktiverat **USB-felsökning** ska du vänta ett par minuter, därefter ska du kunna komma åt företagets eller skolans data via Android-enheten som vanligt.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

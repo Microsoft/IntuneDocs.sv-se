@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9e24f9aca0c06f69c61af6a7fab4f69afe381b6d
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: e2e81bdb3431ac8a2e0fdae6a7f3099512319aee
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836935"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313266"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Vad är enhetshantering i Microsoft Intune?
 
@@ -37,7 +37,7 @@ Arbetsbelastningen **Enheter** ger dig insikter om de enheter du hanterar och l�
    - **Översikt** visar en visuell ögonblicksbild av de registrerade enheterna och visar även hur många enheter som använder olika plattformar, inklusive Android, iOS och mycket mer.
    - **Alla enheter** visar en lista över de registrerade enheter du hanterar.
 
-     Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Microsoft Edge, Chrome).
+     Använd funktionen **Exportera** för att skapa en .csv-lista över alla enheter i steg om 10 000 (Internet Explorer) eller 30 000 (Edge, Chrome).
 
      Välj valfri enhet för att [visa ytterligare information om enheten](device-inventory.md), inklusive information om maskinvara, installerade appar, status för policy för efterlevnad och mycket mer.
 
@@ -55,8 +55,8 @@ Vilka åtgärder som är tillgängliga beror på enhetsplattformen och enhetens 
 
 - [Visa enhetsinventeringen](device-inventory.md)
 - Kör åtgärder för fjärransluten enhet:
-    - [Ta bort företagsdata](devices-wipe.md#remove-company-data)
-    - [Fabriksåterställning](devices-wipe.md#factory-reset)
+    - [Pensionera](devices-wipe.md#retire)
+    - [Rensning](devices-wipe.md#wipe)
     - [Fjärrlåsning](device-remote-lock.md)
     - [Återställ lösenord](device-passcode-reset.md)
     - [Kringgå aktiveringslås](device-activation-lock-bypass.md) (Endast iOS)
