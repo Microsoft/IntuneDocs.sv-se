@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 /ms.custom: intune-azure
-ms.openlocfilehash: ff2774b76bceeeeaecec7a4dc74876b11706d574
-ms.sourcegitcommit: 56a8a3c8974f54f0f9ecc1e5b43581502ecc348e
+ms.openlocfilehash: 41c5af504bb65a661e55d09d735a78df780deb84
+ms.sourcegitcommit: 698af815f6de2c4f003f6da428bbfb0680daafa0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39614521"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43092183"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Nyheter i Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,12 +42,21 @@ Läs mer om varje veckas nyheter i Microsoft Intune. Du kan också läsa mer om 
 
 -->   
 
+
+## <a name="week-of-august-27-2018"></a>Veckan 27 augusti 2018
+
+### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Använda VPP enhetslicenser för att företablera företagsportalen vid DEP-registrering <!-- 1608345 -->
+Nu kan du använda VPP-enhetslicenser (volyminköpsprogram) till att företablera företagsportalen under registreringar med Programmet för enhetsregistrering (DEP). Detta gör du genom att ange den VPP-token du vill använda för att installera företagsportalen när du [skapar eller redigerar en registreringsprofil](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Se till att din token inte upphör att gälla och att du har tillräckligt många licenser för företagsportalappen. Om token upphör att gälla eller om licenserna tar slut kan Intune push-överföra företagsportalen från App Store istället (då krävs ett Apple-ID).
+
+
+## <a name="week-of-august-14-2018"></a>Veckan 14 augusti 2018
+
+### <a name="macos-support-for-apple-device-enrollment-program----747651---"></a>macOS-stöd för Apples program för enhetsregistrering (Device Enrollment Program) <!-- 747651 -->
+Intune har nu stöd för registrering av macOS-enheter i Apples program för enhetsregistrering (DEP). Mer information finns i [Registrera macOS-enheter automatiskt med Apples program för enhetsregistrering](device-enrollment-program-enroll-macos.md).
+
 ## <a name="week-of-july-23-2018"></a>Veckan som inleds den 23 juli 2018
 
 ### <a name="app-management"></a>Apphantering
-
-####  <a name="windows-apps-file-extensions----1884873---"></a>Filnamnstillägg för Windows-appar <!-- 1884873 -->
-Filnamnstilläggen för Windows-appar omfattar nu *.msi*, *.appx*, *.appxbundle*, *.msix* och *.msixbundle*. Du kan lägga till en app i Microsoft Intune genom att välja **Mobilappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas och där du kan välja **Apptyp**. Välj en apptyp som gör att du kan ladda upp en appaketfil, välj **appaketfilen** och ange sedan en installationsfil med rätt filnamnstillägg.
 
 #### <a name="line-of-business-lob-app-support-for-macos----1895847---"></a>Stöd för verksamhetsspecifika appar (LOB) för macOS <!-- 1895847 -->
 I Microsoft Intune kan verksamhetsspecifika macOS-appar distribueras med inställningen **Obligatorisk** eller **Tillgänglig med registrering**. Slutanvändarna kan hämta appar som har distribuerats som **tillgängliga** via företagsportalen för macOS eller [företagsportalwebbplatsen](https://portal.manage.microsoft.com).
@@ -194,7 +203,7 @@ Du kan använda det lokala **sAMAccountName** som kontonamn för e-postprofiler 
 
 Om du vill använda den här funktionen måste du synkronisera attributet `sAMAccountName` från din lokala Active Directory-miljö till Azure AD.
 
-Gäller [Andoid](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 och senare](email-settings-windows-10.md)
+Gäller [Android](email-settings-android.md), [iOS](email-settings-ios.md), [Windows 10 och senare](email-settings-windows-10.md)
 
 #### <a name="see-device-configuration-profiles-in-conflict----1556983---"></a>Se enhetskonfigurationsprofiler som har konflikter <!-- 1556983 -->
 I **Enhetskonfiguration** visas en lista över de befintliga profilerna. I och med den här uppdateringen läggs en ny kolumn till som innehåller information om de profiler som står i konflikt. Du kan välja en rad med en konflikt för att se den inställning och den profil som orsakar konflikten. 
@@ -732,8 +741,7 @@ Om enheten körs på Windows 10 RS1 eller senare, kan du hämta den senaste vers
 
 - **Aktivera grafikacceleration**: Administratörer kan aktivera en virtuell grafikprocessor för Windows Defender Application Guard. Med den här inställningen kan processorn avlasta grafikåtergivning till vGPU. Detta kan förbättra prestanda när du arbetar med grafikintensiva webbplatser eller tittar på videor inuti containern.
 
-- 
-  **SaveFilestoHost**: Administratörer kan aktivera att filer kan skickas från Microsoft Edge som körs i containern till värdfilsystemet. Det gör att användare kan ladda ned filer från Microsoft Edge i containern till värdfilsystemet.
+- **SaveFilestoHost**: Administratörer kan aktivera att filer kan skickas från Microsoft Edge som körs i containern till värdfilsystemet. Det gör att användare kan ladda ned filer från Microsoft Edge i containern till värdfilsystemet.
 
 #### <a name="mam-protection-policies-targeted-based-on-management-state----1665993---"></a>MAM-skyddsprinciper riktas utifrån hanteringsstatus <!-- 1665993 -->
 Du kan rikta MAM-principer baserat på hanteringsstatus för enheten:
@@ -782,7 +790,7 @@ Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Minska attackytan
 
-|Inställningsnamn  |Inställningsalternativ  |Description  |
+|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
 |Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem|Aktiverad, granskad, inte konfigurerad|Flagga stöld av inloggningsuppgifter från Windows Local Security Authority Subsystem (lsass.exe).|
@@ -792,7 +800,7 @@ Create profile\Endpoint protection\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Description |
+|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -871,7 +879,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 ##### <a name="attack-surface-reduction"></a>Minska attackytan
 
 
-|Inställningsnamn  |Inställningsalternativ  |Description  |
+|Inställningsnamn  |Inställningsalternativ  |Beskrivning  |
 |---------|---------|---------|
 |Körning av lösenordsskyddat körbart innehåll från e-post|Blockera, Granska, Inte konfigurerat|Förhindra körning av körbara filer som skyddas av lösenord och som hämtats via e-post.|
 |Avancerat skydd för utpressningstrojan|Aktiverad, granskad, inte konfigurerad|Använd aggressivt skydd mot utpressningstrojan.|
@@ -882,7 +890,7 @@ Resurskontot kan till exempel visas som **konferensrum B41/6233**.
 
 ##### <a name="controlled-folder-access"></a>Reglerad mappåtkomst
 
-|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Description |
+|              Inställningsnamn               |                                                              Inställningsalternativ                                                              | Beskrivning |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Mappskydd (redan implementerat) | Inte konfigurerad, Aktivera, Endast granskning (redan implementerat)<br><br> <strong>Nytt</strong><br>Blockera diskändring, Granska diskändring |             |
 
@@ -1130,6 +1138,16 @@ Du kan ange nekade appar i Intune. Om en app nekas blockeras den från att komma
 
 ## <a name="notices"></a>Meddelanden
 
+### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Vidta åtgärd: Uppdatera Android-lösenordsinställningarna för enhetsbegränsning och efterlevnadsprinciper i Intune
+Intune kommer att ta bort den tillgängliga lösenordstypen ”Standard för enheten” för enheter med Android 4.4 eller senare. På grund av skillnader mellan Android-plattformar och enhetsstandarder behandlas principen ofta som valfri av enheten. Vi kommer att ta bort den här inställningen från användargränssnittet i en kommande version i syfte att undvika förvirring kring när inställningen genomdrivs i Android. 
+#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
+- Om din avsikt är att kräva ett lösenord på enheterna rekommenderar vi att du redigerar dina Android-plattformsprofiler och tydligt anger vilken lösenordstyp som krävs, istället för att använda ”Standard för enheten”.
+- Om din avsikt är att låta användarna själva välja om de vill skapa ett lösenord väljer du knappen ”Inte konfigurerad”. Om inställningen fortfarande är konfigurerad när vi tar bort den från användargränssnittet uppmanas du att välja ett annat värde än ”Standard för enheten” nästa gång du redigerar profilen.
+Vad kan jag göra för att förbereda mig för den här ändringen?
+Granska lösenordsinställningarna för enhetsbegränsning och efterlevnadsprinciper för Android och Android enterprise. Du hittar dem under Systemsäkerhet för efterlevnadsprinciper och under antingen Enhetslösenord eller Arbetsprofilinställningar för enhetsbegränsningar. Under Ytterligare information finns en länk till mer information och skärmdumpar som visar var du gör de här inställningarna.
+####<a name="additional-information"></a>Ytterligare information
+https://aka.ms/PasswordSettings 
+
 ### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Planera för förändring: Change Password at Next Auth (Ändra lösenord vid nästa autentisering) har lagts till i Intune<!-- 1873216 -->
 I och med lanseringen av tjänsten i september planerar Intune att integrera Apples nyligen utgivna inställning **Change Password at Next Auth** (Ändra lösenord vid nästa autentisering) för enheter som kör macOS versioner 10.13 och senare. Före den här inställningen kan MDM-leverantörer inte verifiera att enhetens lösenord har ändrats för att vara kompatibelt. Intunes principer för konfiguration och efterlevnad verifierar endast att ett enhetslösenord markeras som verifierat nästa gång det ändras. När den här nya Apple-funktionen läggs till får dina macOS-användare en begäran om att uppdatera sina lösenord även om lösenorden är kompatibla.
 
@@ -1172,22 +1190,6 @@ Vi rekommenderar att du proaktivt ta bort TLS 1.0- och 1.1-beroenden i dina milj
 
 **Ytterligare Information**: [Intune går över till TLS 1.2 för kryptering](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
 
-### <a name="plan-for-change-new-windows-10-setting-for-kiosk-configuration-in-intune----1560072---"></a>Planera för förändring: Ny Windows 10-inställning för helskärmskonfiguration i Intune <!-- 1560072 -->
-Vi ändrar hur och var du konfigurerar datorer med Windows 10 1709 och senare (RS3 och senare) i Intune Azure Portal.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig? 
-Vi har information som visar att du använder Windows-10 > Enhetsbegränsningar > inställningen Helskärm (förhandsgranskning). Inställningen kommer att byta namn i maj till Windows 10 > Enhetsbegränsningar > Helskärm (inaktuell) för att ange att den inte längre rekommenderas. Men den kommer att fungera fram till juliuppdateringen av Intune. Sedan blir den inaktuell på serverdelen och slutar fungera. Som ett alternativ släpper vi en ny enhetskonfigurationsprofil i maj: Windows 10 > Helskärm, som innehåller inställningar för att konfigurera helskärmsläge i Windows 10 RS4 och senare.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?  
-När underhållsuppdateringen för maj släpps i slutet av maj tillhandahåller vi också instruktioner för hur du kan testa och kontrollera att du kan migrera din helskärmskonfiguration från Windows 10 RS3 till Windows 10 RS4. Använd dessa instruktioner för att konfigurera dina enheter med den nya enhetskonfigurationsprofilen för helskärmsläget.
-
-#### <a name="how-does-this-affect-me"></a>Hur påverkar det här mig?
-Den här förändringen påverkar både kunder som har fristående Intune och hybridkunder (Intune med Configuration Manager). Den här integreringen hjälper till att förenkla administrationen av molnhanteringen. Nu behöver du bara gå till ett blad i Azure, Intune-bladet, för att hantera grupper, principer, appar och eventuell hantering av mobilenheter.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Vad kan jag göra för att förbereda mig för den här ändringen?
-Lägg till Intune som favorit i stället för bladet för tjänsten Intune-appskydd, och se till att du känner till arbetsflödet för appskyddsprinciper på bladet Mobilapp i Intune. Vi omdirigerar under en kort tidsperiod och tar sedan bort appskyddsbladet. Kom ihåg att alla appskyddsprinciper redan finns i Intune och du kan ändra dina villkorliga åtkomstprinciper genom att följa dokumentationen här: [https://aka.ms/azuread_ca](https://aka.ms/azuread_ca).
-
-**Ytterligare information**:[https://aka.ms/intuneapppolicy](https://aka.ms/intuneapppolicy)
 
 ### <a name="plan-for-change-change-in-support-for-the-microsoft-intune-app-sdk-for-cordova-plugin"></a>Planera för förändring: Ändra i stödet för Microsoft Intune App SDK för Cordova-pluginprogrammet
 Microsoft avslutar stödet för [Microsoft Intune App SDK Cordova-pluginprogrammet](app-sdk-cordova.md) 1 maj 2018. Vi rekommenderar att du använder Intunes programhanteringsverktyg i stället, för att förbereda dina Cordova-baserade appar för hantering och tillgänglighet i Intune. När den här ändringen träder i kraft kommer Microsoft Intune APP SDK för Cordova-pluginprogrammet inte längre att hanteras eller bli uppdaterat. Utvecklare av program kommer inte att kunna använda det här pluginprogrammet. Intune planerar att fortsätta att tillhandahålla stöd för appar som utvecklats med Cordova. Alla appar som utvecklats med Microsoft Intune APP SDK för Cordova-pluginprogrammet får dock nedsatt funktionalitet i Intune. Efter att du omslutit en app med Intunes programhanteringsverktyg kan den distribueras till slutanvändare som normalt. För Cordova-baserade Android-appar som publiceras till Google Play-butiken:

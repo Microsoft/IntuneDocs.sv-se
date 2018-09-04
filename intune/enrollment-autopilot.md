@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: c96f211f18168c8ae55f0ca2391c6c140caef649
-ms.sourcegitcommit: dc8b6f802cca7895a19ec38bec283d4b3150d213
+ms.openlocfilehash: b3c374e4ce6baeab8cc6fde3f6c45c63c48e34dd
+ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138736"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903083"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrera Windows-enheter med hjälp av Windows AutoPilot
 Windows AutoPilot förenklar etableringen av enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. Om du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -72,8 +72,8 @@ AutoPilot-distributionsprofiler används för att konfigurera AutoPilot-enhetern
     - **Självdistribution (förhandsversion)**: (Windows 10 Insider Preview, version 17672 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Användarautentiseringsuppgifter krävs inte för att etablera enheten.
 4. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 5. Välj **välkomstprogrammet (OOBE)**, konfigurera följande alternativ och välj **Spara**:
-    - **Språk (Region)***: Välj språket du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
-    - **Konfigurera tangentbord automatiskt***: Om ett **Språk (Region)** har valts hoppar du över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
+    - **Språk (Region)**\*: Välj språket du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
+    - **Konfigurera tangentbord automatiskt**\*: Om ett **Språk (Region)** har valts hoppar du över sidan för val av tangentbord. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
     - **Licensavtal för slutanvändare (EULA)**: (Windows 10, version 1709 eller senare) Välj om du vill visa EULA för användarna.
     - **Sekretessinställningar**: Välj om du vill visa sekretessinställningar för andra.
     - **Användarkontotyp**: Välj om användarens kontotyp ska vara **Administratör** eller **Standard**. 
