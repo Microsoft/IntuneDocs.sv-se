@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 7b13cfdcaa29edfc780126f3d1d76f5a9e46360f
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b34bb7c3f3db9ebb3cdd89b429aaeb530d7ad796
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330304"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141640"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Flytta Intune-kontodata för informationslager 
 
@@ -63,8 +63,6 @@ Vissa trenddiagram i vyn för Azure-portalen kommer att återställas. Du kan s�
 ## <a name="device-enrollment-charts"></a>Enhetsregistreringsdiagram
 1. I Azure-portalen går du till **Microsoft Intune** -> **DeviceEnrollment**.
 2. Med hjälp av Microsoft [Graph-testaren](https://developer.microsoft.com/graph/graph-explorer), laddar du ned data bakom diagrammen.
-    - För registreringsstatus, se 
-    - För de främsta registreringsfelen den här veckan. 
     - För registreringsstatus, kopiera [frågan om registreringsstatus](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) och klistra in den i [Graph-testaren](https://developer.microsoft.com/graph/graph-explorer).
     - För de främsta registreringsfelen denna vecka kopiera [frågan om registreringsfel](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) och klistrar in den i [Graph-testaren](https://developer.microsoft.com/graph/graph-explorer).
 
