@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: f22509d780ec4d877e7e780109b34776b269c8b3
-ms.sourcegitcommit: 49dc405bb26270392ac010d4729ec88dfe1b68e4
+ms.openlocfilehash: 0ea421c63cbb6c2228ea94bf82d795ece01f46ac
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34308865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150332"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Ta bort enheten från företagsportalen
 
-Om du inte längre vill att enheten ska hanteras av ditt företag eller din organisation kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Om du tar bort din enhet kommer den inte längre att visas på företagsportalen. Du kan också förlora åtkomsten till din organisations data, appar och e-post.
+Om du inte längre vill att enheten ska hanteras av ditt företag eller din organisation kan du kan ta bort den från företagsportalen via [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980). Om du tar bort din enhet kommer den inte längre att visas i företagsportalen. Du kan också förlora åtkomsten till din organisations data, appar och e-post.
 
 Så här tar du bort din enhet:
 
-1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
+1. På [webbplatsen för företagsportalen](https://go.microsoft.com/fwlink/?linkid=2010980) trycker du på __menyknappen__ ![En liten bild på menyknappen (tre vågräta streck)](/Intune/whats-new/media/CP_hamburger_menu.png) och väljer __Mina enheter__.
 
    ![En bild av webbplatsen för företagsportalen med en utökad sidomeny till vänster på skärmen med knapparna Start, Alla appar, Mina enheter, Support och Logga ut.](/media/iwp-expanded-sidebar.png)
 
@@ -44,4 +44,4 @@ Så här tar du bort din enhet:
 
 4. Läs varningsmeddelandet och tryck sedan på **Ta bort** för att ta bort enheten från företagsportalen.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

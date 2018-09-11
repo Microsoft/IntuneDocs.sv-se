@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 90cd71383e8f2f82bf9fd6a3dc579c1c0a954227
-ms.sourcegitcommit: d99def6e4ceb44f3e7ca10fe7cdd7f222cf814c8
+ms.openlocfilehash: 515853864236638bc2732f6539d087bd125e3c56
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903151"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313469"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurera registrering av Android enterprise-kioskenheter
 
@@ -112,7 +112,7 @@ För enheter med Android 5.1 och senare som stöder NFC kan du etablera enheter 
 
 För enheter med Android 6 och senare kan du använda token för att registrera enheten. I Android 6.1 och senare versioner kan du även skanna QR-koder när du använder registreringsmetoden **aft#setup**.
 
-1. Aktivera din fabriksåterställningsenhet.
+1. Starta den rensade enheten.
 2. Välj språk på **välkomstskärmen**.
 3. Anslut till ditt **Wi-Fi** och välj **NÄSTA**.
 4. Acceptera Googles villkor och välj **NÄSTA**.
@@ -129,7 +129,7 @@ På enheter med Android 7 och senare kan du skanna QR-koden från registreringsp
 > [!Note]
 > Webbläsarens zoom kan göra att enheter inte kan skanna QR-koder. Du löser problemet genom att öka webbläsarens zoom.
 
-1. Starta en QR-läsning på Android-enheten trycker du flera gånger på den första skärmen du ser efter en fabriksåterställning.
+1. Starta en QR-läsning på Android-enheten genom att trycka flera gånger på den första skärmen du ser efter en rensning.
 2. För enheter med Android 7 och 8 devices uppmanas du att installera en QR-läsare. Enheter med Android 9 och senare har redan en installerad QR-läsare.
 3. Använd QR-lädaren för att skanna registreringsprofilens QR-kod och följ sedan anvisningarna på skärmen för att registrera.
 

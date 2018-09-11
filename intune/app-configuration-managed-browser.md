@@ -15,12 +15,12 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d39dca2a464886ae6752450636fe25a5f5701858
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 25d4bdc51f2dc12cddbfb30c82baa22aa8c4540b
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40251656"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329760"
 ---
 # <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Hantera internetåtkomst med principer för skyddade webbläsare med Microsoft Intune
 
@@ -108,7 +108,7 @@ Enkel inloggning i Intune Managed Browser kräver att enheten har registrerats a
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3.  På bladet **Mobilappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
+3.  På bladet **Klientappar** i listan Hantera väljer du **Appkonfigurationsprinciper**.
 4.  På bladet **Appkonfigurationsprinciper** väljer du **Lägg till**.
 5.  På bladet **Lägg till konfigurationsprincip** anger du ett **Namn** och en valfri **Beskrivning** för appkonfigurationsinställningarna.
 6.  För **Registreringstyp för enhet** väljer du **Hanterade appar**.
@@ -126,7 +126,7 @@ Enkel inloggning i Intune Managed Browser kräver att enheten har registrerats a
 
 Du kan tilldela inställningarna till Azure AD-grupper med användare. Om användaren har den aktuella skyddade webbläsaren installerad så hanteras appen med de inställningar du har angett.
 
-1. På bladet **Mobilappar** i instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfigurationsprinciper**.
+1. På bladet **Klientappar** i instrumentpanelen för Intunes hantering av mobilprogram väljer du **Appkonfigurationsprinciper**.
 2. Välj den du vill tilldela i listan med appkonfigurationer.
 3. Välj **Tilldelningar** på nästa blad.
 4. På bladet **Tilldelningar** väljer du den Azure AD-grupp som du vill tilldela appkonfigurationen till. Välj sedan **OK**.

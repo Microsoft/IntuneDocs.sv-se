@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cee92ff36e2a199cd6cb8cf3cd5e0e839bc81584
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 71ed2458e35934de9da297140d49d6d4128b0784
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321500"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329826"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Inställningar för enhetsbegränsningar i Microsoft Intune för iOS
 
@@ -81,7 +81,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 - Koppla med Apple Watch 
 
 > [!NOTE]
-> Apple har bekräftat att vissa inställningar flyttas till endast övervakat läge under 2018. Vi rekommenderar att du tänker på detta när du använder de här inställningarna i stället för att vänta på att Apple ska migrera dem till endast övervakat läge:
+> Apple har bekräftat att vissa inställningar flyttas till endast övervakat läge under 2019. Vi rekommenderar att du tänker på detta när du använder de här inställningarna i stället för att vänta på att Apple ska migrera dem till endast övervakat läge:
 > - Appinstallation av slutanvändare
 > - Borttagning av app
 > - FaceTime
@@ -91,6 +91,7 @@ Detta gäller även för inställningar som kan nås från appen för iOS-instä
 > - Dokument och data i iCloud
 > - Spel för flera personer
 > - Lägg till spelcentervänner
+> - Siri
 
 ## <a name="password"></a>Lösenord
 -   **Lösenord** – Kräver att användaren måste ange ett lösenord för att få åtkomst till enheten.

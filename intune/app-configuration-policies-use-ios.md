@@ -15,12 +15,12 @@ ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 65f249f05f389d8f05395cb46677d5f5fa53835e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 8abaef622fcf633eecde3a2bb2ee261cb7c8fc9e
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905843"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330270"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Lägg till appkonfigurationsprinciper för hanterade iOS-enheter
 
@@ -47,7 +47,7 @@ När du har valt de grupper som ska inkluderas i programkonfigurationsprincipen 
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj arbetsbelastningen **mobilappar**.
+3. Välj arbetsbelastningen **Klientappar**.
 4. Under gruppen **Hantera** väljer du **Appkonfigurationsprinciper** och väljer sedan **Lägg till**.
 5. Ange följande information:
     - **Namn** – namnet på den profil som visas i Azure Portal.
@@ -133,6 +133,8 @@ När du skapar en appkonfigurationsfil kan du ange ett eller flera av följande 
   <string>{{serialnumberlast4digits}}</string>
   <key>udidlast4digits</key>
   <string>{{udidlast4digits}}</string>
+  <key>aaddeviceid</key>
+  <string>{{aaddeviceid}}</string>
 </dict>
 ```
 ### <a name="supported-xml-plist-data-types"></a>XML PList-datatyper som stöds
@@ -158,6 +160,7 @@ Dessutom stöder Intune följande typer av token i egenskapslistan:
 - \{\{username\}\} – till exempel **Johan Danielsson**
 - \{\{serialnumber\}\} – till exempel **F4KN99ZUG5V2** (för iOS-enheter)
 - \{\{serialnumberlast4digits\}\} – till exempel **G5V2** (för iOS-enheter)
+- \{\{aaddeviceid\}\} – till exempel **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Övervaka konfigurationsstatus för iOS-appar per enhet 
 När en konfigurationsprincip har tilldelats kan du övervaka iOS-appens konfigurationsstatus för varje hanterad enhet. Gå till **Microsoft Intune** i Azure Portal och välj **Enheter** > **Alla enheter**. Välj en specifik enhet från listan med hanterade enheter för att visa ett blad för enheten. Välj **Appkonfiguration** på enhetsbladet.  

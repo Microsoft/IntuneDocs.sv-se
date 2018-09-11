@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b67b50a5bd372541cf0842696e5012ca991d8b8
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: b9520343f3b631fdc2732690b462c6d8fd010c82
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224168"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329503"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Lägg till inbyggda appar i Microsoft Intune
 
@@ -36,8 +36,8 @@ I tidigare versioner av Intune-konsolen tillhandahöll Intune flera hanterade Of
 För att lägga till en inbyggd app till dina tillgängliga appar i Microsoft Intune, gör följande:
 1. Logga in på Azure-portalen.
 2. För att visa Microsoft Intune-fönstret väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I fönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I fönstret **Klientappar** väljer du **Appar** under **Hantera**.
 5. Välj **Lägg till**.
 6. I appfönstret **Lägg till** i listan **Apptyp** väljer du **Inbyggd app**.
 7. Välj **Välj app**.

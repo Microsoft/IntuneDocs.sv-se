@@ -1,11 +1,11 @@
 ---
 title: Lösa hot som upptäckts av Symantec Endpoint Protection Mobile för iOS | Microsoft Docs
-description: Lär dig hur du löser hot som har hittats på en iOS-enhet.
+description: Lär dig hur du löser säkerhets-, virus- och apphot som har hittats på en iOS-enhet.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,34 +15,39 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: e8efab6aea68802da0df9b24a75812918e255a57
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: a4bdb394407155be8716cf8039f997f3905f3998
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148440"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Lösa ett hot som hittas av Symantec Endpoint Protection Mobile
 
-Symantec Endpoint Protection Mobile har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. 
+Symantec Endpoint Protection (SEP) Mobile är en tjänst för skydd mot mobila hot som identifierar potentiella hot på Android-enheter. Dessa hot rapporteras till företagsportalappen och visas som olösta, ej kompatibla problem. Om enheten identifieras som ej kompatibel kanske du inte kan:
 
-Åtgärda problemet genom att öppna appen Symantec Endpoint Protection Mobile och följa anvisningarna som visas i appen.
+* Ansluta till företagets e-post
+* Ansluta till företagets Wi-Fi
+* Ansluta till SharePoint Online
+* Synkronisera företagsfiler med OneDrive
+* Få åtkomst till företagsappar
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Vad som kan visas om den registrerade enhetens åtkomst till e-post eller filer blockeras
+Den här artikeln beskriver hur du kan känna igen hotaviseringar från SEP Mobile och vad du kan göra för att lösa dem. 
 
-Om det finns ett virus eller andra säkerhetshot på den registrerade enheten och du försöker få åtkomst till ditt e-postkonto eller filer hos företaget visas ett meddelande som liknar detta:
+## <a name="resolve-virus-or-security-threat"></a>Lösa virus- eller säkerhetshot  
 
-![Skycure-felmeddelande med länk till företagsportalens webbplats](./media/mtd-go-to-device-management-portal-android.png)
+1. Du får ett meddelande som liknar det i skärmbilden nedan när du försöker få åtkomst till företagets e-post eller webbplatser. Tryck på länken till **enhetshanteringsportalen** för att öppna [företagsportalens webbplats](https://portal.manage.microsoft.com/devices).
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog), där du får anvisningar om hur du kan lösa problemet.
+    ![Exempel på skärmbild av ett felmeddelande för Lookout for Work, med en länk till företagsportalens webbplats och en blå OK-knapp.](./media/mtd-go-to-device-management-portal-android.png)  
 
-## <a name="example-of-an-app-that-symantec-endpoint-protection-mobile-sees-as-a-threat"></a>Exempel på en app som Symantec Endpoint Protection Mobile ser som ett hot
+2. Välj din enhet.  
+3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar SEP Mobile för att åtgärda virus- eller säkerhetshotet.    
 
-Om du har installerat en app som Symantec Endpoint Protection Mobile tror är ett hot meddelar Symantec Endpoint Protection Mobile dig i appen.
+## <a name="resolve-an-app-threat"></a>Lösa ett apphot  
 
-Tryck på appnamnet som visas längst upp på skärmen och ta bort hotet genom att följa anvisningarna.
+Om du installerar en app som ses som ett hot mot din enhet får du ett meddelande i appen SEP Mobile. Om den berörda appen finns kvar på enheten kan du inte komma åt företagsresurser.  
 
-När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
+Lös detta genom att välja appen i listan över hot i SEP Mobile. Följ sedan anvisningarna på skärmen för att ta bort och avinstallera appen.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980). 
 

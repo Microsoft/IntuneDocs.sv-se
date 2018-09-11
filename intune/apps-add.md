@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5964ebdbac251468e3bc35c2c35f0bd2e7fddbff
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: cf6e7098462931000ce4cd5546390d27d68677f1
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251979"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330168"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -62,7 +62,7 @@ I följande tabell visas de specifika apptyperna och hur du kan lägga till dem 
 | Inbyggd Android-app  | Inbyggd app | Välj **Inbyggd app** som **apptyp** och välj sedan den inbyggda appen i listan med appar.  |
 | Webbappar  | Webbapp  | Välj **Webblänk** som **apptyp** och ange sedan en giltig URL som pekar till webbappen.  |
 
-Du kan lägga till en app i Microsoft Intune genom att välja **Mobilappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
+Du kan lägga till en app i Microsoft Intune genom att välja **Klientappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. 
 
 >[!TIP]
 > En verksamhetsspecifik app är en app som du lägger till från en appinstallationsfil. För att exempelvis installera en iOS LOB-app lägger du till programmet genom att välja **Branschspecifik app** som **Apptyp** i fönstret **Lägg till app**. Välj sedan appaketfilen (tillägget .ipa). Dessa typer av appar är vanligen skrivna internt.
@@ -148,8 +148,8 @@ När du lägger till en app i Intune ges möjlighet att välja den kategori som 
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Installera**, väljer du **Appkategorier**.  
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appkategorier** under **Installera**.  
     Fönstret **Appkategorier** visar en lista över aktuella kategorier. 
 5. Gör något av följande:
     - För at lägga till en kategori i fönstret **Skapa kategori** väljer du **Lägg till**, och anger sedan ett namn på kategorin.  

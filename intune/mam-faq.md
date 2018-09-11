@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1c3d0e31520aa2f73eabfce5ebc1d55d4df73946
-ms.sourcegitcommit: 91dc50d38be13c65e5d144d237d7c4358089f215
+ms.openlocfilehash: d7207b84dacc47b567c0fc86c3215605965fda6d
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329934"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312806"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Vanliga frågor och svar om MAM och appskydd
 
@@ -116,10 +116,12 @@ PIN-kod (Personal Identification Number) är ett lösenord som används för att
 
     - **PIN-koden delas mellan appar från samma utgivare för att förbättra användarvänligheten:** I iOS delas en app-PIN-kod mellan alla appar **från samma apputgivare**. På Android delas en app-PIN mellan alla appar.
     - **Beteendet ”Kontrollera åtkomstkraven igen efter (minuter)” efter omstart av enheten:** en ”PIN-timer” spårar det antal minuter med inaktivitet som bestämmer när Intune-appens PIN ska visas nästa gång. På iOS påverkas inte PIN-timern av enhetsomstart. Därför påverkar inte enhetsomstart det antal minuter som användaren har varit inaktiv från en iOS-app med en Intune PIN-princip. På Android återställs PIN-timern när enheten startas om. Därför är det troligt att Android-appar med en Intune PIN-princip frågar efter en app-PIN-kod oavsett värdet på inställningen ”Kontrollera åtkomstkraven igen efter (minuter)” **efter en omstart av enheten**.  
-    - **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen. 
+    - **Den löpande funktionen för timern som är kopplad till PIN-koden:** När en PIN-kod anges för att få åtkomst till en app (app A) och appen lämnar enhetens förgrund (huvudfokus) kommer PIN-timern att återställas för den PIN-koden. De appar (t.ex. app B) som delar denna PIN-kod kommer inte uppmana användaren att ange PIN-kod eftersom timern har återställts. Uppmaningen visas igen när värdet ”Kontrollera åtkomstkraven igen efter (minuter)” uppfylls igen.
+
+För iOS-enheter visas meddelandet igen när värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls igen för den app som inte är huvudfokus, även om PIN-koden delas mellan appar från olika utgivare. En användare har till exempel appen _A_ från utgivare _X_ och appen _B_ från utgivare _Y_, och dessa två appar delar samma PIN-kod. Användaren fokuserar på app _A_ (förgrund) och app _B_ minimeras. När värdet **Kontrollera åtkomstbehörigheterna på nytt efter (minuter)** uppfylls och användaren växlar till app _B_ krävs PIN-koden.
 
       >[!NOTE] 
-      > För att verifiera användarens åtkomstkrav oftare (till exempel med en PIN-fråga), särskilt för appar som används ofta, rekommenderar vi att du minskar värdet för inställningen Kontrollera åtkomstkraven igen efter (minuter). 
+      > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting. 
       
 - **Hur fungerar Intune PIN-koden med inbyggda app-PIN-koder för Outlook och OneDrive?**<br></br>
 Intune PIN-koden fungerar enligt en inaktivitetsbaserad timer (även kallat värdet för ”Kontrollera åtkomstkraven igen efter (minuter)”). Därför visas Intune PIN-uppmaningar oberoende av de inbyggda app-PIN-uppmaningarna för Outlook och OneDrive, som ofta är kopplade till appstart som standard. Om användaren får PIN-uppmaningarna samtidigt är det förväntade beteendet att Intune PIN-koden har företräde. 
@@ -141,13 +143,13 @@ IT-administratörer kan distribuera en appskyddsprincip som kräver att appdata 
 - **Vad krypteras?**<br></br> Endast data som har markerats som "företagets" krypteras enligt IT-administratörens appskyddsprincip. Data anses som "företagets" när det kommer från en företagsplats. För Office-apparna betraktar Intune följande platser som företagets: e-post (Exchange) eller molnlagring (OneDrive-app med ett konto för OneDrive för företag). För branschspecifika appar som hanteras av Intunes programhanteringsverktyg, betraktas alla appdata som företag.
 
 **Hur fjärrensar Intune data?**<br></br>
-Intune kan rensa AppData på tre olika sätt: fullständig rensning av enheten, selektiv rensning för MDM och MAM-selektiv rensning. Läs mer om fjärrensning för MDM i [Ta bort enheter med fabriksåterställning eller ta bort företagsdata](devices-wipe.md#factory-reset). Mer information om selektiv rensning med hjälp av MAM finns i [Ta bort företagsdata](devices-wipe.md#remove-company-data) och [Så här tar du bort endast företagsdata från appar](apps-selective-wipe.md).
+Intune kan rensa AppData på tre olika sätt: fullständig rensning av enheten, selektiv rensning för MDM och MAM-selektiv rensning. Mer information om fjärrensning för MDM finns i [Ta bort enheter med rensning eller dra tillbaka](devices-wipe.md). Om du vill ha mer information om selektiv rensning med hjälp av MAM kan du läsa om [åtgärden Dra tillbaka](devices-wipe.md#retire) och [Hur du rensar endast företagsdata från appar](apps-selective-wipe.md).
 
-- **Vad är fabriksåterställning?**<br></br> [Fabriksåterställning](devices-wipe.md) tar bort alla användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
+- **Vad är rensning?**<br></br> [Rensning](devices-wipe.md) tar bort all användardata och inställningar från **enheten** genom att återställa den till fabriksinställningarna. Enheten tas bort från Intune.
   >[!NOTE]
-  > Fabriksåterställning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
+  > Rensning kan bara ske på enheter som registrerats med Intunes hantering av mobila enheter (MDM).
 
-- **Vad är selektiv rensning för MDM?**<br></br> Se [Ta bort enheter – ta bort företagsdata](devices-wipe.md#remove-company-data) för att läsa om hur du tar bort företagsdata.
+- **Vad är selektiv rensning för MDM?**<br></br> Se [Ta bort enheter – dra tillbaka](devices-wipe.md#retire) för att läsa om hur du tar bort företagsdata.
 
 - **Vad är selektiv rensning för MAM?**<br></br> Selektiv rensning för MAM tar helt enkelt bort företagsdata från en app. Begäran initieras med hjälp av Intune Azure-portalen. Information om hur du initierar en rensningsbegäran finns i [Så här rensar du endast företagsdata från appar](apps-selective-wipe.md).
 

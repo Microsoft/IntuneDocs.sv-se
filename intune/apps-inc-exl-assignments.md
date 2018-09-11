@@ -15,12 +15,12 @@ ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1ec9a45ca09ddff5aa10cc7283444cf96c8153f6
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 47922a30d8106c4d60b6caa43c8855195e3a0220
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905418"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330253"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Inkludera och exkludera apptilldelningar i Microsoft Intune
 
@@ -44,8 +44,8 @@ Intune tar inte hänsyn till några kopplingar mellan användare och specifika e
 Tilldela en app till grupper med hjälp av en tilldelning för att inkludera eller exkludera:
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I **Intune**-menyn väljer du **Mobilappar**.
-4. I fönstret **Mobilappar** väljer du **Appar**. Listan över tillagda appar visas.
+3. Välj **Klientappar** på **Intune**-menyn.
+4. I fönstret **Klientappar** väljer du **Appar**. Listan över tillagda appar visas.
 5. Markera appen som du vill tilldela. En instrumentpanel visar information om appen. 
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**. 
 

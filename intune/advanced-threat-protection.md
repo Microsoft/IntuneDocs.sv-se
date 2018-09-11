@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/23/2018
+ms.date: 8/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d43e95b2f236dc4c03bb3f63670b2b1400243531
-ms.sourcegitcommit: 0303e3b8c510f56e191e6079e3dcdccfc841f530
+ms.openlocfilehash: b89ca2c4320db733f39ce9b67d275169f4cba5c6
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40251831"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313799"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Aktivera Windows Defender ATP med villkorlig åtkomst i Intune
 
@@ -71,27 +71,15 @@ Du gör normalt den här aktiviteten en gång. Så om ATP redan är aktiverat i 
 
 ## <a name="onboard-devices-using-a-configuration-profile"></a>Publicera enheter med en konfigurerad profil
 
-Windows Defender innehåller ett inbyggt konfigurationspaket som är installerat på enheterna. När det är installera, kommunicerar paketet med [Windows Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Windows Defender ATP. Med Intune kan du skapa du en konfigurationsprofil som använder det här konfigurationspaket. Tilldela sedan den här profilen till enheter som du publicerar för första gången.
+När en slutanvändare registreras i Intune kan du skicka olika inställningar till enheten med en konfigurationsprofil. Detta gäller även för Windows Defender ATP.
 
-När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Detta är vanligtvis en engångsaktivitet.
+Windows Defender omfattar ett konfigurationspaket för registrering som kommunicerar med [Windows Defender ATP-tjänster](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) för att söka igenom filer, identifiera hot och rapportera risken till Windows Defender ATP.
 
-Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
+När du registrerar får Intune ett automatiskt genererat konfigurationspaket från Windows Defender ATP. När profilen är skickas eller distribueras till enheten skickas även det här konfigurationspaketet till enheten. På så sätt kan Windows Defender ATP övervaka enheten för att hitta hot.
 
-Nästa steg visar hur du använder Intune för att publicera.
+När du publicerat en enhet med konfigurationspaketet behöver du inte göra det igen. Du kan också publicera enheter med hjälp av en [Grupprincip eller System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-windows-defender-advanced-threat-protection).
 
-#### <a name="download-configuration-package"></a>Hämta konfigurationspaket
-
-1. I [Windows Defender Security Center](https://securitycenter.windows.com) väljer du **Inställningar** > **Integration**.
-2. Ange följande inställningar:
-  - **Operativsystem**: Windows 10
-  - **Publicera en dator** > **Distributionsmetod**: Hantering av mobila enheter/Microsoft Intune
-3. Välj **Hämta paket** och spara filen **WindowsDefenderATPOnboardingPackage.zip**. Extrahera filen.
-
-Den här zipfilen innehåller **WindowsDefenderATP.onboarding**, som du behöver i nästa steg.
-
-#### <a name="create-the-atp-configuration-profile"></a>Skapa ATP-konfigurationsprofilen
-
-Den här profilen använder integrationspaketet som du hämtade i föregående steg.
+### <a name="create-the-configuration-profile"></a>Skapa konfigurationsprofilen
 
 1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 2. Välj **Enhetskonfiguration** > **Profiler** > **Skapa profil**.
@@ -100,10 +88,9 @@ Den här profilen använder integrationspaketet som du hämtade i föregående s
 5. För **Profiltyp** väljer du **Windows Defender ATP (Windows 10 Desktop)**.
 6. Konfigurera inställningarna:
 
-  - **Publicera konfigurationspaket**: Bläddra och välj den **WindowsDefenderATP.onboarding**-fil som du hämtat. Den här filen ställer in så att enheterna kan rapportera till tjänsten Windows Defender ATP.
-  - **Exempeldelning för alla filer**: Tillåter att exempel kan samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys.
-  - **Skicka frekvensvärde för telemetrirapportering**: För enheter som har hög risk, aktivera den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
-  - **Avregistrera konfigurationspaket**: Om du vill ta bort eller ”avlasta” Windows Defender ATP-övervakning, kan du hämta ett paket för avlastning i [Windows Defender Security Center](https://securitycenter.windows.com), och lägger till det. Hoppa annars över den här egenskapen.
+  - **Windows Defender ATP client configuration package type** (Typ av konfigurationspaket för Windows Defender ATP-klient): Välj **Publicera** för att lägga till konfigurationspaketet i profilen. Välj **Avregistrera** för att ta bort konfigurationspaketet från profilen.
+  - **Exempeldelning för alla filer**: **Aktivera** tillåter att exempel kan samlas in och delas med Windows Defender ATP. Till exempel om du ser en misstänkt fil kan du skicka den till Windows Defender ATP för djupgående analys. **Inte konfigurerad** delar inte några exempel med Windows Defender ATP.
+  - **Skicka frekvensvärde för telemetrirapportering**: För enheter som har hög risk kan du **Aktivera** den här inställningen så att den rapporterar telemetri till tjänsten Windows Defender ATP oftare.
 
     [Publicera Windows 10-datorer med hjälp av System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) innehåller mer information om dessa Windows Defender ATP-inställningar.
 

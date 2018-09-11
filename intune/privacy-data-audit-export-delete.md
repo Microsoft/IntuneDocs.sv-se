@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bea51227798e239bb74154e4d97e3efd6d55f807
-ms.sourcegitcommit: cefa84efd3003fa5a0ef0c2dce6206a6a411a1ec
+ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232275"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313606"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Granska, exportera eller ta bort personliga data i Intune
 
@@ -64,8 +64,8 @@ För att en användares personliga data ska kunna tas bort från Intune måste e
 ### <a name="user-self-removal-from-intune-management"></a>Självborttagning av användare från Intune-hantering
 Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) från Intune-hantering utan hjälp från administratör.   
 
-### <a name="remove-company-data"></a>Ta bort företagsdata
-När företagsdata tas bort så tas Intune-etablerade data bort, till exempel företagsprogram, data om appar som Intune hanterar, principinställningar och e-postprofiler som etablerats via Intune. Med den här åtgärden lämnas användarens personliga data kvar på enheten.
+### <a name="retire"></a>Pensionera
+Åtgärden **Dra tillbaka** tar bort Intune-etablerade data, till exempel företagsprogram, data om appar som Intune hanterar, principinställningar och e-postprofiler som etablerats via Intune. Med den här åtgärden lämnas användarens personliga data kvar på enheten.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Ta bort en klientorganisation från Microsoft Intune
 

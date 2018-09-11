@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 45d41f02fdfff7179dbd43f4d2afdac3337f8b7f
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
+ms.openlocfilehash: 7b03c46a9095c0f300869ebd14d1a81698e294f7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400291"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43314031"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurera mobila eSIM-profiler i Intune – offentlig förhandsversion
 
@@ -179,7 +179,7 @@ När du tar bort enheten från Azure AD-gruppen tas även eSIM-profilen bort. Se
 2. Gå till Azure AD-gruppen och ta bort enheten från gruppen.
 3. När den borttagna enheten kontaktar Intune utvärderas den uppdaterade principen, och eSIM-profilen tas bort.
 
-eSIM-profilen tas även bort när enheten avregistreras av användaren eller när åtgärden [ta bort företagsdata](devices-wipe.md#remove-company-data) eller [fjärråterställ enhet](devices-wipe.md#factory-reset) körs på enheten.
+eSIM-profilen tas även bort när enheten [dras tillbaka](devices-wipe.md#retire) eller avregistreras av användaren eller när åtgärden [ta bort företagsdata](devices-wipe.md#wipe) körs på enheten.
 
 > [!NOTE]
 > Det är inte säkert att faktureringen avbryts om du tar bort profilen. Kontakta mobiloperatören för att kontrollera faktureringsstatusen för din enhet.

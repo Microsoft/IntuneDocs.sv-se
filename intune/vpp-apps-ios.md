@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 115486f02a86616fdf2c340fa7e0e2ff6e505afa
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: cbe9f28b66031f6eddef4804c157f01ca79ad81d
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42823077"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347526"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du iOS-appar som har köpts via ett volyminköpsprogram med Microsoft Intune
 
@@ -83,9 +83,9 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-1.  I fönstret **Intune** väljer du **Mobilappar** > **iOS VPP-token** under **Konfiguration**.
-2.  I fönstret med VPP-tokenlistan väljer du **Skapa**.
-4. I fönstret **Skapa VPP-token** anger du följande information:
+3.  I fönstret **Intune** väljer du **Klientappar** > **iOS VPP-token** under **Konfiguration**.
+4.  I fönstret med VPP-tokenlistan väljer du **Skapa**.
+5. I fönstret **Skapa VPP-token** anger du följande information:
     - **VPP-tokenfil** – Om du inte redan gjort det, registrerar du dig för volymköpsprogram för företag eller programmet för utbildning. När du har registrerat dig laddar du ned Apple VPP-token för ditt konto och väljer det här.
     - **Apple-ID** – Ange Apple-ID för det konto som är associerat med inköpsprogrammet för volymen.
     - **Land/region** – Välj VPP-landskod.  Intune synkroniserar VPP-appar för alla språk från det angivna VPP-landets App Store.
@@ -93,9 +93,10 @@ När du ställer in en enhet för en ny Intune-användare ser du till att konfig
         > När du byter land uppdateras apparnas metadata och butikens URL vid nästa synkronisering med Apple-tjänsten för appar som har skapats med denna token. Appen uppdateras inte om den inte finns i det nya landets butik.
 
     - **Typ av VPP-konto** – Välj mellan **Företag** eller **Utbildning**.
-    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat uppdaterar Intune alla appar som har köpts för angiven token genom Intune-tjänsten när enheten checkar in.
-identifiera VPP-appuppdateringar i appbutiken och push-installera dem automatiskt på enheten när den checkar in.
-4. När du är klar väljer du **Skapa**.
+    - **Automatiska appuppdateringar** – Välj mellan **På** eller **Av** för att aktivera automatiska uppdateringar. När det är aktiverat identifierar Intune VPP-appuppdateringar i appbutiken och push-installerar dem automatiskt på enheten när den checkas in.
+        > [!NOTE]
+        > Automatiska appuppdateringar fungerar för både enhets- och användarlicensierade appar för iOS version 11.0 och senare.
+6. När du är klar väljer du **Skapa**.
 
 Den token du önskar visas i fönstret med tokenlistan.
 
@@ -103,7 +104,7 @@ Du kan synkronisera data från Apple med Intune när som helst genom att välja 
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Tilldela en volyminköpt app
 
-1.  I fönstret **Intune** väljer du **Mobilappar** > **Appar** under **Hantera**.
+1.  I fönstret **Intune** väljer du **Klientappar** > **Appar** under **Hantera**.
 2.  I fönstret med applistan väljer du den app som du vill tilldela och väljer sedan **Tilldelningar**.
 3.  I fönstret ***Appnamn*** - **Tilldelningar** väljer du **Lägg till grupp** och i fönstret **Lägg till grupp** väljer du sedan en **Tilldelningstyp** och den Azure AD-användare eller de enhetsgrupper som du vill tilldela till appen.
 5.  Välj följande inställningar för varje grupp som du har valt:
@@ -153,9 +154,17 @@ Om du vill återkalla en licens för alla VPP-appar för en specifik VPP-token, 
 
 Du kan förnya en Apple VPP-token genom att ladda ned en ny token från portalen för Apple Volume Purchase Program och sedan uppdatera befintlig token i Intune.
 
-## <a name="further-information"></a>Ytterligare information
+## <a name="deleting-an-ios-vpp-app"></a>Ta bort en iOS VPP-app
+
+Du kan för närvarande inte ta bort en iOS VPP-app från Microsoft Intune.
+
+## <a name="additional-information"></a>Ytterligare information
 
 När en användare med en kvalificerande enhet försöker installera en volymköpsprogramapp på en enhet, ombeds användaren att gå med i Apples volymköpsprogram. Användaren måste gå med innan appinstallationen fortsätter. Inbjudan att gå med i Apples program för volyminköp kräver att användaren kan använda appen iTunes på iOS-enheten. Om du har angett en princip för inaktivering av iTunes Store-appen kommer den användarbaserade licensieringen för VPP-appar inte att fungera. Lösningen är att antingen tillåta iTunes-appen genom att ta bort principen eller använda enhetsbaserad licensiering.
+
+Apple tillhandahåller direkthjälp för att skapa och förnya VPP-token. Mer information finns i [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) (Distribuera innehåll till användarna med volyminköpsprogrammet (VPP)) som en del av Apples dokumentation. 
+
+Om **Assigned to external MDM** (Tilldelad till extern MDM) anges i Intune-portalen måste du (administratören) ta bort VPP-token från hantering av mobilenheter från tredje part innan VPP-token används i Intune.
 
 ## <a name="frequently-asked-questions"></a>Vanliga frågor och svar
 

@@ -15,12 +15,12 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0ada3be91c3b2c15e33e51449678212286362dbf
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 6f1fbe688705940d3e8038affb84268fbaf113e3
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321194"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313072"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrera Android-enheter automatiskt med hjälp av från Samsung Knox Mobile-registrering
 
@@ -88,7 +88,7 @@ För enheter som registrerats i Intune med KME kan du konfigurera hur en använd
 
 > [!NOTE]
 >
->När användarassociationen definieras kan bara associerad användare registrera enheten med KME. Detta gäller även efter en fabriksåterställning på enheten. När ingen användarassociation har definierats i Knox-portalen kan alla användare med en giltig licens för Intune registrera enheten med KME.
+>När användarassociationen definieras kan bara associerad användare registrera enheten med KME. Detta gäller även efter en rensning av enheten. När ingen användarassociation har definierats i Knox-portalen kan alla användare med en giltig licens för Intune registrera enheten med KME.
 >
 
 ## <a name="distribute-devices"></a>Distribuera enheter

@@ -15,12 +15,12 @@ ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bedd1108ce0c9e173e6e9519a29d3948f1320c3a
-ms.sourcegitcommit: 1a8b34c7854a575bf6ce59f475c7b718fa038d66
+ms.openlocfilehash: a1cf7fbdee6e6dc0cb280c8f9473c48608485737
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/18/2018
-ms.locfileid: "40251507"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329912"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Övervaka appinformation och tilldelningar med Microsoft Intune
 
@@ -30,7 +30,7 @@ I Intune kan du övervaka egenskaperna för appar som du hanterar och hantera ap
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I **Intune**-menyn väljer du **Mobilappar**.
+3. Välj **Klientappar** på **Intune**-menyn.
 4. I avsnittet**Hantera** på menyn, väljer du **Appar**.
 5. Välj en app att övervaka i listan över appar. Appfönstret visas med en översikt över enhetens och användarens status.
 

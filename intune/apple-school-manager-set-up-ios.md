@@ -15,12 +15,12 @@ ms.assetid: 4c35a23e-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 59449efd592f3c47bdf2350b495f81c23f442999
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 2d099d049892d71c36e4b01fb1a8af6f7ad25df1
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751810"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313417"
 ---
 # <a name="enable-ios-device-enrollment-with-apple-school-manager"></a>Aktivera registrering av iOS-enheter med Apple School Manager
 
@@ -113,7 +113,7 @@ Nu när du har installerat din token, kan du skapa en registreringsprofil för A
      > [!NOTE]
      > En enhet som registrerats utan övervakning kan bara återställas genom att använda Apple Configurator. Om du återställer enheten på det här sättet, måste du ansluta en iOS-enhet till en Mac-dator med en USB-kabel. Läs mer om detta i [dokumentation för Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS-inställningarna som tillåter att hanteringsprofilen tas bort från **Inställningar**-menyn. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
+7. Välj om du vill ha låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar iOS-inställningarna som tillåter att hanteringsprofilen tas bort från **Inställningar**-menyn. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten. Sådana enheter måste ha hanteringsläget **Övervakad** inställt på *Ja*. 
 
 8. Om du vill låta flera användare logga in på registrerade iPad-enheter med hjälp av ett hanterat Apple-ID väljer du **Ja** under **Delad iPad** (det här alternativet kräver att lägena **Registrera utan användartillhörighet**och **Övervakad** har inställningen **Ja**.) Hanterade Apple-ID:n skapas i Apple School Manager-portalen. Läs mer om [Delad iPad](education-settings-configure-ios-shared.md) och [Apples krav för delad iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
@@ -179,4 +179,4 @@ Apple School Manager-enheter som hanteras av Intune måste tilldelas en registre
 
 ## <a name="distribute-devices-to-users"></a>Distribuera enheter till användare
 
-Du har aktiverat hantering och synkronisering mellan Apple och Intune och har tilldelat en profil så att dina Apple School-enheter kan registreras. Du kan nu distribuera enheter till användare. När en Apple School Manager-enhet i iOS aktiveras kommer den att registreras för hantering av Intune. Om enheten har aktiverats och används kan profilen inte användas förrän enheten har fabriksåterställts.
+Du har aktiverat hantering och synkronisering mellan Apple och Intune och har tilldelat en profil så att dina Apple School-enheter kan registreras. Du kan nu distribuera enheter till användare. När en Apple School Manager-enhet i iOS aktiveras kommer den att registreras för hantering av Intune. Om enheten har aktiverats och används kan profilen inte användas förrän enheten har rensats.

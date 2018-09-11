@@ -15,12 +15,12 @@ ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 26117a07e0769033dda573882c3853eb0e3921ff
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: ec483218cb86426b237c40c8831a2f0880847ade
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251582"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347465"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Lägga till webbappar i Microsoft Intune
 
@@ -39,8 +39,8 @@ Om du vill lägga till en app i Intune som en genväg till en app på webben gö
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.  
     Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
 5. Välj **Lägg till** i fönsterrutan **Appar**.
 6. Välj typen **Webblänk** i listrutan **Typ av app** i fönsterrutan **Lägg till app**.
 7. Välj **Konfigurera**.

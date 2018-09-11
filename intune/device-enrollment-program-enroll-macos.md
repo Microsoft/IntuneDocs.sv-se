@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7b913cc2f667cb2bb16d6f810d7449ce8ee752e8
-ms.sourcegitcommit: 165c1e48891e386f9f75b0ef7a6826b67695dbb7
+ms.openlocfilehash: 18b4ab35627e1ccb694104f3f5800e5fb07dd1c7
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751742"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313434"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Registrera macOS-enheter automatiskt med Apples program för enhetsregistrering
 
@@ -106,7 +106,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 1. I Intune på Azure-portalen väljer du **Enhetsregistrering** > **Apple-registrering** > **Token för registreringsprogram**.
 2. Välj en token, välj **Profiler** och välj sedan **Skapa profil**.
 
-    ![Skapa en profilskärmbild.](./media/device-enrollment-program-enroll-ios/image04.png)
+    ![Skärmbild av Skapa en profil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
 3. Under **Skapa profil**, anger du ett **Namn** och **Beskrivning** för profilen för administrationssyfte. Användarna kan inte se den här informationen. Du kan använda fältet **Namn** för att skapa en dynamisk grupp i Azure Active Directory. Använd profilnamnet för att definiera parametern enrollmentProfileName för att tilldela registreringsprofilen till enheter. Läs mer om [dynamiska Azure Active Directory-grupper](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
 
@@ -119,7 +119,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 
     - **Registrera utan användartillhörighet** – välj det här alternativet för enheter som inte är kopplade till en enda användare. Använd det här för enheter som utför uppgifter utan att komma åt lokala användardata. Appar som företagsportalappen fungerar inte.
 
-6. Välj **Enhetshanteringsinställningar** och välj om du vill tillämpa låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar macOS-inställningarna som tillåter att hanteringsprofilen tas bort från menyn **Systeminställningar** eller via **Terminal**. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en fabriksåterställning av enheten.
+6. Välj **Enhetshanteringsinställningar** och välj om du vill tillämpa låst registrering för enheter som använder den här profilen. **Låst registrering** inaktiverar macOS-inställningarna som tillåter att hanteringsprofilen tas bort från menyn **Systeminställningar** eller via **Terminal**. När enhetsregistreringen är klar går det inte att ändra inställningen utan att göra en rensning av enheten.
 
     ![Skärmbild för Enhetshanteringsinställningar.](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
  
@@ -128,13 +128,14 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 8. Välj **Inställningar för inställningsassistenten** för att konfigurera följande profilinställningar: ![Anpassning av inställningsassistenten.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Avdelningsinställningar | Description |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |---|---|
     | <strong>Avdelningsnamn</strong> | Visas när användare trycker på <strong>Om konfiguration</strong> vid aktiveringen. |
-    |    <strong>Avdelningens telefonnummer</strong>     |                                                          Visas när användaren klickar på knappen <strong>Behöver hjälp</strong> vid aktiveringen. |
+    | <strong>Avdelningens telefonnummer</strong> | Visas när användaren klickar på knappen <strong>Behöver hjälp</strong> vid aktiveringen. |
 
-    Du kan välja att visa eller dölja en mängd olika skärmar i Installationsassistenten på enheten för användaren.
-    - Om du väljer **Dölj** visas inte skärmen under installationen. När enheten har konfigurerats kan användaren fortfarande använda menyn **Inställningar** för att ställa in funktionen.
-    - Om du väljer **Visa** så visas skärmen under installationen. Användaren kan ibland hoppa över skärmen utan att vidta några åtgärder. Det går dock att öppna menyn **Inställningar** på enheten för att ställa in funktionen. 
+  Du kan välja att visa eller dölja en mängd olika skärmar i Installationsassistenten på enheten för användaren.
+  - Om du väljer **Dölj** visas inte skärmen under installationen. När enheten har konfigurerats kan användaren fortfarande använda menyn **Inställningar** för att ställa in funktionen.
+  - Om du väljer **Visa** så visas skärmen under installationen. Användaren kan ibland hoppa över skärmen utan att vidta några åtgärder. Det går dock att öppna menyn **Inställningar** på enheten för att ställa in funktionen. 
+
 
     | Inställningar på skärm i Installationsassistenten | Om du väljer **Visa** kommer enheten under installationen att ... |
     |------------------------------------------|------------------------------------------|
@@ -152,6 +153,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
     | <strong>iCloud Diagnostics</strong> | Ge användaren möjlighet att skicka diagnostikdata för iCloud till Apple. |
     | <strong>Registrering</strong>| Kräva att användaren registrerar enheten. |
 
+   
 
 10. Välj **OK**.
 
@@ -172,7 +174,7 @@ Du måste tilldela en registreringsprogramprofil till enheterna innan de kan reg
 
 1. I Intune i Azure-portalen, väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > välj en token i listan.
 2. Välj **Enheter** > välj enheter i listan > **Tilldela profil**.
-3. Under **Tilldela profil**, väljer du en profil för enheterna och sedan **Tilldela**.
+3. Välj en profil för enheterna under **Tilldela profil** och välj sedan **Tilldela**.
 
 ### <a name="assign-a-default-profile"></a>Ange som standardprofil
 
@@ -182,7 +184,7 @@ Du kan välja en macOS- och iOS-profil av standardtyp som ska tillämpas för al
 2. Välj **Ange standardprofil**, välj en profil i listmenyn och välj sedan **Spara**. Den här profilen kommer att tillämpas på alla enheter som registreras med token.
 
 ## <a name="distribute-devices"></a>Distribuera enheter
-Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har återställts till fabriksinställningarna.
+Du har aktiverat hantering och synkronisering mellan Apple och Intune, och har tilldelat en profil så att DEP-enheterna kan registreras. Du kan nu distribuera enheter till användare. Enheter med användartillhörighet kräver att varje användare tilldelas en Intune-licens. Enheter utan användartillhörighet kräver en enhetslicens. En aktiverad enhet kan inte använda en registreringsprofil förrän enheten har rensats.
 
 ## <a name="renew-a-dep-token"></a>Ladda upp en DEP-token  
 1. Gå till deploy.apple.com.  

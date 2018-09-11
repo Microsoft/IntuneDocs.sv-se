@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a66ed41442e89ed40850f5b9cd56cbc004a43d0
-ms.sourcegitcommit: 8b4f5685dc7f41f5e967a8f9d0627707a36dbe93
+ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251624"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329673"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -37,7 +37,7 @@ Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar
 Information om att lägga till organisationens affärsapplikationer i Microsoft Intune och förbereda för appskyddsprinciper finns i [Lägga till appar i Microsoft Intune](apps-add.md).
 
 ##  <a name="create-an-app-protection-policy"></a>Skapa en appskyddsprincip
-1. Välj **Principer för appskydd** i **Hantera** i arbetsbelastningen **Mobilappar**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga.
+1. Välj **Principer för appskydd** i avsnittet **Hantera** i arbetsbelastningen **Klientappar**. Därmed öppnas **Principer för appskydd** där du kan skapa nya principer och redigera befintliga.
 2. Välj **Lägg till en princip**.
 
    ![Skärmbild av bladet Lägg till en princip](./media/app-protection-add-policy.png)
@@ -125,7 +125,7 @@ I många organisationer är det vanligt att tillåta användare att använda bå
 
 Eftersom Intune-appskyddsprinciper är riktade till en användares identitet gäller skyddsinställningarna för en användare vanligtvis både för registrerade (MDM-hanterade) och icke-registrerade enheter (utan MDM). Därför kan du rikta en Intune-appskyddsprincip till antingen Intune-registrerade eller icke registrerade iOS- och Android-enheter. Du kan ha en skyddsprincip för ohanterade enheter där ett strikt dataförlustskydd (DLP) används och en separat skyddsprincip för MDM-hanterade enheter, där du kan använda lite mindre strikta DLP-kontroller. 
 
-För att skapa de här principerna bläddrar du till **Mobilappar** > **Appskyddsprinciper** i Intune-konsolen och klickar på **Lägg till en princip**. Du kan även redigera eller en befintlig princip. Om du vill att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in inställningen **Target to all app types** (Gäller för alla apptyper) på **Nej**. 
+För att skapa de här principerna bläddrar du till **Klientappar** > **Appskyddsprinciper** i Intune-konsolen och klickar på **Lägg till en princip**. Du kan även redigera eller en befintlig princip. Om du vill att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in inställningen **Target to all app types** (Gäller för alla apptyper) på **Nej**. 
 
 För att iOS-appar ska anses vara ”hanterade” måste konfigurationsinställningen **IntuneMAMUPN** för princip distribueras för varje app. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 

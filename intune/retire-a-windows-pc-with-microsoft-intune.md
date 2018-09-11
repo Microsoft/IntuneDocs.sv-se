@@ -15,18 +15,18 @@ ms.assetid: 5c916182-d99c-44c5-a779-3f596f261c40
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: c3b0ba5fc46ad489dcb004554abfee4044a74195
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
+ms.openlocfilehash: 95525e66cce1e9691c60799df3da184954d6bf4b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310444"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312669"
 ---
 # <a name="retire-a-windows-pc"></a>Inaktivera en Windows-dator
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Använd följande steg för att inaktivera datorer som hanteras som datorer genom att köra Intune-programvaruklienten på dem. När du inaktiverar en dator tas den bort från Intune-hanteringen. Det går inte att fabriksåterställa en dator från Intune så att den återgår till de ursprungliga fabriksinställningarna.
+Använd följande steg för att inaktivera datorer som hanteras som datorer genom att köra Intune-programvaruklienten på dem. När du inaktiverar en dator tas den bort från Intune-hanteringen. Det går inte att rensa en dator från Intune så att den återgår till de ursprungliga fabriksinställningarna.
 
 1.  I [Microsoft Intune-administrationskonsolen](https://manage.microsoft.com/) väljer du **Grupper** &gt; **Alla enheter** (eller någon annan grupp som innehåller den dator du vill inaktivera).
 

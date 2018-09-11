@@ -15,12 +15,12 @@ ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bffd53030c23f38f0548cb5bccf82f6dd5e85779
-ms.sourcegitcommit: 399f34cd169e2e352b49aad1dcb7e88294a4a9f1
+ms.openlocfilehash: f8b76de6e9b3a584be7ad324391c1c071140488e
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37869514"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329452"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Tilldela Office 365 till macOS-enheter med Microsoft Intune
 
@@ -40,8 +40,8 @@ Innan du börjar lägga till Office 365 till macOS-enheter bör du förstå föl
 Lägg till Office 365 från fönstret **Appar**.
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Övervakning + hantering** > **Intune**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**. 
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**. 
 5. Välj **Lägg till**.
 6. I listan **Apptyp** i gruppen **Office 365-paket** väljer du **macOS**.
 7. Välj **Information om appsvit** för att få information om appsviten.  

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 08/28/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8bb03becae1f28a3f5490a53576d5183c0b3ffaa
-ms.sourcegitcommit: 0d08daa162212e6cdd8a6ee3ad7ed42c6e6824e4
+ms.openlocfilehash: da220e1f82c59f3181d64dc01d071867d62df397
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335834"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313980"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Vad är enhetsprofiler i Microsoft Intune?
 
@@ -54,6 +54,7 @@ Den här funktionen stöder:
 - iOS 
 - macOS
 
+
 ## <a name="device-restrictions"></a>Enhetsbegränsningar
 [Enhetsbegränsningar](device-restrictions-configure.md) styr säkerhet, maskinvara, delning av data och fler inställningar på enheter. Du kan till exempel skapa en profil för enhetsbegränsningar som förhindrar användare av iOS-enheter från att använda kameran på enheten. 
 
@@ -72,6 +73,13 @@ Om du vill publicera Windows Defender Avancerat skydd (WDATP) med Microsoft Intu
 
 Den här funktionen stöder:
 - Windows 10 och senare
+
+## <a name="identity-protection"></a>Identity Protection
+[Identity protection](identity-protection-configure.md) styr upplevelsen av Windows Hello for Business på Windows 10- och Windows 10 Mobile-enheter. Konfigurera dessa inställningar för att göra Windows Hello for Business tillgängligt för användare och enheter, samt för att ange krav på PIN-koder för enheter och gester.  
+
+Den här funktionen stöder:  
+- Windows 10 och senare
+- Windows 10 Holographic for Business  
 
 ## <a name="kiosk"></a>Helskärmsläge
 

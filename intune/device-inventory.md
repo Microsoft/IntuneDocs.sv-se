@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16b8067610e21652a40cb87302d8f1f3d05de342
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
+ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117930"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313186"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -34,11 +34,14 @@ Den här artikeln beskriver hur du visar alla dina enheter och deras egenskaper 
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enheter** > **Alla enheter** > välj en av enheterna i listan för att öppna informationen:
 
-   - I **Översikt** visas namnet på enheten och några viktiga egenskaper, bland annat om det är en BYOD-enhet (Bring Your Own Device), när den checkades in och mycket mer. Välj **Mer** för att:
-     - Ta bort företagsdata
-     - Ta bort enheten
-     - Fjärrlåsa enheten
-     - Radera
+   - I **Översikt** visas namnet på enheten och några viktiga egenskaper, bland annat om det är en BYOD-enhet (Bring Your Own Device), när den checkades in och mycket mer. Du kan utföra följande åtgärder på enheten:
+      - [Pensionera](devices-wipe.md#retire)
+        - [Rensning](devices-wipe.md#wipe)
+        - [Fjärrlåsning](device-remote-lock.md)
+        - [Synkronisera enhet](device-sync.md)
+        - [Återställ lösenord](device-passcode-reset.md)
+        - [Starta om](device-restart.md) (Endast Windows)
+        - [Börja om på nytt](device-fresh-start.md) (Endast Windows)
      - Starta en fjärrhjälpssession
    - Använd **Egenskaper** för att tilldela en [enhetskategori som du skapar](device-group-mapping.md), samt för att ändra ägarskap för enheten till en personlig enhet eller företagets enhet.
    - **Maskinvara** innehåller information om enheten, bland annat enhets-ID, operativsystem och version, lagringsutrymme, modell och tillverkare, inställningar för villkorlig åtkomst.

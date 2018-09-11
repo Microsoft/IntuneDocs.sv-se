@@ -15,12 +15,12 @@ ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e8b3e34e72775061dcc3b40f60e75243972cedd2
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1ae7723e29d23575314fc632c75af01eb9e59f72
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223602"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347668"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Lägga till Windows Phone 8.1 Store-appar i Microsoft Intune
 
@@ -34,8 +34,8 @@ Du kan lägga till en Windows Phone 8.1 Store-app till Intune från Azure Portal
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.  
     Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
 5. Välj **Lägg till** i fönsterrutan **Appar**.
 6. I fönstret **Lägg till app** väljer du **Windows Phone 8.1** som **Apptyp** och väljer sedan **Appinformation**.
 7. Lägg till appinformationen i fönstret **Appinformation**. Beroende på vilken app du har valt kan det hända att några av värdena i det här fönstret har fyllts i automatiskt:

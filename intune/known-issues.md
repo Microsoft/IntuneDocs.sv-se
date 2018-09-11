@@ -5,7 +5,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 08/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f49b5050f4ce182699f0955bed6224309a4d7c7c
-ms.sourcegitcommit: c1631ad8feba6c6fd03698ab20836b2e5d8a78d2
+ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34073843"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347805"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -33,6 +33,13 @@ Om du vill rapportera en bugg som inte visas här, [öppnar du en supportförfr�
 Om du vill föreslå en ny funktion för Intune så kan du skicka in en rapport på [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console)-webbplatsen.
 
 ## <a name="migration"></a>Migrering
+
+### <a name="export-azure-classic-portal-compliance-policies-to-recreate-these-policies-in-the-intune-azure-portal"></a>Exportera efterlevnadsprinciper för den klassiska Azure-portalen för att återskapa dessa principer i Intune Azure-portalen
+
+Principer för enhetsefterlevnad som skapats i den klassiska Azure-portalen upphör att gälla. Du kan granska och ta bort alla befintliga principer, men du kan inte uppdatera dem. Om du behöver migrera några efterlevnadsprinciper till den befintliga Intune Azure-portalen kan du exportera principerna som en kommaavgränsad fil (.csv-fil). Använd sedan informationen i filen för att återskapa dessa principer i Intune Azure-portalen.
+
+> [!IMPORTANT]
+> När den klassiska Azure-portalen upphör kommer du inte längre att kunna komma åt eller visa dina efterlevnadsprinciper. Tänk därför på att exportera dina principer och återskapa dem i Azure-portalen innan den klassiska Azure-portalen upphör.
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Äldre Intune-PC-klientfunktioner är endast tillgängliga i Silverlight-konsolen
 
@@ -52,7 +59,7 @@ Du kan inte visa statusinformation i Azure Portal för principer som har migrera
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Upprepade uppmaningar om appinstallation för vissa VPP-appar
 Du kan se flera uppmaningar om appinstallation för vissa VPP-appar som redan är installerade på slutanvändarnas enheter. Det här problemet uppstår om alternativet **Automatiska appuppdateringar** har angetts till **På** för den VPP-token som du har laddat upp till Intune i Azure Portal.    
 
-Du kan lösa det här problemet genom att inaktivera alternativet **Automatiska appuppdateringar** för VPP-token. Gör det genom att öppna Microsoft Intune i Azure Portal. Från Intune väljer du **Mobilappar** > **iOS VPP-token**. Välj den VPP-token som har distribuerat den berörda appen och välj sedan **Redigera** > **Automatiska appuppdateringar** > **Av** > **Spara**. Alternativt kan du stoppa distributionen av den berörda appen som en VPP-app. Då visas inga fler uppmaningar.    
+Du kan lösa det här problemet genom att inaktivera alternativet **Automatiska appuppdateringar** för VPP-token. Gör det genom att öppna Microsoft Intune i Azure Portal. Från Intune väljer du **Klientappar** > **iOS VPP-token**. Välj den VPP-token som har distribuerat den berörda appen och välj sedan **Redigera** > **Automatiska appuppdateringar** > **Av** > **Spara**. Alternativt kan du stoppa distributionen av den berörda appen som en VPP-app. Då visas inga fler uppmaningar.    
 
 Det här är ett känt problem i den aktuella versionen. Vi har en kommande korrigering som löser problemet. När korrigeringen har implementerats visas inga upprepade uppmaningar om appinstallation för användarna.
 

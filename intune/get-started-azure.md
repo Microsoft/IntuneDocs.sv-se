@@ -15,12 +15,12 @@ ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 859194b364a64854922993d2d798f318b260fc80
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 4e070e80bb9575154aded12f0992d04bd7a4718f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836344"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329962"
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Komma igång med Microsoft Intune i Azure-portalen
 
@@ -53,7 +53,7 @@ Den här funktionen är mer relevant när du har lagt till mer innehåll, exempe
 
 ## <a name="using-services"></a>Använda tjänster
 
-När du öppnar Intune eller någon annan tjänst i Azure visas tjänsten i ett **fönster**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Mobilappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas fönstret på hela sidan. Övriga fönster dras ut från fönstrets högra sida när de öppnas och komprimeras under det huvudfönster som de kom ifrån.
+När du öppnar Intune eller någon annan tjänst i Azure visas tjänsten i ett **fönster**. Några av de första arbetsbelastningarna du använder i Intune, t.ex. **Användare**, **Grupper** och **Klientappar**, visas i helskärmsläge. När du markerar en arbetsbelastning öppnas fönstret på hela sidan. Övriga fönster dras ut från fönstrets högra sida när de öppnas och komprimeras under det huvudfönster som de kom ifrån.
 
 ## <a name="next-steps"></a>Nästa steg
 

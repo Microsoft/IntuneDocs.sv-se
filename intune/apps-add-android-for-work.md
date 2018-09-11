@@ -15,12 +15,12 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b65daa6e098954d88c502114fc7a33ad4cf5efcd
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: faa8918441bd705875fcdc72d3717af001ab2b85
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909294"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329878"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Tilldela appar till Android-arbetsprofilenheter med Intune
 
@@ -59,18 +59,18 @@ Kontrollera att du har konfigurerat Intune och Android-arbetsprofiler så att de
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synkronisera en Managed Google Play-app med Intune
 
-Om du har godkänt en app från butiken men inte ser den i noden **licensierade appar** i arbetsbelastningen **mobilappar**, kan du framtvinga en omedelbar synkronisering genom att göra följande:
+Om du har godkänt en app från butiken men inte ser den i noden **licensierade appar** i arbetsbelastningen **Klientappar**, kan du framtvinga en omedelbar synkronisering genom att göra följande:
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Installation** väljer du **Hanterat Google Play-konto**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** under **Installation** väljer du **Hanterat Google Play-konto**.
 5. I fönstret **Hanterat Google Play-konto** väljer du **Uppdatera**.  
     Sidan uppdaterar tid och status för den senaste synkroniseringen.
-6. I arbetsbelastningsfönstret **Mobilappar** väljer du **Appar**.  
+6. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar**.  
     Den nya tillgängliga Managed Google Play-appen visas.
 
-När appen visas i noden **Applicenser** i arbetsbelastningsfönstret för **Mobilappar** kan du [tilldela den på samma sätt som du gör med andra appar](/intune-azure/manage-apps/deploy-apps). Du kan endast tilldela appen till grupper av användare.
+När appen visas i noden **Applicenser** i arbetsbelastningsfönstret **Klientappar** kan du [tilldela den på samma sätt som du gör med andra appar](/intune-azure/manage-apps/deploy-apps). Du kan endast tilldela appen till grupper av användare.
 
 När du har tilldelat appen installeras den på de enheter som du har som mål. Användaren av enheten behöver inte godkänna installationen.
 
@@ -81,7 +81,7 @@ När apputvecklare uppdaterar behörigheter med en ny version av appen tillåts 
 
 ### <a name="update-app-permissions"></a>Uppdatera app-behörigheter
 
-Du bör regelbundet besöka Managed Google Play-konsolen för att söka efter nya behörigheter. Du kan konfigurera Google Play att skicka dig eller andra ett e-postmeddelande när nya behörigheter krävs för en godkänd app. Om du tilldelar en app och noterar att den inte installeras på enheterna, söker du efter nya behörigheter genom att göra följande:
+Du bör regelbundet besöka den hanterade Google Play-konsolen för att söka efter nya behörigheter. Du kan konfigurera Google Play att skicka dig eller andra ett e-postmeddelande när nya behörigheter krävs för en godkänd app. Om du tilldelar en app och noterar att den inte installeras på enheterna, söker du efter nya behörigheter genom att göra följande:
 
 1. Gå till [Google Play](http://play.google.com/work).
 2. Logga in med det Google-konto som du använde för att publicera och godkänna apparna.

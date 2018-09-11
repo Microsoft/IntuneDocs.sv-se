@@ -15,12 +15,12 @@ ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d527b36876adf29c12d3577f7dcd09416b4d5a37
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: f907ddb631c974a9c7626483446600eae149a12c
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255488"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347404"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Lägga till verksamhetsspecifika appar för macOS i Microsoft Intune
 
@@ -60,8 +60,8 @@ Du måste hämta ett externt verktyg för att förbearbeta dina *.pkg*-filer inn
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Mobilappar** i **Intune**-fönstret.
-4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
 5. Välj **Lägg till** ovanför applistan.
 6. I fönstret **Lägg till app** väljer du **Verksamhetsspecifik app**.
 

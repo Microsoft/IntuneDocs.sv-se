@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f973bd36faef14232d6449c8ce9d1dc92bf32170
-ms.sourcegitcommit: 0bddd8a76201746e8835c4b792f34377b45fad60
+ms.openlocfilehash: b37c210425fd5abf8fd0b0501966fef8196b451b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39356581"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312629"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Kringgå aktiveringslåset på övervakade iOS-enheter med Intune
 
@@ -78,9 +78,9 @@ Intunes fjärråtgärd **Kringgå aktiveringslås** tar bort aktiveringslåset f
 6. Gå till enhetens maskinvaruavsnitt och kopiera sedan värdet **Kod för att kringgå aktiveringslås** under **Villkorlig åtkomst**.
 
     >[!NOTE]
-    >Kopiera koden för att kringgå innan du utför en fabriksåterställning av enheten. Om du återställer enhetsinställningarna innan du har kopierat koden tas koden bort från Azure.
+    >Kopiera koden för att kringgå innan du rensar enheten. Om du återställer enhetsinställningarna innan du har kopierat koden tas koden bort från Azure.
 
-7.  Gå till bladet **Översikt** för enheten och välj sedan **Fabriksåterställning**.
+7.  Gå till bladet **Översikt** för enheten och välj sedan **Rensa**.
 8.  När enheten har återställts uppmanas du att ange *Apple-ID* och *lösenord*. Lämna fältet *ID* tomt och ange sedan den **koden för att kringgå** för *lösenordet*. Detta tar bort kontot från enheten. 
 
 

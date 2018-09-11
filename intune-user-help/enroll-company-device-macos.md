@@ -1,11 +1,11 @@
 ---
-title: Registrera din företagsägda eller tillhandahållna macOS-enhet för hantering | Microsoft Docs
+title: Registrera din macOS-enhet som tillhandahålls av organisationen för hantering | Microsoft Docs
 description: Beskriver hur du registrerar en macOS-enhet i Intune som har köpts och tillhandahålls av din organisation.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/24/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,26 +17,26 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 272a82f7d3d62d117fa5506ccf446b3169ff514f
-ms.sourcegitcommit: bb56ada81e6d4950f130415918c4acc455bb52dd
+ms.openlocfilehash: a5808a0ac80390b76058827d2ca0870249b043b9
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43016235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241838"
 ---
-# <a name="get-your-company-owned-macos-device-managed"></a>Gör din företagsägda macOS-enhet hanterad
+# <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
-Lär dig hur du får en ny macOS-enhet automatiskt hanterad i Intune.
+Läs om hur du får en ny macOS-enhet hanterad i Intune.  
 
-Enheter som ägs av arbetet eller skolan är ofta förkonfigurerade innan du får dem. Din organisation skickar förkonfigurerade inställningar till din enhet när du startar den och loggar in för första gången. När installationen är färdig får du tillgång till arbetets eller skolans resurser. 
+Enheter som tillhandahålls till dig av arbete eller skola är ofta förkonfigurerade innan du tar emot dem. Din organisation skickar dessa förkonfigurerade inställningar till enheten när du startar den och loggar in för första gången. När installationen är färdig får du tillgång till arbetets eller skolans resurser. 
 
 Du påbörjar konfigureringen genom att starta din enhet och logga in med dina inloggningsuppgifter för arbetet eller skolan. Resten av den här artikeln beskriver stegen och de skärmar du kommer att se i installationsassistenten.   
 
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
-Om du har en enhet som ägs av företaget kan den ha köpts via Apple Device Enrollment Program (DEP). Vissa organisationer köper stora mängder iOS- eller macOS-enheter via Apple DEP. Organisationer kan sedan konfigurera och hantera enheterna i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples Device Enrollment Program](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
 ## <a name="set-up-your-macos-device"></a>Konfigurera din macOS-enhet  
-Utför följande steg när du ska registrera din macOS-enhet för hantering. Om du använder en egen enhet i stället för en företagsägd enhet följer du de här stegen för [egna enheter](enroll-your-device-in-intune-macos-cp.md).  
+Utför följande steg när du ska registrera din macOS-enhet för hantering. Om du använder en egen enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Starta din macOS-enhet. 
 2. Välj **Språk** och klicka på **Fortsätt**.  
@@ -64,4 +64,4 @@ Utför följande steg när du ska registrera din macOS-enhet för hantering. Om 
 ## <a name="get-the-company-portal-app"></a>hämta appen för företagsportalen.      
 Gå till App Store och hämta appen Intune Företagsportal till enheten. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

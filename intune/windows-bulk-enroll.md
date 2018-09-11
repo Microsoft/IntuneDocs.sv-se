@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 ms.custom: intune-azure
-ms.openlocfilehash: a1d0c445c2e6e5f2e4227d1b04ead416bf73d737
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 937fdd2130a0ae85421a4310fe6a0dc70986d2de
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34444888"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313246"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Massregistrering för Windows-enheter
 
@@ -85,10 +85,10 @@ Azure AD-användare är standardanvändare på enheterna och kan ta emot de till
 ## <a name="troubleshooting-windows-bulk-enrollment"></a>Felsökning av massregistrering i Windows
 
 ### <a name="provisioning-issues"></a>Konfigurationsproblem
-Konfigurationen är avsedd att användas på nya Windows-enheter. Konfigurationsfel kan kräva en fabriksåterställning av enheten eller en enhetsåterställning från en startavbildning. I nedanstående exempel beskrivs några orsaker till konfigurationsfel:
+Konfigurationen är avsedd att användas på nya Windows-enheter. Konfigurationsfel kan kräva en rensning av enheten eller en enhetsåterställning från en startavbildning. I nedanstående exempel beskrivs några orsaker till konfigurationsfel:
 
 - Ett konfigurationspaket som försöker ansluta till en Active Directory-domän eller Azure Active Directory-klient som inte skapar ett lokalt konto, kan innebära att enheten inte kan nås om domänanslutningen misslyckas på grund av bristande nätverksanslutning.
-- Skript som körs av etableringspaketet körs i systemets kontext. Skripten kan göra godtyckliga ändringar till enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en fabriksåterställning av enheten.
+- Skript som körs av etableringspaketet körs i systemets kontext. Skripten kan göra godtyckliga ändringar till enhetens filsystem och konfigurationer. Ett skadligt eller felaktigt skript kan placera enheten i ett tillstånd som bara kan återställas av en återställning av avbildningen eller en rensning av enheten.
 
 ### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problem med massregistrering och företagsportalen
 Om en användare försöker registrera en tidigare massregistrerad enhet med hjälp av företagsportalen, visas en varning om att deras enheter behöver ytterligare åtgärder, antingen installation eller registrering. Enheten är registrerad, men registreringen kan inte identifieras av företagsportalappen eller webbplatsen.

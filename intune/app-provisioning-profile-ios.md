@@ -15,12 +15,12 @@ ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5d3cc718c0bfd0bba68480b4cd4003cd52489a50
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 5ed39a13c8866786ac044d77ca61d91becd5b89f
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225046"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329572"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Använd etableringsprofilerna för iOS-appar för att förhindra att dina appar upphör att gälla
 
@@ -43,8 +43,8 @@ Som administratör kan du inkludera och undanta säkerhetsgrupper när du tillde
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Mobilappar** i **Intune**-fönstret.
-1.  Välj **Hantera** > **Etableringsprofiler för iOS-app** i arbetsbelastningen **Mobilappar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+1.  Välj **Hantera** > **Etableringsprofiler för iOS-app** i arbetsbelastningen **Klientappar**.
 2.  Välj **Skapa profil** i fönstret med profillistan.
 3. Ange följande värden i fönstret **Skapa profil**:
     - **Namn** – Ange ett namn för den här etableringsprofilen.

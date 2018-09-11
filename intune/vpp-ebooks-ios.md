@@ -15,12 +15,12 @@ ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c00904097986d1cf70031f1b17171221da64abc0
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 1b43e7df72e709cfdd929085b1d6718f1afcdf9f
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224808"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347360"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Så här hanterar du e-böcker i iOS som du har köpt via ett volymköpsprogram med Microsoft Intune
 
@@ -55,8 +55,8 @@ Innan du börjar hämtar du en VPP-token från Apple och laddar upp den till dit
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Mobilappar** i **Intune**-fönstret.
-1.  I arbetsbelastningen **Mobilappar** väljer du **Installation** > **iOS VPP-token**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+1.  I arbetsbelastningen **Klientappar** väljer du **Installation** > **iOS VPP-token**.
 2.  I listan med VPP-tokens klickar du på **Skapa**.
 3.  I fönstret **Ny VPP-token** anger du följande information:
     - **VPP-tokenfil** – Kontrollera att du har registrerat dig för volyminköpsprogrammet för företag eller volymköpsprogrammet för utbildning. Därefter laddar du ned Apples VPP-token för ditt konto och markerar den.

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 4774cdc54a526f25b006c0c3d1a745ab96005c3a
-ms.sourcegitcommit: 2b5d88c434bda7f1cdc32d1ccacc6b341a9a399b
+ms.openlocfilehash: 5b3fbd677eea9143bf5cb297253303330129ef25
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33676638"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148586"
 ---
-# <a name="lock-your-device-from-company-portal-app-for-windows-10"></a>Låsa enheten från appen Företagsportal för Windows 10
+# <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Låsa enheten från företagsportalappen för Windows 10
 
-Fjärrlås en förlorad eller stulen enhet från appen Företagsportal för Windows 10. Om enheten har stöd för funktionen kan du via appen Företagsportal låsa enhetens skärm – oavsett var den finns. Ett lösenord krävs för att låsa upp den.
+Fjärrlås en förlorad eller stulen enhet från appen Företagsportal för Windows 10. Om enheten har stöd för funktionen låser den här inställningen enhetens skärm – oavsett var enheten finns. En person måste ange korrekt lösenord innan enheten kan låsas upp och användas igen.
 
 Fjärrlås stöds på enheter som kör:
 
@@ -43,4 +43,4 @@ Fjärrlås stöds på enheter som kör:
    ![Skärmbild av appen Företagsportal, sidan Information om enhet, bekräftelse av fjärrlåsning.](./media/1804_remote_lock_Windows_CPapp_06.png)  
 4. Om du hittar din enhet anger du ditt lösenord för att låsa upp den.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

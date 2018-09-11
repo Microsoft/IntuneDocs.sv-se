@@ -1,7 +1,7 @@
 
 1. Logga in på [Azure Portal](https://portal.azure.com).  
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.  
-3. Välj **Mobilappar** > **Appar**.
+3. Välj **Klientappar** > **Appar**.
 4. Sök efter och välj din app i listan över appar.  
 5. I bladet **Översikt** väljer du **Egenskaper**.  
 6. Välj **Appaketfil**.  

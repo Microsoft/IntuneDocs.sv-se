@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 08/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: aa91e0c0adcd1182f82c4a09746f154302fae326
-ms.sourcegitcommit: 77ed48ab52b55e92ceaa89e9edf53b892fc62adb
+ms.openlocfilehash: 76c0b96a1759caad4a1052a7233c7dcc8cecfa3b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/17/2018
-ms.locfileid: "40251534"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313725"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -35,15 +35,15 @@ Bland de specifika registreringsbegränsningarna som du kan skapa finns:
 
 - Högsta tillåtna antal registrerade enheter.
 - Enhetsplattformar som får registreras:
-  - Android.
-  - Android-arbetsprofil.
-  - iOS.
-  - macOS.
-  - Windows.
+  - Android
+  - Android-arbetsprofil
+  - iOS
+  - macOS
+  - Windows
 - Version av plattformsoperativsystem för iOS, Android, Android-arbetsprofil och Windows. (Endast Windows 10-versioner kan användas. Lämna tomt om Windows 8.1 tillåts.)
   - Lägsta version.
   - Högsta version.
-- Begränsningar gentemot privatägda enheter (endast iOS, Android, Android-arbetsprofil och macOS).
+- Begränsningar gentemot privatägda enheter (endast iOS, Android, Android-arbetsprofil, macOS och Windows).
 
 ## <a name="default-restrictions"></a>Standardbegränsningar
 
@@ -66,28 +66,46 @@ Standardbegränsningar tillhandahålls automatiskt för både begränsningar fö
 
 ## <a name="set-device-type-restrictions"></a>Ange begränsningar för enhetstyp
 
-Du kan ändra inställningarna för en begränsning för enhetstyp genom att följa dessa steg:
+Du kan ändra inställningarna för en begränsning för enhetstyp genom att följa stegen nedan. Dessa begränsningar påverkar inte enheter som redan har registrerats. Enheter som registreras med [Intune PC-agenten](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune.md) kan inte blockeras med den här funktionen.
 
 1. Logga in på Azure-portalen.
 2. Välj **Fler tjänster**, sök efter **Intune** och välj sedan **Intune**.
 3. Välj **Enhetsregistrering** > **Registreringsbegränsningar**.
-4. Under **Begränsningar för enhetstyp** väljer du den begränsning som du vill ange.
-5. Under begränsningsnamnet (**Alla användare** för begränsningen som är standard) väljer du **Plattformar**. Välj **Tillåt** eller **Blockera** för varje plattform som är med i listan.
-6. Välj **Spara**.
-7. Under begränsningsnamnet (**Alla användare** för standardbegränsning) väljer du **Plattformskonfigurationer**. Välj sedan lägsta och högsta **Versioner** för de plattformar som anges. Versionsformat som stöds är:
+4. Under **Begränsningar för enhetstyp** väljer du den begränsning som du vill ange > **Egenskaper** > **Välj plattformar**. Välj **Tillåt** eller **Blockera** för varje plattform som är med i listan.
+    ![Skärmbild för att tillåta eller blockera en plattform](media/enrollment-restrictions-set/platform-allow-block.png)
+5. Välj **OK**.
+6. Välj **Konfigurera plattformar**.
+    ![Skärmbild för att konfigurera plattformar](media/enrollment-restrictions-set/configure-platforms.png)
+7. Välj lägsta och högsta **Versioner** för de plattformar som anges. Versionsformat som stöds är:
     - Android-arbetsprofil har stöd för major.minor.rev.build.
-    - iOS stöder major.minor.rev.
+    - iOS stöder major.minor.rev. Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
     - Windows stöder endast major.minor.rev.build för Windows 10.
-  Operativsystemversionerna gäller inte för Apple-enheter som registreras med programmet för enhetsregistrering, Apple School Manager eller Apple Configurator-appen.
-8. Ange om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
-    ![Enhetsbegränsningar med standardkonfigurationer för enhetsplattformar visar inställningar för personligt ägda enheter](media/device-restrictions-platform-configurations.png)
-9. Välj **Spara**.
+8. Välj om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
+9. Välj **OK**.
 
+### <a name="android-device-type-restrictions"></a>Begränsningar för Android-enhetstyp
+- Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android-arbetsprofilenheter.
+- Som standard är dina inställningar för Android-arbetsprofilenheter samma som inställningarna för dina Android-enheter. När du har ändrat dina inställningar för Android-arbetsprofilenheter kommer det här inte längre att vara fallet.
+- Om du blockerar registrering av personligt ägda Android-arbetsprofilenheter så kan endast företagsägda Android-enheter att registreras som Android-arbetsprofil.
 
->[!NOTE]
->- Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android-arbetsprofilenheter.
->- Som standard är dina inställningar för Android-arbetsprofilenheter samma som inställningarna för dina Android-enheter. När du har ändrat dina inställningar för Android-arbetsprofilenheter kommer det här inte längre att vara fallet.
->- Om du blockerar registrering av personligt ägda Android-arbetsprofilenheter så kan endast företagsägda Android-enheter att registreras som Android-arbetsprofil.
+### <a name="windows-device-type-restrictions"></a>Begränsningar för Windows-enhetstyp
+När begränsning för enhetstyper med Windows-plattform har ställts in på **Blockera** kontrollerar Intune för att se till att varje ny begäran om Windows-registrering har godkänts som en företagsregistrering. Obehöriga registreringar kommer att blockeras.
+
+Följande metoder räknas som auktoriserade som Windows-företagsregistrering:
+ - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
+- Enheten registreras via [Windows AutoPilot](enrollment-autopilot.md).
+- Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter](corporate-identifiers-add.md)**. (Stöds inte för Windows Phone 8.1.)
+- Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
+- Enheten registreras via [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
+ 
+Följande registreringar markeras som företagsregistreringar av Intune, men eftersom de inte innehåller per enhet-kontroll för Intune-administratören kommer de att blockeras:
+ - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installation](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
+- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning från Windows-inställningar](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md).
+ 
+Följande personliga registreringsmetoder blockeras också:
+- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Add Work Account from Windows Settings](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md) (Lägg till arbetskonto från Windows-inställningarna).
+- Alternativet [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Endast MDM-registrering) från Windows-inställningarna.
+
 
 ## <a name="set-device-limit-restrictions"></a>Ange begränsningar för enhetsgräns
 

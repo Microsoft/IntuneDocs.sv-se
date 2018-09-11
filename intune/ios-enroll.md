@@ -15,12 +15,12 @@ ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 545c5b26b6c908f4a9e7066d3f76cbf774c8fbea
-ms.sourcegitcommit: 08e1b0d45c84eb9525a0a59f5540d41434da2814
+ms.openlocfilehash: 6c92b1b660856fb52f6259514ad9075ab96fb2fc
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146704"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313300"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrera iOS-enheter i Intune
 
@@ -55,8 +55,8 @@ Apple School Manager är ett enhetsregistreringsprogram för skolor. Du kan dist
 
 ## <a name="apple-configurator"></a>Apple Configurator
 Du kan registrera iOS-enheter med Apple Configurator på en Mac-dator. För att förbereda enheter ansluter du dem med USB och installerar en registreringsprofil. Du kan registrera enheter med Apple Configurator på två sätt:
-- Registrering med installationsassistenten – fabriksåterställer enheten, förbereder den att köra installationsassistenten och installerar företagets principer för enhetens nya användare.
-- Direkt registrering – fabriksåterställer inte enheten och registrerar den med en fördefinierad princip. Den här metoden är för enheter utan användartillhörighet.
+- Registrering med installationsassistenten – rensar enheten, förbereder den för att köra installationsassistenten och installerar företagets principer för enhetens nya användare.
+- Direktregistrering – rensar inte enheten och registrerar den med en fördefinierad princip. Den här metoden är för enheter utan användartillhörighet.
 
 Läs mer om [registrering med Apple Configurator](apple-configurator-setup-assistant-enroll-ios.md).
 

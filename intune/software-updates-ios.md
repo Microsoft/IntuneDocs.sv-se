@@ -5,17 +5,17 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.openlocfilehash: b9cc34b2fa45ae447a015f1b3105081041bd0afe
-ms.sourcegitcommit: 0a2e737c5520c1a1dec5d732e5df52b5614b27e1
+ms.openlocfilehash: 1fe0258d3b6d9092c032184fca5fc0f8dc3f12df
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268846"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313504"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurera iOS-uppdateringsprinciper i Intune
 
@@ -32,7 +32,7 @@ Den här funktionen stöder enheter som kör iOS 10.3 och senare.
 4. Ange ett namn och en beskrivning för principen.
 5. Välj **Inställningar**. 
 
-    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera veckodagar, tidszon, starttid och sluttid.
+    Ange information om när iOS-enheter inte ska tvingas att installera de senaste uppdateringarna. Dessa inställningar skapar en begränsad tidsram. Du kan konfigurera **Dagar** i veckan, **Tidszon**, **Starttid**, **Sluttid** och **Fördröj visning av programuppdateringar (dagar)** för att ange användare. Du kan välja en fördröjningstid för programuppdateringar från 1 till 90 dagar. Om du inte vill ställa in en fördröjningstid för programuppdatering anger du 0. De här uppdateringsinställningarna gäller endast övervakade iOS-enheter.
 
 6. Klicka på **OK** för att spara ändringarna. Välj **Skapa** för att skapa principen.
 

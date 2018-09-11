@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 34c66aabe8c094b67805bcf0eeae38dbbbbff627
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 51e52e26357143d214c4bcf7856dfdb75a68653c
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905945"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329777"
 ---
 # <a name="work-device-restriction-settings-in-intune"></a>Inställning av enhetsbegränsningar för arbetsenheter i Intune
 
@@ -42,7 +42,7 @@ I den här artikeln visas alla inställningar av begränsningar för Microsoft I
   - **Bevilja automatiskt**
   - **Neka automatiskt**
 
-    Bevilja-tillstånd för behörigheter kan definieras ytterligare för specifika appar, genom att använda en princip för appkonfiguration för en enskild app (under **Mobilappar** > **Appkonfigurationsprinciper**).
+    Bevilja-tillstånd för behörigheter kan definieras ytterligare för specifika appar, genom att använda en princip för appkonfiguration för en enskild app (under **Klientappar** > **Appkonfigurationsprinciper**).
 
 - **Lägga till och ta bort konton**
 

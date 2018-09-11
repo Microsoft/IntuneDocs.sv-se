@@ -15,12 +15,12 @@ ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ac96c66dd6f09a7bd7a1b1c8c37f2f0eda24828c
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 04d7acb5aa0e1a534fb6ad31519c094123aa90bb
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223517"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347685"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Lägg till iOS Store-appar i Microsoft Intune
 
@@ -41,8 +41,8 @@ Du kan endast tilldela appar med den här metoden om de är gratis i App Store. 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.  
     Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. I arbetsbelastningsfönstret **Mobilappar** under **Hantera**, väljer du **Appar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. I arbetsbelastningsfönstret **Klientappar** väljer du **Appar** under **Hantera**.
 5. Välj **Lägg till** i fönsterrutan **Appar**.
 6. I listan **Apptyp** under den **Store-app**, välj **iOS**.
 7. Välj **Sök i App Store**.

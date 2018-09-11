@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46ef614af39a1dd1b44f4f5ff32f53687ccb060a
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
+ms.openlocfilehash: 96b95fcbfdc970976e24553972c5890f35cfddb2
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164577"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329486"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Tilldela appar till grupper med Microsoft Intune
 
@@ -52,7 +52,7 @@ I följande tabell visas de olika alternativen för att tilldela appar till anv�
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. I **Intune**-menyn väljer du **Mobilappar**.
+3. Välj **Klientappar** på **Intune**-menyn.
 4. I avsnittet**Hantera** på menyn, väljer du **Appar**.
 5. I fönstret **Appar** välj den app som du vill tilldela.
 6. I avsnittet**Hantera** på menyn, väljer du **Tilldelningar**.

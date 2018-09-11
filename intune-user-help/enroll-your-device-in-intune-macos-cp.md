@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/11/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,50 +17,71 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 3dac9446d7a1097f5be4d0851cd78e8cbb86cc4e
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: af5c7492563c8df0168eff3250ae1bbad2cc323e
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38224777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43147725"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrera din macOS-enhet i Intune på företagsportalappen
 
-Med åtkomst till din organisations appar, data och resurser är det enklare för dig att göra ditt jobb. Din organisation använder Intune för att [hantera åtkomst till resurserna](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md), vilket kräver att du kan ladda ned företagsportalappen för macOS. De här instruktionerna fungerar för macOS-enheter på OS X El Capitan 10.11+.
+Registrera din macOS-enhet i Intune-företagsportalappen för att få säker åtkomst till organisationens e-post, filer och appar.
+
+Organisationer kräver ofta att din enhet blir hanterad innan du kan komma åt egna data från den. När en enhet blir hanterad kan organisationer skicka principer och appar till enheten via sin leverantör av hantering av mobilenheter. För att få kontinuerlig tillgång till arbets- eller skolinformation från enheten måste du konfigurera den så att principinställningarna matchar.  
+
+Den här artikeln beskriver hur Intune-företagsportalappen för macOS hjälper dig att registrera, konfigurera och underhålla enheten så att den uppfyller organisationens krav.
+
+## <a name="what-to-expect-from-the-company-portal-app"></a>Vad du kan förvänta dig av företagsportalappen
+
+Under installationen kräver appen att du autentiserar dig själv hos organisationen. Den informerar dig sedan om eventuella enhetsinställningar du måste göra. Organisationer anger exempelvis ofta krav på lägsta eller högsta antal tecken i lösenordet som du måste uppfylla.    
+
+När enheten har registrerats fortsätter företagsportalappen att se till att enheten är skyddad. Om du till exempel installerar en app från en ej betrodd källa kommer appen meddela dig och återkallar ibland åtkomst till företagets data. Appskyddsprinciper som den här är vanliga i organisationer och kräver ofta att du avinstallerar ej betrodda appar innan du kan få åtkomst.
+
+Om organisationen inför ett nytt säkerhetskrav efter registreringen, t.ex. multifaktorautentisering, meddelar företagsportalappen dig. Du får möjlighet att justera dina inställningar så att du kan fortsätta arbeta från enheten.  
+
+Mer information om registrering finns i [Vad händer när jag installerar företagsportalappen och registrerar min enhet?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
+
+## <a name="get-your-device-managed"></a>Få din enhet hanterad  
+Använd följande steg för att registrera macOS-enheter som kör OS X El Capitan 10.11 och senare.   
 
 
-1. På din __Docka__, går du till __Safari__ och öppnar ett nytt fönster och öppnar sedan [företagsportalens webbplats](https://portal.manage.microsoft.com).
+1. Du kommer åt företagsportalwebbplatsen genom att öppna ett nytt fönster i __Safari__ och gå till https://portal.manage.microsoft.com.  
 
 2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto.
 
    [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
 
 
-3. När du har loggat in klickar du på **menyn** i det övre vänstra hörnet på sidan och väljer **Mina enheter**.
+3. Gå till sidans övre vänstra hörn och klicka på **Meny** > **Enheter**.  
 
-   ![En skärmbild av webbportalens landningssida och meddelandet om att inga appar kan installeras ännu. Knappen Mina enheter visas nedanför.](./media/macOS_enroll_001_landing_page.png)
+4. På sidan __Enheter__ visas en lista över hanterade enheter eller ett meddelande. Vad som visas beror på om du redan har en hanterad enhet. 
+    * Om du vill lägga till en enhet som inte visas i listan väljer du meddelandet **Tap here to tell us which device you're using or add a new device** (Tryck här för att berätta vilken enhet du använder eller lägga till en ny enhet).
+    * Om du inte har några enheter visas meddelandet: **You don't have any managed devices. Add this one by tapping here.** (Du har inga hanterade enheter. Lägg till den här genom att trycka här.). Klicka på meddelandet för att lägga till din enhet.  
 
-4. På sidan __Mina enheter__ visas antingen en lista med registrerade enheter eller bara ett popup-meddelande. Det beror på om du redan har registrerat en enhet, ett macOS eller annat. Om du vill registrera en enhet som inte finns i listan väljer du meddelandet som ser ut ungefär så här: __Identifiera enheten i listan genom att trycka på den. Du kan också trycka här för att registrera din enhet om den inte visas i listan__. Om du inte har några registrerade enheter anger banderollen **Du har inga registrerade enheter. Registrera den här genom att trycka här.**
+     ![En skärmbild av sidan Enheter med en röd ruta runt meddelandealternativet för att markera var du ska klicka.](./media/CP-enroll-MACOS-1808.png)  
+5.  Slutför det steg nedan som överensstämmer med det meddelande som visas i företagsportalen.  
+    * Om du lägger till en enhet för första gången uppmanas du att ladda ned företagsportalappen på enheten. Klicka på **Hämta** att fortsätta.  
 
-    ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+         ![Exempel på skärmbild för meddelandeskärmen för att hämta macOS-företagsportalappen. Användaren kan välja att klicka på den blå knappen Hämta längst ned till vänster i meddelandet, eller den grå knappen Avbryt längst ned till höger.](./media/CP-enroll-download-macOS-1808.png)  
 
-5. Hämta företagsportalappen till macOS-enheten för att fortsätta med registreringen.
+    * Om du redan har en hanterad macOS-enhet visas ett meddelande med en lista över dina macOS-enheter som hanteras för närvarande. Välj **My device isn't listed here** (Min enhet visas inte här) > **Hämta** för att hämta företagsportalappen på den enhet som du lägger till.  
 
-    ![Meddelandet som uppmanar en användare att hämta företagsportalappen för macOS. Det här meddelandet har texten i steget ovanför knappen "Hämta" längst ned till höger.](./media/macOS_enroll_IWP_CP_app_notice.png)
+         ![Exempel på skärmbild för meddelandeskärmen för att hämta macOS-företagsportalappen. Användaren kan välja *My device isn't listed here* (Min enhet visas inte här) eller en specifik enhet från mitten av sidan. Den blå knappen Hämta visas längst ned till vänster i meddelandet och den grå knappen Avbryt visas längst ned till höger](./media/cp-mac-os-device-isnt-here-1808.png)  
 
-6. Mac-enheten kontrollerar att den nedladdade filen **CompanyPortal.pkg** är säker att öppna. Öppna installationsprogrammet och gå igenom installationen.
+6. Enheten kontrollerar att installationsfilen **CompanyPortal.pkg** är säker att öppna. När det är slutfört öppnar du installationsprogrammet och slutför installationen.  
 
-7. När installationsprogrammet har slutförts öppnar du mappen **Program** eller **Startfönster** och sedan **Företagsportalen**.
+7. När installationsprogrammet har slutförts går du till **Startfönstret** och öppnar **Företagsportal**.  
 
-8. Mac-enheten visar ett felmeddelande om att **”CompanyPortal” är ett program som laddats ned från Internet. Vill du öppna det ändå?** Klicka på **Öppna**.
+8. macOS-enheten uppmanar dig att bekräfta att du vill öppna företagsportalappen. Klicka på **Öppna**.  
 
-   > [!NOTE]
-   > Intune behöver åtkomst till datorn för att se till att enheten är säker nog för att få åtkomst till organisationens resurser. Om datorn vägrar att öppna företagsportalappen kan du försöka att [inaktivera Gatekeeper](https://support.apple.com/HT202491) och sedan öppna appen.
+   > [!TIP]
+   > Intune behöver åtkomst till datorn för att se till att enheten är säker nog för att få åtkomst till organisationens resurser. Om datorn vägrar att öppna företagsportalappen kan du [inaktivera Gatekeeper](https://support.apple.com/HT202491). Öppna sedan appen.
 
-9. På den första skärmen som visas i företagsportalappen uppmanas du att **Logga in** med samma arbets- eller skolkonto som du använde för att logga in på företagsportalens webbplats.
+9. Den första skärmen som visas i företagsportalappen uppmanar dig att **Logga in**. Använd samma arbets- eller skolkonto som du använde för att logga in på företagsportalens webbplats.
 
-10. Företagsportalen bekräftar kontoinformationen och visar sedan statusen för **Enhetsregistrering** och **Enhetsefterlevnad**. En gul triangel indikerar att det finns åtgärder som du behöver utföra för att kontrollera att Mac-enheten är säker för användning i arbetet. Tryck på **Börja** för att starta [registreringen av din enhet till hantering](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+10. Företagsportalen bekräftar kontoinformationen och visar statusen för **Enhetsregistrering** och **Enhetsefterlevnad**. Gula trianglar markerar de åtgärder du måste utföra för att skydda din macOS-enhet för skolan eller arbetet. Klicka på **Börja** för att starta registreringen. Läs om [vad din organisation kan se](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) när du registrerar en enhet.
 
-11. Mac-enheten börjar registreras för hantering. Du kan uppmanas att ange din dators inloggningsinformation under den här tiden. Det kan ta några minuter att registrera. Du kan göra andra saker på datorn under tiden. När du har slutfört konfigurationen av företagsåtkomst så visas ett meddelande som talar om att du är färdig.
+11. Du kan uppmanas att ange din dators inloggningsinformation. Det kan ta några minuter att registrera enheten i hantering. Du kan göra andra saker på enheten under tiden. Du får ett meddelande när du har slutfört konfigurationen av företagsåtkomst så att du vet att du är färdig.  
 
-Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

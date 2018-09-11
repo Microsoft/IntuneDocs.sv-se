@@ -5,66 +5,69 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/18/2018
+ms.date: 8/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 557bdbace1752b8680cd15d7ba190577bec23e24
-ms.sourcegitcommit: 2e849eea920dcd6ef1b78e5aee26434bb7b01bff
+ms.openlocfilehash: 0af5fb071c6abb01a2819a5d9c73f4e01bf7cb7a
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39132467"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312840"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Övervaka efterlevnadsprinciper för Intune-enheter
 
-Med efterlevnadsrapporter kan administratörer analysera enheternas efterlevnadsstatus i organisationen och snabbt felsöka efterlevnadsrelaterade problem som användarna upplever i organisationen. Du kan visa information om den övergripande efterlevnadsstatusen för enheter, efterlevnadsstatusen för enskilda inställningar, efterlevnadsstatusen för enskilda principer och gå vidare till enskilda enheter och visa de specifika inställningar och principer som påverkar dem.
+Efterlevnadsrapporter hjälper dig att granska enhetsefterlevnad och felsöka efterlevnadsrelaterade problem i organisationen. Med hjälp av dessa rapporter kan du se information om följande:
 
-## <a name="before-you-begin"></a>Innan du börjar
+- Övergripande efterlevnadsstatus för enheter
+- Efterlevnadsstatus för en enskild inställning
+- Efterlevnadsstatus för en enskild princip
+- Se detaljer för enskilda enheter om du vill se specifika inställningar och principer som påverkar enheten
 
-Så här hittar du **instrumentpanelen för Intune-enhetsefterlevnad** i Azure Portal:
+## <a name="open-the-compliance-dashboard"></a>Öppna instrumentpanelen för efterlevnad
 
-1. I [Azure-portalen](https://portal.azure.com) loggar du in med dina Intune-autentiseringsuppgifter.
+Öppna **Intunes instrumentpanel för enhetsefterlevnad**:
 
-2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
+1. I [Azure Portal](https://portal.azure.com) välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 
-3. Välj **Enhetsefterlevnad** > **Översikt**. **Instrumentpanelen för enhetsefterlevnad** öppnas.
+2. Välj **Enhetsefterlevnad** > **Översikt**. **Instrumentpanelen för enhetsefterlevnad** öppnas.
 
 > [!IMPORTANT]
 > Enheter måste registreras i Intune för att kunna ta emot principer för enhetsefterlevnad.
 
-## <a name="device-compliance-dashboard"></a>Instrumentpanelen för enhetsefterlevnad
+## <a name="dashboard-overview"></a>Översikt över instrumentpanelen
 
-I **instrumentpanelen för enhetsefterlevnad** kan du övervaka efterlevnad för olika enheter, deras skyddsstatus och mer. Du kan visa följande rapporter:
+När instrumentpanelen öppnas kan du få en översikt med alla efterlevnadsrapporter. I dessa rapporter kan du se och söka efter:
 
-- Övergripande samlad enhetsefterlevnad
-
+- Övergripande enhetsefterlevnad
 - Enhetsefterlevnad per princip
-
 - Enhetsefterlevnad per inställning
-
 - Enhetsskyddsstatus
-
 - Status för hotagent
 
-![Bild på instrumentpanelen för enhetsefterlevnad](./media/idc-1.png)
+![Bild av instrumentpanelen som visar instrumentpanelen för enhetsefterlevnad och olika rapporter](./media/compliance-policy-monitor/idc-1.png)
 
-Du kan också visa specifika efterlevnadsprinciper och inställningar som gäller för enskilda enheter, och den slutliga efterlevnadsstatusen för var och en av dessa inställningar på enheten.
+När du går in djupare i dessa rapporter kan du även se eventuella specifika efterlevnadsprinciper och inställningar som gäller för en viss enhet, inklusive efterlevnadsstatus för varje inställning.
 
-### <a name="overall-device-compliance-aggregate-report"></a>Rapport om övergripande samlad enhetsefterlevnad
+### <a name="device-compliance-status-report"></a>Rapport för enhetens efterlevnadsstatus
 
-Det är ett ringdiagram som visar den samlade enhetsstatusen för alla Intune-registrerade enheter. Enhetens efterlevnadsstatusar sparas i två olika databaser – Intune och Azure Active Directory. Här finns mer information om statusen för enhetens efterlevnadsprinciper:
+Diagrammet visar efterlevnadsstatus för alla Intune-registrerade enheter. Status för enhetsefterlevnad sparas i två olika databaser: Intune och Azure Active Directory. 
 
-- **Kompatibel**: Enheten har tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål.
+Beskrivningar av statusar för enhetsefterlevnadsprinciper:
 
-- **Inte kompatibel:** Enheten har inte tillämpat en eller flera av principer för enhetsefterlevnad som administratören har satt upp som mål, eller så har användaren inte uppfyllt de principer administratören har satt upp som mål.
+- **Kompatibel**: Enheten har tillämpat en eller flera principinställningar för enhetsefterlevnad.
 
-- **Respitperiod:** Administratören har satt upp en eller flera principer för enhetsefterlevnad som mål för enheten, men användaren har inte tillämpats principerna ännu, vilket innebär att enheten är inkompatibel, men att den fortfarande befinner sig i en respitperiod som administratören har definierat.
+- **Respitperiod:** En eller flera principinställningar för enhetsefterlevnad har riktats mot enheten. Användaren har dock inte tillämpat principerna än. Det innebär att enheten inte är kompatibel, men den är i respitperioden som angetts av administratören.
 
-  - Läs mer om åtgärder för inkompatibla enheter.
+  - Läs mer om [åtgärder för inkompatibla enheter](actions-for-noncompliance.md).
+
+- **Inte utvärderat**: Ett ursprungligt tillstånd för nyregistrerade enheter. Eller enheter som inte har tilldelats en efterlevnadsprincip och inte har en utlösare för att kontrollera efterlevnad.
+
+- **Inte kompatibel**: Enheten har inte tillämpat en eller flera principinställningar för enhetsefterlevnad. Eller så har användaren inte efterlevt principerna.
 
 - **Enheten har inte synkroniserats:** Enheten kunde inte rapportera sin enhetsefterlevnadsstatus på grund av någon av följande orsaker:
 
@@ -75,88 +78,68 @@ Det är ett ringdiagram som visar den samlade enhetsstatusen för alla Intune-re
 > [!IMPORTANT]
 > Enheter som har registrerats i Intune men inte utgör mål för någon enhetsefterlevnadsprincip, inkluderas i den här rapporten under bucketen **Kompatibel**.
 
-#### <a name="drill-down-option"></a>Alternativet Öka detaljnivån
+#### <a name="drill-down-for-more-details"></a>Öka detaljnivån om du vill ha mer information
 
-I **instrumentpanelen för enhetsefterlevnad** väljer du en enhetsefterlevnadsruta för att öka detaljnivån till en specifik **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet är mål för enhetsefterlevnadsprinciperna.
+I diagrammet **Kompatibilitetsstatus för enhet** väljer du en status. Välj till exempel statusen **Inte kompatibel**:
 
-![Bild på ökad detaljnivå på instrumentpanelen för enhetsefterlevnad](./media/idc-2.png)
+![Välj statusen inte kompatibel](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-Om du behöver mer information om en viss användare kan du filtrera diagramrappoten för enhetsefterlevnad genom att skriva användarens e-postalias.
+Den visar mer information om de enheter som har denna status, inklusive operativsystemplattform, datum för senaste incheckningen med mera. 
 
-![Bild på viss användare på instrumentpanelen för enhetsefterlevnad](./media/idc-3.png)
+![Bild på instrumentpanelen visar mer information på enheten med den specifika statusen](./media/compliance-policy-monitor/drill-down-details.png)
 
-Du kan också klicka på de olika efterlevnadsstatusarna i diagrammet över enhetsefterlevnad om du vill se mer detaljerad information om användarens enhetsefterlevnadsstatusar.
+Om du vill se alla enheter som ägs av en specifik användare kan du filtrera diagramrapporten genom att skriva in användarens e-postadress:
 
-![Bild som visar status på instrumentpanelen för enhetsefterlevnad](./media/idc-4.png)
+![Filtrera på e-postadressen för att visa alla enheter för den specifika användaren](./media/compliance-policy-monitor/idc-3.png)
 
-#### <a name="filter"></a>Filter
+#### <a name="filter-and-columns"></a>Filter och kolumner
 
-När du väljer **filterknappen** visas följande alternativ:
+![Välj Filter och Kolumn om du vill ändra resultaten i diagrammet](./media/compliance-policy-monitor/filter-columns.png)
 
-- Modell
+När du väljer knappen **Filter** visas fler alternativ, inklusive efterlevnadsstatus, jailbrokade enheter med mera. **Verkställ** filtret för att uppdatera resultatet.
 
-  - Textruta för fritextsökning
+Använd egenskapen **Kolumner** för att lägga till eller ta bort kolumner från diagrammets data. Till exempel kan **Användarens huvudnamn (UPN)** visa den e-postadress som är registrerad på enheten. **Verkställ** kolumnerna för att uppdatera resultatet.
 
-- Plattform
+#### <a name="device-details"></a>Information om enhet
 
-  - Android
+Välj en specifik enhet i diagrammet och välj sedan **Enhetsefterlevnad**:
 
-  - iOS
+![Välj en specifik enhet och sedan Enhetsefterlevnad för att se de efterlevnadsprinciper som tillämpas](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
 
-  - macOS
-
-  - Windows
-
-  - Windows Phone
-
-- Status
-
-  - Kompatibel
-
-  - Ej kompatibel
-
-  - Respitperiod
-
-  - Okänt
-
-  - Fel
-
-När du väljer **uppdateringsknappen** stängs fältet och resultatet uppdateras enligt de valda filtervillkoren.
-
-##### <a name="device-details"></a>Information om enhet
-
-Om du markerar en enhet öppnas **Enheter** med enheten markerad. Där finns mer information om inställningarna för enhetens efterlevnadsprincip.
-
-När du markerar enhetens principinställning visas namnet på enhetsefterlevnadsprincip som gav upphov till den enhetsefterlevnadsinställning som administratören har satt upp som mål.
+Där finns mer information om principinställningarna för enhetsefterlevnad som används på den enheten. När du väljer en specifik princip visas alla inställningar i principen.
 
 ### <a name="devices-without-compliance-policy"></a>Enheter utan policy för efterlevnad
-Den här rapporten identifierar enheter som inte har några tilldelade efterlevnadsprinciper. Med införandet av säkerhetsinställningen som markerar alla enheter utan efterlevnadsprinciper som ”icke-kompatibla” är det viktigt att kunna identifiera dessa enheter. Du kan sedan tilldela minst en policy för efterlevnad till dem.
+I **Enhetsefterlevnad** > **Översikt** visar rapporten även enheter som inte har några tilldelade efterlevnadsprinciper:
 
-> [!NOTE]
-> Den nya säkerhetsinställningen kan konfigureras i Intune-portalen. Välj **Enhetsefterlevnad** och under **Konfiguration** väljer du **Inställningar för policyer för efterlevnad**. Använd växlingsknappen för att ange **Markera enheter som saknar en policy för efterlevnad som** till antingen **Kompatibel** eller **Inte kompatibel**. Läs mer om denna [förbättrade säkerhet i Intune-tjänsten](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+![Se enheter utan efterlevnadsprinciper](./media/compliance-policy-monitor/devices-without-policies.png)
 
-![Bild som visar rapport för Enheter utan policy för efterlevnad](./media/idc-12.png)
+När du väljer panelen visas alla enheter utan efterlevnadsprincip. Då visas även enhetens användare, principens distributionsstatus samt enhetsmodell.
 
-Ikonen **Enheter utan policy för efterlevnad** finns i instrumentpanelen Enhetsefterlevnad och visar alla enheter utan en policy för efterlevnad, enhetens användare, efterlevnadsstatus och enhetsmodell.
+#### <a name="what-you-need-to-know"></a>Vad du behöver veta
 
-> [!NOTE]
-> Användare som är tilldelade en policy för efterlevnad av valfri typ visas inte i rapporten, oavsett enhetsplattform. Om du exempelvis oavsiktligt har tilldelat en Windows-policy för efterlevnad till en användare med en Android-enhet, visas enheten inte i rapporten. Intune kommer emellertid anse att Android-enheten inte är kompatibel. För att undvika problem rekommenderar vi att du skapar principer för varje enhetsplattform och distribuerar dem till alla användare.
+- Med säkerhetsinställningen **Markera enheter som saknar en policy för efterlevnad som** är det viktigt att identifiera enheter som inte har en efterlevnadsprincip. Du kan sedan tilldela minst en policy för efterlevnad till dem.
+
+  Säkerhetsinställningen kan konfigureras i Intune-portalen. Välj **Enhetsefterlevnad** > **Inställningar för efterlevnadsprinciper**. Ställ sedan in **Markera enheter som saknar en policy för efterlevnad som** på **Kompatibel** eller **Inte kompatibel**. 
+
+  Läs mer om denna [förbättrade säkerhet i Intune-tjänsten](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
+
+- Användare som är tilldelade en efterlevnadsprincip av valfri typ visas inte i rapporten, oavsett enhetsplattform. Om du exempelvis har tilldelat en Windows-efterlevnadsprincip till en användare med en Android-enhet, visas enheten inte i rapporten. Intune anser emellertid att Android-enheten inte är kompatibel. För att undvika problem rekommenderar vi att du skapar principer för varje enhetsplattform och distribuerar dem till alla användare.
 
 ### <a name="per-policy-device-compliance-report"></a>Rapport om enhetsefterlevnad per princip
 
-Den här rapporten visar enhetsefterlevnad per princip och det totala antalet enheter med respektive efterlevnadsstatus. Rubriken för **principefterlevnad** är tillgänglig på instrumentpanelen **Enhetsefterlevnad** och visar alla principer som tidigare har skapats av administratören, de plattformar där principen har tillämpats, antalet kompatibla enheter och antalet inkompatibla enheter.
+Rapporten **Enhetsefterlevnad** > **Principefterlevnad** visar principerna, samt hur många enheter som är kompatibla och inte kompatibla. 
 
-![Bild som visar rapport om enhetsefterlevnad per princip](./media/idc-8.png)
+![Visa en lista över principen och hur många kompatibla och inte kompatibla enheter som finns för den principen](./media/compliance-policy-monitor/idc-8.png)
 
-När du klickar på ikonen Principefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadsprinciperna. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadsprinciperna.
+När du väljer en specifik princip kan du se **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som den efterlevnadsprincipen är inriktad på.
 
 ## <a name="setting-compliance-report"></a>Inställning av efterlevnadsrapport
 
-Den här rapporten visar enhetsefterlevnadsinställningar och det totala antalet enheter med respektive efterlevnadsstatus. Rubriken för **principefterlevnad** är tillgänglig på instrumentpanelen **Enhetsefterlevnad** och visar alla principer som tidigare har skapats av administratören, de plattformar som principen har tillämpats på, antalet kompatibla enheter och antalet inkompatibla enheter.
+Rapporten **Enhetsefterlevnad** > **Inställningskompatibilitet** visar det totala antalet enheter med respektive efterlevnadsstatus per efterlevnadsinställning. Den visar alla principinställningar för enhetsefterlevnad från alla efterlevnadsprinciper, de plattformar som principinställningarna används på, samt antalet ej kompatibla enheter.
 
-![Bild som visar rapport om enhetsefterlevnad per inställning](./media/idc-10.png)
+![Visa en lista över alla inställningar i olika principer](./media/compliance-policy-monitor/idc-10.png)
 
-När du klickar på ikonen Inställningsefterlevnad kan du fortsätta med att klicka på någon av enhetsefterlevnadens principinställningar. Då visas **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för varje enhet som varit mål för enhetsefterlevnadens principinställning.
+När du väljer en specifik inställning kan du se **efterlevnadsstatus**, **användarens e-postalias**, **enhetsmodell** och **plats** för alla enheter som den inställningen är inriktad på.
 
 ## <a name="view-status-of-device-policies"></a>Visa status för enhetsprinciper
 
@@ -167,11 +150,11 @@ Den här funktionen ingår i statusrapporteringen för enheter:
 1. Välj **Enhetsefterlevnad** > **Principer**. En lista över principer visas, inklusive plattformen, om principen har tilldelats, samt ytterligare information.
 2. Välj en princip > **Översikt**. I den här vyn innehåller principtilldelningen följande statusar:
 
-  - Lyckades: Principen tillämpas
-  - Fel: Det gick inte att tillämpa principen. Detta visas vanligtvis med en felkod som länkar till en förklaring. 
-  - Konflikt: Två inställningar tillämpas på samma enhet och Intune kan inte lösa konflikten. En administratör bör granska.
-  - Väntar: Enheten har inte kontaktar Intune ännu för att ta emot principen. 
-  - Inte tillämpligt: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10. 
+    - Lyckades: Principen tillämpas
+    - Fel: Det gick inte att tillämpa principen. Detta meddelande visas vanligtvis med en felkod som länkar till en förklaring. 
+    - Konflikt: Två inställningar tillämpas på samma enhet och Intune kan inte lösa konflikten. En administratör bör granska.
+    - Väntar: Enheten har inte kontaktar Intune ännu för att ta emot principen. 
+    - Inte tillämpligt: Enheten kan inte ta emot principen. Principen uppdaterar t.ex. en inställning som är specifik för iOS 11.1, men enheten använder iOS 10. 
 
 3. Om du vill visa information om de enheter som använder den här principen väljer du en av statusarna. Välj till exempel **Lyckades**. I nästa fönster visas specifik enhetsinformation, inklusive enhetsnamn och distributionsstatus.
 

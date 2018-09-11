@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: baf7ee4f1178b555a0fe311f0e3977941e1491fe
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a49811200cd84882fe9f80708edefde7614e5cee
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905044"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347873"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Android i Microsoft Intune
 
@@ -35,8 +35,8 @@ En verksamhetsspecifik app är en app som du lägger till i Intune från en appi
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
 5. Välj **Lägg till** ovanför listan över appar.
 6. I fönstret **Lägg till app** väljer du **Branschspecifik app**.
 

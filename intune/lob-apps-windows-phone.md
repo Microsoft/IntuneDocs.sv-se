@@ -15,12 +15,12 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ccc1f25d137675ba8e5f984a16324f4b0771dc9c
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: a7d7554cad04dcca0d7f56986aef4c4b30193c18
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224995"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347615"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för Windows Phone i Microsoft Intune
 
@@ -32,8 +32,8 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
 5. Välj **Lägg till** ovanför listan över appar.
 6. I fönstret **Lägg till app** väljer du **Branschspecifik app**.
 

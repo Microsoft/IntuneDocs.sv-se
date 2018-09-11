@@ -1,11 +1,11 @@
 ---
 title: Lös hot som upptäckts av Lookout for Work på Android | Microsoft Docs
-description: Lär dig att åtgärda ett hot som hittades av Lookout for Work på Android.
+description: Lär dig att åtgärda ett hot som upptäcks på en Android-enhet av Lookout for Work-appen.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/17/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,35 +15,43 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: df7055f031fb7661cc0fa3bf2d00b16fc0a082dc
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 0e8f10bac2c7ffc75f81572da60249842c8f4cc1
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31015480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148529"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work  
 
-Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas kan se ut ungefär så här:
+Lookout for Work-appen är en tjänst för skydd mot mobila hot som identifierar potentiella hot på Android-enheter. Dessa hot rapporteras till företagsportalappen och visas där som olösta, ej kompatibla problem. Så länge dessa hot finns kvar kan du inte:
 
-![Lookout for Work har hittat ett hot på din enhet](./media/lookout-threat-found-android.png)
+* Ansluta till företagets e-post
+* Ansluta till företagets Wi-Fi
+* Ansluta till SharePoint Online
+* Synkronisera företagsfiler med OneDrive
+* Få åtkomst till företagsappar
 
-Åtgärda problemet genom att öppna appen Lookout for Work och följa anvisningarna som visas i appen.
+Den här artikeln beskriver hur du kan känna igen hotaviseringar från Lookout for Work och vad du kan göra för att lösa dem. 
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Vad som kan visas om den registrerade enhetens åtkomst till e-post eller filer blockeras
+## <a name="troubleshoot-virus-or-security-threat"></a>Felsöka virus- eller säkerhetshot  
+Få åtkomst till företagets resurser när Lookout for Work-appen identifierar ett säkerhets- eller virushot.  
 
-Om det finns ett virus eller andra säkerhetshot på den registrerade enheten och du försöker få åtkomst till ditt e-postkonto eller filer hos företaget visas ett meddelande som liknar detta:
+1. Om ett virus eller ett säkerhetshot upptäcks får du ett meddelande som liknar det som visas i skärmbilden nedan. Tryck på länken till **enhetshanteringsportalen** för att öppna [företagsportalens webbplats](https://portal.manage.microsoft.com/devices).  
 
-![Lookout for Work-felmeddelande med länk till företagsportalens webbplats](./media/mtd-go-to-device-management-portal-android.png)
+    ![Exempel på skärmbild av ett felmeddelande för Lookout for Work, med en länk till företagsportalens webbplats och en blå OK-knapp.](./media/mtd-go-to-device-management-portal-android.png)
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog), där du får anvisningar om hur du kan lösa problemet.
+2. Välj din enhet.  
+3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar Lookout for Work för att åtgärda virus- eller säkerhetshotet. 
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Exempel på en app som Lookout for Work uppfattar som ett hot
+    ![Exempel på skärmbild av enhetssidan i företagsportalen, som visar varningen från Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
-Om du har installerat en app som Lookout for Work uppfattar som ett hot visas en skärmbild som liknar denna:
+## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot  
 
-![exempel på ett virusvarningsmeddelande från Lookout for Work](./media/lookout-virus-alert-android.png)
+Om du installerar en app som Lookout for Work identifierar som ett hot visas ett meddelande som liknar det som syns i skärmbilden nedan.  
 
-När du har avinstallerat appen återfår du omedelbart åtkomst till e-post och data hos företaget. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data fram till dess att du avinstallerar appen.
+![Exempel på skärmbild som visar ett meddelande med virusvarning från Lookout i Lookout for Work-appgränssnittet. Visar tre knappar: ”Stäng”, ”Mer information” och ”Avinstallera”.](./media/lookout-virus-alert-android.png)  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Avinstallera appen med problem för att återfå den åtkomst du förlorat till företagets e-post och data. Så länge som appen finns kvar på enheten kan du inte komma åt företagsresurser.    
+
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  

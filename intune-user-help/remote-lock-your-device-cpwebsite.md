@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,53 +17,51 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: feba62cac464af75a0f0d249022edb6bd5d031f3
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
+ms.openlocfilehash: 2f8a65d05ecffcf87d7a84ab23ad215256286dd0
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150091"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Fjärrlås din enhet från företagsportalens webbplats
 
-Olyckor händer och ibland kan enheter tappas bort. Om du har tappat bort din enhet, eller blivit bestulen, är kanske det första problemet du oroar dig för att vem som helst kan komma åt informationen på den, oavsett var enheten är.
+Fjärrlås en förlorad eller stulen enhet från företagsportalens webbplats. Om enheten har stöd för funktionen låser den här inställningen enhetens skärm – oavsett var enheten finns. En person måste ange korrekt lösenord innan enheten kan låsas upp och användas igen.   
 
-[!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
-
-För att vara säker kan du låsa den med hjälp av fjärrlåsningsalternativet på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog). Fjärrlåset fungerar på:
+Inställningen Fjärrlås fungerar med:
 
 * Android
 * iOS
 * macOS
 * Windows 10
 * Windows 10 Mobile (om enheten redan har ett angivet lösenord)
-* Windows Phone 8.1 (om enheten redan har ett angivet lösenord)
+* Windows Phone 8.1 (om enheten redan har ett angivet lösenord)  
 
-## <a name="to-use-remote-lock-to-lock-your-device"></a>Använda Fjärrlås för att låsa enheten
+1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com) väljer du knappen __Meny__ > __Enheter__.  
 
-1. På [webbplatsen för företagsportalen](https://portal.manage.microsoft.com#HelpDeskDialog) trycker du på __menyknappen__ och väljer sedan __Mina enheter__.
+2. Välj den enhet som du vill låsa.  
 
-2. På sidan __Mina enheter__ väljer du namnet på den enhet som du vill låsa.
+    ![En skärmbild av sidan Enheter med två paneler som visar oidentifierade, allmänt namngivna enheter. En grå banderoll finns direkt under enheterna och uppmanar användaren att identifiera den enhet som används eller lägga till en ny.](./media/rename-reset-device-step2-1808.png) 
 
-   ![En skärmbild på sidan Min enhet med ett par oidentifierade enheter ovanför popup-meddelandet om att registrera enheter som inte finns i listan eller identifiera oidentifierade enheter.](./media/macOS_enroll_002_tap_here_banner.png)
+3. Tryck på **Fjärrlås**. Om låsalternativet inte visas längst upp på sidan väljer du **Mer (…)** > **Fjärrlås**.  
 
-3. Enheten öppnas i ett popup-fönster. Tryck på knappen **Fjärrlås**.
+   ![Sidan med enhetsinformation för en vald enhet på webbplatsen för företagsportalen, med en lista över länkar längst upp som visar Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/rename-reset-device-1808.png) 
 
-   ![Alla alternativ för den valda enheten på webbplatsen för företagsportalen, inklusive Byt namn, Ta bort, Återställ enhet, Återställ lösenord och Fjärrlås. ](./media/iwp-screen-with-all-options.png)
+    ![Närbild på ikonen Mer, markerad med en röd pil.](./media/rename-reset-device-step3-more-1808.png)    
 
-4. Ett meddelande visas så att du vet att du håller på att låsa enheten. Tryck på **Fjärrlåsning** så kommer företagsportalens webbplats att försöka låsa enheten.
+4. Det visas ett meddelande som varnar om att du kommer låsa enheten. Tryck på **Fjärrlås** för att bekräfta.
 
-   När du väljer **Fjärrlås** visas meddelandet ”Fjärrlås väntar”.  När fjärrlåsningen lyckas ändras statusen till ”Enheten har fjärrlåsts”.
+Efter bekräftelsen försöker företagsportalen låsa enheten. Meddelandet ”Fjärrlås väntar” visas under tiden. När enheten är låst visas statusen ”Enheten har fjärrlåsts”.  
 
-   Fjärrlåsningens status visas på tre platser:
+Fjärrlåsningens status visas på tre platser:
 
    * Meddelandefältet på webbplatsen.
    * Sidan **Information** för enheten.
-   * Panelen som visar namnet på enheten i avsnittet **Mina enheter** på sidan.
+   * Panelen som visar namnet på enheten i avsnittet **Enheter** på sidan.  
 
 > [!Note]
-> Om meddelandet ”Det gick inte att fjärrlåsa” visas väntar du några minuter och provar sedan att låsa enheten igen. När du försöker igen ändras statusen till ”Fjärrlås väntar” igen. Om åtgärden inte fungerar måste du kontakta företagets support.
+> Om du ser ett meddelande om att fjärrlåsningen misslyckades kan du vänta några minuter. Försök sedan att låsa enheten igen. Statusen ändras till ”Fjärrlås väntar” igen. Om det inte fungerar att försöka igen kontaktar du företagets support för att få hjälp.
 
-Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.
+Om du hittar din enhet och vill låsa upp den efter att du har använt Fjärrlås anger du bara ditt lösenord.  
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

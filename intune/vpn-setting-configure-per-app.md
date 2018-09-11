@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f4746e2f20926c102717214304711cc9883597b8
-ms.sourcegitcommit: 1e349bcfd562f34866108e566e5b5062717e0112
+ms.openlocfilehash: 7cf005b225dd11ca6b95dbed0a82330544575f92
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "40251779"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347482"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Konfigurera ett virtuellt privat nätverk (VPN) per app i Intune för iOS-enheter
 
@@ -34,6 +34,7 @@ VPN per app är för närvarande tillgängligt för följande providers:
  - Pulse Connect Secure
  - SonicWall
  - Palo Alto Networks GlobalProtect
+ - Zscaler
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Krav för VPN per app
 
@@ -145,7 +146,7 @@ När du har lagt till VPN-profilen associerar du appen och Azure AD-gruppen med 
 
 1. Logga in på [Azure-portalen](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
-3. Välj **Mobilappar**.
+3. Välj **Klientappar**.
 4. Klicka på **Appar**.
 5. Välj appen från listan över appar.
 6. Klicka på **Tilldelningar**.
@@ -187,6 +188,10 @@ När VPN per app har konfigurerats och associerats med appen kontrollerar du att
     - F5 Access
     - Pulse Secure
     - SonicWall Mobile Connect
+    - Zscaler-app
+
+    > [!NOTE]
+    > Om du använder Pulse Secure VPN-appen kan välja du att använda händelsedirigering nedåt på appnivå eller på paketnivå. Ställ in värdet **Providertyp** på **app-proxy** för händelsedirigering på appnivå eller **paket-tunnel** för händelsedirigering på paketnivå.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Ansluta via VPN per app
 

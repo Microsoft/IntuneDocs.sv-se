@@ -1,11 +1,11 @@
 ---
-title: Ta bort företagsdata på enheter med hjälp av Microsoft Intune – Azure | Microsoft Docs
-description: Ta bort företagsdata på en enhet eller utför en fabriksåterställning på en Android-, Android-arbetsprofil-, iOS-, macOS- eller Windows-enhet med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
+title: Dra tillbaka eller rensa enheter med hjälp av Microsoft Intune – Azure | Microsoft Docs
+description: Dra tillbaka eller rensa en enhet på en enhet med Android, Android-arbetsprofil, iOS, macOS eller Windows med hjälp av Microsoft Intune. Även ta bort en enhet från Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,47 +13,47 @@ ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 41d8f70dd72e845663f39e151c393f5edc0ad394
-ms.sourcegitcommit: 391755a4c8a38e3a22744516fd27d75e40438899
+ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028753"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312825"
 ---
-# <a name="remove-devices-by-using-factory-reset-removing-company-data-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att använda fabriksåterställning, ta bort företagsdata eller manuellt avregistrera enheter
+# <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Ta bort enheter genom att rensa, dra tillbaka eller manuellt avregistrera enheten
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Med hjälp av åtgärden **Ta bort företagsdata** eller **Fabriksåterställning** kan du ta bort enheter från Intune som inte längre behövs, har omkonfigurerats eller saknas. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
+Med hjälp av åtgärden **Dra tillbaka** eller **Rensa** kan du ta bort enheter från Intune som inte längre behövs, har omkonfigurerats eller saknas. Användare kan dessutom utfärda ett fjärrkommando från Intune-företagsportalen till privatägda enheter som har registrerats i Intune.
 
 > [!NOTE]
-> Innan du tar bort en användare från Azure Active Directory (Azure AD) kan du använda åtgärderna **Fabriksåterställning** eller **Ta bort företagsdata** för alla enheter som är kopplade till den användaren. Om du tar bort användare som har hanterade enheter från Azure AD kan inte Intune längre utfärda fabriksåterställning eller borttagning av företagsdata för dessa enheter.
+> Innan du tar bort en användare från Azure Active Directory (Azure AD) kan du använda åtgärderna **Rensa** eller **Dra tillbaka** för alla enheter som är kopplade till den användaren. Om du tar bort användare som har hanterade enheter från Azure AD kan inte Intune längre rensa eller dra tillbaka dessa enheter.
 
-## <a name="factory-reset"></a>Fabriksåterställning
+## <a name="wipe"></a>Rensning
 
-Åtgärden **Fabriksåterställning** återställer en enhet till standardinställningarna från fabriken. Användardata sparas om du markerar kryssrutan **Behåll registreringstillstånd och användarkonto**. I annat fall raderas enheten på ett säkert sätt.
+Åtgärden **Rensa** återställer en enhet till standardinställningarna från fabriken. Användardata sparas om du markerar kryssrutan **Behåll registreringstillstånd och användarkonto**. I annat fall raderas enheten på ett säkert sätt.
 
-|Åtgärden Fabriksåterställning|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Description|
+|Åtgärden Rensa|**Behåll registreringstillstånd och användarkonto**|Borttagen från Intune-hanteringen|Description|
 |:-------------:|:------------:|:------------:|------------|
-|**Fabriksåterställning**| Inte markerad | Ja | Rensar alla användarkonton, data, MDM-principer och inställningar. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
-|**Fabriksåterställning**| Markerad | Nej | Rensar alla MDM-principer. Behåller användarkonton och data. Återställer användarinställningar till standard. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
+|**Rensning**| Inte markerad | Ja | Rensar alla användarkonton, data, MDM-principer och inställningar. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
+|**Rensning**| Markerad | Nej | Rensar alla MDM-principer. Behåller användarkonton och data. Återställer användarinställningar till standard. Återställer operativsystemet till dess standardtillstånd och -inställningar.|
 
 Alternativet **Behåll registreringstillstånd och användarkonto** är endast tillgängligt för Windows 10 version 1709 eller senare.
 
 MDM-principer kommer att tillämpas igen nästa gång enheten ansluter till Intune.
 
-En fabriksåterställning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja **Fabriksåterställning**. Det går inte att återställa data på enheten.
+En rensning är praktisk om du vill återställa en enhet innan du ger den till en ny användare eller om enheten har tappats bort eller blivit stulen. Var försiktig med att välja **Rensa**. Det går inte att återställa data på enheten.
 
-### <a name="factory-reset-a-device"></a>Fabriksåterställa en enhet
+### <a name="wiping-a-device"></a>Rensa en enhet
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster**, filtrera på **Intune** och välj **Microsoft Intune**.
 3. Välj **Enheter** > **Alla enheter**.
-4. Välj namnet på den enhet som du vill fabriksåterställa.
-5. I fönstret som visar enhetsnamnet väljer du **Fabriksåterställning**.
+4. Välj namnet på den enhet som du vill rensa.
+5. I fönstret som visar enhetsnamnet väljer du **Rensa**.
 6. För Windows 10 version 1709 eller senare kan du även välja alternativet **Behåll registreringstillstånd och användarkonto**. 
     
-    |Behålls under en fabriksåterställning|Behålls inte|
+    |Behålls under en rensning |Behålls inte|
     | -------------|------------|
     |Användarkonton kopplade till enheten|Användarfiler|
     |Enhetstillstånd \(domänanslutning, Azure AD-anslutning)| Användarinstallerade appar \(store och Win32-appar)|
@@ -64,17 +64,17 @@ En fabriksåterställning är praktisk om du vill återställa en enhet innan du
     |Automatisk inloggning för användare|| 
     
          
-7. Bekräfta fabriksåterställningen genom att välja **Ja**.
+7. Bekräfta rensningen genom att välja **Ja**.
 
-Om enheten är på och ansluten sprids åtgärden **Fabriksåterställning** över alla enhetstyper på mindre än 15 minuter.
+Om enheten är på och ansluten sprids åtgärden **Rensa** över alla enhetstyper på mindre än 15 minuter.
 
-## <a name="remove-company-data"></a>Ta bort företagsdata
+## <a name="retire"></a>Pensionera
 
-Åtgärden **Ta bort företagsdata** tar bort hanterade appdata (om tillämpligt), inställningar och e-postprofiler som har tilldelats med hjälp av Intune. Enheten tas bort från Intune-hantering. Detta sker nästa gång enheten checkar in och tar emot fjärråtgärden **Ta bort företagets data**.
+Åtgärden **Dra tillbaka** tar bort hanterade appdata (om tillämpligt), inställningar och e-postprofiler som har tilldelats med hjälp av Intune. Enheten tas bort från Intune-hantering. Detta sker nästa gång enheten checkar in och tar emot fjärråtgärden **Dra tillbaka**.
 
-Åtgärden **Ta bort företagsdata** behåller användarens personliga data på enheten.  
+**Dra tillbaka** lämnar kvar användarens personliga data på enheten.  
 
-Följande tabell beskriver vilka data som tas bort och hur åtgärden **Ta bort företagsdata** påverkar data som lämnas kvar på enheten när företagsdata tas bort.
+Följande tabeller beskriver vilka data som tas bort och hur åtgärden **Dra tillbaka** påverkar data som lämnas kvar på enheten när företagsdata tas bort.
 
 ### <a name="ios"></a>iOS
 
@@ -110,11 +110,11 @@ Följande tabell beskriver vilka data som tas bort och hur åtgärden **Ta bort 
 
 ### <a name="android-work-profile"></a>Android-arbetsprofil
 
-Om du tar bort företagsdata från en Android-arbetsprofilenhet raderas alla data, appar och inställningar i arbetsprofilen på den enheten. Enheten dras tillbaka från hantering med Intune. Fabriksåterställning stöds inte för Android-arbetsprofiler.
+Om du tar bort företagsdata från en Android-arbetsprofilenhet raderas alla data, appar och inställningar i arbetsprofilen på den enheten. Enheten dras tillbaka från hantering med Intune. Rensning stöds inte för Android-arbetsprofiler.
 
-### <a name="android-enterprise-kiosk-devices"></a>Android-kioskenheter för företag
+### <a name="android-enterprise-kiosk-devices"></a>Android enterprise-kioskenheter
 
-Du kan bara återställa Android-kioskenheter till fabriksinställningarna. Du kan inte ta bort företagsdata från Android-kioskenheter.
+Du kan endast rensa kioskenheter. Du kan inte dra tillbaka Android-kioskenheter.
 
 
 ### <a name="macos"></a>macOS
@@ -137,16 +137,16 @@ Du kan bara återställa Android-kioskenheter till fabriksinställningarna. Du k
 |Profilinställningar för Wi-Fi och VPN|Tas bort.|Tas bort.|Stöds inte.|Tas bort.|
 |Certifikatprofilinställningar|Certifikat tas bort och återkallas.|Certifikat tas bort och återkallas.|Stöds inte.|Certifikat tas bort och återkallas.|
 |E-post|Tar bort e-post som är EFS-aktiverad. Detta omfattar e-postmeddelanden och bilagor i e-postprogrammet för Windows.|Stöds inte.|E-postprofiler som tillhandahålls via Intune tas bort. Cachelagrad e-post på enheten tas bort.|Tar bort e-post som är EFS-aktiverad. Detta omfattar e-postmeddelanden och bilagor i e-postprogrammet för Windows. Tar bort e-postkonton som etablerats av Intune.|
-|Frånkoppling från Azure AD|Nej.|Nej.|Azure AD-posten tas bort.|Inte tillämpligt. Du kan inte ta bort företagsdata för Azure AD-anslutna enheter i Windows 10.|
+|Frånkoppling från Azure AD|Nej.|Nej.|Azure AD-posten tas bort.|Inte tillämpligt. Du kan inte dra tillbaka Azure AD-anslutna enheter i Windows 10.|
 
-### <a name="remove-company-data"></a>Ta bort företagsdata
+### <a name="retire"></a>Pensionera
 
 1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
 2. Välj **Alla enheter** i fönstret **Enheter**.
-3. Välj namnet på den enhet där du vill ta bort företagsdata.
-4. I fönstret som visar enhetsnamnet väljer du **Ta bort företagsdata**. Välj **Ja** för att bekräfta.
+3. Välj namnet på den enhet som du vill dra tillbaka.
+4. I fönstret som visar enhetsnamnet väljer du **Dra tillbaka**. Välj **Ja** för att bekräfta.
 
-Om enheten är på och ansluten sprids åtgärden **Ta bort företagsdata** över alla enhetstyper på mindre än 15 minuter.
+Om enheten är på och ansluten sprids åtgärden **Dra tillbaka** över alla enhetstyper på mindre än 15 minuter.
 
 ## <a name="delete-devices-from-the-intune-portal"></a>Ta bort enheter från Intune-portalen
 
@@ -181,8 +181,8 @@ Till följd av kommunikationsproblem eller enheter som saknas kan du behöva ta 
 Följ dessa steg om du vill ta bort en Apples DEP-enhet från hantering av Intune fullständigt:
 
 1. Logga in på [Intune i Azure Portal](https://aka.ms/intuneportal).
-2. Välj **Enheter** > **Alla enheter** > Välj enhet > **Ta bort företagsdata**.
-![Skärmbild för Ta bort företagsdata](./media/devices-wipe/remove-company-data.png)
+2. Välj **Enheter** > **Alla enheter** > välj enheten > **Dra tillbaka**.
+![Skärmbild för dra tillbaka](./media/devices-wipe/retire.png)
 3. Välj **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtoken** > välj token > **Enheter** > välj kryssrutan för enheten > **Ta bort** > **Ja**.
 ![Skärmbild för Ta bort enhet](./media/devices-wipe/delete-device.png)
 4. Besök [deploy.apple.com](http://deploy.apple.com) och sök efter enheter med hjälp av serienummer.

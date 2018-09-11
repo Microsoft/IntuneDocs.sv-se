@@ -1,11 +1,11 @@
 ---
-title: Registrera din iOS-enhet med enhetsregistreringsprogrammet (DEP) | Microsoft Docs
-description: Beskriver hur du registrerar en iOS-enhet i Intune med DEP
+title: Registrera din iOS-enhet som tillhandahålls av organisationen i hanteringen. | Microsoft Docs
+description: Beskriver hur du registrerar en iOS-enhet i Intune som har köpts och tillhandahålls av din organisation
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,26 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9d1154d942069ad69294d4235c894f88513dd848
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: b93f02011b0900b1a64ae6cb10a84a52cd40187a
+ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31016415"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43241804"
 ---
-# <a name="enroll-your-ios-device-in-intune-with-the-device-enrollment-program"></a>Registrera din iOS-enhet i Intune med enhetsregistreringsprogrammet
+# <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrera din iOS-enhet som tillhandahålls av organisationen i hanteringen
 
-Programmet för enhetsregistrering erbjuds av Apple för att göra det enklare för företag som hanterar ett stort antal iOS-enheter. Om ditt företag har tillåtit dig att använda din egen enhet (Bring Your Own Device), följer du [de vanliga iOS-registreringsstegen](enroll-your-device-in-intune-ios.md) i stället för stegen på den här sidan. Läs vidare om du har fått en iOS-enhet från ditt företag och du har meddelats att den ingår i enhetsregistreringsprogrammet.
+Läs om hur du får en ny iOS-enhet hanterad i Intune.  
+
+iOS-enheter som tillhandahålls till dig av arbete eller skola är ofta förkonfigurerade innan du tar emot dem. Din organisation skickar dessa förkonfigurerade inställningar till enheten när du startar den och loggar in för första gången. När installationen är färdig får du tillgång till arbetets eller skolans resurser.  
+
+Du påbörjar konfigureringen genom att starta din enhet och logga in med dina inloggningsuppgifter för arbetet eller skolan. Resten av den här artikeln beskriver stegen och de skärmar du kommer att se i installationsassistenten. 
+
+## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
+Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av iOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
+
+## <a name="set-up-your-ios-device"></a>Konfigurera din iOS-enhet  
+Om du använder en egen iOS-enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-ios.md).  
 
 1. Sätt igång din iOS-enhet. 
 2. När du har valt **språk** ansluter du enheten till Wi-Fi.
@@ -46,4 +56,4 @@ Programmet för enhetsregistrering erbjuds av Apple för att göra det enklare f
 6. Godkänn **villkoren** och välj om du vill skicka diagnostikinformation till Apple eller inte.
 7. När du har slutfört registreringen kan du uppmanas att utföra fler åtgärder. I några av de här stegen kan du behöva ange lösenordet för e-poståtkomst eller konfigurera ett lösenord.
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -6,19 +6,19 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5220d9c2e1ba98873658631798240af9e7587758
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: ff3b482f974641dd7255dc98d3af62542d802de9
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31834778"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313742"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrera Windows Hello för företag med Microsoft Intune
 
@@ -31,7 +31,10 @@ Du kan integrera Windows Hello för företag (tidigare Microsoft Passport for Wo
 
 Intune kan integreras med Hello för företag på två sätt:
 
--   Du kan använda en Intune-princip för att styra vilka gester användare kan och inte kan använda för inloggning.
+-   En Intune-princip kan skapas under **Enhetsregistrering**. Den här principen riktar in sig på hela organisationen (klienttäckande). Den har stöd för välkomstprogrammet (OOBE) i Windows AutoPilot och används när en enhet registreras. 
+-  En identitetsskyddsprofil kan skapas under **Enhetskonfiguration**. Den här profilen riktar in sig på tilldelade användare och enheter, och tillämpas vid incheckning. 
+
+Använd den här artikeln för att skapa en standardprincip för Windows Hello för företag som riktar in sig på hela organisationen. Om du vill skapa en identitetsskyddsprofil som används för att välja användar- och enhetsgrupper kan du läsa [Konfigurera en identitetsskyddsprofil](identity-protection-configure.md).  
 
 <!--- -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
@@ -57,7 +60,7 @@ Intune kan integreras med Hello för företag på två sätt:
 
 4. I fönstret **Alla användare** klickar du på **Egenskaper** och anger sedan ett **Namn** och valfri **Beskrivning** för Windows Hello för företag-inställningarna.
 
-5. I fönstret **Alla användare** klickar du på **Inställningar** och väljer bland följande för att **Konfigurera Windows Hello för företag**:
+5. I fönstret **Alla användare** klickar du på **Inställningar** och väljer bland följande alternativ för att **Konfigurera Windows Hello för företag**:
 
     - **Inaktiverad**. Välj den här inställningen om du inte vill använda Windows Hello för företag. Alla andra inställningar på skärmen inaktiveras.
     - **Aktiverad**. Välj den här inställningen om du vill konfigurera inställningarna för Windows Hello för företag.

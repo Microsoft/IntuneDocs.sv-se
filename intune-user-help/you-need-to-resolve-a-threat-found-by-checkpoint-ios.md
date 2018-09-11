@@ -1,11 +1,11 @@
 ---
 title: Åtgärda hot som upptäckts av SandBlast Mobile Protect på iOS | Microsoft Docs
-description: Lär dig att åtgärda ett hot som hittades av Mobile Protect på iOS.
+description: Lär dig att åtgärda ett hot som hittades av SandBlast Mobile Protect för iOS.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/03/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,34 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: a34e73d3209453f07523d1c841e8ba578c85aa3d
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: f4725b76517bc9d3a27f07d7289f178c54a31bce
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30755975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43148039"
 ---
-# <a name="you-need-to-resolve-a-threat-found-by-sandblast-mobile-protect"></a>Du måste åtgärda ett hot som upptäckts av SandBlast Mobile Protect
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Åtgärda ett hot som har upptäckts av SandBlast Mobile Protect
 
-SandBlast Mobile Protect har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan. Meddelandet som visas beror på vilket problem som SandBlast Mobile Protect har hittat.
+SandBlast Mobile Protect är en tjänst för skydd mot mobila hot som identifierar och bedömer potentiella hot på iOS-enheter. Den rapporterar sedan hoten så att du kan se dem från företagsportalappen. Hot visas i appen som olösta, ej kompatibla problem. Så länge dessa hot finns kvar kan du inte:   
 
-Du åtgärdar problemet genom att öppna appen SandBlast Mobile Protect och följa anvisningarna som visas.
+* Ansluta till företagets e-post
+* Ansluta till företagets Wi-Fi
+* Ansluta till SharePoint Online
+* Synkronisera företagsfiler med OneDrive
+* Få åtkomst till företagsappar
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Vad som kan visas om den registrerade enhetens åtkomst till e-post eller filer blockeras
+Den här artikeln beskriver hur du kan känna igen hotaviseringar från SandBlast Mobile Protect och vad du kan göra för att lösa dem.  
 
-Om det finns ett virus eller andra säkerhetshot på den registrerade enheten och du försöker få åtkomst till ditt e-postkonto eller filer hos företaget, får du ett meddelande från SandBlast Mobile Protect om att vidta åtgärder.
+## <a name="troubleshoot-virus-or-security-threat"></a>Felsöka virus- eller säkerhetshot  
+Om ett virus- eller säkerhetshot identifieras agerar SandBlast Mobile Protect-appen enligt organisationens åtkomstprinciper. Åtkomstprinciper kan förhindra att du kommer åt arbetets nätverk, appar och e-post.  
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](http://portal.manage.microsoft.com) där du får anvisningar om hur du kan lösa problemet.
+SandBlast Mobile Protect uppmanar dig att vidta åtgärder för att återfå den åtkomst som du har förlorat. Välj hotet och följ instruktionerna i appen för att lösa det.  
 
-## <a name="example-of-an-app-that-sandblast-mobile-protect-sees-as-a-threat"></a>Exempel på en app som SandBlast Mobile Protect ser som ett hot
+## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot  
 
-Om du har installerat en app som SandBlast Mobile Protect betraktar som ett hot, får du en varning om att en app som inte bedöms som betrodd är installerad på enheten.
+Om du installerar en app som ses som ett hot mot din enhet får du ett meddelande i SandBlast Mobile Protect. Om den berörda appen finns kvar på enheten kan du inte komma åt företagsresurser.  
 
-Avinstallera i så fall appen så får du omedelbart åtkomst till företagets e-post och information igen. Om du inte avinstallerar appen har du ingen åtkomst till e-post och information förrän du avinstallerar appen.
+Lös detta genom att välja appen i listan över hot i SandBlast Mobile Protect. Följ sedan anvisningarna för att ta bort och avinstallera appen.  
 
-Behöver du fortfarande hjälp? Kontakta IT-administratören. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](http://portal.manage.microsoft.com).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980)

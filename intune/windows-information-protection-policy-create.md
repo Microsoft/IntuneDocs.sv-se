@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61df998dae611eb7350fa144260780b5589afc61
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762254"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347315"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Skapa och distribuera en WIP-appskyddsprincip med Intune
 
@@ -62,8 +62,8 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.
-3. Välj **Mobilappar** på **Microsoft Intune**-bladet.
-4. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+3. Välj **Klientappar** på **Microsoft Intune**-bladet.
+4. Välj **Appskyddsprinciper** på bladet **Klientappar**.
 5. Välj **Lägg till en princip** så att bladet **Lägg till en princip** visas.
 6. Lägg till följande värden:
     - **Namn:** Skriv ett namn (obligatoriskt) för den nya principen.
@@ -74,8 +74,8 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Lägga till rekommenderade appar i listan över skyddade appar
 
-1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+1. Välj **Klientappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
 3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
 4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
 5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
@@ -86,8 +86,8 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Lägga till en Store-app i listan över skyddade appar
 
 **Lägga till en Store-app**
-1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+1. Välj **Klientappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
 3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
 4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
 5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
@@ -99,8 +99,8 @@ När du konfigurerar Intune i din organisation kan du skapa en WIP-specifik prin
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Lägga till en skrivbordsapp i listan över skyddade appar
 
 **Lägga till en skrivbordsapp**
-1. Välj **Mobilappar** på **Microsoft Intune**-bladet.
-2. Välj **Appskyddsprinciper** på bladet **Mobilappar**.
+1. Välj **Klientappar** på **Microsoft Intune**-bladet.
+2. Välj **Appskyddsprinciper** på bladet **Klientappar**.
 3. På bladet **Appskyddsprinciper** väljer du den princip som du vill ändra. Bladet **Intune-appskydd** visas.
 4. Välj **Skyddade appar** på bladet **Intune-appskydd**. Bladet **Skyddade appar** öppnas och visar alla appar som redan ingår i listan för den här appskyddsprincipen.
 5. Välj **Lägg till appar**. I **Lägg till appar** visas en filtrerad lista med appar. I listan längst upp på bladet kan du ändra listfiltret.
@@ -116,8 +116,7 @@ När du lägger till de appar som du vill skydda med RIA måste du använda ett 
 
 WIP-utbildning är en rapport som gör det möjligt att övervaka WIP-aktiverade appar och okända WIP-appar. De okända apparna är de som inte distribueras av organisationens IT-avdelning. Du kan exportera de här apparna från rapporten och lägga till dem i dina WIP-principer för att undvika avbrott i produktivitet innan de framtvingar WIP i blockeringsläge.
 
-<!-- 1631908 -->
-Förutom att visa information om WIP-aktiverade appar kan du visa en sammanfattning av de enheter som har delat arbetsdata med webbplatser. Med den här informationen kan du bestämma vilka webbplatser som ska läggas till i gruppernas och användarnas PIA-principer. I sammanfattningen visas vilka webbplatsadresser som används av WIP-aktiverade appar.
+<!-- 1631908 --> Förutom att visa information om WIP-aktiverade appar kan du visa en sammanfattning av de enheter som har delat arbetsdata med webbplatser. Med den här informationen kan du bestämma vilka webbplatser som ska läggas till i gruppernas och användarnas PIA-principer. I sammanfattningen visas vilka webbplatsadresser som används av WIP-aktiverade appar.
 
 När du arbetar med WIP-aktiverade appar och okända WIP-appar rekommenderar vi att du börjar med **Tyst** eller **Tillåt åsidosättningar** medan du verifierar med en liten grupp att du har rätt appar på listan över skyddade appar. När du är klar kan du ändra till din slutliga framtvingandeprincip, **blockera**.
 
@@ -149,7 +148,7 @@ När du stänger av WIP görs ett försök att dekryptera eventuella WIP-taggade
 
 1. Öppna [Azure Portal](https://portal.azure.com). Välj **Alla tjänster**. Skriv **Intune** i textrutefiltret.
 
-3. Välj **Intune** > **Mobilappar**.
+3. Välj **Intune** > **Klientappar**.
 
 4. Välj **Appskyddsstatus** > **Rapporter** > **Windows informationsskydd-inlärning**.  
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 5/16/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 61310f5baa64c43d2e818df6c61a36d232922c1c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744745"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312858"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Windows 10 VPN-inställningar i Intune
 
@@ -42,6 +42,8 @@ Beroende på vilka inställningar du väljer, kanske inte alla värden är konfi
   - **Standardserver**: Gör servern till den standardserver som enheterna använder för att upprätta anslutningen. Ange endast en server som standard.
   - **Importera**: Bläddra till en kommateckenavgränsad fil som innehåller en lista med servrar i formatet: beskrivning, IP-adress eller FQDN, samt standardserver. Välj **OK** för att importera dessa servrar till listan **Servrar**.
   - **Exportera**: Exporterar listan med servrar till en kommateckenavgränsad fil (csv)
+
+- **Registrera IP-adresser med internt DNS**: Välj **Aktivera** för att konfigurera Windows 10 VPN-profilen så att den dynamiskt registrerar IP-adresser som har tilldelats till VPN-gränssnittet med internt DNS, eller välj **Inaktivera** om du inte vill registrera IP-adresserna dynamiskt.
 
 - **Anslutningstyp**: Välj VPN-anslutningstypen från leverantörslistan nedan:
 

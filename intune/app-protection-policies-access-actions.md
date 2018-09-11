@@ -15,12 +15,12 @@ ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cdd3484f002a3719410d4f801073914e7f58fc4c
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254492"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329418"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektiv rensning av data med åtkomståtgärder för appskyddsprinciper i Intune
 
@@ -33,7 +33,7 @@ Du kan uttryckligen välja att rensa ditt företags data från slutanvändarens 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**.  
     Intune finns i avsnittet **Övervakning och hantering**.
-3. I **Intune**-fönstret väljer du **Mobilappar** > **Principer för appskydd**.
+3. I **Intune**-fönstret väljer du **Klientappar** > **Principer för appskydd**.
 4. Klicka på **Lägg till en princip** (du kan även redigera en befintlig princip). 
 5. Klicka på **Konfigurera obligatoriska inställningar** för att se listan över inställningar tillgängliga för konfiguration för principen. 
 6. När du rullar ned i fönstret Inställningar visas avsnittet **Åtkomståtgärder** med en redigerbar tabell.

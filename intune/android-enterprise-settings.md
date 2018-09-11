@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15ac6adbcf262fd14edf11107b032aeda106a15b
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039343"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43312904"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Inställningar för Android enterprise kiosk i Intune
 
@@ -33,14 +33,14 @@ Android-kioskprofiler stöder följande konfigurationsinställningar. När du sk
     - **Bevilja automatiskt**: Behörigheter beviljas automatiskt.
     - **Neka automatiskt**: Behörigheter nekas automatiskt.
 - **Volymändringar**: Välj **Blockera** för att förhindra användare att ändra enhetens volym.
-- **Fabriksåterställning**: Välj **Blockera** för att förhindra användare att fabriksåterställa enheten.
+- **Rensa**: Välj **Blockera** för att hindra användare från att rensa enheten.
 - **Säker start**: Välj **Blockera** för att förhindra att användare startar om enheten i felsäkert läge.
 - **Statusfält**: Välj **Blockera** för att förhindra användare att komma åt statusfältet, till exempel meddelanden och snabbinställningar.
 - **Ändringar i Wi-Fi-inställning**: Välj **Blockera** för att förhindra användare att ändra Wi-Fi-konfigurationer som skapats av enhetsägaren. Användarna kan skapa sina egna Wi-Fi-konfigurationer.
 - **Konfiguration av Wi-Fi-åtkomstpunkt**: Välj **Blockera** för att förhindra användare att skapa eller redigera Wi-Fi-konfigurationer.
 - **Felsökningsfunktioner**: Välj **Tillåt** för att låta användare använda felsökningsfunktioner.
 - **Mikrofonjustering**: Välj **Blockera** för att förhindra användare att justera volymen för eller stänga av mikrofonen.
-- **E-post för skydd mot fabriksåterställning**: Välj **E-postadresser för Google-konto** för att definiera e-postadresser (avgränsa med semikolon) som kan låsa upp enheten efter en fabriksåterställning. Om ett e-postmeddelande inte har angetts kan vem som helst låsa upp enheten efter en fabriksåterställning.
+- **Wipe protection emails** (E-post för skydd mot rensning): Välj **E-postadresser för Google-konto** för att definiera e-postadresser (avgränsa med semikolon) som kan låsa upp enheten efter en rensning. Om ett e-postmeddelande inte har angetts kan vem som helst låsa upp enheten efter en rensning.
 - **Nätverkshjälp**: Välj **Aktivera** för att tillåta aktivering av nätverkshjälpfunktionen. Om en nätverksanslutning inte kan upprättas vid start uppmanar hjälpfunktionen användaren att tillfälligt ansluta till ett nätverk för att kunna uppdatera enhetsprincipen. När principen har tillämpats glöms det tillfälliga nätverket och starten av enheten fortsätter. Detta förhindrar att det inte går att ansluta till något nätverk om det inte finns något lämpligt nätverk i den senaste principen och enheten startar i en app i låsläget, eller om användaren på annat sätt inte kan nå enhetsinställningarna.
 - **Tillåt installation från okända källor**: Välj **Tillåt** för att tillåta att användare installerar från okända källor.
 - **Systemuppdatering**: Välj ett alternativ för att definiera hur enheten hanterar over-the-air-uppdateringar:

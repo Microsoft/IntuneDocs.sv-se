@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9ee132a1b1c79e9829e5d28dc33b5cac2e52c8ac
-ms.sourcegitcommit: 27f365f5e67e83562883e0c1fc9fdfae8fd60ce4
+ms.openlocfilehash: 1461089beafd6501d6ebc87ab1a89963fa4aac57
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40252600"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347781"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Lägg till en verksamhetsspecifik app för iOS i Microsoft Intune
 
@@ -35,8 +35,8 @@ Informationen i den här artikeln visar hur du lägger till en verksamhetsspecif
 
 1. Logga in på [Azure Portal](https://portal.azure.com).
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
-3. Välj **Enheter** i **Mobilappar**-fönstret.
-4. Välj **Hantera** > **appar** i arbetsbelastningen **Mobilappar**.
+3. Välj **Klientappar** i **Intune**-fönstret.
+4. Välj **Hantera** > **Appar** i arbetsbelastningen **Klientappar**.
 5. Välj **Lägg till** ovanför listan över appar.
 6. I fönstret **Lägg till app** väljer du **Branschspecifik app**.
 

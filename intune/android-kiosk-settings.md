@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f1aa88264ef277863f58d21baaa136c140c5c287
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
+ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949551"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329391"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Inställningar för helskärmsläge för Android-enheter i Intune
 
@@ -55,7 +55,7 @@ Följ dessa steg om du vill ange en Android-kioskenhet för flera appar:
 
 1. Gå till [sidan Managed Home Screen på Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) och logga in med samma konto som du använder för andra Managed Google Play-appar.
 2. Välj **Godkänn**.
-3. Gå till [Intune-portalen](https://portal.azure.com) och välj **Mobilappar** > **Managed Google Play** > **Synkronisera**.
+3. Gå till [Intune-portalen](https://portal.azure.com) och välj **Klientappar** > **Managed Google Play** > **Synkronisera**.
 4. Välj **Appar** > **Managed Home Screen** > **Tilldelningar** > **Lägg till grupp**.
 5. Under **Tilldelningstyp** väljer du **Obligatorisk**.
 6. Välj **Grupper som omfattas** > **Välj grupper att ta med** > välj den enhetsgrupp du har skapat för dina kioskenheter > **Välj** > **OK** > **OK** > **Spara**.
@@ -65,13 +65,13 @@ Följ dessa steg om du vill ange en Android-kioskenhet för flera appar:
 Följ dessa steg för varje app du vill ska vara tillgängliga på kioskenheterna:
 
 1. [Lägg till appen i Intune](store-apps-android.md).
-2. Välj **Mobilappar** > **Appar** > välj appen > **Tilldelningar** > **Lägg till grupp**.
+2. Välj **Klientappar** > **Appar** > välj appen > **Tilldelningar** > **Lägg till grupp**.
 3. Under **Tilldelningstyp** väljer du **Obligatorisk**.
 4. Välj **Grupper som omfattas** > **Välj grupper att ta med** > välj den enhetsgrupp du har skapat för dina kioskenheter > **Välj** > **OK** > **OK** > **Spara**.
 
 ### <a name="add-web-links-that-can-be-used-in-kiosk-mode"></a>Lägga till webblänkar som kan användas i helskärmsläge
 
-1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Mobilappar** > **Appar** > **Lägg till**.
+1. Gå till [Intune-portalen](https://portal.azure.com) och välj **Klientappar** > **Appar** > **Lägg till**.
 2. Under **Apptyp** väljer du **Webblänk**.
 3. Välj **Konfigurera** och ange nödvändig information. Du behöver inte lägga en logotypbild eftersom den hämtas automatiskt från webbplatsens favicon.ico.
 4. Välj **OK** > **Lägg till**.

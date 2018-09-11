@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,37 @@ ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9180bf70c114a9bb1f034b51ee3a3d96bef253fa
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
+ms.openlocfilehash: 9f0140d532356a1ddb3f8acf19ea1dfaf6e85eb8
+ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279499"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43347702"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Uppdateringar i användargränssnittet för Intunes slutanvändarappar
 Läs mer om de senaste uppdateringarna i användargränssnittet för appar som dina slutanvändare ser i den här versionen av Microsoft Intune. Att förstå dessa uppdateringar underlättar din användarkommunikation och eventuell uppdaterad anpassad dokumentation som du har skapat för att stödja distributionen. Det underlättar också felsökningen av eventuella problem som användarna har om de kontaktar supportavdelningen för att få hjälp med att använda företagsportalen.
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-august-27-2018"></a>Veckan 27 augusti 2018  
+
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Ny uppdatering av användarupplevelse för företagsportalens webbsida <!--2000968 -->  
+Vi har lagt till nya funktioner på företagsportalen baserat på våra kunders synpunkter. Du kommer att se tydliga förbättringar av befintliga funktioner och användbarheten för dina enheter. Delar av webbplatsen, som enhetsinformation, feedback och support samt enhetsöversikten, har fått en ny och modern design. [Dokumentationen till Intune-företagsportalens webbplats](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website) har uppdaterats för att återspegla dessa ändringar.   
+
+Uppdateringar som du kan se är bland annat:  
+
+- Effektiva arbetsflöden mellan olika plattformar
+- Bättre flöden för identifiering och registrering av enheter
+- Fler användbara felmeddelanden
+- Mer användarvänligt språk, mindre teknisk jargong
+- Möjlighet att dela direktlänkar till appar
+- Förbättrad prestanda för stora app-kataloger
+- Bättre tillgänglighet för alla användare  
+
+|Uppdaterad|Föregånde|
+|---|---|
+|![Den uppdaterade enhetssidan visar enheten korrekt placerad ovanför enhetsinformationen, den dyker inte längre upp ovanför hela listan.](./media/iwp-device-after-1803.png)|![Den tidigare versionen av enhetssidan.](./media/iwp-device-before-1803.png)|
+|![Den uppdaterade appinstallationssidan visar appen korrekt placerad ovanför en beskrivning och olika typer av installationsinformation, inklusive publiceringsdatum, version och typ av app.](./media/iwp-app-install-after-1803.png)|![Den tidigare versionen av appinstallationssidan.](./media/iwp-app-install-before-1803.png)|  
 
 ## <a name="week-of-july-16-2018"></a>Veckan som inleds den 16 juli 2018  
 
@@ -112,7 +132,7 @@ Om du har aktiverat [Mappning av enhetsgrupp](device-group-mapping.md) får anv�
 Vi har förbättrat arbetsflödet för enhetskonfiguration i företagsportalappen för iOS. Språket är mer användarvänligt och vi har kombinerat skärmar där det är möjligt. Vi har också gjort språket mer specifikt för ditt företag genom att använda företagsnamnet genomgående i installationstexten.
 
 > [!NOTE]
-> Vi använder företagets namn som du har angett i Azure Portal i **Microsoft Intune** > **mobilappar** > **företagsportalanpassning** > **företagsnamn**. Om du inte har angett det här värdet, använder vi det klientnamn som ställts in i **Azure Active Directory** > **egenskaper** > **namn**. Om du inte har angett något företagsnamn i företagsportalsanpassningen och inte vill att ditt klientnamn ska visas, rekommenderar vi att du anger företagets namn i företagsportalens anpassningsflik. Om du inte vill att den här strängen ska visas i rubriken till företagsportalen, kan du avmarkera kryssrutan visa företagets namn bredvid logotypen.
+> Vi använder företagets namn som du har angett i Azure Portal i **Microsoft Intune** > **Klientappar** > **Logotyp för företagsportalen** > **Företagsnamn**. Om du inte har angett det här värdet, använder vi det klientnamn som ställts in i **Azure Active Directory** > **egenskaper** > **namn**. Om du inte har angett något företagsnamn i företagsportalsanpassningen och inte vill att ditt klientnamn ska visas, rekommenderar vi att du anger företagets namn i företagsportalens anpassningsflik. Om du inte vill att den här strängen ska visas i rubriken till företagsportalen, kan du avmarkera kryssrutan visa företagets namn bredvid logotypen.
 
 |Före|Efter|
 |---|---|
@@ -458,12 +478,7 @@ Vi har lagt till några nya funktioner, baserat på feedback från kunder som du
 -   Möjlighet att dela direktlänkar till appar
 - Förbättrad prestanda för stora app-kataloger
 
-Du behöver inte göra några förberedelser inför den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan dock behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen för iOS, eftersom webbplatsen startar avsnittet **Appar** i iOS-appen.
-
-|Uppdaterad|Föregånde|
-|---|---|
-|![Den uppdaterade enhetssidan visar enheten korrekt placerad ovanför enhetsinformationen, den dyker inte längre upp ovanför hela listan.](./media/iwp-device-after-1803.png)|![Den tidigare versionen av enhetssidan.](./media/iwp-device-before-1803.png)|
-|![Den uppdaterade appinstallationssidan visar appen korrekt placerad ovanför en beskrivning och olika typer av installationsinformation, inklusive publiceringsdatum, version och typ av app.](./media/iwp-app-install-after-1803.png)|![Den tidigare versionen av appinstallationssidan.](./media/iwp-app-install-before-1803.png)|
+Du behöver inte göra några förberedelser inför den här ändringen. Vi meddelar dig när den uppdaterade webbplatsen för företagsportalen blir tillgänglig för dig. Du kan dock behöva uppdatera slutanvändardokument med uppdaterade skärmbilder. Observera att du också kan behöva uppdatera dokumentationen för företagsportalappen för iOS, eftersom webbplatsen startar avsnittet **Appar** i iOS-appen.  
 
 ### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Gränssnittsuppdateringar på företagsportalswebbplatsen <!--1313244 part 2-->
 

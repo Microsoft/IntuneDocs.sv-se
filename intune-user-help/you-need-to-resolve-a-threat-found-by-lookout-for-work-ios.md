@@ -1,11 +1,11 @@
 ---
 title: Lös hot som upptäckts av Lookout for Work i iOS | Microsoft Docs
-description: Lär dig att åtgärda ett hot som hittades av Lookout for Work på iOS.
+description: Lär dig att åtgärda ett hot som upptäcks på din iOS-enhet av Lookout for Work-appen.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,36 +15,40 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: be7d54cdde7e82cd0e0d4820ecfddff171e5984a
-ms.sourcegitcommit: 7f46e9990797bdfa669ccba2077721f1bc70c07e
+ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
+ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30751976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43150209"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work  
 
-Lookout for Work har hittat ett potentiellt hot på enheten och du måste åtgärda problemet för att få åtkomst till din e-post, appar och filer för företaget eller skolan.
+Lookout for Work-appen är en tjänst för skydd mot mobila hot som identifierar potentiella hot på din iOS-enhet. Dessa hot rapporteras till företagsportalappen och visas där som olösta, ej kompatibla problem. Så länge dessa hot finns kvar kan du inte:
 
-Åtgärda problemet genom att öppna appen Lookout for Work och följa anvisningarna som visas i appen.
+* Ansluta till företagets e-post
+* Ansluta till företagets Wi-Fi
+* Ansluta till SharePoint Online
+* Synkronisera företagsfiler med OneDrive
+* Få åtkomst till företagsappar
 
-## <a name="what-you-might-see-if-your-enrolled-device-is-blocked-from-accessing-email-or-files"></a>Vad som kan visas om den registrerade enhetens åtkomst till e-post eller filer blockeras
+Den här artikeln beskriver hur du kan känna igen hotaviseringar från Lookout for Work och vad du kan göra för att lösa dem. 
 
-Om det finns ett virus eller andra säkerhetshot på den registrerade enheten och du försöker få åtkomst till ditt e-postkonto eller filer hos företaget visas ett meddelande som liknar detta:
+## <a name="troubleshoot-virus-or-security-threat"></a>Felsöka virus- eller säkerhetshot  
+Få åtkomst till företagets resurser när Lookout for Work-appen identifierar ett säkerhets- eller apphot.  
 
-![Lookout for Work-felmeddelande med länk till företagsportalens webbplats](./media/mtd-go-to-device-management-portal-android.png)
+1. Om ett virus eller ett säkerhetshot upptäcks får du ett meddelande som liknar det som visas i skärmbilden nedan. Tryck på länken till **enhetshanteringsportalen** för att öppna [företagsportalens webbplats](https://portal.manage.microsoft.com/devices).  
 
-Tryck på **enhetshanteringsportalens** länk till [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog), där du får anvisningar om hur du kan lösa problemet.
+    ![Exempel på skärmbild av ett felmeddelande för Lookout for Work, med en länk till företagsportalens webbplats och en blå OK-knapp.](./media/mtd-go-to-device-management-portal-android.png)  
 
-## <a name="example-of-an-app-that-lookout-for-work-sees-as-a-threat"></a>Exempel på en app som Lookout for Work uppfattar som ett hot
+2. Välj din enhet.  
+3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar Lookout for Work för att åtgärda virus- eller säkerhetshotet.   
 
-Om du har installerat en app som Lookout for Work uppfattar som ett hot visas en skärmbild som liknar denna:
+## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot   
+Om du installerar en app som Lookout for Work identifierar som ett hot visas ett meddelande som liknar det som syns i skärmbilden nedan.  
 
-![exempel på ett virusvarningsmeddelande från Lookout for Work](./media/ios-lfw-threat-example.png)
+![Exempel på skärmbild som visar en lista över aktiva och lösta apphot som har identifierats av Lookout for Work.](./media/ios-lfw-threat-example.png)    
+Välj appnamnet som visas överst på skärmen. Följ sedan anvisningarna för att ta bort och avinstallera appen. Så länge som appen finns kvar på enheten kan du inte komma åt företagsresurser.    
 
-Om du ser något som liknar detta trycker du på appnamnet som visas längst upp på skärmen och följer anvisningarna för att ta bort hotet.
-
-När du har avinstallerat appen återfår du omedelbart åtkomst till din e-post på företaget eller skolan. Om du ignorerar rekommendationen om att avinstallera appen förlorar du åtkomsten till din e-post och dina data hos företaget fram till dess att du avinstallerar appen.
-
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://portal.manage.microsoft.com#HelpDeskDialog).
+Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

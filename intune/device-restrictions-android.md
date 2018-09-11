@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 952845ba19c52aa44a9e82ee92909b8c4f32aed6
-ms.sourcegitcommit: 0132b59e484c220338b1efcd35d03c83c285361e
+ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39587031"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313707"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Inställningar av begränsningar för Android- och Samsung Knox Standard-enheter – Intune
 
@@ -35,7 +35,7 @@ I den här artikeln visas alla inställningar av enhetsbegränsningar som du kan
 - **Kopiera och klistra in (endast Samsung Knox)** – Tillåter funktioner för att kopiera och klistra in på enheten.
 - **Urklippsdelning mellan appar (endast Samsung Knox)** – Tillåter användning av Urklipp vid funktionen Kopiera och klistra in mellan appar.
 - **Sändning av diagnostikdata (endast Samsung Knox)** – Hindrar användaren från att skicka diagnostikdata från enheten.
-- **Fabriksåterställning (endast Samsung Knox)** – Tillåter att användaren utför en fabriksåterställning på enheten.
+- **Rensning (endast Samsung Knox)** – Tillåter att användaren utför en [rensning](devices-wipe.md) på enheten.
 - **Geoplats (endast Samsung Knox)** – Tillåter att enheten använder platsinformation.
 - **Avstängning (endast Samsung Knox)** – Tillåter att användaren stänger av enheten.<br>Om det är inaktiverat så går det inte att ställa in **antal felaktiga inloggningar innan enheten rensas**.
 - **Skärmdump (endast Samsung Knox)** – Låter användaren fånga skärminnehållet som en bild.

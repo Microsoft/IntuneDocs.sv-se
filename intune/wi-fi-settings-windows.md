@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 08/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8f6532c63612b806f9824f5b9ca98f1ebbbc943f
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: e15a7b034c9277fcd960e8c704f4318f0f5c1da2
+ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321848"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43329655"
 ---
-## <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
+# <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-inställningar för Windows 10-enheter och senare enheter i Microsoft Intune
 
 Wi-Fi-inställningar används i en konfigurationsprofil som tillämpas för enheter som kör Windows 10 och senare. Alternativen är:
 
@@ -77,25 +78,36 @@ Wi-Fi-inställningar används i en konfigurationsprofil som tillämpas för enhe
   - **EAP-TTLS**
   - **Skyddad PEAP** (PEAP)
 
-### <a name="more-options-when-you-choose-the-eap-type"></a>Ytterligare alternativ när du väljer EAP-typ
+    **Ytterligare inställningar för EAP-TLS, EAP-TTLS och PEAP**:
+    
+    > [!NOTE]
+    > För närvarande stöds endast SCEP-certifikatprofiler när du använder en EAP-typ. PKCS-certifikatprofiler stöds inte. Varje gång en användare uppmanas att ange ett certifikat ska ett SCEP-certifikat väljas.
 
-> [!NOTE]
-> För närvarande stöds endast SCEP-certifikatprofiler när du använder en EAP-typ. PKCS-certifikatprofiler stöds inte. Varje gång en användare uppmanas att ange ett certifikat ska ett SCEP-certifikat väljas.
+      - **Serverförtroende**  
 
-#### <a name="server-trust"></a>Serverförtroende
+        **Certifikatservernamn**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.  
 
-|Inställningsnamn|Mer information|Använd när|
-|--------------|-------------|----------|
-|**Certifikatservernamn**|Ange ett eller flera gemensamma namn som används i de certifikat som utfärdats av en betrodd certifikatutfärdare (CA). Om du anger den här informationen kan du hoppa över dialogrutan för dynamiskt förtroende som visas på användarenheter när de ansluter till Wi-Fi-nätverket.|EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**|
-|**Rotcertifikat för serververifiering**|Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen. |EAP-typen är **EAP-TLS**, **EAP-TTLS** eller **PEAP**|
-|**Identitetssekretess (yttre identitet)**|Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.|EAP-typen är **PEAP**|
+        **Rotcertifikat för servervalidering**: Använd med EAP-typerna **EAP-TLS**, **EAP-TTLS** eller **PEAP**. Välj den betrodda rotcertifikatsprofil som ska användas för att autentisera anslutningen.  
 
-#### <a name="client-authentication"></a>Klientautentisering
+        **Identitetssekretess (yttre identitet)**: Använd med EAP-typen **PEAP**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.  
 
-| Inställningsnamn | Mer information | Använd när |
-|---|---|---|
-| **Klientcertifikat för klientautentisering (identitetscertifikat)** |  Välj den SCEP-certifikatsprofil som ska användas för att autentisera anslutningen. | EAP-typen är **EAP-TLS** |
-| **Autentiseringsmetod** | Välj autentiseringsmetod för anslutningen:<br><br>- **Certifikat**: Välj det SCEP-klientcertifikat som är det identitetscertifikat som presenteras för servern.<br><br>- **Användarnamn och lösenord**: Ange en **Annan metod än EAP (inre identitet)** för autentisering. Alternativen är:<br><br>- **Okrypterat lösenord (PAP)**<br>- **Utmaningshandskakning (CHAP)**<br>- **Microsoft CHAP (MS-CHAP)**<br>- **Microsoft CHAP Version 2 (MS-CHAP v2)**<br><br>- **Identitetssekretess (yttre identitet)**: Ange den text som skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel. | EAP-typen är **EAP-TTLS** |
+      - **Klientautentisering**
+
+        **Klientcertifikat för klientautentisering (identitetscertifikat)**: Använd med EAP-typen **EAP-TLS**. Välj den certifikatprofil som ska användas för att autentisera anslutningen.
+
+        **Autentiseringsmetod**: Använd med EAP-typen **EAP-TTLS**. Välj autentiseringsmetod för anslutningen:  
+
+          - **Certifikat**: Välj det klientcertifikat som är det identitetscertifikat som presenteras för servern.
+          - **Användarnamn och lösenord**: Ange en **Annan metod än EAP (inre identitet)** för autentisering. Alternativen är:
+
+            - **Okrypterat lösenord (PAP)**
+            - **Utmaningshandskakning (CHAP)**
+            - **Microsoft CHAP (MS-CHAP)**
+            - **Microsoft CHAP Version 2 (MS-CHAP v2)**
+
+        **Identitetssekretess (yttre identitet)**: Använd med EAP-typen **EAP-TTLS**. Ange den text som ska skickas som svar på en begäran om EAP-identitet. Den här texten kan ha vilket värde som helst. Vid autentisering skickas den här anonyma identiteten från början och sedan följs den av den verkliga identifieringen som skickas i en säker tunnel.
+
+- **Tvinga Wi-Fi-profilen att följa FIPS-standarden (Federal Information Processing Standard)**: Välj **Ja** vid validering mot FIPS 140-2-standarden. Den här standarden krävs för alla amerikanska federala myndigheter som använder kryptografibaserade säkerhetssystem för att skydda känslig men ej klassificerad information som lagras digitalt. Välj **Nej** för att inte vara FIPS-kompatibel.
 
 ## <a name="use-an-imported-settings-file"></a>Använd en importerad inställningsfil
 

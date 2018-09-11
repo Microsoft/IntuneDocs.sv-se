@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7aabb010baa4a5e53ad5e4264edc43e3ca111c70
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 1bd9cff2148857ab6b0ea6d6e3c940e1e731c44b
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909209"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313169"
 ---
 # <a name="what-is-device-enrollment"></a>Vad är enhetsregistrering?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,7 +34,7 @@ Som standard tillåts enheter för alla plattformar registreras i Intune. Men du
 
 | **Metod** |  **Återställning krävs** |    [**Användartillhörighet**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) |   **Låst** | **Information** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Enheterna fabriksåterställs vid registreringen. |  Kopplar varje enhet till en användare.| Användarna kan inte avregistrera enheter.  | |
+| | Enheter rensas under registreringen. |  Kopplar varje enhet till en användare.| Användarna kan inte avregistrera enheter.  | |
 |**[BYOD](#bring-your-own-device)** | Nej|   Ja |   Nej | [Mer information](./apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Nej |Nej |Nej  | [Mer information](./device-enrollment-program-enroll-ios.md)|
 |**[DEP](#apple-device-enrollment-program)**|   Ja |   Valfri |  Valfri|[Mer information](./device-enrollment-program-enroll-ios.md)|
@@ -95,7 +95,7 @@ Läs mer om iOS Apple Configurator-registrering med installationsassistenten:
 - [Registrera iOS-enheter med Configurator och Installationsassistenten](apple-configurator-setup-assistant-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB-Direct
-För direkt registrering måste administratören registrera varje enhet manuellt genom att skapa en registreringsprincip och exportera den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen fabriksåterställning. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program.
+För direkt registrering måste administratören registrera varje enhet manuellt genom att skapa en registreringsprincip och exportera den till Apple Configurator. USB-anslutna, företagsägda enheter registreras direkt och kräver ingen rensning. Enheter hanteras som användarlösa enheter. De är inte låsta eller övervakade och har inte stöd för villkorlig åtkomst, upplåsningsidentifiering eller hantering av mobila program.
 
 Mer information om iOS-registrering finns i:
 

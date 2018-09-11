@@ -14,12 +14,12 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6f711a6bec9be0ac1fd94183931070f9988d49e3
-ms.sourcegitcommit: 2773f388f50654366197a95a6838306f70fc18b8
+ms.openlocfilehash: 1ee08c77fe085ad0f238d63481dd682ea15aa5ce
+ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31442652"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43313093"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Lägga till en enhetsefterlevnadsprincip för iOS-enheter i Intune
 
@@ -106,6 +106,11 @@ Information om e-postprofiler finns i [Konfigurera åtkomst till företagets e-p
 - **Max antal minuter av inaktivitet innan lösenord krävs**: Ange hur lång tid av inaktivitet som kan gå innan användaren måste ange sitt lösenord på nytt.
 - **Lösenordets giltighetstid (dagar):** Ange antalet dagar tills lösenordet upphör att gälla och användaren måste ange ett nytt lösenord.
 - **Förhindra återanvändning av tidigare lösenord**: Ange antalet tidigare lösenord som inte får återanvändas.
+
+### <a name="restricted-applications"></a>Begränsade program 
+Du kan begränsa appar genom att lägga till deras samlings-ID:n i principen. Om en enhet sedan har appen installerad kommer enheten att markeras som ej kompatibel. 
+- **Appnamn**: Ange ett användarvänligt namn som hjälper dig att identifiera samlings-ID:t. 
+- **Appsamlings-ID**: Ange det unika samlings-ID som tilldelats av appleverantören. Information om att hitta samlings-ID finns i [Hitta samlings-ID för en iOS-app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
 
 ## <a name="assign-user-groups"></a>Tilldela användargrupper
 
