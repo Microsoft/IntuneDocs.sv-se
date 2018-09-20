@@ -3,8 +3,8 @@ title: Utvecklarhandbok för Microsoft Intune App SDK för Android
 description: Med Microsoft Intune App SDK för Android kan du implementera hantering av mobila appar (MAM, Mobile App Management) med Intune i din Android-app.
 keywords: SDK
 author: Erikre
-manager: dougeby
 ms.author: erikre
+manager: dougeby
 ms.date: 07/18/2018
 ms.topic: article
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 87333610380ef34e1d832694a30bfe97388bcb62
-ms.sourcegitcommit: e6013abd9669ddd0d6449f5c129d5b8850ea88f3
+ms.openlocfilehash: 4c26d9914173c07096caad428afcbd9174625ef7
+ms.sourcegitcommit: a474a6496209ff3b60e014a91526f3d163a45438
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39254407"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031311"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -59,13 +59,13 @@ Vid appskydd utan enhetsregistrering behöver användaren _**inte**_ registrera 
 
 Intune App SDK är ett Android-standardbibliotek utan externa beroenden. **Microsoft.Intune.MAM.SDK.aar** innehåller både de gränssnitt som krävs för att aktivera en appskyddsprincip och den kod som behövs för att interagera med Microsoft Intunes företagsportalappen.
 
-**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Gör detta genom att öppna approjektet i Android Studio och gå till **Arkiv > Ny > Ny modul**. Välj **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet Microsoft.Intune.MAM.SDK.aar för att skapa en modul för vår .AAR. Högerklicka på den modul eller de moduler som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** > **+-ikonen** > **Modulberoende** > Välj den MAM SDK AAR-modul som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
+**Microsoft.Intune.MAM.SDK.aar** måste anges som en Android-biblioteksreferens. Ange **Microsoft.Intune.MAM.SDK.aar** som en Android-biblioteksreferens genom att öppna ditt app-projekt i Android Studio, gå till **Fil > Ny > Ny modul** och välja **Importera .JAR/.AAR-paket**. Välj sedan Android-arkivpaketet **Microsoft.Intune.MAM.SDK.aar** för att skapa en modul för *.AAR*. Högerklicka på den modul eller de moduler som innehåller din appkod och gå till **Modulinställningar** > **fliken Beroenden** > **+-ikonen** > **Modulberoende** > Välj den MAM SDK AAR-modul som du precis skapat > **OK**. På så sätt kan du vara säker på att modulen kompileras med MAM SDK när du skapar ditt projekt.
 
 Dessutom innehåller **Microsoft.Intune.MAM.SDK.Support.v4** och **Microsoft.Intune.MAM.SDK.Support.v7** Intune-varianter av `android.support.v4` respektive `android.support.v7`. De ingår inte i Microsoft.Intune.MAM.SDK.aar, eftersom det inte är alla appar som ska innehålla supportbiblioteken. De är JAR-standardfiler i stället för Android-biblioteksprojekt.
 
 #### <a name="proguard"></a>ProGuard
 
-Om [ProGuard](http://proguard.sourceforge.net/) (eller annan metod för krympande/döljande) används som ett byggsteg, måste Intunes SDK-klasser undantas. När du integrerar .aar i ditt bygge läggs våra regler automatiskt till i ProGuard-steget, och de nödvändiga klassfilerna bevaras. 
+Om [ProGuard](http://proguard.sourceforge.net/) (eller annan metod för krympande/döljande) används som ett byggsteg, måste Intunes SDK-klasser undantas. När du inkluderar *.AAR* i versionen, läggs reglerna automatiskt till i ProGuard-steget och de nödvändiga klassfilerna bevaras. 
 
 Azure ADAL (Active Directory Authentication Libraries) kan ha egna ProGuard-begränsningar. Om din app integrerar ADAL måste du följa ADAL-dokumentationen om dessa begränsningar.
 
@@ -135,7 +135,7 @@ Android-basklasser måste ersättas med deras respektive MAM-motsvarigheter. Du 
 |android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
 
 ### <a name="renamed-methods"></a>Nytt namn på metoder
-I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (vanligtvis med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `onCreate()` och anropa `super.onCreate()`, måste `Activity` åsidosätta `onMAMCreate()` och anropa `super.onMAMCreate()`. Java-kompilatorn ska framtvinga de slutliga begränsningarna för att förhindra oavsiktlig åsidosättning av den ursprungliga metoden i stället för motsvarande MAM.
+I många fall har en metod som är tillgänglig i Android-klassen markerats som slutgiltig i MAM-ersättningsklassen. I detta fall tillhandahåller MAM-ersättningsklassen en metod med liknande namn (med suffixet `MAM`) som ska åsidosättas i stället. Om du härleder från `MAMActivity`, i stället för att åsidosätta `onCreate()` och anropa `super.onCreate()`, måste `Activity` åsidosätta `onMAMCreate()` och anropa `super.onMAMCreate()`. Java-kompilatorn ska framtvinga de slutliga begränsningarna för att förhindra oavsiktlig åsidosättning av den ursprungliga metoden i stället för motsvarande MAM.
 
 ### <a name="mamapplication"></a>MAMApplication
 Om din app skapar en underklass av `android.app.Application` så **måste** du skapa en underklass av `com.microsoft.intune.mam.client.app.MAMApplication` i stället. Om din app inte skapar `android.app.Application` som en underklass **måste** du ange `"com.microsoft.intune.mam.client.app.MAMApplication"` som `"android:name"`-attribut i taggen `<application>` i AndroidManifest.xml.
@@ -143,14 +143,14 @@ Om din app skapar en underklass av `android.app.Application` så **måste** du s
 I stället för `PendingIntent.get*` måste du använda `MAMPendingIntent.get*`-metoden. Därefter kan du använda resulterande `PendingIntent` som vanligt.
 
 ### <a name="manifest-replacements"></a>Manifestersättningar
-Observera att det kan vara nödvändigt att utföra några av ovanstående klassersättningar i manifestet samt i Java-koden. Observera särskilt:
+Det kan vara nödvändigt att utföra några av ovanstående klassersättningar i manifestet och i Java-koden. Observera särskilt:
 * Manifestreferenser till `android.support.v4.content.FileProvider` måste ersättas med `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
 ## <a name="sdk-permissions"></a>SDK-behörigheter
 
 Intune App SDK kräver tre [Android-systembehörigheter](https://developer.android.com/guide/topics/security/permissions.html) för apparna som integrerar det:
 
-* `android.permission.GET_ACCOUNTS` (begärs vid körningen om det behövs)
+* `android.permission.GET_ACCOUNTS` (begärs vid behov vid körning)
 
 * `android.permission.MANAGE_ACCOUNTS`
 
@@ -206,7 +206,7 @@ public interface AppPolicy {
 
 /**
  * Restrict where an app can save personal data.
- * This function is now deprecated. Please use getIsSaveToLocationAllowed(SaveLocation, String) instead
+ * This function is now deprecated. Use getIsSaveToLocationAllowed(SaveLocation, String) instead
  * @return True if the app is allowed to save to personal data stores; false otherwise.
  */
 @Deprecated
@@ -448,7 +448,7 @@ Om du vill konfigurera din app och aktivera lämplig autentisering, lägger du t
 
 ### <a name="common-adal-configurations"></a>Vanliga ADAL-konfigurationer
 
-Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appkonfiguration och ange ADAL-metadataparametrarna (förklaras ovan) till de värden som krävs. Om du vill kan du i samtliga fall ange auktoriteten för icke-förvalda miljöer, men normalt behövs det inte.
+Nedan visas några vanliga sätt att konfigurera en app med ADAL. Hitta din appkonfiguration och ange ADAL-metadataparametrarna (förklaras ovan) till de värden som krävs. Om du vill kan du i samtliga fall ange auktoriteten för icke-förvalda miljöer, men det behövs inte.
 
 1. **Appen integrerar inte ADAL:**
 
@@ -471,7 +471,7 @@ På Azure-portalen:
 3.  I **Inställningar** och under rubriken **API-åtkomst** väljer du **Required permission** (Nödvändig behörighet). 
 4.  Klicka på **+ Lägg till**.
 5.  Klicka på **Välj ett API**. 
-6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobila program).
+6.  I sökrutan anger du **Microsoft Mobile Application Management** (Microsofts hantering av mobilprogram).
 7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
 8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
 9.  Klicka på **Klar**.
@@ -492,7 +492,7 @@ Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
 ### <a name="conditional-access"></a>Villkorlig åtkomst
 
-Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser. [Intune-administratörer kan definiera regler för villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttokens, eller om den endast kommer åt resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
+Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) i Azure Active Directory som kan användas för att kontrollera åtkomsten till AAD-resurser. [Intune-administratörer kan definiera regler för villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access) som endast tillåter åtkomst till resurser från enheter eller appar som hanteras av Intune. Följ stegen nedan för att säkerställa att din app kan komma åt resurser när det behövs. Om din app inte använder AAD-åtkomsttoken, eller om den endast använder resurser som inte kan skyddas med villkorlig åtkomst (CA), kan du hoppa över de här stegen.
 
 1. Följ [riktlinjerna för ADAL-integration](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Se särskilt steg 11 för Broker-användning.
@@ -502,8 +502,8 @@ Villkorlig åtkomst (CA) är en [funktion](https://docs.microsoft.com/azure/acti
 3. Ange manifestets metadataparametrar enligt informationen under punkt 2 i avsnittet [Vanliga ADAL-konfigurationer](#common-adal-configurations) ovan.
 
 4. Testa att allt är korrekt konfigurerat genom att aktivera [enhetsbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) på [Azure-portalen](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) och bekräfta
-* att inloggningen i din app begär installation och registrering av Intune-företagsportalen
-* att inloggningen till appen fungerar korrekt efter registreringen.
+* att inloggningen i appen begär installation och registrering av Intune-företagsportalen
+* att inloggningen i appen fungerar korrekt efter registreringen.
 
 5. När appen har skickat Intune APP SDK-integrering till produktion kontaktar du msintuneappsdk@microsoft.com så lägger vi till din app i listan med godkända appar för [appbaserad villkorlig åtkomst](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
 
@@ -537,7 +537,7 @@ För att kunna implementera APP-WE-integrationen, måste din app registrera anv�
 
 2. När ett användarkonto skapas och användaren har loggat in med ADAL _måste_ appen anropa `registerAccountForMAM()`.
 
-3. När ett användarkonto tas bort helt, ska appen anropa `unregisterAccountForMAM()` för att ta bort kontot från Intune-hanteringen.
+3. När ett användarkonto tas bort, bör appen anropa `unregisterAccountForMAM()` för att ta bort kontot från Intune-hanteringen.
 
     > [!NOTE]
     > Om en användare loggar ut från appen tillfälligt, behöver appen inte anropa `unregisterAccountForMAM()`. Anropet kan starta en rensning för att ta bort samtliga företagsdata för användaren.
@@ -602,7 +602,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. Appen måste implementera `MAMServiceAuthenticationCallback`-gränssnittet för att tillåta SDK att begära en ADAL-token för angiven användare och resurs-ID. Motringningsinstansen måste anges för `MAMEnrollmentManager` genom att anropa dess `registerAuthenticationCallback()`-metod. En token kan behövas mycket tidigt i appens livscykel för registreringsåterförsök eller uppdatering av incheckningar till appskyddsprincipen, så det bästa stället att registrera motringningen är i `onMAMCreate()`-metoden för appens `MAMApplication`-underklass.
+1. Appen måste implementera `MAMServiceAuthenticationCallback`-gränssnittet för att tillåta SDK att begära en ADAL-token för angiven användare och resurs-ID. Motringningsinstansen måste anges för `MAMEnrollmentManager` genom att anropa dess `registerAuthenticationCallback()`-metod. En token kan behövas mycket tidigt i appens livscykel för registreringsåterförsök eller uppdatering av incheckningar till appens skyddsprincip, så det bästa stället att registrera motringningen är i `onMAMCreate()`-metoden för appens `MAMApplication`-underklass.
 
 2. `acquireToken()`-metoden ska hämta åtkomsttoken för begärd resurs-ID för den angivna användaren. Om det inte går att hämta begärd token returnerar den null.
 
@@ -672,7 +672,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 #### <a name="authentication"></a>Autentisering
 
-* När appen anropar `registerAccountForMAM()` kan den få en motringning till sitt `MAMServiceAuthenticationCallback`-gränssnitt strax därefter i en annan tråd. Vi rekommenderar att appen hämtar sin egen token från ADAL innan kontot registreras för att påskynda hämtningen av en **MAMService-token**. Om appen returnerar en giltig token från motringningen, kommer registreringen att fortsätta och appen kommer att få slutresultatet via ett meddelande.
+* När appen anropar `registerAccountForMAM()` kan den få en motringning till sitt `MAMServiceAuthenticationCallback`-gränssnitt strax därefter i en annan tråd. Vi rekommenderar att appen hämtar sin egen token från ADAL innan kontot registreras för att påskynda hämtningen av en **MAMService-token**. Om appen returnerar en giltig token från motringningen, fortsätter registreringen och appen får slutresultatet via ett meddelande.
 
 * Om programmet inte returnerar en giltig AAD-token, blir slutresultatet från registreringsförsöket `AUTHENTICATION_NEEDED`. Om appen tar emot resultatet via ett meddelande, kan den påskynda registreringen genom att skaffa en **MAMService-token** och anropa `updateToken()`-metoden för att starta registreringen på nytt. Detta är _inte_ ett absolut krav, men eftersom SDK:n försöker att registrera med jämna mellanrum och anropar motringningen krävs denna token.
 
@@ -681,7 +681,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 * Stöd för nationella moln kräver att auktoriteten anges.
 #### <a name="registration"></a>Registrering
 
-* Metoderna för registreringen är idempotenta. Det innebär exempelvis att `registerAccountForMAM()` endast kommer att registrera ett konto och försöka registrera appen om kontot inte är redan registrerat, och `unregisterAccountForMAM()` kommer bara att avregistrera ett konto om det är registrerat. Efterföljande anrop blir inte några åtgärder, så det gör inget om man anropar metoderna mer än en gång. Dessutom är förhållandet mellan anrop till dessa metoder och meddelanden om resultatet inte garanterade: dvs. om `registerAccountForMAM` anropas för en identitet som redan har registrerats, kommer meddelandet kanske inte skickas igen för den identiteten. Det är möjligt att meddelanden skickas som inte motsvarar något anrop till dessa metoder, eftersom SDK:n regelbundet kan försöka registrera i bakgrunden och avregistreringar kan utlösas av rensningsbegäranden från Intune-tjänsten.
+* Metoderna för registreringen är idempotenta. Det innebär exempelvis att `registerAccountForMAM()` endast kommer att registrera ett konto och försöka registrera appen om kontot inte är redan registrerat, och `unregisterAccountForMAM()` kommer bara att avregistrera ett konto om det är registrerat. Efterföljande anrop blir inte några åtgärder, så det gör inget om man anropar metoderna mer än en gång. Förhållandet mellan anrop till dessa metoder och meddelanden om resultat är inte garanterat: dvs. om `registerAccountForMAM` anropas för en identitet som redan har registrerats, kommer meddelandet kanske inte att skickas igen för den identiteten. Det är möjligt att meddelanden skickas som inte motsvarar något anrop till dessa metoder, eftersom SDK:n regelbundet kan försöka registrera i bakgrunden och avregistreringar kan utlösas av rensningsbegäranden från Intune-tjänsten.
 
 * Registreringsmetoderna kan anropas för valfritt antal olika identiteter, men för närvarande kan bara ett användarkonto registreras. Om flera användarkonton som har licens för Intune och ska ha appskyddsprincipen har registrerats samtidigt, går det inte att förutse vilket konto som ”vinner”.
 
@@ -722,7 +722,7 @@ public interface MAMEnrollmentNotification extends MAMUserNotification {
 
 `getEnrollmentResult()`-metoden returnerar resultatet av registreringsbegäran.  Eftersom `MAMEnrollmentNotification` utökar `MAMUserNotification`, är identiteten för den användare som registreringen gjordes för också tillgänglig. Appen måste implementera `MAMNotificationReceiver`-gränssnittet för att kunna ta emot dessa meddelanden, enligt beskrivningen i [Registrera för meddelanden från SDK:n](#register-for-notifications-from-the-sdk).
 
-Den registrerade användarens kontostatus kan ändras när ett registreringsmeddelande tas emot, men den ändras inte i vissa fall (t.ex. om `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER`, kommer fler informativa resultat att behållas som kontots status)
+Det registrerade användarkontots status kan ändras när ett registreringsmeddelande tas emot, men den ändras inte i vissa fall (t.ex. om meddelandet `AUTHORIZATION_NEEDED` har tagits emot efter ett mer informativt resultat som `WRONG_USER`, kommer det mer informativa resultatet att behållas som kontots status)
 
 
 ## <a name="protecting-backup-data"></a>Skydda säkerhetskopierade data
@@ -747,7 +747,7 @@ Med Intune kan du använda alla tillgängliga [funktioner för automatisk säker
 
 2. **[Valfritt]**  Om du har implementerat en valfri anpassad BackupAgent, måste du använda MAMBackupAgent eller MAMBackupAgentHelper. Se följande avsnitt. Överväg att byta till Intunes **MAMDefaultFullBackupAgent** (beskrivs i steg 1), som ger enkel säkerhetskopiering av Android M och senare.
 
-3. När du bestämmer vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) måste du ange attributet `android:fullBackupContent`  till true, false eller till en XML-resurs i appen.
+3. När du har bestämt vilken typ av fullständig säkerhetskopiering som din app ska använda (ofiltrerad, filtrerad eller ingen) ska du ange attributet `android:fullBackupContent` som sant, falskt eller till en XML-resurs i appen.
 
 4. Därefter _**måste**_ du kopiera allt som du placerar i `android:fullBackupContent` i en metadatatagg med namnet `com.microsoft.intune.mam.FullBackupContent` i manifestet.
 
@@ -827,9 +827,9 @@ Guiden Säkerhetskopiering av data anger en allmän algoritm för att återstäl
 ## <a name="multi-identity-optional"></a>Flera identiteter (valfritt)
 
 ### <a name="overview"></a>Översikt
-Som standard tillämpar Intune App SDK principer på appen i sin helhet. Flera identiteter är en valfri Intune-appskyddsfunktion som kan aktiveras för att tillåta att principen tillämpas per identitet. Detta kräver mycket större appmedverkan än andra appskyddsfunktioner.
+Som standard tillämpar Intune App SDK principer på appen i sin helhet. Flera identiteter är en valfri Intune-funktion för appskydd som kan aktiveras för att tillåta att principer tillämpas per identitet. Detta kräver mycket större appmedverkan än andra funktioner för appskydd.
 
-Appen *måste* meddela SDK när den har för avsikt att ändra den aktiva identiteten. SDK meddelar även appen i vissa fall när en identitetsändring krävs. I de flesta fall vet MAM inte vilka data som visas i användargränssnittet eller används på en tråd vid en given tidpunkt och förlitar sig på att appen anger rätt identitet för att undvika dataläckage. I avsnitten som följer kommer vi att visa specifika scenarier som kräver att appåtgärden anropas.
+Appen *måste* meddela SDK när den har för avsikt att ändra den aktiva identiteten. SDK meddelar även appen i vissa fall när en identitetsändring krävs. I de flesta fall vet MAM inte vilka data som visas i användargränssnittet eller används på en tråd vid en given tidpunkt och förlitar sig på att appen anger rätt identitet för att undvika dataläckage. I följande avsnitt visas specifika scenarier som kräver att appåtgärd anropas.
 
 > [!NOTE]
 >  Om appen inte deltar på rätt sätt kan det resultera i dataläckage och andra säkerhetsproblem.
@@ -839,7 +839,7 @@ När användaren registrerar enheten eller appen, registrerar SDK:n den identite
 > [!NOTE]
 > För närvarande stöds endast en Intune-hanterad identitet per enhet.
 
-Tänk på att en identitet endast definieras som en sträng. Identiteter är **skiftlägesokänsliga** och en begäran till SDK:n om en identitet kanske inte returnerar samma gemener och versaler som användes när identiteten skapades.
+En identitet definieras som en sträng. Identiteter är **skiftlägesokänsliga** och en begäran till SDK:n om en identitet kanske inte returnerar samma gemener och versaler som användes när identiteten skapades.
 
 ### <a name="enabling-multi-identity"></a>Aktivera flera identiteter
 
@@ -909,7 +909,7 @@ Alla metoder som används för att ange identiteten rapporterar tillbaka resulta
 | CANCELLED | Användaren avbröt identitetsändringen, vanligtvis genom att klicka på bakåtknappen vid en uppmaning om att ange PIN-kod/autentiseringsuppgifter. |
 | FAILED | Identitetsändringen misslyckades av okänd anledning.|
 
-Appen *måste* se till att en identitetsväxling har lyckats innan den visar eller använder företagsdata. Process- och identitetväxlingar lyckas för närvarande alltid för appar med flera identiteter, men vi förbehåller oss rätten att lägga till feltillstånd. Identitetsväxlingen i gränssnittet kan misslyckas på grund av ogiltigt argument, om den skulle hamna i konflikt med trådidentiteten eller om användaren avbryter på grund av villkorliga startkrav (t.ex. trycker på bakåtknappen på PIN-skärmen).
+Appen *måste* se till att en identitetsväxling har lyckats innan den visar eller använder företagsdata. Process- och identitetväxlingar lyckas för närvarande alltid för appar med flera identiteter, men vi förbehåller oss rätten att lägga till feltillstånd. Identitetsväxlingen i gränssnittet kan misslyckas på grund av ogiltiga argument, om den skulle hamna i konflikt med trådidentiteten eller om användaren avbryter på grund av villkorliga startkrav (t.ex. trycker på bakåtknappen på PIN-skärmen).
 
 
 När en kontextidentitet anges rapporteras resultatet asynkront. Om kontexten är en aktivitet vet SDK:n inte om identitetsändringen lyckades förrän efter att en villkorlig start har utförts. Den kan kräva att användaren anger en PIN-kod eller företagets autentiseringsuppgifter. Appen förväntas implementera en `MAMSetUIIdentityCallback` för att ta emot det här resultatet och du kan skicka null för den här parametern.
@@ -938,7 +938,7 @@ Du kan även åsidosätta en metod i `MAMActivity` om du vill att appen ska avis
 
 ### <a name="implicit-identity-changes"></a>Implicita identitetsändringar
 
-Förutom appens möjlighet att ange identiteten kan en tråd eller en kontexts identitet ändras baserat på inkommande data från en annan Intune-hanterad app med en appskyddsprincip.
+Förutom appens möjlighet att ange identiteten kan en tråd eller identiteten för ett sammanhang ändras baserat på inkommande data från en annan Intune-hanterad app med en appskyddsprincip.
 
 #### <a name="examples"></a>Exempel
 
@@ -960,7 +960,7 @@ Förutom appens möjlighet att ange identiteten kan en tråd eller en kontexts i
     final AppIdentitySwitchResultCallback callback);
   ```
 
-  I `MAMActivity`-klassen finns det en extra parameter i metoden:
+  `MAMActivity`-klassen omfattar en extra parameter i metoden:
 
   ```java
   public void onMAMIdentitySwitchRequired(final String identity,
@@ -1007,7 +1007,7 @@ Metoden `onMAMIdentitySwitchRequired` anropas för alla implicita identitetsänd
   Om en begärd identitet hanteras (använd `MAMPolicyManager.getIsIdentityManaged` för att kontrollera), men appen inte kan använda det kontot (t.ex. eftersom bl.a. e-postkonton måste konfigureras i appen först), bör identitetsväxlingen avvisas.
 
 ### <a name="preserving-identity-in-async-operations"></a>Bevara identitet i asynkrona åtgärder
-Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en annan tråd. En app för flera identiteter vill se till att de här bakgrundsaktiviteterna fungerar med rätt identitet, vilket ofta är samma identitet som används av aktiviteten som skickade ut dem. MAM SDK:n innehåller `MAMAsyncTask` och `MAMIdentityExecutors` för att göra det enklare att bevara identiteten.
+Det är vanligt att åtgärder i UI-tråden skickar bakgrundsaktiviteter till en annan tråd. En app med flera identiteter vill se till att de här bakgrundsaktiviteterna fungerar med rätt identitet, vilken ofta är samma identitet som används av aktiviteten som skickade ut dem. MAM SDK:n innehåller `MAMAsyncTask` och `MAMIdentityExecutors` för att göra det enklare att bevara identiteten.
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
 Om du vill använda `MAMAsyncTask` kan du helt enkelt ärva från den i stället för AsyncTask och ersätta åsidosättningar av `doInBackground` och `onPreExecute` med `doInBackgroundMAM` respektive `onPreExecuteMAM`. Konstruktorn `MAMAsyncTask` tar ett aktivitetssammanhang. Exempel:
@@ -1129,13 +1129,13 @@ Filidentitetstaggningen känner av offlineläget. Ha följande i åtanke:
 
 ### <a name="directory-protection"></a>Katalogskydd
 
-Kataloger kan skyddas med samma `protect`-metod som används för att skydda filer. Observera att katalogskyddet tillämpas rekursivt på alla filer och underkataloger i katalogen, samt på nya filer som skapas i katalogen. Eftersom katalogskydd tillämpas rekursivt kan `protect`-anropet ta lite tid att slutföra för mycket stora kataloger. Därför kan det vara bättre att appar som använder skydd på en katalog som innehåller ett stort antal filer, kör `protect` asynkront i en bakgrundstråd.
+Kataloger kan skyddas med samma `protect`-metod som används för att skydda filer. Katalogskydd tillämpas rekursivt på alla filer och underkataloger i katalogen samt på nya filer som skapas i katalogen. Eftersom katalogskydd tillämpas rekursivt kan det ta en stund att slutföra `protect`-anropet för stora kataloger. Därför kan det vara bättre att appar som använder skydd på en katalog som innehåller ett stort antal filer, kör `protect` asynkront i en bakgrundstråd.
 
 ### <a name="data-protection"></a>Dataskydd
 
-Det går inte att tagga en fil som om den tillhörde flera identiteter. Appar som måste lagra data som tillhör olika användare i samma fil, kan göra detta manuellt med hjälp av de funktioner som finns i `MAMDataProtectionManager`. På så sätt kan programmet kryptera data och koppla dem till en viss användare. Krypterade data är lämpligt för lagring till disk i en fil. Du kan köra frågor mot data som är associerade med identiteten och informationen kan krypteras senare.
+Det går inte att tagga en fil som om den tillhörde flera identiteter. Appar som måste lagra data som tillhör olika användare i samma fil, kan göra detta manuellt med hjälp av de funktioner som finns i `MAMDataProtectionManager`. På så sätt kan programmet kryptera data och koppla dem till en viss användare. Krypterade data är lämpligt för lagring till disk i en fil. Du kan köra frågor mot data som är associerade med identiteten, och dekryptera dessa data senare.
 
-Appar som använder `MAMDataProtectionManager` bör implementera en mottagare av `MANAGEMENT_REMOVED`-meddelandet. När det här meddelandet är klart kan buffertar som skyddades via den här klassen inte längre läsas, om filkryptering aktiverades när buffertarna skyddades. Appen kan åtgärda detta genom att anropa MAMDataProtectionManager.unprotect på alla buffertar under meddelandet. Observera att det också är säkert att anropa skyddet under det här meddelandet om man önskar bevara identitetsinformation – krypteringen kommer att inaktiveras under meddelandet.
+Appar som använder `MAMDataProtectionManager` bör implementera en mottagare av `MANAGEMENT_REMOVED`-meddelandet. När det här meddelandet är klart kan buffertar som skyddades via den här klassen inte längre läsas om filkryptering aktiverades när buffertarna skyddades. Appen kan åtgärda detta genom att anropa MAMDataProtectionManager.unprotect på alla buffertar under meddelandet. Det är också säkert att anropa skyddet under det här meddelandet om man önskar bevara identitetsinformation – kryptering inaktiveras under meddelandet.
 
 ```java
 
@@ -1236,13 +1236,13 @@ Om appen innehåller andra företagsdata än en **ParcelFileDescriptor** via en 
 
 ### <a name="selective-wipe"></a>Selektiv rensning
 
-Om en app med flera identiteter registreras för `WIPE_USER_DATA`-meddelandet är det appens ansvar att ta bort alla data för användaren som rensas, inklusive alla filer som har identitetsmärkts som tillhörandes användaren i fråga. Om appen tar bort användardata från en fil, men vill lämna andra data i filen, *måste* identiteten för filen ändras (via `MAMFileProtectionManager.protect` till en personlig användare eller en tom identitet). Om krypteringsprincipen används dekrypteras inga eventuella återstående filer som hör till användare som tas bort, och de blir otillgängliga för appen efter rensningen.
+Om en app med flera identiteter registreras för `WIPE_USER_DATA`-meddelandet är det appens ansvar att ta bort alla data för användaren som rensas, inklusive alla filer som har identitetsmärkts som tillhörande användaren i fråga. Om appen tar bort användardata från en fil, men vill lämna andra data i filen, *måste* identiteten för filen ändras (via `MAMFileProtectionManager.protect` till en personlig användare eller en tom identitet). Om krypteringsprincipen används dekrypteras inga eventuella återstående filer som hör till användare som tas bort, och de blir otillgängliga för appen efter rensningen.
 
 En appregistrering för `WIPE_USER_DATA` kan inte dra nytta av standardbeteendet för selektiv rensning i SDK:n. För appar som kan hantera flera identiteter kan denna förlust vara mer betydelsefull, eftersom en selektiv standardrensning med MAM endast rensar filer vars identitet ska rensas. Om ett program som kan hantera flera identiteter önskar att MAM:s selektiva standardrensning ska göras _**och**_ vill utföra egna åtgärder för rensningen, måste det registrera sig för `WIPE_USER_AUXILIARY_DATA`-meddelanden. Det här meddelandet skickas omedelbart av SDK:n innan den utför MAM:s selektiva standardrensning. En app bör aldrig registreras för både WIPE_USER_DATA och WIPE_USER_AUXILIARY_DATA.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Aktivera MAM-riktad konfiguration för Android-appar (valfritt)
-Programspecifika nyckelvärdepar kan konfigureras i Intune-konsolen. Dessa nyckel-värdepar tolkas inte av Intune utan de skickas till appen. Program som ska ta emot sådan konfiguration kan använda klasserna `MAMAppConfigManager` och `MAMAppConfig` för detta. Om flera principer är inriktade på samma app kan det finnas flera motstridiga värden för samma nyckel.
+Programspecifika nyckelvärdepar kan konfigureras i Intune-konsolen. Dessa nyckel-/värdepar tolkas inte av Intune utan skickas till appen. Program som ska ta emot sådan konfiguration kan använda klasserna `MAMAppConfigManager` och `MAMAppConfig` för detta. Om flera principer är inriktade på samma app kan det finnas flera motstridiga värden för samma nyckel.
 
 ### <a name="example"></a>Exempel
 ```
@@ -1425,7 +1425,7 @@ Nedan visas den fullständiga listan med tillåtna attribut, UI-element som de s
 ## <a name="default-enrollment-optional"></a>Standardregistrering (valfritt)
 <!-- Requiring user login prompt for an automatic APP-WE service enrollment, requiring Intune app protection policies in order to use your SDK-integrated Android LOB app, and enabling ADAL SSO (optional) -->
 
-Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den SDK-integrerade Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den SDK-integrerade Android LOB-appen. Detta stöds **inte** för Store-appar som kan användas av användare som inte använder Intune.
+Följande är vägledning för att kräva användaruppmaning vid start av appen för en automatisk APP-WE-tjänstregistrering (vi kallar detta **standardregistrering** i det här avsnittet), som kräver Intune-appskyddsprinciper för att endast tillåta att Intune-skyddade användare använder den SDK-integrerade Android LOB-appen. Det tar även upp hur du kan aktivera SSO för den SDK-integrerade Android LOB-appen. Detta stöds **inte** för Store-appar som kan användas av användare utan Intune.
 
 > [!NOTE] 
 > Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
@@ -1434,7 +1434,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 * Se till att din app registreras med Intune Mobile Application Management-tjänsten genom att följa stegen i [Vanliga ADAL-konfigurationer #2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations).
 
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
-De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare som vill kräva Intune-appskyddsprinciper för appanvändning på en slutanvändarenhet.
+De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare som vill kräva Intune-appskyddsprinciper för användning av appen på en slutanvändarenhet.
 
 1. Konfigurera ADAL med hjälp av stegen som beskrivs i [handboken för Intune SDK för Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
    > [!NOTE] 
@@ -1455,14 +1455,14 @@ De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare
 
 För stora kodbaser som körs utan [ProGuard](http://proguard.sourceforge.net/), kan begränsningarna i formatet Dalvik för körbara filer bli ett problem. Mer specifikt kan följande begränsningar förekomma:
 
-1.  Gräns på 65 K för fält.
-2.  Gräns på 65 K för metoder.
+1.  Gräns på 65 000 för fält.
+2.  Gräns på 65 000 för metoder.
 
 ### <a name="policy-enforcement-limitations"></a>Principtillämpningsgränser
 
 * **Skärmdump**: SDK kan inte framtvinga ett nytt värde för skärmdumpsinställningen i aktiviteter som redan har gått igenom Activity.onCreate. Detta kan resultera i en viss tidsperiod då appen är konfigurerad att inaktivera skärmdumpar men då skärmdumpar fortfarande kan tas.
 
-* **Med hjälp av innehållsmatchare**: Överförings- eller mottagningsprincipen i Intune kan blockera eller delvis blockera användningen av en innehållsmatchare för att få åtkomst till innehållsleverantören i en annan app. Detta innebär att ContentResolver-metoder returnerar null eller genererar ett felvärde (t.ex. genererar `openOutputStream` `FileNotFoundException` om den blockeras). Appen kan avgöra om en misslyckad dataskrivning till en innehållsmatchare orsakades av en princip (eller kan orsakas av en princip) genom att göra anropet:
+* **Med hjälp av innehållsmatchare**: Överförings- eller mottagningsprincipen i Intune kan blockera eller delvis blockera användningen av en innehållsmatchare för att få åtkomst till innehållsleverantören i en annan app. Detta innebär att ContentResolver-metoder returnerar null eller genererar ett felvärde (t.ex. genererar `openOutputStream` felet `FileNotFoundException` om den blockeras). Appen kan avgöra om en misslyckad dataskrivning till en innehållsmatchare orsakades av en princip (eller kan orsakas av en princip) genom att göra anropet:
     ```java
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```

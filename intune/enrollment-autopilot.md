@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: 4c268f9061ae624c1f85e386e5633b14334860b7
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a640e6d914da6fead7a64d5235c1cdeac164ac9e
+ms.sourcegitcommit: 7c70c3e0fcae7c4fa8c9e108aafb1cebb366332d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313146"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44096545"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrera Windows-enheter med hjälp av Windows AutoPilot
 Windows AutoPilot förenklar etableringen av enheter. Att skapa och underhålla anpassade operativsystemavbildningar är en process som tar tid. Det kan också ta tid att applicera de här anpassade operativsystemavbildningarna till nya enheter för att förbereda dem för användning innan du ger dem till dina slutanvändare. Med Microsoft Intune och AutoPilot kan du ge dina slutanvändare nya enheter utan att behöva skapa, underhålla och applicera anpassade operativsystemavbildningar på enheter med Microsoft Intune och AutoPilot. Om du använder Intune för att hantera AutoPilot-enheter kan du hantera principer, profiler, appar med mera när de har registrerats. I [översikten över Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot) finns en översikt över fördelar, scenarier och förutsättningar.
@@ -69,7 +69,7 @@ AutoPilot-distributionsprofiler används för att konfigurera AutoPilot-enhetern
 2. Ange ett **namn** och en valfri **beskrivning**.
 3. Välj något av följande två alternativ för **Distributionsläge**:
     - **Användarbaserat**: Enheter med den här profilen är associerade med användaren som registrerar enheten. Användarautentiseringsuppgifter krävs för att etablera enheten.
-    - **Självdistribution (förhandsversion)**: (Windows 10 Insider Preview, version 17672 eller senare) Enheter med den här profilen inte är associerade med användaren som registrerar enheten. Användarautentiseringsuppgifter krävs inte för att etablera enheten.
+    - **Självdistribution (förhandsversion)**: (nyaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/) krävs) Enheter med den här profilen associeras inte med användaren som registrerar enheten. Användarautentiseringsuppgifter krävs inte för att etablera enheten.
 4. Välj **Azure AD-ansluten** i **Anslut till Azure AD som**.
 5. Välj **välkomstprogrammet (OOBE)**, konfigurera följande alternativ och välj **Spara**:
     - **Språk (Region)***: Välj språket du vill använda för enheten. Det här alternativet är endast tillgängligt om du har valt **Självdistribution** som **Distributionsläge**.
@@ -82,7 +82,7 @@ AutoPilot-distributionsprofiler används för att konfigurera AutoPilot-enhetern
 
 6. Välj **Skapa** när du vill skapa profilen. AutoPilot-distributionsprofilen är nu tillgänglig för att tilldela till enheter.
 
-*Både **Språk (Region)** och **Konfigurera tangentbord automatiskt** är endast tillgängliga om du har valt **Självdistribution (förhandsversion)** för **Distributionsläge**  (Windows 10 Insider Preview, version 17672 eller senare).
+*Både **Språk (region)** och **Konfigurera tangentbord automatiskt** är endast tillgängliga om du har valt **Självdistribution (förhandsversion)** som **Distributionsläge** (senaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/) krävs).
 
 
 ## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Tilldela en AutoPilot-distributionsprofil till en enhetsgrupp
@@ -113,7 +113,7 @@ Om du vill visa aviseringar för otilldelade enheter väljer du **Enhetsregistre
 
 Du kan tilldela en användare till en specifik Autopilot-enhet. Den här tilldelningen gör att en användare fylls i på förhand från Azure Active Directory på den [företagsanpassade](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) inloggningssidan under Windows-installationen. Du kan även ange ett anpassat namn för hälsning. Windows-logotypen fylls inte i på förhand och ändras inte. Endast licensierade Intune-användare kan tilldelas på detta sätt.
 
-Krav: Azure Active Directory-företagsportalen har konfigurerats.
+Krav: Azure Active Directory-företagsportal konfigurerad och senaste [Windows 10 Insider Preview-version](https://docs.microsoft.com/windows-insider/at-work-pro/).
 
 1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **Enheter** > väljer enheten > **Tilldela användare**.
     ![Skärmbild av Tilldela användare](media/enrollment-autopilot/assign-user.png)

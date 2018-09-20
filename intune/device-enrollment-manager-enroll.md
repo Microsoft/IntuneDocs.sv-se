@@ -15,12 +15,12 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce785ad7898f9e792feeadcd1623bd0989f0d6d0
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: 8e0d8d6aba74a37d1c07fa8445aa98adf5943be2
+ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255561"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141617"
 ---
 # <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Registrera enheter med ett konto för enhetsregistreringshanteraren
 
@@ -53,7 +53,7 @@ Enheter som har registrerats med ett konto för enhetsregistreringshantering har
   - DEM-användaren kan inte avregistrera DEM-registrerade enheter på själva enheten genom företagsportalen. Intune-administratören kan avregistrera enheter.
   - Endast den lokala enheten visas i företagsportalappen eller webbplatsen.
   - Användare kan inte använda apparna för Apples volymköpsprogram (VPP) med användarlicenser på grund av Apple-ID-kraven per användare för apphantering.
-  - (Endast iOS) Om du använder DEM för att registrera iOS-enheter, kan du inte använda Apple Configurator, Apples program för enhetsregistrering (DEP) eller Apple School Manager (ASM) för att registrera enheter.
+  - (Endast iOS) Om du använder DEM för att registrera iOS-enheter, kan du inte använda Apple Configurator, Apples program för enhetsregistrering (DEP) eller Apple School Manager (ASM) för att registrera enheter. Detta innebär att du inte kan ställa in enheten i övervakat läge och därför inte har åtkomst till vissa konfigurationsalternativ.
   - (Endast Android) Det finns en gräns för hur många Android-arbetsprofilenheter som kan registreras med ett enda DEM-konto. Upp till tio enheter med Android-arbetsprofiler kan registreras per DEM-konto. Den här begränsningen gäller inte för äldre Android-registrering.
   - Enheter kan installera VPP-appar om de har enhetslicenser.
   - Det krävs ingen Intune-enhetslicens för att använda DEM. Läs mer om [användar- och enhetslicenser](licenses-assign.md#how-user-and-device-licenses-affect-access-to-services).
