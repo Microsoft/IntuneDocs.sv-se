@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 54050fd7afc58a101d956b4aee68e9b5e4011a3d
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 140b19ac64003f9ddf481a33e0cf4d423e106ffd
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905384"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028638"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Var är Intune-funktionen i Azure?
 Vi passade på att ordna några uppgifter på ett mer logiskt sätt när vi flyttade Intune till Azure-portalen. Men alla förbättringar innebär att man måste lära sig den nya ordningen. Den här referensguiden är till för dem som är bekanta med Intune i den klassiska portalen och undrar hur de ska arbeta med Intune i Azure-portalen. Om du letar efter en funktion som inte tas upp i den här artikeln kan du lämna en kommentar vid artikelns slut så kan vi uppdatera den.
@@ -70,12 +70,12 @@ De nya begränsningsfunktionerna läggs endast till i Azure-portalen.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Vart tog mina principer för villkorlig åtkomst vägen?
 När din klientorganisation har migrerats till Azure-portalen fortsätter klientorganisationens principer för villkorlig åtkomst att tillämpas. Dock kan du inte visa eller ändra dem från Intune i Azure-portalen.
 
-Om du vill visa och göra ändringar i principer för villkorlig åtkomst från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om hur du migrerar principer för villkorlig åtkomst finns i [Migrera klassiska principer i Azure-portal](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-migration). 
+Om du vill visa och göra ändringar i principer för villkorlig åtkomst från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om hur du migrerar principer för villkorlig åtkomst finns i [Migrera klassiska principer i Azure-portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Vart tog mina efterlevnadsprinciper vägen?
 När din klientorganisation har migrerats till Azure-portalen fortsätter klientorganisationens efterlevnadsprinciper att tillämpas. Dock kan du inte visa eller ändra dem från Intune i Azure-portalen.
 
-Om du vill visa och göra ändringar i efterlevnadsprinciper från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](https://docs.microsoft.com/en-us/intune/known-issues#compliance). 
+Om du vill visa och göra ändringar i efterlevnadsprinciper från Azure-portalen måste du ta bort de gamla principerna från den klassiska portalen. Återskapa dem sedan i Azure-portalen. Mer information om efterlevnadsprinciper för enheter i [Kom igång med efterlevnadsprinciper för enheter i Intune](https://docs.microsoft.com/intune/known-issues#compliance). 
 
 ## <a name="where-did-apple-dep-go"></a>Var finns Apple DEP?
 I den klassiska portalen kunde du konfigurera Intune till att integrera med Apples program för enhetsregistrering och manuellt begära synkronisering med Apple-tjänsten:

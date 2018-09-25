@@ -14,12 +14,12 @@ ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9bead87f80cf8d1f102f396bdd6c9573786c1b9e
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: b9efb60d169ba6f88b4765d3fc651f3a0596b230
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474640"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028587"
 ---
 # <a name="view-and-correct-personal-data"></a>Visa och åtgärda personliga data
 
@@ -33,7 +33,7 @@ Intune-administratörer kan visa vissa personliga data baserat på deras åtkoms
 Administratörer kan se slutanvändarnas personliga information i olika blad i Intune-gränssnittet. Följande artiklar förklarar vilken information administratörer har och inte har åtkomst till:
 - [Visa enhetsinformation](device-inventory.md) i Intune förklarar hur du kan granska information om en slutanvändares enhet.
 - [Övervaka appinformation och tilldelningar](apps-monitor.md) förklarar hur du kan se information om appar som installerats på en slutanvändarens enhet.
-- I artikeln [Vilken information kan företaget se när jag registrerar min enhet?](https://docs.microsoft.com/en-us/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) får slutanvändarna en lista över data som deras företag kan och inte kan se. Det rekommenderas att du tydligt informerar användarna om vilka typer av data du samlar in och varför du samlar in dem. Den här artikeln kan bli det första steget för att skapa en sådan transparens.
+- I artikeln [Vilken information kan företaget se när jag registrerar min enhet?](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) får slutanvändarna en lista över data som deras företag kan och inte kan se. Det rekommenderas att du tydligt informerar användarna om vilka typer av data du samlar in och varför du samlar in dem. Den här artikeln kan bli det första steget för att skapa en sådan transparens.
 
 ### <a name="who-can-view-the-data"></a>Vem kan visa data?
 
