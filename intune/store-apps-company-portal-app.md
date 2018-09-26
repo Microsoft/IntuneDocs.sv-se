@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: edd0ec0d717d4303ad2a452c5d60009ac09aa05f
-ms.sourcegitcommit: 2061f7a442efc96c8afd5db764d11531563c7e39
+ms.openlocfilehash: 109ba2ddeca3af3f1dbb9834e206330f6146b819
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703323"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727568"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Lägga till appen Företagsportal för Windows 10 manuellt med Microsoft Intune
 
@@ -91,7 +91,7 @@ Så här registrerar och tilldelar du appen:
 3. Signera appen Företagsportal för Windows 10 genom att köra skriptet med de indataparametrar som beskrivs i skripthuvudet, enligt tabellen nedan.  
     Beroenden behöver inte överföras till skriptet. De krävs endast om appen ska laddas upp till administratörskonsolen för Intune.
 
-| Parameter |  Description  |
+| Parameter |  Beskrivning  |
 |---|---|
 | InputWin10AppxBundle  |  Sökvägen till appxbundle-källfilen. |
 | OutputWin10AppxBundle | Sökvägen för utdata för den signerade appxbundle-filen. 

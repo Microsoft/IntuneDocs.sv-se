@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: efeaacffe996701f560af4cf077ee9fd23041545
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: b6161540b4b05ebab35942a1657adc30bce6afdb
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223636"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727483"
 ---
 # <a name="reference-for-user-entity"></a>Referens för användarentitet
 
@@ -32,7 +32,7 @@ Entiteten **Användare** visar alla Azure Active Directory-användare (Azure AD)
 
 Entitetssamlingen **Användare** innehåller användardata. De här posterna innehåller användarens tillstånd vid datainsamlingsperioden, även om användaren har tagits bort. En användare kan till exempel läggas till i Intune och sedan tas bort under den senaste månaden. Användaren är då inte tillgänglig vid tidpunkten för rapporten, men användaren och tillståndet finns i data från föregående månad. Du kan skapa en rapport som visar varaktigheten för användarens historiska förekomst i dina data.
 
-| Egenskap  | Description | Exempel |
+| Egenskap  | Beskrivning | Exempel |
 |---------|------------|--------|
 | UserKey |Unikt id för användaren i informationslagret – surrogatnyckel. |123 |
 | UserId |Unikt id för användaren, liknar UserKey men är en naturlig nyckel. |b66bc706-ffff-7437-0340-032819502773 |

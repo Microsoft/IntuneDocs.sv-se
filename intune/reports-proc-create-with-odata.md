@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 12725f567cf84d1d7e9110da747470984bc28c01
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: f4425f508164332295899a6132782833889aa830
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224859"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602273"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Skapa en rapport från OData-feeden med Power BI
 
@@ -40,7 +40,7 @@ För att kunna skapa det här diagrammet måste du:
 
 Du arbetar med tabeller i Power BI. En tabell innehåller datafält. Varje fält har en datatyp. Fältet får bara innehålla data för datatypen. Datatyper är siffror, text, datum och så vidare. Tabellerna i Power BI fylls med de senaste historiska data från din klient när du läser in modellen. Även om specifika data ändras med tiden ändras inte tabellstrukturen om inte den underliggande datamodellen uppdateras.
 
-Du kanske blir förvirrad av användningen av termerna _entitet_ och _tabell_. Datamodellen är åtkomlig via en OData-feed. I OData kallas behållarna som i Power BI heter tabeller istället entiteter. Båda termerna avser samma sak som innehåller dina data.
+Du kanske blir förvirrad av användningen av termerna _entitet_ och _tabell_. Datamodellen är åtkomlig via en OData-feed. I OData kallas containrarna som i Power BI heter tabeller istället entiteter. Båda termerna avser samma sak som innehåller dina data.
 
 ## <a name="install-power-bi-desktop"></a>Installera Power BI Desktop
 

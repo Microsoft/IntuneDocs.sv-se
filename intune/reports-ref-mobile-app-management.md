@@ -6,7 +6,7 @@ keywords: Intune-informationslager
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/15/2018
+ms.date: 09/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 43292efd55ff93c2c05f49a5e3e8ceaaf91c5f2e
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 8f9313b35e6cb9da5d517e8f06e04c5a567612f4
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34224688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727548"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referens för MAM-entiteter (hantering av mobilappshantering)
 
@@ -38,7 +38,7 @@ Kategorin **Mobilappshantering** innehåller entiteter för mobilappar som:
 
 Entiteten **MamApplication** innehåller en lista över verksamhetsspecifika appar som hanteras via mobilappshantering (MAM) utan registrering i företaget.
 
-| Egenskap | Description | Exempel |
+| Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
 | ApplicationKey |Unikt id för MAM-appen i informationslagret. |123 |
 | ApplicationName |Namn på MAM-appen. |”Word” |
@@ -53,7 +53,7 @@ Entiteten **MamApplication** innehåller en lista över verksamhetsspecifika app
 Entiteten **MamApplicationInstance** innehåller en lista över appar som hanteras via mobilappshantering (MAM) som enskilda instanser per användare och enhet. Alla användare och enheter i listan är skyddade, vilket betyder att det finns minst en princip för mobilappshantering kopplad till dem.
 
 
-|          Egenskap          |                                                                                                  Description                                                                                                  |               Exempel                |
+|          Egenskap          |                                                                                                  Beskrivning                                                                                                  |               Exempel                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 |   ApplicationInstanceKey   |                                                               Unikt id för MAM-appinstansen i informationslagret – surrogatnyckel.                                                                |                 123                  |
 |           UserId           |                                                                              Användar-id för den användare som har installerat den här MAM-appen.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
@@ -78,7 +78,7 @@ Entiteten **MamCheckin** visar data som samlas in när en hanterad mobilappinsta
 > [!Note]  
 > När en appinstans checkar in flera gånger per dag lagras den i informationslagret som en enda incheckning.
 
-| Egenskap | Description | Exempel |
+| Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
 | DateKey |Datumnyckel när incheckningen av MAM-appen registrerades i informationslagret. | 20160703 |
 | ApplicationInstanceKey |Nyckel för appinstansen som är kopplad till incheckningen av den mobilappshanterade appen. |1900-05-02 12:00:00 |
@@ -93,7 +93,7 @@ Entiteten **MamCheckin** visar data som samlas in när en hanterad mobilappinsta
 
 Entiteten **MamDeviceHealth** motsvarar de enheter där principer för mobilappshantering (MAM) har distribuerats även om de är jailbrokade.
 
-| Egenskap | Description | Exempel |
+| Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
 | DeviceHealthKey |Unikt id för enheten med tillhörande hälsostatus i informationslagret – surrogatnyckel. |1900-01-01 12:00:00 |
 | DeviceHealth |Unikt id för enheten och dess tillhörande hälsostatus, liknar DeviceHealthKey men id:t är en naturlig nyckel. |1900-01-01 12:00:00 |
@@ -104,7 +104,7 @@ Entiteten **MamDeviceHealth** motsvarar de enheter där principer för mobilapps
 
 Entiteten **MamEffectivePolicy** innehåller en lista över gällande principer för mobilappshantering som tillämpas i din organisation. En gällande tillämpad princip är en sammansättning av alla principer som är relevanta för en viss app och användare.
 
-| Egenskap | Description | Exempel |
+| Egenskap | Beskrivning | Exempel |
 |---------|------------|--------|
 | EffectivePolicyKey |Unikt id för gällande mobilappshanteringsprincip informationslagret. |2 |
 | RealPolicyKey |Unikt id för den mobilappshanteringsprincip som utfärdats av it-avdelningen. |1 |
@@ -115,7 +115,7 @@ Entiteten **MamEffectivePolicy** innehåller en lista över gällande principer 
 Entiteten **MamGlobalApplication** innehåller en lista över Store-appar som hanteras via mobilappshantering (MAM) utan registrering i företaget.
 
 
-|          Egenskap          |                                               Description                                               |           Exempel            |
+|          Egenskap          |                                               Beskrivning                                               |           Exempel            |
 |----------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
 |       ApplicationKey       |          Unikt id för Store-appen i informationslagret, kallas även surrogatnyckeln.          |             123              |
 |       ApplicationId        | Store-appens unika id. Id:t liknar ApplicationKey men är en naturlig nyckel.  | com.microsoft.skydrive.<ios> |
@@ -127,7 +127,7 @@ Entiteten **MamGlobalApplication** innehåller en lista över Store-appar som ha
 Entiteten **MamPlatform** innehåller en lista över namn på plattformar och typer där en mobilappshanterad app (MAM) har installerats.
 
 
-|          Egenskap          |                                    Description                                    |                         Exempel                         |
+|          Egenskap          |                                    Beskrivning                                    |                         Exempel                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Unikt id för plattformen i informationslagret – surrogatnyckel.      |                           123                           |
 |          Plattform          | Unikt id för plattformen, liknar PlatformKey men är en naturlig nyckel. |                           123                           |
