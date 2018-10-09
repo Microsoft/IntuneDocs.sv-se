@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: ffa0207729a6e0855b4534d40aa598bcb04e7847
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5866314c03eff5613b4c0cc5d46d2f2eace29a13
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150209"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828031"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lösa ett hot som upptäckts av Lookout for Work  
 
@@ -42,7 +42,9 @@ Få åtkomst till företagets resurser när Lookout for Work-appen identifierar 
     ![Exempel på skärmbild av ett felmeddelande för Lookout for Work, med en länk till företagsportalens webbplats och en blå OK-knapp.](./media/mtd-go-to-device-management-portal-android.png)  
 
 2. Välj din enhet.  
-3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar Lookout for Work för att åtgärda virus- eller säkerhetshotet.   
+3. Läs varningen som visas under enheten. Den ger dig instruktioner för hur du öppnar Lookout for Work för att åtgärda virus- eller säkerhetshotet.     
+
+    ![Exempel på skärmbild av enhetssidan i företagsportalen, som visar varningen från Lookout for Work.](./media/CP-lookout-virus-banner-1808.png)  
 
 ## <a name="troubleshoot-an-app-threat"></a>Felsöka ett apphot   
 Om du installerar en app som Lookout for Work identifierar som ett hot visas ett meddelande som liknar det som syns i skärmbilden nedan.  
@@ -50,5 +52,5 @@ Om du installerar en app som Lookout for Work identifierar som ett hot visas ett
 ![Exempel på skärmbild som visar en lista över aktiva och lösta apphot som har identifierats av Lookout for Work.](./media/ios-lfw-threat-example.png)    
 Välj appnamnet som visas överst på skärmen. Följ sedan anvisningarna för att ta bort och avinstallera appen. Så länge som appen finns kvar på enheten kan du inte komma åt företagsresurser.    
 
-Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Behöver du fortfarande hjälp? Kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).    
 

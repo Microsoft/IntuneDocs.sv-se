@@ -3,8 +3,8 @@ title: Övervaka villkorlig åtkomst i Exchange i Microsoft Intune
 titlesuffix: ''
 description: Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online via Intune Azure Portal.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: article
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 932dfe32c6df5741615d9db9f303aaee7785d3a3
-ms.sourcegitcommit: 4db0498342364f8a7c28995b15ce32759e920b99
+ms.openlocfilehash: 2ff5686e2d83831259bd21bee164b3c187e1c0ee
+ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29775366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48231363"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Övervaka kompatibilitet för villkorlig åtkomst för Exchange lokalt och Exchange Online i Intune
 
@@ -37,7 +37,7 @@ Från och med version 1704 av Intune kan administratörer se den rapportinformat
 
 2.  När du har loggat in visas **Azure-instrumentpanelen**.
 
-3.  Välj **Alla tjänster** på den vänstra menyn och skriv sedan **Intune** i textrutefiltret.
+3.  Välj **Alla tjänster** i den vänstra menyn och skriv sedan **Intune** i textrutans filter.
 
 4.  Välj **Intune**. **Intune-instrumentpanelen** visas.
 
