@@ -14,18 +14,18 @@ ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: 48f15493d25ba431cedc76533c35c7307fd0f848
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 9cba874c9288b86f5676b38e587a68c227913200
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44254147"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562824"
 ---
 # <a name="microsoft-intune-service-description"></a>Beskrivning av Microsoft Intune-tjänsten
 
 Intune är en molnbaserad tjänst för hantering av företagsmobilitet (EMM) som hjälper anställda att vara produktiva samtidigt som företagets data skyddas. Med Intune kan du:
 * Hantera mobila enheter som anställda använder för att komma åt företagets data.
-* Hantera mobila appar som används av anställda.
+* Hantera klientappar som används av anställda.
 * Skydda företagets information genom att styra hur anställda får åtkomst till och delar den.
 * Säkerställa att enheter och program är kompatibla med företagets säkerhetskrav.
 

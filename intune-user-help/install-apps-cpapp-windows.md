@@ -1,11 +1,11 @@
 ---
-title: Installera appar från företagsportalappen för Windows
-description: ''
+title: Installerar appar från Intune-företagsportalappen för Windows
+description: Läs hur du installerar och delar appar från företagsportalappen
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/07/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,28 +17,46 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 5d77a4c2b5d55a3cd6086af61de0804afc3e5245
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 66e6018138760a987acedf90028b7e8057d355c3
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43149626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864480"
 ---
-# <a name="install-apps-on-your-device"></a>Installera appar på enheten
+# <a name="install-and-share-apps-on-your-device"></a>Installera och dela appar på din enhet
 Installera appar på enheten från företagsportalappen för Windows.
 
+## <a name="install-apps"></a>Installera appar
+
 1. Öppna företagsportalappen och logga in med ditt arbets- eller skolkonto.
-![Hemsida för företagsportalappen för Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)
+![Hemsida för företagsportalappen för Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)  
 2. Hitta och installera appar från något av följande avsnitt i företagsportalappen:
-    * **Appar**: Välj från en lista över din organisations aktuella appar. 
-    * **Visa alla**: I avsnittet **Appar** klickar du på **Visa alla** för att visa alla tillgängliga appar.
-    * **Sök efter appar**: Ett statistiksökfält finns i navigationsmenyn till vänster i appen. Ange namnet på en app för att ta reda på om den är tillgänglig för dig.
-    * **Alla appar**: Visa, sortera och filtrera alla tillgängliga appar.
-3. Välj en app att installera.
-4. På sidan Appinformation, klicka på **Installera**. När installationen är klar visas statusen **Installerad**.
+    * **Start**: välj från en lista över din organisations aktuella appar. 
+    * **Visa alla**: från avsnittet **Startsida** > **Appar**, klickar du på **Visa alla** för att visa alla tillgängliga appar.
+    * **Alla appar**: välj den här sidan i navigeringsfönstret för att se alla tillgängliga appar, inklusive installerade och aktuella.
+    * **Installerade appar**: välj den här sidan i navigeringsfönstret för att se alla installerade appar på din enhet.
+    * **Sök efter appar**: det finns ett statiskt sökfält i appens navigeringsfönster.  Hitta dina tillgängliga appar genom att söka efter appnamn eller utgivare.  
+    * **Alla appar**: Visa, sortera och filtrera alla tillgängliga appar. Sökresultat sorteras automatiskt efter relevans.
+3. Välj en app att installera.  
+4. På sidan appinformation, klickar du på **Installera**. När installationen är klar visas statusen **Installerad**.
 ![Företagsportalappen för Windows 10, appinformationssidan.](./media/RS1_AppDetailsPage_Installed_02.png)  
 ![Företagsportalappen för Windows 10, appinformationssidan, status Installerad visas.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
- Beroende på hur stort ditt företag är finns det flera versioner av Office tillgängliga för nedladdning från företagsportalen. Mer information om Office-paketet för Windows-enheter finns i [Installera Office 365 på Windows-enheten](./install-office-windows.md).
+ Beroende på hur stort ditt företag är kan det finnas flera versioner av Office tillgängliga för hämtning från företagsportalen. Mer information om Office-paketet för Windows-enheter finns i [Installera Office 365 på din Windows-enhet](./install-office-windows.md).
+
+## <a name="share-apps-with-others"></a>Dela appar med andra
+Dela och rekommendera appar till dina arbets- och skolkontakter. Följande steg beskriver hur du delar en länk direkt från Företagsportalen.
+
+1. I Företagsportalen, högerklickar du eller trycker och håller ner på valfri app för att öppna dess [snabbmeny](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+
+    ![Företagsportalappen för Windows 10, framsidan, som visar en lista över appar och enheter. Den klickbara snabbmenyn för Dela är synlig ovanpå exempelappens ikon. ](./media/1808_ShareContext_CP_Windows.png)  
+
+2. Välj **Dela**.
+3. Välj bland enskilda kontakter eller välj ett annat program, till exempel OneNote för att skicka till en grupp. Om du inte ser en app du vill använda, väljer du **Hämta appar i Store** för att se andra tillgängliga appar.  
+
+    ![En exempelskärmbild av företagsportalappen för Windows 10, popup-sidan Dela. Sidan säger Läs om < exempelappnamn > i företagsportalappen. Det visar en kontakt och 2 appar att välja mellan för att skicka länken och en länk för Hämta appar i Store. ](./media/1808_ShareApps_CP_Windows.png) 
+
+När du delar får mottagaren en länk och ett meddelande för att visa appens information. Länken öppnar företagsportalens **appinformationssida**. 
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

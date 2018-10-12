@@ -15,16 +15,16 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b540cd2b2751712604c0ae7172015cb109c9c1d8
-ms.sourcegitcommit: 024cce10a99b12a13f32d3995b69c290743cafb8
+ms.openlocfilehash: 2a4b4a4b2b0df706504e76b418c5b87eb66b1111
+ms.sourcegitcommit: 23997b701365bb514347d75edc2357eff1f1443f
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039445"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47237671"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Felsöka enhetsregistrering i Intune
 
-Den här artikeln innehåller förslag på hur du kan felsöka problem med enhetsregistrering. Om du inte lyckas lösa problemet med hjälp av den här informationen läser du [Ta reda på hur du kan få support för Microsoft Intune](get-support.md), som beskriver hur du kan få hjälp på fler sätt.
+Den här artikeln innehåller förslag på hur du kan felsöka problem med enhetsregistrering. Om den här informationen inte löser ditt problem, se [Få support för Microsoft Intune](get-support.md) där det står om fler sätt att få hjälp.
 
 
 ## <a name="initial-troubleshooting-steps"></a>Inledande felsökningssteg
@@ -39,7 +39,7 @@ Kontrollerar att du har konfigurerat Intune korrekt så att registrering är akt
 Du kan också kontrollera att tid och datum på användarens enhet är inställt på rätt sätt:
 
 1. Starta om enheten.
-2. Kontrollera att tid och datum är inställt nära GMT-standarder (+ eller - 12 timmar) i förhållande till slutanvändarens tidszon.
+2. Kontrollera att tid och datum är inställt nära GMT-standarderna (+ eller - 12 timmar) i förhållande till slutanvändarens tidszon.
 3. Avinstallera och installera Intune-företagsportalen igen (om tillämpligt).
 
 Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar som du kan granska. Anvisningar för hur användare samlar in loggar finns i:
@@ -52,7 +52,7 @@ Användare av hanterade enheter kan samla in registrerings- och diagnostikloggar
 Dessa problem kan uppstå på alla enhetsplattformar.
 
 ### <a name="device-cap-reached"></a>Enhetstaket har nåtts
-**Problem:** En användare får ett fel på enheten under registreringen, som **Företagsportalen är för tillfället otillgänglig** på en iOS-enhet och DMPdownloader.log på Configuration Manager innehåller felet **DeviceCapReached**.
+**Problem:** En användare får ett fel på under registreringen (som **Företagsportalen är otillgänglig för tillfället**) och DMPdownloader.log på konfigurationshanteraren innehåller felet **DeviceCapReached**.
 
 **Lösning:**
 
@@ -89,7 +89,7 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 4.  Om det inte går ska du validera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory.
 
-5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera företagsportalappen för Intune, och sedan kan du prova att registrera dig igen.
+5.  Om användaren loggar in uppmanas denne av en iOS-enhet att installera företagsportalappen för Intune och registrera sig. På en Android-enhet måste du manuellt installera Intune-företagsportalappen och därefter kan du prova att registrera dig igen.
 
 ### <a name="mdm-authority-not-defined"></a>MDM-auktoritet har inte definierats
 **Problem:** Användaren får felet **MDM-utfärdare har inte definierats**.
@@ -98,8 +98,8 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
 1.  Kontrollera att utfärdaren för hantering av mobila enheter har [angetts korrekt](mdm-authority-set.md).
     
-2.  Kontrollera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory genom att kontrollera att användarens UPN matchar Active Directory-informationen i Office 365-portalen.
-    Om aktuellt UPN inte överensstämmer med Active Directory-informationen:
+2.  Verifiera att användarens autentiseringsuppgifter har synkroniserats korrekt med Azure Active Directory. Du kan verifiera att användarens UPN matchar Active Directory-informationen i Office 365-portalen.
+    Om UPN inte matchar Active Directory-informationen:
 
     1.  Inaktivera DirSync på den lokala servern.
 
@@ -121,9 +121,9 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 
         -   Om du vill visa alla användare: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Om du vill se specifika användare använder du följande fråga där %testuser1% representerar username@domain.com för den användare som du vill söka efter: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        -   Om du vill se specifika användare använder du följande fråga där %testuser1% är en platshållare för username@domain.com för den användare som du vill söka efter: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
-        När du har skrivit frågan väljer du **!Kör**.
+        När du har skrivit frågan väljer du **!Execute**.
         När resultatet har returnerats, leta efter molnanvändar-ID:et.  Om det finns något ID är inte användaren licensierad för att använda Intune.
 
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Det går inte att skapa en princip eller registrera enheter om företagets namn innehåller specialtecken
@@ -132,10 +132,15 @@ För att undvika att nå enhetsgränser kan du vara noga med att ta bort inaktue
 **Lösning:** I [administrationscenter för Office 365](https://portal.office.com/) tar du bort specialtecknen från företagets namn och sparar företagsinformationen.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Det går inte att logga in eller registrera enheter om det finns flera verifierade domäner
-**Problem:** När du lägger till en andra verifierad domän i ADFS kanske användare med UPN-suffixet (användarens huvudnamn) för den andra domänen inte kan logga in på portalerna eller registrera enheter.
+**Problem:** detta problem kan uppstå när du lägger till en andra verifierad domän till din ADFS. Användare med UPN-suffixet (användarens huvudnamn) för den andra domänen kanske inte kan logga in på portalerna eller registrera enheter.
 
 
-<strong>Lösning:</strong> Microsoft Office 365-kunder som använder enkel inloggning (SSO) via AD FS 2.0 och som har flera domäner på toppnivå för användarnas UPN-suffix i organisationen (till exempel @contoso.com eller @fabrikam.com) måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix. Nu finns det en [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) som fungerar tillsammans med växeln <strong>SupportMultipleDomain</strong> och som gör att AD FS-servern har stöd det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [den här bloggen](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+<strong>Lösning:</strong> Microsoft Office 365-kunder måste distribuera en separat instans av AD FS 2.0 Federation Service för varje suffix om de:
+- använder enkel inloggning (SSO) via AD FS 2.0 och
+- har flera toppnivådomäner för användarnas UPN-suffix i sin organisation (till exempel @contoso.com eller @fabrikam.com).
+
+
+En [sammanslagning för AD FS 2.0](http://support.microsoft.com/kb/2607496) fungerar tillsammans med växeln <strong>SupportMultipleDomain</strong> och gör att AD FS-servern stöder det här scenariot utan att ytterligare AD FS 2.0-servrar krävs. Mer information finns i [det här blogginlägget](https://blogs.technet.microsoft.uucom/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Android-problem
@@ -146,8 +151,8 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 
 |Felmeddelande|Problem|Lösning|
 |---|---|---|
-|**Administratören behöver tilldela en licens för åtkomst**<br>IT-administratören har inte gett dig behörighet till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br><br>Mer information finns i [Tilldela Intune-licenser till dina användarkonton](/intune/licenses-assign).
-|**IT-administratören måste ange MDM-utfärdare**<br>Det verkar som om din IT-administratör inte har angett en MDM-utfärdare. Kontakta IT-administratören eller försök igen senare.|Utfärdaren för hantering av mobila enheter har inte definierats.|Utfärdaren för hantering av mobila enheter har inte angetts i Intune. Se information om att [ange hantering av mobila enheter](/intune/mdm-authority-set).|
+|**Administratören behöver tilldela en licens för åtkomst**<br>Din IT-administratör har inte gett dig åtkomst till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer:<ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>De använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Mer information finns i [Tilldela Intune-licenser till dina användarkonton](/intune/licenses-assign).|
+|**IT-administratören måste ange MDM-utfärdare**<br>Det verkar som om din IT-administratör inte har angett en MDM-utfärdare. Kontakta IT-administratören eller försök igen senare.|Utfärdaren för hantering av mobila enheter har inte definierats.|Utfärdaren för hantering av mobila enheter har inte definierats i Intune. Se information om att [ange hantering av mobila enheter](/intune/mdm-authority-set).|
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Enheter kan inte checka in med Intune-tjänsten och visas som "Ohälsosamma" i Intune-administrationskonsolen
@@ -157,7 +162,7 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 - Visare de hanteringstillståndet **ohälsosamma** i administratörskonsolen.
 - Användare som är skyddade med principer för villkorlig åtkomst kan förlora åtkomst till företagets resurser.
 
-Samsung har bekräftat att Samsung Smart Manager-programvaran, som medföljer vissa Samsung-enheter, kan inaktivera Intunes företagsportal och dess komponenter. När företagsportalen är i ett inaktiverat tillstånd, kan den inte köras i bakgrunden och kan därför kan inte kontakta tjänsten Intune.
+Samsung Smart Manager-programvaran som medföljer vissa Samsung-enheter, kan inaktivera Intunes företagsportal och dess komponenter. När företagsportalen är i ett inaktiverat tillstånd, kan den inte köras i bakgrunden och kan inte kontakta Intune-tjänsten.
 
 **Lösning nr 1:**
 
@@ -168,7 +173,7 @@ Be användarna att starta företagsportalappen manuellt. När appen startar om, 
 
 **Lösning nr 2:**
 
-Be användarna att försöka uppgradera till Android 6.0. Inaktiveringsproblemet inträffar inte på Android 6.0-enheter. För att kontrollera om en uppdatering är tillgänglig, kan användare gå till **Inställningar** > **Om enheten** > **Hämta uppdateringar manuellt** och följa anvisningarna på enheten.
+Be användarna att försöka uppgradera till Android 6.0. Inaktiveringsproblemet inträffar inte på Android 6.0-enheter. Kontrollera om en uppdatering är tillgänglig genom att gå till **Inställningar** > **Om enheten** > **Hämta uppdateringar manuellt** och följa anvisningarna.
 
 **Lösning nr 3:**
 
@@ -206,13 +211,15 @@ Om lösning nr 2 inte fungerar kan du be användarna att följa de här stegen s
 
 1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
-2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
+2.  Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
 
-3.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
+3. Kontrollera att enheten inte redan har en hanteringsprofil installerad.
+
+4.  Bekräfta att Chrome för Android är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="android-certificate-issues"></a>Certifikatfel (Android)
 
-**Problem**: Användaren får följande meddelande på sin enhet: *Du kan inte logga in eftersom enheten saknar ett obligatoriskt certifikat.*
+**Problem**: Användare får följande meddelande på sina enheter: *Du kan inte logga in eftersom din enhet saknar ett obligatoriskt certifikat.*
 
 **Lösning 1**:
 
@@ -220,7 +227,7 @@ Användaren kanske kan hämta certifikatet som saknas genom att följa instrukti
 
 **Lösning 2**:
 
-Om användaren fortfarande ser ett fel om saknat certifikat efter att ha angett sin företagsinloggning och omdirigerats för federerad inloggning, kan ett mellanliggande certifikat saknas på AD FS-servern (Active Directory Federation Services).
+När de angett sina företagsuppgifter och omdirigerats för federerad inloggning, kan användare fortfarande se ett saknat certifikatfel. I det här fallet kan felet innebära att ett mellanliggande certifikat saknas från din Active Directory Federation Services (AD FS)-server
 
 Certifikatfel uppstår eftersom Android-enheter kräver att mellanliggande certifikat ingår i en [SSL-servers hälsning](https://technet.microsoft.com/library/cc783349.aspx). För närvarande skickar en AD FS-standardserver eller WAP - AD FS Proxy-serverinstallation bara AD FS-tjänstens SSL-certifikat i SSL-serverns hälsningssvar till en SSL-klients hälsning.
 
@@ -232,7 +239,7 @@ Om du vill åtgärda problemet importerar du certifikaten till datorns personlig
 4.  Välj fliken **Certifieringssökväg** för att se certifikatets överordnade certifikat.
 5.  På varje överordnat certifikat väljer du **Visa certifikat**.
 6.  Välj **Information** > **Kopiera till fil...**.
-7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för överordnat certifikatet på önskad plats.
+7.  Följ anvisningarna i guiden för att exportera eller spara den offentliga nyckeln för det överordnade certifikatet på önskad plats.
 8.  Högerklicka på **Certifikat** > **Alla aktiviteter** > **Importera**.
 9.  Följ guidens uppmaningar att importera överordnade certifikat till **Lokal dator\Personliga\Certifikat**.
 10. Starta om AD FS-servrarna.
@@ -256,16 +263,16 @@ Om servercertifikatet har installerats korrekt, ser du alla kryssmarkeringar i r
 I följande tabell finns de felmeddelanden som kan visas när användarna registrerar iOS-enheter i Intune.
 
 |Felmeddelande|Problem|Lösning|
-|-----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------|-----|----------|
 |NoEnrollmentPolicy|Ingen registreringsprincip hittades|Kontrollera att alla krav för registrering har konfigurerats, till exempel APNs-certifikatet (Apple Push Notification Service), och att ”iOS som en plattform” är aktiverat. Anvisningar finns i [Konfigurera iOS- och Mac-enhetshantering](ios-enroll.md).|
 |DeviceCapReached|Det finns redan för många registrerade mobila enheter.|För att kunna registrera en ny enhet måste användaren först ta bort en registrerad mobil enhet från företagsportalen. Se anvisningar för den typ av enhet som du använder: [Android](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android), [iOS](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-ios), [Windows](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-windows).|
-|APNSCertificateNotValid|Det är problem med det certifikat som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att nå ut till registrerade iOS-enheter. Om alla steg för att erhålla ett APNs-certifikat inte utfördes eller om APNs-certifikatet har upphört att gälla misslyckas registreringsförsöket och det här meddelandet visas.<br /><br />Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
-|AccountNotOnboarded|Det är problem med det certifikat som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att nå ut till registrerade iOS-enheter. Om alla steg för att erhålla ett APNs-certifikat inte utfördes eller om APNs-certifikatet har upphört att gälla misslyckas registreringsförsöket och det här meddelandet visas.<br /><br />Mer information finns i [Konfigurera och iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md).|
-|DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den typ av mobil enhet som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS-version 8.0 eller senare.<br /><br />|Kontrollera att användarens enhet kör iOS version 8.0 eller senare.|
-|UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br /><br />Se följande artiklar för mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
-|MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte angetts i Intune.<br /><br />Läs punkt 1 i avsnittet ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](free-trial-sign-up.md).|
+|APNSCertificateNotValid|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information om hur du konfigurerar användare finns i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
+|AccountNotOnboarded|Det finns ett problem med certifikatet som gör det möjligt för den mobila enheten att kommunicera med företagets nätverk.<br /><br />|Apple Push Notification Service (APNs) tillhandahåller en kanal som kan användas för att kontakta registrerade iOS-enheter. Registreringen misslyckas och det här meddelandet visas om:<ul><li>Stegen för att hämta ett APN-certifikat inte har slutförts, eller</li><li>APN-certifikatet har upphört gälla.</li></ul>Mer information finns i [Konfigurera och iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md).|
+|DeviceTypeNotSupported|Användaren kan ha försökt att registrera en enhet som inte är iOS. Den mobila enhetstyp som du försöker registrera stöds inte.<br /><br />Kontrollera att enheten kör iOS-version 8.0 eller senare.<br /><br />|Kontrollera att din användares enhet kör iOS version 8.0 eller senare.|
+|UserLicenseTypeInvalid|Enheten kan inte registreras eftersom användarens konto ännu inte är medlem i någon obligatorisk användargrupp.<br /><br />|Innan användarna kan registrera sina enheter måste de vara medlemmar i rätt användargrupp. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer:<ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>de använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Se följande artiklar för mer information:<br /><br />Läs [Konfigurera iOS- och Mac-hantering med Microsoft Intune](ios-enroll.md) och informationen om hur du konfigurerar användare i [Synkronisera Active Directory och lägga till användare i Intune](users-add.md) och [Ordna användare och enheter](groups-add.md).|
+|MdmAuthorityNotDefined|Utfärdaren för hantering av mobila enheter har inte definierats.<br /><br />|Utfärdaren för hantering av mobila enheter har inte definierats i Intune.<br /><br />Läs punkt 1 i avsnittet ”Steg 6: Registrera mobila enheter och installera en app” i [Kom igång med en 30-dagars utvärderingsversion av Microsoft Intune](free-trial-sign-up.md).|
 
-### <a name="devices-are-inactive-or-the-admin-console-cannot-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
+### <a name="devices-are-inactive-or-the-admin-console-cant-communicate-with-them"></a>Enheterna är inaktiva eller så kan administratörskonsolen inte kommunicera med dem
 **Problem:** iOS-enheter checkar inte in med Intune-tjänsten. Enheter måste regelbundet checka in med tjänsten för att behålla åtkomst till skyddade företagsresurser. Om enheter inte checkar in:
 
 - Kan de inte ta emot princip, appar och fjärranslutna kommandon från Intune-tjänsten.
@@ -274,7 +281,7 @@ I följande tabell finns de felmeddelanden som kan visas när användarna regist
 
 **Lösning:** Dela följande lösningar med dina slutanvändare för att hjälpa dem att återfå åtkomst till företagets resurser.
 
-När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om appen upptäcker att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta. Användaren ser då det infogade meddelandet **Försöker synkronisera...** .
+När användarna startar iOS-företagsportalappen kan den identifiera om enheten har tappat kontakten med Intune. Om den identifierar att det inte finns någon kontakt försöker den automatiskt att synkronisera med Intune för att återansluta (användaren ser då meddelandet **Försöker synkronisera…** ).
 
   ![Meddelandet ”Försöker att synkronisera”](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 
@@ -295,13 +302,15 @@ När de registrerats återgår enheterna till ett felfritt tillstånd och återf
 ### <a name="verify-ws-trust-13-is-enabled"></a>Kontrollera att WS-Trust 1.3 är aktiverat
 **Problem** Det går inte att registrera iOS-enheter med programmet för enhetsregistrering (DEP)
 
-Registrering av DEP-enheter med användartillhörighet kräver att WS-Trust 1.3-slutpunkten användarnamn/kombinerad är aktiverad för att kunna begära användartokens. Active Directory aktiverar den här slutpunkten som standard. Hämta en lista med aktiverade slutpunkter med hjälp av PowerShell-cmdleten Get-AdfsEndpoint, som söker efter slutpunkten trust/13/UsernameMixed. Exempel:
+Registrering av DEP-enheter med användartillhörighet kräver att WS-Trust 1.3 användarnamn/kombinerad slutpunkt är aktiverat för att begära användartokens. Active Directory aktiverar den här slutpunkten som standard. Hämta en lista med aktiverade slutpunkter med hjälp av PowerShell-cmdleten Get-AdfsEndpoint och sök efter slutpunkten trust/13/UsernameMixed. Exempel:
 
       Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
 
 Mer information finns i [dokumentationen för Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-Mer information finns i [Metodtips för att skydda Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Om du behöver ytterligare hjälp för att avgöra om WS-Trust 1.3 användarnamn/kombinerad är aktiverat hos din identitetsfederationsprovider kontaktar du Microsoft Support om du använder ADFS eller din tredjeparts identitetsleverantör.
+Mer information finns i [Metodtips för att skydda Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Om du behöver hjälp att avgöra om WS-Trust 1.3 användarnamn/kombinerad är aktiverad i din identitetsfederationsprovider:
+- kontakta Microsoft Support om du använder ADFS
+- kontakta din tredjeparts identitetsleverantör.
 
 
 ### <a name="profile-installation-failed"></a>Det gick inte att installera profilen
@@ -311,14 +320,16 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 
 1.  Bekräfta att användaren har tilldelats en lämplig licens för den version av Intune-tjänsten som du använder.
 
-2.  Kontrollera att enheten inte redan har registrerats för en annan MDM-provider eller att den inte redan har en hanteringsprofil installerad.
+2.  Kontrollera att enheten inte redan registrerats i en annan MDM-provider.
 
-3.  Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
+3. Bekräfta att enheten inte redan har en hanteringsprofil installerad.
 
-4.  Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
+4.  Gå till [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) och försök att installera profilen när du uppmanas till detta.
+
+5.  Bekräfta att Safari för iOS är standardwebbläsaren och att cookies har aktiverats.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>En registrerad iOS-enhet visas inte i konsolen när System Center Configuration Manager används med Intune
-**Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen i Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
+**Problem:** Användaren registrerar iOS-enheten, men den visas inte i administrationskonsolen för Configuration Manager. Enheten visar inte att den har registrerats. Möjliga orsaker:
 
 - Microsoft Intune Connector på din plats för konfigurationshanteraren kommunicerar inte med Intune-tjänsten.
 - Antingen bearbetar inte Data Discovery Manager (ddm)-komponenten eller State Manager (statmgr)-komponenten meddelanden från Intune-tjänsten.
@@ -334,11 +345,61 @@ Mer information finns i [Metodtips för att skydda Active Directory Federation S
 Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
 
+### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Användarens iOS-enhet har fastnat på en registreringsskärm i mer än 10 minuter
+
+**Problemet**: en registrerande enhet kan fastna på någon av två skärmar:
+- Väntar på slutlig konfiguration från Microsoft
+- Interaktiv åtkomstapp inte tillgänglig. Kontakta din administratör.
+
+Det här problemet kan inträffa om:
+- det finns ett tillfälligt avbrott med Apple-tjänster, eller
+- iOS-registrering är konfigurerad att använda VPP-tokens som visas i tabellen, men det är något fel med VPP-token.
+
+| Registreringsinställningar | Värde |
+| ---- | ---- |
+| Plattform | iOS |
+| Användartillhörighet | Registrera med användartillhörighet |
+|Autentisera med Företagsportalen istället för Apple-installationsassistenten | Ja |
+| Installera företagsportalen med VPP | Använd token: tokenadress |
+| Kör företagsportalen i enkelt appläge tills autentisering | Ja |
+
+**Lösning**: åtgärda problemet genom att:
+1. Avgöra om det finns något fel med VPP-token och åtgärda det.
+2. Identifiera vilka enheter som är blockerade.
+3. Rensa de berörda enheterna.
+4. Säga till användaren att starta om registreringsprocessen.
+
+#### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Avgöra om det finns något fel med VPP-token
+1. Gå till **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > tokennamn > **Profiler** > profilnamn > **Hantera** > **Egenskaper**.
+2. Granska egenskaperna för att se om några fel som liknar följande visas:
+    - Den här token har upphört att gälla.
+    - Den här token ligger utanför Företagsportalens licenser.
+    - Den här token används av en annan tjänst.
+    - Den här token används av en annan klientorganisation.
+    - Den här token har tagits bort.
+3. Åtgärda problemen för token.
+
+#### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identifiera vilka enheter som blockeras av VPP-token
+1. Gå till **Intune** > **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > tokennamn > **Enheter**.
+2. Filtrera kolumnen **Profilstatus** efter **Blockerad**.
+3. Anteckna serienummer för alla enheter som är **Blockerade**.
+
+#### <a name="remotely-wipe-the-blocked-devices"></a>Fjärrensa de blockerade enheterna
+När du har åtgärdat problemen med VPP-token, måste du rensa enheterna som har blockerats.
+1. Gå till **Intune** > **Enheter** > **Alla enheter** > **Kolumner**  >  **Serienummer** > **Tillämpa**. 
+2. För varje blockerade enhet, väljer du den från listan **Alla enheter** och väljer sedan **Rensa** > **Ja**.
+
+#### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Säg till användarna att starta om registreringsprocessen
+När du har rensat de blockerade enheterna kan du be användarna att starta om registreringsprocessen.
+
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problem när du använder System Center Configuration Manager med Intune
 ### <a name="mobile-devices-disappear"></a>Mobila enheter försvinner
-**Problem:** När du registrerar en mobil enhet i Configuration Manager försvinner den från samlingen med mobila enheter, men enheten har fortfarande hanteringsprofilen och visas i CSS Gateway.
+**Problem:** När har registrerat en mobil enhet i Configuration Manager så försvinner den från samlingen med mobila enheter. Men enheten har fortfarande Hanteringsprofilen och visas i CSS Gateway.
 
-**Lösning:** Detta kan inträffa eftersom du har en egen process som tar bort enheter som inte är anslutna till en domän eller för att användaren har dragit tillbaka enheten från prenumerationen. Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
+**Lösning:** det här problemet kan bero på att:
+- Du har en egen process som tar bort icke-domänanslutna enheter eller 
+- användaren har dragit tillbaka enheten från prenumerationen.
+Följ stegen nedan om du vill kontrollera vilken process eller vilket användarkonto som tog bort enheten från Configuration Manager-konsolen.
 
 #### <a name="check-how-device-was-removed"></a>Kontrollera hur enheten har tagits bort
 
@@ -352,29 +413,26 @@ Exempel läggs snart till om vad du ska leta efter i loggfilerna.
 
     ![Skärmbild av enhetsborttagningsdiagnostik](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Kontrollera att Configuration Manager inte har någon schemalagd aktivitet, något skript eller någon annan process som automatiskt kan rensa något som inte är anslutet till någon domän, någon, mobil eller andra relaterade enheter.
-
-
-
+5.  Kontrollera att Configuration Manager inte har någon schemalagd uppgift, något skript eller någon annan process som automatiskt kan rensa icke-domän, mobila, eller relaterade enheter.
 
 ### <a name="other-ios-enrollment-errors"></a>Övriga iOS-registreringsfel
 En lista med iOS-registreringsfel finns i vår dokumentation i [Felsökning av iOS-enhet med registreringsproblem i Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Datorproblem
 
-
 |Felmeddelande|Problem|Lösning|
 |---|---|---|
-|**Administratören behöver tilldela en licens för åtkomst**<br>IT-administratören har inte gett dig behörighet till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet anger att de har fel licenstyp för den angivna hanteringsauktoriteten för mobila enheter. Det här felet visas till exempel om Intune har angetts som utfärdare för hantering av mobila enheter och användarna har en licens för System Center 2012 R2 Configuration Manager.<br>Läs mer om hur du [tilldelar Intune-licenser till dina användarkonton](https://docs.microsoft.com/intune/licenses-assign).|
+|**Administratören behöver tilldela en licens för åtkomst**<br>Din IT-administratör har inte gett dig åtkomst till den här appen. Kontakta IT-administratören eller försök igen senare.|Enheten kan inte registreras eftersom användarkontot inte har den nödvändiga licensen.|Innan användarna kan registrera sina enheter måste de ha tilldelats rätt licenser. Det här meddelandet innebär att de har fel licenstyp för hanteringsauktoriteten för mobila enheter. Till exempel visas de det här felet om följande stämmer: <ol><li>Intune har angetts som utfärdare för hantering av mobila enheter</li><li>De använder en System Center 2012 R2 Configuration Manager-licens.</li></ol>Läs mer om hur du [tilldelar Intune-licenser till dina användarkonton](https://docs.microsoft.com/intune/licenses-assign).|
 
 
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>Datorn har redan registrerats – Fel hr 0x8007064c
 **Problem:** Registreringen misslyckas med felet **Datorn har redan registrerats**. Registreringsloggen visar felet **hr 0x8007064c**.
 
-Detta kan bero på att datorn har registrerats tidigare eller att den har den klonade avbildningen av en dator som har registrerats. Kontocertifikatet för det tidigare kontot finns kvar på datorn.
-
-
+Det här felet kan bero på att datorn:
+- tidigare registrerats, eller
+- har den klonade avbildningen av en dator som redan har registrerats.
+Kontocertifikatet för det tidigare kontot finns kvar på datorn.
 
 **Lösning:**
 
@@ -397,8 +455,8 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 |Felkod|Möjligt problem|Föreslagen lösning|
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |Klockan på klientdatorn är inte inställd på rätt tid.|Kontrollera att klockan och tidszonen på klientdatorn är inställda på rätt tid och tidszon.|
-|0x80240438, 0x80CF0438, 0x80CF402C|Det går inte att ansluta till Intune-tjänsten. Kontrollera klientens proxyinställningar.|Kontrollera att proxykonfigurationen på klientdatorn stöds av Intune och att klientdatorn har Internetanslutning.|
-|0x80240438, 0x80CF0438|Proxyinställningarna i Internet Explorer och Lokalt system har inte konfigurerats.|Det går inte att ansluta till Intune-tjänsten. Kontrollera klientens proxyinställningar och bekräfta att proxykonfigurationen på klientdatorn stöds av Intune och att klientdatorn har Internetanslutning.|
+|0x80240438, 0x80CF0438, 0x80CF402C|det går inte att ansluta till Intune-tjänsten. Kontrollera klientens proxyinställningar.|Verifiera att Intune stöder proxykonfigurationen på klientdatorn. Verifiera att klientdatorn har Internetanslutning.|
+|0x80240438, 0x80CF0438|Proxyinställningarna i Internet Explorer och det lokala systemet har inte konfigurerats.|det går inte att ansluta till Intune-tjänsten. Kontrollera klientens proxyinställningar. Verifiera att Intune stöder proxykonfigurationen på klientdatorn. Verifiera att klientdatorn har Internetanslutning.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Registreringspaketet är inaktuellt.|Hämta och installera det aktuella klientprogramvarupaketet från arbetsytan Administration.|
 |0x80043002, 0x80CF3002|Kontot är i underhållsläge.|Du kan inte registrera nya klientdatorer när kontot är i underhållsläge. Logga in på ditt konto för att visa dina kontoinställningar.|
 |0x80043003, 0x80CF3003|Kontot har tagits bort.|Kontrollera att ditt konto och din prenumeration på Intune fortfarande är aktiva. Logga in på ditt konto för att visa dina kontoinställningar.|
@@ -410,7 +468,7 @@ Detta kan bero på att datorn har registrerats tidigare eller att den har den kl
 |0x80043008, 0x80CF3008|Det gick inte att starta tjänsten Uppdatering av Microsoft onlinehantering.|Kontakta Microsoft-supporten. Mer information finns i [Ta reda på hur du kan få support för Microsoft Intune](get-support.md).|
 |0x80043009, 0x80CF3009|Klientdatorn har redan registrerats i tjänsten.|Du måste inaktivera klientdatorn innan du kan registrera den igen i tjänsten.|
 |0x8004300B, 0x80CF300B|Det går inte att köra installationspaketet för klientprogramvaran eftersom den version av Windows som körs på klienten inte stöds.|Intune stöder inte den version av Windows som körs på klientdatorn.|
-|0xAB2|Windows Installer kunde inte komma åt VBScript-körtiden för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda de verktyg som beskrivs i [Microsoft Support-artikeln KB198038: Användbara verktyg för paket- och distributionsproblem](https://support.microsoft.com/kb/198038).|
+|0xAB2|Windows Installer kunde inte komma åt VBScript-runtimen för en anpassad åtgärd.|Det här felet beror på en anpassad åtgärd som baseras på DLL:er (Dynamic-Link Libraries). När du felsöker DLL-filen kan du behöva använda de verktyg som beskrivs i [Microsoft Support-artikeln KB198038: Användbara verktyg för paket- och distributionsproblem](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|Anslutningen till tjänstslutpunkten avbröts.|Utvärderings- eller betalkontot har inaktiverats tillfälligt. Skapa ett nytt utvärderings- eller betalkonto och registrera dig igen.|
 
 

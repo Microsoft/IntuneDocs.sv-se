@@ -15,12 +15,12 @@ ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5b5395ed4095280230c9cf678395df03bbce41ea
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
+ms.openlocfilehash: b92a5c7bcddbecc438aa5e72989ab2302440da7a
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141685"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562892"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Lägg till appar i Microsoft Intune
 
@@ -90,7 +90,7 @@ När du avgör vilka appar som din personal behöver, överväg att olika gruppe
 
 Du måste först bestämma vilken grupp som ska ha åtkomst till appen baserat på hur känsliga data appen innehåller. Du kanske behöver inkludera eller exkludera vissa typer av roller i organisationen. Till exempel kan endast vissa verksamhetsspecifika appar krävas för säljgruppen, medan personer som arbetar med ingenjörskonst, ekonomi, HR eller juridik kanske inte behöver använda de verksamhetsspecifika apparna. Dessutom kanske säljgruppen behöver ytterligare dataskydd och åtkomst till interna företagstjänster på sina mobila enheter. Du måste bestämma hur den här gruppen ska ansluta till resurser med appen. Kommer de data som appen kommer åt finnas i molnet eller lokalt? Och hur kommer användarna att ansluta till resurser med appen? 
 
-Med Intune kan du också aktivera åtkomst till mobilappar som kräver säker åtkomst till lokala data, t.ex. servrar för affärsappar. Den här typen av åtkomst görs normalt med [Intune-hanterade certifikat](certificates-configure.md) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Azure Active Directory-programproxy. Intunes [App Wrapping Tool och App SDK](apps-prepare-mobile-application-management.md) kan användas för att hålla kvar data i den verksamhetsspecifika appen, så att det inte går att vidareföra företagsdata till konsumentappar eller konsumenttjänster.
+Med Intune kan du också aktivera åtkomst till klientappar som kräver säker åtkomst till lokala data, t.ex. servrar för affärsappar. Den här typen av åtkomst görs normalt med [Intune-hanterade certifikat](certificates-configure.md) för åtkomstkontroll som kombineras med en VPN-gateway eller proxy av standardtyp i perimeternätverket, t.ex. Azure Active Directory-programproxy. Intunes [App Wrapping Tool och App SDK](apps-prepare-mobile-application-management.md) kan användas för att hålla kvar data i den verksamhetsspecifika appen, så att det inte går att vidareföra företagsdata till konsumentappar eller konsumenttjänster.
 
 Använd [guiden för planering, utformning och implementering för distribution av Intune](planning-guide.md) och få hjälp med att bestämma hur du ska identifiera de organisatoriska grupper som är associerade med varje användningsfall och underanvändningsfall i appen. Mer information om hur du tilldelar appar till grupper finns i [Tilldela appar till grupper med Microsoft Intune](apps-deploy.md).
 

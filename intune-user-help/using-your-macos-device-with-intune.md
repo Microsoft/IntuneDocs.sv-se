@@ -1,11 +1,11 @@
 ---
-title: Använda en iOS- eller macOS-enhet med Intune | Microsoft Docs
-description: Lista med länkar till vad du kan göra på din mobila iOS- eller macOS-enhet när enheten har registrerats i Intune
+title: Använda din macOS-enhet med Intune | Microsoft Docs
+description: Hitta länkar för att felsöka eller hantera din mobila macOS-enhet från företagsportalappen
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 4/20/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 02ccde8299e4ad5d6aacb2abd120c094f752c5e6
-ms.sourcegitcommit: 9536300a6211bac4bdc733593a40c1ae47611de3
+ms.openlocfilehash: 887b9355bc68edca314a49743b8d11728ca2361a
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2018
-ms.locfileid: "31771864"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168921"
 ---
-# <a name="using-your-macos-device-with-intune"></a>Använda din macOS-enhet med Intune
+# <a name="using-your-macos-device-with-intune-company-portal"></a>Använd din macOS-enhet med Intune-företagsportalen
 
-Det finns ett antal saker som du kan göra med Intune som gör livet lite lättare. Här är en lista över de vanligaste sakerna som företaget kan be dig att göra.
+Den här artikeln listar uppgifter och information som är specifik för företagsportalen för macOS. Du kan använda den för att hjälpa dig felsöka och hantera din macOS-enhet. Klicka på en länk om du vill se mer information, steg och skärmdumpar. 
 
 ## <a name="supported-versions"></a>Versioner som stöds
 
-Intune stöder för närvarande OS X El Capitan 10.11 och senare för macOS-enheter.
+Företagsportalen för macOS stöder för tillfället OS X El Capitan 10.11 och senare för macOS-enheter.
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrera enheten i Intune och installera företagsportalen
 

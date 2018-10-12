@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: a5808a0ac80390b76058827d2ca0870249b043b9
-ms.sourcegitcommit: 11cad61c565c474a8d653181675cc1109d562626
+ms.openlocfilehash: 603a501ff8b8b3ebc6b142a823b1c5bea4e48b98
+ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241838"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46505758"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrera din macOS-enhet som tillhandahålls av organisationen i hanteringen
 
@@ -35,20 +35,20 @@ Du påbörjar konfigureringen genom att starta din enhet och logga in med dina i
 ## <a name="what-is-apple-dep"></a>Vad är Apple DEP?
 Organisationen kanske har köpt sina enheter via något som kallas *Apples program för enhetsregistrering* (DEP). Apple DEP gör det möjligt för organisationer att köpa stora mängder iOS- eller macOS-enheter. Organisationer kan sedan konfigurera och hantera dessa enheter i önskad provider för hantering av mobila enheter, som Intune. Om du är administratör och vill ha mer information om Apple DEP kan du läsa [Automatisk registrering av macOS-enheter i Apples program för enhetsregistrering](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
-## <a name="set-up-your-macos-device"></a>Konfigurera din macOS-enhet  
+## <a name="get-your-device-managed"></a>Få din enhet hanterad 
 Utför följande steg när du ska registrera din macOS-enhet för hantering. Om du använder en egen enhet i stället för en enhet som tillhandahålls av organisationen följer du de här stegen för [egna enheter](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Starta din macOS-enhet. 
-2. Välj **Språk** och klicka på **Fortsätt**.  
+2. Välj land och klicka på **Fortsätt**.  
 
    ![Skärmbild av startskärmen i installationsassistenten för macOS-enheter och en lista med språk att välja mellan.](./media/macos-dep-welcome-1808.png)   
-3. Välj en tangentbordslayout. I listan visas ett eller flera alternativ som baseras på det valda språket. Om du vill se alla layoutalternativ, oavsett vilket språk du har valt, klickar du på **Visa alla**. När du är färdig klickar du på **Fortsätt**.  
+3. Välj en tangentbordslayout. I listan visas ett eller flera alternativ som baseras på det valda landet. Om du vill se alla layoutalternativ, oavsett vilket land du har valt, klickar du på **Visa alla**. När du är färdig klickar du på **Fortsätt**.  
 
    ![Skärmbild av skärmen för tangentbordslayout i installationsassistenten för macOS-enheter och en lista med tangentbordsspråk att välja från, ett avmarkerat Visa alla-alternativ samt knapparna Tillbaka och Fortsätt.](./media/macos-dep-keyboard-1808.png)  
 4. Välj ditt Wi-Fi-nätverk. Du måste ha en internetanslutning för att fortsätta med installationen. Om du inte ser ditt nätverket, eller om du behöver ansluta via ett kabelanslutet nätverk, klickar du på **Andra nätverksalternativ**. När du är färdig klickar du på **Fortsätt**.  
 
    ![Skärmbild av Wi-Fi-nätverksskärmen i installationsassistenten för macOS-enheter och en lista med tillgängliga nätverk att välja bland. Dessutom visas knapparna Andra nätverksalternativ, Bakåt och Fortsätt.](./media/macos-dep-wifi-1808.png)  
-5. När du har anslutit till Wi-Fi visas skärmen **Fjärrhantering**. Med fjärrhantering kan organisationens administratör konfigurera din enhet med de konton, inställningar, appar och nätverk som används. Läs igenom dokumentationen innan du fortsätter så att du förstår hur din enhet hanteras. Klicka sedan på **Fortsätt**.  
+5. När du har anslutit till Wi-Fi visas skärmen **Fjärrhantering**. Med fjärrhantering kan organisationens administratör konfigurera din enhet med de konton, inställningar, appar och nätverk som används. Läs igenom förklaringen av fjärrhantering, så att du förstår hur din enhet hanteras. Klicka sedan på **Fortsätt**.  
 
    ![Skärmbild av skärmen för fjärrhantering i installationsassistenten för macOS-enheter samt text som förklarar fjärrhantering och en länk till ytterligare dokumentation. Dessutom visas knapparna Bakåt och Fortsätt.](./media/macos-dep-remote-management-1-1808.png)  
 6. När du uppmanas till det loggar du in med ditt arbets- eller skolkonto. När du är inloggad installeras en hanteringsprofil på enheten. Profilen konfigurerar och aktiverar din åtkomst till organisationens resurser.  
@@ -62,6 +62,13 @@ Utför följande steg när du ska registrera din macOS-enhet för hantering. Om 
     * gå igenom en snabbkonfiguration
     * konfigurera din Mac  
 ## <a name="get-the-company-portal-app"></a>hämta appen för företagsportalen.      
-Gå till App Store och hämta appen Intune Företagsportal till enheten. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar.
+Ladda ned Intunes företagsportalsapp för macOS på din enhet. Med den här appen kan du övervaka, synkronisera, lägga till och ta bort enheten från hanteringen samt installera appar. Här beskrivs också hur du registrerar din enhet i företagsportalen.  
+1. Gå till http://portal.manage.microsoft.com/EnrollmentRedirect.aspx på din macOS-enhet.
+2. Logga in på företagsportalens webbplats med ditt arbets- eller skolkonto. 
+3. Hämta installationsprogrammet för företagsportalen för macOS genom att klicka på **Hämta appen**.
+4. Öppna pkg-filen när du uppmanas till detta och slutför installationen.
+4. Öppna företagsportalappen och logga in med ditt arbets- eller skolkonto.
+5. Leta reda på enheten och klicka på **Registrera**.
+6. Klicka på **Fortsätt** > **Klar**. Enheten bör nu visas i företagsportalsappen som en kompatibel företagsenhet.
 
 Behöver du fortfarande hjälp? Kontakta företagssupporten. Titta efter IT-administratörens kontaktuppgifter på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -14,12 +14,12 @@ ms.assetid: 68921fd6-5f50-456c-a3af-83d7bc4b134b
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 085b6a3a68964a200a5d6c462b3710b9744ac99f
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 5613c1284110e85a910db8f156ff4f62a54af4ad
+ms.sourcegitcommit: dc6979f2b14d522530577cc7f212cc822356acc9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474623"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453552"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Datasäkerhet och delning i Intune
 
@@ -66,7 +66,7 @@ Information om data som delas med vissa tredje parter finns i följande artiklar
 
 ### <a name="system-center-configuration-manager-data-sharing"></a>System Center Configuration Manager-datadelning
 
-Microsoft Intune delar inte data med System Center Configuration Manager. Microsoft Intune är en lokal produkt som distribueras, hanteras och drivs direkt av kunden. Diagnostik och användningsdata som samlas in av Configuration Manager används endast för att förbättra installationsproceduren, kvaliteten och säkerheten i framtida versioner.
+Microsoft Intune delar inte data med System Center Configuration Manager. System Center Configuration Manager är en lokal produkt som distribueras, hanteras och drivs direkt av kunden. Diagnostik och användningsdata som samlas in av Configuration Manager används endast för att förbättra installationsproceduren, kvaliteten och säkerheten i framtida versioner.
 
 Mer information finns i [Diagnostik och användningsdata för SCCM](https://docs.microsoft.com/en-us/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data.md). 
 

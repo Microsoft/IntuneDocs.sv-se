@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce017f323ebbe4095f5aa31990878afce0116573
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321245"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028740"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurera och använda SCEP-certifikat med Intune
 
@@ -82,7 +82,7 @@ Du måste slutföra följande steg innan du kan konfigurera certifikatprofiler. 
 Skapa domänanvändarkonto som används som NDES-tjänstkontot Du anger det här kontot när du konfigurerar mallar på den utfärdande certifikatutfärdaren innan du installerar och konfigurerar NDES. Kontrollera att användaren har standardrättigheterna, **logga in lokalt**, **logga in som en tjänst** och **logga in som ett batchjobb**. En del organisationer har härdningsprinciper som inaktiverar dessa rättigheter.
 
 #### <a name="step-2---configure-certificate-templates-on-the-certification-authority"></a>Steg 2 – Konfigurera certifikatmallar hos certifikatutfärdaren
-I den här uppgiften kommer du att:
+I det här steget kommer du att:
 
 - Konfigurera en certifikatmall för NDES
 - Publicera certifikatmallen för NDES
@@ -145,7 +145,7 @@ Konfigurera så att certifikatutfärdaren tillåter att beställaren anger gilti
 3. Kontrollera att mallen publicerats genom att se om den finns i mappen **Certifikatmallar** .
 
 #### <a name="step-3---configure-prerequisites-on-the-ndes-server"></a>Steg 3 – Konfigurera krav på NDES-servern
-I den här uppgiften kommer du att:
+I det här steget kommer du att:
 
 - Lägga till NDES till en Windows Server och konfigurera IIS för att stöda NDES
 - Lägga till NDES-tjänstkontot i gruppen IIS_IUSR
@@ -156,7 +156,7 @@ I den här uppgiften kommer du att:
    1. I guiden väljer du **Active Directory-certifikattjänster** för att få tillgång till AD CS-rolltjänsterna. Välj **Registreringstjänsten för nätverksenheten**, avmarkera **Certifikatutfärdare**och slutför guiden.
 
       > [!TIP]
-      > Markera inte **Stäng** i **Installationsförlopp**. Markera i stället länken **Konfigurera Active Directory-certifikattjänster på målservern**. Då öppnas guiden **AD CS-konfiguration** som du använder för nästa åtgärd. När AD CS-konfiguration öppnats stänger du guiden Lägg till roller och funktioner.
+      > Markera inte **Stäng** i **Installationsförlopp**. Markera i stället länken **Konfigurera Active Directory-certifikattjänster på målservern**. Då öppnas guiden **AD CS-konfiguration** som du använder för nästa steg. När AD CS-konfiguration öppnats stänger du guiden Lägg till roller och funktioner.
 
    2. När NDES läggs till på servern installerar guiden även IIS. Kontrollera att IIS har följande konfigurationer:
 
@@ -181,7 +181,7 @@ I den här uppgiften kommer du att:
     `setspn –s http/Server01.contoso.com contoso\NDESService`
 
 #### <a name="step-4---configure-ndes-for-use-with-intune"></a>Steg 4 – Konfigurera NDES för användning med Intune
-I den här uppgiften kommer du att:
+I det här steget kommer du att:
 
 - Konfigurera NDES för användning med den utfärdande certifikatutfärdaren
 - Binda serverautentiseringscertifikatet (SSL) i IIS
@@ -190,7 +190,7 @@ I den här uppgiften kommer du att:
 1. Öppna AD CS-konfigurationsguiden och utför följande uppdateringar på NDES-servern:
 
     > [!TIP]
-    > Om du klickade på länken i föregående åtgärd är guiden redan öppen. Annars öppnar du Serverhanteraren för att komma åt konfigurationen efter distribution för Active Directory-certifikattjänster.
+    > Om du klickade på länken i föregående steg är guiden redan öppen. Annars öppnar du Serverhanteraren för att komma åt konfigurationen efter distribution för Active Directory-certifikattjänster.
 
    - Under **Rolltjänster** väljer du **registreringstjänsten för nätverksenheter**
    - Under **Tjänstkonto för NDES** anger du NDES-tjänstkontot
@@ -202,7 +202,7 @@ I den här uppgiften kommer du att:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\`
 
-    Identifiera certifikatmallens **Syfte** (finns på fliken **Hantering av begäranden**) för att uppdatera nyckeln. Sedan uppdaterar du den motsvarande posten i registret genom att ersätta den befintliga informationen med namnet på den certifikatmall (inte mallens visningsnamn) som du angav i Uppgift 1. I följande tabell visas certifikatmallens syfte för värdena i registret:
+    Identifiera certifikatmallens **Syfte** (finns på fliken **Hantering av begäranden**) för att uppdatera nyckeln. Sedan uppdaterar du den motsvarande posten i registret genom att ersätta den befintliga informationen med namnet på den certifikatmall (inte mallens visningsnamn) som du angav i steg 2. I följande tabell visas certifikatmallens syfte för värdena i registret:
 
     |Certifikatmallens syfte (på fliken Hantering av begäranden)|Registervärde som redigeras|Värde som visas i Intune-administratörskonsolen för SCEP-profilen|
     |---|---|---|
@@ -229,7 +229,7 @@ I den här uppgiften kommer du att:
 
     ![Testa NDES](./media/SCEP_NDES_URL.png)
 
-    Om du får ett **503 tjänsten ej tillgänglig**, kontrollerar du loggboken. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i uppgift 1.
+    Om du får ett **503 tjänsten ej tillgänglig**, kontrollerar du loggboken. Det är troligt att programpoolen har stoppats på grund av en saknad behörighet för NDES-användaren. Dessa rättigheter beskrivs i steg 1.
 
 ##### <a name="install-and-bind-certificates-on-the-ndes-server"></a>Installera och bind certifikat på NDES-servern
 
@@ -278,7 +278,7 @@ I den här uppgiften kommer du att:
 4. Starta om NDES-servern. Servern är nu klar att stödja Certifikat Connectorn.
 
 #### <a name="step-5---enable-install-and-configure-the-intune-certificate-connector"></a>Steg 5 – Aktivera, installera och konfigurera Intunes certifikatanslutningsapp
-I den här uppgiften kommer du att:
+I det här steget kommer du att:
 
 - Aktivera stöd för NDES i Intune.
 - Ladda ned, installera och konfigurera en Certificate Connector på servern som är värd för rollen för registreringstjänsten för nätverksenheter (NDES) på en server i din miljö. Du kan installera flera NDES-servrar med en Microsoft Intune Certificate Connector-komponent på varje NDES-server för att öka skalan för NDES-implementering i din organisation.
@@ -299,7 +299,7 @@ I den här uppgiften kommer du att:
     > [!NOTE]
     > När du installerar NDES för fristående Intune installeras CRP-tjänsten automatiskt med certifikatanslutningsappen. När du använder Intune med Configuration Manager installerar du certifikatregistreringsplatsen som en separat platssystemroll.
 
-6. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen, väljer du **Välj**och väljer det certifikat för **klientautentisering** som du installerat på NDES-servern i Uppgift 3.
+6. När du tillfrågas om klientcertifikatet för certifikatanslutningsappen, väljer du **Välj**och väljer det certifikat för **klientautentisering** som du installerat på NDES-servern i steg 4.
 
     När du har valt certifikatet för klientautentisering tas du tillbaka till ytan **Klientcertifikat för Microsoft Intune Certifikat Connector** . Även om certifikatet du valt inte visas väljer du **Nästa** för att visa egenskaperna för certifikatet. Välj **Nästa** och sedan **Installera**.
 
@@ -450,7 +450,7 @@ Från och med version 6.1806.x.x loggar Intune Connector Service händelser i **
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Klart  | Klart |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikatutfärdaren är inte giltig eller kan inte nås. Kontrollera att certifikatutfärdaren är tillgänglig och att servern kan kommunicera med den. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Läs mer i artikeln [Installera Symantecs certifikat för registreringsauktorisering](https://docs.microsoft.com/en-us/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Symantec Client Auth-certifikatet gick inte att hitta i det lokala certifikatarkivet. Läs mer i artikeln [Installera Symantecs certifikat för registreringsauktorisering](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Det angivna kontot har inte behörighet att återkalla ett certifikat från certifikatutfärdaren. Du ser utfärdande certifikatmyndighet i motsvarande fält i händelsemeddelandet.  |
 | 0x00000403 | CertThumbprint_NotFound  | Det gick inte att hitta något certifikat som matchar dina indata. Registrera certifikatanslutningen och försök igen. |
 | 0x00000404 | Certificate_NotFound  | Det gick inte att hitta något certifikat som matchar angivna indata. Registrera om certifikatanslutningen och försök igen. |

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cef98527ee2c281547f8046f3c6f08275d8f0807
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329391"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602188"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Inställningar för helskärmsläge för Android-enheter i Intune
 
@@ -51,7 +51,7 @@ Följ dessa steg om du vill ange en Android-kioskenhet för flera appar:
 2. [Lägga till och tilldela appar som kan användas i helskärmsläge](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Valfritt) [Lägga till webblänkar som kan användas i helskärmsläge](#add-web-links-that-can-be-used-in-kiosk-mode)
 
-### <a name="import-and-deply-the-managed-home-screen-app"></a>Importera och distribuera Managed Home Screen-appen
+### <a name="import-and-deploy-the-managed-home-screen-app"></a>Importera och distribuera Managed Home Screen-appen
 
 1. Gå till [sidan Managed Home Screen på Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) och logga in med samma konto som du använder för andra Managed Google Play-appar.
 2. Välj **Godkänn**.
@@ -59,6 +59,9 @@ Följ dessa steg om du vill ange en Android-kioskenhet för flera appar:
 4. Välj **Appar** > **Managed Home Screen** > **Tilldelningar** > **Lägg till grupp**.
 5. Under **Tilldelningstyp** väljer du **Obligatorisk**.
 6. Välj **Grupper som omfattas** > **Välj grupper att ta med** > välj den enhetsgrupp du har skapat för dina kioskenheter > **Välj** > **OK** > **OK** > **Spara**.
+
+> [!NOTE]
+> En ikon läggs till när du lägger till den hanterade appen för startsidan i flerapps- och helskärmsprofilen. Men ingenting händer när du väljer ikonen. Därför behöver du inte lägga till den hanterade appen för startsidan i flerapps- och helskärmsprofilen.
 
 ### <a name="add-and-assign-apps-that-can-be-used-in-kiosk-mode"></a>Lägga till och tilldela appar som kan användas i helskärmsläge
 
@@ -76,7 +79,7 @@ Följ dessa steg för varje app du vill ska vara tillgängliga på kioskenhetern
 3. Välj **Konfigurera** och ange nödvändig information. Du behöver inte lägga en logotypbild eftersom den hämtas automatiskt från webbplatsens favicon.ico.
 4. Välj **OK** > **Lägg till**.
 
-Kontrollera att du har distribuerat en webbläsare till kioskenheterna via [Mobilappar](apps-add.md).
+Kontrollera att du har distribuerat en webbapp till kioskenheterna. Läs mer information i [Lägg till webbappar i Microsoft Intune](web-app.md).
 
 ### <a name="create-a-multi-app-kiosk-profile"></a>Skapa en profil för kioskenhet för flera appar
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 08/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 223906d37159ba4081f5a5c055392321ac02e0ab
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: d80d7a05dc01298dc7bc347098cf85fbdfc3689f
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020630"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403501"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Logga ut den aktuella användaren på Intune-hanterade iOS-enheter
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Åtgärden **Logga ut aktuell användare** loggar ut den aktuella användaren på en delad iPad-enhet som har konfigurerats för hantering av Classroom-appen för iOS med en [utbildningsprofil för iOS](education-settings-configure-ios.md). 
+Åtgärden **Logga ut aktuell användare** loggar ut den aktuella användaren på en delad iPad-enhet. 
 
 ## <a name="supported-platforms"></a>Plattformar som stöds
 
@@ -36,7 +36,7 @@ ms.locfileid: "31020630"
 - macOS – stöds inte
 - Android – stöds inte
 
-## <a name="how-to-logout-the-current-user"></a>Logga ut den aktuella användaren
+## <a name="how-to-log-out-the-current-user"></a>Så här loggar du ut den aktuella användaren
 
 1.  Logga in på Azure-portalen.
 2.  Välj **Fler tjänster** > **Övervakning + hantering** > **Intune**.

@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/5/2018
+ms.date: 9/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 4e43ab0d088edc87e814ad2c4317d7b7336d34d5
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: f49e0bc496f176434577d42d3a372fc4e8bc22d3
+ms.sourcegitcommit: 7063072c94e43aefc6be0072780622a1da8485d5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46119111"
 ---
 # <a name="android-enterprise-kiosk-settings-in-intune"></a>Inställningar för Android enterprise kiosk i Intune
 
@@ -45,9 +45,9 @@ Android-kioskprofiler stöder följande konfigurationsinställningar. När du sk
 - **Tillåt installation från okända källor**: Välj **Tillåt** för att tillåta att användare installerar från okända källor.
 - **Systemuppdatering**: Välj ett alternativ för att definiera hur enheten hanterar over-the-air-uppdateringar:
     - **Standard för enheten**: Använd enhetens standardinställning.
-    - **Automatiskt**: Uppdateringar installeras automatiskt.
-    - **Uppskjuten**: Uppdateringar skjuts upp till ett senare datum.
-    - **Underhållsfönster**: Användarna uppmanas i ett underhållsfönster att godkänna uppdateringen.
+    - **Automatiskt**: Uppdateringar installeras automatiskt utan att användaren behöver göra något. Om du konfigurerar den här principen installeras väntande uppdateringar omedelbart.
+    - **Uppskjuten**: Uppdateringar skjuts upp 30 dagar. Mot slutet av 30-dagarsperioden uppmanas användaren av Android att installera uppdateringen. Det är möjligt för enhetstillverkare eller operatörer att undanta viktiga säkerhetsuppdateringar från att skjutas upp. En undantagen uppdatering visar användaren ett systemmeddelande på enheten. 
+    - **Underhållsperiod**: Installerar uppdateringar automatiskt under en daglig underhållsperiod som du anger i Intune. Installationen utförs varje dag under 30 dagar och kan misslyckas pga otillräckligt diskutrymme eller för låga batterinivåer. Efter 30 dagar uppmanar Android användaren att installera. Det här fönstret används också för att installera uppdateringar för Play-appar. Det här alternativet rekommenderas för dedikerade enheter, t.ex. kiosker, eftersom enskilda kiosk-appar i förgrunden kan uppdateras. 
 
 ## <a name="kiosk-settings"></a>Kioskinställningar
 

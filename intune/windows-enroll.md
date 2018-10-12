@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/12/2018
+ms.date: 09/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 02cc111f8991a855db4f05360e54598af511f28f
-ms.sourcegitcommit: 34e96e57af6b861ecdfea085acf3c44cff1f3d43
+ms.openlocfilehash: 31c3e7b6d255cd99efee134f0276fd4d15dab6b9
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34223500"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403569"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurera registrering av Windows-enheter
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Det här avsnittet hjälper IT-administratörer att förenkla Windows-registrering för sina användare. När du har [konfigurerat Intune](setup-steps.md) kan användarna registrera Windows-enheter genom att [logga in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) med sina arbets- eller skolkonton.  
+Den här artikeln hjälper IT-administratörer att förenkla Windows-registrering för sina användare. När du har [konfigurerat Intune](setup-steps.md) kan användarna registrera Windows-enheter genom att [logga in](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-windows) med sina arbets- eller skolkonton.  
 
 I egenskap av Intune-administratör kan du förenkla registreringen på följande sätt:
 - [Aktivera automatisk registrering](#enable-windows-10-automatic-enrollment) (Azure AD Premium krävs)
@@ -45,13 +45,14 @@ Två saker som innebär att du kan förenkla Windows-enhetsregistreringen:
 
 Organisationer som använder automatisk registrering kan också konfigurera [massregistrering av enheter](windows-bulk-enroll.md) med hjälp av Windows Configuration Designer-appen.
 
-**Stöd för flera användare**<br>
-Enheter som kör Windows 10 Creator-uppdateringen och är domänanslutna till Azure Active Directory, har nu stöd för fleranvändarhantering med Intune. När vanliga användare loggar in med sina autentiseringsuppgifter för Azure AD får de tillgång till de appar och principer som har tilldelats deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
+## <a name="multi-user-support"></a>Stöd för flera användare
+
+Intune har stöd för hantering av flera användare för enheter som kör Windows 10 Creators-uppdateringen och som är domänanslutna med Azure Active Directory. När vanliga användare loggar in med sina autentiseringsuppgifter för Azure AD får de tillgång till de appar och principer som har tilldelats deras användarnamn. Användare kan för närvarande inte använda Företagsportalen för självbetjäningsscenarier som att installera appar.
 
 [!INCLUDE [AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Förenkla Windows-registreringen utan Azure AD Premium
-Du kan förenkla registreringen för dina användare genom att skapa ett DNS-alias (CNAME-posttyp) som automatiskt omdirigerar registreringsbegäranden till Intune-servrarna. Om du inte skapar en DNS CNAME-resurspost måste alla användare som försöker ansluta till Intune ange Intune-servernamnet under registreringen.
+Du kan förenkla registreringen genom att skapa ett DNS-alias (CNAME-posttyp) som omdirigerar registreringsbegäranden till Intune-servrarna. I annat fall måste användare som försöker ansluta till Intune ange Intune-servernamnet under registreringen.
 
 **Steg 1: Skapa CNAME-poster** (valfritt)<br>
 Skapa CNAME-DNS-resursposter för företagsdomänen. Om ditt företags webbplats till exempel är contoso.com så skapar du en CNAME-post i DNS som omdirigerar EnterpriseEnrollment.contoso.com till enterpriseenrollment-s.manage.microsoft.com.
@@ -63,7 +64,13 @@ Det är valfritt att skapa CNAME DNS-poster, men det blir enklare för användar
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 timme|
 |CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 timme|
 
-Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domännamn och leda var och en till EnterpriseEnrollment-s.manage.microsoft.com. Om användare på Contoso använder name@contoso.com, men även använder name@us.contoso.com och name@eu.constoso.com som e-post/UPN måste Contosos DNS-administratör skapa följande CNAME-poster:
+Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domännamn och leda var och en till EnterpriseEnrollment-s.manage.microsoft.com. Till exempel, användare på Contoso använder följande format som e-post/UPN:
+
+- name@contoso.com
+- name@us.contoso.com
+- name@eu.constoso.com\
+
+Contosos DNS-administratör skapar följande CNAME-poster:
 
 |Typ|Värdnamn|Pekar på|TTL|  
 |----------|---------------|---------------|---|
@@ -76,7 +83,8 @@ Om du har fler än ett UPN-suffix måste du skapa en CNAME-post för varje domä
 Distributionen av DNS-poständringarna kan ta upp till 72 timmar. Du kan inte verifiera DNS-ändringen i Intune förrän DNS-posten har spridits.
 
 **Steg 2: Verifiera CNAME** (valfritt)<br>
-På Azure-portalen väljer du **Fler tjänster** > **Övervakning + hantering** > **Intune**. Välj **Registrera enheter** > **Windows-registrering** på Intune-bladet. Ange webbadressen till företagswebbplatsen i rutan **Ange ett verifierat domännamn** och välj sedan **Testa automatisk identifiering**.
+1. I [Intune på Microsoft Azure-portalen](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Windows-registrering** > **CNAME-validering**.
+2. I rutan **Domän** skriver du företagets webbplats och väljer **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Berätta för användare hur de ska registrera Windows-enheter
 Berätta för användarna hur de ska registrera sina Windows-enheter och vad de kan förvänta sig när de har registrerat sig för hantering.

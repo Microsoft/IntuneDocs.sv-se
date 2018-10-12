@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a658182800f480f27097e078f28adc95c35aa3ea
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313186"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187809"
 ---
 # <a name="see-device-details-in-intune"></a>Visa enhetsinformation i Intune
 
@@ -63,44 +63,38 @@ Intune samlar endast in en applista från företagsägda enheter. Appar på pers
 
 ## <a name="hardware-device-details"></a>Information om maskinvaruenheten
 
-### <a name="windows-and-ios-device-details"></a>Windows- och iOS-enhetsinformation:
-|Detalj|Description|  
-|--------------|----------------------|  
-|Namn|Namnet på enheten.|
-|Hanteringsnamn|Enhetsnamnet används endast i konsolen. Även om du ändrar det här namnet ändras inte namnet på enheten.|
-|UDID|Enhetens unika enhets-ID.|
-|ID för Intune-enhet|Ett GUID som unikt identifierar den här enheten.|
-|Serienummer|Enhetens serienummer från tillverkaren.|
-|Delad enhet|Enheten delas av flera användare om inställningen är **Ja**.|
-|Användargodkänd registrering|Enheten har användargodkänd registrering som gör att administratörer kan hantera vissa säkerhetsinställningar på enheten om inställningen är **Ja**.|
-|Operativsystem|Vilken typ av operativsystem som används på enheten.|
-|Operativsystemversion|Enhetens operativsystemversion.|
-|Operativsystemets språk|Språket som är inställt på enhetens operativsystem.|
-|Totalt lagringsutrymme|Det totala lagringsutrymmet på enheten (i gigabyte).|
-|Ledigt lagringsutrymme|Det oanvända lagringsutrymmet på enheten (i gigabyte).|
-
-
-### <a name="windows-ios-and-macos-device-details"></a>Windows, iOS och macOS-enhetsinformation
-|Detalj|Description|  
-|--------------|----------------------|  
-|IMEI|Enhetens IMEI (International Mobile Equipment Identity).|
-|MEID|Enhetens mobilutrustningsnummer.|
-|Tillverkare|Enhetstillverkaren.|
-|Modell|Enhetsmodellen.|
-|Telefonnummer|Telefonnumret som har tilldelats enheten.|
-|Abonnentens operatör|Enhetens mobiloperatör.|
-|Mobilteknik|Radiosystem som används av enheten.|
-|Wi-Fi MAC|Enhetens MAC-adress.|
-|ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|
-|Registreringsdatum|Datum och tid då enheten registrerades i Intune.|
-|Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|
-|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|
-|Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|
-|Efterlevnad|Enhetens kompatibilitetstillstånd.|
-|EAS-aktiverad|Om inställningen är **Ja** så är enheten synkroniserad med en Exchange-postlåda.|
-|Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|
-|Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|
-|Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|
+|Detalj|Beskrivning|Plattform| 
+|--------------|----------------------|----|  
+|Namn|Namnet på enheten.|Windows, iOS|
+|Hanteringsnamn|Enhetsnamnet används endast i konsolen. Även om du ändrar det här namnet ändras inte namnet på enheten.|Windows, iOS|
+|UDID|Enhetens unika enhets-ID.|Windows, iOS|
+|ID för Intune-enhet|Ett GUID som unikt identifierar den här enheten.|Windows, iOS|
+|Serienummer|Enhetens serienummer från tillverkaren.|Windows, iOS|
+|Delad enhet|Enheten delas av flera användare om inställningen är **Ja**.|Windows, iOS|
+|Användargodkänd registrering|Enheten har användargodkänd registrering som gör att administratörer kan hantera vissa säkerhetsinställningar på enheten om inställningen är **Ja**.|Windows, iOS|
+|Operativsystem|Vilken typ av operativsystem som används på enheten.|Windows, iOS|
+|Operativsystemversion|Enhetens operativsystemversion.|Windows, iOS|
+|Operativsystemets språk|Språket som är inställt på enhetens operativsystem.|Windows, iOS|
+|Totalt lagringsutrymme|Det totala lagringsutrymmet på enheten (i gigabyte).|Windows, iOS|
+|Ledigt lagringsutrymme|Det oanvända lagringsutrymmet på enheten (i gigabyte).|Windows, iOS|
+|IMEI|Enhetens IMEI (International Mobile Equipment Identity).|Windows, iOS, Android|
+|MEID|Enhetens mobilutrustningsnummer.|Windows, iOS, Android|
+|Tillverkare|Enhetstillverkaren.|Windows, iOS, Android|
+|Modell|Enhetsmodellen.|Windows, iOS, Android|
+|Telefonnummer|Telefonnumret som har tilldelats enheten.|Windows, iOS, Android|
+|Abonnentens operatör|Enhetens mobiloperatör.|Windows, iOS, Android|
+|Mobilteknik|Radiosystem som används av enheten.|Windows, iOS, Android|
+|Wi-Fi MAC|Enhetens MAC-adress.|Windows, iOS, Android|
+|ICCID|Det integrerade kretskort-ID:t som är ett unikt ID-nummer för ett SIM-kort.|Windows, iOS, Android|
+|Registreringsdatum|Datum och tid då enheten registrerades i Intune.|Windows, iOS, Android|
+|Senaste kontakt|Datum och tid då enheten senast var i kontakt med Intune.|Windows, iOS, Android|
+|Kod för att kringgå aktiveringslås|Koden som kan användas för att förbikoppla aktiveringslåset.|Windows, iOS, Android|
+|Azure AD-registrerad|Om inställningen är **Ja** är enheten registrerad i Azure Directory.|Windows, iOS, Android|
+|Efterlevnad|Enhetens kompatibilitetstillstånd.|Windows, iOS, Android|
+|EAS-aktiverad|Om inställningen är **Ja** så är enheten synkroniserad med en Exchange-postlåda.|Windows, iOS, Android|
+|Aktiverings-ID för EAS|Enhetens identifierare för Exchange ActiveSync.|Windows, iOS, Android|
+|Övervakas|Om inställningen är **Ja** så har administratörer utökad kontroll över enheten.|Windows, iOS, Android|
+|Krypterad|Om inställningen är **Ja** så krypteras de data som lagras på enheten.|Windows, iOS, Android|
 
 
 

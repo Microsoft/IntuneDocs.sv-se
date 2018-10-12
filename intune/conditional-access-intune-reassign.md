@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 06/28/2017
+ms.date: 09/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d295ade29522a5593993b5541311eadd9e4c9528
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 4714b0bbe566589d970a5d959f1f361940e5701b
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31027476"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187843"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Gör om tilldelningen av principer för villkorlig åtkomst från den klassiska Intune-portalen till Azure-portalen
 
@@ -179,6 +179,9 @@ Om du har konfigurerat inställningar för Exchange Active Sync som en del av en
 12. Aktivera **Aktivera principen** på bladet för den **nya** principen för villkorlig åtkomst. Klicka på **Skapa**.
 
     ![Bild som visar en jämförelse av användargränssnittet i Aktivera princip för villkorlig åtkomst i Intune- och Azure-portalerna](./media/reassign-ca-17.png)
+
+> [!NOTE]
+> Om du konfigurerar **Enhetsplattformar** kommer principen inte att sparas och felmeddelandet ”Principkonfigurationen stöds inte” visas. Exchange ActiveSync kan inte identifiera vilken plattform som används av den anslutande enheten. Därför stöds inte konfiguration av specifika enhetsplattformar när du skapar en princip för Exchange ActiveSync-enheter.
 
 ## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Inaktivera principer för villkorlig åtkomst i den klassiska Intune-portalen
 

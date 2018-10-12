@@ -1,12 +1,11 @@
 ---
-title: Hantera datorer med klientprogram
-titlesuffix: Microsoft Intune
+title: Hantera datorer med klientprogram i Microsoft Intune | Microsoft Docs
 description: Hantera Windows genom att installera Intune-klientprogramvaran.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 5a248345a40cd7cfcff3883643562923f9535d3b
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: ef21f22a4808518ce8557b761e4181f8f6a655c3
+ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41910632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45978254"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Hantera Windows-datorer som datorer via Intune-programvaruklienten
 
@@ -57,6 +56,9 @@ Intune stöder hantering av Windows-datorer som datorer med hjälp av programvar
 |Administrativ behörighet|Det konto som installerar klientprogramvaran måste ha lokal administratörsbehörighet på enheten.|
 |Windows Installer 3.1|Datorn måste minst ha Windows Installer 3.1.<br /><br />Så visar du versionen för Windows Installer på en dator:<br /><br />  Högerklicka på **%windir%\System32\msiexec.exe**, och sedan på **Egenskaper**.<br /><br />Du kan hämta den senaste versionen av Windows Installer från [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) på webbplatsen Microsoft Developer Network.|
 |Ta bort klientprogram som inte är kompatibla|Innan du installerar Intune-klientprogrammet ska du avinstallera all klientprogramvara för Configuration Manager, Operations Manager och Service Manager från datorn.|
+
+> [!WARNING]
+> Microsoft tillkännagav att [stöd för Windows 7 upphör den 14 januari 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). På samma datum upphör även Intunes stöd för enheter med Windows 7. Microsoft rekommenderar att du övergår till Windows 10 för att förhindra eventuella avbrott i tjänsten eller supporten. 
 
 ## <a name="deploying-the-intune-software-client"></a>Distribuera Intune-programklienten
 Som Intune-administratör kan du göra Intune programklienten tillgänglig för användarna på en mängd olika sätt. Vägledning finns i [Installera Intune-klientprogrammet på Windows-datorer](install-the-windows-pc-client-with-microsoft-intune.md).

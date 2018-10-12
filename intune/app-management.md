@@ -15,19 +15,19 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 20e9d4799b9ea4329c8286f0b75ea2a7d555e07b
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 9529560fca1fcd30fc479c0eac8bd7bc967fa952
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253773"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562858"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Vad är apphantering i Microsoft Intune?
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Som IT-administratör kan du använda Microsoft Intune för att hantera mobila appar som ditt företags personal använder. Den här funktionen är ett tillägg till hanteringen av enheter och att skydda data. En av en administratörs prioriteringar är att säkerställa att användarna har åtkomst till appar som de behöver för att utföra sitt arbete. Detta mål kan vara en utmaning eftersom:
+Som IT-administratör kan du använda Microsoft Intune för att hantera klientappar som ditt företags personal använder. Den här funktionen är ett tillägg till hanteringen av enheter och att skydda data. En av en administratörs prioriteringar är att säkerställa att användarna har åtkomst till appar som de behöver för att utföra sitt arbete. Detta mål kan vara en utmaning eftersom:
 - Det finns en mängd olika enhetsplattformar och apptyper.
 - Du kan behöva hantera appar på både företagets enheter samt på användarnas personalenheter.
 - Du måste se till att ditt nätverk och dina data förblir säkra.
@@ -68,7 +68,7 @@ Du hittar den mesta app-relaterade informationen i arbetsbelastningen **Klientap
     Intune finns i avsnittet **Övervakning och hantering**.
 3. I fönstret **Microsoft Intune** väljer du **Klientappar**.
 
-    ![Arbetsbelastningen ”Mobilappar”](./media/apps-workload.png)
+    ![Välj arbetsbelastningen ”Klientappar”](./media/apps-workload.png)
 
 I följande fyra avsnitt beskrivs alternativ som är tillgängliga i fönstret **Klientappar**.
 

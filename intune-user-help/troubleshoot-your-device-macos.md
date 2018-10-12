@@ -1,11 +1,11 @@
 ---
-title: Åtgärda vanliga fel med en iOS-enhet | Microsoft Docs
-description: Läs om hur du kan lösa vanliga fel med en iOS-enhet.
+title: Åtgärda vanliga fel hos din iOS-enhet | Microsoft Docs
+description: Felsöka vanliga problem för macOS-enheter i Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,19 +17,19 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: eeb9b04a3e8d7a5d1f96e58e3df7310d53817090
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 003bf4046a997e3633105e4dc41c93a82e16ee40
+ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146786"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46505724"
 ---
 # <a name="fix-common-issues-with-your-macos-device"></a>Åtgärda vanliga problem med din macOS-enhet
 
-Ibland kan problem uppstå med en macOS-enhet som eventuellt kan åtgärdas genom felsökning. Nedan finns en lista med några vanliga problem som du först kan försöka lösa själv. Vid mer komplicerade problem rekommenderar vi att du kontaktar företagets support via kontaktinformationen på [företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
+Felsöka vanliga problem macOS-problem som uppstår under och efter registreringen. Om du inte hittar ditt problem i listan nedan, så kontakta företagets support. Du hittar kontaktinformationen på [Företagsportalens webbplats](https://go.microsoft.com/fwlink/?linkid=2010980).
 
 - [Min macOS-version stöds inte ännu](your-macos-version-isnt-yet-supported.md)
-- [Uppdatera din macOS-enhet](you-need-to-update-your-macos-device.md)
-- [Fel som kan uppstå om du använder Jamf Self Service](device-little-different-jamf.md)
-- [Leta upp ditt serienummer](how-do-i-find-the-serial-number-on-my-device-macos.md)
-- [Identifiera din enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
+- [Jag behöver uppdatera min macOS-enhet](you-need-to-update-your-macos-device.md)
+- [Min Jamf-hanterade enhet är inte kompatibel](device-little-different-jamf.md)
+- [Jag kan inte hitta serienumret](how-do-i-find-the-serial-number-on-my-device-macos.md)
+- [Jag har ombetts att identifiera min enhet](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)

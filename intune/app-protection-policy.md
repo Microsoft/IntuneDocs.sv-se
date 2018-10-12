@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 08/16/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 4189e9357c7ed135ab219b38f22d34a09ebb5318
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5acdcd0a8c2fcb906f0b40e2c1ab937559c7ae01
+ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45727585"
 ---
 # <a name="what-are-app-protection-policies"></a>Vad är appskyddsprinciper?
 
@@ -103,7 +103,7 @@ MDM-lösningen:
 
 -   Hjälpa till att skydda företagsdata från att läcka till konsumentappar och tjänster
 
--   Använda begränsningar (Spara som, Urklipp, PIN-kod osv.) för mobilappar
+-   Använda begränsningar (Spara som, Urklipp, PIN-kod osv.) för klientappar
 
 -   Rensa företagsdata från appar utan att ta bort dessa appar från enheten
 
@@ -122,6 +122,18 @@ Det finns dock vissa begränsningar som du bör känna till, t.ex.:
 -   Du kan inte etablera certifikatprofiler på enheterna.
 
 -   Du kan inte etablera företagets Wi-Fi- och VPN-inställningar på enheterna.
+
+## <a name="app-protection-global-policy"></a>Global princip för appskydd
+
+Om en OneDrive-administratör går till **admin.office.com** och väljer **Enhetsåtkomst** kan de ha möjligheten att ange kontroller för **hantering av mobilprogram** för OneDrive- och SharePoint-klientappar. 
+
+Inställningarna, som nås via OneDrive Admin-konsolen, konfigurerar en särskild Intune-appskyddsprincip som kallas **den Globala** principen. Den globala principen gäller för alla användare i din klient och kan inte styra riktad principtillämpning. 
+
+När den har aktiverats skyddas OneDrive- och SharePoint-appar för iOS och Android med de valda inställningarna som standard. IT-personal kan ändra den här principen i Intune-konsolen när den har skapats och lägga till fler riktade appar och ändra alla principinställningar. 
+
+Som standard kan det endast finnas en **Global** princip per klient. [Intune Graph API:er](intune-graph-apis.md) kan användas för att skapa extra globala principer per klient men detta rekommenderas inte. Vi rekommendera att du inte skapar extra globala principer då detta kan komplicera en eventuell felsökning av implementeringen av principen.
+
+Medan den **Globala** principen gäller för alla användare i din klient kommer standardprinciper för appskydd med Intune att åsidosätta dessa inställningar.
 
 
 ## <a name="multi-identity"></a>Flera identiteter

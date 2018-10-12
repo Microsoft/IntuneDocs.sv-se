@@ -14,12 +14,12 @@ ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 5c467d20a3bf4f2cfb94db5cecfae78b1717993d
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
+ms.openlocfilehash: 317a1fa5fd83cbfe95afa51894466f93131bd278
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34561981"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562773"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Appbaserad villkorlig åtkomst med Intune
 
@@ -27,7 +27,7 @@ ms.locfileid: "34561981"
 
 [Intunes appskyddsprinciper](app-protection-policy.md) hjälper dig att skydda företagets data på enheter som är registrerade i Intune. Du kan även använda appskyddsprinciper på medarbetarnas enheter som inte har registrerats för hantering i Intune. Även om ditt företag inte hanterar enheten i det här fallet, måste du fortfarande se till att företagets data och resurser är skyddade.
 
-Appbaserad villkorlig åtkomst och mobilappshantering ger ett extra säkerhetslager genom att kontrollera att endast mobilappar som har stöd för Intunes appskyddsprinciper får åtkomst till Exchange Online och andra Office 365-tjänster.
+Appbaserad, villkorsstyrd åtkomst och klientapphantering lägger till ett säkerhetslager genom att se till att enbart klientappar som stöder Intunes appskyddsprinciper kommer åt Exchange Online och andra Office 365-tjänster.
 
 > [!NOTE]
 > En hanterad app är en app som har tillämpade appskyddsprinciper och kan hanteras av Intune.

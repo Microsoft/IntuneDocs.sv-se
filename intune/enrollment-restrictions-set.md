@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 76c0b96a1759caad4a1052a7233c7dcc8cecfa3b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: de77ad92eac4aa869aec504f1762ad6f216c74d2
+ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313725"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45602154"
 ---
 # <a name="set-enrollment-restrictions"></a>Ange registreringsbegränsningar
 
@@ -83,29 +83,31 @@ Du kan ändra inställningarna för en begränsning för enhetstyp genom att fö
 8. Välj om du vill **tillåta** eller **blockera** **personligt ägda** enheter för varje plattform i listan.
 9. Välj **OK**.
 
-### <a name="android-device-type-restrictions"></a>Begränsningar för Android-enhetstyp
+### <a name="blocking-personal-android-devices"></a>Blockera personliga Android-enheter
 - Om du blockerar registrering av personligt ägda Android-enheter kan du ändå registrera personligt ägda Android-arbetsprofilenheter.
 - Som standard är dina inställningar för Android-arbetsprofilenheter samma som inställningarna för dina Android-enheter. När du har ändrat dina inställningar för Android-arbetsprofilenheter kommer det här inte längre att vara fallet.
 - Om du blockerar registrering av personligt ägda Android-arbetsprofilenheter så kan endast företagsägda Android-enheter att registreras som Android-arbetsprofil.
 
-### <a name="windows-device-type-restrictions"></a>Begränsningar för Windows-enhetstyp
-När begränsning för enhetstyper med Windows-plattform har ställts in på **Blockera** kontrollerar Intune för att se till att varje ny begäran om Windows-registrering har godkänts som en företagsregistrering. Obehöriga registreringar kommer att blockeras.
+### <a name="blocking-personal-windows-devices"></a>Blockera personliga Windows-enheter
+Om du blockerar personligt ägda Windows-enheter från registrering så kontrollerar Intune att varje ny begäran om Windows-registrering har godkänts som en företagsregistrering. Obehöriga registreringar kommer att blockeras.
 
 Följande metoder räknas som auktoriserade som Windows-företagsregistrering:
  - Den registrerande användaren använder ett [konto för enhetsregistreringshanteraren]( device-enrollment-manager-enroll.md).
 - Enheten registreras via [Windows AutoPilot](enrollment-autopilot.md).
+- Enheten registreras med Windows Autopilot men är inte ett enbart MDM-registreringsalternativ från Windows-inställningar.
 - Enhetens IMEI-nummer anges i **Enhetsregistrering** > **[ID:n för företagsenheter](corporate-identifiers-add.md)**. (Stöds inte för Windows Phone 8.1.)
 - Enheten registreras via ett [bulketableringspaket](windows-bulk-enroll.md).
 - Enheten registreras via [automatisk registrering från SCCM för samhantering](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Följande registreringar markeras som företagsregistreringar av Intune, men eftersom de inte innehåller per enhet-kontroll för Intune-administratören kommer de att blockeras:
- - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installation](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md).
-- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning från Windows-inställningar](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md).
+ - [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning under Windows-installationen](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md)\*.
+- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Azure Active Directory-anslutning från Windows-inställningar](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md)*.
  
 Följande personliga registreringsmetoder blockeras också:
-- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Add Work Account from Windows Settings](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md) (Lägg till arbetskonto från Windows-inställningarna).
+- [Automatisk MDM-registrering](windows-enroll.md#enable-windows-10-automatic-enrollment) med [Lägg till arbetskonto från Windows-inställningar](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md)\*.
 - Alternativet [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) (Endast MDM-registrering) från Windows-inställningarna.
 
+\* Dessa kommer inte att blockeras om de registrerats med Autopilot.
 
 ## <a name="set-device-limit-restrictions"></a>Ange begränsningar för enhetsgräns
 

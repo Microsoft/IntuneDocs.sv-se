@@ -6,19 +6,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/2/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 010ed8511b042d6f764ba947f616d76521588f42
-ms.sourcegitcommit: 91802e78cd5014d20a828ca25a54a381d452f0f8
+ms.openlocfilehash: bdc7f4f8f796d04f5c709298cd654bc2cdc32d0e
+ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864616"
 ---
 # <a name="configure-microsoft-intune-for-ios-device-single-sign-on"></a>Konfigurera enkel inloggning till Microsoft Intune för iOS-enheter
 
@@ -84,7 +84,7 @@ När en användare till exempel ansluter till någon av dessa platser använder 
 > [!NOTE]
 > Dessa URL:er måste vara ett fullständigt domännamn i korrekt format. Apple kräver att dessa ska vara i formatet `http://<yourURL.domain>`
 
-Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning utförs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Om du har iOS 9.0 eller senare kan ett enskilt jokertecken \* användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
+Mönster för URL-matchning måste börja med antingen `http://` eller `https://`. En enkel strängmatchning utförs, så URL-prefixet `http://www.contoso.com/` matchar inte `http://www.contoso.com:80/`. Om du har iOS 10.0 eller senare kan ett enskilt jokertecken \* användas för att ange alla matchande värden. `http://*.contoso.com/` matchar till exempel både `http://store.contoso.com/` och `http://www.contoso.com`.
 Mönstren `http://.com` och `https://.com` matchar alla HTTP- respektive HTTPS-adresser.
 
 ### <a name="apps-that-will-use-single-sign-on"></a>Appar som ska använda enkel inloggning

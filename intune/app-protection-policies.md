@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/20/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: f31b2964-e932-4cee-95c4-8d5506966c85
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 83320c78d461981f1bfff52d2fddf4f121a88b8c
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 45c394f3aadde63299b8397974f4547c4968c192
+ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329673"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169040"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Hur du skapar och tilldelar skyddsprinciper för appar
 
@@ -30,7 +30,7 @@ Lär dig hur du skapar och tilldelar skyddsprinciper för appar till dina använ
 
 ## <a name="before-you-begin"></a>Innan du börjar
 
-Appskyddsprinciper kan tillämpas på appar som körs på enheter som kan, men som inte nödvändigtvis, hanteras av Intune. En mer detaljerad beskrivning av hur appskyddsprinciper fungerar och scenarier som stöds av appskyddsprinciper i Intune finns i [Vad är appskyddsprinciper i Microsoft Intune](app-protection-policy.md).
+Appskyddsprinciper kan tillämpas på appar som körs på enheter som kan, men som inte nödvändigtvis, hanteras av Intune. En mer detaljerad beskrivning av hur appskyddsprinciper fungerar och scenarier som stöds av appskyddsprinciper i Intune finns i [Vad är appskyddsprinciper i Microsoft Intune?](app-protection-policy.md)
 
 Om du söker efter en lista över appar med MAM-stöd, se [lista över MAM-appar](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
@@ -56,24 +56,22 @@ Information om att lägga till organisationens affärsapplikationer i Microsoft 
    Du kan snabbt komma igång genom att använda principinställningarnas standardvärden. Du behöver inte göra några ändringar om standardvärdena uppfyller dina krav.
 
    > [!TIP]
-   > Följande principinställningar används endast när du använder appar i arbetskontexten. När slutanvändarna använder appen för att utföra personliga uppgifter påverkas de inte av dessa principer.
+   > Följande principinställningar används endast när du använder appar i arbetskontexten. När slutanvändarna använder appen för att utföra personliga uppgifter påverkas de inte av dessa principer. Observera att när du skapar en ny fil så betraktas den som en personlig fil. 
 
-7. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka i fönstret **Lägg till en princip** . Skapa principen och spara inställningarna genom att välja **Skapa**.
-8. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka på bladet **Lägg till en princip**.
-9. Skapa principen och spara inställningarna genom att välja **Skapa**.
+7. Spara konfigurationen genom att välja **OK**. Nu är du tillbaka på bladet **Lägg till en princip**.
+8. Skapa principen och spara inställningarna genom att välja **Skapa**.
 
 När du har skapat en princip genom att följa stegen i föregående procedur distribueras den inte till några användare. Information om hur du distribuerar en princip finns i [Distribuera en princip till användare](app-protection-policies.md#deploy-a-policy-to-users).
 
 ## <a name="deploy-a-policy-to-users"></a>Distribuera en princip för användare
 
-
 1. Välj en princip i fönstret **Principer för appskydd**.
 
-1. I fönstret **Princip** väljer du **Tilldelningar** så att fönstret **Intune-appskydd – Tilldelningar** öppnas. Välj **Välj grupper att ta med** i fönstret **Tilldelningar** så att fönstret **Välj grupper att ta med** öppnas.
+2. I fönstret **Princip** väljer du **Tilldelningar** så att fönstret **Intune-appskydd – Tilldelningar** öppnas. Välj **Välj grupper att ta med** i fönstret **Tilldelningar** så att fönstret **Välj grupper att ta med** öppnas.
 
    ![Skärmbild av fönstret Tilldelningar med menyalternativet Välj grupper att ta med markerat](./media/app-protection-policy-add-users.png)
 
-2.  En lista med användargrupper visas i fönstret **Lägg till användargrupp** . Den här listan visar alla säkerhetsgrupper i **Azure Active Directory**. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
+3.  En lista med användargrupper visas i fönstret **Lägg till användargrupp** . Den här listan visar alla säkerhetsgrupper i **Azure Active Directory**. Välj de användargrupper som du vill att den här principen ska tillämpas på och välj sedan **Välj**. När du väljer **Välj** distribueras principen till användarna.
 
     ![Skärmbild av fönstret Lägg till användargrupp som visar listan med Azure Active Directory-användare](./media/azure-ad-user-group-list.png)
 
@@ -127,10 +125,12 @@ Eftersom Intune-appskyddsprinciper är riktade till en användares identitet gä
 
 För att skapa de här principerna bläddrar du till **Klientappar** > **Appskyddsprinciper** i Intune-konsolen och klickar på **Lägg till en princip**. Du kan även redigera eller en befintlig princip. Om du vill att appskyddsprincipen ska gälla för både hanterade och ohanterade enheter bekräftar du att inställningen **Target to all app types** (Gäller för alla apptyper) är inställd på standardvärdet **Ja**. Om du vill tilldela detaljerade inställningar baserat på hanteringstillståndet ställer du in inställningen **Target to all app types** (Gäller för alla apptyper) på **Nej**. 
 
-För att iOS-appar ska anses vara ”hanterade” måste konfigurationsinställningen **IntuneMAMUPN** för princip distribueras för varje app. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/en-us/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
+![Skärmbild av bladet Lägg till en princip där alternativet Rikta till alla typer av appar är valt](./media/app-protection-policies-target-all.png)
+
+För att iOS-appar ska anses vara ”hanterade” måste konfigurationsinställningen **IntuneMAMUPN** för princip distribueras för varje app. Mer information finns i [Hantera dataöverföring mellan iOS-appar med Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 
 > [!NOTE]
-> Läs [MAM protection policies targeted based on management state](whats-new.md#mam-protection-policies-targeted-based-on-management-state-) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
+> Läs [MAM protection policies targeted based on management state](whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-) (MAM-skyddsprinciper som riktas baserat på hanteringstillstånd) för att få specifik information om iOS-stöd och appskyddsprinciper som baseras på hanteringstillstånd.
 
 ## <a name="policy-settings"></a>Principinställningar
 Välj någon av följande länkar om du vill se en fullständig lista med principinställningar för iOS och Android:

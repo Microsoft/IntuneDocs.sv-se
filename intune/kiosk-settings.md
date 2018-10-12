@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6db58b1b1f19f789a2163f497c1f0da4c7c034a5
-ms.sourcegitcommit: 5f6117b83f96f7d93dde3685c2ff2b67ae53740b
+ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39481129"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562875"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Kioskinställningar för Windows 10 (och senare) i Intune
 
@@ -45,7 +45,7 @@ Kioskprofiler används för att konfigurera Windows 10-enheter att köra en enda
 #### <a name="single-full-screen-app-kiosks"></a>Kiosker med en enda app i helskärmsläge
 Ange följande inställningar:
 
-- **ID för UWP-app (Universal Windows Platform)**: Ange kioskappens **programanvändarmodell-ID (AUMID)**. Du kan också välja en befintlig hanterad app som du har lagt till via [Mobile Apps](apps-add.md).
+- **ID för UWP-app (Universal Windows Platform)**: Ange kioskappens **programanvändarmodell-ID (AUMID)**. Du kan också välja en befintlig hanterad app som du har lagt till via [Client Apps](apps-add.md).
 
     Läs mer i informationen om att [hitta programanvändarmodell-ID för en installerad app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
@@ -62,7 +62,7 @@ I [helskärmsläget för flera appar](https://docs.microsoft.com/windows/configu
 Ange följande inställningar:
 
 - **Lägg till Win32-app**: En Win32-app är en traditionell skrivbordsapp. Ange **Appnamn** och **Identifierare**. **Identifieraren** är den fullständigt kvalificerade sökvägen till den körbara filen, i relation till enheten.
-- **Lägg till hanterade appar**: Välj en befintlig hanterad app som du har lagt till via [Mobile Apps i Intune](apps-add.md).
+- **Lägg till hanterade appar**: Välj en befintlig hanterad app som du har lagt till via [Client Apps i Intune](apps-add.md).
 - **Lägg till app via AUMID**: Ange [appens AUMID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
 - **Aktivitetsfältet** – Välj **Aktivera** (visa) Aktivitetsfältet eller **Inte konfigurerad** (dölj) i helskärmsläget.
 - **Startmenylayout**: Ange en XML-fil som beskriver hur apparna ska visas på Start-menyn, inklusive apparnas inbördes ordning. [Anpassa och exportera Start-layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) innehåller viss vägledning och XML-exempel.
@@ -75,7 +75,7 @@ Ange följande inställningar:
 
 ## <a name="kiosk-web-browser-settings"></a>Webbläsarinställningar för kioskenhet
 
-Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Kontrollera att du har distribuerat en webbläsare till kioskenheterna via [Mobilappar](apps-add.md).
+Dessa inställningar definierar hur en webbläsare visas på kioskenheten. Kontrollera att du har distribuerat en webbläsare till kioskenheterna via [Client Apps](apps-add.md).
 
 1. Ange följande inställningar:
 
@@ -115,7 +115,7 @@ Appar i det här läget är tillgängliga på Start-menyn. De här apparna är d
 
 Ange följande inställningar:
 
-- **Lägg till hanterade appar**: Välj en befintlig hanterad app som du har lagt till via [Mobile Apps i Intune](apps-add.md).
+- **Lägg till hanterade appar**: Välj en befintlig hanterad app som du har lagt till via [Client Apps i Intune](apps-add.md).
 - **Lägg till app via AUMID**: Ange [appens AUMID](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (UWP-appar).
 - **Startmenylayout**: Ange en XML-fil som beskriver hur apparna ska visas på Start-menyn, inklusive apparnas inbördes ordning. [Anpassa och exportera Start-layout](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) ger viss vägledning och innehåller en specifik XML-fil för Windows Holographic for Business-enheter.
 - **Startmenylayout**: Lägg till ett eller flera användarkonton som kan använda de appar som du lägger till. Alternativ som stöds är: 

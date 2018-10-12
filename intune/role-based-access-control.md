@@ -2,8 +2,8 @@
 title: RBAC med Microsoft Intune
 description: Läs hur du med rollbaserad åtkomstkontroll (RBAC) kan styra vem som får utföra åtgärder och göra ändringar i Microsoft Intune.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2018
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.assetid: ca3de752-3caa-46a4-b4ed-ee9012ccae8e
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: ad5bf36eeb81c5deabc2c3efd73cddcc3db8a70c
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: 5c75bd80e848bbd309051a9c6f3e149abd7a46ed
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253705"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028706"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Rollbaserad administrationskontroll (RBAC) med Microsoft Intune
 
@@ -42,6 +42,7 @@ RBAC hjälper dig att styra vem som kan utföra olika uppgifter för Intune i di
 
     > [!IMPORTANT]
     > Rollen som Intune Service-administratör ger inte möjlighet att hantera inställningar för villkorlig åtkomst i Azure AD.
+    > Medlemmar i Intune-roller kräver en licens för Intune.
 
     > [!TIP]
     > Intune visar också tre Azure AD-tillägg: **Användare**, **Grupper** och **Villkorlig åtkomst** som kontrolleras med hjälp av Azure AD RBAC. Dessutom kan den **Användarkontoadministratören** endast utför aktiviteter för AAD-användare/-grupp och har inte fullständig behörighet att utföra alla aktiviteter i Intune. Se [RBAC med Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) för mer information.

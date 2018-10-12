@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/31/2018
+ms.date: 09/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 423bfc02edb9260adadf0a6dc67e6299639c7fbb
-ms.sourcegitcommit: 8f68cd3112a71d1cd386da6ecdae3cb014d570f2
+ms.openlocfilehash: 31c083dcd2087de99830317d892750a42cc5ae6d
+ms.sourcegitcommit: ae62a269778cdbf1d207cd017de522f934b030e9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575057"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700990"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Använda API:er för att lägga till tredjeparts certifikatutfärdare för SCEP i Intune
 
@@ -125,6 +125,13 @@ Konfigurationen måste innehålla följande egenskaper:
     - AAD_APP_KEY="The Azure Application Key obtained during the onboarding process" (Den Azure Application-nyckel som hämtas under registreringsprocessen)
     - TENANT="The Tenant Id obtained during the onboarding process" (Det klientorganisations-ID som hämtas under registreringsprocessen)
     - PROVIDER_NAME_AND_VERSION="Information used to identify your product and its version" (Den information som används för att identifiera din produkt och dess version)
+    
+Om din lösning kräver en proxyserver med autentisering eller utan autentisering kan du lägga till följande egenskaper:
+
+    - PROXY_HOST = ”värden proxyn finns på”.
+    - PORT = ”porten proxyn lyssnar på”.
+    - PROXY_USER = ”användarnamnet som ska användas om proxyn använder grundläggande autentisering”.
+    - PROXY_PASS = ”lösenordet som ska användas om proxyn använder grundläggande autentisering”.
 
 Returnerar:
 

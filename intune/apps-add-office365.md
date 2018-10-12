@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,19 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c8c87b5a76a69809e46fe3f4c5d74019546a819d
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: b4905e637f7ef709c88371a41ec9275115d571e1
+ms.sourcegitcommit: ddf90877d1ea9da70fd0ef228560f455625e35ba
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330236"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46563253"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Tilldela Office 365-appar till Windows 10-enheter med Microsoft Intune
 
 Med den här apptypen kan du enkelt tilldela Office 365-appar till enheter som du hanterar och som kör Windows 10. Du kan även installera appar för klientversionen av Microsoft Project Online och Microsoft Visio Pro för Office 365 om du har licenser för dessa. Appar som du vill använda visas som en enda post i listan med appar i Intune-konsolen.
 
+> [!NOTE]
+> Du måste använda Office 365 ProPlus-licenser för att kunna aktivera de Office 365 ProPlus-appar som distribueras via Microsoft Intune. Office 365 Business Edition stöds för närvarande inte av Intune.
 
 ## <a name="before-you-start"></a>Innan du börjar
 
@@ -118,7 +120,7 @@ I följande tabeller visas vanliga felkoder som kan uppstå och deras innebörd.
 
 ||||
 |-|-|-|
-|Status|Fas|Description|
+|Status|Fas|Beskrivning|
 |1460 (ERROR_TIMEOUT)|Hämta|Det gick inte att hämta distributionsverktyget för Office|    
 |13 (ERROR_INVALID_DATA)|-|Det går inte att verifiera signaturen för det hämtade distributionsverktyget för Office|
 |Felkod från CertVerifyCertificateChainPolicy|-|Kontroll av certifikatutfärdare för det hämtade distributionsverktyget för Office|    

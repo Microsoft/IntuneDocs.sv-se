@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 108382a04095330745ca82dc1d70ab48e70362e5
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
+ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
+ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251530"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229083"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Använd felsökningsportalen för att hjälpa användare i ditt företag
 
@@ -36,7 +36,7 @@ När en användare kontaktar supporten om ett tekniskt problem i Intune kan supp
 - Användarstatus
 - Tilldelningar
 - Efterlevnadsproblem
-- Enheten kan inte
+- Enheten svarar inte
 - Enheten saknar VPN- eller Wi-Fi-inställningar
 - Appinstallationsfel
 
@@ -48,7 +48,7 @@ I felsökningsfönstret kan du välja **Välj användare** för att visa informa
 2. Välj **Alla tjänster** > **Intune**. Intune finns i avsnittet **Övervakning och hantering**.
 3. Välj **Felsök** i fönstret **Intune**.
 4. Klicka på **Välj** för att välja en användare att felsöka.
-5. Välj en användare genom att skriva namnet eller e-postadressen. Klicka på **Välj**. Felsökningsinformationen för användaren visas i fönstret Felsökning. I följande tabeller förklaras informationen.
+5. Välj en användare genom att skriva namnet eller e-postadressen. Klicka på **Välj**. Felsökningsinformationen för användaren visas i fönstret Felsökning. Följande tabell förklarar informationen.
 
 > [!Note]  
 > Du kan också få åtkomst till **felsökningsfönstret** genom att gå till: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -64,16 +64,18 @@ Du kan använda fönstret **Felsökning** för att granska användarinformation.
 | 1.   | Kontostatus  | Visar status för aktuell Intune-klient som **Aktiv** eller **Inaktiv**.       |
 | 2.   | Val av användare  | Namnet på den valda användaren. Välj en ny användare genom att klicka på **Ändra användare**.       |
 | 3.   | Användarstatus  | Visar status för användarens Intune-licens, antal enheter, varje enhetskompatibilitet, antalet appar och appkompatibilitet.       |
-| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa i fönstret. <br>Du kan välja: <ul><li>Mobilappar<li>Appskyddsprinciper<li>Efterlevnadsprinciper<li> Konfigurationsprinciper</ul>      |
+| 4.   | Användarinformation  | Använd listan för att välja information som du vill läsa i fönstret. <br>Du kan välja: <ul><li>Klientappar<li>Efterlevnadsprinciper<li> Konfigurationsprinciper<li>Appskyddsprinciper <li>Registreringsbegränsningar</ul>      |
 | 5.   | Gruppmedlemskap  | Visar de grupper som den valda användaren är medlem i.       |
 
-## <a name="mobile-apps-reference"></a>Referens för mobila appar
+## <a name="client-apps-reference"></a>Referens för klientappar
 
-Appar som körs på enheter eller enheter som ägs av användare som hanteras av Intune och Azure Active Directory (AD).
+Apparna som kör enheter
+- hanteras av Intune och Azure Active Directory (AD) 
+- ägs av användare som hanteras av Intune och Azure Active Directory (AD).
 
 ### <a name="properties"></a>Enheter
 
-Egenskaper för mobilappar.
+Egenskaperna för klientappar.
 
 | Egenskap      | Beskrivning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +93,7 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 | Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
 | Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
 | Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
@@ -100,30 +102,30 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 ### <a name="app-protection-status"></a>Appskyddsstatus
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Detta ger en baslinje för skydd för företagets data när de laddas ned till mobila appar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik (Enterprise Mobility Solution). Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
 | Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Appnamn    | Namnet på programmet                                                           |
 | Enhetsnamn | Namnet på enhetstypen.                                                       |
 | Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
 
 ## <a name="app-protection-policies-reference"></a>Appskyddsprinciper för referens
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Detta ger en baslinje för skydd för företagets data när de laddas ned till mobila appar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integrerar med EMS-teknik. De här principerna skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilapparna. 
 
 ### <a name="properties"></a>Enheter
 
 I tabellen sammanfattas appskyddsprincipernas status för enheter som hanteras av Intune.
 
-| Egenskap    | Description                                                                                                                                |
+| Egenskap    | Beskrivning                                                                                                                                |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Namn        | Namnet på programmet.                                                                                                        |
 | Distribuerad    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Plattform    | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Plattform    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Registrering  | Namnet på enhetstypen.                                                                                                     |
 | Senaste uppdateringen | Tidsstämpelprincipen har ändrats.                                                                                              |
 
@@ -136,7 +138,7 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 | Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
 | Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
 | Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
@@ -157,19 +159,19 @@ Egenskaperna för efterlevnadsprinciperna.
 | Tilldelning    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Namn          | Namnet på programmet.                                                                                                        |
 | Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                       |
-| Principtyp   | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Principtyp   | Typen av enhetsägarskap (**företag**, **personlig** och **okänd**).                                               |
 | Senast ändrad | Namnet på enhetstypen.                                                                                                     |
 
 ### <a name="devices"></a>Egenskaper
 
 Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
 
-| Egenskap           | Description                                                                                                                         |
+| Egenskap           | Beskrivning                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
 | Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
 | Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** och **okänd**).                                               |
 | Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
@@ -178,15 +180,15 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 ### <a name="app-protection-policies"></a>Appskyddsprinciper
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Detta ger en baslinje för skydd för företagets data när de laddas ned till mobila appar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
-| Egenskap    | Description                                                                           |
+| Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Appnamn    | Namnet på programmet                                                           |
 | Enhetsnamn | Namnet på enhetstypen.                                                       |
 | Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
 
 ## <a name="configuration-policies-reference"></a>Referens för konfigurationsprinciper
@@ -197,24 +199,24 @@ En appskyddsprincip är tillgänglig för mobilappar med leverantörsspecifika k
 
 Egenskaperna för konfigurationspolicyerna.
 
-| Egenskap      | Description                                                                                                                         |
+| Egenskap      | Beskrivning                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Tilldelning    | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Namn          | Namnet på programmet.                                                                                                        |
 | Operativsystem            | Operativsystemet som är installerat på enheten.                                                                                       |
-| Principtyp   | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Principtyp   | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Senast ändrad | Namnet på enhetstypen.                                                                                                     |
 
 ### <a name="devices"></a>Egenskaper
 
 Enheter som hanteras av Intune eller av användare som hanteras av Intune eller Azure AD.
 
-| Egenskap           | Description                                                                                                                         |
+| Egenskap           | Beskrivning                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Enhetsnamn        | Namnet på enhetstypen.                                                                                                     |
 | Hanteras av         | Tidsstämpelprincipen har ändrats.                                                                                              |
 | Azure AD-anslutningstyp | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
-| Äganderätt          | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**.                                               |
+| Äganderätt          | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**).                                               |
 | Kompatibel med Intune   | Namnet på enhetstypen.                                                                                                     |
 | Kompatibel med Azure AD | Status för användarnas appskydds-appar. Apparna kan ha status **Incheckad** och **Inte incheckad**. |
 | Operativsystem                 | Operativsystemet som är installerat på enheten.                                                                                       |
@@ -224,16 +226,53 @@ Enheter som hanteras av Intune eller av användare som hanteras av Intune eller 
 
 ### <a name="app-protection-policies"></a>Appskyddsprinciper
 
-En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Detta ger en baslinje för skydd för företagets data när de laddas ned till mobila appar, inklusive Office-mobilappar. 
+En appskyddsprincip är tillgänglig för mobilappar som integreras med EMS-teknik. Dessa principer skapar en baslinje för skydd av företagets data när de laddas ned till mobilappar, inklusive Office-mobilappar. 
 
-| Egenskap    | Description                                                                           |
+| Egenskap    | Beskrivning                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Status      | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Status      | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Appnamn    | Namnet på programmet                                                           |
 | Enhetsnamn | Namnet på enhetstypen.                                                       |
 | Enhetstyp | Namnet på enhetstypen.                                                       |
-| Policys    | Typ av äganderätt till enheten. Det kan vara **Företag**, **Personlig** eller **Okänd**. |
+| Policys    | Typen av enhetsägarskap (**företag**, **personlig** eller **okänd**). |
 | Senaste synkronisering   | Tidsstämpel för den senaste gången enheten synkroniserades med Intune.                   |
+
+## <a name="enrollment-failure-reference"></a>Referens för registreringsfel
+
+Tabellen för registreringsfel visar misslyckade registreringsförsök. En enhet som visas i tabellen nedan kan ha registrerats korrekt vid ett senare försök. Vissa misslyckade försök kanske inte visas. Åtgärdsinformation är inte tillgänglig för alla fel.
+
+| Tabellkolumn | Beskrivning |
+|-------------|----------|
+| Registreringsstart | Starttiden när användaren påbörjade registreringen. |
+| Operativsystem | Enhetens operativsystem. |
+| OS-version | Enhetens operativsystemversion. |
+| Fel | Orsaken till felet. |
+
+### <a name="failure-details"></a>Information om felet
+
+När du väljer en felrad visas mer information.
+
+| Avsnitt | Beskrivning |
+|-------------|----------|
+| Information om felet | En mer detaljerad förklaring av felet. |
+| Potentiella åtgärder | Föreslagna steg för att lösa problemet. Vissa fel kanske inte har någon rekommenderad åtgärd. |
+| Resurser (valfritt) | Länkar till ytterligare läsning eller områden på portalen där du kan vidta åtgärder. |
+
+### <a name="enrollment-errors"></a>Registreringsfel
+
+| Fel | Information |
+|-------------|----------|
+| iOS-timeout eller iOS-fel | En timeout mellan enheten och Intune som beror på att användaren tar för lång tid på sig att slutföra registreringen. |
+| Användaren hittades inte eller är inte licensierad | Användaren saknar en licens eller har tagits bort från tjänsten. |
+| Enheten är redan registrerad | Någon har försökt registrera en enhet med hjälp av företagsportalen på en enhet som fortfarande är registrerad av en annan användare. |
+| Inte registrerad i Intune | En registrering gjordes när MDM-utfärdaren (hantering av mobilenheter) för Intune inte hade konfigurerats. |
+| Registreringsauktoriseringen misslyckades | Ett registreringsförsök gjordes med hjälp av en äldre version av företagsportalen. |
+| Enheten stöds inte | Enheten uppfyller inte minimikraven för Intune-registrering. |
+| Registreringsbegränsningarna uppfylls inte | Registreringen blockerades på grund av att en administratör har konfigurerat registreringsbegränsningar. |
+| Enhetstaket har nåtts | Registreringen blockerades på grund av att en administratör har konfigurerat enhetsbegränsningar. |
+| Apple-registrering | Inga iOS-enheter registrerades vid detta tillfälle eftersom ett Apple MDM-pushcertifikat i Intune saknas eller har upphört att gälla. |
+| Enheten har inte förregistrerats | Enheten har inte förregistrerats som företagsägd och alla personliga registreringar blockerades av en administratör. |
+| Funktionen stöds inte | Användaren försökte antagligen registrera via en metod som inte är kompatibel med din Intune-konfiguration. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Samla in tillgängliga data från mobil enhet
 

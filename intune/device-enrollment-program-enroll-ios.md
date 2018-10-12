@@ -15,12 +15,12 @@ ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 27995fb643e4373e2fa6a34c7147c69905f9ccc0
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 841cfdeea1d33876c1b678a531c88663aea3759e
+ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312652"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403603"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Registrera iOS-enheter automatiskt med Apples DEP (Device Enrollment Program)
 
@@ -35,7 +35,7 @@ DEP-registreringen fungerar dock inte med [enhetsregistreringshanteraren](device
 ## <a name="what-is-supervised-mode"></a>Vad är övervakat läge?
 Apple införde övervakat läge i iOS 5. En iOS-enhet i övervakat läge kan hanteras med fler kontroller. Det är därför användbart för företagsägda enheter. Intune har stöd för konfigurering av enheter för övervakat läge som en del av Apples program för enhetsregistrering (DEP). 
 
-Stöd för oövervakade DEP-enheter blev inaktuellt med iOS 11. I iOS 11 och senare, bör DEP-konfigurerade enheter alltid övervakas. Flaggan DEP is_supervised ignoreras i en framtida iOS-version.
+Stöd för ej kontrollerade DEP-enheter upphörde i iOS 11. I iOS 11 och senare, bör DEP-konfigurerade enheter alltid övervakas. Flaggan DEP is_supervised ignoreras i en framtida iOS-version.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -61,7 +61,7 @@ Du kan använda Apples DEP-portal för att skapa en DEP-token. Du kan också anv
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Steg 1. Ladda ned certifikatet för den offentliga Intune-nyckeln som krävs för att skapa token.
 
-1. Gå till [Intune i Azure-portalen](https://aka.ms/intuneportal) och välj **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > **Lägg till**.
+1. I [Intune på Azure Portal](https://aka.ms/intuneportal) väljer du **Enhetsregistrering** > **Apple-registrering** > **Registreringsprogramtokens** > **Lägg till**.
 
     ![Hämta en registreringsprogramtoken.](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -164,7 +164,7 @@ Nu när du har installerat din token kan skapa du en registreringsprofil för DE
 13. Välj **Anpassa inställningsassistenten** för att konfigurera följande profilinställningar: ![Anpassa inställningsassistenten.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Avdelningsinställningar | Description |
+    | Avdelningsinställningar | Beskrivning |
     |---|---|
     | <strong>Avdelningsnamn</strong> | Visas när användare trycker på <strong>Om konfiguration</strong> vid aktiveringen. |
     |    <strong>Avdelningens telefonnummer</strong>     | Visas när användaren klickar på knappen <strong>Behöver hjälp</strong> vid aktiveringen. |

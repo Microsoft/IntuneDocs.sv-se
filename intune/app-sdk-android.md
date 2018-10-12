@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4c26d9914173c07096caad428afcbd9174625ef7
-ms.sourcegitcommit: a474a6496209ff3b60e014a91526f3d163a45438
+ms.openlocfilehash: ca1f34f6a0db6db26f03f62dba69c4cd708b9d65
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031311"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028774"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Utvecklarhandbok för Microsoft Intune App SDK för Android
 
@@ -475,8 +475,9 @@ På Azure-portalen:
 7.  Välj **Microsoft Mobile Application Management** (Microsofts hantering av mobila program) i listan över API:er och klicka på Välj.
 8.  Välj **Read and Write the User’s App Management Data** (Läs och skriv användarens apphanteringsdata).
 9.  Klicka på **Klar**.
+10. Klicka på **Bevilja** och klicka sedan på **Ja**. 
 
-Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). 
+Information om hur du registrerar ett program med Azure AD finns [här](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
 
 Se även kraven för [villkorlig åtkomst](#conditional-access) nedan.
 
@@ -1431,7 +1432,7 @@ Följande är vägledning för att kräva användaruppmaning vid start av appen 
 > Fördelarna med **standardregistrering** omfattar en förenklad metod för att hämta en princip från APP-WE-tjänsten för en app på enheten.
 
 ### <a name="general-requirements"></a>Allmänna krav
-* Se till att din app registreras med Intune Mobile Application Management-tjänsten genom att följa stegen i [Vanliga ADAL-konfigurationer #2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations).
+* Se till att din app registreras med Intune Mobile Application Management-tjänsten genom att följa stegen i [Vanliga ADAL-konfigurationer #2](https://docs.microsoft.com/intune/app-sdk-android#common-adal-configurations).
 
 ### <a name="working-with-the-intune-sdk"></a>Arbeta med Intune SDK
 De här anvisningarna är specifika för alla Android- och Xamarin-apputvecklare som vill kräva Intune-appskyddsprinciper för användning av appen på en slutanvändarenhet.

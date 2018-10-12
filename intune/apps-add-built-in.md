@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 908135e93fd3980af9d9e80d9c5cf3b4a8abddc3
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 62a7f2f45ccd98612e56e253945974a8eb193f25
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058760"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562722"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Lägg till inbyggda appar i Microsoft Intune
 
@@ -48,7 +48,7 @@ För att lägga till en inbyggd app till dina tillgängliga appar i Microsoft In
 ## <a name="configure-app-information"></a>Konfigurera appinformation
 
 Du kan modifiera informationen om den inbyggda appen. Den här informationen hjälper dig att identifiera appen i Intune och hjälper användarna att hitta appen i företagsportalen.
-1. I fönstret **Mobilappar – Appar** väljer du den inbyggda app som du vill ändra.  
+1. I fönstret **Klientappar – Appar** väljer du den inbyggda app som du vill ändra.  
     Ett fönster för den inbyggda appen visas.
 2. Under **Hantera**, välj alternativet **Egenskaper**.
 3. Välj alternativet **Konfigurera** för att ändra informationen om den inbyggda appen.

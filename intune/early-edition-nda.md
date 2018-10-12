@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/4/2018
+ms.date: 09/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: beee1462c1b6e683287b4d304df386ce525be820
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
+ms.openlocfilehash: 0f6447f4a5cfb2638278a59414e83f744adb8c81
+ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45978271"
 ---
 # <a name="the-early-edition-for-microsoft-intune---september-2018"></a>Den tidiga utgåvan för Microsoft Intune – september 2018
 
@@ -57,6 +57,9 @@ Inställningar för Ständig VPN finns i **Enhetskonfiguration** > **Profiler** 
 ### <a name="outlook-for-ios-and-android-app-configuration-policy---1828527---"></a>Outlook för iOS och Android – Princip för appkonfiguration <!--1828527 -->
 Du kan skapa en appkonfigurationsprincip för iOS för Outlook för iOS och Android. Ytterligare konfigurationsinställningar läggs till vartefter de aktiveras för Outlook för iOS och Android.
 
+###  <a name="windows-line-of-business-lob-app-file-extensions----1884873---"></a>Filnamnstillägg för verksamhetsspecifika appar (LOB) för Windows <!-- 1884873 -->
+Filnamnstillägg för LOB-appar på Windows omfattar *.msi*, *.appx*, *.appxbundle*, *.msix* och *.msixbundle*. Du kan lägga till en app i Microsoft Intune genom att välja **Klientappar** > **Appar** > **Lägg till**. Fönstret **Lägg till app** visas där du kan välja **Apptyp**. När det gäller LOB-appar i Windows väljer du först **Verksamhetsspecifik app** som apptyp, sedan **Appaketfil** och anger därefter en installationsfil med rätt filnamnstillägg.
+
 ### <a name="remotely-lock-noncompliant-devices----2064495---"></a>Fjärrlåsa icke-kompatibla enheter <!-- 2064495 -->
 När en enhet inte är kompatibel, kan du skapa en åtgärd i kompatibilitetsprincipen som låser enheten via en fjärranslutning. I Intune > **Enhetskompatibilitet** skapar du en ny princip eller väljer en befintlig princip. Välj **Åtgärder vid inkompatibilitet** > **Lägg till** och välj att fjärrlåsa enheten.
 Stöds på: 
@@ -72,6 +75,9 @@ Du kan skilja kontroll över inställningar för Intune APP-dataöverföring på
 ### <a name="use-a-pre-shared-key-in-a-windows-10-wi-fi-profile----2662938---"></a>Använda en i förväg delad nyckel i en Windows 10 Wi-Fi-profil <!-- 2662938 -->
 Du kan använda en i förväg delad nyckel (PSK) med säkerhetsprotokollet WPA/WPA2-Personal för att autentisera en Wi-Fi-konfigurationsprofil för Windows 10.
 För närvarande måste du importera en Wi-Fi-profil eller skapa en anpassad profil för att använda en i förväg delad nyckel. [Wi-Fi-inställningar för Windows 10](wi-fi-settings-windows.md) visar en lista över de aktuella inställningarna. 
+
+### <a name="app-protection-policy-app-settings-for-web-data----2662995-eeready---"></a>APP-inställningar (App Protection Policy) för webbdata <!-- 2662995 eeready -->
+Principinställningarna för webbinnehåll på både Android och iOS-enheter kommer att uppdateras så att de blir bättre på att hantera både http- och https-länkar liksom dataöverföring via universella iOS-länkar och Android App-länkar.  
 
 ### <a name="autopilot-device-sync-frequency-increasing-to-every-12-hours----2753673---"></a>Frekvensen för Autopilot-enhetssynkronisering ökar till var 12:e timme <!-- 2753673 -->
 Autopilot-enheter synkroniserar var 12:e timme i stället för var 24:e timme.

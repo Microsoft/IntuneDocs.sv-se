@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ee5a39ee8a146fbc6a85a9f4438b8e14a408a735
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: 772c800e75f52d9826992bf0adfbfdcf3faba107
+ms.sourcegitcommit: a13d1eafc979a9cfeb4adbdea861e2784c2b1068
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46329988"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Lägg till certifikatutfärdarpartner i Intune med hjälp av SCEP
 
@@ -123,6 +123,7 @@ När du avregistrerar eller rensar enheten tas certifikaten bort. Certifikaten �
 Följande tredjeparts certifikatutfärdare har stöd för Intune:
 
 - [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
+- [EJBCA GitHub version med öppen källkod](https://github.com/agerbergt/intune-ejbca-connector)
 
 Om du är tredjeparts certifikatutfärdare som är intresserad av att integrera din produkt med Intune kan du läsa API-vägledningen:
 

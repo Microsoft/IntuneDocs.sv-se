@@ -14,12 +14,12 @@ ms.assetid: f33a6645-a57e-4424-a1e9-0ce932ea83c5
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 421eea460ee7c00b79a63a014291a8abb88ddaea
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 4e523e4fb6505b2faaa0aa776b89454524130ba8
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347805"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187860"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Kända problem i Microsoft Intune
 
@@ -106,6 +106,15 @@ Mer information finns i [Vad är enhetsefterlevnad?](device-compliance.md).
 
 <!-- ## Enrollment -->
 
+## <a name="conditional-access"></a>Villkorlig åtkomst
+
+### <a name="conditional-access-settings-from-intune-do-not-show-up-in-new-console"></a>Inställningar för villkorsstyrd åtkomst från Intune visas inte i den nya konsolen
+
+När din klientorganisation har migrerats till Azure-portalen kommer dina inställningar för villkorsstyrd åtkomst att fortsätta gälla. De kommer dock inte visas i Azure Intune-portalen. 
+
+Om du vill visa och hantera inställningarna i Azure-portalen så behöver du ta bort de gamla inställningarna från den klassiska portalen och återskapa dem i Azure-portalen. 
+
+Mer information finns i [Metodtips för villkorsstyrd åtkomst i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices).
 
 ## <a name="data-protection"></a>Dataskydd
 

@@ -14,12 +14,12 @@ ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 8c61040223d964f6ed0eeb85cf08c29bd2880396
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: c646e134f6311e7c365fe38301a9015a752b553f
+ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313606"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028621"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Granska, exportera eller ta bort personliga data i Intune
 
@@ -56,13 +56,13 @@ Det finns tre sätt att ta bort personliga data från Intune-hantering:
 
 ### <a name="delete-a-user-from-intune"></a>Ta bort en användare från Intune
 
-För att en användares personliga data ska kunna tas bort från Intune måste en administratör [ta bort användaren från Azure Active Directory (AAD)](https://docs.microsoft.com/en-us/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
+För att en användares personliga data ska kunna tas bort från Intune måste en administratör [ta bort användaren från Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad). När användaren tas bort från AAD (permanent borttagning) tar Intune emot borttagningssignalen från AAD och börjar sedan automatiskt att rensa alla användarens personliga data från Intune-tjänsten. Användarens information tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
 
 ### <a name="reset-device-to-factory-settings"></a>Återställa enhet till fabriksinställningarna
 Återställning till fabriksinställningarna återställer alla företagsdata, personliga data och inställningar till de ursprungliga fabriksinställningarna. Det är användbart för att ge en enhet till en ny medarbetare. Användarfiler, användarinstallerade program och andra inställningar än standardinställningarna tas bort, och dessa data tas bort från Intune-tjänsten inom 30 dagar från borttagningsåtgärden.
 
 ### <a name="user-self-removal-from-intune-management"></a>Självborttagning av användare från Intune-hantering
-Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](https://docs.microsoft.com/en-us/intune-user-help/unenroll-your-device-from-intune-android.md) från Intune-hantering utan hjälp från administratör.   
+Användare kan ta bort sin personliga [Android-, Apple- eller Windows-enhet](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android.md) från Intune-hantering utan hjälp från administratör.   
 
 ### <a name="retire"></a>Pensionera
 Åtgärden **Dra tillbaka** tar bort Intune-etablerade data, till exempel företagsprogram, data om appar som Intune hanterar, principinställningar och e-postprofiler som etablerats via Intune. Med den här åtgärden lämnas användarens personliga data kvar på enheten.

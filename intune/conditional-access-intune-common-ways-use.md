@@ -6,7 +6,7 @@ keywords: ''
 author: msmimart
 ms.author: mimart
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 59cba4ead614fe0b5deac535efb9bcb303d5810d
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: ee14a7983451ae37113462e1c8f0aac5785f2f09
+ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253617"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47187877"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Hur används villkorlig åtkomst vanligtvis med Intune?
 
@@ -45,6 +45,13 @@ Enhetsbaserad villkorlig åtkomst för Exchange Online och andra Office 365-prod
 -   Läs mer om [Intunes enhetsefterlevnad](device-compliance.md).
 
 -   Lär dig mer om [skydd av e-post, Office 365 och andra tjänster med villkorlig åtkomst i Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+
+> [!NOTE]
+> På Android-enheter när du aktiverar Enhetsåtkomst för Sharepoint Online måste användare aktivera alternativet **Aktivera webbläsaråtkomst** på den registrerade enheten enligt följande:
+> 1. Starta **företagsportalappen**.
+> 2. Gå till sidan **Inställningar** från de tre punkterna (…) eller knappen för maskinvara.
+> 3. Tryck på knappen **Aktivera webbläsaråtkomst**. 
+> 4. I webbläsaren Chrome loggar du ut från Office 365 och startar om Chrome.
 
 ### <a name="conditional-access-for-exchange-on-premises"></a>Villkorlig åtkomst för Exchange lokalt
 

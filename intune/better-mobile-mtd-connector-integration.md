@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: 5aad0e4aa0f3377c0d46f241d92712d81e4cfbd6
-ms.sourcegitcommit: 973a06f4a35b74314fece2bae17dd6885b4211c3
+ms.openlocfilehash: 000a84ac6167b238520ea2ff88aadf9e8aa0a929
+ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42823228"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45562705"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrera Better Mobile med Intune
 
@@ -73,4 +73,4 @@ Det här är processen för behörighetskontroll av Better Mobile-appen:
 
 ## <a name="next-steps"></a>Nästa steg
 
--   [Konfigurera Better Mobile-appar](mtd-apps-ios-app-configuration-policy-add-assign.md)
+-   [Konfigurera bättre klientappar](mtd-apps-ios-app-configuration-policy-add-assign.md)
