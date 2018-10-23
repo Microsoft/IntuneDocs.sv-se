@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
-ms.openlocfilehash: df7e14b485fae0a70b8f0f487229b9e31ace4077
-ms.sourcegitcommit: 40b1d82df99f09a75a17065cdd0e84d8038f460a
+ms.openlocfilehash: d709681519f2e68d38958d6ec2082b762e22cf60
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40255233"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425163"
 ---
 # <a name="manage-software-updates-in-intune"></a>Hantera programuppdateringar i Intune
 
@@ -34,7 +34,7 @@ Genom att använda Windows Update för företag förenklar du hanteringen av upp
   - Windows Insider – långsam
   - Windows Insider-version 
       
-  Mer information om tillgängliga underhållskanaler finns i [Översikt för Windows som en tjänst](https://docs.microsoft.com/en-us/windows/deployment/update/waas-overview#servicing-channels).
+  Mer information om tillgängliga underhållskanaler finns i [Översikt för Windows som en tjänst](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
 - **Inställningar för uppskjutning**: Konfigurera inställningar för uppskjutning av uppdateringar om du vill fördröja uppdateringsinstallationer för grupper av enheter. Använd inställningarna för att mellanlagra uppdateringsdistributionen, så att du kan granska förloppet medan det pågår.
 - **Pausa**: Skjut upp installationen av uppdateringar om du upptäcker ett problem någon gång under uppdateringsförloppet.
 - **Underhållsperiod**: Konfigurera under vilka timmar som uppdateringar ska kunna installeras.
@@ -114,7 +114,7 @@ Den nya uppdateringsringen visas i listan över uppdateringsringar.
 2. På nästa flik markerar du först **Välj grupper att ta med** och sedan de grupper som du vill tilldela ringen till.
 3. När du är klar slutför du tilldelningen genom att markera **Välj**.
 
-## <a name="update-compliance-reporting"></a>Rapporter om uppdateringsefterlevnad
+## <a name="update-compliance-reporting"></a>Uppdatera efterlevnadsrapportering
 Du kan visa uppdateringsefterlevnad i Intune, eller genom att använda en kostnadsfri lösning med namnet Uppdateringsefterlevnad.
 
 ### <a name="review-update-compliance-in-intune"></a>Granska uppdateringsefterlevnad i Intune 

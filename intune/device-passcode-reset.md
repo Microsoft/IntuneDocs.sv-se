@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3bb891b2a602cde4510953ce00c4e206d1135fce
-ms.sourcegitcommit: a89af1f0dad61320ab3e31cb64708f14514a5081
+ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46300467"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49424925"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Återställa eller ta bort ett enhetslösenord i Intune
 
@@ -49,7 +49,6 @@ För Android-enheter innebär detta i praktiken att lösenordsåterställning p�
 | Android-enheter som kör version 7.x och tidigare | Nej |
 | iOS | Nej |
 | macOS | Nej |
-| iOS | Nej |
 
 Använd åtgärden återställ lösenord för att skapa ett nytt lösenord för arbetsprofilen. Den här åtgärden återställer lösenordet och skapar ett nytt, tillfälligt lösenord som endast gäller för arbetsprofilen. 
 
