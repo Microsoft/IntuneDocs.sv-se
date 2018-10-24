@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: e37a45122ab4950e2a85cc1c6f6696759d429a3f
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 72585982cd27962981f581a99f0ea361642df0ee
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828286"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652146"
 ---
 # <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Den tidiga utgåvan för Microsoft Intune – Oktober 2018
 
@@ -44,9 +44,6 @@ Den här sidan uppdateras regelbundet. Kom tillbaka och se om det finns nya uppd
 ### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Använd Microsofts rekommenderade inställningar med säkerhetsbaslinjer <!-- 2055484 -->
 Intune integrerar med andra tjänster som fokuserar på säkerhet, inklusive Windows Defender ATP och Office 365 ATP. Kunder efterfrågar en gemensam strategi och en sammanhängande uppsättning säkerhetsarbetsflöden från slutpunkt till slutpunkt för alla Microsoft 365-tjänster. Vårt mål är att optimera strategier och skapa lösningar som kan hantera säkerhetsåtgärder och vanliga administratörsuppgifter. I Intune vill vi uppnå det här målet genom att publicera en uppsättning Microsoft-rekommenderade ”säkerhetsbaslinjer” (**Intune** > **Security baselines** ((Säkerhetsbaslinjer)).  En administratör kommer att kunna skapa säkerhetsprinciper direkt från dessa baslinjer, och sedan distribuera dem till sina användare. De kan också anpassa rekommendationerna om bästa praxis för att uppfylla behoven i deras organisation. Intune kontrollerar att enheterna uppfyller baslinjerna och meddelar administratören om användare eller enheter inte uppfyller efterlevnadskraven.
 
-### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Administratörer kan inte rensa personliga enheter och återställa lösenord <!-- 2934699 -->
-För att användarna inte ska behöva oroa sig för att företagets administratörer rensar deras personliga enheter har fjärråtgärderna för [rensning](devices-wipe.md#wipe) och [lösenordsåterställning](device-passcode-reset.md) inaktiverats för personliga enheter. Byt typen av enhetsägarskap till företagsägd enhet om du vill aktivera dessa åtgärder för enheter som ägs av organisationen.
-
 ### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Autopilot-stöd för Azure Active Directory-anslutna hybridenheter <!-- 1048100 -->
 Du kan konfigurera Azure Active Directory-anslutna hybridenheter med hjälp av Autopilot. Enheterna måste vara anslutna till organisationens nätverk för att du ska kunna använda Autopilot-hybridfunktionen.
 
@@ -56,7 +53,7 @@ Om du vill skapa en omfångstagg väljer du **Intune-roller** > **Scope (Tags) (
 För att lägga till en omfångstagg till en rolltilldelning väljer du **Intune-roller** > **Alla roller** > **Princip- och profilhanterare** > **Tilldelningar** > **Scope (Tags)** (Omfång (taggar)).
 För att lägga till en omfångstagg till en konfigurationsprofil väljer du **Enhetskonfiguration** > **Profiler** > välj en profil > **Egenskaper** > **Scope (Tags)** (Omfång (taggar)).
 
-## <a name="tenant-health-dashboard----1124854---"></a>Instrumentpanelen Hälsa för klientorganisation <!-- 1124854 -->
+### <a name="tenant-health-dashboard----1124854---"></a>Instrumentpanelen Hälsa för klientorganisation <!-- 1124854 -->
 På sidan med klientorganisationens status i Intune hittar du information om klientorganisationens status på ett och samma ställe. Sidan är uppdelad i fyra delar:  
 - **Information om klientorganisationen**: Innehåller information, till exempel MDM-utfärdare, totalt antal registrerade enheter i klientorganisationen och antal licenser. I det här avsnittet visas även den aktuella versionen av tjänsten för din klientorganisation.
 - **Status för anslutningsprogrammet**: Innehåller information om konfigurerade anslutningsappar, till exempel Apple VPP, Windows Store för företag och certifikatanslutningar. Baserat på deras aktuella tillstånd är anslutningsapparna flaggade med *Felfri*, *Varning* eller *Ej felfri*.
